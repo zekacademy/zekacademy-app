@@ -1,6 +1,6 @@
 /* Zekacademy service worker: uygulamayı kurulabilir yapar, sayfaları ağdan alır (her zaman güncel), ağ yoksa son kopyayı gösterir. */
-const CACHE = "zk-v3";
-const SHELL = ["/", "/index.html", "/app.js", "/firebase-config.js", "/manifest.webmanifest", "/icons/icon-192.png"];
+const CACHE = "zk-v4";
+const SHELL = ["/", "/index.html", "/app.js", "/firebase-config.js", "/manifest.webmanifest", "/icons/icon-192-v2.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {
@@ -15,7 +15,7 @@ self.addEventListener("push", e => {
   const d = p.data || p.notification || p;
   const title = d.title || "Zekacademy";
   e.waitUntil(self.registration.showNotification(title, {
-    body: d.body || "", icon: "/icons/icon-192.png", badge: "/icons/icon-192.png",
+    body: d.body || "", icon: "/icons/icon-192-v2.png", badge: "/icons/badge-96.png",
     data: { link: d.link || "/" }, tag: d.tag || undefined
   }));
 });
