@@ -768,6 +768,84 @@ function deneme() {
     <div class="pills"><button class="btn sm pri" data-act="kopyala" data-hedef="formKodPre">${icon("copy","xs")} Kodu kopyala</button><button class="btn sm" data-act="formkod" data-v2="yenile">Anahtarı yenile</button></div>
     <p class="faint small" style="margin:0">Kodun içindeki anahtar gizlidir; kimseyle paylaşma. Paylaşırsan “Anahtarı yenile” de ve yeni kodu forma yapıştır.</p>`; }
 
+/* ---------- Başvuru süreci (Google Form → WhatsApp adımları) ---------- */
+const DEF_BMESAJ = {
+  onay: "🎯 *Koçluk Başvurun Onaylandı, {Ad}!*\nSeninle derece odaklı, planlı bir yolculuğa başlıyoruz.🚀 ✨\n\nHaftalık çalışma programların *YKS Türkiye 8. si Zekeriya Ürünlü tarafından hazırlanacak.*\nSüreç boyunca tüm sorularını yanıtlayacak, her adımda yanında olacağım. 💬\n\n📌 *Süreçte neler var?*\n✅ Haftalık bire bir online görüşme 📅\n✅ Sınırsız WhatsApp desteği (soru, motivasyon, planlama, rehberlik) 📲 💡\n✅ Profesyonel Excel tabanlı online takip sistemi (her gün) 📊 🖥️\n✅ Türkiye 8. si, 26.sı, 67. si, 95. si ve 101. si olmuş Türkiye YKS derece rekortmeninin özel çalışma stratejileri 🎓 🔥\n✅ Tamamen kişiye özel planlama ve destek 📝 🎯\n\n*Koçluk süreci, ödemenin ardından resmen başlayacaktır.* 💳 ⏳\nÖdeme tamamlandıktan sonra ilk görüşme ve süreç takvimi seninle paylaşılacak. 📅 ✉️\n\nHedef net, yol planlı.\nHazırsan birlikte başlıyoruz! 💪 🚀",
+  kontenjan: "📌 Kontenjan oldukça sınırlı olduğu için *gün içerisinde dönüş yapmanı* bekliyorum.  Hızlı olan kazanır. ⏳",
+  iban: "TR40 0015 7000 0000 0158 6692 82",
+  alici: "İNCİ AKDAĞ ÜRÜNLÜ",
+  odemeNot: "*Not:* Ödemeyi yaptıktan sonra sürecimiz başlayacak inşallah🌹💐\n*Önemli:* Ödemelerin karışmaması için dekont iletmeniz rica olunur🌹💐",
+};
+const bmesaj = () => ({...DEF_BMESAJ, ...(S.settings.bmesaj||{})});
+const BDURUM = [["yeni","Yeni"],["mesaj","Mesaj gönderildi"],["evet","Evet dedi"],["odeme","Ödeme bilgisi gitti"],["ogrenci","Öğrenci oldu"],["hayir","Vazgeçti"]];
+const bdLabel = k => (BDURUM.find(x=>x[0]===k)||BDURUM[0])[1];
+const ilkAd = n => { const a = String(n||"").trim().split(/\s+/)[0] || ""; return a ? a.charAt(0).toLocaleUpperCase("tr") + a.slice(1).toLocaleLowerCase("tr") : ""; };
+const adSoyad = n => String(n||"").trim().split(/\s+/).filter(Boolean).map(w=>w.charAt(0).toLocaleUpperCase("tr")+w.slice(1).toLocaleLowerCase("tr")).join(" ");
+function waNo(t){ let d = String(t||"").replace(/\D/g,""); if(d.startsWith("0")) d = "9"+d; else if(d.length===10 && d.startsWith("5")) d = "90"+d; return d; }
+const waLink = (tel, text) => `https://wa.me/${waNo(tel)}?text=${encodeURIComponent(text)}`;
+const doldur = (t, n) => String(t).replace(/\{Ad\}/g, ilkAd(n.name)).replace(/\{AdSoyad\}/g, adSoyad(n.name));
+function bSet(id, fn){ const n = S.notifs.get(id); if(!n) return; fn(n); n.adim = {...(n.adim||{})}; S.notifs.set(id, n); persistDoc("notifs", id, 200); }
+/* Fotoğraf: settings/foto (Ayarlar'dan yüklenir) */
+let FOTO = undefined;
+function fotoYukle(){ if(FOTO !== undefined) return Promise.resolve(FOTO);
+  return new Promise(res=>{ const u = onSnapshot(doc(fdb,"settings","foto"), sn=>{ FOTO = sn.exists() ? (sn.data().data || null) : null; try{ u(); }catch(_){} res(FOTO); }, ()=>{ FOTO = null; res(null); }); }); }
+async function fotoKaydet(file){
+  const img = await new Promise((res,rej)=>{ const i = new Image(); i.onload=()=>res(i); i.onerror=rej; i.src = URL.createObjectURL(file); });
+  const max = 1080, k = Math.min(1, max/Math.max(img.width, img.height)), c = document.createElement("canvas");
+  c.width = Math.round(img.width*k); c.height = Math.round(img.height*k); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+  let q = .85, data = c.toDataURL("image/jpeg", q); while(data.length > 700000 && q > .4){ q -= .1; data = c.toDataURL("image/jpeg", q); }
+  await setDoc(doc(fdb,"settings","foto"), {data, at:nowISO()}); FOTO = data; }
+async function fotoDosya(){ const d = await fotoYukle(); if(!d) return null; const b = await (await fetch(d)).blob(); return new File([b], "zekacademy.jpg", {type:"image/jpeg"}); }
+function rehberKart(n){ const ad = `${adSoyad(n.name)} Koçluk`, tel = "+"+waNo(n.tel);
+  const v = ["BEGIN:VCARD","VERSION:3.0",`N:Koçluk;${adSoyad(n.name)};;;`,`FN:${ad}`,`TEL;TYPE=CELL:${tel}`, n.eposta?`EMAIL:${n.eposta}`:"", "NOTE:Zekacademy başvurusu","END:VCARD"].filter(Boolean).join("\r\n");
+  return new File([v], `${ad}.vcf`, {type:"text/vcard"}); }
+async function rehbereKaydet(id){ const n = S.notifs.get(id); if(!n) return; const f = rehberKart(n);
+  try{ if(navigator.canShare && navigator.canShare({files:[f]}) && /android|iphone|ipad/i.test(navigator.userAgent)){ await navigator.share({files:[f], title:f.name}); } else throw 0; }
+  catch(e){ if(e && e.name==="AbortError") return; const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); }
+  bSet(id, x=>{ x.adim = {...(x.adim||{}), rehber:nowISO()}; }); render(); toast("Kişi kartı açıldı: “Kaydet”e dokun"); }
+async function onayGonder(id){ const n = S.notifs.get(id); if(!n) return; const text = doldur(bmesaj().onay, n);
+  try{ await navigator.clipboard.writeText(text); }catch(_){}
+  const f = await fotoDosya().catch(()=>null);
+  const mobil = /android|iphone|ipad/i.test(navigator.userAgent);
+  if(f && mobil && navigator.canShare && navigator.canShare({files:[f], text})){
+    try{ await navigator.share({files:[f], text}); }catch(e){ if(e && e.name==="AbortError") return; }
+  } else {
+    let panoda = false;
+    if(f && window.ClipboardItem && navigator.clipboard && navigator.clipboard.write){ try{ /* bilgisayarda: fotoğrafı panoya al, WhatsApp'ta yapıştır */
+      const bmp = await createImageBitmap(f), c = document.createElement("canvas"); c.width = bmp.width; c.height = bmp.height; c.getContext("2d").drawImage(bmp,0,0);
+      const png = await new Promise(r=>c.toBlob(r,"image/png")); await navigator.clipboard.write([new ClipboardItem({"image/png": png})]); panoda = true; }catch(_){} }
+    window.open(waLink(n.tel, text), "_blank");
+    toast(!f ? "Fotoğraf yüklenmemiş; sadece mesaj açıldı (Ayarlar → Başvuru mesajları)" : panoda ? "Mesaj hazır. Fotoğraf panoda: WhatsApp'ta önce Ctrl+V ile yapıştır" : "Mesaj açıldı; fotoğrafı ayrıca eklemelisin"); }
+  bSet(id, x=>{ x.adim = {...(x.adim||{}), onay:nowISO()}; if(!x.durum || x.durum==="yeni") x.durum = "mesaj"; }); render(); }
+function metinGonder(id, ne){ const n = S.notifs.get(id); if(!n) return; const m = bmesaj();
+  const text = ne==="kontenjan" ? doldur(m.kontenjan, n) : ne==="iban" ? m.iban : doldur(`${m.iban}\n${m.alici}\n\n${m.odemeNot}`, n);
+  window.open(waLink(n.tel, text), "_blank");
+  bSet(id, x=>{ x.adim = {...(x.adim||{}), [ne==="iban"?"odeme":ne]:nowISO()}; if(ne!=="kontenjan" && ["yeni","mesaj","evet"].includes(x.durum||"yeni")) x.durum = "odeme"; else if(ne==="kontenjan" && (!x.durum || x.durum==="yeni")) x.durum = "mesaj"; }); render(); }
+function cBasvuru(){
+  const all = [...S.notifs.entries()].filter(([,n])=>n.type==="basvuru").sort((a,b)=>a[1].at<b[1].at?1:-1);
+  const tab = S.btab || "aktif", grp = {aktif:x=>!["ogrenci","hayir"].includes(x.durum||"yeni"), ogrenci:x=>x.durum==="ogrenci", hayir:x=>x.durum==="hayir"};
+  const list = all.filter(([,n])=>grp[tab](n)), cnt = k => all.filter(([,n])=>grp[k](n)).length;
+  const step = (done, no, title, body, btns) => `<div class="bstep ${done?"done":""}"><span class="bno">${done?icon("check","xs"):no}</span><div style="min-width:0;flex:1"><b>${title}</b>${body?`<div class="small muted">${body}</div>`:""}<div class="pills" style="margin-top:6px">${btns}</div></div></div>`;
+  const card = ([id,n]) => { const a = n.adim||{}, d = n.durum||"yeni", tel = n.tel;
+    return `<div class="bcard b-${d}"><div class="bhead"><span class="av">${esc(initials(n.name||"?"))}</span><div style="min-width:0;flex:1"><b>${esc(adSoyad(n.name)||"İsimsiz")}</b>${n.deneme?` <span class="pill">deneme</span>`:""}<div class="small muted">${esc([n.hizmet, n.alan, tel].filter(Boolean).join(" · "))} · ${ago(n.at)}</div></div><span class="bdur">${bdLabel(d)}</span></div>
+      ${d==="ogrenci"||d==="hayir" ? "" : `<div class="bsteps">
+        ${step(a.rehber, 1, "Rehbere kaydet", `“${esc(adSoyad(n.name))} Koçluk” olarak`, `<button class="btn sm" data-act="brehber" data-id="${id}" ${tel?"":"disabled"}>${icon("user","xs")} Kişi kartını aç</button>`)}
+        ${step(a.onay, 2, "Onay mesajı", "Fotoğraf + “Koçluk Başvurun Onaylandı” mesajı", `<button class="btn sm ${a.onay?"":"pri"}" data-act="bonay" data-id="${id}" ${tel?"":"disabled"}>WhatsApp'ta gönder</button>`)}
+        ${step(a.kontenjan, 3, "Kontenjan mesajı", "", `<button class="btn sm ${a.onay&&!a.kontenjan?"pri":""}" data-act="bmetin" data-v="kontenjan" data-id="${id}" ${tel?"":"disabled"}>WhatsApp'ta gönder</button>`)}
+        ${step(d==="evet"||d==="odeme", 4, "Anket", "Anketi WhatsApp'tan sen ekle, cevabı burada işaretle", `<button class="btn sm ${d==="evet"||d==="odeme"?"pri":""}" data-act="bdurum" data-v="evet" data-id="${id}">Evet dedi</button><button class="btn sm" data-act="bdurum" data-v="hayir" data-id="${id}">Hayır dedi</button>`)}
+        ${step(a.odeme, 5, "Ödeme bilgisi", "IBAN, alıcı adı ve dekont notu", `<button class="btn sm ${d==="evet"?"pri":""}" data-act="bmetin" data-v="odeme" data-id="${id}" ${tel?"":"disabled"}>WhatsApp'ta gönder</button><button class="btn sm" data-act="bmetin" data-v="iban" data-id="${id}" ${tel?"":"disabled"}>Sadece IBAN</button>`)}
+        ${step(false, 6, "Ödeme geldi", "Öğrenci hesabını aç; ödeme takibi bugünden başlar", `<button class="btn sm ${d==="odeme"?"pri":""}" data-act="sheet" data-v="ogrenci" data-bid="${id}" data-name="${esc(adSoyad(n.name))}" data-alan="${esc(n.alan||"")}">${icon("plus","xs")} Öğrenci hesabı aç</button>`)}
+      </div>`}
+      <details class="bmore"><summary>Form cevapları ve diğer</summary>${(n.cevaplar||[]).length?`<dl>${n.cevaplar.map(x=>`<dt>${esc(x.s)}</dt><dd>${esc(x.c||"—")}</dd>`).join("")}</dl>`:""}
+        <div class="pills" style="margin-top:8px">${d==="hayir"||d==="ogrenci"?`<button class="btn sm" data-act="bdurum" data-v="yeni" data-id="${id}">Aktife geri al</button>`:`<button class="btn sm" data-act="bdurum" data-v="hayir" data-id="${id}">Vazgeçti</button>`}<button class="btn sm danger" data-act="nsil" data-id="${id}">Başvuruyu sil</button></div></details></div>`; };
+  return `${topbar(`<h1 class="ttl">Başvurular</h1>`, `<button class="iconbtn" data-act="sheet" data-v="bdeneme" aria-label="Deneme başvurusu">${icon("plus")}</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
+  <div class="page wide">
+    <div class="seg">${[["aktif","Süreçte"],["ogrenci","Öğrenci oldu"],["hayir","Vazgeçti"]].map(([k,l])=>`<button data-act="btab" data-v="${k}" aria-pressed="${tab===k}">${l} <span class="num faint">${cnt(k)}</span></button>`).join("")}</div>
+    ${list.length ? list.map(card).join("") : `<div class="card"><div class="empty">${tab==="aktif"?"Süreçte başvuru yok. Google Form doldurulunca burada görünür. Sağ üstteki + ile kendine deneme başvurusu oluşturabilirsin.":"Burada henüz kimse yok."}</div></div>`}
+    <p class="faint small" style="text-align:center">Mesajları Ayarlar → Başvuru mesajları'ndan değiştirebilirsin. {Ad} yazan yere öğrencinin adı gelir.</p>
+  </div>`;
+}
+
 /* ---------- Ödeme takibi (sadece koç; coachNotes/{uid}.odeme) ---------- */
 const DEF_ODEME_MESAJ = "Merhaba, bu mesaj aylık döngümüzü hatırlatma mesajıdır. Ödememizi yaptıysak bu mesajı dikkate almayalım, dekontu Zekeriya hocaya iletmen yeterli. Eğer önemli veya acil bir durum varsa Zekeriya hocaya rahatça söyleyebilirsin.";
 const PERIYOT = {ay:"Aylık", hafta4:"4 haftada bir"};
@@ -816,7 +894,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme};
+  const pages = {ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru};
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["ogrenciler","users","Öğrenciler"],["program","cal","Haftalık Program",true],["bildirim","bell","Bildirimler",false,unread],["daha","more","Daha Fazla"]]);
 }
 const sortedStudents = () => [...S.students.entries()].sort((a,b)=>a[1].name.localeCompare(b[1].name,"tr"));
@@ -913,7 +991,7 @@ function cBell(){
   const basCard = ([id,n]) => `<div class="nbas"><div class="nbh"><span class="nbi">${icon("user","sm")}</span><div style="min-width:0;flex:1"><div class="nbt">Yeni başvuru · Google Form${!n.read?` <span class="pill good">Yeni</span>`:""}${n.deneme?` <span class="pill">deneme</span>`:""}</div><div class="small muted">${ago(n.at)}</div></div></div>
       <dl><dt>Ad soyad</dt><dd>${esc(n.name||"—")}</dd>${n.hizmet?`<dt>Hizmet</dt><dd>${esc(n.hizmet)}</dd>`:""}${n.alan?`<dt>Alan</dt><dd>${esc(n.alan)}</dd>`:""}${n.tel?`<dt>Telefon</dt><dd>${esc(n.tel)}</dd>`:""}${n.eposta?`<dt>E-posta</dt><dd>${esc(n.eposta)}</dd>`:""}</dl>
       ${(n.cevaplar||[]).length?`<details><summary>Tüm cevaplar (${n.cevaplar.length})</summary><dl style="margin-top:8px">${n.cevaplar.map(x=>`<dt>${esc(x.s)}</dt><dd>${esc(x.c||"—")}</dd>`).join("")}</dl></details>`:""}
-      <div class="pills">${n.tel?`<a class="btn sm" href="tel:${esc(telL(n.tel))}">Ara</a><a class="btn sm" href="https://wa.me/${esc(wa(n.tel))}" target="_blank" rel="noopener">WhatsApp</a>`:""}<button class="btn sm pri" data-act="sheet" data-v="ogrenci" data-name="${esc(n.name||"")}" data-alan="${esc(n.alan||"")}">${icon("plus","xs")} Öğrenci hesabı aç</button><button class="btn sm danger" data-act="nsil" data-id="${id}">Sil</button></div></div>`;
+      <div class="pills">${n.tel?`<a class="btn sm" href="tel:${esc(telL(n.tel))}">Ara</a><a class="btn sm" href="https://wa.me/${esc(wa(n.tel))}" target="_blank" rel="noopener">WhatsApp</a>`:""}<button class="btn sm pri" data-act="go" data-v="basvuru">Süreci yönet · ${esc(bdLabel(n.durum||"yeni"))}</button></div></div>`;
   return `${topbar(`<h1 class="ttl">Bildirimler</h1>`)}
   <div class="page wide">${bas.length?`<h3 style="margin:0">Google Form başvuruları</h3>${bas.map(basCard).join("")}`:""}<div class="card">${diger.length? diger.map(([id,n])=>`<button class="row" data-act="${n.sid&&S.students.has(n.sid)?"open":""}" data-id="${n.sid||""}"><span class="ri" style="${!n.read?"background:var(--acs);color:var(--ac)":""}">${icon(n.type==="kayit"?"user":"alert","sm")}</span><div style="min-width:0"><div class="rt">${label[n.type]||"Bildirim"}${!n.read?` <span class="pill ac">Yeni</span>`:""}</div><div class="rs">${esc(n.name||"")}${n.type==="kayit"?` · ${esc(n.alan||"")} · ${esc(n.sinif||"")}`:" yeni şifre oluşturdu"}</div></div><span class="rx small">${ago(n.at)}</span></button>`).join("") : `<div class="empty">${bas.length?"Başka bildirim yok.":"Henüz bildirim yok. Bir öğrenci kaydolduğunda ya da Google Form doldurulduğunda burada görünür."}</div>`}</div>
   <p class="faint small" style="text-align:center">Bildirimleri açtıysan bunlar telefonuna da gelir.</p></div>`;
@@ -922,6 +1000,7 @@ function cMore(){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
   <div class="page wide"><div class="card">
     ${pushCard()}
+    ${(b=>`<button class="row" data-act="go" data-v="basvuru"><span class="ri" style="background:#1E9E4A;color:#fff">${icon("user","sm")}</span><div><div class="rt">Başvurular</div><div class="rs">${b?`${b} başvuru süreçte`:"Süreçte başvuru yok"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(n=>n.type==="basvuru" && !["ogrenci","hayir"].includes(n.durum||"yeni")).length)}
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödeme takibi</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -933,6 +1012,7 @@ function cMore(){
 /* ---------- Ayarlar (koç) ---------- */
 const clone = x => JSON.parse(JSON.stringify(x));
 function cSettings(){
+  if(FOTO===undefined) fotoYukle().then(()=>{ if(S.view==="ayarlar") keepSettingsOpen(); });
   const c = cfg(), cur = CURX(), ex = S.setEx || "TYT", sample = {name:"Ayşe Yılmaz"};
   const ta = (id, key, list, rows, ph) => `<textarea id="${id}" data-setlist="${key}" rows="${rows}" placeholder="${ph||""}">${esc(list.join("\n"))}</textarea>`;
   const sec = (title, desc, body, reset, open) => `<details class="card setsec" ${open?"open":""}><summary><span><b>${title}</b><span class="muted small">${desc}</span></span>${icon("chev","sm")}</summary><div class="setbody">${body}${reset?`<div class="pills"><button class="btn sm" data-act="sreset" data-v="${reset}">Varsayılana dön</button></div>`:""}</div></details>`;
@@ -980,6 +1060,13 @@ function cSettings(){
           <div class="f">Konular <span class="faint" style="font-weight:500">· her satır bir konu</span><textarea id="cu-t-${ex}-${i}" data-curt="${ex}|${i}" rows="${Math.min(14,sub.t.length+1)}">${esc(sub.t.join("\n"))}</textarea></div>
           <div class="pills"><button class="btn sm danger" data-act="cdel" data-v="${ex}|${i}">${icon("trash","xs")} Bu dersi sil</button></div></div></details>`).join("")}
       <div class="pills"><button class="btn sm" data-act="cadd" data-v="${ex}">${icon("plus","xs")} ${ex} dersi ekle</button></div>`, "cur")}
+    ${(m=>sec("Başvuru mesajları","WhatsApp'ta gönderilecek hazır mesajlar ve fotoğraf",`
+      <div class="f">Onay mesajıyla gönderilecek fotoğraf<div class="pills" style="align-items:center"><span id="fotoDurum" class="small muted">${FOTO?"Fotoğraf yüklü ✓":FOTO===null?"Henüz fotoğraf yok":"Kontrol ediliyor…"}</span><label class="btn sm">${icon("plus","xs")} Fotoğraf seç<input type="file" accept="image/*" id="fotoSec" hidden></label></div>${FOTO?`<img src="${FOTO}" alt="" style="max-width:180px;border-radius:12px;margin-top:6px">`:""}</div>
+      <label class="f">Onay mesajı <span class="faint" style="font-weight:500">· {Ad} yerine öğrencinin adı gelir</span><textarea data-setb2="onay" rows="10">${esc(m.onay)}</textarea></label>
+      <label class="f">Kontenjan mesajı<textarea data-setb2="kontenjan" rows="3">${esc(m.kontenjan)}</textarea></label>
+      <div class="two"><label class="f">IBAN<input type="text" data-setb2="iban" value="${esc(m.iban)}"></label><label class="f">Alıcı adı<input type="text" data-setb2="alici" value="${esc(m.alici)}"></label></div>
+      <label class="f">Ödeme notu<textarea data-setb2="odemeNot" rows="3">${esc(m.odemeNot)}</textarea></label>
+      <p class="faint small" style="margin:0">WhatsApp'ta *yıldız arası* kalın görünür.</p>`, "bmesaj"))(bmesaj())}
     ${sec("Google Form bağlantısı","Form doldurulunca sana yeşil bildirim gelsin",`<p class="muted small" style="margin:0">Başvuru formun her doldurulduğunda Bildirimler'e yeşil bir “Yeni başvuru” düşer ve telefonuna bildirim gelir. Kurulum bir kere yapılır.</p>
       <div id="formKodOut">${FORMKOD?formKodHTML():`<div class="pills"><button class="btn sm pri" data-act="formkod">Bağlantı kodunu hazırla</button></div>`}</div>`)}
     ${sec("Veri içe aktar","Drive’dan dönüştürülmüş öğrenci dosyası (.json)",`
@@ -994,6 +1081,8 @@ function cSettings(){
 }
 function setPath(path, val){ const ks = path.split("."); let o = S.settings; for(let i=0;i<ks.length-1;i++){ o[ks[i]] = o[ks[i]] ? o[ks[i]] : clone(cfg()[ks[i]]); o = o[ks[i]]; } o[ks[ks.length-1]] = val; }
 function onSetting(t, isChange){
+  if(t.dataset.setb2!=null){ S.settings.bmesaj = {...(S.settings.bmesaj||{}), [t.dataset.setb2]: t.value}; saveSettings(700); return true; }
+  if(t.id==="fotoSec"){ if(isChange && t.files && t.files[0]){ const st = $("#fotoDurum"); if(st) st.textContent = "Yükleniyor…"; fotoKaydet(t.files[0]).then(()=>{ keepSettingsOpen(); toast("Fotoğraf kaydedildi"); }).catch(e=>{ if(st) st.textContent = "Yüklenemedi: "+(e.message||e); }); } return true; }
   if(t.dataset.set!=null){ S.settings[t.dataset.set] = t.value; saveSettings(600); if(t.dataset.set==="kurum"||t.dataset.set==="examDate") renderSideOnly(); return true; }
   if(t.dataset.setb!=null && isChange){ S.settings[t.dataset.setb] = t.checked; saveSettings(); return true; }
   if(t.dataset.setlist!=null){ setPath(t.dataset.setlist, t.value.split("\n").map(x=>x.trim()).filter(Boolean)); saveSettings(800); return true; }
@@ -1242,6 +1331,14 @@ function openSheet(kind, el){
     fd=>{ const bas = fd.get("bas"); if(!bas) return sheetErr("Başlangıç tarihini seç.");
       setOdeme(id, z=>{ const degisti = z.bas !== bas || (z.periyot||"ay") !== fd.get("periyot"); z.bas = bas; z.tutar = num(fd.get("tutar")); z.periyot = fd.get("periyot"); delete z.taslak; if(degisti && z.odenen){ const v = new Set(vadeler(z)); Object.keys(z.odenen).forEach(d=>{ if(!v.has(d)) delete z.odenen[d]; }); } });
       closeSheet(); render(); toast("Ödeme planı kaydedildi"); }); }
+  if(kind==="bdeneme") return sheet(`<h3>Deneme başvurusu</h3>
+      <p class="muted small" style="margin:-6px 0 0">Süreci kendi üzerinde denemek için. Kendi telefon numaranı yazarsan WhatsApp mesajları sana (“Kendime mesaj”) gider.</p>
+      <label class="f">Ad soyad<input type="text" name="ad" id="bd-ad" value="Deneme Öğrenci"></label>
+      <label class="f">Telefon<input type="tel" name="tel" id="bd-tel" placeholder="05xx xxx xx xx"></label>
+      <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Oluştur</button></div>`,
+    fd=>{ const ad = String(fd.get("ad")).trim(), tel = String(fd.get("tel")).trim(); if(!ad || waNo(tel).length<11) return sheetErr("Ad ve geçerli bir telefon gir.");
+      const id = uid(); S.notifs.set(id, {type:"basvuru", at:nowISO(), read:true, deneme:true, name:ad, tel, alan:"Sayısal", hizmet:"Birebir Koçluk - 1000₺ / Ay", cevaplar:[{s:"İsim Soyisim", c:ad},{s:"Telefon Numaranız", c:tel}]});
+      persistDoc("notifs", id, 0); closeSheet(); S.btab="aktif"; render(); toast("Deneme başvurusu oluşturuldu"); });
   if(kind==="tema") return sheet(`<h3>Görünüm</h3>
     <div class="f">Mod<div class="seg">${[["system","Otomatik"],["light","Açık"],["dark","Koyu"]].map(([k,l])=>`<button type="button" data-act="mode" data-v="${k}" aria-pressed="${THEME.mode===k}">${l}</button>`).join("")}</div></div>
     <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
@@ -1312,7 +1409,7 @@ function openSheet(kind, el){
         <div class="two" style="margin-top:10px"><label class="f">Yeni şifre<input type="text" id="m-np" autocomplete="off" value="123456"></label><div class="f" style="justify-content:flex-end"><button type="button" class="btn" id="m-reset">Şifreyi sıfırla</button></div></div>
         <span class="faint small">Öğrenci bir sonraki girişinde bu şifreyle girer ve kendi şifresini belirler.</span><div class="err" id="m-rerr"></div></div>`
         :`<div class="card" style="box-shadow:none;display:flex;flex-direction:column;gap:10px"><span class="muted small">${x?"Bu öğrencinin hesabı yok. Hesap açmak için “Yeni öğrenci” ile ekleyip bu kayıtla birleştirebilirsin.":"Öğrenci bu bilgilerle kendi paneline girer. İlk girişte şifresini değiştirmesi istenir."}</span>
-        ${x?"":`<div class="two"><label class="f">Kullanıcı adı<input type="text" name="u" id="m-u" autocapitalize="none" autocomplete="off" placeholder="ör. ahmetguner"></label><label class="f">İlk şifre<input type="text" name="p" id="m-p" autocomplete="off" value="123456"></label></div>`}</div>`}
+        ${x?"":`<div class="two"><label class="f">Kullanıcı adı<input type="text" name="u" id="m-u" autocapitalize="none" autocomplete="off" placeholder="ör. ahmetguner" value="${esc(el.dataset.name?normU(el.dataset.name).replace(/[^a-z0-9]/g,"").slice(0,20):"")}"></label><label class="f">İlk şifre<input type="text" name="p" id="m-p" autocomplete="off" value="123456"></label></div>`}</div>`}
       ${x?`<label class="f">Başka bir kayıtla birleştir<select name="merge" id="m-merge"><option value="">—</option>${sortedStudents().filter(([k])=>k!==id).map(([k,y])=>`<option value="${k}">${esc(y.name)} · ${esc(y.sinif)}${y.kullanici?" · @"+esc(y.kullanici):""}</option>`).join("")}</select><span class="faint small" style="font-weight:500">Seçtiğin eski kaydın tüm verisi bu kayda taşınır ve eski kayıt silinir.</span></label>`:""}
       <div class="err" id="serr"></div>
       <div class="acts">${x?`<button type="button" class="btn danger" id="m-del" style="margin-right:auto">Öğrenciyi sil</button>`:""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" data-label="${x?"Kaydet":"Ekle"}">${x?"Kaydet":"Ekle"}</button></div>`,
@@ -1337,7 +1434,11 @@ function openSheet(kind, el){
       const btn = form.querySelector(".btn.pri"); btn.disabled = true; btn.textContent = "Hesap açılıyor…";
       try{ const nid = await createStudentAccount(u, p);
         S.students.set(nid, {...blank({name,alan:fd.get("alan"),sinif:sn,okul,kullanici:u}), ilkSifre:true}); persistDoc("students", nid, 0);
-        S.cur=nid; S.view="detay"; S.dtab="ozet"; closeSheet(); render(); toast(`Hesap açıldı · @${u} · ilk şifre ${p}`); }
+        const bid = el.dataset.bid;
+        if(bid && S.notifs.has(bid)){ const bn = S.notifs.get(bid); bSet(bid, z=>{ z.durum="ogrenci"; z.sid=nid; });
+          const tl = num(String(bn.hizmet||"").replace(/\./g,"").match(/(\d{3,6})\s*₺/)?.[1]); const t0 = today();
+          setOdeme(nid, z=>Object.assign(z, {bas:t0, tutar:tl, periyot:"ay", odenen:{[t0]:{t:t0, tutar:tl}}})); }
+        S.cur=nid; S.view="detay"; S.dtab="ozet"; closeSheet(); render(); toast(`Hesap açıldı · @${u} · ilk şifre ${p}${bid?" · ödeme takibi bugünden başladı":""}`); }
       catch(e){ btn.disabled=false; btn.textContent="Ekle"; sheetErr(authMsg(e)); }
     });
   }
@@ -1392,6 +1493,11 @@ document.addEventListener("click", e=>{
     case "vtog": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; if(o.odenen[d]) delete o.odenen[d]; else o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); openSheet("odeme", b); render(); break; }
     case "osil": { const id=b.dataset.id; const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); closeSheet(); render(); toast("Ödeme planı silindi"); break; }
     case "otaslak": odemeTaslak(); render(); break;
+    case "brehber": rehbereKaydet(b.dataset.id); break;
+    case "bonay": onayGonder(b.dataset.id); break;
+    case "bmetin": metinGonder(b.dataset.id, v); break;
+    case "bdurum": bSet(b.dataset.id, x=>{ x.durum = v; }); render(); toast(v==="evet"?"Evet dedi: sıradaki adım ödeme bilgisi":v==="hayir"?"Vazgeçenlere taşındı":"Aktife alındı"); break;
+    case "btab": S.btab = v; render(); break;
     case "nsil": { const id=b.dataset.id; S.notifs.delete(id); deleteDoc(doc(fdb,"notifs",id)).catch(()=>toast("Silinemedi")); render(); break; }
     case "formkod": formKod(b.dataset.v2==="yenile"); break;
     case "kopyala": { const el=document.getElementById(b.dataset.hedef); if(el){ (navigator.clipboard?navigator.clipboard.writeText(el.textContent):Promise.reject()).then(()=>toast("Kopyalandı")).catch(()=>{ const r=document.createRange(); r.selectNodeContents(el); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Seçildi, kopyala de"); }); } break; }
