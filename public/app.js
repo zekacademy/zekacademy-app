@@ -85,6 +85,7 @@ const ADMIN_U = "zekacademy";
 
 /* ---------- İkonlar ---------- */
 const IC = {
+  phone:'<path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2.5v13h8v-13zm3 15h2v1.5h-2z"/><path d="M11 6.5h2v4h2l-3 3.5-3-3.5h2z"/>',
  home:'<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
  cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>',
  chart:'<path d="M5 20V11M12 20V4M19 20v-6"/>',
@@ -119,6 +120,7 @@ const IC = {
  grad:'<path d="M2 9 12 4l10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
  trend:'<path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/>'
 };
+const LOGO = `<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="16" cy="67" r="6" fill="#fff"/><path d="M27 54 L43 35 L56 66 L76 41" fill="none" stroke="#fff" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M84.75 30.07 L84.59 47.88 L67.41 34.13 Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>`;
 const icon = (n, c="") => `<svg class="i ${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]||""}</svg>`;
 
 /* ---------- Yardımcılar ---------- */
@@ -165,22 +167,23 @@ function sha256(str){
 
 /* ---------- Tema ---------- */
 const THEME = (()=>{ try{ return JSON.parse(localStorage.getItem("zk-theme")||"{}"); }catch(e){ return {}; } })();
-THEME.mode = THEME.mode || "system"; THEME.accent = THEME.accent || "blue";
+if(!THEME.v){ THEME.mode = "light"; THEME.accent = "green"; THEME.v = 2; } /* yeni varsayılan: açık mod, yeşil */
+THEME.mode = THEME.mode || "light"; THEME.accent = THEME.accent || "green";
 function applyTheme(){
   const r = document.documentElement;
   r.classList.toggle("m-light", THEME.mode==="light"); r.classList.toggle("m-dark", THEME.mode==="dark");
-  if(THEME.accent==="blue") r.removeAttribute("data-accent"); else r.setAttribute("data-accent", THEME.accent);
+  r.setAttribute("data-accent", THEME.accent);
   try{ localStorage.setItem("zk-theme", JSON.stringify(THEME)); }catch(e){}
 }
 applyTheme();
 
 /* ---------- Durum ---------- */
-const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), settings:{examDate:"2027-06-19", tahmini:true},
+const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), settings:{examDate:"2027-06-19", tahmini:false},
   ready:false, role:null, me:null, auth:"signup", authRole:"student",
   view:"home", cur:null, dtab:"ozet", week:monday(new Date()), day:today(), pmode:"gun", ex:"TYT", aytAll:false, q:"" };
 const A = () => S.role === "admin";
 function cfg(){ const x = S.settings; return {
-  kurum: x.kurum || "zekacademy",
+  kurum: x.kurum || "Zekacademy",
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
   aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM,
   sureler: x.sureler || DEF_SURELER, quick: x.quick || DEF_QUICK, hedefDers: x.hedefDers || DEF_HEDEF_DERS }; }
@@ -249,7 +252,7 @@ function watchColl(coll, need){
     e=>{ console.error(coll, e); loaded[coll]=true; checkReady(need); render(); }));
 }
 function watchSettings(need){
-  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } loaded.settings=true; checkReady(need); render(true); },
+  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
@@ -398,11 +401,11 @@ let lastRenderKey = "";
 function render(fromSnap){
   const root = $("#root");
   if(!S.role){
-    if(!authResolved){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;font-size:28px">Z</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
+    if(!authResolved){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;border-radius:16px">${LOGO}</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
     if(fromSnap && $("#root .auth form") && root.contains(document.activeElement)){ const b = $("#root .auth form .btn.pri"); if(b && b.disabled){ b.disabled=false; b.textContent=b.dataset.label; } return; }
     renderAuth(); return;
   }
-  if(!S.ready){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;font-size:28px">Z</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
+  if(!S.ready){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;border-radius:16px">${LOGO}</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
   if(S.role==="student" && !S.students.has(S.me)){ root.innerHTML = `<div class="auth"><div class="apanel" style="padding-top:20vh"><h2>Kaydın bulunamadı</h2><p class="muted">Hesabına ait öğrenci kaydı silinmiş olabilir. Koçunla iletişime geç.</p><button class="btn" data-act="logout">Çıkış yap</button></div></div>`; return; }
   if(S.role==="student" && st().ilkSifre){ renderFirstPassword(); return; }
   if(fromSnap && document.activeElement && root.contains(document.activeElement) && document.activeElement.matches("input[type=text],input[type=number],textarea,select")) return;
@@ -437,7 +440,7 @@ function sHome(s){
   const nots = studentNotices(s);
   const msg = !tl.length ? "Bugün için görev yok, kronometreyle çalışmanı kaydedebilirsin." : done===tl.length ? "Bugünün tüm görevleri tamam. Harikasın!" : done ? `${done} görevi tamamladın, devam!` : "Hadi ilk görevle başlayalım.";
   const ev = eveningMsg(s), mm = ev ? null : morningMsg(s, S.me);
-  return `${topbar(`<div class="logo"><span class="lm">${esc(cfg().kurum.slice(0,1).toLocaleUpperCase("tr"))}</span>${esc(cfg().kurum)}</div>`, bellBtn(nots.length))}
+  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>${esc(cfg().kurum)}</div>`, bellBtn(nots.length))}
   <div class="page">
     <div class="hellorow"><div class="hello"><p class="small" style="margin:0 0 2px">${longToday()}</p><h1>Merhaba, ${esc(firstName(s.name))} 👋</h1><p>Hedefine bir adım daha yaklaşıyorsun.</p></div>
       <div class="cd">${icon("cal","sm")}<div><b class="num">${examDays()} gün</b><small>YKS’ye kaldı</small></div></div></div>
@@ -711,7 +714,7 @@ function cOzet(){
   const att = all.filter(x=>x.m.score>0).sort((a,b)=>b.m.score-a.m.score);
   const q = normName(S.q);
   const rows = all.filter(x=>!q || normName(x.s.name).includes(q)).sort((a,b)=>b.m.score-a.m.score || a.s.name.localeCompare(b.s.name,"tr"));
-  return `${topbar(`<div class="logo"><span class="lm">Z</span>Koç Paneli</div>`, bellBtn(unread))}
+  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, bellBtn(unread))}
   <div class="page wide">
     <div class="hello"><p class="small" style="margin:0">${longToday()}</p><h1>Günaydın hocam</h1><p>Öğrencilerinin bu haftaki durumu. Bu sayfayı sadece sen görürsün.</p></div>
     <div class="kpis">
@@ -923,6 +926,27 @@ function keepSettingsOpen(openSubj){
   const ss = document.querySelectorAll("details.setsec details.subj"); ss.forEach((d,i)=>{ if(sub[i]) d.open=true; }); if(openSubj!=null && ss[openSubj]) ss[openSubj].open = true;
 }
 
+/* ---------- Uygulamayı yükle (giriş ekranı) ---------- */
+let installEvt = null;
+const isAndroid = () => /android/i.test(navigator.userAgent);
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; refreshInstall(); });
+window.addEventListener("appinstalled", () => { installEvt = null; refreshInstall(); toast("Uygulama yüklendi! Artık ana ekrandaki Zekacademy simgesinden açabilirsin."); });
+function installCard(){
+  if(isStandalone()) return "";
+  const head = t => `<div class="inst-h"><span class="inst-i">${icon("phone","sm")}</span><div><b>Uygulamayı telefonuna yükle</b><span>${t}</span></div></div>`;
+  if(installEvt) return `<div class="instcard">${head("Tek dokunuşla kur; bildirimler gelsin, tam ekran açılsın.")}<button type="button" class="btn pri full" data-act="install">Uygulamayı yükle</button></div>`;
+  if(isIOS()) return `<div class="instcard">${head("Bildirimlerin gelmesi için iPhone'da bu adım şart.")}<ol class="inst-s"><li><b>Safari</b> ile aç (başka tarayıcıdaysan adresi Safari'ye yapıştır).</li><li>Alttaki <b>Paylaş</b> düğmesine dokun (yukarı oklu kare).</li><li><b>Ana Ekrana Ekle</b> → <b>Ekle</b>.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
+  if(isAndroid()) return `<div class="instcard">${head("Bildirimler gelsin, tam ekran açılsın.")}<ol class="inst-s"><li><b>Chrome</b>'da sağ üstteki <b>⋮</b> menüsüne dokun.</li><li><b>Uygulamayı yükle</b> (ya da <b>Ana ekrana ekle</b>) seçeneğine dokun.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
+  return "";
+}
+function refreshInstall(){ const el = document.getElementById("instWrap"); if(el) el.innerHTML = installCard(); }
+async function doInstall(){
+  if(!installEvt) return refreshInstall();
+  const e = installEvt; installEvt = null;
+  try{ await e.prompt(); await e.userChoice; }catch(_){}
+  refreshInstall();
+}
+
 /* ---------- Giriş ---------- */
 function renderAuth(){
   const r = S.authRole, mode = r==="admin" ? "admin" : S.auth, rd = true;
@@ -931,7 +955,7 @@ function renderAuth(){
   const submit = l => `<button class="btn pri full" style="padding:14px" data-label="${l}" ${rd?"":"disabled"}>${rd?l:"Yükleniyor…"}</button>`;
   let f = "";
   if(mode==="signup") f = `<form class="apanel" id="fSignup" novalidate>
-    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}
+    <div class="logo"><span class="lm">${LOGO}</span>Zekacademy</div>${roleSeg}<div id="instWrap">${installCard()}</div>
     <div class="ahero"><b>YKS yolculuğun tek uygulamada</b><span>Koçunun hazırladığı programı takip et, çalışmanı ve denemelerini kaydet.</span></div>
     <h2>Kayıt ol</h2><p class="sub">Bilgilerini bir kez gir, sonrasında panelin doğrudan açılsın.</p>
     <label class="f">Ad soyad<input type="text" id="r-name" name="name" autocomplete="name"></label>
@@ -947,13 +971,13 @@ function renderAuth(){
     ${keep("r-keep")}<div class="err" id="aerr"></div>${submit("Kaydol ve panele geç")}
     <p class="swap">Zaten hesabın var mı? <button type="button" class="link" data-act="amode" data-v="login">Giriş yap</button></p></form>`;
   else if(mode==="forgot") f = `<div class="apanel">
-    <div class="logo"><span class="lm">Z</span>zekacademy</div>
+    <div class="logo"><span class="lm">${LOGO}</span>Zekacademy</div>
     <h2>Şifreni mi unuttun?</h2>
     <p class="sub">Koçuna yaz, sana yeni bir giriş versin. Programın, denemelerin ve tüm bilgilerin olduğu gibi kalır.</p>
     <div class="card"><b>Koçuna ne yazmalısın?</b><p class="muted small" style="margin:6px 0 0">“Hocam şifremi unuttum, kullanıcı adım: …” yazman yeterli.</p></div>
     <p class="swap"><button type="button" class="link" data-act="amode" data-v="login">Girişe dön</button></p></div>`;
   else { const adm = mode==="admin"; f = `<form class="apanel" id="fLogin" novalidate>
-    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}
+    <div class="logo"><span class="lm">${LOGO}</span>Zekacademy</div>${roleSeg}<div id="instWrap">${installCard()}</div>
     <h2>${adm?"Koç girişi":"Giriş yap"}</h2><p class="sub">${adm?"Tüm öğrencilerini görmek ve yönetmek için.":"Kayıt olurken oluşturduğun bilgilerle gir."}</p>
     <label class="f">Kullanıcı adı<input type="text" id="l-u" name="u" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"></label>
     <label class="f">Şifre<input type="password" id="l-p" name="p" autocomplete="current-password"></label>
@@ -1004,7 +1028,7 @@ function busy(f, on){ const b = f.querySelector(".btn.pri"); if(b){ b.disabled =
 function renderFirstPassword(){
   const s = st();
   $("#root").innerHTML = `<div class="auth"><form class="apanel" id="fFirst" novalidate>
-    <div class="logo"><span class="lm">Z</span>${esc(cfg().kurum)}</div>
+    <div class="logo"><span class="lm">${LOGO}</span>${esc(cfg().kurum)}</div>
     <h2>Hoş geldin, ${esc(firstName(s.name))}</h2>
     <p class="sub">Güvenliğin için koçunun verdiği ilk şifreyi kendi şifrenle değiştir. Sonraki girişlerinde bu şifreyi kullanacaksın.</p>
     <div class="faint small">Kullanıcı adın: <b style="color:var(--fg)">${esc(s.kullanici||"")}</b></div>
@@ -1039,7 +1063,7 @@ function openSheet(kind, el){
   const s = st();
   if(kind==="tema") return sheet(`<h3>Görünüm</h3>
     <div class="f">Mod<div class="seg">${[["system","Otomatik"],["light","Açık"],["dark","Koyu"]].map(([k,l])=>`<button type="button" data-act="mode" data-v="${k}" aria-pressed="${THEME.mode===k}">${l}</button>`).join("")}</div></div>
-    <div class="f">Tema rengi<div class="swatch">${[["blue","#2563EB","Mavi"],["green","#0E9F55","Yeşil"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
+    <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`);
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
     <label class="f">Sınav tarihi<input type="date" name="d" id="m-exam" value="${S.settings.examDate}"></label>
@@ -1171,6 +1195,7 @@ document.addEventListener("click", e=>{
   switch(a){
     case "arole": S.authRole=v; if(v==="student" && S.auth==="admin") S.auth="login"; renderAuth(); break;
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
+    case "install": doInstall(); break;
     case "logout": logout(); break;
     case "pushon": enablePush(); break;
     case "go": S.view=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
