@@ -2,7 +2,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth, initializeAuth, inMemoryPersistence, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, setPersistence, browserLocalPersistence, browserSessionPersistence, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, doc, setDoc, updateDoc, deleteDoc, deleteField, FieldPath, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import { firebaseConfig } from "./firebase-config.js";
+import { getMessaging, getToken, isSupported as messagingSupported } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging.js";
+import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
+import { firebaseConfig, vapidKey } from "./firebase-config.js";
 const fbApp = initializeApp(firebaseConfig);
 
 /* ---------- Müfredat (Zekacademy şablonundan) ---------- */
@@ -250,7 +252,8 @@ function watchSettings(need){
   unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
-function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; if(S.role==="student") startStudent(S.me); render(); } }
+function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
+function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; history.replaceState(null, "", "/"); }
 function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.ready = false; }
 
 let authResolved = false;
@@ -282,6 +285,52 @@ async function createStudentAccount(u, p){
   const a = secondaryAuth(); const cred = await createUserWithEmailAndPassword(a, emailOf(u), p); const id = cred.user.uid; await signOut(a); return id;
 }
 const authMsg = e => ({ "auth/email-already-in-use":"Bu kullanıcı adı alınmış, başka bir tane dene.", "auth/invalid-credential":"Kullanıcı adı veya şifre hatalı.", "auth/wrong-password":"Kullanıcı adı veya şifre hatalı.", "auth/user-not-found":"Kullanıcı adı veya şifre hatalı.", "auth/too-many-requests":"Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar dene.", "auth/network-request-failed":"İnternet bağlantısı yok gibi görünüyor.", "auth/weak-password":"Şifre en az 6 karakter olmalı.", "auth/requires-recent-login":"Güvenlik için çıkış yapıp tekrar girmen gerekiyor." }[e && e.code] || ("Bir sorun oldu: " + (e && (e.code || e.message) || e)));
+
+/* ---------- Telefon bildirimleri ---------- */
+const fns = getFunctions(fbApp, "europe-west3");
+const callFn = (name, data) => httpsCallable(fns, name)(data).then(r => r.data);
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+let pushOk = null;
+async function pushSupported(){ if(pushOk !== null) return pushOk; try{ pushOk = !!vapidKey && "Notification" in window && "serviceWorker" in navigator && await messagingSupported(); }catch(e){ pushOk = false; } return pushOk; }
+/* Bildirim kartının durumu: "hazir" (açık), "ac" (izin istenebilir), "ios" (önce ana ekrana eklenmeli), "red" (reddedilmiş), null (desteklenmiyor) */
+function pushState(){
+  if(!vapidKey) return null;
+  if(isIOS() && !isStandalone()) return "ios";
+  if(!("Notification" in window) || pushOk === false) return null;
+  if(Notification.permission === "denied") return "red";
+  if(Notification.permission === "granted") return "hazir";
+  return "ac";
+}
+async function enablePush(){
+  if(!(await pushSupported())){ toast("Bu tarayıcı bildirimleri desteklemiyor"); return; }
+  const perm = await Notification.requestPermission();
+  if(perm !== "granted"){ toast("Bildirim izni verilmedi"); render(); return; }
+  try{
+    const reg = await navigator.serviceWorker.register("/sw.js");
+    const token = await getToken(getMessaging(fbApp), { vapidKey, serviceWorkerRegistration: reg });
+    if(!token) throw new Error("token yok");
+    if(A()){ await setDoc(doc(fdb, "coachDevices", token.slice(-40).replace(/[^A-Za-z0-9_-]/g,"_")), { token, at: nowISO(), ua: navigator.userAgent.slice(0,120) }); }
+    else { const s = st(); s.bildirim = s.bildirim || {}; s.bildirim.tokens = {...(s.bildirim.tokens||{}), [token]: nowISO()}; s.bildirim.izin = "granted"; save(); }
+    try{ localStorage.setItem("zk-push", token); }catch(e){}
+    toast("Bildirimler açıldı"); render();
+  }catch(e){ console.error(e); toast("Bildirimler açılamadı, biraz sonra tekrar dene"); }
+}
+/* İzin daha önce verildiyse cihaz anahtarını sessizce tazele */
+async function refreshPush(){
+  try{ if(!(await pushSupported()) || Notification.permission !== "granted") return;
+    const reg = await navigator.serviceWorker.register("/sw.js");
+    const token = await getToken(getMessaging(fbApp), { vapidKey, serviceWorkerRegistration: reg }); if(!token) return;
+    if(A()) await setDoc(doc(fdb, "coachDevices", token.slice(-40).replace(/[^A-Za-z0-9_-]/g,"_")), { token, at: nowISO(), ua: navigator.userAgent.slice(0,120) });
+    else { const s = st(); if(s && !(s.bildirim && s.bildirim.tokens && s.bildirim.tokens[token])){ s.bildirim = s.bildirim || {}; s.bildirim.tokens = {...(s.bildirim.tokens||{}), [token]: nowISO()}; s.bildirim.izin = "granted"; save(); } }
+  }catch(e){ console.warn("push yenileme", e); }
+}
+function pushCard(){
+  const k = pushState(); if(!k || k === "hazir") return "";
+  if(k === "ios") return `<div class="card" style="background:var(--acs);border:0"><h3>${icon("bell","sm")} Bildirimleri almak için</h3><p class="muted small" style="margin:6px 0 0">iPhone’da önce uygulamayı ana ekrana ekle: Safari’de alttaki <b>Paylaş</b> simgesine dokun → <b>Ana Ekrana Ekle</b>. Sonra uygulamayı ana ekrandaki simgeden aç.</p></div>`;
+  if(k === "red") return `<div class="card"><h3>${icon("bell","sm")} Bildirimler kapalı</h3><p class="muted small" style="margin:6px 0 0">Bildirim izni reddedilmiş. Açmak için telefonun ayarlarından bu uygulamanın bildirim iznini aç.</p></div>`;
+  return `<div class="card" style="background:var(--acs);border:0"><div class="sech"><h3>${icon("bell","sm")} Bildirimleri aç</h3></div><p class="muted small" style="margin:6px 0 10px">${A()?"Yeni öğrenci kaydolduğunda bu cihaza bildirim gelsin.":"Koçunun sabah mesajları ve akşam hatırlatmaları telefonuna gelsin."}</p><button class="btn sm pri" data-act="pushon">Bildirimlere izin ver</button></div>`;
+}
 
 /* ---------- Hesaplar ---------- */
 const netOf = v => v==null ? null : typeof v==="number" ? v : typeof v==="object" ? ((num(v.d)||0)-(num(v.y)||0)/4) : num(v);
@@ -392,6 +441,7 @@ function sHome(s){
   <div class="page">
     <div class="hellorow"><div class="hello"><p class="small" style="margin:0 0 2px">${longToday()}</p><h1>Merhaba, ${esc(firstName(s.name))} 👋</h1><p>Hedefine bir adım daha yaklaşıyorsun.</p></div>
       <div class="cd">${icon("cal","sm")}<div><b class="num">${examDays()} gün</b><small>YKS’ye kaldı</small></div></div></div>
+    ${pushCard()}
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
     <div class="tiles">
@@ -679,7 +729,7 @@ function cOzet(){
 function studentRow({id,s,m}){
   return `<button class="srow" data-act="open" data-id="${id}"><span class="av">${esc(initials(s.name))}</span><div style="min-width:0"><b>${esc(s.name)}</b> <span class="faint small">${esc(s.alan)} · ${esc(s.sinif)}</span>
     <div class="smet"><span>Uyum <b class="num">${m.w.pct==null?"—":"%"+Math.round(m.w.pct*100)}</b></span><span>Çalışma <b class="num">${fmtMin(m.w.min)}</b></span><span>Son TYT <b class="num">${fmt(m.lt)}</b>${m.dlt!=null?` <span class="${m.dlt>=0?"up":"down"}">${m.dlt>=0?"+":""}${fmt(m.dlt)}</span>`:""}</span><span>Seri <b class="num">${m.streak}</b></span></div></div>
-    <span class="rx">${m.flags.some(f=>f[0]==="bad")?`<span class="pill bad">!</span>`:""}${icon("chev","sm")}</span></button>`;
+    <span class="rx">${Object.keys(s.bildirim?.tokens||{}).length?`<span title="Bildirimleri açık" style="color:var(--good)">${icon("bell","xs")}</span>`:`<span title="Bildirimleri kapalı" style="opacity:.35">${icon("bell","xs")}</span>`}${m.flags.some(f=>f[0]==="bad")?`<span class="pill bad">!</span>`:""}${icon("chev","sm")}</span></button>`;
 }
 function cList(){
   const q = normName(S.q);
@@ -747,6 +797,7 @@ function cBell(){
 function cMore(){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
   <div class="page wide"><div class="card">
+    ${pushCard()}
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="sinav"><span class="ri">${icon("cal","sm")}</span><div><div class="rt">YKS tarihi</div><div class="rs">${trDate(S.settings.examDate)}${S.settings.tahmini?" (tahmini)":""} · ${examDays()} gün</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1052,7 +1103,9 @@ function openSheet(kind, el){
       <div class="two"><label class="f">Sınıf<select name="sinif" id="m-sinif">${SINIFLAR.map(a=>`<option ${sinif===a?"selected":""}>${a}</option>`).join("")}</select></label>
       <label class="f">Alan<select name="alan" id="m-alan">${ALANLAR.map(a=>`<option ${x?.alan===a?"selected":""}>${a}</option>`).join("")}</select></label></div>
       <label class="f" id="m-okulWrap" ${sinif==="Mezun"?"hidden":""}>Okul<input type="text" name="okul" id="m-okul" value="${esc(x?.okul||"")}"></label>
-      ${acc?`<div class="card" style="box-shadow:none"><span class="muted small">Öğrenci hesabı: <b style="color:var(--fg)">@${esc(acc.u)}</b>${x.ilkSifre?" · henüz ilk şifresini değiştirmedi":""}. Şifresini unutursa: “Yeni öğrenci” ile yeni bir kullanıcı adı aç, sonra yeni kaydı düzenleyip bu kayıtla birleştir.</span></div>`
+      ${acc?`<div class="card" style="box-shadow:none"><span class="muted small">Öğrenci hesabı: <b style="color:var(--fg)">@${esc(acc.u)}</b>${x.ilkSifre?" · henüz ilk şifresini değiştirmedi":""}. </span>
+        <div class="two" style="margin-top:10px"><label class="f">Yeni şifre<input type="text" id="m-np" autocomplete="off" value="123456"></label><div class="f" style="justify-content:flex-end"><button type="button" class="btn" id="m-reset">Şifreyi sıfırla</button></div></div>
+        <span class="faint small">Öğrenci bir sonraki girişinde bu şifreyle girer ve kendi şifresini belirler.</span><div class="err" id="m-rerr"></div></div>`
         :`<div class="card" style="box-shadow:none;display:flex;flex-direction:column;gap:10px"><span class="muted small">${x?"Bu öğrencinin hesabı yok. Hesap açmak için “Yeni öğrenci” ile ekleyip bu kayıtla birleştirebilirsin.":"Öğrenci bu bilgilerle kendi paneline girer. İlk girişte şifresini değiştirmesi istenir."}</span>
         ${x?"":`<div class="two"><label class="f">Kullanıcı adı<input type="text" name="u" id="m-u" autocapitalize="none" autocomplete="off" placeholder="ör. ahmetguner"></label><label class="f">İlk şifre<input type="text" name="p" id="m-p" autocomplete="off" value="123456"></label></div>`}</div>`}
       ${x?`<label class="f">Başka bir kayıtla birleştir<select name="merge" id="m-merge"><option value="">—</option>${sortedStudents().filter(([k])=>k!==id).map(([k,y])=>`<option value="${k}">${esc(y.name)} · ${esc(y.sinif)}${y.kullanici?" · @"+esc(y.kullanici):""}</option>`).join("")}</select><span class="faint small" style="font-weight:500">Seçtiğin eski kaydın tüm verisi bu kayda taşınır ve eski kayıt silinir.</span></label>`:""}
@@ -1088,8 +1141,17 @@ function wireSheetExtras(){
   const del = document.getElementById("m-del");
   if(del) del.addEventListener("click", ()=>{
     if(!del.dataset.armed){ del.dataset.armed="1"; del.textContent="Tüm verisi silinsin mi? Onayla"; return; }
-    const id = S.cur; S.students.delete(id); persistDoc("students", id, 0); S.cnotes.delete(id); persistDoc("coachNotes", id, 0);
-    S.cur=null; S.view="ogrenciler"; closeSheet(); render(); toast("Öğrenci silindi");
+    const id = S.cur; del.disabled = true; del.textContent = "Siliniyor…";
+    callFn("ogrenciSil", {uid:id}).then(()=>{ S.students.delete(id); S.cnotes.delete(id); S.cur=null; S.view="ogrenciler"; closeSheet(); render(); toast("Öğrenci ve giriş hesabı silindi"); })
+      .catch(e=>{ console.warn(e); S.students.delete(id); persistDoc("students", id, 0); S.cnotes.delete(id); persistDoc("coachNotes", id, 0); S.cur=null; S.view="ogrenciler"; closeSheet(); render(); toast("Öğrenci kaydı silindi (giriş hesabı silinemedi)"); });
+  });
+  const rs = document.getElementById("m-reset");
+  if(rs) rs.addEventListener("click", ()=>{
+    const p = $("#m-np").value.trim(), err = t => { $("#m-rerr").textContent = t; };
+    if(p.length < 6) return err("Şifre en az 6 karakter olmalı.");
+    rs.disabled = true; rs.textContent = "Sıfırlanıyor…"; err("");
+    callFn("sifreSifirla", {uid:S.cur, sifre:p}).then(()=>{ toast(`Şifre sıfırlandı · yeni şifre ${p}`); rs.textContent = "Sıfırlandı ✓"; })
+      .catch(e=>{ rs.disabled = false; rs.textContent = "Şifreyi sıfırla"; err(e && e.message ? e.message : "Sıfırlanamadı, tekrar dene."); });
   });
 }
 function updateNets(){
@@ -1110,6 +1172,7 @@ document.addEventListener("click", e=>{
     case "arole": S.authRole=v; if(v==="student" && S.auth==="admin") S.auth="login"; renderAuth(); break;
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
     case "logout": logout(); break;
+    case "pushon": enablePush(); break;
     case "go": S.view=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
     case "bell": S.view="bildirim"; render(); window.scrollTo(0,0); break;
     case "open": if(!b.dataset.id) break; S.cur=b.dataset.id; S.week=curStart(st()); S.view="detay"; S.dtab="ozet"; render(); window.scrollTo(0,0); break;

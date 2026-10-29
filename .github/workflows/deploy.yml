@@ -26,6 +26,10 @@ jobs:
           java-version: 21
       - run: npm install --no-audit --no-fund
       - run: npm run test:rules
+      - name: Sunucu fonksiyonları yükleniyor mu
+        run: |
+          npm --prefix functions install --no-audit --no-fund
+          node --input-type=module -e "import('./functions/index.js').then(m => console.log('Fonksiyonlar:', Object.keys(m).join(', ')))"
 
   yayin:
     name: Yayın
@@ -57,18 +61,25 @@ jobs:
           url=$(jq -r '.result | to_entries[0].value.url' out.json)
           echo "::notice::Deneme adresi: $url"
           gh api "repos/${{ github.repository }}/issues/${{ github.event.number }}/comments" -f body="Deneme adresi hazır: $url (14 gün geçerli)" > /dev/null || true
+      - name: Canlı yayın (main)
+        if: github.event_name != 'pull_request'
+        run: |
+          if ! firebase deploy --only hosting --project "$PROJE" --non-interactive > out.txt 2>&1; then
+            tail -n 40 out.txt | sed 's/^/::error::/'; exit 1; fi
+          echo "::notice::Canlı adres: https://app.zekacademy.com"
       - name: Güvenlik kuralları (main)
         if: github.event_name != 'pull_request'
         run: |
           if ! firebase deploy --only firestore:rules --project "$PROJE" --non-interactive > out.txt 2>&1; then
             tail -n 40 out.txt | sed 's/^/::error::/'; exit 1; fi
           echo "::notice::Güvenlik kuralları yayınlandı"
-      - name: Canlı yayın (main)
+      - name: Sunucu fonksiyonları (main)
         if: github.event_name != 'pull_request'
         run: |
-          if ! firebase deploy --only hosting --project "$PROJE" --non-interactive > out.txt 2>&1; then
-            tail -n 40 out.txt | sed 's/^/::error::/'; exit 1; fi
-          echo "::notice::Canlı adres: https://$PROJE.web.app"
+          npm --prefix functions install --no-audit --no-fund
+          if ! firebase deploy --only functions --project "$PROJE" --non-interactive --force > out.txt 2>&1; then
+            tail -n 60 out.txt | sed 's/^/::error::/'; exit 1; fi
+          echo "::notice::Sunucu fonksiyonları yayınlandı"
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"

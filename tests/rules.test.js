@@ -80,3 +80,14 @@ test("giriş yapmamış kullanıcı hiçbir şeye erişemez", async () => {
   await assertFails(getDoc(doc(anon(), "settings/main")));
   await assertFails(setDoc(doc(anon(), "notifs/x"), { type: "kayit", sid: "x", read: false }));
 });
+
+test("koçun cihaz kayıtları sadece koça açık", async () => {
+  await assertSucceeds(setDoc(doc(coach(), "coachDevices/d1"), { token: "t" }));
+  await assertFails(getDoc(doc(ali(), "coachDevices/d1")));
+  await assertFails(setDoc(doc(ali(), "coachDevices/d2"), { token: "t" }));
+  await assertFails(getDoc(doc(coach(), "system/gonderim")));
+});
+
+test("öğrenci kendi bildirim cihazını kaydedebilir", async () => {
+  await assertSucceeds(updateDoc(doc(ali(), "students/ali"), { "bildirim.izin": "granted" }));
+});
