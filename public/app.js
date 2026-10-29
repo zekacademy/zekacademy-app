@@ -190,6 +190,7 @@ const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), settings:{ex
 const A = () => S.role === "admin";
 function cfg(){ const x = S.settings; return {
   kurum: x.kurum || "Zekacademy",
+  odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ,
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
   aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM,
   sureler: x.sureler || DEF_SURELER, quick: x.quick || DEF_QUICK, hedefDers: x.hedefDers || DEF_HEDEF_DERS }; }
@@ -768,6 +769,7 @@ function deneme() {
     <p class="faint small" style="margin:0">Kodun içindeki anahtar gizlidir; kimseyle paylaşma. Paylaşırsan “Anahtarı yenile” de ve yeni kodu forma yapıştır.</p>`; }
 
 /* ---------- Ödeme takibi (sadece koç; coachNotes/{uid}.odeme) ---------- */
+const DEF_ODEME_MESAJ = "Merhaba, bu mesaj aylık döngümüzü hatırlatma mesajıdır. Ödememizi yaptıysak bu mesajı dikkate almayalım, dekontu Zekeriya hocaya iletmen yeterli. Eğer önemli veya acil bir durum varsa Zekeriya hocaya rahatça söyleyebilirsin.";
 const PERIYOT = {ay:"Aylık", hafta4:"4 haftada bir"};
 const gunFark = (a,b) => Math.round((new Date(a+"T12:00:00") - new Date(b+"T12:00:00"))/864e5); /* a - b gün */
 function addMonthsISO(d, n){ const [y,m,g] = d.split("-").map(Number); const t = new Date(y, m-1+n, 1, 12); const last = new Date(t.getFullYear(), t.getMonth()+1, 0).getDate(); t.setDate(Math.min(g,last)); return iso(t); }
@@ -800,7 +802,7 @@ function cOdeme(){
         <div class="osub">${o&&o.bas?`${PERIYOT[o.periyot||"ay"]}${o.tutar?" · "+fmtTL(o.tutar):""} · Başlangıç ${shortDate(o.bas)}`:"Başlangıç tarihi girilmedi"}</div></div>
         <div class="ostat"><span class="otag">${ODEME_ETIKET[d.k]}</span><span class="small">${esc(d.t)}</span></div></button>
         ${d.k==="kirmizi"||d.k==="pembe"||d.k==="turuncu"?`<button class="btn sm ${d.k==="turuncu"?"":"pri"} opay" data-act="odendi" data-id="${id}" data-d="${d.d}">${icon("check","xs")} ${shortDate(d.d)} ödendi</button>`:""}</div>`).join("") || `<div class="card"><div class="empty">Henüz öğrenci yok.</div></div>`}</div>
-    <p class="faint small" style="text-align:center">Pembe: ödeme günü geçti · Kırmızı: 5 günden fazla gecikti · Turuncu: 3 gün ya da daha az kaldı. Bu sayfayı sadece sen görürsün.</p>
+    <p class="faint small" style="text-align:center">${cfg().odemeAcik?`Ödemesi yapılmamış öğrenciye ödeme gününde ve 5 gün sonra saat ${esc(cfg().odemeSaat)}'de hatırlatma bildirimi gider (taslaklara gitmez). `:""}Pembe: ödeme günü geçti · Kırmızı: 5 günden fazla gecikti · Turuncu: 3 gün ya da daha az kaldı. Bu sayfayı sadece sen görürsün.</p>
   </div>`;
 }
 /* Taslak: mevcut öğrencilere farklı durumlar gösterecek örnek başlangıç tarihleri */
@@ -955,6 +957,11 @@ function cSettings(){
       <div class="f">Sadece görevler işaretlenmemişse${ta("st-ak2","aksam.gorev",c.aksam.gorev,3)}</div>
       <div class="f">İkisi de eksikse${ta("st-ak3","aksam.ikisi",c.aksam.ikisi,6)}</div>
       <p class="faint small" style="margin:0">İkisini de tamamlayan öğrenciye akşam mesajı gitmez.</p>`, "aksam,aksamSaat,aksamAcik")}
+    ${sec("Ödeme hatırlatması",`${c.odemeAcik?"Ödeme günü ve 5 gün sonra "+c.odemeSaat:"kapalı"}`,`
+      <div class="two"><label class="inline"><input type="checkbox" id="st-oa" data-setb="odemeAcik" ${c.odemeAcik?"checked":""}>Öğrenciye ödeme hatırlatması gönder</label>
+      <label class="f">Gönderim saati<input type="time" id="st-os" data-set="odemeSaat" value="${esc(c.odemeSaat)}"></label></div>
+      <label class="f">Mesaj<textarea id="st-om" data-set="odemeMesaj" rows="4">${esc(c.odemeMesaj)}</textarea></label>
+      <p class="faint small" style="margin:0">Ödeme gününde ve 5 gün sonra bir kez daha gider. Ödemesi “ödendi” işaretlenen öğrenciye gitmez. Taslak ödeme verileri için hiç gönderilmez.</p>`, "odemeMesaj,odemeSaat,odemeAcik")}
     ${sec("Ortalama süreler","Süre yazmayan satırların günlük toplama katılması",`
       <p class="muted small" style="margin:0">Satırda bu kelimelerin hepsi geçiyorsa süre otomatik hesaplanır. Kısaltma yazabilirsin: “mat” hem Mat hem Matematik’i tutar. Daha çok kelimeli kural önce uygulanır, “x2” süreyi ikiyle çarpar.</p>
       <div class="sgrid"><span class="gh">Satırda geçen kelimeler</span><span class="gh">Süre (dk)</span><span></span>

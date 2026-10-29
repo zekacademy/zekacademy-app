@@ -11,7 +11,7 @@ import { getFirestore, FieldValue, FieldPath } from "firebase-admin/firestore";
 import { getAuth } from "firebase-admin/auth";
 import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
-import { morningText, eveningText, due, cfg } from "./logic.js";
+import { morningText, eveningText, due, cfg, odemeHatirlat } from "./logic.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -61,6 +61,9 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   const jobs = [];
   if (c.sabahAcik && due(c.sabahSaat, minutes, mark.sabah, date)) jobs.push("sabah");
   if (c.aksamAcik && due(c.aksamSaat, minutes, mark.aksam, date)) jobs.push("aksam");
+  const odemeVakti = c.odemeAcik && due(c.odemeSaat, minutes, mark.odeme, date);
+  if (!jobs.length && !odemeVakti) return;
+  if (odemeVakti) { await markRef.set({ odeme: date }, { merge: true }); await odemeBildirimleri(c, date); }
   if (!jobs.length) return;
   await markRef.set(Object.fromEntries(jobs.map(j => [j, date])), { merge: true });
   const students = await db.collection("students").get();
@@ -78,6 +81,21 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   }
   logger.info(`Bildirim (${jobs.join(", ")}): ${sent} gönderildi`, { date });
 });
+
+/* Ödeme günü ve 5 gün sonrası 18:00: ödemesi yapılmamış öğrenciye hatırlatma */
+async function odemeBildirimleri(c, date){
+  const notes = await db.collection("coachNotes").get();
+  let sent = 0, kisi = 0;
+  for (const n of notes.docs) {
+    const vade = odemeHatirlat(n.data().odeme, date); if (!vade) continue;
+    const sd = await db.doc(`students/${n.id}`).get(); if (!sd.exists) continue;
+    const tokens = studentTokens(sd.data()); kisi++;
+    if (!tokens.length) continue;
+    const r = await pushTo(tokens, "Aylık döngü hatırlatması", c.odemeMesaj, "/");
+    sent += r.sent; await dropBadStudentTokens(n.id, r.bad);
+  }
+  logger.info(`Ödeme hatırlatması: ${kisi} öğrenci, ${sent} bildirim`, { date });
+}
 
 /* Yeni öğrenci kaydı veya Google Form başvurusu → koça bildirim */
 export const yeniKayitBildirimi = onDocumentCreated("notifs/{id}", async (event) => {
