@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<script>/* Android: sistem gezinme çubuğunun altına çizme (alt menü kesilmesin) */
-if(/android/i.test(navigator.userAgent)) document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1');</script>
+
 <script>/* Tema: sayfa çizilmeden uygula (varsayılan açık mod, yeşil) */
 (function(){var t={};try{t=JSON.parse(localStorage.getItem("zk-theme")||"{}")}catch(e){}if(!t.v){t={mode:"light",accent:"green"}}var r=document.documentElement;if(t.mode==="light")r.classList.add("m-light");if(t.mode==="dark")r.classList.add("m-dark");r.setAttribute("data-accent",t.accent||"green")})();</script>
 <title>Zekacademy</title>
@@ -23,7 +22,8 @@ if(/android/i.test(navigator.userAgent)) document.querySelector('meta[name=viewp
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <style>
 html{-webkit-text-size-adjust:100%}
-:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--sab:env(safe-area-inset-bottom,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:var(--sab)}
 body{margin:0}
 [hidden]{display:none!important}
 img{max-width:100%}
@@ -75,7 +75,7 @@ svg.i.sm{width:18px;height:18px}
 svg.i.xs{width:15px;height:15px}
 
 /* Kabuk */
-.shell{padding-bottom:calc(var(--navh) + 28px + env(safe-area-inset-bottom,0px))}
+.shell{padding-bottom:calc(var(--navh) + 28px + var(--sab))}
 .page{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:8px 24px;display:flex;flex-direction:column;gap:16px}
 .page.wide{max-width:1080px}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg)}
@@ -92,7 +92,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .spacer{flex:1}
 
 /* Alt menü */
-.nav{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--surface);border-top:1px solid var(--line);padding-bottom:var(--sab);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
 .navin{max-width:720px;margin:0 auto;height:var(--navh);display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:minmax(0,1fr);align-items:end;padding-bottom:8px;box-sizing:border-box}
 .nb{border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--faint);padding:6px 2px}
 .nb[aria-current="page"]{color:var(--ac)}
@@ -324,12 +324,12 @@ input:disabled{opacity:.5}
 
 /* Sayfa altı katmanı */
 .ov{position:fixed;inset:0;z-index:20;background:rgba(5,7,10,.5);display:flex;align-items:flex-end;justify-content:center}
-.sheet{background:var(--bg);width:min(560px,100%);max-height:92vh;overflow:auto;border-radius:26px 26px 0 0;padding:10px 18px calc(22px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:14px}
+.sheet{background:var(--bg);width:min(560px,100%);max-height:92vh;overflow:auto;border-radius:26px 26px 0 0;padding:10px 18px calc(22px + var(--sab));display:flex;flex-direction:column;gap:14px}
 .sheet::before{content:"";width:40px;height:5px;border-radius:3px;background:var(--line);align-self:center;flex:none}
 .sheet h3{margin:0;font-size:20px;font-weight:800}
 .sheet .acts{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px;padding-bottom:22px}}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--navh) + 30px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;font-weight:700;z-index:30;max-width:calc(100% - 32px);text-align:center}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--navh) + 30px + var(--sab));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;font-weight:700;z-index:30;max-width:calc(100% - 32px);text-align:center}
 
 /* Giriş */
 .auth{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr)}
@@ -389,5 +389,13 @@ input:disabled{opacity:.5}
 <noscript>Bu uygulama için JavaScript gerekli.</noscript>
 <script type="module" src="/app.js"></script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script>
+<script>/* Android: uygulama tam ekran açıldığında telefonun alt düğme çubuğu menünün üstüne binmesin */
+(function(){ if(!/android/i.test(navigator.userAgent)) return;
+  function fix(){ var standalone = matchMedia("(display-mode: standalone)").matches;
+    var p=document.createElement("div"); p.style.cssText="position:fixed;bottom:0;height:0;padding-bottom:env(safe-area-inset-bottom,0px);visibility:hidden"; document.body.appendChild(p);
+    var inset=p.offsetHeight; p.remove();
+    var cover = (screen.height - innerHeight) < 56; /* sayfa ekranın en altına kadar çiziliyor */
+    document.documentElement.style.setProperty("--sab", (standalone && cover && inset===0) ? "48px" : "env(safe-area-inset-bottom,0px)"); }
+  if(document.readyState==="loading") addEventListener("DOMContentLoaded", fix); else fix(); addEventListener("resize", fix); })();</script>
 </body>
 </html>
