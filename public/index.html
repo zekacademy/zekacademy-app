@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1E9E4A">
 
 <script>/* Tema: sayfa çizilmeden uygula (varsayılan açık mod, yeşil) */
-(function(){var t={};try{t=JSON.parse(localStorage.getItem("zk-theme")||"{}")}catch(e){}if(!t.v){t={mode:"light",accent:"green"}}var r=document.documentElement;if(t.mode==="light")r.classList.add("m-light");if(t.mode==="dark")r.classList.add("m-dark");r.setAttribute("data-accent",t.accent||"green")})();</script>
+(function(){var t={};try{t=JSON.parse(localStorage.getItem("zk-theme")||"{}")}catch(e){}if(!t.v){t={mode:"light",accent:"green"}}var r=document.documentElement;if(t.mode==="light")r.classList.add("m-light");if(t.mode==="dark")r.classList.add("m-dark");r.setAttribute("data-accent",t.accent||"green");var dk=t.mode==="dark"||(t.mode==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",dk?"#0A0B0E":({green:"#1E9E4A",blue:"#2563EB",red:"#DC2F3C"})[t.accent]||"#1E9E4A")})();</script>
 <title>Zekacademy</title>
 <meta name="description" content="Zekacademy YKS koçluk uygulaması">
-<meta name="theme-color" content="#1E9E4A">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/favicon-48-v2.png" type="image/png" sizes="48x48">
 <link rel="icon" href="/icons/icon-192-v2.png" type="image/png" sizes="192x192">
@@ -293,7 +293,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* Formlar */
 .f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--muted)}
-input[type=text],input[type=password],input[type=number],input[type=date],input[type=time],select,textarea{width:100%;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-size:15px;font-weight:500;color:var(--fg)}
+input[type=text],input[type=search],input[type=password],input[type=number],input[type=date],input[type=time],select,textarea{width:100%;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-size:15px;font-weight:500;color:var(--fg)}
 textarea{resize:vertical;min-height:90px}
 input:disabled{opacity:.5}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -338,6 +338,30 @@ input:disabled{opacity:.5}
 .auth .sub{margin:-8px 0 0;color:var(--muted)}
 .ahero{border-radius:24px;padding:20px;background:linear-gradient(150deg,var(--ac),var(--ac2));color:var(--acfg);display:flex;flex-direction:column;gap:6px}
 .ahero b{font-size:20px;font-weight:800}
+/* Ders renkleri: Matematik mavi, Türkçe/Edebiyat turuncu, Fen camgöbeği, Sosyal mor (aynı grupta farklı tonlar) */
+:root{--c-mat:#2563EB;--c-tr:#E07A10;--c-fen:#0D9488;--c-sos:#8B5CF6}
+@media (prefers-color-scheme: dark){ :root:not(.m-light){--c-mat:#5B8CFF;--c-tr:#F59E3B;--c-fen:#2DD4BF;--c-sos:#A78BFA}}
+:root.m-dark{--c-mat:#5B8CFF;--c-tr:#F59E3B;--c-fen:#2DD4BF;--c-sos:#A78BFA}
+.subj.cl{border-left:5px solid var(--sc);background:color-mix(in srgb,var(--sc) 7%,var(--surface))}
+.subj.cl .sn{color:var(--sc)}
+.subj.cl .sg{color:color-mix(in srgb,var(--sc) 70%,var(--faint))}
+.subj.cl>summary .bar i{background:var(--sc)}
+.subj.cl[open]>summary{border-bottom:1px solid color-mix(in srgb,var(--sc) 20%,var(--line))}
+/* Haftalık hedef konu seçici */
+.kpick{display:flex;align-items:center;gap:8px;justify-content:space-between;width:100%;text-align:left;padding:8px 10px;font:inherit;font-size:14px;font-weight:600;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:12px;min-height:38px}
+.kpick .kpi{flex:none;color:var(--faint);display:grid}
+.koneri,.kgrp{display:flex;flex-direction:column;gap:6px}
+.koneri .gh,.kgrp .gh{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-top:4px}
+.klist{display:flex;flex-direction:column;gap:12px;max-height:46vh;overflow:auto;padding-right:2px}
+.kt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:14px;font-weight:600}
+.kt svg{flex:none;width:16px;height:16px;padding:2px;border-radius:6px;border:1.5px solid var(--line);color:transparent}
+.kt[aria-pressed="true"]{border-color:var(--ac);background:var(--acs)}
+.kt[aria-pressed="true"] svg{background:var(--ac);border-color:var(--ac);color:var(--acfg)}
+.kt span{flex:1;min-width:0}
+.kt small{font-size:11px;font-weight:700;color:var(--good)}
+.kt.sug{border-style:dashed;border-color:var(--ac)}
+.kt .kwhy{display:block;color:var(--muted);font-weight:600;margin-top:2px}
+#kq{width:100%}
 #instWrap:empty{display:none}
 .instcard{border:2px solid var(--ac);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;background:var(--surface)}
 .inst-h{display:flex;gap:12px;align-items:flex-start}

@@ -173,8 +173,14 @@ function applyTheme(){
   const r = document.documentElement;
   r.classList.toggle("m-light", THEME.mode==="light"); r.classList.toggle("m-dark", THEME.mode==="dark");
   r.setAttribute("data-accent", THEME.accent);
+  setBarColor();
   try{ localStorage.setItem("zk-theme", JSON.stringify(THEME)); }catch(e){}
 }
+/* Telefonun üst çubuğu: açık modda tema rengi, koyu modda koyu zemin */
+function setBarColor(){ const dark = THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
+  const c = dark ? "#0A0B0E" : ({green:"#1E9E4A", blue:"#2563EB", red:"#DC2F3C"}[THEME.accent] || "#1E9E4A");
+  const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c); }
+try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setBarColor); }catch(e){}
 applyTheme();
 
 /* ---------- Durum ---------- */
@@ -591,7 +597,7 @@ function planEditor(s){
   const goals = `<div class="card"><div class="sech"><h3>Haftalık hedefler</h3><span class="faint small">${g.list.length?`Öğrenci ${g.done}/${g.list.length} işaretledi`:"Boş bırakılan ders öğrenciye görünmez"}</span></div>
     <div class="goalgrid" style="margin-top:10px"><div class="gh">Ders</div><div class="gh">Bitirilecek konu</div><div class="gh">Takip edilen kitaplar</div>
     ${cfg().hedefDers.map(d=>`<div class="gd">${h[d]&&h[d].konu?`<button class="tick sm" data-act="gtick" data-w="${w}" data-ders="${esc(d)}" aria-pressed="${!!h[d].done}" aria-label="${esc(d)} tamamlandı">${icon("check","xs")}</button>`:`<span class="tick sm ghost"></span>`}${esc(d)}</div>
-      <input type="text" id="hk-${esc(d)}" data-hd="konu" data-ders="${esc(d)}" value="${esc(h[d]?.konu||"")}" placeholder="—">
+      <button type="button" class="kpick" id="hk-${esc(d)}" data-act="sheet" data-v="konu" data-ders="${esc(d)}">${h[d]?.konu?esc(h[d].konu):`<span class="faint">Konu seç</span>`}<span class="kpi">${icon("search","xs")}</span></button>
       <input type="text" id="hb-${esc(d)}" data-hd="kitap" data-ders="${esc(d)}" value="${esc(kitap(s,d))}" placeholder="—">`).join("")}</div>
     <p class="faint small" style="margin:10px 0 0">Kitaplar haftadan haftaya otomatik taşınır; sadece değiştiğinde güncellemen yeterli.</p></div>`;
   const days = pDays(s,w).map((d,i)=>{ const g = GUN[dIdx(d)], l = dayTasks(s,d), dn = l.filter(x=>x.done).length, auto = autoHours(s,d), sv = (p.saat||{})[i];
@@ -650,6 +656,15 @@ function pAnaliz(s){
         <div class="det">${F.map(([k,n,mx,ab])=>{ const o=d[k]; return `<span>${ab}: <b class="num">${fmt(netOf(o))}</b>${o&&typeof o==="object"?` (${o.d||0}/${o.y||0})`:""}</span>`; }).join("")}</div></div>`; }).join("")}</div></div>`:""}
   </div>`;
 }
+/* ---------- Ders renkleri (Konular / Çetele) ---------- */
+const DERS_GRUP = {tr:"tr",aede:"tr",mat:"mat",prob:"mat",matd:"mat",geo:"mat",amat:"mat",fiz:"fen",kim:"fen",bio:"fen",afiz:"fen",akim:"fen",abio:"fen",tar:"sos",cog:"sos",fel:"sos",atar:"sos",acog:"sos",afel:"sos"};
+function subGrp(sub){ if(DERS_GRUP[sub.k]) return DERS_GRUP[sub.k]; const n = trLow(sub.n);
+  return /mat|geo|problem/.test(n) ? "mat" : /fiz|kim|biy|fen/.test(n) ? "fen" : /türk|edeb|dil/.test(n) ? "tr" : "sos"; }
+/* Aynı gruptaki dersler aynı rengin farklı tonlarında */
+function subColors(list){ const seen = {}; return list.map(sub=>{ const g = subGrp(sub), i = seen[g] = (seen[g]==null ? 0 : seen[g]+1);
+  return `subj cl" style="--sc:color-mix(in srgb, var(--c-${g}) ${100-(i%4)*13}%, var(--fg))`; }); }
+const trLow = x => String(x||"").toLocaleLowerCase("tr");
+
 function pKonular(s){
   const ex = S.ex, list = ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll), pct = examPct(s, ex);
   const head = A() ? "" : topbar(`<h1 class="ttl">Konu Takibi</h1>`);
@@ -658,26 +673,26 @@ function pKonular(s){
     <div class="card"><div class="sech"><h3>${ex} ilerlemesi${ex==="AYT"?` · ${esc(s.alan)}`:""}</h3><b class="num">%${Math.round(pct*100)}</b></div><div class="bar" style="margin-top:10px"><i style="width:${pct*100}%"></i></div>
       <p class="muted small" style="margin:10px 0 0">Her konuda: tekrar sayısı, 1. ve 2. soru bankası. Üçü tamamlanan konu yeşil olur.</p>
       ${ex==="AYT"?`<div class="pills" style="margin-top:10px"><button class="tog" data-act="aytall" aria-pressed="${S.aytAll}">${S.aytAll?"Tüm AYT dersleri gösteriliyor":"Tüm AYT derslerini göster"}</button></div>`:""}</div>
-    ${list.map(sub=>{ const p = subjPct(s,sub);
-      return `<details class="subj"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.g)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>
+    ${(cls=>list.map((sub,si)=>{ const p = subjPct(s,sub);
+      return `<details class="${cls[si]}"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.g)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>
       ${sub.t.map(n=>{ const k=tkey(sub.k,n), t=s.topics[k]||{}, full=topicScore(t)>=1;
         return `<div class="trow ${full?"full":""}"><div class="tn">${full?icon("check","xs"):""}${esc(n)}</div>
           <div class="tctl"><span class="stepper lbl">Tekrar<button data-act="rep" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num">${t.r||0}</span><button data-act="rep" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span>
           <button class="tog" data-act="sb" data-f="s1" data-k="${esc(k)}" aria-pressed="${!!t.s1}">${t.s1?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[0]||"Soru B. 1")}</button>
           <button class="tog" data-act="sb" data-f="s2" data-k="${esc(k)}" aria-pressed="${!!t.s2}">${t.s2?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[1]||"Soru B. 2")}</button></div>
           <input class="tnote" type="text" id="n-${esc(k)}" data-act="tnote" data-k="${esc(k)}" value="${esc(t.n||"")}" placeholder="Not ekle (ör. formülleri tekrar et)"></div>`; }).join("")}
-      </details>`; }).join("")}
+      </details>`; }).join(""))(subColors(list))}
   </div>`;
 }
 function pCetele(s){
   const ex = S.ex, list = ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll);
-  let max = 1, total = 0; list.forEach(sub=>sub.t.forEach(n=>{ const y=(s.topics[tkey(sub.k,n)]||{}).y||0; max=Math.max(max,y); total+=y; }));
+  const CLS = subColors(list); let max = 1, total = 0; list.forEach(sub=>sub.t.forEach(n=>{ const y=(s.topics[tkey(sub.k,n)]||{}).y||0; max=Math.max(max,y); total+=y; }));
   const head = A() ? "" : topbar(`<h1 class="ttl">Yanlış Çetelesi</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`);
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
     <div class="seg"><button data-act="ex" data-v="TYT" aria-pressed="${ex==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${ex==="AYT"}">AYT</button></div>
     <div class="card"><div class="sech"><h3>${ex} toplam yanlış</h3><b class="num" style="color:var(--bad);font-size:22px">${total}</b></div><p class="muted small" style="margin:6px 0 0">Deneme ve testlerden sonra yanlış yaptığın konuları burada işaretle. En çok yanlış yapılan konular koçunun özetinde görünür.</p></div>
-    ${list.map(sub=>{ const tot = sub.t.reduce((a,n)=>a+((s.topics[tkey(sub.k,n)]||{}).y||0),0);
-      return `<details class="subj" ${tot?"open":""}><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${ex}</span></span><span></span><span class="pct num" style="color:${tot?"var(--bad)":"var(--faint)"}">${tot}</span></summary>
+    ${list.map((sub,si)=>{ const tot = sub.t.reduce((a,n)=>a+((s.topics[tkey(sub.k,n)]||{}).y||0),0);
+      return `<details class="${CLS[si]}" ${tot?"open":""}><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${ex}</span></span><span></span><span class="pct num" style="color:${tot?"var(--bad)":"var(--faint)"}">${tot}</span></summary>
       ${sub.t.map(n=>{ const k=tkey(sub.k,n), y=(s.topics[k]||{}).y||0;
         return `<div class="trow" style="flex-direction:row;align-items:center;gap:12px"><div style="flex:1;min-width:0"><div class="tn">${esc(n)}</div>${y?`<div class="wbar" style="width:${y/max*100}%"></div>`:""}</div><span class="stepper"><button data-act="yan" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num cnt ${y>=5?"hot":""}">${y}</span><button data-act="yan" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span></div>`; }).join("")}
       </details>`; }).join("")}
@@ -1055,12 +1070,51 @@ function sheet(html, onSubmit){
   form.addEventListener("submit", e=>{ e.preventDefault(); e.stopPropagation(); onSubmit && onSubmit(new FormData(form), form); });
   const first = form.querySelector("input[type=text],input[type=number],select"); if(first && window.innerWidth>700) first.focus();
 }
+/* ---------- Haftalık hedef: konu arama ve öneri ---------- */
+function dersSubs(s, d){ const nd = trLow(d), all = [...CURX().TYT.map(x=>({...x, ex:"TYT"})), ...CURX().AYT.map(x=>({...x, ex:"AYT"}))];
+  const base = x => trLow(x.n.split(" · ")[0]);
+  let m = all.filter(x=> base(x).startsWith(nd) || nd.startsWith(base(x)) || (nd.startsWith("din") && x.k==="afel"));
+  if(!m.length) return all;
+  const al = s.alan, rel = m.filter(x=> x.ex==="TYT" || !x.a || !ALANLAR.includes(al) || x.a.includes(al));
+  return rel.length ? rel : m; }
+const splitKonu = v => String(v||"").split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean);
+function konuOneri(s, d, subs){
+  const ordered = subs.flatMap(sub=>sub.t.map(n=>({n, k:tkey(sub.k,n)})));
+  const weeks = Object.keys(s.plan||{}).filter(w=> w < S.week && (s.plan[w].hedef||{})[d] && s.plan[w].hedef[d].konu).sort();
+  const used = new Set(weeks.flatMap(w=>splitKonu(s.plan[w].hedef[d].konu)));
+  const done = n => ordered.some(o=>o.n===n && topicScore((s.topics||{})[o.k])>=1);
+  const out = [];
+  if(weeks.length){ const last = s.plan[weeks[weeks.length-1]].hedef[d], lt = splitKonu(last.konu);
+    if(!last.done) lt.filter(n=>!done(n)).forEach(n=> out.push({n, why:"Geçen hafta bitmedi, devam"}));
+    const idx = Math.max(-1, ...lt.map(n=>ordered.findIndex(o=>o.n===n)));
+    const nx = ordered.slice(idx+1).find(o=> !used.has(o.n) && !done(o.n)); if(nx) out.push({n:nx.n, why: last.done ? "Geçen hafta bitti, sıradaki konu" : "Sıradaki konu"}); }
+  else { const nx = ordered.find(o=>!done(o.n)); if(nx) out.push({n:nx.n, why:"Bitirilmemiş ilk konu"}); }
+  return out.slice(0,3); }
+let KSEL = [];
+function kselNote(){ const e = $("#ksel"); if(e) e.innerHTML = KSEL.length ? `Seçilen: <b>${esc(KSEL.join(", "))}</b>` : `<span class="faint">Henüz konu seçilmedi</span>`; }
+
 function closeSheet(){ $("#layer").innerHTML=""; }
 document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#layer").innerHTML) closeSheet(); });
 const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
   const s = st();
+  if(kind==="konu"){ const d = el.dataset.ders, w = S.week, p = plan(s,w), cur = ((p.hedef||{})[d]||{}).konu || "";
+    const subs = dersSubs(s,d), allT = new Set(subs.flatMap(x=>x.t)); KSEL = splitKonu(cur);
+    const free = KSEL.filter(x=>!allT.has(x)); KSEL = KSEL.filter(x=>allT.has(x));
+    const one = konuOneri(s,d,subs);
+    const tbtn = (sub,n) => { const full = topicScore((s.topics||{})[tkey(sub.k,n)])>=1;
+      return `<button type="button" class="kt" data-act="kt" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${KSEL.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span>${full?`<small>bitti</small>`:""}</button>`; };
+    return sheet(`<h3>${esc(d)} · bitirilecek konu</h3>
+      <input type="search" id="kq" placeholder="Konu ara (ör. basınç, türev)" autocomplete="off" aria-label="Konu ara">
+      ${one.length?`<div class="koneri"><div class="gh">Öneri</div>${one.map(o=>`<button type="button" class="kt sug" data-act="kt" data-v="${esc(o.n)}" data-q="${esc(trLow(o.n))}" aria-pressed="${KSEL.includes(o.n)}">${icon("check","xs")}<span>${esc(o.n)}<small class="kwhy">${esc(o.why)}</small></span></button>`).join("")}</div>`:""}
+      <div class="klist">${subs.map((sub,si)=>`<div class="kgrp" data-grp><div class="gh">${sub.ex} · ${esc(sub.n)}</div>${sub.t.map(n=>tbtn(sub,n)).join("")}</div>`).join("")}<p class="faint small" id="knone" hidden>Bu aramayla eşleşen konu yok. Aşağıya elle yazabilirsin.</p></div>
+      <p class="small" id="ksel" style="margin:0"></p>
+      <label class="f">Listede yoksa elle yaz<input type="text" name="serbest" id="kfree" value="${esc(free.join(", "))}" placeholder="ör. Karma test"></label>
+      <div class="acts"><button type="button" class="btn" data-act="kclear">Temizle</button><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
+    fd=>{ const v = [...KSEL, ...splitKonu(fd.get("serbest"))].filter((x,i,a)=>a.indexOf(x)===i).join(", ");
+      mutate(st=>{ const pp = ensurePlan(st,w); if(v) pp.hedef[d] = {konu:v, done: !!(pp.hedef[d] && pp.hedef[d].done && pp.hedef[d].konu===v)}; else delete pp.hedef[d]; });
+      closeSheet(); render(); }), kselNote(); }
   if(kind==="tema") return sheet(`<h3>Görünüm</h3>
     <div class="f">Mod<div class="seg">${[["system","Otomatik"],["light","Açık"],["dark","Koyu"]].map(([k,l])=>`<button type="button" data-act="mode" data-v="${k}" aria-pressed="${THEME.mode===k}">${l}</button>`).join("")}</div></div>
     <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
@@ -1207,6 +1261,8 @@ document.addEventListener("click", e=>{
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
     case "ex": S.ex=v; render(); break;
     case "aytall": S.aytAll=!S.aytAll; render(); break;
+    case "kt": { const n=v, on=!KSEL.includes(n); KSEL = on ? [...KSEL, n] : KSEL.filter(x=>x!==n); document.querySelectorAll("#layer .kt").forEach(x=>{ if(x.dataset.v===n) x.setAttribute("aria-pressed", on); }); kselNote(); break; }
+    case "kclear": KSEL=[]; document.querySelectorAll("#layer .kt").forEach(x=>x.setAttribute("aria-pressed","false")); { const f=$("#kfree"); if(f) f.value=""; } kselNote(); break;
     case "tick": { const d=b.dataset.date, id=b.dataset.id; mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
     case "copyweek": { if(!A()) break; mutate(s=>{ const pw=pPrev(s,S.week), pp=plan(s,pw), np=ensurePlan(s,S.week), oldDays=pDays(s,pw); let c=0;
       pDays(s,S.week).forEach((cd,i)=>{ const pd = oldDays.find(o=>dIdx(o)===dIdx(cd)); if(!pd) return; const src=dayTasks(s,pd); c+=src.length; setDayTasks(s,cd, src.map(t=>({id:uid(), t:taskText(t), done:false, doneAt:null}))); const sv=(pp.saat||{})[pIdx(s,pd)]; if(sv!=null&&sv!=="") np.saat[i]=sv; });
@@ -1240,9 +1296,13 @@ document.addEventListener("change", e=>{
   else if(t.dataset.plan || t.dataset.hd==="konu"){ setTimeout(()=>{ if(!document.activeElement || !document.activeElement.matches("textarea,input[type=text],input[type=number]")) render(); }, 0); }
   else if(t.dataset.f && t.type==="date"){ setField(t.dataset.f, t.value); }
 });
+document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
 document.addEventListener("input", e=>{
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
+  if(t.id==="kq"){ const q = trLow(t.value).trim(); let any=false;
+    document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || b.dataset.q.includes(q); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; if(n) any=true; });
+    const ko=$("#layer .koneri"); if(ko) ko.hidden = !!q; const kn=$("#knone"); if(kn) kn.hidden = any; return; }
   if(t.dataset.dy) updateNets();
   else if(t.dataset.act==="q"){ S.q=t.value; const pos=t.selectionStart; render(); const n=$("#q"); if(n){ n.focus(); try{ n.setSelectionRange(pos,pos); }catch(_){} } }
   else if(t.dataset.act==="tnote"){ mutate(s=>{ topic(s,t.dataset.k).n=t.value; }); }
