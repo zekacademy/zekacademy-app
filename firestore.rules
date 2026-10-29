@@ -1,0 +1,41 @@
+rules_version = '2';
+// Zekacademy güvenlik kuralları
+// - Koç (zekacademy@app.zekacademy.com) her şeyi okur ve yazar.
+// - Öğrenci sadece kendi kaydını okur/yazar; koça ait alanları (koçtan not, hedef netler, görüşme günleri) değiştiremez.
+// - Koçun özel notları (coachNotes) sadece koça açık.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isCoach() { return signedIn() && request.auth.token.email == 'zekacademy@app.zekacademy.com'; }
+    function isSelf(uid) { return signedIn() && request.auth.uid == uid; }
+    function coachOnlyKeys() { return ['koctanNot', 'hedef', 'donem', 'programYeni', 'kullanici', 'sbAd']; }
+
+    match /students/{uid} {
+      allow read: if isCoach() || isSelf(uid);
+      allow create: if isCoach()
+        || (isSelf(uid) && request.resource.data.get('ilkSifre', false) == false
+            && request.resource.data.get('koctanNot', null) == null
+            && !request.resource.data.keys().hasAny(['donem', 'programYeni']));
+      allow update: if isCoach()
+        || (isSelf(uid)
+            && !request.resource.data.diff(resource.data).affectedKeys().hasAny(coachOnlyKeys())
+            && (request.resource.data.get('ilkSifre', false) == false || resource.data.get('ilkSifre', false) == true));
+      allow delete: if isCoach();
+    }
+
+    match /coachNotes/{uid} {
+      allow read, write: if isCoach();
+    }
+
+    match /settings/{id} {
+      allow read: if signedIn();
+      allow write: if isCoach();
+    }
+
+    match /notifs/{id} {
+      allow read, update, delete: if isCoach();
+      allow create: if signedIn() && request.resource.data.sid == request.auth.uid
+        && request.resource.data.type in ['kayit'] && request.resource.data.read == false;
+    }
+  }
+}
