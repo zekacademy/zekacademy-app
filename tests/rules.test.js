@@ -71,6 +71,8 @@ test("kayıt: öğrenci kendi kaydını oluşturur, başkasınınkini oluşturam
 test("bildirimler: öğrenci sadece kendi kayıt bildirimini oluşturur, okuyamaz", async () => {
   await assertSucceeds(setDoc(doc(ali(), "notifs/n2"), { type: "kayit", sid: "ali", read: false, name: "Ali" }));
   await assertFails(setDoc(doc(ali(), "notifs/n3"), { type: "kayit", sid: "ayse", read: false }));
+  await assertSucceeds(setDoc(doc(coach(), "notifs/b1"), { type: "basvuru", read: true, deneme: true, name: "Deneme" }));
+  await assertFails(setDoc(doc(ali(), "notifs/b2"), { type: "basvuru", sid: "ali", read: false }));
   await assertFails(getDoc(doc(ali(), "notifs/n1")));
   await assertSucceeds(getDoc(doc(coach(), "notifs/n1")));
 });

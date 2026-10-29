@@ -402,6 +402,21 @@ input:disabled{opacity:.5}
 a.btn{text-decoration:none;color:var(--fg)}
 a.btn.pri{color:var(--acfg)}
 pre.kod{margin:0;max-height:260px;overflow:auto;background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:12px;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--fg)}
+/* Başvuru süreci */
+.bcard{background:var(--surface);border:1px solid var(--line);border-left:5px solid #1E9E4A;border-radius:18px;box-shadow:var(--shadow);padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.bcard.b-hayir{border-left-color:var(--faint);opacity:.8}
+.bcard.b-ogrenci{border-left-color:var(--good)}
+.bhead{display:flex;align-items:center;gap:12px}
+.bdur{flex:none;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:8px;background:color-mix(in srgb,#1E9E4A 14%,var(--surface));color:#168A3F}
+.bsteps{display:flex;flex-direction:column;gap:10px}
+.bstep{display:flex;gap:12px;align-items:flex-start}
+.bstep .bno{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;background:var(--sunk);color:var(--muted)}
+.bstep.done .bno{background:#1E9E4A;color:#fff}
+.bstep.done>div>b{color:var(--muted)}
+.bmore summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--muted)}
+.bmore dl{margin:8px 0 0;display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr);gap:4px 12px;font-size:13px}
+.bmore dt{color:var(--muted);font-weight:600}.bmore dd{margin:0;font-weight:700;overflow-wrap:anywhere}
+input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-size:15px;font-weight:500;color:var(--fg)}
 /* Google Form başvuru bildirimi (yeşil) */
 .nbas{border:2px solid #1E9E4A;background:color-mix(in srgb,#1E9E4A 9%,var(--surface));border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
 .nbas .nbh{display:flex;align-items:center;gap:10px}
