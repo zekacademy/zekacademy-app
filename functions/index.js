@@ -1,7 +1,8 @@
 /* Zekacademy sunucu fonksiyonları (Cloud Functions 2. nesil, Frankfurt) */
 import { setGlobalOptions } from "firebase-functions/v2";
 import { onSchedule } from "firebase-functions/v2/scheduler";
-import { onCall, HttpsError } from "firebase-functions/v2/https";
+import { onCall, onRequest, HttpsError } from "firebase-functions/v2/https";
+import { randomBytes, timingSafeEqual } from "node:crypto";
 import { onDocumentCreated } from "firebase-functions/v2/firestore";
 import { onMessagePublished } from "firebase-functions/v2/pubsub";
 import { logger } from "firebase-functions";
@@ -78,11 +79,13 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   logger.info(`Bildirim (${jobs.join(", ")}): ${sent} gönderildi`, { date });
 });
 
-/* Yeni öğrenci kaydı → koça bildirim */
+/* Yeni öğrenci kaydı veya Google Form başvurusu → koça bildirim */
 export const yeniKayitBildirimi = onDocumentCreated("notifs/{id}", async (event) => {
-  const n = event.data && event.data.data(); if (!n || n.type !== "kayit") return;
+  const n = event.data && event.data.data(); if (!n || !["kayit", "basvuru"].includes(n.type)) return;
   const tokens = await coachTokens();
-  const r = await pushTo(tokens, "Yeni öğrenci kaydı", `${n.name || "Bir öğrenci"} kaydoldu${n.alan ? ` · ${n.alan}` : ""}${n.sinif ? ` · ${n.sinif}` : ""}`, "/?ac=bildirim");
+  const r = n.type === "basvuru"
+    ? await pushTo(tokens, "🟢 Yeni başvuru · Google Form", [n.name || "Yeni başvuru", n.hizmet, n.alan].filter(Boolean).join(" · "), "/?ac=bildirim")
+    : await pushTo(tokens, "Yeni öğrenci kaydı", `${n.name || "Bir öğrenci"} kaydoldu${n.alan ? ` · ${n.alan}` : ""}${n.sinif ? ` · ${n.sinif}` : ""}`, "/?ac=bildirim");
   for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
 });
 
@@ -128,4 +131,37 @@ export const butceSigortasi = onMessagePublished("butce-uyari", async (event) =>
   if (!info.billingEnabled) { logger.info("Ödeme zaten kapalı"); return; }
   await client.request({ url, method: "PUT", data: { billingAccountName: "" } });
   logger.warn(`Bütçe aşıldı (${cost}/${budget} ${msg.currencyCode}); ödeme bağlantısı kesildi.`);
+});
+
+/* ---------- Google Form başvuruları ---------- */
+const FORM_URL = `https://europe-west3-${PROJECT}.cloudfunctions.net/formBasvuru`;
+/* Koç: Apps Script'e yapıştırılacak gizli anahtarı verir (yoksa oluşturur) */
+export const formAnahtari = onCall(async (req) => {
+  requireCoach(req);
+  const ref = db.doc("system/form"), cur = (await ref.get()).data() || {};
+  let anahtar = cur.anahtar;
+  if (!anahtar || (req.data && req.data.yenile)) { anahtar = randomBytes(24).toString("hex"); await ref.set({ anahtar, olusturma: new Date().toISOString() }, { merge: true }); }
+  return { anahtar, url: FORM_URL };
+});
+const esit = (a, b) => { const x = Buffer.from(String(a || "")), y = Buffer.from(String(b || "")); return x.length === y.length && x.length > 0 && timingSafeEqual(x, y); };
+const cut = (v, n) => String(v == null ? "" : v).slice(0, n);
+/* Google Form gönderildiğinde Apps Script buraya yollar → koça yeşil bildirim */
+export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "public" }, async (req, res) => {
+  if (req.method !== "POST") { res.status(405).send("POST"); return; }
+  const b = req.body || {};
+  const kayitli = ((await db.doc("system/form").get()).data() || {}).anahtar;
+  if (!esit(b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
+  const cevaplar = (Array.isArray(b.cevaplar) ? b.cevaplar : []).slice(0, 40).map(x => ({ s: cut(x && x.s, 200), c: cut(x && x.c, 2000) })).filter(x => x.s);
+  const bul = re => (cevaplar.find(x => re.test(x.s)) || {}).c || "";
+  const doc = {
+    type: "basvuru", at: new Date().toISOString(), read: false, deneme: !!b.deneme,
+    name: cut(bul(/İsim|isim|ad[ıi]? ?soyad|adınız/i), 120),
+    tel: cut(bul(/telefon|numara|gsm/i), 40),
+    eposta: cut(bul(/mail|e-posta|eposta/i) || b.eposta, 120),
+    alan: cut(bul(/alan/i), 60),
+    hizmet: cut(bul(/hizmet|paket/i), 120),
+    cevaplar,
+  };
+  await db.collection("notifs").add(doc);
+  res.status(200).json({ ok: true });
 });
