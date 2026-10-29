@@ -78,7 +78,10 @@ jobs:
         run: |
           npm --prefix functions install --no-audit --no-fund
           if ! firebase deploy --only functions --project "$PROJE" --non-interactive --force > out.txt 2>&1; then
-            tail -n 60 out.txt | sed 's/^/::error::/'; exit 1; fi
+            sed 's/\x1b\[[0-9;]*m//g' out.txt > temiz.txt
+            { grep -iE "error|denied|permission|failed|hata" temiz.txt | tail -n 25; echo "----- son satırlar -----"; tail -n 25 temiz.txt; } > ozet.txt
+            echo "::error title=Fonksiyon yayını::$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' ozet.txt)"
+            exit 1; fi
           echo "::notice::Sunucu fonksiyonları yayınlandı"
       - name: Temizlik
         if: always()
