@@ -23,6 +23,14 @@ service cloud.firestore {
       allow delete: if isCoach();
     }
 
+    match /coachDevices/{id} {
+      allow read, write: if isCoach();
+    }
+
+    match /system/{id} {
+      allow read, write: if false;
+    }
+
     match /coachNotes/{uid} {
       allow read, write: if isCoach();
     }
