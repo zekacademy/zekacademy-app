@@ -173,8 +173,14 @@ function applyTheme(){
   const r = document.documentElement;
   r.classList.toggle("m-light", THEME.mode==="light"); r.classList.toggle("m-dark", THEME.mode==="dark");
   r.setAttribute("data-accent", THEME.accent);
+  setBarColor();
   try{ localStorage.setItem("zk-theme", JSON.stringify(THEME)); }catch(e){}
 }
+/* Telefonun üst çubuğu: açık modda tema rengi, koyu modda koyu zemin */
+function setBarColor(){ const dark = THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
+  const c = dark ? "#0A0B0E" : ({green:"#1E9E4A", blue:"#2563EB", red:"#DC2F3C"}[THEME.accent] || "#1E9E4A");
+  const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c); }
+try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setBarColor); }catch(e){}
 applyTheme();
 
 /* ---------- Durum ---------- */
