@@ -85,6 +85,7 @@ const ADMIN_U = "zekacademy";
 
 /* ---------- İkonlar ---------- */
 const IC = {
+  phone:'<path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2.5v13h8v-13zm3 15h2v1.5h-2z"/><path d="M11 6.5h2v4h2l-3 3.5-3-3.5h2z"/>',
  home:'<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
  cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>',
  chart:'<path d="M5 20V11M12 20V4M19 20v-6"/>',
@@ -923,6 +924,27 @@ function keepSettingsOpen(openSubj){
   const ss = document.querySelectorAll("details.setsec details.subj"); ss.forEach((d,i)=>{ if(sub[i]) d.open=true; }); if(openSubj!=null && ss[openSubj]) ss[openSubj].open = true;
 }
 
+/* ---------- Uygulamayı yükle (giriş ekranı) ---------- */
+let installEvt = null;
+const isAndroid = () => /android/i.test(navigator.userAgent);
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; refreshInstall(); });
+window.addEventListener("appinstalled", () => { installEvt = null; refreshInstall(); toast("Uygulama yüklendi! Artık ana ekrandaki Zekacademy simgesinden açabilirsin."); });
+function installCard(){
+  if(isStandalone()) return "";
+  const head = t => `<div class="inst-h"><span class="inst-i">${icon("phone","sm")}</span><div><b>Uygulamayı telefonuna yükle</b><span>${t}</span></div></div>`;
+  if(installEvt) return `<div class="instcard">${head("Tek dokunuşla kur; bildirimler gelsin, tam ekran açılsın.")}<button type="button" class="btn pri full" data-act="install">Uygulamayı yükle</button></div>`;
+  if(isIOS()) return `<div class="instcard">${head("Bildirimlerin gelmesi için iPhone'da bu adım şart.")}<ol class="inst-s"><li><b>Safari</b> ile aç (başka tarayıcıdaysan adresi Safari'ye yapıştır).</li><li>Alttaki <b>Paylaş</b> düğmesine dokun (yukarı oklu kare).</li><li><b>Ana Ekrana Ekle</b> → <b>Ekle</b>.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
+  if(isAndroid()) return `<div class="instcard">${head("Bildirimler gelsin, tam ekran açılsın.")}<ol class="inst-s"><li><b>Chrome</b>'da sağ üstteki <b>⋮</b> menüsüne dokun.</li><li><b>Uygulamayı yükle</b> (ya da <b>Ana ekrana ekle</b>) seçeneğine dokun.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
+  return "";
+}
+function refreshInstall(){ const el = document.getElementById("instWrap"); if(el) el.innerHTML = installCard(); }
+async function doInstall(){
+  if(!installEvt) return refreshInstall();
+  const e = installEvt; installEvt = null;
+  try{ await e.prompt(); await e.userChoice; }catch(_){}
+  refreshInstall();
+}
+
 /* ---------- Giriş ---------- */
 function renderAuth(){
   const r = S.authRole, mode = r==="admin" ? "admin" : S.auth, rd = true;
@@ -931,7 +953,7 @@ function renderAuth(){
   const submit = l => `<button class="btn pri full" style="padding:14px" data-label="${l}" ${rd?"":"disabled"}>${rd?l:"Yükleniyor…"}</button>`;
   let f = "";
   if(mode==="signup") f = `<form class="apanel" id="fSignup" novalidate>
-    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}
+    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}<div id="instWrap">${installCard()}</div>
     <div class="ahero"><b>YKS yolculuğun tek uygulamada</b><span>Koçunun hazırladığı programı takip et, çalışmanı ve denemelerini kaydet.</span></div>
     <h2>Kayıt ol</h2><p class="sub">Bilgilerini bir kez gir, sonrasında panelin doğrudan açılsın.</p>
     <label class="f">Ad soyad<input type="text" id="r-name" name="name" autocomplete="name"></label>
@@ -953,7 +975,7 @@ function renderAuth(){
     <div class="card"><b>Koçuna ne yazmalısın?</b><p class="muted small" style="margin:6px 0 0">“Hocam şifremi unuttum, kullanıcı adım: …” yazman yeterli.</p></div>
     <p class="swap"><button type="button" class="link" data-act="amode" data-v="login">Girişe dön</button></p></div>`;
   else { const adm = mode==="admin"; f = `<form class="apanel" id="fLogin" novalidate>
-    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}
+    <div class="logo"><span class="lm">Z</span>zekacademy</div>${roleSeg}<div id="instWrap">${installCard()}</div>
     <h2>${adm?"Koç girişi":"Giriş yap"}</h2><p class="sub">${adm?"Tüm öğrencilerini görmek ve yönetmek için.":"Kayıt olurken oluşturduğun bilgilerle gir."}</p>
     <label class="f">Kullanıcı adı<input type="text" id="l-u" name="u" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"></label>
     <label class="f">Şifre<input type="password" id="l-p" name="p" autocomplete="current-password"></label>
@@ -1171,6 +1193,7 @@ document.addEventListener("click", e=>{
   switch(a){
     case "arole": S.authRole=v; if(v==="student" && S.auth==="admin") S.auth="login"; renderAuth(); break;
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
+    case "install": doInstall(); break;
     case "logout": logout(); break;
     case "pushon": enablePush(); break;
     case "go": S.view=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
