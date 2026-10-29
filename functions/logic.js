@@ -56,7 +56,8 @@ export const hm = x => { const [h,m] = String(x||"0:0").split(":").map(Number); 
 
 export function cfg(x = {}){ return {
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
-  aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM, kurum: x.kurum || "zekacademy" }; }
+  aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM, kurum: x.kurum || "zekacademy",
+  odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ }; }
 
 const anchors = s => (s.donem||[]).slice().sort();
 function pStart(s, d){ const an = anchors(s).filter(a=>a<=d); if(!an.length) return monday(d); const a = an[an.length-1]; return addDays(a, Math.floor(dDiff(a,d)/7)*7); }
@@ -81,3 +82,13 @@ export function eveningText(settings, student, date, nowMs = Date.now()){
 }
 /** Gönderim zamanı geldi mi? (hedef saatten itibaren 60 dk içinde ve bugün henüz gönderilmediyse) */
 export function due(target, nowMinutes, lastSentDate, date){ return lastSentDate !== date && nowMinutes >= hm(target) && nowMinutes < hm(target) + 60; }
+
+/* ---------- Ödeme hatırlatması ---------- */
+export const DEF_ODEME_MESAJ = "Merhaba, bu mesaj aylık döngümüzü hatırlatma mesajıdır. Ödememizi yaptıysak bu mesajı dikkate almayalım, dekontu Zekeriya hocaya iletmen yeterli. Eğer önemli veya acil bir durum varsa Zekeriya hocaya rahatça söyleyebilirsin.";
+export function addMonthsISO(d, n){ const [y,m,g] = d.split("-").map(Number); const t = new Date(Date.UTC(y, m-1+n, 1, 12)); const last = new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth()+1, 0)).getUTCDate(); t.setUTCDate(Math.min(g,last)); return t.toISOString().slice(0,10); }
+/* Ödeme günleri: başlangıçtan son tarihe kadar (uygulamadaki ile aynı hesap) */
+export function vadeler(o, son){ if(!o || !o.bas) return []; const out = [];
+  for(let i=0; i<240; i++){ const d = o.periyot==="hafta4" ? addDays(o.bas, 28*i) : addMonthsISO(o.bas, i); if(d > son) break; out.push(d); } return out; }
+/* Bugün hatırlatma gidecek mi? Ödeme günü ve 5 gün sonrası; ödendiyse ya da taslak veriyse gitmez */
+export function odemeHatirlat(o, date){ if(!o || !o.bas || o.taslak) return null; const paid = o.odenen || {};
+  return vadeler(o, date).find(d => !paid[d] && (d === date || addDays(d, 5) === date)) || null; }

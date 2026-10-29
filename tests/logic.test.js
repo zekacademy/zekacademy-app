@@ -37,3 +37,16 @@ test("gönderim zamanı: saatten itibaren 1 saat içinde ve günde bir kez", () 
   assert.equal(due("08:30", 9 * 60 + 45, "", "2026-10-29"), false);
   assert.equal(due("08:30", 8 * 60 + 45, "2026-10-29", "2026-10-29"), false);
 });
+
+test("ödeme hatırlatması: ödeme günü ve 5 gün sonra, ödendiyse ya da taslaksa gitmez", async () => {
+  const L = await import("../functions/logic.js");
+  const o = { bas: "2026-09-15", periyot: "ay", odenen: { "2026-09-15": { t: "2026-09-15" } } };
+  assert.equal(L.odemeHatirlat(o, "2026-10-15"), "2026-10-15");
+  assert.equal(L.odemeHatirlat(o, "2026-10-20"), "2026-10-15");
+  assert.equal(L.odemeHatirlat(o, "2026-10-17"), null);
+  assert.equal(L.odemeHatirlat(o, "2026-09-20"), null); /* ödenmiş */
+  assert.equal(L.odemeHatirlat({ ...o, odenen: { ...o.odenen, "2026-10-15": {} } }, "2026-10-20"), null);
+  assert.equal(L.odemeHatirlat({ ...o, taslak: true }, "2026-10-15"), null);
+  assert.equal(L.addMonthsISO("2026-01-31", 1), "2026-02-28");
+  assert.equal(L.vadeler({ bas: "2026-01-01", periyot: "hafta4" }, "2026-02-26").join(","), "2026-01-01,2026-01-29,2026-02-26");
+});
