@@ -9,4 +9,4 @@ export const firebaseConfig = {
 };
 // Web Push sertifikasının herkese açık anahtarı (Firebase → Proje ayarları → Cloud Messaging → Web Push certificates).
 // Boşken bildirim düğmeleri gizlenir.
-export const vapidKey = "";
+export const vapidKey = "BNXm1tYX1T6M8UZNeMp_bsGhZbTClVr4U6C9J_IR-EvqEzUYwRmYs_anoNGoDsAazP7HQeKgs4C7a7-bZwEbmOc";
