@@ -178,7 +178,7 @@ function applyTheme(){
 applyTheme();
 
 /* ---------- Durum ---------- */
-const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), settings:{examDate:"2027-06-19", tahmini:true},
+const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), settings:{examDate:"2027-06-19", tahmini:false},
   ready:false, role:null, me:null, auth:"signup", authRole:"student",
   view:"home", cur:null, dtab:"ozet", week:monday(new Date()), day:today(), pmode:"gun", ex:"TYT", aytAll:false, q:"" };
 const A = () => S.role === "admin";
@@ -252,7 +252,7 @@ function watchColl(coll, need){
     e=>{ console.error(coll, e); loaded[coll]=true; checkReady(need); render(); }));
 }
 function watchSettings(need){
-  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } loaded.settings=true; checkReady(need); render(true); },
+  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
