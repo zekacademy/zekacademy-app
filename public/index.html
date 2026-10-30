@@ -474,6 +474,24 @@ div.b7{cursor:default}
 .wam{text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:14px;color:var(--fg);cursor:pointer}
 .wam:hover{border-color:#25D366}
 .btn.wa{border-color:#25D366;color:#128C7E}
+/* Yumuşak geçişler */
+@keyframes pgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes ovin{from{opacity:0}to{opacity:1}}
+@keyframes shin{from{opacity:.6;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes acin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.shell.pgin>*:not(.nav){animation:pgin .24s cubic-bezier(.2,.7,.3,1) both}
+#layer .ov{animation:ovin .18s ease both}
+#layer .sheet{animation:shin .26s cubic-bezier(.2,.8,.3,1) both}
+details[open]>*:not(summary){animation:acin .18s ease both}
+.btn,.row,.nb,.srow,.gday,.kt,.gozi,.iconbtn,.tog,.qb,.hero{transition:transform .12s ease,background-color .15s ease,border-color .15s ease}
+.btn:active,.row:active,.srow:active,.gday:active,.kt:active,.gozi:active,.iconbtn:active,.tog:active,.qb:active,.hero:active{transform:scale(.97)}
+.nb:active .bub,.nb:active>svg{transform:scale(.9);transition:transform .1s ease}
+.toast{animation:pgin .2s ease both}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* Bildirim satırı + sil */
+.nrow{display:flex;align-items:center;gap:6px;padding:0}
+.nrow .nrowb{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:12px 0;border:0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.nrow .nx{flex:none;box-shadow:none;border:0;background:transparent;color:var(--faint)}
 /* Başvuru süreci */
 .bcard{background:var(--surface);border:1px solid var(--line);border-left:5px solid #1E9E4A;border-radius:18px;box-shadow:var(--shadow);padding:14px 16px;display:flex;flex-direction:column;gap:12px}
 .bcard.b-hayir{border-left-color:var(--faint);opacity:.8}

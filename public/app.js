@@ -420,6 +420,9 @@ function render(fromSnap){
   const y = window.scrollY, acik = new Set([...root.querySelectorAll("details[data-key][open]")].map(d=>d.dataset.key));
   root.innerHTML = A() ? coachShell() : studentShell();
   if(acik.size) root.querySelectorAll("details[data-key]").forEach(d=>{ if(acik.has(d.dataset.key)) d.open = true; }); /* açık bölümler dokununca kapanmasın */
+  const sayfa = [S.role, S.view, S.dtab, S.cur, S.gday, S.pmode, S.ex, S.mx, S.btab].join("|"); /* sayfa değişince hafif geçiş */
+  if(!fromSnap && sayfa !== S._sayfa){ const sh = root.querySelector(".shell"); if(sh && S._sayfa) sh.classList.add("pgin"); }
+  S._sayfa = sayfa;
   window.scrollTo(0, y);
 }
 function navHTML(items){
@@ -484,7 +487,7 @@ function sBell(s){
   if(s.koctanNot && s.koctanNot.date && s.koctanNot.date > (s.notSeen||"")){ s.notSeen = s.koctanNot.date; save(); }
   return `${topbar(`<h1 class="ttl">Bildirimler</h1>`, "", `<button class="iconbtn" data-act="go" data-v="home" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page"><div class="card">${n.length? n.map(([ic,t,d])=>`<div class="row"><span class="ri">${icon(ic,"sm")}</span><div style="min-width:0"><div class="rt">${esc(t)}</div><div class="rs">${esc(d)}</div></div></div>`).join("") : `<div class="empty">Şimdilik yeni bir şey yok.</div>`}</div>
-  <p class="faint small" style="text-align:center">Gerçek uygulamada bu hatırlatmalar telefonuna bildirim olarak da gelecek.</p></div>`;
+  <p class="faint small" style="text-align:center">Bildirimleri açtıysan hatırlatmalar telefonuna da gelir.</p></div>`;
 }
 function sMore(s){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
@@ -1209,14 +1212,14 @@ function cBell(){
   const unreadIds = list.filter(([,n])=>!n.read).map(([id])=>id);
   if(unreadIds.length) setTimeout(()=>{ unreadIds.forEach(id=>{ const n=S.notifs.get(id); if(n){ n.read=true; persistDoc("notifs",id,1500); } }); }, 0);
   const label = {kayit:"Yeni öğrenci kaydı", sifre:"Şifre yenilendi"};
-  const bas = list.filter(([,n])=>n.type==="basvuru"), diger = list.filter(([,n])=>n.type!=="basvuru");
+  const bas = list.filter(([,n])=>n.type==="basvuru" && !n.zilGizli), diger = list.filter(([,n])=>n.type!=="basvuru");
   const telL = t => String(t||"").replace(/[^\d+]/g,""), wa = t => { let d = telL(t).replace(/^\+/,""); if(d.startsWith("0")) d = "9"+d; else if(d.length===10) d = "90"+d; return d; };
   const basCard = ([id,n]) => `<div class="nbas"><div class="nbh"><span class="nbi">${icon("user","sm")}</span><div style="min-width:0;flex:1"><div class="nbt">Yeni başvuru · Google Form${!n.read?` <span class="pill good">Yeni</span>`:""}${n.deneme?` <span class="pill">deneme</span>`:""}</div><div class="small muted">${ago(n.at)}</div></div></div>
       <dl><dt>Ad soyad</dt><dd>${esc(n.name||"—")}</dd>${n.hizmet?`<dt>Hizmet</dt><dd>${esc(n.hizmet)}</dd>`:""}${n.alan?`<dt>Alan</dt><dd>${esc(n.alan)}</dd>`:""}${n.tel?`<dt>Telefon</dt><dd>${esc(n.tel)}</dd>`:""}${n.eposta?`<dt>E-posta</dt><dd>${esc(n.eposta)}</dd>`:""}</dl>
       ${(n.cevaplar||[]).length?`<details><summary>Tüm cevaplar (${n.cevaplar.length})</summary><dl style="margin-top:8px">${n.cevaplar.map(x=>`<dt>${esc(x.s)}</dt><dd>${esc(x.c||"—")}</dd>`).join("")}</dl></details>`:""}
-      <div class="pills">${n.tel?`<a class="btn sm" href="tel:${esc(telL(n.tel))}">Ara</a><a class="btn sm" href="https://wa.me/${esc(wa(n.tel))}" target="_blank" rel="noopener">WhatsApp</a>`:""}<button class="btn sm pri" data-act="go" data-v="basvuru">Süreci yönet · ${esc(bdLabel(n.durum||"yeni"))}</button></div></div>`;
-  return `${topbar(`<h1 class="ttl">Bildirimler</h1>`)}
-  <div class="page wide">${bas.length?`<h3 style="margin:0">Google Form başvuruları</h3>${bas.map(basCard).join("")}`:""}<div class="card">${diger.length? diger.map(([id,n])=>`<button class="row" data-act="${n.sid&&S.students.has(n.sid)?"open":""}" data-id="${n.sid||""}"><span class="ri" style="${!n.read?"background:var(--acs);color:var(--ac)":""}">${icon(n.type==="kayit"?"user":"alert","sm")}</span><div style="min-width:0"><div class="rt">${label[n.type]||"Bildirim"}${!n.read?` <span class="pill ac">Yeni</span>`:""}</div><div class="rs">${esc(n.name||"")}${n.type==="kayit"?` · ${esc(n.alan||"")} · ${esc(n.sinif||"")}`:" yeni şifre oluşturdu"}</div></div><span class="rx small">${ago(n.at)}</span></button>`).join("") : `<div class="empty">${bas.length?"Başka bildirim yok.":"Henüz bildirim yok. Bir öğrenci kaydolduğunda ya da Google Form doldurulduğunda burada görünür."}</div>`}</div>
+      <div class="pills">${n.tel?`<a class="btn sm" href="tel:${esc(telL(n.tel))}">Ara</a><a class="btn sm" href="https://wa.me/${esc(wa(n.tel))}" target="_blank" rel="noopener">WhatsApp</a>`:""}<button class="btn sm pri" data-act="go" data-v="basvuru">Süreci yönet · ${esc(bdLabel(n.durum||"yeni"))}</button><button class="btn sm" data-act="ngizle" data-id="${id}" title="Başvurular'da kalır">Bildirimden kaldır</button></div></div>`;
+  return `${topbar(`<h1 class="ttl">Bildirimler</h1>`, bas.length||diger.length?`<button class="btn sm" data-act="ntemizle">${icon("trash","xs")} Tümünü temizle</button>`:"")}
+  <div class="page wide">${bas.length?`<h3 style="margin:0">Google Form başvuruları</h3>${bas.map(basCard).join("")}`:""}<div class="card">${diger.length? diger.map(([id,n])=>`<div class="row nrow"><button class="nrowb" data-act="${n.sid&&S.students.has(n.sid)?"open":""}" data-id="${n.sid||""}"><span class="ri" style="${!n.read?"background:var(--acs);color:var(--ac)":""}">${icon(n.type==="kayit"?"user":"alert","sm")}</span><div style="min-width:0"><div class="rt">${label[n.type]||"Bildirim"}${!n.read?` <span class="pill ac">Yeni</span>`:""}</div><div class="rs">${esc(n.name||"")}${n.type==="kayit"?` · ${esc(n.alan||"")} · ${esc(n.sinif||"")}`:" yeni şifre oluşturdu"}</div></div><span class="rx small">${ago(n.at)}</span></button><button class="iconbtn sm nx" data-act="nsil" data-id="${id}" aria-label="Bildirimi sil">${icon("x","sm")}</button></div>`).join("") : `<div class="empty">${bas.length?"Başka bildirim yok.":"Henüz bildirim yok. Bir öğrenci kaydolduğunda ya da Google Form doldurulduğunda burada görünür."}</div>`}</div>
   <p class="faint small" style="text-align:center">Bildirimleri açtıysan bunlar telefonuna da gelir.</p></div>`;
 }
 function cMore(){
@@ -1805,6 +1808,10 @@ document.addEventListener("click", e=>{
     case "bmetin": metinGonder(b.dataset.id, v); break;
     case "bdurum": bSet(b.dataset.id, x=>{ x.durum = v; }); render(); toast(v==="evet"?"Evet dedi: sıradaki adım ödeme bilgisi":v==="hayir"?"Vazgeçenlere taşındı":"Aktife alındı"); break;
     case "btab": S.btab = v; render(); break;
+    case "ngizle": { const n = S.notifs.get(b.dataset.id); if(n){ n.zilGizli = true; n.read = true; persistDoc("notifs", b.dataset.id, 0); } render(); toast("Bildirimden kaldırıldı · Başvurular'da duruyor"); break; }
+    case "ntemizle": { if(!b.dataset.armed){ b.dataset.armed = "1"; b.textContent = "Emin misin? Tekrar dokun"; setTimeout(()=>{ if(b.isConnected){ delete b.dataset.armed; b.textContent = "Tümünü temizle"; } }, 3000); break; }
+      let k = 0; [...S.notifs.entries()].forEach(([id,n])=>{ if(n.type==="basvuru"){ if(!n.zilGizli){ n.zilGizli = true; n.read = true; persistDoc("notifs", id, 0); k++; } } else { S.notifs.delete(id); deleteDoc(doc(fdb,"notifs",id)).catch(()=>{}); k++; } });
+      render(); toast(`${k} bildirim temizlendi · başvurular Başvurular sayfasında duruyor`); break; }
     case "nsil": { const id=b.dataset.id; S.notifs.delete(id); deleteDoc(doc(fdb,"notifs",id)).catch(()=>toast("Silinemedi")); render(); break; }
     case "formkod": formKod(b.dataset.v2==="yenile"); break;
     case "kopyala": { const el=document.getElementById(b.dataset.hedef); if(el){ (navigator.clipboard?navigator.clipboard.writeText(el.textContent):Promise.reject()).then(()=>toast("Kopyalandı")).catch(()=>{ const r=document.createRange(); r.selectNodeContents(el); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Seçildi, kopyala de"); }); } break; }
