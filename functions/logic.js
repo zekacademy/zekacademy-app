@@ -100,8 +100,8 @@ const mondayOf = d => addDays(d, -gIdx(d));
 const hmDk = t => { const [h,m] = String(t||"0:0").split(":").map(Number); return h*60+(m||0); };
 /* Bir günün planlı görüşmeleri: students {id: s}, notes {id: coachNote}, gorusmeler [{id,...}] */
 export function gunGorusmeleri(students, notes, gorusmeler, d){
-  const w = mondayOf(d), out = gorusmeler.filter(g=>g.tarih===d && g.sid).map(g=>({key:g.id, sid:g.sid, saat:g.saat, durum:g.durum||"planli"}));
-  for(const [sid, s] of Object.entries(students)){ const z = (notes[sid]||{}).duzen; if(!z || !z.saat) continue;
+  const w = mondayOf(d), out = gorusmeler.filter(g=>g.tarih===d && g.sid && g.saat && g.tur!=="rapor").map(g=>({key:g.id, sid:g.sid, saat:g.saat, durum:g.durum||"planli"}));
+  for(const [sid, s] of Object.entries(students)){ const z = (notes[sid]||{}).duzen; if(!z || !z.saat || s.paket==="whatsapp") continue;
     const gunu = (z.gun!=null && z.gun!=="") ? z.gun===gIdx(d) : pStart(s, d)===d; if(!gunu || (z.bas && d < z.bas)) continue;
     if(gorusmeler.some(g=>g.sid===sid && g.kaynak==="duzen" && (g.hafta || mondayOf(g.tarih))===w)) continue;
     out.push({key:`v:${sid}:${d}`, sid, saat:z.saat, durum:"planli"}); }
