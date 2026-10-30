@@ -475,18 +475,25 @@ div.b7{cursor:default}
 .wam:hover{border-color:#25D366}
 .btn.wa{border-color:#25D366;color:#128C7E}
 /* Yumuşak geçişler */
-@keyframes pgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes pgin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes ovin{from{opacity:0}to{opacity:1}}
-@keyframes shin{from{opacity:.6;transform:translateY(40px)}to{opacity:1;transform:none}}
-@keyframes acin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-.shell.pgin>*:not(.nav){animation:pgin .24s cubic-bezier(.2,.7,.3,1) both}
-#layer .ov{animation:ovin .18s ease both}
-#layer .sheet{animation:shin .26s cubic-bezier(.2,.8,.3,1) both}
-details[open]>*:not(summary){animation:acin .18s ease both}
+@keyframes shin{from{opacity:.4;transform:translateY(80px)}to{opacity:1;transform:none}}
+@keyframes acin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+/* sayfa geçişi: başlık önce, kartlar sırayla (kademeli) belirir */
+.shell.pgin header.top{animation:pgin .45s cubic-bezier(.2,.7,.25,1) both}
+.shell.pgin .page>*{animation:pgin .5s cubic-bezier(.2,.7,.25,1) both}
+.shell.pgin .page>*:nth-child(2){animation-delay:.06s}
+.shell.pgin .page>*:nth-child(3){animation-delay:.12s}
+.shell.pgin .page>*:nth-child(4){animation-delay:.18s}
+.shell.pgin .page>*:nth-child(5){animation-delay:.24s}
+.shell.pgin .page>*:nth-child(n+6){animation-delay:.3s}
+#layer .ov{animation:ovin .3s ease both}
+#layer .sheet{animation:shin .42s cubic-bezier(.2,.8,.25,1) both}
+details[open]>*:not(summary){animation:acin .3s ease both}
 .btn,.row,.nb,.srow,.gday,.kt,.gozi,.iconbtn,.tog,.qb,.hero{transition:transform .12s ease,background-color .15s ease,border-color .15s ease}
 .btn:active,.row:active,.srow:active,.gday:active,.kt:active,.gozi:active,.iconbtn:active,.tog:active,.qb:active,.hero:active{transform:scale(.97)}
 .nb:active .bub,.nb:active>svg{transform:scale(.9);transition:transform .1s ease}
-.toast{animation:pgin .2s ease both}
+.toast{animation:pgin .35s ease both}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 /* Bildirim satırı + sil */
 .nrow{display:flex;align-items:center;gap:6px;padding:0}
