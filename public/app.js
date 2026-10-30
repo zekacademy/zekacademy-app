@@ -417,8 +417,9 @@ function render(fromSnap){
   if(S.role==="student" && !S.students.has(S.me)){ root.innerHTML = `<div class="auth"><div class="apanel" style="padding-top:20vh"><h2>Kaydın bulunamadı</h2><p class="muted">Hesabına ait öğrenci kaydı silinmiş olabilir. Koçunla iletişime geç.</p><button class="btn" data-act="logout">Çıkış yap</button></div></div>`; return; }
   if(S.role==="student" && st().ilkSifre){ renderFirstPassword(); return; }
   if(fromSnap && document.activeElement && root.contains(document.activeElement) && document.activeElement.matches("input[type=text],input[type=number],textarea,select")) return;
-  const y = window.scrollY;
+  const y = window.scrollY, acik = new Set([...root.querySelectorAll("details[data-key][open]")].map(d=>d.dataset.key));
   root.innerHTML = A() ? coachShell() : studentShell();
+  if(acik.size) root.querySelectorAll("details[data-key]").forEach(d=>{ if(acik.has(d.dataset.key)) d.open = true; }); /* açık bölümler dokununca kapanmasın */
   window.scrollTo(0, y);
 }
 function navHTML(items){
@@ -680,9 +681,9 @@ function pKonularMaarif(s){
       ${mx===2?`<div class="pills" style="margin-top:10px"><button class="tog" data-act="aytall" aria-pressed="${S.aytAll}">${S.aytAll?"Tüm dersler gösteriliyor":"Tüm dersleri göster"}</button></div>`:""}</div>
     ${dersler.map(d=>{ const subs = list.map((x,i)=>[x,i]).filter(([x])=>x.ders===d); let ds=0, dc=0; subs.forEach(([x])=>x.t.forEach(n=>{ ds+=topicScore(s.topics[tkey(x.k,n)]); dc++; }));
       const dp = dc ? ds/dc : 0, kon = subs.reduce((a,[x])=>a+x.t.length,0);
-      return `<details class="mders" data-ders="${esc(d)}" style="${CLS[subs[0][1]].split('style="')[1]||""}" ${S.mOpen && S.mOpen[d]?"open":""}><summary><span><b>${esc(d)}</b><span class="faint small">${subs.length} tema · ${kon} konu</span></span><div class="bar"><i style="width:${dp*100}%;${dp>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(dp*100)}</span></summary>
+      return `<details class="mders" data-ders="${esc(d)}" data-key="m:${esc(d)}" style="${CLS[subs[0][1]].split('style="')[1]||""}" ${S.mOpen && S.mOpen[d]?"open":""}><summary><span><b>${esc(d)}</b><span class="faint small">${subs.length} tema · ${kon} konu</span></span><div class="bar"><i style="width:${dp*100}%;${dp>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(dp*100)}</span></summary>
       <div class="mtemalar">${subs.map(([sub,si])=>{ const p = subjPct(s,sub);
-        return `<details class="${CLS[si]}"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.ex)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>${konuSatirlari(s, sub)}</details>`; }).join("")}</div></details>`; }).join("")}
+        return `<details class="${CLS[si]}" data-key="k:${esc(sub.k)}"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.ex)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>${konuSatirlari(s, sub)}</details>`; }).join("")}</div></details>`; }).join("")}
   </div>`;
 }
 
@@ -711,7 +712,7 @@ function pKonular(s){
       <p class="muted small" style="margin:10px 0 0">Her konuda: tekrar sayısı, 1. ve 2. soru bankası. Üçü tamamlanan konu yeşil olur.</p>
       ${ex==="AYT"?`<div class="pills" style="margin-top:10px"><button class="tog" data-act="aytall" aria-pressed="${S.aytAll}">${S.aytAll?"Tüm AYT dersleri gösteriliyor":"Tüm AYT derslerini göster"}</button></div>`:""}</div>
     ${(cls=>list.map((sub,si)=>{ const p = subjPct(s,sub);
-      return `<details class="${cls[si]}"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.g)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>
+      return `<details class="${cls[si]}" data-key="k:${esc(sub.k)}"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${esc(sub.g)}</span></span><div class="bar"><i style="width:${p*100}%;${p>=1?"background:var(--good)":""}"></i></div><span class="pct num">%${Math.round(p*100)}</span></summary>
       ${konuSatirlari(s, sub)}
       </details>`; }).join(""))(subColors(list))}
   </div>`;
@@ -724,7 +725,7 @@ function pCetele(s){
     ${MX ? asamaSeg() : `<div class="seg"><button data-act="ex" data-v="TYT" aria-pressed="${ex==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${ex==="AYT"}">AYT</button></div>`}
     <div class="card"><div class="sech"><h3>${ex} toplam yanlış</h3><b class="num" style="color:var(--bad);font-size:22px">${total}</b></div><p class="muted small" style="margin:6px 0 0">Deneme ve testlerden sonra yanlış yaptığın konuları burada işaretle. En çok yanlış yapılan konular koçunun özetinde görünür.</p></div>
     ${list.map((sub,si)=>{ const tot = sub.t.reduce((a,n)=>a+((s.topics[tkey(sub.k,n)]||{}).y||0),0);
-      return `<details class="${CLS[si]}" ${tot?"open":""}><summary><span><span class="sn">${esc(MX ? sub.ders+" · "+sub.n : sub.n)}</span><span class="sg">${esc(MX ? sub.ex : ex)}</span></span><span></span><span class="pct num" style="color:${tot?"var(--bad)":"var(--faint)"}">${tot}</span></summary>
+      return `<details class="${CLS[si]}" data-key="c:${esc(sub.k)}" ${tot?"open":""}><summary><span><span class="sn">${esc(MX ? sub.ders+" · "+sub.n : sub.n)}</span><span class="sg">${esc(MX ? sub.ex : ex)}</span></span><span></span><span class="pct num" style="color:${tot?"var(--bad)":"var(--faint)"}">${tot}</span></summary>
       ${sub.t.map(n=>{ const k=tkey(sub.k,n), y=(s.topics[k]||{}).y||0;
         return `<div class="trow" style="flex-direction:row;align-items:center;gap:12px"><div style="flex:1;min-width:0"><div class="tn">${esc(n)}</div>${y?`<div class="wbar" style="width:${y/max*100}%"></div>`:""}</div><span class="stepper"><button data-act="yan" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num cnt ${y>=5?"hot":""}">${y}</span><button data-act="yan" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span></div>`; }).join("")}
       </details>`; }).join("")}
