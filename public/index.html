@@ -453,6 +453,25 @@ pre.kod{margin:0;max-height:260px;overflow:auto;background:var(--sunk);border:1p
 .hbar{display:grid;grid-template-columns:120px minmax(0,1fr) 30px;gap:10px;align-items:center;font-size:13px;font-weight:700}
 .hbar>div{height:10px;background:var(--sunk);border-radius:6px;overflow:hidden}.hbar i{display:block;height:100%;background:var(--ac);border-radius:0 4px 4px 0}
 .hbar b{text-align:right}
+/* Daha Fazla bölümleri, günün özeti, görüşme modu, WhatsApp */
+.msec{margin:6px 4px -4px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.gozl{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.gozi{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:14px;color:var(--fg);cursor:pointer}
+.gozi .gzi{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--acs);color:var(--ac)}
+.gozi .gzt{flex:1;min-width:0}.gozi>svg{color:var(--faint);flex:none}
+.gozi.bos .gzi{background:var(--sunk);color:var(--faint)}.gozi.bos{color:var(--muted)}
+.gozi.kotu .gzi{background:var(--bads);color:var(--bad)}
+.gozi.uyari .gzi{background:var(--warns);color:var(--warn)}
+.gozi.iyi .gzi{background:#1E9E4A;color:#fff}
+.gmhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.gmsaat{font-size:24px;font-weight:800}
+.gmacts{display:flex;flex-wrap:wrap;gap:8px}
+.gmacts .btn.pri{flex:1 1 100%}
+div.b7{cursor:default}
+.walist{display:flex;flex-direction:column;gap:6px}
+.wam{text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:14px;color:var(--fg);cursor:pointer}
+.wam:hover{border-color:#25D366}
+.btn.wa{border-color:#25D366;color:#128C7E}
 /* Başvuru süreci */
 .bcard{background:var(--surface);border:1px solid var(--line);border-left:5px solid #1E9E4A;border-radius:18px;box-shadow:var(--shadow);padding:14px 16px;display:flex;flex-direction:column;gap:12px}
 .bcard.b-hayir{border-left-color:var(--faint);opacity:.8}

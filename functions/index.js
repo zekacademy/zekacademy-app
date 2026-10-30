@@ -11,7 +11,8 @@ import { getFirestore, FieldValue, FieldPath } from "firebase-admin/firestore";
 import { getAuth } from "firebase-admin/auth";
 import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
-import { morningText, eveningText, due, cfg, odemeHatirlat } from "./logic.js";
+import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
+import { getStorage } from "firebase-admin/storage";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -62,6 +63,7 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   if (c.sabahAcik && due(c.sabahSaat, minutes, mark.sabah, date)) jobs.push("sabah");
   if (c.aksamAcik && due(c.aksamSaat, minutes, mark.aksam, date)) jobs.push("aksam");
   const odemeVakti = c.odemeAcik && due(c.odemeSaat, minutes, mark.odeme, date);
+  if (c.gorusmeHatirlat) await gorusmeHatirlatmalari(date, minutes).catch(e => logger.error("görüşme hatırlatma", e));
   if (!jobs.length && !odemeVakti) return;
   if (odemeVakti) { await markRef.set({ odeme: date }, { merge: true }); await odemeBildirimleri(c, date); }
   if (!jobs.length) return;
@@ -80,6 +82,39 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
     }
   }
   logger.info(`Bildirim (${jobs.join(", ")}): ${sent} gönderildi`, { date });
+});
+
+/* Görüşmeden 1 saat önce öğrenciye bildirim (her görüşme için bir kez) */
+async function gorusmeHatirlatmalari(date, minutes){
+  if (minutes < 6 * 60 || minutes > 23 * 60) return;
+  const [st, cn, gr] = await Promise.all([db.collection("students").get(), db.collection("coachNotes").get(), db.collection("gorusmeler").where("tarih", "==", date).get()]);
+  const students = Object.fromEntries(st.docs.map(d => [d.id, d.data()])), notes = Object.fromEntries(cn.docs.map(d => [d.id, d.data()]));
+  const list = gunGorusmeleri(students, notes, gr.docs.map(d => ({ id: d.id, ...d.data() })), date);
+  const markRef = db.doc("system/gorusmeHatirlatma"), mark = (await markRef.get()).data() || {};
+  const gonderilen = mark.tarih === date ? (mark.anahtarlar || {}) : {};
+  const simdi = hatirlatilacak(list, minutes, gonderilen); if (!simdi.length) return;
+  for (const g of simdi) gonderilen[g.key] = true;
+  await markRef.set({ tarih: date, anahtarlar: gonderilen });
+  let sent = 0;
+  for (const g of simdi) { const s = students[g.sid]; if (!s) continue; const tokens = studentTokens(s); if (!tokens.length) continue;
+    const ad = String(s.name || "").trim().split(/\s+/)[0] || "";
+    const r = await pushTo(tokens, "Görüşmen 1 saat sonra ⏰", `${ad ? ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1).toLocaleLowerCase("tr") + ", " : ""}bugün saat ${g.saat}'te görüşmemiz var. Programını yanında hazır tut 💪`, "/");
+    sent += r.sent; await dropBadStudentTokens(g.sid, r.bad); }
+  logger.info(`Görüşme hatırlatması: ${simdi.length} görüşme, ${sent} bildirim`, { date });
+}
+
+/* Haftalık yedek: her pazar 03:30, tüm veriler Storage'a JSON olarak (son 12 hafta tutulur) */
+export const haftalikYedek = onSchedule({ schedule: "30 3 * * 0", timeZone: TZ, retryCount: 1, memory: "512MiB", timeoutSeconds: 300 }, async () => {
+  const { date } = istanbulNow();
+  const kol = ["students", "coachNotes", "notifs", "gorusmeler", "settings"], veri = { tarih: new Date().toISOString() };
+  for (const k of kol) veri[k] = Object.fromEntries((await db.collection(k).get()).docs.filter(d => !(k === "settings" && d.id === "foto")).map(d => [d.id, d.data()]));
+  const bucket = getStorage().bucket(), ad = `yedekler/zekacademy-${date}.json`, icerik = JSON.stringify(veri);
+  await bucket.file(ad).save(icerik, { contentType: "application/json", resumable: false });
+  const [dosyalar] = await bucket.getFiles({ prefix: "yedekler/" });
+  const eski = dosyalar.map(f => f.name).sort().slice(0, -12);
+  for (const n of eski) await bucket.file(n).delete().catch(() => {});
+  await db.doc("settings/yedek").set({ son: date, boyutKB: Math.round(icerik.length / 1024), ogrenci: Object.keys(veri.students).length });
+  logger.info(`Yedek alındı: ${ad} (${Math.round(icerik.length / 1024)} KB)`);
 });
 
 /* Ödeme günü ve 5 gün sonrası 18:00: ödemesi yapılmamış öğrenciye hatırlatma */
