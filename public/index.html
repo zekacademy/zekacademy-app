@@ -474,6 +474,12 @@ div.b7{cursor:default}
 .wam{text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:14px;color:var(--fg);cursor:pointer}
 .wam:hover{border-color:#25D366}
 .btn.wa{border-color:#25D366;color:#128C7E}
+/* Tıklanabilir kartlar ve kaydırma hedefi vurgusu */
+button.tile.tbtn{font:inherit;color:inherit;text-align:left;cursor:pointer;width:100%}
+button.tile.tbtn:active{transform:scale(.97)}
+#gorevler,#calisma{scroll-margin-top:16px}
+@keyframes vurgu{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ac) 60%,transparent)}100%{box-shadow:0 0 0 14px transparent}}
+.vurgu{animation:vurgu .9s ease-out 1}
 /* Yumuşak geçişler */
 @keyframes pgin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes ovin{from{opacity:0}to{opacity:1}}
