@@ -263,7 +263,7 @@ function watchSettings(need){
   unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
-function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
+function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
 function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; history.replaceState(null, "", "/"); }
 function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
 
@@ -1534,6 +1534,17 @@ let KSEL = [];
 function kselNote(){ const e = $("#ksel"); if(e) e.innerHTML = KSEL.length ? `Seçilen: <b>${esc(KSEL.join(", "))}</b>` : `<span class="faint">Henüz konu seçilmedi</span>`; }
 
 function closeSheet(){ $("#layer").innerHTML=""; }
+/* ---------- Geri tuşu: önce pencereyi kapat, sonra ana sayfaya dön; ana sayfada iki kez basınca çık ---------- */
+let geriSon = 0, geriKurulu = false;
+function geriKoruma(){ try{ if(!geriKurulu){ history.replaceState({zk:"kok"}, ""); geriKurulu = true; } if(!(history.state && history.state.zk==="koruma")) history.pushState({zk:"koruma"}, ""); }catch(_){} }
+window.addEventListener("popstate", ()=>{
+  if(!S.role || !S.ready) return;
+  const ana = A() ? "ozet" : "home";
+  if($("#layer") && $("#layer").innerHTML.trim()){ closeSheet(); geriKoruma(); return; }
+  if(S.view !== ana){ S.view = ana; S.q = ""; render(); window.scrollTo(0,0); geriKoruma(); return; }
+  if(Date.now() - geriSon < 2000){ history.back(); return; }
+  geriSon = Date.now(); toast("Çıkmak için tekrar geri bas"); geriKoruma();
+});
 document.addEventListener("toggle", e=>{ const d = e.target; if(d && d.classList && d.classList.contains("mders")){ S.mOpen = S.mOpen||{}; S.mOpen[d.dataset.ders] = d.open; } }, true);
 document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#layer").innerHTML) closeSheet(); });
 const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
