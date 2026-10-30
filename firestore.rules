@@ -40,6 +40,9 @@ service cloud.firestore {
       allow write: if isCoach();
     }
 
+    match /gorusmeler/{id} {
+      allow read, write: if isCoach();
+    }
     match /notifs/{id} {
       allow read, update, delete: if isCoach();
       allow create: if isCoach() || signedIn() && request.resource.data.sid == request.auth.uid
