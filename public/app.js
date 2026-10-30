@@ -398,7 +398,8 @@ function ring(p, label){
   const r=32, c=2*Math.PI*r;
   return `<div class="ring"><svg viewBox="0 0 76 76"><circle cx="38" cy="38" r="${r}" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="7"/><circle cx="38" cy="38" r="${r}" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-(p||0))}"/></svg><b>${label}</b></div>`;
 }
-const tile = (cls, ic, val, lbl, id="") => `<div class="tile ${cls}"><div class="ic">${icon(ic,"sm")}</div><b class="num" ${id?`id="${id}"`:""}>${val}</b><span>${lbl}</span></div>`;
+const tile = (cls, ic, val, lbl, id="", act="") => act ? `<button class="tile ${cls} tbtn" ${act}><div class="ic">${icon(ic,"sm")}</div><b class="num" ${id?`id="${id}"`:""}>${val}</b><span>${lbl}</span></button>`
+  : `<div class="tile ${cls}"><div class="ic">${icon(ic,"sm")}</div><b class="num" ${id?`id="${id}"`:""}>${val}</b><span>${lbl}</span></div>`;
 function topbar(title, right="", left=""){
   return `<header class="top ${A()?"wide":""}"><div class="topin">${left}${title}<span class="spacer"></span>${right}</div></header>`;
 }
@@ -460,13 +461,13 @@ function sHome(s){
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
     <div class="tiles">
-      ${tile("t-g","clock",fmtMin(minutes(s,t)),dayTarget(s,t)?`Bugün çalışma · hedef ${fmtH(dayTarget(s,t))}`:"Bugün çalışma","liveMin")}
-      ${tile("t-a","check",`${done}/${tl.length}`,"Görev tamamlandı")}
-      ${tile("t-w","target",w.pct==null?"—":"%"+Math.round(w.pct*100),"Haftalık program uyumu")}
+      ${tile("t-g","clock",fmtMin(minutes(s,t)),dayTarget(s,t)?`Bugün çalışma · hedef ${fmtH(dayTarget(s,t))}`:"Bugün çalışma","liveMin",`data-act="git" data-v="kronometre" data-hedef="calisma"`)}
+      ${tile("t-a","check",`${done}/${tl.length}`,"Görev tamamlandı","",`data-act="kaydir" data-hedef="gorevler"`)}
+      ${tile("t-w","target",w.pct==null?"—":"%"+Math.round(w.pct*100),"Haftalık program uyumu","",`data-act="git" data-v="program" data-mod="hafta"`)}
       ${tile("t-r","flame",streak(s)+" gün","Çalışma serisi")}
     </div>
     <button class="hero" data-act="go" data-v="program" style="text-align:left;width:100%">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}<div><h3>Bugünkü Program</h3><p>${msg}</p></div><span class="go">${icon("chev")}</span></button>
-    <div class="card"><div class="sech"><h3>Bugünün Görevleri</h3><button class="link" data-act="go" data-v="program">Tümünü gör</button></div>
+    <div class="card" id="gorevler"><div class="sech"><h3>Bugünün Görevleri</h3><button class="link" data-act="go" data-v="program">Tümünü gör</button></div>
       <div class="tasks" style="margin-top:6px">${tl.length? tl.map(x=>taskRow(x,t,{canTick:true})).join("") : `<div class="empty">Koçun bugüne görev eklemedi.</div>`}</div></div>
     ${goalsCard(s, curStart(s), {compact:true})}
     <div class="tiles" style="grid-template-columns:repeat(2,minmax(0,1fr))">
@@ -742,7 +743,7 @@ function pCalisma(s){
     ${A()?"":`<div class="card timer"><div class="tface ${run?"run":""}"><b class="num" id="tval">${clock(run?timerMin(s)*60:0)}</b><small>${run?"çalışıyorsun":"hazır"}</small></div>
       <div class="tbtns">${run?`<button class="bigbtn stop" data-act="tstop">${icon("stop","sm")} Bitir ve kaydet</button>`:`<button class="bigbtn" data-act="tstart">${icon("play","sm")} Çalışmaya başla</button>`}</div>
       <div class="muted small">Bugün toplam: <b class="num" style="color:var(--fg)" id="ttoday">${fmtMin(minutes(s,t))}</b></div></div>`}
-    <div class="card"><div class="sech"><h3>Bu hafta çalışma</h3><b class="num">${fmtMin(mins.reduce((a,b)=>a+b,0))}</b></div>
+    <div class="card" id="calisma"><div class="sech"><h3>Bu hafta çalışma</h3><b class="num">${fmtMin(mins.reduce((a,b)=>a+b,0))}</b></div>
       <div class="bars7">${days.map((d,i)=>`<button class="b7 ${d===t?"today":""}" data-act="sheet" data-v="sure" data-date="${d}" aria-label="${GUN[dIdx(d)]} süresini düzenle"><em class="num">${mins[i]?fmtMin(mins[i]):""}</em><i style="height:${mins[i]/mx*100}%"></i><span>${GUNK[dIdx(d)]}</span></button>`).join("")}</div>
       <p class="faint small" style="margin:10px 0 0">Bir güne dokunarak süreyi elle düzeltebilirsin.</p>
       <button class="btn full" style="margin-top:10px" data-act="sheet" data-v="sure" data-date="${t}">${icon("plus","sm")} Elle süre ekle</button></div>
@@ -1794,6 +1795,9 @@ document.addEventListener("click", e=>{
     case "vtog": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; if(o.odenen[d]) delete o.odenen[d]; else o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); openSheet("odeme", b); render(); break; }
     case "osil": { const id=b.dataset.id; const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); closeSheet(); render(); toast("Ödeme planı silindi"); break; }
     case "otaslak": odemeTaslak(); render(); break;
+    case "kaydir": { const h = document.getElementById(b.dataset.hedef); if(h){ h.scrollIntoView({behavior:"smooth", block:"start"}); h.classList.remove("vurgu"); void h.offsetWidth; h.classList.add("vurgu"); } break; }
+    case "git": { S.view = v; if(b.dataset.mod){ S.pmode = b.dataset.mod; const x = st(); if(x){ S.week = curStart(x); S.day = today(); } } render(); window.scrollTo(0,0);
+      if(b.dataset.hedef) setTimeout(()=>{ const h = document.getElementById(b.dataset.hedef); if(h){ h.scrollIntoView({behavior:"smooth", block:"start"}); h.classList.add("vurgu"); } }, 350); break; }
     case "gday": S.gday = v; S.view = "gorusme"; render(); break;
     case "gmod": S.gsel = v; S.view = "gmod"; render(); window.scrollTo(0,0); break;
     case "gbitir": { const rid = gorusSet(b.dataset.id, g=>{ g.durum = "yapildi"; }); S.gsel = rid; S.cur = b.dataset.sid; render(); const bb = document.createElement("button"); bb.dataset.d = b.dataset.d; openSheet("gorusme", bb); break; }
