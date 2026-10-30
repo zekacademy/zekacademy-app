@@ -99,7 +99,7 @@ async function odemeBildirimleri(c, date){
 
 /* Yeni öğrenci kaydı veya Google Form başvurusu → koça bildirim */
 export const yeniKayitBildirimi = onDocumentCreated("notifs/{id}", async (event) => {
-  const n = event.data && event.data.data(); if (!n || !["kayit", "basvuru"].includes(n.type)) return;
+  const n = event.data && event.data.data(); if (!n || !["kayit", "basvuru"].includes(n.type) || n.sessiz) return;
   const tokens = await coachTokens();
   const r = n.type === "basvuru"
     ? await pushTo(tokens, "🟢 Yeni başvuru · Google Form", [n.name || "Yeni başvuru", n.hizmet, n.alan].filter(Boolean).join(" · "), "/?ac=bildirim")
@@ -171,8 +171,11 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
   if (!esit(b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
   const cevaplar = (Array.isArray(b.cevaplar) ? b.cevaplar : []).slice(0, 40).map(x => ({ s: cut(x && x.s, 200), c: cut(x && x.c, 2000) })).filter(x => x.s);
   const bul = re => (cevaplar.find(x => re.test(x.s)) || {}).c || "";
+  /* Formdaki gönderim zamanı (eski başvurular aktarılırken korunur) */
+  const z = Date.parse(b.zaman), now = Date.now();
+  const at = Number.isFinite(z) && z <= now + 60000 && z > now - 2 * 365 * 864e5 ? new Date(z).toISOString() : new Date().toISOString();
   const doc = {
-    type: "basvuru", at: new Date().toISOString(), read: false, deneme: !!b.deneme,
+    type: "basvuru", at, read: !!b.sessiz, deneme: !!b.deneme, sessiz: !!b.sessiz,
     name: cut(bul(/İsim|isim|ad[ıi]? ?soyad|adınız/i), 120),
     tel: cut(bul(/telefon|numara|gsm/i), 40),
     eposta: cut(bul(/mail|e-posta|eposta/i) || b.eposta, 120),
@@ -180,6 +183,11 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
     hizmet: cut(bul(/hizmet|paket/i), 120),
     cevaplar,
   };
-  await db.collection("notifs").add(doc);
+  /* Aynı form yanıtı iki kez gelirse ikinci kez eklenmez (süreç bilgisi korunur) */
+  const yid = String(b.yanitId || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 120);
+  if (yid) {
+    try { await db.doc(`notifs/f_${yid}`).create(doc); }
+    catch (e) { if (e.code === 6 || /already exists/i.test(e.message)) { res.status(200).json({ ok: true, zatenVar: true }); return; } throw e; }
+  } else await db.collection("notifs").add(doc);
   res.status(200).json({ ok: true });
 });

@@ -731,16 +731,22 @@ function formKodHTML(){ if(!FORMKOD) return "";
 const ADRES = "${FORMKOD.url}";
 const ANAHTAR = "${FORMKOD.anahtar}";
 
+// Form gönderilince otomatik çalışır
 function gonder(e) {
-  var r = e.response;
+  yolla(e.response, false);
+}
+
+function yolla(r, sessiz) {
   var cevaplar = r.getItemResponses().map(function (x) {
     var v = x.getResponse();
     return { s: x.getItem().getTitle(), c: Array.isArray(v) ? v.join(", ") : String(v) };
   });
-  UrlFetchApp.fetch(ADRES, {
+  var cevap = UrlFetchApp.fetch(ADRES, {
     method: "post", contentType: "application/json", muteHttpExceptions: true,
-    payload: JSON.stringify({ anahtar: ANAHTAR, cevaplar: cevaplar, eposta: r.getRespondentEmail() })
+    payload: JSON.stringify({ anahtar: ANAHTAR, cevaplar: cevaplar, eposta: r.getRespondentEmail(),
+      zaman: r.getTimestamp().toISOString(), yanitId: r.getId(), sessiz: sessiz })
   });
+  return cevap.getResponseCode() + " " + cevap.getContentText();
 }
 
 // 1) Önce bunu bir kez çalıştır: form gönderilince gonder() otomatik çalışsın
@@ -749,7 +755,18 @@ function kur() {
   ScriptApp.newTrigger("gonder").forForm(FormApp.getActiveForm()).onFormSubmit().create();
 }
 
-// 2) Denemek için: uygulamaya örnek bir başvuru gönderir
+// 2) Formdaki son 13 başvuruyu uygulamaya aktarır (bildirim göndermeden).
+//    İki kez çalıştırılsa da aynı başvuru tekrar eklenmez. Sayıyı değiştirebilirsin.
+function sonBasvurulariAktar() {
+  var KAC = 13;
+  var hepsi = FormApp.getActiveForm().getResponses();
+  hepsi.slice(-KAC).forEach(function (r) {
+    Logger.log(r.getTimestamp() + " → " + yolla(r, true));
+    Utilities.sleep(300);
+  });
+}
+
+// 3) Denemek için: uygulamaya örnek bir başvuru gönderir
 function deneme() {
   var r = UrlFetchApp.fetch(ADRES, {
     method: "post", contentType: "application/json", muteHttpExceptions: true,
@@ -763,7 +780,8 @@ function deneme() {
       <li>Google Form'u bilgisayarda düzenleme modunda aç → sağ üstteki <b>⋮</b> → <b>Apps Script</b> (Komut dosyası düzenleyici).</li>
       <li>Açılan sayfadaki her şeyi sil, aşağıdaki kodu yapıştır, <b>Kaydet</b>'e bas.</li>
       <li>Üstteki işlev listesinden <b>kur</b>'u seç → <b>Çalıştır</b>. Google izin isteyecek: hesabını seç → <b>Gelişmiş</b> → <b>Git (güvenli değil)</b> → <b>İzin ver</b>. Bu senin kendi kodun olduğu için çıkan bir uyarı.</li>
-      <li>Denemek için <b>deneme</b>'yi seç → <b>Çalıştır</b>. Birkaç saniye içinde Bildirimler'de yeşil "Yeni başvuru" görünür.</li></ol>
+      <li>Denemek için <b>deneme</b>'yi seç → <b>Çalıştır</b>. Birkaç saniye içinde Bildirimler'de yeşil "Yeni başvuru" görünür.</li>
+      <li>İstersen <b>sonBasvurulariAktar</b>'ı seç → <b>Çalıştır</b>: formdaki son 13 başvuru, bildirim göndermeden Başvurular'a eklenir.</li></ol>
     <pre class="kod" id="formKodPre">${esc(kod)}</pre>
     <div class="pills"><button class="btn sm pri" data-act="kopyala" data-hedef="formKodPre">${icon("copy","xs")} Kodu kopyala</button><button class="btn sm" data-act="formkod" data-v2="yenile">Anahtarı yenile</button></div>
     <p class="faint small" style="margin:0">Kodun içindeki anahtar gizlidir; kimseyle paylaşma. Paylaşırsan “Anahtarı yenile” de ve yeni kodu forma yapıştır.</p>`; }
