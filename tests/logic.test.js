@@ -66,4 +66,6 @@ test("görüşme hatırlatması: düzenden ve tekil görüşmelerden 1 saat önc
   assert.deepEqual(l.map(x => x.sid), ["b"]); /* a bu hafta perşembeye taşındı */
   assert.deepEqual(L.gunGorusmeleri(students, notes, [{ id: "g1", sid: "a", tarih: "2026-11-05", hafta: "2026-11-02", saat: "19:00", kaynak: "duzen" }], "2026-11-05").map(x => x.saat), ["19:00"]);
   assert.equal(L.pStart({ donem: ["2026-10-28"] }, "2026-11-10"), "2026-11-04");
+  /* WhatsApp paketi ve rapor kayıtları hatırlatılmaz */
+  assert.deepEqual(L.gunGorusmeleri({ ...students, a: { ...students.a, paket: "whatsapp" } }, notes, [{ id: "r1", sid: "b", tarih: d, tur: "rapor", saat: null }], d).map(x => x.sid), ["b"]);
 });
