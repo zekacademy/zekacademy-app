@@ -50,3 +50,20 @@ test("ödeme hatırlatması: ödeme günü ve 5 gün sonra, ödendiyse ya da tas
   assert.equal(L.addMonthsISO("2026-01-31", 1), "2026-02-28");
   assert.equal(L.vadeler({ bas: "2026-01-01", periyot: "hafta4" }, "2026-02-26").join(","), "2026-01-01,2026-01-29,2026-02-26");
 });
+
+test("görüşme hatırlatması: düzenden ve tekil görüşmelerden 1 saat önce, bir kez", async () => {
+  const L = await import("../functions/logic.js");
+  const students = { a: { donem: ["2026-10-28"] }, b: {} }; /* a: Çarşamba döngüsü, b: düzende elle Çarşamba */
+  const notes = { a: { duzen: { saat: "18:00" } }, b: { duzen: { saat: "17:15", gun: 2 } } };
+  const d = "2026-11-04"; /* Çarşamba */
+  let l = L.gunGorusmeleri(students, notes, [], d);
+  assert.deepEqual(l.map(x => x.sid + " " + x.saat).sort(), ["a 18:00", "b 17:15"]);
+  assert.deepEqual(L.hatirlatilacak(l, 17 * 60 + 5, {}).map(x => x.sid).sort(), ["a", "b"]);
+  assert.deepEqual(L.hatirlatilacak(l, 16 * 60 + 20, {}).map(x => x.sid), ["b"]);
+  assert.equal(L.hatirlatilacak(l, 17 * 60 + 5, { ["v:a:" + d]: true, ["v:b:" + d]: true }).length, 0);
+  assert.equal(L.hatirlatilacak(l, 18 * 60, {}).length, 0); /* başlamış görüşmeye gönderilmez */
+  l = L.gunGorusmeleri(students, notes, [{ id: "g1", sid: "a", tarih: "2026-11-05", hafta: "2026-11-02", saat: "19:00", kaynak: "duzen" }], d);
+  assert.deepEqual(l.map(x => x.sid), ["b"]); /* a bu hafta perşembeye taşındı */
+  assert.deepEqual(L.gunGorusmeleri(students, notes, [{ id: "g1", sid: "a", tarih: "2026-11-05", hafta: "2026-11-02", saat: "19:00", kaynak: "duzen" }], "2026-11-05").map(x => x.saat), ["19:00"]);
+  assert.equal(L.pStart({ donem: ["2026-10-28"] }, "2026-11-10"), "2026-11-04");
+});

@@ -57,10 +57,11 @@ export const hm = x => { const [h,m] = String(x||"0:0").split(":").map(Number); 
 export function cfg(x = {}){ return {
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
   aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM, kurum: x.kurum || "zekacademy",
-  odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ }; }
+  odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ,
+  gorusmeHatirlat: x.gorusmeHatirlat !== false }; }
 
 const anchors = s => (s.donem||[]).slice().sort();
-function pStart(s, d){ const an = anchors(s).filter(a=>a<=d); if(!an.length) return monday(d); const a = an[an.length-1]; return addDays(a, Math.floor(dDiff(a,d)/7)*7); }
+export function pStart(s, d){ const an = anchors(s).filter(a=>a<=d); if(!an.length) return monday(d); const a = an[an.length-1]; return addDays(a, Math.floor(dDiff(a,d)/7)*7); }
 const pIdx = (s, d) => dDiff(pStart(s,d), d);
 export const dayTasks = (s, date) => ((s.weeks||{})[pStart(s,date)]||{})[pIdx(s,date)] || [];
 export function minutes(s, date, nowMs = Date.now()){ let m = (s.gunluk||{})[date]||0; if(s.timer && s.timer.start && iso(new Date(s.timer.start))===date) m += (nowMs - s.timer.start)/60000; return m; }
@@ -92,3 +93,18 @@ export function vadeler(o, son){ if(!o || !o.bas) return []; const out = [];
 /* Bugün hatırlatma gidecek mi? Ödeme günü ve 5 gün sonrası; ödendiyse ya da taslak veriyse gitmez */
 export function odemeHatirlat(o, date){ if(!o || !o.bas || o.taslak) return null; const paid = o.odenen || {};
   return vadeler(o, date).find(d => !paid[d] && (d === date || addDays(d, 5) === date)) || null; }
+
+/* ---------- Görüşme hatırlatması (uygulamadaki gunGorusme ile aynı hesap) ---------- */
+const gIdx = d => (new Date(d+"T12:00:00Z").getUTCDay()+6)%7;
+const mondayOf = d => addDays(d, -gIdx(d));
+const hmDk = t => { const [h,m] = String(t||"0:0").split(":").map(Number); return h*60+(m||0); };
+/* Bir günün planlı görüşmeleri: students {id: s}, notes {id: coachNote}, gorusmeler [{id,...}] */
+export function gunGorusmeleri(students, notes, gorusmeler, d){
+  const w = mondayOf(d), out = gorusmeler.filter(g=>g.tarih===d && g.sid).map(g=>({key:g.id, sid:g.sid, saat:g.saat, durum:g.durum||"planli"}));
+  for(const [sid, s] of Object.entries(students)){ const z = (notes[sid]||{}).duzen; if(!z || !z.saat) continue;
+    const gunu = (z.gun!=null && z.gun!=="") ? z.gun===gIdx(d) : pStart(s, d)===d; if(!gunu || (z.bas && d < z.bas)) continue;
+    if(gorusmeler.some(g=>g.sid===sid && g.kaynak==="duzen" && (g.hafta || mondayOf(g.tarih))===w)) continue;
+    out.push({key:`v:${sid}:${d}`, sid, saat:z.saat, durum:"planli"}); }
+  return out; }
+/* Şu an hatırlatılacaklar: başlangıcına 0-60 dk kalan, planlı ve daha önce gönderilmemiş */
+export function hatirlatilacak(list, nowMinutes, gonderilen){ return list.filter(g=>g.durum==="planli" && !gonderilen[g.key] && hmDk(g.saat)-nowMinutes > 0 && hmDk(g.saat)-nowMinutes <= 60); }
