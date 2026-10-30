@@ -869,12 +869,16 @@ const SURE_SEANS = 15, SURE_ILK = 30;
 const hmTo = t => { const [h,m] = String(t||"0:0").split(":").map(Number); return h*60+(m||0); };
 const toHm = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
 const duzenOf = id => (S.cnotes.get(id)||{}).duzen || null;
+/* Seans günü: elle seçildiyse o gün, yoksa öğrencinin program döngüsünün başladığı gün (Yeni görüşme ile kayarsa seans da kayar) */
+function seansGunu(sid, d){ const z = duzenOf(sid); if(!z || !z.saat) return false; if(z.gun!=null && z.gun!=="") return z.gun===dIdx(d);
+  const x = S.students.get(sid); return !!x && pStart(x, d)===d; }
+function otoGun(sid){ const x = S.students.get(sid); return x ? dIdx(curStart(x)) : 0; }
 /* Bir günün görüşmeleri: kayıtlı olanlar + haftalık düzenden gelenler (o hafta için ayrıca kaydı yoksa) */
 function gunGorusme(d){
   const real = [...S.gorus.entries()].filter(([,g])=>g.tarih===d).map(([id,g])=>({...g, id}));
   const w = monday(d), virt = [];
-  S.students.forEach((x,sid)=>{ const z = duzenOf(sid); if(!z || z.gun!==dIdx(d) || (z.bas && d < z.bas)) return;
-    if([...S.gorus.values()].some(g=>g.sid===sid && g.kaynak==="duzen" && monday(g.tarih)===w)) return;
+  S.students.forEach((x,sid)=>{ const z = duzenOf(sid); if(!seansGunu(sid, d) || (z.bas && d < z.bas)) return;
+    if([...S.gorus.values()].some(g=>g.sid===sid && g.kaynak==="duzen" && (g.hafta || monday(g.tarih))===w)) return;
     virt.push({id:"v:"+sid+":"+d, sanal:true, sid, ad:x.name, tarih:d, saat:z.saat, sure:z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen"}); });
   const all = [...real, ...virt].sort((a,b)=>hmTo(a.saat)-hmTo(b.saat) || (a.ad||"").localeCompare(b.ad||"","tr"));
   const akt = all.filter(g=>g.durum!=="iptal");
@@ -883,12 +887,12 @@ function gunGorusme(d){
 function gorusAd(g){ return g.sid && S.students.has(g.sid) ? S.students.get(g.sid).name : (g.ad || "İsimsiz"); }
 /* Sanal (düzenden gelen) görüşmeyi gerçek kayda çevirir */
 function gorusGercek(id){ if(!id.startsWith("v:")) return id; const [,sid,d] = id.split(":"); const z = duzenOf(sid) || {};
-  const nid = uid(); S.gorus.set(nid, {sid, ad:S.students.get(sid)?.name||"", tarih:d, saat:z.saat, sure:z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen"}); persistDoc("gorusmeler", nid, 0); return nid; }
+  const nid = uid(); S.gorus.set(nid, {sid, ad:S.students.get(sid)?.name||"", tarih:d, hafta:monday(d), saat:z.saat, sure:z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen"}); persistDoc("gorusmeler", nid, 0); return nid; }
 function gorusSet(id, fn){ const rid = gorusGercek(id); const g = {...S.gorus.get(rid)}; fn(g); S.gorus.set(rid, g); persistDoc("gorusmeler", rid, 200); return rid; }
 function cGorusme(){
   const t = today(), d = S.gday || t, w = monday(d), days = [0,1,2,3,4,5,6].map(i=>addDays(w,i));
   const list = gunGorusme(d), akt = list.filter(g=>g.durum!=="iptal"), top = akt.reduce((a,g)=>a+(g.sure||15),0);
-  const duzensiz = sortedStudents().filter(([id])=>!duzenOf(id)).length;
+  const duzensiz = sortedStudents().filter(([id])=>!duzenOf(id)?.saat).length;
   const rows = []; let son = null;
   list.forEach(g=>{ const a = hmTo(g.saat); if(son!=null && g.durum!=="iptal" && a - son >= 15) rows.push(`<div class="gbos">Boş · ${toHm(son)} – ${g.saat} <span>${a-son} dk</span></div>`);
     if(g.durum!=="iptal") son = Math.max(son??0, a+(g.sure||15));
@@ -904,16 +908,13 @@ function cGorusme(){
     <div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${trDate(d)}</h3><span class="faint small">${akt.length?`${akt.length} görüşme · ${fmtMin(top)}${akt.length?` · ${akt[0].saat}–${toHm(Math.max(...akt.map(g=>hmTo(g.saat)+(g.sure||15))))}`:""}`:"Görüşme yok"}</span></div>
       <div class="glist">${rows.join("") || `<div class="empty">Bu gün için görüşme yok. Sağ üstteki + ile ekleyebilir ya da öğrencilere haftalık düzen verebilirsin.</div>`}</div></div>
     <div class="card"><div class="sech"><h3>Haftalık düzen</h3><button class="btn sm ${duzensiz?"pri":""}" data-act="sheet" data-v="duzen">Düzenle</button></div>
-      <p class="muted small" style="margin:6px 0 0">Her öğrencinin sabit seans günü ve saati. Bir kez girersin, her hafta takvime kendiliğinden gelir. ${duzensiz?`<b>${duzensiz} öğrencinin düzeni yok.</b>`:"Tüm öğrencilerin düzeni var."}</p></div>
+      <p class="muted small" style="margin:6px 0 0">Seans günü öğrencinin program döngüsünden otomatik gelir (son görüşme günü); sen sadece saati girersin. ${duzensiz?`<b>${duzensiz} öğrencinin saati girilmedi.</b>`:"Tüm öğrencilerin saati girildi."}</p></div>
     <p class="faint small" style="text-align:center">Seans ${SURE_SEANS} dk, ilk görüşme ${SURE_ILK} dk. Bu sayfayı sadece sen görürsün.</p>
   </div>`;
 }
 
 /* ---------- Gelir paneli (koça özel; taslak ödeme verileri varsayılan olarak hariç) ---------- */
 const AYK = ["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
-function kaynakGrup(t){ const n = trLow(t);
-  return /youtube|you tube/.test(n) ? "YouTube" : /insta/.test(n) ? "Instagram" : /tiktok|tik tok/.test(n) ? "TikTok" : /telegram/.test(n) ? "Telegram"
-    : /yapay|chat ?g|gpt|gemini|zeka/.test(n) ? "Yapay zekâ" : /arkada|tavsiye|tanıd|öner|referans/.test(n) ? "Tavsiye" : /google|internet|arama|araştır|araştir|kendim/.test(n) ? "İnternet araması" : n.trim() ? "Diğer" : ""; }
 function gelirVeri(taslak){
   const t = today(), ay = t.slice(0,7), aylar = []; for(let i=5;i>=0;i--){ const x = addMonthsISO(ay+"-15", -i).slice(0,7); aylar.push(x); }
   const tah = Object.fromEntries(aylar.map(a=>[a,0])); let buAyVade = 0, buAyOdenen = 0, geciken = 0, gecikenN = 0, gelecek30 = 0, aktif = 0, tutarlar = [];
@@ -928,8 +929,6 @@ function cGelir(){
   const taslakVar = [...S.students.keys()].some(id=>odemeOf(id)?.taslak), g = gelirVeri(!!S.gelirTaslak), mx = Math.max(1, ...g.aylar.map(a=>g.tah[a])), cur = g.aylar[g.aylar.length-1];
   const bas = [...S.notifs.values()].filter(n=>n.type==="basvuru" && !n.deneme), ay = today().slice(0,7);
   const ayB = bas.filter(n=>String(n.at).slice(0,7)===ay), ogr = bas.filter(n=>n.durum==="ogrenci");
-  const kay = {}; bas.forEach(n=>{ const c = (n.cevaplar||[]).find(x=>/nasıl ula|nereden|nasil ula|duydu/i.test(x.s)); const k = c ? kaynakGrup(c.c) : ""; if(k) kay[k]=(kay[k]||0)+1; });
-  const kayL = Object.entries(kay).sort((a,b)=>b[1]-a[1]).slice(0,6), kmx = Math.max(1, ...kayL.map(x=>x[1]));
   const pct = g.buAyVade ? Math.round(g.buAyOdenen/g.buAyVade*100) : 0;
   return `${topbar(`<h1 class="ttl">Gelir Paneli</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide">
@@ -948,7 +947,7 @@ function cGelir(){
     <div class="card"><div class="sech"><h3>Önümüzdeki 30 gün</h3><b class="num">${fmtTL(g.gelecek30)||"0 ₺"}</b></div><p class="muted small" style="margin:6px 0 0">Vadesi önümüzdeki 30 gün içinde gelecek ödemelerin toplamı.</p></div>
     <div class="card"><div class="sech"><h3>Başvurular</h3><span class="faint small">Google Form</span></div>
       <div class="kpis" style="margin-top:10px">${tile("t-a","user",ayB.length,"Bu ay başvuru")}${tile("t-g","check",ogr.length,"Öğrenci olan")}${tile("t-w","trend",bas.length?"%"+Math.round(ogr.length/bas.length*100):"—","Dönüşüm oranı")}</div>
-      ${kayL.length?`<h3 style="margin:14px 0 8px;font-size:15px">Seni nereden buldular?</h3><div class="hbars">${kayL.map(([k,v])=>`<div class="hbar"><span>${esc(k)}</span><div><i style="width:${v/kmx*100}%"></i></div><b class="num">${v}</b></div>`).join("")}</div>`:`<p class="muted small" style="margin:10px 0 0">Formdaki “nasıl ulaştınız” sorusunun cevapları geldikçe burada kaynak dağılımı görünür.</p>`}</div>
+</div>
     <p class="faint small" style="text-align:center">${S.gelirTaslak?"Taslak ödeme verileri dahil edildi.":"Taslak ödeme verileri hariç."} Tutarı girilmemiş ödeme planları 0 ₺ sayılır. Bu sayfayı sadece sen görürsün.</p>
   </div>`;
 }
@@ -1460,7 +1459,8 @@ function openSheet(kind, el){
       <div class="two"><label class="f">Tarih<input type="date" name="tarih" id="go-tarih" value="${d0}"></label><label class="f">Saat<input type="time" name="saat" id="go-saat" step="300" value="${esc(g0?.saat||sonra)}"></label></div>
       <div class="two"><label class="f">Süre<select name="sure" id="go-sure">${[15,30,45,60].map(m=>`<option value="${m}" ${(g0?.sure||(ilk||!kisi?SURE_ILK:SURE_SEANS))===m?"selected":""}>${m} dk</option>`).join("")}</select></label>
         <label class="f">Tür<select name="tur" id="go-tur"><option value="seans" ${!ilk&&kisi?"selected":""}>Seans</option><option value="ilk" ${ilk||!kisi?"selected":""}>İlk görüşme</option></select></label></div>
-      ${!g0||g0.sanal||g0.kaynak==="duzen"?`<label class="inline" id="go-tekw" ${kisi?"":"hidden"}><input type="checkbox" name="tekrar" id="go-tekrar" ${g0&&(g0.sanal||g0.kaynak==="duzen")?"checked disabled":""}>Her hafta bu gün ve saatte (haftalık düzen)</label>`:""}
+      ${g0&&(g0.sanal||g0.kaynak==="duzen")?`<div class="f" id="go-tekw">Değişiklik<div class="seg"><label class="segr"><input type="radio" name="kapsam" value="hafta" checked><span>Sadece bu hafta</span></label><label class="segr"><input type="radio" name="kapsam" value="hep"><span>Bundan sonra hep</span></label></div></div>`
+        : !g0 ? `<label class="inline" id="go-tekw" ${kisi?"":"hidden"}><input type="checkbox" name="tekrar" id="go-tekrar">Her hafta bu gün ve saatte (haftalık düzen)</label>` : ""}
       <label class="f">Not<input type="text" name="not" id="go-not" value="${esc(g0?.not||"")}" placeholder="ör. deneme analizi yapılacak"></label>
       ${g0?`<div class="f">Durum<div class="seg">${[["planli","Planlı"],["yapildi","Yapıldı"],["gelmedi","Gelmedi"],["iptal","İptal"]].map(([k,l])=>`<label class="segr"><input type="radio" name="durum" value="${k}" ${g0.durum===k?"checked":""}><span>${l}</span></label>`).join("")}</div></div>`:""}
       <div class="err" id="serr"></div>
@@ -1468,18 +1468,21 @@ function openSheet(kind, el){
     fd=>{ const kim = fd.get("kim"), ad = String(fd.get("ad")||"").trim(), tarih = fd.get("tarih"), saat = fd.get("saat"), sure = +fd.get("sure"), tur = fd.get("tur"), not = String(fd.get("not")||"").trim();
       if(!kim && !ad) return sheetErr("Kiminle görüşeceğini seç ya da adını yaz."); if(!tarih || !saat) return sheetErr("Tarih ve saati seç.");
       if(!g0 && kim && fd.get("tekrar")){ setDuzen(kim, {gun:dIdx(tarih), saat, sure, bas:monday(tarih)}); if(not){ gorusSet("v:"+kim+":"+tarih, g=>{ g.not = not; }); } }
+      else if(g0 && fd.get("kapsam")==="hep" && kim){ const eski = duzenOf(kim)||{}, gunDegisti = dIdx(tarih)!==dIdx(g0.tarih);
+        setDuzen(kim, {...eski, saat, sure, gun: gunDegisti ? dIdx(tarih) : (eski.gun ?? null), bas: eski.bas || monday(g0.tarih)});
+        if(!g0.sanal) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||g.durum||"planli"}); });
+        else if(not || (fd.get("durum")||"planli")!=="planli" || gunDegisti) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||"planli"}); }); }
       else if(g0){ gorusSet(gid, g=>{ Object.assign(g, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:fd.get("durum")||g.durum||"planli"}); if(bid) g.bid = bid; }); }
       else { const nid = uid(); S.gorus.set(nid, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:"planli", ...(bid?{bid}:{})}); persistDoc("gorusmeler", nid, 0); }
       S.gday = tarih; closeSheet(); if(S.view!=="basvuru") S.view = "gorusme"; render(); toast("Görüşme kaydedildi"); }); }
-  if(kind==="duzen"){ const gunOpt = v => `<option value="">—</option>${GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("")}`;
-    return sheet(`<h3>Haftalık düzen</h3><p class="muted small" style="margin:-6px 0 0">Her öğrencinin sabit seansı. Gün seçmezsen o öğrencinin düzeni olmaz. Değişiklik bu haftadan itibaren geçerli olur.</p>
-      <div class="dzlist">${sortedStudents().map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(z.gun)}</select><input type="time" step="300" name="s_${id}" value="${esc(z.saat||"")}" aria-label="${esc(x.name)} saati"></div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
+  if(kind==="duzen"){ const gunOpt = (v, oto) => `<option value="">Otomatik · ${GUN[oto]}</option>${GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("")}`;
+    return sheet(`<h3>Haftalık düzen</h3><p class="muted small" style="margin:-6px 0 0">Gün, öğrencinin program döngüsünden (son görüşme günü) otomatik gelir; “Yeni görüşme” ile döngü kayarsa seans da kayar. Sen sadece saati gir. Saati boş bırakılan öğrenci takvime gelmez. Bir öğrencinin günü sabit başka bir güne geçtiyse günü elle seç.</p>
+      <div class="dzlist">${sortedStudents().map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(z.gun??null, otoGun(id))}</select><input type="time" step="300" name="s_${id}" value="${esc(z.saat||"")}" aria-label="${esc(x.name)} saati"></div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
       <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     fd=>{ let n = 0; const w = monday(today());
-      for(const [id] of sortedStudents()){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id);
-        if(g==="" || g==null){ if(z){ setDuzen(id, null); n++; } continue; }
-        if(!sa) return sheetErr(`${S.students.get(id).name} için saat seç.`);
-        if(!z || z.gun!==+g || z.saat!==sa){ setDuzen(id, {gun:+g, saat:sa, sure:z?.sure||SURE_SEANS, bas:w}); n++; } }
+      for(const [id] of sortedStudents()){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id), gun = g==="" || g==null ? null : +g;
+        if(!sa){ if(z){ setDuzen(id, null); n++; } continue; }
+        if(!z || (z.gun??null)!==gun || z.saat!==sa){ setDuzen(id, {gun, saat:sa, sure:z?.sure||SURE_SEANS, bas:z?.bas||w}); n++; } }
       closeSheet(); render(); toast(n?`${n} öğrencinin düzeni güncellendi`:"Değişiklik yok"); }); }
   if(kind==="tema") return sheet(`<h3>Görünüm</h3>
     <div class="f">Mod<div class="seg">${[["system","Otomatik"],["light","Açık"],["dark","Koyu"]].map(([k,l])=>`<button type="button" data-act="mode" data-v="${k}" aria-pressed="${THEME.mode===k}">${l}</button>`).join("")}</div></div>
