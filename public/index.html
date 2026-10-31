@@ -364,6 +364,15 @@ input:disabled{opacity:.5}
 .kt.hz.on{border-color:var(--ac);}
 .kt.hz.on::after{content:"✓ " attr(data-n);margin-left:auto;font-size:12px;font-weight:800;color:var(--ac)}
 .qbtn{white-space:nowrap}
+.bkrow{display:flex;flex-direction:column;gap:6px}
+.bkrow .gh{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--acfg)}
+.bkelle{width:150px;flex:none;padding:8px 12px;border-radius:999px;font-size:14px}
+.bkkonu summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:baseline}.bkkonu summary::-webkit-details-marker{display:none}
+.bkkonu[open] summary{margin-bottom:6px}.bkkonu .klist{max-height:34vh}
+.bkprev{padding:12px 14px;border-radius:12px;background:var(--sunk);font-weight:700;min-height:20px}
 .klist{display:flex;flex-direction:column;gap:12px;max-height:46vh;overflow:auto;padding-right:2px}
 .kt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:14px;font-weight:600}
 .kt svg{flex:none;width:16px;height:16px;padding:2px;border-radius:6px;border:1.5px solid var(--line);color:transparent}
@@ -568,6 +577,7 @@ input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px soli
 .dch b{font-size:15px}
 .dcard textarea{min-height:190px;font-size:14px;line-height:1.6;padding:10px;background:var(--sunk);border-color:transparent}
 .dcf{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dcbtn{display:flex;gap:8px;width:100%}.dcbtn .qbtn{flex:1;justify-content:center}
 .hrs{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--muted);flex:1;min-width:0;white-space:nowrap}
 .hrs input{width:64px;flex:none;padding:7px 6px;text-align:center;font-weight:800}
 .qsel{width:auto;flex:none;padding:7px 8px;font-size:13px;font-weight:700;color:var(--ac);max-width:140px}

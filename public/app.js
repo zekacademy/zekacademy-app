@@ -621,7 +621,7 @@ function planEditor(s){
     return `<div class="dcard ${d===today()?"today":""}"><div class="dch"><b>${g}</b>${yaziliGun(s,d).map(x=>`<span class="pill warn">${esc(x)} yazılısı</span>`).join("")}<span class="faint small">${shortDate(d)}</span></div>
       <textarea id="pl-${i}" data-plan="${d}" rows="8" placeholder="Her satıra bir görev&#10;Problem 20 soru&#10;AYT Matematik Çalışması (2,5 saat)&#10;Fen Branş x1">${esc(l.map(taskText).join("\n"))}</textarea>
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
-        <button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div>
+        <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${d}" aria-label="${g} için blok ekle">${icon("plus","xs")} Blok</button><button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
@@ -1200,6 +1200,28 @@ function cDetail(){
   return `${topbar(`<div style="min-width:0;flex:1"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
+/* ---------- Blok ekle: ders → tür → (konu) → süre seçerek görev satırı oluşturma ---------- */
+const BLK_TUR = [["konu","Konu","Konu Çalışması"],["soru","Soru","Soru Çözümü"],["tekrar","Tekrar","Tekrar"],["brans","Branş","Branş Denemesi"],["deneme","Deneme","Genel Deneme"],["sb","Soru bankası","Soru Bankası"]];
+const BLK_SURE = [0.5,1,1.5,2,2.5,3,3.5];
+const sureYaz = h => h < 1 ? `${Math.round(h*60)} dk` : `${String(Math.round(h*100)/100).replace(".",",")} saat`;
+function sureOku(v){ const t = String(v||"").toLowerCase().replace(",","."), n = parseFloat(t); if(!(n>0)) return null; return /dk|dak/.test(t) || n > 12 ? n/60 : n; }
+function blkSatir(b){ const tur = BLK_TUR.find(x=>x[0]===b.tur); if(!tur) return "";
+  const ex = b.ex ? b.ex+" " : "";
+  let t = b.tur==="deneme" ? `${ex}Genel Deneme` : b.ders ? `${ex}${b.ders} ${tur[2]}` : "";
+  if(!t) return ""; if(b.konu.length && b.tur!=="deneme") t += ` – ${b.konu.join(" + ")}`;
+  if(b.sure) t += ` (${sureYaz(b.sure)})`; return t; }
+function blkDersler(s){ const L = cfg().hedefDers, al = s.alan, oncelik = {SAY:["Matematik","Geometri","Fizik","Kimya","Biyoloji","Türkçe"], EA:["Matematik","Geometri","Edebiyat","Tarih","Coğrafya","Türkçe"], "SÖZ":["Edebiyat","Tarih","Coğrafya","Felsefe","Türkçe","Din Kültürü"]}[al] || [];
+  return [...oncelik.filter(x=>L.includes(x)), ...L.filter(x=>!oncelik.includes(x))]; }
+function blkKonular(s, b){ if(!b.ders || b.tur==="deneme") return []; return dersSubs(s, b.ders).filter(x=>!b.ex || !x.ex || x.ex===b.ex || /^\d/.test(x.ex)); }
+function blkKonuHTML(s, b){ const subs = blkKonular(s, b); if(!subs.length) return `<p class="faint small" style="margin:0">${b.tur==="deneme"?"Genel denemede konu seçilmez.":"Önce ders seç."}</p>`;
+  return subs.map(sub=>`<div class="kgrp" data-grp><div class="gh">${esc(sub.ex||"")} · ${esc(sub.n)}</div>${sub.t.map(n=>`<button type="button" class="kt" data-act="bkk" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${b.konu.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span></button>`).join("")}</div>`).join(""); }
+function blkGuncelle(){ const s = st(), b = S.blk; if(!b) return;
+  document.querySelectorAll("#layer [data-act=bkd]").forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===b.ders));
+  document.querySelectorAll("#layer [data-act=bke]").forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===(b.ex||"")));
+  document.querySelectorAll("#layer [data-act=bkt]").forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===b.tur));
+  document.querySelectorAll("#layer [data-act=bks]").forEach(x=>x.setAttribute("aria-pressed", +x.dataset.v===b.sure && !b.elle));
+  const out = blkSatir(b), pv = $("#bk-prev"), ek = $("#bk-ekle"); if(pv) pv.innerHTML = out ? esc(out) : `<span class="faint">Ders ve tür seç</span>`; if(ek) ek.disabled = !out;
+  const ks = $("#bk-ksay"); if(ks) ks.textContent = b.konu.length ? `${b.konu.length} konu seçili` : "isteğe bağlı"; }
 /* Çetelede 10 ve üzeri yanlışa ulaşan konular (program yazarken tekrar önerisi) */
 const CETELE_ESIK = 10;
 function cetele10(s){ const out = [];
@@ -1639,6 +1661,19 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
   const s = st();
+  if(kind==="blok"){ const d = el.dataset.date, MX = isMaarif(s);
+    S.blk = {d, ders:S.blk?.ders||"", ex: MX ? "" : (S.blk?.ex ?? (s.sinif==="Mezun"||s.sinif==="12. sınıf" ? "TYT" : "TYT")), tur:S.blk?.tur||"konu", konu:[], sure:S.blk?.sure||null, elle:false}; const b = S.blk;
+    return sheet(`<h3>${GUN[dIdx(d)]} ${shortDate(d)} · blok ekle</h3>
+      <div class="bkrow"><div class="gh">Ders</div><div class="chips">${blkDersler(s).map(x=>`<button type="button" class="chip" data-act="bkd" data-v="${esc(x)}" aria-pressed="${x===b.ders}">${esc(x)}</button>`).join("")}</div></div>
+      ${MX?"":`<div class="bkrow"><div class="gh">Sınav</div><div class="chips"><button type="button" class="chip" data-act="bke" data-v="TYT" aria-pressed="${b.ex==="TYT"}">TYT</button><button type="button" class="chip" data-act="bke" data-v="AYT" aria-pressed="${b.ex==="AYT"}">AYT</button><button type="button" class="chip" data-act="bke" data-v="" aria-pressed="${!b.ex}">Yazma</button></div></div>`}
+      <div class="bkrow"><div class="gh">Tür</div><div class="chips">${BLK_TUR.map(([k,l])=>`<button type="button" class="chip" data-act="bkt" data-v="${k}" aria-pressed="${k===b.tur}">${l}</button>`).join("")}</div></div>
+      <details class="bkrow bkkonu"><summary><span class="gh">Konu</span> <span class="faint small" id="bk-ksay">isteğe bağlı</span></summary>
+        <input type="search" id="bkq" placeholder="Konu ara" autocomplete="off" aria-label="Konu ara">
+        <div class="klist" id="bk-konu">${blkKonuHTML(s,b)}</div></details>
+      <div class="bkrow"><div class="gh">Süre</div><div class="chips">${BLK_SURE.map(h=>`<button type="button" class="chip" data-act="bks" data-v="${h}" aria-pressed="${h===b.sure}">${sureYaz(h)}</button>`).join("")}
+        <input type="text" inputmode="decimal" id="bk-elle" class="bkelle" placeholder="elle: 45 dk / 4 saat" aria-label="Süreyi elle yaz"></div></div>
+      <div class="bkprev" id="bk-prev"></div>
+      <div class="acts"><button type="button" class="btn" data-close>Bitti</button><button type="button" class="btn pri" id="bk-ekle" data-act="bkekle">${icon("plus","xs")} Güne ekle</button></div>`); }
   if(kind==="hizli"){ const d = el.dataset.date, say = new Map(), benim = new Map();
     const ekle = (m, t) => { t = String(t||"").trim(); if(t) m.set(t, (m.get(t)||0)+1); };
     Object.values(s.weeks||{}).forEach(x=>Object.values(x).forEach(l=>(l||[]).forEach(k=>ekle(benim, taskText(k)))));
@@ -1925,6 +1960,14 @@ document.addEventListener("click", e=>{
     case "formkod": formKod(b.dataset.v2==="yenile"); break;
     case "kopyala": { const el=document.getElementById(b.dataset.hedef); if(el){ (navigator.clipboard?navigator.clipboard.writeText(el.textContent):Promise.reject()).then(()=>toast("Kopyalandı")).catch(()=>{ const r=document.createRange(); r.selectNodeContents(el); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Seçildi, kopyala de"); }); } break; }
     case "otaslaksil": S.students.forEach((_,id)=>{ const o = odemeOf(id); if(o && o.taslak){ const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); } }); render(); toast("Taslak ödeme verileri silindi"); break;
+    case "bkd": S.blk.ders = v; S.blk.konu = []; if(!isMaarif(st())){ if(/türkçe/i.test(v)) S.blk.ex = "TYT"; else if(/edebiyat/i.test(v)) S.blk.ex = "AYT"; } { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
+    case "bke": S.blk.ex = v; S.blk.konu = []; { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
+    case "bkt": S.blk.tur = v; if(v==="deneme") S.blk.konu = []; { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
+    case "bks": S.blk.sure = +v; S.blk.elle = false; { const e = $("#bk-elle"); if(e) e.value = ""; } blkGuncelle(); break;
+    case "bkk": { const on = !S.blk.konu.includes(v); S.blk.konu = on ? [...S.blk.konu, v] : S.blk.konu.filter(x=>x!==v); b.setAttribute("aria-pressed", on); blkGuncelle(); break; }
+    case "bkekle": { const t = blkSatir(S.blk); if(!t) break; const ta = document.getElementById("pl-"+pIdx(st(), S.blk.d));
+      if(ta){ ta.value = (ta.value.trim()? ta.value.replace(/\s+$/,"")+"\n" : "") + t; ta.dispatchEvent(new Event("input",{bubbles:true})); }
+      toast(`Eklendi: ${t}`); S.blk.konu = []; document.querySelectorAll("#layer [data-act=bkk]").forEach(x=>x.setAttribute("aria-pressed", false)); blkGuncelle(); break; }
     case "hz": { const t = String(v||"").trim(); if(!t) break; const ta = document.getElementById("pl-"+pIdx(st(), S.hzGun));
       if(ta){ ta.value = (ta.value.trim()? ta.value.replace(/\s+$/,"")+"\n" : "") + t; ta.dispatchEvent(new Event("input",{bubbles:true})); }
       b.classList.add("on"); b.dataset.n = (+b.dataset.n||0)+1; toast(`Eklendi: ${t}`); const q = $("#hq"); if(q && b.id==="hfree"){ q.value=""; q.dispatchEvent(new Event("input",{bubbles:true})); } break; }
@@ -1943,7 +1986,7 @@ document.addEventListener("click", e=>{
       mutate(s=>{ s.denemeler=s.denemeler.filter(d=>d.id!==b.dataset.id); }); render(); toast("Deneme silindi"); break; }
     case "tstart": mutate(s=>{ s.timer={start:Date.now()}; }); render(); break;
     case "tstop": { let added=0; mutate(s=>{ if(!s.timer) return; const d=iso(new Date(s.timer.start)); added=Math.round(timerMin(s)); s.gunluk=s.gunluk||{}; if(added>0) s.gunluk[d]=(s.gunluk[d]||0)+added; s.timer=null; }); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
-    case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } break;
+    case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
     case "accent": THEME.accent=v; applyTheme(); openSheet("tema"); render(); break;
@@ -1971,6 +2014,8 @@ document.addEventListener("input", e=>{
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
+  if(t.id==="bk-elle"){ const h = sureOku(t.value); if(S.blk){ S.blk.sure = h; S.blk.elle = !!h; blkGuncelle(); } return; }
+  if(t.id==="bkq"){ const q = trLow(t.value).trim(); document.querySelectorAll("#bk-konu .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; }); return; }
   if(t.id==="hq"){ const q = trLow(t.value).trim(); let any=false, tam=false;
     document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; if(b.dataset.q===q) tam=true; }); g.hidden = !n; if(n) any=true; });
     const hn=$("#hnone"); if(hn) hn.hidden = any; const hf=$("#hfree"); if(hf){ hf.hidden = !q || tam; hf.dataset.v = t.value.trim(); hf.textContent = `“${t.value.trim()}” satırını ekle`; } return; }
