@@ -571,6 +571,22 @@ input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px soli
 .goalgrid{display:grid;grid-template-columns:150px minmax(0,1.2fr) minmax(0,1fr);gap:6px 10px;align-items:center}
 .goalgrid .gh{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
 .goalgrid .gd{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px;letter-spacing:.02em}
+.glist{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.gc{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.25fr);gap:8px 12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-left:4px solid var(--dc,var(--line));border-radius:14px;background:var(--surface)}
+.gc.bos{background:transparent}
+.gch{display:flex;align-items:center;gap:8px}.gch b{color:var(--dc,var(--fg));font-size:14px;letter-spacing:.01em}
+.gkyn{display:flex;flex-direction:column;gap:6px;min-width:0}
+.gk{display:flex;align-items:flex-start;gap:8px;min-width:0}
+.gkl{flex:none;width:58px;display:flex;align-items:center;gap:4px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);padding-top:6px}
+.gchips{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.kc{display:inline-flex;align-items:center;gap:2px;padding:4px 4px 4px 10px;border-radius:999px;font-size:13px;font-weight:700;background:var(--sunk);color:var(--fg);max-width:100%}
+.gk-hoca .kc{background:color-mix(in srgb, var(--dc,var(--ac)) 14%, transparent);color:color-mix(in srgb, var(--dc,var(--ac)) 70%, var(--fg))}
+.kc button{border:0;background:transparent;color:inherit;opacity:.55;font-size:16px;line-height:1;padding:0 4px;cursor:pointer}.kc button:hover{opacity:1}
+.kadd{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;border:1px dashed var(--line);background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.kadd:hover{border-color:var(--dc,var(--ac));color:var(--dc,var(--ac))}
+@media (max-width:760px){.gc{grid-template-columns:1fr}}
+.pbar{display:flex;align-items:center;gap:6px}.pbar .btn{flex:1;justify-content:flex-start;overflow:hidden}.pbar .btn b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.tx.tc{display:grid;place-items:center;font-size:0;padding:2px}
 .kyn{display:flex;flex-direction:column;gap:4px;min-width:0}
 .kbtn{display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:7px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:13px;font-weight:600;cursor:pointer;min-width:0}
 .kbtn>span{min-width:0;overflow-wrap:anywhere;line-height:1.3}.kbtn svg{flex:none;color:var(--muted)}
@@ -595,9 +611,9 @@ input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px soli
 .tdur{flex:none;font-size:12px;font-weight:800;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
 .tx{flex:none;border:0;background:transparent;color:var(--faint);font-size:20px;line-height:1;padding:0 2px;cursor:pointer}
 .tx:hover{color:var(--bad)}
-.tr[data-c=mat]{--dc:#3B82F6}.tr[data-c=geo]{--dc:#6366F1}.tr[data-c=fiz]{--dc:#F97316}.tr[data-c=kim]{--dc:#14B8A6}.tr[data-c=bio]{--dc:#22C55E}
-.tr[data-c=tr]{--dc:#EF4444}.tr[data-c=ede]{--dc:#EC4899}.tr[data-c=tar]{--dc:#A16207}.tr[data-c=cog]{--dc:#06B6D4}.tr[data-c=fel]{--dc:#8B5CF6}
-.tr[data-c=din]{--dc:#84CC16}.tr[data-c=den]{--dc:#64748B}.tr[data-c=oku]{--dc:#F59E0B}
+[data-c=mat]{--dc:#3B82F6}[data-c=geo]{--dc:#6366F1}[data-c=fiz]{--dc:#F97316}[data-c=kim]{--dc:#14B8A6}[data-c=bio]{--dc:#22C55E}
+[data-c=tr]{--dc:#EF4444}[data-c=ede]{--dc:#EC4899}[data-c=tar]{--dc:#A16207}[data-c=cog]{--dc:#06B6D4}[data-c=fel]{--dc:#8B5CF6}
+[data-c=din]{--dc:#84CC16}[data-c=den]{--dc:#64748B}[data-c=oku]{--dc:#F59E0B}
 .dcbtn{display:flex;gap:8px;width:100%}.dcbtn .qbtn{flex:1;justify-content:center}
 .hrs{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--muted);flex:1;min-width:0;white-space:nowrap}
 .hrs input{width:64px;flex:none;padding:7px 6px;text-align:center;font-weight:800}
