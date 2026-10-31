@@ -556,7 +556,7 @@ function linesToTasks(old, text){
 }
 
 /* Görevin dersine ait bu haftaki hedef konu, kitap ve hoca (öğrenci ekranında görevin altında küçük yazı) */
-function gorevHedef(s, date, text){ if(!s) return ""; const kod = dersKodu(text); if(!kod || kod==="den" || kod==="oku") return "";
+function gorevHedef(s, date, text){ if(!s) return ""; if(/paragraf|problem/i.test(trLow(text))) return `<div class="thd"><span>${icon("flame","xs")}Günlük rutin</span></div>`; const kod = dersKodu(text); if(!kod || kod==="den" || kod==="oku") return "";
   const d = cfg().hedefDers.find(x=>dersKodu(x)===kod); if(!d) return "";
   const hd = ((plan(s, pStart(s,date)).hedef)||{})[d] || {}, kt = kitap(s,d), hc = hoca(s,d);
   const par = [hd.konu ? `<span>${icon("target","xs")}${esc(hd.konu)}</span>` : "", kt ? `<span>${icon("book","xs")}${esc(kt)}</span>` : "", hc ? `<span>${icon("users","xs")}${esc(hc)}</span>` : ""].filter(Boolean);
@@ -1230,9 +1230,9 @@ function kysNot(kaydet){ const e = $("#kysel"); if(e) e.textContent = KYS.length
   if(!kaydet || !S.kyn) return; const {d, k} = S.kyn, v = KYS.join(" + "), alan = k==="kitap" ? "kitaplar" : "hocalar";
   mutate(x=>{ x[alan] = x[alan]||{}; if(v) x[alan][d] = v; else delete x[alan][d]; });
   const g = [...document.querySelectorAll(`#root .gk-${k} .kadd`)].find(x=>x.dataset.ders===d)?.closest(".gk"); if(g) g.outerHTML = kaynakCipleri(st(), d, k); }
-function tlSure(t){ const h = parseHours(t); return h ? fmtMin(h*60) : ""; }
-const TL_BTN = `<button type="button" class="tx tc" data-act="tkopya" aria-label="Görevi kopyala" title="Kopyala">${'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'}</button><button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button>`;
-function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}"><span class="tdot">${done?icon("check","xs"):""}</span><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz (Enter ile yeni satır)":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span>${bos?"":TL_BTN}</div>`; }
+function tlSure(t){ if(/\d\s*(saat|sa|dk|dakika)\b/i.test(t)) return ""; const h = parseHours(t); return h ? "≈ "+fmtMin(h*60) : ""; } /* satırda süre yazıyorsa tekrar gösterme */
+const TL_BTN = `<span class="tacts"><button type="button" class="tx tc" data-act="tkopya" aria-label="Görevi kopyala" title="Kopyala">${'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'}</button><button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button></span>`;
+function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}"><span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
 function panoGuncelle(){ const n = (S.pano||[]).length; document.querySelectorAll(".pbar").forEach(x=>{ x.hidden = !n; const b = x.querySelector("[data-act=tyapistir]"); if(b) b.innerHTML = `📋 Yapıştır <b>${n>1?n+" görev":esc(S.pano[0]||"")}</b>`; }); }
 function tlBoyut(kok){ (kok||document).querySelectorAll(".tin").forEach(x=>{ x.style.height = "auto"; x.style.height = x.scrollHeight+"px"; }); }
 function tlSync(box){ const ta = document.getElementById("pl-"+box.dataset.i); if(!ta) return;
