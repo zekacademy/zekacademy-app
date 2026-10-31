@@ -611,7 +611,6 @@ function studentProgram(s){
 
 function planEditor(s){
   const w = S.week, p = plan(s,w), h = p.hedef||{}, ws = weekStats(s,w), g = weekGoals(s,w);
-  const quick = [...new Set([...cfg().quick, ...Object.values(s.weeks||{}).flatMap(x=>Object.values(x).flatMap(l=>(l||[]).map(taskText)))])].slice(0,40);
   const goals = `<div class="card"><div class="sech"><h3>Haftalık hedefler</h3><span class="faint small">${g.list.length?`Öğrenci ${g.done}/${g.list.length} işaretledi`:"Boş bırakılan ders öğrenciye görünmez"}</span></div>
     <div class="goalgrid" style="margin-top:10px"><div class="gh">Ders</div><div class="gh">Bitirilecek konu</div><div class="gh">Takip edilen kitaplar</div>
     ${cfg().hedefDers.map(d=>`<div class="gd">${h[d]&&h[d].konu?`<button class="tick sm" data-act="gtick" data-w="${w}" data-ders="${esc(d)}" aria-pressed="${!!h[d].done}" aria-label="${esc(d)} tamamlandı">${icon("check","xs")}</button>`:`<span class="tick sm ghost"></span>`}${esc(d)}</div>
@@ -622,7 +621,7 @@ function planEditor(s){
     return `<div class="dcard ${d===today()?"today":""}"><div class="dch"><b>${g}</b>${yaziliGun(s,d).map(x=>`<span class="pill warn">${esc(x)} yazılısı</span>`).join("")}<span class="faint small">${shortDate(d)}</span></div>
       <textarea id="pl-${i}" data-plan="${d}" rows="8" placeholder="Her satıra bir görev&#10;Problem 20 soru&#10;AYT Matematik Çalışması (2,5 saat)&#10;Fen Branş x1">${esc(l.map(taskText).join("\n"))}</textarea>
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
-        <select class="qsel" data-quick="${d}" aria-label="${g} için hızlı ekle"><option value="">+ Hızlı ekle</option>${quick.map(q=>`<option>${esc(q)}</option>`).join("")}</select></div>
+        <button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
@@ -1630,6 +1629,22 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
   const s = st();
+  if(kind==="hizli"){ const d = el.dataset.date, say = new Map(), benim = new Map();
+    const ekle = (m, t) => { t = String(t||"").trim(); if(t) m.set(t, (m.get(t)||0)+1); };
+    Object.values(s.weeks||{}).forEach(x=>Object.values(x).forEach(l=>(l||[]).forEach(k=>ekle(benim, taskText(k)))));
+    S.students.forEach((x,id)=>{ if(id===sid()) return; Object.values(x.weeks||{}).forEach(w=>Object.values(w).forEach(l=>(l||[]).forEach(k=>ekle(say, taskText(k))))); });
+    const kayitli = cfg().quick, gor = new Set(kayitli), sirala = m => [...m.entries()].filter(([t])=>!gor.has(t)).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"tr")).map(([t])=>{ gor.add(t); return t; });
+    const g1 = kayitli, g2 = sirala(benim), g3 = sirala(say).slice(0,80);
+    const btn = t => `<button type="button" class="kt hz" data-act="hz" data-v="${esc(t)}" data-q="${esc(trLow(t))}">${icon("plus","xs")}<span>${esc(t)}</span></button>`;
+    const grp = (b, l) => l.length ? `<div class="kgrp" data-grp><div class="gh">${b}</div>${l.map(btn).join("")}</div>` : "";
+    S.hzGun = d;
+    return sheet(`<h3>${GUN[dIdx(d)]} ${shortDate(d)} · hızlı ekle</h3>
+      <input type="search" id="hq" placeholder="Ara (ör. paragraf, fizik, deneme)" autocomplete="off" aria-label="Satır ara">
+      <div class="klist">${grp("Kayıtlı satırlar", g1)}${grp(`${esc(ilkAd(s.name))} için daha önce yazılanlar`, g2)}${grp("Diğer öğrencilerde kullanılanlar", g3)}
+        <p class="faint small" id="hnone" hidden>Eşleşen satır yok.</p></div>
+      <button type="button" class="btn sm" id="hfree" data-act="hz" data-v="" hidden></button>
+      <p class="faint small" style="margin:0">Dokunduğun satır güne eklenir; pencere açık kalır, birden fazla seçebilirsin. Ayarlar → Hızlı ekle listesi’nden kayıtlı satırları düzenleyebilirsin.</p>
+      <div class="acts"><button type="button" class="btn pri" data-close>Bitti</button></div>`); }
   if(kind==="konu"){ const d = el.dataset.ders, w = S.week, p = plan(s,w), cur = ((p.hedef||{})[d]||{}).konu || "";
     const subs = dersSubs(s,d), allT = new Set(subs.flatMap(x=>x.t)); KSEL = splitKonu(cur);
     const free = KSEL.filter(x=>!allT.has(x)); KSEL = KSEL.filter(x=>allT.has(x));
@@ -1899,6 +1914,9 @@ document.addEventListener("click", e=>{
     case "formkod": formKod(b.dataset.v2==="yenile"); break;
     case "kopyala": { const el=document.getElementById(b.dataset.hedef); if(el){ (navigator.clipboard?navigator.clipboard.writeText(el.textContent):Promise.reject()).then(()=>toast("Kopyalandı")).catch(()=>{ const r=document.createRange(); r.selectNodeContents(el); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Seçildi, kopyala de"); }); } break; }
     case "otaslaksil": S.students.forEach((_,id)=>{ const o = odemeOf(id); if(o && o.taslak){ const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); } }); render(); toast("Taslak ödeme verileri silindi"); break;
+    case "hz": { const t = String(v||"").trim(); if(!t) break; const ta = document.getElementById("pl-"+pIdx(st(), S.hzGun));
+      if(ta){ ta.value = (ta.value.trim()? ta.value.replace(/\s+$/,"")+"\n" : "") + t; ta.dispatchEvent(new Event("input",{bubbles:true})); }
+      b.classList.add("on"); b.dataset.n = (+b.dataset.n||0)+1; toast(`Eklendi: ${t}`); const q = $("#hq"); if(q && b.id==="hfree"){ q.value=""; q.dispatchEvent(new Event("input",{bubbles:true})); } break; }
     case "kt": { const n=v, on=!KSEL.includes(n); KSEL = on ? [...KSEL, n] : KSEL.filter(x=>x!==n); document.querySelectorAll("#layer .kt").forEach(x=>{ if(x.dataset.v===n) x.setAttribute("aria-pressed", on); }); kselNote(); break; }
     case "kclear": KSEL=[]; document.querySelectorAll("#layer .kt").forEach(x=>x.setAttribute("aria-pressed","false")); { const f=$("#kfree"); if(f) f.value=""; } kselNote(); break;
     case "tick": { const d=b.dataset.date, id=b.dataset.id; mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
@@ -1936,11 +1954,15 @@ document.addEventListener("change", e=>{
   else if(t.dataset.plan || t.dataset.hd==="konu"){ setTimeout(()=>{ if(!document.activeElement || !document.activeElement.matches("textarea,input[type=text],input[type=number]")) render(); }, 0); }
   else if(t.dataset.f && t.type==="date"){ setField(t.dataset.f, t.value); }
 });
-document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
+document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target.id==="hq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")) || ($("#hfree")?.hidden ? null : $("#hfree")); if(b) b.click(); return; }
+  if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
 document.addEventListener("input", e=>{
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
+  if(t.id==="hq"){ const q = trLow(t.value).trim(); let any=false, tam=false;
+    document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; if(b.dataset.q===q) tam=true; }); g.hidden = !n; if(n) any=true; });
+    const hn=$("#hnone"); if(hn) hn.hidden = any; const hf=$("#hfree"); if(hf){ hf.hidden = !q || tam; hf.dataset.v = t.value.trim(); hf.textContent = `“${t.value.trim()}” satırını ekle`; } return; }
   if(t.id==="kq"){ const q = trLow(t.value).trim(); let any=false;
     document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || b.dataset.q.includes(q); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; if(n) any=true; });
     const ko=$("#layer .koneri"); if(ko) ko.hidden = !!q; const kn=$("#knone"); if(kn) kn.hidden = any; return; }
