@@ -262,10 +262,16 @@ function watchColl(coll, need){
     e=>{ console.error(coll, e); loaded[coll]=true; checkReady(need); render(); }));
 }
 function watchSettings(need){
-  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
+  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ S.setYuklu = true; if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
-function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
+/* Bir kerelik düzeltme: Drive aktarımında kitap sütununa karışan saat çizelgesi satırlarını temizle */
+function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.kitapCizelge) return; const saat = /\d{1,2}[.:]\d{2}\s*-\s*\d{1,2}[.:]\d{2}|^ara\b/i; let n = 0;
+  S.students.forEach((x,id)=>{ const K = x.kitaplar; if(!K) return; let deg = false;
+    Object.keys(K).forEach(d=>{ const parca = String(K[d]).split(/\s+·\s+/), kal = parca.filter(p=>!saat.test(p.trim())); if(kal.length !== parca.length){ deg = true; if(kal.length) K[d] = kal.join(" · "); else delete K[d]; } });
+    if(deg){ n++; persistDoc("students", id, 0); } });
+  S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
+function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(kitapCizelgeTemizle, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
 function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; history.replaceState(null, "", "/"); }
 function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
 
@@ -442,11 +448,36 @@ function studentNotices(s){
   const mm = morningMsg(s, S.me); if(mm) out.push(["sun","Günün mesajı", mm]);
   return out;
 }
+/* ---------- İlk açılışta uygulama tanıtımı (öğrenci) ---------- */
+const TUR = [
+  {nav:null, ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin. Programın, hedeflerin, denemelerin ve çalışma sürelerin burada. Koçun yaptığın her şeyi anında görür. Hadi 1 dakikada tanıyalım."},
+  {nav:"home", ic:"home", b:"Bugünün görevleri", t:"Ana sayfada bugün yapacakların sıralı. Bir görevi bitirince yanındaki yuvarlağa dokun, yeşil olsun.", ornek:"gorev"},
+  {nav:"home", ic:"target", b:"Görevin altındaki küçük yazı", t:"Her dersin altında o hafta bitireceğin konu 🎯, takip edeceğin kitap 📖 ve hoca 👥 yazar. Paragraf ve problemde “Günlük rutin” yazar.", ornek:"hedef"},
+  {nav:"program", ic:"cal", b:"Haftalık Program", t:"Ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık”ta bütün haftayı ve hedeflerini görürsün. Hedef konuyu bitirince onu da işaretle."},
+  {nav:"daha", ic:"timer", b:"Çalışma süresi", t:"Daha Fazla → Kronometre. Derse başlarken başlat, bitince durdur. Unutursan süreyi elle de yazabilirsin. Örneğin: bugün 5 saat 30 dakika.", ornek:"sure"},
+  {nav:"analiz", ic:"chart", b:"Denemeler ve analiz", t:"Her denemeden sonra netlerini gir. Örneğin TYT: Türkçe 32, Sosyal 14, Matematik 25, Fen 12. Grafikte gelişimini, koçun da hangi derste takıldığını görür."},
+  {nav:"konular", ic:"book", b:"Konular", t:"Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur.", ornek:"konu"},
+  {nav:"daha", ic:"list", b:"Yanlış çetelesi", t:"Daha Fazla → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle. Örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
+  {nav:"daha", ic:"bell", b:"Bildirimler ve koçundan notlar", t:"Sabah motivasyon mesajı, akşam eksik hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse “İzin ver”e bas. Koçunun notları da burada."},
+  {nav:null, ic:"check", b:"Hazırsın! 🎯", t:"Her gün görevlerini işaretle, süreni gir, haftada bir denemeni ekle. Bu tanıtımı Daha Fazla → “Uygulamayı tanı”dan istediğin zaman tekrar açabilirsin."} ];
+function turOrnek(k){
+  if(k==="gorev") return `<div class="tasks turex"><div class="task done"><span class="tick" aria-pressed="true">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">Paragraf 20 soru</div></div><span></span></div><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Matematik Çalışması (2,5 saat)</div></div><span class="pill">${icon("clock","xs")}2,5 saat</span></div></div>`;
+  if(k==="hedef") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Konu Soru Çalışması (2 saat)</div><div class="thd"><span>${icon("target","xs")}Basit Harmonik Hareket</span><span>${icon("book","xs")}345 + Bilgi Sarmal</span><span>${icon("users","xs")}Özcan Aykın</span></div></div><span></span></div></div>`;
+  if(k==="sure") return `<div class="turex turbig"><b class="num">5 sa 30 dk</b><span class="muted small">bugün çalıştın · hedef 7,5 saat</span></div>`;
+  if(k==="konu") return `<div class="turex turkonu"><span>Basınç</span><span class="pill">2 tekrar</span><span class="pill ac">SB1 ✓</span><span class="pill ac">SB2 ✓</span></div>`;
+  return ""; }
+function turHTML(s){ const i = S.tur, a = TUR[i]; if(!a) return "";
+  return `<div class="turov" role="dialog" aria-modal="true" aria-label="Uygulama tanıtımı"><div class="turkart">
+    <div class="turust"><span class="turic">${icon(a.ic)}</span><span class="faint small">${i+1} / ${TUR.length}</span><button class="link small" data-act="turbitir">Atla</button></div>
+    <h2>${esc(a.b.replace("{Ad}", ilkAd(s.name)))}</h2><p>${esc(a.t)}</p>${a.ornek?turOrnek(a.ornek):""}
+    <div class="turnok">${TUR.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
+    <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===TUR.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===TUR.length-1?"Başlayalım":"İleri"}</button></div></div></div>`; }
 function studentShell(){
   const s = st(); if(!s) return "";
+  if(S.tur==null && !s.tanitim && !S.turKapandi) S.tur = 0;
   const pages = {home:sHome, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell};
   const nots = studentNotices(s).length;
-  return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]);
+  return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && TUR[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 function sHome(s){
   const t = today(), tl = dayTasks(s,t), done = tl.filter(x=>x.done).length;
@@ -502,6 +533,7 @@ function sMore(s){
       <button class="row" data-act="go" data-v="kronometre"><span class="ri">${icon("timer","sm")}</span><div><div class="rt">Kronometre ve çalışma süresi</div><div class="rs">Bugün ${fmtMin(minutes(s,today()))}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="tur" data-v="0"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="logout"><span class="ri">${icon("logout","sm")}</span><div><div class="rt">Çıkış yap</div><div class="rs">“Beni hatırla” bu cihazda sıfırlanır</div></div></button>
     </div>
@@ -2078,6 +2110,8 @@ document.addEventListener("click", e=>{
       panoGuncelle(); toast(S.pano.length>1 ? `${S.pano.length} görev panoda · istediğin günde “Yapıştır”a bas` : "Kopyalandı · istediğin günde “Yapıştır”a bas"); break; }
     case "tyapistir": { (S.pano||[]).forEach(t=>gunEkle(b.dataset.date, t)); toast(`${(S.pano||[]).length} görev yapıştırıldı`); break; }
     case "ptemizle": S.pano = []; panoGuncelle(); break;
+    case "tur": S.tur = +v; render(); break;
+    case "turbitir": S.tur = null; S.turKapandi = true; if(!A() && st() && !st().tanitim){ st().tanitim = true; save(); } render(); break;
     case "geri": geriAl(false); break;
     case "ileri": geriAl(true); break;
     case "tdel": { const r = b.closest(".tr"), box = b.closest(".tl"); if(r && box){ r.remove(); tlSync(box); } break; }
