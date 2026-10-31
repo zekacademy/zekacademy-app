@@ -472,7 +472,7 @@ function sHome(s){
     </div>
     <button class="hero" data-act="go" data-v="program" style="text-align:left;width:100%">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}<div><h3>Bugünkü Program</h3><p>${msg}</p></div><span class="go">${icon("chev")}</span></button>
     <div class="card" id="gorevler"><div class="sech"><h3>Bugünün Görevleri</h3><button class="link" data-act="go" data-v="program">Tümünü gör</button></div>
-      <div class="tasks" style="margin-top:6px">${tl.length? tl.map(x=>taskRow(x,t,{canTick:true})).join("") : `<div class="empty">Koçun bugüne görev eklemedi.</div>`}</div></div>
+      <div class="tasks" style="margin-top:6px">${tl.length? tl.map(x=>taskRow(x,t,{canTick:true, s})).join("") : `<div class="empty">Koçun bugüne görev eklemedi.</div>`}</div></div>
     ${goalsCard(s, curStart(s), {compact:true})}
     <div class="tiles" style="grid-template-columns:repeat(2,minmax(0,1fr))">
       ${tile("t-a","trend", lt?fmt(tytTotal(lt)):"—", lt?`Son TYT neti · ${shortDate(lt.tarih)}`:"Henüz TYT denemesi yok")}
@@ -555,11 +555,17 @@ function linesToTasks(old, text){
   });
 }
 
-function taskRow(t, date, opts){
+/* Görevin dersine ait bu haftaki hedef konu, kitap ve hoca (öğrenci ekranında görevin altında küçük yazı) */
+function gorevHedef(s, date, text){ if(!s) return ""; const kod = dersKodu(text); if(!kod || kod==="den" || kod==="oku") return "";
+  const d = cfg().hedefDers.find(x=>dersKodu(x)===kod); if(!d) return "";
+  const hd = ((plan(s, pStart(s,date)).hedef)||{})[d] || {}, kt = kitap(s,d), hc = hoca(s,d);
+  const par = [hd.konu ? `<span>${icon("target","xs")}${esc(hd.konu)}</span>` : "", kt ? `<span>${icon("book","xs")}${esc(kt)}</span>` : "", hc ? `<span>${icon("users","xs")}${esc(hc)}</span>` : ""].filter(Boolean);
+  return par.length ? `<div class="thd">${par.join("")}</div>` : ""; }
+function taskRow(t, date, opts={}){
   const h = parseHours(taskText(t));
   return `<div class="task ${t.done?"done":""}">
     <button class="tick" data-act="tick" data-date="${date}" data-id="${t.id}" aria-pressed="${!!t.done}" aria-label="${t.done?"Tamamlandı":"Tamamla"}">${icon("check","sm")}</button>
-    <div style="min-width:0"><div class="tt" style="font-weight:600">${esc(taskText(t))}</div></div>
+    <div style="min-width:0"><div class="tt" style="font-weight:600">${esc(taskText(t))}</div>${gorevHedef(opts.s, date, taskText(t))}</div>
     ${h?`<span class="pill">${icon("clock","xs")}${fmtH(h)}</span>`:"<span></span>"}
   </div>`;
 }
@@ -602,7 +608,7 @@ function studentProgram(s){
     const d = S.day && PD.includes(S.day) ? S.day : (PD.includes(t) ? t : w);
     const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
     body = `<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}${yaziliGun(s,d).map(x=>` <span class="pill warn">${esc(x)} yazılısı</span>`).join("")}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
-      <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${dayFooter(s,d)}
+      <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{s})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${dayFooter(s,d)}
       ${d===t?`<button class="btn full" style="margin-top:12px" data-act="go" data-v="kronometre">${icon("timer","sm")} Kronometreyi aç</button>`:""}</div>
       ${goalsCard(s,w)}`;
   } else {
