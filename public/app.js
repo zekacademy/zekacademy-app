@@ -1358,7 +1358,18 @@ async function runImport(b){
   for(const o of list){
     const u = normU(o.kullanici), name = o.kayit?.name || u;
     if(!/^[a-z0-9._-]{3,20}$/.test(u)){ log(`✗ ${name}: kullanıcı adı geçersiz (${o.kullanici})`); skip++; continue; }
-    if([...S.students.values()].some(x=>x.kullanici===u)){ log(`– ${name}: @${u} zaten var, atlandı`); skip++; continue; }
+    const var_ = [...S.students.entries()].find(([,x])=>x.kullanici===u);
+    if(var_){ /* zaten var: ilerlemesine dokunma; sadece eksik koç bilgilerini (ödeme planı, görüşme günü) ve telefonu tamamla */
+      const [vid, vx] = var_, eski = S.cnotes.get(vid) || {}, cn = {...eski}, eklenen = [];
+      if(o.koc?.odeme && !eski.odeme?.bas){ cn.odeme = o.koc.odeme; eklenen.push("ödeme planı"); }
+      if(o.koc?.duzen && (eski.duzen?.gun==null || eski.duzen?.gun==="")){ cn.duzen = {...o.koc.duzen, ...(eski.duzen?.saat?{saat:eski.duzen.saat}:{})}; eklenen.push("görüşme günü"); }
+      if(o.kocNotu && !eski.not){ cn.not = o.kocNotu; }
+      try{
+        if(eklenen.length || cn.not !== eski.not){ S.cnotes.set(vid, cn); await writeDoc("coachNotes", vid, cn); }
+        if(o.kayit?.tel && vx.tel !== o.kayit.tel){ vx.tel = o.kayit.tel; await writeDoc("students", vid, vx); eklenen.push("telefon"); }
+        log(eklenen.length ? `↻ ${name}: @${u} zaten vardı; ${eklenen.join(", ")} eklendi` : `– ${name}: @${u} zaten var, değişiklik yok`); skip++;
+      }catch(e){ log(`✗ ${name}: ${e.message||e}`); skip++; }
+      continue; }
     try{
       const id = await createStudentAccount(u, o.sifre || "123456");
       const rec = {...o.kayit, kullanici:u, ilkSifre:true}; delete rec.not; delete rec.ornek; delete rec.aktarim;
@@ -1368,7 +1379,7 @@ async function runImport(b){
       log(`✓ ${name} → @${u}`); ok++;
     }catch(e){ log(`✗ ${name}: ${authMsg(e)}`); skip++; }
   }
-  log(`\nBitti: ${ok} öğrenci aktarıldı${skip?`, ${skip} atlandı`:""}.`); b.disabled = false; keepSettingsOpen();
+  log(`\nBitti: ${ok} öğrenci aktarıldı${skip?`, ${skip} zaten vardı`:""}.`); b.disabled = false; keepSettingsOpen();
 }
 async function topluSil(b){ const ids = [...document.querySelectorAll(".tmz:checked")].map(x=>x.value), out = $("#tmz-out"), log = t => { if(out) out.textContent += t + "\n"; };
   if(!ids.length){ toast("Önce öğrenci seç"); return; }
