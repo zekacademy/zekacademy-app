@@ -194,6 +194,7 @@ function cfg(){ const x = S.settings; return {
   odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ, gorusmeHatirlat: x.gorusmeHatirlat !== false,
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
   aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM,
+  kaynak: x.kaynak || DEF_KAYNAK,
   paketler: Array.isArray(x.paketler) && x.paketler.length ? x.paketler : DEF_PAKET,
   sureler: x.sureler || DEF_SURELER, quick: x.quick || DEF_QUICK, hedefDers: x.hedefDers || DEF_HEDEF_DERS }; }
 const CURX = () => S.settings.cur || CUR;
@@ -536,6 +537,26 @@ function dayTarget(s,d){ const v = (plan(s,pStart(s,d)).saat||{})[pIdx(s,d)]; re
 const fmtH = h => h ? (Math.round(h*10)/10).toLocaleString("tr-TR")+" saat" : "—";
 function weekGoals(s,w){ const h = plan(s,w).hedef||{}; const list = cfg().hedefDers.filter(d=>h[d] && h[d].konu); return {list, h, done:list.filter(d=>h[d].done).length}; }
 const kitap = (s,d) => (s.kitaplar||{})[d] || "";
+const hoca = (s,d) => (s.hocalar||{})[d] || "";
+/* Takip edilen kitap ve hocalar (ayarlardan düzenlenir). "# Başlık" satırları grup başlığıdır. */
+const HOCA_MAT = ["Mert Hoca","Bıyıklı Matematik","Rehber Matematik","Şenol Hoca","Eyüp B","SML Matematik","Yaşar Hoca","Mathman"];
+const HOCA_TR = ["Rüştü Hoca","Aker Hoca","Deniz Hoca","Emek Taştan"];
+const DEF_KAYNAK = {
+  "Matematik":{kitap:["# Sıfırdan başlayan","345 Start","Antremanlarla Matematik","Acil Matematiğin İlacı","Mikroorijinal","# Orta","345","Bilgi Sarmal","3D","Orijinal","Acil","# Üst düzey","Ergi","Apotemi","Barış"], hoca:HOCA_MAT},
+  "Geometri":{kitap:["# Sıfırdan başlayan","Geometrinin İlacı","Mikroorijinal","# Orta","345","Bilgi Sarmal","3D","Orijinal","Acil"], hoca:HOCA_MAT},
+  "Fizik":{kitap:["345","Bilgi Sarmal","3D"], hoca:["Özcan Aykın","Altuğ Güneş","VIP Fizik","Umut Öncül"]},
+  "Kimya":{kitap:["Orbital","345","Bilgi Sarmal","3D"], hoca:["Görkem Şahin","Ferrum","Kimya Dersleri"]},
+  "Biyoloji":{kitap:["Biyotik","345","Bilgi Sarmal","3D"], hoca:["Betül Biyoloji","Biosem","Dr. Biyoloji"]},
+  "Türkçe":{kitap:["345 1 Haftada Dil Bilgisi","Bilgi Sarmal","Limit","3D"], hoca:HOCA_TR},
+  "Edebiyat":{kitap:["Limit","Bilgi Sarmal"], hoca:HOCA_TR},
+  "Tarih":{kitap:["Zeduva","Limit","Bilgi Sarmal"], hoca:["Tarihin Kodları","Soner Ardıç"]},
+  "Coğrafya":{kitap:["Zeduva","Limit","Bilgi Sarmal","Haritalar Kitabı (Coğrafyanın Kodları)"], hoca:["Coğrafyanın Kodları"]},
+  "Felsefe":{kitap:["Bilgi Sarmal","Limit"], hoca:["Felsefe Atölyesi"]},
+  "Din Kültürü":{kitap:[], hoca:[]},
+  "_brans":{kitap:["345 Branş Deneme","Bilgi Sarmal Branş Deneme","3D Branş Deneme","Orijinal Branş Deneme"]} };
+const kaynakListe = (d, k) => { const K = S.settings.kaynak || DEF_KAYNAK; return ((K[d]||DEF_KAYNAK[d]||{})[k]) || []; };
+const kaynakBol = v => String(v||"").split(/\s+[+·]\s+/).map(x=>x.trim()).filter(Boolean);
+let KYS = [];
 function linesToTasks(old, text){
   const pool = old.slice();
   return text.split("\n").map(x=>x.trim()).filter(Boolean).map(line=>{
@@ -558,7 +579,7 @@ function goalsCard(s, w, opts={}){
   if(!list.length) return opts.compact ? "" : `<div class="card"><h3>Bu haftanın hedefleri</h3><div class="empty">Koçun bu hafta için hedef konu girmedi.</div></div>`;
   return `<div class="card"><div class="sech"><h3>${opts.title||"Bu haftanın hedefleri"}</h3><span class="small ${done===list.length?"up":"muted"}" style="font-weight:700">${done}/${list.length} konu</span></div>
     <div class="tasks" style="margin-top:4px">${list.map(d=>`<div class="task ${h[d].done?"done":""}"><button class="tick" data-act="gtick" data-w="${w}" data-ders="${esc(d)}" aria-pressed="${!!h[d].done}" aria-label="${esc(d)} hedefi">${icon("check","sm")}</button>
-      <div style="min-width:0"><div class="ts" style="font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ac);text-decoration:none">${esc(d)}</div><div class="tt" style="font-weight:600">${esc(h[d].konu)}</div>${kitap(s,d)?`<div class="tm"><span>${icon("book","xs")}${esc(kitap(s,d))}</span></div>`:""}</div><span></span></div>`).join("")}</div></div>`;
+      <div style="min-width:0"><div class="ts" style="font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ac);text-decoration:none">${esc(d)}</div><div class="tt" style="font-weight:600">${esc(h[d].konu)}</div>${kitap(s,d)||hoca(s,d)?`<div class="tm">${kitap(s,d)?`<span>${icon("book","xs")}${esc(kitap(s,d))}</span>`:""}${hoca(s,d)?`<span>${icon("users","xs")}${esc(hoca(s,d))}</span>`:""}</div>`:""}</div><span></span></div>`).join("")}</div></div>`;
 }
 function dayFooter(s, d){
   const tg = dayTarget(s,d), m = minutes(s,d), p = tg ? Math.min(1, m/60/tg) : 0;
@@ -613,11 +634,12 @@ function studentProgram(s){
 function planEditor(s){
   const w = S.week, p = plan(s,w), h = p.hedef||{}, ws = weekStats(s,w), g = weekGoals(s,w);
   const goals = `<div class="card"><div class="sech"><h3>Haftalık hedefler</h3><span class="faint small">${g.list.length?`Öğrenci ${g.done}/${g.list.length} işaretledi`:"Boş bırakılan ders öğrenciye görünmez"}</span></div>
-    <div class="goalgrid" style="margin-top:10px"><div class="gh">Ders</div><div class="gh">Bitirilecek konu</div><div class="gh">Takip edilen kitaplar</div>
+    <div class="goalgrid" style="margin-top:10px"><div class="gh">Ders</div><div class="gh">Bitirilecek konu</div><div class="gh">Takip edilen kitap ve hocalar</div>
     ${cfg().hedefDers.map(d=>`<div class="gd">${h[d]&&h[d].konu?`<button class="tick sm" data-act="gtick" data-w="${w}" data-ders="${esc(d)}" aria-pressed="${!!h[d].done}" aria-label="${esc(d)} tamamlandı">${icon("check","xs")}</button>`:`<span class="tick sm ghost"></span>`}${esc(d)}</div>
       <button type="button" class="kpick" id="hk-${esc(d)}" data-act="sheet" data-v="konu" data-ders="${esc(d)}">${h[d]?.konu?esc(h[d].konu):`<span class="faint">Konu seç</span>`}<span class="kpi">${icon("search","xs")}</span></button>
-      <input type="text" id="hb-${esc(d)}" data-hd="kitap" data-ders="${esc(d)}" value="${esc(kitap(s,d))}" placeholder="—">`).join("")}</div>
-    <p class="faint small" style="margin:10px 0 0">Kitaplar haftadan haftaya otomatik taşınır; sadece değiştiğinde güncellemen yeterli.</p></div>`;
+      <div class="kyn"><button type="button" class="kbtn" data-act="sheet" data-v="kaynak" data-k="kitap" data-ders="${esc(d)}">${icon("book","xs")}<span>${kitap(s,d)?esc(kitap(s,d)):`<span class="faint">Kitap ekle</span>`}</span></button>
+        <button type="button" class="kbtn" data-act="sheet" data-v="kaynak" data-k="hoca" data-ders="${esc(d)}">${icon("users","xs")}<span>${hoca(s,d)?esc(hoca(s,d)):`<span class="faint">Hoca ekle</span>`}</span></button></div>`).join("")}</div>
+    <p class="faint small" style="margin:10px 0 0">Kitap ve hocalar haftadan haftaya otomatik taşınır; sadece değiştiğinde güncellemen yeterli. Listeleri Ayarlar → Kitaplar ve hocalar’dan düzenleyebilirsin.</p></div>`;
   const days = pDays(s,w).map((d,i)=>{ const g = GUN[dIdx(d)], l = dayTasks(s,d), dn = l.filter(x=>x.done).length, auto = autoHours(s,d), sv = (p.saat||{})[i];
     return `<div class="dcard ${d===today()?"today":""}"><div class="dch"><b>${g}</b>${yaziliGun(s,d).map(x=>`<span class="pill warn">${esc(x)} yazılısı</span>`).join("")}<span class="faint small">${shortDate(d)}</span></div>
       <div class="tl" id="tl-${i}" data-i="${i}">${l.map(x=>tlSatir(taskText(x), x.done)).join("")}${tlSatir("", false, true)}</div>
@@ -1205,6 +1227,7 @@ function cDetail(){
 /* ---------- Günlük görev listesi: her görev ayrı satır (metin kutusu gibi yazılır, Enter yeni satır) ---------- */
 const DERS_ANAHTAR = [["mat",/matemat|problem|\bmat\b|türev|integral|limit\b|logaritma|polinom/],["geo",/geometri|\bgeo\b/],["fiz",/fizik/],["kim",/kimya/],["bio",/biyoloji|\bbiyo/],["tr",/türkçe|paragraf|dil bilgisi|dilbilgisi/],["ede",/edebiyat/],["tar",/tarih|inkılap/],["cog",/coğrafya/],["fel",/felsefe|psikoloji|sosyoloji|mantık/],["din",/din kültürü|\bdin\b/],["den",/deneme/],["oku",/kitap okuma|okuma/]];
 const dersKodu = t => { const l = trLow(t); return (DERS_ANAHTAR.find(([,r])=>r.test(l))||[""])[0]; };
+function kysNot(){ const e = $("#kysel"); if(e) e.textContent = KYS.length ? `Seçili: ${KYS.join(" + ")}` : "Seçim yok"; }
 function tlSure(t){ const h = parseHours(t); return h ? fmtMin(h*60) : ""; }
 function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}"><span class="tdot">${done?icon("check","xs"):""}</span><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz (Enter ile yeni satır)":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span>${bos?"":`<button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button>`}</div>`; }
 function tlBoyut(kok){ (kok||document).querySelectorAll(".tin").forEach(x=>{ x.style.height = "auto"; x.style.height = x.scrollHeight+"px"; }); }
@@ -1389,6 +1412,10 @@ function cSettings(){
       <label class="f">Dene: bir satır yaz<input type="text" id="sr-test" data-act="stest" placeholder="ör. AYT Fen Branş x2"></label><div class="small" id="sr-out" style="font-weight:700"></div>`, "sureler")}
     ${sec("Hızlı ekle listesi",`${c.quick.length} satır`,`<div class="f">Program yazarken “+ Hızlı ekle” menüsünde çıkan satırlar <span class="faint" style="font-weight:500">· her satır bir seçenek</span>${ta("st-quick","quick",c.quick,8)}</div>`, "quick")}
     ${sec("Haftalık hedef dersleri",`${c.hedefDers.length} ders`,`<div class="f">“Bitirilecek konu / Takip edilen kitaplar” tablosundaki dersler <span class="faint" style="font-weight:500">· her satır bir ders</span>${ta("st-hd","hedefDers",c.hedefDers,6)}</div>`, "hedefDers")}
+    ${sec("Kitaplar ve hocalar", `${Object.keys(c.kaynak).filter(k=>k!=="_brans").length} ders`, `
+      <p class="muted small" style="margin:0">Haftalık hedeflerde kitap ve hoca seçerken çıkan listeler. Her satır bir seçenek; “# Başlık” yazan satır grup başlığı olur (ör. # Sıfırdan başlayan).</p>
+      ${[...Object.keys(c.kaynak).filter(k=>k!=="_brans"), "_brans"].map(d=>`<details class="subj"><summary><span><span class="sn">${d==="_brans"?"Branş denemeleri (her derste çıkar)":esc(d)}</span><span class="sg">${(c.kaynak[d]?.kitap||[]).filter(x=>!/^#/.test(x)).length} kitap${d==="_brans"?"":` · ${(c.kaynak[d]?.hoca||[]).length} hoca`}</span></span><span></span><span class="pct">${icon("chev","xs")}</span></summary>
+        <div class="two" style="padding:8px 0"><div class="f">Kitaplar${ta("ky-"+d+"-k","kaynak."+d+".kitap",c.kaynak[d]?.kitap||[],7)}</div>${d==="_brans"?"":`<div class="f">Hocalar${ta("ky-"+d+"-h","kaynak."+d+".hoca",c.kaynak[d]?.hoca||[],7)}</div>`}</div></details>`).join("")}`, "kaynak")}
     ${sec("Konu listeleri",`TYT ${cur.TYT.length} ders · AYT ${cur.AYT.length} ders`,`
       <p class="muted small" style="margin:0">Konu eklemek ve sıralamak güvenlidir. Bir konunun <b>adını değiştirirsen</b> o konuya daha önce girilmiş tekrar, soru bankası ve yanlış bilgileri görünmez olur.</p>
       <div class="seg"><button data-act="setex" data-v="TYT" aria-pressed="${ex==="TYT"}">TYT</button><button data-act="setex" data-v="AYT" aria-pressed="${ex==="AYT"}">AYT</button></div>
@@ -1701,6 +1728,20 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
   const s = st();
+  if(kind==="kaynak"){ const d = el.dataset.ders, k = el.dataset.k, adk = k==="kitap" ? "kitap" : "hoca", mevcut = k==="kitap" ? kitap(s,d) : hoca(s,d);
+    KYS = kaynakBol(mevcut); S.kyn = {d, k};
+    const L = [...kaynakListe(d,k), ...(k==="kitap" && kaynakListe("_brans","kitap").length ? ["# Branş denemeleri", ...kaynakListe("_brans","kitap")] : [])];
+    const gruplar = []; let g = {b:k==="kitap"?"Kitaplar":"Hocalar", l:[]}; L.forEach(x=>{ if(/^#/.test(x)){ if(g.l.length) gruplar.push(g); g = {b:x.replace(/^#\s*/,""), l:[]}; } else g.l.push(x); }); if(g.l.length) gruplar.push(g);
+    const hepsi = new Set(gruplar.flatMap(x=>x.l)), ozel = KYS.filter(x=>!hepsi.has(x)); if(ozel.length) gruplar.unshift({b:"Bu öğrencide yazılı olan", l:ozel});
+    const btn = n => `<button type="button" class="kt" data-act="kys" data-v="${esc(n)}" data-q="${esc(trLow(n))}" aria-pressed="${KYS.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span></button>`;
+    return sheet(`<h3>${esc(d)} · takip edilen ${k==="kitap"?"kitaplar":"hocalar"}</h3>
+      <input type="search" id="kyq" placeholder="${k==="kitap"?"Kitap":"Hoca"} ara" autocomplete="off" aria-label="Ara">
+      <div class="klist">${gruplar.map(x=>`<div class="kgrp" data-grp><div class="gh">${esc(x.b)}</div>${x.l.map(btn).join("")}</div>`).join("") || `<p class="faint small">Bu ders için kayıtlı ${adk} yok; aşağıdan ekleyebilirsin.</p>`}</div>
+      <p class="small" id="kysel" style="margin:0;font-weight:700"></p>
+      <div class="two" style="align-items:end"><label class="f">Listede yoksa elle ekle<input type="text" id="kyfree" placeholder="${k==="kitap"?"ör. Karekök":"ör. Hocanın adı"}"></label><button type="button" class="btn" data-act="kyekle">${icon("plus","xs")} Ekle</button></div>
+      <p class="faint small" style="margin:0">Elle eklediğin ${adk} bu dersin listesine de kaydedilir, sonraki öğrencilerde hazır çıkar.</p>
+      <div class="acts"><button type="button" class="btn" data-act="kytemiz">Temizle</button><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
+    ()=>{ const v = KYS.join(" + "), alan = k==="kitap" ? "kitaplar" : "hocalar"; mutate(x=>{ x[alan] = x[alan]||{}; if(v) x[alan][d] = v; else delete x[alan][d]; }); closeSheet(); render(); toast("Kaydedildi"); }); }
   if(kind==="blok"){ const d = el.dataset.date, MX = isMaarif(s);
     S.blk = {d, rutin:S.blk?.rutin||"", adet:S.blk?.adet||20, ders:S.blk?.ders||"", ex: MX ? "" : (S.blk?.ex ?? (s.sinif==="Mezun"||s.sinif==="12. sınıf" ? "TYT" : "TYT")), tur:S.blk?.tur||"konu", konu:[], sure:S.blk?.sure||null, elle:false}; const b = S.blk;
     return sheet(`<h3>${GUN[dIdx(d)]} ${shortDate(d)} · blok ekle</h3>
@@ -1900,7 +1941,7 @@ function openSheet(kind, el){
         if(mg && S.students.has(mg)){ const o = S.students.get(mg);
           x.topics = {...o.topics, ...x.topics}; x.denemeler = [...(o.denemeler||[]), ...(x.denemeler||[])];
           const own = {...(x.gunluk||{})}; x.gunluk = {...(o.gunluk||{})}; Object.entries(own).forEach(([d,m])=>x.gunluk[d]=(x.gunluk[d]||0)+m);
-          x.weeks = {...(o.weeks||{}), ...(x.weeks||{})}; x.plan = {...(o.plan||{}), ...(x.plan||{})}; x.kitaplar = {...(o.kitaplar||{}), ...(x.kitaplar||{})}; x.sbAd = {...(o.sbAd||{}), ...(x.sbAd||{})};
+          x.weeks = {...(o.weeks||{}), ...(x.weeks||{})}; x.plan = {...(o.plan||{}), ...(x.plan||{})}; x.kitaplar = {...(o.kitaplar||{}), ...(x.kitaplar||{})}; x.hocalar = {...(o.hocalar||{}), ...(x.hocalar||{})}; x.sbAd = {...(o.sbAd||{}), ...(x.sbAd||{})};
           x.donem = [...new Set([...(o.donem||[]), ...(x.donem||[])])].sort();
           x.baslangic = o.baslangic; x.hedef = o.hedef; x.koctanNot = x.koctanNot || o.koctanNot;
           const on = S.cnotes.get(mg)?.not, xn = S.cnotes.get(id)?.not; if(on || xn){ S.cnotes.set(id, {not:[on, xn].filter(Boolean).join("\n")}); persistDoc("coachNotes", id, 0); }
@@ -2005,6 +2046,13 @@ document.addEventListener("click", e=>{
     case "bkd": S.blk.ders = v; S.blk.konu = []; if(!isMaarif(st())){ if(/türkçe/i.test(v)) S.blk.ex = "TYT"; else if(/edebiyat/i.test(v)) S.blk.ex = "AYT"; } { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
     case "bke": S.blk.ex = v; S.blk.konu = []; { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
     case "bkt": { const c = S.blk.tur; S.blk.tur = (v==="konu"||v==="soru") ? (c==="konusoru" ? (v==="konu"?"soru":"konu") : ((c==="konu"&&v==="soru")||(c==="soru"&&v==="konu")) ? "konusoru" : v) : v; } if(v==="deneme") S.blk.konu = []; { const k = $("#bk-konu"); if(k) k.innerHTML = blkKonuHTML(st(), S.blk); } blkGuncelle(); break;
+    case "kys": { const on = !KYS.includes(v); KYS = on ? [...KYS, v] : KYS.filter(x=>x!==v); document.querySelectorAll("#layer [data-act=kys]").forEach(x=>{ if(x.dataset.v===v) x.setAttribute("aria-pressed", on); }); kysNot(); break; }
+    case "kytemiz": KYS = []; document.querySelectorAll("#layer [data-act=kys]").forEach(x=>x.setAttribute("aria-pressed", false)); kysNot(); break;
+    case "kyekle": { const inp = $("#kyfree"), n = (inp?.value||"").trim(); if(!n) break; const {d, k} = S.kyn;
+      if(!KYS.includes(n)) KYS.push(n);
+      if(!kaynakListe(d,k).includes(n)){ const K = S.settings.kaynak = S.settings.kaynak ? S.settings.kaynak : clone(DEF_KAYNAK); K[d] = K[d] || {kitap:[], hoca:[]}; const L0 = K[d][k]||[], basliklar = L0.filter(x=>/^#/.test(x)); K[d][k] = [...L0, ...(basliklar.length && basliklar[basliklar.length-1]!=="# Diğer" ? ["# Diğer"] : []), n]; saveSettings(); }
+      const lst = $("#layer .klist"); if(lst && ![...lst.querySelectorAll("[data-act=kys]")].some(x=>x.dataset.v===n)) lst.insertAdjacentHTML("afterbegin", `<div class="kgrp" data-grp><div class="gh">Yeni eklenen</div><button type="button" class="kt" data-act="kys" data-v="${esc(n)}" data-q="${esc(trLow(n))}" aria-pressed="true">${icon("check","xs")}<span>${esc(n)}</span></button></div>`);
+      document.querySelectorAll("#layer [data-act=kys]").forEach(x=>{ if(x.dataset.v===n) x.setAttribute("aria-pressed", true); }); inp.value = ""; kysNot(); toast(`${n} eklendi`); break; }
     case "tdel": { const r = b.closest(".tr"), box = b.closest(".tl"); if(r && box){ r.remove(); tlSync(box); } break; }
     case "bkr": S.blk.rutin = v; blkGuncelle(); break;
     case "bka": S.blk.adet = +v; blkGuncelle(); break;
@@ -2029,7 +2077,7 @@ document.addEventListener("click", e=>{
       mutate(s=>{ s.denemeler=s.denemeler.filter(d=>d.id!==b.dataset.id); }); render(); toast("Deneme silindi"); break; }
     case "tstart": mutate(s=>{ s.timer={start:Date.now()}; }); render(); break;
     case "tstop": { let added=0; mutate(s=>{ if(!s.timer) return; const d=iso(new Date(s.timer.start)); added=Math.round(timerMin(s)); s.gunluk=s.gunluk||{}; if(added>0) s.gunluk[d]=(s.gunluk[d]||0)+added; s.timer=null; }); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
-    case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); break;
+    case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); if(v==="kaynak") kysNot(); break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
     case "accent": THEME.accent=v; applyTheme(); openSheet("tema"); render(); break;
@@ -2051,7 +2099,9 @@ document.addEventListener("change", e=>{
   else if(t.dataset.plan || t.dataset.hd==="konu"){ setTimeout(()=>{ if(!document.activeElement || !document.activeElement.matches("textarea,input[type=text],input[type=number]")) render(); }, 0); }
   else if(t.dataset.f && t.type==="date"){ setField(t.dataset.f, t.value); }
 });
-document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target.id==="hq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")) || ($("#hfree")?.hidden ? null : $("#hfree")); if(b) b.click(); return; }
+document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target.id==="kyfree"){ e.preventDefault(); $("#layer [data-act=kyekle]")?.click(); return; }
+  if(e.key==="Enter" && e.target.id==="kyq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); else $("#layer [data-act=kyekle]")?.click(); return; }
+  if(e.key==="Enter" && e.target.id==="hq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")) || ($("#hfree")?.hidden ? null : $("#hfree")); if(b) b.click(); return; }
   if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
 document.addEventListener("input", e=>{
   const t = e.target;
@@ -2059,6 +2109,7 @@ document.addEventListener("input", e=>{
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
   if(t.classList && t.classList.contains("tin")){ tlSatirGuncelle(t); const box = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(box), 350); return; }
   if(t.id==="bk-elle"){ const h = sureOku(t.value); if(S.blk){ S.blk.sure = h; S.blk.elle = !!h; blkGuncelle(); } return; }
+  if(t.id==="kyq"){ const q = trLow(t.value).trim(); document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || b.dataset.q.includes(q); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; }); const f = $("#kyfree"); if(f && q) f.value = t.value; return; }
   if(t.id==="bkq"){ const q = trLow(t.value).trim(); document.querySelectorAll("#bk-konu .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; }); return; }
   if(t.id==="hq"){ const q = trLow(t.value).trim(); let any=false, tam=false;
     document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; if(b.dataset.q===q) tam=true; }); g.hidden = !n; if(n) any=true; });
