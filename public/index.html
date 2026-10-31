@@ -480,6 +480,16 @@ button.tile.tbtn:active{transform:scale(.97)}
 #gorevler,#calisma{scroll-margin-top:16px}
 @keyframes vurgu{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ac) 60%,transparent)}100%{box-shadow:0 0 0 14px transparent}}
 .vurgu{animation:vurgu .9s ease-out 1}
+.tmzl{display:flex;flex-direction:column;gap:6px;max-height:240px;overflow:auto;padding:4px 0}
+/* Yazılı haftası */
+.yzk{border:2px solid var(--warn);background:color-mix(in srgb,var(--warn) 8%,var(--surface))}
+.yzl{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.yzr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.yzr b{flex:none;min-width:0}.yzr .small{flex:1}
+.yzr.bugun{border-color:var(--warn);background:var(--warns)}.yzr.gecti{opacity:.55}
+.yzadd{display:grid;grid-template-columns:minmax(0,1fr) 150px auto;gap:8px;margin-top:10px;align-items:center}
+.yzadd input{padding:8px 10px;font-size:14px}
+@media (max-width:520px){.yzadd{grid-template-columns:1fr 1fr}.yzadd .btn{grid-column:1/-1}}
 /* Yumuşak geçişler */
 @keyframes pgin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes ovin{from{opacity:0}to{opacity:1}}
