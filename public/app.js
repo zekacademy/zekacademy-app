@@ -458,6 +458,7 @@ function sHome(s){
     <div class="hellorow"><div class="hello"><p class="small" style="margin:0 0 2px">${longToday()}</p><h1>Merhaba, ${esc(firstName(s.name))} 👋</h1><p>Hedefine bir adım daha yaklaşıyorsun.</p></div>
       <div class="cd">${icon("cal","sm")}<div><b class="num">${examDays()} gün</b><small>YKS’ye kaldı</small></div></div></div>
     ${pushCard()}
+    ${yaziliKart(s, curStart(s), false)}
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
     <div class="tiles">
@@ -564,6 +565,15 @@ function dayFooter(s, d){
     ${tg?`<div class="bar"><i style="width:${p*100}%;background:${p>=1?"var(--good)":"var(--ac)"}"></i></div>`:""}</div>`;
 }
 
+/* ---------- Yazılı haftası (plan[w].yazili + plan[w].yazilar [{ders, tarih}]) ---------- */
+function yaziliKart(s, w, edit){ const p = plan(s,w); if(!p.yazili) return "";
+  const t = today(), l = (p.yazilar||[]).map((y,i)=>({...y, i})).sort((a,b)=>(a.tarih||"").localeCompare(b.tarih||""));
+  const kalan = d => { if(!d) return ""; const g = Math.round((new Date(d+"T12:00:00")-new Date(t+"T12:00:00"))/864e5); return g===0?"bugün":g===1?"yarın":g>0?`${g} gün kaldı`:"geçti"; };
+  return `<div class="card yzk"><div class="sech"><h3>📝 Yazılı haftası</h3>${edit?`<button class="btn sm" data-act="yazili" data-w="${w}">Kaldır</button>`:`<span class="faint small">${l.length} yazılı</span>`}</div>
+    ${l.length?`<div class="yzl">${l.map(y=>`<div class="yzr ${y.tarih===t?"bugun":y.tarih&&y.tarih<t?"gecti":""}"><b>${esc(y.ders)}</b><span class="small muted">${y.tarih?`${GUN[dIdx(y.tarih)]} ${shortDate(y.tarih)} · ${kalan(y.tarih)}`:"tarih yok"}</span>${edit?`<button class="iconbtn sm" data-act="yzsil" data-w="${w}" data-i="${y.i}" aria-label="Sil">${icon("x","sm")}</button>`:""}</div>`).join("")}</div>`:`<p class="muted small" style="margin:6px 0 0">${edit?"Yazılıları aşağıdan ekle; öğrenci ders ve tarihleri programında görür.":"Koçun bu haftayı yazılı haftası olarak işaretledi."}</p>`}
+    ${edit?`<div class="yzadd"><input type="text" id="yz-ders" placeholder="Ders (ör. Matematik)" list="yz-dersler"><datalist id="yz-dersler">${["Matematik","Fizik","Kimya","Biyoloji","Türk Dili ve Edebiyatı","Tarih","Coğrafya","Felsefe","Din Kültürü","İngilizce","Arapça","Geometri"].map(x=>`<option value="${x}">`).join("")}</datalist><input type="date" id="yz-tarih" value="${(l.length && l[l.length-1].tarih) || (today() >= w ? today() : w)}"><button class="btn sm pri" data-act="yzekle" data-w="${w}">${icon("plus","xs")} Ekle</button></div>`:""}</div>`; }
+const yaziliGun = (s, d) => ((plan(s, pStart(s,d)).yazili && plan(s, pStart(s,d)).yazilar) || []).filter(y=>y.tarih===d).map(y=>y.ders);
+
 function pProgram(s, edit){ return edit ? planEditor(s) : studentProgram(s); }
 
 function weekNav(s){ const w = S.week, an = (s.donem||[]).includes(w);
@@ -579,7 +589,7 @@ function studentProgram(s){
   if(S.pmode==="gun"){
     const d = S.day && PD.includes(S.day) ? S.day : (PD.includes(t) ? t : w);
     const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
-    body = `<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
+    body = `<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}${yaziliGun(s,d).map(x=>` <span class="pill warn">${esc(x)} yazılısı</span>`).join("")}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
       <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${dayFooter(s,d)}
       ${d===t?`<button class="btn full" style="margin-top:12px" data-act="go" data-v="kronometre">${icon("timer","sm")} Kronometreyi aç</button>`:""}</div>
       ${goalsCard(s,w)}`;
@@ -593,7 +603,7 @@ function studentProgram(s){
   return `${topbar(`<h1 class="ttl">Programım</h1>`, `<button class="iconbtn" data-act="wk" data-d="0" aria-label="Bu haftaya dön">${icon("cal")}</button>`)}
   <div class="page">
     <div class="seg"><button data-act="pmode" data-v="gun" aria-pressed="${S.pmode==="gun"}">Günlük</button><button data-act="pmode" data-v="hafta" aria-pressed="${S.pmode==="hafta"}">Haftalık</button></div>
-    ${weekNav(s)}${S.pmode==="gun"?strip:""}${hero}${body}
+    ${weekNav(s)}${yaziliKart(s, w, false)}${S.pmode==="gun"?strip:""}${hero}${body}
     <p class="faint small" style="text-align:center">Programını koçun hazırlıyor. Bitirdiğin satırı ve hedef konuyu işaretle; koçun anında görür.</p>
   </div>`;
 }
@@ -608,14 +618,15 @@ function planEditor(s){
       <input type="text" id="hb-${esc(d)}" data-hd="kitap" data-ders="${esc(d)}" value="${esc(kitap(s,d))}" placeholder="—">`).join("")}</div>
     <p class="faint small" style="margin:10px 0 0">Kitaplar haftadan haftaya otomatik taşınır; sadece değiştiğinde güncellemen yeterli.</p></div>`;
   const days = pDays(s,w).map((d,i)=>{ const g = GUN[dIdx(d)], l = dayTasks(s,d), dn = l.filter(x=>x.done).length, auto = autoHours(s,d), sv = (p.saat||{})[i];
-    return `<div class="dcard ${d===today()?"today":""}"><div class="dch"><b>${g}</b><span class="faint small">${shortDate(d)}</span></div>
+    return `<div class="dcard ${d===today()?"today":""}"><div class="dch"><b>${g}</b>${yaziliGun(s,d).map(x=>`<span class="pill warn">${esc(x)} yazılısı</span>`).join("")}<span class="faint small">${shortDate(d)}</span></div>
       <textarea id="pl-${i}" data-plan="${d}" rows="8" placeholder="Her satıra bir görev&#10;Problem 20 soru&#10;AYT Matematik Çalışması (2,5 saat)&#10;Fen Branş x1">${esc(l.map(taskText).join("\n"))}</textarea>
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
         <select class="qsel" data-quick="${d}" aria-label="${g} için hızlı ekle"><option value="">+ Hızlı ekle</option>${quick.map(q=>`<option>${esc(q)}</option>`).join("")}</select></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
-    <div class="pills"><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button><button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
+    <div class="pills"><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button>${plan(s,S.week).yazili?"":`<button class="btn sm" data-act="yazili" data-w="${S.week}">📝 Yazılı haftası yap</button>`}<button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
+    ${yaziliKart(s, S.week, true)}
     ${goals}
     <div class="sech"><h3 class="sec">Günlük plan</h3><span class="faint small">${ws.all?`${ws.done}/${ws.all} görev tamamlandı`:""}</span></div>
     <details class="card" style="padding:12px 16px"><summary class="small" style="cursor:pointer;font-weight:700;color:var(--muted)">Süre yazmayan satırlar için ortalama süreler</summary>
@@ -1305,6 +1316,10 @@ function cSettings(){
       <p class="faint small" style="margin:0">WhatsApp'ta *yıldız arası* kalın görünür.</p>`, "bmesaj"))(bmesaj())}
     ${sec("Google Form bağlantısı","Form doldurulunca sana yeşil bildirim gelsin",`<p class="muted small" style="margin:0">Başvuru formun her doldurulduğunda Bildirimler'e yeşil bir “Yeni başvuru” düşer ve telefonuna bildirim gelir. Kurulum bir kere yapılır.</p>
       <div id="formKodOut">${FORMKOD?formKodHTML():`<div class="pills"><button class="btn sm pri" data-act="formkod">Bağlantı kodunu hazırla</button></div>`}</div>`)}
+    ${sec("Öğrencileri temizle","Örnek / eski öğrenci kayıtlarını toplu sil",`<p class="muted small" style="margin:0">Seçtiğin öğrencilerin tüm verisi ve giriş hesabı kalıcı olarak silinir (kullanıcı adları yeniden kullanılabilir). Başvurular etkilenmez. Silmeden önce Yedekleme'den yedek indirmen önerilir.</p>
+      <div class="tmzl">${sortedStudents().map(([id,x])=>`<label class="inline"><input type="checkbox" class="tmz" value="${id}">${esc(x.name)} <span class="faint small">${x.kullanici?"@"+esc(x.kullanici):""}</span></label>`).join("") || `<span class="faint small">Öğrenci yok.</span>`}</div>
+      <div class="pills"><button class="btn sm" data-act="tmzhepsi">Hepsini seç</button><button class="btn sm danger" data-act="tmzsil">Seçilenleri sil</button></div>
+      <div class="small" id="tmz-out" style="white-space:pre-wrap;font-weight:600"></div>`, "")}
     ${sec("Veri içe aktar","Drive’dan dönüştürülmüş öğrenci dosyası (.json)",`
       <p class="muted small" style="margin:0">Claude’un hazırladığı içe aktarma dosyasını seç. Her öğrenci için hesap açılır (ilk şifre dosyada yazan, genelde 123456) ve tüm verisi aktarılır. Kullanıcı adı zaten varsa o öğrenci atlanır.</p>
       <label class="f">Dosya<input type="file" id="imp-file" accept=".json,application/json"></label>
@@ -1352,8 +1367,18 @@ async function runImport(b){
   }
   log(`\nBitti: ${ok} öğrenci aktarıldı${skip?`, ${skip} atlandı`:""}.`); b.disabled = false; keepSettingsOpen();
 }
+async function topluSil(b){ const ids = [...document.querySelectorAll(".tmz:checked")].map(x=>x.value), out = $("#tmz-out"), log = t => { if(out) out.textContent += t + "\n"; };
+  if(!ids.length){ toast("Önce öğrenci seç"); return; }
+  if(!b.dataset.armed){ b.dataset.armed = "1"; b.textContent = `${ids.length} öğrenci silinsin mi? Tekrar dokun`; setTimeout(()=>{ if(b.isConnected){ delete b.dataset.armed; b.textContent = "Seçilenleri sil"; } }, 4000); return; }
+  b.disabled = true; if(out) out.textContent = "";
+  for(const id of ids){ const n = S.students.get(id)?.name || id;
+    try{ await callFn("ogrenciSil", {uid:id}); S.students.delete(id); S.cnotes.delete(id); log(`✓ ${n} silindi`); }
+    catch(e){ log(`✗ ${n}: ${e.message||e}`); } }
+  log("Bitti."); b.disabled = false; toast(`${ids.length} öğrenci için silme tamamlandı`); setTimeout(keepSettingsOpen, 1500); }
 function onSettingClick(a, b){
   const v = b.dataset.v;
+  if(a==="tmzhepsi"){ document.querySelectorAll(".tmz").forEach(x=>x.checked = true); return true; }
+  if(a==="tmzsil"){ topluSil(b); return true; }
   if(a==="setex"){ S.setEx = v; render(); return true; }
   if(a==="sadd"){ if(!S.settings.sureler) S.settings.sureler = clone(cfg().sureler); S.settings.sureler.push({k:"",dk:30}); saveSettings(); keepSettingsOpen(); setTimeout(()=>{ const x=document.getElementById("sr-k-"+(S.settings.sureler.length-1)); if(x) x.focus(); },0); return true; }
   if(a==="sdel"){ if(!S.settings.sureler) S.settings.sureler = clone(cfg().sureler); S.settings.sureler.splice(+b.dataset.i,1); saveSettings(); keepSettingsOpen(); return true; }
@@ -1795,6 +1820,9 @@ document.addEventListener("click", e=>{
     case "vtog": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; if(o.odenen[d]) delete o.odenen[d]; else o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); openSheet("odeme", b); render(); break; }
     case "osil": { const id=b.dataset.id; const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); closeSheet(); render(); toast("Ödeme planı silindi"); break; }
     case "otaslak": odemeTaslak(); render(); break;
+    case "yazili": { const w = b.dataset.w; mutate(x=>{ const p = ensurePlan(x,w); p.yazili = !p.yazili; if(p.yazili && !p.yazilar) p.yazilar = []; }); render(); toast(plan(st(),w).yazili?"Bu hafta yazılı haftası olarak işaretlendi":"Yazılı haftası kaldırıldı"); break; }
+    case "yzekle": { const w = b.dataset.w, ders = ($("#yz-ders").value||"").trim(), tarih = $("#yz-tarih").value; if(!ders){ toast("Ders adını yaz"); break; } mutate(x=>{ const p = ensurePlan(x,w); p.yazilar = [...(p.yazilar||[]), {ders, tarih}]; }); render(); setTimeout(()=>{ const i=$("#yz-ders"); if(i) i.focus(); },50); break; }
+    case "yzsil": { const w = b.dataset.w, i = +b.dataset.i; mutate(x=>{ const p = ensurePlan(x,w); p.yazilar = (p.yazilar||[]).filter((_,k)=>k!==i); }); render(); break; }
     case "kaydir": { const h = document.getElementById(b.dataset.hedef); if(h){ h.scrollIntoView({behavior:"smooth", block:"start"}); h.classList.remove("vurgu"); void h.offsetWidth; h.classList.add("vurgu"); } break; }
     case "git": { S.view = v; if(b.dataset.mod){ S.pmode = b.dataset.mod; const x = st(); if(x){ S.week = curStart(x); S.day = today(); } } render(); window.scrollTo(0,0);
       if(b.dataset.hedef) setTimeout(()=>{ const h = document.getElementById(b.dataset.hedef); if(h){ h.scrollIntoView({behavior:"smooth", block:"start"}); h.classList.add("vurgu"); } }, 350); break; }
