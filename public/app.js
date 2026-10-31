@@ -1361,7 +1361,8 @@ async function runImport(b){
       const id = await createStudentAccount(u, o.sifre || "123456");
       const rec = {...o.kayit, kullanici:u, ilkSifre:true}; delete rec.not; delete rec.ornek; delete rec.aktarim;
       S.students.set(id, rec); await writeDoc("students", id, rec);
-      if(o.kocNotu){ S.cnotes.set(id, {not:o.kocNotu}); await writeDoc("coachNotes", id, S.cnotes.get(id)); }
+      const cn = {...(o.koc||{}), ...(o.kocNotu ? {not:o.kocNotu} : {})}; /* koc: ödeme planı, haftalık görüşme günü vb. (sadece koç görür) */
+      if(Object.keys(cn).length){ S.cnotes.set(id, cn); await writeDoc("coachNotes", id, cn); }
       log(`✓ ${name} → @${u}`); ok++;
     }catch(e){ log(`✗ ${name}: ${authMsg(e)}`); skip++; }
   }
