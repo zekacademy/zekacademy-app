@@ -556,10 +556,16 @@ function linesToTasks(old, text){
 }
 
 /* Görevin dersine ait bu haftaki hedef konu, kitap ve hoca (öğrenci ekranında görevin altında küçük yazı) */
-function gorevHedef(s, date, text){ if(!s) return ""; if(/paragraf|problem/i.test(trLow(text))) return `<div class="thd"><span>${icon("flame","xs")}Günlük rutin</span></div>`; const kod = dersKodu(text); if(!kod || kod==="den" || kod==="oku") return "";
+function gorevHedef(s, date, text){ if(!s) return ""; const lt = trLow(text);
+  if(/problem/.test(lt)){ /* Matematik hedefinde Problemler bölümünden seçilen (ya da adında "problem" geçen) konular problem görevinin altında görünür */
+    const pt = new Set(((CURX().TYT||[]).find(x=>x.k==="prob")||{}).t||[]), mk = splitKonu((((plan(s, pStart(s,date)).hedef)||{})["Matematik"]||{}).konu);
+    const pr = mk.filter(x=>pt.has(x) || /problem/i.test(x));
+    return `<div class="thd">${pr.length?`<span>${icon("target","xs")}${esc(pr.join(", "))}</span>`:""}<span>${icon("flame","xs")}Günlük rutin</span></div>`; }
+  if(/paragraf/.test(lt)) return `<div class="thd"><span>${icon("flame","xs")}Günlük rutin</span></div>`; const kod = dersKodu(text); if(!kod || kod==="den" || kod==="oku") return "";
   const d = cfg().hedefDers.find(x=>dersKodu(x)===kod); if(!d) return "";
   const hd = ((plan(s, pStart(s,date)).hedef)||{})[d] || {}, kt = kitap(s,d), hc = hoca(s,d);
-  const par = [hd.konu ? `<span>${icon("target","xs")}${esc(hd.konu)}</span>` : "", kt ? `<span>${icon("book","xs")}${esc(kt)}</span>` : "", hc ? `<span>${icon("users","xs")}${esc(hc)}</span>` : ""].filter(Boolean);
+  let konu = hd.konu || ""; if(d==="Matematik" && konu){ const pt = new Set(((CURX().TYT||[]).find(x=>x.k==="prob")||{}).t||[]), kalan = splitKonu(konu).filter(x=>!pt.has(x) && !/problem/i.test(x)); if(kalan.length) konu = kalan.join(", "); } /* problem konuları problem görevinde */
+  const par = [konu ? `<span>${icon("target","xs")}${esc(konu)}</span>` : "", kt ? `<span>${icon("book","xs")}${esc(kt)}</span>` : "", hc ? `<span>${icon("users","xs")}${esc(hc)}</span>` : ""].filter(Boolean);
   return par.length ? `<div class="thd">${par.join("")}</div>` : ""; }
 function taskRow(t, date, opts={}){
   const h = parseHours(taskText(t));
