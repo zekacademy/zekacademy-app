@@ -1272,7 +1272,7 @@ function blkDersler(s){ const L = cfg().hedefDers, al = s.alan, oncelik = {SAY:[
   return [...oncelik.filter(x=>L.includes(x)), ...L.filter(x=>!oncelik.includes(x))]; }
 function blkKonular(s, b){ if(!b.ders || b.tur==="deneme") return []; return dersSubs(s, b.ders).filter(x=>!b.ex || !x.ex || x.ex===b.ex || /^\d/.test(x.ex)); }
 function blkKonuHTML(s, b){ const subs = blkKonular(s, b); if(!subs.length) return `<p class="faint small" style="margin:0">${b.tur==="deneme"?"Genel denemede konu seçilmez.":"Önce ders seç."}</p>`;
-  return subs.map(sub=>`<div class="kgrp" data-grp><div class="gh">${esc(sub.ex||"")} · ${esc(sub.n)}</div>${sub.t.map(n=>`<button type="button" class="kt" data-act="bkk" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${b.konu.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span></button>`).join("")}</div>`).join(""); }
+  return subs.map(sub=>`<div class="kgrp" data-grp><div class="gh">${esc(sub.ex||"")} · ${esc(sub.n)}</div>${sub.t.map(n=>`<button type="button" class="kt ${topicScore((s.topics||{})[tkey(sub.k,n)])>=1?"bitti":""}" data-act="bkk" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${b.konu.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span></button>`).join("")}</div>`).join(""); }
 function blkGuncelle(){ const s = st(), b = S.blk; if(!b) return;
   document.querySelectorAll("#layer [data-act=bkd]").forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===b.ders));
   document.querySelectorAll("#layer [data-act=bke]").forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===(b.ex||"")));
@@ -1777,7 +1777,7 @@ function openSheet(kind, el){
     const free = KSEL.filter(x=>!allT.has(x)); KSEL = KSEL.filter(x=>allT.has(x));
     const one = konuOneri(s,d,subs);
     const tbtn = (sub,n) => { const full = topicScore((s.topics||{})[tkey(sub.k,n)])>=1;
-      return `<button type="button" class="kt" data-act="kt" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${KSEL.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span>${full?`<small>bitti</small>`:""}</button>`; };
+      return `<button type="button" class="kt ${full?"bitti":""}" data-act="kt" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${KSEL.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span>${full?`<small>bitti</small>`:""}</button>`; };
     return sheet(`<h3>${esc(d)} · bitirilecek konu</h3>
       <input type="search" id="kq" placeholder="Konu ara (ör. basınç, türev)" autocomplete="off" aria-label="Konu ara">
       ${one.length?`<div class="koneri"><div class="gh">Öneri</div>${one.map(o=>`<button type="button" class="kt sug" data-act="kt" data-v="${esc(o.n)}" data-q="${esc(trLow(o.n))}" aria-pressed="${KSEL.includes(o.n)}">${icon("check","xs")}<span>${esc(o.n)}<small class="kwhy">${esc(o.why)}</small></span></button>`).join("")}</div>`:""}
