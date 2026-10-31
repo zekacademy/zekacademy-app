@@ -194,6 +194,7 @@ function cfg(){ const x = S.settings; return {
   odemeAcik: x.odemeAcik !== false, odemeSaat: x.odemeSaat || "18:00", odemeMesaj: x.odemeMesaj || DEF_ODEME_MESAJ, gorusmeHatirlat: x.gorusmeHatirlat !== false,
   sabahAcik: x.sabahAcik !== false, sabahSaat: x.sabahSaat || "08:30", sabah: x.sabah || DEF_SABAH,
   aksamAcik: x.aksamAcik !== false, aksamSaat: x.aksamSaat || "22:00", aksam: x.aksam || DEF_AKSAM,
+  paketler: Array.isArray(x.paketler) && x.paketler.length ? x.paketler : DEF_PAKET,
   sureler: x.sureler || DEF_SURELER, quick: x.quick || DEF_QUICK, hedefDers: x.hedefDers || DEF_HEDEF_DERS }; }
 const CURX = () => S.settings.cur || CUR;
 const st = () => S.students.get(A() ? S.cur : S.me);
@@ -918,7 +919,19 @@ const hmTo = t => { const [h,m] = String(t||"0:0").split(":").map(Number); retur
 const toHm = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
 const duzenOf = id => (S.cnotes.get(id)||{}).duzen || null;
 /* Seans günü: elle seçildiyse o gün, yoksa öğrencinin program döngüsünün başladığı gün (Yeni görüşme ile kayarsa seans da kayar) */
-const isWA = x => !!x && x.paket==="whatsapp";
+/* Koçluk paketleri (ayarlardan düzenlenir). tur: "seans" = haftalık birebir görüşme, "whatsapp" = ilk görüşme + haftalık rapor */
+const DEF_PAKET = [{k:"super", n:"Süper Koçluk", tur:"seans", fiyat:6000}, {k:"whatsapp", n:"WhatsApp Koçluğu", tur:"whatsapp", fiyat:null}];
+function paketOf(x){ const L = cfg().paketler; if(!x) return L[0];
+  return L.find(p=>p.k===x.paket) || (x.paket==="whatsapp" ? L.find(p=>p.tur==="whatsapp") : L.find(p=>p.tur!=="whatsapp")) || L[0]; }
+const isWA = x => !!x && paketOf(x)?.tur==="whatsapp";
+/* Ödeme tutarına göre paket önerisi: fiyatı tutan paket; yoksa en ucuz seans paketinin altındaysa WhatsApp paketi */
+function paketTahmin(id){ const L = cfg().paketler, tu = num(odemeOf(id)?.tutar); if(tu==null) return null;
+  const tam = L.find(p=>num(p.fiyat)===tu); if(tam) return tam;
+  const sMin = Math.min(...L.filter(p=>p.tur!=="whatsapp" && num(p.fiyat)!=null).map(p=>num(p.fiyat)));
+  return tu < sMin ? L.find(p=>p.tur==="whatsapp") : L.find(p=>p.tur!=="whatsapp"); }
+function paketOzet(){ const L = cfg().paketler, m = new Map(L.map(p=>[p.k, {p, n:0, tl:0}]));
+  S.students.forEach((x,id)=>{ const r = m.get(paketOf(x).k); if(!r) return; r.n++; const o = odemeOf(id); r.tl += num(o?.tutar) ?? num(r.p.fiyat) ?? 0; });
+  return [...m.values()]; }
 function seansGunu(sid, d){ const z = duzenOf(sid), x = S.students.get(sid);
   if(isWA(x)){ if(z && z.gun!=null && z.gun!=="") return z.gun===dIdx(d); return pStart(x, d)===d; } /* WhatsApp paketi: döngü gününde haftalık rapor, saat yok */
   if(!z) return false; const gunVar = z.gun!=null && z.gun!=="";
@@ -1117,7 +1130,7 @@ function cOdeme(){
     ${taslakVar||planYok?`<div class="card" style="box-shadow:none;border-style:dashed">${taslakVar?`<p class="small" style="margin:0 0 10px"><b>Taslak veriler gösteriliyor.</b> Başlangıç tarihleri örnek olarak oluşturuldu; gerçek tarihleri girince taslak etiketi kalkar.</p>`:""}
       <div class="pills">${planYok?`<button class="btn sm" data-act="otaslak">${icon("plus","xs")} ${planYok} öğrenciye taslak tarih ver</button>`:""}${taslakVar?`<button class="btn sm danger" data-act="otaslaksil">Taslakları sil</button>`:""}</div></div>`:""}
     <div class="olist">${rows.map(({id,x,d,o})=>`<div class="orow o-${d.k}"><button class="ohead" data-act="sheet" data-v="odeme" data-id="${id}"><span class="av">${esc(initials(x.name))}</span><div style="min-width:0;flex:1"><b>${esc(x.name)}</b>${o&&o.taslak?` <span class="pill">taslak</span>`:""}
-        <div class="osub">${o&&o.bas?`${PERIYOT[o.periyot||"ay"]}${o.tutar?" · "+fmtTL(o.tutar):""} · Başlangıç ${shortDate(o.bas)}`:"Başlangıç tarihi girilmedi"}</div></div>
+        <div class="osub">${esc(paketOf(x).n)} · ${o&&o.bas?`${PERIYOT[o.periyot||"ay"]}${o.tutar?" · "+fmtTL(o.tutar):""} · Başlangıç ${shortDate(o.bas)}`:"Başlangıç tarihi girilmedi"}</div></div>
         <div class="ostat"><span class="otag">${ODEME_ETIKET[d.k]}</span><span class="small">${esc(d.t)}</span></div></button>
         ${d.k==="kirmizi"||d.k==="pembe"||d.k==="turuncu"?`<button class="btn sm ${d.k==="turuncu"?"":"pri"} opay" data-act="odendi" data-id="${id}" data-d="${d.d}">${icon("check","xs")} ${shortDate(d.d)} ödendi</button>`:""}</div>`).join("") || `<div class="card"><div class="empty">Henüz öğrenci yok.</div></div>`}</div>
     <p class="faint small" style="text-align:center">${cfg().odemeAcik?`Ödemesi yapılmamış öğrenciye ödeme gününde ve 5 gün sonra saat ${esc(cfg().odemeSaat)}'de hatırlatma bildirimi gider (taslaklara gitmez). `:""}Pembe: ödeme günü geçti · Kırmızı: 5 günden fazla gecikti · Turuncu: 3 gün ya da daha az kaldı. Bu sayfayı sadece sen görürsün.</p>
@@ -1280,6 +1293,18 @@ function cSettings(){
       <div class="f">Sadece görevler işaretlenmemişse${ta("st-ak2","aksam.gorev",c.aksam.gorev,3)}</div>
       <div class="f">İkisi de eksikse${ta("st-ak3","aksam.ikisi",c.aksam.ikisi,6)}</div>
       <p class="faint small" style="margin:0">İkisini de tamamlayan öğrenciye akşam mesajı gitmez.</p>`, "aksam,aksamSaat,aksamAcik")}
+    ${(()=>{ const oz = paketOzet(), topN = oz.reduce((a,r)=>a+r.n,0), topTL = oz.reduce((a,r)=>a+r.tl,0), keys = new Set(c.paketler.map(p=>p.k));
+      const atanmamis = [...S.students.values()].filter(x=>!keys.has(x.paket)).length;
+      return sec("Koçluk paketleri", `${c.paketler.length} paket · ${topN} öğrenci · aylık ${fmtTL(topTL)||"0 ₺"}`, `
+      <div class="pkgrid">${oz.map((r,i)=>`<div class="pkrow">
+        <div class="pkhead"><input type="text" id="pk-n-${i}" data-pk="${i}|n" value="${esc(r.p.n)}" aria-label="Paket adı"><button class="mini" data-act="pkdel" data-i="${i}" aria-label="Paketi sil">${icon("trash","xs")}</button></div>
+        <div class="two"><label class="f">Tür<select id="pk-t-${i}" data-pk="${i}|tur"><option value="seans" ${r.p.tur!=="whatsapp"?"selected":""}>Birebir seans</option><option value="whatsapp" ${r.p.tur==="whatsapp"?"selected":""}>WhatsApp · rapor</option></select></label>
+        <label class="f">Aylık ücret (₺)<input type="number" min="0" step="50" id="pk-f-${i}" data-pk="${i}|fiyat" value="${r.p.fiyat??""}" placeholder="değişken"></label></div>
+        <div class="pkstat"><b class="num">${r.n}</b> öğrenci · aylık <b class="num">${fmtTL(r.tl)||"0 ₺"}</b></div></div>`).join("")}</div>
+      <div class="pktop">Toplam: <b class="num">${topN}</b> öğrenci · aylık <b class="num">${fmtTL(topTL)||"0 ₺"}</b></div>
+      <p class="faint small" style="margin:0">Aylık toplam, öğrencilerin ödeme planındaki tutarlardan hesaplanır; planı olmayan öğrenci için paketin ücreti alınır. WhatsApp türündeki paketlerde ilk görüşmeden sonra her hafta görüşme yerine haftalık rapor günü olur.</p>
+      <div class="pills"><button class="btn sm" data-act="pkadd">${icon("plus","xs")} Paket ekle</button>${atanmamis?`<button class="btn sm pri" data-act="pkata">${atanmamis} öğrenciyi ödeme tutarına göre pakete ata</button>`:""}</div>
+      <div class="small" id="pk-out" style="font-weight:600">${esc(S.pkMsg||"")}</div>`, "paketler"); })()}
     ${sec("Ödeme hatırlatması",`${c.odemeAcik?"Ödeme günü ve 5 gün sonra "+c.odemeSaat:"kapalı"}`,`
       <div class="two"><label class="inline"><input type="checkbox" id="st-oa" data-setb="odemeAcik" ${c.odemeAcik?"checked":""}>Öğrenciye ödeme hatırlatması gönder</label>
       <label class="f">Gönderim saati<input type="time" id="st-os" data-set="odemeSaat" value="${esc(c.odemeSaat)}"></label></div>
@@ -1339,6 +1364,8 @@ function onSetting(t, isChange){
   if(t.dataset.set!=null){ S.settings[t.dataset.set] = t.value; saveSettings(600); if(t.dataset.set==="kurum"||t.dataset.set==="examDate") renderSideOnly(); return true; }
   if(t.dataset.setb!=null && isChange){ S.settings[t.dataset.setb] = t.checked; saveSettings(); return true; }
   if(t.dataset.setlist!=null){ setPath(t.dataset.setlist, t.value.split("\n").map(x=>x.trim()).filter(Boolean)); saveSettings(800); return true; }
+  if(t.dataset.pk!=null){ if(!S.settings.paketler) S.settings.paketler = clone(cfg().paketler); const [i,f] = t.dataset.pk.split("|"), r = S.settings.paketler[+i];
+    if(r){ r[f] = f==="fiyat" ? num(t.value) : t.value; saveSettings(700); if(isChange && f!=="n") keepSettingsOpen(); } return true; }
   if(t.dataset.sure!=null){ if(!S.settings.sureler) S.settings.sureler = clone(cfg().sureler); const r = S.settings.sureler[+t.dataset.sure]; if(r){ r[t.dataset.sf] = t.dataset.sf==="dk" ? num(t.value) : t.value; saveSettings(700); } return true; }
   if(t.dataset.act==="stest"){ const h = parseHours(t.value), r = ruleFor(t.value); $("#sr-out").textContent = t.value ? (h ? `${fmtMin(h*60)}${r && !/(saat|sa|dk|dakika)\b/i.test(t.value) ? ` · “${r.k}” kuralı` : " · satırdaki süre"}` : "Bu satır için kural yok; süre hesaba katılmaz.") : ""; return true; }
   const ensureCur = () => { if(!S.settings.cur) S.settings.cur = clone(CUR); return S.settings.cur; };
@@ -1366,6 +1393,7 @@ async function runImport(b){
       if(o.kocNotu && !eski.not){ cn.not = o.kocNotu; }
       try{
         if(eklenen.length || cn.not !== eski.not){ S.cnotes.set(vid, cn); await writeDoc("coachNotes", vid, cn); }
+        if(o.kayit?.paket && !cfg().paketler.some(p=>p.k===vx.paket)){ vx.paket = o.kayit.paket; await writeDoc("students", vid, vx); eklenen.push("paket"); }
         if(o.kayit?.tel && vx.tel !== o.kayit.tel){ vx.tel = o.kayit.tel; await writeDoc("students", vid, vx); eklenen.push("telefon"); }
         log(eklenen.length ? `↻ ${name}: @${u} zaten vardı; ${eklenen.join(", ")} eklendi` : `– ${name}: @${u} zaten var, değişiklik yok`); skip++;
       }catch(e){ log(`✗ ${name}: ${e.message||e}`); skip++; }
@@ -1393,6 +1421,14 @@ function onSettingClick(a, b){
   const v = b.dataset.v;
   if(a==="tmzhepsi"){ document.querySelectorAll(".tmz").forEach(x=>x.checked = true); return true; }
   if(a==="tmzsil"){ topluSil(b); return true; }
+  if(a==="pkadd"){ if(!S.settings.paketler) S.settings.paketler = clone(cfg().paketler); S.settings.paketler.push({k:"p"+uid().slice(0,6), n:"Yeni paket", tur:"seans", fiyat:null}); saveSettings(); keepSettingsOpen(); setTimeout(()=>{ const x=document.getElementById("pk-n-"+(S.settings.paketler.length-1)); if(x){ x.focus(); x.select(); } },0); return true; }
+  if(a==="pkdel"){ const L = cfg().paketler, p = L[+b.dataset.i]; if(!p) return true; if(L.length<2){ toast("En az bir paket kalmalı"); return true; }
+    const n = [...S.students.values()].filter(x=>paketOf(x).k===p.k).length; if(n){ toast(`Bu pakette ${n} öğrenci var; önce onları başka pakete al`); return true; }
+    if(!b.dataset.armed){ b.dataset.armed="1"; b.classList.add("danger"); toast("Silmek için tekrar dokun"); return true; }
+    S.settings.paketler = clone(L).filter((_,i)=>i!==+b.dataset.i); saveSettings(); keepSettingsOpen(); toast("Paket silindi"); return true; }
+  if(a==="pkata"){ const keys = new Set(cfg().paketler.map(p=>p.k)); let n = 0, yok = [];
+    S.students.forEach((x,id)=>{ if(keys.has(x.paket)) return; const t = paketTahmin(id); if(!t){ yok.push(x.name); return; } x.paket = t.k; persistDoc("students", id, 0); n++; });
+    S.pkMsg = `${n} öğrenci pakete atandı.${yok.length?` Ödeme planı olmadığı için atanamayan: ${yok.join(", ")} (öğrenci düzenle ekranından seç).`:""}`; keepSettingsOpen(); toast(`${n} öğrenci pakete atandı`); return true; }
   if(a==="setex"){ S.setEx = v; render(); return true; }
   if(a==="sadd"){ if(!S.settings.sureler) S.settings.sureler = clone(cfg().sureler); S.settings.sureler.push({k:"",dk:30}); saveSettings(); keepSettingsOpen(); setTimeout(()=>{ const x=document.getElementById("sr-k-"+(S.settings.sureler.length-1)); if(x) x.focus(); },0); return true; }
   if(a==="sdel"){ if(!S.settings.sureler) S.settings.sureler = clone(cfg().sureler); S.settings.sureler.splice(+b.dataset.i,1); saveSettings(); keepSettingsOpen(); return true; }
@@ -1742,7 +1778,8 @@ function openSheet(kind, el){
       <div class="two"><label class="f">Sınıf<select name="sinif" id="m-sinif">${SINIFLAR.map(a=>`<option ${sinif===a?"selected":""}>${a}</option>`).join("")}</select></label>
       <label class="f">Alan<select name="alan" id="m-alan">${(pa=>ALANLAR.map(a=>`<option ${(x?x.alan===a:pa===a)?"selected":""}>${a}</option>`).join(""))(alanTahmin(el.dataset.alan))}</select></label></div>
       <label class="f" id="m-okulWrap" ${sinif==="Mezun"?"hidden":""}>Okul<input type="text" name="okul" id="m-okul" value="${esc(x?.okul||"")}"></label>
-      <label class="f">Koçluk paketi<select name="paket" id="m-paket"><option value="birebir" ${(x?x.paket!=="whatsapp":!/whatsapp/i.test((el.dataset.bid&&S.notifs.get(el.dataset.bid)?.hizmet)||""))?"selected":""}>Birebir görüşme (haftalık seans)</option><option value="whatsapp" ${(x?x.paket==="whatsapp":/whatsapp/i.test((el.dataset.bid&&S.notifs.get(el.dataset.bid)?.hizmet)||""))?"selected":""}>WhatsApp koçluğu (haftalık rapor)</option></select></label>
+      <label class="f">Koçluk paketi<select name="paket" id="m-paket">${(()=>{ const L = cfg().paketler, waIst = /whatsapp/i.test((el.dataset.bid&&S.notifs.get(el.dataset.bid)?.hizmet)||""), sec = x ? paketOf(x).k : (waIst ? L.find(p=>p.tur==="whatsapp") : L.find(p=>p.tur!=="whatsapp"))?.k;
+        return L.map(p=>`<option value="${esc(p.k)}" ${p.k===sec?"selected":""}>${esc(p.n)}${num(p.fiyat)!=null?` · ${fmtTL(p.fiyat)}`:""} (${p.tur==="whatsapp"?"ilk görüşme + haftalık rapor":"haftalık birebir seans"})</option>`).join(""); })()}</select></label>
       <label class="f">Telefon (WhatsApp)<input type="tel" name="tel" id="m-tel" value="${esc(x?.tel||(el.dataset.bid&&S.notifs.get(el.dataset.bid)?.tel)||"")}" placeholder="05xx xxx xx xx"></label>
       ${acc?`<div class="card" style="box-shadow:none"><span class="muted small">Öğrenci hesabı: <b style="color:var(--fg)">@${esc(acc.u)}</b>${x.ilkSifre?" · henüz ilk şifresini değiştirmedi":""}. </span>
         <div class="two" style="margin-top:10px"><label class="f">Yeni şifre<input type="text" id="m-np" autocomplete="off" value="123456"></label><div class="f" style="justify-content:flex-end"><button type="button" class="btn" id="m-reset">Şifreyi sıfırla</button></div></div>
@@ -1754,7 +1791,7 @@ function openSheet(kind, el){
       <div class="acts">${x?`<button type="button" class="btn danger" id="m-del" style="margin-right:auto">Öğrenciyi sil</button>`:""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" data-label="${x?"Kaydet":"Ekle"}">${x?"Kaydet":"Ekle"}</button></div>`,
     async (fd, form)=>{ const name = String(fd.get("name")).trim(); if(!name) return sheetErr("Ad soyad gerekli.");
       const sn = fd.get("sinif"), okul = sn==="Mezun"?"":String(fd.get("okul")||"").trim();
-      const tel = String(fd.get("tel")||"").trim(), paket = fd.get("paket")==="whatsapp" ? "whatsapp" : "birebir";
+      const tel = String(fd.get("tel")||"").trim(), paket = String(fd.get("paket")||paketOf(null).k);
       if(x){ Object.assign(x,{name,alan:fd.get("alan"),sinif:sn,okul,tel,paket});
         const mg = fd.get("merge");
         if(mg && S.students.has(mg)){ const o = S.students.get(mg);

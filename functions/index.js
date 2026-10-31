@@ -63,7 +63,8 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   if (c.sabahAcik && due(c.sabahSaat, minutes, mark.sabah, date)) jobs.push("sabah");
   if (c.aksamAcik && due(c.aksamSaat, minutes, mark.aksam, date)) jobs.push("aksam");
   const odemeVakti = c.odemeAcik && due(c.odemeSaat, minutes, mark.odeme, date);
-  if (c.gorusmeHatirlat) await gorusmeHatirlatmalari(date, minutes).catch(e => logger.error("görüşme hatırlatma", e));
+  const waKeys = Array.isArray(settings.paketler) ? settings.paketler.filter(p => p.tur === "whatsapp").map(p => p.k) : ["whatsapp"];
+  if (c.gorusmeHatirlat) await gorusmeHatirlatmalari(date, minutes, waKeys).catch(e => logger.error("görüşme hatırlatma", e));
   if (!jobs.length && !odemeVakti) return;
   if (odemeVakti) { await markRef.set({ odeme: date }, { merge: true }); await odemeBildirimleri(c, date); }
   if (!jobs.length) return;
@@ -85,11 +86,11 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
 });
 
 /* Görüşmeden 1 saat önce öğrenciye bildirim (her görüşme için bir kez) */
-async function gorusmeHatirlatmalari(date, minutes){
+async function gorusmeHatirlatmalari(date, minutes, waKeys){
   if (minutes < 6 * 60 || minutes > 23 * 60) return;
   const [st, cn, gr] = await Promise.all([db.collection("students").get(), db.collection("coachNotes").get(), db.collection("gorusmeler").where("tarih", "==", date).get()]);
   const students = Object.fromEntries(st.docs.map(d => [d.id, d.data()])), notes = Object.fromEntries(cn.docs.map(d => [d.id, d.data()]));
-  const list = gunGorusmeleri(students, notes, gr.docs.map(d => ({ id: d.id, ...d.data() })), date);
+  const list = gunGorusmeleri(students, notes, gr.docs.map(d => ({ id: d.id, ...d.data() })), date, waKeys);
   const markRef = db.doc("system/gorusmeHatirlatma"), mark = (await markRef.get()).data() || {};
   const gonderilen = mark.tarih === date ? (mark.anahtarlar || {}) : {};
   const simdi = hatirlatilacak(list, minutes, gonderilen); if (!simdi.length) return;
