@@ -627,6 +627,9 @@ function planEditor(s){
     ${weekNav(s)}
     <div class="pills"><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button>${plan(s,S.week).yazili?"":`<button class="btn sm" data-act="yazili" data-w="${S.week}">📝 Yazılı haftası yap</button>`}<button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
     ${yaziliKart(s, S.week, true)}
+    ${(()=>{ const cz = cetele10(s); return cz.length ? `<div class="card czk"><div class="sech"><h3>🔁 Çetelede ${CETELE_ESIK}+ yanlış</h3><span class="faint small">${cz.length} konu</span></div>
+      <div class="pills" style="margin-top:8px">${cz.slice(0,12).map(c=>`<span class="pill warn">${esc(c.n)} · <b class="num">${c.y}</b></span>`).join("")}${cz.length>12?`<span class="pill">+${cz.length-12}</span>`:""}</div>
+      <p class="faint small" style="margin:8px 0 0">Bu konular günlerdeki “Hızlı ekle” penceresinde en üstte tekrar önerisi olarak çıkar.</p></div>` : ""; })()}
     ${goals}
     <div class="sech"><h3 class="sec">Günlük plan</h3><span class="faint small">${ws.all?`${ws.done}/${ws.all} görev tamamlandı`:""}</span></div>
     <details class="card" style="padding:12px 16px"><summary class="small" style="cursor:pointer;font-weight:700;color:var(--muted)">Süre yazmayan satırlar için ortalama süreler</summary>
@@ -1197,6 +1200,13 @@ function cDetail(){
   return `${topbar(`<div style="min-width:0;flex:1"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
+/* Çetelede 10 ve üzeri yanlışa ulaşan konular (program yazarken tekrar önerisi) */
+const CETELE_ESIK = 10;
+function cetele10(s){ const out = [];
+  (isMaarif(s) ? [...maarifList(s,1), ...maarifList(s,2,false)].map(x=>[x.ex, x, x.ders]) : [...CURX().TYT.map(x=>["TYT",x,x.n]), ...aytSubjects(s,false).map(x=>["AYT",x,x.n])])
+    .forEach(([ex,sub,ders])=>sub.t.forEach(n=>{ const y = ((s.topics||{})[tkey(sub.k,n)]||{}).y||0; if(y>=CETELE_ESIK) out.push({ex, ders:String(ders).split(" · ")[0], n, y}); }));
+  return out.sort((a,b)=>b.y-a.y); }
+const ceteleSatir = c => `${c.n} konu tekrarı (${/^\d/.test(c.ex)?"":c.ex+" "}${c.ders})`.replace("( ","(");
 function cSummary(s){
   const m = coachMetrics(s), la = exams(s,"AYT").pop();
   const weak = [];
@@ -1633,14 +1643,15 @@ function openSheet(kind, el){
     const ekle = (m, t) => { t = String(t||"").trim(); if(t) m.set(t, (m.get(t)||0)+1); };
     Object.values(s.weeks||{}).forEach(x=>Object.values(x).forEach(l=>(l||[]).forEach(k=>ekle(benim, taskText(k)))));
     S.students.forEach((x,id)=>{ if(id===sid()) return; Object.values(x.weeks||{}).forEach(w=>Object.values(w).forEach(l=>(l||[]).forEach(k=>ekle(say, taskText(k))))); });
-    const kayitli = cfg().quick, gor = new Set(kayitli), sirala = m => [...m.entries()].filter(([t])=>!gor.has(t)).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"tr")).map(([t])=>{ gor.add(t); return t; });
+    const cz = cetele10(s), czSat = cz.map(ceteleSatir);
+    const kayitli = cfg().quick, gor = new Set([...kayitli, ...czSat]), sirala = m => [...m.entries()].filter(([t])=>!gor.has(t)).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"tr")).map(([t])=>{ gor.add(t); return t; });
     const g1 = kayitli, g2 = sirala(benim), g3 = sirala(say).slice(0,80);
     const btn = t => `<button type="button" class="kt hz" data-act="hz" data-v="${esc(t)}" data-q="${esc(trLow(t))}">${icon("plus","xs")}<span>${esc(t)}</span></button>`;
     const grp = (b, l) => l.length ? `<div class="kgrp" data-grp><div class="gh">${b}</div>${l.map(btn).join("")}</div>` : "";
     S.hzGun = d;
     return sheet(`<h3>${GUN[dIdx(d)]} ${shortDate(d)} · hızlı ekle</h3>
       <input type="search" id="hq" placeholder="Ara (ör. paragraf, fizik, deneme)" autocomplete="off" aria-label="Satır ara">
-      <div class="klist">${grp("Kayıtlı satırlar", g1)}${grp(`${esc(ilkAd(s.name))} için daha önce yazılanlar`, g2)}${grp("Diğer öğrencilerde kullanılanlar", g3)}
+      <div class="klist">${cz.length ? `<div class="kgrp" data-grp><div class="gh">Çetelede ${CETELE_ESIK}+ yanlış · tekrar önerisi</div>${cz.map((c,i)=>btn(czSat[i]).replace("</span></button>", ` <small class="kwhy">${c.y} yanlış</small></span></button>`)).join("")}</div>` : ""}${grp("Kayıtlı satırlar", g1)}${grp(`${esc(ilkAd(s.name))} için daha önce yazılanlar`, g2)}${grp("Diğer öğrencilerde kullanılanlar", g3)}
         <p class="faint small" id="hnone" hidden>Eşleşen satır yok.</p></div>
       <button type="button" class="btn sm" id="hfree" data-act="hz" data-v="" hidden></button>
       <p class="faint small" style="margin:0">Dokunduğun satır güne eklenir; pencere açık kalır, birden fazla seçebilirsin. Ayarlar → Hızlı ekle listesi’nden kayıtlı satırları düzenleyebilirsin.</p>
@@ -1932,7 +1943,7 @@ document.addEventListener("click", e=>{
       mutate(s=>{ s.denemeler=s.denemeler.filter(d=>d.id!==b.dataset.id); }); render(); toast("Deneme silindi"); break; }
     case "tstart": mutate(s=>{ s.timer={start:Date.now()}; }); render(); break;
     case "tstop": { let added=0; mutate(s=>{ if(!s.timer) return; const d=iso(new Date(s.timer.start)); added=Math.round(timerMin(s)); s.gunluk=s.gunluk||{}; if(added>0) s.gunluk[d]=(s.gunluk[d]||0)+added; s.timer=null; }); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
-    case "sheet": openSheet(v, b); wireSheetExtras(); break;
+    case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
     case "accent": THEME.accent=v; applyTheme(); openSheet("tema"); render(); break;
