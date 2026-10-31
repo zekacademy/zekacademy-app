@@ -905,6 +905,14 @@ const ilkAd = n => { const a = String(n||"").trim().split(/\s+/)[0] || ""; retur
 const adSoyad = n => String(n||"").trim().split(/\s+/).filter(Boolean).map(w=>w.charAt(0).toLocaleUpperCase("tr")+w.slice(1).toLocaleLowerCase("tr")).join(" ");
 function waNo(t){ let d = String(t||"").replace(/\D/g,""); if(d.startsWith("0")) d = "9"+d; else if(d.length===10 && d.startsWith("5")) d = "90"+d; return d; }
 const waLink = (tel, text) => `https://wa.me/${waNo(tel)}?text=${encodeURIComponent(text)}`;
+/* Öğrenciye giriş bilgileri mesajı */
+function girisMesaj(x){ const ad = ilkAd(x.name), u = x.kullanici || "";
+  return x.ilkSifre
+    ? `Merhaba ${ad} 👋\nZekacademy koçluk uygulaman hazır!\n\n📲 Link: https://app.zekacademy.com\n👤 Kullanıcı adın: ${u}\n🔑 İlk şifren: 123456\n\nİlk girişte kendi şifreni belirleyeceksin. Uygulamayı telefonunun ana ekranına eklemeyi unutma; kurulum rehberini de gönderiyorum. Takıldığın yerde bana yaz.`
+    : `Merhaba ${ad} 👋\nZekacademy uygulamasına giriş bilgilerin:\n\n📲 Link: https://app.zekacademy.com\n👤 Kullanıcı adın: ${u}\n🔑 Şifren: kendi belirlediğin şifre\n\nŞifreni unuttuysan bana yaz, sıfırlayayım.`; }
+function girisSatir(id, x){ const cn = S.cnotes.get(id)||{}, g = cn.girisGonderildi;
+  return `<div class="grrow"><div style="min-width:0;flex:1"><b>${esc(x.name)}</b><div class="small muted">@${esc(x.kullanici||"—")} · ${x.ilkSifre?`<span style="color:var(--warn);font-weight:700">ilk şifre 123456</span>`:`<span style="color:var(--good);font-weight:700">kendi şifresini belirledi</span>`}${g?` · <span class="faint">gönderildi ${shortDate(g.slice(0,10))}</span>`:""}</div></div>
+    ${x.tel?`<a class="btn sm ${g?"":"pri"}" href="${esc(waLink(x.tel, girisMesaj(x)))}" target="_blank" rel="noopener" data-act="girisgonder" data-id="${id}">${icon("chat","xs")} WhatsApp</a>`:`<span class="faint small">telefon yok</span>`}</div>`; }
 const doldur = (t, n) => String(t).replace(/\{Ad\}/g, ilkAd(n.name)).replace(/\{AdSoyad\}/g, adSoyad(n.name));
 function bSet(id, fn){ const n = S.notifs.get(id); if(!n) return; fn(n); n.adim = {...(n.adim||{})}; S.notifs.set(id, n); persistDoc("notifs", id, 200); }
 /* Fotoğraf: settings/foto (Ayarlar'dan yüklenir) */
@@ -1242,6 +1250,7 @@ function cList(){
   return `${topbar(`<h1 class="ttl">Öğrenciler <span class="faint" style="font-weight:600">${S.students.size}</span></h1>`, `<button class="iconbtn" data-act="sheet" data-v="ogrenci" aria-label="Öğrenci ekle">${icon("plus")}</button>`)}
   <div class="page wide">
     <div class="search">${icon("search","sm")}<input type="text" id="q" data-act="q" value="${esc(S.q)}" placeholder="Öğrenci ara"></div>
+    <div class="pills"><button class="btn sm" data-act="sheet" data-v="girisler">🔑 Giriş bilgilerini WhatsApp’tan gönder</button></div>
     <div class="card">${all.length? all.map(studentRow).join("") : `<div class="empty">Öğrenci bulunamadı.</div>`}</div>
     <div class="card"><h3>Kayıt linki</h3><p class="muted small" style="margin:6px 0 0">Öğrencilerin bu uygulamanın linkinden “Kayıt ol” ile kendileri kaydolur. Her yeni kayıt Bildirimler’e düşer. Link: <b>${esc(location.origin)}</b></p></div>
   </div>`;
@@ -1770,6 +1779,11 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
   const s = st();
+  if(kind==="girisler"){ const L = sortedStudents(), gon = L.filter(([id])=>(S.cnotes.get(id)||{}).girisGonderildi).length;
+    return sheet(`<h3>Giriş bilgilerini gönder</h3><p class="muted small" style="margin:0">Her öğrencinin WhatsApp düğmesine dokun; mesaj kullanıcı adı ve şifresiyle hazır açılır, sadece <b>Gönder</b>’e basarsın. ${gon}/${L.length} gönderildi.</p>
+      <div class="grlist">${L.map(([id,x])=>girisSatir(id,x)).join("")}</div>
+      <details class="small"><summary class="muted" style="cursor:pointer;font-weight:700">Örnek mesaj</summary><pre class="grpre">${esc(girisMesaj({name:"Ayşe Yılmaz", kullanici:"ayseyilmaz", ilkSifre:true}))}</pre></details>
+      <div class="acts"><button type="button" class="btn pri" data-close>Bitti</button></div>`); }
   if(kind==="kaynak"){ const d = el.dataset.ders, k = el.dataset.k, adk = k==="kitap" ? "kitap" : "hoca", mevcut = k==="kitap" ? kitap(s,d) : hoca(s,d);
     KYS = kaynakBol(mevcut); S.kyn = {d, k};
     const MX = isMaarif(s), L = [...kaynakListe(d,k,MX), ...(!MX && k==="kitap" && kaynakListe("_brans","kitap").length ? ["# Branş denemeleri", ...kaynakListe("_brans","kitap")] : [])];
@@ -2019,7 +2033,8 @@ function wireSheetExtras(){
     const p = $("#m-np").value.trim(), err = t => { $("#m-rerr").textContent = t; };
     if(p.length < 6) return err("Şifre en az 6 karakter olmalı.");
     rs.disabled = true; rs.textContent = "Sıfırlanıyor…"; err("");
-    callFn("sifreSifirla", {uid:S.cur, sifre:p}).then(()=>{ toast(`Şifre sıfırlandı · yeni şifre ${p}`); rs.textContent = "Sıfırlandı ✓"; })
+    callFn("sifreSifirla", {uid:S.cur, sifre:p}).then(()=>{ toast(`Şifre sıfırlandı · yeni şifre ${p}`); rs.textContent = "Sıfırlandı ✓"; const x = S.students.get(S.cur);
+        if(x){ x.ilkSifre = true; if(x.tel){ const t = girisMesaj(x).replace("🔑 İlk şifren: 123456", `🔑 Yeni şifren: ${p}`).replace("Zekacademy koçluk uygulaman hazır!", "Şifreni sıfırladım."); rs.insertAdjacentHTML("afterend", `<a class="btn sm pri" style="margin-top:6px" href="${esc(waLink(x.tel, t))}" target="_blank" rel="noopener">${icon("chat","xs")} Yeni şifreyi WhatsApp’tan gönder</a>`); } } })
       .catch(e=>{ rs.disabled = false; rs.textContent = "Şifreyi sıfırla"; err(e && e.message ? e.message : "Sıfırlanamadı, tekrar dene."); });
   });
 }
@@ -2112,6 +2127,8 @@ document.addEventListener("click", e=>{
     case "ptemizle": S.pano = []; panoGuncelle(); break;
     case "tur": S.tur = +v; render(); break;
     case "turbitir": S.tur = null; S.turKapandi = true; if(!A() && st() && !st().tanitim){ st().tanitim = true; save(); } render(); break;
+    case "girisgonder": { const id = b.dataset.id, cn = {...(S.cnotes.get(id)||{}), girisGonderildi: nowISO()}; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0);
+      setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
     case "geri": geriAl(false); break;
     case "ileri": geriAl(true); break;
     case "tdel": { const r = b.closest(".tr"), box = b.closest(".tl"); if(r && box){ r.remove(); tlSync(box); } break; }

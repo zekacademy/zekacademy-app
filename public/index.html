@@ -453,6 +453,9 @@ pre.kod{margin:0;max-height:260px;overflow:auto;background:var(--sunk);border:1p
 .turnok{display:flex;gap:5px;justify-content:center}.turnok i{width:6px;height:6px;border-radius:3px;background:var(--line);transition:width .2s}.turnok i.on{width:18px;background:var(--ac)}
 .nb[data-tur="1"]{position:relative}.nb[data-tur="1"]::before{content:"";position:absolute;inset:4px 8px;border-radius:14px;box-shadow:0 0 0 3px var(--ac);animation:turpuls 1.4s ease-in-out infinite}
 @keyframes turpuls{0%,100%{opacity:.35}50%{opacity:1}}
+.grlist{display:flex;flex-direction:column;max-height:56vh;overflow:auto;border:1px solid var(--line);border-radius:14px}
+.grrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line)}.grrow:last-child{border-bottom:0}
+.grpre{white-space:pre-wrap;font:inherit;font-size:13px;background:var(--sunk);border-radius:12px;padding:10px;margin-top:6px}
 .glist{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .grow{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
 .grow.g-ilk{border-left:4px solid var(--ac)}
