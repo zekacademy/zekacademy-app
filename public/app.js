@@ -1360,20 +1360,29 @@ const TL_BTN = `<span class="tacts"><button type="button" class="tx tc" data-act
 function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
 const TL_GRIP = `<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`;
 /* Sürükle-bırak: görevi aynı gün içinde ya da başka güne taşı (fare ve dokunmatik) */
-let SUR = null;
-document.addEventListener("pointerdown", e=>{ const g = e.target.closest && e.target.closest("[data-grip]"); if(!g || e.button>0) return; const row = g.closest(".tr"); if(!row) return;
-  e.preventDefault(); SUR = {row, src:row.closest(".tl"), x0:e.clientX, y0:e.clientY, basla:false, id:e.pointerId}; try{ g.setPointerCapture(e.pointerId); }catch(_){} });
+let SUR = null, UZUN = null;
+function surBasla(e){ const {row} = SUR, r = row.getBoundingClientRect(); SUR.basla = true; SUR.dx = e.clientX - r.left; SUR.dy = e.clientY - r.top;
+  const ph = document.createElement("div"); ph.className = "tph"; ph.style.height = r.height+"px"; row.after(ph); SUR.ph = ph;
+  row.classList.add("surukle"); Object.assign(row.style, {width:r.width+"px", left:r.left+"px", top:r.top+"px"}); document.body.classList.add("suruk"); }
+document.addEventListener("pointerdown", e=>{ if(e.button>0) return; const g = e.target.closest && e.target.closest("[data-grip]");
+  if(g){ const row = g.closest(".tr"); if(!row) return; e.preventDefault(); SUR = {row, src:row.closest(".tl"), x0:e.clientX, y0:e.clientY, basla:false, id:e.pointerId}; try{ g.setPointerCapture(e.pointerId); }catch(_){} return; }
+  /* Uzun basma: görevin herhangi bir yerine ~0,4 sn basılı tut → taşı */
+  const row = e.target.closest && e.target.closest(".tl .tr:not(.yeni)"); if(!row || e.target.closest("[data-act]")) return;
+  clearTimeout(UZUN?.t); UZUN = {row, x0:e.clientX, y0:e.clientY, x:e.clientX, y:e.clientY, id:e.pointerId};
+  UZUN.t = setTimeout(()=>{ const u = UZUN; UZUN = null; if(!u || !u.row.isConnected) return; if(document.activeElement && document.activeElement.blur) document.activeElement.blur(); try{ getSelection().removeAllRanges(); }catch(_){}
+    SUR = {row:u.row, src:u.row.closest(".tl"), x0:u.x, y0:u.y, basla:false, id:u.id, uzun:true}; surBasla({clientX:u.x, clientY:u.y}); u.row.style.left = (u.x - SUR.dx)+"px"; u.row.style.top = (u.y - SUR.dy)+"px"; try{ navigator.vibrate && navigator.vibrate(18); }catch(_){} }, 420); });
+document.addEventListener("pointermove", e=>{ if(UZUN && e.pointerId===UZUN.id){ UZUN.x = e.clientX; UZUN.y = e.clientY; if(Math.hypot(e.clientX-UZUN.x0, e.clientY-UZUN.y0) > 8){ clearTimeout(UZUN.t); UZUN = null; } } }, true);
+document.addEventListener("touchmove", e=>{ if(SUR && SUR.basla) e.preventDefault(); }, {passive:false}); /* taşırken sayfa kaymasın */
+document.addEventListener("contextmenu", e=>{ if(SUR || (UZUN && e.target.closest && e.target.closest(".tl"))) e.preventDefault(); });
 document.addEventListener("pointermove", e=>{ if(!SUR || e.pointerId!==SUR.id) return; const {row} = SUR;
-  if(!SUR.basla){ if(Math.hypot(e.clientX-SUR.x0, e.clientY-SUR.y0) < 5) return; const r = row.getBoundingClientRect(); SUR.basla = true; SUR.dx = e.clientX - r.left; SUR.dy = e.clientY - r.top;
-    const ph = document.createElement("div"); ph.className = "tph"; ph.style.height = r.height+"px"; row.after(ph); SUR.ph = ph;
-    row.classList.add("surukle"); Object.assign(row.style, {width:r.width+"px", left:r.left+"px", top:r.top+"px"}); document.body.classList.add("suruk"); }
+  if(!SUR.basla){ if(Math.hypot(e.clientX-SUR.x0, e.clientY-SUR.y0) < 5) return; surBasla(e); }
   row.style.left = (e.clientX - SUR.dx)+"px"; row.style.top = (e.clientY - SUR.dy)+"px";
   if(e.clientY < 70) window.scrollBy(0, -12); else if(e.clientY > innerHeight - 90) window.scrollBy(0, 12);
   row.style.visibility = "hidden"; const alt = document.elementFromPoint(e.clientX, e.clientY); row.style.visibility = "";
   const box = alt && alt.closest(".tl"); if(!box) return;
   const satirlar = [...box.querySelectorAll(".tr:not(.surukle):not(.yeni)")]; const once = satirlar.find(x=>{ const r = x.getBoundingClientRect(); return e.clientY < r.top + r.height/2; });
   if(once) once.before(SUR.ph); else { const y = box.querySelector(".tr.yeni"); if(y) y.before(SUR.ph); else box.appendChild(SUR.ph); } });
-function surBitir(e){ if(!SUR || (e && e.pointerId!==SUR.id)) return; const {row, src, ph, basla} = SUR; SUR = null; document.body.classList.remove("suruk"); if(!basla) return;
+function surBitir(e){ if(UZUN && e && e.pointerId===UZUN.id){ clearTimeout(UZUN.t); UZUN = null; } if(!SUR || (e && e.pointerId!==SUR.id)) return; const {row, src, ph, basla} = SUR; SUR = null; document.body.classList.remove("suruk"); if(!basla) return;
   row.classList.remove("surukle"); row.removeAttribute("style"); const hedef = ph.closest(".tl"); ph.replaceWith(row); tlBoyut(row);
   tlSync(src); if(hedef && hedef!==src){ tlSync(hedef); const g = document.querySelector(`.dcard #tl-${hedef.dataset.i}`)?.closest(".dcard")?.querySelector(".dch b")?.textContent; toast(`${g||"Diğer güne"} taşındı`); } }
 document.addEventListener("pointerup", surBitir); document.addEventListener("pointercancel", surBitir);
