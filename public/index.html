@@ -456,6 +456,37 @@ pre.kod{margin:0;max-height:260px;overflow:auto;background:var(--sunk);border:1p
 .grlist{display:flex;flex-direction:column;max-height:56vh;overflow:auto;border:1px solid var(--line);border-radius:14px}
 .grrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line)}.grrow:last-child{border-bottom:0}
 .grpre{white-space:pre-wrap;font:inherit;font-size:13px;background:var(--sunk);border-radius:12px;padding:10px;margin-top:6px}
+.tright{display:flex;align-items:center;gap:6px}
+.tplay{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ac);display:grid;place-items:center;cursor:pointer;flex:none}
+.tplay:hover{border-color:var(--ac);background:var(--acs)}
+.task.running{background:var(--acs);border-radius:14px}
+.trun{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:6px}.tlive{font-weight:800;color:var(--ac);font-size:16px;margin-right:4px}
+.tgorev{display:flex;align-items:center;gap:6px;justify-content:center;font-weight:700;color:var(--ac);text-align:center}
+.ddl{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.ddr{display:grid;grid-template-columns:96px minmax(0,1fr) 64px;gap:8px;align-items:center;font-size:13px}
+.ddn{font-weight:700;color:var(--dc,var(--fg))}.ddr b{text-align:right}
+.ddb{height:10px;border-radius:5px;background:var(--sunk);overflow:hidden}.ddb i{display:block;height:100%;border-radius:5px;background:var(--dc,var(--ac))}
+.dykw{border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}.dykw[open]{gap:8px}.dykw summary{cursor:pointer;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.dykw .klist{max-height:40vh}.dykr{display:grid;grid-template-columns:minmax(0,1fr) 30px 28px 30px;gap:4px;align-items:center;padding:6px 8px;border-radius:10px;font-size:14px}
+.dykr.on{background:var(--bads)}.dykr b{text-align:center}.dykr[hidden]{display:none}
+.sqgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sqk{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.sqk img,.sqph{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--sunk);display:grid;place-items:center;color:var(--faint)}
+.sqk.ok{opacity:.65}.sqk.ok img{filter:grayscale(.6)}
+.sqm{display:flex;flex-direction:column;gap:1px;padding:8px 10px}.sqm b{font-size:13px;color:var(--dc,var(--fg))}.sqm span{font-size:12.5px;font-weight:600}.sqm small{font-size:11px;color:var(--faint)}
+.squp{display:block;border:2px dashed var(--line);border-radius:16px;cursor:pointer;overflow:hidden}
+.squp>span{display:flex;flex-direction:column;align-items:center;gap:4px;padding:22px 12px;color:var(--muted);text-align:center}.squp img{width:100%;max-height:40vh;object-fit:contain;display:block}
+.sqbig{border-radius:14px;overflow:hidden;background:var(--sunk);min-height:120px}.sqbig img{width:100%;display:block;cursor:zoom-in;filter:blur(4px)}.sqbig.ok img{filter:none}
+.tcnt{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--bad);color:#fff;font-size:11px;font-weight:800;margin-left:4px}
+.tkl{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.tkr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;border:1px solid var(--line)}
+.tkr.akt{border-color:var(--ac);background:var(--acs)}.tkr.yz{background:var(--warns);border-color:transparent}
+.tkd{flex:none;width:44px;display:flex;flex-direction:column;align-items:center;line-height:1}.tkd b{font-size:19px}.tkd small{font-size:10px;font-weight:800;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.tkr b{font-size:14px}
+.tkgrid{display:grid;grid-template-columns:130px 130px minmax(0,.8fr) minmax(0,1.2fr) 34px;gap:6px;align-items:center;max-height:50vh;overflow:auto}
+.tkgrid .gh{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.tkgrid input{padding:7px 8px;font-size:13px}
+@media (max-width:640px){.tkgrid{grid-template-columns:1fr 1fr;}.tkgrid .gh{display:none}.tkgrid .mini{justify-self:end}}
 .glist{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .grow{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
 .grow.g-ilk{border-left:4px solid var(--ac)}
