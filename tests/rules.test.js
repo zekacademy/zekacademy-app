@@ -96,3 +96,18 @@ test("koçun cihaz kayıtları sadece koça açık", async () => {
 test("öğrenci kendi bildirim cihazını kaydedebilir", async () => {
   await assertSucceeds(updateDoc(doc(ali(), "students/ali"), { "bildirim.izin": "granted" }));
 });
+
+test("takıldığım sorular: öğrenci kendi sorusunu yönetir, başkasınınkini göremez; koç notunu sadece koç yazar", async () => {
+  await assertSucceeds(setDoc(doc(ali(), "sorular/q1"), { sid: "ali", ders: "Fizik", durum: "bekliyor", thumb: "x" }));
+  await assertSucceeds(setDoc(doc(ali(), "soruFoto/q1"), { sid: "ali", data: "data:image/jpeg;base64,xx" }));
+  await assertFails(setDoc(doc(ali(), "sorular/q2"), { sid: "ayse", ders: "Fizik" }));
+  await assertSucceeds(getDoc(doc(ali(), "sorular/q1")));
+  await assertSucceeds(getDoc(doc(ali(), "soruFoto/q1")));
+  await assertSucceeds(updateDoc(doc(ali(), "sorular/q1"), { durum: "cozuldu" }));
+  await assertFails(updateDoc(doc(ali(), "sorular/q1"), { kocNot: "kendi notum" }));
+  await assertSucceeds(updateDoc(doc(coach(), "sorular/q1"), { kocNot: "Görüşmede çözdük" }));
+  await assertSucceeds(setDoc(doc(coach(), "sorular/q9"), { sid: "ayse", ders: "Kimya" }));
+  await assertFails(getDoc(doc(ali(), "sorular/q9")));
+  await assertSucceeds(deleteDoc(doc(ali(), "sorular/q1")));
+  await assertSucceeds(deleteDoc(doc(ali(), "soruFoto/q1")));
+});

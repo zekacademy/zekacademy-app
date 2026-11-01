@@ -43,6 +43,19 @@ service cloud.firestore {
     match /gorusmeler/{id} {
       allow read, write: if isCoach();
     }
+    // Takıldığım sorular: öğrenci kendi sorularını ekler/okur/günceller/siler; koç hepsini görür. Fotoğraf ayrı belgede.
+    match /sorular/{id} {
+      allow read: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid);
+      allow create: if isCoach() || (signedIn() && request.resource.data.sid == request.auth.uid);
+      allow update: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid && request.resource.data.sid == resource.data.sid
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['kocNot']));
+      allow delete: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid);
+    }
+    match /soruFoto/{id} {
+      allow read, delete: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid);
+      allow create: if isCoach() || (signedIn() && request.resource.data.sid == request.auth.uid && request.resource.data.data.size() < 900000);
+      allow update: if isCoach();
+    }
     match /notifs/{id} {
       allow read, update, delete: if isCoach();
       allow create: if isCoach() || signedIn() && request.resource.data.sid == request.auth.uid
