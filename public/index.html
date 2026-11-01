@@ -284,6 +284,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .srow:first-child{border-top:0}
 .smet{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap;margin-top:3px}
 .smet b{color:var(--fg)}
+.ktw{display:flex;gap:6px;align-items:stretch}.ktw[hidden]{display:none}.ktw .kt{flex:1;min-width:0}
+.kbit{flex:none;width:40px;border-radius:12px;border:1px dashed var(--line);background:var(--surface);color:var(--faint);display:grid;place-items:center;cursor:pointer}
+.kbit:hover{border-color:var(--good);color:var(--good)}.kbit.on{background:var(--good);border:1px solid var(--good);color:#fff}
 .kgrp.ex-TYT{--exc:#2563EB}.kgrp.ex-AYT{--exc:#9333EA}.kgrp.ex-ORT{--exc:#0D9488}
 .kgrp.ex-TYT .gh,.kgrp.ex-AYT .gh,.kgrp.ex-ORT .gh{color:var(--exc)}
 .kgrp.ex-TYT .kt[aria-pressed="true"],.kgrp.ex-AYT .kt[aria-pressed="true"],.kgrp.ex-ORT .kt[aria-pressed="true"]{border-color:var(--exc);background:color-mix(in srgb, var(--exc) 12%, var(--surface))}
@@ -676,6 +679,11 @@ input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px soli
 .dcard .tl textarea.tin{flex:1;width:auto;min-width:0;border:0;border-radius:0;background:transparent;padding:0;margin:0;font:inherit;font-size:14px;line-height:1.4;color:var(--fg);resize:none;overflow:hidden;outline:none;box-shadow:none;min-height:20px}
 .dcard .tl textarea.tin:focus{outline:none;box-shadow:none;border:0}
 .tr:focus-within{border-color:var(--ac)}.tr.yeni:focus-within{border-style:solid}
+.tgrip{flex:none;align-self:center;width:14px;margin-left:-4px;display:grid;place-items:center;color:var(--faint);cursor:grab;touch-action:none;opacity:.55}
+.tr:hover .tgrip{opacity:1}.tgrip:active{cursor:grabbing}
+.tr.surukle{position:fixed;z-index:50;pointer-events:none;box-shadow:0 12px 30px rgba(0,0,0,.22);transform:rotate(1.2deg);opacity:.95}
+.tph{border:2px dashed var(--ac);border-radius:10px;background:var(--acs)}
+body.suruk{user-select:none;-webkit-user-select:none;cursor:grabbing}
 .tmain{flex:1;min-width:0;display:flex;flex-direction:column}
 .tdur{font-size:11px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}.tdur:empty{display:none}
 .tacts{flex:none;display:flex;align-items:center;gap:0}

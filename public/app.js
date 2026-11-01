@@ -1347,13 +1347,32 @@ function kysNot(kaydet){ const e = $("#kysel"); if(e) e.textContent = KYS.length
   const g = [...document.querySelectorAll(`#root .gk-${k} .kadd`)].find(x=>x.dataset.ders===d)?.closest(".gk"); if(g) g.outerHTML = kaynakCipleri(st(), d, k); }
 function tlSure(t){ if(/\d\s*(saat|sa|dk|dakika)\b/i.test(t)) return ""; const h = parseHours(t); return h ? "≈ "+fmtMin(h*60) : ""; } /* satırda süre yazıyorsa tekrar gösterme */
 const TL_BTN = `<span class="tacts"><button type="button" class="tx tc" data-act="tkopya" aria-label="Görevi kopyala" title="Kopyala">${'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'}</button><button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button></span>`;
-function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}"><span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
+function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
+const TL_GRIP = `<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`;
+/* Sürükle-bırak: görevi aynı gün içinde ya da başka güne taşı (fare ve dokunmatik) */
+let SUR = null;
+document.addEventListener("pointerdown", e=>{ const g = e.target.closest && e.target.closest("[data-grip]"); if(!g || e.button>0) return; const row = g.closest(".tr"); if(!row) return;
+  e.preventDefault(); SUR = {row, src:row.closest(".tl"), x0:e.clientX, y0:e.clientY, basla:false, id:e.pointerId}; try{ g.setPointerCapture(e.pointerId); }catch(_){} });
+document.addEventListener("pointermove", e=>{ if(!SUR || e.pointerId!==SUR.id) return; const {row} = SUR;
+  if(!SUR.basla){ if(Math.hypot(e.clientX-SUR.x0, e.clientY-SUR.y0) < 5) return; const r = row.getBoundingClientRect(); SUR.basla = true; SUR.dx = e.clientX - r.left; SUR.dy = e.clientY - r.top;
+    const ph = document.createElement("div"); ph.className = "tph"; ph.style.height = r.height+"px"; row.after(ph); SUR.ph = ph;
+    row.classList.add("surukle"); Object.assign(row.style, {width:r.width+"px", left:r.left+"px", top:r.top+"px"}); document.body.classList.add("suruk"); }
+  row.style.left = (e.clientX - SUR.dx)+"px"; row.style.top = (e.clientY - SUR.dy)+"px";
+  if(e.clientY < 70) window.scrollBy(0, -12); else if(e.clientY > innerHeight - 90) window.scrollBy(0, 12);
+  row.style.visibility = "hidden"; const alt = document.elementFromPoint(e.clientX, e.clientY); row.style.visibility = "";
+  const box = alt && alt.closest(".tl"); if(!box) return;
+  const satirlar = [...box.querySelectorAll(".tr:not(.surukle):not(.yeni)")]; const once = satirlar.find(x=>{ const r = x.getBoundingClientRect(); return e.clientY < r.top + r.height/2; });
+  if(once) once.before(SUR.ph); else { const y = box.querySelector(".tr.yeni"); if(y) y.before(SUR.ph); else box.appendChild(SUR.ph); } });
+function surBitir(e){ if(!SUR || (e && e.pointerId!==SUR.id)) return; const {row, src, ph, basla} = SUR; SUR = null; document.body.classList.remove("suruk"); if(!basla) return;
+  row.classList.remove("surukle"); row.removeAttribute("style"); const hedef = ph.closest(".tl"); ph.replaceWith(row); tlBoyut(row);
+  tlSync(src); if(hedef && hedef!==src){ tlSync(hedef); const g = document.querySelector(`.dcard #tl-${hedef.dataset.i}`)?.closest(".dcard")?.querySelector(".dch b")?.textContent; toast(`${g||"Diğer güne"} taşındı`); } }
+document.addEventListener("pointerup", surBitir); document.addEventListener("pointercancel", surBitir);
 function panoGuncelle(){ const n = (S.pano||[]).length; document.querySelectorAll(".pbar").forEach(x=>{ x.hidden = !n; const b = x.querySelector("[data-act=tyapistir]"); if(b) b.innerHTML = `📋 Yapıştır <b>${n>1?n+" görev":esc(S.pano[0]||"")}</b>`; }); }
 function tlBoyut(kok){ (kok||document).querySelectorAll(".tin").forEach(x=>{ x.style.height = "auto"; x.style.height = x.scrollHeight+"px"; }); }
 function tlSync(box){ const ta = document.getElementById("pl-"+box.dataset.i); if(!ta) return;
   const v = [...box.querySelectorAll(".tin")].map(x=>x.value.replace(/\s+/g," ").trim()).filter(Boolean).join("\n");
   if(ta.value !== v){ ta.value = v; ta.dispatchEvent(new Event("input",{bubbles:true})); }
-  const son = box.lastElementChild; if(!son || !son.classList.contains("yeni") || son.querySelector(".tin").value.trim()){ if(son && son.classList.contains("yeni")){ son.classList.remove("yeni"); son.insertAdjacentHTML("beforeend", TL_BTN); son.querySelector(".tin").placeholder = ""; } box.insertAdjacentHTML("beforeend", tlSatir("", false, true)); } }
+  const son = box.lastElementChild; if(!son || !son.classList.contains("yeni") || son.querySelector(".tin").value.trim()){ if(son && son.classList.contains("yeni")){ son.classList.remove("yeni"); son.insertAdjacentHTML("beforeend", TL_BTN); son.insertAdjacentHTML("afterbegin", TL_GRIP); son.querySelector(".tin").placeholder = ""; } box.insertAdjacentHTML("beforeend", tlSatir("", false, true)); } }
 function tlSatirGuncelle(tin){ const r = tin.closest(".tr"); if(!r) return; tin.style.height = "auto"; tin.style.height = tin.scrollHeight+"px"; if(!r.classList.contains("yeni")) r.dataset.c = dersKodu(tin.value); r.querySelector(".tdur").textContent = tlSure(tin.value); }
 /* Blok / hızlı ekle: güne satır ekle */
 function gunEkle(d, t){ const i = pIdx(st(), d), box = document.getElementById("tl-"+i);
@@ -1373,7 +1392,7 @@ document.addEventListener("paste", e=>{ const t = e.target; if(!t.classList || !
   e.preventDefault(); const r = t.closest(".tr"), box = t.closest(".tl"), L = txt.split(/\r?\n/).map(x=>x.trim()).filter(Boolean); if(!L.length) return;
   const pos = t.selectionStart, bas = t.value.slice(0,pos), son = t.value.slice(t.selectionEnd); t.value = (bas + L[0]).trim(); tlSatirGuncelle(t);
   let cur = r; L.slice(1).forEach((x,k)=>{ cur.insertAdjacentHTML("afterend", tlSatir(k===L.length-2 ? (x+" "+son).trim() : x, false)); cur = cur.nextElementSibling; });
-  if(r.classList.contains("yeni") && L.length>1){ r.classList.remove("yeni"); r.insertAdjacentHTML("beforeend", TL_BTN); }
+  if(r.classList.contains("yeni") && L.length>1){ r.classList.remove("yeni"); r.insertAdjacentHTML("beforeend", TL_BTN); r.insertAdjacentHTML("afterbegin", TL_GRIP); }
   tlBoyut(box); tlSync(box); });
 /* ---------- Blok ekle: ders → tür → (konu) → süre seçerek görev satırı oluşturma ---------- */
 const BLK_TUR = [["konusoru","Konu Soru","Konu Soru Çalışması"],["tekrar","Tekrar","Tekrar"],["brans","Branş","Branş Denemesi"],["deneme","Genel Deneme","Genel Deneme"],["sb","Soru bankası","Soru Bankası"],["rutin","Günlük rutin",""]];
@@ -1949,7 +1968,7 @@ function openSheet(kind, el){
     const free = KSEL.filter(x=>!allT.has(x)); KSEL = KSEL.filter(x=>allT.has(x));
     const one = konuOneri(s,d,subs);
     const tbtn = (sub,n) => { const full = topicScore((s.topics||{})[tkey(sub.k,n)])>=1;
-      return `<button type="button" class="kt ${full?"bitti":""}" data-act="kt" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${KSEL.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span>${full?`<small>bitti</small>`:""}</button>`; };
+      return `<div class="ktw"><button type="button" class="kt ${full?"bitti":""}" data-act="kt" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${KSEL.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span>${full?`<small>bitti</small>`:""}</button><button type="button" class="kbit ${full?"on":""}" data-act="kbit" data-k="${esc(tkey(sub.k,n))}" aria-pressed="${full}" title="${full?"Bitti işaretini kaldır":"Daha önce bitirdi olarak işaretle"}" aria-label="${esc(n)} bitti">${icon("check","xs")}</button></div>`; };
     return sheet(`<h3>${esc(d)} · bitirilecek konu</h3>
       <input type="search" id="kq" placeholder="Konu ara (ör. basınç, türev)" autocomplete="off" aria-label="Konu ara">
       ${one.length?`<div class="koneri"><div class="gh">Öneri</div>${one.map(o=>`<button type="button" class="kt sug" data-act="kt" data-v="${esc(o.n)}" data-q="${esc(trLow(o.n))}" aria-pressed="${KSEL.includes(o.n)}">${icon("check","xs")}<span>${esc(o.n)}<small class="kwhy">${esc(o.why)}</small></span></button>`).join("")}</div>`:""}
@@ -2258,6 +2277,9 @@ document.addEventListener("click", e=>{
       setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
     case "geri": geriAl(false); break;
     case "ileri": geriAl(true); break;
+    case "kbit": { const k = b.dataset.k; let full = false; mutate(x=>{ x.topics = x.topics||{}; const t = x.topics[k] = x.topics[k]||{}; if(topicScore(t)>=1){ delete t.r; delete t.s1; delete t.s2; } else { t.r = Math.max(1, t.r||0); t.s1 = true; t.s2 = true; full = true; } if(!Object.keys(t).length) delete x.topics[k]; });
+      b.classList.toggle("on", full); b.setAttribute("aria-pressed", full); const kt = b.previousElementSibling; if(kt){ kt.classList.toggle("bitti", full); const sm = kt.querySelector("small:not(.kwhy)"); if(full && !sm) kt.insertAdjacentHTML("beforeend", "<small>bitti</small>"); if(!full && sm) sm.remove(); }
+      toast(full ? "Bitti olarak işaretlendi" : "Bitti işareti kaldırıldı"); break; }
     case "tdel": { const r = b.closest(".tr"), box = b.closest(".tl"); if(r && box){ r.remove(); tlSync(box); } break; }
     case "bkr": S.blk.rutin = v; blkGuncelle(); break;
     case "bka": S.blk.adet = +v; blkGuncelle(); break;
@@ -2343,7 +2365,7 @@ document.addEventListener("input", e=>{
     document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || q.split(/\s+/).every(w=>b.dataset.q.includes(w)); b.hidden=!ok; if(ok) n++; if(b.dataset.q===q) tam=true; }); g.hidden = !n; if(n) any=true; });
     const hn=$("#hnone"); if(hn) hn.hidden = any; const hf=$("#hfree"); if(hf){ hf.hidden = !q || tam; hf.dataset.v = t.value.trim(); hf.textContent = `“${t.value.trim()}” satırını ekle`; } return; }
   if(t.id==="kq"){ const q = trLow(t.value).trim(); let any=false;
-    document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || b.dataset.q.includes(q); b.hidden=!ok; if(ok) n++; }); g.hidden = !n; if(n) any=true; });
+    document.querySelectorAll("#layer .klist .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".kt").forEach(b=>{ const ok = !q || b.dataset.q.includes(q); b.hidden=!ok; const w = b.closest(".ktw"); if(w) w.hidden=!ok; if(ok) n++; }); g.hidden = !n; if(n) any=true; });
     const ko=$("#layer .koneri"); if(ko) ko.hidden = !!q; const kn=$("#knone"); if(kn) kn.hidden = any; return; }
   if(t.dataset.dy) updateNets();
   else if(t.dataset.act==="q"){ S.q=t.value; const pos=t.selectionStart; render(); const n=$("#q"); if(n){ n.focus(); try{ n.setSelectionRange(pos,pos); }catch(_){} } }
