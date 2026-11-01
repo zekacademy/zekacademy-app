@@ -690,6 +690,10 @@ input[type=tel]{width:100%;min-width:0;background:var(--surface);border:1px soli
 .tph{border:2px dashed var(--ac);border-radius:10px;background:var(--acs)}
 body.suruk{user-select:none;-webkit-user-select:none;cursor:grabbing}
 .tmain{flex:1;min-width:0;display:flex;flex-direction:column}
+.tmain{position:relative}
+.tghost{position:absolute;left:0;right:0;top:0;pointer-events:none;font-size:14px;line-height:1.4;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word}
+.tghost:empty{display:none}.tgt{color:transparent}.tgr{color:var(--faint)}
+.tgk{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;color:var(--faint);border:1px solid var(--line);border-radius:4px;padding:0 4px;vertical-align:1px}
 .tdur{font-size:11px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}.tdur:empty{display:none}
 .tacts{flex:none;display:flex;align-items:center;gap:0}
 @media (hover:hover){.tacts{position:absolute;right:4px;top:4px;opacity:0;pointer-events:none;background:var(--surface);border-radius:8px;box-shadow:0 0 0 1px var(--line);padding:1px 2px;transition:opacity .12s}

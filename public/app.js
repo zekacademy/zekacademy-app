@@ -1357,7 +1357,7 @@ function kysNot(kaydet){ const e = $("#kysel"); if(e) e.textContent = KYS.length
   const g = [...document.querySelectorAll(`#root .gk-${k} .kadd`)].find(x=>x.dataset.ders===d && (x.dataset.ex||"")===(ex||""))?.closest(".gk"); if(g) g.outerHTML = kaynakCipleri(st(), d, k, ex||""); }
 function tlSure(t){ if(/\d\s*(saat|sa|dk|dakika)\b/i.test(t)) return ""; const h = parseHours(t); return h ? "≈ "+fmtMin(h*60) : ""; } /* satırda süre yazıyorsa tekrar gösterme */
 const TL_BTN = `<span class="tacts"><button type="button" class="tx tc" data-act="tkopya" aria-label="Görevi kopyala" title="Kopyala">${'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'}</button><button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button></span>`;
-function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
+function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><div class="tghost" aria-hidden="true"></div><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
 const TL_GRIP = `<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`;
 /* Sürükle-bırak: görevi aynı gün içinde ya da başka güne taşı (fare ve dokunmatik) */
 let SUR = null, UZUN = null;
@@ -1397,8 +1397,23 @@ function tlSatirGuncelle(tin){ const r = tin.closest(".tr"); if(!r) return; tin.
 function gunEkle(d, t){ const i = pIdx(st(), d), box = document.getElementById("tl-"+i);
   if(box){ const yeni = box.querySelector(".tr.yeni"); yeni.insertAdjacentHTML("beforebegin", tlSatir(t, false)); tlBoyut(box); tlSync(box); return; }
   const ta = document.getElementById("pl-"+i); if(ta){ ta.value = (ta.value.trim()? ta.value.replace(/\s+$/,"")+"\n" : "") + t; ta.dispatchEvent(new Event("input",{bubbles:true})); } }
+/* Yazarken otomatik tamamlama: "AYT Fiz" → "AYT Fizik Çalışması (1,5 saat)" (Enter veya Tab ile kabul) */
+let ONERI = null, ONERI_ZAMAN = 0;
+function oneriListesi(){ if(ONERI && Date.now()-ONERI_ZAMAN < 20000) return ONERI; const m = new Map(), ekle = (t, w) => { t = String(t||"").replace(/\s+/g," ").trim(); if(t.length > 2) m.set(t, (m.get(t)||0) + w); };
+  const s = st(); if(s) Object.values(s.weeks||{}).forEach(x=>Object.values(x).forEach(l=>(l||[]).forEach(k=>ekle(taskText(k), 5))));
+  cfg().quick.forEach(t=>ekle(t, 2)); S.students.forEach((x,id)=>{ if(id===sid()) return; Object.values(x.weeks||{}).forEach(w=>Object.values(w).forEach(l=>(l||[]).forEach(k=>ekle(taskText(k), 1)))); });
+  ONERI = [...m.entries()].sort((a,b)=>b[1]-a[1] || a[0].length-b[0].length).map(([t])=>t); ONERI_ZAMAN = Date.now(); return ONERI; }
+function oneriGoster(t){ const g = t.parentElement && t.parentElement.querySelector(".tghost"); if(!g) return; const v = t.value;
+  const temizle = () => { g.innerHTML = ""; delete t.dataset.oneri; };
+  if(document.activeElement!==t || v.trim().length < 2 || t.selectionStart !== v.length || /\n/.test(v)) return temizle();
+  const lv = trLow(v), bul = oneriListesi().find(x=>x.length > v.length && trLow(x).startsWith(lv)); if(!bul) return temizle();
+  t.dataset.oneri = bul; g.innerHTML = `<span class="tgt">${esc(v)}</span><span class="tgr">${esc(bul.slice(v.length))}</span><span class="tgk">↵</span>`; }
+function oneriKabul(t){ if(!t.dataset.oneri) return false; t.value = t.dataset.oneri; delete t.dataset.oneri; const g = t.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; tlSatirGuncelle(t); t.setSelectionRange(t.value.length, t.value.length); return true; }
+document.addEventListener("focusout", e=>{ if(e.target.classList && e.target.classList.contains("tin")){ const g = e.target.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; delete e.target.dataset.oneri; } });
 document.addEventListener("keydown", e=>{ const t = e.target; if(!t.classList || !t.classList.contains("tin")) return; const r = t.closest(".tr"), box = t.closest(".tl");
-  if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); if(!t.value.trim() && r.classList.contains("yeni")) return;
+  if((e.key==="Tab" || e.key==="ArrowRight") && t.dataset.oneri && t.selectionStart===t.value.length){ e.preventDefault(); oneriKabul(t); const bx = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(bx), 200); return; }
+  if(e.key==="Escape" && t.dataset.oneri){ e.preventDefault(); const g = t.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; delete t.dataset.oneri; return; }
+  if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); oneriKabul(t); if(!t.value.trim() && r.classList.contains("yeni")) return;
     if(r.classList.contains("yeni")){ tlSync(box); box.lastElementChild.querySelector(".tin").focus(); return; }
     const pos = t.selectionStart, sag = t.value.slice(pos); t.value = t.value.slice(0,pos).trim(); tlSatirGuncelle(t);
     r.insertAdjacentHTML("afterend", tlSatir(sag.trim(), false)); const n = r.nextElementSibling.querySelector(".tin"); tlSatirGuncelle(n); n.focus(); n.setSelectionRange(0,0); tlSync(box); return; }
@@ -2381,7 +2396,7 @@ document.addEventListener("input", e=>{
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
-  if(t.classList && t.classList.contains("tin")){ tlSatirGuncelle(t); const box = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(box), 350); return; }
+  if(t.classList && t.classList.contains("tin")){ tlSatirGuncelle(t); oneriGoster(t); const box = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(box), 350); return; }
   if(t.id==="bk-elle"){ const h = sureOku(t.value); if(S.blk){ S.blk.sure = h; S.blk.elle = !!h; blkGuncelle(); } return; }
   if(t.dataset.sqnot){ const id = t.dataset.sqnot, q = S.sorular.get(id); if(q){ q.kocNot = t.value; clearTimeout(t._z); t._z = setTimeout(()=>updateDoc(doc(fdb,"sorular",id), new FieldPath("kocNot"), t.value).catch(()=>toast("Not kaydedilemedi")), 600); } return; }
   if(t.id==="dyq"){ const q = trLow(t.value).trim(); document.querySelectorAll("#layer .dyk .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".dykr").forEach(r=>{ const ok = !q || q.split(/\s+/).every(w=>r.dataset.q.includes(w)); r.hidden=!ok; if(ok) n++; }); g.hidden = !n; }); return; }
