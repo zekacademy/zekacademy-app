@@ -1872,7 +1872,13 @@ function dersSubs(s, d){ if(isMaarif(s)) return maarifDersSubs(s, d); const nd =
   if(!m.length) return all;
   const al = s.alan, rel = m.filter(x=> x.ex==="TYT" || !x.a || !ALANLAR.includes(al) || x.a.includes(al));
   return rel.length ? rel : m; }
-const splitKonu = v => String(v||"").split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean);
+/* Konuları ayır; adında virgül geçen konuları ("İş, Güç ve Enerji" gibi) bölme */
+let KONU_ADLARI = null, KONU_KAYNAK = null;
+function konuAdlari(){ const kaynak = S.settings.cur || CUR; if(KONU_ADLARI && KONU_KAYNAK===kaynak) return KONU_ADLARI; KONU_KAYNAK = kaynak;
+  KONU_ADLARI = new Set([...(kaynak.TYT||[]), ...(kaynak.AYT||[]), ...MAARIF_SUBS].flatMap(x=>x.t||[]).filter(n=>n.includes(","))); return KONU_ADLARI; }
+const splitKonu = v => { const p = String(v||"").split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean), A_ = konuAdlari(), out = [];
+  for(let i=0;i<p.length;i++){ let al = p[i], j = i; for(let k=Math.min(p.length-1, i+3); k>i; k--){ const aday = p.slice(i,k+1).join(", "); if(A_.has(aday)){ al = aday; j = k; break; } } out.push(al); i = j; }
+  return out; };
 function konuOneri(s, d, subs){
   const ordered = subs.flatMap(sub=>sub.t.map(n=>({n, k:tkey(sub.k,n)})));
   const weeks = Object.keys(s.plan||{}).filter(w=> w < S.week && (s.plan[w].hedef||{})[d] && s.plan[w].hedef[d].konu).sort();
