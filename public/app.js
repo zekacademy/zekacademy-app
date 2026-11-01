@@ -304,7 +304,10 @@ const soruList = sid_ => [...S.sorular.entries()].filter(([,q])=>q.sid===sid_).s
 async function resimKucult(file, max, limit){ const img = await new Promise((res,rej)=>{ const i = new Image(); i.onload=()=>res(i); i.onerror=rej; i.src = URL.createObjectURL(file); });
   const k = Math.min(1, max/Math.max(img.width, img.height)), c = document.createElement("canvas"); c.width = Math.round(img.width*k); c.height = Math.round(img.height*k);
   const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0,0,c.width,c.height); g.drawImage(img, 0, 0, c.width, c.height);
-  let q = .85, data = c.toDataURL("image/jpeg", q); while(data.length > limit && q > .35){ q -= .1; data = c.toDataURL("image/jpeg", q); } return data; }
+  let q = .85, data = c.toDataURL("image/jpeg", q); while(data.length > limit && q > .45){ q -= .1; data = c.toDataURL("image/jpeg", q); }
+  /* hâlâ büyükse (çok detaylı fotoğraf) boyutu da küçült; öğrenciye uyarı göstermeden sığdır */
+  let w = c.width, h = c.height; while(data.length > limit && w > 480){ w = Math.round(w*.85); h = Math.round(h*.85); const c2 = document.createElement("canvas"); c2.width = w; c2.height = h; const g2 = c2.getContext("2d"); g2.fillStyle = "#fff"; g2.fillRect(0,0,w,h); g2.drawImage(c, 0, 0, w, h); data = c2.toDataURL("image/jpeg", .6); }
+  return data; }
 function startStudent(id){
   S.me=id; S.view="home"; S.day=today(); S.week=S.students.get(id) ? curStart(S.students.get(id)) : monday(new Date());
   const s = S.students.get(id); if(s && s.lastSeen!==today()){ s.lastSeen = today(); persistDoc("students", id); }
