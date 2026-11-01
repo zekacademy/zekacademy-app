@@ -111,3 +111,9 @@ test("takıldığım sorular: öğrenci kendi sorusunu yönetir, başkasınınki
   await assertSucceeds(deleteDoc(doc(ali(), "sorular/q1")));
   await assertSucceeds(deleteDoc(doc(ali(), "soruFoto/q1")));
 });
+
+test("koç bildirim durumu sadece koç tarafından okunur, kimse yazamaz", async () => {
+  await assertSucceeds(getDoc(doc(coach(), "koc/bildirim")));
+  await assertFails(getDoc(doc(ali(), "koc/bildirim")));
+  await assertFails(setDoc(doc(coach(), "koc/bildirim"), { son: {} }));
+});

@@ -37,12 +37,19 @@ async function pushTo(tokens, title, body, link = "/"){
     data: { title, body, link },
     webpush: { headers: { Urgency: "high", TTL: "21600" }, fcmOptions: { link } },
   });
-  const bad = [];
+  const bad = [], errors = [];
   res.responses.forEach((r, i) => {
-    const code = r.error && r.error.code;
+    const code = r.error && r.error.code; if (code) errors.push(code);
     if (code === "messaging/registration-token-not-registered" || code === "messaging/invalid-registration-token" || code === "messaging/invalid-argument") bad.push(list[i]);
   });
-  return { sent: res.successCount, bad };
+  return { sent: res.successCount, bad, errors };
+}
+/* Koç bildirimlerinin son durumu (Ayarlar → Bildirim testi'nde görünür) */
+async function kocBildirimDurum(tur, tokens, r){
+  const kayit = { at: new Date().toISOString(), tur, cihaz: [...new Set(tokens)].filter(Boolean).length, gonderildi: r.sent || 0, hatalar: r.errors || [], silinen: (r.bad || []).length };
+  logger.info("koç bildirimi", kayit);
+  const ref = db.doc("koc/bildirim"); const eski = ((await ref.get().catch(() => null))?.data() || {}).gecmis || [];
+  await ref.set({ son: kayit, gecmis: [...eski, kayit].slice(-20) }).catch(e => logger.warn("bildirim durumu", e.message));
 }
 const studentTokens = s => Object.keys((s.bildirim && s.bildirim.tokens) || {});
 async function dropBadStudentTokens(id, bad){
@@ -141,6 +148,19 @@ export const yeniKayitBildirimi = onDocumentCreated("notifs/{id}", async (event)
     ? await pushTo(tokens, "🟢 Yeni başvuru · Google Form", [n.name || "Yeni başvuru", n.hizmet, n.alan].filter(Boolean).join(" · "), "/?ac=bildirim")
     : await pushTo(tokens, "Yeni öğrenci kaydı", `${n.name || "Bir öğrenci"} kaydoldu${n.alan ? ` · ${n.alan}` : ""}${n.sinif ? ` · ${n.sinif}` : ""}`, "/?ac=bildirim");
   for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
+  await kocBildirimDurum(n.type === "basvuru" ? "Yeni başvuru" : "Yeni kayıt", tokens, r);
+});
+
+/* Koç: bildirim testi — kayıtlı cihazlara deneme bildirimi gönderir, sonucu döndürür */
+export const bildirimTest = onCall(async (req) => {
+  requireCoach(req);
+  const docs = (await db.collection("coachDevices").get()).docs;
+  const tokens = docs.map(d => d.data().token).filter(Boolean);
+  const r = await pushTo(tokens, "🔔 Test bildirimi", "Bildirimler bu cihaza ulaşıyor 👍", "/?ac=bildirim");
+  for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
+  await kocBildirimDurum("Test", tokens, r);
+  const son = ((await db.doc("koc/bildirim").get()).data() || {}).gecmis || [];
+  return { cihazlar: docs.map(d => ({ at: d.data().at || "", ua: d.data().ua || "", silindi: r.bad.includes(d.data().token) })), gonderildi: r.sent, hatalar: r.errors, gecmis: son.slice(-8).reverse() };
 });
 
 /* Sadece koçun çağırabileceği işlemler */
