@@ -1613,6 +1613,10 @@ function cSettings(){
       <label class="f">Dene: bir satır yaz<input type="text" id="sr-test" data-act="stest" placeholder="ör. AYT Fen Branş x2"></label><div class="small" id="sr-out" style="font-weight:700"></div>`, "sureler")}
     ${sec("Hızlı ekle listesi",`${c.quick.length} satır`,`<div class="f">Program yazarken “+ Hızlı ekle” menüsünde çıkan satırlar <span class="faint" style="font-weight:500">· her satır bir seçenek</span>${ta("st-quick","quick",c.quick,8)}</div>`, "quick")}
     ${sec("Haftalık hedef dersleri",`${c.hedefDers.length} ders`,`<div class="f">“Bitirilecek konu / Takip edilen kitaplar” tablosundaki dersler <span class="faint" style="font-weight:500">· her satır bir ders</span>${ta("st-hd","hedefDers",c.hedefDers,6)}</div>`, "hedefDers")}
+    ${sec("Bildirimler (koç)", `Bu cihaz: ${typeof Notification==="undefined" ? "desteklemiyor" : Notification.permission==="granted" ? "açık" : Notification.permission==="denied" ? "kapalı" : "izin verilmedi"}`, `
+      <p class="muted small" style="margin:0">Yeni kayıt ve başvuru bildirimleri, bildirim izni verdiğin cihazlara gelir. Gelmiyorsa önce bu cihazda bildirimleri yenile, sonra test gönder.</p>
+      <div class="pills"><button class="btn sm" data-act="pushyenile">${icon("bell","xs")} Bu cihazda bildirimleri aç / yenile</button><button class="btn sm pri" data-act="bildirimtest">Test bildirimi gönder</button></div>
+      <div id="bt-out" class="small"></div>`, "")}
     ${sec("Deneme takvimi", `${takvim().filter(x=>(x.bit||x.bas)>=today()).length} yaklaşan deneme`, `
       <p class="muted small" style="margin:0">Öğrencilerin ana sayfasında önümüzdeki 45 günün denemeleri görünür; yazılı tarihleri her öğrencinin yazılı haftasından otomatik eklenir. Yeni açıklanan denemeyi buraya eklemen yeterli.</p>
       <div class="tkgrid"><span class="gh">Başlangıç</span><span class="gh">Bitiş</span><span class="gh">Yayın</span><span class="gh">Deneme</span><span></span>
@@ -1726,6 +1730,17 @@ function onSettingClick(a, b){
   const v = b.dataset.v;
   if(a==="tmzhepsi"){ document.querySelectorAll(".tmz").forEach(x=>x.checked = true); return true; }
   if(a==="tmzsil"){ topluSil(b); return true; }
+  if(a==="pushyenile"){ (async()=>{ try{ localStorage.removeItem("zk-push"); }catch(_){} await enablePush(); keepSettingsOpen(); })(); return true; }
+  if(a==="bildirimtest"){ const o = $("#bt-out"); if(o) o.innerHTML = `<p class="muted">Gönderiliyor…</p>`; b.disabled = true;
+    callFn("bildirimTest", {}).then(r=>{ b.disabled = false; const o2 = $("#bt-out"); if(!o2) return;
+      const cihaz = ua => /iphone|ipad/i.test(ua) ? "iPhone" : /android/i.test(ua) ? "Android" : /mac/i.test(ua) ? "Mac" : /windows/i.test(ua) ? "Windows" : "Cihaz";
+      const tr = h => ({"messaging/registration-token-not-registered":"cihaz kaydı geçersiz (silindi)","messaging/invalid-registration-token":"geçersiz cihaz kaydı","messaging/third-party-auth-error":"Apple/Google reddetti","messaging/internal-error":"geçici hata"}[h]||h);
+      o2.innerHTML = `<div class="card" style="box-shadow:none;border:1px solid var(--line);padding:10px 12px;margin-top:6px">
+        <b>${r.cihazlar.length ? `${r.gonderildi}/${r.cihazlar.length} cihaza gönderildi` : "Kayıtlı cihaz yok"}</b>${r.hatalar.length?` · <span style="color:var(--bad)">${esc([...new Set(r.hatalar.map(tr))].join(", "))}</span>`:""}
+        <div class="muted" style="margin-top:4px">${r.cihazlar.map(c=>`${cihaz(c.ua)} · son yenileme ${c.at?shortDate(c.at.slice(0,10)):"-"}${c.silindi?" · <b style=\"color:var(--bad)\">silindi</b>":""}`).join("<br>") || "Bu cihazda “Bildirimleri aç / yenile”ye bas."}</div>
+        ${r.gecmis.length?`<div style="margin-top:8px"><b>Son bildirim denemeleri</b><div class="muted">${r.gecmis.map(g=>`${new Date(g.at).toLocaleString("tr-TR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})} · ${esc(g.tur)} · ${g.gonderildi}/${g.cihaz} cihaz${g.hatalar&&g.hatalar.length?` · ${esc([...new Set(g.hatalar.map(tr))].join(", "))}`:""}`).join("<br>")}</div></div>`:""}</div>`;
+      toast(r.gonderildi ? "Test gönderildi; telefonuna gelmeli" : "Gönderilecek cihaz yok"); })
+    .catch(e=>{ b.disabled = false; const o2 = $("#bt-out"); if(o2) o2.innerHTML = `<p class="err">Test gönderilemedi: ${esc(e.message||e)}</p>`; }); return true; }
   if(a==="tkadd"){ S.settings.takvim = [{bas:today(), bit:"", yayin:"", ad:""}, ...clone(takvim())]; saveSettings(); keepSettingsOpen(); return true; }
   if(a==="tkdel"){ const L = clone(takvim()); L.splice(+b.dataset.i,1); S.settings.takvim = L; saveSettings(); keepSettingsOpen(); return true; }
   if(a==="pkadd"){ if(!S.settings.paketler) S.settings.paketler = clone(cfg().paketler); S.settings.paketler.push({k:"p"+uid().slice(0,6), n:"Yeni paket", tur:"seans", fiyat:null}); saveSettings(); keepSettingsOpen(); setTimeout(()=>{ const x=document.getElementById("pk-n-"+(S.settings.paketler.length-1)); if(x){ x.focus(); x.select(); } },0); return true; }

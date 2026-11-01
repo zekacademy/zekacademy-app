@@ -27,6 +27,11 @@ service cloud.firestore {
       allow read, write: if isCoach();
     }
 
+    match /koc/{id} {
+      allow read: if isCoach();
+      allow write: if false;
+    }
+
     match /system/{id} {
       allow read, write: if false;
     }
