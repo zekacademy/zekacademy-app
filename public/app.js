@@ -486,24 +486,39 @@ const TUR = [
   {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin sorunun fotoğrafını çek, dersini seç. Görüşmede koçunla birlikte bakarsınız; çözdüğünü “çözüldü” yap."},
   {nav:"daha", ic:"bell", b:"Bildirimler ve koçundan notlar", t:"Sabah motivasyon mesajı, akşam eksik hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse “İzin ver”e bas. Koçunun notları da burada."},
   {nav:null, ic:"check", b:"Hazırsın! 🎯", t:"Her gün görevlerini işaretle, süreni gir, haftada bir denemeni ekle. Bu tanıtımı Daha Fazla → “Uygulamayı tanı”dan istediğin zaman tekrar açabilirsin."} ];
+/* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
+const YENILIK_SURUM = "2026-11-01";
+const YENILIK = [
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, senin için birkaç yeni özellik ekledik. 30 saniyede göstereyim."},
+  {nav:"home", ic:"timer", b:"Görev sayacı", t:"Derse başlarken görevin yanındaki ▶’ye bas, sayaç başlasın. Ara verirken “Durdur”a bas; süren kendiliğinden kaydedilir. Görevi bitirince yuvarlağa dokun. Hangi derse ne kadar çalıştığını Kronometre’de görürsün.", ornek:"sayac"},
+  {nav:"home", ic:"target", b:"TYT mi AYT mi, hemen gör", t:"Görevin altındaki konu ve kitap artık görevin sınavına göre: AYT Matematik görevinde sadece AYT konuları ve kitapları yazar.", ornek:"hedef2"},
+  {nav:"analiz", ic:"chart", b:"Denemede yanlış konular", t:"Deneme eklerken altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir, ayrıca uğraşmazsın.", ornek:"yanlis"},
+  {nav:"home", ic:"cal", b:"Deneme takvimi", t:"Yaklaşan Türkiye geneli denemeler ve yazılıların ana sayfanda. Tüm takvim Analiz’deki takvim simgesinde."},
+  {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. “Kamerayı aç” ile çözemediğin soruyu çek, dersini seç. Görüşmede koçunla birlikte bakarsınız."},
+  {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin! Tanıtımları Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin."} ];
+const turListe = () => S.turListe==="yeni" ? YENILIK : TUR;
 function turOrnek(k){
+  if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
+  if(k==="hedef2") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Matematik Çalışması (2 saat)</div><div class="thd"><span>${icon("target","xs")}Türev</span><span>${icon("book","xs")}Apotemi + Bilgi Sarmal</span><span>${icon("users","xs")}Mert Hoca</span></div></div><span></span></div></div>`;
+  if(k==="yanlis") return `<div class="turex" style="padding:8px 10px"><div class="dykr on"><span>Basınç</span><span class="mini">−</span><b class="num">2</b><span class="mini">+</span></div><div class="dykr"><span>Paragrafta Anlam</span><span class="mini">−</span><b class="num">0</b><span class="mini">+</span></div></div>`;
   if(k==="gorev") return `<div class="tasks turex"><div class="task done"><span class="tick" aria-pressed="true">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">Paragraf 20 soru</div></div><span></span></div><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Matematik Çalışması (2,5 saat)</div></div><span class="pill">${icon("clock","xs")}2,5 saat</span></div></div>`;
   if(k==="hedef") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Konu Soru Çalışması (2 saat)</div><div class="thd"><span>${icon("target","xs")}Basit Harmonik Hareket</span><span>${icon("book","xs")}345 + Bilgi Sarmal</span><span>${icon("users","xs")}Özcan Aykın</span></div></div><span></span></div></div>`;
   if(k==="sure") return `<div class="turex turbig"><b class="num">5 sa 30 dk</b><span class="muted small">bugün çalıştın · hedef 7,5 saat</span></div>`;
   if(k==="konu") return `<div class="turex turkonu"><span>Basınç</span><span class="pill">2 tekrar</span><span class="pill ac">SB1 ✓</span><span class="pill ac">SB2 ✓</span></div>`;
   return ""; }
-function turHTML(s){ const i = S.tur, a = TUR[i]; if(!a) return "";
+function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return "";
   return `<div class="turov" role="dialog" aria-modal="true" aria-label="Uygulama tanıtımı"><div class="turkart">
-    <div class="turust"><span class="turic">${icon(a.ic)}</span><span class="faint small">${i+1} / ${TUR.length}</span><button class="link small" data-act="turbitir">Atla</button></div>
+    <div class="turust"><span class="turic">${icon(a.ic)}</span><span class="faint small">${i+1} / ${L.length}</span><button class="link small" data-act="turbitir">Atla</button></div>
     <h2>${esc(a.b.replace("{Ad}", ilkAd(s.name)))}</h2><p>${esc(a.t)}</p>${a.ornek?turOrnek(a.ornek):""}
-    <div class="turnok">${TUR.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
-    <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===TUR.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===TUR.length-1?"Başlayalım":"İleri"}</button></div></div></div>`; }
+    <div class="turnok">${L.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
+    <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
 function studentShell(){
   const s = st(); if(!s) return "";
-  if(S.tur==null && !s.tanitim && !S.turKapandi) S.tur = 0;
+  if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
+  else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   const pages = {home:sHome, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
   const nots = studentNotices(s).length;
-  return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && TUR[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
+  return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Deneme takvimi (Ayarlar'dan düzenlenir) + öğrencinin yazılıları ---------- */
 const DEF_TAKVIM = [{"bas":"2026-09-18","bit":"2026-09-19","yayin":"ÖZDEBİR","ad":"TYT İlk Prova"},{"bas":"2026-10-02","bit":"2026-10-05","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-10-16","bit":"2026-10-19","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 1"},{"bas":"2026-10-23","bit":"2026-10-26","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-11-09","bit":"2026-11-15","yayin":"MEBİ","ad":"YKS Denemesi 3"},{"bas":"2026-12-04","bit":"2026-12-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 2"},{"bas":"2026-12-10","bit":"2026-12-13","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2026-12-11","bit":"2026-12-14","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2026-12-14","bit":"2026-12-20","yayin":"MEBİ","ad":"YKS Denemesi 4"},{"bas":"2026-12-25","bit":"2026-12-28","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 3"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"4K Yayınları","ad":"Maarif TYT"},{"bas":"2027-01-11","bit":"2027-01-17","yayin":"MEBİ","ad":"YKS Denemesi 5"},{"bas":"2027-02-15","bit":"2027-02-21","yayin":"MEBİ","ad":"YKS Denemesi 6"},{"bas":"2027-02-19","bit":"2027-02-22","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2027-02-26","bit":"2027-03-01","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 4"},{"bas":"2027-03-15","bit":"2027-03-21","yayin":"MEBİ","ad":"YKS Denemesi 7"},{"bas":"2027-03-26","bit":"2027-03-29","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-02","bit":"2027-04-05","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 5"},{"bas":"2027-04-09","bit":"2027-04-12","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-12","bit":"2027-04-18","yayin":"MEBİ","ad":"YKS Denemesi 8"},{"bas":"2027-04-16","bit":"2027-04-19","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 2"},{"bas":"2027-05-07","bit":"2027-05-10","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 6"},{"bas":"2027-05-10","bit":"2027-05-16","yayin":"MEBİ","ad":"YKS Denemesi 9"},{"bas":"2027-05-17","bit":"2027-05-23","yayin":"MEBİ","ad":"YKS Denemesi 10"},{"bas":"2027-05-28","bit":"2027-05-31","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-05-31","bit":"2027-06-06","yayin":"MEBİ","ad":"YKS Denemesi 11"},{"bas":"2027-06-04","bit":"2027-06-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 7"},{"bas":"2027-06-07","bit":"2027-06-10","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-06-07","bit":"2027-06-13","yayin":"MEBİ","ad":"YKS Denemesi 12"},{"bas":"2027-06-08","bit":"2027-06-11","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 2"}];
@@ -585,7 +600,8 @@ function sMore(s){
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
-      <button class="row" data-act="tur" data-v="0"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="tur" data-v="0" data-l="tur"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="tur" data-v="0" data-l="yeni"><span class="ri">${icon("flame","sm")}</span><div><div class="rt">Yenilikler</div><div class="rs">Son eklenen özellikler</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="logout"><span class="ri">${icon("logout","sm")}</span><div><div class="rt">Çıkış yap</div><div class="rs">“Beni hatırla” bu cihazda sıfırlanır</div></div></button>
     </div>
@@ -1357,23 +1373,32 @@ function kysNot(kaydet){ const e = $("#kysel"); if(e) e.textContent = KYS.length
   const g = [...document.querySelectorAll(`#root .gk-${k} .kadd`)].find(x=>x.dataset.ders===d && (x.dataset.ex||"")===(ex||""))?.closest(".gk"); if(g) g.outerHTML = kaynakCipleri(st(), d, k, ex||""); }
 function tlSure(t){ if(/\d\s*(saat|sa|dk|dakika)\b/i.test(t)) return ""; const h = parseHours(t); return h ? "≈ "+fmtMin(h*60) : ""; } /* satırda süre yazıyorsa tekrar gösterme */
 const TL_BTN = `<span class="tacts"><button type="button" class="tx tc" data-act="tkopya" aria-label="Görevi kopyala" title="Kopyala">${'<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'}</button><button type="button" class="tx" data-act="tdel" aria-label="Görevi sil">×</button></span>`;
-function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
+function tlSatir(t, done, bos){ return `<div class="tr ${done?"ok":""} ${bos?"yeni":""}" data-c="${bos?"":dersKodu(t)}">${bos?"":`<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`}<span class="tdot">${done?icon("check","xs"):""}</span><div class="tmain"><div class="tghost" aria-hidden="true"></div><textarea rows="1" class="tin" data-tl="1" placeholder="${bos?"+ Görev yaz":""}" aria-label="Görev">${esc(t)}</textarea><span class="tdur">${esc(tlSure(t))}</span></div>${bos?"":TL_BTN}</div>`; }
 const TL_GRIP = `<span class="tgrip" data-grip title="Sürükleyip taşı" aria-label="Görevi taşı"><svg viewBox="0 0 10 16" width="8" height="14" fill="currentColor"><circle cx="2.5" cy="3" r="1.4"/><circle cx="7.5" cy="3" r="1.4"/><circle cx="2.5" cy="8" r="1.4"/><circle cx="7.5" cy="8" r="1.4"/><circle cx="2.5" cy="13" r="1.4"/><circle cx="7.5" cy="13" r="1.4"/></svg></span>`;
 /* Sürükle-bırak: görevi aynı gün içinde ya da başka güne taşı (fare ve dokunmatik) */
-let SUR = null;
-document.addEventListener("pointerdown", e=>{ const g = e.target.closest && e.target.closest("[data-grip]"); if(!g || e.button>0) return; const row = g.closest(".tr"); if(!row) return;
-  e.preventDefault(); SUR = {row, src:row.closest(".tl"), x0:e.clientX, y0:e.clientY, basla:false, id:e.pointerId}; try{ g.setPointerCapture(e.pointerId); }catch(_){} });
+let SUR = null, UZUN = null;
+function surBasla(e){ const {row} = SUR, r = row.getBoundingClientRect(); SUR.basla = true; SUR.dx = e.clientX - r.left; SUR.dy = e.clientY - r.top;
+  const ph = document.createElement("div"); ph.className = "tph"; ph.style.height = r.height+"px"; row.after(ph); SUR.ph = ph;
+  row.classList.add("surukle"); Object.assign(row.style, {width:r.width+"px", left:r.left+"px", top:r.top+"px"}); document.body.classList.add("suruk"); }
+document.addEventListener("pointerdown", e=>{ if(e.button>0) return; const g = e.target.closest && e.target.closest("[data-grip]");
+  if(g){ const row = g.closest(".tr"); if(!row) return; e.preventDefault(); SUR = {row, src:row.closest(".tl"), x0:e.clientX, y0:e.clientY, basla:false, id:e.pointerId}; try{ g.setPointerCapture(e.pointerId); }catch(_){} return; }
+  /* Uzun basma: görevin herhangi bir yerine ~0,4 sn basılı tut → taşı */
+  const row = e.target.closest && e.target.closest(".tl .tr:not(.yeni)"); if(!row || e.target.closest("[data-act]")) return;
+  clearTimeout(UZUN?.t); UZUN = {row, x0:e.clientX, y0:e.clientY, x:e.clientX, y:e.clientY, id:e.pointerId};
+  UZUN.t = setTimeout(()=>{ const u = UZUN; UZUN = null; if(!u || !u.row.isConnected) return; if(document.activeElement && document.activeElement.blur) document.activeElement.blur(); try{ getSelection().removeAllRanges(); }catch(_){}
+    SUR = {row:u.row, src:u.row.closest(".tl"), x0:u.x, y0:u.y, basla:false, id:u.id, uzun:true}; surBasla({clientX:u.x, clientY:u.y}); u.row.style.left = (u.x - SUR.dx)+"px"; u.row.style.top = (u.y - SUR.dy)+"px"; try{ navigator.vibrate && navigator.vibrate(18); }catch(_){} }, 420); });
+document.addEventListener("pointermove", e=>{ if(UZUN && e.pointerId===UZUN.id){ UZUN.x = e.clientX; UZUN.y = e.clientY; if(Math.hypot(e.clientX-UZUN.x0, e.clientY-UZUN.y0) > 8){ clearTimeout(UZUN.t); UZUN = null; } } }, true);
+document.addEventListener("touchmove", e=>{ if(SUR && SUR.basla) e.preventDefault(); }, {passive:false}); /* taşırken sayfa kaymasın */
+document.addEventListener("contextmenu", e=>{ if(SUR || (UZUN && e.target.closest && e.target.closest(".tl"))) e.preventDefault(); });
 document.addEventListener("pointermove", e=>{ if(!SUR || e.pointerId!==SUR.id) return; const {row} = SUR;
-  if(!SUR.basla){ if(Math.hypot(e.clientX-SUR.x0, e.clientY-SUR.y0) < 5) return; const r = row.getBoundingClientRect(); SUR.basla = true; SUR.dx = e.clientX - r.left; SUR.dy = e.clientY - r.top;
-    const ph = document.createElement("div"); ph.className = "tph"; ph.style.height = r.height+"px"; row.after(ph); SUR.ph = ph;
-    row.classList.add("surukle"); Object.assign(row.style, {width:r.width+"px", left:r.left+"px", top:r.top+"px"}); document.body.classList.add("suruk"); }
+  if(!SUR.basla){ if(Math.hypot(e.clientX-SUR.x0, e.clientY-SUR.y0) < 5) return; surBasla(e); }
   row.style.left = (e.clientX - SUR.dx)+"px"; row.style.top = (e.clientY - SUR.dy)+"px";
   if(e.clientY < 70) window.scrollBy(0, -12); else if(e.clientY > innerHeight - 90) window.scrollBy(0, 12);
   row.style.visibility = "hidden"; const alt = document.elementFromPoint(e.clientX, e.clientY); row.style.visibility = "";
   const box = alt && alt.closest(".tl"); if(!box) return;
   const satirlar = [...box.querySelectorAll(".tr:not(.surukle):not(.yeni)")]; const once = satirlar.find(x=>{ const r = x.getBoundingClientRect(); return e.clientY < r.top + r.height/2; });
   if(once) once.before(SUR.ph); else { const y = box.querySelector(".tr.yeni"); if(y) y.before(SUR.ph); else box.appendChild(SUR.ph); } });
-function surBitir(e){ if(!SUR || (e && e.pointerId!==SUR.id)) return; const {row, src, ph, basla} = SUR; SUR = null; document.body.classList.remove("suruk"); if(!basla) return;
+function surBitir(e){ if(UZUN && e && e.pointerId===UZUN.id){ clearTimeout(UZUN.t); UZUN = null; } if(!SUR || (e && e.pointerId!==SUR.id)) return; const {row, src, ph, basla} = SUR; SUR = null; document.body.classList.remove("suruk"); if(!basla) return;
   row.classList.remove("surukle"); row.removeAttribute("style"); const hedef = ph.closest(".tl"); ph.replaceWith(row); tlBoyut(row);
   tlSync(src); if(hedef && hedef!==src){ tlSync(hedef); const g = document.querySelector(`.dcard #tl-${hedef.dataset.i}`)?.closest(".dcard")?.querySelector(".dch b")?.textContent; toast(`${g||"Diğer güne"} taşındı`); } }
 document.addEventListener("pointerup", surBitir); document.addEventListener("pointercancel", surBitir);
@@ -1388,8 +1413,23 @@ function tlSatirGuncelle(tin){ const r = tin.closest(".tr"); if(!r) return; tin.
 function gunEkle(d, t){ const i = pIdx(st(), d), box = document.getElementById("tl-"+i);
   if(box){ const yeni = box.querySelector(".tr.yeni"); yeni.insertAdjacentHTML("beforebegin", tlSatir(t, false)); tlBoyut(box); tlSync(box); return; }
   const ta = document.getElementById("pl-"+i); if(ta){ ta.value = (ta.value.trim()? ta.value.replace(/\s+$/,"")+"\n" : "") + t; ta.dispatchEvent(new Event("input",{bubbles:true})); } }
+/* Yazarken otomatik tamamlama: "AYT Fiz" → "AYT Fizik Çalışması (1,5 saat)" (Enter veya Tab ile kabul) */
+let ONERI = null, ONERI_ZAMAN = 0;
+function oneriListesi(){ if(ONERI && Date.now()-ONERI_ZAMAN < 20000) return ONERI; const m = new Map(), ekle = (t, w) => { t = String(t||"").replace(/\s+/g," ").trim(); if(t.length > 2) m.set(t, (m.get(t)||0) + w); };
+  const s = st(); if(s) Object.values(s.weeks||{}).forEach(x=>Object.values(x).forEach(l=>(l||[]).forEach(k=>ekle(taskText(k), 5))));
+  cfg().quick.forEach(t=>ekle(t, 2)); S.students.forEach((x,id)=>{ if(id===sid()) return; Object.values(x.weeks||{}).forEach(w=>Object.values(w).forEach(l=>(l||[]).forEach(k=>ekle(taskText(k), 1)))); });
+  ONERI = [...m.entries()].sort((a,b)=>b[1]-a[1] || a[0].length-b[0].length).map(([t])=>t); ONERI_ZAMAN = Date.now(); return ONERI; }
+function oneriGoster(t){ const g = t.parentElement && t.parentElement.querySelector(".tghost"); if(!g) return; const v = t.value;
+  const temizle = () => { g.innerHTML = ""; delete t.dataset.oneri; };
+  if(document.activeElement!==t || v.trim().length < 2 || t.selectionStart !== v.length || /\n/.test(v)) return temizle();
+  const lv = trLow(v), bul = oneriListesi().find(x=>x.length > v.length && trLow(x).startsWith(lv)); if(!bul) return temizle();
+  t.dataset.oneri = bul; g.innerHTML = `<span class="tgt">${esc(v)}</span><span class="tgr">${esc(bul.slice(v.length))}</span><span class="tgk">↵</span>`; }
+function oneriKabul(t){ if(!t.dataset.oneri) return false; t.value = t.dataset.oneri; delete t.dataset.oneri; const g = t.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; tlSatirGuncelle(t); t.setSelectionRange(t.value.length, t.value.length); return true; }
+document.addEventListener("focusout", e=>{ if(e.target.classList && e.target.classList.contains("tin")){ const g = e.target.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; delete e.target.dataset.oneri; } });
 document.addEventListener("keydown", e=>{ const t = e.target; if(!t.classList || !t.classList.contains("tin")) return; const r = t.closest(".tr"), box = t.closest(".tl");
-  if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); if(!t.value.trim() && r.classList.contains("yeni")) return;
+  if((e.key==="Tab" || e.key==="ArrowRight") && t.dataset.oneri && t.selectionStart===t.value.length){ e.preventDefault(); oneriKabul(t); const bx = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(bx), 200); return; }
+  if(e.key==="Escape" && t.dataset.oneri){ e.preventDefault(); const g = t.parentElement.querySelector(".tghost"); if(g) g.innerHTML = ""; delete t.dataset.oneri; return; }
+  if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); oneriKabul(t); if(!t.value.trim() && r.classList.contains("yeni")) return;
     if(r.classList.contains("yeni")){ tlSync(box); box.lastElementChild.querySelector(".tin").focus(); return; }
     const pos = t.selectionStart, sag = t.value.slice(pos); t.value = t.value.slice(0,pos).trim(); tlSatirGuncelle(t);
     r.insertAdjacentHTML("afterend", tlSatir(sag.trim(), false)); const n = r.nextElementSibling.querySelector(".tin"); tlSatirGuncelle(n); n.focus(); n.setSelectionRange(0,0); tlSync(box); return; }
@@ -1863,7 +1903,13 @@ function dersSubs(s, d){ if(isMaarif(s)) return maarifDersSubs(s, d); const nd =
   if(!m.length) return all;
   const al = s.alan, rel = m.filter(x=> x.ex==="TYT" || !x.a || !ALANLAR.includes(al) || x.a.includes(al));
   return rel.length ? rel : m; }
-const splitKonu = v => String(v||"").split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean);
+/* Konuları ayır; adında virgül geçen konuları ("İş, Güç ve Enerji" gibi) bölme */
+let KONU_ADLARI = null, KONU_KAYNAK = null;
+function konuAdlari(){ const kaynak = S.settings.cur || CUR; if(KONU_ADLARI && KONU_KAYNAK===kaynak) return KONU_ADLARI; KONU_KAYNAK = kaynak;
+  KONU_ADLARI = new Set([...(kaynak.TYT||[]), ...(kaynak.AYT||[]), ...MAARIF_SUBS].flatMap(x=>x.t||[]).filter(n=>n.includes(","))); return KONU_ADLARI; }
+const splitKonu = v => { const p = String(v||"").split(/\s*,\s*/).map(x=>x.trim()).filter(Boolean), A_ = konuAdlari(), out = [];
+  for(let i=0;i<p.length;i++){ let al = p[i], j = i; for(let k=Math.min(p.length-1, i+3); k>i; k--){ const aday = p.slice(i,k+1).join(", "); if(A_.has(aday)){ al = aday; j = k; break; } } out.push(al); i = j; }
+  return out; };
 function konuOneri(s, d, subs){
   const ordered = subs.flatMap(sub=>sub.t.map(n=>({n, k:tkey(sub.k,n)})));
   const weeks = Object.keys(s.plan||{}).filter(w=> w < S.week && (s.plan[w].hedef||{})[d] && s.plan[w].hedef[d].konu).sort();
@@ -2282,8 +2328,8 @@ document.addEventListener("click", e=>{
       panoGuncelle(); toast(S.pano.length>1 ? `${S.pano.length} görev panoda · istediğin günde “Yapıştır”a bas` : "Kopyalandı · istediğin günde “Yapıştır”a bas"); break; }
     case "tyapistir": { (S.pano||[]).forEach(t=>gunEkle(b.dataset.date, t)); toast(`${(S.pano||[]).length} görev yapıştırıldı`); break; }
     case "ptemizle": S.pano = []; panoGuncelle(); break;
-    case "tur": S.tur = +v; render(); break;
-    case "turbitir": S.tur = null; S.turKapandi = true; if(!A() && st() && !st().tanitim){ st().tanitim = true; save(); } render(); break;
+    case "tur": if(b.dataset.l) S.turListe = b.dataset.l; S.tur = +v; render(); break;
+    case "turbitir": S.tur = null; S.turKapandi = true; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render(); break;
     case "girisgonder": { const id = b.dataset.id, cn = {...(S.cnotes.get(id)||{}), girisGonderildi: nowISO()}; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0);
       setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
     case "geri": geriAl(false); break;
@@ -2366,7 +2412,7 @@ document.addEventListener("input", e=>{
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
-  if(t.classList && t.classList.contains("tin")){ tlSatirGuncelle(t); const box = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(box), 350); return; }
+  if(t.classList && t.classList.contains("tin")){ tlSatirGuncelle(t); oneriGoster(t); const box = t.closest(".tl"); clearTimeout(t._z); t._z = setTimeout(()=>tlSync(box), 350); return; }
   if(t.id==="bk-elle"){ const h = sureOku(t.value); if(S.blk){ S.blk.sure = h; S.blk.elle = !!h; blkGuncelle(); } return; }
   if(t.dataset.sqnot){ const id = t.dataset.sqnot, q = S.sorular.get(id); if(q){ q.kocNot = t.value; clearTimeout(t._z); t._z = setTimeout(()=>updateDoc(doc(fdb,"sorular",id), new FieldPath("kocNot"), t.value).catch(()=>toast("Not kaydedilemedi")), 600); } return; }
   if(t.id==="dyq"){ const q = trLow(t.value).trim(); document.querySelectorAll("#layer .dyk .kgrp").forEach(g=>{ let n=0; g.querySelectorAll(".dykr").forEach(r=>{ const ok = !q || q.split(/\s+/).every(w=>r.dataset.q.includes(w)); r.hidden=!ok; if(ok) n++; }); g.hidden = !n; }); return; }
