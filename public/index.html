@@ -284,6 +284,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .srow:first-child{border-top:0}
 .smet{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap;margin-top:3px}
 .smet b{color:var(--fg)}
+.kgrp.ex-TYT{--exc:#2563EB}.kgrp.ex-AYT{--exc:#9333EA}.kgrp.ex-ORT{--exc:#0D9488}
+.kgrp.ex-TYT .gh,.kgrp.ex-AYT .gh,.kgrp.ex-ORT .gh{color:var(--exc)}
+.kgrp.ex-TYT .kt[aria-pressed="true"],.kgrp.ex-AYT .kt[aria-pressed="true"],.kgrp.ex-ORT .kt[aria-pressed="true"]{border-color:var(--exc);background:color-mix(in srgb, var(--exc) 12%, var(--surface))}
+.kgrp.ex-AYT .kt{border-left:3px solid color-mix(in srgb, #9333EA 45%, transparent)}.kgrp.ex-TYT .kt{border-left:3px solid color-mix(in srgb, #2563EB 40%, transparent)}
+.kchs{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
+.kch{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:13px;font-weight:700;background:var(--sunk)}
+.kch i{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.04em;padding:1px 4px;border-radius:4px;color:#fff}
+.kch.ex-TYT{background:#EAF1FF;color:#1D4ED8}.kch.ex-TYT i{background:#2563EB}.kch.ex-AYT{background:#F3E8FF;color:#7E22CE}.kch.ex-AYT i{background:#9333EA}.kch.ex-ORT{background:#E6F7F5;color:#0F766E}
+:root[data-theme="dark"] .kch.ex-TYT{background:#16213D;color:#93B4FF}:root[data-theme="dark"] .kch.ex-AYT{background:#2A1640;color:#D8B4FE}:root[data-theme="dark"] .kch.ex-ORT{background:#0F2A27;color:#5EEAD4}
+.nyl{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.nyr{display:grid;grid-template-columns:44px minmax(0,1fr) 20px minmax(0,1.2fr);gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:14px}
+.nyt{font-weight:800;font-size:15px}.nyok{color:var(--faint);text-align:center;font-weight:800}
+.nyb{display:flex;flex-direction:column;gap:3px}.nyb small,.nyg small{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}.nyb input{padding:7px 10px}
+.nyg{display:flex;flex-direction:column;gap:1px;background:var(--acs);border-radius:10px;padding:6px 10px}.nyg b{font-size:20px;color:var(--ac)}
 .stage3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .stg{border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px}
 .stg.cur{border-color:var(--ac);background:var(--acs)}
