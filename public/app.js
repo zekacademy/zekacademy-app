@@ -1852,7 +1852,8 @@ function openSheet(kind, el){
     return sheet(`<h3>Deneme takvimi</h3><p class="muted small" style="margin:0">Türkiye geneli denemeler${s?" ve yazılıların":""}. Tarihler yayınevlerinin açıkladığı programlardan; değişebilir.</p><div class="tkl" style="max-height:60vh;overflow:auto">${L.map(takvimSatir).join("") || `<div class="empty">Yaklaşan deneme yok.</div>`}</div><div class="acts"><button type="button" class="btn pri" data-close>Kapat</button></div>`); }
   if(kind==="soruekle"){ S.sqDosya = null;
     return sheet(`<h3>Soru ekle</h3>
-      <label class="squp" id="sq-up"><input type="file" accept="image/*" id="sq-file" hidden><span id="sq-prev">${icon("plus")}<b>Fotoğraf çek ya da seç</b><small>Sorunun tamamı görünsün</small></span></label>
+      <div class="squp" id="sq-up"><span id="sq-prev">${icon("note")}<b>Sorunun fotoğrafını ekle</b><small>Sorunun tamamı görünsün</small></span></div>
+      <div class="sqbtns"><label class="btn pri">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="sq-cam" hidden></label><label class="btn">🖼️ Galeriden seç<input type="file" accept="image/*" id="sq-file" hidden></label></div>
       <div class="two"><label class="f">Ders<select name="ders" id="sq-ders">${cfg().hedefDers.map(d=>`<option>${esc(d)}</option>`).join("")}<option>Diğer</option></select></label>
       <label class="f">Konu <span class="faint" style="font-weight:500">· isteğe bağlı</span><input type="text" name="konu" id="sq-konu" list="sq-kl" placeholder="ör. Türev"></label></div>
       <datalist id="sq-kl">${[...new Set(dersSubs(s, cfg().hedefDers[0]).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join("")}</datalist>
@@ -2277,7 +2278,7 @@ document.addEventListener("click", e=>{
 function keepOpen(fn){ const open = [...document.querySelectorAll("details.subj")].map((d,i)=>d.open?i:-1).filter(i=>i>=0); fn(); const ds=document.querySelectorAll("details.subj"); open.forEach(i=>{ if(ds[i]) ds[i].open=true; }); }
 document.addEventListener("change", e=>{
   const t = e.target;
-  if(t.id==="sq-file" && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
+  if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }
   if(A() && t.closest && t.closest("#settingsPage")){ if(onSetting(t,true) && (t.dataset.curt!=null || t.dataset.cur!=null)) keepSettingsOpen(); return; }
   if(t.id==="go-kim"){ const yeni = !t.value; const aw=$("#go-adw"), tw=$("#go-tekw"); if(aw) aw.hidden = !yeni; if(tw) tw.hidden = yeni; $("#go-sure").value = String(yeni?SURE_ILK:SURE_SEANS); $("#go-tur").value = yeni?"ilk":"seans"; return; }
