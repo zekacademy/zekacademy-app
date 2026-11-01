@@ -466,7 +466,7 @@ function studentNotices(s){
 /* ---------- İlk açılışta uygulama tanıtımı (öğrenci) ---------- */
 const TUR = [
   {nav:null, ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin. Programın, hedeflerin, denemelerin ve çalışma sürelerin burada. Koçun yaptığın her şeyi anında görür. Hadi 1 dakikada tanıyalım."},
-  {nav:"home", ic:"home", b:"Bugünün görevleri", t:"Ana sayfada bugün yapacakların sıralı. Derse başlarken görevin yanındaki ▶ ile sayacı başlat; bitince “Bitirdim”e bas, hem süren kaydedilir hem görev yeşil olur. Sayaç kullanmadıysan yuvarlağa dokunman yeterli.", ornek:"gorev"},
+  {nav:"home", ic:"home", b:"Bugünün görevleri", t:"Ana sayfada bugün yapacakların sıralı. Derse başlarken görevin yanındaki ▶ ile sayacı başlat, ara verirken “Durdur”a bas; süren kaydedilir. Görevi bitirince yuvarlağa dokun, yeşil olsun.", ornek:"gorev"},
   {nav:"home", ic:"target", b:"Görevin altındaki küçük yazı", t:"Her dersin altında o hafta bitireceğin konu 🎯, takip edeceğin kitap 📖 ve hoca 👥 yazar. Paragraf ve problemde “Günlük rutin” yazar.", ornek:"hedef"},
   {nav:"program", ic:"cal", b:"Haftalık Program", t:"Ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık”ta bütün haftayı ve hedeflerini görürsün. Hedef konuyu bitirince onu da işaretle."},
   {nav:"daha", ic:"timer", b:"Çalışma süresi", t:"Daha Fazla → Kronometre. Derse başlarken başlat, bitince durdur. Unutursan süreyi elle de yazabilirsin. Örneğin: bugün 5 saat 30 dakika.", ornek:"sure"},
@@ -643,7 +643,7 @@ function gorevHedef(s, date, text){ if(!s) return ""; const lt = trLow(text);
   return par.length ? `<div class="thd">${par.join("")}</div>` : ""; }
 function taskRow(t, date, opts={}){
   const h = parseHours(taskText(t)), s = opts.s, ogr = s && !A(), run = !!(s && s.timer && s.timer.task && s.timer.task.id===t.id);
-  const sayac = run ? `<div class="trun"><span class="tlive num" data-tlive>${clock(timerMin(s)*60)}</span><button class="btn sm pri" data-act="tgbitir" data-v="bitti">${icon("check","xs")} Bitirdim</button><button class="btn sm" data-act="tgbitir" data-v="ara">Ara ver</button></div>` : "";
+  const sayac = run ? `<div class="trun"><span class="tlive num" data-tlive>${clock(timerMin(s)*60)}</span><button class="btn sm" data-act="tgbitir" data-v="ara">${icon("stop","xs")} Durdur</button></div>` : "";
   const sag = `<div class="tright">${h?`<span class="pill">${icon("clock","xs")}${fmtH(h)}</span>`:""}${ogr && !t.done && !run && date<=today() ? `<button class="tplay" data-act="tgbasla" data-date="${date}" data-id="${t.id}" aria-label="Bu görev için sayacı başlat" title="Sayacı başlat">${icon("play","xs")}</button>`:""}</div>`;
   return `<div class="task ${t.done?"done":""} ${run?"running":""}">
     <button class="tick" data-act="tick" data-date="${date}" data-id="${t.id}" aria-pressed="${!!t.done}" aria-label="${t.done?"Tamamlandı":"Tamamla"}">${icon("check","sm")}</button>
@@ -858,7 +858,7 @@ function pCalisma(s){
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
     ${A()?"":`<div class="card timer"><div class="tface ${run?"run":""}"><b class="num" id="tval">${clock(run?timerMin(s)*60:0)}</b><small>${run?"çalışıyorsun":"hazır"}</small></div>
       ${run && s.timer.task ? (()=>{ const it = dayTasks(s, s.timer.task.date).find(x=>x.id===s.timer.task.id); return it ? `<div class="tgorev">${icon("target","xs")} ${esc(taskText(it))}</div>` : ""; })() : ""}
-      <div class="tbtns">${run ? (s.timer.task ? `<button class="bigbtn" data-act="tgbitir" data-v="bitti">${icon("check","sm")} Bitirdim</button><button class="bigbtn stop" data-act="tgbitir" data-v="ara">${icon("stop","sm")} Ara ver</button>` : `<button class="bigbtn stop" data-act="tstop">${icon("stop","sm")} Bitir ve kaydet</button>`) : `<button class="bigbtn" data-act="tstart">${icon("play","sm")} Çalışmaya başla</button>`}</div>
+      <div class="tbtns">${run ? (s.timer.task ? `<button class="bigbtn stop" data-act="tgbitir" data-v="ara">${icon("stop","sm")} Durdur ve kaydet</button>` : `<button class="bigbtn stop" data-act="tstop">${icon("stop","sm")} Bitir ve kaydet</button>`) : `<button class="bigbtn" data-act="tstart">${icon("play","sm")} Çalışmaya başla</button>`}</div>
       ${run?"":`<p class="faint small" style="margin:0;text-align:center">İpucu: Ana sayfada bir görevin yanındaki ▶ ile o görev için sayaç başlatırsan süre derse göre de kaydedilir.</p>`}
       <div class="muted small">Bugün toplam: <b class="num" style="color:var(--fg)" id="ttoday">${fmtMin(minutes(s,t))}</b></div></div>`}
     <div class="card" id="calisma"><div class="sech"><h3>Bu hafta çalışma</h3><b class="num">${fmtMin(mins.reduce((a,b)=>a+b,0))}</b></div>
@@ -2249,7 +2249,7 @@ document.addEventListener("click", e=>{
       b.classList.add("on"); b.dataset.n = (+b.dataset.n||0)+1; toast(`Eklendi: ${t}`); const q = $("#hq"); if(q && b.id==="hfree"){ q.value=""; q.dispatchEvent(new Event("input",{bubbles:true})); } break; }
     case "kt": { const n=v, on=!KSEL.includes(n); KSEL = on ? [...KSEL, n] : KSEL.filter(x=>x!==n); document.querySelectorAll("#layer .kt").forEach(x=>{ if(x.dataset.v===n) x.setAttribute("aria-pressed", on); }); kselNote(); break; }
     case "kclear": KSEL=[]; document.querySelectorAll("#layer .kt").forEach(x=>x.setAttribute("aria-pressed","false")); { const f=$("#kfree"); if(f) f.value=""; } kselNote(); break;
-    case "tick": { const d=b.dataset.date, id=b.dataset.id; mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
+    case "tick": { const d=b.dataset.date, id=b.dataset.id; { const s0 = st(); if(!A() && s0 && s0.timer && s0.timer.task && s0.timer.task.id===id){ const r = sayacDurdur(true); render(); toast(`Tebrikler! ${r.added>0?`+${fmtMin(r.added)} · `:""}görev tamamlandı`); break; } } mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
     case "copyweek": { if(!A()) break; mutate(s=>{ const pw=pPrev(s,S.week), pp=plan(s,pw), np=ensurePlan(s,S.week), oldDays=pDays(s,pw); let c=0;
       pDays(s,S.week).forEach((cd,i)=>{ const pd = oldDays.find(o=>dIdx(o)===dIdx(cd)); if(!pd) return; const src=dayTasks(s,pd); c+=src.length; setDayTasks(s,cd, src.map(t=>({id:uid(), t:taskText(t), done:false, doneAt:null}))); const sv=(pp.saat||{})[pIdx(s,pd)]; if(sv!=null&&sv!=="") np.saat[i]=sv; });
       np.hedef = {}; Object.entries(pp.hedef||{}).forEach(([d,v])=>{ if(v&&v.konu) np.hedef[d]={konu:v.konu, done:false}; });
@@ -2263,9 +2263,9 @@ document.addEventListener("click", e=>{
     case "tstart": mutate(s=>{ s.timer={start:Date.now()}; }); render(); break;
     case "tstop": { const {added} = sayacDurdur(false); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
     case "tgbasla": { const s0 = st(); if(s0 && s0.timer){ const r = sayacDurdur(false); if(r.added>0) toast(`Önceki sayaç durdu · +${fmtMin(r.added)}`); }
-      mutate(s=>{ s.timer = {start:Date.now(), task:{id:b.dataset.id, date:b.dataset.date}}; }); render(); toast("Sayaç başladı · bitince “Bitirdim”e bas"); break; }
+      mutate(s=>{ s.timer = {start:Date.now(), task:{id:b.dataset.id, date:b.dataset.date}}; }); render(); toast("Sayaç başladı · ara verirken “Durdur”a bas"); break; }
     case "tgbitir": { const {added, ad} = sayacDurdur(v==="bitti"); render();
-      toast(v==="bitti" ? `Tebrikler! ${added>0?`+${fmtMin(added)} · `:""}görev tamamlandı` : (added>0?`Ara verdin · +${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi")); break; }
+      toast(v==="bitti" ? `Tebrikler! ${added>0?`+${fmtMin(added)} · `:""}görev tamamlandı` : (added>0?`+${fmtMin(added)} kaydedildi · görevi bitirdiysen yuvarlağa dokun`:"1 dakikadan kısa süre kaydedilmedi")); break; }
     case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); if(v==="kaynak") kysNot(); break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
