@@ -273,7 +273,7 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(kitapCizelgeTemizle, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
 function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; history.replaceState(null, "", "/"); }
-function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
+function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
 
 let authResolved = false;
 function init(){
@@ -282,7 +282,7 @@ function init(){
     if(!user){ S.role=null; S.me=null; render(); return; }
     if(user.email === COACH_EMAIL){
       S.role = "admin"; S.me = null; S.view = "ozet";
-      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(collection(fdb,"sorular"));
+      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor")));
     } else {
       S.role = "student"; S.me = user.uid; S.view = "home";
       const need = ["students","settings"];
@@ -294,8 +294,12 @@ function init(){
   });
 }
 /* Takıldığım sorular: sorular/{id} (bilgi + küçük resim), soruFoto/{id} (büyük resim, açınca yüklenir) */
-S.sorular = new Map();
-function watchSorular(q){ unsubs.push(onSnapshot(q, snap=>{ S.sorular = new Map(snap.docs.map(d=>[d.id, d.data()])); render(true); }, e=>console.error("sorular", e))); }
+S.sorular = new Map(); const SQK = {};
+/* Birden çok dinleyici (koç: bekleyenler + açtığı öğrencinin tüm soruları); sonuçlar birleştirilir */
+function watchSorular(q, key="ana"){ if(SQK[key]) return; SQK[key] = {m:new Map()};
+  const un = onSnapshot(q, snap=>{ SQK[key].m = new Map(snap.docs.map(d=>[d.id, d.data()])); S.sorular = new Map(Object.values(SQK).flatMap(x=>[...x.m])); render(true); }, e=>console.error("sorular", e));
+  SQK[key].un = un; unsubs.push(un); }
+function sorularOgrenci(sid_){ if(A()) watchSorular(query(collection(fdb,"sorular"), where("sid","==",sid_)), "o:"+sid_); }
 const soruList = sid_ => [...S.sorular.entries()].filter(([,q])=>q.sid===sid_).sort((a,b)=>(b[1].at||"").localeCompare(a[1].at||""));
 async function resimKucult(file, max, limit){ const img = await new Promise((res,rej)=>{ const i = new Image(); i.onload=()=>res(i); i.onerror=rej; i.src = URL.createObjectURL(file); });
   const k = Math.min(1, max/Math.max(img.width, img.height)), c = document.createElement("canvas"); c.width = Math.round(img.width*k); c.height = Math.round(img.height*k);
@@ -1313,7 +1317,7 @@ function cDetail(){
   const sqb = soruList(S.cur).filter(([,q])=>q.durum!=="cozuldu").length;
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
-  const body = {ozet:()=>cSummary(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>pSorular(s, S.cur)}[S.dtab] || (()=>cSummary(s));
+  const body = {ozet:()=>cSummary(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
   return `${topbar(`<div style="min-width:0;flex:1"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
@@ -1852,7 +1856,7 @@ function openSheet(kind, el){
       <label class="f">Not <span class="faint" style="font-weight:500">· isteğe bağlı</span><input type="text" name="not" id="sq-not" placeholder="ör. 3D deneme 12. soru, şıkları anlamadım"></label>
       <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" id="sq-kaydet">Kaydet</button></div>`,
     async (fd, form)=>{ if(!S.sqDosya) return sheetErr("Önce sorunun fotoğrafını ekle."); const bt = $("#sq-kaydet"); bt.disabled = true; bt.textContent = "Yükleniyor…";
-      try{ const [buyuk, kucuk] = await Promise.all([resimKucult(S.sqDosya, 1400, 650000), resimKucult(S.sqDosya, 260, 40000)]); const id = uid(), me = S.me;
+      try{ const [buyuk, kucuk] = await Promise.all([resimKucult(S.sqDosya, 1280, 420000), resimKucult(S.sqDosya, 260, 40000)]); const id = uid(), me = S.me;
         await setDoc(doc(fdb,"soruFoto",id), {sid:me, data:buyuk});
         const q = {sid:me, ders:fd.get("ders"), konu:String(fd.get("konu")||"").trim(), not:String(fd.get("not")||"").trim(), at:nowISO(), durum:"bekliyor", thumb:kucuk};
         await setDoc(doc(fdb,"sorular",id), q); S.sorular.set(id, q); closeSheet(); render(); toast("Soru havuzuna eklendi"); }
