@@ -984,7 +984,7 @@ function kur() {
   ScriptApp.getProjectTriggers().forEach(function (t) { if (tut.indexOf(t.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger("gonder").forForm(FormApp.getActiveForm()).onFormSubmit().create();
   ScriptApp.newTrigger("kontrol").timeBased().everyMinutes(10).create();
-  PropertiesService.getScriptProperties().setProperty("sonKontrol", String(Date.now() - 2 * 3600 * 1000));
+  PropertiesService.getScriptProperties().setProperty("sonKontrol", String(Date.now() - 3 * 24 * 3600 * 1000)); // ilk kontrolde son 3 günde kaçanlar bildirilir
   nabiz();
 }
 
