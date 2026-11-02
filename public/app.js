@@ -925,12 +925,13 @@ async function formKod(yenile){
 }
 /* Form bağlantısı sağlığı (koc/form: sonNabiz, sonBasvuru, tetikleyici) */
 function formSaglik(){ const f = S.formDurum; if(!f || !f.sonNabiz) return {k:"yok"}; const saat = (Date.now() - Date.parse(f.sonNabiz))/36e5;
-  if(f.tetikleyici === false) return {k:"kotu", saat, neden:"tetikleyici yok"}; return {k: saat > 36 ? "kotu" : "iyi", saat}; }
+  if(f.tetikleyici === false) return {k:"kotu", saat, neden:"tetikleyici yok"};
+  if(f.kontrol === false) return {k:"kotu", saat, neden:"yedek kontrol yok"}; return {k: saat > 36 ? "kotu" : "iyi", saat}; }
 const saatYazi = h => h < 1 ? "1 saatten kısa süre önce" : h < 48 ? `${Math.floor(h)} saat önce` : `${Math.floor(h/24)} gün önce`;
 function formDurumYazi(){ const d = formSaglik(); return d.k==="iyi" ? `Çalışıyor ✓ · son sinyal ${saatYazi(d.saat)}` : d.k==="kotu" ? `⚠️ Sorun var · ${d.neden || "son sinyal "+saatYazi(d.saat)}` : "Sinyal yok · kodu güncelle"; }
 function formDurumKart(){ const d = formSaglik(), f = S.formDurum || {};
   if(d.k==="iyi") return `<div class="fdurum iyi">${icon("check","xs")} Bağlantı çalışıyor · son sinyal ${saatYazi(d.saat)}${f.sonBasvuru?` · son başvuru ${saatYazi((Date.now()-Date.parse(f.sonBasvuru))/36e5)}`:""}</div>`;
-  if(d.k==="kotu") return `<div class="fdurum kotu">⚠️ ${d.neden==="tetikleyici yok" ? "Formdaki otomatik gönderme tetikleyicisi kapalı." : `Formdan ${d.saat<48?Math.floor(d.saat)+" saattir":Math.floor(d.saat/24)+" gündür"} sinyal gelmedi.`} Apps Script'te <b>kur</b>'u yeniden çalıştır; kaçan başvurular için <b>sonBasvurulariAktar</b>.</div>`;
+  if(d.k==="kotu") return `<div class="fdurum kotu">⚠️ ${d.neden==="tetikleyici yok" ? "Formdaki otomatik gönderme tetikleyicisi kapalı." : d.neden==="yedek kontrol yok" ? "Formdaki 10 dakikalık yedek kontrol kapalı." : `Formdan ${d.saat<48?Math.floor(d.saat)+" saattir":Math.floor(d.saat/24)+" gündür"} sinyal gelmedi.`} Apps Script'te <b>kur</b>'u yeniden çalıştır; kaçan başvurular için <b>sonBasvurulariAktar</b>.</div>`;
   return `<div class="fdurum">Formdaki kod henüz sinyal yollamıyor. Aşağıdan yeni kodu hazırlayıp forma yapıştır ve <b>kur</b>'u çalıştır.</div>`; }
 function formKodHTML(){ if(!FORMKOD) return "";
   const kod = `// Zekacademy · Google Form → uygulama bildirimi
@@ -942,11 +943,25 @@ function gonder(e) {
   yolla(e.response, false);
 }
 
-// Her gün uygulamaya "bağlantı çalışıyor" sinyali yollar (gelmezse koça uyarı gider)
+// Google bazen form tetikleyicisini atlar. Bu 10 dakikada bir kaçan başvuru var mı bakar
+// ve varsa gönderir. Zaten ulaşmış olanlar sunucuda tekrar eklenmez, bildirim de tekrar gitmez.
+function kontrol() {
+  var p = PropertiesService.getScriptProperties();
+  var son = Number(p.getProperty("sonKontrol")) || (Date.now() - 2 * 3600 * 1000);
+  var simdi = Date.now();
+  FormApp.getActiveForm().getResponses(new Date(son - 30 * 60 * 1000)).forEach(function (r) {
+    Logger.log(r.getTimestamp() + " → " + yolla(r, false));
+  });
+  p.setProperty("sonKontrol", String(simdi));
+  if (simdi - (Number(p.getProperty("sonNabiz")) || 0) > 6 * 3600 * 1000) { nabiz(); p.setProperty("sonNabiz", String(simdi)); }
+}
+
+// Uygulamaya "bağlantı çalışıyor" sinyali yollar (gelmezse koça uyarı gider)
 function nabiz() {
-  var tetik = ScriptApp.getProjectTriggers().some(function (t) { return t.getHandlerFunction() === "gonder"; });
+  var adlar = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
   var r = UrlFetchApp.fetch(ADRES, { method: "post", contentType: "application/json", muteHttpExceptions: true,
-    payload: JSON.stringify({ anahtar: ANAHTAR, nabiz: true, tetikleyici: tetik }) });
+    payload: JSON.stringify({ nabizAnahtar: ANAHTAR, nabiz: true,
+      tetikleyici: adlar.indexOf("gonder") >= 0, kontrol: adlar.indexOf("kontrol") >= 0 }) });
   Logger.log("Sinyal: " + r.getResponseCode() + " " + r.getContentText());
 }
 
@@ -963,11 +978,13 @@ function yolla(r, sessiz) {
   return cevap.getResponseCode() + " " + cevap.getContentText();
 }
 
-// 1) Önce bunu bir kez çalıştır: form gönderilince gonder() otomatik çalışsın, her gün sinyal gitsin
+// 1) Önce bunu bir kez çalıştır: form gönderilince gonder() çalışsın, kontrol() 10 dakikada bir yedek baksın
 function kur() {
-  ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
+  var tut = ["gonder", "nabiz", "kontrol"];
+  ScriptApp.getProjectTriggers().forEach(function (t) { if (tut.indexOf(t.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger("gonder").forForm(FormApp.getActiveForm()).onFormSubmit().create();
-  ScriptApp.newTrigger("nabiz").timeBased().everyHours(12).create();
+  ScriptApp.newTrigger("kontrol").timeBased().everyMinutes(10).create();
+  PropertiesService.getScriptProperties().setProperty("sonKontrol", String(Date.now() - 2 * 3600 * 1000));
   nabiz();
 }
 

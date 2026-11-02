@@ -246,9 +246,10 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
   if (req.method !== "POST") { res.status(405).send("POST"); return; }
   const b = req.body || {};
   const kayitli = ((await db.doc("system/form").get()).data() || {}).anahtar;
-  if (!esit(b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
-  /* Formdaki script günde bir "çalışıyorum" sinyali yollar; koç uygulamasında durum ve uyarı için */
-  const nabizYaz = (ek) => db.doc("koc/form").set({ sonNabiz: new Date().toISOString(), tetikleyici: b.tetikleyici ?? null, ...ek }, { merge: true }).catch(e => logger.warn("form nabız", e.message));
+  /* Sinyal anahtarı ayrı alanda gelir: eski sunucu sinyali başvuru sanmasın diye (orada 403 alır) */
+  if (!esit(b.nabiz ? (b.nabizAnahtar || b.anahtar) : b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
+  /* Formdaki script düzenli "çalışıyorum" sinyali yollar; koç uygulamasında durum ve uyarı için */
+  const nabizYaz = (ek) => db.doc("koc/form").set({ sonNabiz: new Date().toISOString(), ...(b.nabiz ? { tetikleyici: b.tetikleyici ?? null, kontrol: b.kontrol ?? null } : {}), ...ek }, { merge: true }).catch(e => logger.warn("form nabız", e.message));
   if (b.nabiz) { await nabizYaz({ uyarildi: null }); res.status(200).json({ ok: true, nabiz: true }); return; }
   const cevaplar = (Array.isArray(b.cevaplar) ? b.cevaplar : []).slice(0, 40).map(x => ({ s: cut(x && x.s, 200), c: cut(x && x.c, 2000) })).filter(x => x.s);
   const bul = re => (cevaplar.find(x => re.test(x.s)) || {}).c || "";
