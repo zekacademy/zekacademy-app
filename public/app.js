@@ -343,9 +343,10 @@ function pushState(){
   if(isIOS() && !isStandalone()) return "ios";
   if(!("Notification" in window) || pushOk === false) return null;
   if(Notification.permission === "denied") return "red";
-  if(Notification.permission === "granted") return "hazir";
+  if(Notification.permission === "granted") return pushKayitli() ? "hazir" : "ac"; /* izin var ama cihaz bağlanmamışsa yine göster */
   return "ac";
 }
+const pushKayitli = () => { try{ return !!localStorage.getItem("zk-push"); }catch(e){ return true; } };
 async function enablePush(){
   if(!(await pushSupported())){ toast("Bu tarayıcı bildirimleri desteklemiyor"); return; }
   const perm = await Notification.requestPermission();
@@ -365,15 +366,17 @@ async function refreshPush(){
   try{ if(!(await pushSupported()) || Notification.permission !== "granted") return;
     const reg = await navigator.serviceWorker.register("/sw.js");
     const token = await getToken(getMessaging(fbApp), { vapidKey, serviceWorkerRegistration: reg }); if(!token) return;
+    let yeni = false; try{ yeni = localStorage.getItem("zk-push") !== token; localStorage.setItem("zk-push", token); }catch(e){}
     if(A()) await setDoc(doc(fdb, "coachDevices", token.slice(-40).replace(/[^A-Za-z0-9_-]/g,"_")), { token, at: nowISO(), ua: navigator.userAgent.slice(0,120) });
     else { const s = st(); if(s && !(s.bildirim && s.bildirim.tokens && s.bildirim.tokens[token])){ s.bildirim = s.bildirim || {}; s.bildirim.tokens = {...(s.bildirim.tokens||{}), [token]: nowISO()}; s.bildirim.izin = "granted"; save(); } }
+    if(yeni) render(true);
   }catch(e){ console.warn("push yenileme", e); }
 }
 function pushCard(){
   const k = pushState(); if(!k || k === "hazir") return "";
   if(k === "ios") return `<div class="card" style="background:var(--acs);border:0"><h3>${icon("bell","sm")} Bildirimleri almak için</h3><p class="muted small" style="margin:6px 0 0">iPhone’da önce uygulamayı ana ekrana ekle: Safari’de alttaki <b>Paylaş</b> simgesine dokun → <b>Ana Ekrana Ekle</b>. Sonra uygulamayı ana ekrandaki simgeden aç.</p></div>`;
   if(k === "red") return `<div class="card"><h3>${icon("bell","sm")} Bildirimler kapalı</h3><p class="muted small" style="margin:6px 0 0">Bildirim izni reddedilmiş. Açmak için telefonun ayarlarından bu uygulamanın bildirim iznini aç.</p></div>`;
-  return `<div class="card" style="background:var(--acs);border:0"><div class="sech"><h3>${icon("bell","sm")} Bildirimleri aç</h3></div><p class="muted small" style="margin:6px 0 10px">${A()?"Yeni öğrenci kaydolduğunda bu cihaza bildirim gelsin.":"Koçunun sabah mesajları ve akşam hatırlatmaları telefonuna gelsin."}</p><button class="btn sm pri" data-act="pushon">Bildirimlere izin ver</button></div>`;
+  return `<div class="card pushbar"><span class="pbi">${icon("bell","sm")}</span><div style="min-width:0;flex:1"><b>Bildirimler kapalı</b><div class="small muted">${A()?"Yeni başvuru ve ödeme bildirimleri bu cihaza gelsin.":"Koçunun mesajları ve hatırlatmalar telefonuna gelsin."}</div></div><button class="btn sm pri" data-act="pushon">Aç</button></div>`;
 }
 
 /* ---------- Hesaplar ---------- */
@@ -1367,6 +1370,7 @@ function cOzet(){
   return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, bellBtn(unread))}
   <div class="page wide">
     <div class="hello"><p class="small" style="margin:0">${longToday()}</p><h1>Günaydın hocam</h1><p>Öğrencilerinin bu haftaki durumu. Bu sayfayı sadece sen görürsün.</p></div>
+    ${pushCard()}
     <div class="kpis">
       ${tile("t-a","users",n,"Öğrenci")}
       ${tile("t-g","target",avgP==null?"—":"%"+Math.round(avgP*100),"Ortalama program uyumu")}
@@ -1599,7 +1603,6 @@ function cMore(){
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
-    ${pushCard()}
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="sinav"><span class="ri">${icon("cal","sm")}</span><div><div class="rt">YKS tarihi</div><div class="rs">${trDate(S.settings.examDate)}${S.settings.tahmini?" (tahmini)":""} · ${examDays()} gün</div></div><span class="rx">${icon("chev","sm")}</span></button>
