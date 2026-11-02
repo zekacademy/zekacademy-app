@@ -1760,7 +1760,15 @@ function onSettingClick(a, b){
         <b>${r.cihazlar.length ? `${r.gonderildi}/${r.cihazlar.length} cihaza gönderildi` : "Kayıtlı cihaz yok"}</b>${r.hatalar.length?` · <span style="color:var(--bad)">${esc([...new Set(r.hatalar.map(tr))].join(", "))}</span>`:""}
         <div class="muted" style="margin-top:4px">${r.cihazlar.map(c=>`${cihaz(c.ua)} · son yenileme ${c.at?shortDate(c.at.slice(0,10)):"-"}${c.silindi?" · <b style=\"color:var(--bad)\">silindi</b>":""}`).join("<br>") || "Bu cihazda “Bildirimleri aç / yenile”ye bas."}</div>
         ${r.gecmis.length?`<div style="margin-top:8px"><b>Son bildirim denemeleri</b><div class="muted">${r.gecmis.map(g=>`${new Date(g.at).toLocaleString("tr-TR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})} · ${esc(g.tur)} · ${g.gonderildi}/${g.cihaz} cihaz${g.hatalar&&g.hatalar.length?` · ${esc([...new Set(g.hatalar.map(tr))].join(", "))}`:""}`).join("<br>")}</div></div>`:""}</div>`;
-      toast(r.gonderildi ? "Test gönderildi; telefonuna gelmeli" : "Gönderilecek cihaz yok"); })
+      toast(r.gonderildi ? "Test gönderildi; telefonuna gelmeli" : "Gönderilecek cihaz yok");
+      if(r.gonderildi && r.mid){ o2.insertAdjacentHTML("beforeend", `<div class="fdurum" id="bt-ulas" style="margin-top:6px">Cihazlardan “ulaştı” onayı bekleniyor…</div>`); const t0 = Date.now(), bekle = r.cihazlar.map(c=>cihaz(c.ua));
+        const yokla = async () => { let al = []; try{ const d = await getDoc(doc(fdb,"koc","bildirim")); al = ((d.exists() && d.data().alindi) || []).filter(x=>x.mid===r.mid).map(x=>x.cihaz); }catch(_){}
+          const u = $("#bt-ulas"); if(!u) return; const kalan = [...bekle]; al.forEach(c=>{ const i = kalan.indexOf(c); if(i>=0) kalan.splice(i,1); });
+          const bitti = !kalan.length || Date.now()-t0 > 25000;
+          u.className = "fdurum " + (bitti ? (kalan.length ? "kotu" : "iyi") : "");
+          u.innerHTML = (al.length ? `Ulaştı: ${al.map(c=>`<b>${c}</b> ✓`).join(", ")}` : "") + (kalan.length ? `${al.length?"<br>":""}${bitti ? "Ulaşmadı" : "Bekleniyor"}: ${kalan.map(c=>`<b>${c}</b>`).join(", ")}${bitti ? " · bu cihazda tarayıcı/uygulama bildirim ayarını ya da pil tasarrufunu kontrol et" : "…"}` : "");
+          if(!bitti) setTimeout(yokla, 2500); };
+        setTimeout(yokla, 2500); } })
     .catch(e=>{ b.disabled = false; const o2 = $("#bt-out"); if(o2) o2.innerHTML = `<p class="err">Test gönderilemedi: ${esc(e.message||e)}</p>`; }); return true; }
   if(a==="tkadd"){ S.settings.takvim = [{bas:today(), bit:"", yayin:"", ad:""}, ...clone(takvim())]; saveSettings(); keepSettingsOpen(); return true; }
   if(a==="tkdel"){ const L = clone(takvim()); L.splice(+b.dataset.i,1); S.settings.takvim = L; saveSettings(); keepSettingsOpen(); return true; }
