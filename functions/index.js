@@ -29,12 +29,12 @@ function istanbulNow(){
 }
 
 /* Bir öğrencinin cihazlarına bildirim gönderir, geçersiz cihaz anahtarlarını temizler */
-async function pushTo(tokens, title, body, link = "/"){
+async function pushTo(tokens, title, body, link = "/", mid = ""){
   const list = [...new Set(tokens)].filter(Boolean);
   if (!list.length) return { sent: 0, bad: [] };
   const res = await getMessaging().sendEachForMulticast({
     tokens: list,
-    data: { title, body, link },
+    data: { title, body, link, ...(mid ? { mid } : {}) },
     webpush: { headers: { Urgency: "high", TTL: "21600" }, fcmOptions: { link } },
   });
   const bad = [], errors = [];
@@ -45,8 +45,9 @@ async function pushTo(tokens, title, body, link = "/"){
   return { sent: res.successCount, bad, errors };
 }
 /* Koç bildirimlerinin son durumu (Ayarlar → Bildirim testi'nde görünür) */
-async function kocBildirimDurum(tur, tokens, r){
-  const kayit = { at: new Date().toISOString(), tur, cihaz: [...new Set(tokens)].filter(Boolean).length, gonderildi: r.sent || 0, hatalar: r.errors || [], silinen: (r.bad || []).length };
+const yeniMid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+async function kocBildirimDurum(tur, tokens, r, mid = ""){
+  const kayit = { at: new Date().toISOString(), tur, mid, cihaz: [...new Set(tokens)].filter(Boolean).length, gonderildi: r.sent || 0, hatalar: r.errors || [], silinen: (r.bad || []).length };
   logger.info("koç bildirimi", kayit);
   const ref = db.doc("koc/bildirim"); const eski = ((await ref.get().catch(() => null))?.data() || {}).gecmis || [];
   await ref.set({ son: kayit, gecmis: [...eski, kayit].slice(-20) }).catch(e => logger.warn("bildirim durumu", e.message));
@@ -71,6 +72,7 @@ export const zamanliBildirim = onSchedule({ schedule: "*/15 * * * *", timeZone: 
   if (c.aksamAcik && due(c.aksamSaat, minutes, mark.aksam, date)) jobs.push("aksam");
   const odemeVakti = c.odemeAcik && due(c.odemeSaat, minutes, mark.odeme, date);
   const waKeys = Array.isArray(settings.paketler) ? settings.paketler.filter(p => p.tur === "whatsapp").map(p => p.k) : ["whatsapp"];
+  await formNabizKontrol().catch(e => logger.error("form nabız kontrol", e));
   if (c.gorusmeHatirlat) await gorusmeHatirlatmalari(date, minutes, waKeys).catch(e => logger.error("görüşme hatırlatma", e));
   if (!jobs.length && !odemeVakti) return;
   if (odemeVakti) { await markRef.set({ odeme: date }, { merge: true }); await odemeBildirimleri(c, date); }
@@ -143,24 +145,44 @@ async function odemeBildirimleri(c, date){
 /* Yeni öğrenci kaydı veya Google Form başvurusu → koça bildirim */
 export const yeniKayitBildirimi = onDocumentCreated("notifs/{id}", async (event) => {
   const n = event.data && event.data.data(); if (!n || !["kayit", "basvuru"].includes(n.type) || n.sessiz) return;
-  const tokens = await coachTokens();
+  const tokens = await coachTokens(), mid = yeniMid();
   const r = n.type === "basvuru"
-    ? await pushTo(tokens, "🟢 Yeni başvuru · Google Form", [n.name || "Yeni başvuru", n.hizmet, n.alan].filter(Boolean).join(" · "), "/?ac=bildirim")
-    : await pushTo(tokens, "Yeni öğrenci kaydı", `${n.name || "Bir öğrenci"} kaydoldu${n.alan ? ` · ${n.alan}` : ""}${n.sinif ? ` · ${n.sinif}` : ""}`, "/?ac=bildirim");
+    ? await pushTo(tokens, "🟢 Yeni başvuru · Google Form", [n.name || "Yeni başvuru", n.hizmet, n.alan].filter(Boolean).join(" · "), "/?ac=bildirim", mid)
+    : await pushTo(tokens, "Yeni öğrenci kaydı", `${n.name || "Bir öğrenci"} kaydoldu${n.alan ? ` · ${n.alan}` : ""}${n.sinif ? ` · ${n.sinif}` : ""}`, "/?ac=bildirim", mid);
   for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
-  await kocBildirimDurum(n.type === "basvuru" ? "Yeni başvuru" : "Yeni kayıt", tokens, r);
+  await kocBildirimDurum(n.type === "basvuru" ? "Yeni başvuru" : "Yeni kayıt", tokens, r, mid);
 });
 
+/* Bildirim telefona ulaştı mı? Service worker bildirimi gösterince buraya haber verir (sadece son gönderilen mesajlar kabul edilir) */
+export const bildirimAlindi = onRequest({ cors: false, maxInstances: 2, invoker: "public" }, async (req, res) => {
+  if (req.method !== "POST") { res.status(405).send("POST"); return; }
+  const b = req.body || {}, mid = String(b.mid || "").replace(/[^a-z0-9]/g, "").slice(0, 40);
+  const ref = db.doc("koc/bildirim"), d = (await ref.get()).data() || {};
+  if (!mid || !(d.gecmis || []).some(g => g.mid === mid)) { res.status(204).send(""); return; }
+  const ua = cut(b.ua, 160), cihaz = /iphone|ipad/i.test(ua) ? "iPhone" : /android/i.test(ua) ? "Android" : /mac/i.test(ua) ? "Mac" : /windows/i.test(ua) ? "Windows" : "Cihaz";
+  const alindi = [...(d.alindi || []), { mid, cihaz, at: new Date().toISOString(), izin: cut(b.izin, 20) }].slice(-40);
+  await ref.set({ alindi }, { merge: true }); res.status(204).send("");
+});
+/* Form bağlantısı 36 saatten uzun sinyal vermediyse koça bir kez bildirim */
+async function formNabizKontrol(){
+  const ref = db.doc("koc/form"), f = (await ref.get()).data(); if (!f || !f.sonNabiz) return; /* henüz yeni koda geçilmediyse sessiz */
+  const saat = (Date.now() - Date.parse(f.sonNabiz)) / 36e5; if (saat < 36 || f.uyarildi) return;
+  const tokens = await coachTokens();
+  const r = await pushTo(tokens, "⚠️ Form bağlantısı durmuş olabilir", "Google Form'dan " + Math.floor(saat) + " saattir sinyal gelmedi. Ayarlar → Google Form bağlantısı'ndan kontrol et.", "/?ac=ayarlar");
+  await kocBildirimDurum("Form uyarısı", tokens, r);
+  await ref.set({ uyarildi: new Date().toISOString() }, { merge: true });
+}
 /* Koç: bildirim testi — kayıtlı cihazlara deneme bildirimi gönderir, sonucu döndürür */
 export const bildirimTest = onCall(async (req) => {
   requireCoach(req);
   const docs = (await db.collection("coachDevices").get()).docs;
   const tokens = docs.map(d => d.data().token).filter(Boolean);
-  const r = await pushTo(tokens, "🔔 Test bildirimi", "Bildirimler bu cihaza ulaşıyor 👍", "/?ac=bildirim");
+  const mid = yeniMid();
+  const r = await pushTo(tokens, "🔔 Test bildirimi", "Bildirimler bu cihaza ulaşıyor 👍", "/?ac=bildirim", mid);
   for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
-  await kocBildirimDurum("Test", tokens, r);
+  await kocBildirimDurum("Test", tokens, r, mid);
   const son = ((await db.doc("koc/bildirim").get()).data() || {}).gecmis || [];
-  return { cihazlar: docs.map(d => ({ at: d.data().at || "", ua: d.data().ua || "", silindi: r.bad.includes(d.data().token) })), gonderildi: r.sent, hatalar: r.errors, gecmis: son.slice(-8).reverse() };
+  return { mid, cihazlar: docs.map(d => ({ at: d.data().at || "", ua: d.data().ua || "", silindi: r.bad.includes(d.data().token) })), gonderildi: r.sent, hatalar: r.errors, gecmis: son.slice(-8).reverse() };
 });
 
 /* Sadece koçun çağırabileceği işlemler */
@@ -224,7 +246,11 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
   if (req.method !== "POST") { res.status(405).send("POST"); return; }
   const b = req.body || {};
   const kayitli = ((await db.doc("system/form").get()).data() || {}).anahtar;
-  if (!esit(b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
+  /* Sinyal anahtarı ayrı alanda gelir: eski sunucu sinyali başvuru sanmasın diye (orada 403 alır) */
+  if (!esit(b.nabiz ? (b.nabizAnahtar || b.anahtar) : b.anahtar, kayitli)) { res.status(403).send("anahtar"); return; }
+  /* Formdaki script düzenli "çalışıyorum" sinyali yollar; koç uygulamasında durum ve uyarı için */
+  const nabizYaz = (ek) => db.doc("koc/form").set({ sonNabiz: new Date().toISOString(), ...(b.nabiz ? { tetikleyici: b.tetikleyici ?? null, kontrol: b.kontrol ?? null } : {}), ...ek }, { merge: true }).catch(e => logger.warn("form nabız", e.message));
+  if (b.nabiz) { await nabizYaz({ uyarildi: null }); res.status(200).json({ ok: true, nabiz: true }); return; }
   const cevaplar = (Array.isArray(b.cevaplar) ? b.cevaplar : []).slice(0, 40).map(x => ({ s: cut(x && x.s, 200), c: cut(x && x.c, 2000) })).filter(x => x.s);
   const bul = re => (cevaplar.find(x => re.test(x.s)) || {}).c || "";
   /* Formdaki gönderim zamanı (eski başvurular aktarılırken korunur) */
@@ -245,5 +271,6 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
     try { await db.doc(`notifs/f_${yid}`).create(doc); }
     catch (e) { if (e.code === 6 || /already exists/i.test(e.message)) { res.status(200).json({ ok: true, zatenVar: true }); return; } throw e; }
   } else await db.collection("notifs").add(doc);
+  if (!b.sessiz && !b.deneme) await nabizYaz({ sonBasvuru: new Date().toISOString(), uyarildi: null });
   res.status(200).json({ ok: true });
 });

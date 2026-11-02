@@ -292,7 +292,7 @@ function init(){
     if(!user){ S.role=null; S.me=null; render(); return; }
     if(user.email === COACH_EMAIL){
       S.role = "admin"; S.me = null; S.view = "ozet";
-      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor")));
+      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))); unsubs.push(onSnapshot(doc(fdb,"koc","form"), d=>{ S.formDurum = d.exists() ? d.data() : null; render(true); }, e=>console.warn("form durumu", e)));
     } else {
       S.role = "student"; S.me = user.uid; S.view = "home";
       const need = ["students","settings"];
@@ -923,6 +923,16 @@ async function formKod(yenile){
   if(out) out.innerHTML = formKodHTML();
   if(yenile) toast("Yeni anahtar oluşturuldu. Formdaki kodu da güncellemelisin.");
 }
+/* Form bağlantısı sağlığı (koc/form: sonNabiz, sonBasvuru, tetikleyici) */
+function formSaglik(){ const f = S.formDurum; if(!f || !f.sonNabiz) return {k:"yok"}; const saat = (Date.now() - Date.parse(f.sonNabiz))/36e5;
+  if(f.tetikleyici === false) return {k:"kotu", saat, neden:"tetikleyici yok"};
+  if(f.kontrol === false) return {k:"kotu", saat, neden:"yedek kontrol yok"}; return {k: saat > 36 ? "kotu" : "iyi", saat}; }
+const saatYazi = h => h < 1 ? "1 saatten kısa süre önce" : h < 48 ? `${Math.floor(h)} saat önce` : `${Math.floor(h/24)} gün önce`;
+function formDurumYazi(){ const d = formSaglik(); return d.k==="iyi" ? `Çalışıyor ✓ · son sinyal ${saatYazi(d.saat)}` : d.k==="kotu" ? `⚠️ Sorun var · ${d.neden || "son sinyal "+saatYazi(d.saat)}` : "Sinyal yok · kodu güncelle"; }
+function formDurumKart(){ const d = formSaglik(), f = S.formDurum || {};
+  if(d.k==="iyi") return `<div class="fdurum iyi">${icon("check","xs")} Bağlantı çalışıyor · son sinyal ${saatYazi(d.saat)}${f.sonBasvuru?` · son başvuru ${saatYazi((Date.now()-Date.parse(f.sonBasvuru))/36e5)}`:""}</div>`;
+  if(d.k==="kotu") return `<div class="fdurum kotu">⚠️ ${d.neden==="tetikleyici yok" ? "Formdaki otomatik gönderme tetikleyicisi kapalı." : d.neden==="yedek kontrol yok" ? "Formdaki 10 dakikalık yedek kontrol kapalı." : `Formdan ${d.saat<48?Math.floor(d.saat)+" saattir":Math.floor(d.saat/24)+" gündür"} sinyal gelmedi.`} Apps Script'te <b>kur</b>'u yeniden çalıştır; kaçan başvurular için <b>sonBasvurulariAktar</b>.</div>`;
+  return `<div class="fdurum">Formdaki kod henüz sinyal yollamıyor. Aşağıdan yeni kodu hazırlayıp forma yapıştır ve <b>kur</b>'u çalıştır.</div>`; }
 function formKodHTML(){ if(!FORMKOD) return "";
   const kod = `// Zekacademy · Google Form → uygulama bildirimi
 const ADRES = "${FORMKOD.url}";
@@ -931,6 +941,28 @@ const ANAHTAR = "${FORMKOD.anahtar}";
 // Form gönderilince otomatik çalışır
 function gonder(e) {
   yolla(e.response, false);
+}
+
+// Google bazen form tetikleyicisini atlar. Bu 10 dakikada bir kaçan başvuru var mı bakar
+// ve varsa gönderir. Zaten ulaşmış olanlar sunucuda tekrar eklenmez, bildirim de tekrar gitmez.
+function kontrol() {
+  var p = PropertiesService.getScriptProperties();
+  var son = Number(p.getProperty("sonKontrol")) || (Date.now() - 2 * 3600 * 1000);
+  var simdi = Date.now();
+  FormApp.getActiveForm().getResponses(new Date(son - 30 * 60 * 1000)).forEach(function (r) {
+    Logger.log(r.getTimestamp() + " → " + yolla(r, false));
+  });
+  p.setProperty("sonKontrol", String(simdi));
+  if (simdi - (Number(p.getProperty("sonNabiz")) || 0) > 6 * 3600 * 1000) { nabiz(); p.setProperty("sonNabiz", String(simdi)); }
+}
+
+// Uygulamaya "bağlantı çalışıyor" sinyali yollar (gelmezse koça uyarı gider)
+function nabiz() {
+  var adlar = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
+  var r = UrlFetchApp.fetch(ADRES, { method: "post", contentType: "application/json", muteHttpExceptions: true,
+    payload: JSON.stringify({ nabizAnahtar: ANAHTAR, nabiz: true,
+      tetikleyici: adlar.indexOf("gonder") >= 0, kontrol: adlar.indexOf("kontrol") >= 0 }) });
+  Logger.log("Sinyal: " + r.getResponseCode() + " " + r.getContentText());
 }
 
 function yolla(r, sessiz) {
@@ -946,10 +978,14 @@ function yolla(r, sessiz) {
   return cevap.getResponseCode() + " " + cevap.getContentText();
 }
 
-// 1) Önce bunu bir kez çalıştır: form gönderilince gonder() otomatik çalışsın
+// 1) Önce bunu bir kez çalıştır: form gönderilince gonder() çalışsın, kontrol() 10 dakikada bir yedek baksın
 function kur() {
-  ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
+  var tut = ["gonder", "nabiz", "kontrol"];
+  ScriptApp.getProjectTriggers().forEach(function (t) { if (tut.indexOf(t.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger("gonder").forForm(FormApp.getActiveForm()).onFormSubmit().create();
+  ScriptApp.newTrigger("kontrol").timeBased().everyMinutes(10).create();
+  PropertiesService.getScriptProperties().setProperty("sonKontrol", String(Date.now() - 3 * 24 * 3600 * 1000)); // ilk kontrolde son 3 günde kaçanlar bildirilir
+  nabiz();
 }
 
 // 2) Formdaki son 13 başvuruyu uygulamaya aktarır (bildirim göndermeden).
@@ -976,7 +1012,7 @@ function deneme() {
   return `<ol class="small" style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">
       <li>Google Form'u bilgisayarda düzenleme modunda aç → sağ üstteki <b>⋮</b> → <b>Apps Script</b> (Komut dosyası düzenleyici).</li>
       <li>Açılan sayfadaki her şeyi sil, aşağıdaki kodu yapıştır, <b>Kaydet</b>'e bas.</li>
-      <li>Üstteki işlev listesinden <b>kur</b>'u seç → <b>Çalıştır</b>. Google izin isteyecek: hesabını seç → <b>Gelişmiş</b> → <b>Git (güvenli değil)</b> → <b>İzin ver</b>. Bu senin kendi kodun olduğu için çıkan bir uyarı.</li>
+      <li>Üstteki işlev listesinden <b>kur</b>'u seç → <b>Çalıştır</b>. (Kodu her güncellediğinde <b>kur</b>'u yeniden çalıştır.) Google izin isteyecek: hesabını seç → <b>Gelişmiş</b> → <b>Git (güvenli değil)</b> → <b>İzin ver</b>. Bu senin kendi kodun olduğu için çıkan bir uyarı.</li>
       <li>Denemek için <b>deneme</b>'yi seç → <b>Çalıştır</b>. Birkaç saniye içinde Bildirimler'de yeşil "Yeni başvuru" görünür.</li>
       <li>İstersen <b>sonBasvurulariAktar</b>'ı seç → <b>Çalıştır</b>: formdaki son 13 başvuru, bildirim göndermeden Başvurular'a eklenir.</li></ol>
     <pre class="kod" id="formKodPre">${esc(kod)}</pre>
@@ -1175,6 +1211,7 @@ function gununOzeti(){
   if(rp.length) items.push({ic:"chat", k:"", t:(n=>`<b>${rp.length}</b> haftalık rapor günü · ${n===rp.length?"hepsi geldi":n?`${n} geldi, ${rp.length-n} bekleniyor`:"bekleniyor"}`)(rp.filter(g=>g.durum==="yapildi").length), act:`data-act="gday" data-v="${t}"`});
   let bugun = 0, gecik = 0; S.students.forEach((_,id)=>{ const d = odemeDurum(id); if(d.d===t && d.k==="turuncu") bugun++; if(d.k==="kirmizi"||d.k==="pembe") gecik++; });
   if(bugun || gecik) items.push({ic:"cal", k:gecik?"kotu":"", t:[bugun?`<b>${bugun}</b> ödeme günü bugün`:"", gecik?`<b>${gecik}</b> geciken ödeme`:""].filter(Boolean).join(" · "), act:`data-act="go" data-v="odeme"`});
+  if(formSaglik().k==="kotu") items.push({ic:"alert", k:"kotu", t:`<b>Google Form bağlantısı</b> durmuş olabilir · ${esc(formDurumYazi().replace("⚠️ Sorun var · ",""))}`, act:`data-act="go" data-v="ayarlar"`});
   const yb = [...S.notifs.values()].filter(n=>n.type==="basvuru" && (n.durum||"yeni")==="yeni").length;
   if(yb) items.push({ic:"user", k:"iyi", t:`<b>${yb}</b> yeni başvuru bekliyor`, act:`data-act="go" data-v="basvuru"`});
   const isaret = [], sure = [];
@@ -1649,7 +1686,8 @@ function cSettings(){
       <div class="two"><label class="f">IBAN<input type="text" data-setb2="iban" value="${esc(m.iban)}"></label><label class="f">Alıcı adı<input type="text" data-setb2="alici" value="${esc(m.alici)}"></label></div>
       <label class="f">Ödeme notu<textarea data-setb2="odemeNot" rows="3">${esc(m.odemeNot)}</textarea></label>
       <p class="faint small" style="margin:0">WhatsApp'ta *yıldız arası* kalın görünür.</p>`, "bmesaj"))(bmesaj())}
-    ${sec("Google Form bağlantısı","Form doldurulunca sana yeşil bildirim gelsin",`<p class="muted small" style="margin:0">Başvuru formun her doldurulduğunda Bildirimler'e yeşil bir “Yeni başvuru” düşer ve telefonuna bildirim gelir. Kurulum bir kere yapılır.</p>
+    ${sec("Google Form bağlantısı", formDurumYazi(), `<p class="muted small" style="margin:0">Başvuru formun her doldurulduğunda Bildirimler'e yeşil bir “Yeni başvuru” düşer ve telefonuna bildirim gelir. Formdaki kod günde iki kez “çalışıyorum” sinyali yollar; 36 saat sinyal gelmezse sana uyarı gider.</p>
+      ${formDurumKart()}
       <div id="formKodOut">${FORMKOD?formKodHTML():`<div class="pills"><button class="btn sm pri" data-act="formkod">Bağlantı kodunu hazırla</button></div>`}</div>`)}
     ${sec("Öğrencileri temizle","Örnek / eski öğrenci kayıtlarını toplu sil",`<p class="muted small" style="margin:0">Seçtiğin öğrencilerin tüm verisi ve giriş hesabı kalıcı olarak silinir (kullanıcı adları yeniden kullanılabilir). Başvurular etkilenmez. Silmeden önce Yedekleme'den yedek indirmen önerilir.</p>
       <div class="tmzl">${sortedStudents().map(([id,x])=>`<label class="inline"><input type="checkbox" class="tmz" value="${id}">${esc(x.name)} <span class="faint small">${x.kullanici?"@"+esc(x.kullanici):""}</span></label>`).join("") || `<span class="faint small">Öğrenci yok.</span>`}</div>
@@ -1739,7 +1777,15 @@ function onSettingClick(a, b){
         <b>${r.cihazlar.length ? `${r.gonderildi}/${r.cihazlar.length} cihaza gönderildi` : "Kayıtlı cihaz yok"}</b>${r.hatalar.length?` · <span style="color:var(--bad)">${esc([...new Set(r.hatalar.map(tr))].join(", "))}</span>`:""}
         <div class="muted" style="margin-top:4px">${r.cihazlar.map(c=>`${cihaz(c.ua)} · son yenileme ${c.at?shortDate(c.at.slice(0,10)):"-"}${c.silindi?" · <b style=\"color:var(--bad)\">silindi</b>":""}`).join("<br>") || "Bu cihazda “Bildirimleri aç / yenile”ye bas."}</div>
         ${r.gecmis.length?`<div style="margin-top:8px"><b>Son bildirim denemeleri</b><div class="muted">${r.gecmis.map(g=>`${new Date(g.at).toLocaleString("tr-TR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})} · ${esc(g.tur)} · ${g.gonderildi}/${g.cihaz} cihaz${g.hatalar&&g.hatalar.length?` · ${esc([...new Set(g.hatalar.map(tr))].join(", "))}`:""}`).join("<br>")}</div></div>`:""}</div>`;
-      toast(r.gonderildi ? "Test gönderildi; telefonuna gelmeli" : "Gönderilecek cihaz yok"); })
+      toast(r.gonderildi ? "Test gönderildi; telefonuna gelmeli" : "Gönderilecek cihaz yok");
+      if(r.gonderildi && r.mid){ o2.insertAdjacentHTML("beforeend", `<div class="fdurum" id="bt-ulas" style="margin-top:6px">Cihazlardan “ulaştı” onayı bekleniyor…</div>`); const t0 = Date.now(), bekle = r.cihazlar.map(c=>cihaz(c.ua));
+        const yokla = async () => { let al = []; try{ const d = await getDoc(doc(fdb,"koc","bildirim")); al = ((d.exists() && d.data().alindi) || []).filter(x=>x.mid===r.mid).map(x=>x.cihaz); }catch(_){}
+          const u = $("#bt-ulas"); if(!u) return; const kalan = [...bekle]; al.forEach(c=>{ const i = kalan.indexOf(c); if(i>=0) kalan.splice(i,1); });
+          const bitti = !kalan.length || Date.now()-t0 > 25000;
+          u.className = "fdurum " + (bitti ? (kalan.length ? "kotu" : "iyi") : "");
+          u.innerHTML = (al.length ? `Ulaştı: ${al.map(c=>`<b>${c}</b> ✓`).join(", ")}` : "") + (kalan.length ? `${al.length?"<br>":""}${bitti ? "Ulaşmadı" : "Bekleniyor"}: ${kalan.map(c=>`<b>${c}</b>`).join(", ")}${bitti ? " · bu cihazda tarayıcı/uygulama bildirim ayarını ya da pil tasarrufunu kontrol et" : "…"}` : "");
+          if(!bitti) setTimeout(yokla, 2500); };
+        setTimeout(yokla, 2500); } })
     .catch(e=>{ b.disabled = false; const o2 = $("#bt-out"); if(o2) o2.innerHTML = `<p class="err">Test gönderilemedi: ${esc(e.message||e)}</p>`; }); return true; }
   if(a==="tkadd"){ S.settings.takvim = [{bas:today(), bit:"", yayin:"", ad:""}, ...clone(takvim())]; saveSettings(); keepSettingsOpen(); return true; }
   if(a==="tkdel"){ const L = clone(takvim()); L.splice(+b.dataset.i,1); S.settings.takvim = L; saveSettings(); keepSettingsOpen(); return true; }
