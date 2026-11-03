@@ -320,8 +320,14 @@ async function resimKucult(file, max, limit){ const img = await new Promise((res
   return data; }
 function startStudent(id){
   S.me=id; S.view="home"; S.day=today(); S.week=S.students.get(id) ? curStart(S.students.get(id)) : monday(new Date());
-  const s = S.students.get(id); if(s && s.lastSeen!==today()){ s.lastSeen = today(); persistDoc("students", id); }
+  girisKaydet();
 }
+/* Öğrencinin girişini kaydeder: son giriş saati + son 30 günün giriş günleri (15 dakikada en fazla bir yazma) */
+function girisKaydet(){ if(S.role!=="student" || !S.me) return; const s = S.students.get(S.me); if(!s) return;
+  const t = today(), son = Date.parse(s.sonGiris||"") || 0; if(s.lastSeen===t && Date.now()-son < 15*60e3) return;
+  const gg = {...(s.girisGun||{})}; gg[t] = (gg[t]||0) + 1; const sinir = addDays(t,-30); Object.keys(gg).forEach(d=>{ if(d < sinir) delete gg[d]; });
+  s.sonGiris = nowISO(); s.lastSeen = t; s.girisGun = gg; persistDoc("students", S.me); }
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible") girisKaydet(); });
 /* Koçun başka bir öğrenciye hesap açabilmesi için ikinci bir Firebase örneği (koçun oturumu etkilenmez) */
 let secAuth = null;
 function secondaryAuth(){ if(!secAuth){ const app2 = initializeApp(firebaseConfig, "ikincil"); secAuth = initializeAuth(app2, {persistence: inMemoryPersistence}); } return secAuth; }
@@ -407,6 +413,31 @@ function minutes(s, date, live=true){ let m = (s.gunluk||{})[date]||0; if(live &
 function weekStats(s, w){ let all=0,done=0,min=0; for(const d of pDays(s,w)){ const l=dayTasks(s,d); all+=l.length; done+=l.filter(t=>t.done).length; min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
 function active(s, d){ return minutes(s,d,false)>0 || dayTasks(s,d).some(t=>t.done) || (s.timer && iso(new Date(s.timer.start))===d); }
 function streak(s){ let c=0, d=today(); if(!active(s,d)) d=addDays(d,-1); while(active(s,d) && c<400){ c++; d=addDays(d,-1); } return c; }
+/* ---------- Giriş takibi (koç) ---------- */
+function girisGunleri(s){ const g = new Set(Object.keys(s.girisGun||{})); if(s.lastSeen) g.add(s.lastSeen);
+  Object.entries(s.gunluk||{}).forEach(([d,m])=>{ if(m>0) g.add(d); }); return g; }
+function girisDurum(s){ const son = s.sonGiris || "", gun = s.lastSeen || ([...girisGunleri(s)].sort().pop() || "");
+  if(!son && !gun) return {k:"hic", gun:null, yazi:"Hiç girmedi"};
+  const g = son ? iso(new Date(son)) : gun, fark = Math.round((new Date(today()+"T12:00:00")-new Date(g+"T12:00:00"))/864e5);
+  const saat = son && iso(new Date(son))===g ? " "+new Date(son).toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"}) : "";
+  const yazi = fark<=0 ? "Bugün"+saat : fark===1 ? "Dün"+saat : `${fark} gün önce`;
+  return {k: fark<=1 ? "iyi" : fark<3 ? "orta" : "kotu", gun:fark, yazi}; }
+function girisHatirlat(x, d){ const ad = ilkAd(x.name);
+  return d.k==="hic" ? girisMesaj(x) : `Merhaba ${ad} 👋 ${d.gun} gündür Zekacademy uygulamasına girmediğini gördüm. Bugünkü görevlerine bir göz atıp çalıştıklarını işaretler misin? Bir sorun varsa yaz, birlikte çözelim 💪`; }
+function cGiris(){ const t = today(), gunler = [...Array(14)].map((_,i)=>addDays(t, i-13));
+  const L = sortedStudents().map(([id,x])=>({id, x, d:girisDurum(x)}));
+  const sira = {hic:0, kotu:1, orta:2, iyi:3}; L.sort((a,b)=> sira[a.d.k]-sira[b.d.k] || (b.d.gun??0)-(a.d.gun??0) || a.x.name.localeCompare(b.x.name,"tr"));
+  const bugun = L.filter(r=>r.d.gun===0).length, kotu = L.filter(r=>r.d.k==="kotu").length, hic = L.filter(r=>r.d.k==="hic").length;
+  const satir = ({id,x,d}) => { const G = girisGunleri(x), uyar = d.k==="kotu" || d.k==="hic";
+    return `<div class="gtrow"><button class="gtad" data-act="open" data-id="${id}"><b>${esc(x.name)}</b><span class="small muted">@${esc(x.kullanici||"—")}${x.ilkSifre?" · ilk şifre değişmedi":""}</span></button>
+      <div class="gtsag"><span class="gtdur ${d.k}">${d.yazi}</span><div class="gtserit" aria-label="Son 14 gün">${gunler.map(g=>`<i class="${G.has(g)?"on":""} ${g===t?"bug":""}" title="${trDate(g)}${G.has(g)?" · girdi":""}"></i>`).join("")}</div></div>
+      ${uyar && x.tel ? `<a class="btn sm" href="${esc(waLink(x.tel, girisHatirlat(x,d)))}" target="_blank" rel="noopener" title="WhatsApp'tan hatırlat">${icon("chat","xs")}</a>` : `<span class="gtbos"></span>`}</div>`; };
+  return `${topbar(`<h1 class="ttl">Giriş takibi</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
+  <div class="page wide">
+    <div class="kpis kp3">${tile("t-g","users",`${bugun}/${L.length}`,"Bugün giren")}${tile("t-r","flame",kotu,"3+ gündür girmeyen")}${tile("t-w","eye",hic,"Hiç girmeyen")}</div>
+    <div class="card" style="padding:0">${L.length ? L.map(satir).join("") : `<div class="empty">Henüz öğrenci yok.</div>`}</div>
+    <p class="faint small" style="text-align:center">Şeritte son 14 gün var; dolu kutular öğrencinin uygulamayı açtığı günler. Saat bilgisi bu güncellemeden sonraki girişlerde görünür.</p>
+  </div>`; }
 function lastActivity(s){
   let best = s.lastSeen || "";
   Object.entries(s.gunluk||{}).forEach(([d,m])=>{ if(m>0 && d>best) best=d; });
@@ -1355,7 +1386,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
+  const pages = {ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["ogrenciler","users","Öğrenciler"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
 const sortedStudents = () => [...S.students.entries()].sort((a,b)=>a[1].name.localeCompare(b[1].name,"tr"));
@@ -1406,7 +1437,7 @@ function cDetail(){
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
   const body = {ozet:()=>cSummary(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
-  return `${topbar(`<div style="min-width:0;flex:1"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
+  return `${topbar(`<div style="min-width:0;flex:1"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
 /* ---------- Günlük görev listesi: her görev ayrı satır (metin kutusu gibi yazılır, Enter yeni satır) ---------- */
@@ -1600,6 +1631,7 @@ function cMore(){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
   <div class="page wide"><h3 class="msec">İşim</h3><div class="card">
     ${(b=>`<button class="row" data-act="go" data-v="basvuru"><span class="ri" style="background:#1E9E4A;color:#fff">${icon("user","sm")}</span><div><div class="rt">Başvurular</div><div class="rs">${b?`${b} başvuru süreçte`:"Süreçte başvuru yok"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(n=>n.type==="basvuru" && !["ogrenci","hayir"].includes(n.durum||"yeni")).length)}
+    ${(k=>`<button class="row" data-act="go" data-v="giris"><span class="ri" style="${k?"background:var(--bads);color:var(--bad)":"background:var(--acs);color:var(--ac)"}">${icon("eye","sm")}</span><div><div class="rt">Giriş takibi</div><div class="rs">${k?`${k} öğrenci 3+ gündür girmedi`:"Öğrenciler uygulamaya düzenli giriyor"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>["kotu","hic"].includes(girisDurum(x).k)).length)}
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
