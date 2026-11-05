@@ -2,7 +2,7 @@
    Açmak: ?demo=1   Kapatmak: ?demo=0
    Koç girişi: zekacademy / demo1234   Öğrenci girişi: demo / 123456 */
 (function(){
-  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "2") return;
+  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "4") return;
   var gun = 864e5, bugun = new Date(); bugun.setHours(12,0,0,0);
   function iso(d){ var x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0,10); }
   function ekle(d, n){ return iso(new Date(new Date(d + "T12:00:00").getTime() + n*gun)); }
@@ -76,11 +76,28 @@
   db["coachNotes/demo1"].odeme.odenen[ekle(t,-70)] = {t:ekle(t,-70), tutar:6000};
   db["coachNotes/demo1"].odeme.odenen[ekle(t,-40)] = {t:ekle(t,-40), tutar:6000};
   db["coachNotes/demo1"].odeme.odenen[ekle(t,-10)] = {t:ekle(t,-10), tutar:6000};
+  /* Örnek sohbetler */
+  function sohbet(sid, liste, okK, okO){ var son = liste[liste.length-1];
+    liste.forEach(function(m, i){ db["sohbetler/"+sid+"/mesajlar/"+sid+"m"+i] = m; });
+    db["sohbetler/"+sid] = {sid:sid, son:{metin:son.metin, at:son.at, kim:son.kim}, okunmadiKoc:okK, okunmadiOgr:okO, kocGordu: okK ? liste[0].at : son.at, ogrGordu: okO ? liste[0].at : son.at}; }
+  function z(gunOnce, saat){ var d = new Date(Date.now() - gunOnce*gun); var p = saat.split(":"); d.setHours(+p[0], +p[1], 0, 0); if(d.getTime() > Date.now() - 6e4) d = new Date(Date.now() - (gunOnce ? gunOnce*gun : (10 - (+p[1] % 10)) * 6e4)); return d.toISOString(); }
+  sohbet("demo1", [
+    {kim:"koc", metin:"Merhaba Elif 👋 Bu haftanın programını güncelledim, paragraf rutinini hiç aksatmayalım.", at:z(2,"18:05")},
+    {kim:"ogr", metin:"Tamam hocam, teşekkürler! Türev konusunda biraz zorlanıyorum ama.", at:z(2,"18:20")},
+    {kim:"koc", metin:"Normal, türev ilk başta herkesi zorlar. Bu hafta Rehber Matematik'in türev videolarını izleyip 40 soru çöz, takıldığın yeri buradan fotoğrafla at.", at:z(2,"18:31")},
+    {kim:"ogr", metin:"Hocam dünkü 3D denemesinde 86 net yaptım 🎉", at:z(0,"09:12")},
+    {kim:"ogr", metin:"Matematikte 27 net, ilk defa 25'i geçtim!", at:z(0,"09:13")}
+  ], 2, 0);
+  sohbet("demo2", [
+    {kim:"koc", metin:"Cumartesi 10:00'da TYT denemesi var, herkes kronometreyle çözsün 💪", at:z(1,"20:00"), duyuru:true},
+    {kim:"ogr", metin:"Tamamdır hocam 👍", at:z(1,"20:40")}
+  ], 0, 0);
+  db["sohbetler/demo1/mesajlar/demo1duy"] = {kim:"koc", metin:"Cumartesi 10:00'da TYT denemesi var, herkes kronometreyle çözsün 💪", at:z(1,"20:00"), duyuru:true};
   localStorage.setItem("mockDb", JSON.stringify(db));
   localStorage.setItem("mockUsers", JSON.stringify({"zekacademy@app.zekacademy.com":{uid:"coach1", p:"demo1234"}, "demo@app.zekacademy.com":{uid:"demo1", p:"123456"},
     "mertornek@app.zekacademy.com":{uid:"demo2", p:"123456"}, "zeynepornek@app.zekacademy.com":{uid:"demo3", p:"123456"}}));
   localStorage.removeItem("mockUser");
-  localStorage.setItem("zk-demo-v", "2");
+  localStorage.setItem("zk-demo-v", "4");
 })();
 document.addEventListener("DOMContentLoaded", function(){
   var b = document.createElement("div");

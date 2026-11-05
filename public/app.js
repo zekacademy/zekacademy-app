@@ -282,8 +282,8 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
     if(deg){ n++; persistDoc("students", id, 0); } });
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
-function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
-function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
+function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
+function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
 
 let authResolved = false;
 function init(){
@@ -292,13 +292,13 @@ function init(){
     if(!user){ S.role=null; S.me=null; render(); return; }
     if(user.email === COACH_EMAIL){
       S.role = "admin"; S.me = null; S.view = "ozet";
-      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))); unsubs.push(onSnapshot(doc(fdb,"koc","form"), d=>{ S.formDurum = d.exists() ? d.data() : null; render(true); }, e=>console.warn("form durumu", e)));
+      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))); msgIzle(); unsubs.push(onSnapshot(doc(fdb,"koc","form"), d=>{ S.formDurum = d.exists() ? d.data() : null; render(true); }, e=>console.warn("form durumu", e)));
     } else {
       S.role = "student"; S.me = user.uid; S.view = "home";
       const need = ["students","settings"];
       unsubs.push(onSnapshot(doc(fdb,"students",user.uid), s=>{ if(!dirty.has("students/"+user.uid)){ if(s.exists()){ const v = JSON.parse(JSON.stringify(s.data())); S.students.set(user.uid, v); BASE.set("students/"+user.uid, JSON.parse(JSON.stringify(v))); } else S.students.delete(user.uid); } loaded.students=true; checkReady(need); render(true); },
         e=>{ console.error(e); loaded.students=true; checkReady(need); render(); }));
-      watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("sid","==",user.uid)));
+      watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("sid","==",user.uid))); msgIzle();
     }
     render();
   });
@@ -551,8 +551,9 @@ function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
-  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
+  const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
   const nots = studentNotices(s).length;
+  if(S.view==="mesaj") return `<div class="shell msgshell">${sMesaj()}</div>`;
   return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Deneme takvimi (Ayarlar'dan düzenlenir) + öğrencinin yazılıları ---------- */
@@ -578,7 +579,7 @@ function sHome(s){
   const PD = pDays(s, curStart(s)), tyt = exams(s,"TYT").slice(-5), tmx = Math.max(60, ...tyt.map(tytTotal));
   return `<header class="hhead"><div class="hhin">
       <div class="hrow"><span class="hav">${esc(initials(s.name))}</span><div class="hname"><span>Merhaba <b>${esc(firstName(s.name))}</b></span><small>${longToday()}</small></div><span class="spacer"></span>
-        <span class="hchip" title="Çalışma serisi">${icon("flame","xs")}<b class="num">${streak(s)}</b></span>${bellBtn(nots.length)}</div>
+        <span class="hchip" title="Çalışma serisi">${icon("flame","xs")}<b class="num">${streak(s)}</b></span>${msgBtn()}${bellBtn(nots.length)}</div>
       <div class="wstrip">${PD.map(d=>{ const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
         return `<button class="dbtn ${d===t?"today":""}" data-act="hgun" data-v="${d}" style="--p:${l.length?Math.round(dn/l.length*100):0}">${GUNK[dIdx(d)]}<b class="num">${dNum(d)}</b>${l.length?`<i class="${dn===l.length?"":"p"}"></i>`:""}</button>`; }).join("")}</div>
     </div></header>
@@ -644,6 +645,7 @@ function sMore(s){
       ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span><div><div class="rt">Soru Çözüm</div><div class="rs">Fotoğrafla, yapay zekâ adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="go" data-v="mesaj"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("chat","sm")}</span><div><div class="rt">Koçuma yaz</div><div class="rs">${msgOkunmadi(S.me)?`${msgOkunmadi(S.me)} yeni mesaj`:"Uygulamadan koçunla mesajlaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="tur" data-v="0" data-l="tur"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="tur" data-v="0" data-l="yeni"><span class="ri">${icon("flame","sm")}</span><div><div class="rt">Yenilikler</div><div class="rs">Son eklenen özellikler</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1398,7 +1400,8 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
+  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
+  if(S.view==="sohbet") return `<div class="shell msgshell">${cSohbet()}</div>`;
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["ogrenciler","users","Öğrenciler"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
 const sortedStudents = () => [...S.students.entries()].sort((a,b)=>a[1].name.localeCompare(b[1].name,"tr"));
@@ -1410,7 +1413,7 @@ function cOzet(){
   const att = all.filter(x=>x.m.score>0).sort((a,b)=>b.m.score-a.m.score);
   const q = normName(S.q);
   const rows = all.filter(x=>!q || normName(x.s.name).includes(q)).sort((a,b)=>b.m.score-a.m.score || a.s.name.localeCompare(b.s.name,"tr"));
-  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, bellBtn(unread))}
+  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, msgBtn()+bellBtn(unread))}
   <div class="page wide">
     <div class="hello"><p class="small" style="margin:0">${longToday()}</p><h1>Günaydın hocam</h1><p>Öğrencilerinin bu haftaki durumu. Bu sayfayı sadece sen görürsün.</p></div>
     ${pushCard()}
@@ -1449,7 +1452,7 @@ function cDetail(){
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
   const body = {ozet:()=>cSummary(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
-  return `${topbar(`<div class="tttl"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
+  return `${topbar(`<div class="tttl"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="msgogr" data-id="${S.cur}" aria-label="Uygulamadan mesaj">${icon("chat")}${msgOkunmadi(S.cur)?`<span class="dot">${msgOkunmadi(S.cur)}</span>`:""}</button><button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
 /* ---------- Günlük görev listesi: her görev ayrı satır (metin kutusu gibi yazılır, Enter yeni satır) ---------- */
@@ -1645,6 +1648,7 @@ function cMore(){
     ${(b=>`<button class="row" data-act="go" data-v="basvuru"><span class="ri" style="background:#1E9E4A;color:#fff">${icon("user","sm")}</span><div><div class="rt">Başvurular</div><div class="rs">${b?`${b} başvuru süreçte`:"Süreçte başvuru yok"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(n=>n.type==="basvuru" && !["ogrenci","hayir"].includes(n.durum||"yeni")).length)}
     ${(k=>`<button class="row" data-act="go" data-v="giris"><span class="ri" style="${k?"background:var(--bads);color:var(--bad)":"background:var(--acs);color:var(--ac)"}">${icon("eye","sm")}</span><div><div class="rt">Giriş takibi</div><div class="rs">${k?`${k} öğrenci 3+ gündür girmedi`:"Öğrenciler uygulamaya düzenli giriyor"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>["kotu","hic"].includes(girisDurum(x).k)).length)}
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
+    ${(n=>`<button class="row" data-act="go" data-v="mesajlar"><span class="ri" style="${n?"background:var(--acs);color:var(--ac)":""}">${icon("chat","sm")}</span><div><div class="rt">Mesajlar${n?` <span class="pill ac">${n} yeni</span>`:""}</div><div class="rs">Öğrencilerinle uygulama içinden yazış, duyuru gönder</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(msgToplamOkunmadi())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1814,6 +1818,97 @@ function cAiPanel(){
 async function aiEkHak(sid){ const id = `${aiAy()}_${sid}`, k = AIP.kul.find(z=>z.id===id) || {}, ek = (k.ekHak||0) + 10;
   try{ await setDoc(doc(fdb, "aiKullanim", id), { sid, ay: aiAy(), ekHak: ek }, { merge: true }); const i = AIP.kul.findIndex(z=>z.id===id); if(i>=0) AIP.kul[i] = {...AIP.kul[i], ekHak: ek}; else AIP.kul.push({id, sid, ay:aiAy(), ekHak: ek}); toast(`${S.students.get(sid)?.name || "Öğrenci"} · +10 soru hakkı verildi`); render(); }
   catch(e){ toast("Hak eklenemedi"); } }
+
+/* ---------- Mesajlaşma (koç ↔ öğrenci, birebir) ---------- */
+const DEF_HAZIR = ["Programını güncelledim, bakar mısın? 📋","Görüşmemiz yarın, saatini unutma ⏰","Harika gidiyorsun, aynen devam! 💪","Deneme sonucunu buraya at, birlikte analiz edelim 📊","Bugün çalışma süreni girmeyi unutma ⏱️"];
+const MSG = { sid:"", liste:[], un:null, taslak:{}, foto:null, fotoOn:"", gonderiyor:false, ilk:true, buyuk:"" };
+const msgOkunmadi = sid => { const c = S.sohbet && S.sohbet.get(sid); return c ? (A() ? c.okunmadiKoc||0 : c.okunmadiOgr||0) : 0; };
+const msgToplamOkunmadi = () => A() ? [...(S.sohbet||new Map()).values()].reduce((a,c)=>a+(c.okunmadiKoc||0),0) : msgOkunmadi(S.me);
+function msgIzle(){ S.sohbet = new Map();
+  const ok = snap => { (snap.docs||[]).forEach(d=>S.sohbet.set(d.id, d.data())); };
+  if(A()) unsubs.push(onSnapshot(collection(fdb,"sohbetler"), q=>{ S.sohbet = new Map(); ok(q); msgOkuIsaretle(); render(true); }, e=>console.warn("sohbetler", e)));
+  else unsubs.push(onSnapshot(doc(fdb,"sohbetler",S.me), d=>{ S.sohbet = new Map(d.exists() ? [[S.me, d.data()]] : []); msgOkuIsaretle(); render(true); }, e=>console.warn("sohbet", e))); }
+function msgAc(sid){
+  if(MSG.sid===sid && MSG.un) return; if(MSG.un){ try{ MSG.un(); }catch(e){} }
+  MSG.sid = sid; MSG.liste = []; MSG.ilk = true; MSG.foto = null; MSG.fotoOn = "";
+  MSG.un = onSnapshot(collection(fdb,"sohbetler",sid,"mesajlar"), q=>{
+    const eskiN = MSG.liste.length; MSG.liste = q.docs.map(d=>({id:d.id, ...d.data()})).sort((a,b)=>a.at<b.at?-1:1);
+    const ta = $("#msgYaz"), odak = ta && document.activeElement===ta, pos = ta ? ta.selectionStart : 0;
+    if(S.view==="mesaj" || S.view==="sohbet"){ render(); if(odak){ const t = $("#msgYaz"); if(t){ t.focus(); try{ t.setSelectionRange(pos,pos); }catch(e){} } }
+      if(MSG.ilk || MSG.liste.length > eskiN) msgAsagi(MSG.ilk ? "auto" : "smooth"); MSG.ilk = false; }
+    msgOkuIsaretle(); }, e=>console.warn("mesajlar", e)); }
+function msgKapat(){ if(MSG.un){ try{ MSG.un(); }catch(e){} } MSG.un = null; MSG.sid = ""; }
+function msgAsagi(beh){ requestAnimationFrame(()=>window.scrollTo({top:document.documentElement.scrollHeight, behavior:beh||"smooth"})); }
+function msgOkuIsaretle(){ const sid = MSG.sid; if(!sid || !(S.view==="mesaj"||S.view==="sohbet") || document.visibilityState!=="visible") return;
+  const c = S.sohbet && S.sohbet.get(sid), alan = A() ? "okunmadiKoc" : "okunmadiOgr", gor = A() ? "kocGordu" : "ogrGordu";
+  const son = MSG.liste.length ? MSG.liste[MSG.liste.length-1].at : ""; if(c && !c[alan] && (c[gor]||"") >= son) return;
+  const yeni = {sid, [alan]:0, [gor]:nowISO()}; S.sohbet.set(sid, {...(c||{}), ...yeni}); setDoc(doc(fdb,"sohbetler",sid), yeni, {merge:true}).catch(()=>{}); }
+async function msgGonder(sid, metin, foto, duyuru){
+  metin = String(metin||"").trim(); if(!metin && !foto) return false;
+  const at = nowISO(), kim = A() ? "koc" : "ogr", id = uid(), c = (S.sohbet && S.sohbet.get(sid)) || {};
+  const m = {kim, metin, at, ...(foto?{foto}:{}), ...(duyuru?{duyuru:true}:{})};
+  await setDoc(doc(fdb,"sohbetler",sid,"mesajlar",id), m);
+  const ust = {sid, son:{metin: metin || "📷 Fotoğraf", at, kim}, ...(kim==="koc" ? {okunmadiOgr:(c.okunmadiOgr||0)+1, kocGordu:at} : {okunmadiKoc:(c.okunmadiKoc||0)+1, ogrGordu:at})};
+  S.sohbet.set(sid, {...c, ...ust}); await setDoc(doc(fdb,"sohbetler",sid), ust, {merge:true}); return true; }
+function msgGun(d){ const t = today(); return d===t ? "Bugün" : d===addDays(t,-1) ? "Dün" : `${GUN[dIdx(d)]}, ${trDate(d)}`; }
+const msgSaat = at => new Date(at).toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"});
+const msgLink = s => esc(s).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+function msgBaloncuklar(sid){ const c = (S.sohbet && S.sohbet.get(sid)) || {}, ben = A() ? "koc" : "ogr", karsiGordu = A() ? c.ogrGordu||"" : c.kocGordu||"";
+  if(!MSG.liste.length) return `<div class="msgbos"><span>${icon("chat")}</span><b>${A() ? "Henüz mesaj yok" : "Koçuna buradan yazabilirsin"}</b><small>${A() ? "İlk mesajı sen gönder." : "Sorunu, deneme sonucunu ya da aklına takılanı yaz. Fotoğraf da gönderebilirsin."}</small></div>`;
+  let h = "", sonGun = "";
+  MSG.liste.forEach((m,i)=>{ const g = iso(new Date(m.at)); if(g!==sonGun){ h += `<div class="msggun"><span>${msgGun(g)}</span></div>`; sonGun = g; }
+    const benim = m.kim===ben, sonraki = MSG.liste[i+1], grupSonu = !sonraki || sonraki.kim!==m.kim || iso(new Date(sonraki.at))!==g;
+    h += `<div class="msg ${benim?"ben":"o"} ${grupSonu?"son":""}">${m.duyuru?`<span class="msgduy">📢 Duyuru</span>`:""}${m.foto?`<img src="${m.foto}" alt="Fotoğraf" data-act="msgfoto" data-id="${m.id}" class="${MSG.buyuk===m.id?"buyuk":""}">`:""}${m.metin?`<p>${msgLink(m.metin)}</p>`:""}<span class="msgt">${msgSaat(m.at)}${benim?` <b class="${karsiGordu>=m.at?"okundu":""}">${karsiGordu>=m.at?"✓✓":"✓"}</b>`:""}</span></div>`; });
+  return h; }
+function msgYazmaCubugu(sid){ const hazir = A() ? (S.settings.mesaj && S.settings.mesaj.hazir) || DEF_HAZIR : [];
+  return `<div class="msgbar">${hazir.length ? `<div class="msghazir">${hazir.map((t,i)=>`<button class="chip" data-act="msghazir" data-v="${i}">${esc(t)}</button>`).join("")}</div>` : ""}
+    ${MSG.fotoOn ? `<div class="msgfotoon"><img src="${MSG.fotoOn}" alt=""><span>Fotoğraf eklendi</span><button class="iconbtn sm" data-act="msgfotosil" aria-label="Fotoğrafı kaldır">${icon("x","sm")}</button></div>` : ""}
+    <div class="msgsatir"><label class="iconbtn msgek" aria-label="Fotoğraf ekle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><input type="file" accept="image/*" id="msgFoto" hidden></label>
+      <textarea id="msgYaz" rows="1" placeholder="Mesaj yaz…" aria-label="Mesaj">${esc(MSG.taslak[sid]||"")}</textarea>
+      <button class="msggon" data-act="msggonder" aria-label="Gönder" ${MSG.gonderiyor?"disabled":""}><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12 2-12 2z"/></svg></button></div></div>`; }
+function sMesaj(){ msgAc(S.me);
+  const head = topbar(`<div class="msgkim"><span class="msgav koc">${LOGO}</span><div><b>Koçun</b><small>${esc(cfg().kurum)} · genelde gün içinde cevaplar</small></div></div>`, "", `<button class="iconbtn" data-act="msgcik" aria-label="Geri">${icon("back")}</button>`);
+  return `${head}<div class="page msgpage">${msgBaloncuklar(S.me)}</div>${msgYazmaCubugu(S.me)}`; }
+function cSohbet(){ const sid = S.msgSid, x = S.students.get(sid); if(!x){ S.view = "mesajlar"; return cMesajlar(); } msgAc(sid);
+  const head = topbar(`<button class="msgkim" data-act="msgprofil"><span class="msgav">${esc(initials(x.name))}</span><div><b>${esc(x.name)}</b><small>${(d=>d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.toLocaleLowerCase("tr"))(girisDurum(x))}</small></div></button>`, "", `<button class="iconbtn" data-act="msgcik" aria-label="Geri">${icon("back")}</button>`);
+  return `${head}<div class="page msgpage">${msgBaloncuklar(sid)}</div>${msgYazmaCubugu(sid)}`; }
+function cMesajlar(){ msgKapat(); const q = (S.msgAra||"").toLocaleLowerCase("tr");
+  const L = sortedStudents().map(([id,x])=>({id, x, c:(S.sohbet && S.sohbet.get(id)) || {}})).filter(o=>!q || o.x.name.toLocaleLowerCase("tr").includes(q))
+    .sort((a,b)=>((b.c.okunmadiKoc||0)>0)-((a.c.okunmadiKoc||0)>0) || ((b.c.son&&b.c.son.at)||"").localeCompare((a.c.son&&a.c.son.at)||"") || a.x.name.localeCompare(b.x.name,"tr"));
+  const satir = o => { const n = o.c.okunmadiKoc||0, s = o.c.son;
+    return `<button class="msgrow" data-act="msgsohbet" data-id="${o.id}"><span class="msgav">${esc(initials(o.x.name))}</span><div class="msgrm"><div class="msgr1"><b>${esc(o.x.name)}</b>${s?`<span class="${n?"yeni":""}">${iso(new Date(s.at))===today()?msgSaat(s.at):shortDate(iso(new Date(s.at)))}</span>`:""}</div><div class="msgr2"><span>${s ? (s.kim==="koc"?"Sen: ":"")+esc(s.metin) : `<i class="faint">Henüz mesaj yok</i>`}</span>${n?`<em>${n}</em>`:""}</div></div></button>`; };
+  return `${topbar(`<h1 class="ttl">Mesajlar</h1>`, `<button class="btn sm pri" data-act="sheet" data-v="duyuru">📢 Duyuru</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
+  <div class="page wide"><label class="search">${icon("search","sm")}<input type="search" id="msgAra" placeholder="Öğrenci ara" value="${esc(S.msgAra||"")}"></label>
+    <div class="card" style="padding:4px 0">${L.length ? L.map(satir).join("") : `<div class="empty">Öğrenci bulunamadı.</div>`}</div></div>`; }
+function msgDuyuruSheet(){ const L = sortedStudents();
+  return sheet(`<h3>📢 Duyuru gönder</h3><p class="muted small" style="margin:-6px 0 0">Mesaj seçtiğin her öğrencinin sohbetine ayrı ayrı düşer. Öğrenciler birbirini görmez.</p>
+    <label class="f">Mesaj<textarea name="metin" id="duy-metin" rows="4" placeholder="ör. Cumartesi 10:00'da TYT denemesi var, herkes kronometreyle çözsün 💪"></textarea></label>
+    <label class="inline"><input type="checkbox" id="duy-hepsi" checked>Tüm öğrenciler (${L.length})</label>
+    <div class="aipil" id="duy-liste" hidden>${L.map(([id,x])=>`<label class="inline"><input type="checkbox" name="kim" value="${id}">${esc(x.name)}</label>`).join("")}</div>
+    <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" id="duy-gonder">Gönder</button></div>`,
+  async (fd)=>{ const metin = String(fd.get("metin")||"").trim(); if(!metin) return sheetErr("Duyuru metnini yaz.");
+    const kimler = $("#duy-hepsi").checked ? L.map(([id])=>id) : fd.getAll("kim"); if(!kimler.length) return sheetErr("En az bir öğrenci seç.");
+    const bt = $("#duy-gonder"); bt.disabled = true; bt.textContent = "Gönderiliyor…";
+    try{ for(const sid of kimler) await msgGonder(sid, metin, null, true); closeSheet(); toast(`Duyuru ${kimler.length} öğrenciye gönderildi`); render(); }
+    catch(e){ bt.disabled = false; bt.textContent = "Gönder"; sheetErr("Gönderilemedi. Bağlantını kontrol et."); } }); }
+async function msgGonderBas(){ if(MSG.gonderiyor) return; const sid = A() ? S.msgSid : S.me, ta = $("#msgYaz"), metin = ta ? ta.value : "";
+  if(!metin.trim() && !MSG.foto) return; MSG.gonderiyor = true;
+  try{ const foto = MSG.foto ? await resimKucult(MSG.foto, 1280, 380000) : null; await msgGonder(sid, metin, foto); MSG.taslak[sid] = ""; MSG.foto = null; MSG.fotoOn = ""; if(ta) ta.value = ""; }
+  catch(e){ console.warn(e); toast("Mesaj gönderilemedi. Bağlantını kontrol et."); }
+  finally{ MSG.gonderiyor = false; render(); const t = $("#msgYaz"); if(t) t.focus(); msgAsagi(); } }
+function msgAct(a, b, v){
+  switch(a){
+    case "msggonder": msgGonderBas(); return true;
+    case "msghazir": { const h = (S.settings.mesaj && S.settings.mesaj.hazir) || DEF_HAZIR, ta = $("#msgYaz"); if(ta){ ta.value = (ta.value ? ta.value.trimEnd()+" " : "") + h[+v]; MSG.taslak[S.msgSid] = ta.value; ta.focus(); } return true; }
+    case "msgsohbet": S.msgSid = b.dataset.id; S.view = "sohbet"; render(); msgAsagi("auto"); return true;
+    case "msgcik": msgKapat(); S.view = A() ? (S.msgDon || "mesajlar") : "home"; S.msgDon = ""; render(); window.scrollTo(0,0); return true;
+    case "msgprofil": msgKapat(); S.cur = S.msgSid; S.view = "detay"; S.dtab = "ozet"; render(); window.scrollTo(0,0); return true;
+    case "msgfotosil": MSG.foto = null; MSG.fotoOn = ""; render(); return true;
+    case "msgfoto": MSG.buyuk = MSG.buyuk===b.dataset.id ? "" : b.dataset.id; render(); return true;
+    case "msgogr": S.msgSid = b.dataset.id; S.msgDon = "detay"; S.view = "sohbet"; render(); msgAsagi("auto"); return true;
+  }
+  return false; }
+const msgBtn = () => { const n = msgToplamOkunmadi(); return `<button class="iconbtn" data-act="go" data-v="${A()?"mesajlar":"mesaj"}" aria-label="Mesajlar">${icon("chat")}${n?`<span class="dot">${n}</span>`:""}</button>`; };
 
 /* ---------- Ayarlar (koç) ---------- */
 const clone = x => JSON.parse(JSON.stringify(x));
@@ -2253,6 +2348,7 @@ function openSheet(kind, el){
       ${q.not?`<div class="card" style="padding:10px 12px;box-shadow:none;border:1px solid var(--line)"><b class="small">Öğrencinin notu</b><p class="small" style="margin:4px 0 0">${esc(q.not)}</p></div>`:""}
       ${A() ? `<label class="f">Koç notu <span class="faint" style="font-weight:500">· öğrenci görür</span><input type="text" id="sq-knot" data-sqnot="${id}" value="${esc(q.kocNot||"")}" placeholder="ör. Görüşmede çözdük, benzer 5 soru çöz"></label>` : (q.kocNot?`<div class="card" style="padding:10px 12px;box-shadow:none;background:var(--acs)"><b class="small">Koçunun notu</b><p class="small" style="margin:4px 0 0">${esc(q.kocNot)}</p></div>`:"")}
       <div class="acts"><button type="button" class="btn" data-act="sqsil" data-id="${id}">${icon("trash","xs")} Sil</button><button type="button" class="btn ${q.durum==="cozuldu"?"":"pri"}" data-act="sqdurum" data-id="${id}">${q.durum==="cozuldu"?"Bekleyene al":`${icon("check","xs")} Çözüldü`}</button><button type="button" class="btn" data-close>Kapat</button></div>`); }
+  if(kind==="duyuru") return msgDuyuruSheet();
   if(kind==="girisler"){ const L = sortedStudents(), gon = L.filter(([id])=>(S.cnotes.get(id)||{}).girisGonderildi).length;
     return sheet(`<h3>Giriş bilgilerini gönder</h3><p class="muted small" style="margin:0">Her öğrencinin WhatsApp düğmesine dokun; mesaj kullanıcı adı ve şifresiyle hazır açılır, sadece <b>Gönder</b>’e basarsın. ${gon}/${L.length} gönderildi.</p>
       <div class="grlist">${L.map(([id,x])=>girisSatir(id,x)).join("")}</div>
@@ -2542,6 +2638,7 @@ document.addEventListener("click", e=>{
   const a = b.dataset.act, v = b.dataset.v;
   if(A() && b.closest("#settingsPage") && onSettingClick(a, b)) return;
   if(a && a.startsWith("sz") && szAct(a, b, v)) return;
+  if(a && a.startsWith("msg") && msgAct(a, b, v)) return;
   if(a==="aiekhak" && A()){ aiEkHak(b.dataset.id); return; }
   if(a==="aipyenile" && A()){ aipYukle(); render(); return; }
   switch(a){
@@ -2550,7 +2647,7 @@ document.addEventListener("click", e=>{
     case "install": doInstall(); break;
     case "logout": logout(); break;
     case "pushon": enablePush(); break;
-    case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
+    case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="mesaj") setTimeout(()=>msgAsagi("auto"), 50); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
     case "bell": S.view="bildirim"; render(); window.scrollTo(0,0); break;
     case "open": if(!b.dataset.id) break; S.cur=b.dataset.id; S.week=curStart(st()); S.view="detay"; S.dtab="ozet"; render(); window.scrollTo(0,0); break;
     case "dtab": S.dtab=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week=curStart(st()); } render(); break;
@@ -2667,6 +2764,8 @@ document.addEventListener("click", e=>{
 function keepOpen(fn){ const open = [...document.querySelectorAll("details.subj")].map((d,i)=>d.open?i:-1).filter(i=>i>=0); fn(); const ds=document.querySelectorAll("details.subj"); open.forEach(i=>{ if(ds[i]) ds[i].open=true; }); }
 document.addEventListener("change", e=>{
   const t = e.target;
+  if(t.id==="msgFoto" && t.files && t.files[0]){ MSG.foto = t.files[0]; resimKucult(t.files[0], 200, 30000).then(u=>{ MSG.fotoOn = u; render(); msgAsagi(); }).catch(()=>{ MSG.foto = null; toast("Fotoğraf açılamadı"); }); return; }
+  if(t.id==="duy-hepsi"){ const l = $("#duy-liste"); if(l) l.hidden = t.checked; return; }
   if((t.id==="szFoto" || t.id==="szKamera" || t.id==="szGaleri") && t.files && t.files[0]){ szFotoSec(t.files[0]); return; }
   if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }
@@ -2700,6 +2799,8 @@ document.addEventListener("keydown", e=>{
   if(e.key==="Enter" && e.target.id==="hq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")) || ($("#hfree")?.hidden ? null : $("#hfree")); if(b) b.click(); return; }
   if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
 document.addEventListener("input", e=>{
+  if(e.target && e.target.id==="msgYaz"){ MSG.taslak[A() ? S.msgSid : S.me] = e.target.value; e.target.style.height = "auto"; e.target.style.height = Math.min(140, e.target.scrollHeight)+"px"; return; }
+  if(e.target && e.target.id==="msgAra"){ S.msgAra = e.target.value; const pos = e.target.selectionStart; render(); const t = $("#msgAra"); if(t){ t.focus(); try{ t.setSelectionRange(pos,pos); }catch(_){} } return; }
   if(e.target && e.target.id==="szMetin"){ SZ.metin = e.target.value; return; }
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
@@ -2746,3 +2847,6 @@ init();
 
 
 document.addEventListener("keydown", e=>{ if(e.target && e.target.id==="szSor" && e.key==="Enter" && !e.shiftKey){ e.preventDefault(); szAct("szsor"); } });
+
+document.addEventListener("keydown", e=>{ if(e.target && e.target.id==="msgYaz" && e.key==="Enter" && !e.shiftKey && matchMedia("(pointer:fine)").matches){ e.preventDefault(); msgGonderBas(); } });
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible") msgOkuIsaretle(); });

@@ -61,6 +61,21 @@ service cloud.firestore {
       allow create: if isCoach() || (signedIn() && request.resource.data.sid == request.auth.uid && request.resource.data.data.size() < 900000);
       allow update: if isCoach();
     }
+    // Mesajlaşma: koç ↔ öğrenci birebir; öğrenci sadece kendi sohbetini görür, sadece kendi adına yazar
+    match /sohbetler/{sid} {
+      allow read: if isCoach() || isSelf(sid);
+      allow create, update: if isCoach() || (isSelf(sid) && request.resource.data.sid == sid);
+      allow delete: if isCoach();
+      match /mesajlar/{mid} {
+        allow read: if isCoach() || isSelf(sid);
+        allow create: if (isCoach() && request.resource.data.kim == 'koc')
+          || (isSelf(sid) && request.resource.data.kim == 'ogr'
+              && request.resource.data.metin is string && request.resource.data.metin.size() <= 4000
+              && (!('foto' in request.resource.data) || request.resource.data.foto.size() < 450000)
+              && !('duyuru' in request.resource.data));
+        allow update, delete: if isCoach();
+      }
+    }
     // Soru Çözüm: kullanım sayaçları ve soru kayıtları sadece sunucu tarafından yazılır; öğrenci kendisininkini okur
     match /aiKullanim/{id} {
       allow read: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid);
