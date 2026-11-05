@@ -945,6 +945,12 @@ body{background:var(--bg)}
   .nav{isolation:isolate}
 }
 @media (max-width:360px){.two{grid-template-columns:1fr}.mbars em{display:none}.mbars i.son em{display:block}}
+
+/* Küçük açık/koyu geçiş butonu */
+.temabtn{width:32px;height:32px;flex:none;border-radius:50%;border:0;display:grid;place-items:center;background:var(--surface);color:var(--muted);box-shadow:var(--shadow);cursor:pointer;transition:transform .15s ease}
+.temabtn svg{width:16px;height:16px}
+.temabtn:active{transform:scale(.88) rotate(-20deg)}
+.temabtn:focus-visible{outline:3px solid color-mix(in srgb,var(--ac) 40%,transparent);outline-offset:2px}
 </style>
 </head>
 <body>
