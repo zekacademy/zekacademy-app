@@ -495,7 +495,8 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  return `<nav class="nav" aria-label="Menü"><div class="navin">${items.map(([v,ic,l,fab,cnt])=>`<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v||(v==="program"&&S.view==="program")?"page":"false"}">${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`).join("")}</div></nav>`;
+  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
 /* ---------- Öğrenci ---------- */
@@ -574,37 +575,45 @@ function sHome(s){
   const nots = studentNotices(s);
   const msg = !tl.length ? "Bugün için görev yok, kronometreyle çalışmanı kaydedebilirsin." : done===tl.length ? "Bugünün tüm görevleri tamam. Harikasın!" : done ? `${done} görevi tamamladın, devam!` : "Hadi ilk görevle başlayalım.";
   const ev = eveningMsg(s), mm = ev ? null : morningMsg(s, S.me);
-  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>${esc(cfg().kurum)}</div>`, bellBtn(nots.length))}
+  const PD = pDays(s, curStart(s)), tyt = exams(s,"TYT").slice(-5), tmx = Math.max(60, ...tyt.map(tytTotal));
+  return `<header class="hhead"><div class="hhin">
+      <div class="hrow"><span class="hav">${esc(initials(s.name))}</span><div class="hname"><span>Merhaba <b>${esc(firstName(s.name))}</b></span><small>${longToday()}</small></div><span class="spacer"></span>
+        <span class="hchip" title="Çalışma serisi">${icon("flame","xs")}<b class="num">${streak(s)}</b></span>${bellBtn(nots.length)}</div>
+      <div class="wstrip">${PD.map(d=>{ const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
+        return `<button class="dbtn ${d===t?"today":""}" data-act="hgun" data-v="${d}" style="--p:${l.length?Math.round(dn/l.length*100):0}">${GUNK[dIdx(d)]}<b class="num">${dNum(d)}</b>${l.length?`<i class="${dn===l.length?"":"p"}"></i>`:""}</button>`; }).join("")}</div>
+    </div></header>
   <div class="page">
-    <div class="hellorow"><div class="hello"><p class="small" style="margin:0 0 2px">${longToday()}</p><h1>Merhaba, ${esc(firstName(s.name))} 👋</h1><p>Hedefine bir adım daha yaklaşıyorsun.</p></div>
-      <div class="cd">${icon("cal","sm")}<div><b class="num">${examDays()} gün</b><small>YKS’ye kaldı</small></div></div></div>
     ${pushCard()}
     ${yaziliKart(s, curStart(s), false)}
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
+    ${aiAcik(S.me) ? `<button class="szhome" data-act="go" data-v="socoz"><span class="szhi">${icon("search")}</span><span><b>Soru Çözüm</b><small>Takıldığın soruyu fotoğrafla, adım adım birlikte çözelim</small></span>${s.aiBonus && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<span class="szyeni">🎉 Bonus</span>` : icon("chev","sm")}</button>` : ""}
+    <div class="duo">
+      <div class="dcard2"><button class="dch" data-act="go" data-v="program"><b>Bugünkü Program</b>${icon("chev","sm")}</button><p>${msg}</p>
+        <div class="dil">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}</div>
+        <button class="btn pri full" data-act="go" data-v="program">${done && done===tl.length ? "Programa bak" : "Göreve başla"}</button></div>
+      <div class="dcard2"><button class="dch" data-act="go" data-v="analiz"><b>Denemelerim</b>${icon("chev","sm")}</button><p>${lt?`Son TYT <b class="num">${fmt(tytTotal(lt))}</b> net`:"İlk denemeni ekle, gelişimini birlikte izleyelim."}</p>
+        <div class="dil"><div class="mbars">${tyt.length ? tyt.map((d,i)=>`<i style="height:${Math.max(12,tytTotal(d)/tmx*100)}%" class="${i===tyt.length-1?"son":""}"><em class="num">${fmt(tytTotal(d))}</em></i>`).join("") : `<span class="mbos">${icon("chart")}</span>`}</div></div>
+        <button class="btn pri full" data-act="sheet" data-v="deneme">Deneme ekle</button></div>
+    </div>
+    <div class="sec">Araçlar</div>
+    <div class="arac">
+      <button data-act="go" data-v="kronometre"><span>${icon("timer")}</span>Kronometre</button>
+      <button data-act="go" data-v="sorular"><span>${icon("search")}</span>Sorularım</button>
+      <button data-act="go" data-v="cetele"><span>${icon("list")}</span>Çetele</button>
+      <button data-act="go" data-v="konular"><span>${icon("book")}</span>Konular</button>
+    </div>
+    <div class="card" id="gorevler"><div class="sech"><h3>Bugünün Görevleri</h3><button class="link" data-act="go" data-v="program">Tümünü gör</button></div>
+      <div class="tasks" style="margin-top:6px">${tl.length? tl.map(x=>taskRow(x,t,{canTick:true, s})).join("") : `<div class="empty">Koçun bugüne görev eklemedi.</div>`}</div></div>
     <div class="tiles">
       ${tile("t-g","clock",fmtMin(minutes(s,t)),dayTarget(s,t)?`Bugün çalışma · hedef ${fmtH(dayTarget(s,t))}`:"Bugün çalışma","liveMin",`data-act="git" data-v="kronometre" data-hedef="calisma"`)}
       ${tile("t-a","check",`${done}/${tl.length}`,"Görev tamamlandı","",`data-act="kaydir" data-hedef="gorevler"`)}
       ${tile("t-w","target",w.pct==null?"—":"%"+Math.round(w.pct*100),"Haftalık program uyumu","",`data-act="git" data-v="program" data-mod="hafta"`)}
-      ${tile("t-r","flame",streak(s)+" gün","Çalışma serisi")}
+      ${tile("t-r","clock",fmtMin(w.min),"Bu hafta toplam çalışma")}
     </div>
-    <button class="hero" data-act="go" data-v="program" style="text-align:left;width:100%">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}<div><h3>Bugünkü Program</h3><p>${msg}</p></div><span class="go">${icon("chev")}</span></button>
-    <div class="card" id="gorevler"><div class="sech"><h3>Bugünün Görevleri</h3><button class="link" data-act="go" data-v="program">Tümünü gör</button></div>
-      <div class="tasks" style="margin-top:6px">${tl.length? tl.map(x=>taskRow(x,t,{canTick:true, s})).join("") : `<div class="empty">Koçun bugüne görev eklemedi.</div>`}</div></div>
     ${goalsCard(s, curStart(s), {compact:true})}
     ${takvimKart(s, 45)}
-    <div class="tiles" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-      ${tile("t-a","trend", lt?fmt(tytTotal(lt)):"—", lt?`Son TYT neti · ${shortDate(lt.tarih)}`:"Henüz TYT denemesi yok")}
-      ${tile("t-g","clock", fmtMin(w.min), "Bu hafta toplam çalışma")}
-    </div>
     ${s.koctanNot&&s.koctanNot.text?`<div class="card note"><span class="av">${icon("grad","sm")}</span><div style="min-width:0"><div class="sech"><b>Koçundan not</b><span class="faint small">${s.koctanNot.date?shortDate(s.koctanNot.date.slice(0,10)):""}</span></div><p style="margin:4px 0 0;white-space:pre-wrap">${esc(s.koctanNot.text)}</p></div></div>`:""}
-    ${aiAcik(S.me) ? `<button class="szhome" data-act="go" data-v="socoz"><span class="szhi">${icon("search")}</span><span><b>Soru Çözüm</b><small>Takıldığın soruyu fotoğrafla, adım adım birlikte çözelim</small></span>${s.aiBonus && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<span class="szyeni">🎉 Bonus</span>` : icon("chev","sm")}</button>` : ""}
-    <div><div class="sec" style="margin-bottom:10px">Hızlı Erişim</div><div class="qa">
-      <button class="qb" data-act="go" data-v="kronometre"><span class="ic">${icon("timer")}</span>Kronometre</button>
-      <button class="qb" data-act="sheet" data-v="deneme"><span class="ic">${icon("chart")}</span>Deneme ekle</button>
-      <button class="qb" data-act="go" data-v="cetele"><span class="ic">${icon("list")}</span>Çetele</button>
-      <button class="qb" data-act="go" data-v="konular"><span class="ic">${icon("book")}</span>Konular</button>
-    </div></div>
   </div>`;
 }
 function sBell(s){
@@ -756,7 +765,7 @@ function studentProgram(s){
   const w = S.week, t = today(), ws = weekStats(s,w), g = weekGoals(s,w);
   const PD = pDays(s,w); let tgW = 0; PD.forEach(d=>tgW += dayTarget(s, d));
   const strip = `<div class="strip">${PD.map(d=>{ const x=GUNK[dIdx(d)], l=dayTasks(s,d), all=l.length&&l.every(y=>y.done);
-    return `<button class="dbtn ${d===t?"today":""}" data-act="day" data-v="${d}" aria-pressed="${S.pmode==="gun"&&S.day===d}">${x}<b class="num">${dNum(d)}</b>${l.length?`<i class="${all?"":"p"}"></i>`:""}</button>`; }).join("")}</div>`;
+    return `<button class="dbtn ${d===t?"today":""}" data-act="day" data-v="${d}" aria-pressed="${S.pmode==="gun"&&S.day===d}" style="--p:${l.length?Math.round(l.filter(y=>y.done).length/l.length*100):0}">${x}<b class="num">${dNum(d)}</b>${l.length?`<i class="${all?"":"p"}"></i>`:""}</button>`; }).join("")}</div>`;
   const hero = `<div class="hero goal" style="display:flex"><div class="goalrow"><span class="ic2">${icon("target")}</span><div style="flex:1"><h3>Haftalık durum</h3><p>${ws.all?`${ws.done}/${ws.all} görev`:"Görev yok"}${g.list.length?` · ${g.done}/${g.list.length} hedef konu`:""} · ${fmtMin(ws.min)}${tgW?` / ${fmtH(tgW)}`:""}</p></div><b class="num" style="font-size:20px">%${ws.pct==null?0:Math.round(ws.pct*100)}</b></div><div class="bar"><i style="width:${(ws.pct||0)*100}%"></i></div></div>`;
   let body;
   if(S.pmode==="gun"){
@@ -811,19 +820,20 @@ function planEditor(s){
 }
 
 function netChart(s, tur){
-  const list = exams(s,tur).slice(-8); const max = tur==="TYT"?120:160; const hedef = num(s.hedef[tur.toLowerCase()]);
+  const list = exams(s,tur).slice(-6); const max = tur==="TYT"?120:160; const hedef = num(s.hedef[tur.toLowerCase()]);
   if(!list.length) return `<div class="empty">Deneme eklendikçe net grafiğin burada oluşur.</div>`;
-  const W=600,H=220,pl=10,pr=10,pt=26,pb=28;
+  const W=360,H=210,pl=26,pr=4,pt=16,pb=26, n=list.length;
   const vals = list.map(totalOf); if(hedef!=null) vals.push(hedef);
-  let hi = Math.min(max, Math.ceil((Math.max(...vals)+8)/10)*10), lo = Math.max(0, Math.floor((Math.min(...vals)-10)/10)*10); if(hi-lo<20) hi=lo+20;
-  const x = i => list.length===1 ? W/2 : pl+20 + i*(W-pl-pr-40)/(list.length-1);
-  const y = v => pt + (1-(v-lo)/(hi-lo))*(H-pt-pb);
-  const pts = list.map((d,i)=>[x(i), y(totalOf(d)), totalOf(d), d]);
-  let g = `<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ac)" stop-opacity=".28"/><stop offset="1" stop-color="var(--ac)" stop-opacity="0"/></linearGradient></defs>`;
-  for(let k=0;k<4;k++){ const v = lo+(hi-lo)*k/3; g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-dasharray="3 5"/>`; }
-  if(hedef!=null){ g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(hedef)}" y2="${y(hedef)}" stroke="var(--good)" stroke-width="1.5" stroke-dasharray="6 5"/><text x="${W-pr}" y="${y(hedef)-6}" text-anchor="end" font-size="12" font-weight="700" fill="var(--good)">Hedef ${fmt(hedef)}</text>`; }
-  if(pts.length>1) g += `<path d="M${pts[0][0]},${H-pb} ${pts.map(p=>`L${p[0]},${p[1]}`).join(" ")} L${pts[pts.length-1][0]},${H-pb}Z" fill="url(#ag)"/><polyline points="${pts.map(p=>p[0]+","+p[1]).join(" ")}" fill="none" stroke="var(--ac)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
-  pts.forEach((p,i)=>{ const last=i===pts.length-1; g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${last?6:4.5}" fill="${last?"var(--ac)":"var(--surface)"}" stroke="var(--ac)" stroke-width="2.5"/><text x="${p[0]}" y="${p[1]-11}" text-anchor="middle" font-size="12.5" font-weight="${last?800:600}" fill="var(--fg)">${fmt(p[2])}</text><text x="${p[0]}" y="${H-8}" text-anchor="middle" font-size="11" fill="var(--faint)">${shortDate(p[3].tarih)}</text>`; });
+  const hi = Math.min(max, Math.max(20, Math.ceil((Math.max(...vals)+5)/20)*20));
+  const y = v => pt + (1-Math.max(0,v)/hi)*(H-pt-pb);
+  const slot = (W-pl-pr)/Math.max(n,4), bw = Math.min(42, slot*.66), x0 = pl + (W-pl-pr - slot*n)/2;
+  let g = `<defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ac2)"/><stop offset="1" stop-color="var(--ac)"/></linearGradient></defs>`;
+  for(let k=0;k<=4;k++){ const v = hi*k/4; g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-dasharray="3 6"/><text x="${pl-8}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--faint)">${Math.round(v)}</text>`; }
+  list.forEach((d,i)=>{ const v = totalOf(d), cx = x0 + slot*i + slot/2, top = y(v), son = i===n-1, h = H-pb-top;
+    g += `<rect x="${cx-bw/2}" y="${top}" width="${bw}" height="${Math.max(h,0)}" rx="${Math.min(14,bw/2.6)}" fill="${son?"url(#bg1)":"var(--ac)"}" fill-opacity="${son?1:.78}"/>`;
+    g += h>24 ? `<text x="${cx}" y="${top+17}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#fff">${fmt(v)}</text>` : `<text x="${cx}" y="${top-6}" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--fg)">${fmt(v)}</text>`;
+    g += `<text x="${cx}" y="${H-8}" text-anchor="middle" font-size="10" fill="var(--faint)">${shortDate(d.tarih)}</text>`; });
+  if(hedef!=null){ g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(hedef)}" y2="${y(hedef)}" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="6 5"/><text x="${W-pr}" y="${y(hedef)-5}" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--warn)">Hedef ${fmt(hedef)}</text>`; }
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${tur} net grafiği">${g}</svg></div>`;
 }
 function pAnaliz(s){
@@ -1187,7 +1197,7 @@ function gunGorusme(d){
 /* Öğrencinin sıradaki görüşmesi (4 hafta içinde, haftalık düzenden gelenler dahil) */
 function siradakiGorusme(sid){ const t = today(); for(let i=0;i<28;i++){ const g = gunGorusme(addDays(t,i)).find(x=>x.sid===sid && x.durum==="planli" && x.tur!=="rapor"); if(g) return g; } return null; }
 const gorusmesiVar = sid => [...S.gorus.values()].some(g=>g.sid===sid) || !!duzenOf(sid)?.saat;
-function gorusmeKart(sid){ const x = S.students.get(sid); if(!x) return ""; const g = siradakiGorusme(sid), z = duzenOf(sid), ilk = !gorusmesiVar(sid);
+function gorusmeKart(sid){ const x = S.students.get(sid); if(!x) return ""; const g = siradakiGorusme(sid), z = duzenOf(sid), ilk = !gorusmesiVar(sid) && !g;
   const duz = z && z.saat && z.gun!=null && z.gun!=="" ? `Her hafta ${GUN[z.gun]} ${z.saat}` : "";
   const ust = g ? `<b>${g.tur==="ilk"?"İlk görüşme":"Sıradaki görüşme"}:</b> ${GUN[dIdx(g.tarih)]}, ${trDate(g.tarih)}${g.saat?` · ${g.saat}`:` · <span style="color:var(--bad)">saat yok</span>`}`
     : ilk ? `<b>İlk görüşme henüz planlanmadı.</b>` : `<span class="muted">Önümüzdeki 4 haftada planlı görüşme yok.</span>`;
@@ -1791,7 +1801,7 @@ function cAiPanel(){
   const ogr = sortedStudents().map(([id,x])=>{ const k = AIP.kul.find(z=>z.id===`${AIP.ay}_${id}`) || {}; const top = c.aylikHak+(k.bonus||0)+(k.ekHak||0); return {id, x, k, top}; })
     .filter(o=>aiAcik(o.id) || o.k.soru).sort((a,b)=>(b.k.kullanilan||0)-(a.k.kullanilan||0));
   const back = `<button class="iconbtn" data-act="go" data-v="ayarlar" aria-label="Geri">${icon("back")}</button>`;
-  return `${topbar(`<h1 class="ttl">Soru Çözüm</h1>`, `<button class="iconbtn" data-act="aipyenile" aria-label="Yenile">${icon("trend")}</button>`, back)}
+  return `${topbar(`<h1 class="ttl">AI harcama</h1>`, `<button class="iconbtn" data-act="aipyenile" aria-label="Yenile">${icon("trend")}</button>`, back)}
   <div class="page wide">
     ${AIP.hata ? `<div class="err" style="display:block">${esc(AIP.hata)}</div>` : ""}
     <div class="kpis">${tile(harc >= c.uyari ? "t-r" : "t-g","chart",`${harc.toFixed(2)} $`,`Bu ay harcanan · tavan ${c.tavan} $`)}${tile(tahmin > c.tavan ? "t-r" : "t-a","trend",`${tahmin.toFixed(2)} $`,"Bu hızla ay sonu tahmini")}${tile("t-w","search",String(g.soru||0),`Çözülen soru · %${zorOran} güçlü model`)}${tile("t-g","flame",String((g.bonusGecmis||[]).reduce((a,b)=>a+(b.hak||0),0)),"Dağıtılan bonus hak")}</div>
@@ -2546,6 +2556,7 @@ document.addEventListener("click", e=>{
     case "dtab": S.dtab=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week=curStart(st()); } render(); break;
     case "pmode": S.pmode=v; render(); break;
     case "day": S.day=v; S.pmode="gun"; render(); break;
+    case "hgun": { const x = st(); S.view = "program"; S.pmode = "gun"; S.day = v; if(x) S.week = curStart(x); render(); window.scrollTo(0,0); break; }
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
     case "ex": S.ex=v; render(); break;
     case "aytall": S.aytAll=!S.aytAll; render(); break;
