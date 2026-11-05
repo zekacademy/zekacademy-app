@@ -5,9 +5,10 @@
 <script>/* Eski güvensiz adresten (http) girilirse güvenli adrese geç */ if(location.protocol==="http:" && !/^(localhost|127\.|192\.168\.)/.test(location.hostname)) location.replace("https://"+location.host+location.pathname+location.search+location.hash);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1E9E4A">
+<meta name="color-scheme" content="light">
 
 <script>/* Tema: sayfa çizilmeden uygula (varsayılan açık mod, yeşil) */
-(function(){var t={};try{t=JSON.parse(localStorage.getItem("zk-theme")||"{}")}catch(e){}if(!t.v){t={mode:"light",accent:"green"}}var r=document.documentElement;if(t.mode==="light")r.classList.add("m-light");if(t.mode==="dark")r.classList.add("m-dark");r.setAttribute("data-accent",t.accent||"green");var dk=t.mode==="dark"||(t.mode==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",dk?"#0A0B0E":({green:"#1E9E4A",blue:"#2563EB",red:"#DC2F3C"})[t.accent]||"#1E9E4A")})();</script>
+(function(){var t={};try{t=JSON.parse(localStorage.getItem("zk-theme")||"{}")}catch(e){}if(!t.v){t={mode:"light",accent:"green"}}var r=document.documentElement;if(t.mode==="light")r.classList.add("m-light");if(t.mode==="dark")r.classList.add("m-dark");r.setAttribute("data-accent",t.accent||"green");var dk=t.mode==="dark"||(t.mode==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);var m=document.querySelector('meta[name="theme-color"]');var cs=document.querySelector('meta[name="color-scheme"]');if(cs)cs.setAttribute("content",dk?"dark":"light");r.style.background=dk?"#0A0B0E":"";if(m)m.setAttribute("content",dk?"#0A0B0E":({green:"#1E9E4A",blue:"#2563EB",red:"#DC2F3C"})[t.accent]||"#1E9E4A")})();</script>
 <title>Zekacademy</title>
 <meta name="description" content="Zekacademy YKS koçluk uygulaması">
 <link rel="manifest" href="/manifest.webmanifest">
