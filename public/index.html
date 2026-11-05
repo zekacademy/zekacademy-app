@@ -730,6 +730,107 @@ body.suruk{user-select:none;-webkit-user-select:none;cursor:grabbing}
 .sgrid{display:grid;grid-template-columns:minmax(0,1fr) 110px 34px;gap:8px;align-items:center}
 .sgrid .gh{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ===================== Yeni tasarım (2026-11) ===================== */
+:root[data-accent="green"]{ --acL:#0E8A43; --ac2L:#0A6B33; --acsL:#DFF3E6; --acD:#3CD583; --ac2D:#22B566; --acsD:#0F2A1C }
+:root, :root.m-light{ --ink:#0A3A21; --hg1:#C9EDD6; --hg2:#E6F5EC; --bg:#F3F7F4; --sunk:#EDF2EE; --line:#E1E8E3; --soft:#F5F9F6;
+  --shadow:0 1px 2px rgba(10,58,33,.04),0 10px 26px rgba(10,58,33,.07) }
+:root.m-dark{ --ink:var(--fg); --hg1:#123524; --hg2:#0D1F16; --soft:#191C22 }
+@media (prefers-color-scheme: dark){ :root:not(.m-light){ --ink:var(--fg); --hg1:#123524; --hg2:#0D1F16; --soft:#191C22 } }
+body{background:var(--bg)}
+.shell{position:relative;isolation:isolate}
+.shell::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,var(--hg1) 0%,var(--hg2) 45%,transparent 100%)}
+.top{background:color-mix(in srgb,var(--hg2) 55%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
+.ttl,.hello h1,.card h3,.sech h3{color:var(--ink)}
+.card{border:0;border-radius:24px;box-shadow:var(--shadow)}
+.tile{border:0;border-radius:22px;box-shadow:var(--shadow)}
+.btn{border-radius:999px}
+.btn.pri{background:linear-gradient(160deg,var(--ac),var(--ac2));border:0;box-shadow:0 6px 16px color-mix(in srgb,var(--ac) 28%,transparent)}
+.btn.full{width:100%}
+.iconbtn{border-radius:50%}
+.sec{font-size:15px;font-weight:800;color:var(--ink);margin:4px 2px -4px}
+/* Alt menü: yüzen hap + ayrı yuvarlak buton */
+@media (max-width:899px){
+  .nav{background:transparent;border:0;bottom:calc(10px + var(--sab));padding-bottom:0;pointer-events:none}
+  .navin{display:flex;align-items:center;gap:10px;height:auto;padding:0 14px}
+  .navpill{flex:1;display:flex;gap:2px;background:var(--surface);border-radius:32px;padding:6px;box-shadow:0 10px 30px rgba(10,58,33,.14),0 1px 3px rgba(10,58,33,.06);pointer-events:auto}
+  .navpill .nb{flex:1;border-radius:26px;padding:8px 2px;gap:3px;font-size:10.5px;position:relative}
+  .navpill .nb svg{width:21px;height:21px}
+  .navpill .nb[aria-current="page"]{background:var(--acs);color:var(--ac);font-weight:800}
+  .nb.fab{flex:none;padding:0;pointer-events:auto}
+  .nb.fab .bub{width:66px;height:66px;border-radius:50%;border:0;box-shadow:0 10px 24px color-mix(in srgb,var(--ac) 45%,transparent)}
+  .nb.fab span.l{display:none}
+  .nb.fab[aria-current="page"] .bub{outline:4px solid color-mix(in srgb,var(--ac) 25%,transparent)}
+  .nb .cnt{margin-left:20px;margin-top:-2px;top:4px}
+  .page{padding-bottom:calc(var(--navh) + 40px)}
+}
+@media (min-width:900px){ .navpill{display:contents} }
+/* Öğrenci ana sayfa başlığı */
+.hhead{padding-top:env(safe-area-inset-top,0px)}
+.hhin{max-width:720px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-left,0px)) 6px}
+.hrow{display:flex;align-items:center;gap:12px}
+.hav{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(150deg,var(--ac),var(--ac2));box-shadow:0 0 0 3px var(--surface),0 6px 16px color-mix(in srgb,var(--ac) 30%,transparent)}
+.hname{display:flex;flex-direction:column;min-width:0}
+.hname span{font-size:18px;color:var(--ink)}.hname b{font-weight:800}
+.hname small{font-size:12.5px;color:var(--muted);font-weight:600}
+.hchip{display:inline-flex;align-items:center;gap:5px;height:40px;padding:0 13px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);color:#E8590C;font-weight:800}
+.hchip b{color:var(--ink)}
+.hhead .iconbtn{background:var(--surface);border:0;box-shadow:var(--shadow)}
+/* Gün şeridi (ana sayfa + program) */
+.wstrip,.strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;margin-top:16px}
+.dbtn{border:0;background:transparent;border-radius:22px;padding:8px 0 12px;gap:6px;font-size:12px;color:var(--faint);font-weight:700}
+.dbtn b{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:16px;font-weight:700;color:var(--ink);background:var(--surface);border:1.5px solid var(--line)}
+.dbtn.today{background:color-mix(in srgb,var(--surface) 75%,transparent);box-shadow:var(--shadow);color:var(--ac)}
+.dbtn.today b{border:0;font-weight:800;background:radial-gradient(circle,var(--surface) 0 15px,transparent 16px),conic-gradient(var(--ac) calc(var(--p,0)*1%),color-mix(in srgb,var(--ac) 18%,var(--line)) 0)}
+.dbtn.today:not([aria-pressed="true"]){border:0}
+.dbtn[aria-pressed="true"]{background:transparent;color:var(--ac)}
+.dbtn[aria-pressed="true"] b{background:linear-gradient(160deg,var(--ac),var(--ac2));color:#fff;border:0}
+.dbtn i{bottom:3px;width:5px;height:5px}
+/* İkili kart */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.dcard2{background:var(--surface);border-radius:26px;box-shadow:var(--shadow);padding:16px 14px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.dch{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:6px;color:var(--ink)}
+.dch b{font-size:16px;font-weight:800;line-height:1.2}
+.dcard2>p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.4;min-height:38px}
+.dcard2>p b{color:var(--ink)}
+.dil{flex:1;display:grid;place-items:center;min-height:118px;margin:4px 0 6px;border-radius:20px;background:radial-gradient(circle at 50% 55%,var(--acs),transparent 72%)}
+.dil .ring{color:var(--ac);width:96px;height:96px}
+.dil .ring svg{width:96px;height:96px}
+.dil .ring b{color:var(--ink);font-size:18px}
+.mbars{display:flex;align-items:flex-end;gap:7px;height:100px;padding:0 6px;width:100%;box-sizing:border-box;justify-content:center}
+.mbars i{flex:0 1 22px;border-radius:9px 9px 5px 5px;background:color-mix(in srgb,var(--ac) 55%,var(--surface));position:relative;display:flex;justify-content:center}
+.mbars i.son{background:linear-gradient(180deg,var(--ac),var(--ac2))}
+.mbars em{position:absolute;top:-17px;font-style:normal;font-size:10.5px;font-weight:800;color:var(--muted)}
+.mbars i.son em{color:var(--ink)}
+.mbos{color:var(--ac);opacity:.5}.mbos svg{width:42px;height:42px}
+.dcard2 .btn{padding:11px 10px;font-size:14px}
+/* Araçlar */
+.arac{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.arac button{border:0;background:var(--surface);box-shadow:var(--shadow);border-radius:22px;padding:14px 4px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--ink)}
+.arac button span{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;color:var(--ac);background:linear-gradient(150deg,var(--acs),color-mix(in srgb,var(--acs) 40%,var(--surface)))}
+.arac button span svg{width:24px;height:24px}
+/* Görev satırları: ayrı yumuşak kartlar */
+.tasks{gap:8px}
+.task{border:0;background:var(--soft);border-radius:18px;padding:12px}
+.task:first-child{border-top:0}
+.task.running{background:var(--acs)}
+/* İlerleme çubuğu */
+.bar{height:10px;border-radius:99px}
+.bar>i{border-radius:99px;background:linear-gradient(90deg,var(--ac2),var(--ac))}
+/* Hero (koç ve program): koyu yeşil degrade */
+.hero{background:linear-gradient(150deg,var(--ac) 0%,var(--ac2) 100%);border-radius:26px;box-shadow:0 12px 28px color-mix(in srgb,var(--ac) 30%,transparent)}
+/* Kronometre: koyu, tam kart */
+.card.timer{background:radial-gradient(120% 80% at 50% 0%,#14804A 0%,#0A4A2A 55%,#062917 100%);color:#fff;padding:30px 18px 22px}
+.card.timer .tface{border-color:rgba(255,255,255,.12);background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.10),transparent 70%);width:250px;height:250px}
+.card.timer .tface.run{border-color:#3CD583;box-shadow:0 0 40px rgba(60,213,131,.35)}
+.card.timer .tface b{font-size:52px;color:#fff;font-weight:800}
+.card.timer .tface small,.card.timer .muted,.card.timer .faint{color:rgba(255,255,255,.7)!important}
+.card.timer .muted b{color:#fff!important}
+.card.timer .tgorev{color:#fff;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px}
+.card.timer .bigbtn{background:#fff;color:#0A4A2A;border-radius:999px;padding:15px 26px}
+.card.timer .bigbtn.stop{background:#FFE4E4;color:#B4232A}
+/* Grafik kartı */
+.chart svg{overflow:visible}
 </style>
 </head>
 <body>
