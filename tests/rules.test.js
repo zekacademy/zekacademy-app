@@ -138,3 +138,23 @@ test("soru çözüm: öğrenci kendi kullanımını ve sorularını okur, başka
   await assertSucceeds(setDoc(doc(coach(), "aiKullanim/2026-11_ali"), { sid: "ali", ekHak: 10 }, { merge: true }));
   await assertFails(updateDoc(doc(ali(), "students/ali"), { aiBonus: { hak: 999 } }));
 });
+
+test("mesajlaşma: öğrenci kendi sohbetini okur ve kendi adına yazar; başkasınınkini göremez, koç adına yazamaz", async () => {
+  await env.withSecurityRulesDisabled(async ctx => {
+    const db = ctx.firestore();
+    await setDoc(doc(db, "sohbetler/ali"), { sid: "ali", okunmadiOgr: 1 });
+    await setDoc(doc(db, "sohbetler/ali/mesajlar/m1"), { kim: "koc", metin: "Merhaba Ali", at: "2026-11-06T10:00:00Z" });
+    await setDoc(doc(db, "sohbetler/ayse/mesajlar/m2"), { kim: "koc", metin: "Merhaba Ayşe", at: "2026-11-06T10:00:00Z" });
+  });
+  await assertSucceeds(getDoc(doc(ali(), "sohbetler/ali/mesajlar/m1")));
+  await assertFails(getDoc(doc(ali(), "sohbetler/ayse/mesajlar/m2")));
+  await assertSucceeds(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m3"), { kim: "ogr", metin: "Hocam bir sorum var", at: "2026-11-06T10:05:00Z" }));
+  await assertFails(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m4"), { kim: "koc", metin: "sahte", at: "x" }));
+  await assertFails(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m5"), { kim: "ogr", metin: "duyuru gibi", at: "x", duyuru: true }));
+  await assertFails(setDoc(doc(ali(), "sohbetler/ayse/mesajlar/m6"), { kim: "ogr", metin: "x", at: "x" }));
+  await assertFails(updateDoc(doc(ali(), "sohbetler/ali/mesajlar/m1"), { metin: "değişti" }));
+  await assertSucceeds(setDoc(doc(ali(), "sohbetler/ali"), { sid: "ali", okunmadiOgr: 0 }, { merge: true }));
+  await assertFails(setDoc(doc(ali(), "sohbetler/ayse"), { sid: "ayse" }, { merge: true }));
+  await assertSucceeds(setDoc(doc(coach(), "sohbetler/ayse/mesajlar/m7"), { kim: "koc", metin: "Duyuru", at: "x", duyuru: true }));
+  await assertFails(getDoc(doc(anon(), "sohbetler/ali/mesajlar/m1")));
+});

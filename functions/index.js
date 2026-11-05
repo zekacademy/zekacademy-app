@@ -11,7 +11,7 @@ import { getFirestore, FieldValue, FieldPath } from "firebase-admin/firestore";
 import { getAuth } from "firebase-admin/auth";
 import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
-import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
+import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak, sessizMi } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
@@ -380,4 +380,21 @@ export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retry
     const r = await pushTo(studentTokens(o.s), "Soru Çözüm 🎉", mesaj, "/?ac=socoz"); await dropBadStudentTokens(b.sid, r.bad);
   }
   await gRef.set({ bonusTarih: date, bonusGecmis: FieldValue.arrayUnion({ date, kisi: sonuc.dagitim.length, hak: sonuc.dagitim.reduce((a, b) => a + b.hak, 0), tahmin: Math.round(sonuc.tahmin * 100) / 100 }) }, { merge: true });
+});
+
+/* ===================== Mesajlaşma: yeni mesajda karşı tarafa bildirim ===================== */
+export const yeniMesaj = onDocumentCreated("sohbetler/{sid}/mesajlar/{mid}", async (event) => {
+  const m = event.data && event.data.data(); if (!m) return; const sid = event.params.sid;
+  const metin = String(m.metin || "").slice(0, 140) || "📷 Fotoğraf";
+  const sSnap = await db.doc(`students/${sid}`).get(); const s = sSnap.data() || {};
+  if (m.kim === "ogr") {
+    const tokens = await coachTokens(), mid = yeniMid();
+    const r = await pushTo(tokens, `💬 ${s.name || "Öğrenci"}`, metin, `/?ac=sohbet-${sid}`, mid);
+    for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
+    return;
+  }
+  const ayar = (((await db.doc("settings/main").get()).data() || {}).mesaj) || {};
+  if (sessizMi(istanbulNow().minutes, ayar.sessizBas || "23:00", ayar.sessizBit || "08:00")) return; /* gece: bildirim yok, mesaj sabah görünür */
+  const r = await pushTo(studentTokens(s), m.duyuru ? "📢 Koçundan duyuru" : "💬 Koçundan mesaj", metin, "/?ac=mesaj");
+  await dropBadStudentTokens(sid, r.bad);
 });

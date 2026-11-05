@@ -1,7 +1,7 @@
 // Bildirim mantığı testleri (sabah/akşam mesaj seçimi)
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { morningText, eveningText, due, DEF_SABAH } from "../functions/logic.js";
+import { morningText, eveningText, due, DEF_SABAH, sessizMi } from "../functions/logic.js";
 
 const ayse = { name: "Ayşe Yılmaz", weeks: { "2026-10-26": { "3": [{ t: "Problem 20 soru", done: true }, { t: "Paragraf", done: false }] } }, gunluk: {} };
 
@@ -68,4 +68,9 @@ test("görüşme hatırlatması: düzenden ve tekil görüşmelerden 1 saat önc
   assert.equal(L.pStart({ donem: ["2026-10-28"] }, "2026-11-10"), "2026-11-04");
   /* WhatsApp paketi ve rapor kayıtları hatırlatılmaz */
   assert.deepEqual(L.gunGorusmeleri({ ...students, a: { ...students.a, paket: "whatsapp" } }, notes, [{ id: "r1", sid: "b", tarih: d, tur: "rapor", saat: null }], d).map(x => x.sid), ["b"]);
+});
+
+test("mesaj sessiz saati gece yarısını aşar", () => {
+  assert.equal(sessizMi(23 * 60 + 30), true); assert.equal(sessizMi(2 * 60), true); assert.equal(sessizMi(8 * 60), false); assert.equal(sessizMi(15 * 60), false);
+  assert.equal(sessizMi(13 * 60, "12:00", "14:00"), true); assert.equal(sessizMi(10 * 60, "08:00", "08:00"), false);
 });
