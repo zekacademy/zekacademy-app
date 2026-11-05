@@ -182,6 +182,9 @@ function setBarColor(){ const dark = THEME.mode==="dark" || (THEME.mode==="syste
   const c = dark ? "#0A0B0E" : ({green:"#1E9E4A", blue:"#2563EB", red:"#DC2F3C"}[THEME.accent] || "#1E9E4A");
   const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c); }
 try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setBarColor); }catch(e){}
+/* Ana sayfadaki küçük açık/koyu geçiş butonu */
+const koyuMu = () => THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
+const temaBtn = () => { const k = koyuMu(); return `<button class="temabtn" data-act="temagec" aria-label="${k?"Açık moda geç":"Koyu moda geç"}" title="${k?"Açık mod":"Koyu mod"}">${icon(k?"sun":"moon","xs")}</button>`; };
 applyTheme();
 
 /* ---------- Durum ---------- */
@@ -578,7 +581,7 @@ function sHome(s){
   const PD = pDays(s, curStart(s)), tyt = exams(s,"TYT").slice(-5), tmx = Math.max(60, ...tyt.map(tytTotal));
   return `<header class="hhead"><div class="hhin">
       <div class="hrow"><span class="hav">${esc(initials(s.name))}</span><div class="hname"><span>Merhaba <b>${esc(firstName(s.name))}</b></span><small>${longToday()}</small></div><span class="spacer"></span>
-        <span class="hchip" title="Çalışma serisi">${icon("flame","xs")}<b class="num">${streak(s)}</b></span>${bellBtn(nots.length)}</div>
+        <span class="hchip" title="Çalışma serisi">${icon("flame","xs")}<b class="num">${streak(s)}</b></span>${temaBtn()}${bellBtn(nots.length)}</div>
       <div class="wstrip">${PD.map(d=>{ const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
         return `<button class="dbtn ${d===t?"today":""}" data-act="hgun" data-v="${d}" style="--p:${l.length?Math.round(dn/l.length*100):0}">${GUNK[dIdx(d)]}<b class="num">${dNum(d)}</b>${l.length?`<i class="${dn===l.length?"":"p"}"></i>`:""}</button>`; }).join("")}</div>
     </div></header>
@@ -1410,7 +1413,7 @@ function cOzet(){
   const att = all.filter(x=>x.m.score>0).sort((a,b)=>b.m.score-a.m.score);
   const q = normName(S.q);
   const rows = all.filter(x=>!q || normName(x.s.name).includes(q)).sort((a,b)=>b.m.score-a.m.score || a.s.name.localeCompare(b.s.name,"tr"));
-  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, bellBtn(unread))}
+  return `${topbar(`<div class="logo"><span class="lm">${LOGO}</span>Koç Paneli</div>`, temaBtn()+bellBtn(unread))}
   <div class="page wide">
     <div class="hello"><p class="small" style="margin:0">${longToday()}</p><h1>Günaydın hocam</h1><p>Öğrencilerinin bu haftaki durumu. Bu sayfayı sadece sen görürsün.</p></div>
     ${pushCard()}
@@ -2658,6 +2661,7 @@ document.addEventListener("click", e=>{
     case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); if(v==="kaynak") kysNot(); break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
+    case "temagec": THEME.mode = koyuMu() ? "light" : "dark"; applyTheme(); render(); break;
     case "accent": THEME.accent=v; applyTheme(); openSheet("tema"); render(); break;
     case "addq": { const h=$("#su-h"), m=$("#su-m"); const t=(num(h.value)||0)*60+(num(m.value)||0)+(+v); h.value=Math.floor(t/60); m.value=t%60; break; }
     case "sendnote": { const t=$("#kn").value.trim(); if(!t){ toast("Önce notu yaz"); break; } mutate(s=>{ s.koctanNot={text:t, date:nowISO()}; }); render(); toast("Not öğrencinin ana sayfasına gönderildi"); break; }
