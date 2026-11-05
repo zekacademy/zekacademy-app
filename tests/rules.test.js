@@ -117,3 +117,24 @@ test("koç bildirim durumu sadece koç tarafından okunur, kimse yazamaz", async
   await assertFails(getDoc(doc(ali(), "koc/bildirim")));
   await assertFails(setDoc(doc(coach(), "koc/bildirim"), { son: {} }));
 });
+
+test("soru çözüm: öğrenci kendi kullanımını ve sorularını okur, başkasınınkini ve geneli okuyamaz, hiçbirini yazamaz", async () => {
+  await env.withSecurityRulesDisabled(async ctx => {
+    const db = ctx.firestore();
+    await setDoc(doc(db, "aiKullanim/2026-11_ali"), { sid: "ali", kullanilan: 3 });
+    await setDoc(doc(db, "aiKullanim/2026-11_ayse"), { sid: "ayse", kullanilan: 5 });
+    await setDoc(doc(db, "aiKullanim/2026-11_genel"), { dolar: 3.2 });
+    await setDoc(doc(db, "aiSorular/q1"), { sid: "ali", ders: "TYT Matematik" });
+    await setDoc(doc(db, "aiSorular/q2"), { sid: "ayse", ders: "Fizik" });
+  });
+  await assertSucceeds(getDoc(doc(ali(), "aiKullanim/2026-11_ali")));
+  await assertFails(getDoc(doc(ali(), "aiKullanim/2026-11_ayse")));
+  await assertFails(getDoc(doc(ali(), "aiKullanim/2026-11_genel")));
+  await assertFails(setDoc(doc(ali(), "aiKullanim/2026-11_ali"), { sid: "ali", kullanilan: 0 }));
+  await assertSucceeds(getDoc(doc(ali(), "aiSorular/q1")));
+  await assertFails(getDoc(doc(ali(), "aiSorular/q2")));
+  await assertFails(setDoc(doc(ali(), "aiSorular/q3"), { sid: "ali" }));
+  await assertSucceeds(getDoc(doc(coach(), "aiKullanim/2026-11_genel")));
+  await assertSucceeds(setDoc(doc(coach(), "aiKullanim/2026-11_ali"), { sid: "ali", ekHak: 10 }, { merge: true }));
+  await assertFails(updateDoc(doc(ali(), "students/ali"), { aiBonus: { hak: 999 } }));
+});

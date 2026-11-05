@@ -282,7 +282,7 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
     if(deg){ n++; persistDoc("students", id, 0); } });
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
-function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; history.replaceState(null, "", "/"); }
+function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
 function stopWatching(){ unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); S.ready = false; }
 
 let authResolved = false;
@@ -551,7 +551,7 @@ function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
-  const pages = {home:sHome, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
+  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
   const nots = studentNotices(s).length;
   return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
@@ -587,6 +587,7 @@ function sHome(s){
     ${yaziliKart(s, curStart(s), false)}
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
+    ${aiAcik(S.me) ? `<button class="szhome" data-act="go" data-v="socoz"><span class="szhi">${icon("search")}</span><span><b>Soru Çözüm</b><small>Takıldığın soruyu fotoğrafla, adım adım birlikte çözelim</small></span>${s.aiBonus && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<span class="szyeni">🎉 Bonus</span>` : icon("chev","sm")}</button>` : ""}
     <div class="duo">
       <div class="dcard2"><button class="dch" data-act="go" data-v="program"><b>Bugünkü Program</b>${icon("chev","sm")}</button><p>${msg}</p>
         <div class="dil">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}</div>
@@ -640,6 +641,7 @@ function sMore(s){
     <div class="card note"><span class="av">${esc(initials(s.name))}</span><div><b>${esc(s.name)}</b><div class="muted small">${esc(s.alan)} · ${esc(s.sinif)}${s.okul?" · "+esc(s.okul):""}</div><div class="faint small">@${esc(s.kullanici||"")}</div></div></div>
     <div class="card">
       <button class="row" data-act="go" data-v="kronometre"><span class="ri">${icon("timer","sm")}</span><div><div class="rt">Kronometre ve çalışma süresi</div><div class="rs">Bugün ${fmtMin(minutes(s,today()))}</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span><div><div class="rt">Soru Çözüm</div><div class="rs">Fotoğrafla, yapay zekâ adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1396,7 +1398,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
+  const pages = {socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod};
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["ogrenciler","users","Öğrenciler"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
 const sortedStudents = () => [...S.students.entries()].sort((a,b)=>a[1].name.localeCompare(b[1].name,"tr"));
@@ -1652,6 +1654,167 @@ function cMore(){
   </div><p class="proto">Zekacademy Koç Paneli</p></div>`;
 }
 
+/* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
+const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:50, uyari:40, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
+const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
+const aiAy = () => today().slice(0,7);
+const callAi = (name, data) => httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
+const SZ_BOS = () => ({ foto:null, onizleme:"", key:"", mod:"coz", metin:"", data:null, shown:0, hints:0, busy:"", aciklama:{}, sohbet:[], benzer:null, benzerSec:"", hata:"", id:"", hak:0, model:"" });
+let SZ = SZ_BOS(); SZ.kalan = null; SZ.toplam = null;
+function szKullanimYukle(){ if(A() || !S.me) return; getDoc(doc(fdb, "aiKullanim", aiAy()+"_"+S.me)).then(d=>{ const k = d.exists() ? d.data() : {}, c = aiC();
+  SZ.toplam = c.aylikHak + (k.bonus||0) + (k.ekHak||0); SZ.kalan = Math.max(0, SZ.toplam - (k.kullanilan||0)); if(S.view==="socoz") render(true); }).catch(()=>{}); }
+function szHata(e){ const m = String((e && e.message) || "");
+  if(/hak/.test(m) && !/takip/.test(m)) return "Bu ayın soru hakkın bitti. Koçun ek hak verebilir; ayın başında hakların yenilenir.";
+  if(/takip/.test(m)) return "Bugünkü “anlamadım / benzer soru” hakkın doldu. Yarın yenilenir.";
+  if(/butce/.test(m)) return "Bu ayın Soru Çözüm bütçesi doldu. Ayın başında yeniden açılacak.";
+  if(/kapali/.test(m)) return "Soru Çözüm şu an senin için kapalı.";
+  if(/anahtar-yok/.test(m)) return "Soru Çözüm henüz kurulmadı. Koçuna haber ver.";
+  if(/resim-buyuk/.test(m)) return "Fotoğraf çok büyük. Sadece soruyu içine alacak şekilde tekrar çek.";
+  if(/deadline|timeout/i.test(m)) return "Çözüm çok uzun sürdü. Bir kez daha dene.";
+  return "Şu an çözemedim, bağlantıda bir sorun var. Biraz sonra tekrar dene. (Hakkın düşmedi.)"; }
+const szInline = s => esc(String(s==null?"":s)).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+function szMd(src){ const out = []; let list = null; const close = () => { if(list){ out.push(`</${list}>`); list = null; } };
+  String(src||"").split("\n").forEach(raw=>{ const l = raw.trimEnd(); let m; if(!l.trim()){ close(); return; }
+    if((m = l.match(/^#{1,6}\s+(.*)$/))){ close(); out.push(`<p><strong>${szInline(m[1])}</strong></p>`); return; }
+    if((m = l.match(/^\s*\d+[.)]\s+(.*)$/))){ if(list!=="ol"){ close(); out.push("<ol>"); list = "ol"; } out.push(`<li>${szInline(m[1])}</li>`); return; }
+    if((m = l.match(/^\s*[-*•]\s+(.*)$/))){ if(list!=="ul"){ close(); out.push("<ul>"); list = "ul"; } out.push(`<li>${szInline(m[1])}</li>`); return; }
+    close(); out.push(`<p>${szInline(l)}</p>`); }); close(); return out.join(""); }
+function szBaglam(){ const d = SZ.data || {}; return JSON.stringify({ soru:d.soru, siklar:d.siklar, ders:d.ders, konu:d.konu, adimlar:d.adimlar, cevap:d.cevap }); }
+function szYukleniyor(){ return `<div class="szload"><div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
+let szAsama = null;
+function szAsamaBaslat(){ clearInterval(szAsama); let i = 0; szAsama = setInterval(()=>{ const ph = document.querySelectorAll(".szph"); if(!ph.length || i >= ph.length-1){ return; } ph[i].className = "szph ok"; i++; ph[i].className = "szph on"; }, 8000); }
+function szCozum(){ const d = SZ.data; if(!d) return "";
+  if(d.okunabildi===false) return `<div class="szalert warn"><b>Soruyu tam okuyamadım.</b><br>${szInline(d.sorun || "Fotoğraf bulanık ya da soru kesik olabilir.")}<br>Daha net, düz ve tek soruyu gösteren bir fotoğrafla tekrar dene. <b>Hakkın düşmedi.</b></div>`;
+  let h = `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
+  if(d.anahtar==="uyumsuz" || d.emin===false) h += `<div class="szalert warn">⚠️ <b>Bu soruda emin olamadım.</b> ${d.anahtar==="uyumsuz" ? "Bulduğum cevap girdiğin cevap anahtarıyla uyuşmuyor; anahtarda baskı hatası da olabilir. " : ""}Kitabın çözümüne de bir göz at.</div>`;
+  else if(d.anahtar==="uyumlu") h += `<div class="szalert ok">✓ Cevap anahtarıyla kontrol edildi, uyuşuyor.</div>`;
+  if(d.istenen) h += `<div class="szgoal"><span>🎯</span><div><small>Ne isteniyor?</small><p>${szInline(d.istenen)}</p></div></div>`;
+  const H = (d.ipuclari||[]).filter(Boolean);
+  if(SZ.mod==="ipucu" && !SZ.shown){ const n = Math.max(1, SZ.hints||1);
+    h += H.slice(0, n).map((x,i)=>`<div class="szhint"><span>${i+1}</span><p>${szInline(x)}</p></div>`).join("");
+    return h + `<div class="szlock"><span>Önce kendin dene 💪 Takılırsan:</span><div class="pills" style="justify-content:center">${n < H.length ? `<button class="btn sm" data-act="szipucu">💡 Bir ipucu daha</button>` : ""}<button class="btn sm pri" data-act="szcozumac">Çözümü göster</button></div></div>`; }
+  const bl = (d.bilgi||[]).filter(x=>x && x.ifade);
+  if(bl.length) h += bl.map(x=>`<div class="szfact"><small>📌 ${esc(x.ad||"Kullanacağımız bilgi")}</small><div class="szf">${esc(x.ifade)}</div></div>`).join("");
+  const A2 = d.adimlar || [], n = Math.min(SZ.shown, A2.length);
+  h += `<div class="szsteps">${A2.slice(0, n).map((a,i)=>`<div class="szstep"><span class="szn">${i+1}</span><div class="szsb"><h4>${szInline(a.baslik||("Adım "+(i+1)))}</h4>${a.aciklama?`<p>${szInline(a.aciklama)}</p>`:""}${a.islem?`<div class="szf">${esc(a.islem)}</div>`:""}
+    <button class="link small" data-act="szadim" data-v="${i}" ${SZ.busy?"disabled":""}>🤔 ${SZ.aciklama[i] ? "Hâlâ anlamadım" : "Bu adımı anlamadım"}</button>${SZ.aciklama[i]!=null ? `<div class="szex">${SZ.aciklama[i]==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Daha basit anlatıyorum…` : szMd(SZ.aciklama[i])}</div>` : ""}</div></div>`).join("")}</div>`;
+  if(n < A2.length) return h + `<div class="pills"><button class="btn pri" data-act="szsonraki">${n===0?"1. adımı göster":"Sonraki adım →"}</button><button class="btn" data-act="szhepsi">Hepsini göster</button></div>`;
+  if(d.cevap) h += `<div class="szans"><span class="szbig">${esc(d.cevap.sik||"✓")}</span><div><small>Cevap</small><b>${d.cevap.sik?esc(d.cevap.sik)+" şıkkı":""}${d.cevap.deger?" · "+esc(d.cevap.deger):""}</b></div></div>`;
+  if(d.puf) h += `<div class="sztip"><span>💡</span><div><small>Püf noktası</small><p>${szInline(d.puf)}</p></div></div>`;
+  if(SZ.model!=="zor" && !A()) h += `<p class="small muted" style="margin:0;text-align:center">Çözüm yanlış görünüyorsa <button class="link small" data-act="szyanlis" ${SZ.busy?"disabled":""}>daha güçlü modelle tekrar çözdür</button> (2 hak).</p>`;
+  return h; }
+function szBenzer(){ const q = SZ.benzer; if(!q) return ""; const dogru = String(q.dogru||"").trim().toUpperCase().charAt(0), sec = SZ.benzerSec;
+  return `<div class="szquiz"><h3>🔁 Şimdi sıra sende</h3><p class="szqt" style="color:var(--fg)">${szInline(q.soru)}</p><div class="szopts">${Object.keys(q.siklar||{}).map(k=>`<button class="szopt ${sec ? (k===dogru?"dogru":k===sec?"yanlis":"") : ""}" data-act="szsec" data-v="${esc(k)}" ${sec?"disabled":""}><span>${esc(k)}</span>${esc(q.siklar[k])}</button>`).join("")}</div>
+    ${sec ? (sec===dogru ? `<div class="szalert ok"><b>Harika, doğru! 🎉</b> Bu konuyu kaptın.</div>` : `<div class="szalert bad">Bu sefer olmadı, sorun değil. Doğru cevap <b>${esc(dogru)}</b>.</div>`) + (Array.isArray(q.cozum) && q.cozum.length ? `<div class="szex"><b>Kısa çözüm</b><ol>${q.cozum.map(x=>`<li>${szInline(x)}</li>`).join("")}</ol></div>` : "") : ""}</div>`; }
+function pSoruCoz(){
+  const s = !A() && st(), c = aiC(), yuk = SZ.busy==="coz";
+  const head = topbar(`<h1 class="ttl">Soru Çözüm</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"ayarlar":"home"}" aria-label="Geri">${icon("back")}</button>`);
+  const hakSerit = SZ.kalan!=null ? `<div class="szhak"><span>Bu ay soru hakkın</span><b class="num">${SZ.kalan}</b><span>/ ${SZ.toplam}</span><i style="--w:${SZ.toplam ? Math.round(SZ.kalan/SZ.toplam*100) : 0}%"></i></div>` : A() ? `<div class="szhak"><span>Koç denemesi · hak düşmez</span></div>` : "";
+  const bonus = s && s.aiBonus && s.aiBonus.at && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<div class="szbonus"><span>🎉</span><p>${esc(s.aiBonus.mesaj)}</p><button class="iconbtn sm" data-act="szbonuskapat" aria-label="Kapat">${icon("x","sm")}</button></div>` : "";
+  const form = SZ.data || yuk ? "" : `${hakSerit}<div class="card szform">
+      <label class="szdrop" for="szFoto">${SZ.onizleme ? `<img src="${SZ.onizleme}" alt="Seçilen soru"><span><b>Fotoğraf hazır</b><small>Değiştirmek için dokun</small></span>` : `<span class="szdic">${icon("note")}</span><span><b>Sorunun fotoğrafını ekle</b><small>Tek soru, net ve düz olsun</small></span>`}<input type="file" accept="image/*" id="szFoto" hidden></label>
+      <div class="sqbtns"><label class="btn pri sm">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="szKamera" hidden></label><label class="btn sm">🖼️ Galeriden seç<input type="file" accept="image/*" id="szGaleri" hidden></label></div>
+      <label class="f">Ya da soruyu yaz / not ekle<textarea id="szMetin" rows="2" placeholder="İsteğe bağlı · ör. 12. soru, 18 buldum ama şıklarda yok">${esc(SZ.metin)}</textarea></label>
+      <div class="f">Cevap anahtarı (biliyorsan)<div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}</div></div>
+      <div class="seg">${[["coz","Adım adım çöz"],["ipucu","Önce ipucu"]].map(([k,l])=>`<button data-act="szmod" data-v="${k}" aria-pressed="${SZ.mod===k}">${l}</button>`).join("")}</div>
+      ${SZ.hata ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}
+      <button class="btn pri full" data-act="szgonder" ${SZ.kalan===0?"disabled":""}>${SZ.mod==="coz" ? "Soruyu çöz" : "İpucu ver"}</button>
+      <p class="faint small" style="margin:0;text-align:center">Kolay sorular 1 hak, zor sorular 3 hak. Okunamayan fotoğraf hak düşürmez.</p></div>`;
+  const devam = SZ.data && SZ.data.okunabildi!==false && (SZ.shown >= (SZ.data.adimlar||[]).length || SZ.mod==="ipucu") ? `<div class="card szdevam">
+      <div class="pills">${[["benzer","🔁 Benzer soru ver"],["basit","🤔 Baştan, daha basit anlat"],["hizli","⚡ Sınavda en hızlı yol ne?"]].map(([k,l])=>`<button class="btn sm" data-act="szchip" data-v="${k}" ${SZ.busy?"disabled":""}>${l}</button>`).join("")}</div>
+      <div class="szask"><textarea id="szSor" rows="1" placeholder="Aklına takılanı sor…"></textarea><button class="btn pri" data-act="szsor" ${SZ.busy?"disabled":""}>Sor</button></div></div>` : "";
+  const sohbet = SZ.sohbet.map(m=>`<div class="szmsg ${m.r}">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : m.r==="me" ? szInline(m.t) : szMd(m.t)}</div>`).join("");
+  const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
+  return `${head}<div class="page sz">${SZ.data || yuk ? "" : bonus}${form}${yuk ? szYukleniyor() : ""}${SZ.hata && SZ.data ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}<div class="szsol">${szCozum()}</div>${szBenzer()}${sohbet ? `<div class="szchat">${sohbet}</div>` : ""}${devam}${alt}
+    ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarını girersen çözümü ona göre kontrol eder.</p>` : ""}</div>`;
+}
+async function szFotoSec(file){ if(!file) return; SZ.hata = ""; SZ.foto = file; try{ SZ.onizleme = await resimKucult(file, 360, 60000); }catch(e){ SZ.foto = null; SZ.hata = "Bu fotoğraf açılamadı. Başka bir fotoğraf dene."; } render(); }
+async function szGonder(tekrar){
+  if(SZ.busy) return; const metin = SZ.metin.trim();
+  if(!tekrar && !SZ.foto && !metin){ SZ.hata = "Önce sorunun fotoğrafını ekle ya da soruyu yaz."; render(); return; }
+  SZ.hata = ""; SZ.busy = "coz"; if(!tekrar){ SZ.data = null; SZ.shown = 0; SZ.hints = 0; SZ.aciklama = {}; SZ.sohbet = []; SZ.benzer = null; SZ.benzerSec = ""; }
+  const eski = tekrar && SZ.data ? szBaglam() : ""; SZ.data = null; render(); window.scrollTo(0,0); szAsamaBaslat();
+  try{
+    const [resim, kucuk] = SZ.foto ? await Promise.all([resimKucult(SZ.foto, 1568, 700000), resimKucult(SZ.foto, 240, 40000)]) : [null, null];
+    const r = await callAi("soruCoz", { resim, kucuk, metin, anahtar: SZ.key, tekrar: eski || undefined });
+    SZ.data = r.cozum; SZ.id = r.id; SZ.model = r.model; SZ.hak = (tekrar ? SZ.hak : 0) + (r.hak||0);
+    if(r.kalan!=null && !A()){ SZ.kalan = r.kalan; SZ.toplam = r.toplam; }
+    SZ.shown = SZ.mod==="coz" ? 1 : 0; SZ.hints = 1;
+  }catch(e){ console.warn("soruCoz", e); SZ.hata = szHata(e); }
+  finally{ clearInterval(szAsama); SZ.busy = ""; render(); window.scrollTo(0,0); }
+}
+async function szTakip(tur, gorunen, metin, adim){
+  if(SZ.busy || !SZ.data) return; SZ.busy = tur; SZ.hata = "";
+  if(tur==="adim") SZ.aciklama[adim] = "…"; else if(tur==="benzer"){ SZ.benzer = null; SZ.benzerSec = ""; SZ.sohbet.push({r:"ai", t:"…"}); } else { SZ.sohbet.push({r:"me", t:gorunen}, {r:"ai", t:"…"}); }
+  render(); const yer = tur==="adim" ? null : document.querySelector(".szmsg:last-child"); if(yer) yer.scrollIntoView({behavior:"smooth", block:"center"});
+  try{
+    const r = await callAi("soruTakip", { tur, baglam: szBaglam(), metin, adim: adim!=null ? adim+1 : undefined });
+    if(tur==="adim") SZ.aciklama[adim] = r.metin || "";
+    else if(tur==="benzer"){ SZ.sohbet.pop(); SZ.benzer = r.benzer; }
+    else SZ.sohbet[SZ.sohbet.length-1] = {r:"ai", t:r.metin || ""};
+  }catch(e){ console.warn("soruTakip", e); const m = szHata(e);
+    if(tur==="adim") SZ.aciklama[adim] = m; else SZ.sohbet[SZ.sohbet.length-1] = {r:"ai", t:"⚠️ "+m}; }
+  finally{ SZ.busy = ""; render(); if(tur==="benzer"){ const q = document.querySelector(".szquiz"); if(q) q.scrollIntoView({behavior:"smooth", block:"start"}); } }
+}
+function szAct(a, b, v){
+  switch(a){
+    case "szkey": SZ.key = SZ.key===v ? "" : v; render(); return true;
+    case "szmod": SZ.mod = v; render(); return true;
+    case "szgonder": szGonder(false); return true;
+    case "szyanlis": szGonder(true); return true;
+    case "szsonraki": SZ.shown++; render(); { const l = document.querySelectorAll(".szstep"); if(l.length) l[l.length-1].scrollIntoView({behavior:"smooth", block:"center"}); } return true;
+    case "szhepsi": SZ.shown = (SZ.data.adimlar||[]).length; render(); return true;
+    case "szipucu": SZ.hints = (SZ.hints||1)+1; render(); return true;
+    case "szcozumac": SZ.mod = "coz"; SZ.shown = 1; render(); return true;
+    case "szadim": szTakip("adim", "", "", +v); return true;
+    case "szchip": if(v==="benzer") szTakip("benzer"); else if(v==="basit") szTakip("sohbet", "Baştan, daha basit anlatır mısın?", "Bu soruyu hiç bilmeyen birine anlatır gibi baştan, çok basit anlat. Günlük hayattan küçük bir benzetme kullanabilirsin."); else szTakip("sohbet", "Sınavda en hızlı yol ne?", "Bu soruyu sınavda en hızlı nasıl çözerim? Kısa yol, eleme ya da pratik bir yöntem varsa göster; en fazla 4 madde."); return true;
+    case "szsor": { const t = $("#szSor"), q = t && t.value.trim(); if(q) szTakip("sohbet", q, q); return true; }
+    case "szsec": SZ.benzerSec = v; render(); return true;
+    case "szyeni": { const k = SZ.kalan, tp = SZ.toplam, m = SZ.mod; SZ = SZ_BOS(); SZ.kalan = k; SZ.toplam = tp; SZ.mod = m; render(); window.scrollTo(0,0); return true; }
+    case "szbonuskapat": { const s = st(); if(s && s.aiBonus){ s.aiBonusGoruldu = s.aiBonus.at; save(); } render(); return true; }
+  }
+  return false;
+}
+
+/* ---------- Soru Çözüm: koç ayarları ve harcama paneli ---------- */
+function aiSet(k, v){ S.settings.ai = { ...(S.settings.ai||{}), [k]: v }; saveSettings(600); }
+function aiAyarHTML(){ const c = aiC();
+  return `<div class="f">Durum<div class="seg">${[["kapali","Kapalı"],["pilot","Sadece seçtiklerim"],["herkes","Tüm öğrenciler"]].map(([k,l])=>`<label class="segr"><input type="radio" name="aiacik" data-aiacik="1" value="${k}" ${c.acik===k?"checked":""}><span>${l}</span></label>`).join("")}</div></div>
+    ${c.acik==="pilot" ? `<div class="f">Deneme öğrencileri<div class="aipil">${sortedStudents().map(([id,x])=>`<label class="inline"><input type="checkbox" data-aipilot="${id}" ${(c.pilot||[]).includes(id)?"checked":""}>${esc(x.name)}</label>`).join("")}</div></div>` : ""}
+    <div class="two"><label class="f">Öğrenci başı aylık soru hakkı<input type="number" min="0" step="10" data-ainum="aylikHak" value="${c.aylikHak}"></label>
+      <label class="f">Aylık bütçe tavanı ($)<input type="number" min="1" step="5" data-ainum="tavan" value="${c.tavan}"></label></div>
+    <div class="two"><label class="f">Uyarı tutarı ($)<input type="number" min="1" step="5" data-ainum="uyari" value="${c.uyari}"></label>
+      <label class="f">Günlük “anlamadım / benzer soru” sınırı<input type="number" min="0" step="1" data-ainum="takipGunluk" value="${c.takipGunluk}"></label></div>
+    <label class="inline"><input type="checkbox" data-aibool="bonusAcik" ${c.bonusAcik?"checked":""}>Bütçe artarsa her pazartesi çalışkan öğrencilere bonus soru hakkı dağıt</label>
+    <label class="f">Bonus için en az haftalık program uyumu (%)<input type="number" min="0" max="100" step="5" data-ainum="bonusUyum" value="${c.bonusUyum}"></label>
+    <p class="faint small" style="margin:0">Kolay sorular 1 hak (hızlı model), zor ya da cevap anahtarıyla uyuşmayan sorular 3 hak (güçlü model). Bütçe tavana gelince sistem kendiliğinden durur. Kurulum için Anthropic API anahtarının GitHub'a eklenmiş olması gerekir.</p>
+    <div class="pills"><button class="btn sm pri" data-act="go" data-v="aipanel">${icon("chart","xs")} Kullanım ve harcama</button><button class="btn sm" data-act="go" data-v="socoz">${icon("search","xs")} Kendin dene</button></div>`; }
+const AIP = { ay:"", kul:[], sorular:[], yuk:false, hata:"" };
+function aipYukle(){ const ay = aiAy(); AIP.ay = ay; AIP.yuk = true; AIP.hata = ""; let n = 0; const bitti = () => { if(++n===2){ AIP.yuk = false; if(S.view==="aipanel") render(true); } };
+  const u1 = onSnapshot(query(collection(fdb, "aiKullanim"), where("ay","==",ay)), q=>{ AIP.kul = q.docs.map(d=>({id:d.id, ...d.data()})); try{ u1(); }catch(e){} bitti(); }, e=>{ AIP.hata = "Veriler okunamadı."; bitti(); });
+  const u2 = onSnapshot(query(collection(fdb, "aiSorular"), where("ay","==",ay)), q=>{ AIP.sorular = q.docs.map(d=>({id:d.id, ...d.data()})).sort((a,b)=>a.at<b.at?1:-1).slice(0,40); try{ u2(); }catch(e){} bitti(); }, e=>{ bitti(); }); }
+function cAiPanel(){
+  if(AIP.ay !== aiAy() && !AIP.yuk) aipYukle();
+  const c = aiC(), g = AIP.kul.find(k=>k.id.endsWith("_genel")) || {}, harc = g.dolar || 0, t = today(), gun = +t.slice(8,10), gs = new Date(+t.slice(0,4), +t.slice(5,7), 0).getDate();
+  const tahmin = harc / Math.max(1, gun) * gs, zorOran = g.soru ? Math.round((g.zor||0)/g.soru*100) : 0;
+  const days = [...Array(gs)].map((_,i)=>`${t.slice(0,8)}${String(i+1).padStart(2,"0")}`), gv = days.map(d=>(g.gun||{})[d]||0), mx = Math.max(0.01,...gv);
+  const ogr = sortedStudents().map(([id,x])=>{ const k = AIP.kul.find(z=>z.id===`${AIP.ay}_${id}`) || {}; const top = c.aylikHak+(k.bonus||0)+(k.ekHak||0); return {id, x, k, top}; })
+    .filter(o=>aiAcik(o.id) || o.k.soru).sort((a,b)=>(b.k.kullanilan||0)-(a.k.kullanilan||0));
+  const back = `<button class="iconbtn" data-act="go" data-v="ayarlar" aria-label="Geri">${icon("back")}</button>`;
+  return `${topbar(`<h1 class="ttl">AI harcama</h1>`, `<button class="iconbtn" data-act="aipyenile" aria-label="Yenile">${icon("trend")}</button>`, back)}
+  <div class="page wide">
+    ${AIP.hata ? `<div class="err" style="display:block">${esc(AIP.hata)}</div>` : ""}
+    <div class="kpis">${tile(harc >= c.uyari ? "t-r" : "t-g","chart",`${harc.toFixed(2)} $`,`Bu ay harcanan · tavan ${c.tavan} $`)}${tile(tahmin > c.tavan ? "t-r" : "t-a","trend",`${tahmin.toFixed(2)} $`,"Bu hızla ay sonu tahmini")}${tile("t-w","search",String(g.soru||0),`Çözülen soru · %${zorOran} güçlü model`)}${tile("t-g","flame",String((g.bonusGecmis||[]).reduce((a,b)=>a+(b.hak||0),0)),"Dağıtılan bonus hak")}</div>
+    <div class="card"><div class="sech"><h3>Günlük harcama</h3><span class="faint small">${shortDate(days[0])} – ${shortDate(days[gs-1])}</span></div><div class="aip-bar" style="margin-top:10px">${gv.map((v,i)=>`<i style="height:${v/mx*100}%;${days[i]===t?"opacity:1;background:var(--ac2)":""}" title="${shortDate(days[i])}: ${v.toFixed(3)} $"></i>`).join("")}</div></div>
+    <div class="card"><div class="sech"><h3>Öğrenciler</h3><span class="faint small">${c.acik==="kapali" ? "Soru Çözüm kapalı" : c.acik==="pilot" ? "Sadece seçilen öğrenciler" : "Tüm öğrenciler"}</span></div>
+      ${ogr.length ? `<div style="overflow-x:auto"><table class="aip-tbl"><thead><tr><th>Öğrenci</th><th class="num">Hak</th><th class="num">Soru</th><th class="num">Güçlü</th><th class="num">$</th><th></th></tr></thead><tbody>${ogr.map(o=>`<tr><td>${esc(o.x.name)}${o.k.bonus?` <span class="pill ac">+${o.k.bonus} bonus</span>`:""}</td><td class="num">${o.k.kullanilan||0}/${o.top}</td><td class="num">${o.k.soru||0}</td><td class="num">${o.k.zor||0}</td><td class="num">${(o.k.dolar||0).toFixed(2)}</td><td><button class="btn sm" data-act="aiekhak" data-id="${o.id}">+10 hak</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty">${AIP.yuk ? "Yükleniyor…" : "Henüz kullanan yok. Ayarlar'dan Soru Çözüm'ü açabilirsin."}</div>`}</div>
+    <div class="card"><div class="sech"><h3>Son sorular</h3><span class="faint small">${AIP.sorular.length} soru</span></div>
+      ${AIP.sorular.length ? AIP.sorular.map(q=>`<div class="aip-q">${q.kucuk?`<img src="${q.kucuk}" alt="">`:`<span class="ri">${icon("note","sm")}</span>`}<div style="min-width:0;flex:1"><b class="small">${esc(S.students.get(q.sid)?.name || "Koç denemesi")}</b> <span class="faint small">· ${ago(q.at)}</span><div class="small muted">${esc([q.ders, q.konu].filter(Boolean).join(" · ") || "—")}</div></div><span class="pill ${q.model==="zor"?"":"ac"}">${q.model==="zor"?"Güçlü":"Hızlı"}</span>${q.anahtar==="uyumsuz"||q.emin===false?`<span class="pill" style="background:var(--warns);color:var(--warn)">emin değil</span>`:""}</div>`).join("") : `<div class="empty">Bu ay henüz soru yok.</div>`}</div>
+  </div>`; }
+async function aiEkHak(sid){ const id = `${aiAy()}_${sid}`, k = AIP.kul.find(z=>z.id===id) || {}, ek = (k.ekHak||0) + 10;
+  try{ await setDoc(doc(fdb, "aiKullanim", id), { sid, ay: aiAy(), ekHak: ek }, { merge: true }); const i = AIP.kul.findIndex(z=>z.id===id); if(i>=0) AIP.kul[i] = {...AIP.kul[i], ekHak: ek}; else AIP.kul.push({id, sid, ay:aiAy(), ekHak: ek}); toast(`${S.students.get(sid)?.name || "Öğrenci"} · +10 soru hakkı verildi`); render(); }
+  catch(e){ toast("Hak eklenemedi"); } }
+
 /* ---------- Ayarlar (koç) ---------- */
 const clone = x => JSON.parse(JSON.stringify(x));
 function cSettings(){
@@ -1659,7 +1822,7 @@ function cSettings(){
   if(FOTO===undefined) fotoYukle().then(()=>{ if(S.view==="ayarlar") keepSettingsOpen(); });
   const c = cfg(), cur = CURX(), ex = S.setEx || "TYT", sample = {name:"Ayşe Yılmaz"};
   const ta = (id, key, list, rows, ph) => `<textarea id="${id}" data-setlist="${key}" rows="${rows}" placeholder="${ph||""}">${esc(list.join("\n"))}</textarea>`;
-  const sec = (title, desc, body, reset, open) => `<details class="card setsec" ${open?"open":""}><summary><span><b>${title}</b><span class="muted small">${desc}</span></span>${icon("chev","sm")}</summary><div class="setbody">${body}${reset?`<div class="pills"><button class="btn sm" data-act="sreset" data-v="${reset}">Varsayılana dön</button></div>`:""}</div></details>`;
+  const sec = (title, desc, body, reset, open) => `<details class="card setsec" data-key="set-${esc(String(title).replace(/\s+/g,"-"))}" ${open?"open":""}><summary><span><b>${title}</b><span class="muted small">${desc}</span></span>${icon("chev","sm")}</summary><div class="setbody">${body}${reset?`<div class="pills"><button class="btn sm" data-act="sreset" data-v="${reset}">Varsayılana dön</button></div>`:""}</div></details>`;
   const morningPrev = c.sabah.filter(Boolean).length ? fillName(c.sabah.filter(Boolean)[dayNo(today()) % c.sabah.filter(Boolean).length], sample) : "—";
   return `${topbar(`<h1 class="ttl">Ayarlar</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide" id="settingsPage">
@@ -1706,6 +1869,7 @@ function cSettings(){
       <label class="f">Dene: bir satır yaz<input type="text" id="sr-test" data-act="stest" placeholder="ör. AYT Fen Branş x2"></label><div class="small" id="sr-out" style="font-weight:700"></div>`, "sureler")}
     ${sec("Hızlı ekle listesi",`${c.quick.length} satır`,`<div class="f">Program yazarken “+ Hızlı ekle” menüsünde çıkan satırlar <span class="faint" style="font-weight:500">· her satır bir seçenek</span>${ta("st-quick","quick",c.quick,8)}</div>`, "quick")}
     ${sec("Haftalık hedef dersleri",`${c.hedefDers.length} ders`,`<div class="f">“Bitirilecek konu / Takip edilen kitaplar” tablosundaki dersler <span class="faint" style="font-weight:500">· her satır bir ders</span>${ta("st-hd","hedefDers",c.hedefDers,6)}</div>`, "hedefDers")}
+    ${sec("Soru Çözüm (yapay zekâ)", (c=>c.acik==="kapali" ? "Kapalı" : c.acik==="pilot" ? `Deneme · ${(c.pilot||[]).length} öğrenci` : `Açık · aylık ${c.aylikHak} hak · tavan ${c.tavan} $`)(aiC()), aiAyarHTML())}
     ${sec("Bildirimler (koç)", `Bu cihaz: ${typeof Notification==="undefined" ? "desteklemiyor" : Notification.permission==="granted" ? "açık" : Notification.permission==="denied" ? "kapalı" : "izin verilmedi"}`, `
       <p class="muted small" style="margin:0">Yeni kayıt ve başvuru bildirimleri, bildirim izni verdiğin cihazlara gelir. Gelmiyorsa önce bu cihazda bildirimleri yenile, sonra test gönder.</p>
       <div class="pills"><button class="btn sm" data-act="pushyenile">${icon("bell","xs")} Bu cihazda bildirimleri aç / yenile</button><button class="btn sm pri" data-act="bildirimtest">Test bildirimi gönder</button></div>
@@ -1761,6 +1925,10 @@ function cSettings(){
 }
 function setPath(path, val){ const ks = path.split("."); let o = S.settings; for(let i=0;i<ks.length-1;i++){ o[ks[i]] = o[ks[i]] ? o[ks[i]] : clone(cfg()[ks[i]]); o = o[ks[i]]; } o[ks[ks.length-1]] = val; }
 function onSetting(t, isChange){
+  if(t.dataset.ainum!=null){ const v = Math.max(0, Number(t.value)||0); aiSet(t.dataset.ainum, v); return true; }
+  if(t.dataset.aibool!=null && isChange){ aiSet(t.dataset.aibool, t.checked); return true; }
+  if(t.dataset.aiacik!=null && isChange){ aiSet("acik", t.value); keepSettingsOpen(); return true; }
+  if(t.dataset.aipilot!=null && isChange){ const L = new Set(aiC().pilot||[]); if(t.checked) L.add(t.dataset.aipilot); else L.delete(t.dataset.aipilot); aiSet("pilot", [...L]); return true; }
   if(t.dataset.setb2!=null){ S.settings.bmesaj = {...(S.settings.bmesaj||{}), [t.dataset.setb2]: t.value}; saveSettings(700); return true; }
   if(t.id==="fotoSec"){ if(isChange && t.files && t.files[0]){ const st = $("#fotoDurum"); if(st) st.textContent = "Yükleniyor…"; fotoKaydet(t.files[0]).then(()=>{ keepSettingsOpen(); toast("Fotoğraf kaydedildi"); }).catch(e=>{ if(st) st.textContent = "Yüklenemedi: "+(e.message||e); }); } return true; }
   if(t.dataset.set!=null){ S.settings[t.dataset.set] = t.value; saveSettings(600); if(t.dataset.set==="kurum"||t.dataset.set==="examDate") renderSideOnly(); return true; }
@@ -2373,13 +2541,16 @@ document.addEventListener("click", e=>{
   const b = e.target.closest("[data-act]"); if(!b || b.tagName==="SELECT" || b.tagName==="INPUT") return;
   const a = b.dataset.act, v = b.dataset.v;
   if(A() && b.closest("#settingsPage") && onSettingClick(a, b)) return;
+  if(a && a.startsWith("sz") && szAct(a, b, v)) return;
+  if(a==="aiekhak" && A()){ aiEkHak(b.dataset.id); return; }
+  if(a==="aipyenile" && A()){ aipYukle(); render(); return; }
   switch(a){
     case "arole": S.authRole=v; if(v==="student" && S.auth==="admin") S.auth="login"; renderAuth(); break;
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
     case "install": doInstall(); break;
     case "logout": logout(); break;
     case "pushon": enablePush(); break;
-    case "go": S.view=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
+    case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
     case "bell": S.view="bildirim"; render(); window.scrollTo(0,0); break;
     case "open": if(!b.dataset.id) break; S.cur=b.dataset.id; S.week=curStart(st()); S.view="detay"; S.dtab="ozet"; render(); window.scrollTo(0,0); break;
     case "dtab": S.dtab=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week=curStart(st()); } render(); break;
@@ -2496,6 +2667,7 @@ document.addEventListener("click", e=>{
 function keepOpen(fn){ const open = [...document.querySelectorAll("details.subj")].map((d,i)=>d.open?i:-1).filter(i=>i>=0); fn(); const ds=document.querySelectorAll("details.subj"); open.forEach(i=>{ if(ds[i]) ds[i].open=true; }); }
 document.addEventListener("change", e=>{
   const t = e.target;
+  if((t.id==="szFoto" || t.id==="szKamera" || t.id==="szGaleri") && t.files && t.files[0]){ szFotoSec(t.files[0]); return; }
   if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }
   if(A() && t.closest && t.closest("#settingsPage")){ if(onSetting(t,true) && (t.dataset.curt!=null || t.dataset.cur!=null)) keepSettingsOpen(); return; }
@@ -2528,6 +2700,7 @@ document.addEventListener("keydown", e=>{
   if(e.key==="Enter" && e.target.id==="hq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")) || ($("#hfree")?.hidden ? null : $("#hfree")); if(b) b.click(); return; }
   if(e.key==="Enter" && e.target.id==="kq"){ e.preventDefault(); const b=[...document.querySelectorAll("#layer .klist .kt")].find(x=>!x.hidden && !x.closest("[hidden]")); if(b) b.click(); } });
 document.addEventListener("input", e=>{
+  if(e.target && e.target.id==="szMetin"){ SZ.metin = e.target.value; return; }
   const t = e.target;
   if(A() && t.closest && t.closest("#settingsPage")){ onSetting(t,false); return; }
   if(t.dataset.gnot){ const id = gorusSet(t.dataset.gnot, g=>{ g.not = t.value; }); if(id!==t.dataset.gnot){ t.dataset.gnot = id; S.gsel = id; } return; }
@@ -2571,3 +2744,5 @@ setInterval(()=>{
 render();
 init();
 
+
+document.addEventListener("keydown", e=>{ if(e.target && e.target.id==="szSor" && e.key==="Enter" && !e.shiftKey){ e.preventDefault(); szAct("szsor"); } });
