@@ -83,6 +83,13 @@ jobs:
             echo "::error title=Fonksiyon yayını::$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' ozet.txt)"
             exit 1; fi
           echo "::notice::Sunucu fonksiyonları yayınlandı"
+      - name: Soru Çözüm API anahtarı (main)
+        if: github.event_name != 'pull_request'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npm --prefix functions install --no-audit --no-fund > /dev/null
+          node tools/ai-anahtar.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
