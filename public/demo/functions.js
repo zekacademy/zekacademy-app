@@ -1,0 +1,2 @@
+export function getFunctions(){ return {}; }
+export function httpsCallable(f, name){ return async (data)=>{ window.__calls = (window.__calls||[]); window.__calls.push([name, data]); if(name==="ogrenciSil"){ const db = window.__db; delete db["students/"+data.uid]; localStorage.setItem("mockDb", JSON.stringify(db)); } if(name==="formAnahtari") return {data:{anahtar:"abc123", url:"https://europe-west3-zekacademy-59b2f.cloudfunctions.net/formBasvuru"}}; return {data:{ok:true}}; }; }
