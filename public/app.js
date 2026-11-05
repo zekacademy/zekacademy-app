@@ -182,6 +182,15 @@ function setBarColor(){ const dark = THEME.mode==="dark" || (THEME.mode==="syste
   const c = dark ? "#0A0B0E" : ({green:"#1E9E4A", blue:"#2563EB", red:"#DC2F3C"}[THEME.accent] || "#1E9E4A");
   const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c); }
 try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setBarColor); }catch(e){}
+/* ---------- Ses efektleri (Web Audio ile üretilir, dosya yok; Görünüm'den kapatılabilir) ---------- */
+const SES = { acik: (()=>{ try{ return localStorage.getItem("zk-ses")!=="0"; }catch(e){ return true; } })(), ctx:null };
+function sesCtx(){ try{ if(!SES.ctx){ const C = window.AudioContext || window.webkitAudioContext; if(!C) return null; SES.ctx = new C(); } if(SES.ctx.state==="suspended") SES.ctx.resume(); return SES.ctx; }catch(e){ return null; } }
+function sesNota(c, f, t0, sure, vol, tip, f2){ const o = c.createOscillator(), g = c.createGain(); o.type = tip || "sine"; o.frequency.setValueAtTime(f, t0); if(f2) o.frequency.exponentialRampToValueAtTime(f2, t0+sure);
+  g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(vol, t0+0.008); g.gain.exponentialRampToValueAtTime(0.0001, t0+sure); o.connect(g).connect(c.destination); o.start(t0); o.stop(t0+sure+0.03); }
+function sesCal(tur){ if(!SES.acik) return; const c = sesCtx(); if(!c) return; const t = c.currentTime + 0.005;
+  try{ if(tur==="tik") sesNota(c, 480, t, 0.035, 0.018, "sine", 360);
+    else if(tur==="basari"){ sesNota(c, 659, t, 0.12, 0.045, "triangle"); sesNota(c, 880, t+0.09, 0.16, 0.045, "triangle"); sesNota(c, 1175, t+0.18, 0.24, 0.035, "triangle"); } }catch(e){} }
+document.addEventListener("pointerdown", e=>{ const b = e.target.closest && e.target.closest("button, .row, .srow, .chip, label.btn, .szdrop, .segr"); if(!b || b.disabled || b.matches('[data-act="tick"]')) return; sesCal("tik"); }, {passive:true});
 /* Ana sayfadaki küçük açık/koyu geçiş butonu */
 const koyuMu = () => THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
 const temaBtn = () => { const k = koyuMu(); return `<button class="temabtn" data-act="temagec" aria-label="${k?"Açık moda geç":"Koyu moda geç"}" title="${k?"Açık mod":"Koyu mod"}">${icon(k?"sun":"moon","xs")}</button>`; };
@@ -2393,6 +2402,7 @@ function openSheet(kind, el){
     fd=>{ const t = String(fd.get("serbest")||"").trim(); if(!t) return sheetErr("Bir mesaj yaz ya da hazır mesajlardan birine dokun."); waAc(sid, t); }); }
   if(kind==="tema") return sheet(`<h3>Görünüm</h3>
     <div class="f">Mod<div class="seg">${[["system","Otomatik"],["light","Açık"],["dark","Koyu"]].map(([k,l])=>`<button type="button" data-act="mode" data-v="${k}" aria-pressed="${THEME.mode===k}">${l}</button>`).join("")}</div></div>
+    <label class="inline"><input type="checkbox" id="sesAcik" ${SES.acik?"checked":""}>Ses efektleri (dokunma ve görev tamamlama sesleri)</label>
     <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`);
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
@@ -2642,7 +2652,7 @@ document.addEventListener("click", e=>{
       b.classList.add("on"); b.dataset.n = (+b.dataset.n||0)+1; toast(`Eklendi: ${t}`); const q = $("#hq"); if(q && b.id==="hfree"){ q.value=""; q.dispatchEvent(new Event("input",{bubbles:true})); } break; }
     case "kt": { const n=v, on=!KSEL.includes(n); KSEL = on ? [...KSEL, n] : KSEL.filter(x=>x!==n); document.querySelectorAll("#layer .kt").forEach(x=>{ if(x.dataset.v===n) x.setAttribute("aria-pressed", on); }); kselNote(); break; }
     case "kclear": KSEL=[]; document.querySelectorAll("#layer .kt").forEach(x=>x.setAttribute("aria-pressed","false")); { const f=$("#kfree"); if(f) f.value=""; } kselNote(); break;
-    case "tick": { const d=b.dataset.date, id=b.dataset.id; { const s0 = st(); if(!A() && s0 && s0.timer && s0.timer.task && s0.timer.task.id===id){ const r = sayacDurdur(true); render(); toast(`Tebrikler! ${r.added>0?`+${fmtMin(r.added)} · `:""}görev tamamlandı`); break; } } mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
+    case "tick": { const d=b.dataset.date, id=b.dataset.id; { const s0 = st(); if(!A() && s0 && s0.timer && s0.timer.task && s0.timer.task.id===id){ const r = sayacDurdur(true); sesCal("basari"); render(); toast(`Tebrikler! ${r.added>0?`+${fmtMin(r.added)} · `:""}görev tamamlandı`); break; } } mutate(s=>{ const it=dayTasks(s,d).find(x=>x.id===id); if(it){ it.done=!it.done; it.doneAt = it.done ? today() : null; if(it.done) sesCal("basari"); else sesCal("tik"); if(it.done && !A()){ const l=dayTasks(s,d); if(l.every(x=>x.done)) setTimeout(()=>toast("Bugünün tüm görevleri tamam! 🎉"),50); } } }); render(); break; }
     case "copyweek": { if(!A()) break; mutate(s=>{ const pw=pPrev(s,S.week), pp=plan(s,pw), np=ensurePlan(s,S.week), oldDays=pDays(s,pw); let c=0;
       pDays(s,S.week).forEach((cd,i)=>{ const pd = oldDays.find(o=>dIdx(o)===dIdx(cd)); if(!pd) return; const src=dayTasks(s,pd); c+=src.length; setDayTasks(s,cd, src.map(t=>({id:uid(), t:taskText(t), done:false, doneAt:null}))); const sv=(pp.saat||{})[pIdx(s,pd)]; if(sv!=null&&sv!=="") np.saat[i]=sv; });
       np.hedef = {}; Object.entries(pp.hedef||{}).forEach(([d,v])=>{ if(v&&v.konu) np.hedef[d]={konu:v.konu, done:false}; });
@@ -2672,6 +2682,7 @@ document.addEventListener("click", e=>{
 function keepOpen(fn){ const open = [...document.querySelectorAll("details.subj")].map((d,i)=>d.open?i:-1).filter(i=>i>=0); fn(); const ds=document.querySelectorAll("details.subj"); open.forEach(i=>{ if(ds[i]) ds[i].open=true; }); }
 document.addEventListener("change", e=>{
   const t = e.target;
+  if(t.id==="sesAcik"){ SES.acik = t.checked; try{ localStorage.setItem("zk-ses", t.checked ? "1" : "0"); }catch(_){} if(t.checked) sesCal("basari"); return; }
   if((t.id==="szFoto" || t.id==="szKamera" || t.id==="szGaleri") && t.files && t.files[0]){ szFotoSec(t.files[0]); return; }
   if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }

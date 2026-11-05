@@ -982,12 +982,33 @@ body{background:var(--bg)}
 @keyframes acCiz{to{stroke-dashoffset:0}}
 @keyframes acYazi{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.ac-kutu,.ac-nokta,.ac-ok,.ac-ad,.ac-alt{animation:none}.ac-cizgi{animation:none;stroke-dashoffset:0}}
+
+/* ===== Buton dokunma animasyonu: basınca hafif küçülür, bırakınca yaylanarak döner ===== */
+.btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{
+  transition:transform .32s cubic-bezier(.34,1.56,.64,1),background-color .15s ease,border-color .15s ease,box-shadow .15s ease,color .15s ease;-webkit-tap-highlight-color:transparent}
+.btn:active,.iconbtn:active,.chip:active,.qb:active,.tog:active,.gozi:active,.kt:active,.gday:active,.dbtn:active,.szopt:active,.szkeys button:active,.seg button:active,.segr:active span,.msggon:active,.hchip:active,.pills>button:active,.link:active,.sqbtns label:active,.arac button:active,.tile.tbtn:active{transform:scale(.94);transition-duration:.08s;transition-timing-function:ease-out}
+.hero:active,.szhome:active,.dch:active,.szdrop:active{transform:scale(.97);transition-duration:.08s;transition-timing-function:ease-out}
+.row:active,.srow:active,.msgrow:active,.gtad:active,.kpick:active{transform:scale(.985);transition-duration:.08s;transition-timing-function:ease-out}
+.nb:active .bub,.nb:active>svg{transform:scale(.88);transition-duration:.08s}
+.temabtn:active{transform:scale(.86) rotate(-20deg);transition-duration:.08s}
+.btn:disabled:active,.iconbtn:disabled:active,button:disabled:active{transform:none}
+@media (prefers-reduced-motion:reduce){
+  .btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{transition:background-color .15s ease,color .15s ease}
+  *:active{transform:none!important}
+}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
   window.acilisBitir = function(){ if(kapandi) return; kapandi = true; var el = document.getElementById("acilis"); if(!el) return;
     setTimeout(function(){ el.classList.add("bitti"); setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 500); }, Math.max(0, az - (Date.now() - t0))); };
-  setTimeout(window.acilisBitir, 5000); })();
+  setTimeout(window.acilisBitir, 5000);
+  /* Açılış sesi: tarayıcılar dokunmadan ses çalmaya genelde izin vermez; izin verirse grafikle birlikte hafif yükselen bir ses */
+  try{ var C = window.AudioContext || window.webkitAudioContext; if(C && !az0() && localStorage.getItem("zk-ses")!=="0"){ var c = new C();
+    if(c.state==="running"){ var t = c.currentTime, n = function(f, f2, b, d, v, tip){ var o = c.createOscillator(), g = c.createGain(); o.type = tip; o.frequency.setValueAtTime(f, t+b); if(f2) o.frequency.exponentialRampToValueAtTime(f2, t+b+d);
+        g.gain.setValueAtTime(0.0001, t+b); g.gain.exponentialRampToValueAtTime(v, t+b+0.03); g.gain.exponentialRampToValueAtTime(0.0001, t+b+d); o.connect(g); g.connect(c.destination); o.start(t+b); o.stop(t+b+d+0.05); };
+      n(330, 660, 0.5, 0.6, 0.035, "sine"); n(1320, 0, 1.08, 0.35, 0.03, "triangle"); } else { c.close(); } } }catch(e){}
+  function az0(){ return matchMedia("(prefers-reduced-motion: reduce)").matches; }
+  })();
 </script>
 <div id="root"><div style="min-height:80vh;display:grid;place-items:center;font-family:system-ui;color:#5E6573">Yükleniyor…</div></div>
 <div id="layer"></div>
