@@ -13,6 +13,7 @@ import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
+import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -273,4 +274,110 @@ export const formBasvuru = onRequest({ cors: false, maxInstances: 2, invoker: "p
   } else await db.collection("notifs").add(doc);
   if (!b.sessiz && !b.deneme) await nabizYaz({ sonBasvuru: new Date().toISOString(), uyarildi: null });
   res.status(200).json({ ok: true });
+});
+
+
+/* ===================== Soru Çözüm Merkezi (Claude) ===================== */
+let AI_ANAHTAR = { v: "", at: 0 };
+async function aiAnahtar(){
+  if (AI_ANAHTAR.v && Date.now() - AI_ANAHTAR.at < 5 * 60e3) return AI_ANAHTAR.v;
+  const v = ((await db.doc("system/ai").get()).data() || {}).anahtar || ""; AI_ANAHTAR = { v, at: Date.now() }; return v;
+}
+async function claude(model, content, maxTokens){
+  const key = await aiAnahtar(); if (!key) throw new HttpsError("failed-precondition", "anahtar-yok");
+  const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST",
+    headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    body: JSON.stringify({ model, max_tokens: maxTokens, system: SISTEM, messages: [{ role: "user", content }] }) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { logger.error("claude hata", r.status, j && j.error); throw new HttpsError("unavailable", "yapay-zeka-hata"); }
+  const text = (j.content || []).filter(c => c.type === "text").map(c => c.text).join("");
+  return { text, usage: j.usage || {}, stop: j.stop_reason };
+}
+async function aiBaglam(req){
+  if (!req.auth) throw new HttpsError("unauthenticated", "giris");
+  const sid = req.auth.uid, koc = req.auth.token.email === COACH_EMAIL;
+  const settings = (await db.doc("settings/main").get()).data() || {}, c = aiCfg(settings);
+  if (!koc && !aiAcikMi(c, sid)) throw new HttpsError("failed-precondition", "kapali");
+  const date = istanbulNow().date, ay = ayOf(date);
+  return { sid, koc, c, date, ay, kRef: db.doc(`aiKullanim/${kullanimId(ay, sid)}`), gRef: db.doc(`aiKullanim/${ay}_genel`) };
+}
+async function aiKaydet(x, { hak = 0, dolar = 0, soru = 0, zor = 0, takip = 0 }){
+  const { kRef, gRef, sid, ay, date, c } = x;
+  const inc = FieldValue.increment;
+  await kRef.set({ sid, ay, kullanilan: inc(hak), dolar: inc(dolar), soru: inc(soru), zor: inc(zor), son: new Date().toISOString(), ...(takip ? { takip: { [date]: inc(takip) } } : {}) }, { merge: true });
+  await gRef.set({ ay, dolar: inc(dolar), soru: inc(soru), zor: inc(zor), gun: { [date]: inc(dolar) } }, { merge: true });
+  const g = (await gRef.get()).data() || {};
+  if (g.dolar >= c.uyari && !g.uyarildi) {
+    await gRef.set({ uyarildi: true }, { merge: true });
+    const tokens = await coachTokens(), mid = yeniMid();
+    const r = await pushTo(tokens, "⚠️ Soru Çözüm bütçesi", `Bu ay ${g.dolar.toFixed(2)} $ harcandı (tavan ${c.tavan} $). ${c.tavan} $'a gelince sistem duracak.`, "/?ac=ayarlar", mid);
+    await kocBildirimDurum("Soru Çözüm bütçe uyarısı", tokens, r, mid);
+  }
+  return g;
+}
+
+/* Öğrenci soruyu gönderir: önce kolay model, gerekirse güçlü model */
+export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstances: 5 }, async (req) => {
+  const x = await aiBaglam(req), { c, kRef, gRef } = x, d = req.data || {};
+  const resim = typeof d.resim === "string" && d.resim.startsWith("data:image/jpeg;base64,") ? d.resim.slice(23) : "";
+  const metin = String(d.metin || "").slice(0, 1500), anahtar = /^[A-E]$/.test(d.anahtar || "") ? d.anahtar : "", tekrar = d.tekrar ? String(d.tekrar).slice(0, 2000) : "";
+  if (!resim && !metin) throw new HttpsError("invalid-argument", "soru-yok");
+  if (resim.length > 800000) throw new HttpsError("invalid-argument", "resim-buyuk");
+  const [kS, gS] = await Promise.all([kRef.get(), gRef.get()]); const k = kS.data() || {}, g = gS.data() || {};
+  if (!x.koc && kalanHak(c, k) <= 0) throw new HttpsError("resource-exhausted", "hak");
+  if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
+  const icerik = [...(resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : []), { type: "text", text: cozIstegi({ metin, anahtar, tekrar }) }];
+  let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null;
+  if (!tekrar) {
+    const a = await claude(c.modelKolay, icerik, 2500); dolar += maliyet(c, "kolay", a.usage); r = jsonCikar(a.text);
+    neden = zoraGec(r, anahtar);
+  }
+  if (neden) {
+    try { const b = await claude(c.modelZor, icerik, 3500); dolar += maliyet(c, "zor", b.usage); const r2 = jsonCikar(b.text); if (r2) { r = r2; model = "zor"; } }
+    catch (e) { logger.warn("güçlü model", e.message); if (!r) throw e; }
+  }
+  if (!r) { await aiKaydet(x, { dolar }); throw new HttpsError("unavailable", "cozum-okunamadi"); }
+  delete r.kontrol; r.anahtar = anahtarDurumu(r, anahtar); if (r.anahtar === "uyumsuz") r.emin = false;
+  const hak = r.okunabildi === false ? 0 : tekrar ? c.hakTekrar : model === "zor" ? c.hakZor : c.hakKolay;
+  await aiKaydet(x, { hak, dolar, soru: 1, zor: model === "zor" ? 1 : 0 });
+  const kucuk = typeof d.kucuk === "string" && d.kucuk.startsWith("data:image/jpeg;base64,") && d.kucuk.length < 60000 ? d.kucuk : null;
+  const ref = await db.collection("aiSorular").add({ sid: x.sid, ay: x.ay, at: new Date().toISOString(), ders: r.ders || "", konu: r.konu || "", zorluk: r.zorluk || "", soru: String(r.soru || "").slice(0, 400),
+    cevap: (r.cevap && r.cevap.sik) || "", anahtar: r.anahtar, emin: r.emin !== false, model, neden: neden || null, hak, dolar: Math.round(dolar * 1e5) / 1e5, kucuk, okunabildi: r.okunabildi !== false });
+  const k2 = (await kRef.get()).data() || {};
+  return { cozum: r, id: ref.id, model, hak, kalan: kalanHak(c, k2), toplam: toplamHak(c, k2) };
+});
+
+/* Takip: adımı açıkla / benzer soru / soru sor (kolay model, günlük sınırlı, hak düşmez) */
+export const soruTakip = onCall({ timeoutSeconds: 120, maxInstances: 5 }, async (req) => {
+  const x = await aiBaglam(req), { c, kRef, gRef, date } = x, d = req.data || {};
+  const tur = ["adim", "benzer", "sohbet"].includes(d.tur) ? d.tur : "sohbet";
+  const [kS, gS] = await Promise.all([kRef.get(), gRef.get()]); const k = kS.data() || {}, g = gS.data() || {};
+  if (!x.koc && ((k.takip || {})[date] || 0) >= c.takipGunluk) throw new HttpsError("resource-exhausted", "takip");
+  if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
+  const a = await claude(c.modelKolay, [{ type: "text", text: takipIstegi(tur, d.baglam, d.metin, Number(d.adim) || 1) }], tur === "benzer" ? 1500 : 800);
+  await aiKaydet(x, { dolar: maliyet(c, "kolay", a.usage), takip: 1 });
+  if (tur === "benzer") { const q = jsonCikar(a.text); if (!q || !q.soru || !q.siklar) throw new HttpsError("unavailable", "benzer-okunamadi"); return { benzer: q }; }
+  return { metin: a.text };
+});
+
+/* Her gece: bütçe tahmini; pazartesi: çalışkanlara bonus hak */
+export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
+  const settings = (await db.doc("settings/main").get()).data() || {}, c = aiCfg(settings);
+  if (c.acik === "kapali") return;
+  const { date } = istanbulNow(), ay = ayOf(date), gRef = db.doc(`aiKullanim/${ay}_genel`);
+  const g = (await gRef.get()).data() || {};
+  const pazartesi = new Date(date + "T12:00:00Z").getUTCDay() === 1;
+  if (!pazartesi || !c.bonusAcik || g.bonusTarih === date) return;
+  const studs = (await db.collection("students").get()).docs.filter(s => aiAcikMi(c, s.id));
+  const ks = await Promise.all(studs.map(s => db.doc(`aiKullanim/${kullanimId(ay, s.id)}`).get()));
+  const ogrenciler = studs.map((s, i) => ({ sid: s.id, s: s.data(), k: ks[i].data() || {}, perf: haftalikPerformans(s.data(), date) }));
+  const sonuc = bonusDagit(c, { harcanan: g.dolar || 0, date, ogrenciler });
+  logger.info("ai bonus", { date, pay: sonuc.pay, tahmin: sonuc.tahmin, kisi: sonuc.dagitim.length });
+  for (const b of sonuc.dagitim) {
+    const mesaj = bonusMesaj(b), o = ogrenciler.find(z => z.sid === b.sid);
+    await db.doc(`aiKullanim/${kullanimId(ay, b.sid)}`).set({ sid: b.sid, ay, bonus: FieldValue.increment(b.hak) }, { merge: true });
+    await db.doc(`students/${b.sid}`).update({ aiBonus: { hak: b.hak, mesaj, at: new Date().toISOString() } }).catch(() => {});
+    const r = await pushTo(studentTokens(o.s), "Soru Çözüm 🎉", mesaj, "/?ac=socoz"); await dropBadStudentTokens(b.sid, r.bad);
+  }
+  await gRef.set({ bonusTarih: date, bonusGecmis: FieldValue.arrayUnion({ date, kisi: sonuc.dagitim.length, hak: sonuc.dagitim.reduce((a, b) => a + b.hak, 0), tahmin: Math.round(sonuc.tahmin * 100) / 100 }) }, { merge: true });
 });
