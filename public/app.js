@@ -482,7 +482,7 @@ function render(fromSnap){
   if(!S.role){
     if(!authResolved){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;border-radius:16px">${LOGO}</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
     if(fromSnap && $("#root .auth form") && root.contains(document.activeElement)){ const b = $("#root .auth form .btn.pri"); if(b && b.disabled){ b.disabled=false; b.textContent=b.dataset.label; } return; }
-    renderAuth(); return;
+    renderAuth(); if(window.acilisBitir) window.acilisBitir(); return;
   }
   if(!S.ready){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;border-radius:16px">${LOGO}</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }
   if(S.role==="student" && !S.students.has(S.me)){ root.innerHTML = `<div class="auth"><div class="apanel" style="padding-top:20vh"><h2>Kaydın bulunamadı</h2><p class="muted">Hesabına ait öğrenci kaydı silinmiş olabilir. Koçunla iletişime geç.</p><button class="btn" data-act="logout">Çıkış yap</button></div></div>`; return; }
@@ -490,6 +490,7 @@ function render(fromSnap){
   if(fromSnap && document.activeElement && root.contains(document.activeElement) && document.activeElement.matches("input[type=text],input[type=number],textarea,select")) return;
   const y = window.scrollY, acik = new Set([...root.querySelectorAll("details[data-key][open]")].map(d=>d.dataset.key));
   root.innerHTML = A() ? coachShell() : studentShell();
+  if(window.acilisBitir) window.acilisBitir();
   tlBoyut(root);
   if(acik.size) root.querySelectorAll("details[data-key]").forEach(d=>{ if(acik.has(d.dataset.key)) d.open = true; }); /* açık bölümler dokununca kapanmasın */
   const sayfa = [S.role, S.view, S.dtab, S.cur, S.gday, S.pmode, S.ex, S.mx, S.btab].join("|"); /* sayfa değişince hafif geçiş */
