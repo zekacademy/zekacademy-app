@@ -543,7 +543,7 @@ function turOrnek(k){
 function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return "";
   return `<div class="turov" role="dialog" aria-modal="true" aria-label="Uygulama tanıtımı"><div class="turkart">
     <div class="turust"><span class="turic">${icon(a.ic)}</span><span class="faint small">${i+1} / ${L.length}</span><button class="link small" data-act="turbitir">Atla</button></div>
-    <h2>${esc(a.b.replace("{Ad}", ilkAd(s.name)))}</h2><p>${esc(a.t)}</p>${a.ornek?turOrnek(a.ornek):""}
+    <h2>${esc(a.b.replaceAll("{Ad}", ilkAd(s.name)))}</h2><p>${esc(a.t.replaceAll("{Ad}", ilkAd(s.name)))}</p>${a.ornek?turOrnek(a.ornek):""}
     <div class="turnok">${L.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
     <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
 function studentShell(){
