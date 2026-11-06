@@ -1,0 +1,666 @@
+[
+ {
+  "id": "tytmat-olasilik-0001",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Basit Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "İki bölünebilme koşulundan en az birini sağlayan durumları içerme–dışarma ile sayıp olasılığı bulur.",
+  "tipId": "ol-temel",
+  "tip": "Basit olayın olasılığı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir torbada üzerlerinde 1’den 40’a kadar numaralar yazılı 40 kart vardır. Torbadan rastgele bir kart çekiliyor.\nÇekilen kartın numarasının 4 ile ya da 6 ile (en az biriyle) tam bölünebilme olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/40",
+   "B": "1/4",
+   "C": "13/40",
+   "D": "2/5",
+   "E": "27/40"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "13/40"
+  },
+  "celdiriciler": {
+   "A": "3/40, hem 4 hem 6 ile bölünenlerin (12’nin katları) olasılığı.",
+   "B": "1/4, yalnızca 4 ile bölünenlerin olasılığı.",
+   "D": "2/5, ortak katları iki kez saymak (16/40).",
+   "E": "27/40, ikisiyle de bölünmeyenlerin olasılığı; bu tümleyen."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Kart numarasının 4 ya da 6 ile bölünme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Ortak katlar",
+    "ifade": "hem 4’ün hem 6’nın katı olan sayılar EKOK(4, 6) = 12’nin katlarıdır"
+   }
+  ],
+  "ipuclari": [
+   "1–40 arasında 4’ün kaç katı var? 6’nın kaç katı var?",
+   "Hem 4’ün hem 6’nın katı olan sayılar iki listede de geçer.",
+   "İstenen durum sayısını 40’a böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "4’ün katları",
+    "aciklama": "40 ÷ 4 = 10.",
+    "islem": "4, 8, …, 40 ⇒ 10 sayı"
+   },
+   {
+    "baslik": "6’nın katları",
+    "aciklama": "36’ya kadar.",
+    "islem": "6, 12, …, 36 ⇒ 6 sayı"
+   },
+   {
+    "baslik": "Ortakları çıkar",
+    "aciklama": "12’nin katları iki listede de sayıldı; bir kez çıkar.",
+    "islem": "12, 24, 36 ⇒ 10 + 6 − 3 = 13"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen durumları tüm durumlara böl.",
+    "islem": "13/40"
+   }
+  ],
+  "puf": "“Ya da” koşulunda iki listeyi topla, ortak olanları bir kez çıkar.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0001k",
+  "kaynakKart": "K-OL-01 (numaralı kart, bölünebilme) · “4 ile ya da 6 ile” koşulu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0002",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Art Arda Olaylar",
+  "k": "matd|Olasılık",
+  "kazanim": "Geri atılmadan yapılan art arda çekilişte sıralı olayın olasılığını çarpma ile bulur.",
+  "tipId": "ol-ardisik",
+  "tip": "Art arda olaylar",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir torbada 3 kırmızı ve 5 mavi bilye vardır. Torbadan geri atılmamak koşuluyla art arda iki bilye çekiliyor.\nBirinci bilyenin kırmızı, ikinci bilyenin mavi olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/14",
+   "B": "15/56",
+   "C": "3/8",
+   "D": "15/28",
+   "E": "5/8"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15/56"
+  },
+  "celdiriciler": {
+   "A": "3/14, ikinci çekilişte mavi sayısını da 1 azaltmak (3/8 × 4/7); çekilen bilye kırmızıydı.",
+   "C": "3/8, yalnızca birinci bilyenin kırmızı olma olasılığı.",
+   "D": "15/28, sırayı önemsemeyip kırmızı–mavi ve mavi–kırmızı düzenlerini toplamak.",
+   "E": "5/8, ikinci çekilişi tek başına düşünmek; iki olayın birlikte olma olasılığı çarpımdır."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Önce kırmızı sonra mavi çekme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Art arda olaylar",
+    "ifade": "iki olayın sırayla birlikte olma olasılığı çarpılır. Geri atılmazsa ikinci çekilişte torbadaki bilye sayısı 1 azalır"
+   }
+  ],
+  "ipuclari": [
+   "Birinci çekilişte kırmızı gelme olasılığı kaç?",
+   "Bir kırmızı çekildikten sonra torbada kaç bilye ve kaç mavi kalır?",
+   "İki olasılığı birleştir: çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci çekiliş",
+    "aciklama": "8 bilyeden 3’ü kırmızı.",
+    "islem": "3/8"
+   },
+   {
+    "baslik": "İkinci çekiliş",
+    "aciklama": "Bir kırmızı çıktı; torbada 7 bilye, 5 mavi kaldı.",
+    "islem": "5/7"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İki olay sırayla birlikte oluyor.",
+    "islem": "3/8 × 5/7 = 15/56"
+   }
+  ],
+  "puf": "Geri atılmayan çekilişte her adımda torbayı güncelle: hem toplam hem çekilen renk 1 azalır.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0002k",
+  "kaynakKart": "K-OL-02 (geri atılmadan art arda çekiliş) · istenen sıra: kırmızı sonra mavi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0003",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Kombinasyonla Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Birlikte seçimde istenen bileşimin olasılığını kombinasyonla hesaplar.",
+  "tipId": "ol-secme",
+  "tip": "Kombinasyonla olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir sınıfta 6 kız ve 4 erkek öğrenci vardır. Bu sınıftan rastgele 3 öğrenci seçiliyor.\nSeçilen öğrencilerden 2’sinin kız, 1’inin erkek olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/12",
+   "B": "1/6",
+   "C": "3/10",
+   "D": "1/2",
+   "E": "2/3"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1/2"
+  },
+  "celdiriciler": {
+   "A": "1/12, paydayı sıralı seçimle (10 × 9 × 8 = 720) alıp payı sırasız saymak.",
+   "B": "1/6, yalnızca kız–kız–erkek sırasını hesaplamak (6/10 × 5/9 × 4/8); erkek 3 farklı sırada gelebilir.",
+   "C": "3/10, 1 kız 2 erkek seçilme olasılığı.",
+   "E": "2/3, en az 2 kız seçilme olasılığı; 3 kızın seçildiği durum da eklenmiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "2 kız 1 erkek seçilme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) biçimde seçilir. Örnek: C(5, 2) = 10"
+   }
+  ],
+  "ipuclari": [
+   "10 öğrenciden 3 öğrenci kaç farklı biçimde seçilir?",
+   "2 kızı 6 kızdan, 1 erkeği 4 erkekten seç; bu seçimler çarpılır.",
+   "İstenen seçim sayısını tüm seçimlere böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm seçimler",
+    "aciklama": "10 öğrenciden 3’ü, sıra önemsiz.",
+    "islem": "C(10, 3) = 120"
+   },
+   {
+    "baslik": "İstenen seçimler",
+    "aciklama": "6 kızdan 2, 4 erkekten 1.",
+    "islem": "C(6, 2) × C(4, 1) = 15 × 4 = 60"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenenleri tüm seçimlere böl.",
+    "islem": "60/120 = 1/2"
+   }
+  ],
+  "puf": "Pay ile paydayı aynı yöntemle say: ikisi de sırasız (kombinasyon) ya da ikisi de sıralı.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0003k",
+  "kaynakKart": "K-OL-04 (birlikte seçimde bileşim) · 2 kız 1 erkek",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0004",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Tümleyen Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "“En az ikisi aynı” olasılığını “hepsi farklı” tümleyeninden bulur.",
+  "tipId": "ol-tumleyen",
+  "tip": "Tümleyen olay",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Ayşe, Bora ve Cenk birbirlerinden habersiz olarak 1, 2, 3, 4 ve 5 sayılarından birini rastgele seçiyor.\nEn az iki kişinin aynı sayıyı seçmiş olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/25",
+   "B": "1/5",
+   "C": "12/25",
+   "D": "13/25",
+   "E": "3/5"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "13/25"
+  },
+  "celdiriciler": {
+   "A": "1/25, üçünün de aynı sayıyı seçme olasılığı.",
+   "B": "1/5, yalnızca Bora’nın Ayşe ile aynı sayıyı seçme olasılığı.",
+   "C": "12/25, herkesin farklı sayı seçme olasılığı; bu tümleyen.",
+   "E": "3/5, üç ikilinin eşleşme olasılıklarını (1/5) toplamak; bu olaylar aynı anda olabildiği için toplanamaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "En az iki kişinin aynı sayıyı seçme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Tümleyen olay",
+    "ifade": "bir olayın olma olasılığı = 1 − olmama olasılığı. “En az bir” için “hiç” durumunu 1’den çıkar"
+   },
+   {
+    "ad": "Çarpma ilkesi",
+    "ifade": "her kişi 5 sayıdan birini seçerse üç kişinin seçimleri 5 × 5 × 5 biçimde olur"
+   }
+  ],
+  "ipuclari": [
+   "Üç kişinin seçimleri kaç farklı biçimde olabilir?",
+   "“En az iki kişi aynı” olmayan durum nedir?",
+   "Üçünün de farklı seçtiği durumları say ve 1’den çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm durumlar",
+    "aciklama": "Her kişi 5 sayıdan birini seçer.",
+    "islem": "5 × 5 × 5 = 125"
+   },
+   {
+    "baslik": "Hepsi farklı",
+    "aciklama": "Ayşe 5, Bora kalan 4, Cenk kalan 3 sayıdan seçer.",
+    "islem": "5 × 4 × 3 = 60"
+   },
+   {
+    "baslik": "Tümleyen",
+    "aciklama": "“En az ikisi aynı”, “hepsi farklı”nın tümleyenidir.",
+    "islem": "1 − 60/125 = 65/125 = 13/25"
+   }
+  ],
+  "puf": "“En az iki aynı” sorularında “hepsi farklı” durumunu say ve 1’den çıkar.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0004k",
+  "kaynakKart": "K-OL-05 (en az … olasılığı tümleyenden) · yeni kurgu (üç kişinin sayı seçmesi)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0005",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Art Arda Olaylar",
+  "k": "matd|Olasılık",
+  "kazanim": "İki aşamalı olayda olası yolların olasılıklarını çarpıp toplar.",
+  "tipId": "ol-ardisik",
+  "tip": "Art arda olaylar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir şehirde yağmurlu bir günün ertesi gününün de yağmurlu olma olasılığı 2/5, yağmursuz bir günün ertesi gününün yağmurlu olma olasılığı ise 1/5’tir.\nBu şehirde pazartesi günü yağmur yağdığına göre çarşamba günü yağmur yağma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/25",
+   "B": "4/25",
+   "C": "7/25",
+   "D": "2/5",
+   "E": "18/25"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7/25"
+  },
+  "celdiriciler": {
+   "A": "3/25, yalnızca salının yağmursuz olduğu yolu hesaplamak.",
+   "B": "4/25, yalnızca salının yağmurlu olduğu yolu hesaplamak.",
+   "D": "2/5, salıyı atlayıp pazartesiden çarşambaya doğrudan 2/5 almak.",
+   "E": "18/25, çarşamba günü yağmur yağmama olasılığı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Çarşamba gününün yağmurlu olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Art arda olaylar",
+    "ifade": "iki olayın sırayla birlikte olma olasılığı çarpılır. Geri atılmazsa ikinci çekilişte torbadaki bilye sayısı 1 azalır"
+   },
+   {
+    "ad": "Ayrık yolları toplama",
+    "ifade": "bir sonuca birbirinden ayrı yollarla ulaşılıyorsa her yolun olasılığı ayrı hesaplanır ve toplanır"
+   }
+  ],
+  "ipuclari": [
+   "Pazartesiden çarşambaya giderken salı günü kaç farklı durumda olabilir?",
+   "Her durum için salının ve çarşambanın olasılıklarını çarp.",
+   "Bulduğun iki yolu topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Salı yağmurlu",
+    "aciklama": "Pazartesi yağmurlu ⇒ salı yağmurlu 2/5; ardından çarşamba yağmurlu 2/5.",
+    "islem": "2/5 × 2/5 = 4/25"
+   },
+   {
+    "baslik": "Salı yağmursuz",
+    "aciklama": "Salının yağmursuz olma olasılığı 1 − 2/5 = 3/5; ardından çarşamba yağmurlu 1/5.",
+    "islem": "3/5 × 1/5 = 3/25"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki yol birbirinden ayrık.",
+    "islem": "4/25 + 3/25 = 7/25"
+   }
+  ],
+  "puf": "Ara aşaması belirsiz olaylarda her olası ara durumu ayrı bir yol olarak hesapla, sonra topla.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0005k",
+  "kaynakKart": "K-OL-03 (iki aşamalı olay, yolları toplama) · yeni kurgu (günlük hava durumu)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0006",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Şekilli Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Kareli tahtada ortak kenarlı kare çiftlerini sayarak olasılığı bulur.",
+  "tipId": "ol-sekil",
+  "tip": "Şekil üzerinde olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Aşağıda 3 satır ve 3 sütun biçiminde dizilmiş 9 eş kareden oluşan bir tahta gösterilmiştir. Bu karelerden rastgele 2 tanesi seçiliyor.\nSeçilen iki karenin ortak bir kenarının olma olasılığı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"90.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"140.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"190.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"90.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"140.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"190.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"90.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"140.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><rect x=\"190.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/></svg>",
+  "siklar": {
+   "A": "2/9",
+   "B": "8/27",
+   "C": "1/3",
+   "D": "5/9",
+   "E": "2/3"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1/3"
+  },
+  "celdiriciler": {
+   "A": "2/9, yalnızca köşe köşeye değen kareleri saymak (8/36).",
+   "B": "8/27, kareleri sıralı ve tekrarlı seçiyormuş gibi saymak (24/81).",
+   "D": "5/9, köşesi değen kareleri de saymak (20/36).",
+   "E": "2/3, her karenin komşu sayılarını toplayıp (24) ikiye bölmemek."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Seçilen iki karenin ortak kenarlı olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) biçimde seçilir. Örnek: C(5, 2) = 10"
+   }
+  ],
+  "ipuclari": [
+   "9 kareden 2 kare kaç farklı biçimde seçilir?",
+   "Her satırda yan yana kaç komşu çift var? Her sütunda alt alta kaç çift var?",
+   "Köşeleri değen kareler ortak kenarlı değildir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm seçimler",
+    "aciklama": "9 kareden 2’si, sıra önemsiz.",
+    "islem": "C(9, 2) = 36"
+   },
+   {
+    "baslik": "Komşu çiftler",
+    "aciklama": "Her satırda 2 yan yana çift, her sütunda 2 alt alta çift. Şekilde her karenin komşu sayısı yazılı; toplamları 24, her çift iki kez sayıldığı için ikiye bölünür.",
+    "islem": "3 × 2 + 3 × 2 = 12",
+    "gorsel": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"90.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"115.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2</text><rect x=\"140.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"165.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">3</text><rect x=\"190.0\" y=\"10.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"215.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2</text><rect x=\"90.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"115.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">3</text><rect x=\"140.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"165.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">4</text><rect x=\"190.0\" y=\"60.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"215.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">3</text><rect x=\"90.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"115.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2</text><rect x=\"140.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"165.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">3</text><rect x=\"190.0\" y=\"110.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--bg,#fff)\" fill-opacity=\"0\"/><text x=\"215.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"15\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2</text></svg>"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen çiftleri tüm seçimlere böl.",
+    "islem": "12/36 = 1/3"
+   }
+  ],
+  "puf": "Komşu çiftleri satır satır ve sütun sütun say; her kareden sayarsan sonucu ikiye bölmeyi unutma.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0006k",
+  "kaynakKart": "K-OL-06 (kareli tahtada komşu kareler) · 3 × 3 tahta, ortak kenar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0007",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Olasılıktan Sayı Bulma",
+  "k": "matd|Olasılık",
+  "kazanim": "Verilen olasılıktan torbadaki renk sayısını bulup başka bir olayın olasılığını hesaplar.",
+  "tipId": "ol-sayi-bulma",
+  "tip": "Olasılıktan sayı bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir torbada yalnızca kırmızı ve beyaz bilyeler vardır ve toplam bilye sayısı 10’dur. Torbadan rastgele 2 bilye birlikte çekildiğinde ikisinin de kırmızı olma olasılığı 1/3’tür.\nBuna göre torbadan rastgele çekilen 2 bilyenin ikisinin de beyaz olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2/15",
+   "B": "4/25",
+   "C": "1/3",
+   "D": "2/5",
+   "E": "8/15"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "2/15"
+  },
+  "celdiriciler": {
+   "B": "4/25, bilyeleri geri atılarak çekiliyormuş gibi (4/10)² hesaplamak.",
+   "C": "1/3, ikisinin de kırmızı olma olasılığı; soru beyazı soruyor.",
+   "D": "2/5, tek bir bilyenin beyaz olma olasılığı (4/10).",
+   "E": "8/15, bilyelerin farklı renkte olma olasılığı (24/45)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İki bilyenin de beyaz olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) biçimde seçilir. Örnek: C(5, 2) = 10"
+   }
+  ],
+  "ipuclari": [
+   "10 bilyeden 2 bilye kaç farklı biçimde seçilir?",
+   "İki kırmızı seçiminin sayısı, tüm seçimlerin 1/3’ü olmalı. Kaç kırmızı bilye bunu sağlar?",
+   "Beyaz sayısını bulup iki beyaz seçiminin olasılığını hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm seçimler",
+    "aciklama": "10 bilyeden 2’si.",
+    "islem": "C(10, 2) = 45"
+   },
+   {
+    "baslik": "Kırmızı sayısı",
+    "aciklama": "İki kırmızı seçimi 45 × 1/3 = 15 olmalı.",
+    "islem": "C(r, 2) = 15 ⇒ r × (r − 1) = 30 ⇒ r = 6"
+   },
+   {
+    "baslik": "Beyaz sayısı",
+    "aciklama": "Kalanlar beyaz.",
+    "islem": "10 − 6 = 4"
+   },
+   {
+    "baslik": "İki beyaz",
+    "aciklama": "4 beyazdan 2’si.",
+    "islem": "C(4, 2) / 45 = 6/45 = 2/15"
+   }
+  ],
+  "puf": "Olasılık verilmişse önce istenen durum sayısını bul (tüm durum × olasılık), sonra bilinmeyen sayıyı çöz.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0007k",
+  "kaynakKart": "K-OL-07 (olasılıktan sayı bulma) · yeni kurgu (kırmızı–beyaz bilye), istenen diğer renk",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasilik-0008",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Olasılık ve Sayma",
+  "k": "matd|Olasılık",
+  "kazanim": "Sıralanarak yazılan sayının çift olmasını en büyük rakama bağlayıp kombinasyonla sayar.",
+  "tipId": "ol-sayma",
+  "tip": "Sayma ile olasılık",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ece, 1’den 9’a kadar olan rakamlardan birbirinden farklı üç tanesini rastgele seçip bu rakamları soldan sağa küçükten büyüğe sıralayarak üç basamaklı bir sayı yazıyor.\nEce’nin yazdığı sayının çift sayı olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "31/84",
+   "B": "17/42",
+   "C": "4/9",
+   "D": "1/2",
+   "E": "7/12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "17/42"
+  },
+  "celdiriciler": {
+   "A": "31/84, en büyük rakamın 4 olduğu durumu (3 seçim) unutmak.",
+   "C": "4/9, sıralama kuralını unutup birler basamağını 9 rakamdan rastgele biri sanmak.",
+   "D": "1/2, tek ve çift rakamların sayısını eşit sanmak; 1–9 arasında 4 çift, 5 tek rakam var.",
+   "E": "7/12, en büyük rakam m iken diğer ikisini C(m, 2) ile saymak; m’den küçük m − 1 rakam vardır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Yazılan sayının çift olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "birler basamağı 0, 2, 4, 6 ya da 8 olan sayı çift; 1, 3, 5, 7 ya da 9 olan sayı tektir"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) biçimde seçilir. Örnek: C(5, 2) = 10"
+   },
+   {
+    "ad": "Olasılık",
+    "ifade": "olasılık = istenen durum sayısı / tüm durum sayısı (her durum eşit şanslıysa). Örnek: zarda çift gelme 3/6 = 1/2"
+   }
+  ],
+  "ipuclari": [
+   "Rakamlar küçükten büyüğe dizilince birler basamağına hangi rakam gelir?",
+   "Sayının çift olması, en büyük rakamın çift olması demektir.",
+   "En büyük rakam m ise diğer iki rakam m’den küçük rakamlardan seçilir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birler basamağı",
+    "aciklama": "Rakamlar küçükten büyüğe dizildiği için birler basamağı en büyük rakamdır.",
+    "islem": "sayı çift ⇔ en büyük rakam çift"
+   },
+   {
+    "baslik": "Tüm seçimler",
+    "aciklama": "9 rakamdan 3’ü, sıra önemsiz (dizilişi kural belirliyor).",
+    "islem": "C(9, 3) = 84"
+   },
+   {
+    "baslik": "En büyük rakam çift",
+    "aciklama": "En büyük rakam m ise diğer ikisi m’den küçük m − 1 rakamdan seçilir. m = 2 olamaz; 2’den küçük yalnızca 1 rakam var.",
+    "islem": "m = 4: C(3, 2) = 3 · m = 6: C(5, 2) = 10 · m = 8: C(7, 2) = 21"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "Durumları topla, tüm seçimlere böl.",
+    "islem": "(3 + 10 + 21) / 84 = 34/84 = 17/42"
+   }
+  ],
+  "puf": "Rakamlar bir kurala göre diziliyorsa birler basamağını o kural belirler; olasılığı o rakamın seçimine bağla.",
+  "kisaYol": null,
+  "kardes": "tytmat-olasilik-0008k",
+  "kaynakKart": "K-OL-08 (rakam seçip sıralı sayı yazma) · küçükten büyüğe dizilim, çift olma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,667 @@
+[
+ {
+  "id": "tytmat-mutlak-0001",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Denklemler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "|ax + b| = k denklemini iki duruma ayırarak çözer ve köklerin toplamını bulur.",
+  "tipId": "mtd-denklem",
+  "tip": "Mutlak değerli denklemler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "|2x − 5| = 7\ndenklemini sağlayan x değerlerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−6",
+   "B": "5",
+   "C": "6",
+   "D": "7",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Kökleri çarpmak: 6 × (−1); soru toplamı soruyor.",
+   "C": "Yalnız 2x − 5 = 7 durumunu çözmek; içerisi −7 de olabilir.",
+   "D": "2x − 5 = −7’den x = 1 bulmak; doğrusu 2x = −2, x = −1.",
+   "E": "2’ye bölmeyi unutup 2x değerlerini (12 ve −2) toplamak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Denklemi sağlayan x değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|a|, a’nın 0’a uzaklığıdır ve negatif olmaz. a ≥ 0 ise |a| = a, a < 0 ise |a| = −a. Örnek: |−5| = 5, |3| = 3"
+   },
+   {
+    "ad": "Mutlak değerli denklem",
+    "ifade": "|ifade| = k (k > 0) ise ifade = k ya da ifade = −k. Örnek: |x − 1| = 3 ⇒ x = 4 ya da x = −2"
+   }
+  ],
+  "ipuclari": [
+   "Mutlak değeri 7 olan sayılar hangileridir?",
+   "İçerideki ifade 7’ye ya da −7’ye eşit olmalı; iki denklemi ayrı ayrı çöz.",
+   "Bulduğun iki değeri topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki durum",
+    "aciklama": "Mutlak değeri 7 olan sayılar 7 ve −7.",
+    "islem": "2x − 5 = 7 ya da 2x − 5 = −7"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Her denklemde 5 ekle, 2’ye böl.",
+    "islem": "2x = 12 ⇒ x = 6 · 2x = −2 ⇒ x = −1"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki kökü topla.",
+    "islem": "6 + (−1) = 5"
+   }
+  ],
+  "puf": "|ifade| = k (k > 0) her zaman iki denklem verir: ifade = k ve ifade = −k.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0001k",
+  "kaynakKart": "K-MTD-01 (|ax + b| = k, iki durum) · yeni denklem, istenen köklerin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0002",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Eşitsizlikler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "|x − a| ≤ k eşitsizliğini çift taraflı eşitsizliğe çevirip tam sayı çözümleri sayar.",
+  "tipId": "mtd-esitsizlik",
+  "tip": "Mutlak değerli eşitsizlikler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "|x − 4| ≤ 3\neşitsizliğini sağlayan kaç tane x tam sayısı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "6",
+   "D": "7",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Yalnız x ≥ 4 tarafını (4, 5, 6, 7) saymak; 4’ün solundaki sayılar da sağlar.",
+   "B": "Uçları (1 ve 7) almamak; ≤ işareti uçları da kapsar.",
+   "C": "Uçlardan birini atlamak; 1’den 7’ye kadar 7 tam sayı var.",
+   "E": "Sol uçta 4 eklemeyi unutup −3 ≤ x ≤ 7 yazmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Eşitsizliği sağlayan tam sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değerli eşitsizlik",
+    "ifade": "|ifade| ≤ k ⇒ −k ≤ ifade ≤ k. |ifade| > k ⇒ ifade > k ya da ifade < −k. Örnek: |x| < 2 ⇒ −2 < x < 2"
+   },
+   {
+    "ad": "Uzaklık olarak mutlak değer",
+    "ifade": "|x − a|, sayı doğrusunda x ile a arasındaki uzaklıktır; |x + a| = |x − (−a)|. Örnek: |x − 3| = 2 ⇒ x = 1 ya da x = 5"
+   }
+  ],
+  "ipuclari": [
+   "|ifade| ≤ 3 ise ifade hangi aralıktadır?",
+   "−3 ≤ x − 4 ≤ 3 eşitsizliğinin her tarafına 4 ekle.",
+   "Uçlar dahil; tam sayıları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çift taraflıya çevir",
+    "aciklama": "Mutlak değeri 3’ten büyük olmayan sayılar −3 ile 3 arasındadır.",
+    "islem": "−3 ≤ x − 4 ≤ 3"
+   },
+   {
+    "baslik": "4 ekle",
+    "aciklama": "Her tarafa 4 eklenir.",
+    "islem": "1 ≤ x ≤ 7",
+    "gorsel": "<svg viewBox=\"0 0 330 82\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"54.8\" y1=\"30\" x2=\"54.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"54.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"91.5\" y1=\"30\" x2=\"91.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"91.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"128.2\" y1=\"30\" x2=\"128.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"128.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"165.0\" y1=\"30\" x2=\"165.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"165.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"201.8\" y1=\"30\" x2=\"201.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"201.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">5</text><line x1=\"238.5\" y1=\"30\" x2=\"238.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"238.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"275.2\" y1=\"30\" x2=\"275.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"275.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">7</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">8</text><line x1=\"54.8\" y1=\"34\" x2=\"275.2\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"54.8\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"275.2\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"54.8\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"91.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"128.2\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"201.8\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"238.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"275.2\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"165.0\" y=\"72.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">4’e uzaklığı en çok 3</text></svg>"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "1’den 7’ye kadar tam sayılar.",
+    "islem": "7 − 1 + 1 = 7"
+   }
+  ],
+  "puf": "|x − a| ≤ k, “x’in a’ya uzaklığı en çok k” demektir: a − k ≤ x ≤ a + k.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0002k",
+  "kaynakKart": "K-MTD-03 (|x − a| ≤ k) · yeni sayılar, istenen tam sayı çözüm sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0003",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değer",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Sayıların işaretinden mutlak değerlerin içinin işaretini belirler ve ifadeyi sadeleştirir.",
+  "tipId": "mtd-ifade",
+  "tip": "İşarete göre mutlak değer açma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a < 0 < b olmak üzere\n|a − b| + |b − 2a| − |a|\nifadesinin eşiti aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "2b",
+   "C": "2a − 2b",
+   "D": "2b − 4a",
+   "E": "2b − 2a"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "2b − 2a"
+  },
+  "celdiriciler": {
+   "A": "|a − b|’yi a − b olarak açmak; a − b negatif olduğundan |a − b| = b − a.",
+   "B": "|a − b|’yi b + a sanmak; doğrusu b − a.",
+   "C": "Bütün mutlak değerleri ters işaretle açmak; b − 2a pozitif olduğu için olduğu gibi çıkar.",
+   "D": "|a|’yı a almak; a negatif olduğundan |a| = −a."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "İfadenin sadeleşmiş hâli.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|a|, a’nın 0’a uzaklığıdır ve negatif olmaz. a ≥ 0 ise |a| = a, a < 0 ise |a| = −a. Örnek: |−5| = 5, |3| = 3"
+   }
+  ],
+  "ipuclari": [
+   "Her mutlak değerin içinin işaretini belirle; a negatif, b pozitif.",
+   "İçi negatif olanı −1 ile çarparak dışarı çıkar.",
+   "Terimleri topla; |a|’nın önündeki eksiyi unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İçlerin işareti",
+    "aciklama": "a negatif, b pozitif: a − b negatif; b − 2a = b + (pozitif), pozitif; a negatif.",
+    "islem": "a − b < 0 · b − 2a > 0 · a < 0"
+   },
+   {
+    "baslik": "Mutlak değerleri aç",
+    "aciklama": "İçi negatif olan −1 ile çarpılır.",
+    "islem": "|a − b| = b − a · |b − 2a| = b − 2a · |a| = −a"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Terimleri topla.",
+    "islem": "(b − a) + (b − 2a) − (−a) = 2b − 2a"
+   }
+  ],
+  "puf": "Mutlak değeri açmadan önce her zaman içinin işaretini belirle; negatifse ters işaretle çıkar.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0003k",
+  "kaynakKart": "K-MTD-04 (işarete göre mutlak değer açma) · yeni ifade (üç mutlak değer), istenen sadeleşmiş hâl",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0004",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Eşitsizlikler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Gerçek hayattaki bir aralık bilgisini dönüştürüp |x − merkez| ≤ yarıçap biçiminde yazar.",
+  "tipId": "mtd-model",
+  "tip": "Aralığı mutlak değerle ifade etme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kargo şirketi, içindeki ürünün kütlesi 15 kg ile 21 kg arasında olan paketleri (15 kg ve 21 kg dahil) “orta boy” olarak sınıflandırmaktadır. Her pakette ürünün dışında 2 kg’lık bir ambalaj bulunmaktadır.\nOrta boy bir paketin ambalajıyla birlikte kütlesi x kg olduğuna göre x’in alabileceği değerler aşağıdaki eşitsizliklerden hangisiyle gösterilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "|x − 20| ≤ 3",
+   "B": "|x − 20| < 3",
+   "C": "|x − 20| ≤ 6",
+   "D": "|x − 18| ≤ 3",
+   "E": "|x − 17| ≤ 6"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "|x − 20| ≤ 3"
+  },
+  "celdiriciler": {
+   "B": "Uçları dışarıda bırakmak; 17 kg ve 23 kg dahil.",
+   "C": "Yarıçap yerine aralığın tamamını (6) almak; bu 14 ≤ x ≤ 26 olur.",
+   "D": "2 kg’lık ambalajı eklememek; 15–21 aralığının merkezi 18.",
+   "E": "Sol ucu merkez, aralık uzunluğunu yarıçap almak; bu 11 ≤ x ≤ 23 olur."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Toplam kütle x’in aralığını gösteren mutlak değerli eşitsizlik.",
+  "bilgi": [
+   {
+    "ad": "Aralığı mutlak değerle yazma",
+    "ifade": "m ≤ x ≤ M ⇒ |x − merkez| ≤ yarıçap; merkez = (m + M) ÷ 2, yarıçap = (M − m) ÷ 2. Örnek: 2 ≤ x ≤ 8 ⇒ |x − 5| ≤ 3"
+   }
+  ],
+  "ipuclari": [
+   "Önce toplam kütlenin (ürün + ambalaj) aralığını bul.",
+   "Aralığın orta noktası ve orta noktadan uçlara uzaklık kaç?",
+   "Uçlar dahil mi? ≤ mı, < mı kullanılmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam kütle",
+    "aciklama": "Ürün kütlesine 2 kg eklenir.",
+    "islem": "15 + 2 ≤ x ≤ 21 + 2 ⇒ 17 ≤ x ≤ 23"
+   },
+   {
+    "baslik": "Merkez ve yarıçap",
+    "aciklama": "Merkez aralığın ortası, yarıçap ortadan uca uzaklık.",
+    "islem": "merkez = (17 + 23) ÷ 2 = 20 · yarıçap = (23 − 17) ÷ 2 = 3"
+   },
+   {
+    "baslik": "Eşitsizlik",
+    "aciklama": "Uçlar dahil olduğundan ≤.",
+    "islem": "|x − 20| ≤ 3",
+    "gorsel": "<svg viewBox=\"0 0 330 82\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">15</text><line x1=\"47.4\" y1=\"30\" x2=\"47.4\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"47.4\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">16</text><line x1=\"76.8\" y1=\"30\" x2=\"76.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"76.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">17</text><line x1=\"106.2\" y1=\"30\" x2=\"106.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"106.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">18</text><line x1=\"135.6\" y1=\"30\" x2=\"135.6\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"135.6\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">19</text><line x1=\"165.0\" y1=\"30\" x2=\"165.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"165.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"194.4\" y1=\"30\" x2=\"194.4\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"194.4\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">21</text><line x1=\"223.8\" y1=\"30\" x2=\"223.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"223.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">22</text><line x1=\"253.2\" y1=\"30\" x2=\"253.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"253.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">23</text><line x1=\"282.6\" y1=\"30\" x2=\"282.6\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"282.6\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">24</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">25</text><line x1=\"76.8\" y1=\"34\" x2=\"253.2\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"76.8\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"253.2\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><text x=\"165.0\" y=\"72.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">20’ye uzaklığı en çok 3</text></svg>"
+   }
+  ],
+  "puf": "“a ile b arasında” bilgisini önce istenen niceliğe çevir; sonra merkez ve yarıçapı bul.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0004k",
+  "kaynakKart": "K-MTD-05 (aralığı mutlak değerle ifade) · yeni kurgu (kargo paketi ve ambalaj), kaydırma adımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0005",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Denklemler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki mutlak değerin toplamını içeren denklemi bölgelere ayırarak çözer.",
+  "tipId": "mtd-denklem",
+  "tip": "Mutlak değerli denklemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "|x − 3| + |x + 1| = 6\ndenkleminin çözüm kümesindeki elemanların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−8",
+   "B": "−2",
+   "C": "0",
+   "D": "2",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "Kökleri çarpmak: 4 × (−2); soru toplamı soruyor.",
+   "B": "Yalnız x < −1 bölgesindeki kökü almak; x ≥ 3 bölgesinde de kök var.",
+   "C": "x < −1 bölgesinde −(x − 3) yerine −x − 3 yazıp x = −4 bulmak.",
+   "E": "Yalnız x ≥ 3 bölgesindeki kökü almak; x < −1 bölgesinde de kök var."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Denklemi sağlayan x değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|a|, a’nın 0’a uzaklığıdır ve negatif olmaz. a ≥ 0 ise |a| = a, a < 0 ise |a| = −a. Örnek: |−5| = 5, |3| = 3"
+   },
+   {
+    "ad": "Uzaklık olarak mutlak değer",
+    "ifade": "|x − a|, sayı doğrusunda x ile a arasındaki uzaklıktır; |x + a| = |x − (−a)|. Örnek: |x − 3| = 2 ⇒ x = 1 ya da x = 5"
+   }
+  ],
+  "ipuclari": [
+   "Mutlak değerlerin içini sıfır yapan değerler −1 ve 3; sayı doğrusunu üç bölgeye ayır.",
+   "Her bölgede mutlak değerleri işaretlerine göre aç.",
+   "−1 ile 3 arasında ifade sabit bir sayı olur; 6’ya eşit mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "x ≥ 3",
+    "aciklama": "İki iç de pozitif.",
+    "islem": "(x − 3) + (x + 1) = 2x − 2 = 6 ⇒ x = 4 ✓"
+   },
+   {
+    "baslik": "−1 ≤ x < 3",
+    "aciklama": "x − 3 negatif, x + 1 pozitif.",
+    "islem": "(3 − x) + (x + 1) = 4 ≠ 6 ⇒ kök yok"
+   },
+   {
+    "baslik": "x < −1",
+    "aciklama": "İki iç de negatif.",
+    "islem": "(3 − x) − (x + 1) = 2 − 2x = 6 ⇒ x = −2 ✓"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki kökü topla.",
+    "islem": "4 + (−2) = 2"
+   }
+  ],
+  "puf": "İki mutlak değerin toplamında içleri sıfırlayan noktalarla sayı doğrusunu bölgelere ayır; her bölgede bulduğun kökün o bölgede olduğunu kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0005k",
+  "kaynakKart": "K-MTD-01 (mutlak değerli denklem) · iki mutlak değerin toplamı, bölge ayırma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0006",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Eşitsizlikler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Çift taraflı mutlak değerli eşitsizliği iki aralığa ayırarak çözer; tam sayı çözümlerin toplamını bulur.",
+  "tipId": "mtd-esitsizlik",
+  "tip": "Mutlak değerli eşitsizlikler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x tam sayısı için\n1 < |x + 2| ≤ 4\neşitsizliği sağlandığına göre x’in alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−16",
+   "B": "−15",
+   "C": "−12",
+   "D": "3",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "−12"
+  },
+  "celdiriciler": {
+   "A": "−3 ve −1’i de almak; bu değerlerde |x + 2| = 1 olur ve 1 > 1 sağlanmaz.",
+   "B": "−3’ü de almak; |−3 + 2| = 1 ve 1 < 1 kesin eşitsizliği sağlamaz.",
+   "D": "Yalnız x + 2 > 0 tarafını (0, 1, 2) çözmek; negatif taraf da çözüm verir.",
+   "E": "6, çözüm olan tam sayıların sayısı; soru toplamı soruyor."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eşitsizliği sağlayan tam sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değerli eşitsizlik",
+    "ifade": "|ifade| ≤ k ⇒ −k ≤ ifade ≤ k. |ifade| > k ⇒ ifade > k ya da ifade < −k. Örnek: |x| < 2 ⇒ −2 < x < 2"
+   },
+   {
+    "ad": "Uzaklık olarak mutlak değer",
+    "ifade": "|x − a|, sayı doğrusunda x ile a arasındaki uzaklıktır; |x + a| = |x − (−a)|. Örnek: |x − 3| = 2 ⇒ x = 1 ya da x = 5"
+   }
+  ],
+  "ipuclari": [
+   "x + 2 için iki durum var: pozitif tarafta 1 < x + 2 ≤ 4, negatif tarafta −4 ≤ x + 2 < −1.",
+   "Her durumda her taraftan 2 çıkar.",
+   "Uçlara dikkat ederek tam sayıları yaz ve topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki parça",
+    "aciklama": "Mutlak değeri 1’den büyük, 4’ten büyük olmayan sayılar iki parçadadır.",
+    "islem": "1 < x + 2 ≤ 4 · −4 ≤ x + 2 < −1"
+   },
+   {
+    "baslik": "2 çıkar",
+    "aciklama": "Her parçada her taraftan 2 çıkar.",
+    "islem": "−1 < x ≤ 2 · −6 ≤ x < −3",
+    "gorsel": "<svg viewBox=\"0 0 330 60\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−7</text><line x1=\"47.4\" y1=\"30\" x2=\"47.4\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"47.4\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−6</text><line x1=\"76.8\" y1=\"30\" x2=\"76.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"76.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−5</text><line x1=\"106.2\" y1=\"30\" x2=\"106.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"106.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−4</text><line x1=\"135.6\" y1=\"30\" x2=\"135.6\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"135.6\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−3</text><line x1=\"165.0\" y1=\"30\" x2=\"165.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"165.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−2</text><line x1=\"194.4\" y1=\"30\" x2=\"194.4\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"194.4\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−1</text><line x1=\"223.8\" y1=\"30\" x2=\"223.8\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"223.8\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"253.2\" y1=\"30\" x2=\"253.2\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"253.2\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"282.6\" y1=\"30\" x2=\"282.6\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"282.6\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"47.4\" y1=\"34\" x2=\"135.6\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"47.4\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"135.6\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:none\"/><line x1=\"194.4\" y1=\"34\" x2=\"282.6\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"194.4\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:none\"/><circle cx=\"282.6\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"47.4\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"76.8\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"106.2\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"223.8\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"253.2\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"282.6\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/></svg>"
+   },
+   {
+    "baslik": "Tam sayılar",
+    "aciklama": "İki parçadaki tam sayılar.",
+    "islem": "−6, −5, −4 · 0, 1, 2"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Hepsini topla.",
+    "islem": "−15 + 3 = −12"
+   }
+  ],
+  "puf": "a < |ifade| ≤ b iki ayrı aralık verir; −2’nin sağına ve soluna simetrik bak.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0006k",
+  "kaynakKart": "K-MTD-03 (k₁ < |x − a| ≤ k₂) · iki aralıklı çözüm, istenen tam sayıların toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0007",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Denklemler",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki mutlak değerin toplamını sayı doğrusunda uzaklık olarak yorumlar; çözümün bir aralık olduğunu görüp tam sayıları sayar.",
+  "tipId": "mtd-denklem",
+  "tip": "Mutlak değerli denklemler",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x bir tam sayı olmak üzere\n|x − 5| + |x + 3| = 8\neşitliğini sağlayan kaç farklı x değeri vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "7",
+   "C": "8",
+   "D": "9",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "Yalnız uç noktaları (−3 ve 5) çözüm sanmak; aradaki her x de eşitliği sağlar.",
+   "B": "Uçları (−3 ve 5) saymamak; bu noktalarda da toplam 8.",
+   "C": "Uzaklığı (5 − (−3) = 8) nokta sayısı sanmak; −3’ten 5’e kadar 9 tam sayı var.",
+   "E": "Tam sayıları 5 − (−3) + 2 diye saymak; uçlar dahil sayı 8 + 1 = 9."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Eşitliği sağlayan tam sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Uzaklık olarak mutlak değer",
+    "ifade": "|x − a|, sayı doğrusunda x ile a arasındaki uzaklıktır; |x + a| = |x − (−a)|. Örnek: |x − 3| = 2 ⇒ x = 1 ya da x = 5"
+   },
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|a|, a’nın 0’a uzaklığıdır ve negatif olmaz. a ≥ 0 ise |a| = a, a < 0 ise |a| = −a. Örnek: |−5| = 5, |3| = 3"
+   }
+  ],
+  "ipuclari": [
+   "|x − 5|, x’in 5’e; |x + 3|, x’in −3’e uzaklığıdır.",
+   "−3 ile 5 arasındaki bir noktadan iki uca uzaklıkların toplamı kaçtır?",
+   "Bu aralığın dışındaki bir noktada toplam 8’den büyük mü, küçük mü?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uzaklık olarak oku",
+    "aciklama": "Toplam, x’in 5’e ve −3’e uzaklıklarının toplamı.",
+    "islem": "|x − 5| + |x − (−3)| = 8"
+   },
+   {
+    "baslik": "İki nokta arası",
+    "aciklama": "5 ile −3 arasındaki uzaklık tam 8.",
+    "islem": "5 − (−3) = 8"
+   },
+   {
+    "baslik": "Aradaki noktalar",
+    "aciklama": "−3 ile 5 arasındaki her noktada iki uzaklığın toplamı 8’dir; dışarıda 8’den büyüktür.",
+    "islem": "−3 ≤ x ≤ 5",
+    "gorsel": "<svg viewBox=\"0 0 330 82\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−5</text><line x1=\"42.5\" y1=\"30\" x2=\"42.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"42.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−4</text><line x1=\"67.0\" y1=\"30\" x2=\"67.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"67.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−3</text><line x1=\"91.5\" y1=\"30\" x2=\"91.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"91.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−2</text><line x1=\"116.0\" y1=\"30\" x2=\"116.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"116.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−1</text><line x1=\"140.5\" y1=\"30\" x2=\"140.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"140.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"165.0\" y1=\"30\" x2=\"165.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"165.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"189.5\" y1=\"30\" x2=\"189.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"189.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"214.0\" y1=\"30\" x2=\"214.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"214.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"238.5\" y1=\"30\" x2=\"238.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"238.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"263.0\" y1=\"30\" x2=\"263.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"263.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">5</text><line x1=\"287.5\" y1=\"30\" x2=\"287.5\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"287.5\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">7</text><line x1=\"67.0\" y1=\"34\" x2=\"263.0\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"67.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"263.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"67.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"91.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"116.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"140.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"189.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"214.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"238.5\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"263.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"165.0\" y=\"72.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">−3 ≤ x ≤ 5</text></svg>"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "−3’ten 5’e kadar tam sayılar.",
+    "islem": "5 − (−3) + 1 = 9"
+   }
+  ],
+  "puf": "|x − a| + |x − b|, a ile b arasında sabittir ve bu iki nokta arasındaki uzaklığa eşittir.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0007k",
+  "kaynakKart": "K-MTD-02 (|x − a| + |x − b| = |a − b|, çözüm aralık) · yeni sayılar, istenen tam sayı çözüm adedi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlak-0008",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değer",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki uzaklık arasındaki oran bilgisini mutlak değerli denkleme çevirir; iki durumu da çözerek bütün değerleri bulur.",
+  "tipId": "mtd-uzaklik",
+  "tip": "Uzaklık ve tahmin problemleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir bilgi yarışmasında kavanozdaki bilye sayısını Ece 70, Ferit 58 olarak tahmin etmiştir. Kavanozdaki gerçek bilye sayısı n olmak üzere\n|n − 70| = 2 · |n − 58|\neşitliği sağlanmaktadır.\nBuna göre n’nin alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "46",
+   "C": "62",
+   "D": "108",
+   "E": "148"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "108"
+  },
+  "celdiriciler": {
+   "A": "16, iki değerin farkı (62 − 46); soru toplamı soruyor.",
+   "B": "Yalnız 58’in solundaki çözümü bulmak; 58 ile 70 arasında da bir çözüm var.",
+   "C": "Yalnız iki tahmin arasındaki çözümü bulmak; 58’in solunda da bir çözüm var.",
+   "E": "Oranı ters kurup 2 × |n − 70| = |n − 58| çözmek (66 ve 82)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "n’nin alabileceği değerlerin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|a|, a’nın 0’a uzaklığıdır ve negatif olmaz. a ≥ 0 ise |a| = a, a < 0 ise |a| = −a. Örnek: |−5| = 5, |3| = 3"
+   },
+   {
+    "ad": "Uzaklık olarak mutlak değer",
+    "ifade": "|x − a|, sayı doğrusunda x ile a arasındaki uzaklıktır; |x + a| = |x − (−a)|. Örnek: |x − 3| = 2 ⇒ x = 1 ya da x = 5"
+   },
+   {
+    "ad": "Mutlak değerlerin oranı",
+    "ifade": "|A| = k × |B| (k > 0) ise A = k × B ya da A = −k × B. Örnek: |x| = 2 × |x − 3| ⇒ x = 6 ya da x = 2"
+   }
+  ],
+  "ipuclari": [
+   "|A| = 2 × |B| ise A = 2B ya da A = −2B olur.",
+   "n − 70 = 2 × (n − 58) denklemini çöz.",
+   "n − 70 = −2 × (n − 58) denklemini de çöz ve iki değeri topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki durum",
+    "aciklama": "Mutlak değerler eşitse içler ya eşit ya da zıt işaretlidir.",
+    "islem": "n − 70 = 2 × (n − 58) · n − 70 = −2 × (n − 58)"
+   },
+   {
+    "baslik": "Birinci durum",
+    "aciklama": "Parantezi aç ve çöz.",
+    "islem": "n − 70 = 2n − 116 ⇒ n = 46"
+   },
+   {
+    "baslik": "İkinci durum",
+    "aciklama": "Parantezi aç ve çöz.",
+    "islem": "n − 70 = −2n + 116 ⇒ 3n = 186 ⇒ n = 62"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İkisi de eşitliği sağlıyor.",
+    "islem": "|46 − 70| = 24 = 2 × 12 · |62 − 70| = 8 = 2 × 4 ✓"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki değer.",
+    "islem": "46 + 62 = 108"
+   }
+  ],
+  "puf": "Uzaklık oranı verilen sorularda iki durum vardır: nokta iki tahminin arasında ya da dışında olabilir.",
+  "kisaYol": null,
+  "kardes": "tytmat-mutlak-0008k",
+  "kaynakKart": "K-MTD-06 (tahmin–gerçek uzaklık oranı) · yeni kurgu (kavanozdaki bilyeler), istenen değerlerin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

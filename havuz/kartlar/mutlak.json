@@ -1,0 +1,127 @@
+{
+ "konu": "Mutlak Değer",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-MTD-01",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değerli Denklemler",
+   "fikir": "|ax + b| = k denkleminde içerisi k ya da −k yapılır; iki kök bulunur, toplamı ya da çarpımı istenir. İki mutlak değerin toplamında bölge ayrılır.",
+   "tuzak": "Yalnız pozitif durumu çözmek; −k durumunda işaret hatası; bölge dışında kalan kökü kontrol etmemek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "mtd-denklem",
+   "tip": "Mutlak değerli denklemler",
+   "kaynak": "ÖSYM (Mutlak Değerli Denklemler) · 3D (|x − 4| + |4 − x| = 8) · 345 SB"
+  },
+  {
+   "id": "K-MTD-02",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değerli Denklemler",
+   "fikir": "|x − a| + |x − b| = |a − b| eşitliği sayı doğrusunda a ile b arasındaki bütün noktalar için sağlanır; çözüm bir aralıktır, tam sayılar sayılır.",
+   "tuzak": "Yalnız uç noktaları çözüm sanmak; aralık uzunluğunu nokta sayısı sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "mtd-denklem",
+   "tip": "Mutlak değerli denklemler",
+   "kaynak": "ÖSYM (Mutlak Değer Kavramı ve Özellikleri) · 3D, Bilgi Sarmal"
+  },
+  {
+   "id": "K-MTD-03",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değerli Eşitsizlikler",
+   "fikir": "|x − a| ≤ k ya da k₁ < |x − a| ≤ k₂ çözülür; çözüm bir ya da iki aralıktır, tam sayılar sayılır ya da toplanır.",
+   "tuzak": "Yalnız içerisi pozitif olan tarafı çözmek; < ile ≤ uçlarını karıştırmak; çift taraflıda iç aralığı dahil etmek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "mtd-esitsizlik",
+   "tip": "Mutlak değerli eşitsizlikler",
+   "kaynak": "ÖSYM (|SA + 1| < 5, |x − 4| < 3 gol farkı) · 345 SB, Bilgi Sarmal"
+  },
+  {
+   "id": "K-MTD-04",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değer",
+   "fikir": "Sayıların sıralaması/işareti verilir; mutlak değerlerin içinin işareti belirlenip ifade sadeleştirilir.",
+   "tuzak": "Negatif içerikli mutlak değeri olduğu gibi açmak; önündeki eksiyi tüm terimlere dağıtmamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "mtd-ifade",
+   "tip": "İşarete göre mutlak değer açma",
+   "kaynak": "ÖSYM (Mutlak Değer Kavramı) · 345 SB (a < 0 olmak üzere …) · Bilgi Sarmal (|a| > |c|)"
+  },
+  {
+   "id": "K-MTD-05",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değerli Eşitsizlikler",
+   "fikir": "Gerçek hayattaki “a ila b arasında” bilgisi önce kaydırma/ekleme ile istenen niceliğe çevrilir, sonra |x − merkez| ≤ yarıçap biçiminde yazılır.",
+   "tuzak": "Kaydırmayı unutmak ya da ters yöne yapmak; yarıçap yerine aralık uzunluğunu almak; uçların dahil olup olmadığını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "mtd-model",
+   "tip": "Aralığı mutlak değerle ifade etme",
+   "kaynak": "ÖSYM (sıcaklık 6 ila 10 derece artış, paraşüt 400 ila 500 m, otoyol şeritleri)"
+  },
+  {
+   "id": "K-MTD-06",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak Değer",
+   "fikir": "Bilinmeyen bir sayının iki tahmine uzaklıkları arasında oran verilir; |n − a| = k × |n − b| iki duruma ayrılarak çözülür.",
+   "tuzak": "İki çözümden birini atlamak; oranı ters kurmak; toplam yerine fark vermek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "mtd-uzaklik",
+   "tip": "Uzaklık ve tahmin problemleri",
+   "kaynak": "ÖSYM (dergi sayfa sayısı tahminleri, mutlak farklar) · Mert"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mtd-denklem",
+   "ad": "Mutlak değerli denklemler",
+   "kartlar": [
+    "K-MTD-01",
+    "K-MTD-02"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mtd-esitsizlik",
+   "ad": "Mutlak değerli eşitsizlikler",
+   "kartlar": [
+    "K-MTD-03"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mtd-ifade",
+   "ad": "İşarete göre mutlak değer açma",
+   "kartlar": [
+    "K-MTD-04"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mtd-model",
+   "ad": "Aralığı mutlak değerle ifade etme",
+   "kartlar": [
+    "K-MTD-05"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mtd-uzaklik",
+   "ad": "Uzaklık ve tahmin problemleri",
+   "kartlar": [
+    "K-MTD-06"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  }
+ ]
+}

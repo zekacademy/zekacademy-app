@@ -1,0 +1,500 @@
+[
+ {
+  "id": "tytbio-siniflandirma-0001k",
+  "ana": "tytbio-siniflandirma-0001",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · Taksonomik basamaklar",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Sınıflandırma basamaklarını küçükten büyüğe sıralar.",
+  "tipId": "bs-basamak",
+  "tip": "Sınıflandırma basamakları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Sınıflandırma basamakları içinde aşağıdakilerden hangisi familya ile sınıf arasında yer alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Cins",
+   "B": "Tür",
+   "C": "Şube",
+   "D": "Âlem",
+   "E": "Takım"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Takım"
+  },
+  "celdiriciler": {
+   "A": "Cinsin familyadan küçük olduğunu bilmemek.",
+   "B": "Türün en küçük basamak olduğunu bilmemek.",
+   "C": "Şubenin sınıftan büyük olduğunu bilmemek.",
+   "D": "Âlemin en büyük basamak olduğunu bilmemek."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Familya ile sınıf arasındaki basamak.",
+  "bilgi": [
+   {
+    "ad": "Sınıflandırma basamakları",
+    "ifade": "Küçükten büyüğe: tür → cins → familya → takım → sınıf → şube → âlem · Tür basamağında benzerlik en fazla, âlemde en azdır"
+   }
+  ],
+  "ipuclari": [
+   "En küçük basamak hangisi, en büyük hangisi?",
+   "Tür’den sonra hangi basamak gelir?",
+   "Sınıf ile şube arasında hangisi büyüktür?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sırayı yaz",
+    "aciklama": "Tür, cins, familya, takım, sınıf, şube, âlem.",
+    "islem": "küçükten büyüğe"
+   },
+   {
+    "baslik": "Aralığa bak",
+    "aciklama": "Familyadan sonra takım, ondan sonra sınıf gelir.",
+    "islem": "familya < takım < sınıf"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Arada yalnız takım bulunur.",
+    "islem": "Takım"
+   }
+  ],
+  "puf": "Tür en küçük, âlem en büyük basamaktır; aradakileri sırayla say.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-01 (basamak sırası) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-siniflandirma-0002k",
+  "ana": "tytbio-siniflandirma-0002",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · İkili adlandırma",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Verilen bilimsel adlardan cins ve tür ilişkisini yorumlar.",
+  "tipId": "bs-ikili-ad",
+  "tip": "İkili adlandırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Dört bitkinin bilimsel adları aşağıda verilmiştir:\nQuercus robur (saplı meşe)\nQuercus cerris (saçlı meşe)\nPinus nigra (karaçam)\nPinus sylvestris (sarıçam)\nBu bitkilerle ilgili,\nI. Quercus robur ile Quercus cerris aynı cinsteki iki farklı türdür.\nII. Pinus nigra ile Pinus sylvestris aynı türdür.\nIII. Quercus robur ile Pinus nigra aynı cinstedir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "Aynı cinsteki iki bitkiyi aynı tür sanmak.",
+   "C": "Cins adlarının farklı olduğunu görmemek.",
+   "D": "Pinus’un iki türünü aynı tür saymak.",
+   "E": "Hem tür hem cins ilişkisini yanlış okumak."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "İkili adlandırma",
+    "ifade": "Her canlının adı cins + tür adından oluşur (Linne). Örnek: Felis catus (ev kedisi): Felis cins, catus tür adıdır · Cins adı büyük harfle başlar, tür adı küçük harfle yazılır"
+   },
+   {
+    "ad": "Sınıflandırma basamakları",
+    "ifade": "Küçükten büyüğe: tür → cins → familya → takım → sınıf → şube → âlem · Tür basamağında benzerlik en fazla, âlemde en azdır"
+   }
+  ],
+  "ipuclari": [
+   "Bilimsel adın ilk sözcüğü neyi gösterir?",
+   "Aynı cinsteki iki canlı aynı tür olabilir mi?",
+   "Dört adın ikinci sözcüklerini karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Adı çöz",
+    "aciklama": "İlk sözcük cins, ikinci sözcük tür adıdır.",
+    "islem": "Quercus | Pinus"
+   },
+   {
+    "baslik": "I. ifade",
+    "aciklama": "İki meşenin cinsi Quercus, tür adları farklıdır: robur ve cerris.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "Pinus nigra ile Pinus sylvestris’in tür adları farklıdır.",
+    "islem": "II yanlış"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "Quercus ve Pinus farklı cinslerdir.",
+    "islem": "III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız I doğrudur.",
+    "islem": "Yalnız I"
+   }
+  ],
+  "puf": "İlk sözcük cinsi, ikinci sözcük türü gösterir: cins aynıysa tür farklı olabilir.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-02 (Felis ve Canis adları) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-siniflandirma-0003k",
+  "ana": "tytbio-siniflandirma-0003",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · Âlemler",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Hücre tipi, beslenme ve hücre duvarı özelliklerinden âlemi belirler.",
+  "tipId": "bs-alem-tablo",
+  "tip": "Âlemlerin özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Üç âleme ait canlı grubunun özellikleri tabloda verilmiştir.\n\nGrup | Hücre tipi | Beslenme | Hücre duvarı\nK | Ökaryot | Heterotrof | Bulunmaz\nL | Prokaryot | Ototrof ya da heterotrof | Bulunur\nM | Ökaryot | Heterotrof | Kitin yapılı\n\nBuna göre K, L ve M gruplarının âlemleri aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "K: Hayvanlar, L: Mantarlar, M: Bakteriler",
+   "B": "K: Protista, L: Bakteriler, M: Hayvanlar",
+   "C": "K: Hayvanlar, L: Bakteriler, M: Mantarlar",
+   "D": "K: Mantarlar, L: Bakteriler, M: Hayvanlar",
+   "E": "K: Bitkiler, L: Bakteriler, M: Mantarlar"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "K: Hayvanlar, L: Bakteriler, M: Mantarlar"
+  },
+  "celdiriciler": {
+   "A": "Kitinli duvarı bakterilere atfetmek.",
+   "B": "Duvarı olmayan grubu protista sanmak ve hayvanı M’ye yazmak.",
+   "D": "Hücre duvarı olmayan hayvanı mantar sanmak.",
+   "E": "Heterotrof, duvarsız grubu bitki sanmak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "K, L ve M’nin âlemleri.",
+  "bilgi": [
+   {
+    "ad": "Beş âlem",
+    "ifade": "Bakteriler: prokaryot · Protista: ökaryot, çoğu tek hücreli · Mantarlar: ökaryot, heterotrof, hücre duvarı kitin · Bitkiler: ökaryot, ototrof, hücre duvarı selüloz · Hayvanlar: ökaryot, heterotrof, hücre duvarı yok"
+   }
+  ],
+  "ipuclari": [
+   "Prokaryot olan grup hangisi?",
+   "Hücre duvarı kitin olan ökaryotlar hangi âlemdedir?",
+   "Selülozlu duvarı ve ototrof beslenmesi olan grup hangisi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "L’yi belirle",
+    "aciklama": "Prokaryot yalnız bakteriler âlemindedir.",
+    "islem": "L: bakteriler"
+   },
+   {
+    "baslik": "K’yi belirle",
+    "aciklama": "Ökaryot, heterotrof, hücre duvarı yok: hayvanlar.",
+    "islem": "K: hayvanlar"
+   },
+   {
+    "baslik": "M’yi belirle",
+    "aciklama": "Ökaryot, heterotrof, kitin duvarlı: mantarlar.",
+    "islem": "M: mantarlar"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "K hayvan, L bakteri, M mantardır.",
+    "islem": "K, L, M"
+   }
+  ],
+  "puf": "Hücre tipi, beslenme ve hücre duvarının yapısı âlemi ayırır.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-03 (âlem özellikleri tablosu) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-siniflandirma-0004k",
+  "ana": "tytbio-siniflandirma-0004",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · Dikotomik anahtar",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Dikotomik anahtarı izleyerek canlıların hangi gruba ait olduğunu belirler.",
+  "tipId": "bs-dikotom",
+  "tip": "Dikotomik anahtar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Dört canlı grubunu ayırt etmek için hazırlanan dikotomik anahtar aşağıda verilmiştir:\n1a. Hücre duvarı yoktur → 2’ye git\n1b. Hücre duvarı vardır → 3’e git\n2a. Çok hücrelidir, heterotrof beslenir → Hayvanlar\n2b. Çok hücreli değildir → Protista\n3a. Çekirdek zarı yoktur → Bakteriler\n3b. Çekirdek zarı vardır, duvarı kitin yapılıdır → Mantarlar\nÖzellikleri şöyle olan X, Y ve Z canlıları için;\nX: Hücre duvarı vardır, çekirdek zarı vardır, duvarı kitin yapılıdır.\nY: Hücre duvarı yoktur, çok hücrelidir, heterotrof beslenir.\nZ: Hücre duvarı vardır, çekirdek zarı yoktur.\nbu anahtara göre X, Y ve Z hangi gruplara aittir?",
+  "sekil": null,
+  "siklar": {
+   "A": "X: Bakteriler, Y: Hayvanlar, Z: Mantarlar",
+   "B": "X: Mantarlar, Y: Hayvanlar, Z: Bakteriler",
+   "C": "X: Mantarlar, Y: Protista, Z: Bakteriler",
+   "D": "X: Protista, Y: Hayvanlar, Z: Bakteriler",
+   "E": "X: Mantarlar, Y: Bakteriler, Z: Hayvanlar"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "X: Mantarlar, Y: Hayvanlar, Z: Bakteriler"
+  },
+  "celdiriciler": {
+   "A": "Çekirdek zarı bilgisini yanlış yönlendirmek.",
+   "C": "Y’nin çok hücreli olduğunu görmemek.",
+   "D": "X’in hücre duvarını görmemek.",
+   "E": "Y ve Z’nin yönlendirmelerini karıştırmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "K, L ve M’nin grupları.",
+  "bilgi": [
+   {
+    "ad": "Dikotomik anahtar",
+    "ifade": "Her basamakta iki seçenek (a ve b) vardır; canlının özelliğine uyan seçeneğin yönlendirdiği basamağa geçilir ve bir gruba ulaşılır"
+   },
+   {
+    "ad": "Beş âlem",
+    "ifade": "Bakteriler: prokaryot · Protista: ökaryot, çoğu tek hücreli · Mantarlar: ökaryot, heterotrof, hücre duvarı kitin · Bitkiler: ökaryot, ototrof, hücre duvarı selüloz · Hayvanlar: ökaryot, heterotrof, hücre duvarı yok"
+   }
+  ],
+  "ipuclari": [
+   "L için 1. basamakta hangi seçenek uyar?",
+   "K için 2a ve 3a seçeneklerini izle.",
+   "M için 2b ve 4b seçeneklerini izle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X’i bul",
+    "aciklama": "Hücre duvarı var (1b), çekirdek zarı ve kitin duvar var (3b).",
+    "islem": "X: Mantarlar"
+   },
+   {
+    "baslik": "Y’yi bul",
+    "aciklama": "Hücre duvarı yok (1a), çok hücreli ve heterotrof (2a).",
+    "islem": "Y: Hayvanlar"
+   },
+   {
+    "baslik": "Z’yi bul",
+    "aciklama": "Hücre duvarı var (1b), çekirdek zarı yok (3a).",
+    "islem": "Z: Bakteriler"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "X Mantarlar, Y Hayvanlar, Z Bakteriler.",
+    "islem": "X, Y, Z"
+   }
+  ],
+  "puf": "Anahtarda her basamakta özelliğe uyan seçeneği seç ve gösterilen yere git.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-04 (beş âlem anahtarı) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-siniflandirma-0005k",
+  "ana": "tytbio-siniflandirma-0005",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · Basamaklara göre sayma",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Birey listesinden farklı tür, cins ve familya sayısını bulur.",
+  "tipId": "bs-takson-say",
+  "tip": "Tür, cins ve familya sayısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir ormanda sekiz ağaç incelenmiş ve bilimsel adları ile familyaları aşağıdaki tabloda verilmiştir.\n\nAğaç | Bilimsel ad | Familya\n1 | Quercus robur | Fagaceae\n2 | Quercus cerris | Fagaceae\n3 | Pinus nigra | Pinaceae\n4 | Pinus sylvestris | Pinaceae\n5 | Quercus robur | Fagaceae\n6 | Fagus orientalis | Fagaceae\n7 | Abies nordmanniana | Pinaceae\n8 | Pinus nigra | Pinaceae\n\nBuna göre bu ağaçlar sırasıyla kaç farklı türe, kaç farklı cinse ve kaç farklı familyaya aittir?",
+  "sekil": null,
+  "siklar": {
+   "A": "6 – 2 – 2",
+   "B": "6 – 4 – 3",
+   "C": "8 – 4 – 2",
+   "D": "6 – 4 – 2",
+   "E": "8 – 6 – 2"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6 – 4 – 2"
+  },
+  "celdiriciler": {
+   "A": "Cins sayısını familya sayısına eşitlemek.",
+   "B": "Familya sayısını yanlış saymak.",
+   "C": "Birey sayısını tür sayısı sanmak.",
+   "E": "Her bireyi ayrı tür ve her adı cins saymak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Farklı tür, cins ve familya sayıları.",
+  "bilgi": [
+   {
+    "ad": "İkili adlandırma",
+    "ifade": "Her canlının adı cins + tür adından oluşur (Linne). Örnek: Felis catus (ev kedisi): Felis cins, catus tür adıdır · Cins adı büyük harfle başlar, tür adı küçük harfle yazılır"
+   },
+   {
+    "ad": "Sınıflandırma basamakları",
+    "ifade": "Küçükten büyüğe: tür → cins → familya → takım → sınıf → şube → âlem · Tür basamağında benzerlik en fazla, âlemde en azdır"
+   }
+  ],
+  "ipuclari": [
+   "Aynı bilimsel adı taşıyan bireyler aynı türdür.",
+   "Cins, bilimsel adın ilk sözcüğüdür.",
+   "Familya sütunundaki farklı adları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Türleri say",
+    "aciklama": "Aynı bilimsel adlar tek tür sayılır: robur, cerris, nigra, sylvestris, orientalis, nordmanniana.",
+    "islem": "6 tür"
+   },
+   {
+    "baslik": "Cinsleri say",
+    "aciklama": "İlk sözcükler: Quercus, Pinus, Fagus, Abies.",
+    "islem": "4 cins"
+   },
+   {
+    "baslik": "Familyaları say",
+    "aciklama": "Fagaceae ve Pinaceae.",
+    "islem": "2 familya"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Sırasıyla tür, cins, familya.",
+    "islem": "6 – 4 – 2"
+   }
+  ],
+  "puf": "Tür = ikili adın tamamı; cins = ilk sözcük; aynı ad tekrar ederse yeni tür sayma.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-05 (tür/cins/familya tablosu) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-siniflandirma-0006k",
+  "ana": "tytbio-siniflandirma-0006",
+  "ders": "TYT Biyoloji",
+  "konu": "Canlıların Sınıflandırılması · Âlemler",
+  "k": "bio|Canlıların Sınıflandırılması",
+  "kazanim": "Birden fazla âlemin ortak ve ayırıcı özelliklerini değerlendirir.",
+  "tipId": "bs-alem-yorum",
+  "tip": "Âlemler arası karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Âlemlerle ilgili,\nI. Bitkilerin hepsi ökaryot hücrelidir.\nII. Hayvan hücrelerinde hücre duvarı bulunur.\nIII. Bakterilerin hepsi heterotrof beslenir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "II ve III",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "A": "Hayvan hücresinde hücre duvarı olmadığını bilmemek.",
+   "C": "Bitkilerin ökaryot olduğunu atlamak.",
+   "D": "Hayvan hücre duvarı ve bakteri beslenmesini yanlış bilmek.",
+   "E": "Bazı bakterilerin ototrof olduğunu unutmak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Beş âlem",
+    "ifade": "Bakteriler: prokaryot · Protista: ökaryot, çoğu tek hücreli · Mantarlar: ökaryot, heterotrof, hücre duvarı kitin · Bitkiler: ökaryot, ototrof, hücre duvarı selüloz · Hayvanlar: ökaryot, heterotrof, hücre duvarı yok"
+   }
+  ],
+  "ipuclari": [
+   "Bakteriler prokaryot mu, ökaryot mu?",
+   "Hayvan hücresinde hücre duvarı var mı?",
+   "Mantarlar kendi besinini üretir mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "Bitkiler ökaryot hücrelidir.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "Hayvan hücrelerinde hücre duvarı yoktur.",
+    "islem": "II yanlış"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "Bazı bakteriler fotosentez ya da kemosentezle ototrof beslenir.",
+    "islem": "III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız I doğrudur.",
+    "islem": "Yalnız I"
+   }
+  ],
+  "puf": "Âlem özelliklerini hücre tipi, beslenme ve hücre duvarı üç başlığında karşılaştır.",
+  "kisaYol": null,
+  "kaynakKart": "K-BSI-06 (üç âlem karşılaştırması) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
