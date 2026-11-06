@@ -2251,7 +2251,7 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
    Video + notlar + özet + test + kartlar + anlamadım. Prototipte öğrenme verisi (ilerleme, notlar, kartlar, test yanlışları)
    bu cihazın hafızasında tutulur; gerçek sürümde öğrencinin kaydına yazılacak. */
 const DERS_ICERIK = {
-  "mat|Temel Kavramlar": { vid:"f6P_SLrivps", baslik:"Temel Kavramlar 1 · 49 Günde TYT Matematik Kampı",
+  "mat|Temel Kavramlar": { vid:"8F-ojRKYTVU", baslik:"Temel Kavramlar Konu Anlatımı · 70 Günde TYT Matematik",
     ozet:["**Rakam** sayıları yazmak için kullanılan 10 semboldür: 0, 1, 2, … 9. Sayılar rakamlardan oluşur.",
       "**Tek / çift:** tek + tek = çift, tek · tek = tek. Çarpanlardan biri çiftse sonuç çifttir.",
       "**0** çift sayıdır; ne pozitif ne negatiftir.",
@@ -2261,21 +2261,21 @@ const DERS_ICERIK = {
     test:[{q:"a, b ve c birbirinden farklı rakamlardır. Buna göre a + b + c toplamının alabileceği en büyük değer kaçtır?", s:{A:"21",B:"22",C:"23",D:"24",E:"27"}, d:"D", c:"Farklı rakamlar demek: en büyük üç rakamı seç → **9 + 8 + 7 = 24**. 27 için üçünün de 9 olması gerekirdi."},
       {q:"x ve y tam sayılardır. x + y = 7 olduğuna göre x · y çarpımı aşağıdakilerden hangisi olamaz?", s:{A:"−8",B:"0",C:"10",D:"11",E:"12"}, d:"D", c:"Toplamı 7 olan çiftler: (−1)·8 = **−8**, 0·7 = **0**, 2·5 = **10**, 3·4 = **12**. 11 = 1·11 ya da (−1)·(−11); bunların toplamı 7 değil."},
       {q:"Ardışık üç çift sayının toplamı 66 ise en büyüğü kaçtır?", s:{A:"20",B:"22",C:"24",D:"26",E:"28"}, d:"C", c:"Ortadaki = 66 ÷ 3 = **22**. Çift sayılar 2'şer artar: 20, 22, **24**. Dikkat: 22 ortadaki sayı."}] },
-  "mat|Rasyonel Sayılar": { vid:"os9Jm0GHzE4", baslik:"Rasyonel Sayılar 1 · 49 Günde TYT Matematik Kampı",
+  "mat|Rasyonel Sayılar": { vid:"Kn35GRczqOM", baslik:"Rasyonel Sayılar Konu Anlatımı · 70 Günde TYT Matematik",
     ozet:["Toplama ve çıkarmada önce **paydalar eşitlenir**.","Bölmede ikinci kesir **ters çevrilip çarpılır**.","Sıralarken ondalığa çevir ya da payları / paydaları eşitle.","**İşlem önceliği:** parantez → çarpma ve bölme → toplama ve çıkarma."],
     formul:[{ad:"Bölme", ifade:"a/b ÷ c/d = a/b × d/c"},{ad:"Devirli sayı", ifade:"0,3̄ = 3/9 = 1/3"}],
     kart:[["a/b ÷ c/d = ?","a/b × d/c"],["Payları eşit iki kesirden hangisi büyük?","Paydası küçük olan"],["0,3̄ kaça eşittir?","3/9 = 1/3"],["1/2 + 1/3 = ?","5/6"],["İşlem önceliği?","Parantez → çarpma/bölme → toplama/çıkarma"]],
     test:[{q:"(1/2 + 1/3) ÷ 5/6 işleminin sonucu kaçtır?", s:{A:"5/6",B:"1",C:"6/5",D:"5/3",E:"2"}, d:"B", c:"Parantez: 1/2 + 1/3 = **5/6**. Sonra 5/6 ÷ 5/6 = **1**."},
       {q:"0,2 + 0,3 · 0,4 işleminin sonucu kaçtır?", s:{A:"0,12",B:"0,2",C:"0,32",D:"0,5",E:"0,9"}, d:"C", c:"Önce çarpma: 0,3 · 0,4 = **0,12**. Sonra 0,2 + 0,12 = **0,32**. Soldan sağa yapan 0,2 bulur."},
       {q:"a = 3/4, b = 2/3 ve c = 5/6 olduğuna göre aşağıdaki sıralamalardan hangisi doğrudur?", s:{A:"a < b < c",B:"b < a < c",C:"b < c < a",D:"c < a < b",E:"a < c < b"}, d:"B", c:"Paydaları 12 yap: a = **9/12**, b = **8/12**, c = **10/12**. Yani b < a < c."}] },
-  "mat|Basit Eşitsizlikler": { vid:"OEpQ0Nf-aHg", baslik:"Basit Eşitsizlikler · 49 Günde TYT Matematik Kampı",
+  "mat|Basit Eşitsizlikler": { vid:"2xNWVjgnHNU", baslik:"Basit Eşitsizlikler Konu Anlatımı · 70 Günde TYT Matematik",
     ozet:["İki tarafa aynı sayı eklenir ya da çıkarılırsa **yön değişmez**.","**Negatif** bir sayıyla çarpınca ya da bölünce **yön değişir**.","a < x < b aralığındaki tam sayı sayısı = **b − a − 1**.","0 < x < 1 ise **x² < x** olur."],
     formul:[{ad:"Negatife bölme", ifade:"−3x > 12 ⇒ x < −4"},{ad:"Tam sayı adedi", ifade:"a < x < b ⇒ b − a − 1 tane"}],
     kart:[["−2x < 6 ⇒ ?","x > −3 (negatife bölünce yön değişir)"],["−2 < x < 3 aralığında kaç tam sayı var?","3 − (−2) − 1 = 4"],["0 < x < 1 ise x² mi büyük x mi?","x büyük (x² < x)"],["x² < 0 olabilir mi?","Hayır, her zaman x² ≥ 0"],["a ≤ x ≤ b aralığında kaç tam sayı var?","b − a + 1"]],
     test:[{q:"−2 < x < 3 eşitsizliğini sağlayan kaç farklı x tam sayısı vardır?", s:{A:"2",B:"3",C:"4",D:"5",E:"6"}, d:"C", c:"Uçlar dahil değil: −1, 0, 1, 2 → **4** tane. Uçları dahil eden 6 bulur."},
       {q:"3x + 2 ≤ 20 eşitsizliğini sağlayan en büyük x tam sayısı kaçtır?", s:{A:"5",B:"6",C:"7",D:"8",E:"18"}, d:"B", c:"3x ≤ 18 ⇒ x ≤ **6**. Eşitlik dahil olduğu için en büyük değer 6."},
       {q:"−3x > 12 eşitsizliğinin çözüm kümesi aşağıdakilerden hangisidir?", s:{A:"x < −4",B:"x > −4",C:"x < 4",D:"x > 4",E:"x > −36"}, d:"A", c:"İki tarafı **−3'e** böl: negatife bölünce yön değişir ⇒ **x < −4**."}] },
-  "mat|Mutlak Değer": { vid:"FRN4HWbO5bo", baslik:"Mutlak Değer 1 · 49 Günde TYT Matematik Kampı",
+  "mat|Mutlak Değer": { vid:"IYrBQO9iUug", baslik:"Mutlak Değer Konu Anlatımı · 70 Günde TYT Matematik",
     ozet:["|x|, sayı doğrusunda x'in 0'a **uzaklığıdır**; hiçbir zaman negatif olmaz.","|x| = a (a > 0) ise **x = a veya x = −a**.","|x| < a ise **−a < x < a**; |x| > a ise x > a veya x < −a.","|a − b|, a ile b arasındaki **uzaklıktır**."],
     formul:[{ad:"Denklem", ifade:"|x − 2| = 5 ⇒ x = 7 veya x = −3"},{ad:"Eşitsizlik", ifade:"|x − c| < r ⇒ c − r < x < c + r"}],
     kart:[["|−7| = ?","7"],["|x| = 4 ⇒ ?","x = 4 veya x = −4"],["|x − 1| < 3 ⇒ ?","−2 < x < 4"],["|a − b| ne anlama gelir?","a ile b arasındaki uzaklık"],["|x| = −2 denkleminin çözümü?","Yok; mutlak değer negatif olamaz"]],
@@ -2284,7 +2284,8 @@ const DERS_ICERIK = {
       {q:"|x − 1| < 3 eşitsizliğini sağlayan kaç farklı x tam sayısı vardır?", s:{A:"3",B:"4",C:"5",D:"6",E:"7"}, d:"C", c:"−3 < x − 1 < 3 ⇒ −2 < x < 4: −1, 0, 1, 2, 3 → **5** tane."}] }
 };
 Object.assign(DERS_ICERIK, {
-  "fiz|Fizik Bilimine Giriş": { vid:"_34OfDithTc", kanal:"Fizikle Barış", baslik:"27 Günde TYT Fizik Kampı · 1. Gün · Fizik Bilimine Giriş",
+  "fiz|Fizik Bilimine Giriş": { vid:"1Hg2eF907YA", kanal:"Özcan Aykın", baslik:"55 Günde TYT Fizik Kampı · 1. Gün · Fizik Bilimine Giriş",
+    parca:[["1Hg2eF907YA","Fiziğin Alt Dalları","konu",28],["7aVrdQ7uSQ4","Fiziksel Büyüklükler","konu",28],["PyTaVJVi21c","Soru Çözümü","soru",28]],
     ozet:["Fizik; **madde ve enerjiyi**, ikisi arasındaki etkileşimi inceler.","**Temel büyüklükler** (7 tane): uzunluk, kütle, zaman, sıcaklık, elektrik akımı, madde miktarı, ışık şiddeti. Diğerleri **türetilmiş** büyüklüktür.","**Skaler** büyüklükte sayı ve birim yeter (kütle, zaman, enerji). **Vektörel** büyüklükte yön de gerekir (kuvvet, hız, ivme).","Alt dallar: mekanik, termodinamik, elektromanyetizma, optik, atom ve nükleer fizik, katıhal fiziği."],
     formul:[{ad:"Temel SI birimleri", ifade:"m · kg · s · K · A · mol · cd"},{ad:"Türetilmiş örnek", ifade:"hız = yol ÷ zaman → m/s"}],
     kart:[["Kütle skaler mi vektörel mi?","Skaler"],["Ağırlık skaler mi vektörel mi?","Vektörel (aşağı yönlü bir kuvvet)"],["Sıcaklığın SI birimi?","Kelvin (K)"],["Kuvvet temel mi türetilmiş mi?","Türetilmiş (newton = kg·m/s²)"],["Elektrik akımının SI birimi?","Amper (A)"]],
@@ -2320,17 +2321,14 @@ Object.assign(DERS_ICERIK, {
       {q:"Aşağıdakilerden hangisi yazısız bir tarih kaynağıdır?", s:{A:"Çanak çömlek",B:"Kitabe",C:"Ferman",D:"Kronik",E:"Antlaşma metni"}, d:"A", c:"**Çanak çömlek** üzerinde yazı yoktur; diğerlerinin hepsi yazılı belgedir."},
       {q:"Ay yılını esas alan takvim aşağıdakilerden hangisidir?", s:{A:"Celali",B:"Miladi",C:"Rumi",D:"On İki Hayvanlı Türk Takvimi",E:"Hicri"}, d:"E", c:"**Hicri** takvim Ay yılına göredir (yaklaşık 354 gün). Diğerleri Güneş yılını esas alır."}] }
 });
-["mat|Temel Kavramlar","mat|Rasyonel Sayılar","mat|Basit Eşitsizlikler","mat|Mutlak Değer"].forEach(k=>{ DERS_ICERIK[k].kanal = "Rehber Matematik"; });
+["mat|Temel Kavramlar","mat|Rasyonel Sayılar","mat|Basit Eşitsizlikler","mat|Mutlak Değer"].forEach(k=>{ DERS_ICERIK[k].kanal = "Mert Hoca"; });
 /* Video bölümleri: videoların YouTube açıklamasındaki zaman damgalarından */
-const BOLUM = {
-  "mat|Temel Kavramlar":[[0,"Giriş"],[177,"Rakam nedir?"],[1100,"Sayı kümeleri"],[1111,"Sayma sayıları"],[1147,"Doğal sayılar"],[1183,"Tam sayılar"],[1508,"Rasyonel sayılar"],[1603,"İrrasyonel sayılar"],[1672,"Reel sayılar"],[1755,"ÖSYM tarzı sorular"]],
-  "mat|Mutlak Değer":[[0,"Giriş"],[110,"Mutlak değer nedir?"],[321,"Mutlak değerin özellikleri"],[2581,"Tıpkı ÖSYM soruları"]],
-  "mat|Basit Eşitsizlikler":[[0,"Giriş"],[62,"Aralık kavramı"],[413,"Eşitsizlikler"],[2842,"Kısa bir gezinti"],[2925,"Problemler"]],
-  "fiz|Fizik Bilimine Giriş":[[0,"Giriş ve bilgilendirme"],[60,"Konu anlatımı"],[3216,"Test çözümü"],[3748,"Kapanış ve günün taktiği"]]
-};
+const BOLUM = {}; /* bölümler videoların açıklamasındaki zaman damgalarından eklenecek */
 const OG_SIRALAR = [["mat","Matematik · İlk 12 Konu","Matematik"],["tr","Türkçe","Türkçe"],["fiz","Fizik","Fizik"],["kim","Kimya","Kimya"],["bio","Biyoloji","Biyoloji"],["tar","Tarih","Tarih"]];
 /* Demo: öğrenci biraz ilerlemiş görünsün (sadece demo modunda, bir kez) */
-function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("zk-demo")==="1"; }catch(e){} if(!demo || !S.me || og().tohum) return;
+function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("zk-demo")==="1"; }catch(e){} if(!demo || !S.me) return;
+  if(!og().tohum2){ ogYaz(o=>{ o.tohum2 = 1; }); setTimeout(()=>{ mutate(x=>{ x.hocalar = {...(x.hocalar||{}), "Matematik":"Mert Hoca", "Geometri":"Mert Hoca", "Fizik":"Özcan Aykın", "Kimya":"Görkem Şahin", "Biyoloji":"Betül Biyoloji", "Türkçe":"Rüştü Hoca", "Tarih":"Tarihin Kodları", "Coğrafya":"Coğrafyanın Kodları"}; }); render(); }, 0); }
+  if(og().tohum) return;
   const t0 = today(), now = Date.now();
   ogYaz(o=>{ o.tohum = 1;
     o.ilerleme = {"mat|Basit Eşitsizlikler":{t:1394, d:3480, at:now-3600e3}, "mat|Temel Kavramlar":{t:4100, d:4100, at:now-2*864e5}, "fiz|Fizik Bilimine Giriş":{t:2950, d:2950, at:now-3*864e5}};
@@ -2358,7 +2356,7 @@ function haftaKonulari(s){ const h = ((s.plan||{})[curStart(s)]||{}).hedef||{}, 
 function vidKart(k, s, genis){ const c = DERS_ICERIK[k], t = (s.topics||{})[k]||{}, p = (og().ilerleme||{})[k], pct = p&&p.d ? Math.min(100, p.t/p.d*100) : 0;
   return `<button type="button" class="vk ${c?"":"yok"} ${genis?"genis":""}" ${c?`data-ders="${esc(k)}"`:"disabled"}>
     <span class="vkr">${c?`<img src="${thumb(c.vid)}" alt="" loading="lazy">`:`<i>🎬</i>`}${t.v?`<em class="vkok">✓ İzlendi</em>`:""}${c?`<span class="vkp">▶</span>`:""}${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span>
-    <span class="vkm"><span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)+(((og().sure||{})[k]||(p&&p.d))?` · ${Math.round(((og().sure||{})[k]||p.d)/60)} dk`:"")+(BOLUM[k]?` · ${BOLUM[k].length} bölüm`:"")):"Video yakında"}</span></span></button>`; }
+    <span class="vkm"><span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)+(((og().sure||{})[k]||(p&&p.d))?` · ${Math.round(((og().sure||{})[k]||p.d)/60)} dk`:"")+(c.parca?` · ${c.parca.length} video`:"")+(BOLUM[k]?` · ${BOLUM[k].length} bölüm`:"")):"Video yakında"}</span></span></button>`; }
 function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   Object.entries(DERS_ICERIK).forEach(([k,c])=>{ const ks = (o.kartlar||{})[k]||{}, t = (s.topics||{})[k]||{};
     const due = c.kart.filter((_,i)=>{ const x = ks[i]; return x ? x.sonraki<=bugun : t.v; }).length; if(due) L.push({tip:"kart", k, n:due}); });
@@ -2447,7 +2445,7 @@ const NEDEN = {
   be2:{A:["bilgi","Negatif sayılarda küçük olanın karesi büyüktür: −3 < −1 ama 9 > 1."],B:["bilgi","İki negatif sayının çarpımı pozitiftir."],C:["bilgi","Aynı işaretli sayılar ters çevrilince sıralama değişir: 1/a > 1/b."],D:["islem","a < b ise a − b negatiftir."]},
   be3:{B:["bilgi","Ara bir değer denedin; en küçük değer aralığın ucunda (x = 6) çıkar."],C:["dikkat","−1 en büyük değer; soru en küçüğü soruyor."],D:["islem","−2 ile çarparken eşitsizliğin yönünü değiştirmedin."],E:["dikkat","x = 0 için hesapladın; x en az 2 olabilir."]}
 };
-const nedenTur = (id, c) => ((og().nedenler||{})[id]) || ((NEDEN[id]||{})[c]||[])[0] || "";
+const nedenTur = (id, c) => ((NEDEN[id]||{})[c]||[])[0] || "";
 const bkKonular = () => [...new Set(BANKA.map(x=>x.k))];
 function bkBasla(ids, ad){ S.bk = {ids, ad, cev:{}, bitti:false, bas:Date.now(), acik:{}}; S.view = "banka"; render(); window.scrollTo(0,0); }
 const zEt = z => ({kolay:"Kolay", orta:"Orta", zor:"Zor"})[z]||"";
@@ -2478,8 +2476,8 @@ function pBanka(s){
         <div class="bkqh"><b>${i+1}.</b><span class="faint small">${esc(konuAdi(x.k))} · ${zEt(x.z)}</span>${B.bitti?`<span class="bkdurum">${dg?"✓ Doğru":yn?"✗ Yanlış · doğrusu "+x.d:"Boş · doğrusu "+x.d}</span>`:""}</div>
         <div class="bkmetin">${esc(x.q).replace(/\n/g,"<br>")}</div>
         <div class="bksik">${Object.entries(x.s).map(([h,v])=>`<button type="button" data-bk="sec" data-id="${x.id}" data-h="${h}" class="${c===h?"sec":""} ${B.bitti&&h===x.d?"dogru":""} ${B.bitti&&c===h&&h!==x.d?"yanlis":""}" ${B.bitti?"disabled":""}><b>${h})</b> ${esc(v)}</button>`).join("")}</div>
-        ${B.bitti && yn ? (()=>{ const n = (NEDEN[x.id]||{})[c], t = nedenTur(x.id, c); return `<div class="bkneden"><div><b>🔍 Neden yanlış?</b> ${n?`${c} şıkkını seçtin: ${kalin(n[1])}`:"Bu yanlışın sebebini seç."}</div>
-          <div class="bkntur">${Object.entries(NT).map(([k,[ic,ad]])=>`<button type="button" data-bk="neden" data-id="${x.id}" data-v="${k}" aria-pressed="${t===k}">${ic} ${ad}</button>`).join("")}</div></div>`; })() : ""}
+        ${B.bitti && yn ? (()=>{ const n = (NEDEN[x.id]||{})[c], t = nedenTur(x.id, c); return `<div class="bkneden"><div><b>🔍 Neden yanlış?</b> ${n?`${c} şıkkını seçtin: ${kalin(n[1])}`:"Çözümü inceleyip hangi adımda ayrıldığına bak."}</div>
+          ${t&&NT[t]?`<div class="bkntur"><span class="bkndc t-${t}">${NT[t][0]} ${NT[t][1]}</span></div>`:""}</div>`; })() : ""}
         ${B.bitti?`<button type="button" class="link" data-bk="coz" data-id="${x.id}">${B.acik[x.id]?"Çözümü gizle":"Adım adım çözümü gör"}</button>
           ${B.acik[x.id]?`<div class="bkcoz">${x.ad.map((a,j)=>`<div class="bkad"><span class="bkadn">${j+1}</span><div><b>${esc(a[0])}</b><div class="small">${kalin(a[1])}</div><code>${kalin(a[2])}</code></div></div>`).join("")}<div class="bkpuf">💡 ${kalin(x.puf)}</div></div>`:""}`:""}
       </div>`; }).join("")}</div>
@@ -2509,20 +2507,21 @@ function ytHazir(){ return new Promise((res, rej)=>{ if(window.YT && YT.Player) 
 const dpZaman = () => { try{ return DP.p && DP.p.getCurrentTime ? DP.p.getCurrentTime() : DP.sn; }catch(e){ return DP.sn; } };
 function dpKaydet(){ if(!DP.k || !DP.p || !DP.p.getCurrentTime) return; const t = dpZaman(), d = DP.p.getDuration ? DP.p.getDuration() : 0; if(!t) return;
   ogYaz(o=>{ o.ilerleme = o.ilerleme||{}; o.ilerleme[DP.k] = {t, d, at:Date.now()}; }); }
-function dersAc(k, sekme, sn){ const c = DERS_ICERIK[k]; if(!c) return; closeSheet(); dersKapat(true);
-  Object.assign(DP, {k, sekme: sekme||"ozet", cev:{}, kart:0, ters:false, tak:false, yanit:null, oyn:false, sn: sn!=null ? +sn : ((og().ilerleme||{})[k]||{}).t||0});
+function dersAc(k, sekme, sn, pi){ const c = DERS_ICERIK[k]; if(!c) return; closeSheet(); dersKapat(true); const P = c.parca || [[c.vid, c.baslik, "konu"]]; pi = Math.min(+pi||0, P.length-1); const vid = P[pi][0];
+  Object.assign(DP, {k, pi, sekme: sekme||"ozet", cev:{}, kart:0, ters:false, tak:false, yanit:null, oyn:false, sn: sn!=null ? +sn : ((og().ilerleme||{})[k]||{}).t||0});
   const el = document.createElement("div"); el.id = "dersk"; el.className = "dersk";
-  el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.baslik)}</div></div></div>
+  el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.kanal)} · ${esc(P.length>1 ? (pi+1)+". video: "+P[pi][1] : c.baslik)}</div></div></div>
     <div class="dkana"><div class="dksol"><div class="kavid dkvid"><div id="ytp"></div></div>
     <div class="dkarac"><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button><span class="dkhiz" role="group" aria-label="Oynatma hızı">${[1,1.25,1.5,2].map(r=>`<button data-dk="hiz" data-v="${r}" aria-pressed="${r===(og().hiz||1)}">${String(r).replace(".",",")}x</button>`).join("")}</span><span class="dkzaman faint small"></span></div>
+    ${P.length>1?`<div class="dkbolum"><div class="dkbh">Bu konunun videoları · ${P.length}</div><div class="dkbl">${P.map((x,i)=>`<button data-dk="parca" data-pi="${i}" class="${i===pi?"on":""}"><span>${i+1}. ${x[2]==="soru"?"Soru çözümü":"Konu"}${x[3]?" · "+x[3]+" dk":""}</span>${esc(x[1])}</button>`).join("")}</div></div>`:""}
     ${BOLUM[k]?`<div class="dkbolum"><div class="dkbh">Bölümler</div><div class="dkbl">${BOLUM[k].map(([t,ad],i)=>`<button data-dk="git" data-sn="${t}" data-bi="${i}"><span>${dkSn(t)}</span>${esc(ad)}</button>`).join("")}</div></div>`:""}
     <div class="dksira"><div class="sech"><h3>Sıradaki dersler</h3><span class="faint small">önce aynı dersten</span></div><div class="vkrow">${Object.keys(DERS_ICERIK).filter(x=>x!==k).sort((x,y)=>(y.split("|")[0]===k.split("|")[0])-(x.split("|")[0]===k.split("|")[0])).map(x=>vidKart(x, st())).join("")}</div></div></div>
     <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
     <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
-  const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${c.vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
-  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:c.vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1 },
-    events:{ onReady: ev=>{ try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0) izlendiYap(); } } }); }).catch(sade);
+  const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
+  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1 },
+    events:{ onReady: ev=>{ try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
   clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); bolumIsaretle(); }, 3000);
   geriKoruma(); }
 function bolumIsaretle(){ const B = BOLUM[DP.k]; if(!B) return; const t = dpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll(".dkbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
@@ -2566,6 +2565,7 @@ document.addEventListener("click", e=>{
   if(a==="anla"){ try{ DP.p && DP.p.pauseVideo(); }catch(_){} DP.anlaSn = dpZaman(); DP.sekme = "anla"; DP.yanit = null; dpCiz(); const n = $("#dk-ne"); if(n) n.focus(); return; }
   if(a==="notkaydet"){ const v = ($("#dk-not")||{}).value||""; if(!v.trim()) return toast("Notunu yaz"); const t = dpZaman(); ogYaz(o=>{ o.notlar = o.notlar||{}; (o.notlar[DP.k] = o.notlar[DP.k]||[]).push({t, m:v.trim(), at:Date.now()}); }); toast("Not kaydedildi · "+dkSn(t)); dpCiz(); return; }
   if(a==="notsil"){ ogYaz(o=>{ o.notlar[DP.k] = (o.notlar[DP.k]||[]).filter(n=>String(n.at)!==b.dataset.at); }); dpCiz(); return; }
+  if(a==="parca"){ dpKaydet(); dersAc(DP.k, DP.sekme, 0, +b.dataset.pi); return; }
   if(a==="hiz"){ const r = +b.dataset.v; ogYaz(o=>{ o.hiz = r; }); try{ DP.p.setPlaybackRate(r); }catch(_){} document.querySelectorAll("[data-dk=hiz]").forEach(x=>x.setAttribute("aria-pressed", x===b)); toast(`Hız ${String(r).replace(".",",")}x`); return; }
   if(a==="git"){ const t = +b.dataset.sn; DP.sn = t; try{ DP.p.seekTo(t, true); DP.p.playVideo(); }catch(_){} setTimeout(bolumIsaretle, 300); window.scrollTo(0,0); $("#dersk").scrollTo({top:0, behavior:"smooth"}); return; }
   if(a==="izle"){ const t = (st().topics||{})[DP.k]||{}; if(t.v){ mutate(x=>{ delete topic(x,DP.k).v; }); } else izlendiYap(); setTimeout(dpCiz, 50); return; }
