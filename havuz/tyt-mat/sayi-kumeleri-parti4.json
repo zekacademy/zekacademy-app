@@ -1,0 +1,236 @@
+[
+ {
+  "id": "tytmat-sayilar-0040",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Basamakları",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamları değiştirilen iki basamaklı sayının yeni değerini basamak değeriyle ifade edip denklem kurar.",
+  "tipId": "sk-basamak",
+  "tip": "Basamak çözümleme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İki basamaklı bir sayının onlar basamağındaki rakam 2 artırılıp birler basamağındaki rakam 3 azaltıldığında elde edilen yeni sayı, ilk sayının 2 katından 9 eksik olur.\nBuna göre ilk sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "23",
+   "B": "26",
+   "C": "32",
+   "D": "43",
+   "E": "52"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "26"
+  },
+  "celdiriciler": {
+   "A": "23 için yeni sayı 40 olur; 2 × 23 − 9 = 37, eşit değil.",
+   "C": "32, birler basamağını 3 artırmışsın gibi kurulan denklemden çıkıyor (N + 23 = 2N − 9).",
+   "D": "43, yeni sayı; soru ilk sayıyı soruyor.",
+   "E": "52, ilk sayının 2 katı; 9 çıkarmayı ve asıl istenen sayıyı atlamışsın."
+  },
+  "istenen": "Koşulu sağlayan ilk sayı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   },
+   {
+    "ad": "Basamak değeri",
+    "ifade": "onlar basamağındaki rakam 1 artarsa sayı 10 artar; birler basamağındaki rakam 1 azalırsa sayı 1 azalır"
+   }
+  ],
+  "ipuclari": [
+   "Onlar basamağındaki rakam 2 artınca sayı kaç artar?",
+   "Birler basamağındaki rakam 3 azalınca sayı kaç azalır? Yeni sayıyı ilk sayı cinsinden yaz.",
+   "Yeni sayıyı “2 katından 9 eksik” ifadesine eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk sayıya ad ver",
+    "aciklama": "İlk sayı N olsun.",
+    "islem": "N = 10 × A + B"
+   },
+   {
+    "baslik": "Yeni sayıyı yaz",
+    "aciklama": "Onlar 2 artınca sayı 20 artar; birler 3 azalınca sayı 3 azalır.",
+    "islem": "yeni sayı = N + 20 − 3 = N + 17"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "Yeni sayı, N’nin 2 katından 9 eksik.",
+    "islem": "N + 17 = 2N − 9"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "N’leri bir tarafa topla.",
+    "islem": "N = 17 + 9 = 26"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "26 → onlar 2 + 2 = 4, birler 6 − 3 = 3 ⇒ 43. 2 × 26 − 9 = 43 ✓",
+    "islem": "ilk sayı = 26"
+   }
+  ],
+  "puf": "Basamaktaki rakam değişince sayının ne kadar değiştiğini basamak değeriyle yaz: onlar ±1 ⇒ sayı ±10, birler ±1 ⇒ sayı ±1.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0040k",
+  "kaynakKart": "K-SK-23 (basamakları artırıp azaltma, kat ilişkisi) · yeni artış/azalış miktarları, yeni ilişki (2 katından 9 eksik)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0041",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Doğrusu",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Eşit bölmeli bir göstergede etiketlerin dışındaki bir konumu okur.",
+  "tipId": "sk-gosterge",
+  "tip": "Sayı doğrusu ve göstergeler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Bir mutfak tartısının göstergesinin bir bölümü aşağıda verilmiştir. Gösterge eşit aralıklarla bölmelenmiştir ve kırmızı ok, tartıdaki unun kütlesini gram cinsinden göstermektedir.\nBuna göre tartıdaki un kaç gramdır?",
+  "sekil": "<svg viewBox=\"0 0 330 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"24\" y1=\"46\" x2=\"306\" y2=\"46\" stroke-width=\"2\"/><line x1=\"24.0\" y1=\"46\" x2=\"24.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"49.6\" y1=\"46\" x2=\"49.6\" y2=\"30\" stroke-width=\"2\"/><line x1=\"75.3\" y1=\"46\" x2=\"75.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"100.9\" y1=\"46\" x2=\"100.9\" y2=\"37\" stroke-width=\"2\"/><line x1=\"126.5\" y1=\"46\" x2=\"126.5\" y2=\"37\" stroke-width=\"2\"/><line x1=\"152.2\" y1=\"46\" x2=\"152.2\" y2=\"37\" stroke-width=\"2\"/><line x1=\"177.8\" y1=\"46\" x2=\"177.8\" y2=\"37\" stroke-width=\"2\"/><line x1=\"203.5\" y1=\"46\" x2=\"203.5\" y2=\"30\" stroke-width=\"2\"/><line x1=\"229.1\" y1=\"46\" x2=\"229.1\" y2=\"37\" stroke-width=\"2\"/><line x1=\"254.7\" y1=\"46\" x2=\"254.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"280.4\" y1=\"46\" x2=\"280.4\" y2=\"37\" stroke-width=\"2\"/><line x1=\"306.0\" y1=\"46\" x2=\"306.0\" y2=\"37\" stroke-width=\"2\"/><text x=\"49.6\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">250</text><text x=\"203.5\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">400</text><path d=\"M280.4 50 L274.4 62 L286.4 62 Z\" style=\"fill:#e53935;stroke:#e53935\"/><text x=\"280.4\" y=\"77.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text></svg>",
+  "siklar": {
+   "A": "325",
+   "B": "430",
+   "C": "475",
+   "D": "490",
+   "E": "550"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "475"
+  },
+  "celdiriciler": {
+   "A": "325, oku 250’nin 3 bölme sağında okumak; ok 400’ün sağında.",
+   "B": "430, bir bölmeyi 10 g sanmak; 150 g 6 bölmeye ayrılmış.",
+   "D": "490, aralığı 5 bölme sayıp bir bölmeyi 30 g bulmak; 6 bölme var.",
+   "E": "550, etiketler arasındaki 150 g’ı 400’e eklemek; ok 3 bölme sağda."
+  },
+  "istenen": "Okun gösterdiği değer.",
+  "bilgi": [
+   {
+    "ad": "Bir bölmenin değeri",
+    "ifade": "iki etiket arasındaki fark ÷ aradaki bölme sayısı"
+   }
+  ],
+  "ipuclari": [
+   "250 ile 400 arasında kaç bölme var?",
+   "Bir bölmenin kaç gram olduğunu bul.",
+   "Ok, 400’ün kaç bölme sağında?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölme sayısı",
+    "aciklama": "250 ile 400 etiketleri arasında 6 bölme var (çizgileri değil, aralıkları say).",
+    "islem": "400 − 250 = 150 g"
+   },
+   {
+    "baslik": "Bir bölme",
+    "aciklama": "150 g, 6 eş bölmeye ayrılmış.",
+    "islem": "150 ÷ 6 = 25 g"
+   },
+   {
+    "baslik": "Okun gösterdiği değer",
+    "aciklama": "Ok, 400’ün 3 bölme sağında.",
+    "islem": "400 + 3 × 25 = 475 g",
+    "gorsel": "<svg viewBox=\"0 0 330 130\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"24\" y1=\"46\" x2=\"306\" y2=\"46\" stroke-width=\"2\"/><line x1=\"24.0\" y1=\"46\" x2=\"24.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"49.6\" y1=\"46\" x2=\"49.6\" y2=\"30\" stroke-width=\"2\"/><line x1=\"75.3\" y1=\"46\" x2=\"75.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"100.9\" y1=\"46\" x2=\"100.9\" y2=\"37\" stroke-width=\"2\"/><line x1=\"126.5\" y1=\"46\" x2=\"126.5\" y2=\"37\" stroke-width=\"2\"/><line x1=\"152.2\" y1=\"46\" x2=\"152.2\" y2=\"37\" stroke-width=\"2\"/><line x1=\"177.8\" y1=\"46\" x2=\"177.8\" y2=\"37\" stroke-width=\"2\"/><line x1=\"203.5\" y1=\"46\" x2=\"203.5\" y2=\"30\" stroke-width=\"2\"/><line x1=\"229.1\" y1=\"46\" x2=\"229.1\" y2=\"37\" stroke-width=\"2\"/><line x1=\"254.7\" y1=\"46\" x2=\"254.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"280.4\" y1=\"46\" x2=\"280.4\" y2=\"37\" stroke-width=\"2\"/><line x1=\"306.0\" y1=\"46\" x2=\"306.0\" y2=\"37\" stroke-width=\"2\"/><text x=\"49.6\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">250</text><text x=\"203.5\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">400</text><path d=\"M280.4 50 L274.4 62 L286.4 62 Z\" style=\"fill:#e53935;stroke:#e53935\"/><text x=\"280.4\" y=\"77.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">?</text><path d=\"M203.5 86 H280.4\" stroke-width=\"3\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"241.9\" y=\"102.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">3 bölme = 75 g</text></svg>"
+   }
+  ],
+  "puf": "Bölme sayısını sayarken çizgileri değil aralıkları say; iki etiket arasında 7 çizgi varsa 6 aralık vardır.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0041k",
+  "kaynakKart": "K-SK-04 (eşit bölmeli gösterge) · yeni kurgu (mutfak tartısı), ibre etiketlerin dışında",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0042",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · İşaret İnceleme",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Bölüm ve sıralama bilgisinden durum inceleyerek sayıların işaretlerini bulur.",
+  "tipId": "sk-isaret",
+  "tip": "İşaret inceleme ve sıralama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Sıfırdan farklı a, b ve c gerçel sayıları için a / b bölümü negatif, b / c bölümü pozitiftir ve a sayısı c’den büyüktür.\nBuna göre aşağıdaki ifadelerden hangisinin değeri her zaman negatiftir?",
+  "sekil": null,
+  "siklar": {
+   "A": "b · c",
+   "B": "a − b",
+   "C": "a · c",
+   "D": "a + b",
+   "E": "c − b"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "a · c"
+  },
+  "celdiriciler": {
+   "A": "b · c pozitif: b ve c ikisi de negatif.",
+   "B": "a − b pozitif: pozitiften negatif çıkarınca sonuç büyür.",
+   "D": "a + b’nin işareti belli değil: a = 5, b = −2 için pozitif, a = 1, b = −4 için negatif.",
+   "E": "c − b’nin işareti belli değil: b ile c’nin hangisinin büyük olduğu bilinmiyor."
+  },
+  "istenen": "Her durumda negatif olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Çarpımın işareti",
+    "ifade": "aynı işaretli iki sayının çarpımı pozitif (+), zıt işaretli iki sayının çarpımı negatiftir (−)"
+   },
+   {
+    "ad": "Bölümün işareti",
+    "ifade": "bölmede de çarpmadaki kural geçerli: aynı işaretliler ⇒ +, zıt işaretliler ⇒ −"
+   }
+  ],
+  "ipuclari": [
+   "a / b < 0 ne anlatıyor: a ile b aynı mı, zıt mı işaretli?",
+   "b / c > 0 ise b ile c’nin işaretleri nasıl?",
+   "a’yı önce negatif kabul et; a > c koşulu sağlanabiliyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlişkileri yaz",
+    "aciklama": "a / b negatif ⇒ a ile b zıt işaretli. b / c pozitif ⇒ b ile c aynı işaretli. Demek ki a ile c zıt işaretli.",
+    "islem": "a, b zıt · b, c aynı ⇒ a, c zıt"
+   },
+   {
+    "baslik": "a negatif olsaydı",
+    "aciklama": "c pozitif olurdu. O zaman a > c “negatif > pozitif” demek olur; olamaz.",
+    "islem": "a < 0 ⇒ çelişki"
+   },
+   {
+    "baslik": "İşaretler",
+    "aciklama": "Demek ki a pozitif; b ve c negatif.",
+    "islem": "a > 0 · b < 0 · c < 0"
+   },
+   {
+    "baslik": "Şıkları dene",
+    "aciklama": "a × c = (+) × (−) negatif ✓. b × c pozitif, a − b pozitif. a + b ve c − b’nin işareti sayılara bağlı.",
+    "islem": "a × c < 0"
+   }
+  ],
+  "puf": "İki zıt işaretli sayıdan hangisinin pozitif olduğunu sıralama bilgisi söyler: büyük olan pozitiftir.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0042k",
+  "kaynakKart": "K-SK-28 (bölüm eşitsizliklerinden işaret ve sıralama) · yeni yapı (bölüm), durum incelemesi, yeni istenen (kesin negatif)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,240 @@
+[
+ {
+  "id": "tytmat-sayilar-0040k",
+  "ana": "tytmat-sayilar-0040",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Basamakları",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamları değiştirilen iki basamaklı sayının yeni değerini basamak değeriyle ifade edip denklem kurar.",
+  "tipId": "sk-basamak",
+  "tip": "Basamak çözümleme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İki basamaklı bir sayının onlar basamağındaki rakam 3 artırılıp birler basamağındaki rakam 2 azaltılırsa elde edilen yeni sayı, ilk sayının 3 katından 30 eksik olur.\nBuna göre ilk sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "29",
+   "B": "31",
+   "C": "57",
+   "D": "59",
+   "E": "87"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "29"
+  },
+  "celdiriciler": {
+   "B": "31, birler basamağını 2 artırmışsın gibi kurulan denklemden çıkıyor (N + 32 = 3N − 30).",
+   "C": "57, yeni sayı; soru ilk sayıyı soruyor.",
+   "D": "59, birler basamağındaki azalmayı unutup yalnız onlar basamağını artırmak.",
+   "E": "87, ilk sayının 3 katı; 30 çıkarmadan bırakılmış."
+  },
+  "istenen": "Koşulu sağlayan ilk sayı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   },
+   {
+    "ad": "Basamak değeri",
+    "ifade": "onlar basamağındaki rakam 1 artarsa sayı 10 artar; birler basamağındaki rakam 1 azalırsa sayı 1 azalır"
+   }
+  ],
+  "ipuclari": [
+   "Onlar basamağındaki rakam 3 artınca sayı kaç artar?",
+   "Birler basamağındaki rakam 2 azalınca sayı kaç azalır?",
+   "Yeni sayıyı “3 katından 30 eksik” ifadesine eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk sayıya ad ver",
+    "aciklama": "İlk sayı N olsun.",
+    "islem": "N = 10 × A + B"
+   },
+   {
+    "baslik": "Yeni sayıyı yaz",
+    "aciklama": "Onlar 3 artınca sayı 30 artar; birler 2 azalınca sayı 2 azalır.",
+    "islem": "yeni sayı = N + 30 − 2 = N + 28"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "Yeni sayı, N’nin 3 katından 30 eksik.",
+    "islem": "N + 28 = 3N − 30"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "N’leri bir tarafa topla.",
+    "islem": "2N = 58 ⇒ N = 29"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "29 → onlar 5, birler 7 ⇒ 57. 3 × 29 − 30 = 57 ✓",
+    "islem": "ilk sayı = 29"
+   }
+  ],
+  "puf": "Önce değişimi “N + …” biçiminde yaz; sonra verilen ilişkiyi kur.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-23 (basamakları artırıp azaltma, kat ilişkisi) · kardeş (0040): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0041k",
+  "ana": "tytmat-sayilar-0041",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Doğrusu",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Eşit bölmeli bir göstergede etiketlerin dışındaki bir konumu okur.",
+  "tipId": "sk-gosterge",
+  "tip": "Sayı doğrusu ve göstergeler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Bir dış ortam termometresinin göstergesinin bir bölümü aşağıda verilmiştir. Gösterge eşit aralıklarla bölmelenmiştir ve kırmızı ok, hava sıcaklığını °C cinsinden göstermektedir.\nBuna göre hava sıcaklığı kaç °C’dir?",
+  "sekil": "<svg viewBox=\"0 0 330 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"24\" y1=\"46\" x2=\"306\" y2=\"46\" stroke-width=\"2\"/><line x1=\"24.0\" y1=\"46\" x2=\"24.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"55.3\" y1=\"46\" x2=\"55.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"86.7\" y1=\"46\" x2=\"86.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"118.0\" y1=\"46\" x2=\"118.0\" y2=\"30\" stroke-width=\"2\"/><line x1=\"149.3\" y1=\"46\" x2=\"149.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"180.7\" y1=\"46\" x2=\"180.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"212.0\" y1=\"46\" x2=\"212.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"243.3\" y1=\"46\" x2=\"243.3\" y2=\"30\" stroke-width=\"2\"/><line x1=\"274.7\" y1=\"46\" x2=\"274.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"306.0\" y1=\"46\" x2=\"306.0\" y2=\"37\" stroke-width=\"2\"/><text x=\"118.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">−4</text><text x=\"243.3\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">8</text><path d=\"M55.3 50 L49.3 62 L61.3 62 Z\" style=\"fill:#e53935;stroke:#e53935\"/><text x=\"55.3\" y=\"77.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text></svg>",
+  "siklar": {
+   "A": "−13",
+   "B": "−10",
+   "C": "−8",
+   "D": "−6",
+   "E": "2"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−10"
+  },
+  "celdiriciler": {
+   "A": "−13, oku −4’ün 3 bölme solunda okumak; ok 2 bölme solda.",
+   "C": "−8, bir bölmeyi 2 °C sanmak; −4 ile 8 arası 12 derece.",
+   "D": "−6, etiket farkını 8 − 4 = 4 hesaplayıp bir bölmeyi 1 °C bulmak.",
+   "E": "2, oku −4’ün sağında saymak; ok solda, değer azalır."
+  },
+  "istenen": "Okun gösterdiği sıcaklık.",
+  "bilgi": [
+   {
+    "ad": "Bir bölmenin değeri",
+    "ifade": "iki etiket arasındaki fark ÷ aradaki bölme sayısı"
+   },
+   {
+    "ad": "Negatif sayılarda fark",
+    "ifade": "8 ile −4 arasındaki fark 8 − (−4) = 8 + 4 = 12’dir"
+   }
+  ],
+  "ipuclari": [
+   "−4 ile 8 arasındaki fark kaç derece?",
+   "Aralarında kaç bölme var? Bir bölmeyi bul.",
+   "Ok, −4’ün kaç bölme solunda? Sola gidildikçe değer azalır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Etiket farkı",
+    "aciklama": "Negatif sayıdan çıkarırken işarete dikkat.",
+    "islem": "8 − (−4) = 12"
+   },
+   {
+    "baslik": "Bir bölme",
+    "aciklama": "−4 ile 8 arasında 4 bölme var.",
+    "islem": "12 ÷ 4 = 3 °C"
+   },
+   {
+    "baslik": "Okun gösterdiği değer",
+    "aciklama": "Ok, −4’ün 2 bölme solunda; sola gidildikçe sıcaklık azalır.",
+    "islem": "−4 − 2 × 3 = −10 °C",
+    "gorsel": "<svg viewBox=\"0 0 330 130\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"24\" y1=\"46\" x2=\"306\" y2=\"46\" stroke-width=\"2\"/><line x1=\"24.0\" y1=\"46\" x2=\"24.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"55.3\" y1=\"46\" x2=\"55.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"86.7\" y1=\"46\" x2=\"86.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"118.0\" y1=\"46\" x2=\"118.0\" y2=\"30\" stroke-width=\"2\"/><line x1=\"149.3\" y1=\"46\" x2=\"149.3\" y2=\"37\" stroke-width=\"2\"/><line x1=\"180.7\" y1=\"46\" x2=\"180.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"212.0\" y1=\"46\" x2=\"212.0\" y2=\"37\" stroke-width=\"2\"/><line x1=\"243.3\" y1=\"46\" x2=\"243.3\" y2=\"30\" stroke-width=\"2\"/><line x1=\"274.7\" y1=\"46\" x2=\"274.7\" y2=\"37\" stroke-width=\"2\"/><line x1=\"306.0\" y1=\"46\" x2=\"306.0\" y2=\"37\" stroke-width=\"2\"/><text x=\"118.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">−4</text><text x=\"243.3\" y=\"24.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">8</text><path d=\"M55.3 50 L49.3 62 L61.3 62 Z\" style=\"fill:#e53935;stroke:#e53935\"/><text x=\"55.3\" y=\"77.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">?</text><path d=\"M55.3 86 H118.0\" stroke-width=\"3\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"86.7\" y=\"102.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2 bölme = 6 °C</text></svg>"
+   }
+  ],
+  "puf": "Negatif etiketli göstergede farkı 8 − (−4) diye işaretle hesapla; sola giderken çıkar.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-04 (eşit bölmeli gösterge) · kardeş (0041): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0042k",
+  "ana": "tytmat-sayilar-0042",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · İşaret İnceleme",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Bölüm ve sıralama bilgisinden durum inceleyerek sayıların işaretlerini bulur.",
+  "tipId": "sk-isaret",
+  "tip": "İşaret inceleme ve sıralama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Sıfırdan farklı x, y ve z gerçel sayıları için x / y bölümü pozitif, y · z çarpımı negatiftir ve x sayısı z’den küçüktür.\nBuna göre aşağıdaki ifadelerden hangisinin değeri her zaman pozitiftir?",
+  "sekil": null,
+  "siklar": {
+   "A": "x · z",
+   "B": "x + y",
+   "C": "y + z",
+   "D": "z − y",
+   "E": "x − z"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "z − y"
+  },
+  "celdiriciler": {
+   "A": "x · z negatif: x negatif, z pozitif.",
+   "B": "x + y negatif: iki negatifin toplamı negatiftir.",
+   "C": "y + z’nin işareti belli değil: y = −1, z = 5 için pozitif, y = −6, z = 2 için negatif.",
+   "E": "x − z negatif: negatiften pozitif çıkarınca sonuç daha da küçülür."
+  },
+  "istenen": "Her durumda pozitif olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Çarpımın işareti",
+    "ifade": "aynı işaretli iki sayının çarpımı pozitif (+), zıt işaretli iki sayının çarpımı negatiftir (−)"
+   },
+   {
+    "ad": "Bölümün işareti",
+    "ifade": "bölmede de çarpmadaki kural geçerli: aynı işaretliler ⇒ +, zıt işaretliler ⇒ −"
+   }
+  ],
+  "ipuclari": [
+   "x / y > 0 ise x ile y’nin işaretleri nasıl?",
+   "y · z < 0 ise y ile z zıt işaretli; x ile z için ne söylenebilir?",
+   "x’i önce pozitif kabul et; x < z koşulu sağlanabiliyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlişkileri yaz",
+    "aciklama": "x / y pozitif ⇒ x ile y aynı işaretli. y · z negatif ⇒ y ile z zıt. Demek ki x ile z zıt işaretli.",
+    "islem": "x, y aynı · y, z zıt ⇒ x, z zıt"
+   },
+   {
+    "baslik": "x pozitif olsaydı",
+    "aciklama": "z negatif olurdu. O zaman x < z “pozitif < negatif” demek olur; olamaz.",
+    "islem": "x > 0 ⇒ çelişki"
+   },
+   {
+    "baslik": "İşaretler",
+    "aciklama": "Demek ki x ve y negatif, z pozitif.",
+    "islem": "x < 0 · y < 0 · z > 0"
+   },
+   {
+    "baslik": "Şıkları dene",
+    "aciklama": "z − y = pozitif − negatif ⇒ pozitif ✓. x × z ve x + y negatif; x − z negatif; y + z sayılara bağlı.",
+    "islem": "z − y > 0"
+   }
+  ],
+  "puf": "Zıt işaretli iki sayıdan küçük olan negatiftir; sıralama bilgisini işaret bulmak için kullan.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-28 (bölüm eşitsizliklerinden işaret ve sıralama) · kardeş (0042): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
