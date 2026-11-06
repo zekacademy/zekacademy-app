@@ -16,7 +16,7 @@ KISA={
 '0024':'6!/4! = 6 × 5: üstteki sayıdan başlayıp alttakine kadar (dahil değil) çarp.',
 '0026':'k = 1, e = 2 koy: k · e = 2, k + e = 3, 2k + e = 4, k · e + e = 4, e² = 4. Tek olan yalnızca k + e.',
 }
-KAR={'0001','0002','0003','0004','0005','0006','0007','0008','0009','0010','0011','0012','0019','0024'}
+KAR={f'{i:04d}' for i in range(1,27)}  # 0001–0026'nın hepsinin kardeşi var
 for f in ('sayi-kumeleri-parti1.json','sayi-kumeleri-parti2.json'):
     p=os.path.join(H,f); Q=json.load(open(p))
     for q in Q:

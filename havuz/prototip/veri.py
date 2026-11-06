@@ -7,7 +7,7 @@ Q={q['id']:q for f in ('sayi-kumeleri-parti1.json','sayi-kumeleri-parti2.json') 
 OSYM={'sk-ardisik':[2019,2025],'sk-basamak':[2020,2021,2023,2024,2026],'sk-faktoriyel':[2021],'sk-gosterge':[2019,2020,2024],'sk-isaret':[2019],'sk-kesir':[2018,2021,2022,2023,2024,2025,2026],'sk-ondalik':[2021,2022,2023,2026],'sk-oruntu':[2023],'sk-tanimli':[2018,2019,2022,2023,2024,2025],'sk-tek-cift':[2018,2020,2021,2022,2024,2025],'sk-yerlestirme':[2018,2019,2020,2022,2025,2026]}
 B=lambda a,i:dict(ad=a,ifade=i)
 TEK=B('Tek-çift kuralları','tek + tek = çift · çift + çift = çift · tek + çift = tek'); CARP=B('Çarpımda tek-çift','çarpanlardan biri çiftse çarpım çifttir; hepsi tekse çarpım tektir')
-ASAL=B('Asal sayı','1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2 tek çift asal sayıdır')
+ASAL=B('Asal sayı','1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2, çift olan tek asal sayıdır')
 FAK=B('Faktöriyel','n! = 1 × 2 × … × n. Örnek: 4! = 24. Ayrıca 7! = 7 × 6 × 5! gibi yazılabilir')
 A=lambda b,a,i:dict(baslik=b,aciklama=a,islem=i)
 def K(id,tip,z,metin,siklar,sik,cel,bilgi,adimlar,puf,kisa):

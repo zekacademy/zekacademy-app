@@ -6,7 +6,7 @@ TEK=B('Tek-çift kuralları','tek + tek = çift · çift + çift = çift · tek 
 CARP=B('Çarpımda tek-çift','çarpanlardan biri çiftse çarpım çifttir; hepsi tekse çarpım tektir')
 IKI=B('İki basamaklı sayı','AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4')
 UC=B('Üç basamaklı sayı','ABC = 100 × A + 10 × B + C. Örnek: 352 = 300 + 50 + 2')
-ASAL=B('Asal sayı','1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2 tek çift asal sayıdır')
+ASAL=B('Asal sayı','1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2, çift olan tek asal sayıdır')
 FAK=B('Faktöriyel','n! = 1 × 2 × … × n. Örnek: 4! = 24. Ayrıca 6! = 6 × 5 × 4! gibi yazılabilir')
 A=lambda b,a,i:dict(baslik=b,aciklama=a,islem=i)
 Y={

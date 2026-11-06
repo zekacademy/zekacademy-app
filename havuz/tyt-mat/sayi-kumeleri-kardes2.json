@@ -1,0 +1,941 @@
+[
+ {
+  "id": "tytmat-sayilar-0013k",
+  "ana": "tytmat-sayilar-0013",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Basamakları",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Basamak çözümlemesiyle eşitsizlik kurar, rakamların alabileceği değerleri bulur.",
+  "tipId": "sk-rakam-enaz",
+  "tip": "Rakamlarla en az – en çok",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Deniz’in elinde üzerinde birbirinden ve sıfırdan farklı A, B ve C rakamları yazılı üç kart vardır.\nDeniz kartlarla iki basamaklı CA, CB ve AB sayılarını, üç kartı yan yana koyarak da üç basamaklı ABC sayısını oluşturduğunda CA, CB ve AB sayılarının toplamının ABC sayısından büyük olduğunu görüyor.\nBuna göre ABC sayısı en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "178",
+   "B": "186",
+   "C": "187",
+   "D": "189",
+   "E": "198"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "189"
+  },
+  "celdiriciler": {
+   "A": "178 koşulu sağlıyor ama B = 8, C = 9 ile daha büyük sayı yazılabiliyor.",
+   "B": "186 için C = 6 iken 19 × 6 = 114, 89 + 64 = 153’ten küçük; koşul sağlanmaz.",
+   "C": "187 koşulu sağlıyor ama 189 daha büyük.",
+   "E": "198 için 19 × 8 = 152, 89 + 72 = 161’den küçük; koşul sağlanmaz."
+  },
+  "istenen": "Koşulu sağlayan en büyük üç basamaklı ABC sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   },
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 352 = 300 + 50 + 2"
+   }
+  ],
+  "ipuclari": [
+   "CA + CB + AB toplamını A, B, C cinsinden çözümle.",
+   "Eşitsizliği sadeleştirince A’nın kaç olabileceğine bak.",
+   "A belli olunca C’yi, sonra B’yi en büyük seç; koşulu kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları aç",
+    "aciklama": "Her sayıyı basamaklarına ayır.",
+    "islem": "CA = 10C + A · CB = 10C + B · AB = 10A + B"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "A’lar, B’ler ve C’ler ayrı ayrı toplanır.",
+    "islem": "CA + CB + AB = 11A + 2B + 20C"
+   },
+   {
+    "baslik": "Eşitsizliği sadeleştir",
+    "aciklama": "11A + 2B + 20C > 100A + 10B + C. İki taraftan 11A, 2B ve C çıkar.",
+    "islem": "19C > 89A + 8B"
+   },
+   {
+    "baslik": "A’yı bul",
+    "aciklama": "Sol taraf en fazla 19 × 9 = 171. A = 2 olsaydı sağ taraf en az 178 olurdu; olmaz. O hâlde **A = 1**.",
+    "islem": "A = 1 ⇒ 19C > 89 + 8B"
+   },
+   {
+    "baslik": "En büyük ABC",
+    "aciklama": "ABC’yi büyütmek için önce B’yi büyük seçmek gerekir. B = 9 olursa C = 9 olamaz (farklı rakam), C = 8 ile 152 > 161 sağlanmaz. B = 8 ve C = 9 ile 171 > 153 sağlanır.",
+    "islem": "ABC = 189"
+   }
+  ],
+  "puf": "Eşitsizliği tek harfe indir; “en çok” için yüksek basamaktan başlayarak en büyük rakamı dene ve koşulu kontrol et.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-17 (rakamlı eşitsizlik, en az) · kardeş (0013): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0014k",
+  "ana": "tytmat-sayilar-0014",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Temel İşlemler",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Verilen koşulları sağlayan dağılımları sistemli biçimde bulur.",
+  "tipId": "sk-yerlestirme",
+  "tip": "Kutulara yerleştirme ve işlem bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "2’den 10’a kadar numaralandırılmış dokuz kart, her kutuda üç kart olacak biçimde üç kutuya dağıtılmıştır.\n• Her kutudaki kartların numaraları toplamı birbirine eşittir.\n• Her kutuda numarası asal sayı olan en az bir kart vardır.\nBuna göre 10 numaralı kartın bulunduğu kutudaki kartların numaraları çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "120",
+   "B": "150",
+   "C": "168",
+   "D": "180",
+   "E": "192"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "B": "150 = 3 × 5 × 10; bu dağılımda {4, 6, 8} kutusunda asal kalmıyor.",
+   "C": "{3, 7, 8} geçerli bir kutu ama 10 numaralı kart onda değil.",
+   "D": "{4, 5, 9} geçerli bir kutu ama 10 numaralı kart onda değil.",
+   "E": "{4, 6, 8} kutusunda asal yok; ayrıca 10 bu kutuda değil."
+  },
+  "istenen": "10 numaralı kartın kutusundaki üç numaranın çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2, çift olan tek asal sayıdır"
+   },
+   {
+    "ad": "2’den 10’a toplam",
+    "ifade": "2 + 3 + … + 10 = 54"
+   }
+  ],
+  "ipuclari": [
+   "Dokuz kartın toplamı kaç? Her kutunun toplamı kaç olmalı?",
+   "10 ile toplamı 18 olan üçlüleri yaz.",
+   "Her durumda kalan kartları da kutulara dağıt ve asal koşulunu kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kutu toplamı",
+    "aciklama": "Üç kutunun toplamı eşit; 54’ü üçe böl.",
+    "islem": "54 ÷ 3 = 18"
+   },
+   {
+    "baslik": "10’un kutusu",
+    "aciklama": "10 ile birlikte iki kart daha var ve toplamları 8 olmalı: (2, 6) ya da (3, 5).",
+    "islem": "{2, 6, 10} veya {3, 5, 10}"
+   },
+   {
+    "baslik": "{3, 5, 10}’u dene",
+    "aciklama": "Kalan 2, 4, 6, 7, 8, 9 ile toplamı 18 olan üçlüler {2, 7, 9} ve {4, 6, 8}. {4, 6, 8} kutusunda hiç asal yok.",
+    "islem": "olmaz ✗"
+   },
+   {
+    "baslik": "{2, 6, 10}’u dene",
+    "aciklama": "Kalan 3, 4, 5, 7, 8, 9 ile üçlüler {3, 7, 8} ve {4, 5, 9}. Her kutuda asal var (2; 3 ve 7; 5).",
+    "islem": "olur ✓",
+    "gorsel": "<svg viewBox=\"0 0 330 92\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"10.5\" y=\"18\" width=\"96\" height=\"46\" rx=\"10\" stroke-width=\"2.5\" style=\"stroke:var(--acc,#16A34A)\"/><rect x=\"14.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"26.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><rect x=\"46.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"58.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">6</text><rect x=\"78.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><text x=\"90.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:#fff;stroke:none;font-weight:700\">10</text><text x=\"58.5\" y=\"82.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">toplam 18</text><rect x=\"117.0\" y=\"18\" width=\"96\" height=\"46\" rx=\"10\" stroke-width=\"1.5\" /><rect x=\"121.0\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"133.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><rect x=\"153.0\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"165.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">7</text><rect x=\"185.0\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"197.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">8</text><text x=\"165.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">toplam 18</text><rect x=\"223.5\" y=\"18\" width=\"96\" height=\"46\" rx=\"10\" stroke-width=\"1.5\" /><rect x=\"227.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"239.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text><rect x=\"259.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"271.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">5</text><rect x=\"291.5\" y=\"28\" width=\"24\" height=\"26\" rx=\"4\" stroke-width=\"1.2\" /><text x=\"303.5\" y=\"46.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">9</text><text x=\"271.5\" y=\"82.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">toplam 18</text></svg>"
+   },
+   {
+    "baslik": "Çarpımı bul",
+    "aciklama": "10’un kutusundaki kartlar 2, 6, 10.",
+    "islem": "2 × 6 × 10 = 120"
+   }
+  ],
+  "puf": "Önce toplamdan kutu toplamını bul; sonra en büyük kartı içeren kutudan başla, seçenek az olur.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-18 (kart-kutu eşit toplam) · kardeş (0014): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0015k",
+  "ana": "tytmat-sayilar-0015",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Örüntüler",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Katlanarak artan örüntülerde terimleri ve toplamları bulur.",
+  "tipId": "sk-oruntu",
+  "tip": "Örüntü ve döngü",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir binanın cephesinde süs lambaları vardır. 1. katta 2 lamba bulunur; sonraki her katta, bir önceki kattaki lamba sayısının iki katı kadar lamba vardır.\nTek numaralı katlardaki lambalar sarı, çift numaralı katlardaki lambalar beyazdır.\nBinadaki beyaz lamba sayısı sarı lamba sayısından 42 fazladır.\nBuna göre binada toplam kaç lamba vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "42",
+   "C": "84",
+   "D": "126",
+   "E": "254"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "126"
+  },
+  "celdiriciler": {
+   "A": "30, dört katın toplamı; dört katta fark yalnızca 10.",
+   "B": "42 iki renk arasındaki farktır; soru toplam lamba sayısını soruyor.",
+   "C": "84 yalnızca beyaz lambaların sayısı.",
+   "E": "254 yedi katın toplamı; 7. kat sarı olduğundan fark negatife döner."
+  },
+  "istenen": "Tüm katlardaki lambaların toplamı.",
+  "bilgi": [
+   {
+    "ad": "2 katına çıkma",
+    "ifade": "her kat öncekinin 2 katı: 2, 4, 8, 16, 32, 64, …"
+   }
+  ],
+  "ipuclari": [
+   "Katlardaki lamba sayılarını yaz: 2, 4, 8, …",
+   "Beyaz fazlası oluşması için son kat hangi renkte olmalı?",
+   "Farkı kat kat hesaplayıp 42’ye ulaştığın yerde dur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katları yaz",
+    "aciklama": "1. kattan başlayarak her katı 2 ile çarp.",
+    "islem": "2, 4, 8, 16, 32, 64, …"
+   },
+   {
+    "baslik": "Renkleri belirle",
+    "aciklama": "Tek numaralı katlar sarı, çift numaralı katlar beyaz.",
+    "islem": "sarı: 2, 8, 32 · beyaz: 4, 16, 64"
+   },
+   {
+    "baslik": "Farkı biriktir",
+    "aciklama": "Beyazları ekle, sarıları çıkar; her yeni katta farkı güncelle.",
+    "islem": "−2 → 2 → −6 → 10 → −22 → 42"
+   },
+   {
+    "baslik": "Kat sayısı",
+    "aciklama": "Fark 42 olduğunda **6** kat vardır.",
+    "islem": "6 kat"
+   },
+   {
+    "baslik": "Toplam lamba",
+    "aciklama": "Altı kattaki lambaları topla.",
+    "islem": "2 + 4 + 8 + 16 + 32 + 64 = 126"
+   }
+  ],
+  "puf": "Alternatif toplamlarda farkı adım adım biriktirmek, formül aramaktan hızlıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-13 (katlanan örüntü, iki renk farkı) · kardeş (0015): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0016k",
+  "ana": "tytmat-sayilar-0016",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Basamakları",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamların yer değiştirmesiyle oluşan farkı çözümleyerek sayma yapar.",
+  "tipId": "sk-basamak",
+  "tip": "Basamak çözümleme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Rakamları birbirinden ve sıfırdan farklı üç basamaklı ABC sayısının yüzler ve birler basamağındaki rakamların yerleri değiştirilerek CBA sayısı elde ediliyor.\nABC sayısı, CBA sayısından 396 büyüktür.\nBuna göre kaç farklı ABC sayısı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "35",
+   "C": "40",
+   "D": "42",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "35"
+  },
+  "celdiriciler": {
+   "A": "B için 6 seçenek saymışsın; 1–9 arasından yalnızca A ve C çıkar.",
+   "C": "B = 0’ı da saymışsın; rakamlar sıfırdan farklı olmalı.",
+   "D": "(A, C) ikililerinden birini fazla yazmış olabilirsin; C sıfır olamaz, 5 ikili var.",
+   "E": "B’nin A ve C’den farklı olması gerektiğini unutmuşsun."
+  },
+  "istenen": "Koşulu sağlayan üç basamaklı sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 352 = 300 + 50 + 2"
+   }
+  ],
+  "ipuclari": [
+   "ABC − CBA farkını çözümle; onlar basamağı ne oluyor?",
+   "Farktan A − C’yi bul ve uygun (A, C) ikililerini yaz.",
+   "B için kaç seçenek kaldığını say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları aç",
+    "aciklama": "İki sayıyı basamaklarına ayır.",
+    "islem": "ABC = 100A + 10B + C · CBA = 100C + 10B + A"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "ABC − CBA yapınca 10B’ler birbirini götürür.",
+    "islem": "99A − 99C = 99(A − C)"
+   },
+   {
+    "baslik": "A − C’yi bul",
+    "aciklama": "Fark 396 olduğuna göre 99’a böl.",
+    "islem": "396 ÷ 99 = 4 ⇒ A − C = 4"
+   },
+   {
+    "baslik": "A ve C ikilileri",
+    "aciklama": "C sıfırdan farklı; A, C’den 4 fazla.",
+    "islem": "(5, 1), (6, 2), (7, 3), (8, 4), (9, 5)"
+   },
+   {
+    "baslik": "B’yi say",
+    "aciklama": "B; 1–9 arasında, A’dan ve C’den farklı: **7** seçenek.",
+    "islem": "9 − 2 = 7"
+   },
+   {
+    "baslik": "Toplam sayı",
+    "aciklama": "Her ikili için 7 farklı B var.",
+    "islem": "5 × 7 = 35"
+   }
+  ],
+  "puf": "Yüzler ve birler yer değiştirince fark daima 99’un katıdır; ortadaki rakam serbest kalır ama koşullara dikkat.",
+  "kisaYol": "Fark ÷ 99 = rakam farkı (4). Bu farkı veren ikili sayısı 9 − 4 = 5; her biri için B’ye 7 seçenek: 5 × 7.",
+  "kaynakKart": "K-SK-20 (rakam yer değiştirme farkı) · kardeş (0016): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0017k",
+  "ana": "tytmat-sayilar-0017",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Ardışık Sayılar",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Ardışık tek ve çift sayılarla kurulan koşullarda en büyük değeri bulur.",
+  "tipId": "sk-ardisik",
+  "tip": "Ardışık sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Eda, Fatih, Gül ve Hakan tahtaya birer tane iki basamaklı doğal sayı yazmıştır.\n• Eda ile Fatih’in yazdığı sayılar ardışık tek sayılardır ve Fatih’inki daha büyüktür.\n• Gül ile Hakan’ın yazdığı sayılar ardışık çift sayılardır ve Hakan’ınki daha büyüktür.\n• Gül’ün yazdığı sayı, Eda’nın yazdığı sayının 3 katından 1 fazladır.\n• Dört sayının toplamı 150’den küçüktür.\nBuna göre Hakan’ın yazdığı sayı en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "50",
+   "B": "52",
+   "C": "54",
+   "D": "56",
+   "E": "58"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "54"
+  },
+  "celdiriciler": {
+   "A": "50 için e = 15 almışsın; 17 de koşulları sağlıyor.",
+   "B": "52, Gül’ün sayısı; soru Hakan’ınkini soruyor.",
+   "D": "56 için e tek sayı olmaz (3e + 3 = 56 ⇒ e kesirli).",
+   "E": "58 için e = 18,3 gerekir; e tek tam sayı olmalı ve toplam 150’yi geçer."
+  },
+  "istenen": "Koşullara göre Hakan’ın sayısının en büyük değeri.",
+  "bilgi": [
+   {
+    "ad": "Ardışık tek / çift sayılar",
+    "ifade": "2’şer artar: 15, 17 (tek) · 30, 32 (çift)"
+   }
+  ],
+  "ipuclari": [
+   "Eda’nın sayısına e de; diğer üç sayıyı e ile yaz.",
+   "Dört sayının toplamını e cinsinden bul ve 150’den küçük yap.",
+   "e’nin iki basamaklı tek sayı olduğunu unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eda’ya e de",
+    "aciklama": "Fatih’in sayısı Eda’nınkinden 2 fazla.",
+    "islem": "Eda = e · Fatih = e + 2"
+   },
+   {
+    "baslik": "Gül ve Hakan",
+    "aciklama": "Gül, Eda’nın 3 katından 1 fazla; Hakan, Gül’den 2 fazla.",
+    "islem": "Gül = 3e + 1 · Hakan = 3e + 3"
+   },
+   {
+    "baslik": "Toplamı yaz",
+    "aciklama": "Dört sayıyı topla; toplam 150’den küçük olmalı.",
+    "islem": "e + (e + 2) + (3e + 1) + (3e + 3) = 8e + 6 < 150"
+   },
+   {
+    "baslik": "e’nin sınırı",
+    "aciklama": "8e < 144, yani e < 18. e iki basamaklı **tek** sayı: en büyük **17**.",
+    "islem": "e = 17"
+   },
+   {
+    "baslik": "Hakan’ı bul",
+    "aciklama": "Hakan = 3e + 3. Kontrol: 17, 19, 52, 54 toplamı 142 < 150.",
+    "islem": "3 × 17 + 3 = 54"
+   }
+  ],
+  "puf": "“En çok” sorularında tüm sayıları tek harfe bağla; sınır eşitsizliği o harfin en büyük değerini verir.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-19 (ardışık çift/tek + kat ilişkisi + toplam sınırı) · kardeş (0017): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0018k",
+  "ana": "tytmat-sayilar-0018",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Tek ve Çift Sayılar",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Tek-çift özelliklerini kullanarak kesin doğru ifadeleri belirler.",
+  "tipId": "sk-tek-cift",
+  "tip": "Tek ve çift sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir binanın merdiven basamakları 1’den başlayarak numaralandırılmıştır.\nZeynep, 3 numaralı basamakta dururken yürümeye başlayıp 50 numaralı basamağa çıkarken her adımda ya iki ya da beş basamak çıkmış; hem ikişerli hem beşerli adım atmıştır.\nBuna göre\nI. Zeynep’in attığı beşerli adımların sayısı tektir.\nII. Zeynep’in attığı toplam adım sayısı tektir.\nIII. Zeynep en az 12 adım atmıştır.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "II kesin değil: x = 21, y = 1 için toplam 22 adım (çift). Ayrıca I her durumda doğru.",
+   "C": "II kesin değil: x = 21, y = 1 için toplam 22 adım (çift).",
+   "D": "III kesin değil: x = 1, y = 9 için Zeynep yalnızca 10 adım atar.",
+   "E": "II ve III kesin değil; ikisinin de karşı örneği var."
+  },
+  "istenen": "Tüm olası adım dağılımlarında doğru kalan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   },
+   {
+    "ad": "5 ile çarpım",
+    "ifade": "5 × tek = tek · 5 × çift = çift"
+   }
+  ],
+  "ipuclari": [
+   "Zeynep toplam kaç basamak çıktı?",
+   "İkişerli adım sayısına x, beşerli adım sayısına y de; 2x + 5y kaça eşit?",
+   "Olası (x, y) ikililerini yazıp her ifadeyi dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mesafe",
+    "aciklama": "3. basamaktan 50. basamağa çıkılıyor.",
+    "islem": "50 − 3 = 47 basamak"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "x ikişerli, y beşerli adım olsun.",
+    "islem": "2x + 5y = 47"
+   },
+   {
+    "baslik": "y tek mi?",
+    "aciklama": "2x her zaman çift. Çift + 5y = 47 (tek) olması için 5y tek olmalı; bu da **y tek** demek. I doğru.",
+    "islem": "çift + tek = tek"
+   },
+   {
+    "baslik": "Tüm olasılıklar",
+    "aciklama": "y = 1, 3, 5, 7, 9 için x = 21, 16, 11, 6, 1. Toplam adım x + y: 22, 19, 16, 13, 10.",
+    "islem": "x + y ∈ {10, 13, 16, 19, 22}"
+   },
+   {
+    "baslik": "II ve III’ü dene",
+    "aciklama": "Toplam 22 ya da 16 gibi çift de olabilir: II kesin değil. Toplam 10 da olabilir: III yanlış.",
+    "islem": "Doğru: yalnız I"
+   }
+  ],
+  "puf": "“Kesinlikle” sorularında tüm durumları listele; tek bir karşı örnek ifadeyi düşürür.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-14 (iki adım boyu, parite) · kardeş (0018): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0020k",
+  "ana": "tytmat-sayilar-0020",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Faktöriyel",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Faktöriyelli ifadeleri ortak çarpan parantezine alarak sadeleştirir.",
+  "tipId": "sk-faktoriyel",
+  "tip": "Faktöriyel",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "n bir pozitif tam sayı olmak üzere\n(n + 2)! − (n + 1)! = 36 · n!\nolduğuna göre n! kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "24",
+   "B": "60",
+   "C": "120",
+   "D": "240",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "A": "24 = 4!; n = 5 olduğundan n! = 5! = 120.",
+   "B": "60 = 5!/2; faktöriyeli eksik hesaplamışsın.",
+   "D": "240 = 2 × 5!; faktöriyeli yanlış açmışsın.",
+   "E": "720 = 6! = (n + 1)!; soru n!’i soruyor."
+  },
+  "istenen": "Denklemi sağlayan n için n! değeri.",
+  "bilgi": [
+   {
+    "ad": "Faktöriyel",
+    "ifade": "n! = 1 × 2 × … × n. Örnek: 4! = 24. Ayrıca 7! = 7 × 6 × 5! gibi yazılabilir"
+   }
+  ],
+  "ipuclari": [
+   "(n + 2)! ifadesini (n + 1)! cinsinden yaz.",
+   "Sol tarafı (n + 1)! parantezine al.",
+   "(n + 1)!’i de n! cinsinden yazıp sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "(n + 2)!’yi aç",
+    "aciklama": "(n + 2)!, (n + 1)!’in (n + 2) katıdır.",
+    "islem": "(n + 2)! = (n + 2) × (n + 1)!"
+   },
+   {
+    "baslik": "Ortak paranteze al",
+    "aciklama": "Sol tarafta iki terimde de (n + 1)! var; dışarı al.",
+    "islem": "(n + 1)! × (n + 2 − 1) = (n + 1) × (n + 1)!"
+   },
+   {
+    "baslik": "(n + 1)!’i aç",
+    "aciklama": "(n + 1)! = (n + 1) × n! yazınca iki tarafta n! sadeleşir.",
+    "islem": "(n + 1) × (n + 1) × n! = 36 × n! ⇒ (n + 1)² = 36"
+   },
+   {
+    "baslik": "n’yi bul",
+    "aciklama": "n + 1 pozitif olduğundan n + 1 = 6.",
+    "islem": "n = 5"
+   },
+   {
+    "baslik": "İstenen değer",
+    "aciklama": "Soru n!’i soruyor.",
+    "islem": "5! = 1 × 2 × 3 × 4 × 5 = 120"
+   }
+  ],
+  "puf": "Faktöriyel farklarında en küçük faktöriyeli parantez dışına al; sonra soruda hangi faktöriyelin istendiğine bak.",
+  "kisaYol": "Sol taraf (n + 1)² × n! olur; (n + 1)² = 36 ⇒ n + 1 = 6. Sonra sadece 5!’i hesapla.",
+  "kaynakKart": "K-SK-26 (faktöriyel sadeleştirme) · kardeş (0020): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0021k",
+  "ana": "tytmat-sayilar-0021",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · İşaret İnceleme",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Çarpım ve sıralama bilgisinden sayıların işaretlerini bulur.",
+  "tipId": "sk-isaret",
+  "tip": "İşaret inceleme ve sıralama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a, b ve c sıfırdan farklı gerçel sayılardır.\na · b > 0\nb · c < 0\na < c\nolduğuna göre aşağıdakilerden hangisi kesinlikle negatiftir?",
+  "sekil": null,
+  "siklar": {
+   "A": "a · b",
+   "B": "a + c",
+   "C": "a · b · c",
+   "D": "a · c",
+   "E": "c − a"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "a · c"
+  },
+  "celdiriciler": {
+   "A": "a ve b aynı işaretli: a · b pozitiftir.",
+   "B": "a negatif, c pozitif: a + c’nin işareti sayılara bağlıdır.",
+   "C": "a · b pozitif, c pozitif: a · b · c pozitiftir.",
+   "E": "c pozitif, a negatif: c − a pozitiftir."
+  },
+  "istenen": "İşaretleri belli olan a, b, c ile kesin negatif ifade.",
+  "bilgi": [
+   {
+    "ad": "Çarpımın işareti",
+    "ifade": "çarpım pozitifse iki sayı aynı işaretli, negatifse zıt işaretlidir"
+   }
+  ],
+  "ipuclari": [
+   "a · b > 0 ise a ile b’nin işaretleri hakkında ne söylenir?",
+   "b · c < 0 ise c, b’nin tersi işaretli.",
+   "a < c bilgisiyle hangi işaret durumunun mümkün olduğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "a ve b",
+    "aciklama": "a · b > 0 olduğundan **a ve b aynı işaretli**.",
+    "islem": "a, b aynı işaret"
+   },
+   {
+    "baslik": "c",
+    "aciklama": "b · c < 0 olduğundan c, b’nin (ve a’nın) **zıt işaretli**.",
+    "islem": "c zıt işaret"
+   },
+   {
+    "baslik": "Hangi durum?",
+    "aciklama": "İki ihtimal var: a ve b pozitif, c negatif; ya da a ve b negatif, c pozitif. İlkinde a < c olamaz (pozitif sayı negatiften küçük olamaz).",
+    "islem": "a < 0 · b < 0 · c > 0"
+   },
+   {
+    "baslik": "Şıkları dene",
+    "aciklama": "a · c = (−) × (+) = negatif. a · b ve a · b · c pozitif; c − a pozitif; a + c’nin işareti sayılara bağlı.",
+    "islem": "a · c < 0"
+   }
+  ],
+  "puf": "İki çarpım bilgisi işaret gruplarını verir; sıralama bilgisi hangi grubun negatif olduğunu seçer.",
+  "kisaYol": "Sayı ver: a = −1, b = −2, c = 3 koşulları sağlar. Şıkları hesapla; yalnızca a · c = −3 negatif.",
+  "kaynakKart": "K-SK-28 (işaret inceleme) · kardeş (0021): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0022k",
+  "ana": "tytmat-sayilar-0022",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Sayı Basamakları",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Verilen rakamlarla yazılan sayıların farkını en büyük yapar.",
+  "tipId": "sk-rakam-enaz",
+  "tip": "Rakamlarla en az – en çok",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "1, 3, 4, 6 ve 8 rakamlarının her biri yalnızca bir kez kullanılarak üç basamaklı bir A sayısı ile iki basamaklı bir B sayısı yazılıyor.\nBuna göre A + B toplamı en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "862",
+   "B": "874",
+   "C": "886",
+   "D": "894",
+   "E": "904"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "904"
+  },
+  "celdiriciler": {
+   "A": "862 için onlar basamaklarına büyük rakamları yerleştirmemişsin.",
+   "B": "874 için 6’yı birler basamağına koymuş olabilirsin.",
+   "C": "886 için onlar ve birler basamaklarındaki rakamları karıştırmışsın.",
+   "D": "894 için 4 ile 3’ün yerini karıştırmış olabilirsin; 4 onlar basamağına gitmeli."
+  },
+  "istenen": "A + B’nin alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "Basamak değeri",
+    "ifade": "yüzler basamağındaki rakam 100, onlar basamağındaki 10, birler basamağındaki 1 ile çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "Toplamda hangi basamaktaki rakam en çok değer katar?",
+   "En büyük rakamı A’nın yüzler basamağına koy.",
+   "Sonra kalan en büyük iki rakamı onlar basamaklarına, en küçükleri birler basamaklarına yerleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüzler basamağı",
+    "aciklama": "Toplama en çok katkıyı yüzler basamağı yapar: oraya en büyük rakam 8.",
+    "islem": "A = 8__"
+   },
+   {
+    "baslik": "Onlar basamakları",
+    "aciklama": "A’nın da B’nin de onlar basamağı 10 ile çarpılır; kalan en büyük iki rakam 6 ve 4 bu iki yere gider.",
+    "islem": "onlar: 6 ve 4"
+   },
+   {
+    "baslik": "Birler basamakları",
+    "aciklama": "Kalan 3 ve 1 birler basamaklarına gider.",
+    "islem": "birler: 3 ve 1"
+   },
+   {
+    "baslik": "Toplamı hesapla",
+    "aciklama": "Örneğin A = 863, B = 41 (ya da A = 843, B = 61) aynı toplamı verir.",
+    "islem": "863 + 41 = 904"
+   }
+  ],
+  "puf": "Toplamı büyütmek için büyük rakamları değeri büyük basamaklara koy; aynı değerli basamaklarda yer değiştirmek toplamı değiştirmez.",
+  "kisaYol": "Toplam = 100 × (yüzler) + 10 × (iki onlar) + (iki birler) = 100 × 8 + 10 × (6 + 4) + (3 + 1) = 904.",
+  "kaynakKart": "K-SK-22 (rakam kümesiyle sayı yazma, fark en büyük) · kardeş (0022): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0023k",
+  "ana": "tytmat-sayilar-0023",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Rasyonel Sayılar",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Kesirle verilen bütün bilgisinden görünmeyen kısım hakkında sonuç çıkarır.",
+  "tipId": "sk-kesir",
+  "tip": "Kesirler ve rasyonel sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "48 koltuklu bir sinema salonunda koltukların 5/8’i doludur.\nSalona bakan bir güvenlik kamerasının görüntüsünde, bir direk yüzünden 8 koltuk görünmemektedir. Görünen koltuklardan 26’sı doludur.\nBuna göre direğin arkasında kalan koltuklardan kaç tanesi boştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Dolu koltuk sayısını yanlış hesaplamışsın: 48 × 5/8 = 30.",
+   "C": "Görünen boş koltukları karıştırmış olabilirsin; arkadaki dolu 30 − 26 = 4.",
+   "D": "Görünen koltuk sayısını yanlış bulmuşsun: 48 − 8 = 40.",
+   "E": "8 koltuğun hepsini boş saymışsın; 4’ü dolu."
+  },
+  "istenen": "Görünmeyen 8 koltuktan boş olanların sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bir sayının 5/8’i",
+    "ifade": "önce 8’e böl, sonra 5 ile çarp"
+   }
+  ],
+  "ipuclari": [
+   "Salonda toplam kaç dolu koltuk var?",
+   "Görünmeyen koltuklarda kaç dolu koltuk kalıyor?",
+   "Görünmeyen koltuk sayısından dolu olanları çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dolu koltuklar",
+    "aciklama": "48’in 5/8’i.",
+    "islem": "48 ÷ 8 × 5 = 30"
+   },
+   {
+    "baslik": "Görünen koltuklar",
+    "aciklama": "Kamera salonun tamamını görüyor; 8 koltuk kapalı.",
+    "islem": "48 − 8 = 40 görünen koltuk, 26’sı dolu"
+   },
+   {
+    "baslik": "Arkadaki dolular",
+    "aciklama": "Görünmeyen dolu koltuklar direğin arkasında.",
+    "islem": "30 − 26 = 4"
+   },
+   {
+    "baslik": "Arkadaki boşlar",
+    "aciklama": "Kapalı 8 koltuğun 4’ü dolu.",
+    "islem": "8 − 4 = 4"
+   }
+  ],
+  "puf": "Görünmeyen kısım sorularında önce bütündeki toplamı bul, sonra görüneni çıkar.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-31 (görünmeyen kısım + oran) · kardeş (0023): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0025k",
+  "ana": "tytmat-sayilar-0025",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Asal Sayılar",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Asal sayıların tek-çift özelliğini kullanır.",
+  "tipId": "sk-asal",
+  "tip": "Asal sayılar",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a ve b asal sayılar olmak üzere\na + b = 21\nolduğuna göre a · b çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "38",
+   "B": "42",
+   "C": "54",
+   "D": "80",
+   "E": "98"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "38"
+  },
+  "celdiriciler": {
+   "B": "42 = 2 × 21; 21 asal değil.",
+   "C": "54 = 3 × 18 ya da 6 × 9; bunlar asal değil.",
+   "D": "80 = 5 × 16 ya da 4 × 20; bunlar asal değil.",
+   "E": "98 = 2 × 49 ya da 7 × 14; 49 ve 14 asal değil."
+  },
+  "istenen": "a ile b’nin çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2, çift olan tek asal sayıdır"
+   },
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   }
+  ],
+  "ipuclari": [
+   "21 tek; iki sayının toplamı tekse biri çift olmalı.",
+   "Çift olan asal sayı hangisi?",
+   "Diğer sayıyı bul ve asal olduğunu kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tek-çift dengesi",
+    "aciklama": "21 tek; iki sayının toplamı tekse biri tek, biri çifttir.",
+    "islem": "tek + çift = tek"
+   },
+   {
+    "baslik": "Çift asal",
+    "aciklama": "Çift olan tek asal sayı 2; diğer sayı 21 − 2 = 19 ve 19 asaldır.",
+    "islem": "a = 2 · b = 19"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İki sayıyı çarp.",
+    "islem": "2 × 19 = 38"
+   }
+  ],
+  "puf": "İki asalın toplamı tekse biri mutlaka 2’dir.",
+  "kisaYol": null,
+  "kaynakKart": "K-SK-27 (asal + parite) · kardeş (0025): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ },
+ {
+  "id": "tytmat-sayilar-0026k",
+  "ana": "tytmat-sayilar-0026",
+  "ders": "TYT Matematik",
+  "konu": "Temel Kavramlar · Tek ve Çift Sayılar",
+  "k": "mat|Temel Kavramlar",
+  "kazanim": "Tek ve çift sayıların işlem özelliklerini kullanır.",
+  "tipId": "sk-tek-cift",
+  "tip": "Tek ve çift sayılar",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir otobüsteki ayakta duran yolcuların sayısı a, oturan yolcuların sayısı b’dir.\na ve b birer tek sayı olduğuna göre aşağıdakilerden hangisi kesinlikle çift sayıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "a · b",
+   "B": "a + b",
+   "C": "a + 2b",
+   "D": "3a",
+   "E": "b²"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "a + b"
+  },
+  "celdiriciler": {
+   "A": "İki tek sayının çarpımı tektir.",
+   "C": "2b çift, a tek: toplamları tektir.",
+   "D": "3 ve a tek: çarpımları tektir.",
+   "E": "Tek bir sayının karesi tektir."
+  },
+  "istenen": "Her zaman çift olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   },
+   {
+    "ad": "Çarpımda tek-çift",
+    "ifade": "çarpanlardan biri çiftse çarpım çifttir; hepsi tekse çarpım tektir"
+   }
+  ],
+  "ipuclari": [
+   "İki tek sayının çarpımı tek midir, çift mi?",
+   "İki tek sayının toplamı tek midir, çift mi?",
+   "Her şıkkı a = 3, b = 5 gibi bir örnekle de dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpımlar",
+    "aciklama": "Tek × tek = tek; bu yüzden a · b, 3a ve b² tektir.",
+    "islem": "tek × tek = tek"
+   },
+   {
+    "baslik": "a + 2b",
+    "aciklama": "2b her zaman çift; tek + çift = tek.",
+    "islem": "a + 2b tek"
+   },
+   {
+    "baslik": "a + b",
+    "aciklama": "Tek + tek her zaman çifttir.",
+    "islem": "a + b çift ✓"
+   }
+  ],
+  "puf": "Tek sayıların çarpımı hep tektir; toplamda kaç tane tek terim olduğuna bak.",
+  "kisaYol": "a = 1, b = 1 koy: a · b = 1, a + b = 2, a + 2b = 3, 3a = 3, b² = 1. Çift olan yalnızca a + b.",
+  "kaynakKart": "K-SK-02 (tek-çift) · kardeş (0026): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true
+  }
+ }
+]
