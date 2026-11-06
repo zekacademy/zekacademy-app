@@ -2449,11 +2449,15 @@ function ogHero(s){ const L = dayTasks(s, today()).filter(g=>gorevDers(g.t)), bi
   return `<div class="oghero"><div class="ohm"><small>${["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"][new Date().getDay()]} · bugün</small><b>${L.length ? (bitti===L.length ? "Bugünkü dersler tamam 🎉" : `${L.length - bitti} ders görevin var`) : "Bugün serbest çalışma"}</b>
       <span class="ohc"><span>${icon("play","xs")}${dk} dk izledin</span>${yan?`<span>${icon("alert","xs")}${yan} yanlış bekliyor</span>`:""}</span></div>
     <svg class="ohr" viewBox="0 0 64 64" aria-label="Bugünkü ders görevleri ${bitti}/${L.length}"><circle cx="32" cy="32" r="${R}" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="7"/><circle cx="32" cy="32" r="${R}" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="#fff" font-size="15" font-weight="800">${bitti}/${L.length}</text></svg></div>`; }
+function ogDortKutu(s){ const o = og(), hataSay = (o.hata||[]).filter(h=>!h.tamam).length + soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length;
+  const vSay = Object.keys(VIDEO).length, bkKonu = new Set(BANKA.map(x=>x.k)).size, hak = SZ.kalan!=null ? `${SZ.kalan} soru hakkın var` : "Fotoğrafını çek, adım adım öğren";
+  const k = (cls, v, ic, ad, alt) => `<button data-act="go" data-v="${v}" class="${cls}"><span>${icon(ic)}</span><div><b>${ad}</b><small>${alt}</small></div>${icon("chev","sm")}</button>`;
+  return `<div class="og4">${k("og4a","socoz","kamera","Soru Çöz",hak)}${k("og4b","videolar","video","Ders Videoları",`${vSay} konu · 9 ders`)}${k("og4c","banka","kitapcik","Soru Bankası",`${BANKA.length} soru · ${bkKonu} konu`)}${k("og4d","sorular","defter","Hata Defteri",hataSay?`${hataSay} soru bekliyor`:"Çözemediğin sorular")}</div>`; }
 function pOgren(s){ demoOgrenTohum(); const hk = haftaKonulari(s).map(x=>x.k);
   return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
   <div class="page ogpage ogv3">
     ${ogHero(s)}
-    <div class="og4"><button data-act="go" data-v="socoz" class="og4a"><span>${icon("kamera")}</span><b>Soru Çöz</b></button><button data-act="go" data-v="videolar" class="og4b"><span>${icon("video")}</span><b>Ders Videoları</b></button><button data-act="go" data-v="banka" class="og4c"><span>${icon("kitapcik")}</span><b>Soru Bankası</b></button><button data-act="go" data-v="sorular" class="og4d"><span>${icon("defter")}</span><b>Hata Defteri</b></button></div>
+    ${ogDortKutu(s)}
     ${bugunGorevler(s)}
     ${devamSatiri(s)}
     ${yanlislarKarti(s)}
