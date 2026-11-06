@@ -42,7 +42,7 @@ for i,q in enumerate(Q,1):
 from collections import Counter
 tc=Counter((q.get('tipId'),q.get('tip')) for q in Q); zc=Counter(q['zorluk'] for q in Q)
 filtre='<section class="filtre" aria-label="Soru seç"><div class="fs"><span class="fl">Zorluk</span><div class="seg" id="fz">'+''.join(f'<button data-v="{v}" aria-pressed="{str(v=="").lower()}">{ad}{f" <small>{zc[v]}</small>" if v else ""}</button>' for v,ad in [("","Tümü"),("kolay","Kolay"),("orta","Orta"),("zor","Zor")])+'</div></div>'
-filtre+='<div class="fs"><span class="fl">Soru tipi</span><div class="cips" id="ft"><button data-v="" aria-pressed="true">Tümü</button>'+''.join(f'<button data-v="{i}" aria-pressed="false">{html.escape(a)} <small>{n}</small></button>' for (i,a),n in sorted(tc.items(),key=lambda x:-x[1]))+'</div></div><p class="bos" id="bos" hidden>Bu seçimde henüz soru yok. Zorluğu ya da soru tipini değiştir.</p></section>'
+filtre+='<div class="fs"><span class="fl">Soru tipi</span><button class="acilir" id="ftBtn" aria-expanded="false" aria-controls="ft"><span id="ftAd">Tümü</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="cips" id="ft" hidden><button data-v="" aria-pressed="true">Tümü</button>'+''.join(f'<button data-v="{i}" aria-pressed="false">{html.escape(a)} <small>{n}</small></button>' for (i,a),n in sorted(tc.items(),key=lambda x:-x[1]))+'</div></div><p class="bos" id="bos" hidden>Bu seçimde henüz soru yok. Zorluğu ya da soru tipini değiştir.</p></section>'
 page=f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Soru Havuzu · Pilot Parti 1 · Sayı Kümeleri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -111,6 +111,11 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .cips button[aria-pressed=true]{{background:var(--accbg);border-color:var(--acc);color:var(--acc)}}
 .filtre small{{font-weight:500;opacity:.7;margin-left:2px}}
 .seg button:focus-visible,.cips button:focus-visible{{outline:2px solid var(--acc);outline-offset:2px}}
+
+.acilir{{display:flex;align-items:center;justify-content:space-between;width:100%;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px 12px;font:600 15px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--fg);cursor:pointer;text-align:left}}
+.acilir svg{{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}}
+.acilir[aria-expanded=true] svg{{transform:rotate(180deg)}}.acilir:focus-visible{{outline:2px solid var(--acc);outline-offset:2px}}
+.cips[hidden]{{display:none}}
 .bos{{margin:0;font-size:14px;color:var(--mut)}}.card[hidden]{{display:none}}
 .tag.tip{{color:var(--acc);border-color:var(--acc)}}
 </style></head><body><main>
@@ -136,5 +141,8 @@ document.getElementById('kop').onclick=async()=>{{const ad={{onay:'ONAY',duzelt:
 
 (function(){{let z='',t='';const sec=(id,f)=>document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('#'+id+' button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));f(b.dataset.v);uyg()}});
 function uyg(){{let n=0;document.querySelectorAll('.card').forEach(c=>{{const ok=(!z||c.dataset.z===z)&&(!t||c.dataset.t===t);c.hidden=!ok;if(ok)n++}});document.getElementById('bos').hidden=n>0}}
-sec('fz',v=>z=v);sec('ft',v=>t=v);}})();</script></body></html>'''
+sec('fz',v=>z=v);
+const fb=document.getElementById('ftBtn'),fl=document.getElementById('ft');
+fb.onclick=()=>{{const a=fb.getAttribute('aria-expanded')!=='true';fb.setAttribute('aria-expanded',String(a));fl.hidden=!a}};
+sec('ft',v=>{{t=v;const b=[...fl.querySelectorAll('button')].find(x=>x.dataset.v===v);document.getElementById('ftAd').textContent=b.firstChild.textContent.trim();fb.setAttribute('aria-expanded','false');fl.hidden=true}});}})();</script></body></html>'''
 open(__import__('sys').argv[2],'w').write(page.replace('__FILTRE__',filtre)); print(len(page))
