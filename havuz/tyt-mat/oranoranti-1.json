@@ -1,0 +1,633 @@
+[
+ {
+  "id": "tytmat-oranoranti-0001",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Tarif ölçekleme",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Kişi sayısıyla doğru orantılı malzeme miktarını birim değer üzerinden bulur.",
+  "tipId": "oo-dogru",
+  "tip": "Doğru orantı ve birim değer",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir mantı tarifinde 6 kişilik hamur için 450 gram un kullanılmaktadır.\nAynı tarifle, kişi başına aynı miktarda un kullanılarak 10 kişilik mantı hamuru hazırlanacaktır.\nBuna göre bu hamur için kaç gram un gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "75",
+   "B": "270",
+   "C": "750",
+   "D": "1200",
+   "E": "4500"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "750"
+  },
+  "celdiriciler": {
+   "A": "75 gram, yalnızca bir kişilik un.",
+   "B": "270 gram, ters orantı kurmak (450 × 6 ÷ 10); kişi artınca un artmalı.",
+   "D": "1200 gram, 10 kişilik unu ilk 450 grama eklemek.",
+   "E": "4500 gram, 450’yi 10 ile çarpıp 6’ya bölmeyi unutmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "10 kişilik hamur için gereken un.",
+  "bilgi": [
+   {
+    "ad": "Doğru orantı",
+    "ifade": "biri kaç katına çıkarsa diğeri de o kadar katına çıkar; bölümleri sabittir. Örnek: 2 kg 60 TL ise 6 kg 180 TL"
+   }
+  ],
+  "ipuclari": [
+   "Kişi sayısı artınca un artar mı, azalır mı?",
+   "Bir kişilik hamura kaç gram un düşer?",
+   "Bir kişilik miktarı 10 ile çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Orantı türü",
+    "aciklama": "Kişi sayısı artınca un da aynı oranda artar.",
+    "islem": "doğru orantı"
+   },
+   {
+    "baslik": "Bir kişilik",
+    "aciklama": "6 kişiye 450 gram.",
+    "islem": "450 ÷ 6 = 75 gram"
+   },
+   {
+    "baslik": "10 kişilik",
+    "aciklama": "Birim miktar × kişi sayısı.",
+    "islem": "10 × 75 = 750 gram"
+   }
+  ],
+  "puf": "Doğru orantıda önce birim değeri (1 kişi, 1 kg) bul; sonra istenen miktarla çarp.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0001k",
+  "kaynakKart": "K-ORN-01 (doğru orantı) · yeni kurgu (mantı tarifi), kişi sayısı artıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0002",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Tüketici sayısı ve gün",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Tüketici sayısı ile yetme süresi arasındaki ters orantıdan yeni süreyi bulur.",
+  "tipId": "oo-ters",
+  "tip": "Ters orantı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir barınaktaki mama stoğu, barınaktaki 30 köpeğe 24 gün yetmektedir.\nBarınağa 10 köpek daha getirilmiştir.\nHer köpek her gün eşit miktarda mama yediğine göre aynı stok bu köpeklerin tamamına kaç gün yeter?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "14",
+   "C": "16",
+   "D": "18",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "6, günlerdeki azalma (24 − 18); soru stoğun kaç gün yettiğini soruyor.",
+   "B": "14, eklenen köpek sayısı kadar günü azaltmak.",
+   "C": "16, köpek sayısı 1/3 arttı diye günü 1/3 azaltmak; ters orantıda bölme yapılır (24 × 30/40).",
+   "E": "32, doğru orantı kurmak (24 × 40 ÷ 30)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "40 köpeğe stoğun yettiği gün sayısı.",
+  "bilgi": [
+   {
+    "ad": "Ters orantı",
+    "ifade": "biri kaç katına çıkarsa diğeri o kadar kata bölünür; çarpımları sabittir. Örnek: 4 kişiye 6 gün yeten yemek 8 kişiye 3 gün yeter"
+   }
+  ],
+  "ipuclari": [
+   "Köpek sayısı artınca stok daha az mı, daha çok mu gün yeter?",
+   "Stok kaç “köpek-gün” mamadır?",
+   "Bu toplamı yeni köpek sayısına böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Orantı türü",
+    "aciklama": "Köpek arttıkça gün azalır; köpek × gün sabittir.",
+    "islem": "ters orantı"
+   },
+   {
+    "baslik": "Toplam stok",
+    "aciklama": "30 köpek 24 gün yer.",
+    "islem": "30 × 24 = 720 köpek-gün"
+   },
+   {
+    "baslik": "Yeni süre",
+    "aciklama": "Artık 40 köpek var.",
+    "islem": "720 ÷ 40 = 18 gün"
+   }
+  ],
+  "puf": "Ters orantıda iki çokluğun çarpımı sabittir; önce bu çarpımı bul.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0002k",
+  "kaynakKart": "K-ORN-02 (ters orantı) · yeni kurgu (barınak maması), tüketici artıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0003",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Üçlü oran",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Ortak terimi eşitleyerek iki orandan üçlü oran kurar ve toplamdan istenen parçayı bulur.",
+  "tipId": "oo-bilesik",
+  "tip": "Ortak terimle oranları birleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir okul olimpiyatında dağıtılan altın madalyaların sayısının gümüş madalyaların sayısına oranı 2/3, gümüş madalyaların sayısının bronz madalyaların sayısına oranı ise 4/5’tir.\nOlimpiyatta toplam 140 madalya dağıtıldığına göre kaç bronz madalya dağıtılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "32",
+   "B": "48",
+   "C": "60",
+   "D": "70",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "32, altın madalya sayısı.",
+   "B": "48, gümüş madalya sayısı.",
+   "D": "70, gümüşü eşitlemeden 2 : 3 : 5 yazmak (10 parça, bir parça 14).",
+   "E": "80, bronz olmayan madalyaların sayısı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Bronz madalya sayısı.",
+  "bilgi": [
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "a/b = 2/3 ise a = 2k ve b = 3k yazılır. Örnek: oranı 2/3 olan iki grup toplam 30 kişi ise 5k = 30, k = 6 ⇒ 12 ve 18"
+   },
+   {
+    "ad": "Ortak terimi eşitleme",
+    "ifade": "a/b = 2/3 ve b/c = 4/5 ise b iki oranda eşitlenir: 2/3 = 8/12, 4/5 = 12/15 ⇒ a : b : c = 8 : 12 : 15"
+   }
+  ],
+  "ipuclari": [
+   "İki oranda ortak olan madalya türü hangisi?",
+   "Gümüşü iki oranda da aynı sayıyla göster.",
+   "Üçlü oranın parçalarını topla; bir parça kaç madalya?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak terim",
+    "aciklama": "Gümüş iki oranda da var: 3 ve 4’ün ortak katı 12.",
+    "islem": "2/3 = 8/12 · 4/5 = 12/15"
+   },
+   {
+    "baslik": "Üçlü oran",
+    "aciklama": "Altın : gümüş : bronz.",
+    "islem": "8 : 12 : 15 ⇒ 35 parça"
+   },
+   {
+    "baslik": "Bir parça",
+    "aciklama": "Toplam 140 madalya.",
+    "islem": "140 ÷ 35 = 4"
+   },
+   {
+    "baslik": "Bronz",
+    "aciklama": "15 parça.",
+    "islem": "15 × 4 = 60 · kontrol: 32 + 48 + 60 = 140 ✓"
+   }
+  ],
+  "puf": "İki oranı birleştirirken önce ortak terimi aynı sayıya getir; sonra parçaları topla.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0003k",
+  "kaynakKart": "K-ORN-03 (ortak terimle birleştirme) · yeni kurgu (okul olimpiyatı madalyaları), toplam verildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0004",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Ters orantılı ödül",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Sürelerle ters orantılı paylaştırmada iki payın farkından bir parçanın değerini ve istenen payı bulur.",
+  "tipId": "oo-paylastirma",
+  "tip": "Doğru ve ters orantılı paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir dağ maratonunda parkuru 2 saatte, 3 saatte ve 4 saatte tamamlayan üç koşucuya verilen para ödülü, koşucuların bitirme süreleriyle ters orantılı olarak paylaştırılmıştır.\nParkuru 2 saatte bitiren koşucu, 3 saatte bitiren koşucudan 2400 TL fazla almıştır.\nBuna göre parkuru 4 saatte bitiren koşucu kaç TL almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3600",
+   "B": "4800",
+   "C": "7200",
+   "D": "9600",
+   "E": "15 600"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3600"
+  },
+  "celdiriciler": {
+   "B": "4800 TL, 3 saatte bitiren koşucunun payı.",
+   "C": "7200 TL, 2 saatte bitiren koşucunun payı.",
+   "D": "9600 TL, doğru orantılı paylaştırmak (2 : 3 : 4) ve farkı 1 parça almak.",
+   "E": "15 600 TL, ödülün tamamı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "4 saatte bitiren koşucunun aldığı ödül.",
+  "bilgi": [
+   {
+    "ad": "Ters orantı",
+    "ifade": "biri kaç katına çıkarsa diğeri o kadar kata bölünür; çarpımları sabittir. Örnek: 4 kişiye 6 gün yeten yemek 8 kişiye 3 gün yeter"
+   },
+   {
+    "ad": "Orantılı paylaştırma",
+    "ifade": "2, 3 ve 5 ile doğru orantılı paylar 2k, 3k, 5k’dir. 2, 3 ve 6 ile ters orantılı paylar k/2, k/3, k/6’dır; paydalar eşitlenince 3 : 2 : 1 olur"
+   }
+  ],
+  "ipuclari": [
+   "Ters orantıda paylar 1/2, 1/3 ve 1/4 ile orantılıdır.",
+   "Paydaları eşitle: 12 ile genişlet.",
+   "İlk iki payın farkı kaç parça?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "Süreyle ters orantılı: 1/2, 1/3, 1/4.",
+    "islem": "12 ile genişlet: 6 : 4 : 3"
+   },
+   {
+    "baslik": "Bir parça",
+    "aciklama": "İlk iki pay arasında 6 − 4 = 2 parça fark var.",
+    "islem": "2 parça = 2400 ⇒ 1 parça = 1200 TL"
+   },
+   {
+    "baslik": "4 saatte bitiren",
+    "aciklama": "3 parça.",
+    "islem": "3 × 1200 = 3600 TL · paylar 7200, 4800, 3600"
+   }
+  ],
+  "puf": "Ters orantılı paylaştırmada sayıların çarpmaya göre terslerini al, paydaları eşitleyip tam sayılı orana çevir.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0004k",
+  "kaynakKart": "K-ORN-04 (orantılı paylaştırma) · ters orantı, iki payın farkı verildi, yeni kurgu (dağ maratonu)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0005",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Okunan ve okunmayan",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Toplamı bilinen iki grubun ilk oranından grupları bulup, aradaki geçişle oluşan yeni orandan geçen miktarı hesaplar.",
+  "tipId": "oo-oran-degisim",
+  "tip": "Ekleme ve çıkarmayla oran değişimi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Defne’nin yaz okuma listesinde 42 kitap vardır. Tatil başlamadan önce Defne’nin bu listeden okuduğu kitapların sayısının okumadığı kitapların sayısına oranı 2/5’tir.\nDefne tatilde listedeki kitaplardan bir kısmını daha okumuş ve bu oran 2 olmuştur.\nBuna göre Defne tatilde listeden kaç kitap okumuştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "14",
+   "C": "16",
+   "D": "28",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "12, tatilden önce okunan kitap sayısı.",
+   "B": "14, tatilden sonra okunmayan kitap sayısı.",
+   "D": "28, tatilden sonra okunan kitapların toplamı; tatilden öncekiler de içinde.",
+   "E": "30, tatilden önce okunmayan kitap sayısı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Tatilde okunan kitap sayısı.",
+  "bilgi": [
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "a/b = 2/3 ise a = 2k ve b = 3k yazılır. Örnek: oranı 2/3 olan iki grup toplam 30 kişi ise 5k = 30, k = 6 ⇒ 12 ve 18"
+   }
+  ],
+  "ipuclari": [
+   "Tatilden önce okunan ve okunmayan kitaplar kaçar tane?",
+   "Tatilden sonra oran 2 ise okunan kitaplar okunmayanların kaç katı?",
+   "Okunan kitapların artışı tatilde okunanlardır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk durum",
+    "aciklama": "2k + 5k = 42 ⇒ k = 6.",
+    "islem": "okunan 12 · okunmayan 30"
+   },
+   {
+    "baslik": "Son durum",
+    "aciklama": "Oran 2: okunan = 2 × okunmayan; toplam yine 42.",
+    "islem": "3 parça = 42 ⇒ okunmayan 14 · okunan 28"
+   },
+   {
+    "baslik": "Tatilde okunan",
+    "aciklama": "Okunan kitaplardaki artış.",
+    "islem": "28 − 12 = 16 · kontrol: 30 − 16 = 14 ✓"
+   }
+  ],
+  "puf": "Toplam sabitken oran değişiyorsa iki durumu da toplamdan çöz; fark aktarılan miktardır.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0005k",
+  "kaynakKart": "K-ORN-05 (oran değişimi) · yeni kurgu (okuma listesi), toplam sabit, istenen aktarılan miktar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0006",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Yakıt ve tutar",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İki doğru orantıyı (yol–yakıt, yakıt–tutar) art arda uygular.",
+  "tipId": "oo-dogru",
+  "tip": "Doğru orantı ve birim değer",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir otomobil her 100 kilometrede 6 litre benzin harcamaktadır. Benzinin litresi 55 TL’dir.\nBu otomobil, yakıt tüketimi değişmeden 450 kilometrelik bir yol gidecektir.\nBuna göre bu yolculuk için harcanacak benzinin tutarı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "330",
+   "B": "1485",
+   "C": "1650",
+   "D": "4125",
+   "E": "14 850"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1485"
+  },
+  "celdiriciler": {
+   "A": "330 TL, yalnızca 100 km’nin yakıt tutarı.",
+   "C": "1650 TL, 450 km’yi 5 tane 100 km saymak.",
+   "D": "4125 TL, 450’yi 6’ya bölüp 75 litre bulmak; 6 litre 100 km içindir.",
+   "E": "14 850 TL, litre hesabında virgülü kaydırmak (450 × 0,6)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "450 km için benzin tutarı.",
+  "bilgi": [
+   {
+    "ad": "Doğru orantı",
+    "ifade": "biri kaç katına çıkarsa diğeri de o kadar katına çıkar; bölümleri sabittir. Örnek: 2 kg 60 TL ise 6 kg 180 TL"
+   }
+  ],
+  "ipuclari": [
+   "450 km, 100 km’nin kaç katı?",
+   "Harcanacak benzin kaç litre?",
+   "Litreyi birim fiyatla çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yakıt miktarı",
+    "aciklama": "Yol 4,5 katına çıkınca yakıt da 4,5 katına çıkar.",
+    "islem": "6 × 4,5 = 27 litre"
+   },
+   {
+    "baslik": "Tutar",
+    "aciklama": "Litresi 55 TL.",
+    "islem": "27 × 55 = 1485 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "100 km 6 × 55 = 330 TL tutar.",
+    "islem": "4,5 × 330 = 1485 ✓"
+   }
+  ],
+  "puf": "Art arda doğru orantılarda her adımda birim değeri bul ya da katsayıyı taşı.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0006k",
+  "kaynakKart": "K-ORN-01 (doğru orantı) · iki orantı art arda, yeni kurgu (yakıt tüketimi)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0007",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Değişen paylaştırma",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Orantılı paylaştırmada bir terim değişince yeni payları hesaplayıp planlananla karşılaştırır.",
+  "tipId": "oo-paylastirma",
+  "tip": "Doğru ve ters orantılı paylaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir firma, 112 bilgisayarı üç şubesine, şubelerdeki çalışan sayılarıyla doğru orantılı olacak biçimde dağıtmayı planlamıştır. Bu şubelerdeki çalışan sayıları sırasıyla 12, 16 ve 28’dir.\nDağıtımdan önce 2. şubeye 8 yeni çalışan katılmış ve bilgisayarlar yeni çalışan sayılarıyla doğru orantılı olarak dağıtılmıştır.\nBuna göre 3. şube planlanandan kaç bilgisayar eksik almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "7",
+   "C": "8",
+   "D": "10",
+   "E": "49"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "3, 1. şubedeki azalma (24 − 21).",
+   "C": "8, plandaki bir parçanın değeri (112 ÷ 14); soru 3. şubenin eksiğini soruyor.",
+   "D": "10, 2. şubedeki artış (42 − 32).",
+   "E": "49, 3. şubenin yeni dağıtımdaki payı; soru eksik kalan miktarı soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "3. şubenin planlanana göre eksik aldığı bilgisayar sayısı.",
+  "bilgi": [
+   {
+    "ad": "Orantılı paylaştırma",
+    "ifade": "2, 3 ve 5 ile doğru orantılı paylar 2k, 3k, 5k’dir. 2, 3 ve 6 ile ters orantılı paylar k/2, k/3, k/6’dır; paydalar eşitlenince 3 : 2 : 1 olur"
+   }
+  ],
+  "ipuclari": [
+   "Planlanan oranı sadeleştir; bir parça kaç bilgisayar?",
+   "8 çalışan katılınca yeni oran ve parça sayısı ne olur?",
+   "3. şubenin iki dağıtımdaki payını karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Plan",
+    "aciklama": "12 : 16 : 28 = 3 : 4 : 7 ⇒ 14 parça.",
+    "islem": "112 ÷ 14 = 8 ⇒ 24, 32, 56"
+   },
+   {
+    "baslik": "Yeni oran",
+    "aciklama": "2. şube 24 çalışan oldu.",
+    "islem": "12 : 24 : 28 = 3 : 6 : 7 ⇒ 16 parça"
+   },
+   {
+    "baslik": "Yeni paylar",
+    "aciklama": "Bir parça 112 ÷ 16 = 7.",
+    "islem": "21, 42, 49"
+   },
+   {
+    "baslik": "3. şube",
+    "aciklama": "Planlanan 56, alınan 49.",
+    "islem": "56 − 49 = 7"
+   }
+  ],
+  "puf": "Paylaştırmada bir terim değişirse toplam parça sayısı da değişir; bütün payları yeniden hesapla.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0007k",
+  "kaynakKart": "K-ORN-04 (orantılı paylaştırma) · paylaştırma ölçütü değişiyor, istenen bir paydaki azalma; yeni kurgu (şubelere bilgisayar)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oranoranti-0008",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · İki grupta değişim",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İki gruptan birinden çıkış, diğerine giriş olduktan sonraki orandan grupları bulup son durumu hesaplar.",
+  "tipId": "oo-oran-degisim",
+  "tip": "Ekleme ve çıkarmayla oran değişimi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir yüzme kursundaki kız öğrencilerin sayısının erkek öğrencilerin sayısına oranı 4/5’tir.\nKurstan 6 kız öğrenci ayrılmış, kursa 3 erkek öğrenci katılmıştır. Bu değişikliklerden sonra kız öğrencilerin sayısının erkek öğrencilerin sayısına oranı 1/2 olmuştur.\nBuna göre son durumda kursta kaç öğrenci vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "14",
+   "B": "28",
+   "C": "39",
+   "D": "42",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "42"
+  },
+  "celdiriciler": {
+   "A": "14, son durumdaki kız öğrenci sayısı.",
+   "B": "28, son durumdaki erkek öğrenci sayısı.",
+   "C": "39, başlangıç toplamından yalnızca ayrılan kızları çıkarmak; katılan erkekler eklenmedi.",
+   "E": "45, başlangıçtaki öğrenci sayısı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Son durumdaki öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "a/b = 2/3 ise a = 2k ve b = 3k yazılır. Örnek: oranı 2/3 olan iki grup toplam 30 kişi ise 5k = 30, k = 6 ⇒ 12 ve 18"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçtaki kız ve erkek sayılarını k ile yaz.",
+   "Kızlardan 6 çıkar, erkeklere 3 ekle; yeni oranı yaz.",
+   "k’yi bulup son durumdaki sayıları topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk durum",
+    "aciklama": "Oran 4/5.",
+    "islem": "kız 4k · erkek 5k"
+   },
+   {
+    "baslik": "Değişim",
+    "aciklama": "Kızlar 6 azaldı, erkekler 3 arttı.",
+    "islem": "(4k − 6) ÷ (5k + 3) = 1/2"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "İçler-dışlar çarpımı.",
+    "islem": "8k − 12 = 5k + 3 ⇒ 3k = 15 ⇒ k = 5"
+   },
+   {
+    "baslik": "Son durum",
+    "aciklama": "Kız 20 − 6 = 14, erkek 25 + 3 = 28.",
+    "islem": "14 ÷ 28 = 1/2 ✓ · 14 + 28 = 42"
+   }
+  ],
+  "puf": "Değişimden sonra oran verildiğinde her grubun değişimini ayrı yaz, sonra tek denklem kur.",
+  "kisaYol": null,
+  "kardes": "tytmat-oranoranti-0008k",
+  "kaynakKart": "K-ORN-05 (oran değişimi) · iki grupta zıt yönlü değişim, istenen son toplam; yeni kurgu (yüzme kursu)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

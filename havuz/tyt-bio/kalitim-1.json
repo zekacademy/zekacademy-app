@@ -1,0 +1,681 @@
+[
+ {
+  "id": "tytbio-kalitim-0001",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Gametler",
+  "k": "bio|Kalıtım",
+  "kazanim": "Genotipten oluşabilecek gamet çeşidi sayısını bulur.",
+  "tipId": "kl-gamet",
+  "tip": "Gamet çeşidi sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Genler bağımsız ayrılır ve krossing-over olmaz.\nGenotipi AaBbCC olan bir bireyin oluşturabileceği farklı gamet çeşidi sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "6",
+   "D": "8",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Yalnız bir heterozigot çifti saymak.",
+   "C": "Gen çifti sayısını 2 ile çarpmak.",
+   "D": "Homozigot CC çiftini de iki çeşit saymak.",
+   "E": "Gen çifti sayısını 4 ile çarpmak."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Farklı gamet çeşidi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Gamet çeşidi",
+    "ifade": "Her heterozigot gen çifti (Aa) 2 çeşit gamet verir, homozigot çift (AA, aa) 1 çeşit · Çeşit sayısı 2 üzeri heterozigot çift sayısıdır: AaBb → 2 × 2 = 4 çeşit"
+   }
+  ],
+  "ipuclari": [
+   "Hangi gen çiftleri heterozigot?",
+   "Homozigot çift kaç çeşit alel verir?",
+   "Her heterozigot çift çeşit sayısını iki katına çıkarır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Heterozigotları bul",
+    "aciklama": "Aa ve Bb heterozigot, CC homozigottur.",
+    "islem": "2 heterozigot çift"
+   },
+   {
+    "baslik": "Çeşitleri say",
+    "aciklama": "Aa 2, Bb 2, CC 1 çeşit alel verir.",
+    "islem": "2 × 2 × 1"
+   },
+   {
+    "baslik": "Gametleri yaz",
+    "aciklama": "ABC, AbC, aBC, abC.",
+    "islem": "4 çeşit"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Farklı gamet çeşidi 4’tür.",
+    "islem": "4"
+   }
+  ],
+  "puf": "Gamet çeşidi sayısı = 2 üzeri heterozigot gen çifti sayısı.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0001k",
+  "kaynakKart": "K-BKA-01 (AaBbCC gamet çeşidi) · dört gen çifti, farklı genotip",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0002",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Monohibrit çaprazlama",
+  "k": "bio|Kalıtım",
+  "kazanim": "Tek özellik çaprazlamasında olasılığı hesaplar.",
+  "tipId": "kl-monohibrit",
+  "tip": "Tek karakter çaprazlaması",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bezelyede mor çiçek rengi (M), beyaz çiçek rengi (m) üzerine baskındır. Heterozigot mor çiçekli iki bezelye çaprazlanıyor.\nBu çaprazlamadan elde edilen bir bezelyenin mor çiçekli olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "1/4",
+   "C": "1/2",
+   "D": "3/4",
+   "E": "1"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3/4"
+  },
+  "celdiriciler": {
+   "A": "Heterozigot ebeveynlerden mor yavru çıkmayacağını sanmak.",
+   "B": "Beyaz çiçekli olma olasılığını (mm) vermek.",
+   "C": "Yalnız heterozigot yavruların mor olduğunu sanmak.",
+   "E": "Tüm yavruların mor olacağını sanmak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yavrunun mor çiçekli olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Baskın ve çekinik",
+    "ifade": "Baskın alel (A) heterozigotta da kendini gösterir; çekinik alel (a) yalnız homozigotta görünür · AA ve Aa baskın fenotip, aa çekinik fenotiptir"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "İki ebeveynin genotipini yaz.",
+   "Her ebeveynden hangi gametler gelir?",
+   "Mor çiçek hangi genotiplerde görünür?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Genotipleri yaz",
+    "aciklama": "Heterozigot mor çiçekli bezelye Mm genotipindedir.",
+    "islem": "Mm × Mm"
+   },
+   {
+    "baslik": "Gametler",
+    "aciklama": "Her ebeveyn M ve m gameti verir.",
+    "islem": "M ve m olmak üzere iki çeşit"
+   },
+   {
+    "baslik": "Yavru genotipleri",
+    "aciklama": "Kareyi doldurunca MM, Mm, Mm, mm çıkar.",
+    "islem": "1 MM : 2 Mm : 1 mm"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "MM ve Mm mor çiçeklidir; mm beyazdır.",
+    "islem": "3/4"
+   }
+  ],
+  "puf": "Çaprazlamada önce ebeveyn gametlerini yaz, sonra kareyi doldur.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0002k",
+  "kaynakKart": "K-BKA-02 (Mm × Mm çekinik olasılığı) · tür, özellik ve çaprazlama (Kk × kk)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0003",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Kan grupları",
+  "k": "bio|Kalıtım",
+  "kazanim": "Çocuğun kan grubundan ebeveyn genotiplerini bulup sonraki çocuğun olasılığını hesaplar.",
+  "tipId": "kl-abo",
+  "tip": "ABO kan grubu çaprazlaması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "A kan grubundan bir anne ile B kan grubundan bir babanın ilk çocuğu O kan grubundadır.\nBu çiftin ikinci çocuğunun AB kan grubunda olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "1/16",
+   "C": "1/8",
+   "D": "1/4",
+   "E": "1/2"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1/4"
+  },
+  "celdiriciler": {
+   "A": "İlk çocuğun O olması nedeniyle AB’nin olamayacağını sanmak.",
+   "B": "Dört birleşmeyi 16 sanıp olasılığı küçültmek.",
+   "C": "Gamet olasılıklarını çarpıp bir kez daha bölmek.",
+   "E": "A ve B alellerinden her birinin gelme olasılığını toplamak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "İkinci çocuğun AB grubunda olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "ABO kan grupları",
+    "ifade": "A grubu: AA ya da AO · B grubu: BB ya da BO · AB grubu: AB · O grubu: OO · A ve B alelleri O’ya baskındır, birbirlerine eş baskındır"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "O grubu çocuk hangi alelleri almıştır?",
+   "Anne ve babanın genotipleri ne olmalı?",
+   "Her çocuk için olasılık bağımsızdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Genotipleri bul",
+    "aciklama": "İlk çocuk OO; her ebeveyn bir O vermiştir. Anne AO, baba BO olmalı.",
+    "islem": "AO × BO"
+   },
+   {
+    "baslik": "Yavru olasılıkları",
+    "aciklama": "Gametler A, O ve B, O; dört birleşme eşit olasılıklıdır.",
+    "islem": "AB, AO, BO, OO"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "AB yalnız bir kutuda çıkar; her çocuk için olasılık aynıdır.",
+    "islem": "1/4"
+   }
+  ],
+  "puf": "O grubu çocuk, her ebeveynden bir O aleli aldığını gösterir.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0003k",
+  "kaynakKart": "K-BKA-03 (A ve B ebeveyn, O çocuk) · istenen grup (AB yerine A ya da B)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0004",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Eşeye bağlı kalıtım",
+  "k": "bio|Kalıtım",
+  "kazanim": "Eşeye bağlı çekinik özellikte çocuğun cinsiyet ve fenotip olasılığını hesaplar.",
+  "tipId": "kl-eseye-bagli",
+  "tip": "Eşeye bağlı kalıtım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Renk körlüğü, X kromozomu üzerindeki çekinik bir alelle (Xd) belirlenir. Renk körlüğü bakımından taşıyıcı olan bir anne ile renk körü olmayan bir babanın çocukları olacaktır.\nBu çiftin doğacak çocuğunun renk körü bir erkek olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/4",
+   "B": "3/8",
+   "C": "1/2",
+   "D": "3/4",
+   "E": "1"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1/4"
+  },
+  "celdiriciler": {
+   "B": "Olasılıkları toplamak.",
+   "C": "Çocuğun erkek olduğunu önceden bilinen koşul saymak.",
+   "D": "Renk körü olmayan çocukların olasılığını vermek.",
+   "E": "Tüm çocukların renk körü olacağını sanmak."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Çocuğun renk körü erkek olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Eşeye bağlı kalıtım",
+    "ifade": "Renk körlüğü ve hemofili X kromozomundaki çekinik alellerle taşınır · Kadın XX, erkek XY · Erkek tek X taşıdığı için çekinik alel erkekte tek başına etkili olur"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "Anne XDXd, baba XDY genotipindedir; gametleri yaz.",
+   "Dört birleşmenin her birini yaz.",
+   "Soruda cinsiyet önceden verilmiş mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Genotipleri yaz",
+    "aciklama": "Taşıyıcı anne XDXd, sağlam baba XDY.",
+    "islem": "XDXd × XDY"
+   },
+   {
+    "baslik": "Birleşmeler",
+    "aciklama": "Dört eşit olasılıklı birleşme oluşur.",
+    "islem": "XDXD, XDXd, XDY, XdY"
+   },
+   {
+    "baslik": "Renk körü erkek",
+    "aciklama": "Renk körü erkek yalnız XdY genotipindedir.",
+    "islem": "4 birleşmeden 1’i"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Koşul yok; olasılık dört birleşmeden birine eşittir.",
+    "islem": "1/4"
+   }
+  ],
+  "puf": "Eşeye bağlı sorularda cinsiyeti de olasılığa kat: koşul yoksa hepsi çarpılır.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0004k",
+  "kaynakKart": "K-BKA-04 (X’e bağlı çekinik, taşıyıcı anne) · hastalık, cinsiyet koşulu (kız olduğu bilinen)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0005",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Soyağacı yorumu",
+  "k": "bio|Kalıtım",
+  "kazanim": "Aile öyküsünden baskın ya da çekinik kalıtımı ve genotipleri çıkarır.",
+  "tipId": "kl-soyagaci",
+  "tip": "Aile öyküsünden kalıtım yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Sağlıklı bir anne ile sağlıklı bir babanın ilk çocuğu bir hastalık bakımından hastadır. Hastalığın otozomal kromozomlarda tek gen çiftiyle belirlendiği bilinmektedir.\nBuna göre,\nI. Hastalık çekinik alelle belirlenir.\nII. Anne ve baba bu gen bakımından heterozigottur.\nIII. Çiftin sonraki çocuğunun hasta olma olasılığı 1/2’dir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Ebeveynlerin heterozigot olduğunu fark etmemek.",
+   "B": "Hastalığın çekinik olduğunu çıkaramamak.",
+   "D": "Heterozigot × heterozigotta çekinik olasılığını 1/2 sanmak.",
+   "E": "III’ü doğru saymak; olasılık 1/4’tür."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Baskın ve çekinik",
+    "ifade": "Baskın alel (A) heterozigotta da kendini gösterir; çekinik alel (a) yalnız homozigotta görünür · AA ve Aa baskın fenotip, aa çekinik fenotiptir"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "Sağlıklı ebeveynden hasta çocuk doğması neyi gösterir?",
+   "Hasta çocuğun aleli hangi ebeveynden gelmiştir?",
+   "Heterozigot × heterozigotta çekinik olasılığı kaçtır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "Sağlıklı ebeveynden hasta çocuk doğması, hastalık aleline sahip olduklarını ama göstermediklerini gösterir.",
+    "islem": "I doğru: çekinik"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "Hasta çocuk aa; her ebeveyn bir a vermiş ama sağlıklı olduğu için Aa olmalı.",
+    "islem": "II doğru"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "Aa × Aa çaprazlamasında aa olasılığı 1/4’tür.",
+    "islem": "III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Ebeveynde olmayan özellik çocukta ortaya çıkıyorsa özellik çekiniktir ve ebeveynler heterozigottur.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0005k",
+  "kaynakKart": "K-BKA-05 (sağlıklı ebeveyn, hasta çocuk) · hasta ebeveyn, sağlıklı çocuk (baskın)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0006",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Test çaprazlaması",
+  "k": "bio|Kalıtım",
+  "kazanim": "Yavru oranlarından ebeveynin genotipini belirler.",
+  "tipId": "kl-test",
+  "tip": "Test çaprazlaması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Tavşanlarda siyah tüy rengi (S), beyaz tüy rengi (s) üzerine baskındır. Siyah tüylü bir dişi tavşan, beyaz tüylü bir erkek tavşanla çiftleştirildiğinde doğan 8 yavrunun 4’ü siyah, 4’ü beyaz tüylü oluyor.\nBuna göre dişi tavşanın genotipi ve oluşturduğu gamet çeşidi sayısı aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ss – 2",
+   "B": "SS – 1",
+   "C": "SS – 2",
+   "D": "Ss – 1",
+   "E": "ss – 1"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Ss – 2"
+  },
+  "celdiriciler": {
+   "B": "Beyaz yavrunun çıkamayacağını görmemek.",
+   "C": "Genotipi ve gamet sayısını birlikte yanlış bulmak.",
+   "D": "Genotipi bulup heterozigotun gamet çeşidini 1 saymak.",
+   "E": "Siyah tüylü dişinin çekinik olduğunu sanmak."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Dişinin genotipi ve gamet çeşidi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Baskın ve çekinik",
+    "ifade": "Baskın alel (A) heterozigotta da kendini gösterir; çekinik alel (a) yalnız homozigotta görünür · AA ve Aa baskın fenotip, aa çekinik fenotiptir"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   },
+   {
+    "ad": "Gamet çeşidi",
+    "ifade": "Her heterozigot gen çifti (Aa) 2 çeşit gamet verir, homozigot çift (AA, aa) 1 çeşit · Çeşit sayısı 2 üzeri heterozigot çift sayısıdır: AaBb → 2 × 2 = 4 çeşit"
+   }
+  ],
+  "ipuclari": [
+   "Beyaz erkek hangi genotipte?",
+   "Beyaz yavru çıkması dişi hakkında ne söyler?",
+   "Heterozigot birey kaç çeşit gamet verir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Erkeğin genotipi",
+    "aciklama": "Beyaz tüylü erkek çekiniktir; genotipi ss ve yalnız s gameti verir.",
+    "islem": "erkek: ss"
+   },
+   {
+    "baslik": "Beyaz yavrunun anlamı",
+    "aciklama": "Beyaz yavru ss’tir; bir s’yi dişi de vermiştir.",
+    "islem": "dişide s var"
+   },
+   {
+    "baslik": "Dişinin genotipi",
+    "aciklama": "Dişi siyah tüylü olduğuna göre baskın S de vardır.",
+    "islem": "dişi: Ss"
+   },
+   {
+    "baslik": "Gametler",
+    "aciklama": "Ss genotipli birey S ve s olmak üzere iki çeşit gamet verir.",
+    "islem": "2 çeşit"
+   }
+  ],
+  "puf": "Baskın fenotipli bireyi çekinikle çaprazla: yavruların yarısı çekinikse birey heterozigottur.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0006k",
+  "kaynakKart": "K-BKA-06 (test çaprazlaması (siyah/beyaz tavşan)) · tür, özellik ve sorulan değer (heterozigot yavru sayısı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0007",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Dihibrit çaprazlama",
+  "k": "bio|Kalıtım",
+  "kazanim": "İki karakterli çaprazlamada koşullu olasılığı hesaplar.",
+  "tipId": "kl-dihibrit",
+  "tip": "İki karakter çaprazlaması",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "A ve B genleri bağımsız ayrılan, birer baskın (A, B) ve çekinik (a, b) alele sahip iki gen çiftidir. AaBb genotipli iki birey çaprazlanıyor.\nElde edilen yavrulardan her iki özellik bakımından baskın fenotipli olanlar arasından rastgele seçilen bir bireyin AaBb genotipli olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/4",
+   "B": "1/3",
+   "C": "4/9",
+   "D": "1/2",
+   "E": "9/16"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4/9"
+  },
+  "celdiriciler": {
+   "A": "Paydayı 16 alıp koşulu paydaya katmamak.",
+   "B": "Genotip sayısını yanlış sayıp 3’e bölmek.",
+   "D": "Heterozigot olma olasılığını gamet seçimine indirgemek.",
+   "E": "Baskın fenotip olasılığını sorulan olasılık sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Seçilen bireyin AaBb olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   },
+   {
+    "ad": "Koşullu olasılık",
+    "ifade": "Soru “…olanlar arasından seçilen birey” diyorsa payda tüm yavrular değil, o koşulu sağlayan yavrulardır: olasılık = istenen sayı ÷ koşulu sağlayanların sayısı"
+   }
+  ],
+  "ipuclari": [
+   "16 yavrunun kaçı iki özellikte de baskın fenotiplidir?",
+   "Bu bireylerin kaçı AaBb genotipindedir?",
+   "Payda tüm yavrular değil, koşulu sağlayanlardır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gametler",
+    "aciklama": "Her birey AB, Ab, aB, ab gameti verir; 16 eşit olasılıklı birleşme oluşur.",
+    "islem": "4 × 4 = 16"
+   },
+   {
+    "baslik": "Koşulu sağlayanlar",
+    "aciklama": "İki özellikte de baskın fenotip: A_B_ genotipleri (AABB, AABb, AaBB, AaBb).",
+    "islem": "1 + 2 + 2 + 4 = 9"
+   },
+   {
+    "baslik": "İstenen genotip",
+    "aciklama": "Bu 9 yavrudan AaBb olanlar 4 tanedir.",
+    "islem": "4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İstenen sayı ÷ koşulu sağlayanlar.",
+    "islem": "4/9"
+   }
+  ],
+  "puf": "Koşullu olasılıkta payda “koşulu sağlayan yavru sayısı”dır, 16 değil.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0007k",
+  "kaynakKart": "K-BKA-07 (AaBb × AaBb koşullu genotip) · farklı fenotip koşulu, farklı genler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitim-0008",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Kan grubu ve Rh",
+  "k": "bio|Kalıtım",
+  "kazanim": "ABO ve Rh özelliklerini birlikte değerlendirerek olasılık hesaplar.",
+  "tipId": "kl-abo-rh",
+  "tip": "ABO ve Rh birlikte",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "A kan grubundan Rh+ bir anne ile B kan grubundan Rh− bir babanın ilk çocuğu O kan grubundan ve Rh−’dir. ABO ve Rh özellikleri bağımsız kalıtılmaktadır.\nBu çiftin ikinci çocuğunun AB kan grubundan ve Rh+ olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/16",
+   "B": "1/8",
+   "C": "1/4",
+   "D": "3/8",
+   "E": "1/2"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1/8"
+  },
+  "celdiriciler": {
+   "A": "Olasılıklardan birini 1/4 yerine 1/2 alıp yanlış çarpmak.",
+   "C": "Yalnız AB olma olasılığını vermek.",
+   "D": "Olasılıkları çarpmak yerine toplamak.",
+   "E": "Yalnız Rh+ olma olasılığını vermek."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "İkinci çocuğun AB Rh+ olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "ABO kan grupları",
+    "ifade": "A grubu: AA ya da AO · B grubu: BB ya da BO · AB grubu: AB · O grubu: OO · A ve B alelleri O’ya baskındır, birbirlerine eş baskındır"
+   },
+   {
+    "ad": "Rh faktörü",
+    "ifade": "Rh+ baskın (R), Rh− çekiniktir (r) · Rh+ birey RR ya da Rr, Rh− birey rr’dir"
+   },
+   {
+    "ad": "Çaprazlama",
+    "ifade": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1 (fenotip 3 : 1) · Aa × aa → Aa : aa = 1 : 1 · Bağımsız iki özellikte olasılıklar çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "İlk çocuğun OO ve rr olması ebeveynlerin genotipi hakkında ne söyler?",
+   "ABO için olasılığı ve Rh için olasılığı ayrı hesapla.",
+   "Bağımsız iki olasılık birbiriyle çarpılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "ABO genotipleri",
+    "aciklama": "İlk çocuk OO olduğuna göre anne AO, baba BO’dur.",
+    "islem": "AO × BO"
+   },
+   {
+    "baslik": "Rh genotipleri",
+    "aciklama": "Rh− çocuk rr’dir; baba rr olduğundan anne Rr olmalıdır.",
+    "islem": "Rr × rr"
+   },
+   {
+    "baslik": "Ayrı olasılıklar",
+    "aciklama": "AO × BO’da AB olasılığı 1/4; Rr × rr’de Rh+ (Rr) olasılığı 1/2.",
+    "islem": "1/4 ve 1/2"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bağımsız özellikler olduğundan olasılıklar çarpılır.",
+    "islem": "1/4 × 1/2 = 1/8"
+   }
+  ],
+  "puf": "Bağımsız ayrılan özellikler için olasılıklar çarpılır.",
+  "kisaYol": null,
+  "kardes": "tytbio-kalitim-0008k",
+  "kaynakKart": "K-BKA-08 (AO × BO ve Rr × rr) · ebeveyn grupları, Rh genotipleri ve istenen birleşim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

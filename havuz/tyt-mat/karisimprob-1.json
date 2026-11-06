@@ -1,0 +1,666 @@
+[
+ {
+  "id": "tytmat-karisimprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Karışım oranı",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışıma eklenen tuz ve suyu hem madde hem toplam miktarına yansıtarak yeni oranı bulur.",
+  "tipId": "kr-oran",
+  "tip": "Karışımın oranı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Tuz oranı %20 olan 300 gram tuzlu suya 60 gram tuz ve 140 gram su ekleniyor.\nBuna göre oluşan karışımın tuz oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "20",
+   "C": "24",
+   "D": "25",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "12, eklenen tuzu unutup yalnız toplamı büyütmek (60/500).",
+   "B": "20, eklemelerin oranı değiştirmediğini sanmak.",
+   "D": "25, eski oran (%20) ile eklenen 200 gramın oranının (%30) ortalamasını almak; miktarlar farklı.",
+   "E": "30, yalnız eklenen kısmın (60 g tuz + 140 g su) oranı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yeni karışımın tuz oranı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Yüzde",
+    "ifade": "%20 = 20/100. Örnek: 150 g’ın %20’si 150 × 20/100 = 30 g"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçta 300 gramın içinde kaç gram tuz var?",
+   "Ekleme sonunda tuz kaç gram, karışım kaç gram oldu?",
+   "Yeni tuz miktarını yeni toplama böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıçtaki tuz",
+    "aciklama": "300 gramın %20’si tuzdur.",
+    "islem": "300 × 20/100 = 60 g tuz"
+   },
+   {
+    "baslik": "Yeni miktarlar",
+    "aciklama": "Eklenen tuz hem tuza hem toplama, su yalnız toplama eklenir.",
+    "islem": "tuz: 60 + 60 = 120 g · toplam: 300 + 60 + 140 = 500 g"
+   },
+   {
+    "baslik": "Yeni oran",
+    "aciklama": "Tuzu toplama böl.",
+    "islem": "120/500 = 24/100 = %24"
+   }
+  ],
+  "puf": "Eklenen her şey (tuz da) karışımın toplamını büyütür; oranı hep yeni tuz ÷ yeni toplam ile hesapla.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0001k",
+  "kaynakKart": "K-KR-01 (karışıma madde ve su ekleme) · yeni sayılar, eklenen hem tuz hem su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Su ekleme ve buharlaştırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Buharlaşmada tuz miktarının sabit kaldığını kullanarak yeni toplamı ve buharlaşan suyu bulur.",
+  "tipId": "kr-buharlasma",
+  "tip": "Su ekleme ve buharlaştırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Tuz oranı %10 olan 600 gram tuzlu su bir süre kaynatılıyor ve suyun bir kısmı buharlaşıyor. Buharlaşmadan sonra karışımın tuz oranı %15 oluyor.\nBuharlaşma sırasında tuz kaybı olmadığına göre kaç gram su buharlaşmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "60",
+   "C": "200",
+   "D": "400",
+   "E": "540"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "200"
+  },
+  "celdiriciler": {
+   "A": "30, oran farkını (%5) 600 ile çarpmak; tuz sabit kalır, toplam değişir.",
+   "B": "60, tuzun miktarı; buharlaşan su değil.",
+   "D": "400, buharlaşmadan sonra kalan karışım; soru buharlaşan suyu soruyor.",
+   "E": "540, başlangıçtaki suyun tamamı; suyun yalnız bir kısmı buharlaştı."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Buharlaşan suyun miktarı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Değişmeyen madde",
+    "ifade": "su eklenir ya da buharlaşırsa tuz (şeker) miktarı değişmez; yalnız karışımın toplamı değişir"
+   }
+  ],
+  "ipuclari": [
+   "600 gramın içinde kaç gram tuz var? Buharlaşınca bu miktar değişir mi?",
+   "Aynı tuz, yeni karışımın %15’i ise yeni karışım kaç gramdır?",
+   "Eski toplamdan yeni toplamı çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz miktarı",
+    "aciklama": "600 gramın %10’u; buharlaşmada değişmez.",
+    "islem": "600 × 10/100 = 60 g"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "60 g tuz yeni karışımın %15’i.",
+    "islem": "60 = T × 15/100 ⇒ T = 400 g"
+   },
+   {
+    "baslik": "Buharlaşan su",
+    "aciklama": "Toplamdaki azalma suyun buharlaşmasıdır.",
+    "islem": "600 − 400 = 200 g"
+   }
+  ],
+  "puf": "Buharlaşma ve su eklemede madde miktarı sabittir: önce maddeyi bul, sonra yeni toplamı.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0002k",
+  "kaynakKart": "K-KR-03 (buharlaşınca oran artar) · yeni kurgu (kaynatma), istenen: buharlaşan su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İki karışımı karıştırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "İki karışımın tuz miktarlarını ve toplamlarını ayrı ayrı toplayarak yeni oranı bulur.",
+  "tipId": "kr-karistirma",
+  "tip": "İki karışımı karıştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Tuz oranı %10 olan 300 gram tuzlu su ile tuz oranı %25 olan 200 gram tuzlu su bir kapta karıştırılıyor.\nBuna göre oluşan karışımın tuz oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "17,5",
+   "C": "19",
+   "D": "35",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "B": "17,5, iki oranın aritmetik ortalaması; miktarlar eşit olmadığı için geçersiz.",
+   "C": "19, miktarları oranlara ters eşlemek (%10 ile 200 g, %25 ile 300 g).",
+   "D": "35, iki oranı toplamak; oran, toplam tuz ÷ toplam karışımdır.",
+   "E": "80, karışımdaki tuzun gram cinsinden miktarı; soru oranı soruyor."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Karışımın tuz oranı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Karışımları birleştirme",
+    "ifade": "maddeler kendi arasında, toplamlar kendi arasında toplanır. Örnek: 10 g tuzlu 100 g ile 30 g tuzlu 100 g ⇒ 40/200 = %20"
+   }
+  ],
+  "ipuclari": [
+   "Her karışımda kaç gram tuz var?",
+   "Birleşince toplam tuz ve toplam karışım kaç gram olur?",
+   "Sonuç %10 ile %25 arasında ve miktarı fazla olan karışıma daha yakın olmalı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci karışım",
+    "aciklama": "300 gramın %10’u.",
+    "islem": "300 × 10/100 = 30 g tuz"
+   },
+   {
+    "baslik": "İkinci karışım",
+    "aciklama": "200 gramın %25’i.",
+    "islem": "200 × 25/100 = 50 g tuz"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Tuzlar ve toplamlar ayrı ayrı toplanır.",
+    "islem": "tuz: 30 + 50 = 80 g · toplam: 300 + 200 = 500 g · 80/500 = %16"
+   }
+  ],
+  "puf": "Yeni oran iki oranın arasındadır ve miktarı çok olan karışımın oranına daha yakındır; ortalama ancak miktarlar eşitse doğrudur.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0003k",
+  "kaynakKart": "K-KR-02 (iki karışım birleşiyor) · yeni sayılar, istenen: yeni oran",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Alıp yerine koyma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışımdan alınan kısmın içindeki maddeyi hesaplar; oranı geri getirmek için eklenecek maddeyi, toplamın da arttığını hesaba katarak bulur.",
+  "tipId": "kr-cekme",
+  "tip": "Alıp yerine koyma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Tuz oranı %20 olan 500 gram tuzlu sudan 100 gram alınıyor ve yerine 100 gram su ekleniyor.\nKarışımın tuz oranının yeniden %20 olması için karışıma kaç gram tuz eklenmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "20",
+   "C": "25",
+   "D": "80",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "A": "4, oran farkını (%20 − %16) gram sanmak.",
+   "B": "20, eksilen 20 g tuzu geri koymak; eklenen tuz toplamı da büyüttüğü için oran %20’ye ulaşmaz.",
+   "D": "80, karışımda kalan tuz miktarı.",
+   "E": "100, alınan karışımın miktarı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Oranı yeniden %20 yapmak için eklenecek tuz.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Karışımdan almak",
+    "ifade": "alınan kısım, karışımın o anki oranında madde içerir. Örnek: %20’lik karışımdan alınan 50 g’da 10 g madde vardır"
+   }
+  ],
+  "ipuclari": [
+   "Alınan 100 gramın içinde kaç gram tuz vardı?",
+   "Su eklendikten sonra karışımda kaç gram tuz, toplam kaç gram var?",
+   "x gram tuz eklenince hem tuz hem toplam x artar; denklemi kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "500 gramın %20’si tuz.",
+    "islem": "500 × 20/100 = 100 g tuz"
+   },
+   {
+    "baslik": "Alınan kısım",
+    "aciklama": "Alınan 100 g da %20 tuzludur.",
+    "islem": "100 × 20/100 = 20 g tuz gitti · kalan 80 g tuz, 400 g karışım"
+   },
+   {
+    "baslik": "Su eklenince",
+    "aciklama": "Toplam yeniden 500 g, tuz 80 g.",
+    "islem": "80/500 = %16"
+   },
+   {
+    "baslik": "Tuz ekle",
+    "aciklama": "x gram tuz hem tuza hem toplama eklenir.",
+    "islem": "(80 + x)/(500 + x) = 20/100 ⇒ 400 + 5x = 500 + x ⇒ x = 25 g"
+   }
+  ],
+  "puf": "Karışıma madde eklerken toplamın da büyüdüğünü unutma; eksilen maddeyi geri koymak oranı eski hâline getirmez.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0004k",
+  "kaynakKart": "K-KR-04 (alıp yerine su koyma) · yeni istenen (oranı geri getiren tuz miktarı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İki karışımı karıştırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Hedef orana göre iki karışımın madde dengesini kurarak bilinmeyen karışım miktarını bulur.",
+  "tipId": "kr-karistirma",
+  "tip": "İki karışımı karıştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Meyve oranı %40 olan bir miktar meyve suyu, meyve oranı %10 olan 300 mililitre içecekle karıştırılıyor. Oluşan karışımın meyve oranı %20’dir.\nBuna göre karıştırılan meyve suyu kaç mililitredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "75",
+   "B": "150",
+   "C": "300",
+   "D": "450",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "150"
+  },
+  "celdiriciler": {
+   "A": "75, sağ tarafta toplamı yalnız 300 almak (0,4x + 30 = 0,2 × 300).",
+   "C": "300, iki karışımın eşit miktarda olduğunu sanmak; o durumda oran %25 olurdu.",
+   "D": "450, oluşan karışımın toplam miktarı; soru meyve suyunu soruyor.",
+   "E": "600, oran farklarını (20 ve 10) miktarlara ters eşlemek."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Karıştırılan %40’lık meyve suyunun miktarı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Karışımları birleştirme",
+    "ifade": "maddeler kendi arasında, toplamlar kendi arasında toplanır. Örnek: 10 g tuzlu 100 g ile 30 g tuzlu 100 g ⇒ 40/200 = %20"
+   }
+  ],
+  "ipuclari": [
+   "Meyve suyuna x de: içinde kaç mL meyve var?",
+   "300 mL içecekte kaç mL meyve var?",
+   "Toplam meyve = yeni karışımın (x + 300 mL) %20’si; denklemi kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Meyve miktarları",
+    "aciklama": "x mL meyve suyunda ve 300 mL içecekte.",
+    "islem": "x × 40/100 = 0,4x · 300 × 10/100 = 30"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "Toplam meyve, yeni karışımın %20’si.",
+    "islem": "0,4x + 30 = 0,2 × (x + 300) = 0,2x + 60"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "x’li terimleri bir tarafa topla.",
+    "islem": "0,2x = 30 ⇒ x = 150 mL · kontrol: (60 + 30)/450 = %20"
+   }
+  ],
+  "puf": "Hedef oranlı karıştırmada denklemi “toplam madde = hedef oran × toplam karışım” diye kur.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0005k",
+  "kaynakKart": "K-KR-02 (hedef orana göre miktar) · yeni kurgu (meyve suyu ve içecek), mL birimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Su ekleme ve buharlaştırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Ardışık buharlaştırma ve madde ekleme işlemlerinde madde ve toplamı adım adım izler.",
+  "tipId": "kr-buharlasma",
+  "tip": "Su ekleme ve buharlaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Şeker oranı %16 olan 500 gram şekerli sudan 100 gram su buharlaştırılıyor. Ardından karışıma 100 gram şeker ekleniyor ve şeker tamamen çözünüyor.\nBuharlaşma sırasında şeker kaybı olmadığına göre son karışımın şeker oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "20",
+   "C": "25",
+   "D": "30",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "16, başlangıçtaki oran; buharlaşma ve şeker ekleme oranı artırır.",
+   "B": "20, şeker eklemeyi unutup yalnız buharlaşmayı hesaplamak.",
+   "C": "25, yalnız eklenen şekeri (100/400) hesaba katmak; karışımda zaten 80 g şeker vardı.",
+   "D": "30, buharlaşmayı unutup toplamı 600 g almak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Son karışımın şeker oranı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Değişmeyen madde",
+    "ifade": "su eklenir ya da buharlaşırsa tuz (şeker) miktarı değişmez; yalnız karışımın toplamı değişir"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçta kaç gram şeker var?",
+   "Buharlaşmadan sonra toplam kaç gram, şeker kaç gram?",
+   "Şeker eklenince hem şeker hem toplam artar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "500 gramın %16’sı şeker.",
+    "islem": "500 × 16/100 = 80 g"
+   },
+   {
+    "baslik": "Buharlaşma",
+    "aciklama": "Şeker sabit, toplam azalır.",
+    "islem": "toplam: 500 − 100 = 400 g · 80/400 = %20"
+   },
+   {
+    "baslik": "Şeker ekleme",
+    "aciklama": "Eklenen şeker hem şekere hem toplama girer.",
+    "islem": "şeker: 80 + 100 = 180 g · toplam: 400 + 100 = 500 g · 180/500 = %36"
+   }
+  ],
+  "puf": "Her işlemden sonra “madde kaç, toplam kaç” tablosunu güncelle; buharlaşma yalnız toplamı, madde ekleme ikisini birden değiştirir.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0006k",
+  "kaynakKart": "K-KR-03 (buharlaşma ve ekleme ardışık) · iki işlem, istenen: son oran",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Alıp yerine koyma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Alıp yerine su koyma işleminin tekrarında her seferinde karışımın o anki oranını kullanır.",
+  "tipId": "kr-cekme",
+  "tip": "Alıp yerine koyma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "20 litrelik bir kap saf portakal suyuyla doludur. Kaptan 4 litre portakal suyu alınıp yerine 4 litre su konuyor ve karıştırılıyor. Sonra karışımdan yine 4 litre alınıp yerine 4 litre su konuyor.\nBuna göre son durumda kaptaki karışımın portakal suyu oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12,8",
+   "B": "36",
+   "C": "60",
+   "D": "64",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "64"
+  },
+  "celdiriciler": {
+   "A": "12,8, kaptaki portakal suyunun litre cinsinden miktarı; soru oranı soruyor.",
+   "B": "36, suyun oranı (7,2/20); soru portakal suyunu soruyor.",
+   "C": "60, ikinci seferde de saf portakal suyu alındığını sanmak (20 − 8 = 12 L).",
+   "E": "80, yalnız ilk işlemden sonraki oran."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Son karışımın portakal suyu oranı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Karışımdan almak",
+    "ifade": "alınan kısım, karışımın o anki oranında madde içerir. Örnek: %20’lik karışımdan alınan 50 g’da 10 g madde vardır"
+   }
+  ],
+  "ipuclari": [
+   "İlk işlemden sonra kapta kaç litre portakal suyu kaldı?",
+   "İkinci kez alınan 4 litre saf portakal suyu mu, yoksa karışım mı?",
+   "İkinci alınan 4 litrenin içinde karışımın o anki oranında portakal suyu var."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk işlem",
+    "aciklama": "Saf portakal suyundan 4 litre gider, yerine su gelir.",
+    "islem": "20 − 4 = 16 L portakal · oran 16/20 = %80"
+   },
+   {
+    "baslik": "İkinci alış",
+    "aciklama": "Alınan 4 litre %80 portakal suyudur.",
+    "islem": "4 × 80/100 = 3,2 L portakal gider"
+   },
+   {
+    "baslik": "İkinci işlem sonrası",
+    "aciklama": "Yerine su konunca toplam yine 20 L.",
+    "islem": "16 − 3,2 = 12,8 L portakal"
+   },
+   {
+    "baslik": "Oran",
+    "aciklama": "Portakal suyunu toplama böl.",
+    "islem": "12,8/20 = 64/100 = %64 · kısaca: 20 × (4/5) × (4/5) = 12,8"
+   }
+  ],
+  "puf": "Alıp yerine su koyma her tekrarda maddeyi aynı kesirle (kalan/toplam) çarpar.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0007k",
+  "kaynakKart": "K-KR-04 (alıp yerine koyma, tekrarlı) · yeni kurgu (saf portakal suyu), iki tekrar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İki karışımı karıştırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Kaplar arası aktarımda her adımdan sonra kabın tuz miktarını ve toplamını güncelleyerek son oranı bulur.",
+  "tipId": "kr-karistirma",
+  "tip": "İki karışımı karıştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Birinci kapta tuz oranı %30 olan 200 gram, ikinci kapta tuz oranı %10 olan 300 gram tuzlu su vardır. Birinci kaptan 100 gram alınıp ikinci kaba dökülüyor ve iyice karıştırılıyor. Sonra ikinci kaptan 100 gram alınıp birinci kaba dökülüyor.\nBuna göre birinci kaptaki tuzlu suyun son tuz oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "15",
+   "C": "18",
+   "D": "20",
+   "E": "22,5"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "22,5"
+  },
+  "celdiriciler": {
+   "A": "10, ikinci kabın başlangıç oranı; soru birinci kabı soruyor.",
+   "B": "15, ikinci kabın karışımdan sonraki oranı; birinci kabın oranı değil.",
+   "C": "18, iki kaptaki tuzlu suyun tamamen karıştığını sanmak (90/500).",
+   "D": "20, geri dökülen 100 gramın oranını karışmadan önceki %10 almak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "Birinci kabın son tuz oranı.",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g tuzlu suda 30 g tuz varsa tuz oranı 30/200 = %15"
+   },
+   {
+    "ad": "Karışımları birleştirme",
+    "ifade": "maddeler kendi arasında, toplamlar kendi arasında toplanır. Örnek: 10 g tuzlu 100 g ile 30 g tuzlu 100 g ⇒ 40/200 = %20"
+   },
+   {
+    "ad": "Karışımdan almak",
+    "ifade": "alınan kısım, karışımın o anki oranında madde içerir. Örnek: %20’lik karışımdan alınan 50 g’da 10 g madde vardır"
+   }
+  ],
+  "ipuclari": [
+   "İlk aktarımda ikinci kaba kaç gram tuz gider?",
+   "İkinci kabın yeni tuz oranı nedir?",
+   "Geri dökülen 100 gram bu yeni oranda tuz içerir; birinci kabın tuzunu ve toplamını güncelle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "Her kaptaki tuz.",
+    "islem": "1. kap: 200 × 30/100 = 60 g · 2. kap: 300 × 10/100 = 30 g"
+   },
+   {
+    "baslik": "İlk aktarım",
+    "aciklama": "1. kaptan alınan 100 g’da %30 tuz var.",
+    "islem": "100 × 30/100 = 30 g · 1. kap: 30 g tuz, 100 g"
+   },
+   {
+    "baslik": "İkinci kap",
+    "aciklama": "Gelen kısım karıştırılır.",
+    "islem": "2. kap: 30 + 30 = 60 g tuz, 400 g · 60/400 = %15"
+   },
+   {
+    "baslik": "Geri aktarım",
+    "aciklama": "2. kaptan alınan 100 g %15 tuzludur.",
+    "islem": "100 × 15/100 = 15 g · 1. kap: 30 + 15 = 45 g tuz, 200 g"
+   },
+   {
+    "baslik": "Son oran",
+    "aciklama": "Birinci kabın tuzunu toplamına böl.",
+    "islem": "45/200 = 22,5/100 = %22,5"
+   }
+  ],
+  "puf": "Aktarım sorularında her dökmeden sonra o kabın “madde, toplam” ikilisini yeniden yaz; alınan kısım daima o anki oranı taşır.",
+  "kisaYol": null,
+  "kardes": "tytmat-karisimprob-0008k",
+  "kaynakKart": "K-KR-02 (kaplar arası gidiş-dönüş aktarım) · iki kap, iki aktarım, istenen: birinci kabın son oranı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

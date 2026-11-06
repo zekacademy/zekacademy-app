@@ -1,0 +1,134 @@
+{
+ "konu": "Paragraf",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-PRG-01",
+   "konu": "Paragraf",
+   "alt": "Ana Düşünce",
+   "fikir": "Parçanın tümüne yayılan asıl mesajı, ayrıntı ve örnekten ayırarak bulmak.",
+   "tuzak": "Bir ayrıntıyı ana düşünce sanmak; parçada olmayan ya da parçaya ters bir genellemeyi seçmek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "prg-ana",
+   "tip": "Ana düşünce",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafta anlam: ana düşünce)"
+  },
+  {
+   "id": "K-PRG-02",
+   "konu": "Paragraf",
+   "alt": "Yardımcı Düşünce ve Çıkarım",
+   "fikir": "Parçada açıkça verilen ya da parçadan kesin olarak çıkarılabilen yargıyı, çıkarılamayan yargıdan ayırmak.",
+   "tuzak": "Aşırı genelleme (her, hiç, tümüyle) içeren ya da parçada geçmeyen yargıyı doğru saymak; olumsuz kökü kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-yardimci",
+   "tip": "Yardımcı düşünce ve çıkarım",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafta anlam: değinilmeyen / çıkarılamayan)"
+  },
+  {
+   "id": "K-PRG-03",
+   "konu": "Paragraf",
+   "alt": "Paragraf Tamamlama",
+   "fikir": "Boşluğun önündeki ve arkasındaki cümlelerin bağlaçlarına ve anlam akışına bakarak boşluğa gelecek cümleyi bulmak.",
+   "tuzak": "Konuya uygun görünen ama akışı tersine çeviren ya da bağlaçla çelişen cümleyi seçmek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "prg-tamamlama",
+   "tip": "Paragraf tamamlama",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafın yapısı: tamamlama)"
+  },
+  {
+   "id": "K-PRG-04",
+   "konu": "Paragraf",
+   "alt": "Cümle Sıralama",
+   "fikir": "Zamirler, bağlaçlar ve sıralama sözcükleriyle numaralı cümleleri anlamlı bir bütün oluşturacak biçimde dizmek.",
+   "tuzak": "Genel görünen cümleyi hemen başa koymak; bağlaç ve gönderme ilişkisini atlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "prg-siralama",
+   "tip": "Cümle sıralama",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafın yapısı: cümle sıralama)"
+  },
+  {
+   "id": "K-PRG-05",
+   "konu": "Paragraf",
+   "alt": "Akışı Bozan Cümle",
+   "fikir": "Parçanın odağını belirleyip bu odağa hizmet etmeyen cümleyi bulmak.",
+   "tuzak": "Konuyla aynı sözcükleri taşıyan ama farklı bir yönü anlatan cümleyi parçaya uygun sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "prg-akis",
+   "tip": "Akışı bozan cümle",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafın yapısı: akışı bozan cümle)"
+  },
+  {
+   "id": "K-PRG-06",
+   "konu": "Paragraf",
+   "alt": "Anlatım Biçimleri ve Düşünceyi Geliştirme Yolları",
+   "fikir": "Parçada kullanılan anlatım biçimini ya da düşünceyi geliştirme yolunu (örnekleme, benzetme, karşılaştırma vb.) tanımak.",
+   "tuzak": "Benzer terimleri karıştırmak; metinde olmayan bir yöntemi var saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-anlatim",
+   "tip": "Anlatım biçimleri ve düşünceyi geliştirme yolları",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (paragrafta anlatım teknikleri)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "prg-ana",
+   "ad": "Ana düşünce",
+   "kartlar": [
+    "K-PRG-01"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-yardimci",
+   "ad": "Yardımcı düşünce ve çıkarım",
+   "kartlar": [
+    "K-PRG-02"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-tamamlama",
+   "ad": "Paragraf tamamlama",
+   "kartlar": [
+    "K-PRG-03"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-siralama",
+   "ad": "Cümle sıralama",
+   "kartlar": [
+    "K-PRG-04"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-akis",
+   "ad": "Akışı bozan cümle",
+   "kartlar": [
+    "K-PRG-05"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-anlatim",
+   "ad": "Anlatım biçimleri ve düşünceyi geliştirme yolları",
+   "kartlar": [
+    "K-PRG-06"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  }
+ ]
+}

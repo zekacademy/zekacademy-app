@@ -1,0 +1,113 @@
+{
+ "konu": "Oran Orantı",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-ORN-01",
+   "konu": "Oran Orantı",
+   "alt": "Doğru orantı",
+   "fikir": "Birlikte artan iki çokluk (miktar–tutar, yol–yakıt) verilir; birim değer bulunup istenen miktara geçilir, gerekirse iki orantı art arda uygulanır.",
+   "tuzak": "Doğru orantıyı ters kurmak; artışı mevcut miktara eklemek; birim dönüşümünde virgül hatası.",
+   "zorluk": "kolay-orta",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "oo-dogru",
+   "tip": "Doğru orantı ve birim değer",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s78 #96, büyütme oranı) · Bilgi Sarmal s188 #10, s189 #4"
+  },
+  {
+   "id": "K-ORN-02",
+   "konu": "Oran Orantı",
+   "alt": "Ters orantı",
+   "fikir": "Biri artarken diğeri azalan iki çokluk (tüketici sayısı–gün, birim fiyat–adet) verilir; çarpım sabit tutulur.",
+   "tuzak": "Ters orantıyı doğru orantı gibi kurmak; artış oranı kadar doğrudan azaltmak; azalma miktarını sonuç sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "oo-ters",
+   "tip": "Ters orantı",
+   "kaynak": "Bilgi Sarmal s188 #14–15, s189 #6 · 345 SB oran-orantı testleri"
+  },
+  {
+   "id": "K-ORN-03",
+   "konu": "Oran Orantı",
+   "alt": "Oranları birleştirme",
+   "fikir": "Ortak bir terim içeren iki oran verilir (a/b ve b/c); ortak terim eşitlenip üçlü oran kurulur, toplam ya da bir parça verilir.",
+   "tuzak": "Ortak terimi eşitlemeden oranları yan yana yazmak; istenen parçayı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "oo-bilesik",
+   "tip": "Ortak terimle oranları birleştirme",
+   "kaynak": "Bilgi Sarmal ve 345 SB üçlü oran soruları · ÖSYM YKS çıkmış (kitap s120 #140, 3–4–6 ile orantılı)"
+  },
+  {
+   "id": "K-ORN-04",
+   "konu": "Oran Orantı",
+   "alt": "Orantılı paylaştırma",
+   "fikir": "Bir çokluk sayılarla doğru ya da ters orantılı paylaştırılır; bir pay, iki payın farkı ya da paylaştırma koşulundaki değişim verilir.",
+   "tuzak": "Ters orantılıyı doğru orantılı gibi paylaştırmak; bir parçanın değeri ile pay sayısını karıştırmak; değişimden sonra parça sayısını güncellememek.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "oo-paylastirma",
+   "tip": "Doğru ve ters orantılı paylaştırma",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s120 #140, kalemliklere orantılı paylaştırma) · Bilgi Sarmal s188 #10, s189 #8"
+  },
+  {
+   "id": "K-ORN-05",
+   "konu": "Oran Orantı",
+   "alt": "Oran değişimi",
+   "fikir": "İki grubun oranı verilir; gruplardan birine ya da ikisine ekleme/çıkarma yapılınca yeni oran verilir. Gruplar k ile yazılıp yeni oran denklemi kurulur.",
+   "tuzak": "Değişimi yalnızca bir gruba uygulamak; ilk ve son durumu karıştırmak; oran 2’yi “yarı yarıya” sanmak.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "oo-oran-degisim",
+   "tip": "Ekleme ve çıkarmayla oran değişimi",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s138 #161, gidilen ve gidilmeyen müzeler) · Bilgi Sarmal s231 #7 · 345 Deneme"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "oo-dogru",
+   "ad": "Doğru orantı ve birim değer",
+   "kartlar": [
+    "K-ORN-01"
+   ],
+   "uygulamaKonu": "mat|Oran Orantı"
+  },
+  {
+   "tipId": "oo-ters",
+   "ad": "Ters orantı",
+   "kartlar": [
+    "K-ORN-02"
+   ],
+   "uygulamaKonu": "mat|Oran Orantı"
+  },
+  {
+   "tipId": "oo-bilesik",
+   "ad": "Ortak terimle oranları birleştirme",
+   "kartlar": [
+    "K-ORN-03"
+   ],
+   "uygulamaKonu": "mat|Oran Orantı"
+  },
+  {
+   "tipId": "oo-paylastirma",
+   "ad": "Doğru ve ters orantılı paylaştırma",
+   "kartlar": [
+    "K-ORN-04"
+   ],
+   "uygulamaKonu": "mat|Oran Orantı"
+  },
+  {
+   "tipId": "oo-oran-degisim",
+   "ad": "Ekleme ve çıkarmayla oran değişimi",
+   "kartlar": [
+    "K-ORN-05"
+   ],
+   "uygulamaKonu": "mat|Oran Orantı"
+  }
+ ]
+}
