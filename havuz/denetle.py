@@ -11,7 +11,7 @@ KART={}
 for f in glob.glob(f'{H}/kartlar/*.json'):
     d=json.load(open(f))
     for k in d.get('kartlar',[]): KART[k['id']]=k
-UYG={'prob|Sayı Problemleri','prob|Kesir Problemleri','prob|Yaş Problemleri','prob|Hareket Hız Problemleri','prob|İşçi Emek Problemleri','prob|Yüzde Problemleri','prob|Kar Zarar Problemleri','prob|Karışım Problemleri','prob|Grafik Problemleri','prob|Rutin Olmayan Problemleri','matd|Kümeler-Kartezyen Çarpım','matd|Fonksiyonlar','matd|Permütasyon ve Kombinasyon','matd|Olasılık','mat|Temel Kavramlar','mat|Rasyonel Sayılar','mat|Sayı Basamakları','mat|Bölme ve Bölünebilme','mat|Ebob – ekok','mat|Basit Eşitsizlikler','mat|Mutlak Değer','mat|Üslü Sayılar','mat|Köklü Sayılar','mat|Çarpanlara Ayırma','mat|Oran Orantı','mat|Denklem Çözme'}
+UYG=set(json.load(open(f'{H}/uygulama-konulari.json')))|{'prob|Sayı Problemleri','prob|Kesir Problemleri','prob|Yaş Problemleri','prob|Hareket Hız Problemleri','prob|İşçi Emek Problemleri','prob|Yüzde Problemleri','prob|Kar Zarar Problemleri','prob|Karışım Problemleri','prob|Grafik Problemleri','prob|Rutin Olmayan Problemleri','matd|Kümeler-Kartezyen Çarpım','matd|Fonksiyonlar','matd|Permütasyon ve Kombinasyon','matd|Olasılık','mat|Temel Kavramlar','mat|Rasyonel Sayılar','mat|Sayı Basamakları','mat|Bölme ve Bölünebilme','mat|Ebob – ekok','mat|Basit Eşitsizlikler','mat|Mutlak Değer','mat|Üslü Sayılar','mat|Köklü Sayılar','mat|Çarpanlara Ayırma','mat|Oran Orantı','mat|Denklem Çözme'}
 ZOR={'kolay','orta','zor'}; KALIP={'düz','hikâyeli','öncüllü','tablo','grafik','şekilli','yeni nesil'}
 GEREK=['id','ders','konu','k','kazanim','tipId','tip','zorluk','seviye','kalip','adimSayisi','metin','sekil','siklar','cevap','celdiriciler','istenen','bilgi','ipuclari','adimlar','puf','kaynakKart','dogrulama']
 def sayi(v):
@@ -29,7 +29,7 @@ def denetle(Q,korpus=None):
         for g in GEREK:
             if g not in q: H_(f'eksik alan {g}')
         if ids[i]>1: H_('tekrar eden id')
-        if not re.fullmatch(r'tytmat-[a-z]+-\d{4}k?',i): H_('id biçimi')
+        if not re.fullmatch(r'tyt[a-z]+-[a-z]+-\d{4}k?',i): H_('id biçimi')
         if i.endswith('k') and not q.get('ana'): H_('kardeş sorunun ana bağlantısı yok')
         if q.get('kisaYol') is not None and (not isinstance(q['kisaYol'],str) or len(q['kisaYol'])<20): H_('kısa yol çok kısa ya da biçimi yanlış')
         if q.get('zorluk') not in ZOR: H_('zorluk')
@@ -114,11 +114,16 @@ def tablo(Q):
     for t in sorted(tz): satir.append(f"{t:40} {tz[t]['kolay']:5} {tz[t]['orta']:4} {tz[t]['zor']:3}")
     return '\n'.join(satir)
 if __name__=='__main__':
-    dosyalar=[a for a in sys.argv[1:] if a.endswith('.json') and 'tyt-mat' in a]
+    dosyalar=[a for a in sys.argv[1:] if a.endswith('.json') and re.search(r'tyt-[a-z]+',a) and '--benzerlik' not in a and 'kutup' not in a]
     korpus=None
     if '--benzerlik' in sys.argv:
         korpus=[]
         for f in sys.argv[sys.argv.index('--benzerlik')+1:]:
+            if f.endswith('.txt'):  # MEB kitabından ders metni: sayfaları soru numarasına göre parçala
+                for sn,sayfa in enumerate(open(f).read().split('=== PDF sayfa')):
+                    for pn,parca in enumerate(re.split(r'\n\s*\d{1,3}\.\s+',sayfa)):
+                        if len(parca)>60: korpus.append((f"ÖSYM {os.path.basename(f)} s{sn} #{pn}",sh(parca)))
+                continue
             d=json.load(open(f))
             for n,x in enumerate(d):
                 m=x if isinstance(x,str) else x['metin']; ad=f"ÖSYM#{n}" if isinstance(x,str) else f"{x['kitap']} s{x['sayfa']} #{x['no']}"

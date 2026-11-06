@@ -21,15 +21,16 @@ def A(baslik,aciklama,islem,gorsel=None):
 TURLER={'bilgi','islem','dikkat'}
 
 class Parti:
-    def __init__(s,onek,konu_adi,k):
-        """onek: yalnız küçük harf (ör. 'uslu', 'yuzdeprob'); konu_adi: 'Üslü Sayılar'; k: uygulama anahtarı 'mat|Üslü Sayılar'."""
-        assert onek.isalpha() and onek.islower(), 'önek yalnız küçük İngilizce harf olmalı'
-        s.onek=onek; s.konu_adi=konu_adi; s.k=k; s.ANA=[]; s.KAR=[]
-    def _id(s,no): return f'tytmat-{s.onek}-{no}'
+    def __init__(s,onek,konu_adi,k,ders='TYT Matematik',idon='tytmat'):
+        """onek: yalnız küçük harf (ör. 'uslu', 'yuzdeprob'); konu_adi: 'Üslü Sayılar'; k: uygulama anahtarı 'mat|Üslü Sayılar'.
+        ders/idon: diğer dersler için ör. ders='TYT Fizik', idon='tytfiz'."""
+        assert onek.isalpha() and onek.islower() and idon.isalpha(), 'önek yalnız küçük İngilizce harf olmalı'
+        s.onek=onek; s.konu_adi=konu_adi; s.k=k; s.ders=ders; s.idon=idon; s.ANA=[]; s.KAR=[]
+    def _id(s,no): return f'{s.idon}-{s.onek}-{no}'
     def R(s,no,tipId,tip,zorluk,alt,kazanim,kalip,adim,kart,metin,siklar,sik,istenen,ipuclari,bilgi,adimlar,puf,cel,tur,kisa=None,sekil=None):
         """Ana soru. alt: alt konu adı (konu alanı 'Konu · Alt' olur). siklar: 5 değer listesi (A–E sırasıyla). cel/tur: doğru şık hariç 4 şık."""
         S=dict(zip('ABCDE',siklar)); assert sik in S and set(cel)==set(tur)==set('ABCDE')-{sik} and set(tur.values())<=TURLER
-        s.ANA.append(dict(id=s._id(no),ders='TYT Matematik',konu=f'{s.konu_adi} · {alt}' if alt else s.konu_adi,k=s.k,kazanim=kazanim,tipId=tipId,tip=tip,zorluk=zorluk,
+        s.ANA.append(dict(id=s._id(no),ders=s.ders,konu=f'{s.konu_adi} · {alt}' if alt else s.konu_adi,k=s.k,kazanim=kazanim,tipId=tipId,tip=tip,zorluk=zorluk,
             seviye='ÖSYM',kalip=kalip,adimSayisi=adim,metin=metin,sekil=sekil,siklar=S,cevap=dict(sik=sik,deger=S[sik]),celdiriciler=cel,celTur=tur,
             istenen=istenen,bilgi=bilgi,ipuclari=ipuclari,adimlar=adimlar,puf=puf,kisaYol=kisa,kardes=s._id(no)+'k',kaynakKart=kart,
             dogrulama=dict(yontem2=True,tarama=True,korCozum=False)))
