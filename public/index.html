@@ -1318,6 +1318,21 @@ body.dersacik{overflow:hidden}
 
 .ogv3 .ogarac{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:600px){ .ogv3 .ogarac{grid-template-columns:repeat(4,minmax(0,1fr))} }
+
+/* Bugün ne yapayım + konu işlemleri */
+.bglist{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.bgg{border-radius:14px;background:var(--sunk);padding:12px;display:flex;flex-direction:column;gap:8px}
+.bgg.bitti{opacity:.6}
+.bggh{display:flex;gap:8px;align-items:flex-start;line-height:1.35}
+.bggh b{font-size:15px}
+.bggk{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;background:var(--surface);border-radius:12px;padding:8px 10px}
+.bggk>span:first-child{font-weight:700;font-size:14px;min-width:0}
+.kis{display:inline-flex;gap:6px;flex-wrap:wrap}
+.kis button,.kis span.yok{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:7px 11px;font:700 12.5px/1 var(--font);white-space:nowrap}
+.kis button[data-ders]{border-color:#E5484D;color:#C2272D}
+.kis button[data-bk],.kis button[data-v="socoz"]{border-color:var(--ac);color:var(--ac)}
+.kis span.yok{opacity:.45}
+.ks{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

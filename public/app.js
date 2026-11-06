@@ -2377,7 +2377,7 @@ function konuDurum(k, s){ const c = icerik(k); if(!c) return null; const o = og(
   const iz = t.v ? P.length : Math.min(P.length, ((o.izlenen||{})[k]||[]).length + ((((o.ilerleme||{})[k]||{}).t||0) > 60 ? 0 : 0));
   const kys = (o.kartlar||{})[k]||{}, kOgr = Object.values(kys).filter(x=>x.kutu>=2).length, kTop = c.kart.length;
   const ts = (o.testSonuc||{})[k], tTop = c.test.length;
-  const vPct = P.length ? iz/P.length : 0, tPct = tTop ? (ts ? ts.d/ts.n : 0) : null, kPct = kTop ? kOgr/kTop : null;
+  const vPct = P.length ? iz/P.length : 0, tPct = tTop ? (ts ? ts.d/ts.n : 0) : null, kPct = null; /* kartlar ilerlemeye sayılmaz (koçun kararı) */
   const parcalar = [vPct, tPct, kPct].filter(x=>x!=null), ort = parcalar.reduce((a,b)=>a+b,0)/parcalar.length;
   const durum = ort>=0.8 && vPct===1 ? "tamam" : ort>0 || (((o.ilerleme||{})[k]||{}).t||0)>30 ? "devam" : "yok";
   return {iz, vTop:P.length, vPct, ts, tTop, kOgr, kTop, pct:Math.round(ort*100), durum, c}; }
@@ -2389,11 +2389,6 @@ function siradakiAdim(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icer
     if(d.kTop && d.kOgr<d.kTop) return {k, sekme:"kart", ikon:"🃏", baslik:`${konuAdi(k)}: kartları tekrar et`, alt:`${d.kOgr}/${d.kTop} kart öğrenildi`}; }
   return null; }
 function durumCip(d){ return `<span class="kdc ${d.durum}">${d.durum==="tamam"?"🟢":d.durum==="devam"?"🟡":"⚪"} ${DURUM_AD[d.durum]}</span>`; }
-function konuSatiri(k, s){ const d = konuDurum(k, s); if(!d) return ""; const ders = k.split("|")[0];
-  return `<div class="ks ${d.durum}"><button class="ksb" data-ders="${esc(k)}"><span class="ksad">${esc(konuAdi(k))}</span><span class="faint small">${esc(dersAdi(ders))} · ${esc(d.c.kanal)}</span></button>
-    <div class="ksc"><button data-ders="${esc(k)}" class="${d.vPct===1?"ok":d.iz||d.vPct?"yarim":""}">▶️ ${d.vTop>1?`${d.iz}/${d.vTop}`:d.vPct===1?"✓":"Video"}</button>
-      ${d.tTop?`<button data-ders="${esc(k)}" data-sekme="test" class="${d.ts?(d.ts.d/d.ts.n>=0.8?"ok":"yarim"):""}">🧩 ${d.ts?`${d.ts.d}/${d.ts.n}`:"Test"}</button>`:BANKA.some(x=>x.k===k)?`<button data-bk="konu" data-k="${esc(k)}">🧩 Soru</button>`:`<span class="yok">🧩 —</span>`}
-      ${d.kTop?`<button data-ders="${esc(k)}" data-sekme="kart" class="${d.kOgr===d.kTop?"ok":d.kOgr?"yarim":""}">🃏 ${d.kOgr}/${d.kTop}</button>`:`<span class="yok">🃏 —</span>`}</div></div>`; }
 const dersAdi = sk => ({mat:"Matematik", prob:"Problemler", matd:"Matematik", geo:"Geometri", tr:"Türkçe", fiz:"Fizik", kim:"Kimya", bio:"Biyoloji", tar:"Tarih", cog:"Coğrafya", fel:"Felsefe"})[sk]||sk;
 function devamSatiri(s){ const o = og(), devam = Object.entries(o.ilerleme||{}).filter(([k,p])=>icerik(k) && p.t>20 && (!p.d || p.t < p.d-30)).sort((a,b)=>b[1].at-a[1].at)[0]; if(!devam) return "";
   const [k,p] = devam, c = icerik(k), pct = p.d ? Math.min(100, p.t/p.d*100) : 0;
@@ -2415,43 +2410,35 @@ const ogDort = () => `<div class="og4">
     <button data-act="go" data-v="videolar" class="og4b"><span>▶️</span><b>Ders Videoları</b></button>
     <button data-act="go" data-v="banka" class="og4c"><span>🧩</span><b>Soru Bankası</b></button>
     <button data-ogr="kartlar" class="og4d"><span>🃏</span><b>Kartlar</b></button></div>`;
-/* ---- Üç tasarım ---- */
-function ogA(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icerik(k)), sa = siradakiAdim(s), tk = tekrarListesi(s);
-  const isler = [ ...(sa?[`<button class="row" data-ders="${esc(sa.k)}" data-sekme="${sa.sekme}"><span class="ri">${sa.ikon}</span><div><div class="rt">${esc(sa.baslik)}</div><div class="rs">${esc(sa.alt)}</div></div><span class="rx">${icon("chev","sm")}</span></button>`]:[]) ];
-  return `${ogDort()}
-    <div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3><span class="faint small">${isler.length + (tk.length?1:0)} adım</span></div>
-      <div class="tklist">${isler.join("")}</div>${tk.length?tekrarKarti(s, true).replace('<div class="card ogt">','<div class="ogtic">'):""}
-      ${!isler.length && !tk.length ? `<p class="muted small" style="margin:6px 0 0">Bugünlük her şey tamam 🎉</p>` : ""}</div>
-    ${devamSatiri(s)}
-    ${hk.length?`<div class="card"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kslist">${hk.map(k=>konuSatiri(k,s)).join("")}</div></div>`:""}
-    ${araclar(s)}`; }
-function ogB(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icerik(k));
-  const kart = k => { const d = konuDurum(k,s), seg = [d.vPct, d.tTop?(d.ts?d.ts.d/d.ts.n:0):null, d.kTop?d.kOgr/d.kTop:null];
-    return `<button class="kkart ${d.durum}" data-ders="${esc(k)}"><span class="kkh"><span class="faint small">${esc(dersAdi(k.split("|")[0]))}</span>${durumCip(d)}</span><b>${esc(konuAdi(k))}</b>
-      <span class="kkseg">${[["▶️","Video"],["🧩","Test"],["🃏","Kart"]].map(([ic,ad],i)=>seg[i]==null?`<span class="yok"><i></i><small>${ic} ${ad}</small></span>`:`<span><i style="--w:${Math.round(seg[i]*100)}%"></i><small>${ic} ${ad}</small></span>`).join("")}</span>
-      <span class="kkalt"><span class="faint small">${esc(d.c.kanal)}</span><span class="kkbtn">${d.durum==="yok"?"Başla":d.durum==="tamam"?"Tekrar et":"Devam et"} ›</span></span></button>`; };
-  return `${ogDort()}${devamSatiri(s)}
-    ${hk.length?`<div class="sech" style="margin:4px 4px 0"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kkgrid">${hk.map(kart).join("")}</div>`:""}
-    ${tekrarKarti(s)}${araclar(s)}`; }
-function ogC(s){ const sa = siradakiAdim(s);
-  const dersler = OG_SIRALAR.filter(([sk])=>sk!=="prob" && sk!=="matd").map(([sk, ad])=>{ const subs = CURX().TYT.filter(x=>x.k===sk || (sk==="mat" && (x.k==="prob"||x.k==="matd")));
-    const L = subs.flatMap(sub=>sub.t.map(n=>tkey(sub.k,n))).filter(k=>icerik(k)), D = L.map(k=>konuDurum(k,s)), say = {tamam:0, devam:0, yok:0}; D.forEach(d=>say[d.durum]++);
-    return {sk, ad: ad.split(" · ")[0], L, say, pct: L.length ? Math.round((say.tamam + say.devam*0.5)/L.length*100) : 0}; });
-  return `${sa?`<button class="card siradaki" data-ders="${esc(sa.k)}" data-sekme="${sa.sekme}"><small>Sıradaki adımın</small><span class="sri">${sa.ikon}</span><b>${esc(sa.baslik)}</b><span class="faint small">${esc(sa.alt)}</span><span class="btn pri">Başla</span></button>`:""}
-    ${tekrarKarti(s, true)}
-    <div class="card"><div class="sech"><h3>🗺️ Ders ders ilerlemen</h3><span class="faint small">TYT</span></div>
-      <div class="ydl">${dersler.map(x=>`<details class="yd" ${S.ogAcik===x.sk?"open":""} data-sk="${x.sk}"><summary><span class="ydad">${esc(x.ad)}</span><span class="ydbar"><i class="t" style="width:${x.L.length?x.say.tamam/x.L.length*100:0}%"></i><i class="d" style="width:${x.L.length?x.say.devam/x.L.length*100:0}%"></i></span><span class="ydn faint small">${x.say.tamam}/${x.L.length}</span></summary>
-        <div class="kslist">${x.L.map(k=>konuSatiri(k,s)).join("")}</div></details>`).join("")}</div></div>
-    ${ogDort()}${araclar(s)}`; }
-const OG_TASARIM = [["A","Görev listesi"],["B","Konu kartları"],["C","Yol haritası"]];
-function pOgren(s){ demoOgrenTohum(); let v = "A"; try{ v = localStorage.getItem("zk-og-tasarim")||"A"; }catch(e){}
+/* ---- Öğrenme Merkezi (koçun kararı): bugünün görevleri + koçun bu haftaki konuları; tekrar önerisi yok, sadece yanlışları çöz ---- */
+const GOREV_DERS = [[/paragraf/,"Türkçe","tr|Paragraf"],[/problem/,"Matematik"],[/geometri/,"Geometri"],[/matematik/,"Matematik"],[/fizik/,"Fizik"],[/kimya/,"Kimya"],[/biyoloji/,"Biyoloji"],[/türkçe|dil bilgisi|edebiyat/,"Türkçe"],[/tarih/,"Tarih"],[/coğrafya/,"Coğrafya"],[/felsefe/,"Felsefe"]];
+function gorevDers(t){ const n = trLow(t); if(/deneme|analiz/.test(n) && !/branş/.test(n)) return null; const m = GOREV_DERS.find(([r])=>r.test(n)); return m ? {ders:m[1], sabit:m[2]||null, prob:/problem/.test(n)} : null; }
+function dersKonulari(s, ders){ const h = (((s.plan||{})[curStart(s)]||{}).hedef||{})[ders]; if(!h || !h.konu) return [];
+  return splitKonu(h.konu).map(n=>{ const sub = dersSubs(s, ders).find(sb=>sb.t.includes(n)); return sub ? tkey(sub.k, n) : null; }).filter(Boolean); }
+function konuIslem(k, kisa){ const c = icerik(k), banka = BANKA.some(x=>x.k===k);
+  return `<span class="kis">${c?`<button data-ders="${esc(k)}">▶️ ${kisa?"Dinle":"Konu dinle"}</button>`:`<span class="yok">▶️ Video yok</span>`}${banka?`<button data-bk="konu" data-k="${esc(k)}">🧩 ${kisa?"Çöz":"Soru çöz"}</button>`:`<button data-act="go" data-v="socoz">📷 ${kisa?"Çöz":"Soru çöz"}</button>`}</span>`; }
+function konuSatiri(k, s){ const d = konuDurum(k, s);
+  return `<div class="ks ${d?d.durum:"yok"}"><div class="ksb"><span class="ksad">${esc(konuAdi(k))}</span><span class="faint small">${esc(dersAdi(k.split("|")[0]))}${d?" · "+esc(d.c.kanal):""}${d&&d.durum!=="yok"?` · ${d.durum==="tamam"?"🟢 Tamam":"🟡 Devam ediyor"}`:""}</span></div>${konuIslem(k)}</div>`; }
+function bugunGorevler(s){ const L = dayTasks(s, today()).map(g=>({g, d:gorevDers(g.t)})).filter(x=>x.d);
+  if(!L.length) return `<div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3></div><p class="muted small" style="margin:6px 0 0">Bugünkü programında ders görevi yok. Haftalık konularından dilediğine çalışabilirsin.</p></div>`;
+  return `<div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3><span class="faint small">bugünkü programından</span></div><div class="bglist">${L.map(({g,d})=>{ const ks = d.sabit ? [d.sabit] : dersKonulari(s, d.ders).filter(k=>!d.prob || k.startsWith("prob|") || true);
+      return `<div class="bgg ${g.done?"bitti":""}"><div class="bggh"><span class="bggt">${g.done?"✅":"⬜"}</span><b>${esc(g.t)}</b></div>
+        ${ks.length ? ks.map(k=>`<div class="bggk"><span>🎯 ${esc(konuAdi(k))}</span>${konuIslem(k, true)}</div>`).join("") : `<div class="bggk"><span class="faint small">Bu ders için haftalık konu yazılmamış.</span><span class="kis"><button data-act="go" data-v="videolar">▶️ Videolar</button><button data-act="go" data-v="socoz">📷 Soru çöz</button></span></div>`}</div>`; }).join("")}</div></div>`; }
+function yanlislarKarti(s){ const o = og(), H = (o.hata||[]).filter(h=>!h.tamam), bek = soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length; if(!H.length && !bek) return "";
+  const bugun = H.filter(h=>h.sonraki<=today());
+  return `<div class="card"><div class="sech"><h3>❗ Yanlışlarını çöz</h3><span class="faint small">${H.length+bek} soru</span></div><div class="tklist">
+    ${H.slice(0,3).map(h=>{ const x = h.bid ? BANKA.find(b=>b.id===h.bid) : (icerik(h.k)||{test:[]}).test[h.i]; return x ? `<button class="row" ${h.bid?`data-bk="tek" data-id="${h.bid}"`:`data-ders="${esc(h.k)}" data-sekme="test"`}><span class="ri">❗</span><div style="min-width:0"><div class="rt">${esc(konuAdi(h.k))}</div><div class="rs">${esc(x.q.replace(/\n/g," ").slice(0,70))}…</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""; }).join("")}
+    ${bek?`<button class="row" data-act="go" data-v="sorular"><span class="ri">📕</span><div><div class="rt">Hata Defteri'nde ${bek} soru bekliyor</div><div class="rs">Soru Çözüm'le adım adım çöz</div></div><span class="rx">${icon("chev","sm")}</span></button>`:""}</div>${bugun.length?`<p class="faint small" style="margin:8px 0 0">${bugun.length} tanesinin tekrar günü bugün.</p>`:""}</div>`; }
+function pOgren(s){ demoOgrenTohum(); const hk = haftaKonulari(s).map(x=>x.k);
   return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
   <div class="page ogpage ogv3">
-    <div class="ogtas"><span>Prototip tasarım:</span>${OG_TASARIM.map(([k,ad])=>`<button data-ogt="${k}" aria-pressed="${v===k}">${k} · ${ad}</button>`).join("")}</div>
-    ${v==="B" ? ogB(s) : v==="C" ? ogC(s) : ogA(s)}
+    <div class="og4"><button data-act="go" data-v="socoz" class="og4a"><span>📷</span><b>Soru Çöz</b></button><button data-act="go" data-v="videolar" class="og4b"><span>▶️</span><b>Ders Videoları</b></button><button data-act="go" data-v="banka" class="og4c"><span>🧩</span><b>Soru Bankası</b></button><button data-act="go" data-v="sorular" class="og4d"><span>📕</span><b>Hata Defteri</b></button></div>
+    ${bugunGorevler(s)}
+    ${devamSatiri(s)}
+    ${yanlislarKarti(s)}
+    ${hk.length?`<div class="card"><div class="sech"><h3>🎯 Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kslist">${hk.map(k=>konuSatiri(k,s)).join("")}</div></div>`:""}
+    ${araclar(s)}
   </div>`; }
-document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-ogt]"); if(!b) return; try{ localStorage.setItem("zk-og-tasarim", b.dataset.ogt); }catch(_){} render(); window.scrollTo(0,0); });
-document.addEventListener("toggle", e=>{ const d = e.target; if(d && d.classList && d.classList.contains("yd") && d.open) S.ogAcik = d.dataset.sk; }, true);
 /* ---- Ders Videoları sayfası ---- */
 function pVideolar(s){ const sec = S.vders || "mat", grup = sec==="mat" ? ["mat","prob","matd"] : [sec];
   const L = CURX().TYT.filter(x=>grup.includes(x.k)).flatMap(sub=>[...sub.t, ...(sub.k==="tr"?["Paragraf"]:[])].map(n=>tkey(sub.k,n))).filter(k=>VIDEO[k]);
@@ -2601,7 +2588,7 @@ function dersAc(k, sekme, sn, pi){ const c = icerik(k); if(!c) return; closeShee
     ${P.length>1?`<div class="dkbolum"><div class="dkbh">Bu konunun videoları · ${P.length}</div><div class="dkbl">${P.map((x,i)=>`<button data-dk="parca" data-pi="${i}" class="${i===pi?"on":""}"><span>${i+1}. ${x[2]==="soru"?"Soru çözümü":"Konu"}${x[3]?" · "+x[3]+" dk":""}</span>${esc(x[1])}</button>`).join("")}</div></div>`:""}
     ${BOLUM[k]?`<div class="dkbolum"><div class="dkbh">Bölümler</div><div class="dkbl">${BOLUM[k].map(([t,ad],i)=>`<button data-dk="git" data-sn="${t}" data-bi="${i}"><span>${dkSn(t)}</span>${esc(ad)}</button>`).join("")}</div></div>`:""}
     <div class="dksira"><div class="sech"><h3>Sıradaki dersler</h3><span class="faint small">önce aynı dersten</span></div><div class="vkrow">${(()=>{ const L = Object.keys(VIDEO), i = L.indexOf(k), on = k.split("|")[0]; return [...L.slice(i+1), ...L.slice(0, Math.max(0,i))].filter(x=>x.split("|")[0]===on).slice(0,8).map(x=>vidKart(x, st())).join(""); })()}</div></div></div>
-    <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
+    <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["test","Test"],["anla","Anlamadım"],["not","Notlarım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
     <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
   const sade = () => { const yd = $("#dkarac-yedek"); if(yd) yd.hidden = false; const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
@@ -2637,7 +2624,7 @@ document.addEventListener("keydown", e=>{ if(!DP.p || !$("#dersk") || /input|tex
 function bolumIsaretle(){ const B = BOLUM[DP.k]; if(!B) return; const t = dpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll(".dkbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
 function dersKapat(sessiz){ const el = $("#dersk"); if(!el) return; dpKaydet(); clearInterval(DP.tim); clearInterval(DP.oyt); try{ DP.p && DP.p.destroy && DP.p.destroy(); }catch(e){} DP.p = null; DP.k = null; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
 function izlendiYap(){ const k = DP.k; if(!k) return; const t = (st().topics||{})[k]||{}; if(t.v) return; mutate(x=>{ topic(x,k).v = true; }); sesCal("basari"); toast("Konu izlendi olarak işaretlendi ✓"); }
-function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const dd = konuDurum(DP.k, st()), ds = $("#dkdurum"); if(ds && dd) ds.innerHTML = `${durumCip(dd)}<span>▶️ ${dd.iz}/${dd.vTop}</span>${dd.tTop?`<span>🧩 ${dd.ts?dd.ts.d+"/"+dd.ts.n:"—"}</span>`:""}${dd.kTop?`<span>🃏 ${dd.kOgr}/${dd.kTop}</span>`:""}`; const c = icerik(DP.k), o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
+function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const dd = konuDurum(DP.k, st()), ds = $("#dkdurum"); if(ds && dd) ds.innerHTML = `${durumCip(dd)}<span>▶️ ${dd.iz}/${dd.vTop}</span>${dd.tTop?`<span>🧩 ${dd.ts?dd.ts.d+"/"+dd.ts.n:"—"}</span>`:""}`; const c = icerik(DP.k), o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
   document.querySelectorAll("#dersk [data-dk=sek]").forEach(b=>b.setAttribute("aria-selected", b.dataset.v===DP.sekme));
   let h = "";
   if(DP.sekme==="ozet" && !c.ozet.length) h = `<div class="empty">Bu konunun özeti ve formül kartı yakında. Şimdilik videoyu izle, önemli yerlerde 📝 ile not al.</div>
