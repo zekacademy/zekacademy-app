@@ -60,7 +60,8 @@ def denetle(Q,korpus=None):
         if not 3<=len(a)<=7: H_('anlatım adımı 3–7 değil')
         if not isinstance(q.get('adimSayisi'),int) or not 1<=q['adimSayisi']<=7: H_('adimSayisi (ÖSYM ölçüsü) 1–7 olmalı')
         for x in a:
-            if set(x)!={'baslik','aciklama','islem'}: H_('adım alanları')
+            if not {'baslik','aciklama','islem'}<=set(x) or set(x)-{'baslik','aciklama','islem','gorsel'}: H_('adım alanları')
+            if x.get('gorsel') and ('currentColor' not in x['gorsel'] or 'viewBox' not in x['gorsel']): H_('adım görseli currentColor/viewBox kullanmıyor')
             if len(x.get('baslik','').split())>6: U(f"uzun adım başlığı: {x.get('baslik')}")
             if len(re.findall(r'(?<!\d)[.!?](\s+[A-ZÇĞİÖŞÜ0-9*]|\s*$)',x.get('aciklama','')))>3: U('adım açıklaması 3 cümleden uzun')
         if len(q.get('bilgi',[]))>3: H_('bilgi en fazla 3')

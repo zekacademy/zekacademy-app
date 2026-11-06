@@ -29,7 +29,7 @@ cards=[]
 for i,q in enumerate(Q,1):
     ch=''.join(f'<li data-k="{k}" class="{"ok" if k==q["cevap"]["sik"] else ""}"><span class="h">{k})</span> {kesir(html.escape(v))}</li>' for k,v in q['siklar'].items())
     L=max(len(v) for v in q['siklar'].values()); duzen='sira' if L<=7 else ('osym' if L<=20 else 'alt')
-    st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{re.sub(r' ([=+−×<>⇒]) ','\u00a0\\1\u00a0',kesir(md(a["aciklama"])))}</div><div class="ai">{islem_html(a["islem"])}</div></li>' for a in q['adimlar'])
+    st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{re.sub(r' ([=+−×<>⇒]) ','\u00a0\\1\u00a0',kesir(md(a["aciklama"])))}</div><div class="ai">{islem_html(a["islem"])}</div>{f'<div class="ag">{a["gorsel"]}</div>' if a.get("gorsel") else ""}</li>' for a in q['adimlar'])
     ip=''.join(f'<li>{html.escape(x)}</li>' for x in q['ipuclari'])
     bi=''.join(f'<span class="bil"><b>{html.escape(b["ad"])}</b>{html.escape(b["ifade"])}</span>' for b in q['bilgi'])
     cards.append(f'''<article class="card" id="q{i}" data-z="{q["zorluk"]}" data-t="{q.get("tipId","")}">
@@ -104,7 +104,7 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .yol li:last-child::after{{display:none}}
 .ab{{font-weight:800;font-size:16px;line-height:1.3}}
 .aa{{color:var(--mut);font-size:15px;margin-top:2px;line-height:1.45}}.aa b{{color:var(--fg)}}
-.ais{{display:block}}.ai{{margin-top:9px;display:inline-block;font:19px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);border-radius:10px;padding:8px 14px;border-left:3px solid var(--acc)}}
+.ais{{display:block}}.ag{{margin-top:10px;color:var(--fg);max-width:360px}}.ag svg{{width:100%;height:auto;display:block}}.ai{{margin-top:9px;display:inline-block;font:19px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);border-radius:10px;padding:8px 14px;border-left:3px solid var(--acc)}}
 .cvp{{display:flex;align-items:center;gap:10px;margin:2px 0 14px 0;padding:12px 16px;border-radius:14px;border:2px solid var(--acc);font:20px "Plus Jakarta Sans",system-ui,sans-serif}}
 .cvp span{{font:700 13px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--acc);margin-right:4px}}
 .puf{{display:flex;gap:12px;align-items:flex-start;background:var(--fg);color:var(--card);border-radius:14px;padding:13px 15px;font-size:15px;line-height:1.45}}
