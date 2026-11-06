@@ -583,84 +583,89 @@
   "ders": "TYT Matematik",
   "konu": "Basit Eşitsizlikler · Sıralama",
   "k": "mat|Basit Eşitsizlikler",
-  "kazanim": "Çarpımların işaretinden ve bir sıralamadan sayıların işaretlerini durum ayırarak belirler; kesinlikle doğru ifadeyi seçer.",
+  "kazanim": "Zincir eşitsizlikte ortak çarpana bölerek sayıların işaretini ve 1 ile karşılaştırmasını belirler; sayıları sıralar.",
   "tipId": "esz-siralama",
   "tip": "Eşitsizlikle işaret ve sıralama",
   "zorluk": "zor",
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 4,
-  "metin": "a, b ve c sıfırdan farklı gerçel sayılar olmak üzere\na · b > 0\nb · c < 0\na > c\nolduğu biliniyor.\nBuna göre aşağıdakilerden hangisi kesinlikle doğrudur?",
+  "metin": "a, b ve c gerçel sayılar olmak üzere\na · b < a < a · c < 0\nolduğu biliniyor.\nBuna göre a, b ve c sayılarının doğru sıralanışı aşağıdakilerden hangisidir?",
   "sekil": null,
   "siklar": {
-   "A": "a > b",
-   "B": "b + c > 0",
-   "C": "a · c < b",
-   "D": "c² > a · b",
-   "E": "a − b > c"
+   "A": "a < b < c",
+   "B": "a < c < b",
+   "C": "b < a < c",
+   "D": "c < a < b",
+   "E": "c < b < a"
   },
   "cevap": {
-   "sik": "C",
-   "deger": "a · c < b"
+   "sik": "B",
+   "deger": "a < c < b"
   },
   "celdiriciler": {
-   "A": "a ile b’nin ikisi de pozitif ama hangisinin büyük olduğu belli değil: a = 1, b = 2.",
-   "B": "b + c’nin işareti sayılara bağlı: b = 1, c = −3 için negatif.",
-   "D": "c² ile a · b karşılaştırılamaz: a = b = 3, c = −1 için 1 < 9.",
-   "E": "a − b negatif olup c’den küçük kalabilir: a = 1, b = 5, c = −2 için −4 < −2."
+   "A": "a’ya bölerken yönü çevirmemek: b < 1 ve c > 1 bulmak; a negatif olduğundan yönler değişir.",
+   "C": "a · b < a’dan b’yi negatif sanmak; a’ya bölünce b > 1 çıkar.",
+   "D": "a · c < 0’dan c’yi negatif sanmak; a negatif olduğundan c pozitif olmalı.",
+   "E": "a’yı pozitif sanmak; a < a · c < 0 olduğundan a negatiftir."
   },
   "celTur": {
-   "A": "dikkat",
-   "B": "dikkat",
-   "D": "islem",
-   "E": "islem"
+   "A": "bilgi",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
   },
-  "istenen": "Her durumda doğru olan ifade.",
+  "istenen": "a, b ve c’nin küçükten büyüğe sıralanışı.",
   "bilgi": [
+   {
+    "ad": "Negatif sayıyla çarpma",
+    "ifade": "eşitsizliğin iki yanı negatif bir sayıyla çarpılır ya da bölünürse yön değişir. Örnek: −2x < 6 ⇒ x > −3"
+   },
    {
     "ad": "Çarpımın işareti",
     "ifade": "aynı işaretli iki sayının çarpımı pozitif, zıt işaretli iki sayının çarpımı negatiftir. Örnek: (−2) × (−3) = 6 · (−2) × 3 = −6"
-   },
-   {
-    "ad": "Kesinlikle doğru",
-    "ifade": "ifade verilen koşullardaki her sayı için doğru olmalıdır; tek bir karşı örnek ifadeyi eler"
    }
   ],
   "ipuclari": [
-   "a · b > 0 ise a ile b’nin işaretleri için ne söylenir? b · c < 0 ise b ile c için?",
-   "Demek ki a ile c zıt işaretli. a > c bilgisi hangisinin pozitif olduğunu söyler?",
-   "İşaretleri bulunca şıkları dene; kesin olmayanlar için karşı örnek ara."
+   "Zincirin sağ ucuna bak: a, negatif bir sayıdan küçük. a’nın işareti ne?",
+   "a · c < 0 ve a’nın işaretinden c’nin işaretini bul.",
+   "a < a · c ve a · b < a eşitsizliklerini negatif a’ya böl; yönler değişir."
   ],
   "adimlar": [
    {
-    "baslik": "Çarpımlardan",
-    "aciklama": "a · b > 0 ⇒ a ile b aynı işaretli. b · c < 0 ⇒ b ile c zıt işaretli.",
-    "islem": "a ile c zıt işaretli"
+    "baslik": "a’nın işareti",
+    "aciklama": "a, negatif bir sayıdan (a · c) küçük.",
+    "islem": "a < a × c < 0 ⇒ a < 0"
    },
    {
-    "baslik": "Sıralamadan",
-    "aciklama": "Zıt işaretli iki sayıdan büyük olanı pozitiftir; a > c.",
-    "islem": "a > 0 · c < 0"
+    "baslik": "c’nin işareti",
+    "aciklama": "a × c negatif ve a negatif; c pozitif olmalı.",
+    "islem": "c > 0"
    },
    {
-    "baslik": "b’nin işareti",
-    "aciklama": "b, a ile aynı işaretli.",
-    "islem": "b > 0"
+    "baslik": "c ile 1",
+    "aciklama": "a < a × c eşitsizliğini a’ya böl; a negatif, yön değişir.",
+    "islem": "1 > c ⇒ 0 < c < 1"
    },
    {
-    "baslik": "Şıkları dene",
-    "aciklama": "a × c negatif, b pozitif: her zaman a × c < b. Diğerleri için karşı örnek var (a = 1, b = 2 gibi).",
-    "islem": "a × c < 0 < b ✓"
+    "baslik": "b ile 1",
+    "aciklama": "a × b < a eşitsizliğini a’ya böl; yön yine değişir.",
+    "islem": "b > 1"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "a negatif, c 0 ile 1 arasında, b 1’den büyük.",
+    "islem": "a < 0 < c < 1 < b ⇒ a < c < b"
    }
   ],
-  "puf": "Çarpımın işaretinden “aynı/zıt işaretli” bilgisini çıkar; sıralama bilgisi hangi tarafın pozitif olduğunu söyler.",
+  "puf": "Bir eşitsizliği ortak çarpana bölmeden önce o çarpanın işaretini kesinleştir; negatifse yön değişir.",
   "kisaYol": null,
   "kardes": "tytmat-esitsizlik-0008k",
-  "kaynakKart": "K-ESZ-03 (işaret çıkarımı + kesin yargı) · yeni koşullar (iki çarpım işareti ve bir sıralama), şıklarda ifade",
+  "kaynakKart": "K-ESZ-03 (çarpımlı zincir eşitsizlikten sıralama) · yeni zincir (a · b < a < a · c < 0), istenen üç sayının sıralaması",
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  }
 ]

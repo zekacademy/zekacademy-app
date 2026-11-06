@@ -1,0 +1,639 @@
+[
+ {
+  "id": "tytfiz-optik-0001k",
+  "ana": "tytfiz-optik-0001",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Aydınlanma",
+  "k": "fiz|Optik",
+  "kazanim": "Noktasal kaynağın aydınlanma şiddetinin uzaklıkla değişimini oranla hesaplar.",
+  "tipId": "fz-op-aydinlanma",
+  "tip": "Aydınlanma şiddeti",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Işık şiddeti sabit noktasal bir lambanın 5 m uzağındaki duvarın aydınlanma şiddeti 16 lx’tir.\nDuvar ile lamba arası 2 m’ye düşürülürse duvarın aydınlanma şiddeti kaç lx olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "2,56",
+   "B": "16",
+   "C": "40",
+   "D": "80",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Oranı ters kurup uzaklığın karesiyle çarpmış: 16 × (2/5)².",
+   "C": "Aydınlanmanın uzaklıkla ters orantılı olduğunu sanıp 16 × 5 ÷ 2 almış.",
+   "D": "16 ile uzaklığı (5) çarpmış.",
+   "B": "Aydınlanmanın uzaklıkla değişmediğini sanıp ilk değeri yazmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "islem",
+   "B": "dikkat"
+  },
+  "istenen": "Lamba 2 m uzaktayken aydınlanma şiddeti (lx).",
+  "bilgi": [
+   {
+    "ad": "Aydınlanma şiddeti",
+    "ifade": "noktasal kaynağın ışık şiddeti I, ekranın uzaklığı d ise aydınlanma E = I ÷ d². Uzaklık 2 katına çıkarsa aydınlanma 4’te 1’ine düşer (birim: lüks, lx)"
+   }
+  ],
+  "ipuclari": [
+   "Aydınlanma, uzaklığın karesiyle ters orantılıdır.",
+   "Uzaklık kaç kat artıyor? Aydınlanma bunun karesi kadar azalır.",
+   "Önce uzaklık oranını bul, sonra karesini al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uzaklık oranı",
+    "aciklama": "Uzaklık 5 m’den 2 m’ye iniyor; uzaklık 2,5 kat azalıyor.",
+    "islem": "5 ÷ 2 = 2,5 kat"
+   },
+   {
+    "baslik": "Aydınlanmanın değişimi",
+    "aciklama": "Uzaklık azalınca aydınlanma uzaklık oranının karesi kadar artar.",
+    "islem": "2,5² = 6,25 kat"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yeni aydınlanma şiddeti.",
+    "islem": "E′ = 16 × 6,25 = 100 lx"
+   }
+  ],
+  "puf": "Aydınlanmada uzaklık kaç kat artarsa aydınlanma o sayının karesi kadar azalır.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-01 (uzaklık ve aydınlanma) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0002k",
+  "ana": "tytfiz-optik-0002",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Düzlem Ayna",
+  "k": "fiz|Optik",
+  "kazanim": "Düzlem aynada cisim–görüntü uzaklığını konum değişimiyle bulur.",
+  "tipId": "fz-op-duzlem-ayna",
+  "tip": "Düzlem aynada görüntü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir cisim, bir düzlem aynanın 4 m önündedir. Cisim sabit tutulup ayna cisimden 1 m uzaklaştırılıyor.\nBuna göre ayna uzaklaştırıldıktan sonra cisim ile görüntüsü arasındaki uzaklık kaç m olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "6",
+   "C": "8",
+   "D": "9",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Cismin yeni aynaya olan uzaklığını (5 m) cevap sanmış.",
+   "B": "Görüntünün aynadan uzaklığına (5 m) kaydırmayı (1 m) eklemiş.",
+   "C": "Başlangıçtaki cisim–görüntü uzaklığını (2 × 4) yazmış; aynanın kaymasını hesaba katmamış.",
+   "D": "Başlangıçtaki uzaklığa (8 m) yalnızca 1 m eklemiş; görüntünün de aynayla birlikte kaydığını atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Ayna kaydırıldıktan sonra cisim ile görüntü arası (m).",
+  "bilgi": [
+   {
+    "ad": "Düzlem ayna",
+    "ifade": "görüntü aynanın arkasındadır ve aynadan cisim kadar uzaktır. Cisim ile görüntü arası = 2 × (cismin aynaya uzaklığı). Örnek: cisim aynadan 2 m uzaktaysa görüntüsü ile arası 4 m"
+   }
+  ],
+  "ipuclari": [
+   "Cismin aynaya olan yeni uzaklığını bul.",
+   "Görüntü, aynanın arkasında cisim kadar uzaktadır.",
+   "Cisim ile görüntü arası, aynaya uzaklığın 2 katıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yeni uzaklık",
+    "aciklama": "Ayna uzaklaştığı için cismin aynaya uzaklığı artar.",
+    "islem": "4 + 1 = 5 m"
+   },
+   {
+    "baslik": "Görüntü",
+    "aciklama": "Görüntü aynanın arkasında 5 m uzaktadır.",
+    "islem": "görüntü: 5 m"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Cisim ile görüntü arası iki uzaklığın toplamıdır.",
+    "islem": "5 + 5 = 10 m"
+   }
+  ],
+  "puf": "Düzlem aynada cisim ile görüntü arasındaki uzaklık hep aynaya uzaklığın iki katıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-02 (cisim–görüntü uzaklığı) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0003k",
+  "ana": "tytfiz-optik-0003",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Renk",
+  "k": "fiz|Optik",
+  "kazanim": "Renkli ışık altında cismin görünen rengini ışığın ve cismin bileşenlerinden belirler.",
+  "tipId": "fz-op-renk",
+  "tip": "Işık ve cisim rengi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Beyaz ışıkta mor görünen bir cisim, karanlık odada ışık kaynaklarıyla aydınlatılıyor.\nBuna göre;\nI. sarı ışıkta kırmızı,\nII. camgöbeği ışıkta mavi,\nIII. yeşil ışıkta mor\ngörünür ifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Camgöbeği (yeşil + mavi) ışıktaki mavi bileşenin yansıdığını atlamış.",
+   "B": "Sarı (kırmızı + yeşil) ışıktaki kırmızı bileşenin yansıdığını atlamış.",
+   "C": "Mor cismin yeşil ışıkta mor görüneceğini sanmış; cismin yeşil bileşeni yoktur, siyah görünür.",
+   "E": "Yeşil ışıkta cismin mor göründüğünü sanmış; cisim yeşili soğurur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Işık ve cisim rengi",
+    "ifade": "kırmızı, yeşil ve mavi ana renklerdir; sarı = kırmızı + yeşil, mor = kırmızı + mavi, camgöbeği = yeşil + mavi. Cisim yalnız kendi rengindeki bileşenleri yansıtır, kalanını soğurur; yansıtacak bileşen yoksa siyah görünür"
+   }
+  ],
+  "ipuclari": [
+   "Mor, hangi iki ana rengin birleşimidir?",
+   "Her ışığın hangi bileşenlerinden cismin yansıtabildiği var mı, ayrı ayrı bak.",
+   "Yansıtılacak bileşen kalmıyorsa cisim siyah görünür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Cismin yansıttığı renkler",
+    "aciklama": "Mor = kırmızı + mavi. Mor cisim kırmızıyı ve maviyi yansıtır, yeşili soğurur.",
+    "islem": "yansıtır: kırmızı, mavi · soğurur: yeşil"
+   },
+   {
+    "baslik": "İfadeleri sına",
+    "aciklama": "Sarı ışık = kırmızı + yeşil: kırmızı yansır, yeşil soğurulur, cisim kırmızı görünür. Camgöbeği ışık = yeşil + mavi: mavi yansır, cisim mavi görünür. Yeşil ışık soğurulur, cisim siyah görünür.",
+    "islem": "I: doğru · II: doğru · III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru ifadeler I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Renkli ışıkta cisim, ışığın rengi cismin yansıttığı renklerden biriyse o renkte, değilse siyah görünür.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-03 (renkli ışıkta cisim) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0004k",
+  "ana": "tytfiz-optik-0004",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Kırılma",
+  "k": "fiz|Optik",
+  "kazanim": "Işığın iki ortam sınırındaki kırılmasında kırılma indisini açılardan bulur.",
+  "tipId": "fz-op-kirilma",
+  "tip": "Işığın kırılması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki gibi havadan bir camdan yapılmış levhaya normalle 37° açıyla gelen tek renkli ışık, levhada 30° açıyla kırılıyor.\nIşığın havadaki hızı c, sin 37° = 0,6 ve sin 30° = 0,5 olduğuna göre ışığın levhadaki hızı kaç c’dir?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"20\" y1=\"85\" x2=\"310\" y2=\"85\" stroke-width=\"1.6\"/><line x1=\"165\" y1=\"14\" x2=\"165\" y2=\"158\" stroke-dasharray=\"4 3\" stroke-width=\"1\" opacity=\".6\"/><line x1=\"124.1\" y1=\"30.7\" x2=\"165.0\" y2=\"85.0\" stroke-width=\"2\"/><path d=\"M158.9 81.5 L165.0 85.0 L163.3 78.2\" stroke-width=\"2\"/><line x1=\"165.0\" y1=\"85.0\" x2=\"199.0\" y2=\"143.9\" stroke-width=\"2\"/><path d=\"M193.4 139.7 L199.0 143.9 L198.1 136.9\" stroke-width=\"2\"/><text x=\"300.0\" y=\"77.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Hava</text><text x=\"300.0\" y=\"103.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Cam</text><text x=\"171.0\" y=\"67.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">normal</text><text x=\"150.4\" y=\"45.4\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">37°</text><text x=\"177.9\" y=\"137.3\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">30°</text></svg>",
+  "siklar": {
+   "A": "c/2",
+   "B": "3c/5",
+   "C": "5c/6",
+   "D": "6c/5",
+   "E": "2c"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5c/6"
+  },
+  "celdiriciler": {
+   "A": "sin 30° değerini (0,5) hız oranı sanmış.",
+   "B": "sin 37° değerini (0,6) hız oranı sanmış.",
+   "D": "Hızı c × n olarak bulmuş; v = c ÷ n olduğunu atlamış.",
+   "E": "n = sin 30° ÷ sin 37° hesabı yerine 1 ÷ sin 30° almış; hızı da c × n bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Işığın camdaki hızı (c cinsinden).",
+  "bilgi": [
+   {
+    "ad": "Snell yasası",
+    "ifade": "n₁ × sin θ₁ = n₂ × sin θ₂ (açılar normalden ölçülür). Havanın kırılma indisi 1’dir"
+   },
+   {
+    "ad": "Hız ve kırılma indisi",
+    "ifade": "ışığın n kırılma indisli ortamdaki hızı v = c ÷ n. Örnek: n = 2 ise v = c ÷ 2"
+   }
+  ],
+  "ipuclari": [
+   "Önce Snell yasasıyla camın kırılma indisini bul.",
+   "Havadaki n = 1; sinüs oranından n çıkar.",
+   "Işığın ortamdaki hızı v = c ÷ n."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kırılma indisi",
+    "aciklama": "Snell yasası hava ve cam için yazılır.",
+    "islem": "1 × sin 37° = n × sin 30° · n = 0,6 ÷ 0,5 = 6/5"
+   },
+   {
+    "baslik": "Hız bağıntısı",
+    "aciklama": "Işığın ortamdaki hızı kırılma indisiyle ters orantılıdır.",
+    "islem": "v = c ÷ n"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "n değeri yerine konur.",
+    "islem": "v = c ÷ (6/5) = 5c/6"
+   }
+  ],
+  "puf": "Işık havadan ortama geçiyorsa n = sin(hava açısı) ÷ sin(ortam açısı); açılar normalden ölçülür.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-04 (Snell yasası, kırılma indisi) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0005k",
+  "ana": "tytfiz-optik-0005",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Küresel Aynalar",
+  "k": "fiz|Optik",
+  "kazanim": "Çukur aynada cismin konumundan görüntünün yerini ve özelliklerini belirler.",
+  "tipId": "fz-op-kure-ayna",
+  "tip": "Küresel aynada görüntü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Şekilde odak noktası F, merkezi M olan çukur aynanın önüne bir cisim konulmuştur.\nBuna göre cismin görüntüsü için;\nI. Gerçektir.\nII. F ile M arasında oluşur.\nIII. Cisimden büyüktür.\nifadelerinden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 130\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"14.0\" y1=\"78.0\" x2=\"320.0\" y2=\"78.0\" stroke-width=\"1.2\"/><path d=\"M313.6 80.7 L320.0 78.0 L313.6 75.3\" stroke-width=\"1.2\"/><path d=\"M290 28 Q308 78 290 128\" stroke-width=\"2.4\"/><line x1=\"291\" y1=\"40\" x2=\"299\" y2=\"46\" stroke-width=\"1\"/><line x1=\"294\" y1=\"60\" x2=\"299\" y2=\"66\" stroke-width=\"1\"/><line x1=\"294\" y1=\"80\" x2=\"299\" y2=\"86\" stroke-width=\"1\"/><line x1=\"294\" y1=\"100\" x2=\"299\" y2=\"106\" stroke-width=\"1\"/><line x1=\"291\" y1=\"120\" x2=\"299\" y2=\"126\" stroke-width=\"1\"/><line x1=\"218\" y1=\"74\" x2=\"218\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"218.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">F</text><line x1=\"146\" y1=\"74\" x2=\"146\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"146.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><line x1=\"110.0\" y1=\"78.0\" x2=\"110.0\" y2=\"44.0\" stroke-width=\"2.2\"/><path d=\"M112.7 50.4 L110.0 44.0 L107.3 50.4\" stroke-width=\"2.2\"/><text x=\"110.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">cisim</text></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Görüntünün F ile M arasında oluştuğunu (II) atlamış.",
+   "B": "Görüntünün gerçek olduğunu (I) atlamış.",
+   "D": "M’nin ötesindeki cismin görüntüsünü büyük sanmış; görüntü küçüktür.",
+   "E": "M’nin ötesindeki cismin görüntüsünü büyük sanmış; görüntü küçük ve gerçektir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Çukur ayna",
+    "ifade": "M = 2F. Cisim M’nin ötesinde: görüntü F–M arasında, gerçek, ters, küçük · F ile M arasında: görüntü M’nin ötesinde, gerçek, ters, büyük · F’nin içinde: sanal, düz, büyük"
+   }
+  ],
+  "ipuclari": [
+   "Şekilde cismin F ve M noktalarına göre yerini belirle.",
+   "Cisim F ile M arasındaysa görüntü M’nin ötesinde mi, içinde mi oluşur?",
+   "Görüntü M’nin ötesindeyse boyu cisimden büyük müdür, küçük mü?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Cismin konumu",
+    "aciklama": "Şekildeki cisim M’nin ötesindedir.",
+    "islem": "cisim (5 birim) > M (4 birim)"
+   },
+   {
+    "baslik": "Görüntü yeri",
+    "aciklama": "M’nin ötesindeki cismin görüntüsü F ile M arasında oluşur.",
+    "islem": "II doğru"
+   },
+   {
+    "baslik": "Görüntü özelliği",
+    "aciklama": "Bu bölgede görüntü gerçek, ters ve cisimden küçüktür.",
+    "islem": "I doğru · III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Çukur aynada cismi F ve M’ye göre yerleştir; F–M arasında ise görüntü M’nin ötesinde, gerçek, ters ve büyüktür.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-05 (çukur ayna görüntüsü) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0006k",
+  "ana": "tytfiz-optik-0006",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Mercekler",
+  "k": "fiz|Optik",
+  "kazanim": "İnce kenarlı merceğin önünde cisim yer değiştirince görüntünün yerini ve boyunu karşılaştırır.",
+  "tipId": "fz-op-mercek",
+  "tip": "Mercekte görüntü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Şekildeki ince kenarlı mercekte F odak noktası, 2F merceğin iki katı odak uzaklığındaki noktadır. Merceğin önünde L noktasında duran cisim K noktasına getiriliyor.\nBuna göre görüntü için;\nI. Sanal olur.\nII. Cisimden küçük olur.\nIII. Cisimle aynı yönlü (düz) olur.\nifadelerinden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 130\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"14.0\" y1=\"78.0\" x2=\"320.0\" y2=\"78.0\" stroke-width=\"1.2\"/><path d=\"M313.6 80.7 L320.0 78.0 L313.6 75.3\" stroke-width=\"1.2\"/><line x1=\"165.0\" y1=\"78.0\" x2=\"165.0\" y2=\"22.0\" stroke-width=\"1.8\"/><path d=\"M167.7 28.4 L165.0 22.0 L162.3 28.4\" stroke-width=\"1.8\"/><line x1=\"165.0\" y1=\"78.0\" x2=\"165.0\" y2=\"134.0\" stroke-width=\"1.8\"/><path d=\"M162.3 127.6 L165.0 134.0 L167.7 127.6\" stroke-width=\"1.8\"/><line x1=\"117\" y1=\"74\" x2=\"117\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"117.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">F</text><line x1=\"213\" y1=\"74\" x2=\"213\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"213.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">F</text><line x1=\"69\" y1=\"74\" x2=\"69\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"69.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2F</text><line x1=\"261\" y1=\"74\" x2=\"261\" y2=\"82\" stroke-width=\"1.4\"/><text x=\"261.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2F</text><line x1=\"141\" y1=\"75\" x2=\"141\" y2=\"81\" stroke-width=\"1.4\"/><text x=\"141.0\" y=\"95.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><line x1=\"93\" y1=\"75\" x2=\"93\" y2=\"81\" stroke-width=\"1.4\"/><text x=\"93.0\" y=\"95.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><line x1=\"21\" y1=\"75\" x2=\"21\" y2=\"81\" stroke-width=\"1.4\"/><text x=\"21.0\" y=\"95.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">N</text><line x1=\"93.0\" y1=\"78.0\" x2=\"93.0\" y2=\"44.0\" stroke-width=\"2.2\"/><path d=\"M95.7 50.4 L93.0 44.0 L90.3 50.4\" stroke-width=\"2.2\"/><text x=\"93.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">cisim</text></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Sanal görüntünün düz olduğunu (III) atlamış.",
+   "B": "Görüntünün sanal olduğunu (I) atlamış.",
+   "D": "Görüntünün küçük olacağını sanmış; F’nin içindeki cismin görüntüsü büyüktür.",
+   "E": "Görüntünün cisimden küçük olacağını (II) doğru sanmış; F’nin içindeki cismin görüntüsü büyüktür."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "İnce kenarlı mercek",
+    "ifade": "cisim 2F’nin ötesinde: görüntü F–2F arasında, gerçek, ters, küçük · F–2F arasında: görüntü 2F’nin ötesinde, gerçek, ters, büyük · F’nin içinde: sanal, düz, büyük"
+   }
+  ],
+  "ipuclari": [
+   "K’nın F’ye göre yerini belirle: F’nin içinde mi, dışında mı?",
+   "F’nin içindeki cismin görüntüsü sanal mıdır, gerçek mi?",
+   "Sanal görüntü düz mü ters mi, boyu cisimden büyük mü küçük mü?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk konum",
+    "aciklama": "L, F ile 2F arasındadır.",
+    "islem": "görüntü: gerçek, ters, büyük"
+   },
+   {
+    "baslik": "Son konum",
+    "aciklama": "K, F’nin içindedir (merceğe F’den yakın).",
+    "islem": "görüntü: sanal, düz, büyük"
+   },
+   {
+    "baslik": "İfadeleri sına",
+    "aciklama": "F’nin içindeki cismin görüntüsü sanal ve düzdür; boyu cisimden büyüktür.",
+    "islem": "I doğru · II yanlış · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Mercekte cisim merceğe doğru yaklaşırsa görüntü büyür ve mercekten uzaklaşır; cisim uzaklaşırsa görüntü küçülür ve merceğe yaklaşır.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-06 (mercekte konum değişimi) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0007k",
+  "ana": "tytfiz-optik-0007",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Aydınlanma",
+  "k": "fiz|Optik",
+  "kazanim": "İki kaynağın aydınlanmasının eşit olduğu noktayı uzaklık oranlarının kareköküyle bulur.",
+  "tipId": "fz-op-aydinlanma",
+  "tip": "Aydınlanma şiddeti",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Işık şiddetleri sırasıyla 4I ve I olan noktasal M ve N lambaları arasındaki uzaklık 90 cm’dir. Lambaları birleştiren doğru üzerinde ve aralarında bulunan bir perde, iki lambanın perdede oluşturduğu aydınlanmalar eşit olacak biçimde konuluyor.\nBuna göre perde M’den kaç cm uzaktadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "30",
+   "C": "45",
+   "D": "60",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "Şiddet oranını (1 : 5) doğrusal alıp 90 ÷ 5 hesaplamış.",
+   "B": "Perdenin N’ye olan uzaklığını (90 − 60) M’ye olan uzaklık sanmış.",
+   "C": "İki lambanın ortasına koymuş; şiddetlerin farklı olduğunu atlamış.",
+   "E": "Şiddet oranını doğrusal alıp 90 × 4 ÷ 5 hesaplamış; aydınlanmanın uzaklığın karesiyle değiştiğini atlamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Perdenin M lambasına uzaklığı (cm).",
+  "bilgi": [
+   {
+    "ad": "Aydınlanma şiddeti",
+    "ifade": "noktasal kaynağın ışık şiddeti I, ekranın uzaklığı d ise aydınlanma E = I ÷ d². Uzaklık 2 katına çıkarsa aydınlanma 4’te 1’ine düşer (birim: lüks, lx)"
+   }
+  ],
+  "ipuclari": [
+   "Perdenin M’ye uzaklığı x ise N’ye uzaklığı toplam uzaklıktan x çıkarılarak bulunur.",
+   "Aydınlanmalar eşit: şiddet ÷ uzaklık² iki lamba için aynıdır.",
+   "Karekök alıp çapraz çarp, sonra x’i çek."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği yaz",
+    "aciklama": "Perdenin M’ye uzaklığı x ise N’ye uzaklığı 90 − x olur.",
+    "islem": "4I ÷ x² = I ÷ (90 − x)²"
+   },
+   {
+    "baslik": "Karekök al",
+    "aciklama": "Her iki tarafın karekökü alınır.",
+    "islem": "2 ÷ x = 1 ÷ (90 − x)"
+   },
+   {
+    "baslik": "Çapraz çarp",
+    "aciklama": "Paydalar eşitlenir.",
+    "islem": "2 × (90 − x) = x"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Parantez açılır, x yalnız bırakılır.",
+    "islem": "180 − 2x = x · 180 = 3x"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "M’ye uzaklık.",
+    "islem": "x = 60 cm"
+   }
+  ],
+  "puf": "Eşit aydınlanma için I₁ ÷ d₁² = I₂ ÷ d₂² yaz; karekök alıp uzaklık oranını şiddetlerin kareköküne eşitle.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-07 (eşit aydınlanma noktası) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-optik-0008k",
+  "ana": "tytfiz-optik-0008",
+  "ders": "TYT Fizik",
+  "konu": "Optik · Düzlem Ayna",
+  "k": "fiz|Optik",
+  "kazanim": "Düzlem aynada boyun tamamını görmek için aynanın kenar yüksekliklerini belirler.",
+  "tipId": "fz-op-duzlem-ayna",
+  "tip": "Düzlem aynada görüntü",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 5,
+  "metin": "Boyu 1,6 m olan, göz hizası yerden 1,5 m yükseklikte bulunan bir çocuk, 3 m uzağındaki dik duran düzlem aynada kendisini baştan ayağa görüyor (şekil).\nÇocuk ayak ucunu aynada görebildiğine göre aynanın alt kenarı yerden en çok kaç m yüksekte olabilir?",
+  "sekil": "<svg viewBox=\"0 0 330 143\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"14\" y1=\"115\" x2=\"320\" y2=\"115\" stroke-width=\"1.6\"/><line x1=\"70\" y1=\"115\" x2=\"70\" y2=\"40.8\" stroke-width=\"3\"/><circle cx=\"70\" cy=\"36.8\" r=\"6\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"37.0\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><line x1=\"250.0\" y1=\"115\" x2=\"250.0\" y2=\"23.799999999999997\" stroke-dasharray=\"5 4\" stroke-width=\"2.2\"/><text x=\"258.0\" y=\"35.8\" text-anchor=\"start\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">ayna</text><line x1=\"50\" y1=\"31.799999999999997\" x2=\"62\" y2=\"31.799999999999997\" stroke-width=\"1\"/><line x1=\"56\" y1=\"31.799999999999997\" x2=\"56\" y2=\"115\" stroke-width=\"1\"/><text x=\"52.0\" y=\"77.4\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1,6 m</text><text x=\"80.0\" y=\"41.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">göz: 1,5 m</text><line x1=\"70\" y1=\"125\" x2=\"250.0\" y2=\"125\" stroke-width=\"1\"/><text x=\"160.0\" y=\"122.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3 m</text></svg>",
+  "siklar": {
+   "A": "0,75",
+   "B": "0,8",
+   "C": "1,5",
+   "D": "1,55",
+   "E": "1,6"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "0,75"
+  },
+  "celdiriciler": {
+   "B": "Aynanın en az boyunu (1,6 ÷ 2) alt kenar yüksekliği sanmış.",
+   "D": "Baş ucunu görmek için gereken yüksekliği alt kenar sanmış.",
+   "C": "Göz yüksekliğini alt kenar sanmış; ayak ucundan gelen ışının yansıma noktasını bulmamış.",
+   "E": "Çocuğun boyunu alt kenar yüksekliği sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "D": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Aynanın alt kenarının yerden en çok yüksekliği (m).",
+  "bilgi": [
+   {
+    "ad": "Düzlem aynada boy görme",
+    "ifade": "baş ucundan ve ayak ucundan gelen ışınların aynadaki yansıma noktaları, göz ile bu uçlar arasındaki yüksekliğin tam ortasındadır. Kişinin aynaya uzaklığı bu yükseklikleri değiştirmez"
+   }
+  ],
+  "ipuclari": [
+   "Ayak ucundan gelen ışık aynada yansıyıp göze ulaşır.",
+   "Yansıma noktası, ayak ucu ile göz arasındaki yüksekliğin ortasındadır.",
+   "Çocuğun aynaya uzaklığı sonucu değiştirmez."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Işının yolu",
+    "aciklama": "Ayak ucunun görüntüsü aynanın arkasında yer seviyesindedir (0 m); göz 1,5 m yüksekliktedir.",
+    "islem": "ayak ucu: 0 m · göz: 1,5 m"
+   },
+   {
+    "baslik": "Yansıma noktası",
+    "aciklama": "Yansıma noktası, ayak ucu ile göz yüksekliklerinin ortasındadır.",
+    "islem": "(0 + 1,5) ÷ 2"
+   },
+   {
+    "baslik": "Alt kenar",
+    "aciklama": "Ayak ucunun görülebilmesi için aynanın alt kenarı bu noktadan yukarıda olamaz.",
+    "islem": "0,75 m"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Baş ucu için yansıma noktası (1,6 + 1,5) ÷ 2 = 1,55 m; ayna boyu 1,55 − 0,75 = 0,8 m olur (boyun yarısı).",
+    "islem": "0,8 m = 1,6 ÷ 2"
+   }
+  ],
+  "puf": "Boyun tamamını görmek için ayna en az boyun yarısı kadar olmalıdır; üst kenar (boy + göz) ÷ 2, alt kenar göz ÷ 2 yüksekliktedir.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZOP-08 (boy görme) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

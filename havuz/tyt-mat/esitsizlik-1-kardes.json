@@ -578,83 +578,88 @@
   "ders": "TYT Matematik",
   "konu": "Basit Eşitsizlikler · Sıralama",
   "k": "mat|Basit Eşitsizlikler",
-  "kazanim": "Çarpımların işaretinden ve bir sıralamadan sayıların işaretlerini durum ayırarak belirler; kesinlikle doğru ifadeyi seçer.",
+  "kazanim": "Zincir eşitsizlikte ortak çarpana bölerek sayıların işaretini ve 1 ile karşılaştırmasını belirler; sayıları sıralar.",
   "tipId": "esz-siralama",
   "tip": "Eşitsizlikle işaret ve sıralama",
   "zorluk": "zor",
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 4,
-  "metin": "a, b ve c sıfırdan farklı gerçel sayılardır.\na · b < 0\na · c > 0\nb > c\nolduğuna göre aşağıdakilerden hangisi her zaman doğrudur?",
+  "metin": "x, y ve z gerçel sayılardır.\nx · z < z < x · y < 0\nolduğuna göre x, y ve z’nin küçükten büyüğe sıralanışı aşağıdakilerden hangisidir?",
   "sekil": null,
   "siklar": {
-   "A": "a < c",
-   "B": "b + c > 0",
-   "C": "a · b > c",
-   "D": "a · c > b",
-   "E": "a + c < b"
+   "A": "x < y < z",
+   "B": "y < x < z",
+   "C": "y < z < x",
+   "D": "z < x < y",
+   "E": "z < y < x"
   },
   "cevap": {
    "sik": "E",
-   "deger": "a + c < b"
+   "deger": "z < y < x"
   },
   "celdiriciler": {
-   "A": "a ile c’nin ikisi de negatif ama sıraları belli değil: a = −1, c = −2.",
-   "B": "b + c’nin işareti sayılara bağlı: b = 1, c = −3 için negatif.",
-   "C": "a · b negatif ama c’den küçük olabilir: a = −5, b = 2, c = −1 için −10 < −1.",
-   "D": "a · c pozitif ama b’den küçük olabilir: a = c = −1, b = 5 için 1 < 5."
+   "A": "Yönleri hiç çevirmeden sayıları pozitif sanmak; z negatif olduğundan z’ye bölünce yön değişir.",
+   "B": "z’yi pozitif sanmak; z, negatif bir sayıdan (x · y) küçük.",
+   "C": "z < x · y ile x · y < y bilgisini birleştirmemek; z < x · y < y olduğundan z < y.",
+   "D": "x’i negatif sanmak; x · z < z eşitsizliği z’ye bölünce x > 1 çıkar."
   },
   "celTur": {
-   "A": "dikkat",
-   "B": "dikkat",
+   "A": "bilgi",
+   "B": "bilgi",
    "C": "islem",
-   "D": "islem"
+   "D": "dikkat"
   },
-  "istenen": "Her zaman doğru olan ifade.",
+  "istenen": "x, y ve z’nin küçükten büyüğe sıralanışı.",
   "bilgi": [
+   {
+    "ad": "Negatif sayıyla çarpma",
+    "ifade": "eşitsizliğin iki yanı negatif bir sayıyla çarpılır ya da bölünürse yön değişir. Örnek: −2x < 6 ⇒ x > −3"
+   },
    {
     "ad": "Çarpımın işareti",
     "ifade": "aynı işaretli iki sayının çarpımı pozitif, zıt işaretli iki sayının çarpımı negatiftir. Örnek: (−2) × (−3) = 6 · (−2) × 3 = −6"
-   },
-   {
-    "ad": "Kesinlikle doğru",
-    "ifade": "ifade verilen koşullardaki her sayı için doğru olmalıdır; tek bir karşı örnek ifadeyi eler"
    }
   ],
   "ipuclari": [
-   "a · b < 0 ve a · c > 0 ise b ile c’nin işaretleri hakkında ne söylenir?",
-   "b > c bilgisiyle b’nin ve c’nin işaretini bul; sonra a’nınkini.",
-   "İki negatif sayının toplamı ile bir pozitif sayıyı karşılaştır."
+   "z’nin işaretini zincirin sağ ucundan bul.",
+   "x · z < z eşitsizliğini negatif z’ye böl; x hakkında ne öğrenirsin?",
+   "x > 1 ve y < 0 ise x · y ile y’yi karşılaştır."
   ],
   "adimlar": [
    {
-    "baslik": "Çarpımlardan",
-    "aciklama": "a ile b zıt, a ile c aynı işaretli.",
-    "islem": "b ile c zıt işaretli"
+    "baslik": "z’nin işareti",
+    "aciklama": "z, negatif bir sayıdan (x · y) küçük.",
+    "islem": "z < x × y < 0 ⇒ z < 0"
    },
    {
-    "baslik": "Sıralamadan",
-    "aciklama": "Zıt işaretlilerden büyük olan pozitif; b > c.",
-    "islem": "b > 0 · c < 0"
+    "baslik": "x ile 1",
+    "aciklama": "x × z < z eşitsizliğini negatif z’ye böl; yön değişir.",
+    "islem": "x > 1"
    },
    {
-    "baslik": "a’nın işareti",
-    "aciklama": "a, c ile aynı işaretli.",
-    "islem": "a < 0"
+    "baslik": "y’nin işareti",
+    "aciklama": "x × y negatif, x pozitif.",
+    "islem": "y < 0"
    },
    {
-    "baslik": "Şıkları dene",
-    "aciklama": "a + c iki negatifin toplamı, negatif; b pozitif. Diğerleri için karşı örnek var.",
-    "islem": "a + c < 0 < b ✓"
+    "baslik": "y ile z",
+    "aciklama": "x > 1 ve y < 0 ise x × y, y’den küçüktür (ör. 2 × (−3) = −6 < −3).",
+    "islem": "z < x × y < y ⇒ z < y"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "z ile y negatif, x 1’den büyük.",
+    "islem": "z < y < 0 < 1 < x ⇒ z < y < x"
    }
   ],
-  "puf": "Önce işaretleri kesinleştir, sonra her şıkkı ya kanıtla ya da karşı örnekle ele.",
+  "puf": "Negatif bir sayıyı 1’den büyük bir sayıyla çarpınca daha küçük bir sayı elde edilir.",
   "kisaYol": null,
-  "kaynakKart": "K-ESZ-03 (işaret çıkarımı + kesin yargı) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "kaynakKart": "K-ESZ-03 (çarpımlı zincir eşitsizlikten sıralama) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  }
 ]

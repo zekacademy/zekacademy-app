@@ -268,40 +268,42 @@ P.K('0007',metin='−5 < a < 2 ve −1 < b < 3 olmak üzere a ve b gerçel sayı
 
 # ===== 0008 ZOR · esz-siralama (K-ESZ-03)
 def rs():
-    return Fr(random.choice([-1,1])*random.randint(1,60),random.randint(1,6))
-O=[t for t in ((rs(),rs(),rs()) for _ in range(60000)) if t[0]*t[1]>0 and t[1]*t[2]<0 and t[0]>t[2]]
-assert len(O)>3000 and all(a>0 and b>0 and c<0 for a,b,c in O)
-SEC={'a > b':lambda a,b,c:a>b,'b + c > 0':lambda a,b,c:b+c>0,'a · c < b':lambda a,b,c:a*c<b,'c² > a · b':lambda a,b,c:c*c>a*b,'a − b > c':lambda a,b,c:a-b>c}
-dogru=[k for k,f in SEC.items() if all(f(*t) for t in O)]; assert dogru==['a · c < b'] and all(any(not f(*t) for t in O) for k,f in SEC.items() if k!='a · c < b')
-assert not (1>2) and not (1+(-3)>0) and not ((-1)**2>3*3) and not (1-5>-2)
-P.R('0008',**T('esz-siralama'),zorluk='zor',alt='Sıralama',kazanim='Çarpımların işaretinden ve bir sıralamadan sayıların işaretlerini durum ayırarak belirler; kesinlikle doğru ifadeyi seçer.',kalip='düz',adim=4,
- kart='K-ESZ-03 (işaret çıkarımı + kesin yargı) · yeni koşullar (iki çarpım işareti ve bir sıralama), şıklarda ifade',
- metin='a, b ve c sıfırdan farklı gerçel sayılar olmak üzere\na · b > 0\nb · c < 0\na > c\nolduğu biliniyor.\nBuna göre aşağıdakilerden hangisi kesinlikle doğrudur?',
- **SK('a · c < b',{'a > b':('dikkat','a ile b’nin ikisi de pozitif ama hangisinin büyük olduğu belli değil: a = 1, b = 2.'),'b + c > 0':('dikkat','b + c’nin işareti sayılara bağlı: b = 1, c = −3 için negatif.'),
-                   'c² > a · b':('islem','c² ile a · b karşılaştırılamaz: a = b = 3, c = −1 için 1 < 9.'),'a − b > c':('islem','a − b negatif olup c’den küçük kalabilir: a = 1, b = 5, c = −2 için −4 < −2.')},
-    sira=['a > b','b + c > 0','a · c < b','c² > a · b','a − b > c']),
- istenen='Her durumda doğru olan ifade.',
- ipuclari=['a · b > 0 ise a ile b’nin işaretleri için ne söylenir? b · c < 0 ise b ile c için?','Demek ki a ile c zıt işaretli. a > c bilgisi hangisinin pozitif olduğunu söyler?','İşaretleri bulunca şıkları dene; kesin olmayanlar için karşı örnek ara.'],bilgi=[ISR,KESIN],
- adimlar=[A('Çarpımlardan','a · b > 0 ⇒ a ile b aynı işaretli. b · c < 0 ⇒ b ile c zıt işaretli.','a ile c zıt işaretli'),
-          A('Sıralamadan','Zıt işaretli iki sayıdan büyük olanı pozitiftir; a > c.','a > 0 · c < 0'),
-          A('b’nin işareti','b, a ile aynı işaretli.','b > 0'),
-          A('Şıkları dene','a × c negatif, b pozitif: her zaman a × c < b. Diğerleri için karşı örnek var (a = 1, b = 2 gibi).','a × c < 0 < b ✓')],
- puf='Çarpımın işaretinden “aynı/zıt işaretli” bilgisini çıkar; sıralama bilgisi hangi tarafın pozitif olduğunu söyler.')
-O=[t for t in ((rs(),rs(),rs()) for _ in range(60000)) if t[0]*t[1]<0 and t[0]*t[2]>0 and t[1]>t[2]]
-assert len(O)>3000 and all(a<0 and b>0 and c<0 for a,b,c in O)
-SEC={'a < c':lambda a,b,c:a<c,'b + c > 0':lambda a,b,c:b+c>0,'a · b > c':lambda a,b,c:a*b>c,'a · c > b':lambda a,b,c:a*c>b,'a + c < b':lambda a,b,c:a+c<b}
-dogru=[k for k,f in SEC.items() if all(f(*t) for t in O)]; assert dogru==['a + c < b'] and all(any(not f(*t) for t in O) for k,f in SEC.items() if k!='a + c < b')
-assert not (-1<-2) and not (1-3>0) and not (-5*2>-1) and not ((-1)*(-1)>5)
-P.K('0008',metin='a, b ve c sıfırdan farklı gerçel sayılardır.\na · b < 0\na · c > 0\nb > c\nolduğuna göre aşağıdakilerden hangisi her zaman doğrudur?',
- **SK('a + c < b',{'a < c':('dikkat','a ile c’nin ikisi de negatif ama sıraları belli değil: a = −1, c = −2.'),'b + c > 0':('dikkat','b + c’nin işareti sayılara bağlı: b = 1, c = −3 için negatif.'),
-                   'a · b > c':('islem','a · b negatif ama c’den küçük olabilir: a = −5, b = 2, c = −1 için −10 < −1.'),'a · c > b':('islem','a · c pozitif ama b’den küçük olabilir: a = c = −1, b = 5 için 1 < 5.')},
-    sira=['a < c','b + c > 0','a · b > c','a · c > b','a + c < b']),
- istenen='Her zaman doğru olan ifade.',
- ipuclari=['a · b < 0 ve a · c > 0 ise b ile c’nin işaretleri hakkında ne söylenir?','b > c bilgisiyle b’nin ve c’nin işaretini bul; sonra a’nınkini.','İki negatif sayının toplamı ile bir pozitif sayıyı karşılaştır.'],bilgi=[ISR,KESIN],
- adimlar=[A('Çarpımlardan','a ile b zıt, a ile c aynı işaretli.','b ile c zıt işaretli'),
-          A('Sıralamadan','Zıt işaretlilerden büyük olan pozitif; b > c.','b > 0 · c < 0'),
-          A('a’nın işareti','a, c ile aynı işaretli.','a < 0'),
-          A('Şıkları dene','a + c iki negatifin toplamı, negatif; b pozitif. Diğerleri için karşı örnek var.','a + c < 0 < b ✓')],
- puf='Önce işaretleri kesinleştir, sonra her şıkkı ya kanıtla ya da karşı örnekle ele.')
+    return Fr(random.choice([-1,1])*random.randint(1,60),random.randint(1,12))
+def siralama(t,ad):
+    return ' < '.join(ad[i] for i in sorted(range(3),key=lambda i:t[i]))
+O=[t for t in ((rs(),rs(),rs()) for _ in range(300000)) if t[0]*t[1]<t[0]<t[0]*t[2]<0]
+assert len(O)>500 and all(a<0<c<1<b for a,b,c in O) and {siralama(t,'abc') for t in O}=={'a < c < b'}
+SIR=['a < b < c','a < c < b','b < a < c','c < a < b','c < b < a']
+P.R('0008',**T('esz-siralama'),zorluk='zor',alt='Sıralama',kazanim='Zincir eşitsizlikte ortak çarpana bölerek sayıların işaretini ve 1 ile karşılaştırmasını belirler; sayıları sıralar.',kalip='düz',adim=4,
+ kart='K-ESZ-03 (çarpımlı zincir eşitsizlikten sıralama) · yeni zincir (a · b < a < a · c < 0), istenen üç sayının sıralaması',
+ metin='a, b ve c gerçel sayılar olmak üzere\na · b < a < a · c < 0\nolduğu biliniyor.\nBuna göre a, b ve c sayılarının doğru sıralanışı aşağıdakilerden hangisidir?',
+ **SK('a < c < b',{'a < b < c':('bilgi','a’ya bölerken yönü çevirmemek: b < 1 ve c > 1 bulmak; a negatif olduğundan yönler değişir.'),
+                   'b < a < c':('islem','a · b < a’dan b’yi negatif sanmak; a’ya bölünce b > 1 çıkar.'),
+                   'c < a < b':('bilgi','a · c < 0’dan c’yi negatif sanmak; a negatif olduğundan c pozitif olmalı.'),
+                   'c < b < a':('dikkat','a’yı pozitif sanmak; a < a · c < 0 olduğundan a negatiftir.')},sira=SIR),
+ istenen='a, b ve c’nin küçükten büyüğe sıralanışı.',
+ ipuclari=['Zincirin sağ ucuna bak: a, negatif bir sayıdan küçük. a’nın işareti ne?','a · c < 0 ve a’nın işaretinden c’nin işaretini bul.','a < a · c ve a · b < a eşitsizliklerini negatif a’ya böl; yönler değişir.'],bilgi=[YON,ISR],
+ adimlar=[A('a’nın işareti','a, negatif bir sayıdan (a · c) küçük.','a < a × c < 0 ⇒ a < 0'),
+          A('c’nin işareti','a × c negatif ve a negatif; c pozitif olmalı.','c > 0'),
+          A('c ile 1','a < a × c eşitsizliğini a’ya böl; a negatif, yön değişir.','1 > c ⇒ 0 < c < 1'),
+          A('b ile 1','a × b < a eşitsizliğini a’ya böl; yön yine değişir.','b > 1'),
+          A('Sırala','a negatif, c 0 ile 1 arasında, b 1’den büyük.','a < 0 < c < 1 < b ⇒ a < c < b')],
+ puf='Bir eşitsizliği ortak çarpana bölmeden önce o çarpanın işaretini kesinleştir; negatifse yön değişir.')
+O=[t for t in ((rs(),rs(),rs()) for _ in range(300000)) if t[0]*t[2]<t[2]<t[0]*t[1]<0]
+assert len(O)>500 and all(z<y<0<1<x for x,y,z in O) and {siralama(t,'xyz') for t in O}=={'z < y < x'}
+SIR2=['x < y < z','y < x < z','y < z < x','z < x < y','z < y < x']
+P.K('0008',metin='x, y ve z gerçel sayılardır.\nx · z < z < x · y < 0\nolduğuna göre x, y ve z’nin küçükten büyüğe sıralanışı aşağıdakilerden hangisidir?',
+ **SK('z < y < x',{'x < y < z':('bilgi','Yönleri hiç çevirmeden sayıları pozitif sanmak; z negatif olduğundan z’ye bölünce yön değişir.'),
+                   'y < x < z':('bilgi','z’yi pozitif sanmak; z, negatif bir sayıdan (x · y) küçük.'),
+                   'y < z < x':('islem','z < x · y ile x · y < y bilgisini birleştirmemek; z < x · y < y olduğundan z < y.'),
+                   'z < x < y':('dikkat','x’i negatif sanmak; x · z < z eşitsizliği z’ye bölünce x > 1 çıkar.')},sira=SIR2),
+ istenen='x, y ve z’nin küçükten büyüğe sıralanışı.',
+ ipuclari=['z’nin işaretini zincirin sağ ucundan bul.','x · z < z eşitsizliğini negatif z’ye böl; x hakkında ne öğrenirsin?','x > 1 ve y < 0 ise x · y ile y’yi karşılaştır.'],bilgi=[YON,ISR],
+ adimlar=[A('z’nin işareti','z, negatif bir sayıdan (x · y) küçük.','z < x × y < 0 ⇒ z < 0'),
+          A('x ile 1','x × z < z eşitsizliğini negatif z’ye böl; yön değişir.','x > 1'),
+          A('y’nin işareti','x × y negatif, x pozitif.','y < 0'),
+          A('y ile z','x > 1 ve y < 0 ise x × y, y’den küçüktür (ör. 2 × (−3) = −6 < −3).','z < x × y < y ⇒ z < y'),
+          A('Sırala','z ile y negatif, x 1’den büyük.','z < y < 0 < 1 < x ⇒ z < y < x')],
+ puf='Negatif bir sayıyı 1’den büyük bir sayıyla çarpınca daha küçük bir sayı elde edilir.')
 
 P.yaz(os.path.join(H,ONEK+'-1.json'),os.path.join(H,ONEK+'-1-kardes.json'))

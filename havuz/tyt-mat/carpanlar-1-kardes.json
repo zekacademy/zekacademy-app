@@ -1,0 +1,650 @@
+[
+ {
+  "id": "tytmat-carpanlar-0001k",
+  "ana": "tytmat-carpanlar-0001",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · İki Kare Farkı",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "İki kare farkı özdeşliğiyle büyük sayıların kareleri farkını hesaplar.",
+  "tipId": "ca-ozdeslik",
+  "tip": "İki kare farkı ve tam kare özdeşlikleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "58² − 42²\nfarkının değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "116",
+   "C": "256",
+   "D": "800",
+   "E": "1600"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1600"
+  },
+  "celdiriciler": {
+   "A": "16, yalnızca a − b’yi bulmak; a + b ile de çarpılmalı.",
+   "B": "116, iki çarpanı toplamak: 16 + 100.",
+   "C": "256, a² − b²’yi (a − b)² sanmak.",
+   "D": "800, a + b’yi 50 almak; 58 + 42 = 100."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "İki karenin farkı.",
+  "bilgi": [
+   {
+    "ad": "İki kare farkı",
+    "ifade": "a² − b² = (a − b) × (a + b). Örnek: 7² − 3² = 4 × 10 = 40"
+   }
+  ],
+  "ipuclari": [
+   "Kareleri hesaplamadan bir özdeşlikle çöz.",
+   "a² − b² = (a − b) × (a + b).",
+   "58 − 42 ve 58 + 42’yi bul, çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Özdeşliği tanı",
+    "aciklama": "a = 58, b = 42.",
+    "islem": "58² − 42² = (58 − 42) × (58 + 42)"
+   },
+   {
+    "baslik": "Çarpanları hesapla",
+    "aciklama": "Fark 16, toplam 100.",
+    "islem": "16 × 100 = 1600"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Kareler: 3364 ve 1764.",
+    "islem": "3364 − 1764 = 1600 ✓"
+   }
+  ],
+  "puf": "Toplamı yuvarlak sayı (100, 200) olan iki sayının kareleri farkı, iki kare farkıyla bir çarpmaya iner.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-01 (iki kare farkıyla sayısal hesap) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0002k",
+  "ana": "tytmat-carpanlar-0002",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Gruplama",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Dört terimli ifadeyi gruplayarak çarpanlarına ayırır ve değerini hesaplar.",
+  "tipId": "ca-ortak",
+  "tip": "Ortak çarpan ve gruplama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "a = 23 ve b = 9 için\nab + 4a − 3b − 12\nifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "100",
+   "B": "162",
+   "C": "260",
+   "D": "284",
+   "E": "338"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "260"
+  },
+  "celdiriciler": {
+   "A": "100, ikinci çarpanı (b − 4) almak; işaret hatası.",
+   "B": "162, terimleri ters eşleştirip (a + 4) × (b − 3) yazmak.",
+   "D": "284, −12’yi +12 almak.",
+   "E": "338, ilk çarpanı (a + 3) almak; −3(b + 4) = −3b − 12."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "Gruplama",
+    "ifade": "dört terimli ifadede ikişer terimi grupla, ortak çarpanı al. Örnek: ab + 2a + 3b + 6 = a(b + 2) + 3(b + 2) = (a + 3)(b + 2)"
+   }
+  ],
+  "ipuclari": [
+   "İlk iki terimde ve son iki terimde ortak çarpan ne?",
+   "a(b + 4) − 3(b + 4) biçimine getir.",
+   "Sonra sayıları yerine koy."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grupla",
+    "aciklama": "İlk iki terimde a, son iki terimde −3 ortak.",
+    "islem": "ab + 4a − 3b − 12 = a(b + 4) − 3(b + 4)"
+   },
+   {
+    "baslik": "Ortak çarpan",
+    "aciklama": "(b + 4) iki grupta da var.",
+    "islem": "= (a − 3) × (b + 4)"
+   },
+   {
+    "baslik": "Yerine koy",
+    "aciklama": "a = 23, b = 9.",
+    "islem": "(23 − 3) × (9 + 4) = 20 × 13 = 260"
+   }
+  ],
+  "puf": "Gruplamada ortak çarpanı eksiyle birlikte dışarı al: −3b − 12 = −3(b + 4).",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-03 (gruplama ile iki çarpan) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0003k",
+  "ana": "tytmat-carpanlar-0003",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Sadeleştirme",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "İki kare farkı, tam kare ve ortak çarpanı kullanarak rasyonel ifadeleri sadeleştirir.",
+  "tipId": "ca-sadelestirme",
+  "tip": "Rasyonel ifadeleri sadeleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x ∉ {−4, 0, 4} olmak üzere\n(x² − 4x)/(x² − 16) · (x² + 8x + 16)/x²\nifadesi aşağıdakilerden hangisine eşittir?",
+  "sekil": null,
+  "siklar": {
+   "A": "x/(x + 4)",
+   "B": "1/x",
+   "C": "(x − 4)/x",
+   "D": "(x + 4)/x",
+   "E": "x + 4"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "(x + 4)/x"
+  },
+  "celdiriciler": {
+   "A": "x/(x + 4), sonucu ters çevirmek; pay ile paydayı karıştırmak.",
+   "B": "1/x, (x + 4)²’yi tek (x + 4) gibi almak.",
+   "C": "(x − 4)/x, x² + 8x + 16’yı (x + 4)(x − 4) sanmak; o ifade tam karedir.",
+   "E": "x + 4, paydadaki x²’yi tek x gibi sadeleştirmek."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İfadenin en sade biçimi.",
+  "bilgi": [
+   {
+    "ad": "İki kare farkı",
+    "ifade": "a² − b² = (a − b) × (a + b). Örnek: 7² − 3² = 4 × 10 = 40"
+   },
+   {
+    "ad": "Tam kare üç terimli",
+    "ifade": "a² + 2ab + b² = (a + b)². Örnek: x² + 6x + 9 = (x + 3)², çünkü 6x = 2 × x × 3"
+   },
+   {
+    "ad": "Sadeleştirme",
+    "ifade": "pay ve paydada aynı çarpan varsa (sıfırdan farklı olduğundan) sadeleşir. Örnek: (x + 1)(x − 2)/(x + 1) = x − 2"
+   }
+  ],
+  "ipuclari": [
+   "Dört ifadeyi de çarpanlarına ayır.",
+   "x² + 8x + 16 tam kare mi, iki kare farkı mı?",
+   "Ortak çarpanları sadeleştir; paydadaki x²’nin tamamına dikkat."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları ayır",
+    "aciklama": "Ortak çarpan ve tam kare.",
+    "islem": "x² − 4x = x(x − 4) · x² + 8x + 16 = (x + 4)²"
+   },
+   {
+    "baslik": "Paydaları ayır",
+    "aciklama": "İki kare farkı.",
+    "islem": "x² − 16 = (x − 4)(x + 4) · x² = x × x"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "(x − 4), bir (x + 4) ve bir x sadeleşir.",
+    "islem": "x × (x − 4) × (x + 4)² ÷ ((x − 4) × (x + 4) × x × x) = (x + 4)/x"
+   }
+  ],
+  "puf": "Sadeleştirmeden sonra paydada ve payda kalan çarpanları tek tek say; kare olan çarpanlar iki kez sayılır.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-05 (her parçayı çarpanlarına ayırıp sadeleştirme) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0004k",
+  "ana": "tytmat-carpanlar-0004",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Toplam ve Kareler Toplamı",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Toplam ve kareler toplamından çarpımı bulur, istenen tam kareyi hesaplar.",
+  "tipId": "ca-deger",
+  "tip": "Özdeşlikle ifade değeri bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x − y = 5\nx² + y² = 53\nolduğuna göre (x + y)² kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "14",
+   "B": "28",
+   "C": "67",
+   "D": "78",
+   "E": "81"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "81"
+  },
+  "celdiriciler": {
+   "A": "14, xy’nin değeri; soru (x + y)²’yi soruyor.",
+   "B": "28, 2xy’nin değeri; 53’e eklenmeli.",
+   "C": "67, 53’e xy eklemek; 2xy eklenmeli.",
+   "D": "78, 53’e (x − y)² = 25 eklemek; (x + y)² ile (x − y)² arasındaki fark 4xy’dir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "(x + y)² ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Tam kare açılımları",
+    "ifade": "(a + b)² = a² + 2ab + b² · (a − b)² = a² − 2ab + b². Örnek: (3 + 2)² = 9 + 12 + 4 = 25"
+   }
+  ],
+  "ipuclari": [
+   "(x − y)²’yi aç; x² + y² yerine 53 yaz.",
+   "Buradan xy’yi bul.",
+   "(x + y)² = x² + y² + 2xy."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkın karesi",
+    "aciklama": "(x − y)² açılımında x² + y² = 53.",
+    "islem": "25 = x² − 2xy + y² = 53 − 2xy"
+   },
+   {
+    "baslik": "Çarpımı bul",
+    "aciklama": "53 − 25 = 28.",
+    "islem": "2xy = 28 ⇒ xy = 14"
+   },
+   {
+    "baslik": "Toplamın karesi",
+    "aciklama": "(x + y)² = x² + y² + 2xy.",
+    "islem": "53 + 28 = 81 (x = 7, y = 2 ile kontrol: 9² = 81 ✓)"
+   }
+  ],
+  "puf": "Kareler toplamı verildiğinde önce xy’yi bul; toplamın ve farkın kareleri ondan türetilir.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-06 (a + b ve a² + b² verilip (a − b)² istenmesi) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0005k",
+  "ana": "tytmat-carpanlar-0005",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Kareden kare kesilince kalan alanı iki kare farkıyla yazar, toplam bilgisiyle kenarları bulur.",
+  "tipId": "ca-alan",
+  "tip": "Alan modeliyle çarpanlara ayırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Bir kenarı x cm olan kare biçimindeki bir kumaşın bir kenarı boyunca, y cm genişliğinde bir şerit aşağıdaki gibi kesilip çıkarılmıştır. Geriye kalan dikdörtgen parçanın alanı 84 cm², kısa kenarı 7 cm’dir.\nBuna göre kesilen şeridin genişliği (y) kaç santimetredir?",
+  "sekil": "<svg viewBox=\"0 0 300 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"40\" y=\"18\" width=\"70\" height=\"120\" stroke-width=\"1.8\"/><rect x=\"110\" y=\"18\" width=\"50\" height=\"120\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><text x=\"75.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">84 cm²</text><text x=\"135.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">şerit</text><path d=\"M40 148 H160\" stroke-width=\"1\"/><text x=\"100.0\" y=\"162.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"32.0\" y=\"82.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"135.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">y</text></svg>",
+  "siklar": {
+   "A": "5",
+   "B": "7",
+   "C": "12",
+   "D": "17",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "B": "7, kalan parçanın kısa kenarı (x − y); soru y’yi soruyor.",
+   "C": "12, karenin kenarı (x); soru şeridin genişliğini soruyor.",
+   "D": "17, x + y’yi hesaplamak; soru yalnız y’yi soruyor.",
+   "E": "19, y’yi x + 7 almak; kısa kenar x − y = 7, yani y = x − 7."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Şeridin genişliği (y).",
+  "bilgi": [
+   {
+    "ad": "Ortak çarpan",
+    "ifade": "x² − xy = x × (x − y). Örnek: x = 10, y = 3 ⇒ 100 − 30 = 10 × 7 = 70"
+   },
+   {
+    "ad": "Dikdörtgenin alanı",
+    "ifade": "alan = uzun kenar × kısa kenar. Örnek: 12 × 7 = 84"
+   }
+  ],
+  "ipuclari": [
+   "Kalan dikdörtgenin kenarları x ve x − y. Alanını yaz.",
+   "x² − xy’de ortak çarpan x; kısa kenar hangisi?",
+   "x’i bulduktan sonra y’ye geç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan alan",
+    "aciklama": "Kareden x × y’lik şerit çıktı.",
+    "islem": "x² − xy = x × (x − y) = 84"
+   },
+   {
+    "baslik": "Kenarları eşleştir",
+    "aciklama": "Kalan dikdörtgenin kenarları x ve x − y; kısa olan x − y.",
+    "islem": "x − y = 7 ⇒ x × 7 = 84 ⇒ x = 12"
+   },
+   {
+    "baslik": "Şerit genişliği",
+    "aciklama": "y = x − 7.",
+    "islem": "y = 12 − 7 = 5",
+    "gorsel": "<svg viewBox=\"0 0 300 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"40\" y=\"18\" width=\"70\" height=\"120\" stroke-width=\"1.8\"/><rect x=\"110\" y=\"18\" width=\"50\" height=\"120\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><text x=\"75.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">84 cm²</text><text x=\"135.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">şerit</text><path d=\"M40 148 H160\" stroke-width=\"1\"/><text x=\"100.0\" y=\"162.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"32.0\" y=\"82.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"135.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">y</text><text x=\"172.0\" y=\"82.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">x = 12 · y = 5</text></svg>"
+   }
+  ],
+  "puf": "Kesilen parça şerit ise kalan alan x(x − y) biçiminde ortak çarpanla yazılır; kenarları şekilde eşleştir.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-08 (kareden kare kesme: a² − b²) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0006k",
+  "ana": "tytmat-carpanlar-0006",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · x ile 1/x",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "x − 1/x verildiğinde tam kare açılımlarıyla x + 1/x’in karesini bulur.",
+  "tipId": "ca-ozdeslik",
+  "tip": "İki kare farkı ve tam kare özdeşlikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a + 1/a = 5\nolduğuna göre (a − 1/a)² ifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "19",
+   "B": "21",
+   "C": "23",
+   "D": "25",
+   "E": "27"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "21"
+  },
+  "celdiriciler": {
+   "A": "19, a² + 1/a²’den 4 çıkarmak; (a − 1/a)² = a² + 1/a² − 2.",
+   "C": "23, a² + 1/a²’nin değeri; 2 çıkarılmalı.",
+   "D": "25, (a + 1/a)²’yi cevap sanmak.",
+   "E": "27, 25’e 2 eklemek; (a − 1/a)² = (a + 1/a)² − 4."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "(a − 1/a)² ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Tam kare açılımları",
+    "ifade": "(a + b)² = a² + 2ab + b² · (a − b)² = a² − 2ab + b². Örnek: (3 + 2)² = 9 + 12 + 4 = 25"
+   },
+   {
+    "ad": "x ile 1/x’in çarpımı",
+    "ifade": "x × 1/x = 1 olduğundan (x + 1/x)² = x² + 2 + 1/x² ve (x − 1/x)² = x² − 2 + 1/x²"
+   }
+  ],
+  "ipuclari": [
+   "a + 1/a = 5 eşitliğinin karesini al.",
+   "Orta terim 2 × a × 1/a = 2.",
+   "a² + 1/a²’yi bulup (a − 1/a)²’yi aç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Karesini al",
+    "aciklama": "Orta terim +2.",
+    "islem": "(a + 1/a)² = a² + 2 + 1/a² = 25"
+   },
+   {
+    "baslik": "Kareler toplamı",
+    "aciklama": "2’yi çıkar.",
+    "islem": "a² + 1/a² = 23"
+   },
+   {
+    "baslik": "İstenen kare",
+    "aciklama": "(a − 1/a)² açılımında orta terim −2.",
+    "islem": "(a − 1/a)² = 23 − 2 = 21"
+   }
+  ],
+  "puf": "(a − 1/a)² = (a + 1/a)² − 4: toplamdan farka geçerken 4 çıkar.",
+  "kisaYol": "(a − 1/a)² = (a + 1/a)² − 4 olduğundan doğrudan 25 − 4 = 21.",
+  "kaynakKart": "K-CA-02 (x ± 1/x, orta terim ±2) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0007k",
+  "ana": "tytmat-carpanlar-0007",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Tam Sayı Çözümleri",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "İki bilinmeyenli ifadeyi sabit ekleyerek çarpanlarına ayırır; pozitif tam sayı çözümlerini tarayıp en büyük toplamı bulur.",
+  "tipId": "ca-ortak",
+  "tip": "Ortak çarpan ve gruplama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "x ve y pozitif tam sayılar olmak üzere\nxy + 2x + 3y = 30\neşitliği sağlanıyor.\nBuna göre x + y toplamının alabileceği en büyük değer kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "8",
+   "C": "10",
+   "D": "15",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "7, x + y’nin en küçük değeri; soru en büyüğünü soruyor.",
+   "B": "8, iki tarafa 6 eklemeyi unutup (x + 3) × (y + 2) = 30 çözmek.",
+   "D": "15, y = 0 almak (x = 15); y pozitif tam sayı olmalı.",
+   "E": "32, y = −1 alıp x = 33 bulmak; y pozitif olmalı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "x + y’nin alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "Gruplama",
+    "ifade": "dört terimli ifadede ikişer terimi grupla, ortak çarpanı al. Örnek: ab + 2a + 3b + 6 = a(b + 2) + 3(b + 2) = (a + 3)(b + 2)"
+   },
+   {
+    "ad": "Pozitif tam sayı",
+    "ifade": "1, 2, 3, … sayılarıdır; 0 pozitif değildir"
+   }
+  ],
+  "ipuclari": [
+   "İfadeyi iki çarpanın çarpımı yapmak için iki tarafa hangi sayıyı eklemelisin?",
+   "x(y + 2) + 3(y + 2) biçiminde eksik terim 6.",
+   "(x + 3)(y + 2) = 36; x ≥ 1, y ≥ 1 için çarpan çiftlerini tara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabit ekle",
+    "aciklama": "3 × 2 = 6 eklenirse ifade gruplanabilir.",
+    "islem": "xy + 2x + 3y + 6 = 36"
+   },
+   {
+    "baslik": "Çarpanlara ayır",
+    "aciklama": "Gruplama.",
+    "islem": "x(y + 2) + 3(y + 2) = (x + 3) × (y + 2) = 36"
+   },
+   {
+    "baslik": "Koşulları yaz",
+    "aciklama": "x ≥ 1 ve y ≥ 1.",
+    "islem": "x + 3 ≥ 4 · y + 2 ≥ 3"
+   },
+   {
+    "baslik": "Çarpan çiftleri",
+    "aciklama": "36’yı bu koşullarla iki çarpana ayır.",
+    "islem": "4 × 9 · 6 × 6 · 9 × 4 · 12 × 3"
+   },
+   {
+    "baslik": "İkilileri yaz",
+    "aciklama": "x = ilk çarpan − 3, y = ikinci çarpan − 2.",
+    "islem": "(1, 7) (3, 4) (6, 2) (9, 1) ⇒ en çok 9 + 1 = 10"
+   }
+  ],
+  "puf": "Çarpan çiftlerini tararken her iki bilinmeyenin de pozitif kalmasını kontrol et; uçtaki çiftler en büyük toplamı verir.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-04 (xy + ax + by = c ⇒ (x + b)(y + a) = c + ab) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpanlar-0008k",
+  "ana": "tytmat-carpanlar-0008",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Tam Kareye Tamamlama",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "İkinci dereceden iki değişkenli ifadeyi iki tam kare toplamına çevirir; kareler toplamı sıfırsa değişkenleri bulur.",
+  "tipId": "ca-deger",
+  "tip": "Özdeşlikle ifade değeri bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a ve b gerçel sayılar olmak üzere\na² + b² + 8a − 10b + 41 = 0\nolduğuna göre a · b çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−20",
+   "B": "−9",
+   "C": "1",
+   "D": "9",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−20"
+  },
+  "celdiriciler": {
+   "B": "−9, a − b’nin değeri; soru a × b’yi soruyor.",
+   "C": "1, a + b’nin değeri; soru çarpımı soruyor.",
+   "D": "9, a’yı 4 alıp a + b hesaplamak; hem işaret hem istenen hatalı.",
+   "E": "20, a’yı 4 almak; (a + 4)² = 0 ⇒ a = −4."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "a × b çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Tam kare açılımları",
+    "ifade": "(a + b)² = a² + 2ab + b² · (a − b)² = a² − 2ab + b². Örnek: (3 + 2)² = 9 + 12 + 4 = 25"
+   },
+   {
+    "ad": "Kare negatif olamaz",
+    "ifade": "her gerçel sayının karesi 0 ya da pozitiftir. İki karenin toplamı 0 ise ikisi de 0’dır. Örnek: m² + n² = 0 ⇒ m = n = 0"
+   }
+  ],
+  "ipuclari": [
+   "a’lı ve b’li terimleri ayrı grupla.",
+   "a² + 8a için 16, b² − 10b için 25 eklenir; 41 = 16 + 25.",
+   "İki karenin toplamı 0 ise her biri 0’dır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grupla",
+    "aciklama": "Aynı değişkenli terimleri topla.",
+    "islem": "(a² + 8a) + (b² − 10b) + 41 = 0"
+   },
+   {
+    "baslik": "Tam kareye tamamla",
+    "aciklama": "a² + 8a + 16 = (a + 4)² ve b² − 10b + 25 = (b − 5)²; 41 = 16 + 25.",
+    "islem": "(a + 4)² + (b − 5)² = 0"
+   },
+   {
+    "baslik": "Kareleri sıfırla",
+    "aciklama": "İki kare de 0.",
+    "islem": "a = −4 · b = 5"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İstenen çarpım.",
+    "islem": "a × b = (−4) × 5 = −20"
+   }
+  ],
+  "puf": "Tam kareye tamamlarken katsayının yarısının karesini ekle: 8a için 4² = 16, −10b için 5² = 25.",
+  "kisaYol": null,
+  "kaynakKart": "K-CA-07 (tam kareye tamamlama, kareler toplamı 0) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
