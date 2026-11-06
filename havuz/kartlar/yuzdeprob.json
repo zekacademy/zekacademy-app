@@ -1,0 +1,163 @@
+{
+ "konu": "Yüzde Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026, Bilgi Sarmal, 3D, Mert Hoca, 345 SB.",
+ "kartlar": [
+  {
+   "id": "K-YZ-01",
+   "konu": "Yüzde Problemleri",
+   "alt": "Parça ve bütün",
+   "fikir": "Bütünün bir kısmının yüzdesi verilir; geri kalan kısmın sayısından bütün bulunur (kalan yüzde = 100 − verilen).",
+   "tuzak": "Verilen sayıyı verilen yüzdeye eşlemek; yüzdeyi bilinen sayının üzerine eklemek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "yz-parca-butun",
+   "tip": "Parçadan bütüne yüzde",
+   "kaynak": "ÖSYM 2021 (anketin yüzdesi) · Bilgi Sarmal, 3D"
+  },
+  {
+   "id": "K-YZ-02",
+   "konu": "Yüzde Problemleri",
+   "alt": "Ardışık değişim",
+   "fikir": "Bir nicelik art arda yüzdeyle değişir; ikinci yüzde yeni değerin üzerinden uygulanır (çarpanlar: 1 + p/100, 1 − q/100).",
+   "tuzak": "Yüzdeleri toplamak; ikinci değişimi ilk değere uygulamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "yz-ardisik",
+   "tip": "Ardışık yüzde değişimi",
+   "kaynak": "ÖSYM 2019 (kurutma ve patlatma kaybı) · 3D, Mert Hoca"
+  },
+  {
+   "id": "K-YZ-03",
+   "konu": "Yüzde Problemleri",
+   "alt": "Ardışık değişim (geriye)",
+   "fikir": "Art arda kayıplardan sonra kalan miktar verilir; çarpanlar çarpılıp başlangıç miktarı geriye doğru bulunur.",
+   "tuzak": "Kayıp yüzdelerini toplamak; kaybı son değerin üzerine yüzde olarak geri eklemek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yz-ardisik",
+   "tip": "Ardışık yüzde değişimi",
+   "kaynak": "ÖSYM 2019 (yaş mısır → patlamış mısır) · Bilgi Sarmal"
+  },
+  {
+   "id": "K-YZ-04",
+   "konu": "Yüzde Problemleri",
+   "alt": "Çarpım değişimi",
+   "fikir": "Toplam = adet × birim değer; iki çarpan farklı yüzdelerle değişince toplamın değişimi çarpanların çarpımıyla bulunur.",
+   "tuzak": "Yüzdeleri toplamak ya da çıkarmak; oranı (%110) artış sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yz-carpim",
+   "tip": "Çarpım biçimindeki niceliklerde yüzde değişim",
+   "kaynak": "3D (soru sayısı %30 fazla, puan %10 eksik) · 345 SB"
+  },
+  {
+   "id": "K-YZ-05",
+   "konu": "Yüzde Problemleri",
+   "alt": "Grupların birleşimi",
+   "fikir": "Farklı büyüklükteki iki grubun yüzdeleri ve birleşik yüzde verilir; sayılar üzerinden (ağırlıklı) denklem kurulur.",
+   "tuzak": "Yüzdelerin düz ortalamasını almak; sayıyı yüzde sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yz-birlesim",
+   "tip": "Grupların birleşiminde yüzde",
+   "kaynak": "ÖSYM 2022 (iki gündeki görüşmelerin %24’ü) · Mert Hoca (sınıfların birleşimi)"
+  },
+  {
+   "id": "K-YZ-06",
+   "konu": "Yüzde Problemleri",
+   "alt": "Grupların birleşimi (iki tür)",
+   "fikir": "İki türün sayısı farklı yüzdelerle değişir, toplam değişim verilir; başlangıçtaki oran ağırlıklı denklemle bulunur.",
+   "tuzak": "İki türü eşit sayıda varsaymak; azalışı yanlış türe uygulamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yz-birlesim",
+   "tip": "Grupların birleşiminde yüzde",
+   "kaynak": "Bilgi Sarmal, 3D (iki ürünün ayrı ayrı değişimi)"
+  },
+  {
+   "id": "K-YZ-07",
+   "konu": "Yüzde Problemleri",
+   "alt": "Yüzdenin yüzdesi",
+   "fikir": "Bir grup iki özelliğe göre ayrılır; “A’ların %x’i” ile “B’lerin %y’si A” gibi farklı tabanlı yüzdeler 100 kişi üzerinden birleştirilir.",
+   "tuzak": "Yüzdenin hangi bütüne göre verildiğini karıştırmak (tüm grup mu, alt grup mu?).",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "yz-ic-ice",
+   "tip": "Yüzdenin yüzdesi (iç içe gruplar)",
+   "kaynak": "Bilgi Sarmal, 3D (kız-erkek ve özellik tabloları) · ÖSYM 2023"
+  },
+  {
+   "id": "K-YZ-08",
+   "konu": "Yüzde Problemleri",
+   "alt": "Aktarımla eşitleme",
+   "fikir": "İki kaptaki miktarlar yüzdeyle verilir; birinden ötekine aktarılan kısım bir yüzdeyle eşitlenme sağlar.",
+   "tuzak": "Yüzdenin kabın hacmine mi içindekine mi göre olduğunu karıştırmak; farkın tamamını aktarmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yz-esitleme",
+   "tip": "Yüzde aktarımıyla eşitleme",
+   "kaynak": "ÖSYM 2025 (tuzluk ve karabiberlik) · 345 SB"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "yz-parca-butun",
+   "ad": "Parçadan bütüne yüzde",
+   "kartlar": [
+    "K-YZ-01"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  },
+  {
+   "tipId": "yz-ardisik",
+   "ad": "Ardışık yüzde değişimi",
+   "kartlar": [
+    "K-YZ-02",
+    "K-YZ-03"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  },
+  {
+   "tipId": "yz-carpim",
+   "ad": "Çarpım biçimindeki niceliklerde yüzde değişim",
+   "kartlar": [
+    "K-YZ-04"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  },
+  {
+   "tipId": "yz-birlesim",
+   "ad": "Grupların birleşiminde yüzde",
+   "kartlar": [
+    "K-YZ-05",
+    "K-YZ-06"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  },
+  {
+   "tipId": "yz-ic-ice",
+   "ad": "Yüzdenin yüzdesi (iç içe gruplar)",
+   "kartlar": [
+    "K-YZ-07"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  },
+  {
+   "tipId": "yz-esitleme",
+   "ad": "Yüzde aktarımıyla eşitleme",
+   "kartlar": [
+    "K-YZ-08"
+   ],
+   "uygulamaKonu": "prob|Yüzde Problemleri"
+  }
+ ]
+}

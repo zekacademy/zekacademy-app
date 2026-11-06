@@ -1,0 +1,630 @@
+[
+ {
+  "id": "tytmat-sayiprob-0001k",
+  "ana": "tytmat-sayiprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki tür bilet",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki tür nesnenin toplam adedi ve toplam tutarından bir türün adedini bulur.",
+  "tipId": "sp-iki-urun",
+  "tip": "İki tür nesneyle adet-tutar denklemi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir fırında simidin tanesi 15 TL, poğaçanın tanesi 25 TL’dir.\nBir okul kantini bu fırından simit ve poğaça olmak üzere toplam 24 parça alıp 460 TL ödemiştir.\nBuna göre kantin kaç poğaça almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "12",
+   "C": "14",
+   "D": "18",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "B": "12, iki türden eşit sayıda alındığını varsaymak; toplam tutar kullanılmamış.",
+   "C": "14, simit sayısı; soru poğaçayı soruyor.",
+   "D": "18, toplamı (460) poğaça fiyatına bölüp yuvarlamak; iki tür birlikte alınmış.",
+   "E": "20, fiyat farkını 5 TL almak; 25 − 15 = 10."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Alınan poğaça sayısı.",
+  "bilgi": [
+   {
+    "ad": "“Hepsi aynı olsaydı” yöntemi",
+    "ifade": "her şeyi ucuz türden say, gerçek toplamla aradaki fark, birim farka bölünür. Örnek: 10 tavuk-koyun, 28 ayak ⇒ hepsi tavuk 20 ayak, fark 8, 8 ÷ 2 = 4 koyun"
+   }
+  ],
+  "ipuclari": [
+   "24 parçanın hepsi simit olsaydı kaç TL ödenirdi?",
+   "Gerçek tutarla aradaki fark nereden geliyor?",
+   "Her poğaça simitten kaç TL pahalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hepsi simit",
+    "aciklama": "24 parçanın hepsi simit olsaydı.",
+    "islem": "24 × 15 = 360 TL"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "Fazladan ödenen para poğaçalardan geliyor.",
+    "islem": "460 − 360 = 100 TL"
+   },
+   {
+    "baslik": "Poğaça sayısı",
+    "aciklama": "Her poğaça 25 − 15 = 10 TL fazla.",
+    "islem": "100 ÷ 10 = 10 · kontrol: 14 × 15 + 10 × 25 = 460 ✓"
+   }
+  ],
+  "puf": "Fark tutarı, iki fiyat arasındaki farka bölünür; sonra hangi türün sorulduğuna bak.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-01 (iki tür nesne, toplam adet ve tutar) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0002k",
+  "ana": "tytmat-sayiprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Düz yolda dizilim",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Düz bir yolun iki kenarına eşit aralıklarla konan nesnelerin sayısını aralık sayısından bulur.",
+  "tipId": "sp-dizilim",
+  "tip": "Eşit aralıklı dizilim",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Çevresi 96 metre olan çember biçimindeki bir süs havuzunun kenarına oturma bankları konacaktır.\nBanklar havuzun kenarı boyunca 6 metre aralıklarla yerleştirilecek ve ardışık her iki bankın arası eşit olacaktır.\nBuna göre havuzun çevresine kaç bank konur?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "15",
+   "C": "16",
+   "D": "17",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "8, aralığı 12 m almak; aralık 6 m.",
+   "B": "15, aralık sayısından 1 çıkarmak; çemberde öğe = aralık.",
+   "D": "17, düz yoldaki gibi 1 eklemek; çemberde başlangıç ve bitiş aynı bank.",
+   "E": "32, sayıyı iki kenar varmış gibi ikiyle çarpmak; havuzun tek bir çevresi var."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Havuzun çevresindeki bank sayısı.",
+  "bilgi": [
+   {
+    "ad": "Aralık ve öğe sayısı",
+    "ifade": "düz yolda iki uca da öğe konuyorsa öğe = aralık + 1; çember gibi kapalı yolda öğe = aralık. Örnek: 20 m yol, 5 m aralık ⇒ 4 aralık, 5 fidan"
+   }
+  ],
+  "ipuclari": [
+   "Çevrede kaç tane 6 metrelik aralık var?",
+   "Çember kapalı bir yoldur: ilk bank ile son bank yan yana gelir.",
+   "Kapalı yolda öğe sayısı ile aralık sayısı arasındaki ilişkiyi düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aralık sayısı",
+    "aciklama": "Çevre 96 m, her aralık 6 m.",
+    "islem": "96 ÷ 6 = 16 aralık"
+   },
+   {
+    "baslik": "Kapalı yol",
+    "aciklama": "Çemberde son aralık ilk banka döner; başlangıç ve bitiş aynı banktır.",
+    "islem": "bank = aralık"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Aralık sayısı kadar bank vardır.",
+    "islem": "16 bank"
+   }
+  ],
+  "puf": "Kapalı yolda (çember, kare çevre) öğe sayısı aralık sayısına eşittir; +1 yalnızca açık yolda eklenir.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-02 (açık yolda öğe = aralık + 1) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0003k",
+  "ana": "tytmat-sayiprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kişi sayısı değişince pay",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kişi sayısı azalınca kişi başı payın artışından başlangıçtaki kişi sayısını bulur.",
+  "tipId": "sp-paylasim",
+  "tip": "Planlanan ve gerçekleşen eşit paylaşım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir müzik topluluğu, bir festivale gitmek için 9000 TL’ye bir minibüs kiralamış ve kirayı eşit olarak ödemeyi planlamıştır.\nYola çıkmadan önce topluluğa 3 kişi daha katılmış ve kira tüm kişiler arasında eşit olarak paylaştırılmıştır.\nBöylece kişi başına düşen tutar planlanandan 250 TL azalmıştır.\nBuna göre başlangıçta kişi başına ödenmesi planlanan tutar kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "250",
+   "B": "600",
+   "C": "750",
+   "D": "900",
+   "E": "1000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1000"
+  },
+  "celdiriciler": {
+   "A": "250, paydaki azalma miktarı; planlanan pay değil.",
+   "B": "600, kişi sayısını 15 alıp 9000 ÷ 15 yapmak; katılan 3 kişiyi iki kez eklemek.",
+   "C": "750, son durumdaki kişi başı tutar; soru planlananı soruyor.",
+   "D": "900, n = 10 alıp 9000 ÷ 10 yapmak; 9000 ÷ 13 tam çıkmaz, denemeyi kontrol etmemişsin."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "Başlangıçta planlanan kişi başı pay.",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "kişi başı pay = toplam tutar ÷ kişi sayısı. Örnek: 1200 TL 4 kişiye ⇒ 300 TL"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçtaki kişi sayısına n de; iki payı n cinsinden yaz.",
+   "Payların farkı 250 TL.",
+   "9000’i tam bölen ve aralarında 3 fark olan kişi sayılarını dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "n kişi planlanmış, sonra n + 3 kişi olmuş.",
+    "islem": "planlanan 9000 ÷ n · gerçekleşen 9000 ÷ (n + 3)"
+   },
+   {
+    "baslik": "Farkı kur",
+    "aciklama": "Pay 250 TL azalmış.",
+    "islem": "9000 ÷ n − 9000 ÷ (n + 3) = 250"
+   },
+   {
+    "baslik": "Dene ve bul",
+    "aciklama": "n = 9 için 9000 ÷ 9 = 1000, 9000 ÷ 12 = 750.",
+    "islem": "1000 − 750 = 250 ✓ ⇒ n = 9"
+   },
+   {
+    "baslik": "Planlanan pay",
+    "aciklama": "Soru başlangıçta planlanan payı soruyor.",
+    "islem": "9000 ÷ 9 = 1000 TL"
+   }
+  ],
+  "puf": "Paylaşım sorularında önce kişi sayısını bul, sonra sorunun planlanan mı gerçekleşen mi payı istediğine bak.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-03 (planlanan–gerçekleşen paylaşım) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0004k",
+  "ana": "tytmat-sayiprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kaplarla ölçme",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Eşit miktarların iki farklı kap kombinasyonuyla dolduğu bilgisinden kaplar arasındaki oranı bulup istenen kap sayısını hesaplar.",
+  "tipId": "sp-kap",
+  "tip": "Eşit miktarları kaplarla karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Eşit miktarda süt bulunan iki bidondan birincisindeki sütün tamamı özdeş 6 bardağı ve özdeş 1 sürahiyi, ikincisindeki sütün tamamı da bu bardaklardan 2’sini ve bu sürahilerden 3’ünü tamamen doldurmaktadır.\nBir bidondaki sütün tamamı yalnızca bu sürahilere boşaltılırsa kaç sürahi tamamen dolar?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "7",
+   "D": "8",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "2, bir sürahinin kaç bardak ettiği; soru bidonun sürahi sayısını soruyor.",
+   "C": "7, birinci bidondaki kap sayılarını (6 + 1) toplamak; kaplar eşit büyüklükte değil.",
+   "D": "8, bidonun bardak cinsinden değeri; soru sürahi sayısını soruyor.",
+   "E": "16, iki bidonun toplamını bardak cinsinden almak; soru bir bidonu soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Bir bidon sütün doldurduğu sürahi sayısı.",
+  "bilgi": [],
+  "ipuclari": [
+   "Bir bardağa b, bir sürahiye s de; iki bidonu eşitle.",
+   "Bir sürahi kaç bardak eder?",
+   "Birinci bidonu yalnızca sürahi cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "İki bidonda eşit süt var.",
+    "islem": "6b + s = 2b + 3s"
+   },
+   {
+    "baslik": "Sürahi kaç bardak?",
+    "aciklama": "Sadeleştir.",
+    "islem": "4b = 2s ⇒ s = 2b"
+   },
+   {
+    "baslik": "Bardak cinsinden",
+    "aciklama": "Bidon = 6b + 2b.",
+    "islem": "8 bardak"
+   },
+   {
+    "baslik": "Sürahiye çevir",
+    "aciklama": "Her sürahi 2 bardak.",
+    "islem": "8 ÷ 2 = 4 sürahi"
+   }
+  ],
+  "puf": "Eşitlikten bulduğun oranı her iki yönde de kontrol et: büyük kap küçük kabın katıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-04 (eşit miktar, iki kap türü) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0005k",
+  "ana": "tytmat-sayiprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki kampanya",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki farklı kampanyada aynı adet ürünün tutarını hesaplayıp en düşük ödemeyi bulur.",
+  "tipId": "sp-kampanya",
+  "tip": "Kampanya ve alışveriş karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kahvenin fiyatı M ve N kafelerinde 120 TL’dir. Bu kafelerin kampanyaları şöyledir:\n• M kafede her 4 kahve alana 1 kahve ikram edilmektedir.\n• N kafede ilk 2 kahve 120 TL’den, sonraki her kahve 100 TL’den satılmaktadır.\nBir ofis çalışanı, toplantı için 12 kahve almak istemektedir.\nKahveleri bu kafelerin birinden ya da ikisinden alabildiğine göre ödeyeceği en az tutar kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "960",
+   "B": "1080",
+   "C": "1200",
+   "D": "1240",
+   "E": "1440"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1200"
+  },
+  "celdiriciler": {
+   "A": "960, M’de 8 kahve ödeyip 10 kahve almak; 12 kahve gerekiyordu.",
+   "B": "1080, “her 4 kahveden 1’i ikram” sanıp 9 kahve ödemek; ikram 4 kahve alana veriliyor.",
+   "D": "1240, yalnız N kafenin tutarı.",
+   "E": "1440, kampanyasız fiyat (12 × 120)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "12 kahve için ödenecek en az tutar.",
+  "bilgi": [],
+  "ipuclari": [
+   "M’de kaç kahve için para ödenirse 12 kahveye ulaşılır?",
+   "N’de 12 kahvenin tutarını hesapla.",
+   "Her iki kafeyi birlikte kullanmayı da dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "M kafe",
+    "aciklama": "4 kahve ödeyen 5 kahve alır. 10 kahve için 8 ödenir, kalan 2 kahve ikramsız.",
+    "islem": "8 + 2 = 10 kahve öde · 10 × 120 = 1200 TL"
+   },
+   {
+    "baslik": "N kafe",
+    "aciklama": "İlk 2 kahve 120 TL, sonraki 10 kahve 100 TL.",
+    "islem": "2 × 120 + 10 × 100 = 1240 TL"
+   },
+   {
+    "baslik": "Karma deneme",
+    "aciklama": "M’den 10 kahve (8 öde), N’den 2 kahve.",
+    "islem": "8 × 120 + 2 × 120 = 1200 TL"
+   },
+   {
+    "baslik": "En az tutar",
+    "aciklama": "Hiçbir seçenek 1200 TL’nin altına inmiyor.",
+    "islem": "en az 1200 TL"
+   }
+  ],
+  "puf": "Hediye kampanyasında grup dışında kalan ürünler tam fiyattır; grupları ve kalanı ayrı hesapla.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-05 (iki satıcı, farklı kampanya) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0006k",
+  "ana": "tytmat-sayiprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Araç değişimi",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplam adet ve toplam kapasiteden türlerin sayısını, değişim sonrası kapasite artışından değişen araç sayısını bulur.",
+  "tipId": "sp-iki-urun",
+  "tip": "İki tür nesneyle adet-tutar denklemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kafedeki 25 masanın her biri 2 kişilik ya da 4 kişiliktir ve masalarda toplam 76 sandalye vardır.\nKafe sahibi 2 kişilik masaların bazılarını kaldırıp her birinin yerine 6 kişilik birer masa koymuş ve sandalye sayısı 92’ye çıkmıştır.\nHer masanın sandalye sayısı kişi sayısı kadar olduğuna göre son durumda kafede kaç tane 2 kişilik masa vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "13",
+   "D": "16",
+   "E": "21"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "12, başlangıçtaki 2 kişilik masa sayısı.",
+   "C": "13, 4 kişilik masa sayısı; soru 2 kişilik masaları soruyor.",
+   "D": "16, değişen masaları 2 kişiliklere eklemek; o masalar kaldırıldı.",
+   "E": "21, son durumda 2 ve 4 kişilik masaların toplamı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Son durumdaki 2 kişilik masa sayısı.",
+  "bilgi": [
+   {
+    "ad": "“Hepsi aynı olsaydı” yöntemi",
+    "ifade": "her şeyi ucuz türden say, gerçek toplamla aradaki fark, birim farka bölünür. Örnek: 10 tavuk-koyun, 28 ayak ⇒ hepsi tavuk 20 ayak, fark 8, 8 ÷ 2 = 4 koyun"
+   }
+  ],
+  "ipuclari": [
+   "Masaların hepsi 2 kişilik olsaydı kaç sandalye olurdu?",
+   "2 kişilik bir masanın yerine 6 kişilik masa gelince sandalye kaç artar?",
+   "Önce başlangıçtaki 2 kişilik masa sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hepsi 2 kişilik",
+    "aciklama": "25 masa 50 sandalye eder; fazlası 4 kişilik masalardan.",
+    "islem": "76 − 50 = 26 · 26 ÷ 2 = 13 dört kişilik"
+   },
+   {
+    "baslik": "2 kişilik masalar",
+    "aciklama": "Kalan masalar 2 kişilik.",
+    "islem": "25 − 13 = 12"
+   },
+   {
+    "baslik": "Değişen masa",
+    "aciklama": "Her değişim 6 − 2 = 4 sandalye ekler.",
+    "islem": "92 − 76 = 16 · 16 ÷ 4 = 4 masa"
+   },
+   {
+    "baslik": "Son durum",
+    "aciklama": "4 tane 2 kişilik masa kaldırıldı.",
+    "islem": "12 − 4 = 8"
+   }
+  ],
+  "puf": "Değişimde birim fark, eski ve yeni nesnenin farkıdır (6 − 2), yeni nesnenin kendisi (6) değildir.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-01 (iki tür nesne) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0007k",
+  "ana": "tytmat-sayiprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik ödeme",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Bazı kişilerin hiç ödemediği, bazılarının yarı ödediği paylaşımda eksik tutarı kişi başı artışla eşitleyip gerçekleşen ödemeyi bulur.",
+  "tipId": "sp-paylasim",
+  "tip": "Planlanan ve gerçekleşen eşit paylaşım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "9 kişilik bir aile, bir restoranda yedikleri yemeğin hesabını eşit olarak ödemeyi planlamıştır.\nAiledeki çocuklardan biri hiç ödeme yapmamış, iki genç ise kendi paylarının yarısını ödemiştir.\nKalan tutarı diğer 6 kişi eşit olarak paylaşmış ve bu 6 kişinin her biri planlanandan 150 TL fazla ödemiştir.\nBuna göre yemeğin hesabı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2700",
+   "B": "3600",
+   "C": "4050",
+   "D": "5400",
+   "E": "8100"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4050"
+  },
+  "celdiriciler": {
+   "A": "2700, yarısını ödeyenleri hiç ödemedi saymak (3p = 900 ⇒ p = 300).",
+   "B": "3600, yalnızca 6 kişinin ödediği tutarı toplamak; yarım ödemeler eksik.",
+   "D": "5400, 6 kişinin ödediği 600 TL’yi 9 kişiyle çarpmak.",
+   "E": "8100, yarısını ödeyen iki kişinin eksiğini unutmak (p = 900)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Yemek hesabının tamamı.",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "kişi başı pay = toplam tutar ÷ kişi sayısı. Örnek: 1200 TL 4 kişiye ⇒ 300 TL"
+   }
+  ],
+  "ipuclari": [
+   "Planlanan kişi başı paya p de; kim ne kadar eksik bıraktı?",
+   "Yarısını ödeyen iki kişinin toplam eksiği kaç p eder?",
+   "Toplam eksik = 6 × 150."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payı adlandır",
+    "aciklama": "Planlanan kişi başı pay p.",
+    "islem": "hesap = 9p"
+   },
+   {
+    "baslik": "Eksiği hesapla",
+    "aciklama": "1 kişi p, 2 kişi yarım p eksik bıraktı.",
+    "islem": "p + 2 × p/2 = 2p"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "Eksik, 6 kişinin fazladan ödediği para.",
+    "islem": "2p = 6 × 150 = 900 ⇒ p = 450 TL"
+   },
+   {
+    "baslik": "Hesabın tamamı",
+    "aciklama": "Planlanan pay × kişi sayısı.",
+    "islem": "9 × 450 = 4050 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Ödenenleri topla.",
+    "islem": "2 × 225 + 6 × 600 = 4050 ✓"
+   }
+  ],
+  "puf": "Hesabın tamamı, planlanan pay ile toplam kişi sayısının çarpımıdır; ödeme yapmayanlar da sayılır.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-03 (planlanan–gerçekleşen paylaşım) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0008k",
+  "ana": "tytmat-sayiprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Karma alım",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki farklı kampanyayı birlikte kullanarak istenen adedin en düşük maliyetini bulur.",
+  "tipId": "sp-kampanya",
+  "tip": "Kampanya ve alışveriş karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir resim kursu için en az 11 kutu boya kalemi alınacaktır. Bir kutunun fiyatı T ve U kırtasiyelerinde 160 TL’dir.\n• T kırtasiyesinde her 2 kutu alana 1 kutu hediye verilmektedir.\n• U kırtasiyesinde alınan her 2 kutudan biri yarı fiyatına satılmaktadır.\nKutular bu kırtasiyelerin birinden ya da ikisinden alınabildiğine göre en az kaç TL ödenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "1120",
+   "B": "1200",
+   "C": "1280",
+   "D": "1360",
+   "E": "1760"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1200"
+  },
+  "celdiriciler": {
+   "A": "1120, T’de 7 kutu ödeyip 11 kutu alınacağını sanmak; 7 ödeyene 3 hediye verilir (10 kutu).",
+   "C": "1280, yalnız T kırtasiyesinden almak; karma alım daha ucuz.",
+   "D": "1360, yalnız U kırtasiyesinden almak.",
+   "E": "1760, kampanyasız fiyat (11 × 160)."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "En az 11 kutu için en düşük ödeme.",
+  "bilgi": [],
+  "ipuclari": [
+   "Her kırtasiyede kutu başına düşen maliyeti bul.",
+   "Ucuz olan kırtasiyede tam gruplarla 11’e en yakın sayıyı al.",
+   "Eksik kalan kutuları diğer kırtasiyeden tamamlamayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tane başı maliyet",
+    "aciklama": "T’de 3 kutu 320 TL; U’da 2 kutu 240 TL.",
+    "islem": "T: yaklaşık 106,7 TL · U: 120 TL"
+   },
+   {
+    "baslik": "Tek kırtasiye",
+    "aciklama": "T’de 8 kutu öde, 12 al. U’da 11 kutu: 5 çift + 1 kutu.",
+    "islem": "T: 1280 TL · U: 5 × 240 + 160 = 1360 TL"
+   },
+   {
+    "baslik": "Karma alım",
+    "aciklama": "T’de 6 öde, 9 al; kalan 2 kutuyu U’dan al.",
+    "islem": "6 × 160 + 240 = 1200 TL"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Diğer karmalar bundan pahalı.",
+    "islem": "en az 1200 TL"
+   }
+  ],
+  "puf": "Karma alımda ucuz yerdeki tam grupları kullan, artanı ikinci en ucuz yoldan tamamla.",
+  "kisaYol": null,
+  "kaynakKart": "K-SP-05 (iki satıcı, farklı kampanya) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

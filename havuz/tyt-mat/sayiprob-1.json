@@ -1,0 +1,630 @@
+[
+ {
+  "id": "tytmat-sayiprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki tür bilet",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki tür nesnenin toplam adedi ve toplam tutarından bir türün adedini bulur.",
+  "tipId": "sp-iki-urun",
+  "tip": "İki tür nesneyle adet-tutar denklemi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir sinemada tam bilet 240 TL, öğrenci bileti 180 TL’dir.\n30 kişilik bir arkadaş grubu, her kişiye bir bilet alarak bu sinemaya toplam 6120 TL ödemiştir.\nBuna göre gruptaki kişilerden kaçı öğrenci bileti almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "12",
+   "C": "15",
+   "D": "18",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "6, farkı (1080) öğrenci bileti fiyatına bölmek; fiyat farkına (60) bölünmeli.",
+   "B": "12, tam bilet alanların sayısı; soru öğrenci biletini soruyor.",
+   "C": "15, grubun yarısının öğrenci olduğunu varsaymak; ödenen tutar kullanılmamış.",
+   "E": "24, hepsi öğrenci bileti sayıp fazlalığı (720) kişi sayısına (30) bölmek."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Öğrenci bileti alan kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "“Hepsi aynı olsaydı” yöntemi",
+    "ifade": "her şeyi ucuz türden say, gerçek toplamla aradaki fark, birim farka bölünür. Örnek: 10 tavuk-koyun, 28 ayak ⇒ hepsi tavuk 20 ayak, fark 8, 8 ÷ 2 = 4 koyun"
+   }
+  ],
+  "ipuclari": [
+   "Herkes tam bilet alsaydı kaç TL ödenirdi?",
+   "Bu tutar ile gerçekte ödenen arasındaki fark nereden geliyor?",
+   "Her öğrenci bileti, tam bilete göre kaç TL daha ucuz?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hepsi tam bilet",
+    "aciklama": "30 kişinin hepsi tam bilet alsaydı ödenecek tutarı bul.",
+    "islem": "30 × 240 = 7200 TL"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "Ödenen daha az; fark öğrenci biletlerinden geliyor.",
+    "islem": "7200 − 6120 = 1080 TL"
+   },
+   {
+    "baslik": "Öğrenci bileti sayısı",
+    "aciklama": "Her öğrenci bileti 240 − 180 = 60 TL ucuz.",
+    "islem": "1080 ÷ 60 = 18 · kontrol: 12 × 240 + 18 × 180 = 6120 ✓"
+   }
+  ],
+  "puf": "İki türlü nesnede “hepsi bir türden olsaydı” de; fark ÷ birim fark diğer türün adedini verir.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0001k",
+  "kaynakKart": "K-SP-01 (iki tür nesne, toplam adet ve tutar) · yeni kurgu (sinema bileti), istenen ucuz türün adedi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Düz yolda dizilim",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Düz bir yolun iki kenarına eşit aralıklarla konan nesnelerin sayısını aralık sayısından bulur.",
+  "tipId": "sp-dizilim",
+  "tip": "Eşit aralıklı dizilim",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir parktaki 180 metrelik düz bir yürüyüş yolunun iki kenarına da aydınlatma direkleri dikilecektir.\nHer kenarda direkler 12 metre aralıklarla dikilecek; yolun başına ve sonuna da birer direk gelecektir.\nBuna göre toplam kaç direk dikilecektir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "16",
+   "C": "30",
+   "D": "32",
+   "E": "34"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "15, bir kenardaki aralık sayısı; direk sayısı değil.",
+   "B": "16, yalnızca bir kenar; yolun iki kenarına da direk dikiliyor.",
+   "C": "30, iki kenardaki aralık sayısı; her kenarda direk aralıktan 1 fazla.",
+   "E": "34, her kenara 2 fazla direk saymak (17 + 17); bir kenarda 16 direk var."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İki kenardaki toplam direk sayısı.",
+  "bilgi": [
+   {
+    "ad": "Aralık ve öğe sayısı",
+    "ifade": "düz yolda iki uca da öğe konuyorsa öğe = aralık + 1; çember gibi kapalı yolda öğe = aralık. Örnek: 20 m yol, 5 m aralık ⇒ 4 aralık, 5 fidan"
+   }
+  ],
+  "ipuclari": [
+   "Bir kenarda kaç tane 12 metrelik aralık var?",
+   "Başta ve sonda direk varsa direk sayısı aralık sayısından kaç fazla?",
+   "İki kenarı unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aralık sayısı",
+    "aciklama": "Bir kenar 180 m; her aralık 12 m.",
+    "islem": "180 ÷ 12 = 15 aralık"
+   },
+   {
+    "baslik": "Bir kenardaki direk",
+    "aciklama": "Yolun iki ucunda da direk var: direk = aralık + 1.",
+    "islem": "15 + 1 = 16 direk"
+   },
+   {
+    "baslik": "İki kenar",
+    "aciklama": "Aynı dizilim karşı kenarda da yapılıyor.",
+    "islem": "2 × 16 = 32 direk"
+   }
+  ],
+  "puf": "Düz yolda iki uçta da öğe varsa öğe sayısı aralık sayısından 1 fazladır; kenar sayısıyla sonra çarp.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0002k",
+  "kaynakKart": "K-SP-02 (açık yolda öğe = aralık + 1) · yeni kurgu (aydınlatma direği), yolun iki kenarı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kişi sayısı değişince pay",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kişi sayısı azalınca kişi başı payın artışından başlangıçtaki kişi sayısını bulur.",
+  "tipId": "sp-paylasim",
+  "tip": "Planlanan ve gerçekleşen eşit paylaşım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir arkadaş grubu, 4800 TL tutan kamp alanı kirasını eşit olarak ödemeyi planlamıştır.\nGruptan 2 kişi son anda kampa katılamamış ve kiranın tamamını kampa katılanlar eşit olarak ödemiştir.\nBöylece kampa katılanların her biri planlanandan 200 TL fazla ödemiştir.\nBuna göre bu grupta başlangıçta kaç kişi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "8",
+   "D": "12",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "4, eksik kalan 1200 TL’yi kişi başı pay sanıp 4800 ÷ 1200 yapmak.",
+   "B": "6, kampa katılan kişi sayısı; soru başlangıçtaki sayıyı soruyor.",
+   "D": "12, 200 TL’yi iki kişinin payıyla çarpıp (400) 4800’ü buna bölmek.",
+   "E": "24, toplamı (4800) kişi başı artışa (200) bölmek; artış pay değildir."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Gruptaki başlangıç kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "kişi başı pay = toplam tutar ÷ kişi sayısı. Örnek: 1200 TL 4 kişiye ⇒ 300 TL"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçtaki kişi sayısına n de; planlanan pay ve gerçekleşen pay nedir?",
+   "İki pay arasındaki fark 200 TL.",
+   "4800’ü tam bölen ve aralarında 2 fark olan iki kişi sayısını dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "n kişi planlanmış, n − 2 kişi ödemiş.",
+    "islem": "planlanan 4800 ÷ n · gerçekleşen 4800 ÷ (n − 2)"
+   },
+   {
+    "baslik": "Farkı kur",
+    "aciklama": "Gerçekleşen pay 200 TL fazla.",
+    "islem": "4800 ÷ (n − 2) − 4800 ÷ n = 200"
+   },
+   {
+    "baslik": "Dene ve bul",
+    "aciklama": "n = 8 için 4800 ÷ 6 = 800 ve 4800 ÷ 8 = 600.",
+    "islem": "800 − 600 = 200 ✓ ⇒ n = 8"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Katılmayan 2 kişinin payı (1200 TL), ödeyen 6 kişiye 200’er TL bindi.",
+    "islem": "2 × 600 = 6 × 200 = 1200 ✓"
+   }
+  ],
+  "puf": "Eksilen kişilerin payı, kalanlara eşit dağılır: eksilenlerin toplam payı = kalan kişi × kişi başı artış.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0003k",
+  "kaynakKart": "K-SP-03 (planlanan–gerçekleşen paylaşım) · yeni kurgu (kamp alanı kirası), bazı kişiler katılmıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kaplarla ölçme",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Eşit miktarların iki farklı kap kombinasyonuyla dolduğu bilgisinden kaplar arasındaki oranı bulup istenen kap sayısını hesaplar.",
+  "tipId": "sp-kap",
+  "tip": "Eşit miktarları kaplarla karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Her birinde eşit miktarda zeytinyağı bulunan iki tenekeden birincisindeki yağın tamamı özdeş 4 şişeyi ve özdeş 3 kavanozu, ikincisindeki yağın tamamı ise bu şişelerden 2’sini ve bu kavanozlardan 7’sini tamamen doldurmaktadır.\nBuna göre bir tenekedeki yağın tamamı bu kavanozlardan kaç tanesini doldurur?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "5",
+   "C": "7",
+   "D": "8",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "2, bir şişenin kaç kavanoz ettiği; soru bir tenekenin tamamını soruyor.",
+   "B": "5, oranı ters almak (ş = k/2 ⇒ 4 × 1/2 + 3 = 5); şişe kavanozdan büyük.",
+   "C": "7, ikinci tenekedeki kavanoz sayısı; şişeleri çevirmeyi unutmak.",
+   "D": "8, yalnızca 4 şişeyi kavanoza çevirmek; 3 kavanoz eklenmedi."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Bir teneke yağın doldurduğu kavanoz sayısı.",
+  "bilgi": [],
+  "ipuclari": [
+   "Bir şişeye ş, bir kavanoza k de; iki tenekeyi eşitle.",
+   "Eşitlikten bir şişenin kaç kavanoz ettiğini bul.",
+   "Birinci tenekedeki şişeleri kavanoza çevirip kavanozlarla topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "İki tenekede eşit yağ var.",
+    "islem": "4ş + 3k = 2ş + 7k"
+   },
+   {
+    "baslik": "Şişe kaç kavanoz?",
+    "aciklama": "Ortak terimleri sadeleştir.",
+    "islem": "2ş = 4k ⇒ ş = 2k"
+   },
+   {
+    "baslik": "Tenekeyi çevir",
+    "aciklama": "Birinci tenekede 4 şişe ve 3 kavanoz var.",
+    "islem": "4 × 2k + 3k = 11k ⇒ 11 kavanoz · kontrol: 2 × 2k + 7k = 11k ✓"
+   }
+  ],
+  "puf": "Eşit miktarlar iki farklı biçimde verilmişse eşitleyip bir kabı diğeri cinsinden yaz; sonra tek birime çevir.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0004k",
+  "kaynakKart": "K-SP-04 (eşit miktar, iki kap türü) · yeni kurgu (zeytinyağı tenekesi, şişe ve kavanoz), istenen yalnız tek tür kapla doldurma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki kampanya",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki farklı kampanyada aynı adet ürünün tutarını hesaplayıp en düşük ödemeyi bulur.",
+  "tipId": "sp-kampanya",
+  "tip": "Kampanya ve alışveriş karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir defterin satış fiyatı K ve L kırtasiyelerinde 90 TL’dir. Bu kırtasiyelerdeki kampanyalar aşağıdaki gibidir:\n• K kırtasiyesinde her 3 defter alana 1 defter hediye verilmektedir.\n• L kırtasiyesinde her defter 70 TL’ye satılmaktadır.\n12 deftere ihtiyacı olan Ayşe, defterleri bu kırtasiyelerden birinden ya da ikisinden alacaktır.\nBuna göre Ayşe en az kaç TL ödeyerek 12 defter edinir?",
+  "sekil": null,
+  "siklar": {
+   "A": "720",
+   "B": "810",
+   "C": "820",
+   "D": "840",
+   "E": "1080"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "810"
+  },
+  "celdiriciler": {
+   "A": "720, “3 alana 1 hediye”yi “her 3 defterden 1’i bedava” sanmak (8 defter öde); doğrusu her 4 defterden 1’i bedava.",
+   "C": "820, iki kırtasiyeyi karıştırmanın daha ucuz olduğunu sanmak; K’de defter başı maliyet daha düşük.",
+   "D": "840, yalnız L kırtasiyesinin tutarı; K daha ucuz.",
+   "E": "1080, kampanyasız fiyat (12 × 90)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "12 defter için ödenecek en az tutar.",
+  "bilgi": [],
+  "ipuclari": [
+   "K’de her 4 defterin kaçı için para ödenir?",
+   "12 defteri yalnız K’den ve yalnız L’den almanın tutarını ayrı ayrı bul.",
+   "İki kırtasiyeyi birlikte kullanmak daha ucuz olur mu, dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "K kırtasiyesi",
+    "aciklama": "3 defter ödeyen 4 defter alır. 12 defter = 3 grup.",
+    "islem": "3 × 3 = 9 defter öde · 9 × 90 = 810 TL"
+   },
+   {
+    "baslik": "L kırtasiyesi",
+    "aciklama": "Her defter 70 TL.",
+    "islem": "12 × 70 = 840 TL"
+   },
+   {
+    "baslik": "Karma deneme",
+    "aciklama": "K’den 8 defter (6 öde), L’den 4 defter.",
+    "islem": "6 × 90 + 4 × 70 = 820 TL"
+   },
+   {
+    "baslik": "En azı seç",
+    "aciklama": "K’de defter başı maliyet 810 ÷ 12 = 67,5 TL; L’de 70 TL. K’den almak en ucuzudur.",
+    "islem": "en az 810 TL"
+   }
+  ],
+  "puf": "Kampanyaları karşılaştırırken tane başına düşen maliyeti hesapla; karma seçenekleri de dene.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0005k",
+  "kaynakKart": "K-SP-05 (iki satıcı, farklı kampanya) · yeni kurgu (defter), kampanyalar hediye ve tane indirimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Araç değişimi",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplam adet ve toplam kapasiteden türlerin sayısını, değişim sonrası kapasite artışından değişen araç sayısını bulur.",
+  "tipId": "sp-iki-urun",
+  "tip": "İki tür nesneyle adet-tutar denklemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir tur şirketinin 20 aracı vardır ve bu araçların her biri ya 5 kişilik otomobil ya da 16 kişilik minibüstür. Araçların toplam yolcu kapasitesi 166 kişidir.\nŞirket, otomobillerinden bazılarını satıp her birinin yerine birer minibüs almış ve toplam kapasite 199 kişiye çıkmıştır.\nBuna göre şirketin son durumda kaç otomobili vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "9",
+   "C": "11",
+   "D": "14",
+   "E": "17"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "3, değiştirilen araç sayısı; soru kalan otomobilleri soruyor.",
+   "B": "9, son durumdaki minibüs sayısı.",
+   "D": "14, başlangıçtaki otomobil sayısı; değişim hesaba katılmamış.",
+   "E": "17, değiştirilen araçları otomobile eklemek; otomobiller satıldı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Son durumdaki otomobil sayısı.",
+  "bilgi": [
+   {
+    "ad": "“Hepsi aynı olsaydı” yöntemi",
+    "ifade": "her şeyi ucuz türden say, gerçek toplamla aradaki fark, birim farka bölünür. Örnek: 10 tavuk-koyun, 28 ayak ⇒ hepsi tavuk 20 ayak, fark 8, 8 ÷ 2 = 4 koyun"
+   }
+  ],
+  "ipuclari": [
+   "20 aracın hepsi otomobil olsaydı kapasite kaç olurdu?",
+   "Bir otomobil yerine minibüs gelince kapasite kaç kişi artar?",
+   "Kapasitedeki son artışı bu farka böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hepsi otomobil",
+    "aciklama": "20 otomobil 100 kişi taşır; fazlalık minibüslerden gelir.",
+    "islem": "166 − 20 × 5 = 66"
+   },
+   {
+    "baslik": "Minibüs sayısı",
+    "aciklama": "Her minibüs otomobilden 16 − 5 = 11 kişi fazla taşır.",
+    "islem": "66 ÷ 11 = 6 minibüs · 14 otomobil"
+   },
+   {
+    "baslik": "Değişen araç",
+    "aciklama": "Kapasite artışı yine 11’in katıdır.",
+    "islem": "199 − 166 = 33 · 33 ÷ 11 = 3 araç"
+   },
+   {
+    "baslik": "Son durum",
+    "aciklama": "3 otomobil yerine minibüs geldi.",
+    "islem": "14 − 3 = 11 otomobil"
+   }
+  ],
+  "puf": "Bir nesneyi diğer türle değiştirince toplam, birim fark kadar değişir; artışı birim farka böl.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0006k",
+  "kaynakKart": "K-SP-01 (iki tür nesne) · değişim eklendi (kapasite artışı), yeni kurgu (tur şirketi araçları)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik ödeme",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Bazı kişilerin hiç ödemediği, bazılarının yarı ödediği paylaşımda eksik tutarı kişi başı artışla eşitleyip gerçekleşen ödemeyi bulur.",
+  "tipId": "sp-paylasim",
+  "tip": "Planlanan ve gerçekleşen eşit paylaşım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "10 kişilik bir ekip, emekli olan bir çalışma arkadaşına alınacak hediyenin tutarını eşit olarak paylaşmayı planlamıştır.\nEkipten 2 kişi hiç para verememiş, 3 kişi ise kendi payının yalnızca yarısını verebilmiştir.\nEksik kalan tutarı ekipteki diğer 5 kişi eşit olarak tamamlamış ve bu 5 kişinin her biri planlanandan 280 TL fazla ödemiştir.\nBuna göre bu 5 kişiden her biri kaç TL ödemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "280",
+   "B": "400",
+   "C": "560",
+   "D": "680",
+   "E": "980"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "680"
+  },
+  "celdiriciler": {
+   "A": "280, kişi başı fazladan ödenen tutar; ödenen tutarın tamamı değil.",
+   "B": "400, planlanan kişi başı pay; bu kişiler buna 280 TL ekledi.",
+   "C": "560, yarısını verenleri hiç vermedi saymak (5p = 1400 ⇒ p = 280).",
+   "E": "980, yarısını veren 3 kişinin eksiğini unutmak (2p = 1400 ⇒ p = 700)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eksiği tamamlayan kişilerden her birinin ödediği tutar.",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "kişi başı pay = toplam tutar ÷ kişi sayısı. Örnek: 1200 TL 4 kişiye ⇒ 300 TL"
+   }
+  ],
+  "ipuclari": [
+   "Planlanan kişi başı paya p de. Hiç vermeyen 2 kişi kaç p eksik bıraktı?",
+   "Yarısını veren 3 kişinin eksiği ne kadar?",
+   "Toplam eksik, 5 kişinin fazladan ödediği tutara eşittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payı adlandır",
+    "aciklama": "Planlanan kişi başı pay p olsun.",
+    "islem": "hediye = 10p"
+   },
+   {
+    "baslik": "Eksiği hesapla",
+    "aciklama": "2 kişi p’nin tamamını, 3 kişi p’nin yarısını eksik bıraktı.",
+    "islem": "2p + 3 × p/2 = 3,5p"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "Eksik, 5 kişinin fazladan ödediği paradır.",
+    "islem": "3,5p = 5 × 280 = 1400 ⇒ p = 400 TL"
+   },
+   {
+    "baslik": "Ödenen tutar",
+    "aciklama": "Her biri payına 280 TL ekledi.",
+    "islem": "400 + 280 = 680 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Toplanan para hediye tutarına eşit olmalı.",
+    "islem": "3 × 200 + 5 × 680 = 4000 = 10 × 400 ✓"
+   }
+  ],
+  "puf": "Eksik ödeme sorularında herkesin eksiğini payın kesri olarak yaz; toplam eksik = tamamlayan kişi × artış.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0007k",
+  "kaynakKart": "K-SP-03 (planlanan–gerçekleşen paylaşım) · iki farklı eksik ödeme (hiç ve yarı), istenen gerçekleşen pay",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Karma alım",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki farklı kampanyayı birlikte kullanarak istenen adedin en düşük maliyetini bulur.",
+  "tipId": "sp-kampanya",
+  "tip": "Kampanya ve alışveriş karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir ofis için en az 8 damacana su alınacaktır. Bir damacana suyun fiyatı R ve S marketlerinde 120 TL’dir.\n• R marketinde alınan her 2 damacanadan biri yarı fiyatına satılmaktadır.\n• S marketinde her 2 damacana alana 1 damacana hediye edilmektedir.\nSular bu marketlerin birinden ya da ikisinden alınabildiğine göre en az kaç TL ödenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "600",
+   "B": "660",
+   "C": "720",
+   "D": "900",
+   "E": "960"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "660"
+  },
+  "celdiriciler": {
+   "A": "600, S’de 5 damacana ödeyip 8 damacana alınacağını sanmak; 5 ödeyene yalnızca 2 hediye verilir.",
+   "C": "720, yalnızca tek marketten almak; iki market birlikte daha ucuz.",
+   "D": "900, R’deki indirimi yalnızca bir kez uygulamak (7 × 120 + 60).",
+   "E": "960, kampanyasız fiyat (8 × 120)."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "En az 8 damacana için ödenecek en düşük tutar.",
+  "bilgi": [],
+  "ipuclari": [
+   "Her markette damacana başına düşen maliyeti hesapla.",
+   "S’de kaç damacana ödenirse 8’e en yakın sayıda damacana alınır; eksik kalanı nereden alırsın?",
+   "Yalnız R, yalnız S ve ikisini birlikte kullanan seçenekleri karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tane başı maliyet",
+    "aciklama": "R’de 2 damacana 180 TL; S’de 3 damacana 240 TL.",
+    "islem": "R: 90 TL · S: 80 TL"
+   },
+   {
+    "baslik": "Tek marketten",
+    "aciklama": "R’den 8 damacana 4 × 180. S’de 8’e ulaşmak için 6 damacana ödenip 9 alınır.",
+    "islem": "R: 720 TL · S: 6 × 120 = 720 TL"
+   },
+   {
+    "baslik": "Karma alım",
+    "aciklama": "S’de 4 damacana öde, 6 al; eksik 2 damacanayı R’den al.",
+    "islem": "4 × 120 + 180 = 660 TL"
+   },
+   {
+    "baslik": "Diğer karmalar",
+    "aciklama": "S’de 2 öde 3 al, R’den 5 al: 240 + 2 × 180 + 120 = 720.",
+    "islem": "660 en az"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "En ucuz yol karma alım.",
+    "islem": "660 TL"
+   }
+  ],
+  "puf": "Kampanyaların “tam grup” avantajı vardır: ucuz markette tam grupları al, artakalanı diğer markette tamamla.",
+  "kisaYol": null,
+  "kardes": "tytmat-sayiprob-0008k",
+  "kaynakKart": "K-SP-05 (iki satıcı, farklı kampanya) · iki satıcıyı birlikte kullanmak en ucuz, yeni kurgu (damacana su)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

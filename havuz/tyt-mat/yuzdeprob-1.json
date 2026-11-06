@@ -1,0 +1,667 @@
+[
+ {
+  "id": "tytmat-yuzdeprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Parça ve bütün",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Bütünün bir kısmının yüzdesinden kalan kısmın yüzdesini bulur; kalan kısmın sayısından bütünü hesaplar.",
+  "tipId": "yz-parca-butun",
+  "tip": "Parçadan bütüne yüzde",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir fidanlıktaki fidanların %40’ı çam, geri kalanı meşe fidanıdır.\nFidanlıkta 480 meşe fidanı olduğuna göre fidanlıkta toplam kaç fidan vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "192",
+   "B": "320",
+   "C": "672",
+   "D": "800",
+   "E": "1200"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "800"
+  },
+  "celdiriciler": {
+   "A": "192, 480’in %40’ı; yüzdeyi bilinen sayıya uygulamışsın. 480 bütün değil, bütünün %60’ı.",
+   "B": "320, çam fidanlarının sayısı; soru tüm fidanları soruyor.",
+   "C": "672 = 480 + 480’in %40’ı; yüzdeyi meşelerin üzerine eklemek. %40 bütünün yüzdesidir.",
+   "E": "1200, 480’i fidanların %40’ı sanmak; %40 çamlar, meşeler ise %60."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Fidanlıktaki toplam fidan sayısı.",
+  "bilgi": [
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   },
+   {
+    "ad": "Yüzdesi bilinen parçadan bütün",
+    "ifade": "bir sayının %60’ı 30 ise sayı = 30 ÷ 0,6 = 50"
+   }
+  ],
+  "ipuclari": [
+   "Meşe fidanları tüm fidanların yüzde kaçıdır?",
+   "Toplam fidan sayısına x de; x’in o yüzdesi 480’e eşit olmalı.",
+   "Bulduğun sayının %40’ını alıp 480’e ekleyerek kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Meşelerin yüzdesi",
+    "aciklama": "Çamlar %40 ise geri kalan meşeler %60’tır; 480 sayısı %60’a karşılık gelir.",
+    "islem": "100 − 40 = 60 ⇒ meşe %60"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Toplam fidan x olsun. x’in %60’ı 480’dir.",
+    "islem": "x × 60/100 = 480 · x = 480 × 100 ÷ 60 = 800"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Çamları bulup meşelerle topla.",
+    "islem": "800 × 0,4 = 320 çam · 320 + 480 = 800 ✓"
+   }
+  ],
+  "puf": "Verilen sayının hangi yüzdeye karşılık geldiğini önce belirle; sayıyı o yüzdeye böl.",
+  "kisaYol": "Meşeler %60 ise %10’luk dilim 480 ÷ 6 = 80; %100 = 80 × 10 = 800.",
+  "kardes": "tytmat-yuzdeprob-0001k",
+  "kaynakKart": "K-YZ-01 (kalan kısmın sayısından bütün) · yeni kurgu (fidanlık), yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Ardışık değişim",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Art arda iki yüzde artışını değişim çarpanlarıyla uygular; ikinci yüzdeyi yeni değere göre hesaplar.",
+  "tipId": "yz-ardisik",
+  "tip": "Ardışık yüzde değişimi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Boyu 40 cm olan bir ayçiçeği birinci hafta boyunun %20’si kadar uzamıştır.\nİkinci hafta ise birinci haftanın sonundaki boyunun %25’i kadar uzamıştır.\nBuna göre bu ayçiçeğinin ikinci haftanın sonundaki boyu kaç cm’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "48",
+   "C": "50",
+   "D": "58",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "20, iki haftadaki toplam uzama; soru son boyu soruyor.",
+   "B": "48, yalnız birinci haftanın sonundaki boy.",
+   "C": "50, %25’i doğrudan 40 cm’ye uygulayıp birinci haftayı atlamak.",
+   "D": "58, yüzdeleri toplayıp (%45) 40 cm’ye uygulamak; ikinci yüzde yeni boyun üzerinden."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "İkinci haftanın sonundaki boy.",
+  "bilgi": [
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   },
+   {
+    "ad": "Yüzde değişim çarpanı",
+    "ifade": "%20 artış = × 1,2 · %25 azalış = × 0,75. Örnek: 80 önce %25 artıp sonra %20 azalırsa 80 × 1,25 × 0,8 = 80"
+   }
+  ],
+  "ipuclari": [
+   "Birinci haftanın sonunda boy kaç cm oldu?",
+   "İkinci haftadaki %25, 40 cm’nin değil yeni boyun yüzdesidir.",
+   "Yüzdeleri toplamak doğru olur mu? Yeni boy üzerinden hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci hafta",
+    "aciklama": "%20 uzama: boy 1,2 ile çarpılır.",
+    "islem": "40 × 1,2 = 48 cm"
+   },
+   {
+    "baslik": "İkinci hafta",
+    "aciklama": "%25 uzama 48 cm’nin üzerinden hesaplanır.",
+    "islem": "48 × 0,25 = 12 · 48 + 12 = 60 cm"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İki çarpanı birlikte de uygulayabilirsin.",
+    "islem": "40 × 1,2 × 1,25 = 60 cm"
+   }
+  ],
+  "puf": "Art arda yüzde değişimlerde yüzdeler toplanmaz; her değişim bir öncekinin sonucuna uygulanır.",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0002k",
+  "kaynakKart": "K-YZ-02 (art arda iki artış) · yeni kurgu (ayçiçeğinin boyu), yeni istenen (son değer)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Ardışık değişim (geriye)",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Art arda iki kayıptan sonra kalan miktardan çarpanlarla başlangıç miktarını bulur.",
+  "tipId": "yz-ardisik",
+  "tip": "Ardışık yüzde değişimi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir üretici kuru domates yapmak için önce domatesleri ayıklamaktadır. Ayıklama sırasında domateslerin ağırlığının %20’si (sap, çekirdek) atılmaktadır.\nAyıklanan domatesler kurutulduğunda ağırlıklarının %75’ini kaybetmektedir.\nBuna göre bu üretici 600 gram kuru domates elde etmek için kaç gram domates kullanmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "750",
+   "B": "1260",
+   "C": "2400",
+   "D": "3000",
+   "E": "12000"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3000"
+  },
+  "celdiriciler": {
+   "A": "750 = 600 ÷ 0,8; yalnız ayıklamayı geri alıp kurutmayı unutmak.",
+   "B": "1260 = 600 × 1,75 × 1,2; kaybı son ağırlığın üzerine yüzde olarak eklemek. Kayıp, önceki ağırlığın yüzdesidir.",
+   "C": "2400 = 600 ÷ 0,25; yalnız kurutmayı geri almak, atılan %20’yi unutmak.",
+   "E": "12000, kayıpları toplayıp (%95) kalanı %5 sanmak; ikinci kayıp ayıklanmış domatesin yüzdesidir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Gereken domates miktarı.",
+  "bilgi": [
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   },
+   {
+    "ad": "Yüzde değişim çarpanı",
+    "ifade": "%20 artış = × 1,2 · %25 azalış = × 0,75. Örnek: 80 önce %25 artıp sonra %20 azalırsa 80 × 1,25 × 0,8 = 80"
+   }
+  ],
+  "ipuclari": [
+   "Domates x gram olsun; ayıklamadan sonra x’in yüzde kaçı kalır?",
+   "Kurutmada kalan dilimlerin %75’i kaybolursa yüzde kaçı kalır?",
+   "İki kalan oranı çarp ve 600’e eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ayıklama",
+    "aciklama": "%20 atılırsa %80 kalır.",
+    "islem": "x × 0,8"
+   },
+   {
+    "baslik": "Kurutma",
+    "aciklama": "Ayıklanan domatesin %75’i kaybolur, %25’i kalır.",
+    "islem": "0,8x × 0,25 = 0,2x"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "Kalan miktar 600 gram.",
+    "islem": "0,2x = 600 ⇒ x = 3000 gram"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İleri doğru hesapla.",
+    "islem": "3000 × 0,8 = 2400 · 2400 × 0,25 = 600 ✓"
+   }
+  ],
+  "puf": "Art arda kayıplarda her adımda kalan oranı yaz ve çarp; kayıp yüzdelerini toplama.",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0003k",
+  "kaynakKart": "K-YZ-03 (art arda kayıp, sondan başa) · yeni kurgu (kuru domates), yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Çarpım değişimi",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Adet ve birim değeri farklı yüzdelerle değişen bir toplamın yüzde değişimini bulur.",
+  "tipId": "yz-carpim",
+  "tip": "Çarpım biçimindeki niceliklerde yüzde değişim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kargo şirketi dağıtım aracı sayısını %25 artırmıştır. Aynı dönemde yoğun trafik nedeniyle araç başına günlük teslim edilen paket sayısı %12 azalmıştır.\nHer aracın günde eşit sayıda paket teslim ettiği bilindiğine göre şirketin günlük toplam teslimat sayısı yüzde kaç artmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "13",
+   "C": "16",
+   "D": "37",
+   "E": "110"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "B": "13 = 25 − 12; yüzdeleri çıkarmak. Toplam bir çarpım olduğundan çarpanlar çarpılır.",
+   "C": "16, çarpımı açarken işaret hatası: 25 − 12 + 3 almak; doğrusu 25 − 12 − 3 = 10.",
+   "D": "37 = 25 + 12; azalışı da artış gibi eklemek.",
+   "E": "110, yeni toplamın eski toplama oranı (%110); artış bunun 100’den fazlası."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Günlük toplam teslimattaki yüzde artış.",
+  "bilgi": [
+   {
+    "ad": "Yüzde değişim çarpanı",
+    "ifade": "%20 artış = × 1,2 · %25 azalış = × 0,75. Örnek: 80 önce %25 artıp sonra %20 azalırsa 80 × 1,25 × 0,8 = 80"
+   },
+   {
+    "ad": "100 üzerinden düşünmek",
+    "ifade": "yüzde sorularında bütünü 100 al: “%60’ı kız” ⇒ 100 kişide 60 kız"
+   }
+  ],
+  "ipuclari": [
+   "Toplam teslimat = araç sayısı × araç başına teslimat.",
+   "Başlangıçta 100 araç ve araç başına 100 paket al.",
+   "Yeni toplamı eski toplamla karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "100 üzerinden başla",
+    "aciklama": "100 araç, her biri 100 paket.",
+    "islem": "100 × 100 = 10000 paket"
+   },
+   {
+    "baslik": "Yeni durum",
+    "aciklama": "Araç %25 artar, araç başı teslimat %12 azalır.",
+    "islem": "125 × 88 = 11000 paket"
+   },
+   {
+    "baslik": "Yüzde artış",
+    "aciklama": "Artışı ilk toplama böl.",
+    "islem": "11000 − 10000 = 1000 · 1000 ÷ 10000 = 0,1 ⇒ %10"
+   }
+  ],
+  "puf": "Çarpım biçimindeki bir niceliğin yüzde değişimi, çarpanların değişim çarpanlarının çarpımıyla bulunur.",
+  "kisaYol": "Değişim çarpanlarını doğrudan çarp: 1,25 × 0,88 = 1,10 ⇒ %10 artış.",
+  "kardes": "tytmat-yuzdeprob-0004k",
+  "kaynakKart": "K-YZ-04 (adet × birim değer) · yeni kurgu (kargo araçları ve teslimat), yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Grupların birleşimi",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Büyüklükleri farklı iki grubun yüzdelerini sayıya çevirip birleşik yüzde denklemini kurar.",
+  "tipId": "yz-birlesim",
+  "tip": "Grupların birleşiminde yüzde",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir yüzme kulübünün sabah grubunda 30, akşam grubunda 20 sporcu vardır. Sabah grubundaki sporcuların %40’ı lisanslıdır.\nİki grup birlikte düşünüldüğünde sporcuların %52’si lisanslı olduğuna göre akşam grubundaki sporcuların yüzde kaçı lisanslıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "14",
+   "B": "26",
+   "C": "28",
+   "D": "64",
+   "E": "70"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "70"
+  },
+  "celdiriciler": {
+   "A": "14, akşam grubundaki lisanslı sporcu sayısı; soru yüzdeyi soruyor.",
+   "B": "26, iki gruptaki toplam lisanslı sayısı.",
+   "C": "28 = 14 ÷ 50; akşamdaki lisanslıları tüm sporculara bölmek. Akşam grubunun yüzdesi için 20’ye bölünür.",
+   "D": "64, yüzdelerin düz ortalamasını almak: (40 + x) ÷ 2 = 52. Gruplar eşit büyüklükte değil."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "Akşam grubundaki lisanslı sporcuların yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   },
+   {
+    "ad": "Yüzde ↔ sayı",
+    "ifade": "sayıyı bulmak için yüzdeyi grubun mevcuduyla çarp; yüzdeyi bulmak için sayıyı mevcuda bölüp 100 ile çarp. Örnek: 25 kişide 5 kişi ⇒ %20"
+   }
+  ],
+  "ipuclari": [
+   "Sabah grubunda kaç lisanslı sporcu var?",
+   "İki grupta toplam 50 sporcu var; bunların %52’si kaç kişi?",
+   "Akşamdaki lisanslı sayısını akşam grubunun mevcuduna böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabah grubu",
+    "aciklama": "30 sporcunun %40’ı.",
+    "islem": "30 × 0,4 = 12 lisanslı"
+   },
+   {
+    "baslik": "Toplam lisanslı",
+    "aciklama": "50 sporcunun %52’si.",
+    "islem": "50 × 0,52 = 26 lisanslı"
+   },
+   {
+    "baslik": "Akşam grubu",
+    "aciklama": "Fark akşam grubundaki lisanslılardır.",
+    "islem": "26 − 12 = 14 · 14 ÷ 20 = 0,7 ⇒ %70"
+   }
+  ],
+  "puf": "Farklı büyüklükteki grupların yüzdeleri ortalanmaz; önce sayılara çevir, sonra topla.",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0005k",
+  "kaynakKart": "K-YZ-05 (iki grup, birleşik yüzde) · yeni kurgu (yüzme kulübü), yeni istenen (ikinci grubun yüzdesi)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Aktarımla eşitleme",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Kap hacmine göre verilen doluluk yüzdelerinden aktarılması gereken miktarı bulur ve bunu kaptaki miktarın yüzdesi olarak ifade eder.",
+  "tipId": "yz-esitleme",
+  "tip": "Yüzde aktarımıyla eşitleme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Özdeş iki su deposundan birincisinin %75’i, ikincisinin %15’i suyla doludur.\nBirinci depodaki suyun bir kısmı ikinci depoya aktarıldığında iki depodaki su miktarları eşit olmaktadır.\nBuna göre birinci depodaki suyun yüzde kaçı aktarılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "40",
+   "C": "45",
+   "D": "60",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "30, aktarılan suyun deponun hacmine oranı; soru birinci depodaki suyun yüzdesini soruyor.",
+   "C": "45, eşitlendikten sonra her deponun doluluk yüzdesi.",
+   "D": "60, iki doluluk oranının farkı; eşitlemek için farkın yarısı aktarılır.",
+   "E": "80 = 60 ÷ 75; farkın tamamını aktarmak. Farkın yarısı aktarılınca eşitlenir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Birinci depodaki suyun aktarılan yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "100 üzerinden düşünmek",
+    "ifade": "yüzde sorularında bütünü 100 al: “%60’ı kız” ⇒ 100 kişide 60 kız"
+   },
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   }
+  ],
+  "ipuclari": [
+   "Depoların hacmini 100 litre al; depolarda kaçar litre su var?",
+   "Eşitlenince her depoda toplam suyun yarısı olur.",
+   "Aktarılan miktarı deponun hacmine değil, birinci depodaki suya böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "100 litre al",
+    "aciklama": "Depolar özdeş; hacim 100 litre olsun.",
+    "islem": "birinci: 75 L · ikinci: 15 L"
+   },
+   {
+    "baslik": "Eşit paylaşım",
+    "aciklama": "Toplam su değişmez; eşitlenince her depoda yarısı olur.",
+    "islem": "75 + 15 = 90 · 90 ÷ 2 = 45 L"
+   },
+   {
+    "baslik": "Aktarılan",
+    "aciklama": "Birinci depodan çıkan su.",
+    "islem": "75 − 45 = 30 L"
+   },
+   {
+    "baslik": "Yüzdeye çevir",
+    "aciklama": "30 litre, birinci depodaki 75 litrenin yüzde kaçı?",
+    "islem": "30 ÷ 75 = 0,4 ⇒ %40"
+   }
+  ],
+  "puf": "Yüzdenin hangi bütüne göre sorulduğuna bak: deponun hacmine mi, depodaki suya mı?",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0006k",
+  "kaynakKart": "K-YZ-08 (iki kap, aktarımla eşitleme) · yeni kurgu (su depoları), yeni istenen (içindekinin yüzdesi)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Yüzdenin yüzdesi",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "Farklı bütünlere göre verilen yüzdeleri 100 kişilik bir grup üzerinde birleştirip alt grubun yüzdesini bulur.",
+  "tipId": "yz-ic-ice",
+  "tip": "Yüzdenin yüzdesi (iç içe gruplar)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir yaz kampındaki katılımcıların %60’ı kızdır. Erkek katılımcıların %45’i yüzme bilmektedir.\nYüzme bilen katılımcıların %40’ı kız olduğuna göre kız katılımcıların yüzde kaçı yüzme bilmektedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "18",
+   "C": "20",
+   "D": "30",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "12, yüzme bilen kızların tüm katılımcılara oranı; soru kızlar içindeki oranı soruyor.",
+   "B": "18, yüzme bilen erkeklerin tüm katılımcılara oranı.",
+   "D": "30, yüzme bilenlerin tüm katılımcılara oranı.",
+   "E": "45: 18’i %40’a bölmek; erkekler yüzme bilenlerin %60’ıdır, %40’ı değil."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Kızlar içinde yüzme bilenlerin yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "100 üzerinden düşünmek",
+    "ifade": "yüzde sorularında bütünü 100 al: “%60’ı kız” ⇒ 100 kişide 60 kız"
+   },
+   {
+    "ad": "Yüzdenin tabanı",
+    "ifade": "“erkeklerin %45’i” erkeklere, “yüzme bilenlerin %40’ı” yüzme bilenlere göredir. Örnek: 50 erkeğin %10’u = 5 kişi"
+   }
+  ],
+  "ipuclari": [
+   "Katılımcı sayısını 100 al; kaç kız, kaç erkek var?",
+   "Yüzme bilen erkekler, yüzme bilenlerin yüzde kaçıdır?",
+   "Yüzme bilen kız sayısını tüm kızların sayısına böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "100 kişi al",
+    "aciklama": "%60 kız.",
+    "islem": "60 kız · 40 erkek"
+   },
+   {
+    "baslik": "Yüzme bilen erkekler",
+    "aciklama": "Erkeklerin %45’i.",
+    "islem": "40 × 0,45 = 18"
+   },
+   {
+    "baslik": "Yüzme bilenlerin tamamı",
+    "aciklama": "Yüzme bilenlerin %40’ı kız, %60’ı erkek; 18 kişi %60’a karşılık gelir.",
+    "islem": "18 ÷ 0,6 = 30 kişi"
+   },
+   {
+    "baslik": "Yüzme bilen kızlar",
+    "aciklama": "Toplamdan erkekleri çıkar.",
+    "islem": "30 − 18 = 12"
+   },
+   {
+    "baslik": "Kızlar içindeki oran",
+    "aciklama": "12 kız, 60 kızın yüzde kaçı?",
+    "islem": "12 ÷ 60 = 0,2 ⇒ %20"
+   }
+  ],
+  "puf": "Her yüzdenin hangi gruba göre verildiğini yaz; 100 kişilik bir tablo kurup sayılarla ilerle.",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0007k",
+  "kaynakKart": "K-YZ-07 (iki özellik, farklı tabanlı yüzdeler) · yeni kurgu (yaz kampı ve yüzme), yeni istenen (alt grup içindeki oran)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yuzdeprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Yüzde Problemleri · Grupların birleşimi (iki tür)",
+  "k": "prob|Yüzde Problemleri",
+  "kazanim": "İki türün farklı yüzdelerle değiştiği bir toplamda, toplam değişimden başlangıçtaki türlerin oranını bulur.",
+  "tipId": "yz-birlesim",
+  "tip": "Grupların birleşiminde yüzde",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kütüphanede yalnızca roman ve hikâye kitapları vardır. Yıl içinde roman sayısı %20 artmış, hikâye kitaplarının sayısı ise %10 azalmıştır.\nBu değişimlerden sonra kütüphanedeki toplam kitap sayısı %8 arttığına göre başlangıçta kitapların yüzde kaçı romandır?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "50",
+   "C": "60",
+   "D": "72",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "40, hikâye kitaplarının başlangıç yüzdesi; soru romanları soruyor.",
+   "B": "50, iki türü eşit sayıda varsaymak; o zaman net artış %5 olur, %8 değil.",
+   "D": "72, 100 kitaplık başlangıçta romanların artıştan sonraki sayısı; soru başlangıç yüzdesini soruyor.",
+   "E": "80: azalışı da roman sayısına uygulamak (0,2r − 0,1r = 8); azalış hikâyelerdedir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Başlangıçta romanların toplam içindeki yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "100 üzerinden düşünmek",
+    "ifade": "yüzde sorularında bütünü 100 al: “%60’ı kız” ⇒ 100 kişide 60 kız"
+   },
+   {
+    "ad": "Yüzde",
+    "ifade": "%40 = 40/100 = 0,4 · 200’ün %40’ı = 200 × 0,4 = 80"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçta 100 kitap olsun; r tanesi roman ise kaç tanesi hikâye?",
+   "Romanlardaki artış ve hikâyelerdeki azalış kaç kitap eder?",
+   "Net değişim 100 kitabın %8’i, yani 8 kitap olmalı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "100 kitap al",
+    "aciklama": "r roman, 100 − r hikâye.",
+    "islem": "roman: r · hikâye: 100 − r"
+   },
+   {
+    "baslik": "Değişimler",
+    "aciklama": "Roman %20 artar, hikâye %10 azalır.",
+    "islem": "artış: 0,2r · azalış: 0,1 × (100 − r)"
+   },
+   {
+    "baslik": "Net değişim",
+    "aciklama": "Toplam 100’den 108’e çıkmış.",
+    "islem": "0,2r − 0,1 × (100 − r) = 8"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Parantezi aç ve r’yi bul.",
+    "islem": "0,2r − 10 + 0,1r = 8 · 0,3r = 18 ⇒ r = 60"
+   }
+  ],
+  "puf": "İki türün farklı yüzdelerle değiştiği sorularda bütünü 100 al, her türün değişimini ayrı yaz ve net değişime eşitle.",
+  "kisaYol": null,
+  "kardes": "tytmat-yuzdeprob-0008k",
+  "kaynakKart": "K-YZ-06 (iki türün ayrı değişimi, toplam değişim) · yeni kurgu (kütüphane), yeni istenen (başlangıç oranı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,113 @@
+{
+ "konu": "Sayı Problemleri",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-SP-01",
+   "konu": "Sayı Problemleri",
+   "alt": "İki tür nesne",
+   "fikir": "Toplam adet ve toplam tutar (ya da toplam tekerlek, koltuk) verilir; “hepsi ucuz olandan olsaydı” düşüncesiyle fark, birim farka bölünür. Değişim sonrası yeni toplamdan değişen adet bulunur.",
+   "tuzak": "İstenen türü karıştırma (diğer türün adedini işaretleme); değişimde birim farkı yerine yeni birimin değerine bölme.",
+   "zorluk": "kolay-orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "sp-iki-urun",
+   "tip": "İki tür nesneyle adet-tutar denklemi",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s257 #135, bina–kat değişimi) · Bilgi Sarmal ve 345 SB bilet/araç soruları"
+  },
+  {
+   "id": "K-SP-02",
+   "konu": "Sayı Problemleri",
+   "alt": "Eşit aralıklı dizilim",
+   "fikir": "Belirli uzunluktaki yola eşit aralıklarla fidan, direk ya da bank konur; açık yolda öğe = aralık + 1, kapalı yolda öğe = aralık.",
+   "tuzak": "Aralık sayısını öğe sayısı sanma; yolun iki kenarı istenince ikiyle çarpmayı unutma; çemberde +1 ekleme.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "sp-dizilim",
+   "tip": "Eşit aralıklı dizilim",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s90, ağaç dikme planı) · Bilgi Sarmal s123, s130, s201"
+  },
+  {
+   "id": "K-SP-03",
+   "konu": "Sayı Problemleri",
+   "alt": "Eşit paylaşım",
+   "fikir": "Bir tutar kişilere eşit paylaştırılacakken bazı kişiler ödeyemez ya da eksik öder; eksik kalan tutar ötekilere eşit bölünür ve kişi başı artış verilir.",
+   "tuzak": "Eksik kalan tutarı yanlış sayma (yarı ödeyenleri hiç ödemedi sayma); planlanan payla gerçekleşen ödemeyi karıştırma.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "sp-paylasim",
+   "tip": "Planlanan ve gerçekleşen eşit paylaşım",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s253 #120, ortak hediye) · Bilgi Sarmal s212 #9, s220 #7 · Mert s164 #4"
+  },
+  {
+   "id": "K-SP-04",
+   "konu": "Sayı Problemleri",
+   "alt": "Kaplarla ölçme",
+   "fikir": "Eşit miktardaki iki kap, iki farklı kap türünün farklı sayılarını doldurur; iki ifade eşitlenerek kaplar arasındaki oran bulunur.",
+   "tuzak": "Oranı ters çevirme; yalnızca bir kap türünü çevirip diğerini eklemeyi unutma.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "sp-kap",
+   "tip": "Eşit miktarları kaplarla karşılaştırma",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s238 #67, şişe–bardak–fincan) · Bilgi Sarmal s124 #7, s146 #8"
+  },
+  {
+   "id": "K-SP-05",
+   "konu": "Sayı Problemleri",
+   "alt": "Kampanya karşılaştırma",
+   "fikir": "İki satıcının farklı kampanyaları verilir; istenen adedi en ucuza almak için kampanyalar ayrı ayrı ve birlikte denenir.",
+   "tuzak": "“3 alana 1 hediye” ile “3’te 1 bedava”yı karıştırma; iki satıcıyı birlikte kullanmanın daha ucuz olabileceğini düşünmeme.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "sp-kampanya",
+   "tip": "Kampanya ve alışveriş karşılaştırma",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s252, 50 TL üzeri indirim · s267 #170, iki kırtasiye kampanyası) · Bilgi Sarmal s227 #4, s244 #14"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "sp-iki-urun",
+   "ad": "İki tür nesneyle adet-tutar denklemi",
+   "kartlar": [
+    "K-SP-01"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sp-dizilim",
+   "ad": "Eşit aralıklı dizilim",
+   "kartlar": [
+    "K-SP-02"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sp-paylasim",
+   "ad": "Planlanan ve gerçekleşen eşit paylaşım",
+   "kartlar": [
+    "K-SP-03"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sp-kap",
+   "ad": "Eşit miktarları kaplarla karşılaştırma",
+   "kartlar": [
+    "K-SP-04"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sp-kampanya",
+   "ad": "Kampanya ve alışveriş karşılaştırma",
+   "kartlar": [
+    "K-SP-05"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  }
+ ]
+}
