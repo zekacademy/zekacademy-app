@@ -120,3 +120,36 @@ def otopark(sutun,satir,kapali_sutun,gorunen_dolu,gizli_dolu):
     b.append(_t(x0+(sutun-kapali_sutun)*c/2,y0+satir*c+18,f'görünen: {gorunen_dolu} dolu',size=11))
     b.append(_t(x0+w/2,y0+satir*c+36,f'arkada {gizli_dolu} dolu, {kapali_sutun*satir-gizli_dolu} boş (yeşil)',size=11,bold=True,renk=ACC))
     return _svg(W,H,''.join(b))
+def gosterge_iki_ibre(lo,hi,etiket,ibre,alt=None,yay=None):
+    """Eşit bölmeli gösterge parçası. Çentikler lo..hi (bölme numarası). etiket: {çentik: yazı};
+    ibre: {çentik: harf} (kırmızı üçgen). yay: (başlangıç, bitiş, yazı) vurgulu aralık. alt: alt yazı."""
+    n=hi-lo; W=330; x0=24; st=(W-2*x0)/n; y=46; b=[]
+    X=lambda i:x0+(i-lo)*st
+    b.append(f'<line x1="{x0}" y1="{y}" x2="{W-x0}" y2="{y}" stroke-width="2"/>')
+    for i in range(lo,hi+1):
+        h=16 if i in etiket else 9
+        b.append(f'<line x1="{X(i):.1f}" y1="{y}" x2="{X(i):.1f}" y2="{y-h}" stroke-width="2"/>')
+    for i,s in etiket.items(): b.append(_t(X(i),y-22,s,size=13,bold=True))
+    for i,s in ibre.items():
+        px=X(i); b.append(f'<path d="M{px:.1f} {y+4} L{px-6:.1f} {y+16} L{px+6:.1f} {y+16} Z" style="fill:#e53935;stroke:#e53935"/>')
+        b.append(_t(px,y+31,s,size=12,bold=True))
+    if yay:
+        a,c,s=yay; b.append(f'<path d="M{X(a):.1f} {y+40} H{X(c):.1f}" stroke-width="3" style="stroke:{ACC}"/>')
+        b.append(_t((X(a)+X(c))/2,y+56,s,size=11,bold=True,renk=ACC))
+    if alt: b.append(_t(W/2,y+(74 if yay else 52),alt,size=11))
+    return _svg(W,y+(84 if yay else 62),''.join(b))
+def cita_isaret(L,d1,d2,ad1,ad2,vurgu):
+    """L uzunluklu çıta; üstte d1, altta d2 aralıklı işaretler (uçlar hariç). vurgu: bu uzunluktaki parçalar boyanır."""
+    L,d1,d2,vurgu=Fr(L),Fr(d1),Fr(d2),Fr(vurgu); W,x0,x1,y=330,16,314,52; b=[]
+    X=lambda v:x0+float(v/L)*(x1-x0)
+    m1=[d1*i for i in range(1,int(L/d1)) ]; m2=[d2*i for i in range(1,int(L/d2))]
+    tum=sorted(set(m1)|set(m2)|{Fr(0),L})
+    for a,c in zip(tum,tum[1:]):
+        if c-a==vurgu: b.append(f'<rect x="{X(a)+1:.1f}" y="{y-5}" width="{X(c)-X(a)-2:.1f}" height="10" rx="2" style="fill:{ACC};stroke:none;opacity:.85"/>')
+    b.append(f'<rect x="{x0}" y="{y-5}" width="{x1-x0}" height="10" rx="2" stroke-width="1.4"/>')
+    for v in m1: b.append(f'<line x1="{X(v):.1f}" y1="{y-5}" x2="{X(v):.1f}" y2="{y-17}" stroke-width="2"/>')
+    for v in m2: b.append(f'<line x1="{X(v):.1f}" y1="{y+5}" x2="{X(v):.1f}" y2="{y+17}" stroke-width="2"/>')
+    b.append(_t(x0,y-24,ad1,anchor='start',size=11)); b.append(_t(x0,y+32,ad2,anchor='start',size=11))
+    fmt=lambda v:f'{float(v):g}'.replace('.',',')
+    b.append(_t(W/2,y+50,f'boyalı parçalar: {fmt(vurgu)} m',size=11,bold=True,renk=ACC))
+    return _svg(W,y+60,''.join(b))

@@ -64,6 +64,7 @@ def denetle(Q,korpus=None):
         for x in a:
             if not {'baslik','aciklama','islem'}<=set(x) or set(x)-{'baslik','aciklama','islem','gorsel'}: H_('adım alanları')
             if x.get('gorsel') and ('currentColor' not in x['gorsel'] or 'viewBox' not in x['gorsel']): H_('adım görseli currentColor/viewBox kullanmıyor')
+            if re.search(r'\b[A-Za-z]\b · (\b[A-Za-z]\b|\()|\) · \(',x.get('islem','')): H_(f"işlemde çarpma için ' · ' kullanılmış (satır ayıracıyla karışır; × kullan): {x['islem']}")
             if len(x.get('baslik','').split())>6: U(f"uzun adım başlığı: {x.get('baslik')}")
             if len(re.findall(r'(?<!\d)[.!?](\s+[A-ZÇĞİÖŞÜ0-9*]|\s*$)',x.get('aciklama','')))>3: U('adım açıklaması 3 cümleden uzun')
         if len(q.get('bilgi',[]))>3: H_('bilgi en fazla 3')

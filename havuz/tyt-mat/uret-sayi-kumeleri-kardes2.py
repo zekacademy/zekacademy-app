@@ -138,7 +138,7 @@ K('0021','a, b ve c sıfırdan farklı gerçel sayılardır.\na · b > 0\nb · c
  [A('a ve b','a · b > 0 olduğundan **a ve b aynı işaretli**.','a, b aynı işaret'),
   A('c','b · c < 0 olduğundan c, b’nin (ve a’nın) **zıt işaretli**.','c zıt işaret'),
   A('Hangi durum?','İki ihtimal var: a ve b pozitif, c negatif; ya da a ve b negatif, c pozitif. İlkinde a < c olamaz (pozitif sayı negatiften küçük olamaz).','a < 0 · b < 0 · c > 0'),
-  A('Şıkları dene','a · c = (−) × (+) = negatif. a · b ve a · b · c pozitif; c − a pozitif; a + c’nin işareti sayılara bağlı.','a · c < 0')],
+  A('Şıkları dene','a · c = (−) × (+) = negatif. a · b ve a · b · c pozitif; c − a pozitif; a + c’nin işareti sayılara bağlı.','a × c < 0')],
  'İki çarpım bilgisi işaret gruplarını verir; sıralama bilgisi hangi grubun negatif olduğunu seçer.',
  dict(A='a ve b aynı işaretli: a · b pozitiftir.',B='a negatif, c pozitif: a + c’nin işareti sayılara bağlıdır.',C='a · b pozitif, c pozitif: a · b · c pozitiftir.',E='c pozitif, a negatif: c − a pozitiftir.'),
  kisa='Sayı ver: a = −1, b = −2, c = 3 koşulları sağlar. Şıkları hesapla; yalnızca a · c = −3 negatif.')

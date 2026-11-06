@@ -6,8 +6,8 @@ ANAHTAR='pilot1' if sys.argv[1].endswith('parti1.json') else 'karar-'+re.sub(r'[
 def islem_html(t):
     out=[]
     for par in t.split(' · '):
-        e=kesir(html.escape(par))
-        e=re.sub(r'(?<!>) (?![=⇒])(?<! [=⇒])','\u00a0',e)  # yalnız = ve ⇒ çevresinde kırılabilir
+        e=re.sub(r'(?<!;) (?![=⇒])(?<! [=⇒])','\u00a0',html.escape(par))  # '; ' ile ayrılmış listeler de kırılabilir  # yalnız = ve ⇒ çevresinde kırılabilir
+        e=kesir(e)  # boşluk değişiminden SONRA: etiket içindeki boşluklar bozulmasın
         out.append(f'<span class="ais">{e}</span>')
     return ''.join(out)
 def kesir(e): return re.sub(r'(?<![\d/])(\d+)/(\d+)(?![\d/])',r'<span class="kesir"><span>\1</span><span>\2</span></span>',e)

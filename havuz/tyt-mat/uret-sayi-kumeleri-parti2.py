@@ -140,7 +140,7 @@ add('sk-isaret','Temel Kavramlar · İşaret İnceleme','Çarpım ve sıralama b
  ['b · c > 0 ise b ile c’nin işaretleri hakkında ne söylenir?','a · b < 0 ise a, b’nin tersi işaretli.','a > c bilgisiyle hangi işaret durumunun mümkün olduğunu bul.'],
  [('b ve c aynı işaretli','b · c > 0 olduğundan **b ve c aynı işaretli**; a · b < 0 olduğundan **a ters işaretli**.','b, c aynı · a ters'),
   ('Durumu seç','a negatif olsaydı c pozitif olurdu ve a > c sağlanmazdı. O hâlde **a > 0, b < 0, c < 0**.','a > 0, b < 0, c < 0'),
-  ('Şıkları dene','a · b · c = (+)(−)(−) pozitif; diğerleri ya negatif ya belirsiz.','a · b · c > 0')],
+  ('Şıkları dene','a · b · c = (+)(−)(−) pozitif; diğerleri ya negatif ya belirsiz.','a × b × c > 0')],
  'İki çarpım bilgisi işaret gruplarını verir; sıralama bilgisi hangi grubun pozitif olduğunu seçer.',
  dict(A='a pozitif, c negatif: a · c negatiftir.',B='b ve c ikisi de negatif: toplamları negatiftir.',D='a pozitif, b negatif: a + b’nin işareti sayılara bağlıdır.',E='c ve b ikisi de negatif: c − b’nin işareti sayılara bağlıdır.'),
  'K-SK-28 (işaret inceleme) · yeni koşul seti, kesin pozitif ifade')

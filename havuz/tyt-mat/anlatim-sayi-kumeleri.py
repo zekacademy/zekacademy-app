@@ -132,7 +132,7 @@ Y={
  A('b ve c','b · c > 0 olduğundan **b ve c aynı işaretli**.','b, c aynı işaret'),
  A('a','a · b < 0 olduğundan a, b’nin (ve c’nin) **zıt işaretli**.','a zıt işaret'),
  A('Hangi durum?','İki ihtimal var: a pozitif, b ve c negatif; ya da a negatif, b ve c pozitif. İkincisinde a > c olamaz (negatif sayı pozitiften büyük olamaz).','a > 0 · b < 0 · c < 0'),
- A('Şıkları dene','a · b · c = (+) × (−) × (−) = pozitif. a · c ve b + c negatif; a + b ile c − b’nin işareti sayılara bağlı.','a · b · c > 0')]),
+ A('Şıkları dene','a · b · c = (+) × (−) × (−) = pozitif. a · c ve b + c negatif; a + b ile c − b’nin işareti sayılara bağlı.','a × b × c > 0')]),
 '0022':([B('Basamak kuralı','bir sayı 0 ile başlayamaz; 02 iki basamaklı bir sayı değildir')],[
  A('Strateji','A − B’nin büyük olması için A mümkün olduğunca büyük, B mümkün olduğunca küçük olmalı.','A büyük · B küçük'),
  A('A’nın ilk iki basamağı','En büyük rakamlar 9 ve 7, A’nın yüzler ve onlar basamağına.','A = 97_'),
@@ -156,7 +156,7 @@ Y={
  A('k · e','e çift olduğundan çarpım çifttir.','tek × çift = çift'),
  A('k + e','Tek ile çiftin toplamı her zaman tektir.','tek + çift = tek ✓'),
  A('2k + e','2 ile çarpılan her sayı çifttir; çift + çift = çift.','2k + e = çift'),
- A('Diğer ikisi','k · e + e = çift + çift = çift; e² = e × e = çift.','k · e + e ve e² çift')]),
+ A('Diğer ikisi','k · e + e = çift + çift = çift; e² = e × e = çift.','k × e + e ve e² çift')]),
 }
 for f in sys.argv[1:]:
     Q=json.load(open(f))
