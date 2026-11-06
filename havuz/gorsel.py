@@ -153,3 +153,19 @@ def cita_isaret(L,d1,d2,ad1,ad2,vurgu):
     fmt=lambda v:f'{float(v):g}'.replace('.',',')
     b.append(_t(W/2,y+50,f'boyalı parçalar: {fmt(vurgu)} m',size=11,bold=True,renk=ACC))
     return _svg(W,y+60,''.join(b))
+def cokgen_daire(n,degerler=None,vurgu_kose=False):
+    """n=3 üçgen, n=4 kare: köşelerde ve kenar ortalarında daireler. degerler: köşe0, orta01, köşe1, orta12, … sırasıyla (None = boş)."""
+    import math
+    W=330; cx,cy=W/2,(118 if n==3 else 108); R=96 if n==3 else 92
+    if n==3: P=[(cx+R*math.cos(math.radians(a)),cy+R*math.sin(math.radians(a))) for a in (-90,30,150)]
+    else: P=[(cx-R*0.75,cy-R*0.75),(cx+R*0.75,cy-R*0.75),(cx+R*0.75,cy+R*0.75),(cx-R*0.75,cy+R*0.75)]
+    noktalar=[]
+    for i in range(n):
+        a,b=P[i],P[(i+1)%n]; noktalar+= [(a,True),(((a[0]+b[0])/2,(a[1]+b[1])/2),False)]
+    b_=[f'<path d="M{" L".join(f"{x:.1f} {y:.1f}" for x,y in P)} Z" stroke-width="1.5" opacity=".6"/>']
+    for k,((x,y),kose) in enumerate(noktalar):
+        v=degerler[k] if degerler else None
+        st=f'style="fill:{ACC};stroke:{ACC}"' if (vurgu_kose and kose) else 'style="fill:var(--bg,#fff)"'
+        b_.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="15" stroke-width="1.8" {st}/>')
+        if v is not None: b_.append(_t(x,y+5,str(v),size=14,bold=True,renk=('#fff' if (vurgu_kose and kose) else None)))
+    return _svg(W,(214 if n==3 else 216),''.join(b_))
