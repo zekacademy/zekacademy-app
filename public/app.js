@@ -2243,7 +2243,7 @@ document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#layer").inn
 const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 /* ---------- Konu anlatımı (PROTOTİP): video + izledim + mini test + takıldım ---------- */
-const KA_VIDEO = { "mat|Temel Kavramlar": {id:"VTsU2nzwodo", kanal:"Rehber Matematik", ad:"49 Günde TYT Matematik Kampı · 1. Gün · Temel Kavramlar"} };
+const KA_VIDEO = { "mat|Temel Kavramlar": {id:"f6P_SLrivps", kanal:"Rehber Matematik", ad:"Temel Kavramlar 1 · 49 Günde TYT Matematik Kampı (2027)"} };
 const KA_TEST = { "mat|Temel Kavramlar": [
   {q:"a, b ve c birbirinden farklı rakamlardır. Buna göre a + b + c toplamının alabileceği en büyük değer kaçtır?", s:{A:"21",B:"22",C:"23",D:"24",E:"27"}, d:"D", c:"Farklı rakamlar demek: en büyük üç rakamı seç → **9 + 8 + 7 = 24**. 27 için üçünün de 9 olması gerekirdi ama farklı olmaları isteniyor."},
   {q:"x ve y tam sayılardır. x + y = 7 olduğuna göre x · y çarpımı aşağıdakilerden hangisi olamaz?", s:{A:"12",B:"10",C:"0",D:"−8",E:"11"}, d:"E", c:"Toplamı 7 olan çiftleri dene: 3·4 = **12**, 2·5 = **10**, 0·7 = **0**, (−1)·8 = **−8**. 11 = 1·11 ya da (−1)·(−11) olur ama bu çiftlerin toplamı 7 değil."},
@@ -2277,7 +2277,7 @@ document.addEventListener("click", e=>{ const b = e.target.closest && e.target.c
 function konuSheet(el){ const k = el.dataset.k, d = el.dataset.d||"", n = k.split("|").slice(1).join("|"), v = KA_VIDEO[k], s = st(), h = hoca(s, d);
   Object.assign(KA, {k, cev:{}, tak:false, yanit:false, dk:"", ne:""});
   return sheet(`<h3>${esc(n)}</h3><p class="muted small" style="margin:0">${esc(d)} · konu anlatımı${h?` · Hocan: <b>${esc(h.split("+")[0].trim())}</b>`:""}</p>
-    ${v ? `<div class="kavid"><iframe src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0&playsinline=1&modestbranding=1" title="${esc(v.ad)}" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div><div class="faint small">${esc(v.kanal)} · ${esc(v.ad)}</div>`
+    ${v ? `<div class="kavid"><iframe src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0&playsinline=1&modestbranding=1" title="${esc(v.ad)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="faint small">${esc(v.kanal)} · ${esc(v.ad)} · <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" style="color:var(--ac);font-weight:700">YouTube'da aç</a></div>`
       : `<div class="kavyok">🎬 Bu konunun videosu henüz eşleştirilmedi.<br><span class="faint small">Prototipte sadece TYT Matematik → Temel Kavramlar dolu. Gerçek sürümde her konuya öğrencinin kendi hocasının videosu eşlenecek.</span></div>`}
     <div id="kaBody">${kaGovde()}</div>
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`); }
