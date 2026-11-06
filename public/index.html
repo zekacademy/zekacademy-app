@@ -1029,6 +1029,78 @@ body{background:var(--bg)}
   #layer .sheet{animation:none}
   .kavid{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:none;aspect-ratio:auto;border-radius:0;margin:0;z-index:300;background:#000}
 }
+
+/* Öğrenme Merkezi (prototip) */
+.ogust{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ogb{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:16px 14px;border-radius:var(--r);border:0;color:#fff;min-height:118px;font-family:var(--font);box-shadow:var(--shadow)}
+.ogb span{font-size:26px;line-height:1;margin-bottom:auto}
+.ogb b{font-size:17px;font-weight:800;margin-top:10px}
+.ogb small{font-size:12px;opacity:.85;font-weight:600;line-height:1.3}
+.ogb.soru{background:linear-gradient(140deg,#1FB257,#0B5A30)}
+.ogb.ders{background:linear-gradient(140deg,#E5484D,#A3161C)}
+.vkrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:10px -4px 0;padding:2px 4px 6px;scrollbar-width:none}
+.vkrow::-webkit-scrollbar{display:none}
+.vk{flex:0 0 156px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;text-align:left;background:none;border:0;padding:0;color:var(--fg);font-family:var(--font);min-width:0}
+.vk.genis{flex:none;width:100%}
+.vkr{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--sunk)}
+.vkr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vkr i{font-style:normal;font-size:26px;opacity:.5}
+.vkp{position:relative;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:grid;place-items:center;font-size:15px;padding-left:2px}
+.vkok{position:absolute;top:6px;left:6px;font-style:normal;font-size:11px;font-weight:800;background:var(--good);color:#fff;padding:2px 7px;border-radius:99px}
+.vkbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.35)}
+.vkbar i{display:block;height:100%;background:#E5484D}
+.vkt{font-weight:700;font-size:14px;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.vks{font-size:12px;color:var(--muted)}
+.vk.yok{opacity:.55}
+.tklist{display:flex;flex-direction:column;margin-top:4px}
+.ogarac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.ogarac button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:12px 10px;border-radius:16px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-family:var(--font);min-width:0}
+.ogarac button span{font-size:22px;line-height:1;margin-bottom:6px}
+.ogarac button b{font-size:13px;font-weight:800;line-height:1.2}
+.ogarac button small{font-size:11px;color:var(--muted);line-height:1.25}
+.ogarac button:disabled{opacity:.5}
+@media (max-width:360px){.ogarac{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bgders{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:0;color:var(--fg);font-family:var(--font);padding:12px}
+.bgders .vkr{flex:0 0 132px;width:132px}
+.bgdt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.bgdt small{font-size:11px;font-weight:800;color:#E5484D;text-transform:uppercase;letter-spacing:.04em}
+.bgdt b{font-size:17px;font-weight:800}
+.ognt{font-size:11px;font-weight:800;color:var(--ac);width:auto!important;padding:0 6px}
+/* Ders ekranı */
+body.dersacik{overflow:hidden}
+.dersk{position:fixed;inset:0;z-index:15;background:var(--bg);overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 8px) 16px calc(env(safe-area-inset-bottom,0px) + 24px);animation:pgin .3s ease both}
+.dersk>*{max-width:720px;margin-left:auto;margin-right:auto}
+.dkust{display:flex;align-items:center;gap:10px;padding:4px 0 10px}
+.dkad{font-size:18px;font-weight:800;display:block}
+.dkalt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dkvid{margin-top:0}
+.dkvid iframe,.dkvid #ytp{position:absolute;inset:0;width:100%;height:100%;border:0}
+.dkarac{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.dkzaman{margin-left:auto;font-variant-numeric:tabular-nums}
+.dksek{display:flex;gap:4px;margin-top:14px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
+.dksek::-webkit-scrollbar{display:none}
+.dksek button{flex:none;border:0;background:none;padding:10px 12px;font:700 14px/1 var(--font);color:var(--muted);border-bottom:2.5px solid transparent;margin-bottom:-1px}
+.dksek button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--ac)}
+.dkgovde{display:flex;flex-direction:column;gap:10px;padding-top:14px}
+.dkozet{display:flex;flex-direction:column;gap:8px}
+.dkozet .kay{background:var(--surface);border:1px solid var(--line)}
+.dkformul{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.dkformul div{background:var(--acs);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
+.dkformul small{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.dkformul b{font-size:15px}
+.dknotyaz{display:flex;gap:8px}
+.dknotyaz input{flex:1;min-width:0}
+.dknot{display:flex;align-items:flex-start;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;line-height:1.45}
+.dknot span{flex:1;min-width:0}
+.dkt{flex:none;border:0;background:var(--acs);color:var(--ac);font:800 12px/1 var(--font);padding:6px 8px;border-radius:99px;font-variant-numeric:tabular-nums}
+.dksil{flex:none;border:0;background:none;color:var(--faint);font-size:20px;line-height:1;padding:0 2px}
+.fkart{position:relative;display:grid;place-items:center;min-height:190px;padding:24px;border-radius:22px;border:0;background:linear-gradient(140deg,var(--surface),var(--sunk));box-shadow:var(--shadow);outline:1px solid var(--line);color:var(--fg);font:800 20px/1.35 var(--font);text-align:center}
+.fkart .farka{display:none;color:var(--ac)}
+.fkart.ters .fon{display:none}.fkart.ters .farka{display:block}
+.fkart.ters{animation:fcevir .35s ease}
+@keyframes fcevir{from{transform:rotateY(90deg)}to{transform:none}}
+.fbtn{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (prefers-reduced-motion:reduce){.dersk,.fkart.ters{animation:none}}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
