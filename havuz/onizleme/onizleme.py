@@ -1,210 +1,113 @@
-import json
+import json,html,re
 Q=json.load(open(__import__('sys').argv[1]))
-data=json.dumps([{k:q[k] for k in ('id','konu','zorluk','metin','sekil','siklar','cevap','istenen','bilgi','ipuclari','adimlar','puf','celdiriciler','kaynakKart','kalip','adimSayisi')} for q in Q],ensure_ascii=False)
-html=r'''<!DOCTYPE html>
-<html lang="tr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+def kesir(e): return re.sub(r'(?<![\d/])(\d+)/(\d+)(?![\d/])',r'<span class="kesir"><span>\1</span><span>\2</span></span>',e)
+def metin_html(t):
+    sat=t.split('\n'); out=[]
+    for k,x in enumerate(sat):
+        e=html.escape(x)
+        e=re.sub(r' ([+−×÷=<>≤≥]) ','\u00a0\\1\u00a0',e)
+        kok=k>=len(sat)-2 and re.match(r'(Buna göre|.*olduğuna göre|.*hangisi|.*kaçtır|ifadelerinden)',x)
+        madde=re.match(r'\s*(•|[IVX]+\.)',x)
+        formul=(not kok and not madde and re.search(r'[=<>≤≥□]',x) and len(x)<40 and not re.search(r'[a-zçğıöşü]{6,}',x))
+        e=kesir(e)
+        if not kok and x.strip().startswith('Buna göre') and len(x)<14: kok=True
+        cls='kok' if kok else 'madde' if madde else 'formul' if formul else ''
+        out.append(f'<p class="{cls}">{e}</p>')
+    return ''.join(out)
+def md(s): return re.sub(r'\*\*(.+?)\*\*',r'<b>\1</b>',html.escape(s))
+cards=[]
+for i,q in enumerate(Q,1):
+    ch=''.join(f'<li data-k="{k}" class="{"ok" if k==q["cevap"]["sik"] else ""}"><span class="h">{k})</span> {kesir(html.escape(v))}</li>' for k,v in q['siklar'].items())
+    L=max(len(v) for v in q['siklar'].values()); duzen='sira' if L<=7 else ('osym' if L<=20 else 'alt')
+    st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{kesir(md(a["aciklama"]))}</div><div class="ai">{kesir(html.escape(a["islem"]))}</div></li>' for a in q['adimlar'])
+    ip=''.join(f'<li>{html.escape(x)}</li>' for x in q['ipuclari'])
+    bi=''.join(f'<span class="bil"><b>{html.escape(b["ad"])}</b>{html.escape(b["ifade"])}</span>' for b in q['bilgi'])
+    cards.append(f'''<article class="card" id="q{i}">
+<header><span class="no">{i}</span><span class="tag">{html.escape(q["konu"])}</span><span class="tag z-{q["zorluk"]}">{q["zorluk"]}</span><span class="tag">{q["kalip"]}</span><span class="tag">{q["adimSayisi"]} adım</span></header>
+<div class="metin">{metin_html(q["metin"])}</div>
+{f'<div class="sekil">{q["sekil"]}</div>' if q["sekil"] else ''}
+<ol class="siklar {duzen}">{ch}</ol>
+<details><summary>Çözümü göster</summary>
+<div class="coz">
+<div class="ist"><span>Ne isteniyor?</span>{html.escape(q["istenen"])}</div>
+{f'<div class="bilgiler">{bi}</div>' if bi else ''}
+<ol class="yol">{st}</ol>
+<div class="cvp"><span>Cevap</span><b>{q["cevap"]["sik"]})</b> {kesir(html.escape(q["cevap"]["deger"]))}</div>
+<div class="puf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg><div><b>Püf noktası</b>{html.escape(q["puf"])}</div></div>
+<details class="ipd"><summary>İpuçlarına bak</summary><ol class="ipl">{ip}</ol></details>
+<p class="kart">{html.escape(q["kaynakKart"])}</p>
+</div></details>
+<div class="karar"><button data-v="onay">✓ Onay</button><button data-v="duzelt">✎ Düzeltilsin</button><button data-v="at">✕ At</button>
+<textarea placeholder="Not (isteğe bağlı)"></textarea></div></article>''')
+page=f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Soru Havuzu · Pilot Parti 1 · Sayı Kümeleri</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--zemin:#EEF0F3;--kagit:#FFFFFF;--murekkep:#0F1217;--kursun:#5E6573;--silik:#959BA6;--cizgi:#E3E6EB;
---yesil:#16A34A;--yesil-zemin:#E3F6EA;--kirmizi:#D93636;--kirmizi-zemin:#FDECEC;--sari:#E08A00;--sari-zemin:#FFF1D9;--karalama:#2B3038}
-@media (prefers-color-scheme:dark){:root{--zemin:#0A0B0E;--kagit:#14161B;--murekkep:#F2F4F7;--kursun:#A3A9B5;--silik:#6D7380;--cizgi:#262A33;
---yesil:#3DD47A;--yesil-zemin:#11291B;--kirmizi:#FF6B6B;--kirmizi-zemin:#331616;--sari:#F5B13D;--sari-zemin:#2E2210;--karalama:#D6DAE1}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--zemin);color:var(--murekkep);font:500 16px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
-button{font:inherit;color:inherit}
-.ekran{max-width:520px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--kagit)}
-@media(min-width:560px){.ekran{margin:24px auto;min-height:auto;border-radius:28px;box-shadow:0 1px 0 var(--cizgi),0 30px 60px -30px rgba(15,18,23,.25)}}
-/* üst */
-.ust{display:flex;align-items:center;gap:12px;padding:18px 20px 10px}
-.konu{font-weight:700;font-size:15px}
-.konu small{display:block;font-weight:500;color:var(--kursun);font-size:13px}
-.sayac{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--kursun);font-size:14px}
-.ilerleme{height:4px;margin:0 20px;background:var(--cizgi);border-radius:4px;overflow:hidden}
-.ilerleme i{display:block;height:100%;background:var(--yesil);border-radius:4px;transition:width .4s ease}
-/* soru kâğıdı */
-.kagit{padding:26px 22px 8px 22px;display:grid;grid-template-columns:44px 1fr;column-gap:10px}
-.no{font:700 46px/0.9 "Source Serif 4",serif;color:var(--murekkep);font-variant-numeric:lining-nums;padding-top:4px}
-.metin{font:400 19px/1.62 "Source Serif 4",Georgia,serif;letter-spacing:.002em;max-width:34em}
-.metin p{margin:0 0 .55em}
-.metin p.kok{font-weight:700;margin-top:.8em}
-.metin p.madde{padding-left:1.1em;text-indent:-1.1em}
-.metin p.formul{text-align:center;font-size:21px;margin:.7em 0;font-variant-numeric:tabular-nums;white-space:nowrap}
-.sekil{grid-column:2;color:var(--murekkep);margin:4px 0 6px}
-.sekil svg{width:100%;height:auto;max-width:360px;display:block}
-/* optik şıklar */
-.siklar{list-style:none;margin:10px 0 0;padding:0 16px 4px 16px;display:grid;gap:2px}
-.sik{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:none;border:0;border-radius:16px;padding:10px 12px;cursor:pointer;min-height:50px;transition:background .2s}
-.sik:hover{background:var(--zemin)}
-.sik:focus-visible{outline:2px solid var(--yesil);outline-offset:2px}
-.balon{position:relative;flex:none;width:34px;height:34px;border-radius:50%;border:1.6px solid var(--kursun);display:grid;place-items:center;font:700 14px "Plus Jakarta Sans";color:var(--kursun);overflow:hidden}
-.balon svg{position:absolute;inset:0;width:100%;height:100%;opacity:0}
-.balon svg path{stroke:var(--karalama);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:240;stroke-dashoffset:240}
-.deger{font:400 19px "Source Serif 4",serif;font-variant-numeric:tabular-nums}
-.sik.secili .balon svg{opacity:1}.sik.secili .balon svg path{animation:karala .55s ease-out forwards}
-@keyframes karala{to{stroke-dashoffset:0}}
-.sik.dogru .balon{border-color:var(--yesil);background:var(--yesil);color:#fff;transition:background .25s .45s,border-color .25s .45s}
-.sik.dogru .balon svg{opacity:0;transition:opacity .2s .45s}
-.sik.dogru .deger{font-weight:600}
-.sik.yanlis .balon{border-color:var(--kirmizi)}.sik.yanlis .balon svg path{stroke:var(--kirmizi)}
-.sik.goster .balon{border-color:var(--yesil);color:var(--yesil);border-width:2.4px}
-.cozuldu .sik{cursor:default}.cozuldu .sik:hover{background:none}
-.cozuldu .sik:not(.dogru):not(.yanlis):not(.goster){opacity:.45}
-/* geri bildirim */
-.not{margin:6px 22px 0 66px;font-size:15px;line-height:1.45;border-radius:14px;padding:12px 14px;display:none}
-.not.acik{display:block;animation:belir .3s ease-out}
-.not.iyi{background:var(--yesil-zemin)}.not.kotu{background:var(--kirmizi-zemin)}
-.not b{display:block;font-size:16px;margin-bottom:2px}
-@keyframes belir{from{opacity:0;transform:translateY(-4px)}}
-/* ipucu ve çözüm */
-.eylemler{display:flex;gap:10px;padding:18px 20px 8px}
-.btn{flex:1;border-radius:14px;padding:13px 14px;font-weight:700;font-size:15px;cursor:pointer;border:1.5px solid var(--cizgi);background:var(--kagit)}
-.btn.ana{background:var(--murekkep);color:var(--kagit);border-color:var(--murekkep)}
-.btn:disabled{opacity:.4;cursor:default}
-.btn:focus-visible{outline:2px solid var(--yesil);outline-offset:2px}
-.ipucu{margin:8px 20px 0;background:var(--sari-zemin);border-radius:14px;padding:12px 14px;font-size:15px;display:none}
-.ipucu.acik{display:block;animation:belir .3s ease-out}
-.ipucu ol{margin:0;padding-left:20px}.ipucu li+li{margin-top:6px}
-.cozum{display:none;padding:6px 20px 8px}.cozum.acik{display:block}
-.istenen{font-size:15px;color:var(--kursun);margin:10px 0 12px}
-.istenen strong{color:var(--murekkep)}
-.bilgi{border-left:3px solid var(--yesil);padding:6px 0 6px 12px;margin:0 0 14px;font-size:15px}
-.bilgi div+div{margin-top:4px}
-.adimlar{list-style:none;margin:0;padding:0;counter-reset:a}
-.adim{position:relative;padding:0 0 18px 44px;counter-increment:a;display:none}
-.adim.acik{display:block;animation:belir .35s ease-out}
-.adim::before{content:counter(a);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--zemin);display:grid;place-items:center;font-weight:800;font-size:14px}
-.adim::after{content:"";position:absolute;left:14.5px;top:34px;bottom:4px;width:1.5px;background:var(--cizgi)}
-.adim:last-child::after{display:none}
-.adim h4{margin:3px 0 2px;font-size:16px}
-.adim p{margin:0;color:var(--kursun);font-size:15px}.adim p b{color:var(--murekkep)}
-.islem{margin-top:8px;font:600 18px/1.4 "Source Serif 4",serif;font-variant-numeric:tabular-nums;background:var(--zemin);border-radius:12px;padding:9px 12px;display:inline-block}
-.puf{display:none;margin:4px 0 6px;border-radius:16px;padding:14px 16px;background:var(--murekkep);color:var(--kagit);font-size:15px}
-.puf.acik{display:block;animation:belir .35s ease-out}.puf b{display:block;margin-bottom:2px}
-.gezinti{display:flex;justify-content:space-between;gap:10px;padding:14px 20px 18px;margin-top:auto}
-.gezinti .btn{flex:0 0 auto;padding:12px 18px}
-/* koç şeridi */
-.koc{border-top:1px dashed var(--cizgi);padding:12px 20px 18px;background:var(--zemin)}
-.koc-ust{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--kursun);margin-bottom:8px}
-.koc-ust span{margin-left:auto}
-.kararlar{display:flex;gap:8px}
-.karar{flex:1;border:1.5px solid var(--cizgi);background:var(--kagit);border-radius:12px;padding:9px 6px;font-weight:700;font-size:14px;cursor:pointer}
-.karar[aria-pressed=true][data-v=onay]{background:var(--yesil);border-color:var(--yesil);color:#fff}
-.karar[aria-pressed=true][data-v=duzelt]{background:var(--sari);border-color:var(--sari);color:#fff}
-.karar[aria-pressed=true][data-v=at]{background:var(--kirmizi);border-color:var(--kirmizi);color:#fff}
-.koc textarea{width:100%;margin-top:8px;min-height:40px;border:1.5px solid var(--cizgi);border-radius:12px;background:var(--kagit);color:var(--murekkep);font:inherit;font-size:14px;padding:8px 10px;resize:vertical}
-.koc .kopyala{margin-top:8px;width:100%}
-.kaynak{font-size:12px;color:var(--silik);margin-top:6px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sik.secili .balon svg path{stroke-dashoffset:0}}
-</style></head><body>
-<main class="ekran" id="ekran">
- <div class="ust"><div class="konu" id="konu"></div><div class="sayac" id="sayac"></div></div>
- <div class="ilerleme"><i id="cubuk"></i></div>
- <section class="kagit" aria-live="polite"><div class="no" id="no"></div><div class="metin" id="metin"></div><div class="sekil" id="sekil"></div></section>
- <ol class="siklar" id="siklar"></ol>
- <div class="not" id="not"></div>
- <div class="eylemler"><button class="btn" id="ipucuBtn">İpucu al</button><button class="btn ana" id="cozumBtn">Çözümü gör</button></div>
- <div class="ipucu" id="ipucu"><ol id="ipucuList"></ol></div>
- <section class="cozum" id="cozum">
-  <p class="istenen" id="istenen"></p><div class="bilgi" id="bilgi"></div>
-  <ol class="adimlar" id="adimlar"></ol>
-  <div class="puf" id="puf"></div>
- </section>
- <div class="gezinti"><button class="btn" id="geri">Önceki</button><button class="btn" id="ileri">Sonraki soru</button></div>
- <section class="koc" aria-label="Koç değerlendirmesi">
-  <div class="koc-ust">Koç alanı, öğrenci görmez<span id="isaretli"></span></div>
-  <div class="kararlar"><button class="karar" data-v="onay" aria-pressed="false">Onay</button><button class="karar" data-v="duzelt" aria-pressed="false">Düzeltilsin</button><button class="karar" data-v="at" aria-pressed="false">At</button></div>
-  <textarea id="kocNot" placeholder="Not: neyi değiştireyim?"></textarea>
-  <button class="btn kopyala" id="kopyala">Kararları kopyala</button>
-  <div class="kaynak" id="kaynak"></div>
- </section>
-</main>
-<script>
-const Q=__DATA__;
-const $=id=>document.getElementById(id);
-const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const kalin=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
-const KARALAMA='<svg viewBox="0 0 34 34" aria-hidden="true"><path d="M9 12 L24 9 M7 17 L27 13 M7 22 L27 18 M9 26 L25 23"/></svg>';
-let i=0, durum=Q.map(()=>({secim:null,ipucu:0,adim:0})), koc={};
-try{koc=JSON.parse(localStorage.getItem('pilot1-koc')||'{}')}catch(e){}
-function metinHTML(t){
-  const satirlar=t.split('\n'); const son=satirlar.length-1;
-  return satirlar.map((s,k)=>{
-    const kok=/^(Buna göre|.*olduğuna göre|.*hangisi|.*kaçtır|.*ifadelerinden)/.test(s)&&k>=son-1;
-    const madde=/^(•|[IVX]+\.)/.test(s.trim());
-    const formul=!madde&&!kok&&/[=<>≤≥]/.test(s)&&s.length<40&&!/[a-zçğıöşü]{5,}/.test(s.replace(/\bve\b/g,''));
-    const t=esc(s).replace(/ ([+−×÷=<>≤≥]) /g,'\u00a0$1\u00a0');
-    return `<p class="${kok?'kok':''}${madde?' madde':''}${formul?' formul':''}">${t}</p>`}).join('');
-}
-function goster(){
-  const q=Q[i], d=durum[i];
-  $('konu').innerHTML=esc(q.konu.split(' · ')[1]||q.konu)+'<small>'+esc(q.konu.split(' · ')[0])+'</small>';
-  $('sayac').textContent=(i+1)+' / '+Q.length;
-  $('cubuk').style.width=((i+1)/Q.length*100)+'%';
-  $('no').textContent=i+1; $('metin').innerHTML=metinHTML(q.metin);
-  $('sekil').innerHTML=q.sekil||''; $('sekil').style.display=q.sekil?'block':'none';
-  $('siklar').innerHTML=Object.entries(q.siklar).map(([h,v])=>`<li><button class="sik" data-h="${h}" aria-label="${h} şıkkı: ${esc(v)}"><span class="balon">${h}${KARALAMA}</span><span class="deger">${esc(v)}</span></button></li>`).join('');
-  $('siklar').classList.remove('cozuldu');
-  document.querySelectorAll('.sik').forEach(b=>b.onclick=()=>sec(b.dataset.h));
-  $('not').className='not';
-  $('ipucuList').innerHTML=''; $('ipucu').className='ipucu'; $('ipucuBtn').disabled=false; $('ipucuBtn').textContent='İpucu al';
-  $('istenen').innerHTML='<strong>Ne isteniyor?</strong> '+esc(q.istenen);
-  $('bilgi').innerHTML=q.bilgi.map(b=>`<div><b>${esc(b.ad)}:</b> ${esc(b.ifade)}</div>`).join(''); $('bilgi').style.display=q.bilgi.length?'block':'none';
-  $('adimlar').innerHTML=q.adimlar.map(a=>`<li class="adim"><h4>${esc(a.baslik)}</h4><p>${kalin(a.aciklama)}</p><div class="islem">${esc(a.islem)}</div></li>`).join('');
-  $('puf').innerHTML='<b>Püf noktası</b>'+esc(q.puf); $('puf').className='puf';
-  $('cozum').className='cozum'; $('cozumBtn').textContent='Çözümü gör'; $('cozumBtn').disabled=false;
-  $('geri').disabled=i===0; $('ileri').textContent=i===Q.length-1?'Başa dön':'Sonraki soru';
-  // durumu geri yükle
-  for(let k=0;k<d.ipucu;k++) ipucuEkle(false);
-  if(d.secim) sec(d.secim,true);
-  for(let k=0;k<d.adim;k++) adimAc(false);
-  // koç
-  const c=koc[q.id]||{}; document.querySelectorAll('.karar').forEach(b=>b.setAttribute('aria-pressed',String(c.v===b.dataset.v)));
-  $('kocNot').value=c.n||''; $('kaynak').textContent='Kart: '+q.kaynakKart+' · '+q.zorluk+' · '+q.adimSayisi+' adım';
-  sayKoc();
-}
-function sec(h,sessiz){
-  const q=Q[i], d=durum[i]; if(d.secim&&!sessiz) return; d.secim=h;
-  const dogru=q.cevap.sik; $('siklar').classList.add('cozuldu');
-  document.querySelectorAll('.sik').forEach(b=>{const x=b.dataset.h;
-    if(x===h) b.classList.add('secili', x===dogru?'dogru':'yanlis');
-    else if(x===dogru) setTimeout(()=>b.classList.add('goster'),sessiz?0:450);});
-  const n=$('not');
-  if(h===dogru){n.className='not iyi acik';n.innerHTML='<b>Doğru: '+esc(q.cevap.deger)+'</b>'+(i<Q.length-1?'İstersen çözüm adımlarına da bak.':'Partinin son sorusu.');}
-  else{n.className='not kotu acik';n.innerHTML='<b>Doğru cevap '+dogru+' olacaktı.</b>'+esc(q.celdiriciler[h]||'');}
-}
-function ipucuEkle(kaydet=true){
-  const q=Q[i], d=durum[i], k=$('ipucuList').children.length; if(k>=q.ipuclari.length) return;
-  const li=document.createElement('li'); li.textContent=q.ipuclari[k]; $('ipucuList').appendChild(li); $('ipucu').className='ipucu acik';
-  if(kaydet) d.ipucu=k+1;
-  const kalan=q.ipuclari.length-k-1; $('ipucuBtn').textContent=kalan?'Bir ipucu daha':'İpuçları bitti'; $('ipucuBtn').disabled=!kalan;
-}
-function adimAc(kaydet=true){
-  const q=Q[i], d=durum[i], adimlar=[...document.querySelectorAll('.adim')], k=adimlar.findIndex(a=>!a.classList.contains('acik'));
-  $('cozum').className='cozum acik';
-  if(k===-1){return}
-  adimlar[k].classList.add('acik'); if(kaydet) d.adim=k+1;
-  if(k===adimlar.length-1){$('puf').className='puf acik';$('cozumBtn').textContent='Çözüm tamam';$('cozumBtn').disabled=true}
-  else $('cozumBtn').textContent='Sonraki adım';
-  if(kaydet) adimlar[k].scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'nearest'});
-}
-$('ipucuBtn').onclick=()=>ipucuEkle(); $('cozumBtn').onclick=()=>adimAc();
-$('geri').onclick=()=>{if(i>0){i--;goster();scrollTo(0,0)}};
-$('ileri').onclick=()=>{i=(i+1)%Q.length;goster();scrollTo(0,0)};
-document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA')return;
-  if(e.key==='ArrowRight')$('ileri').click(); if(e.key==='ArrowLeft')$('geri').click();
-  const h=e.key.toUpperCase(); if('ABCDE'.includes(h)&&h.length===1) sec(h);});
-function kaydetKoc(){try{localStorage.setItem('pilot1-koc',JSON.stringify(koc))}catch(e){} sayKoc()}
-function sayKoc(){$('isaretli').textContent=Object.values(koc).filter(c=>c.v).length+' / '+Q.length+' işaretli'}
-document.querySelectorAll('.karar').forEach(b=>b.onclick=()=>{const id=Q[i].id; koc[id]=koc[id]||{}; koc[id].v=b.dataset.v;
-  document.querySelectorAll('.karar').forEach(x=>x.setAttribute('aria-pressed',String(x===b))); kaydetKoc()});
-$('kocNot').oninput=e=>{const id=Q[i].id; koc[id]=koc[id]||{}; koc[id].n=e.target.value; kaydetKoc()};
-$('kopyala').onclick=async()=>{const ad={onay:'ONAY',duzelt:'DÜZELT',at:'AT'};
-  const t='Pilot parti 1 kararları:\n'+Q.map((q,k)=>{const c=koc[q.id]||{};return `${k+1}. ${q.id}: ${c.v?ad[c.v]:'—'}${c.n?' — '+c.n:''}`}).join('\n');
-  const b=$('kopyala'); try{await navigator.clipboard.writeText(t);b.textContent='Kopyalandı'}catch(e){b.textContent='Kopyalanamadı'} setTimeout(()=>b.textContent='Kararları kopyala',2000)};
-goster();
+:root{{--bg:#f6f7f5;--fg:#1d2420;--mut:#5d6b63;--card:#fff;--line:#dfe4e0;--acc:#1f8a5b;--accbg:#e6f4ec}}
+@media(prefers-color-scheme:dark){{:root{{--bg:#121614;--fg:#e8ece9;--mut:#9aa8a0;--card:#1b211e;--line:#2c3631;--acc:#4cc38a;--accbg:#18382a}}}}
+*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:500 16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}}
+main{{max-width:760px;margin:0 auto;padding:20px 14px 80px}}h1{{font-size:1.35rem;margin:.2em 0}}.lead{{color:var(--mut);margin:0 0 18px}}
+.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}}
+header{{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px}}.no{{background:var(--acc);color:#fff;border-radius:8px;padding:0 9px;font-weight:700}}
+.tag{{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:1px 9px;color:var(--mut)}}.z-zor{{color:#c0392b}}.z-orta{{color:#b7791f}}.z-kolay{{color:var(--acc)}}
+.metin{{margin:14px 2px 6px;font:500 17px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;max-width:36em}}
+.metin p{{margin:0 0 .85em}}.metin p.kok{{font-weight:700;margin-top:1.1em}}
+.metin p.madde{{margin:0 0 .35em;padding-left:1.4em}}.metin p.formul{{text-align:center;margin:.9em 0;white-space:nowrap}}.sekil{{color:var(--fg);max-width:420px;margin:6px 0}}.sekil svg{{width:100%;height:auto}}
+.siklar{{list-style:none;padding:0;margin:14px 2px 6px;font:500 17px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}}
+.siklar .h{{font-weight:700;margin-right:.25em}}.siklar li{{border-radius:6px;padding:2px 4px}}
+.siklar.sira{{display:flex;flex-wrap:wrap;column-gap:1.6em;row-gap:.5em}}
+.siklar.osym{{display:grid;grid-template-columns:1fr 1fr;row-gap:.6em;column-gap:1.2em}}
+.siklar.osym li[data-k=C]{{grid-column:1 / span 2;justify-self:center}}.siklar.osym li[data-k=D]{{grid-row:3}}
+.siklar.alt{{display:grid;row-gap:.5em}}
+details[open] ~ * .x,details[open]{{}} .card.acik .siklar li.ok{{background:var(--accbg);box-shadow:inset 0 0 0 1.5px var(--acc)}}
+summary{{cursor:pointer;color:var(--acc);font-weight:600;margin:8px 0}}.adim{{padding-left:20px}}.adim li{{margin:0 0 10px}}.sb{{font-weight:700}}
+code{{display:inline-block;background:var(--bg);border-radius:6px;padding:2px 8px;margin-top:3px;font-size:.92rem}}
+.puf{{background:var(--accbg);border-radius:10px;padding:8px 10px}}.kart{{color:var(--mut);font-size:.82rem}}.bil{{font-size:.9rem;color:var(--mut)}}
+.karar{{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}}
+.karar button{{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:9px;padding:6px 12px;font:inherit;cursor:pointer}}
+.karar button.sec[data-v=onay]{{background:var(--acc);color:#fff;border-color:var(--acc)}}.karar button.sec[data-v=duzelt]{{background:#b7791f;color:#fff}}.karar button.sec[data-v=at]{{background:#c0392b;color:#fff}}
+textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--fg);font:inherit;padding:6px 9px}}
+.alt{{position:sticky;bottom:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between}}
+.alt button{{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}}
+
+.kesir{{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.86em;line-height:1.15;margin:0 .12em}}
+.kesir span:first-child{{border-bottom:1.2px solid currentColor;padding:0 .15em}}
+.coz{{margin-top:6px}}
+.ist{{background:var(--accbg);border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.45}}
+.ist span{{display:block;font-weight:700;color:var(--acc);font-size:13px;margin-bottom:2px}}
+.bilgiler{{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}}
+.bil{{border:1.5px solid var(--line);border-radius:12px;padding:6px 10px;font-size:14px;color:var(--fg)}}
+.bil b{{display:block;font-size:12px;color:var(--mut);font-weight:600}}
+.yol{{list-style:none;margin:18px 0 0;padding:0;counter-reset:y}}
+.yol li{{position:relative;padding:0 0 20px 46px;counter-increment:y}}
+.yol li::before{{content:counter(y);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px}}
+.yol li::after{{content:"";position:absolute;left:15.5px;top:34px;bottom:2px;width:2px;background:repeating-linear-gradient(var(--acc) 0 4px,transparent 4px 8px);opacity:.45}}
+.yol li:last-child::after{{display:none}}
+.ab{{font-weight:800;font-size:16px;line-height:1.3}}
+.aa{{color:var(--mut);font-size:15px;margin-top:2px;line-height:1.45}}.aa b{{color:var(--fg)}}
+.ai{{margin-top:9px;display:inline-block;font:19px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);border-radius:10px;padding:8px 14px;border-left:3px solid var(--acc)}}
+.cvp{{display:flex;align-items:center;gap:10px;margin:2px 0 14px 0;padding:12px 16px;border-radius:14px;border:2px solid var(--acc);font:20px "Plus Jakarta Sans",system-ui,sans-serif}}
+.cvp span{{font:700 13px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--acc);margin-right:4px}}
+.puf{{display:flex;gap:12px;align-items:flex-start;background:var(--fg);color:var(--card);border-radius:14px;padding:13px 15px;font-size:15px;line-height:1.45}}
+.puf svg{{flex:none;width:22px;height:22px;fill:none;stroke:#F5C04A;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}}
+.puf b{{display:block;color:#F5C04A;font-size:13px;margin-bottom:2px}}
+.ipd{{margin-top:12px}}.ipd summary{{font-size:14px}}.ipl{{margin:6px 0 0;padding-left:20px;font-size:15px;color:var(--mut)}}.ipl li+li{{margin-top:4px}}
+</style></head><body><main>
+<h1>Pilot · Parti 1 — Sayı Kümeleri (12 soru)</h1>
+<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
+{''.join(cards)}
+<div class="alt"><span id="say">0 / {len(Q)} işaretlendi</span><button id="kop">Kararları kopyala</button></div>
+</main><script>
+const ids={json.dumps([q['id'] for q in Q])};const st={{}};
+let mem={{}};try{{mem=JSON.parse(localStorage.getItem('pilot1')||'{{}}')}}catch(e){{}}
+document.querySelectorAll('.card').forEach((c,i)=>{{const d=c.querySelector('details');d.addEventListener('toggle',()=>c.classList.toggle('acik',d.open));
+ const ta=c.querySelector('textarea');const bs=c.querySelectorAll('.karar button');
+ const set=v=>{{st[i]=st[i]||{{}};st[i].v=v;bs.forEach(b=>b.classList.toggle('sec',b.dataset.v===v));upd()}};
+ bs.forEach(b=>b.onclick=()=>set(b.dataset.v));ta.oninput=()=>{{st[i]=st[i]||{{}};st[i].n=ta.value;upd()}};
+ if(mem[i]){{if(mem[i].n)ta.value=mem[i].n;st[i]={{n:mem[i].n}};if(mem[i].v)set(mem[i].v)}}}});
+function upd(){{document.getElementById('say').textContent=Object.values(st).filter(x=>x.v).length+' / {len(Q)} işaretlendi';try{{localStorage.setItem('pilot1',JSON.stringify(st))}}catch(e){{}}}}
+document.getElementById('kop').onclick=async()=>{{const ad={{onay:'ONAY',duzelt:'DÜZELT',at:'AT'}};
+ const t='Pilot parti 1 kararları:\\n'+ids.map((id,i)=>`${{i+1}}. ${{id}}: ${{st[i]&&st[i].v?ad[st[i].v]:'—'}}${{st[i]&&st[i].n?' — '+st[i].n:''}}`).join('\\n');
+ const b=document.getElementById('kop');try{{await navigator.clipboard.writeText(t);b.textContent='Kopyalandı ✓'}}catch(e){{b.textContent='Kopyalanamadı'}};setTimeout(()=>b.textContent='Kararları kopyala',2000)}};
 </script></body></html>'''
-html=html.replace('__DATA__',data)
-open(__import__('sys').argv[2],'w').write(html); print(len(html))
+open(__import__('sys').argv[2],'w').write(page); print(len(page))
