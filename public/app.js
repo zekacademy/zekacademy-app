@@ -180,7 +180,10 @@ function applyTheme(){
 /* Telefonun üst çubuğu: açık modda tema rengi, koyu modda koyu zemin */
 function setBarColor(){ const dark = THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
   const c = dark ? "#0A0B0E" : ({green:"#1E9E4A", blue:"#2563EB", red:"#DC2F3C"}[THEME.accent] || "#1E9E4A");
-  const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c); }
+  const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", c);
+  /* Android alt gezinme çubuğu: sayfanın renk şemasına ve kök zemine bakar */
+  const cs = document.querySelector('meta[name="color-scheme"]'); if(cs) cs.setAttribute("content", dark ? "dark" : "light");
+  document.documentElement.style.background = dark ? "#0A0B0E" : ""; }
 try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setBarColor); }catch(e){}
 /* ---------- Ses efektleri (Web Audio ile üretilir, dosya yok; Görünüm'den kapatılabilir) ---------- */
 const SES = { acik: (()=>{ try{ return localStorage.getItem("zk-ses")!=="0"; }catch(e){ return true; } })(), ctx:null };
