@@ -22,8 +22,8 @@ for i,q in enumerate(Q,1):
     st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{kesir(md(a["aciklama"]))}</div><div class="ai">{kesir(html.escape(a["islem"]))}</div></li>' for a in q['adimlar'])
     ip=''.join(f'<li>{html.escape(x)}</li>' for x in q['ipuclari'])
     bi=''.join(f'<span class="bil"><b>{html.escape(b["ad"])}</b>{html.escape(b["ifade"])}</span>' for b in q['bilgi'])
-    cards.append(f'''<article class="card" id="q{i}">
-<header><span class="no">{i}</span><span class="tag">{html.escape(q["konu"])}</span><span class="tag z-{q["zorluk"]}">{q["zorluk"]}</span><span class="tag">{q["kalip"]}</span><span class="tag">{q["adimSayisi"]} adım</span></header>
+    cards.append(f'''<article class="card" id="q{i}" data-z="{q["zorluk"]}" data-t="{q.get("tipId","")}">
+<header><span class="no">{i}</span><span class="tag">{html.escape(q["konu"])}</span><span class="tag z-{q["zorluk"]}">{q["zorluk"]}</span><span class="tag tip">{html.escape(q.get("tip",q["kalip"]))}</span><span class="tag">{q["adimSayisi"]} adım</span></header>
 <div class="metin">{metin_html(q["metin"])}</div>
 {f'<div class="sekil">{q["sekil"]}</div>' if q["sekil"] else ''}
 <ol class="siklar {duzen}">{ch}</ol>
@@ -39,6 +39,10 @@ for i,q in enumerate(Q,1):
 </div></details>
 <div class="karar"><button data-v="onay">✓ Onay</button><button data-v="duzelt">✎ Düzeltilsin</button><button data-v="at">✕ At</button>
 <textarea placeholder="Not (isteğe bağlı)"></textarea></div></article>''')
+from collections import Counter
+tc=Counter((q.get('tipId'),q.get('tip')) for q in Q); zc=Counter(q['zorluk'] for q in Q)
+filtre='<section class="filtre" aria-label="Soru seç"><div class="fs"><span class="fl">Zorluk</span><div class="seg" id="fz">'+''.join(f'<button data-v="{v}" aria-pressed="{str(v=="").lower()}">{ad}{f" <small>{zc[v]}</small>" if v else ""}</button>' for v,ad in [("","Tümü"),("kolay","Kolay"),("orta","Orta"),("zor","Zor")])+'</div></div>'
+filtre+='<div class="fs"><span class="fl">Soru tipi</span><div class="cips" id="ft"><button data-v="" aria-pressed="true">Tümü</button>'+''.join(f'<button data-v="{i}" aria-pressed="false">{html.escape(a)} <small>{n}</small></button>' for (i,a),n in sorted(tc.items(),key=lambda x:-x[1]))+'</div></div><p class="bos" id="bos" hidden>Bu seçimde henüz soru yok. Zorluğu ya da soru tipini değiştir.</p></section>'
 page=f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Soru Havuzu · Pilot Parti 1 · Sayı Kümeleri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,9 +100,22 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .puf svg{{flex:none;width:22px;height:22px;fill:none;stroke:#F5C04A;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}}
 .puf b{{display:block;color:#F5C04A;font-size:13px;margin-bottom:2px}}
 .ipd{{margin-top:12px}}.ipd summary{{font-size:14px}}.ipl{{margin:6px 0 0;padding-left:20px;font-size:15px;color:var(--mut)}}.ipl li+li{{margin-top:4px}}
+
+.filtre{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 16px;display:grid;gap:10px}}
+.fs{{display:grid;gap:6px}}.fl{{font-size:13px;font-weight:700;color:var(--mut)}}
+.seg{{display:flex;border:1.5px solid var(--line);border-radius:12px;padding:3px;gap:2px}}
+.seg button{{flex:1;border:0;background:none;border-radius:9px;padding:7px 4px;font:600 14px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--fg);cursor:pointer}}
+.seg button[aria-pressed=true]{{background:var(--acc);color:#fff}}
+.cips{{display:flex;flex-wrap:wrap;gap:6px}}
+.cips button{{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 11px;font:600 13px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--fg);cursor:pointer}}
+.cips button[aria-pressed=true]{{background:var(--accbg);border-color:var(--acc);color:var(--acc)}}
+.filtre small{{font-weight:500;opacity:.7;margin-left:2px}}
+.seg button:focus-visible,.cips button:focus-visible{{outline:2px solid var(--acc);outline-offset:2px}}
+.bos{{margin:0;font-size:14px;color:var(--mut)}}.card[hidden]{{display:none}}
+.tag.tip{{color:var(--acc);border-color:var(--acc)}}
 </style></head><body><main>
 <div class="bas"><h1>Pilot · Parti 1 — Sayı Kümeleri (12 soru)</h1><div class="tema" role="group" aria-label="Tema"><button data-t="acik" aria-pressed="true">Açık</button><button data-t="koyu" aria-pressed="false">Koyu</button></div></div>
-<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
+__FILTRE__<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
 {''.join(cards)}
 <div class="alt"><span id="say">0 / {len(Q)} işaretlendi</span><button id="kop">Kararları kopyala</button></div>
 </main><script>
@@ -116,5 +133,8 @@ function upd(){{document.getElementById('say').textContent=Object.values(st).fil
 document.getElementById('kop').onclick=async()=>{{const ad={{onay:'ONAY',duzelt:'DÜZELT',at:'AT'}};
  const t='Pilot parti 1 kararları:\\n'+ids.map((id,i)=>`${{i+1}}. ${{id}}: ${{st[i]&&st[i].v?ad[st[i].v]:'—'}}${{st[i]&&st[i].n?' — '+st[i].n:''}}`).join('\\n');
  const b=document.getElementById('kop');try{{await navigator.clipboard.writeText(t);b.textContent='Kopyalandı ✓'}}catch(e){{b.textContent='Kopyalanamadı'}};setTimeout(()=>b.textContent='Kararları kopyala',2000)}};
-</script></body></html>'''
-open(__import__('sys').argv[2],'w').write(page); print(len(page))
+
+(function(){{let z='',t='';const sec=(id,f)=>document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('#'+id+' button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));f(b.dataset.v);uyg()}});
+function uyg(){{let n=0;document.querySelectorAll('.card').forEach(c=>{{const ok=(!z||c.dataset.z===z)&&(!t||c.dataset.t===t);c.hidden=!ok;if(ok)n++}});document.getElementById('bos').hidden=n>0}}
+sec('fz',v=>z=v);sec('ft',v=>t=v);}})();</script></body></html>'''
+open(__import__('sys').argv[2],'w').write(page.replace('__FILTRE__',filtre)); print(len(page))

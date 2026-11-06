@@ -18,7 +18,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2018, 2022, 2024, 2025 · Mert (kuvvetli sayı, dört basamaklı tanım) · 345 Deneme (ortancalı sayı)",
-   "uretimde_degisebilir": "tanımın kuralı, basamak sayısı, istenen (adet / rakam toplamı / öncül)"
+   "uretimde_degisebilir": "tanımın kuralı, basamak sayısı, istenen (adet / rakam toplamı / öncül)",
+   "tipId": "sk-tanimli",
+   "tip": "Tanımlı sayılar ve semboller"
   },
   {
    "id": "K-SK-02",
@@ -35,7 +37,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2018, 2020, 2022, 2025 · Bilgi Sarmal ÖSYM Tipi · Mert tek-çift testleri",
-   "uretimde_degisebilir": "koşul ifadeleri (çarpım/toplam/kesirli), öncüller, harf sayısı, hikâye (sınıf, kasa)"
+   "uretimde_degisebilir": "koşul ifadeleri (çarpım/toplam/kesirli), öncüller, harf sayısı, hikâye (sınıf, kasa)",
+   "tipId": "sk-tek-cift",
+   "tip": "Tek ve çift sayılar"
   },
   {
    "id": "K-SK-03",
@@ -52,7 +56,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2022 (çekmece, kemer), 2023 (raf), 2026",
-   "uretimde_degisebilir": "nesne (direk, raf, delik), bölme sayıları; temiz ondalık sonuç"
+   "uretimde_degisebilir": "nesne (direk, raf, delik), bölme sayıları; temiz ondalık sonuç",
+   "tipId": "sk-ondalik",
+   "tip": "Ondalık sayılar ve günlük hesap"
   },
   {
    "id": "K-SK-04",
@@ -69,7 +75,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2020 (radyo), 2024 (termometre) · 345 SB (MSÜ termometre farkı)",
-   "uretimde_degisebilir": "gösterge türü, ölçek (ondalık/negatif), iki göstergenin farkı"
+   "uretimde_degisebilir": "gösterge türü, ölçek (ondalık/negatif), iki göstergenin farkı",
+   "tipId": "sk-gosterge",
+   "tip": "Sayı doğrusu ve göstergeler"
   },
   {
    "id": "K-SK-05",
@@ -86,7 +94,9 @@
    ],
    "ozel_sayi": "çözüm tekliği kodla taranmalı",
    "kaynak": "ÖSYM 2019, 2020, 2022 · Bilgi Sarmal · Mert (rakamlar toplamı en az/en çok)",
-   "uretimde_degisebilir": "sayı kümesi, işlemler, istenen (kalan / toplam en az / olamaz)"
+   "uretimde_degisebilir": "sayı kümesi, işlemler, istenen (kalan / toplam en az / olamaz)",
+   "tipId": "sk-yerlestirme",
+   "tip": "Kutulara yerleştirme ve işlem bulma"
   },
   {
    "id": "K-SK-06",
@@ -102,7 +112,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2024 (tombala) · Orijinal (okul no ab/ba) · Mert",
-   "uretimde_degisebilir": "bağlam (şifre, bilet, kart), toplam+fark, üç basamaklı uzantı"
+   "uretimde_degisebilir": "bağlam (şifre, bilet, kart), toplam+fark, üç basamaklı uzantı",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-07",
@@ -119,7 +131,9 @@
    ],
    "ozel_sayi": "şıkların bir kısmı ilk koşulu sağlamalı (iyi çeldirici)",
    "kaynak": "ÖSYM 2018, 2019, 2023 · Orijinal Deneme · Mert (∗ işlemi)",
-   "uretimde_degisebilir": "sembol kuralı, iç içe kullanım, ters soru (sonuçtan sayıyı bul)"
+   "uretimde_degisebilir": "sembol kuralı, iç içe kullanım, ters soru (sonuçtan sayıyı bul)",
+   "tipId": "sk-tanimli",
+   "tip": "Tanımlı sayılar ve semboller"
   },
   {
    "id": "K-SK-08",
@@ -135,7 +149,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "3D ardışık sayılar · Bilgi Sarmal kazanım",
-   "uretimde_degisebilir": "sayı adedi, tek/çift, eşitlenen ifade, istenen terim"
+   "uretimde_degisebilir": "sayı adedi, tek/çift, eşitlenen ifade, istenen terim",
+   "tipId": "sk-ardisik",
+   "tip": "Ardışık sayılar"
   },
   {
    "id": "K-SK-09",
@@ -152,7 +168,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2022, 2026",
-   "uretimde_degisebilir": "eşik kesirleri, doğru/yanlış sayısı, hikâye; şıklar aynı paydalı ve sıralı"
+   "uretimde_degisebilir": "eşik kesirleri, doğru/yanlış sayısı, hikâye; şıklar aynı paydalı ve sıralı",
+   "tipId": "sk-kesir",
+   "tip": "Kesirler ve rasyonel sayılar"
   },
   {
    "id": "K-SK-10",
@@ -169,7 +187,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2018 (pasta), 2021 (tartı), 2022 (etiketli tablo), 2025 (tablet ekranı)",
-   "uretimde_degisebilir": "nesne, bölme aşamaları, görünmeyen kısım"
+   "uretimde_degisebilir": "nesne, bölme aşamaları, görünmeyen kısım",
+   "tipId": "sk-kesir",
+   "tip": "Kesirler ve rasyonel sayılar"
   },
   {
    "id": "K-SK-11",
@@ -186,7 +206,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2021 (kasa ekranı), 2026 (lale sapları) · Bilgi Sarmal",
-   "uretimde_degisebilir": "ürünler, miktarlar (kg, adet), istenen (para üstü / fark)"
+   "uretimde_degisebilir": "ürünler, miktarlar (kg, adet), istenen (para üstü / fark)",
+   "tipId": "sk-ondalik",
+   "tip": "Ondalık sayılar ve günlük hesap"
   },
   {
    "id": "K-SK-12",
@@ -203,7 +225,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2023 (lamba ipi; 345 ve Bilgi Sarmal’da tekrar basılmış)",
-   "uretimde_degisebilir": "bağlam (lamba, trafik ışığı, nöbet), periyot uzunluğu, ters soru (kaç kez çekildi)"
+   "uretimde_degisebilir": "bağlam (lamba, trafik ışığı, nöbet), periyot uzunluğu, ters soru (kaç kez çekildi)",
+   "tipId": "sk-oruntu",
+   "tip": "Örüntü ve döngü"
   },
   {
    "id": "K-SK-13",
@@ -220,7 +244,9 @@
    ],
    "ozel_sayi": "fark 2’nin kuvvetleriyle temiz çıkmalı",
    "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (şemsiye örüntüsü)",
-   "uretimde_degisebilir": "çarpan (2, 3), durum türü (renk, açık/kapalı), istenen fark"
+   "uretimde_degisebilir": "çarpan (2, 3), durum türü (renk, açık/kapalı), istenen fark",
+   "tipId": "sk-oruntu",
+   "tip": "Örüntü ve döngü"
   },
   {
    "id": "K-SK-14",
@@ -237,7 +263,9 @@
    ],
    "ozel_sayi": "tüm (x, y) çözümleri kodla taranmalı",
    "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (merdiven)",
-   "uretimde_degisebilir": "mesafe, adım boyları, öncüller"
+   "uretimde_degisebilir": "mesafe, adım boyları, öncüller",
+   "tipId": "sk-tek-cift",
+   "tip": "Tek ve çift sayılar"
   },
   {
    "id": "K-SK-15",
@@ -254,7 +282,9 @@
    ],
    "ozel_sayi": "öncül başına kodla erişilebilirlik taraması",
    "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (özel hesap makinesi)",
-   "uretimde_degisebilir": "tuş kümesi, işlem sayısı, öncül değerler"
+   "uretimde_degisebilir": "tuş kümesi, işlem sayısı, öncül değerler",
+   "tipId": "sk-yerlestirme",
+   "tip": "Kutulara yerleştirme ve işlem bulma"
   },
   {
    "id": "K-SK-16",
@@ -271,7 +301,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 · Orijinal Deneme 7",
-   "uretimde_degisebilir": "sembol sayısı, eşitlikler, işlem önceliği"
+   "uretimde_degisebilir": "sembol sayısı, eşitlikler, işlem önceliği",
+   "tipId": "sk-yerlestirme",
+   "tip": "Kutulara yerleştirme ve işlem bulma"
   },
   {
    "id": "K-SK-17",
@@ -287,7 +319,9 @@
    ],
    "ozel_sayi": "kodla tarama zorunlu",
    "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (ÖSYM 2023 tabanlı) · Mert",
-   "uretimde_degisebilir": "eşitsizlik yönü, basamak yapısı, en az/en çok"
+   "uretimde_degisebilir": "eşitsizlik yönü, basamak yapısı, en az/en çok",
+   "tipId": "sk-rakam-enaz",
+   "tip": "Rakamlarla en az – en çok"
   },
   {
    "id": "K-SK-18",
@@ -304,7 +338,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Temel Tanım (kart-kutu)",
-   "uretimde_degisebilir": "kutu sayısı, kart sayısı, ek koşul, en az/en çok"
+   "uretimde_degisebilir": "kutu sayısı, kart sayısı, ek koşul, en az/en çok",
+   "tipId": "sk-yerlestirme",
+   "tip": "Kutulara yerleştirme ve işlem bulma"
   },
   {
    "id": "K-SK-19",
@@ -320,7 +356,9 @@
    ],
    "ozel_sayi": "kodla tarama",
    "kaynak": "Mert Temel Tanım (dört kişinin sayıları)",
-   "uretimde_degisebilir": "kişi sayısı, ilişkiler, sınır"
+   "uretimde_degisebilir": "kişi sayısı, ilişkiler, sınır",
+   "tipId": "sk-ardisik",
+   "tip": "Ardışık sayılar"
   },
   {
    "id": "K-SK-20",
@@ -337,7 +375,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Sayı Basamakları",
-   "uretimde_degisebilir": "değişen basamaklar, artış miktarı, bilinen rakam"
+   "uretimde_degisebilir": "değişen basamaklar, artış miktarı, bilinen rakam",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-21",
@@ -353,7 +393,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Sayı Basamakları (öz sayı)",
-   "uretimde_degisebilir": "çarpan (9, 11), adım sayısı, öncül sayılar"
+   "uretimde_degisebilir": "çarpan (9, 11), adım sayısı, öncül sayılar",
+   "tipId": "sk-tanimli",
+   "tip": "Tanımlı sayılar ve semboller"
   },
   {
    "id": "K-SK-22",
@@ -370,7 +412,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Sayı Basamakları",
-   "uretimde_degisebilir": "rakam kümesi, basamak sayıları, istenen (fark/toplam)"
+   "uretimde_degisebilir": "rakam kümesi, basamak sayıları, istenen (fark/toplam)",
+   "tipId": "sk-rakam-enaz",
+   "tip": "Rakamlarla en az – en çok"
   },
   {
    "id": "K-SK-23",
@@ -386,7 +430,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Sayı Basamakları",
-   "uretimde_degisebilir": "artış/azalış miktarları, kat ilişkisi"
+   "uretimde_degisebilir": "artış/azalış miktarları, kat ilişkisi",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-24",
@@ -402,7 +448,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Sayı Basamakları (cetveller)",
-   "uretimde_degisebilir": "nesneler, harfli uzunluklar, şekil ilişkisi"
+   "uretimde_degisebilir": "nesneler, harfli uzunluklar, şekil ilişkisi",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-25",
@@ -418,7 +466,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2021 (derslik) · 345 SB (konser)",
-   "uretimde_degisebilir": "bağlam, çarpan sayıları, şık biçimi (k!/m!)"
+   "uretimde_degisebilir": "bağlam, çarpan sayıları, şık biçimi (k!/m!)",
+   "tipId": "sk-faktoriyel",
+   "tip": "Faktöriyel"
   },
   {
    "id": "K-SK-26",
@@ -435,7 +485,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Faktöriyel · Bilgi Sarmal",
-   "uretimde_degisebilir": "faktöriyeller, k tanımı"
+   "uretimde_degisebilir": "faktöriyeller, k tanımı",
+   "tipId": "sk-faktoriyel",
+   "tip": "Faktöriyel"
   },
   {
    "id": "K-SK-27",
@@ -452,7 +504,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Bilgi Sarmal Kazanım · Mert (p² − 2p − 24 asal)",
-   "uretimde_degisebilir": "denklem biçimi, istenen (toplam / asal olmayan şık)"
+   "uretimde_degisebilir": "denklem biçimi, istenen (toplam / asal olmayan şık)",
+   "tipId": "sk-asal",
+   "tip": "Asal sayılar"
   },
   {
    "id": "K-SK-28",
@@ -468,7 +522,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "345 SB · 3D Tek-Çift ve İşaret",
-   "uretimde_degisebilir": "eşitsizlik sayısı, sorulan ifadeler"
+   "uretimde_degisebilir": "eşitsizlik sayısı, sorulan ifadeler",
+   "tipId": "sk-isaret",
+   "tip": "İşaret inceleme ve sıralama"
   },
   {
    "id": "K-SK-29",
@@ -484,7 +540,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Rasyonel Sayılar (2ⁿ bölmeli cetvel)",
-   "uretimde_degisebilir": "bölme kuralı, işaretli noktalar, istenen"
+   "uretimde_degisebilir": "bölme kuralı, işaretli noktalar, istenen",
+   "tipId": "sk-kesir",
+   "tip": "Kesirler ve rasyonel sayılar"
   },
   {
    "id": "K-SK-30",
@@ -501,7 +559,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert Rasyonel Sayılar",
-   "uretimde_degisebilir": "kesir ifadesi, koşul (basit/bileşik), istenen (toplam/adet)"
+   "uretimde_degisebilir": "kesir ifadesi, koşul (basit/bileşik), istenen (toplam/adet)",
+   "tipId": "sk-kesir",
+   "tip": "Kesirler ve rasyonel sayılar"
   },
   {
    "id": "K-SK-31",
@@ -517,7 +577,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "ÖSYM 2022 (etiketli tablo) · 345 SB (boncuk kasnağı)",
-   "uretimde_degisebilir": "nesne, oran, istenen (en az/en çok/kesin)"
+   "uretimde_degisebilir": "nesne, oran, istenen (en az/en çok/kesin)",
+   "tipId": "sk-kesir",
+   "tip": "Kesirler ve rasyonel sayılar"
   },
   {
    "id": "K-SK-32",
@@ -534,7 +596,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Orijinal Deneme (gömlek-kazak-pantolon)",
-   "uretimde_degisebilir": "ürünler, adetler, harfli gelirler"
+   "uretimde_degisebilir": "ürünler, adetler, harfli gelirler",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-33",
@@ -551,7 +615,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Orijinal Deneme (okul gezisi biletleri)",
-   "uretimde_degisebilir": "bağlam, numaralandırma kuralı"
+   "uretimde_degisebilir": "bağlam, numaralandırma kuralı",
+   "tipId": "sk-basamak",
+   "tip": "Basamak çözümleme"
   },
   {
    "id": "K-SK-34",
@@ -568,7 +634,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert (sayı çarkı)",
-   "uretimde_degisebilir": "çark boyutu, toplanan bölme sayısı, n"
+   "uretimde_degisebilir": "çark boyutu, toplanan bölme sayısı, n",
+   "tipId": "sk-oruntu",
+   "tip": "Örüntü ve döngü"
   },
   {
    "id": "K-SK-35",
@@ -585,7 +653,9 @@
    ],
    "ozel_sayi": null,
    "kaynak": "Mert (telefon rehberi)",
-   "uretimde_degisebilir": "bağlam (rehber, sıra numarası, koltuk), sayfa büyüklüğü"
+   "uretimde_degisebilir": "bağlam (rehber, sıra numarası, koltuk), sayfa büyüklüğü",
+   "tipId": "sk-ardisik",
+   "tip": "Ardışık sayılar"
   }
  ]
 }
