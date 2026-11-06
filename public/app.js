@@ -2350,7 +2350,7 @@ function haftaKonulari(s){ const h = ((s.plan||{})[curStart(s)]||{}).hedef||{}, 
 function vidKart(k, s, genis){ const c = DERS_ICERIK[k], t = (s.topics||{})[k]||{}, p = (og().ilerleme||{})[k], pct = p&&p.d ? Math.min(100, p.t/p.d*100) : 0;
   return `<button type="button" class="vk ${c?"":"yok"} ${genis?"genis":""}" ${c?`data-ders="${esc(k)}"`:"disabled"}>
     <span class="vkr">${c?`<img src="${thumb(c.vid)}" alt="" loading="lazy">`:`<i>🎬</i>`}${t.v?`<em class="vkok">✓ İzlendi</em>`:""}${c?`<span class="vkp">▶</span>`:""}${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span>
-    <span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)):"Video yakında"}</span></button>`; }
+    <span class="vkm"><span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)):"Video yakında"}</span></span></button>`; }
 function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   Object.entries(DERS_ICERIK).forEach(([k,c])=>{ const ks = (o.kartlar||{})[k]||{}, t = (s.topics||{})[k]||{};
     const due = c.kart.filter((_,i)=>{ const x = ks[i]; return x ? x.sonraki<=bugun : t.v; }).length; if(due) L.push({tip:"kart", k, n:due}); });
@@ -2363,21 +2363,23 @@ function pOgren(s){
   const tk = tekrarListesi(s), matSub = CURX().TYT.find(x=>x.k==="mat"), izlDk = Math.round(((o.izleme||{})[today()]||0)/60);
   const notSay = Object.values(o.notlar||{}).reduce((a,x)=>a+x.length,0), hataSay = (o.hata||[]).filter(h=>!h.tamam).length + soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length;
   return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
-  <div class="page">
+  <div class="page ogpage">
     <div class="ogust"><button class="ogb soru" data-act="go" data-v="socoz"><span>📷</span><b>Soru Çöz</b><small>Fotoğrafını çek, adım adım öğren</small></button>
       <button class="ogb ders" data-ogr="videolar"><span>▶️</span><b>Ders İzle</b><small>${izlDk?`Bugün ${izlDk} dk izledin`:"Hocanın videoları burada"}</small></button></div>
+    <div class="oggrid"><div class="ogsol">
     ${devam?`<div class="card ogdevam"><div class="sech"><h3>Kaldığın yerden devam et</h3></div>${vidKart(devam[0], s, true)}</div>`:""}
-    <div class="card"><div class="sech"><h3>🔁 Bugün tekrar et</h3><span class="faint small">${tk.length?tk.length+" iş":""}</span></div>
+    ${hk.length?`<div class="card ogh"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="vkrow">${hk.map(x=>vidKart(x.k, s)).join("")}</div></div>`:""}
+    <div id="og-videolar" class="ogsira ogv">${OG_SIRALAR.map(([sk, ad, d],i)=>{ const sub = CURX().TYT.find(x=>x.k===sk); if(!sub) return ""; const L = sk==="mat" ? sub.t : sub.t.filter((n,j)=>j<5);
+      const ilk = L.map(n=>tkey(sk,n)).find(k=>DERS_ICERIK[k]), h = (hoca(s,d)||"").split("+")[0].trim() || (ilk?DERS_ICERIK[ilk].kanal:"");
+      return `<div class="card"><div class="sech"><h3>${esc(ad)}</h3>${h?`<span class="faint small">Hocan: ${esc(h)}</span>`:""}</div><div class="vkrow">${L.map(n=>vidKart(tkey(sk,n), s)).join("")}</div></div>`; }).join("")}
+      <p class="faint small" style="margin:-4px 4px 0">Prototip: her derste bir ya da birkaç konu dolu. Gerçek sürümde her konuda senin hocanın videosu.</p></div>
+    </div><div class="ogsag">
+    <div class="card ogt"><div class="sech"><h3>🔁 Bugün tekrar et</h3><span class="faint small">${tk.length?tk.length+" iş":""}</span></div>
       ${tk.length?`<div class="tklist">${tk.map(x=> x.tip==="kart" ? `<button class="row" data-ders="${esc(x.k)}" data-sekme="kart"><span class="ri">🃏</span><div><div class="rt">${esc(konuAdi(x.k))} kartları</div><div class="rs">${x.n} kart tekrar zamanında</div></div><span class="rx">${icon("chev","sm")}</span></button>`
         : x.tip==="hata" ? `<button class="row" data-ders="${esc(x.k)}" data-sekme="test"><span class="ri">❗</span><div><div class="rt">${esc(konuAdi(x.k))} · yanlış yaptığın soru</div><div class="rs">Testte yanlış yapmıştın, bir daha dene</div></div><span class="rx">${icon("chev","sm")}</span></button>`
         : `<button class="row" data-act="go" data-v="cetele"><span class="ri">📌</span><div><div class="rt">${esc(x.ad)}</div><div class="rs">Çetelede ${x.y} yanlış · konuyu tekrar et</div></div><span class="rx">${icon("chev","sm")}</span></button>`).join("")}</div>`
       : `<p class="muted small" style="margin:6px 0 0">Bugün tekrar edecek bir şey yok. Bir video izleyince o konunun kartları ve yanlışların burada sırayla karşına çıkar.</p>`}</div>
-    ${hk.length?`<div class="card"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="vkrow">${hk.map(x=>vidKart(x.k, s)).join("")}</div></div>`:""}
-    <div id="og-videolar" class="ogsira">${OG_SIRALAR.map(([sk, ad, d],i)=>{ const sub = CURX().TYT.find(x=>x.k===sk); if(!sub) return ""; const L = sk==="mat" ? sub.t : sub.t.filter((n,j)=>j<5);
-      const ilk = L.map(n=>tkey(sk,n)).find(k=>DERS_ICERIK[k]), h = (hoca(s,d)||"").split("+")[0].trim() || (ilk?DERS_ICERIK[ilk].kanal:"");
-      return `<div class="card"><div class="sech"><h3>${esc(ad)}</h3>${h?`<span class="faint small">Hocan: ${esc(h)}</span>`:""}</div><div class="vkrow">${L.map(n=>vidKart(tkey(sk,n), s)).join("")}</div></div>`; }).join("")}
-      <p class="faint small" style="margin:-4px 4px 0">Prototip: her derste bir ya da birkaç konu dolu. Gerçek sürümde her konuda senin hocanın videosu.</p></div>
-    <div class="sech" style="margin:6px 4px 0"><h3>Araçlarım</h3></div>
+    <div class="ogar"><div class="sech" style="margin:6px 4px 10px"><h3>Araçlarım</h3></div>
     <div class="ogarac">
       <button data-act="go" data-v="konular"><span>📚</span><b>Konu Takibi</b><small>%${Math.round(examPct(s,"TYT")*100)} TYT</small></button>
       <button data-act="go" data-v="cetele"><span>✏️</span><b>Yanlış Çetelesi</b><small>Konu konu yanlışların</small></button>
@@ -2385,7 +2387,8 @@ function pOgren(s){
       <button data-ogr="kartlar"><span>🃏</span><b>Kartlarım</b><small>${Object.keys(DERS_ICERIK).length} deste</small></button>
       <button data-ogr="notlar"><span>📝</span><b>Notlarım</b><small>${notSay?notSay+" not":"Videodan not al"}</small></button>
       <button disabled><span>🧩</span><b>Soru Bankası</b><small>Yakında</small></button>
-    </div>
+    </div></div>
+    </div></div>
   </div>`; }
 /* Kartlarım / Notlarım listeleri (alttan pencere) */
 document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-ogr]"); if(!b) return; const v = b.dataset.ogr, o = og();
@@ -2410,10 +2413,11 @@ function dersAc(k, sekme, sn){ const c = DERS_ICERIK[k]; if(!c) return; closeShe
   Object.assign(DP, {k, sekme: sekme||"ozet", cev:{}, kart:0, ters:false, tak:false, yanit:null, oyn:false, sn: sn!=null ? +sn : ((og().ilerleme||{})[k]||{}).t||0});
   const el = document.createElement("div"); el.id = "dersk"; el.className = "dersk";
   el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.baslik)}</div></div></div>
-    <div class="kavid dkvid"><div id="ytp"></div></div>
+    <div class="dkana"><div class="dksol"><div class="kavid dkvid"><div id="ytp"></div></div>
     <div class="dkarac"><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button><span class="dkzaman faint small"></span></div>
-    <div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
-    <div id="dkgovde" class="dkgovde"></div>`;
+    <div class="dksira"><div class="sech"><h3>Sıradaki dersler</h3><span class="faint small">önce aynı dersten</span></div><div class="vkrow">${Object.keys(DERS_ICERIK).filter(x=>x!==k).sort((x,y)=>(y.split("|")[0]===k.split("|")[0])-(x.split("|")[0]===k.split("|")[0])).map(x=>vidKart(x, st())).join("")}</div></div></div>
+    <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
+    <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
   const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${c.vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
   ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:c.vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1 },

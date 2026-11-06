@@ -1102,6 +1102,50 @@ body.dersacik{overflow:hidden}
 .fbtn{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media (prefers-reduced-motion:reduce){.dersk,.fkart.ters{animation:none}}
 .ogsira{display:flex;flex-direction:column;gap:12px}
+
+/* Öğrenme Merkezi: telefonda tek sütun (sıra), geniş ekranda iki sütun */
+.oggrid,.ogsol,.ogsag{display:contents}
+.ogpage .ogust{order:0}.ogpage .ogdevam{order:1}.ogpage .ogt{order:2}.ogpage .ogh{order:3}.ogpage .ogv{order:4}.ogpage .ogar{order:5}
+.dkana{display:block}
+@media (min-width:900px){
+  .ogpage{max-width:1280px}
+  .ogb{display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:center;min-height:96px;padding:18px 22px}
+  .ogb span{grid-row:1/3;font-size:34px;margin:0}
+  .ogb b{margin:0;font-size:19px;align-self:end}.ogb small{align-self:start;font-size:13px}
+  .ogdevam .vk.genis{flex-direction:row;align-items:center;gap:20px}
+  .ogdevam .vk.genis .vkr{flex:0 0 46%;max-width:460px}
+  .ogdevam .vk.genis .vkt{font-size:20px}
+  .vkrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));overflow:visible;scroll-snap-type:none;gap:14px;margin:12px 0 0;padding:0}
+  .vk{flex:none}
+  .vk:hover .vkr img{transform:scale(1.04)}.vkr img{transition:transform .3s ease}
+  .bgders .vkr{flex-basis:200px;width:200px}
+  /* Ders ekranı: solda video, sağda sekmeler */
+  .dersk>*{max-width:1400px}
+  .dersk{padding-left:32px;padding-right:32px}
+}
+@media (min-width:1180px){
+  .oggrid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:16px;align-items:start}
+  .ogsol,.ogsag{display:flex;flex-direction:column;gap:16px;min-width:0}
+  .ogsag{position:sticky;top:16px}
+  .ogsag .ogarac{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1000px){
+  .dersk{overflow:hidden;display:flex;flex-direction:column}
+  .dkana{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:24px;flex:1;min-height:0;width:100%}
+  .dksol{min-width:0;overflow:auto}
+  .dksag{min-width:0;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0 16px 16px}
+  .dksag .dksek{position:sticky;top:0;background:var(--surface);z-index:1;margin-top:0;padding-top:6px}
+}
+
+.vkm{display:flex;flex-direction:column;gap:2px;min-width:0}
+@media (min-width:900px){
+  .shell:has(.ogpage) .topin{max-width:1280px}
+  .dersk>*{width:100%}
+  .ogdevam .vkm{gap:8px}.ogdevam .vks{font-size:14px}
+}
+
+.dksira{display:none}
+@media (min-width:1000px){ .dksira{display:block;margin-top:22px} .dksira .vkrow{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))} }
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
