@@ -2511,21 +2511,57 @@ function dersAc(k, sekme, sn, pi){ const c = DERS_ICERIK[k]; if(!c) return; clos
   Object.assign(DP, {k, pi, sekme: sekme||"ozet", cev:{}, kart:0, ters:false, tak:false, yanit:null, oyn:false, sn: sn!=null ? +sn : ((og().ilerleme||{})[k]||{}).t||0});
   const el = document.createElement("div"); el.id = "dersk"; el.className = "dersk";
   el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.kanal)} · ${esc(P.length>1 ? (pi+1)+". video: "+P[pi][1] : c.baslik)}</div></div></div>
-    <div class="dkana"><div class="dksol"><div class="kavid dkvid"><div id="ytp"></div></div>
-    <div class="dkarac"><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button><span class="dkhiz" role="group" aria-label="Oynatma hızı">${[1,1.25,1.5,2].map(r=>`<button data-dk="hiz" data-v="${r}" aria-pressed="${r===(og().hiz||1)}">${String(r).replace(".",",")}x</button>`).join("")}</span><span class="dkzaman faint small"></span></div>
+    <div class="dkana"><div class="dksol"><div class="oyn" id="oyn"><div class="kavid dkvid"><div id="ytp"></div></div>
+    <div class="oyb" id="oyb" hidden>
+      <div class="oyc" id="oyc" role="slider" aria-label="Videoda ilerle" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="oyct"><i class="oycy" id="oycy"></i><i class="oycd" id="oycd"></i>${(BOLUM[k]||[]).slice(1).map(([t])=>`<b class="oybl" data-t="${t}"></b>`).join("")}${((og().notlar||{})[k]||[]).map(n=>`<em class="oynt" data-t="${n.t}" title="${esc(n.m)}"></em>`).join("")}</div><span class="oytop" id="oytop"></span></div>
+      <div class="oyr">
+        <button class="oyd buyuk" data-oy="oynat" aria-label="Oynat" id="oyoynat">▶</button>
+        <button class="oyd" data-oy="geri" aria-label="10 saniye geri">⟲<small>10</small></button>
+        <button class="oyd" data-oy="ileri" aria-label="10 saniye ileri">⟳<small>10</small></button>
+        <span class="oyz" id="oyz">0:00 / 0:00</span>
+        <span class="oyara"></span>
+        <button class="oyd yazi" data-oy="hiz" aria-label="Oynatma hızı" id="oyhiz">${String(og().hiz||1).replace(".",",")}x</button>
+        <button class="oyd" data-dk="not" aria-label="Not al">📝</button>
+        <button class="oyd" data-dk="anla" aria-label="Burayı anlamadım">🤔</button>
+        <button class="oyd" data-oy="tam" aria-label="Tam ekran">⛶</button>
+      </div>
+    </div></div>
+    <div class="dkarac" id="dkarac-yedek" hidden><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button></div>
     ${P.length>1?`<div class="dkbolum"><div class="dkbh">Bu konunun videoları · ${P.length}</div><div class="dkbl">${P.map((x,i)=>`<button data-dk="parca" data-pi="${i}" class="${i===pi?"on":""}"><span>${i+1}. ${x[2]==="soru"?"Soru çözümü":"Konu"}${x[3]?" · "+x[3]+" dk":""}</span>${esc(x[1])}</button>`).join("")}</div></div>`:""}
     ${BOLUM[k]?`<div class="dkbolum"><div class="dkbh">Bölümler</div><div class="dkbl">${BOLUM[k].map(([t,ad],i)=>`<button data-dk="git" data-sn="${t}" data-bi="${i}"><span>${dkSn(t)}</span>${esc(ad)}</button>`).join("")}</div></div>`:""}
     <div class="dksira"><div class="sech"><h3>Sıradaki dersler</h3><span class="faint small">önce aynı dersten</span></div><div class="vkrow">${Object.keys(DERS_ICERIK).filter(x=>x!==k).sort((x,y)=>(y.split("|")[0]===k.split("|")[0])-(x.split("|")[0]===k.split("|")[0])).map(x=>vidKart(x, st())).join("")}</div></div></div>
     <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
     <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
-  const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
-  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1 },
-    events:{ onReady: ev=>{ try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
+  const sade = () => { const yd = $("#dkarac-yedek"); if(yd) yd.hidden = false; const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
+  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1, controls:0, fs:0, iv_load_policy:3, disablekb:1 },
+    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; oyCiz(); if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
   clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); bolumIsaretle(); }, 3000);
   geriKoruma(); }
+/* ---------- Zekacademy oynatıcısı: YouTube kontrolleri kapalı, kumanda bizim ---------- */
+function oyCiz(){ const p = DP.p; if(!p || !p.getDuration) return; let t = 0, d = 0, y = 0; try{ t = p.getCurrentTime()||0; d = p.getDuration()||0; y = p.getVideoLoadedFraction()||0; }catch(_){ return; } if(d) t = Math.min(t, d);
+  const f = $("#oycd"), yb = $("#oycy"), z = $("#oyz"), o = $("#oyoynat"), c = $("#oyc"); if(!f) return;
+  f.style.width = (d ? t/d*100 : 0) + "%"; yb.style.width = (y*100) + "%"; z.textContent = `${dkSn(t)} / ${dkSn(d)}`; if(c) c.setAttribute("aria-valuenow", Math.round(d ? t/d*100 : 0));
+  o.textContent = DP.oyn ? "❚❚" : "▶"; o.setAttribute("aria-label", DP.oyn ? "Durdur" : "Oynat");
+  if(d) document.querySelectorAll("#oyc [data-t]").forEach(e=>{ e.style.left = (Math.min(1, +e.dataset.t/d)*100) + "%"; }); }
+function oyBasla(){ clearInterval(DP.oyt); DP.oyt = setInterval(()=>{ if(!$("#oyb")) return clearInterval(DP.oyt); oyCiz(); }, 250); oyCiz();
+  const c = $("#oyc"); if(!c) return; let sur = false;
+  const git = e => { const r = c.getBoundingClientRect(), x = Math.max(0, Math.min(1, (e.clientX - r.left)/r.width)); try{ const d = DP.p.getDuration(); DP.p.seekTo(x*d, true); const tp = $("#oytop"); if(tp){ tp.textContent = dkSn(x*d); tp.style.left = (x*100)+"%"; } }catch(_){} oyCiz(); };
+  c.addEventListener("pointerdown", e=>{ sur = true; c.setPointerCapture(e.pointerId); c.classList.add("sur"); git(e); });
+  c.addEventListener("pointermove", e=>{ if(sur) git(e); });
+  const bit = e=>{ if(!sur) return; sur = false; c.classList.remove("sur"); dpKaydet(); bolumIsaretle(); };
+  c.addEventListener("pointerup", bit); c.addEventListener("pointercancel", bit);
+  c.addEventListener("keydown", e=>{ if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); oyAtla(e.key==="ArrowRight"?5:-5); } }); }
+function oyAtla(sn){ try{ DP.p.seekTo(Math.max(0, DP.p.getCurrentTime()+sn), true); }catch(_){} oyCiz(); }
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-oy]"); if(!b || !DP.p) return; const a = b.dataset.oy;
+  if(a==="oynat"){ try{ DP.oyn ? DP.p.pauseVideo() : DP.p.playVideo(); }catch(_){} }
+  else if(a==="geri") oyAtla(-10); else if(a==="ileri") oyAtla(10);
+  else if(a==="hiz"){ const L = [1,1.25,1.5,2], r = L[(L.indexOf(og().hiz||1)+1)%L.length]; ogYaz(o=>{ o.hiz = r; }); try{ DP.p.setPlaybackRate(r); }catch(_){} b.textContent = String(r).replace(".",",")+"x"; }
+  else if(a==="tam"){ const w = $("#oyn"); try{ if(document.fullscreenElement) document.exitFullscreen(); else if(w.requestFullscreen) w.requestFullscreen().then(()=>{ try{ screen.orientation.lock("landscape"); }catch(_){} }).catch(()=>{}); else if(w.webkitRequestFullscreen) w.webkitRequestFullscreen(); }catch(_){} }
+});
+document.addEventListener("keydown", e=>{ if(!DP.p || !$("#dersk") || /input|textarea/i.test((e.target||{}).tagName||"")) return; if(e.key===" "||e.key==="k"){ e.preventDefault(); try{ DP.oyn ? DP.p.pauseVideo() : DP.p.playVideo(); }catch(_){} } else if(e.key==="j") oyAtla(-10); else if(e.key==="l") oyAtla(10); });
 function bolumIsaretle(){ const B = BOLUM[DP.k]; if(!B) return; const t = dpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll(".dkbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
-function dersKapat(sessiz){ const el = $("#dersk"); if(!el) return; dpKaydet(); clearInterval(DP.tim); try{ DP.p && DP.p.destroy && DP.p.destroy(); }catch(e){} DP.p = null; DP.k = null; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
+function dersKapat(sessiz){ const el = $("#dersk"); if(!el) return; dpKaydet(); clearInterval(DP.tim); clearInterval(DP.oyt); try{ DP.p && DP.p.destroy && DP.p.destroy(); }catch(e){} DP.p = null; DP.k = null; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
 function izlendiYap(){ const k = DP.k; if(!k) return; const t = (st().topics||{})[k]||{}; if(t.v) return; mutate(x=>{ topic(x,k).v = true; }); sesCal("basari"); toast("Konu izlendi olarak işaretlendi ✓"); }
 function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const c = DERS_ICERIK[DP.k], o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
   document.querySelectorAll("#dersk [data-dk=sek]").forEach(b=>b.setAttribute("aria-selected", b.dataset.v===DP.sekme));

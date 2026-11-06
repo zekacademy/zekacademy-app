@@ -1209,6 +1209,38 @@ body.dersacik{overflow:hidden}
 .dkbl button span{font-size:11px;font-weight:800;color:var(--ac);font-variant-numeric:tabular-nums}
 .dkbl button.on{border-color:var(--ac);background:var(--acs)}
 @media (min-width:1000px){ .dkbl{flex-direction:column;overflow:visible} .dkbl button{max-width:none;flex-direction:row;gap:12px;align-items:center;width:100%} }
+
+/* Zekacademy oynatıcısı */
+.oyn{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#0B0F0C}
+.oyn .kavid{margin:0;border-radius:0}
+.oyb{background:linear-gradient(180deg,#0E1A12,#0B0F0C);color:#fff;padding:8px 10px 10px;display:flex;flex-direction:column;gap:6px;user-select:none;-webkit-user-select:none}
+.oyc{position:relative;height:22px;display:flex;align-items:center;cursor:pointer;touch-action:none;outline:none}
+.oyct{position:relative;width:100%;height:5px;border-radius:99px;background:rgba(255,255,255,.18);transition:height .15s}
+.oyc:hover .oyct,.oyc.sur .oyct,.oyc:focus-visible .oyct{height:8px}
+.oycy{position:absolute;inset:0 auto 0 0;background:rgba(255,255,255,.28);border-radius:inherit}
+.oycd{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#1FB257,#34D27F);border-radius:inherit}
+.oycd::after{content:"";position:absolute;right:-7px;top:50%;width:14px;height:14px;border-radius:50%;background:#fff;transform:translateY(-50%);box-shadow:0 0 0 3px rgba(52,210,127,.35)}
+.oybl{position:absolute;top:0;bottom:0;width:3px;margin-left:-1.5px;background:#0B0F0C}
+.oynt{position:absolute;top:-7px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#F5B13D;box-shadow:0 0 0 2px #0B0F0C}
+.oytop{position:absolute;bottom:22px;transform:translateX(-50%);background:#fff;color:#0B0F0C;font:800 12px/1 var(--font);padding:4px 6px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s;font-variant-numeric:tabular-nums}
+.oyc.sur .oytop{opacity:1}
+.oyr{display:flex;align-items:center;gap:2px}
+.oyd{flex:none;min-width:40px;height:40px;border:0;border-radius:12px;background:none;color:#fff;font:700 18px/1 var(--font);display:inline-flex;align-items:center;justify-content:center;gap:1px;padding:0 6px}
+.oyd small{font-size:10px;font-weight:800;opacity:.8}
+.oyd:hover{background:rgba(255,255,255,.1)}
+.oyd.buyuk{background:#1E9E4A;min-width:46px;border-radius:50%;font-size:16px;margin-right:4px}
+.oyd.yazi{font-size:13px;font-weight:800;border:1px solid rgba(255,255,255,.25);height:30px;min-width:46px}
+.oyz{font:600 12.5px/1 var(--font);opacity:.85;margin-left:6px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.oyara{flex:1}
+@media (max-width:420px){ .oyd{min-width:34px;padding:0 4px;font-size:16px} .oyd[data-oy="geri"],.oyd[data-oy="ileri"]{display:none} }
+.oyn:fullscreen{border-radius:0;justify-content:center}
+.oyn:fullscreen .kavid{flex:1;aspect-ratio:auto}
+/* telefon yan çevrilince: video + bizim kumanda tüm ekran */
+@media (orientation:landscape) and (max-height:520px){
+  .dersk .oyn{position:fixed;inset:0;z-index:300;border-radius:0}
+  .dersk .oyn .kavid{position:relative;inset:auto;width:100%;height:auto;flex:1;aspect-ratio:auto;z-index:auto}
+  .dersk .oyb{padding:4px 12px 6px}
+}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
