@@ -1024,6 +1024,11 @@ body{background:var(--bg)}
 .katak textarea{width:100%;box-sizing:border-box}
 .kayanit{background:var(--sunk);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}
 .kay{background:var(--surface);border-radius:12px;padding:10px 12px;line-height:1.5;font-size:14px}
+/* Telefon yan çevrilince video tüm ekranı kaplasın (sinema modu) */
+@media (orientation:landscape) and (max-height:520px){
+  #layer .sheet{animation:none}
+  .kavid{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:none;aspect-ratio:auto;border-radius:0;margin:0;z-index:300;background:#000}
+}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
