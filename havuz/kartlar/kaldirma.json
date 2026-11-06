@@ -1,0 +1,128 @@
+{
+ "konu": "Sıvıların Kaldırma Kuvveti",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZKA-01",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Yüzen cisim",
+   "fikir": "Yüzen cisimde batan hacim oranı özkütle oranına eşittir: d_cisim = d_sıvı × batan oran.",
+   "tuzak": "Dışta kalan oranı özkütle sanmak; oranı ters kurmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-kl-yuzme",
+   "tip": "Yüzen cismin batan hacmi",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZKA-02",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Dinamometre",
+   "fikir": "Havadaki ve sıvıdaki ağırlık farkı kaldırma kuvvetidir; F = d g V ile hacim, kütleyle özkütle bulunur.",
+   "tuzak": "Okunan ağırlığı gerçek ağırlık sanmak; g’yi atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-kl-dinamometre",
+   "tip": "Dinamometre ve kaldırma kuvveti",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZKA-03",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Farklı sıvılarda yüzme",
+   "fikir": "Aynı cisim iki sıvıda yüzüyorsa d₁ × V₁ = d₂ × V₂ (batan hacimler ters orantılı).",
+   "tuzak": "Oranı ters yazmak; oranları toplamak ya da çarpmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-kl-yuzme",
+   "tip": "Yüzen cismin batan hacmi",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZKA-04",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "İp gerilmesi",
+   "fikir": "Tamamen batık, ipli cisimde kuvvetler dengelenir: ip, kaldırma kuvveti ile ağırlığın farkı kadardır.",
+   "tuzak": "İp gerilmesini kaldırma kuvvetine ya da ağırlığa eşit saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-kl-ip-gerilme",
+   "tip": "İple bağlı cismin dengesi",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZKA-05",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Yükle batırma",
+   "fikir": "Cisim üstüne yük konup tamamen batırılırsa yük ağırlığı = sıvı ağırlığı farkı: m = (d_sıvı − d_cisim) × V.",
+   "tuzak": "Cismin kütlesini ya da sıvı kütlesini yükle karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-kl-yuk-batma",
+   "tip": "Yük konan cismin batması",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZKA-06",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Buz erirse seviye",
+   "fikir": "Yüzen buz erirken yer değiştiren hacim ile erimiş suyun hacmi karşılaştırılır; içindeki cismin özkütlesi sonucu belirler.",
+   "tuzak": "Buz eridiğinde seviyenin her zaman değiştiğini ya da hep sabit kaldığını sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-kl-buz",
+   "tip": "Buz erirken su seviyesi",
+   "kaynak": "ÖSYM 2018–2025 (kaldırma kuvveti) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-kl-yuzme",
+   "ad": "Yüzen cismin batan hacmi",
+   "kartlar": [
+    "K-FZKA-01",
+    "K-FZKA-03"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  },
+  {
+   "tipId": "fz-kl-dinamometre",
+   "ad": "Dinamometre ve kaldırma kuvveti",
+   "kartlar": [
+    "K-FZKA-02"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  },
+  {
+   "tipId": "fz-kl-ip-gerilme",
+   "ad": "İple bağlı cismin dengesi",
+   "kartlar": [
+    "K-FZKA-04"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  },
+  {
+   "tipId": "fz-kl-yuk-batma",
+   "ad": "Yük konan cismin batması",
+   "kartlar": [
+    "K-FZKA-05"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  },
+  {
+   "tipId": "fz-kl-buz",
+   "ad": "Buz erirken su seviyesi",
+   "kartlar": [
+    "K-FZKA-06"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  }
+ ]
+}

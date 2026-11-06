@@ -1,0 +1,492 @@
+[
+ {
+  "id": "tytbio-ekosistem-0001",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Ekosistem bileşenleri",
+  "k": "bio|Ekosistem",
+  "kazanim": "Abiyotik faktörleri biyotik faktörlerden ayırt eder.",
+  "tipId": "ek-faktor",
+  "tip": "Biyotik ve abiyotik faktörler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Sıcaklık\nII. Ayrıştırıcı bakteri\nIII. Toprağın pH değeri\nYukarıdakilerden hangileri bir ekosistemin abiyotik faktörlerindendir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "II ve III",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Toprağın pH değerinin de abiyotik faktör olduğunu atlamak.",
+   "B": "Ayrıştırıcıyı abiyotik sanmak.",
+   "C": "Sıcaklığı atlayıp bakteriyi abiyotik saymak.",
+   "E": "Ayrıştırıcı bakterinin canlı olduğunu unutmak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Abiyotik faktörler.",
+  "bilgi": [
+   {
+    "ad": "Biyotik ve abiyotik faktörler",
+    "ifade": "Abiyotik: cansız etmenler (ışık, sıcaklık, su, rüzgâr, toprak yapısı, pH) · Biyotik: canlı etmenler (üretici, tüketici, ayrıştırıcı, parazit, rakip, av)"
+   }
+  ],
+  "ipuclari": [
+   "Abiyotik ne demektir?",
+   "Bakteri canlı mıdır?",
+   "Sıcaklık ve pH canlı etmen midir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanımı hatırla",
+    "aciklama": "Abiyotik faktörler cansız çevre etmenleridir.",
+    "islem": "abiyotik = cansız"
+   },
+   {
+    "baslik": "Ögeleri sını",
+    "aciklama": "Sıcaklık ve toprağın pH değeri cansızdır; ayrıştırıcı bakteri canlıdır.",
+    "islem": "I, III cansız · II canlı"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Abiyotik olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Cansız etmen = abiyotik, canlı etmen = biyotik.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0001k",
+  "kaynakKart": "K-BEK-01 (abiyotik faktörler) · soru yönü (biyotik) ve ögeler değişti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-ekosistem-0002",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Enerji akışı",
+  "k": "bio|Ekosistem",
+  "kazanim": "%10 kuralıyla basamaklar arası enerji miktarını hesaplar.",
+  "tipId": "ek-enerji",
+  "tip": "Besin zincirinde enerji aktarımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir ekosistemde üreticilerde 20000 kJ enerji bulunmaktadır. Besin zinciri üretici → otçul → etçil → üst etçil şeklindedir ve her basamakta enerjinin %10’u bir sonraki basamağa aktarılmaktadır.\nBuna göre üst etçile aktarılan enerji kaç kJ’dür?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "20",
+   "C": "200",
+   "D": "2000",
+   "E": "20000"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Dört basamağı beş aktarım sanmak.",
+   "C": "Yalnız iki aktarım hesaplamak.",
+   "D": "Yalnız otçula aktarılan enerjiyi hesaplamak.",
+   "E": "Enerjinin aktarılırken azalmadığını sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Üst etçile aktarılan enerji (kJ).",
+  "bilgi": [
+   {
+    "ad": "Enerji aktarımı",
+    "ifade": "Her basamakta enerjinin yaklaşık %10’u bir üst basamağa aktarılır, kalanı solunumla ısı olarak kaybolur · Örnek: üretici 1000 kJ → otçul 100 kJ → etçil 10 kJ"
+   },
+   {
+    "ad": "Besin zinciri ve ağı",
+    "ifade": "Besin zinciri: üretici → otçul → etçil … basamak basamak tek yol · Besin ağı: birbirine bağlı besin zincirlerinin tümüdür · Zincir üreticiyle başlar, hiçbir canlı tarafından yenmeyen canlıyla biter"
+   }
+  ],
+  "ipuclari": [
+   "Üreticiden otçula aktarılan enerjiyi bul.",
+   "Her basamakta enerji kaç kat azalır?",
+   "Üretici ile üst etçil arasında kaç aktarım var?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Otçul",
+    "aciklama": "Üreticideki enerjinin %10’u otçula geçer.",
+    "islem": "20000 × 0,1 = 2000"
+   },
+   {
+    "baslik": "Etçil",
+    "aciklama": "Otçuldaki enerjinin %10’u etçile geçer.",
+    "islem": "2000 × 0,1 = 200"
+   },
+   {
+    "baslik": "Üst etçil",
+    "aciklama": "Etçildeki enerjinin %10’u üst etçile geçer.",
+    "islem": "200 × 0,1 = 20"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Üst etçile 20 kJ aktarılır.",
+    "islem": "20 kJ"
+   }
+  ],
+  "puf": "Enerji her basamakta 10’a bölünür; basamak sayısını doğru say.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0002k",
+  "kaynakKart": "K-BEK-02 (%10 kuralı, 4 basamak) · zincir, basamak sayısı ve sayılar değişti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-ekosistem-0003",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Besin ağı",
+  "k": "bio|Ekosistem",
+  "kazanim": "Besin ağındaki farklı besin zincirlerini sayar.",
+  "tipId": "ek-besin-agi",
+  "tip": "Besin ağında zincir sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir çayır ekosisteminde canlılar arasındaki beslenme ilişkileri aşağıda (A → B: B, A’yı yer) verilmiştir:\not → çekirge\not → tavşan\nçekirge → kurbağa\nçekirge → kuş\nkurbağa → yılan\nyılan → kartal\nkuş → kartal\ntavşan → tilki\ntavşan → kartal\nBuna göre bu besin ağında üreticiden başlayıp son tüketiciyle biten kaç farklı besin zinciri vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4",
+   "D": "5",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca iki ana dalı saymak.",
+   "B": "Tavşanın kartala giden yolunu atlamak.",
+   "D": "Bir zinciri iki kez saymak.",
+   "E": "Ok sayısını zincir sayısı sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Farklı besin zinciri sayısı.",
+  "bilgi": [
+   {
+    "ad": "Besin zinciri ve ağı",
+    "ifade": "Besin zinciri: üretici → otçul → etçil … basamak basamak tek yol · Besin ağı: birbirine bağlı besin zincirlerinin tümüdür · Zincir üreticiyle başlar, hiçbir canlı tarafından yenmeyen canlıyla biter"
+   }
+  ],
+  "ipuclari": [
+   "Zincir hangi canlıyla başlar?",
+   "Kimleri kimse yemiyor? Zincir orada biter.",
+   "Her dalı ayrı bir zincir olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "Zincirler üretici otla başlar.",
+    "islem": "ot"
+   },
+   {
+    "baslik": "Çekirge dalı",
+    "aciklama": "Ot → çekirge → kurbağa → yılan → kartal ve ot → çekirge → kuş → kartal.",
+    "islem": "2 zincir"
+   },
+   {
+    "baslik": "Tavşan dalı",
+    "aciklama": "Ot → tavşan → tilki ve ot → tavşan → kartal.",
+    "islem": "2 zincir"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Toplam zincir sayısı.",
+    "islem": "2 + 2 = 4"
+   }
+  ],
+  "puf": "Zincirleri üreticiden başlayıp en sona kadar tek tek yaz.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0003k",
+  "kaynakKart": "K-BEK-03 (çayır besin ağı) · göl besin ağı, farklı halkalar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-ekosistem-0004",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Simbiyotik ilişkiler",
+  "k": "bio|Ekosistem",
+  "kazanim": "Canlılar arasındaki ilişki türlerini ayırt eder.",
+  "tipId": "ek-iliski",
+  "tip": "Canlılar arası ilişkiler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Canlılar arasındaki ilişkiler ve türleri ile ilgili,\nI. Baklagil kökü ile Rhizobium bakterisi: Mutualizm\nII. İnsan bağırsağındaki tenya: Kommensalizm\nIII. Mantar ile bitki kökü (mikoriza): Mutualizm\neşleştirmelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Mikorizayı mutualizm olarak bilmemek.",
+   "B": "Baklagil–Rhizobium ilişkisini mutualizm olarak bilmemek.",
+   "C": "Tenyanın konağa zarar verdiğini atlamak.",
+   "D": "Baklagil–Rhizobium eşleşmesini atlamak, tenyayı yanlış saymak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Doğru eşleştirmeler.",
+  "bilgi": [
+   {
+    "ad": "Canlılar arası ilişkiler",
+    "ifade": "Mutualizm: iki tarafın da yararlandığı ilişki (liken, mikoriza, baklagil–Rhizobium) · Parazitizm: bir taraf yararlanır, konak zarar görür (kene, tenya) · Kommensalizm: bir taraf yararlanır, diğeri etkilenmez (ağaç üzerindeki orkide)"
+   }
+  ],
+  "ipuclari": [
+   "Her iki taraf yararlanıyorsa ilişki nedir?",
+   "Tenya konağa zarar verir mi?",
+   "Konak zarar görüyorsa ilişki hangisidir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. eşleştirme",
+    "aciklama": "Rhizobium baklagilden besin alır, baklagile azotlu bileşik sağlar: iki taraf da yararlanır.",
+    "islem": "Mutualizm doğru"
+   },
+   {
+    "baslik": "II. eşleştirme",
+    "aciklama": "Tenya konaktan beslenir, konağa zarar verir: parazitizm.",
+    "islem": "Kommensalizm yanlış"
+   },
+   {
+    "baslik": "III. eşleştirme",
+    "aciklama": "Mantar ile bitki kökü karşılıklı yarar sağlar.",
+    "islem": "Mutualizm doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Kim yararlanıyor, kim zarar görüyor diye sor.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0004k",
+  "kaynakKart": "K-BEK-04 (mutualizm/parazitizm eşleştirmesi) · farklı örnekler ve ilişkiler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-ekosistem-0005",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Azot ve karbon döngüsü",
+  "k": "bio|Ekosistem",
+  "kazanim": "Madde döngülerindeki basamakları ilgili süreç ya da canlıyla eşleştirir.",
+  "tipId": "ek-dongu",
+  "tip": "Madde döngüleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Azot döngüsünün basamakları şöyledir:\nAtmosferdeki N2 —(X)→ Amonyak —(Y)→ Nitrat —(Z)→ Atmosferdeki N2\nBuna göre X, Y ve Z basamaklarını gerçekleştiren canlılar aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "X: Denitrifikasyon bakterileri, Y: Nitrifikasyon bakterileri, Z: Azot bağlayıcı bakteriler",
+   "B": "X: Azot bağlayıcı bakteriler, Y: Denitrifikasyon bakterileri, Z: Nitrifikasyon bakterileri",
+   "C": "X: Nitrifikasyon bakterileri, Y: Azot bağlayıcı bakteriler, Z: Denitrifikasyon bakterileri",
+   "D": "X: Azot bağlayıcı bakteriler, Y: Nitrifikasyon bakterileri, Z: Denitrifikasyon bakterileri",
+   "E": "X: Nitrifikasyon bakterileri, Y: Denitrifikasyon bakterileri, Z: Azot bağlayıcı bakteriler"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "X: Azot bağlayıcı bakteriler, Y: Nitrifikasyon bakterileri, Z: Denitrifikasyon bakterileri"
+  },
+  "celdiriciler": {
+   "A": "Üç basamağı ters yazmak.",
+   "B": "Y ile Z’yi karıştırmak.",
+   "C": "X ile Y’yi karıştırmak.",
+   "E": "Üç basamağı karıştırmak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "X, Y ve Z’yi gerçekleştiren canlılar.",
+  "bilgi": [
+   {
+    "ad": "Azot döngüsü",
+    "ifade": "Azot bağlayıcı bakteriler: N2 → amonyak · Nitrifikasyon bakterileri: amonyak → nitrat · Denitrifikasyon bakterileri: nitrat → N2"
+   }
+  ],
+  "ipuclari": [
+   "N2’yi amonyağa çeviren bakteriler hangileri?",
+   "Amonyağı nitrata çevirmeye ne denir?",
+   "Nitratı tekrar N2’ye çeviren bakterilere ne denir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "X’i bul",
+    "aciklama": "Atmosferdeki N2’yi amonyağa çevirenler azot bağlayıcı bakterilerdir.",
+    "islem": "X: azot bağlayıcılar"
+   },
+   {
+    "baslik": "Y’yi bul",
+    "aciklama": "Amonyak nitrata nitrifikasyon bakterileriyle dönüşür.",
+    "islem": "Y: nitrifikasyon"
+   },
+   {
+    "baslik": "Z’yi bul",
+    "aciklama": "Nitrat tekrar N2 gazına denitrifikasyon bakterileriyle döner.",
+    "islem": "Z: denitrifikasyon"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru sıra dördüncü şıktadır.",
+    "islem": "X, Y, Z"
+   }
+  ],
+  "puf": "Azot döngüsünün sırası: bağlama → nitrifikasyon → denitrifikasyon.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0005k",
+  "kaynakKart": "K-BEK-05 (azot döngüsü basamakları) · karbon döngüsüne geçildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-ekosistem-0006",
+  "ders": "TYT Biyoloji",
+  "konu": "Ekosistem · Popülasyon",
+  "k": "bio|Ekosistem",
+  "kazanim": "Doğum, ölüm ve göçlerden yıl sonu popülasyon yoğunluğunu hesaplar.",
+  "tipId": "ek-populasyon",
+  "tip": "Popülasyon büyüklüğü ve yoğunluğu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 5,
+  "metin": "5 km² büyüklüğündeki bir alanda yaşayan bir popülasyonda yıl başında 400 birey vardır. Bir yıl içinde 80 birey doğmuş, 60 birey ölmüş, dışarıdan 30 birey gelmiş ve 20 birey başka bir alana göç etmiştir.\nBuna göre yıl sonunda bu popülasyonun yoğunluğu kaç birey/km²’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "70",
+   "B": "80",
+   "C": "86",
+   "D": "90",
+   "E": "98"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "86"
+  },
+  "celdiriciler": {
+   "A": "Doğumları hesaba katmamak.",
+   "B": "Yıl başındaki sayıyı alana bölmek.",
+   "D": "Göç edenleri çıkarmayı unutmak.",
+   "E": "Ölenleri çıkarmayı unutmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yıl sonu popülasyon yoğunluğu (birey/km²).",
+  "bilgi": [
+   {
+    "ad": "Popülasyon büyüklüğü",
+    "ifade": "Değişim = doğum + göçle giren − ölüm − göçle çıkan · Popülasyon yoğunluğu = birey sayısı ÷ yaşam alanı (örnek: 200 birey, 4 km² → 50 birey/km²)"
+   }
+  ],
+  "ipuclari": [
+   "Yıl sonu birey sayısını bul.",
+   "Doğum ve göçle gelenler artırır, ölenler ve göç edenler azaltır.",
+   "Yoğunluk = birey sayısı ÷ alan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Artanlar",
+    "aciklama": "Doğumlar ve dışarıdan gelenler sayıyı artırır.",
+    "islem": "+ 80 + 30"
+   },
+   {
+    "baslik": "Azalanlar",
+    "aciklama": "Ölenler ve göç edenler sayıyı azaltır.",
+    "islem": "− 60 − 20"
+   },
+   {
+    "baslik": "Yıl sonu sayı",
+    "aciklama": "Başlangıçtaki sayıya değişimi uygula.",
+    "islem": "400 + 80 − 60 + 30 − 20 = 430"
+   },
+   {
+    "baslik": "Yoğunluk",
+    "aciklama": "Birey sayısı alana bölünür.",
+    "islem": "430 ÷ 5 = 86"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yoğunluk 86 birey/km²’dir.",
+    "islem": "86"
+   }
+  ],
+  "puf": "Önce yeni birey sayısını bul, sonra alana böl.",
+  "kisaYol": null,
+  "kardes": "tytbio-ekosistem-0006k",
+  "kaynakKart": "K-BEK-06 (doğum, ölüm, göç ve alan) · sayılar ve hata kaynakları değişti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

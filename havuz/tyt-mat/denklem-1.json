@@ -1,0 +1,642 @@
+[
+ {
+  "id": "tytmat-denklem-0001",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Parantezli Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Parantezli birinci dereceden denklemi dağılma ve işaret kurallarıyla çözer.",
+  "tipId": "dn-dogrusal",
+  "tip": "Birinci dereceden denklem çözme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "4(x − 3) − 3(x − 5) = 11\ndenkleminde x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−1",
+   "B": "8",
+   "C": "14",
+   "D": "18",
+   "E": "38"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "−1, 4(x − 3)’ü 4x − 3 yazmak; 4, −3 ile de çarpılmalı.",
+   "C": "14, x + 3 = 11’de 3’ü karşıya artı geçirmek.",
+   "D": "18, −3(x − 5)’i −3x + 5 yazmak; −3, −5 ile de çarpılmalı.",
+   "E": "38, −3(x − 5)’i −3x − 15 yazmak; eksi × eksi = artı."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Denklemin çözümü.",
+  "bilgi": [
+   {
+    "ad": "Dağılma",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır. Örnek: −3(x − 5) = −3x + 15"
+   },
+   {
+    "ad": "İşaret kuralı",
+    "ifade": "eksi × eksi = artı, eksi × artı = eksi. Örnek: (−3) × (−5) = 15 · (−2) × 4 = −8"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki parantezi aç; −3’ü iki terimle de çarp.",
+   "(−3) × (−5) kaç eder?",
+   "Benzer terimleri topla, sabiti karşıya geçir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parantezleri aç",
+    "aciklama": "4 ve −3, parantezdeki her terimle çarpılır.",
+    "islem": "4x − 12 − 3x + 15 = 11"
+   },
+   {
+    "baslik": "Benzer terimler",
+    "aciklama": "4x − 3x = x, −12 + 15 = 3.",
+    "islem": "x + 3 = 11"
+   },
+   {
+    "baslik": "Çöz ve kontrol et",
+    "aciklama": "3’ü karşıya eksi olarak geçir.",
+    "islem": "x = 8 · kontrol: 4 × 5 − 3 × 3 = 20 − 9 = 11 ✓"
+   }
+  ],
+  "puf": "Eksi katsayılı parantezi açarken her terimin işaretini değiştir: −3(x − 5) = −3x + 15.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0001k",
+  "kaynakKart": "K-DN-01 (parantez açma, eksi katsayı) · yeni katsayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0002",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Verilen Kök",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Çözümü verilen denklemde x yerine koyarak parametreyi bulur.",
+  "tipId": "dn-parametre",
+  "tip": "Kök ve çözüm kümesi koşulları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "x = 4 değeri\n(a + 2)x − 3a = 14\ndenkleminin bir çözümü olduğuna göre a kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−6",
+   "B": "−3",
+   "C": "6",
+   "D": "12",
+   "E": "22"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "−6, a + 8 = 14’te a = 8 − 14 yazmak; 8 karşıya eksi geçer: a = 14 − 8.",
+   "B": "−3, (a + 2)x’i a + 2x gibi okumak; x, parantezin tamamıyla çarpılır.",
+   "D": "12, (a + 2) × 4’ü 4a + 2 yazmak; 4, 2 ile de çarpılmalı.",
+   "E": "22, 8’i karşıya artı geçirmek: 14 + 8."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "a’nın değeri.",
+  "bilgi": [
+   {
+    "ad": "Denklemin çözümü (kökü)",
+    "ifade": "denklemi sağlayan x değeridir; yerine konunca eşitlik doğru olur. Örnek: 2x − 1 = 5 için x = 3 çözümdür, çünkü 2 × 3 − 1 = 5"
+   },
+   {
+    "ad": "Dağılma",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır. Örnek: −3(x − 5) = −3x + 15"
+   }
+  ],
+  "ipuclari": [
+   "“x = 4 çözüm” ne demek? x yerine 4 yaz.",
+   "(a + 2) × 4’ü dağıt.",
+   "a’lı terimleri topla, a’yı yalnız bırak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yerine koy",
+    "aciklama": "x = 4 denklemi sağlar.",
+    "islem": "(a + 2) × 4 − 3a = 14"
+   },
+   {
+    "baslik": "Dağıt ve topla",
+    "aciklama": "4a + 8 − 3a = 14.",
+    "islem": "a + 8 = 14"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "8’i karşıya geçir.",
+    "islem": "a = 6 · kontrol: 8 × 4 − 18 = 14 ✓"
+   }
+  ],
+  "puf": "Kökü verilen denklemde önce x’i yerine koy; geriye yalnız parametreli basit bir denklem kalır.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0002k",
+  "kaynakKart": "K-DN-03 (kök verilip katsayı istenmesi) · parametre parantez içinde",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0003",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · İki Bilinmeyenli Sistem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "İki bilinmeyenli denklem sistemini yok etme yöntemiyle çözer ve istenen ifadeyi hesaplar.",
+  "tipId": "dn-sistem",
+  "tip": "Denklem sistemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "5x − 2y = 4\n3x + 4y = 18\nolduğuna göre x + y toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−1",
+   "B": "2",
+   "C": "3",
+   "D": "5",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "−1, −2y = −6’dan y = −3 bulmak; eksi bölü eksi artıdır.",
+   "B": "2, x’in değeri; soru x + y’yi soruyor.",
+   "C": "3, y’nin değeri; soru x + y’yi soruyor.",
+   "E": "6, x × y’nin değeri; soru toplamı soruyor."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "x + y toplamı.",
+  "bilgi": [
+   {
+    "ad": "Yok etme yöntemi",
+    "ifade": "denklemleri uygun sayılarla çarpıp taraf tarafa toplayınca bir bilinmeyen gider. Örnek: x + y = 5 ve x − y = 1 ⇒ 2x = 6"
+   }
+  ],
+  "ipuclari": [
+   "y’nin katsayıları −2 ve 4; birini öbürünün tersi yapacak çarpanı bul.",
+   "İlk denklemi 2 ile çarpıp ikinciyle topla.",
+   "x’i bulunca bir denklemde yerine koy."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katsayıyı eşitle",
+    "aciklama": "İlk denklemi 2 ile çarp; y’nin katsayısı −4 olur.",
+    "islem": "10x − 4y = 8"
+   },
+   {
+    "baslik": "Taraf tarafa topla",
+    "aciklama": "−4y ile +4y gider.",
+    "islem": "10x − 4y + 3x + 4y = 8 + 18 ⇒ 13x = 26 ⇒ x = 2"
+   },
+   {
+    "baslik": "y’yi bul",
+    "aciklama": "İlk denklemde x = 2 yaz.",
+    "islem": "10 − 2y = 4 ⇒ −2y = −6 ⇒ y = 3"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İstenen toplam.",
+    "islem": "x + y = 2 + 3 = 5"
+   }
+  ],
+  "puf": "Yok etmede katsayıları zıt işaretli yapacak en küçük çarpanı seç; sonunda sorulan ifadeye dön.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0003k",
+  "kaynakKart": "K-DN-05 (yok etme yöntemi) · katsayı eşitleme gerekiyor, istenen x + y",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0004",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Terazi",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Dengedeki terazilerden denklem kurar, ortak nesneleri sadeleştirerek nesnelerin kütlesini bulur.",
+  "tipId": "dn-terazi",
+  "tip": "Terazi ve şekille denklem kurma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Özdeş üçgen bloklar ve özdeş daire bloklar ile kurulan aşağıdaki eşit kollu teraziler dengededir. Terazilerin kendi kütleleri önemsizdir.\nŞekil 1’de sol kefede 2 üçgen ve 1 daire, sağ kefede 4 daire; Şekil 2’de sol kefede 1 üçgen ve 3 daire, sağ kefede 900 gramlık bir ağırlık vardır.\nBuna göre bir üçgen bloğun kütlesi kaç gramdır?",
+  "sekil": "<svg viewBox=\"0 0 484 132\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M105 104 L118 72 L131 104 Z\" stroke-width=\"1.4\"/><line x1=\"12\" y1=\"70\" x2=\"224\" y2=\"70\" stroke-width=\"2.4\"/><line x1=\"16\" y1=\"67\" x2=\"104\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><line x1=\"132\" y1=\"67\" x2=\"220\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><path d=\"M33.0 66 L41.0 51 L49.0 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><path d=\"M52.0 66 L60.0 51 L68.0 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><circle cx=\"79.0\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"147.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"166.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"185.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"204.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><text x=\"118.0\" y=\"122.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Şekil 1</text><path d=\"M341 104 L354 72 L367 104 Z\" stroke-width=\"1.4\"/><line x1=\"248\" y1=\"70\" x2=\"460\" y2=\"70\" stroke-width=\"2.4\"/><line x1=\"252\" y1=\"67\" x2=\"340\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><line x1=\"368\" y1=\"67\" x2=\"456\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><path d=\"M259.5 66 L267.5 51 L275.5 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><circle cx=\"286.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"305.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"324.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><rect x=\"391.0\" y=\"48\" width=\"42\" height=\"18\" rx=\"3\" stroke-width=\"1.4\"/><text x=\"412.0\" y=\"61.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">900 g</text><text x=\"354.0\" y=\"122.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Şekil 2</text></svg>",
+  "siklar": {
+   "A": "200",
+   "B": "225",
+   "C": "300",
+   "D": "450",
+   "E": "500"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "300"
+  },
+  "celdiriciler": {
+   "A": "200, bir dairenin kütlesi; soru üçgeni soruyor.",
+   "B": "225, üçgen ile daireyi eşit kütleli sanıp 900 ÷ 4 almak.",
+   "D": "450, 2u = 3d’den u = 3d yazmak; 2’ye bölmek unutulmuş.",
+   "E": "500, bir üçgen ile bir dairenin toplamı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Bir üçgen bloğun kütlesi.",
+  "bilgi": [
+   {
+    "ad": "Dengedeki terazi",
+    "ifade": "eşit kollu terazi dengedeyse iki kefedeki toplam kütleler eşittir; iki kefeden aynı nesne atılınca denge bozulmaz"
+   }
+  ],
+  "ipuclari": [
+   "Dengede iki kefedeki kütleler eşittir; Şekil 1’i denklem olarak yaz.",
+   "İki kefede de bulunan daireyi iki taraftan at.",
+   "Bulduğun ilişkiyi Şekil 2’de kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şekil 1’i yaz",
+    "aciklama": "Üçgen u, daire d gram olsun; birer daireyi iki kefeden at.",
+    "islem": "2u + d = 4d ⇒ 2u = 3d ⇒ u = 3d ÷ 2"
+   },
+   {
+    "baslik": "Şekil 2’yi yaz",
+    "aciklama": "Sol kefe 900 grama eşit.",
+    "islem": "u + 3d = 900 ⇒ 3d ÷ 2 + 3d = 900 ⇒ 9d ÷ 2 = 900 ⇒ d = 200"
+   },
+   {
+    "baslik": "Üçgeni bul",
+    "aciklama": "u = 3 × 200 ÷ 2.",
+    "islem": "u = 300 · kontrol: 300 + 600 = 900 ✓",
+    "gorsel": "<svg viewBox=\"0 0 484 148\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M105 104 L118 72 L131 104 Z\" stroke-width=\"1.4\"/><line x1=\"12\" y1=\"70\" x2=\"224\" y2=\"70\" stroke-width=\"2.4\"/><line x1=\"16\" y1=\"67\" x2=\"104\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><line x1=\"132\" y1=\"67\" x2=\"220\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><path d=\"M33.0 66 L41.0 51 L49.0 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><path d=\"M52.0 66 L60.0 51 L68.0 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><circle cx=\"79.0\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"147.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"166.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"185.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"204.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><text x=\"118.0\" y=\"122.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Şekil 1</text><text x=\"118.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">2u = 3d</text><path d=\"M341 104 L354 72 L367 104 Z\" stroke-width=\"1.4\"/><line x1=\"248\" y1=\"70\" x2=\"460\" y2=\"70\" stroke-width=\"2.4\"/><line x1=\"252\" y1=\"67\" x2=\"340\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><line x1=\"368\" y1=\"67\" x2=\"456\" y2=\"67\" stroke-width=\"1\" opacity=\".5\"/><path d=\"M259.5 66 L267.5 51 L275.5 66 Z\" stroke-width=\"1.4\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\" fill-opacity=\".35\"/><circle cx=\"286.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"305.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><circle cx=\"324.5\" cy=\"58\" r=\"7.5\" stroke-width=\"1.4\"/><rect x=\"391.0\" y=\"48\" width=\"42\" height=\"18\" rx=\"3\" stroke-width=\"1.4\"/><text x=\"412.0\" y=\"61.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">900 g</text><text x=\"354.0\" y=\"122.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Şekil 2</text><text x=\"354.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">u = 300 g · d = 200 g</text></svg>"
+   }
+  ],
+  "puf": "Terazide iki kefede ortak olan nesneleri at; kalan eşitlik nesneler arasındaki oranı verir.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0004k",
+  "kaynakKart": "K-DN-07 (iki terazi, oran + toplam) · üçgen ve daire bloklar, ağırlık 900 g",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0005",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Adet ve Tutar",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Toplam adet ve toplam tutar verilen iki ürün için tek bilinmeyenli denklem kurup çözer.",
+  "tipId": "dn-hikaye",
+  "tip": "Sözel durumdan denklem kurma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir fırında poğaçanın tanesi 15 TL, açmanın tanesi 20 TL’dir. Bu fırın bir sabah yalnızca poğaça ve açma satmış; toplam 70 ürün satarak 1200 TL kazanmıştır.\nBuna göre bu sabah kaç poğaça satılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "35",
+   "C": "40",
+   "D": "60",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "30, açma sayısı; soru poğaça sayısını soruyor.",
+   "B": "35, iki üründen eşit sayıda satıldığını varsaymak; tutar koşulu kullanılmamış.",
+   "D": "60, 1200’ü açma fiyatına bölmek; tüm ürünler açma değil.",
+   "E": "80, 1200’ü poğaça fiyatına bölmek; toplam ürün 70."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Satılan poğaça sayısı.",
+  "bilgi": [
+   {
+    "ad": "Dağılma",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır. Örnek: −3(x − 5) = −3x + 15"
+   }
+  ],
+  "ipuclari": [
+   "Poğaça sayısına p dersen açma sayısı ne olur?",
+   "Toplam tutarı p cinsinden yaz.",
+   "Bulduğun sayının poğaçaya mı açmaya mı ait olduğunu kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinmeyeni seç",
+    "aciklama": "Toplam 70 ürün var.",
+    "islem": "poğaça = p · açma = 70 − p"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Toplam tutar 1200 TL.",
+    "islem": "15p + 20 × (70 − p) = 1200 ⇒ 15p + 1400 − 20p = 1200"
+   },
+   {
+    "baslik": "Çöz ve kontrol et",
+    "aciklama": "−5p = −200.",
+    "islem": "p = 40 · kontrol: 40 × 15 + 30 × 20 = 600 + 600 = 1200 ✓"
+   }
+  ],
+  "puf": "İki ürünlü adet-tutar sorularında birine x de, öbürünü “toplam − x” yaz; tek bilinmeyen yeter.",
+  "kisaYol": "Hepsi açma olsaydı 70 × 20 = 1400 TL olurdu; 200 TL eksik ve her poğaça 5 TL eksik getirir: 200 ÷ 5 = 40.",
+  "kardes": "tytmat-denklem-0005k",
+  "kaynakKart": "K-DN-08 (toplam adet + toplam tutar) · yeni kurgu (fırın), istenen ucuz ürün",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0006",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Kesirli Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Paydaları EKOK ile eşitleyerek kesirli birinci dereceden denklemi çözer.",
+  "tipId": "dn-dogrusal",
+  "tip": "Birinci dereceden denklem çözme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(x + 1)/3 − (x − 2)/4 = 2\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−8",
+   "B": "14",
+   "C": "17",
+   "D": "26",
+   "E": "34"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "−8, sağdaki 2’yi 12 ile çarpmamak: x + 10 = 2.",
+   "C": "17, 4(x + 1)’i 4x + 1 yazmak; 4, 1 ile de çarpılmalı.",
+   "D": "26, −3(x − 2)’yi −3x − 6 yazmak; eksi × eksi = artı.",
+   "E": "34, x + 10 = 24’te 10’u karşıya artı geçirmek."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Denklemin çözümü.",
+  "bilgi": [
+   {
+    "ad": "Paydaları eşitleme",
+    "ifade": "her terim paydaların EKOK’u ile çarpılır. Örnek: x/2 + x/3 = 5 ⇒ 3x + 2x = 30"
+   },
+   {
+    "ad": "Dağılma",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır. Örnek: −3(x − 5) = −3x + 15"
+   }
+  ],
+  "ipuclari": [
+   "3 ve 4’ün EKOK’u kaç? Her terimi onunla çarp.",
+   "Sağdaki 2’yi de çarpmayı unutma.",
+   "Payları parantez içinde tut; eksiyi iki terime de dağıt."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paydalardan kurtul",
+    "aciklama": "EKOK(3, 4) = 12; her terimi 12 ile çarp.",
+    "islem": "4(x + 1) − 3(x − 2) = 24"
+   },
+   {
+    "baslik": "Parantezleri aç",
+    "aciklama": "−3 × (−2) = +6.",
+    "islem": "4x + 4 − 3x + 6 = 24"
+   },
+   {
+    "baslik": "Çöz ve kontrol et",
+    "aciklama": "x + 10 = 24.",
+    "islem": "x = 14 · kontrol: 15/3 − 12/4 = 5 − 3 = 2 ✓"
+   }
+  ],
+  "puf": "Paydaları eşitlerken eşitliğin iki tarafındaki her terimi aynı sayıyla çarp.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0006k",
+  "kaynakKart": "K-DN-02 (paydaları eşitleme) · iki kesirli terim ve sabit",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0007",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Zincir Toplamlar",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Bilinmeyen sayısı denklemden fazla olan sistemde istenen toplamı taraf tarafa işlemle bulur.",
+  "tipId": "dn-sistem",
+  "tip": "Denklem sistemleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ali, Berk, Can ve Deniz’in her birinin bir miktar bilyesi vardır.\nAli ile Berk’in bilyelerinin toplamı 10,\nBerk ile Can’ın bilyelerinin toplamı 13,\nCan ile Deniz’in bilyelerinin toplamı 9’dur.\nBuna göre Ali ile Deniz’in bilyelerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "6",
+   "C": "12",
+   "D": "16",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "3, 6’yı ikiye bölüp bir kişinin bilyesini bulmaya çalışmak; soru toplamı soruyor.",
+   "C": "12, (b + c) + (c + d) − (a + b) hesaplamak; bu a + d değil, 2c + d − a verir.",
+   "D": "16, üç toplamı toplayıp ikiye bölmek; bu kalıp yalnızca üç kişinin ikişerli toplamlarında işe yarar.",
+   "E": "32, üç toplamı toplamak; b ve c iki kez sayılır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Ali ile Deniz’in bilyelerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Taraf tarafa işlem",
+    "ifade": "eşitlikler taraf tarafa toplanıp çıkarılabilir. Örnek: a + b = 7 ve b + c = 5 ⇒ (a + b) − (b + c) = a − c = 2"
+   }
+  ],
+  "ipuclari": [
+   "Dört bilinmeyen, üç denklem var; herkesi tek tek bulmak zorunda mısın?",
+   "a + d’yi elde etmek için hangi denklemleri toplayıp hangisini çıkarmalısın?",
+   "b ve c’nin yok olmasını sağla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemleri yaz",
+    "aciklama": "Ali a, Berk b, Can c, Deniz d bilye.",
+    "islem": "a + b = 10 · b + c = 13 · c + d = 9"
+   },
+   {
+    "baslik": "Planı kur",
+    "aciklama": "Dört bilinmeyen ve üç denklem olduğu için kişiler tek tek bulunamaz; a + d doğrudan elde edilmeli.",
+    "islem": "(a + b) − (b + c) + (c + d) = a + d"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "b ve c sadeleşir.",
+    "islem": "10 − 13 + 9 = 6"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Örneğin a = 4, b = 6, c = 7, d = 2 ya da a = 3, b = 7, c = 6, d = 3; ikisinde de a + d = 6.",
+    "islem": "a + d = 6"
+   }
+  ],
+  "puf": "Bilinmeyenleri tek tek bulamıyorsan istenen ifadeyi denklemlerin toplamı ve farkı olarak yazmaya çalış.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0007k",
+  "kaynakKart": "K-DN-06 (ikili toplamlardan istenen toplam) · dört kişi zincir biçiminde, tek tek değerler bulunamaz",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklem-0008",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Boş Küme",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Parametreli birinci dereceden denklemde katsayı ve sabitin durumuna göre çözüm kümesinin boş olduğu değeri bulur.",
+  "tipId": "dn-parametre",
+  "tip": "Kök ve çözüm kümesi koşulları",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a bir gerçel sayı olmak üzere, x’e bağlı\n(a² − 9)x = a² − 3a\ndenkleminin çözüm kümesi boş küme olduğuna göre a kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−3",
+   "B": "0",
+   "C": "3",
+   "D": "9",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−3"
+  },
+  "celdiriciler": {
+   "B": "0, sağ tarafın 0 olmasını koşul sanmak; a = 0 için −9x = 0 ⇒ x = 0 tek çözüm.",
+   "C": "3, a = 3 için 0 × x = 0 olur; her gerçel sayı çözümdür, küme boş değildir.",
+   "D": "9, a² = 9’dan a = 9 bulmak; karesi 9 olan sayılar 3 ve −3’tür.",
+   "E": "18, a = −3 için sağ tarafın değeri; soru a’yı soruyor."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Çözüm kümesini boş yapan a değeri.",
+  "bilgi": [
+   {
+    "ad": "ax = b denkleminin çözümü",
+    "ifade": "a ≠ 0 ise tek çözüm x = b ÷ a · a = 0 ve b = 0 ise her x çözüm · a = 0 ve b ≠ 0 ise çözüm yok (boş küme). Örnek: 0 × x = 5 hiçbir x için sağlanmaz"
+   },
+   {
+    "ad": "Karesi verilen sayı",
+    "ifade": "a² = 9 ise a = 3 ya da a = −3; iki değer de kontrol edilmeli"
+   }
+  ],
+  "ipuclari": [
+   "ax = b biçimindeki bir denklemin hiç çözümü olmaması için a ve b ne olmalı?",
+   "x’in katsayısını sıfır yapan a değerlerini bul; iki tane var.",
+   "Her biri için sağ tarafı hesapla: 0 mı, değil mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Boş küme koşulu",
+    "aciklama": "Hiç çözüm yoksa x’in katsayısı 0, sağ taraf 0’dan farklı olmalı.",
+    "islem": "a² − 9 = 0 ve a² − 3a ≠ 0"
+   },
+   {
+    "baslik": "Katsayıyı sıfırla",
+    "aciklama": "a² = 9.",
+    "islem": "a = 3 ya da a = −3"
+   },
+   {
+    "baslik": "Sağ tarafı dene",
+    "aciklama": "a = 3: sağ taraf 9 − 9 = 0 ⇒ 0 × x = 0, her x çözüm. a = −3: sağ taraf 9 + 9 = 18 ⇒ 0 × x = 18, çözüm yok.",
+    "islem": "a = 3 olmaz · a = −3 olur"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Boş kümeyi veren tek değer.",
+    "islem": "a = −3"
+   }
+  ],
+  "puf": "Katsayıyı sıfır yapan her değeri sağ tarafta da dene: sağ taraf 0 ise sonsuz çözüm, değilse boş küme.",
+  "kisaYol": null,
+  "kardes": "tytmat-denklem-0008k",
+  "kaynakKart": "K-DN-04 (ax = b’de a = 0, b ≠ 0) · katsayı ve sabit parametreye bağlı, sonsuz çözüm tuzağı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

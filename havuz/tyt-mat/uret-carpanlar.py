@@ -172,7 +172,7 @@ for xv in [(3+13**.5)/2,(3-13**.5)/2]:
 assert 9+2==11 and 11+2==13 and 9+4==13 and 11+4==15 and 9-2==7
 P.R('0006','ca-ozdeslik','İki kare farkı ve tam kare özdeşlikleri','orta','x ile 1/x','x − 1/x verildiğinde tam kare açılımlarıyla x + 1/x’in karesini bulur.','düz',3,
  'K-CA-02 (x ± 1/x, orta terim ±2) · farktan toplamın karesine geçiş',
- 'x − 1/x = 3\nolduğuna göre (x + 1/x)² ifadesinin değeri kaçtır?',
+ 'x sıfırdan farklı bir gerçel sayı ve\nx − 1/x = 3\nise (x + 1/x)² kaçtır?',
  ['7','9','11','13','15'],'D','(x + 1/x)² ifadesinin değeri.',
  ['x − 1/x = 3 eşitliğinin iki tarafının karesini al.','x × 1/x = 1; açılımdaki orta terim kaç olur?','Önce x² + 1/x²’yi bul, sonra (x + 1/x)²’yi aç.'],[TKO,TERS],
  [A('Karesini al','(x − 1/x)² açılımında orta terim −2.','(x − 1/x)² = x² − 2 + 1/x² = 9'),
@@ -185,7 +185,7 @@ P.R('0006','ca-ozdeslik','İki kare farkı ve tam kare özdeşlikleri','orta','x
 for av in [(5+21**.5)/2,(5-21**.5)/2]:
     assert abs(av+1/av-5)<1e-12 and abs((av-1/av)**2-21)<1e-9 and abs(av*av+1/(av*av)-23)<1e-9
 assert 25-2==23 and 23-2==21 and 23-4==19 and 25+2==27
-P.K('0006','a + 1/a = 5\nolduğuna göre (a − 1/a)² ifadesinin değeri kaçtır?',
+P.K('0006','a, sıfırdan farklı bir gerçel sayıdır.\na + 1/a = 5\nverildiğine göre (a − 1/a)² kaça eşittir?',
  ['19','21','23','25','27'],'B','(a − 1/a)² ifadesinin değeri.',
  ['a + 1/a = 5 eşitliğinin karesini al.','Orta terim 2 × a × 1/a = 2.','a² + 1/a²’yi bulup (a − 1/a)²’yi aç.'],[TKO,TERS],
  [A('Karesini al','Orta terim +2.','(a + 1/a)² = a² + 2 + 1/a² = 25'),

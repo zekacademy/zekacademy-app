@@ -1,0 +1,503 @@
+[
+ {
+  "id": "tytfiz-kaldirma-0001k",
+  "ana": "tytfiz-kaldirma-0001",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "Yüzen cismin batan hacim oranından özkütlesini bulur.",
+  "tipId": "fz-kl-yuzme",
+  "tip": "Yüzen cismin batan hacmi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 2,
+  "metin": "Özkütlesi 2 g/cm³ olan sıvıda şekildeki gibi yüzen bir cismin hacminin 1/4’ü sıvının dışındadır.\nBuna göre cismin özkütlesi kaç g/cm³’tür?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"115\" y=\"56.8\" width=\"96\" height=\"79.2\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M115 26 L115 136 L211 136 L211 26\" stroke-width=\"2\"/><line x1=\"117\" y1=\"56.8\" x2=\"209\" y2=\"56.8\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"143.0\" y=\"45.8\" width=\"40\" height=\"44\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><text x=\"163.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">2 g/cm³ sıvı</text></svg>",
+  "siklar": {
+   "A": "0,5",
+   "B": "0,75",
+   "C": "1",
+   "D": "1,5",
+   "E": "2"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1,5"
+  },
+  "celdiriciler": {
+   "A": "Dışta kalan oranı (1/4) ile sıvının özkütlesini çarpmış.",
+   "B": "Batan hacim oranını (3/4) özkütle sanmış; sıvının özkütlesiyle çarpmayı atlamış.",
+   "C": "Cismin yarısının battığını sanmış (2 × 1/2).",
+   "E": "Cismin özkütlesini sıvınınkine eşit sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Cismin özkütlesi (g/cm³).",
+  "bilgi": [
+   {
+    "ad": "Yüzme koşulu",
+    "ifade": "yüzen cisimde kaldırma kuvveti ağırlığa eşittir: d_cisim × V = d_sıvı × V_batan; yani d_cisim = d_sıvı × (batan hacim ÷ toplam hacim). Örnek: yarısı batıksa d_cisim = d_sıvı ÷ 2"
+   },
+   {
+    "ad": "Kaldırma kuvveti",
+    "ifade": "F = d_sıvı × V_batan × g; yer değiştiren sıvının ağırlığına eşittir. Örnek: suda (1000 kg/m³) 2 × 10⁻³ m³ batan cisme 1000 × 2 × 10⁻³ × 10 = 20 N etki eder"
+   }
+  ],
+  "ipuclari": [
+   "Yüzen cisimde kaldırma kuvveti cismin ağırlığına eşittir.",
+   "Batan hacim, toplam hacmin kaçta kaçı? Dışta kalan 1/5 ise batan…",
+   "d_cisim × V = d_sıvı × V_batan eşitliğini kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Batan oran",
+    "aciklama": "Hacmin 1/4’ü dışarıda olduğundan 3/4’ü sıvının içindedir.",
+    "islem": "V_batan = 3/4 V"
+   },
+   {
+    "baslik": "Dengeyi yaz",
+    "aciklama": "Yüzen cismin ağırlığı kaldırma kuvvetine eşittir.",
+    "islem": "d × V = 2 × (3/4) V"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "V sadeleşir.",
+    "islem": "d = 2 × 0,75 = 1,5 g/cm³"
+   }
+  ],
+  "puf": "Yüzen cisimde özkütle = sıvının özkütlesi × batan hacim oranıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-01 (yüzen cisim) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-kaldirma-0002k",
+  "ana": "tytfiz-kaldirma-0002",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "Dinamometre okumalarından kaldırma kuvvetini, hacmi ve cismin özkütlesini bulur.",
+  "tipId": "fz-kl-dinamometre",
+  "tip": "Dinamometre ve kaldırma kuvveti",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir metal blok, havada dinamometreyle ölçüldüğünde 36 N, tamamen suya batırıldığında 24 N okunuyor.\nSuyun özkütlesi 1000 kg/m³ ve g = 10 m/s² olduğuna göre bloğun özkütlesi kaç kg/m³’tür?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "1000",
+   "C": "1500",
+   "D": "2000",
+   "E": "3000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "3000"
+  },
+  "celdiriciler": {
+   "A": "Hacmi 1,2 × 10⁻² m³ bulmuş (üs hatası yapmış).",
+   "B": "Suyun özkütlesini bloğun özkütlesi sanmış.",
+   "C": "Özkütleyi 1000 × 36 ÷ 24 olarak hesaplamış; sudaki okumayı kaldırma kuvveti yerine kullanmış.",
+   "D": "Sudaki okumayı (24 N) bloğun ağırlığı sanıp özkütleyi 2,4 kg ÷ 1,2 × 10⁻³ m³ bulmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Bloğun özkütlesi (kg/m³).",
+  "bilgi": [
+   {
+    "ad": "Kaldırma kuvveti",
+    "ifade": "F = d_sıvı × V_batan × g; yer değiştiren sıvının ağırlığına eşittir. Örnek: suda (1000 kg/m³) 2 × 10⁻³ m³ batan cisme 1000 × 2 × 10⁻³ × 10 = 20 N etki eder"
+   },
+   {
+    "ad": "Özkütle ve ağırlık",
+    "ifade": "özkütle d = m ÷ V; ağırlık G = m × g. Örnek: 50 N ağırlıklı cismin kütlesi 5 kg’dır (g = 10)"
+   }
+  ],
+  "ipuclari": [
+   "Havadaki ve sudaki okuma farkı kaldırma kuvvetidir.",
+   "Kaldırma kuvvetinden cismin hacmini bul: F = d × V × g.",
+   "Havadaki ağırlıktan kütleyi, kütle ve hacimden özkütleyi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kaldırma kuvveti",
+    "aciklama": "Havadaki ağırlıktan sudaki okuma çıkarılır.",
+    "islem": "F = 36 − 24 = 12 N"
+   },
+   {
+    "baslik": "Hacim",
+    "aciklama": "Blok tamamen batıktır.",
+    "islem": "12 = 1000 × V × 10 · V = 1,2 × 10⁻³ m³"
+   },
+   {
+    "baslik": "Kütle",
+    "aciklama": "Havadaki okuma bloğun ağırlığıdır.",
+    "islem": "m = 36 ÷ 10 = 3,6 kg"
+   },
+   {
+    "baslik": "Özkütle",
+    "aciklama": "Kütle hacme bölünür.",
+    "islem": "d = 3,6 ÷ (1,2 × 10⁻³) = 3000 kg/m³"
+   }
+  ],
+  "puf": "Dinamometre sorularında önce okuma farkından kaldırma kuvvetini, ondan hacmi bul; kütle için havadaki okumayı kullan.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-02 (dinamometre ve özkütle) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-kaldirma-0003k",
+  "ana": "tytfiz-kaldirma-0003",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "Aynı cismin iki farklı sıvıdaki batan hacim oranlarından sıvıların özkütle oranını bulur.",
+  "tipId": "fz-kl-yuzme",
+  "tip": "Yüzen cismin batan hacmi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki gibi aynı cisim, özkütleleri d_K ve d_L olan K ve L sıvılarında yüzmektedir. Cismin hacminin K sıvısında 3/5’i, L sıvısında 3/4’ü sıvı içindedir.\nBuna göre d_K / d_L oranı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"30\" y=\"59.0\" width=\"96\" height=\"77.0\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M30 26 L30 136 L126 136 L126 26\" stroke-width=\"2\"/><line x1=\"32\" y1=\"59.0\" x2=\"124\" y2=\"59.0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"58.0\" y=\"41.4\" width=\"40\" height=\"44\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><text x=\"78.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K sıvısı</text><rect x=\"190\" y=\"59.0\" width=\"96\" height=\"77.0\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M190 26 L190 136 L286 136 L286 26\" stroke-width=\"2\"/><line x1=\"192\" y1=\"59.0\" x2=\"284\" y2=\"59.0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"218.0\" y=\"48.0\" width=\"40\" height=\"44\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><text x=\"238.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L sıvısı</text></svg>",
+  "siklar": {
+   "A": "3/20",
+   "B": "9/20",
+   "C": "4/5",
+   "D": "5/4",
+   "E": "27/20"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5/4"
+  },
+  "celdiriciler": {
+   "A": "Batan hacim oranlarının farkını (3/4 − 3/5) almış.",
+   "B": "Batan hacim oranlarını (3/5 × 3/4) çarpmış.",
+   "C": "Oranı ters kurmuş: d_L ÷ d_K.",
+   "E": "Batan hacim oranlarını (3/5 + 3/4) toplamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "K ve L sıvılarının özkütle oranı (d_K / d_L).",
+  "bilgi": [
+   {
+    "ad": "Yüzme koşulu",
+    "ifade": "yüzen cisimde kaldırma kuvveti ağırlığa eşittir: d_cisim × V = d_sıvı × V_batan; yani d_cisim = d_sıvı × (batan hacim ÷ toplam hacim). Örnek: yarısı batıksa d_cisim = d_sıvı ÷ 2"
+   }
+  ],
+  "ipuclari": [
+   "Aynı cisim iki sıvıda da yüzüyor: kaldırma kuvveti her iki durumda da cismin ağırlığına eşittir.",
+   "İki durumu eşitle: d_X × V_X batan = d_Y × V_Y batan.",
+   "Özkütle oranını çekmek için batan hacimleri oranla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her sıvı için denge",
+    "aciklama": "Kaldırma kuvveti iki durumda da cismin ağırlığına eşit.",
+    "islem": "d_K × (3V ÷ 5) = G · d_L × (3V ÷ 4) = G"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "Ağırlık aynı olduğundan iki kaldırma kuvveti eşittir; V sadeleşir.",
+    "islem": "3 d_K ÷ 5 = 3 d_L ÷ 4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Oran çekilir.",
+    "islem": "d_K ÷ d_L = (3/4) ÷ (3/5) = 5/4"
+   }
+  ],
+  "puf": "Aynı cisim iki sıvıda yüzüyorsa özkütle × batan hacim iki durumda da eşittir; sıvıların özkütleleri batan hacimlerle ters orantılıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-03 (farklı sıvılarda yüzme) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-kaldirma-0004k",
+  "ana": "tytfiz-kaldirma-0004",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "İple bağlı, tamamen batık cismin ip gerilmesini kuvvet dengesinden bulur.",
+  "tipId": "fz-kl-ip-gerilme",
+  "tip": "İple bağlı cismin dengesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Ağırlığı 50 N olan bir cisim, hacmi 3 L (3 × 10⁻³ m³) olacak biçimde tamamen yağın içinde, şekildeki gibi tavana bağlı bir iple dengede tutuluyor.\nYağın özkütlesi 800 kg/m³ ve g = 10 m/s² olduğuna göre ipteki gerilme kuvveti kaç N’dur?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"115\" y=\"48.0\" width=\"96\" height=\"88.0\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M115 26 L115 136 L211 136 L211 26\" stroke-width=\"2\"/><line x1=\"117\" y1=\"48.0\" x2=\"209\" y2=\"48.0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"143.0\" y=\"62.0\" width=\"40\" height=\"40\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><line x1=\"107\" y1=\"12\" x2=\"219\" y2=\"12\" stroke-width=\"3\"/><line x1=\"163.0\" y1=\"12\" x2=\"163.0\" y2=\"62.0\" stroke-width=\"1.6\"/><text x=\"163.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">yağ</text></svg>",
+  "siklar": {
+   "A": "24",
+   "B": "26",
+   "C": "50",
+   "D": "74",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "26"
+  },
+  "celdiriciler": {
+   "A": "Kaldırma kuvvetini (24 N) ip gerilmesi sanmış.",
+   "C": "Cismin ağırlığını (50 N) ip gerilmesi sanmış; kaldırma kuvvetini çıkarmamış.",
+   "D": "Kaldırma kuvveti ile ağırlığı toplamış (24 + 50).",
+   "E": "Hacmi litre olarak kullanıp kaldırma kuvvetini 240 N bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İpteki gerilme kuvveti (N).",
+  "bilgi": [
+   {
+    "ad": "Kaldırma kuvveti",
+    "ifade": "F = d_sıvı × V_batan × g; yer değiştiren sıvının ağırlığına eşittir. Örnek: suda (1000 kg/m³) 2 × 10⁻³ m³ batan cisme 1000 × 2 × 10⁻³ × 10 = 20 N etki eder"
+   },
+   {
+    "ad": "Kuvvet dengesi",
+    "ifade": "dengedeki cisimde yukarı yönlü kuvvetlerin toplamı aşağı yönlülere eşittir. Örnek: ağırlık 30 N, kaldırma kuvveti 10 N ise ip 20 N’dur"
+   }
+  ],
+  "ipuclari": [
+   "Cisim denge halinde; yukarı ve aşağı yönlü kuvvetleri belirle.",
+   "İp tavana bağlı: ip ve kaldırma kuvveti yukarı, ağırlık aşağı yönlüdür.",
+   "Önce yağın uyguladığı kaldırma kuvvetini hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kaldırma kuvveti",
+    "aciklama": "Cisim tamamen batık; hacim 3 × 10⁻³ m³.",
+    "islem": "F = 800 × 3 × 10⁻³ × 10 = 24 N"
+   },
+   {
+    "baslik": "Kuvvetleri yaz",
+    "aciklama": "İp ve kaldırma kuvveti yukarı, ağırlık aşağı yönlüdür.",
+    "islem": "T + F = G"
+   },
+   {
+    "baslik": "Değerleri koy",
+    "aciklama": "Ağırlık 50 N, kaldırma kuvveti 24 N.",
+    "islem": "T + 24 = 50"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "T çekilir.",
+    "islem": "T = 26 N"
+   }
+  ],
+  "puf": "İple tabana bağlı batık cisimde T = F_kaldırma − G; iple tavana asılı cisimde T = G − F_kaldırma.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-04 (ip gerilmesi) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-kaldirma-0005k",
+  "ana": "tytfiz-kaldirma-0005",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "Yüzen cismin üstüne konan yükle tamamen batması için gereken kütleyi bulur.",
+  "tipId": "fz-kl-yuk-batma",
+  "tip": "Yük konan cismin batması",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Hacmi 600 cm³, özkütlesi 0,8 g/cm³ olan bir tahta blok, özkütlesi 1,2 g/cm³ olan tuzlu suda yüzmektedir. Bloğun üzerine kütlesi m olan bir yük konulunca blok yalnızca tamamen sıvıya batıyor (yük sıvıya değmiyor); sistem dengededir (şekil).\nBuna göre m kaç gramdır?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"115\" y=\"59.0\" width=\"96\" height=\"77.0\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M115 26 L115 136 L211 136 L211 26\" stroke-width=\"2\"/><line x1=\"117\" y1=\"59.0\" x2=\"209\" y2=\"59.0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"143.0\" y=\"59.0\" width=\"40\" height=\"40\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><rect x=\"151.0\" y=\"43.0\" width=\"24\" height=\"16\" stroke-width=\"2\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"179.0\" y=\"55.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">m</text><text x=\"163.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">tuzlu su</text></svg>",
+  "siklar": {
+   "A": "120",
+   "B": "240",
+   "C": "480",
+   "D": "720",
+   "E": "1200"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "240"
+  },
+  "celdiriciler": {
+   "A": "Gerekli yükün yarısını almış; kaldırma kuvvetinin yalnız yarısını hesaba katmış.",
+   "C": "Bloğun kütlesini (0,8 × 600) yükün kütlesi sanmış.",
+   "D": "Yer değiştiren sıvının kütlesini (1,2 × 600) yükün kütlesi sanmış.",
+   "E": "Özkütleleri toplayıp (1,2 + 0,8) × 600 hesaplamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Yükün kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Kaldırma kuvveti",
+    "ifade": "F = d_sıvı × V_batan × g; yer değiştiren sıvının ağırlığına eşittir. Örnek: suda (1000 kg/m³) 2 × 10⁻³ m³ batan cisme 1000 × 2 × 10⁻³ × 10 = 20 N etki eder"
+   },
+   {
+    "ad": "Kütle ve özkütle",
+    "ifade": "m = d × V. Örnek: özkütlesi 0,6 g/cm³, hacmi 100 cm³ olan cismin kütlesi 60 g’dır"
+   }
+  ],
+  "ipuclari": [
+   "Sistemin (cisim + yük) toplam ağırlığı, tamamen batan cismin kaldırma kuvvetine eşit olmalıdır.",
+   "Kaldırma kuvveti, 500 cm³ suyun ağırlığıdır.",
+   "Cismin kendi ağırlığını bu kuvvetten çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yer değiştiren sıvı",
+    "aciklama": "Blok tamamen batık: 600 cm³ tuzlu suyun kütlesi.",
+    "islem": "m_sıvı = 1,2 × 600 = 720 g"
+   },
+   {
+    "baslik": "Bloğun kütlesi",
+    "aciklama": "Özkütle ile hacmin çarpımı.",
+    "islem": "m_blok = 0,8 × 600 = 480 g"
+   },
+   {
+    "baslik": "Denge",
+    "aciklama": "Blok ve yükün toplam kütlesi, yer değiştiren sıvının kütlesine eşittir.",
+    "islem": "480 + m = 720"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "m çekilir.",
+    "islem": "m = 240 g"
+   }
+  ],
+  "puf": "Yükle tamamen batırmada cisim + yükün kütlesi, cismin hacmi kadar sıvının kütlesine eşittir: m_yük = (d_sıvı − d_cisim) × V.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-05 (yükle batırma) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-kaldirma-0006k",
+  "ana": "tytfiz-kaldirma-0006",
+  "ders": "TYT Fizik",
+  "konu": "Sıvıların Kaldırma Kuvveti · Kaldırma Kuvveti",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "kazanim": "İçinde cisim bulunan buz erirken su seviyesindeki ve basınçtaki değişimi yorumlar.",
+  "tipId": "fz-kl-buz",
+  "tip": "Buz erirken su seviyesi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Şekildeki kapta su ve içinde özkütlesi 0,5 g/cm³ olan bir mantar parçası bulunan, yüzen bir buz parçası vardır. Buz parçasının ve mantarın birlikte özkütlesi suyun özkütlesinden küçüktür.\nBuz tamamen eriyip dengeye ulaştığında;\nI. Kaptaki su seviyesi değişmez.\nII. Mantar kabın dibine batar.\nIII. Kabın tabanındaki sıvı basıncı değişmez.\nifadelerinden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"115\" y=\"59.0\" width=\"96\" height=\"77.0\" style=\"fill:currentColor;stroke:none;opacity:.13\"/><path d=\"M115 26 L115 136 L211 136 L211 26\" stroke-width=\"2\"/><line x1=\"117\" y1=\"59.0\" x2=\"209\" y2=\"59.0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" opacity=\".7\"/><rect x=\"141.0\" y=\"54.2\" width=\"44\" height=\"40\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><text x=\"191.0\" y=\"78.2\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">buz</text><text x=\"163.0\" y=\"153.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">su</text></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Seviyenin değişmemesinin taban basıncını da değiştirmediğini (III) atlamış.",
+   "B": "Mantarın özkütlesi sudan küçük; mantar batmaz, yüzer.",
+   "C": "Seviyenin değişmediğini (I) görmemiş.",
+   "D": "Mantarın dibe battığını sanmış; özkütlesi sudan küçük olduğundan yüzer."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Doğru olan ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Yüzme koşulu",
+    "ifade": "yüzen cisimde kaldırma kuvveti ağırlığa eşittir: d_cisim × V = d_sıvı × V_batan; yani d_cisim = d_sıvı × (batan hacim ÷ toplam hacim). Örnek: yarısı batıksa d_cisim = d_sıvı ÷ 2"
+   },
+   {
+    "ad": "Taban basıncı",
+    "ifade": "sıvının taban basıncı P = d × g × h; derinlik h azalırsa basınç azalır"
+   }
+  ],
+  "ipuclari": [
+   "Mantarın özkütlesi suyunkinden küçük mü? Buz eriyince mantara ne olur?",
+   "Önce yer değiştiren su kütlesi, buz ile mantarın toplam kütlesine eşit.",
+   "Erimeden sonra buzun suyu ve yüzen mantar toplam kaç gram sıvı yer değiştirir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eriyen buzun mantarı",
+    "aciklama": "Buz eriyince mantar serbest kalır; özkütlesi (0,5 g/cm³) sudan küçük olduğundan yüzer.",
+    "islem": "II yanlış"
+   },
+   {
+    "baslik": "Önceki durum",
+    "aciklama": "Buz ve mantar birlikte yüzerken yer değiştirdikleri su kütlesi, kendi toplam kütlelerine eşittir.",
+    "islem": "900 + 20 = 920 g su yer değiştirir"
+   },
+   {
+    "baslik": "Sonraki durum",
+    "aciklama": "Eriyen buz 900 g su olur; yüzen mantar kendi kütlesi kadar (20 g) su yer değiştirir.",
+    "islem": "900 + 20 = 920 g"
+   },
+   {
+    "baslik": "Seviye ve basınç",
+    "aciklama": "Yer değiştiren su miktarı aynı kaldığından seviye değişmez; taban basıncı da değişmez.",
+    "islem": "I doğru · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Yüzen buz eriyince seviye değişmez; içindeki cisim özkütlesi sudan büyükse seviye alçalır, küçükse değişmez.",
+  "kisaYol": null,
+  "kaynakKart": "K-FZKA-06 (buz erirse seviye) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
