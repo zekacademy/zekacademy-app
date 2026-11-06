@@ -912,7 +912,7 @@ function subColors(list){ const seen = {}; return list.map(sub=>{ const g = subG
 const trLow = x => String(x||"").toLocaleLowerCase("tr");
 
 function konuSatirlari(s, sub){ return sub.t.map(n=>{ const k=tkey(sub.k,n), t=s.topics[k]||{}, full=topicScore(t)>=1;
-        return `<div class="trow ${full?"full":""}"><div class="tn">${full?icon("check","xs"):""}${esc(n)}</div>
+        return `<div class="trow ${full?"full":""}"><div class="tn">${full?icon("check","xs"):""}${esc(n)}<button type="button" class="kavbtn ${t.v?"on":""}" data-act="sheet" data-v="konu" data-k="${esc(k)}" data-d="${esc(sub.n.split(" · ")[0])}" aria-label="${esc(n)} konu anlatımı">▶<span>${t.v?"İzlendi":"Konu anlatımı"}</span></button></div>
           <div class="tctl"><span class="stepper lbl">Tekrar<button data-act="rep" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num">${t.r||0}</span><button data-act="rep" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span>
           <button class="tog" data-act="sb" data-f="s1" data-k="${esc(k)}" aria-pressed="${!!t.s1}">${t.s1?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[0]||"Soru B. 1")}</button>
           <button class="tog" data-act="sb" data-f="s2" data-k="${esc(k)}" aria-pressed="${!!t.s2}">${t.s2?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[1]||"Soru B. 2")}</button></div>
@@ -2242,8 +2242,49 @@ document.addEventListener("toggle", e=>{ const d = e.target; if(d && d.classList
 document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#layer").innerHTML) closeSheet(); });
 const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
+/* ---------- Konu anlatımı (PROTOTİP): video + izledim + mini test + takıldım ---------- */
+const KA_VIDEO = { "mat|Temel Kavramlar": {id:"VTsU2nzwodo", kanal:"Rehber Matematik", ad:"49 Günde TYT Matematik Kampı · 1. Gün · Temel Kavramlar"} };
+const KA_TEST = { "mat|Temel Kavramlar": [
+  {q:"a, b ve c birbirinden farklı rakamlardır. Buna göre a + b + c toplamının alabileceği en büyük değer kaçtır?", s:{A:"21",B:"22",C:"23",D:"24",E:"27"}, d:"D", c:"Farklı rakamlar demek: en büyük üç rakamı seç → **9 + 8 + 7 = 24**. 27 için üçünün de 9 olması gerekirdi ama farklı olmaları isteniyor."},
+  {q:"x ve y tam sayılardır. x + y = 7 olduğuna göre x · y çarpımı aşağıdakilerden hangisi olamaz?", s:{A:"12",B:"10",C:"0",D:"−8",E:"11"}, d:"E", c:"Toplamı 7 olan çiftleri dene: 3·4 = **12**, 2·5 = **10**, 0·7 = **0**, (−1)·8 = **−8**. 11 = 1·11 ya da (−1)·(−11) olur ama bu çiftlerin toplamı 7 değil."},
+  {q:"Ardışık üç çift sayının toplamı 66 ise en büyüğü kaçtır?", s:{A:"20",B:"22",C:"24",D:"26",E:"28"}, d:"C", c:"Ortadaki sayı = 66 ÷ 3 = **22**. Çift sayılar 2'şer artar: 20, 22, **24**. Dikkat: 22 ortadaki sayı, en büyük değil."} ] };
+const KA = { k:null, cev:{}, tak:false, yanit:false };
+const kalin = x => esc(x).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+function kaGovde(){ const s = st(), k = KA.k, t = (s.topics||{})[k]||{}, T = KA_TEST[k];
+  const test = !T ? `<p class="muted small" style="margin:0">Bu konunun mini testi soru havuzu hazır olunca eklenecek.</p>` : `<div class="katest">${T.map((x,i)=>{ const c = KA.cev[i];
+    return `<div class="kaq"><div class="kaqt"><b>${i+1}.</b> ${esc(x.q)}</div><div class="kasik">${Object.entries(x.s).map(([h,v])=>`<button type="button" data-ka="cev" data-i="${i}" data-h="${h}" class="${c? (h===x.d?"dogru":h===c?"yanlis":"") : ""}" ${c?"disabled":""}><b>${h}</b>${esc(v)}</button>`).join("")}</div>
+      ${c?`<div class="kacoz ${c===x.d?"ok":""}"><b>${c===x.d?"Doğru! 🎉":"Doğru cevap "+x.d}</b> ${kalin(x.c)}</div>`:""}</div>`; }).join("")}
+    ${Object.keys(KA.cev).length===T.length ? (()=>{ const d = T.filter((x,i)=>KA.cev[i]===x.d).length; return `<div class="kasonuc">${d}/${T.length} doğru · ${d===T.length?"Konuyu kapmışsın 💪":"Yanlışların çözümlerine bak, gerekirse videonun ilgili kısmını tekrar izle."}</div>`; })() : ""}</div>`;
+  const tak = !KA.tak ? `<button type="button" class="btn" data-ka="tak" style="width:100%">🤔 Bir yerde takıldım</button>`
+    : `<div class="katak"><div class="two"><label class="f">Videonun kaçıncı dakikası? <input type="text" id="ka-dk" inputmode="numeric" placeholder="ör. 12" value="${esc(KA.dk||"")}"></label><span></span></div>
+      <label class="f">Neyi anlamadın? <textarea id="ka-ne" rows="2" placeholder="ör. rakam ile sayı arasındaki farkı karıştırıyorum">${esc(KA.ne||"")}</textarea></label>
+      <button type="button" class="btn pri" data-ka="sor" style="width:100%">Soru Çözüm koçuna sor</button>
+      ${KA.yanit?`<div class="kayanit"><div class="faint small" style="margin-bottom:6px">ÖRNEK YANIT · gerçek sürümde Soru Çözüm koçu senin yazdığına göre cevaplar (1 hak)</div>
+        <div class="kay"><b>Rakam</b> sayıları yazmak için kullandığımız 10 semboldür: 0, 1, 2, … 9.</div>
+        <div class="kay"><b>Sayı</b> rakamların bir araya gelmesiyle oluşur. 7 hem rakam hem sayıdır; 27 ise sayıdır ama rakam değildir.</div>
+        <div class="kay"><b>Sınavda dikkat:</b> "a, b rakam" yazıyorsa a ve b en fazla <b>9</b> olabilir. "Farklı rakamlar" deniyorsa aynı rakamı iki kez kullanamazsın.</div>
+        <div class="faint small" style="margin-top:6px">Videonun ${esc(KA.dk||"ilgili")}. dakikasına dönüp bu gözle tekrar izle 👀</div></div>`:""}</div>`;
+  return `<div class="kablok"><div class="kah">${t.v?"✅ İzledin":"Videoyu izleyince işaretle"}</div><button type="button" class="btn ${t.v?"":"pri"}" data-ka="izle" style="width:100%">${t.v?"İzlemedim olarak işaretle":"✓ İzledim"}</button></div>
+    ${t.v ? `<div class="kablok"><div class="kah">Mini test · 3 soru</div>${test}</div>` : ""}
+    <div class="kablok"><div class="kah">Anlamadığın yer mi var?</div>${tak}</div>`; }
+function kaYenile(){ const b = $("#kaBody"); if(b) b.innerHTML = kaGovde(); }
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-ka]"); if(!b || !KA.k) return; const a = b.dataset.ka;
+  if(a==="izle"){ mutate(x=>{ const t = topic(x, KA.k); if(t.v) delete t.v; else t.v = true; }); const t = (st().topics||{})[KA.k]||{}; if(t.v) sesCal("basari"); keepOpen(()=>render()); kaYenile(); }
+  else if(a==="cev"){ KA.cev[b.dataset.i] = b.dataset.h; const x = KA_TEST[KA.k][b.dataset.i]; if(b.dataset.h===x.d) sesCal("basari"); kaYenile(); }
+  else if(a==="tak"){ KA.tak = true; kaYenile(); const n = $("#ka-ne"); if(n) n.focus(); }
+  else if(a==="sor"){ const ne = ($("#ka-ne")||{}).value||""; if(!ne.trim()){ toast("Neyi anlamadığını kısaca yaz"); return; } KA.dk = (($("#ka-dk")||{}).value||"").trim(); KA.ne = ne; KA.yanit = true; kaYenile(); }
+});
+function konuSheet(el){ const k = el.dataset.k, d = el.dataset.d||"", n = k.split("|").slice(1).join("|"), v = KA_VIDEO[k], s = st(), h = hoca(s, d);
+  Object.assign(KA, {k, cev:{}, tak:false, yanit:false, dk:"", ne:""});
+  return sheet(`<h3>${esc(n)}</h3><p class="muted small" style="margin:0">${esc(d)} · konu anlatımı${h?` · Hocan: <b>${esc(h.split("+")[0].trim())}</b>`:""}</p>
+    ${v ? `<div class="kavid"><iframe src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0&playsinline=1&modestbranding=1" title="${esc(v.ad)}" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div><div class="faint small">${esc(v.kanal)} · ${esc(v.ad)}</div>`
+      : `<div class="kavyok">🎬 Bu konunun videosu henüz eşleştirilmedi.<br><span class="faint small">Prototipte sadece TYT Matematik → Temel Kavramlar dolu. Gerçek sürümde her konuya öğrencinin kendi hocasının videosu eşlenecek.</span></div>`}
+    <div id="kaBody">${kaGovde()}</div>
+    <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`); }
+
 function openSheet(kind, el){
   const s = st();
+  if(kind==="konu") return konuSheet(el);
   if(kind==="takvim"){ const t = today(), L = takvim().filter(x=>(x.bit||x.bas) >= t).map(x=>({...x, tip:"deneme"})); Object.values(s?.plan||{}).forEach(p=>(p.yazilar||[]).forEach(y=>{ if(y.tarih && y.tarih>=t) L.push({bas:y.tarih, bit:y.tarih, yayin:"Yazılı", ad:y.ders, tip:"yazili"}); })); L.sort((a,b)=>a.bas.localeCompare(b.bas));
     return sheet(`<h3>Deneme takvimi</h3><p class="muted small" style="margin:0">Türkiye geneli denemeler${s?" ve yazılıların":""}. Tarihler yayınevlerinin açıkladığı programlardan; değişebilir.</p><div class="tkl" style="max-height:60vh;overflow:auto">${L.map(takvimSatir).join("") || `<div class="empty">Yaklaşan deneme yok.</div>`}</div><div class="acts"><button type="button" class="btn pri" data-close>Kapat</button></div>`); }
   if(kind==="soruekle"){ S.sqDosya = null;

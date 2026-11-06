@@ -997,6 +997,33 @@ body{background:var(--bg)}
   .btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{transition:background-color .15s ease,color .15s ease}
   *:active{transform:none!important}
 }
+
+/* Konu anlatımı (prototip) */
+.trow .tn{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.kavbtn{margin-left:auto;display:inline-flex;align-items:center;gap:4px;border:1px solid var(--line);background:var(--surface);color:var(--ac);border-radius:99px;padding:3px 9px 3px 7px;font:700 11px/1.2 var(--font);white-space:nowrap}
+.kavbtn span{color:var(--muted)}
+.kavbtn.on{background:var(--acs);border-color:transparent}.kavbtn.on span{color:var(--ac)}
+.kavid{position:relative;width:100%;aspect-ratio:16/9;max-width:100%;border-radius:14px;overflow:hidden;background:#000;margin-top:12px}
+.kavid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.kavyok{margin-top:12px;padding:16px;border:1.5px dashed var(--line);border-radius:14px;text-align:center;line-height:1.6}
+.kablok{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.kah{font-weight:800;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.katest{display:flex;flex-direction:column;gap:12px}
+.kaq{background:var(--sunk);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.kaqt{line-height:1.5}
+.kasik{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.kasik button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:600 14px/1.2 var(--font)}
+.kasik button b{font-size:11px;color:var(--muted)}
+.kasik button.dogru{background:var(--goods);border-color:var(--good)}.kasik button.dogru b{color:var(--good)}
+.kasik button.yanlis{background:var(--bads);border-color:var(--bad)}.kasik button.yanlis b{color:var(--bad)}
+.kasik button:disabled{opacity:1}
+.kacoz{font-size:14px;line-height:1.55;padding:10px 12px;border-radius:12px;background:var(--bads)}
+.kacoz.ok{background:var(--goods)}
+.kasonuc{font-weight:700;text-align:center;padding:10px;border-radius:12px;background:var(--acs);color:var(--fg)}
+.katak{display:flex;flex-direction:column;gap:10px}
+.katak textarea{width:100%;box-sizing:border-box}
+.kayanit{background:var(--sunk);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.kay{background:var(--surface);border-radius:12px;padding:10px 12px;line-height:1.5;font-size:14px}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
