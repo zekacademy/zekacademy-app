@@ -27,7 +27,9 @@ def denetle(Q,korpus=None):
         for g in GEREK:
             if g not in q: H_(f'eksik alan {g}')
         if ids[i]>1: H_('tekrar eden id')
-        if not re.fullmatch(r'tytmat-[a-z]+-\d{4}',i): H_('id biçimi')
+        if not re.fullmatch(r'tytmat-[a-z]+-\d{4}k?',i): H_('id biçimi')
+        if i.endswith('k') and not q.get('ana'): H_('kardeş sorunun ana bağlantısı yok')
+        if q.get('kisaYol') is not None and (not isinstance(q['kisaYol'],str) or len(q['kisaYol'])<20): H_('kısa yol çok kısa ya da biçimi yanlış')
         if q.get('zorluk') not in ZOR: H_('zorluk')
         if q.get('kalip') not in KALIP: H_(f"kalıp '{q.get('kalip')}'")
         if q.get('k') not in UYG: H_(f"uygulama konusu '{q.get('k')}'")
@@ -84,9 +86,18 @@ def denetle(Q,korpus=None):
                 en=max(((len(S&K)/len(S|K)),ad) for ad,K in korpus)
                 if en[0]>=0.25: H_(f'kaynak metne çok benziyor ({en[1]}, Jaccard {en[0]:.2f})')
                 elif en[0]>=0.15: U(f'kaynak metne benzerlik ({en[1]}, {en[0]:.2f})')
-    # tekrar: havuz içi benzerlik
+    # ana–kardeş tutarlılığı
+    ID={q['id']:q for q in Q}
+    for q in Q:
+        if q.get('kardes') and q['kardes'] in ID:
+            k=ID[q['kardes']]
+            if k.get('ana')!=q['id']: hata.append(f"{q['id']}: kardeşin ana bağlantısı tutmuyor")
+            if k['tipId']!=q['tipId'] or k['zorluk']!=q['zorluk']: hata.append(f"{q['id']}: kardeşin tipi/zorluğu farklı")
+            if k['metin']==q['metin'] or k['siklar']==q['siklar']: hata.append(f"{q['id']}: kardeş ana soruyla aynı")
+    # tekrar: havuz içi benzerlik (ana–kardeş çiftleri hariç)
     for x in range(len(Q)):
         for y in range(x+1,len(Q)):
+            if Q[x]['id'].rstrip('k')==Q[y]['id'].rstrip('k'): continue
             A,B=sh(Q[x]['metin']),sh(Q[y]['metin'])
             if A and B and len(A&B)/len(A|B)>=0.3: hata.append(f"{Q[x]['id']} ~ {Q[y]['id']}: havuz içinde benzer soru")
     return hata,uyari

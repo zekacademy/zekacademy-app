@@ -75,7 +75,9 @@
   },
   "tipId": "sk-tanimli",
   "tip": "Tanımlı sayılar ve semboller",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": "Rakamlardan biri mutlaka 1 olmalı (hepsi 2 ve üstüyse çarpım büyük kalır); 1 + b + c = bc ⇒ (b − 1)(c − 1) = 2 ⇒ {1, 2, 3}, sıralanışı 3! = 6.",
+  "kardes": "tytmat-sayilar-0001k"
  },
  {
   "id": "tytmat-sayilar-0002",
@@ -162,7 +164,9 @@
   },
   "tipId": "sk-tek-cift",
   "tip": "Tek ve çift sayılar",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": "a’yı tek varsay: ikinci koşuldan b ve c tek çıkar, birinci koşul bozulur. Tek denemede a çift bulunur.",
+  "kardes": "tytmat-sayilar-0002k"
  },
  {
   "id": "tytmat-sayilar-0003",
@@ -247,7 +251,9 @@
   },
   "tipId": "sk-ondalik",
   "tip": "Ondalık sayılar ve günlük hesap",
-  "k": "mat|Rasyonel Sayılar"
+  "k": "mat|Rasyonel Sayılar",
+  "kisaYol": "k. nesnenin yeri = (k − 1) × aralık: 3 × 0,6 = 1,8 ve 5 × 0,4 = 2,0; fark 0,2.",
+  "kardes": "tytmat-sayilar-0003k"
  },
  {
   "id": "tytmat-sayilar-0004",
@@ -321,7 +327,9 @@
   },
   "tipId": "sk-gosterge",
   "tip": "Sayı doğrusu ve göstergeler",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0004k"
  },
  {
   "id": "tytmat-sayilar-0005",
@@ -394,7 +402,9 @@
   },
   "tipId": "sk-yerlestirme",
   "tip": "Kutulara yerleştirme ve işlem bulma",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0005k"
  },
  {
   "id": "tytmat-sayilar-0006",
@@ -472,7 +482,9 @@
   },
   "tipId": "sk-basamak",
   "tip": "Basamak çözümleme",
-  "k": "mat|Sayı Basamakları"
+  "k": "mat|Sayı Basamakları",
+  "kisaYol": "A + B = 11 ve A − B = 3 olunca: A = (11 + 3) ÷ 2 = 7, B = (11 − 3) ÷ 2 = 4.",
+  "kardes": "tytmat-sayilar-0006k"
  },
  {
   "id": "tytmat-sayilar-0007",
@@ -554,7 +566,9 @@
   },
   "tipId": "sk-tanimli",
   "tip": "Tanımlı sayılar ve semboller",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": "Şıkların hepsi ilk koşulu sağlıyor; yalnızca ikinci koşulu dene: ⟨99⟩ = 18 ve [18] = 8. Diğer şıklarda rakam toplamı 17, 11, 14.",
+  "kardes": "tytmat-sayilar-0007k"
  },
  {
   "id": "tytmat-sayilar-0008",
@@ -627,7 +641,9 @@
   },
   "tipId": "sk-ardisik",
   "tip": "Ardışık sayılar",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": "Ortadaki sayı yöntemi: beş ardışık çift sayının toplamı = 5 × ortadaki. 5m = 6(m − 4) ⇒ m = 24, en büyük 24 + 4 = 28.",
+  "kardes": "tytmat-sayilar-0008k"
  },
  {
   "id": "tytmat-sayilar-0009",
@@ -636,7 +652,7 @@
   "zorluk": "orta",
   "kalip": "hikâyeli",
   "adimSayisi": 4,
-  "metin": "Ali, Bora ve Cem bir kavanozdaki suyun kavanozun kaçta kaçını doldurduğunu tahmin ediyor.\n• Ali: “2/5’ten fazla.”\n• Bora: “3/7’den az.”\n• Cem: “5/12’den fazla.”\nSu ölçüldüğünde bu üç kişiden yalnızca birinin tahmininin yanlış olduğu görülüyor.\nBuna göre suyun kavanoza oranı aşağıdakilerden hangisi olabilir?",
+  "metin": "Ali, Bora ve Cem bir kavanozdaki suyun kavanozun kaçta kaçını doldurduğunu tahmin ediyor.\n• Ali: “2/5’ten fazla.”\n• Bora: “3/7’den az.”\n• Cem: “5/12’den fazla.”\nSu ölçüldüğünde bu üç kişiden yalnızca birinin tahmininin yanlış olduğu görülüyor.\nBuna göre su kavanozun kaçta kaçını doldurmuş olabilir?",
   "siklar": {
    "A": "43/120",
    "B": "45/120",
@@ -701,7 +717,9 @@
   },
   "tipId": "sk-kesir",
   "tip": "Kesirler ve rasyonel sayılar",
-  "k": "mat|Rasyonel Sayılar"
+  "k": "mat|Rasyonel Sayılar",
+  "kisaYol": "Şıklar 120’li; sınırları da 120’liye çevir (48, 50, ≈51,4). Tek yanlış için sayı 48 ile 50 arasında olmalı: 49.",
+  "kardes": "tytmat-sayilar-0009k"
  },
  {
   "id": "tytmat-sayilar-0010",
@@ -710,7 +728,7 @@
   "zorluk": "kolay",
   "kalip": "hikâyeli",
   "adimSayisi": 3,
-  "metin": "Bir tepsideki baklava eş büyüklükte 6 dilime ayrılmıştır. Ayşe bu dilimlerden 2 tanesini alıp her birini 3 eş parçaya bölmüş ve bu parçalardan 4 tanesini misafirlerine ikram etmiştir.\nBuna göre misafirlere ikram edilen baklavanın, tepsideki baklavanın tamamına oranı kaçtır?",
+  "metin": "Bir tepsideki baklava eş büyüklükte 6 dilime ayrılmıştır. Ayşe bu dilimlerden 2 tanesini alıp her birini 3 eş parçaya bölmüş ve bu parçalardan 4 tanesini misafirlerine ikram etmiştir.\nBuna göre Ayşe’nin misafirlerine ikram ettiği parçalar tepsideki baklavanın kaçta kaçıdır?",
   "siklar": {
    "A": "1/9",
    "B": "2/9",
@@ -722,7 +740,7 @@
    "sik": "B",
    "deger": "2/9"
   },
-  "istenen": "İkram edilen 4 küçük parçanın tüm tepsiye oranı.",
+  "istenen": "İkram edilen 4 küçük parçanın tepsideki baklavanın kaçta kaçı olduğu.",
   "ipuclari": [
    "Bir dilim tepsinin kaçta kaçı?",
    "Küçük bir parça bir dilimin kaçta kaçı?",
@@ -770,7 +788,9 @@
   },
   "tipId": "sk-kesir",
   "tip": "Kesirler ve rasyonel sayılar",
-  "k": "mat|Rasyonel Sayılar"
+  "k": "mat|Rasyonel Sayılar",
+  "kisaYol": null,
+  "kardes": "tytmat-sayilar-0010k"
  },
  {
   "id": "tytmat-sayilar-0011",
@@ -843,7 +863,9 @@
   },
   "tipId": "sk-ondalik",
   "tip": "Ondalık sayılar ve günlük hesap",
-  "k": "mat|Rasyonel Sayılar"
+  "k": "mat|Rasyonel Sayılar",
+  "kisaYol": "12,40 × 2,5 = 124 ÷ 4 = 31 (× 2,5 = × 10 ÷ 4); 18,60 × 1,5 = 18,60 + 9,30.",
+  "kardes": "tytmat-sayilar-0011k"
  },
  {
   "id": "tytmat-sayilar-0012",
@@ -922,6 +944,8 @@
   },
   "tipId": "sk-oruntu",
   "tip": "Örüntü ve döngü",
-  "k": "mat|Temel Kavramlar"
+  "k": "mat|Temel Kavramlar",
+  "kisaYol": "15 dakika = 900 sn = 12 tam tur; kalan 2 dk 20 sn = 140 sn = 75 + 65. Turun 65. saniyesi: kırmızının 20. saniyesi.",
+  "kardes": "tytmat-sayilar-0012k"
  }
 ]

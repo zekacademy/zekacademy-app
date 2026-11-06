@@ -33,7 +33,7 @@ for i,q in enumerate(Q,1):
     ip=''.join(f'<li>{html.escape(x)}</li>' for x in q['ipuclari'])
     bi=''.join(f'<span class="bil"><b>{html.escape(b["ad"])}</b>{html.escape(b["ifade"])}</span>' for b in q['bilgi'])
     cards.append(f'''<article class="card" id="q{i}" data-z="{q["zorluk"]}" data-t="{q.get("tipId","")}">
-<header><span class="no">{i}</span><span class="tag">{html.escape(q["konu"])}</span><span class="tag z-{q["zorluk"]}">{q["zorluk"]}</span><span class="tag tip">{html.escape(q.get("tip",q["kalip"]))}</span><span class="tag">{q["adimSayisi"]} adım</span></header>
+<header><span class="no">{i}</span><span class="tag">{html.escape(q["konu"])}</span><span class="tag z-{q["zorluk"]}">{q["zorluk"]}</span><span class="tag tip">{html.escape(q.get("tip",q["kalip"]))}</span>{f'<span class="tag kar">kardeşi: {int(q["ana"][-4:])}. soru</span>' if q.get("ana") else ''}<span class="tag">{q["adimSayisi"]} adım</span></header>
 <div class="metin">{metin_html(q["metin"])}</div>
 {f'<div class="sekil">{q["sekil"]}</div>' if q["sekil"] else ''}
 <ol class="siklar {duzen}">{ch}</ol>
@@ -43,7 +43,7 @@ for i,q in enumerate(Q,1):
 {f'<div class="bilgiler"><span class="bbas">Bilmen gereken</span>{bi}</div>' if bi else ''}
 <ol class="yol">{st}</ol>
 <div class="cvp"><span>Cevap</span><b>{q["cevap"]["sik"]})</b> {kesir(html.escape(q["cevap"]["deger"]))}</div>
-<div class="puf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg><div><b>Püf noktası</b>{html.escape(q["puf"])}</div></div>
+<div class="puf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg><div><b>Püf noktası</b>{html.escape(q["puf"])}</div></div>{f'<div class="hizli"><b>⚡ Sınavda hızlı yol</b>{re.sub(chr(32)+"([=+−×<>⇒])"+chr(32),chr(160)+chr(92)+"1"+chr(160),kesir(html.escape(q["kisaYol"])))}</div>' if q.get("kisaYol") else ''}
 <details class="ipd"><summary>İpuçlarına bak</summary><ol class="ipl">{ip}</ol></details>
 <p class="kart">{html.escape(q["kaynakKart"])}</p>
 </div></details>
@@ -129,6 +129,9 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .cips[hidden]{{display:none}}
 .bos{{margin:0;font-size:14px;color:var(--mut)}}.card[hidden]{{display:none}}
 .tag.tip{{color:var(--acc);border-color:var(--acc)}}
+.hizli{{margin-top:10px;border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.45;background:#FFF3DC;color:#14191A}}.hizli b{{display:block;font-size:13px;color:#A86A00;margin-bottom:2px}}
+:root[data-tema=koyu] .hizli{{background:#33260D;color:#E8ECE9}}:root[data-tema=koyu] .hizli b{{color:#F5B13D}}
+.tag.kar{{background:var(--accbg);border-color:transparent;color:var(--acc)}}
 </style></head><body><main>
 <div class="bas"><h1>{html.escape(BASLIK)} ({len(Q)} soru)</h1><div class="tema" role="group" aria-label="Tema"><button data-t="acik" aria-pressed="true">Açık</button><button data-t="koyu" aria-pressed="false">Koyu</button></div></div>
 __FILTRE__<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
