@@ -62,6 +62,7 @@ h2{font-size:20px;margin:0 0 6px}p{margin:0 0 8px}.mut{color:var(--mut)}.kucuk{f
 .trow div{flex:1;min-width:0}.trow small{display:block;color:var(--mut);font-size:13px}
 .gunler{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}.gun{font-size:12px;font-weight:700;border-radius:8px;padding:3px 8px;background:var(--bg);color:var(--mut)}.gun.bugun{background:var(--acc);color:#fff}
 .ok-i{width:18px;height:18px}
+.atla{display:block;margin:12px auto 0;border:0;background:none;color:var(--mut);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 </style></head><body><div class="tel" id="app"></div>
 <script>
 const D=__DATA__;
@@ -84,6 +85,7 @@ function cozum(q){const bi=q.bilgi&&q.bilgi.length?`<div class="bilgiler"><span>
 function soru(q,cev,acik,on){const d=duzen(q.siklar);return `<div class="metin">${metin(q.metin)}</div><div class="siklar ${d}">${Object.entries(q.siklar).map(([h,v])=>{let c='';if(cev){c=h===q.cevap.sik?'dogru':h===cev?'yanlis':'soluk'}return `<button class="sik ${c}" data-on="${on}" data-h="${h}" ${cev?'disabled':''}><b>${h})</b> ${kesir(esc(v))}</button>`}).join('')}</div>
  ${cev?`<div class="geri-b ${cev===q.cevap.sik?'iyi':'kotu'}"><b>${cev===q.cevap.sik?'Doğru!':'Doğru cevap '+q.cevap.sik+') olacaktı.'}</b>${cev===q.cevap.sik?(q.kisaYol?'Sınavda daha hızlı bir yol da var; çözümde göreceksin.':'Çözüme bakmak istersen aşağıda.'):esc(q.celdiriciler[cev]||'')}</div>`:''}
  ${acik?cozum(q):''}`}
+const SON=()=>S.i<TEST.length-1?'Sonraki soru':'Sonucu gör';
 function sureYaz(s){s=Math.max(0,s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
 function ciz(){document.documentElement.dataset.tema=tema;
  const yanlisTip=TEST.filter(q=>S.cev[q.id]&&S.cev[q.id]!==q.cevap.sik);
@@ -103,9 +105,9 @@ function testCiz(){
  return `<div class="ilerle">${TEST.map((x,j)=>`<i class="${S.cev[x.id]?(S.cev[x.id]===x.cevap.sik?'d':'y'):j===S.i?'s':''}"></i>`).join('')}</div>
  <div class="kart"><div class="qbas"><b>${S.i+1}.</b><span class="cip tip">${esc(q.tip)}</span><span class="cip">${ZAD[q.zorluk]}</span>${osymCip(q.tipId)}${S.sureli?`<span class="sure ${S.kalan<60?'az':''}" id="sure">${sureYaz(S.kalan)}</span>`:''}</div>
  ${soru(q,cev,S.acik[q.id],'ana')}
- ${cev?`<div class="eyl"><button class="btn" id="cozBtn">${S.acik[q.id]?'Çözümü gizle':'Çözümü gör'}</button>${cev!==q.cevap.sik&&!S.kardesAcik[q.id]?`<button class="btn pri" id="kardesBtn">Kardeş soruyu dene</button>`:`<button class="btn pri" id="sonraki">${S.i<TEST.length-1?'Sonraki soru':'Sonucu gör'}</button>`}</div>`:''}
+ ${cev?`<div class="eyl"><button class="btn" id="cozBtn">${S.acik[q.id]?'Çözümü gizle':'Çözümü gör'}</button>${cev===q.cevap.sik?`<button class="btn pri sonraki">${SON()}</button>`:!S.kardesAcik[q.id]?`<button class="btn pri" id="kardesBtn">Kardeş soruyu dene</button>`:''}</div>${cev!==q.cevap.sik&&!S.kardesAcik[q.id]?`<button class="atla sonraki">Kardeşi deneme, ${S.i<TEST.length-1?'sonraki soruya geç':'sonucu gör'}</button>`:''}`:''}
  ${S.kardesAcik[q.id]?`<div class="kardes"><div class="kbas">${IK.kardes}Kardeş soru · aynı tip, yeni sayılar</div>${soru(k,kc,S.kacik[k.id],'kardes')}
-   ${kc?`<div class="eyl"><button class="btn" id="kcozBtn">${S.kacik[k.id]?'Çözümü gizle':'Çözümü gör'}</button><button class="btn pri" id="sonraki">${S.i<TEST.length-1?'Sonraki soru':'Sonucu gör'}</button></div>`:''}</div>`:''}
+   ${kc?`<div class="eyl"><button class="btn" id="kcozBtn">${S.kacik[k.id]?'Çözümü gizle':'Çözümü gör'}</button><button class="btn pri sonraki">${SON()}</button></div>`:`<button class="atla sonraki">Atla, ${S.i<TEST.length-1?'sonraki soruya geç':'sonucu gör'}</button>`}</div>`:''}
  </div>`}
 function gunEkle(n){const d=new Date();d.setDate(d.getDate()+n);return d.toLocaleDateString('tr-TR',{day:'numeric',month:'short'})}
 function plan(){return `<div class="gunler">${[[1,'yarın'],[3,'3 gün'],[7,'1 hafta'],[14,'2 hafta']].map(([n,l],j)=>`<span class="gun">${l} · ${gunEkle(n)}</span>`).join('')}</div>`}
@@ -128,7 +130,7 @@ function bagla(){
  const cz=$('#cozBtn');if(cz)cz.onclick=()=>{const q=TEST[S.i];S.acik[q.id]=!S.acik[q.id];ciz()};
  const kz=$('#kcozBtn');if(kz)kz.onclick=()=>{const k=TEST[S.i].kardes;S.kacik[k]=!S.kacik[k];ciz()};
  const kb=$('#kardesBtn');if(kb)kb.onclick=()=>{S.kardesAcik[TEST[S.i].id]=true;ciz()};
- const sn=$('#sonraki');if(sn)sn.onclick=()=>{if(S.i<TEST.length-1){S.i++;ciz();scrollTo(0,0)}else bitir()};
+ document.querySelectorAll('.sonraki').forEach(b=>b.onclick=()=>{if(S.i<TEST.length-1){S.i++;ciz();scrollTo(0,0)}else bitir()});
  const yd=$('#yeniden');if(yd)yd.onclick=()=>{Object.assign(S,{faz:'giris',i:0,cev:{},kcev:{},acik:{},kacik:{},kardesAcik:{},kalan:450});ciz()};
 }
 function bitir(){clearInterval(S.tim);S.bitis=Date.now();S.faz='sonuc';ciz();scrollTo(0,0)}
