@@ -36,9 +36,9 @@
     "islem": "(b − 1)(c − 1) = 2 ⇒ b = 2, c = 3"
    },
    {
-    "baslik": "İki rakam 1 olamaz",
-    "aciklama": "1 + 1 + c = c olamaz, bu durumdan sayı çıkmaz.",
-    "islem": "2 + c ≠ c"
+    "baslik": "Birden çok 1 olamaz",
+    "aciklama": "İki ya da üç rakam 1 olursa toplam çarpımdan büyük çıkar.",
+    "islem": "1 + 1 + c > 1 × 1 × c"
    },
    {
     "baslik": "Sıralamaları say",
@@ -50,7 +50,8 @@
   "kaynakKart": "K-SK-01 (ÖSYM tanımlı sayı türü: üçsel/sıralı/bitişik ailesi) · yeni tanım, yeni koşul, yeni sayılar",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -63,7 +64,8 @@
    "E": "3 × 3 değil, 3! kadar sıralama vardır."
   },
   "tipId": "sk-tanimli",
-  "tip": "Tanımlı sayılar ve semboller"
+  "tip": "Tanımlı sayılar ve semboller",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0002",
@@ -126,7 +128,8 @@
   "kaynakKart": "K-SK-02 (ÖSYM tek-çift öncüllü ailesi) · yeni koşul ifadeleri, yeni öncüller",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -138,7 +141,8 @@
    "E": "a + b ve a × c ikisi de çifttir; yalnız b + c tektir."
   },
   "tipId": "sk-tek-cift",
-  "tip": "Tek ve çift sayılar"
+  "tip": "Tek ve çift sayılar",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0003",
@@ -192,7 +196,8 @@
   "kaynakKart": "K-SK-03 (ÖSYM eşit aralığa bölme: raf/çekmece/kemer) · yeni hikâye, iki farklı bölme, yeni sayılar",
   "dogrulama": {
    "yontem2": true,
-   "tarama": false
+   "tarama": false,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -204,7 +209,8 @@
    "E": "0,6 m bir direk aralığıdır; soru iki konumun farkını soruyor."
   },
   "tipId": "sk-ondalik",
-  "tip": "Ondalık sayılar ve günlük hesap"
+  "tip": "Ondalık sayılar ve günlük hesap",
+  "k": "mat|Rasyonel Sayılar"
  },
  {
   "id": "tytmat-sayilar-0004",
@@ -244,16 +250,17 @@
     "islem": "20 ÷ 5 = 4"
    },
    {
-    "baslik": "Oku oku",
+    "baslik": "Okun değerini bul",
     "aciklama": "Ok 40’tan **8** bölme sağdadır.",
     "islem": "40 + 8 × 4 = 72"
    }
   ],
-  "puf": "Etiketli iki çizgi arasındaki bölmeleri değil çizgileri sayarsan bir fazla bulursun; aralıkları say.",
+  "puf": "Bölme sayısını bulurken çizgileri sayarsan bir fazla bulursun; iki çizgi arasındaki aralıkları say.",
   "kaynakKart": "K-SK-04 (ÖSYM gösterge okuma: radyo/termometre) · yeni gösterge, yeni ölçek",
   "dogrulama": {
    "yontem2": true,
-   "tarama": false
+   "tarama": false,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -265,7 +272,8 @@
    "E": "Bir bölme 5 değil 4 birimdir: 40 ile 60 arasında 5 bölme var."
   },
   "tipId": "sk-gosterge",
-  "tip": "Sayı doğrusu ve göstergeler"
+  "tip": "Sayı doğrusu ve göstergeler",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0005",
@@ -313,7 +321,8 @@
   "kaynakKart": "K-SK-05 (ÖSYM kutulara sayı yerleştirme) · yeni sayı kümesi, işlem türü ve soru kökü değişti",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -326,7 +335,8 @@
    "D": "6, 2 × 3 = 6 eşitliğinin sonucu."
   },
   "tipId": "sk-yerlestirme",
-  "tip": "Kutulara yerleştirme ve işlem bulma"
+  "tip": "Kutulara yerleştirme ve işlem bulma",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0006",
@@ -380,7 +390,8 @@
   "kaynakKart": "K-SK-06 (ÖSYM basamak çözümleme AB + BA) · yeni hikâye, toplam ve fark birlikte",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -392,7 +403,8 @@
    "E": "9 ve 4’ün toplamı 13; AB + BA = 143 olurdu."
   },
   "tipId": "sk-basamak",
-  "tip": "Basamak çözümleme"
+  "tip": "Basamak çözümleme",
+  "k": "mat|Sayı Basamakları"
  },
  {
   "id": "tytmat-sayilar-0007",
@@ -445,7 +457,8 @@
   "kaynakKart": "K-SK-07 (ÖSYM tanımlı sembol işlemi) · yeni semboller, iç içe kullanım, ters soru",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -458,7 +471,8 @@
    "D": "İlk koşulu sağlıyor ama ⟨98⟩ = 17 ve [17] = 7."
   },
   "tipId": "sk-tanimli",
-  "tip": "Tanımlı sayılar ve semboller"
+  "tip": "Tanımlı sayılar ve semboller",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0008",
@@ -506,7 +520,8 @@
   "kaynakKart": "K-SK-08 (ardışık sayılar) · yeni koşul (toplam = k × en küçük)",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -519,7 +534,8 @@
    "D": "26 dördüncü sayı; en büyük sayı x + 8."
   },
   "tipId": "sk-ardisik",
-  "tip": "Ardışık sayılar"
+  "tip": "Ardışık sayılar",
+  "k": "mat|Temel Kavramlar"
  },
  {
   "id": "tytmat-sayilar-0009",
@@ -572,7 +588,8 @@
   "kaynakKart": "K-SK-09 (ÖSYM rasyonel karşılaştırma + doğru/yanlış) · yeni hikâye (üç kişinin tahmini), yeni kesirler, aynı paydalı şıklar",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -585,7 +602,8 @@
    "E": "51/120 ile üç tahmin de doğru çıkar; birinin yanlış olması gerekiyordu."
   },
   "tipId": "sk-kesir",
-  "tip": "Kesirler ve rasyonel sayılar"
+  "tip": "Kesirler ve rasyonel sayılar",
+  "k": "mat|Rasyonel Sayılar"
  },
  {
   "id": "tytmat-sayilar-0010",
@@ -633,7 +651,8 @@
   "kaynakKart": "K-SK-10 (ÖSYM kesirle paylaştırma: pasta) · yeni hikâye, iki aşamalı bölme",
   "dogrulama": {
    "yontem2": true,
-   "tarama": false
+   "tarama": false,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -646,7 +665,8 @@
    "E": "2/3 tepside kalan dilimlerin oranı."
   },
   "tipId": "sk-kesir",
-  "tip": "Kesirler ve rasyonel sayılar"
+  "tip": "Kesirler ve rasyonel sayılar",
+  "k": "mat|Rasyonel Sayılar"
  },
  {
   "id": "tytmat-sayilar-0011",
@@ -694,7 +714,8 @@
   "kaynakKart": "K-SK-11 (ÖSYM günlük hesap: kasa ekranı) · yeni ürünler, kilogram cinsinden ondalık miktar",
   "dogrulama": {
    "yontem2": true,
-   "tarama": false
+   "tarama": false,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -707,7 +728,8 @@
    "E": "Domates tutarını 31 yerine 29 aldın."
   },
   "tipId": "sk-ondalik",
-  "tip": "Ondalık sayılar ve günlük hesap"
+  "tip": "Ondalık sayılar ve günlük hesap",
+  "k": "mat|Rasyonel Sayılar"
  },
  {
   "id": "tytmat-sayilar-0012",
@@ -766,7 +788,8 @@
   "kaynakKart": "K-SK-12 (ÖSYM döngü/periyot: lamba ipi) · yeni bağlam, süreye dayalı periyot",
   "dogrulama": {
    "yontem2": true,
-   "tarama": true
+   "tarama": true,
+   "korCozum": true
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
@@ -778,6 +801,7 @@
    "E": "Kırmızıyı 40. saniyede başlattın; aradaki 5 saniyelik sarıyı unuttun."
   },
   "tipId": "sk-oruntu",
-  "tip": "Örüntü ve döngü"
+  "tip": "Örüntü ve döngü",
+  "k": "mat|Temel Kavramlar"
  }
 ]

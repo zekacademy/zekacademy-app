@@ -1,5 +1,8 @@
 import json,html,re
-Q=json.load(open(__import__('sys').argv[1]))
+import sys
+Q=json.load(open(sys.argv[1]))
+BASLIK=sys.argv[3] if len(sys.argv)>3 else 'Soru partisi'
+ANAHTAR='pilot1' if sys.argv[1].endswith('parti1.json') else 'karar-'+re.sub(r'[^a-z0-9]+','-',sys.argv[1].lower().split('/')[-1])
 def kesir(e): return re.sub(r'(?<![\d/])(\d+)/(\d+)(?![\d/])',r'<span class="kesir"><span>\1</span><span>\2</span></span>',e)
 def metin_html(t):
     sat=t.split('\n'); out=[]
@@ -44,7 +47,7 @@ tc=Counter((q.get('tipId'),q.get('tip')) for q in Q); zc=Counter(q['zorluk'] for
 filtre='<section class="filtre" aria-label="Soru seç"><div class="fs"><span class="fl">Zorluk</span><div class="seg" id="fz">'+''.join(f'<button data-v="{v}" aria-pressed="{str(v=="").lower()}">{ad}{f" <small>{zc[v]}</small>" if v else ""}</button>' for v,ad in [("","Tümü"),("kolay","Kolay"),("orta","Orta"),("zor","Zor")])+'</div></div>'
 filtre+='<div class="fs"><span class="fl">Soru tipi</span><button class="acilir" id="ftBtn" aria-expanded="false" aria-controls="ft"><span id="ftAd">Tümü</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="cips" id="ft" hidden><button data-v="" aria-pressed="true">Tümü</button>'+''.join(f'<button data-v="{i}" aria-pressed="false">{html.escape(a)} <small>{n}</small></button>' for (i,a),n in sorted(tc.items(),key=lambda x:-x[1]))+'</div></div><p class="bos" id="bos" hidden>Bu seçimde henüz soru yok. Zorluğu ya da soru tipini değiştir.</p></section>'
 page=f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Soru Havuzu · Pilot Parti 1 · Sayı Kümeleri</title>
+<title>Soru Havuzu · {html.escape(BASLIK)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{{--bg:#f6f7f5;--fg:#1d2420;--mut:#5d6b63;--card:#fff;--line:#dfe4e0;--acc:#1f8a5b;--accbg:#e6f4ec}}
@@ -119,7 +122,7 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .bos{{margin:0;font-size:14px;color:var(--mut)}}.card[hidden]{{display:none}}
 .tag.tip{{color:var(--acc);border-color:var(--acc)}}
 </style></head><body><main>
-<div class="bas"><h1>Pilot · Parti 1 — Sayı Kümeleri (12 soru)</h1><div class="tema" role="group" aria-label="Tema"><button data-t="acik" aria-pressed="true">Açık</button><button data-t="koyu" aria-pressed="false">Koyu</button></div></div>
+<div class="bas"><h1>{html.escape(BASLIK)} ({len(Q)} soru)</h1><div class="tema" role="group" aria-label="Tema"><button data-t="acik" aria-pressed="true">Açık</button><button data-t="koyu" aria-pressed="false">Koyu</button></div></div>
 __FILTRE__<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
 {''.join(cards)}
 <div class="alt"><span id="say">0 / {len(Q)} işaretlendi</span><button id="kop">Kararları kopyala</button></div>
@@ -128,15 +131,15 @@ __FILTRE__<p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı
 const uygula=x=>{{document.documentElement.dataset.tema=x;document.querySelectorAll('.tema button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.t===x)));try{{localStorage.setItem('pilot-tema',x)}}catch(e){{}}}};
 uygula(t);document.querySelectorAll('.tema button').forEach(b=>b.onclick=()=>uygula(b.dataset.t));}})();
 const ids={json.dumps([q['id'] for q in Q])};const st={{}};
-let mem={{}};try{{mem=JSON.parse(localStorage.getItem('pilot1')||'{{}}')}}catch(e){{}}
+let mem={{}};try{{mem=JSON.parse(localStorage.getItem('{ANAHTAR}')||'{{}}')}}catch(e){{}}
 document.querySelectorAll('.card').forEach((c,i)=>{{const d=c.querySelector('details');d.addEventListener('toggle',()=>c.classList.toggle('acik',d.open));
  const ta=c.querySelector('textarea');const bs=c.querySelectorAll('.karar button');
  const set=v=>{{st[i]=st[i]||{{}};st[i].v=v;bs.forEach(b=>b.classList.toggle('sec',b.dataset.v===v));upd()}};
  bs.forEach(b=>b.onclick=()=>set(b.dataset.v));ta.oninput=()=>{{st[i]=st[i]||{{}};st[i].n=ta.value;upd()}};
  if(mem[i]){{if(mem[i].n)ta.value=mem[i].n;st[i]={{n:mem[i].n}};if(mem[i].v)set(mem[i].v)}}}});
-function upd(){{document.getElementById('say').textContent=Object.values(st).filter(x=>x.v).length+' / {len(Q)} işaretlendi';try{{localStorage.setItem('pilot1',JSON.stringify(st))}}catch(e){{}}}}
+function upd(){{document.getElementById('say').textContent=Object.values(st).filter(x=>x.v).length+' / {len(Q)} işaretlendi';try{{localStorage.setItem('{ANAHTAR}',JSON.stringify(st))}}catch(e){{}}}}
 document.getElementById('kop').onclick=async()=>{{const ad={{onay:'ONAY',duzelt:'DÜZELT',at:'AT'}};
- const t='Pilot parti 1 kararları:\\n'+ids.map((id,i)=>`${{i+1}}. ${{id}}: ${{st[i]&&st[i].v?ad[st[i].v]:'—'}}${{st[i]&&st[i].n?' — '+st[i].n:''}}`).join('\\n');
+ const t='{html.escape(BASLIK)} kararları:\\n'+ids.map((id,i)=>`${{i+1}}. ${{id}}: ${{st[i]&&st[i].v?ad[st[i].v]:'—'}}${{st[i]&&st[i].n?' — '+st[i].n:''}}`).join('\\n');
  const b=document.getElementById('kop');try{{await navigator.clipboard.writeText(t);b.textContent='Kopyalandı ✓'}}catch(e){{b.textContent='Kopyalanamadı'}};setTimeout(()=>b.textContent='Kararları kopyala',2000)}};
 
 (function(){{let z='',t='';const sec=(id,f)=>document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('#'+id+' button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));f(b.dataset.v);uyg()}});

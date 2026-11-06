@@ -1,6 +1,6 @@
 {
  "surum": "1 (6 Kasım 2026)",
- "aciklama": "Öğrencinin seçeceği soru tipleri (konu içi). Her soru bir tipe bağlıdır; tip = bir veya birkaç mantık kartı.",
+ "aciklama": "Öğrencinin seçeceği soru tipleri (konu içi). Her soru bir tipe bağlıdır; tip = bir veya birkaç mantık kartı. uygulamaKonu: uygulamadaki konu anahtarı (public/app.js konu listesi, \"mat|Konu\").",
  "konular": {
   "Sayı Kümeleri": [
    {
@@ -9,7 +9,8 @@
     "kartlar": [
      "K-SK-02",
      "K-SK-14"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-basamak",
@@ -21,7 +22,8 @@
      "K-SK-24",
      "K-SK-32",
      "K-SK-33"
-    ]
+    ],
+    "uygulamaKonu": "mat|Sayı Basamakları"
    },
    {
     "tipId": "sk-rakam-enaz",
@@ -29,7 +31,8 @@
     "kartlar": [
      "K-SK-17",
      "K-SK-22"
-    ]
+    ],
+    "uygulamaKonu": "mat|Sayı Basamakları"
    },
    {
     "tipId": "sk-tanimli",
@@ -38,7 +41,8 @@
      "K-SK-01",
      "K-SK-07",
      "K-SK-21"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-yerlestirme",
@@ -48,7 +52,8 @@
      "K-SK-15",
      "K-SK-16",
      "K-SK-18"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-ardisik",
@@ -57,7 +62,8 @@
      "K-SK-08",
      "K-SK-19",
      "K-SK-35"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-kesir",
@@ -68,7 +74,8 @@
      "K-SK-29",
      "K-SK-30",
      "K-SK-31"
-    ]
+    ],
+    "uygulamaKonu": "mat|Rasyonel Sayılar"
    },
    {
     "tipId": "sk-ondalik",
@@ -76,14 +83,16 @@
     "kartlar": [
      "K-SK-03",
      "K-SK-11"
-    ]
+    ],
+    "uygulamaKonu": "mat|Rasyonel Sayılar"
    },
    {
     "tipId": "sk-gosterge",
     "ad": "Sayı doğrusu ve göstergeler",
     "kartlar": [
      "K-SK-04"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-oruntu",
@@ -92,7 +101,8 @@
      "K-SK-12",
      "K-SK-13",
      "K-SK-34"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-faktoriyel",
@@ -100,21 +110,24 @@
     "kartlar": [
      "K-SK-25",
      "K-SK-26"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-asal",
     "ad": "Asal sayılar",
     "kartlar": [
      "K-SK-27"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    },
    {
     "tipId": "sk-isaret",
     "ad": "İşaret inceleme ve sıralama",
     "kartlar": [
      "K-SK-28"
-    ]
+    ],
+    "uygulamaKonu": "mat|Temel Kavramlar"
    }
   ]
  }
