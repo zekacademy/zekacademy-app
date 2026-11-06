@@ -5,11 +5,13 @@ from fractions import Fraction
 from collections import Counter,defaultdict
 H=os.path.dirname(os.path.abspath(__file__))
 TIP={t['tipId']:t for ks in json.load(open(f'{H}/kartlar/soru-tipleri.json'))['konular'].values() for t in ks}
+for f in glob.glob(f'{H}/kartlar/*.json'):  # konu dosyalarındaki 'tipler' listesi (paralel üretim)
+    for x in json.load(open(f)).get('tipler',[]): TIP[x['tipId']]=x
 KART={}
 for f in glob.glob(f'{H}/kartlar/*.json'):
     d=json.load(open(f))
     for k in d.get('kartlar',[]): KART[k['id']]=k
-UYG={'mat|Temel Kavramlar','mat|Rasyonel Sayılar','mat|Sayı Basamakları','mat|Bölme ve Bölünebilme','mat|Ebob – ekok','mat|Basit Eşitsizlikler','mat|Mutlak Değer','mat|Üslü Sayılar','mat|Köklü Sayılar','mat|Çarpanlara Ayırma','mat|Oran Orantı','mat|Denklem Çözme'}
+UYG={'prob|Sayı Problemleri','prob|Kesir Problemleri','prob|Yaş Problemleri','prob|Hareket Hız Problemleri','prob|İşçi Emek Problemleri','prob|Yüzde Problemleri','prob|Kar Zarar Problemleri','prob|Karışım Problemleri','prob|Grafik Problemleri','prob|Rutin Olmayan Problemleri','matd|Kümeler-Kartezyen Çarpım','matd|Fonksiyonlar','matd|Permütasyon ve Kombinasyon','matd|Olasılık','mat|Temel Kavramlar','mat|Rasyonel Sayılar','mat|Sayı Basamakları','mat|Bölme ve Bölünebilme','mat|Ebob – ekok','mat|Basit Eşitsizlikler','mat|Mutlak Değer','mat|Üslü Sayılar','mat|Köklü Sayılar','mat|Çarpanlara Ayırma','mat|Oran Orantı','mat|Denklem Çözme'}
 ZOR={'kolay','orta','zor'}; KALIP={'düz','hikâyeli','öncüllü','tablo','grafik','şekilli','yeni nesil'}
 GEREK=['id','ders','konu','k','kazanim','tipId','tip','zorluk','seviye','kalip','adimSayisi','metin','sekil','siklar','cevap','celdiriciler','istenen','bilgi','ipuclari','adimlar','puf','kaynakKart','dogrulama']
 def sayi(v):
@@ -52,6 +54,9 @@ def denetle(Q,korpus=None):
             kes=[('/' in v) for v in s.values()]
             if any(kes) and not all(kes) and not all(('/' in v) or v.lstrip('−-').isdigit() for v in s.values()): U('şık biçimleri karışık')
         cd=q.get('celdiriciler',{})
+        ct=q.get('celTur')
+        if ct is None: U('çeldirici hata türü (celTur) yok')
+        elif set(ct)!=set(cd) or not set(ct.values())<={'bilgi','islem','dikkat'}: H_('celTur, çeldiricilerle aynı şıklarda olmalı ve bilgi/islem/dikkat değerlerini almalı')
         if set(cd)!=set('ABCDE')-{c.get('sik')}: H_('çeldirici açıklamaları doğru şık hariç 4 şık olmalı')
         if any(len(v)<12 for v in cd.values()): H_('çok kısa çeldirici açıklaması')
         ip=q.get('ipuclari',[])
