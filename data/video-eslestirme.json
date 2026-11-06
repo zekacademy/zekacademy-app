@@ -1,45 +1,3682 @@
 {
-  "_aciklama": "Konu → video eşleştirmesi. Koçun hoca listesi (6 Kasım 2026). Kaynak: kanalların YouTube oynatma listeleri. tur: konu | soru. Bir konuda birden fazla parça olabilir; sıralı.",
-  "kanallar": {
-    "Mert Hoca": {"ders": "Matematik", "liste": "TYT Matematik Konu Anlatımı - 2027 (Tek Videolar)", "playlist": "PLxSXQclq3muCBnV2nFrC8FGaAFk9yJNRN"},
-    "Özcan Aykın": {"ders": "Fizik", "liste": "2027 - 55 Günde TYT Fizik Kampı", "playlist": "PLhhV4F6NB0-uEPdZncMf_qb0tSKyBM-Lf", "kanal": "@ÖzcanAykınFİZİK-y2k"},
-    "Görkem Şahin": {"ders": "Kimya", "durum": "bekliyor"},
-    "Betül Biyoloji": {"ders": "Biyoloji", "durum": "bekliyor"},
-    "Rüştü Hoca": {"ders": "Türkçe", "durum": "bekliyor"},
-    "Tarihin Kodları": {"ders": "Tarih", "durum": "bekliyor"},
-    "Coğrafyanın Kodları": {"ders": "Coğrafya", "durum": "bekliyor", "ornek": {"cog|Doğa ve İnsan": "NlHi5ndIjpA"}}
+ "_aciklama": "Konu → video eşleştirmesi. Koçun hoca listesi (6 Kasım 2026). Kaynak: kanalların YouTube oynatma listeleri. tur: konu | soru. Bir konuda birden fazla parça olabilir; sıralı. Güncellendi: 6 Kasım 2026 akşamı, tüm TYT dersleri.",
+ "kanallar": {
+  "Mert Hoca": {
+   "dersler": [
+    "Matematik",
+    "Geometri"
+   ],
+   "listeler": {
+    "PLxSXQclq3muCBnV2nFrC8FGaAFk9yJNRN": "TYT Matematik Konu Anlatımı - 2027 (Tek Videolar)",
+    "PLxSXQclq3muBKKBXwyEAJP0shmedtEZQr": "TYT-AYT Geometri Konu Anlatımı - 2027"
+   }
   },
-  "konular": {
-    "mat|Temel Kavramlar": {"hoca": "Mert Hoca", "parca": [["8F-ojRKYTVU", "Temel Kavramlar Konu Anlatımı (1. Ünite, tek video)", "konu"]]},
-    "mat|Sayı Basamakları": {"hoca": "Mert Hoca", "parca": [["J8vCbkVlx-E", "Sayı Basamakları Konu Anlatımı", "konu"]]},
-    "mat|Rasyonel Sayılar": {"hoca": "Mert Hoca", "parca": [["Kn35GRczqOM", "Rasyonel Sayılar Konu Anlatımı", "konu"]]},
-    "mat|Bölme ve Bölünebilme": {"hoca": "Mert Hoca", "parca": [["fmafVaxx_80", "Bölme Bölünebilme Konu Anlatımı", "konu"]]},
-    "mat|Ebob – ekok": {"hoca": "Mert Hoca", "parca": [["KsY4JA_GBt4", "Ebob Ekok Konu Anlatımı", "konu"]]},
-    "mat|Basit Eşitsizlikler": {"hoca": "Mert Hoca", "parca": [["2xNWVjgnHNU", "Basit Eşitsizlikler Konu Anlatımı", "konu"]]},
-    "mat|Mutlak Değer": {"hoca": "Mert Hoca", "parca": [["IYrBQO9iUug", "Mutlak Değer Konu Anlatımı", "konu"]]},
-    "mat|Üslü Sayılar": {"hoca": "Mert Hoca", "parca": [["Bqtj4NRkZCo", "Üslü Sayılar Konu Anlatımı", "konu"]]},
-    "mat|Köklü Sayılar": {"hoca": "Mert Hoca", "parca": [["3v2bLUpZ7rg", "Köklü Sayılar Konu Anlatımı", "konu"]]},
-    "mat|Çarpanlara Ayırma": {"hoca": "Mert Hoca", "parca": [["rR82dLW8qK8", "Çarpanlara Ayırma Konu Anlatımı", "konu"]]},
-    "mat|Oran Orantı": {"hoca": "Mert Hoca", "parca": [["VJW58GixYkM", "Oran Orantı Konu Anlatımı", "konu"]]},
-    "mat|Denklem Çözme": {"hoca": "Mert Hoca", "parca": [["sEX8jTjVs_M", "I ve II Bilinmeyenli Denklemler Konu Anlatımı", "konu"]]},
-    "prob|*": {"hoca": "Mert Hoca", "kontrol": "Problemler iki uzun videoda; hangi problem türünün hangi dakikada olduğu açıklamadan çıkarılacak", "parca": [["Luys_WYJBsU", "Problemler Part-1", "konu"], ["WBZRkMVfveQ", "Problemler Part-2", "konu"]]},
-    "prob|Grafik Problemleri": {"hoca": "Mert Hoca", "parca": [["-P3XxaYHfAo", "Grafik ve Veri Analizi Konu Anlatımı", "konu"]]},
-    "prob|Rutin Olmayan Problemleri": {"hoca": "Mert Hoca", "kontrol": "Mantık Analizi videosunun rutin olmayan problemler mi, TYT Mantık konusu mu olduğu koçla netleşecek", "parca": [["VWKV-aIClxk", "Mantık Analizi Konu Anlatımı", "konu"]]},
-    "matd|Kümeler-Kartezyen Çarpım": {"hoca": "Mert Hoca", "parca": [["mngMZfQVtmA", "Kümeler Konu Anlatımı", "konu"]]},
-    "matd|Fonksiyonlar": {"hoca": "Mert Hoca", "parca": [["rUsrVJbScOs", "Fonksiyonlar Konu Anlatımı", "konu"]]},
-    "matd|Permütasyon ve Kombinasyon": {"hoca": "Mert Hoca", "parca": [["JHMENIAC_X8", "Permütasyon-1", "konu"], ["vXczsrqu9RE", "Permütasyon-2", "konu"], ["CxxjhL3zDso", "Kombinasyon-1", "konu"], ["oSLCHj5WBn0", "Kombinasyon-2", "konu"], ["0z4T6paM5mg", "Binom Açılımı-1", "konu"], ["MuZqJKKQc1I", "Binom Açılımı-2", "konu"], ["6ezp7N3pUuA", "Bölüm Bitirme Testi-1", "soru"], ["2mhOHyA6L6o", "Efişinado Testi-1", "soru"]]},
-    "matd|Olasılık": {"hoca": "Mert Hoca", "parca": [["wWLodePjvUA", "Olasılık-1", "konu"], ["krk0QsWTz40", "Olasılık-2", "konu"], ["w6DRg0TBMjk", "Bölüm Bitirme Testi", "soru"], ["C_dSLGhzCxo", "Efişinado Testi", "soru"]]},
-    "fiz|Fizik Bilimine Giriş": {"hoca": "Özcan Aykın", "parca": [["1Hg2eF907YA", "Fizik Bilimine Giriş 1 · Fiziğin Alt Dalları", "konu", 28], ["7aVrdQ7uSQ4", "Fizik Bilimine Giriş 2 · Fiziksel Büyüklükler", "konu", 28], ["PyTaVJVi21c", "Fizik Bilimine Giriş Soru Çözümü", "soru", 28]]},
-    "fiz|Madde ve Özellikleri": {"hoca": "Özcan Aykın", "parca": [["Mhgsu-3ZLNA", "Kütle ve Hacim", "konu", 30], ["tv64WNuMGn8", "Özkütle", "konu", 25], ["OSpkdUAQ41o", "Karışımların Özkütlesi", "konu", 22], ["H0HZrc9-I04", "Soru Çözümü 1", "soru", 27], ["UrMwq39KF2c", "Dayanıklılık", "konu", 24], ["Wh0MdHIOWHM", "Adezyon ve Kohezyon", "konu", 33], ["dhSEXueJg40", "Soru Çözümü 2", "soru", 32]]},
-    "fiz|Hareket ve Kuvvet": {"hoca": "Özcan Aykın", "parca": [["Qp211SqOGJ4", "Hareket 1 · Temel Kavramlar", "konu", 37], ["C2lKjxiLnkE", "Hareket 2 · Düzgün Doğrusal Hareket", "konu", 32], ["Cl43P5zbPeo", "Hareket 3 · İvme", "konu", 30], ["w8PKMoRcjI4", "Hareket Soru Çözümü 1", "soru", 27], ["EDbz2IbEc44", "Hareket Soru Çözümü 2", "soru", 20], ["VwxSW7Rmr2U", "Kuvvet 1 · Temel Kuvvetler ve Bileşke", "konu", 24]]},
-    "fiz|Dinamik": {"hoca": "Özcan Aykın", "parca": [["8pWbsm5Fz9U", "Kuvvet 2 · Newton'ın Hareket Yasaları", "konu", 37], ["DjqPL2eMzVM", "Kuvvet 3 · Newton'ın Hareket Yasaları", "konu", 26], ["-t8AXflQcVU", "Kuvvet 4 · Sürtünme Kuvveti", "konu", 30], ["1NGTT1X4lnA", "Kuvvet Soru Çözümü 1", "soru", 22], ["BhN4puabxW8", "Kuvvet Soru Çözümü 2", "soru", 26]]},
-    "fiz|İş, Güç ve Enerji": {"hoca": "Özcan Aykın", "parca": [["D07mKe56Eis", "İş Kavramı", "konu", 29], ["WXs6nUyVJ28", "Mekanik Enerji", "konu", 31], ["Bidoa76lgEk", "Enerjinin Korunumu ve Güç", "konu", 32], ["gK_GV4z-OjU", "Verim ve Enerji Kaynakları", "konu", 23], ["0vA8I1D3yq0", "Soru Çözümü 1", "soru", 24], ["LOpwAg5w_d8", "Soru Çözümü 2", "soru", 21]]},
-    "fiz|Isı, Sıcaklık ve Genleşme": {"hoca": "Özcan Aykın", "parca": [["kGrdvkxHxjA", "İç Enerji, Sıcaklık, Isı", "konu", 31], ["7HIjhLRs-Dc", "Sıcaklık Ölçekleri", "konu", 15], ["VhqHkBN6xMQ", "Öz Isı ve Isı Sığası", "konu", 29], ["3pRu3T0Q03U", "Hal Değişimi", "konu", 41], ["2-aHeYUXvCI", "Isıl Denge", "konu", 32], ["CRg4b_g1IXc", "Enerji İletim Yolları ve Hızı", "konu", 32], ["XRHERBB3kI0", "Isı ve Sıcaklık Soru Çözümü 1", "soru", 25], ["L3W9YVviHrU", "Isı ve Sıcaklık Soru Çözümü 2", "soru", 23], ["brzhvf6-L_I", "Genleşme 1", "konu", 23], ["iOkBQ3GBVk8", "Genleşme 2", "konu", 22], ["YJJfmAinEhI", "Genleşme Soru Çözümü", "soru", 31]]},
-    "fiz|Elektrik": {"hoca": "Özcan Aykın", "parca": [["jLdxW888qsg", "Elektrostatik 1 · Elektrik Yükleri", "konu", 20], ["xieg5ohrPGs", "Elektrostatik 2 · Elektriklenme Çeşitleri", "konu", 37], ["NqzDtAGqbQY", "Elektrostatik 3 · Elektroskop", "konu", 28], ["AL7H47SY968", "Elektrostatik 4 · İletken ve Yalıtkanlar", "konu", 29], ["qb2_VWVm_oQ", "Elektrostatik 5 · Coulomb Kuvveti", "konu", 19], ["u2Y616NLBBs", "Elektrostatik 6 · Elektrik Alan", "konu", 23], ["6jbPjwbPXls", "Elektrostatik Soru Çözümü 1", "soru", 27], ["VKrJ1GJX0zE", "Elektrostatik Soru Çözümü 2", "soru", 23], ["eFizWwjLopQ", "Elektrik Akımı ve Potansiyel Fark", "konu", 38], ["Tap34nISlqg", "Direnç", "konu", 25], ["uq9Q7seOe28", "Ohm Yasası", "konu", 42], ["urZkI2qOtYo", "Dirençlerin Bağlanması", "konu", 38], ["MjctdUFHILE", "Üreteçlerin Bağlanması", "konu", 29], ["9CbekU-8WwQ", "Elektrik Devreleri Soru Çözümü 1", "soru", 19], ["RwsGiXMimEw", "Elektrik Devreleri Soru Çözümü 2", "soru", 18], ["zN7DKUvyqzA", "Elektriksel Güç ve Lambalar", "konu", 38], ["Y8cJuEqETI0", "Elektriksel Güç Soru Çözümü 1", "soru", 24], ["cbqBhmByflM", "Elektriksel Güç Soru Çözümü 2", "soru", 18]]},
-    "fiz|Manyetizma": {"hoca": "Özcan Aykın", "parca": [["p6zLfL59v8Y", "Mıknatıs ve Manyetik Alan", "konu", 34], ["57NKxjQkOoU", "Akım ve Manyetik Alan", "konu", 35], ["WT5V4wGrSBM", "Elektromıknatıs", "konu", 22], ["aMpvY7w8rK4", "Dünya'nın Manyetik Alanı", "konu", 14], ["9k17_RBIXeg", "Soru Çözümü 1", "soru", 31], ["OOZ-NFlWebY", "Soru Çözümü 2", "soru", 21]]},
-    "fiz|Basınç": {"hoca": "Özcan Aykın", "parca": [["DnQNBoR_Dsw", "Katı Basıncı", "konu", 29], ["5Hr5osikAlk", "Katı Basıncı Soru Çözümü", "soru", 20], ["dkwbOGhBedc", "Sıvı Basıncı 1", "konu", 26], ["8XFD833ngJc", "Sıvı Basıncı 2", "konu", 23], ["jOKADXphfC8", "Sıvı Basıncı 3", "konu", 29], ["bYnkDV0LJ5o", "Açık Hava Basıncı", "konu", 32], ["8EvdMuWG6kU", "Kapalı Kaplarda Gaz Basıncı", "konu", 29], ["pduzOUiY1uM", "Basınç Ölçen Aletler", "konu", 27], ["1Q3CtzfV1lQ", "Akışkanların Basıncı", "konu", 26], ["PQM2gVZrgS4", "Durgun Sıvı ve Akışkan Basıncı Soru Çözümü 1", "soru", 26], ["2Y3BQddhguA", "Durgun Sıvı ve Akışkan Basıncı Soru Çözümü 2", "soru", 16], ["PmJmQpttSnY", "Gaz Basıncı Soru Çözümü 1", "soru", 22], ["iUDFx-qjjeM", "Gaz Basıncı Soru Çözümü 2", "soru", 23]]},
-    "fiz|Sıvıların Kaldırma Kuvveti": {"hoca": "Özcan Aykın", "parca": [["XQHH2VV1Bbk", "Kaldırma Kuvveti 1", "konu", 34], ["IX2LZ_CYJQI", "Kaldırma Kuvveti 2", "konu", 34], ["EkNxYWi-uKM", "Soru Çözümü 1", "soru", 31], ["-uyoBz_bC4I", "Soru Çözümü 2", "soru", 28]]},
-    "fiz|Optik": {"hoca": "Özcan Aykın", "parca": [["1O3Q5X8mleQ", "Işık Şiddeti ve Işık Akısı", "konu", 24], ["T9g5QdOr8Mo", "Aydınlanma Şiddeti", "konu", 24], ["ceSzQEruRxQ", "Aydınlanma Soru Çözümü", "soru", 24], ["dd-BhlkKSuU", "Gölge 1", "konu", 26], ["9hgQWVXqn6s", "Gölge 2", "konu", 30], ["0XJt3FaWS5M", "Gölge Soru Çözümü", "soru", 21], ["ixgV1NTdISQ", "Yansıma ve Yansıma Kanunları", "konu", 34], ["6Ol1f4UKsnM", "Düzlem Ayna 1", "konu", 36], ["Niuye4Sxiio", "Görüş Alanı · Düzlem Ayna 2", "konu", 22], ["PuGnerpUo14", "Düzlem Ayna Soru Çözümü", "soru", 27], ["9Qv8MXWL4yc", "Çukur Aynada Özel Işınlar", "konu", 31], ["jczDv1QHAic", "Tümsek Aynada Özel Işınlar", "konu", 14], ["JK8l1zMiw0g", "Çukur Aynada Görüntü", "konu", 39], ["W8H3bTK4JxE", "Tümsek Aynada Görüntü", "konu", 19], ["Xn-W093iEGA", "Küresel Aynalar Soru Çözümü", "soru", 26], ["HBGioahDgyA", "Kırılma İndisi, Snell Yasası", "konu", 33], ["ffttO_LOmR8", "Sınır Açısı ve Tam Yansıma", "konu", 39], ["DfDdkMfeUIo", "Küresel Yüzeylerden Geçiş ve Görünür Uzaklık", "konu", 25], ["LrekDijm8Qc", "Işığın Kırılması Soru Çözümü", "soru", 33], ["7UGITYRh8ds", "Mercekler ve Odak Uzaklığı", "konu", 33], ["APT59L7PrxQ", "Merceklerde Özel Işınlar", "konu", 23], ["Kb1V3qLPO8U", "Merceklerde Görüntü", "konu", 40], ["EkaOHdAYKzI", "Mercekler Soru Çözümü", "soru", 31], ["gSmX1oqE7sg", "Prizmalar", "konu", 33], ["gFXIw6RN7cg", "Renkler", "konu", 40], ["S6wH6_nZoEs", "Prizma ve Renkler Soru Çözümü", "soru", 24]]},
-    "fiz|Dalgalar": {"hoca": "Özcan Aykın", "parca": [["p13oQVkAzR0", "Dalgalar 1 · Temel Kavramlar", "konu", 34], ["1QpDnuEAm2s", "Dalgalar 2 · Sınıflandırma", "konu", 28], ["bRbvtVB4ZDc", "Yay Dalgaları 1", "konu", 38], ["IvCvvEQeGrg", "Yay Dalgaları 2", "konu", 38], ["sPS084MAn88", "Yay Dalgaları 3", "konu", 32], ["o4QOA4JWjqo", "Yay Dalgaları Soru Çözümü", "soru", 27], ["W2kxJOz57Bc", "Su Dalgası 1", "konu", 21], ["HXTKAnIUe1c", "Su Dalgası 2", "konu", 31], ["rvcpdc5-v9w", "Su Dalgası 3", "konu", 16], ["85SvEQsvJgM", "Su Dalgası 4", "konu", 40], ["KAmjPBtPfMk", "Su Dalgaları Soru Çözümü", "soru", 37], ["CJh-XzyR6Dg", "Ses ve Deprem Dalgaları", "konu", 44], ["VMGG-hcx5JM", "Ses ve Deprem Dalgaları Soru Çözümü", "soru", 22]]}
+  "Özcan Aykın": {
+   "dersler": [
+    "Fizik"
+   ],
+   "listeler": {
+    "PLhhV4F6NB0-uEPdZncMf_qb0tSKyBM-Lf": "2027 - 55 Günde TYT Fizik Kampı"
+   }
+  },
+  "Görkem Şahin": {
+   "dersler": [
+    "Kimya"
+   ],
+   "kanal": "@BenimHocam",
+   "listeler": {
+    "PLYLBaDBvPgfo": "2027 / TYT Kimya Konu Anlatım Videoları - Görkem ŞAHİN"
+   }
+  },
+  "Betül Biyoloji": {
+   "dersler": [
+    "Biyoloji"
+   ],
+   "kanal": "@betulbiyoloji",
+   "listeler": {
+    "PLfEqAmKijw1I": "2027 TYT Biyoloji Kampı"
+   }
+  },
+  "Rüştü Hoca": {
+   "dersler": [
+    "Türkçe"
+   ],
+   "kanal": "@RüştüHocaileTürkçe",
+   "listeler": {
+    "PLJMIDa91CHjc": "Dil Bilgisinin Ritmi 2027",
+    "PLT5Y-Sr8yifs": "Paragrafın Ritmi 2027",
+    "PLL4Uzg_MGO2J74Fma5G2VblIJV21t5s9W": "49 Günde TYT Türkçe Kampı (2026 Tayfa)"
+   }
+  },
+  "Tarihin Kodları": {
+   "dersler": [
+    "Tarih"
+   ],
+   "kanal": "@Sadettin.Akyayla",
+   "listeler": {
+    "PLCLfupK6Ie8Uow9njwNnXclaTqhLClYiA": "TYT Tarih (Kodlarla Konu Anlatımı 2027)"
+   }
+  },
+  "Coğrafyanın Kodları": {
+   "dersler": [
+    "Coğrafya"
+   ],
+   "kanal": "@cografyaninkodlari",
+   "listeler": {
+    "PLnBnugScc-7J3C3CJCelCOWIwUezzxBZI": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027"
+   }
+  },
+  "Felsefe Atölyesi": {
+   "dersler": [
+    "Felsefe"
+   ],
+   "kanal": "@FelsefeAtölyesi",
+   "listeler": {
+    "PL4P7Q5QUoe-iodiVl_7z0IinPm4weN4dn": "7 Günde TYT Felsefe Kampı 2027"
+   }
   }
+ },
+ "konular": {
+  "mat|Temel Kavramlar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "8F-ojRKYTVU",
+     "Temel Kavramlar (tek video) Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Sayı Basamakları": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "J8vCbkVlx-E",
+     "Sayı Basamakları Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Rasyonel Sayılar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Kn35GRczqOM",
+     "Rasyonel Sayılar Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Bölme ve Bölünebilme": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "fmafVaxx_80",
+     "Bölme Bölünebilme Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Ebob – ekok": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "KsY4JA_GBt4",
+     "Ebob Ekok Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Basit Eşitsizlikler": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "2xNWVjgnHNU",
+     "Basit Eşitsizlikler Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Mutlak Değer": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "IYrBQO9iUug",
+     "Mutlak Değer Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Üslü Sayılar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Bqtj4NRkZCo",
+     "Üslü Sayılar Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Köklü Sayılar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "3v2bLUpZ7rg",
+     "Köklü Sayılar Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Çarpanlara Ayırma": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "rR82dLW8qK8",
+     "Çarpanlara Ayırma Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Oran Orantı": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "VJW58GixYkM",
+     "Oran Orantı Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "mat|Denklem Çözme": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "sEX8jTjVs_M",
+     "I ve II Bilinmeyenli Denklemler Konu Anlatımı",
+     "konu"
+    ]
+   ]
+  },
+  "prob|Sayı Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Kesir Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Yaş Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Hareket Hız Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|İşçi Emek Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Yüzde Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Kar Zarar Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Karışım Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "Luys_WYJBsU",
+     "Problemler Part-1",
+     "konu"
+    ],
+    [
+     "WBZRkMVfveQ",
+     "Problemler Part-2",
+     "konu"
+    ]
+   ],
+   "kontrol": "Problemler iki uzun videoda; türün başladığı dakika bölüm olarak eklenecek"
+  },
+  "prob|Grafik Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "-P3XxaYHfAo",
+     "Grafik ve Veri Analizi",
+     "konu"
+    ]
+   ]
+  },
+  "prob|Rutin Olmayan Problemleri": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "VWKV-aIClxk",
+     "Mantık Analizi",
+     "konu"
+    ]
+   ],
+   "kontrol": "Rutin olmayan mı, TYT Mantık mı? koç onayı"
+  },
+  "matd|Kümeler-Kartezyen Çarpım": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "mngMZfQVtmA",
+     "Kümeler",
+     "konu"
+    ]
+   ]
+  },
+  "matd|Fonksiyonlar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "rUsrVJbScOs",
+     "Fonksiyonlar",
+     "konu"
+    ]
+   ]
+  },
+  "matd|Permütasyon ve Kombinasyon": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "JHMENIAC_X8",
+     "Permütasyon-1",
+     "konu"
+    ],
+    [
+     "vXczsrqu9RE",
+     "Permütasyon-2",
+     "konu"
+    ],
+    [
+     "CxxjhL3zDso",
+     "Kombinasyon-1",
+     "konu"
+    ],
+    [
+     "oSLCHj5WBn0",
+     "Kombinasyon-2",
+     "konu"
+    ],
+    [
+     "0z4T6paM5mg",
+     "Binom Açılımı-1",
+     "konu"
+    ],
+    [
+     "MuZqJKKQc1I",
+     "Binom Açılımı-2",
+     "konu"
+    ],
+    [
+     "6ezp7N3pUuA",
+     "Bölüm Bitirme Testi",
+     "soru"
+    ],
+    [
+     "2mhOHyA6L6o",
+     "Efişinado Testi",
+     "soru"
+    ]
+   ]
+  },
+  "matd|Olasılık": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT Matematik Konu Anlatımı 2027 (Tek Videolar)",
+   "parca": [
+    [
+     "wWLodePjvUA",
+     "Olasılık-1",
+     "konu"
+    ],
+    [
+     "krk0QsWTz40",
+     "Olasılık-2",
+     "konu"
+    ],
+    [
+     "w6DRg0TBMjk",
+     "Bölüm Bitirme Testi",
+     "soru"
+    ],
+    [
+     "C_dSLGhzCxo",
+     "Efişinado Testi",
+     "soru"
+    ]
+   ]
+  },
+  "geo|Doğruda Açılar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "MFy3DTnf3Zk",
+     "Doğruda Açılar 1",
+     "konu"
+    ],
+    [
+     "CYgjYxPCyMU",
+     "Doğruda Açılar 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Üçgende Açılar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "IYU9eFFZf3k",
+     "Üçgende Açılar 1",
+     "konu"
+    ],
+    [
+     "D5kJMYUTMKI",
+     "Üçgende Açılar 2",
+     "konu"
+    ],
+    [
+     "is1r0z8GERs",
+     "Üçgende Açılar 3",
+     "konu"
+    ],
+    [
+     "8mvbCB6p2Cs",
+     "Üçgende Açılar 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Dik Üçgen": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "0Ie1k3knFUo",
+     "Dik Üçgen 1",
+     "konu"
+    ],
+    [
+     "_2_0NBKVh0Q",
+     "Dik Üçgen 2",
+     "konu"
+    ],
+    [
+     "SaujJsMorE4",
+     "Dik Üçgen 3",
+     "konu"
+    ],
+    [
+     "V_uulYI-5jg",
+     "Dik Üçgen 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|İkizkenar Üçgen": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "YyisvG8RHOs",
+     "İkizkenar Üçgen 1",
+     "konu"
+    ],
+    [
+     "lMbQ2KYg-pY",
+     "İkizkenar Üçgen 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Eşkenar Üçgen": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "f4X7lIh0HHE",
+     "Eşkenar Üçgen 1",
+     "konu"
+    ],
+    [
+     "f6BLdYEXHbU",
+     "Eşkenar Üçgen 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Açıortay": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "3z7U3FMFAkI",
+     "Açıortay 1",
+     "konu"
+    ],
+    [
+     "ZIgadTHg9Po",
+     "Açıortay 2",
+     "konu"
+    ],
+    [
+     "pDFEfbfRGc0",
+     "Açıortay 3",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Kenarortay": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "yGcWu6QSBDM",
+     "Kenarortay 1",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Eşlik ve Benzerlik": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "0UD2tbQMOhE",
+     "Eşlik ve Benzerlik 1",
+     "konu"
+    ],
+    [
+     "TblbOFciF8A",
+     "Eşlik ve Benzerlik 2",
+     "konu"
+    ],
+    [
+     "p0TC--1YlZw",
+     "Eşlik ve Benzerlik 3",
+     "konu"
+    ],
+    [
+     "329nuGp0MQ0",
+     "Eşlik ve Benzerlik 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Üçgende Benzerlik": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "TblbOFciF8A",
+     "Üçgende Benzerlik 1",
+     "konu"
+    ],
+    [
+     "p0TC--1YlZw",
+     "Üçgende Benzerlik 2",
+     "konu"
+    ],
+    [
+     "329nuGp0MQ0",
+     "Üçgende Benzerlik 3",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Üçgende Alan": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "5iTvWZgLHmY",
+     "Üçgende Alan 1",
+     "konu"
+    ],
+    [
+     "D_OtwwYn3B4",
+     "Üçgende Alan 2",
+     "konu"
+    ],
+    [
+     "08I7f2iTBX0",
+     "Üçgende Alan 3",
+     "konu"
+    ],
+    [
+     "zuKTTqeoRWE",
+     "Üçgende Alan 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Çokgenler": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "rFBQVoBC-8Y",
+     "Çokgenler 1",
+     "konu"
+    ],
+    [
+     "fp7PD3Y_w0E",
+     "Çokgenler 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Dörtgenler": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "XgWNXN6-2Yc",
+     "Dörtgenler 1",
+     "konu"
+    ],
+    [
+     "e0in1nP5F4Y",
+     "Dörtgenler 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Yamuk": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "eVcPaSVkB48",
+     "Yamuk 1",
+     "konu"
+    ],
+    [
+     "E3oFohM8Njw",
+     "Yamuk 2",
+     "konu"
+    ],
+    [
+     "7elKvY7eEno",
+     "Yamuk 3",
+     "konu"
+    ],
+    [
+     "AYJS8CZrugU",
+     "Yamuk 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Paralelkenar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "U3hV4C9E49M",
+     "Paralelkenar 1",
+     "konu"
+    ],
+    [
+     "eGSF2IDUjBU",
+     "Paralelkenar 2",
+     "konu"
+    ],
+    [
+     "LU_0LI2QR8A",
+     "Paralelkenar 3",
+     "konu"
+    ],
+    [
+     "FDEWcmnwO1M",
+     "Paralelkenar 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Eşkenar Dörtgen": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "HXZrjOjQCWQ",
+     "Eşkenar Dörtgen 1",
+     "konu"
+    ],
+    [
+     "ec-cRwyDdKA",
+     "Eşkenar Dörtgen 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Deltoid": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "NG_iMM2fItc",
+     "Deltoid 1",
+     "konu"
+    ],
+    [
+     "yTnsTVV9qtE",
+     "Deltoid 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Dikdörtgen": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "CJyp2jcBYV8",
+     "Dikdörtgen 1",
+     "konu"
+    ],
+    [
+     "OeP4VDwGbHk",
+     "Dikdörtgen 2",
+     "konu"
+    ],
+    [
+     "BrdHag76cGs",
+     "Dikdörtgen 3",
+     "konu"
+    ],
+    [
+     "VNrBvQCRK60",
+     "Dikdörtgen 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Kare": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "5_NuouyN6uE",
+     "Kare 1",
+     "konu"
+    ],
+    [
+     "fYAPYGDWopc",
+     "Kare 2",
+     "konu"
+    ],
+    [
+     "e00t0gjiKXQ",
+     "Kare 3",
+     "konu"
+    ],
+    [
+     "r0Im_kS8q-M",
+     "Kare 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Çemberde Açı": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "xqkW5PJIXMM",
+     "Çemberde Açı 1",
+     "konu"
+    ],
+    [
+     "YRUxcAODUHk",
+     "Çemberde Açı 2",
+     "konu"
+    ],
+    [
+     "Is7G8bPj2vM",
+     "Çemberde Açı 3",
+     "konu"
+    ],
+    [
+     "UjfXlGG1S9U",
+     "Çemberde Açı 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Çemberde Uzun": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "LBDtzd5_ihQ",
+     "Çemberde Uzun 1",
+     "konu"
+    ],
+    [
+     "6xGVpA4CUOw",
+     "Çemberde Uzun 2",
+     "konu"
+    ],
+    [
+     "KA5OMy5Jzrw",
+     "Çemberde Uzun 3",
+     "konu"
+    ],
+    [
+     "nXmh62LkFyo",
+     "Çemberde Uzun 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Dairede Çevre ve Alan": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "4Gu6vkai0R8",
+     "Dairede Çevre ve Alan 1",
+     "konu"
+    ],
+    [
+     "U0IEYS8Z9GY",
+     "Dairede Çevre ve Alan 2",
+     "konu"
+    ],
+    [
+     "tsUCDsIqfsE",
+     "Dairede Çevre ve Alan 3",
+     "konu"
+    ],
+    [
+     "1IXnfTu-8RY",
+     "Dairede Çevre ve Alan 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Prizmalar": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "i99dlWUm4U4",
+     "Prizmalar 1",
+     "konu"
+    ],
+    [
+     "tJ8K6Wz91V8",
+     "Prizmalar 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Silindir": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "NptKniWEKIk",
+     "Silindir 1",
+     "konu"
+    ],
+    [
+     "kBRocecFtH0",
+     "Silindir 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Piramit": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "loXoB4x7cjU",
+     "Piramit 1",
+     "konu"
+    ],
+    [
+     "EpWJnpYHXPQ",
+     "Piramit 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Koni": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "l-Z8vjL93L8",
+     "Koni 1",
+     "konu"
+    ],
+    [
+     "GcKRxvK_1yA",
+     "Koni 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Küre": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "ysgwiPxNOZk",
+     "Küre 1",
+     "konu"
+    ],
+    [
+     "4BhqTowgJxI",
+     "Küre 2",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Noktanın Analitiği": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "NJa5wdv20_k",
+     "Noktanın Analitiği 1",
+     "konu"
+    ],
+    [
+     "RzP6ROtBX20",
+     "Noktanın Analitiği 2",
+     "konu"
+    ],
+    [
+     "dO_rAqLwGLI",
+     "Noktanın Analitiği 3",
+     "konu"
+    ],
+    [
+     "UwR2j2xmTOo",
+     "Noktanın Analitiği 4",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Doğrunun Analitiği": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "fCqXEvvB79o",
+     "Doğrunun Analitiği 1",
+     "konu"
+    ],
+    [
+     "FY2G2Q0DfqQ",
+     "Doğrunun Analitiği 2",
+     "konu"
+    ],
+    [
+     "752hjLDvn8Q",
+     "Doğrunun Analitiği 3",
+     "konu"
+    ],
+    [
+     "LVQF75Jgz80",
+     "Doğrunun Analitiği 4",
+     "konu"
+    ],
+    [
+     "aQ1IeXOT1io",
+     "Doğrunun Analitiği 5",
+     "konu"
+    ],
+    [
+     "t2Al-QXu09w",
+     "Doğrunun Analitiği 6",
+     "konu"
+    ],
+    [
+     "1MOYiXURWTU",
+     "Doğrunun Analitiği 7",
+     "konu"
+    ],
+    [
+     "tFGYDOi599Q",
+     "Doğrunun Analitiği 8",
+     "konu"
+    ],
+    [
+     "EqzlUK1a7kk",
+     "Doğrunun Analitiği 9",
+     "konu"
+    ],
+    [
+     "6kjsjkfUboM",
+     "Doğrunun Analitiği 10",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Dönüşüm Geometrisi": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "FxEa4BhsDs4",
+     "Dönüşüm Geometrisi 1",
+     "konu"
+    ],
+    [
+     "mbR-nHmEEjo",
+     "Dönüşüm Geometrisi 2",
+     "konu"
+    ],
+    [
+     "QSe_ONLcIVQ",
+     "Dönüşüm Geometrisi 3",
+     "konu"
+    ],
+    [
+     "9ecN3lflVuE",
+     "Dönüşüm Geometrisi 4",
+     "konu"
+    ],
+    [
+     "dCfQekQOy80",
+     "Dönüşüm Geometrisi 5",
+     "konu"
+    ],
+    [
+     "AcjlQ_SBvW8",
+     "Dönüşüm Geometrisi 6",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Çemberin Analitiği": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "HfXJj6HJVJ4",
+     "Çemberin Analitiği 1",
+     "konu"
+    ],
+    [
+     "EHr7TEGuyC8",
+     "Çemberin Analitiği 2",
+     "konu"
+    ],
+    [
+     "RRF6p-nKCsM",
+     "Çemberin Analitiği 3",
+     "konu"
+    ],
+    [
+     "nmduSQhi3gA",
+     "Çemberin Analitiği 4",
+     "konu"
+    ],
+    [
+     "kFgj1DL9iIM",
+     "Çemberin Analitiği 5",
+     "konu"
+    ],
+    [
+     "MvBDJ_g100U",
+     "Çemberin Analitiği 6",
+     "konu"
+    ]
+   ]
+  },
+  "geo|Açı Kenar Bağıntıları": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "pnuij2wmug4",
+     "Açı-Kenar Bağıntıları 1",
+     "konu"
+    ],
+    [
+     "Ik1vJS9h1vE",
+     "Açı-Kenar Bağıntıları 2",
+     "konu"
+    ],
+    [
+     "LiurZe73l-0",
+     "Üçgenler Bölüm Bitirme Testi 1",
+     "soru"
+    ],
+    [
+     "CK2f8rLEsTI",
+     "Üçgenler Bölüm Bitirme Testi 2",
+     "soru"
+    ],
+    [
+     "9sjMuUEA6No",
+     "Üçgenler Efişinado Testi 1",
+     "soru"
+    ],
+    [
+     "RD25-YnoI48",
+     "Üçgenler Efişinado Testi 2",
+     "soru"
+    ]
+   ]
+  },
+  "geo|Özel Dörtgenler": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "XgWNXN6-2Yc",
+     "Dörtgenler 1",
+     "konu"
+    ],
+    [
+     "di4yA2tEvsw",
+     "Dörtgenler-Çokgenler Bölüm Bitirme Testi 1",
+     "soru"
+    ],
+    [
+     "TrnGLGDgdKU",
+     "Bölüm Bitirme Testi 2",
+     "soru"
+    ],
+    [
+     "5wmwSGl4ItU",
+     "Efişinado Testi 1",
+     "soru"
+    ],
+    [
+     "L5L8qgHY1PI",
+     "Efişinado Testi 2",
+     "soru"
+    ]
+   ]
+  },
+  "geo|Katı Cisimler": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "i99dlWUm4U4",
+     "Prizmalar 1",
+     "konu"
+    ],
+    [
+     "OiVHA9uHjz8",
+     "Katı Cisimler Bölüm Bitirme Testi 1",
+     "soru"
+    ],
+    [
+     "oC_15SImxhw",
+     "Bölüm Bitirme Testi 2",
+     "soru"
+    ],
+    [
+     "gSWjx2-W2hg",
+     "Efişinado Testi 1",
+     "soru"
+    ],
+    [
+     "SsOYc3VwEQs",
+     "Efişinado Testi 2",
+     "soru"
+    ]
+   ]
+  },
+  "geo|Küp": {
+   "hoca": "Mert Hoca",
+   "kaynak": "TYT-AYT Geometri Konu Anlatımı 2027 (60 Günde Geometri)",
+   "parca": [
+    [
+     "i99dlWUm4U4",
+     "Prizmalar 1 (küp dahil)",
+     "konu"
+    ],
+    [
+     "tJ8K6Wz91V8",
+     "Prizmalar 2",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Kimya Bilimi": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "ayDKtjR1Rm8",
+     "Kimya Dersine Giriş",
+     "konu"
+    ],
+    [
+     "duCUXCZQTQM",
+     "Simyadan Kimyaya",
+     "konu"
+    ],
+    [
+     "LLKF93vAs54",
+     "Kimyanın ve Kimyacıların Çalışması",
+     "konu"
+    ],
+    [
+     "tlTI8XiBxIw",
+     "Kimyanın Sembolik Dili",
+     "konu"
+    ],
+    [
+     "WWX-j2zEkTw",
+     "İş Sağlığı ve Güvenliği",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Atom ve Yapısı": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "jHs5nsAPTzA",
+     "Atom Modelleri",
+     "konu"
+    ],
+    [
+     "L3zFmvfH5l8",
+     "Atomun Yapısı",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Periyodik Sistem": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "xTDnVqsYBdQ",
+     "Periyodik Sistem",
+     "konu"
+    ],
+    [
+     "K0tJ3dlga9k",
+     "Elementlerin Sınıflandırılması",
+     "konu"
+    ],
+    [
+     "am3PMzxw97k",
+     "Periyodik Özellikler 1",
+     "konu"
+    ],
+    [
+     "v6HArH6Kd9E",
+     "Periyodik Özellikler 2",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Kimyasal Türler Arası Etkileşimler": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "rELNDPv4NlM",
+     "Kimyasal Türler Arası Etkileşimler",
+     "konu"
+    ],
+    [
+     "-rgN0nRTmxE",
+     "İyonik Bağ 1",
+     "konu"
+    ],
+    [
+     "jouoHKYFiEU",
+     "İyonik Bağ 2",
+     "konu"
+    ],
+    [
+     "m1Xp593lDCY",
+     "Kovalent Bağların Oluşumu",
+     "konu"
+    ],
+    [
+     "WlnowYuxJLE",
+     "Kovalent Bileşiklerin Adlandırılması",
+     "konu"
+    ],
+    [
+     "3qR_YCjUcHU",
+     "Zayıf Etkileşimler",
+     "konu"
+    ],
+    [
+     "G1ZADh2g--c",
+     "Fiziksel ve Kimyasal Değişimler",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Maddenin Halleri": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "VZoaFp4YAj4",
+     "Maddenin Halleri",
+     "konu"
+    ],
+    [
+     "lbCW7oezwhM",
+     "Katılar",
+     "konu"
+    ],
+    [
+     "hbfiyn-p92w",
+     "Sıvılar",
+     "konu"
+    ],
+    [
+     "vlx-BvDazm0",
+     "Gazlar",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Kimyanın Temel Kanunları": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "ArtApyDmbGw",
+     "Kütlenin Korunumu Kanunu",
+     "konu"
+    ],
+    [
+     "2WeEzROKVZE",
+     "Sabit Oranlar Kanunu",
+     "konu"
+    ],
+    [
+     "MU_vSjlXaAQ",
+     "Katlı Oranlar Kanunu",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Kimyasal Hesaplamalar": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "uCU_aTloakI",
+     "Mol Kavramı 1",
+     "konu"
+    ],
+    [
+     "Bs4QSOGqPNQ",
+     "Mol Kavramı 2",
+     "konu"
+    ],
+    [
+     "Fguaqi-AAKY",
+     "Mol Kavramı Soru Çözümü",
+     "soru"
+    ],
+    [
+     "TSEVOp0g0sQ",
+     "Kimyasal Tepkime Türleri",
+     "konu"
+    ],
+    [
+     "PxTdS5y2Al0",
+     "Kimyasal Hesaplamalar 1",
+     "konu"
+    ],
+    [
+     "FHfOyLJa0NI",
+     "Kimyasal Hesaplamalar 2",
+     "konu"
+    ],
+    [
+     "6quyj6fMaT8",
+     "Kimyasal Hesaplamalar 3",
+     "konu"
+    ],
+    [
+     "41G2hE1x9CU",
+     "Kimyasal Hesaplamalar Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "kim|Karışımlar": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "DbqfWCZ5ZHs",
+     "Karışımların Sınıflandırılması 1",
+     "konu"
+    ],
+    [
+     "_hjCuvmVx-k",
+     "Karışımların Sınıflandırılması 2",
+     "konu"
+    ],
+    [
+     "3_bnEfIO0oY",
+     "Çözünme Süreci",
+     "konu"
+    ],
+    [
+     "cclZfTbzZ18",
+     "Çözeltilerde Derişim",
+     "konu"
+    ],
+    [
+     "F4V31H_Jhdk",
+     "Koligatif Özellikler",
+     "konu"
+    ],
+    [
+     "CeEgV5BHLus",
+     "Ayırma ve Saflaştırma Teknikleri",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Asitler, Bazlar ve Tuzlar": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "aAgU4gcJEPg",
+     "Asitler ve Bazlar",
+     "konu"
+    ],
+    [
+     "_qumqYa03dY",
+     "Asit-Baz Tepkimeleri 1",
+     "konu"
+    ],
+    [
+     "Nxk2TBgmnGA",
+     "Asit-Baz Tepkimeleri 2",
+     "konu"
+    ],
+    [
+     "gjyrRYzsiiY",
+     "Hayatımızdaki Asitler, Bazlar ve Tuzlar",
+     "konu"
+    ]
+   ]
+  },
+  "kim|Kimya Her Yerde": {
+   "hoca": "Görkem Şahin",
+   "kaynak": "2027 / TYT Kimya Video Ders Notları - Konu Anlatım Videoları (Benim Hocam)",
+   "parca": [
+    [
+     "oVSQDxD2khw",
+     "Kimya Her Yerde",
+     "konu"
+    ],
+    [
+     "p6o2TZe7lgE",
+     "Doğa ve Kimya",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Canlıların Ortak Özellikleri": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "wecoNsYW9gE",
+     "Canlıların Ortak Özellikleri",
+     "konu"
+    ],
+    [
+     "Kr32jD4Zvow",
+     "Bilimsel Yöntem Basamakları",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Canlıların Temel Bileşenleri": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "UoymYSQQdRM",
+     "İnorganik ve Organik Bileşikler",
+     "konu"
+    ],
+    [
+     "8Ht9-uObX4c",
+     "Karbohidratlar",
+     "konu"
+    ],
+    [
+     "AvRMrGjiDXE",
+     "Yağlar ve Proteinler",
+     "konu"
+    ],
+    [
+     "eWqCd-OMOVc",
+     "Enzimler",
+     "konu"
+    ],
+    [
+     "gzD8e6ocbGg",
+     "Vitaminler, Hormonlar, ATP",
+     "konu"
+    ],
+    [
+     "GqOcRwco1YQ",
+     "Nükleik Asitler, DNA, RNA",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Hücre ve Organeller – Madde Geçişleri": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "x1iRW6H4qFQ",
+     "Hücre",
+     "konu"
+    ],
+    [
+     "C0YllZtb6QI",
+     "Zarsız ve Tek Zarlı Organeller",
+     "konu"
+    ],
+    [
+     "k3S8u4sbaCo",
+     "Çift Zarlı Organeller",
+     "konu"
+    ],
+    [
+     "TlPdLWHoIXQ",
+     "Hücre Zarı, Hücre Duvarı",
+     "konu"
+    ],
+    [
+     "AZrTZfMmMKQ",
+     "Madde Geçişleri 1",
+     "konu"
+    ],
+    [
+     "l2_X8dPyTF4",
+     "Madde Geçişleri 2",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Canlıların Sınıflandırılması": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "gbESnGsY5_8",
+     "Çeşitlilik ve Sınıflandırma",
+     "konu"
+    ],
+    [
+     "fwfYAaQxfuE",
+     "Bakteriler ve Arkeler",
+     "konu"
+    ],
+    [
+     "tinDNgq2_RY",
+     "Protista, Bitkiler ve Mantarlar",
+     "konu"
+    ],
+    [
+     "2jLNlxU2M38",
+     "Hayvanlar Alemi ve Virüsler",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Hücrede Bölünme – Üreme": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "qtjAG8FIQ9Y",
+     "Hücre Bölünmeleri, Mitoz",
+     "konu"
+    ],
+    [
+     "jsnEKVwsH5Q",
+     "Eşeysiz Üreme",
+     "konu"
+    ],
+    [
+     "52AVCgjN6tM",
+     "Mayoz Bölünme, Eşeyli Üreme",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Kalıtım": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "x72DiT88gR4",
+     "Kalıtım 1 · Kavramlar, Gamet",
+     "konu"
+    ],
+    [
+     "ETAqRdS8LlU",
+     "Kalıtım 2 · Monohibrit, Dihibrit",
+     "konu"
+    ],
+    [
+     "PKYEwTvYwzQ",
+     "Kalıtım 3 · Soyağaçları, Kan Grupları",
+     "konu"
+    ],
+    [
+     "mvEBQX5Sdj0",
+     "Kalıtım 4 · Eşeye Bağlı Kalıtım",
+     "konu"
+    ]
+   ]
+  },
+  "bio|Ekosistem": {
+   "hoca": "Betül Biyoloji",
+   "kaynak": "2027 TYT Biyoloji Kampı (Günde 2 video, 2 haftada bitir)",
+   "parca": [
+    [
+     "ylraslS39LY",
+     "Ekosistem Ekolojisi 1",
+     "konu"
+    ],
+    [
+     "5RRRpQnNl1g",
+     "Ekosistem Ekolojisi 2 · Madde ve Enerji Akışı",
+     "konu"
+    ],
+    [
+     "rY_k7QpCTic",
+     "Ekosistem Ekolojisi 3 · Çevre Sorunları",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Sözcükte Anlam": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "04toVLmAjBk",
+     "Sözcükte Anlam 1",
+     "konu"
+    ],
+    [
+     "4E4j-aEPPeg",
+     "Sözcükte Anlam 2",
+     "konu"
+    ],
+    [
+     "b42fQ4fYNHY",
+     "Sözcükte Anlam 3",
+     "konu"
+    ],
+    [
+     "GvSuD20mBlc",
+     "Sözcükte Anlam 4",
+     "konu"
+    ],
+    [
+     "N60maMRfhUI",
+     "Sözcükte Anlam 5",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Söz Yorumu": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "04toVLmAjBk",
+     "Sözcükte Anlam 1",
+     "konu"
+    ],
+    [
+     "4E4j-aEPPeg",
+     "Sözcükte Anlam 2",
+     "konu"
+    ],
+    [
+     "b42fQ4fYNHY",
+     "Sözcükte Anlam 3",
+     "konu"
+    ],
+    [
+     "GvSuD20mBlc",
+     "Sözcükte Anlam 4",
+     "konu"
+    ],
+    [
+     "N60maMRfhUI",
+     "Sözcükte Anlam 5",
+     "konu"
+    ]
+   ],
+   "kontrol": "Kampta ayrı video yok; Sözcükte Anlam serisi içinde"
+  },
+  "tr|Deyimler ve Atasözleri": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "04toVLmAjBk",
+     "Sözcükte Anlam 1",
+     "konu"
+    ],
+    [
+     "4E4j-aEPPeg",
+     "Sözcükte Anlam 2",
+     "konu"
+    ],
+    [
+     "b42fQ4fYNHY",
+     "Sözcükte Anlam 3",
+     "konu"
+    ],
+    [
+     "GvSuD20mBlc",
+     "Sözcükte Anlam 4",
+     "konu"
+    ],
+    [
+     "N60maMRfhUI",
+     "Sözcükte Anlam 5",
+     "konu"
+    ]
+   ],
+   "kontrol": "Kampta ayrı video yok; Sözcükte Anlam serisi içinde"
+  },
+  "tr|Cümlede Anlam": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "ADw1AqrMnR4",
+     "Cümlede Anlam 1",
+     "konu"
+    ],
+    [
+     "gPLUCkSmeDI",
+     "Cümlede Anlam 2",
+     "konu"
+    ],
+    [
+     "bmaqAXMn3pE",
+     "Cümlede Anlam 3",
+     "konu"
+    ],
+    [
+     "Yu0LbUkoZ04",
+     "Cümlede Anlam 4",
+     "konu"
+    ],
+    [
+     "3XD3HsSfvlA",
+     "Cümlede Anlam 5",
+     "konu"
+    ],
+    [
+     "G1ho1KSR4IY",
+     "Cümlede Anlam 6",
+     "konu"
+    ],
+    [
+     "8Akzdp-21pE",
+     "Cümlede Anlam 7",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Ses Bilgisi": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "zRGGapulh30",
+     "Ses Bilgisi",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Sözcükte Yapı/Ekler": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "iDFILOYlus8",
+     "Sözcükte Yapı 1",
+     "konu"
+    ],
+    [
+     "giY3F_oSI3k",
+     "Sözcükte Yapı 2",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Sözcük Türleri": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "MJR0GAvY9wY",
+     "İsim - Sıfat",
+     "konu"
+    ],
+    [
+     "t9PXUsvpSQ0",
+     "Zamir - Zarf",
+     "konu"
+    ],
+    [
+     "dlRU9PQkwNs",
+     "Edat, Bağlaç, Ünlem, Eylem",
+     "konu"
+    ],
+    [
+     "cR1gPgPfdIk",
+     "Cümle Çeşitleri ve Sözcük Türleri Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "tr|Fiiller-Fiilimsiler-Ek Fiiller-Çatı": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "OwhjLT1PozI",
+     "Fiiller",
+     "konu"
+    ],
+    [
+     "pJrx6yIP51w",
+     "Eylemsi 1",
+     "konu"
+    ],
+    [
+     "dKPtZX9iQwY",
+     "Eylemsi 2",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Cümlenin Ögeleri": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "ze257o4HpCE",
+     "Cümlenin Ögeleri",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Cümle Türleri": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+   "parca": [
+    [
+     "MOZ6j3kQDtA",
+     "Cümle Çeşitleri",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Anlatım Bozukluğu": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "XcsUpEr0M1Q",
+     "Anlatım Bozukluğu",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Yazım Kuralları": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "Rgn1jyLv-fg",
+     "Yazım Kuralları 1",
+     "konu"
+    ],
+    [
+     "4KLzFOuf884",
+     "Yazım Kuralları 2",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Noktalama İşaretleri": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Dil Bilgisinin Ritmi Kampı 2027",
+   "parca": [
+    [
+     "OBRoj3NfvTo",
+     "Noktalama İşaretleri 1",
+     "konu"
+    ],
+    [
+     "gcfWjDnBQ84",
+     "Noktalama İşaretleri 2",
+     "konu"
+    ]
+   ]
+  },
+  "tr|Paragraf": {
+   "hoca": "Rüştü Hoca",
+   "kaynak": "Paragrafın Ritmi Kampı 2027",
+   "parca": [
+    [
+     "MzbKo_zoaS4",
+     "1. Gün · Genel Taktikler",
+     "konu"
+    ],
+    [
+     "YbKBWaMhcdg",
+     "2. Gün",
+     "konu"
+    ],
+    [
+     "iOWbrw2tpFY",
+     "3. Gün",
+     "konu"
+    ],
+    [
+     "niGOSBj-Cbo",
+     "4. Gün",
+     "konu"
+    ],
+    [
+     "V2QUqKFlQSk",
+     "5. Gün",
+     "konu"
+    ],
+    [
+     "ApbCkLDw2hU",
+     "6. Gün",
+     "konu"
+    ],
+    [
+     "l_GK7b6buNY",
+     "7. Gün",
+     "konu"
+    ],
+    [
+     "dDdpan4RhhU",
+     "9. Gün",
+     "konu"
+    ],
+    [
+     "Bzv9-UIIpvA",
+     "10. Gün",
+     "konu"
+    ],
+    [
+     "umdFcyvC3Bs",
+     "11. Gün",
+     "konu"
+    ],
+    [
+     "LDSVAvrY15o",
+     "12. Gün · 5 Büyük Hata",
+     "konu"
+    ],
+    [
+     "4Qhw3t0csBg",
+     "13. Gün · Odak Çalışmaları",
+     "konu"
+    ],
+    [
+     "RKsZkPqRUyE",
+     "14. Gün · Odak Çalışmaları 2",
+     "konu"
+    ],
+    [
+     "1xP0ybY5p2E",
+     "15. Gün",
+     "konu"
+    ],
+    [
+     "Hr6oJGsH0NE",
+     "16. Gün · Paragraf Sözlüğü",
+     "konu"
+    ],
+    [
+     "H7LQy1Rqm7w",
+     "17. Gün",
+     "konu"
+    ],
+    [
+     "RPOHXE3DjTM",
+     "18. Gün",
+     "konu"
+    ],
+    [
+     "_ULBzRzUNGQ",
+     "19. Gün",
+     "konu"
+    ],
+    [
+     "1TE_TX3YtP8",
+     "20. Gün",
+     "konu"
+    ],
+    [
+     "v4w1g2PdyzA",
+     "21. Gün · Son",
+     "konu"
+    ]
+   ]
+  },
+  "tar|TYT Tarih": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "jhWpC9WB5-M",
+     "Ders 0 · Tek videoda tüm üniteler",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Tarih ve Zaman": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "ChgR5JAg2Q4",
+     "Tarih ve Zaman",
+     "konu"
+    ]
+   ]
+  },
+  "tar|İnsanlığın İlk Dönemleri": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "87b2HgNM6kE",
+     "İnsanlığın İlk Dönemleri",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Ortaçağ’da Dünya": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "FPj8nWsE3pg",
+     "Ortaçağ’da Dünya",
+     "konu"
+    ]
+   ]
+  },
+  "tar|İlk ve Orta Çağlarda Türk Dünyası": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "ZEzpPdYVbKA",
+     "İlk ve Orta Çağlarda Türk Dünyası",
+     "konu"
+    ]
+   ]
+  },
+  "tar|İslam Medeniyetinin Doğuşu": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "HBW6U7C63es",
+     "İslam Medeniyetinin Doğuşu",
+     "konu"
+    ]
+   ]
+  },
+  "tar|İlk Türk İslam Devletleri": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "iGdsg6IeiDs",
+     "İlk Türk İslam Devletleri",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "3UW78WR8MUc",
+     "Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Beylikten Devlete Osmanlı Siyaseti(1300-1453)": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "k-89z_wSA8Y",
+     "Beylikten Devlete Osmanlı Siyaseti(1300-1453)",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Dünya Gücü Osmanlı Devleti (1453-1600)": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "ubYoI00u3XM",
+     "Dünya Gücü Osmanlı Devleti (1453-1600)",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Yeni Çağ Avrupa Tarihi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "9sIfS63rOL8",
+     "Yeni Çağ Avrupa Tarihi",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Yakın Çağ Avrupa Tarihi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "i-Fd9Ldt7D0",
+     "Yakın Çağ Avrupa Tarihi",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Osmanlı Devletinde Arayış Yılları": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "QpVLskV0bMs",
+     "Osmanlı Devletinde Arayış Yılları",
+     "konu"
+    ]
+   ]
+  },
+  "tar|18. Yüzyılda Değişim ve Diplomasi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "3qJq9DSjgew",
+     "18. Yüzyılda Değişim ve Diplomasi",
+     "konu"
+    ]
+   ]
+  },
+  "tar|En Uzun Yüzyıl": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "Rt5FIM02A5U",
+     "En Uzun Yüzyıl",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Osmanlı Kültür ve Medeniyeti": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "q1i4Bfdz96Y",
+     "Osmanlı Kültür ve Medeniyeti",
+     "konu"
+    ]
+   ]
+  },
+  "tar|20. Yüzyılda Osmanlı Devleti": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "YhX80CmrdBM",
+     "20. Yüzyılda Osmanlı Devleti",
+     "konu"
+    ]
+   ]
+  },
+  "tar|I. TBMM Dönemi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "iRIEtMDcbYY",
+     "I. TBMM Dönemi",
+     "konu"
+    ]
+   ]
+  },
+  "tar|II. TBMM Dönemi ve Çok Partili Hayata Geçiş": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "EMJklRnnObQ",
+     "II. TBMM Dönemi ve Çok Partili Hayata Geçiş",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Türk İnkılabı": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "VTerCzUfROI",
+     "Türk İnkılabı",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Atatürk İlkeleri": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "zeZTHGVHeM0",
+     "Atatürk İlkeleri",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Atatürk Dönemi Türk Dış Politikası": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "X3O90FDuGqY",
+     "Atatürk Dönemi Türk Dış Politikası",
+     "konu"
+    ]
+   ]
+  },
+  "tar|I. Dünya Savaşı": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "YhX80CmrdBM",
+     "XX. Yüzyıl Başlarında Osmanlı Devleti",
+     "konu"
+    ]
+   ],
+   "kontrol": "I. Dünya Savaşı bu dersin içinde"
+  },
+  "tar|Mondros Ateşkesi, İşgaller ve Cemiyetler": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "njRpa0jP9oM",
+     "Mondros Ateşkes Antlaşması ve Cemiyetler",
+     "konu"
+    ],
+    [
+     "tJTfgRi2SNo",
+     "Millî Mücadele Hazırlık Dönemi ve İşgaller",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Kurtuluş Savaşına Hazırlık Dönemi": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "tJTfgRi2SNo",
+     "Millî Mücadele Hazırlık Dönemi ve İşgaller",
+     "konu"
+    ]
+   ]
+  },
+  "tar|Kurtuluş Savaşı ve Antlaşmalar": {
+   "hoca": "Tarihin Kodları",
+   "kaynak": "TYT Tarih · Kodlarla Konu Anlatımı 2027 (Sadettin Akyayla)",
+   "parca": [
+    [
+     "IzgAk6HxabM",
+     "Millî Mücadele Muharebeler Dönemi",
+     "konu"
+    ],
+    [
+     "swcUCWSk2jM",
+     "Mudanya Ateşkesi ve Lozan",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Doğa ve İnsan": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "TLVVxhghVd8",
+     "Coğrafyanın Bölümleri",
+     "konu"
+    ],
+    [
+     "Zx6bArZ49Gg",
+     "Coğrafyanın Bölümleri Soru Çözümü",
+     "soru"
+    ],
+    [
+     "k7Akbo06kIw",
+     "Coğrafyanın Tarihi Gelişimi",
+     "konu"
+    ],
+    [
+     "BDTd3m9KY4E",
+     "Tarihi Gelişim Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Dünya’nın Şekli ve Hareketleri": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "Sw3mhjAh6JU",
+     "Dünya'nın Şekli ve Hareketleri",
+     "konu"
+    ],
+    [
+     "PAMkcASzhfY",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Coğrafi Konum": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "zHWck6jNyuo",
+     "Coğrafi Konum",
+     "konu"
+    ],
+    [
+     "wpAkuhAXT-4",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Harita Bilgisi": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "IChJgQdiYJ0",
+     "Harita Bilgisi",
+     "konu"
+    ],
+    [
+     "6LG3DYgiVJw",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Atmosfer ve Sıcaklık": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "JrRJFujEIJw",
+     "Atmosferin Katmanları",
+     "konu"
+    ],
+    [
+     "LMWkh7rf9QY",
+     "Atmosfer Soru Çözümü",
+     "soru"
+    ],
+    [
+     "JcKNDqwt-Vc",
+     "Sıcaklık",
+     "konu"
+    ],
+    [
+     "ckdvJ5g2nnw",
+     "Sıcaklık Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|İklimler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "IwtpdG4u96c",
+     "Büyük İklim Tipleri",
+     "konu"
+    ],
+    [
+     "oIs4EubPRjs",
+     "İklim Tipleri Soru Çözümü",
+     "soru"
+    ],
+    [
+     "9ra55hD5WA4",
+     "Türkiye İklimi",
+     "konu"
+    ],
+    [
+     "ywb5BmVQIpY",
+     "Türkiye İklimi Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Basınç ve Rüzgarlar": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "pOtroRS61nU",
+     "Basınç ve Rüzgarlar",
+     "konu"
+    ],
+    [
+     "zUu2eLxYyGk",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Nem, Yağış ve Buharlaşma": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "srSMADVxKps",
+     "Nem ve Yağış",
+     "konu"
+    ],
+    [
+     "Y2HMa_KRQXg",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|İç Kuvvetler / Dış Kuvvetler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "Dx5bq_L9UYQ",
+     "Dünyanın Tektonik Oluşumu",
+     "konu"
+    ],
+    [
+     "E7Rs_Jl5grs",
+     "Tektonik Oluşum Soru Çözümü",
+     "soru"
+    ],
+    [
+     "b-ezTmctZak",
+     "İç Kuvvetler",
+     "konu"
+    ],
+    [
+     "kmgo1byysio",
+     "İç Kuvvetler Soru Çözümü",
+     "soru"
+    ],
+    [
+     "KnsjldoMwnU",
+     "Kayaçlar",
+     "konu"
+    ],
+    [
+     "HJFwn43dx6g",
+     "Kayaçlar Soru Çözümü",
+     "soru"
+    ],
+    [
+     "cv7V9BfOtr4",
+     "Türkiye'de İç Kuvvetler",
+     "konu"
+    ],
+    [
+     "ht3Pyze8SW4",
+     "Türkiye'de İç Kuvvetler Soru Çözümü",
+     "soru"
+    ],
+    [
+     "E3Oluksc-uo",
+     "Dış Kuvvetler · Akarsular",
+     "konu"
+    ],
+    [
+     "CKHFCHec1Wk",
+     "Karstik Şekiller",
+     "konu"
+    ],
+    [
+     "VpO-OSf8hfU",
+     "Rüzgar ve Buzul",
+     "konu"
+    ],
+    [
+     "wrpp0gU5o5o",
+     "Dalga ve Akıntılar, Kıyı Tipleri",
+     "konu"
+    ],
+    [
+     "4viJ7ANXylk",
+     "Türkiye'de Dış Kuvvetler",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Su – Toprak ve Bitkiler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "_oPDRQcj9TU",
+     "Dünya'da Sular",
+     "konu"
+    ],
+    [
+     "Um_6dyI7yaQ",
+     "Türkiye'de Sular",
+     "konu"
+    ],
+    [
+     "bw3uotgwtM8",
+     "Dünya'da Topraklar",
+     "konu"
+    ],
+    [
+     "P93G0P0xbgg",
+     "Türkiye'de Topraklar",
+     "konu"
+    ],
+    [
+     "5Ta4wvgpNE8",
+     "Dünya'da Bitkiler",
+     "konu"
+    ],
+    [
+     "KVZS7h0CHBc",
+     "Türkiye'de Bitkiler",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Nüfus": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "jf_8fVa0CRQ",
+     "Nüfusun Önemi ve Özellikleri",
+     "konu"
+    ],
+    [
+     "JbU5gnJw5U8",
+     "Dünya'da Nüfusun Dağılışı",
+     "konu"
+    ],
+    [
+     "U22oGb3dJL8",
+     "Nüfus Piramitleri",
+     "konu"
+    ],
+    [
+     "myXhBHoMvjw",
+     "Türkiye'de Nüfus",
+     "konu"
+    ],
+    [
+     "hOm8kalqImA",
+     "Türkiye'de Nüfus Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Göç": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "BHolf82LVxc",
+     "Dünya ve Türkiye'de Göçler",
+     "konu"
+    ],
+    [
+     "kSMrXNjRCDg",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Yerleşme": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "o0tT35Vd8Zo",
+     "Dünya'da Yerleşmeler",
+     "konu"
+    ],
+    [
+     "ojhybvYpBhY",
+     "Türkiye'de Yerleşmeler",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Türkiye’nin Yer Şekilleri": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "t0_oJ7FshqI",
+     "Türkiye'nin Yer Şekilleri",
+     "konu"
+    ],
+    [
+     "kkAM9bnL5gk",
+     "Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "cog|Ekonomik Faaliyetler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "j6CVJ7C5Ywk",
+     "Ekonomik Faaliyetler",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Bölgeler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "4Zk6KrzT33U",
+     "Bölge ve Bölge Türleri",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Uluslararası Ulaşım Hatları": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "ZMbmy-GekAM",
+     "Ulaşım",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Çevre ve Toplum": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "yPwfZyXlOy0",
+     "Çevre ve Toplum",
+     "konu"
+    ]
+   ]
+  },
+  "cog|Doğal Afetler": {
+   "hoca": "Coğrafyanın Kodları",
+   "kaynak": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+   "parca": [
+    [
+     "UGsM0-wcvLU",
+     "Afetler",
+     "konu"
+    ],
+    [
+     "bG9OPsE4nqU",
+     "Afetler Soru Çözümü",
+     "soru"
+    ]
+   ]
+  },
+  "fel|Felsefenin Konusu": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "jzsL2q8qVak",
+     "Felsefeyi Tanıma ve Felsefe ile Düşünme",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Varlık Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "hh2xzwJUJU8",
+     "Varlık ve Bilgi Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Bilgi Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "hh2xzwJUJU8",
+     "Varlık ve Bilgi Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Bilim Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "DGbgFNRNxz4",
+     "Bilim ve Ahlak Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Ahlak Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "DGbgFNRNxz4",
+     "Bilim ve Ahlak Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Din Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "mepU1SduBxI",
+     "Din, Siyaset ve Sanat Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Siyaset Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "mepU1SduBxI",
+     "Din, Siyaset ve Sanat Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fel|Sanat Felsefesi": {
+   "hoca": "Felsefe Atölyesi",
+   "kaynak": "7 Günde TYT Felsefe Kampı 2027",
+   "parca": [
+    [
+     "mepU1SduBxI",
+     "Din, Siyaset ve Sanat Felsefesi",
+     "konu"
+    ]
+   ]
+  },
+  "fiz|Fizik Bilimine Giriş": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "1Hg2eF907YA",
+     "Fizik Bilimine Giriş 1 · Fiziğin Alt Dalları",
+     "konu",
+     28
+    ],
+    [
+     "7aVrdQ7uSQ4",
+     "Fizik Bilimine Giriş 2 · Fiziksel Büyüklükler",
+     "konu",
+     28
+    ],
+    [
+     "PyTaVJVi21c",
+     "Fizik Bilimine Giriş Soru Çözümü",
+     "soru",
+     28
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Madde ve Özellikleri": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "Mhgsu-3ZLNA",
+     "Kütle ve Hacim",
+     "konu",
+     30
+    ],
+    [
+     "tv64WNuMGn8",
+     "Özkütle",
+     "konu",
+     25
+    ],
+    [
+     "OSpkdUAQ41o",
+     "Karışımların Özkütlesi",
+     "konu",
+     22
+    ],
+    [
+     "H0HZrc9-I04",
+     "Soru Çözümü 1",
+     "soru",
+     27
+    ],
+    [
+     "UrMwq39KF2c",
+     "Dayanıklılık",
+     "konu",
+     24
+    ],
+    [
+     "Wh0MdHIOWHM",
+     "Adezyon ve Kohezyon",
+     "konu",
+     33
+    ],
+    [
+     "dhSEXueJg40",
+     "Soru Çözümü 2",
+     "soru",
+     32
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Hareket ve Kuvvet": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "Qp211SqOGJ4",
+     "Hareket 1 · Temel Kavramlar",
+     "konu",
+     37
+    ],
+    [
+     "C2lKjxiLnkE",
+     "Hareket 2 · Düzgün Doğrusal Hareket",
+     "konu",
+     32
+    ],
+    [
+     "Cl43P5zbPeo",
+     "Hareket 3 · İvme",
+     "konu",
+     30
+    ],
+    [
+     "w8PKMoRcjI4",
+     "Hareket Soru Çözümü 1",
+     "soru",
+     27
+    ],
+    [
+     "EDbz2IbEc44",
+     "Hareket Soru Çözümü 2",
+     "soru",
+     20
+    ],
+    [
+     "VwxSW7Rmr2U",
+     "Kuvvet 1 · Temel Kuvvetler ve Bileşke",
+     "konu",
+     24
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Dinamik": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "8pWbsm5Fz9U",
+     "Kuvvet 2 · Newton'ın Hareket Yasaları",
+     "konu",
+     37
+    ],
+    [
+     "DjqPL2eMzVM",
+     "Kuvvet 3 · Newton'ın Hareket Yasaları",
+     "konu",
+     26
+    ],
+    [
+     "-t8AXflQcVU",
+     "Kuvvet 4 · Sürtünme Kuvveti",
+     "konu",
+     30
+    ],
+    [
+     "1NGTT1X4lnA",
+     "Kuvvet Soru Çözümü 1",
+     "soru",
+     22
+    ],
+    [
+     "BhN4puabxW8",
+     "Kuvvet Soru Çözümü 2",
+     "soru",
+     26
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|İş, Güç ve Enerji": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "D07mKe56Eis",
+     "İş Kavramı",
+     "konu",
+     29
+    ],
+    [
+     "WXs6nUyVJ28",
+     "Mekanik Enerji",
+     "konu",
+     31
+    ],
+    [
+     "Bidoa76lgEk",
+     "Enerjinin Korunumu ve Güç",
+     "konu",
+     32
+    ],
+    [
+     "gK_GV4z-OjU",
+     "Verim ve Enerji Kaynakları",
+     "konu",
+     23
+    ],
+    [
+     "0vA8I1D3yq0",
+     "Soru Çözümü 1",
+     "soru",
+     24
+    ],
+    [
+     "LOpwAg5w_d8",
+     "Soru Çözümü 2",
+     "soru",
+     21
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Isı, Sıcaklık ve Genleşme": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "kGrdvkxHxjA",
+     "İç Enerji, Sıcaklık, Isı",
+     "konu",
+     31
+    ],
+    [
+     "7HIjhLRs-Dc",
+     "Sıcaklık Ölçekleri",
+     "konu",
+     15
+    ],
+    [
+     "VhqHkBN6xMQ",
+     "Öz Isı ve Isı Sığası",
+     "konu",
+     29
+    ],
+    [
+     "3pRu3T0Q03U",
+     "Hal Değişimi",
+     "konu",
+     41
+    ],
+    [
+     "2-aHeYUXvCI",
+     "Isıl Denge",
+     "konu",
+     32
+    ],
+    [
+     "CRg4b_g1IXc",
+     "Enerji İletim Yolları ve Hızı",
+     "konu",
+     32
+    ],
+    [
+     "XRHERBB3kI0",
+     "Isı ve Sıcaklık Soru Çözümü 1",
+     "soru",
+     25
+    ],
+    [
+     "L3W9YVviHrU",
+     "Isı ve Sıcaklık Soru Çözümü 2",
+     "soru",
+     23
+    ],
+    [
+     "brzhvf6-L_I",
+     "Genleşme 1",
+     "konu",
+     23
+    ],
+    [
+     "iOkBQ3GBVk8",
+     "Genleşme 2",
+     "konu",
+     22
+    ],
+    [
+     "YJJfmAinEhI",
+     "Genleşme Soru Çözümü",
+     "soru",
+     31
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Elektrik": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "jLdxW888qsg",
+     "Elektrostatik 1 · Elektrik Yükleri",
+     "konu",
+     20
+    ],
+    [
+     "xieg5ohrPGs",
+     "Elektrostatik 2 · Elektriklenme Çeşitleri",
+     "konu",
+     37
+    ],
+    [
+     "NqzDtAGqbQY",
+     "Elektrostatik 3 · Elektroskop",
+     "konu",
+     28
+    ],
+    [
+     "AL7H47SY968",
+     "Elektrostatik 4 · İletken ve Yalıtkanlar",
+     "konu",
+     29
+    ],
+    [
+     "qb2_VWVm_oQ",
+     "Elektrostatik 5 · Coulomb Kuvveti",
+     "konu",
+     19
+    ],
+    [
+     "u2Y616NLBBs",
+     "Elektrostatik 6 · Elektrik Alan",
+     "konu",
+     23
+    ],
+    [
+     "6jbPjwbPXls",
+     "Elektrostatik Soru Çözümü 1",
+     "soru",
+     27
+    ],
+    [
+     "VKrJ1GJX0zE",
+     "Elektrostatik Soru Çözümü 2",
+     "soru",
+     23
+    ],
+    [
+     "eFizWwjLopQ",
+     "Elektrik Akımı ve Potansiyel Fark",
+     "konu",
+     38
+    ],
+    [
+     "Tap34nISlqg",
+     "Direnç",
+     "konu",
+     25
+    ],
+    [
+     "uq9Q7seOe28",
+     "Ohm Yasası",
+     "konu",
+     42
+    ],
+    [
+     "urZkI2qOtYo",
+     "Dirençlerin Bağlanması",
+     "konu",
+     38
+    ],
+    [
+     "MjctdUFHILE",
+     "Üreteçlerin Bağlanması",
+     "konu",
+     29
+    ],
+    [
+     "9CbekU-8WwQ",
+     "Elektrik Devreleri Soru Çözümü 1",
+     "soru",
+     19
+    ],
+    [
+     "RwsGiXMimEw",
+     "Elektrik Devreleri Soru Çözümü 2",
+     "soru",
+     18
+    ],
+    [
+     "zN7DKUvyqzA",
+     "Elektriksel Güç ve Lambalar",
+     "konu",
+     38
+    ],
+    [
+     "Y8cJuEqETI0",
+     "Elektriksel Güç Soru Çözümü 1",
+     "soru",
+     24
+    ],
+    [
+     "cbqBhmByflM",
+     "Elektriksel Güç Soru Çözümü 2",
+     "soru",
+     18
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Manyetizma": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "p6zLfL59v8Y",
+     "Mıknatıs ve Manyetik Alan",
+     "konu",
+     34
+    ],
+    [
+     "57NKxjQkOoU",
+     "Akım ve Manyetik Alan",
+     "konu",
+     35
+    ],
+    [
+     "WT5V4wGrSBM",
+     "Elektromıknatıs",
+     "konu",
+     22
+    ],
+    [
+     "aMpvY7w8rK4",
+     "Dünya'nın Manyetik Alanı",
+     "konu",
+     14
+    ],
+    [
+     "9k17_RBIXeg",
+     "Soru Çözümü 1",
+     "soru",
+     31
+    ],
+    [
+     "OOZ-NFlWebY",
+     "Soru Çözümü 2",
+     "soru",
+     21
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Basınç": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "DnQNBoR_Dsw",
+     "Katı Basıncı",
+     "konu",
+     29
+    ],
+    [
+     "5Hr5osikAlk",
+     "Katı Basıncı Soru Çözümü",
+     "soru",
+     20
+    ],
+    [
+     "dkwbOGhBedc",
+     "Sıvı Basıncı 1",
+     "konu",
+     26
+    ],
+    [
+     "8XFD833ngJc",
+     "Sıvı Basıncı 2",
+     "konu",
+     23
+    ],
+    [
+     "jOKADXphfC8",
+     "Sıvı Basıncı 3",
+     "konu",
+     29
+    ],
+    [
+     "bYnkDV0LJ5o",
+     "Açık Hava Basıncı",
+     "konu",
+     32
+    ],
+    [
+     "8EvdMuWG6kU",
+     "Kapalı Kaplarda Gaz Basıncı",
+     "konu",
+     29
+    ],
+    [
+     "pduzOUiY1uM",
+     "Basınç Ölçen Aletler",
+     "konu",
+     27
+    ],
+    [
+     "1Q3CtzfV1lQ",
+     "Akışkanların Basıncı",
+     "konu",
+     26
+    ],
+    [
+     "PQM2gVZrgS4",
+     "Durgun Sıvı ve Akışkan Basıncı Soru Çözümü 1",
+     "soru",
+     26
+    ],
+    [
+     "2Y3BQddhguA",
+     "Durgun Sıvı ve Akışkan Basıncı Soru Çözümü 2",
+     "soru",
+     16
+    ],
+    [
+     "PmJmQpttSnY",
+     "Gaz Basıncı Soru Çözümü 1",
+     "soru",
+     22
+    ],
+    [
+     "iUDFx-qjjeM",
+     "Gaz Basıncı Soru Çözümü 2",
+     "soru",
+     23
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Sıvıların Kaldırma Kuvveti": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "XQHH2VV1Bbk",
+     "Kaldırma Kuvveti 1",
+     "konu",
+     34
+    ],
+    [
+     "IX2LZ_CYJQI",
+     "Kaldırma Kuvveti 2",
+     "konu",
+     34
+    ],
+    [
+     "EkNxYWi-uKM",
+     "Soru Çözümü 1",
+     "soru",
+     31
+    ],
+    [
+     "-uyoBz_bC4I",
+     "Soru Çözümü 2",
+     "soru",
+     28
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Optik": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "1O3Q5X8mleQ",
+     "Işık Şiddeti ve Işık Akısı",
+     "konu",
+     24
+    ],
+    [
+     "T9g5QdOr8Mo",
+     "Aydınlanma Şiddeti",
+     "konu",
+     24
+    ],
+    [
+     "ceSzQEruRxQ",
+     "Aydınlanma Soru Çözümü",
+     "soru",
+     24
+    ],
+    [
+     "dd-BhlkKSuU",
+     "Gölge 1",
+     "konu",
+     26
+    ],
+    [
+     "9hgQWVXqn6s",
+     "Gölge 2",
+     "konu",
+     30
+    ],
+    [
+     "0XJt3FaWS5M",
+     "Gölge Soru Çözümü",
+     "soru",
+     21
+    ],
+    [
+     "ixgV1NTdISQ",
+     "Yansıma ve Yansıma Kanunları",
+     "konu",
+     34
+    ],
+    [
+     "6Ol1f4UKsnM",
+     "Düzlem Ayna 1",
+     "konu",
+     36
+    ],
+    [
+     "Niuye4Sxiio",
+     "Görüş Alanı · Düzlem Ayna 2",
+     "konu",
+     22
+    ],
+    [
+     "PuGnerpUo14",
+     "Düzlem Ayna Soru Çözümü",
+     "soru",
+     27
+    ],
+    [
+     "9Qv8MXWL4yc",
+     "Çukur Aynada Özel Işınlar",
+     "konu",
+     31
+    ],
+    [
+     "jczDv1QHAic",
+     "Tümsek Aynada Özel Işınlar",
+     "konu",
+     14
+    ],
+    [
+     "JK8l1zMiw0g",
+     "Çukur Aynada Görüntü",
+     "konu",
+     39
+    ],
+    [
+     "W8H3bTK4JxE",
+     "Tümsek Aynada Görüntü",
+     "konu",
+     19
+    ],
+    [
+     "Xn-W093iEGA",
+     "Küresel Aynalar Soru Çözümü",
+     "soru",
+     26
+    ],
+    [
+     "HBGioahDgyA",
+     "Kırılma İndisi, Snell Yasası",
+     "konu",
+     33
+    ],
+    [
+     "ffttO_LOmR8",
+     "Sınır Açısı ve Tam Yansıma",
+     "konu",
+     39
+    ],
+    [
+     "DfDdkMfeUIo",
+     "Küresel Yüzeylerden Geçiş ve Görünür Uzaklık",
+     "konu",
+     25
+    ],
+    [
+     "LrekDijm8Qc",
+     "Işığın Kırılması Soru Çözümü",
+     "soru",
+     33
+    ],
+    [
+     "7UGITYRh8ds",
+     "Mercekler ve Odak Uzaklığı",
+     "konu",
+     33
+    ],
+    [
+     "APT59L7PrxQ",
+     "Merceklerde Özel Işınlar",
+     "konu",
+     23
+    ],
+    [
+     "Kb1V3qLPO8U",
+     "Merceklerde Görüntü",
+     "konu",
+     40
+    ],
+    [
+     "EkaOHdAYKzI",
+     "Mercekler Soru Çözümü",
+     "soru",
+     31
+    ],
+    [
+     "gSmX1oqE7sg",
+     "Prizmalar",
+     "konu",
+     33
+    ],
+    [
+     "gFXIw6RN7cg",
+     "Renkler",
+     "konu",
+     40
+    ],
+    [
+     "S6wH6_nZoEs",
+     "Prizma ve Renkler Soru Çözümü",
+     "soru",
+     24
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  },
+  "fiz|Dalgalar": {
+   "hoca": "Özcan Aykın",
+   "parca": [
+    [
+     "p13oQVkAzR0",
+     "Dalgalar 1 · Temel Kavramlar",
+     "konu",
+     34
+    ],
+    [
+     "1QpDnuEAm2s",
+     "Dalgalar 2 · Sınıflandırma",
+     "konu",
+     28
+    ],
+    [
+     "bRbvtVB4ZDc",
+     "Yay Dalgaları 1",
+     "konu",
+     38
+    ],
+    [
+     "IvCvvEQeGrg",
+     "Yay Dalgaları 2",
+     "konu",
+     38
+    ],
+    [
+     "sPS084MAn88",
+     "Yay Dalgaları 3",
+     "konu",
+     32
+    ],
+    [
+     "o4QOA4JWjqo",
+     "Yay Dalgaları Soru Çözümü",
+     "soru",
+     27
+    ],
+    [
+     "W2kxJOz57Bc",
+     "Su Dalgası 1",
+     "konu",
+     21
+    ],
+    [
+     "HXTKAnIUe1c",
+     "Su Dalgası 2",
+     "konu",
+     31
+    ],
+    [
+     "rvcpdc5-v9w",
+     "Su Dalgası 3",
+     "konu",
+     16
+    ],
+    [
+     "85SvEQsvJgM",
+     "Su Dalgası 4",
+     "konu",
+     40
+    ],
+    [
+     "KAmjPBtPfMk",
+     "Su Dalgaları Soru Çözümü",
+     "soru",
+     37
+    ],
+    [
+     "CJh-XzyR6Dg",
+     "Ses ve Deprem Dalgaları",
+     "konu",
+     44
+    ],
+    [
+     "VMGG-hcx5JM",
+     "Ses ve Deprem Dalgaları Soru Çözümü",
+     "soru",
+     22
+    ]
+   ],
+   "kaynak": "2027 - 55 Günde TYT Fizik Kampı"
+  }
+ }
 }
