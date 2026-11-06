@@ -1378,6 +1378,44 @@ body.dersacik{overflow:hidden}
 @keyframes dalga{to{transform:scale(2.4);opacity:0}}
 .og4 button:active,.kis button:active,.oyd:active,.vdc button:active,.bksik button:active{transform:scale(.94);transition:transform .08s ease-out}
 .og4 button,.kis button,.oyd,.vdc button,.bksik button{transition:transform .32s cubic-bezier(.34,1.56,.64,1),background-color .15s,border-color .15s}
+
+/* Öğrenme Merkezi — uygulamanın tasarım diliyle (sade yüzeyler, tek vurgu rengi, SVG ikonlar) */
+.og4 button{background:var(--surface)!important;color:var(--fg);border:1px solid var(--line);box-shadow:var(--shadow);padding:14px 6px 12px;gap:8px;font-size:12.5px}
+.og4 span{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:0;filter:none}
+.og4 span svg{width:22px;height:22px}
+.og4a span{background:var(--acs);color:var(--ac)}
+.og4b span{background:color-mix(in srgb,var(--c-mat) 14%,transparent);color:var(--c-mat)}
+.og4c span{background:color-mix(in srgb,var(--c-sos) 14%,transparent);color:var(--c-sos)}
+.og4d span{background:var(--warns);color:var(--warn)}
+.oghero{background:linear-gradient(135deg,var(--ac),var(--ac2));box-shadow:var(--shadow);border-radius:var(--r)}
+.oghero::after{background:rgba(255,255,255,.07)}
+.ohc span{display:inline-flex;align-items:center;gap:5px}
+.ohc svg.i{width:13px;height:13px}
+.sech h3{display:flex;align-items:center;gap:8px}
+.sech h3 svg.i{width:20px;height:20px;color:var(--ac)}
+.drz{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font:800 12px/1 var(--font);letter-spacing:.02em;color:var(--dc);background:color-mix(in srgb,var(--dc) 13%,transparent)}
+.bgg{border-left-width:1px;border-left-color:var(--line);box-shadow:none;background:var(--surface)}
+.bggd{color:var(--muted);text-transform:none;letter-spacing:0;font-weight:600;font-size:12px}
+.bgg.bitti .bggd{color:var(--good);font-weight:700}
+.bggk{background:var(--sunk)}
+.kk2.bos{color:var(--faint);background:var(--surface)}
+.kis button,.kis span.yok{display:inline-flex;align-items:center;gap:5px;border-radius:10px;padding:8px 12px;font:700 13px/1 var(--font)}
+.kis svg.i{width:14px;height:14px}
+.kis .kdin{background:var(--acs)!important;border-color:transparent!important;color:var(--ac)!important}
+.kis .kcoz{background:var(--ac)!important;border-color:var(--ac)!important;color:var(--acfg)!important}
+.hk{border-top:1px solid var(--line);border-radius:var(--r)}
+.hkk{border-radius:14px}
+.hkd{background:rgba(255,255,255,.92);color:var(--dc);font-weight:800}
+.hks{background:rgba(255,255,255,.92);color:var(--muted)}
+.hks.devam{color:var(--warn)}.hks.tamam{color:var(--good)}
+.row .ri.kotu{background:var(--bads);color:var(--bad)}
+.ogarac button span{width:36px;height:36px;border-radius:12px;background:var(--sunk);display:grid;place-items:center;font-size:0;color:var(--fg);margin-bottom:6px}
+.ogarac button span svg{width:19px;height:19px}
+.card.note .av svg{width:20px;height:20px}
+@media (prefers-color-scheme: dark){ :root:not(.m-light) .hkd,:root:not(.m-light) .hks{background:rgba(10,11,14,.85)} }
+:root.m-dark .hkd,:root.m-dark .hks{background:rgba(10,11,14,.85)}
+
+.dvm small{color:var(--ac)}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
