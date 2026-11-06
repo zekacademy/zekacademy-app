@@ -1,0 +1,591 @@
+{
+ "konu": "Sayı Kümeleri",
+ "surum": "1 (6 Kasım 2026)",
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 + Bilgi Sarmal, 3D, Mert Hoca, 345 SB, 345 Deneme, Orijinal Deneme. 345 SB okutması tamamlanınca kartlar güncellenecek.",
+ "kartlar": [
+  {
+   "id": "K-SK-01",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Yeni bir sayı türü tanımlanır (rakamlar arası ilişki); tanıma uyan sayılar sayılır ya da harfli sayıların rakamları bulunur.",
+   "tuzak": "Örnekteki sayıyı genelleme, 0 rakamını unutma, aynı rakamlardan farklı sıralamaları saymama.",
+   "zorluk": "orta-zor",
+   "seviye": "ÖSYM",
+   "kalip": "yeni nesil",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2018, 2022, 2024, 2025 · Mert (kuvvetli sayı, dört basamaklı tanım) · 345 Deneme (ortancalı sayı)",
+   "uretimde_degisebilir": "tanımın kuralı, basamak sayısı, istenen (adet / rakam toplamı / öncül)"
+  },
+  {
+   "id": "K-SK-02",
+   "konu": "Sayı Kümeleri",
+   "alt": "Tek-çift",
+   "fikir": "İki-üç tek/çift koşulundan harflerin paritesi bulunur; öncüllerde “her zaman” tek/çift olan ifade seçilir.",
+   "tuzak": "“Olabilir” ile “her zaman”ı karıştırma; çarpımda tek çift çarpanın her şeyi çift yaptığını unutma.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "öncüllü",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2018, 2020, 2022, 2025 · Bilgi Sarmal ÖSYM Tipi · Mert tek-çift testleri",
+   "uretimde_degisebilir": "koşul ifadeleri (çarpım/toplam/kesirli), öncüller, harf sayısı, hikâye (sınıf, kasa)"
+  },
+  {
+   "id": "K-SK-03",
+   "konu": "Sayı Kümeleri",
+   "alt": "Ondalık sayılar",
+   "fikir": "Bir uzunluk iki farklı sayıda eşit parçaya bölünür; iki işaretin konumu karşılaştırılır.",
+   "tuzak": "Uçlar dahil dizilimde aralık sayısını nesne sayısı sanmak.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2022 (çekmece, kemer), 2023 (raf), 2026",
+   "uretimde_degisebilir": "nesne (direk, raf, delik), bölme sayıları; temiz ondalık sonuç"
+  },
+  {
+   "id": "K-SK-04",
+   "konu": "Sayı Kümeleri",
+   "alt": "Sayı doğrusu",
+   "fikir": "Eşit bölmeli göstergede iki etiketten bir bölmenin değeri bulunup ibre okunur.",
+   "tuzak": "Bölme yerine çizgi saymak; negatif bölgede yön hatası.",
+   "zorluk": "kolay",
+   "seviye": "ÖSYM",
+   "kalip": "şekilli",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2020 (radyo), 2024 (termometre) · 345 SB (MSÜ termometre farkı)",
+   "uretimde_degisebilir": "gösterge türü, ölçek (ondalık/negatif), iki göstergenin farkı"
+  },
+  {
+   "id": "K-SK-05",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "Verilen sayılar kutulara bir kez yerleştirilip eşitlikler sağlanır; kalan sayı ya da sonuç sorulur.",
+   "tuzak": "En kısıtlı eşitlikten başlamamak; birden çok yerleşim olup olmadığını kontrol etmemek.",
+   "zorluk": "orta-zor",
+   "seviye": "ÖSYM",
+   "kalip": "yeni nesil",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": "çözüm tekliği kodla taranmalı",
+   "kaynak": "ÖSYM 2019, 2020, 2022 · Bilgi Sarmal · Mert (rakamlar toplamı en az/en çok)",
+   "uretimde_degisebilir": "sayı kümesi, işlemler, istenen (kalan / toplam en az / olamaz)"
+  },
+  {
+   "id": "K-SK-06",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "AB ve BA (veya yer değiştiren rakamlar) toplam/fark ile verilir; 11 ve 9 katları kullanılır.",
+   "tuzak": "AB’yi A·B sanmak; fark 9(A−B) değil 10(A−B) almak.",
+   "zorluk": "kolay-orta",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2024 (tombala) · Orijinal (okul no ab/ba) · Mert",
+   "uretimde_degisebilir": "bağlam (şifre, bilet, kart), toplam+fark, üç basamaklı uzantı"
+  },
+  {
+   "id": "K-SK-07",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "Sembolle tanımlı bir işlem (rakam toplamı/çarpımı, kesir tam kısmı vb.) iç içe ya da ters yönde kullanılır.",
+   "tuzak": "Sadece bir koşulu kontrol edip şıkkı işaretlemek.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "yeni nesil",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": "şıkların bir kısmı ilk koşulu sağlamalı (iyi çeldirici)",
+   "kaynak": "ÖSYM 2018, 2019, 2023 · Orijinal Deneme · Mert (∗ işlemi)",
+   "uretimde_degisebilir": "sembol kuralı, iç içe kullanım, ters soru (sonuçtan sayıyı bul)"
+  },
+  {
+   "id": "K-SK-08",
+   "konu": "Sayı Kümeleri",
+   "alt": "Ardışık sayılar",
+   "fikir": "Ardışık tek/çift sayıların toplamı başka bir ifadeye eşitlenir.",
+   "tuzak": "En küçüğü bulup durmak (soru en büyüğü sorar).",
+   "zorluk": "kolay",
+   "seviye": "3D",
+   "kalip": "düz",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "3D ardışık sayılar · Bilgi Sarmal kazanım",
+   "uretimde_degisebilir": "sayı adedi, tek/çift, eşitlenen ifade, istenen terim"
+  },
+  {
+   "id": "K-SK-09",
+   "konu": "Sayı Kümeleri",
+   "alt": "Rasyonel sayılar",
+   "fikir": "Birkaç kesir eşiği verilir; kaç ifadenin doğru/yanlış olduğu bilgisiyle sayı seçilir.",
+   "tuzak": "Kesirleri ortak paydaya getirmeden sezgiyle sıralamak.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2022, 2026",
+   "uretimde_degisebilir": "eşik kesirleri, doğru/yanlış sayısı, hikâye; şıklar aynı paydalı ve sıralı"
+  },
+  {
+   "id": "K-SK-10",
+   "konu": "Sayı Kümeleri",
+   "alt": "Rasyonel sayılar",
+   "fikir": "Bütün eş parçalara, parçalar yeniden parçalara bölünür; parçanın bütüne oranı sorulur.",
+   "tuzak": "Ara bilgiyi (kaç dilim alındı) sonuca katmak.",
+   "zorluk": "kolay",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2018 (pasta), 2021 (tartı), 2022 (etiketli tablo), 2025 (tablet ekranı)",
+   "uretimde_degisebilir": "nesne, bölme aşamaları, görünmeyen kısım"
+  },
+  {
+   "id": "K-SK-11",
+   "konu": "Sayı Kümeleri",
+   "alt": "Ondalık sayılar",
+   "fikir": "Günlük alışverişte ondalık birim fiyat × miktar; para üstü veya fark.",
+   "tuzak": "Virgül kaydırma hatası.",
+   "zorluk": "kolay",
+   "seviye": "ÖSYM",
+   "kalip": "tablo",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2021 (kasa ekranı), 2026 (lale sapları) · Bilgi Sarmal",
+   "uretimde_degisebilir": "ürünler, miktarlar (kg, adet), istenen (para üstü / fark)"
+  },
+  {
+   "id": "K-SK-12",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "Durumlar sabit bir sırayla tekrar eder; tam turlar atılıp kalanla çalışılır.",
+   "tuzak": "Kalan 0 durumunu son durum yerine ilk durum saymak.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2023 (lamba ipi; 345 ve Bilgi Sarmal’da tekrar basılmış)",
+   "uretimde_degisebilir": "bağlam (lamba, trafik ışığı, nöbet), periyot uzunluğu, ters soru (kaç kez çekildi)"
+  },
+  {
+   "id": "K-SK-13",
+   "konu": "Sayı Kümeleri",
+   "alt": "Örüntü",
+   "fikir": "Her adımda nesne sayısı katlanır; tek/çift adımlarda farklı durum (açık/kapalı) → iki grubun farkından adım sayısı bulunur.",
+   "tuzak": "Farkı alternatif toplam olarak kurmamak; ilk adımı yanlış saymak.",
+   "zorluk": "zor",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "şekilli",
+   "adim": [
+    4,
+    5
+   ],
+   "ozel_sayi": "fark 2’nin kuvvetleriyle temiz çıkmalı",
+   "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (şemsiye örüntüsü)",
+   "uretimde_degisebilir": "çarpan (2, 3), durum türü (renk, açık/kapalı), istenen fark"
+  },
+  {
+   "id": "K-SK-14",
+   "konu": "Sayı Kümeleri",
+   "alt": "Tek-çift",
+   "fikir": "Bir mesafe iki farklı adım boyuyla (ör. 2’şer ve 3’er) tamamlanır; adım sayılarının paritesi öncüllerle sorulur.",
+   "tuzak": "Tek bir çözümü bulup “kesinlikle” demek; tüm çözümleri taramamak.",
+   "zorluk": "orta-zor",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "öncüllü",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": "tüm (x, y) çözümleri kodla taranmalı",
+   "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (merdiven)",
+   "uretimde_degisebilir": "mesafe, adım boyları, öncüller"
+  },
+  {
+   "id": "K-SK-15",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "Sınırlı tuş/kart (belli rakamlar, belli işlemler) ile elde edilebilecek sonuçlar öncüllerle sorulur.",
+   "tuzak": "İşlem önceliğini unutmak; “olabilir” için tek örneğin yettiğini görmemek.",
+   "zorluk": "orta-zor",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "öncüllü",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": "öncül başına kodla erişilebilirlik taraması",
+   "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (özel hesap makinesi)",
+   "uretimde_degisebilir": "tuş kümesi, işlem sayısı, öncül değerler"
+  },
+  {
+   "id": "K-SK-16",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "İki sembolün yerine dört işlemden farklı ikisi konur; verilen eşitliklerden semboller bulunup yeni ifade hesaplanır.",
+   "tuzak": "İşlem önceliğini atlamak.",
+   "zorluk": "orta",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "yeni nesil",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 · Orijinal Deneme 7",
+   "uretimde_degisebilir": "sembol sayısı, eşitlikler, işlem önceliği"
+  },
+  {
+   "id": "K-SK-17",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Harfli iki/üç basamaklı sayılar arasında eşitsizlik; rakamlar toplamının en az/en çok değeri.",
+   "tuzak": "Rakamların farklı ve sıfırdan farklı koşulunu atlamak.",
+   "zorluk": "zor",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "düz",
+   "adim": [
+    4
+   ],
+   "ozel_sayi": "kodla tarama zorunlu",
+   "kaynak": "Bilgi Sarmal ÖSYM Tipi-5 (ÖSYM 2023 tabanlı) · Mert",
+   "uretimde_degisebilir": "eşitsizlik yönü, basamak yapısı, en az/en çok"
+  },
+  {
+   "id": "K-SK-18",
+   "konu": "Sayı Kümeleri",
+   "alt": "Temel işlemler",
+   "fikir": "Kutulara atılan kartların toplamları eşit; bazı kartlar aynı, ek koşullar var; toplam en az/en çok.",
+   "tuzak": "Ek koşulu (aynı kart en büyük/en küçük olamaz) unutmak.",
+   "zorluk": "zor",
+   "seviye": "Mert",
+   "kalip": "yeni nesil",
+   "adim": [
+    4,
+    5
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Temel Tanım (kart-kutu)",
+   "uretimde_degisebilir": "kutu sayısı, kart sayısı, ek koşul, en az/en çok"
+  },
+  {
+   "id": "K-SK-19",
+   "konu": "Sayı Kümeleri",
+   "alt": "Ardışık sayılar",
+   "fikir": "Kişilerin yazdığı sayılar ardışık çift/tek ve aralarında kat ilişkisi; toplam sınırıyla bir kişinin sayısı en çok/en az.",
+   "tuzak": "Sınır eşitliğini (≤) kaçırmak; iki basamaklı koşulunu unutmak.",
+   "zorluk": "zor",
+   "seviye": "Mert",
+   "kalip": "hikâyeli",
+   "adim": [
+    4
+   ],
+   "ozel_sayi": "kodla tarama",
+   "kaynak": "Mert Temel Tanım (dört kişinin sayıları)",
+   "uretimde_degisebilir": "kişi sayısı, ilişkiler, sınır"
+  },
+  {
+   "id": "K-SK-20",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Üç basamaklı sayının rakamları yer değiştirince sayı belli miktar artar; rakamlar bulunur.",
+   "tuzak": "Artışı yanlış basamağa yazmak (9’un katı olduğunu görmemek).",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "düz",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Sayı Basamakları",
+   "uretimde_degisebilir": "değişen basamaklar, artış miktarı, bilinen rakam"
+  },
+  {
+   "id": "K-SK-21",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Bir sayıya uygulanan işlem zinciri (9 ile çarp, rakamlarını topla) tanımlanır; öncüllerde hangi sayıların sonucu belli değer verir.",
+   "tuzak": "9 ile bölünebilme ilişkisini görmeyip tek tek hesaplamak.",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "öncüllü",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Sayı Basamakları (öz sayı)",
+   "uretimde_degisebilir": "çarpan (9, 11), adım sayısı, öncül sayılar"
+  },
+  {
+   "id": "K-SK-22",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Bir rakam kümesinden üç ve iki basamaklı sayılar yazılır; farkın en büyük ve en küçük değerleri karşılaştırılır.",
+   "tuzak": "0’ı başa yazmak; en küçük farkı yanlış eşleştirmek.",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "düz",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Sayı Basamakları",
+   "uretimde_degisebilir": "rakam kümesi, basamak sayıları, istenen (fark/toplam)"
+  },
+  {
+   "id": "K-SK-23",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "İki basamaklı sayının basamakları belli miktarda artırılıp azaltılır; yeni sayı eskinin katıyla ilişkilendirilir.",
+   "tuzak": "Basamak değerini (10 ile çarpım) unutmak.",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "düz",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Sayı Basamakları",
+   "uretimde_degisebilir": "artış/azalış miktarları, kat ilişkisi"
+  },
+  {
+   "id": "K-SK-24",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Gerçek nesnelerin uzunlukları harfli sayılarla verilir (AB cm, 1BC cm…); şekildeki toplam/fark ile rakamlar bulunur.",
+   "tuzak": "Şekildeki uzunluk ilişkisini yanlış kurmak.",
+   "zorluk": "zor",
+   "seviye": "Mert",
+   "kalip": "şekilli",
+   "adim": [
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Sayı Basamakları (cetveller)",
+   "uretimde_degisebilir": "nesneler, harfli uzunluklar, şekil ilişkisi"
+  },
+  {
+   "id": "K-SK-25",
+   "konu": "Sayı Kümeleri",
+   "alt": "Faktöriyel",
+   "fikir": "Gerçek hayatta çarpımla sayma (ülke × şehir × konser); sonuç faktöriyelli ifade olarak seçilir.",
+   "tuzak": "Toplama ile çarpmayı karıştırmak.",
+   "zorluk": "kolay",
+   "seviye": "ÖSYM",
+   "kalip": "hikâyeli",
+   "adim": [
+    2
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2021 (derslik) · 345 SB (konser)",
+   "uretimde_degisebilir": "bağlam, çarpan sayıları, şık biçimi (k!/m!)"
+  },
+  {
+   "id": "K-SK-26",
+   "konu": "Sayı Kümeleri",
+   "alt": "Faktöriyel",
+   "fikir": "Faktöriyelli ifadeler ortak çarpan parantezine alınıp sadeleştirilir; sonuç k türünden yazılır.",
+   "tuzak": "(n+1)! = (n+1)·n! açılımını eksik yapmak.",
+   "zorluk": "kolay",
+   "seviye": "Mert",
+   "kalip": "düz",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Faktöriyel · Bilgi Sarmal",
+   "uretimde_degisebilir": "faktöriyeller, k tanımı"
+  },
+  {
+   "id": "K-SK-27",
+   "konu": "Sayı Kümeleri",
+   "alt": "Asal sayılar",
+   "fikir": "Asal sayılarla verilen denklemde parite kullanılır (biri 2 olmalı) ya da ifade çarpanlarına ayrılıp bir çarpanın 1 olması gerekir.",
+   "tuzak": "2’nin tek çift asal olduğunu kullanmamak.",
+   "zorluk": "orta-zor",
+   "seviye": "Bilgi Sarmal",
+   "kalip": "düz",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Bilgi Sarmal Kazanım · Mert (p² − 2p − 24 asal)",
+   "uretimde_degisebilir": "denklem biçimi, istenen (toplam / asal olmayan şık)"
+  },
+  {
+   "id": "K-SK-28",
+   "konu": "Sayı Kümeleri",
+   "alt": "İşaret",
+   "fikir": "Çarpım/bölüm biçiminde eşitsizliklerden harflerin sıralaması ve ifadelerin işaretleri çıkarılır.",
+   "tuzak": "Mutlak değerli çarpanın işaretini yok saymak.",
+   "zorluk": "orta",
+   "seviye": "345",
+   "kalip": "düz",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "345 SB · 3D Tek-Çift ve İşaret",
+   "uretimde_degisebilir": "eşitsizlik sayısı, sorulan ifadeler"
+  },
+  {
+   "id": "K-SK-29",
+   "konu": "Sayı Kümeleri",
+   "alt": "Rasyonel sayılar",
+   "fikir": "Cetvelde her birim aralık farklı sayıda eş parçaya bölünür; işaretli noktaların değerleri toplanır/karşılaştırılır.",
+   "tuzak": "Bölme sayısını aralıklar arasında aynı sanmak.",
+   "zorluk": "zor",
+   "seviye": "Mert",
+   "kalip": "şekilli",
+   "adim": [
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Rasyonel Sayılar (2ⁿ bölmeli cetvel)",
+   "uretimde_degisebilir": "bölme kuralı, işaretli noktalar, istenen"
+  },
+  {
+   "id": "K-SK-30",
+   "konu": "Sayı Kümeleri",
+   "alt": "Rasyonel sayılar",
+   "fikir": "Pay/payda x içeren kesrin basit/bileşik olmasını sağlayan tam sayı değerleri bulunur.",
+   "tuzak": "Paydanın 0 olduğu değeri dışarıda bırakmamak.",
+   "zorluk": "kolay",
+   "seviye": "Mert",
+   "kalip": "düz",
+   "adim": [
+    2,
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert Rasyonel Sayılar",
+   "uretimde_degisebilir": "kesir ifadesi, koşul (basit/bileşik), istenen (toplam/adet)"
+  },
+  {
+   "id": "K-SK-31",
+   "konu": "Sayı Kümeleri",
+   "alt": "Rasyonel sayılar",
+   "fikir": "Bir düzenin bir kısmı görünmez (el, etiket, kasnak); görünen kısım ve oran bilgisinden gizli kısım hakkında sonuç çıkarılır.",
+   "tuzak": "Görünmeyen kısımda olası en uç durumları düşünmemek.",
+   "zorluk": "orta",
+   "seviye": "ÖSYM",
+   "kalip": "şekilli",
+   "adim": [
+    3
+   ],
+   "ozel_sayi": null,
+   "kaynak": "ÖSYM 2022 (etiketli tablo) · 345 SB (boncuk kasnağı)",
+   "uretimde_degisebilir": "nesne, oran, istenen (en az/en çok/kesin)"
+  },
+  {
+   "id": "K-SK-32",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Tablodaki adet ve toplam gelir harfli sayılarla verilir; bölünebilme ve basamakla birim fiyatlar bulunur.",
+   "tuzak": "Bölünebilme kuralını yanlış basamakta uygulamak.",
+   "zorluk": "zor",
+   "seviye": "Orijinal",
+   "kalip": "tablo",
+   "adim": [
+    4,
+    5
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Orijinal Deneme (gömlek-kazak-pantolon)",
+   "uretimde_degisebilir": "ürünler, adetler, harfli gelirler"
+  },
+  {
+   "id": "K-SK-33",
+   "konu": "Sayı Kümeleri",
+   "alt": "Basamak",
+   "fikir": "Bilet/kart üzerindeki ab ve ba numaraları ile kapasite/oturma düzeni ilişkilendirilir.",
+   "tuzak": "Numara sırasını kapasite ile karıştırmak.",
+   "zorluk": "orta",
+   "seviye": "Orijinal",
+   "kalip": "şekilli",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Orijinal Deneme (okul gezisi biletleri)",
+   "uretimde_degisebilir": "bağlam, numaralandırma kuralı"
+  },
+  {
+   "id": "K-SK-34",
+   "konu": "Sayı Kümeleri",
+   "alt": "Örüntü",
+   "fikir": "Sayı çarkında ardışık bölmelerin toplamları ile bir dizi oluşur; n. terim periyotla bulunur.",
+   "tuzak": "Periyodun başlangıç noktasını kaydırmak.",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "şekilli",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert (sayı çarkı)",
+   "uretimde_degisebilir": "çark boyutu, toplanan bölme sayısı, n"
+  },
+  {
+   "id": "K-SK-35",
+   "konu": "Sayı Kümeleri",
+   "alt": "Ardışık sayılar",
+   "fikir": "Ardışık numaralı kayıtlar eşit kayıtlı sayfalara dağılır; görünen numaralardan sayfa başı kayıt ve harfli numara bulunur.",
+   "tuzak": "Sayfa sınırında numarayı bir kaydırmak.",
+   "zorluk": "orta",
+   "seviye": "Mert",
+   "kalip": "tablo",
+   "adim": [
+    3,
+    4
+   ],
+   "ozel_sayi": null,
+   "kaynak": "Mert (telefon rehberi)",
+   "uretimde_degisebilir": "bağlam (rehber, sıra numarası, koltuk), sayfa büyüklüğü"
+  }
+ ]
+}
