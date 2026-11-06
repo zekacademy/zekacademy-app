@@ -511,7 +511,7 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${(S.view===v || (v==="ogren" && !A() && ["konular","cetele","sorular","socoz","banka"].includes(S.view)))?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${(S.view===v || (v==="ogren" && !A() && ["konular","cetele","sorular","socoz","banka","videolar"].includes(S.view)))?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
   return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
@@ -567,7 +567,7 @@ function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
-  const pages = {home:sHome, ogren:()=>pOgren(s), banka:()=>pBanka(s), socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
+  const pages = {home:sHome, ogren:()=>pOgren(s), videolar:()=>pVideolar(s), banka:()=>pBanka(s), socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
   const nots = studentNotices(s).length;
   return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["ogren","book","Öğren"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
@@ -2334,6 +2334,7 @@ const OG_SIRALAR = [["mat","Matematik · İlk 12 Konu","Matematik"],["prob","Mat
 /* Demo: öğrenci biraz ilerlemiş görünsün (sadece demo modunda, bir kez) */
 function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("zk-demo")==="1"; }catch(e){} if(!demo || !S.me) return;
   if(!og().tohum2){ ogYaz(o=>{ o.tohum2 = 1; }); setTimeout(()=>{ mutate(x=>{ x.hocalar = {...(x.hocalar||{}), "Matematik":"Mert Hoca", "Geometri":"Mert Hoca", "Fizik":"Özcan Aykın", "Kimya":"Görkem Şahin", "Biyoloji":"Betül Biyoloji", "Türkçe":"Rüştü Hoca", "Tarih":"Tarihin Kodları", "Coğrafya":"Coğrafyanın Kodları"}; }); render(); }, 0); }
+  if(!og().tohum3){ ogYaz(o=>{ o.tohum3 = 1; o.testSonuc = {...(o.testSonuc||{}), "mat|Temel Kavramlar":{d:3,n:3,at:Date.now()-2*864e5}, "mat|Rasyonel Sayılar":{d:2,n:3,at:Date.now()-864e5}}; o.izlenen = {...(o.izlenen||{}), "fiz|Fizik Bilimine Giriş":[0,1]}; if(o.kartlar && o.kartlar["mat|Temel Kavramlar"]) Object.values(o.kartlar["mat|Temel Kavramlar"]).forEach(x=>{ x.kutu = Math.max(x.kutu, 2); }); }); }
   if(og().tohum) return;
   const t0 = today(), now = Date.now();
   ogYaz(o=>{ o.tohum = 1;
@@ -2343,6 +2344,8 @@ function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("z
       "mat|Rasyonel Sayılar":{0:{kutu:2,sonraki:gunSonra(4)},1:{kutu:0,sonraki:t0},2:{kutu:1,sonraki:t0},3:{kutu:2,sonraki:gunSonra(6)},4:{kutu:1,sonraki:gunSonra(1)}},
       "fiz|Fizik Bilimine Giriş":{0:{kutu:1,sonraki:t0},1:{kutu:0,sonraki:t0},2:{kutu:2,sonraki:gunSonra(3)},3:{kutu:1,sonraki:t0},4:{kutu:2,sonraki:gunSonra(7)}}};
     o.hata = [{k:"mat|Rasyonel Sayılar", i:1, at:now-864e5, sonraki:t0}, {k:"tar|Tarih ve Zaman", i:0, at:now-864e5, sonraki:t0}, {k:"mat|Temel Kavramlar", i:1, at:now-2*864e5, sonraki:gunSonra(3)}];
+    o.testSonuc = {"mat|Temel Kavramlar":{d:3,n:3,at:now-2*864e5}, "mat|Rasyonel Sayılar":{d:2,n:3,at:now-864e5}};
+    o.izlenen = {"fiz|Fizik Bilimine Giriş":[0,1]};
     o.notlar = {"mat|Temel Kavramlar":[{t:312, m:"0 çift sayı ama pozitif değil!", at:now-2*864e5},{t:1260, m:"Ardışık sayılarda toplam = ortanca × adet", at:now-2*864e5}],
       "fiz|Fizik Bilimine Giriş":[{t:540, m:"Ağırlık vektörel, kütle skaler", at:now-3*864e5}]};
   });
@@ -2369,39 +2372,100 @@ function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   (o.hata||[]).filter(h=>h.sonraki<=bugun && !h.tamam).forEach(h=>L.push({tip:"hata", k:h.k, i:h.i, bid:h.bid}));
   cetele10(s).slice(0,3).forEach(c=>L.push({tip:"cetele", ad:c.n||c.ad||"", y:c.y}));
   return L; }
-function pOgren(s){
-  demoOgrenTohum();
-  const o = og(), hk = haftaKonulari(s), devam = Object.entries(o.ilerleme||{}).filter(([k,p])=>icerik(k) && p.t>20 && (!p.d || p.t < p.d-30)).sort((a,b)=>b[1].at-a[1].at)[0];
-  const tk = tekrarListesi(s), matSub = CURX().TYT.find(x=>x.k==="mat"), izlDk = Math.round(((o.izleme||{})[today()]||0)/60);
-  const notSay = Object.values(o.notlar||{}).reduce((a,x)=>a+x.length,0), hataSay = (o.hata||[]).filter(h=>!h.tamam).length + soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length;
-  return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
-  <div class="page ogpage">
-    <div class="ogust"><button class="ogb soru" data-act="go" data-v="socoz"><span>📷</span><b>Soru Çöz</b><small>Fotoğrafını çek, adım adım öğren</small></button>
-      <button class="ogb ders" data-ogr="videolar"><span>▶️</span><b>Ders İzle</b><small>${izlDk?`Bugün ${izlDk} dk izledin`:"Hocanın videoları burada"}</small></button></div>
-    <div class="oggrid"><div class="ogsol">
-    ${devam?`<div class="card ogdevam"><div class="sech"><h3>Kaldığın yerden devam et</h3></div>${vidKart(devam[0], s, true)}</div>`:""}
-    ${hk.length?`<div class="card ogh"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="vkrow">${hk.map(x=>vidKart(x.k, s)).join("")}</div></div>`:""}
-    <div id="og-videolar" class="ogsira ogv">${OG_SIRALAR.map(([sk, ad, d],i)=>{ const sub = CURX().TYT.find(x=>x.k===sk); if(!sub) return ""; const L = [...sub.t, ...(sk==="tr" ? ["Paragraf"] : [])];
-      const ilk = L.map(n=>tkey(sk,n)).find(k=>VIDEO[k]), h = (hoca(s,d)||"").split("+")[0].trim() || (ilk?VIDEO[ilk].h:""), say = L.filter(n=>VIDEO[tkey(sk,n)]).length;
-      return `<div class="card"><div class="sech"><h3>${esc(ad)}</h3>${h?`<span class="faint small">Hocan: ${esc(h)}</span>`:""}</div><div class="vkrow">${L.map(n=>vidKart(tkey(sk,n), s)).join("")}</div></div>`; }).join("")}
-      <p class="faint small" style="margin:-4px 4px 0">Videolar koçunun seçtiği hocaların en güncel TYT serilerinden. Özet, test ve kartlar şimdilik işaretli konularda; soru havuzu büyüdükçe hepsine gelecek.</p></div>
-    </div><div class="ogsag">
-    <div class="card ogt"><div class="sech"><h3>🔁 Bugün tekrar et</h3><span class="faint small">${tk.length?tk.length+" iş":""}</span></div>
-      ${tk.length?`<div class="tklist">${tk.map(x=> x.tip==="kart" ? `<button class="row" data-ders="${esc(x.k)}" data-sekme="kart"><span class="ri">🃏</span><div><div class="rt">${esc(konuAdi(x.k))} kartları</div><div class="rs">${x.n} kart tekrar zamanında</div></div><span class="rx">${icon("chev","sm")}</span></button>`
-        : x.tip==="hata" ? `<button class="row" ${x.bid?`data-bk="tek" data-id="${x.bid}"`:`data-ders="${esc(x.k)}" data-sekme="test"`}><span class="ri">❗</span><div><div class="rt">${esc(konuAdi(x.k))} · yanlış yaptığın soru</div><div class="rs">Testte yanlış yapmıştın, bir daha dene</div></div><span class="rx">${icon("chev","sm")}</span></button>`
-        : `<button class="row" data-act="go" data-v="cetele"><span class="ri">📌</span><div><div class="rt">${esc(x.ad)}</div><div class="rs">Çetelede ${x.y} yanlış · konuyu tekrar et</div></div><span class="rx">${icon("chev","sm")}</span></button>`).join("")}</div>`
-      : `<p class="muted small" style="margin:6px 0 0">Bugün tekrar edecek bir şey yok. Bir video izleyince o konunun kartları ve yanlışların burada sırayla karşına çıkar.</p>`}</div>
-    <div class="ogar"><div class="sech" style="margin:6px 4px 10px"><h3>Araçlarım</h3></div>
-    <div class="ogarac">
+/* ---------- Konu durumu: video + test + kart → ⚪ başlanmadı · 🟡 devam · 🟢 tamam ---------- */
+function konuDurum(k, s){ const c = icerik(k); if(!c) return null; const o = og(), t = (s.topics||{})[k]||{}, P = c.parca || [[c.vid]];
+  const iz = t.v ? P.length : Math.min(P.length, ((o.izlenen||{})[k]||[]).length + ((((o.ilerleme||{})[k]||{}).t||0) > 60 ? 0 : 0));
+  const kys = (o.kartlar||{})[k]||{}, kOgr = Object.values(kys).filter(x=>x.kutu>=2).length, kTop = c.kart.length;
+  const ts = (o.testSonuc||{})[k], tTop = c.test.length;
+  const vPct = P.length ? iz/P.length : 0, tPct = tTop ? (ts ? ts.d/ts.n : 0) : null, kPct = kTop ? kOgr/kTop : null;
+  const parcalar = [vPct, tPct, kPct].filter(x=>x!=null), ort = parcalar.reduce((a,b)=>a+b,0)/parcalar.length;
+  const durum = ort>=0.8 && vPct===1 ? "tamam" : ort>0 || (((o.ilerleme||{})[k]||{}).t||0)>30 ? "devam" : "yok";
+  return {iz, vTop:P.length, vPct, ts, tTop, kOgr, kTop, pct:Math.round(ort*100), durum, c}; }
+const DURUM_AD = {yok:"Başlanmadı", devam:"Devam ediyor", tamam:"Tamam"};
+/* Sıradaki tek adım: önce yarım video, sonra testi çözülmemiş izlenmiş konu, sonra kart, sonra yeni konu */
+function siradakiAdim(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icerik(k)); for(const k of hk){ const d = konuDurum(k,s); if(d.durum==="tamam") continue;
+    if(d.vPct<1) return {k, sekme:"ozet", ikon:"▶️", baslik:`${konuAdi(k)}: videoyu ${d.iz?"bitir":"izle"}`, alt:`${d.c.kanal} · ${d.vTop>1?`${d.iz}/${d.vTop} video`:"konu anlatımı"}`};
+    if(d.tTop && !d.ts) return {k, sekme:"test", ikon:"🧩", baslik:`${konuAdi(k)}: testi çöz`, alt:`${d.tTop} soru · konuyu anladın mı görelim`};
+    if(d.kTop && d.kOgr<d.kTop) return {k, sekme:"kart", ikon:"🃏", baslik:`${konuAdi(k)}: kartları tekrar et`, alt:`${d.kOgr}/${d.kTop} kart öğrenildi`}; }
+  return null; }
+function durumCip(d){ return `<span class="kdc ${d.durum}">${d.durum==="tamam"?"🟢":d.durum==="devam"?"🟡":"⚪"} ${DURUM_AD[d.durum]}</span>`; }
+function konuSatiri(k, s){ const d = konuDurum(k, s); if(!d) return ""; const ders = k.split("|")[0];
+  return `<div class="ks ${d.durum}"><button class="ksb" data-ders="${esc(k)}"><span class="ksad">${esc(konuAdi(k))}</span><span class="faint small">${esc(dersAdi(ders))} · ${esc(d.c.kanal)}</span></button>
+    <div class="ksc"><button data-ders="${esc(k)}" class="${d.vPct===1?"ok":d.iz||d.vPct?"yarim":""}">▶️ ${d.vTop>1?`${d.iz}/${d.vTop}`:d.vPct===1?"✓":"Video"}</button>
+      ${d.tTop?`<button data-ders="${esc(k)}" data-sekme="test" class="${d.ts?(d.ts.d/d.ts.n>=0.8?"ok":"yarim"):""}">🧩 ${d.ts?`${d.ts.d}/${d.ts.n}`:"Test"}</button>`:BANKA.some(x=>x.k===k)?`<button data-bk="konu" data-k="${esc(k)}">🧩 Soru</button>`:`<span class="yok">🧩 —</span>`}
+      ${d.kTop?`<button data-ders="${esc(k)}" data-sekme="kart" class="${d.kOgr===d.kTop?"ok":d.kOgr?"yarim":""}">🃏 ${d.kOgr}/${d.kTop}</button>`:`<span class="yok">🃏 —</span>`}</div></div>`; }
+const dersAdi = sk => ({mat:"Matematik", prob:"Problemler", matd:"Matematik", geo:"Geometri", tr:"Türkçe", fiz:"Fizik", kim:"Kimya", bio:"Biyoloji", tar:"Tarih", cog:"Coğrafya", fel:"Felsefe"})[sk]||sk;
+function devamSatiri(s){ const o = og(), devam = Object.entries(o.ilerleme||{}).filter(([k,p])=>icerik(k) && p.t>20 && (!p.d || p.t < p.d-30)).sort((a,b)=>b[1].at-a[1].at)[0]; if(!devam) return "";
+  const [k,p] = devam, c = icerik(k), pct = p.d ? Math.min(100, p.t/p.d*100) : 0;
+  return `<button class="card dvs" data-ders="${esc(k)}"><span class="vkr"><img src="${thumb(c.vid)}" alt="" loading="lazy"><span class="vkp">▶</span>${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span><span class="dvm"><small>Kaldığın yerden devam et</small><b>${esc(konuAdi(k))}</b><span class="faint small">${esc(c.kanal)} · ${dkSn(p.t)}'te kaldın</span></span></button>`; }
+function tekrarKarti(s, kisa){ const tk = tekrarListesi(s); if(!tk.length) return kisa ? "" : `<div class="card ogt"><div class="sech"><h3>🔁 Bugün tekrar et</h3></div><p class="muted small" style="margin:6px 0 0">Bugün tekrar edecek bir şey yok 🎉</p></div>`;
+  const kart = tk.filter(x=>x.tip==="kart"), hata = tk.filter(x=>x.tip==="hata"), cet = tk.filter(x=>x.tip==="cetele"), kartSay = kart.reduce((a,x)=>a+x.n,0);
+  return `<div class="card ogt"><div class="sech"><h3>🔁 Bugün tekrar et</h3><span class="faint small">${tk.length} iş</span></div><div class="tklist">
+    ${kartSay?`<button class="row" data-ders="${esc(kart[0].k)}" data-sekme="kart"><span class="ri">🃏</span><div><div class="rt">${kartSay} kart tekrar zamanında</div><div class="rs">${kart.map(x=>esc(konuAdi(x.k))).join(", ")}</div></div><span class="rx">${icon("chev","sm")}</span></button>`:""}
+    ${hata.length?`<button class="row" ${hata[0].bid?`data-bk="tek" data-id="${hata[0].bid}"`:`data-ders="${esc(hata[0].k)}" data-sekme="test"`}><span class="ri">❗</span><div><div class="rt">${hata.length} yanlışını tekrar çöz</div><div class="rs">${hata.map(x=>esc(konuAdi(x.k))).join(", ")}</div></div><span class="rx">${icon("chev","sm")}</span></button>`:""}
+    ${cet.map(x=>`<button class="row" data-act="go" data-v="cetele"><span class="ri">📌</span><div><div class="rt">${esc(x.ad)} konusunu tekrar et</div><div class="rs">Çetelede ${x.y} yanlış</div></div><span class="rx">${icon("chev","sm")}</span></button>`).join("")}</div></div>`; }
+function araclar(s){ const o = og(), notSay = Object.values(o.notlar||{}).reduce((a,x)=>a+x.length,0), hataSay = (o.hata||[]).filter(h=>!h.tamam).length + soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length;
+  return `<div class="ogar"><div class="sech" style="margin:6px 4px 10px"><h3>Araçlarım</h3></div><div class="ogarac">
       <button data-act="go" data-v="konular"><span>📚</span><b>Konu Takibi</b><small>%${Math.round(examPct(s,"TYT")*100)} TYT</small></button>
       <button data-act="go" data-v="cetele"><span>✏️</span><b>Yanlış Çetelesi</b><small>Konu konu yanlışların</small></button>
       <button data-act="go" data-v="sorular"><span>📕</span><b>Hata Defteri</b><small>${hataSay?hataSay+" soru bekliyor":"Çözemediğin sorular"}</small></button>
-      <button data-ogr="kartlar"><span>🃏</span><b>Kartlarım</b><small>${Object.keys(DERS_ICERIK).length} deste</small></button>
-      <button data-ogr="notlar"><span>📝</span><b>Notlarım</b><small>${notSay?notSay+" not":"Videodan not al"}</small></button>
-      <button data-act="go" data-v="banka"><span>🧩</span><b>Soru Bankası</b><small>${BANKA.length} örnek soru</small></button>
-    </div></div>
-    </div></div>
+      <button data-ogr="notlar"><span>📝</span><b>Notlarım</b><small>${notSay?notSay+" not":"Videodan not al"}</small></button></div></div>`; }
+const ogDort = () => `<div class="og4">
+    <button data-act="go" data-v="socoz" class="og4a"><span>📷</span><b>Soru Çöz</b></button>
+    <button data-act="go" data-v="videolar" class="og4b"><span>▶️</span><b>Ders Videoları</b></button>
+    <button data-act="go" data-v="banka" class="og4c"><span>🧩</span><b>Soru Bankası</b></button>
+    <button data-ogr="kartlar" class="og4d"><span>🃏</span><b>Kartlar</b></button></div>`;
+/* ---- Üç tasarım ---- */
+function ogA(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icerik(k)), sa = siradakiAdim(s), tk = tekrarListesi(s);
+  const isler = [ ...(sa?[`<button class="row" data-ders="${esc(sa.k)}" data-sekme="${sa.sekme}"><span class="ri">${sa.ikon}</span><div><div class="rt">${esc(sa.baslik)}</div><div class="rs">${esc(sa.alt)}</div></div><span class="rx">${icon("chev","sm")}</span></button>`]:[]) ];
+  return `${ogDort()}
+    <div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3><span class="faint small">${isler.length + (tk.length?1:0)} adım</span></div>
+      <div class="tklist">${isler.join("")}</div>${tk.length?tekrarKarti(s, true).replace('<div class="card ogt">','<div class="ogtic">'):""}
+      ${!isler.length && !tk.length ? `<p class="muted small" style="margin:6px 0 0">Bugünlük her şey tamam 🎉</p>` : ""}</div>
+    ${devamSatiri(s)}
+    ${hk.length?`<div class="card"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kslist">${hk.map(k=>konuSatiri(k,s)).join("")}</div></div>`:""}
+    ${araclar(s)}`; }
+function ogB(s){ const hk = haftaKonulari(s).map(x=>x.k).filter(k=>icerik(k));
+  const kart = k => { const d = konuDurum(k,s), seg = [d.vPct, d.tTop?(d.ts?d.ts.d/d.ts.n:0):null, d.kTop?d.kOgr/d.kTop:null];
+    return `<button class="kkart ${d.durum}" data-ders="${esc(k)}"><span class="kkh"><span class="faint small">${esc(dersAdi(k.split("|")[0]))}</span>${durumCip(d)}</span><b>${esc(konuAdi(k))}</b>
+      <span class="kkseg">${[["▶️","Video"],["🧩","Test"],["🃏","Kart"]].map(([ic,ad],i)=>seg[i]==null?`<span class="yok"><i></i><small>${ic} ${ad}</small></span>`:`<span><i style="--w:${Math.round(seg[i]*100)}%"></i><small>${ic} ${ad}</small></span>`).join("")}</span>
+      <span class="kkalt"><span class="faint small">${esc(d.c.kanal)}</span><span class="kkbtn">${d.durum==="yok"?"Başla":d.durum==="tamam"?"Tekrar et":"Devam et"} ›</span></span></button>`; };
+  return `${ogDort()}${devamSatiri(s)}
+    ${hk.length?`<div class="sech" style="margin:4px 4px 0"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kkgrid">${hk.map(kart).join("")}</div>`:""}
+    ${tekrarKarti(s)}${araclar(s)}`; }
+function ogC(s){ const sa = siradakiAdim(s);
+  const dersler = OG_SIRALAR.filter(([sk])=>sk!=="prob" && sk!=="matd").map(([sk, ad])=>{ const subs = CURX().TYT.filter(x=>x.k===sk || (sk==="mat" && (x.k==="prob"||x.k==="matd")));
+    const L = subs.flatMap(sub=>sub.t.map(n=>tkey(sub.k,n))).filter(k=>icerik(k)), D = L.map(k=>konuDurum(k,s)), say = {tamam:0, devam:0, yok:0}; D.forEach(d=>say[d.durum]++);
+    return {sk, ad: ad.split(" · ")[0], L, say, pct: L.length ? Math.round((say.tamam + say.devam*0.5)/L.length*100) : 0}; });
+  return `${sa?`<button class="card siradaki" data-ders="${esc(sa.k)}" data-sekme="${sa.sekme}"><small>Sıradaki adımın</small><span class="sri">${sa.ikon}</span><b>${esc(sa.baslik)}</b><span class="faint small">${esc(sa.alt)}</span><span class="btn pri">Başla</span></button>`:""}
+    ${tekrarKarti(s, true)}
+    <div class="card"><div class="sech"><h3>🗺️ Ders ders ilerlemen</h3><span class="faint small">TYT</span></div>
+      <div class="ydl">${dersler.map(x=>`<details class="yd" ${S.ogAcik===x.sk?"open":""} data-sk="${x.sk}"><summary><span class="ydad">${esc(x.ad)}</span><span class="ydbar"><i class="t" style="width:${x.L.length?x.say.tamam/x.L.length*100:0}%"></i><i class="d" style="width:${x.L.length?x.say.devam/x.L.length*100:0}%"></i></span><span class="ydn faint small">${x.say.tamam}/${x.L.length}</span></summary>
+        <div class="kslist">${x.L.map(k=>konuSatiri(k,s)).join("")}</div></details>`).join("")}</div></div>
+    ${ogDort()}${araclar(s)}`; }
+const OG_TASARIM = [["A","Görev listesi"],["B","Konu kartları"],["C","Yol haritası"]];
+function pOgren(s){ demoOgrenTohum(); let v = "A"; try{ v = localStorage.getItem("zk-og-tasarim")||"A"; }catch(e){}
+  return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
+  <div class="page ogpage ogv3">
+    <div class="ogtas"><span>Prototip tasarım:</span>${OG_TASARIM.map(([k,ad])=>`<button data-ogt="${k}" aria-pressed="${v===k}">${k} · ${ad}</button>`).join("")}</div>
+    ${v==="B" ? ogB(s) : v==="C" ? ogC(s) : ogA(s)}
   </div>`; }
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-ogt]"); if(!b) return; try{ localStorage.setItem("zk-og-tasarim", b.dataset.ogt); }catch(_){} render(); window.scrollTo(0,0); });
+document.addEventListener("toggle", e=>{ const d = e.target; if(d && d.classList && d.classList.contains("yd") && d.open) S.ogAcik = d.dataset.sk; }, true);
+/* ---- Ders Videoları sayfası ---- */
+function pVideolar(s){ const sec = S.vders || "mat", grup = sec==="mat" ? ["mat","prob","matd"] : [sec];
+  const L = CURX().TYT.filter(x=>grup.includes(x.k)).flatMap(sub=>[...sub.t, ...(sub.k==="tr"?["Paragraf"]:[])].map(n=>tkey(sub.k,n))).filter(k=>VIDEO[k]);
+  const h = L.length ? VIDEO[L[0]].h : "", o = og();
+  return `${topbar(`<h1 class="ttl">Ders Videoları</h1>`, "", `<button class="iconbtn" data-act="go" data-v="ogren" aria-label="Geri">${icon("back")}</button>`)}
+  <div class="page ogpage">
+    <div class="vdc">${[["mat","Matematik"],["geo","Geometri"],["tr","Türkçe"],["fiz","Fizik"],["kim","Kimya"],["bio","Biyoloji"],["tar","Tarih"],["cog","Coğrafya"],["fel","Felsefe"]].map(([k,ad])=>`<button data-vd="${k}" aria-pressed="${sec===k}">${ad}</button>`).join("")}</div>
+    ${devamSatiri(s)}
+    <div class="card"><div class="sech"><h3>${esc(({mat:"Matematik",geo:"Geometri",tr:"Türkçe",fiz:"Fizik",kim:"Kimya",bio:"Biyoloji",tar:"Tarih",cog:"Coğrafya",fel:"Felsefe"})[sec])}</h3><span class="faint small">Hocan: ${esc((hoca(s, dersAdi(sec))||h).split("+")[0].trim())} · ${L.length} konu</span></div>
+      <div class="vlist">${L.map((k,i)=>{ const v = VIDEO[k], d = konuDurum(k,s), p = (o.ilerleme||{})[k], pct = d.vPct===1 ? 100 : p&&p.d ? Math.min(100,p.t/p.d*100) : 0;
+        return `<button class="vls" data-ders="${esc(k)}"><span class="vkr"><img src="${thumb(v.p[0][0])}" alt="" loading="lazy">${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span><span class="vlm"><b>${i+1}. ${esc(konuAdi(k))}</b><span class="faint small">${v.p.length>1?v.p.length+" video":"1 video"}${v.p.some(x=>x[2]==="s")?" · soru çözümü var":""}</span>${durumCip(d)}</span></button>`; }).join("")}</div></div>
+  </div>`; }
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-vd]"); if(!b) return; S.vders = b.dataset.vd; render(); });
+
 /* Kartlarım / Notlarım listeleri (alttan pencere) */
 document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-ogr]"); if(!b) return; const v = b.dataset.ogr, o = og();
   if(v==="videolar"){ const el = $("#og-videolar"); if(el) el.scrollIntoView({behavior:"smooth", block:"start"}); return; }
@@ -2516,7 +2580,7 @@ function dpKaydet(){ if(!DP.k || !DP.p || !DP.p.getCurrentTime) return; const t 
 function dersAc(k, sekme, sn, pi){ const c = icerik(k); if(!c) return; closeSheet(); dersKapat(true); const P = c.parca || [[c.vid, c.baslik, "konu"]]; pi = Math.min(+pi||0, P.length-1); const vid = P[pi][0];
   Object.assign(DP, {k, pi, sekme: sekme||"ozet", cev:{}, kart:0, ters:false, tak:false, yanit:null, oyn:false, sn: sn!=null ? +sn : ((og().ilerleme||{})[k]||{}).t||0});
   const el = document.createElement("div"); el.id = "dersk"; el.className = "dersk";
-  el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.kanal)} · ${esc(P.length>1 ? (pi+1)+". video: "+P[pi][1] : c.baslik)}</div></div></div>
+  el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="dkdurum" id="dkdurum"></div><div class="faint small dkalt">${esc(c.kanal)} · ${esc(P.length>1 ? (pi+1)+". video: "+P[pi][1] : c.baslik)}</div></div></div>
     <div class="dkana"><div class="dksol"><div class="oyn" id="oyn"><div class="kavid dkvid"><div id="ytp"></div></div>
     <div class="oyb" id="oyb" hidden>
       <div class="oyc" id="oyc" role="slider" aria-label="Videoda ilerle" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="oyct"><i class="oycy" id="oycy"></i><i class="oycd" id="oycd"></i>${(BOLUM[k]||[]).slice(1).map(([t])=>`<b class="oybl" data-t="${t}"></b>`).join("")}${((og().notlar||{})[k]||[]).map(n=>`<em class="oynt" data-t="${n.t}" title="${esc(n.m)}"></em>`).join("")}</div><span class="oytop" id="oytop"></span></div>
@@ -2542,7 +2606,7 @@ function dersAc(k, sekme, sn, pi){ const c = icerik(k); if(!c) return; closeShee
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
   const sade = () => { const yd = $("#dkarac-yedek"); if(yd) yd.hidden = false; const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
   ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1, controls:0, fs:0, iv_load_policy:3, disablekb:1, cc_load_policy:0, cc_lang_pref:"tr" },
-    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); oyAltYazi(!!og().cc); try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; oyCiz(); if(ev.data===1 && !og().cc) oyAltYazi(false); if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
+    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); oyAltYazi(!!og().cc); try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; oyCiz(); if(ev.data===1 && !og().cc) oyAltYazi(false); if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ ogYaz(o=>{ o.izlenen = o.izlenen||{}; const L = o.izlenen[k] = o.izlenen[k]||[]; if(!L.includes(pi)) L.push(pi); }); if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
   clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); bolumIsaretle(); }, 3000);
   geriKoruma(); }
 /* ---------- Zekacademy oynatıcısı: YouTube kontrolleri kapalı, kumanda bizim ---------- */
@@ -2573,7 +2637,7 @@ document.addEventListener("keydown", e=>{ if(!DP.p || !$("#dersk") || /input|tex
 function bolumIsaretle(){ const B = BOLUM[DP.k]; if(!B) return; const t = dpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll(".dkbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
 function dersKapat(sessiz){ const el = $("#dersk"); if(!el) return; dpKaydet(); clearInterval(DP.tim); clearInterval(DP.oyt); try{ DP.p && DP.p.destroy && DP.p.destroy(); }catch(e){} DP.p = null; DP.k = null; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
 function izlendiYap(){ const k = DP.k; if(!k) return; const t = (st().topics||{})[k]||{}; if(t.v) return; mutate(x=>{ topic(x,k).v = true; }); sesCal("basari"); toast("Konu izlendi olarak işaretlendi ✓"); }
-function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const c = icerik(DP.k), o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
+function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const dd = konuDurum(DP.k, st()), ds = $("#dkdurum"); if(ds && dd) ds.innerHTML = `${durumCip(dd)}<span>▶️ ${dd.iz}/${dd.vTop}</span>${dd.tTop?`<span>🧩 ${dd.ts?dd.ts.d+"/"+dd.ts.n:"—"}</span>`:""}${dd.kTop?`<span>🃏 ${dd.kOgr}/${dd.kTop}</span>`:""}`; const c = icerik(DP.k), o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
   document.querySelectorAll("#dersk [data-dk=sek]").forEach(b=>b.setAttribute("aria-selected", b.dataset.v===DP.sekme));
   let h = "";
   if(DP.sekme==="ozet" && !c.ozet.length) h = `<div class="empty">Bu konunun özeti ve formül kartı yakında. Şimdilik videoyu izle, önemli yerlerde 📝 ile not al.</div>
@@ -2620,6 +2684,7 @@ document.addEventListener("click", e=>{
   if(a==="git"){ const t = +b.dataset.sn; DP.sn = t; try{ DP.p.seekTo(t, true); DP.p.playVideo(); }catch(_){} setTimeout(bolumIsaretle, 300); window.scrollTo(0,0); $("#dersk").scrollTo({top:0, behavior:"smooth"}); return; }
   if(a==="izle"){ const t = (st().topics||{})[DP.k]||{}; if(t.v){ mutate(x=>{ delete topic(x,DP.k).v; }); } else izlendiYap(); setTimeout(dpCiz, 50); return; }
   if(a==="cev"){ const i = +b.dataset.i, x = c.test[i]; DP.cev[i] = b.dataset.h; if(b.dataset.h===x.d) sesCal("basari");
+    if(Object.keys(DP.cev).length===c.test.length){ const d = c.test.filter((y,j)=>DP.cev[j]===y.d).length; ogYaz(o=>{ o.testSonuc = o.testSonuc||{}; o.testSonuc[DP.k] = {d, n:c.test.length, at:Date.now()}; }); }
     else ogYaz(o=>{ o.hata = (o.hata||[]).filter(h=>!(h.k===DP.k && h.i===i)); o.hata.push({k:DP.k, i, at:Date.now(), sonraki:gunSonra(1)}); });
     if(b.dataset.h===x.d) ogYaz(o=>{ (o.hata||[]).forEach(h=>{ if(h.k===DP.k && h.i===i) h.tamam = true; }); });
     dpCiz(); return; }
