@@ -1,0 +1,768 @@
+{
+ "ad": "ÖSYM TYT Matematik haritası 2018–2026",
+ "surum": "1 (6 Kasım 2026)",
+ "kaynak": "MEB OGM \"YKS Çıkmış Sorular TYT\" (2018-2026, konulara göre). Soru metinleri saklanmadı; yalnızca istatistik.",
+ "notlar": [
+  "Konu grupları MEB kitabının öğrenme alanı tablosundan alınmıştır (Maarif ünite adları).",
+  "Kitapta 359 soru var (360 değil). MEB sınıflandırması: Temel Matematik 271, Geometri 88 (ör. 2019da temel 31 soru). MEB tablosu 2022 Özel Dörtgenleri 1 yazıyor, kitapta 2 soru var; kitap esas alındı.",
+  "otomatik_profil metin taramasıdır (yaklaşık): şekil algısı \"şekil\" kelimesine bakar, şekilli geometri soruları \"düz\" görünebilir.",
+  "elle_analiz: adım sayısı, zorluk ve mantık ailesi soru tek tek okunarak verildi (Claude değerlendirmesi). Şimdilik yalnız Sayı Kümeleri.",
+  "sayi_buyuklugu: soru kökündeki en büyük sayının medyanı / %90 dilimi."
+ ],
+ "cevap_harfi_dagilimi": {
+  "A": 63,
+  "B": 79,
+  "C": 76,
+  "D": 74,
+  "E": 67
+ },
+ "bolum_toplam": {
+  "Temel Matematik": 271,
+  "Geometri": 88
+ },
+ "konular": [
+  {
+   "konu": "Sayı Kümeleri",
+   "bolum": "Temel Matematik",
+   "toplam": 50,
+   "yillar": {
+    "2018": 5,
+    "2019": 6,
+    "2020": 4,
+    "2021": 5,
+    "2022": 7,
+    "2023": 6,
+    "2024": 6,
+    "2025": 6,
+    "2026": 5
+   },
+   "ortalama_yillik": 5.6,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 39.5,
+    "sayi_buyuklugu": {
+     "medyan": 10.0,
+     "p90": 96.0
+    },
+    "ondalik_oran": 0.08,
+    "kalip_sikligi": {
+     "şekilli": 17,
+     "hikâyeli": 16,
+     "düz": 12,
+     "yeni nesil (tanımlı kavram/işlem)": 9,
+     "öncüllü": 6,
+     "tablo": 2
+    },
+    "sik_turu": {
+     "sayı": 41,
+     "öncül kombinasyonu": 5,
+     "cebirsel/sembol": 3,
+     "metin/ifade": 1
+    }
+   },
+   "elle_analiz": {
+    "adim_dagilimi": {
+     "1": 1,
+     "2": 10,
+     "3": 28,
+     "4": 11
+    },
+    "adim_medyan": 3.0,
+    "zorluk": {
+     "orta": 27,
+     "kolay": 13,
+     "zor": 10
+    },
+    "alt_konu": {
+     "Rasyonel sayılar": 12,
+     "Basamak": 10,
+     "Temel işlemler": 9,
+     "Ondalık sayılar": 7,
+     "Tek-çift": 6,
+     "Ardışık sayılar": 2,
+     "Basamak / bölünebilme": 1,
+     "Sıralama": 1,
+     "Mantık / paylaştırma": 1,
+     "Asal sayılar": 1
+    },
+    "mantik_aileleri": {
+     "tanımlı sayı türü": 4,
+     "tanımlı sembol işlemi": 4,
+     "tek-çift öncüllü": 4,
+     "ölçek / gösterge okuma": 3,
+     "kutulara sayı yerleştirme": 3,
+     "eşit aralıklara bölme": 3,
+     "kesir-oran (şekil)": 2,
+     "kesirle paylaştırma": 1,
+     "kutulara işlem işareti yerleştirme": 1,
+     "konum / sıralama yorumu": 1,
+     "ileri-geri sayma": 1,
+     "tanımlı sayı türü + sayma": 1,
+     "basamak çözümleme (hikâyeli)": 1,
+     "kesirle ölçüm (tartı)": 1,
+     "günlük hesap (alışveriş tablosu)": 1,
+     "çarpım / faktöriyel gösterimi": 1,
+     "rakamlar toplamı (10ⁿ'li ifade)": 1,
+     "tek-çift (hikâyeli)": 1,
+     "rasyonel karşılaştırma + doğru/yanlış": 1,
+     "kesir toplama (tablo)": 1,
+     "döngü / periyot (durum değişimi)": 1,
+     "basamak çözümleme + sayma": 1,
+     "rasyonel gruplama": 1,
+     "sayı kümesi tanımı": 1,
+     "tek-çift öncüllü (hikâyeli)": 1,
+     "basamak çözümleme (AB+BA)": 1,
+     "rasyonel işlem (hikâyeli)": 1,
+     "koşullu paylaştırma": 1,
+     "ardışık sayılar + rakam toplamı": 1,
+     "kesir karşılaştırma": 1,
+     "günlük hesap (ölçüm farkı)": 1,
+     "işlem karışıklığı → denklem": 1,
+     "koşullu tarama (tek-çift)": 1,
+     "katın rakamlar toplamı": 1
+    },
+    "yila_gore_zor_oran": {
+     "2018": 0.0,
+     "2019": 0.5,
+     "2020": 0.0,
+     "2021": 0.0,
+     "2022": 0.14,
+     "2023": 0.33,
+     "2024": 0.0,
+     "2025": 0.33,
+     "2026": 0.4
+    }
+   }
+  },
+  {
+   "konu": "Bölünebilme Kuralları",
+   "bolum": "Temel Matematik",
+   "toplam": 11,
+   "yillar": {
+    "2018": 0,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 1,
+    "2026": 2
+   },
+   "ortalama_yillik": 1.2,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 40,
+    "sayi_buyuklugu": {
+     "medyan": 30.0,
+     "p90": 175.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "düz": 5,
+     "şekilli": 3,
+     "yeni nesil (tanımlı kavram/işlem)": 3,
+     "hikâyeli": 2
+    },
+    "sik_turu": {
+     "sayı": 9,
+     "cebirsel/sembol": 2
+    }
+   }
+  },
+  {
+   "konu": "Birinci Dereceden Denklemler ve Eşitsizlikler",
+   "bolum": "Temel Matematik",
+   "toplam": 28,
+   "yillar": {
+    "2018": 5,
+    "2019": 4,
+    "2020": 3,
+    "2021": 4,
+    "2022": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 4,
+    "2026": 3
+   },
+   "ortalama_yillik": 3.1,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 59.0,
+    "sayi_buyuklugu": {
+     "medyan": 13.0,
+     "p90": 150.0
+    },
+    "ondalik_oran": 0.04,
+    "kalip_sikligi": {
+     "hikâyeli": 15,
+     "düz": 10,
+     "şekilli": 10,
+     "öncüllü": 1,
+     "tablo": 1
+    },
+    "sik_turu": {
+     "sayı": 21,
+     "cebirsel/sembol": 6,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Üslü-Köklü İfadeler",
+   "bolum": "Temel Matematik",
+   "toplam": 18,
+   "yillar": {
+    "2018": 2,
+    "2019": 2,
+    "2020": 2,
+    "2021": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   },
+   "ortalama_yillik": 2.0,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 39.5,
+    "sayi_buyuklugu": {
+     "medyan": 16.0,
+     "p90": 720.0
+    },
+    "ondalik_oran": 0.11,
+    "kalip_sikligi": {
+     "hikâyeli": 8,
+     "düz": 6,
+     "şekilli": 5,
+     "tablo": 1
+    },
+    "sik_turu": {
+     "sayı": 18
+    }
+   }
+  },
+  {
+   "konu": "Problemler (Denklem/Eşitsizlik Uygulamaları)",
+   "bolum": "Temel Matematik",
+   "toplam": 100,
+   "yillar": {
+    "2018": 10,
+    "2019": 11,
+    "2020": 13,
+    "2021": 11,
+    "2022": 12,
+    "2023": 11,
+    "2024": 11,
+    "2025": 10,
+    "2026": 11
+   },
+   "ortalama_yillik": 11.1,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 63.0,
+    "sayi_buyuklugu": {
+     "medyan": 69.0,
+     "p90": 1700.0
+    },
+    "ondalik_oran": 0.08,
+    "kalip_sikligi": {
+     "hikâyeli": 73,
+     "şekilli": 25,
+     "düz": 19,
+     "tablo": 6,
+     "yeni nesil (tanımlı kavram/işlem)": 2,
+     "grafik": 2,
+     "öncüllü": 1
+    },
+    "sik_turu": {
+     "sayı": 93,
+     "metin/ifade": 6,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Mantık",
+   "bolum": "Temel Matematik",
+   "toplam": 6,
+   "yillar": {
+    "2018": 0,
+    "2019": 0,
+    "2020": 0,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 0.7,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 64.5,
+    "sayi_buyuklugu": {
+     "medyan": 3.0,
+     "p90": 2000.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "hikâyeli": 5,
+     "tablo": 1,
+     "düz": 1
+    },
+    "sik_turu": {
+     "metin/ifade": 3,
+     "cebirsel/sembol": 2,
+     "sayı": 1
+    }
+   }
+  },
+  {
+   "konu": "Kümeler",
+   "bolum": "Temel Matematik",
+   "toplam": 9,
+   "yillar": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.0,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 43,
+    "sayi_buyuklugu": {
+     "medyan": 9.0,
+     "p90": 42.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "düz": 5,
+     "öncüllü": 2,
+     "şekilli": 1,
+     "hikâyeli": 1
+    },
+    "sik_turu": {
+     "sayı": 4,
+     "öncül kombinasyonu": 2,
+     "cebirsel/sembol": 2,
+     "metin/ifade": 1
+    }
+   }
+  },
+  {
+   "konu": "Sıralama ve Seçme (Perm-Komb)",
+   "bolum": "Temel Matematik",
+   "toplam": 9,
+   "yillar": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.0,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 56,
+    "sayi_buyuklugu": {
+     "medyan": 2.0,
+     "p90": 17.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 8,
+     "hikâyeli": 6,
+     "tablo": 2
+    },
+    "sik_turu": {
+     "sayı": 9
+    }
+   }
+  },
+  {
+   "konu": "Olasılık",
+   "bolum": "Temel Matematik",
+   "toplam": 9,
+   "yillar": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.0,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 51,
+    "sayi_buyuklugu": {
+     "medyan": 9.0,
+     "p90": 25.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "hikâyeli": 6,
+     "şekilli": 2,
+     "düz": 2
+    },
+    "sik_turu": {
+     "sayı": 9
+    }
+   }
+  },
+  {
+   "konu": "Fonksiyonlar",
+   "bolum": "Temel Matematik",
+   "toplam": 11,
+   "yillar": {
+    "2018": 1,
+    "2019": 2,
+    "2020": 2,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.2,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 36,
+    "sayi_buyuklugu": {
+     "medyan": 3.0,
+     "p90": 7.0
+    },
+    "ondalik_oran": 0.27,
+    "kalip_sikligi": {
+     "grafik": 8,
+     "şekilli": 6,
+     "yeni nesil (tanımlı kavram/işlem)": 2,
+     "öncüllü": 1,
+     "düz": 1
+    },
+    "sik_turu": {
+     "sayı": 7,
+     "cebirsel/sembol": 4
+    }
+   }
+  },
+  {
+   "konu": "Polinomlar",
+   "bolum": "Temel Matematik",
+   "toplam": 3,
+   "yillar": {
+    "2018": 2,
+    "2019": 0,
+    "2020": 0,
+    "2021": 1,
+    "2022": 0,
+    "2023": 0,
+    "2024": 0,
+    "2025": 0,
+    "2026": 0
+   },
+   "ortalama_yillik": 0.3,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 46,
+    "sayi_buyuklugu": {
+     "medyan": 2.0,
+     "p90": 21.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 1,
+     "yeni nesil (tanımlı kavram/işlem)": 1,
+     "öncüllü": 1,
+     "düz": 1
+    },
+    "sik_turu": {
+     "öncül kombinasyonu": 2,
+     "sayı": 1
+    }
+   }
+  },
+  {
+   "konu": "Veri (İstatistik-Grafik)",
+   "bolum": "Temel Matematik",
+   "toplam": 17,
+   "yillar": {
+    "2018": 2,
+    "2019": 2,
+    "2020": 2,
+    "2021": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   },
+   "ortalama_yillik": 1.9,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 77,
+    "sayi_buyuklugu": {
+     "medyan": 30.0,
+     "p90": 120.0
+    },
+    "ondalik_oran": 0.06,
+    "kalip_sikligi": {
+     "hikâyeli": 11,
+     "grafik": 9,
+     "yeni nesil (tanımlı kavram/işlem)": 8,
+     "şekilli": 3
+    },
+    "sik_turu": {
+     "sayı": 16,
+     "cebirsel/sembol": 1
+    }
+   }
+  },
+  {
+   "konu": "Üçgenlerde Temel Kavramlar",
+   "bolum": "Geometri",
+   "toplam": 17,
+   "yillar": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 3,
+    "2022": 2,
+    "2023": 3,
+    "2024": 1,
+    "2025": 3,
+    "2026": 2
+   },
+   "ortalama_yillik": 1.9,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 48,
+    "sayi_buyuklugu": {
+     "medyan": 16.0,
+     "p90": 115.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 10,
+     "hikâyeli": 4,
+     "düz": 4,
+     "yeni nesil (tanımlı kavram/işlem)": 2
+    },
+    "sik_turu": {
+     "sayı": 12,
+     "cebirsel/sembol": 4,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Eşlik ve Benzerlik",
+   "bolum": "Geometri",
+   "toplam": 10,
+   "yillar": {
+    "2018": 1,
+    "2019": 0,
+    "2020": 1,
+    "2021": 2,
+    "2022": 1,
+    "2023": 2,
+    "2024": 1,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.1,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 62.0,
+    "sayi_buyuklugu": {
+     "medyan": 9.0,
+     "p90": 180.0
+    },
+    "ondalik_oran": 0.2,
+    "kalip_sikligi": {
+     "şekilli": 9,
+     "hikâyeli": 4,
+     "öncüllü": 1
+    },
+    "sik_turu": {
+     "sayı": 9,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Dik Üçgen ve Trigonometri",
+   "bolum": "Geometri",
+   "toplam": 11,
+   "yillar": {
+    "2018": 3,
+    "2019": 2,
+    "2020": 1,
+    "2021": 0,
+    "2022": 1,
+    "2023": 0,
+    "2024": 1,
+    "2025": 1,
+    "2026": 2
+   },
+   "ortalama_yillik": 1.2,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 58,
+    "sayi_buyuklugu": {
+     "medyan": 18.0,
+     "p90": 100.0
+    },
+    "ondalik_oran": 0.09,
+    "kalip_sikligi": {
+     "şekilli": 8,
+     "hikâyeli": 6,
+     "düz": 1,
+     "yeni nesil (tanımlı kavram/işlem)": 1,
+     "öncüllü": 1
+    },
+    "sik_turu": {
+     "sayı": 9,
+     "cebirsel/sembol": 1,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Üçgende Alan",
+   "bolum": "Geometri",
+   "toplam": 2,
+   "yillar": {
+    "2018": 0,
+    "2019": 0,
+    "2020": 0,
+    "2021": 0,
+    "2022": 1,
+    "2023": 0,
+    "2024": 1,
+    "2025": 0,
+    "2026": 0
+   },
+   "ortalama_yillik": 0.2,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 45.5,
+    "sayi_buyuklugu": {
+     "medyan": 30.0,
+     "p90": 88.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 1,
+     "yeni nesil (tanımlı kavram/işlem)": 1,
+     "öncüllü": 1,
+     "hikâyeli": 1
+    },
+    "sik_turu": {
+     "sayı": 1,
+     "öncül kombinasyonu": 1
+    }
+   }
+  },
+  {
+   "konu": "Çokgenler ve Dörtgenler",
+   "bolum": "Geometri",
+   "toplam": 10,
+   "yillar": {
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 2,
+    "2025": 1,
+    "2026": 1
+   },
+   "ortalama_yillik": 1.1,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 57.0,
+    "sayi_buyuklugu": {
+     "medyan": 180.0,
+     "p90": 360.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 9,
+     "düz": 1,
+     "hikâyeli": 1
+    },
+    "sik_turu": {
+     "sayı": 10
+    }
+   }
+  },
+  {
+   "konu": "Özel Dörtgenler",
+   "bolum": "Geometri",
+   "toplam": 20,
+   "yillar": {
+    "2018": 2,
+    "2019": 2,
+    "2020": 4,
+    "2021": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   },
+   "ortalama_yillik": 2.2,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 56.5,
+    "sayi_buyuklugu": {
+     "medyan": 26.0,
+     "p90": 56.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 18,
+     "hikâyeli": 7,
+     "düz": 2,
+     "tablo": 1
+    },
+    "sik_turu": {
+     "sayı": 20
+    }
+   }
+  },
+  {
+   "konu": "Katı Cisimler",
+   "bolum": "Geometri",
+   "toplam": 18,
+   "yillar": {
+    "2018": 2,
+    "2019": 2,
+    "2020": 2,
+    "2021": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   },
+   "ortalama_yillik": 2.0,
+   "otomatik_profil": {
+    "kok_kelime_medyan": 55.0,
+    "sayi_buyuklugu": {
+     "medyan": 12.0,
+     "p90": 82.0
+    },
+    "ondalik_oran": 0.0,
+    "kalip_sikligi": {
+     "şekilli": 9,
+     "düz": 8,
+     "hikâyeli": 2
+    },
+    "sik_turu": {
+     "sayı": 18
+    }
+   }
+  }
+ ]
+}
