@@ -2282,6 +2282,59 @@ const DERS_ICERIK = {
       {q:"|x − 2| = 5 denklemini sağlayan x değerlerinin toplamı kaçtır?", s:{A:"4",B:"5",C:"7",D:"10",E:"14"}, d:"A", c:"x − 2 = 5 ⇒ **7**; x − 2 = −5 ⇒ **−3**. Toplam 7 + (−3) = **4**."},
       {q:"|x − 1| < 3 eşitsizliğini sağlayan kaç farklı x tam sayısı vardır?", s:{A:"3",B:"4",C:"5",D:"6",E:"7"}, d:"C", c:"−3 < x − 1 < 3 ⇒ −2 < x < 4: −1, 0, 1, 2, 3 → **5** tane."}] }
 };
+Object.assign(DERS_ICERIK, {
+  "fiz|Fizik Bilimine Giriş": { vid:"_34OfDithTc", kanal:"Fizikle Barış", baslik:"27 Günde TYT Fizik Kampı · 1. Gün · Fizik Bilimine Giriş",
+    ozet:["Fizik; **madde ve enerjiyi**, ikisi arasındaki etkileşimi inceler.","**Temel büyüklükler** (7 tane): uzunluk, kütle, zaman, sıcaklık, elektrik akımı, madde miktarı, ışık şiddeti. Diğerleri **türetilmiş** büyüklüktür.","**Skaler** büyüklükte sayı ve birim yeter (kütle, zaman, enerji). **Vektörel** büyüklükte yön de gerekir (kuvvet, hız, ivme).","Alt dallar: mekanik, termodinamik, elektromanyetizma, optik, atom ve nükleer fizik, katıhal fiziği."],
+    formul:[{ad:"Temel SI birimleri", ifade:"m · kg · s · K · A · mol · cd"},{ad:"Türetilmiş örnek", ifade:"hız = yol ÷ zaman → m/s"}],
+    kart:[["Kütle skaler mi vektörel mi?","Skaler"],["Ağırlık skaler mi vektörel mi?","Vektörel (aşağı yönlü bir kuvvet)"],["Sıcaklığın SI birimi?","Kelvin (K)"],["Kuvvet temel mi türetilmiş mi?","Türetilmiş (newton = kg·m/s²)"],["Elektrik akımının SI birimi?","Amper (A)"]],
+    test:[{q:"Aşağıdakilerden hangisi temel büyüklüktür?", s:{A:"Kuvvet",B:"Hız",C:"Enerji",D:"Elektrik akımı",E:"Basınç"}, d:"D", c:"7 temel büyüklükten biri **elektrik akımıdır** (amper). Kuvvet, hız, enerji ve basınç temel büyüklüklerden türetilir."},
+      {q:"Aşağıdakilerden hangisi vektörel bir büyüklüktür?", s:{A:"İvme",B:"Kütle",C:"Zaman",D:"Sıcaklık",E:"Enerji"}, d:"A", c:"**İvmenin** yönü vardır, bu yüzden vektöreldir. Kütle, zaman, sıcaklık ve enerji skalerdir."},
+      {q:"Buzdolabının soğutma sisteminin çalışma ilkesi fiziğin en çok hangi alt dalının konusudur?", s:{A:"Mekanik",B:"Optik",C:"Termodinamik",D:"Atom fiziği",E:"Nükleer fizik"}, d:"C", c:"Isı aktarımı ve sıcaklık değişimi **termodinamiğin** konusudur."}] },
+  "kim|Kimya Bilimi": { vid:"WsP2LkGg5q4", kanal:"Mihriban Hoca İle Kimya", baslik:"Kimya Bilimi · 30 Günde TYT Kimya Kampı",
+    ozet:["**Simya** deneme-yanılmaya dayanır, sistematik bilgi birikimi yoktur. **Kimya** bilimsel yöntemle çalışır.","**Robert Boyle** ile kimya bir bilim olmaya başladı; **Lavoisier** kütlenin korunumunu gösterdi.","**Element** tek tür atomdan oluşur (Fe, O₂). **Bileşik** farklı atomların belirli oranda birleşmesidir (H₂O).","Alt dallar: analitik, organik, anorganik, fizikokimya, biyokimya, polimer, endüstriyel kimya."],
+    formul:[{ad:"Sembol kuralı", ifade:"İlk harf büyük, ikincisi küçük"},{ad:"Dikkat", ifade:"Co = kobalt · CO = karbon monoksit"}],
+    kart:[["Kimyayı bilim yapan ilk bilim insanı?","Robert Boyle"],["O₂ element mi bileşik mi?","Element (tek tür atom)"],["H₂O element mi bileşik mi?","Bileşik (H ve O)"],["Co ile CO arasındaki fark?","Co kobalt elementi; CO karbon monoksit bileşiği"],["Maddenin bileşimini ve miktarını belirleyen alt dal?","Analitik kimya"]],
+    test:[{q:"Aşağıdakilerden hangisi bileşiktir?", s:{A:"NaCl",B:"N₂",C:"Fe",D:"O₃",E:"He"}, d:"A", c:"**NaCl** iki farklı elementten (Na ve Cl) oluşur. N₂, Fe, O₃ ve He tek tür atomdan oluştuğu için elementtir."},
+      {q:"Aşağıdakilerden hangisi simyanın özelliklerinden biri değildir?", s:{A:"Deneme-yanılmaya dayanması",B:"Değersiz metalleri altına çevirmeye çalışması",C:"Bilimsel yöntem kullanması",D:"Sistematik bilgi birikiminin olmaması",E:"Bazı laboratuvar araçları geliştirmesi"}, d:"C", c:"Simya **bilimsel yöntem kullanmaz**; bilimsel yöntem kimyanın özelliğidir."},
+      {q:"Karbonun sembolü C, kobaltın sembolü Co'dur. Buna göre CO ifadesi neyi gösterir?", s:{A:"Kobalt elementini",B:"Karbon monoksit bileşiğini",C:"Karbon elementini",D:"Oksijen elementini",E:"Kobalt oksit bileşiğini"}, d:"B", c:"İki büyük harf iki ayrı element demek: **C** (karbon) ve **O** (oksijen) → karbon monoksit."}] },
+  "bio|Canlıların Ortak Özellikleri": { vid:"1_LWUCjbYx0", kanal:"Senin Biyolojin", baslik:"Canlıların Ortak Özellikleri 1 · TYT Biyoloji Kampı",
+    ozet:["Bütün canlılar **hücreden** oluşur; hücre canlının en küçük yapı ve görev birimidir.","**Metabolizma** = yapım (**anabolizma**) + yıkım (**katabolizma**).","Canlılar solunum yapar, **ATP** üretir, uyarılara tepki verir, ürer, büyür ve gelişir.","Canlılar **homeostazi** ile iç dengelerini korur, çevrelerine **adaptasyon** gösterir."],
+    formul:[{ad:"Metabolizma", ifade:"anabolizma + katabolizma"},{ad:"Ortak enerji molekülü", ifade:"ATP"}],
+    kart:[["Canlının en küçük yapı ve görev birimi?","Hücre"],["Anabolizma ne demek?","Yapım: küçük moleküllerden büyük molekül"],["Katabolizma ne demek?","Yıkım: büyük moleküllerin parçalanması"],["Homeostazi nedir?","İç ortamın dengede tutulması"],["Tüm canlıların ortak enerji molekülü?","ATP"]],
+    test:[{q:"Aşağıdakilerden hangisi tüm canlılar için ortak bir özellik değildir?", s:{A:"Hücreden oluşma",B:"ATP üretme",C:"Fotosentez yapma",D:"Uyarılara tepki verme",E:"Metabolizma faaliyeti gösterme"}, d:"C", c:"**Fotosentezi** sadece bitkiler, algler ve bazı bakteriler yapar. Diğerleri bütün canlılarda ortaktır."},
+      {q:"Proteinlerin amino asitlere parçalanması aşağıdakilerden hangisine örnektir?", s:{A:"Katabolizma",B:"Anabolizma",C:"Homeostazi",D:"Adaptasyon",E:"Üreme"}, d:"A", c:"Büyük molekülün küçük parçalara ayrılması bir **yıkım** olayıdır, yani katabolizma."},
+      {q:"Sıcak bir günde terleyerek vücut sıcaklığının sabit tutulması hangi özelliğe örnektir?", s:{A:"Büyüme",B:"Homeostazi",C:"Üreme",D:"Anabolizma",E:"Adaptasyon"}, d:"B", c:"İç ortamın (vücut sıcaklığının) dengede tutulması **homeostazidir**."}] },
+  "tr|Sözcükte Anlam": { vid:"XVDocbEn6T8", kanal:"Sözel Hocam", baslik:"Sözcükte Anlam 1 · TYT Türkçe",
+    ozet:["**Gerçek anlam:** sözcüğün akla gelen ilk anlamı (\"elini kesti\").","**Mecaz anlam:** gerçek anlamından uzaklaşmış anlam (\"sert bakış\", \"sıcak davranış\").","**Terim anlam:** bir bilim, sanat ya da meslek dalına özgü anlam (\"açı\", \"kesir\").","**Eş anlamlı** (siyah–kara), **zıt anlamlı** (uzun–kısa), **sesteş** (yüz: sayı / yüz: surat)."],
+    formul:[{ad:"Somut", ifade:"Beş duyudan biriyle algılanır: taş, ses"},{ad:"Soyut", ifade:"Duyularla algılanamaz: sevgi, umut"}],
+    kart:[["\"Sert konuştu\" sözünde \"sert\" hangi anlamda?","Mecaz anlam"],["\"Kara\" ile \"siyah\" arasındaki ilişki?","Eş anlamlı"],["\"Sevgi\" somut mu soyut mu?","Soyut"],["\"Yüz\" (sayı) ve \"yüz\" (surat) ilişkisi?","Sesteş (eş sesli)"],["Terim anlam nedir?","Bir bilim ya da meslek dalına özgü anlam"]],
+    test:[{q:"Aşağıdaki cümlelerin hangisinde \"sıcak\" sözcüğü mecaz anlamda kullanılmıştır?", s:{A:"Sıcak çorbayı yavaşça içti.",B:"Bize çok sıcak davrandılar.",C:"Odadaki sıcak hava bunalttı.",D:"Sıcak sudan elini hemen çekti.",E:"Fırından sıcak ekmek aldık."}, d:"B", c:"\"Sıcak davranmak\" **içten, samimi** davranmak demektir; sıcaklıkla ilgisi yoktur. Diğerlerinde gerçek anlam var."},
+      {q:"Aşağıdaki sözcüklerden hangisi soyut anlamlıdır?", s:{A:"Özlem",B:"Rüzgâr",C:"Koku",D:"Duman",E:"Gölge"}, d:"A", c:"**Özlem** duyularla algılanamaz. Rüzgâr hissedilir, koku koklanır, duman ve gölge görülür."},
+      {q:"Aşağıdaki sözcük çiftlerinden hangisi zıt anlamlıdır?", s:{A:"Cevap – yanıt",B:"Yaşlı – ihtiyar",C:"Cesur – korkak",D:"Okul – mektep",E:"Kırmızı – al"}, d:"C", c:"**Cesur – korkak** zıt anlamlıdır. Diğer çiftler eş anlamlıdır."}] },
+  "tar|Tarih ve Zaman": { vid:"n8TRsD_kWl4", kanal:"Tarihane", baslik:"Tarih ve Zaman · Tarih Bilimine Giriş · TYT Tarih",
+    ozet:["Tarih; geçmişteki olayları **yer ve zaman** belirterek, **neden-sonuç** ilişkisi içinde, belgelere dayanarak inceler.","Tarihte **deney ve gözlem yapılamaz**; olaylar bir daha aynı koşullarla yaşanmaz.","**Kaynaklar:** yazılı (kitabe, ferman, kronik) ve yazısız (çanak çömlek, silah, fosil).","**Takvimler:** Hicri (Ay yılı, 622 Hicret), Miladi (Güneş yılı), Celali (Melikşah dönemi, Güneş yılı)."],
+    formul:[{ad:"Yüzyıl bulma", ifade:"1453 → 14,53 → 15. yüzyıl"},{ad:"Yıl uzunluğu", ifade:"Güneş yılı ≈ 365 gün · Ay yılı ≈ 354 gün"}],
+    kart:[["1453 hangi yüzyıldadır?","15. yüzyıl"],["Hicri takvimin başlangıcı?","622, Hicret"],["Celali takvimi hangi hükümdar döneminde hazırlandı?","Melikşah (Büyük Selçuklu)"],["Tarihte neden deney yapılamaz?","Olaylar bir daha aynı koşullarla yaşanmaz"],["Kitabe yazılı mı yazısız kaynak mı?","Yazılı kaynak"]],
+    test:[{q:"1071 yılı hangi yüzyılın hangi çeyreğindedir?", s:{A:"10. yüzyılın son çeyreği",B:"11. yüzyılın ilk çeyreği",C:"11. yüzyılın üçüncü çeyreği",D:"11. yüzyılın son çeyreği",E:"12. yüzyılın ilk çeyreği"}, d:"C", c:"1071 → **11. yüzyıl** (1001–1100). Çeyrekler: 1001–1025, 1026–1050, **1051–1075**, 1076–1100 → üçüncü çeyrek."},
+      {q:"Aşağıdakilerden hangisi yazısız bir tarih kaynağıdır?", s:{A:"Çanak çömlek",B:"Kitabe",C:"Ferman",D:"Kronik",E:"Antlaşma metni"}, d:"A", c:"**Çanak çömlek** üzerinde yazı yoktur; diğerlerinin hepsi yazılı belgedir."},
+      {q:"Ay yılını esas alan takvim aşağıdakilerden hangisidir?", s:{A:"Celali",B:"Miladi",C:"Rumi",D:"On İki Hayvanlı Türk Takvimi",E:"Hicri"}, d:"E", c:"**Hicri** takvim Ay yılına göredir (yaklaşık 354 gün). Diğerleri Güneş yılını esas alır."}] }
+});
+["mat|Temel Kavramlar","mat|Rasyonel Sayılar","mat|Basit Eşitsizlikler","mat|Mutlak Değer"].forEach(k=>{ DERS_ICERIK[k].kanal = "Rehber Matematik"; });
+const OG_SIRALAR = [["mat","Matematik · İlk 12 Konu","Matematik"],["tr","Türkçe","Türkçe"],["fiz","Fizik","Fizik"],["kim","Kimya","Kimya"],["bio","Biyoloji","Biyoloji"],["tar","Tarih","Tarih"]];
+/* Demo: öğrenci biraz ilerlemiş görünsün (sadece demo modunda, bir kez) */
+function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("zk-demo")==="1"; }catch(e){} if(!demo || !S.me || og().tohum) return;
+  const t0 = today(), now = Date.now();
+  ogYaz(o=>{ o.tohum = 1;
+    o.ilerleme = {"mat|Basit Eşitsizlikler":{t:1394, d:3480, at:now-3600e3}, "mat|Temel Kavramlar":{t:4100, d:4100, at:now-2*864e5}, "fiz|Fizik Bilimine Giriş":{t:2950, d:2950, at:now-3*864e5}};
+    o.izleme = {[t0]:1500};
+    o.kartlar = {"mat|Temel Kavramlar":{0:{kutu:1,sonraki:t0},1:{kutu:0,sonraki:t0},2:{kutu:2,sonraki:gunSonra(5)},3:{kutu:1,sonraki:t0},4:{kutu:3,sonraki:gunSonra(20)}},
+      "mat|Rasyonel Sayılar":{0:{kutu:2,sonraki:gunSonra(4)},1:{kutu:0,sonraki:t0},2:{kutu:1,sonraki:t0},3:{kutu:2,sonraki:gunSonra(6)},4:{kutu:1,sonraki:gunSonra(1)}},
+      "fiz|Fizik Bilimine Giriş":{0:{kutu:1,sonraki:t0},1:{kutu:0,sonraki:t0},2:{kutu:2,sonraki:gunSonra(3)},3:{kutu:1,sonraki:t0},4:{kutu:2,sonraki:gunSonra(7)}}};
+    o.hata = [{k:"mat|Rasyonel Sayılar", i:1, at:now-864e5, sonraki:t0}, {k:"tar|Tarih ve Zaman", i:0, at:now-864e5, sonraki:t0}, {k:"mat|Temel Kavramlar", i:1, at:now-2*864e5, sonraki:gunSonra(3)}];
+    o.notlar = {"mat|Temel Kavramlar":[{t:312, m:"0 çift sayı ama pozitif değil!", at:now-2*864e5},{t:1260, m:"Ardışık sayılarda toplam = ortanca × adet", at:now-2*864e5}],
+      "fiz|Fizik Bilimine Giriş":[{t:540, m:"Ağırlık vektörel, kütle skaler", at:now-3*864e5}]};
+  });
+  setTimeout(()=>{ mutate(x=>{ ["mat|Temel Kavramlar","mat|Rasyonel Sayılar","fiz|Fizik Bilimine Giriş","tar|Tarih ve Zaman"].forEach(k=>{ topic(x,k).v = true; }); topic(x,"fiz|Basınç").y = 12; }); render(); }, 0); }
 const kalin = x => esc(x).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 const dkSn = t => { t = Math.max(0, Math.floor(t||0)); const h = Math.floor(t/3600), m = Math.floor(t%3600/60), sn = t%60; return (h? h+":"+String(m).padStart(2,"0") : m) + ":" + String(sn).padStart(2,"0"); };
 const OGK = () => "zk-ogren-" + (S.me||"x");
@@ -2297,7 +2350,7 @@ function haftaKonulari(s){ const h = ((s.plan||{})[curStart(s)]||{}).hedef||{}, 
 function vidKart(k, s, genis){ const c = DERS_ICERIK[k], t = (s.topics||{})[k]||{}, p = (og().ilerleme||{})[k], pct = p&&p.d ? Math.min(100, p.t/p.d*100) : 0;
   return `<button type="button" class="vk ${c?"":"yok"} ${genis?"genis":""}" ${c?`data-ders="${esc(k)}"`:"disabled"}>
     <span class="vkr">${c?`<img src="${thumb(c.vid)}" alt="" loading="lazy">`:`<i>🎬</i>`}${t.v?`<em class="vkok">✓ İzlendi</em>`:""}${c?`<span class="vkp">▶</span>`:""}${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span>
-    <span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:"Rehber Matematik"):"Video yakında"}</span></button>`; }
+    <span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)):"Video yakında"}</span></button>`; }
 function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   Object.entries(DERS_ICERIK).forEach(([k,c])=>{ const ks = (o.kartlar||{})[k]||{}, t = (s.topics||{})[k]||{};
     const due = c.kart.filter((_,i)=>{ const x = ks[i]; return x ? x.sonraki<=bugun : t.v; }).length; if(due) L.push({tip:"kart", k, n:due}); });
@@ -2305,6 +2358,7 @@ function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   cetele10(s).slice(0,3).forEach(c=>L.push({tip:"cetele", ad:c.n||c.ad||"", y:c.y}));
   return L; }
 function pOgren(s){
+  demoOgrenTohum();
   const o = og(), hk = haftaKonulari(s), devam = Object.entries(o.ilerleme||{}).filter(([k,p])=>DERS_ICERIK[k] && p.t>20 && (!p.d || p.t < p.d-30)).sort((a,b)=>b[1].at-a[1].at)[0];
   const tk = tekrarListesi(s), matSub = CURX().TYT.find(x=>x.k==="mat"), izlDk = Math.round(((o.izleme||{})[today()]||0)/60);
   const notSay = Object.values(o.notlar||{}).reduce((a,x)=>a+x.length,0), hataSay = (o.hata||[]).filter(h=>!h.tamam).length + soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length;
@@ -2319,8 +2373,10 @@ function pOgren(s){
         : `<button class="row" data-act="go" data-v="cetele"><span class="ri">📌</span><div><div class="rt">${esc(x.ad)}</div><div class="rs">Çetelede ${x.y} yanlış · konuyu tekrar et</div></div><span class="rx">${icon("chev","sm")}</span></button>`).join("")}</div>`
       : `<p class="muted small" style="margin:6px 0 0">Bugün tekrar edecek bir şey yok. Bir video izleyince o konunun kartları ve yanlışların burada sırayla karşına çıkar.</p>`}</div>
     ${hk.length?`<div class="card"><div class="sech"><h3>Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="vkrow">${hk.map(x=>vidKart(x.k, s)).join("")}</div></div>`:""}
-    <div class="card" id="og-videolar"><div class="sech"><h3>Matematik · İlk 12 Konu</h3><span class="faint small">Hocan: ${esc((hoca(s,"Matematik")||"Rehber Matematik").split("+")[0].trim())}</span></div><div class="vkrow">${matSub.t.map(n=>vidKart(tkey("mat",n), s)).join("")}</div>
-      <p class="faint small" style="margin:8px 0 0">Prototip: 4 konu dolu. Gerçek sürümde bütün dersler, her konuda senin hocanın videosu.</p></div>
+    <div id="og-videolar" class="ogsira">${OG_SIRALAR.map(([sk, ad, d],i)=>{ const sub = CURX().TYT.find(x=>x.k===sk); if(!sub) return ""; const L = sk==="mat" ? sub.t : sub.t.filter((n,j)=>j<5);
+      const ilk = L.map(n=>tkey(sk,n)).find(k=>DERS_ICERIK[k]), h = (hoca(s,d)||"").split("+")[0].trim() || (ilk?DERS_ICERIK[ilk].kanal:"");
+      return `<div class="card"><div class="sech"><h3>${esc(ad)}</h3>${h?`<span class="faint small">Hocan: ${esc(h)}</span>`:""}</div><div class="vkrow">${L.map(n=>vidKart(tkey(sk,n), s)).join("")}</div></div>`; }).join("")}
+      <p class="faint small" style="margin:-4px 4px 0">Prototip: her derste bir ya da birkaç konu dolu. Gerçek sürümde her konuda senin hocanın videosu.</p></div>
     <div class="sech" style="margin:6px 4px 0"><h3>Araçlarım</h3></div>
     <div class="ogarac">
       <button data-act="go" data-v="konular"><span>📚</span><b>Konu Takibi</b><small>%${Math.round(examPct(s,"TYT")*100)} TYT</small></button>
@@ -2420,7 +2476,7 @@ document.addEventListener("click", e=>{
 document.addEventListener("keydown", e=>{ if(e.key==="Enter" && e.target && e.target.id==="dk-not"){ e.preventDefault(); const b = document.querySelector('[data-dk="notkaydet"]'); if(b) b.click(); } });
 /* Ana sayfa: bugünün dersi */
 function bugunDersKart(s){ const k = haftaKonulari(s).map(x=>x.k).find(k=>DERS_ICERIK[k] && !((s.topics||{})[k]||{}).v); if(!k) return ""; const c = DERS_ICERIK[k];
-  return `<button type="button" class="card bgders" data-ders="${esc(k)}"><span class="vkr"><img src="${thumb(c.vid)}" alt="" loading="lazy"><span class="vkp">▶</span></span><span class="bgdt"><small>Bugünün dersi · koçunun hedefi</small><b>${esc(konuAdi(k))}</b><span class="faint small">Rehber Matematik · özet, test ve kartlarıyla</span></span></button>`; }
+  return `<button type="button" class="card bgders" data-ders="${esc(k)}"><span class="vkr"><img src="${thumb(c.vid)}" alt="" loading="lazy"><span class="vkp">▶</span></span><span class="bgdt"><small>Bugünün dersi · koçunun hedefi</small><b>${esc(konuAdi(k))}</b><span class="faint small">${esc(c.kanal)} · özet, test ve kartlarıyla</span></span></button>`; }
 
 function openSheet(kind, el){
   const s = st();
