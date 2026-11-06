@@ -1,0 +1,664 @@
+[
+ {
+  "id": "tytfiz-elektrik-0001",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Yükleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Özdeş iletken cisimlerin temasından sonraki yük dağılımını belirler.",
+  "tipId": "fz-el-yuk",
+  "tip": "Yüklü cisimlerin temasında yük paylaşımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Yalıtkan saplarla tutulan özdeş iletken X ve Y kürelerinden X’in yükü +10q, Y’nin yükü −4q’dur. Küreler birbirine dokundurulup yeniden ayrılıyor.\nBuna göre X küresinin son yükü kaç q’dur?",
+  "sekil": null,
+  "siklar": {
+   "A": "−4",
+   "B": "3",
+   "C": "6",
+   "D": "7",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "Y’nin ilk yükünü yazmış; temasta yük paylaşıldığını atlamış.",
+   "C": "Toplam yükü (+6q) ikiye bölmeyi unutmuş.",
+   "D": "Yükleri işaretsiz toplayıp (10 + 4) ÷ 2 almış; negatif yükü pozitif saymış.",
+   "E": "Yükleri işaretsiz toplamış ve paylaştırmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Temastan sonra X küresinin yükü.",
+  "bilgi": [
+   {
+    "ad": "Yük paylaşımı",
+    "ifade": "özdeş iletken kürelerde toplam yük korunur ve temastan sonra eşit paylaşılır: son yük = toplam yük ÷ 2. Örnek: +6q ve +2q → her biri +4q"
+   },
+   {
+    "ad": "Yüklerin toplanması",
+    "ifade": "yükler işaretleriyle toplanır: (+5q) + (−3q) = +2q"
+   }
+  ],
+  "ipuclari": [
+   "Temas sırasında toplam yük değişmez.",
+   "Önce iki yükü işaretleriyle topla.",
+   "Özdeş iletken küreler toplam yükü eşit paylaşır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam yük",
+    "aciklama": "Yükler işaretleriyle toplanır; temas sırasında yük yok olmaz.",
+    "islem": "(+10q) + (−4q) = +6q"
+   },
+   {
+    "baslik": "Eşit paylaştır",
+    "aciklama": "Küreler özdeş ve iletken olduğundan toplam yük ikiye bölünür.",
+    "islem": "+6q ÷ 2 = +3q"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Ayrıldıktan sonra her kürede +3q vardır.",
+    "islem": "X küresi: +3q"
+   }
+  ],
+  "puf": "Özdeş iletken kürelerde önce yükleri işaretiyle topla, sonra küre sayısına böl.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0001k",
+  "kaynakKart": "K-FZEL-01 (özdeş iletken kürelerin teması) · yeni yük değerleri, istenen X’in son yükü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0002",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Akımı, Potansiyel Farkı ve Direnç",
+  "k": "fiz|Elektrik",
+  "kazanim": "Telin direncinin uzunluk ve kesit alanıyla değişimini orantıyla hesaplar.",
+  "tipId": "fz-el-direnc",
+  "tip": "Telin direncini etkileyen etmenler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aynı maddeden yapılmış homojen bir telin uzunluğu ℓ, kesit alanı A iken direnci 6 Ω’dur.\nSıcaklık sabit tutulduğuna göre aynı maddeden yapılmış, uzunluğu 3ℓ ve kesit alanı 2A olan telin direnci kaç Ω olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "9",
+   "D": "18",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca kesit alanının etkisini (6 ÷ 2) hesaplamış; uzunluğu atlamış.",
+   "B": "Oranları ters yazmış: 6 × 2 ÷ 3.",
+   "D": "Yalnızca uzunluğun etkisini (6 × 3) hesaplamış; kesit alanını atlamış.",
+   "E": "Kesit alanı arttığında direncin de arttığını sanıp 6 × 3 × 2 almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yeni telin direnci (Ω).",
+  "bilgi": [
+   {
+    "ad": "Telin direnci",
+    "ifade": "R = ρ × ℓ ÷ A (ρ: maddeye ve sıcaklığa bağlı özdirenç). Uzunluk 2 katına çıkarsa R iki katına çıkar; kesit alanı 2 katına çıkarsa R yarıya iner"
+   }
+  ],
+  "ipuclari": [
+   "Direnç uzunlukla doğru, kesit alanıyla ters orantılıdır.",
+   "Uzunluk kaç kat oluyor, direnç buna göre değişir; alan için tersini düşün.",
+   "Önce uzunluğun, sonra alanın etkisini 6 Ω’a uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uzunluğun etkisi",
+    "aciklama": "Uzunluk 3 katına çıkınca direnç doğru orantılı olarak 3 katına çıkar.",
+    "islem": "6 Ω × 3 = 18 Ω"
+   },
+   {
+    "baslik": "Alanın etkisi",
+    "aciklama": "Kesit alanı 2 katına çıkınca direnç ters orantılı olarak yarıya iner.",
+    "islem": "18 Ω ÷ 2 = 9 Ω"
+   },
+   {
+    "baslik": "Kısaca",
+    "aciklama": "İki etki birlikte oran olarak uygulanır.",
+    "islem": "R = 6 × 3 ÷ 2 = 9 Ω"
+   }
+  ],
+  "puf": "Direnç için uzunluk oranını payda, kesit alanı oranını paydaya yaz: R′ = R × (ℓ′/ℓ) ÷ (A′/A).",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0002k",
+  "kaynakKart": "K-FZEL-02 (uzunluk ve kesit alanı oranları) · yeni oranlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0003",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Seri ve paralel bağlı dirençlerden oluşan devrenin eşdeğer direncini bulur.",
+  "tipId": "fz-el-es-direnc",
+  "tip": "Eşdeğer direnç",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki devrede R₁ = 4 Ω, R₂ = 12 Ω ve R₃ = 6 Ω’dur.\nBuna göre A ve B uçları arasındaki eşdeğer direnç kaç Ω’dur?",
+  "sekil": "<svg viewBox=\"0 0 330 154\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><circle cx=\"58\" cy=\"36\" r=\"3.5\" stroke-width=\"1.6\"/><circle cx=\"58\" cy=\"136\" r=\"3.5\" stroke-width=\"1.6\"/><text x=\"48.0\" y=\"40.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"48.0\" y=\"140.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><line x1=\"61.5\" y1=\"36.0\" x2=\"80.8\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(98.8,36.0) rotate(0)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"98.8\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₁</text><line x1=\"116.8\" y1=\"36.0\" x2=\"136.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"136.0\" x2=\"61.5\" y2=\"136.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"136.0\" y2=\"68.0\" stroke-width=\"1.6\"/><g transform=\"translate(136.0,86.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"152.0\" y=\"90.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₂</text><line x1=\"136.0\" y1=\"104.0\" x2=\"136.0\" y2=\"136.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"218.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"136.0\" x2=\"218.0\" y2=\"136.0\" stroke-width=\"1.6\"/><circle cx=\"136\" cy=\"36\" r=\"2.8\" style=\"fill:currentColor\"/><circle cx=\"136\" cy=\"136\" r=\"2.8\" style=\"fill:currentColor\"/><line x1=\"218.0\" y1=\"36.0\" x2=\"218.0\" y2=\"68.0\" stroke-width=\"1.6\"/><g transform=\"translate(218.0,86.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"234.0\" y=\"90.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₃</text><line x1=\"218.0\" y1=\"104.0\" x2=\"218.0\" y2=\"136.0\" stroke-width=\"1.6\"/></svg>",
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "8",
+   "D": "10",
+   "E": "22"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "Üç direnci de paralel sanıp 1/4 + 1/12 + 1/6 işlemini yapmış.",
+   "B": "Yalnızca paralel kolun eşdeğerini (4 Ω) yazmış; seri R₁’i eklememiş.",
+   "D": "R₁ ile paralel kolun yalnız bir direncini (4 + 6) toplamış.",
+   "E": "Bütün dirençleri seri sanıp toplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "A–B uçları arasındaki eşdeğer direnç.",
+  "bilgi": [
+   {
+    "ad": "Seri ve paralel bağlama",
+    "ifade": "seri: eşdeğer direnç R = R₁ + R₂, akım ortak · paralel: iki direnç için R = (R₁ × R₂) ÷ (R₁ + R₂), gerilim ortak. Örnek: 6 Ω ve 3 Ω paralel → 18 ÷ 9 = 2 Ω"
+   }
+  ],
+  "ipuclari": [
+   "Hangi dirençler aynı iki nokta arasına bağlı? Onlar paralel.",
+   "Önce paralel kolun eşdeğerini bul.",
+   "Bulduğun değeri seri bağlı dirençle topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paralel kolu bul",
+    "aciklama": "R₂ ve R₃ aynı iki nokta arasına bağlıdır, paraleldir.",
+    "islem": "R₂₃ = (12 × 6) ÷ (12 + 6) = 4 Ω"
+   },
+   {
+    "baslik": "Seri ekle",
+    "aciklama": "R₁ bu paralel grupla seridir.",
+    "islem": "R = 4 + 4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Eşdeğer direnç iki değerin toplamıdır.",
+    "islem": "R = 8 Ω"
+   }
+  ],
+  "puf": "Önce paralel grupları tek dirence indir, sonra seri olanları topla.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0003k",
+  "kaynakKart": "K-FZEL-03 (karma bağlama) · yeni ağ ve değerler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0004",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Karma devrede kol akımını ve uçlar arası gerilimi hesaplar.",
+  "tipId": "fz-el-akim-gerilim",
+  "tip": "Devrede akım ve gerilim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekildeki devrede üreteç ve ampermetre idealdir (ampermetrenin direnci ihmal edilir). R₁ = 4 Ω, R₂ = 6 Ω ve R₃ = 12 Ω’dur.\nBuna göre ampermetre kaç A’i gösterir?",
+  "sekil": "<svg viewBox=\"0 0 330 162\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"58.0\" y1=\"36.0\" x2=\"58.0\" y2=\"85.0\" stroke-width=\"1.6\"/><line x1=\"58.0\" y1=\"95.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"45\" y1=\"85.0\" x2=\"71\" y2=\"85.0\" stroke-width=\"2.4\"/><line x1=\"51\" y1=\"95.0\" x2=\"65\" y2=\"95.0\" stroke-width=\"3.4\"/><text x=\"75.0\" y=\"82.0\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">+</text><text x=\"41.0\" y=\"94.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">24 V</text><line x1=\"58.0\" y1=\"36.0\" x2=\"79.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(97.0,36.0) rotate(0)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"97.0\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₁</text><line x1=\"115.0\" y1=\"36.0\" x2=\"136.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"144.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"136.0\" y2=\"72.0\" stroke-width=\"1.6\"/><g transform=\"translate(136.0,90.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"152.0\" y=\"94.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₂</text><line x1=\"136.0\" y1=\"108.0\" x2=\"136.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"218.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"144.0\" x2=\"218.0\" y2=\"144.0\" stroke-width=\"1.6\"/><circle cx=\"136\" cy=\"36\" r=\"2.8\" style=\"fill:currentColor\"/><circle cx=\"136\" cy=\"144\" r=\"2.8\" style=\"fill:currentColor\"/><line x1=\"218.0\" y1=\"36.0\" x2=\"218.0\" y2=\"54.0\" stroke-width=\"1.6\"/><g transform=\"translate(218.0,72.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"234.0\" y=\"76.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₃</text><line x1=\"218.0\" y1=\"90.0\" x2=\"218.0\" y2=\"98.0\" stroke-width=\"1.6\"/><g transform=\"translate(218.0,108.0) rotate(90)\"><circle r=\"10\" stroke-width=\"1.6\"/></g><text x=\"218.0\" y=\"112.5\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><line x1=\"218.0\" y1=\"118.0\" x2=\"218.0\" y2=\"144.0\" stroke-width=\"1.6\"/></svg>",
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "3",
+   "D": "4",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1"
+  },
+  "celdiriciler": {
+   "B": "R₂ üzerinden geçen akımı (12 ÷ 6) ampermetrenin okuması sanmış.",
+   "C": "Ana koldaki akımı ampermetrenin okuması sanmış; ampermetre yalnız R₃ koludadır.",
+   "D": "24 V’u doğrudan R₂’ye uygulamış (24 ÷ 6).",
+   "E": "24 V’u yalnızca R₁’e uygulamış (24 ÷ 4); devrenin geri kalanını atlamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "R₃ koluna bağlı ampermetrenin okuması.",
+  "bilgi": [
+   {
+    "ad": "Ohm yasası",
+    "ifade": "V = I × R. Seri koldaki her elemandan aynı akım geçer; paralel kollarda uçlar arası gerilim aynıdır, akımlar toplanır. Örnek: 12 V’ta 4 Ω’dan 3 A geçer"
+   },
+   {
+    "ad": "Seri ve paralel bağlama",
+    "ifade": "seri: eşdeğer direnç R = R₁ + R₂, akım ortak · paralel: iki direnç için R = (R₁ × R₂) ÷ (R₁ + R₂), gerilim ortak. Örnek: 6 Ω ve 3 Ω paralel → 18 ÷ 9 = 2 Ω"
+   }
+  ],
+  "ipuclari": [
+   "Önce üretecin verdiği toplam akımı bul.",
+   "Paralel kolun uçları arasındaki gerilimi hesapla.",
+   "Ampermetre hangi koldan geçen akımı ölçüyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşdeğer direnç",
+    "aciklama": "R₂ ve R₃ paraleldir; R₁ ile seri bağlanır.",
+    "islem": "R₂₃ = (6 × 12) ÷ 18 = 4 Ω · R = 4 + 4 = 8 Ω"
+   },
+   {
+    "baslik": "Ana kol akımı",
+    "aciklama": "Üretecin verdiği akım toplam dirence bölünerek bulunur.",
+    "islem": "I = 24 ÷ 8 = 3 A"
+   },
+   {
+    "baslik": "Paralel uç gerilimi",
+    "aciklama": "R₁’den 3 A geçer; paralel kolun uçlarında kalan gerilim vardır.",
+    "islem": "V₁ = 3 × 4 = 12 V · V₂₃ = 24 − 12 = 12 V"
+   },
+   {
+    "baslik": "Ampermetre okuması",
+    "aciklama": "Ampermetre R₃ koldaki akımı ölçer.",
+    "islem": "I₃ = 12 ÷ 12 = 1 A"
+   }
+  ],
+  "puf": "Önce ana kol akımını, sonra paralel uç gerilimini bul; kol akımı bu gerilimin kol direncine bölümüdür.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0004k",
+  "kaynakKart": "K-FZEL-04 (paralel kolda akım) · yeni değerler, ampermetre paralel kolda",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0005",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Güç ve süreden elektrik enerjisini (kWh) ve bedelini hesaplar.",
+  "tipId": "fz-el-guc-enerji",
+  "tip": "Elektriksel güç ve enerji",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir evde her biri 100 W gücündeki 4 lamba günde 5 saat yanıyor. 1 kWh elektrik enerjisinin bedeli 2 TL’dir.\nBuna göre bu lambaların 30 günlük elektrik gideri kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "12",
+   "C": "60",
+   "D": "120",
+   "E": "1200"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca bir günün giderini hesaplamış; 30 günü atlamış.",
+   "C": "Harcanan enerjiyi (60 kWh) bulup birim bedelle çarpmayı unutmuş.",
+   "E": "100 W’ı 1 kW almış; watt–kilowatt dönüşümünü yanlış yapmış.",
+   "B": "100 W’ı 0,01 kW almış; watt–kilowatt dönüşümünü yanlış yapmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "30 günlük toplam elektrik gideri (TL).",
+  "bilgi": [
+   {
+    "ad": "Elektrik enerjisi",
+    "ifade": "E = P × t. Güç kW, süre saat alınırsa enerji kWh olur; 1 kW = 1000 W. Örnek: 500 W’lık cihaz 2 saatte 0,5 × 2 = 1 kWh harcar"
+   },
+   {
+    "ad": "Gider",
+    "ifade": "gider = harcanan kWh × 1 kWh’in bedeli"
+   }
+  ],
+  "ipuclari": [
+   "Enerji = güç × süre; kWh için gücü kW cinsinden yaz.",
+   "Önce bir günde harcanan toplam enerjiyi bul.",
+   "Enerjiyi gün sayısıyla, sonra birim bedelle çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gücü kW yap",
+    "aciklama": "Hesabı kWh cinsinden yapmak için watt, 1000’e bölünür.",
+    "islem": "100 W = 0,1 kW"
+   },
+   {
+    "baslik": "Günlük enerji",
+    "aciklama": "4 lambanın toplam gücü süreyle çarpılır.",
+    "islem": "E = 4 × 0,1 × 5 = 2 kWh"
+   },
+   {
+    "baslik": "30 günlük enerji",
+    "aciklama": "Günlük enerji gün sayısıyla çarpılır.",
+    "islem": "E = 2 × 30 = 60 kWh"
+   },
+   {
+    "baslik": "Gider",
+    "aciklama": "Enerji birim bedelle çarpılır.",
+    "islem": "60 × 2 = 120 TL"
+   }
+  ],
+  "puf": "Elektrik giderinde sıra: W → kW, kW × saat = kWh, kWh × birim bedel = TL.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0005k",
+  "kaynakKart": "K-FZEL-05 (kWh ve gider) · yeni cihazlar, süre ve birim bedel",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0006",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Seri devrede akımı bulup bir elemanın uçları arasındaki gerilimi hesaplar.",
+  "tipId": "fz-el-akim-gerilim",
+  "tip": "Devrede akım ve gerilim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki devrede üreteç ve voltmetre idealdir. R₁ = 2 Ω, R₂ = 4 Ω ve R₃ = 12 Ω’dur.\nBuna göre voltmetre kaç V’u gösterir?",
+  "sekil": "<svg viewBox=\"0 0 356 154\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"58.0\" y1=\"36.0\" x2=\"58.0\" y2=\"81.0\" stroke-width=\"1.6\"/><line x1=\"58.0\" y1=\"91.0\" x2=\"58.0\" y2=\"136.0\" stroke-width=\"1.6\"/><line x1=\"45\" y1=\"81.0\" x2=\"71\" y2=\"81.0\" stroke-width=\"2.4\"/><line x1=\"51\" y1=\"91.0\" x2=\"65\" y2=\"91.0\" stroke-width=\"3.4\"/><text x=\"75.0\" y=\"78.0\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">+</text><text x=\"41.0\" y=\"90.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">36 V</text><line x1=\"58.0\" y1=\"36.0\" x2=\"92.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(110.0,36.0) rotate(0)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"110.0\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₁</text><line x1=\"128.0\" y1=\"36.0\" x2=\"144.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(162.0,36.0) rotate(0)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"162.0\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₂</text><line x1=\"180.0\" y1=\"36.0\" x2=\"214.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"136.0\" x2=\"58.0\" y2=\"136.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"36.0\" x2=\"214.0\" y2=\"68.0\" stroke-width=\"1.6\"/><g transform=\"translate(214.0,86.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"230.0\" y=\"90.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₃</text><line x1=\"214.0\" y1=\"104.0\" x2=\"214.0\" y2=\"136.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"36.0\" x2=\"296.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"136.0\" x2=\"296.0\" y2=\"136.0\" stroke-width=\"1.6\"/><circle cx=\"214\" cy=\"36\" r=\"2.8\" style=\"fill:currentColor\"/><circle cx=\"214\" cy=\"136\" r=\"2.8\" style=\"fill:currentColor\"/><line x1=\"296.0\" y1=\"36.0\" x2=\"296.0\" y2=\"76.0\" stroke-width=\"1.6\"/><g transform=\"translate(296.0,86.0) rotate(90)\"><circle r=\"10\" stroke-width=\"1.6\"/></g><text x=\"296.0\" y=\"90.5\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">V</text><line x1=\"296.0\" y1=\"96.0\" x2=\"296.0\" y2=\"136.0\" stroke-width=\"1.6\"/></svg>",
+  "siklar": {
+   "A": "2",
+   "B": "8",
+   "C": "12",
+   "D": "18",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "Devredeki akımı (2 A) voltmetrenin okuması sanmış.",
+   "C": "R₃’ün direnç değerini ya da R₁–R₂ uçlarındaki gerilimi (12 V) okuma sanmış.",
+   "D": "Toplam direnci (18 Ω) gerilim değeri sanmış.",
+   "B": "R₂ uçlarındaki gerilimi (2 × 4) okuma sanmış; voltmetre R₃’tedir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "B": "dikkat"
+  },
+  "istenen": "R₃ direncinin uçlarına bağlı voltmetrenin okuması.",
+  "bilgi": [
+   {
+    "ad": "Ohm yasası",
+    "ifade": "V = I × R. Seri koldaki her elemandan aynı akım geçer; paralel kollarda uçlar arası gerilim aynıdır, akımlar toplanır. Örnek: 12 V’ta 4 Ω’dan 3 A geçer"
+   },
+   {
+    "ad": "Seri ve paralel bağlama",
+    "ifade": "seri: eşdeğer direnç R = R₁ + R₂, akım ortak · paralel: iki direnç için R = (R₁ × R₂) ÷ (R₁ + R₂), gerilim ortak. Örnek: 6 Ω ve 3 Ω paralel → 18 ÷ 9 = 2 Ω"
+   }
+  ],
+  "ipuclari": [
+   "Seri devrede her dirençten aynı akım geçer.",
+   "Toplam direnç ile üreteç geriliminden akımı bul.",
+   "Voltmetre, R₃’ün uçlarındaki gerilimi okur: V = I × R₃."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam direnç",
+    "aciklama": "Seri bağlı dirençler toplanır.",
+    "islem": "R = 2 + 4 + 12 = 18 Ω"
+   },
+   {
+    "baslik": "Devre akımı",
+    "aciklama": "Seri devrede akım her yerde aynıdır.",
+    "islem": "I = 36 ÷ 18 = 2 A"
+   },
+   {
+    "baslik": "Voltmetre okuması",
+    "aciklama": "Voltmetre R₃’ün uçlarındadır.",
+    "islem": "V = 2 × 12 = 24 V"
+   }
+  ],
+  "puf": "Seri devrede önce ortak akımı bul; bir elemanın gerilimi o akımın elemanın direnciyle çarpımıdır.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0006k",
+  "kaynakKart": "K-FZEL-06 (seri devrede voltmetre okuması) · yeni değerler, voltmetre R₃ uçlarında",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0007",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Anahtarın açılıp kapanmasıyla devrenin eşdeğer direncindeki ve akımdaki değişimi hesaplar.",
+  "tipId": "fz-el-anahtar-lamba",
+  "tip": "Anahtar ve lamba parlaklığı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 5,
+  "metin": "Şekildeki devrede üreteç ve ampermetre idealdir. R₁ = 2 Ω, R₂ = 3 Ω ve R₃ = 6 Ω’dur. S anahtarı açıkken devre dengeye ulaşmıştır.\nS anahtarı kapatılırsa ampermetre kaç A’i gösterir?",
+  "sekil": "<svg viewBox=\"0 0 356 162\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"58.0\" y1=\"36.0\" x2=\"58.0\" y2=\"85.0\" stroke-width=\"1.6\"/><line x1=\"58.0\" y1=\"95.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"45\" y1=\"85.0\" x2=\"71\" y2=\"85.0\" stroke-width=\"2.4\"/><line x1=\"51\" y1=\"95.0\" x2=\"65\" y2=\"95.0\" stroke-width=\"3.4\"/><text x=\"75.0\" y=\"82.0\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">+</text><text x=\"41.0\" y=\"94.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">24 V</text><line x1=\"58.0\" y1=\"36.0\" x2=\"92.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(110.0,36.0) rotate(0)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"110.0\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₁</text><line x1=\"128.0\" y1=\"36.0\" x2=\"152.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(162.0,36.0) rotate(0)\"><circle r=\"10\" stroke-width=\"1.6\"/></g><text x=\"162.0\" y=\"40.5\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><line x1=\"172.0\" y1=\"36.0\" x2=\"214.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"144.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"36.0\" x2=\"214.0\" y2=\"72.0\" stroke-width=\"1.6\"/><g transform=\"translate(214.0,90.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"230.0\" y=\"94.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₃</text><line x1=\"214.0\" y1=\"108.0\" x2=\"214.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"36.0\" x2=\"296.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"214.0\" y1=\"144.0\" x2=\"296.0\" y2=\"144.0\" stroke-width=\"1.6\"/><circle cx=\"214\" cy=\"36\" r=\"2.8\" style=\"fill:currentColor\"/><circle cx=\"214\" cy=\"144\" r=\"2.8\" style=\"fill:currentColor\"/><line x1=\"296.0\" y1=\"36.0\" x2=\"296.0\" y2=\"54.0\" stroke-width=\"1.6\"/><g transform=\"translate(296.0,72.0) rotate(90)\"><rect x=\"-18\" y=\"-6\" width=\"36\" height=\"12\" stroke-width=\"1.6\"/></g><text x=\"312.0\" y=\"76.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">R₂</text><line x1=\"296.0\" y1=\"90.0\" x2=\"296.0\" y2=\"94.0\" stroke-width=\"1.6\"/><g transform=\"translate(296.0,108.0) rotate(90)\"><circle cx=\"-14\" r=\"2\" stroke-width=\"1.4\"/><circle cx=\"14\" r=\"2\" stroke-width=\"1.4\"/><path d=\"M-14 0 L10 -14\" stroke-width=\"1.8\"/></g><text x=\"312.0\" y=\"112.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">S</text><line x1=\"296.0\" y1=\"122.0\" x2=\"296.0\" y2=\"144.0\" stroke-width=\"1.6\"/></svg>",
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "3",
+   "D": "4",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "R₃’ten geçen akımdaki azalmayı (3 A → 2 A) okuma sanmış.",
+   "B": "Kapalı durumda yalnız R₃’ten geçen akımı (2 A) okuma sanmış; ampermetre toplam akımı ölçer.",
+   "C": "Anahtar açıkken okunan değeri yazmış; S’nin kapanmasını hesaba katmamış.",
+   "D": "Kapalı durumda yalnız R₂ koluna giden akımı (4 A) okuma sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "S kapalıyken ampermetrenin okuması.",
+  "bilgi": [
+   {
+    "ad": "Ohm yasası",
+    "ifade": "V = I × R. Seri koldaki her elemandan aynı akım geçer; paralel kollarda uçlar arası gerilim aynıdır, akımlar toplanır. Örnek: 12 V’ta 4 Ω’dan 3 A geçer"
+   },
+   {
+    "ad": "Seri ve paralel bağlama",
+    "ifade": "seri: eşdeğer direnç R = R₁ + R₂, akım ortak · paralel: iki direnç için R = (R₁ × R₂) ÷ (R₁ + R₂), gerilim ortak. Örnek: 6 Ω ve 3 Ω paralel → 18 ÷ 9 = 2 Ω"
+   }
+  ],
+  "ipuclari": [
+   "Anahtar açıkken akımın hangi dirençlerden geçtiğini belirle.",
+   "Anahtar kapanınca R₂ ve R₃ paralel olur; yeni toplam direnci bul.",
+   "İki durumdaki akımı ayrı ayrı hesapla ve farkı al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "S açıkken",
+    "aciklama": "R₂ koluna akım gitmez; devrede yalnız R₁ ve R₃ vardır.",
+    "islem": "R = 2 + 6 = 8 Ω"
+   },
+   {
+    "baslik": "S açıkken akım",
+    "aciklama": "Ampermetre toplam akımı okur; bu, anahtar açıkken değerdir.",
+    "islem": "I₁ = 24 ÷ 8 = 3 A"
+   },
+   {
+    "baslik": "S kapalıyken direnç",
+    "aciklama": "R₂ ve R₃ paralel olur, R₁ ile seri kalır.",
+    "islem": "R₂₃ = (3 × 6) ÷ 9 = 2 Ω · R = 2 + 2 = 4 Ω"
+   },
+   {
+    "baslik": "S kapalıyken akım",
+    "aciklama": "Ampermetre toplam akımı okur.",
+    "islem": "I₂ = 24 ÷ 4 = 6 A"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Paralel uç gerilimi 12 V; kol akımları toplam akımı vermelidir.",
+    "islem": "V₂₃ = 6 × 2 = 12 V · I₃ + I₂ = 2 + 4 = 6 A"
+   }
+  ],
+  "puf": "Anahtarlı sorularda ilgili durumun toplam direncini yeniden bul; kol akımlarının toplamı ana akıma eşit olmalıdır.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0007k",
+  "kaynakKart": "K-FZEL-07 (anahtarın etkisi) · yeni değerler, istenen kapalı durum okuması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-elektrik-0008",
+  "ders": "TYT Fizik",
+  "konu": "Elektrik · Elektrik Devreleri",
+  "k": "fiz|Elektrik",
+  "kazanim": "Anahtar kapanınca lambaların akımındaki ve parlaklığındaki değişimi karşılaştırır.",
+  "tipId": "fz-el-anahtar-lamba",
+  "tip": "Anahtar ve lamba parlaklığı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Şekildeki devrede K, L ve M lambaları özdeştir; lambaların dirençleri sabit, üreteç idealdir. S anahtarı açıkken devre dengeye ulaşmıştır.\nS anahtarı kapatılırsa;\nI. K lambasının parlaklığı artar.\nII. L lambasının parlaklığı azalır.\nIII. M lambasının parlaklığı K lambasınınkinden fazla olur.\nifadelerinden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 162\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"58.0\" y1=\"36.0\" x2=\"58.0\" y2=\"85.0\" stroke-width=\"1.6\"/><line x1=\"58.0\" y1=\"95.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"45\" y1=\"85.0\" x2=\"71\" y2=\"85.0\" stroke-width=\"2.4\"/><line x1=\"51\" y1=\"95.0\" x2=\"65\" y2=\"95.0\" stroke-width=\"3.4\"/><text x=\"75.0\" y=\"82.0\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">+</text><text x=\"41.0\" y=\"94.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">V</text><line x1=\"58.0\" y1=\"36.0\" x2=\"87.0\" y2=\"36.0\" stroke-width=\"1.6\"/><g transform=\"translate(97.0,36.0) rotate(0)\"><circle r=\"10\" stroke-width=\"1.6\"/><path d=\"M-7 -7 L7 7 M-7 7 L7 -7\" stroke-width=\"1.4\"/></g><text x=\"97.0\" y=\"22.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">K</text><line x1=\"107.0\" y1=\"36.0\" x2=\"136.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"144.0\" x2=\"58.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"136.0\" y2=\"80.0\" stroke-width=\"1.6\"/><g transform=\"translate(136.0,90.0) rotate(90)\"><circle r=\"10\" stroke-width=\"1.6\"/><path d=\"M-7 -7 L7 7 M-7 7 L7 -7\" stroke-width=\"1.4\"/></g><text x=\"152.0\" y=\"94.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">L</text><line x1=\"136.0\" y1=\"100.0\" x2=\"136.0\" y2=\"144.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"36.0\" x2=\"218.0\" y2=\"36.0\" stroke-width=\"1.6\"/><line x1=\"136.0\" y1=\"144.0\" x2=\"218.0\" y2=\"144.0\" stroke-width=\"1.6\"/><circle cx=\"136\" cy=\"36\" r=\"2.8\" style=\"fill:currentColor\"/><circle cx=\"136\" cy=\"144\" r=\"2.8\" style=\"fill:currentColor\"/><line x1=\"218.0\" y1=\"36.0\" x2=\"218.0\" y2=\"62.0\" stroke-width=\"1.6\"/><g transform=\"translate(218.0,72.0) rotate(90)\"><circle r=\"10\" stroke-width=\"1.6\"/><path d=\"M-7 -7 L7 7 M-7 7 L7 -7\" stroke-width=\"1.4\"/></g><text x=\"234.0\" y=\"76.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">M</text><line x1=\"218.0\" y1=\"82.0\" x2=\"218.0\" y2=\"94.0\" stroke-width=\"1.6\"/><g transform=\"translate(218.0,108.0) rotate(90)\"><circle cx=\"-14\" r=\"2\" stroke-width=\"1.4\"/><circle cx=\"14\" r=\"2\" stroke-width=\"1.4\"/><path d=\"M-14 0 L10 -14\" stroke-width=\"1.8\"/></g><text x=\"234.0\" y=\"112.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">S</text><line x1=\"218.0\" y1=\"122.0\" x2=\"218.0\" y2=\"144.0\" stroke-width=\"1.6\"/></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "L’nin de paralel kolda akımının azaldığını görememiş.",
+   "C": "III’ü doğru sanmış; M ve L özdeş paralel kollardır, her birinin akımı K’nınkinin yarısıdır.",
+   "D": "Toplam direnç azaldığından K’nın akımının arttığını (I) atlamış.",
+   "E": "M’nin K’dan parlak olduğunu sanmış; K’dan geçen akım M ve L’ninkinin iki katıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan öncüllerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Lamba parlaklığı",
+    "ifade": "lambanın gücü P = I² × R; dirençleri sabit özdeş lambalarda akım ne kadar büyükse lamba o kadar parlaktır"
+   },
+   {
+    "ad": "Seri ve paralel bağlama",
+    "ifade": "seri: eşdeğer direnç R = R₁ + R₂, akım ortak · paralel: iki direnç için R = (R₁ × R₂) ÷ (R₁ + R₂), gerilim ortak. Örnek: 6 Ω ve 3 Ω paralel → 18 ÷ 9 = 2 Ω"
+   }
+  ],
+  "ipuclari": [
+   "Anahtar açıkken ve kapalıyken devrenin toplam direncini karşılaştır.",
+   "Parlaklık, lambadan geçen akımla artar. K’dan geçen akım değişti mi?",
+   "Kapalıyken K’nın akımı L ve M arasında nasıl paylaşılıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "S açıkken",
+    "aciklama": "Devrede yalnız K ve L seri bağlıdır; direnç R seçilirse toplam direnç 2R olur.",
+    "islem": "I = V ÷ 2R · K ve L’nin gücü eşit"
+   },
+   {
+    "baslik": "S kapalıyken",
+    "aciklama": "L ve M paralel olur: eşdeğeri R ÷ 2. K ile seri toplam direnç 1,5R olur.",
+    "islem": "R = R + R ÷ 2 = 3R ÷ 2 · I = 2V ÷ 3R"
+   },
+   {
+    "baslik": "K lambası",
+    "aciklama": "Toplam akım arttığından K’dan geçen akım artar; I doğru.",
+    "islem": "K: V ÷ 2R → 2V ÷ 3R (artar)"
+   },
+   {
+    "baslik": "L lambası",
+    "aciklama": "K’dan gelen akım L ve M’ye eşit bölünür; L’nin akımı V ÷ 3R olur ve ilk değerden küçüktür; II doğru.",
+    "islem": "L: V ÷ 2R → V ÷ 3R (azalır)"
+   },
+   {
+    "baslik": "M ve K",
+    "aciklama": "M’nin akımı L’ninkine eşittir ve K’nınkinin yarısıdır. M, K’dan sönük kalır; III yanlış.",
+    "islem": "M: V ÷ 3R, K: 2V ÷ 3R"
+   }
+  ],
+  "puf": "Anahtar kapanınca önce toplam akımı bul, sonra her lambadan geçen akımı yeniden hesaplayıp ilk haliyle karşılaştır.",
+  "kisaYol": null,
+  "kardes": "tytfiz-elektrik-0008k",
+  "kaynakKart": "K-FZEL-08 (anahtar sonrası lamba parlaklığı) · yeni bağlantı, öncüllü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

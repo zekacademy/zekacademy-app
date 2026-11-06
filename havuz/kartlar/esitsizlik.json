@@ -1,0 +1,113 @@
+{
+ "konu": "Basit Eşitsizlikler",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-ESZ-01",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Eşitsizlik Çözme",
+   "fikir": "Çift taraflı birinci dereceden eşitsizlik çözülür; aralıktaki tam sayılar sayılır, toplanır ya da en küçüğü/en büyüğü istenir.",
+   "tuzak": "Negatif katsayıya bölerken yönü çevirmemek; ≤ ile < uçlarını karıştırmak; adet ile toplamı karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "esz-cozum",
+   "tip": "Eşitsizlik çözme ve tam sayı değerleri",
+   "kaynak": "ÖSYM (Basit Eşitsizlikler) · 345 SB, 3D, Bilgi Sarmal"
+  },
+  {
+   "id": "K-ESZ-02",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Aralık",
+   "fikir": "İki değişkenin aralıkları verilir; ka ± mb ifadesinin aralığı katsayı ve işaret dikkate alınarak bulunur, tam sayı değerleri sayılır ya da en büyük değer sorulur.",
+   "tuzak": "Aralıkları taraf tarafa çıkarmak; −b’ye çevirirken uçları yer değiştirmemek; kesin eşitsizlikte uçları saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "esz-aralik",
+   "tip": "Aralıklardan ifadenin aralığı",
+   "kaynak": "ÖSYM (Aralık Kavramı, Basit Eşitsizlikler) · 345 SB (a² + b² en büyük tam değer) · 3D"
+  },
+  {
+   "id": "K-ESZ-03",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Sıralama",
+   "fikir": "Çarpım ve sıralama bilgilerinden sayıların işaretleri çıkarılır; öncüllerde ya da şıklarda kesinlikle doğru olan ifade bulunur.",
+   "tuzak": "Negatif sayıyla çarpınca/bölünce yön değiştirmeyi unutmak; “olabilir” ile “kesinlikle”yi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "esz-siralama",
+   "tip": "Eşitsizlikle işaret ve sıralama",
+   "kaynak": "ÖSYM 2018–2026 (a > ab > 2a > ac, kalori sıralaması) · 345 SB, Bilgi Sarmal"
+  },
+  {
+   "id": "K-ESZ-04",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Eşitsizlik Problemleri",
+   "fikir": "Bütçe, ücret ya da “alabiliyor ama alamıyor” bilgileri eşitsizliğe çevrilir; tam sayı koşuluyla en çok değer ya da değer sayısı bulunur.",
+   "tuzak": "Sabit ücreti düşmemek; ondalık sonucu yukarı yuvarlamak; iki koşulun kesişimini almamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "esz-problem",
+   "tip": "Eşitsizlik problemleri",
+   "kaynak": "ÖSYM (buzdolabı maliyeti, kâr–zarar eşitsizliği) · Bilgi Sarmal, Mert"
+  },
+  {
+   "id": "K-ESZ-05",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Aralık",
+   "fikir": "Sıfırı içeren bir aralıkta değişkenin karesi ile başka bir ifade birleştirilir; ifadenin en küçük/en büyük tam sayı değeri bulunur.",
+   "tuzak": "Karenin aralığını uçların karelerinden kurmak (0’ı atlamak); −b aralığını çevirmemek; uç değeri dahil etmek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "esz-kare",
+   "tip": "Kare içeren ifadenin aralığı",
+   "kaynak": "ÖSYM (Basit Eşitsizlikler) · 345 SB (a² − b², a² + b²) · 3D (a² + b² en büyük–en küçük)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "esz-cozum",
+   "ad": "Eşitsizlik çözme ve tam sayı değerleri",
+   "kartlar": [
+    "K-ESZ-01"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "esz-aralik",
+   "ad": "Aralıklardan ifadenin aralığı",
+   "kartlar": [
+    "K-ESZ-02"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "esz-siralama",
+   "ad": "Eşitsizlikle işaret ve sıralama",
+   "kartlar": [
+    "K-ESZ-03"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "esz-problem",
+   "ad": "Eşitsizlik problemleri",
+   "kartlar": [
+    "K-ESZ-04"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "esz-kare",
+   "ad": "Kare içeren ifadenin aralığı",
+   "kartlar": [
+    "K-ESZ-05"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  }
+ ]
+}

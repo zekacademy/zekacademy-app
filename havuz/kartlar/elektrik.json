@@ -1,0 +1,163 @@
+{
+ "konu": "Elektrik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZEL-01",
+   "konu": "Elektrik",
+   "alt": "Yük paylaşımı",
+   "fikir": "Özdeş iletken kürelerin teması: toplam yük işaretiyle bulunur ve eşit paylaşılır.",
+   "tuzak": "Yükleri işaretsiz toplamak; paylaştırmayı unutmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fz-el-yuk",
+   "tip": "Yüklü cisimlerin temasında yük paylaşımı",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-02",
+   "konu": "Elektrik",
+   "alt": "Direnç bağıntısı",
+   "fikir": "R = ρℓ/A: uzunlukla doğru, kesit alanıyla ters orantı; oranlar birlikte uygulanır.",
+   "tuzak": "Kesit alanını doğru orantılı almak; yalnız bir oranı kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fz-el-direnc",
+   "tip": "Telin direncini etkileyen etmenler",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-03",
+   "konu": "Elektrik",
+   "alt": "Karma bağlama",
+   "fikir": "Seri ve paralel dirençlerden oluşan ağın A–B arası eşdeğeri adım adım indirgenir.",
+   "tuzak": "Paralel kolu seri toplamak; bir kolu unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el-es-direnc",
+   "tip": "Eşdeğer direnç",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-04",
+   "konu": "Elektrik",
+   "alt": "Paralel kolda akım",
+   "fikir": "Ana kol akımı bulunur, paralel uçlardaki gerilimden kol akımları elde edilir.",
+   "tuzak": "Ana koldaki akımı kola yazmak; tüm gerilimi bir dirence uygulamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el-akim-gerilim",
+   "tip": "Devrede akım ve gerilim",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-05",
+   "konu": "Elektrik",
+   "alt": "Enerji bedeli",
+   "fikir": "E = P × t (kWh); gider = kWh × birim bedel; W–kW dönüşümü.",
+   "tuzak": "Watt’ı kW’a çevirmemek; süre ya da gün sayısını atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-el-guc-enerji",
+   "tip": "Elektriksel güç ve enerji",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-06",
+   "konu": "Elektrik",
+   "alt": "Seri devrede voltmetre",
+   "fikir": "Seri devrede akım ortak; voltmetre okuması I × R.",
+   "tuzak": "Üreteç gerilimini okuma sanmak; kalan gerilimi okumak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el-akim-gerilim",
+   "tip": "Devrede akım ve gerilim",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-07",
+   "konu": "Elektrik",
+   "alt": "Anahtarın etkisi",
+   "fikir": "Anahtar kapanınca eşdeğer direnç değişir; ampermetre değeri iki halde hesaplanıp karşılaştırılır.",
+   "tuzak": "Kapalı değeri artış sanmak; kollardaki akımı karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el-anahtar-lamba",
+   "tip": "Anahtar ve lamba parlaklığı",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-FZEL-08",
+   "konu": "Elektrik",
+   "alt": "Lamba parlaklığı",
+   "fikir": "Parlaklık P = I²R; anahtar sonrası her lambanın akımı yeniden bulunup öncüller sınanır.",
+   "tuzak": "Paralel kolda gerilimin düştüğünü görmemek; özdeş lambaları karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-el-anahtar-lamba",
+   "tip": "Anahtar ve lamba parlaklığı",
+   "kaynak": "ÖSYM 2019–2024 (elektrik devreleri) · MEB 9–10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-el-yuk",
+   "ad": "Yüklü cisimlerin temasında yük paylaşımı",
+   "kartlar": [
+    "K-FZEL-01"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el-direnc",
+   "ad": "Telin direncini etkileyen etmenler",
+   "kartlar": [
+    "K-FZEL-02"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el-es-direnc",
+   "ad": "Eşdeğer direnç",
+   "kartlar": [
+    "K-FZEL-03"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el-akim-gerilim",
+   "ad": "Devrede akım ve gerilim",
+   "kartlar": [
+    "K-FZEL-04",
+    "K-FZEL-06"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el-guc-enerji",
+   "ad": "Elektriksel güç ve enerji",
+   "kartlar": [
+    "K-FZEL-05"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el-anahtar-lamba",
+   "ad": "Anahtar ve lamba parlaklığı",
+   "kartlar": [
+    "K-FZEL-07",
+    "K-FZEL-08"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  }
+ ]
+}

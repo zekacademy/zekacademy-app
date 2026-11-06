@@ -1,0 +1,660 @@
+[
+ {
+  "id": "tytmat-esitsizlik-0001k",
+  "ana": "tytmat-esitsizlik-0001",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Çözme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Çift taraflı birinci dereceden eşitsizliği çözer; uç değerleri doğru yorumlayarak tam sayı çözümleri bulur.",
+  "tipId": "esz-cozum",
+  "tip": "Eşitsizlik çözme ve tam sayı değerleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "x bir tam sayıdır.\n−5 < 3x + 1 ≤ 10\nolduğuna göre x’in alabileceği en küçük değer kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−5",
+   "B": "−2",
+   "C": "−1",
+   "D": "0",
+   "E": "3"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "−1"
+  },
+  "celdiriciler": {
+   "A": "3’e bölmeyi unutup −6 < x almak.",
+   "B": "−2’yi çözüm sanmak; x > −2 kesin eşitsizlik, −2 dahil değil.",
+   "D": "Negatif tam sayıları atlamak; −1 de bir tam sayıdır ve −2’den büyüktür.",
+   "E": "3, x’in en büyük değeri; soru en küçüğü soruyor."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "x’in en küçük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Uç değerler",
+    "ifade": "< ve > uç değeri almaz, ≤ ve ≥ alır. Örnek: 2 ≤ x < 5 için x tam sayıları 2, 3, 4"
+   }
+  ],
+  "ipuclari": [
+   "Her taraftan 1 çıkar.",
+   "Her tarafı 3’e böl.",
+   "Sol uç kesin (<); bu uçtan büyük ilk tam sayıyı seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "1 çıkar",
+    "aciklama": "Ortadaki +1’i yok et.",
+    "islem": "−5 − 1 < 3x ≤ 10 − 1 ⇒ −6 < 3x ≤ 9"
+   },
+   {
+    "baslik": "3’e böl",
+    "aciklama": "Pozitif sayıya bölünce yön korunur.",
+    "islem": "−2 < x ≤ 3",
+    "gorsel": "<svg viewBox=\"0 0 330 82\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−3</text><line x1=\"60.0\" y1=\"30\" x2=\"60.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"60.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−2</text><line x1=\"102.0\" y1=\"30\" x2=\"102.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"102.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">−1</text><line x1=\"144.0\" y1=\"30\" x2=\"144.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"144.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"186.0\" y1=\"30\" x2=\"186.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"186.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"228.0\" y1=\"30\" x2=\"228.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"228.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"270.0\" y1=\"30\" x2=\"270.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"270.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"60.0\" y1=\"34\" x2=\"270.0\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"60.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:none\"/><circle cx=\"270.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"102.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"144.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"186.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"228.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"270.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"165.0\" y=\"72.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">x = −1, 0, 1, 2, 3</text></svg>"
+   },
+   {
+    "baslik": "En küçük",
+    "aciklama": "−2 dahil değil; ondan büyük ilk tam sayı.",
+    "islem": "x = −1"
+   }
+  ],
+  "puf": "Kesin eşitsizlikte (<) uç değer çözüm değildir; en küçük çözüm ondan büyük ilk tam sayıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-01 (çift taraflı eşitsizlik, tam sayı çözümler) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0002k",
+  "ana": "tytmat-esitsizlik-0002",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Problemleri",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Sabit ve birim ücretli bir harcamayı eşitsizlikle ifade eder; tam sayı koşuluyla en büyük değeri bulur.",
+  "tipId": "esz-problem",
+  "tip": "Eşitsizlik problemleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir öğrenci kırtasiyeden 85 TL’lik bir okul çantası ve tanesi 18 TL olan defterlerden birkaç tane alacaktır.\nÖğrencinin harcaması 300 TL’yi geçmeyeceğine göre en çok kaç defter alabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "12",
+   "C": "16",
+   "D": "17",
+   "E": "21"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "B": "11,9…’u yukarı yuvarlamak; 12 defterle tutar 301 TL olur.",
+   "C": "Çantanın fiyatını düşmeden 300 ÷ 18 hesaplamak.",
+   "D": "Çantayı düşmeden hesaplayıp yukarı yuvarlamak.",
+   "E": "85 TL’yi çıkarmak yerine eklemek: 385 ÷ 18."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Alınabilecek en çok defter sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bütçe eşitsizliği",
+    "ifade": "harcama bütçeyi geçemez: harcama ≤ bütçe. Örnek: 20 + 6x ≤ 50 ⇒ x ≤ 5"
+   }
+  ],
+  "ipuclari": [
+   "x defter için toplam tutarı yaz.",
+   "Tutar 300 TL’yi geçmemeli.",
+   "Defter sayısı tam sayı; uygun yuvarlamayı yap."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitsizlik",
+    "aciklama": "Çanta + x defter ≤ 300.",
+    "islem": "85 + 18x ≤ 300"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "85’i çıkar, 18’e böl.",
+    "islem": "18x ≤ 215 ⇒ x ≤ 215/18 ≈ 11,9"
+   },
+   {
+    "baslik": "Tam sayı",
+    "aciklama": "11,9’dan büyük olmayan en büyük tam sayı.",
+    "islem": "x = 11 · 85 + 18 × 11 = 283 ≤ 300 ✓"
+   }
+  ],
+  "puf": "Sabit harcamayı önce bütçeden düş, kalanı birim fiyata böl ve aşağı yuvarla.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-04 (bütçe eşitsizliği) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0003k",
+  "ana": "tytmat-esitsizlik-0003",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralık",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "İki değişkenin aralığından ka − mb ifadesinin aralığını bulur ve alabileceği tam sayı değerlerini sayar.",
+  "tipId": "esz-aralik",
+  "tip": "Aralıklardan ifadenin aralığı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a ve b gerçel sayılardır.\n−2 < a < 4 ve −3 < b < 1\nolduğuna göre a − 3b ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "6",
+   "C": "8",
+   "D": "12",
+   "E": "13"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "a ile b’nin en büyük değerlerini (4 ve 1) koyup 4 − 3 = 1’den küçük tam sayı almak; b küçüldükçe ifade büyür.",
+   "B": "−3b’nin aralığını çevirmeden (−9, 3) almak; negatifle çarpınca yön değişir.",
+   "C": "a’yı hesaba katmadan yalnız −3b < 9’dan en büyük tam sayıyı almak.",
+   "E": "Uç değeri almak; a − 3b < 13 kesin, 13’e ulaşılamaz."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "a − 3b’nin en büyük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Aralıkları birleştirme",
+    "ifade": "aynı yönlü eşitsizlikler taraf tarafa toplanır ama çıkarılmaz; a − b için önce −b’nin aralığı bulunur. Örnek: 1 < b < 5 ⇒ −5 < −b < −1"
+   },
+   {
+    "ad": "Negatif sayıyla çarpma",
+    "ifade": "eşitsizliğin iki yanı negatif bir sayıyla çarpılır ya da bölünürse yön değişir. Örnek: −2x < 6 ⇒ x > −3"
+   }
+  ],
+  "ipuclari": [
+   "b’nin aralığını −3 ile çarp; yön ne olur?",
+   "a’nın aralığı ile −3b’nin aralığını taraf tarafa topla.",
+   "Üst sınır dahil değilse en büyük tam değer ondan 1 küçüktür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "−3b’nin aralığı",
+    "aciklama": "−3 ile çarpınca yön değişir.",
+    "islem": "−3 < b < 1 ⇒ −3 < −3b < 9"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "a’nın aralığı ile topla.",
+    "islem": "−2 + (−3) < a − 3b < 4 + 9 ⇒ −5 < a − 3b < 13"
+   },
+   {
+    "baslik": "En büyük tam değer",
+    "aciklama": "13 dahil değil.",
+    "islem": "12"
+   }
+  ],
+  "puf": "Negatif katsayılı terimin aralığını çevirmeyi unutma; en büyük değeri, çıkarılan terimin en küçük olduğu yer verir.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-02 (aralıktan ifade aralığı) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0004k",
+  "ana": "tytmat-esitsizlik-0004",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Sıralama",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Verilen sıralamadan çarpma ve bölmede eşitsizliğin yönünü belirler; kesinlikle doğru olan öncülleri seçer.",
+  "tipId": "esz-siralama",
+  "tip": "Eşitsizlikle işaret ve sıralama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "x, y ve z gerçel sayılar olmak üzere\nx < y < 0 < z\nolduğu biliniyor.\nBuna göre\nI. x · z < y · z\nII. x/y > 1\nIII. x + z < 0\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’yi elemek: x < y < 0 iken iki tarafı negatif y’ye bölünce yön değişir, x/y > 1 olur (−4/−2 = 2).",
+   "B": "III kesin değil: x = −5, z = 10 için x + z = 5 > 0.",
+   "D": "III’ü kesin sanmak (x = −5, z = 10 için x + z > 0) ve I’i atlamak.",
+   "E": "III’ü kesin sanmak; z büyükse x + z pozitif olur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Her durumda doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Negatif sayıyla çarpma",
+    "ifade": "eşitsizliğin iki yanı negatif bir sayıyla çarpılır ya da bölünürse yön değişir. Örnek: −2x < 6 ⇒ x > −3"
+   },
+   {
+    "ad": "Kesinlikle doğru",
+    "ifade": "ifade verilen koşullardaki her sayı için doğru olmalıdır; tek bir karşı örnek ifadeyi eler"
+   }
+  ],
+  "ipuclari": [
+   "I için x < y’yi pozitif z ile çarp.",
+   "II için x < y’nin iki tarafını negatif y’ye böl.",
+   "III için z’yi büyük seçen bir örnek dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. öncül",
+    "aciklama": "z > 0; pozitifle çarpınca yön korunur.",
+    "islem": "x × z < y × z ✓"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "y < 0; negatife bölünce yön değişir.",
+    "islem": "x/y > y/y = 1 ✓"
+   },
+   {
+    "baslik": "III. öncül",
+    "aciklama": "Karşı örnek: x = −5, y = −1, z = 10.",
+    "islem": "x + z = 5 > 0 ✗"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve II her durumda doğru.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Bölme de çarpma gibidir: negatif bir sayıya bölünce eşitsizlik yön değiştirir.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-03 (sıralamadan kesin yargı) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0005k",
+  "ana": "tytmat-esitsizlik-0005",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Çözme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Negatif katsayılı çift taraflı eşitsizliği yön değiştirerek çözer; tam sayı çözümlerin toplamını bulur.",
+  "tipId": "esz-cozum",
+  "tip": "Eşitsizlik çözme ve tam sayı değerleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "−4 ≤ 8 − 2x < 6\neşitsizliğini sağlayan x tam sayılarının toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "14",
+   "C": "20",
+   "D": "21",
+   "E": "27"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "5, çözüm olan tam sayıların sayısı; soru toplamı soruyor.",
+   "B": "6’yı almamak; x ≤ 6 olduğundan 6 dahildir.",
+   "D": "1’i de eklemek; x > 1 kesin eşitsizlik.",
+   "E": "−4 − 8’i −14 hesaplayıp x ≤ 7 bulmak; −4 − 8 = −12."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Eşitsizliği sağlayan tam sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Negatif sayıyla çarpma",
+    "ifade": "eşitsizliğin iki yanı negatif bir sayıyla çarpılır ya da bölünürse yön değişir. Örnek: −2x < 6 ⇒ x > −3"
+   },
+   {
+    "ad": "Uç değerler",
+    "ifade": "< ve > uç değeri almaz, ≤ ve ≥ alır. Örnek: 2 ≤ x < 5 için x tam sayıları 2, 3, 4"
+   }
+  ],
+  "ipuclari": [
+   "Her taraftan 8 çıkar.",
+   "−2’ye bölerken yönleri çevir.",
+   "Uçlardan hangisinin dahil olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "8 çıkar",
+    "aciklama": "Ortadaki 8’i yok et.",
+    "islem": "−12 ≤ −2x < −2"
+   },
+   {
+    "baslik": "−2’ye böl",
+    "aciklama": "Negatife bölünce yönler değişir.",
+    "islem": "6 ≥ x > 1 ⇒ 1 < x ≤ 6",
+    "gorsel": "<svg viewBox=\"0 0 330 82\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10\" y1=\"34\" x2=\"320\" y2=\"34\" stroke-width=\"1.2\" opacity=\".6\"/><path d=\"M320 34 l-6 -4 v8 z\" style=\"fill:currentColor;stroke:none\" opacity=\".6\"/><line x1=\"18.0\" y1=\"30\" x2=\"18.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"18.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"60.0\" y1=\"30\" x2=\"60.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"60.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"102.0\" y1=\"30\" x2=\"102.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"102.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"144.0\" y1=\"30\" x2=\"144.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"144.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"186.0\" y1=\"30\" x2=\"186.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"186.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"228.0\" y1=\"30\" x2=\"228.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"228.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">5</text><line x1=\"270.0\" y1=\"30\" x2=\"270.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"270.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"312.0\" y1=\"30\" x2=\"312.0\" y2=\"38\" stroke-width=\"1\" opacity=\".6\"/><text x=\"312.0\" y=\"52.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">7</text><line x1=\"60.0\" y1=\"34\" x2=\"270.0\" y2=\"34\" stroke-width=\"4\" style=\"stroke:var(--acc,#16A34A)\" opacity=\".55\"/><circle cx=\"60.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:none\"/><circle cx=\"270.0\" cy=\"34\" r=\"4.5\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A);fill:var(--acc,#16A34A)\"/><circle cx=\"102.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"144.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"186.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"228.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"270.0\" cy=\"23\" r=\"3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"165.0\" y=\"72.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">x = 2, 3, 4, 5, 6</text></svg>"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Tam sayı çözümleri topla.",
+    "islem": "2 + 3 + 4 + 5 + 6 = 20"
+   }
+  ],
+  "puf": "Yön değiştirdikten sonra eşitsizliği küçükten büyüğe yeniden yaz; uçları okumak kolaylaşır.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-01 (çift taraflı eşitsizlik) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0006k",
+  "ana": "tytmat-esitsizlik-0006",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Problemleri",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "“Alabiliyor ama alamıyor” bilgilerini çift taraflı eşitsizliğe çevirir; iki koşulun kesişimindeki tam sayıları sayar.",
+  "tipId": "esz-problem",
+  "tip": "Eşitsizlik problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Can’ın parasıyla tanesi 24 TL olan sinema biletlerinden 5 tane alınabiliyor ancak 6 tane alınamıyor. Aynı parayla tanesi 35 TL olan menülerden ise 3 tane alınabiliyor ancak 4 tane alınamıyor.\nCan’ın parası TL cinsinden bir tam sayı olduğuna göre parasının alabileceği en büyük değer ile en küçük değerin farkı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "19",
+   "B": "20",
+   "C": "23",
+   "D": "24",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "19"
+  },
+  "celdiriciler": {
+   "B": "20, paranın alabileceği değerlerin sayısı; soru en büyük ile en küçük değerin farkını soruyor.",
+   "C": "Menü koşulunu kullanmayıp 143 − 120 almak.",
+   "D": "Sınırları dahil edip 144 − 120 almak; 144 TL ile 6 bilet alınabilir.",
+   "E": "Yalnız menü koşulunu kullanıp 140 − 105 almak."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Paranın en büyük ve en küçük değerinin farkı.",
+  "bilgi": [
+   {
+    "ad": "Alabilir ama alamaz",
+    "ifade": "n tane alınabiliyor, n + 1 tane alınamıyorsa: n × fiyat ≤ para < (n + 1) × fiyat. Örnek: 12 TL’likten 4 tane ⇒ 48 ≤ para < 60"
+   },
+   {
+    "ad": "Uç değerler",
+    "ifade": "< ve > uç değeri almaz, ≤ ve ≥ alır. Örnek: 2 ≤ x < 5 için x tam sayıları 2, 3, 4"
+   }
+  ],
+  "ipuclari": [
+   "Bilet koşulunu çift taraflı eşitsizlik olarak yaz.",
+   "Menü koşulunu da yaz.",
+   "Ortak aralığın en küçük ve en büyük tam sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilet koşulu",
+    "aciklama": "5 bilet alınabiliyor, 6 alınamıyor.",
+    "islem": "120 ≤ p < 144"
+   },
+   {
+    "baslik": "Menü koşulu",
+    "aciklama": "3 menü alınabiliyor, 4 alınamıyor.",
+    "islem": "105 ≤ p < 140"
+   },
+   {
+    "baslik": "Ortak kısım",
+    "aciklama": "İkisi birlikte.",
+    "islem": "120 ≤ p < 140 ⇒ en küçük 120, en büyük 139"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "En büyük − en küçük.",
+    "islem": "139 − 120 = 19"
+   }
+  ],
+  "puf": "Kesin üst sınırda (<) en büyük tam değer sınırdan 1 eksiktir.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-04 (alabilir–alamaz bilgisi) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0007k",
+  "ana": "tytmat-esitsizlik-0007",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralık",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Sıfırı içeren bir aralıkta karenin aralığını doğru kurar; fark ifadesinin en küçük tam sayı değerini bulur.",
+  "tipId": "esz-kare",
+  "tip": "Kare içeren ifadenin aralığı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "−5 < a < 2 ve −1 < b < 3 olmak üzere a ve b gerçel sayılardır.\nBuna göre b − a² ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−23",
+   "B": "−2",
+   "C": "1",
+   "D": "2",
+   "E": "3"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "a²’nin en büyük değerini kullanıp 3 − 25’ten aşağı inmek; ifadeyi büyütmek için a² en küçük olmalı.",
+   "B": "a²’nin aralığını uçların karelerinden (4, 25) kurmak; a = 0 olabilir.",
+   "C": "a²’nin en küçük değerini 1 sanmak; a = 0 için a² = 0.",
+   "E": "Uç değeri almak; b − a² < 3 kesin, 3’e ulaşılamaz."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "b − a²’nin en büyük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Karenin aralığı",
+    "ifade": "aralık 0’ı içeriyorsa kare 0’dan başlar; üst sınır, uçların karelerinden büyük olanıdır. Örnek: −2 < a < 1 ⇒ 0 ≤ a² < 4"
+   },
+   {
+    "ad": "Aralıkları birleştirme",
+    "ifade": "aynı yönlü eşitsizlikler taraf tarafa toplanır ama çıkarılmaz; a − b için önce −b’nin aralığı bulunur. Örnek: 1 < b < 5 ⇒ −5 < −b < −1"
+   },
+   {
+    "ad": "Uç değerler",
+    "ifade": "< ve > uç değeri almaz, ≤ ve ≥ alır. Örnek: 2 ≤ x < 5 için x tam sayıları 2, 3, 4"
+   }
+  ],
+  "ipuclari": [
+   "a’nın aralığı 0’ı içeriyor; a² en az kaç?",
+   "−a²’nin aralığını bul (yön değişir).",
+   "b ile −a²’nin aralıklarını topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "a²’nin aralığı",
+    "aciklama": "a, 0’dan geçiyor. Üst sınır (−5)² = 25.",
+    "islem": "0 ≤ a² < 25"
+   },
+   {
+    "baslik": "−a²’nin aralığı",
+    "aciklama": "−1 ile çarpınca yön değişir.",
+    "islem": "−25 < −a² ≤ 0"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "b ile taraf tarafa topla.",
+    "islem": "−1 + (−25) < b − a² < 3 + 0 ⇒ −26 < b − a² < 3"
+   },
+   {
+    "baslik": "En büyük tam değer",
+    "aciklama": "3 dahil değil. Örneğin a = 0, b = 2.",
+    "islem": "2 − 0 = 2 ✓"
+   }
+  ],
+  "puf": "Bir kareyi çıkarırken ifade en büyük, kare 0 iken olur; aralık 0’ı içeriyorsa bunu kullan.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-05 (kare içeren ifadenin aralığı) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitsizlik-0008k",
+  "ana": "tytmat-esitsizlik-0008",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Sıralama",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Çarpımların işaretinden ve bir sıralamadan sayıların işaretlerini durum ayırarak belirler; kesinlikle doğru ifadeyi seçer.",
+  "tipId": "esz-siralama",
+  "tip": "Eşitsizlikle işaret ve sıralama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a, b ve c sıfırdan farklı gerçel sayılardır.\na · b < 0\na · c > 0\nb > c\nolduğuna göre aşağıdakilerden hangisi her zaman doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "a < c",
+   "B": "b + c > 0",
+   "C": "a · b > c",
+   "D": "a · c > b",
+   "E": "a + c < b"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "a + c < b"
+  },
+  "celdiriciler": {
+   "A": "a ile c’nin ikisi de negatif ama sıraları belli değil: a = −1, c = −2.",
+   "B": "b + c’nin işareti sayılara bağlı: b = 1, c = −3 için negatif.",
+   "C": "a · b negatif ama c’den küçük olabilir: a = −5, b = 2, c = −1 için −10 < −1.",
+   "D": "a · c pozitif ama b’den küçük olabilir: a = c = −1, b = 5 için 1 < 5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Her zaman doğru olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Çarpımın işareti",
+    "ifade": "aynı işaretli iki sayının çarpımı pozitif, zıt işaretli iki sayının çarpımı negatiftir. Örnek: (−2) × (−3) = 6 · (−2) × 3 = −6"
+   },
+   {
+    "ad": "Kesinlikle doğru",
+    "ifade": "ifade verilen koşullardaki her sayı için doğru olmalıdır; tek bir karşı örnek ifadeyi eler"
+   }
+  ],
+  "ipuclari": [
+   "a · b < 0 ve a · c > 0 ise b ile c’nin işaretleri hakkında ne söylenir?",
+   "b > c bilgisiyle b’nin ve c’nin işaretini bul; sonra a’nınkini.",
+   "İki negatif sayının toplamı ile bir pozitif sayıyı karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpımlardan",
+    "aciklama": "a ile b zıt, a ile c aynı işaretli.",
+    "islem": "b ile c zıt işaretli"
+   },
+   {
+    "baslik": "Sıralamadan",
+    "aciklama": "Zıt işaretlilerden büyük olan pozitif; b > c.",
+    "islem": "b > 0 · c < 0"
+   },
+   {
+    "baslik": "a’nın işareti",
+    "aciklama": "a, c ile aynı işaretli.",
+    "islem": "a < 0"
+   },
+   {
+    "baslik": "Şıkları dene",
+    "aciklama": "a + c iki negatifin toplamı, negatif; b pozitif. Diğerleri için karşı örnek var.",
+    "islem": "a + c < 0 < b ✓"
+   }
+  ],
+  "puf": "Önce işaretleri kesinleştir, sonra her şıkkı ya kanıtla ya da karşı örnekle ele.",
+  "kisaYol": null,
+  "kaynakKart": "K-ESZ-03 (işaret çıkarımı + kesin yargı) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
