@@ -44,7 +44,11 @@ page=f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{{--bg:#f6f7f5;--fg:#1d2420;--mut:#5d6b63;--card:#fff;--line:#dfe4e0;--acc:#1f8a5b;--accbg:#e6f4ec}}
-@media(prefers-color-scheme:dark){{:root{{--bg:#121614;--fg:#e8ece9;--mut:#9aa8a0;--card:#1b211e;--line:#2c3631;--acc:#4cc38a;--accbg:#18382a}}}}
+:root[data-tema=koyu]{{--bg:#121614;--fg:#e8ece9;--mut:#9aa8a0;--card:#1b211e;--line:#2c3631;--acc:#4cc38a;--accbg:#18382a}}
+.bas{{display:flex;align-items:flex-start;gap:12px}}.bas h1{{flex:1}}
+.tema{{flex:none;display:flex;border:1.5px solid var(--line);border-radius:999px;padding:3px;background:var(--card);margin-top:4px}}
+.tema button{{border:0;background:none;color:var(--mut);font:600 13px "Plus Jakarta Sans",system-ui,sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer}}
+.tema button[aria-pressed=true]{{background:var(--fg);color:var(--card)}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:500 16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}}
 main{{max-width:760px;margin:0 auto;padding:20px 14px 80px}}h1{{font-size:1.35rem;margin:.2em 0}}.lead{{color:var(--mut);margin:0 0 18px}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}}
@@ -93,11 +97,14 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .puf b{{display:block;color:#F5C04A;font-size:13px;margin-bottom:2px}}
 .ipd{{margin-top:12px}}.ipd summary{{font-size:14px}}.ipl{{margin:6px 0 0;padding-left:20px;font-size:15px;color:var(--mut)}}.ipl li+li{{margin-top:4px}}
 </style></head><body><main>
-<h1>Pilot · Parti 1 — Sayı Kümeleri (12 soru)</h1>
+<div class="bas"><h1>Pilot · Parti 1 — Sayı Kümeleri (12 soru)</h1><div class="tema" role="group" aria-label="Tema"><button data-t="acik" aria-pressed="true">Açık</button><button data-t="koyu" aria-pressed="false">Koyu</button></div></div>
 <p class="lead">Her soru kodla doğrulandı (cevap yeniden hesaplandı, gerekenlerde tüm olasılıklar tarandı). Her karta Onay / Düzeltilsin / At işaretle, istersen not yaz; en alttaki düğmeyle kararlarını kopyalayıp sohbete yapıştır.</p>
 {''.join(cards)}
 <div class="alt"><span id="say">0 / {len(Q)} işaretlendi</span><button id="kop">Kararları kopyala</button></div>
 </main><script>
+(function(){{let t='acik';try{{t=localStorage.getItem('pilot-tema')||'acik'}}catch(e){{}}
+const uygula=x=>{{document.documentElement.dataset.tema=x;document.querySelectorAll('.tema button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.t===x)));try{{localStorage.setItem('pilot-tema',x)}}catch(e){{}}}};
+uygula(t);document.querySelectorAll('.tema button').forEach(b=>b.onclick=()=>uygula(b.dataset.t));}})();
 const ids={json.dumps([q['id'] for q in Q])};const st={{}};
 let mem={{}};try{{mem=JSON.parse(localStorage.getItem('pilot1')||'{{}}')}}catch(e){{}}
 document.querySelectorAll('.card').forEach((c,i)=>{{const d=c.querySelector('details');d.addEventListener('toggle',()=>c.classList.toggle('acik',d.open));
