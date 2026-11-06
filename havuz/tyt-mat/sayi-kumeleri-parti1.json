@@ -55,7 +55,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "Yalnızca 123’ü saydın. Aynı rakamlarla yazılan diğer sayıları da say.",
+   "B": "1, 2, 3 rakamlarıyla 3 değil 3! = 6 farklı sayı yazılır.",
+   "C": "1, 2, 3 dışında denk sayı yok; sıralamaları yeniden say: 3! = 6.",
+   "E": "3 × 3 değil, 3! kadar sıralama vardır."
+  }
  },
  {
   "id": "tytmat-sayilar-0002",
@@ -122,7 +128,13 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "sekil": null
+  "sekil": null,
+  "celdiriciler": {
+   "B": "a ve b ikisi de çift; a + b her zaman çifttir.",
+   "C": "a + b çifttir, bu yüzden II olamaz.",
+   "D": "a çift olduğundan a × c her zaman çifttir.",
+   "E": "a + b ve a × c ikisi de çifttir; yalnız b + c tektir."
+  }
  },
  {
   "id": "tytmat-sayilar-0003",
@@ -180,7 +192,13 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "sekil": null
+  "sekil": null,
+  "celdiriciler": {
+   "A": "Konumları yeniden hesapla: 4. direk 3 aralık, 6. lamba 5 aralık ötededir.",
+   "C": "Konumları yeniden hesapla: 4. direk 3 aralık, 6. lamba 5 aralık ötededir.",
+   "D": "0,4 m bir lamba aralığıdır; soru iki konumun farkını soruyor.",
+   "E": "0,6 m bir direk aralığıdır; soru iki konumun farkını soruyor."
+  }
  },
  {
   "id": "tytmat-sayilar-0004",
@@ -190,7 +208,7 @@
   "kalip": "şekilli",
   "adimSayisi": 3,
   "metin": "Eşit aralıklarla bölmelenmiş bir göstergenin bir kısmı aşağıda verilmiştir. Kırmızı ok, göstergenin o anda gösterdiği değeri belirtmektedir.\nBuna göre kırmızı okun gösterdiği değer kaçtır?",
-  "sekil": "<svg viewBox=\"0 0 400 120\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"sans-serif\" font-size=\"14\"><line x1=\"30\" y1=\"70\" x2=\"350\" y2=\"70\" stroke-width=\"2\"/><line x1=\"30\" y1=\"70\" x2=\"30\" y2=\"54\" stroke-width=\"2\"/><line x1=\"62\" y1=\"70\" x2=\"62\" y2=\"61\" stroke-width=\"2\"/><line x1=\"94\" y1=\"70\" x2=\"94\" y2=\"61\" stroke-width=\"2\"/><line x1=\"126\" y1=\"70\" x2=\"126\" y2=\"61\" stroke-width=\"2\"/><line x1=\"158\" y1=\"70\" x2=\"158\" y2=\"61\" stroke-width=\"2\"/><line x1=\"190\" y1=\"70\" x2=\"190\" y2=\"54\" stroke-width=\"2\"/><line x1=\"222\" y1=\"70\" x2=\"222\" y2=\"61\" stroke-width=\"2\"/><line x1=\"254\" y1=\"70\" x2=\"254\" y2=\"61\" stroke-width=\"2\"/><line x1=\"286\" y1=\"70\" x2=\"286\" y2=\"61\" stroke-width=\"2\"/><line x1=\"318\" y1=\"70\" x2=\"318\" y2=\"61\" stroke-width=\"2\"/><line x1=\"350\" y1=\"70\" x2=\"350\" y2=\"54\" stroke-width=\"2\"/><text x=\"30\" y=\"98\" text-anchor=\"middle\" fill=\"currentColor\" stroke=\"none\">40</text><text x=\"190\" y=\"98\" text-anchor=\"middle\" fill=\"currentColor\" stroke=\"none\">60</text><path d=\"M286 74 L279 92 L293 92 Z\" fill=\"#e53935\" stroke=\"#e53935\"/></svg>",
+  "sekil": "<svg viewBox=\"0 0 400 120\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"sans-serif\" font-size=\"17\"><line x1=\"30\" y1=\"70\" x2=\"350\" y2=\"70\" stroke-width=\"2\"/><line x1=\"30\" y1=\"70\" x2=\"30\" y2=\"54\" stroke-width=\"2\"/><line x1=\"62\" y1=\"70\" x2=\"62\" y2=\"61\" stroke-width=\"2\"/><line x1=\"94\" y1=\"70\" x2=\"94\" y2=\"61\" stroke-width=\"2\"/><line x1=\"126\" y1=\"70\" x2=\"126\" y2=\"61\" stroke-width=\"2\"/><line x1=\"158\" y1=\"70\" x2=\"158\" y2=\"61\" stroke-width=\"2\"/><line x1=\"190\" y1=\"70\" x2=\"190\" y2=\"54\" stroke-width=\"2\"/><line x1=\"222\" y1=\"70\" x2=\"222\" y2=\"61\" stroke-width=\"2\"/><line x1=\"254\" y1=\"70\" x2=\"254\" y2=\"61\" stroke-width=\"2\"/><line x1=\"286\" y1=\"70\" x2=\"286\" y2=\"61\" stroke-width=\"2\"/><line x1=\"318\" y1=\"70\" x2=\"318\" y2=\"61\" stroke-width=\"2\"/><line x1=\"350\" y1=\"70\" x2=\"350\" y2=\"54\" stroke-width=\"2\"/><text x=\"30\" y=\"100\" text-anchor=\"middle\" fill=\"currentColor\" stroke=\"none\">40</text><text x=\"190\" y=\"100\" text-anchor=\"middle\" fill=\"currentColor\" stroke=\"none\">60</text><path d=\"M286 74 L279 92 L293 92 Z\" fill=\"#e53935\" stroke=\"#e53935\"/></svg>",
   "siklar": {
    "A": "64",
    "B": "68",
@@ -233,7 +251,13 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "Ok 40’tan 8 bölme sağda; 6 bölme saydın.",
+   "B": "Ok 40’tan 8 bölme sağda; 7 bölme saydın.",
+   "D": "Bölmeleri değil çizgileri saydın; 40’taki çizgi sayılmaz.",
+   "E": "Bir bölme 5 değil 4 birimdir: 40 ile 60 arasında 5 bölme var."
+  }
  },
  {
   "id": "tytmat-sayilar-0005",
@@ -286,7 +310,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "2, 2 × 3 = 6 eşitliğinde kullanılıyor.",
+   "B": "4, 4 + 5 = 9 eşitliğinde kullanılıyor.",
+   "C": "5, 4 + 5 = 9 eşitliğinde kullanılıyor.",
+   "D": "6, 2 × 3 = 6 eşitliğinin sonucu."
+  }
  },
  {
   "id": "tytmat-sayilar-0006",
@@ -344,7 +374,13 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "sekil": null
+  "sekil": null,
+  "celdiriciler": {
+   "B": "5 ve 6 için fark 9 olur, 27 değil.",
+   "C": "8 ve 4’ün toplamı 12; AB + BA = 132 olurdu.",
+   "D": "7 ve 5’in toplamı 12; AB + BA = 132 olurdu.",
+   "E": "9 ve 4’ün toplamı 13; AB + BA = 143 olurdu."
+  }
  },
  {
   "id": "tytmat-sayilar-0007",
@@ -353,7 +389,7 @@
   "zorluk": "orta",
   "kalip": "yeni nesil",
   "adimSayisi": 4,
-  "metin": "Bir doğal sayı için\n⟨n⟩ gösterimi n’nin rakamları toplamını,\n[n] gösterimi n’nin rakamları çarpımını\nifade etmektedir.\nİki basamaklı AB sayısı için\n⟨[AB]⟩ = 9 ve [⟨AB⟩] = 8\nolduğuna göre AB kaçtır?",
+  "metin": "Bir doğal sayı için ⟨n⟩ gösterimi n’nin rakamları toplamını, [n] gösterimi ise n’nin rakamları çarpımını ifade etmektedir.\nİki basamaklı AB sayısı için\n⟨[AB]⟩ = 9 ve [⟨AB⟩] = 8\nolduğuna göre AB kaçtır?",
   "siklar": {
    "A": "89",
    "B": "92",
@@ -402,7 +438,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "İlk koşulu sağlıyor ama ⟨89⟩ = 17 ve [17] = 7.",
+   "B": "İlk koşulu sağlıyor ama ⟨92⟩ = 11 ve [11] = 1.",
+   "C": "İlk koşulu sağlıyor ama ⟨95⟩ = 14 ve [14] = 4.",
+   "D": "İlk koşulu sağlıyor ama ⟨98⟩ = 17 ve [17] = 7."
+  }
  },
  {
   "id": "tytmat-sayilar-0008",
@@ -455,7 +497,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "20 en küçük sayı; soru en büyüğü soruyor.",
+   "B": "22 ikinci sayı; en büyük sayı x + 8.",
+   "C": "24 ortadaki sayı; en büyük sayı x + 8.",
+   "D": "26 dördüncü sayı; en büyük sayı x + 8."
+  }
  },
  {
   "id": "tytmat-sayilar-0009",
@@ -513,7 +561,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "48/120’den küçük: hem Ali hem Cem yanılmış olur.",
+   "B": "48/120’den küçük: hem Ali hem Cem yanılmış olur.",
+   "C": "48/120’den küçük: hem Ali hem Cem yanılmış olur.",
+   "E": "51/120 ile üç tahmin de doğru çıkar; birinin yanlış olması gerekiyordu."
+  }
  },
  {
   "id": "tytmat-sayilar-0010",
@@ -566,7 +620,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "A": "Bu 2 küçük parçanın oranı; ikram edilen 4 parça.",
+   "C": "1/3, Ayşe’nin aldığı 2 dilimin oranı; ikram edilen daha az.",
+   "D": "Küçük parçayı 1/9 aldın; bir parça 1/6 × 1/3 = 1/18.",
+   "E": "2/3 tepside kalan dilimlerin oranı."
+  }
  },
  {
   "id": "tytmat-sayilar-0011",
@@ -619,7 +679,13 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": []
+  "bilgi": [],
+  "celdiriciler": {
+   "B": "Tutarları yeniden topla: 31 + 27,9 = 58,9.",
+   "C": "Biber tutarını 27,9 yerine 26,9 aldın.",
+   "D": "Tutarları yeniden topla: 31 + 27,9 = 58,9.",
+   "E": "Domates tutarını 31 yerine 29 aldın."
+  }
  },
  {
   "id": "tytmat-sayilar-0012",
@@ -682,6 +748,12 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "sekil": null
+  "sekil": null,
+  "celdiriciler": {
+   "A": "65. saniye yeşilde değil; yeşil yalnızca 0–40 arası.",
+   "B": "Sarı 40–45 arası; 65. saniye kırmızıda.",
+   "C": "Kırmızı 45. saniyede başladı: 65 − 45 = 20.",
+   "E": "Kırmızıyı 40. saniyede başlattın; aradaki 5 saniyelik sarıyı unuttun."
+  }
  }
 ]
