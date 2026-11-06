@@ -1,0 +1,665 @@
+[
+ {
+  "id": "tytmat-bolunebilme-0001",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Kalanlı Bölme",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Bölünen = bölen × bölüm + kalan bağıntısıyla sayıyı bulur ve başka bir bölene göre kalanı hesaplar.",
+  "tipId": "bln-kalan",
+  "tip": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir fırında üretilen simitlerin tamamı 6’lı paketlere konulduğunda 13 paket tamamen dolmakta ve 5 simit pakete girmeden açıkta kalmaktadır.\nBu simitlerin tamamı 8’li paketlere konulursa kaç simit açıkta kalır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "3",
+   "C": "5",
+   "D": "6",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "5 simidi eklemek yerine çıkarıp 73’ü 8’e bölmek; açıkta kalanlar toplama eklenir.",
+   "C": "Eski kalanı yeni kalan sanmak; bölen değişince kalan da değişir.",
+   "D": "Açıkta kalan 5 simidi unutup yalnız 78’i 8’e bölmek.",
+   "E": "10, dolan 8’li paket sayısı (bölüm); soru açıkta kalan simidi soruyor."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "8’li paketlemede açıkta kalan simit sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kalanlı bölme",
+    "ifade": "bölünen = bölen × bölüm + kalan ve 0 ≤ kalan < bölen. Örnek: 17 = 5 × 3 + 2 (kalan 2, bölen 5’ten küçük)"
+   }
+  ],
+  "ipuclari": [
+   "Önce toplam simit sayısını bul.",
+   "Bölünen = bölen × bölüm + kalan.",
+   "Bulduğun sayıyı 8’e böl; kalan 8’den küçük olmalı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam simit",
+    "aciklama": "13 paket doldu, 5 simit açıkta kaldı. Bölünen = bölen × bölüm + kalan.",
+    "islem": "6 × 13 + 5 = 78 + 5 = 83"
+   },
+   {
+    "baslik": "8’li paketler",
+    "aciklama": "83’ü 8’e böl; kalan 8’den küçük olmalı.",
+    "islem": "83 = 8 × 10 + 3"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "10 paket dolar, geriye 3 simit kalır.",
+    "islem": "kalan = 3"
+   }
+  ],
+  "puf": "Önce bölünen = bölen × bölüm + kalan ile sayının kendisini bul, sonra yeni bölene böl.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0001k",
+  "kaynakKart": "K-BLN-01 (bölüm ve kalandan sayıyı kurma) · yeni kurgu (fırında paketleme), yeni istenen (başka paket boyunda kalan)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0002",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Bölünebilme Kuralları",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "3 ile bölünebilme kuralını kullanarak bilinmeyen rakamın alabileceği tüm değerleri bulur.",
+  "tipId": "bln-kural",
+  "tip": "Bölünebilme kurallarıyla rakam bulma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "A bir rakam olmak üzere, üç basamaklı 4A7 sayısı 3 ile tam bölünebilmektedir.\nBuna göre A’nın alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "7",
+   "D": "12",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "3, A’nın alabileceği değer sayısı; soru değerlerin toplamını soruyor.",
+   "B": "Yalnız 1 ve 4’ü bulup 7’yi atlamak; rakam 9’a kadar çıkabilir.",
+   "C": "9 ile bölünebilme kuralını kullanmak (4 + A + 7 = 18); 3 için toplamın 3’ün katı olması yeter.",
+   "E": "18, rakamlar toplamının alabileceği en büyük değer; istenen A’nın değerleri."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "A’nın alabileceği değerlerin toplamı.",
+  "bilgi": [
+   {
+    "ad": "3 ve 9 ile bölünebilme",
+    "ifade": "rakamlar toplamı 3’ün (9’un) katıysa sayı 3’e (9’a) tam bölünür. Örnek: 252 → 2 + 5 + 2 = 9, hem 3’e hem 9’a bölünür"
+   }
+  ],
+  "ipuclari": [
+   "3 ile bölünebilme kuralını hatırla.",
+   "Rakamlar toplamı 11 + A; bu toplam 3’ün katı olmalı.",
+   "A, 0’dan 9’a kadar bir rakam; uyan değerlerin hepsini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Rakamlar toplamı",
+    "aciklama": "3 ile bölünebilme için rakamlar toplamı 3’ün katı olmalı.",
+    "islem": "4 + A + 7 = 11 + A"
+   },
+   {
+    "baslik": "Uyan değerler",
+    "aciklama": "11 + A ∈ {12, 15, 18} olmalı (A en çok 9).",
+    "islem": "A = 1, 4 ya da 7"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Bulunan üç değeri topla.",
+    "islem": "1 + 4 + 7 = 12"
+   }
+  ],
+  "puf": "Bilinmeyen rakamı ararken 0’dan 9’a kadar bütün değerleri düşün; 3 ile bölünmede uyan rakamlar 3’er artar.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0002k",
+  "kaynakKart": "K-BLN-03 (bir kuralla rakam bulma) · yeni sayı, yeni istenen (değerlerin toplamı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0003",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Kalanlı Bölme",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Bölüm ile kalan arasındaki ilişkiyi bölünen = bölen × bölüm + kalan bağıntısına taşır; kalan < bölen koşuluyla en büyük değeri bulur.",
+  "tipId": "bln-kalan",
+  "tip": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir doğal sayı 15 ile bölündüğünde elde edilen bölüm, kalanın 2 katına eşittir.\nBu koşulu sağlayan en büyük doğal sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "238",
+   "B": "420",
+   "C": "434",
+   "D": "464",
+   "E": "465"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "434"
+  },
+  "celdiriciler": {
+   "A": "Bölümle böleni karıştırıp 15 × k + 2k = 17 × 14 hesaplamak.",
+   "B": "Kalanı eklemeyi unutmak: yalnız 15 × 28.",
+   "D": "Bölümü bölenin 2 katı (30) sanmak; bölüm kalanın 2 katı.",
+   "E": "Kalanı 15 almak; kalan bölenden küçük olmalı, en çok 14."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Koşulu sağlayan en büyük doğal sayı.",
+  "bilgi": [
+   {
+    "ad": "Kalanlı bölme",
+    "ifade": "bölünen = bölen × bölüm + kalan ve 0 ≤ kalan < bölen. Örnek: 17 = 5 × 3 + 2 (kalan 2, bölen 5’ten küçük)"
+   }
+  ],
+  "ipuclari": [
+   "Kalana k dersen bölüm kaç olur?",
+   "Sayıyı bölünen = bölen × bölüm + kalan ile k cinsinden yaz.",
+   "Kalan, bölen olan 15’ten küçük olmak zorunda."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalana harf ver",
+    "aciklama": "Kalan k ise bölüm 2k olur.",
+    "islem": "bölüm = 2k · kalan = k"
+   },
+   {
+    "baslik": "Sayıyı yaz",
+    "aciklama": "Bölünen = bölen × bölüm + kalan.",
+    "islem": "sayı = 15 × 2k + k = 31k"
+   },
+   {
+    "baslik": "Kalan sınırı",
+    "aciklama": "Kalan bölenden küçük olmalı; k en çok 14.",
+    "islem": "k ≤ 14 ⇒ sayı ≤ 31 × 14 = 434"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "434’ü 15’e böl.",
+    "islem": "434 = 15 × 28 + 14 · 28 = 2 × 14 ✓"
+   }
+  ],
+  "puf": "Bölümle kalan arasında ilişki varsa kalana harf ver; en büyük değeri her zaman “kalan < bölen” sınırı belirler.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0003k",
+  "kaynakKart": "K-BLN-02 (bölüm–kalan ilişkisi, kalan < bölen) · yeni ilişki (bölüm kalanın 2 katı), yeni istenen (en büyük sayı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0004",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Bölünebilme Kuralları",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Bileşik bir bölene bölünebilmeyi aralarında asal çarpanlarına ayırarak inceler; her durumu ayrı çözer.",
+  "tipId": "bln-kural",
+  "tip": "Bölünebilme kurallarıyla rakam bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A ve B birer rakam olmak üzere, dört basamaklı 7A4B sayısı 45 ile tam bölünebilmektedir.\nBuna göre A + B toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "9",
+   "C": "12",
+   "D": "16",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "B": "İki durumdaki A değerlerini (7 ve 2) toplamak; istenen A + B.",
+   "C": "B = 0 durumundaki A = 7 ile diğer durumdaki B = 5’i birlikte almak; her durum kendi içinde çözülür.",
+   "D": "Rakamlar toplamını 27 alıp 11 + A + B = 27 yazmak; B 0 ya da 5 iken A rakam olamaz.",
+   "E": "Rakamlar toplamı 18’i A + B sanmak; 7 ve 4’ü çıkarmayı unutmak."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "A + B toplamı.",
+  "bilgi": [
+   {
+    "ad": "Bölenleri ayırma",
+    "ifade": "aralarında asal çarpanlara ayrılan bir sayıya bölünme, her çarpana ayrı ayrı bölünmedir. Örnek: 45 = 5 × 9, 36 = 4 × 9, 18 = 2 × 9"
+   },
+   {
+    "ad": "3 ve 9 ile bölünebilme",
+    "ifade": "rakamlar toplamı 3’ün (9’un) katıysa sayı 3’e (9’a) tam bölünür. Örnek: 252 → 2 + 5 + 2 = 9, hem 3’e hem 9’a bölünür"
+   },
+   {
+    "ad": "4 ve 5 ile bölünebilme",
+    "ifade": "5: birler basamağı 0 ya da 5 olmalı · 4: son iki basamağın oluşturduğu sayı 4’ün katı olmalı. Örnek: 316 → 16, 4’ün katı"
+   }
+  ],
+  "ipuclari": [
+   "45’i aralarında asal iki çarpana ayır.",
+   "5 ile bölünme B için hangi değerleri bırakır?",
+   "Her B değeri için 9 kuralıyla A’yı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Böleni ayır",
+    "aciklama": "45 = 5 × 9 olduğundan sayı hem 5’e hem 9’a bölünmeli.",
+    "islem": "5 ⇒ B = 0 ya da B = 5"
+   },
+   {
+    "baslik": "B = 0 durumu",
+    "aciklama": "Rakamlar toplamı 9’un katı olmalı.",
+    "islem": "7 + A + 4 + 0 = 11 + A = 18 ⇒ A = 7"
+   },
+   {
+    "baslik": "B = 5 durumu",
+    "aciklama": "Aynı kural.",
+    "islem": "7 + A + 4 + 5 = 16 + A = 18 ⇒ A = 2"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "İki durumda da A + B aynı.",
+    "islem": "7 + 0 = 7 · 2 + 5 = 7"
+   }
+  ],
+  "puf": "Bileşik bölende her çarpanın kuralını ayrı uygula; birden çok durum çıkarsa her birini sonuna kadar çöz.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0004k",
+  "kaynakKart": "K-BLN-04 (36/45 gibi bileşik bölen, iki kural birlikte) · yeni sayı (7A4B, 45), istenen her durumda aynı çıkan toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0005",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Kalan Bulma",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Bir bölünebilme koşulundan bilinmeyen rakamı bulur; sayının 11 ile bölümünden kalanı kuralla hesaplar.",
+  "tipId": "bln-kalan-kural",
+  "tip": "Kurallarla kalan bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A bir rakam olmak üzere, beş basamaklı 4A3A6 sayısı 9 ile tam bölünebilmektedir.\nBuna göre bu sayının 11 ile bölümünden kalan kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "3",
+   "C": "5",
+   "D": "7",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Kural sonucu −1’i kalan 1 sanmak; negatif sonuca 11 eklenir.",
+   "B": "A’yı bir kez sayıp A = 5 bulmak; A sayıda iki kez geçiyor.",
+   "C": "Rakamlar toplamını (27) 11’e bölmek; 11 kuralında rakamlar sırayla + ve − alır.",
+   "D": "7, A’nın değeri; soru 11 ile bölümden kalanı soruyor."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "4A3A6 sayısının 11 ile bölümünden kalan.",
+  "bilgi": [
+   {
+    "ad": "3 ve 9 ile bölünebilme",
+    "ifade": "rakamlar toplamı 3’ün (9’un) katıysa sayı 3’e (9’a) tam bölünür. Örnek: 252 → 2 + 5 + 2 = 9, hem 3’e hem 9’a bölünür"
+   },
+   {
+    "ad": "11 ile bölümden kalan",
+    "ifade": "sağdan başlayarak rakamlara sırayla +, −, +, … işareti verilip toplanır; sonuç negatifse 11 eklenir. Örnek: 2541 → 1 − 4 + 5 − 2 = 0, kalan 0"
+   }
+  ],
+  "ipuclari": [
+   "Önce 9 kuralıyla A’yı bul; A kaç kez geçiyor?",
+   "11 ile kalan için sağdan başlayarak +, −, +, … işaretlerini ver.",
+   "Sonuç negatif çıkarsa 11 ekle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A’yı bul",
+    "aciklama": "Rakamlar toplamı 9’un katı olmalı; A iki kez geçiyor.",
+    "islem": "4 + A + 3 + A + 6 = 13 + 2A = 27 ⇒ A = 7"
+   },
+   {
+    "baslik": "Sayı",
+    "aciklama": "A = 7 yerine yazılır.",
+    "islem": "47376"
+   },
+   {
+    "baslik": "11 kuralı",
+    "aciklama": "Sağdan başlayarak +, −, +, −, +.",
+    "islem": "6 − 7 + 3 − 7 + 4 = −1"
+   },
+   {
+    "baslik": "Kalan",
+    "aciklama": "Negatif sonuca 11 eklenir.",
+    "islem": "−1 + 11 = 10"
+   }
+  ],
+  "puf": "11 kuralında sonuç negatif çıkarsa 11 ekleyerek pozitif kalana çevir; kalan 0 ile 10 arasındadır.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0005k",
+  "kaynakKart": "K-BLN-05 (koşuldan rakam, sonra kalan) · yeni sayı (4A3A6), yeni bölen (11 ile kalan)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0006",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Bölünebilme",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Bölünebilmeyle tanımlanan bir sayı türünü verilen aralıkta tarar; sınır değerleri doğru yorumlar.",
+  "tipId": "bln-tanimli",
+  "tip": "Bölünebilmeyle tanımlanan sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Rakamları toplamına tam bölünebilen doğal sayılara “dost sayı” denir. Örneğin 24 bir dost sayıdır, çünkü 2 + 4 = 6 ve 24 sayısı 6’ya tam bölünür.\n50’den büyük ve 70’ten küçük olan dost sayıların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "117",
+   "B": "177",
+   "C": "227",
+   "D": "247",
+   "E": "297"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "177"
+  },
+  "celdiriciler": {
+   "A": "60’ı atlamak; 6 + 0 = 6 ve 60, 6’ya tam bölünür.",
+   "C": "50’yi de eklemek; 50’den büyük sayılar isteniyor.",
+   "D": "70’i de eklemek; 70’ten küçük sayılar isteniyor.",
+   "E": "İki sınır değerini (50 ve 70) de eklemek."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "51 ile 69 arasındaki dost sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 63 için 6 + 3 = 9; 63 ÷ 9 = 7 tam bölünür"
+   }
+  ],
+  "ipuclari": [
+   "Aralık 51’den 69’a kadar; sınırlar dahil değil.",
+   "Her sayının rakamları toplamını bul, sayı ona bölünüyor mu bak.",
+   "Onlar basamağı 5 ve 6 olanları ayrı tara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aralık",
+    "aciklama": "“Büyük” ve “küçük” sınırları dışarıda bırakır.",
+    "islem": "51, 52, …, 69"
+   },
+   {
+    "baslik": "50’li sayılar",
+    "aciklama": "Rakamları toplamı 6’dan 14’e kadar; yalnız 54 bölünüyor.",
+    "islem": "54: 5 + 4 = 9 · 54 = 9 × 6 ✓"
+   },
+   {
+    "baslik": "60’lı sayılar",
+    "aciklama": "60, 63 bölünüyor; 66’nın toplamı 12, 66 ÷ 12 tam değil.",
+    "islem": "60 = 6 × 10 ✓ · 63 = 9 × 7 ✓"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Üç dost sayıyı topla.",
+    "islem": "54 + 60 + 63 = 177"
+   }
+  ],
+  "puf": "Tanımlı sayı sorularında aralıktaki sayıları sistemli tara ve sınır ifadelerini (büyük, küçük, en az) dikkatle oku.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0006k",
+  "kaynakKart": "K-BLN-07 (bölünebilmeyle tanımlı sayı) · yeni tanım (rakamlar toplamına bölünme), yeni istenen (aralıktaki sayıların toplamı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0007",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Bölünebilme Kuralları",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Rakamları yer değiştirmiş iki sayıya verilen farklı bölünebilme koşullarını durum ayırarak inceler.",
+  "tipId": "bln-iki-sayi",
+  "tip": "İki sayı, iki bölünebilme koşulu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kargo deposundaki iki rafın numaraları, A ve B birer rakam olmak üzere üç basamaklı A7B ve B7A doğal sayılarıdır.\nBu numaralardan biri 45 ile, diğeri 8 ile tam bölünmektedir.\nBuna göre A + B toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "8",
+   "C": "11",
+   "D": "18",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "B = 0 alıp 270’i bulmak; o zaman B7A üç basamaklı olmaz.",
+   "B": "45 yerine yalnız 3 ve 5’e bakıp A = 3 almak; 45 için 9 kuralı gerekir.",
+   "D": "Rakamlar toplamı 18’i A + B sanmak; ortadaki 7 çıkarılmalı.",
+   "E": "30, A × B çarpımı; soru toplamı soruyor."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "A + B toplamı.",
+  "bilgi": [
+   {
+    "ad": "Basamak çözümleme",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 675 = 100 × 6 + 10 × 7 + 5"
+   },
+   {
+    "ad": "Bölenleri ayırma",
+    "ifade": "aralarında asal çarpanlara ayrılan bir sayıya bölünme, her çarpana ayrı ayrı bölünmedir. Örnek: 45 = 5 × 9, 36 = 4 × 9, 18 = 2 × 9"
+   },
+   {
+    "ad": "4 ve 5 ile bölünebilme",
+    "ifade": "5: birler basamağı 0 ya da 5 olmalı · 4: son iki basamağın oluşturduğu sayı 4’ün katı olmalı. Örnek: 316 → 16, 4’ün katı"
+   }
+  ],
+  "ipuclari": [
+   "45’e bölünen sayının birler basamağı ne olabilir? İki numara da üç basamaklı.",
+   "Önce A7B’nin 45’e bölündüğünü varsay, 9 kuralıyla diğer rakamı bul.",
+   "Bulduğun diğer numaranın 8’e bölünüp bölünmediğini kontrol et; sonra öbür durumu dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "45’e bölünen",
+    "aciklama": "45 = 5 × 9. Birler basamağı 0 ya da 5; 0 olursa diğer numara 0 ile başlar, üç basamaklı olmaz.",
+    "islem": "birler basamağı = 5"
+   },
+   {
+    "baslik": "Durum 1: A7B",
+    "aciklama": "B = 5; rakamlar toplamı 9’un katı.",
+    "islem": "A + 7 + 5 = 18 ⇒ A = 6 · 675 = 45 × 15 ✓"
+   },
+   {
+    "baslik": "8 kontrolü",
+    "aciklama": "Diğer numara B7A = 576.",
+    "islem": "576 = 8 × 72 ✓"
+   },
+   {
+    "baslik": "Durum 2: B7A",
+    "aciklama": "A = 5 ⇒ B + 12 = 18 ⇒ B = 6; aynı iki numara çıkar.",
+    "islem": "675 ve 576"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Rakamlar 5 ve 6.",
+    "islem": "A + B = 11"
+   }
+  ],
+  "puf": "“Biri …, diğeri …” sorularında iki durumu da dene ve bulduğun sayıları öbür koşulda mutlaka kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0007k",
+  "kaynakKart": "K-BLN-06 (yer değiştiren rakamlı iki sayı, biri bir bölene diğeri başka bölene) · yeni kurgu (raf numaraları), yeni bölenler (45 ve 8)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-bolunebilme-0008",
+  "ders": "TYT Matematik",
+  "konu": "Bölme ve Bölünebilme · Kalanlı Bölme",
+  "k": "mat|Bölme ve Bölünebilme",
+  "kazanim": "Zincirleme kalanlı bölmelerde her bölenin kalandan büyük olması koşulunu kullanarak en küçük değeri bulur.",
+  "tipId": "bln-kalan",
+  "tip": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a, b ve c pozitif tam sayılar olmak üzere\n• a sayısı b’ye bölündüğünde bölüm 6, kalan 5’tir.\n• b sayısı c’ye bölündüğünde bölüm 3, kalan 2’dir.\nBuna göre a en az kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "35",
+   "B": "53",
+   "C": "66",
+   "D": "71",
+   "E": "89"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "71"
+  },
+  "celdiriciler": {
+   "A": "c = 1 alıp b = 5 bulmak; kalan 2 iken bölen c en az 3, ayrıca kalan 5 iken b 5’ten büyük olmalı.",
+   "B": "c = 2 almak; kalan (2) bölenden küçük olmalı, c en az 3.",
+   "C": "b = 11’i bulup a = 6 × 11 hesaplamak; kalan 5 eklenmeli.",
+   "E": "c’yi 4 almak; c = 3 zaten koşulları sağlıyor ve daha küçük sonuç verir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "a’nın alabileceği en küçük değer.",
+  "bilgi": [
+   {
+    "ad": "Kalanlı bölme",
+    "ifade": "bölünen = bölen × bölüm + kalan ve 0 ≤ kalan < bölen. Örnek: 17 = 5 × 3 + 2 (kalan 2, bölen 5’ten küçük)"
+   }
+  ],
+  "ipuclari": [
+   "Her bölmede kalan, bölenden küçük olmalı. c için bu ne demek?",
+   "b’yi c cinsinden, a’yı b cinsinden yaz.",
+   "En küçük c ile başla; b’nin 5’ten büyük olduğunu da kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağıntılar",
+    "aciklama": "İki bölmeyi bölünen = bölen × bölüm + kalan ile yaz.",
+    "islem": "a = 6 × b + 5 · b = 3 × c + 2"
+   },
+   {
+    "baslik": "c’nin sınırı",
+    "aciklama": "b’nin c’ye bölümünden kalan 2; kalan bölenden küçük olmalı.",
+    "islem": "c > 2 ⇒ c en az 3"
+   },
+   {
+    "baslik": "b’nin değeri",
+    "aciklama": "c = 3 ⇒ b = 11. Ayrıca kalan 5 olduğu için b > 5 olmalı ✓.",
+    "islem": "b = 3 × 3 + 2 = 11"
+   },
+   {
+    "baslik": "a’nın değeri",
+    "aciklama": "a, b ile birlikte büyür; en küçük b en küçük a’yı verir.",
+    "islem": "a = 6 × 11 + 5 = 71"
+   }
+  ],
+  "puf": "Zincirleme bölmelerde her adımda “kalan < bölen” koşulunu yaz; en küçük değeri bu koşullar belirler.",
+  "kisaYol": null,
+  "kardes": "tytmat-bolunebilme-0008k",
+  "kaynakKart": "K-BLN-02 (zincirleme bölme, kalan < bölen) · yeni veriliş (iki bölme zinciri), yeni istenen (en küçük bölünen)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

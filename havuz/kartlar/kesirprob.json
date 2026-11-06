@@ -1,0 +1,113 @@
+{
+ "konu": "Kesir Problemleri",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-KES-01",
+   "konu": "Kesir Problemleri",
+   "alt": "Kalanın kesri",
+   "fikir": "Bir bütünden ardışık olarak “kalanın” kesirleri ayrılır; sondaki miktar verilip başlangıç ya da aradaki bir parça istenir.",
+   "tuzak": "“Kalanın” kesrini bütüne uygulamak; yalnızca son adımı geri alıp durmak; istenen ara parçayı karıştırmak.",
+   "zorluk": "kolay-orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kes-kalanin",
+   "tip": "Ardışık “kalanın” kesirleri",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s150 #173, sergide satılan tablolar) · Bilgi Sarmal s208 #12, s271 #4 · 3D s188 #8"
+  },
+  {
+   "id": "K-KES-02",
+   "konu": "Kesir Problemleri",
+   "alt": "Parçadan bütüne",
+   "fikir": "Bütünün bilinen kesirleri dışında kalan parçanın değeri verilir; kalan kesir bulunup bütüne, oradan istenen parçaya geçilir.",
+   "tuzak": "Kalan kesri değil verilen kesri kullanmak; bütünü bulup istenen parçaya geçmeyi unutmak.",
+   "zorluk": "kolay-orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kes-parca",
+   "tip": "Parçadan bütüne geçiş",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s1 #1, pasta dilimleri; s14 #21, boyalı kareler) · Bilgi Sarmal ve 345 SB kesir soruları"
+  },
+  {
+   "id": "K-KES-03",
+   "konu": "Kesir Problemleri",
+   "alt": "Dolu–boş kap",
+   "fikir": "Kabın dolu ve kısmen dolu kütleleri verilir; farkın içindekinin hangi kesrine karşılık geldiği bulunur, içindekinin tamamı ve boş kap hesaplanır.",
+   "tuzak": "Farkı kalan kısmın karşılığı sanmak; boş kap ile içindekinin tamamını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kes-dolu",
+   "tip": "Dolu–boş kap kütlesi",
+   "kaynak": "Bilgi Sarmal s264 #8 · 3D s144 #2, s185 #11 · Mert s181 #12"
+  },
+  {
+   "id": "K-KES-04",
+   "konu": "Kesir Problemleri",
+   "alt": "Kesirle paylaştırma",
+   "fikir": "Bir tutar kişilere ya da bölümlere bütünün ve kalanın kesirleriyle dağıtılır; iki payın farkı verilip bütün ya da bir pay istenir.",
+   "tuzak": "“Kalanın” kesrini bütünün kesri sanmak; farkı yanlış iki pay arasında kurmak; istenen payı karıştırmak.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kes-pay",
+   "tip": "Kesirlerle paylaştırma",
+   "kaynak": "Bilgi Sarmal s285 #1 · 3D s188 #8 · 345 SB kesir problemleri"
+  },
+  {
+   "id": "K-KES-05",
+   "konu": "Kesir Problemleri",
+   "alt": "Tekrarlı süreç",
+   "fikir": "Her dönem mevcut miktarın bir kesri kullanılır, ardından sabit miktar eklenir; son durum verilip işlemler sondan başa ters sırayla geri alınır.",
+   "tuzak": "Geri dönerken işlem sırasını karıştırmak (önce bölüp sonra çıkarmak); eklemeleri yok saymak; ara günü başlangıç sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kes-surec",
+   "tip": "Tekrarlı kesir süreci (sondan başa)",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s150 #173, her sergide 3/5 satış ve yenileme) · Bilgi Sarmal s271 #4"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kes-kalanin",
+   "ad": "Ardışık “kalanın” kesirleri",
+   "kartlar": [
+    "K-KES-01"
+   ],
+   "uygulamaKonu": "prob|Kesir Problemleri"
+  },
+  {
+   "tipId": "kes-parca",
+   "ad": "Parçadan bütüne geçiş",
+   "kartlar": [
+    "K-KES-02"
+   ],
+   "uygulamaKonu": "prob|Kesir Problemleri"
+  },
+  {
+   "tipId": "kes-dolu",
+   "ad": "Dolu–boş kap kütlesi",
+   "kartlar": [
+    "K-KES-03"
+   ],
+   "uygulamaKonu": "prob|Kesir Problemleri"
+  },
+  {
+   "tipId": "kes-pay",
+   "ad": "Kesirlerle paylaştırma",
+   "kartlar": [
+    "K-KES-04"
+   ],
+   "uygulamaKonu": "prob|Kesir Problemleri"
+  },
+  {
+   "tipId": "kes-surec",
+   "ad": "Tekrarlı kesir süreci (sondan başa)",
+   "kartlar": [
+    "K-KES-05"
+   ],
+   "uygulamaKonu": "prob|Kesir Problemleri"
+  }
+ ]
+}

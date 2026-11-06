@@ -1,0 +1,639 @@
+[
+ {
+  "id": "tytmat-kesirprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kalan parçadan bütün",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bütünün bir kesri tamamlandıktan sonra kalan miktardan bütünü bulur.",
+  "tipId": "kes-parca",
+  "tip": "Parçadan bütüne geçiş",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Kerem, telefonuna bir oyunun güncelleme dosyasını indirmektedir.\nDosyanın 3/8’i indiğinde, inmesi gereken 1500 MB daha olduğunu görmüştür.\nBuna göre güncelleme dosyasının tamamı kaç MB’tır?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "900",
+   "C": "2400",
+   "D": "4000",
+   "E": "12000"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "2400"
+  },
+  "celdiriciler": {
+   "A": "300 MB, dosyanın yalnızca 1/8’i; tamamı 8 parça.",
+   "B": "900 MB, inmiş olan kısım (3/8); soru dosyanın tamamını soruyor.",
+   "D": "4000 MB, 1500’ü inen kısmın (3/8) karşılığı sanmak; 1500 MB kalan kısım.",
+   "E": "12000 MB, 1500’ü paydayla çarpıp paya bölmeyi unutmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Dosyanın tamamının büyüklüğü.",
+  "bilgi": [
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "Dosyanın 3/8’i indiyse kaçta kaçı inmeyi bekliyor?",
+   "1500 MB, dosyanın hangi kesrine karşılık geliyor?",
+   "Bir parçanın (1/8) kaç MB olduğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesir",
+    "aciklama": "İnen kısım 3/8; geri kalanı inmeyi bekliyor.",
+    "islem": "1 − 3/8 = 5/8"
+   },
+   {
+    "baslik": "Bir parça",
+    "aciklama": "5/8 = 1500 MB ise 1/8 bunun beşte biri.",
+    "islem": "1500 ÷ 5 = 300 MB"
+   },
+   {
+    "baslik": "Tamamı",
+    "aciklama": "8 parçanın hepsi.",
+    "islem": "8 × 300 = 2400 MB"
+   }
+  ],
+  "puf": "Verilen sayı hangi parçaya aitse o parçanın kesrini kullan; “kalan” verildiyse önce kalan kesri bul.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0001k",
+  "kaynakKart": "K-KES-02 (parçadan bütüne) · yeni kurgu (oyun güncellemesi indirme), kalan miktar verildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · İki adımlı kalan",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "İki ardışık “kalanın” kesrinden sonra kalan miktardan başlangıçtaki miktarı bulur.",
+  "tipId": "kes-kalanin",
+  "tip": "Ardışık “kalanın” kesirleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir aile, aylık gelirinin 1/4’ünü kiraya, kalan paranın 1/3’ünü de fatura ve ulaşım giderlerine ayırmaktadır.\nBu ödemelerden sonra ailenin elinde 30 000 TL kalmaktadır.\nBuna göre ailenin aylık geliri kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "40 000",
+   "B": "60 000",
+   "C": "72 000",
+   "D": "90 000",
+   "E": "120 000"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "60 000"
+  },
+  "celdiriciler": {
+   "A": "40 000 TL, yalnız kira adımını geri almak (30 000 ÷ 3/4); faturalar unutuldu.",
+   "C": "72 000 TL, “kalanın 1/3’ü”nü gelirin 1/3’ü sanmak (1 − 1/4 − 1/3 = 5/12).",
+   "D": "90 000 TL, 30 000’i kalanın 1/3’ü sanıp 3 ile çarpmak; 30 000 kalanın 2/3’ü.",
+   "E": "120 000 TL, 30 000’i gelirin 1/4’ü sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Ailenin aylık geliri.",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/3’ü” = kalan × 1/3; bütünün değil, kalanın parçasıdır. Örnek: 90’ın 1/3’ü ayrılınca 60 kalır; kalanın 1/4’ü 60 × 1/4 = 15’tir"
+   }
+  ],
+  "ipuclari": [
+   "Kiradan sonra gelirin kaçta kaçı kalır?",
+   "Faturalardan sonra, kalanın kaçta kaçı elde kalır?",
+   "İki kesri çarparak elde kalan kısmın gelire oranını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kiradan sonra",
+    "aciklama": "Gelirin 1/4’ü gitti.",
+    "islem": "kalan: 1 − 1/4 = 3/4"
+   },
+   {
+    "baslik": "Faturalardan sonra",
+    "aciklama": "Kalanın 1/3’ü gitti, 2/3’ü kaldı.",
+    "islem": "3/4 × 2/3 = 1/2"
+   },
+   {
+    "baslik": "Geliri bul",
+    "aciklama": "Gelirin yarısı 30 000 TL.",
+    "islem": "30 000 × 2 = 60 000 TL"
+   }
+  ],
+  "puf": "“Kalanın” kesirlerinde elde kalan kısımları çarp; toplama ya da çıkarma yapma.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0002k",
+  "kaynakKart": "K-KES-01 (kalanın kesri, sondaki miktar verildi) · yeni kurgu (aile bütçesi), iki adım",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Üç adımlı kalan",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Ardışık üç “kalanın” kesrinden sonra kalan miktardan bütünü ve istenen ara parçayı bulur.",
+  "tipId": "kes-kalanin",
+  "tip": "Ardışık “kalanın” kesirleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kargo aracı, sabah yüklediği paketlerin 1/3’ünü öğleden önce teslim etmiştir.\nÖğleden sonra kalan paketlerin 1/4’ünü, akşam saatlerinde de geriye kalan paketlerin 2/5’ini teslim etmiştir.\nGün sonunda araçta 36 paket kaldığına göre öğleden önce teslim edilen paket sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "24",
+   "C": "40",
+   "D": "84",
+   "E": "120"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "20, öğleden sonra teslim edilen paket sayısı (80’in 1/4’ü).",
+   "B": "24, akşam teslim edilen paket sayısı (60’ın 2/5’i).",
+   "D": "84, gün içinde teslim edilen paketlerin toplamı.",
+   "E": "120, sabah yüklenen paketlerin tamamı; soru ilk teslimatı soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Öğleden önce teslim edilen paket sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/3’ü” = kalan × 1/3; bütünün değil, kalanın parçasıdır. Örnek: 90’ın 1/3’ü ayrılınca 60 kalır; kalanın 1/4’ü 60 × 1/4 = 15’tir"
+   }
+  ],
+  "ipuclari": [
+   "Her teslimattan sonra paketlerin kaçta kaçı kalıyor?",
+   "Kalan kesirleri çarpıp 36’nın bütünün hangi kesri olduğunu bul.",
+   "Bütünü bulunca ilk teslimatı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesirler",
+    "aciklama": "Her teslimattan sonra kalan kısım.",
+    "islem": "2/3 · 3/4 · 3/5"
+   },
+   {
+    "baslik": "Gün sonu kesri",
+    "aciklama": "Kalan kesirleri çarp.",
+    "islem": "2/3 × 3/4 × 3/5 = 3/10"
+   },
+   {
+    "baslik": "Bütün",
+    "aciklama": "3/10 = 36 ⇒ 1/10 = 12.",
+    "islem": "toplam 120 paket"
+   },
+   {
+    "baslik": "İlk teslimat",
+    "aciklama": "Paketlerin 1/3’ü.",
+    "islem": "120 ÷ 3 = 40 · kontrol: 120 → 80 → 60 → 36 ✓"
+   }
+  ],
+  "puf": "Ara bir parçayı sorduklarında önce bütünü bul; sonra her adımda kalanı yazarak ilerle.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0003k",
+  "kaynakKart": "K-KES-01 (kalanın kesri) · üç adım, istenen ara parça (ilk teslimat), yeni kurgu (kargo aracı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · İçilen su",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Dolu ve kısmen boşalmış kabın kütle farkından içindekinin tamamını bulur.",
+  "tipId": "kes-dolu",
+  "tip": "Dolu–boş kap kütlesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Suyla tamamen dolu bir termosun kütlesi 2400 gramdır.\nTermostaki suyun 2/5’i içildikten sonra termosun kütlesi 1680 gram olarak ölçülmüştür.\nBuna göre termos tamamen doluyken içindeki su kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "600",
+   "B": "720",
+   "C": "1200",
+   "D": "1800",
+   "E": "2400"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1800"
+  },
+  "celdiriciler": {
+   "A": "600 g, boş termosun kütlesi; soru suyun tamamını soruyor.",
+   "B": "720 g, yalnızca içilen suyun kütlesi.",
+   "C": "1200 g, 720 g’ı kalan suyun (3/5) karşılığı sanmak; 720 g içilen kısmın kütlesi.",
+   "E": "2400 g, dolu termosun kütlesi; termosun kendi kütlesi de içinde."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Termostaki suyun tamamının kütlesi.",
+  "bilgi": [
+   {
+    "ad": "Dolu ve boş kap",
+    "ifade": "dolu kap = boş kap + içindekinin tamamı. İki tartımın farkı, aradaki eksilen miktarın kütlesidir"
+   },
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "İki tartım arasındaki fark neyin kütlesi?",
+   "Bu fark suyun hangi kesrine karşılık gelir?",
+   "Parçadan bütüne geç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "İki tartım arasındaki fark, içilen suyun kütlesidir.",
+    "islem": "2400 − 1680 = 720 g"
+   },
+   {
+    "baslik": "Kesirle eşle",
+    "aciklama": "İçilen su, suyun 2/5’i.",
+    "islem": "2/5 = 720 g ⇒ 1/5 = 360 g"
+   },
+   {
+    "baslik": "Suyun tamamı",
+    "aciklama": "5 parça.",
+    "islem": "5 × 360 = 1800 g · boş termos 2400 − 1800 = 600 g"
+   }
+  ],
+  "puf": "İki tartımın farkı yalnızca eksilen kısmın kütlesidir; kabın kütlesi farkta yok olur.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0004k",
+  "kaynakKart": "K-KES-03 (dolu–boş kap) · yeni kurgu (termos), istenen içindekinin tamamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · İki payın farkı",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bütünün ve kalanın kesirleriyle yapılan paylaştırmada iki pay arasındaki farktan bütünü bulur.",
+  "tipId": "kes-pay",
+  "tip": "Kesirlerle paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Üç kişilik bir proje ekibi, bir yarışmadan kazandığı para ödülünü paylaşmıştır.\nÖdülün 1/3’ünü Ali, kalan paranın 3/8’ini Burak, geriye kalan paranın tamamını da Can almıştır.\nCan’ın aldığı para, Burak’ın aldığı paradan 10 000 TL fazla olduğuna göre para ödülü kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15 000",
+   "B": "20 000",
+   "C": "25 000",
+   "D": "35 000",
+   "E": "60 000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "60 000"
+  },
+  "celdiriciler": {
+   "A": "15 000 TL, Burak’ın payı.",
+   "B": "20 000 TL, Ali’nin payı.",
+   "C": "25 000 TL, Can’ın payı.",
+   "D": "35 000 TL, Ali ile Burak’ın paylarının toplamı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Para ödülünün tamamı.",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/3’ü” = kalan × 1/3; bütünün değil, kalanın parçasıdır. Örnek: 90’ın 1/3’ü ayrılınca 60 kalır; kalanın 1/4’ü 60 × 1/4 = 15’tir"
+   }
+  ],
+  "ipuclari": [
+   "Ali’den sonra ödülün kaçta kaçı kaldı?",
+   "Burak’ın payını ödülün tamamına göre kesirle yaz.",
+   "Can’ın kesrinden Burak’ın kesrini çıkar; bu fark 10 000 TL."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ali’den sonra",
+    "aciklama": "Ali ödülün 1/3’ünü aldı.",
+    "islem": "kalan: 2/3"
+   },
+   {
+    "baslik": "Burak’ın kesri",
+    "aciklama": "Kalanın 3/8’i.",
+    "islem": "2/3 × 3/8 = 1/4"
+   },
+   {
+    "baslik": "Can’ın kesri",
+    "aciklama": "Geriye kalan.",
+    "islem": "1 − 1/3 − 1/4 = 5/12"
+   },
+   {
+    "baslik": "Farkı eşle",
+    "aciklama": "Can − Burak = 10 000 TL.",
+    "islem": "5/12 − 3/12 = 2/12 = 1/6 ⇒ ödül 6 × 10 000 = 60 000 TL"
+   }
+  ],
+  "puf": "Her payı bütüne göre kesirle yaz; farklar ve toplamlar ancak o zaman doğrudan karşılaştırılır.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0005k",
+  "kaynakKart": "K-KES-04 (kesirle paylaştırma) · yeni kurgu (proje ödülü), iki payın farkı verildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kalan parçadan bir pay",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bütünün kesirleri dışında kalan miktardan bütünü bulup istenen parçayı hesaplar.",
+  "tipId": "kes-parca",
+  "tip": "Parçadan bütüne geçiş",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Arda, kitaplarının 2/5’ini kitaplığının ilk rafına, 1/3’ünü de ikinci rafına dizmiştir.\nGeriye kalan 48 kitabı ise üçüncü rafa yerleştirmiştir.\nBuna göre Arda ilk rafa kaç kitap dizmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "72",
+   "C": "108",
+   "D": "132",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "60, ikinci raftaki kitap sayısı.",
+   "C": "108, ilk raftan sonra kalan kitaplar (180’in 3/5’i).",
+   "D": "132, ilk iki raftaki kitapların toplamı.",
+   "E": "180, kitapların tamamı; soru ilk rafı soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk raftaki kitap sayısı.",
+  "bilgi": [
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "İlk iki rafa kitapların toplam kaçta kaçı dizildi?",
+   "48 kitap kitapların hangi kesrine denk geliyor?",
+   "Kitapların tamamını bulup ilk rafın kesriyle çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesir",
+    "aciklama": "İki rafın kesirlerini topla, 1’den çıkar.",
+    "islem": "1 − 2/5 − 1/3 = 15/15 − 6/15 − 5/15 = 4/15"
+   },
+   {
+    "baslik": "Bütün",
+    "aciklama": "4/15 = 48 ⇒ 1/15 = 12.",
+    "islem": "15 × 12 = 180 kitap"
+   },
+   {
+    "baslik": "İlk raf",
+    "aciklama": "Kitapların 2/5’i.",
+    "islem": "180 × 2/5 = 72 kitap"
+   }
+  ],
+  "puf": "Kesirler bütüne göre verildiyse toplanır; kalan kesir 1’den çıkarılarak bulunur.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0006k",
+  "kaynakKart": "K-KES-02 (parçadan bütüne) · iki kesir ve kalan miktar, istenen bir parça (ilk raf), yeni kurgu (kitaplık)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kullanım ve ekleme",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Her gün mevcut miktarın kesri kullanılıp sabit miktar eklenen süreçte son durumdan geriye giderek başlangıç miktarını bulur.",
+  "tipId": "kes-surec",
+  "tip": "Tekrarlı kesir süreci (sondan başa)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir hayvan barınağında, her sabah o anda depoda bulunan mamanın 1/3’ü kullanılmakta, her akşam da depoya 80 kg mama bağışlanmaktadır.\nBu düzen 3 gün sürmüş ve 3. günün akşamı bağış geldikten sonra depoda 320 kg mama olmuştur.\n1. günün sabahı mama kullanılmadan önce depoda kaç kilogram mama vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "360",
+   "B": "420",
+   "C": "510",
+   "D": "700",
+   "E": "1080"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "510"
+  },
+  "celdiriciler": {
+   "A": "360 kg, 2. günün akşamındaki mama; bir gün daha geri gidilmeli.",
+   "B": "420 kg, 1. günün akşamındaki mama; başlangıç değil.",
+   "D": "700 kg, geri dönerken işlem sırasını karıştırmak (önce 2/3’e bölüp sonra 80 çıkarmak).",
+   "E": "1080 kg, bağışları hesaba katmadan yalnızca 2/3’e üç kez bölmek."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "1. günün sabahındaki mama miktarı.",
+  "bilgi": [
+   {
+    "ad": "Sondan başa çözüm",
+    "ifade": "işlemleri ters sırayla ve ters işlemle geri al. “80 eklendi” ⇒ geri dönerken 80 çıkar · “1/3’ü kullanıldı” ⇒ kalan öncekinin 2/3’ü, geri dönerken 2/3’e böl"
+   }
+  ],
+  "ipuclari": [
+   "Son günden başla: bağış gelmeden önce depoda ne kadar mama vardı?",
+   "O miktar, sabahki mamanın kaçta kaçıdır?",
+   "Aynı iki geri adımı her gün için tekrarla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "3. gün",
+    "aciklama": "Bağışı geri al, sonra 2/3’e böl.",
+    "islem": "320 − 80 = 240 · 240 ÷ 2/3 = 360"
+   },
+   {
+    "baslik": "2. gün",
+    "aciklama": "2. günün akşamı depoda 360 kg vardı.",
+    "islem": "360 − 80 = 280 · 280 ÷ 2/3 = 420"
+   },
+   {
+    "baslik": "1. gün",
+    "aciklama": "1. günün akşamı depoda 420 kg vardı.",
+    "islem": "420 − 80 = 340 · 340 ÷ 2/3 = 510"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İleri doğru hesapla.",
+    "islem": "510 → 340 + 80 = 420 → 280 + 80 = 360 → 240 + 80 = 320 ✓"
+   }
+  ],
+  "puf": "Sondan başa çözümde son yapılan işlemi ilk geri al; her adımda önce ekleneni çıkar, sonra kesre böl.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0007k",
+  "kaynakKart": "K-KES-05 (tekrarlı süreç, sondan başa) · yeni kurgu (barınak maması), her gün kesirle kullanım ve sabit bağış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Pay ile toplamın farkı",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Kalanın kesriyle yapılan paylaştırmada bir payın diğer iki payın toplamından farkını kullanarak istenen payı bulur.",
+  "tipId": "kes-pay",
+  "tip": "Kesirlerle paylaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir şirket, yıl sonu primi için ayırdığı paranın 1/4’ünü satış bölümüne, kalan paranın 2/5’ini üretim bölümüne, geriye kalanın tamamını da teknik bölüme vermiştir.\nTeknik bölüme verilen para, satış ve üretim bölümlerine verilen paraların toplamından 18 000 TL azdır.\nBuna göre teknik bölüme kaç TL prim verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "21 000",
+   "B": "45 000",
+   "C": "54 000",
+   "D": "81 000",
+   "E": "99 000"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "81 000"
+  },
+  "celdiriciler": {
+   "A": "21 000 TL, “kalanın 2/5’i”ni bütünün 2/5’i sanmak (teknik 7/20, toplam 60 000).",
+   "B": "45 000 TL, satış bölümünün primi.",
+   "C": "54 000 TL, üretim bölümünün primi.",
+   "E": "99 000 TL, satış ve üretim bölümlerinin toplamı."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Teknik bölümün aldığı prim.",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/3’ü” = kalan × 1/3; bütünün değil, kalanın parçasıdır. Örnek: 90’ın 1/3’ü ayrılınca 60 kalır; kalanın 1/4’ü 60 × 1/4 = 15’tir"
+   }
+  ],
+  "ipuclari": [
+   "Satış bölümünden sonra paranın kaçta kaçı kaldı?",
+   "Üretim bölümünün payını bütüne göre kesirle yaz; teknik bölümün kesrini bul.",
+   "Satış + üretim kesrinden teknik kesrini çıkar; bu fark 18 000 TL."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satıştan sonra",
+    "aciklama": "1/4 satış bölümüne.",
+    "islem": "kalan: 3/4"
+   },
+   {
+    "baslik": "Üretim",
+    "aciklama": "Kalanın 2/5’i.",
+    "islem": "3/4 × 2/5 = 3/10"
+   },
+   {
+    "baslik": "Teknik",
+    "aciklama": "Geriye kalan.",
+    "islem": "1 − 1/4 − 3/10 = 9/20"
+   },
+   {
+    "baslik": "Farkı eşle",
+    "aciklama": "Satış + üretim = 5/20 + 6/20 = 11/20.",
+    "islem": "11/20 − 9/20 = 1/10 = 18 000 ⇒ toplam 180 000 TL"
+   },
+   {
+    "baslik": "Teknik bölüm",
+    "aciklama": "Toplamın 9/20’si.",
+    "islem": "180 000 × 9/20 = 81 000 TL"
+   }
+  ],
+  "puf": "Kalanın kesrini bütüne çevirmeden fark kurma; bütün paylar aynı bütüne göre yazılmalı.",
+  "kisaYol": null,
+  "kardes": "tytmat-kesirprob-0008k",
+  "kaynakKart": "K-KES-04 (kesirle paylaştırma) · fark, bir pay ile iki payın toplamı arasında; yeni kurgu (yıl sonu primi)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

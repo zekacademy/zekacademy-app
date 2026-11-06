@@ -1,0 +1,689 @@
+[
+ {
+  "id": "tytmat-kumeler-0001k",
+  "ana": "tytmat-kumeler-0001",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Alt Küme",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Belirli elemanları içeren ya da içermeyen alt kümelerin sayısını serbest elemanlarla bulur.",
+  "tipId": "km-altkume",
+  "tip": "Koşullu alt küme sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "K = {a, b, c, d, e, f, g, h} kümesi veriliyor.\nK’nin a ve b elemanlarının ikisini birden içeren, h elemanını ise içermeyen kaç alt kümesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "31",
+   "C": "32",
+   "D": "64",
+   "E": "128"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "16, serbest eleman sayısını 4 sanmak; c, d, e, f, g beş tanedir.",
+   "B": "31, boş kümeyi çıkarmak; a ve b’yi içeren alt küme boş olamaz.",
+   "D": "64, h koşulunu atlamak (2⁶).",
+   "E": "128, yalnızca h koşulunu kullanmak (2⁷); a ve b şartı atlanmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "a ile b’yi içeren, h’yi içermeyen alt kümelerin sayısı.",
+  "bilgi": [
+   {
+    "ad": "Alt küme sayısı",
+    "ifade": "n elemanlı bir kümenin 2ⁿ alt kümesi vardır (boş küme ve kümenin kendisi dahil). Örnek: {a, b} için ∅, {a}, {b}, {a, b} ⇒ 2² = 4"
+   },
+   {
+    "ad": "Serbest eleman",
+    "ifade": "bir elemanın alt kümede bulunup bulunmayacağı koşulla belirlenmemişse o eleman için 2 seçenek vardır (var / yok)"
+   }
+  ],
+  "ipuclari": [
+   "Durumu belli olan elemanlar hangileri?",
+   "Geriye kaç serbest eleman kalıyor?",
+   "Her serbest eleman için 2 seçenek var."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabit elemanlar",
+    "aciklama": "a ve b her alt kümede var, h hiçbirinde yok.",
+    "islem": "a, b → var · h → yok"
+   },
+   {
+    "baslik": "Serbest elemanlar",
+    "aciklama": "c, d, e, f ve g’nin her biri alt kümede olabilir ya da olmayabilir.",
+    "islem": "5 serbest eleman"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Her serbest eleman 2 seçenek verir.",
+    "islem": "2⁵ = 32"
+   }
+  ],
+  "puf": "Kesin bulunan ve kesin bulunmayan elemanları çıkardıktan sonra kalan elemanlarla 2ᵏ hesapla.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-01 (koşullu alt küme sayısı) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0002k",
+  "ana": "tytmat-kumeler-0002",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Alt Küme",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "“En az bir” koşullu alt küme sayısını tümleyen yoluyla bulur.",
+  "tipId": "km-altkume",
+  "tip": "Koşullu alt küme sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "C = {a, b, c, d, e, f} kümesinin elemanları birer harftir.\nC’nin alt kümelerinden kaç tanesinde en az bir sesli harf bulunur?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "32",
+   "C": "47",
+   "D": "48",
+   "E": "63"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "16, hiç sesli harf içermeyen alt kümelerin sayısı.",
+   "B": "32, sesli harf sayısını 1 sanıp 64 − 2⁵ hesaplamak; a ve e iki sesli harftir.",
+   "C": "47, boş kümeyi ayrıca çıkarmak; boş küme zaten sesli içermeyen 16 alt kümede.",
+   "E": "63, boş küme dışındaki tüm alt kümeler; {b, c} gibi sesli içermeyenler de sayılmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "En az bir sesli harf içeren alt kümelerin sayısı.",
+  "bilgi": [
+   {
+    "ad": "Alt küme sayısı",
+    "ifade": "n elemanlı bir kümenin 2ⁿ alt kümesi vardır (boş küme ve kümenin kendisi dahil). Örnek: {a, b} için ∅, {a}, {b}, {a, b} ⇒ 2² = 4"
+   },
+   {
+    "ad": "Sesli harfler",
+    "ifade": "Türkçede sesli harfler a, e, ı, i, o, ö, u, ü’dür; diğerleri sessizdir"
+   }
+  ],
+  "ipuclari": [
+   "C’deki sesli harfleri belirle.",
+   "Hiç sesli harf içermeyen alt kümeler hangi harflerden oluşur?",
+   "Tüm alt kümelerden bunları çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sesli harfler",
+    "aciklama": "C’de sesli harfler a ve e; sessizler b, c, d, f.",
+    "islem": "sesli: a, e · sessiz: 4 harf"
+   },
+   {
+    "baslik": "Tüm alt kümeler",
+    "aciklama": "C’nin 6 elemanı var.",
+    "islem": "2⁶ = 64"
+   },
+   {
+    "baslik": "Sesli içermeyenler",
+    "aciklama": "Yalnızca b, c, d, f’den oluşanlar (boş küme dahil).",
+    "islem": "2⁴ = 16"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Tümleyeni çıkar.",
+    "islem": "64 − 16 = 48"
+   }
+  ],
+  "puf": "“En az bir” koşulu varsa önce koşulu hiç sağlamayanları say; boş küme onların içindedir.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-01 (koşullu alt küme sayısı) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0003k",
+  "ana": "tytmat-kumeler-0003",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Küme İşlemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Birleşim, kesişim ve fark kümesinden bir kümenin elemanlarını belirler.",
+  "tipId": "km-islem",
+  "tip": "Küme işlemleriyle eleman bulma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "K ve L kümeleriyle ilgili aşağıdakiler bilinmektedir.\nK ∪ L = {2, 4, 6, 8, 10, 12, 14}\nK ∩ L = {6, 12}\nL \\ K = {2, 10, 14}\nBuna göre K \\ L kümesindeki elemanların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "18",
+   "C": "26",
+   "D": "30",
+   "E": "44"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "18, kesişimdeki 6 ve 12’nin toplamı.",
+   "C": "26, L \\ K’nın toplamı; soru K \\ L’yi soruyor.",
+   "D": "30, K’nin tamamının toplamı; K \\ L’de kesişimdeki elemanlar yoktur.",
+   "E": "44, L kümesinin toplamı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "K \\ L kümesindeki elemanların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Birleşim, kesişim",
+    "ifade": "A ∪ B: en az birinde olanlar · A ∩ B: ikisinde birden olanlar"
+   },
+   {
+    "ad": "Fark kümesi",
+    "ifade": "A \\ B: A’da olup B’de olmayan elemanlar. Örnek: {1, 2, 3} \\ {2} = {1, 3}"
+   }
+  ],
+  "ipuclari": [
+   "Birleşimdeki her eleman hangi üç bölgeden birindedir?",
+   "Kesişimi ve L \\ K’yı birleşimden çıkar.",
+   "K \\ L, kesişimi içermez."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölgeler",
+    "aciklama": "Birleşim üç parçadan oluşur: K \\ L, K ∩ L ve L \\ K.",
+    "islem": "K ∪ L = (K \\ L) ∪ (K ∩ L) ∪ (L \\ K)"
+   },
+   {
+    "baslik": "K \\ L’yi bul",
+    "aciklama": "Birleşimden kesişimi ve L \\ K’yı çıkar.",
+    "islem": "K \\ L = {4, 8}",
+    "gorsel": "<svg viewBox=\"0 0 330 192\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><defs><clipPath id=\"v9caf80cK\"><circle cx=\"130\" cy=\"100\" r=\"64\"/></clipPath><clipPath id=\"v9caf80cL\"><circle cx=\"200\" cy=\"100\" r=\"64\"/></clipPath></defs><circle cx=\"130\" cy=\"100\" r=\"64\" stroke-width=\"1.8\"/><circle cx=\"200\" cy=\"100\" r=\"64\" stroke-width=\"1.8\"/><text x=\"70.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"260.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><text x=\"98.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">4, 8</text><text x=\"165.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">6, 12</text><text x=\"232.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">2, 10, 14</text></svg>"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Kalan iki elemanı topla.",
+    "islem": "4 + 8 = 12"
+   }
+  ],
+  "puf": "Fark kümesi kesişimi içermez; birleşimi üç bölgeye ayırarak düşün.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-02 (işlemlerden kümeyi kurma) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0004k",
+  "ana": "tytmat-kumeler-0004",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Venn Problemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Kesişimin iki grubun kesri olarak verildiği problemde birleşim denklemini kurar.",
+  "tipId": "km-venn-problem",
+  "tip": "Venn şemasıyla sayma problemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "36 kişilik bir grubun her üyesi çay ve kahveden en az birini içmektedir.\nÇay içenlerin 1/4’ü kahve de içmektedir.\nKahve içenlerin 2/3’ü çay da içmektedir.\nBuna göre yalnızca kahve içen kaç kişi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "8",
+   "C": "12",
+   "D": "24",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "B": "8, ikisini birden içenlerin sayısı.",
+   "C": "12, kahve içenlerin tamamı; bunların 8’i çay da içiyor.",
+   "D": "24, yalnızca çay içenlerin sayısı; soru yalnızca kahve içenleri soruyor.",
+   "E": "32, çay içenlerin tamamı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yalnızca kahve içen kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B); kesişim iki kez sayıldığı için bir kez çıkarılır. Örnek: 5 + 4 − 2 = 7"
+   },
+   {
+    "ad": "Kesrin bütünü",
+    "ifade": "bir grubun 2/3’ü x ise grubun tamamı 3x/2’dir. Örnek: 2/3’ü 8 olan grup 12 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "İkisini birden içenlere x de.",
+   "Çay içenlerin 1/4’ü x ise çay içen kaç kişi? Kahve içenlerin 2/3’ü x ise kahve içen kaç kişi?",
+   "Birleşim 36 olacak biçimde denklem kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesişime x de",
+    "aciklama": "İkisini birden içenler x olsun.",
+    "islem": "s(Ç ∩ K) = x"
+   },
+   {
+    "baslik": "Grupları yaz",
+    "aciklama": "x, çay içenlerin 1/4’ü ve kahve içenlerin 2/3’üdür.",
+    "islem": "s(Ç) = 4x · s(K) = 3x/2"
+   },
+   {
+    "baslik": "Birleşim 36",
+    "aciklama": "Kesişimi bir kez çıkar.",
+    "islem": "4x + 3x/2 − x = 9x/2 = 36 ⇒ x = 8"
+   },
+   {
+    "baslik": "Yalnız kahve",
+    "aciklama": "Kahve içenler 3 × 8 ÷ 2 = 12; bunlardan 8’i çay da içiyor.",
+    "islem": "12 − 8 = 4",
+    "gorsel": "<svg viewBox=\"0 0 330 192\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><defs><clipPath id=\"v1074d8cÇ\"><circle cx=\"130\" cy=\"100\" r=\"64\"/></clipPath><clipPath id=\"v1074d8cK\"><circle cx=\"200\" cy=\"100\" r=\"64\"/></clipPath></defs><circle cx=\"130\" cy=\"100\" r=\"64\" stroke-width=\"1.8\"/><circle cx=\"200\" cy=\"100\" r=\"64\" stroke-width=\"1.8\"/><text x=\"70.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ç</text><text x=\"260.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"98.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">24</text><text x=\"165.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">8</text><text x=\"232.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text></svg>"
+   }
+  ],
+  "puf": "Kesişim iki ayrı kesirle verildiyse iki grubu da x cinsinden yaz; birleşimde kesişimi bir kez çıkar.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-03 (kesişim iki grubun kesri) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0005k",
+  "ana": "tytmat-kumeler-0005",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Venn Şeması",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Bölünebilme özelliğiyle tanımlı kümelerde boyalı bölgelerin eleman sayısını bulur.",
+  "tipId": "km-boyali",
+  "tip": "Venn şemasında boyalı bölge",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki Venn şemasında evrensel küme E = {1, 2, 3, …, 40} olarak alınmıştır. A, E’deki 3’ün katlarını; B, 4’ün katlarını; C ise 5’in katlarını göstermektedir.\nŞemadaki boyalı bölgelere düşen sayıların adedi kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 218\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><defs><clipPath id=\"vda4be7cA\"><circle cx=\"135\" cy=\"92\" r=\"60\"/></clipPath><clipPath id=\"vda4be7cB\"><circle cx=\"195\" cy=\"92\" r=\"60\"/></clipPath><clipPath id=\"vda4be7cC\"><circle cx=\"165\" cy=\"144\" r=\"60\"/></clipPath><mask id=\"vda4be7mabc\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/></mask><mask id=\"vda4be7mc\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/><circle cx=\"135\" cy=\"92\" r=\"60\" fill=\"black\"/><circle cx=\"195\" cy=\"92\" r=\"60\" fill=\"black\"/></mask><mask id=\"vda4be7mab\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/><circle cx=\"165\" cy=\"144\" r=\"60\" fill=\"black\"/></mask></defs><g clip-path=\"url(#vda4be7cC)\"><g clip-path=\"url(#vda4be7cB)\"><g clip-path=\"url(#vda4be7cA)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vda4be7mabc)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g></g></g><g clip-path=\"url(#vda4be7cC)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vda4be7mc)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g><g clip-path=\"url(#vda4be7cB)\"><g clip-path=\"url(#vda4be7cA)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vda4be7mab)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g></g><rect x=\"8\" y=\"8\" width=\"314\" height=\"202\" rx=\"6\" stroke-width=\"1.5\"/><text x=\"24.0\" y=\"28.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">E</text><circle cx=\"135\" cy=\"92\" r=\"60\" stroke-width=\"1.8\"/><circle cx=\"195\" cy=\"92\" r=\"60\" stroke-width=\"1.8\"/><circle cx=\"165\" cy=\"144\" r=\"60\" stroke-width=\"1.8\"/><text x=\"70.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"260.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"242.0\" y=\"196.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">C</text></svg>",
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "7",
+   "D": "9",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "3, yalnızca A ∩ B bölgesi; boyalı “yalnız C” bölgesi eksik.",
+   "B": "4, yalnızca “yalnız C” bölgesi; A ∩ B bölgesi eksik.",
+   "D": "9, 5’in katlarından 3’ün katlarını (15, 30) çıkarmamak: 6 + 3.",
+   "E": "11, C’nin 8 elemanının hepsini “yalnız C” sanmak: 8 + 3."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Boyalı bölgelerdeki sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Venn şemasında bölge",
+    "ifade": "her bölge hangi kümelerin içinde, hangilerinin dışında olduğuyla okunur. “Yalnız A” = A’da olup diğer kümelerde olmayan"
+   },
+   {
+    "ad": "Ortak katlar",
+    "ifade": "hem 3’ün hem 4’ün katı olan sayılar 12’nin katlarıdır"
+   }
+  ],
+  "ipuclari": [
+   "Boyalı bölgeler: A ile B’nin ortak kısmı ve yalnız C. Sözle yaz.",
+   "A ∩ B: hem 3’ün hem 4’ün katı, yani 12’nin katları.",
+   "Yalnız C: 5’in katı olup 3’ün ve 4’ün katı olmayanlar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölgeleri oku",
+    "aciklama": "Boyalı olanlar A ∩ B’nin tamamı (C içindeki parçası dahil) ve yalnız C.",
+    "islem": "A ∩ B · yalnız C"
+   },
+   {
+    "baslik": "A ∩ B",
+    "aciklama": "12’nin katları; hiçbiri 5’in katı değil.",
+    "islem": "12, 24, 36 ⇒ 3 sayı"
+   },
+   {
+    "baslik": "Yalnız C",
+    "aciklama": "5’in katlarından 3’ün ya da 4’ün katı olanları (15, 20, 30, 40) ele.",
+    "islem": "5, 10, 25, 35 ⇒ 4 sayı"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki bölgeyi topla.",
+    "islem": "3 + 4 = 7",
+    "gorsel": "<svg viewBox=\"0 0 330 218\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><defs><clipPath id=\"vdd0adfcA\"><circle cx=\"135\" cy=\"92\" r=\"60\"/></clipPath><clipPath id=\"vdd0adfcB\"><circle cx=\"195\" cy=\"92\" r=\"60\"/></clipPath><clipPath id=\"vdd0adfcC\"><circle cx=\"165\" cy=\"144\" r=\"60\"/></clipPath><mask id=\"vdd0adfmabc\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/></mask><mask id=\"vdd0adfmc\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/><circle cx=\"135\" cy=\"92\" r=\"60\" fill=\"black\"/><circle cx=\"195\" cy=\"92\" r=\"60\" fill=\"black\"/></mask><mask id=\"vdd0adfmab\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" fill=\"white\"/><circle cx=\"165\" cy=\"144\" r=\"60\" fill=\"black\"/></mask></defs><g clip-path=\"url(#vdd0adfcC)\"><g clip-path=\"url(#vdd0adfcB)\"><g clip-path=\"url(#vdd0adfcA)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vdd0adfmabc)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g></g></g><g clip-path=\"url(#vdd0adfcC)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vdd0adfmc)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g><g clip-path=\"url(#vdd0adfcB)\"><g clip-path=\"url(#vdd0adfcA)\"><rect x=\"0\" y=\"0\" width=\"330\" height=\"218\" mask=\"url(#vdd0adfmab)\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".45\"/></g></g><rect x=\"8\" y=\"8\" width=\"314\" height=\"202\" rx=\"6\" stroke-width=\"1.5\"/><text x=\"24.0\" y=\"28.0\" text-anchor=\"middle\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">E</text><circle cx=\"135\" cy=\"92\" r=\"60\" stroke-width=\"1.8\"/><circle cx=\"195\" cy=\"92\" r=\"60\" stroke-width=\"1.8\"/><circle cx=\"165\" cy=\"144\" r=\"60\" stroke-width=\"1.8\"/><text x=\"70.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"260.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"242.0\" y=\"196.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">C</text><text x=\"100.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">8</text><text x=\"230.0\" y=\"82.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">5</text><text x=\"165.0\" y=\"186.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text><text x=\"165.0\" y=\"68.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"126.0\" y=\"136.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"204.0\" y=\"136.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"165.0\" y=\"114.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">0</text></svg>"
+   }
+  ],
+  "puf": "Ortak katlar EKOK’un katlarıdır; “yalnız” bölgede diğer kümelerin katlarını tek tek ele.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-05 (bölünebilme kümeleri, boyalı bölge) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0006k",
+  "ana": "tytmat-kumeler-0006",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Venn Problemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Üç kümeli problemde fazla sayımı kullanarak yalnızca bir kümede olanların sayısını bulur.",
+  "tipId": "km-venn-problem",
+  "tip": "Venn şemasıyla sayma problemi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir sitede oturan 60 kişinin her biri X, Y ve Z dizilerinden en az birini izlemektedir.\nX dizisini 30, Y dizisini 26, Z dizisini 24 kişi izlemektedir.\nÜç diziyi de izleyen 3 kişi vardır.\nBuna göre bu dizilerden yalnızca ikisini izleyen kaç kişi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "14",
+   "C": "17",
+   "D": "20",
+   "E": "43"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "11, üç dizi izleyenleri 3 kez çıkarmak (20 − 9); onlar 2 kez fazla sayılır.",
+   "C": "17, üç dizi izleyenleri bir kez çıkarmak (20 − 3).",
+   "D": "20, fazla sayımın tamamını iki dizi izleyenlere vermek.",
+   "E": "43, yalnızca bir dizi izleyenlerin sayısı (60 − 14 − 3)."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yalnızca iki dizi izleyen kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Tam olarak k kümede",
+    "ifade": "x₁: yalnız birinde, x₂: yalnız ikisinde, x₃: üçünde de olanlar · x₁ + x₂ + x₃ = kişi sayısı · x₁ + 2x₂ + 3x₃ = s(A) + s(B) + s(C)"
+   }
+  ],
+  "ipuclari": [
+   "İzleyici sayılarının toplamı 60’tan ne kadar fazla?",
+   "Bu fazlalığa kimler katkı yapar?",
+   "Üç diziyi izleyen biri 2, iki dizi izleyen biri 1 kez fazla sayılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamları ekle",
+    "aciklama": "İki dizi izleyen 2 kez, üçünü izleyen 3 kez sayılır.",
+    "islem": "30 + 26 + 24 = 80"
+   },
+   {
+    "baslik": "Fazla sayım",
+    "aciklama": "Her kişi bir kez sayılsaydı toplam 60 olurdu.",
+    "islem": "80 − 60 = 20"
+   },
+   {
+    "baslik": "Üç dizi izleyenler",
+    "aciklama": "Her biri 2 kez fazla sayıldı.",
+    "islem": "2 × 3 = 6"
+   },
+   {
+    "baslik": "Yalnız iki dizi",
+    "aciklama": "Kalan fazlalık yalnızca ikisini izleyenlerden gelir.",
+    "islem": "x₂ = 20 − 6 = 14"
+   }
+  ],
+  "puf": "Fazla sayımı paylaştırırken üç kümede olanların 2 kez fazla sayıldığını unutma.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-04 (üç kümede fazla sayım) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0007k",
+  "ana": "tytmat-kumeler-0007",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Kartezyen Çarpım",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Kartezyen çarpım ve birleşim bilgisinden kümelerin eleman sayılarını bulup yeni bir kartezyen çarpımı hesaplar.",
+  "tipId": "km-kartezyen",
+  "tip": "Kartezyen çarpımın eleman sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "K ve L sonlu kümeleri için\ns(K ∪ L) = 10\ns(K ∩ L) = 3\ns(K × L) = 36\neşitlikleri sağlanmaktadır. K’nin eleman sayısı L’ninkinden azdır.\nBuna göre K × (L \\ K) kümesinin eleman sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "20",
+   "C": "24",
+   "D": "36",
+   "E": "54"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "12, K × (K ∩ L) hesaplamak (4 × 3).",
+   "B": "20, s(L \\ K)’yı s(L) − s(K) = 5 sanmak; çıkarılması gereken kesişimdir.",
+   "D": "36, s(K × L); soru K × (L \\ K)’yı soruyor.",
+   "E": "54, K yerine L ile çarpmak (9 × 6)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "K × (L \\ K) kümesinin eleman sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eleman sayısı",
+    "ifade": "s(A), A kümesinin eleman sayısıdır. Örnek: A = {2, 5, 9} ⇒ s(A) = 3"
+   },
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B); kesişim iki kez sayıldığı için bir kez çıkarılır. Örnek: 5 + 4 − 2 = 7"
+   },
+   {
+    "ad": "Kartezyen çarpım",
+    "ifade": "A × B, birinci bileşeni A’dan, ikinci bileşeni B’den alınan tüm (x, y) sıralı ikilileridir; s(A × B) = s(A) × s(B). Örnek: 2 ve 3 elemanlı kümeler ⇒ 6 ikili"
+   }
+  ],
+  "ipuclari": [
+   "s(K) + s(L) değerini birleşim formülünden bul.",
+   "Toplamı ve çarpımı bilinen iki sayıyı belirle.",
+   "L \\ K, L’den kesişim çıkarılınca kalır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam",
+    "aciklama": "Birleşim formülünden.",
+    "islem": "s(K) + s(L) = 10 + 3 = 13"
+   },
+   {
+    "baslik": "Çarpım",
+    "aciklama": "Kartezyen çarpımdan.",
+    "islem": "s(K) × s(L) = 36"
+   },
+   {
+    "baslik": "Sayıları bul",
+    "aciklama": "Toplamı 13, çarpımı 36: 4 ve 9. K’ninki küçük.",
+    "islem": "s(K) = 4 · s(L) = 9"
+   },
+   {
+    "baslik": "Fark kümesi",
+    "aciklama": "L’den kesişimi çıkar.",
+    "islem": "s(L \\ K) = 9 − 3 = 6"
+   },
+   {
+    "baslik": "Yeni çarpım",
+    "aciklama": "Eleman sayılarını çarp.",
+    "islem": "4 × 6 = 24"
+   }
+  ],
+  "puf": "Fark kümesinin eleman sayısı için büyük kümeden kesişimi çıkar; diğer kümenin eleman sayısını değil.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-06 (toplam–çarpımdan eleman sayıları) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeler-0008k",
+  "ana": "tytmat-kumeler-0008",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Kartezyen Çarpım",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Bileşenleri eşit ikililerden kesişimi çıkarır; iki olası durumu inceleyerek en büyük değeri bulur.",
+  "tipId": "km-kartezyen",
+  "tip": "Kartezyen çarpımın eleman sayısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "K × L kümesinin 48 elemanından tam 3 tanesi, birinci bileşeni ikinci bileşenine eşit olan sıralı ikililerdir.\ns(K ∪ L) = 11\nolduğuna göre L \\ K kümesinin eleman sayısı en az kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "5",
+   "D": "6",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "2, s(L) − s(K) farkı (8 − 6); fark kümesi için kesişim çıkarılır.",
+   "C": "5, s(L) = 8 durumundaki değer; soru en az değeri soruyor.",
+   "D": "6, s(L)’nin küçük değerini fark kümesi sanmak; kesişim çıkarılmamış.",
+   "E": "8, s(L)’nin büyük değeri."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "s(L \\ K)’nin alabileceği en küçük değer.",
+  "bilgi": [
+   {
+    "ad": "Sıralı ikili",
+    "ifade": "(x, y) ikilisinde x birinci, y ikinci bileşendir. (x, x) ikilisi A × B’de ise x hem A’da hem B’dedir"
+   },
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B); kesişim iki kez sayıldığı için bir kez çıkarılır. Örnek: 5 + 4 − 2 = 7"
+   },
+   {
+    "ad": "Kartezyen çarpım",
+    "ifade": "A × B, birinci bileşeni A’dan, ikinci bileşeni B’den alınan tüm (x, y) sıralı ikilileridir; s(A × B) = s(A) × s(B). Örnek: 2 ve 3 elemanlı kümeler ⇒ 6 ikili"
+   }
+  ],
+  "ipuclari": [
+   "Bileşenleri eşit ikililer K ile L’nin hangi elemanlarından oluşur?",
+   "s(K) + s(L) ve s(K) × s(L)’yi bul.",
+   "s(L)’nin alabileceği iki değeri de dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşit bileşenler",
+    "aciklama": "Her ortak eleman x için (x, x) ikilisi K × L’dedir.",
+    "islem": "s(K ∩ L) = 3"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Birleşim formülünden.",
+    "islem": "s(K) + s(L) = 11 + 3 = 14"
+   },
+   {
+    "baslik": "Çarpım",
+    "aciklama": "Kartezyen çarpımdan.",
+    "islem": "s(K) × s(L) = 48"
+   },
+   {
+    "baslik": "İki durum",
+    "aciklama": "Toplamı 14, çarpımı 48: 6 ve 8.",
+    "islem": "s(L) = 6 ⇒ 6 − 3 = 3 · s(L) = 8 ⇒ 8 − 3 = 5"
+   },
+   {
+    "baslik": "En az",
+    "aciklama": "Küçük olanı seç.",
+    "islem": "en az 3"
+   }
+  ],
+  "puf": "(x, x) ikililerinin sayısı her zaman kesişimin eleman sayısıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-KM-06 (toplam–çarpımdan eleman sayıları) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

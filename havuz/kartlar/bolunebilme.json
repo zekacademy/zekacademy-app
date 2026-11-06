@@ -1,0 +1,141 @@
+{
+ "konu": "Bölme ve Bölünebilme",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-BLN-01",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Kalanlı Bölme",
+   "fikir": "Bölüm ve kalanı verilen bir sayı (paket, sıra, demet) önce bölünen = bölen × bölüm + kalan ile kurulur, sonra başka bir bölene göre kalanı sorulur.",
+   "tuzak": "Eski kalanı yeni kalan sanmak, kalanı eklemeyi unutmak, bölümü kalanla karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "bln-kalan",
+   "tip": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+   "kaynak": "ÖSYM (Bölünebilme · kalanlı bölme) · Bilgi Sarmal, 3D (nöbet/paketleme)"
+  },
+  {
+   "id": "K-BLN-02",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Kalanlı Bölme",
+   "fikir": "Bölüm ile kalan arasında bir ilişki (bölüm = k × kalan) ya da zincirleme bölmeler verilir; kalan < bölen koşulu en büyük/en küçük değeri belirler.",
+   "tuzak": "Kalanın bölenden küçük olması gerektiğini unutmak; zincirde ara bölenin kalandan büyük olma koşulunu atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bln-kalan",
+   "tip": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+   "kaynak": "ÖSYM (n-değişmeli sayılar) · Bilgi Sarmal, Mert kalanlı bölme testleri"
+  },
+  {
+   "id": "K-BLN-03",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Bölünebilme Kuralları",
+   "fikir": "Bilinmeyen rakamlı bir sayının 3, 4, 5 ya da 9 ile bölünebilmesinden rakamın alabileceği değerler bulunur.",
+   "tuzak": "3 ile 9 kuralını karıştırmak; rakamın 9’a kadar çıkabileceğini unutup bir değeri atlamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "bln-kural",
+   "tip": "Bölünebilme kurallarıyla rakam bulma",
+   "kaynak": "ÖSYM (Bölünebilme Kuralları 1) · Bilgi Sarmal, 345"
+  },
+  {
+   "id": "K-BLN-04",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Bölünebilme Kuralları",
+   "fikir": "Bileşik bir bölen (36, 45) aralarında asal çarpanlara ayrılır; her çarpanın kuralı ayrı uygulanır, durumlar ayrı ayrı çözülür.",
+   "tuzak": "Bir durumdaki rakamı diğer durumdakiyle karıştırmak; rakamlar toplamının 18 dışında 9 ya da 27 de olabileceğini düşünmemek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bln-kural",
+   "tip": "Bölünebilme kurallarıyla rakam bulma",
+   "kaynak": "ÖSYM 2024 (9 ile kalan, rakam bulma) · Bilgi Sarmal (25x3y, 4 ve 3 ile)"
+  },
+  {
+   "id": "K-BLN-05",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Kalan Bulma",
+   "fikir": "Bir bölünebilme koşulundan bilinmeyen rakam bulunur, sonra sayının başka bir sayıyla (11, 4, 9) bölümünden kalan kurallarla hesaplanır.",
+   "tuzak": "Aynı harfin iki kez geçtiğini unutmak; 11 kuralında negatif sonucu kalan sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bln-kalan-kural",
+   "tip": "Kurallarla kalan bulma",
+   "kaynak": "ÖSYM 2024 (xyxyx, 9 ile kalan) · ÖSYM (A34B, 5 ve 9 ile kalan) · Bilgi Sarmal"
+  },
+  {
+   "id": "K-BLN-06",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Bölünebilme Kuralları",
+   "fikir": "Rakamları yer değiştirmiş iki sayıdan biri bir bölene, diğeri başka bir bölene bölünür; iki durum ayrı incelenip ortak çözüm bulunur.",
+   "tuzak": "Birler basamağının 0 olamayacağını (diğer sayı üç basamaklı kalmalı) gözden kaçırmak; iki durumu birden denememek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "bln-iki-sayi",
+   "tip": "İki sayı, iki bölünebilme koşulu",
+   "kaynak": "ÖSYM (AAB–ABA 9, 5 ve 12 · ABB–BAB 11 ve 12 · AB × BA ve 30) · Mert"
+  },
+  {
+   "id": "K-BLN-07",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Bölünebilme",
+   "fikir": "Bölünebilmeyle yeni bir sayı türü tanımlanır (rakamlar toplamına/çarpımına bölünen sayılar); tanıma uyan sayılar bir aralıkta taranır.",
+   "tuzak": "0 içeren sayıları ya da sınır değerleri yanlış dahil etmek, örneği genelleştirmek.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "bln-tanimli",
+   "tip": "Bölünebilmeyle tanımlanan sayılar",
+   "kaynak": "ÖSYM (ortakatlı sayı, n-değişmeli sayılar) · Bilgi Sarmal şema soruları"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bln-kalan",
+   "ad": "Kalanlı bölme ve bölüm–kalan ilişkisi",
+   "kartlar": [
+    "K-BLN-01",
+    "K-BLN-02"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "bln-kural",
+   "ad": "Bölünebilme kurallarıyla rakam bulma",
+   "kartlar": [
+    "K-BLN-03",
+    "K-BLN-04"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "bln-kalan-kural",
+   "ad": "Kurallarla kalan bulma",
+   "kartlar": [
+    "K-BLN-05"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "bln-iki-sayi",
+   "ad": "İki sayı, iki bölünebilme koşulu",
+   "kartlar": [
+    "K-BLN-06"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "bln-tanimli",
+   "ad": "Bölünebilmeyle tanımlanan sayılar",
+   "kartlar": [
+    "K-BLN-07"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  }
+ ]
+}
