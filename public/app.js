@@ -2419,24 +2419,37 @@ function konuIslem(k, kisa){ const c = icerik(k), banka = BANKA.some(x=>x.k===k)
   return `<span class="kis">${c?`<button data-ders="${esc(k)}">▶️ ${kisa?"Dinle":"Konu dinle"}</button>`:`<span class="yok">▶️ Video yok</span>`}${banka?`<button data-bk="konu" data-k="${esc(k)}">🧩 ${kisa?"Çöz":"Soru çöz"}</button>`:`<button data-act="go" data-v="socoz">📷 ${kisa?"Çöz":"Soru çöz"}</button>`}</span>`; }
 function konuSatiri(k, s){ const d = konuDurum(k, s);
   return `<div class="ks ${d?d.durum:"yok"}"><div class="ksb"><span class="ksad">${esc(konuAdi(k))}</span><span class="faint small">${esc(dersAdi(k.split("|")[0]))}${d?" · "+esc(d.c.kanal):""}${d&&d.durum!=="yok"?` · ${d.durum==="tamam"?"🟢 Tamam":"🟡 Devam ediyor"}`:""}</span></div>${konuIslem(k)}</div>`; }
+const DERS_EMO = {mat:"🔢", prob:"🧮", matd:"🔢", geo:"📐", tr:"📖", fiz:"⚡", kim:"🧪", bio:"🧬", tar:"🏛️", cog:"🌍", fel:"💭"};
+const DERS_ON = {Matematik:"mat", Geometri:"geo", Türkçe:"tr", Fizik:"fiz", Kimya:"kim", Biyoloji:"bio", Tarih:"tar", Coğrafya:"cog", Felsefe:"fel"};
+const grpOf = on => DERS_GRUP[on] || "sos";
+const kucukKapak = k => { const c = icerik(k); return c ? `<span class="kk2" style="background-image:url(${thumb(c.vid)})"></span>` : `<span class="kk2 bos">${DERS_EMO[k.split("|")[0]]||"📘"}</span>`; };
 function bugunGorevler(s){ const L = dayTasks(s, today()).map(g=>({g, d:gorevDers(g.t)})).filter(x=>x.d);
   if(!L.length) return `<div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3></div><p class="muted small" style="margin:6px 0 0">Bugünkü programında ders görevi yok. Haftalık konularından dilediğine çalışabilirsin.</p></div>`;
   return `<div class="card"><div class="sech"><h3>✅ Bugün ne yapayım?</h3><span class="faint small">bugünkü programından</span></div><div class="bglist">${L.map(({g,d})=>{ const ks = d.sabit ? [d.sabit] : dersKonulari(s, d.ders).filter(k=>!d.prob || k.startsWith("prob|") || true);
-      return `<div class="bgg ${g.done?"bitti":""}"><div class="bggh"><span class="bggt">${g.done?"✅":"⬜"}</span><b>${esc(g.t)}</b></div>
-        ${ks.length ? ks.map(k=>`<div class="bggk"><span>🎯 ${esc(konuAdi(k))}</span>${konuIslem(k, true)}</div>`).join("") : `<div class="bggk"><span class="faint small">Bu ders için haftalık konu yazılmamış.</span><span class="kis"><button data-act="go" data-v="videolar">▶️ Videolar</button><button data-act="go" data-v="socoz">📷 Soru çöz</button></span></div>`}</div>`; }).join("")}</div></div>`; }
+      const on = d.sabit ? "tr" : (d.prob ? "prob" : DERS_ON[d.ders]||"mat");
+      return `<div class="bgg g-${grpOf(on)} ${g.done?"bitti":""}"><div class="bggh"><span class="bgge">${DERS_EMO[on]||"📘"}</span><div class="bggm"><b>${esc(g.t)}</b><span class="bggd">${g.done?"✓ Tamamlandı":esc(d.ders)}</span></div></div>
+        ${ks.length ? ks.map(k=>`<div class="bggk">${kucukKapak(k)}<span class="bggkn">${esc(konuAdi(k))}</span>${konuIslem(k, true)}</div>`).join("") : `<div class="bggk"><span class="faint small">Bu ders için haftalık konu yazılmamış.</span><span class="kis"><button data-act="go" data-v="videolar">▶️ Videolar</button><button data-act="go" data-v="socoz">📷 Soru çöz</button></span></div>`}</div>`; }).join("")}</div></div>`; }
 function yanlislarKarti(s){ const o = og(), H = (o.hata||[]).filter(h=>!h.tamam), bek = soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length; if(!H.length && !bek) return "";
   const bugun = H.filter(h=>h.sonraki<=today());
   return `<div class="card"><div class="sech"><h3>❗ Yanlışlarını çöz</h3><span class="faint small">${H.length+bek} soru</span></div><div class="tklist">
     ${H.slice(0,3).map(h=>{ const x = h.bid ? BANKA.find(b=>b.id===h.bid) : (icerik(h.k)||{test:[]}).test[h.i]; return x ? `<button class="row" ${h.bid?`data-bk="tek" data-id="${h.bid}"`:`data-ders="${esc(h.k)}" data-sekme="test"`}><span class="ri">❗</span><div style="min-width:0"><div class="rt">${esc(konuAdi(h.k))}</div><div class="rs">${esc(x.q.replace(/\n/g," ").slice(0,70))}…</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""; }).join("")}
     ${bek?`<button class="row" data-act="go" data-v="sorular"><span class="ri">📕</span><div><div class="rt">Hata Defteri'nde ${bek} soru bekliyor</div><div class="rs">Soru Çözüm'le adım adım çöz</div></div><span class="rx">${icon("chev","sm")}</span></button>`:""}</div>${bugun.length?`<p class="faint small" style="margin:8px 0 0">${bugun.length} tanesinin tekrar günü bugün.</p>`:""}</div>`; }
+function ogHero(s){ const L = dayTasks(s, today()).filter(g=>gorevDers(g.t)), bitti = L.filter(g=>g.done).length, pct = L.length ? bitti/L.length : 0, o = og();
+  const dk = Math.round(((o.izleme||{})[today()]||0)/60), yan = (o.hata||[]).filter(h=>!h.tamam).length, R = 26, C = 2*Math.PI*R;
+  return `<div class="oghero"><div class="ohm"><small>${["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"][new Date().getDay()]} · bugün</small><b>${L.length ? (bitti===L.length ? "Bugünkü dersler tamam 🎉" : `${L.length - bitti} ders görevin var`) : "Bugün serbest çalışma"}</b>
+      <span class="ohc"><span>▶️ ${dk} dk izledin</span>${yan?`<span>❗ ${yan} yanlış bekliyor</span>`:""}</span></div>
+    <svg class="ohr" viewBox="0 0 64 64" aria-label="Bugünkü ders görevleri ${bitti}/${L.length}"><circle cx="32" cy="32" r="${R}" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="7"/><circle cx="32" cy="32" r="${R}" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="#fff" font-size="15" font-weight="800">${bitti}/${L.length}</text></svg></div>`; }
 function pOgren(s){ demoOgrenTohum(); const hk = haftaKonulari(s).map(x=>x.k);
   return `${topbar(`<h1 class="ttl">Öğrenme Merkezi</h1>`)}
   <div class="page ogpage ogv3">
+    ${ogHero(s)}
     <div class="og4"><button data-act="go" data-v="socoz" class="og4a"><span>📷</span><b>Soru Çöz</b></button><button data-act="go" data-v="videolar" class="og4b"><span>▶️</span><b>Ders Videoları</b></button><button data-act="go" data-v="banka" class="og4c"><span>🧩</span><b>Soru Bankası</b></button><button data-act="go" data-v="sorular" class="og4d"><span>📕</span><b>Hata Defteri</b></button></div>
     ${bugunGorevler(s)}
     ${devamSatiri(s)}
     ${yanlislarKarti(s)}
-    ${hk.length?`<div class="card"><div class="sech"><h3>🎯 Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="kslist">${hk.map(k=>konuSatiri(k,s)).join("")}</div></div>`:""}
+    ${hk.length?`<div class="sech" style="margin:4px 4px -4px"><h3>🎯 Bu haftaki konuların</h3><span class="faint small">koçunun programından</span></div><div class="hkrow">${hk.map(k=>{ const on = k.split("|")[0], c = icerik(k), d = konuDurum(k,s);
+      return `<div class="hk g-${grpOf(on)}"><button class="hkk" ${c?`data-ders="${esc(k)}"`:"disabled"} style="${c?`background-image:url(${thumb(c.vid)})`:""}"><span class="hkd">${DERS_EMO[on]||""} ${esc(dersAdi(on))}</span>${d&&d.durum!=="yok"?`<span class="hks">${d.durum==="tamam"?"🟢 Tamam":"🟡 Devam"}</span>`:""}${c?`<span class="vkp">▶</span>`:""}</button>
+        <div class="hkm"><b>${esc(konuAdi(k))}</b><span class="faint small">${c?esc(c.kanal):"Video yakında"}</span></div>${konuIslem(k)}</div>`; }).join("")}</div>`:""}
     ${araclar(s)}
   </div>`; }
 /* ---- Ders Videoları sayfası ---- */

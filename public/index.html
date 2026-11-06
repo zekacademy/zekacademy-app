@@ -1333,6 +1333,45 @@ body.dersacik{overflow:hidden}
 .kis button[data-bk],.kis button[data-v="socoz"]{border-color:var(--ac);color:var(--ac)}
 .kis span.yok{opacity:.45}
 .ks{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap}
+
+/* Öğrenme Merkezi görsel canlılık */
+.oghero{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-radius:22px;color:#fff;background:radial-gradient(130% 140% at 0% 0%,#22C063 0%,#13854A 55%,#0B5A30 100%);box-shadow:0 10px 30px -12px rgba(11,90,48,.55);position:relative;overflow:hidden}
+.oghero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.08)}
+.ohm{display:flex;flex-direction:column;gap:4px;min-width:0;position:relative;z-index:1}
+.ohm small{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.ohm b{font-size:21px;font-weight:800;line-height:1.2}
+.ohc{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ohc span{background:rgba(255,255,255,.16);border-radius:99px;padding:5px 9px;font-size:12px;font-weight:700}
+.ohr{flex:none;width:72px;height:72px;position:relative;z-index:1}
+.og4 button{box-shadow:0 8px 18px -10px rgba(0,0,0,.45);transition:transform .2s}
+.og4 span{font-size:26px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.g-mat{--dc:var(--c-mat)}.g-tr{--dc:var(--c-tr)}.g-fen{--dc:var(--c-fen)}.g-sos{--dc:var(--c-sos)}
+.bgg{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--dc,var(--ac));box-shadow:var(--shadow)}
+.bggh{align-items:center}
+.bgge{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:color-mix(in srgb,var(--dc,var(--ac)) 16%,transparent)}
+.bggm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.bggd{font-size:11.5px;font-weight:800;color:var(--dc,var(--ac));text-transform:uppercase;letter-spacing:.04em}
+.bgg.bitti .bggd{color:var(--good)}
+.bggk{background:var(--sunk);justify-content:flex-start}
+.bggkn{font-weight:700;font-size:14px;min-width:0;flex:1}
+.kk2{flex:none;width:56px;height:32px;border-radius:8px;background:var(--line) center/cover no-repeat;display:grid;place-items:center;font-size:16px}
+.kis button[data-ders]{background:#E5484D;border-color:#E5484D;color:#fff}
+.kis button[data-bk],.kis button[data-v="socoz"]{background:var(--ac);border-color:var(--ac);color:var(--acfg)}
+.hkrow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 8px;margin:0 -2px;scrollbar-width:none}
+.hkrow::-webkit-scrollbar{display:none}
+.hk{flex:0 0 230px;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px;padding:10px 10px 12px;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-top:5px solid var(--dc,var(--ac))}
+.hkk{position:relative;aspect-ratio:16/9;width:100%;border:0;border-radius:14px;background:color-mix(in srgb,var(--dc,var(--ac)) 20%,var(--sunk)) center/cover no-repeat;display:grid;place-items:center;padding:0}
+.hkd{position:absolute;left:8px;top:8px;background:var(--dc,var(--ac));color:#fff;font:800 11px/1 var(--font);padding:5px 8px;border-radius:99px}
+.hks{position:absolute;right:8px;top:8px;background:rgba(0,0,0,.6);color:#fff;font:800 11px/1 var(--font);padding:5px 8px;border-radius:99px}
+.hkm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.hkm b{font-size:16px;font-weight:800}
+.hk .kis{display:grid;grid-template-columns:1fr 1fr}
+.hk .kis button,.hk .kis span{text-align:center}
+@media (min-width:900px){ .hkrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));overflow:visible} .hk{flex:none} .og4 button:hover{transform:translateY(-2px)} }
+
+.bggk{flex-wrap:wrap;row-gap:8px}
+.bggkn{flex:1 1 0}
+@media (max-width:520px){ .bggk .kis{flex:1 1 100%;padding-left:64px} .bggk .kis button{flex:1} }
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
