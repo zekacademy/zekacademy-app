@@ -26,24 +26,29 @@
   ],
   "adimlar": [
    {
-    "baslik": "Büyük rakamları ele",
-    "aciklama": "Üç rakam da **2 veya daha büyükse** çarpım her zaman toplamdan büyük olur (en küçük durum 2, 2, 2: çarpım 8, toplam 6).",
-    "islem": "2 × 2 × 2 = 8 > 6 = 2 + 2 + 2"
+    "baslik": "Tanımı anla",
+    "aciklama": "Denk sayıda rakamları toplayınca ve çarpınca **aynı sonuç** çıkar. Örnekteki 22 için ikisi de 4’tür.",
+    "islem": "2 + 2 = 4 · 2 × 2 = 4"
    },
    {
-    "baslik": "Bir rakam 1 olsun",
-    "aciklama": "1 + b + c = b × c düzenlenirse **(b − 1)(c − 1) = 2** olur.",
-    "islem": "(b − 1)(c − 1) = 2 ⇒ b = 2, c = 3"
+    "baslik": "Büyük rakamları dene",
+    "aciklama": "Üç rakamın hepsi en az 2 olsun. En küçük durum 2, 2, 2: çarpım toplamdan şimdiden büyük. Rakamlar büyüdükçe çarpım daha da hızlı büyür, bu yüzden eşitlik olmaz.",
+    "islem": "2 + 2 + 2 = 6 · 2 × 2 × 2 = 8"
    },
    {
-    "baslik": "Birden çok 1 olamaz",
-    "aciklama": "İki ya da üç rakam 1 olursa toplam çarpımdan büyük çıkar.",
-    "islem": "1 + 1 + c > 1 × 1 × c"
+    "baslik": "İki tane 1 olamaz",
+    "aciklama": "Rakamlar 1, 1, c olsun. Toplam c + 2, çarpım c olur; toplam hep 2 fazla kalır.",
+    "islem": "1 + 1 + c ≠ 1 × 1 × c"
    },
    {
-    "baslik": "Sıralamaları say",
-    "aciklama": "Rakamlar 1, 2, 3; bunlarla **3! = 6** farklı sayı yazılır.",
-    "islem": "3! = 6"
+    "baslik": "Bir tane 1 olsun",
+    "aciklama": "Rakamlar 1, b, c olsun. b = 2 için 1 + 2 + c = 2 × c olmalı; buradan **c = 3** bulunur. b = 3 seçilirse c = 2 çıkar (yine 1, 2, 3); b = 4 ve üstünde c tam sayı çıkmaz.",
+    "islem": "1 + 2 + 3 = 6 · 1 × 2 × 3 = 6"
+   },
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "1, 2 ve 3 rakamlarını üç basamağa farklı sıralarla yerleştir.",
+    "islem": "123, 132, 213, 231, 312, 321 ⇒ 6 sayı"
    }
   ],
   "puf": "Rakamlar büyüdükçe çarpım toplamı hızla geçer; bu tip sorularda önce “1 içeren” durumları dene.",
@@ -56,7 +61,12 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Rakam",
+    "ifade": "0’dan 9’a kadar olan sembollerdir; sayılar rakamlarla yazılır"
+   }
+  ],
   "celdiriciler": {
    "A": "Yalnızca 123’ü saydın. Aynı rakamlarla yazılan diğer sayıları da say.",
    "B": "1, 2, 3 rakamlarıyla 3 değil 3! = 6 farklı sayı yazılır.",
@@ -89,12 +99,12 @@
   "istenen": "Verilen iki koşula göre a, b, c’nin tek/çift durumunu bulup her zaman tek olan ifadeleri seçmek.",
   "bilgi": [
    {
-    "ad": "Çarpım",
-    "ifade": "çarpanlardan biri çift ise çarpım çifttir"
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
    },
    {
-    "ad": "Toplam",
-    "ifade": "tek + tek = çift, tek + çift = tek"
+    "ad": "Çarpımda tek-çift",
+    "ifade": "çarpanlardan biri çiftse çarpım çifttir; hepsi tekse çarpım tektir"
    }
   ],
   "ipuclari": [
@@ -104,24 +114,34 @@
   ],
   "adimlar": [
    {
-    "baslik": "a tek olamaz",
-    "aciklama": "a tek olsaydı b × c tek olmalıydı; o zaman b ve c tek olur ve a × b + c **çift** çıkardı.",
-    "islem": "tek × tek + tek = çift ✗"
+    "baslik": "Verilenleri yaz",
+    "aciklama": "a × b + c **tek**, b × c + a **çift**. a’nın tek mi çift mi olduğunu deneyerek bulacağız.",
+    "islem": "a × b + c = tek · b × c + a = çift"
+   },
+   {
+    "baslik": "a tek olsaydı?",
+    "aciklama": "b × c + a çift ve a tek ise b × c de tek olmalı; yani b ve c ikisi de tek. O zaman a × b + c = tek + tek = **çift** olur, ama tek olması gerekiyordu.",
+    "islem": "çelişki ⇒ a tek olamaz"
    },
    {
     "baslik": "a çifttir",
-    "aciklama": "a çift ise a × b çifttir; toplamın tek olması için **c tek** olmalı.",
+    "aciklama": "a çift olduğuna göre a × b de çifttir.",
+    "islem": "a çift ⇒ a × b çift"
+   },
+   {
+    "baslik": "c’yi bul",
+    "aciklama": "a × b + c tek ve a × b çift ise c **tek** olmalı.",
     "islem": "çift + c = tek ⇒ c tek"
    },
    {
     "baslik": "b’yi bul",
-    "aciklama": "b × c + a çift ve a çift ⇒ b × c çift; c tek olduğundan **b çift**.",
+    "aciklama": "b × c + a çift ve a çift ise b × c çift olmalı. c tek olduğuna göre **b çift**.",
     "islem": "b × tek = çift ⇒ b çift"
    },
    {
     "baslik": "İfadeleri dene",
-    "aciklama": "a, b çift, c tek: b + c tek, a + b çift, a × c çift.",
-    "islem": "I tek · II çift · III çift"
+    "aciklama": "a çift, b çift, c tek. b + c = çift + tek = tek; a + b = çift; a × c = çift.",
+    "islem": "yalnız I tek"
    }
   ],
   "puf": "Tek-çift sorularında “yanlış varsayımla çelişki” yolu en hızlı yoldur: bir harfi tek kabul et, çelişki çıkıyorsa çifttir.",
@@ -167,7 +187,7 @@
   "bilgi": [
    {
     "ad": "Uçlar dahil dizilim",
-    "ifade": "n nesne arasında n − 1 aralık vardır"
+    "ifade": "n tane nesne arasında n − 1 aralık vardır. Örnek: 3 direk ⇒ 2 aralık"
    }
   ],
   "ipuclari": [
@@ -177,19 +197,34 @@
   ],
   "adimlar": [
    {
-    "baslik": "Direk aralığı",
-    "aciklama": "7 direk arasında **6** aralık vardır.",
+    "baslik": "Direk aralık sayısı",
+    "aciklama": "Bir uçtan öbür uca 7 direk varsa aralarında **6** boşluk vardır.",
+    "islem": "7 − 1 = 6 aralık"
+   },
+   {
+    "baslik": "Bir direk aralığı",
+    "aciklama": "3,6 metreyi 6 eşit parçaya böl.",
     "islem": "3,6 ÷ 6 = 0,6 m"
    },
    {
-    "baslik": "Lamba aralığı",
-    "aciklama": "10 lamba arasında **9** aralık vardır.",
+    "baslik": "4. direğin yeri",
+    "aciklama": "1. direk başlangıçtadır; 4. direğe gelmek için **3** aralık geçilir.",
+    "islem": "3 × 0,6 = 1,8 m"
+   },
+   {
+    "baslik": "Bir lamba aralığı",
+    "aciklama": "10 lamba arasında 9 aralık vardır.",
     "islem": "3,6 ÷ 9 = 0,4 m"
    },
    {
-    "baslik": "Konumları karşılaştır",
-    "aciklama": "4. direk 3 aralık, 6. lamba 5 aralık ötededir.",
-    "islem": "3 × 0,6 = 1,8 · 5 × 0,4 = 2,0 ⇒ fark 0,2"
+    "baslik": "6. lambanın yeri",
+    "aciklama": "6. lambaya gelmek için **5** aralık geçilir.",
+    "islem": "5 × 0,4 = 2,0 m"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "İki konumun farkı istenen uzaklıktır.",
+    "islem": "2,0 − 1,8 = 0,2 m"
    }
   ],
   "puf": "Uçlar dahilse aralık sayısı nesne sayısının 1 eksiğidir; k. nesne k − 1 aralık ötededir.",
@@ -240,18 +275,23 @@
   ],
   "adimlar": [
    {
-    "baslik": "Bölme sayısını say",
-    "aciklama": "40 ile 60 arasında **5** eşit bölme vardır.",
-    "islem": "60 − 40 = 20"
+    "baslik": "Etiketleri bul",
+    "aciklama": "Göstergede yazılı iki değer var: 40 ve 60.",
+    "islem": "40 ve 60"
    },
    {
-    "baslik": "Bir bölmenin değeri",
-    "aciklama": "Her bölme **4** birimdir.",
-    "islem": "20 ÷ 5 = 4"
+    "baslik": "Aralıkları say",
+    "aciklama": "40 ile 60 arasındaki **boşlukları** say (çizgileri değil): 5 aralık var.",
+    "islem": "5 aralık"
    },
    {
-    "baslik": "Okun değerini bul",
-    "aciklama": "Ok 40’tan **8** bölme sağdadır.",
+    "baslik": "Bir aralığın değeri",
+    "aciklama": "20 birimlik fark 5 eşit aralığa bölünmüş.",
+    "islem": "(60 − 40) ÷ 5 = 4"
+   },
+   {
+    "baslik": "Okun değeri",
+    "aciklama": "Ok, 40’tan başlayarak **8** aralık sağda.",
     "islem": "40 + 8 × 4 = 72"
    }
   ],
@@ -264,7 +304,12 @@
   },
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Eşit bölmeli gösterge",
+    "ifade": "her küçük aralık aynı değeri gösterir"
+   }
+  ],
   "celdiriciler": {
    "A": "Ok 40’tan 8 bölme sağda; 6 bölme saydın.",
    "B": "Ok 40’tan 8 bölme sağda; 7 bölme saydın.",
@@ -302,19 +347,29 @@
   ],
   "adimlar": [
    {
-    "baslik": "Çarpımı bul",
-    "aciklama": "Listedeki iki farklı sayının çarpımı yine listede olmalı; tek seçenek **2 × 3 = 6**.",
+    "baslik": "Kaç sayı dışarıda?",
+    "aciklama": "7 sayıdan 6’sı kutulara yazılır; **1** sayı dışarıda kalır.",
+    "islem": "7 − 6 = 1"
+   },
+   {
+    "baslik": "Çarpmayı dene",
+    "aciklama": "Çarpımın sonucu da listede olmalı. 2 × 3 = 6 listede var; 2 × 4 = 8, 2 × 5 = 10, 3 × 4 = 12 gibi diğerleri yok.",
     "islem": "2 × 3 = 6"
    },
    {
-    "baslik": "Toplamı bul",
-    "aciklama": "Kalan 4, 5, 7, 9 sayılarından iki tanesinin toplamı üçüncüyü vermeli.",
+    "baslik": "Kalanları yaz",
+    "aciklama": "2, 3 ve 6 kullanıldı.",
+    "islem": "kalanlar: 4, 5, 7, 9"
+   },
+   {
+    "baslik": "Toplamayı dene",
+    "aciklama": "Kalanlardan ikisinin toplamı üçüncüsü olmalı: 4 + 5 = 9 uyuyor (4 + 7 = 11, 5 + 7 = 12 listede yok).",
     "islem": "4 + 5 = 9"
    },
    {
-    "baslik": "Kalanı yaz",
-    "aciklama": "Kullanılmayan sayı **7**’dir.",
-    "islem": "{4, 5, 7, 9} − {4, 5, 9} = {7}"
+    "baslik": "Dışarıda kalan",
+    "aciklama": "Kullanılmayan tek sayı kaldı.",
+    "islem": "7"
    }
   ],
   "puf": "Kısıtı en sıkı olan eşitlikten (genelde çarpma) başla; seçenek sayısı hızla azalır.",
@@ -360,8 +415,8 @@
   "istenen": "A ve B rakamlarının çarpımı.",
   "bilgi": [
    {
-    "ad": "Çözümleme",
-    "ifade": "AB + BA = 11(A + B), AB − BA = 9(A − B)"
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
    }
   ],
   "ipuclari": [
@@ -371,18 +426,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "Toplamı çözümle",
-    "aciklama": "AB + BA = 11(A + B) olduğundan **A + B = 11**.",
-    "islem": "121 ÷ 11 = 11"
+    "baslik": "Şifreleri aç",
+    "aciklama": "AB ve BA sayılarını basamaklarına ayırarak yaz.",
+    "islem": "AB = 10A + B · BA = 10B + A"
    },
    {
-    "baslik": "Farkı çözümle",
-    "aciklama": "AB − BA = 9(A − B) olduğundan **A − B = 3**.",
-    "islem": "27 ÷ 9 = 3"
+    "baslik": "Toplamı kullan",
+    "aciklama": "İki şifreyi topla: 11A + 11B = 121. İki tarafı 11’e böl.",
+    "islem": "A + B = 11"
    },
    {
-    "baslik": "Rakamları bul",
-    "aciklama": "A = 7, B = 4 bulunur.",
+    "baslik": "Farkı kullan",
+    "aciklama": "Ece’ninkinden Can’ınkini çıkar: 9A − 9B = 27. İki tarafı 9’a böl.",
+    "islem": "A − B = 3"
+   },
+   {
+    "baslik": "A ve B’yi bul",
+    "aciklama": "İki denklemi topla: 2A = 14, yani **A = 7**; o zaman **B = 4**. Kontrol: 74 + 47 = 121, 74 − 47 = 27.",
+    "islem": "A = 7 · B = 4"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İstenen A × B.",
     "islem": "7 × 4 = 28"
    }
   ],
@@ -433,23 +498,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "İkinci koşulu aç",
-    "aciklama": "A + B ≤ 18 ve rakamları çarpımı 8 olmalı: **A + B = 8 veya 18**.",
+    "baslik": "İçten dışa çalış",
+    "aciklama": "⟨[AB]⟩ yazısında önce içteki [AB] yapılır, sonra dıştaki ⟨ ⟩.",
+    "islem": "önce iç, sonra dış"
+   },
+   {
+    "baslik": "İkinci koşuldan başla",
+    "aciklama": "⟨AB⟩ = A + B, en fazla 18’dir. [A + B] = 8 olması için A + B ya **8** olmalı ya da rakamları çarpımı 8 olan iki basamaklı **18**.",
     "islem": "[8] = 8 · [18] = 1 × 8 = 8"
    },
    {
     "baslik": "A + B = 18 dene",
-    "aciklama": "Bu yalnız A = B = 9 ile olur.",
+    "aciklama": "Bu yalnızca A = 9, B = 9 ile olur. Birinci koşulu kontrol et.",
     "islem": "[99] = 81 ⇒ ⟨81⟩ = 9 ✓"
    },
    {
     "baslik": "A + B = 8 dene",
-    "aciklama": "Rakam çarpımları: 7, 12, 15, 16 (ve 0). Rakamları toplamı 9 olan yok.",
-    "islem": "⟨7⟩, ⟨12⟩, ⟨15⟩, ⟨16⟩ ≠ 9"
+    "aciklama": "Sayılar: 17, 26, 35, 44, 53, 62, 71, 80. Rakam çarpımları 7, 12, 15, 16, 0; bunların rakam toplamı hiçbir zaman 9 olmuyor.",
+    "islem": "⟨7⟩, ⟨12⟩, ⟨15⟩, ⟨16⟩, ⟨0⟩ ≠ 9"
    },
    {
     "baslik": "Sonuç",
-    "aciklama": "Tek sayı **99**’dur.",
+    "aciklama": "İki koşulu birlikte sağlayan tek sayı 99.",
     "islem": "AB = 99"
    }
   ],
@@ -463,7 +533,16 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   },
+   {
+    "ad": "Gösterimler",
+    "ifade": "⟨n⟩: rakamları topla, ⟨35⟩ = 8 · [n]: rakamları çarp, [35] = 15"
+   }
+  ],
   "celdiriciler": {
    "A": "İlk koşulu sağlıyor ama ⟨89⟩ = 17 ve [17] = 7.",
    "B": "İlk koşulu sağlıyor ama ⟨92⟩ = 11 ve [11] = 1.",
@@ -501,18 +580,23 @@
   ],
   "adimlar": [
    {
-    "baslik": "Sayıları yaz",
-    "aciklama": "Sayılar x, x + 2, x + 4, x + 6, x + 8.",
-    "islem": "toplam = 5x + 20"
+    "baslik": "En küçüğe x de",
+    "aciklama": "Beş sayı 2’şer artarak yazılır.",
+    "islem": "x, x + 2, x + 4, x + 6, x + 8"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "x’ler ve sayılar ayrı ayrı toplanır.",
+    "islem": "5x + (2 + 4 + 6 + 8) = 5x + 20"
    },
    {
     "baslik": "Denklemi kur",
-    "aciklama": "Toplam en küçüğün 6 katı.",
+    "aciklama": "Toplam, en küçüğün (x) 6 katına eşit. İki taraftan 5x çıkar.",
     "islem": "5x + 20 = 6x ⇒ x = 20"
    },
    {
     "baslik": "En büyüğü bul",
-    "aciklama": "En büyük sayı **x + 8**.",
+    "aciklama": "Soru en büyük sayıyı soruyor: x + 8.",
     "islem": "20 + 8 = 28"
    }
   ],
@@ -526,7 +610,12 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Ardışık çift sayılar",
+    "ifade": "2’şer artar: 10, 12, 14, 16, …"
+   }
+  ],
   "celdiriciler": {
    "A": "20 en küçük sayı; soru en büyüğü soruyor.",
    "B": "22 ikinci sayı; en büyük sayı x + 8.",
@@ -564,24 +653,24 @@
   ],
   "adimlar": [
    {
-    "baslik": "Kesirleri genişlet",
-    "aciklama": "2/5 = **48/120**, 5/12 = **50/120**, 3/7 ≈ 51,4/120.",
+    "baslik": "Paydaları eşitle",
+    "aciklama": "2/5 ve 5/12’yi paydası 120 olacak şekilde genişlet (2/5’i 24 ile, 5/12’yi 10 ile).",
     "islem": "2/5 = 48/120 · 5/12 = 50/120"
    },
    {
-    "baslik": "48’den küçükleri ele",
-    "aciklama": "43, 45, 47 için hem Ali hem Cem yanılmış: **iki yanlış**.",
-    "islem": "47/120 < 48/120"
+    "baslik": "3/7’yi yerleştir",
+    "aciklama": "3/7 payda 120 ile tam yazılamaz; ondalık olarak yaklaşık 0,428’dir. Bu 51/120 (0,425) ile 52/120 arasına düşer.",
+    "islem": "3/7 ≈ 51,4/120"
    },
    {
-    "baslik": "51/120’yi dene",
-    "aciklama": "51/120 hem 48’den hem 50’den büyük, 51,4’ten küçük: **hiç yanlış yok**.",
-    "islem": "50 < 51 < 51,4"
+    "baslik": "Sınırları diz",
+    "aciklama": "Üç sınır sayı doğrusunda şöyle sıralanır.",
+    "islem": "48/120 < 50/120 < 51,4/120"
    },
    {
-    "baslik": "49/120’yi dene",
-    "aciklama": "2/5’ten büyük, 3/7’den küçük ama 5/12’den küçük: **tek yanlış**.",
-    "islem": "48 < 49 < 50"
+    "baslik": "Şıkları dene",
+    "aciklama": "43, 45, 47 için hem Ali hem Cem yanılır (**iki yanlış**). 51 için kimse yanılmaz. 49 için yalnızca Cem yanılır (**tek yanlış**).",
+    "islem": "49/120 ✓"
    }
   ],
   "puf": "Kesirleri ortak paydaya getirip sayı doğrusuna dizmek, “kaç ifade doğru” sorularını tek bakışta çözer.",
@@ -594,7 +683,12 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Kesir karşılaştırma",
+    "ifade": "paydalar eşitse payı büyük olan kesir büyüktür. Örnek: 5/12 = 50/120"
+   }
+  ],
   "celdiriciler": {
    "A": "48/120’den küçük: hem Ali hem Cem yanılmış olur.",
    "B": "48/120’den küçük: hem Ali hem Cem yanılmış olur.",
@@ -633,18 +727,18 @@
   "adimlar": [
    {
     "baslik": "Bir dilim",
-    "aciklama": "Bir dilim tepsinin **1/6**’sıdır.",
-    "islem": "1 ÷ 6 = 1/6"
+    "aciklama": "Tepsi 6 eş dilim; bir dilim tepsinin altıda biri.",
+    "islem": "1/6"
    },
    {
     "baslik": "Bir küçük parça",
-    "aciklama": "Dilim 3’e bölününce bir parça tepsinin **1/18**’i olur.",
+    "aciklama": "Bir dilim 3 eş parçaya bölünmüş.",
     "islem": "1/6 × 1/3 = 1/18"
    },
    {
     "baslik": "Dört parça",
-    "aciklama": "İkram edilen 4 parça.",
-    "islem": "4 × 1/18 = 2/9"
+    "aciklama": "4 küçük parça ikram edilmiş. Sonucu sadeleştir (pay ve paydayı 2’ye böl).",
+    "islem": "4 × 1/18 = 4/18 = 2/9"
    }
   ],
   "puf": "Parçanın parçası soruluyorsa kesirleri çarp; “2 dilim aldı” bilgisi sonucu etkilemez, dikkat dağıtır.",
@@ -657,7 +751,12 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Parçanın parçası",
+    "ifade": "kesirleri çarparız: bir dilimin 1/3’ü = 1/6 × 1/3"
+   }
+  ],
   "celdiriciler": {
    "A": "Bu 2 küçük parçanın oranı; ikram edilen 4 parça.",
    "C": "1/3, Ayşe’nin aldığı 2 dilimin oranı; ikram edilen daha az.",
@@ -696,17 +795,22 @@
   "adimlar": [
    {
     "baslik": "Domates tutarı",
-    "aciklama": "2,5 kg domates.",
-    "islem": "12,40 × 2,5 = 31"
+    "aciklama": "12,40 × 2,5’i ikiye ayır: 2 kg ve 0,5 kg.",
+    "islem": "12,40 × 2 = 24,80 · 12,40 × 0,5 = 6,20 ⇒ 31"
    },
    {
     "baslik": "Biber tutarı",
-    "aciklama": "1,5 kg biber.",
-    "islem": "18,60 × 1,5 = 27,9"
+    "aciklama": "18,60 × 1,5 = 18,60’ın kendisi + yarısı.",
+    "islem": "18,60 + 9,30 = 27,90"
+   },
+   {
+    "baslik": "Toplam tutar",
+    "aciklama": "İki tutarı topla.",
+    "islem": "31 + 27,90 = 58,90"
    },
    {
     "baslik": "Para üstü",
-    "aciklama": "Toplam **58,9 TL**.",
+    "aciklama": "100 TL’den toplam tutarı çıkar.",
     "islem": "100 − 58,9 = 41,1"
    }
   ],
@@ -720,7 +824,12 @@
   "ders": "TYT Matematik",
   "seviye": "ÖSYM",
   "sekil": null,
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Tutar",
+    "ifade": "birim fiyat × miktar"
+   }
+  ],
   "celdiriciler": {
    "B": "Tutarları yeniden topla: 31 + 27,9 = 58,9.",
    "C": "Biber tutarını 27,9 yerine 26,9 aldın.",
@@ -753,8 +862,8 @@
   "istenen": "09.17.20’de yanan renk ve o rengin kaçıncı saniyesinde olunduğu.",
   "bilgi": [
    {
-    "ad": "Periyot",
-    "ifade": "bir tam tur = 40 + 5 + 30 = 75 sn"
+    "ad": "Tekrar eden düzen",
+    "ifade": "tam turlar sonucu değiştirmez; yalnızca artan (kalan) süreye bakılır"
    }
   ],
   "ipuclari": [
@@ -764,24 +873,29 @@
   ],
   "adimlar": [
    {
-    "baslik": "Tur süresi",
-    "aciklama": "Bir tam tur **75 saniye**dir.",
-    "islem": "40 + 5 + 30 = 75"
+    "baslik": "Bir tur",
+    "aciklama": "Yeşil, sarı ve kırmızı sürelerini topla.",
+    "islem": "40 + 5 + 30 = 75 sn"
    },
    {
     "baslik": "Geçen süre",
-    "aciklama": "17 dakika 20 saniye geçmiştir.",
+    "aciklama": "09.00.00’dan 09.17.20’ye 17 dakika 20 saniye geçer.",
     "islem": "17 × 60 + 20 = 1040 sn"
    },
    {
-    "baslik": "Kalanı bul",
-    "aciklama": "13 tam tur tamamlanmış, **65** saniye artmıştır.",
-    "islem": "1040 = 13 × 75 + 65"
+    "baslik": "Tam turları at",
+    "aciklama": "1040’ın içinde 13 tam tur var; artan süreyi bul.",
+    "islem": "13 × 75 = 975 ⇒ 1040 − 975 = 65 sn"
    },
    {
-    "baslik": "Rengi oku",
-    "aciklama": "0–40 yeşil, 40–45 sarı, 45–75 kırmızı. 65. saniyede kırmızı **20 saniyedir** yanıyor.",
-    "islem": "65 − 45 = 20"
+    "baslik": "Turun içinde yer",
+    "aciklama": "Bir turda 0–40 yeşil, 40–45 sarı, 45–75 kırmızı. 65. saniye kırmızıdadır.",
+    "islem": "45 < 65 < 75 ⇒ kırmızı"
+   },
+   {
+    "baslik": "Kaç saniyedir yanıyor?",
+    "aciklama": "Kırmızı 45. saniyede yandı.",
+    "islem": "65 − 45 = 20 sn"
    }
   ],
   "puf": "Döngü sorularında tam turları at, sadece kalanla çalış; kalanı hangi aralığa düştüğüne göre oku.",

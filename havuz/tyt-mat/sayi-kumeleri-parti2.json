@@ -31,7 +31,16 @@
    "E": "189 koşulu sağlıyor ama en küçük değil; B’yi en küçük uygun rakam seç."
   },
   "istenen": "Koşulu sağlayan en küçük üç basamaklı ABC sayısı.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   },
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 352 = 300 + 50 + 2"
+   }
+  ],
   "ipuclari": [
    "AB + BC + CA toplamını A, B, C cinsinden çözümle.",
    "Eşitsizliği düzenleyince A ve C için ne söyleyebilirsin?",
@@ -39,23 +48,33 @@
   ],
   "adimlar": [
    {
-    "baslik": "Toplamı çözümle",
-    "aciklama": "Her rakam bir kez onlar, bir kez birler basamağında: toplam **11(A + B + C)**.",
+    "baslik": "Sayıları aç",
+    "aciklama": "Her sayıyı basamaklarına ayır.",
+    "islem": "AB = 10A + B · BC = 10B + C · CA = 10C + A"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Her harf bir kez 10 ile, bir kez 1 ile geçer.",
     "islem": "AB + BC + CA = 11A + 11B + 11C"
    },
    {
-    "baslik": "Eşitsizliği kur",
-    "aciklama": "ABC = 100A + 10B + C ile karşılaştırıp düzenle.",
-    "islem": "11A + 11B + 11C > 100A + 10B + C ⇒ B + 10C > 89A"
+    "baslik": "Eşitsizliği sadeleştir",
+    "aciklama": "11A + 11B + 11C > 100A + 10B + C. İki taraftan 11A, 10B ve C çıkar.",
+    "islem": "B + 10C > 89A"
    },
    {
-    "baslik": "A ve C’yi bul",
-    "aciklama": "B + 10C en fazla 98 olabilir; bu yüzden **A = 1** ve **C = 9** olmalı.",
-    "islem": "B + 90 > 89 ✓ (A = 2 için 178’i geçmek imkânsız)"
+    "baslik": "A’yı bul",
+    "aciklama": "Sol taraf en fazla 8 + 90 = 98 olabilir. A = 2 olsaydı 178’i geçmesi gerekirdi; imkânsız. O hâlde **A = 1**.",
+    "islem": "B + 10C > 89"
+   },
+   {
+    "baslik": "C’yi bul",
+    "aciklama": "C = 8 olsaydı sol taraf en fazla 9 + 80 = 89 olurdu, 89’dan büyük olamazdı. O hâlde **C = 9**.",
+    "islem": "C = 9"
    },
    {
     "baslik": "En küçük ABC",
-    "aciklama": "B; 0, 1 ve 9’dan farklı en küçük rakam: **2**.",
+    "aciklama": "B; 0, 1 ve 9 olamaz (rakamlar farklı ve sıfırdan farklı). En küçük seçenek **2**.",
     "islem": "ABC = 129"
    }
   ],
@@ -99,7 +118,12 @@
    "E": "{3, 5, 7} geçerli bir kutu ama 9 numaralı kart onda değil."
   },
   "istenen": "9 numaralı kartın kutusundaki üç numaranın çarpımı.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "1’den 9’a toplam",
+    "ifade": "1 + 2 + … + 9 = 45"
+   }
+  ],
   "ipuclari": [
    "Dokuz kartın toplamı kaç? Her kutunun toplamı buna göre kaç olmalı?",
    "Toplamı 15 olan, 9’u içeren üçlüleri yaz.",
@@ -107,23 +131,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "Kutu toplamını bul",
-    "aciklama": "1’den 9’a kadar toplam 45; üç kutu eşit olduğundan her kutu **15**.",
+    "baslik": "Kutu toplamı",
+    "aciklama": "Üç kutunun toplamı eşit; 45’i üçe böl.",
     "islem": "45 ÷ 3 = 15"
    },
    {
-    "baslik": "9’lu kutuyu ara",
-    "aciklama": "9 ile toplamı 15 olan üçlüler: {1, 5, 9} ve {2, 4, 9}.",
-    "islem": "9 + 1 + 5 = 15 · 9 + 2 + 4 = 15"
+    "baslik": "9’un kutusu",
+    "aciklama": "9 ile birlikte iki kart daha var ve toplam 15; diğer ikisinin toplamı 6 olmalı: (1, 5) ya da (2, 4).",
+    "islem": "{1, 5, 9} veya {2, 4, 9}"
    },
    {
     "baslik": "{1, 5, 9}’u dene",
-    "aciklama": "Kalan 2, 3, 4, 6, 7, 8 ile 15’lik iki üçlü yalnızca {2, 6, 7} ve {3, 4, 8}; ikisinde de ardışık kart var.",
-    "islem": "6–7 ve 3–4 ardışık ✗"
+    "aciklama": "Kalan 2, 3, 4, 6, 7, 8 ile toplamı 15 olan üçlüler {2, 6, 7} ve {3, 4, 8}. İkisinde de ardışık kart var (6–7 ve 3–4).",
+    "islem": "olmaz ✗"
    },
    {
     "baslik": "{2, 4, 9}’u dene",
-    "aciklama": "Kalanlar {1, 6, 8} ve {3, 5, 7}; hiçbirinde ardışık kart yok.",
+    "aciklama": "Kalan 1, 3, 5, 6, 7, 8 ile üçlüler {1, 6, 8} ve {3, 5, 7}. Hiçbir kutuda ardışık kart yok.",
+    "islem": "olur ✓"
+   },
+   {
+    "baslik": "Çarpımı bul",
+    "aciklama": "9’un kutusundaki kartlar 2, 4, 9.",
     "islem": "2 × 4 × 9 = 72"
    }
   ],
@@ -167,7 +196,12 @@
    "E": "364 altı sıranın toplamı; 6. sıra beyaz olduğundan fark negatife döner."
   },
   "istenen": "Tüm sıralardaki karelerin toplamı.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "3 katına çıkma",
+    "ifade": "her sıra öncekinin 3 katı: 1, 3, 9, 27, 81, …"
+   }
+  ],
   "ipuclari": [
    "Sıralardaki kare sayılarını yaz: 1, 3, 9, …",
    "Mavi fazlası oluşması için son sıra hangi renkte olmalı?",
@@ -176,22 +210,27 @@
   "adimlar": [
    {
     "baslik": "Sıraları yaz",
-    "aciklama": "Her sıra öncekinin 3 katı.",
-    "islem": "1, 3, 9, 27, 81, …"
+    "aciklama": "1. sıradan başlayarak her sırayı 3 ile çarp.",
+    "islem": "1, 3, 9, 27, 81, 243, …"
+   },
+   {
+    "baslik": "Renkleri belirle",
+    "aciklama": "Tek numaralı sıralar (1., 3., 5.) mavi; çift numaralılar (2., 4.) beyaz.",
+    "islem": "mavi: 1, 9, 81 · beyaz: 3, 27"
    },
    {
     "baslik": "Farkı biriktir",
-    "aciklama": "Mavi sıralar eklenir, beyazlar çıkarılır.",
-    "islem": "1 − 3 + 9 − 27 + 81 = **61**"
+    "aciklama": "Mavileri ekle, beyazları çıkar; her yeni sırada farkı güncelle.",
+    "islem": "1 → −2 → 7 → −20 → 61"
    },
    {
     "baslik": "Sıra sayısı",
-    "aciklama": "Fark 61 olduğunda **5** sıra vardır (6. sıra eklenseydi fark negatif olurdu).",
+    "aciklama": "Fark 61 olduğunda **5** sıra vardır.",
     "islem": "5 sıra"
    },
    {
-    "baslik": "Toplamı bul",
-    "aciklama": "Beş sıranın karelerini topla.",
+    "baslik": "Toplam kare",
+    "aciklama": "Beş sıradaki kareleri topla.",
     "islem": "1 + 3 + 9 + 27 + 81 = 121"
    }
   ],
@@ -235,7 +274,12 @@
    "E": "B’nin A ve C’den farklı olması gerektiğini unutmuşsun."
   },
   "istenen": "Koşulu sağlayan üç basamaklı sayıların adedi.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 352 = 300 + 50 + 2"
+   }
+  ],
   "ipuclari": [
    "CBA − ABC farkını çözümle; onlar basamağı ne oluyor?",
    "Farktan C − A’yı bul ve uygun (A, C) ikililerini yaz.",
@@ -243,23 +287,33 @@
   ],
   "adimlar": [
    {
-    "baslik": "Farkı çözümle",
-    "aciklama": "Onlar basamakları birbirini götürür.",
-    "islem": "CBA − ABC = 99(C − A)"
+    "baslik": "Sayıları aç",
+    "aciklama": "İki sayıyı basamaklarına ayır.",
+    "islem": "CBA = 100C + 10B + A · ABC = 100A + 10B + C"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "CBA − ABC yapınca 10B’ler birbirini götürür.",
+    "islem": "99C − 99A = 99(C − A)"
    },
    {
     "baslik": "C − A’yı bul",
-    "aciklama": "99(C − A) = 594.",
-    "islem": "C − A = 6"
+    "aciklama": "Fark 594 olduğuna göre 99’a böl.",
+    "islem": "594 ÷ 99 = 6 ⇒ C − A = 6"
    },
    {
-    "baslik": "İkilileri yaz",
-    "aciklama": "A ve C sıfırdan farklı rakamlar.",
-    "islem": "(A, C) = (1, 7), (2, 8), (3, 9)"
+    "baslik": "A ve C ikilileri",
+    "aciklama": "A ve C sıfırdan farklı rakam; C, A’dan 6 fazla.",
+    "islem": "(1, 7), (2, 8), (3, 9)"
    },
    {
     "baslik": "B’yi say",
-    "aciklama": "B; 0, A ve C dışındaki **7** rakamdan biri.",
+    "aciklama": "B; 1–9 arasında, A’dan ve C’den farklı olmalı: **7** seçenek.",
+    "islem": "9 − 2 = 7"
+   },
+   {
+    "baslik": "Toplam sayı",
+    "aciklama": "Her ikili için 7 farklı B var.",
     "islem": "3 × 7 = 21"
    }
   ],
@@ -303,7 +357,12 @@
    "E": "Toplam sınırını kullanmamışsın."
   },
   "istenen": "Koşullara göre Burak’ın sayısının en büyük değeri.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Ardışık tek / çift sayılar",
+    "ifade": "2’şer artar: 15, 17 (tek) · 30, 32 (çift)"
+   }
+  ],
   "ipuclari": [
    "Duru’nun sayısına d de; diğer üç sayıyı d ile yaz.",
    "Dört sayının toplamını d cinsinden bul ve 110’dan küçük yap.",
@@ -311,23 +370,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "Sayıları d ile yaz",
-    "aciklama": "Duru = d, Cem = d + 2, Ayla = 2d, Burak = 2d + 2.",
-    "islem": "d, d + 2, 2d, 2d + 2"
+    "baslik": "Duru’ya d de",
+    "aciklama": "Cem’in sayısı Duru’nunkinden 2 fazla.",
+    "islem": "Duru = d · Cem = d + 2"
    },
    {
-    "baslik": "Toplamı sınırla",
-    "aciklama": "Toplam **6d + 4** olmalı ve 110’dan küçük.",
-    "islem": "6d + 4 < 110 ⇒ d < 17,67"
+    "baslik": "Ayla ve Burak",
+    "aciklama": "Ayla, Duru’nun 2 katı; Burak, Ayla’dan 2 fazla.",
+    "islem": "Ayla = 2d · Burak = 2d + 2"
    },
    {
-    "baslik": "En büyük d",
-    "aciklama": "d iki basamaklı tek sayı: en çok **17**.",
+    "baslik": "Toplamı yaz",
+    "aciklama": "Dört sayıyı topla ve 110’dan küçük olmalı.",
+    "islem": "d + (d + 2) + 2d + (2d + 2) = 6d + 4 < 110"
+   },
+   {
+    "baslik": "d’nin sınırı",
+    "aciklama": "6d < 106, yani d < 17,67. d iki basamaklı **tek** sayı: en büyük **17**.",
     "islem": "d = 17"
    },
    {
     "baslik": "Burak’ı bul",
-    "aciklama": "Burak = 2d + 2.",
+    "aciklama": "Burak = 2d + 2. Kontrol: 17, 19, 34, 36 toplamı 106 < 110.",
     "islem": "2 × 17 + 2 = 36"
    }
   ],
@@ -371,7 +435,16 @@
    "E": "II kesin değil; toplam adım sayısı tek de olabilir."
   },
   "istenen": "Tüm olası adım dağılımlarında doğru kalan ifadeler.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   },
+   {
+    "ad": "3 ile çarpım",
+    "ifade": "3 × tek = tek · 3 × çift = çift"
+   }
+  ],
   "ipuclari": [
    "Deniz toplam kaç basamak çıktı?",
    "İkişerli adım sayısına x, üçerli adım sayısına y de; 2x + 3y kaça eşit?",
@@ -379,23 +452,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "Mesafeyi bul",
-    "aciklama": "5’ten 46’ya çıkılan basamak sayısı.",
-    "islem": "46 − 5 = 41"
+    "baslik": "Mesafe",
+    "aciklama": "5. basamaktan 46. basamağa çıkılıyor.",
+    "islem": "46 − 5 = 41 basamak"
    },
    {
     "baslik": "Denklemi kur",
-    "aciklama": "2x + 3y = 41; 41 tek olduğu için **3y tek**, yani **y tek**.",
+    "aciklama": "x ikişerli, y üçerli adım olsun.",
     "islem": "2x + 3y = 41"
    },
    {
-    "baslik": "Olasılıkları yaz",
-    "aciklama": "y = 1, 3, …, 13 için toplam adım x + y: 20, 19, 18, 17, 16, 15, 14.",
+    "baslik": "y tek mi?",
+    "aciklama": "2x her zaman çift. Çift + 3y = 41 (tek) olması için 3y tek olmalı; bu da **y tek** demek. I doğru.",
+    "islem": "çift + tek = tek"
+   },
+   {
+    "baslik": "Tüm olasılıklar",
+    "aciklama": "y = 1, 3, 5, …, 13 için x = 19, 16, 13, 10, 7, 4, 1. Toplam adım x + y: 20, 19, 18, 17, 16, 15, 14.",
     "islem": "x + y ∈ {14, …, 20}"
    },
    {
-    "baslik": "İfadeleri dene",
-    "aciklama": "I her zaman doğru; II bazen yanlış (ör. 19); III doğru (en az 14).",
+    "baslik": "II ve III’ü dene",
+    "aciklama": "Toplam 19 gibi tek de olabilir: II kesin değil. Toplam hiçbir durumda 14’ten az değil: III doğru.",
     "islem": "Doğrular: I ve III"
    }
   ],
@@ -439,7 +517,16 @@
    "E": "24 veren bir asal üçlü yok."
   },
   "istenen": "Denklemi sağlayan asal üçlüler arasında en küçük toplam.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2 tek çift asal sayıdır"
+   },
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   }
+  ],
   "ipuclari": [
    "23 tek; x · y ile z’den biri çift olmalı.",
    "Çift olan tek asal sayı hangisi?",
@@ -447,23 +534,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "Tek-çift durumu",
-    "aciklama": "23 tek olduğundan x · y ve z’den **biri çift**; çift asal yalnızca **2**.",
-    "islem": "çift + tek = tek"
+    "baslik": "Tek-çift dengesi",
+    "aciklama": "23 tek; x · y + z toplamında biri tek, biri çift olmalı.",
+    "islem": "tek = tek + çift"
+   },
+   {
+    "baslik": "Çift olan kim?",
+    "aciklama": "Çift asal sayı yalnızca 2. Ya z = 2 ya da x · y çift (x < y olduğundan x = 2).",
+    "islem": "z = 2 veya x = 2"
    },
    {
     "baslik": "z = 2 durumu",
-    "aciklama": "x · y = 21 ⇒ x = 3, y = 7.",
+    "aciklama": "x · y = 21 olmalı; 21 = 3 × 7.",
     "islem": "3 + 7 + 2 = 12"
    },
    {
     "baslik": "x = 2 durumu",
-    "aciklama": "2y + z = 23: y = 3 ⇒ z = 17; y = 5 ⇒ z = 13.",
-    "islem": "2 + 3 + 17 = 22 · 2 + 5 + 13 = 20"
+    "aciklama": "2y + z = 23. y = 3 ⇒ z = 17; y = 5 ⇒ z = 13; y = 7 ⇒ z = 9 (asal değil); y = 11 ⇒ z = 1 (asal değil).",
+    "islem": "toplamlar 22 ve 20"
    },
    {
     "baslik": "En küçüğü seç",
-    "aciklama": "Toplamlar 12, 20, 22.",
+    "aciklama": "Bulunan toplamlar 12, 20, 22.",
     "islem": "en az 12"
    }
   ],
@@ -507,7 +599,12 @@
    "D": "240, 2 · 5!; faktöriyeli yanlış açmışsın."
   },
   "istenen": "Denklemi sağlayan n için (n + 1)! değeri.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Faktöriyel",
+    "ifade": "n! = 1 × 2 × … × n. Örnek: 4! = 24. Ayrıca 6! = 6 × 5 × 4! gibi yazılabilir"
+   }
+  ],
   "ipuclari": [
    "(n + 1)! ifadesini n! cinsinden yaz.",
    "Sol tarafı n! parantezine al.",
@@ -515,19 +612,29 @@
   ],
   "adimlar": [
    {
-    "baslik": "n! parantezine al",
-    "aciklama": "(n + 1)! = (n + 1) · n! olduğundan sol taraf **n · n!** olur.",
-    "islem": "(n + 1)! − n! = n! (n + 1 − 1) = n · n!"
+    "baslik": "(n + 1)!’i aç",
+    "aciklama": "(n + 1)!, n!’in (n + 1) katıdır.",
+    "islem": "(n + 1)! = (n + 1) × n!"
    },
    {
-    "baslik": "Sadeleştir",
-    "aciklama": "n! = n · (n − 1)! yaz ve iki taraftan (n − 1)! sadeleştir.",
-    "islem": "n · n · (n − 1)! = 25 · (n − 1)! ⇒ n² = 25"
+    "baslik": "Ortak paranteze al",
+    "aciklama": "Sol tarafta iki terimde de n! var; dışarı al.",
+    "islem": "(n + 1) × n! − n! = n! × (n + 1 − 1) = n × n!"
    },
    {
-    "baslik": "Sonucu bul",
-    "aciklama": "n pozitif olduğundan **n = 5**; soru (n + 1)!’i soruyor.",
-    "islem": "6! = 720"
+    "baslik": "n!’i aç",
+    "aciklama": "n! = n × (n − 1)! yazınca iki tarafta da (n − 1)! olur ve sadeleşir.",
+    "islem": "n × n × (n − 1)! = 25 × (n − 1)! ⇒ n² = 25"
+   },
+   {
+    "baslik": "n’yi bul",
+    "aciklama": "n pozitif olduğundan n = 5.",
+    "islem": "n = 5"
+   },
+   {
+    "baslik": "İstenen değer",
+    "aciklama": "Soru (n + 1)! = 6!’i soruyor.",
+    "islem": "6! = 1 × 2 × 3 × 4 × 5 × 6 = 720"
    }
   ],
   "puf": "Faktöriyel farklarında en küçük faktöriyeli parantez dışına al; sonra soruda hangi faktöriyelin istendiğine tekrar bak.",
@@ -570,7 +677,12 @@
    "E": "c ve b ikisi de negatif: c − b’nin işareti sayılara bağlıdır."
   },
   "istenen": "İşaretleri belli olan a, b, c ile kesin pozitif ifade.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Çarpımın işareti",
+    "ifade": "çarpım pozitifse iki sayı aynı işaretli, negatifse zıt işaretlidir"
+   }
+  ],
   "ipuclari": [
    "b · c > 0 ise b ile c’nin işaretleri hakkında ne söylenir?",
    "a · b < 0 ise a, b’nin tersi işaretli.",
@@ -578,18 +690,23 @@
   ],
   "adimlar": [
    {
-    "baslik": "b ve c aynı işaretli",
-    "aciklama": "b · c > 0 olduğundan **b ve c aynı işaretli**; a · b < 0 olduğundan **a ters işaretli**.",
-    "islem": "b, c aynı · a ters"
+    "baslik": "b ve c",
+    "aciklama": "b · c > 0 olduğundan **b ve c aynı işaretli**.",
+    "islem": "b, c aynı işaret"
    },
    {
-    "baslik": "Durumu seç",
-    "aciklama": "a negatif olsaydı c pozitif olurdu ve a > c sağlanmazdı. O hâlde **a > 0, b < 0, c < 0**.",
-    "islem": "a > 0, b < 0, c < 0"
+    "baslik": "a",
+    "aciklama": "a · b < 0 olduğundan a, b’nin (ve c’nin) **zıt işaretli**.",
+    "islem": "a zıt işaret"
+   },
+   {
+    "baslik": "Hangi durum?",
+    "aciklama": "İki ihtimal var: a pozitif, b ve c negatif; ya da a negatif, b ve c pozitif. İkincisinde a > c olamaz (negatif sayı pozitiften büyük olamaz).",
+    "islem": "a > 0 · b < 0 · c < 0"
    },
    {
     "baslik": "Şıkları dene",
-    "aciklama": "a · b · c = (+)(−)(−) pozitif; diğerleri ya negatif ya belirsiz.",
+    "aciklama": "a · b · c = (+) × (−) × (−) = pozitif. a · c ve b + c negatif; a + b ile c − b’nin işareti sayılara bağlı.",
     "islem": "a · b · c > 0"
    }
   ],
@@ -633,7 +750,12 @@
    "E": "B = 02 almışsın; iki basamaklı sayı 0 ile başlayamaz."
   },
   "istenen": "A − B’nin alabileceği en büyük değer.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Basamak kuralı",
+    "ifade": "bir sayı 0 ile başlayamaz; 02 iki basamaklı bir sayı değildir"
+   }
+  ],
   "ipuclari": [
    "Fark büyük olsun diye A nasıl, B nasıl olmalı?",
    "A’ya en büyük rakamları sırayla yerleştir.",
@@ -641,18 +763,28 @@
   ],
   "adimlar": [
    {
-    "baslik": "A’yı büyüt",
-    "aciklama": "A’nın yüzler ve onlar basamağına en büyük rakamlar: 9 ve 7.",
+    "baslik": "Strateji",
+    "aciklama": "A − B’nin büyük olması için A mümkün olduğunca büyük, B mümkün olduğunca küçük olmalı.",
+    "islem": "A büyük · B küçük"
+   },
+   {
+    "baslik": "A’nın ilk iki basamağı",
+    "aciklama": "En büyük rakamlar 9 ve 7, A’nın yüzler ve onlar basamağına.",
     "islem": "A = 97_"
    },
    {
-    "baslik": "B’yi küçült",
-    "aciklama": "B’nin onlar basamağı 0 olamaz; kalan 0, 2, 5 ile en küçük B = **20**.",
+    "baslik": "En küçük B",
+    "aciklama": "Kalan 0, 2, 5. B’nin onlar basamağı 0 olamaz; en küçük B = 20.",
     "islem": "B = 20"
    },
    {
+    "baslik": "A’yı tamamla",
+    "aciklama": "A’nın birler basamağına kalan rakam 5 gelir.",
+    "islem": "A = 975"
+   },
+   {
     "baslik": "Farkı hesapla",
-    "aciklama": "A’nın birler basamağına kalan rakam: 5.",
+    "aciklama": "Bulunan sayıları çıkar.",
     "islem": "975 − 20 = 955"
    }
   ],
@@ -696,7 +828,12 @@
    "E": "Görünen boş yer sayısını bulmuş olabilirsin; soru kapalı alandaki boşları soruyor."
   },
   "istenen": "Görünmeyen 12 yerden boş olanların sayısı.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Bir sayının 4/9’u",
+    "ifade": "önce 9’a böl, sonra 4 ile çarp"
+   }
+  ],
   "ipuclari": [
    "Otoparkta toplam kaç dolu yer var?",
    "Görünmeyen yerlerde kaç dolu yer kalıyor?",
@@ -705,17 +842,22 @@
   "adimlar": [
    {
     "baslik": "Dolu yerler",
-    "aciklama": "Toplamın 4/9’u dolu.",
-    "islem": "36 × 4/9 = 16"
+    "aciklama": "36’nın 4/9’u.",
+    "islem": "36 ÷ 9 × 4 = 16"
    },
    {
-    "baslik": "Görünmeyen dolu yerler",
-    "aciklama": "Görünen 7 dolu yer çıkınca kalan dolu yerler kamyonun arkasındadır.",
+    "baslik": "Görünen yerler",
+    "aciklama": "Kamera otoparkın tamamını görüyor; 12 yer kapalı.",
+    "islem": "36 − 12 = 24 görünen yer, 7’si dolu"
+   },
+   {
+    "baslik": "Kapalı alandaki dolular",
+    "aciklama": "Dolu yerlerin görünmeyenleri kamyonun arkasında.",
     "islem": "16 − 7 = 9"
    },
    {
-    "baslik": "Boş yerler",
-    "aciklama": "Kapatılan 12 yerin 9’u dolu.",
+    "baslik": "Kapalı alandaki boşlar",
+    "aciklama": "Kapalı 12 yerin 9’u dolu.",
     "islem": "12 − 9 = 3"
    }
   ],
@@ -759,7 +901,12 @@
    "D": "3! yerine 3 eklemişsin; 3! = 6."
   },
   "istenen": "İşlemin sonucu.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Faktöriyel",
+    "ifade": "n! = 1 × 2 × … × n. Örnek: 4! = 24. Ayrıca 6! = 6 × 5 × 4! gibi yazılabilir"
+   }
+  ],
   "ipuclari": [
    "6! ile 4! arasındaki ortak çarpanları düşün.",
    "6!/4! = 6 × 5 olur.",
@@ -767,14 +914,14 @@
   ],
   "adimlar": [
    {
-    "baslik": "Bölmeyi sadeleştir",
+    "baslik": "6!/4!",
     "aciklama": "6! = 6 × 5 × 4! olduğundan 4! sadeleşir.",
     "islem": "6!/4! = 6 × 5 = 30"
    },
    {
-    "baslik": "3!’i hesapla",
-    "aciklama": "3! = 3 × 2 × 1.",
-    "islem": "3! = 6"
+    "baslik": "3!",
+    "aciklama": "3 faktöriyel.",
+    "islem": "3! = 1 × 2 × 3 = 6"
    },
    {
     "baslik": "Topla",
@@ -822,7 +969,16 @@
    "E": "44 = 4 × 11; 4 asal değil."
   },
   "istenen": "a ile b’nin çarpımı.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük, yalnızca 1’e ve kendisine bölünen sayı: 2, 3, 5, 7, 11, 13, … 2 tek çift asal sayıdır"
+   },
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   }
+  ],
   "ipuclari": [
    "15 tek; iki sayının toplamı tekse biri çift olmalı.",
    "Çift olan asal sayı hangisi?",
@@ -830,14 +986,14 @@
   ],
   "adimlar": [
    {
-    "baslik": "Tek-çift durumu",
-    "aciklama": "Toplam tek olduğundan sayılardan biri çift; çift asal yalnızca **2**.",
-    "islem": "çift + tek = tek"
+    "baslik": "Tek-çift dengesi",
+    "aciklama": "15 tek; iki sayının toplamı tekse biri tek, biri çifttir.",
+    "islem": "tek + çift = tek"
    },
    {
-    "baslik": "Diğer sayı",
-    "aciklama": "Öteki sayı 15 − 2 = 13 ve 13 asaldır.",
-    "islem": "b = 13"
+    "baslik": "Çift asal",
+    "aciklama": "Çift olan tek asal sayı 2; diğer sayı 15 − 2 = 13 ve 13 asaldır.",
+    "islem": "a = 2 · b = 13"
    },
    {
     "baslik": "Çarp",
@@ -885,7 +1041,16 @@
    "E": "Çift bir sayının karesi çifttir."
   },
   "istenen": "Her zaman tek olan ifade.",
-  "bilgi": [],
+  "bilgi": [
+   {
+    "ad": "Tek-çift kuralları",
+    "ifade": "tek + tek = çift · çift + çift = çift · tek + çift = tek"
+   },
+   {
+    "ad": "Çarpımda tek-çift",
+    "ifade": "çarpanlardan biri çiftse çarpım çifttir; hepsi tekse çarpım tektir"
+   }
+  ],
   "ipuclari": [
    "Çarpanlardan biri çiftse çarpım ne olur?",
    "Tek ile çiftin toplamı tek midir, çift mi?",
@@ -893,19 +1058,24 @@
   ],
   "adimlar": [
    {
-    "baslik": "Çarpımlara bak",
-    "aciklama": "e çift olduğundan k · e, e² ve k · e + e çifttir.",
-    "islem": "çift × tek = çift"
-   },
-   {
-    "baslik": "2k + e",
-    "aciklama": "2k her zaman çift; çift + çift = çift.",
-    "islem": "2k + e çift"
+    "baslik": "k · e",
+    "aciklama": "e çift olduğundan çarpım çifttir.",
+    "islem": "tek × çift = çift"
    },
    {
     "baslik": "k + e",
-    "aciklama": "Tek + çift her zaman tektir.",
-    "islem": "k + e tek"
+    "aciklama": "Tek ile çiftin toplamı her zaman tektir.",
+    "islem": "tek + çift = tek ✓"
+   },
+   {
+    "baslik": "2k + e",
+    "aciklama": "2 ile çarpılan her sayı çifttir; çift + çift = çift.",
+    "islem": "2k + e = çift"
+   },
+   {
+    "baslik": "Diğer ikisi",
+    "aciklama": "k · e + e = çift + çift = çift; e² = e × e = çift.",
+    "islem": "k · e + e ve e² çift"
    }
   ],
   "puf": "Çift bir çarpan çarpımı hep çift yapar; toplamda ise tek sayıdaki terimlerin sayısına bak.",

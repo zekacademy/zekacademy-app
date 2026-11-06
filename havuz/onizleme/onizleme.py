@@ -3,6 +3,13 @@ import sys
 Q=json.load(open(sys.argv[1]))
 BASLIK=sys.argv[3] if len(sys.argv)>3 else 'Soru partisi'
 ANAHTAR='pilot1' if sys.argv[1].endswith('parti1.json') else 'karar-'+re.sub(r'[^a-z0-9]+','-',sys.argv[1].lower().split('/')[-1])
+def islem_html(t):
+    out=[]
+    for par in t.split(' · '):
+        e=kesir(html.escape(par))
+        e=re.sub(r'(?<!>) (?![=⇒])(?<! [=⇒])','\u00a0',e)  # yalnız = ve ⇒ çevresinde kırılabilir
+        out.append(f'<span class="ais">{e}</span>')
+    return ''.join(out)
 def kesir(e): return re.sub(r'(?<![\d/])(\d+)/(\d+)(?![\d/])',r'<span class="kesir"><span>\1</span><span>\2</span></span>',e)
 def metin_html(t):
     sat=t.split('\n'); out=[]
@@ -22,7 +29,7 @@ cards=[]
 for i,q in enumerate(Q,1):
     ch=''.join(f'<li data-k="{k}" class="{"ok" if k==q["cevap"]["sik"] else ""}"><span class="h">{k})</span> {kesir(html.escape(v))}</li>' for k,v in q['siklar'].items())
     L=max(len(v) for v in q['siklar'].values()); duzen='sira' if L<=7 else ('osym' if L<=20 else 'alt')
-    st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{kesir(md(a["aciklama"]))}</div><div class="ai">{kesir(html.escape(a["islem"]))}</div></li>' for a in q['adimlar'])
+    st=''.join(f'<li><div class="ab">{html.escape(a["baslik"])}</div><div class="aa">{re.sub(r' ([=+−×<>⇒]) ','\u00a0\\1\u00a0',kesir(md(a["aciklama"])))}</div><div class="ai">{islem_html(a["islem"])}</div></li>' for a in q['adimlar'])
     ip=''.join(f'<li>{html.escape(x)}</li>' for x in q['ipuclari'])
     bi=''.join(f'<span class="bil"><b>{html.escape(b["ad"])}</b>{html.escape(b["ifade"])}</span>' for b in q['bilgi'])
     cards.append(f'''<article class="card" id="q{i}" data-z="{q["zorluk"]}" data-t="{q.get("tipId","")}">
@@ -33,7 +40,7 @@ for i,q in enumerate(Q,1):
 <details><summary>Çözümü göster</summary>
 <div class="coz">
 <div class="ist"><span>Ne isteniyor?</span>{html.escape(q["istenen"])}</div>
-{f'<div class="bilgiler">{bi}</div>' if bi else ''}
+{f'<div class="bilgiler"><span class="bbas">Bilmen gereken</span>{bi}</div>' if bi else ''}
 <ol class="yol">{st}</ol>
 <div class="cvp"><span>Cevap</span><b>{q["cevap"]["sik"]})</b> {kesir(html.escape(q["cevap"]["deger"]))}</div>
 <div class="puf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg><div><b>Püf noktası</b>{html.escape(q["puf"])}</div></div>
@@ -86,9 +93,10 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .coz{{margin-top:6px}}
 .ist{{background:var(--accbg);border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.45}}
 .ist span{{display:block;font-weight:700;color:var(--acc);font-size:13px;margin-bottom:2px}}
-.bilgiler{{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}}
-.bil{{border:1.5px solid var(--line);border-radius:12px;padding:6px 10px;font-size:14px;color:var(--fg)}}
-.bil b{{display:block;font-size:12px;color:var(--mut);font-weight:600}}
+.bilgiler{{display:grid;gap:8px;margin:12px 0 0;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px}}
+.bbas{{font-weight:800;font-size:13px;color:var(--acc)}}
+.bil{{font-size:15px;line-height:1.45;color:var(--fg)}}
+.bil b{{display:block;font-size:13px;color:var(--mut);font-weight:700}}
 .yol{{list-style:none;margin:18px 0 0;padding:0;counter-reset:y}}
 .yol li{{position:relative;padding:0 0 20px 46px;counter-increment:y}}
 .yol li::before{{content:counter(y);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px}}
@@ -96,7 +104,7 @@ textarea{{flex:1 1 100%;min-height:38px;border:1px solid var(--line);border-radi
 .yol li:last-child::after{{display:none}}
 .ab{{font-weight:800;font-size:16px;line-height:1.3}}
 .aa{{color:var(--mut);font-size:15px;margin-top:2px;line-height:1.45}}.aa b{{color:var(--fg)}}
-.ai{{margin-top:9px;display:inline-block;font:19px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);border-radius:10px;padding:8px 14px;border-left:3px solid var(--acc)}}
+.ais{{display:block}}.ai{{margin-top:9px;display:inline-block;font:19px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);border-radius:10px;padding:8px 14px;border-left:3px solid var(--acc)}}
 .cvp{{display:flex;align-items:center;gap:10px;margin:2px 0 14px 0;padding:12px 16px;border-radius:14px;border:2px solid var(--acc);font:20px "Plus Jakarta Sans",system-ui,sans-serif}}
 .cvp span{{font:700 13px "Plus Jakarta Sans",system-ui,sans-serif;color:var(--acc);margin-right:4px}}
 .puf{{display:flex;gap:12px;align-items:flex-start;background:var(--fg);color:var(--card);border-radius:14px;padding:13px 15px;font-size:15px;line-height:1.45}}
