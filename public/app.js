@@ -2520,6 +2520,7 @@ function dersAc(k, sekme, sn, pi){ const c = DERS_ICERIK[k]; if(!c) return; clos
         <button class="oyd" data-oy="ileri" aria-label="10 saniye ileri">⟳<small>10</small></button>
         <span class="oyz" id="oyz">0:00 / 0:00</span>
         <span class="oyara"></span>
+        <button class="oyd yazi" data-oy="cc" aria-label="Alt yazı" aria-pressed="${!!og().cc}" id="oycc">CC</button>
         <button class="oyd yazi" data-oy="hiz" aria-label="Oynatma hızı" id="oyhiz">${String(og().hiz||1).replace(".",",")}x</button>
         <button class="oyd" data-dk="not" aria-label="Not al">📝</button>
         <button class="oyd" data-dk="anla" aria-label="Burayı anlamadım">🤔</button>
@@ -2534,14 +2535,14 @@ function dersAc(k, sekme, sn, pi){ const c = DERS_ICERIK[k]; if(!c) return; clos
     <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
   const sade = () => { const yd = $("#dkarac-yedek"); if(yd) yd.hidden = false; const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
-  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1, controls:0, fs:0, iv_load_policy:3, disablekb:1 },
-    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; oyCiz(); if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
+  ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1, controls:0, fs:0, iv_load_policy:3, disablekb:1, cc_load_policy:0, cc_lang_pref:"tr" },
+    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); oyAltYazi(!!og().cc); try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; oyCiz(); if(ev.data===1 && !og().cc) oyAltYazi(false); if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0){ if(pi < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>dersAc(k, DP.sekme, 0, pi+1), 1200); } else izlendiYap(); } } } }); }).catch(sade);
   clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); bolumIsaretle(); }, 3000);
   geriKoruma(); }
 /* ---------- Zekacademy oynatıcısı: YouTube kontrolleri kapalı, kumanda bizim ---------- */
 function oyCiz(){ const p = DP.p; if(!p || !p.getDuration) return; let t = 0, d = 0, y = 0; try{ t = p.getCurrentTime()||0; d = p.getDuration()||0; y = p.getVideoLoadedFraction()||0; }catch(_){ return; } if(d) t = Math.min(t, d);
   const f = $("#oycd"), yb = $("#oycy"), z = $("#oyz"), o = $("#oyoynat"), c = $("#oyc"); if(!f) return;
-  f.style.width = (d ? t/d*100 : 0) + "%"; yb.style.width = (y*100) + "%"; z.textContent = `${dkSn(t)} / ${dkSn(d)}`; if(c) c.setAttribute("aria-valuenow", Math.round(d ? t/d*100 : 0));
+  f.style.width = (d ? t/d*100 : 0) + "%"; yb.style.width = (y*100) + "%"; z.innerHTML = `${dkSn(t)}<span class="oyzt"> / ${dkSn(d)}</span>`; if(c) c.setAttribute("aria-valuenow", Math.round(d ? t/d*100 : 0));
   o.textContent = DP.oyn ? "❚❚" : "▶"; o.setAttribute("aria-label", DP.oyn ? "Durdur" : "Oynat");
   if(d) document.querySelectorAll("#oyc [data-t]").forEach(e=>{ e.style.left = (Math.min(1, +e.dataset.t/d)*100) + "%"; }); }
 function oyBasla(){ clearInterval(DP.oyt); DP.oyt = setInterval(()=>{ if(!$("#oyb")) return clearInterval(DP.oyt); oyCiz(); }, 250); oyCiz();
@@ -2552,9 +2553,12 @@ function oyBasla(){ clearInterval(DP.oyt); DP.oyt = setInterval(()=>{ if(!$("#oy
   const bit = e=>{ if(!sur) return; sur = false; c.classList.remove("sur"); dpKaydet(); bolumIsaretle(); };
   c.addEventListener("pointerup", bit); c.addEventListener("pointercancel", bit);
   c.addEventListener("keydown", e=>{ if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); oyAtla(e.key==="ArrowRight"?5:-5); } }); }
+/* Alt yazı: varsayılan kapalı; CC ile açılır (Türkçe varsa Türkçe), tercih hatırlanır */
+function oyAltYazi(acik){ const p = DP.p; if(!p) return; try{ if(acik){ p.loadModule("captions"); p.setOption("captions", "track", {languageCode:"tr"}); } else { p.setOption("captions", "track", {}); p.unloadModule("captions"); p.unloadModule("cc"); } }catch(_){} const b = $("#oycc"); if(b) b.setAttribute("aria-pressed", acik); }
 function oyAtla(sn){ try{ DP.p.seekTo(Math.max(0, DP.p.getCurrentTime()+sn), true); }catch(_){} oyCiz(); }
 document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-oy]"); if(!b || !DP.p) return; const a = b.dataset.oy;
   if(a==="oynat"){ try{ DP.oyn ? DP.p.pauseVideo() : DP.p.playVideo(); }catch(_){} }
+  else if(a==="cc"){ const acik = !og().cc; ogYaz(o=>{ o.cc = acik; }); oyAltYazi(acik); toast(acik ? "Alt yazı açık" : "Alt yazı kapalı"); }
   else if(a==="geri") oyAtla(-10); else if(a==="ileri") oyAtla(10);
   else if(a==="hiz"){ const L = [1,1.25,1.5,2], r = L[(L.indexOf(og().hiz||1)+1)%L.length]; ogYaz(o=>{ o.hiz = r; }); try{ DP.p.setPlaybackRate(r); }catch(_){} b.textContent = String(r).replace(".",",")+"x"; }
   else if(a==="tam"){ const w = $("#oyn"); try{ if(document.fullscreenElement) document.exitFullscreen(); else if(w.requestFullscreen) w.requestFullscreen().then(()=>{ try{ screen.orientation.lock("landscape"); }catch(_){} }).catch(()=>{}); else if(w.webkitRequestFullscreen) w.webkitRequestFullscreen(); }catch(_){} }
