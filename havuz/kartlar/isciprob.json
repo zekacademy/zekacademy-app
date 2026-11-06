@@ -1,0 +1,13 @@
+{"konu":"İşçi Emek Problemleri","surum":1,
+ "kartlar":[
+  {"id":"K-IS-01","konu":"İşçi Emek Problemleri","alt":"Birlikte çalışma","fikir":"Bir işi a günde bitiren kişi bir günde işin 1/a’sını yapar; birlikte çalışanların bir günlük işleri toplanır. İkişerli birlikte süreler verilirse toplam iki katı alınır.","tuzak":"Süreleri toplamak ya da ortalamasını almak; ikişerli toplamları ikiye bölmeyi unutmak; yapılan ile kalan işi karıştırmak.","zorluk":"kolay-orta","kalip":"hikâyeli","adim":3,"tipId":"is-birlikte","tip":"Birlikte çalışma","kaynak":"ÖSYM TYT çıkmış (iş birlikte yapılıyor) · Bilgi Sarmal (A ve B işçileri) · Mert Hoca (halı yıkama)"},
+  {"id":"K-IS-02","konu":"İşçi Emek Problemleri","alt":"Ayrılma ve katılma","fikir":"İş evrelere ayrılır; her evrede çalışanların bir günlük işi toplanıp gün sayısıyla çarpılır, kalan iş son ekibin hızına bölünür.","tuzak":"Bir evrede çalışan birini unutmak; yalnız son evrenin süresini cevap sanmak; birlikte bitirme süresini toplam süre sanmak.","zorluk":"orta-zor","kalip":"hikâyeli","adim":4,"tipId":"is-ayrilma","tip":"Ayrılma ve sonradan katılma","kaynak":"Bilgi Sarmal (işçi ayrılıyor) · 3D · 345 SB"},
+  {"id":"K-IS-03","konu":"İşçi Emek Problemleri","alt":"Havuz ve musluk","fikir":"Dolduran musluk havuza ekler (+), boşaltan musluk çıkarır (−); evrelerde açık olan musluklara göre doluluk hesaplanır.","tuzak":"Boşaltan musluğu doldurucu gibi eklemek; yarısı dolu havuzda tamamını hesaplamak; süreyi yanlış andan ölçmek.","zorluk":"kolay-orta","kalip":"hikâyeli","adim":3,"tipId":"is-havuz","tip":"Havuz ve musluk","kaynak":"ÖSYM TYT çıkmış (musluklu silindir) · 3D (su sebili) · Mert Hoca (tuzlu su muslukları)"},
+  {"id":"K-IS-04","konu":"İşçi Emek Problemleri","alt":"İşçi sayısı, süre ve verim","fikir":"Toplam iş = işçi sayısı × gün × günlük saat × verim; işçi azalınca süre artar (ters orantı), üretilen iş miktarı doğru orantılıdır.","tuzak":"Ters orantıyı doğru orantı sanmak; değişkenlerden birini hesaba katmamak; gecikmeyi kalan işçi sayısına bölmek.","zorluk":"orta-zor","kalip":"hikâyeli","adim":3,"tipId":"is-verim","tip":"İşçi sayısı, süre ve verim","kaynak":"Mert Hoca (konfeksiyon atölyesi, işçi ve saat artışı) · Bilgi Sarmal · 345 SB"}
+ ],
+ "tipler":[
+  {"tipId":"is-birlikte","ad":"Birlikte çalışma","kartlar":["K-IS-01"],"uygulamaKonu":"prob|İşçi Emek Problemleri"},
+  {"tipId":"is-ayrilma","ad":"Ayrılma ve sonradan katılma","kartlar":["K-IS-02"],"uygulamaKonu":"prob|İşçi Emek Problemleri"},
+  {"tipId":"is-havuz","ad":"Havuz ve musluk","kartlar":["K-IS-03"],"uygulamaKonu":"prob|İşçi Emek Problemleri"},
+  {"tipId":"is-verim","ad":"İşçi sayısı, süre ve verim","kartlar":["K-IS-04"],"uygulamaKonu":"prob|İşçi Emek Problemleri"}
+ ]}

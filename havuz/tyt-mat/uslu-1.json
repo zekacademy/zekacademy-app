@@ -1,0 +1,670 @@
+[
+ {
+  "id": "tytmat-uslu-0001",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Negatif ve Sıfırıncı Kuvvet",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Negatif ve sıfırıncı kuvvetleri kesre çevirerek toplama yapar.",
+  "tipId": "us-kural",
+  "tip": "Üslü ifadelerde işlem kuralları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "2⁻¹ + 4⁻¹ + 3⁰\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/4",
+   "B": "7/4",
+   "C": "2",
+   "D": "15/4",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7/4"
+  },
+  "celdiriciler": {
+   "A": "3/4, 3⁰’ı 0 almak; sıfırdan farklı her sayının 0. kuvveti 1’dir.",
+   "C": "2, 4⁻¹’i 1/2 almak; 4⁻¹ = 1/4, üs −1 karekök demek değildir.",
+   "D": "15/4, 3⁰’ı 3 almak; 0. kuvvet 1’dir.",
+   "E": "7, negatif üsleri yok sayıp 2 + 4 + 1 toplamak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Üç terimin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Negatif üs",
+    "ifade": "a⁻ⁿ = 1/aⁿ (a ≠ 0); işaret değişmez, sayı ters çevrilir. Örnek: 2⁻³ = 1/8 · 5⁻¹ = 1/5"
+   },
+   {
+    "ad": "Sıfırıncı kuvvet",
+    "ifade": "sıfırdan farklı her sayının 0. kuvveti 1’dir. Örnek: 7⁰ = 1 · (−4)⁰ = 1"
+   }
+  ],
+  "ipuclari": [
+   "Negatif üs sayının işaretini mi değiştirir, yoksa sayıyı ters mi çevirir?",
+   "Sıfırdan farklı bir sayının 0. kuvveti kaçtır?",
+   "Kesirleri toplarken paydaları eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Negatif üsleri çevir",
+    "aciklama": "Negatif üs, sayının çarpmaya göre tersini verir; işaret değişmez.",
+    "islem": "2⁻¹ = 1/2 · 4⁻¹ = 1/4"
+   },
+   {
+    "baslik": "Sıfırıncı kuvvet",
+    "aciklama": "3 sıfırdan farklı olduğu için 0. kuvveti 1’dir.",
+    "islem": "3⁰ = 1"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Paydaları 4’te eşitle.",
+    "islem": "1/2 + 1/4 + 1 = 2/4 + 1/4 + 4/4 = 7/4"
+   }
+  ],
+  "puf": "Negatif üs sayıyı negatif yapmaz, ters çevirir: a⁻¹ = 1/a.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0001k",
+  "kaynakKart": "K-US-01 (negatif ve sıfırıncı kuvvet) · üç terimli toplam, yeni tabanlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0002",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Bilimsel Gösterim",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "10’un kuvvetleriyle verilen ölçülerle çarpma yapar ve sonucu istenen birime çevirir.",
+  "tipId": "us-bilimsel",
+  "tip": "Bilimsel gösterim ve 10’un kuvvetleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Çapı 4 × 10⁻⁶ metre olan özdeş hücreler, bir doğru boyunca aralarında boşluk kalmayacak biçimde yan yana dizilmiştir. Dizide 5000 hücre vardır.\nBuna göre bu dizinin uzunluğu kaç milimetredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,02",
+   "B": "0,2",
+   "C": "2",
+   "D": "20",
+   "E": "200"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "0,02, uzunluğu metre olarak bırakmak; soru milimetre soruyor.",
+   "B": "0,2, 1 m = 10 mm sanmak; 1 m = 1000 mm.",
+   "C": "2, 5000’i 5 × 10² yazmak; 5000 = 5 × 10³.",
+   "E": "200, 5000’i 5 × 10⁴ yazmak; bir sıfır fazla sayılmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Dizinin milimetre cinsinden uzunluğu.",
+  "bilgi": [
+   {
+    "ad": "10’un kuvvetleri",
+    "ifade": "10ⁿ, 1’in yanına n tane sıfır yazmaktır; 10⁻ⁿ = 1/10ⁿ. Örnek: 10³ = 1000 · 10⁻² = 0,01"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Örnek: 10⁻⁶ × 10³ = 10⁻³ · 3⁵ ÷ 3² = 3³"
+   },
+   {
+    "ad": "Metre ve milimetre",
+    "ifade": "1 m = 1000 mm, yani 10⁻³ m = 1 mm. Örnek: 0,5 m = 500 mm"
+   }
+  ],
+  "ipuclari": [
+   "5000’i 10’un kuvvetiyle yaz.",
+   "Katsayıları ayrı, 10’un kuvvetlerini ayrı çarp.",
+   "Sonucu milimetreye çevirmeyi unutma: 1 m kaç mm?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıyı 10’un kuvvetiyle yaz",
+    "aciklama": "5000, 5’in yanına üç sıfırdır.",
+    "islem": "5000 = 5 × 10³"
+   },
+   {
+    "baslik": "Uzunluğu hesapla",
+    "aciklama": "Toplam uzunluk = bir hücrenin çapı × hücre sayısı. Katsayıları ve kuvvetleri ayrı çarp.",
+    "islem": "4 × 10⁻⁶ × 5 × 10³ = 20 × 10⁻³ m"
+   },
+   {
+    "baslik": "Milimetreye çevir",
+    "aciklama": "10⁻³ m = 1 mm olduğundan sonuç doğrudan milimetre olur.",
+    "islem": "20 × 10⁻³ m = 0,02 m = 20 mm"
+   }
+  ],
+  "puf": "Bilimsel gösterimde katsayıları ve 10’un kuvvetlerini ayrı çarp; en sonda birimi kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0002k",
+  "kaynakKart": "K-US-02 (bilimsel gösterimle ölçü) · yeni kurgu (yan yana hücreler), birim milimetre",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0003",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Ortak Çarpan",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Farklı kuvvetlerden oluşan üslü toplamda en küçük kuvveti ortak çarpan yapar ve istenen kuvveti bulur.",
+  "tipId": "us-ortak-carpan",
+  "tip": "Ortak çarpan parantezine alma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "5ˣ⁺¹ − 5ˣ⁻¹ = 600\nolduğuna göre 5ˣ⁺¹ kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "25",
+   "C": "125",
+   "D": "600",
+   "E": "625"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "625"
+  },
+  "celdiriciler": {
+   "A": "3, x’in değeri; soru 5ˣ⁺¹’i soruyor.",
+   "B": "25, 5ˣ⁻¹’in değeri; soru 5ˣ⁺¹’i soruyor.",
+   "C": "125, 5ˣ’in değeri; soru 5ˣ⁺¹’i soruyor.",
+   "D": "600, 5ˣ⁻¹ terimini yok sayıp 5ˣ⁺¹’i 600 almak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "5ˣ⁺¹ ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Ortak çarpan",
+    "ifade": "aˣ⁺² = aˣ × a² ve aˣ⁻¹ = aˣ ÷ a. Örnek: 2ˣ⁺³ + 2ˣ = 2ˣ × (8 + 1) = 9 × 2ˣ"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Örnek: 10⁻⁶ × 10³ = 10⁻³ · 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Hangi kuvvet daha küçük? Onu ortak çarpan parantezine al.",
+   "5ˣ⁺¹, 5ˣ⁻¹’in kaç katıdır?",
+   "Bulduğun değer sorulan ifade mi? Sorulana dönüştür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak çarpan seç",
+    "aciklama": "Küçük kuvvet 5ˣ⁻¹. 5ˣ⁺¹ = 5ˣ⁻¹ × 5².",
+    "islem": "5ˣ⁺¹ − 5ˣ⁻¹ = 5ˣ⁻¹ × (25 − 1)"
+   },
+   {
+    "baslik": "Parantezi hesapla",
+    "aciklama": "25 − 1 = 24.",
+    "islem": "24 × 5ˣ⁻¹ = 600 ⇒ 5ˣ⁻¹ = 25"
+   },
+   {
+    "baslik": "Sorulana çevir",
+    "aciklama": "5ˣ⁺¹, 5ˣ⁻¹’in 5² = 25 katıdır.",
+    "islem": "5ˣ⁺¹ = 25 × 25 = 625 (x = 3)"
+   }
+  ],
+  "puf": "Üslü toplamda en küçük kuvveti ortak çarpan yap; sonunda bulduğun kuvveti sorulana çevir.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0003k",
+  "kaynakKart": "K-US-03 (en küçük kuvvet parantezine alma) · fark biçimi, yeni istenen (5ˣ⁺¹)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0004",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Üslü Denklem",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Kesirli ve tam sayı tabanları ortak tabana çevirerek üsleri eşitler.",
+  "tipId": "us-denklem",
+  "tip": "Üslü denklemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(1/9)ˣ = 27ˣ⁻⁵\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−3",
+   "B": "1",
+   "C": "3",
+   "D": "5",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "−3, son adımda −5x = −15’i x = −3 bulmak; eksi bölü eksi artıdır.",
+   "B": "1, 27ˣ⁻⁵’i 3³ˣ⁻⁵ yazmak; 3, x − 5’in iki terimiyle de çarpılmalı.",
+   "D": "5, −2x’i görmeyip 3x = 15 çözmek.",
+   "E": "15, 1/9’u 3² sanmak; 1/9 = 3⁻²."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Negatif üs",
+    "ifade": "a⁻ⁿ = 1/aⁿ (a ≠ 0); işaret değişmez, sayı ters çevrilir. Örnek: 2⁻³ = 1/8 · 5⁻¹ = 1/5"
+   },
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 9ˣ = (3²)ˣ = 3²ˣ · 27⁴ = (3³)⁴ = 3¹²"
+   }
+  ],
+  "ipuclari": [
+   "1/9 ve 27’yi 3’ün kuvveti olarak yaz.",
+   "1/9 = 3’ün hangi kuvveti? İşarete dikkat.",
+   "Tabanlar eşitlenince üsleri eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak tabana çevir",
+    "aciklama": "1/9 = 1/3² = 3⁻² ve 27 = 3³.",
+    "islem": "(3⁻²)ˣ = (3³)ˣ⁻⁵"
+   },
+   {
+    "baslik": "Kuvvetin kuvveti",
+    "aciklama": "Üsler çarpılır; parantezdeki her terim çarpılmalı.",
+    "islem": "3⁻²ˣ = 3³ˣ⁻¹⁵"
+   },
+   {
+    "baslik": "Üsleri eşitle",
+    "aciklama": "Tabanlar aynı olunca üsler eşit olur.",
+    "islem": "−2x = 3x − 15 ⇒ −5x = −15 ⇒ x = 3"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "x = 3 için iki taraf da 3⁻⁶.",
+    "islem": "(1/9)³ = 1/729 · 27⁻² = 1/729 ✓"
+   }
+  ],
+  "puf": "Kesirli tabanı negatif üsle yaz: 1/aⁿ = a⁻ⁿ; sonra tek tabanda üsleri eşitle.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0004k",
+  "kaynakKart": "K-US-04 (ortak tabana çevirme) · kesirli taban (1/9) ve 27, yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0005",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Katlanarak Artma",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Her adımda sabit katına çıkan bir niceliği üslü ifadeyle yazar ve belirli bir adıma kadar toplamını bulur.",
+  "tipId": "us-buyume",
+  "tip": "Katlanarak artma ve azalma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir okulda bir duyuru şöyle yayılmıştır: 1. gün müdür duyuruyu 3 öğrenciye söylemiştir. Sonraki her gün, bir önceki gün duyuruyu öğrenen her öğrenci, duyuruyu henüz bilmeyen 3 yeni öğrenciye söylemiştir. Hiçbir öğrenciye duyuru iki kez söylenmemiştir.\nBuna göre 4. günün sonunda duyuruyu öğrenmiş toplam öğrenci sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "81",
+   "C": "120",
+   "D": "121",
+   "E": "363"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "A": "12, her gün 3 yeni öğrenci eklendiğini sanmak (3 × 4); sayı her gün 3 katına çıkıyor.",
+   "B": "81, yalnız 4. gün öğrenenler; soru toplamı soruyor.",
+   "D": "121, müdürü de saymak; soru öğrenci sayısını soruyor.",
+   "E": "363, 5 günü toplamak; soru 4. günün sonunu soruyor."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk 4 günde duyuruyu öğrenen öğrencilerin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Katlanarak artma",
+    "ifade": "her adımda sayı 3 katına çıkıyorsa n. adımdaki sayı 3ⁿ olur. Örnek: 3, 9, 27, 81 → 4. adım 3⁴ = 81"
+   }
+  ],
+  "ipuclari": [
+   "1. gün kaç öğrenci öğrendi? 2. gün bu sayının kaç katı öğrendi?",
+   "Her gün yeni öğrenen sayısını 3’ün kuvveti olarak yaz.",
+   "Soru yalnız 4. günü değil, 4 günün toplamını soruyor."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her günü yaz",
+    "aciklama": "1. gün 3 öğrenci; sonraki her gün bir önceki günün 3 katı kadar yeni öğrenci.",
+    "islem": "3¹ = 3 · 3² = 9 · 3³ = 27 · 3⁴ = 81"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "4. günün sonuna kadar öğrenenlerin hepsi sayılır.",
+    "islem": "3 + 9 + 27 + 81 = 120"
+   },
+   {
+    "baslik": "Müdürü ayır",
+    "aciklama": "Soru öğrenci sayısını soruyor; müdür sayılmaz.",
+    "islem": "120 öğrenci"
+   }
+  ],
+  "puf": "“n. günün sonunda toplam” soruluyorsa her günü ayrı yazıp topla; yalnız son günü alma.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0005k",
+  "kaynakKart": "K-US-05 (her adımda sabit katına çıkma) · yeni kurgu (okulda duyuru), yeni istenen (toplam)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0006",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Sıralama",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Üsleri ortak bölenle eşitleyerek üslü sayıları tabanlarına göre sıralar.",
+  "tipId": "us-siralama",
+  "tip": "Üslü sayıları karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a = 2⁴⁰\nb = 3³⁰\nc = 5²⁰\nolduğuna göre a, b ve c sayılarının doğru sıralanışı aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "a < c < b",
+   "B": "a < b < c",
+   "C": "b < a < c",
+   "D": "c < a < b",
+   "E": "c < b < a"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "a < c < b"
+  },
+  "celdiriciler": {
+   "B": "a < b < c, yalnızca tabanlara (2, 3, 5) bakmak; üsler farklıyken taban tek başına karar vermez.",
+   "C": "b < a < c, 3³’ü 9 hesaplamak; 3³ = 27.",
+   "D": "c < a < b, 5²’yi 10 hesaplamak; 5² = 25.",
+   "E": "c < b < a, yalnızca üslere (40, 30, 20) bakmak."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Üç sayının küçükten büyüğe sıralanışı.",
+  "bilgi": [
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 9ˣ = (3²)ˣ = 3²ˣ · 27⁴ = (3³)⁴ = 3¹²"
+   },
+   {
+    "ad": "Aynı üs, farklı taban",
+    "ifade": "üsler eşit ve pozitifse tabanı büyük olan sayı büyüktür. Örnek: 3¹⁰ < 4¹⁰"
+   }
+  ],
+  "ipuclari": [
+   "40, 30 ve 20’nin ortak böleni hangisi?",
+   "Her sayıyı (…)¹⁰ biçiminde yaz.",
+   "Üsler eşitse büyük tabanlı sayı büyüktür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak üs seç",
+    "aciklama": "40, 30 ve 20’nin ortak böleni 10.",
+    "islem": "2⁴⁰ = (2⁴)¹⁰ · 3³⁰ = (3³)¹⁰ · 5²⁰ = (5²)¹⁰"
+   },
+   {
+    "baslik": "Tabanları hesapla",
+    "aciklama": "2⁴ = 16, 3³ = 27, 5² = 25.",
+    "islem": "a = 16¹⁰ · b = 27¹⁰ · c = 25¹⁰"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "Üsler eşit; tabanlara bak: 16 < 25 < 27.",
+    "islem": "a < c < b"
+   }
+  ],
+  "puf": "Üslü sayıları karşılaştırmak için önce üsleri (ya da tabanları) eşitle; ikisi birden farklıyken karar verme.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0006k",
+  "kaynakKart": "K-US-06 (ortak kuvvete getirerek karşılaştırma) · üç sayı, yeni taban ve üsler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0007",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Değişken Değiştirme",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Üslü denklemi değişken değiştirerek ikinci dereceden denkleme çevirir; üslü ifadenin pozitifliğiyle kökü seçer.",
+  "tipId": "us-denklem",
+  "tip": "Üslü denklemler",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "9ˣ⁺¹ − 3ˣ⁺³ = 486\nolduğuna göre 3ˣ kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−9",
+   "B": "−6",
+   "C": "2",
+   "D": "6",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "−9, a² − 3a − 54’ü (a + 9) × (a − 6) diye yanlış ayırıp negatif kökü almak.",
+   "B": "−6, denklemin öbür kökü; 3ˣ negatif olamaz.",
+   "C": "2, x’in değeri; soru 3ˣ’i soruyor.",
+   "D": "6, a² − 3a − 54’ü (a + 9) × (a − 6) diye yanlış ayırmak; çarpanların toplamı +3 olur, −3 değil."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "3ˣ ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 9ˣ = (3²)ˣ = 3²ˣ · 27⁴ = (3³)⁴ = 3¹²"
+   },
+   {
+    "ad": "Üslü ifade pozitiftir",
+    "ifade": "a > 0 ise aˣ her x için pozitiftir. Örnek: 3⁻² = 1/9 > 0; 3ˣ hiçbir zaman −6 olamaz"
+   },
+   {
+    "ad": "Değişken değiştirme",
+    "ifade": "tekrar eden ifadeye harf ver: 3ˣ = a ise 9ˣ = (3²)ˣ = (3ˣ)² = a²"
+   }
+  ],
+  "ipuclari": [
+   "3ˣ’e bir harf ver: 3ˣ = a. 9ˣ⁺¹ ve 3ˣ⁺³’ü a ile yaz.",
+   "Elde ettiğin ikinci dereceden denklemi sadeleştir ve çarpanlarına ayır.",
+   "3ˣ negatif olabilir mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Harf ver",
+    "aciklama": "3ˣ = a olsun. 9ˣ⁺¹ = 9 × 9ˣ ve 9ˣ = (3ˣ)².",
+    "islem": "9ˣ⁺¹ = 9a² · 3ˣ⁺³ = 27a"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Denklemi 9’a böl.",
+    "islem": "9a² − 27a = 486 ⇒ a² − 3a − 54 = 0"
+   },
+   {
+    "baslik": "Çarpanlara ayır",
+    "aciklama": "Çarpımı −54, toplamı −3 olan iki sayı: −9 ve 6.",
+    "islem": "(a − 9) × (a + 6) = 0 ⇒ a = 9 ya da a = −6"
+   },
+   {
+    "baslik": "Pozitif kökü seç",
+    "aciklama": "3ˣ her zaman pozitif; −6 olamaz.",
+    "islem": "3ˣ = 9 (x = 2) · kontrol: 9³ − 3⁵ = 729 − 243 = 486 ✓"
+   }
+  ],
+  "puf": "aˣ’e harf verdiğinde çıkan negatif kökü ele: a > 0 ise aˣ asla negatif olamaz.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0007k",
+  "kaynakKart": "K-US-07 (9ˣ = (3ˣ)² ile değişken değiştirme) · fark biçimi, negatif kökü eleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-uslu-0008",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Büyümelerin Karşılaştırılması",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Farklı hızlarda katlanan iki niceliği aynı tabanda yazar, “k katı” koşulunu üs eşitliğine çevirir.",
+  "tipId": "us-buyume",
+  "tip": "Katlanarak artma ve azalma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir laboratuvarda A kabında başlangıçta 2¹⁰ bakteri vardır ve bu kaptaki bakteri sayısı her saat 2 katına çıkmaktadır. B kabında başlangıçta 2⁴ bakteri vardır ve bu kaptaki bakteri sayısı her saat 4 katına çıkmaktadır.\nBuna göre kaç saat sonra B kabındaki bakteri sayısı A kabındakinin 8 katı olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "6",
+   "C": "9",
+   "D": "13",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "3, koşulu ters kurmak (A, B’nin 8 katı); soru B’nin A’nın 8 katı olmasını soruyor.",
+   "B": "6, iki kabın eşit olduğu an; soru 8 katı olmasını soruyor.",
+   "D": "13, 3 + 10’u, yani A’nın üssündeki sabiti süre sanmak.",
+   "E": "14, “8 katı” için üsse 8 eklemek; 8 = 2³ olduğundan üsse 3 eklenir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "B’nin A’nın 8 katı olduğu andaki süre (saat).",
+  "bilgi": [
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Örnek: 10⁻⁶ × 10³ = 10⁻³ · 3⁵ ÷ 3² = 3³"
+   },
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 9ˣ = (3²)ˣ = 3²ˣ · 27⁴ = (3³)⁴ = 3¹²"
+   },
+   {
+    "ad": "Katlanarak artma",
+    "ifade": "başlangıç sayısı N, her saat k katına çıkıyorsa t saat sonra N × kᵗ olur. Örnek: 2⁴ × 4ᵗ"
+   }
+  ],
+  "ipuclari": [
+   "t saat sonra iki kaptaki sayıyı 2’nin kuvveti olarak yaz.",
+   "4ᵗ = (2²)ᵗ; “8 katı” = 2³ ile çarpmak.",
+   "Üsleri eşitle: hangi kap hangisinin 8 katı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "A kabı",
+    "aciklama": "2¹⁰ ile başlar, her saat 2 katı.",
+    "islem": "A = 2¹⁰ × 2ᵗ = 2¹⁰⁺ᵗ"
+   },
+   {
+    "baslik": "B kabı",
+    "aciklama": "2⁴ ile başlar, her saat 4 = 2² katı.",
+    "islem": "B = 2⁴ × (2²)ᵗ = 2⁴⁺²ᵗ"
+   },
+   {
+    "baslik": "Koşulu yaz",
+    "aciklama": "B, A’nın 8 katı: 8 = 2³ olduğundan A’nın üssüne 3 eklenir.",
+    "islem": "2⁴⁺²ᵗ = 2³ × 2¹⁰⁺ᵗ = 2¹³⁺ᵗ"
+   },
+   {
+    "baslik": "Üsleri eşitle",
+    "aciklama": "Aynı tabanda üsler eşit olmalı.",
+    "islem": "4 + 2t = 13 + t ⇒ t = 9"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "9 saat sonra A = 2¹⁹, B = 2²².",
+    "islem": "2²² ÷ 2¹⁹ = 2³ = 8 ✓"
+   }
+  ],
+  "puf": "“k katı” koşulunda k’yı tabanın kuvveti olarak yaz (8 = 2³) ve üsse o kuvveti ekle; k’nın kendisini değil.",
+  "kisaYol": null,
+  "kardes": "tytmat-uslu-0008k",
+  "kaynakKart": "K-US-08 (iki farklı katlanma, “k katı” koşulu) · yeni kurgu (iki kapta bakteri), yeni istenen (süre)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

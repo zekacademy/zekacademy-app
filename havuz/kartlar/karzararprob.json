@@ -1,0 +1,149 @@
+{
+ "konu": "Kâr Zarar Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026, Bilgi Sarmal, 3D, Mert Hoca, 345 SB.",
+ "kartlar": [
+  {
+   "id": "K-KZ-01",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Alış, satış, kâr",
+   "fikir": "Alış fiyatı ve kâr/zarar yüzdesinden satış fiyatı ya da satış fiyatından alış fiyatı bulunur (satış = alış × (1 ± p/100)).",
+   "tuzak": "Kâr yüzdesini satış fiyatına göre almak; geriye giderken yüzdeyi satış fiyatından düşmek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "kz-temel",
+   "tip": "Alış, satış ve kâr yüzdesi",
+   "kaynak": "Bilgi Sarmal (180 TL’ye alınan ürün) · 345 SB"
+  },
+  {
+   "id": "K-KZ-02",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Adet ve fiyat",
+   "fikir": "Alınan ürünlerin bir kısmı satılamaz ya da adetler farklıdır; toplam alış ve toplam satış tutarı karşılaştırılarak kâr yüzdesi bulunur.",
+   "tuzak": "Satılamayan ürünlerin maliyetini unutmak; kârı satış tutarına bölmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kz-adet",
+   "tip": "Adet-fiyat ilişkisiyle kâr",
+   "kaynak": "345 SB (5’inin alışı, 6’sının satışı) · 3D"
+  },
+  {
+   "id": "K-KZ-03",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Etiket ve indirim",
+   "fikir": "Etiket fiyatı üzerinden indirimle satışta kâr ya da zarar edilir; alış = 100 alınıp etiket ile alış arasındaki oran bulunur.",
+   "tuzak": "İndirim ve kâr yüzdelerini toplamak/çıkarmak; indirimi indirimli fiyatın yüzdesi sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kz-etiket",
+   "tip": "Etiket fiyatı, indirim ve kâr",
+   "kaynak": "Bilgi Sarmal (%20 indirimle %8 kâr) · Mert Hoca (kampanya broşürü)"
+  },
+  {
+   "id": "K-KZ-04",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Etiket, iki indirim, kâr",
+   "fikir": "Etiket alışın belli bir yüzde fazlasıdır; art arda iki indirimden sonra kalan kâr verilir, ikinci indirim bulunur.",
+   "tuzak": "İkinci indirimi etiket ya da alış fiyatına oranlamak; yüzdeleri toplayıp çıkarmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kz-etiket",
+   "tip": "Etiket fiyatı, indirim ve kâr",
+   "kaynak": "345 SB, Bilgi Sarmal (etiket kârı ve indirim zinciri)"
+  },
+  {
+   "id": "K-KZ-05",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Ardışık indirim",
+   "fikir": "İkinci indirim indirimli fiyat üzerinden yapılır; son ödenen fiyattan bilinmeyen ilk ya da ikinci indirim oranı bulunur.",
+   "tuzak": "İndirim yüzdelerini toplamak; indirimi yanlış fiyata oranlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kz-ardisik-indirim",
+   "tip": "Art arda indirimler",
+   "kaynak": "345 SB (ilk indirimden sonra %16 daha) · ÖSYM 2018 (kampanyalı kalem)"
+  },
+  {
+   "id": "K-KZ-06",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Kampanya karşılaştırma",
+   "fikir": "İki satıcının farklı kampanyaları (ikincisi yarı fiyatına, n al m öde, yüzde indirim) aynı alışveriş için hesaplanıp karşılaştırılır.",
+   "tuzak": "Kampanyayı tüm ürünlere ya da tek ürüne uygulamak; yüzde indirimi TL sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kz-kampanya",
+   "tip": "Kampanya karşılaştırma",
+   "kaynak": "ÖSYM 2018 (ikincisi %50 indirimli kalem), ÖSYM 2021 (iki kırtasiyenin kampanyası)"
+  },
+  {
+   "id": "K-KZ-07",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Parça parça satış",
+   "fikir": "Malın bir kısmı satılamaz, kalanın bir kısmı belli kârla satılır; toplam hedef kâr için kalan kısmın satış fiyatı bulunur.",
+   "tuzak": "Hedef kâr oranını kalan kısma uygulamak; satılamayanların maliyetini unutmak; ortalama fiyatı almak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "kz-parca-satis",
+   "tip": "Malın parça parça satışı",
+   "kaynak": "Bilgi Sarmal (üç ürün farklı kâr/zarar) · 3D (bozulan meyve)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kz-temel",
+   "ad": "Alış, satış ve kâr yüzdesi",
+   "kartlar": [
+    "K-KZ-01"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kz-adet",
+   "ad": "Adet-fiyat ilişkisiyle kâr",
+   "kartlar": [
+    "K-KZ-02"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kz-etiket",
+   "ad": "Etiket fiyatı, indirim ve kâr",
+   "kartlar": [
+    "K-KZ-03",
+    "K-KZ-04"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kz-ardisik-indirim",
+   "ad": "Art arda indirimler",
+   "kartlar": [
+    "K-KZ-05"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kz-kampanya",
+   "ad": "Kampanya karşılaştırma",
+   "kartlar": [
+    "K-KZ-06"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kz-parca-satis",
+   "ad": "Malın parça parça satışı",
+   "kartlar": [
+    "K-KZ-07"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  }
+ ]
+}

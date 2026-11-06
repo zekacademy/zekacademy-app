@@ -1,0 +1,665 @@
+[
+ {
+  "id": "tytmat-isciprob-0001k",
+  "ana": "tytmat-isciprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Birlikte çalışma",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "İki makinenin bir saatlik işlerini toplayarak birlikte bitirme süresini bulur.",
+  "tipId": "is-birlikte",
+  "tip": "Birlikte çalışma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir arşiv odasını Ece yalnız başına 10 günde, Nil 15 günde düzenleyebiliyor. İkisi birlikte 4 gün çalışıyor.\nBuna göre bu 4 günde işin kaçta kaçı yapılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4/25",
+   "B": "1/6",
+   "C": "1/3",
+   "D": "2/5",
+   "E": "2/3"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "2/3"
+  },
+  "celdiriciler": {
+   "A": "4/25, süreleri toplayıp 25 günde bitecek sanmak; günlük işler toplanır.",
+   "B": "1/6, birlikte bir günde yapılan iş; 4 gün çalışılmış.",
+   "C": "1/3, kalan iş; soru yapılan işi soruyor.",
+   "D": "2/5, yalnız Ece’nin 4 günlük işi; Nil’in işi eklenmemiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "4 günde yapılan iş (işin tamamına oranı).",
+  "bilgi": [
+   {
+    "ad": "Bir günlük iş",
+    "ifade": "bir işi a günde bitiren kişi bir günde işin 1/a’sını yapar. Örnek: 6 günde bitiren bir günde 1/6’sını yapar"
+   },
+   {
+    "ad": "Birlikte çalışma",
+    "ifade": "birlikte çalışanların bir birim zamandaki işleri toplanır. Örnek: 1/3 + 1/6 = 1/2 ⇒ birlikte 2 günde biter"
+   }
+  ],
+  "ipuclari": [
+   "Ece bir günde işin kaçta kaçını yapar? Nil?",
+   "Birlikte bir günde yapılan işi bul.",
+   "4 günde yapılan iş = 4 × (bir günlük iş)."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Günlük işler",
+    "aciklama": "Ece günde 1/10, Nil günde 1/15 iş yapar.",
+    "islem": "1/10 · 1/15"
+   },
+   {
+    "baslik": "Birlikte bir gün",
+    "aciklama": "Paydaları 30’da eşitle.",
+    "islem": "1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6"
+   },
+   {
+    "baslik": "4 gün",
+    "aciklama": "Bir günlük işi 4 ile çarp.",
+    "islem": "4 × 1/6 = 4/6 = 2/3"
+   }
+  ],
+  "puf": "Belirli sürede yapılan iş = birlikte bir günlük iş × gün sayısı.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-01 (iki kişinin birlikte çalışması) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0002k",
+  "ana": "tytmat-isciprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Havuz ve musluk",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "Dolduran ve boşaltan muslukların saatlik etkilerini işaretleriyle toplayarak dolma süresini bulur.",
+  "tipId": "is-havuz",
+  "tip": "Havuz ve musluk",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir yüzme havuzunun dolum musluğu boş havuzu 3 saatte doldurabiliyor, tahliye musluğu ise dolu havuzu 12 saatte boşaltabiliyor. Havuzun yarısı doluyken iki musluk birlikte açılıyor.\nBuna göre havuz kaç saat sonra tamamen dolar?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,2",
+   "B": "1,5",
+   "C": "2",
+   "D": "4",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "1,2, tahliye musluğunu da doldurucu sayıp hızları toplamak.",
+   "B": "1,5, tahliye musluğunu unutup yalnız dolum musluğunu hesaba katmak.",
+   "D": "4, boş havuzun tamamının dolma süresi; havuz yarısı dolu.",
+   "E": "9, sürelerin farkı (12 − 3); saatlik işlerle çalışılmalı."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Yarısı dolu havuzun iki musluk açıkken tamamen dolma süresi.",
+  "bilgi": [
+   {
+    "ad": "Doldurma ve boşaltma",
+    "ifade": "dolduran musluk havuza ekler (+), boşaltan musluk havuzdan çıkarır (−). Örnek: 1/4 − 1/6 = 1/12 ⇒ havuz 12 saatte dolar"
+   }
+  ],
+  "ipuclari": [
+   "Dolum musluğu saatte havuzun kaçta kaçını doldurur, tahliye musluğu kaçta kaçını boşaltır?",
+   "Net saatlik dolumu bul.",
+   "Havuzun tamamı değil, yalnız boş olan yarısı dolacak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Net dolum",
+    "aciklama": "Dolum saatte 1/3 ekler, tahliye 1/12 çıkarır.",
+    "islem": "1/3 − 1/12 = 4/12 − 1/12 = 3/12 = 1/4"
+   },
+   {
+    "baslik": "Dolacak kısım",
+    "aciklama": "Havuzun yarısı zaten dolu.",
+    "islem": "dolacak = 1 − 1/2 = 1/2"
+   },
+   {
+    "baslik": "Süre",
+    "aciklama": "Saatte 1/4 dolarsa 1/2 için gereken süre.",
+    "islem": "1/2 ÷ 1/4 = 2 saat"
+   }
+  ],
+  "puf": "Havuz kısmen doluysa yalnız kalan boş kısmı net hıza böl.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-03 (doldurma ve boşaltma birlikte) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0003k",
+  "ana": "tytmat-isciprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Ayrılma ve katılma",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "İşi evrelere ayırarak birlikte yapılan kısmı ve kalan işi bulur; bir kişinin toplam çalışma süresini hesaplar.",
+  "tipId": "is-ayrilma",
+  "tip": "Ayrılma ve sonradan katılma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir yazılım projesini Kaan yalnız başına 20 günde, Ozan yalnız başına 30 günde tamamlayabiliyor. Kaan projeye yalnız başlıyor; 5 gün sonra Ozan da katılıyor ve projeyi birlikte bitiriyorlar.\nBuna göre proje, başladıktan kaç gün sonra biter?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "14",
+   "C": "15",
+   "D": "17",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "9, yalnız birlikte çalışılan günler; Kaan’ın yalnız çalıştığı 5 gün eklenmemiş.",
+   "C": "15, ilk 5 günü Ozan’ın hızıyla (5/30) hesaplamak; o günlerde Kaan çalıştı.",
+   "D": "17, işin tamamını birlikte 12 günde yapacaklarını sanıp 5 gün eklemek; işin 1/4’ü zaten bitmişti.",
+   "E": "20, Kaan’ın projeyi yalnız bitirme süresi; Ozan’ın katkısı unutulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Projenin başlangıcından bitişine kadar geçen gün.",
+  "bilgi": [
+   {
+    "ad": "Bir günlük iş",
+    "ifade": "bir işi a günde bitiren kişi bir günde işin 1/a’sını yapar. Örnek: 6 günde bitiren bir günde 1/6’sını yapar"
+   },
+   {
+    "ad": "Birlikte çalışma",
+    "ifade": "birlikte çalışanların bir birim zamandaki işleri toplanır. Örnek: 1/3 + 1/6 = 1/2 ⇒ birlikte 2 günde biter"
+   }
+  ],
+  "ipuclari": [
+   "Kaan 5 günde projenin kaçta kaçını yapar?",
+   "Kalan iş ne kadar? İkisi birlikte bir günde kaçta kaçını yapar?",
+   "Birlikte geçen günlere ilk 5 günü ekle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk 5 gün",
+    "aciklama": "Kaan günde 1/20 iş yapar.",
+    "islem": "5 × 1/20 = 1/4 · kalan = 3/4"
+   },
+   {
+    "baslik": "Birlikte bir gün",
+    "aciklama": "Paydaları 60’ta eşitle.",
+    "islem": "1/20 + 1/30 = 3/60 + 2/60 = 1/12"
+   },
+   {
+    "baslik": "Kalan iş",
+    "aciklama": "Birlikte günde 1/12 iş yapılır.",
+    "islem": "3/4 ÷ 1/12 = 3/4 × 12 = 9 gün"
+   },
+   {
+    "baslik": "Toplam süre",
+    "aciklama": "İlk 5 gün ve birlikte geçen 9 gün.",
+    "islem": "5 + 9 = 14 gün"
+   }
+  ],
+  "puf": "Sonradan katılmada önce yalnız yapılan işi düş; kalan iş birlikte hıza bölünür, sonra günler toplanır.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-02 (biri işi bırakıyor, kalanı diğeri bitiriyor) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0004k",
+  "ana": "tytmat-isciprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · İşçi sayısı, süre ve verim",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "Toplam işi işçi × gün × saat olarak hesaplar; işçi sayısı ve günlük saat değişince yeni süreyi bulur.",
+  "tipId": "is-verim",
+  "tip": "İşçi sayısı, süre ve verim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir fabrikada aynı tip 3 makine günde 10 saat çalışarak 4 günde 2400 parça üretiyor.\nAynı tip 5 makine günde 8 saat çalışırsa 6 günde kaç parça üretir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3600",
+   "B": "4000",
+   "C": "4800",
+   "D": "6000",
+   "E": "7500"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4800"
+  },
+  "celdiriciler": {
+   "A": "3600, yalnız gün sayısının değişimini hesaba katmak (2400 × 6/4).",
+   "B": "4000, yalnız makine sayısının değişimini hesaba katmak (2400 × 5/3).",
+   "D": "6000, günlük saatin 10’dan 8’e düştüğünü unutmak.",
+   "E": "7500, saat azalınca üretimin arttığını sanmak (6000 × 10/8); saat ile üretim doğru orantılıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "5 makinenin günde 8 saat çalışarak 6 günde ürettiği parça sayısı.",
+  "bilgi": [
+   {
+    "ad": "Toplam iş",
+    "ifade": "eşit verimli işçilerde toplam iş = işçi sayısı × gün (× günlük saat). Örnek: 4 işçi 5 günde 20 işçi-günlük iş yapar"
+   },
+   {
+    "ad": "Doğru orantı",
+    "ifade": "süre aynı kalıp çalışan sayısı ya da saat artarsa üretilen iş de aynı oranda artar"
+   }
+  ],
+  "ipuclari": [
+   "Bir makine bir saatte kaç parça üretir?",
+   "Yeni durumda toplam kaç makine-saat çalışılır?",
+   "Makine-saat ile saatlik üretimi çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam makine-saat",
+    "aciklama": "İlk durum.",
+    "islem": "3 × 10 × 4 = 120 makine-saat"
+   },
+   {
+    "baslik": "Saatlik üretim",
+    "aciklama": "Bir makinenin bir saatte ürettiği parça.",
+    "islem": "2400 ÷ 120 = 20 parça"
+   },
+   {
+    "baslik": "Yeni çalışma",
+    "aciklama": "5 makine, günde 8 saat, 6 gün.",
+    "islem": "5 × 8 × 6 = 240 makine-saat"
+   },
+   {
+    "baslik": "Üretim",
+    "aciklama": "Makine-saat × saatlik üretim.",
+    "islem": "240 × 20 = 4800 parça"
+   }
+  ],
+  "puf": "Üretim sorularında önce birim üretimi (bir makine, bir saat) bul; sonra yeni duruma ölçekle.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-04 (işçi sayısı ve günlük saat birlikte değişiyor) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0005k",
+  "ana": "tytmat-isciprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Havuz ve musluk",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "Evrelere göre açık olan muslukları belirler; ilk evrede dolan kısmı düşüp kalanı net hızla tamamlar.",
+  "tipId": "is-havuz",
+  "tip": "Havuz ve musluk",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir sulama deposuna su dolduran K ve L muslukları boş depoyu sırasıyla 8 ve 12 saatte doldurabiliyor; M musluğu ise dolu depoyu 6 saatte boşaltabiliyor. Depo boşken üç musluk birlikte açılıyor ve 4 saat sonra M musluğu kapatılıyor.\nBuna göre depo, M musluğu kapatıldıktan kaç saat sonra dolar?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,8",
+   "B": "4",
+   "C": "4,8",
+   "D": "8",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "0,8, dolan 1/6’yı kalan sanıp 1/6 ÷ 5/24 hesaplamak.",
+   "C": "4,8, deponun tamamını K ve L ile doldurmak; ilk 4 saatte 1/6’sı dolmuştu.",
+   "D": "8, depoyu ilk açılıştan itibaren ölçmek (4 + 4); soru M kapandıktan sonrasını soruyor.",
+   "E": "24, M’nin kapatıldığını unutup üç muslukla dolma süresini almak."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "M kapatıldıktan sonra deponun dolma süresi.",
+  "bilgi": [
+   {
+    "ad": "Doldurma ve boşaltma",
+    "ifade": "dolduran musluk havuza ekler (+), boşaltan musluk havuzdan çıkarır (−). Örnek: 1/4 − 1/6 = 1/12 ⇒ havuz 12 saatte dolar"
+   }
+  ],
+  "ipuclari": [
+   "Üç musluk açıkken depo saatte net kaçta kaç dolar?",
+   "M kapanana kadar deponun ne kadarı doldu, ne kadarı kaldı?",
+   "M kapanınca K ve L birlikte saatte kaçta kaç doldurur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üç musluk açık",
+    "aciklama": "Dolduranlar eklenir, M çıkarılır.",
+    "islem": "1/8 + 1/12 − 1/6 = 3/24 + 2/24 − 4/24 = 1/24"
+   },
+   {
+    "baslik": "İlk 4 saat",
+    "aciklama": "Net hızla 4 saat.",
+    "islem": "4 × 1/24 = 1/6 · kalan = 5/6"
+   },
+   {
+    "baslik": "M kapandıktan sonra",
+    "aciklama": "Yalnız K ve L açık.",
+    "islem": "1/8 + 1/12 = 5/24"
+   },
+   {
+    "baslik": "Kalan süre",
+    "aciklama": "Kalanı yeni hıza böl.",
+    "islem": "5/6 ÷ 5/24 = 5/6 × 24/5 = 4 saat"
+   }
+  ],
+  "puf": "Bir musluk kapandığında net hız değişir; her evrenin hızını ayrı kur.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-03 (musluklar farklı anlarda açılıyor) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0006k",
+  "ana": "tytmat-isciprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Birlikte çalışma",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "İkişerli birlikte çalışma sürelerinden üç kişinin toplam hızını, oradan bir kişinin yalnız çalışma süresini bulur.",
+  "tipId": "is-birlikte",
+  "tip": "Birlikte çalışma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Cem ile Doruk bir bahçeyi 10 saatte, Doruk ile Efe 12 saatte, Cem ile Efe ise 15 saatte çapalayabiliyor. Üçünün de çalışma hızı sabittir.\nBuna göre Efe bu bahçeyi yalnız başına kaç saatte çapalar?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "15",
+   "C": "24",
+   "D": "40",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "8, üçünün birlikte çapalama süresi; soru Efe’nin yalnız süresini soruyor.",
+   "B": "15, Cem ile Efe’nin birlikte süresi; Efe yalnız daha uzun sürede bitirir.",
+   "C": "24, Cem’in yalnız süresi (1/8 − 1/12 = 1/24); Efe için Cem ile Doruk’un işi çıkarılmalı.",
+   "E": "60, iki ikilinin saatlik işlerinin farkını (1/10 − 1/12) Efe’nin işi sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Efe’nin bahçeyi yalnız başına çapalama süresi.",
+  "bilgi": [
+   {
+    "ad": "Bir günlük iş",
+    "ifade": "bir işi a günde bitiren kişi bir günde işin 1/a’sını yapar. Örnek: 6 günde bitiren bir günde 1/6’sını yapar"
+   },
+   {
+    "ad": "Birlikte çalışma",
+    "ifade": "birlikte çalışanların bir birim zamandaki işleri toplanır. Örnek: 1/3 + 1/6 = 1/2 ⇒ birlikte 2 günde biter"
+   }
+  ],
+  "ipuclari": [
+   "Her kişinin bir saatlik işine bir harf ver ve üç eşitlik yaz.",
+   "Üç eşitliği topla; her kişi kaç kez sayıldı?",
+   "Üçünün birlikte bir saatlik işinden Cem ile Doruk’unkini çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitlikler",
+    "aciklama": "Saatlik işler: Cem c, Doruk d, Efe e.",
+    "islem": "c + d = 1/10 · d + e = 1/12 · c + e = 1/15"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Her kişi iki kez sayılır; paydaları 60’ta eşitle.",
+    "islem": "2(c + d + e) = 6/60 + 5/60 + 4/60 = 15/60 = 1/4"
+   },
+   {
+    "baslik": "Üçü birlikte",
+    "aciklama": "İkiye böl.",
+    "islem": "c + d + e = 1/8"
+   },
+   {
+    "baslik": "Efe",
+    "aciklama": "Cem ile Doruk’un işini çıkar.",
+    "islem": "e = 1/8 − 1/10 = 5/40 − 4/40 = 1/40 ⇒ 40 saat"
+   }
+  ],
+  "puf": "Bir kişinin süresi için üçünün toplam hızından diğer ikisinin birlikte hızını çıkar.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-01 (ikişerli birlikte süreler) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0007k",
+  "ana": "tytmat-isciprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · Ayrılma ve katılma",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "Üç evreli bir işte her evrede çalışanların işini ayrı hesaplayıp kalan işi son çalışanın hızıyla tamamlar.",
+  "tipId": "is-ayrilma",
+  "tip": "Ayrılma ve sonradan katılma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir duvar boyama işini Gül yalnız başına 15 günde, Nur 10 günde, Ece 30 günde bitirebiliyor. Gül ile Ece işe birlikte başlıyor; 2 gün sonra Nur da onlara katılıyor. Üçü 2 gün birlikte çalıştıktan sonra Gül ayrılıyor ve kalan işi Nur ile Ece bitiriyor.\nBuna göre iş, başladıktan kaç gün sonra biter?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "7",
+   "C": "7,5",
+   "D": "8",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "5, üçünün en baştan birlikte çalışması durumundaki süre.",
+   "C": "7,5, ilk 2 günde Ece’nin de çalıştığını unutmak.",
+   "D": "8, son evrede Ece’yi unutup kalanı yalnız Nur’a yaptırmak.",
+   "E": "10, Nur’un işi yalnız bitirme süresi; diğerlerinin katkısı unutulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "İşin başından bitişine kadar geçen gün.",
+  "bilgi": [
+   {
+    "ad": "Bir günlük iş",
+    "ifade": "bir işi a günde bitiren kişi bir günde işin 1/a’sını yapar. Örnek: 6 günde bitiren bir günde 1/6’sını yapar"
+   },
+   {
+    "ad": "Birlikte çalışma",
+    "ifade": "birlikte çalışanların bir birim zamandaki işleri toplanır. Örnek: 1/3 + 1/6 = 1/2 ⇒ birlikte 2 günde biter"
+   }
+  ],
+  "ipuclari": [
+   "İşi 30 eş parça düşün: Gül, Nur ve Ece günde kaç parça boyar?",
+   "İlk 2 gün kimler çalıştı? Sonraki 2 gün kimler?",
+   "Kalanı Nur ile Ece’nin günlük işine böl; günleri topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Günlük işler",
+    "aciklama": "30’luk paydayla yaz.",
+    "islem": "Gül 2/30 · Nur 3/30 · Ece 1/30"
+   },
+   {
+    "baslik": "İlk 2 gün",
+    "aciklama": "Gül ve Ece.",
+    "islem": "2 × (2 + 1)/30 = 6/30"
+   },
+   {
+    "baslik": "Sonraki 2 gün",
+    "aciklama": "Üçü birlikte.",
+    "islem": "2 × (2 + 3 + 1)/30 = 12/30 · toplam 18/30"
+   },
+   {
+    "baslik": "Son evre",
+    "aciklama": "Kalanı Nur ve Ece bitirir.",
+    "islem": "kalan 12/30 ÷ (3 + 1)/30 = 3 gün"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Üç evrenin günleri.",
+    "islem": "2 + 2 + 3 = 7 gün"
+   }
+  ],
+  "puf": "Katılma ve ayrılma olan işlerde her evrenin ekibini tek tek yaz; birini unutmak en sık hatadır.",
+  "kisaYol": null,
+  "kaynakKart": "K-IS-02 (ekipten sırayla ayrılma) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-isciprob-0008k",
+  "ana": "tytmat-isciprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "İşçi Emek Problemleri · İşçi sayısı, süre ve verim",
+  "k": "prob|İşçi Emek Problemleri",
+  "kazanim": "İşçi-gün hesabıyla ara verme nedeniyle kaybedilen işi bulur ve tam ekiple telafi süresini hesaplar.",
+  "tipId": "is-verim",
+  "tip": "İşçi sayısı, süre ve verim",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Eşit verimle çalışan 6 kişilik bir ekip, bir yolun asfaltını 12 günde bitirmek üzere çalışmaya başlıyor. 3. günün sonunda ekipten 2 kişi başka bir işe gidiyor ve 9 gün sonra geri dönüyor; iş tam ekiple tamamlanıyor.\nBuna göre iş, planlanandan kaç gün geç tamamlanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4,5",
+   "C": "9",
+   "D": "12",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "B": "4,5, kaybı (2 × 9 = 18) kalan 4 kişiye bölmek; telafiyi 6 kişilik ekip yapıyor.",
+   "C": "9, iki kişinin ayrı kaldığı gün sayısı; o sürede 4 kişi çalıştı.",
+   "D": "12, planlanan süre; soru gecikmeyi soruyor.",
+   "E": "15, işin toplam süresi; gecikme bundan planlanan süre çıkarılarak bulunur."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İşin planlanan süreden kaç gün fazla sürdüğü.",
+  "bilgi": [
+   {
+    "ad": "Toplam iş",
+    "ifade": "eşit verimli işçilerde toplam iş = işçi sayısı × gün (× günlük saat). Örnek: 4 işçi 5 günde 20 işçi-günlük iş yapar"
+   }
+  ],
+  "ipuclari": [
+   "İşin tamamı kaç kişi-günlük iştir?",
+   "2 kişi yokken geçen 9 günde kaç kişi-günlük iş yapılır?",
+   "Kalan işi 6 kişi kaç günde bitirir? Toplamı 12 ile karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam iş",
+    "aciklama": "6 kişi 12 gün.",
+    "islem": "6 × 12 = 72 kişi-gün"
+   },
+   {
+    "baslik": "İlk 12 gün",
+    "aciklama": "3 gün 6 kişi, sonra 9 gün 4 kişi.",
+    "islem": "3 × 6 + 9 × 4 = 18 + 36 = 54"
+   },
+   {
+    "baslik": "Kalan iş",
+    "aciklama": "Ekip tamamlandı.",
+    "islem": "72 − 54 = 18 · 18 ÷ 6 = 3 gün"
+   },
+   {
+    "baslik": "Gecikme",
+    "aciklama": "Toplam süre plana göre.",
+    "islem": "3 + 9 + 3 = 15 gün · 15 − 12 = 3 gün"
+   }
+  ],
+  "puf": "Bir süre eksik çalışılan işlerde kaybı kişi-gün olarak bul; telafiyi işi bitiren ekip yapar.",
+  "kisaYol": "Kaybedilen iş 2 kişi × 9 gün = 18 kişi-gün; 6 kişi bunu 18 ÷ 6 = 3 günde telafi eder.",
+  "kaynakKart": "K-IS-04 (işçi sayısı değişince süre) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
