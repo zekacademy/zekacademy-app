@@ -1187,6 +1187,28 @@ body.dersacik{overflow:hidden}
   .bkgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
   .bkalt{bottom:20px}
 }
+
+/* Neden yanlış */
+.bkneden{background:var(--bads);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5}
+.bkntur{display:flex;flex-wrap:wrap;gap:6px}
+.bkntur button{border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:6px 10px;font:600 12.5px/1 var(--font)}
+.bkntur button[aria-pressed="true"]{border-color:var(--bad);background:var(--surface);color:var(--bad);font-weight:800}
+.bknd{display:flex;flex-direction:column;gap:10px}
+.bkndl{display:flex;flex-wrap:wrap;gap:8px}
+.bkndc{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:99px;background:var(--sunk);font-size:14px;font-weight:600}
+.bkndc b{font-size:16px}
+/* Video hız ve bölümler */
+.dkhiz{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:var(--surface)}
+.dkhiz button{border:0;background:none;padding:7px 9px;font:700 12px/1 var(--font);color:var(--muted)}
+.dkhiz button[aria-pressed="true"]{background:var(--ac);color:var(--acfg)}
+.dkbolum{margin-top:12px}
+.dkbh{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.dkbl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.dkbl::-webkit-scrollbar{display:none}
+.dkbl button{flex:none;display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:12px;padding:8px 10px;font:600 13px/1.2 var(--font);text-align:left;max-width:200px}
+.dkbl button span{font-size:11px;font-weight:800;color:var(--ac);font-variant-numeric:tabular-nums}
+.dkbl button.on{border-color:var(--ac);background:var(--acs)}
+@media (min-width:1000px){ .dkbl{flex-direction:column;overflow:visible} .dkbl button{max-width:none;flex-direction:row;gap:12px;align-items:center;width:100%} }
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

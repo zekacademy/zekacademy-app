@@ -650,7 +650,7 @@ function pSorular(s, sid_){ const L = soruList(sid_), f = S.sqf || "bekliyor", G
     ${A()?"":`<div class="card note"><span class="av">❓</span><div><b>Çözemediğin soruyu biriktir</b><div class="muted small">Fotoğrafını çek, dersini seç. Soru Çözüm’le adım adım çöz, anladığında “çözüldü” yap. Testlerde yanlış yaptığın sorular da Öğrenme Merkezi’nde tekrar karşına çıkar.</div></div></div>
     <button class="btn full" data-act="go" data-v="socoz">📷 Soru Çözüm’le çöz</button>
     <button class="btn pri full" data-act="sheet" data-v="soruekle">${icon("plus","sm")} Soru ekle</button>
-    ${(L=>L.length?`<div class="card"><div class="sech"><h3>Test ve soru bankası yanlışları</h3><span class="faint small">${L.length}</span></div>${L.map(h=>{ const c = DERS_ICERIK[h.k], x = h.bid ? BANKA.find(b=>b.id===h.bid) : c && c.test[h.i]; return x ? `<button class="row" ${h.bid?`data-bk="tek" data-id="${h.bid}"`:`data-ders="${esc(h.k)}" data-sekme="test"`}><span class="ri">❗</span><div style="min-width:0"><div class="rt">${esc(x.q)}</div><div class="rs">${esc(konuAdi(h.k))} · ${h.sonraki<=today()?"tekrar zamanı geldi":h.sonraki===gunSonra(1)?"yarın tekrar karşına çıkacak":"tekrar: "+esc(h.sonraki.split("-").reverse().join("."))}</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""; }).join("")}</div>`:"")((og().hata||[]).filter(h=>!h.tamam))}`}
+    ${(L=>L.length?`<div class="card"><div class="sech"><h3>Test ve soru bankası yanlışları</h3><span class="faint small">${L.length}</span></div>${L.map(h=>{ const c = DERS_ICERIK[h.k], x = h.bid ? BANKA.find(b=>b.id===h.bid) : c && c.test[h.i]; return x ? `<button class="row" ${h.bid?`data-bk="tek" data-id="${h.bid}"`:`data-ders="${esc(h.k)}" data-sekme="test"`}><span class="ri">❗</span><div style="min-width:0"><div class="rt">${esc(x.q)}</div><div class="rs">${h.tur&&NT[h.tur]?NT[h.tur][0]+" "+NT[h.tur][1]+" · ":""}${esc(konuAdi(h.k))} · ${h.sonraki<=today()?"tekrar zamanı geldi":h.sonraki===gunSonra(1)?"yarın tekrar karşına çıkacak":"tekrar: "+esc(h.sonraki.split("-").reverse().join("."))}</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""; }).join("")}</div>`:"")((og().hata||[]).filter(h=>!h.tamam))}`}
     <div class="seg"><button data-act="sqf" data-v="bekliyor" aria-pressed="${f==="bekliyor"}">Bekleyen ${bek}</button><button data-act="sqf" data-v="cozuldu" aria-pressed="${f==="cozuldu"}">Çözülen ${L.length-bek}</button><button data-act="sqf" data-v="tum" aria-pressed="${f==="tum"}">Tümü</button></div>
     ${G.length ? `<div class="sqgrid">${G.map(([id,q])=>soruKart(id,q)).join("")}</div>` : `<div class="empty">${L.length ? "Bu filtrede soru yok." : (A() ? "Öğrenci henüz soru eklemedi." : "Henüz soru eklemedin. Takıldığın ilk soruyu ekle.")}</div>`}
   </div>`; }
@@ -2321,6 +2321,13 @@ Object.assign(DERS_ICERIK, {
       {q:"Ay yılını esas alan takvim aşağıdakilerden hangisidir?", s:{A:"Celali",B:"Miladi",C:"Rumi",D:"On İki Hayvanlı Türk Takvimi",E:"Hicri"}, d:"E", c:"**Hicri** takvim Ay yılına göredir (yaklaşık 354 gün). Diğerleri Güneş yılını esas alır."}] }
 });
 ["mat|Temel Kavramlar","mat|Rasyonel Sayılar","mat|Basit Eşitsizlikler","mat|Mutlak Değer"].forEach(k=>{ DERS_ICERIK[k].kanal = "Rehber Matematik"; });
+/* Video bölümleri: videoların YouTube açıklamasındaki zaman damgalarından */
+const BOLUM = {
+  "mat|Temel Kavramlar":[[0,"Giriş"],[177,"Rakam nedir?"],[1100,"Sayı kümeleri"],[1111,"Sayma sayıları"],[1147,"Doğal sayılar"],[1183,"Tam sayılar"],[1508,"Rasyonel sayılar"],[1603,"İrrasyonel sayılar"],[1672,"Reel sayılar"],[1755,"ÖSYM tarzı sorular"]],
+  "mat|Mutlak Değer":[[0,"Giriş"],[110,"Mutlak değer nedir?"],[321,"Mutlak değerin özellikleri"],[2581,"Tıpkı ÖSYM soruları"]],
+  "mat|Basit Eşitsizlikler":[[0,"Giriş"],[62,"Aralık kavramı"],[413,"Eşitsizlikler"],[2842,"Kısa bir gezinti"],[2925,"Problemler"]],
+  "fiz|Fizik Bilimine Giriş":[[0,"Giriş ve bilgilendirme"],[60,"Konu anlatımı"],[3216,"Test çözümü"],[3748,"Kapanış ve günün taktiği"]]
+};
 const OG_SIRALAR = [["mat","Matematik · İlk 12 Konu","Matematik"],["tr","Türkçe","Türkçe"],["fiz","Fizik","Fizik"],["kim","Kimya","Kimya"],["bio","Biyoloji","Biyoloji"],["tar","Tarih","Tarih"]];
 /* Demo: öğrenci biraz ilerlemiş görünsün (sadece demo modunda, bir kez) */
 function demoOgrenTohum(){ let demo = false; try{ demo = localStorage.getItem("zk-demo")==="1"; }catch(e){} if(!demo || !S.me || og().tohum) return;
@@ -2351,7 +2358,7 @@ function haftaKonulari(s){ const h = ((s.plan||{})[curStart(s)]||{}).hedef||{}, 
 function vidKart(k, s, genis){ const c = DERS_ICERIK[k], t = (s.topics||{})[k]||{}, p = (og().ilerleme||{})[k], pct = p&&p.d ? Math.min(100, p.t/p.d*100) : 0;
   return `<button type="button" class="vk ${c?"":"yok"} ${genis?"genis":""}" ${c?`data-ders="${esc(k)}"`:"disabled"}>
     <span class="vkr">${c?`<img src="${thumb(c.vid)}" alt="" loading="lazy">`:`<i>🎬</i>`}${t.v?`<em class="vkok">✓ İzlendi</em>`:""}${c?`<span class="vkp">▶</span>`:""}${pct?`<span class="vkbar"><i style="width:${pct}%"></i></span>`:""}</span>
-    <span class="vkm"><span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)):"Video yakında"}</span></span></button>`; }
+    <span class="vkm"><span class="vkt">${esc(konuAdi(k))}</span><span class="vks">${c?(p&&p.t>20&&pct<97?`${dkSn(p.t)}'de kaldın`:esc(c.kanal)+(((og().sure||{})[k]||(p&&p.d))?` · ${Math.round(((og().sure||{})[k]||p.d)/60)} dk`:"")+(BOLUM[k]?` · ${BOLUM[k].length} bölüm`:"")):"Video yakında"}</span></span></button>`; }
 function tekrarListesi(s){ const o = og(), L = [], bugun = today();
   Object.entries(DERS_ICERIK).forEach(([k,c])=>{ const ks = (o.kartlar||{})[k]||{}, t = (s.topics||{})[k]||{};
     const due = c.kart.filter((_,i)=>{ const x = ks[i]; return x ? x.sonraki<=bugun : t.v; }).length; if(due) L.push({tip:"kart", k, n:due}); });
@@ -2426,6 +2433,21 @@ const BANKA = [
   {id:"be3", k:"mat|Basit Eşitsizlikler", z:"kolay", q:"2 ≤ x ≤ 6\nolduğuna göre 3 − 2x ifadesinin alabileceği en küçük değer kaçtır?", s:{A:"−9",B:"−5",C:"−1",D:"1",E:"3"}, d:"A",
     ad:[["−2 ile çarp","Negatifle çarpınca yön değişir.","−12 ≤ −2x ≤ −4"],["3 ekle","Üç tarafa da ekle.","−9 ≤ 3 − 2x ≤ −1"],["En küçüğü oku","Sol uç en küçük değerdir.","**−9**"]], puf:"−1 en büyük değerdir; soru en küçüğü soruyor."}
 ];
+/* Neden yanlış? Havuzdaki her çeldirici belirli bir hatadan türetildiği için seçilen şık hatanın türünü ve sebebini söyler. */
+const NT = {bilgi:["📘","Bilgi eksiği"], islem:["🧮","İşlem hatası"], dikkat:["👀","Dikkatsizlik"], sure:["⏱️","Süre yetmedi"]};
+const NEDEN = {
+  tk1:{A:["bilgi","a + b ≥ 2√24 ≈ 9,8 sonucunu aşağı yuvarladın; ama a ve b tam sayı olmalı, 9 elde edilemez."],C:["dikkat","3 · 8'de durdun; birbirine daha yakın 4 · 6 çifti daha küçük toplam verir."],D:["dikkat","2 · 12'yi aldın; çarpan çiftlerini sonuna kadar listelemedin."],E:["dikkat","1 · 24 en büyük toplamı verir; soru en küçüğü soruyor."]},
+  tk2:{A:["islem","Ortadaki 21'den geriye gittin; en büyük sayı ileride."],B:["dikkat","21 ortadaki sayı; soru en büyüğü soruyor."],C:["islem","Ortadakinden bir adım ileri gittin; beş sayıda en büyük, ortadakinden iki adım (+4) ileridedir."],E:["islem","Üç adım ileri gittin; ortadakinden sonra sadece iki sayı var."]},
+  tk3:{A:["bilgi","Çıkarılan z için 0'ı seçmedin; 0 da bir rakamdır ve çıkarılan en küçük olmalı."],B:["bilgi","Çıkarılan z için 0'ı seçmedin; 0 da bir rakamdır ve çıkarılan en küçük olmalı."],C:["dikkat","9 + 8 + 7 gibi topladın; x'in katsayısı 2, z ise çıkarılıyor."],E:["dikkat","y'ye de 9 verdin; rakamların birbirinden farklı olması gerekiyordu."]},
+  tk4:{B:["bilgi","a + 2b'nin tek mi çift mi olduğu a'ya bağlı; a'nın durumu bilinmiyor."],C:["bilgi","2a + b'nin tek mi çift mi olduğu b'ye bağlı; b'nin durumu bilinmiyor."],D:["bilgi","a² ile a aynı teklikte olduğu için a² + b de a + b gibi tektir."],E:["dikkat","a tek de olabilir çift de; \"kesinlikle\" sorularında iki durumu da dene."]},
+  md1:{A:["islem","|x − y|'yi x − y diye açtın; içi negatif olduğu için y − x olur."],B:["bilgi","|x|'i x olarak açtın; x negatif olduğu için |x| = −x."],D:["islem","Mutlak değerleri açarken y'li terimlerin işaretini yanlış taşıdın; y'ler birbirini götürür."],E:["islem","Mutlak değerleri açarken işaretleri yanlış taşıdın; y'ler birbirini götürür, sonuç sadece x'e bağlı."]},
+  md2:{A:["islem","İkinci denklemi yanlış çözdün: 2x − 4 = −6 ⇒ x = −1."],C:["dikkat","Sadece negatif durumu çözdün; çarpım için iki kök de gerekli."],D:["bilgi","Sadece pozitif durumu çözdün; |A| = 6 ise A = −6 da olabilir."],E:["islem","Kökleri doğru bulup çarpımda işareti kaybettin: 5 · (−1) = −5."]},
+  md3:{A:["bilgi","Aralığı yanlış kurdun; |x + 2| ≤ 5 ⇒ −5 ≤ x + 2 ≤ 5 ⇒ −7 ≤ x ≤ 3."],B:["bilgi","Aralığı yanlış kurdun; |x + 2| ≤ 5 ⇒ −7 ≤ x ≤ 3."],C:["dikkat","Uçları dahil etmedin; ≤ işareti −7 ve 3'ü de kapsar."],D:["islem","Bir ucu saymadın; uçlar dahilse adet = son − ilk + 1."]},
+  be1:{A:["islem","En küçük çarpımı yanlış buldun; x → −3 ve y → 4 için çarpım −12'ye yaklaşır."],B:["islem","Uç değerleri eksik çarptın; en küçük −12'ye, en büyük 8'e yaklaşır."],D:["dikkat","Uçlardan birini dahil ettin; −12 ve 8 elde edilemez çünkü eşitsizlikler kesin."],E:["dikkat","İki ucu da dahil ettin; −12 ve 8 elde edilemez."]},
+  be2:{A:["bilgi","Negatif sayılarda küçük olanın karesi büyüktür: −3 < −1 ama 9 > 1."],B:["bilgi","İki negatif sayının çarpımı pozitiftir."],C:["bilgi","Aynı işaretli sayılar ters çevrilince sıralama değişir: 1/a > 1/b."],D:["islem","a < b ise a − b negatiftir."]},
+  be3:{B:["bilgi","Ara bir değer denedin; en küçük değer aralığın ucunda (x = 6) çıkar."],C:["dikkat","−1 en büyük değer; soru en küçüğü soruyor."],D:["islem","−2 ile çarparken eşitsizliğin yönünü değiştirmedin."],E:["dikkat","x = 0 için hesapladın; x en az 2 olabilir."]}
+};
+const nedenTur = (id, c) => ((og().nedenler||{})[id]) || ((NEDEN[id]||{})[c]||[])[0] || "";
 const bkKonular = () => [...new Set(BANKA.map(x=>x.k))];
 function bkBasla(ids, ad){ S.bk = {ids, ad, cev:{}, bitti:false, bas:Date.now(), acik:{}}; S.view = "banka"; render(); window.scrollTo(0,0); }
 const zEt = z => ({kolay:"Kolay", orta:"Orta", zor:"Zor"})[z]||"";
@@ -2446,7 +2468,8 @@ function pBanka(s){
   const L = B.ids.map(id=>BANKA.find(x=>x.id===id)), isa = Object.keys(B.cev).length;
   let ozet = "";
   if(B.bitti){ const d = L.filter(x=>B.cev[x.id]===x.d).length, y = L.filter(x=>B.cev[x.id] && B.cev[x.id]!==x.d).length, bos = L.length-d-y, net = d - y/4;
-    ozet = `<div class="card bkozet"><div><b class="num">${d}</b><small>Doğru</small></div><div><b class="num" style="color:var(--bad)">${y}</b><small>Yanlış</small></div><div><b class="num" style="color:var(--muted)">${bos}</b><small>Boş</small></div><div><b class="num" style="color:var(--ac)">${String(net).replace(".",",")}</b><small>Net</small></div><div><b class="num">${dkSn(B.sure/1000)}</b><small>Süre</small></div></div>`; }
+    ozet = `<div class="card bkozet"><div><b class="num">${d}</b><small>Doğru</small></div><div><b class="num" style="color:var(--bad)">${y}</b><small>Yanlış</small></div><div><b class="num" style="color:var(--muted)">${bos}</b><small>Boş</small></div><div><b class="num" style="color:var(--ac)">${String(net).replace(".",",")}</b><small>Net</small></div><div><b class="num">${dkSn(B.sure/1000)}</b><small>Süre</small></div></div>${(()=>{ const T = {}; L.filter(x=>B.cev[x.id] && B.cev[x.id]!==x.d).forEach(x=>{ const t = nedenTur(x.id, B.cev[x.id]); if(t) T[t] = (T[t]||0)+1; }); const e = Object.entries(T).sort((a,b)=>b[1]-a[1]);
+      return e.length ? `<div class="card bknd"><b>Yanlışlarının sebebi</b><div class="bkndl">${e.map(([t,n])=>`<span class="bkndc t-${t}">${NT[t][0]} ${NT[t][1]} <b>${n}</b></span>`).join("")}</div><p class="muted small" style="margin:0">${e[0][0]==="dikkat"?"Bilgin var; soruyu sonuna kadar okumak ve şıkları kontrol etmek sana net kazandırır.":e[0][0]==="islem"?"Konuyu biliyorsun; işlemleri adım adım yazmak ve sonucu kontrol etmek hatayı azaltır.":e[0][0]==="bilgi"?"Bazı kurallar eksik; o konunun videosuna ve kartlarına dönmek iyi olur.":"Süre baskısını azaltmak için önce bildiğin soruları çöz, zor soruyu sona bırak."}</p></div>` : ""; })()}`; }
   return `${topbar(`<h1 class="ttl">${esc(B.ad)}</h1>`, "", geri)}
   <div class="page ogpage bkpage">
     ${ozet || `<div class="bkust"><span>${L.length} soru · <b id="bk-isa">${isa}</b> işaretlendi</span><span class="faint small">4 yanlış 1 doğruyu götürür</span></div>`}
@@ -2455,6 +2478,8 @@ function pBanka(s){
         <div class="bkqh"><b>${i+1}.</b><span class="faint small">${esc(konuAdi(x.k))} · ${zEt(x.z)}</span>${B.bitti?`<span class="bkdurum">${dg?"✓ Doğru":yn?"✗ Yanlış · doğrusu "+x.d:"Boş · doğrusu "+x.d}</span>`:""}</div>
         <div class="bkmetin">${esc(x.q).replace(/\n/g,"<br>")}</div>
         <div class="bksik">${Object.entries(x.s).map(([h,v])=>`<button type="button" data-bk="sec" data-id="${x.id}" data-h="${h}" class="${c===h?"sec":""} ${B.bitti&&h===x.d?"dogru":""} ${B.bitti&&c===h&&h!==x.d?"yanlis":""}" ${B.bitti?"disabled":""}><b>${h})</b> ${esc(v)}</button>`).join("")}</div>
+        ${B.bitti && yn ? (()=>{ const n = (NEDEN[x.id]||{})[c], t = nedenTur(x.id, c); return `<div class="bkneden"><div><b>🔍 Neden yanlış?</b> ${n?`${c} şıkkını seçtin: ${kalin(n[1])}`:"Bu yanlışın sebebini seç."}</div>
+          <div class="bkntur">${Object.entries(NT).map(([k,[ic,ad]])=>`<button type="button" data-bk="neden" data-id="${x.id}" data-v="${k}" aria-pressed="${t===k}">${ic} ${ad}</button>`).join("")}</div></div>`; })() : ""}
         ${B.bitti?`<button type="button" class="link" data-bk="coz" data-id="${x.id}">${B.acik[x.id]?"Çözümü gizle":"Adım adım çözümü gör"}</button>
           ${B.acik[x.id]?`<div class="bkcoz">${x.ad.map((a,j)=>`<div class="bkad"><span class="bkadn">${j+1}</span><div><b>${esc(a[0])}</b><div class="small">${kalin(a[1])}</div><code>${kalin(a[2])}</code></div></div>`).join("")}<div class="bkpuf">💡 ${kalin(x.puf)}</div></div>`:""}`:""}
       </div>`; }).join("")}</div>
@@ -2471,9 +2496,10 @@ document.addEventListener("click", e=>{ const b = e.target.closest && e.target.c
     b.parentElement.querySelectorAll("button").forEach(x=>x.classList.toggle("sec", B.cev[id]===x.dataset.h)); const n = $("#bk-isa"); if(n) n.textContent = Object.keys(B.cev).length; sesCal("tik"); return; }
   if(a==="bitir"){ B.bitti = true; B.sure = Date.now()-B.bas; const L = B.ids.map(id=>BANKA.find(x=>x.id===id)), d = L.filter(x=>B.cev[x.id]===x.d).length;
     ogYaz(o=>{ o.banka = o.banka||{}; bkKonular().forEach(k=>{ const M = L.filter(x=>x.k===k); if(M.length && B.ad!=="Hata Defteri tekrarı") o.banka[k] = {d:M.filter(x=>B.cev[x.id]===x.d).length, n:M.length, at:Date.now()}; });
-      o.hata = o.hata||[]; L.forEach(x=>{ const c = B.cev[x.id]; o.hata = o.hata.filter(h=>h.bid!==x.id); if(c && c!==x.d) o.hata.push({k:x.k, bid:x.id, at:Date.now(), sonraki:gunSonra(1)}); }); });
+      o.hata = o.hata||[]; L.forEach(x=>{ const c = B.cev[x.id]; o.hata = o.hata.filter(h=>h.bid!==x.id); if(c && c!==x.d) o.hata.push({k:x.k, bid:x.id, at:Date.now(), sonraki:gunSonra(1), tur:((NEDEN[x.id]||{})[c]||[])[0]||""}); }); });
     if(d===L.length) sesCal("basari"); render(); window.scrollTo(0,0); return; }
   if(a==="coz"){ B.acik[b.dataset.id] = !B.acik[b.dataset.id]; render(); return; }
+  if(a==="neden"){ ogYaz(o=>{ o.nedenler = o.nedenler||{}; o.nedenler[b.dataset.id] = b.dataset.v; (o.hata||[]).forEach(h=>{ if(h.bid===b.dataset.id) h.tur = b.dataset.v; }); }); render(); return; }
   if(a==="tekrar"){ bkBasla(B.ids, B.ad); return; }
 });
 /* ---------- Ders ekranı: render()'dan bağımsız, video yeniden yüklenmesin diye ayrı katman ---------- */
@@ -2488,16 +2514,18 @@ function dersAc(k, sekme, sn){ const c = DERS_ICERIK[k]; if(!c) return; closeShe
   const el = document.createElement("div"); el.id = "dersk"; el.className = "dersk";
   el.innerHTML = `<div class="dkust"><button class="iconbtn" data-dk="kapat" aria-label="Geri">${icon("back")}</button><div style="min-width:0;flex:1"><b class="dkad">${esc(konuAdi(k))}</b><div class="faint small dkalt">${esc(c.baslik)}</div></div></div>
     <div class="dkana"><div class="dksol"><div class="kavid dkvid"><div id="ytp"></div></div>
-    <div class="dkarac"><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button><span class="dkzaman faint small"></span></div>
+    <div class="dkarac"><button class="btn sm" data-dk="not">📝 Not al</button><button class="btn sm" data-dk="anla">🤔 Burayı anlamadım</button><span class="dkhiz" role="group" aria-label="Oynatma hızı">${[1,1.25,1.5,2].map(r=>`<button data-dk="hiz" data-v="${r}" aria-pressed="${r===(og().hiz||1)}">${String(r).replace(".",",")}x</button>`).join("")}</span><span class="dkzaman faint small"></span></div>
+    ${BOLUM[k]?`<div class="dkbolum"><div class="dkbh">Bölümler</div><div class="dkbl">${BOLUM[k].map(([t,ad],i)=>`<button data-dk="git" data-sn="${t}" data-bi="${i}"><span>${dkSn(t)}</span>${esc(ad)}</button>`).join("")}</div></div>`:""}
     <div class="dksira"><div class="sech"><h3>Sıradaki dersler</h3><span class="faint small">önce aynı dersten</span></div><div class="vkrow">${Object.keys(DERS_ICERIK).filter(x=>x!==k).sort((x,y)=>(y.split("|")[0]===k.split("|")[0])-(x.split("|")[0]===k.split("|")[0])).map(x=>vidKart(x, st())).join("")}</div></div></div>
     <div class="dksag"><div class="dksek" role="tablist">${[["ozet","Özet"],["not","Notlarım"],["test","Test"],["kart","Kartlar"],["anla","Anlamadım"]].map(([v,l])=>`<button role="tab" data-dk="sek" data-v="${v}">${l}</button>`).join("")}</div>
     <div id="dkgovde" class="dkgovde"></div></div></div>`;
   document.body.appendChild(el); document.body.classList.add("dersacik"); dpCiz();
   const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${c.vid}?rel=0&playsinline=1&start=${Math.floor(DP.sn)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
   ytHazir().then(()=>{ if(DP.k!==k) return; DP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:c.vid, playerVars:{ start:Math.floor(DP.sn), rel:0, playsinline:1, modestbranding:1 },
-    events:{ onStateChange: ev=>{ DP.oyn = ev.data===1; if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0) izlendiYap(); } } }); }).catch(sade);
-  clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); }, 3000);
+    events:{ onReady: ev=>{ try{ ev.target.setPlaybackRate(og().hiz||1); const d = ev.target.getDuration(); if(d) ogYaz(o=>{ o.sure = o.sure||{}; o.sure[k] = d; }); }catch(_){} }, onStateChange: ev=>{ DP.oyn = ev.data===1; if(ev.data===2 || ev.data===0) dpKaydet(); if(ev.data===0) izlendiYap(); } } }); }).catch(sade);
+  clearInterval(DP.tim); DP.tim = setInterval(()=>{ if(!DP.oyn) return; ogYaz(o=>{ o.izleme = o.izleme||{}; o.izleme[today()] = (o.izleme[today()]||0) + 3; }); dpKaydet(); const z = $(".dkzaman"); if(z) z.textContent = dkSn(dpZaman()); bolumIsaretle(); }, 3000);
   geriKoruma(); }
+function bolumIsaretle(){ const B = BOLUM[DP.k]; if(!B) return; const t = dpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll(".dkbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
 function dersKapat(sessiz){ const el = $("#dersk"); if(!el) return; dpKaydet(); clearInterval(DP.tim); try{ DP.p && DP.p.destroy && DP.p.destroy(); }catch(e){} DP.p = null; DP.k = null; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
 function izlendiYap(){ const k = DP.k; if(!k) return; const t = (st().topics||{})[k]||{}; if(t.v) return; mutate(x=>{ topic(x,k).v = true; }); sesCal("basari"); toast("Konu izlendi olarak işaretlendi ✓"); }
 function dpCiz(){ const g = $("#dkgovde"); if(!g || !DP.k) return; const c = DERS_ICERIK[DP.k], o = og(), s = st(), t = (s.topics||{})[DP.k]||{};
@@ -2538,7 +2566,8 @@ document.addEventListener("click", e=>{
   if(a==="anla"){ try{ DP.p && DP.p.pauseVideo(); }catch(_){} DP.anlaSn = dpZaman(); DP.sekme = "anla"; DP.yanit = null; dpCiz(); const n = $("#dk-ne"); if(n) n.focus(); return; }
   if(a==="notkaydet"){ const v = ($("#dk-not")||{}).value||""; if(!v.trim()) return toast("Notunu yaz"); const t = dpZaman(); ogYaz(o=>{ o.notlar = o.notlar||{}; (o.notlar[DP.k] = o.notlar[DP.k]||[]).push({t, m:v.trim(), at:Date.now()}); }); toast("Not kaydedildi · "+dkSn(t)); dpCiz(); return; }
   if(a==="notsil"){ ogYaz(o=>{ o.notlar[DP.k] = (o.notlar[DP.k]||[]).filter(n=>String(n.at)!==b.dataset.at); }); dpCiz(); return; }
-  if(a==="git"){ const t = +b.dataset.sn; try{ DP.p.seekTo(t, true); DP.p.playVideo(); }catch(_){} window.scrollTo(0,0); $("#dersk").scrollTo({top:0, behavior:"smooth"}); return; }
+  if(a==="hiz"){ const r = +b.dataset.v; ogYaz(o=>{ o.hiz = r; }); try{ DP.p.setPlaybackRate(r); }catch(_){} document.querySelectorAll("[data-dk=hiz]").forEach(x=>x.setAttribute("aria-pressed", x===b)); toast(`Hız ${String(r).replace(".",",")}x`); return; }
+  if(a==="git"){ const t = +b.dataset.sn; DP.sn = t; try{ DP.p.seekTo(t, true); DP.p.playVideo(); }catch(_){} setTimeout(bolumIsaretle, 300); window.scrollTo(0,0); $("#dersk").scrollTo({top:0, behavior:"smooth"}); return; }
   if(a==="izle"){ const t = (st().topics||{})[DP.k]||{}; if(t.v){ mutate(x=>{ delete topic(x,DP.k).v; }); } else izlendiYap(); setTimeout(dpCiz, 50); return; }
   if(a==="cev"){ const i = +b.dataset.i, x = c.test[i]; DP.cev[i] = b.dataset.h; if(b.dataset.h===x.d) sesCal("basari");
     else ogYaz(o=>{ o.hata = (o.hata||[]).filter(h=>!(h.k===DP.k && h.i===i)); o.hata.push({k:DP.k, i, at:Date.now(), sonraki:gunSonra(1)}); });
