@@ -1,0 +1,50 @@
+{
+ "konu": "Söz Yorumu",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-SYO-01",
+   "konu": "Söz Yorumu",
+   "alt": "Sözün Anlamı",
+   "fikir": "Benzetme ve kinaye içeren bir sözün gerçek anlamını bırakıp asıl vermek istediği düşünceyi bulmak.",
+   "tuzak": "Sözü sözcüğü sözcüğüne alıp somut bir bilgi gibi yorumlamak; sözde olmayan bir öğüt eklemek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "soz-anlam",
+   "tip": "Sözün anlamı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (söz yorumu: sözün anlamı)"
+  },
+  {
+   "id": "K-SYO-02",
+   "konu": "Söz Yorumu",
+   "alt": "Sözler Arası Anlam Yakınlığı",
+   "fikir": "Verilen sözlerin ya da bir sözle başka bir ifadenin aynı düşünceyi taşıyıp taşımadığını belirlemek.",
+   "tuzak": "Ortak sözcüğe ya da konuya bakıp düşüncenin yönünü atlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "soz-iliski",
+   "tip": "Sözler arası anlam yakınlığı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (söz yorumu: sözlerin ilişkisi)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "soz-anlam",
+   "ad": "Sözün anlamı",
+   "kartlar": [
+    "K-SYO-01"
+   ],
+   "uygulamaKonu": "tr|Söz Yorumu"
+  },
+  {
+   "tipId": "soz-iliski",
+   "ad": "Sözler arası anlam yakınlığı",
+   "kartlar": [
+    "K-SYO-02"
+   ],
+   "uygulamaKonu": "tr|Söz Yorumu"
+  }
+ ]
+}

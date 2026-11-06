@@ -72,7 +72,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -148,7 +148,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -164,7 +164,7 @@
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
   "adimSayisi": 3,
-  "metin": "Beyaz ışıkta mor görünen bir cisim, karanlık odada ışık kaynaklarıyla aydınlatılıyor.\nBuna göre;\nI. sarı ışıkta kırmızı,\nII. camgöbeği ışıkta mavi,\nIII. yeşil ışıkta mor\ngörünür ifadelerinden hangileri doğrudur?",
+  "metin": "Beyaz ışıkta macenta (kırmızı ve mavi ışığın birleşimi) görünen bir cisim, karanlık odada ışık kaynaklarıyla aydınlatılıyor.\nBuna göre;\nI. sarı ışıkta kırmızı,\nII. camgöbeği ışıkta mavi,\nIII. yeşil ışıkta macenta\ngörünür ifadelerinden hangileri doğrudur?",
   "sekil": null,
   "siklar": {
    "A": "Yalnız I",
@@ -180,8 +180,8 @@
   "celdiriciler": {
    "A": "Camgöbeği (yeşil + mavi) ışıktaki mavi bileşenin yansıdığını atlamış.",
    "B": "Sarı (kırmızı + yeşil) ışıktaki kırmızı bileşenin yansıdığını atlamış.",
-   "C": "Mor cismin yeşil ışıkta mor görüneceğini sanmış; cismin yeşil bileşeni yoktur, siyah görünür.",
-   "E": "Yeşil ışıkta cismin mor göründüğünü sanmış; cisim yeşili soğurur."
+   "C": "Macenta cismin yeşil ışıkta macenta görüneceğini sanmış; cismin yeşil bileşeni yoktur, siyah görünür.",
+   "E": "Yeşil ışıkta cismin macenta göründüğünü sanmış; cisim yeşili soğurur."
   },
   "celTur": {
    "A": "dikkat",
@@ -193,18 +193,18 @@
   "bilgi": [
    {
     "ad": "Işık ve cisim rengi",
-    "ifade": "kırmızı, yeşil ve mavi ana renklerdir; sarı = kırmızı + yeşil, mor = kırmızı + mavi, camgöbeği = yeşil + mavi. Cisim yalnız kendi rengindeki bileşenleri yansıtır, kalanını soğurur; yansıtacak bileşen yoksa siyah görünür"
+    "ifade": "kırmızı, yeşil ve mavi ana renklerdir; sarı = kırmızı + yeşil, macenta (mor) = kırmızı + mavi, camgöbeği = yeşil + mavi. Cisim yalnız kendi rengindeki bileşenleri yansıtır, kalanını soğurur; yansıtacak bileşen yoksa siyah görünür"
    }
   ],
   "ipuclari": [
-   "Mor, hangi iki ana rengin birleşimidir?",
+   "Macenta, hangi iki ana rengin birleşimidir?",
    "Her ışığın hangi bileşenlerinden cismin yansıtabildiği var mı, ayrı ayrı bak.",
    "Yansıtılacak bileşen kalmıyorsa cisim siyah görünür."
   ],
   "adimlar": [
    {
     "baslik": "Cismin yansıttığı renkler",
-    "aciklama": "Mor = kırmızı + mavi. Mor cisim kırmızıyı ve maviyi yansıtır, yeşili soğurur.",
+    "aciklama": "Macenta = kırmızı + mavi. Macenta cisim kırmızıyı ve maviyi yansıtır, yeşili soğurur.",
     "islem": "yansıtır: kırmızı, mavi · soğurur: yeşil"
    },
    {
@@ -224,7 +224,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -304,7 +304,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -385,7 +385,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -466,7 +466,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -552,7 +552,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -633,7 +633,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  }
 ]

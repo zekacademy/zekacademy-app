@@ -1,0 +1,481 @@
+[
+ {
+  "id": "tytfiz-dalgalar-0001",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Dalgalar",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Mekanik ve elektromanyetik dalgaları, yayılma ortamına göre ayırt eder.",
+  "tipId": "fz-dg-sinif",
+  "tip": "Dalgaların sınıflandırılması",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Ses dalgası\nII. Işık dalgası\nIII. Su yüzeyindeki dalga\nBu dalgalardan hangilerinin yayılabilmesi için maddesel bir ortama gerek vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Su dalgasının da mekanik olduğunu (III) atlamış.",
+   "B": "Işığın ortam gerektirdiğini sanmış; ışık boşlukta da yayılır.",
+   "D": "Işığın ortam gerektirdiğini sanıp sesi (I) atlamış.",
+   "E": "Işığın da ortam gerektirdiğini sanmış; ışık elektromanyetik dalgadır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yayılması için ortam gereken dalgalar.",
+  "bilgi": [
+   {
+    "ad": "Mekanik ve elektromanyetik dalga",
+    "ifade": "mekanik dalgalar (ses, su, yay) yayılmak için maddesel ortam ister; elektromanyetik dalgalar (ışık, radyo, X ışınları) boşlukta da yayılır"
+   }
+  ],
+  "ipuclari": [
+   "Güneş ışığı uzayın boşluğundan Dünya’ya gelir.",
+   "Ortam gerektirenler mekanik dalgalardır.",
+   "Ses ve su dalgası hangi tür?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mekanik dalgaları ayır",
+    "aciklama": "Ses havadaki, su dalgası suyun yüzeyindeki titreşimle yayılır; ortam ister.",
+    "islem": "I ve III mekanik"
+   },
+   {
+    "baslik": "Işığa bak",
+    "aciklama": "Işık elektromanyetik dalgadır; boşlukta da yayılır.",
+    "islem": "II ortam istemez"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Ortam isteyenler ses ve su dalgasıdır.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Ses, su ve yay dalgaları mekaniktir (ortam ister); ışık ve radyo dalgaları elektromanyetiktir (ortamsız yayılır).",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0001k",
+  "kaynakKart": "K-FZDA-01 (dalga türleri) · yeni dalgalar, istenen ortam gerektirenler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytfiz-dalgalar-0002",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Dalgalar",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Konum–yer değiştirme grafiğinden dalga boyunu okuyup hızı hesaplar.",
+  "tipId": "fz-dg-grafik",
+  "tip": "Dalga grafiği ve hız",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Şekilde, bir yay üzerinde ilerleyen dalganın belirli bir andaki konum–yer değiştirme (y–x) grafiği verilmiştir. Dalganın frekansı 5 Hz’dir.\nBuna göre dalganın yayılma hızı kaç m/s’dir?",
+  "sekil": "<svg viewBox=\"0 0 330 140\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"44\" y1=\"72\" x2=\"322\" y2=\"72\" stroke-width=\"1.4\"/><line x1=\"44\" y1=\"124\" x2=\"44\" y2=\"20\" stroke-width=\"1.4\"/><text x=\"36.0\" y=\"26.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><text x=\"326.0\" y=\"62.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">x (m)</text><polyline points=\"44.0,72.0 45.1,70.0 46.2,68.0 47.4,66.1 48.5,64.1 49.6,62.2 50.7,60.3 51.8,58.4 52.9,56.5 54.0,54.7 55.2,53.0 56.3,51.3 57.4,49.7 58.5,48.1 59.6,46.6 60.8,45.1 61.9,43.8 63.0,42.5 64.1,41.3 65.2,40.1 66.3,39.1 67.5,38.1 68.6,37.3 69.7,36.5 70.8,35.9 71.9,35.3 73.0,34.8 74.2,34.5 75.3,34.2 76.4,34.1 77.5,34.0 78.6,34.1 79.7,34.2 80.8,34.5 82.0,34.8 83.1,35.3 84.2,35.9 85.3,36.5 86.4,37.3 87.6,38.1 88.7,39.1 89.8,40.1 90.9,41.3 92.0,42.5 93.1,43.8 94.2,45.1 95.4,46.6 96.5,48.1 97.6,49.7 98.7,51.3 99.8,53.0 100.9,54.7 102.1,56.5 103.2,58.4 104.3,60.3 105.4,62.2 106.5,64.1 107.7,66.1 108.8,68.0 109.9,70.0 111.0,72.0 112.1,74.0 113.2,76.0 114.4,77.9 115.5,79.9 116.6,81.8 117.7,83.7 118.8,85.6 119.9,87.5 121.0,89.3 122.2,91.0 123.3,92.7 124.4,94.3 125.5,95.9 126.6,97.4 127.8,98.9 128.9,100.2 130.0,101.5 131.1,102.7 132.2,103.9 133.3,104.9 134.4,105.9 135.6,106.7 136.7,107.5 137.8,108.1 138.9,108.7 140.0,109.2 141.1,109.5 142.3,109.8 143.4,109.9 144.5,110.0 145.6,109.9 146.7,109.8 147.9,109.5 149.0,109.2 150.1,108.7 151.2,108.1 152.3,107.5 153.4,106.7 154.6,105.9 155.7,104.9 156.8,103.9 157.9,102.7 159.0,101.5 160.1,100.2 161.2,98.9 162.4,97.4 163.5,95.9 164.6,94.3 165.7,92.7 166.8,91.0 167.9,89.3 169.1,87.5 170.2,85.6 171.3,83.7 172.4,81.8 173.5,79.9 174.7,77.9 175.8,76.0 176.9,74.0 178.0,72.0 179.1,70.0 180.2,68.0 181.3,66.1 182.5,64.1 183.6,62.2 184.7,60.3 185.8,58.4 186.9,56.5 188.0,54.7 189.2,53.0 190.3,51.3 191.4,49.7 192.5,48.1 193.6,46.6 194.8,45.1 195.9,43.8 197.0,42.5 198.1,41.3 199.2,40.1 200.3,39.1 201.5,38.1 202.6,37.3 203.7,36.5 204.8,35.9 205.9,35.3 207.0,34.8 208.2,34.5 209.3,34.2 210.4,34.1 211.5,34.0 212.6,34.1 213.7,34.2 214.8,34.5 216.0,34.8 217.1,35.3 218.2,35.9 219.3,36.5 220.4,37.3 221.5,38.1 222.7,39.1 223.8,40.1 224.9,41.3 226.0,42.5 227.1,43.8 228.2,45.1 229.4,46.6 230.5,48.1 231.6,49.7 232.7,51.3 233.8,53.0 235.0,54.7 236.1,56.5 237.2,58.4 238.3,60.3 239.4,62.2 240.5,64.1 241.7,66.1 242.8,68.0 243.9,70.0 245.0,72.0 246.1,74.0 247.2,76.0 248.3,77.9 249.5,79.9 250.6,81.8 251.7,83.7 252.8,85.6 253.9,87.5 255.0,89.3 256.2,91.0 257.3,92.7 258.4,94.3 259.5,95.9 260.6,97.4 261.8,98.9 262.9,100.2 264.0,101.5 265.1,102.7 266.2,103.9 267.3,104.9 268.5,105.9 269.6,106.7 270.7,107.5 271.8,108.1 272.9,108.7 274.0,109.2 275.1,109.5 276.3,109.8 277.4,109.9 278.5,110.0 279.6,109.9 280.7,109.8 281.9,109.5 283.0,109.2 284.1,108.7 285.2,108.1 286.3,107.5 287.4,106.7 288.5,105.9 289.7,104.9 290.8,103.9 291.9,102.7 293.0,101.5 294.1,100.2 295.2,98.9 296.4,97.4 297.5,95.9 298.6,94.3 299.7,92.7 300.8,91.0 301.9,89.3 303.1,87.5 304.2,85.6 305.3,83.7 306.4,81.8 307.5,79.9 308.7,77.9 309.8,76.0 310.9,74.0 312.0,72.0\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"44.0\" y1=\"68\" x2=\"44.0\" y2=\"76\" stroke-width=\"1.4\"/><text x=\"44.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"111.0\" y1=\"68\" x2=\"111.0\" y2=\"76\" stroke-width=\"1.4\"/><text x=\"111.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"178.0\" y1=\"68\" x2=\"178.0\" y2=\"76\" stroke-width=\"1.4\"/><text x=\"178.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"245.0\" y1=\"68\" x2=\"245.0\" y2=\"76\" stroke-width=\"1.4\"/><text x=\"245.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"312.0\" y1=\"68\" x2=\"312.0\" y2=\"76\" stroke-width=\"1.4\"/><text x=\"312.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text></svg>",
+  "siklar": {
+   "A": "0,8",
+   "B": "9",
+   "C": "10",
+   "D": "20",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Hızı λ ÷ f olarak hesaplamış (4 ÷ 5).",
+   "B": "Dalga boyu ile frekansı toplamış (4 + 5).",
+   "C": "Yarım dalga boyunu (2 m) dalga boyu sanmış.",
+   "E": "Grafiğin tüm uzunluğunu (8 m) dalga boyu sanmış; grafikte iki dalga var."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Dalganın yayılma hızı (m/s).",
+  "bilgi": [
+   {
+    "ad": "Dalga büyüklükleri",
+    "ifade": "T = 1 ÷ f ve v = λ × f. İki ardışık tepe arası bir dalga boyu (λ), tepe ile komşu çukur arası λ ÷ 2’dir. Örnek: f = 2 Hz, λ = 3 m → v = 6 m/s"
+   }
+  ],
+  "ipuclari": [
+   "Bir dalga boyu, aynı fazdaki iki ardışık nokta arasındaki uzaklıktır.",
+   "Grafikte sıfırdan başlayıp aynı yönde tekrar sıfırdan geçene kadar bir dalga boyu.",
+   "Hız = dalga boyu × frekans."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dalga boyunu oku",
+    "aciklama": "Dalga x = 0’dan başlar, x = 4 m’de aynı noktaya (aynı yönde sıfır) döner; bir tam dalga 4 m’dir.",
+    "islem": "λ = 4 m (grafikte 2 dalga, 8 m)"
+   },
+   {
+    "baslik": "Hız bağıntısı",
+    "aciklama": "Dalga hızı dalga boyu ile frekansın çarpımıdır.",
+    "islem": "v = λ × f"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Değerler yerine konur.",
+    "islem": "v = 4 × 5 = 20 m/s"
+   }
+  ],
+  "puf": "Grafikte bir tam dalgayı bul (aynı fazda iki nokta arası); hız = dalga boyu × frekans.",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0002k",
+  "kaynakKart": "K-FZDA-02 (grafikten dalga boyu ve hız) · yeni grafik ve frekans",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytfiz-dalgalar-0003",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Yay Dalgası",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Yay dalgasında gerginliğin hız, dalga boyu ve frekans üzerindeki etkisini belirler.",
+  "tipId": "fz-dg-yay",
+  "tip": "Yay dalgasının özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bir ucundan sabit frekansla titreştirilen gergin bir yayda ilerleyen dalgalar oluşturuluyor. Kaynağın frekansı değiştirilmeden yay daha gergin hâle getiriliyor.\nBuna göre;\nI. Dalgaların yayılma hızı artar.\nII. Dalga boyu artar.\nIII. Dalgaların frekansı değişmez.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I, II ve III"
+  },
+  "celdiriciler": {
+   "A": "Hız artınca frekans sabit kaldığından dalga boyunun da arttığını (II) ve frekansın değişmediğini (III) atlamış.",
+   "B": "Gerginliğin hızı artırdığını (I) ve frekansın sabit kaldığını (III) atlamış.",
+   "C": "Frekansın sabit kaldığını (III) atlamış; frekansı kaynak belirler.",
+   "D": "Hız artınca dalga boyunun da arttığını (II) atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru olan ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Dalga büyüklükleri",
+    "ifade": "T = 1 ÷ f ve v = λ × f. İki ardışık tepe arası bir dalga boyu (λ), tepe ile komşu çukur arası λ ÷ 2’dir. Örnek: f = 2 Hz, λ = 3 m → v = 6 m/s"
+   },
+   {
+    "ad": "Frekans ve hız",
+    "ifade": "dalganın frekansını kaynak belirler, ortam değişse de frekans değişmez; yayılma hızını ortam (yayda gerginlik) belirler"
+   }
+  ],
+  "ipuclari": [
+   "Yayda dalga hızı yayın gerginliğine bağlıdır.",
+   "Frekansı kaynak belirler; yay gerginleşince frekans değişir mi?",
+   "v = λ × f bağıntısında f sabit, v artıyorsa λ ne olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hız",
+    "aciklama": "Yay gerginleştikçe dalga hızı artar.",
+    "islem": "v artar → I doğru"
+   },
+   {
+    "baslik": "Frekans",
+    "aciklama": "Frekansı kaynak belirler; kaynak değişmediğinden sabittir.",
+    "islem": "f sabit → III doğru"
+   },
+   {
+    "baslik": "Dalga boyu",
+    "aciklama": "v = λ × f bağıntısında f sabit, v arttığından λ artar.",
+    "islem": "λ = v ÷ f artar → II doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Üç ifade de doğrudur.",
+    "islem": "I, II ve III"
+   }
+  ],
+  "puf": "Ortam değişince (ya da gerginlik değişince) hız ve dalga boyu değişir; frekans kaynağa bağlı olduğu için sabit kalır.",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0003k",
+  "kaynakKart": "K-FZDA-03 (yay dalgası, gerginlik) · yeni durum, öncüllü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytfiz-dalgalar-0004",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Su Dalgası",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Su dalgası derinden sığa geçerken frekansın sabit kalmasından yeni dalga boyunu bulur.",
+  "tipId": "fz-dg-su",
+  "tip": "Su dalgasının ortam değiştirmesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir dalga leğeninde derin bölgede yayılan su dalgalarının hızı 12 cm/s ve dalga boyu 6 cm’dir. Dalgalar sığ bölgeye geçtiğinde hızları 8 cm/s oluyor.\nBuna göre dalgaların sığ bölgedeki dalga boyu kaç cm’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "6",
+   "D": "9",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Frekansı (2 Hz) dalga boyu sanmış.",
+   "C": "Dalga boyunun ortam değişince değişmediğini sanmış.",
+   "D": "Oranı ters kurmuş: 6 × 12 ÷ 8.",
+   "E": "İlk ortamdaki hızı dalga boyu sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Sığ bölgedeki dalga boyu (cm).",
+  "bilgi": [
+   {
+    "ad": "Dalga büyüklükleri",
+    "ifade": "T = 1 ÷ f ve v = λ × f. İki ardışık tepe arası bir dalga boyu (λ), tepe ile komşu çukur arası λ ÷ 2’dir. Örnek: f = 2 Hz, λ = 3 m → v = 6 m/s"
+   },
+   {
+    "ad": "Ortam değişimi",
+    "ifade": "dalga bir ortamdan diğerine geçerken frekans değişmez; hız ve dalga boyu birlikte (doğru orantılı) değişir: v₁ ÷ λ₁ = v₂ ÷ λ₂"
+   }
+  ],
+  "ipuclari": [
+   "Dalgalar ortam değiştirirken kaynağın frekansı değişmez.",
+   "Önce derin bölgedeki frekansı v = λ × f ile bul.",
+   "Sığ bölgede aynı frekansla λ = v ÷ f."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Frekansı bul",
+    "aciklama": "Derin bölgede v = λ × f yazılır.",
+    "islem": "f = 12 ÷ 6 = 2 Hz"
+   },
+   {
+    "baslik": "Frekans sabit",
+    "aciklama": "Sığ bölgede de frekans 2 Hz’dir.",
+    "islem": "f = 2 Hz"
+   },
+   {
+    "baslik": "Dalga boyu",
+    "aciklama": "Sığ bölgede λ = v ÷ f.",
+    "islem": "λ = 8 ÷ 2 = 4 cm"
+   }
+  ],
+  "puf": "Ortam değişince frekans sabit kalır; v ÷ λ oranı her iki ortamda da aynıdır.",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0004k",
+  "kaynakKart": "K-FZDA-04 (derin–sığ geçişi) · yeni hızlar, istenen sığdaki dalga boyu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytfiz-dalgalar-0005",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Dalgalar",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Frekans ve hızdan dalga boyunu bulup tepe ve çukurlar arasındaki uzaklığı hesaplar.",
+  "tipId": "fz-dg-hiz",
+  "tip": "Dalga denklemi ve uzaklıklar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir dalga kaynağı 5 saniyede 20 tam titreşim yapıyor ve oluşturduğu dalgalar 40 m/s hızla yayılıyor.\nBuna göre bir dalga tepesi ile bu tepeden sonra gelen 3. çukur arasındaki uzaklık kaç m’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "10",
+   "C": "15",
+   "D": "20",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "C": "Tepe ile 2. çukur arasını (1,5λ) hesaplamış.",
+   "D": "Tepe ile 3. çukur arasını 2λ almış.",
+   "A": "Tepe ile ilk çukur arasını (λ ÷ 2) hesaplamış.",
+   "B": "Tepe ile ilk çukur arasını λ almış; tepe–çukur arasının λ ÷ 2 olduğunu atlamış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "dikkat",
+   "A": "dikkat",
+   "B": "bilgi"
+  },
+  "istenen": "Tepe ile 3. çukur arasındaki uzaklık (m).",
+  "bilgi": [
+   {
+    "ad": "Dalga büyüklükleri",
+    "ifade": "T = 1 ÷ f ve v = λ × f. İki ardışık tepe arası bir dalga boyu (λ), tepe ile komşu çukur arası λ ÷ 2’dir. Örnek: f = 2 Hz, λ = 3 m → v = 6 m/s"
+   }
+  ],
+  "ipuclari": [
+   "Önce kaynağın frekansını bul: titreşim sayısı ÷ süre.",
+   "Dalga boyunu v = λ × f ile hesapla.",
+   "Tepe ile ilk çukur λ ÷ 2 uzaktadır; sonraki her çukur λ daha uzakta."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Frekans",
+    "aciklama": "Frekans, birim zamandaki titreşim sayısıdır.",
+    "islem": "f = 20 ÷ 5 = 4 Hz"
+   },
+   {
+    "baslik": "Dalga boyu",
+    "aciklama": "v = λ × f bağıntısından λ bulunur.",
+    "islem": "λ = 40 ÷ 4 = 10 m"
+   },
+   {
+    "baslik": "Çukurların konumu",
+    "aciklama": "Tepeden ilk çukur λ ÷ 2, ikinci λ ÷ 2 + λ, üçüncü λ ÷ 2 + 2λ uzaktadır.",
+    "islem": "5 m · 15 m · 25 m"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "3. çukur için uzaklık 2,5λ’dır.",
+    "islem": "2,5 × 10 = 25 m"
+   }
+  ],
+  "puf": "Tepe ile n. çukur arası (n − 1/2) × λ’dır; önce frekanstan ve hızdan λ’yı bul.",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0005k",
+  "kaynakKart": "K-FZDA-05 (dalga boyu ve tepe–çukur uzaklığı) · yeni sayılar, 3. çukur",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytfiz-dalgalar-0006",
+  "ders": "TYT Fizik",
+  "konu": "Dalgalar · Yay Dalgası",
+  "k": "fiz|Dalgalar",
+  "kazanim": "Karşılaşan ters atmaların yayı düzleştirdiği anı göreli hızla hesaplar.",
+  "tipId": "fz-dg-atma",
+  "tip": "Yayda atmaların süperpozisyonu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Uzunluğu 24 m olan gergin bir yayın iki ucundan, genlikleri eşit olan biri tepe, diğeri çukur biçiminde iki atma aynı anda birbirine doğru gönderiliyor. Atmaların yayılma hızı 4 m/s’dir ve atmalar yayın orta noktasında karşılaşıyor.\nBuna göre gönderildikten kaç saniye sonra yay tamamen doğrusal görünür?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "6",
+   "D": "12",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "E": "Yayın uzunluğunu (24 m) süre sanmış.",
+   "B": "Atmanın hızını (4 m/s) süre sanmış.",
+   "C": "Tek atmanın tüm yayı gitme süresini (24 ÷ 4) hesaplamış.",
+   "D": "Karşılaşma noktasının uzaklığını (12 m) süre sanmış."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Yayın tamamen doğrusal göründüğü an (s).",
+  "bilgi": [
+   {
+    "ad": "Atmaların üst üste binmesi",
+    "ifade": "karşılaşan atmaların yer değiştirmeleri toplanır. Genlikleri eşit tepe ve çukur üst üste gelince yay anlık olarak düz görünür; sonra atmalar yollarına devam eder"
+   }
+  ],
+  "ipuclari": [
+   "Yay, karşılaşma anında iki atmanın toplamıdır.",
+   "Genlikleri eşit ters atmalar üst üste binince toplam yer değiştirme ne olur?",
+   "Atmalar birbirine yaklaşırken her biri orta noktaya kaç m gider?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Karşılaşma noktası",
+    "aciklama": "Atmalar aynı hızla, zıt yönden gelir; yayın orta noktasında buluşurlar.",
+    "islem": "24 ÷ 2 = 12 m"
+   },
+   {
+    "baslik": "Düz görünüm",
+    "aciklama": "Eşit genlikli tepe ve çukur üst üste binince toplam yer değiştirme sıfırdır.",
+    "islem": "tepe + çukur = 0"
+   },
+   {
+    "baslik": "Süre",
+    "aciklama": "Her atma 12 m yol alır.",
+    "islem": "t = 12 ÷ 4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yay bu anda doğrusaldır.",
+    "islem": "t = 3 s"
+   }
+  ],
+  "puf": "Zıt yönden gelen eşit hızlı atmalar orta noktada buluşur; süre = (uzunluk ÷ 2) ÷ hız.",
+  "kisaYol": null,
+  "kardes": "tytfiz-dalgalar-0006k",
+  "kaynakKart": "K-FZDA-06 (atmaların karşılaşması) · yeni uzunluk ve hız",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ }
+]

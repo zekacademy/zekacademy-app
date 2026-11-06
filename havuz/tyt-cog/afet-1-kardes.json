@@ -1,0 +1,470 @@
+[
+ {
+  "id": "tytcog-afet-0001k",
+  "ana": "tytcog-afet-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Afet türleri",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Doğal afetleri iç kuvvetlere ve atmosfere bağlı olarak sınıflandırır.",
+  "tipId": "cg-afet-koken",
+  "tip": "Afetlerin oluşum kaynağı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Sel\nII. Deprem\nIII. Çığ\nYukarıdaki afetlerden hangisi yerin iç kuvvetlerine bağlı olarak gelişir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "Seli yağıştan değil yerin hareketinden doğan bir olay saymak.",
+   "C": "Çığı iç kuvvet sanmak; çığ kar kütlesinin kaymasıdır.",
+   "D": "Depremi doğru bulup seli de iç kuvvet saymak.",
+   "E": "İki atmosfer kökenli afeti seçip depremi atlamak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İç kuvvetlere bağlı afetler.",
+  "bilgi": [
+   {
+    "ad": "Afetlerin kökeni",
+    "ifade": "İç kuvvetlere bağlı: deprem, volkanik patlama (levha hareketleri) · Atmosfere bağlı: sel, kuraklık, hortum, çığ · Yer şekline ve iklime bağlı: heyelan, çığ"
+   }
+  ],
+  "ipuclari": [
+   "Afetin yerin içinden mi, atmosferden mi kaynaklandığını düşün.",
+   "Levha hareketleriyle ilişkili olaylar hangileri?",
+   "Hortum hangi katmanda oluşur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökeni ayır",
+    "aciklama": "Sel yağışa, çığ kar birikimine bağlıdır; ikisi de atmosfer ve yer şeklinin etkisindedir.",
+    "islem": "sel, çığ: atmosfer"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "Deprem yer kabuğunun kırılmasıyla olur.",
+    "islem": "I: hayır · II: evet · III: hayır"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İç kuvvet kökenli olan yalnız deprem.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Deprem ve volkanizma levha hareketlerinin, sel ve hortum atmosfer olaylarının sonucudur.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-01 (Verilen afetlerden iç kuvvetlere bağlı olanlar s) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytcog-afet-0002k",
+  "ana": "tytcog-afet-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Önlem ve hazırlık",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Afet türüne uygun önlemi belirler.",
+  "tipId": "cg-afet-onlem",
+  "tip": "Afetlere karşı alınabilecek önlemler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisi heyelan riskini azaltmaya yönelik önlemlerden biridir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yamaç eteklerinde yoğun yapılaşma",
+   "B": "Yamaçlarda bitki örtüsünün temizlenmesi",
+   "C": "Yamaçlara fazla su verilmesi",
+   "D": "Eğimli yamaçlarda ağaçlandırma yapılması",
+   "E": "Yamacın alt kısmından toprak kazılması"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Eğimli yamaçlarda ağaçlandırma yapılması"
+  },
+  "celdiriciler": {
+   "A": "Eğimli yamaç eteğine yapı yapmak riski artırır.",
+   "B": "Kökler toprağı tutar; temizlenirse kayma artar.",
+   "C": "Doygun toprak daha kolay kayar.",
+   "E": "Yamacın dengesini bozar."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Sel riskini azaltan önlem.",
+  "bilgi": [
+   {
+    "ad": "Önlem ve risk azaltma",
+    "ifade": "Sel: dere yataklarının ıslahı, baraj, yatakta yapılaşmama · Heyelan: yamaçta ağaçlandırma, drenaj, eğimli yamaç eteğinde yapı yapmama · Deprem: yapıların depreme dayanıklı olması"
+   }
+  ],
+  "ipuclari": [
+   "Selin nedeni kısa sürede çok suyun akışa geçmesidir.",
+   "Suyun rahat akması için hangi çalışma yapılır?",
+   "Dere yatağındaki yapılaşma riski artırır mı azaltır mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Nedeni düşün",
+    "aciklama": "Heyelan, eğimli yerde toprağın suya doyup kaymasıdır.",
+    "islem": "neden: eğim + su + bitkisiz yamaç"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "Toprağı gevşeten ya da yamacın dengesini bozan uygulamalar riski artırır.",
+    "islem": "kazı, su, bitki kaldırma: risk artar"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Kökler toprağı tutar; ağaçlandırma kaymayı azaltır.",
+    "islem": "ağaçlandırma = önlem"
+   }
+  ],
+  "puf": "Önlem, afetin nedenini ortadan kaldırır ya da etkisini azaltır.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-02 (Sel riskini azaltan önlem seçilir.) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytcog-afet-0003k",
+  "ana": "tytcog-afet-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Türkiye’de afet coğrafyası",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Türkiye’de afet türlerinin bölgesel dağılışını yorumlar.",
+  "tipId": "cg-afet-turkiye",
+  "tip": "Türkiye’de afetlerin dağılışı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Türkiye’de görülen doğal afetlerle ilgili olarak\nI. Marmara Bölgesi’nde deprem riski, Kuzey Anadolu Fay Hattı nedeniyle yüksektir.\nII. Güneydoğu Anadolu’nun düzlük alanlarında heyelan sıklığı Doğu Karadeniz’e göre fazladır.\nIII. Akdeniz kıyılarında orman yangını riski, yazların kurak geçmesi nedeniyle Karadeniz kıyılarından fazladır.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Orman yangını ile yaz kuraklığı ilişkisini atlamak.",
+   "B": "Marmara’daki fay hattı etkisini atlamak.",
+   "D": "Heyelanın eğimli ve yağışlı alanlarda olacağını unutmak.",
+   "E": "Düzlük alanlarda heyelanı fazla saymak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Türkiye’de afetlerin dağılışı",
+    "ifade": "Deprem: Kuzey Anadolu ve Doğu Anadolu fay hatları boyunca · Heyelan ve sel: bol yağışlı Karadeniz kıyıları · Çığ: yüksek, karlı dağlar · Orman yangını: yazı kurak geçen Akdeniz ve Ege kıyıları"
+   },
+   {
+    "ad": "Afetlerin kökeni",
+    "ifade": "İç kuvvetlere bağlı: deprem, volkanik patlama (levha hareketleri) · Atmosfere bağlı: sel, kuraklık, hortum, çığ · Yer şekline ve iklime bağlı: heyelan, çığ"
+   }
+  ],
+  "ipuclari": [
+   "Her ifadedeki afetin hangi koşulda arttığını düşün.",
+   "Çığ için yükselti ve kar, heyelan için yağış ve eğim gerekir.",
+   "Fay hatları depremin, kurak yazlar orman yangınının yeridir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "Marmara, Kuzey Anadolu Fay Hattı’na yakındır.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II ve III",
+    "aciklama": "Heyelan için eğim ve bol yağış gerekir. Akdeniz yazları kurak olduğu için yangın riski yüksektir.",
+    "islem": "II yanlış · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve III doğrudur.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Her afetin sıklığı bölgenin yer şekline, iklimine ve fay hatlarına bağlıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-03 (Afet türü ile bölgenin fiziki özellikleri eşleşt) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytcog-afet-0004k",
+  "ana": "tytcog-afet-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Dünya’da afet coğrafyası",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Deprem ve volkanizmanın yoğun olduğu kuşakları tanır.",
+  "tipId": "cg-afet-dunya",
+  "tip": "Afetlerin dünyadaki dağılışı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki alanlardan hangisinde deprem ve volkanik faaliyet olma ihtimali en düşüktür?",
+  "sekil": null,
+  "siklar": {
+   "A": "Endonezya adaları",
+   "B": "Brezilya Yaylası",
+   "C": "Japon Adaları",
+   "D": "İtalya’nın güneyi",
+   "E": "Meksika’nın güneyi"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Brezilya Yaylası"
+  },
+  "celdiriciler": {
+   "A": "Endonezya levha sınırlarındadır; deprem ve volkan çoktur.",
+   "C": "Japonya Ateş Çemberi’ndedir.",
+   "D": "Güney İtalya Avrasya ve Afrika levhalarının yakınındadır; Etna ve Vezüv vardır.",
+   "E": "Meksika levha sınırındadır; volkan ve deprem sıktır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Ateş Çemberi dışında kalan ülke.",
+  "bilgi": [
+   {
+    "ad": "Ateş Çemberi",
+    "ifade": "Pasifik Okyanusu çevresinde, levha sınırları boyunca uzanan deprem ve volkanizma kuşağı: Japonya, Filipinler, Şili, Peru, Meksika … · Eski, kararlı kıtalarda (Brezilya Yaylası, Afrika’nın büyük bölümü) deprem ve volkanizma azdır"
+   },
+   {
+    "ad": "Afetlerin kökeni",
+    "ifade": "İç kuvvetlere bağlı: deprem, volkanik patlama (levha hareketleri) · Atmosfere bağlı: sel, kuraklık, hortum, çığ · Yer şekline ve iklime bağlı: heyelan, çığ"
+   }
+  ],
+  "ipuclari": [
+   "Ateş Çemberi hangi okyanusun çevresindedir?",
+   "Şıklardan hangisi bu okyanusun kıyısında değil?",
+   "İzlanda hangi okyanusun ortasındadır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Deprem ve volkanizma levha sınırlarında yoğundur; kararlı kıtasal alanlarda azdır.",
+    "islem": "sınır = hareketli · iç kısım = kararlı"
+   },
+   {
+    "baslik": "Şıkları yerleştir",
+    "aciklama": "Endonezya, Japonya, güney İtalya ve Meksika levha sınırlarındadır.",
+    "islem": "4 alan hareketli"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Brezilya Yaylası eski ve kararlı bir kıta bloğudur.",
+    "islem": "Brezilya Yaylası kararlı"
+   }
+  ],
+  "puf": "Deprem ve volkanizma levha sınırlarında yoğunlaşır; Pasifik çevresi Ateş Çemberi’dir.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-04 (Ateş Çemberi dışında kalan alan bulunur.) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytcog-afet-0005k",
+  "ana": "tytcog-afet-0005",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Afet ve insan etkisi",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Bir afetin oluşumundaki beşeri etkenleri ayırt eder.",
+  "tipId": "cg-afet-etken",
+  "tip": "Afette doğal ve beşeri etkenler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bir dağ yolu açılırken yamaç dikçe kesilmiş, kış sonunda eriyen kar sularıyla birlikte yamaçtaki kayalar yola düşmüştür.\nBu olay için\nI. yamacın eğiminin fazla olması,\nII. yolun yapımı için yamacın kesilmesi,\nIII. kar erimesiyle yamacın suya doyması\netkenlerinden hangisi beşeri etkinliklerle ilgilidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "Eğimi insanın yarattığını sanmak; eğim doğal özelliktir.",
+   "C": "Kar erimesini beşeri etken saymak.",
+   "D": "Eğimi de beşeri saymak.",
+   "E": "Kar erimesini insan etkinliği saymak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Beşeri etkinliklerle ilgili etkenler.",
+  "bilgi": [
+   {
+    "ad": "Doğal ve beşeri etken",
+    "ifade": "Doğal etken: yağış, eğim, kayaç yapısı · Beşeri etken: ağaç kesimi, yamaçta ya da dere yatağında yapılaşma, yol açmak"
+   },
+   {
+    "ad": "Afetlerin kökeni",
+    "ifade": "İç kuvvetlere bağlı: deprem, volkanik patlama (levha hareketleri) · Atmosfere bağlı: sel, kuraklık, hortum, çığ · Yer şekline ve iklime bağlı: heyelan, çığ"
+   }
+  ],
+  "ipuclari": [
+   "Hangi etkeni insan oluşturdu, hangisi kendiliğinden vardı?",
+   "Yağış insan etkinliği midir?",
+   "Ağaç kesmek ve yapı yapmak kimin eylemi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Etkenleri ayır",
+    "aciklama": "Eğim ve kar erimesi doğal koşullardır. Yamacı kesmek insan eylemidir.",
+    "islem": "I, III: doğal"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "Yalnız yol yapımı için yamacın kesilmesi insana aittir.",
+    "islem": "II: beşeri"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Beşeri etken yalnız II.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Yağış ve eğim doğal; kesme ve yapılaşma beşeri etkendir.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-05 (Metindeki olayda insan etkinliğinden kaynaklanan) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytcog-afet-0006k",
+  "ana": "tytcog-afet-0006",
+  "ders": "TYT Coğrafya",
+  "konu": "Doğal Afetler · Risk analizi",
+  "k": "cog|Doğal Afetler",
+  "kazanim": "Tehlike ile riski ayırarak nüfus ve yapı verisinden zarar görebilirliği hesaplar.",
+  "tipId": "cg-afet-risk",
+  "tip": "Afet riski ve zarar yorumlama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Aynı bölgede bulunan ve aynı şiddette depremden etkileneceği varsayılan beş kente ait bilgiler aşağıdaki tabloda verilmiştir.\nKent | Nüfus (bin) | Depreme dayanıklı yapıda yaşayanların oranı (%)\nR | 900 | 60\nS | 400 | 25\nT | 1500 | 75\nU | 600 | 30\nV | 250 | 0\nDiğer koşullar eşit olduğuna göre, depremde can kaybı riski en yüksek olan kent hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "R",
+   "B": "S",
+   "C": "T",
+   "D": "U",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "U"
+  },
+  "celdiriciler": {
+   "A": "Dayanıksız nüfusu 360 bin bulup U kentindeki 420 bini görmemek.",
+   "B": "Düşük dayanıklılık oranına bakıp nüfusu küçük olan kenti seçmek; dayanıksız nüfus 300 bindir.",
+   "C": "En büyük nüfusu seçmek; dayanıksız yapıdaki nüfus 375 bindir.",
+   "E": "Dayanıklı yapı oranı sıfır olan kenti seçmek; nüfusu 250 bin olduğundan en yüksek değildir."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Dayanıksız yapıda yaşayan nüfusu en çok olan kent.",
+  "bilgi": [
+   {
+    "ad": "Tehlike ve risk",
+    "ifade": "Tehlike: afetin gerçekleşme ihtimali · Risk: afetin vereceği zarar; nüfus yoğunluğu ve yapı kalitesiyle artar. Dayanıksız yapıda yaşayan nüfus = toplam nüfus × dayanıksız oran"
+   }
+  ],
+  "ipuclari": [
+   "Dayanıksız yapı oranını, dayanıklı yapı oranından hesapla.",
+   "Her kentte dayanıksız yapıda yaşayan nüfusu bul.",
+   "Nüfusu en büyük kent en riskli olmayabilir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dayanıksız oranı bul",
+    "aciklama": "Dayanıksız oran = 100 − dayanıklı oran.",
+    "islem": "R %40 · S %75 · T %25 · U %70 · V %100"
+   },
+   {
+    "baslik": "Nüfusa uygula",
+    "aciklama": "Nüfus × dayanıksız oran (bin kişi).",
+    "islem": "R 360 · S 300 · T 375 · U 420 · V 250"
+   },
+   {
+    "baslik": "Karşılaştır",
+    "aciklama": "En çok dayanıksız yapıda yaşayan nüfus U kentindedir.",
+    "islem": "U: 420 bin"
+   }
+  ],
+  "puf": "Risk, yalnızca nüfusa değil nüfus ile yapı kalitesinin birleşimine bağlıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-CGAF-06 (Aynı şiddette depremde dayanıksız yapıda yaşayan) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ }
+]

@@ -1,0 +1,636 @@
+[
+ {
+  "id": "tytmat-rutinprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kural ve tarife",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Dilimli bir ücret tarifesini, “saatin bir kısmı” kuralıyla birlikte uygulayarak ödenecek tutarı bulur.",
+  "tipId": "rt-kural",
+  "tip": "Kural ve tarife yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 2,
+  "metin": "Bir otoparkın ücret tarifesi şöyledir:\n• İlk 2 saat için 40 TL\n• Sonraki her saat ya da saatin bir kısmı için 15 TL\nBu otoparka saat 09.40’ta giren bir araç saat 15.00’te çıkıyor.\nBuna göre bu aracın ödeyeceği ücret kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "55",
+   "B": "85",
+   "C": "90",
+   "D": "100",
+   "E": "130"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "55, ilk 2 saatten sonraki bütün süreyi bir dilim saymak.",
+   "B": "85, kalan 20 dakikayı ücretlendirmemek; “saatin bir kısmı” da bir dilimdir.",
+   "C": "90, ilk 2 saati de 15 TL’lik dilimler gibi hesaplamak (6 × 15).",
+   "E": "130, ilk 2 saati düşmeden 6 dilim saymak (40 + 6 × 15)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Aracın ödeyeceği otopark ücreti.",
+  "bilgi": [
+   {
+    "ad": "“Bir kısmı” ifadesi",
+    "ifade": "“her saat ya da saatin bir kısmı” denince başlayan her saat tam ücretlenir. Örnek: 2 saat 10 dakika = 3 dilim"
+   }
+  ],
+  "ipuclari": [
+   "Araç otoparkta kaç saat kaç dakika kaldı?",
+   "İlk 2 saatten sonra kalan süre kaç “saat ya da saatin bir kısmı” eder?",
+   "İlk 2 saatin ücretine ek dilimlerin ücretini ekle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalış süresi",
+    "aciklama": "09.40’tan 15.00’e kadar.",
+    "islem": "5 saat 20 dakika"
+   },
+   {
+    "baslik": "Ek dilimler",
+    "aciklama": "İlk 2 saatten sonra 3 saat 20 dakika kalır; başlayan her saat tam sayılır.",
+    "islem": "3 tam saat + 20 dakika ⇒ 4 dilim"
+   },
+   {
+    "baslik": "Ücret",
+    "aciklama": "İlk 2 saat ve 4 ek dilim.",
+    "islem": "40 + 4 × 15 = 40 + 60 = 100 TL"
+   }
+  ],
+  "puf": "Dilimli tarifelerde önce ilk dilimi düş, sonra kalan süreyi yukarı yuvarlayarak dilim say.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0001k",
+  "kaynakKart": "K-RT-01 (ücret tarifesi kuralı) · yeni kurgu (otopark), giriş-çıkış saatinden süre",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tablo ve takvim",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Ayın ilk gününden haftanın günlerini 7’lik döngüyle izleyerek istenen tarihi bulur.",
+  "tipId": "rt-tablo",
+  "tip": "Tablo ve takvim yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir satranç kulübü her ayın üçüncü cuma günü toplanmaktadır. Ekim ayının 1’i salı günüdür.\nBuna göre kulüp ekim ayında ayın kaçında toplanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "17",
+   "C": "18",
+   "D": "21",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "11, ikinci cuma; soru üçüncü cumayı soruyor.",
+   "B": "17, salıdan cumaya 2 gün sayıp ilk cumayı 3 bulmak.",
+   "D": "21, üçüncü haftanın son günü (3 × 7) ile üçüncü cumayı karıştırmak.",
+   "E": "25, ilk cumaya (4) üç hafta eklemek; ilk cuma zaten birinci cumadır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Ekim ayının üçüncü cumasının tarihi.",
+  "bilgi": [
+   {
+    "ad": "Haftanın günleri",
+    "ifade": "günler 7 günde bir tekrar eder: ayın 1’i salıysa 8’i, 15’i, 22’si ve 29’u da salıdır"
+   }
+  ],
+  "ipuclari": [
+   "Salıdan cumaya kaç gün vardır?",
+   "Ayın ilk cuması ayın kaçıdır?",
+   "Her cuma bir öncekinden 7 gün sonradır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk cuma",
+    "aciklama": "1’i salı ise 2’si çarşamba, 3’ü perşembe, 4’ü cumadır.",
+    "islem": "ilk cuma: 4"
+   },
+   {
+    "baslik": "Sonraki cumalar",
+    "aciklama": "Her hafta 7 gün ekle.",
+    "islem": "4 · 11 · 18 · 25"
+   },
+   {
+    "baslik": "Üçüncü cuma",
+    "aciklama": "Sıradaki üçüncü cuma.",
+    "islem": "18 Ekim"
+   }
+  ],
+  "puf": "Takvim sorularında önce istenen günün ilk tarihini bul, sonra 7’şer ekle.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0002k",
+  "kaynakKart": "K-RT-02 (takvimde haftanın günleri) · yeni kurgu (kulüp toplantısı), istenen: üçüncü cuma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Koşullu sıralama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Yan yana oturma koşullarını iki ikili ve bir kişi olarak modelleyip tüm yerleşimleri inceleyerek zorunlu konumu bulur.",
+  "tipId": "rt-siralama",
+  "tip": "Koşullu sıralama ve yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Ali, Berk, Cem, Ece ve Yusuf bir sinemada yan yana dizili beş koltuğa birer kişi olacak biçimde oturuyor. Oturuş düzeniyle ilgili şunlar biliniyor:\n• Ali ile Berk yan yana oturuyor.\n• Cem ile Ece yan yana oturuyor.\n• Yusuf en uçtaki iki koltuktan birinde oturmuyor.\nBuna göre ortadaki koltukta kim oturur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ali",
+   "B": "Berk",
+   "C": "Cem",
+   "D": "Ece",
+   "E": "Yusuf"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Yusuf"
+  },
+  "celdiriciler": {
+   "A": "Ali ortada olursa Berk 2. ya da 4. koltuğa oturur; geriye kalan üç koltukta Cem–Ece yan yana oturunca Yusuf uca düşer.",
+   "B": "Berk ortada olursa Ali yanına oturur; kalan koltuklarda Cem ile Ece yan yana oturursa Yusuf’a yalnız uç koltuk kalır.",
+   "C": "Cem ortada olursa Ece yanına oturur; Ali–Berk kalan yan yana iki koltuğa oturunca Yusuf uca düşer.",
+   "D": "Ece ortada olursa Cem 2. ya da 4. koltuktadır; bu durumda Yusuf uçta kalmak zorundadır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Ortadaki (3.) koltukta oturan kişi.",
+  "bilgi": [],
+  "ipuclari": [
+   "Yan yana oturan iki ikiliyi birer blok gibi düşün.",
+   "Beş koltuğa iki blok (2’şer koltuk) ve bir kişi yerleşir; bu kişi hangi koltuklarda olabilir?",
+   "Yusuf uçta olamıyorsa geriye hangi koltuk kalır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bloklar",
+    "aciklama": "Ali–Berk ve Cem–Ece ikişer koltukluk iki blok; Yusuf bunların dışında kalır.",
+    "islem": "2 blok + Yusuf = 5 koltuk"
+   },
+   {
+    "baslik": "Yusuf’un yeri",
+    "aciklama": "Yusuf 2. ya da 4. koltukta olursa yanında yalnız bir koltuk kalır ve bir blok sığmaz. Bu yüzden Yusuf 1., 3. ya da 5. koltukta olabilir.",
+    "islem": "Yusuf: 1, 3 ya da 5"
+   },
+   {
+    "baslik": "Uç koşulu",
+    "aciklama": "Yusuf uçta değil; geriye ortadaki koltuk kalır.",
+    "islem": "Yusuf: 3. koltuk",
+    "gorsel": "<svg viewBox=\"0 0 330 92\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"15.0\" y=\"10\" width=\"55.2\" height=\"36\" rx=\"7\" stroke-width=\"1.4\" /><text x=\"42.6\" y=\"33.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ali</text><text x=\"42.6\" y=\"62.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><rect x=\"76.2\" y=\"10\" width=\"55.2\" height=\"36\" rx=\"7\" stroke-width=\"1.4\" /><text x=\"103.8\" y=\"33.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Berk</text><text x=\"103.8\" y=\"62.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><rect x=\"137.4\" y=\"10\" width=\"55.2\" height=\"36\" rx=\"7\" stroke-width=\"2.4\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><text x=\"165.0\" y=\"33.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:#fff;stroke:none;font-weight:700\">Yusuf</text><text x=\"165.0\" y=\"62.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><rect x=\"198.6\" y=\"10\" width=\"55.2\" height=\"36\" rx=\"7\" stroke-width=\"1.4\" /><text x=\"226.2\" y=\"33.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Cem</text><text x=\"226.2\" y=\"62.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><rect x=\"259.8\" y=\"10\" width=\"55.2\" height=\"36\" rx=\"7\" stroke-width=\"1.4\" /><text x=\"287.4\" y=\"33.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ece</text><text x=\"287.4\" y=\"62.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"165.0\" y=\"84.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">bloklar 1–2 ve 4–5 koltuklarında</text></svg>"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Bloklar 1–2 ve 4–5 koltuklarına her sırayla yerleşebilir; ortada hep Yusuf vardır.",
+    "islem": "8 farklı oturuş · ortada hep Yusuf"
+   }
+  ],
+  "puf": "Yan yana olması gerekenleri blok yap; kalan boşlukların nereye düşebileceğini incelemek çoğu zaman tek yeri verir.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0003k",
+  "kaynakKart": "K-RT-03 (koşullu yerleştirme) · yeni kurgu (sinema koltukları), istenen: kesin konum",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tablo ve takvim",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Lig tablosundaki galibiyet–mağlubiyet dengesini ve beraberlik bilgisini kullanarak eksik satırı tamamlar.",
+  "tipId": "rt-tablo",
+  "tip": "Tablo ve takvim yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "P, R, S ve T takımlarının katıldığı bir futbol turnuvasında her takım diğer takımlarla birer kez oynamıştır. Galibiyete 3, beraberliğe 1 puan verilmiş, mağlubiyete puan verilmemiştir. Turnuva sonunda oluşan tablonun bir kısmı aşağıda verilmiştir (O: oynanan, G: galibiyet, B: beraberlik, M: mağlubiyet).\nTurnuvada yalnızca 1 maç berabere bittiğine göre T takımının puanı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 148\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"10\" y=\"4\" width=\"310\" height=\"140\" stroke-width=\"1.4\"/><line x1=\"10\" y1=\"32\" x2=\"320\" y2=\"32\" stroke-width=\"1.4\"/><line x1=\"10\" y1=\"60\" x2=\"320\" y2=\"60\" stroke-width=\"0.8\"/><line x1=\"10\" y1=\"88\" x2=\"320\" y2=\"88\" stroke-width=\"0.8\"/><line x1=\"10\" y1=\"116\" x2=\"320\" y2=\"116\" stroke-width=\"0.8\"/><line x1=\"61.7\" y1=\"4\" x2=\"61.7\" y2=\"144\" stroke-width=\".8\"/><line x1=\"113.3\" y1=\"4\" x2=\"113.3\" y2=\"144\" stroke-width=\".8\"/><line x1=\"165.0\" y1=\"4\" x2=\"165.0\" y2=\"144\" stroke-width=\".8\"/><line x1=\"216.7\" y1=\"4\" x2=\"216.7\" y2=\"144\" stroke-width=\".8\"/><line x1=\"268.3\" y1=\"4\" x2=\"268.3\" y2=\"144\" stroke-width=\".8\"/><text x=\"35.8\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Takım</text><text x=\"87.5\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">O</text><text x=\"139.2\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">G</text><text x=\"190.8\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"242.5\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><text x=\"294.2\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text><text x=\"35.8\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">P</text><text x=\"87.5\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"190.8\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"242.5\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"294.2\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">7</text><text x=\"35.8\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">R</text><text x=\"87.5\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"190.8\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"242.5\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"294.2\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"35.8\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">S</text><text x=\"87.5\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"190.8\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"242.5\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"294.2\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"35.8\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">T</text><text x=\"87.5\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"190.8\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"242.5\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"294.2\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">?</text></svg>",
+  "siklar": {
+   "A": "0",
+   "B": "1",
+   "C": "2",
+   "D": "3",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "0, T’nin bütün maçlarını kaybettiğini sanmak; o zaman toplam mağlubiyet (6) toplam galibiyetten (4) fazla olurdu.",
+   "B": "1, T’nin bir beraberliği olduğunu sanmak; berabere biten maç P ile R arasında.",
+   "C": "2, T’nin 2 beraberliği olduğunu sanmak; “yalnızca 1 maç berabere” bilgisi kullanılmamış.",
+   "E": "6, T’nin 2 galibiyeti olduğunu sanmak; galibiyet ve mağlubiyet sayıları dengelenmiyor."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "T takımının turnuva sonundaki puanı.",
+  "bilgi": [
+   {
+    "ad": "Lig puanı",
+    "ifade": "galibiyet 3, beraberlik 1, mağlubiyet 0 puan. 4 takım birbiriyle birer kez oynarsa 4 × 3 ÷ 2 = 6 maç yapılır"
+   },
+   {
+    "ad": "Galibiyet = mağlubiyet",
+    "ifade": "berabere bitmeyen her maçta bir takım kazanır, bir takım kaybeder; bu yüzden ligdeki toplam galibiyet sayısı toplam mağlubiyet sayısına eşittir"
+   }
+  ],
+  "ipuclari": [
+   "Tabloda iki takımın beraberliği var; turnuvada yalnız 1 maç berabere bittiyse bu maç hangi iki takım arasında oynanmıştır?",
+   "T’nin beraberliği olabilir mi?",
+   "Toplam galibiyet sayısı toplam mağlubiyet sayısına eşit olmalı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Beraberlik",
+    "aciklama": "P’nin ve R’nin birer beraberliği var; berabere biten maç yalnızca 1 olduğuna göre bu maç P–R maçıdır.",
+    "islem": "T’nin beraberlik sayısı 0"
+   },
+   {
+    "baslik": "G = M dengesi",
+    "aciklama": "Bilinen takımların galibiyetleri ve mağlubiyetleri.",
+    "islem": "G: 2 + 1 + 1 = 4 · M: 0 + 1 + 2 = 3"
+   },
+   {
+    "baslik": "T’nin satırı",
+    "aciklama": "T’nin galibiyeti g, mağlubiyeti m olsun; g + m = 3 ve toplamlar eşit olmalı.",
+    "islem": "4 + g = 3 + m ⇒ m = g + 1 ⇒ g = 1, m = 2"
+   },
+   {
+    "baslik": "Puan",
+    "aciklama": "1 galibiyet, 0 beraberlik.",
+    "islem": "3 × 1 + 0 = 3 puan",
+    "gorsel": "<svg viewBox=\"0 0 330 148\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"10\" y=\"116\" width=\"310\" height=\"28\" style=\"fill:var(--acc,#16A34A);stroke:none\" fill-opacity=\".18\"/><rect x=\"10\" y=\"4\" width=\"310\" height=\"140\" stroke-width=\"1.4\"/><line x1=\"10\" y1=\"32\" x2=\"320\" y2=\"32\" stroke-width=\"1.4\"/><line x1=\"10\" y1=\"60\" x2=\"320\" y2=\"60\" stroke-width=\"0.8\"/><line x1=\"10\" y1=\"88\" x2=\"320\" y2=\"88\" stroke-width=\"0.8\"/><line x1=\"10\" y1=\"116\" x2=\"320\" y2=\"116\" stroke-width=\"0.8\"/><line x1=\"61.7\" y1=\"4\" x2=\"61.7\" y2=\"144\" stroke-width=\".8\"/><line x1=\"113.3\" y1=\"4\" x2=\"113.3\" y2=\"144\" stroke-width=\".8\"/><line x1=\"165.0\" y1=\"4\" x2=\"165.0\" y2=\"144\" stroke-width=\".8\"/><line x1=\"216.7\" y1=\"4\" x2=\"216.7\" y2=\"144\" stroke-width=\".8\"/><line x1=\"268.3\" y1=\"4\" x2=\"268.3\" y2=\"144\" stroke-width=\".8\"/><text x=\"35.8\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Takım</text><text x=\"87.5\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">O</text><text x=\"139.2\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">G</text><text x=\"190.8\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"242.5\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><text x=\"294.2\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text><text x=\"35.8\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">P</text><text x=\"87.5\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"190.8\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"242.5\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"294.2\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">7</text><text x=\"35.8\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">R</text><text x=\"87.5\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"190.8\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"242.5\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"294.2\" y=\"78.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"35.8\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">S</text><text x=\"87.5\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"139.2\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"190.8\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"242.5\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"294.2\" y=\"106.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"35.8\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">T</text><text x=\"87.5\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none\">3</text><text x=\"139.2\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none\">1</text><text x=\"190.8\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none\">0</text><text x=\"242.5\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none\">2</text><text x=\"294.2\" y=\"134.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none\">3</text></svg>"
+   }
+  ],
+  "puf": "Lig tablolarında iki gizli kural vardır: toplam galibiyet = toplam mağlubiyet, her berabere maç iki takıma birer beraberlik yazar.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0004k",
+  "kaynakKart": "K-RT-02 (tablodan gizli eşitlik) · yeni kurgu (dört takımlı futbol turnuvası), istenen: eksik puan",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kural ve tarife",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Koşullu bir işlem kuralını tekrar tekrar uygulayıp oluşan döngüyü bulur ve kalanla istenen adımı belirler.",
+  "tipId": "rt-kural",
+  "tip": "Kural ve tarife yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir sayı makinesine girilen sayı 10’dan büyükse makine bu sayıdan 7 çıkarır; sayı 10 ya da 10’dan küçükse sayıyı 2 ile çarpar. Makineden çıkan sayı tekrar makineye giriliyor ve işlem bu şekilde sürdürülüyor.\nMakineye ilk olarak 25 girildiğine göre makineden 20. kez çıkan sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "9",
+   "C": "11",
+   "D": "16",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "4, bir adım fazla saymak (21. çıkış) ya da kalanı 3 almak.",
+   "B": "9, 25’i de döngüye katıp 7 sayılık döngü sanmak (20 = 7 × 2 + 6).",
+   "D": "16, döngüdeki 9’u atlayıp 5 sayılık döngü sanmak.",
+   "E": "18, bir adım eksik saymak (19. çıkış)."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Makineden 20. kez çıkan sayı.",
+  "bilgi": [
+   {
+    "ad": "Döngü",
+    "ifade": "bir işlem dizisi belli adımdan sonra kendini tekrar ediyorsa adım sayısını döngü uzunluğuna böl; kalan, döngüdeki sırayı verir"
+   }
+  ],
+  "ipuclari": [
+   "İlk birkaç çıkışı sırayla yaz.",
+   "Hangi sayı ikinci kez çıkıyor? Döngü kaç sayıdan oluşuyor?",
+   "25 döngünün içinde mi? 20’yi döngü uzunluğuna böl ve kalana bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çıkışları yaz",
+    "aciklama": "Kuralı uygula: 25 → 18 → 11 → 4 → 8 → 16 → 9 → 18 …",
+    "islem": "1. 18 · 2. 11 · 3. 4 · 4. 8 · 5. 16 · 6. 9 · 7. 18"
+   },
+   {
+    "baslik": "Döngü",
+    "aciklama": "7. çıkış yine 18; 18’den başlayan 6 sayılık döngü oluştu (25 döngüde yok).",
+    "islem": "18, 11, 4, 8, 16, 9"
+   },
+   {
+    "baslik": "Kalan",
+    "aciklama": "20 = 6 × 3 + 2; üç tam döngüden sonra döngünün 2. sayısı.",
+    "islem": "20. çıkış = 11"
+   }
+  ],
+  "puf": "Döngüde başlangıç değeri tekrar etmiyorsa onu döngüye katma; sayımı döngünün ilk elemanından başlat.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0005k",
+  "kaynakKart": "K-RT-01 (tekrarlanan kural, döngü) · yeni kurgu (sayı makinesi), istenen: 20. çıkış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Durum tarama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Puan denklemini ve toplam soru sınırını birlikte kullanarak doğru-yanlış-boş sayılarını tarar.",
+  "tipId": "rt-tarama",
+  "tip": "Durum tarama, en az – en çok",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "20 sorudan oluşan bir bilgi yarışmasında her doğru cevap 5 puan kazandırmakta, her yanlış cevap 2 puan kaybettirmektedir. Boş bırakılan sorular puanı değiştirmemektedir ve her yarışmacı 0 puanla başlamaktadır.\nSelin bu yarışmada 61 puan aldığına göre kaç soruyu yanlış cevaplamıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "4",
+   "D": "5",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "1, 61 = 5 × 12 + 1 diye düşünüp artan 1’i yanlış sayısı sanmak; yanlış cevap puanı azaltır.",
+   "C": "4, yanlış başına 1 puan kaybı sanmak (5d − y = 61).",
+   "D": "5, boş bırakılan soru sayısı; soru yanlış sayısını soruyor.",
+   "E": "7, d = 15, y = 7 durumunu soru sayısı sınırını kontrol etmeden kabul etmek."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Selin’in yanlış cevapladığı soru sayısı.",
+  "bilgi": [
+   {
+    "ad": "Puan denklemi",
+    "ifade": "toplam puan = 5 × (doğru sayısı) − 2 × (yanlış sayısı); boşlar puanı değiştirmez"
+   }
+  ],
+  "ipuclari": [
+   "Doğru sayısına d, yanlış sayısına y de: puan denklemini yaz.",
+   "5d, 61’den büyük olmalı; d hangi değerlerden başlayabilir?",
+   "Her durumda d + y’nin 20’yi aşmadığını kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklem",
+    "aciklama": "Doğru d, yanlış y.",
+    "islem": "5d − 2y = 61 · d + y ≤ 20"
+   },
+   {
+    "baslik": "Durumları tara",
+    "aciklama": "5d − 61 çift ve pozitif olmalı: d tek ve d ≥ 13.",
+    "islem": "d = 13 ⇒ y = 2 · d = 15 ⇒ y = 7"
+   },
+   {
+    "baslik": "Sınırı kontrol et",
+    "aciklama": "d = 15, y = 7 için 22 soru gerekir; yarışma 20 soru.",
+    "islem": "yalnız d = 13, y = 2 (boş 5) ✓"
+   }
+  ],
+  "puf": "Denklemi sağlayan her durumu yaz; toplam soru gibi sınırları en sonda tek tek kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0006k",
+  "kaynakKart": "K-RT-04 (tam sayı durumları ve sınır) · yeni kurgu (bilgi yarışması), istenen: yanlış sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Koşullu sıralama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Sıralama koşullarından ilk sıraları zorunlu kılan kişileri bulur; öncülleri bütün uygun dizilimlerde denetler.",
+  "tipId": "rt-siralama",
+  "tip": "Koşullu sıralama ve yerleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Arda, Bora, Can, Doruk, Emre ve Fırat’ın katıldığı bir koşu yarışında herkes farklı sürede bitirmiştir. Yarışın sonuç sıralamasıyla ilgili şunlar biliniyor:\n• Bora, Arda’dan hemen sonra bitirmiştir.\n• Can ilk üç sırada değildir.\n• Fırat Doruk’tan, Doruk da Emre’den önce bitirmiştir.\n• Doruk, Arda’dan önce bitirmiştir.\nBuna göre\nI. Fırat birinci olmuştur.\nII. Can sonuncu olmuştur.\nIII. Doruk ikinci olmuştur.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Yalnız I, Doruk’un ikinci olmak zorunda olduğunu görmemek; Arda, Bora ve Emre’den önce bitirmesi gerekir, Can da ilk üçte değildir.",
+   "B": "Yalnız II, bulunan bir dizilimi (Can sonuncu) kesin sanmak; Can 4. ya da 5. de olabilir.",
+   "C": "I ve II, Can’ın sonuncu olduğu bir dizilimi kesin sanmak ve Doruk’un ikinciliğini görmemek; Fırat, Doruk, Emre, Can, Arda, Bora sıralaması da uygundur.",
+   "E": "I, II ve III, II. öncülün yalnız bazı dizilimlerde doğru olduğunu gözden kaçırmak."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Bütün uygun sıralamalarda doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Sağında – hemen sağında",
+    "ifade": "“A, B’nin sağında” denince A, B’nin sağındaki herhangi bir yerdedir; “hemen sağında” denince yan yanadırlar"
+   }
+  ],
+  "ipuclari": [
+   "Birinci sırada kimler olamaz? Her kişi için “ondan önce bitiren biri var mı?” diye sor.",
+   "Fırat birinci olduktan sonra ikinci sırada kim olabilir?",
+   "Kalan dört kişiyi (Arda–Bora bitişik, Can 4. ya da sonrası) yerleştirip Can’ın yerini denetle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci kim?",
+    "aciklama": "Doruk’tan önce Fırat var; Arda, Bora ve Emre’den önce Doruk var; Can ilk üçte değil.",
+    "islem": "birinci: Fırat ✓ (I)"
+   },
+   {
+    "baslik": "İkinci kim?",
+    "aciklama": "Arda, Bora ve Emre’den önce Doruk bitirmeli; Can ilk üçte olamaz.",
+    "islem": "ikinci: Doruk ✓ (III)"
+   },
+   {
+    "baslik": "Kalan sıralar",
+    "aciklama": "3–6. sıralarda Arda, Bora, Can, Emre; Arda–Bora bitişik, Can 4., 5. ya da 6.",
+    "islem": "Fırat, Doruk, Arda, Bora, Can, Emre · Fırat, Doruk, Arda, Bora, Emre, Can"
+   },
+   {
+    "baslik": "Diğer dizilimler",
+    "aciklama": "Emre 3. sırada da olabilir.",
+    "islem": "Fırat, Doruk, Emre, Arda, Bora, Can · Fırat, Doruk, Emre, Can, Arda, Bora"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "Can bazı dizilimlerde 5. ya da 4. sırada; kesin sonuncu değil.",
+    "islem": "kesin doğrular: I ve III"
+   }
+  ],
+  "puf": "“Kesinlikle doğru” sorularında bütün uygun dizilimleri çıkar; bir dizilimde bile yanlış olan ifade kesin değildir.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0007k",
+  "kaynakKart": "K-RT-03 (koşullu sıralama, kesinlik) · yeni kurgu (koşu yarışı), öncüllü kesinlik sorusu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Durum tarama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Adet ve tutar denklemlerinden iki bilinmeyeni tek bilinmeyene indirir; eşitsizlik koşuluyla uygun durumları tarayıp en küçük değeri bulur.",
+  "tipId": "rt-tarama",
+  "tip": "Durum tarama, en az – en çok",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir kumbarada yalnızca 5 TL’lik, 10 TL’lik ve 20 TL’lik banknotlar vardır. Kumbarada toplam 30 banknot ve 400 TL bulunmaktadır. 20 TL’lik banknotların sayısı, 10 TL’lik banknotların sayısından fazladır.\nBuna göre kumbarada en az kaç tane 5 TL’lik banknot vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "4",
+   "C": "6",
+   "D": "11",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "0, c > b koşulunu kullanmamak; c = 10 için b = 20, yani 20 TL’likler 10 TL’liklerden az olur.",
+   "B": "4, c > 12,5 koşulunu c ≥ 12 diye yuvarlamak; c = 12 için b = 14 > c.",
+   "D": "11, bulunan durumdaki 10 TL’lik banknot sayısı; soru 5 TL’likleri soruyor.",
+   "E": "12, 5 TL’lik sayısının en büyük değeri (c = 16); soru en azını soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "5 TL’lik banknot sayısının alabileceği en küçük değer.",
+  "bilgi": [],
+  "ipuclari": [
+   "5, 10 ve 20 TL’lik banknot sayılarına a, b, c de; adet ve tutar için iki denklem yaz.",
+   "Tutar denklemini 5’e böl ve adet denkleminden çıkar: b ile c arasında bir ilişki çıkar.",
+   "a’yı c cinsinden yaz; c > b koşulunu ve a ≥ 0, b ≥ 0 koşullarını uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemler",
+    "aciklama": "Adet ve tutar.",
+    "islem": "a + b + c = 30 · 5a + 10b + 20c = 400 ⇒ a + 2b + 4c = 80"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "İkinci denklemden birinciyi çıkar.",
+    "islem": "b + 3c = 50 ⇒ b = 50 − 3c"
+   },
+   {
+    "baslik": "a’yı yaz",
+    "aciklama": "Adet denkleminde yerine koy.",
+    "islem": "a = 30 − b − c = 2c − 20"
+   },
+   {
+    "baslik": "Koşullar",
+    "aciklama": "a ≥ 0 ⇒ c ≥ 10 · b ≥ 0 ⇒ c ≤ 16 · c > b ⇒ c > 50 − 3c ⇒ c > 12,5.",
+    "islem": "c ∈ {13, 14, 15, 16}"
+   },
+   {
+    "baslik": "En az a",
+    "aciklama": "a = 2c − 20, c en küçükken en küçük.",
+    "islem": "c = 13 ⇒ a = 6, b = 11 · kontrol: 30 + 110 + 260 = 400"
+   }
+  ],
+  "puf": "Üç bilinmeyen ve iki denklem varsa birini parametre seç; diğer koşullar bu parametrenin aralığını verir.",
+  "kisaYol": null,
+  "kardes": "tytmat-rutinprob-0008k",
+  "kaynakKart": "K-RT-04 (iki denklem + eşitsizlik, en az değer) · yeni kurgu (kumbaradaki banknotlar)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

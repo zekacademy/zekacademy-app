@@ -1,0 +1,640 @@
+[
+ {
+  "id": "tytmat-rutinprob-0001k",
+  "ana": "tytmat-rutinprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kural ve tarife",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Dilimli bir ücret tarifesini, “saatin bir kısmı” kuralıyla birlikte uygulayarak ödenecek tutarı bulur.",
+  "tipId": "rt-kural",
+  "tip": "Kural ve tarife yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 2,
+  "metin": "Bir kargo firmasının ücret tarifesi şöyledir:\n• İlk 2 kilogram için 45 TL\n• Sonraki her kilogram ya da kilogramın bir kısmı için 10 TL\nBir müşteri bu firmayla gönderdiği bir paket için 95 TL ödemiştir.\nBuna göre bu paketin kütlesi kaç kilogram olabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "6",
+   "C": "6,5",
+   "D": "7,5",
+   "E": "9,5"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6,5"
+  },
+  "celdiriciler": {
+   "A": "5, ek dilimleri bulup ilk 2 kilogramı eklemeyi unutmak.",
+   "B": "6, tam 6 kg için ücret 45 + 4 × 10 = 85 TL olur; 95 TL için 6 kg’ı aşmak gerekir.",
+   "D": "7,5, kilogramın bir kısmını ücretlendirmemek; 7,5 kg için 6 ek dilim, 105 TL ödenir.",
+   "E": "9,5, bütün tutarı 10 TL’lik dilimlere bölmek (95 ÷ 10); ilk 2 kg’ın ücreti farklı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "95 TL ödenen paketin olabilecek kütlesi.",
+  "bilgi": [
+   {
+    "ad": "“Bir kısmı” ifadesi",
+    "ifade": "“her kilogram ya da kilogramın bir kısmı” denince başlayan her kilogram tam ücretlenir. Örnek: 3,2 kg = 4 dilim"
+   }
+  ],
+  "ipuclari": [
+   "95 TL’nin ne kadarı ilk 2 kilogram için ödendi?",
+   "Kalan tutar kaç ek dilime karşılık gelir?",
+   "Ek dilim sayısı k ise paket 2 + (k − 1) kg’dan ağır, 2 + k kg’dan hafif ya da ona eşittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ek tutar",
+    "aciklama": "İlk 2 kg 45 TL.",
+    "islem": "95 − 45 = 50 TL"
+   },
+   {
+    "baslik": "Ek dilim",
+    "aciklama": "Her dilim 10 TL.",
+    "islem": "50 ÷ 10 = 5 dilim"
+   },
+   {
+    "baslik": "Kütle aralığı",
+    "aciklama": "5 ek dilim: 2 kg’ın üstünde 4 kg’dan fazla, en çok 5 kg.",
+    "islem": "6 kg < kütle ≤ 7 kg ⇒ 6,5 kg ✓"
+   }
+  ],
+  "puf": "Ücretten kütleye giderken dilim sayısı bir aralık verir; sınırdaki değerleri (tam 6 kg) ayrıca kontrol et.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-01 (ücret tarifesi kuralı) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0002k",
+  "ana": "tytmat-rutinprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tablo ve takvim",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Ayın ilk gününden haftanın günlerini 7’lik döngüyle izleyerek istenen tarihi bulur.",
+  "tipId": "rt-tablo",
+  "tip": "Tablo ve takvim yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir okulun bahar dönemi takviminde 1 Mart pazartesi gününe denk gelmektedir. Mart ayı 31 gün çeker.\nBuna göre aynı yılın 1 Nisan günü haftanın hangi günüdür?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazartesi",
+   "B": "Salı",
+   "C": "Çarşamba",
+   "D": "Perşembe",
+   "E": "Cuma"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Perşembe"
+  },
+  "celdiriciler": {
+   "A": "Pazartesi, Mart’ı 4 tam hafta (28 gün) sanmak.",
+   "B": "Salı, Mart’ı 29 gün sanmak.",
+   "C": "Çarşamba, Mart’ı 30 gün sanmak.",
+   "E": "Cuma, 1 Nisan’ı 1 Mart’tan 32 gün sonra saymak."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "1 Nisan’ın haftanın hangi gününe denk geldiği.",
+  "bilgi": [
+   {
+    "ad": "Haftanın günleri",
+    "ifade": "günler 7 günde bir tekrar eder: ayın 1’i salıysa 8’i, 15’i, 22’si ve 29’u da salıdır"
+   }
+  ],
+  "ipuclari": [
+   "1 Mart’tan 1 Nisan’a kaç gün geçer?",
+   "Bu gün sayısı kaç tam hafta ve kaç gün eder?",
+   "Artan gün kadar pazartesiden ileri say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Geçen gün",
+    "aciklama": "1 Mart’tan 1 Nisan’a, Mart’ın gün sayısı kadar gün geçer.",
+    "islem": "31 gün"
+   },
+   {
+    "baslik": "Haftalara ayır",
+    "aciklama": "Tam haftalar aynı güne döndürür.",
+    "islem": "31 = 4 × 7 + 3"
+   },
+   {
+    "baslik": "Gün bul",
+    "aciklama": "Pazartesiden 3 gün ileri: salı, çarşamba, perşembe.",
+    "islem": "1 Nisan perşembe"
+   }
+  ],
+  "puf": "Tarih farkını 7’ye böl; kalan kadar haftanın gününü ilerlet.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-02 (takvimde haftanın günleri) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0003k",
+  "ana": "tytmat-rutinprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Koşullu sıralama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Yan yana oturma koşullarını iki ikili ve bir kişi olarak modelleyip tüm yerleşimleri inceleyerek zorunlu konumu bulur.",
+  "tipId": "rt-siralama",
+  "tip": "Koşullu sıralama ve yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Kerem, Leyla, Mert, Nil ve Oya bir fotoğraf çekimi için yan yana tek sıra hâlinde diziliyor. Dizilişle ilgili şunlar biliniyor:\n• Kerem en solda ya da en sağda duruyor.\n• Leyla ile Kerem yan yana duruyor.\n• Leyla, Mert’in sağında duruyor (yan yana olmaları gerekmez).\nBuna göre en sağda kim durur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kerem",
+   "B": "Leyla",
+   "C": "Mert",
+   "D": "Nil",
+   "E": "Oya"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kerem"
+  },
+  "celdiriciler": {
+   "B": "Leyla en sağda olamaz; Kerem uçta ve Leyla’nın yanında olduğu için Leyla 2. ya da 4. sıradadır.",
+   "C": "Mert, Leyla’nın solunda durmalı; en sağdaki kişi kimsenin solunda değildir.",
+   "D": "Nil en sağda olursa Kerem en solda kalır; o zaman Leyla 2. sırada olur ve Mert, Leyla’nın soluna sığmaz.",
+   "E": "Oya en sağda olursa Kerem en solda olur; bu durumda Mert, Leyla’nın soluna sığmaz."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "En sağda duran kişi.",
+  "bilgi": [
+   {
+    "ad": "Sağında – hemen sağında",
+    "ifade": "“A, B’nin sağında” denince A, B’nin sağındaki herhangi bir yerdedir; “hemen sağında” denince yan yanadırlar"
+   }
+  ],
+  "ipuclari": [
+   "Kerem en solda olursa Leyla nerede durur?",
+   "Bu durumda Mert, Leyla’nın solunda durabilir mi?",
+   "Kerem’in en sağda olması gerektiğini kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kerem solda mı?",
+    "aciklama": "Kerem en solda ise Leyla 2. sıradadır; Leyla’nın solunda yalnız Kerem kalır.",
+    "islem": "Mert, Leyla’nın soluna sığmaz ✗"
+   },
+   {
+    "baslik": "Kerem sağda",
+    "aciklama": "Kerem en sağda ise Leyla 4. sıradadır; Mert 1., 2. ya da 3. sırada olabilir.",
+    "islem": "Kerem 5. · Leyla 4."
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bütün uygun dizilişlerde en sağda Kerem vardır.",
+    "islem": "6 farklı diziliş · en sağda hep Kerem"
+   }
+  ],
+  "puf": "Bir uç koşulu verildiğinde iki ucu ayrı ayrı dene; birinin çelişki vermesi diğerini kesinleştirir.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-03 (koşullu yerleştirme) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0004k",
+  "ana": "tytmat-rutinprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tablo ve takvim",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Lig tablosundaki galibiyet–mağlubiyet dengesini ve beraberlik bilgisini kullanarak eksik satırı tamamlar.",
+  "tipId": "rt-tablo",
+  "tip": "Tablo ve takvim yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "K, L, M ve N takımlarının katıldığı bir hentbol turnuvasında her takım diğer takımlarla birer kez oynamıştır. Galibiyete 3, beraberliğe 1 puan verilmiş, mağlubiyete puan verilmemiştir. Turnuva sonunda takımların puanları aşağıdaki tabloda verilmiştir.\nBuna göre bu turnuvada kaç maç berabere bitmiştir?",
+  "sekil": "<svg viewBox=\"0 0 330 64\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"10\" y=\"4\" width=\"310\" height=\"56\" stroke-width=\"1.4\"/><line x1=\"10\" y1=\"32\" x2=\"320\" y2=\"32\" stroke-width=\"1.4\"/><line x1=\"72.0\" y1=\"4\" x2=\"72.0\" y2=\"60\" stroke-width=\".8\"/><line x1=\"134.0\" y1=\"4\" x2=\"134.0\" y2=\"60\" stroke-width=\".8\"/><line x1=\"196.0\" y1=\"4\" x2=\"196.0\" y2=\"60\" stroke-width=\".8\"/><line x1=\"258.0\" y1=\"4\" x2=\"258.0\" y2=\"60\" stroke-width=\".8\"/><text x=\"41.0\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Takım</text><text x=\"103.0\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"165.0\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><text x=\"227.0\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><text x=\"289.0\" y=\"22.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">N</text><text x=\"41.0\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text><text x=\"103.0\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">7</text><text x=\"165.0\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"227.0\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"289.0\" y=\"50.2\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none\">0</text></svg>",
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "6",
+   "D": "8",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "B": "4, beraberlikleri takım takım saymak; her berabere maç iki takıma birer beraberlik yazar.",
+   "C": "6, turnuvadaki toplam maç sayısı.",
+   "D": "8, toplam puanı ikiye bölmek; berabere maç başına toplamdan yalnız 1 puan eksilir.",
+   "E": "16, takımların toplam puanı; soru maç sayısını soruyor."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Turnuvada berabere biten maç sayısı.",
+  "bilgi": [
+   {
+    "ad": "Lig puanı",
+    "ifade": "galibiyet 3, beraberlik 1, mağlubiyet 0 puan. 4 takım birbiriyle birer kez oynarsa 4 × 3 ÷ 2 = 6 maç yapılır"
+   }
+  ],
+  "ipuclari": [
+   "Turnuvada toplam kaç maç oynandı?",
+   "Berabere bitmeyen bir maç toplam kaç puan dağıtır? Berabere biten bir maç kaç puan dağıtır?",
+   "Bütün maçlar galibiyetle bitseydi toplam puan kaç olurdu? Aradaki fark neyi gösterir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maç sayısı",
+    "aciklama": "4 takım birbiriyle birer kez oynar.",
+    "islem": "4 × 3 ÷ 2 = 6 maç"
+   },
+   {
+    "baslik": "Puan dağılımı",
+    "aciklama": "Galibiyetle biten maç 3 + 0 = 3, berabere biten maç 1 + 1 = 2 puan dağıtır. Her beraberlik toplamı 1 azaltır.",
+    "islem": "hepsi galibiyetle biterse 6 × 3 = 18"
+   },
+   {
+    "baslik": "Toplam puan",
+    "aciklama": "Tablodaki puanları topla.",
+    "islem": "7 + 5 + 4 + 0 = 16"
+   },
+   {
+    "baslik": "Beraberlik",
+    "aciklama": "Eksilen her puan bir berabere maçtır.",
+    "islem": "18 − 16 = 2 maç"
+   }
+  ],
+  "puf": "Toplam puan = 3 × (maç sayısı) − (berabere maç sayısı); bu eşitlik tablodaki eksikleri hızla bulur.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-02 (tablodan gizli eşitlik) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0005k",
+  "ana": "tytmat-rutinprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kural ve tarife",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Koşullu bir işlem kuralını tekrar tekrar uygulayıp oluşan döngüyü bulur ve kalanla istenen adımı belirler.",
+  "tipId": "rt-kural",
+  "tip": "Kural ve tarife yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir robot, 25 basamaklı bir merdivenin en altından başlayarak her hamlede önce 3 basamak çıkıyor, sonra 1 basamak iniyor. Robot en üst basamağa ulaştığı anda duruyor ve o hamlede inmiyor.\nBuna göre robot kaçıncı hamlesinde en üst basamağa ulaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "11",
+   "C": "12",
+   "D": "13",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "9, inişi unutup 25 ÷ 3 ≈ 8,3’ü yukarı yuvarlamak.",
+   "B": "11, tam hamle sayısını cevap sanmak; robot o anda 22. basamakta.",
+   "D": "13, son hamlede de inildiğini varsayıp 25 ÷ 2 = 12,5’i yukarı yuvarlamak.",
+   "E": "25, basamak sayısı; hamle sayısı değil."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Robotun en üst basamağa ulaştığı hamlenin sırası.",
+  "bilgi": [
+   {
+    "ad": "Döngü",
+    "ifade": "bir işlem dizisi belli adımdan sonra kendini tekrar ediyorsa adım sayısını döngü uzunluğuna böl; kalan, döngüdeki sırayı verir"
+   }
+  ],
+  "ipuclari": [
+   "Tam bir hamlede robot net kaç basamak yükselir?",
+   "Son hamlede robot inmeden 3 basamak çıkar; son hamleden önce en az kaçıncı basamakta olmalı?",
+   "Kaç tam hamleden sonra bu basamağa ulaşır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Net ilerleme",
+    "aciklama": "Bir tam hamle: 3 çık, 1 in.",
+    "islem": "net + 2 basamak"
+   },
+   {
+    "baslik": "Son hamle",
+    "aciklama": "Son hamlede 3 basamak çıkıp durur; öncesinde en az 22. basamakta olmalı.",
+    "islem": "25 − 3 = 22"
+   },
+   {
+    "baslik": "Tam hamleler",
+    "aciklama": "22. basamağa net 2’şerle ulaşır.",
+    "islem": "22 ÷ 2 = 11 tam hamle"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "11 tam hamleden sonra 12. hamlede tepeye çıkar.",
+    "islem": "11 + 1 = 12 · kontrol: 22 + 3 = 25"
+   }
+  ],
+  "puf": "Son adımda kural değişiyorsa (inmeden durma) son adımı ayrı düşün, öncesini net ilerlemeyle hesapla.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-01 (tekrarlanan kural, döngü) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0006k",
+  "ana": "tytmat-rutinprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Durum tarama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Puan denklemini ve toplam soru sınırını birlikte kullanarak doğru-yanlış-boş sayılarını tarar.",
+  "tipId": "rt-tarama",
+  "tip": "Durum tarama, en az – en çok",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "25 sorudan oluşan bir testte her doğru cevap 4 puan kazandırmakta, her yanlış cevap 1 puan kaybettirmektedir. Boş bırakılan sorular puanı değiştirmemektedir ve test 0 puanla başlamaktadır.\nBu testten 62 puan alan Tuna en çok kaç soruyu boş bırakmış olabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "7",
+   "C": "8",
+   "D": "9",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "2, boş sayısının en küçük değeri; soru en çoğunu soruyor.",
+   "C": "8, yanlış cevabın puan kazandırdığını sanmak (4d + y = 62).",
+   "D": "9, yanlış cevapları da boş saymak (25 − 16).",
+   "E": "10, 62 ÷ 4 ≈ 15 doğru alıp yanlışları hesaba katmamak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Tuna’nın boş bıraktığı soru sayısının alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "Puan denklemi",
+    "ifade": "toplam puan = 4 × (doğru sayısı) − (yanlış sayısı); boşlar puanı değiştirmez"
+   }
+  ],
+  "ipuclari": [
+   "Doğru sayısına d, yanlış sayısına y de; puan denklemini yaz.",
+   "4d en az kaç olmalı? d’nin alabileceği değerleri sırayla dene.",
+   "Her durumda boş sayısını (25 − d − y) bul ve 25 sınırını kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklem",
+    "aciklama": "Doğru d, yanlış y.",
+    "islem": "4d − y = 62 · d + y ≤ 25"
+   },
+   {
+    "baslik": "Durumları tara",
+    "aciklama": "4d ≥ 62 ⇒ d ≥ 16.",
+    "islem": "d = 16 ⇒ y = 2 · d = 17 ⇒ y = 6 · d = 18 ⇒ y = 10 (28 soru ✗)"
+   },
+   {
+    "baslik": "Boşlar",
+    "aciklama": "Uygun iki durumda boş sayıları.",
+    "islem": "25 − 18 = 7 · 25 − 23 = 2"
+   },
+   {
+    "baslik": "En çok",
+    "aciklama": "İki durumdan büyük olanı.",
+    "islem": "en çok 7 boş"
+   }
+  ],
+  "puf": "“En çok” sorularında bütün uygun durumları listele, sonra en büyüğünü seç.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-04 (tam sayı durumları ve sınır) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0007k",
+  "ana": "tytmat-rutinprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Koşullu sıralama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Sıralama koşullarından ilk sıraları zorunlu kılan kişileri bulur; öncülleri bütün uygun dizilimlerde denetler.",
+  "tipId": "rt-siralama",
+  "tip": "Koşullu sıralama ve yerleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Bir kurye K, L, M, N, P ve R paketlerini farklı zamanlarda, sırayla teslim etmiştir. Teslim sırasıyla ilgili şunlar biliniyor:\n• L paketi, K paketinden hemen sonra teslim edilmiştir.\n• R paketi N’den, N paketi de P’den önce teslim edilmiştir.\n• M ile P paketleri art arda teslim edilmiştir.\n• N paketi, K paketinden önce teslim edilmiştir.\nBuna göre\nI. P paketi dördüncü sırada teslim edilmiştir.\nII. R paketi ilk sırada teslim edilmiştir.\nIII. N paketi ikinci sırada teslim edilmiştir.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "Yalnız I, P’nin 4. olduğu bir dizilimi kesin sanmak; P 3., 5. ya da 6. sırada da olabilir.",
+   "B": "Yalnız II, N’nin ikinci olmak zorunda olduğunu görmemek.",
+   "C": "I ve II, P’nin dördüncü olduğu bir dizilimi kesin sanmak; RNKLMP diziliminde P altıncıdır.",
+   "D": "I ve III, R’nin ilk sırada olmak zorunda olduğunu görmemek ve P’nin yerini kesin sanmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "Bütün uygun teslim sıralarında doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Sağında – hemen sağında",
+    "ifade": "“A, B’nin sağında” denince A, B’nin sağındaki herhangi bir yerdedir; “hemen sağında” denince yan yanadırlar"
+   }
+  ],
+  "ipuclari": [
+   "İlk sırada hangi paketler olamaz? Her paket için “ondan önce teslim edilmesi gereken var mı?” diye sor.",
+   "M paketi, P ile art arda olduğuna göre ilk iki sıraya girebilir mi?",
+   "Kalan sıraları (K–L bitişik, M–P bitişik) yerleştirip P’nin yerini denetle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk paket",
+    "aciklama": "N’den önce R; K, L ve P’den önce N var. M, P ile art arda; P en erken 3. sırada olduğundan M ilk sırada olamaz.",
+    "islem": "ilk: R ✓ (II)"
+   },
+   {
+    "baslik": "İkinci paket",
+    "aciklama": "K, L ve P’den önce N gelmeli. M 2. sırada olursa P 3. sırada olur; R ile N’nin ikisi de P’den önce 1. sıraya sığmaz.",
+    "islem": "ikinci: N ✓ (III)"
+   },
+   {
+    "baslik": "Kalan bloklar",
+    "aciklama": "3–6. sıralarda iki bitişik ikili: K–L ve (M, P).",
+    "islem": "K–L önce: 3–4, ikili 5–6 · ikili önce: 3–4, K–L 5–6"
+   },
+   {
+    "baslik": "Dizilimler",
+    "aciklama": "İkililerin iç sırası M–P ya da P–M olabilir.",
+    "islem": "RNKLMP · RNKLPM · RNMPKL · RNPMKL"
+   },
+   {
+    "baslik": "I. öncül",
+    "aciklama": "P bu dizilimlerde 6., 5., 4. ya da 3. sıradadır; dördüncülük kesin değil.",
+    "islem": "kesin doğrular: II ve III"
+   }
+  ],
+  "puf": "Bitişik olması gerekenleri blok yap; blokların ve iç sıralarının bütün durumlarını yazarak kesinliği denetle.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-03 (koşullu sıralama, kesinlik) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutinprob-0008k",
+  "ana": "tytmat-rutinprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Durum tarama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Adet ve tutar denklemlerinden iki bilinmeyeni tek bilinmeyene indirir; eşitsizlik koşuluyla uygun durumları tarayıp en küçük değeri bulur.",
+  "tipId": "rt-tarama",
+  "tip": "Durum tarama, en az – en çok",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir tiyatro gösterisi için 30 TL’lik, 50 TL’lik ve 80 TL’lik biletlerden toplam 40 bilet satılmış ve 2200 TL gelir elde edilmiştir. Satılan 80 TL’lik bilet sayısı, 30 TL’lik bilet sayısından fazladır.\nBuna göre satılan 50 TL’lik bilet sayısı en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "5",
+   "C": "25",
+   "D": "30",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "0, c = 20 durumunu almak; o zaman a = 20 olur ve c > a koşulu bozulur.",
+   "B": "5, 50 TL’lik sayısının en küçük değeri (c = 18); soru en çoğunu soruyor.",
+   "C": "25, c’nin 10’dan başladığını sanmak; c = 8 de uygundur.",
+   "E": "35, c = 6 almak; o zaman a = −1 olur, bilet sayısı negatif olamaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "50 TL’lik bilet sayısının alabileceği en büyük değer.",
+  "bilgi": [],
+  "ipuclari": [
+   "30, 50 ve 80 TL’lik bilet sayılarına a, b, c de; iki denklem yaz.",
+   "Tutar denklemini 10’a böl, adet denkleminin 3 katını çıkar: b ile c arasında ilişki bul.",
+   "b’yi büyütmek için c’yi küçült; ama a ≥ 0 ve c > a koşullarını unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemler",
+    "aciklama": "Adet ve tutar (10’a bölünmüş).",
+    "islem": "a + b + c = 40 · 3a + 5b + 8c = 220"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "İkinci denklemden birincinin 3 katını çıkar.",
+    "islem": "2b + 5c = 100 ⇒ b = 50 − 2,5c (c çift)"
+   },
+   {
+    "baslik": "a’yı yaz",
+    "aciklama": "Adet denkleminde yerine koy.",
+    "islem": "a = 40 − b − c = 1,5c − 10"
+   },
+   {
+    "baslik": "Koşullar",
+    "aciklama": "a ≥ 0 ⇒ c ≥ 7 (c çift ⇒ c ≥ 8) · c > a ⇒ c < 20 · b ≥ 0 ⇒ c ≤ 20.",
+    "islem": "c ∈ {8, 10, 12, 14, 16, 18}"
+   },
+   {
+    "baslik": "En çok b",
+    "aciklama": "b, c en küçükken en büyük.",
+    "islem": "c = 8 ⇒ b = 30, a = 2 · kontrol: 60 + 1500 + 640 = 2200"
+   }
+  ],
+  "puf": "En çok/en az sorularında parametrenin sınırını belirleyen koşulu bul; sınır değeri mutlaka denklemde kontrol et.",
+  "kisaYol": null,
+  "kaynakKart": "K-RT-04 (iki denklem + eşitsizlik, en az değer) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,102 @@
+"""TYT Tarih · Kurtuluş Savaşı ve Antlaşmalar: 6 ana + 6 kardeş. Metinler özgündür."""
+import sys,os
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from tar_ortak import *
+
+KARTLAR={
+ 'K-HKS-01':Kt('Cephe ve Antlaşma Eşleştirme','tks-antlasma','kolay','düz',2,'Cephe, düşman devlet ve tarihten antlaşmayı bulmak.','Moskova, Gümrü, Kars ve Ankara antlaşmalarının tarafını ve sırasını karıştırmak.'),
+ 'K-HKS-02':Kt('Zafer Öncesi–Sonrası Sıralama','tks-sira','orta','öncüllü',3,'Batı Cephesi olaylarının belirli bir olaya göre önce mi sonra mı olduğunu ayırmak.','Teşkilat-ı Esasiye, Başkomutanlık ve Gazi unvanı gibi yakın tarihli olayların sırasını karıştırmak.'),
+ 'K-HKS-03':Kt('Antlaşmanın Sonuçlarını Yorumlama','tks-sonuc','orta','yeni nesil',3,'Ankara ve Moskova antlaşmalarının verilen bilgisinden çıkarılabilecek sonucu bulmak.','Metinde olmayan sonucu (cephenin kapanması gibi) doğru saymak.'),
+ 'K-HKS-04':Kt('Lozan Kararları','tks-lozan','orta','düz',3,'Lozan Antlaşması’nın içeriğini bilip metne uymayan ifadeyi bulmak.','Sevr’in maddelerini Lozan’a, Lozan’da bırakılan sorunları çözülmüş sanmak.'),
+ 'K-HKS-05':Kt('Savaş Anlatımından Çıkarım','tks-yorum','zor','yeni nesil',4,'Sakarya ve Büyük Taarruz’u anlatan metinden çıkarılamayacak yargıyı bulmak.','Metinde olmayan bilgiyi (sıralama hatası, yetki yanlışı) kesin sanmak.'),
+ 'K-HKS-06':Kt('Siyasi Sonuçların Nedeni','tks-neden','zor','yeni nesil',4,'Savaş sonrası siyasi gelişmelerin (saltanat, Sevr) nedenini kronolojiyle çözmek.','Sonradan gerçekleşen bir olayı neden saymak.'),
+}
+TIPLER={'tks-antlasma':'Cephe ve antlaşma eşleştirme','tks-sira':'Zafer öncesi ve sonrası sıralama','tks-sonuc':'Antlaşmanın sonuçlarını yorumlama','tks-lozan':'Lozan kararları','tks-yorum':'Savaş anlatımından çıkarım','tks-neden':'Siyasi sonuçların nedeni'}
+Q=Konu('kurtulussavasi','Kurtuluş Savaşı ve Antlaşmalar','tar|Kurtuluş Savaşı ve Antlaşmalar',KARTLAR,TIPLER)
+
+B_ANT=B('TBMM’nin antlaşmaları','Gümrü (Aralık 1920): Ermenistan, TBMM’nin ilk antlaşması · Moskova (Mart 1921): Sovyet Rusya · Ankara (Ekim 1921): Fransa, İtilaf Devletleri ile ilk antlaşma · Kars (Ekim 1921): Kafkas cumhuriyetleri, doğu sınırı')
+B_SIRAL=B('Batı Cephesi’nde önemli tarihler','Birinci İnönü: Ocak 1921 · Teşkilat-ı Esasiye: 20 Ocak 1921 · Başkomutanlık yetkisi: 5 Ağustos 1921 · Sakarya: Ağustos–Eylül 1921, ardından Gazi unvanı · Büyük Taarruz: 26 Ağustos 1922')
+B_ANK=B('Ankara ve Moskova','Ankara Antlaşması: Fransa Güney Cephesi’nden çekilmeyi kabul etti, İtilaf Devletleri arasındaki birlik bozuldu · Moskova Antlaşması: Sovyet Rusya ile; doğu sınırı belirlendi, Batum Gürcistan’a bırakıldı, TBMM’nin tanınmasında önemli adım')
+B_LOZ=B('Lozan Barış Antlaşması','24 Temmuz 1923: kapitülasyonlar kaldırıldı · Boğazlar askerden arındırıldı ve uluslararası komisyon denetimine bırakıldı · Doğu Trakya’da sınır Meriç · Musul sorunu ertelendi · Türk–Rum nüfus mübadelesi')
+B_SAK=B('Sakarya ve Büyük Taarruz','Sakarya Meydan Muharebesi (Ağustos–Eylül 1921): Başkomutan Mustafa Kemal, savunma tek hatta değil alana dayandı, Yunan ordusu durduruldu. Büyük Taarruz (26 Ağustos 1922) ve Başkomutanlık Meydan Muharebesi (30 Ağustos): Yunan ordusu yenildi, 9 Eylül’de İzmir’e girildi')
+B_SAL=B('Saltanatın kaldırılması','Mudanya Ateşkesi (11 Ekim 1922) sonrası İtilaf Devletleri Lozan Konferansı’na hem İstanbul hem Ankara hükümetini çağırdı; TBMM 1 Kasım 1922’de saltanatı kaldırdı')
+
+# ---- 0001 antlaşma · kolay
+Q.ekle('0001','K-HKS-01','kolay','Cephe ve tarihten antlaşmayı belirler.','düz',2,
+ dict(metin='Doğu Cephesi’nde Kâzım Karabekir komutasındaki ordunun Ermenistan’a karşı başarısı sonrasında, TBMM Hükümeti 1920 sonunda Ermenistan ile bir antlaşma imzalamıştır.\nBu antlaşma aşağıdakilerden hangisidir?',
+  dogru='Gümrü Antlaşması',yan=[('Moskova Antlaşması','Moskova Antlaşması 1921’de Sovyet Rusya ile imzalanmıştır, Ermenistan ile değil.','b'),('Kars Antlaşması','Kars Antlaşması 1921 sonunda Kafkas cumhuriyetleriyle yapılmıştır; 1920 sonunda değildir.','d'),('Ankara Antlaşması','Ankara Antlaşması Fransa ile imzalanmıştır.','b'),('Mudanya Ateşkes Antlaşması','Mudanya 1922’de İtilaf Devletleri ve Yunanistan ile imzalanmıştır.','d')],
+  istenen='Ermenistan ile imzalanan antlaşma.',ip=['Antlaşmanın tarafı ve yılı soruda verilmiş.','1920 sonunda imzalanan tek antlaşma hangisidir?','Moskova ve Ankara kimlerle yapıldı?'],
+  bilgi=[B_ANT],
+  adim=[('Veriyi oku','Antlaşma Ermenistan ile, Doğu Cephesi’nde, 1920 sonunda yapılmıştır.','taraf: Ermenistan · yıl: 1920'),('Antlaşmaları eşle','Moskova: Sovyet Rusya · Ankara: Fransa · Kars: Kafkas cumhuriyetleri · Mudanya: ateşkes.','Ermenistan = Gümrü'),('Sonuç','TBMM’nin imzaladığı ilk antlaşma Gümrü’dür.','Gümrü Antlaşması')],
+  puf='Antlaşma sorularında önce karşı tarafı bul: Ermenistan Gümrü, Sovyet Rusya Moskova, Fransa Ankara.'),
+ dict(metin='Güney Cephesi’nde Kuvayımilliye ve halk Fransız işgaline karşı direnmiş; 1921’de TBMM Hükümeti, Fransa ile bir antlaşma imzalamıştır. Bu antlaşma Kurtuluş Savaşı sırasında İtilaf Devletleri’nden biriyle imzalanan ilk antlaşmadır.\nBu antlaşma aşağıdakilerden hangisidir?',
+  dogru='Ankara Antlaşması',yan=[('Gümrü Antlaşması','Gümrü Ermenistan ile yapılmıştır ve 1920 sonundadır.','b'),('Moskova Antlaşması','Moskova Sovyet Rusya ile yapılmıştır; Sovyet Rusya İtilaf Devleti değildir.','b'),('Kars Antlaşması','Kars Antlaşması Kafkas cumhuriyetleriyle imzalanmıştır.','b'),('Mudanya Ateşkes Antlaşması','Mudanya 1922’de, Batı Cephesi’ndeki zaferden sonra imzalanmıştır.','d')],
+  istenen='Fransa ile imzalanan antlaşma.',ip=['Antlaşmanın karşı tarafı Fransa.','İtilaf Devletleri’nden biriyle yapılan ilk antlaşma hangisi?','Sovyet Rusya ve Ermenistan İtilaf Devleti midir?'],
+  adim=[('Veriyi oku','Antlaşma Fransa ile, Güney Cephesi’nde yapılmıştır.','taraf: Fransa'),('Karşı tarafa bak','Gümrü ve Kars Kafkaslar ile, Moskova Sovyet Rusya ile imzalandı.','diğerleri: Fransa ile değil'),('Sonuç','Fransa ile yapılan antlaşma Ankara Antlaşması’dır.','Ankara Antlaşması')]))
+
+# ---- 0002 sıra · orta
+Q.ekle('0002','K-HKS-02','orta','Olayların Sakarya Meydan Muharebesi’ne göre sırasını belirler.','öncüllü',3,
+ dict(metin='I. Teşkilat-ı Esasiye’nin kabul edilmesi\nII. Mustafa Kemal’e Başkomutanlık yetkisinin verilmesi\nIII. Mustafa Kemal’e Gazi unvanının verilmesi\nYukarıdaki gelişmelerden hangileri Sakarya Meydan Muharebesi’nden önce gerçekleşmiştir?',
+  sirali=[('Yalnız I','II. öncül de savaştan önce, Ağustos 1921’de gerçekleşti.','d'),('Yalnız III','Gazi unvanı savaşın ardından, Eylül 1921’de verildi.','b'),('I ve II',None,None),('II ve III','III. öncül savaştan sonradır.','b'),('I, II ve III','III. öncül savaştan sonra gerçekleşti.','b')],
+  istenen='Sakarya’dan önceki gelişmeler.',ip=['Teşkilat-ı Esasiye hangi yılın başında kabul edildi?','Başkomutanlık yetkisi savaştan hemen önce mi verildi?','Gazi unvanı savaşı kazanmanın bir ödülüdür.'],
+  bilgi=[B_SIRAL],
+  adim=[('Savaşın tarihini koy','Sakarya Meydan Muharebesi Ağustos–Eylül 1921’de yapıldı.','ölçüt: Ağustos–Eylül 1921'),('Öncülleri tarihle','I: Ocak 1921, II: 5 Ağustos 1921, III: savaştan sonra Eylül 1921.','I ve II önce · III sonra'),('Sonuç','Savaştan önce gerçekleşenler I ve II’dir.','I ve II')],
+  puf='“Gazi” unvanı zaferin sonucudur; zaferden önce verilemez.'),
+ dict(metin='I. Büyük Taarruz’un başlaması\nII. İzmir’in kurtarılması\nIII. Lozan Barış Antlaşması’nın imzalanması\nYukarıdaki gelişmelerden hangileri Mudanya Ateşkesi’nden önce gerçekleşmiştir?',
+  sirali=[('Yalnız I','II. öncül de ateşkesten önce, Eylül 1922’de gerçekleşti.','d'),('Yalnız III','Lozan 1923’te imzalandı; Mudanya’dan sonradır.','b'),('I ve III','III. öncül ateşkesten sonradır.','b'),('II ve III','III. öncül ateşkesten sonradır.','b'),('I ve II',None,None)],
+  istenen='Mudanya’dan önceki gelişmeler.',ip=['Mudanya Ateşkesi hangi ayda imzalandı?','Büyük Taarruz ve İzmir’in kurtuluşu Ağustos–Eylül 1922’de mi?','Barış antlaşması ateşkesten önce mi sonra mı gelir?'],
+  adim=[('Ölçütü koy','Mudanya Ateşkesi Ekim 1922’de imzalandı.','ölçüt: Ekim 1922'),('Öncülleri tarihle','I: 26 Ağustos 1922, II: 9 Eylül 1922, III: Temmuz 1923.','I, II önce · III sonra'),('Sonuç','Ateşkesten önceki olaylar I ve II’dir.','I ve II')]))
+
+# ---- 0003 sonuç · orta
+Q.ekle('0003','K-HKS-03','orta','Ankara Antlaşması’nın verilen bilgisinden çıkarım yapar.','yeni nesil',3,
+ dict(metin='1921’de TBMM ile Fransa arasında imzalanan Ankara Antlaşması ile Fransa, Güney Cephesi’ndeki işgal bölgelerinden çekilmeyi kabul etmiştir.\nBu bilgiye dayanarak aşağıdakilerden hangisine ulaşılabilir?',
+  dogru='İtilaf Devletleri arasındaki birliğin bozulmaya başladığına',yan=[('Mudanya Ateşkesi’nin imzalandığına','Mudanya Ateşkesi 1922’de, Batı Cephesi’ndeki zaferden sonra imzalandı; metinde yoktur.','d'),('Sevr Antlaşması’nın uygulanmaya başlandığına','Sevr hiçbir zaman uygulanmadı; Fransa’nın çekilmesi tersini gösterir.','b'),('Doğu Cephesi’nin tümüyle kapandığına','Metin Güney Cephesi’nden söz eder, Doğu Cephesi’nden değil.','d'),('Misak-ı Millî’den tamamen vazgeçildiğine','Metinde böyle bir bilgi yoktur; antlaşma, millî mücadelenin bir başarısıdır.','b')],harf=None,
+  istenen='Metinden çıkarılabilecek sonuç.',ip=['Fransa neden işgal bölgelerinden çekiliyor?','Fransa İtilaf Devletleri’nden biridir.','Metin hangi cepheden söz ediyor?'],
+  bilgi=[B_ANK],
+  adim=[('Bilgiyi oku','Fransa, TBMM ile anlaşıp işgal bölgelerinden çekiliyor.','Fransa çekiliyor'),('Anlamı çıkar','Fransa İtilaf Devletleri’nin bir üyesidir; TBMM ile ayrı anlaşması, birliğin bozulduğunu gösterir.','İtilaf birliği bozuluyor'),('Şıkları ele','Mudanya sonradır, Sevr uygulanmadı, Doğu Cephesi anlatılmıyor, Misak-ı Millî’den vazgeçilmedi.','diğer şıklar: elendi')],
+  puf='Metinde anlatılmayan cepheyi, tarihi ve sonucu ekleyen şıkları ele; yalnız metnin gösterdiğine ulaş.'),
+ dict(metin='Sovyet Rusya, 1921’de TBMM Hükümeti ile bir antlaşma imzalamış, Türkiye’nin doğu sınırını belirlemiş ve daha sonra TBMM’ye silah ve para yardımı yapmıştır.\nBu bilgiye dayanarak aşağıdakilerden hangisine ulaşılabilir?',
+  dogru='TBMM’nin uluslararası alanda siyasi saygınlık kazanmaya başladığına',yan=[('Doğu sınırının Lozan’da belirlendiğine','Metinde doğu sınırının 1921 antlaşmasıyla belirlendiği söylenir; Lozan sonradır.','d'),('Sovyet Rusya’nın İtilaf Devletleri ile birlikte hareket ettiğine','Sovyet Rusya, TBMM ile anlaşmış ve ona yardım etmiştir; İtilaf Devletleri’ne katılmamıştır.','b'),('Millî Mücadele’nin dış yardıma tamamen bağımlı olduğuna','Metin yalnız yardımdan söz eder; “tamamen bağımlı” demek aşırı bir yorumdur.','d'),('Saltanatın bu antlaşmayla kaldırıldığına','Saltanat 1922’de kaldırıldı; metinle ilgisi yoktur.','b')],harf=None,
+  istenen='Metinden çıkarılabilecek sonuç.',ip=['Sovyet Rusya kimin yanında yer alıyor?','Yardım “tamamen bağımlılık” demek midir?','Saltanat hangi yıl kaldırıldı?'],
+  adim=[('Bilgiyi oku','Sovyet Rusya TBMM ile antlaşma yapmış, sınırı belirlemiş ve yardım etmiştir.','tanıma + yardım'),('Anlamı çıkar','Büyük bir devletin TBMM ile antlaşma yapması, TBMM’nin tanınmasına katkıdır.','tanınma artıyor'),('Şıkları ele','Lozan ve saltanatın kaldırılması sonradır; Sovyet Rusya İtilaf tarafında değildir; “tamamen bağımlı” aşırıdır.','diğer şıklar: elendi')]))
+
+# ---- 0004 Lozan · orta
+Q.ekle('0004','K-HKS-04','orta','Lozan Barış Antlaşması’nın içeriğine uymayan ifadeyi bulur.','düz',3,
+ dict(metin='Lozan Barış Antlaşması ile ilgili aşağıdakilerden hangisi söylenemez?',
+  dogru='Musul sorunu kesin olarak çözüme kavuşturulmuştur.',yan=[('Kapitülasyonlar kaldırılmıştır.','Bu hüküm antlaşmada yer alır; söylenebilir.','b'),('Boğazlar askerden arındırılmış ve uluslararası bir komisyonun denetimine bırakılmıştır.','Bu hüküm antlaşmada yer alır; söylenebilir.','b'),('Türkiye ile Yunanistan arasında nüfus mübadelesi öngörülmüştür.','Bu hüküm antlaşmada yer alır; söylenebilir.','b'),('Doğu Trakya’da Türkiye–Yunanistan sınırı Meriç Nehri olarak belirlenmiştir.','Bu hüküm antlaşmada yer alır; söylenebilir.','b')],harf=None,
+  istenen='Lozan’da yer almayan ifade.',ip=['“Söylenemez” kökünde yanlış ifade aranır.','Lozan’da çözülemeyip sonraya bırakılan sorun var mı?','Musul’un durumu hangi yolla çözüldü: Lozan’da mı, sonraki görüşmelerde mi?'],
+  bilgi=[B_LOZ],
+  adim=[('Soru kökünü oku','“Söylenemez”: antlaşmada olmayan (yanlış) ifade aranıyor.','aranan: yanlış ifade'),('Hükümleri hatırla','Kapitülasyonların kaldırılması, Boğazlar rejimi, mübadele ve Meriç sınırı antlaşmada vardır.','dört ifade: doğru'),('Yanlışı bul','Musul sorunu Lozan’da çözülemedi, ayrı görüşmelere bırakıldı.','Musul: ertelendi')],
+  puf='Lozan’da “çözülmeyip ertelenenler” (Musul, Hatay) sık tuzaktır; “kesin çözüldü” diyen şıkka dikkat.'),
+ dict(metin='Aşağıdakilerden hangisi Lozan Barış Antlaşması’nda alınan kararlardan biri değildir?',
+  dogru='Doğu Anadolu’da bağımsız bir Ermenistan kurulması kabul edilmiştir.',yan=[('Kapitülasyonların tümüyle kaldırıldığı belirtilmiştir.','Bu karar Lozan’da vardır.','b'),('Gayrimüslim azınlıkların Türk yasaları çerçevesinde haklarının korunacağı belirtilmiştir.','Bu karar Lozan’da vardır.','b'),('Yabancı okulların Türk yasalarına bağlı olacağı belirtilmiştir.','Bu karar Lozan’da vardır.','b'),('Doğu Trakya’da sınırın Meriç Nehri olacağı belirtilmiştir.','Bu karar Lozan’da vardır.','b')],harf=None,
+  istenen='Lozan’da alınmayan karar.',ip=['Bağımsız Ermenistan hangi antlaşmada öngörülmüştü?','Sevr ile Lozan’ı karşılaştır.','Lozan Türkiye’nin bütünlüğünü bozan bir madde taşır mı?'],
+  adim=[('Soru kökünü oku','“Değildir”: Lozan’da olmayan karar aranıyor.','aranan: yanlış karar'),('Kararları hatırla','Kapitülasyonlar, azınlık hakları, yabancı okullar ve Meriç sınırı Lozan’dadır.','dört karar: Lozan’da'),('Yanlışı bul','Bağımsız Ermenistan, Sevr’de öngörülmüştü; Lozan’da böyle bir madde yoktur.','Ermenistan: Sevr')]))
+
+# ---- 0005 yorum · zor
+Q.ekle('0005','K-HKS-05','zor','Sakarya anlatımından çıkarılamayacak yargıyı bulur.','yeni nesil',4,
+ dict(metin='Mustafa Kemal, TBMM’nin kendisine verdiği Başkomutanlık yetkisiyle yönettiği Sakarya Meydan Muharebesi’nde, savunmanın tek bir hatta değil, bütün yurt toprağında yapılmasını emretmiştir. Yaklaşık üç hafta süren savaşın sonunda Yunan ordusu Sakarya’nın batısına çekilmek zorunda kalmıştır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?',
+  dogru='Savaşın, TBMM’nin denetimi dışında yürütüldüğüne',yan=[('Başkomutanlığın Meclis’in verdiği yetkiye dayandığına','Metin yetkinin TBMM’den geldiğini açıkça söyler; ulaşılabilir.','b'),('Savunmada alan savunması anlayışının benimsendiğine','Metin, savunmanın tek hatta değil bütün toprakta yapıldığını söyler; ulaşılabilir.','b'),('Yunan ordusunun ilerleyişinin durdurulduğuna','Metin, ordunun çekilmek zorunda kaldığını söyler; ulaşılabilir.','b'),('Savaşın Sakarya Nehri çevresinde yapıldığına','Metin, Sakarya Meydan Muharebesi’nden ve Yunan ordusunun Sakarya’nın batısına çekilmesinden söz eder; ulaşılabilir.','d')],harf=None,
+  istenen='Metinden çıkarılamayan yargı.',ip=['“Ulaşılamaz” kökünde metne aykırı ya da metinde olmayan yargı aranır.','Yetkiyi veren kurum metinde var mı?','Dört şık metinden çıkıyor; biri çıkmıyor.'],
+  bilgi=[B_SAK],
+  adim=[('Metni özetle','Yetki TBMM’den; savunma bütün topraklarda; savaş yaklaşık üç hafta; Yunan ordusu geri çekildi.','4 bilgi'),('Şıkları metinle sına','Yetkinin kaynağı, alan savunması, ilerleyişin durması ve savaş yeri metinde var.','dört şık: çıkarılabilir'),('Çıkmayanı seç','Yetki TBMM’den geldiğine göre savaş TBMM denetimi dışında yürümemiştir.','doğru: çıkarılamayan')],
+  puf='“Ulaşılamaz” sorusunda her şıkka “metinde buna dayanak var mı?” diye sor; dayanağı olmayan ya da metne ters olan cevaptır.'),
+ dict(metin='Büyük Taarruz, 26 Ağustos 1922’de başlamış; dört gün sonra Başkomutanlık Meydan Muharebesi’yle Yunan ordusu kesin bir yenilgiye uğratılmış, 9 Eylül’de İzmir’e girilmiştir. Taarruz, Sakarya’da savunmaya geçmiş olan ordunun uzun hazırlığının ürünüdür.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?',
+  dogru='Mudanya Ateşkesi’nin taarruzdan önce imzalandığına',yan=[('Yunan ordusunun Anadolu’daki gücünün büyük ölçüde kırıldığına','Metin, kesin yenilgiden söz eder; ulaşılabilir.','b'),('Taarruzun önceden yapılan hazırlığa dayandığına','Metin, uzun hazırlıktan söz eder; ulaşılabilir.','b'),('İzmir’in taarruzdan kısa süre sonra kurtarıldığına','Metin, 9 Eylül’de İzmir’e girildiğini söyler; ulaşılabilir.','d'),('Taarruz öncesinde ordunun bir dönem savunmada kaldığına','Metin, Sakarya’da savunmaya geçildiğini söyler; ulaşılabilir.','d')],harf=None,
+  istenen='Metinden çıkarılamayan yargı.',ip=['Metinde ateşkesten söz ediliyor mu?','Ateşkes zaferin sonucu mu, nedeni mi?','Dört şık metindeki ifadelere dayanıyor.'],
+  adim=[('Metni özetle','Taarruz 26 Ağustos’ta başladı, kesin yenilgi aldı, İzmir 9 Eylül’de alındı; hazırlık uzundu.','4 bilgi'),('Şıkları metinle sına','Yenilgi, hazırlık, İzmir’in kısa sürede alınması ve savunma dönemi metinde var.','dört şık: çıkarılabilir'),('Çıkmayanı seç','Mudanya Ateşkesi Ekim 1922’dedir, yani taarruzdan sonra.','doğru: çıkarılamayan')]))
+
+# ---- 0006 neden · zor
+Q.ekle('0006','K-HKS-06','zor','Saltanatın kaldırılmasının nedenini kronolojiyle belirler.','yeni nesil',4,
+ dict(metin='Büyük Taarruz’un zaferle sonuçlanmasından sonra imzalanan Mudanya Ateşkesi’nin ardından İtilaf Devletleri, barış görüşmeleri için hem İstanbul hem de Ankara Hükümeti’ni Lozan’a çağırmıştır. TBMM, 1 Kasım 1922’de saltanatı kaldırmıştır.\nBu karar aşağıdakilerden hangisiyle açıklanabilir?',
+  dogru='TBMM’nin millet adına konuşan tek meşru yönetim olduğunu kabul ettirmek istemesiyle',yan=[('Cumhuriyetin ilan edilmiş olmasıyla','Cumhuriyet 1923’te ilan edildi; saltanatın kaldırılmasından sonradır.','d'),('Halifeliğin kaldırılmasıyla','Halifelik 1924’te kaldırıldı; sonradır.','d'),('Lozan Barış Antlaşması’nın imzalanmasıyla','Lozan 1923’te imzalandı; karardan sonradır.','b'),('Sevr Antlaşması’nın TBMM tarafından onaylanmasıyla','TBMM Sevr’i hiçbir zaman onaylamadı.','b')],harf=None,
+  istenen='Saltanatın kaldırılma nedeni.',ip=['İtilaf Devletleri kimleri konferansa çağırdı?','İki hükümetin çağrılması TBMM açısından neyi sorun yaptı?','Seçeneklerden hangileri Kasım 1922’den sonra gerçekleşti?'],
+  bilgi=[B_SAL],
+  adim=[('Gelişmeyi oku','Hem İstanbul hem Ankara Hükümeti konferansa çağrılıyor.','iki hükümet'),('Çelişkiyi bul','Millet adına tek temsilci TBMM’dir; çifte yönetim bu ilkeyle bağdaşmaz.','tek meşru yönetim'),('Şıkları ele','Cumhuriyet, halifeliğin kaldırılması ve Lozan sonraki olaylardır; TBMM Sevr’i onaylamadı.','diğer şıklar: elendi'),('Sonuç','Saltanat, TBMM’nin tek meşru yönetim olmasını sağlamak için kaldırıldı.','doğru: tek meşru yönetim')],
+  puf='Nedeni ararken önce olayın tarihini koy; o tarihten sonra gerçekleşen bir olay neden olamaz.'),
+ dict(metin='Doğu Anadolu’da bir Ermeni devleti kurulmasını öngören Sevr Antlaşması’nı TBMM tanımamıştır. Doğu Cephesi’nde Ermenistan’ın yenilmesi üzerine 1920 sonunda imzalanan Gümrü Antlaşması’nda Ermenistan, Sevr’i geçersiz saymayı kabul etmiştir.\nBu durum aşağıdakilerden hangisine yol açmıştır?',
+  dogru='Sevr’in Doğu Anadolu’ya ilişkin hükümlerinin uygulanma olanağının ortadan kalkmasına',yan=[('Lozan Antlaşması’nın imzalanmasına','Lozan 1923’te imzalandı; Gümrü’nün doğrudan sonucu değildir.','d'),('Mudanya Ateşkesi’nin imzalanmasına','Mudanya, 1922’de Batı Cephesi’ndeki zaferin sonucudur.','d'),('Doğu Anadolu’nun Sovyet Rusya’ya bırakılmasına','Gümrü’de böyle bir hüküm yoktur; Doğu Anadolu Türkiye’de kaldı.','b'),('Güney Cephesi’nde Fransa’nın çekilmesine','Fransa’nın çekilmesi 1921 Ankara Antlaşması ile gerçekleşti; Gümrü ile ilgisi yoktur.','b')],harf=None,
+  istenen='Gümrü Antlaşması’nın sonucu.',ip=['Sevr’de Doğu Anadolu için ne öngörülmüştü?','Ermenistan Gümrü’de Sevr’i geçersiz sayınca ne oldu?','Seçeneklerden hangileri başka cepheye ya da sonraki yıllara ait?'],
+  adim=[('Gelişmeyi oku','Sevr, Doğu Anadolu’da Ermeni devleti öngörüyor; Ermenistan Gümrü’de Sevr’i geçersiz sayıyor.','Sevr geçersiz'),('Sonucu çıkar','Hükümlerden yararlanacak devlet vazgeçince, Doğu Anadolu’ya ilişkin Sevr hükümleri uygulanamaz.','uygulama yok'),('Şıkları ele','Lozan ve Mudanya sonradır; Doğu Anadolu Sovyet Rusya’ya bırakılmadı; Fransa Güney Cephesi’nde çekildi.','diğer şıklar: elendi'),('Sonuç','Gümrü, Sevr’in Doğu Anadolu hükümlerini işlemez kıldı.','doğru: Sevr işlemez')]))
+
+Q.bitir()
