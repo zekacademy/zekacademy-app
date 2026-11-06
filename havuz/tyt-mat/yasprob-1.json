@@ -1,0 +1,651 @@
+[
+ {
+  "id": "tytmat-yasprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Gelecekte kat",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Bugünkü ve gelecekteki kat ilişkilerinden yaşları bulur.",
+  "tipId": "yas-kat",
+  "tip": "Yaşlar arasında kat ilişkisi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bugün Ece’nin annesinin yaşı, Ece’nin yaşının 4 katıdır.\n6 yıl sonra annesinin yaşı, Ece’nin o zamanki yaşının 3 katı olacaktır.\nBuna göre Ece’nin annesi bugün kaç yaşındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "36",
+   "C": "48",
+   "D": "54",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "12, Ece’nin bugünkü yaşı; soru annesini soruyor.",
+   "B": "36, anne ile Ece arasındaki yaş farkı.",
+   "D": "54, annenin 6 yıl sonraki yaşı.",
+   "E": "72, annenin yaşına 6 eklemeyi unutmak (4e = 3 × (e + 6) ⇒ e = 18)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Annenin bugünkü yaşı.",
+  "bilgi": [
+   {
+    "ad": "“Katı” denklemi",
+    "ifade": "“A’nın yaşı B’nin yaşının 3 katı” ⇒ A = 3 × B. Yıl kaydırınca iki kişinin yaşına da aynı sayı eklenir ya da çıkarılır"
+   }
+  ],
+  "ipuclari": [
+   "Ece’nin bugünkü yaşına e de; annenin yaşı ne olur?",
+   "6 yıl sonra ikisinin de yaşına 6 ekle.",
+   "Denklemi çöz; soru kimin yaşını soruyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bugünkü yaşlar",
+    "aciklama": "Ece e, annesi 4e yaşında.",
+    "islem": "Ece: e · anne: 4e"
+   },
+   {
+    "baslik": "6 yıl sonra",
+    "aciklama": "İkisi de 6 yaş büyür.",
+    "islem": "4e + 6 = 3 × (e + 6) = 3e + 18 ⇒ e = 12"
+   },
+   {
+    "baslik": "Annenin yaşı",
+    "aciklama": "Bugünkü yaş 4e.",
+    "islem": "4 × 12 = 48 · kontrol: 54 = 3 × 18 ✓"
+   }
+  ],
+  "puf": "Yıl kaydırırken iki kişinin yaşına da aynı sayıyı ekle; sonra sorunun kimi sorduğunu kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0001k",
+  "kaynakKart": "K-YAS-01 (bugün ve gelecekte kat ilişkisi) · yeni kurgu (anne–kız), gelecek 6 yıl",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Geçmişte toplam yaş",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Bir grubun yaşları toplamının geçmişteki değerini kişi sayısıyla yılı çarparak bulur.",
+  "tipId": "yas-toplam",
+  "tip": "Yaşlar toplamının zamanla değişimi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Anne, baba ve iki çocuktan oluşan dört kişilik bir ailenin bugünkü yaşları toplamı 104’tür.\nAilenin en küçük üyesi 7 yaşındadır.\nBuna göre 6 yıl önce bu ailedeki dört kişinin yaşları toplamı kaçtı?",
+  "sekil": null,
+  "siklar": {
+   "A": "80",
+   "B": "86",
+   "C": "92",
+   "D": "98",
+   "E": "128"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "80"
+  },
+  "celdiriciler": {
+   "B": "86, yalnızca 3 kişinin yaşından 6 çıkarmak.",
+   "C": "92, yalnızca 2 kişinin yaşından 6 çıkarmak.",
+   "D": "98, toplamdan yalnızca 6 çıkarmak; her kişi ayrı ayrı 6 yaş küçüktü.",
+   "E": "128, 6 yıl önce yerine 6 yıl sonrayı hesaplamak."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "6 yıl önceki toplam yaş.",
+  "bilgi": [
+   {
+    "ad": "Zamanla toplam yaş",
+    "ifade": "n kişinin her biri t yıl büyürse yaşları toplamı n × t artar. Örnek: 3 kişi 5 yıl sonra toplam 15 yaş büyür"
+   }
+  ],
+  "ipuclari": [
+   "6 yıl önce her bir aile üyesi kaç yaş küçüktü?",
+   "Ailede kaç kişi var?",
+   "En küçük üye 6 yıl önce doğmuş muydu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Herkes doğmuş mu?",
+    "aciklama": "En küçük üye 7 yaşında; 6 yıl önce o da doğmuştu.",
+    "islem": "4 kişi de sayılır"
+   },
+   {
+    "baslik": "Toplam azalma",
+    "aciklama": "4 kişinin her biri 6 yaş küçüktü.",
+    "islem": "4 × 6 = 24"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bugünkü toplamdan çıkar.",
+    "islem": "104 − 24 = 80"
+   }
+  ],
+  "puf": "t yıl geçmişe gidince toplam yaş, kişi sayısı × t kadar azalır.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0002k",
+  "kaynakKart": "K-YAS-03 (toplam yaşın değişimi) · yeni kurgu (dört kişilik aile), geçmişe gidiş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · İki konuşma cümlesi",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "“Senin yaşındayken” ve “benim yaşıma geldiğinde” cümlelerini yaş farkı kadar geri ve ileri gitmek olarak yorumlar.",
+  "tipId": "yas-fark",
+  "tip": "Sabit yaş farkı (“ben senin yaşındayken”)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Murat, kız kardeşi Elif’e şunları söylemiştir:\n• “Sen benim bugünkü yaşıma geldiğinde ben 46 yaşında olacağım.”\n• “Ben senin bugünkü yaşındayken sen 10 yaşındaydın.”\nBuna göre Murat bugün kaç yaşındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "22",
+   "C": "28",
+   "D": "34",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "34"
+  },
+  "celdiriciler": {
+   "A": "12, iki kardeş arasındaki yaş farkı.",
+   "B": "22, Elif’in bugünkü yaşı.",
+   "C": "28, iki kardeşin bugünkü yaşlarının ortalaması ((46 + 10) ÷ 2).",
+   "E": "36, 46 ile 10’un farkı; bu fark yaş farkının 3 katıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Murat’ın bugünkü yaşı.",
+  "bilgi": [
+   {
+    "ad": "Yaş farkı değişmez",
+    "ifade": "iki kişinin yaş farkı her zaman aynıdır. Örnek: anne 30, kızı 6 ise 10 yıl sonra 40 ve 16; fark yine 24"
+   }
+  ],
+  "ipuclari": [
+   "Yaş farkına d de. Elif, Murat’ın yaşına kaç yıl sonra gelir?",
+   "Murat, Elif’in bugünkü yaşında kaç yıl önceydi?",
+   "46 ile 10 arasında kaç tane d var?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı adlandır",
+    "aciklama": "Murat m, Elif e yaşında; fark d = m − e.",
+    "islem": "m = e + d"
+   },
+   {
+    "baslik": "İki zamanı yaz",
+    "aciklama": "d yıl sonra Murat 46, d yıl önce Elif 10.",
+    "islem": "m + d = 46 · e − d = 10"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "46’dan 10’a: m + d − (e − d) = (m − e) + 2d = 3d.",
+    "islem": "46 − 10 = 36 = 3d ⇒ d = 12"
+   },
+   {
+    "baslik": "Murat",
+    "aciklama": "m + d = 46.",
+    "islem": "m = 46 − 12 = 34 (Elif 22)"
+   }
+  ],
+  "puf": "“Senin yaşındayken” = yaş farkı kadar geri, “benim yaşıma geldiğinde” = yaş farkı kadar ileri gitmektir.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0003k",
+  "kaynakKart": "K-YAS-02 (sabit yaş farkı) · yeni kurgu (kardeşler), geçmiş ve gelecek birlikte",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Eşyanın yapım yılı",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "İki farklı yıldaki kat ilişkisinden bir eşyanın yaşını ve yapıldığı yılı bulur.",
+  "tipId": "yas-yil",
+  "tip": "Takvim yılı ile yaş",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Selin, 2026 yılında dedesinden kalan bir duvar saatinin yapım yılını merak etmiş ve şunları hesaplamıştır:\n• 2026 yılında saatin yaşı, Selin’in yaşının 4 katıdır.\n• 2016 yılında saatin yaşı, Selin’in o yılki yaşının 9 katıydı.\nBuna göre bu duvar saati hangi yılda yapılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1946",
+   "B": "1952",
+   "C": "1962",
+   "D": "1972",
+   "E": "2010"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1962"
+  },
+  "celdiriciler": {
+   "A": "1946, saatin yaşını (64) Selin’in doğum yılından (2010) çıkarmak.",
+   "B": "1952, 2026’daki yaşı (64) 2016’dan çıkarmak; yaş ile yıl uyuşmuyor.",
+   "D": "1972, 2016’daki yaşı (54) 2026’dan çıkarmak.",
+   "E": "2010, Selin’in doğum yılı; soru saatin yapım yılını soruyor."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Saatin yapıldığı yıl.",
+  "bilgi": [
+   {
+    "ad": "Yıl ve yaş",
+    "ifade": "yaş = içinde bulunulan yıl − doğum (yapım) yılı. Örnek: 2010’da doğan biri 2026’da 16 yaşındadır"
+   },
+   {
+    "ad": "“Katı” denklemi",
+    "ifade": "“A’nın yaşı B’nin yaşının 3 katı” ⇒ A = 3 × B. Yıl kaydırınca iki kişinin yaşına da aynı sayı eklenir ya da çıkarılır"
+   }
+  ],
+  "ipuclari": [
+   "2026’da Selin’in yaşına s de; saatin yaşı kaçtır?",
+   "2016, 2026’dan kaç yıl önce? İki yaştan da o kadar çıkar.",
+   "Saatin 2026’daki yaşını 2026’dan çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "2026’daki yaşlar",
+    "aciklama": "Selin s, saat 4s yaşında.",
+    "islem": "Selin: s · saat: 4s"
+   },
+   {
+    "baslik": "2016’ya git",
+    "aciklama": "10 yıl önce; ikisinden de 10 çıkar.",
+    "islem": "4s − 10 = 9 × (s − 10) = 9s − 90 ⇒ 5s = 80 ⇒ s = 16"
+   },
+   {
+    "baslik": "Saatin yaşı",
+    "aciklama": "2026’da 4s.",
+    "islem": "4 × 16 = 64"
+   },
+   {
+    "baslik": "Yapım yılı",
+    "aciklama": "Yıl − yaş.",
+    "islem": "2026 − 64 = 1962 · kontrol: 2016’da 54 = 9 × 6 ✓"
+   }
+  ],
+  "puf": "Yapım ya da doğum yılını bulurken yaşı hangi yıla göre bulduysan o yıldan çıkar.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0004k",
+  "kaynakKart": "K-YAS-04 (takvim yılı ile yaş) · yeni kurgu (duvar saati), iki yılda kat ilişkisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Gruba katılanlar",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Ortalamadan toplamlara geçip gruba katılanların yaşlarını bulur.",
+  "tipId": "yas-ortalama",
+  "tip": "Yaş ortalaması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir korodaki 8 kişinin yaş ortalaması 30’dur.\nKoroya 2 yeni üye katıldıktan sonra korodaki tüm üyelerin yaş ortalaması 28 olmuştur.\nYeni üyelerden biri diğerinden 6 yaş büyük olduğuna göre büyük olan üye kaç yaşındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "20",
+   "C": "23",
+   "D": "31",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "17, küçük olan yeni üyenin yaşı.",
+   "B": "20, iki yeni üyenin yaş ortalaması.",
+   "D": "31, yeni üyelerin yaş ortalamasını 28 sanmak (toplam 56).",
+   "E": "40, iki yeni üyenin yaşları toplamı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yeni üyelerden büyük olanın yaşı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = yaşlar toplamı ÷ kişi sayısı ⇒ toplam = ortalama × kişi sayısı. Örnek: 4 kişinin ortalaması 20 ise toplam 80"
+   }
+  ],
+  "ipuclari": [
+   "8 kişinin yaşları toplamı kaç?",
+   "10 kişinin yaşları toplamı kaç?",
+   "İki toplamın farkı yeni üyelerin yaşları toplamıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk toplam",
+    "aciklama": "Ortalama × kişi sayısı.",
+    "islem": "8 × 30 = 240"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "Katılımdan sonra 10 kişi.",
+    "islem": "10 × 28 = 280"
+   },
+   {
+    "baslik": "Yeni üyeler",
+    "aciklama": "Farkları 6 olan iki yaşın toplamı 40.",
+    "islem": "280 − 240 = 40 · x + (x − 6) = 40 ⇒ x = 23"
+   }
+  ],
+  "puf": "Ortalama sorularında önce toplamlara geç; toplamlar arasındaki fark katılan ya da ayrılanların toplamıdır.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0005k",
+  "kaynakKart": "K-YAS-05 (yaş ortalaması) · yeni kurgu (koro), iki kişi katılıyor, yaş farkı verildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Çocukların toplam yaşı",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Bir kişinin yaşı ile birden çok kişinin yaşları toplamı arasındaki kat ilişkisini, toplamın kişi sayısı kadar arttığını gözeterek kurar.",
+  "tipId": "yas-kat",
+  "tip": "Yaşlar arasında kat ilişkisi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir babanın bugünkü yaşı, iki çocuğunun bugünkü yaşları toplamının 3 katıdır.\n6 yıl sonra babanın yaşı, iki çocuğunun o zamanki yaşları toplamının 2 katı olacaktır.\nBuna göre baba bugün kaç yaşındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "30",
+   "C": "36",
+   "D": "54",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "54"
+  },
+  "celdiriciler": {
+   "A": "18, çocukların bugünkü yaşları toplamı.",
+   "B": "30, çocukların 6 yıl sonraki yaşları toplamı.",
+   "C": "36, baba ile çocukların yaşları toplamı arasındaki fark.",
+   "E": "60, babanın 6 yıl sonraki yaşı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Babanın bugünkü yaşı.",
+  "bilgi": [
+   {
+    "ad": "“Katı” denklemi",
+    "ifade": "“A’nın yaşı B’nin yaşının 3 katı” ⇒ A = 3 × B. Yıl kaydırınca iki kişinin yaşına da aynı sayı eklenir ya da çıkarılır"
+   },
+   {
+    "ad": "Zamanla toplam yaş",
+    "ifade": "n kişinin her biri t yıl büyürse yaşları toplamı n × t artar. Örnek: 3 kişi 5 yıl sonra toplam 15 yaş büyür"
+   }
+  ],
+  "ipuclari": [
+   "Çocukların bugünkü yaşları toplamına s de.",
+   "6 yıl sonra iki çocuğun yaşları toplamı kaç artar?",
+   "Denklemi kur ve babanın yaşını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bugün",
+    "aciklama": "Çocukların toplamı s, baba 3s.",
+    "islem": "baba: 3s"
+   },
+   {
+    "baslik": "6 yıl sonra",
+    "aciklama": "Baba 6 yaş büyür; iki çocuğun toplamı 2 × 6 = 12 artar.",
+    "islem": "3s + 6 = 2 × (s + 12)"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "3s + 6 = 2s + 24.",
+    "islem": "s = 18 ⇒ baba 3 × 18 = 54 · kontrol: 60 = 2 × 30 ✓"
+   }
+  ],
+  "puf": "Bir toplamın içinde kaç kişi varsa, yıl kaydırınca toplam o kadar kez değişir.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0006k",
+  "kaynakKart": "K-YAS-01 (kat ilişkisi) · bir kişi ile iki kişinin toplamı, gelecek 6 yıl",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Toplam ve yaş farkı",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Yaşlar toplamı ile “senin yaşındayken” bilgisinden yaşları bulur; ileri bir zamandaki toplamı yaş farkı kadar ilerleyerek hesaplar.",
+  "tipId": "yas-fark",
+  "tip": "Sabit yaş farkı (“ben senin yaşındayken”)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ayşe ile annesinin bugünkü yaşları toplamı 56’dır.\nAnnesi, Ayşe’nin bugünkü yaşındayken Ayşe 4 yaşındaydı.\nBuna göre Ayşe, annesinin bugünkü yaşına geldiğinde ikisinin yaşları toplamı kaç olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "36",
+   "B": "52",
+   "C": "72",
+   "D": "88",
+   "E": "104"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "88"
+  },
+  "celdiriciler": {
+   "A": "36, annenin bugünkü yaşı; Ayşe’nin o zamanki yaşı.",
+   "B": "52, annenin o zamanki yaşı; soru toplamı soruyor.",
+   "C": "72, toplama 16’yı yalnızca bir kez eklemek; iki kişi de 16 yaş büyür.",
+   "E": "104, annenin o zamanki yaşını iki kez almak; Ayşe o zaman 36 yaşında olur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ayşe annesinin bugünkü yaşına geldiğindeki yaşlar toplamı.",
+  "bilgi": [
+   {
+    "ad": "Yaş farkı değişmez",
+    "ifade": "iki kişinin yaş farkı her zaman aynıdır. Örnek: anne 30, kızı 6 ise 10 yıl sonra 40 ve 16; fark yine 24"
+   },
+   {
+    "ad": "Zamanla toplam yaş",
+    "ifade": "n kişinin her biri t yıl büyürse yaşları toplamı n × t artar. Örnek: 3 kişi 5 yıl sonra toplam 15 yaş büyür"
+   }
+  ],
+  "ipuclari": [
+   "Yaş farkına d de; annesi Ayşe’nin yaşındayken kaç yıl önceydi?",
+   "O zaman Ayşe 4 yaşındaydı: Ayşe’nin yaşı d cinsinden ne olur?",
+   "Ayşe annesinin yaşına d yıl sonra gelir; o zaman ikisi de d yaş büyümüştür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yaşları d ile yaz",
+    "aciklama": "d yıl önce Ayşe 4 yaşındaydı.",
+    "islem": "Ayşe: d + 4 · anne: 2d + 4"
+   },
+   {
+    "baslik": "Toplamı kullan",
+    "aciklama": "İki yaşın toplamı 56.",
+    "islem": "3d + 8 = 56 ⇒ d = 16"
+   },
+   {
+    "baslik": "Bugünkü yaşlar",
+    "aciklama": "Ayşe 20, annesi 36.",
+    "islem": "20 + 36 = 56 ✓"
+   },
+   {
+    "baslik": "Gelecek",
+    "aciklama": "Ayşe 36’ya 16 yıl sonra gelir; iki kişi 16’şar yaş büyür.",
+    "islem": "56 + 2 × 16 = 88 (36 ve 52)"
+   }
+  ],
+  "puf": "İki kişinin toplam yaşı t yılda 2t artar; “benim yaşıma geldiğinde” t’nin yaş farkı olduğunu gösterir.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0007k",
+  "kaynakKart": "K-YAS-02 (sabit yaş farkı) · toplam yaş verildi, istenen gelecekteki toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-yasprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Yaş Problemleri · Doğum yılları ve farklar",
+  "k": "prob|Yaş Problemleri",
+  "kazanim": "Doğumlardaki yaşlardan yaş farklarını çıkarır, kat ilişkisiyle yaşları bulup doğum yılını hesaplar.",
+  "tipId": "yas-yil",
+  "tip": "Takvim yılı ile yaş",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Kerem, 2026 yılında dedesiyle sohbet etmektedir. Dedesi Kerem’e şunları söylemiştir:\n• “Sen doğduğunda ben 58 yaşındaydım.”\n• “Baban doğduğunda ise ben 26 yaşındaydım.”\nBugün Kerem’in babasının yaşı, Kerem’in yaşının 3 katı olduğuna göre dede hangi yılda doğmuştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "1952",
+   "B": "1955",
+   "C": "1968",
+   "D": "1978",
+   "E": "2010"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1952"
+  },
+  "celdiriciler": {
+   "B": "1955, baba ile Kerem arasındaki farkı 26 almak (k = 13, dede 71).",
+   "C": "1968, 58’i dedenin bugünkü yaşı sanmak.",
+   "D": "1978, Kerem’in babasının doğum yılı.",
+   "E": "2010, Kerem’in doğum yılı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Dedenin doğum yılı.",
+  "bilgi": [
+   {
+    "ad": "Yıl ve yaş",
+    "ifade": "yaş = içinde bulunulan yıl − doğum (yapım) yılı. Örnek: 2010’da doğan biri 2026’da 16 yaşındadır"
+   },
+   {
+    "ad": "Yaş farkı değişmez",
+    "ifade": "iki kişinin yaş farkı her zaman aynıdır. Örnek: anne 30, kızı 6 ise 10 yıl sonra 40 ve 16; fark yine 24"
+   }
+  ],
+  "ipuclari": [
+   "Dede ile Kerem, dede ile baba arasındaki yaş farkları nedir?",
+   "Bu iki farktan baba ile Kerem arasındaki yaş farkını bul.",
+   "Kerem’in yaşını bul, dedenin yaşına geç ve 2026’dan çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yaş farkları",
+    "aciklama": "Doğumdaki yaş, yaş farkıdır.",
+    "islem": "dede − Kerem = 58 · dede − baba = 26"
+   },
+   {
+    "baslik": "Baba − Kerem",
+    "aciklama": "İki farkın farkı.",
+    "islem": "58 − 26 = 32"
+   },
+   {
+    "baslik": "Kerem’in yaşı",
+    "aciklama": "Baba 3k, Kerem k; fark 2k.",
+    "islem": "2k = 32 ⇒ k = 16 · baba 48"
+   },
+   {
+    "baslik": "Dedenin yaşı",
+    "aciklama": "Kerem’den 58 büyük.",
+    "islem": "16 + 58 = 74"
+   },
+   {
+    "baslik": "Doğum yılı",
+    "aciklama": "Yıl − yaş.",
+    "islem": "2026 − 74 = 1952"
+   }
+  ],
+  "puf": "Birinin doğduğu andaki yaş, iki kişi arasındaki yaş farkıdır; farkların farkı da üçüncü bir farktır.",
+  "kisaYol": null,
+  "kardes": "tytmat-yasprob-0008k",
+  "kaynakKart": "K-YAS-04 (takvim yılı ile yaş) · üç kuşak, iki yaş farkı ve kat ilişkisi, istenen doğum yılı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,669 @@
+[
+ {
+  "id": "tytmat-ebobekok-0001k",
+  "ana": "tytmat-ebobekok-0001",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EBOB Problemleri",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Farklı uzunlukları artansız ve olabildiğince uzun eş parçalara ayırmak için EBOB’u kullanır; parça sayısını bulur.",
+  "tipId": "ebk-parca",
+  "tip": "Eş parçalara bölme (EBOB)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir zeytinyağı üreticisinin depolarında 60 litre, 84 litre ve 132 litre zeytinyağı vardır. Üretici bu yağların tamamını, depolardaki yağları birbirine karıştırmadan, eşit hacimli ve olabildiğince büyük bidonlara dolduracaktır.\nBütün bidonlar tamamen dolacağına göre üretici kaç bidon kullanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "23",
+   "C": "46",
+   "D": "69",
+   "E": "92"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "12, bir bidonun hacmi (litre); soru bidon sayısını soruyor.",
+   "C": "Ortak böleni 6 almak; daha büyük ortak bölen (12) var.",
+   "D": "Ortak böleni 4 almak; bidonlar olabildiğince büyük olmalı.",
+   "E": "Ortak böleni 3 almak; en büyük ortak bölen 12."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Kullanılan bidon sayısı.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "sayıların hepsini tam bölen en büyük sayı. Örnek: EBOB(12, 18) = 6 (12 = 6 × 2, 18 = 6 × 3)"
+   }
+  ],
+  "ipuclari": [
+   "Bidon hacmi üç miktarı da tam bölmeli.",
+   "Olabildiğince büyük bidon, en büyük ortak bölendir.",
+   "Her depodaki yağın kaç bidon doldurduğunu topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bidon hacmi",
+    "aciklama": "Üç miktarı da bölen en büyük sayı.",
+    "islem": "EBOB(60, 84, 132) = 12 L"
+   },
+   {
+    "baslik": "Her depo",
+    "aciklama": "Her miktarı 12’ye böl.",
+    "islem": "60 ÷ 12 = 5 · 84 ÷ 12 = 7 · 132 ÷ 12 = 11"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Bidonları topla.",
+    "islem": "5 + 7 + 11 = 23 bidon"
+   }
+  ],
+  "puf": "Bidon sayısını en aza indirmek için bidon hacmini en büyük ortak bölen seç.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-02 (artansız eş parçalar, EBOB) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0002k",
+  "ana": "tytmat-ebobekok-0002",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Periyodik Problemler",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Farklı aralıklarla tekrar eden iki olayın yeniden birlikte gerçekleşeceği zamanı EKOK ile bulur; gün adını 7 ile kalandan belirler.",
+  "tipId": "ebk-periyot",
+  "tip": "Periyodik buluşma (EKOK)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir fabrikadaki A makinesi 10 günde bir, B makinesi 15 günde bir bakıma alınmaktadır. İki makine bir çarşamba günü birlikte bakıma alınmıştır.\nBuna göre iki makine bir sonraki sefer hangi gün birlikte bakıma alınır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazartesi",
+   "B": "Perşembe",
+   "C": "Cuma",
+   "D": "Cumartesi",
+   "E": "Pazar"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Cuma"
+  },
+  "celdiriciler": {
+   "A": "EBOB’u (5) almak; iki olay EKOK’ta yeniden buluşur.",
+   "B": "Yalnız büyük aralığı (15 gün) almak; 15. gün A bakımda değildir.",
+   "D": "10 × 15 = 150 gün almak; ortak katların en küçüğü 30.",
+   "E": "10 + 15 = 25 gün saymak; ortak kat gerekir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Bir sonraki ortak bakımın günü.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "sayıların hepsinin katı olan en küçük pozitif sayı. Örnek: EKOK(4, 6) = 12"
+   },
+   {
+    "ad": "Haftanın günleri",
+    "ifade": "günler 7 günde bir tekrar eder. Örnek: pazartesiden 10 gün sonra: 10 = 7 + 3 ⇒ 3 gün ileri, perşembe"
+   }
+  ],
+  "ipuclari": [
+   "Geçen gün sayısı hem 10’un hem 15’in katı olmalı.",
+   "En küçük ortak katı bul.",
+   "7’ye böl ve kalan kadar çarşambadan ileri say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak bakım",
+    "aciklama": "En küçük ortak kat.",
+    "islem": "EKOK(10, 15) = 30 gün"
+   },
+   {
+    "baslik": "Haftalara ayır",
+    "aciklama": "30 günde 4 tam hafta ve 2 gün var.",
+    "islem": "30 = 7 × 4 + 2"
+   },
+   {
+    "baslik": "Gün adı",
+    "aciklama": "Çarşambadan 2 gün ileri.",
+    "islem": "perşembe, cuma ⇒ cuma"
+   }
+  ],
+  "puf": "Tam haftalar günü değiştirmez; yalnız 7’ye bölümden kalan günleri ileri say.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-05 (periyodik buluşma, gün adı) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0003k",
+  "ana": "tytmat-ebobekok-0003",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EBOB – EKOK Kavramı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "EBOB’u ve toplamı verilen iki sayıyı EBOB × m biçiminde yazar; olası ikilileri tarayıp EKOK’un en büyük değerini bulur.",
+  "tipId": "ebk-tanim",
+  "tip": "EBOB ve EKOK ilişkisi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "m ve n iki basamaklı doğal sayılar ve m < n olmak üzere\nEBOB(m, n) = 9\nm + n = 90\nolduğuna göre EKOK(m, n) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "72",
+   "B": "81",
+   "C": "90",
+   "D": "189",
+   "E": "1701"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "189"
+  },
+  "celdiriciler": {
+   "A": "18 ve 72’yi almak; bu ikilinin EBOB’u 18 olur, 9 değil.",
+   "B": "9 ve 81’i almak; 9 iki basamaklı değil.",
+   "C": "90, iki sayının toplamı; soru EKOK’u soruyor.",
+   "E": "27 × 63 çarpımını EKOK sanmak; EKOK = çarpım ÷ EBOB."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "EKOK(m, n) değeri.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "sayıların hepsini tam bölen en büyük sayı. Örnek: EBOB(12, 18) = 6 (12 = 6 × 2, 18 = 6 × 3)"
+   },
+   {
+    "ad": "EBOB ile EKOK ilişkisi",
+    "ifade": "EBOB(a, b) = d ise a = d × m, b = d × n (m ile n aralarında asal, yani ortak böleni yalnız 1) ve EKOK(a, b) = d × m × n. Örnek: 12 = 6 × 2, 18 = 6 × 3 ⇒ EKOK = 6 × 2 × 3 = 36"
+   }
+  ],
+  "ipuclari": [
+   "m = 9 × x ve n = 9 × y yaz; x ile y’nin ortak böleni olmamalı.",
+   "x + y = 10 olan ikilileri listele.",
+   "İki basamaklı olma ve ortak bölen koşullarını uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "İkisi de 9’un katı; çarpanların ortak böleni yok.",
+    "islem": "m = 9x · n = 9y · x + y = 10"
+   },
+   {
+    "baslik": "İkilileri ele",
+    "aciklama": "(1, 9) ⇒ 9 iki basamaklı değil. (2, 8) ve (4, 6) ortak bölenli. (5, 5) eşit.",
+    "islem": "yalnız (3, 7)"
+   },
+   {
+    "baslik": "Sayılar",
+    "aciklama": "x = 3, y = 7.",
+    "islem": "m = 27 · n = 63"
+   },
+   {
+    "baslik": "EKOK",
+    "aciklama": "EKOK = 9 × 3 × 7.",
+    "islem": "EKOK = 189"
+   }
+  ],
+  "puf": "Çarpanlar listesinde hem ortak bölen hem de basamak koşulunu tek tek kontrol et.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-01 (a = d × m, b = d × n) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0004k",
+  "ana": "tytmat-ebobekok-0004",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EKOK Problemleri",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Eş dikdörtgenlerle oluşturulacak en küçük karenin kenarını EKOK ile bulur; kullanılan parça sayısını hesaplar.",
+  "tipId": "ebk-kare",
+  "tip": "Eş parçalarla kare ve küp oluşturma (EKOK)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Boyutları 4 cm, 6 cm ve 10 cm olan dikdörtgenler prizması biçimindeki eş tahta bloklar, hepsi aynı yönde olacak biçimde ve aralarında boşluk kalmadan üst üste ve yan yana dizilerek içi dolu bir küp oluşturulacaktır.\nBu iş için en az kaç blok gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "31",
+   "C": "60",
+   "D": "240",
+   "E": "900"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "900"
+  },
+  "celdiriciler": {
+   "A": "EBOB’u (2) almak; küpün kenarı üç boyutun da katı olmalı.",
+   "B": "Üç yöndeki blok sayılarını (15, 10, 6) toplamak; çarpılmalı.",
+   "C": "60, küpün bir kenarı (cm); soru blok sayısını soruyor.",
+   "D": "240, bir bloğun hacmi (4 × 6 × 10)."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Küpü oluşturmak için gereken en az blok sayısı.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "sayıların hepsinin katı olan en küçük pozitif sayı. Örnek: EKOK(4, 6) = 12"
+   }
+  ],
+  "ipuclari": [
+   "Küpün kenarı 4’ün, 6’nın ve 10’un ortak katı olmalı.",
+   "En küçük ortak kat kaç?",
+   "Her yönde kaç blok sığar? Üçünü çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Küpün kenarı",
+    "aciklama": "Kenar üç boyutun da katı; en küçüğü EKOK.",
+    "islem": "EKOK(4, 6, 10) = 60 cm"
+   },
+   {
+    "baslik": "Her yöndeki bloklar",
+    "aciklama": "Kenarı her boyuta böl.",
+    "islem": "60 ÷ 4 = 15 · 60 ÷ 6 = 10 · 60 ÷ 10 = 6"
+   },
+   {
+    "baslik": "Toplam blok",
+    "aciklama": "Üç sayıyı çarp.",
+    "islem": "15 × 10 × 6 = 900 blok"
+   }
+  ],
+  "puf": "Küpte üç yön vardır: her yöndeki blok sayısını bul ve üçünü çarp.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-03 (eş dikdörtgenlerle kare, EKOK) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0005k",
+  "ana": "tytmat-ebobekok-0005",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EKOK Problemleri",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Kalanlar bölenden hep aynı sayı eksik olduğunda sayıyı EKOK’un katı eksi sabit biçiminde yazar; sınır koşuluyla en küçük değeri bulur.",
+  "tipId": "ebk-kalan",
+  "tip": "Kalan koşullu sayılar (EKOK)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir spor kulübündeki sporcular 4’erli gruplara ayrıldığında 1, 5’erli gruplara ayrıldığında 2, 6’şarlı gruplara ayrıldığında ise 3 sporcu gruplara giremiyor.\nKulüpteki sporcu sayısı 100’den az olduğuna göre en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "27",
+   "B": "57",
+   "C": "60",
+   "D": "63",
+   "E": "117"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "57"
+  },
+  "celdiriciler": {
+   "A": "EKOK’u 30 sanıp 30 − 3 yazmak; 4, 5 ve 6’nın EKOK’u 60.",
+   "C": "EKOK’u bulup 3 çıkarmamak; 60 sporcu gruplara tam dağılır.",
+   "D": "3’ü çıkarmak yerine eklemek; kalanlar gruplardan 3 eksik.",
+   "E": "120 − 3 = 117 almak; sporcu sayısı 100’den az olmalı."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Sporcu sayısının 100’den küçük en büyük değeri.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "sayıların hepsinin katı olan en küçük pozitif sayı. Örnek: EKOK(4, 6) = 12"
+   },
+   {
+    "ad": "Kalanlı bölme",
+    "ifade": "bölünen = bölen × bölüm + kalan. Örnek: 13 = 4 × 3 + 1; 13 + 3 = 16, 4’ün katı"
+   }
+  ],
+  "ipuclari": [
+   "Her durumda gruba giremeyen sayı, grup büyüklüğünden kaç eksik?",
+   "Sporcu sayısına 3 eklersen ne olur?",
+   "EKOK’un katlarından 3 çıkar; 100’den küçük en büyüğünü seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eksikler aynı",
+    "aciklama": "4 − 1 = 3 · 5 − 2 = 3 · 6 − 3 = 3.",
+    "islem": "n + 3 hem 4’ün, hem 5’in, hem 6’nın katı"
+   },
+   {
+    "baslik": "EKOK",
+    "aciklama": "n + 3, EKOK’un bir katı.",
+    "islem": "EKOK(4, 5, 6) = 60 ⇒ n + 3 = 60, 120, …"
+   },
+   {
+    "baslik": "Sınır",
+    "aciklama": "n = 57, 117, … ; 100’den küçük olan yalnız 57.",
+    "islem": "n = 57"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "57’yi üç bölene ayrı ayrı böl.",
+    "islem": "57 = 4 × 14 + 1 · 57 = 5 × 11 + 2 · 57 = 6 × 9 + 3 ✓"
+   }
+  ],
+  "puf": "“Gruba giremeyen” sayılar gruptan hep aynı kadar eksikse o eksiği ekle; sonuç EKOK’un katı olur.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-04 (kalanlar bölenden sabit eksik, EKOK − sabit) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0006k",
+  "ana": "tytmat-ebobekok-0006",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Periyodik Problemler",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Farklı aralıklarla tekrar eden olayların belli bir sürede kaç kez birlikte gerçekleştiğini EKOK ile sayar; başlangıç ve bitiş anlarını doğru dahil eder.",
+  "tipId": "ebk-periyot",
+  "tip": "Periyodik buluşma (EKOK)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir duraktan A hattının otobüsleri 15 dakikada bir, B hattının otobüsleri 20 dakikada bir, C hattının otobüsleri 25 dakikada bir kalkmaktadır. Üç hattın otobüsleri saat 07.00’de aynı anda kalkmıştır.\nBuna göre 07.00 ile 22.00 arasında, bu iki saat de dahil olmak üzere, üç hattın otobüsleri kaç kez aynı anda kalkar?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4",
+   "D": "16",
+   "E": "181"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "07.00 ve 22.00’deki kalkışları saymamak; iki saat de dahil.",
+   "B": "07.00’deki ilk kalkışı saymamak.",
+   "D": "Yalnız A ile B’nin EKOK’unu (60 dk) almak; C hattı da hesaba katılmalı.",
+   "E": "EBOB’u (5 dk) almak; birlikte kalkış EKOK’ta tekrarlanır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "07.00–22.00 arasında (uçlar dahil) birlikte kalkış sayısı.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "sayıların hepsinin katı olan en küçük pozitif sayı. Örnek: EKOK(4, 6) = 12"
+   },
+   {
+    "ad": "Saat ve dakika",
+    "ifade": "1 saat = 60 dakika. Örnek: 300 dk = 5 saat"
+   }
+  ],
+  "ipuclari": [
+   "Üç hat kaç dakikada bir birlikte kalkar?",
+   "07.00 ile 22.00 arasında kaç dakika var?",
+   "İlk kalkışı da sayarak birlikte kalkış saatlerini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak aralık",
+    "aciklama": "Birlikte kalkışlar EKOK’ta tekrarlanır.",
+    "islem": "EKOK(15, 20, 25) = 300 dk = 5 saat"
+   },
+   {
+    "baslik": "Süre",
+    "aciklama": "07.00’den 22.00’ye 15 saat.",
+    "islem": "15 ÷ 5 = 3 aralık"
+   },
+   {
+    "baslik": "Kalkış sayısı",
+    "aciklama": "İlk kalkış dahil: aralık sayısı + 1.",
+    "islem": "07.00, 12.00, 17.00, 22.00 ⇒ 4"
+   }
+  ],
+  "puf": "Buluşma anlarını tek tek yazmak, “+1”i unutmamanın en güvenli yoludur.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-05 (periyodik buluşma, sayım) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0007k",
+  "ana": "tytmat-ebobekok-0007",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EBOB Problemleri",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Dikdörtgen bir alanı olabildiğince büyük eş karelere ayırmak için EBOB’u kullanır; ızgaradaki köşe noktalarını sayar.",
+  "tipId": "ebk-parca",
+  "tip": "Eş parçalara bölme (EBOB)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Kenar uzunlukları 120 m ve 84 m olan dikdörtgen biçimindeki bir tarla, kenar uzunlukları metre cinsinden tam sayı olan, olabildiğince büyük eş karesel bölümlere ayrılacaktır.\nBölümlerin her köşesine bir sulama borusu yerleştirilecek, ortak köşelere tek boru konulacaktır.\nBuna göre tarlanın sınırı üzerinde olmayan kaç sulama borusu vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "34",
+   "B": "54",
+   "C": "70",
+   "D": "88",
+   "E": "315"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "54"
+  },
+  "celdiriciler": {
+   "A": "34, tarlanın sınırındaki boru sayısı; soru sınırda olmayanları soruyor.",
+   "C": "70, bölüm sayısı (10 × 7); borular köşelere yerleştiriliyor.",
+   "D": "88, bütün boruların sayısı; sınırdaki 34 boru çıkarılmalı.",
+   "E": "Bölüm kenarını 6 m alıp tüm köşeleri saymak; kenar EBOB = 12 m olmalı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Tarlanın sınırında olmayan boru sayısı.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "sayıların hepsini tam bölen en büyük sayı. Örnek: EBOB(12, 18) = 6 (12 = 6 × 2, 18 = 6 × 3)"
+   },
+   {
+    "ad": "Sıradaki iç noktalar",
+    "ifade": "yan yana n bölüm varsa uçlar dahil n + 1, uçlar hariç n − 1 köşe noktası olur. Örnek: 4 bölüm ⇒ 3 iç nokta"
+   }
+  ],
+  "ipuclari": [
+   "Bölümlerin kenarı iki kenarı da bölen en büyük sayı.",
+   "Her yönde kaç bölüm var? Sınırdaki köşeler bu sayılardan nasıl etkilenir?",
+   "Bir sırada n bölüm varsa sınırda olmayan kaç iç köşe vardır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölüm kenarı",
+    "aciklama": "Kenar 120’yi ve 84’ü bölmeli, en büyük olmalı.",
+    "islem": "EBOB(120, 84) = 12 m"
+   },
+   {
+    "baslik": "Bölüm sayıları",
+    "aciklama": "Her kenarı 12’ye böl.",
+    "islem": "120 ÷ 12 = 10 · 84 ÷ 12 = 7"
+   },
+   {
+    "baslik": "İç noktalar",
+    "aciklama": "Sınır dışındaki köşeler her yönde bölüm sayısından 1 eksik.",
+    "islem": "10 − 1 = 9 · 7 − 1 = 6"
+   },
+   {
+    "baslik": "İç borular",
+    "aciklama": "İç noktaların sayısı.",
+    "islem": "9 × 6 = 54 boru",
+    "gorsel": "<svg viewBox=\"0 0 330 162\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"79.3\" y1=\"14\" x2=\"79.3\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"96.4\" y1=\"14\" x2=\"96.4\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"113.6\" y1=\"14\" x2=\"113.6\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"130.7\" y1=\"14\" x2=\"130.7\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"147.9\" y1=\"14\" x2=\"147.9\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"165.0\" y1=\"14\" x2=\"165.0\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"182.1\" y1=\"14\" x2=\"182.1\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"199.3\" y1=\"14\" x2=\"199.3\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"216.4\" y1=\"14\" x2=\"216.4\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"233.6\" y1=\"14\" x2=\"233.6\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"250.7\" y1=\"14\" x2=\"250.7\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"14.0\" x2=\"250.7\" y2=\"14.0\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"31.1\" x2=\"250.7\" y2=\"31.1\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"48.3\" x2=\"250.7\" y2=\"48.3\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"65.4\" x2=\"250.7\" y2=\"65.4\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"82.6\" x2=\"250.7\" y2=\"82.6\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"99.7\" x2=\"250.7\" y2=\"99.7\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"116.9\" x2=\"250.7\" y2=\"116.9\" stroke-width=\"1\" opacity=\".55\"/><line x1=\"79.28571428571429\" y1=\"134.0\" x2=\"250.7\" y2=\"134.0\" stroke-width=\"1\" opacity=\".55\"/><circle cx=\"79.3\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"31.1\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"48.3\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"65.4\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"82.6\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"99.7\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"116.9\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"79.3\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"96.4\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"96.4\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"96.4\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"113.6\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"113.6\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"113.6\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"130.7\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"130.7\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"130.7\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"147.9\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"147.9\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"147.9\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"165.0\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"165.0\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"165.0\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"182.1\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"182.1\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"182.1\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"199.3\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"199.3\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"199.3\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"216.4\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"216.4\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"216.4\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"233.6\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"233.6\" cy=\"31.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"48.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"65.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"82.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"99.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"116.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"233.6\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"14.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"31.1\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"48.3\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"65.4\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"82.6\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"99.7\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"116.9\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><circle cx=\"250.7\" cy=\"134.0\" r=\"2.6\" style=\"fill:currentColor;stroke:none\" opacity=\".45\"/><text x=\"165.0\" y=\"152.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">10 × 7 parsel · 54 iç direk</text></svg>"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Tüm köşeler − sınırdakiler.",
+    "islem": "11 × 8 = 88 · 88 − 34 = 54 ✓"
+   }
+  ],
+  "puf": "Izgarada tüm noktalar (n + 1) × (m + 1), iç noktalar (n − 1) × (m − 1) ile sayılır.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-02 (EBOB ile eş kareler) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobekok-0008k",
+  "ana": "tytmat-ebobekok-0008",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EBOB – EKOK Kavramı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "EBOB ve EKOK’u verilen iki sayının olası ikililerini çarpan ayırarak bulur; koşullara uyan en küçük toplamı belirler.",
+  "tipId": "ebk-tanim",
+  "tip": "EBOB ve EKOK ilişkisi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x ve y, 6’dan büyük doğal sayılar ve x < y olmak üzere\nEBOB(x, y) = 6\nEKOK(x, y) = 180\nolduğuna göre y − x farkı en az kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "36",
+   "C": "42",
+   "D": "78",
+   "E": "174"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "B": "36, y’nin değeri; soru y − x farkını soruyor.",
+   "C": "18 ve 60 ikilisinin farkı; 30 ve 36 daha küçük fark verir.",
+   "D": "78, farkın en büyük değeri (90 − 12); soru en küçüğü soruyor.",
+   "E": "6 ve 180’i almak; sayılar 6’dan büyük olmalı."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "y − x farkının en küçük değeri.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "sayıların hepsini tam bölen en büyük sayı. Örnek: EBOB(12, 18) = 6 (12 = 6 × 2, 18 = 6 × 3)"
+   },
+   {
+    "ad": "EKOK",
+    "ifade": "sayıların hepsinin katı olan en küçük pozitif sayı. Örnek: EKOK(4, 6) = 12"
+   },
+   {
+    "ad": "EBOB ile EKOK ilişkisi",
+    "ifade": "EBOB(a, b) = d ise a = d × m, b = d × n (m ile n aralarında asal, yani ortak böleni yalnız 1) ve EKOK(a, b) = d × m × n. Örnek: 12 = 6 × 2, 18 = 6 × 3 ⇒ EKOK = 6 × 2 × 3 = 36"
+   }
+  ],
+  "ipuclari": [
+   "x ve y’yi EBOB × m ve EBOB × n biçiminde yaz; m ile n’nin ortak böleni olmamalı.",
+   "m × n = EKOK ÷ EBOB kaçtır?",
+   "m = 1 olamaz; kalan ikililerde y − x = EBOB × (n − m)’yi karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "İkisi de 6’nın katı.",
+    "islem": "x = 6m · y = 6n · m < n"
+   },
+   {
+    "baslik": "m × n",
+    "aciklama": "EKOK = 6 × m × n.",
+    "islem": "6 × m × n = 180 ⇒ m × n = 30"
+   },
+   {
+    "baslik": "İkililer",
+    "aciklama": "Sayılar 6’dan büyük; m = 1 olmaz.",
+    "islem": "(2, 15); (3, 10); (5, 6)"
+   },
+   {
+    "baslik": "Farklar",
+    "aciklama": "y − x = 6 × (n − m).",
+    "islem": "6 × 13 = 78 · 6 × 7 = 42 · 6 × 1 = 6"
+   },
+   {
+    "baslik": "En küçük",
+    "aciklama": "x = 30, y = 36.",
+    "islem": "y − x = 6"
+   }
+  ],
+  "puf": "EBOB–EKOK birlikte verilince m × n = EKOK ÷ EBOB; çarpanları sistemli listele ve koşulları ele.",
+  "kisaYol": null,
+  "kaynakKart": "K-EBK-06 (EBOB ve EKOK birlikte, m × n = EKOK ÷ EBOB) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

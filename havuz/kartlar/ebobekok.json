@@ -1,0 +1,127 @@
+{
+ "konu": "EBOB – EKOK",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-EBK-01",
+   "konu": "EBOB – EKOK",
+   "alt": "EBOB – EKOK Kavramı",
+   "fikir": "EBOB’u verilen iki sayı d × m ve d × n biçiminde yazılır (m, n ortak böleni olmayan); toplam ya da EKOK bilgisiyle olası ikililer taranır.",
+   "tuzak": "m ile n’nin ortak böleni olmaması koşulunu unutmak; basamak ya da “büyüktür” koşullarını atlamak; a × b ile EKOK’u karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ebk-tanim",
+   "tip": "EBOB ve EKOK ilişkisi",
+   "kaynak": "ÖSYM (EBOB-EKOK Kavramı ve Özellikleri) · 3D (EBOB(x, 35) = 7) · Bilgi Sarmal"
+  },
+  {
+   "id": "K-EBK-02",
+   "konu": "EBOB – EKOK",
+   "alt": "EBOB Problemleri",
+   "fikir": "Farklı uzunluk/hacimler artmadan eş ve olabildiğince büyük parçalara ayrılır; parça boyu EBOB, parça sayısı bölümlerin toplamıdır. Izgara sorularında köşe ve direk sayısı da istenir.",
+   "tuzak": "Parça boyunu parça sayısı sanmak; EKOK kullanmak; ızgarada direk sayısı için +1’i unutmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ebk-parca",
+   "tip": "Eş parçalara bölme (EBOB)",
+   "kaynak": "ÖSYM (EBOB-EKOK Problemleri) · Bilgi Sarmal (en büyük ortak bölen ile kalan) · Mert (konserve, kutu dizme)"
+  },
+  {
+   "id": "K-EBK-03",
+   "konu": "EBOB – EKOK",
+   "alt": "EKOK Problemleri",
+   "fikir": "Eş dikdörtgen ya da prizmalar aynı yönde dizilerek en küçük kare/küp oluşturulur; kenar EKOK, adet her boyuttaki bölümlerin çarpımıdır.",
+   "tuzak": "EBOB kullanmak; boyutlardaki adetleri toplamak; kenar uzunluğunu adet sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ebk-kare",
+   "tip": "Eş parçalarla kare ve küp oluşturma (EKOK)",
+   "kaynak": "ÖSYM (EBOB-EKOK Problemleri) · Bilgi Sarmal, Mert"
+  },
+  {
+   "id": "K-EBK-04",
+   "konu": "EBOB – EKOK",
+   "alt": "EKOK Problemleri",
+   "fikir": "Farklı bölenlere göre kalanlar, bölenden hep aynı sayı eksikse sayı “EKOK’un katı − sabit” biçimindedir; bir sınırla en küçük/en büyük değer bulunur.",
+   "tuzak": "Sabiti çıkarmak yerine eklemek; EKOK yerine bölenlerin çarpımını almak; sınır koşulunu unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ebk-kalan",
+   "tip": "Kalan koşullu sayılar (EKOK)",
+   "kaynak": "ÖSYM (Bölünebilme · kalanlı bölme) · Bilgi Sarmal (99, 148, 161 kalanları) · 3D"
+  },
+  {
+   "id": "K-EBK-05",
+   "konu": "EBOB – EKOK",
+   "alt": "Periyodik Problemler",
+   "fikir": "Farklı aralıklarla tekrar eden olaylar EKOK aralığında birlikte gerçekleşir; gün adı için 7 ile kalan, sayım için ilk ve son an dikkate alınır.",
+   "tuzak": "EKOK yerine toplam ya da çarpım kullanmak; başlangıç anını saymamak; haftada kalan günü yanlış saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ebk-periyot",
+   "tip": "Periyodik buluşma (EKOK)",
+   "kaynak": "ÖSYM (Periyodik Problemler, karton etiketleme) · 3D (5 günde bir nöbet)"
+  },
+  {
+   "id": "K-EBK-06",
+   "konu": "EBOB – EKOK",
+   "alt": "EBOB – EKOK Kavramı",
+   "fikir": "EBOB ve EKOK birlikte verilir; m × n = EKOK ÷ EBOB çarpanlarına ayrılıp ortak böleni olmayan ikililer listelenir, toplam ya da fark en küçüklenir.",
+   "tuzak": "m = 1 durumunu “sayılar EBOB’dan büyük” koşuluna rağmen saymak; m ile n’nin ortak böleni olan ikilileri almak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "ebk-tanim",
+   "tip": "EBOB ve EKOK ilişkisi",
+   "kaynak": "ÖSYM (EBOB-EKOK Kavramı) · Bilgi Sarmal, 345"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ebk-tanim",
+   "ad": "EBOB ve EKOK ilişkisi",
+   "kartlar": [
+    "K-EBK-01",
+    "K-EBK-06"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ebk-parca",
+   "ad": "Eş parçalara bölme (EBOB)",
+   "kartlar": [
+    "K-EBK-02"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ebk-kare",
+   "ad": "Eş parçalarla kare ve küp oluşturma (EKOK)",
+   "kartlar": [
+    "K-EBK-03"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ebk-kalan",
+   "ad": "Kalan koşullu sayılar (EKOK)",
+   "kartlar": [
+    "K-EBK-04"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ebk-periyot",
+   "ad": "Periyodik buluşma (EKOK)",
+   "kartlar": [
+    "K-EBK-05"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  }
+ ]
+}

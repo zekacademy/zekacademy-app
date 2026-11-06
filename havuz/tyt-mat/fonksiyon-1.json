@@ -1,0 +1,644 @@
+[
+ {
+  "id": "tytmat-fonksiyon-0001",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Fonksiyonda Değer",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Doğrusal fonksiyonda verilen değerden bilinmeyen girdiyi bulup yeni bir girdide değer hesaplar.",
+  "tipId": "fn-deger",
+  "tip": "Fonksiyonda değer bulma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Gerçel sayılar kümesi üzerinde tanımlı f fonksiyonu\nf(x) = 2x + 3\nbiçiminde veriliyor.\nf(a) = 13 olduğuna göre f(2a) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "13",
+   "C": "23",
+   "D": "26",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "10, 2a’nın değeri; istenen f(2a).",
+   "B": "13, f(2a)’yı 2a + 3 sanıp 10 + 3 hesaplamak; x’in katsayısı olan 2 unutulmuş.",
+   "D": "26, 2 × f(a) hesaplamak; f(2a), f(a)’nın iki katı değildir.",
+   "E": "35, 2a + 3 = 13’ü 2a = 16 diye çözüp a = 8 bulmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "f fonksiyonunun 2a’daki değeri.",
+  "bilgi": [
+   {
+    "ad": "Fonksiyonda değer",
+    "ifade": "kuralda x gördüğün her yere parantez içindeki sayı yazılır. Örnek: f(x) = 2x + 3 ise f(4) = 2 × 4 + 3 = 11"
+   }
+  ],
+  "ipuclari": [
+   "f(a)’yı kurala göre a cinsinden yaz.",
+   "Denklemi çözüp a’yı bul.",
+   "f(2a) için kuralda x yerine 2a’nın sayı değerini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "f(a), kuralda x yerine a yazılarak bulunur.",
+    "islem": "2a + 3 = 13 ⇒ a = 5"
+   },
+   {
+    "baslik": "Girdiyi hesapla",
+    "aciklama": "f(2a) için girdi 2a’dır.",
+    "islem": "2a = 10"
+   },
+   {
+    "baslik": "Değeri bul",
+    "aciklama": "Kuralda x yerine 10 yaz.",
+    "islem": "f(10) = 2 × 10 + 3 = 23"
+   }
+  ],
+  "puf": "f(2a) ile 2 × f(a) farklıdır: önce girdiyi hesapla, sonra kurala yerleştir.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0001k",
+  "kaynakKart": "K-FN-01 (girdiyi bulup yeni girdide değer) · istenen f(2a)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0002",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Grafik",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Grafikten verilen noktalardaki fonksiyon değerlerini işaretiyle okur.",
+  "tipId": "fn-grafik",
+  "tip": "Grafikten değer okuma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 2,
+  "metin": "Dik koordinat düzleminde [−2, 5] aralığında tanımlı y = f(x) fonksiyonunun grafiği aşağıda verilmiştir.\nBuna göre f(−1) + f(4) toplamı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 184\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"48.0\" y1=\"14.0\" x2=\"48.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"74.0\" y1=\"14.0\" x2=\"74.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"100.0\" y1=\"14.0\" x2=\"100.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"126.0\" y1=\"14.0\" x2=\"126.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"152.0\" y1=\"14.0\" x2=\"152.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"178.0\" y1=\"14.0\" x2=\"178.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"204.0\" y1=\"14.0\" x2=\"204.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"230.0\" y1=\"14.0\" x2=\"230.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"256.0\" y1=\"14.0\" x2=\"256.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"282.0\" y1=\"14.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"170.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"144.0\" x2=\"282.0\" y2=\"144.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"118.0\" x2=\"282.0\" y2=\"118.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"92.0\" x2=\"282.0\" y2=\"92.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"66.0\" x2=\"282.0\" y2=\"66.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"40.0\" x2=\"282.0\" y2=\"40.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"14.0\" x2=\"282.0\" y2=\"14.0\" stroke-width=\".6\" opacity=\".18\"/><path d=\"M48.0 118.0 H282.0 m-7 -4 l7 4 l-7 4\" stroke-width=\"1.4\"/><path d=\"M126.0 170.0 V14.0 m-4 7 l4 -7 l4 7\" stroke-width=\"1.4\"/><text x=\"278.0\" y=\"134.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"138.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><path d=\"M74.0 92.0 L126.0 40.0 L178.0 40.0 L230.0 144.0 L256.0 92.0\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><circle cx=\"74.0\" cy=\"92.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"256.0\" cy=\"92.0\" r=\"3.2\" style=\"fill:currentColor\"/><text x=\"74.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−2</text><text x=\"100.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"152.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"178.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"204.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"230.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">4</text><text x=\"256.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">5</text><text x=\"120.0\" y=\"148.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"120.0\" y=\"96.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"120.0\" y=\"70.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"120.0\" y=\"44.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"121.0\" y=\"132.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">O</text><text x=\"260.0\" y=\"84.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">y = f(x)</text></svg>",
+  "siklar": {
+   "A": "−2",
+   "B": "0",
+   "C": "1",
+   "D": "2",
+   "E": "3"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1"
+  },
+  "celdiriciler": {
+   "A": "−2, f(−1)’i −1 sanmak; f(−1), x = −1’deki noktanın y değeridir.",
+   "B": "0, f(−1)’i x = −2’deki değerden (1) okumak.",
+   "D": "2, f(−1) yerine f(0) = 3’ü okumak: 3 + (−1).",
+   "E": "3, f(4)’ü 1 almak; nokta x ekseninin altında, f(4) = −1."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "f(−1) ile f(4)’ün toplamı.",
+  "bilgi": [
+   {
+    "ad": "Grafikten değer okuma",
+    "ifade": "f(a), grafiğin x = a’daki noktasının y koordinatıdır. Örnek: grafik (3, 5)’ten geçiyorsa f(3) = 5; nokta x ekseninin altındaysa değer negatiftir"
+   }
+  ],
+  "ipuclari": [
+   "f(−1) için x = −1’den dikey çık; grafiğe değdiğin yerin yüksekliği nedir?",
+   "x = 4’te grafik x ekseninin üstünde mi, altında mı?",
+   "İki değeri işaretleriyle topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "f(−1)’i oku",
+    "aciklama": "x = −1’den dikey çık; grafiğe değdiğin noktanın y değerini al.",
+    "islem": "f(−1) = 2"
+   },
+   {
+    "baslik": "f(4)’ü oku",
+    "aciklama": "x = 4’te grafik x ekseninin altında.",
+    "islem": "f(4) = −1",
+    "gorsel": "<svg viewBox=\"0 0 330 184\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"48.0\" y1=\"14.0\" x2=\"48.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"74.0\" y1=\"14.0\" x2=\"74.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"100.0\" y1=\"14.0\" x2=\"100.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"126.0\" y1=\"14.0\" x2=\"126.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"152.0\" y1=\"14.0\" x2=\"152.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"178.0\" y1=\"14.0\" x2=\"178.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"204.0\" y1=\"14.0\" x2=\"204.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"230.0\" y1=\"14.0\" x2=\"230.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"256.0\" y1=\"14.0\" x2=\"256.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"282.0\" y1=\"14.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"170.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"144.0\" x2=\"282.0\" y2=\"144.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"118.0\" x2=\"282.0\" y2=\"118.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"92.0\" x2=\"282.0\" y2=\"92.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"66.0\" x2=\"282.0\" y2=\"66.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"40.0\" x2=\"282.0\" y2=\"40.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"14.0\" x2=\"282.0\" y2=\"14.0\" stroke-width=\".6\" opacity=\".18\"/><path d=\"M48.0 118.0 H282.0 m-7 -4 l7 4 l-7 4\" stroke-width=\"1.4\"/><path d=\"M126.0 170.0 V14.0 m-4 7 l4 -7 l4 7\" stroke-width=\"1.4\"/><text x=\"278.0\" y=\"134.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"138.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><path d=\"M100.0 118.0 V66.0 H126.0\" stroke-dasharray=\"3 3\" stroke-width=\"1.2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M230.0 118.0 V144.0 H126.0\" stroke-dasharray=\"3 3\" stroke-width=\"1.2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M74.0 92.0 L126.0 40.0 L178.0 40.0 L230.0 144.0 L256.0 92.0\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><circle cx=\"74.0\" cy=\"92.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"256.0\" cy=\"92.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"100.0\" cy=\"66.0\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"230.0\" cy=\"144.0\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><text x=\"74.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−2</text><text x=\"100.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"152.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"178.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"204.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"230.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">4</text><text x=\"256.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">5</text><text x=\"120.0\" y=\"148.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"120.0\" y=\"96.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"120.0\" y=\"70.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"120.0\" y=\"44.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"121.0\" y=\"132.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">O</text><text x=\"260.0\" y=\"84.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">y = f(x)</text></svg>"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki değeri işaretleriyle topla.",
+    "islem": "2 + (−1) = 1"
+   }
+  ],
+  "puf": "Grafikte f(a), x = a’daki noktanın yüksekliğidir; x ekseninin altındaki nokta negatif değer verir.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0002k",
+  "kaynakKart": "K-FN-02 (grafikten değer okuma) · bir değer x ekseninin altında",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0003",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Ters Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Ters fonksiyonun bir değerinden kuraldaki parametreyi bulur ve başka bir ters değeri hesaplar.",
+  "tipId": "fn-ters",
+  "tip": "Ters fonksiyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a bir gerçel sayı olmak üzere, gerçel sayılar kümesinde tanımlı ve birebir örten f fonksiyonu\nf(x) = ax − 6\nbiçimindedir.\nf⁻¹(9) = 3 olduğuna göre f⁻¹(24) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "6",
+   "D": "30",
+   "E": "114"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "3, f⁻¹(9)’un değeri; soru f⁻¹(24)’ü soruyor.",
+   "B": "5, a’nın değeri; istenen f⁻¹(24).",
+   "D": "30, f⁻¹(9) = 3’ü f(9) = 3 sanmak: 9a − 6 = 3 ⇒ a = 1 ve f⁻¹(24) = 30.",
+   "E": "114, f⁻¹(24) yerine f(24) = 5 × 24 − 6 hesaplamak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "f⁻¹(24)’ün değeri.",
+  "bilgi": [
+   {
+    "ad": "Ters fonksiyon",
+    "ifade": "f(a) = b ise f⁻¹(b) = a’dır. Örnek: f(2) = 7 ise f⁻¹(7) = 2. f(x) = x + 4 ise f⁻¹(x) = x − 4 (işlem tersine döner)"
+   }
+  ],
+  "ipuclari": [
+   "f⁻¹(9) = 3 bilgisini f cinsinden yaz.",
+   "Bu eşitlikten a’yı bul.",
+   "f⁻¹(24) = k dersen f(k) kaça eşit olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tersi çevir",
+    "aciklama": "f⁻¹(9) = 3 demek, f’nin 3’teki değeri 9 demektir.",
+    "islem": "f(3) = 9"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "Kuralda x yerine 3 yaz.",
+    "islem": "3a − 6 = 9 ⇒ a = 5"
+   },
+   {
+    "baslik": "Ters değeri bul",
+    "aciklama": "f⁻¹(24) = k ise f(k) = 24.",
+    "islem": "5k − 6 = 24 ⇒ k = 6"
+   }
+  ],
+  "puf": "f⁻¹(b) = a gördüğün an f(a) = b yaz; ters fonksiyonun kuralını bulmadan da çözebilirsin.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0003k",
+  "kaynakKart": "K-FN-04 (ters değerden parametre) · doğrusal kural, istenen başka bir ters değer",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0004",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Bileşke",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Bir bileşke değerinden bilinmeyeni bulur ve ters sıradaki bileşkeyi hesaplar.",
+  "tipId": "fn-bileske",
+  "tip": "Bileşke fonksiyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılar kümesinde tanımlı f ve g fonksiyonları\nf(x) = 2x + 1\ng(x) = x² − 3\nbiçiminde veriliyor.\na pozitif bir gerçel sayı ve (f ∘ g)(a) = 13 olduğuna göre (g ∘ f)(a) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "7",
+   "C": "13",
+   "D": "46",
+   "E": "49"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "46"
+  },
+  "celdiriciler": {
+   "A": "6, g(a) = g(3)’ün değeri; bileşke tamamlanmamış.",
+   "B": "7, f(a) = f(3)’ün değeri; g uygulanmamış.",
+   "C": "13, (g ∘ f)(a)’yı (f ∘ g)(a) ile aynı sanmak; bileşkede sıra önemlidir.",
+   "E": "49, g(7)’de −3’ü unutmak (yalnızca 7²)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "(g ∘ f)(a)’nın değeri.",
+  "bilgi": [
+   {
+    "ad": "Bileşke",
+    "ifade": "(f ∘ g)(x) = f(g(x)): önce g, sonra f uygulanır. Örnek: g(1) = 4 ve f(4) = 9 ise (f ∘ g)(1) = 9; sıra değişirse sonuç değişebilir"
+   },
+   {
+    "ad": "Kare",
+    "ifade": "x² = x × x. Örnek: 7² = 49, (−4)² = 16"
+   }
+  ],
+  "ipuclari": [
+   "(f ∘ g)(a) = f(g(a)): önce hangi fonksiyon uygulanır?",
+   "f(g(a))’yı a cinsinden yazıp a’yı bul; a pozitif.",
+   "(g ∘ f)(a) için önce f(a)’yı bul, sonra g’ye ver."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bileşkeyi aç",
+    "aciklama": "Önce g, sonra f uygulanır.",
+    "islem": "f(g(a)) = 2 × (a² − 3) + 1 = 2a² − 5"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "a pozitif olduğu için negatif kök alınmaz.",
+    "islem": "2a² − 5 = 13 ⇒ a² = 9 ⇒ a = 3"
+   },
+   {
+    "baslik": "Ters sıra",
+    "aciklama": "(g ∘ f)(3) için önce f(3).",
+    "islem": "f(3) = 2 × 3 + 1 = 7"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bulduğun 7’yi g’ye ver.",
+    "islem": "g(7) = 49 − 3 = 46"
+   }
+  ],
+  "puf": "Bileşkede sağdaki fonksiyon önce çalışır; (f ∘ g) ile (g ∘ f) genellikle farklıdır.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0004k",
+  "kaynakKart": "K-FN-05 (bileşkeden a, ters sıralı bileşke) · doğrusal ve ikinci dereceden kural",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0005",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Fonksiyonlarda İşlem",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Fark fonksiyonunun bir değerinden parametreyi bulur, çarpım fonksiyonunun değerini hesaplar.",
+  "tipId": "fn-islem",
+  "tip": "Fonksiyonlarda dört işlem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a bir gerçel sayı olmak üzere gerçel sayılar kümesinde tanımlı f ve g fonksiyonları\nf(x) = ax + 2\ng(x) = x − a\nbiçimindedir.\n(f − g)(2) = 9 olduğuna göre (f · g)(4) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "11",
+   "C": "14",
+   "D": "15",
+   "E": "98"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "5, (f · g)(4)’ü f(g(4)) = f(1) sanmak; çarpım bileşke değildir.",
+   "B": "11, g(f(4)) = g(14) hesaplamak; istenen çarpım.",
+   "D": "15, f(4) + g(4) toplamı; istenen çarpım.",
+   "E": "98, g(4)’ü 4 + 3 = 7 almak; g(x) = x − a."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "(f · g)(4)’ün değeri.",
+  "bilgi": [
+   {
+    "ad": "Fonksiyonlarda işlem",
+    "ifade": "(f + g)(x) = f(x) + g(x), (f − g)(x) = f(x) − g(x), (f · g)(x) = f(x) × g(x). Örnek: f(1) = 3, g(1) = 4 ⇒ (f · g)(1) = 12"
+   }
+  ],
+  "ipuclari": [
+   "(f − g)(2) = f(2) − g(2) olarak aç.",
+   "Parantezleri dikkatle açıp a’yı bul.",
+   "(f · g)(4) = f(4) × g(4)."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı aç",
+    "aciklama": "(f − g)(2) = f(2) − g(2); ikinci parantezin önündeki eksi her terimi etkiler.",
+    "islem": "(2a + 2) − (2 − a) = 3a"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "Eşitliğin iki yanını 3’e böl.",
+    "islem": "3a = 9 ⇒ a = 3"
+   },
+   {
+    "baslik": "Değerler",
+    "aciklama": "Kurallar f(x) = 3x + 2 ve g(x) = x − 3 olur.",
+    "islem": "f(4) = 14 · g(4) = 1"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Çarpım fonksiyonu değerlerin çarpımıdır.",
+    "islem": "f(4) × g(4) = 14 × 1 = 14"
+   }
+  ],
+  "puf": "(f · g)(x) bir çarpımdır, bileşke değildir: iki değeri ayrı bul, sonra çarp.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0005k",
+  "kaynakKart": "K-FN-07 (işlemden parametre, çarpım fonksiyonu) · fark ile verilen koşul",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0006",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Grafik",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Grafikten bileşke değerleri iki aşamalı okuma ile bulur.",
+  "tipId": "fn-grafik",
+  "tip": "Grafikten değer okuma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Dik koordinat düzleminde [−3, 4] aralığında tanımlı f fonksiyonunun grafiği aşağıda verilmiştir.\nBuna göre (f ∘ f)(−3) + (f ∘ f)(−2) toplamı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 184\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"48.0\" y1=\"14.0\" x2=\"48.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"74.0\" y1=\"14.0\" x2=\"74.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"100.0\" y1=\"14.0\" x2=\"100.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"126.0\" y1=\"14.0\" x2=\"126.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"152.0\" y1=\"14.0\" x2=\"152.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"178.0\" y1=\"14.0\" x2=\"178.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"204.0\" y1=\"14.0\" x2=\"204.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"230.0\" y1=\"14.0\" x2=\"230.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"256.0\" y1=\"14.0\" x2=\"256.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"282.0\" y1=\"14.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"170.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"144.0\" x2=\"282.0\" y2=\"144.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"118.0\" x2=\"282.0\" y2=\"118.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"92.0\" x2=\"282.0\" y2=\"92.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"66.0\" x2=\"282.0\" y2=\"66.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"40.0\" x2=\"282.0\" y2=\"40.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"14.0\" x2=\"282.0\" y2=\"14.0\" stroke-width=\".6\" opacity=\".18\"/><path d=\"M48.0 118.0 H282.0 m-7 -4 l7 4 l-7 4\" stroke-width=\"1.4\"/><path d=\"M152.0 170.0 V14.0 m-4 7 l4 -7 l4 7\" stroke-width=\"1.4\"/><text x=\"278.0\" y=\"134.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"164.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><path d=\"M74.0 144.0 L126.0 40.0 L178.0 92.0 L230.0 92.0 L256.0 40.0\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><circle cx=\"74.0\" cy=\"144.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"256.0\" cy=\"40.0\" r=\"3.2\" style=\"fill:currentColor\"/><text x=\"74.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−3</text><text x=\"100.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−2</text><text x=\"126.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"178.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"204.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"230.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"256.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">4</text><text x=\"146.0\" y=\"148.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"146.0\" y=\"96.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"146.0\" y=\"70.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"146.0\" y=\"44.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"147.0\" y=\"132.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">O</text><text x=\"260.0\" y=\"32.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">y = f(x)</text></svg>",
+  "siklar": {
+   "A": "0",
+   "B": "1",
+   "C": "2",
+   "D": "3",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "0, f’yi bir kez uygulamak: f(−3) + f(−2) = −1 + 1.",
+   "B": "1, yalnızca (f ∘ f)(−2)’yi almak; toplamın ilk terimi unutulmuş.",
+   "C": "2, (f ∘ f)(x)’i f(x) × f(x) sanmak: (−1)² + 1².",
+   "D": "3, yalnızca (f ∘ f)(−3)’ü almak; ikinci terim unutulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "İki bileşke değerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Bileşke",
+    "ifade": "(f ∘ g)(x) = f(g(x)): önce g, sonra f uygulanır. Örnek: g(1) = 4 ve f(4) = 9 ise (f ∘ g)(1) = 9; sıra değişirse sonuç değişebilir"
+   },
+   {
+    "ad": "Grafikten değer okuma",
+    "ifade": "f(a), grafiğin x = a’daki noktasının y koordinatıdır. Örnek: grafik (3, 5)’ten geçiyorsa f(3) = 5; nokta x ekseninin altındaysa değer negatiftir"
+   }
+  ],
+  "ipuclari": [
+   "(f ∘ f)(−3) = f(f(−3)): önce içteki değeri oku.",
+   "Bulduğun sayıyı yeni x değeri gibi kullanıp grafikten tekrar oku.",
+   "Aynı işlemi −2 için yap ve topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İçteki değerler",
+    "aciklama": "Önce f(−3) ve f(−2)’yi grafikten oku.",
+    "islem": "f(−3) = −1 · f(−2) = 1"
+   },
+   {
+    "baslik": "Dıştaki değerler",
+    "aciklama": "Bulduğun sayıları yeniden f’ye ver: x = −1 ve x = 1’de oku.",
+    "islem": "f(−1) = 3 · f(1) = 1",
+    "gorsel": "<svg viewBox=\"0 0 330 184\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"48.0\" y1=\"14.0\" x2=\"48.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"74.0\" y1=\"14.0\" x2=\"74.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"100.0\" y1=\"14.0\" x2=\"100.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"126.0\" y1=\"14.0\" x2=\"126.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"152.0\" y1=\"14.0\" x2=\"152.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"178.0\" y1=\"14.0\" x2=\"178.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"204.0\" y1=\"14.0\" x2=\"204.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"230.0\" y1=\"14.0\" x2=\"230.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"256.0\" y1=\"14.0\" x2=\"256.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"282.0\" y1=\"14.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"170.0\" x2=\"282.0\" y2=\"170.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"144.0\" x2=\"282.0\" y2=\"144.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"118.0\" x2=\"282.0\" y2=\"118.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"92.0\" x2=\"282.0\" y2=\"92.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"66.0\" x2=\"282.0\" y2=\"66.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"40.0\" x2=\"282.0\" y2=\"40.0\" stroke-width=\".6\" opacity=\".18\"/><line x1=\"48.0\" y1=\"14.0\" x2=\"282.0\" y2=\"14.0\" stroke-width=\".6\" opacity=\".18\"/><path d=\"M48.0 118.0 H282.0 m-7 -4 l7 4 l-7 4\" stroke-width=\"1.4\"/><path d=\"M152.0 170.0 V14.0 m-4 7 l4 -7 l4 7\" stroke-width=\"1.4\"/><text x=\"278.0\" y=\"134.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"164.0\" y=\"24.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><path d=\"M126.0 118.0 V40.0 H152.0\" stroke-dasharray=\"3 3\" stroke-width=\"1.2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M178.0 118.0 V92.0 H152.0\" stroke-dasharray=\"3 3\" stroke-width=\"1.2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M74.0 144.0 L126.0 40.0 L178.0 92.0 L230.0 92.0 L256.0 40.0\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><circle cx=\"74.0\" cy=\"144.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"256.0\" cy=\"40.0\" r=\"3.2\" style=\"fill:currentColor\"/><circle cx=\"126.0\" cy=\"40.0\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"178.0\" cy=\"92.0\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><text x=\"74.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−3</text><text x=\"100.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−2</text><text x=\"126.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"178.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"204.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"230.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"256.0\" y=\"132.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">4</text><text x=\"146.0\" y=\"148.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">−1</text><text x=\"146.0\" y=\"96.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">1</text><text x=\"146.0\" y=\"70.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">2</text><text x=\"146.0\" y=\"44.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">3</text><text x=\"147.0\" y=\"132.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:var(--bg,#fff);stroke-width:3;paint-order:stroke\">O</text><text x=\"260.0\" y=\"32.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">y = f(x)</text></svg>"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki bileşke değerini topla.",
+    "islem": "3 + 1 = 4"
+   }
+  ],
+  "puf": "Grafikte bileşke iki kez okumaktır: çıkan y değeri bir sonraki adımın x değeri olur.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0006k",
+  "kaynakKart": "K-FN-03 (grafikte bileşke) · iki bileşke değerinin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0007",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Bileşke",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Ters fonksiyon içeren bileşkeden bilinmeyeni bulur ve başka bir ters-bileşke değeri hesaplar.",
+  "tipId": "fn-bileske",
+  "tip": "Bileşke fonksiyon",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılarda tanımlı f ve g fonksiyonları\nf(x) = 3x − 2\ng(x) = x + 4\nolarak veriliyor.\n(f⁻¹ ∘ g)(a) = 5 olduğuna göre (g⁻¹ ∘ f)(a) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "21",
+   "C": "25",
+   "D": "29",
+   "E": "33"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "21"
+  },
+  "celdiriciler": {
+   "A": "9, a’nın değeri; istenen (g⁻¹ ∘ f)(a).",
+   "C": "25, f(a) = f(9); g⁻¹ uygulanmamış.",
+   "D": "29, g⁻¹(x)’i x + 4 sanmak; tersinde işlem tersine döner.",
+   "E": "33, f⁻¹(x)’i (x − 2)/3 sanıp a = 13 bulmak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "(g⁻¹ ∘ f)(a)’nın değeri.",
+  "bilgi": [
+   {
+    "ad": "Ters fonksiyon",
+    "ifade": "f(a) = b ise f⁻¹(b) = a’dır. Örnek: f(2) = 7 ise f⁻¹(7) = 2. f(x) = x + 4 ise f⁻¹(x) = x − 4 (işlem tersine döner)"
+   },
+   {
+    "ad": "Bileşke",
+    "ifade": "(f ∘ g)(x) = f(g(x)): önce g, sonra f uygulanır. Örnek: g(1) = 4 ve f(4) = 9 ise (f ∘ g)(1) = 9; sıra değişirse sonuç değişebilir"
+   }
+  ],
+  "ipuclari": [
+   "(f⁻¹ ∘ g)(a) = f⁻¹(g(a)) = 5 ise g(a), f’nin hangi değerine eşittir?",
+   "g(a) = a + 4 eşitliğinden a’yı bul.",
+   "g⁻¹ kuralında işlem tersine döner: 4 eklemenin tersi 4 çıkarmaktır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dıştaki tersi kaldır",
+    "aciklama": "f⁻¹(g(a)) = 5 ise g(a) = f(5).",
+    "islem": "g(a) = 3 × 5 − 2 = 13"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "g(a) = a + 4.",
+    "islem": "a + 4 = 13 ⇒ a = 9"
+   },
+   {
+    "baslik": "İçi hesapla",
+    "aciklama": "(g⁻¹ ∘ f)(9) için önce f(9).",
+    "islem": "f(9) = 27 − 2 = 25"
+   },
+   {
+    "baslik": "Tersi uygula",
+    "aciklama": "g 4 ekliyorsa g⁻¹ 4 çıkarır.",
+    "islem": "g⁻¹(x) = x − 4 ⇒ g⁻¹(25) = 21"
+   }
+  ],
+  "puf": "f⁻¹(k) = m ise k = f(m): ters fonksiyonu kaldırmak için diğer tarafa f uygula.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0007k",
+  "kaynakKart": "K-FN-06 (ters ve bileşke birlikte) · (f⁻¹ ∘ g) verilip (g⁻¹ ∘ f) isteniyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonksiyon-0008",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Parçalı Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Parçalı fonksiyonda f(f(a)) = k denklemini her kuralı kendi aralığında deneyerek çözer.",
+  "tipId": "fn-parcali",
+  "tip": "Parçalı fonksiyon",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılar kümesinde tanımlı f fonksiyonu\nf(x) = x + 2, x < 1 ise\nf(x) = 2x − 6, x ≥ 1 ise\nbiçiminde tanımlanıyor.\nf(f(a)) = 2 eşitliğini sağlayan a gerçel sayılarının toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−2",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "−2, her yerde yalnızca x < 1 kuralını kullanmak: (a + 2) + 2 = 2.",
+   "B": "4, f(a)’nın alabileceği değerleri (0 ve 4) toplamak; istenen a değerleri.",
+   "C": "5, her yerde yalnızca x ≥ 1 kuralını kullanmak: 2(2a − 6) − 6 = 2.",
+   "E": "8, x < 1 kuralından çıkan a = 2’yi de saymak; 2 bu aralıkta değil."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "f(f(a)) = 2 denkleminin çözümlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Parçalı fonksiyon",
+    "ifade": "her kural yalnızca kendi aralığında geçerlidir; bir kuraldan bulduğun x o aralıkta değilse atılır. Örnek: “x < 1 ise” kuralından x = 2 çıkarsa geçersizdir"
+   }
+  ],
+  "ipuclari": [
+   "Önce f(t) = 2 olan t değerlerini bul; f(a) bu değerlerden biri olmalı.",
+   "Her denklemi iki kuralla ayrı ayrı çöz.",
+   "Bulduğun her x’in o kuralın aralığında olup olmadığını kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dıştan başla",
+    "aciklama": "f(t) = 2 olan t’leri bul; her kuralı kendi aralığında dene.",
+    "islem": "t < 1: t + 2 = 2 ⇒ t = 0 ✓ · t ≥ 1: 2t − 6 = 2 ⇒ t = 4 ✓"
+   },
+   {
+    "baslik": "f(a) = 0",
+    "aciklama": "İki kuralı dene, aralığı kontrol et.",
+    "islem": "a < 1: a + 2 = 0 ⇒ a = −2 ✓ · a ≥ 1: 2a − 6 = 0 ⇒ a = 3 ✓"
+   },
+   {
+    "baslik": "f(a) = 4",
+    "aciklama": "Aralık kontrolü burada bir adayı eler.",
+    "islem": "a < 1: a + 2 = 4 ⇒ a = 2 ✗ (2 < 1 değil) · a ≥ 1: 2a − 6 = 4 ⇒ a = 5 ✓"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Geçerli a değerleri −2, 3 ve 5.",
+    "islem": "−2 + 3 + 5 = 6"
+   }
+  ],
+  "puf": "Parçalı fonksiyonda her adayı bulduğun kuralın aralığına geri koyup kontrol et.",
+  "kisaYol": null,
+  "kardes": "tytmat-fonksiyon-0008k",
+  "kaynakKart": "K-FN-08 (parçalı fonksiyonda iç içe denklem) · bir aday aralık dışında kalıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

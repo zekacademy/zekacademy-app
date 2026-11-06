@@ -1,0 +1,113 @@
+{
+ "konu": "Yaş Problemleri",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-YAS-01",
+   "konu": "Yaş Problemleri",
+   "alt": "Kat ilişkisi",
+   "fikir": "Bugünkü yaşlar arasında bir kat ilişkisi, geçmişte ya da gelecekte başka bir kat ilişkisi verilir; iki yaşa da aynı yıl eklenip çıkarılarak denklem kurulur.",
+   "tuzak": "Yıl kaydırırken yalnızca bir kişinin yaşını değiştirmek; birden çok çocuğun toplamında yılı kişi sayısıyla çarpmayı unutmak; istenen kişiyi ya da yılı karıştırmak.",
+   "zorluk": "kolay-orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yas-kat",
+   "tip": "Yaşlar arasında kat ilişkisi",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s167, günlük yazısı ve 3 katı yaş) · Bilgi Sarmal s232 #10 · 3D s157 #9"
+  },
+  {
+   "id": "K-YAS-02",
+   "konu": "Yaş Problemleri",
+   "alt": "Sabit yaş farkı",
+   "fikir": "“Ben senin yaşındayken…”, “sen benim yaşıma geldiğinde…” cümleleri yaş farkı kadar geri ya da ileri gitmektir; yaş farkı hiç değişmez.",
+   "tuzak": "Yaş farkının zamanla arttığını sanmak; iki yaşın ortalamasını ya da farkını yaş sanmak; iki kişinin toplamını bir kez artırmak.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yas-fark",
+   "tip": "Sabit yaş farkı (“ben senin yaşındayken”)",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s179, anne–çocuk tablo konuşması) · Bilgi Sarmal s232 #14–16 · 345 Deneme s118 #18"
+  },
+  {
+   "id": "K-YAS-03",
+   "konu": "Yaş Problemleri",
+   "alt": "Toplam yaşın değişimi",
+   "fikir": "n kişilik bir grubun yaşları toplamı t yılda n × t değişir; geçmişe gidilirken o tarihte doğmamış kişiler ayrıca düşünülür.",
+   "tuzak": "Toplamı yalnızca t kadar değiştirmek; doğmamış çocuğu negatif yaşla saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "yas-toplam",
+   "tip": "Yaşlar toplamının zamanla değişimi",
+   "kaynak": "Bilgi Sarmal s232 #10, s233 #2 · ÖSYM YKS çıkmış (kitap s90 #110, arkadaşlar ve çocukları)"
+  },
+  {
+   "id": "K-YAS-04",
+   "konu": "Yaş Problemleri",
+   "alt": "Yıl ve yaş",
+   "fikir": "Takvim yılları, doğum ya da yapım yılları ile yaşlar birlikte verilir; yaş = yıl − doğum yılı ilişkisiyle bilinmeyen yıl bulunur.",
+   "tuzak": "Yaşı farklı bir yıla göre hesaplamak; doğum yılı ile yaşı karıştırmak; iki farkı karıştırmak.",
+   "zorluk": "orta-zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yas-yil",
+   "tip": "Takvim yılı ile yaş",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s118 #141, tarihi ağaç · s122 #143, vazo · s150 #174, restoran) · Bilgi Sarmal s234 #9–10"
+  },
+  {
+   "id": "K-YAS-05",
+   "konu": "Yaş Problemleri",
+   "alt": "Yaş ortalaması",
+   "fikir": "Bir grubun yaş ortalaması verilir; gruba katılan ya da ayrılan kişilerden sonra yeni ortalama verilip kişilerin yaşları istenir.",
+   "tuzak": "Ortalamayı toplam sanmak; ortalamadaki değişimi doğrudan yaşa eklemek; yeni kişi sayısını yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yas-ortalama",
+   "tip": "Yaş ortalaması",
+   "kaynak": "ÖSYM YKS çıkmış (kitap s90 #110 · s230 #259) · Bilgi Sarmal s190 #13, s200 #8 · 3D s156 #3"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "yas-kat",
+   "ad": "Yaşlar arasında kat ilişkisi",
+   "kartlar": [
+    "K-YAS-01"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yas-fark",
+   "ad": "Sabit yaş farkı (“ben senin yaşındayken”)",
+   "kartlar": [
+    "K-YAS-02"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yas-toplam",
+   "ad": "Yaşlar toplamının zamanla değişimi",
+   "kartlar": [
+    "K-YAS-03"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yas-yil",
+   "ad": "Takvim yılı ile yaş",
+   "kartlar": [
+    "K-YAS-04"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yas-ortalama",
+   "ad": "Yaş ortalaması",
+   "kartlar": [
+    "K-YAS-05"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{"konu":"Fonksiyonlar","surum":1,
+ "not_":"Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 (11 soru: grafik 8, şekilli 6, yeni nesil 2; dört işlem ve bileşke ağırlıklı) · 3D, Bilgi Sarmal, Mert, 345 SB.",
+ "kartlar":[
+  {"id":"K-FN-01","konu":"Fonksiyonlar","alt":"Fonksiyonda Değer","fikir":"Doğrusal kuralda bilinmeyen girdi bir değerden bulunur, sonra başka bir girdide (2a, b + 3) değer hesaplanır.","tuzak":"f(2a)'yı 2·f(a), f(b + 3)'ü f(b) + 3 ya da f(b) + f(3) sanmak.","zorluk":"kolay","kalip":"düz","adim":2,"tipId":"fn-deger","tip":"Fonksiyonda değer bulma","kaynak":"3D s233 · 345 SB fonksiyon kavramı testleri"},
+  {"id":"K-FN-02","konu":"Fonksiyonlar","alt":"Grafik","fikir":"Birim kareli grafikte verilen x değerlerinde f(x) okunur, işaretiyle birlikte işlem yapılır.","tuzak":"x ile f(x)'i karıştırmak; x ekseninin altındaki değeri pozitif okumak; komşu noktadan okumak.","zorluk":"kolay","kalip":"grafik","adim":2,"tipId":"fn-grafik","tip":"Grafikten değer okuma","kaynak":"ÖSYM (grafik soruları, 8/11) · 3D s250"},
+  {"id":"K-FN-03","konu":"Fonksiyonlar","alt":"Grafik","fikir":"Grafikten bileşke değer: önce içteki f(a) okunur, bulunan değer tekrar grafiğe verilir.","tuzak":"f'yi bir kez uygulamak; f(f(a))'yı f(a)·f(a) sanmak.","zorluk":"orta","kalip":"grafik","adim":3,"tipId":"fn-grafik","tip":"Grafikten değer okuma","kaynak":"ÖSYM (grafikte bileşke, f(a) = f(b) = f(c) sıralama) · 3D grafik testleri"},
+  {"id":"K-FN-04","konu":"Fonksiyonlar","alt":"Ters Fonksiyon","fikir":"f⁻¹(b) = a bilgisi f(a) = b'ye çevrilip kuraldaki parametre bulunur; sonra başka bir ters değer istenir.","tuzak":"f⁻¹(b) = a'yı f(b) = a sanmak; f⁻¹ yerine f hesaplamak.","zorluk":"orta","kalip":"düz","adim":3,"tipId":"fn-ters","tip":"Ters fonksiyon","kaynak":"345 SB s389 · Mert ters fonksiyon testleri"},
+  {"id":"K-FN-05","konu":"Fonksiyonlar","alt":"Bileşke","fikir":"(f ∘ g)(a) değerinden a bulunur, ters sıradaki (g ∘ f)(a) istenir.","tuzak":"Bileşkede sırayı değiştirmek; içteki değeri cevap sanmak.","zorluk":"orta","kalip":"düz","adim":3,"tipId":"fn-bileske","tip":"Bileşke fonksiyon","kaynak":"ÖSYM ((f ∘ g) ve (g ∘ f) birlikte) · 345 SB s386"},
+  {"id":"K-FN-06","konu":"Fonksiyonlar","alt":"Bileşke","fikir":"Ters ve bileşke birlikte: (f⁻¹ ∘ g)(a) = k ise g(a) = f(k); ardından başka bir ters-bileşke değer.","tuzak":"Tersin kuralında işlemi ters çevirmemek (g⁻¹(x) = x + 4 sanmak).","zorluk":"zor","kalip":"düz","adim":4,"tipId":"fn-bileske","tip":"Bileşke fonksiyon","kaynak":"Mert s309 · 345 SB bileşke-ters testleri"},
+  {"id":"K-FN-07","konu":"Fonksiyonlar","alt":"Fonksiyonlarda İşlem","fikir":"Parametreli iki doğrusal fonksiyonun toplamı/farkı bir noktada verilir; parametre bulunup çarpım fonksiyonu hesaplanır.","tuzak":"(f · g)(x)'i bileşke sanmak; farkta işaret hatası.","zorluk":"orta","kalip":"düz","adim":3,"tipId":"fn-islem","tip":"Fonksiyonlarda dört işlem","kaynak":"ÖSYM ((f + g), (f · g) ile parametre bulma, 2 soru) · 3D s250"},
+  {"id":"K-FN-08","konu":"Fonksiyonlar","alt":"Parçalı Fonksiyon","fikir":"İki kurallı fonksiyonda f(f(a)) = k çözülür; her adayın kendi aralığında olup olmadığı kontrol edilir.","tuzak":"Aralık dışında kalan adayı saymak; tek bir kuralı her yerde kullanmak.","zorluk":"zor","kalip":"düz","adim":4,"tipId":"fn-parcali","tip":"Parçalı fonksiyon","kaynak":"3D s239 (parçalı fonksiyon) · 345 SB s386"}
+ ],
+ "tipler":[
+  {"tipId":"fn-deger","ad":"Fonksiyonda değer bulma","kartlar":["K-FN-01"],"uygulamaKonu":"matd|Fonksiyonlar"},
+  {"tipId":"fn-grafik","ad":"Grafikten değer okuma","kartlar":["K-FN-02","K-FN-03"],"uygulamaKonu":"matd|Fonksiyonlar"},
+  {"tipId":"fn-ters","ad":"Ters fonksiyon","kartlar":["K-FN-04"],"uygulamaKonu":"matd|Fonksiyonlar"},
+  {"tipId":"fn-bileske","ad":"Bileşke fonksiyon","kartlar":["K-FN-05","K-FN-06"],"uygulamaKonu":"matd|Fonksiyonlar"},
+  {"tipId":"fn-islem","ad":"Fonksiyonlarda dört işlem","kartlar":["K-FN-07"],"uygulamaKonu":"matd|Fonksiyonlar"},
+  {"tipId":"fn-parcali","ad":"Parçalı fonksiyon","kartlar":["K-FN-08"],"uygulamaKonu":"matd|Fonksiyonlar"}
+ ]}
