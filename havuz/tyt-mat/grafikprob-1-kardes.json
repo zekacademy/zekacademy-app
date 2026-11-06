@@ -1,0 +1,646 @@
+[
+ {
+  "id": "tytmat-grafikprob-0001k",
+  "ana": "tytmat-grafikprob-0001",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Sütun grafiği",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Sütun grafiğinden değerleri okuyup toplamı bulur; bir değerin toplam içindeki yüzdesini hesaplar.",
+  "tipId": "grf-sutun",
+  "tip": "Sütun grafiği okuma ve yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 2,
+  "metin": "Bir alışveriş merkezinin otoparkına bir gün boyunca iki saatlik zaman dilimlerinde giren araç sayıları aşağıdaki grafikte verilmiştir.\nBuna göre saat 12.00 ile 16.00 arasında otoparka giren araçlar, 08.00 ile 18.00 arasında giren tüm araçların yüzde kaçıdır?",
+  "sekil": "<svg viewBox=\"0 0 330 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"162.6\" x2=\"322\" y2=\"162.6\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"166.6\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"46\" y1=\"141.1\" x2=\"322\" y2=\"141.1\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"145.1\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"46\" y1=\"119.7\" x2=\"322\" y2=\"119.7\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"123.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"46\" y1=\"98.3\" x2=\"322\" y2=\"98.3\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"102.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"46\" y1=\"76.9\" x2=\"322\" y2=\"76.9\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"80.9\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><line x1=\"46\" y1=\"55.4\" x2=\"322\" y2=\"55.4\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"59.4\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">70</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"58.4\" y=\"76.9\" width=\"30.4\" height=\"107.1\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"73.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">08–10</text><rect x=\"113.6\" y=\"119.7\" width=\"30.4\" height=\"64.3\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"128.8\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10–12</text><rect x=\"168.8\" y=\"141.1\" width=\"30.4\" height=\"42.9\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"184.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">12–14</text><rect x=\"224.0\" y=\"98.3\" width=\"30.4\" height=\"85.7\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"239.2\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">14–16</text><rect x=\"279.2\" y=\"55.4\" width=\"30.4\" height=\"128.6\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"294.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">16–18</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Araç sayısı</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Saat aralığı</text></svg>",
+  "siklar": {
+   "A": "10",
+   "B": "20",
+   "C": "30",
+   "D": "40",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "10, yalnız 12.00–14.00 dilimini almak (20 ÷ 200); 14.00–16.00 de aralıkta.",
+   "B": "20, yalnız 14.00–16.00 dilimini almak (40 ÷ 200).",
+   "D": "40, beş dilimden ikisini seçip 2/5 almak; dilimlerdeki araç sayıları eşit değil.",
+   "E": "60, bu aralıkta giren araç sayısı; soru yüzdeyi soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "12.00–16.00 arasında giren araçların tüm araçlara göre yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "Sütun grafiği okuma",
+    "ifade": "sütunun üst ucundan yatay çizgiyi izleyip dikey eksendeki değeri oku"
+   },
+   {
+    "ad": "Yüzdeyi bulmak",
+    "ifade": "parça ÷ bütün × 100. Örnek: 30 ÷ 120 = 0,25 ⇒ %25"
+   }
+  ],
+  "ipuclari": [
+   "12.00 ile 16.00 arası hangi iki dilimi kapsar?",
+   "Beş dilimin toplamını bul.",
+   "İki dilimin toplamını tüm araçlara böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri oku",
+    "aciklama": "Beş dilimdeki araç sayıları.",
+    "islem": "50 · 30 · 20 · 40 · 60"
+   },
+   {
+    "baslik": "Toplam ve aralık",
+    "aciklama": "12.00–16.00 arası iki dilimdir: 12–14 ve 14–16.",
+    "islem": "toplam: 200 · aralık: 20 + 40 = 60"
+   },
+   {
+    "baslik": "Yüzde",
+    "aciklama": "Aralıktaki araçları toplama böl.",
+    "islem": "60 ÷ 200 = 0,3 ⇒ %30"
+   }
+  ],
+  "puf": "Bir zaman aralığı birden çok dilimi kapsıyorsa hepsini topla; sonra bütüne böl.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-01 (sütundan değer okuma, toplam içindeki yüzde) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0002k",
+  "ana": "tytmat-grafikprob-0002",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Daire grafiği",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Daire grafiğindeki açıları toplam sayıya göre kişi sayısına çevirir ve iki grubu karşılaştırır.",
+  "tipId": "grf-daire",
+  "tip": "Daire grafiği",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 2,
+  "metin": "Bir bahçedeki 60 meyve ağacının türlerine göre dağılımı aşağıdaki daire grafiğinde verilmiştir.\nBuna göre bahçedeki elma ve kiraz ağaçlarının toplam sayısı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 196\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M165.0 98.0 L165.0 24.0 A74 74 0 0 1 235.4 120.9 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".14\"/><text x=\"200.9\" y=\"75.9\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">108°</text><text x=\"233.0\" y=\"52.6\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Elma</text><path d=\"M165.0 98.0 L235.4 120.9 A74 74 0 0 1 165.0 172.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".42\"/><text x=\"191.1\" y=\"137.9\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">72°</text><text x=\"214.4\" y=\"170.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Armut</text><path d=\"M165.0 98.0 L165.0 172.0 A74 74 0 0 1 100.9 61.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".26\"/><text x=\"126.5\" y=\"124.2\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">120°</text><text x=\"92.3\" y=\"144.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Ceviz</text><path d=\"M165.0 98.0 L100.9 61.0 A74 74 0 0 1 165.0 24.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".56\"/><text x=\"142.8\" y=\"63.5\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">60°</text><text x=\"123.0\" y=\"29.3\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kiraz</text></svg>",
+  "siklar": {
+   "A": "10",
+   "B": "14",
+   "C": "18",
+   "D": "28",
+   "E": "168"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "28"
+  },
+  "celdiriciler": {
+   "A": "10, yalnız kiraz ağaçlarının sayısı.",
+   "B": "14 = 168 ÷ 12; bir ağacı 12° sanmak. 360 ÷ 60 = 6°.",
+   "C": "18, yalnız elma ağaçlarının sayısı.",
+   "E": "168, iki dilimin açılarının toplamı (°); ağaç sayısına çevrilmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Elma ve kiraz ağaçlarının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Daire grafiği",
+    "ifade": "tüm daire 360°’dir; dilimin sayısı = toplam × açı ÷ 360. Örnek: 60 kişide 90°’lik dilim ⇒ 60 × 90 ÷ 360 = 15 kişi"
+   }
+  ],
+  "ipuclari": [
+   "Tüm daire 60 ağaç ise 1 ağaç kaç derecedir?",
+   "Elma ve kiraz dilimlerinin açılarını topla.",
+   "Toplam açıyı ağaç sayısına çevir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir ağacın açısı",
+    "aciklama": "Tüm daire 60 ağaç.",
+    "islem": "360 ÷ 60 = 6°"
+   },
+   {
+    "baslik": "İki dilim",
+    "aciklama": "Elma 108°, kiraz 60°.",
+    "islem": "108 + 60 = 168°"
+   },
+   {
+    "baslik": "Ağaç sayısı",
+    "aciklama": "Açıyı 6’ya böl.",
+    "islem": "168 ÷ 6 = 28 ağaç"
+   }
+  ],
+  "puf": "Daire grafiğinde birden çok dilim soruluyorsa açıları topla, sonra tek seferde sayıya çevir.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-03 (açıdan sayıya) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0003k",
+  "ana": "tytmat-grafikprob-0003",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Çizgi grafiği",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Çizgi grafiğinden en büyük değeri ve istenen değeri okuyup yüzde farkını miktara çevirir.",
+  "tipId": "grf-cizgi",
+  "tip": "Çizgi grafiği ve değişim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Bir kafede bir haftanın altı gününde satılan çay sayıları aşağıdaki çizgi grafiğinde gösterilmiştir.\nBuna göre satılan çay sayısının bir önceki güne göre sayıca en çok arttığı günde, satış bir önceki güne göre yüzde kaç artmıştır?",
+  "sekil": "<svg viewBox=\"0 0 330 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"167.3\" x2=\"318\" y2=\"167.3\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"171.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"46\" y1=\"150.7\" x2=\"318\" y2=\"150.7\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"154.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"46\" y1=\"134.0\" x2=\"318\" y2=\"134.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"138.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"46\" y1=\"117.3\" x2=\"318\" y2=\"117.3\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"121.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">120</text><line x1=\"46\" y1=\"100.7\" x2=\"318\" y2=\"100.7\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"104.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">150</text><line x1=\"46\" y1=\"84.0\" x2=\"318\" y2=\"84.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"88.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">180</text><line x1=\"46\" y1=\"67.3\" x2=\"318\" y2=\"67.3\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"71.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">210</text><line x1=\"46\" y1=\"50.7\" x2=\"318\" y2=\"50.7\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"54.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">240</text><line x1=\"46\" y1=\"34.0\" x2=\"318\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">270</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"68.7\" y1=\"117.3\" x2=\"68.7\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"68.7\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Pzt</text><line x1=\"114.0\" y1=\"100.7\" x2=\"114.0\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"114.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Salı</text><line x1=\"159.3\" y1=\"134.0\" x2=\"159.3\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"159.3\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Çar</text><line x1=\"204.7\" y1=\"84.0\" x2=\"204.7\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"204.7\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Per</text><line x1=\"250.0\" y1=\"67.3\" x2=\"250.0\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"250.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cuma</text><line x1=\"295.3\" y1=\"50.7\" x2=\"295.3\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"295.3\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cmt</text><polyline points=\"68.7,117.3 114.0,100.7 159.3,134.0 204.7,84.0 250.0,67.3 295.3,50.7\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><circle cx=\"68.7\" cy=\"117.3\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"114.0\" cy=\"100.7\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"159.3\" cy=\"134.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"204.7\" cy=\"84.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"250.0\" cy=\"67.3\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"295.3\" cy=\"50.7\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><line x1=\"46\" y1=\"184\" x2=\"318\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Satılan çay (bardak)</text><text x=\"182.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Günler</text></svg>",
+  "siklar": {
+   "A": "25",
+   "B": "50",
+   "C": "60",
+   "D": "90",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "25, salıdaki artışın yüzdesi (120 → 150); en büyük artış perşembe.",
+   "B": "50 = 90 ÷ 180; artışı yeni değere bölmek. Bölen önceki gündür.",
+   "C": "60, çarşambadaki düşüş miktarı; artış değil.",
+   "D": "90, perşembedeki artış miktarı (bardak); yüzde değil."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "En büyük artışın olduğu günün yüzde artışı.",
+  "bilgi": [
+   {
+    "ad": "Yüzde değişim",
+    "ifade": "değişim ÷ eski değer × 100. Örnek: 40’tan 50’ye çıkış ⇒ 10 ÷ 40 = %25 artış"
+   }
+  ],
+  "ipuclari": [
+   "Her günün değerini oku ve bir önceki günle farkını yaz.",
+   "En büyük artış hangi günde?",
+   "Artışı bir önceki günün değerine böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri oku",
+    "aciklama": "Pazartesiden cumartesiye.",
+    "islem": "120 · 150 · 90 · 180 · 210 · 240"
+   },
+   {
+    "baslik": "Günlük değişimler",
+    "aciklama": "Her günü bir öncekiyle karşılaştır.",
+    "islem": "+30 · −60 · +90 · +30 · +30 ⇒ en büyük artış perşembe"
+   },
+   {
+    "baslik": "Yüzde artış",
+    "aciklama": "Perşembe 90’dan 180’e çıkmış; artışı eski değere böl.",
+    "islem": "90 ÷ 90 = 1 ⇒ %100"
+   }
+  ],
+  "puf": "Yüzde artışta bölen her zaman eski (önceki) değerdir.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-04 (zamana göre değişim, yüzde puan → miktar) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0004k",
+  "ana": "tytmat-grafikprob-0004",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Tablo",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Tablodaki eksik hücreleri gelir = fiyat × adet ilişkisi ve verilen toplamla tamamlar.",
+  "tipId": "grf-tablo",
+  "tip": "Tablo yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir sinemanın hafta sonu bilet satışlarına ait bilgilerin bir kısmı aşağıdaki tabloda verilmiştir.\nSinema hafta sonu bu biletlerden toplam 39000 TL gelir elde etmiştir.\nBuna göre hafta sonu toplam kaç bilet satılmıştır?",
+  "sekil": "<svg viewBox=\"0 0 328 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"324\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"35.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">Bilet türü</text><text x=\"117.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">Bilet fiyatı (TL)</text><text x=\"206.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">Satılan bilet</text><text x=\"286.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">Gelir (TL)</text><text x=\"35.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Tam</text><text x=\"117.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">240</text><text x=\"206.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">100</text><text x=\"286.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">?</text><text x=\"35.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Öğrenci</text><text x=\"117.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">150</text><text x=\"206.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">?</text><text x=\"286.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">?</text><text x=\"35.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Çocuk</text><text x=\"117.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">?</text><text x=\"206.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"286.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3000</text><line x1=\"2\" y1=\"2\" x2=\"326\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"326\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"326\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"326\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"326\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"68\" y1=\"2\" x2=\"68\" y2=\"106\" stroke-width=\"1\"/><line x1=\"166\" y1=\"2\" x2=\"166\" y2=\"106\" stroke-width=\"1\"/><line x1=\"246\" y1=\"2\" x2=\"246\" y2=\"106\" stroke-width=\"1\"/><line x1=\"326\" y1=\"2\" x2=\"326\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "80",
+   "B": "130",
+   "C": "180",
+   "D": "210",
+   "E": "230"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "210"
+  },
+  "celdiriciler": {
+   "A": "80, yalnız öğrenci biletlerinin sayısı; soru tüm biletleri soruyor.",
+   "B": "130: öğrenci biletlerini toplama katmamak (100 + 30).",
+   "C": "180: çocuk biletlerini toplama katmamak (100 + 80).",
+   "E": "230: çocuk gelirini düşmeden öğrenci bileti sayısını 100 bulmak; (39000 − 24000) ÷ 150 = 100."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Hafta sonu satılan tüm biletlerin sayısı.",
+  "bilgi": [
+   {
+    "ad": "Gelir",
+    "ifade": "gelir = birim fiyat × satılan adet. Örnek: tanesi 25 TL olan üründen 8 tane ⇒ 200 TL"
+   }
+  ],
+  "ipuclari": [
+   "Tam bilet gelirini tablodan hesapla.",
+   "Toplam gelirden tam ve çocuk bileti gelirlerini çıkarıp öğrenci bileti sayısını bul.",
+   "Üç bilet türünün adetlerini topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tam bilet geliri",
+    "aciklama": "Fiyat × adet.",
+    "islem": "240 × 100 = 24000 TL"
+   },
+   {
+    "baslik": "Öğrenci biletleri",
+    "aciklama": "Kalan geliri öğrenci bileti fiyatına böl.",
+    "islem": "39000 − 24000 − 3000 = 12000 · 12000 ÷ 150 = 80"
+   },
+   {
+    "baslik": "Toplam bilet",
+    "aciklama": "Üç türün adetleri.",
+    "islem": "100 + 80 + 30 = 210 bilet"
+   }
+  ],
+  "puf": "Tablodaki toplam koşulunu kullanmadan önce bilinen satırların hepsini toplamdan düş.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-05 (eksik hücreli tablo, toplam koşulu) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0005k",
+  "ana": "tytmat-grafikprob-0005",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Veri değişince grafik",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Daire grafiğindeki bir gruba ekleme yapıldığında verilen yeni yüzdeden başlangıç toplamını denklemle bulur.",
+  "tipId": "grf-degisim",
+  "tip": "Veri değişince grafiği yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Bir okul kütüphanesindeki kitapların türlerine göre dağılımı aşağıdaki daire grafiğinde verilmiştir.\nKütüphaneye 12 yeni bilim kitabı bağışlandığında bilim kitapları kütüphanedeki tüm kitapların %25’i olmuştur.\nBuna göre başlangıçta kütüphanede kaç tarih kitabı vardır?",
+  "sekil": "<svg viewBox=\"0 0 330 196\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M165.0 98.0 L165.0 24.0 A74 74 0 0 1 180.4 170.4 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".14\"/><text x=\"209.2\" y=\"97.4\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">168°</text><text x=\"248.5\" y=\"93.2\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Roman</text><path d=\"M165.0 98.0 L180.4 170.4 A74 74 0 0 1 100.9 135.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".42\"/><text x=\"146.9\" y=\"142.6\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">72°</text><text x=\"130.8\" y=\"178.7\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Bilim</text><path d=\"M165.0 98.0 L100.9 135.0 A74 74 0 0 1 165.0 24.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".26\"/><text x=\"126.5\" y=\"79.8\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">120°</text><text x=\"92.3\" y=\"60.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Tarih</text></svg>",
+  "siklar": {
+   "A": "36",
+   "B": "60",
+   "C": "80",
+   "D": "84",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "36, başlangıçtaki bilim kitabı sayısı.",
+   "C": "80: yeni oranı kurarken bağışlanan 12 kitabı toplama eklememek (N ÷ 5 + 12 = N ÷ 4 ⇒ N = 240).",
+   "D": "84, başlangıçtaki roman sayısı.",
+   "E": "180, başlangıçtaki toplam kitap sayısı."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Başlangıçtaki tarih kitabı sayısı.",
+  "bilgi": [
+   {
+    "ad": "Daire grafiği",
+    "ifade": "tüm daire 360°’dir; dilimin sayısı = toplam × açı ÷ 360. Örnek: 60 kişide 90°’lik dilim ⇒ 60 × 90 ÷ 360 = 15 kişi"
+   },
+   {
+    "ad": "Yüzdeyi bulmak",
+    "ifade": "parça ÷ bütün × 100. Örnek: 30 ÷ 120 = 0,25 ⇒ %25"
+   }
+  ],
+  "ipuclari": [
+   "Bilim dilimi dairenin kaçta kaçı?",
+   "Bağıştan sonra bilim kitapları ve toplam kitap sayısı kaç olur?",
+   "Yeni oranı %25’e eşitle; toplamı bulunca tarih dilimini hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilimin payı",
+    "aciklama": "72°, dairenin beşte biri.",
+    "islem": "72 ÷ 360 = 1/5 ⇒ bilim: N ÷ 5"
+   },
+   {
+    "baslik": "Yeni durum",
+    "aciklama": "12 bilim kitabı eklenir; toplam da 12 artar.",
+    "islem": "bilim: N ÷ 5 + 12 · toplam: N + 12"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "Yeni bilim oranı %25 = 1/4.",
+    "islem": "4 × (N ÷ 5 + 12) = N + 12 · 0,8N + 48 = N + 12 ⇒ 0,2N = 36 ⇒ N = 180"
+   },
+   {
+    "baslik": "Tarih kitapları",
+    "aciklama": "Tarih dilimi 120°.",
+    "islem": "180 × 120 ÷ 360 = 60"
+   }
+  ],
+  "puf": "Ekleme sonrası oran sorularında payı da paydayı da güncelle; sonra istenen dilimi başlangıç toplamından hesapla.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-06 (ekleme sonrası yeni yüzde) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0006k",
+  "ana": "tytmat-grafikprob-0006",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · Ölçeği verilmemiş sütun",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Değerleri yazılmamış eşit bölmeli bir sütun grafiğinde bilinen bir sütundan bir bölmenin değerini bulur ve diğer sütunları okur.",
+  "tipId": "grf-sutun",
+  "tip": "Sütun grafiği okuma ve yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Bir çiftlikteki hayvanların türlerine göre sayıları aşağıdaki sütun grafiğinde gösterilmiştir. Dikey eksendeki sayılar okunamamaktadır; yatay çizgiler eşit aralıklıdır ve her sütun bir çizgide bitmektedir.\nÇiftlikteki koyun sayısı keçi sayısından 20 fazla olduğuna göre çiftlikteki inek ve tavukların toplam sayısı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"165.2\" x2=\"322\" y2=\"165.2\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"146.5\" x2=\"322\" y2=\"146.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"127.8\" x2=\"322\" y2=\"127.8\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"109.0\" x2=\"322\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"90.2\" x2=\"322\" y2=\"90.2\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"71.5\" x2=\"322\" y2=\"71.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"52.8\" x2=\"322\" y2=\"52.8\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><rect x=\"63.5\" y=\"109.0\" width=\"34.0\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"80.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">İnek</text><rect x=\"132.5\" y=\"52.8\" width=\"34.0\" height=\"131.2\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"149.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Koyun</text><rect x=\"201.5\" y=\"127.8\" width=\"34.0\" height=\"56.2\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"218.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Keçi</text><rect x=\"270.5\" y=\"71.5\" width=\"34.0\" height=\"112.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"287.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Tavuk</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Hayvan sayısı</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Hayvan türü</text></svg>",
+  "siklar": {
+   "A": "10",
+   "B": "20",
+   "C": "30",
+   "D": "40",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "50"
+  },
+  "celdiriciler": {
+   "A": "10, inek ve tavuk sütunlarının bölme sayılarının toplamı.",
+   "B": "20, yalnız ineklerin sayısı.",
+   "C": "30, yalnız tavukların sayısı.",
+   "D": "40: koyun ile keçi arasını 5 bölme saymak (bir bölme 4 hayvan)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "İnek ve tavukların toplam sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bir bölmenin değeri",
+    "ifade": "bilinen değer ÷ ona karşılık gelen bölme sayısı. Örnek: 4 bölme 20 ise 1 bölme 5"
+   }
+  ],
+  "ipuclari": [
+   "Koyun ve keçi sütunları arasında kaç bölme fark var?",
+   "Bu fark 20 hayvan ise bir bölme kaç hayvan?",
+   "İnek ve tavuk sütunlarının bölmelerini toplayıp çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölmeleri say",
+    "aciklama": "Sütunların yükseklikleri (bölme).",
+    "islem": "İnek 4 · Koyun 7 · Keçi 3 · Tavuk 6"
+   },
+   {
+    "baslik": "Bir bölmenin değeri",
+    "aciklama": "Koyun ile keçi arasında 7 − 3 = 4 bölme fark var; bu 20 hayvan.",
+    "islem": "20 ÷ 4 = 5 hayvan"
+   },
+   {
+    "baslik": "İnek ve tavuk",
+    "aciklama": "Toplam bölmeyi 5 ile çarp.",
+    "islem": "(4 + 6) × 5 = 50 hayvan"
+   }
+  ],
+  "puf": "Fark verildiğinde bölme farkını say; farkın değerini bu sayıya bölerek bir bölmeyi bul.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-02 (ölçeksiz sütun, bir değer verilir) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0007k",
+  "ana": "tytmat-grafikprob-0007",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · İki grafik: dağılım ve oran",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Daire grafiğindeki açıları sütun grafiğindeki yüzdelerle birleştirip bir derecenin kaç kişiye karşılık geldiğini bulur; istenen alt grubu hesaplar.",
+  "tipId": "grf-iki",
+  "tip": "İki grafiği birlikte yorumlama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 5,
+  "metin": "Bir şirketin dört şubesindeki çalışanların şubelere göre dağılımı Şekil 1’deki daire grafiğinde verilmiştir. Her şubede uzaktan çalışanların o şubedeki tüm çalışanlara oranı ise Şekil 2’deki sütun grafiğinde yüzde olarak gösterilmiştir.\nŞirkette uzaktan çalışan 252 kişi olduğuna göre İzmir şubesinde uzaktan çalışan kaç kişi vardır?",
+  "sekil": "<svg viewBox=\"0 0 330 468\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"165.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 1</text><g transform=\"translate(0.0,20)\"><path d=\"M165.0 95.0 L165.0 25.0 A70 70 0 0 1 200.0 155.6 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".14\"/><text x=\"205.6\" y=\"88.1\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">150°</text><text x=\"242.3\" y=\"78.3\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Ankara</text><path d=\"M165.0 95.0 L200.0 155.6 A70 70 0 0 1 104.4 130.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".42\"/><text x=\"154.1\" y=\"139.6\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">90°</text><text x=\"144.3\" y=\"176.3\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">İzmir</text><path d=\"M165.0 95.0 L104.4 130.0 A70 70 0 0 1 104.4 60.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".26\"/><text x=\"123.0\" y=\"99.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">60°</text><text x=\"85.0\" y=\"99.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Bursa</text><path d=\"M165.0 95.0 L104.4 60.0 A70 70 0 0 1 165.0 25.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".56\"/><text x=\"144.0\" y=\"62.6\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">60°</text><text x=\"125.0\" y=\"29.7\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Antalya</text></g><text x=\"165.0\" y=\"230.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 2</text><g transform=\"translate(0.0,236)\"><line x1=\"46\" y1=\"159.0\" x2=\"322\" y2=\"159.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"163.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"46\" y1=\"134.0\" x2=\"322\" y2=\"134.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"138.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"46\" y1=\"109.0\" x2=\"322\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"46\" y1=\"84.0\" x2=\"322\" y2=\"84.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"88.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"46\" y1=\"59.0\" x2=\"322\" y2=\"59.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"63.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"63.5\" y=\"84.0\" width=\"34.0\" height=\"100.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"80.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Ankara</text><rect x=\"132.5\" y=\"134.0\" width=\"34.0\" height=\"50.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"149.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">İzmir</text><rect x=\"201.5\" y=\"109.0\" width=\"34.0\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"218.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Bursa</text><rect x=\"270.5\" y=\"59.0\" width=\"34.0\" height=\"125.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"287.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Antalya</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Uzaktan çalışanlar (%)</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şubeler</text></g></svg>",
+  "siklar": {
+   "A": "18",
+   "B": "36",
+   "C": "90",
+   "D": "144",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "18: bir dereceyi 1 kişi sanmak (90 × 0,2); 126 derecelik pay 252 kişiye karşılık geliyor.",
+   "C": "90, İzmir diliminin açısı (°); kişi sayısı değil.",
+   "D": "144, İzmir’de ofisten çalışanların sayısı.",
+   "E": "180, İzmir şubesindeki tüm çalışanlar."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İzmir şubesinde uzaktan çalışanların sayısı.",
+  "bilgi": [
+   {
+    "ad": "Daire grafiği",
+    "ifade": "tüm daire 360°’dir; dilimin sayısı = toplam × açı ÷ 360. Örnek: 60 kişide 90°’lik dilim ⇒ 60 × 90 ÷ 360 = 15 kişi"
+   },
+   {
+    "ad": "Bir derecenin değeri",
+    "ifade": "bilinen sayı ÷ ona karşılık gelen açı. Örnek: 90° = 1800 TL ise 1° = 20 TL"
+   }
+  ],
+  "ipuclari": [
+   "Her şubenin açısını uzaktan çalışma yüzdesiyle çarp ve topla.",
+   "Bu toplam açı 252 kişiye karşılık geliyorsa 1° kaç kişi?",
+   "İzmir şubesinin çalışan sayısını bulup yüzdesini uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uzaktan çalışanların açı payı",
+    "aciklama": "Açı × oran.",
+    "islem": "150 × 0,4 = 60 · 90 × 0,2 = 18 · 60 × 0,3 = 18 · 60 × 0,5 = 30"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Uzaktan çalışanların açı karşılığı.",
+    "islem": "60 + 18 + 18 + 30 = 126°"
+   },
+   {
+    "baslik": "Bir derece",
+    "aciklama": "126° = 252 kişi.",
+    "islem": "252 ÷ 126 = 2 kişi"
+   },
+   {
+    "baslik": "İzmir şubesi",
+    "aciklama": "Dilim 90°.",
+    "islem": "90 × 2 = 180 kişi"
+   },
+   {
+    "baslik": "Uzaktan çalışanlar",
+    "aciklama": "İzmir’de oran %20.",
+    "islem": "180 × 0,2 = 36 kişi"
+   }
+  ],
+  "puf": "Açı × yüzde çarpımlarının toplamı, özelliği taşıyanların daire üzerindeki payıdır; bunu bilinen sayıya eşle.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-07 (daire: dağılım · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-grafikprob-0008k",
+  "ana": "tytmat-grafikprob-0008",
+  "ders": "TYT Matematik",
+  "konu": "Grafik Problemleri · İki grafik: adet ve gelir",
+  "k": "prob|Grafik Problemleri",
+  "kazanim": "Bilinen bir fiyattan gelir dağılımında bir derecenin değerini bulur; başka bir ürünün gelirini adedine bölerek fiyatını hesaplar.",
+  "tipId": "grf-iki",
+  "tip": "İki grafiği birlikte yorumlama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Bir manavın bir günde sattığı dört çeşit meyvenin miktarları Şekil 1’deki sütun grafiğinde, bu meyvelerin satışından elde edilen gelirin meyvelere göre dağılımı ise Şekil 2’deki daire grafiğinde verilmiştir.\nHer meyve gün boyunca aynı fiyattan satılmıştır ve elmanın kilogram fiyatı 36 TL’dir.\nBuna göre portakalın kilogram fiyatı kaç TL’dir?",
+  "sekil": "<svg viewBox=\"0 0 330 468\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"165.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 1</text><g transform=\"translate(0.0,20)\"><line x1=\"46\" y1=\"159.0\" x2=\"322\" y2=\"159.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"163.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"46\" y1=\"134.0\" x2=\"322\" y2=\"134.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"138.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"46\" y1=\"109.0\" x2=\"322\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"46\" y1=\"84.0\" x2=\"322\" y2=\"84.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"88.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"46\" y1=\"59.0\" x2=\"322\" y2=\"59.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"63.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"63.5\" y=\"59.0\" width=\"34.0\" height=\"125.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"80.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Elma</text><rect x=\"132.5\" y=\"134.0\" width=\"34.0\" height=\"50.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"149.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Muz</text><rect x=\"201.5\" y=\"159.0\" width=\"34.0\" height=\"25.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"218.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Kiraz</text><rect x=\"270.5\" y=\"84.0\" width=\"34.0\" height=\"100.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"287.5\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Portakal</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Satış (kg)</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Meyveler</text></g><text x=\"165.0\" y=\"266.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 2</text><g transform=\"translate(0.0,272)\"><path d=\"M165.0 95.0 L165.0 25.0 A70 70 0 0 1 235.0 95.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".14\"/><text x=\"194.7\" y=\"69.3\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">90°</text><text x=\"221.6\" y=\"42.4\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Elma</text><path d=\"M165.0 95.0 L235.0 95.0 A70 70 0 0 1 177.2 163.9 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".42\"/><text x=\"197.2\" y=\"126.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">80°</text><text x=\"226.3\" y=\"150.4\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Muz</text><path d=\"M165.0 95.0 L177.2 163.9 A70 70 0 0 1 95.0 95.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".26\"/><text x=\"138.0\" y=\"131.2\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">100°</text><text x=\"113.6\" y=\"160.3\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kiraz</text><path d=\"M165.0 95.0 L95.0 95.0 A70 70 0 0 1 165.0 25.0 Z\" stroke-width=\"1.4\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".56\"/><text x=\"135.3\" y=\"69.3\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">90°</text><text x=\"108.4\" y=\"42.4\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Portakal</text></g></svg>",
+  "siklar": {
+   "A": "36",
+   "B": "45",
+   "C": "90",
+   "D": "180",
+   "E": "1800"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "45"
+  },
+  "celdiriciler": {
+   "A": "36: aynı açılı dilimlerin fiyatlarını eşit sanmak; gelirler eşit ama satılan miktarlar farklı.",
+   "C": "90 = 1800 ÷ 20; portakal gelirini muzun miktarına bölmek.",
+   "D": "180 = 7200 ÷ 40; toplam geliri portakal miktarına bölmek.",
+   "E": "1800, portakal satışından elde edilen gelir (TL); kilogram fiyatı değil."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Portakalın kilogram fiyatı.",
+  "bilgi": [
+   {
+    "ad": "Gelir",
+    "ifade": "gelir = birim fiyat × satılan adet. Örnek: tanesi 25 TL olan üründen 8 tane ⇒ 200 TL"
+   },
+   {
+    "ad": "Bir derecenin değeri",
+    "ifade": "bilinen sayı ÷ ona karşılık gelen açı. Örnek: 90° = 1800 TL ise 1° = 20 TL"
+   }
+  ],
+  "ipuclari": [
+   "Elmadan elde edilen gelir kaç TL ve kaç dereceye karşılık geliyor?",
+   "Bir derece kaç TL gelir eder?",
+   "Portakal gelirini satılan portakal miktarına böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Elma geliri",
+    "aciklama": "Fiyat × miktar.",
+    "islem": "36 × 50 = 1800 TL"
+   },
+   {
+    "baslik": "Bir derecenin değeri",
+    "aciklama": "Elma dilimi 90°.",
+    "islem": "1800 ÷ 90 = 20 TL"
+   },
+   {
+    "baslik": "Portakal geliri",
+    "aciklama": "Portakal dilimi de 90°.",
+    "islem": "90 × 20 = 1800 TL"
+   },
+   {
+    "baslik": "Portakal fiyatı",
+    "aciklama": "Geliri satılan miktara böl.",
+    "islem": "1800 ÷ 40 = 45 TL"
+   }
+  ],
+  "puf": "Eşit açılı dilimler eşit geliri gösterir; satılan miktarlar farklıysa fiyatlar da farklıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-GR-08 (sütun: adet · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

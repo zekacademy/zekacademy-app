@@ -1,0 +1,163 @@
+{
+ "konu": "Grafik Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 (Veri ve Problemler), Bilgi Sarmal, 3D, Mert Hoca, 345 SB, Orijinal Deneme.",
+ "kartlar": [
+  {
+   "id": "K-GR-01",
+   "konu": "Grafik Problemleri",
+   "alt": "Sütun grafiği",
+   "fikir": "Sütun grafiğinden değerler okunur; toplam, fark ya da bir değerin toplam içindeki yüzdesi hesaplanır.",
+   "tuzak": "Komşu sütunu okumak; bir değeri toplamın dışında bırakmak; sayıyı yüzde sanmak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 2,
+   "tipId": "grf-sutun",
+   "tip": "Sütun grafiği okuma ve yorumlama",
+   "kaynak": "Bilgi Sarmal, Mert Hoca (sütun grafiğinde dağılım) · ÖSYM 2019"
+  },
+  {
+   "id": "K-GR-02",
+   "konu": "Grafik Problemleri",
+   "alt": "Ölçeği verilmemiş sütun",
+   "fikir": "Dikey eksende sayı yoktur; bir sütunun değeri (ya da iki sütunun farkı) verilir, bir bölmenin değeri bulunup diğer sütunlar okunur.",
+   "tuzak": "Bölme sayısını değer sanmak; bölmeleri yanlış saymak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "grf-sutun",
+   "tip": "Sütun grafiği okuma ve yorumlama",
+   "kaynak": "Mert Hoca (araçlardaki benzin), 345 SB (ölçeksiz grafik)"
+  },
+  {
+   "id": "K-GR-03",
+   "konu": "Grafik Problemleri",
+   "alt": "Daire grafiği",
+   "fikir": "Daire 360°’dir; toplam verilince bir derecenin karşılığı bulunur ve dilimler sayıya çevrilir.",
+   "tuzak": "Açıyı sayı sanmak; bir derecenin değerini yanlış bulmak; istenmeyen dilimi almak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 2,
+   "tipId": "grf-daire",
+   "tip": "Daire grafiği",
+   "kaynak": "ÖSYM 2020 (spor egzersizi süreleri), ÖSYM 2022 (dolaptaki kıyafetler)"
+  },
+  {
+   "id": "K-GR-04",
+   "konu": "Grafik Problemleri",
+   "alt": "Çizgi grafiği",
+   "fikir": "Zamana göre değişim çizgi grafiğinden okunur; iki an arasındaki fark ya da bir önceki döneme göre yüzde değişim bulunur.",
+   "tuzak": "Yüzde puan farkını miktar sanmak; değişimi yeni değere bölmek; yanlış aralığı seçmek.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "grf-cizgi",
+   "tip": "Çizgi grafiği ve değişim",
+   "kaynak": "3D (aracın aldığı yol), 345 SB (mumun boyu) · ÖSYM 2024"
+  },
+  {
+   "id": "K-GR-05",
+   "konu": "Grafik Problemleri",
+   "alt": "Tablo",
+   "fikir": "Tablodaki bazı hücreler boştur; satır/sütun ilişkileri (gelir = fiyat × adet) ve verilen toplamla eksikler tamamlanır.",
+   "tuzak": "Bir satırı toplamdan düşmeyi unutmak; istenmeyen hücreyi cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "grf-tablo",
+   "tip": "Tablo yorumlama",
+   "kaynak": "Bilgi Sarmal (kurs kayıt tablosu, maaş tablosu) · Mert Hoca (deneme tablosu)"
+  },
+  {
+   "id": "K-GR-06",
+   "konu": "Grafik Problemleri",
+   "alt": "Veri değişince grafik",
+   "fikir": "Daire grafiğindeki bir gruba ekleme yapılınca o grubun yeni yüzdesi verilir; başlangıç toplamı denklemle bulunur.",
+   "tuzak": "Yeni oranı kurarken eklenenleri toplama katmamak; istenmeyen dilimi vermek.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "grf-degisim",
+   "tip": "Veri değişince grafiği yorumlama",
+   "kaynak": "ÖSYM 2022 (dolaptan ceket eksilince), ÖSYM 2021 (anket oyları eklenince)"
+  },
+  {
+   "id": "K-GR-07",
+   "konu": "Grafik Problemleri",
+   "alt": "İki grafik: dağılım ve oran",
+   "fikir": "Daire grafiği grupların dağılımını, sütun grafiği her grupta bir özelliğin yüzdesini verir; açı × yüzde toplamı bilinen sayıya eşlenir.",
+   "tuzak": "Yüzdeleri doğrudan toplamak ya da ortalamak; bir dereceyi bir kişi sanmak; istenmeyen alt grubu vermek.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "grf-iki",
+   "tip": "İki grafiği birlikte yorumlama",
+   "kaynak": "ÖSYM 2019 (yatak satış ve iade yüzdeleri), ÖSYM 2023 (fabrika ve ihracat yüzdeleri)"
+  },
+  {
+   "id": "K-GR-08",
+   "konu": "Grafik Problemleri",
+   "alt": "İki grafik: adet ve gelir",
+   "fikir": "Sütun grafiği satış adedini, daire grafiği gelirin dağılımını verir; bilinen bir fiyattan bir derecenin değeri, oradan diğer fiyatlar bulunur.",
+   "tuzak": "Fiyat oranını açı oranı sanmak; geliri yanlış ürünün adedine bölmek.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "grf-iki",
+   "tip": "İki grafiği birlikte yorumlama",
+   "kaynak": "Bilgi Sarmal (alış fiyatı tablosu + dairesel grafik), Orijinal Deneme (ciro ve maliyet grafiği)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "grf-sutun",
+   "ad": "Sütun grafiği okuma ve yorumlama",
+   "kartlar": [
+    "K-GR-01",
+    "K-GR-02"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  },
+  {
+   "tipId": "grf-daire",
+   "ad": "Daire grafiği",
+   "kartlar": [
+    "K-GR-03"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  },
+  {
+   "tipId": "grf-cizgi",
+   "ad": "Çizgi grafiği ve değişim",
+   "kartlar": [
+    "K-GR-04"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  },
+  {
+   "tipId": "grf-tablo",
+   "ad": "Tablo yorumlama",
+   "kartlar": [
+    "K-GR-05"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  },
+  {
+   "tipId": "grf-degisim",
+   "ad": "Veri değişince grafiği yorumlama",
+   "kartlar": [
+    "K-GR-06"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  },
+  {
+   "tipId": "grf-iki",
+   "ad": "İki grafiği birlikte yorumlama",
+   "kartlar": [
+    "K-GR-07",
+    "K-GR-08"
+   ],
+   "uygulamaKonu": "prob|Grafik Problemleri"
+  }
+ ]
+}

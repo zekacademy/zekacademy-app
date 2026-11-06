@@ -1,0 +1,615 @@
+[
+ {
+  "id": "tyttr-cumleanlam-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Cümleden Çıkarım",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Cümleden kesin olarak çıkarılabilecek yargıyı belirler.",
+  "tipId": "can-cikarim",
+  "tip": "Cümleden çıkarım",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Sınav öncesi sabaha kadar uyumayan öğrencilerin çoğu, sınav sırasında dikkatini toplamakta zorlanıyor.\nBu cümleden aşağıdakilerden hangisi çıkarılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sınav öncesi uyuyan öğrenciler her zaman başarılı olur.",
+   "B": "Uykusuzluk, dikkat üzerinde olumsuz bir etki yapabilir.",
+   "C": "Öğrenciler sınavdan önce hiç ders çalışmamalıdır.",
+   "D": "Dikkat sorunu yaşayan öğrenciler sabaha kadar uyumaz.",
+   "E": "Sınavda zorlanan her öğrenci uykusuz kalmıştır."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Uykusuzluk, dikkat üzerinde olumsuz bir etki yapabilir."
+  },
+  "celdiriciler": {
+   "A": "Cümle uyuyanların başarısından söz etmez; “her zaman” da cümleyi aşan bir genellemedir.",
+   "C": "Cümlede bir öğüt yoktur; yalnızca uykusuzluğun etkisi anlatılır.",
+   "D": "Nedensellik tersine çevrilmiş: cümlede uykusuzluk dikkat sorununa yol açıyor, tersi söylenmiyor.",
+   "E": "Cümle “çoğu” der ve yalnızca uykusuzlardan söz eder; “her” genellemesi cümlede yok."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Cümleden çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Çıkarım",
+    "ifade": "cümlede açıkça yazan ya da kesin olarak sonucu çıkan yargı çıkarılabilir. “Her, hiç, yalnızca, tek” gibi sözcüklerle genelleyen şıklar cümleyi aşar. Örnek: “Çoğu öğrenci geldi” cümlesinden “hepsi geldi” çıkmaz"
+   }
+  ],
+  "ipuclari": [
+   "Cümlede “çoğu” sözcüğü var; kesin ve genel yargılara dikkat et.",
+   "Cümle hangi durumdan hangi sonuca gidiyor?",
+   "Yön tersine çevrilmiş şıkları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kanıtı bul",
+    "aciklama": "Cümle, uykusuz öğrencilerin çoğunun sınavda dikkat toplamakta zorlandığını söylüyor.",
+    "islem": "uykusuzluk → dikkat sorunu"
+   },
+   {
+    "baslik": "Çıkarım kuralını uygula",
+    "aciklama": "Çıkarım, cümledeki bilginin kesin sonucudur; “her zaman, hiç” gibi aşırı iddialar çıkmaz.",
+    "islem": "kesin sonuç aranır"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, C ve D cümleyi aşıyor ya da tersine çeviriyor, E öğüt veriyor. B temkinli ve cümleyle uyumlu.",
+    "islem": "B: doğru"
+   }
+  ],
+  "puf": "Çıkarım sorularında “her, hiç, yalnızca, kesinlikle” içeren şıkka şüpheyle bak; cümle kadar söyleyen şık doğrudur.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0001k",
+  "kaynakKart": "K-CAN-01 (Cümleden Çıkarım) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Cümleden Çıkarım",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Karşıt iki durumu anlatan cümleden çıkarılabilecek yargıyı belirler.",
+  "tipId": "can-cikarim",
+  "tip": "Cümleden çıkarım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Çocuk, yaptıklarına güvenilen bir ortamda özgüven kazanırken, sürekli müdahale edilen bir ortamda bu duygusunu yitirmeye başlar.\nBu cümleden aşağıdakilerden hangisi çıkarılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Özgüvenli çocuklar hiçbir zaman müdahaleye ihtiyaç duymaz.",
+   "B": "Müdahale edilmeyen çocukların hepsi özgüvenli olur.",
+   "C": "Özgüven yalnızca çocukluk döneminde kazanılır.",
+   "D": "Çocukların özgüveni, çevrenin tutumuna göre güçlenip zayıflayabilir.",
+   "E": "Çocuklara güvenilmesi, onların hata yapmasını tümüyle engeller."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Çocukların özgüveni, çevrenin tutumuna göre güçlenip zayıflayabilir."
+  },
+  "celdiriciler": {
+   "A": "Cümle müdahale ihtiyacından söz etmez; “hiçbir zaman” cümleyi aşar.",
+   "B": "Cümle güvenilen ortamdan söz eder, müdahalesiz bırakılan tüm çocuklardan değil; “hepsi” genellemesi cümlede yok.",
+   "C": "Cümlede özgüvenin başka dönemlerde kazanılıp kazanılmadığına dair bir bilgi yoktur.",
+   "E": "Cümle hata yapmadan söz etmez; “tümüyle engeller” cümleyi aşar."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Cümleden çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Çıkarım",
+    "ifade": "cümlede açıkça yazan ya da kesin olarak sonucu çıkan yargı çıkarılabilir. “Her, hiç, yalnızca, tek” gibi sözcüklerle genelleyen şıklar cümleyi aşar. Örnek: “Çoğu öğrenci geldi” cümlesinden “hepsi geldi” çıkmaz"
+   }
+  ],
+  "ipuclari": [
+   "Cümle iki ortamı karşılaştırıyor: biri özgüveni artırıyor, öbürü azaltıyor.",
+   "Ortak sonuç: özgüven neye bağlı?",
+   "“Hiçbir zaman, hepsi, tümüyle” içeren şıklara dikkat."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki durumu ayır",
+    "aciklama": "Güvenilen ortamda özgüven artıyor, müdahale edilen ortamda azalıyor.",
+    "islem": "güven → artar · müdahale → azalır"
+   },
+   {
+    "baslik": "Ortak sonucu bul",
+    "aciklama": "İki durumun ortak noktası: özgüven çevrenin tutumuna göre değişiyor.",
+    "islem": "özgüven ← çevre tutumu"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, B ve E genelleme yapıyor, C cümlede olmayan bir dönemden söz ediyor. D tam karşılığı veriyor.",
+    "islem": "D: doğru"
+   }
+  ],
+  "puf": "Karşıt iki durum varsa çıkarım çoğu zaman ikisinin ortak sonucudur.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0002k",
+  "kaynakKart": "K-CAN-01 (Cümleden Çıkarım) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Anlamca Özdeş Cümle",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Benzetmeli bir cümleyle anlamca özdeş cümleyi belirler.",
+  "tipId": "can-anlamdas",
+  "tip": "Anlamca özdeş cümle",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir sorunun nedenini bilmeden ona çözüm aramak, hastalığı tanımadan ilaç vermeye benzer.\nBu cümleyle anlamca en yakın cümle aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sorunu doğru teşhis etmeden bulunan çözüm, çoğu zaman sonuç vermez.",
+   "B": "Her sorunun çözümü, nedenini bilen kişide bulunur.",
+   "C": "İlaçlar, hastalığı tanımadan da iyileştirici olabilir.",
+   "D": "Sorun çözmek isteyenler önce hastalıkları öğrenmelidir.",
+   "E": "Çözümü zor olan sorunlarda uzman desteği alınmalıdır."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Sorunu doğru teşhis etmeden bulunan çözüm, çoğu zaman sonuç vermez."
+  },
+  "celdiriciler": {
+   "B": "Cümle “her” sorun için kesin bir hüküm vermez; asıl vurgu nedeni bilmeden çözüm aramanın sakıncasıdır.",
+   "C": "Cümlenin söylediğinin tersini söyler: tanımadan verilen ilaç iyi gelir diyor.",
+   "D": "Hastalık benzetmenin bir parçasıdır; şık benzetmeyi gerçek anlamıyla almıştır.",
+   "E": "Cümle uzman desteğinden söz etmez; konudan sapar."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Verilen cümleyle anlamca en yakın cümle.",
+  "bilgi": [
+   {
+    "ad": "Anlamca özdeş cümle",
+    "ifade": "“yalnızca/ancak” içeren cümle bir koşul bildirir: “Yalnızca A olanlar B’dir” = “B olan herkes A’dır”. Tersi (“A olan herkes B’dir”) aynı anlama gelmez. Örnek: “Yalnızca bilet alanlar girer” = “Girenlerin hepsi bilet almıştır”"
+   }
+  ],
+  "ipuclari": [
+   "Benzetmenin karşılıklarını bul: sorun = hastalık, çözüm = ilaç.",
+   "Nedeni bilmemek, hastalığı tanımamak demek.",
+   "Benzetmeyi sade bir dille yeniden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Benzetmeyi çöz",
+    "aciklama": "Sorun hastalığa, çözüm ilaca, nedeni bilmemek hastalığı tanımamaya karşılık gelir.",
+    "islem": "sorun = hastalık · çözüm = ilaç"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Cümle, sorunu doğru tanımadan bulunan çözümün işe yaramayacağını söylüyor.",
+    "islem": "özet: teşhissiz çözüm işe yaramaz"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "B anlamı tersine çevirir, C benzetmeyi düz anlamıyla alır, D ve E konudan sapar. A özetle aynıdır.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "Benzetmeli cümlelerde önce karşılıkları (sorun = hastalık gibi) eşle, sonra sade biçimde özetle.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0003k",
+  "kaynakKart": "K-CAN-02 (Anlamca Özdeş Cümle) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Anlamca Özdeş Cümle",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "“Yalnızca/ancak” sınırlayıcılı cümlenin mantıksal karşılığını belirler.",
+  "tipId": "can-anlamdas",
+  "tip": "Anlamca özdeş cümle",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Yalnızca düzenli çalışanlar sınavda başarılı olur.\nBu cümleyle anlamca aynı olan cümle aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Düzenli çalışan herkes sınavda başarılı olur.",
+   "B": "Düzenli çalışmayan bazı kişiler de sınavda başarılı olur.",
+   "C": "Sınavda başarısız olan herkes düzenli çalışmamıştır.",
+   "D": "Düzenli çalışmanın sınav başarısı üzerinde etkisi yoktur.",
+   "E": "Sınavda başarılı olan herkes düzenli çalışmıştır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Sınavda başarılı olan herkes düzenli çalışmıştır."
+  },
+  "celdiriciler": {
+   "A": "Cümle düzenli çalışmayı başarı için şart koşar, yeterli saymaz; şık şartı sonuca çevirmiştir.",
+   "B": "Cümlenin “yalnızca” sözüne terstir.",
+   "C": "Cümle başarısızların durumunu söylemez; bu yargı cümlenin tersidir, eşi değildir.",
+   "D": "Cümle düzenli çalışmayı şart koşar; etkisiz demek cümleye terstir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Verilen cümleyle anlamca aynı olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Anlamca özdeş cümle",
+    "ifade": "“yalnızca/ancak” içeren cümle bir koşul bildirir: “Yalnızca A olanlar B’dir” = “B olan herkes A’dır”. Tersi (“A olan herkes B’dir”) aynı anlama gelmez. Örnek: “Yalnızca bilet alanlar girer” = “Girenlerin hepsi bilet almıştır”"
+   }
+  ],
+  "ipuclari": [
+   "“Yalnızca düzenli çalışanlar” ifadesi, çalışmayı bir şart yapar.",
+   "Başarılı olanların hepsi hakkında ne söyleyebilirsin?",
+   "Şartı sonuç yapan (tersine çeviren) şıkları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şartı belirle",
+    "aciklama": "“Yalnızca … olanlar” demek, başarılı olmak için düzenli çalışmanın şart olduğunu gösterir.",
+    "islem": "başarı ⇒ düzenli çalışma"
+   },
+   {
+    "baslik": "Mantığı çevir",
+    "aciklama": "Başarılı olan herkes düzenli çalışmıştır.",
+    "islem": "başarılı ⇒ çalışmış"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A ve C şartı tersine çeviriyor, B ve D cümleye zıt. E aynı anlamı veriyor.",
+    "islem": "A, B, C, D: elendi"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "E’de başarılıların hepsinin düzenli çalıştığı söyleniyor; verilen cümleyle aynı.",
+    "islem": "E: doğru"
+   }
+  ],
+  "puf": "“Yalnızca A olanlar B’dir” cümlesi “B olan herkes A’dır” demektir; “A olan herkes B’dir” demek değildir.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0004k",
+  "kaynakKart": "K-CAN-02 (Anlamca Özdeş Cümle) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Neden–Sonuç, Amaç–Sonuç, Koşul",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Cümlelerdeki neden–sonuç ilişkisini ayırt eder.",
+  "tipId": "can-neden",
+  "tip": "Neden–sonuç, amaç ve koşul ilişkisi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinde neden–sonuç ilişkisi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çocuk, oyuncağını arkadaşıyla paylaştı.",
+   "B": "Yağmuru sevmiyor ama yağmurun sesini dinlemekten hoşlanıyor.",
+   "C": "Yol çalışması yüzünden otobüsler başka bir güzergâhtan gidiyor.",
+   "D": "Sınıfın bir köşesinde eski bir harita asılıydı.",
+   "E": "Sabahları ya çay içer ya da kahve."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Yol çalışması yüzünden otobüsler başka bir güzergâhtan gidiyor."
+  },
+  "celdiriciler": {
+   "A": "Yalnızca bir eylem anlatılıyor; neden–sonuç bağı yok.",
+   "B": "“Ama” karşıtlık bildirir; neden–sonuç bildirmez.",
+   "D": "Durum betimlemesidir; neden–sonuç yok.",
+   "E": "“Ya … ya da” seçenek bildirir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Neden–sonuç ilişkisi bulunan cümle.",
+  "bilgi": [
+   {
+    "ad": "Neden, amaç, koşul",
+    "ifade": "neden–sonuç: “…-diği için, yüzünden” · amaç–sonuç: “… için, … diye” (sonuçta ulaşılmak istenen şey) · koşul: “…-sa/-se, …-ırsa”. Örnek: “Yağmur yağdığı için ıslandık” neden; “Islanmamak için şemsiye aldık” amaç; “Yağmur yağarsa kalırız” koşul"
+   }
+  ],
+  "ipuclari": [
+   "Neden–sonuç ilişkisinde bir olay, bir başka olayın sebebidir.",
+   "“Yüzünden, için, çünkü” gibi sözcükler ipucudur.",
+   "Karşıtlık ve seçenek bildiren bağlaçları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağlaçları ara",
+    "aciklama": "“Yüzünden”, “-diği için”, “çünkü” gibi sözler neden bildirir.",
+    "islem": "neden bağlaçları"
+   },
+   {
+    "baslik": "Şıkları tara",
+    "aciklama": "A olay, B karşıtlık, D betimleme, E seçenek bildiriyor.",
+    "islem": "A, B, D, E: bağ yok"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "“Yol çalışması → otobüsler başka güzergâhtan gidiyor” bir neden–sonuç ilişkisi.",
+    "islem": "C: doğru"
+   }
+  ],
+  "puf": "“Yüzünden, -diği için, çünkü, bu nedenle” gördüğünde neden–sonuç ilişkisini ara.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0005k",
+  "kaynakKart": "K-CAN-03 (Neden–Sonuç, Amaç–Sonuç, Koşul) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Neden–Sonuç, Amaç–Sonuç, Koşul",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Amaç–sonuç ilişkisini neden–sonuç, koşul ve karşıtlıktan ayırır.",
+  "tipId": "can-neden",
+  "tip": "Neden–sonuç, amaç ve koşul ilişkisi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde amaç–sonuç ilişkisi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yağmur bastırdığı için maç ertelendi.",
+   "B": "Sağlıklı kalmak için her sabah yürüyüşe çıkıyor.",
+   "C": "Hava açılırsa pikniğe gideceğiz.",
+   "D": "Bu kitabı hem okudum hem de not aldım.",
+   "E": "Sınavı kazanamadı, fakat vazgeçmedi."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Sağlıklı kalmak için her sabah yürüyüşe çıkıyor."
+  },
+  "celdiriciler": {
+   "A": "Bu cümlede maçın ertelenmesinin nedeni verilmiş; amaç değil, neden–sonuç vardır.",
+   "C": "“-ırsa” ekiyle koşul bildirilmiş; amaç yok.",
+   "D": "“Hem … hem de” ekleme bildirir.",
+   "E": "“Fakat” karşıtlık bildirir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Amaç–sonuç ilişkisi bulunan cümle.",
+  "bilgi": [
+   {
+    "ad": "Neden, amaç, koşul",
+    "ifade": "neden–sonuç: “…-diği için, yüzünden” · amaç–sonuç: “… için, … diye” (sonuçta ulaşılmak istenen şey) · koşul: “…-sa/-se, …-ırsa”. Örnek: “Yağmur yağdığı için ıslandık” neden; “Islanmamak için şemsiye aldık” amaç; “Yağmur yağarsa kalırız” koşul"
+   }
+  ],
+  "ipuclari": [
+   "Amaç, yapılan işin ulaşmak istediği sonuçtur: “… için” ve geleceğe dönük bir istek.",
+   "Geçmişteki bir olayın sebebini veren cümle amaç değildir.",
+   "Koşul bildiren “-sa/-se” ekli şıkları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Amacı tanımla",
+    "aciklama": "Amaç, bir işin yapılma gerekçesi olan istenen sonuçtur: “sağlıklı kalmak için yürümek”.",
+    "islem": "iş → ulaşılmak istenen sonuç"
+   },
+   {
+    "baslik": "Şıkları ayır",
+    "aciklama": "A neden, C koşul, D ekleme, E karşıtlık bildirir.",
+    "islem": "A, C, D, E: amaç değil"
+   },
+   {
+    "baslik": "Doğrula",
+    "aciklama": "“Sağlıklı kalmak için yürüyüşe çıkıyor”: yürüyüşün amacı sağlıklı kalmak.",
+    "islem": "B: doğru"
+   }
+  ],
+  "puf": "“İçin” hem neden hem amaç bildirir: geçmişte olmuş bir olaydan sonra gelirse neden, yapılacak bir iş için ulaşılmak istenen şeyi bildirirse amaçtır.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0006k",
+  "kaynakKart": "K-CAN-03 (Neden–Sonuç, Amaç–Sonuç, Koşul) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Öznel ve Nesnel Yargı",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Nesnel yargı taşıyan cümleyi öznel yargıdan ayırır.",
+  "tipId": "can-yargi",
+  "tip": "Öznel ve nesnel yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde nesnel bir yargı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu kentin en güzel mevsimi şüphesiz ilkbahardır.",
+   "B": "Ankara’daki bu müze, ülkenin en ilginç müzesidir.",
+   "C": "Bence kısa filmler uzun filmlerden daha etkileyicidir.",
+   "D": "Su, deniz seviyesinde 100 derecede kaynar.",
+   "E": "Deniz kenarında yaşamak insanı mutlu eder."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Su, deniz seviyesinde 100 derecede kaynar."
+  },
+  "celdiriciler": {
+   "A": "“En güzel” bir beğeni bildirir; kişiden kişiye değişir.",
+   "B": "“En ilginç” kişisel bir değerlendirmedir.",
+   "C": "“Bence” kişisel görüşü gösterir.",
+   "E": "Mutluluk kişiye göre değişir; doğrulanabilir bir ölçüt yok."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Nesnel yargı taşıyan cümle.",
+  "bilgi": [
+   {
+    "ad": "Nesnel ve öznel yargı",
+    "ifade": "nesnel yargı: ölçülüp doğrulanabilen, kişiye göre değişmeyen yargı (“Su 100 °C’de kaynar”). Öznel yargı: kişinin beğenisine, duygusuna dayanan yargı (“Çay kahveden güzeldir”). “En güzel, bence, harika, ne yazık ki” gibi değer bildiren ifadeler öznelliğe işaret eder"
+   }
+  ],
+  "ipuclari": [
+   "Nesnel yargı ölçülebilir ve herkes için aynıdır.",
+   "“En güzel, bence, ilginç” gibi değer bildiren sözler öznelliğe işaret eder.",
+   "Bilimsel bir olguyu anlatan cümleyi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Nesnel yargıyı tanımla",
+    "aciklama": "Ölçülüp doğrulanabilen, kişiden kişiye değişmeyen yargı aranıyor.",
+    "islem": "aranan: doğrulanabilir"
+   },
+   {
+    "baslik": "Öznel ifadeleri ele",
+    "aciklama": "“En güzel, en ilginç, bence, mutlu eder” beğeni ve kanaat bildirir.",
+    "islem": "A, B, C, E: öznel"
+   },
+   {
+    "baslik": "Doğrula",
+    "aciklama": "Suyun kaynama noktası ölçülerek doğrulanabilir.",
+    "islem": "D: nesnel"
+   }
+  ],
+  "puf": "Ölçüp deneyle doğrulayabiliyorsan nesnel; “bence, en güzel” diye başlayıp bitiyorsa öznel.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0007k",
+  "kaynakKart": "K-CAN-04 (Öznel ve Nesnel Yargı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-cumleanlam-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlede Anlam · Öznel ve Nesnel Yargı",
+  "k": "tr|Cümlede Anlam",
+  "kazanim": "Bilgi görünümlü öznel ifadeleri ayıklayarak nesnel yargıyı bulur.",
+  "tipId": "can-yargi",
+  "tip": "Öznel ve nesnel yargı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bir kitap tanıtım yazısındaki cümlelerden hangisi, kişisel değerlendirme katmadan doğrulanabilir bir bilgi vermektedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kitap, yayımlandığı yıl satış listelerine girdi.",
+   "B": "Ne yazık ki kitabın sonu beklediğimden zayıf.",
+   "C": "Roman, sade diliyle okuru kolayca içine çekiyor.",
+   "D": "Yazarın bu kitabı, bütün eserlerinin zirvesidir.",
+   "E": "Kapak tasarımı kitabın havasını çok güzel yansıtıyor."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kitap, yayımlandığı yıl satış listelerine girdi."
+  },
+  "celdiriciler": {
+   "B": "“Ne yazık ki” ve “beklediğimden zayıf” kişisel değerlendirmedir.",
+   "C": "“Kolayca içine çekiyor” kişiden kişiye değişen bir izlenimdir.",
+   "D": "“Zirve” bir değer yargısıdır; ölçüsü yoktur.",
+   "E": "“Çok güzel” beğeni bildirir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Nesnel yargı taşıyan cümle.",
+  "bilgi": [
+   {
+    "ad": "Nesnel ve öznel yargı",
+    "ifade": "nesnel yargı: ölçülüp doğrulanabilen, kişiye göre değişmeyen yargı (“Su 100 °C’de kaynar”). Öznel yargı: kişinin beğenisine, duygusuna dayanan yargı (“Çay kahveden güzeldir”). “En güzel, bence, harika, ne yazık ki” gibi değer bildiren ifadeler öznelliğe işaret eder"
+   }
+  ],
+  "ipuclari": [
+   "Beş cümlenin dördü bir duygu ya da değerlendirme taşıyor.",
+   "Satış listesine girip girmediği bir kayıttan kontrol edilebilir mi?",
+   "“Ne yazık ki, zirve, çok güzel” gibi sözcükleri işaretle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öznel işaretleri ara",
+    "aciklama": "Her cümlede beğeni, şikâyet ve övgü bildiren sözcükleri işaretle.",
+    "islem": "işaret arama"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "B, C, D ve E’de “ne yazık ki, kolayca içine çekiyor, zirvesidir, çok güzel” gibi değer bildiren ifadeler var.",
+    "islem": "B, C, D, E: öznel"
+   },
+   {
+    "baslik": "Nesnel olanı seç",
+    "aciklama": "A’da kitap bir listeye girmiş; bu kayıtlardan doğrulanabilir.",
+    "islem": "A: nesnel"
+   }
+  ],
+  "puf": "Edebî ya da bilimsel görünümlü cümlelerde de değer sözcüğü (zirve, çok güzel, ne yazık ki) varsa yargı öznel olur.",
+  "kisaYol": null,
+  "kardes": "tyttr-cumleanlam-0008k",
+  "kaynakKart": "K-CAN-04 (Öznel ve Nesnel Yargı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

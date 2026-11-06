@@ -1,0 +1,657 @@
+[
+ {
+  "id": "tytmat-permkomb-0001k",
+  "ana": "tytmat-permkomb-0001",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Saymanın Temel İlkesi",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "İsteğe bağlı seçimi de içeren birlikte seçimlerde çarpma ilkesini uygular.",
+  "tipId": "pk-carpma",
+  "tip": "Saymanın temel ilkesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir dondurmacıda 6 farklı dondurma çeşidi vardır; dondurma külahta ya da kâsede verilmektedir.\nDondurmanın üzerine 3 farklı sostan biri eklenebilir ya da hiç sos eklenmeyebilir.\nAhmet bir dondurma çeşidi ve bir sunum biçimi seçecek, sos için de bu seçeneklerden birini tercih edecektir.\nBuna göre Ahmet kaç farklı sipariş verebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "36",
+   "D": "48",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "12, sosu hiç hesaba katmamak (6 × 2).",
+   "B": "15, sos sayısını 6 × 2’ye eklemek; sos seçimi de çarpılır.",
+   "C": "36, sossuz seçeneğini unutmak (6 × 2 × 3).",
+   "E": "72, sos için “var/yok” ile sos çeşidini ayrıca çarpmak (6 × 2 × 2 × 3); sossuz seçenek bir kez sayılır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Ahmet’in verebileceği farklı sipariş sayısı.",
+  "bilgi": [
+   {
+    "ad": "Çarpma ilkesi",
+    "ifade": "birlikte yapılan seçimlerde seçenek sayıları çarpılır. Örnek: 3 gömlek ve 2 pantolon ⇒ 3 × 2 = 6 kombin"
+   }
+  ],
+  "ipuclari": [
+   "Dondurma çeşidi ve sunum biçimi için kaç seçenek var?",
+   "Sos için “sossuz” seçeneğini de say.",
+   "Seçenek sayılarını çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çeşit ve sunum",
+    "aciklama": "Her çeşit iki sunumla verilebilir.",
+    "islem": "6 × 2 = 12"
+   },
+   {
+    "baslik": "Sos seçenekleri",
+    "aciklama": "3 sostan biri ya da sossuz.",
+    "islem": "3 + 1 = 4"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Üç seçim birlikte yapılır.",
+    "islem": "12 × 4 = 48"
+   }
+  ],
+  "puf": "“Eklenebilir ya da eklenmeyebilir” ifadesi seçenek sayısını 1 artırır.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-01 (çarpma ilkesi, isteğe bağlı seçim) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0002k",
+  "ana": "tytmat-permkomb-0002",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Sıralama",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Bitişiklik ve konum koşullarını birlikte kullanarak sıralama sayısını tümleyenle bulur.",
+  "tipId": "pk-sira-kosul",
+  "tip": "Koşullu sıralama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Deniz, Efe, Filiz ve dört arkadaşları daha olmak üzere 7 kişi bir sırada yan yana oturacaktır.\nFiliz sıranın en başında oturacak; Deniz ile Efe ise yan yana oturmayacaktır.\nBuna göre bu 7 kişi kaç farklı biçimde oturabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "240",
+   "B": "480",
+   "C": "720",
+   "D": "3600",
+   "E": "5040"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "480"
+  },
+  "celdiriciler": {
+   "A": "240, Deniz ile Efe’nin yan yana oturduğu düzenler; bunlar istenmiyor.",
+   "C": "720, Deniz–Efe koşulunu kullanmamak (6!).",
+   "D": "3600, Filiz koşulunu kullanmamak (7! − 6! × 2).",
+   "E": "5040, hiçbir koşulu kullanmamak (7!)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşullara uyan oturma düzeni sayısı.",
+  "bilgi": [
+   {
+    "ad": "Faktöriyel",
+    "ifade": "n! = 1 × 2 × … × n. Örnek: 4! = 24. Farklı n nesne yan yana n! farklı biçimde dizilir"
+   },
+   {
+    "ad": "Bitişik kişiler",
+    "ifade": "yan yana duracak kişiler tek bir blok gibi sıralanır; blok içinde de kendi aralarında yer değiştirebilirler (2! = 2)"
+   },
+   {
+    "ad": "Tümleyenle sayma",
+    "ifade": "“en az”, “olmayacak” gibi koşullarda tüm durumlardan istenmeyen durumları çıkar"
+   }
+  ],
+  "ipuclari": [
+   "Filiz’in yeri belli; geriye kaç kişi ve kaç yer kalıyor?",
+   "Kalan kişilerin tüm dizilişlerinden Deniz ile Efe’nin yan yana olduklarını çıkar.",
+   "Yan yana olanları sayarken onları blok yap."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Filiz’i yerleştir",
+    "aciklama": "Filiz en başta; kalan 6 kişi 6 yere dizilir.",
+    "islem": "6! = 720"
+   },
+   {
+    "baslik": "Yan yana olanlar",
+    "aciklama": "Deniz–Efe bloğu ve 4 kişi: 5 birim; blok içinde 2 düzen.",
+    "islem": "5! × 2 = 240"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Yan yana oturdukları düzenleri at.",
+    "islem": "720 − 240 = 480"
+   }
+  ],
+  "puf": "“Yan yana olmayacak” sorularında tüm dizilişlerden yan yana olanları çıkarmak en kısa yoldur.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-03 (bitişiklik + konum koşulu) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0003k",
+  "ana": "tytmat-permkomb-0003",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Kombinasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "“En az bir” koşullu ekip seçimini tümleyenle sayar.",
+  "tipId": "pk-secme",
+  "tip": "Kombinasyonla seçme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "10 sorudan oluşan bir sınavda her öğrenci bu sorulardan 6 tanesini seçip cevaplayacaktır.\nSınav kuralına göre ilk 4 sorudan en az 3 tanesinin seçilmesi zorunludur.\nBuna göre bir öğrenci cevaplayacağı soruları kaç farklı biçimde seçebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "80",
+   "C": "95",
+   "D": "140",
+   "E": "210"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "95"
+  },
+  "celdiriciler": {
+   "A": "15, yalnızca ilk 4 sorunun hepsinin seçildiği durum.",
+   "B": "80, yalnızca ilk 4’ten tam 3 sorunun seçildiği durum; 4’ünün seçildiği durum unutulmuş.",
+   "D": "140, ilk 4’ten 3 soru seçip kalan 3’ü diğer 7 sorudan seçmek; bazı seçimler iki kez sayılır.",
+   "E": "210, koşulu kullanmamak (C(10, 6))."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kurala uyan soru seçimi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n kişiden sırası önemsiz r kişi C(n, r) = n! / (r! × (n − r)!) biçimde seçilir. Örnek: C(5, 2) = 10"
+   },
+   {
+    "ad": "Durumlara ayırma",
+    "ifade": "“en az 3” = “tam 3” ya da “tam 4”; ayrık durumların sayıları toplanır"
+   }
+  ],
+  "ipuclari": [
+   "İlk 4 sorudan kaç tane seçilebilir: 3 mü, 4 mü?",
+   "Her durumda kalan sorular son 6 sorudan seçilir.",
+   "İki durumu ayrı ayrı hesaplayıp topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tam 3 soru",
+    "aciklama": "İlk 4’ten 3, son 6’dan 3 soru.",
+    "islem": "C(4, 3) × C(6, 3) = 4 × 20 = 80"
+   },
+   {
+    "baslik": "Tam 4 soru",
+    "aciklama": "İlk 4’ün hepsi, son 6’dan 2 soru.",
+    "islem": "C(4, 4) × C(6, 2) = 1 × 15 = 15"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki durum birbirinden ayrık.",
+    "islem": "80 + 15 = 95"
+   }
+  ],
+  "puf": "“En az” koşulunu “tam şu kadar” durumlarına ayır; her durumda kalan seçimi diğer gruptan yap.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-04 (en az koşullu ekip seçimi) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0004k",
+  "ana": "tytmat-permkomb-0004",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Yol Sayma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Ara noktadan geçen en kısa yolların sayısını çarpma ilkesiyle bulur.",
+  "tipId": "pk-yol",
+  "tip": "Şekil üzerinde yol sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki ızgarada K noktasından L noktasına, çizgiler üzerinde yalnızca sağa ya da yukarı doğru ilerleyerek gidilecektir.\nIzgaradaki M noktası onarımda olduğu için bu noktadan geçilemez.\nBuna göre K’dan L’ye kaç farklı yol vardır?",
+  "sekil": "<svg viewBox=\"0 0 330 190\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"73.0\" y1=\"160.0\" x2=\"73.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"119.0\" y1=\"160.0\" x2=\"119.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"165.0\" y1=\"160.0\" x2=\"165.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"211.0\" y1=\"160.0\" x2=\"211.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"257.0\" y1=\"160.0\" x2=\"257.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"160.0\" x2=\"257.0\" y2=\"160.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"114.0\" x2=\"257.0\" y2=\"114.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"68.0\" x2=\"257.0\" y2=\"68.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"22.0\" x2=\"257.0\" y2=\"22.0\" stroke-width=\"1.6\"/><circle cx=\"73.0\" cy=\"160.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"61.0\" y=\"176.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><circle cx=\"257.0\" cy=\"22.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"269.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><circle cx=\"165.0\" cy=\"114.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"177.0\" y=\"106.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><circle cx=\"165.0\" cy=\"114.0\" r=\"9\" stroke-width=\"2\" style=\"fill:var(--bg,#fff);stroke:#e53935\"/><path d=\"M160.0 109.0 l10 10 m0 -10 l-10 10\" stroke-width=\"2.2\" style=\"stroke:#e53935\"/></svg>",
+  "siklar": {
+   "A": "17",
+   "B": "18",
+   "C": "26",
+   "D": "32",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "17"
+  },
+  "celdiriciler": {
+   "B": "18, M’den geçen yolların sayısı; bunlar kullanılamıyor.",
+   "C": "26, M’den geçen yolları 3 + 6 = 9 sanıp 35 − 9 hesaplamak; parçalar çarpılır.",
+   "D": "32, yalnızca K’dan M’ye giden 3 yolu çıkarmak; her biri M’den L’ye 6 yolla devam eder.",
+   "E": "35, kapalı noktayı yok saymak."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "M’den geçmeyen yolların sayısı.",
+  "bilgi": [
+   {
+    "ad": "Izgarada en kısa yol",
+    "ifade": "m sağ ve n yukarı adımlık yolda m + n adımdan hangilerinin yukarı olduğu seçilir: C(m + n, n). Örnek: 2 sağ, 1 yukarı ⇒ C(3, 1) = 3 yol"
+   },
+   {
+    "ad": "Tümleyenle sayma",
+    "ifade": "“en az”, “olmayacak” gibi koşullarda tüm durumlardan istenmeyen durumları çıkar"
+   }
+  ],
+  "ipuclari": [
+   "Önce M’yi yok sayarak K’dan L’ye kaç yol olduğunu bul.",
+   "M’den geçen yolları iki parçaya ayırıp say.",
+   "Tüm yollardan M’den geçenleri çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm yollar",
+    "aciklama": "4 sağ, 3 yukarı adım; 7 adımdan 3’ü yukarı.",
+    "islem": "C(7, 3) = 35"
+   },
+   {
+    "baslik": "M’den geçenler",
+    "aciklama": "K’dan M’ye 2 sağ 1 yukarı, M’den L’ye 2 sağ 2 yukarı.",
+    "islem": "C(3, 1) × C(4, 2) = 3 × 6 = 18"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Geçilemeyen noktadan geçen yolları at.",
+    "islem": "35 − 18 = 17",
+    "gorsel": "<svg viewBox=\"0 0 330 190\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"73.0\" y1=\"160.0\" x2=\"73.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"119.0\" y1=\"160.0\" x2=\"119.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"165.0\" y1=\"160.0\" x2=\"165.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"211.0\" y1=\"160.0\" x2=\"211.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"257.0\" y1=\"160.0\" x2=\"257.0\" y2=\"22.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"160.0\" x2=\"257.0\" y2=\"160.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"114.0\" x2=\"257.0\" y2=\"114.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"68.0\" x2=\"257.0\" y2=\"68.0\" stroke-width=\"1.6\"/><line x1=\"73.0\" y1=\"22.0\" x2=\"257.0\" y2=\"22.0\" stroke-width=\"1.6\"/><circle cx=\"73.0\" cy=\"160.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"61.0\" y=\"176.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><circle cx=\"257.0\" cy=\"22.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"269.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><circle cx=\"165.0\" cy=\"114.0\" r=\"4.5\" style=\"fill:currentColor\"/><text x=\"177.0\" y=\"106.0\" text-anchor=\"middle\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><circle cx=\"165.0\" cy=\"114.0\" r=\"9\" stroke-width=\"2\" style=\"fill:var(--bg,#fff);stroke:#e53935\"/><path d=\"M160.0 109.0 l10 10 m0 -10 l-10 10\" stroke-width=\"2.2\" style=\"stroke:#e53935\"/></svg>"
+   }
+  ],
+  "puf": "Kapalı nokta varsa tüm yollardan o noktadan geçenleri çıkar; geçenleri sayarken iki parçayı çarp.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-06 (ızgarada yol, ara noktadan geçme) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0005k",
+  "ana": "tytmat-permkomb-0005",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Tekrarlı Permütasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Özdeş nesnelerin dizilişlerini tekrarlı permütasyonla sayar.",
+  "tipId": "pk-tekrarli",
+  "tip": "Tekrarlı permütasyon",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "BALABAN kelimesindeki harflerin hepsi kullanılarak yazılabilecek 7 harfli, anlamlı ya da anlamsız kaç farklı kelime vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "420",
+   "B": "840",
+   "C": "1260",
+   "D": "2520",
+   "E": "5040"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "420"
+  },
+  "celdiriciler": {
+   "B": "840, yalnızca A’ların tekrarını hesaba katmak (7! / 3!).",
+   "C": "1260, A’yı 2 kez sayıp 7! / (2! × 2!) hesaplamak; A üç kez geçiyor.",
+   "D": "2520, yalnızca B’lerin tekrarını hesaba katmak (7! / 2!).",
+   "E": "5040, harfleri birbirinden farklı saymak (7!)."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Farklı 7 harfli kelime sayısı.",
+  "bilgi": [
+   {
+    "ad": "Faktöriyel",
+    "ifade": "n! = 1 × 2 × … × n. Örnek: 4! = 24. Farklı n nesne yan yana n! farklı biçimde dizilir"
+   },
+   {
+    "ad": "Tekrarlı permütasyon",
+    "ifade": "n nesneden a tanesi kendi arasında, b tanesi kendi arasında özdeşse diziliş sayısı n! / (a! × b!). Örnek: A, A, B ⇒ 3! / 2! = 3"
+   }
+  ],
+  "ipuclari": [
+   "Hangi harfler kaç kez tekrar ediyor?",
+   "Harfler farklı olsaydı kaç kelime olurdu?",
+   "Her tekrar eden harfin tekrar sayısının faktöriyeline böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Harfleri say",
+    "aciklama": "B 2 kez, A 3 kez, L ve N birer kez.",
+    "islem": "2 + 3 + 1 + 1 = 7 harf"
+   },
+   {
+    "baslik": "Hepsi farklı olsaydı",
+    "aciklama": "7 harf yan yana.",
+    "islem": "7! = 5040"
+   },
+   {
+    "baslik": "Tekrarlara böl",
+    "aciklama": "Özdeş B’ler ve A’lar kendi aralarında yer değiştirince aynı kelime çıkar.",
+    "islem": "5040 ÷ (2! × 3!) = 5040 ÷ 12 = 420"
+   }
+  ],
+  "puf": "Kelimedeki her harfin kaç kez geçtiğini önce tablo gibi yaz; böleni bu sayılar belirler.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-07 (özdeş nesnelerle diziliş) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0006k",
+  "ana": "tytmat-permkomb-0006",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Saymanın Temel İlkesi",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Rakamları farklı ve çift olan sayıları birler basamağına göre durumlara ayırarak sayar.",
+  "tipId": "pk-carpma",
+  "tip": "Saymanın temel ilkesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Rakamları birbirinden farklı olan dört basamaklı doğal sayılardan kaç tanesi 5 ile tam bölünür?",
+  "sekil": null,
+  "siklar": {
+   "A": "448",
+   "B": "504",
+   "C": "896",
+   "D": "952",
+   "E": "1008"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "952"
+  },
+  "celdiriciler": {
+   "A": "448, yalnızca birler basamağı 5 olan sayılar.",
+   "B": "504, yalnızca birler basamağı 0 olan sayılar.",
+   "C": "896, birler 0 iken de binler için 8 seçenek almak (2 × 448).",
+   "E": "1008, birler 5 iken de binler için 9 seçenek almak (2 × 504); binler 0 olamaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Rakamları farklı, 5’e bölünen dört basamaklı sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Rakamları farklı sayı",
+    "ifade": "her rakam en fazla bir kez kullanılır; en soldaki basamak 0 olamaz. Örnek: 102 olur, 012 üç basamaklı değildir"
+   },
+   {
+    "ad": "5 ile bölünebilme",
+    "ifade": "birler basamağı 0 ya da 5 olan sayılar 5 ile tam bölünür. Örnek: 340 ve 785"
+   },
+   {
+    "ad": "Çarpma ilkesi",
+    "ifade": "birlikte yapılan seçimlerde seçenek sayıları çarpılır. Örnek: 3 gömlek ve 2 pantolon ⇒ 3 × 2 = 6 kombin"
+   }
+  ],
+  "ipuclari": [
+   "5 ile bölünebilmek için birler basamağı ne olmalı?",
+   "Birler 0 iken binler basamağına kaç rakam gelebilir? Birler 5 iken?",
+   "İki durumu ayrı say ve topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birler 0 ise",
+    "aciklama": "Binlere 9, yüzlere 8, onlara 7 rakam.",
+    "islem": "9 × 8 × 7 = 504"
+   },
+   {
+    "baslik": "Birler 5 ise",
+    "aciklama": "Binler 0 ve 5 olamaz: 8; yüzler kalan 8; onlar 7.",
+    "islem": "8 × 8 × 7 = 448"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Durumlar ayrık.",
+    "islem": "504 + 448 = 952"
+   }
+  ],
+  "puf": "Birler basamağı 0 olunca 0 başa gelme sorunu kalkar; bu yüzden 0’lı ve 0’sız durumların sayıları farklıdır.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-02 (rakamları farklı, koşullu sayı) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0007k",
+  "ana": "tytmat-permkomb-0007",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Gruplara Ayırma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Sırasız ikililere ayırmada iki “birlikte olmama” koşulunu içerme–dışarma ile sayar.",
+  "tipId": "pk-gruplama",
+  "tip": "Gruplara ayırma ve eşleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kampa katılan 8 öğrenci (aralarında Ece, Fatih, Gizem ve Hakan da var) ikişer kişilik 4 çadıra yerleşecektir.\nEce ile Fatih aynı çadırda kalacak; Gizem ile Hakan ise aynı çadırda kalmayacaktır.\nÇadırlar birbirinden ayırt edilmediğine göre öğrenciler çadırlara kaç farklı biçimde yerleşebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "12",
+   "C": "14",
+   "D": "15",
+   "E": "105"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "3, Gizem ile Hakan’ın aynı çadırda olduğu yerleşimler; bunlar istenmiyor.",
+   "C": "14, Gizem–Hakan ikilisinin oluştuğu durumu 1 sanmak; kalan 4 kişi 3 biçimde eşleşir.",
+   "D": "15, Gizem–Hakan koşulunu kullanmamak.",
+   "E": "105, hiçbir koşulu kullanmamak (8 kişinin tüm eşleşmeleri)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşullara uyan yerleşim sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eşleştirme sayısı",
+    "ifade": "2n kişiyi sırasız ikililere ayırmanın yolu (2n − 1) × (2n − 3) × … × 1’dir. Örnek: 4 kişi ⇒ 3 × 1 = 3"
+   },
+   {
+    "ad": "Tümleyenle sayma",
+    "ifade": "“en az”, “olmayacak” gibi koşullarda tüm durumlardan istenmeyen durumları çıkar"
+   }
+  ],
+  "ipuclari": [
+   "Ece ile Fatih bir çadırı doldurur; geriye kaç kişi kalır?",
+   "Kalan 6 kişi kaç farklı biçimde ikililere ayrılır?",
+   "Gizem ile Hakan’ın aynı çadırda olduğu yerleşimleri çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ece ile Fatih",
+    "aciklama": "Bu ikili bir çadırı doldurur; 6 kişi kalır.",
+    "islem": "6 kişi, 3 çadır"
+   },
+   {
+    "baslik": "Kalanların eşleşmesi",
+    "aciklama": "Bir kişinin çadır arkadaşı 5, sonrakinin 3 yolla seçilir.",
+    "islem": "5 × 3 × 1 = 15"
+   },
+   {
+    "baslik": "Gizem–Hakan birlikte",
+    "aciklama": "Bu ikili de bir çadırdaysa kalan 4 kişi 3 yolla eşleşir.",
+    "islem": "3 yerleşim"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "İstenmeyen yerleşimleri at.",
+    "islem": "15 − 3 = 12"
+   }
+  ],
+  "puf": "“Birlikte olacak” kişileri önce yerleştir; “birlikte olmayacak” koşulunu kalanlarda tümleyenle say.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-08 (eşleştirme, birlikte olmama koşulları) · kardeş (0007): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permkomb-0008k",
+  "ana": "tytmat-permkomb-0008",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Kombinasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Tokalaşma sayılarından grup büyüklüklerini bulur ve bir grubun kendi içindeki seçim sayısını hesaplar.",
+  "tipId": "pk-secme",
+  "tip": "Kombinasyonla seçme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kulübün üyelerinden oluşturulabilecek 2 kişilik grupların sayısı 28’dir.\nAralarında Mert ve Nil’in de bulunduğu bu üyelerden 3 kişilik bir grup oluşturulacaktır.\nMert ile Nil aynı grupta yer almayacağına göre bu grup kaç farklı biçimde oluşturulabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "20",
+   "C": "35",
+   "D": "50",
+   "E": "56"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "50"
+  },
+  "celdiriciler": {
+   "A": "6, Mert ile Nil’in birlikte olduğu grupların sayısı.",
+   "B": "20, Mert ile Nil’i hiç almamak (C(6, 3)); ikisinden biri grupta olabilir.",
+   "C": "35, yalnızca Mert’i dışarıda bırakıp C(7, 3) hesaplamak.",
+   "E": "56, koşulu kullanmamak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Mert ile Nil’in birlikte olmadığı 3 kişilik grup sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n kişiden sırası önemsiz r kişi C(n, r) = n! / (r! × (n − r)!) biçimde seçilir. Örnek: C(5, 2) = 10"
+   },
+   {
+    "ad": "Tümleyenle sayma",
+    "ifade": "“en az”, “olmayacak” gibi koşullarda tüm durumlardan istenmeyen durumları çıkar"
+   }
+  ],
+  "ipuclari": [
+   "C(n, 2) = 28 eşitliğinden üye sayısını bul.",
+   "Koşulsuz 3 kişilik grup sayısını hesapla.",
+   "Mert ile Nil’in birlikte olduğu grupları çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üye sayısı",
+    "aciklama": "2 kişilik grup sayısı C(n, 2).",
+    "islem": "n × (n − 1) / 2 = 28 ⇒ n = 8"
+   },
+   {
+    "baslik": "Tüm gruplar",
+    "aciklama": "8 kişiden 3 kişi.",
+    "islem": "C(8, 3) = 56"
+   },
+   {
+    "baslik": "Mert ve Nil birlikte",
+    "aciklama": "İkisi de gruptaysa üçüncü kişi kalan 6 kişiden seçilir.",
+    "islem": "C(6, 1) = 6"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "İstenmeyen grupları at.",
+    "islem": "56 − 6 = 50"
+   }
+  ],
+  "puf": "“İki kişi birlikte olmayacak” koşulunda ikisinin birlikte olduğu grupları sabitleyip say ve çıkar.",
+  "kisaYol": null,
+  "kaynakKart": "K-PK-05 (seçim sayısından kişi sayısı) · kardeş (0008): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
