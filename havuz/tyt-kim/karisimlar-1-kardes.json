@@ -1,0 +1,488 @@
+[
+ {
+  "id": "tytkim-karisimlar-0001k",
+  "ana": "tytkim-karisimlar-0001",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Verilen karışımları homojen ve heterojen olarak sınıflandırır.",
+  "tipId": "kim-karisim-sinif",
+  "tip": "Homojen ve heterojen karışımları ayırt etme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Tuzlu su\nII. Demir tozu–kükürt tozu karışımı\nIII. Temiz ve kuru hava\nYukarıdaki karışımlardan hangisi ya da hangileri heterojendir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "Tuzlu su çözeltidir; tuz suda her yere eşit dağılır, homojendir.",
+   "C": "Gaz karışımları da homojendir; havada ayrı bölgeler ayırt edilmez.",
+   "D": "Tuzlu suyu da heterojen saymışsın; çözeltiler homojendir.",
+   "E": "İki homojen karışımı seçmişsin; soru heterojen olanı soruyor."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Homojen olan karışımlar.",
+  "bilgi": [
+   {
+    "ad": "Homojen ve heterojen karışım",
+    "ifade": "Homojen: her yerinde aynı özellik, tek faz (tuzlu su, alaşımlar). Heterojen: bölgeleri birbirinden ayırt edilir, birden çok faz (çamurlu su, yağ–su)"
+   }
+  ],
+  "ipuclari": [
+   "Homojen karışımın her yerinde özellik aynıdır.",
+   "Alaşımlar katı çözelti sayılır.",
+   "Çamurlu suda toprak parçacıkları ayırt edilir mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanımı hatırla",
+    "aciklama": "Heterojen karışımda bölgeler birbirinden ayırt edilir.",
+    "islem": "heterojen: çok faz"
+   },
+   {
+    "baslik": "Öncülleri incele",
+    "aciklama": "Tuzlu su ve hava çözeltidir. Demir ve kükürt tozları ayrı parçacıklar hâlinde durur.",
+    "islem": "I: homojen · II: heterojen · III: homojen"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız II heterojendir.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Gözle ya da mikroskopla ayrı bölgeler ayırt ediliyorsa karışım heterojendir; çözeltiler ve alaşımlar homojendir.",
+  "kisaYol": null,
+  "kaynakKart": "K-KKR-01 (Karışım türü: homojen–heterojen) · kardeş (0001): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0002k",
+  "ana": "tytkim-karisimlar-0002",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Kütlece Yüzde Derişim",
+  "k": "kim|Karışımlar",
+  "kazanim": "Farklı derişimli çözeltilerin karışımının kütlece yüzde derişimini hesaplar.",
+  "tipId": "kim-karisim-yuzde",
+  "tip": "Kütlece yüzde derişimli çözeltileri karıştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kütlece %12’lik 150 g tuzlu su çözeltisi ile kütlece %20’lik 250 g tuzlu su çözeltisi karıştırılıyor.\nBuna göre oluşan çözeltinin kütlece yüzde derişimi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "16",
+   "C": "17",
+   "D": "20",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "17"
+  },
+  "celdiriciler": {
+   "A": "Çözelti kütlelerini ters ağırlıklandırmışsın; 250 g olan çözeltinin payı daha büyüktür.",
+   "B": "İki derişimin aritmetik ortalamasını almışsın; kütleler eşit olmadığından ağırlıklı ortalama gerekir.",
+   "D": "Daha derişik çözeltinin yüzdesini aynen almışsın.",
+   "E": "Yüzdeleri toplamışsın; karışımda derişim toplanmaz."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Son çözeltinin kütlece yüzde derişimi.",
+  "bilgi": [
+   {
+    "ad": "Kütlece yüzde derişim",
+    "ifade": "100 g çözeltide çözünen kütlesidir. Örnek: %20’lik 150 g çözeltide 150 × 20/100 = 30 g çözünen vardır"
+   },
+   {
+    "ad": "Karıştırma",
+    "ifade": "Çözünen kütleleri ve çözelti kütleleri ayrı ayrı toplanır, sonra oran alınır"
+   }
+  ],
+  "ipuclari": [
+   "Her çözeltideki tuz kütlesini ayrı ayrı bul.",
+   "Tuz kütlelerini de çözelti kütlelerini de topla.",
+   "Toplam tuzu toplam çözeltiye böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz kütlelerini bul",
+    "aciklama": "Kütlece % derişim, 100 g çözeltideki çözünen kütlesidir.",
+    "islem": "1. çözelti: 150 × 12/100 = 18 g · 2. çözelti: 250 × 20/100 = 50 g"
+   },
+   {
+    "baslik": "Toplamları bul",
+    "aciklama": "Tuz ve çözelti kütleleri ayrı ayrı toplanır.",
+    "islem": "tuz: 18 + 50 = 68 g · çözelti: 150 + 250 = 400 g"
+   },
+   {
+    "baslik": "Yüzdeyi hesapla",
+    "aciklama": "Tuz kütlesi toplam çözelti kütlesine bölünür.",
+    "islem": "68/400 × 100 = %17"
+   }
+  ],
+  "puf": "Karışımın derişimi, kütleleriyle ağırlıklandırılmış ortalamadır; çözünen ve çözelti kütlelerini ayrı topla.",
+  "kisaYol": "Çözelti kütleleri 1 : 3 oranındadır; derişim 20 ile 40’ın ağırlıklı ortalamasıdır: (1 × 20 + 3 × 40)/4 = 35.",
+  "kaynakKart": "K-KKR-02 (iki çözeltiyi karıştırma) · kardeş (0002): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0003k",
+  "ana": "tytkim-karisimlar-0003",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Çözünürlük",
+  "k": "kim|Karışımlar",
+  "kazanim": "Verilen sıcaklıktaki çözünürlüğe göre çözünen ve çözünmeden kalan madde miktarını hesaplar.",
+  "tipId": "kim-karisim-cozunurluk",
+  "tip": "Çözünürlük ve doymuş çözelti",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir tuzun 25 °C’deki çözünürlüğü 100 g suda 25 g’dır.\n25 °C’de 160 g saf suya bu tuzdan 50 g konup karıştırılıyor.\nBuna göre çözünmeden kalan tuz kütlesi kaç g’dır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "10",
+   "C": "25",
+   "D": "40",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Konan tuzun tamamının çözüneceğini sanmışsın; 160 g su en çok 40 g çözer.",
+   "C": "Çözünürlük değerini çözünmeyen miktar sanmışsın.",
+   "D": "Çözünen kütleyi bulup soruyu orada bırakmışsın.",
+   "E": "Konan tuzun hiç çözünmediğini varsaymışsın."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Çözünmeden kalan katının kütlesi.",
+  "bilgi": [
+   {
+    "ad": "Çözünürlük",
+    "ifade": "Belirli sıcaklıkta 100 g suda çözünebilen en çok madde kütlesidir. Örnek: 100 g suda 30 g çözünüyorsa 200 g suda 60 g çözünür"
+   },
+   {
+    "ad": "Doymuş çözelti",
+    "ifade": "O sıcaklıkta daha fazla madde çözemeyen çözeltidir; fazlası dipte çözünmeden kalır"
+   }
+  ],
+  "ipuclari": [
+   "Çözünürlük 100 g su için verilmiş; 160 g su kaç g tuz çözer?",
+   "Konan miktar bu değerden büyük mü?",
+   "Fazlası çözünmeden kalır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çözülebilecek miktarı bul",
+    "aciklama": "Çözünürlük su kütlesiyle doğru orantılıdır.",
+    "islem": "100 g su → 25 g · 160 g su → 160 × 25/100 = 40 g"
+   },
+   {
+    "baslik": "Konan miktarla karşılaştır",
+    "aciklama": "50 g, çözülebilecek en çok miktar olan 40 g’dan büyüktür.",
+    "islem": "50 > 40"
+   },
+   {
+    "baslik": "Artanı hesapla",
+    "aciklama": "Çözünmeyen kısım, konan ile çözünen miktarın farkıdır.",
+    "islem": "50 − 40 = 10 g"
+   }
+  ],
+  "puf": "Önce verilen su kütlesinin çözebileceği en çok miktarı bul, sonra konan miktarla karşılaştır.",
+  "kisaYol": null,
+  "kaynakKart": "K-KKR-03 (çözünürlüğe göre kalan katı) · kardeş (0003): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0004k",
+  "ana": "tytkim-karisimlar-0004",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Çözeltilerin Donma Noktası",
+  "k": "kim|Karışımlar",
+  "kazanim": "Çözünen tanecik sayısına göre çözeltilerin donma noktalarını karşılaştırır.",
+  "tipId": "kim-karisim-koligatif",
+  "tip": "Çözünen tanecik sayısına göre donma noktası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Üç ayrı kapta 1000’er g saf suya aşağıdaki maddeler ilave edilip tamamen çözünmeleri sağlanıyor.\nI. kap: 0,2 mol sakkaroz (C₁₂H₂₂O₁₁)\nII. kap: 0,1 mol CaCl₂\nIII. kap: 0,1 mol NaNO₃\n(Sakkaroz suda moleküller hâlinde; CaCl₂ ve NaNO₃ tamamen iyonlarına ayrışarak çözünmektedir.)\nBu çözeltilerin 1 atm dış basınçta donmaya başlama sıcaklıkları sırasıyla T₁, T₂ ve T₃ olduğuna göre bunlar arasındaki ilişki aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "T₁ = T₂ = T₃",
+   "B": "T₂ > T₁ = T₃",
+   "C": "T₁ > T₃ > T₂",
+   "D": "T₃ > T₁ > T₂",
+   "E": "T₁ = T₃ > T₂"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "T₁ = T₃ > T₂"
+  },
+  "celdiriciler": {
+   "A": "Üçünde de benzer mol miktarı gördüğün için eşit sanmışsın; CaCl₂ 3 mol iyon verir.",
+   "B": "Etkiyi ters yorumlamışsın; tanecik çoksa donma noktası daha düşüktür.",
+   "C": "Sakkaroz ile NaNO₃’ı farklı saymışsın; ikisi de 0,2 mol tanecik verir.",
+   "D": "NaNO₃’ın iyonlarını sayıp sakkarozun 0,2 molünü eksik saymışsın."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "T₁, T₂ ve T₃ arasındaki sıralama.",
+  "bilgi": [
+   {
+    "ad": "Donma noktası alçalması",
+    "ifade": "Suda çözünen tanecik sayısı arttıkça çözeltinin donma noktası saf suyunkinden daha çok düşer"
+   },
+   {
+    "ad": "İyonlarına ayrışma",
+    "ifade": "CaCl₂ → Ca²⁺ + 2Cl⁻ (1 mol CaCl₂, 3 mol iyon) · NaNO₃ → Na⁺ + NO₃⁻ (1 mol, 2 mol iyon)"
+   }
+  ],
+  "ipuclari": [
+   "Donma noktasını çözünen toplam tanecik sayısı belirler.",
+   "CaCl₂ ve NaNO₃’ın her molü kaç mol iyon verir?",
+   "Tanecik sayıları eşitse donma noktaları da eşittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanecik sayısını bul",
+    "aciklama": "Donma noktasını molekül ve iyonların toplam sayısı etkiler.",
+    "islem": "sakkaroz: 0,2 mol · CaCl₂: 0,1 × 3 = 0,3 mol · NaNO₃: 0,1 × 2 = 0,2 mol"
+   },
+   {
+    "baslik": "Etkiyi yorumla",
+    "aciklama": "Tanecik sayısı en çok olan çözeltinin donma noktası en çok düşer.",
+    "islem": "tanecik: I = III < II"
+   },
+   {
+    "baslik": "Sıralamayı yaz",
+    "aciklama": "I ve III’ün donma noktası eşit ve CaCl₂’lü çözeltinin üstündedir.",
+    "islem": "T₁ = T₃ > T₂"
+   }
+  ],
+  "puf": "Aynı miktar suda, çözünen toplam tanecik (molekül ya da iyon) sayısı en çok olanın donma noktası en düşüktür.",
+  "kisaYol": null,
+  "kaynakKart": "K-KKR-04 (koligatif: donma noktası) · kardeş (0004): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0005k",
+  "ana": "tytkim-karisimlar-0005",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Kütlece Yüzde Derişim",
+  "k": "kim|Karışımlar",
+  "kazanim": "Buharlaştırma ve çözünen ekleme sonucu oluşan çözeltinin derişimini adım adım hesaplar.",
+  "tipId": "kim-karisim-derisim",
+  "tip": "Buharlaştırma ve ekleme ile derişim değişimi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Kütlece %20’lik 140 g tuzlu su çözeltisinden 60 g su buharlaştırılıyor. Ardından çözeltiye 20 g tuz ekleniyor ve tuzun tamamı çözünüyor.\nBuna göre son çözeltinin kütlece yüzde derişimi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "30",
+   "C": "35",
+   "D": "48",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "Hiçbir şey değişmemiş gibi ilk derişimi yazmışsın.",
+   "B": "Buharlaşmayı hesaba katmamışsın: 48/160 = %30.",
+   "C": "Eklenen tuzu unutup 28 g’ı 80 g’a bölmüşsün.",
+   "E": "Eklenen 20 g tuzu çözelti kütlesine katmamışsın: 48/80."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Son çözeltinin kütlece yüzde derişimi.",
+  "bilgi": [
+   {
+    "ad": "Kütlece yüzde derişim",
+    "ifade": "100 g çözeltide çözünen kütlesidir. Örnek: %20’lik 150 g çözeltide 150 × 20/100 = 30 g çözünen vardır"
+   },
+   {
+    "ad": "Buharlaşma ve ekleme",
+    "ifade": "Buharlaşırken yalnız su gider (çözünen kalır). Çözünen eklenirse hem çözünen hem çözelti kütlesi artar"
+   }
+  ],
+  "ipuclari": [
+   "İlk çözeltideki tuz kütlesini bul.",
+   "Buharlaşan su tuzu etkiler mi, çözelti kütlesini mi azaltır?",
+   "Eklenen tuz hem tuz hem çözelti kütlesine eklenir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk tuz kütlesi",
+    "aciklama": "Kütlece %20’lik 140 g çözeltide tuz vardır.",
+    "islem": "140 × 20/100 = 28 g tuz"
+   },
+   {
+    "baslik": "Buharlaşma",
+    "aciklama": "Yalnız su gider; tuz kütlesi değişmez.",
+    "islem": "çözelti: 140 − 60 = 80 g · tuz: 28 g"
+   },
+   {
+    "baslik": "Tuz ekleme",
+    "aciklama": "Eklenen tuz hem tuza hem çözeltiye katılır.",
+    "islem": "tuz: 28 + 20 = 48 g · çözelti: 80 + 20 = 100 g"
+   },
+   {
+    "baslik": "Yüzdeyi hesapla",
+    "aciklama": "Tuz kütlesi çözelti kütlesine bölünür.",
+    "islem": "48/100 × 100 = %48"
+   }
+  ],
+  "puf": "Her işlemden sonra çözünen ve çözelti kütlesini ayrı ayrı yaz; buharlaşırken yalnız çözelti kütlesi azalır.",
+  "kisaYol": null,
+  "kaynakKart": "K-KKR-05 (buharlaştırma + ekleme) · kardeş (0005): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0006k",
+  "ana": "tytkim-karisimlar-0006",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Molar Derişim",
+  "k": "kim|Karışımlar",
+  "kazanim": "İyonlaşan tuz çözeltilerini karıştırınca ortak iyonun derişimini hesaplar.",
+  "tipId": "kim-karisim-molarite",
+  "tip": "Çözeltileri karıştırınca iyon derişimi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "0,2 M 200 mL MgCl₂ çözeltisi ile 0,1 M 300 mL AlCl₃ çözeltisi karıştırılıyor.\n(Hacimlerin toplandığı ve tuzların tamamen iyonlarına ayrıştığı varsayılacaktır.)\nBuna göre karışımdaki Cl⁻ iyonlarının molar derişimi kaç M’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,14 M",
+   "B": "0,15 M",
+   "C": "0,17 M",
+   "D": "0,34 M",
+   "E": "0,35 M"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "0,34 M"
+  },
+  "celdiriciler": {
+   "A": "Formüldeki Cl sayısını çarpmamışsın: (0,04 + 0,03) / 0,5.",
+   "B": "Çözeltilerin derişimlerinin ortalamasını almışsın: (0,2 + 0,1) / 2.",
+   "C": "Toplam mol sayısını hacme bölmeyi unutmuşsun.",
+   "E": "Cl⁻ derişimlerinin (0,4 ve 0,3) ortalamasını almışsın; hacimler eşit değil."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Karışımdaki Cl⁻ derişimi.",
+  "bilgi": [
+   {
+    "ad": "Molar derişim (molarite)",
+    "ifade": "1 L çözeltideki çözünen mol sayısıdır: M = n / V(L). Örnek: 0,2 M 500 mL çözeltide n = 0,2 × 0,5 = 0,1 mol çözünen vardır"
+   },
+   {
+    "ad": "İyonlarına ayrışma",
+    "ifade": "MgCl₂ → Mg²⁺ + 2Cl⁻ (1 mol MgCl₂, 2 mol Cl⁻) · AlCl₃ → Al³⁺ + 3Cl⁻ (1 mol AlCl₃, 3 mol Cl⁻)"
+   }
+  ],
+  "ipuclari": [
+   "Her çözeltideki çözünen mol sayısını n = M × V ile bul (V litre).",
+   "MgCl₂ ve AlCl₃’ün 1 molü kaç mol Cl⁻ verir?",
+   "Toplam Cl⁻ molünü toplam hacme böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz mollerini bul",
+    "aciklama": "Mol sayısı molarite ile hacmin (L) çarpımıdır.",
+    "islem": "MgCl₂: 0,2 × 0,2 = 0,04 mol · AlCl₃: 0,1 × 0,3 = 0,03 mol"
+   },
+   {
+    "baslik": "Cl⁻ mollerini bul",
+    "aciklama": "MgCl₂ başına 2 Cl⁻, AlCl₃ başına 3 Cl⁻ vardır.",
+    "islem": "MgCl₂’den: 0,04 × 2 = 0,08 mol · AlCl₃’ten: 0,03 × 3 = 0,09 mol"
+   },
+   {
+    "baslik": "Toplamları bul",
+    "aciklama": "Cl⁻ molleri ve hacimler toplanır.",
+    "islem": "0,08 + 0,09 = 0,17 mol · 200 + 300 = 500 mL = 0,5 L"
+   },
+   {
+    "baslik": "Derişimi hesapla",
+    "aciklama": "Toplam mol toplam hacme bölünür.",
+    "islem": "0,17 / 0,5 = 0,34 M"
+   }
+  ],
+  "puf": "Ortak iyonun toplam mol sayısını toplam hacme böl; iyon sayısını formülden oku.",
+  "kisaYol": null,
+  "kaynakKart": "K-KKR-06 (iyon derişimi karışımı) · kardeş (0006): aynı tip ve zorluk, yeni kurgu ve sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ }
+]

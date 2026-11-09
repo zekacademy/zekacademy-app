@@ -1,7 +1,7 @@
 """Kullanım: python3 kalite.py <onek> [başlık]  → /tmp/kor/<onek>.txt + şekil PNG'leri, önizleme HTML /home/claude/uret/<onek>.html"""
 import json,sys,os,subprocess
-R='/home/claude/zekacademy-app'; a=sys.argv[1]; kl,o=(a.split('/') if '/' in a else ('tyt-mat',a)); bas=sys.argv[2] if len(sys.argv)>2 else o
-Q=json.load(open(f'{R}/havuz/{kl}/{o}-1.json'))+json.load(open(f'{R}/havuz/{kl}/{o}-1-kardes.json'))
+R='/home/claude/zekacademy-app'; o=sys.argv[1]; bas=sys.argv[2] if len(sys.argv)>2 else o
+Q=json.load(open(f'{R}/havuz/tyt-mat/{o}-1.json'))+json.load(open(f'{R}/havuz/tyt-mat/{o}-1-kardes.json'))
 os.makedirs('/tmp/kor',exist_ok=True)
 birlesik=f'/tmp/kor/{o}-tum.json'; json.dump(Q,open(birlesik,'w'),ensure_ascii=False)
 sek=[]

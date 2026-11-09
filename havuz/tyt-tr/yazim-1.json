@@ -1,0 +1,468 @@
+[
+ {
+  "id": "tyttr-yazim-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · de/da Yazımı",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "“de/da” bağlacı ile bulunma hâli ekini yazımda ayırt eder.",
+  "tipId": "yz-deda",
+  "tip": "de/da yazımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinde “de/da” yazımıyla ilgili bir yanlışlık vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Hasta olduğu için gelemedi, bir de yağmur başlayınca iyice zorlaştı.",
+   "B": "Defterini sınıfta unutmuş, çantasında da bulamamış.",
+   "C": "Bu konuyu bende anlamadım, biraz daha anlatır mısın?",
+   "D": "Yarın sen de bizimle gel, ben de gelirim.",
+   "E": "Çok çalıştı da yine de başaramadı."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Bu konuyu bende anlamadım, biraz daha anlatır mısın?"
+  },
+  "celdiriciler": {
+   "A": "“Bir de” bağlaçtır, ayrı yazılması doğrudur.",
+   "B": "“Sınıfta” ek, “çantasında da” bağlaçtır; yazım doğrudur.",
+   "D": "“Sen de, ben de” bağlaçtır, ayrı yazılması doğrudur.",
+   "E": "“Çalıştı da” ve “yine de” bağlaçtır; ayrı yazılmıştır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "“de/da” yazımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "de/da",
+    "ifade": "Bağlaç olan “de/da” (anlamı “dahi, ayrıca”) ayrı yazılır: “Sen de gel”. Bulunma hâli eki “-de/-da” sözcüğe bitişiktir: “Evde kaldım”. Deneme: “de/da”yı çıkarınca anlam bozulmuyorsa bağlaçtır"
+   }
+  ],
+  "ipuclari": [
+   "“de/da”yı çıkarınca anlam bozuluyorsa ek, bozulmuyorsa bağlaçtır.",
+   "“Ben de anlamadım” mı demek istiyor, “bende” mi?",
+   "Anlamı “ben dahi” olan “de”, ayrı yazılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Bağlaç “de/da” ayrı, ek “-de/-da” bitişik yazılır.",
+    "islem": "“dahi” anlamı varsa bağlaç"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "A: bağlaç ✓ · B: “sınıfta” ek, “çantasında da” bağlaç ✓ · C: “ben de” olmalı ✗ · D: ✓ · E: ✓",
+    "islem": "C: yanlış"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "“Bende anlamadım” cümlesinde “ben de” anlamı vardır; bağlaç ayrı yazılmalıydı.",
+    "islem": "C: ben de anlamadım"
+   }
+  ],
+  "puf": "“Dahi” sözcüğünü koyabiliyorsan “de/da” bağlaçtır ve ayrı yazılır.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0001k",
+  "kaynakKart": "K-YZ-01 (de/da Yazımı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-yazim-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · ki Yazımı",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "Bağlaç “ki” ile aitlik ekini ve “dünkü” gibi istisnaları yazımda ayırt eder.",
+  "tipId": "yz-ki",
+  "tip": "ki yazımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde “ki” yazımıyla ilgili bir yanlışlık vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bugünkü toplantı yarına ertelendi.",
+   "B": "O kadar yorgunum ki oturur oturmaz uyuyakalırım.",
+   "C": "Çantandaki kalemi bana verir misin?",
+   "D": "Benim fikrimle seninki aynı.",
+   "E": "Sınıftaki öğrencilerin çoğu dünki sınavı zor bulmuş."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Sınıftaki öğrencilerin çoğu dünki sınavı zor bulmuş."
+  },
+  "celdiriciler": {
+   "A": "“Bugünkü” ünlü uyumuna uyan istisnadır; yazım doğrudur.",
+   "B": "Bağlaç olan “ki” ayrı yazılmıştır; doğrudur.",
+   "C": "Aitlik eki “-ki” bitişik yazılmıştır; doğrudur.",
+   "D": "“Seninki” aitlik ekidir, bitişik yazılması doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "“ki” yazımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "ki",
+    "ifade": "Bağlaç olan “ki” ayrı yazılır: “O kadar yoruldum ki uyuyakaldım”. Aitlik eki “-ki” bitişiktir: “evdeki, benimki”. Ünlü uyumuna uyan tek istisna: dünkü, bugünkü, öbürkü"
+   }
+  ],
+  "ipuclari": [
+   "Aitlik eki “-ki” genelde ünlü uyumuna uyar.",
+   "“Dün” sözcüğüne gelen ekin doğru biçimini düşün.",
+   "“Sınıftaki” sözcüğünü cümleden çıkarmadan, ek mi bağlaç mı olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Aitlik eki “-ki” bitişik, bağlaç “ki” ayrı yazılır; “dünkü, bugünkü” ünlü uyumuna uyar.",
+    "islem": "“-ki” istisnaları: dünkü, bugünkü"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "A: bugünkü ✓ · B: bağlaç ✓ · C: çantandaki ✓ · D: seninki ✓ · E: “dünki” ✗",
+    "islem": "E: yanlış"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "“Dünki” değil, “dünkü” yazılır.",
+    "islem": "E: dünkü olmalıydı"
+   }
+  ],
+  "puf": "Dün, bugün, öbür sözcüklerine gelen “-ki” ünlü uyumuna uyar: dünkü, bugünkü, öbürkü.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0002k",
+  "kaynakKart": "K-YZ-02 (ki Yazımı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-yazim-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · Bitişik ve Ayrı Yazılan Sözcükler",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "“Hiçbir, herkes, birkaç, her şey” gibi sözcüklerin bitişik/ayrı yazımını ayırt eder.",
+  "tipId": "yz-bitisik",
+  "tip": "Bitişik ve ayrı yazılan sözcükler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde bitişik ya da ayrı yazımla ilgili bir yanlışlık vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu konuda hiç bir fikrim yok.",
+   "B": "Her şeyi baştan yapmamız gerekecek.",
+   "C": "Birkaç arkadaşımla sinemaya gittim.",
+   "D": "Çocuk kendi kendine yürümeyi öğrendi.",
+   "E": "Hava kapalı olduğu için maç ertelendi."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Bu konuda hiç bir fikrim yok."
+  },
+  "celdiriciler": {
+   "B": "“Her şey” ayrı yazılmıştır; doğrudur.",
+   "C": "“Birkaç” bitişik yazılır; doğrudur.",
+   "D": "“Kendi kendine” ayrı yazılır; doğrudur.",
+   "E": "Ayrı yazılması gereken sözcükler ayrı yazılmıştır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Bitişik/ayrı yazımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Bitişik ve ayrı sözcükler",
+    "ifade": "Bitişik: herkes, hiçbir, birçok, birkaç, neyse. Ayrı: her şey, bir şey, bu yüzden, kendi kendine, her zaman"
+   }
+  ],
+  "ipuclari": [
+   "“Hiç” ile “bir” birleşince tek sözcük olur.",
+   "Her şıktaki birleşik ya da ayrı sözcükleri kurala göre sına.",
+   "Yalnızca bir şıkta ayrı yazılması gereken değil, bitişik yazılması gereken sözcük var."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "“Hiçbir” bitişik; “her şey, kendi kendine” ayrı yazılır.",
+    "islem": "hiçbir · birkaç · her şey"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "A: “hiç bir” ✗ · B: her şey ✓ · C: birkaç ✓ · D: kendi kendine ✓ · E: ✓",
+    "islem": "A: yanlış"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "“Hiç bir” bitişik yazılmalıydı: hiçbir.",
+    "islem": "A: hiçbir olmalıydı"
+   }
+  ],
+  "puf": "Hiçbir, birçok, birkaç, herkes bitişik; her şey, bir şey, hiçbir şey ayrı yazılır.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0003k",
+  "kaynakKart": "K-YZ-03 (Bitişik ve Ayrı Yazılan Sözcükler) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-yazim-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · Büyük Harflerin Kullanımı",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "Özel ad, dil adı ve unvanlarda büyük harf kullanımını değerlendirir.",
+  "tipId": "yz-buyuk",
+  "tip": "Büyük harflerin kullanımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde büyük harflerin kullanımıyla ilgili bir yanlışlık vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yaz tatilinde Karadeniz’de bir hafta kalacağız.",
+   "B": "Prof. Dr. Ayhan Kaya konferansı açtı.",
+   "C": "Çalıkuşu romanı Reşat Nuri Güntekin’in tanınmış eseridir.",
+   "D": "Okulda ingilizce dersi bu yıl iki saate çıkarıldı.",
+   "E": "Gelecek hafta Ankara’daki toplantıya katılacağız."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Okulda ingilizce dersi bu yıl iki saate çıkarıldı."
+  },
+  "celdiriciler": {
+   "A": "“Karadeniz” özel addır, büyük harfle yazılmıştır.",
+   "B": "Unvan ve özel ad büyük harfle yazılmıştır.",
+   "C": "Eser adı büyük, “romanı” cins adı küçüktür.",
+   "E": "“Ankara” özel addır; doğru yazılmıştır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Büyük harf kullanımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Büyük harf",
+    "ifade": "Özel adlar, dil adları (Türkçe, İngilizce), kıta-deniz-yer adları (Güney Amerika, Karadeniz), eser adları ve unvanlar büyük harfle başlar; cins adlar (şehir, roman, deniz) küçük yazılır"
+   }
+  ],
+  "ipuclari": [
+   "Özel adların yanında dil adlarını da incele.",
+   "Dil adları (Türkçe, Almanca…) büyük harfle başlar.",
+   "Cins adlar (roman, ders) küçük yazılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Özel adlar, dil adları ve eser adları büyük harfle başlar.",
+    "islem": "Karadeniz · İngilizce · Çalıkuşu"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "A: Karadeniz ✓ · B: Prof. Dr. ✓ · C: Çalıkuşu ✓ · D: “ingilizce” ✗ · E: Ankara ✓",
+    "islem": "D: yanlış"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "Dil adı olan “İngilizce” büyük harfle başlamalıydı.",
+    "islem": "D: İngilizce olmalıydı"
+   }
+  ],
+  "puf": "Dil adları cümle ortasında bile büyük harfle başlar: Türkçe, Almanca, İngilizce.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0004k",
+  "kaynakKart": "K-YZ-04 (Büyük Harflerin Kullanımı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-yazim-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · Kesme İşareti",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "Çekim ekleri ile türetme eklerinin kesme işaretiyle ilişkisini değerlendirir.",
+  "tipId": "yz-kesme",
+  "tip": "Kesme işareti",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. İstanbul’lu esnaf yeni yılı karşıladı.\nII. Hatice’yle 14.00’te buluşacağız.\nIII. Çocuklar Atatürk’çü bir ortamda büyüdü.\nIV. 1990’lı yıllarda ev bilgisayarları yaygınlaştı.\nYukarıdaki numaralı cümlelerin hangilerinde kesme işareti yanlış kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve III",
+   "C": "II ve IV",
+   "D": "I, II ve IV",
+   "E": "I, III ve IV"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’te de türetme eki öncesinde kesme kullanılmış; I tek başına yetmez.",
+   "C": "II ve IV’te kesme çekim ekinden önce kullanılmıştır; doğrudur.",
+   "D": "II ve IV’ün yazımı doğrudur; III ise yanlış olduğu hâlde bu şıkta yok.",
+   "E": "IV’te “1990’lı” sayıya gelen ek olduğu için kesme gerekir; yazım doğrudur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Kesme işareti yanlış kullanılan cümleler.",
+  "bilgi": [
+   {
+    "ad": "Kesme işareti",
+    "ifade": "Özel adlara ve sayılara gelen çekim ekleri kesmeyle ayrılır: Ayşe’nin, 1980’li, 17.30’da. Türetme eki alan sözcüklerde kesme olmaz: Ankaralı, Türkçe, Atatürkçü"
+   }
+  ],
+  "ipuclari": [
+   "Kesme işareti özel adlara gelen çekim ekleriyle sayılara gelen eklerden önce konur.",
+   "“-lı, -çı” gibi türetme eklerinden önce kesme konur mu?",
+   "Her cümlede kesme işaretinden sonra gelen eki türüne göre sınıflandır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Kesme, çekim ekinden önce konur; türetme ekinde konmaz.",
+    "islem": "Ayşe’nin · Ankaralı"
+   },
+   {
+    "baslik": "I ve III’ü sına",
+    "aciklama": "“İstanbullu” ve “Atatürkçü” sözcüklerinde ek türetme ekidir; kesme olmaz.",
+    "islem": "I: ✗ · III: ✗"
+   },
+   {
+    "baslik": "II ve IV’ü sına",
+    "aciklama": "“Hatice’yle” ve “14.00’te” çekim eklidir. “1990’lı” da sayıya getirilen ektir; kesme ister.",
+    "islem": "II: ✓ · IV: ✓"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yanlış kullanılan cümleler I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "İsim sözcük türetiyorsa (-lı, -çı, -ca) kesme yok; çekim ekiyse özel ad ve sayıdan sonra kesme var.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0005k",
+  "kaynakKart": "K-YZ-05 (Kesme İşareti) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-yazim-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Yazım Kuralları · Birleşik Fiillerin Yazımı",
+  "k": "tr|Yazım Kuralları",
+  "kazanim": "Yardımcı fiille kurulan birleşik fiillerin yazımını ses olayına göre değerlendirir.",
+  "tipId": "yz-birlesikfiil",
+  "tip": "Birleşik fiillerin yazımı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde birleşik fiilin yazımı yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yaptığı hatayı kabul etmeyi öğrenmişti.",
+   "B": "Onu hiç affetmeyeceğini söyledi.",
+   "C": "Projeyi teslimetmeden önce son kez kontrol etti.",
+   "D": "Önerimizi reddettiğine çok şaşırdık.",
+   "E": "Ondan yardım etmesini rica ettim."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Projeyi teslimetmeden önce son kez kontrol etti."
+  },
+  "celdiriciler": {
+   "A": "“Kabul etmek” ses olayı olmadığından ayrı yazılır; doğrudur.",
+   "B": "“Af” sözcüğü ikizleşir (aff-); bitişik yazılması doğrudur.",
+   "D": "“Ret” ikizleşir (redd-); bitişik yazılması doğrudur.",
+   "E": "“Yardım etmek” ve “rica etmek” ses olayı olmadığından ayrı yazılır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Birleşik fiil yazımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Birleşik fiil yazımı",
+    "ifade": "et-, ol- gibi yardımcı fiillerde ses olayı (düşme, ikizleşme) varsa bitişik yazılır: affetmek, hissetmek, reddetmek. Ses olayı yoksa ayrı: kabul etmek, teslim etmek"
+   }
+  ],
+  "ipuclari": [
+   "Birleşik fiilde ses düşmesi ya da ikizleşme olup olmadığına bak.",
+   "“Teslim” sözcüğüne “et-” gelince ses olayı var mı?",
+   "Ses olayı yoksa iki sözcük ayrı yazılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Ses olayı varsa bitişik, yoksa ayrı yazılır.",
+    "islem": "affetmek · kabul etmek"
+   },
+   {
+    "baslik": "Ses olaylı olanlar",
+    "aciklama": "“Affetmek” ve “reddetmek” ikizleşme vardır; bitişik yazım doğru.",
+    "islem": "B ✓ · D ✓"
+   },
+   {
+    "baslik": "Ses olayı olmayanlar",
+    "aciklama": "“Kabul etmek, yardım etmek, rica etmek, teslim etmek” ses olayı olmadığından ayrı yazılır.",
+    "islem": "A ✓ · E ✓ · C: “teslimetmek” ✗"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yanlış yazılan birleşik fiil “teslimetmek”.",
+    "islem": "C: teslim etmek"
+   }
+  ],
+  "puf": "Af, hiss, ret, emir gibi sözcüklerle kurulan fiillerde ses olayı vardır (bitişik); kabul, rica, teslim, tercih ayrı yazılır.",
+  "kisaYol": null,
+  "kardes": "tyttr-yazim-0006k",
+  "kaynakKart": "K-YZ-06 (Birleşik Fiillerin Yazımı) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ }
+]
