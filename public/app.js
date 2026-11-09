@@ -996,7 +996,7 @@ const avRenk = x => AV_RENK[(strHash(x)*7)%AV_RENK.length];
 /* ---------- Karakter avatarlar (özgün SVG; öğrenci kendisi seçer) ---------- */
 const AVK = {
   ten:["#FBD9BF","#F2C29B","#D9A274","#B57A4E","#8A5534"],
-  sac:["kisa","yan","fade","dalga","uzun","omuz","kuyruk","topuz","orgu","kivircik","bere","kel","basortu","sal","turban","ortadan","kirpi","arkaya","kakulE","etopuz","bukle","undercut","bob","kakul","ikiorgu","yuksek","daginik","pixie","puf","yandan"],
+  sac:["kisa","yan","fade","dalga","uzun","omuz","kuyruk","topuz","orgu","kivircik","bere","kel","basortu","sal","uzundalga","yarimtop","ortadan","kirpi","arkaya","kakulE","etopuz","bukle","undercut","bob","kakul","ikiorgu","yuksek","daginik","pixie","puf","yandan"],
   sacR:["#1C1410","#3B2618","#5C3B24","#8A5A34","#B8925E","#6B6B6B","#2E2A27","#7A3A26","#A47148","#D6C29A"],
   basR:["#1F2937","#E7E5E4","#7F1D1D","#1E3A5F","#4D5B3A","#C2A27A","#6B4E71","#9CA3AF"],
   giy:["tisort","kapus","gomlek","kazak","forma"],
@@ -1005,6 +1005,7 @@ const AVK = {
   goz:["normal","badem","iri"],
   kas:["duz","kalin","kavis"],
   aks:["yok","gozluk","yuvarlak","kulaklik"],
+  sacAks:["yok","toka","bant","kurdele"],
   ruh:["odakli","mutlu","kararli","heyecanli","yorgun"],
   detay:["yok","cil","ben"],
   masaR:[["#8B5E3C","#B07A4F","#5E3E27","#4A3020"],["#5B3A24","#7A5236","#3E2718","#2F1D12"],["#C9A37A","#DDBE98","#A07E58","#8C6B47"],["#D9DCE1","#F1F3F5","#B9BEC6","#A6ACB5"],["#2B2B2E","#45454A","#1C1C1F","#141416"],["#3F5A4A","#56755F","#2C4134","#22342A"]],
@@ -1012,34 +1013,34 @@ const AVK = {
   masaSag:["yok","kahve","su","saat","bitki","kupa"],
   masaOn:["yok","postit","yks","yildiz"]
 };
-const AV_AD = {ruh:"Ruh hali", detay:"Yüz detayı", masaR:"Masa rengi", masaSol:"Sol köşe", masaSag:"Sağ köşe", masaOn:"Masanın önü", ten:"Ten", goz:"Göz", kas:"Kaş", sakal:"Sakal / bıyık", sac:"Saç / başörtüsü", sacR:"Saç rengi", basR:"Başörtüsü rengi", giy:"Kıyafet", gom:"Kıyafet rengi", aks:"Aksesuar", masa:"Masa"};
-const SECENEK_AD = {kisa:"Kısa", yan:"Yandan ayrık", fade:"Kısa yanlar", dalga:"Dalgalı", uzun:"Uzun", omuz:"Omuz hizası", kuyruk:"At kuyruğu", topuz:"Topuz", orgu:"Örgü", kivircik:"Kıvırcık", bere:"Bere", kel:"Kazınmış", basortu:"Başörtüsü", sal:"Şal", turban:"Türban", ortadan:"Ortadan ayrık", kirpi:"Dikleştirilmiş", arkaya:"Arkaya taranmış", kakulE:"Perçemli", etopuz:"Topuz", bukle:"Bukleli üst", undercut:"Uzun üst", bob:"Küt", kakul:"Kâküllü", ikiorgu:"İki örgü", yuksek:"Yüksek kuyruk", daginik:"Dağınık topuz", pixie:"Pixie", puf:"Afro", yandan:"Yana atılmış",
+const AV_AD = {sacAks:"Saç aksesuarı", ruh:"Ruh hali", detay:"Yüz detayı", masaR:"Masa rengi", masaSol:"Sol köşe", masaSag:"Sağ köşe", masaOn:"Masanın önü", ten:"Ten", goz:"Göz", kas:"Kaş", sakal:"Sakal / bıyık", sac:"Saç / başörtüsü", sacR:"Saç rengi", basR:"Başörtüsü rengi", giy:"Kıyafet", gom:"Kıyafet rengi", aks:"Aksesuar", masa:"Masa"};
+const SECENEK_AD = {kisa:"Kısa", yan:"Yandan ayrık", fade:"Kısa yanlar", dalga:"Dalgalı", uzun:"Uzun", omuz:"Omuz hizası", kuyruk:"At kuyruğu", topuz:"Topuz", orgu:"Örgü", kivircik:"Kıvırcık", bere:"Bere", kel:"Kazınmış", basortu:"Başörtüsü", sal:"Şal", uzundalga:"Uzun dalgalı", yarimtop:"Yarım toplu", toka:"Toka", bant:"Saç bandı", kurdele:"Kurdele", ortadan:"Ortadan ayrık", kirpi:"Dikleştirilmiş", arkaya:"Arkaya taranmış", kakulE:"Perçemli", etopuz:"Topuz", bukle:"Bukleli üst", undercut:"Uzun üst", bob:"Küt", kakul:"Kâküllü", ikiorgu:"İki örgü", yuksek:"Yüksek kuyruk", daginik:"Dağınık topuz", pixie:"Pixie", puf:"Afro", yandan:"Yana atılmış",
   tisort:"Tişört", kapus:"Kapüşonlu", gomlek:"Gömlek", kazak:"Kazak", forma:"Okul forması", yok:"Yok", hafif:"Hafif sakal", biyik:"Bıyık", keci:"Keçi sakalı", sakal:"Sakal",
   normal:"Normal", badem:"Badem", iri:"İri", duz:"Düz", kalin:"Kalın", kavis:"Kavisli", gozluk:"Gözlük", yuvarlak:"Yuvarlak gözlük", kulaklik:"Kulaklık", saat:"Kol saati",
   lamba:"Masa lambası", bitki:"Saksı bitkisi", kupa:"Kupa", odakli:"Odaklı", mutlu:"Mutlu", kararli:"Kararlı", heyecanli:"Heyecanlı", yorgun:"Yorgun", cil:"Çil", kalemlik:"Kalemlik", kitaplar:"Kitap yığını", kahve:"Kahve", su:"Su şişesi", saat:"Masa saati", postit:"Not kâğıdı", yks:"YKS 2027 etiketi", yildiz:"Yıldız çıkartma"};
 /* Masa ödülleri: çalışarak açılır (görüntülerken de kontrol edilir, elle yazılamaz) */
 const MASA_KILIT = {lamba:{t:"Seviye 3'e ulaş", ok:x=>x.seviye>=3}, bitki:{t:"7 gün üst üste çalış", ok:x=>x.seri7>=7}, kupa:{t:"Seviye 5'e ulaş", ok:x=>x.seviye>=5}};
-const BASORTU = new Set(["basortu","sal","turban"]);
+const BASORTU = new Set(["basortu","sal"]);
 function masaSecim(av){ av = av||{}; const eski = Array.isArray(av.masa) ? av.masa : [];
   return {r:av.masaR ?? 0, sol:av.masaSol || (eski.includes("lamba") ? "lamba" : "yok"), sag:av.masaSag || (eski.includes("bitki") ? "bitki" : eski.includes("kupa") ? "kupa" : "yok"), on:av.masaOn || "yok"}; }
-const SAC_CINS = {e:["kisa","yan","ortadan","arkaya","fade","undercut","kirpi","kakulE","dalga","bukle","kivircik","puf","uzun","etopuz","bere","kel"], k:["uzun","yandan","kakul","dalga","omuz","bob","pixie","kuyruk","yuksek","topuz","daginik","orgu","ikiorgu","kivircik","puf","kisa","bere","basortu","sal","turban"]};
+const SAC_CINS = {e:["kisa","yan","ortadan","arkaya","fade","undercut","kirpi","kakulE","dalga","bukle","kivircik","puf","uzun","etopuz","bere","kel"], k:["uzun","uzundalga","yandan","kakul","yarimtop","orgu","ikiorgu","kivircik","omuz","bob","topuz","daginik","basortu","sal"]};
 const profilVar = s => !!(s && takmaAd(s) && s.avatar && s.avatar.cins);
 function avVarsayilan(key){ const h = k => (Math.imul(strHash((key||"x")+":"+k), 2654435761) >>> 0) >>> 8;
   const cins = h("c")%2 ? "k" : "e", sl = SAC_CINS[cins].filter(x=>!BASORTU.has(x) && x!=="bere" && x!=="kel");
-  return {cins, ten:h("t")%5, sac:sl[h("s")%sl.length], sacR:h("r")%5, basR:h("b")%8, giy:AVK.giy[h("y")%5], gom:h("g")%8, sakal:"yok", goz:"normal", kas:AVK.kas[h("k")%3], aks:["yok","yok","gozluk","kulaklik"][h("a")%4], masa:[]}; }
+  return {cins, ten:h("t")%5, sac:sl[h("s")%sl.length], sacR:h("r")%5, basR:h("b")%8, giy:AVK.giy[h("y")%5], gom:h("g")%8, sakal:"yok", sacAks:"yok", ruh:"odakli", detay:"yok", goz:"normal", kas:AVK.kas[h("k")%3], aks:["yok","yok","gozluk","kulaklik"][h("a")%4], masa:[]}; }
 function avOf(key){ const s = S.students.get(key); if(s && s.avatar) return s.avatar; for(const m of GR.canli.values()){ const c = m.get(key); if(c && c.avatar) return c.avatar; } return avVarsayilan(key); }
 /* Karakter: baş merkezi (50,40); yetişkin oranlar, sade renkler */
 const AV_TEMEL = {cins:"e", ten:1, sac:"kisa", sacR:0, basR:0, giy:"tisort", gom:0, sakal:"yok", goz:"normal", kas:"duz", aks:"yok", ruh:"odakli", detay:"yok", masa:[]};
 function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
   const ten = AVK.ten[av.ten] || AVK.ten[1], sr = AVK.sacR[av.sacR] || AVK.sacR[0], gr = AVK.gom[av.gom] || AVK.gom[0], br = AVK.basR[av.basR] || AVK.basR[0], sac = av.sac || "kisa", bas = BASORTU.has(sac);
   const golge = "rgba(0,0,0,.14)", acik = "rgba(255,255,255,.22)";
-  const arka = bas ? "" : {yandan:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/><path d="M60 30c6 6 8 18 7 33-3 1-5 1-7 0z" fill="${sr}"/>`, kakul:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/>`, bob:`<path d="M33 38c0-13 8-21 17-21s17 8 17 21v12c0 3-2 5-5 5H38c-3 0-5-2-5-5z" fill="${sr}"/>`,
+  const arka = bas ? "" : {uzundalga:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21c2 6-1 9 1 14s-1 8 0 11c-6 3-30 3-36 0 1-3-2-6 0-11s-1-8 1-14z" fill="${sr}"/>`, yarimtop:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/><ellipse cx="50" cy="19.5" rx="5" ry="3.6" fill="${sr}"/>`, yandan:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/><path d="M60 30c6 6 8 18 7 33-3 1-5 1-7 0z" fill="${sr}"/>`, kakul:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/>`, bob:`<path d="M33 38c0-13 8-21 17-21s17 8 17 21v12c0 3-2 5-5 5H38c-3 0-5-2-5-5z" fill="${sr}"/>`,
     ikiorgu:`<g fill="${sr}">${[46,51,56,61].map(y=>`<ellipse cx="33.5" cy="${y}" rx="3.3" ry="3"/><ellipse cx="66.5" cy="${y}" rx="3.3" ry="3"/>`).join("")}<path d="M33 40v4M67 40v4" stroke="${sr}" stroke-width="5"/></g>`,
     yuksek:`<path d="M57 22c7-8 18-5 17 6-1 8-5 13-8 18-1-8-3-15-9-19z" fill="${sr}"/><circle cx="58" cy="21.5" r="2.6" fill="#334155"/>`, daginik:`<ellipse cx="50" cy="18.5" rx="8.5" ry="6.5" fill="${sr}"/><ellipse cx="45" cy="15.5" rx="4" ry="3" fill="${sr}"/><ellipse cx="55.5" cy="15" rx="3.6" ry="3" fill="${sr}"/>`,
     puf:`<circle cx="50" cy="31" r="21" fill="${sr}"/>`, etopuz:`<circle cx="50" cy="17" r="5" fill="${sr}"/>`, uzun:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/>`, omuz:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v15c-5 3-27 3-32 0z" fill="${sr}"/>`,
     kuyruk:`<path d="M63 33c7 2 9 10 7 20-1 4-4 5-5 3 1-7 0-14-4-18z" fill="${sr}"/>`, topuz:`<ellipse cx="50" cy="20" rx="7" ry="5.5" fill="${sr}"/>`,
     orgu:`<g fill="${sr}"><path d="M62 36c4 4 5 9 4 14"/>${[46,52,58,64].map((y,i)=>`<ellipse cx="${65-i*.4}" cy="${y}" rx="3.6" ry="3.4"/>`).join("")}</g>`,
-    kivircik:[36,43,50,57,64].map((x,i)=>`<circle cx="${x}" cy="${i%2?27:30}" r="7" fill="${sr}"/>`).join("")}[sac] || "";
+    kivircik:[36,43,50,57,64].map((x,i)=>`<circle cx="${x}" cy="${i%2?27:30}" r="7" fill="${sr}"/>`).join("") + (av.cins==="k" ? [38,45,52,59].flatMap((y,i)=>[`<circle cx="${32+(i%2)}" cy="${y}" r="5.5" fill="${sr}"/>`,`<circle cx="${68-(i%2)}" cy="${y}" r="5.5" fill="${sr}"/>`]).join("") : "")}[sac] || "";
   const on = bas ? "" : {ortadan:`<path d="M35 39c-1-13 7-20 15-20s16 7 15 20c-2-6-6-9-11-10-1 1-3 2-4 2s-3-1-4-2c-5 1-9 4-11 10z" fill="${sr}"/>`,
     kirpi:`<path d="M35 38c-1-12 6-17 15-17s16 5 15 17c-2-6-7-9-15-9s-13 3-15 9z" fill="${sr}"/><path d="M37 27l1-6 3 3 2-6 3 4 4-6 3 5 3-4 2 6 3-2 1 6c-4-3-9-4-14-4s-8 1-11 4z" fill="${sr}"/>`,
     arkaya:`<path d="M35 37c0-12 7-18 15-18s15 6 15 18c-3-5-8-7-15-7s-12 2-15 7z" fill="${sr}"/><path d="M42 22q8-2 14 1M40 25q10-2 18 1" stroke="rgba(255,255,255,.18)" stroke-width=".9" fill="none"/>`,
@@ -1055,6 +1056,8 @@ function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
     pixie:`<path d="M35 39c-1-13 7-20 16-20s15 7 14 20c-2-6-5-9-9-10-6 3-14 4-21 10z" fill="${sr}"/>`,
     puf:`<path d="M34 38c0-13 7-20 16-20s16 7 16 20c-4-6-10-9-16-9s-12 3-16 9z" fill="${sr}"/>`,
     yandan:`<path d="M35 39c0-13 7-20 15-20s15 7 15 20c-2-5-5-8-8-9-8 0-16 3-22 9z" fill="${sr}"/>`,
+    uzundalga:`<path d="M35 39c0-13 7-20 15-20s15 7 15 20c-3-6-6-9-10-9-2 1.5-8 1.5-10 0-4 0-7 3-10 9z" fill="${sr}"/>`,
+    yarimtop:`<path d="M35 38c0-12 7-19 15-19s15 7 15 19c-3-7-8-9-15-9s-12 2-15 9z" fill="${sr}"/><path d="M39 27q11-4 22 0" stroke="rgba(0,0,0,.14)" stroke-width="1" fill="none"/>`,
     kisa:`<path d="M35 38c-1-13 7-19 15-19s16 6 15 19c-2-6-7-9-15-9s-13 3-15 9z" fill="${sr}"/>`,
     yan:`<path d="M35 39c-1-13 7-20 16-20s15 7 14 20c-1-5-3-8-6-9-8 1-15-1-19-4-3 3-4 7-5 13z" fill="${sr}"/><path d="M45 21.5c-1 2-1.5 4-1 6" stroke="${golge}" stroke-width="1"/>`,
     fade:`<path d="M36 37c-1-11 6-17 14-17s15 6 14 17c-3-5-8-7-14-7s-11 2-14 7z" fill="${sr}"/><path d="M35.5 36c0 4 .5 7 1.5 9M64.5 36c0 4-.5 7-1.5 9" stroke="${sr}" stroke-width="2.2" opacity=".35"/>`,
@@ -1068,7 +1071,7 @@ function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
     bere:`<path d="M34 36c0-12 7-18 16-18s16 6 16 18z" fill="#3F3F46"/><rect x="33" y="32" width="34" height="6.5" rx="3" fill="#27272A"/>`,
     kel:`<path d="M36 35c2-9 7-13 14-13s12 4 14 13c-4-5-9-7-14-7s-10 2-14 7z" fill="${sr}" opacity=".3"/>`}[sac] || "";
   /* Başörtüsü: yüzü çerçeveler, omuzlara iner */
-  const basArka = bas ? `${sac==="turban"?`<ellipse cx="50" cy="20" rx="14" ry="8" fill="${br}"/><path d="M38 18q12-8 24 0" stroke="rgba(0,0,0,.15)" stroke-width="1.2" fill="none"/>`:""}<path d="M32 42c0-16 8-25 18-25s18 9 18 25v14c0 6-3 10-6 13H38c-3-3-6-7-6-13z" fill="${br}"/>` : "";
+  const basArka = bas ? `<path d="M32 42c0-16 8-25 18-25s18 9 18 25v14c0 6-3 10-6 13H38c-3-3-6-7-6-13z" fill="${br}"/>` : "";
   const basOn = bas ? `<path fill-rule="evenodd" fill="${br}" d="M32 42c0-16 8-25 18-25s18 9 18 25v14c0 6-3 10-6 13H38c-3-3-6-7-6-13zM50 26c-7.2 0-12.2 6.4-12.2 14.6 0 8.6 5.2 14.9 12.2 14.9s12.2-6.3 12.2-14.9C62.2 32.4 57.2 26 50 26z"/>
     <path d="M50 26c-7.2 0-12.2 6.4-12.2 14.6" stroke="${golge}" stroke-width="1.4" fill="none"/>
     <path d="M26 82c4-10 12-15 24-15s20 5 24 15c-7 4-16 6-24 6s-17-2-24-6z" fill="${br}"/>${sac==="sal" ? `<path d="M56 67c6 4 9 11 9 20" stroke="${golge}" stroke-width="2" fill="none"/><path d="M38 62c-4 6-5 13-4 22" stroke="${golge}" stroke-width="1.5" fill="none"/>` : `<path d="M44 67q6 4 12 0" stroke="${golge}" stroke-width="1.6" fill="none"/>`}` : "";
@@ -1103,11 +1106,14 @@ function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
     yuvarlak:`<g fill="none" stroke="#7C5A2E" stroke-width="1.3"><circle cx="43.5" cy="41" r="4.6"/><circle cx="56.5" cy="41" r="4.6"/><path d="M48.1 40.6q1.9-1.2 3.8 0M38.9 40.5l-3.2-.8M61.1 40.5l3.2-.8"/></g>`,
     kulaklik:`<path d="M33.5 41c0-15 7-23 16.5-23S66.5 26 66.5 41" fill="none" stroke="#27272A" stroke-width="3" stroke-linecap="round"/><rect x="30.5" y="37" width="6.5" height="11" rx="3" fill="#3F3F46"/><rect x="63" y="37" width="6.5" height="11" rx="3" fill="#3F3F46"/>`,
     saat:""}[av.aks] || "";
+  const sacAks = bas || av.cins!=="k" ? "" : ({toka:`<rect x="55.5" y="25" width="10" height="2.8" rx="1.4" fill="#C9A227" transform="rotate(-28 60.5 26.4)"/><rect x="56.5" y="25.6" width="8" height="1" rx=".5" fill="#F3E3A0" transform="rotate(-28 60.5 26.4)"/>`,
+    bant:`<path d="M35.6 32.5c2.2-8 8-12.6 14.4-12.6s12.2 4.6 14.4 12.6" stroke="#7F1D1D" stroke-width="2.8" fill="none" stroke-linecap="round"/>`,
+    kurdele:`<g transform="translate(62 24)"><path d="M0 0l-5-3.5v7zM0 0l5-3.5v7z" fill="#1F2937"/><circle r="1.6" fill="#374151"/></g>`}[av.sacAks] || "");
   const kulak = bas ? "" : `<ellipse cx="35.2" cy="42" rx="2.6" ry="3.8" fill="${ten}"/><ellipse cx="64.8" cy="42" rx="2.6" ry="3.8" fill="${ten}"/>`;
   return `<svg class="kar" viewBox="0 0 100 100" aria-hidden="true">${arka}${basArka}${govde}${giysi}
     <path d="M44.5 53h11v14l-5.5 3-5.5-3z" fill="${ten}"/><path d="M44.5 55q5.5 4 11 0v3q-5.5 3-11 0z" fill="${golge}"/>
     ${kulak}<path d="M35 40c0-11 6.5-19 15-19s15 8 15 19c0 9-6 17-15 17s-15-8-15-17z" fill="${ten}"/>
-    ${detay}${sakal}${on}${basOn}${kas}${goz}${burun}${agiz}${aks}</svg>`; }
+    ${detay}${sakal}${on}${basOn}${sacAks}${kas}${goz}${burun}${agiz}${aks}</svg>`; }
 /* Kişisel masa: cihaz, ders kitabı ve çalışarak açılan eşyalar */
 const DERS_RENK = {mat:"#2563EB", geo:"#0EA5E9", fiz:"#7C3AED", kim:"#16A34A", bio:"#22C55E", tr:"#DC2626", ede:"#DB2777", tar:"#B45309", cog:"#0D9488", fel:"#9333EA", den:"#F59E0B"};
 function masaSVG(x){ const on = x.canli, kr = DERS_RENK[x.ders] || "#64748B", c = x.cihaz || "tel", m = masaSecim(x.av), R = AVK.masaR[m.r] || AVK.masaR[0];
@@ -1248,7 +1254,7 @@ function grupSheet(gid){ const g = gid ? GR.list.get(gid) : null, sec = new Set(
     <div class="acts">${g ? `<button type="button" class="btn danger" style="margin-right:auto" data-act="grsil" data-v="${gid}">Grubu sil</button>` : ""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     async fd=>{ const ad = String(fd.get("ad")||"").trim(), uyeler = fd.getAll("u"); if(!ad) return sheetErr("Gruba bir ad ver.");
       const id = gid || uid(); try{ await setDoc(doc(fdb,"gruplar",id), {ad, uyeler, at: g ? (g.at||Date.now()) : Date.now()}); closeSheet(); toast(g ? "Grup güncellendi" : "Grup kuruldu"); }catch(e){ sheetErr("Kaydedilemedi: "+(e.message||e)); } }); }
-const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["masaR","masaSol","masaSag","masaOn"]]];
+const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR","sacAks"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["masaR","masaSol","masaSag","masaOn"]]];
 function benOzet(){ return ogrOzet(S.me, st()); }
 const CINS_ORNEK = {k:{cins:"k", ten:1, sac:"uzun", sacR:1, giy:"kazak", gom:0, aks:"yok", kas:"kavis"}, e:{cins:"e", ten:1, sac:"yan", sacR:1, giy:"kapus", gom:5, aks:"yok", kas:"duz"}};
 function cinsSec(){ const ornek = c => karakterSVG(CINS_ORNEK[c], true);
@@ -1256,13 +1262,13 @@ function cinsSec(){ const ornek = c => karakterSVG(CINS_ORNEK[c], true);
 function avSecici(){ const a = S.avT, sek = S.avSek || "yuz", bas = BASORTU.has(a.sac), ben = benOzet();
   if(!a.cins) return cinsSec();
   const mini = (ek) => `<span class="avmini">${karakterSVG({...a, ...ek}, true)}</span>`;
-  const sat = (k) => { if(k==="sacR" && bas) return ""; if(k==="basR" && !bas) return ""; if(k==="sakal" && (bas || a.cins==="k")) return "";
+  const sat = (k) => { if(k==="sacR" && bas) return ""; if(k==="basR" && !bas) return ""; if(k==="sakal" && (bas || a.cins==="k")) return ""; if(k==="sacAks" && (bas || a.cins!=="k")) return "";
     if(k==="masaR") return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avsec" data-k="masaR">${AVK.masaR.map((R,i)=>`<button type="button" class="avb ${(masaSecim(a).r)===i?"on":""}" data-act="avsec" data-k="masaR" data-v="${i}" style="background:linear-gradient(180deg,${R[1]} 0 30%,${R[0]} 30% 55%,${R[2]} 55%)" aria-label="Masa rengi"></button>`).join("")}</div></div>`;
     if(k==="masaSol"||k==="masaSag"||k==="masaOn"){ const ms = masaSecim(a), alan = {masaSol:"sol", masaSag:"sag", masaOn:"on"}[k];
       return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avmasa">${AVK[k].map(v=>{ const kl = MASA_KILIT[v], ok = !kl || kl.ok(ben), sec = ms[alan]===v, onz = {...a, masaSol:"yok", masaSag:"yok", masaOn:"yok", masaR:ms.r, [k]:v};
         return `<button type="button" class="avme ${sec?"on":""} ${ok?"":"kilit"}" data-act="avsec" data-k="${k}" data-v="${v}" ${ok?"":"disabled"}><span class="avmeres">${masaSVG({canli:true, cihaz:"tel", ders:"mat", av:onz, onizleme:true})}</span><b>${v==="yok"?"Boş":SECENEK_AD[v]}</b>${kl?`<small>${ok ? "🏅 Ödül" : "🔒 "+kl.t}</small>`:""}</button>`; }).join("")}</div></div>`; }
     const L = k==="sac" ? SAC_CINS[a.cins] : AVK[k], renk = ["ten","sacR","basR","gom"].includes(k); if(k==="detay" && a.sakal==="sakal" && a.cins==="e") {}
-    return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avsec ${renk?"":"sekil"} ${k==="giy"?"bust":["goz","kas","sakal","ruh","detay"].includes(k)?"yakin":""}" data-k="${k}">${L.map((v,i)=>{ const val = renk ? i : v, on = String(a[k])===String(val);
+    return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avsec ${renk?"":"sekil"} ${k==="giy"?"bust":["goz","kas","sakal","ruh","detay","sacAks"].includes(k)?"yakin":""}" data-k="${k}">${L.map((v,i)=>{ const val = renk ? i : v, on = String(a[k])===String(val);
       return `<button type="button" class="avb ${on?"on":""}" data-act="avsec" data-k="${k}" data-v="${val}" ${renk ? `style="background:${v}" aria-label="${AV_AD[k]}">` : `title="${SECENEK_AD[v]}">${mini({[k]:v})}<em>${SECENEK_AD[v]}</em>`}</button>`; }).join("")}</div></div>`; };
   return `<div class="avcinsk">${[["k","Kadın"],["e","Erkek"]].map(([c,ad])=>`<button type="button" class="${a.cins===c?"on":""}" data-act="avcins" data-v="${c}">${ad}</button>`).join("")}</div><div class="avsekme">${AV_SEKME.map(([id,ad])=>`<button type="button" class="${sek===id?"on":""}" data-act="avsek" data-v="${id}">${ad}</button>`).join("")}</div>${(AV_SEKME.find(x=>x[0]===sek)||AV_SEKME[0])[2].map(sat).join("")}`; }
 function avYenile(){ const p = $("#avprev"); if(p) p.hidden = !S.avT.cins; if(p) p.innerHTML = `<div class="ksah on" style="--gc:${avRenk(S.me)}">${karakterSVG(S.avT, true)}${masaSVG({...benOzet(), canli:true, ders:"mat", cihaz:"pc", av:S.avT})}</div>`; const w = $("#avsecw"); if(w) w.innerHTML = avSecici(); }
@@ -2977,8 +2983,8 @@ document.addEventListener("click", e=>{
     case "grgor": GR.gor = v; render(); break;
     case "avsec": { const k = b.dataset.k; if(k==="masaR"){ S.avT.masaR = +v; } else if(k==="masaSol"||k==="masaSag"||k==="masaOn"){ const ms = masaSecim(S.avT); S.avT.masaSol = ms.sol; S.avT.masaSag = ms.sag; S.avT.masaOn = ms.on; S.avT[k] = v; S.avT.masa = []; } else { S.avT[k] = ["ten","sacR","basR","gom"].includes(k) ? +v : v; if(k==="sac") S.avT._sacSecildi = true; } avYenile(); break; }
     case "avsek": S.avSek = v; avYenile(); break;
-    case "avcins": { const a = S.avT, ilk = !a.cins; a.cins = v; if(ilk) Object.assign(a, CINS_ORNEK[v], {masa:a.masa||[]}); else if(!SAC_CINS[v].includes(a.sac)) a.sac = CINS_ORNEK[v].sac; if(v==="k") a.sakal = "yok"; avYenile(); break; }
-    case "avrast": { const r = L => L[Math.floor(Math.random()*L.length)], i = n => Math.floor(Math.random()*n); S.avT = {...S.avT, ruh:r(AVK.ruh), detay:r(["yok","yok","cil","ben"]), ten:i(5), sac:r(SAC_CINS[S.avT.cins||"e"]), sacR:i(8), basR:i(8), giy:r(AVK.giy), gom:i(10), sakal:S.avT.cins==="k" ? "yok" : r(["yok","yok","hafif","biyik","keci","sakal"]), goz:r(AVK.goz), kas:r(AVK.kas), aks:r(["yok","yok","gozluk","yuvarlak","kulaklik"])}; avYenile(); break; }
+    case "avcins": { const a = S.avT, ilk = !a.cins; a.cins = v; if(ilk) Object.assign(a, CINS_ORNEK[v], {masa:a.masa||[]}); else if(!SAC_CINS[v].includes(a.sac)) a.sac = CINS_ORNEK[v].sac; if(v==="k") a.sakal = "yok"; else a.sacAks = "yok"; avYenile(); break; }
+    case "avrast": { const r = L => L[Math.floor(Math.random()*L.length)], i = n => Math.floor(Math.random()*n); S.avT = {...S.avT, sacAks:S.avT.cins==="k" ? r(["yok","yok","toka","bant","kurdele"]) : "yok", ruh:r(AVK.ruh), detay:r(["yok","yok","cil","ben"]), ten:i(5), sac:r(SAC_CINS[S.avT.cins||"e"]), sacR:i(8), basR:i(8), giy:r(AVK.giy), gom:i(10), sakal:S.avT.cins==="k" ? "yok" : r(["yok","yok","hafif","biyik","keci","sakal"]), goz:r(AVK.goz), kas:r(AVK.kas), aks:r(["yok","yok","gozluk","yuvarlak","kulaklik"])}; avYenile(); break; }
     case "grfiltre": GR.filtre = v; render(); break;
     case "otoTamam": mutate(x=>{ delete x.kronOto; }); render(); break;
     case "grsil": if(confirm("Bu grup silinsin mi? Öğrencilerin kayıtları silinmez.")){ (async()=>{ try{ await deleteDoc(doc(fdb,"gruplar",v)); closeSheet(); toast("Grup silindi"); }catch(e){ toast("Silinemedi"); } })(); } break;
