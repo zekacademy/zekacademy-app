@@ -1144,7 +1144,8 @@ body{background:var(--bg)}
 .ksah.alev .kisik{background:radial-gradient(circle,rgba(255,140,0,.75) 0%,transparent 68%);opacity:.8;animation:kalevp2 1.4s ease-in-out infinite}
 @keyframes kalevp2{50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
 .avust{display:flex;gap:14px;align-items:center}
-.avprev{width:120px;flex:none;padding:8px;border-radius:18px}
+@media (max-width:520px){ .avust{flex-direction:column;align-items:stretch} .avust .avprev{align-self:center} }
+.avprev{width:170px;flex:none;padding:10px 10px 0;border-radius:20px}
 .avprev .ksah{margin:0 auto}
 .avsat{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .avsat>span{font-size:12.5px;font-weight:700;color:var(--muted)}
@@ -1153,6 +1154,21 @@ body{background:var(--bg)}
 .avb.on{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 30%,transparent)}
 .avsec[data-k=sac] .avb,.avsec[data-k=aks] .avb{width:52px;height:52px;border-radius:14px;overflow:hidden;position:relative;background:#E8EEF8}
 .avmini{position:absolute;inset:0}.avmini .kar{position:absolute;left:-12%;top:-2%;width:124%;height:124%}
+.avsekme{display:flex;gap:4px;background:var(--sunk);border-radius:14px;padding:4px;margin-top:14px;overflow-x:auto}
+.avsekme button{flex:1;border:0;background:none;font:inherit;font-weight:700;font-size:13px;color:var(--muted);padding:8px 10px;border-radius:10px;cursor:pointer;white-space:nowrap}
+.avsekme button.on{background:var(--surface);color:var(--fg);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.avsec.sekil .avb{width:64px;height:78px;border-radius:14px;overflow:hidden;position:relative;background:#DCE3EE;display:flex;flex-direction:column;justify-content:flex-end}
+.avsec.sekil .avb .avmini{position:absolute;inset:0 0 16px 0}.avsec.sekil .avb .avmini .kar{position:absolute;left:-12%;top:-4%;width:124%;height:auto}
+.avsec.sekil .avb em{position:relative;z-index:2;font-style:normal;font-size:9.5px;font-weight:700;line-height:1.1;background:var(--surface);color:var(--fg);padding:3px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.avmasa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.avme{border:2px solid var(--line);border-radius:14px;background:var(--surface);padding:6px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;font:inherit;color:var(--fg);text-align:center}
+.avme.on{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 25%,transparent)}
+.avme.kilit{opacity:.6;cursor:default}
+.avme .avmeres{width:100%;background:#151C2B;border-radius:10px;overflow:hidden;display:block}.avme .avmeres svg{display:block;width:100%;height:auto}
+.avme b{font-size:12px}.avme small{font-size:10.5px;color:var(--muted);line-height:1.2}
+.avsec.bust .avb .avmini .kar{left:-2%;top:-26%;width:104%}
+.ksah .kar{top:-21%}
+.avsec.yakin .avb .avmini .kar{left:-55%;top:-28%;width:210%}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
