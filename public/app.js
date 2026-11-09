@@ -1009,9 +1009,9 @@ const AVK = {
   ruh:["odakli","mutlu","kararli","heyecanli","yorgun"],
   detay:["yok","cil","ben"],
   masaR:[["#8B5E3C","#B07A4F","#5E3E27","#4A3020"],["#5B3A24","#7A5236","#3E2718","#2F1D12"],["#C9A37A","#DDBE98","#A07E58","#8C6B47"],["#D9DCE1","#F1F3F5","#B9BEC6","#A6ACB5"],["#2B2B2E","#45454A","#1C1C1F","#141416"],["#3F5A4A","#56755F","#2C4134","#22342A"]],
-  masaSol:["yok","kalemlik","kitaplar","lamba"],
-  masaSag:["yok","kahve","su","saat","bitki","kupa"],
-  masaOn:["yok","postit","yks","yildiz"]
+  masaSol:["yok","kalemlik","kitaplar"],
+  masaSag:["yok","kahve","su"],
+  masaOn:["yok","postit","yks"]
 };
 const AV_AD = {sacAks:"Saç aksesuarı", ruh:"Ruh hali", detay:"Yüz detayı", masaR:"Masa rengi", masaSol:"Sol köşe", masaSag:"Sağ köşe", masaOn:"Masanın önü", ten:"Ten", goz:"Göz", kas:"Kaş", sakal:"Sakal / bıyık", sac:"Saç / başörtüsü", sacR:"Saç rengi", basR:"Başörtüsü rengi", giy:"Kıyafet", gom:"Kıyafet rengi", aks:"Aksesuar", masa:"Masa"};
 const SECENEK_AD = {kisa:"Kısa", yan:"Yandan ayrık", fade:"Kısa yanlar", dalga:"Dalgalı", uzun:"Uzun", omuz:"Omuz hizası", kuyruk:"At kuyruğu", topuz:"Topuz", orgu:"Örgü", kivircik:"Kıvırcık", bere:"Bere", kel:"Kazınmış", basortu:"Başörtüsü", sal:"Şal", uzundalga:"Uzun dalgalı", yarimtop:"Yarım toplu", toka:"Toka", bant:"Saç bandı", kurdele:"Kurdele", ortadan:"Ortadan ayrık", kirpi:"Dikleştirilmiş", arkaya:"Arkaya taranmış", kakulE:"Perçemli", etopuz:"Topuz", bukle:"Bukleli üst", undercut:"Uzun üst", bob:"Küt", kakul:"Kâküllü", ikiorgu:"İki örgü", yuksek:"Yüksek kuyruk", daginik:"Dağınık topuz", pixie:"Pixie", puf:"Afro", yandan:"Yana atılmış",
@@ -1019,10 +1019,22 @@ const SECENEK_AD = {kisa:"Kısa", yan:"Yandan ayrık", fade:"Kısa yanlar", dalg
   normal:"Normal", badem:"Badem", iri:"İri", duz:"Düz", kalin:"Kalın", kavis:"Kavisli", gozluk:"Gözlük", yuvarlak:"Yuvarlak gözlük", kulaklik:"Kulaklık", saat:"Kol saati",
   lamba:"Masa lambası", bitki:"Saksı bitkisi", kupa:"Kupa", odakli:"Odaklı", mutlu:"Mutlu", kararli:"Kararlı", heyecanli:"Heyecanlı", yorgun:"Yorgun", cil:"Çil", kalemlik:"Kalemlik", kitaplar:"Kitap yığını", kahve:"Kahve", su:"Su şişesi", saat:"Masa saati", postit:"Not kâğıdı", yks:"YKS 2027 etiketi", yildiz:"Yıldız çıkartma"};
 /* Masa ödülleri: çalışarak açılır (görüntülerken de kontrol edilir, elle yazılamaz) */
-const MASA_KILIT = {lamba:{t:"Seviye 3'e ulaş", ok:x=>x.seviye>=3}, bitki:{t:"7 gün üst üste çalış", ok:x=>x.seri7>=7}, kupa:{t:"Seviye 5'e ulaş", ok:x=>x.seviye>=5}};
+const MASA_KILIT = {};
+/* Lig: üst üste günlerde günlük en az şu kadar çalışma. Seri bozulunca bir alt lige iner. */
+const LIGLER = [
+  {k:"bronz", ad:"Bronz", ik:"🥉", gun:3,  dk:240, renk:"#B87333"},
+  {k:"gumus", ad:"Gümüş", ik:"🥈", gun:5,  dk:300, renk:"#9CA3AF"},
+  {k:"altin", ad:"Altın", ik:"🥇", gun:7,  dk:360, renk:"#D4A017"},
+  {k:"elmas", ad:"Elmas", ik:"💎", gun:14, dk:420, renk:"#38BDF8"} ];
+/* gunler: {tarih: dk} (bugün dahil). Bugün eşik henüz aşılmadıysa seri dünden sayılır (gün bitmeden düşmez). */
+function seriSay(gunler, esik){ const t = today(); let n = 0, d = t; if((gunler[t]||0) < esik) d = gEkle(t,-1); while((gunler[d]||0) >= esik && n < 60){ n++; d = gEkle(d,-1); } return n; }
+function ligOf(gunler){ let lig = null; for(const L of LIGLER){ if(seriSay(gunler, L.dk) >= L.gun) lig = L; } const i = lig ? LIGLER.indexOf(lig) : -1, sonraki = LIGLER[i+1] || null;
+  return {lig, sonraki, seri: sonraki ? seriSay(gunler, sonraki.dk) : seriSay(gunler, lig.dk)}; }
+const ligRozet = (x, kisa) => x.lig ? `<span class="lrz l-${x.lig.k}">${x.lig.ik}${kisa?"":" "+x.lig.ad}</span>` : `<span class="lrz l-yok">${x.seriGun ? `Seri ${x.seriGun} gün` : "Lig yok"}</span>`;
 const BASORTU = new Set(["basortu","sal"]);
 function masaSecim(av){ av = av||{}; const eski = Array.isArray(av.masa) ? av.masa : [];
-  return {r:av.masaR ?? 0, sol:av.masaSol || (eski.includes("lamba") ? "lamba" : "yok"), sag:av.masaSag || (eski.includes("bitki") ? "bitki" : eski.includes("kupa") ? "kupa" : "yok"), on:av.masaOn || "yok"}; }
+  const g = (k, v) => (AVK[k] || []).includes(v) ? v : "yok";
+  return {r:0, sol:g("masaSol", av.masaSol), sag:g("masaSag", av.masaSag), on:g("masaOn", av.masaOn)}; }
 const SAC_CINS = {e:["kisa","yan","ortadan","arkaya","fade","undercut","kirpi","kakulE","dalga","bukle","kivircik","puf","uzun","etopuz","bere","kel"], k:["uzun","uzundalga","yandan","kakul","yarimtop","orgu","ikiorgu","kivircik","omuz","bob","topuz","daginik","basortu","sal"]};
 const profilVar = s => !!(s && takmaAd(s) && s.avatar && s.avatar.cins);
 function avVarsayilan(key){ const h = k => (Math.imul(strHash((key||"x")+":"+k), 2654435761) >>> 0) >>> 8;
@@ -1116,7 +1128,8 @@ function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
     ${detay}${sakal}${on}${basOn}${sacAks}${kas}${goz}${burun}${agiz}${aks}</svg>`; }
 /* Kişisel masa: cihaz, ders kitabı ve çalışarak açılan eşyalar */
 const DERS_RENK = {mat:"#2563EB", geo:"#0EA5E9", fiz:"#7C3AED", kim:"#16A34A", bio:"#22C55E", tr:"#DC2626", ede:"#DB2777", tar:"#B45309", cog:"#0D9488", fel:"#9333EA", den:"#F59E0B"};
-function masaSVG(x){ const on = x.canli, kr = DERS_RENK[x.ders] || "#64748B", c = x.cihaz || "tel", m = masaSecim(x.av), R = AVK.masaR[m.r] || AVK.masaR[0];
+const LIG_MASA = {bronz:["#7A4E2D","#C98A55","#5A3820","#47301B","#B87333"], gumus:["#A9B0BA","#E5E9EE","#8D95A1","#7C8490","#D1D5DB"], altin:["#3E2718","#5B3A24","#2F1D12","#24160D","#D4A017"], elmas:["#7DD3FC","#E0F2FE","#38BDF8","#0EA5E9","#F0F9FF"]};
+function masaSVG(x){ const on = x.canli, kr = DERS_RENK[x.ders] || "#64748B", c = x.cihaz || "tel", m = masaSecim(x.av), lk = x.lig && x.lig.k, R = LIG_MASA[lk] || AVK.masaR[0];
   const izin = k => !MASA_KILIT[k] || x.onizleme || MASA_KILIT[k].ok(x);
   const cihaz = !on ? "" : c==="pc" ? `<path d="M30 63h40l-3 17H33z" fill="#CBD5E1"/><path d="M30 63h40l-3 17H33z" fill="none" stroke="#94A3B8" stroke-width="1"/><circle cx="50" cy="71" r="2.2" fill="#fff" opacity=".9"/><rect x="26" y="80" width="48" height="3" rx="1.5" fill="#94A3B8"/>`
     : c==="tab" ? `<rect x="58" y="66" width="18" height="15" rx="2" fill="#334155" transform="rotate(-8 67 74)"/><rect x="60" y="68" width="14" height="10" rx="1" fill="#60A5FA" opacity=".8" transform="rotate(-8 67 74)"/>`
@@ -1135,7 +1148,16 @@ function masaSVG(x){ const on = x.canli, kr = DERS_RENK[x.ders] || "#64748B", c 
   const onYuz = ({postit:`<g transform="rotate(-6 76 98)"><rect x="70" y="92" width="12" height="12" fill="#FDE047"/><path d="M72 96h8M72 99h6" stroke="#A16207" stroke-width=".8"/></g>`,
     yks:`<rect x="11" y="94" width="25" height="9" rx="2" fill="#16A34A"/><text x="23.5" y="100.4" text-anchor="middle" font-size="5" font-weight="800" fill="#fff" font-family="system-ui,sans-serif">YKS 2027</text>`,
     yildiz:`<path d="M50 93l2.3 4.6 5 .7-3.6 3.5.9 5-4.6-2.4-4.6 2.4.9-5-3.6-3.5 5-.7z" fill="#FBBF24" stroke="#B45309" stroke-width=".6"/>`}[m.on] || "");
-  return `<svg class="masaS" viewBox="0 60 100 50" aria-hidden="true"><rect x="2" y="82" width="96" height="7" rx="3" fill="${R[0]}"/><rect x="2" y="82" width="96" height="2" rx="1" fill="${R[1]}"/><rect x="6" y="89" width="88" height="21" fill="${R[2]}"/><rect x="6" y="89" width="88" height="3" fill="${R[3]}"/>${onYuz}${sol}${sag}${kitap}${cihaz}</svg>`; }
+  const kenar = lk ? `<rect x="2" y="87.6" width="96" height="1.4" fill="${R[4]}"/><rect x="6" y="108.2" width="88" height="1.8" fill="${R[4]}"/>` : "";
+  const plaka = lk ? `<rect x="40" y="95" width="20" height="8" rx="1.6" fill="${R[4]}" stroke="rgba(0,0,0,.25)" stroke-width=".5"/><text x="50" y="100.6" text-anchor="middle" font-size="4.6" font-weight="800" fill="${lk==="elmas"?"#0369A1":"#1F2937"}" font-family="system-ui,sans-serif">${x.lig.ad.toLocaleUpperCase("tr")}</text>` : "";
+  const cam = lk==="elmas" ? `<rect x="6" y="89" width="88" height="21" fill="url(#elmasDoku)" opacity=".55"/><path d="M14 92l6 14M30 91l4 10M68 92l7 15M84 90l3 9" stroke="#fff" stroke-width=".8" opacity=".55"/>` : "";
+  return `<svg class="masaS" viewBox="0 60 100 50" aria-hidden="true">${lk==="elmas"?`<defs><linearGradient id="elmasDoku" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#7DD3FC" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient></defs>`:""}<rect x="2" y="82" width="96" height="7" rx="3" fill="${R[0]}"/><rect x="2" y="82" width="96" height="2" rx="1" fill="${R[1]}"/><rect x="6" y="89" width="88" height="21" fill="${R[2]}"/><rect x="6" y="89" width="88" height="3" fill="${R[3]}"/>${cam}${kenar}${plaka}${onYuz}${sol}${sag}${kitap}${cihaz}</svg>`; }
+/* Lig arka planı (karakterin arkasında): Gümüş sertifika, Altın kitaplık, Elmas kitaplık + ışıltı */
+function ligArka(x){ const lk = x.lig && x.lig.k; if(!lk || lk==="bronz") return "";
+  const raf = (x0) => `<rect x="${x0}" y="4" width="22" height="58" rx="1.5" fill="#5B3A24"/>${[16,34,52].map(y=>`<rect x="${x0}" y="${y}" width="22" height="2.4" fill="#3E2718"/>`).join("")}${[4,22,40].map((y,r)=>[0,1,2,3,4].map(i=>`<rect x="${x0+1.5+i*4}" y="${y+3+(i%2)}" width="3.2" height="${12-(i%2)}" fill="${["#7F1D1D","#1E3A5F","#4D7C0F","#B45309","#6B4E71"][(i+r)%5]}"/>`).join("")).join("")}`;
+  const ser = `<rect x="5" y="8" width="20" height="15" rx="1" fill="#F8FAFC" stroke="#9CA3AF" stroke-width="1.6"/><path d="M9 13h12M9 16h9" stroke="#9CA3AF" stroke-width="1"/><circle cx="20" cy="19.5" r="2" fill="#D1D5DB"/>`;
+  const isil = lk==="elmas" ? [[12,10],[86,14],[20,60],[90,52],[50,4]].map(([a,b],i)=>`<path class="sp sp${i}" d="M${a} ${b-3}l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z" fill="#E0F2FE"/>`).join("") : "";
+  return `<svg class="ligA" viewBox="0 0 100 92" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${lk==="gumus" ? ser : raf(1)+raf(77)}${isil}</svg>`; }
 function grAvatar(ad, key, canli, cls="", av){ return `<span class="gav ${canli?"on":""} ${cls}" style="--gc:${avRenk(key||ad)}" title="${esc(ad||"")}">${karakterSVG(av || avOf(key), true)}</span>`; }
 function timerDers(s){ const t = s && s.timer; if(!t) return ""; if(t.ders) return t.ders; if(t.task){ const it = dayTasks(s, t.task.date).find(x=>x.id===t.task.id); if(it) return /paragraf/i.test(taskText(it)) ? "tr" : dersKodu(taskText(it)); } return ""; }
 /* Canlı mı? 4 saati geçen açık sayaç "çalışmıyor" sayılır (telefon kapalı kalsa bile) */
@@ -1144,16 +1166,16 @@ const gecenSn = basla => Math.min(KRON_TAVAN*60, (Date.now()-basla)/1000);
 /* Bir üyenin özeti: hem öğrenci kaydından (koç) hem canli belgesinden (öğrenci) aynı biçimde */
 const gEkle = (d, n) => iso(new Date(new Date(d+"T12:00:00").getTime()+n*864e5));
 /* Seviye: son 7 günün toplamına göre (günde ort. <1 sa → 1 … 4+ sa → 5) */
-const seviyeOf = dk7 => dk7 < 7*60 ? 1 : dk7 < 14*60 ? 2 : dk7 < 21*60 ? 3 : dk7 < 28*60 ? 4 : 5;
 function uyeOzet(c){ const t = today(), w = monday(t), y7 = gEkle(t,-6), canli = canliMi(c.basla), canliDk = canli ? gecenSn(c.basla)/60 : 0;
   const bugun = (c.gun===t ? (c.bugunDk||0) : 0) + (canli && iso(new Date(c.basla))===t ? canliDk : 0);
-  const tum = {}; Object.entries(c.gunler||{}).forEach(([d,v])=>{ if(d>=y7 && d<t) tum[d] = v; }); tum[t] = c.gun===t ? (c.bugunDk||0) : 0;
+  const tum = {}, ondort = {}; Object.entries(c.gunler||{}).forEach(([d,v])=>{ if(d<t){ ondort[d] = v; if(d>=y7) tum[d] = v; } }); tum[t] = c.gun===t ? (c.bugunDk||0) : 0; ondort[t] = bugun;
   const gunler = {}; Object.entries(tum).forEach(([d,v])=>{ if(d>=w) gunler[d] = v; });
   const hafta = Object.values(gunler).reduce((a,b)=>a+b,0) + canliDk, yedi = Object.values(tum).reduce((a,b)=>a+b,0) + canliDk;
-  return {...c, canli, bugun, hafta, gunler, yedi, seviye:seviyeOf(yedi), seri7:Object.entries(tum).filter(([d,v])=>v>0 || (d===t && canli)).length}; }
-function ogrOzet(id, s){ const t = today(), gunler = {}; for(let i=6;i>=0;i--){ const d = gEkle(t,-i); gunler[d] = Math.round(minutes(s,d,false)); }
+  const lg = ligOf(ondort), seriGun = seriSay(ondort, 1);
+  return {...c, canli, bugun, hafta, gunler, yedi, lig:lg.lig, sonraki:lg.sonraki, sonrakiSeri:lg.seri, seriGun}; }
+function ogrOzet(id, s){ const t = today(), gunler = {}; for(let i=13;i>=0;i--){ const d = gEkle(t,-i); gunler[d] = Math.round(minutes(s,d,false)); }
   return uyeOzet({uid:id, ad:s.name, takma:takmaAd(s), av:s.avatar || avVarsayilan(id), basla:s.timer && s.timer.start || null, ders:timerDers(s), cihaz:s.timer && s.timer.cihaz || "", gun:t, bugunDk:gunler[t]||0, gunler}); }
-function canliBelge(s){ const t = today(), gunler = {}; for(let i=6;i>=1;i--){ const d = gEkle(t,-i), m = Math.round(minutes(s,d,false)); if(m) gunler[d] = m; }
+function canliBelge(s){ const t = today(), gunler = {}; for(let i=13;i>=1;i--){ const d = gEkle(t,-i), m = Math.round(minutes(s,d,false)); if(m) gunler[d] = m; }
   return {takma:takmaAd(s) || "", avatar:s.avatar || avVarsayilan(S.me), basla:s.timer && s.timer.start || null, ders:timerDers(s), cihaz:s.timer && s.timer.cihaz || "", gun:t, bugunDk:Math.round(minutes(s,t,false)), gunler}; }
 /* Öğrenci: kendi kaydı her kaydedildiğinde gruplardaki canlı özetini güncelle (değişmediyse yazma) */
 function canliSenk(){ if(A() || !S.me || !GR.list.size) return; const s = st(); if(!s || !takmaAd(s)) return;
@@ -1176,7 +1198,7 @@ function grSatir(x, i, sekme, koc){ const ad = koc ? x.ad : (x.takma || "Sen"), 
   const alt = x.canli ? `<span class="gcanli"><i></i>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></span>`
     : sekme==="hafta" ? `<span class="faint">Bugün ${x.bugun ? fmtMin(x.bugun) : "başlamadı"}</span>` : `<span class="faint">${x.bugun ? "Şu an ara veriyor" : "Bugün henüz başlamadı"}</span>`;
   const bars = koc ? `<span class="g7">${pDays7().map(d=>{ const v = (x.gunler||{})[d] || 0; return `<i title="${GUNK[dIdx(d)]} ${fmtMin(v)}" style="--h:${Math.min(100, v/300*100)}%" class="${d===today()?"bg":""} ${v?"":"z"}"></i>`; }).join("")}</span>` : "";
-  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""}${koc && x.takma?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}${x.bugun>=ALEV_DK?`<span class="galev" title="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
+  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""} ${x.lig?ligRozet(x, true):""}${koc && x.takma?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}${x.bugun>=ALEV_DK?`<span class="galev" title="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
 const pDays7 = () => { const w = monday(today()); return [0,1,2,3,4,5,6].map(i=>iso(new Date(new Date(w+"T12:00:00").getTime()+i*864e5))); };
 function grSekme(){ return `<div class="seg"><button data-act="grsekme" data-v="bugun" aria-pressed="${GR.sekme!=="hafta"}">Bugün</button><button data-act="grsekme" data-v="hafta" aria-pressed="${GR.sekme==="hafta"}">Bu hafta</button></div>`; }
 /* Öğrenci: Çalışma grubum */
@@ -1189,15 +1211,15 @@ const ALEV_SVG = '<svg viewBox="0 0 24 32"><defs><linearGradient id="alv" x1="0"
 function salonKoltuk(x, koc){
   const ad = koc ? ilkAd(x.ad)+(x.ad.split(/\s+/)[1] ? " "+x.ad.split(/\s+/).slice(-1)[0][0]+"." : "") : (x.takma || "Sen"), alev = x.bugun>=ALEV_DK;
   const sure = x.canli ? `<b class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</b>` : `<b class="num kz">00:00</b>`;
-  const sahne = `<div class="ksah ${x.canli?"on":""} ${alev?"alev":""}" style="--gc:${avRenk(x.uid)}">${alev?`<span class="kalev" aria-label="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}${x.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${karakterSVG(x.av || avOf(x.uid), x.canli)}${masaSVG(x)}</div>`;
-  return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${alev?"alev":""}" title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">
-    <span class="kcz ${x.canli?"on":x.bugun?"ara":""}"></span><b class="kad">${esc(ad)}${x.ben?` <em>sen</em>`:""}</b><small class="kders">${x.canli ? esc(dersEt(x.ders)) : x.bugun ? "Mola" : "Gelmedi"}</small><span class="ksu">${sure}<span class="ksv">Sv ${x.seviye}</span></span><span class="ktop"><small>BUGÜN TOPLAM</small><b class="num" ${x.canli?`data-gt="${x.basla}" data-gb0="${x.bugun - gecenSn(x.basla)/60}"`:""}>${fmtMin(x.bugun)}</b></span>${sahne}</div>`; }
+  const sahne = `<div class="ksah ${x.canli?"on":""} ${alev?"alev":""} ${x.lig?"l-"+x.lig.k:""}" style="--gc:${avRenk(x.uid)}">${alev?`<span class="kalev" aria-label="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}${x.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${ligArka(x)}${karakterSVG(x.av || avOf(x.uid), x.canli)}${masaSVG(x)}</div>`;
+  return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${alev?"alev":""} ${x.lig?"lig l-"+x.lig.k:""}" title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">
+    <span class="kcz ${x.canli?"on":x.bugun?"ara":""}"></span><b class="kad">${esc(ad)}${x.ben?` <em>sen</em>`:""}</b><small class="kders">${x.canli ? esc(dersEt(x.ders)) : x.bugun ? "Mola" : "Gelmedi"}</small><span class="ksu">${sure}</span>${ligRozet(x)}<span class="ktop"><small>BUGÜN TOPLAM</small><b class="num" ${x.canli?`data-gt="${x.basla}" data-gb0="${x.bugun - gecenSn(x.basla)/60}"`:""}>${fmtMin(x.bugun)}</b></span>${sahne}</div>`; }
 function salon(L, koc){ const F = GR.filtre || "tum", benim = L.find(x=>x.ben), bd = benim && benim.canli ? benim.ders : "";
   let G = L; if(F==="calisan") G = L.filter(x=>x.canli); else if(F==="ayni") G = L.filter(x=>x.canli && x.ders===bd);
     const cip = (k, ad, say, kapali) => `<button class="scip ${F===k?"on":""}" data-act="grfiltre" data-v="${k}" ${kapali?"disabled":""}>${ad}${say!=null?` · ${say}`:""}</button>`;
   return `<div class="salon"><div class="scipler">${cip("tum","Tümü",L.length)}${cip("calisan","Çalışanlar",L.filter(x=>x.canli).length)}${koc?"":cip("ayni", bd ? `Aynı derstekiler (${GDERS_K[bd]||dersEt(bd)})` : "Aynı derstekiler", bd ? L.filter(x=>x.canli && x.ders===bd).length : null, !bd)}</div>
     ${!G.length ? `<div class="sbos">${F==="ayni" ? "Şu an seninle aynı derse çalışan yok." : "Şu an kimse çalışmıyor. İlk sen otur!"}</div>` : `<div class="derslik">${G.map(x=>salonKoltuk(x,koc)).join("")}</div>`}
-    <p class="snot">${ALEV_SVG} Bugün 7 saati geçenler alev alır · Sv = seviye, son 7 günün ortalamasına göre (günde 1 saat → 1 … 4+ saat → 5)</p>
+    <div class="snot"><span>${ALEV_SVG} Bugün 7 saati geçenler alev alır</span><span class="sligler">${LIGLER.map(L=>`<span class="lrz l-${L.k}">${L.ik} ${L.ad}</span> ${L.gun} gün üst üste ${L.dk/60}+ saat`).join(" · ")}</span></div>
   </div>`; }
 const gorSec = () => `<div class="seg gorseg"><button data-act="grgor" data-v="salon" aria-pressed="${GR.gor!=="liste"}">Salon</button><button data-act="grgor" data-v="liste" aria-pressed="${GR.gor==="liste"}">Sıralama</button></div>`;
 function pGrup(s){ const head = topbar(`<h1 class="ttl">Sınıf</h1>`);
@@ -1210,10 +1232,11 @@ function pGrup(s){ const head = topbar(`<h1 class="ttl">Sınıf</h1>`);
     ${GR.list.size>1 ? `<div class="pills">${[...GR.list].map(([id,x])=>`<button class="btn sm ${id===gid?"pri":""}" data-act="grsec" data-v="${id}">${esc(x.ad)}</button>`).join("")}</div>` : ""}
     <div class="card ghero"><div class="ghh"><div><small>ÇALIŞMA GRUBU</small><h2>${esc(g.ad)}</h2><span class="gonl"><i></i><b class="num">${on}</b> kişi şu an çalışıyor · ${L.length} üye</span></div>
       <div class="gyig">${L.filter(x=>x.canli).slice(0,4).map(x=>grAvatar(x.ben?(x.takma||"Sen"):x.takma, x.uid, true)).join("")}</div></div>
-      ${ben ? `<div class="benk"><div class="ksah ${ben.canli?"on":""} ${ben.bugun>=ALEV_DK?"alev":""}" style="--gc:${avRenk(S.me)}">${ben.bugun>=ALEV_DK?`<span class="kalev">${ALEV_SVG}</span>`:""}${ben.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${karakterSVG(ben.av, ben.canli)}${masaSVG(ben)}</div>
+      ${ben ? `<div class="benk"><div class="ksah ${ben.canli?"on":""} ${ben.bugun>=ALEV_DK?"alev":""} ${ben.lig?"l-"+ben.lig.k:""}" style="--gc:${avRenk(S.me)}">${ben.bugun>=ALEV_DK?`<span class="kalev">${ALEV_SVG}</span>`:""}${ben.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${ligArka(ben)}${karakterSVG(ben.av, ben.canli)}${masaSVG(ben)}</div>
         <div class="benb"><small>SINIFTAKİ SEN</small><b>${esc(takmaAd(s))}</b>
           <span class="benm">${run ? `<span class="gcanli"><i></i>${esc(dersEt(timerDers(s)))} · <b class="num" data-tlive>${clock(timerMin(s)*60)}</b></span>` : "Şu an çalışmıyorsun"}</span>
-          <span class="benm">Bugün toplam <b class="num" ${ben.canli?`data-gt="${ben.basla}" data-gb0="${ben.bugun - gecenSn(ben.basla)/60}"`:""}>${fmtMin(ben.bugun)}</b> · Sv ${ben.seviye}</span>
+          <span class="benm">Bugün toplam <b class="num" ${ben.canli?`data-gt="${ben.basla}" data-gb0="${ben.bugun - gecenSn(ben.basla)/60}"`:""}>${fmtMin(ben.bugun)}</b></span>
+          <span class="benm">${ligRozet(ben)} ${ben.sonraki ? `${ben.sonraki.ik} ${ben.sonraki.ad}${{gumus:"'e"}[ben.sonraki.k]||"'a"} ${Math.max(1, ben.sonraki.gun - ben.sonrakiSeri)} gün kaldı (günde ${ben.sonraki.dk/60}+ saat)` : "En üst ligdesin!"}</span>
           ${sira ? `<span class="benm">${GR.sekme==="hafta"?"Bu hafta":"Bugün"} sıran <b>${sira}/${L.length}</b>${sira>1 ? ` · üstündekine ${fmtMin(Math.max(1, (GR.sekme==="hafta"?L[sira-2].hafta-ben.hafta:L[sira-2].bugun-ben.bugun)))}` : " · zirvedesin 🏆"}</span>` : ""}
           <div class="benbt">${run ? `<button class="btn sm" data-act="go" data-v="kronometre">Kronometre</button>` : `<button class="btn sm pri" data-act="go" data-v="kronometre">${icon("play","xs")} Çalışmaya başla</button>`}<button class="btn sm" data-act="sheet" data-v="takma">${icon("edit","xs")} Karakterim</button></div></div></div>` : ""}</div>
     ${gorSec()}
@@ -1254,7 +1277,7 @@ function grupSheet(gid){ const g = gid ? GR.list.get(gid) : null, sec = new Set(
     <div class="acts">${g ? `<button type="button" class="btn danger" style="margin-right:auto" data-act="grsil" data-v="${gid}">Grubu sil</button>` : ""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     async fd=>{ const ad = String(fd.get("ad")||"").trim(), uyeler = fd.getAll("u"); if(!ad) return sheetErr("Gruba bir ad ver.");
       const id = gid || uid(); try{ await setDoc(doc(fdb,"gruplar",id), {ad, uyeler, at: g ? (g.at||Date.now()) : Date.now()}); closeSheet(); toast(g ? "Grup güncellendi" : "Grup kuruldu"); }catch(e){ sheetErr("Kaydedilemedi: "+(e.message||e)); } }); }
-const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR","sacAks"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["masaR","masaSol","masaSag","masaOn"]]];
+const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR","sacAks"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["lig","masaSol","masaSag","masaOn"]]];
 function benOzet(){ return ogrOzet(S.me, st()); }
 const CINS_ORNEK = {k:{cins:"k", ten:1, sac:"uzun", sacR:1, giy:"kazak", gom:0, aks:"yok", kas:"kavis"}, e:{cins:"e", ten:1, sac:"yan", sacR:1, giy:"kapus", gom:5, aks:"yok", kas:"duz"}};
 function cinsSec(){ const ornek = c => karakterSVG(CINS_ORNEK[c], true);
@@ -1263,15 +1286,16 @@ function avSecici(){ const a = S.avT, sek = S.avSek || "yuz", bas = BASORTU.has(
   if(!a.cins) return cinsSec();
   const mini = (ek) => `<span class="avmini">${karakterSVG({...a, ...ek}, true)}</span>`;
   const sat = (k) => { if(k==="sacR" && bas) return ""; if(k==="basR" && !bas) return ""; if(k==="sakal" && (bas || a.cins==="k")) return ""; if(k==="sacAks" && (bas || a.cins!=="k")) return "";
+    if(k==="lig") return `<div class="avsat"><span>Ligin ve masan</span><p class="faint small" style="margin:0">Masanın malzemesi ligine göre değişir. Üst üste çalıştıkça yükselirsin; seri bozulursa bir alt lige inersin.</p><div class="avlig">${LIGLER.map(L=>{ const ok = ben.lig && LIGLER.indexOf(ben.lig) >= LIGLER.indexOf(L), x0 = {canli:true, cihaz:"pc", ders:"mat", av:{}, lig:L}; return `<div class="avlk ${ok?"on":""} ${ben.lig===L?"su":""}"><span class="avmeres">${masaSVG(x0)}</span><b>${L.ik} ${L.ad}</b><small>${L.gun} gün üst üste<br>günde ${L.dk/60}+ saat</small>${ben.lig===L?`<em>Şu anki ligin</em>`:ok?`<em>Geçildi</em>`:""}</div>`; }).join("")}</div></div>`;
     if(k==="masaR") return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avsec" data-k="masaR">${AVK.masaR.map((R,i)=>`<button type="button" class="avb ${(masaSecim(a).r)===i?"on":""}" data-act="avsec" data-k="masaR" data-v="${i}" style="background:linear-gradient(180deg,${R[1]} 0 30%,${R[0]} 30% 55%,${R[2]} 55%)" aria-label="Masa rengi"></button>`).join("")}</div></div>`;
     if(k==="masaSol"||k==="masaSag"||k==="masaOn"){ const ms = masaSecim(a), alan = {masaSol:"sol", masaSag:"sag", masaOn:"on"}[k];
-      return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avmasa">${AVK[k].map(v=>{ const kl = MASA_KILIT[v], ok = !kl || kl.ok(ben), sec = ms[alan]===v, onz = {...a, masaSol:"yok", masaSag:"yok", masaOn:"yok", masaR:ms.r, [k]:v};
-        return `<button type="button" class="avme ${sec?"on":""} ${ok?"":"kilit"}" data-act="avsec" data-k="${k}" data-v="${v}" ${ok?"":"disabled"}><span class="avmeres">${masaSVG({canli:true, cihaz:"tel", ders:"mat", av:onz, onizleme:true})}</span><b>${v==="yok"?"Boş":SECENEK_AD[v]}</b>${kl?`<small>${ok ? "🏅 Ödül" : "🔒 "+kl.t}</small>`:""}</button>`; }).join("")}</div></div>`; }
+      return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avmasa">${AVK[k].map(v=>{ const kl = MASA_KILIT[v], ok = !kl || kl.ok(ben), sec = ms[alan]===v, onz = {...a, masaSol:"yok", masaSag:"yok", masaOn:"yok", [k]:v};
+        return `<button type="button" class="avme ${sec?"on":""} ${ok?"":"kilit"}" data-act="avsec" data-k="${k}" data-v="${v}" ${ok?"":"disabled"}><span class="avmeres">${masaSVG({canli:true, cihaz:"tel", ders:"mat", av:onz, onizleme:true, lig:ben.lig})}</span><b>${v==="yok"?"Boş":SECENEK_AD[v]}</b>${kl?`<small>${ok ? "🏅 Ödül" : "🔒 "+kl.t}</small>`:""}</button>`; }).join("")}</div></div>`; }
     const L = k==="sac" ? SAC_CINS[a.cins] : AVK[k], renk = ["ten","sacR","basR","gom"].includes(k); if(k==="detay" && a.sakal==="sakal" && a.cins==="e") {}
     return `<div class="avsat"><span>${AV_AD[k]}</span><div class="avsec ${renk?"":"sekil"} ${k==="giy"?"bust":["goz","kas","sakal","ruh","detay","sacAks"].includes(k)?"yakin":""}" data-k="${k}">${L.map((v,i)=>{ const val = renk ? i : v, on = String(a[k])===String(val);
       return `<button type="button" class="avb ${on?"on":""}" data-act="avsec" data-k="${k}" data-v="${val}" ${renk ? `style="background:${v}" aria-label="${AV_AD[k]}">` : `title="${SECENEK_AD[v]}">${mini({[k]:v})}<em>${SECENEK_AD[v]}</em>`}</button>`; }).join("")}</div></div>`; };
   return `<div class="avcinsk">${[["k","Kadın"],["e","Erkek"]].map(([c,ad])=>`<button type="button" class="${a.cins===c?"on":""}" data-act="avcins" data-v="${c}">${ad}</button>`).join("")}</div><div class="avsekme">${AV_SEKME.map(([id,ad])=>`<button type="button" class="${sek===id?"on":""}" data-act="avsek" data-v="${id}">${ad}</button>`).join("")}</div>${(AV_SEKME.find(x=>x[0]===sek)||AV_SEKME[0])[2].map(sat).join("")}`; }
-function avYenile(){ const p = $("#avprev"); if(p) p.hidden = !S.avT.cins; if(p) p.innerHTML = `<div class="ksah on" style="--gc:${avRenk(S.me)}">${karakterSVG(S.avT, true)}${masaSVG({...benOzet(), canli:true, ders:"mat", cihaz:"pc", av:S.avT})}</div>`; const w = $("#avsecw"); if(w) w.innerHTML = avSecici(); }
+function avYenile(){ const p = $("#avprev"); if(p) p.hidden = !S.avT.cins; if(p) p.innerHTML = `<div class="ksah on" style="--gc:${avRenk(S.me)}">${ligArka(benOzet())}${karakterSVG(S.avT, true)}${masaSVG({...benOzet(), canli:true, ders:"mat", cihaz:"pc", av:S.avT})}</div>`; const w = $("#avsecw"); if(w) w.innerHTML = avSecici(); }
 function takmaSheet(){ const s = st(), cur = takmaAd(s); S.avT = {...avVarsayilan(S.me), ...(s.avatar||{})}; if(!(s.avatar && s.avatar.cins)) S.avT.cins = ""; S.avSek = "yuz";
   return sheet(`<h3>Grup profilin</h3><p class="muted small" style="margin:-6px 0 0">Çalışma grubundaki arkadaşların seni bu karakterle ve takma adınla görür. Gerçek adın görünmez; koçun her zaman görür.</p>
     <div class="avust"><div class="avprev salon" id="avprev"></div><label class="f" style="flex:1;min-width:0">Takma ad<input type="text" name="t" id="tk-ad" maxlength="16" value="${esc(cur)}" placeholder="ör. Kartal, Tıp2027"></label></div>
