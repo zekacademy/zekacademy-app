@@ -2,7 +2,7 @@
    Açmak: ?demo=1   Kapatmak: ?demo=0
    Koç girişi: zekacademy / demo1234   Öğrenci girişi: demo / 123456 */
 (function(){
-  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "4") return;
+  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "6") return;
   var gun = 864e5, bugun = new Date(); bugun.setHours(12,0,0,0);
   function iso(d){ var x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0,10); }
   function ekle(d, n){ return iso(new Date(new Date(d + "T12:00:00").getTime() + n*gun)); }
@@ -84,20 +84,23 @@
   ornek.forEach(function(o, i){ var u = "dg"+(i+1), x = basit(o[0], o[1], 40+i*3, 0); x.takma = o[2]; x.sinif = i%2 ? "Mezun" : "12. sınıf";
     for(var j=1;j<=6;j++){ var dd = ekle(t,-j); x.gunluk[dd] = [180,210,150,240,200,170][ (i+j)%6 ] - i*10; }
     if(o[5]) x.gunluk[t] = o[5]; if(o[4]) x.timer = {start: simdi - o[4]*dk, ders:o[3] || undefined, cihaz:o[6] || "tel"}; if(!o[3] && o[4]) delete x.timer.ders;
+    x.avatar = [{ten:1,sac:"kisa",sacR:0,gom:0,aks:"kulaklik"},{ten:0,sac:"uzun",sacR:3,gom:6,aks:"yok"},{ten:3,sac:"kivircik",sacR:0,gom:7,aks:"yok"},{ten:2,sac:"kuyruk",sacR:4,gom:5,aks:"gozluk"},{ten:1,sac:"bere",sacR:5,gom:3,aks:"yok"},{ten:4,sac:"topuz",sacR:0,gom:4,aks:"yok"},{ten:0,sac:"dalga",sacR:2,gom:1,aks:"gozluk"},{ten:2,sac:"uzun",sacR:1,gom:2,aks:"kulaklik"},{ten:1,sac:"kel",sacR:5,gom:7,aks:"yok"}][i];
     db["students/"+u] = x; uyeler.push(u); });
+  elif.avatar = {ten:1, sac:"kuyruk", sacR:1, gom:4, aks:"yok"}; 
   elif.takma = "Elif2027";
   db["students/demo2"].takma = "Mert"; db["students/demo2"].gunluk[t] = 75; db["students/demo2"].timer = {start: simdi - 21*dk, ders:"geo", cihaz:"pc"};
   db["students/demo3"].takma = "Zeyno"; db["students/demo3"].gunluk[t] = 450;
   db["gruplar/g1"] = {ad:"Hedef Tıp 2027", uyeler:["dg1","dg2","demo2","dg4","demo1","dg6","dg7","dg8","dg9"], at:simdi};
   db["gruplar/g2"] = {ad:"Mezunlar", uyeler:["demo3","dg3","dg5"], at:simdi};
   /* Öğrencilerin gruplardaki canlı özetleri (gerçekte her öğrencinin uygulaması kendisi yazar) */
-  function canli(x){ var w = {}; Object.keys(x.gunluk).forEach(function(d){ if(d >= ekle(t,-6) && d < t) w[d] = x.gunluk[d]; }); return {takma:x.takma||"", basla:x.timer ? x.timer.start : null, ders:(x.timer && x.timer.ders) || "", cihaz:(x.timer && x.timer.cihaz) || "", gun:t, bugunDk:x.gunluk[t]||0, gunler:w, at:simdi}; }
+  function canli(x){ var c = canli0(x); c.avatar = x.avatar || null; if(!c.avatar) delete c.avatar; return c; }
+  function canli0(x){ var w = {}; Object.keys(x.gunluk).forEach(function(d){ if(d >= ekle(t,-6) && d < t) w[d] = x.gunluk[d]; }); return {takma:x.takma||"", basla:x.timer ? x.timer.start : null, ders:(x.timer && x.timer.ders) || "", cihaz:(x.timer && x.timer.cihaz) || "", gun:t, bugunDk:x.gunluk[t]||0, gunler:w, at:simdi}; }
   ["g1","g2"].forEach(function(g){ db["gruplar/"+g].uyeler.forEach(function(u){ if(u!=="demo1") db["gruplar/"+g+"/canli/"+u] = canli(db["students/"+u]); }); });
   localStorage.setItem("mockDb", JSON.stringify(db));
   localStorage.setItem("mockUsers", JSON.stringify({"zekacademy@app.zekacademy.com":{uid:"coach1", p:"demo1234"}, "demo@app.zekacademy.com":{uid:"demo1", p:"123456"},
     "mertornek@app.zekacademy.com":{uid:"demo2", p:"123456"}, "zeynepornek@app.zekacademy.com":{uid:"demo3", p:"123456"}}));
   localStorage.removeItem("mockUser");
-  localStorage.setItem("zk-demo-v", "4");
+  localStorage.setItem("zk-demo-v", "6");
 })();
 document.addEventListener("DOMContentLoaded", function(){
   var b = document.createElement("div");

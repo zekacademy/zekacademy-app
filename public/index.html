@@ -1115,6 +1115,44 @@ body{background:var(--bg)}
 .masalar{display:grid;grid-template-columns:minmax(0,1fr);column-gap:14px}
 @media (min-width:1000px){ .masalar{grid-template-columns:repeat(2,minmax(0,1fr))} }
 .snot{display:flex;align-items:center;justify-content:center;gap:6px;margin:12px 4px 0;font-size:11.5px;color:#9AA4B8;text-align:center;line-height:1.35}.snot svg{width:12px;height:16px;flex:none}
+
+/* ---------- Karakterler ve kişisel masalar ---------- */
+.gav{overflow:hidden;background:#CBD5E1}
+.gav .kar{position:absolute;left:-22%;top:-4%;width:144%;height:144%}
+.gav.on::after{display:none}
+.gyig .gav,.gcc .gav{background:#CBD5E1}
+.derslik{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 6px;margin-top:12px}
+@media (min-width:700px){ .derslik{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px 10px} }
+.kol{padding:10px 2px 0;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);overflow:hidden;justify-content:flex-start}
+.kol.on{background:linear-gradient(180deg,rgba(61,220,132,.07),rgba(255,255,255,.02))}
+.kol.ben{border-color:rgba(124,196,255,.45)}
+.kol.alev{border-color:rgba(255,138,0,.5);background:linear-gradient(180deg,rgba(255,138,0,.12),rgba(255,255,255,.02))}
+.kol.yok{opacity:.55}
+.ksv{font-size:10px;padding:1px 5px}
+.ksah{position:relative;width:100%;max-width:130px;aspect-ratio:1/.86;margin:2px auto 0}
+.ksah .kar{position:absolute;left:3%;top:-17%;width:94%;height:auto;transition:filter .3s}
+.ksah:not(.on) .kar{filter:saturate(.55) brightness(.8)}
+.ksah .masaS{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.kisik{position:absolute;left:50%;top:-4%;width:84%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,236,190,.22) 0%,transparent 66%);opacity:.9}
+.ksah:not(.on) .kisik{opacity:.15}
+
+@keyframes knefes{50%{transform:translateY(1.5%) scale(1.01)}}
+.kzz{position:absolute;right:8%;top:2%;color:#64748B;font-weight:700;font-size:13px;z-index:3;animation:kzz 2.4s ease-in-out infinite}
+.kzz small{font-size:10px;margin-left:1px;vertical-align:super}
+@keyframes kzz{0%{opacity:.2;transform:translateY(4px)}50%{opacity:1}100%{opacity:.2;transform:translateY(-6px)}}
+.ksah .kalev{left:auto;right:2%;top:-6%;width:30%;height:auto;aspect-ratio:3/4;z-index:4}
+.ksah.alev .kisik{background:radial-gradient(circle,rgba(255,140,0,.75) 0%,transparent 68%);opacity:.8;animation:kalevp2 1.4s ease-in-out infinite}
+@keyframes kalevp2{50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
+.avust{display:flex;gap:14px;align-items:center}
+.avprev{width:120px;flex:none;padding:8px;border-radius:18px}
+.avprev .ksah{margin:0 auto}
+.avsat{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.avsat>span{font-size:12.5px;font-weight:700;color:var(--muted)}
+.avsec{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:thin}
+.avb{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid var(--line);padding:0;cursor:pointer;background:var(--surface)}
+.avb.on{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 30%,transparent)}
+.avsec[data-k=sac] .avb,.avsec[data-k=aks] .avb{width:52px;height:52px;border-radius:14px;overflow:hidden;position:relative;background:#E8EEF8}
+.avmini{position:absolute;inset:0}.avmini .kar{position:absolute;left:-12%;top:-2%;width:124%;height:124%}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
