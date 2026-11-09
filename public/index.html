@@ -1060,6 +1060,61 @@ body{background:var(--bg)}
 @media (max-width:380px){ .gdk{min-width:48px;font-size:14px} }
 @media (max-width:560px){ .g7{display:none} }
 .g7 i.bg{outline:0;background:var(--ac2)}
+
+/* ---------- Çalışma salonu (masalar) ---------- */
+.gorseg{margin-top:2px}
+.salon{background:radial-gradient(120% 80% at 50% 0%,#1B2335,#0F1420);color:#E9EDF5;border-radius:24px;padding:14px 12px 16px;box-shadow:0 10px 30px rgba(10,15,30,.25)}
+.scipler{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.scip{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);color:#E9EDF5;font:inherit;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:99px;cursor:pointer}
+.scip.on{background:#2F7BF6;border-color:#2F7BF6;color:#fff}
+.scip:disabled{opacity:.4;cursor:default}
+.sbos{text-align:center;padding:30px 10px;color:#9AA4B8;font-size:14px}
+.masa{margin-top:12px;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:10px 4px 8px;background:rgba(255,255,255,.025)}
+.mrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.mtahta{margin:8px 6px;height:34px;border-radius:12px;background:linear-gradient(180deg,#5A3E28,#3E2A1B);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 6px 14px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;position:relative}
+.mtahta span{display:inline-flex;align-items:center;gap:6px;color:#F4A35A;font-weight:800;font-size:12.5px;letter-spacing:.14em}
+.mtahta svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mtahta em{position:absolute;right:12px;font-style:normal;font-size:12px;font-weight:800;color:#F4A35A;opacity:.85}
+.kol{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:6px 2px;min-width:0;position:relative}
+.kol.yok{opacity:.42}
+.kcz{width:22px;height:3px;border-radius:2px;background:rgba(255,255,255,.18);margin-bottom:3px}
+.kcz.on{background:#3DDC84}.kcz.ara{background:#F59E0B}
+.mrow.alt .kcz{order:9;margin:3px 0 0}
+.kad{font-size:13px;line-height:1.2;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kad em{font-style:normal;font-size:10px;font-weight:800;color:#7CC4FF;margin-left:2px}
+.kol .kders{font-size:11.5px;color:#9AA4B8;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.kol.on .kders{color:#B8F5CF}
+.ksu{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:center;margin:1px 0 4px}
+.ksu b{font-size:13.5px}.ksu b.kz{color:#9AA4B8}
+.ksv{font-size:10.5px;font-weight:800;padding:2px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.22);color:#D5DBE6;white-space:nowrap}
+.mrow.alt .kav{margin-bottom:4px}
+.kav{--gc:#4B5563;width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;position:relative;background:var(--gc);color:#fff;font-weight:800;font-size:14.5px;box-shadow:0 0 0 3px #0F1420,0 0 0 5px rgba(255,255,255,.14)}
+.kav.on{box-shadow:0 0 0 3px #0F1420,0 0 0 5px #3DDC84,0 0 16px rgba(61,220,132,.35)}
+.kin{position:relative;z-index:2}
+.kci{position:absolute;right:-4px;bottom:-3px;width:19px;height:19px;border-radius:50%;background:#3DDC84;display:grid;place-items:center;z-index:3;box-shadow:0 0 0 2px #0F1420;font-style:normal}
+.kci svg{width:11px;height:11px;fill:none;stroke:#0F1420;stroke-width:2.4;stroke-linecap:round}
+.kci.uyu{background:#3A4356;color:#C7CFDC;font-size:10px;font-weight:800}
+.kol.bos .sand{width:46px;height:46px;display:grid;place-items:center;color:rgba(255,255,255,.22);margin:auto}
+.kol.bos{justify-content:center;min-height:84px}
+.kol.bos .sand svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.kol.ben .kad{color:#7CC4FF}
+/* Alev: bugün 7 saati geçen */
+.kav.alev{box-shadow:0 0 0 3px #0F1420,0 0 0 5px #FF8A00,0 0 22px rgba(255,120,0,.6);animation:kalevp 1.6s ease-in-out infinite}
+@keyframes kalevp{50%{box-shadow:0 0 0 3px #0F1420,0 0 0 5px #FFB300,0 0 30px rgba(255,140,0,.8)}}
+.kalev{position:absolute;left:-13px;top:-22px;width:30px;height:40px;z-index:4;pointer-events:none;filter:drop-shadow(0 0 5px rgba(255,120,0,.8))}
+.kalev svg{width:100%;height:100%;transform-origin:50% 100%;animation:kalevt .9s ease-in-out infinite alternate}
+.kalev .a2{transform-origin:50% 100%;animation:kalevt .6s ease-in-out infinite alternate-reverse}
+@keyframes kalevt{0%{transform:scale(1,1) skewX(-3deg)}100%{transform:scale(1.06,1.12) skewX(3deg)}}
+.kol.alev .ksu b{color:#FFB74D}
+
+.galev{width:18px;height:24px;flex:none;filter:drop-shadow(0 0 4px rgba(255,120,0,.6))}.galev svg{width:100%;height:100%;animation:kalevt .9s ease-in-out infinite alternate;transform-origin:50% 100%}
+.gsat.alev .gdk{color:#F97316}
+.sgrup{margin-top:4px}.sgrup .sech{margin:10px 2px 8px;flex-wrap:nowrap;align-items:flex-start}.sgrup .sech .iconbtn{flex:none}
+@media (min-width:900px){ .salon{padding:18px}  .kav{width:52px;height:52px;font-size:16px} .kad{font-size:14px} }
+@media (prefers-reduced-motion:reduce){ .kalev svg,.kalev .a2,.galev svg,.kav.alev{animation:none} }
+.masalar{display:grid;grid-template-columns:minmax(0,1fr);column-gap:14px}
+@media (min-width:1000px){ .masalar{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.snot{display:flex;align-items:center;justify-content:center;gap:6px;margin:12px 4px 0;font-size:11.5px;color:#9AA4B8;text-align:center;line-height:1.35}.snot svg{width:12px;height:16px;flex:none}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

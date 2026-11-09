@@ -81,7 +81,7 @@ service cloud.firestore {
         allow read: if isCoach() || grupUyesi(gid);
         allow delete: if isCoach();
         allow create, update: if isCoach() || (isSelf(uid) && grupUyesi(gid)
-          && request.resource.data.keys().hasOnly(['takma', 'basla', 'ders', 'gun', 'bugunDk', 'gunler', 'at'])
+          && request.resource.data.keys().hasOnly(['takma', 'basla', 'ders', 'cihaz', 'gun', 'bugunDk', 'gunler', 'at'])
           && request.resource.data.takma is string && request.resource.data.takma.size() <= 16);
       }
     }

@@ -995,15 +995,19 @@ function timerDers(s){ const t = s && s.timer; if(!t) return ""; if(t.ders) retu
 const canliMi = basla => !!basla && (Date.now()-basla) < KRON_TAVAN*60000;
 const gecenSn = basla => Math.min(KRON_TAVAN*60, (Date.now()-basla)/1000);
 /* Bir üyenin özeti: hem öğrenci kaydından (koç) hem canli belgesinden (öğrenci) aynı biçimde */
-function uyeOzet(c){ const t = today(), w = monday(t), canli = canliMi(c.basla), canliDk = canli ? gecenSn(c.basla)/60 : 0;
+const gEkle = (d, n) => iso(new Date(new Date(d+"T12:00:00").getTime()+n*864e5));
+/* Seviye: son 7 günün toplamına göre (günde ort. <1 sa → 1 … 4+ sa → 5) */
+const seviyeOf = dk7 => dk7 < 7*60 ? 1 : dk7 < 14*60 ? 2 : dk7 < 21*60 ? 3 : dk7 < 28*60 ? 4 : 5;
+function uyeOzet(c){ const t = today(), w = monday(t), y7 = gEkle(t,-6), canli = canliMi(c.basla), canliDk = canli ? gecenSn(c.basla)/60 : 0;
   const bugun = (c.gun===t ? (c.bugunDk||0) : 0) + (canli && iso(new Date(c.basla))===t ? canliDk : 0);
-  const gunler = {}; Object.entries(c.gunler||{}).forEach(([d,v])=>{ if(d>=w && d<=t) gunler[d] = v; }); if(c.gun===t) gunler[t] = c.bugunDk||0;
-  const hafta = Object.values(gunler).reduce((a,b)=>a+b,0) + canliDk;
-  return {...c, canli, bugun, hafta, gunler}; }
-function ogrOzet(id, s){ const t = today(), w = monday(t), gunler = {}; for(let d=w; d<=t; d=iso(new Date(new Date(d+"T12:00:00").getTime()+864e5))) gunler[d] = Math.round(minutes(s,d,false));
-  return uyeOzet({uid:id, ad:s.name, takma:takmaAd(s), basla:s.timer && s.timer.start || null, ders:timerDers(s), gun:t, bugunDk:gunler[t]||0, gunler}); }
-function canliBelge(s){ const t = today(), w = monday(t), gunler = {}; for(let d=w; d<t; d=iso(new Date(new Date(d+"T12:00:00").getTime()+864e5))){ const m = Math.round(minutes(s,d,false)); if(m) gunler[d] = m; }
-  return {takma:takmaAd(s) || "", basla:s.timer && s.timer.start || null, ders:timerDers(s), gun:t, bugunDk:Math.round(minutes(s,t,false)), gunler}; }
+  const tum = {}; Object.entries(c.gunler||{}).forEach(([d,v])=>{ if(d>=y7 && d<t) tum[d] = v; }); tum[t] = c.gun===t ? (c.bugunDk||0) : 0;
+  const gunler = {}; Object.entries(tum).forEach(([d,v])=>{ if(d>=w) gunler[d] = v; });
+  const hafta = Object.values(gunler).reduce((a,b)=>a+b,0) + canliDk, yedi = Object.values(tum).reduce((a,b)=>a+b,0) + canliDk;
+  return {...c, canli, bugun, hafta, gunler, yedi, seviye:seviyeOf(yedi)}; }
+function ogrOzet(id, s){ const t = today(), gunler = {}; for(let i=6;i>=0;i--){ const d = gEkle(t,-i); gunler[d] = Math.round(minutes(s,d,false)); }
+  return uyeOzet({uid:id, ad:s.name, takma:takmaAd(s), basla:s.timer && s.timer.start || null, ders:timerDers(s), cihaz:s.timer && s.timer.cihaz || "", gun:t, bugunDk:gunler[t]||0, gunler}); }
+function canliBelge(s){ const t = today(), gunler = {}; for(let i=6;i>=1;i--){ const d = gEkle(t,-i), m = Math.round(minutes(s,d,false)); if(m) gunler[d] = m; }
+  return {takma:takmaAd(s) || "", basla:s.timer && s.timer.start || null, ders:timerDers(s), cihaz:s.timer && s.timer.cihaz || "", gun:t, bugunDk:Math.round(minutes(s,t,false)), gunler}; }
 /* Öğrenci: kendi kaydı her kaydedildiğinde gruplardaki canlı özetini güncelle (değişmediyse yazma) */
 function canliSenk(){ if(A() || !S.me || !GR.list.size) return; const s = st(); if(!s || !takmaAd(s)) return;
   const b = canliBelge(s), imza = JSON.stringify(b)+[...GR.list.keys()].join(","); if(imza===GR.sonImza) return; GR.sonImza = imza;
@@ -1025,10 +1029,32 @@ function grSatir(x, i, sekme, koc){ const ad = koc ? x.ad : (x.takma || "Sen"), 
   const alt = x.canli ? `<span class="gcanli"><i></i>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></span>`
     : sekme==="hafta" ? `<span class="faint">Bugün ${x.bugun ? fmtMin(x.bugun) : "başlamadı"}</span>` : `<span class="faint">${x.bugun ? "Şu an ara veriyor" : "Bugün henüz başlamadı"}</span>`;
   const bars = koc ? `<span class="g7">${pDays7().map(d=>{ const v = (x.gunler||{})[d] || 0; return `<i title="${GUNK[dIdx(d)]} ${fmtMin(v)}" style="--h:${Math.min(100, v/300*100)}%" class="${d===today()?"bg":""} ${v?"":"z"}"></i>`; }).join("")}</span>` : "";
-  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""}${koc && x.takma?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
+  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""}${koc && x.takma?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}${x.bugun>=ALEV_DK?`<span class="galev" title="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
 const pDays7 = () => { const w = monday(today()); return [0,1,2,3,4,5,6].map(i=>iso(new Date(new Date(w+"T12:00:00").getTime()+i*864e5))); };
 function grSekme(){ return `<div class="seg"><button data-act="grsekme" data-v="bugun" aria-pressed="${GR.sekme!=="hafta"}">Bugün</button><button data-act="grsekme" data-v="hafta" aria-pressed="${GR.sekme==="hafta"}">Bu hafta</button></div>`; }
 /* Öğrenci: Çalışma grubum */
+const cihazTur = () => /iPad|Tablet|Android(?!.*Mobile)/i.test(navigator.userAgent) ? "tab" : /Mobi|iPhone|Android/i.test(navigator.userAgent) ? "tel" : "pc";
+const CIHAZ_SVG = {tel:'<svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>', tab:'<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M11 18h2"/></svg>', pc:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>'};
+const MASA = 6;
+const ALEV_DK = 420; /* bugün 7 saati geçen alev alır */
+const ALEV_SVG = '<svg viewBox="0 0 24 32"><defs><linearGradient id="alv" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF3D00"/><stop offset=".55" stop-color="#FF9100"/><stop offset="1" stop-color="#FFD54F"/></linearGradient></defs><path class="a1" fill="url(#alv)" d="M12 1c1 5 7 8 7 16a7 7 0 0 1-14 0c0-4 2-6 3-8 0 3 1 4 2 4 0-4 0-8 2-12z"/><path class="a2" fill="#FFE082" d="M12 15c.6 3 3.5 4 3.5 8a3.5 3.5 0 0 1-7 0c0-2 1-3 1.6-4 .2 1.4.8 2 1.3 2-.2-2.2-.2-4.4.6-6z"/></svg>';
+/* Çalışma salonu: masalar, her masada 6 sandalye (3 üst, 3 alt). Oturma sırası grup listesindeki sıradır, böylece kimse yer değiştirmez. */
+function salonKoltuk(x, koc, ust){ if(!x) return `<div class="kol bos"><span class="sand">${'<svg viewBox="0 0 24 24"><path d="M6 10V4h12v6M5 10h14v4H5zM7 14v6M17 14v6"/></svg>'}</span></div>`;
+  const ad = koc ? ilkAd(x.ad)+(x.ad.split(/\s+/)[1] ? " "+x.ad.split(/\s+/).slice(-1)[0][0]+"." : "") : (x.takma || "Sen");
+  const sure = x.canli ? `<b class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</b>` : `<b class="num kz">${x.bugun?fmtMin(x.bugun):"00:00"}</b>`;
+  const av = `<span class="kav ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}" style="--gc:${avRenk(x.uid)}">${x.bugun>=ALEV_DK?`<span class="kalev" aria-label="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<span class="kin">${esc(initials(koc?x.ad:ad)||"?")}</span>${x.canli ? `<i class="kci">${CIHAZ_SVG[x.cihaz||"tel"]||CIHAZ_SVG.tel}</i>` : `<i class="kci uyu">z</i>`}</span>`;
+  const bilgi = `<span class="kcz ${x.canli?"on":x.bugun?"ara":""}"></span><b class="kad">${esc(ad)}${x.ben?` <em>sen</em>`:""}</b><small class="kders">${x.canli ? esc(dersEt(x.ders)) : x.bugun ? "Mola" : "Gelmedi"}</small><span class="ksu">${sure}<span class="ksv">Seviye ${x.seviye}</span></span>`;
+  return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${x.bugun>=ALEV_DK?"alev":""}" title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">${ust ? bilgi+av : av+bilgi}</div>`; }
+function salon(L, koc){ const F = GR.filtre || "tum", benim = L.find(x=>x.ben), bd = benim && benim.canli ? benim.ders : "";
+  let G = L; if(F==="calisan") G = L.filter(x=>x.canli); else if(F==="ayni") G = L.filter(x=>x.canli && x.ders===bd);
+  const n = Math.max(1, Math.ceil(G.length/MASA)), masalar = [...Array(n)].map((_,i)=>G.slice(i*MASA, i*MASA+MASA));
+  const cip = (k, ad, say, kapali) => `<button class="scip ${F===k?"on":""}" data-act="grfiltre" data-v="${k}" ${kapali?"disabled":""}>${ad}${say!=null?` · ${say}`:""}</button>`;
+  return `<div class="salon"><div class="scipler">${cip("tum","Tümü",L.length)}${cip("calisan","Çalışanlar",L.filter(x=>x.canli).length)}${koc?"":cip("ayni", bd ? `Aynı derstekiler (${GDERS_K[bd]||dersEt(bd)})` : "Aynı derstekiler", bd ? L.filter(x=>x.canli && x.ders===bd).length : null, !bd)}</div>
+    ${!G.length ? `<div class="sbos">${F==="ayni" ? "Şu an seninle aynı derse çalışan yok." : "Şu an kimse çalışmıyor. İlk sen otur!"}</div>` : `<div class="masalar">`+masalar.map((m,i)=>{ const p = [...m, ...Array(MASA-m.length).fill(null)];
+      return `<div class="masa"><div class="mrow ust">${p.slice(0,3).map(x=>salonKoltuk(x,koc,true)).join("")}</div><div class="mtahta"><span>${'<svg viewBox="0 0 24 24"><path d="M9 3h6l-1 6h-4zM12 9v12M8 21h8"/></svg>'} MASA ${i+1}</span><em class="num">${m.filter(x=>x.canli).length}/${m.length}</em></div><div class="mrow alt">${p.slice(3,6).map(x=>salonKoltuk(x,koc,false)).join("")}</div></div>`; }).join("")+`</div>`}
+    <p class="snot">${ALEV_SVG} Bugün 7 saati geçenler alev alır · Seviye son 7 günün ortalamasına göre (günde 1 saat → Seviye 1 … 4+ saat → Seviye 5)</p>
+  </div>`; }
+const gorSec = () => `<div class="seg gorseg"><button data-act="grgor" data-v="salon" aria-pressed="${GR.gor!=="liste"}">Salon</button><button data-act="grgor" data-v="liste" aria-pressed="${GR.gor==="liste"}">Sıralama</button></div>`;
 function pGrup(s){ const head = topbar(`<h1 class="ttl">Çalışma Grubum</h1>`, "", `<button class="iconbtn" data-act="go" data-v="kronometre" aria-label="Geri">${icon("back")}</button>`);
   if(!GR.list.size) return `${head}<div class="page"><div class="card"><div class="empty" style="padding:24px 8px">${icon("user")}<b>Henüz bir çalışma grubunda değilsin</b><p class="muted small">Koçun seni bir gruba eklediğinde, gruptaki arkadaşlarının şu an çalışıp çalışmadığını burada göreceksin.</p></div></div></div>`;
   const gid = GR.list.has(GR.sec) ? GR.sec : [...GR.list.keys()][0], g = GR.list.get(gid), L = grSirala(grUyeler(gid), GR.sekme), on = L.filter(x=>x.canli).length, run = !!(s.timer && s.timer.start);
@@ -1041,8 +1067,8 @@ function pGrup(s){ const head = topbar(`<h1 class="ttl">Çalışma Grubum</h1>`,
       ${run ? `<div class="gben on"><span class="gcanli"><i></i><span>Sen de çalışıyorsun<b class="num" data-tlive>${clock(timerMin(s)*60)}</b></span></span><button class="btn sm" data-act="go" data-v="kronometre">Kronometre</button></div>`
         : `<button class="btn pri full" data-act="go" data-v="kronometre">${icon("play","sm")} Çalışmaya başla</button>`}
       ${sira ? `<p class="gsiram">${GR.sekme==="hafta"?"Bu hafta":"Bugün"} gruptaki sıran: <b>${sira}.</b>${sira>1 ? ` Bir üstündekine <b>${fmtMin(Math.max(1, (GR.sekme==="hafta"?L[sira-2].hafta-ben.hafta:L[sira-2].bugun-ben.bugun)))}</b> var.` : " Zirvedesin! 🏆"}</p>` : ""}</div>
-    ${grSekme()}
-    <div class="card glist">${L.map((x,i)=>grSatir(x, i, GR.sekme, false)).join("")}</div>
+    ${gorSec()}
+    ${GR.gor==="liste" ? `${grSekme()}<div class="card glist">${L.map((x,i)=>grSatir(x, i, GR.sekme, false)).join("")}</div>` : salon(L.slice().sort((a,b)=>(g.uyeler||[]).indexOf(a.uid)-(g.uyeler||[]).indexOf(b.uid)), false)}
     <p class="faint small" style="text-align:center;margin:4px 0 0">Kronometre 4 saatten uzun açık kalırsa kendiliğinden kapanır.${takmaAd(s)?` · <button class="lnk" data-act="sheet" data-v="takma">Takma adını değiştir</button>`:""}</p>
   </div>`; }
 /* Kronometre sayfasındaki küçük grup kartı */
@@ -1060,8 +1086,9 @@ function cGruplar(){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.s
   <div class="page wide">
     <div class="card ghero"><div class="ghh"><div><small>ŞU AN</small><h2><span class="num">${on.length}</span> öğrenci çalışıyor</h2><span class="gonl">${hepsi.filter(x=>x.bugun>0).length} öğrenci bugün çalıştı · ${hepsi.filter(x=>!x.bugun && !x.canli).length} öğrenci henüz başlamadı</span></div></div>
       ${on.length ? `<div class="gcanlilar">${on.map(x=>`<div class="gcc">${grAvatar(x.ad, x.uid, true)}<div><b>${esc(ilkAd(x.ad))}</b><small>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></small></div></div>`).join("")}</div>` : ""}</div>
-    ${grSekme()}
-    ${G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(hepsi.filter(x=>(g.uyeler||[]).includes(x.uid)), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
+    ${gorSec()}${GR.gor==="liste"?grSekme():""}
+    ${G.length && GR.gor!=="liste" ? G.map(([gid,g])=>{ const L = hepsi.filter(x=>(g.uyeler||[]).includes(x.uid)).sort((a,b)=>(g.uyeler||[]).indexOf(a.uid)-(g.uyeler||[]).indexOf(b.uid));
+      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(hepsi.filter(x=>(g.uyeler||[]).includes(x.uid)), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
       return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>
         ${L.length ? L.map((x,i)=>grSatir(x, i, GR.sekme, true)).join("") : `<p class="muted small">Bu grupta henüz öğrenci yok. Düzenle'ye dokunup öğrenci ekle.</p>`}</div>`; }).join("")}</div>`
       : `<div class="card"><div class="empty" style="padding:22px 8px">${icon("user")}<b>Henüz grup yok</b><p class="muted small">Öğrencilerini istediğin gibi gruplara ayır (ör. “Hedef Tıp”, “12. sınıflar”). Gruptakiler birbirinin şu an çalışıp çalışmadığını takma adla görür.</p><button class="btn pri" data-act="sheet" data-v="grup">${icon("plus","sm")} İlk grubu kur</button></div></div>`}
@@ -2782,15 +2809,17 @@ document.addEventListener("click", e=>{
     case "sb": mutate(s=>{ const t=topic(s,b.dataset.k); t[b.dataset.f]=!t[b.dataset.f]; }); keepOpen(()=>render()); break;
     case "ddel": { if(!b.dataset.armed){ b.dataset.armed="1"; b.style.color="var(--bad)"; b.style.borderColor="var(--bad)"; toast("Silmek için tekrar dokun"); setTimeout(()=>{ if(b.isConnected){ delete b.dataset.armed; b.style.color=""; b.style.borderColor=""; } },2500); break; }
       mutate(s=>{ const dd = (s.denemeler||[]).find(d=>d.id===b.dataset.id); if(dd && dd.yk) Object.entries(dd.yk).forEach(([k,n])=>{ const tp = (s.topics||{})[k]; if(tp){ tp.y = Math.max(0,(tp.y||0)-n); if(!tp.y) delete tp.y; } }); s.denemeler=s.denemeler.filter(d=>d.id!==b.dataset.id); }); render(); toast("Deneme silindi"); break; }
-    case "tstart": mutate(s=>{ s.timer={start:Date.now(), ...(S.kDers?{ders:S.kDers}:{})}; }); render(); break;
+    case "tstart": mutate(s=>{ s.timer={start:Date.now(), cihaz:cihazTur(), ...(S.kDers?{ders:S.kDers}:{})}; }); render(); break;
     case "kders": S.kDers = S.kDers===v ? "" : v; render(); break;
     case "grsec": GR.sec = v; render(); break;
     case "grsekme": GR.sekme = v; render(); break;
+    case "grgor": GR.gor = v; render(); break;
+    case "grfiltre": GR.filtre = v; render(); break;
     case "otoTamam": mutate(x=>{ delete x.kronOto; }); render(); break;
     case "grsil": if(confirm("Bu grup silinsin mi? Öğrencilerin kayıtları silinmez.")){ (async()=>{ try{ await deleteDoc(doc(fdb,"gruplar",v)); closeSheet(); toast("Grup silindi"); }catch(e){ toast("Silinemedi"); } })(); } break;
     case "tstop": { const {added} = sayacDurdur(false); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
     case "tgbasla": { const s0 = st(); if(s0 && s0.timer){ const r = sayacDurdur(false); if(r.added>0) toast(`Önceki sayaç durdu · +${fmtMin(r.added)}`); }
-      mutate(s=>{ s.timer = {start:Date.now(), task:{id:b.dataset.id, date:b.dataset.date}}; }); render(); toast("Sayaç başladı · ara verirken “Durdur”a bas"); break; }
+      mutate(s=>{ s.timer = {start:Date.now(), cihaz:cihazTur(), task:{id:b.dataset.id, date:b.dataset.date}}; }); render(); toast("Sayaç başladı · ara verirken “Durdur”a bas"); break; }
     case "tgbitir": { const {added, ad} = sayacDurdur(v==="bitti"); render();
       toast(v==="bitti" ? `Tebrikler! ${added>0?`+${fmtMin(added)} · `:""}görev tamamlandı` : (added>0?`+${fmtMin(added)} kaydedildi · görevi bitirdiysen yuvarlağa dokun`:"1 dakikadan kısa süre kaydedilmedi")); break; }
     case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); if(v==="kaynak") kysNot(); break;
