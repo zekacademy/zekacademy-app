@@ -1015,7 +1015,8 @@ function avVarsayilan(key){ const h = k => (Math.imul(strHash((key||"x")+":"+k),
   return {ten:h("t")%5, sac:["kisa","yan","fade","dalga","uzun","omuz","kuyruk","topuz","kivircik"][h("s")%9], sacR:h("r")%6, basR:h("b")%8, giy:AVK.giy[h("y")%5], gom:h("g")%8, sakal:"yok", goz:"normal", kas:AVK.kas[h("k")%3], aks:["yok","yok","gozluk","kulaklik"][h("a")%4], masa:[]}; }
 function avOf(key){ const s = S.students.get(key); if(s && s.avatar) return s.avatar; for(const m of GR.canli.values()){ const c = m.get(key); if(c && c.avatar) return c.avatar; } return avVarsayilan(key); }
 /* Karakter: baş merkezi (50,40); yetişkin oranlar, sade renkler */
-function karakterSVG(av, uyanik=true){ av = {...avVarsayilan(""), ...(av||{})};
+const AV_TEMEL = {ten:1, sac:"kisa", sacR:0, basR:0, giy:"tisort", gom:0, sakal:"yok", goz:"normal", kas:"duz", aks:"yok", masa:[]};
+function karakterSVG(av, uyanik=true){ av = {...AV_TEMEL, ...(av||{})};
   const ten = AVK.ten[av.ten] || AVK.ten[1], sr = AVK.sacR[av.sacR] || AVK.sacR[0], gr = AVK.gom[av.gom] || AVK.gom[0], br = AVK.basR[av.basR] || AVK.basR[0], sac = av.sac || "kisa", bas = BASORTU.has(sac);
   const golge = "rgba(0,0,0,.14)", acik = "rgba(255,255,255,.22)";
   const arka = bas ? "" : {uzun:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v24c-5 3-27 3-32 0z" fill="${sr}"/>`, omuz:`<path d="M34 38c0-13 7-21 16-21s16 8 16 21v15c-5 3-27 3-32 0z" fill="${sr}"/>`,
