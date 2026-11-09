@@ -1066,7 +1066,7 @@ body{background:var(--bg)}
 .salon{--sbg1:color-mix(in srgb,var(--ac) 16%,var(--surface));--sbg2:color-mix(in srgb,var(--ac) 7%,var(--surface));background:linear-gradient(180deg,var(--sbg1),var(--sbg2));color:var(--fg);border-radius:24px;padding:14px 12px 16px;border:1px solid color-mix(in srgb,var(--ac) 18%,transparent)}
 .scipler{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
 .scip{border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:99px;cursor:pointer}
-.scip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.scip.on{background:var(--ac);border-color:var(--ac);color:var(--surface)}
 .scip:disabled{opacity:.4;cursor:default}
 .sbos{text-align:center;padding:30px 10px;color:var(--muted);font-size:14px}
 .masa{margin-top:12px;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:10px 4px 8px;background:rgba(255,255,255,.025)}
@@ -1157,7 +1157,7 @@ body{background:var(--bg)}
 .avsekme{display:flex;gap:4px;background:var(--sunk);border-radius:14px;padding:4px;margin-top:14px;overflow-x:auto}
 .avsekme button{flex:1;border:0;background:none;font:inherit;font-weight:700;font-size:13px;color:var(--muted);padding:8px 10px;border-radius:10px;cursor:pointer;white-space:nowrap}
 .avsekme button.on{background:var(--surface);color:var(--fg);box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.avsec.sekil .avb{width:64px;height:78px;border-radius:14px;overflow:hidden;position:relative;background:#DCE3EE;display:flex;flex-direction:column;justify-content:flex-end}
+.avsec.sekil .avb{width:64px;height:78px;border-radius:14px;overflow:hidden;position:relative;background:color-mix(in srgb,var(--ac) 12%,var(--surface));display:flex;flex-direction:column;justify-content:flex-end}
 .avsec.sekil .avb .avmini{position:absolute;inset:0 0 16px 0}.avsec.sekil .avb .avmini .kar{position:absolute;left:-12%;top:-4%;width:124%;height:auto}
 .avsec.sekil .avb em{position:relative;z-index:2;font-style:normal;font-size:9.5px;font-weight:700;line-height:1.1;background:var(--surface);color:var(--fg);padding:3px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .avmasa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
@@ -1181,6 +1181,7 @@ body{background:var(--bg)}
 .ghome{display:flex;align-items:center;gap:12px;width:100%;text-align:left;color:var(--fg);border:1.5px solid var(--ac)}
 .ghome b{display:block;font-size:15px}.ghome small{color:var(--muted);font-size:12.5px}
 .ghomek{width:52px;height:52px;border-radius:50%;flex:none;background:color-mix(in srgb,var(--ac) 16%,var(--surface));overflow:hidden;position:relative}.ghomek .kar{position:absolute;left:-20%;top:-6%;width:140%;height:auto}
+.ktop{font-size:11.5px;font-weight:600;color:var(--muted);margin:-2px 0 2px;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--ac) 9%,var(--surface))}.ktop b{color:var(--fg);font-weight:800}.kol.alev .ktop b{color:#E8590C}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
