@@ -1182,6 +1182,17 @@ body{background:var(--bg)}
 .ghome b{display:block;font-size:15px}.ghome small{color:var(--muted);font-size:12.5px}
 .ghomek{width:52px;height:52px;border-radius:50%;flex:none;background:color-mix(in srgb,var(--ac) 16%,var(--surface));overflow:hidden;position:relative}.ghomek .kar{position:absolute;left:-20%;top:-6%;width:140%;height:auto}
 .ktop{display:flex;flex-direction:column;align-items:center;line-height:1.15;margin:0 0 3px;padding:4px 10px;border-radius:10px;background:color-mix(in srgb,var(--ac) 9%,var(--surface));max-width:100%}.ktop small{font-size:8.5px;font-weight:800;letter-spacing:.06em;color:var(--muted);white-space:nowrap}.ktop b{color:var(--fg);font-weight:800;font-size:13px;white-space:nowrap}.kol.alev .ktop b{color:#E8590C}
+.benk{display:flex;gap:12px;align-items:center;margin-top:14px;padding:10px 12px 10px 8px;border-radius:18px;background:var(--surface);color:var(--fg)}
+.benk .ksah{width:118px;flex:none;margin:0;max-width:none}
+.benb{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.benb>small{font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--muted);opacity:1}
+.benb>b{font-size:18px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.benm{font-size:12.5px;color:var(--muted);line-height:1.3}.benm b{color:var(--fg)}
+.benm .gcanli{color:var(--good)}.benm .gcanli i{background:var(--good)}
+.benbt{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.ghero .benbt .btn.pri{background:var(--ac);color:#fff;margin-top:0}
+.ghero .benbt .btn{margin-top:0}
+@media (max-width:360px){ .benk .ksah{width:96px} .benb>b{font-size:16px} }
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

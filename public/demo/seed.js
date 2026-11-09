@@ -2,7 +2,7 @@
    Açmak: ?demo=1   Kapatmak: ?demo=0
    Koç girişi: zekacademy / demo1234   Öğrenci girişi: demo / 123456 */
 (function(){
-  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "8") return;
+  if (localStorage.getItem("mockDb") && localStorage.getItem("zk-demo-v") === "9") return;
   var gun = 864e5, bugun = new Date(); bugun.setHours(12,0,0,0);
   function iso(d){ var x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0,10); }
   function ekle(d, n){ return iso(new Date(new Date(d + "T12:00:00").getTime() + n*gun)); }
@@ -84,7 +84,7 @@
   ornek.forEach(function(o, i){ var u = "dg"+(i+1), x = basit(o[0], o[1], 40+i*3, 0); x.takma = o[2]; x.sinif = i%2 ? "Mezun" : "12. sınıf";
     for(var j=1;j<=6;j++){ var dd = ekle(t,-j); x.gunluk[dd] = [180,210,150,240,200,170][ (i+j)%6 ] - i*10; }
     if(o[5]) x.gunluk[t] = o[5]; if(o[4]) x.timer = {start: simdi - o[4]*dk, ders:o[3] || undefined, cihaz:o[6] || "tel"}; if(!o[3] && o[4]) delete x.timer.ders;
-    x.avatar = [{cins:"e",ten:1,sac:"fade",sacR:0,giy:"kapus",gom:0,sakal:"hafif",kas:"kalin",aks:"kulaklik"},{cins:"k",ten:0,sac:"basortu",basR:1,giy:"forma",gom:0,kas:"kavis"},{cins:"e",ten:3,sac:"kivircik",sacR:0,giy:"tisort",gom:7,sakal:"keci"},{cins:"k",ten:2,sac:"sal",basR:4,giy:"kazak",gom:4,aks:"gozluk"},{cins:"e",ten:1,sac:"yan",sacR:1,giy:"gomlek",gom:5,sakal:"biyik"},{cins:"k",ten:4,sac:"orgu",sacR:0,giy:"kazak",gom:2,kas:"kavis"},{cins:"e",ten:0,sac:"kisa",sacR:2,giy:"gomlek",gom:8,aks:"yuvarlak",kas:"duz"},{cins:"k",ten:2,sac:"basortu",basR:2,giy:"kapus",gom:3,goz:"badem"},{cins:"e",ten:1,sac:"kel",sacR:5,giy:"kapus",gom:7,sakal:"sakal"}][i];
+    x.avatar = [{cins:"e",ten:1,sac:"fade",sacR:0,giy:"kapus",gom:0,sakal:"hafif",kas:"kalin",aks:"kulaklik",ruh:"kararli",masaR:1,masaSol:"kitaplar",masaSag:"kahve",masaOn:"yks"},{cins:"k",ten:0,sac:"basortu",basR:1,giy:"forma",gom:0,kas:"kavis",ruh:"mutlu",masaR:2,masaSol:"lamba",masaSag:"bitki",masaOn:"postit",detay:"cil"},{cins:"e",ten:3,sac:"kivircik",sacR:0,giy:"tisort",gom:7,sakal:"keci",ruh:"odakli",masaR:4,masaSag:"su"},{cins:"k",ten:2,sac:"sal",basR:4,giy:"kazak",gom:4,aks:"gozluk",ruh:"heyecanli",masaR:3,masaSol:"kalemlik",masaSag:"saat",masaOn:"yildiz"},{cins:"e",ten:1,sac:"yan",sacR:1,giy:"gomlek",gom:5,sakal:"biyik",ruh:"odakli",masaR:0,masaSol:"kitaplar",masaSag:"su",detay:"ben"},{cins:"k",ten:4,sac:"orgu",sacR:0,giy:"kazak",gom:2,kas:"kavis",ruh:"mutlu",masaR:5,masaSol:"lamba",masaSag:"kahve",masaOn:"postit"},{cins:"e",ten:0,sac:"kisa",sacR:2,giy:"gomlek",gom:8,aks:"yuvarlak",kas:"duz",ruh:"kararli",masaR:1,masaSol:"kalemlik",masaSag:"saat",masaOn:"yks"},{cins:"k",ten:2,sac:"basortu",basR:2,giy:"kapus",gom:3,goz:"badem",ruh:"odakli",masaR:2,masaSag:"bitki"},{cins:"e",ten:1,sac:"kel",sacR:5,giy:"kapus",gom:7,sakal:"sakal",ruh:"yorgun",masaR:4,masaSag:"kahve"}][i];
     db["students/"+u] = x; uyeler.push(u); });
 
   elif.takma = "Elif2027";
@@ -100,7 +100,7 @@
   localStorage.setItem("mockUsers", JSON.stringify({"zekacademy@app.zekacademy.com":{uid:"coach1", p:"demo1234"}, "demo@app.zekacademy.com":{uid:"demo1", p:"123456"},
     "mertornek@app.zekacademy.com":{uid:"demo2", p:"123456"}, "zeynepornek@app.zekacademy.com":{uid:"demo3", p:"123456"}}));
   localStorage.removeItem("mockUser");
-  localStorage.setItem("zk-demo-v", "8");
+  localStorage.setItem("zk-demo-v", "9");
 })();
 document.addEventListener("DOMContentLoaded", function(){
   var b = document.createElement("div");
