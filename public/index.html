@@ -997,6 +997,69 @@ body{background:var(--bg)}
   .btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{transition:background-color .15s ease,color .15s ease}
   *:active{transform:none!important}
 }
+
+/* ---------- Çalışma grupları ---------- */
+.gav{--gc:var(--ac);width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff;background:var(--gc);position:relative;box-shadow:0 0 0 2px var(--surface)}
+.gav.on{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--good)}
+.gav.on::after{content:"";position:absolute;right:-1px;bottom:-1px;width:12px;height:12px;border-radius:50%;background:var(--good);border:2px solid var(--surface)}
+.gav.big{width:56px;height:56px;font-size:19px}
+.gcanli{display:inline-flex;align-items:center;gap:6px;color:var(--good);font-weight:700}
+.gcanli i{width:8px;height:8px;border-radius:50%;background:var(--good);animation:gnab 1.6s ease-in-out infinite;flex:none}
+@keyframes gnab{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 55%,transparent)}50%{box-shadow:0 0 0 5px transparent}}
+.ghero{background:linear-gradient(150deg,var(--ac),var(--ac2));color:#fff;border:0}
+.ghero small{font-size:11px;font-weight:800;letter-spacing:.08em;opacity:.8}
+.ghero h2{margin:2px 0 6px;font-size:22px;color:#fff}
+.ghh{display:flex;align-items:flex-start;gap:12px;justify-content:space-between}
+.gonl{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;opacity:.95}
+.gonl i{width:8px;height:8px;border-radius:50%;background:#7CF2A8;box-shadow:0 0 0 3px rgba(124,242,168,.3)}
+.gyig{display:flex;flex:none}.gyig .gav{width:34px;height:34px;font-size:12px;margin-left:-8px;box-shadow:0 0 0 2px var(--ac)}.gyig .gav.on::after{display:none}
+.ghero .btn.pri{background:#fff;color:var(--ac);margin-top:14px;box-shadow:none}
+.gben{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.16)}
+.gben .gcanli{color:#fff;font-size:14px}.gben .gcanli>span{display:flex;flex-direction:column;line-height:1.25}.gben .gcanli b{font-size:20px}.gben .gcanli i{background:#7CF2A8}.gben .btn{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+.gsiram{margin:12px 0 0;font-size:13.5px;opacity:.95}
+.glist{padding-top:6px;padding-bottom:6px}
+.gsat{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.glist .sech + .gsat,.glist > .gsat:first-child{border-top:0}
+.gsat.ben{background:var(--acs);margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:14px;border-top-color:transparent}
+.gsat.ben + .gsat{border-top-color:transparent}
+.gsira{width:18px;text-align:center;font-weight:800;color:var(--faint);font-size:13px;flex:none}
+.gsat:nth-of-type(1) .gsira{color:#D4A20B}
+.gtx{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.gtx b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gtx small{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gdk{font-size:15px;flex:none;min-width:58px;text-align:right}
+.gsat.on .gdk{color:var(--good)}
+.g7{display:flex;align-items:flex-end;gap:3px;height:26px;flex:none}
+.g7 i{width:6px;height:var(--h);min-height:3px;border-radius:3px;background:var(--ac);opacity:.75}
+.g7 i.z{background:var(--line);opacity:1}.g7 i.bg{opacity:1;outline:1.5px solid var(--ac);outline-offset:1px}
+.gkart{display:flex;align-items:center;gap:12px;width:100%;text-align:left;color:var(--fg)}
+.gkart b{display:block;font-size:15px}.gkart .gcanli{align-items:flex-start}.gkart .gcanli i{margin-top:5px}.gkart small{font-size:12.5px;color:var(--muted)}
+.gkart .gyig .gav{box-shadow:0 0 0 2px var(--surface)}
+.gkart .gyig{margin-left:8px}
+.gcanlilar{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,175px),1fr));gap:8px;margin-top:14px}
+.gcc{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px;background:rgba(255,255,255,.14)}
+.gcc .gav{width:34px;height:34px;font-size:12px;box-shadow:0 0 0 2px #7CF2A8}.gcc .gav::after{display:none}
+.gcc>div{min-width:0}.gcc b{display:block;font-size:13.5px}.gcc small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gcc small{font-size:12px;opacity:.9;font-weight:600;letter-spacing:0}
+.ggrid{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}.ggrid>.card{min-width:0}
+.glist .sech{flex-wrap:nowrap;align-items:flex-start}.glist .sech .iconbtn{flex:none}
+@media (min-width:1000px){ .ggrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start} }
+.gsec{display:flex;flex-direction:column;max-height:46vh;overflow:auto;border:1px solid var(--line);border-radius:14px}
+.gsl{display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid var(--line);cursor:pointer}
+.gsl:first-child{border-top:0}.gsl .av{width:34px;height:34px;font-size:12px}
+.gsl b{display:block;font-size:14px}.gsl small{font-size:12px}
+.gsl input{width:20px;height:20px;accent-color:var(--ac);flex:none}
+.gtkon{display:flex;align-items:center;gap:14px}
+.gotok{border:1.5px solid var(--warn);background:var(--warns)}
+.gtakma{border:1.5px solid var(--ac)}
+.kders{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center}
+.kders .pills{justify-content:center}
+.timer .kders .faint{color:rgba(255,255,255,.75)}
+.timer .kders .btn{background:rgba(255,255,255,.14);color:#fff;border-color:transparent;box-shadow:none;min-height:34px}
+.timer .kders .btn.pri{background:#fff;color:var(--ac)}
+.lnk{background:none;border:0;padding:0;color:var(--ac);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer}
+@media (max-width:380px){ .gdk{min-width:48px;font-size:14px} }
+@media (max-width:560px){ .g7{display:none} }
+.g7 i.bg{outline:0;background:var(--ac2)}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

@@ -71,6 +71,20 @@ service cloud.firestore {
       allow delete: if isCoach();
       allow create, update: if false;
     }
+    // Çalışma grupları: koç kurar; üyeler grubu ve birbirinin canlı özetini (takma ad, kronometre) görür.
+    // Her öğrenci sadece kendi özetini yazar; gerçek ad ve diğer veriler bu belgede yok.
+    function grupUyesi(gid) { return signedIn() && request.auth.uid in get(/databases/$(database)/documents/gruplar/$(gid)).data.uyeler; }
+    match /gruplar/{gid} {
+      allow read: if isCoach() || (signedIn() && request.auth.uid in resource.data.uyeler);
+      allow write: if isCoach();
+      match /canli/{uid} {
+        allow read: if isCoach() || grupUyesi(gid);
+        allow delete: if isCoach();
+        allow create, update: if isCoach() || (isSelf(uid) && grupUyesi(gid)
+          && request.resource.data.keys().hasOnly(['takma', 'basla', 'ders', 'gun', 'bugunDk', 'gunler', 'at'])
+          && request.resource.data.takma is string && request.resource.data.takma.size() <= 16);
+      }
+    }
     match /notifs/{id} {
       allow read, update, delete: if isCoach();
       allow create: if isCoach() || signedIn() && request.resource.data.sid == request.auth.uid
