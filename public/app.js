@@ -663,10 +663,10 @@ function soruKart(id, q){ return `<button class="sqk ${q.durum==="cozuldu"?"ok":
 function pSorular(s, sid_){ const L = soruList(sid_), f = S.sqf || "bekliyor", G = L.filter(([,q])=> f==="tum" || (f==="cozuldu" ? q.durum==="cozuldu" : q.durum!=="cozuldu"));
   const bek = L.filter(([,q])=>q.durum!=="cozuldu").length;
   const head = A() ? "" : topbar(`<h1 class="ttl">Takıldığım sorular</h1>`, `<button class="iconbtn" data-act="sheet" data-v="soruekle" aria-label="Soru ekle">${icon("plus")}</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${A()?"":`<div class="card note"><span class="av">❓</span><div><b>Çözemediğin soruyu biriktir</b><div class="muted small">Fotoğrafını çek, dersini seç ve burada biriktir. Çözdüğünde “çözüldü” yap.</div></div></div>
     <button class="btn pri full" data-act="sheet" data-v="soruekle">${icon("plus","sm")} Soru ekle</button>`}
-    <div class="seg"><button data-act="sqf" data-v="bekliyor" aria-pressed="${f==="bekliyor"}">Bekleyen ${bek}</button><button data-act="sqf" data-v="cozuldu" aria-pressed="${f==="cozuldu"}">Çözülen ${L.length-bek}</button><button data-act="sqf" data-v="tum" aria-pressed="${f==="tum"}">Tümü</button></div>
+    <div class="seg" style="width:100%;max-width:520px;align-self:center"><button data-act="sqf" data-v="bekliyor" aria-pressed="${f==="bekliyor"}">Bekleyen ${bek}</button><button data-act="sqf" data-v="cozuldu" aria-pressed="${f==="cozuldu"}">Çözülen ${L.length-bek}</button><button data-act="sqf" data-v="tum" aria-pressed="${f==="tum"}">Tümü</button></div>
     ${G.length ? `<div class="sqgrid">${G.map(([id,q])=>soruKart(id,q)).join("")}</div>` : `<div class="empty">${L.length ? "Bu filtrede soru yok." : (A() ? "Öğrenci henüz soru eklemedi." : "Henüz soru eklemedin. Takıldığın ilk soruyu ekle.")}</div>`}
   </div>`; }
 function sMore(s){
@@ -875,7 +875,7 @@ function pAnaliz(s){
   const tot = last ? totalOf(last) : null, dl = last&&prev ? tot-totalOf(prev) : null;
   const hedef = num(s.hedef[tur.toLowerCase()]), bas = num(s.baslangic[tur.toLowerCase()]);
   const head = A() ? "" : topbar(`<h1 class="ttl">Deneme Analizi</h1>`, `<button class="iconbtn" data-act="sheet" data-v="takvim" aria-label="Deneme takvimi">${icon("cal")}</button><button class="iconbtn" data-act="sheet" data-v="deneme" aria-label="Deneme ekle">${icon("plus")}</button>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     <div class="seg"><button data-act="ex" data-v="TYT" aria-pressed="${tur==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${tur==="AYT"}">AYT</button></div>
     <div class="card">
       ${last?`<div class="muted small" style="font-weight:700">Son ${tur} denemen · ${esc(last.yayin||"")} · ${trDate(last.tarih)}</div>
@@ -907,7 +907,7 @@ function pKonularMaarif(s){
   let sum = 0, c = 0; list.forEach(sub=>sub.t.forEach(n=>{ sum += topicScore(s.topics[tkey(sub.k,n)]); c++; })); const pct = c ? sum/c : 0;
   const dersler = [...new Set(list.map(x=>x.ders))];
   const head = A() ? "" : topbar(`<h1 class="ttl">Konu Takibi</h1>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${asamaSeg()}
     <div class="card"><div class="sech"><h3>${mx}. Aşama ilerlemesi${mx===2?` · ${esc(s.alan)}`:""}</h3><b class="num">%${Math.round(pct*100)}</b></div><div class="bar" style="margin-top:10px"><i style="width:${pct*100}%"></i></div>
       <p class="muted small" style="margin:10px 0 0">Maarif Modeli konuları, temalara göre. ${mx===1?"9. ve 10. sınıf temaları.":"11. sınıf temaları."} Her konuda: tekrar sayısı, 1. ve 2. soru bankası. Üçü tamamlanan konu yeşil olur.</p>
@@ -939,7 +939,7 @@ function pKonular(s){
   if(isMaarif(s)) return pKonularMaarif(s);
   const ex = S.ex, list = ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll), pct = examPct(s, ex);
   const head = A() ? "" : topbar(`<h1 class="ttl">Konu Takibi</h1>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     <div class="seg"><button data-act="ex" data-v="TYT" aria-pressed="${ex==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${ex==="AYT"}">AYT</button></div>
     <div class="card"><div class="sech"><h3>${ex} ilerlemesi${ex==="AYT"?` · ${esc(s.alan)}`:""}</h3><b class="num">%${Math.round(pct*100)}</b></div><div class="bar" style="margin-top:10px"><i style="width:${pct*100}%"></i></div>
       <p class="muted small" style="margin:10px 0 0">Her konuda: tekrar sayısı, 1. ve 2. soru bankası. Üçü tamamlanan konu yeşil olur.</p>
@@ -954,7 +954,7 @@ function pCetele(s){
   const MX = isMaarif(s), ex = MX ? `${S.mx||1}. Aşama` : S.ex, list = MX ? maarifList(s, S.mx||1, S.aytAll) : ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll);
   const CLS = subColors(list); let max = 1, total = 0; list.forEach(sub=>sub.t.forEach(n=>{ const y=(s.topics[tkey(sub.k,n)]||{}).y||0; max=Math.max(max,y); total+=y; }));
   const head = A() ? "" : topbar(`<h1 class="ttl">Yanlış Çetelesi</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${MX ? asamaSeg() : `<div class="seg"><button data-act="ex" data-v="TYT" aria-pressed="${ex==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${ex==="AYT"}">AYT</button></div>`}
     <div class="card"><div class="sech"><h3>${ex} toplam yanlış</h3><b class="num" style="color:var(--bad);font-size:22px">${total}</b></div><p class="muted small" style="margin:6px 0 0">Deneme ve testlerden sonra yanlış yaptığın konuları burada işaretle. En çok yanlış yapılan konular koçunun özetinde görünür.</p></div>
     ${list.map((sub,si)=>{ const tot = sub.t.reduce((a,n)=>a+((s.topics[tkey(sub.k,n)]||{}).y||0),0);
@@ -968,7 +968,7 @@ function pCalisma(s){
   const t = today(), run = !!(s.timer && s.timer.start), w = curStart(s);
   const days = pDays(s,w); const mins = days.map(d=>minutes(s,d)); const mx = Math.max(60,...mins);
   const head = A() ? "" : topbar(`<h1 class="ttl">Kronometre</h1>`, "", `<button class="iconbtn" data-act="go" data-v="home" aria-label="Geri">${icon("back")}</button>`);
-  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
+  return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${A()?"":`<div class="card timer"><div class="tface ${run?"run":""}"><b class="num" id="tval">${clock(run?timerMin(s)*60:0)}</b><small>${run?"çalışıyorsun":"hazır"}</small></div>
       ${run && s.timer.task ? (()=>{ const it = dayTasks(s, s.timer.task.date).find(x=>x.id===s.timer.task.id); return it ? `<div class="tgorev">${icon("target","xs")} ${esc(taskText(it))}</div>` : ""; })() : ""}
       <div class="tbtns">${run ? (s.timer.task ? `<button class="bigbtn stop" data-act="tgbitir" data-v="ara">${icon("stop","sm")} Durdur ve kaydet</button>` : `<button class="bigbtn stop" data-act="tstop">${icon("stop","sm")} Bitir ve kaydet</button>`) : `<button class="bigbtn" data-act="tstart">${icon("play","sm")} Çalışmaya başla</button>`}</div>
