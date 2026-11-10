@@ -1812,6 +1812,8 @@ function szHata(e){ const m = String((e && e.message) || "");
   if(/resim-buyuk/.test(m)) return "Fotoğraf çok büyük. Sadece soruyu içine alacak şekilde tekrar çek.";
   if(/deadline|timeout/i.test(m)) return "Çözüm çok uzun sürdü. Bir kez daha dene.";
   return "Şu an çözemedim, bağlantıda bir sorun var. Biraz sonra tekrar dene. (Hakkın düşmedi.)"; }
+/* İşlem satırı: ";" ile ayrılmış işlemler alt alta (telefonda yana kaydırma olmasın) */
+const szSatir = t => String(t==null?"":t).split(/\s*;\s*/).filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join("");
 const szInline = s => esc(String(s==null?"":s)).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
 function szMd(src){ const out = []; let list = null; const close = () => { if(list){ out.push(`</${list}>`); list = null; } };
   String(src||"").split("\n").forEach(raw=>{ const l = raw.trimEnd(); let m; if(!l.trim()){ close(); return; }
@@ -1834,9 +1836,9 @@ function szCozum(){ const d = SZ.data; if(!d) return "";
     h += H.slice(0, n).map((x,i)=>`<div class="szhint"><span>${i+1}</span><p>${szInline(x)}</p></div>`).join("");
     return h + `<div class="szlock"><span>Önce kendin dene 💪 Takılırsan:</span><div class="pills" style="justify-content:center">${n < H.length ? `<button class="btn sm" data-act="szipucu">💡 Bir ipucu daha</button>` : ""}<button class="btn sm pri" data-act="szcozumac">Çözümü göster</button></div></div>`; }
   const bl = (d.bilgi||[]).filter(x=>x && x.ifade);
-  if(bl.length) h += bl.map(x=>`<div class="szfact"><small>📌 ${esc(x.ad||"Kullanacağımız bilgi")}</small><div class="szf">${esc(x.ifade)}</div></div>`).join("");
+  if(bl.length) h += bl.map(x=>`<div class="szfact"><small>📌 ${esc(x.ad||"Kullanacağımız bilgi")}</small><div class="szf">${szSatir(x.ifade)}</div></div>`).join("");
   const A2 = d.adimlar || [], n = Math.min(SZ.shown, A2.length);
-  h += `<div class="szsteps">${A2.slice(0, n).map((a,i)=>`<div class="szstep"><span class="szn">${i+1}</span><div class="szsb"><h4>${szInline(a.baslik||("Adım "+(i+1)))}</h4>${a.aciklama?`<p>${szInline(a.aciklama)}</p>`:""}${a.islem?`<div class="szf">${esc(a.islem)}</div>`:""}
+  h += `<div class="szsteps">${A2.slice(0, n).map((a,i)=>`<div class="szstep"><span class="szn">${i+1}</span><div class="szsb"><h4>${szInline(a.baslik||("Adım "+(i+1)))}</h4>${a.aciklama?`<p>${szInline(a.aciklama)}</p>`:""}${a.islem?`<div class="szf">${szSatir(a.islem)}</div>`:""}
     <button class="link small" data-act="szadim" data-v="${i}" ${SZ.busy?"disabled":""}>🤔 ${SZ.aciklama[i] ? "Hâlâ anlamadım" : "Bu adımı anlamadım"}</button>${SZ.aciklama[i]!=null ? `<div class="szex">${SZ.aciklama[i]==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Daha basit anlatıyorum…` : szMd(SZ.aciklama[i])}</div>` : ""}</div></div>`).join("")}</div>`;
   if(n < A2.length) return h + `<div class="pills"><button class="btn pri" data-act="szsonraki">${n===0?"1. adımı göster":"Sonraki adım →"}</button><button class="btn" data-act="szhepsi">Hepsini göster</button></div>`;
   if(d.cevap) h += `<div class="szans"><span class="szbig">${esc(d.cevap.sik||"✓")}</span><div><small>Cevap</small><b>${d.cevap.sik?esc(d.cevap.sik)+" şıkkı":""}${d.cevap.deger?" · "+esc(d.cevap.deger):""}</b></div></div>`;
