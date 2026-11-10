@@ -30,6 +30,19 @@ body{margin:0}
 [hidden]{display:none!important}
 img{max-width:100%}
 .onzbar{position:sticky;top:0;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:#F59E0B;color:#1a1300;font-size:13px;font-weight:700}.onzbar span{display:flex;align-items:center;gap:6px;min-width:0}.onzbar .btn{background:#fff;color:#1a1300;border-color:transparent;flex:none}
+.krnbtn{display:flex;gap:12px;align-items:center;padding:14px;border:1.5px dashed var(--ac);border-radius:16px;background:var(--acs);cursor:pointer}
+.krnbtn b{display:block;font-size:15px}.krnbtn small{display:block;color:var(--muted);font-size:12.5px;line-height:1.35;margin-top:2px}
+.krnic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--ac);color:#fff;display:grid;place-items:center}
+.krnor{display:flex;align-items:center;gap:10px;color:var(--faint,var(--muted));font-size:12px;font-weight:700}.krnor::before,.krnor::after{content:"";flex:1;height:1px;background:var(--line)}
+.krnload{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px 0;text-align:center}
+.spin{width:36px;height:36px;border-radius:50%;border:3.5px solid var(--acs);border-top-color:var(--ac);animation:spin .9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.krn{border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px;opacity:.6}.krn.on{opacity:1;border-color:var(--ac)}
+.krnh{display:flex;align-items:center;gap:8px;flex-wrap:wrap;cursor:pointer}.krnh input{width:20px;height:20px;accent-color:var(--ac)}
+.krnt{display:grid;grid-template-columns:minmax(0,1fr) 54px 54px 72px;gap:6px;align-items:center;font-size:13px}
+.krnt>span:nth-child(-n+4){font-size:11px;font-weight:700;color:var(--muted);text-align:center}.krnt .nm{font-weight:600;text-align:left!important;font-size:13px!important;color:var(--fg)!important;min-width:0}
+.krnt input{width:100%;min-width:0;padding:7px 6px;text-align:center}.krnt b,.krnt .faint{text-align:center}
+.pill.warn{background:var(--warns);color:var(--warn)}
+.krngec>summary,.krnyk>summary{cursor:pointer}.krngec{display:flex;flex-direction:column;gap:10px}.krngec[open]>.krn{margin-top:10px}
 </style>
 <style>
 /* Layout: telefonda alt menü (ortada büyük Program butonu), geniş ekranda sol menü; içerik ortada tek sütun */
