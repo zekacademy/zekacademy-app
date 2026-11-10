@@ -1794,7 +1794,7 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
   S.role = "admin"; S.me = null; S.tur = null; S.turKapandi = false; S.cur = o.cur ?? null; S.view = "daha"; window.scrollTo(0,0); render(); }
 
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
-const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:50, uyari:40, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
+const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:100, uyari:80, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
 const callAi = (name, data) => window.ZK_ONZ && name!=="denemeOku" ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
