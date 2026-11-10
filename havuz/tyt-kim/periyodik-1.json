@@ -1,0 +1,471 @@
+[
+ {
+  "id": "tytkim-periyodik-0001",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "Atom numarasından elektron dizilimini yazıp elementin periyot ve grubunu bulur.",
+  "tipId": "kim-pr-yer",
+  "tip": "Atom numarasından periyot ve grup",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Atom numarası 17 olan X elementi periyodik sistemde hangi periyot ve grupta yer alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2. periyot 7A",
+   "B": "3. periyot 5A",
+   "C": "3. periyot 7A",
+   "D": "4. periyot 7A",
+   "E": "3. periyot 1A"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3. periyot 7A"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa elektron dizilimi 2, 8, 7 olduğu için üç katman vardır, periyot 3’tür",
+   "B": "Bu ifadeyi doğru sanmış; oysa son katmanda 7 elektron bulunduğundan grup 7A’dır",
+   "D": "Bu ifadeyi doğru sanmış; oysa elektronlar üç katmanda bulunur; dördüncü katman yoktur",
+   "E": "Bu ifadeyi doğru sanmış; oysa son katmanda 1 değil 7 elektron vardır"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "X elementinin periyodu ve grubu.",
+  "bilgi": [
+   {
+    "ad": "Periyot ve grup",
+    "ifade": "Katman sayısı periyot numarasını, son katmandaki elektron sayısı A grubu numarasını verir. Örnek: atom numarası 11 → 2, 8, 1 → 3. periyot 1A"
+   }
+  ],
+  "ipuclari": [
+   "Önce elektronları katmanlara 2, 8, 8 sırasıyla yerleştir; katman sayısı periyodu, son katmandaki elektron sayısı grubu verir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Elektron dizilimi",
+    "aciklama": "17 elektron 2, 8, 8 kuralıyla katmanlara yerleştirilir.",
+    "islem": "K: 2 · L: 8 · M: 7"
+   },
+   {
+    "baslik": "Periyot",
+    "aciklama": "Üç katman dolu olduğu için periyot 3’tür.",
+    "islem": "periyot = 3"
+   },
+   {
+    "baslik": "Grup",
+    "aciklama": "Son katmanda 7 elektron vardır.",
+    "islem": "grup = 7A"
+   }
+  ],
+  "puf": "Katman sayısı periyodu, son katmandaki elektron sayısı A grubunu verir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-01 (periyot ve grup) · atom numarası 17",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-periyodik-0002",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "Atom numarasından konum bulup atom yarıçaplarını karşılaştırır.",
+  "tipId": "kim-pr-yaricap",
+  "tip": "Atom yarıçapı sıralaması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "X, Y ve Z elementlerinin atom numaraları sırasıyla 11, 12 ve 19’dur.\nBuna göre bu atomların yarıçapları arasındaki ilişki aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "X > Y > Z",
+   "B": "Y > X > Z",
+   "C": "X > Z > Y",
+   "D": "Y > Z > X",
+   "E": "Z > X > Y"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Z > X > Y"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa Z’nin katman sayısı fazla olduğundan yarıçapı en büyüktür",
+   "B": "Bu ifadeyi doğru sanmış; oysa aynı periyotta soldan sağa gidildikçe yarıçap azalır, X Y’den büyüktür; ayrıca Z en büyüktür",
+   "C": "Bu ifadeyi doğru sanmış; oysa Z dört katmanlıdır, üç katmanlı X’ten büyüktür",
+   "D": "Bu ifadeyi doğru sanmış; oysa aynı periyotta X, Y’den büyüktür ve Z en büyük yarıçaplıdır"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Atom yarıçaplarının büyükten küçüğe sıralaması.",
+  "bilgi": [
+   {
+    "ad": "Atom yarıçapı",
+    "ifade": "Aynı grupta yukarıdan aşağı gidildikçe katman sayısı artar, yarıçap artar. Aynı periyotta soldan sağa gidildikçe çekirdek yükü artar, yarıçap azalır. Örnek: Na atomu Li atomundan büyüktür"
+   }
+  ],
+  "ipuclari": [
+   "Önce her elementin kaç katmanı olduğuna bak; katman sayıları eşitse çekirdek yükünün etkisine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Elektron dizilimleri",
+    "aciklama": "Dizilimlerden periyot ve grup bulunur.",
+    "islem": "X: 2, 8, 1 (3. periyot) · Y: 2, 8, 2 (3. periyot) · Z: 2, 8, 8, 1 (4. periyot)"
+   },
+   {
+    "baslik": "Katman sayısı",
+    "aciklama": "Z dört, X ve Y üç katmanlıdır; Z en büyüktür.",
+    "islem": "Z > X, Y"
+   },
+   {
+    "baslik": "Aynı periyot",
+    "aciklama": "X ile Y aynı periyottadır; Y daha sağdadır, daha küçüktür.",
+    "islem": "X > Y"
+   },
+   {
+    "baslik": "Sıralama",
+    "aciklama": "İki sonuç birleştirilir.",
+    "islem": "Z > X > Y"
+   }
+  ],
+  "puf": "Yarıçap karşılaştırmasında önce katman sayısına, eşitse atom numarasına bak (büyük atom numarası = daha küçük yarıçap).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-02 (atom yarıçapı) · atom numaraları 11, 12, 19",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-periyodik-0003",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "Atom numarasından konum bulup metal–ametal ve değerlik elektronu özelliklerini yorumlar.",
+  "tipId": "kim-pr-sinif",
+  "tip": "Atom numarasından element özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "X, Y ve Z elementlerinin atom numaraları sırasıyla 8, 11 ve 18’dir.\nBu elementlerle ilgili şunlar söyleniyor.\nI. X, 2. periyot 6A grubundadır.\nII. Y, 3. periyot 1A grubunda yer alan bir metaldir.\nIII. Z’nin son katmanında 2 elektron bulunur.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "Yalnız III",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "B": "II öncülünü yanlış sanmış; oysa Y’nin dizilimi 2, 8, 1’dir; 3. periyot 1A’da, elektron vermeye yatkın bir metaldir.",
+   "C": "I öncülünü yanlış sanmış; oysa X’in dizilimi 2, 6’dır; 2. periyot 6A grubundadır.",
+   "D": "III öncülünü doğru sanmış; oysa Z’nin dizilimi 2, 8, 8’dir; son katmanında 2 değil 8 elektron bulunur. I öncülünü yanlış sanmış; oysa X’in dizilimi 2, 6’dır; 2. periyot 6A grubundadır. II öncülünü yanlış sanmış; oysa Y’nin dizilimi 2, 8, 1’dir; 3. periyot 1A’da, elektron vermeye yatkın bir metaldir.",
+   "E": "III öncülünü doğru sanmış; oysa Z’nin dizilimi 2, 8, 8’dir; son katmanında 2 değil 8 elektron bulunur. II öncülünü yanlış sanmış; oysa Y’nin dizilimi 2, 8, 1’dir; 3. periyot 1A’da, elektron vermeye yatkın bir metaldir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Elektron dizilimi ve konum",
+    "ifade": "Elektronlar 2, 8, 8 … sırasıyla katmanlara yerleşir. Katman sayısı periyodu, son katman elektron sayısı A grubunu verir. Örnek: atom numarası 6 → 2, 4 → 2. periyot 4A"
+   }
+  ],
+  "ipuclari": [
+   "Her elementin elektron dizilimini yaz; katman sayısı ve son katmandaki elektron sayısı konumu belirler."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X elementi",
+    "aciklama": "8 elektron: 2, 6.",
+    "islem": "2. periyot 6A → I: doğru"
+   },
+   {
+    "baslik": "Y elementi",
+    "aciklama": "11 elektron: 2, 8, 1.",
+    "islem": "3. periyot 1A, metal → II: doğru"
+   },
+   {
+    "baslik": "Z elementi",
+    "aciklama": "18 elektron: 2, 8, 8.",
+    "islem": "son katmanda 8 elektron → III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "I: doğru · II: doğru · III: yanlış · Sonuç: I ve II"
+   }
+  ],
+  "puf": "Elektron dizilimini yazmak, konum ve değerlik elektronu sorularının her zaman ilk adımıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-03 (element sınıflandırması) · atom numaraları 8, 11, 18",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-periyodik-0004",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "Periyodik sistemdeki konuma göre birinci iyonlaşma enerjilerini karşılaştırır.",
+  "tipId": "kim-pr-iyonlasma",
+  "tip": "İyonlaşma enerjisi sıralaması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "X, Y ve Z elementlerinin atom numaraları sırasıyla 3, 9 ve 11’dir.\nBuna göre bu elementlerin birinci iyonlaşma enerjileri arasındaki ilişki aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "X > Y > Z",
+   "B": "Y > X > Z",
+   "C": "Z > X > Y",
+   "D": "X > Z > Y",
+   "E": "Y > Z > X"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Y > X > Z"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa aynı periyotta sağa gidildikçe iyonlaşma enerjisi artar, Y (7A) X’ten (1A) büyüktür",
+   "C": "Bu ifadeyi doğru sanmış; oysa aynı grupta aşağı inildikçe iyonlaşma enerjisi azalır; Z en küçüktür",
+   "D": "Bu ifadeyi doğru sanmış; oysa Y aynı periyotta en sağdadır, iyonlaşma enerjisi en büyük olan odur",
+   "E": "Bu ifadeyi doğru sanmış; oysa aynı grupta aşağı inildikçe iyonlaşma enerjisi azalır, X Z’den büyüktür"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Birinci iyonlaşma enerjilerinin büyükten küçüğe sıralaması.",
+  "bilgi": [
+   {
+    "ad": "İyonlaşma enerjisi",
+    "ifade": "Gaz hâlindeki bir atomdan bir elektron koparmak için gereken enerjidir. Aynı periyotta soldan sağa genelde artar, aynı grupta yukarıdan aşağı azalır. Örnek: Na’nın iyonlaşma enerjisi Li’den küçüktür"
+   }
+  ],
+  "ipuclari": [
+   "Önce her elementin periyodunu ve grubunu bul; periyotta sağa ve grupta aşağı gitmenin iyonlaşma enerjisini nasıl değiştirdiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Konumlar",
+    "aciklama": "Elektron dizilimleri yazılır.",
+    "islem": "X: 2, 1 (2. periyot 1A) · Y: 2, 7 (2. periyot 7A) · Z: 2, 8, 1 (3. periyot 1A)"
+   },
+   {
+    "baslik": "Aynı periyot",
+    "aciklama": "X ve Y 2. periyottadır; Y daha sağdadır.",
+    "islem": "Y > X"
+   },
+   {
+    "baslik": "Aynı grup",
+    "aciklama": "X ve Z 1A grubundadır; Z daha aşağıdadır.",
+    "islem": "X > Z"
+   },
+   {
+    "baslik": "Sıralama",
+    "aciklama": "İki sonuç birleştirilir.",
+    "islem": "Y > X > Z"
+   }
+  ],
+  "puf": "İyonlaşma enerjisi periyotta sağa doğru artar, grupta aşağı doğru azalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-04 (iyonlaşma enerjisi) · atom numaraları 3, 9, 11",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-periyodik-0005",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "İyon yükü ve elektron sayısından nötr atomun atom numarasını ve periyodik sistemdeki yerini bulur.",
+  "tipId": "kim-pr-iyon",
+  "tip": "İyonlardan element belirleme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "X²⁻ iyonunda 18, Y³⁺ iyonunda 10 elektron bulunmaktadır.\nBuna göre X ve Y elementleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "X ve Y aynı grupta yer alır",
+   "B": "Y’nin değerlik elektron sayısı 5’tir",
+   "C": "X, 2. periyot 6A grubundadır",
+   "D": "X ve Y aynı periyottadır, X’in değerlik elektron sayısı 6’dır",
+   "E": "Y ametaldir"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "X ve Y aynı periyottadır, X’in değerlik elektron sayısı 6’dır"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa X 6A, Y 3A grubundadır; gruplar farklıdır",
+   "B": "Bu ifadeyi doğru sanmış; oysa Y’nin dizilimi 2, 8, 3’tür; değerlik elektron sayısı 3’tür",
+   "C": "Bu ifadeyi doğru sanmış; oysa X’in dizilimi 2, 8, 6’dır; üç katmanı olduğundan 3. periyottadır",
+   "E": "Bu ifadeyi doğru sanmış; oysa Y 3A grubunda yer alan bir metaldir ve elektron vermeye yatkındır"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "X ve Y için doğru olan ifade.",
+  "bilgi": [
+   {
+    "ad": "İyon ve elektron sayısı",
+    "ifade": "Nötr atomda proton sayısı elektron sayısına eşittir. Anyon, yükü kadar elektron almıştır; katyon, yükü kadar elektron vermiştir. Örnek: Cl⁻ iyonunda 18 elektron varsa Cl atomunda 17 elektron vardır"
+   }
+  ],
+  "ipuclari": [
+   "Anyon elektron almıştır, katyon elektron vermiştir; nötr atomun elektron sayısını bulmak için yükü kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X atomu",
+    "aciklama": "X²⁻ iyonu 2 elektron almıştır.",
+    "islem": "nötr X: 18 − 2 = 16 elektron → 2, 8, 6"
+   },
+   {
+    "baslik": "Y atomu",
+    "aciklama": "Y³⁺ iyonu 3 elektron vermiştir.",
+    "islem": "nötr Y: 10 + 3 = 13 elektron → 2, 8, 3"
+   },
+   {
+    "baslik": "Konumlar",
+    "aciklama": "Her ikisi de üç katmanlıdır.",
+    "islem": "X: 3. periyot 6A · Y: 3. periyot 3A"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "Şıklar tek tek denetlenir.",
+    "islem": "D: doğru · diğerleri: yanlış"
+   }
+  ],
+  "puf": "İyonlarda önce nötr atomun elektron sayısını bul: anyondan yükü çıkar, katyona yükü ekle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-05 (iyon yükleri) · X²⁻ 18 elektron, Y³⁺ 10 elektron",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-periyodik-0006",
+  "ders": "TYT Kimya",
+  "konu": "Periyodik Sistem · Periyodik Sistem",
+  "k": "kim|Periyodik Sistem",
+  "kazanim": "Elementlerin periyodik sistemdeki göreli konumuna göre periyodik özelliklerini karşılaştırır.",
+  "tipId": "kim-pr-konum",
+  "tip": "Konuma göre periyodik özellik",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "A grubu elementlerinden X, Y ve Z için şu bilgiler veriliyor.\n• X ile Y aynı periyottadır ve Y, X’in sağında yer alır.\n• Z, X ile aynı gruptadır ve X’in altında yer alır.\n• Y soy gaz değildir.\nBu elementlerle ilgili şunlar söyleniyor.\nI. Atom yarıçapları arasındaki ilişki Z > X > Y’dir.\nII. Z ile X’in değerlik elektron sayıları eşittir.\nIII. Y’nin elektronegatifliği Z’ninkinden küçüktür.\nBuna göre hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "II ve III",
+   "D": "I ve III",
+   "E": "Yalnız III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II öncülünü yanlış sanmış; oysa aynı gruptaki elementlerin değerlik elektron sayıları eşittir.",
+   "C": "III öncülünü doğru sanmış; oysa Y aynı periyotta X’in sağında, Z ise X’in altındadır; Y’nin elektronegatifliği Z’ninkinden büyüktür. I öncülünü yanlış sanmış; oysa Z’nin katman sayısı X’ten fazladır; X ile Y aynı periyottadır ve Y daha sağda olduğundan daha küçüktür: Z > X > Y.",
+   "D": "III öncülünü doğru sanmış; oysa Y aynı periyotta X’in sağında, Z ise X’in altındadır; Y’nin elektronegatifliği Z’ninkinden büyüktür. II öncülünü yanlış sanmış; oysa aynı gruptaki elementlerin değerlik elektron sayıları eşittir.",
+   "E": "III öncülünü doğru sanmış; oysa Y aynı periyotta X’in sağında, Z ise X’in altındadır; Y’nin elektronegatifliği Z’ninkinden büyüktür. I öncülünü yanlış sanmış; oysa Z’nin katman sayısı X’ten fazladır; X ile Y aynı periyottadır ve Y daha sağda olduğundan daha küçüktür: Z > X > Y. II öncülünü yanlış sanmış; oysa aynı gruptaki elementlerin değerlik elektron sayıları eşittir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Periyodik eğilimler",
+    "ifade": "Aynı grupta aşağı inildikçe katman sayısı ve atom yarıçapı artar, elektronegatiflik azalır. Aynı periyotta sağa gidildikçe yarıçap azalır, elektronegatiflik artar. Aynı gruptaki elementlerin değerlik elektron sayısı aynıdır"
+   }
+  ],
+  "ipuclari": [
+   "Elementlerin kabaca bir tablo üzerindeki yerini çiz: X’in sağına Y’yi, altına Z’yi koy ve eğilimleri uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Konum çizimi",
+    "aciklama": "Y, X’in sağında; Z, X’in altında.",
+    "islem": "Y → X ↓ Z"
+   },
+   {
+    "baslik": "I. öncül",
+    "aciklama": "Z’nin katman sayısı fazladır; X ile Y arasında soldaki X daha büyüktür.",
+    "islem": "Z > X > Y → doğru"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "Aynı gruptadırlar.",
+    "islem": "değerlik elektronları eşit → doğru"
+   },
+   {
+    "baslik": "III. öncül",
+    "aciklama": "Y sağa, Z aşağı kaydığı için Y’nin elektronegatifliği Z’den büyüktür.",
+    "islem": "III: yanlış · Sonuç: I ve II"
+   }
+  ],
+  "puf": "Konumdan karşılaştırma yaparken elementleri bir ızgarada yerleştir; sağ = küçük yarıçap, aşağı = büyük yarıçap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PRDK-06 (konumdan özellik) · X, Y, Z göreli konumları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

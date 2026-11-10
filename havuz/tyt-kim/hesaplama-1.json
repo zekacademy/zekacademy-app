@@ -1,0 +1,320 @@
+[
+ {
+  "id": "tytkim-hesaplama-0001",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Hesaplamalar · Mol Kavramı",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "kazanim": "Kütleden mol sayısını, oradan toplam atom sayısını hesaplar.",
+  "tipId": "kim-hs-mol",
+  "tip": "Mol, tanecik ve atom sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "H: 1 g/mol, O: 16 g/mol, Avogadro sayısı = 6 × 10²³ olduğuna göre 36 g H₂O sıvısındaki toplam atom sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,2 × 10²⁴",
+   "B": "1,8 × 10²⁴",
+   "C": "2,4 × 10²⁴",
+   "D": "3,6 × 10²⁴",
+   "E": "7,2 × 10²⁴"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3,6 × 10²⁴"
+  },
+  "celdiriciler": {
+   "A": "Yalnız molekül sayısını (2 mol) bulmuş; atom sayısına geçmemiş.",
+   "B": "H₂O’nun mol kütlesini 36 g/mol almış; mol sayısını 1 bulmuş.",
+   "C": "Yalnız H atomlarının sayısını (4 mol) bulmuş.",
+   "E": "Molekül başına atom sayısını 6 almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "36 g H₂O’daki toplam atom sayısı.",
+  "bilgi": [
+   {
+    "ad": "Mol",
+    "ifade": "n = kütle ÷ mol kütlesi; 1 mol = 6 × 10²³ tanecik. Örnek: 9 g H₂O (18 g/mol) = 0,5 mol = 3 × 10²³ molekül"
+   }
+  ],
+  "ipuclari": [
+   "Önce mol sayısını bul; sonra bir H₂O molekülünde kaç atom olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mol kütlesi",
+    "aciklama": "H₂O molekülünde 2 H ve 1 O vardır.",
+    "islem": "M = 2 × 1 + 16 = 18 g/mol"
+   },
+   {
+    "baslik": "Mol sayısı",
+    "aciklama": "Kütle mol kütlesine bölünür.",
+    "islem": "n = 36 ÷ 18 = 2 mol"
+   },
+   {
+    "baslik": "Toplam atom",
+    "aciklama": "Bir H₂O molekülünde 2 H + 1 O = 3 atom vardır.",
+    "islem": "2 × 3 = 6 mol atom · 6 × 6 × 10²³ = 3,6 × 10²⁴"
+   }
+  ],
+  "puf": "Atom sayısı = mol × molekül başına atom × Avogadro sayısı.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHE-01 (mol kavramı) · su örneği, toplam atom sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-hesaplama-0002",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Hesaplamalar · Kimyasal Tepkimelerde Hesaplamalar",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "kazanim": "Denkleştirilmiş tepkimenin katsayılarını kullanarak harcanan gazın NK’daki hacmini bulur.",
+  "tipId": "kim-hs-tepkime",
+  "tip": "Tepkimede mol ve hacim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "C₃H₈ gazının yanma tepkimesi aşağıdaki gibidir.\nC₃H₈ + 5O₂ → 3CO₂ + 4H₂O\nC: 12 g/mol, H: 1 g/mol ve NK’da 1 mol gaz 22,4 L olduğuna göre 8,8 g C₃H₈ gazı yeterli miktarda O₂ ile tamamen yandığında harcanan O₂ gazı normal koşullarda (NK) kaç L hacim kaplar?",
+  "sekil": null,
+  "siklar": {
+   "A": "4,48",
+   "B": "13,44",
+   "C": "17,92",
+   "D": "22,4",
+   "E": "112"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "22,4"
+  },
+  "celdiriciler": {
+   "A": "O₂ için katsayıyı kullanmamış; 0,2 mol O₂ almış.",
+   "B": "CO₂’nin katsayısını (3) kullanıp 0,6 mol almış.",
+   "C": "H₂O’nun katsayısını (4) kullanıp 0,8 mol almış.",
+   "E": "Mol sayısını bulmadan doğrudan 5 mol O₂ almış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Harcanan O₂’nin NK’daki hacmi (L).",
+  "bilgi": [
+   {
+    "ad": "Mol",
+    "ifade": "n = kütle ÷ mol kütlesi; 1 mol = 6 × 10²³ tanecik. Örnek: 9 g H₂O (18 g/mol) = 0,5 mol = 3 × 10²³ molekül"
+   },
+   {
+    "ad": "Gaz hacmi",
+    "ifade": "Normal koşullarda (NK) 1 mol gaz 22,4 L hacim kaplar. Örnek: 0,5 mol gaz 11,2 L kaplar"
+   }
+  ],
+  "ipuclari": [
+   "C₃H₈’in mol sayısını bul; denklemdeki katsayı oranıyla O₂’nin mol sayısına geç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "C₃H₈ mol sayısı",
+    "aciklama": "C₃H₈’in mol kütlesi 3 × 12 + 8 × 1 = 44 g/mol’dür.",
+    "islem": "n = 8,8 ÷ 44 = 0,2 mol"
+   },
+   {
+    "baslik": "O₂ mol sayısı",
+    "aciklama": "Katsayılar mol oranını verir: 1 mol C₃H₈ için 5 mol O₂.",
+    "islem": "n(O₂) = 5 × 0,2 = 1 mol"
+   },
+   {
+    "baslik": "Hacim",
+    "aciklama": "NK’da mol sayısı 22,4 ile çarpılır.",
+    "islem": "V = 1 × 22,4 = 22,4 L"
+   }
+  ],
+  "puf": "Katsayı oranı mol oranıdır; önce mol, sonra gram ya da hacim hesaplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHE-02 (tepkimede hesaplama) · propan yanması, O₂ hacmi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-hesaplama-0003",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Hesaplamalar · Mol Kavramı",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "kazanim": "Farklı gazların mol sayılarını bularak molekül ve atom sayılarını karşılaştırır.",
+  "tipId": "kim-hs-karsilastir",
+  "tip": "Gazlarda molekül ve atom sayısı karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Kap 1: NK’da 11,2 L CH₄ gazı\nKap 2: 11 g CO₂ gazı\nI. Kap 1’deki molekül sayısı, Kap 2’dekinin 2 katıdır.\nII. Kap 2’deki toplam atom sayısı, Kap 1’dekinden fazladır.\nIII. Kap 1’deki H atomu sayısı, Kap 2’deki O atomu sayısının 4 katıdır.\nC: 12 g/mol, O: 16 g/mol ve NK’da 1 mol gaz 22,4 L olduğuna göre yukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü yanlış sanmış; H atomu sayısını (2 mol) O atomu sayısıyla (0,5 mol) karşılaştırmamış.",
+   "B": "II’yi doğru sanıp I ile III’ü yanlış bulmuş; atom sayılarını mol sayısıyla molekül başına atomu çarparak bulmamış.",
+   "C": "I’i yanlış sanmış; mol sayılarının 0,5 ve 0,25 olduğunu bulmamış.",
+   "D": "II’yi doğru sanmış; CO₂’nin toplam atom sayısını (0,75 mol) Kap 1’le (2,5 mol) karşılaştırmamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Mol",
+    "ifade": "n = kütle ÷ mol kütlesi; 1 mol = 6 × 10²³ tanecik. Örnek: 9 g H₂O (18 g/mol) = 0,5 mol = 3 × 10²³ molekül"
+   },
+   {
+    "ad": "Molekülde atom",
+    "ifade": "CH₄ molekülünde 1 C ve 4 H (toplam 5 atom), CO₂ molekülünde 1 C ve 2 O (toplam 3 atom) vardır"
+   }
+  ],
+  "ipuclari": [
+   "İki kaptaki gazın da mol sayısını ayrı ayrı bul; sonra her molekülde kaç atom olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mol sayıları",
+    "aciklama": "CH₄: hacimden, CO₂: kütleden mol hesaplanır (CO₂ = 44 g/mol).",
+    "islem": "CH₄: 11,2 ÷ 22,4 = 0,5 mol · CO₂: 11 ÷ 44 = 0,25 mol"
+   },
+   {
+    "baslik": "I ve II",
+    "aciklama": "Molekül sayısı mol ile doğru orantılıdır; atom sayısı molekül başına atomla çarpılır.",
+    "islem": "I: 0,5 = 2 × 0,25 → doğru · atom: 0,5 × 5 = 2,5 mol ve 0,25 × 3 = 0,75 mol → II yanlış"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "Kap 1’de H atomu 4 × 0,5 = 2 mol, Kap 2’de O atomu 2 × 0,25 = 0,5 mol.",
+    "islem": "2 ÷ 0,5 = 4 → doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Önce her kabın mol sayısını bul; molekül sayısı mol ile, atom sayısı mol ve formül indisleriyle bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHE-03 (mol karşılaştırma) · CH₄ hacmi ile CO₂ kütlesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-hesaplama-0004",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Hesaplamalar · Kimyasal Tepkimelerde Hesaplamalar",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "kazanim": "Sınırlayıcı bileşeni belirleyip tepkime sonunda artan maddenin kütlesini bulur.",
+  "tipId": "kim-hs-sinirlayici",
+  "tip": "Sınırlayıcı bileşen ve artan madde",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Mg + 2HCl → MgCl₂ + H₂\n7,2 g Mg katısı, 0,4 mol HCl içeren sulu çözeltiye atılıyor ve tepkime tamamlanıyor.\nH: 1 g/mol, Mg: 24 g/mol, Cl: 35,5 g/mol olduğuna göre tepkime sonunda artan maddenin kütlesi kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2,4",
+   "B": "3,65",
+   "C": "4,8",
+   "D": "7,2",
+   "E": "14,6"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "2,4"
+  },
+  "celdiriciler": {
+   "B": "Mg ile HCl’yi 1 : 1 oranında tepkimeye sokmuş; HCl’nin 0,1 mol arttığını sanmış.",
+   "C": "Artan değil, tepkimeye giren Mg’nin kütlesini (0,2 mol) bulmuş.",
+   "D": "Tepkimeyi dikkate almadan atılan Mg’nin tamamını artan kabul etmiş.",
+   "E": "0,4 mol HCl’nin başlangıç kütlesini artan madde olarak yazmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Tepkime sonunda artan maddenin kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Mol",
+    "ifade": "n = kütle ÷ mol kütlesi; 1 mol = 6 × 10²³ tanecik. Örnek: 9 g H₂O (18 g/mol) = 0,5 mol = 3 × 10²³ molekül"
+   },
+   {
+    "ad": "Sınırlayıcı bileşen",
+    "ifade": "tepkimede önce biten maddedir; ürün miktarını o belirler. Örnek: 1 mol A ile 3 mol B, A + B → ürün tepkimesinde B 2 mol artar"
+   }
+  ],
+  "ipuclari": [
+   "Her iki maddenin mol sayısını bul; 2 : 1 mol oranıyla hangisinin yetmediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mol sayıları",
+    "aciklama": "Mg’nin mol kütlesi 24 g/mol’dür.",
+    "islem": "n(Mg) = 7,2 ÷ 24 = 0,3 mol · n(HCl) = 0,4 mol"
+   },
+   {
+    "baslik": "Sınırlayıcı madde",
+    "aciklama": "1 mol Mg için 2 mol HCl gerekir; 0,3 mol Mg için 0,6 mol HCl gerekirdi ama 0,4 mol var.",
+    "islem": "HCl sınırlayıcı · Mg artan"
+   },
+   {
+    "baslik": "Tüketilen Mg",
+    "aciklama": "0,4 mol HCl, yarısı kadar Mg ile tepkimeye girer.",
+    "islem": "0,4 ÷ 2 = 0,2 mol Mg"
+   },
+   {
+    "baslik": "Artan Mg",
+    "aciklama": "Başlangıçtaki mol sayısından tüketilen çıkarılır ve kütleye çevrilir.",
+    "islem": "0,3 − 0,2 = 0,1 mol · 0,1 × 24 = 2,4 g"
+   }
+  ],
+  "puf": "Sınırlayıcıyı bulmak için her maddenin mol sayısını katsayısına böl; en küçük değeri veren madde önce biter.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHE-04 (sınırlayıcı bileşen) · Mg ile HCl, artan madde kütlesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

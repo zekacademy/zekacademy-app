@@ -1,0 +1,303 @@
+[
+ {
+  "id": "tytkim-kimyabilimi-0001",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Bilimi · Kimya Disiplinleri",
+  "k": "kim|Kimya Bilimi",
+  "kazanim": "Bir çalışmanın hangi kimya disiplinine ait olduğunu belirler.",
+  "tipId": "kim-kb-disiplin",
+  "tip": "Kimya disiplinleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Bir kimyager, bir göl suyundan aldığı numunede çözünmüş kurşun iyonlarının miktarını belirlemek için bir ölçüm yöntemi uygulamaktadır. Kimyagerin amacı, numunede hangi maddenin ne kadar bulunduğunu saptamaktır.\nBu çalışma, kimyanın aşağıdaki disiplinlerinden hangisinin alanına girer?",
+  "sekil": null,
+  "siklar": {
+   "A": "Endüstriyel kimya",
+   "B": "Biyokimya",
+   "C": "Fizikokimya",
+   "D": "Organik kimya",
+   "E": "Analitik kimya"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Analitik kimya"
+  },
+  "celdiriciler": {
+   "A": "Çalışmayı üretim ve endüstriyel uygulama sanmış; burada amaç numunedeki madde miktarını belirlemektir.",
+   "B": "Canlıyla ilgisi olmayan bir su numunesini biyokimya sanmış.",
+   "C": "Enerji ve hız gibi fiziksel ilkeleri inceleyen disiplini seçmiş.",
+   "D": "Organik kimyayı karbon bileşikleriyle ilişkilendirmeyi bilmemiş; burada karbon bileşiği incelenmiyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Çalışmanın ait olduğu kimya disiplini.",
+  "bilgi": [
+   {
+    "ad": "Analitik kimya",
+    "ifade": "maddelerin türünü (nitel) ve miktarını (nicel) belirleyen kimya dalıdır. Örnek: sütteki kalsiyum miktarının bulunması"
+   }
+  ],
+  "ipuclari": [
+   "Kimyagerin amacı bir maddenin ne olduğunu ya da ne kadar olduğunu bulmak mı, yoksa yeni madde üretmek mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Amacı belirle",
+    "aciklama": "Çalışmada kurşun iyonlarının miktarı ölçülüyor; yeni madde elde edilmiyor.",
+    "islem": "amaç: miktar belirleme"
+   },
+   {
+    "baslik": "Disiplinleri ele",
+    "aciklama": "Organik kimya karbon bileşiklerini, biyokimya canlıdaki olayları, fizikokimya enerji ve hız gibi ilkeleri, endüstriyel kimya üretim süreçlerini inceler.",
+    "islem": "Bu çalışma onların konusu değil"
+   },
+   {
+    "baslik": "Disiplini seç",
+    "aciklama": "Madde miktarı ve türü tayini analitik kimyanın konusudur.",
+    "islem": "Analitik kimya"
+   }
+  ],
+  "puf": "Disiplini maddenin kendisine değil, çalışmanın amacına bakarak seç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KBL-01 (kimya disiplinleri) · su numunesinde kurşun miktarı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kimyabilimi-0002",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Bilimi · Kimyanın Sembolik Dili",
+  "k": "kim|Kimya Bilimi",
+  "kazanim": "Katsayı ve parantez dışı indisleri kullanarak formülde toplam atom sayısını bulur.",
+  "tipId": "kim-kb-formul",
+  "tip": "Formülde atom sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "3Al₂(SO₄)₃ ifadesinde toplam kaç atom vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "21",
+   "C": "27",
+   "D": "51",
+   "E": "54"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "51"
+  },
+  "celdiriciler": {
+   "A": "Başındaki katsayıyı (3) hesaba katmamış.",
+   "B": "Parantez dışındaki indisi (3) S ve O atomlarına uygulamamış.",
+   "C": "Parantez dışındaki indisi yalnız S’ye uygulamış, O’nun 4 olduğunu değiştirmemiş.",
+   "E": "Katsayıyı (3) toplam atom sayısına eklemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "3Al₂(SO₄)₃ içindeki toplam atom sayısı.",
+  "bilgi": [
+   {
+    "ad": "Formülde sayma",
+    "ifade": "katsayı bütün formül birimini çoğaltır, alt indis önündeki atomu ya da parantezi çoğaltır. Örnek: 2Ca(OH)₂ içinde 2 Ca, 4 O, 4 H vardır"
+   }
+  ],
+  "ipuclari": [
+   "Önce bir Al₂(SO₄)₃ biriminde atom türlerini say; parantez dışındaki indis parantezin içindeki her atomu çarpar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parantezi aç",
+    "aciklama": "(SO₄)₃ içinde 3 S ve 3 × 4 = 12 O vardır.",
+    "islem": "S: 3 · O: 12"
+   },
+   {
+    "baslik": "Tek birimdeki atomlar",
+    "aciklama": "Al₂ ile birlikte tüm atomlar toplanır.",
+    "islem": "2 + 3 + 12 = 17 atom"
+   },
+   {
+    "baslik": "Katsayıyı uygula",
+    "aciklama": "3 formül birimi vardır.",
+    "islem": "3 × 17 = 51"
+   }
+  ],
+  "puf": "Önce parantezi aç, sonra katsayıyla çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KBL-02 (sembolik dil) · 3Al₂(SO₄)₃ ifadesinde toplam atom",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kimyabilimi-0003",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Bilimi · Kimyanın Sembolik Dili",
+  "k": "kim|Kimya Bilimi",
+  "kazanim": "Kimyasal denklemi denkleştirip katsayılar toplamını bulur.",
+  "tipId": "kim-kb-denkles",
+  "tip": "Denklem denkleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "C₃H₈ + O₂ → CO₂ + H₂O\nDenkleşmemiş tepkimesi verilen bu yanma tepkimesi en küçük tam sayılarla denkleştirildiğinde katsayıların toplamı kaç olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "12",
+   "C": "13",
+   "D": "15",
+   "E": "17"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "13"
+  },
+  "celdiriciler": {
+   "A": "Yalnız O₂ ile H₂O’nun katsayılarını (5 + 4) toplamış.",
+   "B": "Katsayısı 1 olan C₃H₈’i toplamaya katmamış.",
+   "D": "O atomlarını sayarken O₂ katsayısını 7 bulmuş.",
+   "E": "O atomlarını sayarken O₂ katsayısını 9 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Denkleştirilmiş denklemdeki katsayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Denkleştirme",
+    "ifade": "tepkimenin iki yanında her atomdan eşit sayıda bulunmalıdır; yalnız katsayılar değiştirilir, indisler değişmez. Örnek: 2H₂ + O₂ → 2H₂O"
+   }
+  ],
+  "ipuclari": [
+   "Önce C ve H atomlarını eşitle; oksijen atomlarını en son say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "C ve H’yi eşitle",
+    "aciklama": "1 C₃H₈ için 3 CO₂ ve 4 H₂O gerekir.",
+    "islem": "C: 3 → 3CO₂ · H: 8 → 4H₂O"
+   },
+   {
+    "baslik": "Oksijeni say",
+    "aciklama": "Ürün tarafında O atomu sayısı bulunur.",
+    "islem": "3 × 2 + 4 × 1 = 10 O → 5O₂"
+   },
+   {
+    "baslik": "Katsayıları topla",
+    "aciklama": "Denklem 1, 5, 3, 4 katsayılarıyla denkleşir.",
+    "islem": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O · 1 + 5 + 3 + 4 = 13"
+   }
+  ],
+  "puf": "Denkleştirmede en çok geçen ve yalnız tek maddede bulunan atomlardan başla, O₂ gibi serbest elementi sona bırak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KBL-03 (denkleştirme) · propanın yanma denklemi, katsayılar toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kimyabilimi-0004",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Bilimi · Kimya Uygulamalarında İş Sağlığı ve Güvenliği",
+  "k": "kim|Kimya Bilimi",
+  "kazanim": "Kimya laboratuvarında güvenli ve güvensiz davranışları ayırt eder.",
+  "tipId": "kim-kb-guvenlik",
+  "tip": "Laboratuvar güvenliği",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. Seyreltik asit çözeltisi hazırlarken asit, karıştırılarak suya azar azar eklenir.\nII. Bir kimyasalın kokusunu belirlemek için kap buruna yaklaştırılıp derin nefes alınır.\nIII. Yanıcı simgesi taşıyan kimyasallar açık alevden uzak tutulur.\nIV. Deney sonunda artan kimyasallar, tekrar kullanılmak üzere stok şişesine geri boşaltılır.\nV. Uçucu ve zehirli gaz çıkaran deneyler çeker ocak altında yapılır.\nBir kimya laboratuvarındaki davranışlarla ilgili yukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve III",
+   "B": "I, III ve V",
+   "C": "I, II ve V",
+   "D": "I, III ve IV",
+   "E": "II, IV ve V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I, III ve V"
+  },
+  "celdiriciler": {
+   "A": "V’i yanlış sanmış; zehirli gazların çeker ocakta çalışılarak uzaklaştırıldığını bilmemiş.",
+   "C": "II’yi doğru sanmış; kokunun elle yelpazelenerek ve çok az alınarak anlaşılması gerektiğini bilmemiş.",
+   "D": "IV’ü doğru sanmış; artan kimyasalın şişeyi kirleteceğini düşünmemiş.",
+   "E": "I ve III’ü yanlış sanıp II ve IV’ü doğru bulmuş; güvenlik kurallarını ters yorumlamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Laboratuvar güvenliği",
+    "ifade": "asit suya azar azar eklenir; kokular elle yelpazelenerek anlaşılır; artan kimyasal stok şişesine geri konmaz; zehirli gazlarda çeker ocak kullanılır. Örnek: derişik asit seyreltilirken asit suya eklenir"
+   }
+  ],
+  "ipuclari": [
+   "Her ifadeyi güvenlik kuralına göre ayrı ayrı değerlendir; kimyasalı kaba geri boşaltmak ve doğrudan koklamak güvenli değildir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I ve II",
+    "aciklama": "Asit seyreltilirken asit suya azar azar eklenir; kokular doğrudan koklanmaz.",
+    "islem": "I: doğru · II: yanlış"
+   },
+   {
+    "baslik": "III ve IV",
+    "aciklama": "Yanıcı maddeler alevden uzak tutulur; artan kimyasal stok şişesini kirletir.",
+    "islem": "III: doğru · IV: yanlış"
+   },
+   {
+    "baslik": "V",
+    "aciklama": "Zehirli gazlar çeker ocakta çalışılarak uzaklaştırılır.",
+    "islem": "V: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I, III ve V’tir.",
+    "islem": "I, III ve V"
+   }
+  ],
+  "puf": "Güvenlik sorularında kimyasalla doğrudan temas ve kirletme içeren davranışlar yanlıştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KBL-04 (iş güvenliği) · beş davranış, üçü doğru",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

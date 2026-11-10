@@ -1,0 +1,308 @@
+[
+ {
+  "id": "tytkim-atom-0001",
+  "ders": "TYT Kimya",
+  "konu": "Atom ve Yapısı · Atomun Yapısı",
+  "k": "kim|Atom ve Yapısı",
+  "kazanim": "İyonun proton, nötron ve elektron sayısını yük ve kütle numarasından hesaplar.",
+  "tipId": "kim-at-iyon",
+  "tip": "İyonda tanecik sayıları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "X²⁻ iyonunun kütle numarası 32, nötron sayısı 16’dır.\nBuna göre X²⁻ iyonunun elektron sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "14",
+   "B": "16",
+   "C": "18",
+   "D": "32",
+   "E": "34"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "İyonun eksi yükünü elektrondan çıkarmış; eksi yük elektron fazlalığıdır.",
+   "B": "Elektron sayısını proton sayısına eşit almış; iyonda bu eşitlik bozulur.",
+   "D": "Kütle numarasını elektron sayısı sanmış.",
+   "E": "Kütle numarasına yükü ekleyip 32 + 2 işlemini yapmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "X²⁻ iyonundaki elektron sayısı.",
+  "bilgi": [
+   {
+    "ad": "Atom ve iyon",
+    "ifade": "kütle numarası = proton + nötron. Nötr atomda elektron = proton. 2− yüklü iyon, atoma göre 2 elektron fazla taşır. Örnek: O²⁻ iyonunda proton 8, elektron 10"
+   }
+  ],
+  "ipuclari": [
+   "Önce proton sayısını kütle numarası ile nötron sayısından bul; sonra iyon yüküne bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Proton sayısı",
+    "aciklama": "Kütle numarasından nötron sayısı çıkarılır.",
+    "islem": "p = 32 − 16 = 16"
+   },
+   {
+    "baslik": "Yükü yorumla",
+    "aciklama": "2− yük, atomun 2 elektron kazandığını gösterir.",
+    "islem": "nötr atomda e = 16 · iyonda 2 fazla"
+   },
+   {
+    "baslik": "Elektron sayısı",
+    "aciklama": "Nötr atomdaki elektron sayısına 2 eklenir.",
+    "islem": "e = 16 + 2 = 18"
+   }
+  ],
+  "puf": "İyonda elektron sayısı = proton sayısı − yük (yük işaretiyle birlikte düşünülür).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KAT-01 (atomun yapısı) · eksi yüklü iyonun elektron sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-atom-0002",
+  "ders": "TYT Kimya",
+  "konu": "Atom ve Yapısı · Atomun Yapısı",
+  "k": "kim|Atom ve Yapısı",
+  "kazanim": "İzotop, izobar ve izoton atomları atom numarası ve kütle numarasına göre ayırt eder.",
+  "tipId": "kim-at-izo",
+  "tip": "İzotop, izobar, izoton",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Nötr X, Y ve Z atomlarının atom numaraları ve kütle numaraları tabloda verilmiştir.\nAtom: X · Atom numarası: 18 · Kütle numarası: 40\nAtom: Y · Atom numarası: 20 · Kütle numarası: 40\nAtom: Z · Atom numarası: 20 · Kütle numarası: 42\nI. X ile Y izobardır.\nII. Y ile Z izotoptur.\nIII. Y ile Z izotondur.\nBu atomlarla ilgili yukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "İzotop tanımını bilmemiş; atom numarası eşit olan Y ile Z’nin izotop olduğunu görmemiş.",
+   "D": "I’i yanlış sanmış; kütle numarası eşit olan X ile Y’nin izobar olduğunu görmemiş. III’ü doğru sanmış; oysa Y’nin nötron sayısı 20, Z’nin 22’dir, izoton değildirler.",
+   "C": "II’yi yanlış sanıp III’ü doğru bulmuş; Y ve Z’nin nötron sayılarını (20 ve 22) karşılaştırmamış.",
+   "E": "III’ü doğru saymış; nötron sayılarını hesaplamadan izotonu izotopla karıştırmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "bilgi",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "İzotop–izobar–izoton",
+    "ifade": "izotop: proton sayısı aynı, kütle numarası farklı; izobar: kütle numarası aynı, proton sayısı farklı; izoton: nötron sayısı aynı. Örnek: ¹²C ile ¹³C izotoptur"
+   }
+  ],
+  "ipuclari": [
+   "İzoton için kütle numarasından atom numarasını çıkararak her atomun nötron sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Nötron sayıları",
+    "aciklama": "Nötron sayısı kütle numarasından atom numarası çıkarılarak bulunur.",
+    "islem": "X: 40 − 18 = 22 · Y: 40 − 20 = 20 · Z: 42 − 20 = 22"
+   },
+   {
+    "baslik": "Her ifadeyi sına",
+    "aciklama": "Kütle ve atom numaralarını karşılaştır.",
+    "islem": "I: X ve Y kütle numarası 40 → doğru · II: Y ve Z atom numarası 20 → doğru"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "Y ile Z’nin nötron sayıları farklıdır.",
+    "islem": "III: 20 ≠ 22 → yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II’dir.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Önce her atomun proton ve nötron sayısını yaz; izo-sözcüklerini bu iki sayıya göre karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KAT-02 (izotop-izobar-izoton) · üç atomlu tablo, Y–Z izoton sanılır",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-atom-0003",
+  "ders": "TYT Kimya",
+  "konu": "Atom ve Yapısı · Atom Modelleri",
+  "k": "kim|Atom ve Yapısı",
+  "kazanim": "Atom modellerini ve bilim insanlarının getirdiği temel yenilikleri eşleştirir.",
+  "tipId": "kim-at-model",
+  "tip": "Atom modelleri ve katkıları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki bilim insanı ve atom modeline getirdiği yenilik eşleştirmelerinden hangisi yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Dalton: Atomu, içi dolu ve bölünemeyen bir küre olarak tanımlamıştır.",
+   "B": "Thomson: Atomun artı yüklü bir kütle içine gömülü elektronlardan oluştuğunu öne sürmüştür.",
+   "C": "Rutherford: Atomun artı yükünün ve kütlesinin büyük bölümünün küçük bir çekirdekte toplandığını bulmuştur.",
+   "D": "Bohr: Elektronların çekirdek çevresinde belirli enerjili katmanlarda bulunduğunu öne sürmüştür.",
+   "E": "Thomson: Atomun merkezinde artı yüklü bir çekirdek bulunduğunu göstermiştir."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Thomson: Atomun merkezinde artı yüklü bir çekirdek bulunduğunu göstermiştir."
+  },
+  "celdiriciler": {
+   "A": "Doğru eşleştirmeyi yanlış sanmış; Dalton atomu bölünemeyen küre kabul eder.",
+   "B": "Doğru eşleştirmeyi yanlış sanmış; elektronlu “üzümlü kek” modeli Thomson’a aittir.",
+   "C": "Doğru eşleştirmeyi yanlış sanmış; çekirdeğin varlığı Rutherford’un saçılma deneyiyle bulunmuştur.",
+   "D": "Doğru eşleştirmeyi yanlış sanmış; enerji katmanları fikri Bohr modelindedir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Yanlış eşleştirmenin bulunması.",
+  "bilgi": [
+   {
+    "ad": "Atom modelleri",
+    "ifade": "Dalton: bölünemeyen küre. Thomson: elektronun keşfi, artı yüklü kütle içinde elektronlar. Rutherford: çekirdek. Bohr: belirli enerjili katmanlar"
+   }
+  ],
+  "ipuclari": [
+   "Çekirdeğin keşfini hangi bilim insanının yaptığını düşün; Thomson’ın modelinde atomun içi nasıl düzenlenmişti?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Modelleri sırala",
+    "aciklama": "Dalton → Thomson → Rutherford → Bohr sırasıyla her modelin yeniliğini hatırla.",
+    "islem": "Dalton: bölünemez · Thomson: elektron · Rutherford: çekirdek · Bohr: katman"
+   },
+   {
+    "baslik": "Seçenekleri ele",
+    "aciklama": "Dalton, Rutherford ve Bohr eşleştirmeleri doğrudur; Thomson’ın elektronlu modeli de doğrudur.",
+    "islem": "Dalton ✓ · Thomson (elektron) ✓ · Rutherford ✓ · Bohr ✓"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "Çekirdeği Rutherford bulmuştur, Thomson modelinde çekirdek yoktur.",
+    "islem": "Thomson: çekirdek → yanlış"
+   }
+  ],
+  "puf": "Çekirdek Rutherford, elektron Thomson, katmanlar Bohr ile eşleşir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KAT-03 (atom modelleri) · yanlış eşleştirme: çekirdek Thomson’a yazılmış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-atom-0004",
+  "ders": "TYT Kimya",
+  "konu": "Atom ve Yapısı · Atomun Yapısı",
+  "k": "kim|Atom ve Yapısı",
+  "kazanim": "Elektron sayıları eşit iyonlardan yola çıkarak atomların nötron sayılarını bulur.",
+  "tipId": "kim-at-izoelektronik",
+  "tip": "İzoelektronik iyonlar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "X³⁺ ve Y²⁻ iyonlarının elektron sayıları birbirine eşittir. X atomunun kütle numarası 27, nötron sayısı 14; Y atomunun kütle numarası 17’dir.\nBuna göre X ve Y atomlarının nötron sayıları toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "19",
+   "C": "21",
+   "D": "23",
+   "E": "31"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "X³⁺ iyonunun elektron sayısını 16 bulmuş (yükü eklemiş), böylece Y’nin proton sayısı yanlış çıkmış.",
+   "B": "Y²⁻ iyonunun elektron sayısına yükü ekleyerek Y’nin proton sayısını 12 bulmuş.",
+   "C": "Y²⁻ iyonunun elektron sayısını (10) Y’nin proton sayısı sanmış.",
+   "E": "Y’nin kütle numarasını (17) nötron sayısı olarak toplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "X ve Y atomlarının nötron sayıları toplamı.",
+  "bilgi": [
+   {
+    "ad": "İyonda elektron",
+    "ifade": "artı yüklü iyonda elektron = proton − yük; eksi yüklü iyonda elektron = proton + yük. Örnek: Mg²⁺ (p = 12) 10 elektron taşır"
+   }
+  ],
+  "ipuclari": [
+   "X’in proton sayısından X³⁺’ın elektron sayısına, oradan Y’nin proton sayısına git."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X’in proton sayısı",
+    "aciklama": "Kütle numarasından nötron sayısı çıkarılır.",
+    "islem": "pₓ = 27 − 14 = 13"
+   },
+   {
+    "baslik": "Elektron sayısı",
+    "aciklama": "X³⁺ üç elektron vermiştir; Y²⁻ ile elektron sayısı eşittir.",
+    "islem": "e = 13 − 3 = 10"
+   },
+   {
+    "baslik": "Y’nin proton sayısı",
+    "aciklama": "Y²⁻ iyonu 2 elektron almıştır.",
+    "islem": "p_Y = 10 − 2 = 8 · n_Y = 17 − 8 = 9"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "İki atomun nötron sayıları toplanır.",
+    "islem": "14 + 9 = 23"
+   }
+  ],
+  "puf": "Elektron sayısı eşit iyon çiftlerinde her iyonun elektronunu yazıp protonlara geri dön.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KAT-04 (izoelektronik) · X³⁺ ile Y²⁻ elektron sayısı eşit",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

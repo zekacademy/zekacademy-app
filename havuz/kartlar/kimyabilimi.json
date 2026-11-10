@@ -1,0 +1,93 @@
+{
+ "konu": "Kimya Bilimi",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KBL-01",
+   "konu": "Kimya Bilimi",
+   "alt": "Kimya disiplinleri",
+   "fikir": "Analitik kimya madde miktarı/türü analizi; organik kimya karbon bileşikleri; biyokimya canlıdaki olaylar.",
+   "tuzak": "Maddenin türüne bakıp disiplini seçmek; çalışmanın amacını gözden kaçırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-kb-disiplin",
+   "tip": "Kimya disiplinleri",
+   "kaynak": "ÖSYM 2018–2025 (kimya disiplinleri, sembolik dil, iş güvenliği) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KBL-02",
+   "konu": "Kimya Bilimi",
+   "alt": "Kimyanın sembolik dili",
+   "fikir": "Katsayı tüm formül birimini, alt indis yalnız önündeki atomu (ya da parantezi) çoğaltır.",
+   "tuzak": "Katsayıyı atlamak; parantez dışı indisi iç atomlara uygulamamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-kb-formul",
+   "tip": "Formülde atom sayısı",
+   "kaynak": "ÖSYM 2018–2025 (kimya disiplinleri, sembolik dil, iş güvenliği) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KBL-03",
+   "konu": "Kimya Bilimi",
+   "alt": "Kimyanın sembolik dili",
+   "fikir": "Tepkime denkleminde atom türü ve sayısı iki yanda eşitlenir; katsayılar bulunur.",
+   "tuzak": "Hidrojen ve oksijeni sayarken indisleri unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-kb-denkles",
+   "tip": "Denklem denkleştirme",
+   "kaynak": "ÖSYM 2018–2025 (kimya disiplinleri, sembolik dil, iş güvenliği) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KBL-04",
+   "konu": "Kimya Bilimi",
+   "alt": "İş sağlığı ve güvenliği",
+   "fikir": "Laboratuvarda doğru davranışlar: asit suya eklenir, kokular yelpazelenerek, zehirli gazlarla çeker ocak.",
+   "tuzak": "Kokuyu doğrudan koklamak; artan kimyasalı şişeye geri boşaltmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "kim-kb-guvenlik",
+   "tip": "Laboratuvar güvenliği",
+   "kaynak": "ÖSYM 2018–2025 (kimya disiplinleri, sembolik dil, iş güvenliği) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-kb-disiplin",
+   "ad": "Kimya disiplinleri",
+   "kartlar": [
+    "K-KBL-01"
+   ],
+   "uygulamaKonu": "kim|Kimya Bilimi"
+  },
+  {
+   "tipId": "kim-kb-formul",
+   "ad": "Formülde atom sayısı",
+   "kartlar": [
+    "K-KBL-02"
+   ],
+   "uygulamaKonu": "kim|Kimya Bilimi"
+  },
+  {
+   "tipId": "kim-kb-denkles",
+   "ad": "Denklem denkleştirme",
+   "kartlar": [
+    "K-KBL-03"
+   ],
+   "uygulamaKonu": "kim|Kimya Bilimi"
+  },
+  {
+   "tipId": "kim-kb-guvenlik",
+   "ad": "Laboratuvar güvenliği",
+   "kartlar": [
+    "K-KBL-04"
+   ],
+   "uygulamaKonu": "kim|Kimya Bilimi"
+  }
+ ]
+}

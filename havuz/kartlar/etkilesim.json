@@ -1,0 +1,135 @@
+{
+ "konu": "Kimyasal Türler Arası Etkileşimler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ETKL-01",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "Bağ türü belirleme",
+   "fikir": "Metal–ametal arasında iyonik, ametal–ametal arasında kovalent bağ oluşur.",
+   "tuzak": "Her bileşikte iyonik bağ aramak; kovalent bileşiği iyonik sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-et-bagturu",
+   "tip": "Bileşikte bağ türü",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ETKL-02",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "İyonik bileşik formülü",
+   "fikir": "Metal elektron verir, ametal alır; verilen ve alınan elektron sayısı eşitlenerek formül yazılır.",
+   "tuzak": "Atom sayılarını 1:1 almak; çaprazlamayı ters yapmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-et-formul",
+   "tip": "Atom numarasından bileşik formülü",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ETKL-03",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "Çoklu bağlar",
+   "fikir": "Her atom oktetini (H için dueti) tamamlayacak kadar bağ yapar; O₂ çift, N₂ üçlü bağ içerir.",
+   "tuzak": "CO₂’deki çift bağları ya da C₂H₄’teki çift bağı atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-et-coklu",
+   "tip": "Çoklu bağ içeren moleküller",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ETKL-04",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "Moleküller arası etkileşim türü",
+   "fikir": "Hidrojen bağı için H, F–O–N atomlarından birine bağlı olmalıdır; apolarda London, polarda dipol–dipol baskındır.",
+   "tuzak": "HBr ya da HCl’de hidrojen bağı aramak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-et-zayif",
+   "tip": "Baskın zayıf etkileşim",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ETKL-05",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "Halojenlerin hâl ve kaynama noktası",
+   "fikir": "Apolar moleküllerde mol kütlesi arttıkça London kuvveti ve kaynama noktası artar; hâl, oda sıcaklığının erime–kaynama noktaları arasındaki yerinden bulunur.",
+   "tuzak": "Hâli yalnız kaynama noktasına bakıp belirlemek.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "kim-et-halojen",
+   "tip": "Tablodan hâl ve kaynama noktası yorumu",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ETKL-06",
+   "konu": "Kimyasal Türler Arası Etkileşimler",
+   "alt": "Benzer benzeri çözer",
+   "fikir": "Polar maddeler polar çözücüde, apolar maddeler apolar çözücüde çözünür; iyonik maddeler polar çözücüde çözünür.",
+   "tuzak": "Yağın suda, NaCl’nin CCl₄’te çözüneceğini sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "kim-et-cozunme",
+   "tip": "Çözünme ve etkileşim",
+   "kaynak": "ÖSYM 2018–2025 (güçlü ve zayıf etkileşimler) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-et-bagturu",
+   "ad": "Bileşikte bağ türü",
+   "kartlar": [
+    "K-ETKL-01"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  },
+  {
+   "tipId": "kim-et-formul",
+   "ad": "Atom numarasından bileşik formülü",
+   "kartlar": [
+    "K-ETKL-02"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  },
+  {
+   "tipId": "kim-et-coklu",
+   "ad": "Çoklu bağ içeren moleküller",
+   "kartlar": [
+    "K-ETKL-03"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  },
+  {
+   "tipId": "kim-et-zayif",
+   "ad": "Baskın zayıf etkileşim",
+   "kartlar": [
+    "K-ETKL-04"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  },
+  {
+   "tipId": "kim-et-halojen",
+   "ad": "Tablodan hâl ve kaynama noktası yorumu",
+   "kartlar": [
+    "K-ETKL-05"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  },
+  {
+   "tipId": "kim-et-cozunme",
+   "ad": "Çözünme ve etkileşim",
+   "kartlar": [
+    "K-ETKL-06"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Türler Arası Etkileşimler"
+  }
+ ]
+}

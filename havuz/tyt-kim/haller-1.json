@@ -1,0 +1,470 @@
+[
+ {
+  "id": "tytkim-haller-0001",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Katı, sıvı ve gaz hâllerinin genel özelliklerini ayırt eder.",
+  "tipId": "kim-hl-ozellik",
+  "tip": "Maddenin hâllerinin özellikleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "Maddenin hâlleriyle ilgili şunlar söyleniyor.\nI. Katılar belirli şekle ve belirli hacme sahiptir.\nII. Sıvılar bulundukları kabın şeklini alır, hacimleri belirlidir.\nIII. Gazların belirli bir hacmi vardır.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "Yalnız III",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "B": "II öncülünü yanlış sanmış; oysa sıvılar bulundukları kabın şeklini alır ve hacimleri belirlidir.",
+   "C": "I öncülünü yanlış sanmış; oysa katı hâlde madde belirli şekil ve hacme sahiptir.",
+   "D": "III öncülünü doğru sanmış; oysa gazların hacmi belirli değildir, bulundukları kabın tamamını doldururlar. I öncülünü yanlış sanmış; oysa katı hâlde madde belirli şekil ve hacme sahiptir. II öncülünü yanlış sanmış; oysa sıvılar bulundukları kabın şeklini alır ve hacimleri belirlidir.",
+   "E": "III öncülünü doğru sanmış; oysa gazların hacmi belirli değildir, bulundukları kabın tamamını doldururlar. II öncülünü yanlış sanmış; oysa sıvılar bulundukları kabın şeklini alır ve hacimleri belirlidir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Hâllerin özellikleri",
+    "ifade": "Katı: şekli ve hacmi belirlidir. Sıvı: hacmi belirli, şekli kabına bağlıdır. Gaz: ne şekli ne hacmi belirlidir, bulunduğu kabın tamamını doldurur. Örnek: bir balondaki hava balonun şeklini alır"
+   }
+  ],
+  "ipuclari": [
+   "Hangi hâlde şekil, hangi hâlde hacim kabın özelliğine bağlıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katılar",
+    "aciklama": "Tanecikler sıkı dizilmiştir.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "Sıvılar",
+    "aciklama": "Tanecikler birbiri üzerinde kayar, hacim sabit kalır.",
+    "islem": "II: doğru"
+   },
+   {
+    "baslik": "Gazlar",
+    "aciklama": "Tanecikler arası çok uzaktır, gaz kabın tamamına yayılır.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "I: doğru · II: doğru · III: yanlış · Sonuç: I ve II"
+   }
+  ],
+  "puf": "Gazın belirli şekli de hacmi de yoktur; sıvının yalnız hacmi belirlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-01 (hâllerin özellikleri) · şekil ve hacim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-haller-0002",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Günlük olaylardaki hâl değişimlerini ısı alan ya da ısı veren olarak sınıflandırır.",
+  "tipId": "kim-hl-isi",
+  "tip": "Hâl değişimlerinde ısı alışverişi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki olaylar veriliyor.\nI. Soğuk bardağın dış yüzeyinde su damlacıklarının oluşması\nII. Islak çamaşırın kuruması\nIII. Gölün yüzeyindeki suyun donması\nBunlardan hangileri ortama ısı vererek gerçekleşir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I ve II"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III öncülünü yanlış sanmış; oysa su donarken ortama ısı verir.",
+   "B": "II öncülünü doğru sanmış; oysa ıslak çamaşır kururken su buharlaşır ve buharlaşma ısı alan bir olaydır. I öncülünü yanlış sanmış; oysa su buharı yoğuşurken ısı verir. III öncülünü yanlış sanmış; oysa su donarken ortama ısı verir.",
+   "D": "II öncülünü doğru sanmış; oysa ıslak çamaşır kururken su buharlaşır ve buharlaşma ısı alan bir olaydır. I öncülünü yanlış sanmış; oysa su buharı yoğuşurken ısı verir.",
+   "E": "II öncülünü doğru sanmış; oysa ıslak çamaşır kururken su buharlaşır ve buharlaşma ısı alan bir olaydır. III öncülünü yanlış sanmış; oysa su donarken ortama ısı verir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Isı veren hâl değişimleri.",
+  "bilgi": [
+   {
+    "ad": "Hâl değişimi ve ısı",
+    "ifade": "Erime, buharlaşma ve süblimleşme ısı alır. Donma, yoğuşma ve kırağılaşma ısı verir. Örnek: buzun erimesi ısı alır"
+   }
+  ],
+  "ipuclari": [
+   "Her olayın hangi hâl değişimi olduğunu adlandır; sonra ısı alan mı, veren mi olduğuna karar ver."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Olayları adlandır",
+    "aciklama": "Her olaydaki hâl değişimi belirlenir.",
+    "islem": "I: yoğuşma · II: buharlaşma · III: donma"
+   },
+   {
+    "baslik": "Isı alışverişi",
+    "aciklama": "Gaz→sıvı ve sıvı→katı ısı verir; sıvı→gaz ısı alır.",
+    "islem": "I: verir · II: alır · III: verir"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Isı verenler seçilir.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Tanecikler birbirine yaklaşıyorsa (gaz→sıvı→katı) olay ısı verir, uzaklaşıyorsa ısı alır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-02 (hâl değişimi ve ısı) · yoğuşma, buharlaşma, donma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-haller-0003",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Saf maddenin ısıtma grafiğinden hâl ve hâl değişimi aralıklarını yorumlar.",
+  "tipId": "kim-hl-egri",
+  "tip": "Isıtma grafiğini yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Katı hâldeki saf bir X maddesi sabit güçlü bir ısıtıcıyla ısıtılıyor ve sıcaklığın zamanla değişimi şekildeki grafikte verilmiştir.\nI. 3. dakikada X hem katı hem sıvı hâldedir.\nII. 10. dakikada X yalnız gaz hâldedir.\nIII. 5–8. dakikalar arasında verilen ısı X sıvısının sıcaklığını yükseltmek için kullanılır.\nBuna göre hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 290 205\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"40.0\" y1=\"170.0\" x2=\"40.0\" y2=\"18.0\" stroke-width=\"1.6\" /><line x1=\"40.0\" y1=\"170.0\" x2=\"265.0\" y2=\"170.0\" stroke-width=\"1.6\" /><path d=\"M40.0 156.5 L68.0 129.5 L110.0 129.5 L152.0 48.5 L222.0 48.5 L250.0 21.5\" stroke-width=\"2.6\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"40.0\" y1=\"170.0\" x2=\"40.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"40.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"68.0\" y1=\"170.0\" x2=\"68.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"68.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"110.0\" y1=\"170.0\" x2=\"110.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"110.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">5</text><line x1=\"152.0\" y1=\"170.0\" x2=\"152.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"152.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">8</text><line x1=\"222.0\" y1=\"170.0\" x2=\"222.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"222.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">13</text><line x1=\"250.0\" y1=\"170.0\" x2=\"250.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"250.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">15</text><line x1=\"35.0\" y1=\"156.5\" x2=\"40.0\" y2=\"156.5\" stroke-width=\"1.4\" /><text x=\"33.0\" y=\"160.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"35.0\" y1=\"129.5\" x2=\"40.0\" y2=\"129.5\" stroke-width=\"1.4\" /><text x=\"33.0\" y=\"133.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"35.0\" y1=\"48.5\" x2=\"40.0\" y2=\"48.5\" stroke-width=\"1.4\" /><text x=\"33.0\" y=\"52.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"35.0\" y1=\"21.5\" x2=\"40.0\" y2=\"21.5\" stroke-width=\"1.4\" /><text x=\"33.0\" y=\"25.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">110</text><text x=\"60.0\" y=\"14.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sıcaklık (°C)</text><text x=\"265.0\" y=\"200.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Zaman (dk)</text></svg>",
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız I",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "II öncülünü doğru sanmış; oysa 10. dakika kaynama aralığındadır; madde sıvı ve gaz birlikte bulunur, yalnız gaz değildir. I öncülünü yanlış sanmış; oysa 3. dakika sıcaklığın sabit kaldığı erime aralığındadır; madde katı ve sıvı karışımıdır. III öncülünü yanlış sanmış; oysa 5–8. dakikalarda sıcaklık arttığı için verilen ısı sıvının sıcaklığını yükseltir.",
+   "B": "III öncülünü yanlış sanmış; oysa 5–8. dakikalarda sıcaklık arttığı için verilen ısı sıvının sıcaklığını yükseltir.",
+   "C": "I öncülünü yanlış sanmış; oysa 3. dakika sıcaklığın sabit kaldığı erime aralığındadır; madde katı ve sıvı karışımıdır.",
+   "D": "II öncülünü doğru sanmış; oysa 10. dakika kaynama aralığındadır; madde sıvı ve gaz birlikte bulunur, yalnız gaz değildir. III öncülünü yanlış sanmış; oysa 5–8. dakikalarda sıcaklık arttığı için verilen ısı sıvının sıcaklığını yükseltir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Grafiğe göre doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Isıtma grafiği",
+    "ifade": "Saf maddede hâl değişimi sırasında sıcaklık sabit kalır ve ısı hâl değiştirmeye harcanır. Sıcaklık yükseliyorsa madde tek hâldedir. Örnek: buz erirken 0 °C’de sabit kalır"
+   }
+  ],
+  "ipuclari": [
+   "Grafikte sıcaklığın sabit kaldığı aralıklarda hâl değişimi olur; arttığı aralıklarda tek hâl vardır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabit aralıkları bul",
+    "aciklama": "Sıcaklık 2–5 dk 30 °C’de ve 8–13 dk 90 °C’de sabit.",
+    "islem": "2–5 dk: erime · 8–13 dk: kaynama"
+   },
+   {
+    "baslik": "I. öncül",
+    "aciklama": "3. dk erime aralığındadır.",
+    "islem": "katı + sıvı → I: doğru"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "10. dk kaynama aralığındadır.",
+    "islem": "sıvı + gaz → II: yanlış"
+   },
+   {
+    "baslik": "III. öncül",
+    "aciklama": "5–8. dk sıcaklık 30 °C’den 90 °C’ye çıkıyor.",
+    "islem": "sıvı ısınıyor → III: doğru · Sonuç: I ve III"
+   }
+  ],
+  "puf": "Düz (yatay) aralık hâl değişimini, eğimli aralık tek hâlde ısınmayı gösterir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-03 (ısıtma eğrisi) · katıdan gaza ısıtma grafiği",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-haller-0004",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Aynı sıcaklıktaki buhar basınçlarından sıvıların kaynama noktalarını karşılaştırır.",
+  "tipId": "kim-hl-buhar",
+  "tip": "Buhar basıncından kaynama noktası sırası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Saf X, Y ve Z sıvılarının aynı sıcaklıktaki buhar basınçları tabloda verilmiştir.\nSıvı | Buhar basıncı (mmHg)\nX | 150\nY | 40\nZ | 90\nBu sıvıların aynı dış basınçtaki kaynama noktaları arasındaki ilişki aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "X > Z > Y",
+   "B": "Y > Z > X",
+   "C": "Z > Y > X",
+   "D": "X > Y > Z",
+   "E": "Y > X > Z"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Y > Z > X"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa buhar basıncı en yüksek olan X’in kaynama noktası en düşüktür; sıralama ters kurulmuştur",
+   "C": "Bu ifadeyi doğru sanmış; oysa Y’nin buhar basıncı en düşük olduğundan kaynama noktası en yüksektir",
+   "D": "Bu ifadeyi doğru sanmış; oysa buhar basıncı ile kaynama noktası ters orantılıdır; X en düşük kaynama noktasına sahiptir",
+   "E": "Bu ifadeyi doğru sanmış; oysa X’in buhar basıncı Z’den yüksek olduğu için kaynama noktası Z’den düşüktür"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kaynama noktalarının büyükten küçüğe sıralaması.",
+  "bilgi": [
+   {
+    "ad": "Buhar basıncı ve kaynama",
+    "ifade": "Aynı sıcaklıkta buhar basıncı büyük olan sıvı kolay buharlaşır; çekim kuvvetleri zayıftır ve kaynama noktası düşüktür. Örnek: ağız açık kolonya, sudan daha çabuk buharlaşır"
+   }
+  ],
+  "ipuclari": [
+   "Aynı sıcaklıkta kolay buharlaşan sıvının tanecikleri arasındaki çekim zayıftır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Buhar basınçlarını sırala",
+    "aciklama": "En büyük olan en kolay buharlaşır.",
+    "islem": "X (150) > Z (90) > Y (40)"
+   },
+   {
+    "baslik": "Kaynama noktasına çevir",
+    "aciklama": "Buhar basıncı ile kaynama noktası ters sıralanır.",
+    "islem": "kaynama noktası: Y > Z > X"
+   },
+   {
+    "baslik": "Şıkları karşılaştır",
+    "aciklama": "Sıralamayı veren şık seçilir.",
+    "islem": "B"
+   }
+  ],
+  "puf": "Buhar basıncı yüksek olan sıvının kaynama noktası düşüktür; sıralama ters çevrilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-04 (buhar basıncı) · X, Y, Z sıvıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-haller-0005",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Sıvıların yüzey gerilimi, viskozite, kaynama noktası ve buhar basıncı ile ilgili ifadeleri değerlendirir.",
+  "tipId": "kim-hl-sivi",
+  "tip": "Sıvıların özellikleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Sıvıların özellikleriyle ilgili aşağıdaki ifadeler veriliyor.\nI. Yüzey gerilimi, sıvı yüzeyindeki moleküllerin iç kısma doğru çekilmesinden kaynaklanır.\nII. Sıcaklık arttıkça sıvıların viskozitesi artar.\nIII. Dış basınç azaldıkça bir sıvının kaynama noktası yükselir.\nIV. Sıcaklık sabitken bir sıvının buhar basıncı, sıvının miktarına bağlı değildir.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "II ve III",
+   "C": "III ve IV",
+   "D": "I ve IV",
+   "E": "II ve IV"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve IV"
+  },
+  "celdiriciler": {
+   "A": "II öncülünü doğru sanmış; oysa sıcaklık arttıkça sıvıların viskozitesi azalır. IV öncülünü yanlış sanmış; oysa sıcaklık sabitken sıvının buhar basıncı sıvı miktarına ve kabın hacmine bağlı değildir.",
+   "B": "II öncülünü doğru sanmış; oysa sıcaklık arttıkça sıvıların viskozitesi azalır. III öncülünü doğru sanmış; oysa dış basınç azaldıkça kaynama noktası düşer (yüksek yerlerde su daha düşük sıcaklıkta kaynar). I öncülünü yanlış sanmış; oysa yüzeydeki moleküller içeriden aşağı doğru çekildiği için yüzey gerilimi oluşur. IV öncülünü yanlış sanmış; oysa sıcaklık sabitken sıvının buhar basıncı sıvı miktarına ve kabın hacmine bağlı değildir.",
+   "C": "III öncülünü doğru sanmış; oysa dış basınç azaldıkça kaynama noktası düşer (yüksek yerlerde su daha düşük sıcaklıkta kaynar). I öncülünü yanlış sanmış; oysa yüzeydeki moleküller içeriden aşağı doğru çekildiği için yüzey gerilimi oluşur.",
+   "E": "II öncülünü doğru sanmış; oysa sıcaklık arttıkça sıvıların viskozitesi azalır. I öncülünü yanlış sanmış; oysa yüzeydeki moleküller içeriden aşağı doğru çekildiği için yüzey gerilimi oluşur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Sıvı özellikleri",
+    "ifade": "Yüzey gerilimi: yüzeyin gerilmiş zar gibi davranması. Viskozite: akmaya karşı direnç, sıcaklık artınca azalır. Kaynama noktası: sıvının buhar basıncının dış basınca eşit olduğu sıcaklıktır; dış basınç azalırsa kaynama noktası düşer. Buhar basıncı yalnız sıcaklık ve sıvı türüne bağlıdır"
+   }
+  ],
+  "ipuclari": [
+   "Viskozitenin sıcaklığa, buhar basıncının miktara, kaynama noktasının dış basınca nasıl bağlı olduğunu tek tek düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. öncül",
+    "aciklama": "Yüzeydeki moleküller yalnız aşağıdan ve yanlardan çekilir.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "Sıcaklık artınca moleküller kolay kayar, viskozite azalır.",
+    "islem": "II: yanlış"
+   },
+   {
+    "baslik": "III. öncül",
+    "aciklama": "Dış basınç azalınca buhar basıncı daha düşük sıcaklıkta dış basınca ulaşır.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "IV. öncül",
+    "aciklama": "Buhar basıncı sıvı miktarına ve kap hacmine bağlı değildir.",
+    "islem": "IV: doğru · Sonuç: I ve IV"
+   }
+  ],
+  "puf": "Viskozite sıcaklıkla azalır; buhar basıncı yalnız sıvı türü ve sıcaklığa bağlıdır, miktara değil; dış basınç azalınca kaynama noktası düşer.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-05 (sıvıların özellikleri) · yüzey gerilimi, viskozite, kaynama noktası, buhar basıncı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-haller-0006",
+  "ders": "TYT Kimya",
+  "konu": "Maddenin Halleri · Sıvılar",
+  "k": "kim|Maddenin Halleri",
+  "kazanim": "Buhar basıncı–sıcaklık grafiğinden farklı dış basınçlardaki kaynama noktalarını okuyup yorumlar.",
+  "tipId": "kim-hl-bp-grafik",
+  "tip": "Buhar basıncı–sıcaklık grafiğinden kaynama noktası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Saf X ve Y sıvılarının buhar basıncının sıcaklıkla değişimi şekildeki grafikte verilmiştir.\nI. Aynı sıcaklıkta X’in buhar basıncı Y’ninkinden büyüktür.\nII. X’in tanecikleri arasındaki çekim kuvveti Y’ninkinden daha büyüktür.\nIII. Dış basıncın 380 mmHg olduğu bir ortamda X 40 °C’de, Y 55 °C’de kaynar.\nIV. Dış basınç 760 mmHg’den 380 mmHg’ye düşürülürse X ile Y’nin kaynama noktaları arasındaki fark artar.\nBuna göre hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 300 215\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46.0\" y1=\"170.0\" x2=\"46.0\" y2=\"18.0\" stroke-width=\"1.6\" /><line x1=\"46.0\" y1=\"170.0\" x2=\"285.0\" y2=\"170.0\" stroke-width=\"1.6\" /><line x1=\"62.5\" y1=\"20.0\" x2=\"62.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"79.0\" y1=\"20.0\" x2=\"79.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"95.5\" y1=\"20.0\" x2=\"95.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"112.0\" y1=\"20.0\" x2=\"112.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"128.5\" y1=\"20.0\" x2=\"128.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"145.0\" y1=\"20.0\" x2=\"145.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"161.5\" y1=\"20.0\" x2=\"161.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"178.0\" y1=\"20.0\" x2=\"178.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"194.5\" y1=\"20.0\" x2=\"194.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"211.0\" y1=\"20.0\" x2=\"211.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"227.5\" y1=\"20.0\" x2=\"227.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"244.0\" y1=\"20.0\" x2=\"244.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"260.5\" y1=\"20.0\" x2=\"260.5\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"277.0\" y1=\"20.0\" x2=\"277.0\" y2=\"170.0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"46.0\" y1=\"114.9\" x2=\"285.0\" y2=\"114.9\" stroke-width=\"1.0\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><line x1=\"46.0\" y1=\"59.8\" x2=\"285.0\" y2=\"59.8\" stroke-width=\"1.0\" stroke-dasharray=\"3 3\" style=\"stroke-opacity:.35\"/><path d=\"M46.0 142.4 L49.3 141.5 L52.6 140.5 L55.9 139.4 L59.2 138.4 L62.5 137.2 L65.8 136.1 L69.1 134.9 L72.4 133.6 L75.7 132.4 L79.0 131.0 L82.3 129.7 L85.6 128.2 L88.9 126.8 L92.2 125.2 L95.5 123.7 L98.8 122.0 L102.1 120.3 L105.4 118.6 L108.7 116.8 L112.0 114.9 L115.3 113.0 L118.6 110.9 L121.9 108.9 L125.2 106.7 L128.5 104.5 L131.8 102.2 L135.1 99.8 L138.4 97.3 L141.7 94.7 L145.0 92.1 L148.3 89.3 L151.6 86.5 L154.9 83.5 L158.2 80.5 L161.5 77.3 L164.8 74.1 L168.1 70.7 L171.4 67.2 L174.7 63.6 L178.0 59.8 L181.3 55.9 L184.6 51.9 L187.9 47.7 L191.2 43.4 L194.5 38.9 L197.8 34.3 L201.1 29.5 L204.1 25.0\" stroke-width=\"2.6\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M46.0 149.1 L49.3 148.5 L52.6 147.9 L55.9 147.3 L59.2 146.7 L62.5 146.0 L65.8 145.3 L69.1 144.6 L72.4 143.9 L75.7 143.2 L79.0 142.4 L82.3 141.7 L85.6 140.9 L88.9 140.1 L92.2 139.2 L95.5 138.4 L98.8 137.5 L102.1 136.5 L105.4 135.6 L108.7 134.6 L112.0 133.6 L115.3 132.6 L118.6 131.6 L121.9 130.5 L125.2 129.4 L128.5 128.2 L131.8 127.1 L135.1 125.9 L138.4 124.6 L141.7 123.3 L145.0 122.0 L148.3 120.7 L151.6 119.3 L154.9 117.9 L158.2 116.4 L161.5 114.9 L164.8 113.4 L168.1 111.8 L171.4 110.1 L174.7 108.4 L178.0 106.7 L181.3 104.9 L184.6 103.1 L187.9 101.2 L191.2 99.3 L194.5 97.3 L197.8 95.3 L201.1 93.1 L204.4 91.0 L207.7 88.8 L211.0 86.5 L214.3 84.1 L217.6 81.7 L220.9 79.2 L224.2 76.7 L227.5 74.1 L230.8 71.4 L234.1 68.6 L237.4 65.7 L240.7 62.8 L244.0 59.8 L247.3 56.7 L250.6 53.5 L253.9 50.2 L257.2 46.9 L260.5 43.4 L263.8 39.9 L267.1 36.2 L270.4 32.4 L273.7 28.6 L276.7 25.0\" stroke-width=\"2.6\"/><line x1=\"46.0\" y1=\"170.0\" x2=\"46.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"46.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"79.0\" y1=\"170.0\" x2=\"79.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"79.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"112.0\" y1=\"170.0\" x2=\"112.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"112.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"145.0\" y1=\"170.0\" x2=\"145.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"145.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><line x1=\"178.0\" y1=\"170.0\" x2=\"178.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"178.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"211.0\" y1=\"170.0\" x2=\"211.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"211.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">70</text><line x1=\"244.0\" y1=\"170.0\" x2=\"244.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"244.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">80</text><line x1=\"277.0\" y1=\"170.0\" x2=\"277.0\" y2=\"175.0\" stroke-width=\"1.4\" /><text x=\"277.0\" y=\"188.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"41.0\" y1=\"114.9\" x2=\"46.0\" y2=\"114.9\" stroke-width=\"1.4\" /><text x=\"38.0\" y=\"118.9\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">380</text><line x1=\"41.0\" y1=\"59.8\" x2=\"46.0\" y2=\"59.8\" stroke-width=\"1.4\" /><text x=\"38.0\" y=\"63.8\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">760</text><text x=\"170.0\" y=\"41.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">X</text><text x=\"250.6\" y=\"43.5\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Y</text><text x=\"50.0\" y=\"12.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Buhar basıncı (mmHg)</text><text x=\"285.0\" y=\"205.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sıcaklık (°C)</text></svg>",
+  "siklar": {
+   "A": "I ve III",
+   "B": "Yalnız I",
+   "C": "II ve IV",
+   "D": "I ve II",
+   "E": "III ve IV"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "B": "III öncülünü yanlış sanmış; oysa 380 mmHg doğrusu X eğrisini 40 °C’de, Y eğrisini 55 °C’de keser.",
+   "C": "II öncülünü doğru sanmış; oysa X’in kaynama noktası daha düşük olduğundan X’in tanecikleri arası çekim kuvveti Y’ninkinden zayıftır. IV öncülünü doğru sanmış; oysa dış basınç 380 mmHg’ye düşünce kaynama noktaları farkı 20 °C’den 15 °C’ye azalır. I öncülünü yanlış sanmış; oysa aynı sıcaklıkta X’in buhar basıncı Y’ninkinden büyüktür; grafikte X eğrisi Y eğrisinin üstündedir. III öncülünü yanlış sanmış; oysa 380 mmHg doğrusu X eğrisini 40 °C’de, Y eğrisini 55 °C’de keser.",
+   "D": "II öncülünü doğru sanmış; oysa X’in kaynama noktası daha düşük olduğundan X’in tanecikleri arası çekim kuvveti Y’ninkinden zayıftır. III öncülünü yanlış sanmış; oysa 380 mmHg doğrusu X eğrisini 40 °C’de, Y eğrisini 55 °C’de keser.",
+   "E": "IV öncülünü doğru sanmış; oysa dış basınç 380 mmHg’ye düşünce kaynama noktaları farkı 20 °C’den 15 °C’ye azalır. I öncülünü yanlış sanmış; oysa aynı sıcaklıkta X’in buhar basıncı Y’ninkinden büyüktür; grafikte X eğrisi Y eğrisinin üstündedir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Grafiğe göre doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Kaynama noktası ve dış basınç",
+    "ifade": "Sıvı, buhar basıncı dış basınca eşit olunca kaynar. Grafikte dış basınç değerinden çizilen yatay doğrunun eğriyi kestiği nokta kaynama noktasıdır; dış basınç azalırsa kaynama noktası düşer. Örnek: yüksek yerlerde su 100 °C’den düşük sıcaklıkta kaynar"
+   },
+   {
+    "ad": "Buhar basıncı ve çekim kuvveti",
+    "ifade": "Aynı sıcaklıkta buhar basıncı büyük olan sıvı daha uçucudur; tanecikleri arası çekim kuvveti zayıftır ve kaynama noktası düşüktür"
+   }
+  ],
+  "ipuclari": [
+   "Kaynama noktası, buhar basıncının dış basınca eşit olduğu sıcaklıktır; dış basıncı gösteren yatay doğruyu eğrilerle kesiştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kaynama noktalarını oku",
+    "aciklama": "760 mmHg ve 380 mmHg doğrularını X ve Y eğrileriyle kesiştir.",
+    "islem": "760 mmHg: X 60 °C, Y 80 °C · 380 mmHg: X 40 °C, Y 55 °C"
+   },
+   {
+    "baslik": "I ve II",
+    "aciklama": "X eğrisi Y’nin üstündedir; X daha uçucudur, çekim kuvveti daha zayıftır.",
+    "islem": "I: doğru · II: yanlış"
+   },
+   {
+    "baslik": "III ve IV",
+    "aciklama": "380 mmHg okumaları 40 ve 55 °C; fark 80 − 60 = 20 °C iken 55 − 40 = 15 °C olur.",
+    "islem": "III: doğru · IV: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "Sonuç: I ve III"
+   }
+  ],
+  "puf": "Kaynama noktasını sorarken önce dış basıncı bul; o basınçtan çizdiğin yatay doğrunun eğriyi kestiği sıcaklığı oku.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HALL-06 (buhar basıncı ve dış basınç) · X ve Y sıvıları, 760 ve 380 mmHg doğruları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

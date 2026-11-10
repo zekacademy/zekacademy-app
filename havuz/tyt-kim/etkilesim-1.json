@@ -1,0 +1,478 @@
+[
+ {
+  "id": "tytkim-etkilesim-0001",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Güçlü Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Bileşiği oluşturan elementlerin türüne göre bağ türünü belirler.",
+  "tipId": "kim-et-bagturu",
+  "tip": "Bileşikte bağ türü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki bileşiklerden hangisinde atomlar arasında yalnız iyonik bağ bulunur?",
+  "sekil": null,
+  "siklar": {
+   "A": "CO₂",
+   "B": "NaCl",
+   "C": "H₂O",
+   "D": "CH₄",
+   "E": "NH₃"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "NaCl"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa karbon ve oksijen ametaldir, aralarında kovalent bağ vardır",
+   "C": "Bu ifadeyi doğru sanmış; oysa hidrojen ve oksijen ametaldir, aralarında kovalent bağ vardır",
+   "D": "Bu ifadeyi doğru sanmış; oysa karbon ve hidrojen ametaldir, aralarında kovalent bağ vardır",
+   "E": "Bu ifadeyi doğru sanmış; oysa azot ve hidrojen ametaldir, aralarında kovalent bağ vardır"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yalnız iyonik bağ içeren bileşik.",
+  "bilgi": [
+   {
+    "ad": "İyonik ve kovalent bağ",
+    "ifade": "Metal ile ametal arasında elektron aktarımıyla iyonik bağ oluşur (örnek: NaCl). Ametaller arasında elektronlar ortak kullanılır ve kovalent bağ oluşur (örnek: H₂O)"
+   }
+  ],
+  "ipuclari": [
+   "Bileşiği oluşturan elementlerin metal mi ametal mi olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Elementleri sınıflandır",
+    "aciklama": "Na metaldir; C, O, H, N, Cl ametaldir.",
+    "islem": "Na: metal · C, H, N, O, Cl: ametal"
+   },
+   {
+    "baslik": "Bağ türünü belirle",
+    "aciklama": "Metal–ametal iyonik, ametal–ametal kovalenttir.",
+    "islem": "NaCl: iyonik · CO₂, H₂O, CH₄, NH₃: kovalent"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız iyonik bağ içeren tek bileşik bulunur.",
+    "islem": "NaCl → B"
+   }
+  ],
+  "puf": "Bileşikte metal varsa genellikle iyonik, yalnız ametal varsa kovalent bağ düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-01 (bağ türü) · NaCl, CO₂, H₂O, CH₄, NH₃",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-etkilesim-0002",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Güçlü Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Atom numaralarından elektron dizilimini bulup oluşan bileşiğin formülünü ve bağ türünü belirler.",
+  "tipId": "kim-et-formul",
+  "tip": "Atom numarasından bileşik formülü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "X ve Y elementlerinin atom numaraları sırasıyla 12 ve 17’dir.\nBuna göre X ile Y’nin oluşturduğu kararlı bileşiğin formülü ve bağ türü aşağıdakilerden hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "XY₂, kovalent",
+   "B": "X₂Y, kovalent",
+   "C": "XY, iyonik",
+   "D": "X₂Y, iyonik",
+   "E": "XY₂, iyonik"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "XY₂, iyonik"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa metal ile ametal arasında elektron aktarılır, bağ iyoniktir",
+   "B": "Bu ifadeyi doğru sanmış; oysa bağ iyoniktir ve indisler de ters yazılmıştır",
+   "C": "Bu ifadeyi doğru sanmış; oysa X 2 elektron verir, Y 1 elektron alır; 1:1 birleşirse yük dengelenmez",
+   "D": "Bu ifadeyi doğru sanmış; oysa çaprazlama ters yapılmış; X için indis 1, Y için indis 2 olmalıdır"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Bileşiğin formülü ve bağ türü.",
+  "bilgi": [
+   {
+    "ad": "Elektron dizilimi",
+    "ifade": "Elektronlar katmanlara 2, 8, 8 … sırasıyla yerleşir. Son katmandaki elektronlar değerlik elektronudur. Örnek: atom numarası 11 → 2, 8, 1"
+   },
+   {
+    "ad": "Kararlı olma",
+    "ifade": "Metal son katmandaki elektronları verir, ametal oktetini tamamlayacak kadar alır; verilen ve alınan elektron sayıları eşitlenir"
+   }
+  ],
+  "ipuclari": [
+   "Elektron dizilimlerinden son katmandaki elektron sayılarını bul; kim kaç elektron verir, kim kaç elektron alır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Elektron dizilimleri",
+    "aciklama": "Atom numaralarına göre katmanlar doldurulur.",
+    "islem": "X: 2, 8, 2 · Y: 2, 8, 7"
+   },
+   {
+    "baslik": "Verilen ve alınan elektron",
+    "aciklama": "X 2 elektron verir (metal), Y oktet için 1 elektron alır (ametal).",
+    "islem": "X: −2 e⁻ → X²⁺ · Y: +1 e⁻ → Y⁻"
+   },
+   {
+    "baslik": "Formül",
+    "aciklama": "1 X, 2 Y atomu 2 elektronu dengeler; bağ iyoniktir.",
+    "islem": "XY₂, iyonik"
+   }
+  ],
+  "puf": "Verilen elektron sayısı alınan elektron sayısına eşitlenerek formül bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-02 (iyonik bileşik formülü) · atom numaraları 12 ve 17",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-etkilesim-0003",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Güçlü Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Moleküllerin Lewis yapılarını çizerek çift ve üçlü bağ içerenleri belirler.",
+  "tipId": "kim-et-coklu",
+  "tip": "Çoklu bağ içeren moleküller",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "O₂, N₂, CO₂, C₂H₄, H₂O ve NH₃ moleküllerinin tamamında atomlar oktet (H için dubletle) kuralına uyacak biçimde bağlanmıştır.\nBuna göre bu moleküllerden kaç tanesi çift ya da üçlü bağ içerir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4",
+   "D": "5",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Yalnız O₂ ve N₂’yi saymış; CO₂ ve C₂H₄’teki çift bağları atlamış.",
+   "B": "C₂H₄’teki karbon–karbon çift bağını fark etmemiş.",
+   "D": "H₂O ya da NH₃’ü de çoklu bağlı saymış; hidrojen yalnız tek bağ yapar.",
+   "E": "Tüm molekülleri çoklu bağlı saymış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Çift ya da üçlü bağ içeren molekül sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bağ sayısı",
+    "ifade": "Oktetini tamamlamak için ametal atomu 8 − (değerlik elektron sayısı) kadar bağ yapar: H 1, O 2, N 3, C 4 bağ. Örnek: H₂O’da O iki tek bağ yapar"
+   },
+   {
+    "ad": "Çoklu bağ",
+    "ifade": "İki atom arasında iki ortak elektron çifti çift bağ, üç çift üçlü bağdır. Örnek: O=O çift bağ, N≡N üçlü bağdır"
+   }
+  ],
+  "ipuclari": [
+   "Her atomun oktetini tamamlamak için kaç bağ yapması gerektiğini düşün: O 2, N 3, C 4, H 1 bağ yapar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağ sayıları",
+    "aciklama": "Her atomun yapması gereken bağ sayısı bulunur.",
+    "islem": "H: 1 · O: 2 · N: 3 · C: 4"
+   },
+   {
+    "baslik": "Moleküller",
+    "aciklama": "O₂ ve CO₂’de O’lar, N₂’de N’ler, C₂H₄’te C’ler tek bağla doyamaz.",
+    "islem": "O=O; N≡N; O=C=O; H₂C=CH₂"
+   },
+   {
+    "baslik": "Tek bağlılar",
+    "aciklama": "H₂O ve NH₃’te O ve N, H’lerle tek bağ yaparak doyar.",
+    "islem": "H–O–H · NH₃: üç tek bağ"
+   },
+   {
+    "baslik": "Sayım",
+    "aciklama": "Çoklu bağlı olanlar sayılır.",
+    "islem": "O₂, N₂, CO₂, C₂H₄ → 4"
+   }
+  ],
+  "puf": "Önce her atomun yapması gereken bağ sayısını yaz; tek bağla doymayan atom çiftleri çoklu bağ kurar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-03 (çoklu bağlar) · O₂, N₂, CO₂, C₂H₄, H₂O, NH₃",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-etkilesim-0004",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Zayıf Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Moleküller arasındaki baskın zayıf etkileşim türünü belirler.",
+  "tipId": "kim-et-zayif",
+  "tip": "Baskın zayıf etkileşim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Sıvı hâlde bulunan aşağıdaki maddelerin molekülleri arasındaki baskın etkileşim türleri için şunlar söyleniyor.\nI. NH₃ – hidrojen bağı\nII. CH₄ – London kuvvetleri\nIII. HBr – hidrojen bağı\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "Yalnız III",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "B": "II öncülünü yanlış sanmış; oysa CH₄ apolar bir molekül olduğu için baskın etkileşim London kuvvetleridir.",
+   "C": "I öncülünü yanlış sanmış; oysa N–H bağı içeren NH₃ moleküllerinde hidrojen bağı bulunur.",
+   "D": "III öncülünü doğru sanmış; oysa HBr’de H, F–O–N atomlarından birine bağlı değildir; baskın etkileşim dipol–dipoldür. I öncülünü yanlış sanmış; oysa N–H bağı içeren NH₃ moleküllerinde hidrojen bağı bulunur. II öncülünü yanlış sanmış; oysa CH₄ apolar bir molekül olduğu için baskın etkileşim London kuvvetleridir.",
+   "E": "III öncülünü doğru sanmış; oysa HBr’de H, F–O–N atomlarından birine bağlı değildir; baskın etkileşim dipol–dipoldür. II öncülünü yanlış sanmış; oysa CH₄ apolar bir molekül olduğu için baskın etkileşim London kuvvetleridir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru eşleştirilen etkileşim türleri.",
+  "bilgi": [
+   {
+    "ad": "Zayıf etkileşimler",
+    "ifade": "Apolar moleküller arasında London kuvvetleri vardır. Polar moleküller arasında dipol–dipol etkileşimi bulunur. H atomu F, O ya da N’ye bağlıysa moleküller arasında hidrojen bağı oluşur. Örnek: H₂O"
+   }
+  ],
+  "ipuclari": [
+   "Önce molekülün polar mı apolar mı olduğuna, sonra H’nin F, O ya da N’ye bağlı olup olmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "NH₃",
+    "aciklama": "Azota bağlı hidrojen vardır.",
+    "islem": "hidrojen bağı → I: doğru"
+   },
+   {
+    "baslik": "CH₄",
+    "aciklama": "Molekül apolardır.",
+    "islem": "London kuvvetleri → II: doğru"
+   },
+   {
+    "baslik": "HBr",
+    "aciklama": "H, brom atomuna bağlıdır; polar molekül.",
+    "islem": "dipol–dipol → III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "I: doğru · II: doğru · III: yanlış · Sonuç: I ve II"
+   }
+  ],
+  "puf": "Hidrojen bağı yalnız H’nin F, O ya da N atomuna bağlı olduğu moleküllerde görülür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-04 (zayıf etkileşimler) · NH₃, CH₄, HBr",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-etkilesim-0005",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Zayıf Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Apolar moleküllerin mol kütlesi, erime ve kaynama noktası verilerinden hâl ve etkileşim yorumu yapar.",
+  "tipId": "kim-et-halojen",
+  "tip": "Tablodan hâl ve kaynama noktası yorumu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Apolar moleküllerden oluşan F₂, Cl₂, Br₂ ve I₂ maddelerine ait bilgiler tabloda verilmiştir.\nMadde | Mol kütlesi (g/mol) | Erime noktası (°C) | Kaynama noktası (°C)\nF₂ | 38 | −220 | −188\nCl₂ | 71 | −101 | −34\nBr₂ | 160 | −7 | 59\nI₂ | 254 | 114 | 184\nBu maddelerle ilgili şunlar söyleniyor.\nI. Mol kütlesi arttıkça kaynama noktası artmaktadır.\nII. 25 °C’de F₂ ve Cl₂ sıvı hâldedir.\nIII. 25 °C’de Br₂ sıvı, I₂ katı hâldedir.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III öncülünü yanlış sanmış; oysa 25 °C’de Br₂ erime ve kaynama noktası arasında olduğu için sıvı, I₂ erime noktasının altında olduğu için katıdır.",
+   "B": "II öncülünü doğru sanmış; oysa 25 °C kaynama noktalarının üstündedir; F₂ ve Cl₂ bu sıcaklıkta gaz hâldedir. I öncülünü yanlış sanmış; oysa tablodaki dört maddede kaynama noktası mol kütlesiyle aynı sırada artar. III öncülünü yanlış sanmış; oysa 25 °C’de Br₂ erime ve kaynama noktası arasında olduğu için sıvı, I₂ erime noktasının altında olduğu için katıdır.",
+   "C": "I öncülünü yanlış sanmış; oysa tablodaki dört maddede kaynama noktası mol kütlesiyle aynı sırada artar.",
+   "E": "II öncülünü doğru sanmış; oysa 25 °C kaynama noktalarının üstündedir; F₂ ve Cl₂ bu sıcaklıkta gaz hâldedir. I öncülünü yanlış sanmış; oysa tablodaki dört maddede kaynama noktası mol kütlesiyle aynı sırada artar."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Tabloya göre doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Apolar maddeler",
+    "ifade": "Apolar moleküller arasında London kuvvetleri etkindir. Mol kütlesi büyüdükçe London kuvvetleri güçlenir ve kaynama noktası yükselir"
+   },
+   {
+    "ad": "Hâl belirleme",
+    "ifade": "Sıcaklık erime noktasının altındaysa madde katı, erime ile kaynama noktası arasındaysa sıvı, kaynama noktasının üstündeyse gazdır. Örnek: su 25 °C’de sıvıdır (0 < 25 < 100)"
+   }
+  ],
+  "ipuclari": [
+   "Bir maddenin hâli için 25 °C’nin erime ve kaynama noktalarına göre yerini bul: erime noktasının altında katı, kaynama noktasının üstünde gazdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. öncül",
+    "aciklama": "Kaynama noktaları −188, −34, 59, 184 ve mol kütleleri 38, 71, 160, 254 aynı sırada artıyor.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II. öncül",
+    "aciklama": "25 °C, F₂ ve Cl₂’nin kaynama noktasından yüksektir.",
+    "islem": "25 > −188 ve 25 > −34 → gaz → II: yanlış"
+   },
+   {
+    "baslik": "III. öncül",
+    "aciklama": "Br₂ için −7 < 25 < 59; I₂ için 25 < 114.",
+    "islem": "Br₂: sıvı · I₂: katı → III: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "Sonuç: I ve III"
+   }
+  ],
+  "puf": "Hâl sorularında sıcaklığı erime ve kaynama noktalarıyla karşılaştır: altı katı, arası sıvı, üstü gaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-05 (halojenler) · mol kütlesi, erime ve kaynama noktası tablosu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-etkilesim-0006",
+  "ders": "TYT Kimya",
+  "konu": "Kimyasal Türler Arası Etkileşimler · Zayıf Etkileşimler",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "kazanim": "Maddelerin polarlığına göre çözünme durumlarını yorumlar.",
+  "tipId": "kim-et-cozunme",
+  "tip": "Çözünme ve etkileşim",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki çözünme olayları için şunlar söyleniyor.\nI. Apolar olan yağ, polar olan suda çözünür.\nII. Apolar olan I₂ katısı, apolar olan CCl₄ sıvısında çözünür.\nIII. İyonik olan NaCl katısı, apolar olan CCl₄ sıvısında çözünür.\nIV. Polar olan C₂H₅OH (etanol) sıvısı, suda hidrojen bağları kurarak her oranda çözünür.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "II ve IV",
+   "C": "III ve IV",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II ve IV"
+  },
+  "celdiriciler": {
+   "A": "I öncülünü doğru sanmış; oysa apolar yağ polar suda çözünmez; benzer benzeri çözer. IV öncülünü yanlış sanmış; oysa C₂H₅OH ile H₂O molekülleri arasında hidrojen bağı kurulur ve ikisi her oranda karışır.",
+   "C": "III öncülünü doğru sanmış; oysa iyonik NaCl polar suda çözünür, apolar CCl₄’te çözünmez. II öncülünü yanlış sanmış; oysa apolar I₂ ile apolar CCl₄ arasındaki London kuvvetleri çözünmeyi sağlar.",
+   "D": "I öncülünü doğru sanmış; oysa apolar yağ polar suda çözünmez; benzer benzeri çözer. III öncülünü doğru sanmış; oysa iyonik NaCl polar suda çözünür, apolar CCl₄’te çözünmez. II öncülünü yanlış sanmış; oysa apolar I₂ ile apolar CCl₄ arasındaki London kuvvetleri çözünmeyi sağlar. IV öncülünü yanlış sanmış; oysa C₂H₅OH ile H₂O molekülleri arasında hidrojen bağı kurulur ve ikisi her oranda karışır.",
+   "E": "III öncülünü doğru sanmış; oysa iyonik NaCl polar suda çözünür, apolar CCl₄’te çözünmez. IV öncülünü yanlış sanmış; oysa C₂H₅OH ile H₂O molekülleri arasında hidrojen bağı kurulur ve ikisi her oranda karışır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Benzer benzeri çözer",
+    "ifade": "Polar maddeler ve iyonik bileşikler polar çözücülerde (örnek: su), apolar maddeler apolar çözücülerde (örnek: CCl₄) çözünür"
+   }
+  ],
+  "ipuclari": [
+   "Çözünmede “benzer benzeri çözer” ilkesini uygula: çözünen ve çözücünün polar, apolar ya da iyonik olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maddeleri sınıflandır",
+    "aciklama": "Su ve etanol polar, yağ, I₂ ve CCl₄ apolar, NaCl iyoniktir.",
+    "islem": "polar: H₂O, C₂H₅OH · apolar: yağ, I₂, CCl₄ · iyonik: NaCl"
+   },
+   {
+    "baslik": "I ve III",
+    "aciklama": "Yağ–su ve NaCl–CCl₄ benzer değildir.",
+    "islem": "I: yanlış · III: yanlış"
+   },
+   {
+    "baslik": "II ve IV",
+    "aciklama": "I₂–CCl₄ apolar–apolar; etanol–su polar–polar ve hidrojen bağlıdır.",
+    "islem": "II: doğru · IV: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar toplanır.",
+    "islem": "Sonuç: II ve IV"
+   }
+  ],
+  "puf": "Çözünme sorusunda önce her maddeyi polar, apolar ya da iyonik olarak etiketle; benzerler birbirini çözer.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ETKL-06 (benzer benzeri çözer) · yağ–su, I₂–CCl₄, NaCl–CCl₄, etanol–su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

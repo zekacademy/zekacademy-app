@@ -1,0 +1,135 @@
+{
+ "konu": "Karışımlar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KRSM-01",
+   "konu": "Karışımlar",
+   "alt": "Homojen–heterojen ayrımı",
+   "fikir": "Tek fazlı, her yerinde aynı özellikte olan karışım homojendir; bileşenleri ayırt edilebiliyorsa heterojendir.",
+   "tuzak": "Çözeltiyi, alaşımı ya da bulanık görüneni yanlış sınıflandırmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "kim-krs-sinif",
+   "tip": "Karışımı sınıflandırma",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRSM-02",
+   "konu": "Karışımlar",
+   "alt": "Ayırma sırası",
+   "fikir": "Katı karışımda önce mıknatıs, sonra suda çözme–süzme, son olarak buharlaştırma uygulanır.",
+   "tuzak": "Süzme ile buharlaştırmanın sırasını karıştırmak; suya atmadan süzmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-krs-sira",
+   "tip": "Ayırma işlem sırası",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRSM-03",
+   "konu": "Karışımlar",
+   "alt": "Buharlaştırma ile derişim",
+   "fikir": "Çözücü azalınca çözünen kütlesi sabit kalır; yüzde = çözünen ÷ çözelti × 100.",
+   "tuzak": "Çözelti kütlesi yerine çözücü kütlesini kullanmak; buharlaşan su yerine su eklenmiş saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kim-krs-buhar",
+   "tip": "Buharlaştırma ve kütlece yüzde",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRSM-04",
+   "konu": "Karışımlar",
+   "alt": "Çözelti karıştırma",
+   "fikir": "Aynı maddenin iki çözeltisi karıştırılınca çözünen kütleleri ve çözelti kütleleri ayrı ayrı toplanır.",
+   "tuzak": "Derişimlerin aritmetik ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kim-krs-karis",
+   "tip": "İki çözeltiyi karıştırma",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRSM-05",
+   "konu": "Karışımlar",
+   "alt": "Çözünürlük ve çökme",
+   "fikir": "Doygun çözeltide çözücü kütlesi ile çözünürlük orantılıdır; soğutmada çözünürlük farkı kadar katı çöker.",
+   "tuzak": "100 g su için verilen farkı gerçek su kütlesine ölçeklememek.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "kim-krs-cozunurluk",
+   "tip": "Soğutmada çöken madde miktarı",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRSM-06",
+   "konu": "Karışımlar",
+   "alt": "Doygun çözelti özellikleri",
+   "fikir": "Doygun çözeltide aynı sıcaklıkta ek katı çözünmez, su eklenince çözelti doymamış olur, su buharlaşınca derişim sabit kalır.",
+   "tuzak": "Su buharlaşınca derişimin arttığını sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-krs-doygun",
+   "tip": "Doygun çözelti",
+   "kaynak": "ÖSYM 2018–2025 (homojen–heterojen karışımlar, ayırma teknikleri) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-krs-sinif",
+   "ad": "Karışımı sınıflandırma",
+   "kartlar": [
+    "K-KRSM-01"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  },
+  {
+   "tipId": "kim-krs-sira",
+   "ad": "Ayırma işlem sırası",
+   "kartlar": [
+    "K-KRSM-02"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  },
+  {
+   "tipId": "kim-krs-buhar",
+   "ad": "Buharlaştırma ve kütlece yüzde",
+   "kartlar": [
+    "K-KRSM-03"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  },
+  {
+   "tipId": "kim-krs-karis",
+   "ad": "İki çözeltiyi karıştırma",
+   "kartlar": [
+    "K-KRSM-04"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  },
+  {
+   "tipId": "kim-krs-cozunurluk",
+   "ad": "Soğutmada çöken madde miktarı",
+   "kartlar": [
+    "K-KRSM-05"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  },
+  {
+   "tipId": "kim-krs-doygun",
+   "ad": "Doygun çözelti",
+   "kartlar": [
+    "K-KRSM-06"
+   ],
+   "uygulamaKonu": "kim|Karışımlar"
+  }
+ ]
+}

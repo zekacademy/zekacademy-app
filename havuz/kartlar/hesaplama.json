@@ -1,0 +1,93 @@
+{
+ "konu": "Kimyasal Hesaplamalar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KHE-01",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Mol kavramı",
+   "fikir": "n = m ÷ MA; 1 mol = 6 × 10²³ tanecik; atom sayısı = molekül sayısı × molekül başına atom.",
+   "tuzak": "Molekül sayısı ile atom sayısını karıştırmak; mol kütlesini yanlış toplamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-hs-mol",
+   "tip": "Mol, tanecik ve atom sayısı",
+   "kaynak": "ÖSYM 2018–2025 (mol kavramı, tepkimelerde hesaplamalar) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHE-02",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Tepkimelerde hesaplama",
+   "fikir": "Katsayılar mol oranını verir; gaz hacmi NK’da n × 22,4.",
+   "tuzak": "Katsayıyı kullanmamak; yanlış maddenin katsayısını almak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-hs-tepkime",
+   "tip": "Tepkimede mol ve hacim",
+   "kaynak": "ÖSYM 2018–2025 (mol kavramı, tepkimelerde hesaplamalar) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHE-03",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Mol kavramı",
+   "fikir": "Aynı kaplardaki gazların mol sayısını karşılaştırıp molekül ve atom sayılarını yorumlamak.",
+   "tuzak": "Hacmi ile kütleyi birbirine karıştırmak; atom ve molekül sayısını eşitlemek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-hs-karsilastir",
+   "tip": "Gazlarda molekül ve atom sayısı karşılaştırma",
+   "kaynak": "ÖSYM 2018–2025 (mol kavramı, tepkimelerde hesaplamalar) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHE-04",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Tepkimelerde hesaplama",
+   "fikir": "Sınırlayıcı bileşen önce bulunur; artan madde miktarı tepkimeye girene göre hesaplanır.",
+   "tuzak": "Katsayı oranını 1:1 almak; artan maddeyi yanlış seçmek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "kim-hs-sinirlayici",
+   "tip": "Sınırlayıcı bileşen ve artan madde",
+   "kaynak": "ÖSYM 2018–2025 (mol kavramı, tepkimelerde hesaplamalar) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-hs-mol",
+   "ad": "Mol, tanecik ve atom sayısı",
+   "kartlar": [
+    "K-KHE-01"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "kim-hs-tepkime",
+   "ad": "Tepkimede mol ve hacim",
+   "kartlar": [
+    "K-KHE-02"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "kim-hs-karsilastir",
+   "ad": "Gazlarda molekül ve atom sayısı karşılaştırma",
+   "kartlar": [
+    "K-KHE-03"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "kim-hs-sinirlayici",
+   "ad": "Sınırlayıcı bileşen ve artan madde",
+   "kartlar": [
+    "K-KHE-04"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  }
+ ]
+}

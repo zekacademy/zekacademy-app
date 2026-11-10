@@ -1,0 +1,303 @@
+[
+ {
+  "id": "tytkim-kanunlar-0001",
+  "ders": "TYT Kimya",
+  "konu": "Kimyanın Temel Kanunları · Kütlenin Korunumu",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "kazanim": "Kütlenin korunumu kanununu kullanarak harcanan madde miktarını bulur.",
+  "tipId": "kim-kn-korunum",
+  "tip": "Kütlenin korunumu",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Mg + O₂ → MgO tepkimesinde 12 g Mg, yeterli miktarda O₂ ile tamamen tepkimeye girerek 20 g MgO oluşturuyor.\nBuna göre tepkimede kaç g O₂ harcanmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "16",
+   "D": "20",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "Harcanan O₂ yerine Mg’nin kütlesini yazmış.",
+   "C": "Oksijenin mol kütlesini (16) harcanan kütle sanmış.",
+   "D": "Oluşan MgO kütlesini harcanan O₂ sanmış.",
+   "E": "Girenlerle ürünün kütlesini toplamış (12 + 20)."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Tepkimede harcanan O₂ kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Kütlenin korunumu",
+    "ifade": "kapalı kapta tepkimeden önceki toplam kütle, tepkimeden sonraki toplam kütleye eşittir. Örnek: 4 g A + 6 g B → 10 g ürün"
+   }
+  ],
+  "ipuclari": [
+   "Tepkimeye girenlerin toplam kütlesi ile ürünün kütlesi arasındaki ilişkiyi düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği yaz",
+    "aciklama": "Girenlerin toplam kütlesi ürünün kütlesine eşit olmalıdır.",
+    "islem": "m(Mg) + m(O₂) = m(MgO)"
+   },
+   {
+    "baslik": "Değerleri yerleştir",
+    "aciklama": "Bilinen kütleler eşitlikte yerine yazılır.",
+    "islem": "12 + m(O₂) = 20"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Bilinmeyen kütle yalnız bırakılır.",
+    "islem": "m(O₂) = 20 − 12 = 8 g"
+   }
+  ],
+  "puf": "Tepkimede bir maddenin kütlesi bilinmiyorsa girenlerin toplamını ürünlerin toplamına eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKN-01 (kütlenin korunumu) · Mg yanması, harcanan O₂",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kanunlar-0002",
+  "ders": "TYT Kimya",
+  "konu": "Kimyanın Temel Kanunları · Sabit Oranlar Kanunu",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "kazanim": "Sabit oranlar kanununa göre sınırlayıcı maddeyi bulup oluşan bileşik kütlesini hesaplar.",
+  "tipId": "kim-kn-sabit",
+  "tip": "Sabit oranlar ve artan madde",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "MgO bileşiğinde Mg ile O’nun kütlece birleşme oranı mMg / mO = 3/2’dir.\n24 g Mg ile 24 g oksijen tepkimeye sokuluyor ve MgO oluşuyor.\nBuna göre tepkime sonunda kaç g MgO oluşur?",
+  "sekil": null,
+  "siklar": {
+   "A": "24",
+   "B": "36",
+   "C": "40",
+   "D": "48",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Yalnız Mg’nin kütlesini ürün kütlesi sanmış.",
+   "B": "24 g oksijen için gereken Mg kütlesini (36 g) ürün sanmış.",
+   "D": "Girenlerin toplam kütlesini ürün sanmış; artan oksijeni görmemiş.",
+   "E": "Mg’nin yeteceğini varsaymış; oksijenin tamamı harcanmış sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Oluşan MgO kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Sabit oranlar kanunu",
+    "ifade": "bir bileşikte elementlerin kütlece oranı sabittir; fazla gelen madde tepkimeye girmeden artar. Örnek: oran 3/2 ise 6 g Mg yalnız 4 g oksijenle birleşir"
+   }
+  ],
+  "ipuclari": [
+   "24 g Mg ile birleşmesi gereken oksijen kütlesini 3/2 oranından bul; hangisinin yettiğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gereken oksijen",
+    "aciklama": "24 g Mg için oran korunur.",
+    "islem": "mO = 24 × 2 ÷ 3 = 16 g"
+   },
+   {
+    "baslik": "Artan madde",
+    "aciklama": "Oksijenden 24 g var, 16 g yeterli; Mg tamamen biter.",
+    "islem": "24 − 16 = 8 g oksijen artar"
+   },
+   {
+    "baslik": "Oluşan bileşik",
+    "aciklama": "Birleşen Mg ve oksijen kütleleri toplanır.",
+    "islem": "24 + 16 = 40 g MgO"
+   }
+  ],
+  "puf": "Sabit oranda önce oranı koruyan miktarı bul; fazla gelen madde artar, ürün kütlesi birleşenlerin toplamıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKN-02 (sabit oranlar) · Mg ve O oranı 3/2, artan oksijen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kanunlar-0003",
+  "ders": "TYT Kimya",
+  "konu": "Kimyanın Temel Kanunları · Katlı Oranlar Kanunu",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "kazanim": "Katlı oranlar kanununu kullanarak ikinci bileşiğin formülünü bulur.",
+  "tipId": "kim-kn-katli",
+  "tip": "Katlı oranlar ve formül",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "X ve Y elementlerinden oluşan iki farklı bileşiğin kütlece bileşimi aşağıda verilmiştir.\nI. bileşik: 6 g X ve 8 g Y\nII. bileşik: 9 g X ve 24 g Y\nI. bileşiğin formülü XY₂ olduğuna göre II. bileşiğin formülü aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "XY₃",
+   "B": "XY₄",
+   "C": "XY₅",
+   "D": "XY₆",
+   "E": "XY₈"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "XY₄"
+  },
+  "celdiriciler": {
+   "A": "Y kütleleri oranını (24 ÷ 8 = 3) doğrudan atom sayısı sanmış.",
+   "C": "I. bileşikteki indise (2) Y kütleleri oranını (3) eklemiş.",
+   "D": "Y kütleleri oranını (3) I. bileşikteki indisle (2) çarpmış.",
+   "E": "Katlı oranı iki kez uygulamış (2 × 2 × 2)."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "II. bileşiğin formülü.",
+  "bilgi": [
+   {
+    "ad": "Katlı oranlar kanunu",
+    "ifade": "aynı iki elementten oluşan bileşiklerde, birinin sabit kütlesiyle birleşen öteki elementin kütleleri arasında küçük tam sayılı oran vardır. Örnek: CO ve CO₂’de 12 g C ile 16 g ve 32 g O birleşir (oran 1/2)"
+   }
+  ],
+  "ipuclari": [
+   "İki bileşikte X kütlesini eşitle; sonra bu kütleyle birleşen Y kütlelerini kıyasla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X’i eşitle",
+    "aciklama": "İki bileşikte 18 g X olacak şekilde birinci bileşiği 3, ikinciyi 2 ile genişlet.",
+    "islem": "I: 18 g X + 24 g Y · II: 18 g X + 48 g Y"
+   },
+   {
+    "baslik": "Y oranı",
+    "aciklama": "Aynı X kütlesiyle birleşen Y kütleleri oranlanır.",
+    "islem": "48 ÷ 24 = 2"
+   },
+   {
+    "baslik": "Formül",
+    "aciklama": "Y atom sayısı da 2 katına çıkar.",
+    "islem": "XY₂ → XY₄"
+   }
+  ],
+  "puf": "Katlı oranda önce sabit element kütlesini eşitle, sonra öteki elementin kütle oranını indislere uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKN-03 (katlı oranlar) · X ve Y’den iki bileşik, formül bulma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-kanunlar-0004",
+  "ders": "TYT Kimya",
+  "konu": "Kimyanın Temel Kanunları · Sabit Oranlar Kanunu",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "kazanim": "İlk deneyden birleşme oranını çıkarıp ikinci deneyde oluşan bileşik kütlesini bulur.",
+  "tipId": "kim-kn-deney",
+  "tip": "İki deneyden oran bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "A ve B elementleri yalnız bir bileşik oluşturmaktadır.\n1. deney: 12 g A ile 20 g B tepkimeye giriyor ve tepkime sonunda 4 g B artıyor.\n2. deney: 15 g A ile 30 g B tepkimeye giriyor.\nBuna göre 2. deneyde kaç g bileşik oluşur?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "28",
+   "C": "35",
+   "D": "45",
+   "E": "52,5"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "35"
+  },
+  "celdiriciler": {
+   "A": "Oluşan bileşik yerine 2. deneyde birleşen B kütlesini yazmış.",
+   "B": "1. deneyde oluşan bileşik kütlesini 2. deneyin sonucu sanmış.",
+   "D": "Girenlerin toplamını yazmış; 2. deneyde B’nin 10 g arttığını görmemiş.",
+   "E": "B’nin tamamen bittiğini varsaymış; gereken A kütlesinin 15 g’ı aştığını kontrol etmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "2. deneyde oluşan bileşik kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Sabit oranlar kanunu",
+    "ifade": "bir bileşikte elementlerin kütlece oranı sabittir; artan madde tepkimeye girmemiştir. Örnek: oran 1/2 ise 3 g X, 6 g Y ile birleşir"
+   }
+  ],
+  "ipuclari": [
+   "1. deneyde artan B’yi çıkararak A ile gerçekten birleşen B kütlesini bul; oranı 2. deneye uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birleşen miktarlar",
+    "aciklama": "1. deneyde B’den 4 g arttığı için 4 g B tepkimeye girmemiştir.",
+    "islem": "B: 20 − 4 = 16 g · mA/mB = 12/16 = 3/4"
+   },
+   {
+    "baslik": "2. deneyde gereken B",
+    "aciklama": "15 g A, aynı oranla birleşecek B kütlesini belirler.",
+    "islem": "mB = 15 × 4 ÷ 3 = 20 g"
+   },
+   {
+    "baslik": "Sınırlayıcıyı bul",
+    "aciklama": "30 g B var, 20 g yeterli; A tamamen biter, 10 g B artar.",
+    "islem": "30 − 20 = 10 g B artar"
+   },
+   {
+    "baslik": "Bileşik kütlesi",
+    "aciklama": "Birleşen A ve B toplanır.",
+    "islem": "15 + 20 = 35 g"
+   }
+  ],
+  "puf": "Birinci deneyden artanı çıkararak gerçek birleşme oranını bul; ikinci deneyde sınırlayıcıyı bu orana göre belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKN-04 (sabit oranlar) · iki deney, birinci deneyden oran çıkarma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,93 @@
+{
+ "konu": "Atom ve Yapısı",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KAT-01",
+   "konu": "Atom ve Yapısı",
+   "alt": "Atomun yapısı",
+   "fikir": "Atom numarası proton sayısını verir; nötr atomda elektron = proton, iyonda yüke göre değişir.",
+   "tuzak": "İyon yükünü ters işlemek; kütle numarasını proton sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-at-iyon",
+   "tip": "İyonda tanecik sayıları",
+   "kaynak": "ÖSYM 2018–2025 (atomun yapısı, atom modelleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KAT-02",
+   "konu": "Atom ve Yapısı",
+   "alt": "Atomun yapısı",
+   "fikir": "İzotop: aynı proton; izobar: aynı kütle numarası; izoton: aynı nötron sayısı.",
+   "tuzak": "Üç kavramı birbirine karıştırmak; nötron sayısını hesaplamayı atlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-at-izo",
+   "tip": "İzotop, izobar, izoton",
+   "kaynak": "ÖSYM 2018–2025 (atomun yapısı, atom modelleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KAT-03",
+   "konu": "Atom ve Yapısı",
+   "alt": "Atom modelleri",
+   "fikir": "Dalton, Thomson, Rutherford ve Bohr modellerinin getirdiği temel yenilik.",
+   "tuzak": "Çekirdeğin keşfini Thomson’a, elektronun keşfini Rutherford’a yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-at-model",
+   "tip": "Atom modelleri ve katkıları",
+   "kaynak": "ÖSYM 2018–2025 (atomun yapısı, atom modelleri) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KAT-04",
+   "konu": "Atom ve Yapısı",
+   "alt": "Atomun yapısı",
+   "fikir": "İzoelektronik taneciklerde elektron sayısı eşit; proton sayısı yükten geriye doğru bulunur.",
+   "tuzak": "Elektron sayısını proton sayısı sanmak; iyon yükünü yanlış yönde eklemek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "kim-at-izoelektronik",
+   "tip": "İzoelektronik iyonlar",
+   "kaynak": "ÖSYM 2018–2025 (atomun yapısı, atom modelleri) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-at-iyon",
+   "ad": "İyonda tanecik sayıları",
+   "kartlar": [
+    "K-KAT-01"
+   ],
+   "uygulamaKonu": "kim|Atom ve Yapısı"
+  },
+  {
+   "tipId": "kim-at-izo",
+   "ad": "İzotop, izobar, izoton",
+   "kartlar": [
+    "K-KAT-02"
+   ],
+   "uygulamaKonu": "kim|Atom ve Yapısı"
+  },
+  {
+   "tipId": "kim-at-model",
+   "ad": "Atom modelleri ve katkıları",
+   "kartlar": [
+    "K-KAT-03"
+   ],
+   "uygulamaKonu": "kim|Atom ve Yapısı"
+  },
+  {
+   "tipId": "kim-at-izoelektronik",
+   "ad": "İzoelektronik iyonlar",
+   "kartlar": [
+    "K-KAT-04"
+   ],
+   "uygulamaKonu": "kim|Atom ve Yapısı"
+  }
+ ]
+}

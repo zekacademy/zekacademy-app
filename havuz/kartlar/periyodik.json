@@ -1,0 +1,135 @@
+{
+ "konu": "Periyodik Sistem",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-PRDK-01",
+   "konu": "Periyodik Sistem",
+   "alt": "Periyot ve grup bulma",
+   "fikir": "Elektron dizilimindeki katman sayısı periyodu, son katmandaki elektron sayısı A grubunu verir.",
+   "tuzak": "Periyot ile grup numarasını karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-pr-yer",
+   "tip": "Atom numarasından periyot ve grup",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-PRDK-02",
+   "konu": "Periyodik Sistem",
+   "alt": "Atom yarıçapı sıralaması",
+   "fikir": "Aynı grupta aşağı inildikçe, aynı periyotta sağa gidildikçe azalır; katman sayısı belirleyicidir.",
+   "tuzak": "Katman sayısını hesaba katmadan yalnız atom numarasına bakmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-pr-yaricap",
+   "tip": "Atom yarıçapı sıralaması",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-PRDK-03",
+   "konu": "Periyodik Sistem",
+   "alt": "Element sınıflandırması",
+   "fikir": "Atom numarasından dizilim, buradan metal–ametal ve değerlik elektronu bulunur.",
+   "tuzak": "Son katman elektron sayısını atom numarasıyla karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-pr-sinif",
+   "tip": "Atom numarasından element özellikleri",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-PRDK-04",
+   "konu": "Periyodik Sistem",
+   "alt": "İyonlaşma enerjisi sıralaması",
+   "fikir": "Aynı periyotta soldan sağa genelde artar, aynı grupta yukarıdan aşağı azalır.",
+   "tuzak": "Periyodik eğilimleri ters yorumlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-pr-iyonlasma",
+   "tip": "İyonlaşma enerjisi sıralaması",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-PRDK-05",
+   "konu": "Periyodik Sistem",
+   "alt": "İyon yüklerinden element bulma",
+   "fikir": "İyon yükü ve elektron sayısından nötr atomun elektron sayısı ve yeri bulunur.",
+   "tuzak": "Elektron sayısını atom numarası sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "kim-pr-iyon",
+   "tip": "İyonlardan element belirleme",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-PRDK-06",
+   "konu": "Periyodik Sistem",
+   "alt": "Konumdan özellik yorumu",
+   "fikir": "Bir elementin periyot ve grup konumuna göre yarıçap, değerlik elektronu ve elektronegatiflik karşılaştırılır.",
+   "tuzak": "Gruptaki elementlerin değerlik elektron sayısını farklı sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "kim-pr-konum",
+   "tip": "Konuma göre periyodik özellik",
+   "kaynak": "ÖSYM 2018–2025 (periyodik sistem, periyodik özellikler) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-pr-yer",
+   "ad": "Atom numarasından periyot ve grup",
+   "kartlar": [
+    "K-PRDK-01"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  },
+  {
+   "tipId": "kim-pr-yaricap",
+   "ad": "Atom yarıçapı sıralaması",
+   "kartlar": [
+    "K-PRDK-02"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  },
+  {
+   "tipId": "kim-pr-sinif",
+   "ad": "Atom numarasından element özellikleri",
+   "kartlar": [
+    "K-PRDK-03"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  },
+  {
+   "tipId": "kim-pr-iyonlasma",
+   "ad": "İyonlaşma enerjisi sıralaması",
+   "kartlar": [
+    "K-PRDK-04"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  },
+  {
+   "tipId": "kim-pr-iyon",
+   "ad": "İyonlardan element belirleme",
+   "kartlar": [
+    "K-PRDK-05"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  },
+  {
+   "tipId": "kim-pr-konum",
+   "ad": "Konuma göre periyodik özellik",
+   "kartlar": [
+    "K-PRDK-06"
+   ],
+   "uygulamaKonu": "kim|Periyodik Sistem"
+  }
+ ]
+}

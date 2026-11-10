@@ -1,0 +1,93 @@
+{
+ "konu": "Kimya Her Yerde",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KHY-01",
+   "konu": "Kimya Her Yerde",
+   "alt": "Temizlik maddeleri",
+   "fikir": "Çamaşır suyunun etkin maddesi sodyum hipoklorittir (NaOCl); ağartıcı ve mikrop öldürücüdür.",
+   "tuzak": "Çamaşır suyunu NaCl ya da NaOH ile karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kim-hy-camasir",
+   "tip": "Çamaşır suyu",
+   "kaynak": "ÖSYM 2018–2025 (günlük hayat kimyasalları) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHY-02",
+   "konu": "Kimya Her Yerde",
+   "alt": "Sabun ve deterjan",
+   "fikir": "Sabun yağın bazla tepkimesinden elde edilir; sert suda çözünmeyen tuz verip etkisini yitirir; deterjan sert suda da etkilidir.",
+   "tuzak": "Sabun ile deterjanın sert sudaki davranışını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kim-hy-sabun",
+   "tip": "Sabun ve deterjan",
+   "kaynak": "ÖSYM 2018–2025 (günlük hayat kimyasalları) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHY-03",
+   "konu": "Kimya Her Yerde",
+   "alt": "Günlük hayat kimyasalları",
+   "fikir": "Yaygın kimyasalların bileşimi ile kullanım amacını eşleştirmek.",
+   "tuzak": "Kuvvetli ve aşındırıcı maddeyi ilaç sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kim-hy-eslestirme",
+   "tip": "Kimyasal ve kullanım eşleştirme",
+   "kaynak": "ÖSYM 2018–2025 (günlük hayat kimyasalları) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-KHY-04",
+   "konu": "Kimya Her Yerde",
+   "alt": "Günlük hayat kimyasalları",
+   "fikir": "Çamaşır suyu bazik; tuz ruhu ile karıştırılmaz; sabunun polar ve apolar kısmı; antiasit bazik; katkı maddeleri yapay da olabilir.",
+   "tuzak": "Çamaşır suyunu asidik sanmak; katkı maddelerinin yalnız doğal olduğunu düşünmek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "kim-hy-guvenli",
+   "tip": "Evde kullanılan kimyasalların özellikleri",
+   "kaynak": "ÖSYM 2018–2025 (günlük hayat kimyasalları) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kim-hy-camasir",
+   "ad": "Çamaşır suyu",
+   "kartlar": [
+    "K-KHY-01"
+   ],
+   "uygulamaKonu": "kim|Kimya Her Yerde"
+  },
+  {
+   "tipId": "kim-hy-sabun",
+   "ad": "Sabun ve deterjan",
+   "kartlar": [
+    "K-KHY-02"
+   ],
+   "uygulamaKonu": "kim|Kimya Her Yerde"
+  },
+  {
+   "tipId": "kim-hy-eslestirme",
+   "ad": "Kimyasal ve kullanım eşleştirme",
+   "kartlar": [
+    "K-KHY-03"
+   ],
+   "uygulamaKonu": "kim|Kimya Her Yerde"
+  },
+  {
+   "tipId": "kim-hy-guvenli",
+   "ad": "Evde kullanılan kimyasalların özellikleri",
+   "kartlar": [
+    "K-KHY-04"
+   ],
+   "uygulamaKonu": "kim|Kimya Her Yerde"
+  }
+ ]
+}

@@ -1,0 +1,465 @@
+[
+ {
+  "id": "tytkim-karisimlar-0001",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Verilen karışımları homojen ve heterojen olarak sınıflandırır.",
+  "tipId": "kim-krs-sinif",
+  "tip": "Karışımı sınıflandırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "Aşağıda üç karışım verilmiştir.\nI. Şekerli su\nII. Çamurlu su\nIII. Bronz (bakır–kalay alaşımı)\nBunlardan hangileri homojen karışımdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve III",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "Yalnız III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "B": "III öncülünü yanlış sanmış; oysa bronz bakır–kalay alaşımıdır, katı çözeltidir ve homojendir.",
+   "C": "II öncülünü doğru sanmış; oysa çamurlu suda katı parçacıklar ayırt edilir, heterojendir. I öncülünü yanlış sanmış; oysa şekerli su tek fazlıdır, her yerinde aynı özelliktedir; homojendir. III öncülünü yanlış sanmış; oysa bronz bakır–kalay alaşımıdır, katı çözeltidir ve homojendir.",
+   "D": "I öncülünü yanlış sanmış; oysa şekerli su tek fazlıdır, her yerinde aynı özelliktedir; homojendir.",
+   "E": "II öncülünü doğru sanmış; oysa çamurlu suda katı parçacıklar ayırt edilir, heterojendir. I öncülünü yanlış sanmış; oysa şekerli su tek fazlıdır, her yerinde aynı özelliktedir; homojendir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Homojen olan karışımlar.",
+  "bilgi": [
+   {
+    "ad": "Homojen ve heterojen karışım",
+    "ifade": "Homojen karışımda bileşenler her yerde aynı oranda dağılmıştır ve tek faz görülür (örnek: tuzlu su). Heterojen karışımda bileşenler ayırt edilebilir (örnek: kum–su)"
+   }
+  ],
+  "ipuclari": [
+   "Karışımın her yerinde aynı görünüm ve aynı özellik varsa homojendir; parçacıkları ayırt edebiliyorsan heterojendir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Karışımı incele",
+    "aciklama": "Her karışımın her yerinde aynı özellik olup olmadığına bak.",
+    "islem": "I · II · III"
+   },
+   {
+    "baslik": "Şekerli su",
+    "aciklama": "Şeker suda tamamen çözünür, tek faz oluşur.",
+    "islem": "I: homojen"
+   },
+   {
+    "baslik": "Çamurlu su",
+    "aciklama": "Toprak parçacıkları ayırt edilir ve zamanla dibe çöker.",
+    "islem": "II: heterojen"
+   },
+   {
+    "baslik": "Bronz",
+    "aciklama": "Alaşımlar katı çözeltidir, her yerinde aynı bileşimdedir.",
+    "islem": "III: homojen · Sonuç: I ve III"
+   }
+  ],
+  "puf": "Gözle ayırt edilebilen bileşen yoksa ve her yer aynıysa karışım homojendir; alaşımlar da homojendir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-01 (homojen–heterojen) · şekerli su, çamurlu su, bronz",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0002",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Ayırma ve Saflaştırma Teknikleri",
+  "k": "kim|Karışımlar",
+  "kazanim": "Katı karışımdaki maddeleri uygun ayırma yöntemlerini doğru sırayla uygulayarak ayırır.",
+  "tipId": "kim-krs-sira",
+  "tip": "Ayırma işlem sırası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Demir tozu, kum ve tuzdan oluşan katı karışımdaki üç madde de ayrı ayrı elde edilecektir.\nMıknatıs, su, süzgeç kâğıdı ve ısıtıcı kullanılabildiğine göre aşağıdaki işlem sıralarından hangisi bu amaca uygundur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Suya atma → süzme → buharlaştırma",
+   "B": "Buharlaştırma → süzme → mıknatıs",
+   "C": "Mıknatıs → süzme → suya atma → buharlaştırma",
+   "D": "Mıknatıs → suya atma → buharlaştırma → süzme",
+   "E": "Mıknatıs → suya atma → süzme → buharlaştırma"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Mıknatıs → suya atma → süzme → buharlaştırma"
+  },
+  "celdiriciler": {
+   "A": "Bu ifadeyi doğru sanmış; oysa demir tozu ve kum süzgeçte birlikte kalır, üç madde ayrı ayrı elde edilemez",
+   "B": "Bu ifadeyi doğru sanmış; oysa katı karışımda buharlaştırılacak bir sıvı yoktur ve süzme için önce suda çözmek gerekir",
+   "C": "Bu ifadeyi doğru sanmış; oysa karışım suya atılmadan süzülemez; süzme çözme işleminden sonra yapılır",
+   "D": "Bu ifadeyi doğru sanmış; oysa su buharlaşınca tuz kumla birlikte kalır ve süzme ikisini ayıramaz"
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Üç maddeyi ayıran doğru işlem sırası.",
+  "bilgi": [
+   {
+    "ad": "Fiziksel ayırma yöntemleri",
+    "ifade": "Mıknatıs demir gibi mıknatıslanan maddeyi ayırır. Suda çözünen madde (tuz) ile çözünmeyen madde (kum) çözme ve süzme ile ayrılır. Buharlaştırma, çözünen katıyı çözeltiden geri kazanır"
+   }
+  ],
+  "ipuclari": [
+   "Her yöntemin hangi özellik farkına dayandığını düşün: mıknatıslanma, suda çözünme, buharlaşma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mıknatıs",
+    "aciklama": "Demir tozu mıknatısla çekilerek ayrılır.",
+    "islem": "kalan: kum + tuz"
+   },
+   {
+    "baslik": "Suda çözme ve süzme",
+    "aciklama": "Tuz suda çözünür, kum çözünmez; süzgeçte kum kalır.",
+    "islem": "süzgeçte: kum · süzüntü: tuzlu su"
+   },
+   {
+    "baslik": "Buharlaştırma",
+    "aciklama": "Tuzlu su ısıtılınca su uçar, tuz geride kalır.",
+    "islem": "geri kalan: tuz"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "Sıra bu üç adıma uyan tek şıktır.",
+    "islem": "E: doğru · diğerleri: yanlış"
+   }
+  ],
+  "puf": "Katı karışımlarda önce mıknatıs gibi doğrudan ayıranı, sonra çözme–süzme–buharlaştırma zincirini uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-02 (ayırma sırası) · demir tozu–kum–tuz",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0003",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Çözeltiden su buharlaştırıldığında kütlece yüzde derişimin değişimini hesaplar.",
+  "tipId": "kim-krs-buhar",
+  "tip": "Buharlaştırma ve kütlece yüzde",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kütlece %20’lik 300 g tuzlu su çözeltisi açık bir kapta ısıtılıyor ve çözeltideki sudan 100 g buharlaşıyor. Tuz buharlaşmamaktadır.\nBuna göre kalan çözeltinin kütlece yüzde derişimi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "20",
+   "C": "25",
+   "D": "30",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Buharlaşan suyu çözeltiye eklenmiş gibi hesaplayıp 60 ÷ 400 yapmış.",
+   "B": "Derişimin değişmediğini sanmış; su azalınca yüzdenin arttığını fark etmemiş.",
+   "C": "Tuz kütlesini çözeltiye değil, ilk çözelti kütlesinden tuz çıkarılmış suya (240 g) bölmüş.",
+   "E": "Tuzun gram cinsinden kütlesini (60) yüzde değeri olarak yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Kalan çözeltinin kütlece yüzde derişimi (%).",
+  "bilgi": [
+   {
+    "ad": "Kütlece yüzde",
+    "ifade": "Kütlece yüzde derişim = çözünen kütlesi ÷ çözelti kütlesi × 100. Örnek: 20 g şekeri 80 g suda çözersen çözelti 100 g olur ve derişim %20 olur"
+   }
+  ],
+  "ipuclari": [
+   "Buharlaşan yalnızca sudur; tuzun kütlesi değişmez, çözeltinin kütlesi değişir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz kütlesi",
+    "aciklama": "%20’lik 300 g çözeltide tuz miktarı bulunur.",
+    "islem": "tuz = 300 × 20 ÷ 100 = 60 g"
+   },
+   {
+    "baslik": "Yeni çözelti kütlesi",
+    "aciklama": "Yalnız su gittiği için tuz 60 g kalır.",
+    "islem": "çözelti = 300 − 100 = 200 g"
+   },
+   {
+    "baslik": "Yeni derişim",
+    "aciklama": "Tuz kütlesi yeni çözelti kütlesine bölünür.",
+    "islem": "60 ÷ 200 × 100 = %30"
+   }
+  ],
+  "puf": "Su buharlaşınca çözünen kütlesi sabit kalır; yalnız çözelti kütlesi azalır, derişim artar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-03 (buharlaştırma ile derişim) · %20’lik tuzlu su, 100 g su buharlaşıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0004",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Aynı maddenin farklı derişimli iki çözeltisini karıştırdığında oluşan derişimi hesaplar.",
+  "tipId": "kim-krs-karis",
+  "tip": "İki çözeltiyi karıştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir öğrenci, kütlece %10’luk 200 g şekerli su çözeltisi ile kütlece %40’lık 100 g şekerli su çözeltisini aynı kapta karıştırıyor.\nBuna göre oluşan çözeltinin kütlece yüzde derişimi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "20",
+   "C": "25",
+   "D": "30",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Karışımın derişimini küçük olan çözeltinin derişimine eşit sanmış.",
+   "C": "İki derişimin aritmetik ortalamasını almış; çözelti kütlelerini hesaba katmamış.",
+   "D": "Toplam şekeri (60 g) yalnız ilk çözeltinin kütlesine (200 g) bölmüş.",
+   "E": "İki derişimi toplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Oluşan çözeltinin kütlece yüzde derişimi (%).",
+  "bilgi": [
+   {
+    "ad": "Kütlece yüzde",
+    "ifade": "Kütlece yüzde = çözünen kütlesi ÷ çözelti kütlesi × 100. Örnek: %10’luk 100 g çözeltide 10 g çözünen vardır"
+   }
+  ],
+  "ipuclari": [
+   "Önce her çözeltideki şeker kütlesini bul; sonra şekerleri ve çözelti kütlelerini ayrı ayrı topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şeker kütleleri",
+    "aciklama": "Her çözeltideki şeker bulunur.",
+    "islem": "1. çözelti: 200 × 10 ÷ 100 = 20 g · 2. çözelti: 100 × 40 ÷ 100 = 40 g"
+   },
+   {
+    "baslik": "Toplamlar",
+    "aciklama": "Şekerler ve çözelti kütleleri toplanır.",
+    "islem": "şeker = 20 + 40 = 60 g · çözelti = 200 + 100 = 300 g"
+   },
+   {
+    "baslik": "Yeni derişim",
+    "aciklama": "Toplam şeker toplam çözeltiye bölünür.",
+    "islem": "60 ÷ 300 × 100 = %20"
+   }
+  ],
+  "puf": "Çözeltileri karıştırırken derişimleri değil, çözünen ve çözelti kütlelerini topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-04 (çözelti karıştırma) · %10’luk 200 g + %40’lık 100 g şekerli su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0005",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Çözünürlük verisinden soğutma sırasında çöken madde miktarını hesaplar.",
+  "tipId": "kim-krs-cozunurluk",
+  "tip": "Soğutmada çöken madde miktarı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "X katısının sudaki çözünürlüğü tabloda verilmiştir.\nSıcaklık (°C) | Çözünürlük (g X / 100 g su)\n20 | 30\n50 | 50\n50 °C’de 300 g su kullanılarak hazırlanan doygun X çözeltisi, hiçbir bileşen kaybedilmeden 20 °C’ye soğutuluyor.\nBuna göre kaç gram X katısı çöker?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "30",
+   "C": "60",
+   "D": "90",
+   "E": "150"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "100 g su için olan farkı (50 − 30) 300 g suya ölçeklememiş.",
+   "B": "20 °C’deki çözünürlük değerini çöken miktar sanmış.",
+   "D": "Soğutmadan sonra çözeltide kalan X miktarını çöken miktar sanmış.",
+   "E": "50 °C’de çözünmüş toplam X miktarını çöken miktar sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "20 °C’ye soğutulunca çöken X katısı kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Çözünürlük ve doygunluk",
+    "ifade": "Çözünürlük, belirli sıcaklıkta 100 g suda çözünebilen en çok madde kütlesidir. Örnek: çözünürlük 30 g ise 200 g suda en çok 60 g çözünür"
+   },
+   {
+    "ad": "Soğutma",
+    "ifade": "Çözünürlük sıcaklıkla azalıyorsa doygun çözelti soğutulunca fazla madde katı olarak çöker"
+   }
+  ],
+  "ipuclari": [
+   "Çözünürlük 100 g su için verilmiştir; 300 g su için üç katını al. Çöken miktar iki sıcaklıktaki çözünen kütlelerinin farkıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "50 °C’de çözünen",
+    "aciklama": "300 g su 100 g suyun 3 katıdır.",
+    "islem": "X = 50 × 3 = 150 g"
+   },
+   {
+    "baslik": "20 °C’de çözünebilen",
+    "aciklama": "Aynı 300 g su için 20 °C’deki sınır bulunur.",
+    "islem": "X = 30 × 3 = 90 g"
+   },
+   {
+    "baslik": "Çöken miktar",
+    "aciklama": "Fazla olan kısım katı olarak dibe çöker.",
+    "islem": "150 − 90 = 60 g"
+   }
+  ],
+  "puf": "Çözünürlük 100 g su içindir; su kütlesi farklıysa önce oranla, sonra çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-05 (çözünürlük) · 50 °C’de doygun çözelti 20 °C’ye soğutuluyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-karisimlar-0006",
+  "ders": "TYT Kimya",
+  "konu": "Karışımlar · Homojen ve Heterojen Karışımlar",
+  "k": "kim|Karışımlar",
+  "kazanim": "Doygun bir çözeltide yapılan değişikliklerin sonucunu yorumlar.",
+  "tipId": "kim-krs-doygun",
+  "tip": "Doygun çözelti",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Dibinde çözünmemiş katı bulunmayan, 20 °C’deki doygun bir X çözeltisi için aşağıdakiler söyleniyor.\nI. Sıcaklık değişmeden çözeltiye bir miktar X katısı eklenirse eklenen katı çözünmez.\nII. Sıcaklık değişmeden çözeltiye bir miktar su eklenirse çözelti doymamış hâle gelir.\nIII. Sıcaklık değişmeden çözeltiden bir miktar su buharlaştırılırsa çözeltinin kütlece yüzde derişimi artar.\nBuna göre hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve III",
+   "E": "I ve II"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II öncülünü yanlış sanmış; oysa su eklenince çözücü artar ve çözelti aynı sıcaklıkta daha çok X çözebilir hâle gelir, yani doymamış olur.",
+   "B": "I öncülünü yanlış sanmış; oysa doygun çözelti o sıcaklıkta daha fazla katı çözemez, eklenen X dibe çöker.",
+   "C": "III öncülünü doğru sanmış; oysa su buharlaşınca fazla kalan X dibe çöker ve sıcaklık sabit olduğundan doygun çözeltinin derişimi değişmez. I öncülünü yanlış sanmış; oysa doygun çözelti o sıcaklıkta daha fazla katı çözemez, eklenen X dibe çöker. II öncülünü yanlış sanmış; oysa su eklenince çözücü artar ve çözelti aynı sıcaklıkta daha çok X çözebilir hâle gelir, yani doymamış olur.",
+   "D": "III öncülünü doğru sanmış; oysa su buharlaşınca fazla kalan X dibe çöker ve sıcaklık sabit olduğundan doygun çözeltinin derişimi değişmez. II öncülünü yanlış sanmış; oysa su eklenince çözücü artar ve çözelti aynı sıcaklıkta daha çok X çözebilir hâle gelir, yani doymamış olur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Doygun çözelti",
+    "ifade": "Belirli sıcaklıkta daha fazla madde çözemeyen çözeltidir. Örnek: 100 g suyun çözebildiği en çok X 30 g ise 30 g X içeren çözelti doygundur, sıcaklık aynıysa derişimi hep aynıdır"
+   }
+  ],
+  "ipuclari": [
+   "Doygun çözeltide aynı sıcaklıkta çözücü başına çözülebilen en çok madde miktarı sabittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katı eklemek",
+    "aciklama": "Çözelti zaten doygundur, ek katı çözünemez.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "Su eklemek",
+    "aciklama": "Çözücü arttığı için daha çok X çözülebilir; çözelti doymamış olur.",
+    "islem": "II: doğru"
+   },
+   {
+    "baslik": "Su buharlaştırmak",
+    "aciklama": "Çözülemeyen fazla X katı olarak çöker, doygun çözeltinin derişimi sabit kalır.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar bir araya getirilir.",
+    "islem": "I: doğru · II: doğru · III: yanlış · Sonuç: I ve II"
+   }
+  ],
+  "puf": "Sıcaklık sabitse doygun çözeltinin derişimi sabittir; fazlası katı olarak çöker.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRSM-06 (doygun çözelti) · katı ekleme, su ekleme, su buharlaştırma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

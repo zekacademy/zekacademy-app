@@ -1,0 +1,308 @@
+[
+ {
+  "id": "tytkim-heryerde-0001",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Her Yerde · Temizlik Maddeleri",
+  "k": "kim|Kimya Her Yerde",
+  "kazanim": "Çamaşır suyunun etkin maddesini bilir.",
+  "tipId": "kim-hy-camasir",
+  "tip": "Çamaşır suyu",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Evlerde ağartıcı ve mikrop öldürücü olarak kullanılan çamaşır suyunun etkin maddesi aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "HCl",
+   "B": "Na₂CO₃",
+   "C": "NaCl",
+   "D": "NaOH",
+   "E": "NaOCl"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "NaOCl"
+  },
+  "celdiriciler": {
+   "A": "HCl’yi tuz ruhuyla karıştırıp çamaşır suyu sanmış; HCl asit olup farklı bir temizlik maddesidir.",
+   "B": "Na₂CO₃’ı (soda) çamaşır suyuna bağlamış; soda başka bir temizlik maddesidir.",
+   "C": "NaCl’yi (sofra tuzu) etkin madde sanmış; tuz ağartıcı değildir.",
+   "D": "NaOH’ı (kostik) çamaşır suyuyla karıştırmış; NaOH kuvvetli bir bazdır ama çamaşır suyunun etkin maddesi değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Çamaşır suyunun etkin maddesi.",
+  "bilgi": [
+   {
+    "ad": "Çamaşır suyu",
+    "ifade": "sodyum hipoklorit (NaOCl) çözeltisidir; ağartıcı ve mikrop öldürücüdür. Örnek: bazı yüzey temizleyicilerinde NaOCl bulunur"
+   }
+  ],
+  "ipuclari": [
+   "Çamaşır suyunun adı sodyum hipoklorit çözeltisidir; formülünde Na, O ve Cl bulunur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maddeyi hatırla",
+    "aciklama": "Çamaşır suyu, sodyum hipoklorit çözeltisidir.",
+    "islem": "çamaşır suyu = sodyum hipoklorit"
+   },
+   {
+    "baslik": "Elementleri eşle",
+    "aciklama": "Sodyum Na, klor Cl, hipoklorit ise ClO⁻ iyonudur.",
+    "islem": "Na + ClO → NaOCl"
+   },
+   {
+    "baslik": "Formülü seç",
+    "aciklama": "Seçeneklerde yalnız bu formül Na, O ve Cl birlikte içerir.",
+    "islem": "NaOCl"
+   }
+  ],
+  "puf": "Çamaşır suyunun adı sodyum hipoklorittir; formülünde Na, O ve Cl bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHY-01 (çamaşır suyu) · etkin madde formülü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-heryerde-0002",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Her Yerde · Sabun ve Deterjanlar",
+  "k": "kim|Kimya Her Yerde",
+  "kazanim": "Sabun ve deterjanın elde edilişini ve sert sudaki davranışını karşılaştırır.",
+  "tipId": "kim-hy-sabun",
+  "tip": "Sabun ve deterjan",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "I. Sabun, yağların NaOH gibi bir bazla tepkimeye girmesiyle elde edilir.\nII. Sert suda sabunun temizleme etkisi azalır.\nIII. Deterjanlar sert suda, sabun gibi çözünmeyen tuz oluşturarak etkisini yitirir.\nSabun ve deterjanlarla ilgili yukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "B": "II’yi yanlış sanmış; sabunun sert suda Ca²⁺ ve Mg²⁺ ile çözünmeyen tuz verdiğini bilmemiş.",
+   "C": "I’i yanlış sanmış; sabunun bazla yağın tepkimesinden elde edildiğini bilmemiş.",
+   "D": "I’i yanlış sanıp III’ü doğru bulmuş; deterjanın sert suda da etkili olduğunu bilmemiş.",
+   "E": "III’ü doğru saymış; sabun ile deterjanın sert sudaki farkını karıştırmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Sabun ve deterjan",
+    "ifade": "sabun, yağların NaOH ya da KOH gibi bir bazla tepkimesinden elde edilir; sert suda köpürmez ve temizleme gücü azalır. Deterjan sert suda da etkilidir"
+   }
+  ],
+  "ipuclari": [
+   "Sert suda çözünmüş Ca²⁺ ve Mg²⁺ iyonları bulunur; sabun bu iyonlarla çözünmeyen tuz oluşturur, deterjan ise oluşturmaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "Sabun, yağın kuvvetli bazla tepkimesinden (sabunlaşma) elde edilir.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II’yi incele",
+    "aciklama": "Sert suda Ca²⁺ ve Mg²⁺ sabunla çözünmeyen tuz oluşturur.",
+    "islem": "II: doğru"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "Deterjan sert suda çözünmeyen tuz oluşturmaz, temizlik etkisini sürdürür.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru ifadeler I ve II’dir.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Sert suda sabun etkisini yitirir; deterjan sert suda da temizler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHY-02 (sabun ve deterjan) · üç öncül, deterjan sert suda sabun gibi sanılır",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-heryerde-0003",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Her Yerde · Yaygın Günlük Hayat Kimyasalları",
+  "k": "kim|Kimya Her Yerde",
+  "kazanim": "Yaygın günlük hayat kimyasallarını kullanım amaçlarıyla eşleştirir.",
+  "tipId": "kim-hy-eslestirme",
+  "tip": "Kimyasal ve kullanım eşleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki günlük hayat kimyasalı ve kullanım amacı eşleştirmelerinden hangisi yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sodyum hidroksit (NaOH): Mide yanmasını gidermek için ilaç olarak içilir.",
+   "B": "Sodyum hipoklorit (NaOCl): Ağartıcı ve mikrop öldürücü olarak kullanılır.",
+   "C": "Hidroklorik asit çözeltisi (tuz ruhu): Yüzeylerdeki kireç lekelerini gidermede kullanılır.",
+   "D": "Asetik asit çözeltisi (sirke): Turşu gibi gıdalarda koruyucu ve tat verici olarak kullanılır.",
+   "E": "Sodyum hidrojenkarbonat (NaHCO₃): Mide asidini gidermek ve kabartma tozu olarak kullanılır."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Sodyum hidroksit (NaOH): Mide yanmasını gidermek için ilaç olarak içilir."
+  },
+  "celdiriciler": {
+   "B": "Doğru eşleştirmeyi yanlış sanmış; NaOCl çamaşır suyunun etkin maddesidir.",
+   "C": "Doğru eşleştirmeyi yanlış sanmış; asit kireci çözer.",
+   "D": "Doğru eşleştirmeyi yanlış sanmış; sirke gıdalarda koruyucu ve tat verici olarak kullanılır.",
+   "E": "Doğru eşleştirmeyi yanlış sanmış; NaHCO₃ bazik özellikte olup asidi giderir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yanlış eşleştirmenin bulunması.",
+  "bilgi": [
+   {
+    "ad": "Günlük hayat kimyasalları",
+    "ifade": "NaOCl: ağartıcı; HCl çözeltisi (tuz ruhu): kireç çözücü; asetik asit çözeltisi (sirke): gıdada; NaHCO₃: antiasit ve kabartma tozu; NaOH: kuvvetli, aşındırıcı bazdır"
+   }
+  ],
+  "ipuclari": [
+   "Kuvvetli ve aşındırıcı bir maddenin vücuda alınan ilaç olarak kullanılıp kullanılamayacağını düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kimyasalları tanı",
+    "aciklama": "Her kimyasalın adını ve özelliğini hatırla.",
+    "islem": "NaOCl: ağartıcı · HCl: asit · sirke: zayıf asit · NaHCO₃: zayıf baz · NaOH: kuvvetli baz"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "B, C, D ve E eşleştirmeleri doğrudur.",
+    "islem": "B: doğru · C: doğru · D: doğru · E: doğru"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "NaOH kuvvetli ve aşındırıcı olduğundan ilaç olarak içilmez; mide yanması için bazik ve zayıf olan NaHCO₃ kullanılır.",
+    "islem": "A: yanlış → cevap A"
+   }
+  ],
+  "puf": "Kuvvetli asit ve bazlar aşındırıcıdır; ilaç ve gıda amaçlı kullanılmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHY-03 (günlük kimyasallar) · kimyasal–kullanım eşleştirme, aşındırıcı baz ilaç sanılır",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytkim-heryerde-0004",
+  "ders": "TYT Kimya",
+  "konu": "Kimya Her Yerde · Yaygın Günlük Hayat Kimyasalları",
+  "k": "kim|Kimya Her Yerde",
+  "kazanim": "Günlük hayattaki temizlik, gıda ve ilaç kimyasallarının özelliklerini doğru-yanlış olarak değerlendirir.",
+  "tipId": "kim-hy-guvenli",
+  "tip": "Evde kullanılan kimyasalların özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. Çamaşır suyu ile tuz ruhu karıştırılırsa zehirli klor gazı açığa çıkabileceğinden birlikte kullanılmaz.\nII. Sabun molekülünün apolar hidrokarbon zinciri yağ ile, iyonik başı su ile etkileşir.\nIII. Çamaşır suyu çözeltisi asidik özelliktedir.\nIV. Gıdalarda kullanılan katkı maddelerinin tamamı doğal kaynaklıdır.\nV. Mide asidini gidermek için kullanılan antiasit ilaçlar bazik özellik gösterir.\nGünlük hayatta kullanılan kimyasallarla ilgili yukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "I, II ve V",
+   "C": "I, III ve V",
+   "D": "I, II ve IV",
+   "E": "II, IV ve V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I, II ve V"
+  },
+  "celdiriciler": {
+   "A": "V’i yanlış sanmış; antiasitlerin mide asidini nötrleştirmek için bazik olduğunu bilmemiş.",
+   "D": "IV’ü doğru sanmış; katkı maddelerinin bir kısmının yapay olarak üretildiğini bilmemiş.",
+   "C": "II’yi yanlış, III’ü doğru sanmış; çamaşır suyunun bazik, sabunun iki kısımlı olduğunu karıştırmış.",
+   "E": "I’i yanlış sanıp IV’ü doğru bulmuş; karıştırma tehlikesini ve katkı maddelerinin çeşitliliğini bilmemiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Günlük hayat kimyasalları",
+    "ifade": "çamaşır suyu bazik özelliktedir ve asitli temizleyicilerle karıştırılmaz. Antiasitler mide asidini nötrleştiren bazik maddelerdir. Gıda katkı maddeleri doğal ya da yapay olabilir"
+   }
+  ],
+  "ipuclari": [
+   "Çamaşır suyunun asit mi baz mı olduğunu, antiasit ilaçların ise asidi gidermek için nasıl bir madde olması gerektiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I ve II",
+    "aciklama": "Klor gazı tehlikesi nedeniyle çamaşır suyu asitlerle karıştırılmaz; sabunun iki ucu farklı özelliktedir.",
+    "islem": "I: doğru · II: doğru"
+   },
+   {
+    "baslik": "III ve IV",
+    "aciklama": "Çamaşır suyu bazik özelliktedir; katkı maddelerinin bir kısmı yapaydır.",
+    "islem": "III: yanlış · IV: yanlış"
+   },
+   {
+    "baslik": "V",
+    "aciklama": "Asidi gidermek için baz gerekir.",
+    "islem": "V: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I, II ve V’tir.",
+    "islem": "I, II ve V"
+   }
+  ],
+  "puf": "Doğru-yanlış sorularında “tamamı”, “hepsi” gibi kesin ifadeler çoğunlukla yanlıştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KHY-04 (günlük kimyasallar) · beş ifade, üçü doğru",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
