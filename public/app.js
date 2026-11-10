@@ -629,7 +629,7 @@ function sHome(s){
         <button class="btn pri full" data-act="go" data-v="program">${done && done===tl.length ? "Programa bak" : "Göreve başla"}</button></div>
       <div class="dcard2"><button class="dch" data-act="go" data-v="analiz"><b>Denemelerim</b>${icon("chev","sm")}</button><p>${lt?`Son TYT <b class="num">${fmt(tytTotal(lt))}</b> net`:"İlk denemeni ekle, gelişimini birlikte izleyelim."}</p>
         <div class="dil"><div class="mbars">${tyt.length ? tyt.map((d,i)=>`<i style="height:${Math.max(12,tytTotal(d)/tmx*100)}%" class="${i===tyt.length-1?"son":""}"><em class="num">${fmt(tytTotal(d))}</em></i>`).join("") : `<span class="mbos">${icon("chart")}</span>`}</div></div>
-        <button class="btn pri full" data-act="sheet" data-v="deneme">Deneme ekle</button></div>
+        <div class="krnikili"><label class="btn pri">${icon("camera","sm")} Karneden ekle<input type="file" class="krn-in" accept="image/*,application/pdf" multiple hidden></label><button class="btn" data-act="sheet" data-v="deneme">${icon("plus","sm")} Elle ekle</button></div></div>
     </div>
     <div class="sec">Araçlar</div>
     <div class="arac">
@@ -884,7 +884,9 @@ function pAnaliz(s){
       :`<div class="empty">Henüz ${tur} denemesi yok.</div>`}
       <div style="margin-top:12px">${netChart(s,tur)}</div>
       ${hedef!=null&&tot!=null?`<div class="small muted" style="margin-top:6px">Hedefine <b class="num" style="color:var(--fg)">${fmt(Math.max(0,hedef-tot))}</b> net kaldı${bas!=null?` · Başlangıçtan bu yana <b class="num ${tot-bas>=0?"up":"down"}">${tot-bas>=0?"+":""}${fmt(tot-bas)}</b>`:""}</div>`:""}
-      <button class="btn pri full" style="margin-top:14px" data-act="sheet" data-v="deneme">${icon("plus","sm")} ${tur} denemesi ekle</button>
+      ${A() ? `<button class="btn pri full" style="margin-top:14px" data-act="sheet" data-v="deneme">${icon("plus","sm")} ${tur} denemesi ekle</button>`
+        : `<div class="krnikili" style="margin-top:14px"><label class="btn pri">${icon("camera","sm")} Karneden ekle<input type="file" class="krn-in" accept="image/*,application/pdf" multiple hidden></label><button class="btn" data-act="sheet" data-v="deneme">${icon("plus","sm")} Elle ekle</button></div>
+          <p class="faint small" style="margin:6px 0 0;text-align:center">Karnenin fotoğrafını ya da PDF'ini seç; netler ve yanlış konular otomatik dolsun.</p>`}
     </div>
     ${last?`<div class="card"><div class="sech"><h3>Ders bazlı analiz</h3><span class="faint small">Son deneme</span></div><div style="margin-top:6px">${F.map(([k,n,mx,ab])=>{ const v = netOf(last[k]); const o = last[k] && typeof last[k]==="object" ? last[k] : null; const pv = prev ? netOf(prev[k]) : null;
       return `<div class="drow"><span class="ic">${ab}</span><div style="min-width:0"><div class="n">${n}${o?` <span class="faint" style="font-weight:600">· ${o.d||0}D ${o.y||0}Y</span>`:""}</div><div class="bar"><i style="width:${Math.max(0,(v||0)/mx*100)}%"></i></div></div><div class="v num">${fmt(v)}<small> / ${mx}</small>${pv!=null&&v!=null&&v!==pv?`<div class="small ${v>pv?"up":"down"}" style="text-align:right;font-weight:700">${v>pv?"+":""}${fmt(v-pv)}</div>`:""}</div></div>`; }).join("")}</div></div>`:""}
@@ -2844,7 +2846,7 @@ document.addEventListener("change", e=>{
   const t = e.target;
   if(t.id==="sesAcik"){ SES.acik = t.checked; try{ localStorage.setItem("zk-ses", t.checked ? "1" : "0"); }catch(_){} if(t.checked) sesCal("basari"); return; }
   if((t.id==="szFoto" || t.id==="szKamera" || t.id==="szGaleri") && t.files && t.files[0]){ szFotoSec(t.files[0]); return; }
-  if(t.id==="krn-file" && t.files && t.files.length){ karneOku([...t.files]); return; }
+  if((t.id==="krn-file" || t.classList.contains("krn-in")) && t.files && t.files.length){ const fl = [...t.files]; t.value = ""; karneOku(fl); return; }
   if(t.dataset && t.dataset.krsec!=null && KR && KR.denemeler){ const x = KR.denemeler[+t.dataset.krsec]; if(x){ x.sec = t.checked; t.closest(".krn")?.classList.toggle("on", t.checked); } return; }
   if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }
