@@ -2073,9 +2073,13 @@ let installEvt = null;
 const isAndroid = () => /android/i.test(navigator.userAgent);
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; refreshInstall(); });
 window.addEventListener("appinstalled", () => { installEvt = null; refreshInstall(); toast("Uygulama yüklendi! Artık ana ekrandaki Zekacademy simgesinden açabilirsin."); });
+/* Samsung Internet vb. tarayıcılar uygulamayı kendileri paketliyor; Play Protect bunu "güvenli olmayan uygulama" diye engelliyor → Chrome'a yönlendir */
+const androidBaskaTarayici = () => isAndroid() && /SamsungBrowser|MiuiBrowser|HuaweiBrowser|YaBrowser|OPR\/|HeyTapBrowser|VivoBrowser|UCBrowser/i.test(navigator.userAgent);
+const chromeIntent = () => `intent://${location.host}${location.pathname}${location.search}#Intent;scheme=https;package=com.android.chrome;end`;
 function installCard(){
   if(isStandalone()) return "";
   const head = t => `<div class="inst-h"><span class="inst-i">${icon("phone","sm")}</span><div><b>Uygulamayı telefonuna yükle</b><span>${t}</span></div></div>`;
+  if(androidBaskaTarayici()) return `<div class="instcard">${head("Bu tarayıcıdan yüklersen telefon “güvenli olmayan uygulama” uyarısı verir. Chrome'dan yükle, uyarı çıkmaz.")}<a class="btn pri full" href="${chromeIntent()}">Chrome'da aç</a><button type="button" class="btn full" data-act="adresKopya" style="margin-top:8px">Adresi kopyala</button><p class="inst-not">Chrome açılınca giriş ekranındaki <b>Uygulamayı yükle</b> düğmesine dokun.</p></div>`;
   if(installEvt) return `<div class="instcard">${head("Tek dokunuşla kur; bildirimler gelsin, tam ekran açılsın.")}<button type="button" class="btn pri full" data-act="install">Uygulamayı yükle</button></div>`;
   if(isIOS()) return `<div class="instcard">${head("Bildirimlerin gelmesi için iPhone'da bu adım şart.")}<ol class="inst-s"><li><b>Safari</b> ile aç (başka tarayıcıdaysan adresi Safari'ye yapıştır).</li><li>Alttaki <b>Paylaş</b> düğmesine dokun (yukarı oklu kare).</li><li><b>Ana Ekrana Ekle</b> → <b>Ekle</b>.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
   if(isAndroid()) return `<div class="instcard">${head("Bildirimler gelsin, tam ekran açılsın.")}<ol class="inst-s"><li><b>Chrome</b>'da sağ üstteki <b>⋮</b> menüsüne dokun.</li><li><b>Uygulamayı yükle</b> (ya da <b>Ana ekrana ekle</b>) seçeneğine dokun.</li><li>Uygulamayı ana ekrandaki <b>Zekacademy</b> simgesinden aç.</li></ol></div>`;
@@ -2570,6 +2574,7 @@ document.addEventListener("click", e=>{
     case "arole": S.authRole=v; if(v==="student" && S.auth==="admin") S.auth="login"; renderAuth(); break;
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
     case "install": doInstall(); break;
+    case "adresKopya": { const u = location.origin + "/"; (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(() => toast("Adres kopyalandı. Chrome'u açıp adres çubuğuna yapıştır."), () => toast(u)); break; }
     case "logout": logout(); break;
     case "pushon": enablePush(); break;
     case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
