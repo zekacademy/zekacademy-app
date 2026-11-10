@@ -549,10 +549,10 @@ const TUR = [
   {view:"konular", nav:"konular", ic:"book", b:"Konular", t:"Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
   {view:"cetele", nav:"daha", ic:"list", b:"Yanlış çetelesi", t:"Daha Fazla → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
   {view:"socoz", nav:"daha", ic:"search", b:"Soru Çözüm (Zek AI)", t:"Takıldığın sorunun fotoğrafını çek; yapay zekâ adım adım çözsün. Ana sayfadaki “Soru Çözüm” kartından ya da Daha Fazla’dan açılır. Önce kendin dene, sonra bak!", kosul:"ai"},
-  {view:"sorular", nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin sorunun fotoğrafını çek, dersini seç. Görüşmede koçunla birlikte bakarsınız; çözünce “Çözüldü” yap."},
+  {view:"sorular", nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin soruların fotoğrafını çek, dersini seç ve burada biriktir. Sonra tekrar dönüp çözdüğünde “Çözüldü” yap."},
   {view:"bildirim", nav:"daha", ic:"bell", b:"Bildirimler", t:"Sabah günün mesajı, akşam eksik görev hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse mutlaka “İzin ver”e bas. Koçunun sana yazdığı notlar da burada."},
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
-  {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Gerisini koçunla birlikte hallederiz. Kolay gelsin {Ad}!"} ];
+  {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
 const YENILIK_SURUM = "2026-11-01";
 const YENILIK = [
@@ -561,7 +561,7 @@ const YENILIK = [
   {nav:"home", ic:"target", b:"TYT mi AYT mi, hemen gör", t:"Görevin altındaki konu ve kitap artık görevin sınavına göre: AYT Matematik görevinde sadece AYT konuları ve kitapları yazar.", ornek:"hedef2"},
   {nav:"analiz", ic:"chart", b:"Denemede yanlış konular", t:"Deneme eklerken altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir, ayrıca uğraşmazsın.", ornek:"yanlis"},
   {nav:"home", ic:"cal", b:"Deneme takvimi", t:"Yaklaşan Türkiye geneli denemeler ve yazılıların ana sayfanda. Tüm takvim Analiz’deki takvim simgesinde."},
-  {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. “Kamerayı aç” ile çözemediğin soruyu çek, dersini seç. Görüşmede koçunla birlikte bakarsınız."},
+  {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. “Kamerayı aç” ile çözemediğin soruyu çek, dersini seç ve biriktir. Çözdüğünde “Çözüldü” yap."},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin! Tanıtımları Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin."} ];
 const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
@@ -664,7 +664,7 @@ function pSorular(s, sid_){ const L = soruList(sid_), f = S.sqf || "bekliyor", G
   const bek = L.filter(([,q])=>q.durum!=="cozuldu").length;
   const head = A() ? "" : topbar(`<h1 class="ttl">Takıldığım sorular</h1>`, `<button class="iconbtn" data-act="sheet" data-v="soruekle" aria-label="Soru ekle">${icon("plus")}</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`);
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none":""}">
-    ${A()?"":`<div class="card note"><span class="av">❓</span><div><b>Çözemediğin soruyu biriktir</b><div class="muted small">Fotoğrafını çek, dersini seç. Görüşmede koçunla birlikte bakarsınız; çözdüğünü “çözüldü” yap.</div></div></div>
+    ${A()?"":`<div class="card note"><span class="av">❓</span><div><b>Çözemediğin soruyu biriktir</b><div class="muted small">Fotoğrafını çek, dersini seç ve burada biriktir. Çözdüğünde “çözüldü” yap.</div></div></div>
     <button class="btn pri full" data-act="sheet" data-v="soruekle">${icon("plus","sm")} Soru ekle</button>`}
     <div class="seg"><button data-act="sqf" data-v="bekliyor" aria-pressed="${f==="bekliyor"}">Bekleyen ${bek}</button><button data-act="sqf" data-v="cozuldu" aria-pressed="${f==="cozuldu"}">Çözülen ${L.length-bek}</button><button data-act="sqf" data-v="tum" aria-pressed="${f==="tum"}">Tümü</button></div>
     ${G.length ? `<div class="sqgrid">${G.map(([id,q])=>soruKart(id,q)).join("")}</div>` : `<div class="empty">${L.length ? "Bu filtrede soru yok." : (A() ? "Öğrenci henüz soru eklemedi." : "Henüz soru eklemedin. Takıldığın ilk soruyu ekle.")}</div>`}
@@ -2348,7 +2348,7 @@ function openSheet(kind, el){
       <div class="sqbig"><img id="sq-big" src="${q.thumb||""}" alt="Soru" data-act="sqac"></div>
       <p class="faint small" style="margin:-4px 0 0">${trDate((q.at||"").slice(0,10))} eklendi${q.durum==="cozuldu"&&q.cozAt?` · ${trDate(q.cozAt.slice(0,10))} çözüldü`:""} · büyütmek için resme dokun</p>
       ${q.not?`<div class="card" style="padding:10px 12px;box-shadow:none;border:1px solid var(--line)"><b class="small">Öğrencinin notu</b><p class="small" style="margin:4px 0 0">${esc(q.not)}</p></div>`:""}
-      ${A() ? `<label class="f">Koç notu <span class="faint" style="font-weight:500">· öğrenci görür</span><input type="text" id="sq-knot" data-sqnot="${id}" value="${esc(q.kocNot||"")}" placeholder="ör. Görüşmede çözdük, benzer 5 soru çöz"></label>` : (q.kocNot?`<div class="card" style="padding:10px 12px;box-shadow:none;background:var(--acs)"><b class="small">Koçunun notu</b><p class="small" style="margin:4px 0 0">${esc(q.kocNot)}</p></div>`:"")}
+      ${A() ? `<label class="f">Koç notu <span class="faint" style="font-weight:500">· öğrenci görür</span><input type="text" id="sq-knot" data-sqnot="${id}" value="${esc(q.kocNot||"")}" placeholder="ör. Bu konudan 20 soru daha çöz"></label>` : (q.kocNot?`<div class="card" style="padding:10px 12px;box-shadow:none;background:var(--acs)"><b class="small">Koçunun notu</b><p class="small" style="margin:4px 0 0">${esc(q.kocNot)}</p></div>`:"")}
       <div class="acts"><button type="button" class="btn" data-act="sqsil" data-id="${id}">${icon("trash","xs")} Sil</button><button type="button" class="btn ${q.durum==="cozuldu"?"":"pri"}" data-act="sqdurum" data-id="${id}">${q.durum==="cozuldu"?"Bekleyene al":`${icon("check","xs")} Çözüldü`}</button><button type="button" class="btn" data-close>Kapat</button></div>`); }
   if(kind==="girisler"){ const L = sortedStudents(), gon = L.filter(([id])=>(S.cnotes.get(id)||{}).girisGonderildi).length;
     return sheet(`<h3>Giriş bilgilerini gönder</h3><p class="muted small" style="margin:0">Her öğrencinin WhatsApp düğmesine dokun; mesaj kullanıcı adı ve şifresiyle hazır açılır, sadece <b>Gönder</b>’e basarsın. ${gon}/${L.length} gönderildi.</p>
