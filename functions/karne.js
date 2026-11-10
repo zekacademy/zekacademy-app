@@ -7,6 +7,31 @@ export const BOLUM = {
   AYT: [["mat", "Matematik", 40], ["fen", "Fen Bilimleri", 40], ["sos1", "Edebiyat-Sosyal 1", 40], ["sos2", "Sosyal Bilimler 2", 40]],
 };
 
+/* Ders → bölüm (konu analizinden net hesaplamak için) ve bölümlerin ders bileşenleri */
+const dn = x => String(x || "").toLocaleLowerCase("tr").replace(/ı/g, "i").replace(/[çğöşüâî]/g, c => ({ ç: "c", ğ: "g", ö: "o", ş: "s", ü: "u", â: "a", î: "i" })[c]).replace(/[^a-z0-9]/g, "");
+export function dersBolum(tur, ders){ const d = dn(ders);
+  if (tur === "TYT") { if (/^turkce/.test(d)) return "turkce"; if (/^(tarih|cografya|felsefe|din)/.test(d)) return "sosyal"; if (/^(matematik|geometri)/.test(d)) return "mat"; if (/^(fizik|kimya|biyoloji)/.test(d)) return "fen"; return null; }
+  if (/^(matematik|geometri)/.test(d)) return "mat"; if (/^(fizik|kimya|biyoloji)/.test(d)) return "fen";
+  if (/^(edebiyat|turkdili|tde)/.test(d) || /(tarih|cografya)1$/.test(d)) return "sos1";
+  if (/(tarih|cografya)2$/.test(d) || /^(felsefe|psikoloji|sosyoloji|mantik|din)/.test(d)) return "sos2";
+  return null; }
+const BILESEN = { TYT: { turkce: ["turkce"], sosyal: ["tarih", "cografya", "felsefe", "din"], mat: ["matematik"], fen: ["fizik", "kimya", "biyoloji"] },
+  AYT: { mat: ["matematik"], fen: ["fizik", "kimya", "biyoloji"], sos1: ["edebiyat"], sos2: ["felsefe"] } };
+/* Yalnız konu analizi sayfası geldiyse: her bölümde doğru = soru − yanlış − boş − iptal */
+export function konudanBolumler(tur, yanlislar, dersler){
+  const B = BOLUM[tur], var_ = new Set((dersler || []).map(dn)), out = {}, notlar = [];
+  const sayac = {}; (yanlislar || []).forEach(x => { const k = dersBolum(tur, x.ders); if (!k) return; const c = sayac[k] = sayac[k] || { y: 0, b: 0, i: 0 }; c[x.durum === "bos" ? "b" : x.durum === "iptal" ? "i" : "y"]++; });
+  for (const [k, ad, mx] of B) {
+    const gerek = BILESEN[tur][k], tam = gerek.every(g => [...var_].some(v => v.startsWith(g)));
+    if (!tam && !sayac[k]) continue;
+    if (!tam) { notlar.push(`${ad}: sayfada bütün dersleri görünmüyor, net hesaplanmadı`); continue; }
+    const c = sayac[k] || { y: 0, b: 0, i: 0 }, d = mx - c.y - c.b - c.i;
+    if (d < 0) { notlar.push(`${ad}: yanlış/boş sayısı soru sayısını aşıyor`); continue; }
+    out[k] = { d, y: c.y }; if (c.i) notlar.push(`${ad}: ${c.i} iptal soru doğru sayılmadı`);
+  }
+  return { bolumler: out, notlar };
+}
+
 export const KARNE_SISTEM = [
   "Sen bir YKS deneme sınavı sonuç belgesi okuyucususun. Görevin, öğrencinin yüklediği fotoğraf ya da PDF'teki deneme sonuçlarını hatasız ve uydurmadan yapılandırılmış JSON'a çevirmek.",
   "Sadece belgede gerçekten yazanı aktar. Okuyamadığın ya da belgede olmayan değer için null yaz; asla tahmin edip sayı uydurma.",
@@ -30,7 +55,8 @@ const ISTEK = `Belgeyi oku ve aşağıdaki JSON biçiminde yanıt ver.
       "toplamNet": sayı|null,
       "puan": sayı|null,
       "siralama": "metin ya da null",
-      "yanlislar": [ { "ders": "Matematik", "no": 3, "konu": "belgedeki konu adı", "eslesen": "listeden tam konu adı ya da null", "durum": "yanlis" | "bos" } ],
+      "dersler": ["konu analizi sayfasında başlığı görünen dersler, ör. Türkçe, Matematik, Geometri, Tarih, ..."],
+      "yanlislar": [ { "ders": "Matematik", "no": 3, "konu": "belgedeki konu adı", "eslesen": "listeden tam konu adı ya da null", "durum": "yanlis" | "bos" | "iptal" } ],
       "emin": true | false,
       "notlar": ["kısa Türkçe not"]
     }
@@ -50,7 +76,8 @@ KURALLAR:
 4. "Sınav Adı" içinde yayın geçer: "3D TG TYT 1 2027" → yayin "3D"; "PARAF TG TYT-1" → "Paraf"; "ÖZDEBİR TYT-1" → "Özdebir"; "BİLGİ SARMAL TG TYT 2" → "Bilgi Sarmal"; "SIFIR POZİTİF" → "Sıfır Pozitif"; "345 son prova" → "345". Belgenin başlığındaki kurum adı (ör. "Model VİP Özel Öğretim Kurumu", "Hangi Kaynak") yayın DEĞİLDİR. Kitapçık kapağındaki yayın logosu/adı (ör. "ICEBERG") yayındır.
 5. Sınav adı kırpılmış ya da görünmüyorsa, belgedeki "SON N SINAVIN SONUÇLARI" tablosunda aynı tarihli satırdan sınav adını ve yayını al; tarih de yoksa toplam net eşleşen satırı kullan. Bulamazsan yayin null.
 6. "SON N SINAVIN SONUÇLARI" gibi geçmiş tablosundaki DİĞER satırları da ayrı denemeler olarak ekle, kaynak "gecmis" olsun. Bu satırlarda yalnız netler vardır: bolumler'de d ve y null, net dolu olsun (TYT-TRK → turkce, TYT-SOS "T" sütunu → sosyal, TYT-MAT "T" → mat, TYT-FEN "T" → fen). Alt ders netlerini (TRH, COG, FLS, DIN, MAT, GEO, FZK, KMY, BIO) altDersler'e yaz. Asıl belgedeki deneme (karnenin konusu olan) kaynak "ana"dır ve geçmiş tablosunda tekrar ediyorsa bir kez yaz.
-7. Konu analizi sayfasında her soru için "DC" doğru cevap, "ÖC" öğrencinin cevabı, "SO" sonuçtur: "+" doğru, "-" yanlış, boş hücre boş bırakılmış demektir. "İPTAL" sorular hesaba girmez. yanlislar listesine "-" olan soruları durum "yanlis", ÖC boş olanları durum "bos" olarak ekle. Ders adı tablodaki başlıktır (Türkçe, Matematik, Geometri, Tarih, Coğrafya, Felsefe, Din Kültürü, Fizik, Kimya, Biyoloji, Edebiyat...).
+7. Konu analizi sayfasında her soru için "DC" doğru cevap, "ÖC" öğrencinin cevabı, "SO" sonuçtur: "+" doğru, "-" yanlış, ÖC boş ise soru boş bırakılmıştır. yanlislar listesine "-" olan HER soruyu durum "yanlis", ÖC boş olan HER soruyu durum "bos", "İPTAL" yazan soruları durum "iptal" olarak EKSİKSİZ ekle (hiçbirini atlama; sayfadaki tüm sütunları tara). Ders adı tablodaki başlıktır (Türkçe, Matematik, Geometri, Tarih, Coğrafya, Felsefe, Din Kültürü, Fizik, Kimya, Biyoloji, Edebiyat...); AYT'de "Tarih-1", "Tarih-2", "Coğrafya-1", "Coğrafya-2" gibi yaz. Sayfada başlığı görünen tüm dersleri "dersler" listesine yaz.
+7b. Belgede SADECE konu analizi sayfası varsa (net tablosu yoksa) bolumler'i boş bırak; netleri uygulama yanlis/bos listesinden hesaplayacak. Bu yüzden yanlış ve boş listesi eksiksiz olmalı.
 8. Her yanlış/boş sorunun konusunu, aşağıda verilen UYGULAMA KONU LİSTESİ'nden en uygun konuyla eşle ve listedeki adı AYNEN "eslesen"e yaz (ör. "Atomun Yapısı" → "Atom ve Yapısı", "Asitlerin ve Bazların Tepkimeleri" → "Asitler, Bazlar ve Tuzlar", "Üçgende Açı-Kenar Bağıntıları" → "Açı Kenar Bağıntıları", "Paragrafın Ana Düşüncesi" gibi paragraf soruları için listede paragraf yoksa null). Emin değilsen null yaz; zorla eşleme.
 9. Konu analizi sayfası ile karne sayfası aynı denemeye aitse (aynı belge grubunda) tek deneme olarak birleştir: netler karneden, yanlislar konu analizinden.
 10. Elle yazılmış netler (ör. "Türkçe = 35,25  Sos = 11,75  Mat = 30  Fen = 17,75") için yalnız net doldur, d/y null. Toplamı kontrol et; tutmuyorsa notlar'a yaz. Basılı ve el yazısı rakamları karıştırma; el yazısında 1/7, 3/8, 5/6 karışabilir, toplamla doğrula, emin değilsen emin:false.
@@ -93,17 +120,24 @@ export function karneDuzelt(r, bugun){
       if (d == null && net == null) continue;
       bolumler[k] = d != null ? { d, y } : { net };
     }
-    if (!Object.keys(bolumler).length) continue;
+    const yanlis0 = Array.isArray(d0.yanlislar) ? d0.yanlislar : [];
+    let konudan = false;
+    if (!Object.keys(bolumler).length && yanlis0.length) {
+      const h = konudanBolumler(tur, yanlis0, d0.dersler);
+      Object.assign(bolumler, h.bolumler); notlar.push(...h.notlar);
+      if (Object.keys(bolumler).length) { konudan = true; notlar.unshift("Netler konu analizinden sayıldı; karnen varsa karşılaştır"); }
+    }
+    if (!Object.keys(bolumler).length && !yanlis0.length) continue;
     const toplam = yuvarla(Object.values(bolumler).reduce((a, v) => a + (v.net != null ? v.net : v.d - v.y / 4), 0));
     const tn = sayi(d0.toplamNet);
     if (tn != null && Object.keys(bolumler).length === B.length && Math.abs(tn - toplam) > 0.01) { notlar.push(`Toplam net belgede ${tn}, derslerin toplamı ${toplam}`); emin = false; }
     let tarih = /^\d{4}-\d{2}-\d{2}$/.test(d0.tarih || "") ? d0.tarih : null;
     if (tarih && bugun && tarih > bugun) { const geri = tarih.replace(/^(\d{4})/, (m, yy) => String(+yy - 1)); tarih = geri <= bugun ? geri : null; notlar.push("Tarih gelecekte görünüyordu, düzeltildi"); }
-    const yanlislar = (Array.isArray(d0.yanlislar) ? d0.yanlislar : []).slice(0, 160).map(x => ({
+    const yanlislar = yanlis0.slice(0, 160).map(x => ({
       ders: String(x.ders || "").slice(0, 40), no: sayi(x.no), konu: String(x.konu || "").slice(0, 120),
-      eslesen: x.eslesen ? String(x.eslesen).slice(0, 120) : null, durum: x.durum === "bos" ? "bos" : "yanlis" }));
+      eslesen: x.eslesen ? String(x.eslesen).slice(0, 120) : null, durum: x.durum === "bos" ? "bos" : x.durum === "iptal" ? "iptal" : "yanlis" }));
     out.denemeler.push({ tur, yayin: d0.yayin ? String(d0.yayin).slice(0, 60) : "", sinavAdi: d0.sinavAdi ? String(d0.sinavAdi).slice(0, 160) : "",
-      tarih, kaynak: d0.kaynak === "gecmis" ? "gecmis" : "ana", bolumler, toplam,
+      tarih, kaynak: d0.kaynak === "gecmis" ? "gecmis" : "ana", bolumler, toplam, konudan,
       altDersler: d0.altDersler && typeof d0.altDersler === "object" ? Object.fromEntries(Object.entries(d0.altDersler).slice(0, 16).map(([k, v]) => [k, { d: sayi(v && v.d), y: sayi(v && v.y), net: sayi(v && v.net) }])) : {},
       puan: sayi(d0.puan), siralama: d0.siralama ? String(d0.siralama).slice(0, 40) : "", yanlislar, emin, notlar });
   }

@@ -69,3 +69,21 @@ test("istek metni: kritik kurallar ve konu listesi", () => {
   assert.match(t, /ORT/); assert.match(t, /SON N SINAVIN SONUÇLARI/); assert.match(t, /Atom ve Yapısı \| Karışımlar/); assert.match(t, /BUGÜN: 2026-11-10/);
   assert.match(t, /kurum adı .* yayın DEĞİLDİR/);
 });
+
+test("yalnız konu analizi sayfası: netler yanlış/boş/iptal listesinden sayılır", () => {
+  const y = [
+    ...[4, 9, 16].map(no => ({ ders: "Türkçe", no, konu: "x", durum: "yanlis" })), { ders: "Türkçe", no: 10, konu: "Çekim Ekleri", durum: "bos" },
+    { ders: "Matematik", no: 3, konu: "Rasyonel Sayılar", eslesen: "Rasyonel Sayılar", durum: "yanlis" }, { ders: "Geometri", no: 33, konu: "Açı Kenar", durum: "yanlis" },
+    { ders: "Matematik", no: 18, konu: "İPTAL", durum: "iptal" }, { ders: "Matematik", no: 1, konu: "Sayı Basamakları", durum: "bos" },
+    { ders: "Tarih", no: 3, konu: "Kavimler Göçü", durum: "yanlis" }, { ders: "Kimya", no: 10, konu: "Asit", eslesen: "Asitler, Bazlar ve Tuzlar", durum: "yanlis" } ];
+  const o = karneDuzelt({ belgeTuru: "konu-analizi", denemeler: [{ tur: "TYT", yayin: null, tarih: null, bolumler: {}, dersler: ["Türkçe", "Matematik", "Geometri", "Tarih", "Coğrafya", "Felsefe", "Din Kültürü", "Fizik", "Kimya", "Biyoloji"], yanlislar: y }] }, BUGUN);
+  const d = o.denemeler[0];
+  assert.equal(d.konudan, true);
+  assert.deepEqual(d.bolumler.turkce, { d: 36, y: 3 }); assert.deepEqual(d.bolumler.mat, { d: 36, y: 2 }); assert.deepEqual(d.bolumler.sosyal, { d: 19, y: 1 }); assert.deepEqual(d.bolumler.fen, { d: 19, y: 1 });
+  assert.match(d.notlar.join(), /iptal/); assert.match(d.notlar[0], /konu analizinden/);
+});
+
+test("konu analizi sayfasında bazı dersler yoksa o bölüm hesaplanmaz, yanlışlar yine gelir", () => {
+  const o = karneDuzelt({ denemeler: [{ tur: "TYT", bolumler: {}, dersler: ["Türkçe", "Fizik"], yanlislar: [{ ders: "Türkçe", no: 2, durum: "yanlis" }, { ders: "Fizik", no: 1, durum: "yanlis", eslesen: "Basınç" }] }] }, BUGUN);
+  const d = o.denemeler[0]; assert.deepEqual(Object.keys(d.bolumler), ["turkce"]); assert.equal(d.yanlislar.length, 2); assert.match(d.notlar.join(), /Fen Bilimleri: sayfada bütün/);
+});

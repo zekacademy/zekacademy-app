@@ -1735,9 +1735,10 @@ function karneSheet(s){
   const L = KR.denemeler || [];
   const kart = (x, i) => { const F = x.tur==="TYT" ? TYTF : AYTF;
     return `<div class="krn ${x.sec?"on":""}" data-i="${i}">
-      <label class="krnh"><input type="checkbox" data-krsec="${i}" ${x.sec?"checked":""}><span class="kch ex-${x.tur}"><i>${x.tur}</i></span><b class="num">${fmt(x.toplam)} net</b>${x.kaynak==="gecmis"?`<span class="pill">karnedeki geçmiş</span>`:""}${x.kayitli?`<span class="pill">zaten kayıtlı</span>`:""}${x.emin?"":`<span class="pill warn">kontrol et</span>`}</label>
-      <div class="two"><label class="f">Yayın<input type="text" data-krf="yayin" data-i="${i}" value="${esc(x.yayin||"")}" placeholder="ör. 3D"></label><label class="f">Tarih${x.tarih?"":` <span class="faint" style="font-weight:500">· karnede yok</span>`}<input type="date" data-krf="tarih" data-i="${i}" value="${x.tarih||today()}" max="${today()}"></label></div>
-      <div class="krnt"><span></span><span>D</span><span>Y</span><span>Net</span>${F.map(([k,n])=>{ const v = x.bolumler[k]; if(!v) return `<span class="nm">${n}</span><span class="faint">—</span><span class="faint">—</span><span class="faint">—</span>`;
+      <label class="krnh"><input type="checkbox" data-krsec="${i}" ${x.sec?"checked":""}><span class="kch ex-${x.tur}"><i>${x.tur}</i></span>${Object.keys(x.bolumler).length?`<b class="num">${fmt(x.toplam)} net</b>`:`<b>Net yok · sadece yanlış konular</b>`}${x.konudan?`<span class="pill">konu analizinden sayıldı</span>`:""}${x.kaynak==="gecmis"?`<span class="pill">karnedeki geçmiş</span>`:""}${x.kayitli?`<span class="pill">zaten kayıtlı</span>`:""}${x.emin?"":`<span class="pill warn">kontrol et</span>`}</label>
+      <div class="two" ${Object.keys(x.bolumler).length?"":"hidden"}><label class="f">Yayın<input type="text" data-krf="yayin" data-i="${i}" value="${esc(x.yayin||"")}" placeholder="ör. 3D"></label><label class="f">Tarih${x.tarih?"":` <span class="faint" style="font-weight:500">· karnede yok</span>`}<input type="date" data-krf="tarih" data-i="${i}" value="${x.tarih||today()}" max="${today()}"></label></div>
+      ${Object.keys(x.bolumler).length?"":`<p class="faint small" style="margin:0">Bu sayfada net yok; kaydedince yalnız yanlış konular çeteleye eklenir. Netler için karne sayfasını da birlikte yükle.</p>`}
+      <div class="krnt" ${Object.keys(x.bolumler).length?"":"hidden"}><span></span><span>D</span><span>Y</span><span>Net</span>${F.map(([k,n])=>{ const v = x.bolumler[k]; if(!v) return `<span class="nm">${n}</span><span class="faint">—</span><span class="faint">—</span><span class="faint">—</span>`;
         return v.net!=null ? `<span class="nm">${n}</span><span class="faint">—</span><span class="faint">—</span><input type="text" inputmode="decimal" data-krn="${k}" data-i="${i}" value="${fmt(v.net)}" aria-label="${n} net">`
           : `<span class="nm">${n}</span><input type="number" inputmode="numeric" min="0" data-krd="${k}" data-i="${i}" value="${v.d}" aria-label="${n} doğru"><input type="number" inputmode="numeric" min="0" data-kry="${k}" data-i="${i}" value="${v.y}" aria-label="${n} yanlış"><b class="num">${fmt(v.d - v.y/4)}</b>`; }).join("")}</div>
       ${(()=>{ const yk = Object.entries(x.yk), top = yk.reduce((a,[,n])=>a+n,0);
@@ -1760,9 +1761,9 @@ function karneKaydet(){ const s = st(); if(!s || !KR) return; const L = KR.denem
       if(v.net!=null){ const nt = num(val(`data-krn="${k}"`, i)); if(nt==null) continue; if(nt > mx || nt < -mx/4) return sheetErr(`${n}: net ${mx} soruyu aşamaz.`); d[k] = nt; }
       else { const D = num(val(`data-krd="${k}"`, i))||0, Y = num(val(`data-kry="${k}"`, i))||0; if(D<0||Y<0||D+Y>mx) return sheetErr(`${x.yayin||x.tur}: ${n} için doğru + yanlış en fazla ${mx}.`); d[k] = {d:D, y:Y}; } }
     if(Object.keys(x.yk).length){ d.yk = {...x.yk}; s.topics = s.topics||{}; Object.entries(x.yk).forEach(([k,n])=>{ const tp = topic(s,k); tp.y = (tp.y||0)+n; yt += n; }); }
-    yeni.push(d); }
+    if(Object.keys(x.bolumler).length) yeni.push(d); }
   s.denemeler = [...(s.denemeler||[]), ...yeni]; save(); KR = null; closeSheet(); render();
-  toast(`${yeni.length} deneme kaydedildi${yt?` · ${yt} yanlış çeteleye eklendi`:""}`); }
+  toast(yeni.length ? `${yeni.length} deneme kaydedildi${yt?` · ${yt} yanlış çeteleye eklendi`:""}` : `${yt} yanlış çeteleye eklendi`); }
 
 /* ---------- Demo öğrenci: koç uygulamayı öğrenci gözünden görür (yalnızca bu cihazda, kaydedilmez) ---------- */
 const ONZ_ID = "__demo_ogrenci";
