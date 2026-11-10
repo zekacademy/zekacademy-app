@@ -1,0 +1,93 @@
+{
+ "konu": "Uluslararası Ulaşım Hatları",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGUL-01",
+   "konu": "Uluslararası Ulaşım Hatları",
+   "alt": "Taşıma türleri",
+   "fikir": "Deniz taşımacılığı büyük hacimli, ağır yükleri ucuza taşır; hava hızlıdır ama pahalıdır; kara kapıdan kapıya hizmet verir.",
+   "tuzak": "Taşıma türlerinin üstünlüklerini karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-ulasim-tur",
+   "tip": "Taşıma türlerinin özellikleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGUL-02",
+   "konu": "Uluslararası Ulaşım Hatları",
+   "alt": "Kanal ve boğazlar",
+   "fikir": "Süveyş: Akdeniz–Kızıldeniz; Panama: Atlas–Pasifik; Cebelitarık: Akdeniz–Atlas; İstanbul: Karadeniz–Marmara; Çanakkale: Marmara–Ege.",
+   "tuzak": "Kanal ve boğazların bağladığı denizleri karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-ulasim-gecit",
+   "tip": "Kanal ve boğazların bağladığı denizler",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGUL-03",
+   "konu": "Uluslararası Ulaşım Hatları",
+   "alt": "Kanalın etkisi",
+   "fikir": "Süveyş Kanalı Avrupa ile Hint Okyanusu çevresi arasındaki deniz yolunu Ümit Burnu’na göre kısaltır.",
+   "tuzak": "Kanalın bağladığı denizleri karıştırıp yanlış sonuç çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-ulasim-kanal",
+   "tip": "Süveyş Kanalı’nın etkisi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGUL-04",
+   "konu": "Uluslararası Ulaşım Hatları",
+   "alt": "Rota karşılaştırma",
+   "fikir": "Mesafe farkı hıza bölünerek süre, süre farkı günlük tüketimle çarpılarak tasarruf bulunur.",
+   "tuzak": "Saat ile günü karıştırmak; tek rotanın değerini vermek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "cg-ulasim-rota",
+   "tip": "Rota seçimi ve yakıt hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-ulasim-tur",
+   "ad": "Taşıma türlerinin özellikleri",
+   "kartlar": [
+    "K-CGUL-01"
+   ],
+   "uygulamaKonu": "cog|Uluslararası Ulaşım Hatları"
+  },
+  {
+   "tipId": "cg-ulasim-gecit",
+   "ad": "Kanal ve boğazların bağladığı denizler",
+   "kartlar": [
+    "K-CGUL-02"
+   ],
+   "uygulamaKonu": "cog|Uluslararası Ulaşım Hatları"
+  },
+  {
+   "tipId": "cg-ulasim-kanal",
+   "ad": "Süveyş Kanalı’nın etkisi",
+   "kartlar": [
+    "K-CGUL-03"
+   ],
+   "uygulamaKonu": "cog|Uluslararası Ulaşım Hatları"
+  },
+  {
+   "tipId": "cg-ulasim-rota",
+   "ad": "Rota seçimi ve yakıt hesabı",
+   "kartlar": [
+    "K-CGUL-04"
+   ],
+   "uygulamaKonu": "cog|Uluslararası Ulaşım Hatları"
+  }
+ ]
+}

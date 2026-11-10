@@ -1,0 +1,2472 @@
+[
+ {
+  "id": "tyttr-pyarb-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada bulunmayan yargıyı belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Mahalle bakkalı yalnızca alışveriş yapılan bir dükkân değildir. Bakkal, sokaktan geçen herkesi tanır; kimin evde hasta olduğunu, kimin sınava hazırlandığını bilir. Çocuklar harçlıklarıyla ilk alışverişlerini orada yapar, yaşlılar da evden çıkmadan siparişlerini telefonla iletir. Veresiye defteri, parayla ölçülemeyen bir güven ilişkisinin kaydıdır. Büyük marketlerin yaygınlaşmasıyla bu ilişki zayıflamış, alışveriş hızlanmış ama sohbet azalmıştır. Bu yüzden mahalleliler, bakkalın kapanmasına bir dükkânın kapanmasından fazlası olarak bakar.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bakkallar fiyat bakımından marketlere üstündür.",
+   "B": "Bakkallar, çevresindeki insanlar hakkında bilgi sahibidir.",
+   "C": "Veresiye defteri, bakkalla müşteri arasındaki güveni yansıtır.",
+   "D": "Marketlerin yaygınlaşması alışverişi hızlandırmıştır.",
+   "E": "Bakkalın kurduğu ilişkiler alışverişten daha geniş anlam taşır."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Bakkallar fiyat bakımından marketlere üstündür."
+  },
+  "celdiriciler": {
+   "B": "Parçada karşılığı var: bakkal “kimin evde hasta olduğunu” bilir.",
+   "C": "Parçada karşılığı var: defter “güven ilişkisinin kaydıdır”.",
+   "D": "Parçada karşılığı var: son cümlede “alışveriş hızlanmış” denir.",
+   "E": "Parçada karşılığı var: ilk cümle bakkalın “yalnızca alışveriş yapılan” yer olmadığını söyler."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Şıkların hangisi parçada hiç geçmeyen bir konuyu getiriyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Bakkal ve market karşılaştırması parçada yalnızca ilişki ve sohbet üzerinden yapılır; fiyat konusu hiç açılmaz. Diğer dört şık parçadaki birer cümleyle eşleşir.",
+    "islem": "dayanak: Parçada bakkal–market karşılaştırması ilişki ve sohbet üzerinden yapılır; fiyattan hiç söz edilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yok ✓ · B: var · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Olumsuz köklerde önce dört “var” şıkkını parçada işaretle, geriye kalan şık doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçayla çelişen yargıyı belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Bir romanı ikinci kez okuyan kişi, ilk okumada gözünden kaçan ayrıntıları fark eder. Ne var ki bu, kitabın değiştiği anlamına gelmez; değişen, okurun kendisidir. Çocukken sevilen bir kitabın yetişkinlikte bambaşka bir tat vermesi bundandır. Aradan geçen yıllar okura yeni yaşantılar kazandırmıştır ve metin bu birikimle başka bir ışıkta görünür. Bu nedenle iyi bir roman, bir kez okunup rafa kaldırılan bir şey değil, okurla birlikte yaşlanan bir yol arkadaşıdır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "İlk okumada fark edilmeyen ayrıntılar sonra görünür olabilir.",
+   "B": "Bir romanın metni her okuyuşta kendiliğinden değişir.",
+   "C": "Okurun yaşantıları, metnin algılanışını etkileyebilir.",
+   "D": "Geçen yıllar okura yeni yaşantılar kazandırmıştır.",
+   "E": "İyi bir roman, tekrar okunmaya değer bir eserdir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Bir romanın metni her okuyuşta kendiliğinden değişir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: ikinci okuyan kişi “gözünden kaçan ayrıntıları fark eder”.",
+   "C": "Parçada karşılığı var: metin “bu birikimle başka bir ışıkta görünür”.",
+   "D": "Parçada karşılığı var: “aradan geçen yıllar okura yeni yaşantılar kazandırmıştır”.",
+   "E": "Parçada karşılığı var: iyi roman “rafa kaldırılan” değil, okurla yaşlanan bir yol arkadaşıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "“Ne var ki” sonrasında parça neyin değiştiğini söylüyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça değişenin kitap değil okur olduğunu söyler; “metin kendiliğinden değişir” yargısı bununla çelişir. Diğer dört şık parçada açıkça yer alır.",
+    "islem": "dayanak: Parça “kitabın değiştiği anlamına gelmez; değişen okurun kendisidir” der; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: yok ✓ · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Parçada izi olmayan ya da parçayı tersine çeviren şık, “ulaşılamaz” sorusunun yanıtıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçayla çelişen yargıyı belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gönüllülük, çoğu zaman karşılıksız emek olarak tanımlanır; oysa gönüllü çalışanlar karşılıklarını başka biçimlerde alır: yeni arkadaşlıklar, kazanılan beceriler, kendini işe yarar hissetmenin verdiği doyum. Hiçbir karşılık beklemediğini söyleyen gönüllü bile, çoğu zaman emeğinin bir işe yaradığını görmekten memnun olur. Bu durum gönüllülüğün değerini azaltmaz, tersine onu sürdürülebilir kılar. Yalnızca verenin yorulduğu bir ilişki uzun ömürlü olmaz; iki tarafın da bir şey kazandığı bir ilişki ise kendi kendini besler.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Gönüllüler maddi olmayan kazançlar elde edebilir.",
+   "B": "Karşılıklı kazanç, gönüllülüğün sürmesine katkı sağlar.",
+   "C": "Gönüllünün karşılık görmesi, gönüllülüğün değerini azaltır.",
+   "D": "Gönüllülük sırasında yeni beceriler edinilebilir.",
+   "E": "Gönüllülük, çoğu kez karşılıksız emek diye anlaşılır."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Gönüllünün karşılık görmesi, gönüllülüğün değerini azaltır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: arkadaşlık, beceri ve doyum sayılır.",
+   "B": "Parçada karşılığı var: karşılıklı ilişki “kendi kendini besler”, değeri “sürdürülebilir” kılar.",
+   "D": "Parçada karşılığı var: “kazanılan beceriler” karşılıklar arasında sayılır.",
+   "E": "Parçada karşılığı var: ilk cümle bunu bir tespit olarak verir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parça karşılık görmenin gönüllülüğe etkisi için ne diyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça, karşılık görmenin gönüllülüğü azaltmadığını, sürdürülebilir kıldığını söyler. “Değerini azaltır” şıkkı bu cümleyle çelişir.",
+    "islem": "dayanak: Parça karşılık görmenin gönüllülüğün değerini “azaltmadığını” söyler; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: yok ✓ · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "Konuya uygun görünmesi bir yargının parçadan çıkarılabildiği anlamına gelmez; dayanak cümlesini göstermeden şık seçme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Aşırı genellemeyi ve çelişen yargıyı ayırt eder.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Ezbere dayalı öğrenme kısa vadede iyi sonuç verir; sınavdan önce toplanan bilgi sınavdan sonra hızla silinir. Anlayarak öğrenilen konu ise başka konulara bağlanır ve zamanla kendi kendine genişler. Nitekim bir kez anlaşılan bir konu aylar sonra bile kısa bir hatırlatmayla yerine oturur. Bu, ezberin tümüyle gereksiz olduğu anlamına gelmez: çarpım tablosu ya da bir dildeki temel sözcükler ezberlenmeden ilerlemek zordur. Sorun, ezberin bir araç olmaktan çıkıp tek yöntem hâline gelmesindedir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ezberlenen bilgi çoğu zaman kalıcı olmaz.",
+   "B": "Anlayarak öğrenme, bilgilerin birbirine bağlanmasını sağlar.",
+   "C": "Kimi konularda ezber, öğrenmenin gerekli parçasıdır.",
+   "D": "Ezber, öğrenme sürecinden tümüyle çıkarılmalıdır.",
+   "E": "Ezber, tek yöntem olduğunda sorun yaratır."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Ezber, öğrenme sürecinden tümüyle çıkarılmalıdır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: bilgi sınavdan sonra “hızla silinir”.",
+   "B": "Parçada karşılığı var: anlayarak öğrenilen konu “başka konulara bağlanır”.",
+   "C": "Parçada karşılığı var: çarpım tablosu ve temel sözcükler örnek verilir.",
+   "E": "Parçada karşılığı var: son cümle sorunu “tek yöntem hâline gelmesinde” görür."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parça ezberin tümüyle gereksiz olduğunu söylüyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça ezberin sınırlarını çizer ama tümüyle gereksiz saymaz. “Tümüyle çıkarılmalıdır” yargısı parçayla çelişir.",
+    "islem": "dayanak: Parça ezberin “tümüyle gereksiz olduğu anlamına gelmediğini” söyler; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: yok ✓ · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Olumsuz köklerde önce dört “var” şıkkını parçada işaretle, geriye kalan şık doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada geçmeyen öneriyi belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir müzede en kalabalık yer, çoğu kez en ünlü eserin önüdür; oysa ziyaretçilerin eserin karşısında durduğu süre birkaç saniyeyi bulmaz. Çoğu insan eseri görmekten çok, onunla birlikte görüntülenmeyi önemser. Kimi ziyaretçi, yanındaki arkadaşıyla sohbet ederken eserin etiketini bile okumadan yoluna devam eder. Oysa bir esere uzun uzun bakmak, ilk bakışta fark edilmeyen ayrıntıları ortaya çıkarır. Bu yüzden bazı müzeler, kalabalığı dağıtan sessiz bakış köşeleri düzenlemektedir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ünlü eserlerin önü genellikle kalabalıktır.",
+   "B": "Çok sayıda ziyaretçi eserin karşısında kısa süre durur.",
+   "C": "Uzun bakış eserin gözden kaçan yönlerini ortaya çıkarır.",
+   "D": "Bazı müzeler izleyiciye yönelik sessiz alanlar kurar.",
+   "E": "Müzelerde fotoğraf çekmek yasaklanmalıdır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Müzelerde fotoğraf çekmek yasaklanmalıdır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: en kalabalık yer “en ünlü eserin önüdür”.",
+   "B": "Parçada karşılığı var: süre “birkaç saniyeyi bulmaz”.",
+   "C": "Parçada karşılığı var: üçüncü cümle bunu söyler.",
+   "D": "Parçada karşılığı var: son cümledeki “sessiz bakış köşeleri”."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parçada bir yasaktan ya da öneriden söz ediliyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça yasaklayıcı bir öneri getirmez, müzelerin sessiz köşeler kurduğunu aktarır. Fotoğraf yasağı parçada hiç geçmez.",
+    "islem": "dayanak: Parça müzelerdeki bir uygulamayı anlatır; fotoğraf yasağı önerisi parçada yoktur."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: var · E: yok ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Parçada izi olmayan ya da parçayı tersine çeviren şık, “ulaşılamaz” sorusunun yanıtıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada olmayan yargıyı belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Kentlerde yeşil alanlar çoğu zaman “boş arsa” gözüyle görülür ve imara açılacak ilk yerler olur. Bir sokağın ya da mahallenin yeşili, çoğu zaman yıllar içinde büyüyen ağaçlarla oluşur ve kesildiğinde kolay yerine konmaz. Oysa parklar yalnızca nefes alınan yerler değildir; yaz sıcağında çevresini birkaç derece serinletir, yağmur sularının toprağa karışmasını sağlar ve komşuların birbirini tanıdığı ortak bir buluşma noktası oluşturur. Bu yararlar sayılarla gösterilemediği için karar verilirken kolayca gözden çıkarılır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yeşil alanların bakımı kent bütçesine ağır yük getirir.",
+   "B": "Yeşil alanlar, kentin sıcaklığını düşürebilir.",
+   "C": "Yeşil alanların toplumsal bir işlevi de vardır.",
+   "D": "Yeşil alanlar imara açılacak ilk yerler sayılabilir.",
+   "E": "Yeşil alanların yararı rakamla gösterilemediği için ihmal edilir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yeşil alanların bakımı kent bütçesine ağır yük getirir."
+  },
+  "celdiriciler": {
+   "B": "Parçada karşılığı var: park çevresini “birkaç derece serinletir”.",
+   "C": "Parçada karşılığı var: parklar “ortak bir buluşma noktası” oluşturur.",
+   "D": "Parçada karşılığı var: ilk cümlede böyle denir.",
+   "E": "Parçada karşılığı var: son cümle bunu söyler."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parça yeşil alanların maliyetinden söz ediyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça yeşil alanların yararlarını sayar, bakım giderlerine hiç değinmez. Bu yüzden bakım yükü yargısına ulaşılamaz.",
+    "islem": "dayanak: Parçada yeşil alanların maliyetinden hiç söz edilmez; şık parçada yer almaz."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yok ✓ · B: var · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Konuya uygun görünmesi bir yargının parçadan çıkarılabildiği anlamına gelmez; dayanak cümlesini göstermeden şık seçme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada olmayan yargıyı belirler.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Çeviri, bir metni sözcük sözcük başka bir dile aktarmak değildir; çünkü her dilin kendine özgü bir ses düzeni, deyim dağarcığı ve düşünme alışkanlığı vardır. İyi bir çevirmen yalnızca iki dili değil, iki kültürü de bilir. Bir deyimi harfi harfine çevirmek, çoğu zaman anlamı ortadan kaldırır. Örneğin bir dilde yağmurun yağışını anlatan bir deyim, başka bir dilde bambaşka bir görüntüyle karşılanabilir. Bu yüzden çevirmen, yazarın söylediğini değil, söylemek istediğini okura ulaştırmaya çalışır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Her dilin kendine özgü bir deyim dağarcığı vardır.",
+   "B": "Çevirmen, metni okura uyarlamak için kısaltmak zorundadır.",
+   "C": "İyi çeviri için iki kültürü tanımak gerekir.",
+   "D": "Sözcüğü sözcüğüne çeviri anlam kaybına yol açabilir.",
+   "E": "Çevirmen, yazarın amaçladığı anlamı aktarmayı hedefler."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Çevirmen, metni okura uyarlamak için kısaltmak zorundadır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: ilk cümlede “deyim dağarcığı” geçer.",
+   "C": "Parçada karşılığı var: iyi çevirmen “iki kültürü de bilir”.",
+   "D": "Parçada karşılığı var: harfi harfine çeviri “anlamı ortadan kaldırır”.",
+   "E": "Parçada karşılığı var: çevirmen “söylemek istediğini” ulaştırmaya çalışır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parçada çevirmene yüklenen görevler neler?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça çevirmenin iki kültürü bilmesini ve yazarın amacını aktarmasını anlatır. Metni kısaltma zorunluluğu parçada geçmez.",
+    "islem": "dayanak: Parçada çevirmenin metni kısaltması gerektiğinden söz edilmez; şık parçada yer almaz."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: yok ✓ · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Olumsuz köklerde önce dört “var” şıkkını parçada işaretle, geriye kalan şık doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın reddettiği nedeni içeren şıkkı bulur.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Apartman yaşamında insanlar yan yana yaşadığı hâlde çoğu zaman birbirine yabancıdır. Asansörde yapılan kısa selamlaşma, tanışıklığın en ileri biçimi sayılır. Merdivende karşılaşıp başını eğerek geçen komşular bunun en bilinen örneğidir. Oysa bir su kesintisi, bir bayram ya da bir yönetim toplantısı bu mesafeyi bir anda kısaltabilir; ortak bir derdi olan insanlar birbirinin kapısını çalmakta zorlanmaz. Demek ki yabancılığı yaratan, duvarların inceliği değil, ortak bir konunun eksikliğidir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Apartmanda komşuluk ilişkileri çoğu zaman yüzeyseldir.",
+   "B": "Ortak sorunlar komşuları birbirine yaklaştırabilir.",
+   "C": "Komşular arasındaki yabancılığın nedeni binanın yapısıdır.",
+   "D": "Bayram gibi günler komşuluğu canlandırabilir.",
+   "E": "Yabancılığın asıl kaynağı ortak bir konunun eksikliğidir."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Komşular arasındaki yabancılığın nedeni binanın yapısıdır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: selamlaşma “tanışıklığın en ileri biçimi” sayılır.",
+   "B": "Parçada karşılığı var: ortak derdi olanlar “kapıyı çalmakta zorlanmaz”.",
+   "D": "Parçada karşılığı var: bayram mesafeyi kısaltan durumlar arasında sayılır.",
+   "E": "Parçada karşılığı var: son cümle bunu açıkça söyler."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Son cümlede yabancılığın nedeni olarak ne reddediliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça yabancılığın nedenini duvarlarda değil, ortak konu eksikliğinde bulur. Binanın yapısına bağlayan şık parçayla çelişir.",
+    "islem": "dayanak: Parça yabancılığın nedenini “duvarların inceliğinde değil” ortak konu eksikliğinde görür; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: yok ✓ · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "Parçada izi olmayan ya da parçayı tersine çeviren şık, “ulaşılamaz” sorusunun yanıtıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0009",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "Bağlaç sonrası gelen asıl yargıya dikkat ettirir.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bir eserin klasik sayılması için yalnızca eski olması yetmez; eski olup unutulan pek çok eser vardır. Klasik, her çağın okuru tarafından yeniden okunabilen ve her okumada yeni bir şey söyleyen eserdir. Bu yüzden klasikler, yazıldıkları dönemin ruhunu taşımalarına rağmen o dönemle sınırlı kalmaz. Bir tragedya, yazıldığı yüzyılın töresini yansıtır; ama bugünkü okur, o töreyi bilmese bile eserin acısını anlar. Ancak bu nitelik, eserin bir kez kazanıp sonsuza dek koruduğu bir ayrıcalık da değildir: Her kuşak, ona yeniden ilgi gösterdiği ölçüde onu klasik tutar. Bu bakımdan klasikliği bir ödül değil, sürekli yenilenen bir ilişki saymak gerekir. Başka bir deyişle klasikliği eserin kendisi kadar, onu okuyanlar da belirler.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Eskilik, bir eserin klasik sayılması için tek başına yetmez.",
+   "B": "Klasik eserler, yazıldığı dönemin özelliklerini taşıyabilir.",
+   "C": "Klasikliğin sürmesi, okurların eserle ilişkisine bağlıdır.",
+   "D": "Eser klasik olduktan sonra bu niteliği kalıcı biçimde korur.",
+   "E": "Klasik bir eser her okumada yeni bir şey söyler."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Eser klasik olduktan sonra bu niteliği kalıcı biçimde korur."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: ilk cümlede böyle denir.",
+   "B": "Parçada karşılığı var: klasikler “dönemin ruhunu taşır”.",
+   "C": "Parçada karşılığı var: her kuşak ilgi gösterdiği ölçüde eseri “klasik tutar”.",
+   "E": "Parçada karşılığı var: ikinci cümlede böyle tanımlanır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "“Ancak” bağlacından sonra parça klasikliği nasıl niteliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "“Ancak” sonrası parça klasikliğin kalıcı bir ayrıcalık olmadığını, kuşakların ilgisine bağlı olduğunu söyler. “Kalıcı biçimde korur” yargısı bununla çelişir.",
+    "islem": "dayanak: Parça klasikliğin “sonsuza dek korunan bir ayrıcalık” olmadığını söyler; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: yok ✓ · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Konuya uygun görünmesi bir yargının parçadan çıkarılabildiği anlamına gelmez; dayanak cümlesini göstermeden şık seçme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0010",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Ulaşılamaz",
+  "k": "tr|Paragraf",
+  "kazanim": "“değil” ile reddedilen yargıyı seçenekte yakalar.",
+  "tipId": "pab-ulasilamaz",
+  "tip": "Parçadan ulaşılamayan yargı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Çocukların açıkça soru sorma sıklığı, okul çağına geldiklerinde belirgin biçimde azalır. Bunun nedeni merakın körelmesi sanılır; oysa araştırmalar, çocukların sormaktan vazgeçmediğini, yalnızca sorularını artık yüksek sesle sormadıklarını gösterir. Bu düşüş, çoğu zaman okulla birlikte başlayan yeni bir kuralla ilişkilendirilir: söz almadan konuşulmaz ve her soru ders akışına uygun olmak zorundadır. Evde bütün gün “neden” diye soran çocuk, sınıfta parmak kaldırmadan önce arkadaşlarının ona nasıl bakacağını uzun uzun hesaplar. Sınıfta yanlış soru sormanın küçük düşürücü olabileceğini öğrenen çocuk, sorusunu kendine saklar. Dolayısıyla merak ölmez, yer değiştirir; öğretmenin işi de merakı yeniden yaratmak değil, ona güvenli bir ortam hazırlamaktır. Bu yüzden öğretmenler, sessiz bir sınıfı ilgili bir sınıf sanma yanılgısına düşebilir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Okul çağında çocukların açıkça soru sorması azalır.",
+   "B": "Soru sormaktan çekinme, çevreden gelen tepkiyle ilişkilidir.",
+   "C": "Çocuk, dile getirmediği sorulara ilişkin merakı sürdürebilir.",
+   "D": "Öğretmenin işi, soru sormayı güvenli kılacak ortamı hazırlamaktır.",
+   "E": "Öğretmen, çocuğun merakını yeniden uyandırmakla yükümlüdür."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Öğretmen, çocuğun merakını yeniden uyandırmakla yükümlüdür."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: ilk cümle sıklığın “belirgin biçimde azaldığını” söyler.",
+   "B": "Parçada karşılığı var: yanlış soru sormanın “küçük düşürücü” olabileceği öğrenilir.",
+   "C": "Parçada karşılığı var: çocuk sorusunu “kendine saklar”, merak yer değiştirir.",
+   "D": "Parçada karşılığı var: son cümlede böyle denir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılamayan yargı.",
+  "bilgi": [
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“ulaşılamaz” sorusunda dört şık parçadan çıkarılabilir, doğru şık çıkarılamayandır. Örnek: parça “su yaşam kaynağıdır” diyorsa “suyun yaşamla ilgisi yoktur” ulaşılamaz"
+   },
+   {
+    "ad": "Çıkarılamayan yargı",
+    "ifade": "parçada hiç geçmeyen ya da parçayla çelişen yargıya ulaşılamaz. Örnek: parça yalnızca kitaptan söz ediyorsa “gazeteler yararsızdır” parçadan çıkarılamaz"
+   }
+  ],
+  "ipuclari": [
+   "Parça öğretmenin işini ne olarak, neyin karşıtı olarak tanımlıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök olumsuz: parçadan çıkarılamayanı arıyoruz. Dört şık parçada dayanak bulacak.",
+    "islem": "aranan: dayanağı olmayan şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça merakın ölmediğini söylediği için öğretmenin görevini merakı yeniden yaratmak olarak görmez. Bu görevi ona yükleyen şık parçayla çelişir.",
+    "islem": "dayanak: Parça öğretmenin işinin merakı “yeniden yaratmak değil”, güvenli ortam hazırlamak olduğunu söyler; şık parçayla çelişir."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: var · E: yok ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Olumsuz köklerde önce dört “var” şıkkını parçada işaretle, geriye kalan şık doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-01 (Ulaşılamaz) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0011",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada işlenmeyen noktayı belirler.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Sokak müzisyenleri kentin en eski seslerinden biridir. Köprü başında çalan keman, meydandaki gitar, tramvay durağındaki akordeon; her biri yoldan geçenin gününe küçük bir ritim ekler. Müzisyen için de sokak bir sahnedir ve seyirci, davetsiz ama hiç beklemeden gelen bir kalabalıktır. Bazen tek bir şarkı, aceleyle yürüyen birini birkaç dakikalığına durdurur. Kimi akşamlar, kalabalığın arasından bir türkü yükselir ve bütün bir sokak onunla birlikte yavaşlar.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sokak müzisyenlerinin gelirine ilişkin bilgi verilmiştir.",
+   "B": "Sokak müzisyenlerinin çaldığı çalgılardan örnek verilmiştir.",
+   "C": "Sokağın müzisyen için bir sahne işlevi gördüğü söylenmiştir.",
+   "D": "Müziğin yoldan geçenleri etkileyebildiğine yer verilmiştir.",
+   "E": "Sokak müzisyenliğinin kentte eski bir geçmişi olduğu belirtilmiştir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Sokak müzisyenlerinin gelirine ilişkin bilgi verilmiştir."
+  },
+  "celdiriciler": {
+   "B": "Parçada karşılığı var: keman, gitar ve akordeon sayılır.",
+   "C": "Parçada karşılığı var: “sokak bir sahnedir”.",
+   "D": "Parçada karşılığı var: bir şarkı “aceleyle yürüyen birini durdurur”.",
+   "E": "Parçada karşılığı var: sokak müzisyenleri “kentin en eski seslerinden biridir”."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Hangi konu parçada hiç geçmiyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça çalgıları, sahneyi, dinleyiciyi ve geçmişi işler; gelir konusu hiç açılmaz. Diğer dört şık parçada yer alır.",
+    "islem": "dayanak: Parçada müzisyenlerin kazancından hiç söz edilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yok ✓ · B: var · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "“Değinilmemiştir” sorusunda parçaya ters olmak şart değil, parçada işlenmemiş olmak yeterlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0012",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada işlenmeyen noktayı belirler.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Bisiklet, kent trafiğinde hem hızlı hem sessiz bir ulaşım aracıdır. Kısa mesafelerde otomobilden daha çabuk varılabilir, park yeri aramak gerekmez ve havaya duman karışmaz. Üstelik bisiklet, trafik sıkışıklığında kendine yer bulabilen az sayıdaki araçtan biridir. Sabah işe giderken sıraya girmiş araçların yanından geçmek, birçok kullanıcı için küçük bir keyiftir. Ancak bisiklet kullanıcılarının güvenle yol alabilmesi için ayrılmış yollara gerek vardır; aksi hâlde bisiklet, çoğu insan için çekici bir seçenek olmaktan çıkar.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bisikletin kısa mesafede hız üstünlüğü sağladığı belirtilmiştir.",
+   "B": "Bisiklet kullanımının sağlığa yararlı olduğu vurgulanmıştır.",
+   "C": "Bisikletin havayı kirletmediği ifade edilmiştir.",
+   "D": "Bisiklet yollarının gerekliliği üzerinde durulmuştur.",
+   "E": "Bisikletle park sorunu yaşanmadığına değinilmiştir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Bisiklet kullanımının sağlığa yararlı olduğu vurgulanmıştır."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: kısa mesafelerde “otomobilden daha çabuk” varılır.",
+   "C": "Parçada karşılığı var: “havaya duman karışmaz”.",
+   "D": "Parçada karşılığı var: “ayrılmış yollara gerek vardır”.",
+   "E": "Parçada karşılığı var: “park yeri aramak gerekmez”."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Bisikletin hangi yararı parçada sayılmıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça hızı, temiz havayı, park kolaylığını ve yol gereksinimini işler. Sağlık konusu hiç geçmez.",
+    "islem": "dayanak: Parçada bisikletin sağlığa etkisinden söz edilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: yok ✓ · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Her şık için parçadaki dayanak cümleyi bul; dayanağı bulunamayan şık yanıttır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0013",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Konuya yakın ama işlenmemiş noktayı ayırır.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Şiirde ses, anlam kadar önemlidir. Kimi şair, sözcükleri anlamlarına göre değil çıkardıkları sese göre seçer; aynı ünlünün tekrarı bir hüzün, kısa ve sert ünsüzlerin ardı ardına gelişi bir gerginlik duygusu uyandırır. Bu tür şiirler çevrilmeye direnir, çünkü bir dilin sesi başka bir dile taşınamaz. Bu yüzden bazı şairler yazdıklarını bitirmeden önce defalarca yüksek sesle okuyup kulaklarına güvenir. Okur ise bu şiirleri sessizce okumaktansa yüksek sesle okuyarak daha iyi kavrar.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Şiirde sesin anlam kadar belirleyici olduğu savunulmuştur.",
+   "B": "Seslerin okurda duygu uyandırabileceğine örnek verilmiştir.",
+   "C": "Şairlerin kişisel duygularını öne çıkardığı söylenmiştir.",
+   "D": "Ses ağırlıklı şiirlerin çevrilmesinin güç olduğu belirtilmiştir.",
+   "E": "Yüksek sesle okumanın kavramayı kolaylaştırdığı söylenmiştir."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Şairlerin kişisel duygularını öne çıkardığı söylenmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: ilk cümle böyle der.",
+   "B": "Parçada karşılığı var: ünlü tekrarı hüzün, sert ünsüzler gerginlik uyandırır.",
+   "D": "Parçada karşılığı var: bu şiirler “çevrilmeye direnir”.",
+   "E": "Parçada karşılığı var: okur şiirleri yüksek sesle okuyarak “daha iyi kavrar”."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Şairin neye göre sözcük seçtiği parçada nasıl anlatılıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça şairin sözcüğü sesine göre seçtiğini söyler, kişisel duygularından söz etmez. Diğer dört şık parçada işlenir.",
+    "islem": "dayanak: Parçada şairin kendi duygularını anlatmasından söz edilmez; duygu yalnızca okurda uyanan etki olarak geçer."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: yok ✓ · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "“Değinilmemiştir” sorusunda parçaya ters olmak şart değil, parçada işlenmemiş olmak yeterlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0014",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada işlenmeyen noktayı belirler.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Geri dönüşüm alışkanlığı bireysel bir erdem gibi sunulsa da asıl belirleyici olan, kentin altyapısıdır. Mahallesinde ayrı toplama kutuları bulunan kişi, atıklarını ayırmayı kısa sürede alışkanlık hâline getirir; kutuyu on dakika uzakta bulan kişi ise en iyi niyetle bile vazgeçer. Alışkanlık, çoğu zaman bir kez kurulduktan sonra kendini sürdürür. Bu nedenle çevre bilinci aşılamaya çalışmak kadar, doğru davranışı kolaylaştıracak düzenlemeler yapmak da gereklidir.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Davranışların oluşmasında altyapının etkili olduğu belirtilmiştir.",
+   "B": "Toplama kutusunun uzaklığıyla ilgili bir vazgeçme örneği verilmiştir.",
+   "C": "Çevre bilinci aşılamanın tek başına yetmeyebileceği anlatılmıştır.",
+   "D": "Geri dönüşümün ekonomiye katkısından söz edilmiştir.",
+   "E": "Geri dönüşümün bireysel bir erdem gibi sunulduğuna değinilmiştir."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Geri dönüşümün ekonomiye katkısından söz edilmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: asıl belirleyici “kentin altyapısıdır”.",
+   "B": "Parçada karşılığı var: kutuyu “on dakika uzakta bulan kişi” vazgeçer.",
+   "C": "Parçada karşılığı var: düzenleme yapmak da “gereklidir”.",
+   "E": "Parçada karşılığı var: ilk cümle böyle der."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Parçada geri dönüşümün hangi yönü hiç işlenmiyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça altyapıyı, kutu uzaklığını, bilinç ve düzenlemeyi ve erdem anlayışını işler. Ekonomik katkı parçada geçmez.",
+    "islem": "dayanak: Parçada geri dönüşümün ekonomik sonuçlarına hiç değinilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: yok ✓ · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Her şık için parçadaki dayanak cümleyi bul; dayanağı bulunamayan şık yanıttır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0015",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada işlenmeyen noktayı belirler.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Çoğu öğrenci, hoca ne söylediyse not defterine geçirmenin en güvenli yol olduğuna inanır. Derste not tutan öğrenci, dinlediği her şeyi yazmaya çalıştığında genellikle anlamayı kaçırır; elinin hızına yetişmek için kulağı gevşer. Daha iyi bir yol, öğretmenin söylediklerini kendi cümleleriyle kısaltarak yazmaktır. Böylece öğrenci hem anlamak hem de seçmek zorunda kalır. Not tutma, bu yüzden bir yazı yarışı değil, düşünerek yapılan bir ayıklama işidir. Ders sonrasında bu notlara bir kez daha göz atmak, bilginin kalıcı olmasını da kolaylaştırır.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Her şeyi yazmaya çalışmanın dinlemeyi zayıflattığı söylenmiştir.",
+   "B": "Notların kendi cümleleriyle kısaltılarak yazılması önerilmiştir.",
+   "C": "Not alırken ayıklama yapmak gerektiğine dikkat çekilmiştir.",
+   "D": "Notlara ders sonrasında dönmenin yararı belirtilmiştir.",
+   "E": "Not tutmanın derse katılımı artırdığı ifade edilmiştir."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Not tutmanın derse katılımı artırdığı ifade edilmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: öğrencinin “kulağı gevşer”.",
+   "B": "Parçada karşılığı var: ikinci cümle bunu önerir.",
+   "C": "Parçada karşılığı var: öğrenci “hem anlamak hem de seçmek zorunda kalır”.",
+   "D": "Parçada karşılığı var: son cümle bilginin kalıcılığına değinir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Parçada not tutmanın hangi sonucu hiç anılmıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça dinlemeyi, kısaltmayı, seçmeyi ve tekrarı işler. Derse katılım konusu geçmez.",
+    "islem": "dayanak: Parçada not tutmanın derse katılıma etkisinden söz edilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: var · E: yok ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "“Değinilmemiştir” sorusunda parçaya ters olmak şart değil, parçada işlenmemiş olmak yeterlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0016",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçada işlenmeyen noktayı belirler.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Eski kent dokularındaki dar sokaklar, ilk bakışta modern ulaşımın düşmanı gibi görünür. Oysa bu sokaklar araçları yavaşlatır, yürümeyi ve sohbet etmeyi özendirir; çocuklar sokakta oynayabilir. Böyle bir sokakta komşular pencereden seslenerek bile selamlaşabilir. Genişletilen her yol ise bir süre sonra daha fazla araç çeker ve yaya, kendi mahallesinde konuk gibi kalır. Kimi kent planlamacıları, genişliği bir kazanç saymanın aldatıcı olduğunu söyler. Kimi kentler bu yüzden en dar sokaklarını koruma altına almaktadır.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Dar sokakların araç hızını düşürdüğü ifade edilmiştir.",
+   "B": "Dar sokakların çocuklara oyun alanı olabildiği belirtilmiştir.",
+   "C": "Dar sokakların acil durumlarda sorun yarattığı söylenmiştir.",
+   "D": "Yolların genişletilmesinin araç sayısını artırabileceği söylenmiştir.",
+   "E": "Dar sokaklara ilk bakışta olumsuz yaklaşıldığına değinilmiştir."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Dar sokakların acil durumlarda sorun yarattığı söylenmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: sokaklar “araçları yavaşlatır”.",
+   "B": "Parçada karşılığı var: “çocuklar sokakta oynayabilir”.",
+   "D": "Parçada karşılığı var: genişletilen yol “daha fazla araç çeker”.",
+   "E": "Parçada karşılığı var: ilk cümle sokakların “düşman gibi göründüğünü” söyler."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Dar sokaklarla ilgili hangi sakınca parçada yok?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça dar sokakların yararlarını sayar ve sakıncalarından yalnızca ilk bakıştaki izlenim olarak söz eder. Acil durum konusu hiç geçmez.",
+    "islem": "dayanak: Parçada dar sokakların acil durumlardaki sakıncalarına hiç değinilmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: yok ✓ · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "Her şık için parçadaki dayanak cümleyi bul; dayanağı bulunamayan şık yanıttır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0017",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Tehdit algısı ile somut bir sonucu karıştırmamayı sağlar.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Fotoğrafın icadı başlangıçta resmin sonu olarak görülmüştü; gerçeği olduğu gibi kaydedebilen bir makine varken ressamın elinin ne anlamı kalırdı? Beklenen olmadı. Nitekim ilk fotoğrafçılar bile çoğu zaman ressamların bıraktığı kompozisyon kurallarıyla çalışıyordu. Ressamlar, kameranın yapabildiğini yapmaktan vazgeçtiler ve kameranın yapamadığına, yani görünenin ardındaki duyguya yöneldiler. Müzelerde asılan tabloların önünde insanlar, bir resmin ne kadar uzun sürede yapıldığını değil, ne söylediğini sormaya başladı. Öte yandan fotoğrafın kendisi de zamanla bir sanat dalı olarak kabul gördü; çünkü hangi anın, hangi açıdan, hangi ışıkta tutulacağına karar veren kişi, makineden çok bir göz ve bir tercihti. Böylece iki sanat birbirinin yerine geçmedi, birbirini yeniden tanımladı.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Fotoğrafın icadının resim için bir tehdit sayıldığı belirtilmiştir.",
+   "B": "Ressamların kameranın yapamadığı alana yöneldiği anlatılmıştır.",
+   "C": "Fotoğraf çekerken yapılan tercihlerin sanatsal değer taşıdığına işaret edilmiştir.",
+   "D": "Fotoğraftan sonra resim satışlarının düştüğüne yer verilmiştir.",
+   "E": "Fotoğraf ile resmin birbirini yeniden tanımladığı söylenmiştir."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Fotoğraftan sonra resim satışlarının düştüğüne yer verilmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: icat “resmin sonu olarak görülmüştü”.",
+   "B": "Parçada karşılığı var: ressamlar “görünenin ardındaki duyguya yöneldi”.",
+   "C": "Parçada karşılığı var: anı, açıyı ve ışığı seçen kişinin “bir göz ve bir tercih” olduğu söylenir.",
+   "E": "Parçada karşılığı var: son cümle bunu söyler."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Parçada resmin uğradığı olumsuz sonuç neyle anlatılıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça resmin tehdit sanıldığını ama beklenenin olmadığını anlatır; satışların düşmesi konusu geçmez. Diğer dört şık parçadaki cümlelerle eşleşir.",
+    "islem": "dayanak: Parçada resim satışlarından ya da piyasadan hiç söz edilmez; tehdit algısı yalnızca bir beklenti olarak geçer."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: var · C: var · D: yok ✓ · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "“Değinilmemiştir” sorusunda parçaya ters olmak şart değil, parçada işlenmemiş olmak yeterlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0018",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Değinilmemiştir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın kapsamını aşan noktayı ayırır.",
+  "tipId": "pab-degenilmemis",
+  "tip": "Parçada değinilmeyen nokta",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Övgü, doğru verildiğinde güçlü bir motivasyon aracıdır; ancak yanlış verildiğinde tersine çalışır. Çocuğa “Çok zekisin” demek, başarıyı doğuştan gelen bir niteliğe bağlar ve çocuk, zor bir işle karşılaştığında bu imajı kaybetme korkusuyla denemekten kaçınabilir. Nitekim kendisine hep başarılı olduğu söylenen çocuk, ilk kez zorlandığında bunu bir yetersizlik belirtisi sayabilir. “Çok çalıştın, bu iş sana yaradı” demek ise çabayı öne çıkarır ve çocuğu yeniden denemeye iter. Çabası görülen çocuk ise zorluğu geçici ve aşılabilir bir durum olarak karşılar. Yani övgünün etkisi, övülenin kim olduğuna değil, neyin övüldüğüne bağlıdır. Bu ayrım, övgüyü azaltmayı değil, daha özenli seçmeyi gerektirir. Çünkü çocuk, kendisine söylenen sözden kendine dair bir hüküm çıkarır.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Övgünün hem yararlı hem zararlı olabildiği ifade edilmiştir.",
+   "B": "Övgünün yetişkinler üzerinde de etkili olduğuna değinilmiştir.",
+   "C": "Başarıyı doğuştan bir niteliğe bağlamanın riskine işaret edilmiştir.",
+   "D": "Çabanın övülmesinin yeniden denemeyi desteklediği vurgulanmıştır.",
+   "E": "Övgünün etkisinin neyin övüldüğüne göre değiştiği belirtilmiştir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Övgünün yetişkinler üzerinde de etkili olduğuna değinilmiştir."
+  },
+  "celdiriciler": {
+   "A": "Parçada karşılığı var: övgü doğru verilirse motivasyon, yanlış verilirse tersine işler.",
+   "C": "Parçada karşılığı var: çocuk “imajı kaybetme korkusuyla” denemekten kaçınabilir.",
+   "D": "Parçada karşılığı var: çabayı öne çıkarmak “yeniden denemeye iter”.",
+   "E": "Parçada karşılığı var: dördüncü cümle bunu söyler."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Parçada işlenmeyen nokta.",
+  "bilgi": [
+   {
+    "ad": "Değinme",
+    "ifade": "bir yargıya değinilmiş sayılması için parçada açıkça ya da kesin biçimde işlenmesi gerekir. Örnek: parça yalnızca bir kentin sokaklarını anlatıyorsa kentin nüfusuna değinilmemiştir"
+   },
+   {
+    "ad": "Olumsuz soru kökü",
+    "ifade": "“değinilmemiştir” sorusunda dört şık parçada yer alır; doğru şık parçada hiç işlenmeyen şıktır"
+   }
+  ],
+  "ipuclari": [
+   "Parçadaki örnekler kimi hedef alıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök “değinilmemiştir” diyor: parçada işlenmeyen noktayı arıyoruz. Dört şık parçada yer alacak.",
+    "islem": "aranan: parçada işlenmeyen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça övgünün etkisini çocuk örneği üzerinden anlatır; yetişkinlere hiç geçmez. Diğer dört şık parçada yer alır.",
+    "islem": "dayanak: Parça yalnızca çocuğa yönelik övgüyü işler; yetişkinlerden söz etmez."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: var · B: yok ✓ · C: var · D: var · E: var"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı kökün aradığı şıktır; diğerlerinin parçada dayanağı vardır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Her şık için parçadaki dayanak cümleyi bul; dayanağı bulunamayan şık yanıttır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-02 (Değinilmemiştir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0019",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Öncüllerin her birini ayrı sınar.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "Yaşlıların teknolojiyi öğrenemediği düşüncesi yaygındır; oysa onları teknolojiden uzak tutan şey çoğu zaman yeteneksizlik değil, acele eden öğreticilerdir. Bir telefonun ayarını ilk kez gösteren torununun hızına yetişemeyen yaşlı kişi, kendini beceriksiz sanır ve denemeyi bırakır. Oysa kendi hızında ilerlemesine izin verilen yaşlılar, uygulamaları çoğu zaman şaşırtıcı bir çabuklukla öğrenir. Sabırla, adım adım gösterildiğinde aynı kişi, bir mesajı birkaç gün içinde rahatça gönderir.\nI. Yaşlıların teknolojiden uzak kalmasında öğretim biçimi etkili olabilir.\nII. Yaşlılar teknolojiyi öğrenmek için hiçbir yardıma gereksinim duymaz.\nIII. Sabırlı bir öğretim, yaşlının teknolojiyi kullanmasını kolaylaştırır.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III. yargıya ulaşılabilir (adım adım gösterilince mesaj rahatça gönderilir), şıkta eksik kalmış.",
+   "B": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); I. yargıya ulaşılabilir (öğreticilerin acelesi engel olarak gösterilir), şıkta eksik kalmış; III. yargıya ulaşılabilir (adım adım gösterilince mesaj rahatça gönderilir), şıkta eksik kalmış.",
+   "D": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); I. yargıya ulaşılabilir (öğreticilerin acelesi engel olarak gösterilir), şıkta eksik kalmış.",
+   "E": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Her öncülü parçadaki cümleyle karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça yaşlıların teknolojiden kopmasını öğretim biçimine bağlar; I ve III bu çerçevede çıkarılır. II parçadaki sabırlı gösterim vurgusuyla çelişir.",
+    "islem": "dayanak: I var; II yok; III var"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: öğreticilerin acelesi engel olarak gösterilir. II. yargı: parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz. III. yargı: adım adım gösterilince mesaj rahatça gönderilir.",
+    "islem": "I: ulaşılabilir · II: ulaşılamaz · III: ulaşılabilir"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “I ve III” olduğundan yanıt C şıkkıdır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0020",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Abartılan ve olmayan yargıyı ayıklar.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bir çalgıyı öğrenmek, parmaklara olduğu kadar kulağa da ders verir. Çalgı çalan çocuk, sesler arasındaki küçük farkları ayırt etmeyi öğrenir; bu beceri başka alanlara da sızar ve örneğin yabancı dildeki ses ayrımlarını kavramayı kolaylaştırır. Piyano başında geçen ilk aylarda en çok yorulan şey, çoğu zaman parmaklar değil kulaktır. Ne var ki bu kazanç düzenli çalışmayı gerektirir; haftada bir kez elini çalgıya süren çocuğun kulağı fazla gelişmez.\nI. Çalgı çalmak, çocukların bütün derslerdeki başarısını artırır.\nII. Çalgı eğitimiyle gelişen kulak becerisi, müzik dışı alanlarda da işe yarayabilir.\nIII. Çalgı çalmaya başlamak için en uygun dönem çocukluktur.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "B": "III. yargıya ulaşılamaz (parçada uygun yaş dönemine ilişkin bir yargı yoktur); II. yargıya ulaşılabilir (beceri “başka alanlara da sızar”), şıkta eksik kalmış.",
+   "C": "I. yargıya ulaşılamaz (parça yalnızca ses ayrımı becerisinden ve bir örnek olarak yabancı dilden söz eder).",
+   "D": "I. yargıya ulaşılamaz (parça yalnızca ses ayrımı becerisinden ve bir örnek olarak yabancı dilden söz eder); III. yargıya ulaşılamaz (parçada uygun yaş dönemine ilişkin bir yargı yoktur); II. yargıya ulaşılabilir (beceri “başka alanlara da sızar”), şıkta eksik kalmış.",
+   "E": "III. yargıya ulaşılamaz (parçada uygun yaş dönemine ilişkin bir yargı yoktur)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Öncülleri parçada geçen ifadelerle eşle; abartıyı ayıkla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça kulak gelişiminin başka alanlara yansıyabildiğini söyler; yalnızca II çıkarılır. I abartıdır, III parçada geçmez.",
+    "islem": "dayanak: I yok; II var; III yok"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: parça yalnızca ses ayrımı becerisinden ve bir örnek olarak yabancı dilden söz eder. II. yargı: beceri “başka alanlara da sızar”. III. yargı: parçada uygun yaş dönemine ilişkin bir yargı yoktur.",
+    "islem": "I: ulaşılamaz · II: ulaşılabilir · III: ulaşılamaz"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “Yalnız II” olduğundan yanıt A şıkkıdır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Öncülleri tek tek sına: parçada olmayan ya da abartılan öncül “ulaşılamaz”dır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0021",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Yaygın olmak ile etkisiz olmak arasındaki farkı ayırt eder.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Tarihî binaları müzeye çevirmek, onları korumanın en yaygın yolu sayılır. Oysa kapısı yalnızca ziyaret saatlerinde açılan bir bina, zamanla kentin gündelik yaşamından kopar. Aynı yapı bir kütüphane, bir kafe ya da bir atölye olarak kullanıldığında ise insanlar ona sürekli uğrar ve onun bakımına da gönüllü sahip çıkar. Elbette her yapı yeni bir işleve uygun değildir; taşıyıcı sistemi bozulacak bir binada bu denenmemelidir.\nI. Müzeye dönüştürme, bir yapının kentle bağını zayıflatabilir.\nII. Tarihî yapıya yeni işlev seçilirken yapının durumu gözetilmelidir.\nIII. Müzeye çevirme, tarihî yapıyı korumanın en etkisiz yoludur.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış.",
+   "B": "I. yargıya ulaşılabilir (ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar), şıkta eksik kalmış.",
+   "C": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); I. yargıya ulaşılabilir (ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar), şıkta eksik kalmış; II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış.",
+   "E": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Her yargının parçada hangi cümleye dayandığını ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça müze dönüşümünün kentle bağı zayıflatabildiğini ve yapının durumuna bakılması gerektiğini söyler; I ve II çıkarılır. “En etkisiz yol” parçada yoktur.",
+    "islem": "dayanak: I var; II var; III yok"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar. II. yargı: taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir. III. yargı: parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez.",
+    "islem": "I: ulaşılabilir · II: ulaşılabilir · III: ulaşılamaz"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “I ve II” olduğundan yanıt D şıkkıdır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0022",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçaya ters yargıyı ayıklar.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Mektup yazmak, düşünceyi yavaşlatan bir iştir. Yazan kişi, cümleyi gönderdikten sonra geri alamayacağını bilir ve sözünü tartarak seçer. Kâğıda dökülen bir öfke, bir gece beklese çoğu zaman yumuşar. Anlık mesajlaşmada ise düşünce, ağızdan çıktığı hızla ekrana düşer; bu hız samimiyet kazandırır ama özen kaybettirir. Bu iki yazışma biçimi birbirinin yerini almaz, farklı ihtiyaçlara hizmet eder; hızlı bir haber için mesaj, uzun bir hesaplaşma için mektup uygundur.\nI. Mektup, anlık mesajlaşmanın yerini almıştır.\nII. Anlık mesajlaşmanın hızı, yazışmaya samimiyet katabilir.\nIII. Uzun bir hesaplaşma için mektup uygun görülebilir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "I. yargıya ulaşılamaz (parça iki biçimin birbirinin yerini almadığını söyler); II. yargıya ulaşılabilir (“bu hız samimiyet kazandırır”), şıkta eksik kalmış; III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış.",
+   "B": "III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış.",
+   "C": "II. yargıya ulaşılabilir (“bu hız samimiyet kazandırır”), şıkta eksik kalmış.",
+   "D": "I. yargıya ulaşılamaz (parça iki biçimin birbirinin yerini almadığını söyler); III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Parçada her iki yazışma biçimine verilen değeri ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça mesajın hızına samimiyet, mektubun uzun hesaplaşmalara uygunluk payı verir; II ve III çıkarılır. I parçaya terstir.",
+    "islem": "dayanak: I yok; II var; III var"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: parça iki biçimin birbirinin yerini almadığını söyler. II. yargı: “bu hız samimiyet kazandırır”. III. yargı: son cümlede uzun hesaplaşma için mektup önerilir.",
+    "islem": "I: ulaşılamaz · II: ulaşılabilir · III: ulaşılabilir"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “II ve III” olduğundan yanıt E şıkkıdır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Öncülleri tek tek sına: parçada olmayan ya da abartılan öncül “ulaşılamaz”dır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0023",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Aynı düşüncenin başka sözcüklerle ifadesini tanır.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir hikâyeyi anlatan kişi, hikâyenin yalnızca aktarıcısı değildir; neyi anlatacağına, neyi atlayacağına ve hangi sırayla söyleyeceğine o karar verir. Bu yetki, anlatıcıya görünmez bir güç verir: Bir kişiyi sevimli ya da sevimsiz kılmak, çoğu zaman yalnızca onu hangi sahnede gösterdiğine bağlıdır. Aynı olay, iki farklı anlatıcının ağzından iki ayrı hikâye olur. Tarih kitaplarında bile aynı savaşı iki farklı ülkenin farklı anlatması, bu durumun sık anılan bir örneğidir. Bu yüzden okur, anlatılanı gerçeğin kendisi sanmamalı, anlatıcının seçtiği bir gerçek olarak okumalıdır. Okurun işi, bu seçimlerin ardındaki sesi duymaktır. Ne var ki bu durum, hikâyenin değerini azaltmaz: Anlatıcının seçimleri, hikâyeyi yaşatan asıl dokudur.\nI. Anlatıcı, olayların hangi sırayla verileceğini belirleyebilir.\nII. Aynı olay, farklı anlatıcıların elinde farklı hikâyelere dönüşebilir.\nIII. Anlatıcının seçimleri, bir hikâyenin değerini belirleyen önemli bir öğedir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I, II ve III"
+  },
+  "celdiriciler": {
+   "A": "II. yargıya ulaşılabilir (aynı olay “iki ayrı hikâye olur”), şıkta eksik kalmış; III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış.",
+   "B": "I. yargıya ulaşılabilir (sırayı “o karar verir”), şıkta eksik kalmış; III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış.",
+   "C": "I. yargıya ulaşılabilir (sırayı “o karar verir”), şıkta eksik kalmış; II. yargıya ulaşılabilir (aynı olay “iki ayrı hikâye olur”), şıkta eksik kalmış.",
+   "D": "III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Her yargı parçada başka sözcüklerle söylenmiş olabilir; dayanak ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Üç yargı da parçadaki cümlelerin başka sözcüklerle ifadesidir: seçim yetkisi, aynı olayın farklı hikâyeleri ve seçimlerin hikâyedeki önemi.",
+    "islem": "dayanak: I var; II var; III var"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: sırayı “o karar verir”. II. yargı: aynı olay “iki ayrı hikâye olur”. III. yargı: seçimler hikâyeyi yaşatan “asıl doku” sayılır.",
+    "islem": "I: ulaşılabilir · II: ulaşılabilir · III: ulaşılabilir"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “I, II ve III” olduğundan yanıt E şıkkıdır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0024",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Abartıyı ve parçada olmayan öneriyi ayıklar.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Sınav kaygısı çoğu zaman olumsuz bir duygu olarak görülür; oysa belli bir düzeyin altındaki kaygı kişiyi hazırlıksız bırakır. Kaygının dozu bir kez ayarlandığında, sınav günü heyecanı bile işe yarar hâle gelir; titreyen eller soruyu okumaya engel olmaz. Hiç heyecan duymayan öğrenci çalışmayı gereksiz bulabilir. Sorun, kaygının varlığı değil, kişinin çalışmasını engelleyecek kadar büyümesidir. Bu noktada işe yarayan şey kaygıyı yok etmeye çalışmak değil, ona bir yön vermektir: Kaygıyı konu listesine, günlük çalışma planına dönüştüren öğrenci onu bir yakıt olarak kullanır. Öğretmenlerin ve ailelerin “Sakın heyecanlanma” demesi çoğu zaman kaygıyı azaltmaz, çünkü öğrenci bu kez kaygılı olduğu için de kaygılanır. Kısacası kaygı, doğru kanala akıtıldığında düşman değil müttefiktir.\nI. Kaygının hiç bulunmaması, hazırlıksızlığa yol açabilir.\nII. Sınav kaygısını gidermenin en etkili yolu sınavdan önce dinlenmektir.\nIII. Aşırı kaygı yaşayan öğrenci çalışma planı yapamaz.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "II. yargıya ulaşılamaz (parça kaygıyı gidermeyi değil yönlendirmeyi önerir; dinlenmeden söz etmez); I. yargıya ulaşılabilir (hiç heyecan duymayan öğrenci çalışmayı gereksiz bulabilir), şıkta eksik kalmış.",
+   "C": "III. yargıya ulaşılamaz (parça aşırı kaygının çalışmayı engelleyebileceğini söyler; plan yapılamayacağını söylemez); I. yargıya ulaşılabilir (hiç heyecan duymayan öğrenci çalışmayı gereksiz bulabilir), şıkta eksik kalmış.",
+   "D": "II. yargıya ulaşılamaz (parça kaygıyı gidermeyi değil yönlendirmeyi önerir; dinlenmeden söz etmez).",
+   "E": "III. yargıya ulaşılamaz (parça aşırı kaygının çalışmayı engelleyebileceğini söyler; plan yapılamayacağını söylemez)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Parçanın kaygıya yönelik yaklaşımını belirle, sonra öncülleri sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça hiç kaygı duymamanın da sorun olduğunu söyler; yalnız I çıkarılır. II parçada yoktur, III parçadaki “engelleyebilir” ifadesini abartır.",
+    "islem": "dayanak: I var; II yok; III yok"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: hiç heyecan duymayan öğrenci çalışmayı gereksiz bulabilir. II. yargı: parça kaygıyı gidermeyi değil yönlendirmeyi önerir; dinlenmeden söz etmez. III. yargı: parça aşırı kaygının çalışmayı engelleyebileceğini söyler; plan yapılamayacağını söylemez.",
+    "islem": "I: ulaşılabilir · II: ulaşılamaz · III: ulaşılamaz"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “Yalnız I” olduğundan yanıt A şıkkıdır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Öncülleri tek tek sına: parçada olmayan ya da abartılan öncül “ulaşılamaz”dır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0025",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçaya ters ve parçada olmayan yargıyı ayıklar.",
+  "tipId": "pab-oncullu",
+  "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Kent bahçeleri, boş kalmış arsaların sebze yetiştirilen küçük tarlalara dönüştürülmesiyle ortaya çıkar. Bu bahçelerde çoğu zaman bir kişinin parseli, öteki kişinin sulama saatini belirler; alet çantası ortak, su borusu ortak, takvim ortaktır. İlk bakışta bu uygulamanın amacı gıda üretimi sanılır; ancak bahçelerde yetişen sebzenin kente sağladığı katkı sınırlıdır. Hasat edilen sebze market fiyatından çok daha pahalıya mal olsa da kimse bundan yakınmaz. Asıl işlev, birbirini tanımayan insanların aynı toprağı paylaşırken kurduğu ilişkidir. Bahçe yönetiminde ortaya çıkan küçük anlaşmazlıklar bile komşuluğun öğrenildiği bir ortam sağlar. Kış gelip bahçe boşaldığında bile komşular birbirinin ismini bilir ve sokakta selamlaşır. Bahçeye ilk kez gelen biri, tohum ekmeyi komşusundan öğrenir.\nI. Kent bahçeleri, kentin gıda gereksinimini büyük ölçüde karşılar.\nII. Kent bahçeleri yalnızca kentte yaşayan emeklilere yöneliktir.\nIII. Kent bahçeleri, insanlar arasındaki ilişkileri güçlendirebilir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız III"
+  },
+  "celdiriciler": {
+   "A": "I. yargıya ulaşılamaz (parça sebzenin kente katkısını “sınırlı” bulur); III. yargıya ulaşılabilir (asıl işlev tanımayan insanların kurduğu ilişkidir), şıkta eksik kalmış.",
+   "C": "I. yargıya ulaşılamaz (parça sebzenin kente katkısını “sınırlı” bulur); II. yargıya ulaşılamaz (parçada bahçeleri kullananların yaşına ilişkin bir yargı yoktur); III. yargıya ulaşılabilir (asıl işlev tanımayan insanların kurduğu ilişkidir), şıkta eksik kalmış.",
+   "D": "I. yargıya ulaşılamaz (parça sebzenin kente katkısını “sınırlı” bulur).",
+   "E": "II. yargıya ulaşılamaz (parçada bahçeleri kullananların yaşına ilişkin bir yargı yoktur)."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
+  "bilgi": [
+   {
+    "ad": "Ulaşılabilir yargı",
+    "ifade": "parçadan makul bir çıkarımla varılabilen yargıdır; parçada olmayan, abartılan ya da parçaya ters yargıya ulaşılamaz. Örnek: parça “spor yararlıdır” diyorsa “her spor herkese yararlıdır” abartıdır"
+   },
+   {
+    "ad": "Öncüllü soru",
+    "ifade": "her öncül ayrı sınanır, sonra doğru öncüllerin birleşimi şıklarda aranır. Örnek: I ve III doğruysa yanıt “I ve III”tür"
+   }
+  ],
+  "ipuclari": [
+   "Parçanın “asıl işlev” dediği şeyi bul, öncülleri onunla karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öncülleri ayrı ayrı oku",
+    "aciklama": "Her yargı bağımsız bir iddiadır; birini doğru bulmak ötekileri doğru yapmaz. Hepsini parçayla sınayacağız.",
+    "islem": "sınanacak: üç yargı"
+   },
+   {
+    "baslik": "Dayanak ara",
+    "aciklama": "Parça bahçelerin asıl işlevini insan ilişkilerinde görür; yalnız III çıkarılır. I parçaya terstir, II parçada geçmez.",
+    "islem": "dayanak: I yok; II yok; III var"
+   },
+   {
+    "baslik": "Karar ver",
+    "aciklama": "I. yargı: parça sebzenin kente katkısını “sınırlı” bulur. II. yargı: parçada bahçeleri kullananların yaşına ilişkin bir yargı yoktur. III. yargı: asıl işlev tanımayan insanların kurduğu ilişkidir.",
+    "islem": "I: ulaşılamaz · II: ulaşılamaz · III: ulaşılabilir"
+   },
+   {
+    "baslik": "Şıkta birleşimi bul",
+    "aciklama": "Doğru öncüllerin birleşimi “Yalnız III” olduğundan yanıt B şıkkıdır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-03 (Öncüllü Ulaşılabilir Yargılar) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0026",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Söylenebilir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın doğrudan söylediğini seçer.",
+  "tipId": "pab-soylenebilir",
+  "tip": "Parçadan söylenebilecek yargı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Kütüphaneler yalnızca kitap ödünç alınan yerler değildir. Sessiz çalışma masaları, çocuk okuma saatleri, yaşlılar için düzenlenen söyleşiler ve internet erişimi sayesinde her yaştan insan için bir buluşma noktası hâline gelmiştir. Birçok kütüphane artık akşam saatlerine kadar açık kalmakta ve ücretsiz kurslara da ev sahipliği yapmaktadır. Sabahın erken saatlerinde bile okuma salonunda yer bulmak güçtür. Bu çeşitlilik, kütüphanelerin dijital çağda bile ziyaretçi kaybetmemesine yardım eder.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kütüphaneler dijital çağda önemini tümüyle yitirmiştir.",
+   "B": "Kitap ödünç vermek, kütüphanelerin tek işlevidir.",
+   "C": "Kütüphanelere en çok ilgiyi çocuklar göstermektedir.",
+   "D": "Yaşlıların kütüphane etkinliklerine katılımı azalmaktadır.",
+   "E": "Kütüphaneler farklı yaş gruplarına yönelik hizmetler sunar."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Kütüphaneler farklı yaş gruplarına yönelik hizmetler sunar."
+  },
+  "celdiriciler": {
+   "A": "Parça kütüphanelerin dijital çağda bile ziyaretçi kaybetmemesine yardım edildiğini söyler; şık parçaya terstir.",
+   "B": "Parça ilk cümlede kütüphanelerin yalnızca ödünç kitap yeri olmadığını söyler; şık parçaya terstir.",
+   "C": "Parçada hangi yaş grubunun daha çok geldiğine dair karşılaştırma yoktur.",
+   "D": "Parçada katılımın azaldığına ilişkin bir bilgi yoktur; yaşlılar için söyleşi düzenlendiği söylenir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Söylenebilir yargı",
+    "ifade": "parçadan doğrudan çıkarılabilen yargıdır; parçaya ters, parçada olmayan ya da parçayı abartan yargı söylenemez. Örnek: parça “bazı kuşlar göç eder” diyorsa “bütün kuşlar göç eder” söylenemez"
+   }
+  ],
+  "ipuclari": [
+   "Parçadaki sayılan hizmetlere bak: hangi yaş gruplarına yöneliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök, parçadan çıkarılabilen yargıyı soruyor. Doğru şık parçanın söylediğinin dışına çıkmaz.",
+    "islem": "aranan: parçayla örtüşen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça çocuklara, yaşlılara ve her yaştan insana yönelik hizmetleri sayar. Yanlış şıklar parçaya terstir ya da parçada olmayan karşılaştırmalar getirir.",
+    "islem": "dayanak: Parça çocuk saatlerini, yaşlı söyleşilerini ve her yaştan insanın buluşma noktası olmasını anlatır."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: yanlış · E: doğru ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı parçayla örtüşen tek şıktır; diğerleri parçaya terstir ya da parçada yoktur.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "“Söylenebilir” sorusunda parçanın söylediğinin dışına çıkan şıkkı ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-04 (Söylenebilir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0027",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Söylenebilir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın doğrudan söylediğini seçer.",
+  "tipId": "pab-soylenebilir",
+  "tip": "Parçadan söylenebilecek yargı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Çocuklar aynı masalı defalarca dinlemek ister ve anlatıcı bir yerde sapıtsa hemen uyarır. Gece uyumadan önce istenen masal çoğu zaman bir gün öncekiyle aynıdır. Yetişkinler bunu sıkıcı bulabilir; oysa çocuk için tekrar bir sıkıntı değil güvencedir. Ne olacağını bilmek, korkutucu bölümleri bile katlanılır kılar ve çocuğun dünyayı öngörebildiği bir yer olarak görmesine yardım eder. Ebeveynler kimi zaman sıkılır, ama çocuk bu tekrar sayesinde rahatlayıp uykuya dalar.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çocuğa tanıdık olan, güven duygusu verir.",
+   "B": "Çocuklar yeni masallara karşı ilgisizdir.",
+   "C": "Korkutucu bölümler masallardan çıkarılmalıdır.",
+   "D": "Çocuklar yetişkinlerden daha iyi masal anlatır.",
+   "E": "Tekrarlanan masallar çocuğun hayal gücünü zayıflatır."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Çocuğa tanıdık olan, güven duygusu verir."
+  },
+  "celdiriciler": {
+   "B": "Parça çocukların tanıdık masalı sevdiğini söyler; yeni masallara ilgisiz olduklarını söylemez.",
+   "C": "Parça korkutucu bölümlerin tanıdık olunca katlanılır hâle geldiğini söyler; çıkarılmasını önermez.",
+   "D": "Parçada çocukların masal anlatma becerisine ilişkin bir yargı yoktur.",
+   "E": "Parça tekrarı sıkıntı değil güvence sayar; hayal gücüne etkisinden söz etmez."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Söylenebilir yargı",
+    "ifade": "parçadan doğrudan çıkarılabilen yargıdır; parçaya ters, parçada olmayan ya da parçayı abartan yargı söylenemez. Örnek: parça “bazı kuşlar göç eder” diyorsa “bütün kuşlar göç eder” söylenemez"
+   }
+  ],
+  "ipuclari": [
+   "Parça çocuk için tekrarı ne olarak niteliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök, parçadan çıkarılabilen yargıyı soruyor. Doğru şık parçanın söylediğinin dışına çıkmaz.",
+    "islem": "aranan: parçayla örtüşen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça tekrarı güvence olarak niteler; doğru şık bunu genelleyerek söyler. Diğer şıklar parçada olmayan ya da parçaya ters yargılardır.",
+    "islem": "dayanak: Parça tekrarın çocuk için “güvence” olduğunu, ne olacağını bilmenin korkuyu katlanılır kıldığını söyler."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: doğru ✓ · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı parçayla örtüşen tek şıktır; diğerleri parçaya terstir ya da parçada yoktur.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Abartı sözcükleri (hiç, her, yalnızca) taşıyan şıklar çoğunlukla parçadan taşar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-04 (Söylenebilir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0028",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Söylenebilir",
+  "k": "tr|Paragraf",
+  "kazanim": "Abartılan ve ters yargıyı ayırır.",
+  "tipId": "pab-soylenebilir",
+  "tip": "Parçadan söylenebilecek yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Büyük kentlerde gece gökyüzüne bakan biri, çoğu zaman birkaç yıldızdan fazlasını göremez. Bunun nedeni hava kirliliğinden çok, kentin aydınlatma düzenidir: yukarı doğru saçılan ışık, gökyüzünü soluk bir parlaklıkla örter. Yıldız görememek insanlar için yalnızca bir estetik kayıp değildir; geceleri yön bulmak için gökyüzüne bakan göçmen kuşların da yolunu şaşırmasına yol açar. Armatürlerin ışığı aşağı yönlendirecek biçimde tasarlanması, sorunu büyük ölçüde hafifletir.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kentlerde yıldızların az görünmesinin asıl nedeni hava kirliliğidir.",
+   "B": "Göçmen kuşlar yön bulmak için yalnızca yıldızlara başvurur.",
+   "C": "Armatür tasarımı değişse bile sorun azalmaz.",
+   "D": "Kent ışığı, insanların yanı sıra kuşları da olumsuz etkiler.",
+   "E": "Yıldız görememek yalnızca estetik bir sorun sayılmalıdır."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Kent ışığı, insanların yanı sıra kuşları da olumsuz etkiler."
+  },
+  "celdiriciler": {
+   "A": "Parça nedenin “hava kirliliğinden çok aydınlatma düzeni” olduğunu söyler; şık parçaya terstir.",
+   "B": "Parça kuşların gökyüzüne baktığını söyler; “yalnızca yıldız” abartısı parçada yoktur.",
+   "C": "Parça tasarımın sorunu “büyük ölçüde hafiflettiğini” söyler; şık parçaya terstir.",
+   "E": "Parça tam tersini söyler: sorun yalnızca estetik değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Söylenebilir yargı",
+    "ifade": "parçadan doğrudan çıkarılabilen yargıdır; parçaya ters, parçada olmayan ya da parçayı abartan yargı söylenemez. Örnek: parça “bazı kuşlar göç eder” diyorsa “bütün kuşlar göç eder” söylenemez"
+   }
+  ],
+  "ipuclari": [
+   "Parçada yıldız görememenin sonuçları neler?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök, parçadan çıkarılabilen yargıyı soruyor. Doğru şık parçanın söylediğinin dışına çıkmaz.",
+    "islem": "aranan: parçayla örtüşen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça yıldız görememenin kuşları da etkilediğini söyler; doğru şık bunu ifade eder. Diğerleri parçaya ters ya da parçayı abartan yargılardır.",
+    "islem": "dayanak: Parça yıldız görememenin “yalnızca estetik kayıp” olmadığını, göçmen kuşların yolunu şaşırttığını söyler."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru ✓ · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı parçayla örtüşen tek şıktır; diğerleri parçaya terstir ya da parçada yoktur.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "“Söylenebilir” sorusunda parçanın söylediğinin dışına çıkan şıkkı ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-04 (Söylenebilir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0029",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Söylenebilir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın doğrudan söylediğini seçer.",
+  "tipId": "pab-soylenebilir",
+  "tip": "Parçadan söylenebilecek yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Usta–çırak ilişkisinde bilgi, kitaptan değil el hareketinden öğrenilir. Çırak, ustasının bir işi nasıl yaptığını izler, yanlış yaptığında düzeltilir ve yıllar içinde ustanın bakışını da edinir. Fırının ya da tamirhanenin kapısından giren çırak, ilk günlerde çoğu zaman yalnızca süpürür ve izler. Bu öğrenme biçimi bir ders programına sığmaz, çünkü neyin ne zaman öğretileceği önceden belirlenmemiştir. Bunun bedeli yavaşlıktır; karşılığında ise okulda kolay aktarılamayan bir “iş sezgisi” kazanılır.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Usta–çırak yöntemi okul eğitiminden daha verimlidir.",
+   "B": "Okulda aktarılması güç bir sezgi, bu yöntemle kazanılır.",
+   "C": "Çırak ustasının yöntemini sorgulamadan benimsemek zorundadır.",
+   "D": "Usta–çırak ilişkisinde öğrenme süresi kısadır.",
+   "E": "Bu yöntemde öğretilecekler önceden bir programla belirlenir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Okulda aktarılması güç bir sezgi, bu yöntemle kazanılır."
+  },
+  "celdiriciler": {
+   "A": "Parça iki yöntemi verimlilik bakımından karşılaştırmaz; yalnızca usta–çırak yönteminin bedelinin yavaşlık olduğunu söyler.",
+   "C": "Parçada çırağın sorgulama hakkına ilişkin bir yargı yoktur.",
+   "D": "Parça bu yöntemin bedelinin “yavaşlık” olduğunu söyler; şık parçaya terstir.",
+   "E": "Parça neyin ne zaman öğretileceğinin önceden belirlenmediğini söyler; şık parçaya terstir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Söylenebilir yargı",
+    "ifade": "parçadan doğrudan çıkarılabilen yargıdır; parçaya ters, parçada olmayan ya da parçayı abartan yargı söylenemez. Örnek: parça “bazı kuşlar göç eder” diyorsa “bütün kuşlar göç eder” söylenemez"
+   }
+  ],
+  "ipuclari": [
+   "Parçada usta–çırak yönteminin bedeli ve kazancı nedir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök, parçadan çıkarılabilen yargıyı soruyor. Doğru şık parçanın söylediğinin dışına çıkmaz.",
+    "islem": "aranan: parçayla örtüşen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça bedeli yavaşlık, kazancı okulda aktarılamayan iş sezgisi olarak gösterir. Yanlış şıklar parçaya terstir ya da parçada olmayan karşılaştırmalar getirir.",
+    "islem": "dayanak: Parça son cümlede “okulda kolay aktarılamayan bir iş sezgisi” kazanıldığını söyler."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yanlış · B: doğru ✓ · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı parçayla örtüşen tek şıktır; diğerleri parçaya terstir ya da parçada yoktur.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Abartı sözcükleri (hiç, her, yalnızca) taşıyan şıklar çoğunlukla parçadan taşar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-04 (Söylenebilir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ },
+ {
+  "id": "tyttr-pyarb-0030",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Söylenebilir",
+  "k": "tr|Paragraf",
+  "kazanim": "Parçanın doğrudan söylediğini seçer.",
+  "tipId": "pab-soylenebilir",
+  "tip": "Parçadan söylenebilecek yargı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Tiyatroyu sinemadan ayıran şey, oyuncu ile seyircinin aynı odada, aynı anda soluk almasıdır. Sinemada film önceden çekilmiştir ve her gösterimde aynıdır; tiyatroda ise oyuncunun yorgunluğu, salonun sessizliği ya da bir öksürük bile o akşamın oyununu değiştirebilir. Bu nedenle aynı oyun iki akşam arka arkaya izlense de iki ayrı deneyim olur. Kimi oyuncular, perde açılmadan önce kulise sızan seyirci uğultusundan o akşamın nasıl geçeceğini sezdiğini söyler.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sinema, seyirciyle kurduğu bağ bakımından tiyatrodan daha zayıftır.",
+   "B": "Tiyatroda oyuncunun hataları seyirci tarafından bağışlanmaz.",
+   "C": "Aynı tiyatro oyunu farklı akşamlarda birebir aynı olmayabilir.",
+   "D": "Seyircinin tepkisi oyunun metnini değiştirir.",
+   "E": "Tiyatro, sinemadan daha eski bir sanat dalıdır."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Aynı tiyatro oyunu farklı akşamlarda birebir aynı olmayabilir."
+  },
+  "celdiriciler": {
+   "A": "Parça iki sanatı farklı gösterir ama birini bağ bakımından üstün ya da zayıf saymaz.",
+   "B": "Parçada seyircinin oyuncu hatalarına tepkisine ilişkin bir yargı yoktur.",
+   "D": "Parça oyunun akışının o akşama göre değişebileceğini söyler; metnin değiştiğini söylemez.",
+   "E": "Parçada iki sanatın tarihine ilişkin bir yargı yoktur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Parçadan çıkarılabilen yargı.",
+  "bilgi": [
+   {
+    "ad": "Söylenebilir yargı",
+    "ifade": "parçadan doğrudan çıkarılabilen yargıdır; parçaya ters, parçada olmayan ya da parçayı abartan yargı söylenemez. Örnek: parça “bazı kuşlar göç eder” diyorsa “bütün kuşlar göç eder” söylenemez"
+   }
+  ],
+  "ipuclari": [
+   "Parça iki akşam izlenen aynı oyun için ne diyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü doğru oku",
+    "aciklama": "Kök, parçadan çıkarılabilen yargıyı soruyor. Doğru şık parçanın söylediğinin dışına çıkmaz.",
+    "islem": "aranan: parçayla örtüşen şık"
+   },
+   {
+    "baslik": "Dayanağı parçada bul",
+    "aciklama": "Parça aynı oyunun iki akşamda iki ayrı deneyim olduğunu söyler; bu, oyunun birebir aynı olmayabileceği anlamına gelir. Diğer şıklar parçada olmayan karşılaştırmalar ya da abartılardır.",
+    "islem": "dayanak: Parça aynı oyunun iki akşamda “iki ayrı deneyim” olduğunu söyler."
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı parçadaki cümleyle karşılaştır; dayanağı olan ya da olmayanı ayır.",
+    "islem": "A: yanlış · B: yanlış · C: doğru ✓ · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı parçayla örtüşen tek şıktır; diğerleri parçaya terstir ya da parçada yoktur.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "“Söylenebilir” sorusunda parçanın söylediğinin dışına çıkan şıkkı ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PAB-04 (Söylenebilir) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": false
+  }
+ }
+]

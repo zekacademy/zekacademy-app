@@ -1,0 +1,303 @@
+[
+ {
+  "id": "tytcog-nem-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Nem, Yağış ve Buharlaşma · Yağış türleri",
+  "k": "cog|Nem, Yağış ve Buharlaşma",
+  "kazanim": "Yağışları oluşum biçimine göre ayırt eder.",
+  "tipId": "cg-nem-tur",
+  "tip": "Yağış türleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Güneş ışınlarıyla ısınan nemli havanın yükselip soğuması ve yoğunlaşması sonucu oluşan yağış türü aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yamaç (orografik) yağışı",
+   "B": "Cephe (frontal) yağışı",
+   "C": "Konveksiyonel yağış",
+   "D": "Dolu",
+   "E": "Çiy"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Konveksiyonel yağış"
+  },
+  "celdiriciler": {
+   "A": "Yamaç yağışında havayı yükselten etken dağ yamacıdır; burada yükselmenin nedeni ısınmadır.",
+   "B": "Cephe yağışında sıcak hava, soğuk havanın üzerine çıkarak yükselir; ısınma nedeni değildir.",
+   "D": "Dolu bir yağış şeklidir (buz taneleri); yağışın oluşum türü değildir.",
+   "E": "Çiy yağış sayılmaz; soğuyan yüzeyde havadaki buharın yoğunlaşmasıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Isınmayla yükselen havanın oluşturduğu yağış türü.",
+  "bilgi": [
+   {
+    "ad": "Yağış türleri (oluşuma göre)",
+    "ifade": "konveksiyonel: ısınan hava yükselir · yamaç: hava dağ yamacında yükselir · cephe: sıcak hava soğuk havanın üzerine çıkar"
+   }
+  ],
+  "ipuclari": [
+   "Havayı yükselten şey dağ mı, soğuk hava mı, yoksa yüzeyin ısınması mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yükselme nedenini bul",
+    "aciklama": "Soruda havanın Güneş’le ısınıp yükseldiği söyleniyor.",
+    "islem": "neden: ısınma"
+   },
+   {
+    "baslik": "Yağış türlerini eşle",
+    "aciklama": "Dağ yamacı yamaç yağışını, hava kütlelerinin karşılaşması cephe yağışını doğurur. Dolu ve çiy oluşum türü değildir.",
+    "islem": "yamaç: dağ · cephe: hava kütleleri"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "Isınmayla yükselen havanın yağışı konveksiyonel yağıştır.",
+    "islem": "konveksiyonel"
+   }
+  ],
+  "puf": "Yağış türünü, havayı yükselten etkene bakarak adlandır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NEM-01 (Yağış türleri) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nem-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Nem, Yağış ve Buharlaşma · Nem ve yoğunlaşma hesabı",
+  "k": "cog|Nem, Yağış ve Buharlaşma",
+  "kazanim": "Soğuyan havada kapasiteyi aşan su buharı miktarını hesaplar.",
+  "tipId": "cg-nem-hesap",
+  "tip": "Yoğunlaşma miktarı hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "1 m³ hava 25 °C’de en fazla 24 g, 15 °C’de en fazla 12 g su buharı taşıyabilmektedir.\n25 °C’de 1 m³’ünde 20 g su buharı bulunan bir hava kütlesi 15 °C’ye soğuduğunda, 1 m³ havadan kaç g su buharı yoğunlaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "8",
+   "C": "12",
+   "D": "20",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "25 °C’deki boşluğu (24 − 20) yoğunlaşan miktar sanmış.",
+   "C": "İki sıcaklıktaki kapasite farkını (24 − 12) bulmuş; oysa havada başlangıçta 24 g değil 20 g buhar vardı.",
+   "D": "Havadaki bütün buharın yoğunlaştığını sanmış; 15 °C’de hava 12 g taşıyabilir.",
+   "E": "25 °C’deki kapasiteyi yoğunlaşan miktar saymış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yoğunlaşan su buharı miktarı (g).",
+  "bilgi": [
+   {
+    "ad": "Kapasite ve yoğunlaşma",
+    "ifade": "sıcaklık düştükçe havanın taşıyabileceği en fazla buhar miktarı azalır · havada taşınamayan fazla buhar yoğunlaşır (ör. 15 g içeren hava, kapasite 10 g olunca 5 g yoğunlaştırır)"
+   }
+  ],
+  "ipuclari": [
+   "Soğuyan havanın taşıyabileceği en fazla buhar miktarını yeni sıcaklıkta bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yeni kapasiteyi oku",
+    "aciklama": "15 °C’de hava en fazla 12 g buhar taşıyabilir.",
+    "islem": "15 °C kapasitesi: 12 g"
+   },
+   {
+    "baslik": "Fazlayı bul",
+    "aciklama": "Havadaki buhar 20 g idi; 12 g’ı taşınabilir, geri kalan taşınamaz.",
+    "islem": "20 − 12 = 8 g"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Taşınamayan 8 g su buharı yoğunlaşarak sıvı suya dönüşür.",
+    "islem": "8 g yoğunlaşır"
+   }
+  ],
+  "puf": "Yoğunlaşan miktar = havadaki buhar − yeni sıcaklıktaki kapasite.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NEM-02 (Nem ve yoğunlaşma hesabı) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nem-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Nem, Yağış ve Buharlaşma · Buharlaşmayı etkileyen etkenler",
+  "k": "cog|Nem, Yağış ve Buharlaşma",
+  "kazanim": "Buharlaşma miktarını artıran etkenleri ayırt eder.",
+  "tipId": "cg-nem-buharlasma",
+  "tip": "Buharlaşmayı etkileyen etkenler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bir gölün buharlaşma miktarını belirleyen etkenler incelenmektedir.\nI. Havanın sıcaklığının yüksek olması\nII. Su yüzeyinin geniş olması\nIII. Havanın bağıl neminin yüksek olması\nYukarıdakilerden hangileri buharlaşma miktarını artırır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "I ve III",
+   "C": "I ve II",
+   "D": "Yalnız III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "I. ifade de koşulu sağlar ama seçenekte yok: Sıcaklık arttıkça su molekülleri hızlanır ve buharlaşma artar.",
+   "B": "III. ifade koşulu sağlamaz: Hava buharla dolu ise daha az buhar alabilir; buharlaşma azalır. II. ifade de koşulu sağlar ama seçenekte yok: Havayla temas eden yüzey genişledikçe buharlaşan su artar.",
+   "D": "III. ifade koşulu sağlamaz: Hava buharla dolu ise daha az buhar alabilir; buharlaşma azalır. I. ifade de koşulu sağlar ama seçenekte yok: Sıcaklık arttıkça su molekülleri hızlanır ve buharlaşma artar. II. ifade de koşulu sağlar ama seçenekte yok: Havayla temas eden yüzey genişledikçe buharlaşan su artar.",
+   "E": "III. ifade koşulu sağlamaz: Hava buharla dolu ise daha az buhar alabilir; buharlaşma azalır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Buharlaşmayı artıran etkenler.",
+  "bilgi": [
+   {
+    "ad": "Buharlaşma",
+    "ifade": "suyun buhara dönüşmesidir · artıran etkenler: sıcaklık, rüzgâr, geniş su yüzeyi, havanın kuru olması (düşük bağıl nem)"
+   }
+  ],
+  "ipuclari": [
+   "Hava ne kadar nemliyse daha fazla buhar alabilir mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Etkenleri hatırla",
+    "aciklama": "Sıcaklık, rüzgâr ve yüzey genişliği buharlaşmayı artırır. Havadaki nem arttıkça buharlaşma azalır.",
+    "islem": "artıran: sıcaklık, yüzey · azaltan: yüksek nem"
+   },
+   {
+    "baslik": "İfadeleri sına",
+    "aciklama": "I ve II artırır. III’te nem yüksek olduğundan buharlaşma artmaz.",
+    "islem": "I: evet · II: evet · III: hayır"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Artıran etkenler I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Buharlaşma için hava “kuru ve sıcak”, yüzey “geniş” ise artar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NEM-03 (Buharlaşmayı etkileyen etkenler) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nem-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Nem, Yağış ve Buharlaşma · Yamaç yağışı ve yağmur gölgesi",
+  "k": "cog|Nem, Yağış ve Buharlaşma",
+  "kazanim": "Dağın rüzgârüstü ve rüzgâraltı yamacında nem ve yağış durumunu yorumlar.",
+  "tipId": "cg-nem-yamac",
+  "tip": "Yamaç yağışı ve rüzgâraltı (şekil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Şekilde, denizden esen nemli havanın geçtiği bir dağ ve K, L, M, N noktaları gösterilmiştir.\nI. Nemli hava K’den L’ye doğru yükselirken soğur ve yoğunlaşarak yağış bırakır.\nII. N noktasına inen hava soğuyarak bağıl nemini artırır.\nIII. N noktasında yıllık yağış miktarının L noktasından az olması beklenir.\nBu ifadelerden hangileri yanlıştır?",
+  "sekil": "<svg viewBox=\"0 0 350 205\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M10 172 Q40 164 70 172 L10 172 Z\" stroke-width=\"0\" style=\"fill:currentColor;fill-opacity:.12\"/><path d=\"M10 172 Q25 166 40 172 T70 172\" stroke-width=\"1.6\" fill=\"none\"/><text x=\"38.0\" y=\"196.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Deniz</text><path d=\"M70 172 L205 50 L335 172 Z\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.12\"/><path d=\"M12 120 L58 120\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M50 114 L60 120 L50 126\" stroke-width=\"2.4\" fill=\"none\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"36.0\" y=\"108.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none\">Nemli hava</text><circle cx=\"84\" cy=\"172\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"92.0\" y=\"188.0\" text-anchor=\"start\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><circle cx=\"140\" cy=\"111\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"148.0\" y=\"105.0\" text-anchor=\"start\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><circle cx=\"205\" cy=\"50\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"213.0\" y=\"44.0\" text-anchor=\"start\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><circle cx=\"295\" cy=\"139\" r=\"4.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"303.0\" y=\"133.0\" text-anchor=\"start\" font-size=\"14\" style=\"fill:currentColor;stroke:none;font-weight:700\">N</text></svg>",
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız I",
+   "C": "Yalnız III",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "B": "I. ifade koşulu sağlamaz: Yükselen hava soğur, buharın bir kısmı yoğunlaşıp yamaç yağışı olarak düşer. II. ifade de koşulu sağlar ama seçenekte yok: Alçalan hava sıkışarak ısınır; bağıl nemi azalır.",
+   "C": "III. ifade koşulu sağlamaz: Rüzgâraltı yamaçta hava kurumuştur; yağış azdır (yağmur gölgesi). II. ifade de koşulu sağlar ama seçenekte yok: Alçalan hava sıkışarak ısınır; bağıl nemi azalır.",
+   "D": "I. ifade koşulu sağlamaz: Yükselen hava soğur, buharın bir kısmı yoğunlaşıp yamaç yağışı olarak düşer. III. ifade koşulu sağlamaz: Rüzgâraltı yamaçta hava kurumuştur; yağış azdır (yağmur gölgesi). II. ifade de koşulu sağlar ama seçenekte yok: Alçalan hava sıkışarak ısınır; bağıl nemi azalır.",
+   "E": "III. ifade koşulu sağlamaz: Rüzgâraltı yamaçta hava kurumuştur; yağış azdır (yağmur gölgesi)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Yanlış olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Rüzgârüstü ve rüzgâraltı",
+    "ifade": "rüzgârüstü yamaç: hava yükselir, soğur, yoğunlaşır → bol yağış · rüzgâraltı yamaç: hava alçalır, ısınır, bağıl nemi azalır → yağış az (yağmur gölgesi)"
+   }
+  ],
+  "ipuclari": [
+   "Hava alçalırken sıkışır mı, genleşir mi? Sıcaklığı ve bağıl nemi bu yönde düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Rüzgârüstünü yorumla",
+    "aciklama": "K’den L’ye hava yükselir, soğur ve yoğunlaşır. I doğrudur.",
+    "islem": "K → L: yükselir, soğur → yağış"
+   },
+   {
+    "baslik": "Rüzgâraltını yorumla",
+    "aciklama": "Zirveden sonra hava alçalır, sıkışıp ısınır. Isınan havanın bağıl nemi azalır.",
+    "islem": "N: alçalır → ısınır → bağıl nem azalır"
+   },
+   {
+    "baslik": "İfadeleri değerlendir",
+    "aciklama": "II’de “soğuyarak” denmiş; bu yanlıştır. III’te yağmur gölgesi doğru anlatılmıştır.",
+    "islem": "I: doğru · II: yanlış · III: doğru"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Soru yanlış olanı soruyor; yalnız II yanlıştır.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Alçalan hava ısınır ve kurur; yükselen hava soğur ve yağış bırakır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NEM-04 (Yamaç yağışı ve yağmur gölgesi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

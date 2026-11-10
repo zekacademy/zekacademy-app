@@ -1,0 +1,92 @@
+{
+ "konu": "Harita Bilgisi",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-CGHR-01",
+   "alt": "Ölçek ve uzunluk",
+   "fikir": "Haritadaki uzaklık × ölçek paydası = gerçek uzaklık; santimetre kilometreye çevrilir.",
+   "tuzak": "Sıfırları yanlış atmak; ölçek paydasını yanlış okumak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-harita-olcek",
+   "tip": "Ölçekten gerçek uzaklık hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (harita okuryazarlığı) · MEB 9. sınıf",
+   "konu": "Harita Bilgisi"
+  },
+  {
+   "id": "K-CGHR-02",
+   "alt": "Harita projeksiyonları",
+   "fikir": "Silindir, konik ve düzlem projeksiyonların uygun kullanım alanları ve bozulma yönü.",
+   "tuzak": "Konik ile düzlem projeksiyonun uygun kullanım alanlarını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-harita-proj",
+   "tip": "Projeksiyon türleri ve bozulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (harita okuryazarlığı) · MEB 9. sınıf",
+   "konu": "Harita Bilgisi"
+  },
+  {
+   "id": "K-CGHR-03",
+   "alt": "Eş yükselti ve eğim",
+   "fikir": "Eğim (%) = yükselti farkı × 100 ÷ yatay uzaklık; yatay uzaklık ölçekle bulunur.",
+   "tuzak": "Yükselti farkını yanlış okumak; metre ve santimetreyi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "cg-harita-egim",
+   "tip": "Eş yükselti eğrisinden eğim hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (harita okuryazarlığı) · MEB 9. sınıf",
+   "konu": "Harita Bilgisi"
+  },
+  {
+   "id": "K-CGHR-04",
+   "alt": "Ölçek ve alan",
+   "fikir": "Alan, uzunluğun karesiyle değiştiğinden alan oranı ölçek oranının karesidir.",
+   "tuzak": "Alan oranını uzunluk oranıyla aynı sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "cg-harita-alan",
+   "tip": "Ölçek değişince alanın değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (harita okuryazarlığı) · MEB 9. sınıf",
+   "konu": "Harita Bilgisi"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-harita-olcek",
+   "ad": "Ölçekten gerçek uzaklık hesabı",
+   "kartlar": [
+    "K-CGHR-01"
+   ],
+   "uygulamaKonu": "cog|Harita Bilgisi"
+  },
+  {
+   "tipId": "cg-harita-proj",
+   "ad": "Projeksiyon türleri ve bozulma",
+   "kartlar": [
+    "K-CGHR-02"
+   ],
+   "uygulamaKonu": "cog|Harita Bilgisi"
+  },
+  {
+   "tipId": "cg-harita-egim",
+   "ad": "Eş yükselti eğrisinden eğim hesabı",
+   "kartlar": [
+    "K-CGHR-03"
+   ],
+   "uygulamaKonu": "cog|Harita Bilgisi"
+  },
+  {
+   "tipId": "cg-harita-alan",
+   "ad": "Ölçek değişince alanın değişimi",
+   "kartlar": [
+    "K-CGHR-04"
+   ],
+   "uygulamaKonu": "cog|Harita Bilgisi"
+  }
+ ]
+}

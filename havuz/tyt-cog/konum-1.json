@@ -1,0 +1,302 @@
+[
+ {
+  "id": "tytcog-konum-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Coğrafi Konum · Matematik ve özel konum",
+  "k": "cog|Coğrafi Konum",
+  "kazanim": "Matematik konum ile özel konumun sonuçlarını ayırt eder.",
+  "tipId": "cg-konum-ozel",
+  "tip": "Matematik ve özel konum ayrımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisi Türkiye’nin özel konumunun bir sonucudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Dört mevsimin belirgin yaşanması",
+   "B": "Güneş ışınlarının yıl boyunca Türkiye’ye dik açıyla gelmemesi",
+   "C": "Doğu ile batı uçları arasında yerel saat farkı bulunması",
+   "D": "Asya ile Avrupa arasındaki kara ve deniz yollarının kavşağında yer alması",
+   "E": "Ekvator’a yakın ülkelere göre yıllık sıcaklık ortalamasının daha düşük olması"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Asya ile Avrupa arasındaki kara ve deniz yollarının kavşağında yer alması"
+  },
+  "celdiriciler": {
+   "A": "Mevsimler enleme bağlıdır; bu, matematik konumun sonucudur.",
+   "B": "Işınların geliş açısı enleme bağlıdır; matematik konum sonucudur.",
+   "C": "Yerel saat farkı boylamdan doğar; matematik konum sonucudur.",
+   "E": "Sıcaklık enlemle değişir; matematik konum sonucudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Özel konumun sonucu olan durum.",
+  "bilgi": [
+   {
+    "ad": "Matematik ve özel konum",
+    "ifade": "Matematik konum: enlem ve boylamla belirlenen yer (mevsimler, sıcaklık, yerel saat). Özel konum: çevredeki deniz, kara, yarımada, boğaz ve geçit gibi özellikler (jeopolitik, ulaşım, ticaret). İki paralel arası 1° = 111 km"
+   }
+  ],
+  "ipuclari": [
+   "Önce her şıkkın enleme ve boylama mı, yoksa çevredeki kara, deniz ve yollara mı dayandığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ayrımı hatırla",
+    "aciklama": "Enlem ve boylamdan doğan durumlar matematik konumun sonucudur. Çevredeki kıtalar, denizler ve yollar özel konumu belirler.",
+    "islem": "matematik: enlem–boylam · özel: çevre ve yollar"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "Mevsimler, ışınların geliş açısı, sıcaklık ve yerel saat farkı enlem ve boylamla ilgilidir.",
+    "islem": "mevsim, ışın açısı, sıcaklık, saat: matematik konum"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Asya ile Avrupa arasındaki yolların kavşağında olmak çevreye bağlı bir özelliktir.",
+    "islem": "Yolların kavşağı: özel konum"
+   }
+  ],
+  "puf": "Enlem ve boylamdan doğan sonuçlar matematik, çevreden doğan sonuçlar özel konuma aittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGKN-01 (Matematik ve özel konum) · yeni şık kümesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-konum-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Coğrafi Konum · Türkiye’nin matematik konumu",
+  "k": "cog|Coğrafi Konum",
+  "kazanim": "Uç noktaların enlem ve boylamından uzaklık ve yerel saat farkını yorumlar.",
+  "tipId": "cg-konum-turkiye",
+  "tip": "Türkiye’nin matematik konumu yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Türkiye, 36° ile 42° kuzey paralelleri ve 26° ile 45° doğu meridyenleri arasında yer alır. (1° enlem = 111 km; Yengeç Dönencesi 23° 27′ kuzeydedir.)\nBuna göre\nI. Doğu ve batı uçları arasındaki yerel saat farkı 19 dakikadır.\nII. Güney ve kuzey uç paralelleri arasındaki uzaklık 666 km’dir.\nIII. Yılın bazı günlerinde Güneş ışınları öğle vakti Türkiye’nin güneyine dik açıyla gelir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "Boylam farkını (19°) doğrudan dakika sanmak; 1° = 4 dakikadır.",
+   "C": "I’deki 19° farkını dakikaya çevirmeyi atlamak.",
+   "D": "Türkiye’nin Yengeç Dönencesi’nin çok kuzeyinde olduğunu unutmak.",
+   "E": "Işınların dönencelerin dışına dik gelmeyeceğini bilmemek."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Yerel saat",
+    "ifade": "Dünya 24 saatte 360° döner: 1 saat = 15°, 1° = 4 dakika. Doğuda saat ileridir. Örnek: 15° doğuya gidince saat 1 saat ileri gider"
+   },
+   {
+    "ad": "Matematik ve özel konum",
+    "ifade": "Matematik konum: enlem ve boylamla belirlenen yer (mevsimler, sıcaklık, yerel saat). Özel konum: çevredeki deniz, kara, yarımada, boğaz ve geçit gibi özellikler (jeopolitik, ulaşım, ticaret). İki paralel arası 1° = 111 km"
+   }
+  ],
+  "ipuclari": [
+   "Her ifadede uç meridyenler ya da paraleller arasındaki farkı bul, uygun çarpanla çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Saat farkı",
+    "aciklama": "Boylam farkı 45 − 26 = 19°; 1° = 4 dakikadır.",
+    "islem": "19 × 4 = 76 dakika · I yanlış"
+   },
+   {
+    "baslik": "Uzaklık",
+    "aciklama": "Enlem farkı 42 − 36 = 6°; 1° = 111 km.",
+    "islem": "6 × 111 = 666 km · II doğru"
+   },
+   {
+    "baslik": "Güneş ışınları",
+    "aciklama": "Işınlar en fazla Yengeç Dönencesi’ne (23° 27′ K) dik gelir; Türkiye 36° K’nin kuzeyindedir.",
+    "islem": "III yanlış · yalnız II"
+   }
+  ],
+  "puf": "Boylam farkı × 4 dakika saat farkını, enlem farkı × 111 km uzaklığı verir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGKN-02 (Türkiye’nin matematik konumu) · Türkiye’nin uç koordinatları verildi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-konum-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Coğrafi Konum · Yerel saat",
+  "k": "cog|Coğrafi Konum",
+  "kazanim": "İki boylam arasındaki yerel saat farkını hesaplar.",
+  "tipId": "cg-konum-saat",
+  "tip": "Yerel saat hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "K kenti 20° batı, L kenti 40° doğu boylamındadır.\nK kentinde yerel saat 14.00 iken L kentinde yerel saat kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10.00",
+   "B": "12.00",
+   "C": "15.20",
+   "D": "16.00",
+   "E": "18.00"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "18.00"
+  },
+  "celdiriciler": {
+   "A": "Doğuya gidildiğinde saatin geri gideceğini sanmak; doğuda saat ileridir.",
+   "B": "Hem yönü ters almak hem 30° = 1 saat saymak.",
+   "C": "Farklı yarımkürelerdeki boylamları çıkarmak (40 − 20 = 20°); toplamak gerekir.",
+   "D": "60° farkı 30° = 1 saat sanıp 2 saat bulmak; 15° = 1 saattir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "L kentindeki yerel saat.",
+  "bilgi": [
+   {
+    "ad": "Yerel saat",
+    "ifade": "Dünya 24 saatte 360° döner: 1 saat = 15°, 1° = 4 dakika. Doğuda saat ileridir. Örnek: 15° doğuya gidince saat 1 saat ileri gider"
+   }
+  ],
+  "ipuclari": [
+   "K batıda, L doğuda olduğundan boylamlar toplanır; 1° = 4 dakika."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Boylam farkı",
+    "aciklama": "Boylamlar farklı yarımkürelerde olduğu için toplanır.",
+    "islem": "20 + 40 = 60°"
+   },
+   {
+    "baslik": "Saat farkı",
+    "aciklama": "1° = 4 dakika.",
+    "islem": "60 × 4 = 240 dakika = 4 saat"
+   },
+   {
+    "baslik": "Yönü uygula",
+    "aciklama": "L, K’nin doğusundadır; saat ileridir.",
+    "islem": "14.00 + 4 = 18.00"
+   }
+  ],
+  "puf": "Zıt yarımkürelerde boylamlar toplanır, aynı yarımkürede çıkarılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGKN-03 (Yerel saat) · K ve L kentleri, farklı yarımküreler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-konum-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Coğrafi Konum · Saatten boylam bulma",
+  "k": "cog|Coğrafi Konum",
+  "kazanim": "Yerel saat farkından bir yerin boylamını bulur.",
+  "tipId": "cg-konum-boylam",
+  "tip": "Yerel saatten boylam bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "A kenti 30° doğu boylamındadır. A kentinde yerel saat 09.00 iken B kentinde yerel saat 05.40’tır.\nBuna göre B kenti hangi boylamdadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "50° B",
+   "B": "20° B",
+   "C": "18° B",
+   "D": "20° D",
+   "E": "80° D"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "20° B"
+  },
+  "celdiriciler": {
+   "A": "Yalnız boylam farkını (50°) yazıp A’nın boylamını hesaba katmamak.",
+   "C": "3 saat 20 dakikayı 3,2 saat sanıp 48° bulmak.",
+   "D": "Boylam değerini 20 bulup batı–doğu yönünü saatten çıkarmamak.",
+   "E": "Saati geride olan kenti A’nın doğusuna koymak."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "B kentinin boylamı.",
+  "bilgi": [
+   {
+    "ad": "Yerel saat",
+    "ifade": "Dünya 24 saatte 360° döner: 1 saat = 15°, 1° = 4 dakika. Doğuda saat ileridir. Örnek: 15° doğuya gidince saat 1 saat ileri gider"
+   }
+  ],
+  "ipuclari": [
+   "Saati geride olan yer batıdadır; saat farkını dakikaya çevirip 4’e böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Saat farkı",
+    "aciklama": "09.00 − 05.40 = 3 saat 20 dakika.",
+    "islem": "3 × 60 + 20 = 200 dakika"
+   },
+   {
+    "baslik": "Boylam farkı",
+    "aciklama": "1° = 4 dakika.",
+    "islem": "200 ÷ 4 = 50°"
+   },
+   {
+    "baslik": "Yönü bul",
+    "aciklama": "B’nin saati geride olduğundan B, A’nın batısındadır.",
+    "islem": "30° − 50° = −20° → 20° B"
+   }
+  ],
+  "puf": "Önce yönü saatten çıkar, sonra dakikayı 4’e bölerek boylam farkını bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGKN-04 (Saatten boylam bulma) · saatten boylama dönüş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

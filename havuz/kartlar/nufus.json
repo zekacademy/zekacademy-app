@@ -1,0 +1,135 @@
+{
+ "konu": "Nüfus",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGNF-01",
+   "konu": "Nüfus",
+   "alt": "Nüfus yoğunluğu",
+   "fikir": "Aritmetik yoğunluk = nüfus ÷ yüzölçümü; tabloda her ülke için hesaplanıp karşılaştırılır.",
+   "tuzak": "En kalabalık ya da en geniş ülkeyi yoğunluğu en fazla sanmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 2,
+   "tipId": "cg-nufus-yogunluk",
+   "tip": "Aritmetik nüfus yoğunluğu",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGNF-02",
+   "konu": "Nüfus",
+   "alt": "Nüfusun dağılışı",
+   "fikir": "Verimli ova, ılıman iklim, su, ulaşım, iş olanağı nüfusu toplar; aşırı soğuk, kurak, engebeli alan seyrekleştirir.",
+   "tuzak": "Kıyı ve vadi gibi elverişli alanları seyrek sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-nufus-dagilis",
+   "tip": "Nüfus dağılışını etkileyen etkenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGNF-03",
+   "konu": "Nüfus",
+   "alt": "Doğal artış hızı",
+   "fikir": "Doğal artış hızı (‰) = (doğum − ölüm) ÷ nüfus × 1000.",
+   "tuzak": "Binde yerine yüzde kullanmak; yalnız doğumu ya da ölümü almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "cg-nufus-artis",
+   "tip": "Doğal nüfus artış hızı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGNF-04",
+   "konu": "Nüfus",
+   "alt": "Yaş yapısından çıkarım",
+   "fikir": "Genç nüfus oranı yüksek, yaşlı oranı düşük ülkede doğum oranı yüksek, ortalama yaşam süresi kısadır.",
+   "tuzak": "Genç nüfusu gelişmişlik ya da uzun ömürle ilişkilendirmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-nufus-yas",
+   "tip": "Yaş yapısından yorum",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGNF-05",
+   "konu": "Nüfus",
+   "alt": "Nüfus piramidi",
+   "fikir": "Piramitte her çubuk yaş-cinsiyet grubunun toplam içindeki yüzdesidir; istenen gruplar seçilip toplanır, toplam nüfusla çarpılır.",
+   "tuzak": "Cinsiyetleri karıştırmak; bir grubu atlamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-nufus-piramit",
+   "tip": "Nüfus piramidini okuma ve hesaplama",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGNF-06",
+   "konu": "Nüfus",
+   "alt": "Yoğunluk ve yaş yapısı",
+   "fikir": "Aritmetik yoğunluk = nüfus ÷ yüzölçümü; bir yaş grubunun sayısı = toplam nüfus × oran; oran büyüklüğü ile sayı büyüklüğü farklı sonuç verebilir.",
+   "tuzak": "Yaş grubu oranını sayı gibi karşılaştırmak; nüfusu farklı iki ülkede yüzdeleri doğrudan kıyaslamak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "cg-nufus-yogunluk-yas",
+   "tip": "Nüfus yoğunluğu ve yaş grupları",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-nufus-yogunluk",
+   "ad": "Aritmetik nüfus yoğunluğu",
+   "kartlar": [
+    "K-CGNF-01"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  },
+  {
+   "tipId": "cg-nufus-dagilis",
+   "ad": "Nüfus dağılışını etkileyen etkenler",
+   "kartlar": [
+    "K-CGNF-02"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  },
+  {
+   "tipId": "cg-nufus-artis",
+   "ad": "Doğal nüfus artış hızı",
+   "kartlar": [
+    "K-CGNF-03"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  },
+  {
+   "tipId": "cg-nufus-yas",
+   "ad": "Yaş yapısından yorum",
+   "kartlar": [
+    "K-CGNF-04"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  },
+  {
+   "tipId": "cg-nufus-piramit",
+   "ad": "Nüfus piramidini okuma ve hesaplama",
+   "kartlar": [
+    "K-CGNF-05"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  },
+  {
+   "tipId": "cg-nufus-yogunluk-yas",
+   "ad": "Nüfus yoğunluğu ve yaş grupları",
+   "kartlar": [
+    "K-CGNF-06"
+   ],
+   "uygulamaKonu": "cog|Nüfus"
+  }
+ ]
+}

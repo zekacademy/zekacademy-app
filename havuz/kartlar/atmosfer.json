@@ -1,0 +1,92 @@
+{
+ "konu": "Atmosfer ve Sıcaklık",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-ATM-01",
+   "konu": "Atmosfer ve Sıcaklık",
+   "alt": "Atmosferin katmanları",
+   "fikir": "Katmanların özellikleri (hava olayları, ozon, iyonosfer) sıralanıp doğru katman bulunur.",
+   "tuzak": "Hava olayı ile ozonun katmanlarını karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-atm-katman",
+   "tip": "Atmosfer katmanlarının özellikleri",
+   "kaynak": "ÖSYM 2018–2026 (atmosferin katmanları, sıcaklık dağılışı, izotermler) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-ATM-02",
+   "konu": "Atmosfer ve Sıcaklık",
+   "alt": "Yükselti ve sıcaklık",
+   "fikir": "Verilen azalma oranı yükselti farkıyla çarpılıp sıcaklık farkı bulunur.",
+   "tuzak": "İki yükseltiyi toplamak ya da deniz seviyesinden başlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "cg-atm-yukselti",
+   "tip": "Yükselti ve sıcaklık hesabı",
+   "kaynak": "ÖSYM 2018–2026 (atmosferin katmanları, sıcaklık dağılışı, izotermler) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-ATM-03",
+   "konu": "Atmosfer ve Sıcaklık",
+   "alt": "Sıcaklığı etkileyen etkenler",
+   "fikir": "Aynı enlemde sıcaklık farkını yükselti, kara-deniz dağılışı ve akıntılar açıklar; geliş açısı sabittir.",
+   "tuzak": "Aynı enlemde ışın açısını farklı sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-atm-etken",
+   "tip": "Sıcaklığı etkileyen etkenler",
+   "kaynak": "ÖSYM 2018–2026 (atmosferin katmanları, sıcaklık dağılışı, izotermler) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-ATM-04",
+   "konu": "Atmosfer ve Sıcaklık",
+   "alt": "İzoterm haritası",
+   "fikir": "Eş sıcaklık eğrileri arasında kalan yerlerin değer aralığından en az/en çok fark çıkarılır.",
+   "tuzak": "Komşu eğriler arasındaki noktaları hep yakın sıcaklıkta saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-atm-izoterm",
+   "tip": "İzoterm haritası yorumu",
+   "kaynak": "ÖSYM 2018–2026 (atmosferin katmanları, sıcaklık dağılışı, izotermler) · MEB 9. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-atm-katman",
+   "ad": "Atmosfer katmanlarının özellikleri",
+   "kartlar": [
+    "K-ATM-01"
+   ],
+   "uygulamaKonu": "cog|Atmosfer ve Sıcaklık"
+  },
+  {
+   "tipId": "cg-atm-yukselti",
+   "ad": "Yükselti ve sıcaklık hesabı",
+   "kartlar": [
+    "K-ATM-02"
+   ],
+   "uygulamaKonu": "cog|Atmosfer ve Sıcaklık"
+  },
+  {
+   "tipId": "cg-atm-etken",
+   "ad": "Sıcaklığı etkileyen etkenler",
+   "kartlar": [
+    "K-ATM-03"
+   ],
+   "uygulamaKonu": "cog|Atmosfer ve Sıcaklık"
+  },
+  {
+   "tipId": "cg-atm-izoterm",
+   "ad": "İzoterm haritası yorumu",
+   "kartlar": [
+    "K-ATM-04"
+   ],
+   "uygulamaKonu": "cog|Atmosfer ve Sıcaklık"
+  }
+ ]
+}

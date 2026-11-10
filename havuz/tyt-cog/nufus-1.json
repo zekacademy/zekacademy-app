@@ -1,0 +1,451 @@
+[
+ {
+  "id": "tytcog-nufus-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Nüfus yoğunluğu",
+  "k": "cog|Nüfus",
+  "kazanim": "Ülkelerin nüfus yoğunluğunu yüzölçümü ve nüfus verilerinden hesaplar.",
+  "tipId": "cg-nufus-yogunluk",
+  "tip": "Aritmetik nüfus yoğunluğu",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 2,
+  "metin": "Beş ülkenin yüzölçümü ve nüfusu aşağıdaki tabloda verilmiştir.\nÜlke – Yüzölçümü (km²) – Nüfus\nK – 40 000 – 2 000 000\nL – 25 000 – 2 250 000\nM – 50 000 – 4 000 000\nN – 80 000 – 2 400 000\nP – 30 000 – 1 200 000\nBu verilere göre hangi ülkenin nüfus yoğunluğu (kişi/km²) en fazladır?",
+  "sekil": null,
+  "siklar": {
+   "A": "K",
+   "B": "L",
+   "C": "M",
+   "D": "N",
+   "E": "P"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "L"
+  },
+  "celdiriciler": {
+   "A": "K ülkesinin yoğunluğu 50 kişi/km²’dir; L’nin 90 değerinden küçüktür.",
+   "C": "Nüfusu en fazla olan ülkeyi seçmiş; yoğunlukta yüzölçümünü hesaba katmamış (M: 80 kişi/km²).",
+   "D": "Yüzölçümü en büyük ülkeyi seçmiş; N’nin yoğunluğu yalnız 30 kişi/km²’dir.",
+   "E": "P’nin yoğunluğu 40 kişi/km²’dir; en düşük değerlerden biridir."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Nüfus yoğunluğu en fazla olan ülke.",
+  "bilgi": [
+   {
+    "ad": "Nüfus yoğunluğu",
+    "ifade": "Nüfus yoğunluğu = nüfus ÷ yüzölçümü (kişi/km²). Örnek: 600 kişi yaşayan 20 km²’lik bir alanda yoğunluk 600 ÷ 20 = 30 kişi/km²’dir."
+   }
+  ],
+  "ipuclari": [
+   "Yoğunluk, nüfusun yüzölçümüne bölünmesiyle bulunur; yalnız nüfusa ya da yalnız yüzölçümüne bakmak yetmez."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Formülü yaz",
+    "aciklama": "Yoğunluk, 1 km²’ye düşen ortalama kişi sayısıdır.",
+    "islem": "yoğunluk = nüfus ÷ yüzölçümü"
+   },
+   {
+    "baslik": "Her ülkeyi hesapla",
+    "aciklama": "Nüfusu yüzölçümüne böl.",
+    "islem": "K: 2 000 000 ÷ 40 000 = 50 · L: 2 250 000 ÷ 25 000 = 90 · M: 4 000 000 ÷ 50 000 = 80 · N: 2 400 000 ÷ 80 000 = 30 · P: 1 200 000 ÷ 30 000 = 40"
+   },
+   {
+    "baslik": "Karşılaştır",
+    "aciklama": "En büyük yoğunluk değeri aranır.",
+    "islem": "90 > 80 > 50 > 40 > 30 · en fazla: L"
+   }
+  ],
+  "puf": "Yoğunluk sorularında “nüfus ÷ alan” hesabını her seçenek için ayrı yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-01 (Nüfus yoğunluğu) · tablo: 5 kurgusal ülke, yoğunluk hesabı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nufus-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Nüfusun dağılışı",
+  "k": "cog|Nüfus",
+  "kazanim": "Nüfusun dağılışını etkileyen doğal ve beşerî etkenleri yorumlar.",
+  "tipId": "cg-nufus-dagilis",
+  "tip": "Nüfus dağılışını etkileyen etkenler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Dünyada nüfusun dağılışıyla ilgili olarak\nI. Verimli ovalar tarıma elverişli olduğundan nüfus bu alanlarda yoğunlaşma eğilimindedir.\nII. Çok soğuk ve kurak alanlarda yaşam koşulları zor olduğundan nüfus seyrektir.\nIII. Akarsu vadilerinde ve kıyı ovalarında su ve ulaşım kolaylığı nüfusun seyrekleşmesine yol açar.\nIV. Sanayi ve ticaret merkezlerinde iş olanaklarının fazla olması nüfusun toplanmasını sağlar.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve III",
+   "C": "II ve III",
+   "D": "I, II ve IV",
+   "E": "I, II, III ve IV"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I, II ve IV"
+  },
+  "celdiriciler": {
+   "A": "II. öncül doğrudur (aşırı soğuk ve kurak alanlar yaşamı zorlaştırır); onu yanlış sanmış.",
+   "B": "III. öncül yanlıştır (su ve ulaşım kolaylığı nüfusu toplayan etkenlerdir); ona doğru demiş.",
+   "C": "III. öncül yanlıştır (su ve ulaşım kolaylığı nüfusu toplayan etkenlerdir); ona doğru demiş.",
+   "E": "III. öncül yanlıştır (su ve ulaşım kolaylığı nüfusu toplayan etkenlerdir); ona doğru demiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Nüfusu toplayan ve seyrekleştiren etkenler",
+    "ifade": "Toplayan: verimli toprak, ılıman iklim, su, ulaşım kolaylığı, iş olanağı · Seyrekleştiren: aşırı soğuk ya da kuraklık, yüksek ve engebeli arazi, ulaşım güçlüğü"
+   }
+  ],
+  "ipuclari": [
+   "Her ifadede, belirtilen koşulun yaşamı kolaylaştırıp kolaylaştırmadığını düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Yaşamı ve geçimi kolaylaştıran koşullar nüfusu toplar.",
+    "islem": "kolaylaştırıcı = yoğun · zorlaştırıcı = seyrek"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I, II ve IV bu ölçüte uyar; III’te su ve ulaşım kolaylığı nüfusu seyrekleştirmez, toplar.",
+    "islem": "I: doğru · II: doğru · III: yanlış · IV: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru ifadeler I, II ve IV’tür.",
+    "islem": "I, II ve IV"
+   }
+  ],
+  "puf": "Nüfusu toplayan etkenler yaşamı kolaylaştırır, seyrekleştirenler zorlaştırır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-02 (Nüfusun dağılışı) · 4 öncül, doğru kümesi hesaplandı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nufus-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Doğal artış hızı",
+  "k": "cog|Nüfus",
+  "kazanim": "Doğum ve ölüm sayılarından doğal nüfus artış hızını hesaplar.",
+  "tipId": "cg-nufus-artis",
+  "tip": "Doğal nüfus artış hızı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Nüfusu 5 000 000 olan bir ülkede bir yıl içinde 135 000 bebek doğmuş, 45 000 kişi hayatını kaybetmiştir. Bu ülkeye yıl içinde göç alma ve göç verme olmamıştır.\nBuna göre ülkenin yıllık doğal nüfus artış hızı binde (‰) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,8",
+   "B": "9",
+   "C": "18",
+   "D": "27",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "Farkı 1000 yerine 100 ile çarpmış; binde yerine yüzde bulmuş.",
+   "B": "Yalnız ölüm hızını (45 000 ÷ 5 000 000 × 1000) hesaplamış.",
+   "D": "Yalnız doğum hızını hesaplamış; ölümleri çıkarmayı unutmuş.",
+   "E": "Farkı 1000 yerine 10 000 ile çarpmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Yıllık doğal nüfus artış hızı (‰).",
+  "bilgi": [
+   {
+    "ad": "Doğal artış hızı",
+    "ifade": "Doğal artış hızı (‰) = (doğum − ölüm) ÷ toplam nüfus × 1000. Örnek: 1000 kişilik köyde 30 doğum, 10 ölüm varsa (30 − 10) ÷ 1000 × 1000 = 20‰ olur."
+   }
+  ],
+  "ipuclari": [
+   "Doğal artış, doğum ile ölüm sayısı arasındaki farktan bulunur; hız bulmak için bu fark nüfusa bölünür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Doğal artışı bul",
+    "aciklama": "Doğumlardan ölümleri çıkar.",
+    "islem": "135 000 − 45 000 = 90 000 kişi"
+   },
+   {
+    "baslik": "Nüfusa oranla",
+    "aciklama": "Artışı nüfusa böl.",
+    "islem": "90 000 ÷ 5 000 000 = 0,018"
+   },
+   {
+    "baslik": "Binde ile ifade et",
+    "aciklama": "Binde için 1000 ile çarp.",
+    "islem": "0,018 × 1000 = 18‰"
+   }
+  ],
+  "puf": "Hız sorusunda önce farkı, sonra oranı bul; birimi (‰ ya da %) kontrol et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-03 (Doğal artış hızı) · binde ve yüzde karışıklığı, kurgusal veri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nufus-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Yaş yapısından çıkarım",
+  "k": "cog|Nüfus",
+  "kazanim": "Yaş gruplarının oranından ülkenin demografik özelliğini çıkarır.",
+  "tipId": "cg-nufus-yas",
+  "tip": "Yaş yapısından yorum",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir ülkenin nüfusunun %36’sı 0–14 yaş grubunda, %4’ü 65 ve üzeri yaş grubundadır.\nBu verilere göre söz konusu ülke ile ilgili aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Doğum oranının yüksek olduğu",
+   "B": "Ortalama yaşam süresinin uzun olduğu",
+   "C": "Yaşlı bağımlılık yükünün fazla olduğu",
+   "D": "Nüfus artış hızının yavaş olduğu",
+   "E": "Nüfusun yaşlanma sürecine girdiği"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Doğum oranının yüksek olduğu"
+  },
+  "celdiriciler": {
+   "B": "Yaşlı oranı çok düşüktür; bu durum genellikle kısa yaşam süresiyle birlikte görülür.",
+   "C": "65 ve üzeri yaş grubu yalnız %4’tür; yaşlı bağımlılık yükü azdır.",
+   "D": "Çocuk oranının yüksekliği doğumların fazla olduğunu, artışın hızlı olduğunu gösterir.",
+   "E": "Yaşlanma, 65 ve üzeri oranın artmasıdır; burada genç nüfus ağırlıktadır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilerden çıkarılabilecek sonuç.",
+  "bilgi": [
+   {
+    "ad": "Yaş yapısı ve doğum oranı",
+    "ifade": "Çocuk (0–14 yaş) oranı yüksek ve yaşlı (65+) oranı düşükse doğum oranı yüksek, ortalama yaşam süresi kısadır; nüfus genç ve hızlı artar. Örnek: 0–14 yaş %40 olan ülke genç nüfusludur."
+   }
+  ],
+  "ipuclari": [
+   "Çocuk oranı çok, yaşlı oranı az olan bir ülkenin doğum ve ölüm düzeyini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Verileri oku",
+    "aciklama": "Çocuk oranı çok yüksek, yaşlı oranı çok düşüktür.",
+    "islem": "0–14: %36 · 65+: %4"
+   },
+   {
+    "baslik": "Anlamını çıkar",
+    "aciklama": "Çok çocuk, çok doğum demektir; yaşlı azlığı ise yaşam süresinin kısa olmasıyla uyumludur.",
+    "islem": "genç nüfus → doğum yüksek"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "Yaşam süresinin uzun olması, yaşlı yükü ve yavaş artış verilerle çelişir.",
+    "islem": "A: doğru · B, C, D, E: yanlış"
+   }
+  ],
+  "puf": "Yaş gruplarında hangi grubun ağır bastığına bak; genç ağırlık = yüksek doğum.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-04 (Yaş yapısından çıkarım) · yaş oranlarından çıkarım",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nufus-0005",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Nüfus piramidi",
+  "k": "cog|Nüfus",
+  "kazanim": "Nüfus piramidindeki yaş ve cinsiyet gruplarını okuyup nüfus sayısını hesaplar.",
+  "tipId": "cg-nufus-piramit",
+  "tip": "Nüfus piramidini okuma ve hesaplama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Aşağıda, toplam nüfusu 4 000 000 olan bir ülkenin nüfus piramidi verilmiştir. Çubuk uçlarındaki sayılar, ilgili yaş ve cinsiyet grubunun toplam nüfus içindeki yüzdesini göstermektedir.\nBuna göre kadın nüfusun 45 ve üzeri yaş gruplarındaki sayısı ile erkek nüfusun 0–14 yaş grubundaki sayısının toplamı kaç kişidir?",
+  "sekil": "<svg viewBox=\"0 0 360 212\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"103.0\" y=\"30\" width=\"77\" height=\"26\" stroke-width=\"1.6\" style=\"fill:currentColor;fill-opacity:.18\"/><rect x=\"180.0\" y=\"30\" width=\"88\" height=\"26\" stroke-width=\"1.6\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"99.0\" y=\"47.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%7</text><text x=\"272.0\" y=\"47.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%8</text><text x=\"180.0\" y=\"47.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60+</text><rect x=\"92.0\" y=\"62\" width=\"88\" height=\"26\" stroke-width=\"1.6\" style=\"fill:currentColor;fill-opacity:.18\"/><rect x=\"180.0\" y=\"62\" width=\"99\" height=\"26\" stroke-width=\"1.6\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"88.0\" y=\"79.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%8</text><text x=\"283.0\" y=\"79.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%9</text><text x=\"180.0\" y=\"79.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">45–59</text><rect x=\"70.0\" y=\"94\" width=\"110\" height=\"26\" stroke-width=\"1.6\" style=\"fill:currentColor;fill-opacity:.18\"/><rect x=\"180.0\" y=\"94\" width=\"110\" height=\"26\" stroke-width=\"1.6\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"66.0\" y=\"111.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%10</text><text x=\"294.0\" y=\"111.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%10</text><text x=\"180.0\" y=\"111.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30–44</text><rect x=\"48.0\" y=\"126\" width=\"132\" height=\"26\" stroke-width=\"1.6\" style=\"fill:currentColor;fill-opacity:.18\"/><rect x=\"180.0\" y=\"126\" width=\"121\" height=\"26\" stroke-width=\"1.6\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"44.0\" y=\"143.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%12</text><text x=\"305.0\" y=\"143.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%11</text><text x=\"180.0\" y=\"143.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">15–29</text><rect x=\"37.0\" y=\"158\" width=\"143\" height=\"26\" stroke-width=\"1.6\" style=\"fill:currentColor;fill-opacity:.18\"/><rect x=\"180.0\" y=\"158\" width=\"132\" height=\"26\" stroke-width=\"1.6\" style=\"fill:var(--acc,#16A34A);fill-opacity:.35;stroke:var(--acc,#16A34A)\"/><text x=\"33.0\" y=\"175.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%13</text><text x=\"316.0\" y=\"175.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">%12</text><text x=\"180.0\" y=\"175.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0–14</text><text x=\"110.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Erkek</text><text x=\"250.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kadın</text><text x=\"180.0\" y=\"202.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Değerler toplam nüfus içindeki yüzdedir.</text></svg>",
+  "siklar": {
+   "A": "680 000",
+   "B": "840 000",
+   "C": "880 000",
+   "D": "1 080 000",
+   "E": "1 200 000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1 200 000"
+  },
+  "celdiriciler": {
+   "A": "Erkeklerin 0–14 yaş grubunu toplamaya katmamış; yalnız kadınlarda 45 ve üzeriyi (%17) almış.",
+   "B": "Kadınlarda yalnız 60+ (%8) ile erkek 0–14’ü (%13) toplamış; 45–59 kadın grubunu atlamış.",
+   "C": "45–59 yaş kadınlarını (%9) ve erkek 0–14’ü (%13) almış; kadın 60+ grubunu atlamış.",
+   "D": "Cinsiyetleri karıştırmış: erkek 45 ve üzeri (%15) ile kadın 0–14 (%12) grubunu toplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "İstenen iki grubun toplam sayısı.",
+  "bilgi": [
+   {
+    "ad": "Nüfus piramidi",
+    "ifade": "Piramitte sol taraf erkek, sağ taraf kadın nüfusu gösterir; her çubuk bir yaş grubudur. Bir grubun sayısı = toplam nüfus × yüzde ÷ 100. Örnek: toplam 1000 kişi, çubuk %12 ise grup 120 kişidir."
+   }
+  ],
+  "ipuclari": [
+   "Önce istenen grupların yüzdelerini piramitten ayrı ayrı oku, sonra yüzdeleri toplayıp toplam nüfusla çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grupları belirle",
+    "aciklama": "Kadın taraf (sağ) 45–59 ve 60+; erkek taraf (sol) 0–14.",
+    "islem": "kadın 45–59: %9 · kadın 60+: %8 · erkek 0–14: %13"
+   },
+   {
+    "baslik": "Yüzdeleri topla",
+    "aciklama": "Üç grubun yüzdeleri toplanır.",
+    "islem": "9 + 8 + 13 = %30"
+   },
+   {
+    "baslik": "Sayıya çevir",
+    "aciklama": "Toplam nüfusun yüzde 30’unu al.",
+    "islem": "4 000 000 × 30 ÷ 100 = 1 200 000"
+   }
+  ],
+  "puf": "Piramit sorularında önce sol–sağ cinsiyet ayrımını, sonra yaş grubunu doğru okuyup yüzdeleri topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-05 (Nüfus piramidi) · piramit çizildi; yüzdeler toplamı 100",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-nufus-0006",
+  "ders": "TYT Coğrafya",
+  "konu": "Nüfus · Yoğunluk ve yaş yapısı",
+  "k": "cog|Nüfus",
+  "kazanim": "Aritmetik nüfus yoğunluğunu ve yaş grubu sayılarını hesaplayıp ülkeleri karşılaştırır.",
+  "tipId": "cg-nufus-yogunluk-yas",
+  "tip": "Nüfus yoğunluğu ve yaş grupları",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki tabloda iki ülkeye ait kurgusal veriler yer almaktadır.\nÜlke – Yüzölçümü (km²) – Nüfus – 0–14 yaş oranı – 65 ve üzeri yaş oranı\nX – 150 000 – 12 000 000 – %35 – %4\nY – 200 000 – 16 000 000 – %25 – %9\nBu verilere göre\nI. İki ülkenin aritmetik nüfus yoğunlukları birbirine eşittir.\nII. X ülkesinde 0–14 yaş grubundaki nüfus, sayıca Y ülkesindekinden fazladır.\nIII. Y ülkesinde 65 ve üzeri yaş grubundaki nüfus, X ülkesindekinin 2 katından azdır.\nIV. X ülkesinin nüfusu, Y ülkesinin nüfusuna göre daha gençtir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "I ve II",
+   "C": "II ve III",
+   "D": "I, III ve IV",
+   "E": "I, II ve IV"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I, II ve IV"
+  },
+  "celdiriciler": {
+   "A": "I. öncül doğrudur (X: 12 000 000 ÷ 150 000 = 80; Y: 16 000 000 ÷ 200 000 = 80); onu yanlış sanmış.",
+   "B": "IV. öncül doğrudur (X’te çocuk oranı yüksek, yaşlı oranı düşüktür); onu yanlış sanmış.",
+   "C": "III. öncül yanlıştır (Y: 1 440 000 kişi, X: 480 000 kişi; Y, X’in 3 katıdır); ona doğru demiş.",
+   "D": "III. öncül yanlıştır (Y: 1 440 000 kişi, X: 480 000 kişi; Y, X’in 3 katıdır); ona doğru demiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Yoğunluk ve yaş grubu sayısı",
+    "ifade": "Aritmetik yoğunluk = nüfus ÷ yüzölçümü · Bir yaş grubunun sayısı = toplam nüfus × oran ÷ 100. Örnek: 2 000 000 nüfuslu ülkede %20 oranındaki grup 400 000 kişidir; oranı yüksek olan ülkenin grubu sayıca da büyük olmayabilir."
+   }
+  ],
+  "ipuclari": [
+   "Her ülke için yoğunluğu ve yaş gruplarının kişi sayısını hesapla; sonra ifadeleri bu değerlerle karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aritmetik yoğunluklar",
+    "aciklama": "Nüfusu yüzölçümüne böl.",
+    "islem": "X: 12 000 000 ÷ 150 000 = 80 · Y: 16 000 000 ÷ 200 000 = 80"
+   },
+   {
+    "baslik": "0–14 yaş sayıları",
+    "aciklama": "Nüfusu oranla çarp.",
+    "islem": "X: 12 000 000 × 35 ÷ 100 = 4 200 000 · Y: 16 000 000 × 25 ÷ 100 = 4 000 000"
+   },
+   {
+    "baslik": "65 ve üzeri sayıları",
+    "aciklama": "Nüfusu oranla çarp.",
+    "islem": "X: 12 000 000 × 4 ÷ 100 = 480 000 · Y: 16 000 000 × 9 ÷ 100 = 1 440 000"
+   },
+   {
+    "baslik": "İfadeleri sına",
+    "aciklama": "I ve II hesaplarla uyuşur; III yanlıştır (1 440 000, 2 × 480 000 = 960 000’den fazladır); IV doğrudur, çünkü X’te çocuk oranı yüksek, yaşlı oranı düşüktür.",
+    "islem": "I: doğru · II: doğru · III: yanlış · IV: doğru"
+   }
+  ],
+  "puf": "Oran büyüklüğü ile sayı büyüklüğünü karıştırma; önce her grubun kişi sayısını bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGNF-06 (Yoğunluk ve yaş yapısı) · kurgusal tablo; yalnız aritmetik yoğunluk ve yaş grubu oranları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,303 @@
+[
+ {
+  "id": "tytcog-yerlesme-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Yerleşme · Kent yerleşmesi",
+  "k": "cog|Yerleşme",
+  "kazanim": "Kent yerleşmesinin ayırt edici özelliğini belirler.",
+  "tipId": "cg-yerlesme-tur",
+  "tip": "Kent yerleşmesinin özellikleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisi kent yerleşmelerinin özelliklerinden biridir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Nüfusun büyük bölümünün tarım ve hayvancılıkla geçinmesi",
+   "B": "Nüfusun büyük bölümünün sanayi, ticaret ve hizmet kollarında çalışması",
+   "C": "Evlerin arasında geniş tarla ve bahçelerin yer alması",
+   "D": "Yerleşmenin yaylacılık amacıyla yılın yalnız birkaç ayında kullanılması",
+   "E": "Nüfus yoğunluğunun çok düşük olması"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Nüfusun büyük bölümünün sanayi, ticaret ve hizmet kollarında çalışması"
+  },
+  "celdiriciler": {
+   "A": "Bu, kır yerleşmelerinin özelliğidir.",
+   "C": "Bahçeli ve tarlalı düzen kırsal yerleşmeye aittir.",
+   "D": "Mevsimlik kullanım, geçici kır yerleşmesi (yayla) özelliğidir.",
+   "E": "Kentlerde yoğunluk yüksektir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kent yerleşmesinin özelliği.",
+  "bilgi": [
+   {
+    "ad": "Kır ve kent",
+    "ifade": "Kır yerleşmesi: nüfus az, geçim tarım ve hayvancılık, bahçeli ev düzeni · Kent yerleşmesi: nüfus çok, geçim sanayi, ticaret ve hizmet"
+   }
+  ],
+  "ipuclari": [
+   "Kentte insanların ne iş yaptığını ve nüfusun yoğunluğunu düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ayrımı hatırla",
+    "aciklama": "Kentte geçim tarım dışı kollardan sağlanır.",
+    "islem": "kent: sanayi, ticaret, hizmet"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "A, C ve D kır ve yayla özellikleridir; E’de yoğunluk kentte yüksektir.",
+    "islem": "A, C, D, E: kır"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız B kent özelliğidir.",
+    "islem": "B"
+   }
+  ],
+  "puf": "Geçim kolu tarımsa kır, sanayi ve hizmetse kenttir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGYR-01 (Kent yerleşmesi) · kır–kent ayrımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-yerlesme-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Yerleşme · Yer seçimi etkenleri",
+  "k": "cog|Yerleşme",
+  "kazanim": "Yerleşme yerinin seçiminde avantaj sağlayan etkenleri belirler.",
+  "tipId": "cg-yerlesme-yer",
+  "tip": "Yerleşme yeri seçimini etkileyen etkenler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bir yerleşmenin kurulacağı yer belirlenirken\nI. Akarsu ve kaynak gibi su kaynaklarına yakın olma\nII. Tarıma elverişli verimli arazinin bulunması\nIII. Sel ve heyelan riskinin yüksek olması\nIV. Yolların kesiştiği noktada bulunma\nözelliklerinden hangileri o yer için avantaj sayılır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "II ve III",
+   "D": "III ve IV",
+   "E": "I, II ve IV"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I, II ve IV"
+  },
+  "celdiriciler": {
+   "A": "II. öncül doğrudur (geçim için arazi gerekir); onu yanlış sanmış.",
+   "B": "IV. öncül doğrudur (ulaşım kolaylığı yerleşmeyi büyütür); onu yanlış sanmış.",
+   "C": "III. öncül yanlıştır (afet riski yerleşmeyi caydırır, avantaj sağlamaz); ona doğru demiş.",
+   "D": "III. öncül yanlıştır (afet riski yerleşmeyi caydırır, avantaj sağlamaz); ona doğru demiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Avantaj sağlayan özelliklerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Yerleşme yeri seçimi",
+    "ifade": "Çeken etkenler: su, verimli arazi, ılıman iklim, ulaşım kolaylığı, güvenlik · Caydıran etkenler: sel, heyelan, deprem riski, aşırı engebe"
+   }
+  ],
+  "ipuclari": [
+   "Her özelliğin yerleşmeyi kolaylaştırıp kolaylaştırmadığını sor."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Yaşamı ve geçimi kolaylaştıran özellikler avantajdır.",
+    "islem": "avantaj = su, arazi, ulaşım"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I, II ve IV avantaj sağlar; III afet riskidir, caydırır.",
+    "islem": "I: evet · II: evet · III: hayır · IV: evet"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Avantajlar I, II ve IV’tür.",
+    "islem": "I, II ve IV"
+   }
+  ],
+  "puf": "Yerleşmeyi kolaylaştıran etkenler çeker, afet riski ve engebe caydırır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGYR-02 (Yer seçimi etkenleri) · yerleşme avantajları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-yerlesme-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Yerleşme · Kır yerleşmesinin biçimi",
+  "k": "cog|Yerleşme",
+  "kazanim": "Dağınık yerleşmenin görüldüğü doğal koşulları belirler.",
+  "tipId": "cg-yerlesme-bicim",
+  "tip": "Dağınık ve toplu kır yerleşmesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Dağınık yerleşme, evlerin birbirinden uzakta, arazi içine serpiştirilmiş olduğu kır yerleşme biçimidir.\nBuna göre aşağıdaki köylerden hangisinde dağınık yerleşme görülmesi beklenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yağışın bol, suyun her yerde bulunduğu, engebeli ve ormanlık bir yamaçtaki köy",
+   "B": "Suyun kıt olduğu, düz bir plato üzerindeki köy",
+   "C": "Suyun tek kaynaktan sağlandığı geniş bir bozkır köyü",
+   "D": "Yazın akarsuyun kuruduğu, suyun yalnız tek bir çeşmeden alındığı düz bir ova köyü",
+   "E": "Suyun yalnız bir kuyudan alındığı bir vaha köyü"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yağışın bol, suyun her yerde bulunduğu, engebeli ve ormanlık bir yamaçtaki köy"
+  },
+  "celdiriciler": {
+   "B": "Su kıtlığı evleri su kaynağı çevresinde toplar; toplu yerleşme görülür.",
+   "C": "Tek su kaynağı çevresinde evler toplanır.",
+   "D": "Su tek çeşmeden sağlandığı için evler çeşme çevresinde toplanır; toplu yerleşme görülür.",
+   "E": "Tek kuyu çevresinde evler sık dizilir; toplu yerleşmedir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Dağınık yerleşme beklenen köy.",
+  "bilgi": [
+   {
+    "ad": "Dağınık ve toplu yerleşme",
+    "ifade": "Dağınık: su her yerde bulunur, yağış fazladır, arazi engebeli ve ormanlıktır (ör. Karadeniz) · Toplu: su kıt ya da tek kaynaktan sağlanır, arazi düzdür (ör. İç Anadolu bozkırı)"
+   }
+  ],
+  "ipuclari": [
+   "Evlerin birbirinden uzak durabilmesi için suyun ve arazinin nasıl olması gerektiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşulları hatırla",
+    "aciklama": "Dağınıklık için su her yerde bulunmalı; toplu yerleşmede ise su kaynağı çevresinde toplanılır.",
+    "islem": "su bol → dağınık · su kıt → toplu"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "B, C, D ve E’de su kıt ya da tek kaynaktandır; evler o kaynağa yakın toplanır.",
+    "islem": "B, C, D, E: toplu"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bol sulu, yağışlı, engebeli yamaç köyünde evler dağınık kurulur.",
+    "islem": "A"
+   }
+  ],
+  "puf": "Su her yerdeyse dağınık, su tek yerdeyse toplu yerleşme olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGYR-03 (Kır yerleşmesinin biçimi) · dağınık–toplu eşleştirmesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-yerlesme-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Yerleşme · Kentleşme oranı",
+  "k": "cog|Yerleşme",
+  "kazanim": "Kentleşme oranından kent nüfusunu bulup iki tarihi karşılaştırır.",
+  "tipId": "cg-yerlesme-kentlesme",
+  "tip": "Kentleşme oranı ve nüfus değişimi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Kentleşme oranı, kent nüfusunun toplam nüfusa bölünüp 100 ile çarpılmasıyla bulunur. Kurgusal bir ülkenin iki yıla ait verileri aşağıdaki tabloda verilmiştir.\nYıl – Toplam nüfus – Kentleşme oranı\n2000 – 8 000 000 – %40\n2020 – 12 000 000 – %65\nBuna göre bu ülkede 2000–2020 arasında kent nüfusu kaç kişi artmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "600 000",
+   "B": "3 000 000",
+   "C": "4 600 000",
+   "D": "4 800 000",
+   "E": "7 800 000"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4 600 000"
+  },
+  "celdiriciler": {
+   "A": "Kırsal nüfusun azalışını (4 800 000 − 4 200 000) bulmuş; kent artışı sorulmuştur.",
+   "B": "Oran farkını (25 puan) 2020 toplam nüfusuyla çarpmış; iki yılın kent nüfusunu ayrı hesaplamamış.",
+   "D": "2000 yılındaki kırsal nüfusu (4 800 000) kent artışı sanmış.",
+   "E": "2020 kent nüfusunu bulup 2000 kent nüfusunu çıkarmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kent nüfusunun artış miktarı.",
+  "bilgi": [
+   {
+    "ad": "Kentleşme oranı",
+    "ifade": "Kentleşme oranı = kent nüfusu ÷ toplam nüfus × 100. Kent nüfusu = toplam nüfus × oran ÷ 100. Örnek: 1000 kişilik yerde oran %30 ise kent nüfusu 300 kişidir."
+   }
+  ],
+  "ipuclari": [
+   "Her yıl için önce oranı kullanarak kent nüfusunu bul; sonra iki yılı karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "2000 yılı kent nüfusu",
+    "aciklama": "Toplam nüfusun %40’ı kentte yaşar.",
+    "islem": "8 000 000 × 40 ÷ 100 = 3 200 000"
+   },
+   {
+    "baslik": "2020 yılı kent nüfusu",
+    "aciklama": "Toplam nüfusun %65’i kentte yaşar.",
+    "islem": "12 000 000 × 65 ÷ 100 = 7 800 000"
+   },
+   {
+    "baslik": "Artışı bul",
+    "aciklama": "Sonraki kent nüfusundan önceki kent nüfusunu çıkar.",
+    "islem": "7 800 000 − 3 200 000 = 4 600 000"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "600 000 kırsal azalışı, 4 800 000 ise 2000’deki kırsal nüfustur.",
+    "islem": "C: 4 600 000"
+   }
+  ],
+  "puf": "Oran verilmişse önce her tarih için sayıya çevir; oran farkı sayı farkı değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGYR-04 (Kentleşme oranı) · kurgusal tablo; oran→sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

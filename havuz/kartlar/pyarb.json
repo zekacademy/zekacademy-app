@@ -1,0 +1,92 @@
+{
+ "konu": "Paragraf",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-PAB-01",
+   "konu": "Paragraf",
+   "alt": "Ulaşılamaz",
+   "fikir": "Dört şıkkın her biri parçada açıkça karşılığı olan bir yargıdır; parçada hiç geçmeyen ya da parçayla çelişen yargıyı bulmak.",
+   "tuzak": "Konuya yakın görünen şıkkı doğru sanmak; “ulaşılamaz” kökünü “ulaşılır” diye okumak; parçanın bir cümlesini abartan şıkta duraksamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "pab-ulasilamaz",
+   "tip": "Parçadan ulaşılamayan yargı",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: ulaşılamaz)"
+  },
+  {
+   "id": "K-PAB-02",
+   "konu": "Paragraf",
+   "alt": "Değinilmemiştir",
+   "fikir": "Parçada işlenen dört noktayı tek tek bulup hiç işlenmeyen noktayı seçmek; parçaya ters olmak şart değil, yalnızca parçada yer almamak yeterlidir.",
+   "tuzak": "Parçanın konusuna uygun düştüğü için değinilmemiş bir yargıyı “değinilmiş” saymak; ters bir yargıyla değinilmeyen yargıyı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "pab-degenilmemis",
+   "tip": "Parçada değinilmeyen nokta",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: değinilmemiştir)"
+  },
+  {
+   "id": "K-PAB-03",
+   "konu": "Paragraf",
+   "alt": "Öncüllü Ulaşılabilir Yargılar",
+   "fikir": "Her öncül ayrı ayrı parçayla sınanır: parçadan çıkarılabilen yargıya ulaşılır; parçada olmayan, abartılan ya da parçayla çelişen yargıya ulaşılamaz. Sonra doğru öncüllerin birleşimi şıklarda aranır.",
+   "tuzak": "Öncüllerden birini ezbere doğru saymak; akla yatkın ama parçada olmayan yargıyı doğru kabul etmek; şıktaki birleşimi eksik okumak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "pab-oncullu",
+   "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: yargılardan hangilerine ulaşılabilir)"
+  },
+  {
+   "id": "K-PAB-04",
+   "konu": "Paragraf",
+   "alt": "Söylenebilir",
+   "fikir": "Parçadan doğrudan çıkarılabilen tek yargıyı bulmak; yanlış şıklar parçaya terstir, parçada yoktur ya da parçayı abartır.",
+   "tuzak": "Parçada olmayan ama doğru bilinen bir yargıyı seçmek; “her, hiç, yalnızca” gibi sözcüklerle abartılmış şıkka kanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "pab-soylenebilir",
+   "tip": "Parçadan söylenebilecek yargı",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: söylenebilir)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pab-ulasilamaz",
+   "ad": "Parçadan ulaşılamayan yargı",
+   "kartlar": [
+    "K-PAB-01"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pab-degenilmemis",
+   "ad": "Parçada değinilmeyen nokta",
+   "kartlar": [
+    "K-PAB-02"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pab-oncullu",
+   "ad": "Öncüllü yargılardan hangilerine ulaşılabilir",
+   "kartlar": [
+    "K-PAB-03"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pab-soylenebilir",
+   "ad": "Parçadan söylenebilecek yargı",
+   "kartlar": [
+    "K-PAB-04"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  }
+ ]
+}

@@ -1,0 +1,306 @@
+[
+ {
+  "id": "tytcog-harita-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Harita Bilgisi · Ölçek ve uzunluk",
+  "k": "cog|Harita Bilgisi",
+  "kazanim": "Kesir ölçekten gerçek uzaklığı hesaplar.",
+  "tipId": "cg-harita-olcek",
+  "tip": "Ölçekten gerçek uzaklık hesabı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Ölçeği 1/2.000.000 olan bir haritada iki kent arasındaki uzaklık 4,5 cm ölçülmüştür.\nBuna göre bu iki kent arasındaki gerçek uzaklık kaç km’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "45",
+   "C": "90",
+   "D": "180",
+   "E": "900"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "Santimetreyi kilometreye çevirirken bir sıfır fazla atmak.",
+   "B": "Ölçeği 1/1.000.000 sanmak.",
+   "D": "Haritadaki uzaklığı iki katı (9 cm) almak.",
+   "E": "Santimetreyi kilometreye çevirirken bir sıfırı atlamak."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İki kent arasındaki gerçek uzaklık (km).",
+  "bilgi": [
+   {
+    "ad": "Ölçek",
+    "ifade": "Kesir ölçek 1/50.000: haritada 1 cm, gerçekte 50.000 cm = 500 m’dir. Gerçek uzaklık = harita uzaklığı × payda. 100.000 cm = 1 km"
+   }
+  ],
+  "ipuclari": [
+   "Haritadaki uzunluğu ölçek paydasıyla çarp, sonra cm’yi km’ye çevir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçeği oku",
+    "aciklama": "1/2.000.000: haritada 1 cm gerçekte 2.000.000 cm’dir.",
+    "islem": "1 cm → 2.000.000 cm"
+   },
+   {
+    "baslik": "Gerçek uzaklık",
+    "aciklama": "Haritadaki uzaklık ölçek paydasıyla çarpılır.",
+    "islem": "4,5 × 2.000.000 = 9.000.000 cm"
+   },
+   {
+    "baslik": "Km’ye çevir",
+    "aciklama": "100.000 cm = 1 km.",
+    "islem": "9.000.000 ÷ 100.000 = 90 km"
+   }
+  ],
+  "puf": "Gerçek uzaklık cm cinsinden bulunur; kilometre için 5 sıfır atılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGHR-01 (Ölçek ve uzunluk) · kesir ölçekten uzaklık",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-harita-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Harita Bilgisi · Harita projeksiyonları",
+  "k": "cog|Harita Bilgisi",
+  "kazanim": "Harita projeksiyonlarının özelliklerini ve kullanım alanlarını bilir.",
+  "tipId": "cg-harita-proj",
+  "tip": "Projeksiyon türleri ve bozulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Harita projeksiyonları ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Konik projeksiyon, kutup bölgelerinin haritasını çizmek için en uygun yöntemdir.",
+   "B": "Silindir projeksiyonda bozulma, Ekvator’dan kutuplara doğru artar.",
+   "C": "Düzlem projeksiyon, orta enlemlerdeki ülkelerin haritasını çizmek için en uygun yöntemdir.",
+   "D": "Silindir projeksiyonda Ekvator’dan uzaklaştıkça bozulma azalır.",
+   "E": "Küre yüzeyini düzleme aktarırken hiçbir projeksiyonda bozulma olmaz."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Silindir projeksiyonda bozulma, Ekvator’dan kutuplara doğru artar."
+  },
+  "celdiriciler": {
+   "A": "Kutup bölgeleri için düzlem projeksiyon uygundur; konik projeksiyon orta enlemlerde kullanılır.",
+   "C": "Orta enlemler için konik projeksiyon uygundur; düzlem projeksiyon kutuplar içindir.",
+   "D": "Tersi doğrudur: silindir projeksiyonda bozulma Ekvator’dan kutuplara doğru artar.",
+   "E": "Küre düzleme tam olarak açılamaz; her projeksiyonda bir miktar bozulma olur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifade.",
+  "bilgi": [
+   {
+    "ad": "Projeksiyon",
+    "ifade": "Küre yüzeyi düzleme aktarılırken bozulma kaçınılmazdır. Silindir: Ekvator çevresi iyi, kutuplara doğru bozulma artar · Konik: orta enlemlerdeki ülkeler · Düzlem: kutup bölgeleri"
+   }
+  ],
+  "ipuclari": [
+   "Her projeksiyonun hangi bölge için uygun olduğunu ve bozulmanın nerede arttığını hatırla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilgiyi hatırla",
+    "aciklama": "Silindir: Ekvator çevresi, konik: orta enlemler, düzlem: kutuplar için uygundur.",
+    "islem": "silindir–Ekvator · konik–orta enlem · düzlem–kutup"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "Konik ve düzlem için verilen kullanım alanları yer değiştirmiştir. Bozulmanın hiç olmadığı bir projeksiyon yoktur.",
+    "islem": "A, C, E: yanlış"
+   },
+   {
+    "baslik": "Bozulma yönü",
+    "aciklama": "Silindirde Ekvator’dan uzaklaştıkça bozulma artar.",
+    "islem": "B: doğru · D: yanlış"
+   }
+  ],
+  "puf": "Silindir Ekvator’a, konik orta enlemlere, düzlem kutuplara uygundur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGHR-02 (Harita projeksiyonları) · projeksiyon ifadeleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-harita-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Harita Bilgisi · Eş yükselti ve eğim",
+  "k": "cog|Harita Bilgisi",
+  "kazanim": "Eş yükselti haritasında iki nokta arasındaki eğimi hesaplar.",
+  "tipId": "cg-harita-egim",
+  "tip": "Eş yükselti eğrisinden eğim hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Ölçeği 1/25.000 olan bir haritada, eş yükselti eğrileri şekilde verilen tepe üzerindeki A ve B noktaları arasındaki doğrusal uzaklık 4 cm ölçülmüştür.\nBuna göre A ile B arasındaki ortalama eğim yüzde kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 320 208\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><ellipse cx=\"160\" cy=\"108\" rx=\"110\" ry=\"70\" stroke-width=\"1.8\" style=\"fill:currentColor;fill-opacity:.05\"/><ellipse cx=\"160\" cy=\"108\" rx=\"82\" ry=\"52\" stroke-width=\"1.8\" style=\"fill:currentColor;fill-opacity:.05\"/><ellipse cx=\"160\" cy=\"108\" rx=\"54\" ry=\"35\" stroke-width=\"1.8\" style=\"fill:currentColor;fill-opacity:.05\"/><ellipse cx=\"160\" cy=\"108\" rx=\"26\" ry=\"17\" stroke-width=\"1.8\" style=\"fill:currentColor;fill-opacity:.05\"/><line x1=\"50\" y1=\"108\" x2=\"134\" y2=\"108\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"64.0\" y=\"121.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">100</text><text x=\"92.0\" y=\"121.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">200</text><text x=\"121.0\" y=\"121.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">300</text><text x=\"160.0\" y=\"112.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">400</text><circle cx=\"50\" cy=\"108\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"134\" cy=\"108\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><text x=\"41.0\" y=\"112.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">A</text><text x=\"130.0\" y=\"99.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">B</text><text x=\"160.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Eş yükselti eğrileri (m)</text><text x=\"160.0\" y=\"200.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Şekil ölçekli değildir</text></svg>",
+  "siklar": {
+   "A": "0,3",
+   "B": "10",
+   "C": "15",
+   "D": "30",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Eğim formülündeki 100 ile çarpmayı unutmak (300 ÷ 1000 = 0,3).",
+   "B": "Yükselti farkı yerine tek bir eğri aralığını (100 m) kullanmak.",
+   "C": "Ölçeği 1/50.000 alıp yatay uzaklığı 2 km bulmak.",
+   "E": "Yükselti farkı yerine B’nin yüksekliğini (400 m) almak."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "A ile B arasındaki ortalama eğim (%).",
+  "bilgi": [
+   {
+    "ad": "Ölçek",
+    "ifade": "Kesir ölçek 1/50.000: haritada 1 cm, gerçekte 50.000 cm = 500 m’dir. Gerçek uzaklık = harita uzaklığı × payda. 100.000 cm = 1 km"
+   },
+   {
+    "ad": "Eğim",
+    "ifade": "Eş yükselti eğrileri aynı yükseltideki noktaları birleştirir. Eğim (%) = yükselti farkı × 100 ÷ yatay uzaklık. Örnek: 1000 m’de 100 m yükselen yamaç %10 eğimlidir"
+   }
+  ],
+  "ipuclari": [
+   "Şekilden A ve B’nin yüksekliğini oku, haritadaki uzaklığı ölçekle metreye çevir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yükselti farkı",
+    "aciklama": "A, 100 m’lik; B, 400 m’lik eğri üzerindedir.",
+    "islem": "400 − 100 = 300 m"
+   },
+   {
+    "baslik": "Yatay uzaklık",
+    "aciklama": "4 cm × 25.000 = 100.000 cm.",
+    "islem": "100.000 cm = 1000 m"
+   },
+   {
+    "baslik": "Eğimi bul",
+    "aciklama": "Eğim = yükselti farkı × 100 ÷ yatay uzaklık.",
+    "islem": "300 × 100 ÷ 1000 = %30"
+   }
+  ],
+  "puf": "Eğimde önce yükselti farkını, sonra yatay uzaklığı metreye çevir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGHR-03 (Eş yükselti ve eğim) · eş yükselti şekli ve ölçek",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-harita-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Harita Bilgisi · Ölçek ve alan",
+  "k": "cog|Harita Bilgisi",
+  "kazanim": "Ölçek değiştiğinde harita üzerindeki alanın nasıl değiştiğini hesaplar.",
+  "tipId": "cg-harita-alan",
+  "tip": "Ölçek değişince alanın değişimi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "1/50.000 ölçekli bir haritada 12 cm² yer kaplayan bir göl, aynı gölü gösteren 1/200.000 ölçekli haritada kaç cm² yer kaplar?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,75",
+   "B": "3",
+   "C": "12",
+   "D": "48",
+   "E": "192"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "0,75"
+  },
+  "celdiriciler": {
+   "B": "Alanı yalnız uzunluk oranıyla (4) bölmek; alan oranı 4² = 16’dır.",
+   "C": "Alanın ölçekten bağımsız olduğunu sanmak.",
+   "D": "Küçük ölçekte alanın büyüyeceğini sanıp 4 ile çarpmak.",
+   "E": "Alanı 16 ile çarpmak; ölçek küçüldüğünde alan azalır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Gölün 1/200.000 ölçekli haritadaki alanı (cm²).",
+  "bilgi": [
+   {
+    "ad": "Ölçek ve alan",
+    "ifade": "Uzunluklar k kat küçülürse alanlar k² kat küçülür. Örnek: ölçek paydası 2 kat artarsa harita üzerindeki alan 4 kat azalır"
+   },
+   {
+    "ad": "Ölçek",
+    "ifade": "Kesir ölçek 1/50.000: haritada 1 cm, gerçekte 50.000 cm = 500 m’dir. Gerçek uzaklık = harita uzaklığı × payda. 100.000 cm = 1 km"
+   }
+  ],
+  "ipuclari": [
+   "Ölçek paydası 4 kat artınca uzunluklar 4 kat küçülür; alan için bunun karesini al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uzunluk oranı",
+    "aciklama": "Payda 50.000’den 200.000’e çıkar.",
+    "islem": "200.000 ÷ 50.000 = 4 kat küçülme"
+   },
+   {
+    "baslik": "Alan oranı",
+    "aciklama": "Alan, uzunluğun karesi gibi değişir.",
+    "islem": "4² = 16 kat küçülme"
+   },
+   {
+    "baslik": "Yeni alan",
+    "aciklama": "Eski alanı 16’ya böl.",
+    "islem": "12 ÷ 16 = 0,75 cm²"
+   }
+  ],
+  "puf": "Ölçek k kat küçülürse harita üzerindeki alan k² kat küçülür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGHR-04 (Ölçek ve alan) · alan–ölçek ilişkisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

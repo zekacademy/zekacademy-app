@@ -1,0 +1,93 @@
+{
+ "konu": "Ekonomik Faaliyetler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGEK-01",
+   "konu": "Ekonomik Faaliyetler",
+   "alt": "Faaliyet grupları",
+   "fikir": "Birincil: doğadan doğrudan ürün alma; ikincil: işleme; üçüncül: hizmet.",
+   "tuzak": "Konserve üretimi gibi işlemeyi birincil saymak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "cg-ekonomi-grup",
+   "tip": "Ekonomik faaliyet grupları",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGEK-02",
+   "konu": "Ekonomik Faaliyetler",
+   "alt": "Doğal koşullar ve faaliyet",
+   "fikir": "Geniş otlaklar hayvancılığı, kıyı balıkçılığı, karlı dağ kış turizmini destekler.",
+   "tuzak": "Koşulla çelişen faaliyeti seçmek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-ekonomi-dogal",
+   "tip": "Doğal koşulların ekonomiye etkisi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGEK-03",
+   "konu": "Ekonomik Faaliyetler",
+   "alt": "Hayvancılık biçimleri",
+   "fikir": "Entansif hayvancılık ahırda, yemle, denetimli ve verimlidir; ekstansif geniş meralarda, az masrafla yapılır.",
+   "tuzak": "İki biçimi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-ekonomi-hayvan",
+   "tip": "Entansif hayvancılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGEK-04",
+   "konu": "Ekonomik Faaliyetler",
+   "alt": "Sektörel çalışan sayısı",
+   "fikir": "Çalışan sayısı = toplam çalışan × sektör payı; ülkeler sayı ve oran açısından karşılaştırılır.",
+   "tuzak": "Yüzdeyi sayı sanmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "cg-ekonomi-sektor",
+   "tip": "Sektörlere göre çalışan dağılımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-ekonomi-grup",
+   "ad": "Ekonomik faaliyet grupları",
+   "kartlar": [
+    "K-CGEK-01"
+   ],
+   "uygulamaKonu": "cog|Ekonomik Faaliyetler"
+  },
+  {
+   "tipId": "cg-ekonomi-dogal",
+   "ad": "Doğal koşulların ekonomiye etkisi",
+   "kartlar": [
+    "K-CGEK-02"
+   ],
+   "uygulamaKonu": "cog|Ekonomik Faaliyetler"
+  },
+  {
+   "tipId": "cg-ekonomi-hayvan",
+   "ad": "Entansif hayvancılık",
+   "kartlar": [
+    "K-CGEK-03"
+   ],
+   "uygulamaKonu": "cog|Ekonomik Faaliyetler"
+  },
+  {
+   "tipId": "cg-ekonomi-sektor",
+   "ad": "Sektörlere göre çalışan dağılımı",
+   "kartlar": [
+    "K-CGEK-04"
+   ],
+   "uygulamaKonu": "cog|Ekonomik Faaliyetler"
+  }
+ ]
+}

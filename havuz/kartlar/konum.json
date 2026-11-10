@@ -1,0 +1,92 @@
+{
+ "konu": "Coğrafi Konum",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-CGKN-01",
+   "alt": "Matematik ve özel konum",
+   "fikir": "Matematik konum enlem–boylam ile, özel konum çevredeki denizler, kıtalar ve yollarla ilgilidir; sonuçları ayrı ayrı düşünülür.",
+   "tuzak": "Güneş ışınları ve mevsim sonuçlarını özel konuma yazmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-konum-ozel",
+   "tip": "Matematik ve özel konum ayrımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (konum, koordinat) · MEB 9. sınıf",
+   "konu": "Coğrafi Konum"
+  },
+  {
+   "id": "K-CGKN-02",
+   "alt": "Türkiye’nin matematik konumu",
+   "fikir": "Uç paralel ve meridyenlerden uzaklık (1° enlem = 111 km) ve yerel saat farkı (1° boylam = 4 dakika) çıkarılır.",
+   "tuzak": "Enlem farkını boylam farkıyla karıştırmak; güneş ışınlarının dik geleceğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-konum-turkiye",
+   "tip": "Türkiye’nin matematik konumu yorumu",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (konum, koordinat) · MEB 9. sınıf",
+   "konu": "Coğrafi Konum"
+  },
+  {
+   "id": "K-CGKN-03",
+   "alt": "Yerel saat",
+   "fikir": "Boylam farkı × 4 dakika = saat farkı; doğuya gidildikçe saat ileridir.",
+   "tuzak": "Ayrı yarımkürelerdeki boylamları çıkarmak; yönü ters almak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-konum-saat",
+   "tip": "Yerel saat hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (konum, koordinat) · MEB 9. sınıf",
+   "konu": "Coğrafi Konum"
+  },
+  {
+   "id": "K-CGKN-04",
+   "alt": "Saatten boylam bulma",
+   "fikir": "Saat farkı dakikaya çevrilir, 4’e bölünüp boylam farkı bulunur; yön saatten çıkarılır.",
+   "tuzak": "Saat farkını ondalık yazmak (3 saat 20 dk ≠ 3,2 saat); batı–doğu yönünü karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "cg-konum-boylam",
+   "tip": "Yerel saatten boylam bulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya (konum, koordinat) · MEB 9. sınıf",
+   "konu": "Coğrafi Konum"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-konum-ozel",
+   "ad": "Matematik ve özel konum ayrımı",
+   "kartlar": [
+    "K-CGKN-01"
+   ],
+   "uygulamaKonu": "cog|Coğrafi Konum"
+  },
+  {
+   "tipId": "cg-konum-turkiye",
+   "ad": "Türkiye’nin matematik konumu yorumu",
+   "kartlar": [
+    "K-CGKN-02"
+   ],
+   "uygulamaKonu": "cog|Coğrafi Konum"
+  },
+  {
+   "tipId": "cg-konum-saat",
+   "ad": "Yerel saat hesabı",
+   "kartlar": [
+    "K-CGKN-03"
+   ],
+   "uygulamaKonu": "cog|Coğrafi Konum"
+  },
+  {
+   "tipId": "cg-konum-boylam",
+   "ad": "Yerel saatten boylam bulma",
+   "kartlar": [
+    "K-CGKN-04"
+   ],
+   "uygulamaKonu": "cog|Coğrafi Konum"
+  }
+ ]
+}

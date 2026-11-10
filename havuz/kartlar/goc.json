@@ -1,0 +1,135 @@
+{
+ "konu": "Göç",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGGC-01",
+   "konu": "Göç",
+   "alt": "Göç türleri",
+   "fikir": "Göçler ülke sınırına göre iç/dış sınıflanır; örnekte kişinin ülke içinde mi dışında mı yer değiştirdiğine bakılır.",
+   "tuzak": "Yurt dışı göçü iç göç saymak; mevsimlik göçü ülke dışı sanmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "cg-goc-tur",
+   "tip": "Göç türlerini ayırt etme",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGGC-02",
+   "konu": "Göç",
+   "alt": "İtici ve çekici etkenler",
+   "fikir": "Göç verilen yerdeki olumsuzluklar itici, göç alan yerdeki olanaklar çekici etkendir.",
+   "tuzak": "İtici ve çekici etkenleri karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-goc-neden",
+   "tip": "İtici ve çekici etkenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGGC-03",
+   "konu": "Göç",
+   "alt": "Göçün sonuçları",
+   "fikir": "Sürekli göç veren yerde genç nüfus azalır, arazi boş kalır; göç alan yerde konut, altyapı, işsizlik sorunları artar.",
+   "tuzak": "Göç alan yerin sorunlarını göç veren yere yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-goc-sonuc",
+   "tip": "Göç veren bölgedeki sonuçlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGGC-04",
+   "konu": "Göç",
+   "alt": "Net göç",
+   "fikir": "Net göç = alınan göç − verilen göç; pozitifse göç kazancı, negatifse göç kaybı vardır.",
+   "tuzak": "En çok göç alanı net göçü en fazla sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "cg-goc-net",
+   "tip": "Net göç sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGGC-05",
+   "konu": "Göç",
+   "alt": "Göçü çok ölçütle sınıflandırma",
+   "fikir": "Göç yer (iç/dış), isteğe bağlılık (gönüllü/zorunlu) ve süre (geçici/kalıcı) ölçütleriyle birlikte değerlendirilir.",
+   "tuzak": "Üç ölçütten birini atlamak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "cg-goc-ciftsinif",
+   "tip": "Çok ölçütlü göç sınıflaması",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGGC-06",
+   "konu": "Göç",
+   "alt": "Net göç ve nüfus değişimi",
+   "fikir": "Yıl sonu nüfusu = başlangıç nüfusu + doğal artış + net göç.",
+   "tuzak": "Net göçü ya da doğal artışı atlamak; işareti karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "cg-goc-nufusdeg",
+   "tip": "Doğal artış ve net göçle nüfus değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-goc-tur",
+   "ad": "Göç türlerini ayırt etme",
+   "kartlar": [
+    "K-CGGC-01"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  },
+  {
+   "tipId": "cg-goc-neden",
+   "ad": "İtici ve çekici etkenler",
+   "kartlar": [
+    "K-CGGC-02"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  },
+  {
+   "tipId": "cg-goc-sonuc",
+   "ad": "Göç veren bölgedeki sonuçlar",
+   "kartlar": [
+    "K-CGGC-03"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  },
+  {
+   "tipId": "cg-goc-net",
+   "ad": "Net göç sayısı",
+   "kartlar": [
+    "K-CGGC-04"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  },
+  {
+   "tipId": "cg-goc-ciftsinif",
+   "ad": "Çok ölçütlü göç sınıflaması",
+   "kartlar": [
+    "K-CGGC-05"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  },
+  {
+   "tipId": "cg-goc-nufusdeg",
+   "ad": "Doğal artış ve net göçle nüfus değişimi",
+   "kartlar": [
+    "K-CGGC-06"
+   ],
+   "uygulamaKonu": "cog|Göç"
+  }
+ ]
+}

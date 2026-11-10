@@ -1,0 +1,92 @@
+{
+ "konu": "Nem, Yağış ve Buharlaşma",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-NEM-01",
+   "konu": "Nem, Yağış ve Buharlaşma",
+   "alt": "Yağış türleri",
+   "fikir": "Yağışlar oluşumuna göre konveksiyonel, yamaç ve cephe yağışı olarak ayrılır; yükselme nedeni ayırt edicidir.",
+   "tuzak": "Yağış şeklini (dolu, kar) oluşum türü sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-nem-tur",
+   "tip": "Yağış türleri",
+   "kaynak": "ÖSYM 2018–2026 (nem, yağış türleri, buharlaşma) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-NEM-02",
+   "konu": "Nem, Yağış ve Buharlaşma",
+   "alt": "Nem ve yoğunlaşma hesabı",
+   "fikir": "Soğuyan havanın taşıyabileceği buhar miktarı azalır; mutlak nem kapasiteyi aşan kısım yoğunlaşır.",
+   "tuzak": "Kapasite farkını yoğunlaşan miktar sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "cg-nem-hesap",
+   "tip": "Yoğunlaşma miktarı hesabı",
+   "kaynak": "ÖSYM 2018–2026 (nem, yağış türleri, buharlaşma) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-NEM-03",
+   "konu": "Nem, Yağış ve Buharlaşma",
+   "alt": "Buharlaşmayı etkileyen etkenler",
+   "fikir": "Sıcaklık ve yüzey genişliği buharlaşmayı artırır; havanın bağıl neminin yüksek olması azaltır.",
+   "tuzak": "Nemli havada buharlaşmanın arttığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-nem-buharlasma",
+   "tip": "Buharlaşmayı etkileyen etkenler",
+   "kaynak": "ÖSYM 2018–2026 (nem, yağış türleri, buharlaşma) · MEB 9. sınıf coğrafya"
+  },
+  {
+   "id": "K-NEM-04",
+   "konu": "Nem, Yağış ve Buharlaşma",
+   "alt": "Yamaç yağışı ve yağmur gölgesi",
+   "fikir": "Rüzgârüstünde yükselen hava yağış bırakır; rüzgâraltında alçalırken ısınır, bağıl nemi azalır ve yağış azdır.",
+   "tuzak": "Alçalan havanın soğuduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-nem-yamac",
+   "tip": "Yamaç yağışı ve rüzgâraltı (şekil)",
+   "kaynak": "ÖSYM 2018–2026 (nem, yağış türleri, buharlaşma) · MEB 9. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-nem-tur",
+   "ad": "Yağış türleri",
+   "kartlar": [
+    "K-NEM-01"
+   ],
+   "uygulamaKonu": "cog|Nem, Yağış ve Buharlaşma"
+  },
+  {
+   "tipId": "cg-nem-hesap",
+   "ad": "Yoğunlaşma miktarı hesabı",
+   "kartlar": [
+    "K-NEM-02"
+   ],
+   "uygulamaKonu": "cog|Nem, Yağış ve Buharlaşma"
+  },
+  {
+   "tipId": "cg-nem-buharlasma",
+   "ad": "Buharlaşmayı etkileyen etkenler",
+   "kartlar": [
+    "K-NEM-03"
+   ],
+   "uygulamaKonu": "cog|Nem, Yağış ve Buharlaşma"
+  },
+  {
+   "tipId": "cg-nem-yamac",
+   "ad": "Yamaç yağışı ve rüzgâraltı (şekil)",
+   "kartlar": [
+    "K-NEM-04"
+   ],
+   "uygulamaKonu": "cog|Nem, Yağış ve Buharlaşma"
+  }
+ ]
+}

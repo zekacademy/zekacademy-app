@@ -1,0 +1,135 @@
+{
+ "konu": "Bölgeler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGBL-01",
+   "konu": "Bölgeler",
+   "alt": "Bölge türleri",
+   "fikir": "Şekilsel bölge tek ya da birkaç unsurun türdeşliğine, işlevsel bölge merkeze bağlı ilişkiye dayanır.",
+   "tuzak": "İşlevsel bir hizmet alanını şekilsel saymak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "cg-bolge-tur",
+   "tip": "Şekilsel ve işlevsel bölge",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGBL-02",
+   "konu": "Bölgeler",
+   "alt": "Bölgenin özellikleri",
+   "fikir": "Bölge ölçüte göre belirlenir; sınırlar ölçüt ve amaca göre değişir, doğal da beşerî de ölçüt olabilir.",
+   "tuzak": "Bölgelerin yalnız doğal ölçüte dayandığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-bolge-olcut",
+   "tip": "Bölgenin genel özellikleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGBL-03",
+   "konu": "Bölgeler",
+   "alt": "İşlevsel bölge",
+   "fikir": "İşlevsel bölgede çevre alanlar bir merkeze akışlarla bağlıdır ve merkezden yönetilir.",
+   "tuzak": "Bölge türünü yalnız doğal özelliklere bakarak belirlemek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "cg-bolge-islevsel",
+   "tip": "İşlevsel bölgeyi tanıma",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGBL-04",
+   "konu": "Bölgeler",
+   "alt": "Algısal bölge",
+   "fikir": "Algısal bölge, insanların zihnindeki imgeye dayanır; sınırı kişiye göre değişir.",
+   "tuzak": "Algısal bölgeyi ölçülebilir verilerle çizilen bölge sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "cg-bolge-algisal",
+   "tip": "Algısal bölgeyi tanıma",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGBL-05",
+   "konu": "Bölgeler",
+   "alt": "Ölçüte göre bölge sınırı",
+   "fikir": "Bölge sınırı ölçütlere göre çizilir; iki ölçütün birlikte sağlandığı alan kesişimdir.",
+   "tuzak": "Kesişim yerine birleşimi ya da tek ölçütü almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-bolge-izgara",
+   "tip": "Ölçüte göre bölge sınırı çizme",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGBL-06",
+   "konu": "Bölgeler",
+   "alt": "Bölge türlerini birlikte ayırma",
+   "fikir": "Bir örnekte ölçütün ne olduğuna bakılarak şekilsel, işlevsel ya da algısal tür belirlenir.",
+   "tuzak": "Merkezli hizmet alanlarını şekilsel saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "cg-bolge-uclu",
+   "tip": "Dört bölgeyi türlerine ayırma",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-bolge-tur",
+   "ad": "Şekilsel ve işlevsel bölge",
+   "kartlar": [
+    "K-CGBL-01"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  },
+  {
+   "tipId": "cg-bolge-olcut",
+   "ad": "Bölgenin genel özellikleri",
+   "kartlar": [
+    "K-CGBL-02"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  },
+  {
+   "tipId": "cg-bolge-islevsel",
+   "ad": "İşlevsel bölgeyi tanıma",
+   "kartlar": [
+    "K-CGBL-03"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  },
+  {
+   "tipId": "cg-bolge-algisal",
+   "ad": "Algısal bölgeyi tanıma",
+   "kartlar": [
+    "K-CGBL-04"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  },
+  {
+   "tipId": "cg-bolge-izgara",
+   "ad": "Ölçüte göre bölge sınırı çizme",
+   "kartlar": [
+    "K-CGBL-05"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  },
+  {
+   "tipId": "cg-bolge-uclu",
+   "ad": "Dört bölgeyi türlerine ayırma",
+   "kartlar": [
+    "K-CGBL-06"
+   ],
+   "uygulamaKonu": "cog|Bölgeler"
+  }
+ ]
+}

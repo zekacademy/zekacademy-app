@@ -1,0 +1,120 @@
+{
+ "konu": "Paragraf",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-PYAR-01",
+   "konu": "Paragraf",
+   "alt": "Ulaşılamayan Yargı",
+   "fikir": "Dört şıkkı parçadaki karşılıklarıyla eşleyip karşılığı olmayan ya da parçayla çelişen yargıyı bulmak.",
+   "tuzak": "Soru kökünü olumlu okuyup parçada var olan şıkkı seçmek; çelişkiyi fark etmemek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-ulasilamaz",
+   "tip": "Parçadan ulaşılamayan yargı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  },
+  {
+   "id": "K-PYAR-02",
+   "konu": "Paragraf",
+   "alt": "Dolaylı Anlatılan Yargılar",
+   "fikir": "Parçadaki bilgilerin şıklarda başka sözcüklerle ifade edildiğini görüp yanlış ya da aşırı genellenmiş yargıyı ayırmak.",
+   "tuzak": "Şıkta sözcük birebir geçmediği için doğru yargıyı yanlış sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "prg-ulasilamaz",
+   "tip": "Parçadan ulaşılamayan yargı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  },
+  {
+   "id": "K-PYAR-03",
+   "konu": "Paragraf",
+   "alt": "Parçada Geçmeyen Konu",
+   "fikir": "Şıklardaki konuların her birinin parçada işlenip işlenmediğini sırayla denetleyip hiç geçmeyeni bulmak.",
+   "tuzak": "Konuya yakın, doğru bilgiyi parçada varmış gibi sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-deginilmemis",
+   "tip": "Parçada değinilmeyen konu",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  },
+  {
+   "id": "K-PYAR-04",
+   "konu": "Paragraf",
+   "alt": "Dolaylı Değinilen Konular",
+   "fikir": "Parçada tek cümleyle ya da dolaylı biçimde geçen konuları fark edip gerçekten hiç geçmeyeni ayırmak.",
+   "tuzak": "Yan cümlede geçen bir konuyu değinilmemiş sanmak; doğru bilgiyi parçada var saymak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "prg-deginilmemis",
+   "tip": "Parçada değinilmeyen konu",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  },
+  {
+   "id": "K-PYAR-05",
+   "konu": "Paragraf",
+   "alt": "Söylenemeyen Yargı",
+   "fikir": "Parçanın destekleyemediği ya da tersini söylediği yargıyı, desteklenen dört yargıdan ayırmak.",
+   "tuzak": "Aşırı genelleme (yalnızca, tek yol, hiç) içeren şıkkı gözden kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-soylenemez",
+   "tip": "Parçaya göre söylenemeyen yargı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  },
+  {
+   "id": "K-PYAR-06",
+   "konu": "Paragraf",
+   "alt": "Kesin Çıkarım",
+   "fikir": "Parçadaki bilgilerden mantıksal olarak çıkan tek yargıyı, akla yatkın ama parçada dayanağı olmayan yargılardan ayırmak.",
+   "tuzak": "Parçanın söylemediği ama doğru görünen genellemeyi çıkarım saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "prg-cikarilabilir",
+   "tip": "Parçadan ulaşılabilen / çıkarılabilen yargı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Paraf İQ · Sıfır Risk (paragrafta anlam: olumsuz kökler)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "prg-ulasilamaz",
+   "ad": "Parçadan ulaşılamayan yargı",
+   "kartlar": [
+    "K-PYAR-01",
+    "K-PYAR-02"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-deginilmemis",
+   "ad": "Parçada değinilmeyen konu",
+   "kartlar": [
+    "K-PYAR-03",
+    "K-PYAR-04"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-soylenemez",
+   "ad": "Parçaya göre söylenemeyen yargı",
+   "kartlar": [
+    "K-PYAR-05"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "prg-cikarilabilir",
+   "ad": "Parçadan ulaşılabilen / çıkarılabilen yargı",
+   "kartlar": [
+    "K-PYAR-06"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  }
+ ]
+}

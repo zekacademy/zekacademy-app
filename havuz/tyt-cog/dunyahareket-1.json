@@ -1,0 +1,320 @@
+[
+ {
+  "id": "tytcog-dunyahareket-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Dünya’nın Şekli ve Hareketleri · Günlük ve yıllık hareketin sonuçları",
+  "k": "cog|Dünya’nın Şekli ve Hareketleri",
+  "kazanim": "Dünya’nın günlük hareketinin sonuçlarını yıllık hareketin sonuçlarından ayırır.",
+  "tipId": "cg-dnh-sonuc",
+  "tip": "Günlük hareketin sonuçları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisi Dünya’nın kendi ekseni etrafındaki dönüşünün (günlük hareketin) sonuçlarından biridir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Mevsimlerin oluşması",
+   "B": "Gece ile gündüzün oluşması",
+   "C": "Gece ve gündüz sürelerinin yıl boyunca değişmesi",
+   "D": "Kutup bölgelerinde altı ay süren gece ve gündüz",
+   "E": "Güneş ışınlarının geliş açısının yıl boyunca değişmesi"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Gece ile gündüzün oluşması"
+  },
+  "celdiriciler": {
+   "A": "Mevsimler Dünya’nın Güneş etrafındaki dolanımı ve eksen eğikliğinin sonucudur; yıllık harekete bağlıdır.",
+   "C": "Süre farkları eksen eğikliği ve yıllık hareketle ilgilidir; günlük hareket yalnızca gece-gündüzü doğurur.",
+   "D": "Bu durum eksen eğikliğiyle yıllık hareketin birleşmesinden doğar.",
+   "E": "Geliş açısının yıl içinde değişmesi yıllık hareketin sonucudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Günlük hareketin sonucu.",
+  "bilgi": [
+   {
+    "ad": "Günlük hareket (dönme)",
+    "ifade": "Dünya’nın kendi ekseni etrafında dönmesi, 24 saat sürer · sonuçları: gece-gündüz oluşumu, yerel saat farkları, rüzgâr ve akıntıların sapması"
+   },
+   {
+    "ad": "Yıllık hareket (dolanma)",
+    "ifade": "Güneş etrafındaki dolanım, 365 gün 6 saat sürer · sonuçları: mevsimler, gece-gündüz sürelerinin değişmesi, ışınların geliş açısının değişmesi"
+   }
+  ],
+  "ipuclari": [
+   "Dünya’nın kendi çevresinde dönmesi 24 saatte bir tur sürer; hangi olay her gün tekrar eder?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hareketleri ayır",
+    "aciklama": "Dönme günlük, dolanma yıllık harekettir. Her harekete ait sonuçlar farklıdır.",
+    "islem": "dönme: günlük · dolanma: yıllık"
+   },
+   {
+    "baslik": "Şıkları sınıflandır",
+    "aciklama": "Mevsimler, süre değişimi, altı aylık gece-gündüz ve geliş açısı değişimi yıllık harekete bağlıdır.",
+    "islem": "A, C, D, E: yıllık"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız gece ile gündüzün oluşması günlük harekete bağlıdır.",
+    "islem": "B: günlük"
+   }
+  ],
+  "puf": "Her gün tekrar eden olay günlük harekete, yıl boyunca değişen olay yıllık harekete aittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNH-01 (Günlük ve yıllık hareketin sonuçları) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-dunyahareket-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Dünya’nın Şekli ve Hareketleri · Güneş ışınlarının geliş açısı",
+  "k": "cog|Dünya’nın Şekli ve Hareketleri",
+  "kazanim": "Güneş ışınlarının öğle vakti geliş açısını hesaplar.",
+  "tipId": "cg-dnh-aci",
+  "tip": "Güneş ışınlarının geliş açısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "21 Haziran’da öğle vakti Güneş ışınları 23°27’ Kuzey paralelinde yere dik (90°) olarak düşer.\nBu tarihte, 40° Kuzey enleminde bulunan bir K şehrine öğle vakti Güneş ışınlarının geliş açısı kaç derecedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "16°33’",
+   "B": "26°33’",
+   "C": "50°",
+   "D": "66°33’",
+   "E": "73°27’"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "73°27’"
+  },
+  "celdiriciler": {
+   "A": "Enlem ile dönence arasındaki farkı (40° − 23°27’) geliş açısı sanmış; bu fark 90°’den çıkarılmalıdır.",
+   "B": "Enlem ile dönenceyi toplayıp (40° + 23°27’ = 63°27’) 90°’den çıkarmış (90° − 63°27’ = 26°33’); oysa dönence ile K aynı yarım kürededir, fark alınmalıdır.",
+   "C": "Güneş ışınlarının dönenceye dik geldiğini unutup ekvatora dik geliyormuş gibi hesaplamış (90° − 40°).",
+   "D": "Yalnız dönenceyi kullanmış (90° − 23°27’); K’nin enlemini hesaba katmamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "K şehrinde öğle vakti ışınların geliş açısı.",
+  "bilgi": [
+   {
+    "ad": "Geliş açısı",
+    "ifade": "öğle vakti Güneş ışınlarının yere düşme açısı = 90° − (enlem ile ışınların dik düştüğü paralel arasındaki fark) · 1° = 60’ (dakika)"
+   },
+   {
+    "ad": "Örnek",
+    "ifade": "Işınlar 20° K’ye dik düşerken 35° K’de açı: 90° − (35° − 20°) = 75°"
+   }
+  ],
+  "ipuclari": [
+   "Güneş ışınlarının dik geldiği paralel ile K’nin enlemi arasındaki farkı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Enlem farkını bul",
+    "aciklama": "K, dik düşen paralelin kuzeyindedir; fark çıkarılarak bulunur.",
+    "islem": "40° − 23°27’ = 16°33’"
+   },
+   {
+    "baslik": "Açıyı hesapla",
+    "aciklama": "Dik açıdan (90°) enlem farkı çıkarılır.",
+    "islem": "90° − 16°33’ = 73°27’"
+   },
+   {
+    "baslik": "Doğrula",
+    "aciklama": "Işınların dik düştüğü yere yaklaştıkça açı 90°’ye yaklaşır; 73°27’ makul bir değerdir.",
+    "islem": "73°27’ < 90°"
+   }
+  ],
+  "puf": "Geliş açısı = 90° − (enlem farkı); fark, ışınların dik düştüğü paralele göre hesaplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNH-02 (Güneş ışınlarının geliş açısı) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-dunyahareket-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Dünya’nın Şekli ve Hareketleri · Gündüz süresi",
+  "k": "cog|Dünya’nın Şekli ve Hareketleri",
+  "kazanim": "21 Haziran’da farklı enlemlerde gündüz süresini yorumlar.",
+  "tipId": "cg-dnh-gunduz",
+  "tip": "Gündüz süresi (21 Haziran)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "21 Haziran tarihinde Güneş ışınları öğle vakti Yengeç Dönencesi’ne (23°27’ K) dik düşer.\nI. 40° Kuzey enleminde gündüz süresi 12 saatten uzundur.\nII. 40° Güney enleminde gündüz süresi 12 saatten uzundur.\nIII. 70° Güney enleminde Güneş gün boyunca doğmaz.\nYukarıdaki ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III. ifade de koşulu sağlar ama seçenekte yok: Güney Kutup Dairesi’nin (66°33’G) güneyinde bu tarihte gece kesintisiz sürer.",
+   "B": "II. ifade koşulu sağlamaz: Güney Yarım Küre’de bu tarih kıştır; gündüzler 12 saatten kısadır. I. ifade de koşulu sağlar ama seçenekte yok: Güneş ışınları kuzey yarım küreye daha dik gelir; gündüzler uzundur. III. ifade de koşulu sağlar ama seçenekte yok: Güney Kutup Dairesi’nin (66°33’G) güneyinde bu tarihte gece kesintisiz sürer.",
+   "C": "I. ifade de koşulu sağlar ama seçenekte yok: Güneş ışınları kuzey yarım küreye daha dik gelir; gündüzler uzundur.",
+   "E": "II. ifade koşulu sağlamaz: Güney Yarım Küre’de bu tarih kıştır; gündüzler 12 saatten kısadır. I. ifade de koşulu sağlar ama seçenekte yok: Güneş ışınları kuzey yarım küreye daha dik gelir; gündüzler uzundur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadeler.",
+  "bilgi": [
+   {
+    "ad": "21 Haziran",
+    "ifade": "Güneş ışınları Yengeç Dönencesi’ne (23°27’K) dik gelir · Kuzey Yarım Küre’de yaz: gündüzler uzun · Güney Yarım Küre’de kış: gündüzler kısa · Güney Kutup Dairesi’nin güneyinde gün boyu gece"
+   }
+  ],
+  "ipuclari": [
+   "Haziran’da Güney Yarım Küre’de mevsim nedir? Gündüz süresi uzar mı kısalır mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Işınların konumunu bul",
+    "aciklama": "Işınlar kuzeye (23°27’K) dik düştüğü için kuzey yarım küre daha çok ısınır.",
+    "islem": "kuzey: yaz · güney: kış"
+   },
+   {
+    "baslik": "Gündüz sürelerini yorumla",
+    "aciklama": "Yazın gündüz uzun, kışın kısadır. Kutup dairesi ötesinde gün boyu gece vardır.",
+    "islem": "40°K: uzun · 40°G: kısa · 70°G: gece"
+   },
+   {
+    "baslik": "İfadeleri sına",
+    "aciklama": "I ve III doğrudur. II’de güneyde gündüz uzun denmiş; yanlıştır.",
+    "islem": "I: doğru · II: yanlış · III: doğru"
+   }
+  ],
+  "puf": "Haziran’da Kuzey’i yaz, Güney’i kış say; gündüz süreleri buna göre uzar ya da kısalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNH-03 (Gündüz süresi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-dunyahareket-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Dünya’nın Şekli ve Hareketleri · Yerel saat ve tarih değiştirme çizgisi",
+  "k": "cog|Dünya’nın Şekli ve Hareketleri",
+  "kazanim": "Tarih değiştirme çizgisini geçen iki yer arasında yerel saat ve tarih farkını bulur.",
+  "tipId": "cg-dnh-saat",
+  "tip": "Yerel saat ve tarih çizgisi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 5,
+  "metin": "K noktası 170° Doğu, L noktası 170° Batı boylamındadır. Yerel saatler esas alınmaktadır ve 180° meridyeni tarih değiştirme çizgisidir.\nK noktasında 21 Mart günü saat 02:00 iken L noktasında tarih ve saat aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20 Mart 03:20",
+   "B": "21 Mart 00:40",
+   "C": "21 Mart 03:20",
+   "D": "22 Mart 00:40",
+   "E": "20 Mart 04:00"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20 Mart 03:20"
+  },
+  "celdiriciler": {
+   "B": "Boylam farkını 340° yerine 20° alıp L’yi geride saymış (02:00 − 1 saat 20 dakika); tarih çizgisini de hesaba katmamış.",
+   "C": "Saati doğru bulmuş (03:20) ama doğuya giderken tarih çizgisi geçildiği halde tarihi bir gün geri almamış.",
+   "D": "Doğu-batı yönünü ters yorumlayıp 22 saat 40 dakika eklemiş.",
+   "E": "340° ÷ 15 = 22,67 saati 22 saate yuvarlamış; 40 dakikayı atlamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "L noktasındaki tarih ve saat.",
+  "bilgi": [
+   {
+    "ad": "Saat farkı",
+    "ifade": "1° boylam = 4 dakika (ör. 15° = 60 dakika = 1 saat) · doğuya gidildikçe saat ileri, batıya gidildikçe geri alınır"
+   },
+   {
+    "ad": "Tarih değiştirme çizgisi",
+    "ifade": "180° meridyenidir · doğuya doğru geçilirse tarih bir gün geri alınır, batıya doğru geçilirse bir gün ileri alınır"
+   }
+  ],
+  "ipuclari": [
+   "K’den L’ye doğuya giderken 180° meridyeninden geçildiğini unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Boylam farkını bul",
+    "aciklama": "170° D ile 170° B arasında 180° meridyeni var. K’den doğuya gidince L’ye 10° + 10° = 20° ile ulaşılır.",
+    "islem": "(180 − 170) + (180 − 170) = 20°"
+   },
+   {
+    "baslik": "Saat farkını hesapla",
+    "aciklama": "Her derece 4 dakikadır. L, K’nin doğusunda olduğundan saati ileridir.",
+    "islem": "20 × 4 = 80 dk = 1 saat 20 dk"
+   },
+   {
+    "baslik": "Saati uygula",
+    "aciklama": "K’deki 02:00’ye 1 saat 20 dakika eklenir.",
+    "islem": "02:00 + 1:20 = 03:20"
+   },
+   {
+    "baslik": "Tarihi düzelt",
+    "aciklama": "K’den L’ye doğuya giderken tarih değiştirme çizgisi geçilir; tarih bir gün geri alınır.",
+    "islem": "21 Mart → 20 Mart"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "L noktasında tarih 20 Mart, saat 03:20’dir.",
+    "islem": "20 Mart 03:20"
+   }
+  ],
+  "puf": "Çizgiyi geçiyorsan önce yakın yoldan boylam farkını al, sonra tarihi düzelt.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNH-04 (Yerel saat ve tarih değiştirme çizgisi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

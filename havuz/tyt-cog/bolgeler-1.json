@@ -1,0 +1,451 @@
+[
+ {
+  "id": "tytcog-bolgeler-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · Bölge türleri",
+  "k": "cog|Bölgeler",
+  "kazanim": "Verilen bölge örneklerinden şekilsel olanları ayırt eder.",
+  "tipId": "cg-bolge-tur",
+  "tip": "Şekilsel ve işlevsel bölge",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "Aşağıda bazı bölge örnekleri verilmiştir.\nI. Tundra bitki örtüsünün yayıldığı alan\nII. Bir hastanenin tek merkezden yönetilen sağlık hizmeti bölgesi\nIII. Fındık üretiminin yoğun yapıldığı alan\nBu örneklerden hangileri şekilsel bölgeye örnektir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "II ve III",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III. öncül doğrudur (ürün türdeşliğine dayanır); onu yanlış sanmış.",
+   "B": "II. öncül yanlıştır (merkezden yönetilen hizmet alanı işlevsel bölgedir); ona doğru demiş.",
+   "C": "II. öncül yanlıştır (merkezden yönetilen hizmet alanı işlevsel bölgedir); ona doğru demiş.",
+   "E": "II. öncül yanlıştır (merkezden yönetilen hizmet alanı işlevsel bölgedir); ona doğru demiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Şekilsel bölge örneklerinin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Bölge türleri",
+    "ifade": "Şekilsel bölge: tek ya da birkaç ortak özelliğe göre ayrılır (iklim, bitki, ürün) · İşlevsel bölge: merkezden yönetilen ya da merkeze bağlı hizmet alanı · Algısal bölge: insanların zihnindeki imgeye göre, sınırı kişiden kişiye değişir"
+   }
+  ],
+  "ipuclari": [
+   "Bölgeyi oluşturan ölçüt tek bir ortak özellik mi, yoksa bir merkeze bağlılık mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Şekilsel bölge, ortak bir özelliğin türdeşliğine dayanır; merkezden yönetim aranmaz.",
+    "islem": "şekilsel = ortak özellik"
+   },
+   {
+    "baslik": "Örnekleri sına",
+    "aciklama": "I ve III ortak bir özelliğe dayanır; II ise tek merkezden yönetilen hizmet alanıdır.",
+    "islem": "I: şekilsel · II: işlevsel · III: şekilsel"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Şekilsel örnekler I ve III’tür.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Ortak özellik = şekilsel, merkez ve hizmet = işlevsel.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-01 (Bölge türleri) · yeni bölge örnekleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-bolgeler-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · Bölgenin özellikleri",
+  "k": "cog|Bölgeler",
+  "kazanim": "Bölgenin tanımına ve sınırlarının nasıl belirlendiğine ilişkin bilgileri değerlendirir.",
+  "tipId": "cg-bolge-olcut",
+  "tip": "Bölgenin genel özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bölgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ölçüt değiştiğinde bölgenin sınırları da değişebilir.",
+   "B": "Bölgeler yalnızca doğal ölçütlere göre belirlenir; beşerî ölçüt kullanılamaz.",
+   "C": "Aynı alan, farklı amaçlarla birden fazla bölge türüne dâhil edilebilir.",
+   "D": "Bölgelendirme, mekânı tanımayı ve planlamayı kolaylaştırır.",
+   "E": "Bölgeler arasındaki sınırlar çoğu zaman keskin bir çizgi değil, geçiş alanıdır."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Bölgeler yalnızca doğal ölçütlere göre belirlenir; beşerî ölçüt kullanılamaz."
+  },
+  "celdiriciler": {
+   "A": "Bu ifade doğrudur; bölge sınırı ölçüte bağlıdır.",
+   "C": "Bu ifade doğrudur; aynı alan farklı ölçütlerle farklı bölgelere girebilir.",
+   "D": "Bu ifade doğrudur; bölgelendirme amacı budur.",
+   "E": "Bu ifade doğrudur; komşu bölgeler arasında geçiş kuşağı bulunur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yanlış olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Bölge",
+    "ifade": "Bölge, belirli ölçütlere göre sınırlandırılmış alandır. Ölçüt doğal (iklim, bitki) ya da beşerî (nüfus, ekonomi) olabilir; ölçüt değişirse sınır değişir. Örnek: “Yağışlı alan” ile “sanayi alanı” farklı sınırlara sahiptir."
+   }
+  ],
+  "ipuclari": [
+   "Kökte “yanlış” isteniyor; doğru ifadeleri eleyerek kalanı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökü oku",
+    "aciklama": "“Yanlış” isteniyor; doğru ifadeleri eleyeceksin.",
+    "islem": "aranan: yanlış ifade"
+   },
+   {
+    "baslik": "Doğruları ele",
+    "aciklama": "A, C, D ve E bölgenin ölçüte bağlı, amaçlı ve geçişli olduğunu söyler.",
+    "islem": "A, C, D, E: doğru"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "Bölgeler beşerî ölçütlerle de belirlenir (nüfus, ekonomi).",
+    "islem": "B: yanlış"
+   }
+  ],
+  "puf": "Köke dikkat et: “yanlış” sorularında doğru olanlar elenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-02 (Bölgenin özellikleri) · genel bölge bilgileri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-bolgeler-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · İşlevsel bölge",
+  "k": "cog|Bölgeler",
+  "kazanim": "Merkeze bağlı bir hizmet alanını işlevsel bölge olarak tanır.",
+  "tipId": "cg-bolge-islevsel",
+  "tip": "İşlevsel bölgeyi tanıma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kargo şirketinin dağıtım merkezi C kentindedir. Çevredeki beş ilçeye gönderilecek paketler bu merkezden yönetilerek dağıtılmaktadır.\nBu dağıtım alanı ile ilgili aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Şekilsel bölgedir; çünkü ilçelerin hepsi aynı bitki örtüsüne sahiptir.",
+   "B": "Algısal bölgedir; çünkü sınırlar insanların zihnindeki imgeye göre çizilmiştir.",
+   "C": "Doğal bir bölgedir; çünkü sınırlar akarsu havzasına göre belirlenmiştir.",
+   "D": "İklim bölgesidir; çünkü ilçelerin sıcaklık değerleri benzerdir.",
+   "E": "İşlevsel bölgedir; çünkü ilçeler dağıtım açısından C kentindeki merkeze bağlıdır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "İşlevsel bölgedir; çünkü ilçeler dağıtım açısından C kentindeki merkeze bağlıdır."
+  },
+  "celdiriciler": {
+   "A": "Bölgeyi bitki değil, merkezden yönetilen dağıtım ilişkisi oluşturur.",
+   "B": "Dağıtım alanı somut ve merkezden yönetilir; zihinsel imgeye dayanmaz.",
+   "C": "Sınırı doğal bir unsur değil, kargonun merkeze bağlı dağıtımı belirler.",
+   "D": "Soruda iklimle ilgili bir veri yoktur; ölçüt dağıtım hizmetidir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Dağıtım alanının bölge türü.",
+  "bilgi": [
+   {
+    "ad": "Bölge türleri",
+    "ifade": "Şekilsel bölge: tek ya da birkaç ortak özelliğe göre ayrılır (iklim, bitki, ürün) · İşlevsel bölge: merkezden yönetilen ya da merkeze bağlı hizmet alanı · Algısal bölge: insanların zihnindeki imgeye göre, sınırı kişiden kişiye değişir"
+   }
+  ],
+  "ipuclari": [
+   "Bölgeyi bir araya getiren şeyin ortak özellik mi, yoksa merkeze bağlılık mı olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü bul",
+    "aciklama": "Alanı oluşturan şey, ilçelerin tek bir merkezden yönetilmesidir.",
+    "islem": "ölçüt: merkeze bağlılık"
+   },
+   {
+    "baslik": "Türü belirle",
+    "aciklama": "Merkezden yönetilen hizmet alanı işlevsel bölgedir.",
+    "islem": "merkez + çevre = işlevsel"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "Bitki, imge, havza ve sıcaklık ölçütleri soruda yoktur.",
+    "islem": "E: doğru · A, B, C, D: yanlış"
+   }
+  ],
+  "puf": "Hizmet, dağıtım ve yönetim alanları işlevsel bölgedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-03 (İşlevsel bölge) · kargo dağıtım örneği",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-bolgeler-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · Algısal bölge",
+  "k": "cog|Bölgeler",
+  "kazanim": "Algısal bölge örneğini diğer bölge türlerinden ayırır.",
+  "tipId": "cg-bolge-algisal",
+  "tip": "Algısal bölgeyi tanıma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdakilerden hangisi algısal bölgeye örnektir?",
+  "sekil": null,
+  "siklar": {
+   "A": "İnsanların zihninde “tatil kenti” olarak canlanan, sınırı kişiden kişiye değişen kıyı şeridi",
+   "B": "Yıllık yağışı 600 mm’nin üzerinde olan alan",
+   "C": "Bir belediyenin çöp toplama hizmeti verdiği mahalleler",
+   "D": "Pamuğun yetiştirildiği alan",
+   "E": "Bir ilin idari sınırları içinde kalan alan"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "İnsanların zihninde “tatil kenti” olarak canlanan, sınırı kişiden kişiye değişen kıyı şeridi"
+  },
+  "celdiriciler": {
+   "B": "Yağış ölçülebilir bir ölçüttür; bu şekilsel bölgedir.",
+   "C": "Merkezden yönetilen hizmet alanıdır; işlevsel bölgedir.",
+   "D": "Tek bir ürüne dayanan türdeş alandır; şekilsel bölgedir.",
+   "E": "İdari sınır resmî ve kesindir; insanların algısına bağlı değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Algısal bölge örneği.",
+  "bilgi": [
+   {
+    "ad": "Bölge türleri",
+    "ifade": "Şekilsel bölge: tek ya da birkaç ortak özelliğe göre ayrılır (iklim, bitki, ürün) · İşlevsel bölge: merkezden yönetilen ya da merkeze bağlı hizmet alanı · Algısal bölge: insanların zihnindeki imgeye göre, sınırı kişiden kişiye değişir"
+   }
+  ],
+  "ipuclari": [
+   "Sınırı ölçüyle çizilemeyen, kişiden kişiye değişen bölgeyi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanımı hatırla",
+    "aciklama": "Algısal bölgenin sınırı insanların zihnindeki imgeye göre belirlenir.",
+    "islem": "algısal = zihinde"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "Yağış ve pamuk ölçülebilir ölçüttür; çöp toplama merkezden yönetilir; idari sınır resmîdir.",
+    "islem": "B, D: şekilsel · C: işlevsel · E: idari"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız A kişilerin algısına göre belirlenir.",
+    "islem": "A"
+   }
+  ],
+  "puf": "Ölçülemeyen, kişiye göre değişen sınır algısal bölgenin işaretidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-04 (Algısal bölge) · algısal bölge örneği",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-bolgeler-0005",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · Ölçüte göre bölge sınırı",
+  "k": "cog|Bölgeler",
+  "kazanim": "İki ölçüte göre çizilen bölgenin alanını şekilden hesaplar.",
+  "tipId": "cg-bolge-izgara",
+  "tip": "Ölçüte göre bölge sınırı çizme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki şekilde aynı alanın karelere bölünmüş iki haritası verilmiştir. I. haritada yıllık yağışı 800 mm’den fazla olan, II. haritada yüksekliği 1000 m’den fazla olan kareler renklidir.\nHem yağışı 800 mm’den fazla hem de yüksekliği 1000 m’den fazla olan alan bir bölge kabul edildiğine göre bu bölge, yalnız yağış ölçütüne göre belirlenen bölgeden kaç kare daha küçüktür?",
+  "sekil": "<svg viewBox=\"0 0 310 190\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"70.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">I. Yağış > 800 mm</text><text x=\"240.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">II. Yükselti > 1000 m</text><rect x=\"5\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"31\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"57\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"83\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"109\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"5\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"31\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"57\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"83\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"109\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"5\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"31\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"57\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"83\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"109\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"5\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"31\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"57\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"83\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"109\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"5\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"31\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"57\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"83\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"109\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"175\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"201\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"227\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"253\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"279\" y=\"26\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"175\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"201\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"227\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"253\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"279\" y=\"52\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"175\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"201\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"227\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"253\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"279\" y=\"78\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"175\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"201\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"227\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"253\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"279\" y=\"104\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><rect x=\"175\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"201\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"227\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"253\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:currentColor;fill-opacity:0.04\"/><rect x=\"279\" y=\"130\" width=\"26\" height=\"26\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.45\"/><text x=\"155.0\" y=\"178.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Renkli kare: ölçütü sağlayan alan</text></svg>",
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "7",
+   "D": "9",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Yalnız yükselti ölçütünü sağlayıp yağış ölçütünü sağlamayan kareleri saymış.",
+   "B": "İki ölçütü birlikte sağlayan kareleri (5) bulup bölgenin küçülme miktarını sanmış.",
+   "D": "Yükselti ölçütünü sağlayan kare sayısını (9) vermiş.",
+   "E": "İki harita birleştirilmiş (kesişim yerine birleşim); 16 kare bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yağış bölgesi ile iki ölçütlü bölge arasındaki kare farkı.",
+  "bilgi": [
+   {
+    "ad": "Birden çok ölçüt",
+    "ifade": "Birden çok ölçütle belirlenen bölge, ölçütlerin hepsinin birlikte sağlandığı alandır (kesişim). Örnek: “yağışlı ve yüksek” alan, yalnız “yağışlı” alandan küçüktür."
+   }
+  ],
+  "ipuclari": [
+   "İki ölçütün birlikte sağlandığı kareler her iki haritada da renkli olanlardır; önce onları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yağış bölgesini say",
+    "aciklama": "I. haritadaki renkli kareleri say.",
+    "islem": "yağış ölçütü: 12 kare"
+   },
+   {
+    "baslik": "Ortak kareleri bul",
+    "aciklama": "Hem I hem II. haritada renkli olan kareleri say.",
+    "islem": "her iki ölçüt: 5 kare"
+   },
+   {
+    "baslik": "Farkı hesapla",
+    "aciklama": "Yalnız yağış bölgesinden iki ölçütlü bölgeyi çıkar.",
+    "islem": "12 − 5 = 7 kare"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "4 yalnız yükseltiyi, 9 tüm yükselti karelerini, 16 birleşimi verir.",
+    "islem": "C: 7"
+   }
+  ],
+  "puf": "Birden çok ölçüt varsa ortak (kesişen) alanı say; ölçütler arttıkça bölge küçülür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-05 (Ölçüte göre bölge sınırı) · ızgara kodla sayıldı, tek doğru 7",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-bolgeler-0006",
+  "ders": "TYT Coğrafya",
+  "konu": "Bölgeler · Bölge türlerini birlikte ayırma",
+  "k": "cog|Bölgeler",
+  "kazanim": "Dört örnek bölgeyi ölçütlerine bakarak şekilsel, işlevsel ve algısal olarak ayırır.",
+  "tipId": "cg-bolge-uclu",
+  "tip": "Dört bölgeyi türlerine ayırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir araştırmada dört bölge tanımlanmıştır:\nI. Yıllık ortalama sıcaklığı 10 °C’nin altında kalan alan\nII. Bir banka şubesinin müşterilerinin yaşadığı ve şubeye bağlı alan\nIII. İnsanların zihninde “kuzey” denince canlanan alan\nIV. Bir limanın merkezden yönetilen sevkiyat ağının ulaştığı alan\nBu bölgeler sırasıyla hangi bölge türüne örnektir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Şekilsel – İşlevsel – İşlevsel – İşlevsel",
+   "B": "Şekilsel – İşlevsel – Şekilsel – Şekilsel",
+   "C": "İşlevsel – Şekilsel – Algısal – İşlevsel",
+   "D": "Algısal – İşlevsel – Algısal – İşlevsel",
+   "E": "Şekilsel – İşlevsel – Algısal – İşlevsel"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Şekilsel – İşlevsel – Algısal – İşlevsel"
+  },
+  "celdiriciler": {
+   "A": "III. bölgeyi işlevsel saymış; oysa sınırı zihindeki imgeye göre değişir, yani algısal bölgedir.",
+   "B": "III. bölgeyi şekilsel saymış; oysa sınırı zihindeki imgeye göre değişir, yani algısal bölgedir.",
+   "C": "I. bölgeyi işlevsel saymış; oysa sıcaklık tek ölçütle ölçülür, türdeş alan oluşturur, yani şekilsel bölgedir.",
+   "D": "I. bölgeyi algısal saymış; oysa sıcaklık tek ölçütle ölçülür, türdeş alan oluşturur, yani şekilsel bölgedir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "I, II, III ve IV numaralı bölgelerin türleri.",
+  "bilgi": [
+   {
+    "ad": "Bölge türleri",
+    "ifade": "Şekilsel bölge: tek ya da birkaç ortak özelliğe göre ayrılır (iklim, bitki, ürün) · İşlevsel bölge: merkezden yönetilen ya da merkeze bağlı hizmet alanı · Algısal bölge: insanların zihnindeki imgeye göre, sınırı kişiden kişiye değişir"
+   }
+  ],
+  "ipuclari": [
+   "Her bölgede sınırı belirleyen ölçütün ne olduğuna bak: ortak özellik, merkez ya da zihindeki imge."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütleri bul",
+    "aciklama": "Her bölgenin sınırını neyin belirlediğine bak.",
+    "islem": "I: sıcaklık · II: şubeye bağlılık · III: zihinde imge · IV: merkezden yönetim"
+   },
+   {
+    "baslik": "Türleri yaz",
+    "aciklama": "Ortak özellik şekilsel, merkeze bağlılık işlevsel, zihindeki imge algısaldır.",
+    "islem": "I: şekilsel · II: işlevsel · III: algısal · IV: işlevsel"
+   },
+   {
+    "baslik": "Şıkla eşle",
+    "aciklama": "Sıralama Şekilsel – İşlevsel – Algısal – İşlevsel olmalıdır.",
+    "islem": "E"
+   }
+  ],
+  "puf": "Her örnekte “sınırı ne belirliyor?” sorusunu sor: özellik, merkez ya da imge.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CGBL-06 (Bölge türlerini birlikte ayırma) · 4 örnek, tür eşleştirmesi kodla",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,478 @@
+[
+ {
+  "id": "tytcog-iklim-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · İklim tipini özelliklerinden bulma",
+  "k": "cog|İklimler",
+  "kazanim": "Sıcaklık ve yağış özelliklerinden iklim tipini belirler.",
+  "tipId": "cg-iklim-ozellik",
+  "tip": "İklim tipini özelliklerinden bulma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Yıllık ortalama sıcaklığı yüksek, yıllık sıcaklık farkı çok az olan, hemen her ay yağış alan ve yağışları çoğunlukla öğleden sonra sağanak biçiminde düşen bir bölgede aşağıdaki iklim tiplerinden hangisi görülür?",
+  "sekil": null,
+  "siklar": {
+   "A": "Savan iklimi",
+   "B": "Ekvatoral iklim",
+   "C": "Muson iklimi",
+   "D": "Akdeniz iklimi",
+   "E": "Çöl iklimi"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Ekvatoral iklim"
+  },
+  "celdiriciler": {
+   "A": "Savan ikliminde yağışsız, kurak bir mevsim vardır. Burada her ay yağış alındığı için savan değildir.",
+   "C": "Muson ikliminde yağış yazın toplanır, kış kurak geçer; yağış yıla dengeli dağılmaz.",
+   "D": "Akdeniz ikliminde yaz kurak, kış yağışlıdır ve yıllık sıcaklık farkı fazladır.",
+   "E": "Çöl ikliminde yağış çok azdır; sürekli yağış alan bir bölge çöl olamaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Verilen özelliklere sahip iklim tipi.",
+  "bilgi": [
+   {
+    "ad": "Ekvatoral iklim",
+    "ifade": "Ekvator çevresinde görülür · yıl boyu sıcak ve yağışlıdır · yıllık sıcaklık farkı çok azdır · yağışlar konveksiyonel (sağanak) biçimdedir · bitki örtüsü yağmur ormanıdır"
+   }
+  ],
+  "ipuclari": [
+   "Yağışın yıl içindeki dağılışına bak: kurak bir mevsim var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Özellikleri ayır",
+    "aciklama": "Dört veri var: yüksek sıcaklık, çok az sıcaklık farkı, her ay yağış ve öğleden sonra sağanak.",
+    "islem": "sıcak + farksız + her ay yağışlı"
+   },
+   {
+    "baslik": "İklimleri sına",
+    "aciklama": "Savanda kurak mevsim, Akdeniz ve muson ikliminde yağışsız yaz ya da kış vardır. Çölde yağış zaten azdır.",
+    "islem": "savan, akdeniz, muson, çöl: uymuyor"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Yıl boyu sıcak ve yağışlı olan iklim ekvatoral iklimdir.",
+    "islem": "ekvatoral iklim"
+   }
+  ],
+  "puf": "Kurak mevsim yoksa ve her ay yağış varsa önce ekvatoral iklimi düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-01 (İklim tipini özelliklerinden bulma) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-iklim-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · Türkiye iklim grafiği",
+  "k": "cog|İklimler",
+  "kazanim": "Aylık sıcaklık–yağış grafiğinden Türkiye’deki il merkezini belirler.",
+  "tipId": "cg-iklim-grafik",
+  "tip": "Türkiye iklim grafiği yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Türkiye’deki bir il merkezinin aylık sıcaklık ve yağış değerleri grafikte gösterilmiştir.\nGrafikteki verilere göre bu il merkezi aşağıdakilerden hangisi olabilir?",
+  "sekil": "<svg viewBox=\"0 0 340 230\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"34.0\" y=\"14.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">°C</text><text x=\"306.0\" y=\"14.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">mm</text><line x1=\"38\" y1=\"176.0\" x2=\"302\" y2=\"176.0\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"180.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"38\" y1=\"125.3\" x2=\"302\" y2=\"125.3\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"129.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"38\" y1=\"74.7\" x2=\"302\" y2=\"74.7\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"78.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"38\" y1=\"24.0\" x2=\"302\" y2=\"24.0\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"28.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"307.0\" y=\"180.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"307.0\" y=\"129.3\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">100</text><text x=\"307.0\" y=\"78.7\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">200</text><text x=\"307.0\" y=\"28.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">300</text><rect x=\"42.0\" y=\"74.7\" width=\"14.1\" height=\"101.3\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"49.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Oca</text><rect x=\"64.0\" y=\"89.9\" width=\"14.1\" height=\"86.1\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"71.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Şub</text><rect x=\"86.0\" y=\"100.0\" width=\"14.1\" height=\"76.0\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"93.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Mar</text><rect x=\"108.0\" y=\"115.2\" width=\"14.1\" height=\"60.8\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"115.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Nis</text><rect x=\"130.0\" y=\"125.3\" width=\"14.1\" height=\"50.7\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"137.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">May</text><rect x=\"152.0\" y=\"110.1\" width=\"14.1\" height=\"65.9\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"159.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Haz</text><rect x=\"174.0\" y=\"120.3\" width=\"14.1\" height=\"55.7\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"181.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Tem</text><rect x=\"196.0\" y=\"105.1\" width=\"14.1\" height=\"70.9\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"203.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Ağu</text><rect x=\"218.0\" y=\"69.6\" width=\"14.1\" height=\"106.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"225.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Eyl</text><rect x=\"240.0\" y=\"24.0\" width=\"14.1\" height=\"152.0\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"247.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Eki</text><rect x=\"262.0\" y=\"34.1\" width=\"14.1\" height=\"141.9\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"269.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Kas</text><rect x=\"284.0\" y=\"54.4\" width=\"14.1\" height=\"121.6\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"291.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Ara</text><line x1=\"38\" y1=\"176\" x2=\"302\" y2=\"176\" stroke-width=\"1.5\"/><line x1=\"38\" y1=\"24\" x2=\"38\" y2=\"176\" stroke-width=\"1.5\"/><line x1=\"302\" y1=\"24\" x2=\"302\" y2=\"176\" stroke-width=\"1.5\"/><polyline points=\"49.0,140.5 71.0,140.5 93.0,130.4 115.0,110.1 137.0,89.9 159.0,69.6 181.0,59.5 203.0,59.5 225.0,74.7 247.0,94.9 269.0,115.2 291.0,130.4\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><circle cx=\"49.0\" cy=\"140.5\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"71.0\" cy=\"140.5\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"93.0\" cy=\"130.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"115.0\" cy=\"110.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"137.0\" cy=\"89.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"159.0\" cy=\"69.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"181.0\" cy=\"59.5\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"203.0\" cy=\"59.5\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"225.0\" cy=\"74.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"247.0\" cy=\"94.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"269.0\" cy=\"115.2\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"291.0\" cy=\"130.4\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><line x1=\"48\" y1=\"216\" x2=\"72\" y2=\"216\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"78.0\" y=\"220.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sıcaklık</text><rect x=\"150\" y=\"209\" width=\"14\" height=\"10\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"170.0\" y=\"220.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Yağış</text></svg>",
+  "siklar": {
+   "A": "Antalya",
+   "B": "Konya",
+   "C": "Şanlıurfa",
+   "D": "Rize",
+   "E": "Erzurum"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Rize"
+  },
+  "celdiriciler": {
+   "A": "Antalya’da yaz ayları kurak geçer; grafikte haziran-ağustos arası 100 mm’nin üzerinde yağış var.",
+   "B": "Konya’da yıllık yağış yaklaşık 300–400 mm’dir; grafikteki yıllık toplam 2150 mm’dir.",
+   "C": "Şanlıurfa’da yaz sıcaklığı 30 °C’yi aşar ve yaz kuraktır; grafikte temmuz 23 °C’dir ve yağışlıdır.",
+   "E": "Erzurum’da kış çok soğuktur (ocak ayı sıfırın çok altındadır); grafikte ocak 7 °C’dir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Grafikteki il merkezi.",
+  "bilgi": [
+   {
+    "ad": "Sıcaklık–yağış grafiği",
+    "ifade": "çizgi: aylık sıcaklık (sol eksen, °C) · sütun: aylık yağış (sağ eksen, mm) · yıllık sıcaklık farkı = en sıcak ay − en soğuk ay (ör. 25 − 5 = 20 °C)"
+   },
+   {
+    "ad": "Karadeniz kıyısı iklimi",
+    "ifade": "her mevsim yağışlı, yağış çok bol · deniz etkisiyle yıllık sıcaklık farkı az · Rize, Trabzon, Giresun"
+   }
+  ],
+  "ipuclari": [
+   "Yağışsız ya da az yağışlı bir ay var mı? Yıllık sıcaklık farkı büyük mü?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grafiği oku",
+    "aciklama": "Sıcaklık ocakta 7, temmuzda 23 °C. Her ay en az 100 mm yağış düşüyor.",
+    "islem": "fark: 23 − 7 = 16 °C · en az yağış: 100 mm"
+   },
+   {
+    "baslik": "Yıllık toplamı bul",
+    "aciklama": "Aylık yağışlar toplanır; çok bol bir yağış söz konusu.",
+    "islem": "200 + 170 + … + 240 = 2150 mm"
+   },
+   {
+    "baslik": "İlleri ele",
+    "aciklama": "Antalya yazın kurak, Konya ve Şanlıurfa az yağışlı, Erzurum kışın çok soğuktur. Hiçbiri grafikle uyuşmaz.",
+    "islem": "Antalya, Konya, Şanlıurfa, Erzurum: yanlış"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Yıl boyu bol yağış ve az sıcaklık farkı Karadeniz kıyısını gösterir.",
+    "islem": "Rize"
+   }
+  ],
+  "puf": "Yağışsız ay yoksa ve yıllık yağış çok yüksekse Karadeniz kıyısını düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-02 (Türkiye iklim grafiği) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-iklim-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · Muson iklimi",
+  "k": "cog|İklimler",
+  "kazanim": "Muson ikliminin özelliklerini ayırt eder.",
+  "tipId": "cg-iklim-muson",
+  "tip": "Muson iklimi özellikleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Güney ve Güneydoğu Asya’nın önemli bölümünde muson ikliminin etkisi görülür.\nI. Yağışlar yılın bütün aylarına dengeli biçimde dağılır.\nII. Yazın denizden karaya esen nemli rüzgârlar bol yağış getirir.\nIII. Kışın rüzgârlar karadan denize doğru eserek kuru bir mevsim oluşturur.\nYukarıdaki ifadelerden hangileri muson iklimi için doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "II ve III",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "B": "I. ifade koşulu sağlamaz: Muson ikliminde yağış yaz aylarında yoğunlaşır, kışlar kuraktır. II. ifade de koşulu sağlar ama seçenekte yok: Yazın ısınan karaya doğru deniz üzerindeki nemli hava gelir ve yağış bırakır. III. ifade de koşulu sağlar ama seçenekte yok: Kışın rüzgâr karadan denize eser; kuru hava kış mevsimini kurak geçirir.",
+   "C": "III. ifade de koşulu sağlar ama seçenekte yok: Kışın rüzgâr karadan denize eser; kuru hava kış mevsimini kurak geçirir.",
+   "D": "I. ifade koşulu sağlamaz: Muson ikliminde yağış yaz aylarında yoğunlaşır, kışlar kuraktır. II. ifade de koşulu sağlar ama seçenekte yok: Yazın ısınan karaya doğru deniz üzerindeki nemli hava gelir ve yağış bırakır.",
+   "E": "I. ifade koşulu sağlamaz: Muson ikliminde yağış yaz aylarında yoğunlaşır, kışlar kuraktır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Muson ikliminin doğru özellikleri.",
+  "bilgi": [
+   {
+    "ad": "Muson iklimi",
+    "ifade": "rüzgârlar mevsimlik yön değiştirir · yaz: denizden karaya, nemli, bol yağış · kış: karadan denize, kuru · Hindistan, Bangladeş, Güneydoğu Asya"
+   }
+  ],
+  "ipuclari": [
+   "Muson, mevsimlere göre yönü değişen rüzgârlarla ilgilidir; yazın ve kışın rüzgâr yönünü düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Rüzgâr yönünü hatırla",
+    "aciklama": "Yazın kara daha çok ısınır, alçak basınç oluşur ve rüzgâr denizden karaya eser.",
+    "islem": "yaz: deniz → kara · kış: kara → deniz"
+   },
+   {
+    "baslik": "Yağışı yorumla",
+    "aciklama": "Denizden gelen nemli hava yazın yağış bırakır, kış kuraktır. Yağış yıla eşit dağılmaz.",
+    "islem": "I: yanlış · II: doğru · III: doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru ifadeler II ve III.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "Muson denince “yaz yağışlı, kış kurak ve rüzgâr yönü mevsimlik” üçlüsünü hatırla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-03 (Muson iklimi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-iklim-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · Kıta ve deniz etkisi",
+  "k": "cog|İklimler",
+  "kazanim": "Aynı enlemdeki iki yerin sıcaklık farkından kıta ve deniz etkisini yorumlar.",
+  "tipId": "cg-iklim-kita",
+  "tip": "Kıta ve deniz etkisi karşılaştırması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "K ve L şehirleri aynı enlemde ve deniz seviyesindedir. Şehirlerin ocak ve temmuz ayı ortalama sıcaklıkları aşağıda verilmiştir.\nK şehri: Ocak 9 °C, Temmuz 25 °C\nL şehri: Ocak −6 °C, Temmuz 25 °C\nBu verilere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "L’de en sıcak ay ile en soğuk ay arasındaki fark, K’dekinden azdır.",
+   "B": "K’nin iç kesimde, L’nin kıyıda yer aldığı söylenebilir.",
+   "C": "Temmuz ayında K şehri, L şehrinden daha sıcaktır.",
+   "D": "Ocak ayında L şehri, K şehrinden daha sıcaktır.",
+   "E": "K şehrinde yıllık sıcaklık farkı L şehrine göre azdır; bu durum deniz etkisiyle açıklanabilir."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "K şehrinde yıllık sıcaklık farkı L şehrine göre azdır; bu durum deniz etkisiyle açıklanabilir."
+  },
+  "celdiriciler": {
+   "A": "L’de fark 31 °C, K’de 16 °C’dir; ifade tersine kurulmuştur.",
+   "B": "Yıllık sıcaklık farkı az olan K deniz etkisindedir; farkı çok olan L iç kesimdedir.",
+   "C": "Temmuzda iki şehrin sıcaklığı da 25 °C’dir; biri diğerinden sıcak değildir.",
+   "D": "Ocakta L −6 °C, K 9 °C’dir; kış sıcaklığı K’de daha yüksektir."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Verilere göre söylenebilecek yargı.",
+  "bilgi": [
+   {
+    "ad": "Yıllık sıcaklık farkı",
+    "ifade": "en sıcak ay ortalaması − en soğuk ay ortalaması (ör. 24 − 4 = 20 °C)"
+   },
+   {
+    "ad": "Deniz ve kara",
+    "ifade": "deniz geç ısınır, geç soğur: kıyıda kış ılık, yaz serin, fark az · iç kesimde kış soğuk, yaz sıcak, fark çok"
+   }
+  ],
+  "ipuclari": [
+   "Her şehrin en sıcak ayı ile en soğuk ayı arasındaki farkı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkları hesapla",
+    "aciklama": "Aynı enlemde ve yükseltide olduğundan fark yalnız deniz-kara etkisinden gelir.",
+    "islem": "Fark (K şehri): 25 − 9 = 16 °C · Fark (L şehri): 25 − (−6) = 31 °C"
+   },
+   {
+    "baslik": "Yorumla",
+    "aciklama": "Deniz etkisi sıcaklık farkını azaltır. K’nin farkı küçük, L’nin farkı büyüktür.",
+    "islem": "K: kıyı · L: iç kesim"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "A, B, C ve D verilerle çelişir; yalnız E verilere uyar.",
+    "islem": "A, B, C, D: yanlış · E: doğru"
+   }
+  ],
+  "puf": "Yıllık sıcaklık farkı küçükse deniz etkisini, büyükse kıta etkisini düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-04 (Kıta ve deniz etkisi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-iklim-0005",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · Yarım küre ve iklim tipi",
+  "k": "cog|İklimler",
+  "kazanim": "Aylık sıcaklık-yağış grafiğinden iklim tipini ve yarım küreyi birlikte belirler.",
+  "tipId": "cg-iklim-yarimkure",
+  "tip": "Yarım küre ve iklim tipi (grafik)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Bir istasyonda ölçülen aylık ortalama değerler grafikte gösterilmiştir.\nBu istasyonun iklim tipi ile bulunduğu yarım küre, aşağıdakilerden hangisinde birlikte doğru verilmiştir?",
+  "sekil": "<svg viewBox=\"0 0 340 230\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"34.0\" y=\"14.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">°C</text><text x=\"306.0\" y=\"14.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">mm</text><line x1=\"38\" y1=\"176.0\" x2=\"302\" y2=\"176.0\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"180.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"38\" y1=\"125.3\" x2=\"302\" y2=\"125.3\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"129.3\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"38\" y1=\"74.7\" x2=\"302\" y2=\"74.7\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"78.7\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"38\" y1=\"24.0\" x2=\"302\" y2=\"24.0\" stroke-width=\".6\" opacity=\".25\"/><text x=\"33.0\" y=\"28.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"307.0\" y=\"180.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"307.0\" y=\"142.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">25</text><text x=\"307.0\" y=\"104.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><text x=\"307.0\" y=\"66.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">75</text><text x=\"307.0\" y=\"28.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">100</text><rect x=\"42.0\" y=\"153.2\" width=\"14.1\" height=\"22.8\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"49.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Oca</text><rect x=\"64.0\" y=\"153.2\" width=\"14.1\" height=\"22.8\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"71.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Şub</text><rect x=\"86.0\" y=\"145.6\" width=\"14.1\" height=\"30.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"93.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Mar</text><rect x=\"108.0\" y=\"107.6\" width=\"14.1\" height=\"68.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"115.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Nis</text><rect x=\"130.0\" y=\"54.4\" width=\"14.1\" height=\"121.6\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"137.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">May</text><rect x=\"152.0\" y=\"31.6\" width=\"14.1\" height=\"144.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"159.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Haz</text><rect x=\"174.0\" y=\"39.2\" width=\"14.1\" height=\"136.8\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"181.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Tem</text><rect x=\"196.0\" y=\"46.8\" width=\"14.1\" height=\"129.2\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"203.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Ağu</text><rect x=\"218.0\" y=\"107.6\" width=\"14.1\" height=\"68.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"225.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Eyl</text><rect x=\"240.0\" y=\"130.4\" width=\"14.1\" height=\"45.6\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"247.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Eki</text><rect x=\"262.0\" y=\"145.6\" width=\"14.1\" height=\"30.4\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"269.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Kas</text><rect x=\"284.0\" y=\"153.2\" width=\"14.1\" height=\"22.8\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"291.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"8.5\" style=\"fill:currentColor;stroke:none\">Ara</text><line x1=\"38\" y1=\"176\" x2=\"302\" y2=\"176\" stroke-width=\"1.5\"/><line x1=\"38\" y1=\"24\" x2=\"38\" y2=\"176\" stroke-width=\"1.5\"/><line x1=\"302\" y1=\"24\" x2=\"302\" y2=\"176\" stroke-width=\"1.5\"/><polyline points=\"49.0,69.6 71.0,69.6 93.0,74.7 115.0,89.9 137.0,105.1 159.0,115.2 181.0,120.3 203.0,115.2 225.0,110.1 247.0,94.9 269.0,84.8 291.0,74.7\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><circle cx=\"49.0\" cy=\"69.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"71.0\" cy=\"69.6\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"93.0\" cy=\"74.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"115.0\" cy=\"89.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"137.0\" cy=\"105.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"159.0\" cy=\"115.2\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"181.0\" cy=\"120.3\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"203.0\" cy=\"115.2\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"225.0\" cy=\"110.1\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"247.0\" cy=\"94.9\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"269.0\" cy=\"84.8\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><circle cx=\"291.0\" cy=\"74.7\" r=\"2.6\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><line x1=\"48\" y1=\"216\" x2=\"72\" y2=\"216\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"78.0\" y=\"220.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sıcaklık</text><rect x=\"150\" y=\"209\" width=\"14\" height=\"10\" stroke-width=\"1\" style=\"fill:currentColor;fill-opacity:.22\"/><text x=\"170.0\" y=\"220.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Yağış</text></svg>",
+  "siklar": {
+   "A": "Akdeniz iklimi – Kuzey Yarım Küre",
+   "B": "Okyanusal iklim – Güney Yarım Küre",
+   "C": "Akdeniz iklimi – Güney Yarım Küre",
+   "D": "Savan iklimi – Güney Yarım Küre",
+   "E": "Muson iklimi – Kuzey Yarım Küre"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Akdeniz iklimi – Güney Yarım Küre"
+  },
+  "celdiriciler": {
+   "A": "Yağış düzeni Akdeniz iklimine benzer ama en sıcak ay ocaktır; bu, istasyonun Güney Yarım Küre’de olduğunu gösterir.",
+   "B": "Okyanusal iklimde yağış yıl boyu dengelidir. Grafikte yaz ayları (aralık–şubat) 20 mm’nin altında kurak geçer.",
+   "D": "Savanda yağış sıcak mevsimde düşer. Grafikte yağış, sıcaklığın en düşük olduğu haziran-ağustos aylarında toplanmıştır.",
+   "E": "Muson ikliminde yağış yazın yoğunlaşır; burada yağışlar sıcaklığın düşük olduğu aylarda toplanmıştır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Grafikteki istasyonun iklim tipi ve yarım küresi.",
+  "bilgi": [
+   {
+    "ad": "Sıcaklık–yağış grafiği",
+    "ifade": "çizgi: aylık sıcaklık (sol eksen, °C) · sütun: aylık yağış (sağ eksen, mm) · yıllık sıcaklık farkı = en sıcak ay − en soğuk ay (ör. 25 − 5 = 20 °C)"
+   },
+   {
+    "ad": "Mevsimlerin zıtlığı",
+    "ifade": "Kuzey Yarım Küre’de yaz haziran–ağustos, Güney Yarım Küre’de yaz aralık–şubattır · Akdeniz iklimi: yaz sıcak ve kurak, kış ılık ve yağışlı"
+   }
+  ],
+  "ipuclari": [
+   "En sıcak ay hangisi? Bu, hangi yarım kürede olduğunu söyler."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En sıcak ayı bul",
+    "aciklama": "Sıcaklık çizgisi ocak-şubatta tepe yapıyor (21 °C), temmuzda en düşük (11 °C).",
+    "islem": "en sıcak: ocak · en soğuk: temmuz"
+   },
+   {
+    "baslik": "Yarım küreyi belirle",
+    "aciklama": "Ocak en sıcak ay ise yaz aralık–şubattır. Bu mevsim düzeni Güney Yarım Küre’ye aittir.",
+    "islem": "yaz: ocak çevresi → Güney Yarım Küre"
+   },
+   {
+    "baslik": "Yağış düzenini oku",
+    "aciklama": "Yaz (aralık–şubat) kurak, kış (mayıs–ağustos) yağışlıdır; yıllık fark azdır.",
+    "islem": "yaz: 15–20 mm · kış: 80–95 mm"
+   },
+   {
+    "baslik": "İklimi seç",
+    "aciklama": "Kurak yaz, yağışlı kış: Akdeniz iklimi. Yarım küre güney olduğundan sonuç budur.",
+    "islem": "Akdeniz iklimi – Güney Yarım Küre"
+   }
+  ],
+  "puf": "Önce en sıcak ayın hangi yarım kürede yaz olduğunu belirle, sonra yağışı mevsime göre oku.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-05 (Yarım küre ve iklim tipi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-iklim-0006",
+  "ders": "TYT Coğrafya",
+  "konu": "İklimler · Dört istasyonun iklimi",
+  "k": "cog|İklimler",
+  "kazanim": "Dört istasyonun ocak-temmuz sıcaklık ve yağış verilerinden iklim tiplerini eşleştirir.",
+  "tipId": "cg-iklim-dortlu",
+  "tip": "İstasyon–iklim eşleştirme (tablo)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 5,
+  "metin": "Aşağıdaki tabloda dört istasyonun ocak ve temmuz ayı ortalama sıcaklık ve yağış değerleri verilmiştir.\nİstasyon | Ocak (°C) | Temmuz (°C) | Ocak (mm) | Temmuz (mm)\nK | −24 | 16 | 20 | 80\nL | 26 | 26 | 250 | 180\nM | 10 | 27 | 120 | 4\nN | 14 | 36 | 5 | 3\nBu istasyonların iklim tipleri sırasıyla aşağıdakilerin hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "K: Akdeniz iklimi · L: Ekvatoral iklim · M: Karasal iklim · N: Çöl iklimi",
+   "B": "K: Karasal iklim · L: Ekvatoral iklim · M: Akdeniz iklimi · N: Çöl iklimi",
+   "C": "K: Karasal iklim · L: Çöl iklimi · M: Akdeniz iklimi · N: Ekvatoral iklim",
+   "D": "K: Karasal iklim · L: Ekvatoral iklim · M: Çöl iklimi · N: Akdeniz iklimi",
+   "E": "K: Ekvatoral iklim · L: Karasal iklim · M: Akdeniz iklimi · N: Çöl iklimi"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "K: Karasal iklim · L: Ekvatoral iklim · M: Akdeniz iklimi · N: Çöl iklimi"
+  },
+  "celdiriciler": {
+   "A": "K istasyonu Akdeniz sayılmış; oysa ocak −24 °C ile çok soğuk, temmuz 16 °C; yağış az: karasal iklim. M istasyonu Karasal sayılmış; oysa temmuzda yağış 4 mm (yaz kurak), ocakta 120 mm (kış yağışlı): Akdeniz iklimi.",
+   "C": "L istasyonu Çöl sayılmış; oysa ocak ve temmuz sıcaklığı 26 °C (fark yok), her iki ay da bol yağış: ekvatoral iklim. N istasyonu Ekvatoral sayılmış; oysa her iki ayda da yağış 5 mm’nin altında ve yaz çok sıcak: çöl iklimi.",
+   "D": "M istasyonu Çöl sayılmış; oysa temmuzda yağış 4 mm (yaz kurak), ocakta 120 mm (kış yağışlı): Akdeniz iklimi. N istasyonu Akdeniz sayılmış; oysa her iki ayda da yağış 5 mm’nin altında ve yaz çok sıcak: çöl iklimi.",
+   "E": "K istasyonu Ekvatoral sayılmış; oysa ocak −24 °C ile çok soğuk, temmuz 16 °C; yağış az: karasal iklim. L istasyonu Karasal sayılmış; oysa ocak ve temmuz sıcaklığı 26 °C (fark yok), her iki ay da bol yağış: ekvatoral iklim."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "K, L, M ve N istasyonlarının iklim tipleri.",
+  "bilgi": [
+   {
+    "ad": "İklim ipuçları",
+    "ifade": "ekvatoral: her ay sıcak ve yağışlı · Akdeniz: yaz kurak, kış yağışlı · karasal: kış çok soğuk, yaz serin, yağış az · çöl: yıl boyu çok az yağış"
+   }
+  ],
+  "ipuclari": [
+   "Önce yağışı hiç olmayan ve sıcaklığı hiç değişmeyen istasyonları ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yağışı çok az olanı ayır",
+    "aciklama": "N istasyonunda iki ayda da yağış 5 mm’nin altında; yaz çok sıcak.",
+    "islem": "N: 5 ve 3 mm → çöl iklimi"
+   },
+   {
+    "baslik": "Sıcaklık farkı olmayanı bul",
+    "aciklama": "L’de ocak ve temmuz 26 °C, iki ay da bol yağışlı.",
+    "islem": "L: ekvatoral iklim"
+   },
+   {
+    "baslik": "Yaz kuraklığını ara",
+    "aciklama": "M’de temmuz yağışı 4 mm, ocak yağışı 120 mm; kış ılık (10 °C).",
+    "islem": "M: Akdeniz iklimi"
+   },
+   {
+    "baslik": "Kalanı çöz",
+    "aciklama": "K’de ocak −24 °C: kış çok soğuk, yağış az.",
+    "islem": "K: karasal iklim"
+   },
+   {
+    "baslik": "Şıkla karşılaştır",
+    "aciklama": "Sıra K, L, M, N için karasal, ekvatoral, Akdeniz, çöl olmalı.",
+    "islem": "Karasal, Ekvatoral, Akdeniz, Çöl"
+   }
+  ],
+  "puf": "Tablodaki en belirgin (en uç) değerden başla ve elemeyle ilerle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-IKL-06 (Dört istasyonun iklimi) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

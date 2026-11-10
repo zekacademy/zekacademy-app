@@ -1,0 +1,307 @@
+[
+ {
+  "id": "tytcog-atmosfer-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Atmosfer ve Sıcaklık · Atmosferin katmanları",
+  "k": "cog|Atmosfer ve Sıcaklık",
+  "kazanim": "Atmosfer katmanlarını özelliklerine göre ayırt eder.",
+  "tipId": "cg-atm-katman",
+  "tip": "Atmosfer katmanlarının özellikleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Ozon tabakasının bulunduğu, hava olaylarının görülmediği ve Güneş’ten gelen zararlı morötesi ışınların büyük bölümünü soğuran atmosfer katmanı aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Troposfer",
+   "B": "Mezosfer",
+   "C": "Stratosfer",
+   "D": "Termosfer",
+   "E": "Ekzosfer"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Stratosfer"
+  },
+  "celdiriciler": {
+   "A": "Hava olayları troposferde görülür; soruda hava olaylarının görülmediği belirtiliyor.",
+   "B": "Mezosfer atmosferin en soğuk katmanıdır ve gök taşları burada yanar; ozon tabakası bu katmanda değildir.",
+   "D": "Termosferde sıcaklık çok yüksektir ve iyonosfer burada yer alır; ozon tabakası bu katmanda değildir.",
+   "E": "Ekzosfer atmosferin en dış katmanıdır; gazlar burada uzaya karışır, ozon tabakası bulunmaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilen özelliklere sahip atmosfer katmanı.",
+  "bilgi": [
+   {
+    "ad": "Atmosferin katmanları (yerden yukarıya)",
+    "ifade": "troposfer: hava olayları, sıcaklık yükseldikçe azalır · stratosfer: ozon tabakası · mezosfer: gök taşları yanar · termosfer: iyonosfer · ekzosfer: gazların uzaya karıştığı en dış katman"
+   }
+  ],
+  "ipuclari": [
+   "Yerden yukarıya katmanların sırasını düşün; ozon hangi katmandadır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Verilenleri ayır",
+    "aciklama": "Üç ipucu var: ozon, hava olayı olmaması ve morötesi ışınların soğurulması.",
+    "islem": "ozon + hava olayı yok"
+   },
+   {
+    "baslik": "Katmanları sına",
+    "aciklama": "Hava olayları troposferdedir. Mezosfer, termosfer ve ekzosferde ozon yoktur.",
+    "islem": "troposfer, mezosfer, termosfer, ekzosfer: uymuyor"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Ozon tabakası stratosferdedir ve burada hava olayı görülmez.",
+    "islem": "stratosfer"
+   }
+  ],
+  "puf": "Ozon denince stratosferi, hava olayı denince troposferi hatırla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ATM-01 (Atmosferin katmanları) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-atmosfer-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Atmosfer ve Sıcaklık · Yükselti ve sıcaklık",
+  "k": "cog|Atmosfer ve Sıcaklık",
+  "kazanim": "Yükselti farkından sıcaklık değişimini hesaplar.",
+  "tipId": "cg-atm-yukselti",
+  "tip": "Yükselti ve sıcaklık hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Troposferde yükseldikçe sıcaklığın her 200 metrede 1 °C azaldığı kabul edilmektedir.\nYükseltisi 400 metre olan K kasabasında sıcaklık 18 °C ölçüldüğü anda, yükseltisi 1600 metre olan L kasabasında sıcaklığın kaç °C olması beklenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "8",
+   "C": "10",
+   "D": "12",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Yükselti farkını her 100 metrede 1 °C düşüyormuş gibi hesaplamış (1200 ÷ 100 = 12 °C azalma).",
+   "B": "K’nin yükseltisini de L’ye eklemiş: (400 + 1600) ÷ 200 = 10 °C düşmüş olur.",
+   "C": "K’nin 400 metresini çıkarmadan 1600 ÷ 200 = 8 °C azalma bulmuş (18 − 8 = 10).",
+   "E": "L, K’den yüksek olduğu için sıcaklık azalır; azalmayı eklemiş (18 + 6)."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "L kasabasında beklenen sıcaklık (°C).",
+  "bilgi": [
+   {
+    "ad": "Yükselti ve sıcaklık",
+    "ifade": "troposferde yükseldikçe sıcaklık azalır · her 200 m’de 1 °C azalıyorsa 1000 m’de 5 °C azalır (1000 ÷ 200 = 5)"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki kasaba arasındaki yükselti farkını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yükselti farkını bul",
+    "aciklama": "İki kasaba arasındaki fark, yüksek yükseltiden alçak yükselti çıkarılarak bulunur.",
+    "islem": "1600 − 400 = 1200 m"
+   },
+   {
+    "baslik": "Düşüşü hesapla",
+    "aciklama": "Her 200 metrede 1 °C azalıyor. Kaç tane 200 metre olduğu sayılır.",
+    "islem": "1200 ÷ 200 = 6 → 6 °C azalır"
+   },
+   {
+    "baslik": "Sıcaklığı bul",
+    "aciklama": "L daha yüksek olduğundan K’den soğuktur.",
+    "islem": "18 − 6 = 12 °C"
+   }
+  ],
+  "puf": "Sıcaklık değişimi için her zaman iki yükselti arasındaki farkı kullan, tek yükseltiyi değil.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ATM-02 (Yükselti ve sıcaklık) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-atmosfer-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Atmosfer ve Sıcaklık · Sıcaklığı etkileyen etkenler",
+  "k": "cog|Atmosfer ve Sıcaklık",
+  "kazanim": "Aynı enlemde sıcaklık farkına yol açan etkenleri ayırt eder.",
+  "tipId": "cg-atm-etken",
+  "tip": "Sıcaklığı etkileyen etkenler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Aynı enlem üzerinde bulunan iki yerin yıllık ortalama sıcaklıkları farklı ölçülmüştür.\nI. İki yer arasındaki yükselti farkı\nII. Güneş ışınlarının yere düşme açısındaki fark\nIII. Kıyıdan geçen sıcak ya da soğuk deniz akıntıları\nBu durumun nedeni olarak yukarıdakilerden hangileri gösterilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve III",
+   "B": "Yalnız I",
+   "C": "Yalnız II",
+   "D": "I ve II",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "B": "III. ifade de koşulu sağlar ama seçenekte yok: Sıcak akıntı geçen kıyı ısınır, soğuk akıntı geçen kıyı soğur.",
+   "C": "II. ifade koşulu sağlamaz: Aynı enlemde Güneş ışınlarının geliş açısı aynıdır; bu fark yaratmaz. I. ifade de koşulu sağlar ama seçenekte yok: Yükseldikçe sıcaklık azalır; yükseltisi farklı yerlerin sıcaklığı farklı olur. III. ifade de koşulu sağlar ama seçenekte yok: Sıcak akıntı geçen kıyı ısınır, soğuk akıntı geçen kıyı soğur.",
+   "D": "II. ifade koşulu sağlamaz: Aynı enlemde Güneş ışınlarının geliş açısı aynıdır; bu fark yaratmaz. III. ifade de koşulu sağlar ama seçenekte yok: Sıcak akıntı geçen kıyı ısınır, soğuk akıntı geçen kıyı soğur.",
+   "E": "II. ifade koşulu sağlamaz: Aynı enlemde Güneş ışınlarının geliş açısı aynıdır; bu fark yaratmaz. I. ifade de koşulu sağlar ama seçenekte yok: Yükseldikçe sıcaklık azalır; yükseltisi farklı yerlerin sıcaklığı farklı olur."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Sıcaklık farkının nedeni olabilecek etkenler.",
+  "bilgi": [
+   {
+    "ad": "Sıcaklığı etkileyen etkenler",
+    "ifade": "enlem (ışınların geliş açısı) · yükselti · kara-deniz dağılışı · okyanus akıntıları · bakı · bitki örtüsü"
+   },
+   {
+    "ad": "Aynı enlem",
+    "ifade": "Güneş ışınları aynı açıyla geldiği için enlemin etkisi eşit olur; fark başka etkenden doğar"
+   }
+  ],
+  "ipuclari": [
+   "Aynı enlemde hangi etken zaten aynıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabit olanı bul",
+    "aciklama": "İki yer aynı enlemde olduğundan ışınların geliş açısı eşittir.",
+    "islem": "geliş açısı: aynı → II hariç"
+   },
+   {
+    "baslik": "Farklılaşanları ayır",
+    "aciklama": "Yükselti ve deniz akıntıları yerden yere değişebilir ve sıcaklığı etkiler.",
+    "islem": "I: evet · III: evet"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Gösterilebilecek nedenler I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Aynı enlemde sıcaklık farkı soruluyorsa geliş açısını elemeden başla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ATM-03 (Sıcaklığı etkileyen etkenler) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-atmosfer-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Atmosfer ve Sıcaklık · İzoterm haritası",
+  "k": "cog|Atmosfer ve Sıcaklık",
+  "kazanim": "İzoterm haritasında iki yer arasındaki sıcaklık farkını aralıklarla değerlendirir.",
+  "tipId": "cg-atm-izoterm",
+  "tip": "İzoterm haritası yorumu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekilde, bir bölgenin deniz seviyesine indirgenmiş izoterm haritası verilmiştir. K ve M noktaları, 20 °C ve 10 °C’lik izoterm eğrileri üzerindedir; L, N ve P noktaları ise iki izoterm arasındadır.\nBuna göre, hangi iki noktanın sıcaklıkları arasındaki fark kesinlikle 5 °C’den azdır?",
+  "sekil": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M20 55.2 L30 56.6 L40 57.7 L50 58.5 L60 58.9 L70 59.0 L80 58.6 L90 57.9 L100 56.8 L110 55.5 L120 54.0 L130 52.3 L140 50.7 L150 49.1 L160 47.7 L170 46.5 L180 45.6 L190 45.1 L200 45.0 L210 45.3 L220 45.9 L230 46.9 L240 48.2 L250 49.7 L260 51.4 L270 53.0 L280 54.6 L290 56.1 L300 57.3\" stroke-width=\"1.8\" fill=\"none\"/><text x=\"318.0\" y=\"61.3\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">25 °C</text><path d=\"M20 93.2 L30 94.6 L40 95.7 L50 96.5 L60 96.9 L70 97.0 L80 96.6 L90 95.9 L100 94.8 L110 93.5 L120 92.0 L130 90.3 L140 88.7 L150 87.1 L160 85.7 L170 84.5 L180 83.6 L190 83.1 L200 83.0 L210 83.3 L220 83.9 L230 84.9 L240 86.2 L250 87.7 L260 89.4 L270 91.0 L280 92.6 L290 94.1 L300 95.3\" stroke-width=\"1.8\" fill=\"none\"/><text x=\"318.0\" y=\"99.3\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">20 °C</text><path d=\"M20 131.2 L30 132.6 L40 133.7 L50 134.5 L60 134.9 L70 135.0 L80 134.6 L90 133.9 L100 132.8 L110 131.5 L120 130.0 L130 128.3 L140 126.7 L150 125.1 L160 123.7 L170 122.5 L180 121.6 L190 121.1 L200 121.0 L210 121.3 L220 121.9 L230 122.9 L240 124.2 L250 125.7 L260 127.4 L270 129.0 L280 130.6 L290 132.1 L300 133.3\" stroke-width=\"1.8\" fill=\"none\"/><text x=\"318.0\" y=\"137.3\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">15 °C</text><path d=\"M20 169.2 L30 170.6 L40 171.7 L50 172.5 L60 172.9 L70 173.0 L80 172.6 L90 171.9 L100 170.8 L110 169.5 L120 168.0 L130 166.3 L140 164.7 L150 163.1 L160 161.7 L170 160.5 L180 159.6 L190 159.1 L200 159.0 L210 159.3 L220 159.9 L230 160.9 L240 162.2 L250 163.7 L260 165.4 L270 167.0 L280 168.6 L290 170.1 L300 171.3\" stroke-width=\"1.8\" fill=\"none\"/><text x=\"318.0\" y=\"175.3\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">10 °C</text><circle cx=\"70\" cy=\"97.0\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"77.0\" y=\"90.0\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><circle cx=\"190\" cy=\"102.1\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"197.0\" y=\"95.1\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><circle cx=\"255\" cy=\"164.5\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"262.0\" y=\"157.5\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><circle cx=\"105\" cy=\"75.2\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"112.0\" y=\"68.2\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">N</text><circle cx=\"150\" cy=\"144.1\" r=\"4\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"157.0\" y=\"137.1\" text-anchor=\"start\" font-size=\"13\" style=\"fill:currentColor;stroke:none;font-weight:700\">P</text><text x=\"170.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Deniz seviyesine indirgenmiş izoterm haritası</text></svg>",
+  "siklar": {
+   "A": "L – P",
+   "B": "K – M",
+   "C": "M – N",
+   "D": "N – P",
+   "E": "K – L"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "K – L"
+  },
+  "celdiriciler": {
+   "A": "L noktası 15–20 °C, P noktası 10–15 °C arasında kalır; ikisi de bu aralıklarda herhangi bir değer alabilir. Fark 0’a da 10’a da yaklaşabilir.",
+   "B": "K 20 °C, M 10 °C’lik eğri üzerindedir; fark tam 10 °C’dir, 5 °C’den azdır denemez.",
+   "C": "N 20 °C’den sıcaktır (20–25 arası), M 10 °C’dir; fark 10 °C’den büyüktür.",
+   "D": "N 20 °C’den sıcak, P 15 °C’den soğuktur; fark en az 5 °C’den büyüktür, azdır denemez."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "Sıcaklık farkı kesinlikle 5 °C’den az olan iki nokta.",
+  "bilgi": [
+   {
+    "ad": "İzoterm",
+    "ifade": "sıcaklığı eşit olan yerleri birleştiren eğridir (ör. 20 °C’lik izoterm üzerindeki her yer 20 °C’dir) · iki izoterm arasındaki yer, bu iki değerin arasında bir sıcaklığa sahiptir"
+   }
+  ],
+  "ipuclari": [
+   "Her noktanın sıcaklığının hangi iki değer arasında olduğunu yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aralıkları yaz",
+    "aciklama": "Eğri üzerindeki yerin değeri kesindir; iki eğri arasındaki yerin değeri aralıkta kalır.",
+    "islem": "K = 20 · M = 10 · L: 15–20 · N: 20–25 · P: 10–15"
+   },
+   {
+    "baslik": "En büyük farkı bul",
+    "aciklama": "İki noktanın farkı en çok, birinin en yüksek ve diğerinin en düşük değerinde olur.",
+    "islem": "K–L: fark < 20 − 15 = 5"
+   },
+   {
+    "baslik": "Diğer çiftleri sına",
+    "aciklama": "L–P arası 0 ile 10 arasında değişebilir. K–M tam 10, M–N 10’dan büyük, N–P 5’ten büyüktür.",
+    "islem": "L–P: belirsiz · K–M: 10 · M–N: >10 · N–P: >5"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Yalnız K–L çiftinde fark her durumda 5 °C’den küçüktür.",
+    "islem": "K – L"
+   }
+  ],
+  "puf": "Kesinlik soruluyorsa her noktanın değer aralığını yazıp en uç farkı hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ATM-04 (İzoterm haritası) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

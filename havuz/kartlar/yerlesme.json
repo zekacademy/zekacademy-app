@@ -1,0 +1,93 @@
+{
+ "konu": "Yerleşme",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez.",
+ "kartlar": [
+  {
+   "id": "K-CGYR-01",
+   "konu": "Yerleşme",
+   "alt": "Kent yerleşmesi",
+   "fikir": "Kentte nüfusun çoğu sanayi, ticaret ve hizmette çalışır; kırda tarım ve hayvancılık ağır basar.",
+   "tuzak": "Kırsal özellikleri kente yazmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "cg-yerlesme-tur",
+   "tip": "Kent yerleşmesinin özellikleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGYR-02",
+   "konu": "Yerleşme",
+   "alt": "Yer seçimi etkenleri",
+   "fikir": "Su, tarıma elverişli arazi, ulaşım ve güvenlik yerleşmeyi çeker; afet riski caydırır.",
+   "tuzak": "Afet riskini avantaj saymak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "cg-yerlesme-yer",
+   "tip": "Yerleşme yeri seçimini etkileyen etkenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGYR-03",
+   "konu": "Yerleşme",
+   "alt": "Kır yerleşmesinin biçimi",
+   "fikir": "Yağışlı, bol sulu, engebeli ve ormanlık yerlerde dağınık; suyun kıt ve tek kaynaktan sağlandığı düzlüklerde toplu yerleşme görülür.",
+   "tuzak": "Dağınık ve toplu koşullarını ters eşleştirmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "cg-yerlesme-bicim",
+   "tip": "Dağınık ve toplu kır yerleşmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  },
+  {
+   "id": "K-CGYR-04",
+   "konu": "Yerleşme",
+   "alt": "Kentleşme oranı",
+   "fikir": "Kentleşme oranı = kent nüfusu ÷ toplam nüfus × 100; iki tarihte hem toplam hem oran değişir.",
+   "tuzak": "Oran farkını nüfus artışı sanmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "cg-yerlesme-kentlesme",
+   "tip": "Kentleşme oranı ve nüfus değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Coğrafya Nüfus/Göç/Bölgeler dağılımı (örüntü) · MEB 9–10. sınıf coğrafya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-yerlesme-tur",
+   "ad": "Kent yerleşmesinin özellikleri",
+   "kartlar": [
+    "K-CGYR-01"
+   ],
+   "uygulamaKonu": "cog|Yerleşme"
+  },
+  {
+   "tipId": "cg-yerlesme-yer",
+   "ad": "Yerleşme yeri seçimini etkileyen etkenler",
+   "kartlar": [
+    "K-CGYR-02"
+   ],
+   "uygulamaKonu": "cog|Yerleşme"
+  },
+  {
+   "tipId": "cg-yerlesme-bicim",
+   "ad": "Dağınık ve toplu kır yerleşmesi",
+   "kartlar": [
+    "K-CGYR-03"
+   ],
+   "uygulamaKonu": "cog|Yerleşme"
+  },
+  {
+   "tipId": "cg-yerlesme-kentlesme",
+   "ad": "Kentleşme oranı ve nüfus değişimi",
+   "kartlar": [
+    "K-CGYR-04"
+   ],
+   "uygulamaKonu": "cog|Yerleşme"
+  }
+ ]
+}

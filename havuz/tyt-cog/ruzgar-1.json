@@ -1,0 +1,320 @@
+[
+ {
+  "id": "tytcog-ruzgar-0001",
+  "ders": "TYT Coğrafya",
+  "konu": "Basınç ve Rüzgârlar · Basınç kuşakları",
+  "k": "cog|Basınç ve Rüzgarlar",
+  "kazanim": "Basınç kuşaklarını termik ve dinamik, alçak ve yüksek olarak ayırt eder.",
+  "tipId": "cg-rzg-kusak",
+  "tip": "Basınç kuşaklarının türleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki basınç alanlarından hangisi dinamik (hava hareketine bağlı) alçak basınç alanıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kutup noktaları çevresi",
+   "B": "Ekvator çevresi",
+   "C": "30° enlemleri çevresi",
+   "D": "60° enlemleri çevresi",
+   "E": "Kışın Sibirya çevresi"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "60° enlemleri çevresi"
+  },
+  "celdiriciler": {
+   "A": "Kutuplarda aşırı soğuma nedeniyle oluşan termik yüksek basınç alanıdır; dinamik değil.",
+   "B": "Ekvator’da aşırı ısınma sonucu oluşan termik alçak basınç alanıdır; dinamik değil.",
+   "C": "Havanın alçalmasıyla oluşan dinamik alanıdır ama yüksek basınçlıdır.",
+   "E": "Kışın soğuyan kara üzerinde oluşan termik yüksek basınç alanıdır; dinamik değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Dinamik alçak basınç alanı.",
+  "bilgi": [
+   {
+    "ad": "Basınç kuşakları",
+    "ifade": "Ekvator: termik alçak (ısınma) · 30° enlemleri: dinamik yüksek (hava alçalır) · 60° enlemleri: dinamik alçak (hava yükselir) · Kutuplar: termik yüksek (soğuma)"
+   }
+  ],
+  "ipuclari": [
+   "Sıcaklık değil de hava hareketi yüzünden oluşan alçak basınç hangi enlemdedir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sınıflandırmayı hatırla",
+    "aciklama": "Isınma ve soğumayla oluşanlar termik, hava hareketiyle oluşanlar dinamik basınçtır.",
+    "islem": "termik: ekvator, kutup · dinamik: 30°, 60°"
+   },
+   {
+    "baslik": "Alçak olanı seç",
+    "aciklama": "Dinamik kuşaklardan 30° yüksek, 60° alçak basınçlıdır.",
+    "islem": "30°: yüksek · 60°: alçak"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Dinamik alçak basınç alanı 60° enlemleri çevresidir.",
+    "islem": "60° enlemleri"
+   }
+  ],
+  "puf": "Ekvator–30°–60°–kutup sırasında basınç alçak, yüksek, alçak, yüksek diye gider.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RZG-01 (Basınç kuşakları) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-ruzgar-0002",
+  "ders": "TYT Coğrafya",
+  "konu": "Basınç ve Rüzgârlar · Basınç farkı ve rüzgâr hızı",
+  "k": "cog|Basınç ve Rüzgarlar",
+  "kazanim": "Basınç farkı ve uzaklıktan rüzgâr hızı ile yönünü belirler.",
+  "tipId": "cg-rzg-hiz",
+  "tip": "Basınç farkı ve rüzgâr hızı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Aynı yükseltideki sekiz noktanın basınç değerleri ve ikili noktalar arasındaki uzaklıklar aşağıda verilmiştir.\nK: 1016 hPa, L: 1004 hPa (K–L arası 200 km)\nM: 1012 hPa, N: 1000 hPa (M–N arası 300 km)\nR: 1024 hPa, S: 1008 hPa (R–S arası 200 km)\nP: 1020 hPa, T: 1000 hPa (P–T arası 500 km)\nBu ikililer arasında rüzgârın hızının en fazla olduğu yer ve rüzgârın yönü aşağıdakilerin hangisinde doğru verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "P–T arasında, P’den T’ye",
+   "B": "R–S arasında, R’den S’ye",
+   "C": "R–S arasında, S’den R’ye",
+   "D": "K–L arasında, K’den L’ye",
+   "E": "M–N arasında, N’den M’ye"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "R–S arasında, R’den S’ye"
+  },
+  "celdiriciler": {
+   "A": "Basınç farkı en büyük olan çift P–T’dir (20 hPa) ama uzaklık 500 km olduğu için 100 km’deki fark 4 hPa kalır; en hızlı rüzgâr burada değildir.",
+   "C": "Çift doğru ama yön ters: rüzgâr yüksek basınçtan (R, 1024) alçak basınca (S, 1008) eser.",
+   "D": "K–L’de 100 km’deki fark 6 hPa’dır; R–S’deki 8 hPa’dan azdır.",
+   "E": "M–N’de 100 km’deki fark 4 hPa’dır; hem hız azdır hem de yön yüksek basınçtan alçağa doğru değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Rüzgârın hızının en fazla olduğu ikili ve rüzgârın yönü.",
+  "bilgi": [
+   {
+    "ad": "Rüzgâr hızı",
+    "ifade": "basınç farkı ne kadar büyük ve uzaklık ne kadar kısaysa rüzgâr o kadar hızlıdır · hız ∼ basınç farkı ÷ uzaklık (ör. 12 hPa ÷ 200 km = 6 hPa / 100 km)"
+   },
+   {
+    "ad": "Rüzgâr yönü",
+    "ifade": "yüksek basınçtan alçak basınca doğru eser"
+   }
+  ],
+  "ipuclari": [
+   "Rüzgâr hızı, 100 km’ye düşen basınç farkıyla artar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "100 km’ye düşen farkı hesapla",
+    "aciklama": "Farkı uzaklığa böl, 100 ile çarp ya da doğrudan oranla.",
+    "islem": "K–L: 12 ÷ 2 = 6 · M–N: 12 ÷ 3 = 4 · R–S: 16 ÷ 2 = 8 · P–T: 20 ÷ 5 = 4 (hPa / 100 km)"
+   },
+   {
+    "baslik": "En büyüğü seç",
+    "aciklama": "En çok hPa / 100 km değeri en hızlı rüzgârı verir. Toplam fark en büyük olan P–T değildir.",
+    "islem": "en büyük: R–S (8)"
+   },
+   {
+    "baslik": "Yönü bul",
+    "aciklama": "R’de 1024, S’de 1008 hPa vardır. Rüzgâr R’den S’ye eser.",
+    "islem": "R (yüksek) → S (alçak)"
+   }
+  ],
+  "puf": "Rüzgâr hızı için toplam basınç farkına değil, birim uzaklıktaki farka bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RZG-02 (Basınç farkı ve rüzgâr hızı) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-ruzgar-0003",
+  "ders": "TYT Coğrafya",
+  "konu": "Basınç ve Rüzgârlar · Yerel rüzgârlar",
+  "k": "cog|Basınç ve Rüzgarlar",
+  "kazanim": "Meltemin oluşum nedenini ve yönünü değerlendirir.",
+  "tipId": "cg-rzg-yerel",
+  "tip": "Yerel rüzgârlar (meltem)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Kıyı kesimlerde deniz ve kara meltemi görülür.\nI. Gündüz karalar denizden daha hızlı ısındığı için kara üzerinde yüksek basınç oluşur.\nII. Gece rüzgâr karadan denize doğru eser.\nIII. Meltemlerin oluşmasında kara ile denizin ısınma hızlarının farklı olması etkilidir.\nBu ifadelerden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "I. ifade koşulu sağlamaz: Gündüz hızlı ısınan kara üzerinde alçak basınç oluşur; rüzgâr denizden karaya eser. II. ifade de koşulu sağlar ama seçenekte yok: Gece kara hızlı soğur, kara üzerinde yüksek basınç oluşur; rüzgâr karadan denize eser. III. ifade de koşulu sağlar ama seçenekte yok: Kara çabuk ısınıp çabuk soğur, deniz geç ısınıp geç soğur; basınç farkı bu yüzden doğar.",
+   "B": "III. ifade de koşulu sağlar ama seçenekte yok: Kara çabuk ısınıp çabuk soğur, deniz geç ısınıp geç soğur; basınç farkı bu yüzden doğar.",
+   "C": "I. ifade koşulu sağlamaz: Gündüz hızlı ısınan kara üzerinde alçak basınç oluşur; rüzgâr denizden karaya eser. III. ifade de koşulu sağlar ama seçenekte yok: Kara çabuk ısınıp çabuk soğur, deniz geç ısınıp geç soğur; basınç farkı bu yüzden doğar.",
+   "D": "I. ifade koşulu sağlamaz: Gündüz hızlı ısınan kara üzerinde alçak basınç oluşur; rüzgâr denizden karaya eser. II. ifade de koşulu sağlar ama seçenekte yok: Gece kara hızlı soğur, kara üzerinde yüksek basınç oluşur; rüzgâr karadan denize eser."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Meltem",
+    "ifade": "kara ve denizin farklı ısınmasıyla oluşan yerel rüzgâr · gündüz: deniz → kara (kara sıcak, alçak basınç) · gece: kara → deniz (kara soğuk, yüksek basınç)"
+   }
+  ],
+  "ipuclari": [
+   "Gündüz kara mı deniz mi daha sıcak olur? Basıncı buna göre düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Isınma farkını hatırla",
+    "aciklama": "Kara çabuk ısınır ve çabuk soğur. Deniz ise geç ısınır ve geç soğur.",
+    "islem": "gündüz: kara sıcak · gece: kara soğuk"
+   },
+   {
+    "baslik": "Basıncı ve yönü bul",
+    "aciklama": "Gündüz kara üzerinde alçak, gece yüksek basınç oluşur. Rüzgâr yüksekten alçağa eser.",
+    "islem": "gündüz: deniz → kara · gece: kara → deniz"
+   },
+   {
+    "baslik": "İfadeleri ele",
+    "aciklama": "I’de basınç türü yanlıştır. II ve III doğrudur.",
+    "islem": "I: yanlış · II: doğru · III: doğru"
+   }
+  ],
+  "puf": "Meltem sorularında önce kara ile denizin hangisinin sıcak olduğunu belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RZG-03 (Yerel rüzgârlar) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytcog-ruzgar-0004",
+  "ders": "TYT Coğrafya",
+  "konu": "Basınç ve Rüzgârlar · Dünya’nın dönmesi ve rüzgâr yönü",
+  "k": "cog|Basınç ve Rüzgarlar",
+  "kazanim": "Dünya’nın dönmesinin etkisiyle kuşaklar arasında esen rüzgârların yönünü belirler.",
+  "tipId": "cg-rzg-sapma",
+  "tip": "Sürekli rüzgârların yönü ve sapma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 5,
+  "metin": "Bir coğrafya öğretmeni, yeryüzünde basınç kuşakları arasında esen sürekli rüzgârların yönünü Dünya’nın dönmesinin etkisini de hesaba katarak (rüzgârlar Kuzey Yarım Küre’de sağa, Güney Yarım Küre’de sola sapar) öğrencilerinden bulmalarını istiyor.\nBuna göre aşağıdaki yön bilgilerinden hangisi doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kuzey Yarım Küre’de 30° enlemlerinden 60° enlemlerine esen rüzgâr güneybatıdan eser.",
+   "B": "Güney Yarım Küre’de 30° enlemlerinden Ekvator’a esen rüzgâr kuzeydoğudan eser.",
+   "C": "Kuzey Yarım Küre’de kutup noktalarından 60° enlemlerine esen rüzgâr güneydoğudan eser.",
+   "D": "Güney Yarım Küre’de 30° enlemlerinden 60° enlemlerine esen rüzgâr güneybatıdan eser.",
+   "E": "Kuzey Yarım Küre’de 30° enlemlerinden Ekvator’a esen rüzgâr güneydoğudan eser."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kuzey Yarım Küre’de 30° enlemlerinden 60° enlemlerine esen rüzgâr güneybatıdan eser."
+  },
+  "celdiriciler": {
+   "B": "Güneydoğu alizeleri: Güney Yarım Küre’de güneydoğudan eser.",
+   "C": "Kutup doğu rüzgârları: Kuzey Yarım Küre’de kuzeydoğudan eser.",
+   "D": "Güney Yarım Küre’de bu yöndeki rüzgâr kuzeybatıdan eser (sola sapma).",
+   "E": "Kuzey Yarım Küre’de bu yöndeki rüzgâr kuzeydoğudan eser (kuzeydoğu alizeleri)."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Sapma dikkate alındığında doğru olan rüzgâr yönü bilgisi.",
+  "bilgi": [
+   {
+    "ad": "Rüzgâr nereye esiyor?",
+    "ifade": "yüksek basınçtan alçak basınca · 30° → Ekvator: ekvatora doğru · 30° → 60°: kutba doğru · kutup → 60°: ekvatora doğru"
+   },
+   {
+    "ad": "Sapma",
+    "ifade": "Kuzey Yarım Küre’de rüzgâr gittiği yönün sağına, Güney Yarım Küre’de soluna sapar · rüzgâr yönü, estiği (geldiği) yerle adlandırılır"
+   },
+   {
+    "ad": "Örnek",
+    "ifade": "Kuzey’de ekvatora doğru güneye esen rüzgâr batıya sapar: kuzeydoğudan eser (kuzeydoğu alizeleri)"
+   }
+  ],
+  "ipuclari": [
+   "Önce rüzgârın ekvatora mı kutba mı yöneldiğini, sonra hangi yarım kürede saptığını düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Esiş yönünü belirle",
+    "aciklama": "Yüksek basınç kuşağından alçak basınç kuşağına doğru esen rüzgârın düz yönü bulunur.",
+    "islem": "30° → 60°: kutba doğru (K yarım kürede kuzeye)"
+   },
+   {
+    "baslik": "Sapmayı uygula",
+    "aciklama": "Kuzey Yarım Küre’de sağa sapılır. Kuzeye giden rüzgâr doğuya doğru kayar.",
+    "islem": "kuzey + sağa → kuzeydoğuya gider"
+   },
+   {
+    "baslik": "Estiği yeri adlandır",
+    "aciklama": "Rüzgâr, geldiği yönle anılır. Kuzeydoğuya giden rüzgâr güneybatıdan eser.",
+    "islem": "güneybatıdan eser (batı rüzgârları)"
+   },
+   {
+    "baslik": "Diğer şıkları sına",
+    "aciklama": "Güney’de 30°–Ekvator rüzgârı güneydoğudan, Kuzey’de 30°–Ekvator ve kutup–60° rüzgârları kuzeydoğudan, Güney’de 30°–60° rüzgârı kuzeybatıdan eser.",
+    "islem": "B, C, D, E: yön yanlış"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Yalnız A şıkkı sapma hesabıyla uyuşur.",
+    "islem": "A"
+   }
+  ],
+  "puf": "Önce “nereye”, sonra sapma yönü, en son “nereden” diye üç adımda ilerle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RZG-04 (Dünya’nın dönmesi ve rüzgâr yönü) · özgün kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
