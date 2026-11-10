@@ -1,0 +1,1203 @@
+[
+ {
+  "id": "tyttr-pyeni-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metin ve Tablo",
+  "k": "tr|Paragraf",
+  "kazanim": "Tablodaki toplam ve ortalama değerleri yorumlar.",
+  "tipId": "pyn-tablo",
+  "tip": "Metin ve tabloyu birlikte yorumlama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 2,
+  "metin": "Bir ilçe kütüphanesi, üç ay boyunca düzenlediği etkinliklere katılan kişileri saymıştır. Etkinliklerin düzenlenme sayıları ve toplam katılımcı sayıları aşağıdaki tabloda verilmiştir. Kütüphane yöneticisi, bir etkinliğin başarısını yalnızca toplam katılımcıya değil, her düzenlenişine gelen ortalama kişiye bakarak da değerlendirmek gerektiğini söylemiştir.\nEtkinlik | Düzenlenme sayısı | Toplam katılımcı\nKitap söyleşisi | 6 | 180\nÇocuk okuma saati | 12 | 360\nYazı atölyesi | 3 | 135\nBu bilgilere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çocuk okuma saati, toplam katılımcı sayısı en fazla olan etkinliktir.",
+   "B": "Yazı atölyesinin her düzenlenişine ortalama 30 kişi katılmıştır.",
+   "C": "Düzenlenişi başına en az katılımcı yazı atölyesine gelmiştir.",
+   "D": "Düzenlenme sayısı en fazla olan etkinlik kitap söyleşisidir.",
+   "E": "Üç etkinlikte de düzenlenişi başına düşen katılımcı sayısı aynıdır."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Çocuk okuma saati, toplam katılımcı sayısı en fazla olan etkinliktir."
+  },
+  "celdiriciler": {
+   "B": "135 ÷ 3 = 45 kişidir; 30 değildir.",
+   "C": "Atölyede 45, diğer ikisinde 30 kişi düşer; en az gelen atölye değildir.",
+   "D": "En çok düzenlenen etkinlik 12 ile çocuk okuma saatidir.",
+   "E": "Ortalamalar 30, 30 ve 45 olduğundan aynı değildir."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "önce satır ve sütun başlığını eşle, sonra şıkta istenen işlemi yap. Örnek: 20 öğrencili sınıfta 60 kitap okunduysa öğrenci başına 60 ÷ 20 = 3 kitap düşer"
+   },
+   {
+    "ad": "Oran ve yüzde",
+    "ifade": "“yüzde p”, bütünün p/100’üdür. Örnek: 400 kişinin %50’si 400 × 50/100 = 200 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Her şık için tablodaki sayıları kullan; gerekirse bölme yap."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metni ve tabloyu oku",
+    "aciklama": "Metindeki koşulu ve tablodaki satır–sütun başlıklarını eşleştir; hangi sayıların gerekeceğine bak.",
+    "islem": "okunacak: koşul + sayılar"
+   },
+   {
+    "baslik": "Hesabı yap",
+    "aciklama": "Toplam katılımcı en çok çocuk okuma saatinde (360). Etkinlik başına ortalama 180 ÷ 6 = 30, 360 ÷ 12 = 30, 135 ÷ 3 = 45 olur.",
+    "islem": "ortalama: 180 ÷ 6 = 30 · 360 ÷ 12 = 30 · 135 ÷ 3 = 45"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: doğru ✓ · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Tablo sorularında şıktaki ifadeyi sayıya çevirip hesapla; sezgiyle şık seçme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-01 (Yeni Nesil: Metin ve Tablo) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metin ve Tablo",
+  "k": "tr|Paragraf",
+  "kazanim": "Tabloda farkları hesaplayarak yorum yapar.",
+  "tipId": "pyn-tablo",
+  "tip": "Metin ve tabloyu birlikte yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir kentte işe gidenlerin kullandığı ulaşım türleri, on yıl arayla yapılan iki ankette sorulmuştur. Yanıtların yüzdeleri aşağıdaki tabloda verilmiştir. Bu on yıl içinde kent yönetimi, ana caddelerden birine bisiklet yolu yapmıştır.\nUlaşım türü | 2015 (%) | 2025 (%)\nOtomobil | 48 | 38\nToplu taşıma | 36 | 37\nYürüyerek | 12 | 15\nBisiklet | 4 | 10\nBu bilgilere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Otomobil kullananların oranındaki azalma, bisiklet kullananların oranındaki artıştan azdır.",
+   "B": "2015’te işe gidenlerin çoğunluğu toplu taşımayı kullanmıştır.",
+   "C": "2025’te yürüyerek gidenlerin oranı, bisiklet kullananların oranının altındadır.",
+   "D": "Oranı en çok artan ulaşım türü bisiklettir.",
+   "E": "Toplu taşımanın oranındaki artış, yürüyerek gidenlerinkinden fazladır."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Oranı en çok artan ulaşım türü bisiklettir."
+  },
+  "celdiriciler": {
+   "A": "Otomobilde 10 puanlık azalma, bisiklette 6 puanlık artış vardır; azalma daha fazladır.",
+   "B": "Toplu taşıma %36’dır; yarıdan azdır, ayrıca otomobil %48 ile öndedir.",
+   "C": "2025’te yürüyenler %15, bisikletliler %10’dur; yürüyenler fazladır.",
+   "E": "Toplu taşıma 1 puan, yürüme 3 puan artmıştır; yürüme daha fazla artmıştır."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "önce satır ve sütun başlığını eşle, sonra şıkta istenen işlemi yap. Örnek: 20 öğrencili sınıfta 60 kitap okunduysa öğrenci başına 60 ÷ 20 = 3 kitap düşer"
+   },
+   {
+    "ad": "Oran ve yüzde",
+    "ifade": "“yüzde p”, bütünün p/100’üdür. Örnek: 400 kişinin %50’si 400 × 50/100 = 200 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Her ulaşım türü için iki yıl arasındaki farkı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metni ve tabloyu oku",
+    "aciklama": "Metindeki koşulu ve tablodaki satır–sütun başlıklarını eşleştir; hangi sayıların gerekeceğine bak.",
+    "islem": "okunacak: koşul + sayılar"
+   },
+   {
+    "baslik": "Hesabı yap",
+    "aciklama": "İki yıl arasındaki fark: otomobil −10, toplu taşıma +1, yürüyerek +3, bisiklet +6 puandır. Bu farklar şıkları sınamak için yeterlidir.",
+    "islem": "fark: 38 − 48 = −10 · 37 − 36 = 1 · 15 − 12 = 3 · 10 − 4 = 6"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru ✓ · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Toplamla oranı ve artış miktarıyla artış oranını ayrı ayrı düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-01 (Yeni Nesil: Metin ve Tablo) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metin ve Tablo",
+  "k": "tr|Paragraf",
+  "kazanim": "Tablodan oran hesaplayıp sıralama yapar.",
+  "tipId": "pyn-tablo",
+  "tip": "Metin ve tabloyu birlikte yorumlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir lisede düzenlenen okuma kampanyasında sınıflar, dönem boyunca okudukları toplam kitap sayısını bildirmiştir. Kampanya yöneticisi, kazananı toplam kitap sayısına göre değil, öğrenci başına düşen kitap sayısına göre belirleyeceklerini açıklamıştır.\nSınıf | Öğrenci sayısı | Okunan kitap sayısı\n9-A | 20 | 60\n9-B | 25 | 50\n10-A | 30 | 120\n10-B | 24 | 72\nBu bilgilere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kampanyanın kazananı 9-A sınıfıdır.",
+   "B": "Kampanyanın kazananı, toplam kitap sayısında da birinci olan sınıftır.",
+   "C": "9-A ile 10-B sınıflarında öğrenci başına düşen kitap sayısı farklıdır.",
+   "D": "9-B, öğrenci başına en çok kitap okuyan ikinci sınıftır.",
+   "E": "Öğrenci sayısı en az olan sınıf, toplamda da en az kitap okumuştur."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Kampanyanın kazananı, toplam kitap sayısında da birinci olan sınıftır."
+  },
+  "celdiriciler": {
+   "A": "Öğrenci başına 60 ÷ 20 = 3 kitapla 9-A kazanan değildir; 10-A, 120 ÷ 30 = 4 kitapla öndedir.",
+   "C": "Her ikisinde de 3 kitap düşer: 60 ÷ 20 = 72 ÷ 24 = 3.",
+   "D": "9-B 2 kitapla son sıradadır; 4 ve 3 kitaplı sınıflar ondan öndedir.",
+   "E": "En az öğrencili 9-A 60 kitap okumuştur; en az kitap 50 ile 9-B’dedir."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "önce satır ve sütun başlığını eşle, sonra şıkta istenen işlemi yap. Örnek: 20 öğrencili sınıfta 60 kitap okunduysa öğrenci başına 60 ÷ 20 = 3 kitap düşer"
+   },
+   {
+    "ad": "Oran ve yüzde",
+    "ifade": "“yüzde p”, bütünün p/100’üdür. Örnek: 400 kişinin %50’si 400 × 50/100 = 200 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Önce her sınıfın öğrenci başına kitap sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metni ve tabloyu oku",
+    "aciklama": "Metindeki koşulu ve tablodaki satır–sütun başlıklarını eşleştir; hangi sayıların gerekeceğine bak.",
+    "islem": "okunacak: koşul + sayılar"
+   },
+   {
+    "baslik": "Hesabı yap",
+    "aciklama": "Kişi başına kitap: 9-A 3, 9-B 2, 10-A 4, 10-B 3. Kampanya kişi başına ölçüldüğünden kazanan 10-A’dır; toplam kitap sayısında da 120 ile birincidir.",
+    "islem": "kişi başına: 60 ÷ 20 = 3 · 50 ÷ 25 = 2 · 120 ÷ 30 = 4 · 72 ÷ 24 = 3"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: doğru ✓ · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Tablo sorularında şıktaki ifadeyi sayıya çevirip hesapla; sezgiyle şık seçme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-01 (Yeni Nesil: Metin ve Tablo) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metin ve Tablo",
+  "k": "tr|Paragraf",
+  "kazanim": "Yüzdeyi sayıya çevirip bölümler arası karşılaştırma yapar.",
+  "tipId": "pyn-tablo",
+  "tip": "Metin ve tabloyu birlikte yorumlama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir müzeye bir ay boyunca gelen ziyaretçilerin sayısı ve bu ziyaretçiler içinde öğrencilerin yüzdesi, gün türüne göre tabloda verilmiştir. Müze öğrencilerden bilet ücreti almamakta, öğrenci olmayan her ziyaretçiden aynı ücreti almaktadır. Ücret, hafta içi ve hafta sonu değişmemektedir.\nGün türü | Ziyaretçi sayısı | Öğrenci oranı (%)\nHafta içi | 400 | 50\nHafta sonu | 600 | 20\nBu bilgilere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Hafta sonu gelen ziyaretçilerin yarısından fazlası öğrencidir.",
+   "B": "Öğrenci ziyaretçilerin çoğunluğu hafta sonu gelmiştir.",
+   "C": "Bilet alan ziyaretçi sayısı, öğrenci ziyaretçi sayısının üç katından fazladır.",
+   "D": "Hafta içi bilet alan ziyaretçi sayısı, hafta sonu bilet alanların yarısından fazladır.",
+   "E": "Bilet alan ziyaretçilerin üçte ikisinden fazlası hafta sonu gelmiştir."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Bilet alan ziyaretçilerin üçte ikisinden fazlası hafta sonu gelmiştir."
+  },
+  "celdiriciler": {
+   "A": "Hafta sonu öğrenci oranı %20’dir; yarıdan çok azdır.",
+   "B": "Öğrenciler hafta içi 200, hafta sonu 120 kişidir; çoğunluk hafta içindedir.",
+   "C": "Bilet alanlar 680, öğrenciler 320 kişidir; 3 × 320 = 960 olduğundan 680 üç katından azdır.",
+   "D": "Hafta içi 200, hafta sonu 480 bilet alan vardır; 480 ÷ 2 = 240 olduğundan 200 yarıdan azdır."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "önce satır ve sütun başlığını eşle, sonra şıkta istenen işlemi yap. Örnek: 20 öğrencili sınıfta 60 kitap okunduysa öğrenci başına 60 ÷ 20 = 3 kitap düşer"
+   },
+   {
+    "ad": "Oran ve yüzde",
+    "ifade": "“yüzde p”, bütünün p/100’üdür. Örnek: 400 kişinin %50’si 400 × 50/100 = 200 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Önce her gün türü için öğrenci ve bilet alan sayısını ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metni ve tabloyu oku",
+    "aciklama": "Metindeki koşulu ve tablodaki satır–sütun başlıklarını eşleştir; hangi sayıların gerekeceğine bak.",
+    "islem": "okunacak: koşul + sayılar"
+   },
+   {
+    "baslik": "Hesabı yap",
+    "aciklama": "Hafta içi 200 öğrenci, 200 bilet alan; hafta sonu 120 öğrenci, 480 bilet alan vardır. Toplamda 320 öğrenci ve 680 bilet alan ziyaretçi bulunur.",
+    "islem": "öğrenci: 400 × 50/100 = 200 · 600 × 20/100 = 120. Bilet alan: 400 − 200 = 200 · 600 − 120 = 480"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: yanlış · E: doğru ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Toplamla oranı ve artış miktarıyla artış oranını ayrı ayrı düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-01 (Yeni Nesil: Metin ve Tablo) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Kişinin Görüşü",
+  "k": "tr|Paragraf",
+  "kazanim": "İki görüşün odaklarını sahibine göre ayırır.",
+  "tipId": "pyn-gorus",
+  "tip": "İki kişinin görüşünü karşılaştırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 2,
+  "metin": "Elif: “Basılı kitap, okuru yalnızca kitapla baş başa bırakır; ekranda ise gelen bildirimler okumayı her an bölebilir. Bu yüzden uzun bir romanı kâğıttan okumak, dikkati koruma bakımından daha elverişlidir.”\nKaan: “Ekran, yazı boyutunu ve ışığı okura göre ayarlamaya izin verir. Görme sorunu olan biri için bu ayar okumayı kolaylaştırır; her okur kendi gözüne göre bir düzen kurabilir.”\nBu görüşlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "İki konuşmacı da basılı kitabın ekrandan her bakımdan üstün olduğunu savunmaktadır.",
+   "B": "İki konuşmacı da ekranda okumanın dikkati dağıttığını kabul etmektedir.",
+   "C": "Elif dikkatin korunmasını, Kaan ise okura uyum sağlanmasını öne çıkarmaktadır.",
+   "D": "Kaan, basılı kitabın görme sorunu olanlara uygun olmadığını söylemektedir.",
+   "E": "Elif, ekranın yazı boyutunun ayarlanmasına izin vermediğini belirtmektedir."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Elif dikkatin korunmasını, Kaan ise okura uyum sağlanmasını öne çıkarmaktadır."
+  },
+  "celdiriciler": {
+   "A": "Kaan ekranın ayarlanabilirliğini över; basılı kitabı her bakımdan üstün saymaz.",
+   "B": "Bildirimlerin bölücü etkisini yalnızca Elif söyler; Kaan dikkat konusuna girmez.",
+   "D": "Kaan basılı kitabı hiç anmaz; yalnızca ekranın ayarlanabildiğini söyler.",
+   "E": "Yazı boyutu ayarını Kaan anlatır; Elif bu konuya hiç girmez."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki görüşü ayırma",
+    "ifade": "her görüşü sahibine yaz; “her ikisi” diyen şık için iki görüşte de dayanak ara. Örnek: biri “ödev gerekli”, öteki “gereksiz” diyorsa ortak yargı yoktur"
+   }
+  ],
+  "ipuclari": [
+   "Her görüşün hangi konuya odaklandığını bir kelimeyle özetle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Görüşleri ayır",
+    "aciklama": "Her görüşü sahibine yaz; “her ikisi” ya da “biri” gibi sözcüklere dikkat et.",
+    "islem": "her görüş sahibine yazılır"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Elif’in odağı dikkatin sürmesi, Kaan’ın odağı ekranın okura göre ayarlanabilmesidir. Doğru şık bu iki odağı doğru sahiplerine verir.",
+    "islem": "Elif → dikkatin korunması · Kaan → okura uyum"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: doğru ✓ · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "“Her ikisi” diyen şıkta iki konuşmacıda da dayanak göstermeden karar verme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-02 (Yeni Nesil: İki Kişinin Görüşü) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Kişinin Görüşü",
+  "k": "tr|Paragraf",
+  "kazanim": "Bir görüşü sahibine bağlayıp ortak noktayı sınar.",
+  "tipId": "pyn-gorus",
+  "tip": "İki kişinin görüşünü karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Elif: “Ödev, derste öğrenilenin evde pekiştirilmesini sağlar. Ödev olmazsa konu birkaç gün içinde unutulur ve her ders yeniden başlamak zorunda kalır. Üstelik her gün küçük bir ödev yapan öğrenci, çalışma düzenini de erken yaşta edinir.”\nKaan: “Ödev, çocukların oyun ve dinlenme zamanını azaltır; üstelik evde yardım alabilen öğrenciyi, alamayandan öne geçirir. Pekiştirme için ödev yerine ders içinde tekrar yapılabilir. Okulun görevi, öğrenciyi eve iş götürmeden de öğretebilmektir.”\nBu görüşlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "İki konuşmacı da ödevin tamamen kaldırılması gerektiğini savunmaktadır.",
+   "B": "Kaan, pekiştirmenin ödev dışında bir yolla da sağlanabileceğini düşünmektedir.",
+   "C": "Elif, ödevin öğrenciler arasında fırsat eşitsizliği yarattığını savunmaktadır.",
+   "D": "Kaan, ders içinde yapılan tekrarın konuları kalıcı kılmadığını ileri sürmektedir.",
+   "E": "İki konuşmacı da öğrencinin dinlenme zamanının azalmasını sakıncalı bulmaktadır."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Kaan, pekiştirmenin ödev dışında bir yolla da sağlanabileceğini düşünmektedir."
+  },
+  "celdiriciler": {
+   "A": "Elif ödevi gerekli bulur; kaldırılmasını yalnızca Kaan’ın görüşü ima eder.",
+   "C": "Fırsat eşitsizliğine Kaan değinir; Elif böyle bir sakıncadan söz etmez.",
+   "D": "Kaan tam tersine ders içi tekrarı bir çözüm olarak önerir.",
+   "E": "Dinlenme zamanından yalnızca Kaan söz eder; Elif bu konuya girmez."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki görüşü ayırma",
+    "ifade": "her görüşü sahibine yaz; “her ikisi” diyen şık için iki görüşte de dayanak ara. Örnek: biri “ödev gerekli”, öteki “gereksiz” diyorsa ortak yargı yoktur"
+   }
+  ],
+  "ipuclari": [
+   "Hangi cümle hangi konuşmacıya ait, işaretle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Görüşleri ayır",
+    "aciklama": "Her görüşü sahibine yaz; “her ikisi” ya da “biri” gibi sözcüklere dikkat et.",
+    "islem": "her görüş sahibine yazılır"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Pekiştirmenin ders içinde tekrarla da yapılabileceğini Kaan söyler. Fırsat eşitsizliği ve dinlenme zamanı yalnızca Kaan’ın, unutma kaygısı yalnızca Elif’in sözüdür.",
+    "islem": "Kaan → pekiştirme ders içinde tekrarla da olur"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: doğru ✓ · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Bir görüşü sahibine yaz; söylenmeyeni konuşmacıya yükleme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-02 (Yeni Nesil: İki Kişinin Görüşü) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Kişinin Görüşü",
+  "k": "tr|Paragraf",
+  "kazanim": "Görüşlerin ortak ve ayrışan yanını ayırt eder.",
+  "tipId": "pyn-gorus",
+  "tip": "İki kişinin görüşünü karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Selin: “Bir ressamın ustalarını kopyalaması, çıraklık döneminin parçasıdır. Taklit, el becerisinin kazanıldığı yoldur ve asıl sanat bu temel üzerinde yükselir. Taklidi bırakmayı bilen çırak, zamanla kendi elini bulur.”\nBarış: “Taklitten başlayan kişi taklitçi kalma tehlikesiyle karşılaşır; öğrenci ilk günden kendi sesini aramazsa sonradan o sesi bulması güçleşir. Beceri kazanmak ile kendi sesini bulmak aynı süreçte yürümelidir. Aksi hâlde çıraklık yıllarında edinilen alışkanlıklar, sonradan aşılması zor bir kalıba dönüşür.”\nBu görüşlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Selin’e göre sanatçı, taklit yoluyla özgün bir sese hiçbir zaman ulaşamaz.",
+   "B": "Barış’a göre beceri kazanma, özgün sesin aranmasından sonra gelmelidir.",
+   "C": "İki konuşmacı da taklidin sanatçı yetiştirmede hiçbir yeri olmadığını savunmaktadır.",
+   "D": "Selin’e göre özgün ses, beceri kazanılmadan önce bulunmalıdır.",
+   "E": "İki konuşmacı da beceri ile özgünlük arasında bağ kurmakta, işleyişte ayrılmaktadır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "İki konuşmacı da beceri ile özgünlük arasında bağ kurmakta, işleyişte ayrılmaktadır."
+  },
+  "celdiriciler": {
+   "A": "Selin asıl sanatın taklitle kazanılan temel üzerinde yükseldiğini söyler.",
+   "B": "Barış ikisinin aynı süreçte yürümesini ister; sıralama önermez.",
+   "C": "Selin taklidi çıraklığın parçası sayar; bu yargı Selin’e terstir.",
+   "D": "Selin önce beceri temelini, sonra asıl sanatı sıralar; bu şık ters kurulmuştur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki görüşü ayırma",
+    "ifade": "her görüşü sahibine yaz; “her ikisi” diyen şık için iki görüşte de dayanak ara. Örnek: biri “ödev gerekli”, öteki “gereksiz” diyorsa ortak yargı yoktur"
+   }
+  ],
+  "ipuclari": [
+   "Selin ve Barış’ın beceri ile özgün ses arasındaki sıralamayı nasıl kurduğunu karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Görüşleri ayır",
+    "aciklama": "Her görüşü sahibine yaz; “her ikisi” ya da “biri” gibi sözcüklere dikkat et.",
+    "islem": "her görüş sahibine yazılır"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Selin sıralı bir yol görür (önce beceri, sonra asıl sanat). Barış ise ikisinin aynı süreçte yürümesini ister. İlişkiyi ikisi de kurar, işleyişte ayrılırlar.",
+    "islem": "Selin → önce beceri · Barış → ikisi aynı süreçte"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: yanlış · E: doğru ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "“Her ikisi” diyen şıkta iki konuşmacıda da dayanak göstermeden karar verme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-02 (Yeni Nesil: İki Kişinin Görüşü) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Kişinin Görüşü",
+  "k": "tr|Paragraf",
+  "kazanim": "“Her ikisi” ifadesini iki konuşmacıda birden sınar.",
+  "tipId": "pyn-gorus",
+  "tip": "İki kişinin görüşünü karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Mert: “Çarşı merkezini araç trafiğine kapatmak, esnafın müşterisini kaybetmesine yol açar; çünkü insanlar arabasıyla kapısına gelemediği dükkâna uğramaz. Kapatma ancak toplu taşıma, arabasız gelmeyi zahmetsiz kılacak kadar güçlendiğinde yapılmalıdır. Dükkânın önünden geçen kalabalık, kasaya uğrayan müşteriyle aynı şey değildir.”\nZeynep: “Yaya bölgesine dönüşen merkezlerde esnafın cirosunun arttığı görülmüştür; çünkü yürüyen insan, arabayla geçen insandan çok daha fazla dükkâna girer. Yine de geçiş döneminde esnaf zarar görebilir; bu yüzden kapatmadan önce toplu taşıma hazır hâle getirilmelidir.”\nBu görüşlere göre aşağıdakilerden hangisi her iki konuşmacının da kabul ettiği bir yargıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kapatma, toplu taşıma hazırlandıktan sonra yapılmalıdır.",
+   "B": "Yaya bölgesine dönüşen merkezlerde esnafın cirosu yükselir.",
+   "C": "Arabayla gelemeyen müşteri o dükkâna uğramaz.",
+   "D": "Yürüyen insan, arabayla geçen insandan daha çok dükkâna girer.",
+   "E": "Kapatma kararı, esnafın onayı alınarak verilmelidir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kapatma, toplu taşıma hazırlandıktan sonra yapılmalıdır."
+  },
+  "celdiriciler": {
+   "B": "Ciro artışını yalnızca Zeynep söyler; Mert esnafın müşteri kaybedeceğini savunur.",
+   "C": "Bu yargı Mert’indir; Zeynep böyle bir yargıyı kabul etmez, yürüyenin daha çok girdiğini söyler.",
+   "D": "Yalnızca Zeynep’in görüşüdür; Mert bunu söylemez.",
+   "E": "Esnaf onayından iki konuşmacı da söz etmez."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki görüşü ayırma",
+    "ifade": "her görüşü sahibine yaz; “her ikisi” diyen şık için iki görüşte de dayanak ara. Örnek: biri “ödev gerekli”, öteki “gereksiz” diyorsa ortak yargı yoktur"
+   }
+  ],
+  "ipuclari": [
+   "Her şıkta konuşmacının adını ara; iki isimde de dayanak bulamıyorsan ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Görüşleri ayır",
+    "aciklama": "Her görüşü sahibine yaz; “her ikisi” ya da “biri” gibi sözcüklere dikkat et.",
+    "islem": "her görüş sahibine yazılır"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Ortak yargı, kapatmanın toplu taşımadan sonra gelmesidir: Mert ve Zeynep bunu farklı gerekçelerle söyler. Ciro artışı ve yürüyenin daha çok girmesi Zeynep’e, arabayla gelemeyen müşterinin uğramaması Mert’e aittir.",
+    "islem": "Mert ve Zeynep → önce toplu taşıma, sonra kapatma"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: doğru ✓ · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Bir görüşü sahibine yaz; söylenmeyeni konuşmacıya yükleme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-02 (Yeni Nesil: İki Kişinin Görüşü) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0009",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Metin Karşılaştırma",
+  "k": "tr|Paragraf",
+  "kazanim": "İki metnin vurgusunu sahibine göre ayırır.",
+  "tipId": "pyn-metin",
+  "tip": "İki metni karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "I. metin: Sesli kitaplar, okuma alışkanlığı olmayanlara kapıyı aralar. Yürürken, yemek yaparken ya da trafikte beklerken dinlenen bir roman, gün içinde okumaya vakit bulamayanları edebiyatla buluşturur. Kitabın elde taşınmasına, sayfalarının çevrilmesine gerek kalmaması da bu yönteme erişim kolaylığı kazandırır.\nII. metin: Okumak, yalnızca bir metni anlamak değil, metnin temposunu kendin belirlemektir. Bir cümlenin üstünde durmak, geriye dönüp bir paragrafı yeniden okumak, bir anlatıcının sesiyle ilerleyen dinleyicinin pek sahip olamadığı bir özgürlüktür. Bu özgürlük, okurun metinle kurduğu ilişkinin niteliğini de belirler.\nBu metinlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Her iki metin de sesli kitapların okuma alışkanlığına zarar verdiğini savunmaktadır.",
+   "B": "II. metin, sesli kitapların yalnızca okuma alışkanlığı olmayanlara hitap ettiğini söylemektedir.",
+   "C": "I. metin erişim kolaylığına, II. metin okurun tempo özgürlüğüne dikkat çekmektedir.",
+   "D": "II. metin, sesli kitapların romanlar için uygun olmadığını ileri sürmektedir.",
+   "E": "I. metin, yürürken kitap dinlemenin dikkati dağıttığını vurgulamaktadır."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I. metin erişim kolaylığına, II. metin okurun tempo özgürlüğüne dikkat çekmektedir."
+  },
+  "celdiriciler": {
+   "A": "I. metin sesli kitabı okumaya kapı aralayan bir yol olarak över; zarar verdiğini söylemez.",
+   "B": "Böyle bir yargı II. metinde yoktur; II. metin okurun tempo özgürlüğünü anlatır.",
+   "D": "II. metin türden söz etmez; yalnızca dinleyicinin temposunu belirleyemediğini söyler.",
+   "E": "I. metin yürürken dinlemeyi bir kolaylık olarak sunar; dikkat dağınıklığından söz etmez."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki metni karşılaştırma",
+    "ifade": "her metnin neye dikkat çektiğini ayrı yaz; şıktaki “her iki metin” ya da “II. metin” ifadesini ilgili metinde sına. Örnek: I. metin maliyeti, II. metin güvenliği anlatıyorsa ortak vurgu maliyet değildir"
+   }
+  ],
+  "ipuclari": [
+   "Her metnin neye dikkat çektiğini tek kelimeyle yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metinleri ayır",
+    "aciklama": "Her metnin neye dikkat çektiğini ayrı yaz; ortak ve ayrışan noktaları işaretle.",
+    "islem": "her metin ayrı özetlenir"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "I. metnin vurgusu erişim kolaylığı, II. metnin vurgusu okurun temposunu belirleme özgürlüğüdür. Doğru şık bu iki vurguyu doğru metinlere verir.",
+    "islem": "I → erişim kolaylığı · II → tempo özgürlüğü"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: doğru ✓ · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "İki metin sorusunda her ifadeyi önce ilgili metne bağla, sonra karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-03 (Yeni Nesil: İki Metin Karşılaştırma) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0010",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Metin Karşılaştırma",
+  "k": "tr|Paragraf",
+  "kazanim": "İki metnin zıt vurgusunu yakalar.",
+  "tipId": "pyn-metin",
+  "tip": "İki metni karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "I. metin: Edebiyat derslerinde şiir çözümlenirken öğrenciler, şairin ne demek istediğini bulmakla görevlendirilir. Bu, şiiri bir bilmece gibi sunar ve çoğu öğrenci “doğru cevabı” bulamama korkusuyla şiirden uzaklaşır. Oysa bir şiir, sevilmek için önce rahatça okunabilmelidir.\nII. metin: Şiiri çözümlemek, ona yaklaşmanın yollarından biridir; dizelerin yapısını, imgelerin nasıl kurulduğunu bilen okur şiirden daha çok tat alır. Çözümleme, şiirin sesini boğmak değil, kulağı eğitmektir. Yeter ki çözümleme bir sınav sorusuna indirgenmesin.\nBu metinlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Her iki metin de şiir çözümlemenin edebiyat derslerinden kaldırılmasını önermektedir.",
+   "B": "II. metin, şiirin yalnızca tek bir doğru anlamı olduğunu ileri sürmektedir.",
+   "C": "I. metin, şiir çözümlemenin öğrenciyi şiire yaklaştırdığını ve sevdirdiğini söylemektedir.",
+   "D": "I. metin çözümlemenin şiirden uzaklaştırabildiğini, II. metin tadı artırabildiğini söylemektedir.",
+   "E": "II. metin, şiir çözümlemenin öğrencileri şiirden korkuttuğunu belirtmektedir."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I. metin çözümlemenin şiirden uzaklaştırabildiğini, II. metin tadı artırabildiğini söylemektedir."
+  },
+  "celdiriciler": {
+   "A": "II. metin çözümlemeyi yararlı bulur; kaldırılmasını önermez.",
+   "B": "II. metin anlamdan değil yapı ve imge bilgisinden söz eder; tek doğru anlam iddiası yoktur.",
+   "C": "I. metin tam tersini söyler: çözümleme öğrenciyi şiirden uzaklaştırır.",
+   "E": "Korku I. metinde geçer; II. metin böyle bir şey söylemez."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki metni karşılaştırma",
+    "ifade": "her metnin neye dikkat çektiğini ayrı yaz; şıktaki “her iki metin” ya da “II. metin” ifadesini ilgili metinde sına. Örnek: I. metin maliyeti, II. metin güvenliği anlatıyorsa ortak vurgu maliyet değildir"
+   }
+  ],
+  "ipuclari": [
+   "Her metnin çözümlemeye bakışını (olumlu / olumsuz) belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metinleri ayır",
+    "aciklama": "Her metnin neye dikkat çektiğini ayrı yaz; ortak ve ayrışan noktaları işaretle.",
+    "islem": "her metin ayrı özetlenir"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "I. metin çözümlemeyi öğrenciyi şiirden uzaklaştıran bir uygulama olarak anlatır. II. metin ise çözümlemenin okurun tadını artırdığını söyler. Doğru şık bu iki bakışı birlikte verir.",
+    "islem": "I → şiirden uzaklaşma · II → tadın artması"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru ✓ · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Bir metnin vurgusunu ötekine kaydıran şıkka dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-03 (Yeni Nesil: İki Metin Karşılaştırma) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0011",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Metin Karşılaştırma",
+  "k": "tr|Paragraf",
+  "kazanim": "Metinlerin ele aldığı farklı sonuçları ayırt eder.",
+  "tipId": "pyn-metin",
+  "tip": "İki metni karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "I. metin: Müzelere girişin ücretsiz olması, düşük gelirli ailelerin çocuklarına da sanatla karşılaşma fırsatı verir. Ücretli girişte bu çocukların çoğu müzenin kapısından bile geçemez. Eğitimde fırsat eşitliği, çoğu zaman bir bilet fiyatında başlar.\nII. metin: Ücretsiz giriş ziyaretçi sayısını artırır, ancak müzenin bakım ve koruma gelirlerini düşürür. Bir eserin bakımı, bilet gelirinin yetmediği yerde kamu bütçesine kalır; bütçe ise her zaman yeterli olmaz.\nBu metinlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Her iki metin de müzelere girişin ücretsiz olması gerektiğini önermektedir.",
+   "B": "II. metin, ücretsiz girişin ziyaretçi sayısını azalttığını söylemektedir.",
+   "C": "I. metin ücretli girişin erişimi, II. metin ücretsiz girişin geliri etkilediğini söyler.",
+   "D": "I. metin, müze gelirlerinin kamu bütçesinden karşılanması gerektiğini savunmaktadır.",
+   "E": "II. metin, düşük gelirli ailelerin çocuklarının müzeye gidemediğini ifade etmektedir."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I. metin ücretli girişin erişimi, II. metin ücretsiz girişin geliri etkilediğini söyler."
+  },
+  "celdiriciler": {
+   "A": "II. metin ücretsiz girişin gelir sorunu yarattığını söyler; ücretsizliği önermez.",
+   "B": "II. metin ziyaretçi sayısının arttığını söyler; şık tersini söylemektedir.",
+   "D": "Kamu bütçesinden II. metin söz eder; I. metin gelir kaynağına girmez.",
+   "E": "Bu yargı I. metindedir; II. metin ailelerin gelirinden söz etmez."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki metni karşılaştırma",
+    "ifade": "her metnin neye dikkat çektiğini ayrı yaz; şıktaki “her iki metin” ya da “II. metin” ifadesini ilgili metinde sına. Örnek: I. metin maliyeti, II. metin güvenliği anlatıyorsa ortak vurgu maliyet değildir"
+   }
+  ],
+  "ipuclari": [
+   "Her metnin ücretli ve ücretsiz giriş hakkında neyi sorun ettiğini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metinleri ayır",
+    "aciklama": "Her metnin neye dikkat çektiğini ayrı yaz; ortak ve ayrışan noktaları işaretle.",
+    "islem": "her metin ayrı özetlenir"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "I. metin ücretli girişin düşük gelirli çocukların erişimini engellediğini, II. metin ücretsiz girişin müzenin gelirini düşürdüğünü söyler. Doğru şık bu iki noktayı doğru metinlere verir.",
+    "islem": "I → girişte erişim · II → gelir ve bakım"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: doğru ✓ · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "C şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: C"
+   }
+  ],
+  "puf": "İki metin sorusunda her ifadeyi önce ilgili metne bağla, sonra karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-03 (Yeni Nesil: İki Metin Karşılaştırma) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0012",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: İki Metin Karşılaştırma",
+  "k": "tr|Paragraf",
+  "kazanim": "Metinlerin görüş derecelerini karşılaştırır.",
+  "tipId": "pyn-metin",
+  "tip": "İki metni karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "I. metin: Geniş koridorlu bir okulda öğrencilerin teneffüste daha çok sohbet ettiği doğrudur; ancak okul binasının öğrencilerin davranışını belirlediğini söylemek yanlıştır. Koridor yalnızca sohbeti kolaylaştırır; konuşmak isteyen öğrenci dar bir koridorda da durup konuşur. Mekân davranışı belirlemez; yalnızca bazı davranışları kolaylaştırır ya da zorlaştırır.\nII. metin: Mekân, davranışın sınırlarını çizer; duvarı olmayan bir odada gizlilik beklenemez. Bir okulun yapısı, orada neyin yapılabileceğini önceden belirler. Duvarların izin vermediği bir davranış ise ancak duvarı değiştirmekle mümkün olur.\nBu metinlere göre aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I. metin, mekânın davranışa etkisini II. metinden daha sınırlı görmektedir.",
+   "B": "Her iki metin de mekânın davranışı hiçbir biçimde etkilemediğini savunmaktadır.",
+   "C": "I. metin, geniş koridorlu okullarda öğrencilerin sohbet etmediğini söylemektedir.",
+   "D": "I. metin, dar koridorda öğrencilerin konuşmasının mümkün olmadığını belirtmektedir.",
+   "E": "II. metin, duvarı olmayan odada gizliliğin sağlanabileceğini ileri sürmektedir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I. metin, mekânın davranışa etkisini II. metinden daha sınırlı görmektedir."
+  },
+  "celdiriciler": {
+   "B": "I. metin mekânın bazı davranışları kolaylaştırdığını, II. metin davranışın sınırlarını çizdiğini söyler; ikisi de etki kabul eder.",
+   "C": "I. metin geniş koridorda öğrencilerin daha çok sohbet ettiğini söyler; şık tersini söylemektedir.",
+   "D": "I. metin konuşmak isteyen öğrencinin dar koridorda da durup konuştuğunu söyler; şık parçaya terstir.",
+   "E": "II. metin duvarı olmayan odada gizlilik beklenemeyeceğini söyler; şık tersini söylemektedir."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "İki metni karşılaştırma",
+    "ifade": "her metnin neye dikkat çektiğini ayrı yaz; şıktaki “her iki metin” ya da “II. metin” ifadesini ilgili metinde sına. Örnek: I. metin maliyeti, II. metin güvenliği anlatıyorsa ortak vurgu maliyet değildir"
+   }
+  ],
+  "ipuclari": [
+   "Her metnin mekânın davranışa etkisine verdiği ağırlığı “az / çok” diye derecelendir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Metinleri ayır",
+    "aciklama": "Her metnin neye dikkat çektiğini ayrı yaz; ortak ve ayrışan noktaları işaretle.",
+    "islem": "her metin ayrı özetlenir"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "I. metin mekânın etkisini sınırlı (kolaylaştırma ya da zorlaştırma), II. metin sınır çizici ve belirleyici görür. Bu fark doğru şıkkın dayanağıdır; diğer dört şık metinlerin söylediklerini tersine çevirir ya da metinlerde olmayan bir şey söyler.",
+    "islem": "I → sınırlı etki · II → belirleyici etki"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: doğru ✓ · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "A şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: A"
+   }
+  ],
+  "puf": "Bir metnin vurgusunu ötekine kaydıran şıkka dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-03 (Yeni Nesil: İki Metin Karşılaştırma) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0013",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metnin Duruma Uygulanması",
+  "k": "tr|Paragraf",
+  "kazanim": "Metindeki ilişkiyi iki örneğe ayrı ayrı uygular.",
+  "tipId": "pyn-durum",
+  "tip": "Metni verilen duruma uygulama",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 2,
+  "metin": "Bir ürünün fiyatı yükseldiğinde, o ürüne olan istek çoğu zaman azalır. Ancak bu azalma her üründe aynı değildir: ekmek, su gibi vazgeçilmesi güç ürünlerde azalma çok küçük kalır; vazgeçilebilir ürünlerde ise belirgindir. Çünkü alıcı, vazgeçemediği ürüne daha pahalı olsa da para ödemeye devam eder.\nBir ailenin alışveriş listesinde ekmek ve çikolata vardır. Bir ay içinde ekmeğin de çikolatanın da fiyatı aynı oranda artmıştır.\nBu metne göre ailenin ay sonundaki alışverişiyle ilgili aşağıdakilerden hangisi beklenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ekmek alımı ve çikolata alımı aynı oranda azalır.",
+   "B": "Ekmek alımı, çikolata alımından daha çok azalır.",
+   "C": "İki ürünün alımı da hiç değişmez.",
+   "D": "Çikolata alımı, ekmek alımından daha çok azalır.",
+   "E": "Ekmek alımı tümüyle durur."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Çikolata alımı, ekmek alımından daha çok azalır."
+  },
+  "celdiriciler": {
+   "A": "Metne göre azalma her üründe aynı değildir; vazgeçilmesi güç ürün ekmektir.",
+   "B": "Vazgeçilmesi güç olan ekmekte azalma küçük kalır; şık ters kurulmuştur.",
+   "C": "Metin vazgeçilebilir üründe azalmanın belirgin olduğunu söyler; çikolata alımı azalır.",
+   "E": "Metne göre ekmekte azalma “çok küçük” kalır; alım durmaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Metni duruma uygulama",
+    "ifade": "metindeki kural ya da ilişkiyi, durumdaki her öğeye ayrı ayrı uygula. Örnek: “Fiyat artınca talep düşer” kuralı fiyatı artan her ürüne ayrı uygulanır"
+   }
+  ],
+  "ipuclari": [
+   "Hangi ürün vazgeçilebilir, hangisi vazgeçilmesi güç? Metne göre sınıfla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı belirle",
+    "aciklama": "Metindeki kuralı ya da ilişkiyi tek cümleyle yaz; sonra durumun her öğesine uygula.",
+    "islem": "kural → duruma uygula"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Ekmek vazgeçilmesi güç ürün olduğundan fiyat artışında alımı çok az azalır. Çikolata vazgeçilebilir ürün olduğundan alımı belirgin biçimde azalır.",
+    "islem": "ekmek → vazgeçilmesi güç · çikolata → vazgeçilebilir"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru ✓ · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "D şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: D"
+   }
+  ],
+  "puf": "Kuralı önce tek cümleyle yaz, sonra durumun her öğesine ayrı uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-04 (Yeni Nesil: Metnin Duruma Uygulanması) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0014",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metnin Duruma Uygulanması",
+  "k": "tr|Paragraf",
+  "kazanim": "Metindeki kuralı üç ayrı güne uygular.",
+  "tipId": "pyn-durum",
+  "tip": "Metni verilen duruma uygulama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "İnsan beyni iki işi gerçekten aynı anda yapmaz; işler arasında hızla geçiş yapar. Her geçişte dikkatin bir bölümü yeni işe uyum sağlamaya harcanır ve bu yüzden aynı anda birden çok işle uğraşan kişi, her işi sırayla yapan kişiden daha yavaş ilerler. Aynı kişi, işi bölen bir kesinti olmadığında dikkatini baştan sona koruyabilir.\nCeren üç gün boyunca aynı türde ödevleri yapmıştır. Birinci gün telefonu açık tutup gelen mesajlara hemen yanıt vermiştir. İkinci gün telefonu tamamen kapatmıştır. Üçüncü gün telefonu açık tutmuş, ancak bildirimleri kapatıp mesajlara ödev bitince bakmıştır.\nBu metne göre Ceren’in üç gününe ilişkin aşağıdakilerden hangisi beklenir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Üçüncü gün ödev, birinci günden daha yavaş ilerlemiştir.",
+   "B": "Birinci gün ödev, ikinci günden daha hızlı ilerlemiştir.",
+   "C": "İkinci günle üçüncü gün arasında dikkat kaybı bakımından belirgin bir fark vardır.",
+   "D": "Birinci gün, dikkat kaybının en az olduğu gündür.",
+   "E": "Üçüncü gündeki dikkat kaybı, birinci gündekinden azdır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Üçüncü gündeki dikkat kaybı, birinci gündekinden azdır."
+  },
+  "celdiriciler": {
+   "A": "Üçüncü günde işi bölen geçiş yoktur; ödevin birinci günden yavaş ilerlemesi beklenmez.",
+   "B": "Birinci gün mesajlara dönmek iş geçişi demektir; ödev ikinci günden hızlı değil, yavaş ilerler.",
+   "C": "İkinci ve üçüncü günde ödev sırasında işi bölen bir geçiş yoktur; fark beklenmez.",
+   "D": "Dikkat kaybı iş geçişi olan birinci günde en fazladır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Metni duruma uygulama",
+    "ifade": "metindeki kural ya da ilişkiyi, durumdaki her öğeye ayrı ayrı uygula. Örnek: “Fiyat artınca talep düşer” kuralı fiyatı artan her ürüne ayrı uygulanır"
+   }
+  ],
+  "ipuclari": [
+   "Her günde ödev sırasında iş geçişi olup olmadığını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı belirle",
+    "aciklama": "Metindeki kuralı ya da ilişkiyi tek cümleyle yaz; sonra durumun her öğesine uygula.",
+    "islem": "kural → duruma uygula"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Birinci günde mesajlara hemen yanıt verildiği için işler arası geçiş vardır. İkinci ve üçüncü günde ödev sırasında geçiş yoktur. Bu nedenle üçüncü gündeki dikkat kaybı birinciden azdır.",
+    "islem": "1. gün: geçiş var · 2. gün: geçiş yok · 3. gün: geçiş yok"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: yanlış · E: doğru ✓"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "E şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: E"
+   }
+  ],
+  "puf": "Durumdaki küçük ayrıntı (kapatılan bildirim gibi) çoğu zaman sonucu değiştirir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-04 (Yeni Nesil: Metnin Duruma Uygulanması) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-pyeni-0015",
+  "ders": "TYT Türkçe",
+  "konu": "Paragraf · Yeni Nesil: Metnin Duruma Uygulanması",
+  "k": "tr|Paragraf",
+  "kazanim": "Üç koşulu ayrı ayrı sınayıp birleştirir.",
+  "tipId": "pyn-durum",
+  "tip": "Metni verilen duruma uygulama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir anlatının şimdiki zamanı tek bir günü aşmıyorsa o anlatıya “dar zamanlı”, şimdiki zaman boyunca olaylar tek bir yerde geçiyorsa “tek mekânlı” denir. Anlatı, şimdiki zamanın akışını bırakıp geçmişteki bir olaya dönüyorsa “geri dönüşlü” sayılır. Bu üç özellik birbirinden bağımsızdır; her biri ayrı ayrı sınanır.\nBir romanın şimdiki zamanı iki gündür. Birinci gün olaylar bir köy evinde, ikinci gün şehirdeki bir hastanede geçer. İkinci günün sonunda anlatıcı, köydeki çocukluğunu anımsar.\nBu metne ve duruma göre romanla ilgili aşağıdakilerden hangisi söylenebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Dar zamanlı, tek mekânlı ve geri dönüşlüdür.",
+   "B": "Dar zamanlı ve tek mekânlı değildir; geri dönüşlüdür.",
+   "C": "Dar zamanlıdır; tek mekânlı değildir, geri dönüşlüdür.",
+   "D": "Dar zamanlı değildir, tek mekânlıdır; geri dönüşlü değildir.",
+   "E": "Dar zamanlı, tek mekânlı ve geri dönüşlü değildir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Dar zamanlı ve tek mekânlı değildir; geri dönüşlüdür."
+  },
+  "celdiriciler": {
+   "A": "Şimdiki zaman iki gün olduğundan dar zamanlı değildir; iki yerde geçtiğinden tek mekânlı da değildir.",
+   "C": "Şimdiki zaman iki gün olduğundan roman dar zamanlı değildir.",
+   "D": "Olaylar köy evi ve hastane olmak üzere iki yerde geçtiğinden tek mekânlı değildir; çocukluğa dönüş de geri dönüşlüdür.",
+   "E": "Anlatıcı ikinci günün sonunda çocukluğunu anımsadığı için roman geri dönüşlüdür."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Metin ve verilerden çıkarılabilen tek yargı.",
+  "bilgi": [
+   {
+    "ad": "Metni duruma uygulama",
+    "ifade": "metindeki kural ya da ilişkiyi, durumdaki her öğeye ayrı ayrı uygula. Örnek: “Fiyat artınca talep düşer” kuralı fiyatı artan her ürüne ayrı uygulanır"
+   }
+  ],
+  "ipuclari": [
+   "Üç özelliği ayrı ayrı sına: gün sayısı, yer sayısı, geçmişe dönüş."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı belirle",
+    "aciklama": "Metindeki kuralı ya da ilişkiyi tek cümleyle yaz; sonra durumun her öğesine uygula.",
+    "islem": "kural → duruma uygula"
+   },
+   {
+    "baslik": "Dayanakları bul",
+    "aciklama": "Şimdiki zaman iki gündür (dar zamanlı değil), olaylar iki yerde geçer (tek mekânlı değil), anlatıcı çocukluğunu anımsar (geri dönüşlü). Üç sonuç birlikte yalnız B şıkkında vardır.",
+    "islem": "gün: 2 → dar zamanlı değil · yer: 2 → tek mekânlı değil · çocukluk anısı → geri dönüşlü"
+   },
+   {
+    "baslik": "Şıkları tek tek ele",
+    "aciklama": "Her şıkkı yaptığın hesap ya da çıkarımla karşılaştır; yanlış şıkların nedenini bul.",
+    "islem": "A: yanlış · B: doğru ✓ · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu ver",
+    "aciklama": "B şıkkı tek doğru şıktır; diğer dört şıkkın her biri yukarıdaki dayanakla çelişir ya da dayanaksızdır.",
+    "islem": "doğru: B"
+   }
+  ],
+  "puf": "Kuralı önce tek cümleyle yaz, sonra durumun her öğesine ayrı uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PYN-04 (Yeni Nesil: Metnin Duruma Uygulanması) · özgün metin",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

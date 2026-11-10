@@ -27,7 +27,7 @@
   "celdiriciler": {
    "B": "Parçada karşılığı var: bakkal “kimin evde hasta olduğunu” bilir.",
    "C": "Parçada karşılığı var: defter “güven ilişkisinin kaydıdır”.",
-   "D": "Parçada karşılığı var: son cümlede “alışveriş hızlanmış” denir.",
+   "D": "Parçada karşılığı var: beşinci cümlede “alışveriş hızlanmış” denir.",
    "E": "Parçada karşılığı var: ilk cümle bakkalın “yalnızca alışveriş yapılan” yer olmadığını söyler."
   },
   "celTur": {
@@ -79,7 +79,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -162,7 +162,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -245,7 +245,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -328,7 +328,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -336,31 +336,31 @@
   "ders": "TYT Türkçe",
   "konu": "Paragraf · Ulaşılamaz",
   "k": "tr|Paragraf",
-  "kazanim": "Parçada geçmeyen öneriyi belirler.",
+  "kazanim": "Parçada geçmeyen ayrıntıyı belirler.",
   "tipId": "pab-ulasilamaz",
   "tip": "Parçadan ulaşılamayan yargı",
   "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 3,
-  "metin": "Bir müzede en kalabalık yer, çoğu kez en ünlü eserin önüdür; oysa ziyaretçilerin eserin karşısında durduğu süre birkaç saniyeyi bulmaz. Çoğu insan eseri görmekten çok, onunla birlikte görüntülenmeyi önemser. Kimi ziyaretçi, yanındaki arkadaşıyla sohbet ederken eserin etiketini bile okumadan yoluna devam eder. Oysa bir esere uzun uzun bakmak, ilk bakışta fark edilmeyen ayrıntıları ortaya çıkarır. Bu yüzden bazı müzeler, kalabalığı dağıtan sessiz bakış köşeleri düzenlemektedir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "metin": "Evde saksı bitkisi öldürenlerin çoğu, bunu susuz bırakarak değil, fazla su vererek yapar. Kök, sürekli ıslak kalan toprakta nefes alamaz ve çürür. Oysa toprağın üst katmanına parmakla dokunmak, sulamanın zamanını çoğu kez doğru söyler. Kuru bir dokunuş sulamaya, nemli bir dokunuş beklemeye işaret eder. Bu yüzden bitki bakımında ölçü, takvimden çok bitkinin kendi durumudur.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
   "sekil": null,
   "siklar": {
-   "A": "Ünlü eserlerin önü genellikle kalabalıktır.",
-   "B": "Çok sayıda ziyaretçi eserin karşısında kısa süre durur.",
-   "C": "Uzun bakış eserin gözden kaçan yönlerini ortaya çıkarır.",
-   "D": "Bazı müzeler izleyiciye yönelik sessiz alanlar kurar.",
-   "E": "Müzelerde fotoğraf çekmek yasaklanmalıdır."
+   "A": "Fazla su vermek, saksı bitkisinin ölmesine yol açabilir.",
+   "B": "Sürekli ıslak toprakta bitkinin kökü zarar görür.",
+   "C": "Toprağa dokunmak, sulama zamanını anlamaya yardımcı olur.",
+   "D": "Bakımda bitkinin durumu, takvimden daha belirleyicidir.",
+   "E": "Saksı bitkileri için en uygun toprak, killi topraktır."
   },
   "cevap": {
    "sik": "E",
-   "deger": "Müzelerde fotoğraf çekmek yasaklanmalıdır."
+   "deger": "Saksı bitkileri için en uygun toprak, killi topraktır."
   },
   "celdiriciler": {
-   "A": "Parçada karşılığı var: en kalabalık yer “en ünlü eserin önüdür”.",
-   "B": "Parçada karşılığı var: süre “birkaç saniyeyi bulmaz”.",
+   "A": "Parçada karşılığı var: ilk cümle bitki öldürenlerin çoğunun “fazla su vererek” bunu yaptığını söyler.",
+   "B": "Parçada karşılığı var: ikinci cümle kökün “nefes alamaz ve çürür” dediğini söyler.",
    "C": "Parçada karşılığı var: üçüncü cümle bunu söyler.",
-   "D": "Parçada karşılığı var: son cümledeki “sessiz bakış köşeleri”."
+   "D": "Parçada karşılığı var: son cümlede “ölçü, takvimden çok bitkinin kendi durumudur” denir."
   },
   "celTur": {
    "A": "dikkat",
@@ -380,7 +380,7 @@
    }
   ],
   "ipuclari": [
-   "Parçada bir yasaktan ya da öneriden söz ediliyor mu?"
+   "Parçada toprağın cinsinden mi, nemden mi söz ediliyor?"
   ],
   "adimlar": [
    {
@@ -390,8 +390,8 @@
    },
    {
     "baslik": "Dayanağı parçada bul",
-    "aciklama": "Parça yasaklayıcı bir öneri getirmez, müzelerin sessiz köşeler kurduğunu aktarır. Fotoğraf yasağı parçada hiç geçmez.",
-    "islem": "dayanak: Parça müzelerdeki bir uygulamayı anlatır; fotoğraf yasağı önerisi parçada yoktur."
+    "aciklama": "Parça fazla suyun zararını, toprağa dokunarak nemi anlamayı ve bitkinin durumunu esas almayı anlatır. Toprak cinsi parçada hiç geçmez; diğer dört şık parçadaki cümlelerle eşleşir.",
+    "islem": "dayanak: Parçada toprağın cinsine ilişkin bir öneri yoktur; yalnızca toprağın nemi ve bitkinin durumu anlatılır."
    },
    {
     "baslik": "Şıkları tek tek ele",
@@ -411,7 +411,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -494,7 +494,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -502,31 +502,31 @@
   "ders": "TYT Türkçe",
   "konu": "Paragraf · Ulaşılamaz",
   "k": "tr|Paragraf",
-  "kazanim": "Parçada olmayan yargıyı belirler.",
+  "kazanim": "Parçayla çelişen yargıyı belirler.",
   "tipId": "pab-ulasilamaz",
   "tip": "Parçadan ulaşılamayan yargı",
   "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 3,
-  "metin": "Çeviri, bir metni sözcük sözcük başka bir dile aktarmak değildir; çünkü her dilin kendine özgü bir ses düzeni, deyim dağarcığı ve düşünme alışkanlığı vardır. İyi bir çevirmen yalnızca iki dili değil, iki kültürü de bilir. Bir deyimi harfi harfine çevirmek, çoğu zaman anlamı ortadan kaldırır. Örneğin bir dilde yağmurun yağışını anlatan bir deyim, başka bir dilde bambaşka bir görüntüyle karşılanabilir. Bu yüzden çevirmen, yazarın söylediğini değil, söylemek istediğini okura ulaştırmaya çalışır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "metin": "Bir romanı filme uyarlamak, kitabın sayfalarını görüntüye dökmekten ibaret değildir; çünkü roman, okurun kendi kafasında kurduğu bir dünyayla ilerler, film ise bu dünyayı seyirciye hazır sunar. Yönetmen bu yüzden romandaki her cümleyi sahneye taşımaya uğraşmaz; hangi iç sesin bir bakışa, hangi sayfaların tek bir sahneye dönüşebileceğine karar verir. Kitaptaki uzun bir tasvirin filmde birkaç saniyelik bir plana sığması çoğu zaman kaçınılmazdır. Bu yüzden uyarlamanın başarısı, kitaba sadakatten çok, kitabın etkisini sinema diliyle yeniden kurabilmesine bağlıdır.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
   "sekil": null,
   "siklar": {
-   "A": "Her dilin kendine özgü bir deyim dağarcığı vardır.",
-   "B": "Çevirmen, metni okura uyarlamak için kısaltmak zorundadır.",
-   "C": "İyi çeviri için iki kültürü tanımak gerekir.",
-   "D": "Sözcüğü sözcüğüne çeviri anlam kaybına yol açabilir.",
-   "E": "Çevirmen, yazarın amaçladığı anlamı aktarmayı hedefler."
+   "A": "Roman okurun zihninde, film ise seyirciye hazır bir dünya kurar.",
+   "B": "Yönetmen, romandaki her cümleyi sahneye taşımak zorundadır.",
+   "C": "Yönetmen, hangi sayfaların bir sahneye dönüşeceğine karar verir.",
+   "D": "Kitaptaki uzun tasvirler filmde kısa planlara indirgenebilir.",
+   "E": "Uyarlamada kitabın etkisini sinema diliyle kurmak önemlidir."
   },
   "cevap": {
    "sik": "B",
-   "deger": "Çevirmen, metni okura uyarlamak için kısaltmak zorundadır."
+   "deger": "Yönetmen, romandaki her cümleyi sahneye taşımak zorundadır."
   },
   "celdiriciler": {
-   "A": "Parçada karşılığı var: ilk cümlede “deyim dağarcığı” geçer.",
-   "C": "Parçada karşılığı var: iyi çevirmen “iki kültürü de bilir”.",
-   "D": "Parçada karşılığı var: harfi harfine çeviri “anlamı ortadan kaldırır”.",
-   "E": "Parçada karşılığı var: çevirmen “söylemek istediğini” ulaştırmaya çalışır."
+   "A": "Parçada karşılığı var: ilk cümle romanın okurun kafasında kurduğu dünyayla, filmin hazır sunduğu dünyayla ilerlediğini söyler.",
+   "C": "Parçada karşılığı var: ikinci cümlede yönetmen “karar verir”.",
+   "D": "Parçada karşılığı var: üçüncü cümle tasvirin “birkaç saniyelik bir plana” sığmasından söz eder.",
+   "E": "Parçada karşılığı var: son cümle başarıyı bu yeniden kurmaya bağlar."
   },
   "celTur": {
    "A": "dikkat",
@@ -546,7 +546,7 @@
    }
   ],
   "ipuclari": [
-   "Parçada çevirmene yüklenen görevler neler?"
+   "Yönetmenin kitaba nasıl yaklaştığı parçada nasıl anlatılıyor?"
   ],
   "adimlar": [
    {
@@ -556,8 +556,8 @@
    },
    {
     "baslik": "Dayanağı parçada bul",
-    "aciklama": "Parça çevirmenin iki kültürü bilmesini ve yazarın amacını aktarmasını anlatır. Metni kısaltma zorunluluğu parçada geçmez.",
-    "islem": "dayanak: Parçada çevirmenin metni kısaltması gerektiğinden söz edilmez; şık parçada yer almaz."
+    "aciklama": "Parça yönetmenin romandan neyi sahneye taşıyacağını seçtiğini söyler; her cümleyi taşımak zorunda olduğu yargısı parçayla çelişir.",
+    "islem": "dayanak: Parça yönetmenin her cümleyi sahneye taşımaya uğraşmadığını, neyi dönüştüreceğine karar verdiğini söyler; şık parçayla çelişir."
    },
    {
     "baslik": "Şıkları tek tek ele",
@@ -577,7 +577,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -660,7 +660,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -690,7 +690,7 @@
   },
   "celdiriciler": {
    "A": "Parçada karşılığı var: ilk cümlede böyle denir.",
-   "B": "Parçada karşılığı var: klasikler “dönemin ruhunu taşır”.",
+   "B": "Parçada karşılığı var: klasikler “dönemin ruhunu taşımalarına rağmen” o dönemle sınırlı kalmaz.",
    "C": "Parçada karşılığı var: her kuşak ilgi gösterdiği ölçüde eseri “klasik tutar”.",
    "E": "Parçada karşılığı var: ikinci cümlede böyle tanımlanır."
   },
@@ -723,7 +723,7 @@
    {
     "baslik": "Dayanağı parçada bul",
     "aciklama": "“Ancak” sonrası parça klasikliğin kalıcı bir ayrıcalık olmadığını, kuşakların ilgisine bağlı olduğunu söyler. “Kalıcı biçimde korur” yargısı bununla çelişir.",
-    "islem": "dayanak: Parça klasikliğin “sonsuza dek korunan bir ayrıcalık” olmadığını söyler; şık parçayla çelişir."
+    "islem": "dayanak: Parça klasikliğin eserin “sonsuza dek koruduğu bir ayrıcalık” olmadığını söyler; şık parçayla çelişir."
    },
    {
     "baslik": "Şıkları tek tek ele",
@@ -743,7 +743,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -751,31 +751,31 @@
   "ders": "TYT Türkçe",
   "konu": "Paragraf · Ulaşılamaz",
   "k": "tr|Paragraf",
-  "kazanim": "“değil” ile reddedilen yargıyı seçenekte yakalar.",
+  "kazanim": "Parçada bulunmayan yargıyı belirler.",
   "tipId": "pab-ulasilamaz",
   "tip": "Parçadan ulaşılamayan yargı",
   "zorluk": "zor",
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 4,
-  "metin": "Çocukların açıkça soru sorma sıklığı, okul çağına geldiklerinde belirgin biçimde azalır. Bunun nedeni merakın körelmesi sanılır; oysa araştırmalar, çocukların sormaktan vazgeçmediğini, yalnızca sorularını artık yüksek sesle sormadıklarını gösterir. Bu düşüş, çoğu zaman okulla birlikte başlayan yeni bir kuralla ilişkilendirilir: söz almadan konuşulmaz ve her soru ders akışına uygun olmak zorundadır. Evde bütün gün “neden” diye soran çocuk, sınıfta parmak kaldırmadan önce arkadaşlarının ona nasıl bakacağını uzun uzun hesaplar. Sınıfta yanlış soru sormanın küçük düşürücü olabileceğini öğrenen çocuk, sorusunu kendine saklar. Dolayısıyla merak ölmez, yer değiştirir; öğretmenin işi de merakı yeniden yaratmak değil, ona güvenli bir ortam hazırlamaktır. Bu yüzden öğretmenler, sessiz bir sınıfı ilgili bir sınıf sanma yanılgısına düşebilir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
+  "metin": "Çocukların boş zamanı, yetişkinlerin gözünde çoğu zaman bir kayıp sayılır; oysa sıkılmak, hayal gücünün en verimli başlangıcıdır. Programı baştan sona doldurulmuş çocuk, kendi başına bir oyun kurma fırsatı bulamaz; bir etkinlikten ötekine taşınan zihin, kendi içine bakmaya vakit ayıramaz. Sıkılan çocuk ise önce huzursuzlanır, sonra eline geçen bir kutuyu, bir battaniyeyi ya da bir sopayı kendi dünyasının malzemesine dönüştürür. Bu dönüşüm çoğu zaman beklenenden uzun sürer ve yetişkinin müdahalesiyle kesintiye uğrar. Hemen bir ekran uzatılan çocuk, bu sürecin ilk basamağını bile geçemez. Bu nedenle boş zaman, doldurulması gereken bir boşluk değil, çocuğun kendi fikrini ürettiği bir alandır. Ebeveynin işi, her saati dolu bir program hazırlamak değil, çocuğa sıkılma payı bırakmaktır. Bu yüzden her saati dolu bir çocuk, dışarıdan verimli görünse de kendi fikrini üretmek için gereken süreden yoksun kalabilir.\nBu parçadan aşağıdakilerden hangisine ulaşılamaz?",
   "sekil": null,
   "siklar": {
-   "A": "Okul çağında çocukların açıkça soru sorması azalır.",
-   "B": "Soru sormaktan çekinme, çevreden gelen tepkiyle ilişkilidir.",
-   "C": "Çocuk, dile getirmediği sorulara ilişkin merakı sürdürebilir.",
-   "D": "Öğretmenin işi, soru sormayı güvenli kılacak ortamı hazırlamaktır.",
-   "E": "Öğretmen, çocuğun merakını yeniden uyandırmakla yükümlüdür."
+   "A": "Programı dolu bir çocuk, kendi oyununu kurmakta zorlanır.",
+   "B": "Sıkılan çocuk, sıradan nesneleri kendi oyununa dönüştürebilir.",
+   "C": "Hemen uzatılan bir ekran, sıkılmanın başlattığı süreci kesebilir.",
+   "D": "Ebeveynin görevi, çocuğa sıkılma fırsatı tanımaktır.",
+   "E": "Sıkılma payı bırakılan çocuklar, okulda daha başarılı olur."
   },
   "cevap": {
    "sik": "E",
-   "deger": "Öğretmen, çocuğun merakını yeniden uyandırmakla yükümlüdür."
+   "deger": "Sıkılma payı bırakılan çocuklar, okulda daha başarılı olur."
   },
   "celdiriciler": {
-   "A": "Parçada karşılığı var: ilk cümle sıklığın “belirgin biçimde azaldığını” söyler.",
-   "B": "Parçada karşılığı var: yanlış soru sormanın “küçük düşürücü” olabileceği öğrenilir.",
-   "C": "Parçada karşılığı var: çocuk sorusunu “kendine saklar”, merak yer değiştirir.",
-   "D": "Parçada karşılığı var: son cümlede böyle denir."
+   "A": "Parçada karşılığı var: ikinci cümle bunu söyler.",
+   "B": "Parçada karşılığı var: üçüncü cümlede kutu, battaniye ve sopa örneği verilir.",
+   "C": "Parçada karşılığı var: beşinci cümle bunu söyler.",
+   "D": "Parçada karşılığı var: yedinci cümle “sıkılma payı bırakmaktır” der."
   },
   "celTur": {
    "A": "dikkat",
@@ -795,7 +795,7 @@
    }
   ],
   "ipuclari": [
-   "Parça öğretmenin işini ne olarak, neyin karşıtı olarak tanımlıyor?"
+   "Parçada sıkılmanın sonuçları sayılırken okul başarısından söz ediliyor mu?"
   ],
   "adimlar": [
    {
@@ -805,8 +805,8 @@
    },
    {
     "baslik": "Dayanağı parçada bul",
-    "aciklama": "Parça merakın ölmediğini söylediği için öğretmenin görevini merakı yeniden yaratmak olarak görmez. Bu görevi ona yükleyen şık parçayla çelişir.",
-    "islem": "dayanak: Parça öğretmenin işinin merakı “yeniden yaratmak değil”, güvenli ortam hazırlamak olduğunu söyler; şık parçayla çelişir."
+    "aciklama": "Parça sıkılmanın yaratıcı süreci başlattığını ve bu sürecin yetişkin müdahalesiyle kesildiğini anlatır. Okul başarısı hiç geçmez; diğer dört şık parçadaki cümlelerle eşleşir.",
+    "islem": "dayanak: Parçada sıkılma ile okul başarısı arasında bir ilişki kurulmaz; şık parçada yer almaz."
    },
    {
     "baslik": "Şıkları tek tek ele",
@@ -826,7 +826,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -857,7 +857,7 @@
   "celdiriciler": {
    "B": "Parçada karşılığı var: keman, gitar ve akordeon sayılır.",
    "C": "Parçada karşılığı var: “sokak bir sahnedir”.",
-   "D": "Parçada karşılığı var: bir şarkı “aceleyle yürüyen birini durdurur”.",
+   "D": "Parçada karşılığı var: bir şarkı “aceleyle yürüyen birini birkaç dakikalığına durdurur”.",
    "E": "Parçada karşılığı var: sokak müzisyenleri “kentin en eski seslerinden biridir”."
   },
   "celTur": {
@@ -909,7 +909,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -992,7 +992,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1075,7 +1075,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1158,7 +1158,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1188,7 +1188,7 @@
   },
   "celdiriciler": {
    "A": "Parçada karşılığı var: öğrencinin “kulağı gevşer”.",
-   "B": "Parçada karşılığı var: ikinci cümle bunu önerir.",
+   "B": "Parçada karşılığı var: üçüncü cümle bunu önerir.",
    "C": "Parçada karşılığı var: öğrenci “hem anlamak hem de seçmek zorunda kalır”.",
    "D": "Parçada karşılığı var: son cümle bilginin kalıcılığına değinir."
   },
@@ -1241,7 +1241,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1324,7 +1324,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1407,7 +1407,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1422,7 +1422,7 @@
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 4,
-  "metin": "Övgü, doğru verildiğinde güçlü bir motivasyon aracıdır; ancak yanlış verildiğinde tersine çalışır. Çocuğa “Çok zekisin” demek, başarıyı doğuştan gelen bir niteliğe bağlar ve çocuk, zor bir işle karşılaştığında bu imajı kaybetme korkusuyla denemekten kaçınabilir. Nitekim kendisine hep başarılı olduğu söylenen çocuk, ilk kez zorlandığında bunu bir yetersizlik belirtisi sayabilir. “Çok çalıştın, bu iş sana yaradı” demek ise çabayı öne çıkarır ve çocuğu yeniden denemeye iter. Çabası görülen çocuk ise zorluğu geçici ve aşılabilir bir durum olarak karşılar. Yani övgünün etkisi, övülenin kim olduğuna değil, neyin övüldüğüne bağlıdır. Bu ayrım, övgüyü azaltmayı değil, daha özenli seçmeyi gerektirir. Çünkü çocuk, kendisine söylenen sözden kendine dair bir hüküm çıkarır.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+  "metin": "Övgü, doğru verildiğinde güçlü bir motivasyon aracıdır; ancak yanlış verildiğinde tersine çalışır. Çocuğa “Çok zekisin” demek, başarıyı doğuştan gelen bir niteliğe bağlar ve çocuk, zor bir işle karşılaştığında bu imajı kaybetme korkusuyla denemekten kaçınabilir. Nitekim kendisine hep başarılı olduğu söylenen çocuk, ilk kez zorlandığında bunu bir yetersizlik belirtisi sayabilir. “Çok çalıştın, bu iş sana yaradı” demek ise çabayı öne çıkarır ve çocuğu yeniden denemeye iter. Çabası görülen çocuk ise zorluğu geçici ve aşılabilir bir durum olarak karşılar. Yani övgünün etkisi, ne kadar övüldüğüne değil, neyin övüldüğüne bağlıdır. Bu ayrım, övgüyü azaltmayı değil, daha özenli seçmeyi gerektirir. Çünkü çocuk, kendisine söylenen sözden kendine dair bir hüküm çıkarır.\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
   "sekil": null,
   "siklar": {
    "A": "Övgünün hem yararlı hem zararlı olabildiği ifade edilmiştir.",
@@ -1439,7 +1439,7 @@
    "A": "Parçada karşılığı var: övgü doğru verilirse motivasyon, yanlış verilirse tersine işler.",
    "C": "Parçada karşılığı var: çocuk “imajı kaybetme korkusuyla” denemekten kaçınabilir.",
    "D": "Parçada karşılığı var: çabayı öne çıkarmak “yeniden denemeye iter”.",
-   "E": "Parçada karşılığı var: dördüncü cümle bunu söyler."
+   "E": "Parçada karşılığı var: “Yani” ile başlayan altıncı cümle bunu söyler."
   },
   "celTur": {
    "A": "dikkat",
@@ -1490,7 +1490,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1510,24 +1510,24 @@
   "siklar": {
    "A": "Yalnız I",
    "B": "Yalnız II",
-   "C": "I ve III",
-   "D": "II ve III",
-   "E": "I, II ve III"
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
   },
   "cevap": {
-   "sik": "C",
+   "sik": "D",
    "deger": "I ve III"
   },
   "celdiriciler": {
    "A": "III. yargıya ulaşılabilir (adım adım gösterilince mesaj rahatça gönderilir), şıkta eksik kalmış.",
    "B": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); I. yargıya ulaşılabilir (öğreticilerin acelesi engel olarak gösterilir), şıkta eksik kalmış; III. yargıya ulaşılabilir (adım adım gösterilince mesaj rahatça gönderilir), şıkta eksik kalmış.",
-   "D": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); I. yargıya ulaşılabilir (öğreticilerin acelesi engel olarak gösterilir), şıkta eksik kalmış.",
-   "E": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz)."
+   "C": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); III. yargıya ulaşılabilir (adım adım gösterilince mesaj rahatça gönderilir), şıkta eksik kalmış.",
+   "E": "II. yargıya ulaşılamaz (parça sabırlı gösterimin işe yaradığını söyler, yardımı gereksiz saymaz); I. yargıya ulaşılabilir (öğreticilerin acelesi engel olarak gösterilir), şıkta eksik kalmış."
   },
   "celTur": {
    "A": "dikkat",
    "B": "bilgi",
-   "D": "bilgi",
+   "C": "bilgi",
    "E": "bilgi"
   },
   "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
@@ -1562,8 +1562,8 @@
    },
    {
     "baslik": "Şıkta birleşimi bul",
-    "aciklama": "Doğru öncüllerin birleşimi “I ve III” olduğundan yanıt C şıkkıdır.",
-    "islem": "doğru: C"
+    "aciklama": "Doğru öncüllerin birleşimi “I ve III” olduğundan yanıt D şıkkıdır.",
+    "islem": "doğru: D"
    }
   ],
   "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
@@ -1573,7 +1573,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1656,7 +1656,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1676,24 +1676,24 @@
   "siklar": {
    "A": "Yalnız I",
    "B": "Yalnız II",
-   "C": "Yalnız III",
-   "D": "I ve II",
-   "E": "I ve III"
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
   },
   "cevap": {
-   "sik": "D",
+   "sik": "C",
    "deger": "I ve II"
   },
   "celdiriciler": {
    "A": "II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış.",
    "B": "I. yargıya ulaşılabilir (ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar), şıkta eksik kalmış.",
-   "C": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); I. yargıya ulaşılabilir (ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar), şıkta eksik kalmış; II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış.",
-   "E": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış."
+   "D": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); II. yargıya ulaşılabilir (taşıyıcı sistemi bozulacak binada yeni işlev denenmemelidir), şıkta eksik kalmış.",
+   "E": "III. yargıya ulaşılamaz (parça müzeyi “en yaygın” yol sayar, etkisiz olduğunu söylemez); I. yargıya ulaşılabilir (ziyaret saatleri dışında kapalı bina gündelik yaşamdan kopar), şıkta eksik kalmış."
   },
   "celTur": {
    "A": "dikkat",
    "B": "dikkat",
-   "C": "bilgi",
+   "D": "bilgi",
    "E": "bilgi"
   },
   "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
@@ -1728,8 +1728,8 @@
    },
    {
     "baslik": "Şıkta birleşimi bul",
-    "aciklama": "Doğru öncüllerin birleşimi “I ve II” olduğundan yanıt D şıkkıdır.",
-    "islem": "doğru: D"
+    "aciklama": "Doğru öncüllerin birleşimi “I ve II” olduğundan yanıt C şıkkıdır.",
+    "islem": "doğru: C"
    }
   ],
   "puf": "Önce öncüllere karar ver, şıklara sonra bak; şık, kararını doğrulayan birleşimdir.",
@@ -1739,7 +1739,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1747,20 +1747,20 @@
   "ders": "TYT Türkçe",
   "konu": "Paragraf · Öncüllü Ulaşılabilir Yargılar",
   "k": "tr|Paragraf",
-  "kazanim": "Parçaya ters yargıyı ayıklar.",
+  "kazanim": "Abartılan yargıyı ayıklar.",
   "tipId": "pab-oncullu",
   "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
   "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
   "adimSayisi": 3,
-  "metin": "Mektup yazmak, düşünceyi yavaşlatan bir iştir. Yazan kişi, cümleyi gönderdikten sonra geri alamayacağını bilir ve sözünü tartarak seçer. Kâğıda dökülen bir öfke, bir gece beklese çoğu zaman yumuşar. Anlık mesajlaşmada ise düşünce, ağızdan çıktığı hızla ekrana düşer; bu hız samimiyet kazandırır ama özen kaybettirir. Bu iki yazışma biçimi birbirinin yerini almaz, farklı ihtiyaçlara hizmet eder; hızlı bir haber için mesaj, uzun bir hesaplaşma için mektup uygundur.\nI. Mektup, anlık mesajlaşmanın yerini almıştır.\nII. Anlık mesajlaşmanın hızı, yazışmaya samimiyet katabilir.\nIII. Uzun bir hesaplaşma için mektup uygun görülebilir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "metin": "Göz kararı yemek yapmak, ustalık gösterisi gibi görülür; oysa usta bir aşçının göz kararı, yıllarca tartıyla yaptığı denemelerin birikimidir. Yeni başlayan biri, ölçüyü tartıyla öğrenmeden göz kararına güvenirse tuzu da yağı da fazla kaçırır. Tartı, yaratıcılığı kısıtlamaz; elin neyi ne kadar attığını gösteren bir öğretmendir. Bu yüzden tariflerden sıyrılıp göz kararına geçmek isteyen kişi, önce bir süre tartıyla çalışmalıdır.\nI. Göz kararıyla yemek yapmak, tartıyla yapmaktan her durumda daha kötü sonuç verir.\nII. Usta aşçının göz kararı, önceki denemelerin birikiminden doğar.\nIII. Tartı, yeni başlayanın ölçüyü öğrenmesine yardımcı olabilir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
   "sekil": null,
   "siklar": {
    "A": "Yalnız I",
    "B": "Yalnız II",
-   "C": "Yalnız III",
-   "D": "I ve II",
+   "C": "I ve II",
+   "D": "I ve III",
    "E": "II ve III"
   },
   "cevap": {
@@ -1768,15 +1768,15 @@
    "deger": "II ve III"
   },
   "celdiriciler": {
-   "A": "I. yargıya ulaşılamaz (parça iki biçimin birbirinin yerini almadığını söyler); II. yargıya ulaşılabilir (“bu hız samimiyet kazandırır”), şıkta eksik kalmış; III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış.",
-   "B": "III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış.",
-   "C": "II. yargıya ulaşılabilir (“bu hız samimiyet kazandırır”), şıkta eksik kalmış.",
-   "D": "I. yargıya ulaşılamaz (parça iki biçimin birbirinin yerini almadığını söyler); III. yargıya ulaşılabilir (son cümlede uzun hesaplaşma için mektup önerilir), şıkta eksik kalmış."
+   "A": "I. yargıya ulaşılamaz (parça yeni başlayan için tartıyı önerir; ustanın göz kararını kötü saymaz); II. yargıya ulaşılabilir (göz kararı “denemelerin birikimidir”), şıkta eksik kalmış; III. yargıya ulaşılabilir (tartı elin neyi ne kadar attığını gösteren “bir öğretmendir”), şıkta eksik kalmış.",
+   "B": "III. yargıya ulaşılabilir (tartı elin neyi ne kadar attığını gösteren “bir öğretmendir”), şıkta eksik kalmış.",
+   "C": "I. yargıya ulaşılamaz (parça yeni başlayan için tartıyı önerir; ustanın göz kararını kötü saymaz); III. yargıya ulaşılabilir (tartı elin neyi ne kadar attığını gösteren “bir öğretmendir”), şıkta eksik kalmış.",
+   "D": "I. yargıya ulaşılamaz (parça yeni başlayan için tartıyı önerir; ustanın göz kararını kötü saymaz); II. yargıya ulaşılabilir (göz kararı “denemelerin birikimidir”), şıkta eksik kalmış."
   },
   "celTur": {
    "A": "bilgi",
    "B": "dikkat",
-   "C": "dikkat",
+   "C": "bilgi",
    "D": "bilgi"
   },
   "istenen": "Parçadan çıkarılabilen öncüllerin birleşimi.",
@@ -1791,7 +1791,7 @@
    }
   ],
   "ipuclari": [
-   "Parçada her iki yazışma biçimine verilen değeri ayır."
+   "Öncülleri parçadaki cümlelerle eşle; abartıyı ayıkla."
   ],
   "adimlar": [
    {
@@ -1801,12 +1801,12 @@
    },
    {
     "baslik": "Dayanak ara",
-    "aciklama": "Parça mesajın hızına samimiyet, mektubun uzun hesaplaşmalara uygunluk payı verir; II ve III çıkarılır. I parçaya terstir.",
+    "aciklama": "Parça ustanın göz kararını denemelerin birikimi, tartıyı ise öğretici bir araç olarak anlatır; II ve III çıkarılır. I abartıdır, parçaya terstir.",
     "islem": "dayanak: I yok; II var; III var"
    },
    {
     "baslik": "Karar ver",
-    "aciklama": "I. yargı: parça iki biçimin birbirinin yerini almadığını söyler. II. yargı: “bu hız samimiyet kazandırır”. III. yargı: son cümlede uzun hesaplaşma için mektup önerilir.",
+    "aciklama": "I. yargı: parça yeni başlayan için tartıyı önerir; ustanın göz kararını kötü saymaz. II. yargı: göz kararı “denemelerin birikimidir”. III. yargı: tartı elin neyi ne kadar attığını gösteren “bir öğretmendir”.",
     "islem": "I: ulaşılamaz · II: ulaşılabilir · III: ulaşılabilir"
    },
    {
@@ -1822,7 +1822,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1837,13 +1837,13 @@
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
   "adimSayisi": 4,
-  "metin": "Bir hikâyeyi anlatan kişi, hikâyenin yalnızca aktarıcısı değildir; neyi anlatacağına, neyi atlayacağına ve hangi sırayla söyleyeceğine o karar verir. Bu yetki, anlatıcıya görünmez bir güç verir: Bir kişiyi sevimli ya da sevimsiz kılmak, çoğu zaman yalnızca onu hangi sahnede gösterdiğine bağlıdır. Aynı olay, iki farklı anlatıcının ağzından iki ayrı hikâye olur. Tarih kitaplarında bile aynı savaşı iki farklı ülkenin farklı anlatması, bu durumun sık anılan bir örneğidir. Bu yüzden okur, anlatılanı gerçeğin kendisi sanmamalı, anlatıcının seçtiği bir gerçek olarak okumalıdır. Okurun işi, bu seçimlerin ardındaki sesi duymaktır. Ne var ki bu durum, hikâyenin değerini azaltmaz: Anlatıcının seçimleri, hikâyeyi yaşatan asıl dokudur.\nI. Anlatıcı, olayların hangi sırayla verileceğini belirleyebilir.\nII. Aynı olay, farklı anlatıcıların elinde farklı hikâyelere dönüşebilir.\nIII. Anlatıcının seçimleri, bir hikâyenin değerini belirleyen önemli bir öğedir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
+  "metin": "Bir hikâyeyi anlatan kişi, hikâyenin yalnızca aktarıcısı değildir; neyi anlatacağına, neyi atlayacağına ve hangi sırayla söyleyeceğine o karar verir. Bu yetki, anlatıcıya görünmez bir güç verir: Bir kişiyi sevimli ya da sevimsiz kılmak, çoğu zaman yalnızca onu hangi sahnede gösterdiğine bağlıdır. Aynı olay, iki farklı anlatıcının ağzından iki ayrı hikâye olur. Tarih kitaplarında bile aynı savaşı iki farklı ülkenin farklı anlatması, bu durumun sık anılan bir örneğidir. Bu yüzden okur, anlatılanı gerçeğin kendisi sanmamalı, anlatıcının seçtiği bir gerçek olarak okumalıdır. Okurun işi, bu seçimlerin ardındaki sesi duymaktır. Ne var ki bu durum, hikâyenin değerini azaltmaz: Anlatıcının seçimleri, hikâyeyi yaşatan asıl dokudur.\nI. Anlatıcı, olayların hangi sırayla verileceğini belirleyebilir.\nII. Aynı olay, farklı anlatıcıların elinde farklı hikâyelere dönüşebilir.\nIII. Anlatıcının seçimleri, hikâyenin canlı kalmasında önemli bir rol oynar.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
   "sekil": null,
   "siklar": {
    "A": "Yalnız I",
    "B": "Yalnız II",
-   "C": "Yalnız III",
-   "D": "I ve II",
+   "C": "I ve II",
+   "D": "I ve III",
    "E": "I, II ve III"
   },
   "cevap": {
@@ -1853,8 +1853,8 @@
   "celdiriciler": {
    "A": "II. yargıya ulaşılabilir (aynı olay “iki ayrı hikâye olur”), şıkta eksik kalmış; III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış.",
    "B": "I. yargıya ulaşılabilir (sırayı “o karar verir”), şıkta eksik kalmış; III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış.",
-   "C": "I. yargıya ulaşılabilir (sırayı “o karar verir”), şıkta eksik kalmış; II. yargıya ulaşılabilir (aynı olay “iki ayrı hikâye olur”), şıkta eksik kalmış.",
-   "D": "III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış."
+   "C": "III. yargıya ulaşılabilir (seçimler hikâyeyi yaşatan “asıl doku” sayılır), şıkta eksik kalmış.",
+   "D": "II. yargıya ulaşılabilir (aynı olay “iki ayrı hikâye olur”), şıkta eksik kalmış."
   },
   "celTur": {
    "A": "dikkat",
@@ -1905,7 +1905,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1988,7 +1988,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -1999,10 +1999,10 @@
   "kazanim": "Parçaya ters ve parçada olmayan yargıyı ayıklar.",
   "tipId": "pab-oncullu",
   "tip": "Öncüllü yargılardan hangilerine ulaşılabilir",
-  "zorluk": "zor",
+  "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
-  "adimSayisi": 4,
+  "adimSayisi": 3,
   "metin": "Kent bahçeleri, boş kalmış arsaların sebze yetiştirilen küçük tarlalara dönüştürülmesiyle ortaya çıkar. Bu bahçelerde çoğu zaman bir kişinin parseli, öteki kişinin sulama saatini belirler; alet çantası ortak, su borusu ortak, takvim ortaktır. İlk bakışta bu uygulamanın amacı gıda üretimi sanılır; ancak bahçelerde yetişen sebzenin kente sağladığı katkı sınırlıdır. Hasat edilen sebze market fiyatından çok daha pahalıya mal olsa da kimse bundan yakınmaz. Asıl işlev, birbirini tanımayan insanların aynı toprağı paylaşırken kurduğu ilişkidir. Bahçe yönetiminde ortaya çıkan küçük anlaşmazlıklar bile komşuluğun öğrenildiği bir ortam sağlar. Kış gelip bahçe boşaldığında bile komşular birbirinin ismini bilir ve sokakta selamlaşır. Bahçeye ilk kez gelen biri, tohum ekmeyi komşusundan öğrenir.\nI. Kent bahçeleri, kentin gıda gereksinimini büyük ölçüde karşılar.\nII. Kent bahçeleri yalnızca kentte yaşayan emeklilere yöneliktir.\nIII. Kent bahçeleri, insanlar arasındaki ilişkileri güçlendirebilir.\nBu parçadan hareketle aşağıdaki yargılardan hangilerine ulaşılabilir?",
   "sekil": null,
   "siklar": {
@@ -2071,7 +2071,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -2100,7 +2100,7 @@
    "deger": "Kütüphaneler farklı yaş gruplarına yönelik hizmetler sunar."
   },
   "celdiriciler": {
-   "A": "Parça kütüphanelerin dijital çağda bile ziyaretçi kaybetmemesine yardım edildiğini söyler; şık parçaya terstir.",
+   "A": "Parça çeşitliliğin kütüphanelerin dijital çağda bile ziyaretçi kaybetmemesine yardım ettiğini söyler; şık parçaya terstir.",
    "B": "Parça ilk cümlede kütüphanelerin yalnızca ödünç kitap yeri olmadığını söyler; şık parçaya terstir.",
    "C": "Parçada hangi yaş grubunun daha çok geldiğine dair karşılaştırma yoktur.",
    "D": "Parçada katılımın azaldığına ilişkin bir bilgi yoktur; yaşlılar için söyleşi düzenlendiği söylenir."
@@ -2150,7 +2150,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -2229,7 +2229,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -2258,7 +2258,7 @@
    "deger": "Kent ışığı, insanların yanı sıra kuşları da olumsuz etkiler."
   },
   "celdiriciler": {
-   "A": "Parça nedenin “hava kirliliğinden çok aydınlatma düzeni” olduğunu söyler; şık parçaya terstir.",
+   "A": "Parça nedenin “hava kirliliğinden çok, kentin aydınlatma düzeni” olduğunu söyler; şık parçaya terstir.",
    "B": "Parça kuşların gökyüzüne baktığını söyler; “yalnızca yıldız” abartısı parçada yoktur.",
    "C": "Parça tasarımın sorunu “büyük ölçüde hafiflettiğini” söyler; şık parçaya terstir.",
    "E": "Parça tam tersini söyler: sorun yalnızca estetik değildir."
@@ -2308,7 +2308,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -2387,7 +2387,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  },
  {
@@ -2402,24 +2402,24 @@
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 3,
-  "metin": "Tiyatroyu sinemadan ayıran şey, oyuncu ile seyircinin aynı odada, aynı anda soluk almasıdır. Sinemada film önceden çekilmiştir ve her gösterimde aynıdır; tiyatroda ise oyuncunun yorgunluğu, salonun sessizliği ya da bir öksürük bile o akşamın oyununu değiştirebilir. Bu nedenle aynı oyun iki akşam arka arkaya izlense de iki ayrı deneyim olur. Kimi oyuncular, perde açılmadan önce kulise sızan seyirci uğultusundan o akşamın nasıl geçeceğini sezdiğini söyler.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
+  "metin": "Bisiklet, kentte yalnızca bir ulaşım aracı değil, şehri tanımanın yavaş bir yoludur. Arabayla bir çırpıda geçilen cadde, pedalla geçildiğinde dükkânların tabelalarıyla, ağaçların gölgesiyle ve kaldırımdaki insanlarla ayrıntılı bir yere dönüşür. Bisiklet yolu olmayan kentlerde sürücüler ve bisikletliler çoğu zaman aynı şeritte sıkışır ve ikisi de tedirgin olur. Bu nedenle ayrılmış yollar, bisikletlinin güvenliğini artırdığı kadar sürücünün de rahatlamasına yardım eder.\nBu parçadan aşağıdakilerden hangisi söylenebilir?",
   "sekil": null,
   "siklar": {
-   "A": "Sinema, seyirciyle kurduğu bağ bakımından tiyatrodan daha zayıftır.",
-   "B": "Tiyatroda oyuncunun hataları seyirci tarafından bağışlanmaz.",
-   "C": "Aynı tiyatro oyunu farklı akşamlarda birebir aynı olmayabilir.",
-   "D": "Seyircinin tepkisi oyunun metnini değiştirir.",
-   "E": "Tiyatro, sinemadan daha eski bir sanat dalıdır."
+   "A": "Bisiklet, kentte arabadan her zaman daha hızlı bir ulaşım aracıdır.",
+   "B": "Bisiklet yolu olmayan kentlerde kimse bisiklete binmez.",
+   "C": "Ayrılmış bisiklet yolları, sürücülerin de rahatlamasına yardım edebilir.",
+   "D": "Bisiklet yolu yapmak, kentlerin en pahalı yatırımıdır.",
+   "E": "Arabayla geçilen caddeler, pedalla geçilenlerden daha ayrıntılı görünür."
   },
   "cevap": {
    "sik": "C",
-   "deger": "Aynı tiyatro oyunu farklı akşamlarda birebir aynı olmayabilir."
+   "deger": "Ayrılmış bisiklet yolları, sürücülerin de rahatlamasına yardım edebilir."
   },
   "celdiriciler": {
-   "A": "Parça iki sanatı farklı gösterir ama birini bağ bakımından üstün ya da zayıf saymaz.",
-   "B": "Parçada seyircinin oyuncu hatalarına tepkisine ilişkin bir yargı yoktur.",
-   "D": "Parça oyunun akışının o akşama göre değişebileceğini söyler; metnin değiştiğini söylemez.",
-   "E": "Parçada iki sanatın tarihine ilişkin bir yargı yoktur."
+   "A": "Parçada bisiklet ile arabanın hızı karşılaştırılmaz; şık parçada yoktur.",
+   "B": "Parça bisikletlilerin aynı şeritte sıkıştığını söyler; hiç binilmediğini söylemez.",
+   "D": "Parçada yolların maliyetine ilişkin bir yargı yoktur.",
+   "E": "Parça tam tersini söyler: pedalla geçilen cadde ayrıntılı bir yere dönüşür."
   },
   "celTur": {
    "A": "bilgi",
@@ -2435,7 +2435,7 @@
    }
   ],
   "ipuclari": [
-   "Parça iki akşam izlenen aynı oyun için ne diyor?"
+   "Parça ayrılmış bisiklet yollarının kimlere yaradığını söylüyor?"
   ],
   "adimlar": [
    {
@@ -2445,8 +2445,8 @@
    },
    {
     "baslik": "Dayanağı parçada bul",
-    "aciklama": "Parça aynı oyunun iki akşamda iki ayrı deneyim olduğunu söyler; bu, oyunun birebir aynı olmayabileceği anlamına gelir. Diğer şıklar parçada olmayan karşılaştırmalar ya da abartılardır.",
-    "islem": "dayanak: Parça aynı oyunun iki akşamda “iki ayrı deneyim” olduğunu söyler."
+    "aciklama": "Parça ayrılmış yolların bisikletlinin güvenliğini artırdığı kadar sürücüyü de rahatlattığını söyler. Diğer şıklar parçada olmayan ya da parçaya ters yargılardır.",
+    "islem": "dayanak: Parça son cümlede ayrılmış yolların sürücünün de “rahatlamasına yardım eder” dediğini söyler."
    },
    {
     "baslik": "Şıkları tek tek ele",
@@ -2466,7 +2466,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": false
+   "korCozum": true
   }
  }
 ]

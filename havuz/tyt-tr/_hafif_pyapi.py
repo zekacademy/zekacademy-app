@@ -29,7 +29,7 @@ B_GI=B('Giriş cümlesi','paragrafı başlatan cümle kendi başına anlaşılma
 ROMS=ROM
 ORD={1:'ilk',2:'ikinci',3:'üçüncü',4:'dördüncü',5:'beşinci'}
 BAGIMLI=['bu','şu','o','onlar','bunlar','şunlar','bunun','buna','bunu','bundan','bunda','bunların','böylece','böyle','ancak','ayrıca','oysa','çünkü','üstelik','nitekim','dolayısıyla','yine','öte','söz','aynı','diğer','öteki','sonuç','kısacası','ne','buna','bunca','bu tür','işte','peki','ama','fakat','lakin','ise','de','da','ki']
-BAGIMLI_KATI=['bu','şu','onlar','bunlar','şunlar','bunun','buna','bunu','bundan','bunların','böylece','böyle','ancak','ayrıca','oysa','çünkü','üstelik','nitekim','dolayısıyla','söz konusu','aynı','diğer','öteki','kısacası','işte','peki','fakat','lakin','yine de','öte yandan','sonuç olarak','bunca','ne var ki','tersine']
+BAGIMLI_KATI=['bu','şu','onlar','bunlar','şunlar','bunun','buna','bunu','bundan','bunların','böylece','böyle','ancak','ayrıca','oysa','çünkü','üstelik','nitekim','dolayısıyla','söz konusu','aynı','diğer','öteki','kısacası','işte','peki','fakat','lakin','yine de','öte yandan','sonuç olarak','bunca','ne var ki','tersine','bununla','bunlara','bunlarla','bunların']
 
 def _sozc(s): return re.findall(r'[a-zçğıöşü]+',s.lower().replace('İ','i').replace('I','ı'))
 def bagimli_mi(s):
@@ -65,7 +65,7 @@ def tam(no,zor,konum,par,dogru,yan,harf,cevre,gerekce,ip,puf,kok=None):
     elif konum=='sonuc': assert par.rstrip().endswith('........')
     else: assert not par.startswith('........') and not par.rstrip().endswith('........')
     n=len(re.findall(r'\w+',par.replace('........',dogru)))
-    assert 55<=n<=165,(no,n)
+    assert 55<=n<=165 and (zor!='zor' or 100<=n<=150),(no,n)
     for m,f,c,t in yan:
         assert set(f)=={'baglac','akis','konu'} and not all(f.values()),(no,m)
     assert len(dogru)<=max(len(y[0]) for y in yan) and not all(len(dogru)>len(y[0]) for y in yan),(no,'doğru şık en uzun')
@@ -90,7 +90,7 @@ def akis(no,zor,cum,roller,bozan,odak,bozan_ac,cikar,ip,puf,kok=None):
     for c,(r,b) in zip(cum,roller):
         if b: assert b in c,(no,b)
     assert sum(r=='sapma' for r,_ in roller)==1
-    n=len(re.findall(r'\w+',' '.join(cum))); assert 50<=n<=160,(no,n)
+    n=len(re.findall(r'\w+',' '.join(cum))); assert 50<=n<=160 and (zor!='zor' or 100<=n<=150),(no,n)
     metin=' '.join(f'({ROM[i]}) {c}' for i,c in enumerate(cum))+'\n'+(kok or 'Bu parçadaki numaralanmış cümlelerden hangisi düşüncenin akışını bozmaktadır?')
     opts=[]
     for i in range(5):
@@ -113,7 +113,8 @@ def bolme(no,zor,cum,isaret,odak1,odak2,ip,puf,kok=None):
     kes=yeni[0]
     for c,(t,m,a) in zip(cum,isaret):
         if m: assert m in c,(no,m)
-    n=len(re.findall(r'\w+',' '.join(cum))); assert 60<=n<=165,(no,n)
+        if t=='yeni': assert a.startswith('“'),(no,'açıklama alıntıyla başlamalı',a)
+    n=len(re.findall(r'\w+',' '.join(cum))); assert 60<=n<=165 and (zor!='zor' or 100<=n<=150),(no,n)
     metin=' '.join(f'({ROM[i]}) {c}' for i,c in enumerate(cum))+'\n'+(kok or 'Bu parça iki paragrafa ayrılmak istense ikinci paragraf numaralanmış cümlelerin hangisiyle başlar?')
     opts=[]
     for i in range(1,6):
@@ -121,8 +122,8 @@ def bolme(no,zor,cum,isaret,odak1,odak2,ip,puf,kok=None):
         opts.append((ROM[i],t,'' if t=='yeni' else f'{ROM[i]}. cümle {a}; konu sürdüğü için ikinci paragraf buradan başlamaz.','' if t=='yeni' else 'dikkat'))
     t,m,a=isaret[kes]
     adimlar=[AD('Konuyu izle',odak1,'1. paragraf: önceki konu'),
-             AD('Kırılma noktasını bul',f'{ROM[kes]}. cümledeki “{m}” {a}.',f'{ROM[kes]}: yeni yön'),
-             AD('Sonrasını doğrula',odak2,f'{ROM[kes]}–{ROM[5]}: yeni paragraf'),
+             AD('Kırılma noktasını bul',f'{ROM[kes]}. cümledeki {a}.',f'{ROM[kes]}: yeni yön'),
+             AD('Sonrasını doğrula',odak2,(f'{ROM[kes]}–{ROM[5]}: yeni paragraf' if kes<5 else f'{ROM[5]}: yeni paragraf')),
              AD('Diğer şıkları ele','Diğer cümleler zamir, bağlaç ya da aynı konunun sürmesiyle öncekine bağlıdır.',' · '.join(f'{ROM[i]}: devam' for i in range(1,6) if i!=kes))]
     soru_(no,'K-PYA-05',zor,'Konunun değiştiği cümleyi bularak parçayı iki paragrafa ayırır.','öncüllü',ADIM[zor],metin,opts,'ABCDE'[kes-1],lambda e:e=='yeni',
           'İkinci paragrafı başlatan cümle.',ip,[B_BO],adimlar,puf)
@@ -132,6 +133,7 @@ def sira(no,zor,cum,kurallar,roller,konum,harf,baglar,ip,puf,seed):
     """cum: doğru sıradaki 5 cümle. kurallar: (tip,a,b,ipucu,açıklama); tip: once|hemen|ilk|son (indeksler doğru sıradadır).
     Tüm 120 sıra taranır; kuralları sağlayan tek sıra cum'un sırası olmalıdır. konum: >0 baştan, <0 sondan."""
     n=len(cum); assert n==5 and len(roller)==5
+    nw=len(re.findall(r'\w+',' '.join(cum))); assert zor!='zor' or 100<=nw<=150,(no,nw)
     def tamam(p):
         pos={x:i for i,x in enumerate(p)}
         for tip,a,b,_,_ in kurallar:
@@ -183,7 +185,7 @@ def giris(no,zor,mod,dogru,yan,harf,ip,puf,kok=None):
         for m,c,t in yan: assert not bagimli_mi(m),(no,'bağımsız sanılan cümle bağımlı',m,bagimli_mi(m))
         opts=yerlestir(harf,(dm,'dep','',''),[(m,'ind',c,t) for m,c,t in yan]); pred=lambda e:e=='dep'
         kk=kok or 'Aşağıdakilerden hangisi bir paragrafın giriş cümlesi olamaz?'
-        ac=f'“{dis}” sözcüğü öncede söylenmiş bir şeye gönderme yapar; bu cümle paragrafı başlatamaz.'
+        ac=f'“{dis}” sözcüğü önceden söylenmiş bir şeye gönderme yapar; bu cümle paragrafı başlatamaz.'
         ayak=' · '.join(f'{L[i]}: {"öncüle bağlı" if o[1]=="dep" else "bağımsız"}' for i,o in enumerate(opts))
         istenen='Giriş cümlesi olamayan cümle.'
     else:

@@ -1,0 +1,92 @@
+{
+ "konu": "Paragraf",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-PYN-01",
+   "konu": "Paragraf",
+   "alt": "Yeni Nesil: Metin ve Tablo",
+   "fikir": "Kısa metindeki koşulu ve tablodaki sayıları birlikte okuyup her şıkkı tablodan hesaplayarak sınamak (oran, toplam, en çok, kaç katı).",
+   "tuzak": "Tabloyu okumadan metnin genel havasına göre şık seçmek; toplam ile oranı, artış miktarı ile artış oranını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "pyn-tablo",
+   "tip": "Metin ve tabloyu birlikte yorumlama",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (yeni nesil paragraf: tablolu)"
+  },
+  {
+   "id": "K-PYN-02",
+   "konu": "Paragraf",
+   "alt": "Yeni Nesil: İki Kişinin Görüşü",
+   "fikir": "İki kişinin görüşünü ayrı ayrı çıkarıp ortak ve ayrışan noktaları belirlemek; “her ikisi”, “yalnızca biri” ayrımını yapmak.",
+   "tuzak": "Bir konuşmacıya ait görüşü ötekine yüklemek; konuşmacının söylemediği ama akla yatkın görüşü ona atfetmek.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "pyn-gorus",
+   "tip": "İki kişinin görüşünü karşılaştırma",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (yeni nesil paragraf: iki görüş)"
+  },
+  {
+   "id": "K-PYN-03",
+   "konu": "Paragraf",
+   "alt": "Yeni Nesil: İki Metin Karşılaştırma",
+   "fikir": "İki metnin hangi noktada birleştiğini ve hangi noktada ayrıldığını, her metnin neye dikkat çektiğini belirleyerek karşılaştırmak.",
+   "tuzak": "Bir metnin vurgusunu ötekine geçirmek; metinlerde olmayan ortak görüş uydurmak; metnin söylediğini abartmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "pyn-metin",
+   "tip": "İki metni karşılaştırma",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (yeni nesil paragraf: iki metin)"
+  },
+  {
+   "id": "K-PYN-04",
+   "konu": "Paragraf",
+   "alt": "Yeni Nesil: Metnin Duruma Uygulanması",
+   "fikir": "Metinde verilen kural ya da ilişkiyi, verilen duruma öge öge uygulayıp beklenen sonucu çıkarmak.",
+   "tuzak": "Kuralın koşulunu eksik uygulamak; durumdaki bir ayrıntıyı (ör. bildirimlerin kapatılması) gözden kaçırmak; kuralı abartmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pyn-durum",
+   "tip": "Metni verilen duruma uygulama",
+   "kaynak": "ÖSYM 2018–2026 · Paraf İQ · Sıfır Risk (yeni nesil paragraf: duruma uygulama)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pyn-tablo",
+   "ad": "Metin ve tabloyu birlikte yorumlama",
+   "kartlar": [
+    "K-PYN-01"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pyn-gorus",
+   "ad": "İki kişinin görüşünü karşılaştırma",
+   "kartlar": [
+    "K-PYN-02"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pyn-metin",
+   "ad": "İki metni karşılaştırma",
+   "kartlar": [
+    "K-PYN-03"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  },
+  {
+   "tipId": "pyn-durum",
+   "ad": "Metni verilen duruma uygulama",
+   "kartlar": [
+    "K-PYN-04"
+   ],
+   "uygulamaKonu": "tr|Paragraf"
+  }
+ ]
+}

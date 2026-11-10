@@ -16,7 +16,7 @@ Q=kur('pteknik','Paragrafta Anlatım Teknikleri','tr|Paragraf',KARTLAR,TIPLER); 
 B_TAN=B('Tanımlama','bir kavramın ne olduğunu “X, … olan şeydir” diyerek belirtmek · “Empati, kendini başkasının yerine koyabilmektir.”')
 B_ORN=B('Örnekleme','düşünceyi somut bir olayla destekleme; “örneğin, mesela” ile gelir · “Örneğin erken yatan öğrenci derste daha dinçtir.”')
 B_KAR=B('Karşılaştırma','iki varlığı ya da durumu benzerlik ve ayrılıklarıyla yan yana koymak · “Kentte zaman hızlı, köyde yavaş akar.”')
-B_TAK=B('Tanık gösterme','görüşü desteklemek için bir uzmanın ya da atasözünün sözüne başvurmak · “Dr. Ece Sarıtaş’a göre okumak düşünmeyi besler.”')
+B_TAK=B('Tanık gösterme','görüşü desteklemek için bir uzmanın ya da atasözünün sözüne başvurmak · “Bir eğitimciye göre okumak düşünmeyi besler.”')
 B_BEN=B('Benzetme','zayıf olanı güçlü olana “gibi, sanki, kadar” ile benzetmek · “Kitap bir bahçe gibidir.”')
 B_SAY=B('Sayısal verilerden yararlanma','düşünceyi sayı, yüzde, oran gibi verilerle desteklemek · “Öğrencilerin yüzde 70’i erken kalkıyor.”')
 B_BIC=B('Anlatım biçimleri','açıklama: bilgi verme · tartışma: görüş savunma · öyküleme: olayı zamana bağlı anlatma · betimleme: görünüşü sözcüklerle resmetme')
@@ -40,9 +40,9 @@ TEK('0001','K-PT-01','kolay','v',
   ('Sayısal verilerden yararlanma','y','sayı, yüzde ya da oran gibi bir veri kullanılmaz')],
  [B_BIC],'Fiiller zaman sırasıyla dizilip olay ilerliyorsa anlatım öyküleyicidir.','Cümlelerin çoğu bir eylemi anlatıyor; bu eylemler hangi sırayla geliyor?')
 TEK('0002','K-PT-01','kolay','y',
- 'Güneş sistemi, merkezindeki yıldız ile onun çekim alanında dolanan gezegenlerden oluşur. Gezegenler, Güneş’e yakınlıklarına göre sıralanır; en yakın olan Merkür, en uzak olan ise Neptün’dür. Bu gökcisimleri kendi eksenleri etrafında dönerken Güneş’in çevresinde de dolanırlar. Dünya, bu dolanımı yaklaşık 365 gün 6 saatte tamamlar. Örneğin Jüpiter, tek başına öbür gezegenlerin toplam kütlesinden daha ağırdır.',KY_,
+ 'Güneş sistemi, merkezindeki yıldız ile onun çekim alanında dolanan gezegenlerden oluşur. Gezegenler, Güneş’e yakınlıklarına göre sıralanır; en yakın olan Merkür, en uzak olan ise Neptün’dür. Bu gök cisimleri kendi eksenleri etrafında dönerken Güneş’in çevresinde de dolanırlar. Dünya, bu dolanımı yaklaşık 365 gün 6 saatte tamamlar. Dolanım süresi, gezegen Güneş’ten uzaklaştıkça uzar. Örneğin Merkür, Güneş çevresindeki bir turu yaklaşık seksen sekiz günde bitirirken Neptün aynı turu yaklaşık yüz altmış beş yılda tamamlar.',KY_,
  [('Tanımlama','v','“Güneş sistemi, … gezegenlerden oluşur” cümlesi sistemin ne olduğunu belirtir'),
-  ('Örnekleme','v','“Örneğin Jüpiter …” cümlesi bir örnek verir'),
+  ('Örnekleme','v','“Örneğin Merkür …” cümlesi bir örnek verir'),
   ('Sayısal verilerden yararlanma','v','“365 gün 6 saat” sayısal bir veridir'),
   ('Açıklama','v','gezegenlerin sıralanışını anlatan cümleler okura bilgi verir'),
   ('Öyküleme','y','olaylar zaman akışı içinde anlatılmaz, yalnız bilgi verilir')],
@@ -56,11 +56,11 @@ TEK('0003','K-PT-01','kolay','v',
   ('Sayısal verilerden yararlanma','y','sayısal bir veri verilmez')],
  [B_BIC],'Renk, biçim ve görünüş ayrıntıları sıralanıyorsa anlatım betimleyicidir.','Parçada olaylar mı ilerliyor, yoksa bir şeyin görünüşü mü anlatılıyor?')
 TEK('0004','K-PT-01','kolay','y',
- 'Bence bilgisayar oyunlarını tümüyle zararlı saymak haksızlıktır. Örneğin strateji oyunları, oyuncuyu plan yapmaya ve sonuçları önceden düşünmeye zorlar. Eğitimci Dr. Ayten Korkmaz’ın dediği gibi “Oyun bir araçtır; iyi ya da kötü oluşu kullananın elindedir.” Ancak günde üç saati aşan ekran süresi göz ve sırt sağlığını bozar. Bu nedenle oyun süresine sınır konmalıdır. Kısacası asıl sorun oyunun kendisi değil, onu nasıl kullandığımızdır.',KY_,
+ 'Bence bilgisayar oyunlarını tümüyle zararlı saymak haksızlıktır. Örneğin strateji oyunları, oyuncuyu plan yapmaya ve sonuçları önceden düşünmeye zorlar. Bir eğitimcinin dediği gibi “Oyun bir araçtır; iyi ya da kötü oluşu kullananın elindedir.” Ancak ekran süresi uzadıkça göz ve sırt sağlığı bozulur. Nitekim okulumuzda 200 öğrenciyle yapılan bir ankette katılanların yüzde altmışı, günde üç saatten fazla oyun oynadığını söyledi. Bu nedenle oyun süresine sınır konmalıdır. Kısacası asıl sorun oyunun kendisi değil, onu nasıl kullandığımızdır.',KY_,
  [('Tartışma','v','“Bence … haksızlıktır” ile bir görüş savunulur'),
   ('Örnekleme','v','“Örneğin strateji oyunları …” bir örnektir'),
-  ('Tanık gösterme','v','“Eğitimci Dr. Ayten Korkmaz’ın dediği gibi …” bir uzmanın sözüne başvurur'),
-  ('Sayısal verilerden yararlanma','v','“günde üç saati aşan ekran süresi” sayısal bir veridir'),
+  ('Tanık gösterme','v','“Bir eğitimcinin dediği gibi …” bir uzmanın sözüne başvurur'),
+  ('Sayısal verilerden yararlanma','v','“200 öğrenci”, “yüzde altmış”, “üç saat” sayısal verilerdir'),
   ('Öyküleme','y','olaylar zamana bağlı sıralanmaz')],
  [B_BIC,B_TAK],'Cümlede “bence, kanımca” varsa ve gerekçe sıralanıyorsa anlatım tartışmacıdır.','Dört şıkkın her biri için parçada bir ifade göster; gösteremediğin cevaptır.')
 TEK('0005','K-PT-01','orta','v',
@@ -85,16 +85,16 @@ TEK('0007','K-PT-01','zor','y',
   ('Öyküleme','v','“babam kapıyı itip içeri girmiş … Dün yeniden gittim” olayları zamana bağlı aktarır'),
   ('Benzetme','v','“susmuş bir yaşlı gibi duruyordu” bir benzetmedir'),
   ('Tanımlama','v','“Değirmen, tahılı öğütmeye yarayan … bir düzenektir” cümlesi tanımdır'),
-  ('Sayısal verilerden yararlanma','y','sayı, yüzde ya da oran verilmez')],
- [B_BIC,B_BEN],'Öyküleyici bir parçada betimleme, benzetme ve tanım iç içe geçebilir; her şıkka cümleyle bak.','Bu parçada tek bir biçim değil, birkaç teknik iç içe. Hangisinin hiç izi yok?')
+  ('Tanık gösterme','y','hiçbir kişinin sözüne başvurulmaz; “babam” yalnız olayın kişisi olarak anılır')],
+ [B_BIC,B_BEN,B_TAK],'Öyküleyici bir parçada betimleme, benzetme ve tanım iç içe geçebilir; her şıkka cümleyle bak.','Bu parçada tek bir biçim değil, birkaç teknik iç içe. Hangisinin hiç izi yok?')
 TEK('0008','K-PT-02','zor','y',
- 'Dilbilimci Prof. Dr. Selin Karaağaç’a göre dil, düşüncenin yalnızca kabı değil, aynı zamanda kalıbıdır. Dil, bir topluluğun kendi aralarında anlaşmak için kullandığı ortak işaretler dizgesidir. Denizcilikle uğraşan topluluklar rüzgârın yönleri için ayrı ayrı adlar bulurken ormanda yaşayanlar ağaç türlerini tek tek adlandırır. Oysa kentli, bu ayrımları yapmaya hiç ihtiyaç duymaz; çünkü onun gündeminde başka kavramlar vardır. Bu yüzden bir dili anlamak, o dili konuşanların dünyaya hangi pencereden baktığını anlamaktır. Çeviri çalışmalarının güçlüğü de çoğu zaman buradan doğar; çünkü her sözcük, kendi toplumunun deneyimini taşır.',KDY,
- [('Tanık gösterme','v','“Dilbilimci Prof. Dr. Selin Karaağaç’a göre …” bir uzmanın sözüne başvurur'),
+ 'Bir dilbilimcinin dediği gibi dil, düşüncenin yalnızca taşıyıcısı değil, onu biçimlendiren etkenlerden biridir. Dil, bir topluluğun kendi aralarında anlaşmak için kullandığı ortak işaretler dizgesidir. Denizcilikle uğraşan topluluklar rüzgârın yönleri için ayrı ayrı adlar bulurken ormanda yaşayanlar ağaç türlerini tek tek adlandırır. Oysa kentlinin gündeminde başka kavramlar olduğu için bu ayrımlara çoğu zaman ihtiyaç duymaz. Bu yüzden bir dili anlamak, o dili konuşanların dünyaya hangi pencereden baktığını anlamaktır. Çeviri çalışmalarının güçlüğü de çoğu zaman buradan doğar; çünkü her sözcük, kendi toplumunun deneyimini taşır.',KDY,
+ [('Tanık gösterme','v','“Bir dilbilimcinin dediği gibi …” bir uzmanın sözüne başvurur'),
   ('Tanımlama','v','“Dil, … ortak işaretler dizgesidir” cümlesi tanımdır'),
   ('Örnekleme','v','denizcilikle uğraşanlar ve ormanda yaşayanlar düşünceyi örnekler'),
   ('Karşılaştırma','v','“Oysa kentli …” cümlesiyle iki yaşam biçimi karşı karşıya konur'),
-  ('Sayısal verilerden yararlanma','y','sayı, yüzde ya da oran verilmez')],
- [B_TAK,B_ORN],'Dört yolun da iç içe geçtiği parçada olmayanı bulmak için önce sayı, alıntı, örnek, tanım izini ara.','Parçada bir uzman, bir tanım, örnekler ve bir karşıtlık var. Peki bir rakam var mı?')
+  ('Öyküleme','y','olaylar zaman akışı içinde anlatılmaz')],
+ [B_TAK,B_ORN],'Dört yolun da iç içe geçtiği parçada olmayanı bulmak için önce sayı, alıntı, örnek, tanım izini ara.','Parçada bir uzman, bir tanım, örnekler ve bir karşıtlık var. Peki zamana bağlı bir olay akışı var mı?')
 # ---------------- DÜŞÜNCEYİ GELİŞTİRME YOLLARI ----------------
 TEK('0009','K-PT-02','kolay','v',
  'Kitap, bir bahçe gibidir; özenle bakılırsa her mevsim yeni bir çiçek açar. Okur da bu bahçede dolaşan, her köşede başka bir güzellikle karşılaşan bir gezgin gibidir. Her sayfa bir patikadır; hangisinden yürürsek yürüyelim bizi başka bir yere çıkarır. Kimi sayfada gölge bulur, kimi sayfada ışığa çıkarız. İşte bu yüzden iyi okur, sabırlı bir bahçıvan gibi acele etmez.',KDV,
@@ -113,9 +113,9 @@ TEK('0010','K-PT-02','kolay','v',
   ('Karşılaştırma','y','iki varlık ya da durum yan yana konmaz')],
  [B_TAN],'Parçanın başında kavramın ne olduğu söyleniyorsa tanımlama vardır.','İlk cümlede “önyargı”nın ne olduğu açıklanıyor mu?')
 TEK('0011','K-PT-02','orta','y',
- 'Uyku, bedenin ve zihnin kendini onardığı dinlenme hâlidir. Uyku bilimci Dr. Ferit Aksungur, yetişkinlerin gecede en az yedi saat uyuması gerektiğini söylüyor. Oysa bugün pek çok insan altı saatin altında uyuyor; öğrenciler ise sınav dönemlerinde bu süreyi dört saate kadar indiriyor. Örneğin gece geç saate kadar çalışan bir öğrenci, ertesi gün derste dikkatini toplayamaz. Uykusuzluk yalnızca yorgunluk değil, hafıza ve dikkat kaybı da demektir.',KDY,
+ 'Uyku, bedenin ve zihnin kendini onardığı dinlenme hâlidir. Bir uyku uzmanı, yetişkinlerin gecede en az yedi saat uyuması gerektiğini söylüyor. Oysa bugün pek çok insan altı saatten az uyuyor; öğrenciler ise sınav dönemlerinde bu süreyi dört saate kadar indiriyor. Örneğin gece geç saate kadar çalışan bir öğrenci, ertesi gün derste dikkatini toplamakta zorlanır. Uykusuzluk yalnızca yorgunluk değil, hafıza ve dikkat kaybı da demektir.',KDY,
  [('Tanımlama','v','“Uyku, … dinlenme hâlidir” cümlesi tanımdır'),
-  ('Tanık gösterme','v','“Uyku bilimci Dr. Ferit Aksungur … söylüyor” bir uzmanın görüşüne başvurur'),
+  ('Tanık gösterme','v','“Bir uyku uzmanı … söylüyor” bir uzmanın görüşüne başvurur'),
   ('Sayısal verilerden yararlanma','v','“yedi saat”, “altı saat”, “dört saat” sayısal verilerdir'),
   ('Örnekleme','v','“Örneğin gece geç saate kadar çalışan bir öğrenci …” bir örnektir'),
   ('Benzetme','y','“gibi, sanki” ile kurulmuş bir benzetme yoktur')],
@@ -137,16 +137,16 @@ TEK('0013','K-PT-02','orta','y',
   ('Tanık gösterme','y','hiçbir uzmanın sözüne başvurulmaz')],
  [B_TAN,B_KAR,B_BEN],'Dört yolun hepsi için cümle bulunup biri bulunamıyorsa cevap odur.','Hangi tekniğin parçada hiçbir ipucu yok?')
 TEK('0014','K-PT-02','orta','y',
- 'LED, elektrik akımı geçtiğinde ışık veren yarı iletken bir devre elemanıdır. Enerji mühendisi Doç. Dr. Hakan Yüceyurt’un deyişiyle “En ucuz enerji, harcanmayan enerjidir.” Eski tip akkor ampuller harcadıkları enerjinin büyük bölümünü ışığa değil ısıya dönüştürür; LED’ler ise aynı aydınlığı çok daha az enerjiyle verir. Bir evde aydınlatma LED’e çevrildiğinde elektrik tüketimi yaklaşık yüzde yetmiş beş azalabilir.',KDY,
+ 'LED, elektrik akımı geçtiğinde ışık veren yarı iletken bir devre elemanıdır. Bir enerji mühendisinin deyişiyle “En ucuz enerji, harcanmayan enerjidir.” Eski tip akkor ampuller harcadıkları enerjinin büyük bölümünü ışığa değil ısıya dönüştürür; LED’ler ise aynı aydınlığı çok daha az enerjiyle verir. Bir evde aydınlatma LED’e çevrildiğinde aydınlatma kaynaklı elektrik tüketimi yaklaşık yüzde yetmiş beş azalabilir.',KDY,
  [('Tanımlama','v','“LED, … bir devre elemanıdır” cümlesi tanımdır'),
-  ('Tanık gösterme','v','“Doç. Dr. Hakan Yüceyurt’un deyişiyle …” bir uzmanın sözüne başvurur'),
+  ('Tanık gösterme','v','“Bir enerji mühendisinin deyişiyle …” bir uzmanın sözüne başvurur'),
   ('Karşılaştırma','v','akkor ampul ile LED yan yana konur'),
   ('Sayısal verilerden yararlanma','v','“yaklaşık yüzde yetmiş beş” sayısal bir veridir'),
   ('Benzetme','y','“gibi, sanki” ile kurulmuş bir benzetme yoktur')],
  [B_TAK,B_SAY],'Alıntı tırnak içinde ve bir kişiye bağlıysa tanık gösterme, rakam varsa sayısal veridir.','Parçada bir tanım, bir uzman sözü, bir karşılaştırma ve bir yüzde var.')
-TEK('0015','K-PT-02','zor','v',
- 'Eleştirmen Prof. Dr. Nermin Tanrıkulu, iyi bir romanın okuru “değiştirmeden bırakmayan” roman olduğunu söyler. Bu ölçüt, yazarın okurdan ne beklediğini de açıklar: okur metnin içinde dolaşırken kendi yargılarını yeniden düşünmelidir. Başka bir ifadeyle roman, okura hazır cevaplar sunmak yerine sorular bırakır. Bu ölçüt aynı zamanda eleştirmenin görevini de belirler: iyi bir eleştirmen, kitabın okurda bıraktığı izi sorgular. Sorguladığı şey beğeni değil, değişimdir. Böyle bakıldığında bir kitabın satış listesinde ne kadar kalacağı, değerini belirleyen bir ölçüt olmaktan çıkar.',KDV,
- [('Tanık gösterme','v','“Eleştirmen Prof. Dr. Nermin Tanrıkulu … söyler” bir uzmanın sözüne başvurur'),
+TEK('0015','K-PT-02','orta','v',
+ 'Bir edebiyat eleştirmeni, iyi bir romanın okuru “değiştirmeden bırakmayan” roman olduğunu söyler. Bu ölçüt, yazarın okurdan ne beklediğini de açıklar: okur metnin içinde dolaşırken kendi yargılarını yeniden düşünmelidir. Başka bir ifadeyle roman, okura hazır cevaplar sunmak yerine sorular bırakır. Bu ölçüt aynı zamanda eleştirmenin görevini de belirler: iyi bir eleştirmen, kitabın okurda bıraktığı izi sorgular. Sorguladığı şey beğeni değil, değişimdir. Böyle bakıldığında bir kitabın satış listesinde ne kadar kalacağı, değerini belirleyen bir ölçüt olmaktan çıkar.',KDV,
+ [('Tanık gösterme','v','“Bir edebiyat eleştirmeni … söyler” bir uzmanın sözüne başvurur'),
   ('Sayısal verilerden yararlanma','y','sayı, yüzde ya da oran verilmez'),
   ('Örnekleme','y','“örneğin” ile verilmiş somut bir olay ya da kitap adı yoktur'),
   ('Benzetme','y','“gibi, sanki” ile kurulmuş bir benzetme yoktur'),
@@ -167,76 +167,79 @@ ONC('0017','K-PT-03','orta',
  [('tanımlama',True,'“Empati, … anlayabilmektir” cümlesi kavramı tanımlar'),('sayısal verilerden yararlanma',False,'parçada sayı, yüzde ya da oran yoktur'),('örnekleme',True,'“Örneğin arkadaşı sınavdan düşük not aldığında …” bir örnektir')],
  ['Yalnız I','Yalnız III','I ve II','I ve III','II ve III'],[B_TAN,B_ORN],'Üç öncülü ayrı ayrı sına; yalnız cümleyle gösterebildiklerini işaretle.','Önce üç yolun her biri için parçada bir cümle ara.')
 ONC('0018','K-PT-03','orta',
- 'Elektrikli otobüsler, dizel otobüslere göre daha sessiz çalışır; üstelik kilometre başına enerji maliyeti yaklaşık üçte bir oranında daha düşüktür. Dizel araçta motor sürekli titreşirken elektrikli araçta bu titreşim neredeyse hissedilmez. Ancak elektrikli otobüsün ilk satın alma bedeli, dizel otobüsünkinden fazladır; bu fark, birkaç yıl içinde yakıt tasarrufuyla kapanır.',
- [('tanımlama',False,'hiçbir kavram “X, … olan şeydir” biçiminde tanımlanmaz'),('karşılaştırma',True,'elektrikli ve dizel otobüsler sessizlik, titreşim ve maliyet bakımından yan yana konur'),('sayısal verilerden yararlanma',True,'“üçte bir oranında” sayısal bir veridir')],
+ 'Elektrikli otobüsler, dizel otobüslere göre daha sessiz çalışır; üstelik kilometre başına enerji maliyeti yaklaşık yüzde otuz daha düşüktür. Dizel araçta motor sürekli titreşirken elektrikli araçta bu titreşim neredeyse hissedilmez. Ancak elektrikli otobüsün ilk satın alma bedeli, dizel otobüsünkinden fazladır; bu fark, birkaç yıl içinde yakıt tasarrufuyla kapanır.',
+ [('tanımlama',False,'hiçbir kavram “X, … olan şeydir” biçiminde tanımlanmaz'),('karşılaştırma',True,'elektrikli ve dizel otobüsler sessizlik, titreşim ve maliyet bakımından yan yana konur'),('sayısal verilerden yararlanma',True,'“yüzde otuz” sayısal bir veridir')],
  ['Yalnız II','I ve II','I ve III','II ve III','I, II ve III'],[B_KAR,B_SAY],'Şıktaki her öncül parçada karşılık buluyorsa o şıkta yer alır.','İki aracın yan yana ele alınması hangi yola işaret eder?')
-ONC('0019','K-PT-03','orta',
+ONC('0019','K-PT-03','kolay',
  'Fikirler tohum gibidir; uygun toprak bulunca filizlenir, bulamayınca kuru bir kabuk olarak kalır. İyi bir öğretmen bu toprağı hazırlayan bahçıvandır. Öğrenci ise sabırla sulanmayı bekleyen taze bir fidandır. Bahçıvan acele ederse fidan boynunu büker; fazla özen gösterirse kök salamaz. Eğitimde de ölçü, ne bırakmak ne de boğmaktır.',
  [('benzetme',True,'“Fikirler tohum gibidir” bir benzetmedir'),('tanık gösterme',False,'hiçbir uzmanın sözüne başvurulmaz'),('sayısal verilerden yararlanma',False,'parçada sayısal veri yoktur')],
  ['Yalnız I','Yalnız II','I ve II','I ve III','II ve III'],[B_BEN],'Öncüllü sorularda her öncülü ayrı ayrı sınamadan şıka bakma.','“Gibi” ile kurulan ilişkiyi hangi yol karşılar?')
 ONC('0020','K-PT-03','orta',
- 'Müzik eğitiminin çocukların dil gelişimine katkı sağladığı sık dile getirilen bir görüştür. Çocuk gelişimi uzmanı Dr. Aslı Pekgüzel, ritim çalışan çocukların heceleri ayırmada daha başarılı olduğunu belirtiyor. Örneğin ilkokulda her hafta şarkı söyleyen öğrencilerin yeni sözcükleri daha çabuk öğrendiği gözlenmiştir. Bu nedenle okullarda müziğe ayrılan saatin kısılması, yalnızca bir sanat dersinden vazgeçmek anlamına gelmez.',
- [('tanık gösterme',True,'“Çocuk gelişimi uzmanı Dr. Aslı Pekgüzel … belirtiyor” bir uzmanın sözüne başvurur'),('sayısal verilerden yararlanma',False,'parçada sayı, yüzde ya da oran yoktur'),('örnekleme',True,'“Örneğin ilkokulda her hafta şarkı söyleyen öğrenciler …” bir örnektir')],
+ 'Müzik eğitiminin çocukların dil gelişimine katkı sağladığı sık dile getirilen bir görüştür. Bir çocuk gelişimi uzmanı, ritim çalışan çocukların heceleri ayırmada daha başarılı olduğunu belirtiyor. Örneğin ilkokulda her hafta şarkı söyleyen öğrencilerin yeni sözcükleri daha çabuk öğrendiği gözlenmiştir. Bu nedenle okullarda müziğe ayrılan saatin kısılması, yalnızca bir sanat dersinden vazgeçmek anlamına gelmez. Bu çalışmalardan en çok, okuma yazmaya yeni başlayan çocuklar yarar görür.',
+ [('tanık gösterme',True,'“Bir çocuk gelişimi uzmanı … belirtiyor” bir uzmanın sözüne başvurur'),('sayısal verilerden yararlanma',False,'parçada sayı, yüzde ya da oran yoktur'),('örnekleme',True,'“Örneğin ilkokulda her hafta şarkı söyleyen öğrenciler …” bir örnektir')],
  ['Yalnız I','I ve II','I ve III','II ve III','I, II ve III'],[B_TAK,B_ORN],'Uzman adı + görüş = tanık gösterme; “örneğin” = örnekleme.','Parçadaki uzman kişi ve “örneğin” sözcüğü hangi öncülleri destekliyor?')
-ONC('0021','K-PT-03','zor',
+ONC('0021','K-PT-03','orta',
  'Nezaket, başkalarının duygularını incitmeden davranma biçimidir. İnsan ilişkilerinde bir yağ gibidir; dişliler onunla sürtünmeden döner. Kabalık ise karşıdakini her söyleyişte biraz daha uzaklaştıran bir çıkıntıdır. Nazik biri aynı eleştiriyi yumuşak bir dille yaptığında karşısındaki onu dinler; kaba biri yaptığında ise karşısındaki savunmaya geçer. Nitekim çoğu anlaşmazlık, söylenenin içeriğinden çok söyleniş biçiminden çıkar. Biçimi düzeltmek, içeriği değiştirmeden sonucu değiştirir. Bu nedenle nezaket, bir süs değil, doğrudan sonuç alma aracıdır.',
  [('tanımlama',True,'“Nezaket, … davranma biçimidir” cümlesi kavramı tanımlar'),('benzetme',True,'“bir yağ gibidir” bir benzetmedir'),('karşılaştırma',True,'nazik kişi ile kaba kişi aynı eleştiri karşısında yan yana konur')],
  ['Yalnız II','I ve II','I ve III','II ve III','I, II ve III'],[B_TAN,B_BEN,B_KAR],'Üç öncülün üçü de parçada varsa “I, II ve III” seçilir; yine de her birini cümleyle doğrula.','Parçanın ilk cümlesi, “gibi” sözcüğü ve “nazik / kaba” karşıtlığı birer yol gösteriyor.')
-ONC('0022','K-PT-03','zor',
- 'Çocuklara okuma alışkanlığı kazandırmak, sandığımızdan daha çok evdeki havaya bağlıdır. Eğitimci Dr. Tülin Kocabaşoğlu, çocukların yaşadıklarını görerek öğrendiğini, bu yüzden en etkili öğüdün davranışla verilen öğüt olduğunu söylüyor. Örneğin akşam yemeğinden sonra bir saat kitap okuyan bir ailede büyüyen çocuk, bu saati kendiliğinden ayrılmış sayar. Aynı çocuk ileride kendi evinde de benzer bir saati kendisi oluşturacaktır. Bu durum, çocuğa öğüt vermeden önce kendi davranışımızı gözden geçirmemiz gerektiğini düşündürür. Okuma saati evin doğal bir parçası olduğunda kalıcı bir alışkanlığa dönüşür.',
- [('tanık gösterme',True,'“Eğitimci Dr. Tülin Kocabaşoğlu … söylüyor” bir uzmanın görüşüne başvurur'),('örnekleme',True,'“Örneğin akşam yemeğinden sonra bir saat kitap okuyan bir ailede …” bir örnektir'),('karşılaştırma',False,'iki varlık ya da durum yan yana konup karşılaştırılmaz; yalnız tek bir aile örneği anlatılır')],
+ONC('0022','K-PT-03','orta',
+ 'Çocuklara okuma alışkanlığı kazandırmak, sandığımızdan daha çok evdeki havaya bağlıdır. Bir eğitimci, çocukların yaşadıklarını görerek öğrendiğini, bu yüzden öğüdün en çok davranışla verildiğinde işe yaradığını söylüyor. Örneğin akşam yemeğinden sonra bir saat kitap okuyan bir ailede büyüyen çocuk, bu saati kendiliğinden ayrılmış sayar. Aynı çocuk ileride kendi evinde de benzer bir saati kendisi oluşturabilir. Bu durum, çocuğa öğüt vermeden önce kendi davranışımızı gözden geçirmemiz gerektiğini düşündürür. Okuma saati evin doğal bir parçası olduğunda kalıcı bir alışkanlığa dönüşür.',
+ [('tanık gösterme',True,'“Bir eğitimci … söylüyor” bir uzmanın görüşüne başvurur'),('örnekleme',True,'“Örneğin akşam yemeğinden sonra bir saat kitap okuyan bir ailede …” bir örnektir'),('karşılaştırma',False,'iki varlık ya da durum yan yana konup karşılaştırılmaz; yalnız tek bir aile örneği anlatılır')],
  ['Yalnız I','I ve II','I ve III','II ve III','I, II ve III'],[B_TAK,B_ORN,B_KAR],'Bir öncül için karşılığı olmayan tek bir cümle bile yoksa o öncülü işaretleme.','Üçüncü öncülde iki durum gerçekten karşı karşıya mı konuyor?')
 # ---------------- KİŞİLEŞTİRME / BETİMLEME ----------------
-TEK('0023','K-PT-04','kolay','v',None,'Aşağıdaki cümlelerin hangisinde kişileştirme yapılmıştır?',
- [('Yağmur, camlara usulca vurup içeri girmek istiyordu.','v','yağmura “içeri girmek istemek” gibi insana özgü bir davranış verilmiştir'),
-  ('Gökyüzü, kurşun gibi gri bir örtüyle kaplanmıştı.','y','insan özelliği verilmemiş, “gibi” ile benzetme yapılmıştır'),
-  ('Yağmur sabaha kadar durmadan yağdı.','y','yalnızca bir olay aktarılır, insan özelliği yoktur'),
-  ('Pencerenin önündeki kiraz ağacının dalları incecik ve çıplaktı.','y','ağacın görünüşü anlatılır; bu betimlemedir, kişileştirme değil'),
-  ('Yağmurun sesi, çatıda davul gibi çalıyordu.','y','ses davula benzetilmiştir; insan özelliği verilmemiştir')],
- [B_KIS],'İnsan dışı varlık düşünüyor, konuşuyor, istiyorsa kişileştirme vardır.','Hangi cümlede yağmur, insan gibi bir şey “yapıyor”?')
-TEK('0024','K-PT-04','orta','v',None,'Aşağıdaki cümlelerin hangisinde betimleme vardır?',
- [('Kapıdan giren adamın saçları kırlaşmış, yüzü kırışmış, gözleri çökmüştü.','v','adamın görünüşü ayrıntılarla resmedilmiştir'),
-  ('Adam, kapıdan girer girmez doğruca masaya yürüdü.','y','art arda eylemler anlatılır; bu öykülemedir'),
-  ('Rüzgâr, ağaçların arasında fısıldaşıp duruyordu.','y','rüzgâra insan özelliği verilmiştir; bu kişileştirmedir'),
-  ('Her sabah beşte kalkıp koşuya çıkar.','y','bir alışkanlık bildirilir, görünüş resmedilmez'),
-  ('Sağlıklı beslenmek için sebze ve meyve tüketmek gerekir.','y','bilgi ve öğüt verilir; görünüş anlatılmaz')],
- [B_KIS],'Renk, biçim, görünüş ayrıntıları sıralanıyorsa betimleme vardır.','Hangi cümle bir şeyin nasıl göründüğünü anlatıyor?')
-TEK('0025','K-PT-04','orta','v',None,'Aşağıdaki cümlelerin hangisinde hem benzetme hem kişileştirme birlikte kullanılmıştır?',
- [('Deniz, geceleri bir dev gibi uyuyup sabaha doğru yavaşça uyanır.','v','“bir dev gibi” benzetme, “uyuyup uyanır” kişileştirmedir'),
-  ('Dağlar, güneşe doğru kollarını açıp uzanıyordu.','y','yalnız kişileştirme vardır, “gibi” ile kurulmuş bir benzetme yoktur'),
-  ('Ay, gümüş bir tepsi gibi gökyüzünde asılıydı.','y','yalnız benzetme vardır, ay insan gibi davranmaz'),
-  ('Gökyüzü masmavi, bulutsuzdu.','y','yalnızca görünüş anlatılır; betimlemedir'),
-  ('Kuşlar sabahleyin yuvalarından çıktı.','y','yalnızca bir olay aktarılır')],
- [B_KIS,B_BEN],'İki teknik soruluyorsa her teknik için cümlede ayrı bir işaret ara.','Hangi şıkta hem “gibi” hem insana özgü bir eylem var?')
-# ---------------- TANIK GÖSTERME / SAYISAL VERİ ----------------
-TEK('0026','K-PT-05','orta','v',None,'Aşağıdakilerden hangisi, düşüncesini bir uzmanın sözüyle destekleyen cümledir?',
- [('Ekonomist Prof. Dr. Cemile Arıtürk’ün dediği gibi “Tasarruf, geleceğe yapılan bir yatırımdır.”','v','bir uzmanın sözüne başvurularak görüş desteklenir'),
-  ('Tasarruf, gelirin bir bölümünü ileride kullanmak üzere ayırmaktır.','y','bir kavramın ne olduğu söylenir; bu tanımlamadır'),
-  ('Örneğin aylık gelirinin onda birini ayıran biri, bir yılda yaklaşık bir aylık maaşını biriktirir.','y','somut bir olayla düşünce desteklenir; bu örneklemedir'),
-  ('Tasarruf eden insan, kışa hazırlanan karıncalar gibidir.','y','“gibi” ile kurulmuş bir benzetmedir'),
-  ('Tasarrufa yönelen ailelerin sayısı son beş yılda yüzde kırk artmıştır.','y','yüzde ile verilmiş sayısal veridir')],
- [B_TAK],'Bir kişinin adı + sözü ile görüş destekleniyorsa tanık gösterme vardır.','Hangi cümlede bir uzmanın sözü aktarılıyor?')
-TEK('0027','K-PT-05','orta','v',None,'Aşağıdaki cümlelerin hangisinde sayısal verilerden yararlanılmıştır?',
- [('Bu şehirde bisiklet kullanımı, bisiklet yolları yapıldıktan sonra üç yıl içinde dört katına çıkmıştır.','v','“üç yıl”, “dört katı” görüşü destekleyen sayısal verilerdir'),
-  ('Bisikletli ulaşım, hem sağlığı hem çevreyi koruyan bir yoldur.','y','sayı içermeyen bir yargıdır'),
-  ('Bisiklet, iki tekerlekli ve pedalla yürüyen bir taşıttır.','y','“iki” bir veri değildir; cümle bisikleti tanımlar'),
-  ('Çocukluğumda bisikletim vardı; bir yaz günü ilk kez düşmüştüm.','y','yaşanmış bir olay anlatılır; bu öyküleyicidir'),
-  ('Bisiklet, otomobile göre daha ucuz ve daha sağlıklıdır.','y','iki aracı yan yana koyar; bu karşılaştırmadır, sayısal veri yoktur')],
+def NUM(no,kart,zor,kok,cuml,bilgi,puf,ip,aranan):
+    """numaralı cümleli parça; cuml[0] doğru şık cümlesi (dayanak), öbürleri yanlış (neden)"""
+    SPEC.append(dict(t='num',no=no,kart=kart,zor=zor,kok=kok,cuml=cuml,bilgi=bilgi,puf=puf,ip=ip,aranan=aranan))
+NUM('0023','K-PT-04','kolay','Numaralanmış cümlelerin hangisinde kişileştirme vardır?',
+ [('Rüzgâr, sokak boyunca koşup bütün komşuların kapısını tek tek çalmak, içeri girip ısınmak istiyordu.','“koşmak, kapı çalmak, ısınmak istemek” rüzgâra insana özgü davranışlar verir'),
+  ('Sokağın başındaki eski çınarın gövdesi kalın, kabuğu gri, dalları çıplak ve yer yer kırıktı.','ağacın görünüşü ayrıntılı anlatılmıştır; bu betimlemedir, kişileştirme değildir'),
+  ('Kar taneleri, gökyüzünden savrulan pamuk gibi yavaş yavaş, birbirine karışarak yere iniyordu.','kar taneleri “gibi” ile pamuğa benzetilmiştir; insan özelliği verilmemiştir'),
+  ('Evlerin önündeki termometre, sabah yedide sıfırın altında beş dereceyi gösteriyordu.','bir ölçüm bildirilir; bu sayısal veridir, kişileştirme değildir'),
+  ('Bakkal, dükkânın kepengini yarıya kadar indirdi, anahtarını cebine koyup evine doğru yürüdü.','bir insanın art arda eylemleri anlatılır; bu öykülemedir, insan dışı bir varlığa insan özelliği verilmemiştir')],
+ [B_KIS],'İnsan dışı varlık düşünüyor, konuşuyor, istiyorsa kişileştirme vardır.','Hangi cümlede doğa olayı, insan gibi bir şey “yapmak istiyor”?','olan')
+TEK('0024','K-PT-04','orta','y',
+ 'Kapıdan giren adamın saçları kırlaşmış, yüzü kırışmış, gözleri çökmüştü. Omuzları, ağır bir çuval taşıyormuş gibi öne düşüyordu. Adam kapıyı kapattı, çantasını masaya bıraktı ve pencerenin önündeki sandalyeye oturdu. Dışarıda rüzgâr, ağaçların arasında fısıldaşıp duruyordu. Pencerenin camı buğulanmış, odanın duvarları solgun bir sarıya boyanmış, tavandaki lamba loş bir ışık yayıyordu. Kısa bir sessizlikten sonra çayını doldurdu ve bardağı iki eliyle sardı.',KY_,
+ [('Betimleme','v','“saçları kırlaşmış, yüzü kırışmış, gözleri çökmüştü” adamın görünüşünü ayrıntılı resmeder'),
+  ('Kişileştirme','v','“rüzgâr … fısıldaşıp duruyordu” rüzgâra insana özgü bir davranış verir'),
+  ('Benzetme','v','“ağır bir çuval taşıyormuş gibi” bir benzetmedir'),
+  ('Öyküleme','v','“kapıyı kapattı, çantasını bıraktı, oturdu” olayları zamana bağlı aktarır'),
+  ('Tanık gösterme','y','hiçbir kişinin ya da uzmanın sözüne başvurulmaz')],
+ [B_KIS,B_BIC],'Her şıkkı parçadaki bir ifadeyle eşle; ifade gösteremediğin teknik cevaptır.','Parçada görünüş, doğa, olay ve benzetme var. Başka birinin sözü var mı?')
+NUM('0025','K-PT-04','orta','Numaralanmış cümlelerin hangisinde hem benzetme hem kişileştirme vardır?',
+ [('Ay, gümüş bir tepsi gibi parlıyor, yıldızlar ona selam durarak gökyüzünden geçiyordu.','“gümüş bir tepsi gibi” benzetme, “yıldızlar ona selam durarak geçiyordu” kişileştirmedir'),
+  ('Dağlar, sabah güneşine doğru kollarını açıp yavaşça uzanıyor, vadide sis henüz dağılmamıştı.','yalnız kişileştirme vardır; “gibi” ile kurulmuş bir benzetme yoktur'),
+  ('Göl, öğle sıcağında ayna gibi parlayan geniş ve durgun bir yüzeye benziyordu.','yalnız benzetme vardır; göl insan gibi davranmaz'),
+  ('Gökyüzü masmavi ve bulutsuzdu; uzaktaki tepeler bakır rengi bir ışıkla çevrelenmişti.','yalnızca görünüş anlatılır; bu betimlemedir'),
+  ('Kuşlar sabahleyin yuvalarından çıkıp bahçedeki ağaçlara dağıldı, sonra çeşme başında toplandı.','yalnızca art arda olaylar aktarılır; bu öykülemedir')],
+ [B_KIS,B_BEN],'İki teknik soruluyorsa her teknik için cümlede ayrı bir işaret ara.','Hangi cümlede hem “gibi” ile kurulan bir ilişki hem insana özgü bir eylem var?','olan')
+NUM('0026','K-PT-05','kolay','Numaralanmış cümlelerin hangisinde tanık gösterme vardır?',
+ [('Bir ekonomistin dediği gibi “Tasarruf, geleceğe yapılan bir yatırımdır”; bugünden ayrılan pay yarının güvencesidir.','bir uzmanın sözüne başvurularak görüş desteklenir'),
+  ('Tasarruf, bir kişinin ya da ailenin gelirinin bir bölümünü ileride kullanmak üzere ayırmasıdır.','bir kavramın ne olduğu söylenir; bu tanımlamadır'),
+  ('Örneğin her ay maaşının bir kısmını kenara koyan biri, yıl sonunda beklenmedik bir gideri rahatça karşılar.','somut bir durumla düşünce desteklenir; bu örneklemedir'),
+  ('Tasarruf eden insan, yaz boyunca kışa hazırlanan çalışkan karıncalar gibidir.','“gibi” ile kurulmuş bir benzetmedir'),
+  ('Tasarrufa yönelen ailelerin sayısı son beş yılda yüzde kırk artmış, bu oran yeni kuşaklarda daha da yükselmiştir.','yüzde ile verilmiş sayısal veridir')],
+ [B_TAK],'Bir kişinin ya da uzmanın sözü aktarılıyorsa tanık gösterme vardır.','Hangi cümlede bir uzmanın söylediği bir şey aktarılıyor?','olan')
+TEK('0027','K-PT-05','orta','v',
+ 'Bisiklet, pedalla ilerleyen iki tekerlekli bir taşıttır. Kentlerde bisiklet yolları yapıldıkça kullanımı da artmaktadır. Kimi şehirlerde bu yolların uzunluğu giderek artıyor, ancak kavşaklarda hâlâ düzenleme gerekiyor. Bu şehirde bisiklet kullanımı, yeni yollar açıldıktan sonra üç yıl içinde dört katına çıkmıştır. Bisikletli ulaşım, hem sağlığı hem çevreyi koruyan bir seçenektir. Bu nedenle belediyelerin bisiklet yollarını yaygınlaştırması ve güvenli hâle getirmesi beklenir.',KV_,
+ [('Sayısal verilere başvurma','v','“üç yıl içinde dört katına çıkmıştır” düşünceyi destekleyen sayısal verilerdir'),
+  ('Uzman görüşüne başvurma','y','hiçbir kişinin ya da uzmanın sözüne başvurulmaz'),
+  ('Benzetmelerden yararlanma','y','“gibi, sanki” ile kurulmuş bir benzetme yoktur'),
+  ('Öyküleme yoluna gitme','y','olaylar zamana bağlı bir akışla anlatılmaz'),
+  ('Betimlemeden yararlanma','y','görünüş ayrıntılı biçimde resmedilmez')],
  [B_SAY],'Her sayı sayısal veri değildir; sayı bir iddiayı desteklemek için kullanılıyorsa veridir.','“İki tekerlekli” ile “dört katına çıkmak” aynı işi mi görüyor?')
-TEK('0028','K-PT-05','zor','y',None,'Aşağıdaki cümlelerin hangisinde, adı geçen kişinin sözünden yararlanılmadığı için tanık gösterme yoktur?',
- [('Dr. Neşe Ongunsoy’un deyişiyle “Sabır, acının tadını tatlıya çeviren zamandır.”','v','bir kişinin sözü, görüşü desteklemek için aktarılmıştır'),
-  ('Uzmanlara göre düzenli uyku, öğrenmenin en güçlü destekçisidir.','v','“Uzmanlara göre” ile uzman görüşü aktarılır'),
-  ('Bir atasözünün dediği gibi “Damlaya damlaya göl olur.”','v','atasözüne başvurularak düşünce desteklenir'),
-  ('Dün öğretmenimiz Selma Hanım bizi müzeye götürdü ve sergiyi gezdirdi.','y','bir kişi adı geçer ama onun sözüne başvurulmaz; olay aktarılır'),
-  ('Eğitim bilimci Doç. Dr. Mert Orhonoğlu, merak duygusunun öğrenmenin yakıtı olduğunu söylüyor.','v','bir uzmanın görüşü aktarılır')],
- [B_TAK],'Cümlede kişi adı geçmesi tek başına tanık göstermek değildir; o kişinin sözü görüşü desteklemeli.','Hangi cümlede adı geçen kişinin söylediği bir şey yok, yalnız yaptığı bir şey var?')
+NUM('0028','K-PT-05','zor','Numaralanmış cümlelerin hangisinde tanık gösterme yoktur?',
+ [('Dün öğretmenimiz bizi müzeye götürdü, sergiyi baştan sona gezdirdi ve yanımızdaki öğrencilerle sohbet etti.','bir kişi anılır ama onun sözüne başvurulmaz; olay aktarılır'),
+  ('Bir şairin deyişiyle “Merak, öğrenmenin kapısıdır” ve bu kapıdan girenler yeni şeyler keşfeder.','bir şairin sözü aktarılarak görüş desteklenir'),
+  ('Bir eğitim bilimci, merak duygusunun öğrenmenin yakıtı olduğunu ve çocuklarda erken yaşta uyandığını söylüyor.','bir uzmanın görüşü aktarılır'),
+  ('Uzmanlara göre düzenli ve yeterli uyku, öğrenmeyi destekleyen önemli etkenlerden biridir.','“Uzmanlara göre” ile uzman görüşü aktarılır'),
+  ('Bir psikolog, küçük çocukların bilgiyi en iyi oyun yoluyla öğrendiğini belirtiyor.','bir uzmanın görüşü aktarılır')],
+ [B_TAK],'Cümlede kişi anılması tek başına tanık göstermek değildir; o kişinin sözü görüşü desteklemeli.','Hangi cümlede anılan kişinin söylediği bir şey yok, yalnız yaptığı bir şey var?','olmayan')
 
 EK={
 '0001':' Gün boyunca neredeyse hiç konuşmadı; yalnızca motorun sesi ona eşlik etti. Ertesi sabah aynı iskeleye yine erkenden indi.',
-'0002':' Merkür ise Güneş çevresindeki bir turu yaklaşık seksen sekiz günde bitirir.',
 '0003':' Kapının yanındaki eski kuyunun taş kenarı da sarmaşıkla örtülmüş, kovası paslanmış zincirinde sallanıyordu.',
 '0005':' Hatta çoğu zaman en etkili anlatım, kullanıldığı fark edilmeyen anlatımdır; bu yüzden metafor dilin en sessiz ama en güçlü ustalarından sayılır.',
-'0007':' Ağır ağır yürüdüğümüz o yoldan her adımda tanıdık bir koku yükselirdi. Annemin bu yerden hiç hoşlanmadığını, her gidişimizde beni geri çağırdığını da hatırlarım.',
+'0007':' İçeri girince her adımda tanıdık bir koku yükseldi.',
 '0008':' Bu nedenle dil öğretimi, yalnızca kural aktarmak değil, bir bakış biçimini tanıtmaktır. Bir sözcüğün yerini bulmak, çoğu zaman o toplumun neyi önemsediğini bulmaktır.',
 '0009':' Bahçede aceleyle yürüyenin gözünden en güzel çiçekler kaçar.',
 '0010':' Çünkü gerçek bir tanışma, hükmün değil dinlemenin ardından başlar.',
@@ -245,9 +248,9 @@ EK={
 '0014':' Bu yüzden aydınlatma ihtiyacı karşılanırken verimli çözümler tercih edilmelidir.',
 '0015':' Bu bakımdan bir romanın değeri, okurda uyandırdığı soruların kalıcılığıyla ölçülür. Çabuk unutulan bir kitap ne kadar çok okunursa okunsun bu ölçütü karşılamaz.',
 '0016':' Gölge, rüzgâr ve nem de bu serinliği artıran etkenlerdir. Bu etkenlerin her biri tek başına küçük görünse de toplamda kentin yaşanabilirliğini belirler. Kent yaşamını planlayanların bu toplamı görmesi gerekir.',
-'0017':' Bu nedenle empati, öğrenilebilen ve geliştirilebilen bir beceri olarak da görülür.',
+'0017':' Ayrıca empati, öğrenilebilen ve geliştirilebilen bir beceri olarak da görülür. Bu beceri, çoğu zaman karşımızdakini dinlerken ona söz hakkı tanımakla başlar.',
 '0018':' Bu nedenle belediyeler filo yenilerken yalnız fiyata değil, işletme maliyetine de bakmalıdır.',
-'0019':' Fidanın büyümesi için gereken, hazırlanan toprak ve zamandır.',
+'0019':' Fidanın büyümesi için gereken, hazırlanan toprak ve zamandır. Bu yüzden iyi bir eğitimci, her öğrencinin kendi hızında büyüyeceğini unutmaz.',
 '0021':' Çalışma hayatında da durum farklı değildir; aynı hatayı “Bunu yanlış yapmışsın” diye değil “Şuraya bir daha bakalım” diye söyleyen yönetici, ekibinin güvenini kazanır.',
 '0022':' Çocuğun okuduğu kitabı bir sohbet konusu yapmak da bu alışkanlığı besler.',
 }
@@ -256,6 +259,14 @@ for _s in SPEC:
 # ---------------- kurma ----------------
 def etiketle(s,harf):
     L='ABCDE'
+    if s['t']=='num':
+        RM=['I','II','III','IV','V']; hi=L.index(harf); cu=list(s['cuml']); dog=cu[0]; sir=cu[1:]; sir.insert(hi,dog)
+        parca=' '.join(f'({RM[i]}) {c[0]}' for i,c in enumerate(sir)); nk=len(parca.split()); print(s['no'],'num',nk,'kelime'); assert 60<=nk<=140,(s['no'],nk)
+        son=[(RM[i],'dogru','','') if i==hi else (RM[i],'yan',f'{RM[i]}. cümle: {c[1]}.','bilgi') for i,c in enumerate(sir)]
+        adim=[A('Kökü doğru oku','Sorulan tekniği tanımla; numaralı cümleleri o tanıma göre sına.','aranan: '+s['aranan']),
+              A('Cümleleri tek tek çözümle','Her numaralı cümlenin hangi anlatım tekniğini kullandığını belirle.',' · '.join(f"{RM[i]}: {'doğru' if i==hi else 'elendi'}" for i in range(5))),
+              A('Sonucu belirle',f'{RM[hi]}. cümle: {dog[1]}.',f'{harf}: cevap')]
+        return parca+'\n'+s['kok'],son,adim,'Sorulan tekniği taşıyan (ya da taşımayan) numaralı cümleyi bulmak.'
     if s['t']=='tek':
         mod=s['mod']; ok=[o for o in s['opts'] if o[1]==mod]; assert len(ok)==1,(s['no'],'tek doğru değil')
         yan=[o for o in s['opts'] if o[1]!=mod]; assert len(yan)==4
