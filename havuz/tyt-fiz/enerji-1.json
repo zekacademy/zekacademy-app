@@ -1,0 +1,316 @@
+[
+ {
+  "id": "tytfiz-enerji-0001",
+  "ders": "TYT Fizik",
+  "konu": "İş, Güç ve Enerji · İş",
+  "k": "fiz|İş, Güç ve Enerji",
+  "kazanim": "Kuvvet–yol grafiğinin altında kalan alandan yapılan işi hesaplar.",
+  "tipId": "fz-en-grafik",
+  "tip": "Kuvvet–yol grafiğinden iş",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 2,
+  "metin": "Yatay düzlemde duran bir cisme, yol doğrultusunda uygulanan kuvvetin konuma bağlı grafiği şekildeki gibidir.\nBuna göre cisim 0–5 m konumları arasında hareket ederken kuvvetin yaptığı iş kaç J’dür?",
+  "sekil": "<svg viewBox=\"0 0 300 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M45 125.0 L101 53.0 L185 53.0 L185 125.0 Z\" stroke-width=\"2\" style=\"fill:var(--acc,#16A34A);fill-opacity:.2;stroke:var(--acc,#16A34A)\"/><line x1=\"45.0\" y1=\"125.0\" x2=\"201.8\" y2=\"125.0\" stroke-width=\"1.6\" /><line x1=\"45.0\" y1=\"125.0\" x2=\"45.0\" y2=\"31.4\" stroke-width=\"1.6\" /><text x=\"39.0\" y=\"35.4\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">F (N)</text><text x=\"205.8\" y=\"129.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">x (m)</text><line x1=\"101.0\" y1=\"122.0\" x2=\"101.0\" y2=\"128.0\" stroke-width=\"1.6\" /><text x=\"101.0\" y=\"141.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"185.0\" y1=\"122.0\" x2=\"185.0\" y2=\"128.0\" stroke-width=\"1.6\" /><text x=\"185.0\" y=\"141.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><line x1=\"42.0\" y1=\"53.0\" x2=\"48.0\" y2=\"53.0\" stroke-width=\"1.6\" /><text x=\"37.0\" y=\"57.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"45.0\" y1=\"53.0\" x2=\"101.0\" y2=\"53.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".6\"/><line x1=\"101.0\" y1=\"53.0\" x2=\"101.0\" y2=\"125.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".6\"/></svg>",
+  "siklar": {
+   "A": "20",
+   "B": "40",
+   "C": "60",
+   "D": "80",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "80"
+  },
+  "celdiriciler": {
+   "A": "Yalnız ilk 2 m’deki üçgenin alanını almış.",
+   "B": "İlk 2 m’de kuvveti sabit 20 N sanıp 2 × 20 hesaplamış.",
+   "C": "Yalnız 2–5 m’deki dikdörtgenin alanını almış.",
+   "E": "Tüm yolu 20 N’luk sabit kuvvet sanıp 5 × 20 hesaplamış; üçgeni dikdörtgen saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Kuvvetin 0–5 m arasında yaptığı iş (J).",
+  "bilgi": [
+   {
+    "ad": "İş",
+    "ifade": "W = F × x (kuvvet yol doğrultusundayken). Kuvvet–yol grafiğinde grafiğin altında kalan alan işi verir. Örnek: 10 N’luk kuvvet 3 m’de 30 J iş yapar"
+   }
+  ],
+  "ipuclari": [
+   "İş, grafiğin altında kalan alandır; alanı üçgen ve dikdörtgen olarak iki parçaya ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üçgen kısım",
+    "aciklama": "0–2 m arasında kuvvet 0’dan 20 N’a çıkar.",
+    "islem": "W₁ = ½ × 2 × 20 = 20 J"
+   },
+   {
+    "baslik": "Dikdörtgen kısım",
+    "aciklama": "2–5 m arasında kuvvet 20 N sabittir.",
+    "islem": "W₂ = 3 × 20 = 60 J"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Alanlar toplanır.",
+    "islem": "W = 20 + 60 = 80 J"
+   }
+  ],
+  "puf": "Kuvvet değişse de iş her zaman kuvvet–yol grafiğinin altında kalan alandır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZEN-01 (kuvvet–yol grafiği) · yamuk alan",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-enerji-0002",
+  "ders": "TYT Fizik",
+  "konu": "İş, Güç ve Enerji · Güç ve Verim",
+  "k": "fiz|İş, Güç ve Enerji",
+  "kazanim": "Yük kaldıran motorun yararlı gücünden elektrik girdi gücünü bulur.",
+  "tipId": "fz-en-guc-verim",
+  "tip": "Motorun gücü ve verimi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Verimi %80 olan bir elektrik motoru, kütlesi 40 kg olan bir yükü sabit hızla 5 m yükseğe 10 s’de çıkarmaktadır.\ng = 10 m/s² olduğuna göre motorun şebekeden çektiği elektrik gücü kaç W’tır?",
+  "sekil": null,
+  "siklar": {
+   "A": "160",
+   "B": "200",
+   "C": "250",
+   "D": "2000",
+   "E": "2500"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "250"
+  },
+  "celdiriciler": {
+   "A": "Yararlı gücü (200 W) verimle çarpmış.",
+   "B": "Verimi hesaba katmamış; yararlı gücü elektrik gücü sanmış.",
+   "D": "Süreye bölmeyi atlayıp yük ağırlığının işini güç sanmış.",
+   "E": "Süreye bölmeden iş değerini verime bölmüş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Motorun çektiği elektrik gücü (W).",
+  "bilgi": [
+   {
+    "ad": "Güç",
+    "ifade": "P = W ÷ t; birimi watt (W). Örnek: 10 s’de 500 J iş yapan makinenin gücü 50 W’tır"
+   },
+   {
+    "ad": "Verim",
+    "ifade": "verim = yararlı güç ÷ harcanan güç. Örnek: verim %50 ise 100 W harcayan makine 50 W yararlı güç verir"
+   }
+  ],
+  "ipuclari": [
+   "Önce yükün kazandığı enerjiyi, sonra bu enerjiyi sağlayan yararlı gücü bul; yararlı güç, şebekeden çekilen elektrik gücünün %80’idir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yükün kazandığı enerji",
+    "aciklama": "Sabit hızla kaldırmada motor yükün potansiyel enerji artışı kadar iş yapar.",
+    "islem": "W = m × g × h = 40 × 10 × 5 = 2000 J"
+   },
+   {
+    "baslik": "Yararlı güç",
+    "aciklama": "İş süreye bölünür.",
+    "islem": "P_yararlı = 2000 ÷ 10 = 200 W"
+   },
+   {
+    "baslik": "Verim bağıntısı",
+    "aciklama": "Yararlı güç, çekilen gücün %80’idir.",
+    "islem": "200 = 0,8 × P_çekilen"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "P_çekilen çekilir.",
+    "islem": "P_çekilen = 200 ÷ 0,8 = 250 W"
+   }
+  ],
+  "puf": "Verimli makinede çekilen güç, yararlı gücün verime bölünmesiyle bulunur; verim 1’den küçük olduğundan çekilen güç hep büyüktür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZEN-02 (güç ve verim) · yük kaldıran motor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-enerji-0003",
+  "ders": "TYT Fizik",
+  "konu": "İş, Güç ve Enerji · Mekanik Enerji",
+  "k": "fiz|İş, Güç ve Enerji",
+  "kazanim": "Sürtünmesiz yolda iki nokta arasındaki kinetik enerjiyi enerji korunumundan hesaplar.",
+  "tipId": "fz-en-korunum",
+  "tip": "Mekanik enerjinin korunumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Kütlesi 2 kg olan bir cisim, sürtünmesiz eğik yolun yerden 20 m yüksekteki K noktasından serbest bırakılıyor. Cisim yerden 5 m yüksekteki L noktasından geçmektedir (şekil).\ng = 10 m/s² olduğuna göre cismin L noktasındaki kinetik enerjisi kaç J’dür?",
+  "sekil": "<svg viewBox=\"0 0 280 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"20.0\" y1=\"130.0\" x2=\"260.0\" y2=\"130.0\" stroke-width=\"2\" /><path d=\"M40 30 L200 130\" stroke-width=\"2.5\"/><circle cx=\"40\" cy=\"30\" r=\"5\" style=\"fill:currentColor;stroke:none\"/><circle cx=\"160.0\" cy=\"105\" r=\"5\" style=\"fill:currentColor;stroke:none\"/><text x=\"54.0\" y=\"26.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"174.0\" y=\"99.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><line x1=\"20.0\" y1=\"30.0\" x2=\"32.0\" y2=\"30.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"18.0\" y1=\"30.0\" x2=\"18.0\" y2=\"130.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M18.0 130.0 L14.9 122.6 M18.0 130.0 L21.1 122.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"18.0\" y1=\"130.0\" x2=\"18.0\" y2=\"30.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M18.0 30.0 L21.1 37.4 M18.0 30.0 L14.9 37.4\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"24.0\" y=\"82.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">20 m</text><line x1=\"160.0\" y1=\"105.0\" x2=\"256.0\" y2=\"105.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"250.0\" y1=\"105.0\" x2=\"250.0\" y2=\"130.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M250.0 130.0 L246.9 122.6 M250.0 130.0 L253.1 122.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"250.0\" y1=\"130.0\" x2=\"250.0\" y2=\"105.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M250.0 105.0 L253.1 112.4 M250.0 105.0 L246.9 112.4\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"246.0\" y=\"118.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">5 m</text><text x=\"150.0\" y=\"150.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">yatay zemin</text></svg>",
+  "siklar": {
+   "A": "100",
+   "B": "150",
+   "C": "200",
+   "D": "300",
+   "E": "400"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "300"
+  },
+  "celdiriciler": {
+   "A": "L noktasındaki potansiyel enerjiyi (2 × 10 × 5) kinetik enerji sanmış.",
+   "B": "Potansiyel enerji farkını ½ ile çarpmış.",
+   "C": "K ile L arasındaki yükseklik farkını 10 m almış.",
+   "E": "K noktasındaki toplam enerjiyi L’deki kinetik enerji sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Cismin L noktasındaki kinetik enerjisi (J).",
+  "bilgi": [
+   {
+    "ad": "Potansiyel ve kinetik enerji",
+    "ifade": "E_p = m × g × h; E_k = ½ × m × v². Sürtünmesiz yolda E_k + E_p sabit kalır. Örnek: 2 kg, 5 m için E_p = 2 × 10 × 5 = 100 J"
+   }
+  ],
+  "ipuclari": [
+   "Sürtünme yok: K’deki potansiyel enerji, L’de potansiyel ve kinetik enerjinin toplamına eşittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "K noktasındaki enerji",
+    "aciklama": "Cisim serbest bırakıldığı için yalnız potansiyel enerjisi vardır.",
+    "islem": "E_K = 2 × 10 × 20 = 400 J"
+   },
+   {
+    "baslik": "L noktasındaki potansiyel enerji",
+    "aciklama": "Yükseklik 5 m’dir.",
+    "islem": "E_p = 2 × 10 × 5 = 100 J"
+   },
+   {
+    "baslik": "Enerji korunumu",
+    "aciklama": "Toplam enerji değişmez; kalan kısım kinetik enerjidir.",
+    "islem": "400 = 100 + E_k · E_k = 300 J"
+   }
+  ],
+  "puf": "Sürtünmesiz yolda kinetik enerji, yükseklik farkından kaybedilen potansiyel enerjiye eşittir: E_k = m × g × Δh.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZEN-03 (mekanik enerji korunumu) · yerden yükseklikler verilmiş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-enerji-0004",
+  "ders": "TYT Fizik",
+  "konu": "İş, Güç ve Enerji · Enerji Dönüşümleri",
+  "k": "fiz|İş, Güç ve Enerji",
+  "kazanim": "Eğik yoldaki enerji kaybını ve yatay yoldaki sürtünme işini birlikte değerlendirir.",
+  "tipId": "fz-en-surtunme",
+  "tip": "Sürtünmeli yolda enerji dönüşümü",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Kütlesi 4 kg olan bir cisim, K noktasından serbest bırakılıyor. K–L eğik yolunda cismin ilk enerjisinin %25’i ısıya dönüşmektedir. Cisim L noktasından sonra yatay L–M yolunda 20 N’luk sabit sürtünme kuvvetinin etkisiyle M noktasında duruyor (şekil).\ng = 10 m/s² olduğuna göre L–M uzaklığı kaç m’dir?",
+  "sekil": "<svg viewBox=\"0 0 310 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M40 35 L130 130 L275 130\" stroke-width=\"2.5\"/><line x1=\"20.0\" y1=\"130.0\" x2=\"300.0\" y2=\"130.0\" stroke-width=\"1\" opacity=\".4\"/><circle cx=\"40\" cy=\"35\" r=\"5\" style=\"fill:currentColor;stroke:none\"/><text x=\"54.0\" y=\"29.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"124.0\" y=\"148.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><text x=\"275.0\" y=\"148.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">M</text><line x1=\"22.0\" y1=\"35.0\" x2=\"22.0\" y2=\"130.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M22.0 130.0 L18.9 122.6 M22.0 130.0 L25.1 122.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"22.0\" y1=\"130.0\" x2=\"22.0\" y2=\"35.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M22.0 35.0 L25.1 42.4 M22.0 35.0 L18.9 42.4\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"28.0\" y=\"88.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">10 m</text><text x=\"85.0\" y=\"64.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">sürtünmeli</text><text x=\"85.0\" y=\"76.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">(enerjinin %25’i ısıya)</text><text x=\"202.0\" y=\"120.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">sürtünme kuvveti 20 N</text><text x=\"202.0\" y=\"108.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">L → M</text></svg>",
+  "siklar": {
+   "A": "5",
+   "B": "15",
+   "C": "20",
+   "D": "25",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Eğik yolda ısıya dönen enerjiyi (100 J) L’deki kinetik enerji sanmış.",
+   "C": "Eğik yoldaki kaybı hesaba katmamış; ilk enerjiyi (400 J) kullanmış.",
+   "D": "Isıya dönen enerjiyi ilk enerjiye eklemiş (500 J).",
+   "E": "İlk enerji ile L’deki kinetik enerjiyi toplamış (700 J)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "L–M yatay yolunun uzunluğu (m).",
+  "bilgi": [
+   {
+    "ad": "Potansiyel ve kinetik enerji",
+    "ifade": "E_p = m × g × h; E_k = ½ × m × v². Sürtünmesiz yolda E_k + E_p sabit kalır. Örnek: 2 kg, 5 m için E_p = 2 × 10 × 5 = 100 J"
+   },
+   {
+    "ad": "Sürtünme işi",
+    "ifade": "sürtünme kuvveti cismin enerjisini ısıya çevirir: W_sürt = F_s × x. Örnek: 5 N’luk sürtünme 4 m’de 20 J enerjiyi ısıya dönüştürür"
+   }
+  ],
+  "ipuclari": [
+   "L’deki kinetik enerji, yatay yolda sürtünme kuvvetinin yaptığı işle tükenir; önce L’deki kinetik enerjiyi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk enerji",
+    "aciklama": "Cisim K’de durgun; yalnız potansiyel enerjisi vardır.",
+    "islem": "E_K = 4 × 10 × 10 = 400 J"
+   },
+   {
+    "baslik": "Isıya dönen enerji",
+    "aciklama": "K–L yolunda ilk enerjinin %25’i ısı olur.",
+    "islem": "0,25 × 400 = 100 J"
+   },
+   {
+    "baslik": "L’deki kinetik enerji",
+    "aciklama": "Kalan enerji kinetik enerjidir.",
+    "islem": "E_L = 400 − 100 = 300 J"
+   },
+   {
+    "baslik": "Yatay yol",
+    "aciklama": "Kinetik enerjinin tamamı sürtünme işiyle tükenir.",
+    "islem": "F_s × x = 300 · 20 × x = 300 · x = 15 m"
+   }
+  ],
+  "puf": "Önce eğik yoldaki kaybı çıkar, kalan kinetik enerjiyi sürtünme kuvvetine bölerek yolu bul: x = E_k ÷ F_s.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZEN-04 (sürtünmeli yol) · önce yüzde kayıp, sonra sabit sürtünme kuvveti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,461 @@
+[
+ {
+  "id": "tytfiz-hareketkuvvet-0001",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Hareket",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Yön değiştiren hareketlide ortalama hızı yer değiştirmeden hesaplar.",
+  "tipId": "fz-hk-ortalama",
+  "tip": "Ortalama hız ve sürat",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Doğrusal bir yolda hareket eden bir koşucu K noktasından doğuya doğru 60 m’yi 20 s’de koşuyor, hemen ardından batıya doğru 40 m’yi 20 s’de koşuyor.\nBuna göre koşucunun tüm hareket boyunca ortalama hızının büyüklüğü kaç m/s’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,5",
+   "B": "1",
+   "C": "2,5",
+   "D": "3",
+   "E": "5"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "0,5"
+  },
+  "celdiriciler": {
+   "B": "Yer değiştirmeyi (20 m) yalnız ilk sürenin (20 s) tamamına bölmüş.",
+   "C": "Yolu (100 m) toplam süreye bölmüş; bu ortalama süratir, ortalama hız değildir.",
+   "D": "Yalnız ilk 20 s’lik hareketin hızını yazmış.",
+   "E": "Yolu (100 m) yalnız ilk sürenin (20 s) tamamına bölmüş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Ortalama hızın büyüklüğü (m/s).",
+  "bilgi": [
+   {
+    "ad": "Ortalama hız",
+    "ifade": "ortalama hız = yer değiştirme ÷ geçen süre; yer değiştirme ilk ve son konum arasındaki uzaklıktır, yön değiştirince yoldan küçük olur. Örnek: 10 m doğuya, 4 m batıya giden 6 m yer değiştirmiştir"
+   }
+  ],
+  "ipuclari": [
+   "Ortalama hızda toplam yol değil, yer değiştirme kullanılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yer değiştirme",
+    "aciklama": "Doğuya 60 m, batıya 40 m gidildiği için son konum K’nin 20 m doğusundadır.",
+    "islem": "Δx = 60 − 40 = 20 m"
+   },
+   {
+    "baslik": "Toplam süre",
+    "aciklama": "İki hareketin süreleri toplanır.",
+    "islem": "t = 20 + 20 = 40 s"
+   },
+   {
+    "baslik": "Ortalama hız",
+    "aciklama": "Yer değiştirme toplam süreye bölünür.",
+    "islem": "v = 20 ÷ 40 = 0,5 m/s"
+   }
+  ],
+  "puf": "Yön değişiyorsa ortalama hız için önce yer değiştirmeyi bul; yolu kullanma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-01 (ortalama hız ve sürat) · gidiş–dönüş yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-hareketkuvvet-0002",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Hareket",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Hız–zaman grafiğinin altında kalan alandan yer değiştirmeyi bulur.",
+  "tipId": "fz-hk-vt",
+  "tip": "Hız–zaman grafiği",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 3,
+  "metin": "Doğrusal yolda hareket eden bir aracın hız–zaman grafiği şekilde verilmiştir.\nBuna göre aracın 0–12 s aralığındaki yer değiştirmesi kaç m’dir?",
+  "sekil": "<svg viewBox=\"0 0 330 176\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M46 12 L46 150 L310 150\" stroke-width=\"1.6\"/><text x=\"40.0\" y=\"16.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">v (m/s)</text><text x=\"308.0\" y=\"166.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">t (s)</text><path d=\"M46.0 150.0 L119.7 42.8 L230.3 42.8 L267.1 150.0\" stroke-width=\"2.2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M119.71428571428571 150 l0 4\" stroke-width=\"1.2\"/><text x=\"119.7\" y=\"164.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><path d=\"M119.71428571428571 150 L119.71428571428571 42.8\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><path d=\"M230.28571428571428 150 l0 4\" stroke-width=\"1.2\"/><text x=\"230.3\" y=\"164.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><path d=\"M230.28571428571428 150 L230.28571428571428 42.8\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><path d=\"M267.1428571428571 150 l0 4\" stroke-width=\"1.2\"/><text x=\"267.1\" y=\"164.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">12</text><path d=\"M46 42.8 l-4 0\" stroke-width=\"1.2\"/><text x=\"38.0\" y=\"46.8\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text><path d=\"M46 42.8 L230.28571428571428 42.8\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/></svg>",
+  "siklar": {
+   "A": "8",
+   "B": "24",
+   "C": "48",
+   "D": "72",
+   "E": "96"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "Grafikteki en büyük hızı yer değiştirme sanmış.",
+   "B": "Yalnız hızın değiştiği iki bölgenin alanını toplamış.",
+   "C": "Yalnızca sabit hızlı bölgenin alanını bulmuş.",
+   "E": "En büyük hızı toplam süreyle çarpmış (8 × 12); grafiği dikdörtgen saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "0–12 s aralığındaki yer değiştirme (m).",
+  "bilgi": [
+   {
+    "ad": "v–t grafiği",
+    "ifade": "grafikle zaman ekseni arasındaki alan yer değiştirmeyi verir. Üçgen alanı = taban × yükseklik ÷ 2, dikdörtgen alanı = taban × yükseklik. Örnek: 5 m/s hızla 3 s giden 15 m gider"
+   }
+  ],
+  "ipuclari": [
+   "Hız–zaman grafiğinde yer değiştirme, grafikle zaman ekseni arasında kalan alandır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grafiği parçala",
+    "aciklama": "Grafik üç bölgeden oluşur: 0–4 s, 4–10 s, 10–12 s.",
+    "islem": "üçgen · dikdörtgen · üçgen"
+   },
+   {
+    "baslik": "Alanları bul",
+    "aciklama": "Her bölgenin alanı ayrı hesaplanır.",
+    "islem": "A₁ = 4 × 8 ÷ 2 = 16 · A₂ = 6 × 8 = 48 · A₃ = 2 × 8 ÷ 2 = 8"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Alanlar toplanarak yer değiştirme bulunur.",
+    "islem": "Δx = 16 + 48 + 8 = 72 m"
+   }
+  ],
+  "puf": "v–t grafiklerinde şekli üçgen ve dikdörtgenlere ayır, alanları topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-02 (v–t grafiğinin altındaki alan) · yamuk biçimli grafik, yeni değerler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-hareketkuvvet-0003",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Hareket",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Sabit ivmeli doğrusal harekette alınan yolu hesaplar.",
+  "tipId": "fz-hk-ivmeli",
+  "tip": "Sabit ivmeli hareket",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Doğrusal yolda 5 m/s hızla giden bir bisikletli, hareket yönünde sabit 3 m/s² ivmeyle hızlanmaya başlıyor.\nBuna göre bisikletlinin hızlanmaya başladığı andan sonraki 4 s içinde aldığı yol kaç m’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "17",
+   "C": "20",
+   "D": "32",
+   "E": "44"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "44"
+  },
+  "celdiriciler": {
+   "A": "Yolu ½at² yerine a × t (3 × 4) olarak hesaplamış.",
+   "B": "4 s sonundaki hızı (17 m/s) alınan yol sanmış.",
+   "C": "İvmenin etkisini atlayıp yalnız v₀ × t almış.",
+   "D": "½ katsayısını unutarak v₀t + at hesaplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "4 s içinde alınan yol (m).",
+  "bilgi": [
+   {
+    "ad": "Sabit ivmeli hareket",
+    "ifade": "x = v₀ × t + ½ × a × t². Örnek: v₀ = 2 m/s, a = 2 m/s², t = 3 s için x = 6 + 9 = 15 m"
+   }
+  ],
+  "ipuclari": [
+   "Yol için v₀ × t terimine ivmeden gelen ½ × a × t² terimini ekle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağıntıyı yaz",
+    "aciklama": "Başlangıç hızı ve sabit ivme birlikte verildiğinden iki terim vardır.",
+    "islem": "x = v₀ × t + ½ × a × t²"
+   },
+   {
+    "baslik": "Terimleri hesapla",
+    "aciklama": "Değerleri yerine koy.",
+    "islem": "v₀ × t = 5 × 4 = 20 m · ½ × a × t² = ½ × 3 × 16 = 24 m"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki terim toplanır.",
+    "islem": "x = 20 + 24 = 44 m"
+   }
+  ],
+  "puf": "İvmeli harekette yol, başlangıç hızıyla alınan yol ile ivmeden gelen ½at² teriminin toplamıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-03 (x = v₀t + ½at²) · yeni değerler, ilk hız var",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-hareketkuvvet-0004",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Kuvvet",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Aynı noktaya etkiyen kuvvetlerin bileşkesini dik bileşenlerle bulur.",
+  "tipId": "fz-hk-bileske",
+  "tip": "Bileşke kuvvet",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekilde O noktasına yatay ve düşey doğrultuda üç kuvvet etki etmektedir (sağ yön doğu, yukarı yön kuzeydir).\nBuna göre bu kuvvetlerin bileşkesinin büyüklüğü kaç N’dur?",
+  "sekil": "<svg viewBox=\"0 0 330 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><circle cx=\"165\" cy=\"95\" r=\"3.5\" style=\"fill:currentColor\"/><text x=\"173.0\" y=\"111.0\" text-anchor=\"start\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">O</text><path d=\"M165 95 L263 95\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><polygon points=\"263.0,95.0 254.7,98.5 254.7,91.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"214.0\" y=\"86.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">7 N</text><path d=\"M165 95 L165 39\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><polygon points=\"165.0,39.0 168.5,47.3 161.5,47.3\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"173.0\" y=\"67.0\" text-anchor=\"start\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">4 N</text><path d=\"M165 95 L109 95\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><polygon points=\"109.0,95.0 117.3,91.5 117.3,98.5\" style=\"fill:var(--acc,#16A34A);stroke:none\"/><text x=\"137.0\" y=\"112.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">4 N</text></svg>",
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "5",
+   "D": "7",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Yalnız yatay doğrultudaki bileşkeyi (7 − 4) yazmış.",
+   "B": "Yalnız düşey kuvveti bileşke sanmış.",
+   "D": "Yalnız doğuya olan kuvveti bileşke sanmış.",
+   "E": "Büyüklükleri yönlerine bakmadan toplamış (7 + 4 + 4)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Bileşke kuvvetin büyüklüğü (N).",
+  "bilgi": [
+   {
+    "ad": "Bileşke kuvvet",
+    "ifade": "aynı doğrultudaki zıt yönlü kuvvetler çıkarılır; birbirine dik iki bileşke varsa büyüklük R = √(Rx² + Ry²). Örnek: 3 N ve 4 N dik kuvvetlerin bileşkesi 5 N’dur"
+   }
+  ],
+  "ipuclari": [
+   "Önce yatay doğrultudaki kuvvetleri kendi aralarında işaretle topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yatay bileşke",
+    "aciklama": "Doğuya 7 N, batıya 4 N vardır; zıt yönler çıkarılır.",
+    "islem": "Rx = 7 − 4 = 3 N (doğu)"
+   },
+   {
+    "baslik": "Düşey bileşke",
+    "aciklama": "Düşey doğrultuda yalnız kuzeye 4 N vardır.",
+    "islem": "Ry = 4 N (kuzey)"
+   },
+   {
+    "baslik": "Dik bileşkeleri birleştir",
+    "aciklama": "Dik bileşenler Pisagor ile birleşir.",
+    "islem": "R² = 3² + 4² = 25 · R = 5 N"
+   }
+  ],
+  "puf": "Önce her doğrultunun bileşkesini işaretle bul, sonra dik iki bileşkeyi Pisagor ile birleştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-04 (bileşke kuvvet) · üç kuvvet, dik bileşenler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-hareketkuvvet-0005",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Hareket",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Sabit hızlı ve ivmeli hareketlinin buluşma anını bulup hızı hesaplar.",
+  "tipId": "fz-hk-yetisme",
+  "tip": "Yetişme problemi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Aynı doğru boyunca ve aynı yönde hareket eden K ve L araçları t = 0 anında aynı noktadan geçiyor. K sabit 10 m/s hızla gidiyor; L ise o anda durgun halden başlayarak 2 m/s² sabit ivmeyle hızlanıyor.\nBuna göre L aracı K’ya yetiştiği anda hızı kaç m/s’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "5",
+   "C": "10",
+   "D": "15",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "İvmeyi (2 m/s²) hız sanmış.",
+   "B": "½ katsayısını unutarak 10t = 2t² yazmış, t = 5 s bulup L’nin hızı yerine zamanı yazmış.",
+   "C": "Yetiştiği anda hızların eşit (10 m/s) olduğunu sanmış.",
+   "D": "K’nin hızı ile L’nin son hızının ortalamasını almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "L’nin yetişme anındaki hızı (m/s).",
+  "bilgi": [
+   {
+    "ad": "Sabit ivmeli hareket",
+    "ifade": "x = ½ × a × t² (durgun başlayan için), v = a × t. Sabit hızda x = v × t. Örnek: durgun başlayıp 2 m/s² ivmeyle 3 s giden 9 m yol alır, hızı 6 m/s olur"
+   }
+  ],
+  "ipuclari": [
+   "Yetiştiği anda iki aracın aldığı yol eşittir: K için v × t, L için ½ × a × t²."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yolları eşitle",
+    "aciklama": "Yetiştiklerinde iki araç da aynı yolu almıştır.",
+    "islem": "10 × t = ½ × 2 × t²"
+   },
+   {
+    "baslik": "Zamanı bul",
+    "aciklama": "t’yi sadeleştirip çöz.",
+    "islem": "10 = t ; t = 10 s"
+   },
+   {
+    "baslik": "L’nin hızı",
+    "aciklama": "Durgun başlayan L’nin hızı a × t’dir.",
+    "islem": "v = 2 × 10 = 20 m/s"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Alınan yollar eşit olmalıdır.",
+    "islem": "K: 10 × 10 = 100 m ; L: ½ × 2 × 100 = 100 m"
+   }
+  ],
+  "puf": "Yetişme sorularında yolları eşitle, süreyi bul; sonra istenen hız ya da yolu hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-05 (yetişme) · L’nin yetişme anındaki hızı istenen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-hareketkuvvet-0006",
+  "ders": "TYT Fizik",
+  "konu": "Hareket ve Kuvvet · Hareket",
+  "k": "fiz|Hareket ve Kuvvet",
+  "kazanim": "Aynı anda başlayan serbest düşme ve düşey atışın karşılaşma anını bulur.",
+  "tipId": "fz-hk-dusey",
+  "tip": "Düşey atış ve serbest düşme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Yerden 60 m yükseklikteki bir noktadan A cismi serbest bırakılırken aynı anda aynı düşey doğrultudaki yerden B cismi 20 m/s hızla düşey yukarı fırlatılıyor.\nHava direnci ihmal edildiğine ve g = 10 m/s² olduğuna göre cisimler karşılaştığı anda B’nin hızının büyüklüğü kaç m/s’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "10",
+   "C": "20",
+   "D": "30",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "B’nin hızını karşılaşma anında sıfır (en üst nokta) sanmış.",
+   "C": "B’nin ilk hızını karşılaşma anındaki hız sanmış.",
+   "D": "A’nın karşılaşma anındaki hızını (30 m/s) B’nin hızı sanmış.",
+   "E": "A’nın ve B’nin hızlarını toplamış; soru yalnız B’nin hızını soruyor."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Karşılaşma anında B’nin hızının büyüklüğü (m/s).",
+  "bilgi": [
+   {
+    "ad": "Düşey atış ve serbest düşme",
+    "ifade": "serbest bırakılan cismin hızı v = g × t. Yukarı atılan cismin hızı v = v₀ − g × t; eksi çıkarsa cisim aşağı iniyordur. Örnek: 20 m/s ile atılan cisim 3 s sonra 20 − 30 = −10 m/s hıza sahip olur (10 m/s aşağı)"
+   }
+  ],
+  "ipuclari": [
+   "Cisimler birbirine yaklaşırken ikisine de aynı g ivmesi etki ettiğinden aradaki mesafe, ilk hızların toplamı (0 + 20 = 20 m/s) olan sabit bir bağıl hızla kapanır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağıl hız",
+    "aciklama": "A ilk hızsız bırakılır, B 20 m/s ile yukarı atılır; ikisine de aynı g ivmesi etki ettiği için bağıl hız değişmez ve ilk hızların toplamına eşittir.",
+    "islem": "v(bağıl) = 0 + 20 = 20 m/s"
+   },
+   {
+    "baslik": "Karşılaşma süresi",
+    "aciklama": "Aradaki 60 m bu hızla kapanır.",
+    "islem": "t = 60 ÷ 20 = 3 s"
+   },
+   {
+    "baslik": "B’nin hızı",
+    "aciklama": "Yukarı atılan cisim için v = v₀ − g × t.",
+    "islem": "v = 20 − 10 × 3 = −10 m/s"
+   },
+   {
+    "baslik": "Yön ve büyüklük",
+    "aciklama": "Eksi işaret B’nin aşağı doğru indiğini gösterir; büyüklük 10 m/s’dir.",
+    "islem": "|v| = 10 m/s"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Karşılaşma yüksekliği iki cisim için de aynı çıkmalıdır.",
+    "islem": "A: 60 − ½ × 10 × 9 = 15 m ; B: 20 × 3 − 45 = 15 m"
+   }
+  ],
+  "puf": "Aynı anda başlayan düşey hareketlerde yerçekimi etkisi sadeleşir; süre, mesafenin ilk hızlar toplamına bölümüyle bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZHK-06 (düşey karşılaşma) · karşılaşma anında hız istenen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

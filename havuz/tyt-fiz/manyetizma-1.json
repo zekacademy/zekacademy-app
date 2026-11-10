@@ -1,0 +1,308 @@
+[
+ {
+  "id": "tytfiz-manyetizma-0001",
+  "ders": "TYT Fizik",
+  "konu": "Manyetizma · Mıknatıs ve Manyetik Alan",
+  "k": "fiz|Manyetizma",
+  "kazanim": "Mıknatısın kutupları ve manyetik alan çizgileri hakkındaki bilgileri değerlendirir.",
+  "tipId": "fz-mn-ozellik",
+  "tip": "Mıknatısın özellikleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "Çubuk mıknatıslarla ilgili;\nI. Aynı cins kutuplar birbirini iter.\nII. Manyetik alan çizgilerinin sık olduğu bölgede alan şiddeti daha büyüktür.\nIII. Çubuk mıknatıs ortasından kırılırsa parçalardan biri yalnız N, diğeri yalnız S kutbuna sahip olur.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Alan çizgilerinin sıklığı ile alan şiddeti arasındaki ilişkiyi (II) bilmiyor.",
+   "B": "Aynı cins kutupların birbirini ittiğini (I) bilmiyor.",
+   "D": "Mıknatıs bölününce her parçada yeni N ve S kutupları oluştuğunu bilmiyor; III yanlıştır.",
+   "E": "Mıknatısın tek kutuplu parçalara ayrılabileceğini sanmış; I’i de atlamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Mıknatıs ve alan çizgileri",
+    "ifade": "aynı cins kutuplar iter, farklı cins kutuplar çeker; alan çizgileri sık olan yerde alan güçlüdür. Mıknatıs kırılınca her parça yine N ve S kutbu olan bir mıknatıs olur. Örnek: 10 cm’lik mıknatıs ikiye bölününce iki tane 5 cm’lik mıknatıs olur"
+   }
+  ],
+  "ipuclari": [
+   "Bir mıknatıs kırıldığında oluşan her parçanın kutuplarını düşün; N ve S kutuplar hep birlikte bulunur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i değerlendir",
+    "aciklama": "Aynı cins kutuplar birbirini iter; farklı cinsler çeker.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II’yi değerlendir",
+    "aciklama": "Alan çizgilerinin sık olduğu yerde alan şiddeti büyüktür (kutuplara yakın).",
+    "islem": "II doğru"
+   },
+   {
+    "baslik": "III’ü değerlendir",
+    "aciklama": "Mıknatıs kırılınca her parça kendi N ve S kutbunu oluşturur; tek kutuplu parça yoktur.",
+    "islem": "III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Mıknatısın tek kutbu olmaz: ne kadar küçük parçalara bölünse de her parçada N ve S birlikte bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMN-01 (mıknatıs özellikleri) · öncüllü genel bilgi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-manyetizma-0002",
+  "ders": "TYT Fizik",
+  "konu": "Manyetizma · Mıknatıs ve Manyetik Alan",
+  "k": "fiz|Manyetizma",
+  "kazanim": "Çubuk mıknatısın çevresindeki noktalarda pusula iğnesinin yönünü manyetik alan çizgilerine göre belirler.",
+  "tipId": "fz-mn-pusula",
+  "tip": "Pusula iğnesinin yönü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Kutupları şekilde gösterilen çubuk mıknatısın N kutbunun sağındaki X noktasına ve mıknatısın tam ortasının üstündeki Y noktasına küçük birer pusula iğnesi konuyor.\nYer’in manyetik alanı ihmal edildiğine göre iğnelerin N uçları X ve Y noktalarında hangi yönü gösterir?",
+  "sekil": "<svg viewBox=\"0 0 300 130\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"90.0\" y=\"72.0\" width=\"60.0\" height=\"26.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.0\"/><rect x=\"150.0\" y=\"72.0\" width=\"60.0\" height=\"26.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.35\"/><text x=\"120.0\" y=\"89.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">S</text><text x=\"180.0\" y=\"89.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">N</text><circle cx=\"255\" cy=\"85\" r=\"9\" stroke-width=\"1.6\"/><text x=\"255.0\" y=\"108.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">X</text><text x=\"255.0\" y=\"70.0\" text-anchor=\"middle\" font-size=\"2\" style=\"fill:currentColor;stroke:none\"></text><circle cx=\"150\" cy=\"30\" r=\"9\" stroke-width=\"1.6\"/><text x=\"172.0\" y=\"34.0\" text-anchor=\"start\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Y</text></svg>",
+  "siklar": {
+   "A": "X: →, Y: ←",
+   "B": "X: →, Y: →",
+   "C": "X: ←, Y: ←",
+   "D": "X: ←, Y: →",
+   "E": "X: ↑, Y: ←"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "X: →, Y: ←"
+  },
+  "celdiriciler": {
+   "B": "Y’de alan çizgilerinin N kutbunun yönünde (sağa) olduğunu sanmış; mıknatısın dışında alan N’den S’ye doğrudur.",
+   "C": "X’te pusula N ucunun mıknatısın N kutbuna doğru döneceğini sanmış; aynı cins kutuplar iter.",
+   "D": "Alan yönünü her iki noktada da ters (S’den N’ye) almış.",
+   "E": "X noktasında alan çizgisinin eksene dik olduğunu sanmış; eksen üzerinde alan eksen doğrultusundadır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "X ve Y’deki pusula iğnelerinin N uçlarının gösterdiği yönler.",
+  "bilgi": [
+   {
+    "ad": "Alan yönü ve pusula",
+    "ifade": "manyetik alan çizgileri mıknatısın dışında N’den S’ye, içinde S’den N’ye doğrudur. Pusula iğnesinin N ucu bulunduğu noktadaki alan yönünü gösterir. Örnek: N kutbundan uzakta, eksen üzerinde iğnenin N ucu N kutbundan uzağı gösterir"
+   }
+  ],
+  "ipuclari": [
+   "Manyetik alan çizgileri mıknatısın dışında N kutbundan çıkıp S kutbuna girer; pusula iğnesinin N ucu çizginin yönünü gösterir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X noktası",
+    "aciklama": "X, N kutbunun sağında eksen üzerindedir; alan çizgisi N’den dışarı doğrudur.",
+    "islem": "iğnenin N ucu →"
+   },
+   {
+    "baslik": "Y noktası",
+    "aciklama": "Mıknatısın dışında alan N’den S’ye doğrudur; ortanın üstünde bu yön sağdan sola doğrudur.",
+    "islem": "iğnenin N ucu ←"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "İki yön birleştirilir.",
+    "islem": "X: →, Y: ←"
+   }
+  ],
+  "puf": "Pusula iğnesinin N ucu hep o noktadaki alan çizgisini izler; mıknatısın dışında bu yön N kutbundan S kutbuna doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMN-02 (pusula ve çubuk mıknatıs) · eksen üzerindeki ve orta üstündeki noktalar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-manyetizma-0003",
+  "ders": "TYT Fizik",
+  "konu": "Manyetizma · Akım ve Manyetik Alan",
+  "k": "fiz|Manyetizma",
+  "kazanim": "Akım taşıyan düz telin çevresindeki manyetik alanın yönünü sağ el kuralıyla bulur.",
+  "tipId": "fz-mn-duztel",
+  "tip": "Düz telin manyetik alanı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Sayfa düzlemine dik, uzun bir telden sayfa düzleminden dışarıya doğru akım geçmektedir. Telin sağındaki K noktasına ve üstündeki L noktasına küçük birer pusula iğnesi konuyor (şekil).\nYer’in manyetik alanı ihmal edildiğine göre iğnelerin N uçları K ve L noktalarında sayfa düzleminde hangi yönü gösterir?",
+  "sekil": "<svg viewBox=\"0 0 300 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><circle cx=\"150\" cy=\"80\" r=\"13\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"80\" r=\"3.5\" style=\"fill:currentColor;stroke:none\"/><circle cx=\"150\" cy=\"80\" r=\"40\" stroke-width=\"1\" stroke-dasharray=\"3 4\" opacity=\".35\"/><circle cx=\"230\" cy=\"80\" r=\"9\" stroke-width=\"1.6\"/><text x=\"230.0\" y=\"104.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><circle cx=\"150\" cy=\"22\" r=\"9\" stroke-width=\"1.6\"/><text x=\"172.0\" y=\"26.0\" text-anchor=\"start\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><text x=\"150.0\" y=\"140.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Akım sayfa düzleminden dışarıya doğru (⊙)</text></svg>",
+  "siklar": {
+   "A": "K: ↓, L: →",
+   "B": "K: ↑, L: →",
+   "C": "K: ↓, L: ←",
+   "D": "K: →, L: ↑",
+   "E": "K: ↑, L: ←"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "K: ↑, L: ←"
+  },
+  "celdiriciler": {
+   "A": "Akımı sayfaya girer gibi düşünüp sağ el kuralını ters uygulamış.",
+   "B": "K’de doğru bulmuş; L’de alanın yönünü ters almış.",
+   "C": "L’de doğru bulmuş; K’de alanın yönünü ters almış.",
+   "D": "Alan çizgilerini telden dışarı doğru (radyal) sanmış; oysa tel etrafında halkalar oluşturur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "K ve L’deki pusula iğnelerinin N uçlarının gösterdiği yönler.",
+  "bilgi": [
+   {
+    "ad": "Sağ el kuralı",
+    "ifade": "sağ elin başparmağı akım yönünü gösterirse kıvrılan dört parmak telin çevresindeki alan yönünü gösterir; alan çizgileri tele dik düzlemde halkadır. Örnek: akım sayfadan dışarıya ise alan, sayfaya bakınca saat yönünün tersindedir"
+   }
+  ],
+  "ipuclari": [
+   "Başparmağın akım yönünü (okuyucuya doğru) gösterdiği sağ elin kıvrılan parmakları alan yönünü verir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alanın dönüş yönü",
+    "aciklama": "Akım dışarıya doğru: başparmak okuyucuya bakar, parmaklar saat yönünün tersine kıvrılır.",
+    "islem": "alan çizgileri saat yönünün tersine"
+   },
+   {
+    "baslik": "K noktası",
+    "aciklama": "Telin sağında saat yönünün tersindeki teğet yukarıdır.",
+    "islem": "K: ↑"
+   },
+   {
+    "baslik": "L noktası",
+    "aciklama": "Telin üstünde saat yönünün tersindeki teğet soldur.",
+    "islem": "L: ←"
+   }
+  ],
+  "puf": "Alan çizgileri akım taşıyan telin çevresinde halkadır; pusula iğnesi halkanın o noktadaki teğetini gösterir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMN-03 (akım taşıyan düz tel) · sayfaya dik tel, iki nokta",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-manyetizma-0004",
+  "ders": "TYT Fizik",
+  "konu": "Manyetizma · Akım ve Manyetik Alan",
+  "k": "fiz|Manyetizma",
+  "kazanim": "Elektromıknatısın gücünü etkileyen etkenleri akım, sarım sayısı ve çekirdek yönünden değerlendirir.",
+  "tipId": "fz-mn-elektromiknatis",
+  "tip": "Elektromıknatısın gücü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "İç direnci önemsiz bir pil, bir reosta ve demir çekirdekli bir bobin seri bağlanarak masadaki çivileri çeken bir elektromıknatıs yapılıyor.\nI. Reostanın direnci artırılırsa çekilen çivi sayısı azalır.\nII. Pilin kutupları ters çevrilirse elektromıknatıs çivileri çekemez.\nIII. Akım şiddeti sabit tutulup sarım sayısı artırılırsa çekilen çivi sayısı artar.\nIV. Demir çekirdek aynı boyutta bir plastik çubukla değiştirilirse çekilen çivi sayısı azalır.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve III",
+   "B": "I ve IV",
+   "C": "II ve IV",
+   "D": "I, III ve IV",
+   "E": "II, III ve IV"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I, III ve IV"
+  },
+  "celdiriciler": {
+   "A": "IV’ü yanlış sanmış; demir çekirdeğin alanı güçlendirdiğini bilmiyor.",
+   "B": "III’ü yanlış sanmış; sarım sayısının alanı artırdığını atlamış.",
+   "C": "Direnç artınca akımın azalacağını (I) ve sarım etkisini (III) kaçırmış; II’yi doğru sanmış.",
+   "E": "Pil ters çevrilince mıknatıslığın kaybolduğunu sanmış; yalnız kutuplar yer değiştirir, çiviler yine çekilir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru ifadelerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Elektromıknatıs",
+    "ifade": "bobinden akım geçince manyetik alan oluşur; akım şiddeti ve sarım sayısı arttıkça, bobine demir çekirdek konunca alan güçlenir. Akım yönü değişince N ve S kutupları yer değiştirir. Örnek: akım iki katına çıkarsa çivileri çekme gücü artar"
+   }
+  ],
+  "ipuclari": [
+   "Elektromıknatısın gücünü artıran üç etkeni düşün: akım şiddeti, sarım sayısı, demir çekirdek; pil ters çevrilince yalnız kutuplar yer değiştirir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I",
+    "aciklama": "Gerilim sabit; direnç artarsa akım azalır, alan zayıflar.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II",
+    "aciklama": "Akım yönü değişince yalnız kutuplar yer değiştirir; demir çiviler her iki kutupta da çekilir.",
+    "islem": "II yanlış"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "Akım sabitken sarım sayısı arttıkça manyetik alan güçlenir.",
+    "islem": "III doğru"
+   },
+   {
+    "baslik": "IV",
+    "aciklama": "Demir çekirdek alanı güçlendirir; plastik çubuk alanı güçlendirmez, çekilen çivi azalır.",
+    "islem": "IV doğru · Sonuç: I, III ve IV"
+   }
+  ],
+  "puf": "Elektromıknatısın gücü akımla, sarım sayısıyla ve demir çekirdekle artar; pil ters çevrilince yalnız kutup yönü değişir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMN-04 (elektromıknatıs) · reosta, pil yönü, sarım ve çekirdek",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

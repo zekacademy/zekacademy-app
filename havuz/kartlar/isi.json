@@ -1,0 +1,135 @@
+{
+ "konu": "Isı, Sıcaklık ve Genleşme",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZIS-01",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isıl denge sıcaklığı",
+   "fikir": "Aynı maddeden karışımda Tson = (m₁T₁ + m₂T₂)/(m₁ + m₂).",
+   "tuzak": "Ortalama almak ya da kütleleri ters yerleştirmek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fz-is-denge",
+   "tip": "Isıl denge",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZIS-02",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Q = m·c·ΔT",
+   "fikir": "Verilen ısıdan sıcaklık artışı, oradan son sıcaklık bulunur.",
+   "tuzak": "Öz ısıyı unutmak; ΔT’yi son sıcaklık sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-is-q",
+   "tip": "Isı alışverişi ve öz ısı",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZIS-03",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Öz ısı oranı (tablo)",
+   "fikir": "Aynı ısıtıcıda Q = P·t; c = P·t / (m·ΔT).",
+   "tuzak": "Yalnız süre ya da yalnız ΔT oranına bakmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "fz-is-ozisi",
+   "tip": "Öz ısı karşılaştırması",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZIS-04",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Enerji iletim yolları",
+   "fikir": "İletim ve konveksiyon maddesel ortam ister; ışıma boşlukta da olur.",
+   "tuzak": "Işımayı da ortam gerektiriyor sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "fz-is-iletim",
+   "tip": "Enerji iletim yolları",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZIS-05",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Boyca genleşme oranları",
+   "fikir": "ΔL = α·L·ΔT; ilişkili oranlar birlikte uygulanır.",
+   "tuzak": "Bir oranı atlamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-is-genlesme",
+   "tip": "Boyca genleşme",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZIS-06",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Buz–su karışımı",
+   "fikir": "Önce suyun 0 °C’ye inerken verdiği ısı ile buzun erime ısısı karşılaştırılır; artan ısı tüm kütleyi ısıtır.",
+   "tuzak": "Erime ısısını unutmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "fz-is-hal",
+   "tip": "Hâl değişimi ve ısıl denge",
+   "kaynak": "ÖSYM 2018–2026 (ısıl denge, enerji iletimi, genleşme) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-is-denge",
+   "ad": "Isıl denge",
+   "kartlar": [
+    "K-FZIS-01"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is-q",
+   "ad": "Isı alışverişi ve öz ısı",
+   "kartlar": [
+    "K-FZIS-02"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is-ozisi",
+   "ad": "Öz ısı karşılaştırması",
+   "kartlar": [
+    "K-FZIS-03"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is-iletim",
+   "ad": "Enerji iletim yolları",
+   "kartlar": [
+    "K-FZIS-04"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is-genlesme",
+   "ad": "Boyca genleşme",
+   "kartlar": [
+    "K-FZIS-05"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is-hal",
+   "ad": "Hâl değişimi ve ısıl denge",
+   "kartlar": [
+    "K-FZIS-06"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  }
+ ]
+}

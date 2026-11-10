@@ -1,0 +1,93 @@
+{
+ "konu": "İş, Güç ve Enerji",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZEN-01",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Kuvvet–yol grafiği",
+   "fikir": "Kuvvet–yol grafiğinde eğrinin altında kalan alan yapılan işe eşittir.",
+   "tuzak": "Yalnız dikdörtgen alanı almak; üçgeni 1/2 ile çarpmamak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 2,
+   "tipId": "fz-en-grafik",
+   "tip": "Kuvvet–yol grafiğinden iş",
+   "kaynak": "ÖSYM 2018–2025 (iş, güç, enerji) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZEN-02",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Güç ve verim",
+   "fikir": "P = W ÷ t; verimli sistemde girdi gücü = yararlı güç ÷ verim.",
+   "tuzak": "Verimi çarpmak; süreyi hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-en-guc-verim",
+   "tip": "Motorun gücü ve verimi",
+   "kaynak": "ÖSYM 2018–2025 (iş, güç, enerji) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZEN-03",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Mekanik enerji korunumu",
+   "fikir": "Sürtünmesiz yolda E_k + E_p sabittir; E_k = m × g × (yükseklik farkı).",
+   "tuzak": "Başlangıç ya da bitiş potansiyel enerjisini kinetik enerji sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-en-korunum",
+   "tip": "Mekanik enerjinin korunumu",
+   "kaynak": "ÖSYM 2018–2025 (iş, güç, enerji) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZEN-04",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Sürtünmeli yol",
+   "fikir": "Enerji kaybı ısıya dönüşür; kalan kinetik enerji, yatay yoldaki sürtünme işiyle tükenir.",
+   "tuzak": "Kayıp enerjiyi kalan enerji sanmak; eğik yoldaki kaybı atlamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-en-surtunme",
+   "tip": "Sürtünmeli yolda enerji dönüşümü",
+   "kaynak": "ÖSYM 2018–2025 (iş, güç, enerji) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-en-grafik",
+   "ad": "Kuvvet–yol grafiğinden iş",
+   "kartlar": [
+    "K-FZEN-01"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en-guc-verim",
+   "ad": "Motorun gücü ve verimi",
+   "kartlar": [
+    "K-FZEN-02"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en-korunum",
+   "ad": "Mekanik enerjinin korunumu",
+   "kartlar": [
+    "K-FZEN-03"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en-surtunme",
+   "ad": "Sürtünmeli yolda enerji dönüşümü",
+   "kartlar": [
+    "K-FZEN-04"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  }
+ ]
+}

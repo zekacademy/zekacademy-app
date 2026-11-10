@@ -1,0 +1,311 @@
+[
+ {
+  "id": "tytfiz-fizikgiris-0001",
+  "ders": "TYT Fizik",
+  "konu": "Fizik Bilimine Giriş · Fiziksel Niceliklerin Sınıflandırılması",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "kazanim": "Fiziksel nicelikleri temel–türetilmiş ve skaler–vektörel olarak sınıflandırır.",
+  "tipId": "fz-gr-siniflama",
+  "tip": "Temel, türetilmiş, skaler ve vektörel nicelikler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki fiziksel niceliklerden hangisi hem türetilmiş hem de vektörel bir niceliktir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sıcaklık",
+   "B": "Hız",
+   "C": "Enerji",
+   "D": "Kütle",
+   "E": "Uzunluk"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Hız"
+  },
+  "celdiriciler": {
+   "A": "Sıcaklığı hem türetilmiş hem vektörel sanmış; sıcaklık temel ve skaler bir niceliktir.",
+   "C": "Enerjinin türetilmiş olduğunu bilmiş ama yönü olmadığını (skaler) görmemiş.",
+   "D": "Kütle temel ve skalerdir; hiçbir koşulu sağlamaz.",
+   "E": "Uzunluk temel bir niceliktir ve yönü yoktur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Hem türetilmiş hem vektörel olan nicelik.",
+  "bilgi": [
+   {
+    "ad": "Temel ve türetilmiş nicelikler",
+    "ifade": "temel nicelikler (uzunluk, kütle, zaman, sıcaklık, akım şiddeti…) başka niceliklerden türetilemez; türetilmiş nicelikler temel niceliklerden oluşur. Örnek: hız = yer değiştirme ÷ zaman"
+   },
+   {
+    "ad": "Skaler ve vektörel",
+    "ifade": "vektörel nicelikler büyüklük ve yön, skaler nicelikler yalnız büyüklük taşır. Örnek: 5 m/s kuzeye hız vektörel, 5 kg kütle skalerdir"
+   }
+  ],
+  "ipuclari": [
+   "Önce hangi seçeneklerin temel nicelik olduğunu ele; kalanlardan yönü olanı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Temel olanları ele",
+    "aciklama": "Sıcaklık, kütle ve uzunluk temel niceliklerdir.",
+    "islem": "Sıcaklık, kütle, uzunluk elendi"
+   },
+   {
+    "baslik": "Kalanları incele",
+    "aciklama": "Hız ve enerji türetilmiştir. Enerjinin yönü yoktur; hızın yönü vardır.",
+    "islem": "Enerji: skaler · Hız: vektörel"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Hem türetilmiş hem vektörel olan hızdır.",
+    "islem": "Hız"
+   }
+  ],
+  "puf": "Önce temel nicelikleri ele, kalan türetilmiş niceliklerden yönü olanı seç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZGR-01 (niceliklerin sınıflandırılması) · hem türetilmiş hem vektörel",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-fizikgiris-0002",
+  "ders": "TYT Fizik",
+  "konu": "Fizik Bilimine Giriş · Fiziksel Niceliklerin Sınıflandırılması",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "kazanim": "Tanım bağıntısından türetilmiş bir niceliğin temel birimlerle ifadesini bulur.",
+  "tipId": "fz-gr-birim",
+  "tip": "Birim türetme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Kuvvetin birimi kg·m/s²’dir. İş, kuvvet ile yolun çarpımı; güç ise işin zamana bölümüdür.\nBuna göre SI birim sisteminde birimi kg·m²/s³ olan nicelik aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kuvvet",
+   "B": "Enerji",
+   "C": "Basınç",
+   "D": "Özkütle",
+   "E": "Güç"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Güç"
+  },
+  "celdiriciler": {
+   "A": "Birimi kg·m/s² olan kuvveti seçmiş; metre üssünü ve zamanı hesaba katmamış.",
+   "B": "İşin birimini (kg·m²/s²) bulmuş ama zamana bölmeyi unutmuş.",
+   "C": "Birimi kg/(m·s²) olan basıncı seçmiş; kuvveti alana bölmüş.",
+   "D": "Özkütlenin birimi kg/m³’tür; temel birimlerle karıştırmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Birimi kg·m²/s³ olan nicelik.",
+  "bilgi": [
+   {
+    "ad": "Birim türetme",
+    "ifade": "türetilmiş niceliğin birimi bağıntıdan çıkar; çarpmada birimler çarpılır, bölmede bölünür. Örnek: hız = yol ÷ zaman ise birim m/s’dir"
+   }
+  ],
+  "ipuclari": [
+   "Önce işin, sonra gücün birimini temel birimlerle yaz; zaman birimi paydaya girer."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İşin birimi",
+    "aciklama": "İş = kuvvet × yol.",
+    "islem": "kg·m/s² × m = kg·m²/s²"
+   },
+   {
+    "baslik": "Gücün birimi",
+    "aciklama": "Güç = iş ÷ zaman.",
+    "islem": "kg·m²/s² ÷ s = kg·m²/s³"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bu birim güce aittir (watt).",
+    "islem": "Güç"
+   }
+  ],
+  "puf": "Birim sorularında tanım bağıntısını sırayla uygula; her bölmede paydaya bir saniye üssü eklenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZGR-02 (birim türetme) · güç",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-fizikgiris-0003",
+  "ders": "TYT Fizik",
+  "konu": "Fizik Bilimine Giriş · Fiziksel Niceliklerin Sınıflandırılması",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "kazanim": "Kütle ve hacim birimlerini SI birimine çevirerek özkütleyi hesaplar.",
+  "tipId": "fz-gr-donusum",
+  "tip": "Özkütlede birim dönüşümü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kuyumcu, homojen bir alüminyum parçanın kütlesini 540 g, hacmini 0,2 dm³ ölçüyor.\nBuna göre alüminyum parçanın özkütlesi kaç kg/m³’tür?",
+  "sekil": null,
+  "siklar": {
+   "A": "2,7",
+   "B": "270",
+   "C": "2700",
+   "D": "27000",
+   "E": "2700000"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "2700"
+  },
+  "celdiriciler": {
+   "A": "Hacmi doğru çevirip (0,2 dm³ = 200 cm³) 540 ÷ 200 = 2,7 g/cm³ bulmuş; sonucu kg/m³’e çevirmeyi (× 1000) unutmuş.",
+   "B": "1 dm³’ü 10 000 cm³ almış; hacmi 2000 cm³ bulmuş.",
+   "D": "1 dm³’ü 100 cm³ almış; hacmi 20 cm³ bulmuş.",
+   "E": "Kütleyi kg’ye çevirmemiş; g/m³ cinsinden sonucu kg/m³ sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Alüminyum parçanın özkütlesi (kg/m³).",
+  "bilgi": [
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 kg = 1000 g; 1 dm³ = 1 L = 1000 cm³ = 10⁻³ m³. Örnek: 2 dm³ = 2 × 10⁻³ m³"
+   },
+   {
+    "ad": "Özkütle",
+    "ifade": "d = m ÷ V. Örnek: 6 kg kütleli, 2 m³ hacimli cismin özkütlesi 3 kg/m³’tür"
+   }
+  ],
+  "ipuclari": [
+   "Kütleyi kilograma, hacmi metreküpe çevir: 1 dm³ = 10⁻³ m³ ve 1000 g = 1 kg."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kütle",
+    "aciklama": "Gramı kilograma çevir.",
+    "islem": "m = 540 g = 0,54 kg"
+   },
+   {
+    "baslik": "Hacim",
+    "aciklama": "Desimetreküpü metreküpe çevir.",
+    "islem": "V = 0,2 dm³ = 0,2 × 10⁻³ m³ = 2 × 10⁻⁴ m³"
+   },
+   {
+    "baslik": "Özkütle",
+    "aciklama": "Kütle hacme bölünür.",
+    "islem": "d = 0,54 ÷ (2 × 10⁻⁴) = 2700 kg/m³"
+   }
+  ],
+  "puf": "Özkütlede g/cm³ değeri 1000 ile çarpılınca kg/m³ olur: 2,7 g/cm³ = 2700 kg/m³.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZGR-03 (birim dönüşümü) · g ve dm³ verilmiş, kg/m³ istenmiş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-fizikgiris-0004",
+  "ders": "TYT Fizik",
+  "konu": "Fizik Bilimine Giriş · Fiziksel Niceliklerin Sınıflandırılması",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "kazanim": "Bir etkenin etkisini incelemek için kontrol edilmesi gereken değişkenleri belirler.",
+  "tipId": "fz-gr-deney",
+  "tip": "Kontrollü deney tasarımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir öğrenci, basit sarkacın periyodunun (bir tam salınım süresinin) ip uzunluğuna bağlı olup olmadığını araştırmak için dört deney yapıyor. Deneylerde kullanılan değerler aşağıdadır.\nDeney K: ip uzunluğu 50 cm, kütle 100 g, ilk açı 10°\nDeney L: ip uzunluğu 50 cm, kütle 200 g, ilk açı 10°\nDeney M: ip uzunluğu 80 cm, kütle 100 g, ilk açı 10°\nDeney N: ip uzunluğu 80 cm, kütle 200 g, ilk açı 20°\nBuna göre öğrenci, ip uzunluğunun etkisini belirlemek için hangi iki deneyin sonuçlarını karşılaştırmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "K ve M",
+   "B": "K ve L",
+   "C": "L ve N",
+   "D": "M ve N",
+   "E": "L ve M"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "K ve M"
+  },
+  "celdiriciler": {
+   "B": "Yalnız kütlesi farklı iki deneyi seçmiş; bu çift kütlenin etkisini gösterir.",
+   "C": "İp uzunluğu ile ilk açının birlikte değiştiği çifti seçmiş; etkiler ayrılamaz.",
+   "D": "İp uzunluğu sabit olan, kütle ve ilk açısı farklı çifti seçmiş.",
+   "E": "İp uzunluğu ile kütlenin birlikte değiştiği çifti seçmiş; etkiler ayrılamaz."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "İp uzunluğunun etkisini ölçecek deney çifti.",
+  "bilgi": [
+   {
+    "ad": "Kontrollü deney",
+    "ifade": "bir etkenin etkisi incelenirken yalnız o etken (bağımsız değişken) değiştirilir, diğerleri sabit tutulur. Örnek: bitkinin büyümesine ışığın etkisini incelerken su ve toprak miktarı iki bitkide de aynı olmalıdır"
+   }
+  ],
+  "ipuclari": [
+   "İncelenen etken dışında her şeyi sabit tutan deney çiftini ara: ip uzunluğu farklı, kütle ve ilk açı aynı olmalıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değiştirilecek etken",
+    "aciklama": "İncelenen etken ip uzunluğudur; kütle ve ilk açı sabit olmalıdır.",
+    "islem": "değişen: ip · sabit: kütle, ilk açı"
+   },
+   {
+    "baslik": "Çiftleri tara",
+    "aciklama": "K–M çiftinde yalnız uzunluk (50 ve 80 cm) farklıdır; kütle 100 g, açı 10° aynıdır.",
+    "islem": "K–M: yalnız ip farklı"
+   },
+   {
+    "baslik": "Diğer çiftler",
+    "aciklama": "K–L yalnız kütle, L–M ip ve kütle, L–N ip ve açı, M–N kütle ve açı bakımından farklıdır.",
+    "islem": "K ve M dışında hepsi uygun değil"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Tek geçerli çift K ve M’dir.",
+    "islem": "K ve M"
+   }
+  ],
+  "puf": "Kontrollü deneyde karşılaştırılan iki deney arasında yalnız incelenen etken farklı olmalıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZGR-04 (kontrollü deney) · basit sarkaç, dört deney, tek geçerli çift",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

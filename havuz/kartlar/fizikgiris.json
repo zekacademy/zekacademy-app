@@ -1,0 +1,93 @@
+{
+ "konu": "Fizik Bilimine Giriş",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZGR-01",
+   "konu": "Fizik Bilimine Giriş",
+   "alt": "Niceliklerin sınıflandırılması",
+   "fikir": "Temel nicelikler (uzunluk, kütle, zaman, sıcaklık…) başka niceliklerden türetilmez; yönü olan nicelikler vektörel, olmayanlar skalerdir.",
+   "tuzak": "Enerjiyi ya da sıcaklığı vektörel sanmak; hızı temel nicelik sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fz-gr-siniflama",
+   "tip": "Temel, türetilmiş, skaler ve vektörel nicelikler",
+   "kaynak": "ÖSYM 2018–2025 (fiziksel nicelikler, bilimsel yöntem) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZGR-02",
+   "konu": "Fizik Bilimine Giriş",
+   "alt": "Birim türetme",
+   "fikir": "Türetilmiş niceliğin birimi, tanım bağıntısından temel birimlerle çıkarılır.",
+   "tuzak": "Bağıntıdaki zaman üssünü yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "fz-gr-birim",
+   "tip": "Birim türetme",
+   "kaynak": "ÖSYM 2018–2025 (fiziksel nicelikler, bilimsel yöntem) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZGR-03",
+   "konu": "Fizik Bilimine Giriş",
+   "alt": "Birim dönüşümü",
+   "fikir": "SI birimine çevirirken her büyüklüğün çevirme katsayısı ayrı alınır: 1 dm³ = 1000 cm³ = 10⁻³ m³.",
+   "tuzak": "Hacim birimlerinde 10’un üssünü yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-gr-donusum",
+   "tip": "Özkütlede birim dönüşümü",
+   "kaynak": "ÖSYM 2018–2025 (fiziksel nicelikler, bilimsel yöntem) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZGR-04",
+   "konu": "Fizik Bilimine Giriş",
+   "alt": "Kontrollü deney",
+   "fikir": "Bir etkeni incelemek için yalnız o etken değiştirilir, diğerleri sabit tutulur.",
+   "tuzak": "Birden çok etkenin değiştiği deneyleri karşılaştırmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "fz-gr-deney",
+   "tip": "Kontrollü deney tasarımı",
+   "kaynak": "ÖSYM 2018–2025 (fiziksel nicelikler, bilimsel yöntem) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-gr-siniflama",
+   "ad": "Temel, türetilmiş, skaler ve vektörel nicelikler",
+   "kartlar": [
+    "K-FZGR-01"
+   ],
+   "uygulamaKonu": "fiz|Fizik Bilimine Giriş"
+  },
+  {
+   "tipId": "fz-gr-birim",
+   "ad": "Birim türetme",
+   "kartlar": [
+    "K-FZGR-02"
+   ],
+   "uygulamaKonu": "fiz|Fizik Bilimine Giriş"
+  },
+  {
+   "tipId": "fz-gr-donusum",
+   "ad": "Özkütlede birim dönüşümü",
+   "kartlar": [
+    "K-FZGR-03"
+   ],
+   "uygulamaKonu": "fiz|Fizik Bilimine Giriş"
+  },
+  {
+   "tipId": "fz-gr-deney",
+   "ad": "Kontrollü deney tasarımı",
+   "kartlar": [
+    "K-FZGR-04"
+   ],
+   "uygulamaKonu": "fiz|Fizik Bilimine Giriş"
+  }
+ ]
+}

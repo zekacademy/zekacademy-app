@@ -1,0 +1,464 @@
+[
+ {
+  "id": "tytfiz-madde-0001",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Madde ve Özkütle",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "Özkütle, kütle ve hacim arasındaki bağıntıyı kullanır.",
+  "tipId": "fz-md-ozkutle",
+  "tip": "Özkütle bağıntısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Özkütlesi 5 g/cm³ olan maddeden yapılmış cismin hacmi 20 cm³’tür.\nBuna göre cismin kütlesi kaç g’dır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,25",
+   "B": "4",
+   "C": "15",
+   "D": "25",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Özkütleyi hacme bölmüş (5 ÷ 20); bağıntıyı ters kurmuş.",
+   "B": "Hacmi özkütleye bölmüş (20 ÷ 5); kütle yerine hacim ile özkütle oranını bulmuş.",
+   "C": "Hacimden özkütleyi çıkarmış; büyüklükler çarpılmalıdır.",
+   "D": "Hacimle özkütleyi toplamış; farklı büyüklükler toplanmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Cismin kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Özkütle",
+    "ifade": "d = m ÷ V (kütle ÷ hacim). Birimi g/cm³ ya da kg/m³. Örnek: 40 g kütleli, 10 cm³ hacimli cismin özkütlesi 4 g/cm³"
+   }
+  ],
+  "ipuclari": [
+   "d = m ÷ V bağıntısından m’yi yalnız bırak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağıntıyı yaz",
+    "aciklama": "Özkütle kütlenin hacme oranıdır.",
+    "islem": "d = m ÷ V"
+   },
+   {
+    "baslik": "Kütleyi çek",
+    "aciklama": "Her iki tarafı V ile çarp.",
+    "islem": "m = d × V"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Değerleri yerine yaz.",
+    "islem": "m = 5 × 20 = 100 g"
+   }
+  ],
+  "puf": "Üç büyüklükten ikisini bilince d = m ÷ V ile üçüncüsünü bul; çarpma ya da bölmeyi birim düşünerek seç (g/cm³ × cm³ = g).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-01 (d = m/V) · kütle istenen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-madde-0002",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Madde ve Özkütle",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "Birbiri içinde tamamen çözünen sıvıların karışımının özkütlesini hesaplar.",
+  "tipId": "fz-md-karisim",
+  "tip": "Karışımın özkütlesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Özkütlesi 0,8 g/cm³ olan 200 cm³ sıvı ile özkütlesi 1,2 g/cm³ olan 300 cm³ sıvı birbirine karıştırılıyor.\nSıvılar birbiri içinde tamamen çözündüğüne ve karışımda hacim değişmediğine göre karışımın özkütlesi kaç g/cm³ olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,96",
+   "B": "1",
+   "C": "1,04",
+   "D": "1,2",
+   "E": "2"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1,04"
+  },
+  "celdiriciler": {
+   "A": "Hacimleri ters yerleştirmiş: 0,8 × 300 ile 1,2 × 200’ü toplamış.",
+   "B": "Özkütlelerin aritmetik ortalamasını almış; hacimlerin farklı olduğunu hesaba katmamış.",
+   "D": "Büyük hacimli sıvının özkütlesini karışımın özkütlesi sanmış.",
+   "E": "İki özkütleyi toplamış (0,8 + 1,2)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Karışımın özkütlesi (g/cm³).",
+  "bilgi": [
+   {
+    "ad": "Özkütle",
+    "ifade": "d = m ÷ V (kütle ÷ hacim). Birimi g/cm³ ya da kg/m³. Örnek: 40 g kütleli, 10 cm³ hacimli cismin özkütlesi 4 g/cm³"
+   },
+   {
+    "ad": "Karışımın özkütlesi",
+    "ifade": "d(karışım) = toplam kütle ÷ toplam hacim. Örnek: 10 g + 30 g kütleli sıvılar 40 cm³ oluşturuyorsa d = 40 ÷ 40 = 1 g/cm³"
+   }
+  ],
+  "ipuclari": [
+   "Her sıvının kütlesini m = d × V ile bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kütleleri bul",
+    "aciklama": "Her sıvının kütlesi özkütle ile hacmin çarpımıdır.",
+    "islem": "m₁ = 0,8 × 200 = 160 g · m₂ = 1,2 × 300 = 360 g"
+   },
+   {
+    "baslik": "Toplamları al",
+    "aciklama": "Kütleler ve hacimler ayrı ayrı toplanır.",
+    "islem": "m = 160 + 360 = 520 g · hacim = 200 + 300 = 500 cm³"
+   },
+   {
+    "baslik": "Özkütleyi bul",
+    "aciklama": "Toplam kütle toplam hacme bölünür.",
+    "islem": "d = 520 ÷ 500 = 1,04 g/cm³"
+   }
+  ],
+  "puf": "Karışımlarda özkütleleri ortalama alma; toplam kütleyi toplam hacme böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-02 (karışımın özkütlesi) · yeni sıvılar ve hacimler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-madde-0003",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Madde ve Özkütle",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "Kap ve sıvı kütlelerini iki farklı doluluk durumundan ayırır.",
+  "tipId": "fz-md-kap",
+  "tip": "Kap ve sıvı kütlesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Homojen sıvı dolu bir kabın kütlesi 700 g’dır. Sıvının yarısı boşaltılınca kabın kütlesi 450 g oluyor.\nBuna göre boş kabın kütlesi kaç g’dır?",
+  "sekil": null,
+  "siklar": {
+   "A": "200",
+   "B": "250",
+   "C": "350",
+   "D": "450",
+   "E": "500"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "200"
+  },
+  "celdiriciler": {
+   "B": "Boşaltılan yarım sıvının kütlesini (250 g) kabın kütlesi sanmış.",
+   "C": "700’ün yarısını almış; kabın kütlesini de ikiye bölmüş.",
+   "D": "Yarı dolu kabın kütlesini boş kap sanmış.",
+   "E": "Tüm sıvının kütlesini (500 g) kabın kütlesi sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Boş kabın kütlesi (g).",
+  "bilgi": [
+   {
+    "ad": "Kütle farkı",
+    "ifade": "kütle azalması boşaltılan maddenin kütlesine eşittir. Örnek: 300 g olan kaptan 50 g su dökülürse 250 g kalır"
+   }
+  ],
+  "ipuclari": [
+   "İki durum arasındaki kütle farkı, boşaltılan sıvının kütlesidir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yarım sıvının kütlesi",
+    "aciklama": "Kütledeki azalma boşaltılan sıvıdır.",
+    "islem": "700 − 450 = 250 g"
+   },
+   {
+    "baslik": "Tüm sıvının kütlesi",
+    "aciklama": "Boşaltılan, sıvının yarısıdır.",
+    "islem": "250 × 2 = 500 g"
+   },
+   {
+    "baslik": "Kabın kütlesi",
+    "aciklama": "Dolu kabın kütlesinden sıvının kütlesi çıkarılır.",
+    "islem": "700 − 500 = 200 g"
+   }
+  ],
+  "puf": "Doluluk değişen kaplarda kütle farkından sıvının kütlesini bul, kalanı kaba ait say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-03 (kap ve sıvı) · yeni kütleler, boş kabın kütlesi istenen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-madde-0004",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Yapışma ve Birbirini Tutma",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "Adezyon ve kohezyon kuvvetlerini günlük olaylarla ayırt eder.",
+  "tipId": "fz-md-yapisma",
+  "tip": "Yapışma ve birbirini tutma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Tebeşirin tahtaya sürtüldüğünde iz bırakması\nII. Cıva damlasının cam yüzeyinde küre biçimini alması\nIII. Boya fırçasındaki boyanın duvara yapışması\nYukarıdaki olaylardan hangileri adezyon (yapışma) kuvvetinin etkisiyle açıklanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’teki boya ile duvarın farklı cins olduğunu görememiş.",
+   "B": "I’deki tebeşir ile tahtanın farklı cins olduğunu görememiş.",
+   "C": "Cıvanın kendi molekülleri arasındaki çekimi (kohezyon) adezyon sanmış.",
+   "E": "Cıva damlasının küre biçimini adezyona bağlamış; bu kohezyondur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Adezyonla açıklanan olayların hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Adezyon ve kohezyon",
+    "ifade": "adezyon farklı cins moleküller arasındaki çekimdir (tebeşir–tahta); kohezyon aynı cins moleküller arasındaki çekimdir (su damlasındaki su molekülleri)"
+   }
+  ],
+  "ipuclari": [
+   "Her olayda birbirine tutunan maddelerin aynı cins mi farklı cins mi olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kavramı ayır",
+    "aciklama": "Farklı maddeler arasındaki çekim adezyon, aynı madde içindeki çekim kohezyondur.",
+    "islem": "adezyon: farklı cins · kohezyon: aynı cins"
+   },
+   {
+    "baslik": "I ve III",
+    "aciklama": "Tebeşir–tahta ve boya–duvar farklı maddelerdir.",
+    "islem": "I: adezyon · III: adezyon"
+   },
+   {
+    "baslik": "II",
+    "aciklama": "Cıva damlasını bir arada tutan cıva moleküllerinin birbirini çekmesidir.",
+    "islem": "II: kohezyon"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Adezyon yalnız I ve III’tür.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Önce iki tarafın aynı mı farklı mı madde olduğuna bak: farklıysa adezyon, aynıysa kohezyon.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-04 (adezyon ve kohezyon) · yeni günlük olaylar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-madde-0005",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Madde ve Özkütle",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "Kütle–hacim grafiğinden özkütle bulup eşit kütleli karışımın özkütlesini hesaplar.",
+  "tipId": "fz-md-grafik",
+  "tip": "Özkütle grafiği ve karışım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Şekilde X ve Y maddelerinin kütle–hacim grafikleri verilmiştir.\nX ve Y’den eşit kütlede alınarak tamamen çözünen bir karışım hazırlanıyor ve hacim değişmiyor.\nBuna göre karışımın özkütlesi kaç g/cm³ olur?",
+  "sekil": "<svg viewBox=\"0 0 330 176\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M46 12 L46 150 L306 150\" stroke-width=\"1.6\"/><text x=\"40.0\" y=\"16.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">m (g)</text><text x=\"304.0\" y=\"166.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">V (cm³)</text><path d=\"M109.5 150 l0 4\" stroke-width=\"1.2\"/><text x=\"109.5\" y=\"164.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><path d=\"M236.5 150 l0 4\" stroke-width=\"1.2\"/><text x=\"236.5\" y=\"164.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><path d=\"M46 49.5 l-4 0\" stroke-width=\"1.2\"/><text x=\"38.0\" y=\"53.5\" text-anchor=\"end\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">60</text><path d=\"M46.0 150.0 L130.66666666666669 16.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M46 49.5 L109.5 49.5 L109.5 150\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"109.5\" cy=\"49.5\" r=\"2.8\" style=\"fill:currentColor\"/><text x=\"126.7\" y=\"10.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">X</text><path d=\"M46.0 150.0 L300.0 16.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M46 49.5 L236.5 49.5 L236.5 150\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"236.5\" cy=\"49.5\" r=\"2.8\" style=\"fill:currentColor\"/><text x=\"296.0\" y=\"10.0\" text-anchor=\"end\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Y</text></svg>",
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "6",
+   "D": "8",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "B": "Özkütlelerin aritmetik ortalamasını almış; kütleler eşit olduğunda hacimler eşit değildir.",
+   "C": "X’in özkütlesini karışımın özkütlesi sanmış.",
+   "D": "İki özkütleyi toplamış (6 + 2).",
+   "E": "Özkütleleri çarpmış (6 × 2)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Karışımın özkütlesi (g/cm³).",
+  "bilgi": [
+   {
+    "ad": "Özkütle",
+    "ifade": "d = m ÷ V (kütle ÷ hacim). Birimi g/cm³ ya da kg/m³. Örnek: 40 g kütleli, 10 cm³ hacimli cismin özkütlesi 4 g/cm³"
+   },
+   {
+    "ad": "Karışımın özkütlesi",
+    "ifade": "d = toplam kütle ÷ toplam hacim. Örnek: 20 g + 20 g kütle, 10 + 20 cm³ hacim → 40 ÷ 30 g/cm³"
+   }
+  ],
+  "ipuclari": [
+   "Grafikte her madde için aynı kütleye karşılık gelen hacmi oku ve özkütleleri bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Özkütleleri oku",
+    "aciklama": "Grafikte 60 g’a karşılık X için 10 cm³, Y için 30 cm³ okunur.",
+    "islem": "dX = 60 ÷ 10 = 6 g/cm³ · dY = 60 ÷ 30 = 2 g/cm³"
+   },
+   {
+    "baslik": "Eşit kütle seç",
+    "aciklama": "Her maddeden 60 g alındığında toplam kütle 120 g olur.",
+    "islem": "m = 60 + 60 = 120 g"
+   },
+   {
+    "baslik": "Toplam hacim",
+    "aciklama": "Hacimler kütleyi özkütleye bölerek bulunur; grafikten de 10 ve 30 cm³ okunur.",
+    "islem": "V = 10 + 30 = 40 cm³"
+   },
+   {
+    "baslik": "Karışımın özkütlesi",
+    "aciklama": "Toplam kütleyi toplam hacme böl.",
+    "islem": "d = 120 ÷ 40 = 3 g/cm³"
+   }
+  ],
+  "puf": "Eşit kütlede özkütleler ortalaması alınmaz; toplam kütleyi toplam hacme bölmek gerekir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-05 (m–V grafiği, eşit kütleli karışım) · yeni doğrular",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-madde-0006",
+  "ders": "TYT Fizik",
+  "konu": "Madde ve Özellikleri · Madde ve Özkütle",
+  "k": "fiz|Madde ve Özellikleri",
+  "kazanim": "İçi boş cismin madde hacmini ve boşluk hacmini özkütle bağıntısıyla bulur.",
+  "tipId": "fz-md-bosluk",
+  "tip": "İçi boş cisimde boşluk hacmi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Özkütlesi 5 g/cm³ olan maddeden yapılmış, içinde hava boşluğu bulunan cismin kütlesi 300 g, dış hacmi 150 cm³’tür. Boşluğun kütlesi ihmal edilmektedir.\nBuna göre cismin içindeki boşluğun hacmi kaç cm³’tür?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "90",
+   "C": "150",
+   "D": "210",
+   "E": "450"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "Maddenin hacmini boşluk hacmi sanmış.",
+   "C": "Cismin dış hacmini boşluk hacmi sanmış.",
+   "D": "Dış hacimle madde hacmini toplamış (150 + 60).",
+   "E": "Kütle ile dış hacmi toplamış; farklı büyüklükler toplanmaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Boşluğun hacmi (cm³).",
+  "bilgi": [
+   {
+    "ad": "Özkütle",
+    "ifade": "d = m ÷ V (kütle ÷ hacim). Birimi g/cm³ ya da kg/m³. Örnek: 40 g kütleli, 10 cm³ hacimli cismin özkütlesi 4 g/cm³"
+   }
+  ],
+  "ipuclari": [
+   "Önce cismi oluşturan maddenin gerçek hacmini bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Madde hacmi",
+    "aciklama": "Maddenin kütlesi ve özkütlesi biliniyor; V = m ÷ d.",
+    "islem": "V(madde) = 300 ÷ 5 = 60 cm³"
+   },
+   {
+    "baslik": "Dış hacim",
+    "aciklama": "Cismin kapladığı toplam hacim 150 cm³’tür; bu madde ile boşluğun toplamıdır.",
+    "islem": "V(dış) = V(madde) + V(boşluk)"
+   },
+   {
+    "baslik": "Boşluk",
+    "aciklama": "Dış hacimden madde hacmi çıkarılır.",
+    "islem": "V(boşluk) = 150 − 60 = 90 cm³"
+   }
+  ],
+  "puf": "İçi boş cisimlerde maddenin hacmini V = m ÷ d ile bul, dış hacimden çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZMD-06 (içi boş cisim) · yeni sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

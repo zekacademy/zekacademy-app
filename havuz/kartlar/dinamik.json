@@ -1,0 +1,93 @@
+{
+ "konu": "Dinamik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZDN-01",
+   "konu": "Dinamik",
+   "alt": "Sürtünmeli yüzeyde ivme",
+   "fikir": "Net kuvvet = uygulanan kuvvet − sürtünme; a = Fnet ÷ m.",
+   "tuzak": "Sürtünmeyi atlamak ya da eklemek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "fz-dn-surtunme",
+   "tip": "Net kuvvet ve ivme",
+   "kaynak": "ÖSYM 2018–2026 (Newton’ın hareket yasaları, sürtünme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZDN-02",
+   "konu": "Dinamik",
+   "alt": "İp gerilmesi",
+   "fikir": "Ortak ivme bütün sistemden bulunur; ip gerilmesi arkadaki kütle için T = m·a.",
+   "tuzak": "Gerilmeyi uygulanan kuvvetle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-dn-ip",
+   "tip": "İpteki gerilme kuvveti",
+   "kaynak": "ÖSYM 2018–2026 (Newton’ın hareket yasaları, sürtünme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZDN-03",
+   "konu": "Dinamik",
+   "alt": "Asansörde tepki kuvveti",
+   "fikir": "Yukarı ivmeli asansörde N = m(g + a).",
+   "tuzak": "Ağırlığı değişmez sanmak; g − a almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-dn-asansor",
+   "tip": "Asansörde görünür ağırlık",
+   "kaynak": "ÖSYM 2018–2026 (Newton’ın hareket yasaları, sürtünme) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZDN-04",
+   "konu": "Dinamik",
+   "alt": "Makara sistemi",
+   "fikir": "Asılı ağırlık − sürtünme = toplam kütle × ivme.",
+   "tuzak": "Sürtünmeyi atlamak ya da yalnız bir kütleye bölmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-dn-makara",
+   "tip": "Makaralı sistem ve sürtünme",
+   "kaynak": "ÖSYM 2018–2026 (Newton’ın hareket yasaları, sürtünme) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-dn-surtunme",
+   "ad": "Net kuvvet ve ivme",
+   "kartlar": [
+    "K-FZDN-01"
+   ],
+   "uygulamaKonu": "fiz|Dinamik"
+  },
+  {
+   "tipId": "fz-dn-ip",
+   "ad": "İpteki gerilme kuvveti",
+   "kartlar": [
+    "K-FZDN-02"
+   ],
+   "uygulamaKonu": "fiz|Dinamik"
+  },
+  {
+   "tipId": "fz-dn-asansor",
+   "ad": "Asansörde görünür ağırlık",
+   "kartlar": [
+    "K-FZDN-03"
+   ],
+   "uygulamaKonu": "fiz|Dinamik"
+  },
+  {
+   "tipId": "fz-dn-makara",
+   "ad": "Makaralı sistem ve sürtünme",
+   "kartlar": [
+    "K-FZDN-04"
+   ],
+   "uygulamaKonu": "fiz|Dinamik"
+  }
+ ]
+}

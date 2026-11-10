@@ -1,0 +1,470 @@
+[
+ {
+  "id": "tytfiz-isi-0001",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Isıl Denge",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "Aynı maddeden sıvıların karışımında ısıl denge sıcaklığını bulur.",
+  "tipId": "fz-is-denge",
+  "tip": "Isıl denge",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Sıcaklığı 20 °C olan 200 g su ile sıcaklığı 70 °C olan 300 g su yalıtılmış bir kapta karıştırılıyor.\nIsı kaybı olmadığına göre ısıl denge sıcaklığı kaç °C olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "40",
+   "C": "45",
+   "D": "50",
+   "E": "70"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "50"
+  },
+  "celdiriciler": {
+   "A": "Soğuk suyun sıcaklığını denge sıcaklığı sanmış.",
+   "B": "Kütleleri ters yerleştirmiş: 200 × 70 ile 300 × 20’yi toplamış.",
+   "C": "İki sıcaklığın aritmetik ortalamasını almış; kütlelerin farklı olduğunu hesaba katmamış.",
+   "E": "Sıcak suyun sıcaklığını denge sıcaklığı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Isıl denge sıcaklığı (°C).",
+  "bilgi": [
+   {
+    "ad": "Isıl denge",
+    "ifade": "sıcak madde verdiği kadar ısıyı soğuk madde alır: Q(verilen) = Q(alınan), Q = m × c × ΔT. Aynı maddede c sadeleşir. Örnek: 100 g 10 °C ile 100 g 30 °C su karışınca denge 20 °C’de olur"
+   }
+  ],
+  "ipuclari": [
+   "Soğuyan suyun verdiği ısı, ısınan suyun aldığı ısıya eşittir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "Verilen ısı alınan ısıya eşit; aynı maddede c sadeleşir.",
+    "islem": "m₁ × (T − T₁) = m₂ × (T₂ − T)"
+   },
+   {
+    "baslik": "Değerleri yaz",
+    "aciklama": "Soğuk su 20 °C’den, sıcak su 70 °C’den denge sıcaklığı T’ye gelir.",
+    "islem": "200 × (T − 20) = 300 × (70 − T)"
+   },
+   {
+    "baslik": "T’yi çöz",
+    "aciklama": "Parantezleri aç, T’li terimleri topla.",
+    "islem": "200T − 4000 = 21000 − 300T · 500T = 25000"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Denge sıcaklığı iki sıcaklık arasında kalır.",
+    "islem": "T = 50 °C"
+   }
+  ],
+  "puf": "Aynı maddelerde Tson = (m₁T₁ + m₂T₂) ÷ (m₁ + m₂); çok kütleli olan sıcaklığa daha yakındır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-01 (aynı maddeden karışım) · yeni kütle ve sıcaklıklar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-isi-0002",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Isı ve Sıcaklık",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "Madde için alınan ısıyı Q = m·c·ΔT bağıntısıyla hesaplar.",
+  "tipId": "fz-is-q",
+  "tip": "Isı alışverişi ve öz ısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Öz ısısı 0,4 cal/g·°C olan maddeden yapılmış 250 g kütleli bir cismin sıcaklığı 20 °C’den 60 °C’ye çıkarılıyor.\nBuna göre cismin aldığı ısı kaç cal’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2000",
+   "B": "4000",
+   "C": "6000",
+   "D": "8000",
+   "E": "10000"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4000"
+  },
+  "celdiriciler": {
+   "A": "ΔT yerine ilk sıcaklığı (20 °C) kullanmış.",
+   "C": "ΔT yerine son sıcaklığı (60 °C) kullanmış.",
+   "D": "Sıcaklıkları toplamış (20 + 60) ve ΔT almamış.",
+   "E": "Öz ısıyı çarpıma katmamış (250 × 40)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Cismin aldığı ısı (cal).",
+  "bilgi": [
+   {
+    "ad": "Öz ısı ve ısı",
+    "ifade": "1 g maddenin sıcaklığını 1 °C artırmak için gereken ısıya öz ısı (c) denir. Alınan ısı Q = m × c × ΔT. Örnek: 100 g su (c = 1 cal/g·°C) 10 °C ısınırsa 100 × 1 × 10 = 1000 cal alır"
+   }
+  ],
+  "ipuclari": [
+   "ΔT son ve ilk sıcaklığın farkıdır; Q = m × c × ΔT."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sıcaklık değişimi",
+    "aciklama": "ΔT, son sıcaklıktan ilk sıcaklığın çıkarılmasıdır.",
+    "islem": "ΔT = 60 − 20 = 40 °C"
+   },
+   {
+    "baslik": "Bağıntıyı yaz",
+    "aciklama": "Kütle, öz ısı ve ΔT çarpılır.",
+    "islem": "Q = m × c × ΔT"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Değerleri yerine koy.",
+    "islem": "Q = 250 × 0,4 × 40 = 4000 cal"
+   }
+  ],
+  "puf": "Isı sorularında önce ΔT’yi bul; sonra m × c × ΔT çarpımını yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-02 (Q = m c ΔT) · yeni madde, ısı istenen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-isi-0003",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Isı ve Sıcaklık",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "Aynı ısıtıcıyla ısıtılan eşit kütleli sıvıların öz ısılarını karşılaştırır.",
+  "tipId": "fz-is-ozisi",
+  "tip": "Öz ısı karşılaştırması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Kütleleri eşit X ve Y sıvıları, birim zamanda sabit ısı veren özdeş ısıtıcılarla ısıtılıyor. Isı kaybı yoktur.\nSıvı | Isıtma süresi | Sıcaklık artışı\nX | 2 dk | 20 °C\nY | 4 dk | 10 °C\nBuna göre X’in öz ısısının Y’nin öz ısısına oranı (cX/cY) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,25",
+   "B": "0,5",
+   "C": "1",
+   "D": "2",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "0,25"
+  },
+  "celdiriciler": {
+   "B": "Yalnızca süre oranına (2/4) bakmış; sıcaklık artışlarını katmamış.",
+   "C": "Öz ısıların eşit olduğunu düşünmüş.",
+   "D": "Yalnızca sıcaklık artışı oranına (20/10) bakmış.",
+   "E": "Oranı ters yazmış (cY/cX)."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "cX/cY oranı.",
+  "bilgi": [
+   {
+    "ad": "Öz ısı",
+    "ifade": "c = Q ÷ (m × ΔT). Sabit ısıtıcıda Q, ısıtma süresiyle orantılıdır. Örnek: aynı kütlede 3 kat ısı alıp aynı ısınan maddenin öz ısısı 3 kat büyüktür"
+   }
+  ],
+  "ipuclari": [
+   "Alınan ısı süreyle orantılıdır; c = Q ÷ (m × ΔT)."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Isıyı süreyle ilişkilendir",
+    "aciklama": "Isıtıcı birim zamanda sabit ısı verir; QX = P × 2, QY = P × 4.",
+    "islem": "QX : QY = 2 : 4"
+   },
+   {
+    "baslik": "Bağıntıyı kur",
+    "aciklama": "Kütleler eşit olduğundan sadeleşir.",
+    "islem": "c = Q ÷ (m × ΔT)"
+   },
+   {
+    "baslik": "Oranla",
+    "aciklama": "Değerleri yerine koy.",
+    "islem": "cX/cY = (2 ÷ 20) ÷ (4 ÷ 10) = 0,1 ÷ 0,4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Oran sadeleştirilir.",
+    "islem": "cX/cY = 1/4"
+   }
+  ],
+  "puf": "Aynı ısıtıcı ve eşit kütlede öz ısı oranı = (süre ÷ ΔT) oranıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-03 (aynı ısıtıcıyla öz ısı oranı) · yeni süreler ve sıcaklık artışları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-isi-0004",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Enerji İletim Yolları ve Enerji İletim Hızı",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "İletim, konveksiyon ve ışıma yollarının maddesel ortam gereksinimini ayırt eder.",
+  "tipId": "fz-is-iletim",
+  "tip": "Enerji iletim yolları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 2,
+  "metin": "I. Çay bardağına konulan metal kaşığın sapının ısınması\nII. Kaynayan tencerede suyun alt ve üst katmanlarının ısınması\nIII. Güneş’ten gelen enerjinin Dünya’ya ulaşması\nYukarıdaki olaylardan hangilerinde enerji aktarımı için maddesel bir ortam gereklidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’deki sıvı akışıyla (konveksiyon) olan aktarımın da maddesel ortam istediğini görememiş.",
+   "B": "Güneş enerjisinin ışımayla ve boşlukta yayıldığını (ortam gerektirmediğini) bilememiş.",
+   "D": "II’yi atlayıp III’ü maddesel ortam gerektiriyor sanmış.",
+   "E": "Işımayı ortam gerektiren sanmış; I’deki iletimi atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Maddesel ortam gerektiren olayların hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Enerji iletim yolları",
+    "ifade": "iletim: maddenin molekülleri aracılığıyla (metal çubuk) · konveksiyon: sıvı ve gazlarda akışkanın yer değiştirmesiyle · ışıma: ortam gerekmez, boşlukta da yayılır (Güneş’ten Dünya’ya)"
+   }
+  ],
+  "ipuclari": [
+   "Işıma yolunda enerji boşlukta da yayılabilir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her olayın yolu",
+    "aciklama": "Metal sapta iletim, kaynayan suda konveksiyon, Güneş’ten ışıma vardır.",
+    "islem": "I: iletim · II: konveksiyon · III: ışıma"
+   },
+   {
+    "baslik": "Ortam gereksinimi",
+    "aciklama": "İletim ve konveksiyonda enerji madde ile taşınır; ışıma boşlukta yayılır.",
+    "islem": "I: gerekli · II: gerekli · III: gerekmez"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Maddesel ortam gereken olaylar I ve II’dir.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Işıma dışındaki iki yolda (iletim, konveksiyon) madde şarttır; ışıma boşlukta da olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-04 (iletim yolları) · yeni günlük örnekler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-isi-0005",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Genleşme",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "Boyca uzamanın boy, madde cinsi ve sıcaklık değişimiyle orantısını birlikte uygular.",
+  "tipId": "fz-is-genlesme",
+  "tip": "Boyca genleşme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "X çubuğunun sıcaklığı bir miktar artırıldığında boyu 1 mm uzuyor. Y çubuğunun ilk boyu X’inkinin 2 katı, Y’yi oluşturan maddenin boyca genleşme katsayısı X’i oluşturan maddeninkinin 3 katı, Y’nin sıcaklık artışı ise X’inkinin 4 katıdır.\nBuna göre Y çubuğunun boyu kaç mm uzar?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "8",
+   "C": "9",
+   "D": "12",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "Sıcaklık artışının 4 katı olduğunu hesaba katmamış.",
+   "B": "Genleşme katsayısının 3 kat farkını atlamış.",
+   "C": "Üç oranı toplamış (2 + 3 + 4); genleşme oranları çarpılır.",
+   "D": "Boy oranını (2 kat) hesaba katmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Y çubuğunun boyundaki uzama (mm).",
+  "bilgi": [
+   {
+    "ad": "Boyca genleşme",
+    "ifade": "ΔL = α × L₀ × ΔT (α: boyca genleşme katsayısı, L₀: ilk boy, ΔT: sıcaklık artışı). Uzama bu üç büyüklükle doğru orantılıdır. Örnek: boy 2 katı, ΔT 3 katı → uzama 6 katı"
+   }
+  ],
+  "ipuclari": [
+   "ΔL = α × L₀ × ΔT bağıntısındaki her büyüklüğün oranını ayrı ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Oranları yaz",
+    "aciklama": "X’e göre Y’de α 3 kat, boy 2 kat, ΔT 4 kat büyüktür.",
+    "islem": "αY/αX = 3 · L₀Y/L₀X = 2 · ΔTY/ΔTX = 4"
+   },
+   {
+    "baslik": "Uzamayı oranla",
+    "aciklama": "Üç oran çarpılır.",
+    "islem": "ΔLY/ΔLX = 3 × 2 × 4 = 24"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "X’in uzaması 1 mm’dir.",
+    "islem": "ΔLY = 24 × 1 = 24 mm"
+   }
+  ],
+  "puf": "Genleşmede uzama oranı = katsayı oranı × ilk boy oranı × sıcaklık değişimi oranıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-05 (boyca genleşme oranları) · üç oran birlikte",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-isi-0006",
+  "ders": "TYT Fizik",
+  "konu": "Isı, Sıcaklık ve Genleşme · Hâl Değişimi",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "kazanim": "Buz–su karışımında erime ısısını da katarak son sıcaklığı bulur.",
+  "tipId": "fz-is-hal",
+  "tip": "Hâl değişimi ve ısıl denge",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "0 °C’de 100 g buz, 40 °C’de 400 g suyun bulunduğu yalıtılmış kaba konuyor. Buzun erime ısısı 80 cal/g, suyun öz ısısı 1 cal/g·°C’dir ve ısı kaybı yoktur.\nBuna göre ısıl denge sıcaklığı kaç °C olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "16",
+   "C": "20",
+   "D": "32",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Buzun tamamen erimediğini düşünmüş; su 0 °C’ye inerken verdiği ısının buzu eritmeye yettiğini hesaplamamış.",
+   "C": "Erimiş buzun da ısınacağını katmamış; yalnız suyun kütlesine bölmüş.",
+   "D": "Erime ısısını hiç hesaba katmamış.",
+   "E": "Suyun sıcaklığının hiç değişmediğini sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Isıl denge sıcaklığı (°C).",
+  "bilgi": [
+   {
+    "ad": "Erime ısısı",
+    "ifade": "erime sırasında sıcaklık değişmeden Q = m × L ısı alınır (L: erime ısısı). Örnek: 10 g buzu eritmek için 10 × 80 = 800 cal gerekir"
+   },
+   {
+    "ad": "Isıl denge",
+    "ifade": "verilen ısı alınan ısıya eşittir; Q = m × c × ΔT"
+   }
+  ],
+  "ipuclari": [
+   "Önce suyun 0 °C’ye inerken vereceği ısı ile buzu tamamen eritmek için gereken ısıyı karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Suyun verebileceği ısı",
+    "aciklama": "Su 40 °C’den 0 °C’ye inerken verir.",
+    "islem": "Q = 400 × 1 × 40 = 16000 cal"
+   },
+   {
+    "baslik": "Buzun erime ısısı",
+    "aciklama": "Buz 0 °C’de erirken ısı alır.",
+    "islem": "Q = 100 × 80 = 8000 cal"
+   },
+   {
+    "baslik": "Karşılaştır",
+    "aciklama": "16000 > 8000 olduğundan buzun tamamı erir, artan ısı 500 g suyu ısıtır.",
+    "islem": "kalan ısı = 16000 − 8000 = 8000 cal"
+   },
+   {
+    "baslik": "Son sıcaklık",
+    "aciklama": "Artan ısı toplam su kütlesinin (400 + 100) sıcaklığını yükseltir.",
+    "islem": "8000 = 500 × 1 × T"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "T hesaplanır.",
+    "islem": "T = 16 °C"
+   }
+  ],
+  "puf": "Buz–su karışımında önce “buz tamamen erir mi?” sorusunu ısıları karşılaştırarak yanıtla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZIS-06 (buz–su karışımı) · yeni kütleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

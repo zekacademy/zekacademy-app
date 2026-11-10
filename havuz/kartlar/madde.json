@@ -1,0 +1,135 @@
+{
+ "konu": "Madde ve Özellikleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZMD-01",
+   "konu": "Madde ve Özellikleri",
+   "alt": "Özkütle bağıntısı",
+   "fikir": "d = m/V; üç büyüklükten ikisi verilince üçüncüsü bulunur.",
+   "tuzak": "Bağıntıyı ters kurmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fz-md-ozkutle",
+   "tip": "Özkütle bağıntısı",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZMD-02",
+   "konu": "Madde ve Özellikleri",
+   "alt": "Karışımın özkütlesi",
+   "fikir": "Homojen karışımda d = toplam kütle / toplam hacim.",
+   "tuzak": "Özkütlelerin aritmetik ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-md-karisim",
+   "tip": "Karışımın özkütlesi",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZMD-03",
+   "konu": "Madde ve Özellikleri",
+   "alt": "Kap ve sıvı kütlesi",
+   "fikir": "İki farklı doluluk durumundan kabın kütlesi ayrıştırılır.",
+   "tuzak": "Yarı dolu kabın kütlesini yalnız sıvı sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-md-kap",
+   "tip": "Kap ve sıvı kütlesi",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZMD-04",
+   "konu": "Madde ve Özellikleri",
+   "alt": "Adezyon ve kohezyon",
+   "fikir": "Aynı cins moleküller arası çekim kohezyon, farklı cins moleküller arası çekim adezyondur.",
+   "tuzak": "İki kavramı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "fz-md-yapisma",
+   "tip": "Yapışma ve birbirini tutma",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZMD-05",
+   "konu": "Madde ve Özellikleri",
+   "alt": "m–V grafiğinden karışım",
+   "fikir": "Doğruların eğimi özkütledir; eşit kütlede hacimler farklı olur.",
+   "tuzak": "Eşit kütlede ortalama özkütle almak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-md-grafik",
+   "tip": "Özkütle grafiği ve karışım",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZMD-06",
+   "konu": "Madde ve Özellikleri",
+   "alt": "İçi boş cisim",
+   "fikir": "Boşluk hacmi = toplam hacim − (kütle / madde özkütlesi).",
+   "tuzak": "Maddenin hacmini boşluk sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-md-bosluk",
+   "tip": "İçi boş cisimde boşluk hacmi",
+   "kaynak": "ÖSYM 2018–2026 (madde ve özkütle, yapışma) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-md-ozkutle",
+   "ad": "Özkütle bağıntısı",
+   "kartlar": [
+    "K-FZMD-01"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  },
+  {
+   "tipId": "fz-md-karisim",
+   "ad": "Karışımın özkütlesi",
+   "kartlar": [
+    "K-FZMD-02"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  },
+  {
+   "tipId": "fz-md-kap",
+   "ad": "Kap ve sıvı kütlesi",
+   "kartlar": [
+    "K-FZMD-03"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  },
+  {
+   "tipId": "fz-md-yapisma",
+   "ad": "Yapışma ve birbirini tutma",
+   "kartlar": [
+    "K-FZMD-04"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  },
+  {
+   "tipId": "fz-md-grafik",
+   "ad": "Özkütle grafiği ve karışım",
+   "kartlar": [
+    "K-FZMD-05"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  },
+  {
+   "tipId": "fz-md-bosluk",
+   "ad": "İçi boş cisimde boşluk hacmi",
+   "kartlar": [
+    "K-FZMD-06"
+   ],
+   "uygulamaKonu": "fiz|Madde ve Özellikleri"
+  }
+ ]
+}

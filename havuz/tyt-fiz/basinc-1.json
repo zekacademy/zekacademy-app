@@ -1,0 +1,302 @@
+[
+ {
+  "id": "tytfiz-basinc-0001",
+  "ders": "TYT Fizik",
+  "konu": "Basınç · Katı Basıncı",
+  "k": "fiz|Basınç",
+  "kazanim": "Cismin zemine uyguladığı basıncı ağırlık ve temas alanından hesaplar.",
+  "tipId": "fz-bs-kati",
+  "tip": "Katı basıncı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 2,
+  "metin": "Kütlesi 6 kg olan homojen bir blok, ayrıtları şekilde verilen konumda yatay zemin üzerinde durmaktadır.\ng = 10 m/s² olduğuna göre bloğun zemine uyguladığı basınç kaç Pa’dır?",
+  "sekil": "<svg viewBox=\"0 0 260 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"10.0\" y1=\"135.0\" x2=\"250.0\" y2=\"135.0\" stroke-width=\"2\" /><rect x=\"70.0\" y=\"30.0\" width=\"70.0\" height=\"105.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.18\"/><path d=\"M70 30 L98 12 L168 12 L140 30 Z\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.08\"/><path d=\"M140 30 L168 12 L168 117 L140 135 Z\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:.28\"/><text x=\"105.0\" y=\"150.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">20 cm</text><text x=\"174.0\" y=\"77.5\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">30 cm</text><text x=\"150.0\" y=\"8.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">10 cm</text></svg>",
+  "siklar": {
+   "A": "30",
+   "B": "300",
+   "C": "1000",
+   "D": "2000",
+   "E": "3000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "3000"
+  },
+  "celdiriciler": {
+   "C": "Zemine değen yüzü 20 cm × 30 cm sanıp alanı 600 cm² almış.",
+   "D": "Zemine değen yüzü 10 cm × 30 cm sanıp alanı 300 cm² almış.",
+   "B": "Ağırlık yerine kütleyi (6) kullanmış; g ile çarpmayı atlamış.",
+   "A": "200 cm²’yi 2 m² almış; cm²’yi m²’ye yanlış çevirmiş."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "dikkat",
+   "B": "islem",
+   "A": "islem"
+  },
+  "istenen": "Bloğun zemine uyguladığı basınç (Pa).",
+  "bilgi": [
+   {
+    "ad": "Katı basıncı",
+    "ifade": "P = F ÷ A; yatay zeminde F cismin ağırlığıdır (G = m × g). 1 cm² = 10⁻⁴ m². Örnek: 20 N ağırlık, 0,005 m² alana basarsa P = 20 ÷ 0,005 = 4000 Pa"
+   }
+  ],
+  "ipuclari": [
+   "Zemine değen yüzün hangi ayrıtlardan oluştuğuna şekilden bak; yükseklik temas alanına girmez."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Temas alanı",
+    "aciklama": "Blok 20 cm × 10 cm’lik yüzü üzerinde durmaktadır; 1 cm² = 10⁻⁴ m².",
+    "islem": "A = 20 × 10 = 200 cm² = 0,02 m²"
+   },
+   {
+    "baslik": "Ağırlık",
+    "aciklama": "Yatay zeminde zemine uygulanan kuvvet ağırlıktır.",
+    "islem": "F = 6 × 10 = 60 N"
+   },
+   {
+    "baslik": "Basınç",
+    "aciklama": "Kuvvet alana bölünür.",
+    "islem": "P = 60 ÷ 0,02 = 3000 Pa"
+   }
+  ],
+  "puf": "Katı basıncında önce zemine değen yüzü, sonra alanı metrekareye çevirerek bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZBS-01 (katı basıncı) · dikdörtgenler prizması, ayrıtlar 10–20–30 cm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-basinc-0002",
+  "ders": "TYT Fizik",
+  "konu": "Basınç · Sıvı Basıncı",
+  "k": "fiz|Basınç",
+  "kazanim": "Birbirine karışmayan iki sıvının kap tabanında oluşturduğu basıncı hesaplar.",
+  "tipId": "fz-bs-sivi",
+  "tip": "Katmanlı sıvıda taban basıncı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Birbirine karışmayan X ve Y sıvıları şekildeki kapta dengededir. X sıvısının özkütlesi 800 kg/m³ ve yüksekliği 25 cm, Y sıvısının özkütlesi 1200 kg/m³ ve yüksekliği 10 cm’dir.\nAçık hava basıncı ihmal edildiğine ve g = 10 m/s² olduğuna göre kabın tabanındaki sıvı basıncı kaç Pa’dır?",
+  "sekil": "<svg viewBox=\"0 0 250 170\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"70.0\" y=\"30.0\" width=\"100.0\" height=\"125.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.0\"/><rect x=\"70.0\" y=\"30.0\" width=\"100.0\" height=\"78.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.1\"/><rect x=\"70.0\" y=\"108.0\" width=\"100.0\" height=\"47.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.3\"/><text x=\"120.0\" y=\"70.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">X</text><text x=\"120.0\" y=\"136.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">Y</text><line x1=\"55.0\" y1=\"108.0\" x2=\"55.0\" y2=\"30.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M55.0 30.0 L58.1 37.4 M55.0 30.0 L51.9 37.4\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"55.0\" y1=\"30.0\" x2=\"55.0\" y2=\"108.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M55.0 108.0 L51.9 100.6 M55.0 108.0 L58.1 100.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"50.0\" y=\"72.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">25 cm</text><line x1=\"55.0\" y1=\"155.0\" x2=\"55.0\" y2=\"108.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M55.0 108.0 L58.1 115.4 M55.0 108.0 L51.9 115.4\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><line x1=\"55.0\" y1=\"108.0\" x2=\"55.0\" y2=\"155.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M55.0 155.0 L51.9 147.6 M55.0 155.0 L58.1 147.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"50.0\" y=\"135.0\" text-anchor=\"end\" font-size=\"11\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">10 cm</text><text x=\"178.0\" y=\"72.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">d_X = 800</text><text x=\"178.0\" y=\"136.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">d_Y = 1200</text><text x=\"178.0\" y=\"150.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">kg/m³</text></svg>",
+  "siklar": {
+   "A": "1200",
+   "B": "2000",
+   "C": "2800",
+   "D": "3200",
+   "E": "4200"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3200"
+  },
+  "celdiriciler": {
+   "A": "Yalnız alttaki Y sıvısının basıncını hesaplamış.",
+   "B": "Yalnız üstteki X sıvısının basıncını hesaplamış.",
+   "C": "Tüm 35 cm’lik sıvıyı X’in özkütlesiyle hesaplamış.",
+   "E": "Tüm 35 cm’lik sıvıyı Y’nin özkütlesiyle hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kabın tabanındaki sıvı basıncı (Pa).",
+  "bilgi": [
+   {
+    "ad": "Sıvı basıncı",
+    "ifade": "P = d × g × h; h sıvının yüzeyden olan derinliğidir. Örnek: d = 1000 kg/m³, h = 0,2 m, g = 10 için P = 1000 × 10 × 0,2 = 2000 Pa"
+   }
+  ],
+  "ipuclari": [
+   "Tabandaki basınç, iki sıvı katmanının basınçlarının toplamıdır; her katman kendi özkütlesi ve yüksekliğiyle hesaplanır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "X katmanı",
+    "aciklama": "Yükseklik 25 cm = 0,25 m.",
+    "islem": "P_X = 800 × 10 × 0,25 = 2000 Pa"
+   },
+   {
+    "baslik": "Y katmanı",
+    "aciklama": "Yükseklik 10 cm = 0,1 m.",
+    "islem": "P_Y = 1200 × 10 × 0,1 = 1200 Pa"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Katmanların basınçları toplanır.",
+    "islem": "P = 2000 + 1200 = 3200 Pa"
+   }
+  ],
+  "puf": "Karışmayan sıvılarda taban basıncı, her katman için d × g × h hesaplanıp toplanarak bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZBS-02 (sıvı basıncı) · iki katmanlı karışmayan sıvı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-basinc-0003",
+  "ders": "TYT Fizik",
+  "konu": "Basınç · Pascal Prensibi",
+  "k": "fiz|Basınç",
+  "kazanim": "Hidrolik sistemde piston yarıçaplarından alan oranını bulup kuvvet dengesini kurar.",
+  "tipId": "fz-bs-hidrolik",
+  "tip": "Hidrolik pres",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki hidrolik sistemde sıvı dolu bağlantılı iki silindirik kabın, aynı yatay seviyedeki pistonlarının yarıçapları 2 cm ve 10 cm’dir. Büyük pistonun üzerine ağırlığı 2500 N olan bir yük konulmuştur. Pistonların ağırlıkları ve sürtünmeler ihmal edilmektedir.\nSistem dengede kalması için küçük pistona uygulanması gereken F₁ kuvveti kaç N olmalıdır?",
+  "sekil": "<svg viewBox=\"0 0 300 175\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><path d=\"M40 80 L64 80 L64 120 L140 120 L140 80 L260 80 L260 140 L40 140 Z\" stroke=\"none\" style=\"fill:currentColor;fill-opacity:.13\"/><line x1=\"40.0\" y1=\"50.0\" x2=\"40.0\" y2=\"140.0\" stroke-width=\"2\" /><line x1=\"64.0\" y1=\"50.0\" x2=\"64.0\" y2=\"120.0\" stroke-width=\"2\" /><line x1=\"140.0\" y1=\"50.0\" x2=\"140.0\" y2=\"120.0\" stroke-width=\"2\" /><line x1=\"260.0\" y1=\"50.0\" x2=\"260.0\" y2=\"140.0\" stroke-width=\"2\" /><line x1=\"40.0\" y1=\"140.0\" x2=\"260.0\" y2=\"140.0\" stroke-width=\"2\" /><line x1=\"64.0\" y1=\"120.0\" x2=\"140.0\" y2=\"120.0\" stroke-width=\"2\" /><rect x=\"42.0\" y=\"72.0\" width=\"20.0\" height=\"8.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.3\"/><rect x=\"142.0\" y=\"72.0\" width=\"116.0\" height=\"8.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.3\"/><rect x=\"165.0\" y=\"44.0\" width=\"70.0\" height=\"28.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.18\"/><text x=\"200.0\" y=\"62.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none;font-weight:700\">yük 2500 N</text><line x1=\"52.0\" y1=\"22.0\" x2=\"52.0\" y2=\"70.0\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><path d=\"M52.0 70.0 L48.9 62.6 M52.0 70.0 L55.1 62.6\" stroke-width=\"2\" style=\"stroke:var(--acc,#16A34A)\"/><text x=\"52.0\" y=\"16.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">F₁</text><text x=\"52.0\" y=\"162.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">r₁ = 2 cm</text><text x=\"200.0\" y=\"162.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">r₂ = 10 cm</text></svg>",
+  "siklar": {
+   "A": "100",
+   "B": "500",
+   "C": "2500",
+   "D": "12500",
+   "E": "62500"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "B": "Alan oranı yerine yarıçap oranını (5) kullanmış.",
+   "C": "Kuvvetlerin eşit olması gerektiğini sanmış.",
+   "D": "Yarıçap oranıyla (5) çarpmış.",
+   "E": "Küçük pistondaki kuvveti büyük olması gerekir sanıp alan oranıyla (25) çarpmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Küçük pistona uygulanması gereken kuvvet (N).",
+  "bilgi": [
+   {
+    "ad": "Pascal prensibi",
+    "ifade": "kapalı kaptaki sıvıya uygulanan basınç her yöne aynen iletilir; F₁ ÷ A₁ = F₂ ÷ A₂. Dairesel pistonda A = π × r². Örnek: yarıçap 3 katına çıkarsa alan 9 katına çıkar"
+   }
+  ],
+  "ipuclari": [
+   "Her iki pistonun sıvıya yaptığı basınç eşittir; piston alanı yarıçapın karesiyle orantılıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alan oranı",
+    "aciklama": "Alan yarıçapın karesiyle orantılıdır.",
+    "islem": "A₂ ÷ A₁ = (10 ÷ 2)² = 25"
+   },
+   {
+    "baslik": "Basınç eşitliği",
+    "aciklama": "İki pistonun altındaki basınç eşit olmalıdır.",
+    "islem": "F₁ ÷ A₁ = 2500 ÷ A₂"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "F₁ çekilir.",
+    "islem": "F₁ = 2500 ÷ 25 = 100 N"
+   }
+  ],
+  "puf": "Hidrolik sistemde kuvvet oranı alan oranına, alan oranı da yarıçap oranının karesine eşittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZBS-03 (hidrolik sistem) · yarıçap verilmiş, yük dengelenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytfiz-basinc-0004",
+  "ders": "TYT Fizik",
+  "konu": "Basınç · Katı Basıncı",
+  "k": "fiz|Basınç",
+  "kazanim": "Üst üste duran cisimlerde farklı yüzeylerdeki basınçları karşılaştırır.",
+  "tipId": "fz-bs-yigin",
+  "tip": "Üst üste konulan cisimlerde basınç",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Ayrıtı 10 cm olan homojen K küpü, ayrıtı 20 cm olan homojen L küpünün üst yüzeyinin tam ortasına gelecek biçimde şekildeki gibi yatay zemin üzerinde durmaktadır. K’nin kütlesi 2 kg, L’nin kütlesi 12 kg’dır.\ng = 10 m/s² olduğuna göre L’nin zemine yaptığı basıncın, K’nin L’nin üst yüzeyine yaptığı basınca oranı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 260 190\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"30.0\" y1=\"170.0\" x2=\"230.0\" y2=\"170.0\" stroke-width=\"2\" /><rect x=\"70.0\" y=\"70.0\" width=\"100.0\" height=\"100.0\" stroke-width=\"2\" style=\"fill:currentColor;fill-opacity:0.18\"/><rect x=\"95.0\" y=\"20.0\" width=\"50.0\" height=\"50.0\" stroke-width=\"2\" style=\"fill:var(--acc,#16A34A);fill-opacity:0.35;stroke:var(--acc,#16A34A)\"/><text x=\"120.0\" y=\"50.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">K</text><text x=\"120.0\" y=\"125.0\" text-anchor=\"middle\" font-size=\"12\" style=\"fill:currentColor;stroke:none;font-weight:700\">L</text><text x=\"120.0\" y=\"185.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">20 cm</text><text x=\"150.0\" y=\"48.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">10 cm</text><text x=\"178.0\" y=\"98.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">m_K = 2 kg</text><text x=\"178.0\" y=\"115.0\" text-anchor=\"start\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">m_L = 12 kg</text></svg>",
+  "siklar": {
+   "A": "4/7",
+   "B": "7/5",
+   "C": "3/2",
+   "D": "7/4",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "7/4"
+  },
+  "celdiriciler": {
+   "A": "Oranı ters kurmuş: K’nin basıncını zemindeki basınca bölmüş.",
+   "B": "Zemindeki basıncı hesaplarken iki küpün alanlarını toplayıp (500 cm²) kullanmış.",
+   "C": "Zemindeki basınçta K’nin ağırlığını katmamış.",
+   "E": "Alanları hesaba katmadan yalnız ağırlıklar oranını (140 N ÷ 20 N) almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "P_zemin ÷ P_K oranı.",
+  "bilgi": [
+   {
+    "ad": "Katı basıncı",
+    "ifade": "P = F ÷ A; yatay zeminde F cismin ağırlığıdır (G = m × g). 1 cm² = 10⁻⁴ m². Örnek: 20 N ağırlık, 0,005 m² alana basarsa P = 20 ÷ 0,005 = 4000 Pa"
+   },
+   {
+    "ad": "Alan",
+    "ifade": "kenarı a olan karenin alanı a × a’dır. Örnek: 20 cm ayrıtlı küpün tabanı 20 × 20 = 400 cm² = 0,04 m²"
+   }
+  ],
+  "ipuclari": [
+   "Zemine bastıran toplam ağırlık ile K’nin bastığı yüzeyin alanı farklıdır; iki basıncı ayrı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Zemindeki basınç",
+    "aciklama": "Zemine L ve K’nin toplam ağırlığı bastırır; temas alanı L’nin tabanıdır (0,04 m²).",
+    "islem": "F = (2 + 12) × 10 = 140 N · P_zemin = 140 ÷ 0,04 = 3500 Pa"
+   },
+   {
+    "baslik": "K’nin yaptığı basınç",
+    "aciklama": "L’nin üst yüzeyine yalnız K’nin ağırlığı bastırır; temas alanı K’nin tabanıdır (0,01 m²).",
+    "islem": "F = 2 × 10 = 20 N · P_K = 20 ÷ 0,01 = 2000 Pa"
+   },
+   {
+    "baslik": "Oran",
+    "aciklama": "İki basınç bölünür.",
+    "islem": "3500 ÷ 2000 = 7/4"
+   }
+  ],
+  "puf": "Üst üste cisimlerde her yüzey için “o yüzeye bastıran toplam ağırlık ÷ o yüzeyin temas alanı” hesabı ayrı yapılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FZBS-04 (üst üste küpler) · iki farklı yüzeydeki basınç oranı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,93 @@
+{
+ "konu": "Basınç",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZBS-01",
+   "konu": "Basınç",
+   "alt": "Katı basıncı",
+   "fikir": "P = F ÷ A; aynı cisim farklı yüzleri üzerinde durunca kuvvet sabit, alan değişir.",
+   "tuzak": "Yanlış yüzün alanını almak; cm²’yi m²’ye çevirmemek; g’yi atlamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-bs-kati",
+   "tip": "Katı basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZBS-02",
+   "konu": "Basınç",
+   "alt": "Sıvı basıncı",
+   "fikir": "Üst üste karışmayan sıvılarda taban basıncı, her katmanın d × g × h değerlerinin toplamıdır.",
+   "tuzak": "Tüm sıvıyı tek özkütleli saymak; yalnız bir katmanı hesaba katmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-bs-sivi",
+   "tip": "Katmanlı sıvıda taban basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZBS-03",
+   "konu": "Basınç",
+   "alt": "Hidrolik sistem",
+   "fikir": "Pascal prensibi: P₁ = P₂ olduğundan F₁ ÷ A₁ = F₂ ÷ A₂; alan yarıçapın karesiyle orantılıdır.",
+   "tuzak": "Yarıçap oranını alan oranı sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-bs-hidrolik",
+   "tip": "Hidrolik pres",
+   "kaynak": "ÖSYM 2018–2025 (basınç) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FZBS-04",
+   "konu": "Basınç",
+   "alt": "Üst üste küpler",
+   "fikir": "Her yüzeydeki basınç, o yüzeye bastıran toplam ağırlığın o yüzeyin alanına bölümüdür.",
+   "tuzak": "Zemin basıncında üstteki cismin ağırlığını katmamak; alanları karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-bs-yigin",
+   "tip": "Üst üste konulan cisimlerde basınç",
+   "kaynak": "ÖSYM 2018–2025 (basınç) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-bs-kati",
+   "ad": "Katı basıncı",
+   "kartlar": [
+    "K-FZBS-01"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs-sivi",
+   "ad": "Katmanlı sıvıda taban basıncı",
+   "kartlar": [
+    "K-FZBS-02"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs-hidrolik",
+   "ad": "Hidrolik pres",
+   "kartlar": [
+    "K-FZBS-03"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs-yigin",
+   "ad": "Üst üste konulan cisimlerde basınç",
+   "kartlar": [
+    "K-FZBS-04"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  }
+ ]
+}

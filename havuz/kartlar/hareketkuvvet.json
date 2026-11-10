@@ -1,0 +1,135 @@
+{
+ "konu": "Hareket ve Kuvvet",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZHK-01",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Ortalama hız ve sürat",
+   "fikir": "Ortalama hız yer değiştirmenin süreye oranı; yön değişince yoldan küçüktür.",
+   "tuzak": "Yolu yer değiştirme saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "fz-hk-ortalama",
+   "tip": "Ortalama hız ve sürat",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZHK-02",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "v–t grafiğinde yer değiştirme",
+   "fikir": "Grafiğin altında kalan alan yer değiştirmedir; parçalara ayrılır.",
+   "tuzak": "Tepe hızı × toplam süre almak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "fz-hk-vt",
+   "tip": "Hız–zaman grafiği",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZHK-03",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Sabit ivmeli hareket",
+   "fikir": "x = v₀t + ½at²; ½ katsayısı ve v₀t terimi birlikte.",
+   "tuzak": "½ katsayısını unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-hk-ivmeli",
+   "tip": "Sabit ivmeli hareket",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZHK-04",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Bileşke kuvvet",
+   "fikir": "Doğrusal kuvvetler işaretle toplanır; dik bileşenlerden Pisagor.",
+   "tuzak": "Büyüklükleri aritmetik toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-hk-bileske",
+   "tip": "Bileşke kuvvet",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZHK-05",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Yetişme problemi",
+   "fikir": "Sabit hızlı ile ivmeli hareketlinin aynı yolu aldığı an bulunur; sonra hız hesaplanır.",
+   "tuzak": "½ katsayısını unutarak süreyi yanlış bulmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "fz-hk-yetisme",
+   "tip": "Yetişme problemi",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-FZHK-06",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Düşey hareketle karşılaşma",
+   "fikir": "Bağıl hızla süre bulunur; v = v₀ − gt ile hız hesaplanır.",
+   "tuzak": "Hızları büyüklükçe toplamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "fz-hk-dusey",
+   "tip": "Düşey atış ve serbest düşme",
+   "kaynak": "ÖSYM 2018–2026 (hareket, kuvvet) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-hk-ortalama",
+   "ad": "Ortalama hız ve sürat",
+   "kartlar": [
+    "K-FZHK-01"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fz-hk-vt",
+   "ad": "Hız–zaman grafiği",
+   "kartlar": [
+    "K-FZHK-02"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fz-hk-ivmeli",
+   "ad": "Sabit ivmeli hareket",
+   "kartlar": [
+    "K-FZHK-03"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fz-hk-bileske",
+   "ad": "Bileşke kuvvet",
+   "kartlar": [
+    "K-FZHK-04"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fz-hk-yetisme",
+   "ad": "Yetişme problemi",
+   "kartlar": [
+    "K-FZHK-05"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fz-hk-dusey",
+   "ad": "Düşey atış ve serbest düşme",
+   "kartlar": [
+    "K-FZHK-06"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  }
+ ]
+}
