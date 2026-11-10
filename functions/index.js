@@ -13,7 +13,7 @@ import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
-import { KARNE_SISTEM, karneIstegi, karneDuzelt } from "./karne.js";
+import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
 initializeApp();
@@ -387,14 +387,19 @@ export const denemeOku = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInst
   for (const ex of ["TYT", "AYT"]) { const x = (d.konular || {})[ex]; if (!x || typeof x !== "object") continue; konular[ex] = {};
     for (const [ders, ts] of Object.entries(x).slice(0, 20)) konular[ex][String(ders).slice(0, 40)] = (Array.isArray(ts) ? ts : []).slice(0, 80).map(t => String(t).slice(0, 80)); }
   icerik.push({ type: "text", text: karneIstegi({ bugun: date, alan: ogr.alan, sinif: ogr.sinif, konular }) });
-  const a = await claude(c.modelZor, icerik, 8000, KARNE_SISTEM), dolar = maliyet(c, "zor", a.usage);
+  /* Önce ucuz model; düzenli belgede sayılar tutarsa yeter. El yazısı, konu analizi ya da tutarsızlıkta güçlü model. */
+  let dolar = 0, model = "kolay", neden = null, a = null, r = null, out = null;
+  try { a = await claude(c.modelKolay, icerik, 8000, KARNE_SISTEM); dolar += maliyet(c, "kolay", a.usage); r = jsonCikar(a.text); out = r ? karneDuzelt(r, date) : null; neden = karneZoraGec(r, out, a.stop); }
+  catch (e) { logger.warn("karne ucuz model", e.message); neden = "hata"; }
+  if (neden) {
+    try { const b = await claude(c.modelZor, icerik, 8000, KARNE_SISTEM); dolar += maliyet(c, "zor", b.usage); const r2 = jsonCikar(b.text); if (r2) { a = b; r = r2; out = karneDuzelt(r2, date); model = "zor"; } else if (!r) a = b; }
+    catch (e) { logger.warn("karne güçlü model", e.message); if (!r) throw e; }
+  }
   const inc = FieldValue.increment;
   await kRef.set({ sid, ay, dolar: inc(dolar), karne: { [date]: inc(1) }, son: new Date().toISOString() }, { merge: true });
   await gRef.set({ ay, dolar: inc(dolar), karne: inc(1), gun: { [date]: inc(dolar) } }, { merge: true });
-  const r = jsonCikar(a.text);
-  if (!r) { logger.warn("karne json yok", a.stop, a.text.slice(0, 300)); throw new HttpsError("unavailable", "karne-okunamadi"); }
-  const out = karneDuzelt(r, date);
-  await db.collection("aiKarne").add({ sid, ay, at: new Date().toISOString(), belge: out.belgeTuru, n: out.denemeler.length, okunabildi: out.okunabildi,
+  if (!r || !out) { logger.warn("karne json yok", a && a.stop, a && a.text.slice(0, 300)); throw new HttpsError("unavailable", "karne-okunamadi"); }
+  await db.collection("aiKarne").add({ sid, ay, at: new Date().toISOString(), model, neden, belge: out.belgeTuru, n: out.denemeler.length, okunabildi: out.okunabildi,
     emin: out.denemeler.every(x => x.emin), dosya: icerik.length - 1, dolar: Math.round(dolar * 1e5) / 1e5, kesildi: a.stop === "max_tokens" }).catch(() => {});
   if (a.stop === "max_tokens") out.uyarilar.push("Belge çok uzundu; bazı konular okunamamış olabilir.");
   return out;
