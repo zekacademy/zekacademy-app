@@ -45,7 +45,7 @@ Q.S('0003','K-CGBL-03','orta','Merkeze bağlı bir hizmet alanını işlevsel b�
 # ---- 0004
 Q.S('0004','K-CGBL-04','orta','Algısal bölge örneğini diğer bölge türlerinden ayırır.',
  'Aşağıdakilerden hangisi algısal bölgeye örnektir?',
- [('İnsanların zihninde “tatil kenti” olarak canlanan, sınırı kişiden kişiye değişen kıyı şeridi',True,'',''),('Yıllık yağışı 600 mm’nin üzerinde olan alan',False,'Yağış ölçülebilir bir ölçüttür; bu şekilsel bölgedir.','bilgi'),('Bir belediyenin çöp toplama hizmeti verdiği mahalleler',False,'Merkezden yönetilen hizmet alanıdır; işlevsel bölgedir.','bilgi'),('Pamuğun yetiştirildiği alan',False,'Tek bir ürüne dayanan türdeş alandır; şekilsel bölgedir.','bilgi'),('Bir ilin idari sınırları içinde kalan alan',False,'İdari sınır resmî ve kesindir; insanların algısına bağlı değildir.','dikkat')],'A',
+ [('Halkın “tatil yöresi” diye andığı, sınırı belirsiz kıyılar',True,'',''),('Yıllık ortalama yağışı 600 mm’nin üzerinde olan geniş alan',False,'Yağış ölçülebilir bir ölçüttür; bu şekilsel bölgedir.','bilgi'),('Bir belediyenin çöp toplama hizmeti verdiği tüm mahalleler',False,'Merkezden yönetilen hizmet alanıdır; işlevsel bölgedir.','bilgi'),('Pamuk tarımının yoğun olarak yapıldığı geniş ova alanı',False,'Tek bir ürüne dayanan türdeş alandır; şekilsel bölgedir.','bilgi'),('Bir ilin resmî idari sınırları içinde kalan geniş alan',False,'İdari sınır resmî ve kesindir; insanların algısına bağlı değildir.','dikkat')],'A',
  'Algısal bölge örneği.','Sınırı ölçüyle çizilemeyen, kişiden kişiye değişen bölgeyi ara.',
  [BIL],
  [A('Tanımı hatırla','Algısal bölgenin sınırı insanların zihnindeki imgeye göre belirlenir.','algısal = zihinde'),

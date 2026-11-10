@@ -66,7 +66,7 @@ Q.oncul('0003','K-DNH-03','orta','21 Haziran’da farklı enlemlerde gündüz s�
   ('40° Güney enleminde gündüz süresi 12 saatten uzundur.',gunduz(-40)>12,'Güney Yarım Küre’de bu tarih kıştır; gündüzler 12 saatten kısadır.'),
   ('70° Güney enleminde Güneş gün boyunca doğmaz.',gunduz(-70)==0,'Güney Kutup Dairesi’nin (66°33’G) güneyinde bu tarihte gece kesintisiz sürer.')],
  'Yukarıdaki ifadelerden hangileri doğrudur?',
- ['Yalnız I','Yalnız II','Yalnız III','I ve III','II ve III'],'D',True,'Doğru ifadeler.',
+ ['Yalnız I','Yalnız II','I ve II','I ve III','II ve III'],'D',True,'Doğru ifadeler.',
  'Haziran’da Güney Yarım Küre’de mevsim nedir? Gündüz süresi uzar mı kısalır mı?',
  [B('21 Haziran','Güneş ışınları Yengeç Dönencesi’ne (23°27’K) dik gelir · Kuzey Yarım Küre’de yaz: gündüzler uzun · Güney Yarım Küre’de kış: gündüzler kısa · Güney Kutup Dairesi’nin güneyinde gün boyu gece')],
  [A('Işınların konumunu bul','Işınlar kuzeye (23°27’K) dik düştüğü için kuzey yarım küre daha çok ısınır.','kuzey: yaz · güney: kış'),

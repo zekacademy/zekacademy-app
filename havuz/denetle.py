@@ -59,6 +59,13 @@ def denetle(Q,korpus=None):
         elif set(ct)!=set(cd) or not set(ct.values())<={'bilgi','islem','dikkat'}: H_('celTur, çeldiricilerle aynı şıklarda olmalı ve bilgi/islem/dikkat değerlerini almalı')
         if set(cd)!=set('ABCDE')-{c.get('sik')}: H_('çeldirici açıklamaları doğru şık hariç 4 şık olmalı')
         if any(len(v)<12 for v in cd.values()): H_('çok kısa çeldirici açıklaması')
+        # sözel derslerde ele veren şık denetimi (10 Kasım 2026)
+        if q.get('k','').split('|')[0] in ('tr','tar','cog','fel') and c.get('sik') in s and all(isinstance(v,str) for v in s.values()):
+            L={k:len(v) for k,v in s.items()}; dk=c['sik']; dig=[L[k] for k in L if k!=dk]
+            if dig and L[dk]>max(dig) and L[dk]>=1.25*(sum(dig)/len(dig)) and L[dk]>=25: H_('doğru şık belirgin biçimde en uzun şık (ele veriyor)')
+            UC=r'\b(yalnızca|yalnız|tümüyle|tamamen|hiçbir|hiç|her zaman|daima|asla|kesinlikle|tek|bütün)\b'
+            ucy=[k for k,v in s.items() if k!=dk and re.search(UC,v.lower())]
+            if len(ucy)>=3 and not re.search(UC,s[dk].lower()): U('yanlış şıkların çoğu uç sözcük taşıyor, doğru şık taşımıyor (ele verebilir)')
         ip=q.get('ipuclari',[])
         if len(ip) not in (1,3): H_('ipucu sayısı 1 (iskelet) ya da 3 olmalı')
         dv=str(c.get('deger',''))
@@ -104,6 +111,7 @@ def denetle(Q,korpus=None):
     for x in range(len(Q)):
         for y in range(x+1,len(Q)):
             if Q[x]['id'].rstrip('k')==Q[y]['id'].rstrip('k'): continue
+            if Q[x].get('parca') and Q[x].get('parca')==Q[y].get('parca'): continue  # aynı parçaya bağlı soru grubu
             A,B=sh(Q[x]['metin']),sh(Q[y]['metin'])
             if A and B and len(A&B)/len(A|B)>=0.3: hata.append(f"{Q[x]['id']} ~ {Q[y]['id']}: havuz içinde benzer soru")
     return hata,uyari
