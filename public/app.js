@@ -1,11 +1,16 @@
 /* Zekacademy koçluk uygulaması */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth, initializeAuth, inMemoryPersistence, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, setPersistence, browserLocalPersistence, browserSessionPersistence, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-import { getFirestore, doc, setDoc, updateDoc, deleteDoc, deleteField, FieldPath, collection, onSnapshot, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import { getFirestore, doc, setDoc as fsSetDoc, updateDoc as fsUpdateDoc, deleteDoc as fsDeleteDoc, deleteField, FieldPath, collection, onSnapshot, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getMessaging, getToken, isSupported as messagingSupported } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging.js";
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
 import { firebaseConfig, vapidKey } from "./firebase-config.js";
 const fbApp = initializeApp(firebaseConfig);
+/* Koçun "Demo öğrenci" önizlemesi açıkken hiçbir şey veritabanına yazılmaz */
+const onzYok = () => Promise.resolve();
+const setDoc = (...a) => window.ZK_ONZ ? onzYok() : fsSetDoc(...a);
+const updateDoc = (...a) => window.ZK_ONZ ? onzYok() : fsUpdateDoc(...a);
+const deleteDoc = (...a) => window.ZK_ONZ ? onzYok() : fsDeleteDoc(...a);
 
 /* ---------- Müfredat (Zekacademy şablonundan) ---------- */
 const CUR = {"TYT": [{"k": "tr", "n": "Türkçe", "g": "Türkçe", "t": ["Sözcükte Anlam", "Söz Yorumu", "Deyimler ve Atasözleri", "Cümlede Anlam", "Ses Bilgisi", "Sözcükte Yapı/Ekler", "Sözcük Türleri", "Fiiller-Fiilimsiler-Ek Fiiller-Çatı", "Sözcük Grupları", "Cümlenin Ögeleri", "Cümle Türleri", "Anlatım Bozukluğu", "Yazım Kuralları", "Noktalama İşaretleri"]}, {"k": "mat", "n": "Matematik · İlk 12 Konu", "g": "Matematik", "t": ["Temel Kavramlar", "Rasyonel Sayılar", "Sayı Basamakları", "Bölme ve Bölünebilme", "Ebob – ekok", "Basit Eşitsizlikler", "Mutlak Değer", "Üslü Sayılar", "Köklü Sayılar", "Çarpanlara Ayırma", "Oran Orantı", "Denklem Çözme"]}, {"k": "prob", "n": "Matematik · Problemler", "g": "Matematik", "t": ["Sayı Problemleri", "Kesir Problemleri", "Yaş Problemleri", "Hareket Hız Problemleri", "İşçi Emek Problemleri", "Yüzde Problemleri", "Kar Zarar Problemleri", "Karışım Problemleri", "Grafik Problemleri", "Rutin Olmayan Problemleri"]}, {"k": "matd", "n": "Matematik · Diğer Konular", "g": "Matematik", "t": ["Kümeler-Kartezyen Çarpım", "Mantık", "Fonksiyonlar", "Polinomlar", "2.Dereceden Denklemler", "Permütasyon ve Kombinasyon", "Olasılık", "Veri – İstatistik"]}, {"k": "geo", "n": "Geometri", "g": "TYT/AYT", "t": ["Temel Kavramlar", "Doğruda Açılar", "Üçgende Açılar", "Özel Üçgenler", "Dik Üçgen", "İkizkenar Üçgen", "Eşkenar Üçgen", "Açıortay", "Kenarortay", "Eşlik ve Benzerlik", "Üçgende Alan", "Üçgende Benzerlik", "Açı Kenar Bağıntıları", "Çokgenler", "Özel Dörtgenler", "Dörtgenler", "Deltoid", "Paralelkenar", "Eşkenar Dörtgen", "Dikdörtgen", "Kare", "Yamuk", "Çemberde Açı", "Çemberde Uzun", "Dairede Çevre ve Alan", "Noktanın Analitiği", "Doğrunun Analitiği", "Dönüşüm Geometrisi", "Çemberin Analitiği", "Katı Cisimler", "Prizmalar", "Küp", "Silindir", "Piramit", "Koni", "Küre"]}, {"k": "tar", "n": "Tarih", "g": "Sosyal", "t": ["TYT Tarih", "Tarih ve Zaman", "İnsanlığın İlk Dönemleri", "Ortaçağ’da Dünya", "İlk ve Orta Çağlarda Türk Dünyası", "İslam Medeniyetinin Doğuşu", "İlk Türk İslam Devletleri", "Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi", "Beylikten Devlete Osmanlı Siyaseti(1300-1453)", "Dünya Gücü Osmanlı Devleti (1453-1600)", "Yeni Çağ Avrupa Tarihi", "Yakın Çağ Avrupa Tarihi", "Osmanlı Devletinde Arayış Yılları", "18. Yüzyılda Değişim ve Diplomasi", "En Uzun Yüzyıl", "Osmanlı Kültür ve Medeniyeti", "20. Yüzyılda Osmanlı Devleti", "I. Dünya Savaşı", "Mondros Ateşkesi, İşgaller ve Cemiyetler", "Kurtuluş Savaşına Hazırlık Dönemi", "I. TBMM Dönemi", "Kurtuluş Savaşı ve Antlaşmalar", "II. TBMM Dönemi ve Çok Partili Hayata Geçiş", "Türk İnkılabı", "Atatürk İlkeleri", "Atatürk Dönemi Türk Dış Politikası"]}, {"k": "cog", "n": "Coğrafya", "g": "Sosyal", "t": ["Doğa ve İnsan", "Dünya’nın Şekli ve Hareketleri", "Coğrafi Konum", "Harita Bilgisi", "Atmosfer ve Sıcaklık", "İklimler", "Basınç ve Rüzgarlar", "Nem, Yağış ve Buharlaşma", "İç Kuvvetler / Dış Kuvvetler", "Su – Toprak ve Bitkiler", "Nüfus", "Göç", "Yerleşme", "Türkiye’nin Yer Şekilleri", "Ekonomik Faaliyetler", "Bölgeler", "Uluslararası Ulaşım Hatları", "Çevre ve Toplum", "Doğal Afetler"]}, {"k": "fel", "n": "Felsefe", "g": "Sosyal", "t": ["Felsefenin Konusu", "Bilgi Felsefesi", "Varlık Felsefesi", "Ahlak Felsefesi", "Sanat Felsefesi", "Din Felsefesi", "Siyaset Felsefesi", "Bilim Felsefesi"]}, {"k": "fiz", "n": "Fizik", "g": "Fen", "t": ["Fizik Bilimine Giriş", "Madde ve Özellikleri", "Sıvıların Kaldırma Kuvveti", "Basınç", "Isı, Sıcaklık ve Genleşme", "Hareket ve Kuvvet", "Dinamik", "İş, Güç ve Enerji", "Elektrik", "Manyetizma", "Dalgalar", "Optik"]}, {"k": "kim", "n": "Kimya", "g": "Fen", "t": ["Kimya Bilimi", "Atom ve Yapısı", "Periyodik Sistem", "Kimyasal Türler Arası Etkileşimler", "Maddenin Halleri", "Kimyanın Temel Kanunları", "Kimyasal Hesaplamalar", "Karışımlar", "Asitler, Bazlar ve Tuzlar", "Endüstride ve Canlılarda Enerji", "Kimya Her Yerde"]}, {"k": "bio", "n": "Biyoloji", "g": "Fen", "t": ["Canlıların Ortak Özellikleri", "Canlıların Temel Bileşenleri", "Hücre ve Organeller – Madde Geçişleri", "Canlıların Sınıflandırılması", "Hücrede Bölünme – Üreme", "Kalıtım", "Ekosistem"]}], "AYT": [{"k": "amat", "n": "Matematik", "g": "SAY · EA", "t": ["Polinomlar", "Fonksiyonlar", "2.Dereceden Denklemler", "Permütasyon ve Kombinasyon", "Binom ve Olasılık", "İstatistik", "Karmaşık Sayılar", "Eşitsizlikler", "Parabol", "Trigonometri", "Logaritma", "Diziler", "Limit", "Türev", "İntegral"], "a": ["SAY", "EA"]}, {"k": "afiz", "n": "Fizik", "g": "SAY", "t": ["Vektörler", "Bağıl Hareket", "Newton’un Hareket Yasaları", "Bir Boyutta Sabit İvmeli Hareket", "Atışlar", "Enerji ve Hareket", "İtme ve Momentum", "Tork Denge", "Kütle ve Ağırlık Merkezi", "Basit Makineler", "Düzgün Çembersel Hareket", "Eylemsizlik ve Açısal Momentum", "Kütle Çekim Kuvveti", "Basit Harmonik Hareket", "Dalga Mekaniği", "Elektrik Alan ve Potansiyel", "Paralel Levhalar ve Sığa", "Manyetik Alan ve Manyetik Kuvvet", "İndüksiyon, Alternatif Akım ve Transformatörler", "Atom Modelleri", "Büyük Patlama ve Parçacık Fiziği", "Radyoaktivite", "Özel Görelilik", "Kara Cisim Işıması", "Fotoelektrik Olay ve Compton Olayı", "Modern Fiziğin Teknolojideki Uygulamaları"], "a": ["SAY"]}, {"k": "akim", "n": "Kimya", "g": "SAY", "t": ["Modern Atom Teorisi", "Gazlar", "Sıvı Çözeltiler", "Kimyasal Tepkimelerde Enerji", "Kimyasal Tepkimelerde Hız", "Kimyasal Tepkimelerde Denge", "Asit-Baz Dengesi", "Çözünürlük Dengesi", "Kimya ve Elektrik", "Organik Kimyaya Giriş", "Hidrokarbonlar (Alkan, Alken, Alkin)", "Aromatik Bileşikler", "Alkoller ve Eterler", "Karbonil Bileşikleri (Aldehit ve Keton)", "Karboksilik Asitler ve Esterler", "Organik Tepkimeler ve İzomeri", "Enerji Kaynakları ve Bilimsel Gelişmeler"], "a": ["SAY"]}, {"k": "abio", "n": "Biyoloji", "g": "SAY", "t": ["Sinir Sistemi", "Endokrin Sistem", "Duyu Organları", "Destek ve Hareket Sistemi", "Sindirim Sistemi", "Dolaşım ve Bağışıklık Sistemi", "Solunum Sistemi", "Boşaltım Sistemi", "Üreme Sistemi ve Embriyonik Gelişim", "Komünite ve Popülasyon Ekolojisi", "Genetik Şifre-Protein Sentezi", "Fotosentez – Kemosentez", "Hücresel Solunum", "Bitki Biyolojisi", "Canlılar ve Çevre"], "a": ["SAY"]}, {"k": "aede", "n": "Edebiyat", "g": "EA · SÖZ", "t": ["Güzel Sanatlar ve Edebiyat", "Metinlerin Sınıflandırılması", "Şiir Bilgisi", "Edebi Sanatlar", "Türk Edebiyatı Dönemleri", "İslamiyet Öncesi Türk Edebiyatı ve Geçiş Dönemi", "Halk Edebiyatı", "Divan Edebiyatı", "Tanzimat Edebiyatı", "Servet-i Fünun Edebiyatı", "Fecr-i Ati Edebiyatı", "Milli Edebiyat", "Cumhuriyet Dönemi Edebiyatı", "Edebiyat Akımları", "Dünya Edebiyatı"], "a": ["EA", "SÖZ"]}, {"k": "atar", "n": "Tarih", "g": "EA · SÖZ", "t": ["Tarih ve Zaman", "İnsanlığın İlk Dönemleri", "Ortaçağ’da Dünya", "İlk ve Orta Çağlarda Türk Dünyası", "İslam Medeniyetinin Doğuşu", "İlk Türk İslam Devletleri", "Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi", "Beylikten Devlete Osmanlı Siyaseti(1300-1453)", "Dünya Gücü Osmanlı Devleti (1453-1600)", "Yeni Çağ Avrupa Tarihi", "Yakın Çağ Avrupa Tarihi", "Osmanlı Devletinde Arayış Yılları", "18. Yüzyılda Değişim ve Diplomasi", "En Uzun Yüzyıl", "Osmanlı Kültür ve Medeniyeti", "20. Yüzyılda Osmanlı Devleti", "I. Dünya Savaşı", "Mondros Ateşkesi, İşgaller ve Cemiyetler", "Kurtuluş Savaşına Hazırlık Dönemi", "I. TBMM Dönemi", "Kurtuluş Savaşı ve Antlaşmalar", "II. TBMM Dönemi ve Çok Partili Hayata Geçiş", "Türk İnkılabı", "Atatürk İlkeleri", "Atatürk Dönemi Türk Dış Politikası", "Atatürk Sonrası Dış Politika ve Güncel Olaylar"], "a": ["EA", "SÖZ"]}, {"k": "acog", "n": "Coğrafya", "g": "EA · SÖZ", "t": ["Biyoçeşitlilik", "Enerji Akışı ve Madde Döngüleri", "Nüfus Politikaları", "Şehirlerin Fonksiyonları", "Türkiyede Yerleşmeler", "Ekonomik Faaliyetler", "Türkiyede Tarım", "Türkiyede Hayvancılık", "Türkiyede Madenler", "Türkiyede Enerji Kaynakları", "Türkiyede Sanayi", "Kültür Bölgeleri", "Küresel Ticaret", "Küresel ve Bölgesel Örgütler", "Çevre Sorunları ve Ekstrem Doğa Olayları", "Küresel İklim Değişikliği", "Kalkınma Projeleri", "Türkiyede Ulaşım", "Türkiyede Ticaret", "Türkiyede Turizm", "Jeopolitik Konum", "Ülkeler Arası Etkileşimler", "Çatışma Bölgeleri", "Çevre Sorunları"], "a": ["EA", "SÖZ"]}, {"k": "afel", "n": "Felsefe Grubu", "g": "SÖZ", "t": ["Felsefe", "Psikoloji", "Sosyoloji", "Mantık", "Din"], "a": ["SÖZ"]}]};
@@ -206,7 +211,7 @@ applyTheme();
 
 /* ---------- Durum ---------- */
 const S = { students:new Map(), cnotes:new Map(), notifs:new Map(), gorus:new Map(), settings:{examDate:"2027-06-19", tahmini:false},
-  ready:false, role:null, me:null, auth:"signup", authRole:"student",
+  ready:false, role:null, me:null, auth:"login", authRole:"student",
   view:"home", cur:null, dtab:"ozet", week:monday(new Date()), day:today(), pmode:"gun", ex:"TYT", aytAll:false, q:"" };
 const A = () => S.role === "admin";
 function cfg(){ const x = S.settings; return {
@@ -256,7 +261,7 @@ async function writeDoc(coll, id, data){
   await updateDoc(ref, ...args); BASE.set(key, clean);
 }
 function persistDoc(coll, id, delay=500){
-  if(!id) return;
+  if(!id || window.ZK_ONZ) return;
   const key = coll+"/"+id; dirty.add(key);
   clearTimeout(timers[key]);
   timers[key] = setTimeout(()=>{
@@ -275,7 +280,7 @@ const loaded = {};
 function applySnap(coll, snap){
   const m = MAPS[coll](), seen = new Set();
   snap.docs.forEach(d=>{ seen.add(d.id); if(!dirty.has(coll+"/"+d.id)){ const v = JSON.parse(JSON.stringify(d.data())); m.set(d.id, v); BASE.set(coll+"/"+d.id, JSON.parse(JSON.stringify(v))); } });
-  [...m.keys()].forEach(k=>{ if(!seen.has(k) && !dirty.has(coll+"/"+k)) m.delete(k); });
+  [...m.keys()].forEach(k=>{ if(!seen.has(k) && !dirty.has(coll+"/"+k) && k!==ONZ_ID) m.delete(k); });
 }
 function watchColl(coll, need){
   unsubs.push(onSnapshot(collection(fdb, coll), snap=>{ applySnap(coll, snap); loaded[coll]=true; checkReady(need); render(true); },
@@ -358,7 +363,7 @@ const authMsg = e => ({ "auth/email-already-in-use":"Bu kullanıcı adı alınm�
 
 /* ---------- Telefon bildirimleri ---------- */
 const fns = getFunctions(fbApp, "europe-west3");
-const callFn = (name, data) => httpsCallable(fns, name)(data).then(r => r.data);
+const callFn = (name, data) => window.ZK_ONZ ? Promise.reject(new Error("Önizlemede kullanılamaz")) : httpsCallable(fns, name)(data).then(r => r.data);
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 let pushOk = null;
@@ -531,17 +536,23 @@ function studentNotices(s){
 }
 /* ---------- İlk açılışta uygulama tanıtımı (öğrenci) ---------- */
 const TUR = [
-  {nav:null, ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin. Programın, hedeflerin, denemelerin ve çalışma sürelerin burada. Koçun yaptığın her şeyi anında görür. Hadi 1 dakikada tanıyalım."},
-  {nav:"home", ic:"home", b:"Bugünün görevleri", t:"Ana sayfada bugün yapacakların sıralı. Derse başlarken görevin yanındaki ▶ ile sayacı başlat, ara verirken “Durdur”a bas; süren kaydedilir. Görevi bitirince yuvarlağa dokun, yeşil olsun.", ornek:"gorev"},
-  {nav:"home", ic:"target", b:"Görevin altındaki küçük yazı", t:"Her dersin altında o hafta bitireceğin konu 🎯, takip edeceğin kitap 📖 ve hoca 👥 yazar. Paragraf ve problemde “Günlük rutin” yazar.", ornek:"hedef"},
-  {nav:"program", ic:"cal", b:"Haftalık Program", t:"Ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık”ta bütün haftayı ve hedeflerini görürsün. Hedef konuyu bitirince onu da işaretle."},
-  {nav:"daha", ic:"timer", b:"Çalışma süresi", t:"Daha Fazla → Kronometre. Derse başlarken başlat, bitince durdur. Unutursan süreyi elle de yazabilirsin. Örneğin: bugün 5 saat 30 dakika.", ornek:"sure"},
-  {nav:"analiz", ic:"chart", b:"Denemeler ve analiz", t:"Her denemeden sonra netlerini gir; altta yanlış yaptığın konuları da seç, çeteleye kendiliğinden eklenir. Üstteki takvim simgesinde yaklaşan Türkiye geneli denemeler var."},
-  {nav:"konular", ic:"book", b:"Konular", t:"Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur.", ornek:"konu"},
-  {nav:"daha", ic:"list", b:"Yanlış çetelesi", t:"Daha Fazla → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle. Örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
-  {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin sorunun fotoğrafını çek, dersini seç. Görüşmede koçunla birlikte bakarsınız; çözdüğünü “çözüldü” yap."},
-  {nav:"daha", ic:"bell", b:"Bildirimler ve koçundan notlar", t:"Sabah motivasyon mesajı, akşam eksik hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse “İzin ver”e bas. Koçunun notları da burada."},
-  {nav:null, ic:"check", b:"Hazırsın! 🎯", t:"Her gün görevlerini işaretle, süreni gir, haftada bir denemeni ekle. Bu tanıtımı Daha Fazla → “Uygulamayı tanı”dan istediğin zaman tekrar açabilirsin."} ];
+  {view:"home", ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin: programın, hedeflerin, denemelerin ve çalışma sürelerin hep burada. Yaptığın her şeyi koçun anında görür. Şimdi 2 dakikada her bölümü sırayla gezelim; her adımda arkada o sayfa açılacak."},
+  {view:"home", ic:"phone", b:"Önce telefonuna kur", t:"Tarayıcıdan değil, uygulama gibi kullan: Android’de Chrome menüsünden (⋮) “Uygulamayı yükle”, iPhone’da Safari’de Paylaş (□↑) → “Ana Ekrana Ekle”. Böylece tek dokunuşla açılır ve bildirimler gelir.", kosul:"kurulmamis"},
+  {view:"home", nav:"home", ic:"home", b:"Ana sayfa: bugünün görevleri", t:"Koçunun bugün için yazdığı görevler sırayla burada. Görevi bitirince solundaki yuvarlağa dokun, yeşil olsun. Üstteki şeritte haftanın günlerini ve kaç görevin bittiğini görürsün.", ornek:"gorev"},
+  {view:"home", nav:"home", ic:"timer", b:"Görev sayacı ▶", t:"Bir göreve başlarken yanındaki ▶ düğmesine bas; sayaç başlar. Ara verirken “Durdur”a bas, süren kendiliğinden kaydedilir. Böylece hangi derse ne kadar çalıştığın ayrı ayrı tutulur.", ornek:"sayac"},
+  {view:"home", nav:"home", ic:"target", b:"Görevin altındaki küçük yazı", t:"Her dersin altında o hafta bitireceğin konu 🎯, takip edeceğin kitap 📖 ve izleyeceğin hoca 👥 yazar. Ne çalışacağını düşünmene gerek yok, hepsi görevin altında.", ornek:"hedef"},
+  {view:"program", nav:"program", ic:"cal", b:"Haftalık Program", t:"Alttaki ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık” sekmesinde bütün haftayı tek ekranda görürsün. Koçun her görüşmeden sonra yeni haftanı buraya yazar."},
+  {view:"program", nav:"program", ic:"target", b:"Bu haftanın hedefleri", t:"Programın altında her ders için bu hafta bitirmen gereken konular var. Konuyu bitirince hedefin yanındaki yuvarlağı işaretle; koçun hangi hedefin tamamlandığını buradan takip eder."},
+  {view:"kronometre", nav:"daha", ic:"timer", b:"Kronometre ve çalışma süresi", t:"Daha Fazla → Kronometre. Görev dışı çalışmalarında da sayacı başlat, ders seç, bitince durdur. Unuttuysan süreyi elle de yazabilirsin. Günlük hedef sürene ne kadar yaklaştığını burada görürsün.", ornek:"sure"},
+  {view:"analiz", nav:"analiz", ic:"chart", b:"Denemeler ve analiz", t:"Her denemeden sonra “Deneme ekle” ile netlerini gir. Altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir. Netlerinin grafiği ve hedefe ne kadar kaldığı burada.", ornek:"yanlis"},
+  {view:"analiz", nav:"analiz", ic:"cal", b:"Deneme takvimi", t:"Analiz sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
+  {view:"konular", nav:"konular", ic:"book", b:"Konular", t:"Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
+  {view:"cetele", nav:"daha", ic:"list", b:"Yanlış çetelesi", t:"Daha Fazla → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
+  {view:"socoz", nav:"daha", ic:"search", b:"Soru Çözüm (Zek AI)", t:"Takıldığın sorunun fotoğrafını çek; yapay zekâ adım adım çözsün. Ana sayfadaki “Soru Çözüm” kartından ya da Daha Fazla’dan açılır. Önce kendin dene, sonra bak!", kosul:"ai"},
+  {view:"sorular", nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin sorunun fotoğrafını çek, dersini seç. Görüşmede koçunla birlikte bakarsınız; çözünce “Çözüldü” yap."},
+  {view:"bildirim", nav:"daha", ic:"bell", b:"Bildirimler", t:"Sabah günün mesajı, akşam eksik görev hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse mutlaka “İzin ver”e bas. Koçunun sana yazdığı notlar da burada."},
+  {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
+  {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Gerisini koçunla birlikte hallederiz. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
 const YENILIK_SURUM = "2026-11-01";
 const YENILIK = [
@@ -552,7 +563,8 @@ const YENILIK = [
   {nav:"home", ic:"cal", b:"Deneme takvimi", t:"Yaklaşan Türkiye geneli denemeler ve yazılıların ana sayfanda. Tüm takvim Analiz’deki takvim simgesinde."},
   {nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. “Kamerayı aç” ile çözemediğin soruyu çek, dersini seç. Görüşmede koçunla birlikte bakarsınız."},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin! Tanıtımları Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin."} ];
-const turListe = () => S.turListe==="yeni" ? YENILIK : TUR;
+const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : true);
+const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
   if(k==="hedef2") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Matematik Çalışması (2 saat)</div><div class="thd"><span>${icon("target","xs")}Türev</span><span>${icon("book","xs")}Apotemi + Bilgi Sarmal</span><span>${icon("users","xs")}Mert Hoca</span></div></div><span></span></div></div>`;
@@ -572,9 +584,10 @@ function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
+  if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
   const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
   const nots = studentNotices(s).length;
-  return `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
+  return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","chart","Analiz"],["program","cal","Haftalık Program",true],["konular","book","Konular"],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Deneme takvimi (Ayarlar'dan düzenlenir) + öğrencinin yazılıları ---------- */
 const DEF_TAKVIM = [{"bas":"2026-09-18","bit":"2026-09-19","yayin":"ÖZDEBİR","ad":"TYT İlk Prova"},{"bas":"2026-10-02","bit":"2026-10-05","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-10-16","bit":"2026-10-19","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 1"},{"bas":"2026-10-23","bit":"2026-10-26","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-11-09","bit":"2026-11-15","yayin":"MEBİ","ad":"YKS Denemesi 3"},{"bas":"2026-12-04","bit":"2026-12-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 2"},{"bas":"2026-12-10","bit":"2026-12-13","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2026-12-11","bit":"2026-12-14","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2026-12-14","bit":"2026-12-20","yayin":"MEBİ","ad":"YKS Denemesi 4"},{"bas":"2026-12-25","bit":"2026-12-28","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 3"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"4K Yayınları","ad":"Maarif TYT"},{"bas":"2027-01-11","bit":"2027-01-17","yayin":"MEBİ","ad":"YKS Denemesi 5"},{"bas":"2027-02-15","bit":"2027-02-21","yayin":"MEBİ","ad":"YKS Denemesi 6"},{"bas":"2027-02-19","bit":"2027-02-22","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2027-02-26","bit":"2027-03-01","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 4"},{"bas":"2027-03-15","bit":"2027-03-21","yayin":"MEBİ","ad":"YKS Denemesi 7"},{"bas":"2027-03-26","bit":"2027-03-29","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-02","bit":"2027-04-05","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 5"},{"bas":"2027-04-09","bit":"2027-04-12","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-12","bit":"2027-04-18","yayin":"MEBİ","ad":"YKS Denemesi 8"},{"bas":"2027-04-16","bit":"2027-04-19","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 2"},{"bas":"2027-05-07","bit":"2027-05-10","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 6"},{"bas":"2027-05-10","bit":"2027-05-16","yayin":"MEBİ","ad":"YKS Denemesi 9"},{"bas":"2027-05-17","bit":"2027-05-23","yayin":"MEBİ","ad":"YKS Denemesi 10"},{"bas":"2027-05-28","bit":"2027-05-31","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-05-31","bit":"2027-06-06","yayin":"MEBİ","ad":"YKS Denemesi 11"},{"bas":"2027-06-04","bit":"2027-06-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 7"},{"bas":"2027-06-07","bit":"2027-06-10","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-06-07","bit":"2027-06-13","yayin":"MEBİ","ad":"YKS Denemesi 12"},{"bas":"2027-06-08","bit":"2027-06-11","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 2"}];
@@ -1676,6 +1689,7 @@ function cMore(){
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
+    <button class="row" data-act="onzac"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("user","sm")}</span><div><div class="rt">Demo öğrenci</div><div class="rs">Uygulamayı öğrenci gözünden gör, yenilikleri dene (kaydedilmez)</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="sinav"><span class="ri">${icon("cal","sm")}</span><div><div class="rt">YKS tarihi</div><div class="rs">${trDate(S.settings.examDate)}${S.settings.tahmini?" (tahmini)":""} · ${examDays()} gün</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1683,11 +1697,40 @@ function cMore(){
   </div><p class="proto">Zekacademy Koç Paneli</p></div>`;
 }
 
+/* ---------- Demo öğrenci: koç uygulamayı öğrenci gözünden görür (yalnızca bu cihazda, kaydedilmez) ---------- */
+const ONZ_ID = "__demo_ogrenci";
+function demoOgrenci(){
+  const t = today(), w = monday(t), gw = addDays(w,-7), dI = dIdx(t), n = {i:0}, id = () => "dm"+(++n.i);
+  const gun = [
+    ["Paragraf 20 soru","TYT Matematik Çalışması (2,5 saat)","AYT Fizik Çalışması (2 saat)","Problem 20 soru"],
+    ["Paragraf 20 soru","AYT Matematik Çalışması (2 saat)","TYT Kimya Çalışması (1,5 saat)","Biyoloji Tekrar (45 dk)"],
+    ["Paragraf 20 soru","TYT Geometri Çalışması (2 saat)","Türkçe Branş Denemesi x1","Fizik Soru Bankası 40 soru"],
+    ["Paragraf 20 soru","AYT Matematik Çalışması (2 saat)","AYT Kimya Çalışması (2 saat)","Problem 20 soru"],
+    ["Paragraf 20 soru","TYT Matematik Çalışması (2,5 saat)","AYT Biyoloji Çalışması (1,5 saat)","Haftalık Tekrar (1 saat)"],
+    ["TYT Genel Deneme x1","Deneme Analizi (1 saat)","Paragraf 20 soru"],
+    ["AYT Genel Deneme x1","Deneme Analizi (1 saat)"] ];
+  const hafta = (bas, gecmis) => Object.fromEntries(gun.map((l,i)=>[String(i), l.map((x,j)=>{ const d = addDays(bas,i), bitti = gecmis ? j < l.length-(i%3===0?1:0) : d < t ? j < l.length-(i===dI-1?1:0) : d===t ? j < 1 : false; return {id:id(), t:x, done:bitti, doneAt:bitti?d:null}; })]));
+  const hedef = {Matematik:{konu:"Fonksiyonlar, Polinomlar", done:false}, Fizik:{konu:"Newton’un Hareket Yasaları", done:false}, Kimya:{konu:"Kimyasal Hesaplamalar", done:true}, Biyoloji:{konu:"Sinir Sistemi", done:false}, Geometri:{konu:"Üçgende Benzerlik", done:false}};
+  const topics = {"tr|Sözcükte Anlam":{r:2,s1:true,s2:true}, "tr|Cümlede Anlam":{r:1,s1:true}, "mat|Rasyonel Sayılar":{r:2,s1:true,s2:true}, "mat|Üslü Sayılar":{r:1,s1:true,y:3}, "matd|Fonksiyonlar":{r:1,y:4}, "fiz|Basınç":{r:1,s1:true,y:2}, "kim|Atom ve Yapısı":{r:2,s1:true,s2:true}, "bio|Kalıtım":{r:1,y:2}, "afiz|Vektörler":{r:1,s1:true}};
+  const den = [[-40,"345",22,8.5,18,9],[-26,"3D",24,10,21,11.25],[-12,"Bilgi Sarmal",27,11,23.5,13]].map(([g,y,tr,so,ma,fe],k)=>({id:"dmd"+k, tur:"TYT", yayin:y, tarih:addDays(t,g), turkce:tr, sosyal:so, mat:ma, fen:fe}));
+  den.push({id:"dmda", tur:"AYT", yayin:"Limit", tarih:addDays(t,-12), mat:14.5, fen:12.25, sos1:null, sos2:null});
+  const gunluk = {}; for(let i=1;i<=12;i++){ if(i%5) gunluk[addDays(t,-i)] = [300,270,360,240,330,390,280,310,260,350,295,320][i-1]; }
+  return {name:"Demo Öğrenci", alan:"SAY", sinif:"Mezun", okul:"", createdAt:addDays(t,-45), kullanici:"demo", paket:"super",
+    baslangic:{tarih:addDays(t,-45), tyt:52, ayt:20, tytYok:false, aytYok:false}, hedef:{tarih:"", tyt:95, ayt:60},
+    topics, sbAd:{}, weeks:{[gw]:hafta(gw,true), [w]:hafta(w,false)}, plan:{[gw]:{saat:{}, hedef:{}}, [w]:{saat:{}, hedef}},
+    kitaplar:{Matematik:"345 + Bilgi Sarmal", "Matematik|AYT":"Apotemi", Fizik:"345", Kimya:"Orbital", Biyoloji:"Biyotik", Geometri:"Bilgi Sarmal"}, hocalar:{Matematik:"Mert Hoca", Fizik:"Özcan Aykın", Kimya:"Görkem Şahin", Biyoloji:"Dr. Biyoloji"},
+    denemeler:den, gunluk, timer:null, koctanNot:{text:"Bu hafta fonksiyonlara ağırlık verelim, her gün 20 problem. 💪", date:t}, notSeen:"", lastSeen:"", tanitim:false, yenilik:"" };
+}
+function onzAc(){ closeSheet(); window.ZK_ONZ = {view:S.view, cur:S.cur}; S.students.set(ONZ_ID, demoOgrenci());
+  S.role = "student"; S.me = ONZ_ID; S.view = "home"; S.tur = null; S.turKapandi = false; S.turListe = "tur"; window.scrollTo(0,0); render(); }
+function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ = null; S.students.delete(ONZ_ID);
+  S.role = "admin"; S.me = null; S.tur = null; S.turKapandi = false; S.cur = o.cur ?? null; S.view = "daha"; window.scrollTo(0,0); render(); }
+
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
 const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:50, uyari:40, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
-const callAi = (name, data) => httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
+const callAi = (name, data) => window.ZK_ONZ ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
 const SZ_BOS = () => ({ foto:null, onizleme:"", key:"", mod:"coz", metin:"", data:null, shown:0, hints:0, busy:"", aciklama:{}, sohbet:[], benzer:null, benzerSec:"", hata:"", id:"", hak:0, model:"" });
 let SZ = SZ_BOS(); SZ.kalan = null; SZ.toplam = null;
 function szKullanimYukle(){ if(A() || !S.me) return; getDoc(doc(fdb, "aiKullanim", aiAy()+"_"+S.me)).then(d=>{ const k = d.exists() ? d.data() : {}, c = aiC();
@@ -2125,8 +2168,7 @@ async function doInstall(){
 
 /* ---------- Giriş ---------- */
 function renderAuth(){
-  const r = S.authRole, mode = r==="admin" ? "admin" : S.auth, rd = true;
-  const roleSeg = `<div class="seg"><button type="button" data-act="arole" data-v="student" aria-pressed="${r==="student"}">Öğrenci</button><button type="button" data-act="arole" data-v="admin" aria-pressed="${r==="admin"}">Koç girişi</button></div>`;
+  const mode = S.auth==="admin" ? "login" : S.auth, rd = true, roleSeg = ""; /* tek giriş: koç da aynı formdan kendi kullanıcı adıyla girer */
   const keep = id => `<label class="inline"><input type="checkbox" id="${id}" name="keep" checked>Beni hatırla</label>`;
   const submit = l => `<button class="btn pri full" style="padding:14px" data-label="${l}" ${rd?"":"disabled"}>${rd?l:"Yükleniyor…"}</button>`;
   let f = "";
@@ -2152,9 +2194,10 @@ function renderAuth(){
     <p class="sub">Koçuna yaz, sana yeni bir giriş versin. Programın, denemelerin ve tüm bilgilerin olduğu gibi kalır.</p>
     <div class="card"><b>Koçuna ne yazmalısın?</b><p class="muted small" style="margin:6px 0 0">“Hocam şifremi unuttum, kullanıcı adım: …” yazman yeterli.</p></div>
     <p class="swap"><button type="button" class="link" data-act="amode" data-v="login">Girişe dön</button></p></div>`;
-  else { const adm = mode==="admin"; f = `<form class="apanel" id="fLogin" novalidate>
-    <div class="logo"><span class="lm">${LOGO}</span>Zekacademy</div>${roleSeg}<div id="instWrap">${installCard()}</div>
-    <h2>${adm?"Koç girişi":"Giriş yap"}</h2><p class="sub">${adm?"Tüm öğrencilerini görmek ve yönetmek için.":"Kayıt olurken oluşturduğun bilgilerle gir."}</p>
+  else { const adm = false; f = `<form class="apanel" id="fLogin" novalidate>
+    <div class="logo"><span class="lm">${LOGO}</span>Zekacademy</div><div id="instWrap">${installCard()}</div>
+    <div class="ahero"><b>YKS yolculuğun tek uygulamada</b><span>Koçunun hazırladığı programı takip et, çalışmanı ve denemelerini kaydet.</span></div>
+    <h2>Giriş yap</h2><p class="sub">Koçunun verdiği kullanıcı adı ve şifreyle gir.</p>
     <label class="f">Kullanıcı adı<input type="text" id="l-u" name="u" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"></label>
     <label class="f">Şifre<input type="password" id="l-p" name="p" autocomplete="current-password"></label>
     ${keep("l-keep")}<div class="err" id="aerr"></div>${submit("Giriş yap")}
@@ -2192,8 +2235,7 @@ async function doSignup(f){
 async function doLogin(f){
   const fd = new FormData(f), u = normU(fd.get("u")), p = String(fd.get("p")), keep = !!fd.get("keep");
   if(!u || !p) return authErr("Kullanıcı adı ve şifreni yaz.");
-  if(S.authRole==="admin" && u!==ADMIN_U) return authErr("Kullanıcı adı veya şifre hatalı.");
-  if(S.authRole!=="admin" && u===ADMIN_U) return authErr("Koç girişi için üstteki “Koç girişi” sekmesini kullan.");
+  S.authRole = u===ADMIN_U ? "admin" : "student";
   busy(f, true);
   try{
     await setPersistence(auth, keep ? browserLocalPersistence : browserSessionPersistence);
@@ -2606,7 +2648,9 @@ document.addEventListener("click", e=>{
     case "amode": S.auth=v; renderAuth(); window.scrollTo(0,0); break;
     case "install": doInstall(); break;
     case "adresKopya": { const u = location.origin + "/"; (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(() => toast("Adres kopyalandı. Chrome'u açıp adres çubuğuna yapıştır."), () => toast(u)); break; }
-    case "logout": logout(); break;
+    case "logout": if(window.ZK_ONZ){ onzKapat(); break; } logout(); break;
+    case "onzac": onzAc(); break;
+    case "onzkapat": onzKapat(); break;
     case "pushon": enablePush(); break;
     case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
     case "bell": S.view="bildirim"; render(); window.scrollTo(0,0); break;
@@ -2677,7 +2721,7 @@ document.addEventListener("click", e=>{
     case "tyapistir": { (S.pano||[]).forEach(t=>gunEkle(b.dataset.date, t)); toast(`${(S.pano||[]).length} görev yapıştırıldı`); break; }
     case "ptemizle": S.pano = []; panoGuncelle(); break;
     case "tur": if(b.dataset.l) S.turListe = b.dataset.l; S.tur = +v; render(); break;
-    case "turbitir": S.tur = null; S.turKapandi = true; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render(); break;
+    case "turbitir": S.tur = null; S.turKapandi = true; if(!A()) S.view = "home"; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render(); break;
     case "girisgonder": { const id = b.dataset.id, cn = {...(S.cnotes.get(id)||{}), girisGonderildi: nowISO()}; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0);
       setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
     case "geri": geriAl(false); break;
