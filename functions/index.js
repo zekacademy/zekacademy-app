@@ -13,6 +13,7 @@ import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
+import { KARNE_SISTEM, karneIstegi, karneDuzelt } from "./karne.js";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
 initializeApp();
@@ -283,11 +284,11 @@ async function aiAnahtar(){
   if (AI_ANAHTAR.v && Date.now() - AI_ANAHTAR.at < 5 * 60e3) return AI_ANAHTAR.v;
   const v = ((await db.doc("system/ai").get()).data() || {}).anahtar || ""; AI_ANAHTAR = { v, at: Date.now() }; return v;
 }
-async function claude(model, content, maxTokens){
+async function claude(model, content, maxTokens, sistem = SISTEM){
   const key = await aiAnahtar(); if (!key) throw new HttpsError("failed-precondition", "anahtar-yok");
   const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model, max_tokens: maxTokens, system: SISTEM, messages: [{ role: "user", content }] }) });
+    body: JSON.stringify({ model, max_tokens: maxTokens, system: sistem, messages: [{ role: "user", content }] }) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) { logger.error("claude hata", r.status, j && j.error); throw new HttpsError("unavailable", "yapay-zeka-hata"); }
   const text = (j.content || []).filter(c => c.type === "text").map(c => c.text).join("");
@@ -358,6 +359,45 @@ export const soruTakip = onCall({ timeoutSeconds: 120, maxInstances: 5 }, async 
   await aiKaydet(x, { dolar: maliyet(c, "kolay", a.usage), takip: 1 });
   if (tur === "benzer") { const q = jsonCikar(a.text); if (!q || !q.soru || !q.siklar) throw new HttpsError("unavailable", "benzer-okunamadi"); return { benzer: q }; }
   return { metin: a.text };
+});
+
+/* Deneme karnesi okuma: öğrenci karnesinin fotoğrafını / PDF'ini yükler, deneme formu dolar.
+   Soru hakkından düşmez; aylık genel bütçeye yazılır, öğrenci başına günlük sınır var. */
+export const denemeOku = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstances: 5 }, async (req) => {
+  if (!req.auth) throw new HttpsError("unauthenticated", "giris");
+  const sid = req.auth.uid, koc = req.auth.token.email === COACH_EMAIL, d = req.data || {};
+  const settings = (await db.doc("settings/main").get()).data() || {}, c = aiCfg(settings);
+  const date = istanbulNow().date, ay = ayOf(date), gunluk = Number(c.karneGunluk) || 10;
+  const kRef = db.doc(`aiKullanim/${kullanimId(ay, sid)}`), gRef = db.doc(`aiKullanim/${ay}_genel`);
+  const dosyalar = (Array.isArray(d.dosyalar) ? d.dosyalar : []).slice(0, 6), icerik = []; let boyut = 0;
+  for (const f of dosyalar) {
+    const v = String((f && f.veri) || ""), m = v.match(/^data:(image\/jpeg|image\/png|application\/pdf);base64,([A-Za-z0-9+/=]+)$/);
+    if (!m) throw new HttpsError("invalid-argument", "dosya-gecersiz");
+    boyut += m[2].length; if (m[2].length > (m[1] === "application/pdf" ? 7e6 : 1.6e6) || boyut > 9e6) throw new HttpsError("invalid-argument", "dosya-buyuk");
+    icerik.push(m[1] === "application/pdf" ? { type: "document", source: { type: "base64", media_type: "application/pdf", data: m[2] } } : { type: "image", source: { type: "base64", media_type: m[1], data: m[2] } });
+  }
+  if (!icerik.length) throw new HttpsError("invalid-argument", "dosya-yok");
+  const [kS, gS, sS] = await Promise.all([kRef.get(), gRef.get(), db.doc(`students/${sid}`).get()]);
+  const k = kS.data() || {}, g = gS.data() || {}, ogr = sS.data() || {};
+  if (!koc && !sS.exists) throw new HttpsError("permission-denied", "ogrenci-yok");
+  if (!koc && ((k.karne || {})[date] || 0) >= gunluk) throw new HttpsError("resource-exhausted", "karne-gunluk");
+  if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
+  /* öğrencinin uygulamadaki konu listesi (eşleme için): { TYT: { Ders: [konu, ...] }, AYT: {...} } */
+  const konular = {};
+  for (const ex of ["TYT", "AYT"]) { const x = (d.konular || {})[ex]; if (!x || typeof x !== "object") continue; konular[ex] = {};
+    for (const [ders, ts] of Object.entries(x).slice(0, 20)) konular[ex][String(ders).slice(0, 40)] = (Array.isArray(ts) ? ts : []).slice(0, 80).map(t => String(t).slice(0, 80)); }
+  icerik.push({ type: "text", text: karneIstegi({ bugun: date, alan: ogr.alan, sinif: ogr.sinif, konular }) });
+  const a = await claude(c.modelZor, icerik, 8000, KARNE_SISTEM), dolar = maliyet(c, "zor", a.usage);
+  const inc = FieldValue.increment;
+  await kRef.set({ sid, ay, dolar: inc(dolar), karne: { [date]: inc(1) }, son: new Date().toISOString() }, { merge: true });
+  await gRef.set({ ay, dolar: inc(dolar), karne: inc(1), gun: { [date]: inc(dolar) } }, { merge: true });
+  const r = jsonCikar(a.text);
+  if (!r) { logger.warn("karne json yok", a.stop, a.text.slice(0, 300)); throw new HttpsError("unavailable", "karne-okunamadi"); }
+  const out = karneDuzelt(r, date);
+  await db.collection("aiKarne").add({ sid, ay, at: new Date().toISOString(), belge: out.belgeTuru, n: out.denemeler.length, okunabildi: out.okunabildi,
+    emin: out.denemeler.every(x => x.emin), dosya: icerik.length - 1, dolar: Math.round(dolar * 1e5) / 1e5, kesildi: a.stop === "max_tokens" }).catch(() => {});
+  if (a.stop === "max_tokens") out.uyarilar.push("Belge çok uzundu; bazı konular okunamamış olabilir.");
+  return out;
 });
 
 /* Her gece: bütçe tahmini; pazartesi: çalışkanlara bonus hak */

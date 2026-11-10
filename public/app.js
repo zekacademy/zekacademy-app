@@ -91,6 +91,7 @@ const ADMIN_U = "zekacademy";
 /* ---------- İkonlar ---------- */
 const IC = {
   chat:'<path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
+  camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
   phone:'<path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2.5v13h8v-13zm3 15h2v1.5h-2z"/><path d="M11 6.5h2v4h2l-3 3.5-3-3.5h2z"/>',
  home:'<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
  cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>',
@@ -1697,6 +1698,70 @@ function cMore(){
   </div><p class="proto">Zekacademy Koç Paneli</p></div>`;
 }
 
+/* ---------- Karneden deneme: fotoğraf / PDF → Zek AI okur → öğrenci kontrol edip kaydeder (soru hakkından düşmez) ---------- */
+let KR = null;
+const KRN_HATA = m => /karne-gunluk/.test(m) ? "Bugünkü karne okuma hakkın doldu (günde 10). Yarın tekrar dene ya da elle gir."
+  : /butce/.test(m) ? "Bu ayın yapay zekâ bütçesi doldu; denemeyi elle girebilirsin." : /dosya-buyuk/.test(m) ? "Dosya çok büyük. PDF en fazla 5 MB, en fazla 6 fotoğraf olabilir."
+  : /dosya-gecersiz/.test(m) ? "Bu dosya türü okunamıyor. Fotoğraf (JPG/PNG) ya da PDF seç." : /Önizleme/.test(m) ? "Önizlemede karne okunmaz."
+  : /okunamadi/.test(m) ? "Karne okunamadı. Daha net bir fotoğrafla tekrar dene." : /anahtar-yok/.test(m) ? "Karne okuma henüz kurulmadı, koçuna haber ver."
+  : "Şu an okunamadı, bağlantını kontrol edip tekrar dene.";
+function karneKonular(s){ const o = {TYT:{}, AYT:{}}; CURX().TYT.forEach(x=>{ o.TYT[x.n] = x.t; }); aytSubjects(s, false).forEach(x=>{ o.AYT[x.n] = x.t; }); return o; }
+/* AI'nin seçtiği konu adını uygulamadaki konu anahtarına çevirir (önce dersi tutan alt başlık) */
+function karneKonuKey(s, tur, ders, ad){ if(!ad) return null; const subs = tur==="AYT" ? aytSubjects(s, true) : CURX().TYT, dl = trLow(ders||"");
+  const aday = subs.filter(x=>x.t.includes(ad)); if(!aday.length) return null;
+  const iyi = aday.find(x=>dl && (trLow(x.n).includes(dl) || dl.includes(trLow(x.n.split(" ·")[0])))) || aday[0]; return tkey(iyi.k, ad); }
+async function karneOku(files){ const s = st(); if(!s) return;
+  const L = files.slice(0, 6), pdf = L.find(f=>/pdf/i.test(f.type) || /\.pdf$/i.test(f.name));
+  closeSheet(); KR = {yukleniyor:true}; openSheet("karne");
+  try{
+    const dosyalar = [];
+    if(pdf){ if(pdf.size > 5e6) throw new Error("dosya-buyuk"); dosyalar.push({veri: await new Promise((res,rej)=>{ const fr = new FileReader(); fr.onload=()=>res(String(fr.result).replace(/^data:[^;]*;/, "data:application/pdf;")); fr.onerror=rej; fr.readAsDataURL(pdf); })}); }
+    for(const f of L.filter(f=>f!==pdf && /^image\//.test(f.type||"image/"))) dosyalar.push({veri: await resimKucult(f, 2200, 1.5e6)});
+    if(!dosyalar.length) throw new Error("dosya-gecersiz");
+    const r = await callAi("denemeOku", {dosyalar, konular: karneKonular(s)});
+    const var_ = (d, x) => (s.denemeler||[]).some(e=>e.tur===x.tur && (x.tarih ? e.tarih===x.tarih : true) && Math.abs(totalOf(e) - x.toplam) < 0.01);
+    (r.denemeler||[]).forEach(x=>{ x.kayitli = var_(s, x); x.sec = !x.kayitli && (x.kaynak==="ana" || !(r.denemeler||[]).some(y=>y.kaynak==="ana"));
+      x.yk = {}; x.eslesmeyen = [];
+      (x.yanlislar||[]).filter(y=>y.durum==="yanlis").forEach(y=>{ const k = karneKonuKey(s, x.tur, y.ders, y.eslesen); if(k) x.yk[k] = (x.yk[k]||0) + 1; else x.eslesmeyen.push(y); });
+      x.bos = (x.yanlislar||[]).filter(y=>y.durum==="bos").length; });
+    KR = r; if(!(r.denemeler||[]).length && r.okunabildi !== false) KR.uyarilar = [...(r.uyarilar||[]), "Belgede deneme sonucu bulunamadı."];
+  }catch(e){ KR = {hata: KRN_HATA(String((e && e.message) || ""))}; }
+  if($("#layer .sheet")) openSheet("karne"); }
+function karneSheet(s){
+  if(!KR || KR.yukleniyor) return sheet(`<h3>Karnen okunuyor…</h3><div class="krnload"><span class="spin"></span><p class="muted small">Zek AI netlerini ve yanlış konularını çıkarıyor. 10–40 saniye sürebilir; bu ekrandan çıkma.</p></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button></div>`);
+  if(KR.hata) return sheet(`<h3>Karne okunamadı</h3><p class="muted">${esc(KR.hata)}</p><div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="sheet" data-v="deneme">Elle gir</button></div>`);
+  const L = KR.denemeler || [];
+  const kart = (x, i) => { const F = x.tur==="TYT" ? TYTF : AYTF;
+    return `<div class="krn ${x.sec?"on":""}" data-i="${i}">
+      <label class="krnh"><input type="checkbox" data-krsec="${i}" ${x.sec?"checked":""}><span class="kch ex-${x.tur}"><i>${x.tur}</i></span><b class="num">${fmt(x.toplam)} net</b>${x.kaynak==="gecmis"?`<span class="pill">karnedeki geçmiş</span>`:""}${x.kayitli?`<span class="pill">zaten kayıtlı</span>`:""}${x.emin?"":`<span class="pill warn">kontrol et</span>`}</label>
+      <div class="two"><label class="f">Yayın<input type="text" data-krf="yayin" data-i="${i}" value="${esc(x.yayin||"")}" placeholder="ör. 3D"></label><label class="f">Tarih${x.tarih?"":` <span class="faint" style="font-weight:500">· karnede yok</span>`}<input type="date" data-krf="tarih" data-i="${i}" value="${x.tarih||today()}" max="${today()}"></label></div>
+      <div class="krnt"><span></span><span>D</span><span>Y</span><span>Net</span>${F.map(([k,n])=>{ const v = x.bolumler[k]; if(!v) return `<span class="nm">${n}</span><span class="faint">—</span><span class="faint">—</span><span class="faint">—</span>`;
+        return v.net!=null ? `<span class="nm">${n}</span><span class="faint">—</span><span class="faint">—</span><input type="text" inputmode="decimal" data-krn="${k}" data-i="${i}" value="${fmt(v.net)}" aria-label="${n} net">`
+          : `<span class="nm">${n}</span><input type="number" inputmode="numeric" min="0" data-krd="${k}" data-i="${i}" value="${v.d}" aria-label="${n} doğru"><input type="number" inputmode="numeric" min="0" data-kry="${k}" data-i="${i}" value="${v.y}" aria-label="${n} yanlış"><b class="num">${fmt(v.d - v.y/4)}</b>`; }).join("")}</div>
+      ${(()=>{ const yk = Object.entries(x.yk), top = yk.reduce((a,[,n])=>a+n,0);
+        return yk.length || x.eslesmeyen.length ? `<details class="krnyk"><summary><b>Yanlış konular</b> <span class="faint small">${top} yanlış çeteleye eklenecek${x.bos?` · ${x.bos} boş`:""}</span></summary>
+          <div class="pills" style="margin-top:8px">${yk.map(([k,n])=>`<span class="pill">${esc(k.split("|")[1])}${n>1?` ×${n}`:""}</span>`).join("")}</div>
+          ${x.eslesmeyen.length?`<p class="faint small" style="margin:6px 0 0">Listede karşılığı bulunamayanlar (eklenmez): ${esc([...new Set(x.eslesmeyen.map(y=>y.konu))].join(", "))}</p>`:""}</details>` : ""; })()}
+      ${x.notlar.length?`<p class="small" style="margin:6px 0 0;color:var(--warn)">${x.notlar.map(esc).join(" · ")}</p>`:""}</div>`; };
+  const ana = L.filter(x=>x.kaynak==="ana"), gec = L.filter(x=>x.kaynak!=="ana");
+  return sheet(`<h3>Karneden okunanlar</h3>
+    <p class="muted small" style="margin:-6px 0 0">Zek AI karnenden aşağıdakileri okudu. <b>Sayıları karnenle karşılaştır</b>, gerekirse düzelt, sonra kaydet.</p>
+    ${(KR.uyarilar||[]).length?`<div class="card" style="padding:10px 12px;box-shadow:none;background:var(--warns,#FEF3C7)"><p class="small" style="margin:0">${KR.uyarilar.map(esc).join("<br>")}</p></div>`:""}
+    ${ana.map(x=>kart(x, L.indexOf(x))).join("")}
+    ${gec.length?`<details class="krngec" ${ana.length?"":"open"}><summary><b>Karnedeki geçmiş denemeler (${gec.length})</b> <span class="faint small">uygulamada olmayanları da ekleyebilirsin</span></summary>${gec.map(x=>kart(x, L.indexOf(x))).join("")}</details>`:""}
+    <div class="err" id="serr"></div>
+    <div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button type="button" class="btn pri" data-act="krkaydet">${icon("check","xs")} Seçilenleri kaydet</button></div>`); }
+function karneKaydet(){ const s = st(); if(!s || !KR) return; const L = KR.denemeler || [], sec = L.filter(x=>x.sec); if(!sec.length) return sheetErr("Kaydetmek için en az bir deneme seç.");
+  const val = (sel, i) => { const e = $(`#layer [${sel}][data-i="${i}"]`); return e ? e.value : null; }, yeni = []; let yt = 0;
+  for(const x of sec){ const i = L.indexOf(x), F = x.tur==="TYT" ? TYTF : AYTF, d = {id:uid(), tur:x.tur, yayin:String(val('data-krf="yayin"', i)||"").trim(), tarih:val('data-krf="tarih"', i)||today(), karne:true};
+    for(const [k,n,mx] of F){ const v = x.bolumler[k]; if(!v) continue;
+      if(v.net!=null){ const nt = num(val(`data-krn="${k}"`, i)); if(nt==null) continue; if(nt > mx || nt < -mx/4) return sheetErr(`${n}: net ${mx} soruyu aşamaz.`); d[k] = nt; }
+      else { const D = num(val(`data-krd="${k}"`, i))||0, Y = num(val(`data-kry="${k}"`, i))||0; if(D<0||Y<0||D+Y>mx) return sheetErr(`${x.yayin||x.tur}: ${n} için doğru + yanlış en fazla ${mx}.`); d[k] = {d:D, y:Y}; } }
+    if(Object.keys(x.yk).length){ d.yk = {...x.yk}; s.topics = s.topics||{}; Object.entries(x.yk).forEach(([k,n])=>{ const tp = topic(s,k); tp.y = (tp.y||0)+n; yt += n; }); }
+    yeni.push(d); }
+  s.denemeler = [...(s.denemeler||[]), ...yeni]; save(); KR = null; closeSheet(); render();
+  toast(`${yeni.length} deneme kaydedildi${yt?` · ${yt} yanlış çeteleye eklendi`:""}`); }
+
 /* ---------- Demo öğrenci: koç uygulamayı öğrenci gözünden görür (yalnızca bu cihazda, kaydedilmez) ---------- */
 const ONZ_ID = "__demo_ogrenci";
 function demoOgrenci(){
@@ -1730,7 +1795,7 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
 const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:50, uyari:40, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
-const callAi = (name, data) => window.ZK_ONZ ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
+const callAi = (name, data) => window.ZK_ONZ && name!=="denemeOku" ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
 const SZ_BOS = () => ({ foto:null, onizleme:"", key:"", mod:"coz", metin:"", data:null, shown:0, hints:0, busy:"", aciklama:{}, sohbet:[], benzer:null, benzerSec:"", hata:"", id:"", hak:0, model:"" });
 let SZ = SZ_BOS(); SZ.kalan = null; SZ.toplam = null;
 function szKullanimYukle(){ if(A() || !S.me) return; getDoc(doc(fdb, "aiKullanim", aiAy()+"_"+S.me)).then(d=>{ const k = d.exists() ? d.data() : {}, c = aiC();
@@ -2502,8 +2567,11 @@ function openSheet(kind, el){
       <div class="pills">${[30,60,90,120].map(x=>`<button type="button" class="btn sm" data-act="addq" data-v="${x}">+${fmtMin(x)}</button>`).join("")}</div>
       <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     fd=>{ const v = (num(fd.get("h"))||0)*60 + (num(fd.get("m"))||0); if(v<0||v>16*60) return sheetErr("0 ile 16 saat arasında bir süre gir."); s.gunluk = s.gunluk||{}; if(v) s.gunluk[d]=v; else delete s.gunluk[d]; save(); closeSheet(); render(); toast("Çalışma süresi kaydedildi"); }); }
+  if(kind==="karne") return karneSheet(s);
   if(kind==="deneme"){ const tur = S.ex, F = tur==="TYT"?TYTF:AYTF;
     return sheet(`<h3>${tur} denemesi ekle</h3>
+      ${A()?"":`<label class="krnbtn"><input type="file" id="krn-file" accept="image/*,application/pdf" multiple hidden><span class="krnic">${icon("camera","sm")}</span><span><b>Karneden otomatik doldur</b><small>Sonuç karnesinin fotoğrafını ya da PDF'ini seç; konu analizi sayfasını da eklersen yanlış konular çeteleye gelir.</small></span></label>
+      <div class="krnor"><span>ya da elle gir</span></div>`}
       <div class="seg">${["TYT","AYT"].map(t=>`<button type="button" data-act="dtur" data-v="${t}" aria-pressed="${tur===t}">${t}</button>`).join("")}</div>
       <div class="two"><label class="f">Yayın<input type="text" name="yayin" id="dn-yayin" placeholder="ör. 345, Limit"></label><label class="f">Tarih<input type="date" name="tarih" id="dn-tarih" value="${today()}"></label></div>
       <div class="dyrow dyhead"><span>Ders</span><span style="text-align:center">Doğru</span><span style="text-align:center">Yanlış</span><span style="text-align:right">Net</span></div>
@@ -2759,6 +2827,7 @@ document.addEventListener("click", e=>{
       toast(v==="bitti" ? `Tebrikler! ${added>0?`+${fmtMin(added)} · `:""}görev tamamlandı` : (added>0?`+${fmtMin(added)} kaydedildi · görevi bitirdiysen yuvarlağa dokun`:"1 dakikadan kısa süre kaydedilmedi")); break; }
     case "sheet": openSheet(v, b); wireSheetExtras(); if(v==="hizli"){ const q = $("#hq"); if(q) q.focus({preventScroll:true}); } if(v==="blok") blkGuncelle(); if(v==="kaynak") kysNot(); break;
     case "dtur": { S.ex=v; openSheet("deneme", b); break; }
+    case "krkaydet": karneKaydet(); break;
     case "mode": THEME.mode=v; applyTheme(); openSheet("tema"); render(); break;
     case "temagec": THEME.mode = koyuMu() ? "light" : "dark"; applyTheme(); render(); break;
     case "accent": THEME.accent=v; applyTheme(); openSheet("tema"); render(); break;
@@ -2768,10 +2837,15 @@ document.addEventListener("click", e=>{
   }
 });
 function keepOpen(fn){ const open = [...document.querySelectorAll("details.subj")].map((d,i)=>d.open?i:-1).filter(i=>i>=0); fn(); const ds=document.querySelectorAll("details.subj"); open.forEach(i=>{ if(ds[i]) ds[i].open=true; }); }
+document.addEventListener("input", e=>{ const t = e.target; if(!(t.dataset && (t.dataset.krd!=null || t.dataset.kry!=null))) return; /* karne: net anında güncellensin */
+  const k = t.dataset.krd ?? t.dataset.kry, i = t.dataset.i, D = num($(`#layer [data-krd="${k}"][data-i="${i}"]`)?.value)||0, Y = num($(`#layer [data-kry="${k}"][data-i="${i}"]`)?.value)||0, b = t.parentElement && t.nextElementSibling && t.dataset.kry!=null ? t.nextElementSibling : t.nextElementSibling?.nextElementSibling;
+  if(b && b.tagName==="B") b.textContent = fmt(D - Y/4); });
 document.addEventListener("change", e=>{
   const t = e.target;
   if(t.id==="sesAcik"){ SES.acik = t.checked; try{ localStorage.setItem("zk-ses", t.checked ? "1" : "0"); }catch(_){} if(t.checked) sesCal("basari"); return; }
   if((t.id==="szFoto" || t.id==="szKamera" || t.id==="szGaleri") && t.files && t.files[0]){ szFotoSec(t.files[0]); return; }
+  if(t.id==="krn-file" && t.files && t.files.length){ karneOku([...t.files]); return; }
+  if(t.dataset && t.dataset.krsec!=null && KR && KR.denemeler){ const x = KR.denemeler[+t.dataset.krsec]; if(x){ x.sec = t.checked; t.closest(".krn")?.classList.toggle("on", t.checked); } return; }
   if((t.id==="sq-file" || t.id==="sq-cam") && t.files && t.files[0]){ S.sqDosya = t.files[0]; const pv = $("#sq-prev"); if(pv) pv.innerHTML = `<img src="${URL.createObjectURL(t.files[0])}" alt="">`; return; }
   if(t.id==="sq-ders"){ const dl = $("#sq-kl"); if(dl) dl.innerHTML = [...new Set(dersSubs(st(), t.value).flatMap(x=>x.t))].map(n=>`<option value="${esc(n)}">`).join(""); return; }
   if(A() && t.closest && t.closest("#settingsPage")){ if(onSetting(t,true) && (t.dataset.curt!=null || t.dataset.cur!=null)) keepSettingsOpen(); return; }
