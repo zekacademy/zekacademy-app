@@ -355,8 +355,11 @@ export const soruTakip = onCall({ timeoutSeconds: 120, maxInstances: 5 }, async 
   const [kS, gS] = await Promise.all([kRef.get(), gRef.get()]); const k = kS.data() || {}, g = gS.data() || {};
   if (!x.koc && ((k.takip || {})[date] || 0) >= c.takipGunluk) throw new HttpsError("resource-exhausted", "takip");
   if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
-  const a = await claude(c.modelKolay, [{ type: "text", text: takipIstegi(tur, d.baglam, d.metin, Number(d.adim) || 1) }], tur === "benzer" ? 1500 : 800);
-  await aiKaydet(x, { dolar: maliyet(c, "kolay", a.usage), takip: 1 });
+  const istek = [{ type: "text", text: takipIstegi(tur, d.baglam, d.metin, Number(d.adim) || 1) }];
+  let a = await claude(c.modelKolay, istek, tur === "benzer" ? 1500 : 800), dolar = maliyet(c, "kolay", a.usage);
+  if (!a.text.trim()) { logger.warn("takip boş yanıt", tur, a.stop); a = await claude(c.modelZor, istek, tur === "benzer" ? 1500 : 900); dolar += maliyet(c, "zor", a.usage); } /* boş geldiyse güçlü model */
+  await aiKaydet(x, { dolar, takip: 1 });
+  if (!a.text.trim()) throw new HttpsError("unavailable", "bos-yanit");
   if (tur === "benzer") { const q = jsonCikar(a.text); if (!q || !q.soru || !q.siklar) throw new HttpsError("unavailable", "benzer-okunamadi"); return { benzer: q }; }
   return { metin: a.text };
 });

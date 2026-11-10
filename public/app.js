@@ -1812,6 +1812,8 @@ function szHata(e){ const m = String((e && e.message) || "");
   if(/resim-buyuk/.test(m)) return "Fotoğraf çok büyük. Sadece soruyu içine alacak şekilde tekrar çek.";
   if(/deadline|timeout/i.test(m)) return "Çözüm çok uzun sürdü. Bir kez daha dene.";
   return "Şu an çözemedim, bağlantıda bir sorun var. Biraz sonra tekrar dene. (Hakkın düşmedi.)"; }
+/* İşlem satırı: ";" ile ayrılmış işlemler alt alta (telefonda yana kaydırma olmasın) */
+const szSatir = t => String(t==null?"":t).split(/\s*;\s*/).filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join("");
 const szInline = s => esc(String(s==null?"":s)).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
 function szMd(src){ const out = []; let list = null; const close = () => { if(list){ out.push(`</${list}>`); list = null; } };
   String(src||"").split("\n").forEach(raw=>{ const l = raw.trimEnd(); let m; if(!l.trim()){ close(); return; }
@@ -1825,7 +1827,8 @@ let szAsama = null;
 function szAsamaBaslat(){ clearInterval(szAsama); let i = 0; szAsama = setInterval(()=>{ const ph = document.querySelectorAll(".szph"); if(!ph.length || i >= ph.length-1){ return; } ph[i].className = "szph ok"; i++; ph[i].className = "szph on"; }, 8000); }
 function szCozum(){ const d = SZ.data; if(!d) return "";
   if(d.okunabildi===false) return `<div class="szalert warn"><b>Soruyu tam okuyamadım.</b><br>${szInline(d.sorun || "Fotoğraf bulanık ya da soru kesik olabilir.")}<br>Daha net, düz ve tek soruyu gösteren bir fotoğrafla tekrar dene. <b>Hakkın düşmedi.</b></div>`;
-  let h = `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
+  let h = SZ.fotoUrl ? `<button class="szfoto" data-act="szfotobuyut" aria-label="Sorunun fotoğrafını büyüt"><img src="${SZ.fotoUrl}" alt="Sorunun fotoğrafı"><span>${icon("search","xs")} Büyüt</span></button>` : "";
+  h += `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
   if(d.anahtar==="uyumsuz" || d.emin===false) h += `<div class="szalert warn">⚠️ <b>Bu soruda emin olamadım.</b> ${d.anahtar==="uyumsuz" ? "Bulduğum cevap girdiğin cevap anahtarıyla uyuşmuyor; anahtarda baskı hatası da olabilir. " : ""}Kitabın çözümüne de bir göz at.</div>`;
   else if(d.anahtar==="uyumlu") h += `<div class="szalert ok">✓ Cevap anahtarıyla kontrol edildi, uyuşuyor.</div>`;
   if(d.istenen) h += `<div class="szgoal"><span>🎯</span><div><small>Ne isteniyor?</small><p>${szInline(d.istenen)}</p></div></div>`;
@@ -1834,9 +1837,9 @@ function szCozum(){ const d = SZ.data; if(!d) return "";
     h += H.slice(0, n).map((x,i)=>`<div class="szhint"><span>${i+1}</span><p>${szInline(x)}</p></div>`).join("");
     return h + `<div class="szlock"><span>Önce kendin dene 💪 Takılırsan:</span><div class="pills" style="justify-content:center">${n < H.length ? `<button class="btn sm" data-act="szipucu">💡 Bir ipucu daha</button>` : ""}<button class="btn sm pri" data-act="szcozumac">Çözümü göster</button></div></div>`; }
   const bl = (d.bilgi||[]).filter(x=>x && x.ifade);
-  if(bl.length) h += bl.map(x=>`<div class="szfact"><small>📌 ${esc(x.ad||"Kullanacağımız bilgi")}</small><div class="szf">${esc(x.ifade)}</div></div>`).join("");
+  if(bl.length) h += bl.map(x=>`<div class="szfact"><small>📌 ${esc(x.ad||"Kullanacağımız bilgi")}</small><div class="szf">${szSatir(x.ifade)}</div></div>`).join("");
   const A2 = d.adimlar || [], n = Math.min(SZ.shown, A2.length);
-  h += `<div class="szsteps">${A2.slice(0, n).map((a,i)=>`<div class="szstep"><span class="szn">${i+1}</span><div class="szsb"><h4>${szInline(a.baslik||("Adım "+(i+1)))}</h4>${a.aciklama?`<p>${szInline(a.aciklama)}</p>`:""}${a.islem?`<div class="szf">${esc(a.islem)}</div>`:""}
+  h += `<div class="szsteps">${A2.slice(0, n).map((a,i)=>`<div class="szstep"><span class="szn">${i+1}</span><div class="szsb"><h4>${szInline(a.baslik||("Adım "+(i+1)))}</h4>${a.aciklama?`<p>${szInline(a.aciklama)}</p>`:""}${a.islem?`<div class="szf">${szSatir(a.islem)}</div>`:""}
     <button class="link small" data-act="szadim" data-v="${i}" ${SZ.busy?"disabled":""}>🤔 ${SZ.aciklama[i] ? "Hâlâ anlamadım" : "Bu adımı anlamadım"}</button>${SZ.aciklama[i]!=null ? `<div class="szex">${SZ.aciklama[i]==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Daha basit anlatıyorum…` : szMd(SZ.aciklama[i])}</div>` : ""}</div></div>`).join("")}</div>`;
   if(n < A2.length) return h + `<div class="pills"><button class="btn pri" data-act="szsonraki">${n===0?"1. adımı göster":"Sonraki adım →"}</button><button class="btn" data-act="szhepsi">Hepsini göster</button></div>`;
   if(d.cevap) h += `<div class="szans"><span class="szbig">${esc(d.cevap.sik||"✓")}</span><div><small>Cevap</small><b>${d.cevap.sik?esc(d.cevap.sik)+" şıkkı":""}${d.cevap.deger?" · "+esc(d.cevap.deger):""}</b></div></div>`;
@@ -1855,28 +1858,29 @@ function pSoruCoz(){
       <label class="szdrop" for="szFoto">${SZ.onizleme ? `<img src="${SZ.onizleme}" alt="Seçilen soru"><span><b>Fotoğraf hazır</b><small>Değiştirmek için dokun</small></span>` : `<span class="szdic">${icon("note")}</span><span><b>Sorunun fotoğrafını ekle</b><small>Tek soru, net ve düz olsun</small></span>`}<input type="file" accept="image/*" id="szFoto" hidden></label>
       <div class="sqbtns"><label class="btn pri sm">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="szKamera" hidden></label><label class="btn sm">🖼️ Galeriden seç<input type="file" accept="image/*" id="szGaleri" hidden></label></div>
       <label class="f">Ya da soruyu yaz / not ekle<textarea id="szMetin" rows="2" placeholder="İsteğe bağlı · ör. 12. soru, 18 buldum ama şıklarda yok">${esc(SZ.metin)}</textarea></label>
-      <div class="f">Cevap anahtarı (biliyorsan)<div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}</div></div>
+      <div class="f szanahtar ${SZ.keyUyar?"uyar":""}">Cevap anahtarındaki doğru şık nedir?<small>Çözüm buna göre kontrol edilir, yanlış çözüm gösterilmez.</small><div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}<button class="szyok" data-act="szkey" data-v="yok" aria-pressed="${SZ.key==="yok"}">Anahtar yok</button></div></div>
       <div class="seg">${[["coz","Adım adım çöz"],["ipucu","Önce ipucu"]].map(([k,l])=>`<button data-act="szmod" data-v="${k}" aria-pressed="${SZ.mod===k}">${l}</button>`).join("")}</div>
       ${SZ.hata ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}
       <button class="btn pri full" data-act="szgonder" ${SZ.kalan===0?"disabled":""}>${SZ.mod==="coz" ? "Soruyu çöz" : "İpucu ver"}</button>
       <p class="faint small" style="margin:0;text-align:center">Kolay sorular 1 hak, zor sorular 3 hak. Okunamayan fotoğraf hak düşürmez.</p></div>`;
   const devam = SZ.data && SZ.data.okunabildi!==false && (SZ.shown >= (SZ.data.adimlar||[]).length || SZ.mod==="ipucu") ? `<div class="card szdevam">
-      <div class="pills">${[["benzer","🔁 Benzer soru ver"],["basit","🤔 Baştan, daha basit anlat"],["hizli","⚡ Sınavda en hızlı yol ne?"]].map(([k,l])=>`<button class="btn sm" data-act="szchip" data-v="${k}" ${SZ.busy?"disabled":""}>${l}</button>`).join("")}</div>
-      <div class="szask"><textarea id="szSor" rows="1" placeholder="Aklına takılanı sor…"></textarea><button class="btn pri" data-act="szsor" ${SZ.busy?"disabled":""}>Sor</button></div></div>` : "";
+      <b class="small">Aklına takılanı sor</b>
+      <div class="szask"><textarea id="szSor" rows="1" placeholder="ör. 2. adımda neden 16,8'i çıkardık?"></textarea><button class="btn pri" data-act="szsor" ${SZ.busy?"disabled":""}>Sor</button></div></div>` : "";
   const sohbet = SZ.sohbet.map(m=>`<div class="szmsg ${m.r}">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : m.r==="me" ? szInline(m.t) : szMd(m.t)}</div>`).join("");
   const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
   return `${head}<div class="page sz">${SZ.data || yuk ? "" : bonus}${form}${yuk ? szYukleniyor() : ""}${SZ.hata && SZ.data ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}<div class="szsol">${szCozum()}</div>${szBenzer()}${sohbet ? `<div class="szchat">${sohbet}</div>` : ""}${devam}${alt}
-    ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarını girersen çözümü ona göre kontrol eder.</p>` : ""}</div>`;
+    ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarındaki şıkla karşılaştırarak kontrol eder; tutmazsa “emin değilim” der.</p>` : ""}</div>`;
 }
-async function szFotoSec(file){ if(!file) return; SZ.hata = ""; SZ.foto = file; try{ SZ.onizleme = await resimKucult(file, 360, 60000); }catch(e){ SZ.foto = null; SZ.hata = "Bu fotoğraf açılamadı. Başka bir fotoğraf dene."; } render(); }
+async function szFotoSec(file){ if(!file) return; SZ.hata = ""; SZ.foto = file; try{ if(SZ.fotoUrl) URL.revokeObjectURL(SZ.fotoUrl); SZ.fotoUrl = URL.createObjectURL(file); }catch(_){ SZ.fotoUrl = ""; } try{ SZ.onizleme = await resimKucult(file, 360, 60000); }catch(e){ SZ.foto = null; SZ.hata = "Bu fotoğraf açılamadı. Başka bir fotoğraf dene."; } render(); }
 async function szGonder(tekrar){
   if(SZ.busy) return; const metin = SZ.metin.trim();
   if(!tekrar && !SZ.foto && !metin){ SZ.hata = "Önce sorunun fotoğrafını ekle ya da soruyu yaz."; render(); return; }
+  if(!tekrar && !SZ.key){ SZ.hata = "Önce cevap anahtarındaki doğru şıkkı seç. Anahtarın yoksa “Anahtar yok”a dokun."; SZ.keyUyar = true; render(); document.querySelector(".szanahtar")?.scrollIntoView({behavior:"smooth", block:"center"}); return; }
   SZ.hata = ""; SZ.busy = "coz"; if(!tekrar){ SZ.data = null; SZ.shown = 0; SZ.hints = 0; SZ.aciklama = {}; SZ.sohbet = []; SZ.benzer = null; SZ.benzerSec = ""; }
   const eski = tekrar && SZ.data ? szBaglam() : ""; SZ.data = null; render(); window.scrollTo(0,0); szAsamaBaslat();
   try{
     const [resim, kucuk] = SZ.foto ? await Promise.all([resimKucult(SZ.foto, 1568, 700000), resimKucult(SZ.foto, 240, 40000)]) : [null, null];
-    const r = await callAi("soruCoz", { resim, kucuk, metin, anahtar: SZ.key, tekrar: eski || undefined });
+    const r = await callAi("soruCoz", { resim, kucuk, metin, anahtar: SZ.key==="yok" ? "" : SZ.key, anahtarYok: SZ.key==="yok", tekrar: eski || undefined });
     SZ.data = r.cozum; SZ.id = r.id; SZ.model = r.model; SZ.hak = (tekrar ? SZ.hak : 0) + (r.hak||0);
     if(r.kalan!=null && !A()){ SZ.kalan = r.kalan; SZ.toplam = r.toplam; }
     SZ.shown = SZ.mod==="coz" ? 1 : 0; SZ.hints = 1;
@@ -1891,14 +1895,15 @@ async function szTakip(tur, gorunen, metin, adim){
     const r = await callAi("soruTakip", { tur, baglam: szBaglam(), metin, adim: adim!=null ? adim+1 : undefined });
     if(tur==="adim") SZ.aciklama[adim] = r.metin || "";
     else if(tur==="benzer"){ SZ.sohbet.pop(); SZ.benzer = r.benzer; }
-    else SZ.sohbet[SZ.sohbet.length-1] = {r:"ai", t:r.metin || ""};
+    else SZ.sohbet[SZ.sohbet.length-1] = {r:"ai", t:(r.metin||"").trim() || "⚠️ Bu soruya cevap üretemedim. Sorunu biraz farklı yazıp tekrar dene."};
   }catch(e){ console.warn("soruTakip", e); const m = szHata(e);
     if(tur==="adim") SZ.aciklama[adim] = m; else SZ.sohbet[SZ.sohbet.length-1] = {r:"ai", t:"⚠️ "+m}; }
   finally{ SZ.busy = ""; render(); if(tur==="benzer"){ const q = document.querySelector(".szquiz"); if(q) q.scrollIntoView({behavior:"smooth", block:"start"}); } }
 }
 function szAct(a, b, v){
   switch(a){
-    case "szkey": SZ.key = SZ.key===v ? "" : v; render(); return true;
+    case "szfotobuyut": if(SZ.fotoUrl){ const o = document.createElement("div"); o.className = "szfotobig"; o.innerHTML = `<img src="${SZ.fotoUrl}" alt="Sorunun fotoğrafı"><button class="iconbtn" aria-label="Kapat">${icon("x")}</button>`; o.addEventListener("click", e=>{ if(e.target.tagName!=="IMG") o.remove(); }); document.body.appendChild(o); } return true;
+    case "szkey": SZ.key = SZ.key===v ? "" : v; SZ.keyUyar = false; if(SZ.hata && /anahtar/i.test(SZ.hata)) SZ.hata = ""; render(); return true;
     case "szmod": SZ.mod = v; render(); return true;
     case "szgonder": szGonder(false); return true;
     case "szyanlis": szGonder(true); return true;
