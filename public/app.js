@@ -1196,12 +1196,19 @@ function paketOzet(){ const L = cfg().paketler, m = new Map(L.map(p=>[p.k, {p, n
 function seansGunu(sid, d){ const z = duzenOf(sid), x = S.students.get(sid);
   if(isWA(x)){ if(z && z.gun!=null && z.gun!=="") return z.gun===dIdx(d); return pStart(x, d)===d; } /* WhatsApp paketi: döngü gününde haftalık rapor, saat yok */
   if(!z) return false; const gunVar = z.gun!=null && z.gun!=="";
-  if(!z.saat) return gunVar && z.gun===dIdx(d); /* saati henüz girilmemiş: günü belli, listede "saat yok" olarak görünür */
+  if(!z.saat && !sonSaat(sid, d)) return gunVar && z.gun===dIdx(d); /* saati henüz girilmemiş: günü belli, listede "saat yok" olarak görünür */
   if(gunVar) return z.gun===dIdx(d);
   return !!x && pStart(x, d)===d; }
+/* Öğrencinin önceki haftalardaki en son görüşme saati: yeni hafta bunu devralır ("Sadece bu hafta" denenler ve düzen değiştikten önceki kayıtlar hariç) */
+function sonSaat(sid, d){ const z = duzenOf(sid) || {}, w = monday(d); let son = null;
+  S.gorus.forEach(g=>{ if(g.sid!==sid || g.kaynak!=="duzen" || g.tek || !g.saat || !g.tarih) return;
+    if((g.hafta || monday(g.tarih)) >= w || (z.degis && w >= monday(z.degis) && g.tarih < z.degis)) return;
+    if(!son || g.tarih > son.tarih) son = g; });
+  return son; }
 function sanalKayit(sid, d){ const x = S.students.get(sid), z = duzenOf(sid) || {};
-  return isWA(x) ? {sid, ad:x?.name||"", tarih:d, hafta:monday(d), saat:null, sure:0, tur:"rapor", durum:"planli", kaynak:"duzen"}
-    : {sid, ad:x?.name||"", tarih:d, hafta:monday(d), saat:z.saat||null, sure:z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen"}; }
+  if(isWA(x)) return {sid, ad:x?.name||"", tarih:d, hafta:monday(d), saat:null, sure:0, tur:"rapor", durum:"planli", kaynak:"duzen"};
+  const o = sonSaat(sid, d), aktar = !!o && o.saat!==z.saat;
+  return {sid, ad:x?.name||"", tarih:d, hafta:monday(d), saat:(o&&o.saat)||z.saat||null, sure:(o&&o.sure)||z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen", ...(aktar?{aktar:true}:{})}; }
 const saatSira = g => g.saat ? hmTo(g.saat) : 99999;
 function otoGun(sid){ const x = S.students.get(sid); return x ? dIdx(curStart(x)) : 0; }
 /* Bir günün görüşmeleri: kayıtlı olanlar + haftalık düzenden gelenler (o hafta için ayrıca kaydı yoksa) */
@@ -1229,7 +1236,7 @@ function gorusAd(g){ return g.sid && S.students.has(g.sid) ? S.students.get(g.si
 /* Sanal (düzenden gelen) görüşmeyi gerçek kayda çevirir */
 function gorusGercek(id){ if(!id.startsWith("v:")) return id; const [,sid,d] = id.split(":"); const z = duzenOf(sid) || {};
   const var_ = [...S.gorus.entries()].find(([,g])=>g.sid===sid && g.kaynak==="duzen" && (g.hafta || monday(g.tarih))===monday(d)); if(var_) return var_[0];
-  const nid = uid(); S.gorus.set(nid, sanalKayit(sid, d)); persistDoc("gorusmeler", nid, 0); return nid; }
+  const nid = uid(), k = sanalKayit(sid, d); delete k.aktar; S.gorus.set(nid, k); persistDoc("gorusmeler", nid, 0); return nid; }
 function gorusSet(id, fn){ const rid = gorusGercek(id); const g = {...S.gorus.get(rid)}; fn(g); S.gorus.set(rid, g); persistDoc("gorusmeler", rid, 200); return rid; }
 function cGorusme(){
   const t = today(), d = S.gday || t, w = monday(d), days = [0,1,2,3,4,5,6].map(i=>addDays(w,i));
@@ -1240,7 +1247,7 @@ function cGorusme(){
     if(g.saat && g.durum!=="iptal") son = Math.max(son??0, a+(g.sure||15));
     const ilk = g.tur==="ilk", dur = g.durum;
     rows.push(`<div class="grow g-${dur} ${g.cakisma?"g-cak":""} ${ilk?"g-ilk":""}"><div class="gsaat">${g.saat?`<b class="num">${g.saat}</b><span class="num">${toHm(a+(g.sure||15))}</span>`:`<b>—</b><span>saat yok</span>`}</div>
-      <div style="min-width:0;flex:1;cursor:pointer" data-act="gmod" data-v="${g.id}" role="button" tabindex="0"><b>${esc(gorusAd(g))}</b><div class="gmeta"><span class="gtag">${ilk?"İlk görüşme":"Seans"} · ${g.sure||15} dk</span>${g.sanal||g.kaynak==="duzen"?`<span class="faint">her hafta</span>`:""}${!g.saat?`<span class="gwarn">Saati gir</span>`:""}${g.cakisma?`<span class="gwarn">Çakışıyor</span>`:""}${dur==="yapildi"?`<span class="gok">Yapıldı</span>`:dur==="gelmedi"?`<span class="gwarn">Gelmedi</span>`:dur==="iptal"?`<span class="faint">İptal</span>`:""}</div>${g.not?`<div class="small muted" style="margin-top:4px">${esc(g.not)}</div>`:""}</div>
+      <div style="min-width:0;flex:1;cursor:pointer" data-act="gmod" data-v="${g.id}" role="button" tabindex="0"><b>${esc(gorusAd(g))}</b><div class="gmeta"><span class="gtag">${ilk?"İlk görüşme":"Seans"} · ${g.sure||15} dk</span>${g.sanal||g.kaynak==="duzen"?`<span class="faint">${g.aktar?"geçen haftanın saati":g.tek?"sadece bu hafta":"her hafta"}</span>`:""}${!g.saat?`<span class="gwarn">Saati gir</span>`:""}${g.cakisma?`<span class="gwarn">Çakışıyor</span>`:""}${dur==="yapildi"?`<span class="gok">Yapıldı</span>`:dur==="gelmedi"?`<span class="gwarn">Gelmedi</span>`:dur==="iptal"?`<span class="faint">İptal</span>`:""}</div>${g.not?`<div class="small muted" style="margin-top:4px">${esc(g.not)}</div>`:""}</div>
       <div class="gact"><button class="iconbtn sm ${dur==="yapildi"?"on":""}" data-act="gdurum" data-id="${g.id}" data-v="${dur==="yapildi"?"planli":"yapildi"}" aria-label="Yapıldı">${icon("check","sm")}</button><button class="iconbtn sm" data-act="sheet" data-v="gplan" data-id="${g.id}" aria-label="Düzenle">${icon("edit","sm")}</button></div></div>`); });
   return `${topbar(`<h1 class="ttl">Görüşmeler</h1>`, `<button class="iconbtn" data-act="sheet" data-v="gplan" data-d="${d}" aria-label="Görüşme ekle">${icon("plus")}</button>`)}
   <div class="page wide">
@@ -1388,7 +1395,9 @@ const ODEME_SIRA = {kirmizi:0, pembe:1, turuncu:2, yok:3, tamam:4};
 const ODEME_ETIKET = {kirmizi:"5 günü geçti", pembe:"Gecikti", turuncu:"Yaklaşıyor", tamam:"Güncel", yok:"Plan yok"};
 const fmtTL = v => v==null || v==="" ? "" : Number(v).toLocaleString("tr-TR")+" ₺";
 function odemeSay(){ const c = {kirmizi:0, pembe:0, turuncu:0, yok:0, tamam:0}; S.students.forEach((_,id)=>c[odemeDurum(id).k]++); return c; }
-function setDuzen(id, z){ const cn = {...(S.cnotes.get(id)||{})}; cn.duzen = z; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 300); }
+function setDuzen(id, z){ const cn = {...(S.cnotes.get(id)||{})}, eski = cn.duzen || {};
+  if(z && (z.saat!==eski.saat || (z.sure||null)!==(eski.sure||null))) z = {...z, degis: z.degis || today()}; /* düzen saati elle değişti: önceki haftaların saati artık devralınmaz */
+  cn.duzen = z; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 300); }
 function setOdeme(id, fn){ const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = {...(cn.odeme||{})}; fn(cn.odeme); if(!cn.odeme.bas) delete cn.odeme; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 300); }
 function cOdeme(){
   const c = odemeSay(), rows = sortedStudents().map(([id,x])=>({id,x,d:odemeDurum(id),o:odemeOf(id)})).sort((a,b)=>ODEME_SIRA[a.d.k]-ODEME_SIRA[b.d.k] || (a.d.d||"9").localeCompare(b.d.d||"9") || a.x.name.localeCompare(b.x.name,"tr"));
@@ -2377,7 +2386,7 @@ function openSheet(kind, el){
       <div class="two"><label class="f">Tarih<input type="date" name="tarih" id="go-tarih" value="${d0}"></label><label class="f">Saat<input type="time" name="saat" id="go-saat" step="300" value="${esc(g0?.saat||sonra)}"></label></div>
       <div class="two"><label class="f">Süre<select name="sure" id="go-sure">${[15,30,45,60].map(m=>`<option value="${m}" ${(g0?.sure||(ilk||!kisi?SURE_ILK:SURE_SEANS))===m?"selected":""}>${m} dk</option>`).join("")}</select></label>
         <label class="f">Tür<select name="tur" id="go-tur"><option value="seans" ${!ilk&&kisi?"selected":""}>Seans</option><option value="ilk" ${ilk||!kisi?"selected":""}>İlk görüşme</option></select></label></div>
-      ${g0&&(g0.sanal||g0.kaynak==="duzen")?`<div class="f" id="go-tekw">Değişiklik<div class="seg"><label class="segr"><input type="radio" name="kapsam" value="hafta" checked><span>Sadece bu hafta</span></label><label class="segr"><input type="radio" name="kapsam" value="hep"><span>Bundan sonra hep</span></label></div></div>`
+      ${g0&&(g0.sanal||g0.kaynak==="duzen")?`<div class="f" id="go-tekw">Değişiklik<div class="seg"><label class="segr"><input type="radio" name="kapsam" value="hep" ${g0.tek?"":"checked"}><span>Bundan sonra hep</span></label><label class="segr"><input type="radio" name="kapsam" value="hafta" ${g0.tek?"checked":""}><span>Sadece bu hafta</span></label></div></div>`
         : !g0 ? `<label class="inline" id="go-tekw" ${kisi?"":"hidden"}><input type="checkbox" name="tekrar" id="go-tekrar">Her hafta bu gün ve saatte (haftalık düzen)</label>` : ""}
       <label class="f">Not<input type="text" name="not" id="go-not" value="${esc(g0?.not||"")}" placeholder="ör. deneme analizi yapılacak"></label>
       ${g0?`<div class="f">Durum<div class="seg">${[["planli","Planlı"],["yapildi","Yapıldı"],["gelmedi","Gelmedi"],["iptal","İptal"]].map(([k,l])=>`<label class="segr"><input type="radio" name="durum" value="${k}" ${g0.durum===k?"checked":""}><span>${l}</span></label>`).join("")}</div></div>`:""}
@@ -2387,10 +2396,11 @@ function openSheet(kind, el){
       if(!kim && !ad) return sheetErr("Kiminle görüşeceğini seç ya da adını yaz."); if(!tarih || !saat) return sheetErr("Tarih ve saati seç.");
       if(!g0 && kim && fd.get("tekrar")){ setDuzen(kim, {gun:dIdx(tarih), saat, sure, bas:monday(tarih)}); if(not){ gorusSet("v:"+kim+":"+tarih, g=>{ g.not = not; }); } }
       else if(g0 && fd.get("kapsam")==="hep" && kim){ const eski = duzenOf(kim)||{}, gunDegisti = dIdx(tarih)!==dIdx(g0.tarih);
-        setDuzen(kim, {...eski, saat, sure, gun: gunDegisti ? dIdx(tarih) : (eski.gun ?? null), bas: eski.bas || monday(g0.tarih)});
-        if(!g0.sanal) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||g.durum||"planli"}); });
-        else if(not || (fd.get("durum")||"planli")!=="planli" || gunDegisti) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||"planli"}); }); }
-      else if(g0){ gorusSet(gid, g=>{ Object.assign(g, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:fd.get("durum")||g.durum||"planli"}); if(bid) g.bid = bid; }); }
+        setDuzen(kim, {...eski, saat, sure, gun: gunDegisti ? dIdx(tarih) : (eski.gun ?? null), bas: eski.bas || monday(g0.tarih), degis: monday(tarih)});
+        if(!g0.sanal) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||g.durum||"planli"}); delete g.tek; delete g.aktar; });
+        else if(not || (fd.get("durum")||"planli")!=="planli" || gunDegisti) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||"planli"}); delete g.aktar; }); }
+      else if(g0){ gorusSet(gid, g=>{ Object.assign(g, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:fd.get("durum")||g.durum||"planli"}); if(bid) g.bid = bid; delete g.aktar;
+          if(g.kaynak==="duzen" && fd.get("kapsam")==="hafta" && (saat!==g0.saat || sure!==(g0.sure||SURE_SEANS))) g.tek = true; }); }
       else { const nid = uid(); S.gorus.set(nid, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:"planli", ...(bid?{bid}:{})}); persistDoc("gorusmeler", nid, 0); }
       S.gday = tarih; closeSheet(); if(!["basvuru","detay"].includes(S.view)) S.view = "gorusme"; render(); toast("Görüşme kaydedildi"); }); }
   if(kind==="duzen"){ const gunOpt = (v, oto) => `<option value="">Otomatik · ${GUN[oto]}</option>${GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("")}`;
