@@ -193,7 +193,12 @@ function sesNota(c, f, t0, sure, vol, tip, f2){ const o = c.createOscillator(), 
 function sesCal(tur){ if(!SES.acik) return; const c = sesCtx(); if(!c) return; const t = c.currentTime + 0.005;
   try{ if(tur==="tik") sesNota(c, 480, t, 0.035, 0.018, "sine", 360);
     else if(tur==="basari"){ sesNota(c, 659, t, 0.12, 0.045, "triangle"); sesNota(c, 880, t+0.09, 0.16, 0.045, "triangle"); sesNota(c, 1175, t+0.18, 0.24, 0.035, "triangle"); } }catch(e){} }
-document.addEventListener("pointerdown", e=>{ const b = e.target.closest && e.target.closest("button, .row, .srow, .chip, label.btn, .szdrop, .segr"); if(!b || b.disabled || b.matches('[data-act="tick"]')) return; sesCal("tik"); }, {passive:true});
+/* Ses ve dalga sadece gerçek düğmelerde; satırlar, kartlar ve listeler sessiz ve sabit */
+const DUGME = ".btn, .iconbtn, .nb, .tog, .chip, .seg button, .szkeys button, label.btn, .temabtn, .og4 button, .kis button, .oyd, .bksik button, .kasik button, .vdc button";
+const DALGA = ".btn, .tog, .chip, .seg button, label.btn, .og4 button, .kis button, .bksik button, .vdc button";
+document.addEventListener("pointerdown", e=>{ const b = e.target.closest && e.target.closest(DUGME); if(!b || b.disabled || b.matches('[data-act="tick"]')) return; sesCal("tik");
+  const d = e.target.closest(DALGA); if(!d || matchMedia("(prefers-reduced-motion: reduce)").matches) return; const r = d.getBoundingClientRect(), z = Math.max(r.width, r.height);
+  const sp = document.createElement("span"); sp.className = "dalga"; sp.style.cssText = `width:${z}px;height:${z}px;left:${e.clientX - r.left - z/2}px;top:${e.clientY - r.top - z/2}px`; d.appendChild(sp); setTimeout(()=>sp.remove(), 520); }, {passive:true});
 /* Ana sayfadaki küçük açık/koyu geçiş butonu */
 const koyuMu = () => THEME.mode==="dark" || (THEME.mode==="system" && matchMedia("(prefers-color-scheme: dark)").matches);
 const temaBtn = () => { const k = koyuMu(); return `<button class="temabtn" data-act="temagec" aria-label="${k?"Açık moda geç":"Koyu moda geç"}" title="${k?"Açık mod":"Koyu mod"}">${icon(k?"sun":"moon","xs")}</button>`; };
