@@ -602,7 +602,7 @@ button.tile.tbtn:active{transform:scale(.97)}
 #layer .sheet{animation:shin .42s cubic-bezier(.2,.8,.25,1) both}
 details[open]>*:not(summary){animation:acin .3s ease both}
 .btn,.row,.nb,.srow,.gday,.kt,.gozi,.iconbtn,.tog,.qb,.hero{transition:transform .12s ease,background-color .15s ease,border-color .15s ease}
-.btn:active,.row:active,.srow:active,.gday:active,.kt:active,.gozi:active,.iconbtn:active,.tog:active,.qb:active,.hero:active{transform:scale(.97)}
+.btn:active,.gozi:active,.iconbtn:active,.tog:active,.qb:active{transform:scale(.97)}
 .nb:active .bub,.nb:active>svg{transform:scale(.9);transition:transform .1s ease}
 .toast{animation:pgin .35s ease both}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
@@ -987,9 +987,9 @@ body{background:var(--bg)}
 /* ===== Buton dokunma animasyonu: basınca hafif küçülür, bırakınca yaylanarak döner ===== */
 .btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{
   transition:transform .32s cubic-bezier(.34,1.56,.64,1),background-color .15s ease,border-color .15s ease,box-shadow .15s ease,color .15s ease;-webkit-tap-highlight-color:transparent}
-.btn:active,.iconbtn:active,.chip:active,.qb:active,.tog:active,.gozi:active,.kt:active,.gday:active,.dbtn:active,.szopt:active,.szkeys button:active,.seg button:active,.segr:active span,.msggon:active,.hchip:active,.pills>button:active,.link:active,.sqbtns label:active,.arac button:active,.tile.tbtn:active{transform:scale(.94);transition-duration:.08s;transition-timing-function:ease-out}
-.hero:active,.szhome:active,.dch:active,.szdrop:active{transform:scale(.97);transition-duration:.08s;transition-timing-function:ease-out}
-.row:active,.srow:active,.msgrow:active,.gtad:active,.kpick:active{transform:scale(.985);transition-duration:.08s;transition-timing-function:ease-out}
+.btn:active,.iconbtn:active,.chip:active,.qb:active,.tog:active,.gozi:active,.dbtn:active,.szopt:active,.szkeys button:active,.seg button:active,.segr:active span,.msggon:active,.hchip:active,.pills>button:active,.link:active,.sqbtns label:active,.arac button:active,.tile.tbtn:active{transform:scale(.94);transition-duration:.08s;transition-timing-function:ease-out}
+/* Kartlar ve satırlar küçülmez (titreme hissi); basınca sadece hafifçe renklenir */
+.row:active,.srow:active,.msgrow:active,.gtad:active,.kpick:active,.szdrop:active{background-color:color-mix(in srgb,var(--fg) 5%,transparent)}
 .nb:active .bub,.nb:active>svg{transform:scale(.88);transition-duration:.08s}
 .temabtn:active{transform:scale(.86) rotate(-20deg);transition-duration:.08s}
 .btn:disabled:active,.iconbtn:disabled:active,button:disabled:active{transform:none}
@@ -997,6 +997,13 @@ body{background:var(--bg)}
   .btn,.iconbtn,.chip,.qb,.tog,.gozi,.kt,.gday,.hero,.szhome,.dch,.arac button,.dbtn,.szopt,.szkeys button,.seg button,.segr span,.tile.tbtn,.msggon,.hchip,.temabtn,.pills>button,.link,.szdrop,.sqbtns label,.row,.srow,.msgrow,.gtad,.kpick,.nb .bub,.nb>svg{transition:background-color .15s ease,color .15s ease}
   *:active{transform:none!important}
 }
+
+/* Düğmeye basma dalgası */
+.btn,.tog,.chip,.seg button,label.btn,.og4 button,.kis button,.bksik button,.vdc button{position:relative;overflow:hidden}
+.dalga{position:absolute;border-radius:50%;pointer-events:none;background:currentColor;opacity:.22;transform:scale(0);animation:dalga .5s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes dalga{to{transform:scale(2.4);opacity:0}}
+.og4 button:active,.kis button:active,.oyd:active,.vdc button:active,.bksik button:active{transform:scale(.94);transition:transform .08s ease-out}
+.og4 button,.kis button,.oyd,.vdc button,.bksik button{transition:transform .32s cubic-bezier(.34,1.56,.64,1),background-color .15s,border-color .15s}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
