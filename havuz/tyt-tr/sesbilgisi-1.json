@@ -1,0 +1,298 @@
+[
+ {
+  "id": "tyttr-sesbilgisi-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Yumuşaması",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünsüz yumuşaması olan sözcüğü belirler.",
+  "tipId": "ses-yumusama",
+  "tip": "Ünsüz yumuşaması",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünsüz yumuşaması vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "evden",
+   "B": "kalemi",
+   "C": "okulda",
+   "D": "kitabı",
+   "E": "çocuklar"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "kitabı"
+  },
+  "celdiriciler": {
+   "A": "Ev + -den: sözcüğün sonundaki ünsüz değişmemiştir; yumuşama yoktur.",
+   "B": "Kalem + -i: kök sonundaki “m” yumuşak bir ünsüzdür; değişmemiştir.",
+   "C": "Okul + -da: kök sonu ünsüz değişmemiştir.",
+   "E": "Çocuk + -lar: ek ünsüzle başladığı için kökteki “k” yumuşamaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Ünsüz yumuşaması bulunan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz yumuşaması",
+    "ifade": "p, ç, t, k ile biten sözcüğe ünlüyle başlayan ek gelince p→b, ç→c, t→d, k→ğ olur · kitap → kitabı, ağaç → ağacı"
+   }
+  ],
+  "ipuclari": [
+   "p, ç, t, k ile biten kök, ünlüyle başlayan ek aldığında hangi ünsüze dönüşür?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sert ünsüzle biten sözcüğe ünlüyle başlayan ek gelince sert ünsüz yumuşar.",
+    "islem": "p→b, ç→c, t→d, k→ğ"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, B, C’de kök sonu değişmemiş; E’de ek ünsüzle başladığı için “k” yumuşamamış.",
+    "islem": "A, B, C, E: yumuşama yok"
+   },
+   {
+    "baslik": "Yumuşamayı bul",
+    "aciklama": "“Kitap + -ı” → kitabı: p, b’ye dönüşmüş.",
+    "islem": "D: kitabı"
+   }
+  ],
+  "puf": "Ek ünlüyle başlıyor ve kökün son harfi sertse kökün sonunda yumuşama olabilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SES-01 (Ünsüz Yumuşaması) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sesbilgisi-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Benzeşmesi",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünsüz benzeşmesi olan sözcüğü belirler.",
+  "tipId": "ses-benzesme",
+  "tip": "Ünsüz benzeşmesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünsüz benzeşmesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "evden",
+   "B": "kitapçı",
+   "C": "kalemlik",
+   "D": "burnu",
+   "E": "çocuklar"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "kitapçı"
+  },
+  "celdiriciler": {
+   "A": "Ev + -den: “v” sert ünsüz değildir; ekin “d”si değişmemiştir.",
+   "C": "Kalem + -lik: “m” sert ünsüz değildir; ek aynen kalmıştır.",
+   "D": "Burun + -u: ünlü düşmesi görülür; benzeşme yoktur.",
+   "E": "Çocuk + -lar: “k” sert olsa da ekin “l”si sertleşmemiştir; benzeşme yoktur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ünsüz benzeşmesi bulunan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz benzeşmesi",
+    "ifade": "sert ünsüzle (f, s, t, k, ç, ş, h, p) biten sözcüğe gelen ekin ilk ünsüzü sert olur · kitap+çı → kitapçı, sokak+ta → sokakta"
+   }
+  ],
+  "ipuclari": [
+   "Ekin ilk ünsüzü, kökün sonundaki sert ünsüzün etkisiyle sertleşmiş mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sert ünsüzle biten sözcüğe -cı, -da, -dan gibi ekler gelince ekin ilk ünsüzü sertleşir.",
+    "islem": "c→ç, d→t, g→k"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, C, E’de ek değişmemiş; D’de görülen olay ünlü düşmesidir.",
+    "islem": "A, C, D, E: benzeşme yok"
+   },
+   {
+    "baslik": "Benzeşmeyi bul",
+    "aciklama": "“Kitap + -cı” → kitapçı: ekin “c”si “ç”ye dönmüş.",
+    "islem": "B: kitapçı"
+   }
+  ],
+  "puf": "Sert ünsüzle biten kökün ardından ekte c, d, g yerine ç, t, k görüyorsan benzeşme vardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SES-02 (Ünsüz Benzeşmesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sesbilgisi-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünlü Uyumları",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Büyük ünlü uyumuna uyup küçük ünlü uyumuna uymayan sözcüğü belirler.",
+  "tipId": "ses-uyum",
+  "tip": "Ünlü uyumları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisi büyük ünlü uyumuna uyar, ancak küçük ünlü uyumuna uymaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "çiçek",
+   "B": "kapı",
+   "C": "kitap",
+   "D": "kalem",
+   "E": "karpuz"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "karpuz"
+  },
+  "celdiriciler": {
+   "A": "Ünlüleri i–e: ince ve düz; iki uyuma da uyar.",
+   "B": "Ünlüleri a–ı: kalın ve düz; iki uyuma da uyar.",
+   "C": "Ünlüleri i–a: biri ince, biri kalın; büyük ünlü uyumuna uymaz.",
+   "D": "Ünlüleri a–e: biri kalın, biri ince; büyük ünlü uyumuna uymaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Büyük ünlü uyumuna uyup küçük ünlü uyumuna uymayan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü uyumları",
+    "ifade": "büyük ünlü uyumu: sözcükteki tüm ünlüler kalın (a ı o u) ya da ince (e i ö ü) · küçük ünlü uyumu: düz ünlüden (a e ı i) sonra düz, yuvarlak ünlüden (o ö u ü) sonra u, ü, a ya da e gelir · karpuz: büyüğe uyar, küçüğe uymaz"
+   }
+  ],
+  "ipuclari": [
+   "Önce ünlülerin hepsi kalın mı ince mi diye bak; sonra düz ünlüden sonra yuvarlak ünlü gelip gelmediğini denetle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütleri hatırla",
+    "aciklama": "Büyük ünlü uyumu: ünlüler hep kalın ya da hep ince. Küçük ünlü uyumu: düz ünlüden sonra düz ünlü gelir.",
+    "islem": "büyük: kalın/ince · küçük: düz/yuvarlak"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "çiçek ve kapı iki uyuma da uyar; kitap ve kalem büyük ünlü uyumuna uymaz.",
+    "islem": "A, B, C, D: elenir"
+   },
+   {
+    "baslik": "Cevabı seç",
+    "aciklama": "karpuz: a–u ünlüleri kalındır (büyük uyum ✓); ama düz “a”dan sonra yuvarlak “u” geldiği için küçük uyum ✗.",
+    "islem": "E: karpuz"
+   }
+  ],
+  "puf": "Önce büyük ünlü uyumunu ele; geriye kalanlarda düz ünlüden sonra yuvarlak ünlü geliyor mu diye bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SES-03 (Ünlü Uyumları) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sesbilgisi-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ses Olaylarını Eşleştirme",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Sözcükte görülen ses olayının adını doğru eşleştirir.",
+  "tipId": "ses-eslestirme",
+  "tip": "Ses olayı eşleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki sözcüklerden hangisinin karşısında yazılan ses olayı yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "burnu – ünsüz yumuşaması",
+   "B": "kitabı – ünsüz yumuşaması",
+   "C": "ağzı – ünlü düşmesi",
+   "D": "sokakta – ünsüz benzeşmesi",
+   "E": "alnı – ünlü düşmesi"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "burnu – ünsüz yumuşaması"
+  },
+  "celdiriciler": {
+   "B": "Kitap + -ı → kitabı: p, b’ye dönüşmüştür; ses olayı doğru verilmiştir.",
+   "C": "Ağız + -ı → ağzı: ikinci hecedeki ünlü düşmüştür; doğru verilmiştir.",
+   "D": "Sokak + -ta: ekin “d”si sert “k”nin etkisiyle “t” olmuştur; benzeşmedir.",
+   "E": "Alın + -ı → alnı: ikinci hecedeki ünlü düşmüştür; doğru verilmiştir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ses olayı yanlış verilmiş olan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ses olayları",
+    "ifade": "yumuşama: kitap → kitabı · benzeşme: kitap+çı → kitapçı · ünlü düşmesi: ağız → ağzı, burun → burnu, alın → alnı"
+   }
+  ],
+  "ipuclari": [
+   "Burun + -u sözcüğünde bir ünsüz mü değişiyor, bir ünlü mü kayboluyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Olayları hatırla",
+    "aciklama": "Yumuşamada sert ünsüz yumuşak olur; benzeşmede ek sertleşir; düşmede ünlü kaybolur.",
+    "islem": "yumuşama · benzeşme · düşme"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "kitabı: p→b (yumuşama) ✓. sokakta: d→t (benzeşme) ✓. ağzı ve alnı: ünlü düşmesi ✓.",
+    "islem": "B, C, D, E: doğru"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "Burun + -u → burnu: “u” ünlüsü düşmüştür; yumuşama değil, ünlü düşmesidir.",
+    "islem": "A: ünlü düşmesi olmalı"
+   }
+  ],
+  "puf": "Bir harf başka bir harfe dönüşüyorsa yumuşama/benzeşme; bir harf kayboluyorsa düşme.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SES-04 (Ses Olaylarını Eşleştirme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

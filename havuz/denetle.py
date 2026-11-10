@@ -60,7 +60,7 @@ def denetle(Q,korpus=None):
         if set(cd)!=set('ABCDE')-{c.get('sik')}: H_('çeldirici açıklamaları doğru şık hariç 4 şık olmalı')
         if any(len(v)<12 for v in cd.values()): H_('çok kısa çeldirici açıklaması')
         ip=q.get('ipuclari',[])
-        if len(ip)!=3: H_('ipucu sayısı 3 değil')
+        if len(ip) not in (1,3): H_('ipucu sayısı 1 (iskelet) ya da 3 olmalı')
         dv=str(c.get('deger',''))
         if dv and len(dv)<=8 and any(re.search(rf'(?<![\d,/]){re.escape(dv)}(?![\d,/])',x) for x in ip) and not dv.isalpha(): U(f'ipucu cevabı ({dv}) içeriyor olabilir')
         a=q.get('adimlar',[])

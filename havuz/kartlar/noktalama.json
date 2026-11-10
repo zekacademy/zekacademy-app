@@ -1,0 +1,134 @@
+{
+ "konu": "Noktalama İşaretleri",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-NOK-01",
+   "konu": "Noktalama İşaretleri",
+   "alt": "Nokta, Soru ve Ünlem İşareti",
+   "fikir": "Cümlenin anlamına göre (bildirme, soru, ünlem) uygun bitiş işaretini belirlemek.",
+   "tuzak": "Dolaylı soruya soru işareti, ünlem anlamlı cümleye nokta koymak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "nok-bitis",
+   "tip": "Bitiş işaretleri",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-NOK-02",
+   "konu": "Noktalama İşaretleri",
+   "alt": "Dolaylı Soru ve Bitiş İşareti",
+   "fikir": "Soru sözcüğü taşıyan ama soru anlamı olmayan cümleleri tanımak.",
+   "tuzak": "Soru sözcüğü görünce soru işareti koymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "nok-dolayli",
+   "tip": "Dolaylı soru",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-NOK-03",
+   "konu": "Noktalama İşaretleri",
+   "alt": "İki Nokta",
+   "fikir": "İki noktanın açıklama ve sıralama öncesinde, tamamlanmış cümleden sonra kullanıldığını bilmek.",
+   "tuzak": "İki noktayı cümlenin ortasında, yüklemi tamamlanmamış yerde kullanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "nok-ikinokta",
+   "tip": "İki nokta",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-NOK-04",
+   "konu": "Noktalama İşaretleri",
+   "alt": "Kesme İşareti",
+   "fikir": "Kesme işaretinin özel adlara gelen çekim eklerinde kullanıldığını, yapım eklerinde ve cins adlarda kullanılmadığını bilmek.",
+   "tuzak": "Yapım ekinden önce kesme koymak; dil adına gelen eki kesmeyle ayırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "nok-kesme",
+   "tip": "Kesme işareti",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-NOK-05",
+   "konu": "Noktalama İşaretleri",
+   "alt": "Noktalı Virgül",
+   "fikir": "Noktalı virgülün birbiriyle ilgili cümleleri ya da öbekleri ayırmada kullanıldığını bilmek.",
+   "tuzak": "Noktalı virgülü sıralı sözcükler ya da hitap sonrasında kullanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "nok-noktalivirgul",
+   "tip": "Noktalı virgül",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-NOK-06",
+   "konu": "Noktalama İşaretleri",
+   "alt": "Nokta (Kısaltma, Saat, Sayı)",
+   "fikir": "Noktanın kısaltma, saat, tarih ve sayılarda kullanıldığı; kurum kısaltmalarında kullanılmadığı kuralını uygulamak.",
+   "tuzak": "Büyük harfli kurum kısaltmalarına nokta koymak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "nok-nokta",
+   "tip": "Nokta",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (noktalama işaretleri) ve TDK Yazım Kılavuzu"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "nok-bitis",
+   "ad": "Bitiş işaretleri",
+   "kartlar": [
+    "K-NOK-01"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  },
+  {
+   "tipId": "nok-dolayli",
+   "ad": "Dolaylı soru",
+   "kartlar": [
+    "K-NOK-02"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  },
+  {
+   "tipId": "nok-ikinokta",
+   "ad": "İki nokta",
+   "kartlar": [
+    "K-NOK-03"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  },
+  {
+   "tipId": "nok-kesme",
+   "ad": "Kesme işareti",
+   "kartlar": [
+    "K-NOK-04"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  },
+  {
+   "tipId": "nok-noktalivirgul",
+   "ad": "Noktalı virgül",
+   "kartlar": [
+    "K-NOK-05"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  },
+  {
+   "tipId": "nok-nokta",
+   "ad": "Nokta",
+   "kartlar": [
+    "K-NOK-06"
+   ],
+   "uygulamaKonu": "tr|Noktalama İşaretleri"
+  }
+ ]
+}

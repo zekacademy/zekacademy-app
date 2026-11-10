@@ -1,0 +1,298 @@
+[
+ {
+  "id": "tyttr-yapiekler-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcükte Yapı/Ekler · Yapı Bakımından Sözcükler",
+  "k": "tr|Sözcükte Yapı/Ekler",
+  "kazanim": "Sözcüklerin yapı bakımından basit, türemiş ve birleşik olduğunu ayırt eder.",
+  "tipId": "yap-yapi",
+  "tip": "Yapı bakımından sözcükler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki sözcüklerden hangisi yapı bakımından basit bir sözcüktür?",
+  "sekil": null,
+  "siklar": {
+   "A": "sandalye",
+   "B": "gözlük",
+   "C": "başbakan",
+   "D": "güzellik",
+   "E": "hanımeli"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "sandalye"
+  },
+  "celdiriciler": {
+   "B": "Göz + -lük: yapım eki aldığı için türemiş yapılıdır; basit değildir.",
+   "C": "Baş + bakan: iki sözcüğün birleşmesidir; birleşik yapılıdır.",
+   "D": "Güzel + -lik: yapım eki almıştır; türemiştir.",
+   "E": "Hanım + eli: iki sözcük kaynaşarak yeni bir kavramı (bitki adı) karşılar; birleşiktir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yapı bakımından basit olan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Yapı bakımından sözcükler",
+    "ifade": "basit: kök halinde, ek almamış (göz, sandalye) · türemiş: kök + yapım eki (göz+lük) · birleşik: iki sözcüğün birleşmesi (baş+bakan)"
+   }
+  ],
+  "ipuclari": [
+   "Sözcüğü köküne ve eklerine ayırmayı dene; ek almamış, tek parçalı olanı ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yapı türlerini hatırla",
+    "aciklama": "Basit sözcük ek almaz, iki sözcükten de oluşmaz.",
+    "islem": "basit = tek kök"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "gözlük: göz+lük, güzellik: güzel+lik (türemiş). başbakan: baş+bakan, hanımeli: hanım+eli (birleşik).",
+    "islem": "B, D: türemiş · C, E: birleşik"
+   },
+   {
+    "baslik": "Basit olanı seç",
+    "aciklama": "Sandalye bölünemeyen, ek almamış bir sözcüktür.",
+    "islem": "sandalye: basit"
+   }
+  ],
+  "puf": "Sözcüğü parçalara ayırabiliyorsan basit değildir; parça yoksa basittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-YE-01 (Yapı Bakımından Sözcükler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-yapiekler-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcükte Yapı/Ekler · Yapım Eki ve Çekim Eki",
+  "k": "tr|Sözcükte Yapı/Ekler",
+  "kazanim": "Sözcükteki ekin yapım eki mi çekim eki mi olduğunu belirler.",
+  "tipId": "yap-yapimcekim",
+  "tip": "Yapım eki ve çekim eki",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisi bir yapım eki almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "evlerden",
+   "B": "kitabın",
+   "C": "yazdık",
+   "D": "balıkçı",
+   "E": "gözlerim"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "balıkçı"
+  },
+  "celdiriciler": {
+   "A": "Ev + -ler (çoğul) + -den (ayrılma hâli): iki ek de çekim ekidir.",
+   "B": "Kitap + -ın (tamlayan eki): çekim ekidir, yapım eki yoktur.",
+   "C": "Yaz- + -dı (geçmiş zaman) + -k (kişi): ikisi de çekim ekidir.",
+   "E": "Göz + -ler (çoğul) + -im (iyelik): ikisi de çekim ekidir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yapım eki almış sözcük.",
+  "bilgi": [
+   {
+    "ad": "Yapım eki / çekim eki",
+    "ifade": "yapım eki sözcüğün anlamını ya da türünü değiştirir (göz → gözlük) · çekim eki sözcüğü cümleye bağlar, anlamını değiştirmez (çoğul -ler, hâl -i/-e/-den, iyelik -im, kişi, zaman ekleri)"
+   }
+  ],
+  "ipuclari": [
+   "Eki çıkarınca sözcüğün anlamı ya da türü değişiyor mu diye kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki ek türünü ayır",
+    "aciklama": "Yapım eki yeni sözcük türetir; çekim eki türetmez, yalnız cümledeki göreve işaret eder.",
+    "islem": "yapım: yeni sözcük · çekim: görev"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "evlerden: ev+ler+den. kitabın: kitap+ın. yazdık: yaz+dı+k. gözlerim: göz+ler+im. Hepsinde yalnız çekim eki var.",
+    "islem": "A, B, C, E: yalnız çekim"
+   },
+   {
+    "baslik": "Yapım ekini bul",
+    "aciklama": "Balıkçı: balık + -çı. Ek, “balık avlayan ya da satan kişi” anlamlı yeni bir sözcük türetmiştir.",
+    "islem": "D: balık+çı"
+   }
+  ],
+  "puf": "Eki çıkardığında yeni bir kavram kayboluyorsa ek yapım ekidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-YE-02 (Yapım Eki ve Çekim Eki) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-yapiekler-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcükte Yapı/Ekler · Ekin Türü (Kök Türü)",
+  "k": "tr|Sözcükte Yapı/Ekler",
+  "kazanim": "Yapım ekinin türettiği sözcüğün kökünün türünü belirler.",
+  "tipId": "yap-ekturu",
+  "tip": "Ekin türü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisi fiilden türemiş bir isimdir?",
+  "sekil": null,
+  "siklar": {
+   "A": "gözlük",
+   "B": "çiçekçi",
+   "C": "güzellik",
+   "D": "evcil",
+   "E": "okuyucu"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "okuyucu"
+  },
+  "celdiriciler": {
+   "A": "Göz + -lük: kök bir isimdir; ek isimden isim türetmiştir.",
+   "B": "Çiçek + -çi: kök isimdir; fiil kökü yoktur.",
+   "C": "Güzel + -lik: kök sıfat (isim soylu) bir sözcüktür; fiilden türememiştir.",
+   "D": "Ev + -cil: kök isimdir; üstelik türeyen sözcük isim değil sıfattır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Fiilden türemiş isim.",
+  "bilgi": [
+   {
+    "ad": "Ekin türü",
+    "ifade": "isimden isim: göz+lük · fiilden isim: oku+yucu · isimden fiil: baş+la- · fiilden fiil: yaz+dır-. Ek, kökün türüne göre adlandırılır"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün kökünü bul; kökü “-mek” alabilen (fiil olan) sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökleri ayır",
+    "aciklama": "Her sözcüğü ek ve köke ayır: göz+lük, çiçek+çi, güzel+lik, ev+cil, oku+yucu.",
+    "islem": "5 kök"
+   },
+   {
+    "baslik": "Kök türüne bak",
+    "aciklama": "Göz, çiçek, ev isim; güzel sıfattır. Bunların hiçbiri fiil değildir.",
+    "islem": "A, B, C, D: fiil kökü yok"
+   },
+   {
+    "baslik": "Fiil kökünü bul",
+    "aciklama": "Oku- bir fiildir; -yucu eki fiilden isim yapar. Okumak denilebilir.",
+    "islem": "E: oku- fiil"
+   }
+  ],
+  "puf": "Kök “-mek” alıp fiil oluyorsa ve türeyen sözcük isimse ek fiilden isim yapma ekidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-YE-03 (Ekin Türü (Kök Türü)) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-yapiekler-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcükte Yapı/Ekler · Ek Sayısı ve Sırası",
+  "k": "tr|Sözcükte Yapı/Ekler",
+  "kazanim": "Sözcükteki yapım ve çekim eklerini sayarak ayırt eder.",
+  "tipId": "yap-eksayi",
+  "tip": "Ek sayısı ve sırası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki sözcüklerden hangisinde birden fazla yapım eki vardır ve çekim eki yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "kitaplık",
+   "B": "gözlükçü",
+   "C": "balıkçıya",
+   "D": "evlerde",
+   "E": "okuyucu"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "gözlükçü"
+  },
+  "celdiriciler": {
+   "A": "Kitap + -lık: yalnız bir yapım eki vardır; birden fazla değildir.",
+   "C": "Balık + -çı (yapım) + -ya (yönelme hâli, çekim): bir yapım, bir çekim eki vardır.",
+   "D": "Ev + -ler + -de: iki ek de çekim ekidir; yapım eki yoktur.",
+   "E": "Oku- + -yucu: tek yapım eki vardır."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Birden fazla yapım eki olup çekim eki olmayan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Yapım eki / çekim eki",
+    "ifade": "yapım eki sözcüğün anlamını ya da türünü değiştirir (göz → gözlük) · çekim eki sözcüğü cümleye bağlar, anlamını değiştirmez (çoğul -ler, hâl -i/-e/-den, iyelik -im, kişi, zaman ekleri)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğü köküne kadar çöz; ekleri yapım ve çekim diye iki sütunda say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü yaz",
+    "aciklama": "İki koşul var: en az iki yapım eki, hiç çekim eki yok.",
+    "islem": "yapım ≥ 2 · çekim = 0"
+   },
+   {
+    "baslik": "Şıkları say",
+    "aciklama": "kitaplık 1 yapım. balıkçıya 1 yapım ve 1 çekim. evlerde 2 çekim. okuyucu 1 yapım.",
+    "islem": "A, C, D, E: koşulu sağlamıyor"
+   },
+   {
+    "baslik": "Çözümü doğrula",
+    "aciklama": "Gözlükçü: göz + -lük + -çü. İki ek de yeni sözcük türetir ve çekim eki yoktur.",
+    "islem": "B: göz+lük+çü"
+   }
+  ],
+  "puf": "Ek saymada her şıkkı köke kadar çöz ve yapım-çekim ayrımını tabloya dök.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-YE-04 (Ek Sayısı ve Sırası) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

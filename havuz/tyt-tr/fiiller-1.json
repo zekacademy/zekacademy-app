@@ -1,0 +1,298 @@
+[
+ {
+  "id": "tyttr-fiiller-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Fiiller-Fiilimsiler-Ek Fiiller-Çatı · Fiilimsiler",
+  "k": "tr|Fiiller-Fiilimsiler-Ek Fiiller-Çatı",
+  "kazanim": "Fiilimsinin isim-fiil olduğu cümleyi bulur.",
+  "tipId": "fii-fiilimsi",
+  "tip": "Fiilimsi türü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinde tırnak içindeki fiilimsi isim-fiildir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Gelen” misafirleri karşıladık.",
+   "B": "Sabah erken “kalkmak” bana iyi geliyor.",
+   "C": "Eve “koşarak” girdi.",
+   "D": "Yağmur “yağınca” yola çıkmadık.",
+   "E": "“Okunan” kitabı kapattı."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Sabah erken “kalkmak” bana iyi geliyor."
+  },
+  "celdiriciler": {
+   "A": "Gel- + -en: “misafirleri” ismini niteleyen sıfat-fiildir.",
+   "C": "Koş- + -arak: “girdi” fiilini niteleyen zarf-fiildir.",
+   "D": "Yağ- + -ınca: zaman bildiren zarf-fiildir.",
+   "E": "Okun- + -an: “kitabı” ismini niteleyen sıfat-fiildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İsim-fiil olan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Fiilimsiler",
+    "ifade": "isim-fiil: -mak, -ma, -ış (kalkmak) · sıfat-fiil: -an, -dık, -ecek, -mış (giren öğrenci) · zarf-fiil: -arak, -ınca, -ip, -madan, -a … -a (koşarak girdi). Fiilimsiler yüklem olmaz, cümlede isim, sıfat ya da zarf görevi görür"
+   }
+  ],
+  "ipuclari": [
+   "İsim-fiil ekleri -mak, -ma, -ış’tır; bu ekleri alan fiilimsiyi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ekleri hatırla",
+    "aciklama": "İsim-fiil eki -mak, -ma, -ış’tır.",
+    "islem": "isim-fiil: -mak, -ma, -ış"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "gelen ve okunan: -an (sıfat-fiil). koşarak ve yağınca: -arak, -ınca (zarf-fiil).",
+    "islem": "A, E: sıfat-fiil · C, D: zarf-fiil"
+   },
+   {
+    "baslik": "İsim-fiili seç",
+    "aciklama": "Kalkmak: kalk- + -mak. Cümlede “kalkmak” özne görevinde bir isim gibi kullanılıyor.",
+    "islem": "B: isim-fiil"
+   }
+  ],
+  "puf": "Fiilimsinin ekine bak: -mak/-ma/-ış isim-fiil, -an/-dık/-ecek sıfat-fiil, -arak/-ınca/-ip zarf-fiildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FF-01 (Fiilimsiler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-fiiller-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Fiiller-Fiilimsiler-Ek Fiiller-Çatı · Fiillerde Çatı",
+  "k": "tr|Fiiller-Fiilimsiler-Ek Fiiller-Çatı",
+  "kazanim": "Fiilin ettirgen çatılı olduğu cümleyi bulur.",
+  "tipId": "fii-cati",
+  "tip": "Fiillerde çatı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde fiil ettirgen çatılıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ayşe pencereyi açtı.",
+   "B": "Ders bitince bahçeye çıktılar.",
+   "C": "Yemek annem tarafından hazırlandı.",
+   "D": "Ali saçını kestirdi.",
+   "E": "Misafirler akşam geç geldi."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Ali saçını kestirdi."
+  },
+  "celdiriciler": {
+   "A": "Aç- kök fiil; iş doğrudan özne tarafından yapılıyor, etken çatıdır.",
+   "B": "Çık- kök fiil; çatı eki yoktur, etken çatıdır.",
+   "C": "Hazırla-n-: özne işi yapan değil, işten etkilenendir; edilgendir.",
+   "E": "Gel- kök fiil; çatı eki yoktur, etken çatıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Fiilin ettirgen çatılı olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Çatı",
+    "ifade": "etken: özne işi kendisi yapar (kapıyı açtı) · edilgen: özne iş yapılan şeydir, -l/-n eki (kapı açıldı) · ettirgen: iş başkasına yaptırılır, -dır, -t eki (kestirdi) · dönüşlü: özne işi kendi üzerine yapar (yıkandı)"
+   }
+  ],
+  "ipuclari": [
+   "Ettirgen çatıda iş özne tarafından değil, başkasına yaptırılarak yapılır; -dır ve -t eklerini ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ettirgen çatıyı hatırla",
+    "aciklama": "İş özne tarafından değil başkasına yaptırılarak gerçekleşir; -dır, -t, -ir ekleri kullanılır.",
+    "islem": "kes-tir-: yaptırma"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "açtı, çıktılar, geldi: çatı eki yok, etken. hazırlandı: -n eki ve “tarafından” ile edilgen.",
+    "islem": "A, B, E: etken · C: edilgen"
+   },
+   {
+    "baslik": "Ettirgeni seç",
+    "aciklama": "Kestirdi: kes- + -tir. Ali saçını kendisi kesmiyor, birine kestiriyor.",
+    "islem": "D: ettirgen"
+   }
+  ],
+  "puf": "Fiilde -dır/-t ekini görürsen “başkasına yaptırılıyor mu?” diye sor.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FF-02 (Fiillerde Çatı) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-fiiller-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Fiiller-Fiilimsiler-Ek Fiiller-Çatı · Ek Fiil",
+  "k": "tr|Fiiller-Fiilimsiler-Ek Fiiller-Çatı",
+  "kazanim": "Yüklemin rivayet anlamı katan ek fiille çekimlendiği cümleyi bulur.",
+  "tipId": "fii-ekfiil",
+  "tip": "Ek fiil",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinin yüklemi, rivayet (öğrenilen geçmiş zaman) anlamı katan ek fiille çekimlenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Komşumuzun bahçesi çok genişmiş.",
+   "B": "Çocuk akşam erkenden uyumuş.",
+   "C": "Annem sabah pazara gitmiş.",
+   "D": "Kardeşim dün gece geç yatmış.",
+   "E": "Babam bu sabah işe erken çıkmış."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Komşumuzun bahçesi çok genişmiş."
+  },
+  "celdiriciler": {
+   "B": "Uyu- fiil kökü + -muş: kip ekidir, yüklem fiildir; ek fiil yoktur.",
+   "C": "Git- fiil kökü + -miş: fiilin kip ekidir; ek fiil değildir.",
+   "D": "Yat- fiil kökü + -mış: kip ekidir; ek fiil yoktur.",
+   "E": "Çık- fiil kökü + -mış: kip ekidir; ek fiil yoktur."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yüklemi ek fiille çekimlenmiş cümle.",
+  "bilgi": [
+   {
+    "ad": "Ek fiil",
+    "ifade": "ek fiil: isim soylu sözcüğü yüklem yapar, kip ve kişi ekleri alır (genişmiş = geniş + imiş, yorgundu = yorgun + idi). Fiile gelen -miş ise kip ekidir, ek fiil değildir (yatmış = yat- + -mış)"
+   }
+  ],
+  "ipuclari": [
+   "Yüklemin kökü fiil mi, isim soylu bir sözcük mü? Fiil kökü olanlarda -miş ek fiil değildir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüklemin kökünü bul",
+    "aciklama": "Ek fiil, isim soylu sözcüğü yüklem yapar; kökü fiilse ek fiil yoktur.",
+    "islem": "kök fiil → ek fiil yok"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "uyumuş: uyu-, gitmiş: git-, yatmış: yat-, çıkmış: çık-. Hepsi fiil kökü; -miş kip ekidir.",
+    "islem": "B, C, D, E: fiil çekimi"
+   },
+   {
+    "baslik": "Ek fiili seç",
+    "aciklama": "Genişmiş: geniş (sıfat) + imiş. İsim soylu sözcük ek fiille yüklem olmuştur.",
+    "islem": "A: geniş+miş"
+   }
+  ],
+  "puf": "Yüklemde -miş görünce önce köke bak: isim soylu ise ek fiil, fiil ise kip ekidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FF-03 (Ek Fiil) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-fiiller-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Fiiller-Fiilimsiler-Ek Fiiller-Çatı · Fiilimsi Türlerini Karşılaştırma",
+  "k": "tr|Fiiller-Fiilimsiler-Ek Fiiller-Çatı",
+  "kazanim": "Fiilimsilerin türünü karşılaştırarak farklı olanı belirler.",
+  "tipId": "fii-karsilastir",
+  "tip": "Fiilimsi türlerini karşılaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerde tırnak içinde verilen fiilimsilerden hangisi türü bakımından diğerlerinden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Bildiğimiz” yoldan gitmeyi tercih ettik.",
+   "B": "Sınıfa “giren” öğrenci selam verdi.",
+   "C": "Yarın “alacağım” kitabı sana göstereceğim.",
+   "D": "“Yırtılmış” defteri çöpe attı.",
+   "E": "Sabah erken “kalkmak” zordur."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Sabah erken “kalkmak” zordur."
+  },
+  "celdiriciler": {
+   "A": "Bil- + -dik: “yol” ismini niteleyen sıfat-fiildir; diğerleriyle aynı türdedir.",
+   "B": "Gir- + -en: “öğrenci” ismini niteleyen sıfat-fiildir; diğerleriyle aynı türdedir.",
+   "C": "Al- + -acak: “kitabı” ismini niteleyen sıfat-fiildir.",
+   "D": "Yırtıl- + -mış: “defteri” ismini niteleyen sıfat-fiildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Türü diğerlerinden farklı olan fiilimsi.",
+  "bilgi": [
+   {
+    "ad": "Fiilimsiler",
+    "ifade": "isim-fiil: -mak, -ma, -ış (kalkmak) · sıfat-fiil: -an, -dık, -ecek, -mış (giren öğrenci) · zarf-fiil: -arak, -ınca, -ip, -madan, -a … -a (koşarak girdi). Fiilimsiler yüklem olmaz, cümlede isim, sıfat ya da zarf görevi görür"
+   }
+  ],
+  "ipuclari": [
+   "Önce her fiilimsinin bir isim mi niteleyip nitelemediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ek ve görevi yaz",
+    "aciklama": "Sıfat-fiil bir ismi niteler; isim-fiil isim gibi kullanılır.",
+    "islem": "sıfat-fiil: isim niteler"
+   },
+   {
+    "baslik": "Dört şıkkı çöz",
+    "aciklama": "bildiğimiz yol, giren öğrenci, alacağım kitap, yırtılmış defter: hepsinde fiilimsi bir ismi niteliyor.",
+    "islem": "A, B, C, D: sıfat-fiil"
+   },
+   {
+    "baslik": "Farklı olanı seç",
+    "aciklama": "“Kalkmak” bir ismi nitelemiyor, cümlede özne gibi kullanılıyor; -mak eki isim-fiil yapar.",
+    "islem": "E: isim-fiil"
+   }
+  ],
+  "puf": "Farklı olanı bulurken dört şıkkın ortak özelliğini önce bul, sonra uymayanı seç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FF-04 (Fiilimsi Türlerini Karşılaştırma) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

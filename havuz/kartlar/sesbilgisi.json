@@ -1,0 +1,92 @@
+{
+ "konu": "Ses Bilgisi",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-SES-01",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünsüz Yumuşaması",
+   "fikir": "p, ç, t, k ile biten sözcüklere ünlüyle başlayan ek gelince sertin yumuşadığını tanımak.",
+   "tuzak": "Ünsüz benzeşmesiyle (ek değişimi) karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "ses-yumusama",
+   "tip": "Ünsüz yumuşaması",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (ses bilgisi) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-SES-02",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünsüz Benzeşmesi",
+   "fikir": "Sert ünsüzle biten sözcüğe gelen ekin ilk ünsüzünün sertleştiğini tanımak.",
+   "tuzak": "Yumuşamayı (kök değişimi) benzeşme sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ses-benzesme",
+   "tip": "Ünsüz benzeşmesi",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (ses bilgisi) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-SES-03",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünlü Uyumları",
+   "fikir": "Sözcüğün büyük ve küçük ünlü uyumuna uyup uymadığını ünlüleri sınıflayarak belirlemek.",
+   "tuzak": "Yalnız ilk iki ünlüye bakıp küçük ünlü uyumunu atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ses-uyum",
+   "tip": "Ünlü uyumları",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (ses bilgisi) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-SES-04",
+   "konu": "Ses Bilgisi",
+   "alt": "Ses Olaylarını Eşleştirme",
+   "fikir": "Sözcüklerde görülen ses olayını (yumuşama, benzeşme, düşme) doğru adlandırmak.",
+   "tuzak": "Ünlü düşmesini yumuşamayla karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "ses-eslestirme",
+   "tip": "Ses olayı eşleştirme",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (ses bilgisi) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ses-yumusama",
+   "ad": "Ünsüz yumuşaması",
+   "kartlar": [
+    "K-SES-01"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "ses-benzesme",
+   "ad": "Ünsüz benzeşmesi",
+   "kartlar": [
+    "K-SES-02"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "ses-uyum",
+   "ad": "Ünlü uyumları",
+   "kartlar": [
+    "K-SES-03"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "ses-eslestirme",
+   "ad": "Ses olayı eşleştirme",
+   "kartlar": [
+    "K-SES-04"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  }
+ ]
+}

@@ -1,0 +1,298 @@
+[
+ {
+  "id": "tyttr-anlatimboz-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Anlatım Bozukluğu · Gereksiz Sözcük Kullanımı",
+  "k": "tr|Anlatım Bozukluğu",
+  "kazanim": "Anlamca aynı sözcüklerin gereksiz yinelendiği cümleyi bulur.",
+  "tipId": "anl-gereksiz",
+  "tip": "Gereksiz sözcük kullanımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinde anlamca aynı olan sözcüklerin gereksiz kullanımından kaynaklanan bir anlatım bozukluğu vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Komşumuz, bahçedeki ağaçları sonbaharda budadı.",
+   "B": "Öğretmenimiz, ödevlerin cuma gününe kadar getirilmesini istedi.",
+   "C": "Çocuklar, yağmur dinince sokakta top oynamaya başladı.",
+   "D": "Kitabı bitirdikten sonra onu bir daha tekrar okumak istedi.",
+   "E": "Kütüphaneden aldığım roman, beklediğimden çok daha akıcıydı."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Kitabı bitirdikten sonra onu bir daha tekrar okumak istedi."
+  },
+  "celdiriciler": {
+   "A": "Anlamca tekrar eden sözcük yoktur; cümle doğrudur.",
+   "B": "Gereksiz sözcük yoktur; anlatım doğrudur.",
+   "C": "Anlamca tekrar yoktur; anlatım doğrudur.",
+   "E": "“Çok daha” karşılaştırmayı pekiştirir; aynı anlamlı gereksiz sözcük yoktur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Gereksiz sözcük nedeniyle bozuk olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Gereksiz sözcük",
+    "ifade": "anlamca aynı olan sözcüklerin birlikte kullanılması anlatım bozukluğudur (bir daha tekrar, yaklaşık olarak tahminen). Kullanılan sözcüklerden biri yetmektedir"
+   }
+  ],
+  "ipuclari": [
+   "“Bir daha” ve “tekrar” gibi aynı anlamı veren sözcük çiftlerini ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bozukluk türünü hatırla",
+    "aciklama": "Aynı anlamı veren iki sözcük birlikte kullanılırsa gereksiz yineleme olur.",
+    "islem": "bir daha = tekrar"
+   },
+   {
+    "baslik": "Şıkları tara",
+    "aciklama": "A, B, C ve E’de aynı anlamı taşıyan sözcük çifti yok; her sözcük cümleye yeni bir bilgi katıyor.",
+    "islem": "A, B, C, E: doğru"
+   },
+   {
+    "baslik": "Bozuk cümleyi seç",
+    "aciklama": "D’de “bir daha” ve “tekrar” aynı anlamdadır; birini çıkarınca cümle düzelir.",
+    "islem": "D: bozuk"
+   }
+  ],
+  "puf": "Anlam bakımından yinelenen sözcükleri ararken birini çıkar; cümle hâlâ aynı anlamı veriyorsa yineleme vardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-AB-01 (Gereksiz Sözcük Kullanımı) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-anlatimboz-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Anlatım Bozukluğu · Özne–Yüklem Uyumu",
+  "k": "tr|Anlatım Bozukluğu",
+  "kazanim": "Özne ile yüklemin kişi ve sayı bakımından uyuşmadığı cümleyi bulur.",
+  "tipId": "anl-ozne",
+  "tip": "Özne–yüklem uyumsuzluğu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde özne–yüklem uyumsuzluğundan kaynaklanan bir anlatım bozukluğu vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Arkadaşlarım hafta sonu müzeyi gezdi.",
+   "B": "Misafirler akşam yemeğinden sonra çaylarını içip bizimle vedalaştım.",
+   "C": "Hepimiz sınav sonuçlarını merak ediyorduk.",
+   "D": "Sizler bu projede çok emek harcadınız.",
+   "E": "Çocuklar bahçede saklambaç oynadı."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Misafirler akşam yemeğinden sonra çaylarını içip bizimle vedalaştım."
+  },
+  "celdiriciler": {
+   "A": "Özne “arkadaşlarım” (3. kişi), yüklem “gezdi” (3. kişi); uyumludur.",
+   "C": "Özne “hepimiz” (1. çoğul), yüklem “ediyorduk” (1. çoğul); uyumludur.",
+   "D": "Özne “sizler” (2. çoğul), yüklem “harcadınız” (2. çoğul); uyumludur.",
+   "E": "Özne “çocuklar”, yüklem “oynadı”: çoğul özneye tekil yüklem Türkçede uyumsuzluk sayılmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Özne–yüklem uyumsuzluğu olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Özne–yüklem uyumu",
+    "ifade": "özne ile yüklem kişi ve sayı bakımından uyumlu olmalıdır. Öğrenciler geldi (3. çoğul + 3. çoğul) doğru; Öğrenciler geldim (3. çoğul + 1. tekil) bozuktur"
+   }
+  ],
+  "ipuclari": [
+   "Her cümlede öznenin kişisini ve yüklemin kişi ekini yan yana yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Özne ile yüklemin kişisi uyuşmalı: biz → -ık, siz → -ınız, onlar → -dı.",
+    "islem": "özne ↔ yüklem uyumu"
+   },
+   {
+    "baslik": "Şıkları çözümle",
+    "aciklama": "A: arkadaşlarım–gezdi, C: hepimiz–ediyorduk, D: sizler–harcadınız, E: çocuklar–oynadı. Hepsi uyumlu.",
+    "islem": "A, C, D, E: uyumlu"
+   },
+   {
+    "baslik": "Uyumsuzluğu bul",
+    "aciklama": "B’de özne “misafirler” (3. çoğul); yüklem “vedalaştım” 1. tekil kişi eki alıyor.",
+    "islem": "B: bozuk"
+   }
+  ],
+  "puf": "Önce özneyi, sonra yüklemin kişi ekini bul; ikisinin kişisini karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-AB-02 (Özne–Yüklem Uyumu) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-anlatimboz-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Anlatım Bozukluğu · Neden–Sonuç ve Mantık",
+  "k": "tr|Anlatım Bozukluğu",
+  "kazanim": "Neden–sonuç ilişkisi mantıkla bağdaşmayan cümleyi bulur.",
+  "tipId": "anl-mantik",
+  "tip": "Neden–sonuç ve mantık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde neden–sonuç ilişkisinden kaynaklanan bir anlatım bozukluğu vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yeni açılan metro hattı sayesinde şehir içi ulaşım kolaylaştı.",
+   "B": "Sabah erken kalktığı için derse geç kalmadı.",
+   "C": "Yeterince çalışmadığı hâlde sınavdan yüksek not aldı.",
+   "D": "Yolların kapanması nedeniyle seferler iptal edildi.",
+   "E": "Sürekli yağış yüzünden barajlardaki su seviyesi düştü."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Sürekli yağış yüzünden barajlardaki su seviyesi düştü."
+  },
+  "celdiriciler": {
+   "A": "Metro hattı ulaşımı kolaylaştırır; neden ile sonuç tutarlıdır.",
+   "B": "Erken kalkmak, derse zamanında yetişmenin nedenidir; mantık tutarlıdır.",
+   "C": "“Hâlde” karşıtlık bildirir; çalışmama ile yüksek not arasındaki karşıtlık doğru kurulmuştur.",
+   "D": "Yolların kapanması seferlerin iptaline yol açar; mantık tutarlıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Neden–sonuç ilişkisi mantıksız olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Neden–sonuç / mantık",
+    "ifade": "cümledeki neden ile sonuç anlamca birbirini karşılamalıdır. “Hava soğuk olduğu için kalın giyindik” doğru; “Hava sıcak olduğu için kalın giyindik” mantık bakımından bozuktur"
+   }
+  ],
+  "ipuclari": [
+   "Her cümlede nedenin sonucu gerçekten doğurup doğurmadığını sor."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Neden ile sonuç birbirini karşılamalıdır; neden sonucu doğurmalıdır.",
+    "islem": "neden → sonuç"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "Metro hattı ulaşımı kolaylaştırır. Erken kalkan geç kalmaz. Yolların kapanması seferleri durdurur. C’deki karşıtlık da doğrudur.",
+    "islem": "A, B, C, D: tutarlı"
+   },
+   {
+    "baslik": "Mantıksız olanı bul",
+    "aciklama": "Sürekli yağış barajlardaki suyu azaltmaz, artırır; “yüzünden düştü” mantıkla bağdaşmaz.",
+    "islem": "E: bozuk"
+   }
+  ],
+  "puf": "Neden-sonuç cümlelerinde nedeni ve sonucu ayrı ayrı yaz, sonra nedenin sonucu doğurup doğurmadığına bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-AB-03 (Neden–Sonuç ve Mantık) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-anlatimboz-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Anlatım Bozukluğu · Bozukluğu Olmayan Cümle",
+  "k": "tr|Anlatım Bozukluğu",
+  "kazanim": "Farklı türde bozukluk içeren cümleler arasından bozukluğu olmayanı bulur.",
+  "tipId": "anl-karma",
+  "tip": "Bozukluğu olmayan cümle",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğu yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Akşam yağan sağanak yüzünden şehrin bazı yolları ulaşıma kapandı.",
+   "B": "Müdür, hem öğretmenleri hem öğrencilerle uzun uzun konuştu.",
+   "C": "Sınıf başkanı seçilen Zeynep, bütün arkadaşlarına teşekkür ettik.",
+   "D": "Toplantıya yaklaşık olarak tahminen elli kişi katıldı.",
+   "E": "Hava çok sıcak olduğu için kalın montlarımızı giyip yola çıktık."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Akşam yağan sağanak yüzünden şehrin bazı yolları ulaşıma kapandı."
+  },
+  "celdiriciler": {
+   "B": "“Konuşmak” fiili “-le” alır; ortak ek “öğretmenleri” sözcüğüne uymaz (ek eksikliği). “Öğretmenlerle ve öğrencilerle” olmalıdır.",
+   "C": "Özne “Zeynep” 3. tekil, yüklem “ettik” 1. çoğul: özne–yüklem uyumsuzluğu vardır.",
+   "D": "“Yaklaşık olarak” ve “tahminen” aynı anlamdadır; gereksiz sözcük kullanımı vardır.",
+   "E": "Sıcak havanın sonucu kalın giyinmek değildir; neden-sonuç mantığı bozuktur."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Anlatım bozukluğu bulunmayan cümle.",
+  "bilgi": [
+   {
+    "ad": "Bozukluk türleri",
+    "ifade": "gereksiz sözcük (bir daha tekrar) · özne–yüklem uyumsuzluğu (öğrenciler geldim) · mantık hatası (sıcak olduğu için kalın giyindik) · ek eksikliği (hem öğretmeni hem öğrencilerle: ortak ek her sözcüğe uymalı)"
+   }
+  ],
+  "ipuclari": [
+   "Dört cümlede farklı türde bozukluk var: ek, özne–yüklem, yineleme ve mantık."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tür listesini yap",
+    "aciklama": "Aranacak bozukluklar: ek eksikliği, özne–yüklem uyumsuzluğu, gereksiz sözcük, mantık hatası.",
+    "islem": "4 tür"
+   },
+   {
+    "baslik": "Bozuk cümleleri ele",
+    "aciklama": "B’de ortak ek eksik, C’de Zeynep–ettik uyumsuz, D’de yaklaşık olarak–tahminen yinelemesi, E’de sıcak–kalın mont çelişkisi var.",
+    "islem": "B, C, D, E: bozuk"
+   },
+   {
+    "baslik": "Temiz olanı doğrula",
+    "aciklama": "A’da yağış nedeni ile yolların kapanması sonucu tutarlı; özne “yollar”, yüklem “kapandı” uyumlu; gereksiz sözcük yok.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "“Bozukluk yoktur” sorularında önce bozuk olanları türleriyle birlikte etiketle; geriye kalan temizdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-AB-04 (Bozukluğu Olmayan Cümle) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,446 @@
+[
+ {
+  "id": "tyttr-noktalama-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Nokta, Soru ve Ünlem İşareti",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Cümlenin anlamına göre uygun bitiş işaretini belirler.",
+  "tipId": "nok-bitis",
+  "tip": "Bitiş işaretleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinin sonuna nokta (.) konulmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu kadar yolu nasıl yürüdün",
+   "B": "Yarın okula erken gideceğim",
+   "C": "Ne kadar güzel çiçekler",
+   "D": "Kapıyı kim açtı",
+   "E": "Bu akşam bize gelecek misin"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yarın okula erken gideceğim"
+  },
+  "celdiriciler": {
+   "A": "Soru anlamı taşır; sonuna soru işareti konur.",
+   "C": "Şaşkınlık ve beğeni bildirir; sonuna ünlem işareti konur.",
+   "D": "Soru cümlesidir; sonuna soru işareti konur.",
+   "E": "Soru ekiyle sorulmuş bir sorudur; sonuna soru işareti konur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Sonuna nokta konulması gereken cümle.",
+  "bilgi": [
+   {
+    "ad": "Bitiş işaretleri",
+    "ifade": "nokta: bildirme cümleleri (Yarın gideceğim.) · soru işareti: soru anlamlı cümleler (Kim geldi?) · ünlem: sevinç, şaşkınlık, seslenme (Ne güzel çiçek!)"
+   }
+  ],
+  "ipuclari": [
+   "Cümleyi bir bilgi mi veriyor, soru mu soruyor, yoksa duygu mu bildiriyor diye sınıfla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Cümleleri sınıfla",
+    "aciklama": "Her cümlenin bildirme, soru ya da ünlem anlamı taşıdığına bak.",
+    "islem": "3 tür"
+   },
+   {
+    "baslik": "Soru ve ünlemleri ele",
+    "aciklama": "A, D, E soru anlamlı; C ünlem anlamlıdır.",
+    "islem": "A, D, E: ? · C: !"
+   },
+   {
+    "baslik": "Bildirmeyi seç",
+    "aciklama": "B yalnızca bilgi verir; nokta ile biter.",
+    "islem": "B: ."
+   }
+  ],
+  "puf": "Cümle bilgi veriyorsa nokta, soru soruyorsa soru işareti, duygu bildiriyorsa ünlem.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-01 (Nokta, Soru ve Ünlem İşareti) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-noktalama-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Dolaylı Soru ve Bitiş İşareti",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Soru sözcüğü taşıyan ama soru anlamı olmayan cümlede bitiş işaretini doğru kullanır.",
+  "tipId": "nok-dolayli",
+  "tip": "Dolaylı soru",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde noktalama yanlışı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazardan elma, armut, portakal ve muz aldık.",
+   "B": "Evet, haklısın.",
+   "C": "Toplantıda şu konular görüşülecek: bütçe, personel, eğitim.",
+   "D": "Kimin geldiğini bilmiyorum?",
+   "E": "Ne güzel bir gün!"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Kimin geldiğini bilmiyorum?"
+  },
+  "celdiriciler": {
+   "A": "Sıralı sözcükler virgülle ayrılmış, cümle noktayla bitmiş; noktalama doğrudur.",
+   "B": "“Evet” cevap sözcüğünden sonra virgül konur; noktalama doğrudur.",
+   "C": "Sıralama öncesinde tamamlanmış cümleden sonra iki nokta kullanılmıştır; doğrudur.",
+   "E": "Beğeni bildiren cümle ünlemle bitmiştir; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Noktalama yanlışı bulunan cümle.",
+  "bilgi": [
+   {
+    "ad": "Dolaylı soru",
+    "ifade": "soru sözcüğü olsa da soru sorulmuyor, bilgi veriliyorsa nokta konur · “Ne zaman döneceğini sordu.” (nokta) – “Kim geldi?” (soru işareti)"
+   }
+  ],
+  "ipuclari": [
+   "Soru sözcüğü olan cümlede gerçekten soru soruluyor mu, yoksa bilgi mi veriliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her işareti sına",
+    "aciklama": "Virgül, iki nokta ve ünlem kurallarına göre A, B, C ve E’yi kontrol et.",
+    "islem": "A, B, C, E: doğru"
+   },
+   {
+    "baslik": "Soru anlamını ara",
+    "aciklama": "D’deki “kimin” soru sözcüğü olsa da cümle soru sormaz, bir durumu bildirir (dolaylı soru).",
+    "islem": "D: bildirme"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "Dolaylı soruda nokta konur; D’nin sonundaki soru işareti yanlıştır.",
+    "islem": "D: ? yerine ."
+   }
+  ],
+  "puf": "Soru sözcüğü gördüğünde hemen soru işareti koyma; cevabı gerçekten bekleyen bir soru var mı?",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-02 (Dolaylı Soru ve Bitiş İşareti) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-noktalama-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · İki Nokta",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "İki noktanın doğru yerde kullanıldığı cümleyi belirler.",
+  "tipId": "nok-ikinokta",
+  "tip": "İki nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde iki nokta (:) yerinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Toplantıda şu konular ele alındı: bütçe, personel ve eğitim.",
+   "B": "Dün: arkadaşlarımla sinemaya gittim.",
+   "C": "Gitmeden önce: bana haber ver.",
+   "D": "Annem pazardan: elma, armut ve üzüm aldı.",
+   "E": "Okula: servisle gidiyorum."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Toplantıda şu konular ele alındı: bütçe, personel ve eğitim."
+  },
+  "celdiriciler": {
+   "B": "İki nokta, cümlenin tamamlanmadığı yerde kullanılmış; zaman zarfından sonra gelmez.",
+   "C": "Cümle devam ederken yüklemden önce iki nokta konmaz.",
+   "D": "İki noktadan önceki bölüm tamamlanmış bir cümle değildir; yüklem sonradan gelir.",
+   "E": "Cümle tamamlanmadan, yer bildiren sözcükten sonra iki nokta konmaz."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İki noktanın yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "açıklama ya da sıralama yapılacağı zaman, cümle tamamlandıktan sonra konur · “Şu üç konu işlendi: tarih, coğrafya, felsefe.”"
+   }
+  ],
+  "ipuclari": [
+   "İki noktadan önceki bölüm, kendi başına tamamlanmış bir cümle mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "İki nokta, tamamlanmış bir cümleden sonra açıklama ya da sıralama gelecekse konur.",
+    "islem": "tam cümle + : + açıklama"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "B, C, D ve E’de iki noktadan önceki kısım tamamlanmış bir cümle değil; yüklem sonradan geliyor.",
+    "islem": "B, C, D, E: yanlış"
+   },
+   {
+    "baslik": "Doğruyu seç",
+    "aciklama": "A’da “Toplantıda şu konular ele alındı” cümlesi tamamdır; ardından sıralama gelir.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "İki noktadan önceki bölümü tek başına oku; cümle bitmişse ve açıklama ya da sıralama geliyorsa yerindedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-03 (İki Nokta) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-noktalama-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Kesme İşareti",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Kesme işaretinin yanlış kullanıldığı cümleyi belirler.",
+  "tipId": "nok-kesme",
+  "tip": "Kesme işareti",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde kesme işareti (’) yanlış kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ahmet’in kitabını sınıfta unutmuş.",
+   "B": "1938’de Atatürk’ü kaybettik.",
+   "C": "Yabancılara Türkçeyi öğretiyor.",
+   "D": "Bahçeden Hatice’ye gül topladım.",
+   "E": "Ankara’lı arkadaşım bizi ziyarete geldi."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Ankara’lı arkadaşım bizi ziyarete geldi."
+  },
+  "celdiriciler": {
+   "A": "Özel ada gelen tamlayan eki kesmeyle ayrılmıştır; doğrudur.",
+   "B": "Sayıya ve özel ada gelen çekim ekleri kesmeyle ayrılır; doğrudur.",
+   "C": "Dil adlarına gelen ekler kesmeyle ayrılmaz; kesme konmaması doğrudur.",
+   "D": "Özel ada gelen yönelme eki kesmeyle ayrılmıştır; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Kesme işareti yanlış kullanılan cümle.",
+  "bilgi": [
+   {
+    "ad": "Kesme işareti",
+    "ifade": "özel adlara gelen çekim ekleri kesmeyle ayrılır (Ahmet’in, 1938’de) · yapım ekleri ve dil/cins adları kesmeyle ayrılmaz (Ankaralı, Türkçeyi)"
+   }
+  ],
+  "ipuclari": [
+   "Kesme işareti çekim eklerinde kullanılır; yapım eklerinde kullanılır mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Özel adlara gelen çekim ekleri kesmeyle ayrılır; yapım ekleri ayrılmaz.",
+    "islem": "Ahmet’in ✓ · Ankaralı ✓"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, B, D’de çekim ekleri kesmeyle ayrılmış. C’de “Türkçeyi” dil adı olduğundan kesme yok.",
+    "islem": "A, B, C, D: doğru"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "E’deki “-lı” bir yapım ekidir; “Ankaralı” kesme işaretsiz yazılmalıdır.",
+    "islem": "E: Ankaralı"
+   }
+  ],
+  "puf": "Ek yeni bir sözcük (sıfat, isim) türetiyorsa kesme kullanma; yalnız çekim ekinde kullan.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-04 (Kesme İşareti) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-noktalama-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Noktalı Virgül",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Noktalı virgülün yerinde kullanıldığı cümleyi belirler.",
+  "tipId": "nok-noktalivirgul",
+  "tip": "Noktalı virgül",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde noktalı virgül (;) yerinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bahçede gül; lale; sümbül açmış.",
+   "B": "Sevgili Ayşe; seni çok özledim.",
+   "C": "Öğrencilerin bir kısmı kütüphanede ders çalışıyor; bir kısmı ise spor salonunda antrenman yapıyor.",
+   "D": "Yarın; sınavımız var.",
+   "E": "Okuduğum kitap; çok güzeldi."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Öğrencilerin bir kısmı kütüphanede ders çalışıyor; bir kısmı ise spor salonunda antrenman yapıyor."
+  },
+  "celdiriciler": {
+   "A": "Sıralı sözcükler virgülle ayrılır; noktalı virgül yerinde değildir.",
+   "B": "Hitap sözcüğünden sonra virgül konur; noktalı virgül yanlıştır.",
+   "D": "Özne ile yüklem arasında noktalı virgül kullanılmaz.",
+   "E": "Özne ile yüklem birbirinden noktalı virgülle ayrılmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Noktalı virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "birbirine anlamca bağlı cümleleri ayırır · “Birimiz kitap okuyor; ötekimiz müzik dinliyordu.” Sıralı sözcükler için virgül kullanılır"
+   }
+  ],
+  "ipuclari": [
+   "Noktalı virgül, birbiriyle ilgili iki ayrı cümleyi (yargıyı) ayırır; sıralı sözcükleri ya da hitabı ayırmaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Noktalı virgül, birbirine anlamca bağlı cümleleri birbirinden ayırır.",
+    "islem": "cümle ; cümle"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A sıralı sözcük, B hitap, D ve E özne–yüklem; hiçbirinde ayrılacak iki cümle yok.",
+    "islem": "A, B, D, E: yanlış"
+   },
+   {
+    "baslik": "Doğruyu seç",
+    "aciklama": "C’de iki ayrı cümle birbiriyle ilgili ve noktalı virgülle ayrılmış.",
+    "islem": "C: doğru"
+   }
+  ],
+  "puf": "Noktalı virgülün iki yanında da kendi başına anlamlı birer cümle arıyorsan doğru yoldasın.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-05 (Noktalı Virgül) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-noktalama-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Nokta (Kısaltma, Saat, Sayı)",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Noktanın kısaltma, saat, sayı ve tarihte kullanımını; kurum kısaltmasında kullanılmadığını bilir.",
+  "tipId": "nok-nokta",
+  "tip": "Nokta",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde nokta (.) yanlış kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Prof. Dr. Ayşe Yılmaz konferansta konuştu.",
+   "B": "Bu belgeyi T.B.M.M. Kütüphanesi’nden aldım.",
+   "C": "Kitabın fiyatı 1.250 TL idi.",
+   "D": "Toplantı saat 14.30’da başlayacak.",
+   "E": "Mektubu 12.05.2024 tarihinde gönderdi."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Bu belgeyi T.B.M.M. Kütüphanesi’nden aldım."
+  },
+  "celdiriciler": {
+   "A": "Unvan kısaltmalarının sonuna nokta konur; doğrudur.",
+   "C": "Binlik sayılarda basamak ayırmak için nokta kullanılır; doğrudur.",
+   "D": "Saat ile dakika arasında nokta kullanılır; doğrudur.",
+   "E": "Tarihte gün, ay ve yıl noktayla ayrılabilir; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Nokta yanlış kullanılan cümle.",
+  "bilgi": [
+   {
+    "ad": "Nokta",
+    "ifade": "kısaltmalarda (Dr., Prof.), saat (14.30), tarih (12.05.2024) ve binlik sayılarda (1.250) kullanılır · TBMM, TDK gibi büyük harfli kurum kısaltmalarında kullanılmaz"
+   }
+  ],
+  "ipuclari": [
+   "Büyük harfle yazılan kurum kısaltmalarının içinde nokta olur mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralları hatırla",
+    "aciklama": "Nokta; unvan kısaltmalarında, saat, tarih ve binlik sayılarda kullanılır.",
+    "islem": "Dr. · 14.30 · 1.250"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A, C, D ve E’de nokta yerinde: unvan, sayı, saat, tarih.",
+    "islem": "A, C, D, E: doğru"
+   },
+   {
+    "baslik": "Yanlışı bul",
+    "aciklama": "B’de kurum kısaltması “TBMM” noktasız yazılmalıdır.",
+    "islem": "B: TBMM"
+   }
+  ],
+  "puf": "Büyük harfli kurum kısaltmaları (TDK, TBMM) noktasız yazılır; unvan kısaltmaları (Dr., Prof.) noktalı yazılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-NOK-06 (Nokta (Kısaltma, Saat, Sayı)) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

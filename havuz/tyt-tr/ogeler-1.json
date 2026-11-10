@@ -1,0 +1,450 @@
+[
+ {
+  "id": "tyttr-ogeler-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Yüklem",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Yüklemin isim soylu olduğu cümleyi belirler.",
+  "tipId": "oge-yuklem",
+  "tip": "Yüklem türü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinin yüklemi isim soyludur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kapıyı yavaşça açtı.",
+   "B": "Çocuklar parkta oynuyordu.",
+   "C": "Yağmur dün gece başladı.",
+   "D": "Kitabı masanın üzerine bıraktım.",
+   "E": "Bu akşamki konser çok güzeldi."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Bu akşamki konser çok güzeldi."
+  },
+  "celdiriciler": {
+   "A": "“Açtı” eylem bildirir; yüklem fiil soyludur.",
+   "B": "“Oynuyordu” bir eylemdir; yüklem fiil soyludur.",
+   "C": "“Başladı” fiildir; yüklem fiil soyludur.",
+   "D": "“Bıraktım” fiildir; yüklem fiil soyludur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Yüklemi isim soylu olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Yüklem türü",
+    "ifade": "fiil yüklemi: eylem bildirir (Çocuk koştu.) · isim yüklemi: isim soylu sözcük + ek fiil (Konser güzeldi.)"
+   }
+  ],
+  "ipuclari": [
+   "Yüklem bir eylem mi bildiriyor, yoksa bir durum/nitelik mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüklem türlerini hatırla",
+    "aciklama": "Eylem bildiren yüklem fiil soyludur; isim soylu sözcük + ek fiil isim yüklemidir.",
+    "islem": "fiil · isim+ek fiil"
+   },
+   {
+    "baslik": "Yüklemleri bul",
+    "aciklama": "A: açtı, B: oynuyordu, C: başladı, D: bıraktım. Hepsi eylem bildirir.",
+    "islem": "A, B, C, D: fiil"
+   },
+   {
+    "baslik": "İsim yüklemini seç",
+    "aciklama": "E’de “güzeldi” (güzel + ek fiil -di) konserin niteliğini bildirir.",
+    "islem": "E: isim yüklemi"
+   }
+  ],
+  "puf": "Yüklem “ne yaptı?” sorusuna cevap vermiyorsa, “nasıl/ne?” diyorsa isim soyludur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-01 (Yüklem) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-ogeler-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Özne",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Gizli özneyi yüklemin kişi ekinden tanır.",
+  "tipId": "oge-ozne",
+  "tip": "Özne",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde özne gizlidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sabah erkenden kalkıp yola çıktık.",
+   "B": "Misafirler akşam yemeğinden sonra gitti.",
+   "C": "Bu mektubu Ahmet yazmış.",
+   "D": "Çocuklar bahçede oynuyor.",
+   "E": "Annem yemeği hazırladı."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Sabah erkenden kalkıp yola çıktık."
+  },
+  "celdiriciler": {
+   "B": "Özne “misafirler” cümlede yazılmıştır; gizli değildir.",
+   "C": "Özne “Ahmet” cümlede açıkça yer alır.",
+   "D": "Özne “çocuklar” cümlede yazılmıştır.",
+   "E": "Özne “annem” cümlede yazılmıştır."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Öznesi gizli olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Özne",
+    "ifade": "yükleme “kim, ne” diye sorulunca bulunur · gizli özne: cümlede yazılmayan, yüklemin kişi ekinden anlaşılan özne (Eve döndük → biz)"
+   }
+  ],
+  "ipuclari": [
+   "Yükleme “kim?” diye sor; cevap cümlede yazıyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yükleme sor",
+    "aciklama": "Her cümlede yükleme “kim?” sorusunu yönelt.",
+    "islem": "kim?"
+   },
+   {
+    "baslik": "Cevabı ara",
+    "aciklama": "B, C, D ve E’de cevap cümlede yazılı: misafirler, Ahmet, çocuklar, annem.",
+    "islem": "B, C, D, E: özne açık"
+   },
+   {
+    "baslik": "Gizliyi seç",
+    "aciklama": "A’da “çıktık” kişi ekinden “biz” anlaşılır; özne yazılmamıştır.",
+    "islem": "A: biz"
+   }
+  ],
+  "puf": "Yükleme “kim?” diye sor; cevap cümlede yoksa ama kişi ekinden anlaşılıyorsa özne gizlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-02 (Özne) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-ogeler-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Nesne",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Nesnenin bulunmadığı cümleyi belirler.",
+  "tipId": "oge-nesne",
+  "tip": "Nesne",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde nesne yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Annem pazardan elma aldı.",
+   "B": "Öğretmen soruları tahtaya yazdı.",
+   "C": "Misafirler akşam yemeğinden sonra evden ayrıldı.",
+   "D": "Ayşe mektubu okudu.",
+   "E": "Dedem bahçeye yeni fidanlar dikti."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Misafirler akşam yemeğinden sonra evden ayrıldı."
+  },
+  "celdiriciler": {
+   "A": "“Neyi aldı?” sorusunun cevabı “elma”dır; cümlede nesne vardır.",
+   "B": "“Neyi yazdı?” sorusunun cevabı “soruları”dır; nesne vardır.",
+   "D": "“Neyi okudu?” sorusunun cevabı “mektubu”dur; nesne vardır.",
+   "E": "“Ne dikti?” sorusunun cevabı “yeni fidanlar”dır; nesne vardır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Nesnesi bulunmayan cümle.",
+  "bilgi": [
+   {
+    "ad": "Nesne",
+    "ifade": "geçişli fiile “neyi, kimi” (belirtisiz nesnede “ne”) sorusuyla bulunur · “Annem mektubu yazdı.” → neyi yazdı? mektubu · yönelme, bulunma, ayrılma hâlleri nesne değildir"
+   }
+  ],
+  "ipuclari": [
+   "Her yükleme “neyi / kimi / ne?” sorusunu yönelt; cevap bulunamayan cümleyi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Nesneyi bulma yolunu hatırla",
+    "aciklama": "Yükleme “neyi, kimi, ne?” sorusu sorulur; cevap nesnedir.",
+    "islem": "neyi? kimi? ne?"
+   },
+   {
+    "baslik": "Şıkları ele",
+    "aciklama": "A: elma, B: soruları, D: mektubu, E: yeni fidanlar. Hepsi nesnedir.",
+    "islem": "A, B, D, E: nesne var"
+   },
+   {
+    "baslik": "Nesnesizi seç",
+    "aciklama": "C’de “evden” ayrılma hâlindedir; “neyi/ne?” sorusuna cevap vermez, nesne yoktur.",
+    "islem": "C: nesne yok"
+   }
+  ],
+  "puf": "Yönelme (-e), bulunma (-de), ayrılma (-den) ekli öbekler nesne olmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-03 (Nesne) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-ogeler-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Belirtili ve Belirtisiz Nesne",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Belirtisiz nesnenin bulunduğu cümleyi belirler.",
+  "tipId": "oge-belirtisiz",
+  "tip": "Belirtili ve belirtisiz nesne",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde belirtisiz nesne vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ayşe mektubu okudu.",
+   "B": "Babam geçen hafta yeni bir araba aldı.",
+   "C": "Babam arabayı garaja çekti.",
+   "D": "Öğretmen öğrencileri salona çağırdı.",
+   "E": "Kardeşim kitabı çantasına koydu."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Babam geçen hafta yeni bir araba aldı."
+  },
+  "celdiriciler": {
+   "A": "“Mektubu” -u belirtme hâl ekini almıştır; belirtili nesnedir.",
+   "C": "“Arabayı” -ı hâl ekini almıştır; belirtili nesnedir.",
+   "D": "“Öğrencileri” -i hâl ekini almıştır; belirtili nesnedir.",
+   "E": "“Kitabı” belirtme hâl ekiyle kullanılmıştır; belirtilidir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Belirtisiz nesne bulunan cümle.",
+  "bilgi": [
+   {
+    "ad": "Belirtili / belirtisiz nesne",
+    "ifade": "belirtili nesne -i (belirtme) hâl eki alır (kitabı okudu) · belirtisiz nesne ek almaz (kitap okudu)"
+   }
+  ],
+  "ipuclari": [
+   "Nesne “-i” belirtme hâl eki almıyorsa belirtisizdir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ayrımı hatırla",
+    "aciklama": "Belirtili nesne -i/-ı/-u/-ü eki alır; belirtisiz nesne ek almaz.",
+    "islem": "kitabı (belirtili) · kitap (belirtisiz)"
+   },
+   {
+    "baslik": "Nesneleri bul",
+    "aciklama": "A: mektubu, C: arabayı, D: öğrencileri, E: kitabı. Hepsi -i hâl eki almış.",
+    "islem": "A, C, D, E: belirtili"
+   },
+   {
+    "baslik": "Belirtisizi seç",
+    "aciklama": "B’de “yeni bir araba” ek almamış nesnedir.",
+    "islem": "B: belirtisiz"
+   }
+  ],
+  "puf": "Nesneye “-i” ekini ekleyebiliyor ama eklenmemişse nesne belirtisizdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-04 (Belirtili ve Belirtisiz Nesne) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-ogeler-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Sözde (Gerçek Olmayan) Özne",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Edilgen çatılı cümledeki sözde özneyi belirler.",
+  "tipId": "oge-sozde",
+  "tip": "Sözde özne",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde özne, sözde (gerçek olmayan) öznedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kuşlar sabah erkenden ötmeye başladı.",
+   "B": "Öğretmen ödevleri toplayıp çıktı.",
+   "C": "Ayşe pencereyi açıp dışarı baktı.",
+   "D": "Bu mektup dün akşam yazıldı.",
+   "E": "Kardeşim akşam erkenden uyudu."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Bu mektup dün akşam yazıldı."
+  },
+  "celdiriciler": {
+   "A": "Kuşlar eylemi yapan gerçek öznedir; yüklem etkendir.",
+   "B": "Öğretmen eylemi yapar; gerçek özne.",
+   "C": "Ayşe eylemi yapan gerçek öznedir.",
+   "E": "Kardeşim eylemi yapan gerçek öznedir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Öznesi sözde özne olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Sözde özne",
+    "ifade": "edilgen çatılı yüklemin öznesi eylemi yapan değil eylemden etkilenendir; buna sözde özne denir · “Mektup yazıldı.” (yapan belli de olabilir: Mektup Ali tarafından yazıldı.)"
+   }
+  ],
+  "ipuclari": [
+   "Edilgen yüklem ara; eylemi yapan değil eylemden etkilenen ad özne olmuştur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kavramı hatırla",
+    "aciklama": "Edilgen çatılı yüklemin öznesi eylemi yapan değil, eylemden etkilenendir (sözde özne).",
+    "islem": "edilgen yüklem → sözde özne"
+   },
+   {
+    "baslik": "Yüklemleri incele",
+    "aciklama": "A, B, C ve E’deki yüklemler etkendir: başladı, çıktı, baktı, uyudu.",
+    "islem": "A, B, C, E: gerçek özne"
+   },
+   {
+    "baslik": "Edilgeni bul",
+    "aciklama": "D’deki “yazıldı” edilgendir; “mektup” yazma eylemini yapmaz, ondan etkilenir.",
+    "islem": "D: sözde özne"
+   }
+  ],
+  "puf": "Yüklem edilgense (-l/-n) özne eylemi yapan değil, eylemden etkilenendir: sözde özne.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-05 (Sözde (Gerçek Olmayan) Özne) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-ogeler-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Cümlenin Ögeleri · Ek Fiil ve Gizli Özne",
+  "k": "tr|Cümlenin Ögeleri",
+  "kazanim": "Hem isim yüklemli hem öznesi gizli olan cümleyi belirler.",
+  "tipId": "oge-ekfiil",
+  "tip": "Ek fiil ve gizli özne",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde yüklem isim soyludur ve özne gizlidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çok yorgunduk.",
+   "B": "Çocuklar çok yorgundu.",
+   "C": "Eve erken döndük.",
+   "D": "Kitabı yarın okurum.",
+   "E": "Ahmet eve geldi."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Çok yorgunduk."
+  },
+  "celdiriciler": {
+   "B": "Yüklem isim soyludur ama özne “çocuklar” açıkça yazılmıştır.",
+   "C": "Özne gizli (biz) ama yüklem “döndük” fiil soyludur.",
+   "D": "Özne gizli (ben) ama yüklem “okurum” fiildir.",
+   "E": "Hem yüklem fiil soyludur hem özne “Ahmet” açıktır."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yüklemi isim soylu ve öznesi gizli olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Yüklem türü",
+    "ifade": "fiil yüklemi: eylem bildirir (Çocuk koştu.) · isim yüklemi: isim soylu sözcük + ek fiil (Konser güzeldi.)"
+   },
+   {
+    "ad": "Özne",
+    "ifade": "yükleme “kim, ne” diye sorulunca bulunur · gizli özne: cümlede yazılmayan, yüklemin kişi ekinden anlaşılan özne (Eve döndük → biz)"
+   }
+  ],
+  "ipuclari": [
+   "Önce yüklemin fiil mi isim mi olduğuna, sonra öznenin yazılı olup olmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki ölçütü ayır",
+    "aciklama": "Cümlede hem yüklem türüne (fiil/isim) hem özneye (açık/gizli) bak.",
+    "islem": "yüklem + özne"
+   },
+   {
+    "baslik": "Şıkları tabloya dök",
+    "aciklama": "A isim+gizli · B isim+açık · C fiil+gizli · D fiil+gizli · E fiil+açık.",
+    "islem": "A: isim, gizli"
+   },
+   {
+    "baslik": "Sonucu seç",
+    "aciklama": "A’da “yorgunduk” = yorgun + ek fiil + kişi eki; “biz” özne yazılmamıştır.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "İsim yüklemini ek fiilden, gizli özneyi kişi ekinden tanı; iki ölçütü ayrı ayrı denetle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OGE-06 (Ek Fiil ve Gizli Özne) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

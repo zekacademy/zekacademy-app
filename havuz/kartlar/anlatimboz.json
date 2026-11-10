@@ -1,0 +1,92 @@
+{
+ "konu": "Anlatım Bozukluğu",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-AB-01",
+   "konu": "Anlatım Bozukluğu",
+   "alt": "Gereksiz Sözcük Kullanımı",
+   "fikir": "Anlamca aynı olan sözcüklerin gereksiz yinelendiği cümleyi bulmak.",
+   "tuzak": "Vurgu amaçlı doğal tekrarı bozukluk sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "anl-gereksiz",
+   "tip": "Gereksiz sözcük kullanımı",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (anlatım bozuklukları) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-AB-02",
+   "konu": "Anlatım Bozukluğu",
+   "alt": "Özne–Yüklem Uyumu",
+   "fikir": "Öznenin kişi ve sayısı ile yüklemin kişi ve sayısının uyuşmadığı cümleyi bulmak.",
+   "tuzak": "Yüklemi bulmadan öznenin tek görünen biçimine bakmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "anl-ozne",
+   "tip": "Özne–yüklem uyumsuzluğu",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (anlatım bozuklukları) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-AB-03",
+   "konu": "Anlatım Bozukluğu",
+   "alt": "Neden–Sonuç ve Mantık",
+   "fikir": "Neden-sonuç ilişkisi mantıkla bağdaşmayan cümleyi bulmak.",
+   "tuzak": "Bağlaç ve ekleri doğru diye cümleyi doğru sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "anl-mantik",
+   "tip": "Neden–sonuç ve mantık",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (anlatım bozuklukları) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  },
+  {
+   "id": "K-AB-04",
+   "konu": "Anlatım Bozukluğu",
+   "alt": "Bozukluğu Olmayan Cümle",
+   "fikir": "Beş cümlenin dördündeki farklı türde bozukluğu görüp bozukluğu olmayanı bulmak.",
+   "tuzak": "Bozuklukların türünü tanıyamayıp kalanı doğru sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "anl-karma",
+   "tip": "Bozukluğu olmayan cümle",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 (anlatım bozuklukları) ve MEB Türk Dili ve Edebiyatı müfredatı"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "anl-gereksiz",
+   "ad": "Gereksiz sözcük kullanımı",
+   "kartlar": [
+    "K-AB-01"
+   ],
+   "uygulamaKonu": "tr|Anlatım Bozukluğu"
+  },
+  {
+   "tipId": "anl-ozne",
+   "ad": "Özne–yüklem uyumsuzluğu",
+   "kartlar": [
+    "K-AB-02"
+   ],
+   "uygulamaKonu": "tr|Anlatım Bozukluğu"
+  },
+  {
+   "tipId": "anl-mantik",
+   "ad": "Neden–sonuç ve mantık",
+   "kartlar": [
+    "K-AB-03"
+   ],
+   "uygulamaKonu": "tr|Anlatım Bozukluğu"
+  },
+  {
+   "tipId": "anl-karma",
+   "ad": "Bozukluğu olmayan cümle",
+   "kartlar": [
+    "K-AB-04"
+   ],
+   "uygulamaKonu": "tr|Anlatım Bozukluğu"
+  }
+ ]
+}

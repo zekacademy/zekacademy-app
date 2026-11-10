@@ -1,0 +1,298 @@
+[
+ {
+  "id": "tyttr-sozcukturleri-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat ve Zarf",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Tırnak içindeki sözcüğün zarf olarak kullanıldığı cümleyi bulur.",
+  "tipId": "szt-sifatzarf",
+  "tip": "Sıfat ve zarf",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hangi cümlede tırnak içine alınan sözcük, fiili niteleyerek zarf görevinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Hızlı” bir koşucu ödülü aldı.",
+   "B": "“Sessiz” sokakta yürüdük.",
+   "C": "Çocuk eve “çabuk” döndü.",
+   "D": "Masaya “kırmızı” bir örtü serdi.",
+   "E": "“Yüksek” dağın zirvesine çıktık."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Çocuk eve “çabuk” döndü."
+  },
+  "celdiriciler": {
+   "A": "“Hızlı”, “koşucu” ismini niteler; sıfattır.",
+   "B": "“Sessiz”, “sokak” ismini niteler; sıfattır.",
+   "D": "“Kırmızı”, “örtü” ismini niteler; sıfattır.",
+   "E": "“Yüksek”, “dağ” ismini niteler; sıfattır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Tırnak içindeki sözcüğün zarf olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Sıfat ve zarf",
+    "ifade": "sıfat: ismi niteler, isimden önce gelir (hızlı araba) · zarf: fiili, sıfatı ya da başka bir zarfı niteler (araba hızlı gitti). Aynı sözcük göreve göre değişir"
+   }
+  ],
+  "ipuclari": [
+   "Tırnak içindeki sözcük bir ismi mi, yoksa bir fiili mi niteliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zarf fiili niteler; sıfat ismi niteler.",
+    "islem": "zarf: fiil · sıfat: isim"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A koşucu, B sokakta, D örtü, E dağın: tırnak içindeki sözcük her seferinde bir ismi niteliyor.",
+    "islem": "A, B, D, E: sıfat"
+   },
+   {
+    "baslik": "Fiili niteleyeni seç",
+    "aciklama": "C’de “çabuk”, “döndü” fiilinin nasıl yapıldığını söylüyor.",
+    "islem": "C: zarf"
+   }
+  ],
+  "puf": "Niteleme sorularında tırnaklı sözcüğün hangi sözcüğü nitelediğine bak: isimse sıfat, fiilse zarf.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ST-01 (Sıfat ve Zarf) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sozcukturleri-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir (Adıl)",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İsmin yerini tutan sözcüğü (zamiri) ismi niteleyen sözcüklerden ayırır.",
+  "tipId": "szt-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Tırnaklı sözcüklerden hangisi, bir ismin yerini tutarak zamir (adıl) görevinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Bu” kalemi dün aldım.",
+   "B": "“Hangi” kitabı okudun?",
+   "C": "“Şu” çantayı bana ver.",
+   "D": "“Kaç” kişi geldi?",
+   "E": "Diğerlerini bırakıp “bunu” seçtim."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Diğerlerini bırakıp “bunu” seçtim."
+  },
+  "celdiriciler": {
+   "A": "“Bu”, “kalem” ismini niteler; işaret sıfatıdır, ismin yerini tutmaz.",
+   "B": "“Hangi”, “kitap” ismini niteler; soru sıfatıdır.",
+   "C": "“Şu”, “çanta” ismini niteler; işaret sıfatıdır.",
+   "D": "“Kaç”, “kişi” ismini niteler; soru sıfatıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Zamir olarak kullanılan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "zamir ismin yerini tutar (bunu aldım). İsmin önünde onu niteleyen “bu kalem”deki gibi sözcükler sıfattır; ismin yerini tutmaz"
+   }
+  ],
+  "ipuclari": [
+   "Tırnak içindeki sözcüğün hemen yanında nitelediği bir isim var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zamir tek başına bir ismin yerine geçer. Bir ismi niteliyorsa sıfattır.",
+    "islem": "yerini tutuyor → zamir"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A kalemi, B kitabı, C çantayı, D kişi: her tırnaklı sözcüğün hemen yanında nitelediği bir isim var.",
+    "islem": "A, B, C, D: sıfat"
+   },
+   {
+    "baslik": "Yerini tutanı seç",
+    "aciklama": "E’de “bunu”, yanında isim olmadan bir nesnenin yerine geçiyor.",
+    "islem": "E: zamir"
+   }
+  ],
+  "puf": "Tırnaklı sözcüğün yanında nitelediği isim yoksa ve isim yerine geçiyorsa zamirdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ST-02 (Zamir (Adıl)) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sozcukturleri-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat ve Bağlaç",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Cümleleri birbirine bağlayan sözcüğü (bağlacı) edatlardan ayırır.",
+  "tipId": "szt-edatbaglac",
+  "tip": "Edat ve bağlaç",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bağlaç görevinde kullanılan tırnaklı sözcük, aşağıdakilerin hangisinde vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu hediyeyi senin “için” aldım.",
+   "B": "Çocuklar kar “gibi” beyazdı.",
+   "C": "Yağmur dinene “kadar” bekledik.",
+   "D": "Yorgundu “ama” yine de çalıştı.",
+   "E": "Havaya “göre” giyindik."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Yorgundu “ama” yine de çalıştı."
+  },
+  "celdiriciler": {
+   "A": "“İçin”, “senin” sözcüğüyle birlikte görev yapan bir edattır.",
+   "B": "“Gibi”, benzetme bildiren bir edattır.",
+   "C": "“Kadar”, sınır bildiren bir edattır.",
+   "E": "“Göre”, “havaya” sözcüğüyle görev yapan bir edattır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Bağlaç olan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Edat ve bağlaç",
+    "ifade": "edat: tek başına anlamı olmayan, kendinden önceki sözcükle görev yapar (senin için, kar gibi, akşama kadar) · bağlaç: sözcükleri ya da cümleleri birbirine bağlar (ama, ve, fakat)"
+   }
+  ],
+  "ipuclari": [
+   "Tırnaklı sözcük iki cümleyi ya da iki yargıyı mı birbirine bağlıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Bağlaç iki cümleyi ya da iki sözcüğü bağlar; edat bir sözcükle birlikte görev yapar.",
+    "islem": "bağlaç: bağlar · edat: eşlik eder"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "için, gibi, kadar, göre: her biri önündeki sözcüğe bağlı edattır.",
+    "islem": "A, B, C, E: edat"
+   },
+   {
+    "baslik": "Bağlacı seç",
+    "aciklama": "D’de “ama”, “yorgundu” ve “yine de çalıştı” yargılarını birbirine bağlıyor.",
+    "islem": "D: bağlaç"
+   }
+  ],
+  "puf": "İki ayrı yargıyı birbirine bağlayan sözcük bağlaçtır; tek bir sözcüğe eşlik eden edattır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ST-03 (Edat ve Bağlaç) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-sozcukturleri-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sözcüğün Görevi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Aynı cümledeki iki sözcüğün sıfat ve zarf görevini birlikte belirler.",
+  "tipId": "szt-gorev",
+  "tip": "Sözcüğün cümledeki görevi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde tırnak içindeki sözcüklerden ilki sıfat, ikincisi zarftır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Eski” çarşıyı “yavaş” gezdik.",
+   "B": "“Güzel” bir şarkıyı “anlamlı” bir sesle söyledi.",
+   "C": "“Hızlı” koşup “çabuk” yoruldu.",
+   "D": "“Yeşil” bahçeye “kırmızı” gül ekti.",
+   "E": "Çocuk “iyi” uyuyup “erken” kalktı."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "“Eski” çarşıyı “yavaş” gezdik."
+  },
+  "celdiriciler": {
+   "B": "İkisi de bir ismi niteler: güzel → şarkı, anlamlı → ses. İkisi de sıfattır.",
+   "C": "İkisi de fiili niteler: hızlı koşmak, çabuk yorulmak. İkisi de zarftır.",
+   "D": "Yeşil → bahçe, kırmızı → gül: ikisi de isim niteler; sıfattır.",
+   "E": "İkisi de fiili niteler: iyi uyumak, erken kalkmak. İkisi de zarftır."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İlki sıfat, ikincisi zarf olan sözcük çifti.",
+  "bilgi": [
+   {
+    "ad": "Sıfat ve zarf",
+    "ifade": "sıfat: ismi niteler, isimden önce gelir (hızlı araba) · zarf: fiili, sıfatı ya da başka bir zarfı niteler (araba hızlı gitti). Aynı sözcük göreve göre değişir"
+   }
+  ],
+  "ipuclari": [
+   "Her tırnaklı sözcüğü ayrı ayrı ele al: hemen ardından isim mi fiil mi geliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü yaz",
+    "aciklama": "Aranan çift: önce bir ismi niteleyen, sonra bir fiili niteleyen sözcük.",
+    "islem": "sıfat → isim · zarf → fiil"
+   },
+   {
+    "baslik": "Her şıkkı çöz",
+    "aciklama": "B: güzel şarkı, anlamlı ses (iki sıfat). C: hızlı koşmak, çabuk yorulmak (iki zarf). D: yeşil bahçe, kırmızı gül (iki sıfat). E: iyi uyumak, erken kalkmak (iki zarf).",
+    "islem": "B, D: sıfat+sıfat · C, E: zarf+zarf"
+   },
+   {
+    "baslik": "Aranan çifti seç",
+    "aciklama": "A’da “eski”, “çarşı” ismini niteler (sıfat); “yavaş”, “gezdik” fiilini niteler (zarf).",
+    "islem": "A: sıfat+zarf"
+   }
+  ],
+  "puf": "İki sözcüklü sorularda her sözcüğün niteledikleri ayrı ayrı bulunur; ancak sonra çift değerlendirilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ST-04 (Sözcüğün Görevi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
