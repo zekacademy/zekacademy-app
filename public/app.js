@@ -1945,6 +1945,8 @@ function cSettings(){
     ${sec("Veri içe aktar","Drive’dan dönüştürülmüş öğrenci dosyası (.json)",`
       <p class="muted small" style="margin:0">Claude’un hazırladığı içe aktarma dosyasını seç. Her öğrenci için hesap açılır (ilk şifre dosyada yazan, genelde 123456) ve tüm verisi aktarılır. Kullanıcı adı zaten varsa o öğrenci atlanır.</p>
       <label class="f">Dosya<input type="file" id="imp-file" accept=".json,application/json"></label>
+      <label class="inline"><input type="checkbox" id="imp-guncelle">Öğrenci zaten varsa dosyadakiyle güncelle</label>
+      <p class="faint small" style="margin:-4px 0 0">İşaretlersen var olan öğrencinin programı (bu hafta), hedefleri, kitap ve hocaları, konuları, denemeleri, ödeme planı ve görüşme günü dosyadakiyle değiştirilir. Kullanıcı adı, şifre ve uygulamada girdiği çalışma süreleri korunur.</p>
       <div class="pills"><button class="btn sm pri" data-act="import">Aktarmayı başlat</button></div>
       <div class="small" id="imp-out" style="white-space:pre-wrap;font-weight:600">${esc(S.impLog||"")}</div>`, "")}
     ${sec("Koç şifresi","Koç girişinde kullandığın şifre",`
@@ -1981,11 +1983,31 @@ async function runImport(b){
   if(!f) return log("Önce dosyayı seç.");
   let data; try{ data = JSON.parse(await f.text()); }catch(e){ return log("Dosya okunamadı: geçerli bir içe aktarma dosyası değil."); }
   const list = data.ogrenciler || []; if(!list.length) return log("Dosyada öğrenci yok.");
-  b.disabled = true; let ok = 0, skip = 0;
+  const guncelle = !!$("#imp-guncelle")?.checked;
+  b.disabled = true; let ok = 0, skip = 0, gun = 0;
   for(const o of list){
     const u = normU(o.kullanici), name = o.kayit?.name || u;
     if(!/^[a-z0-9._-]{3,20}$/.test(u)){ log(`✗ ${name}: kullanıcı adı geçersiz (${o.kullanici})`); skip++; continue; }
     const var_ = [...S.students.entries()].find(([,x])=>x.kullanici===u);
+    if(var_ && guncelle){ /* zaten var + "güncelle" seçili: dosyadakiyle değiştir, hesap bilgileri ve uygulamada girilenler korunur */
+      const [vid, vx] = var_, k = o.kayit || {}, rec = JSON.parse(JSON.stringify(vx));
+      ["name","alan","sinif","okul","baslangic","paket","tel","kitaplar","hocalar","sbAd"].forEach(f=>{ if(k[f]!==undefined) rec[f] = k[f]; });
+      if(k.hedef && (k.hedef.tyt!=null || k.hedef.ayt!=null || k.hedef.tarih)) rec.hedef = k.hedef;
+      rec.weeks = {...(vx.weeks||{}), ...(k.weeks||{})}; rec.plan = {...(vx.plan||{}), ...(k.plan||{})};
+      const T = {}; /* konular: dosyadakiler esas; uygulamada işaretlenenler kaybolmasın diye en yükseği alınır */
+      Object.entries(k.topics||{}).forEach(([key,v])=>{ T[key] = {...v}; });
+      Object.entries(vx.topics||{}).forEach(([key,v])=>{ if(!T[key]) return; const t = T[key]; if(v.r>(t.r||0)) t.r = v.r; if(v.s1) t.s1 = true; if(v.s2) t.s2 = true; if(v.n && !t.n) t.n = v.n; });
+      rec.topics = T;
+      const dk = e => [e.tur, e.tarih, String(e.yayin||"").toLocaleLowerCase("tr")].join("|"), dosya = new Set((k.denemeler||[]).map(dk));
+      rec.denemeler = [...(k.denemeler||[]), ...(vx.denemeler||[]).filter(e=>!dosya.has(dk(e)) && !String(e.id||"").startsWith(u))];
+      rec.gunluk = {...(k.gunluk||{}), ...(vx.gunluk||{})};
+      const eski = S.cnotes.get(vid) || {}, cn = {...eski};
+      if(o.koc?.odeme) cn.odeme = o.koc.odeme;
+      if(o.koc?.duzen) cn.duzen = {...o.koc.duzen, ...(eski.duzen?.saat ? {saat:eski.duzen.saat} : {})};
+      if(o.kocNotu) cn.not = o.kocNotu;
+      try{ S.students.set(vid, rec); await writeDoc("students", vid, rec); S.cnotes.set(vid, cn); await writeDoc("coachNotes", vid, cn); log(`↻ ${name}: @${u} güncellendi`); gun++; }
+      catch(e){ log(`✗ ${name}: ${e.message||e}`); skip++; }
+      continue; }
     if(var_){ /* zaten var: ilerlemesine dokunma; sadece eksik koç bilgilerini (ödeme planı, görüşme günü) ve telefonu tamamla */
       const [vid, vx] = var_, eski = S.cnotes.get(vid) || {}, cn = {...eski}, eklenen = [];
       if(o.koc?.odeme && !eski.odeme?.bas){ cn.odeme = o.koc.odeme; eklenen.push("ödeme planı"); }
@@ -2007,7 +2029,7 @@ async function runImport(b){
       log(`✓ ${name} → @${u}`); ok++;
     }catch(e){ log(`✗ ${name}: ${authMsg(e)}`); skip++; }
   }
-  log(`\nBitti: ${ok} öğrenci aktarıldı${skip?`, ${skip} zaten vardı`:""}.`); b.disabled = false; keepSettingsOpen();
+  log(`\nBitti: ${ok} öğrenci aktarıldı${gun?`, ${gun} öğrenci güncellendi`:""}${skip?`, ${skip} zaten vardı (güncellemek için kutuyu işaretle)`:""}.`); b.disabled = false; keepSettingsOpen();
 }
 async function topluSil(b){ const ids = [...document.querySelectorAll(".tmz:checked")].map(x=>x.value), out = $("#tmz-out"), log = t => { if(out) out.textContent += t + "\n"; };
   if(!ids.length){ toast("Önce öğrenci seç"); return; }
