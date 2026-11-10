@@ -87,3 +87,20 @@ test("konu analizi sayfasında bazı dersler yoksa o bölüm hesaplanmaz, yanlı
   const o = karneDuzelt({ denemeler: [{ tur: "TYT", bolumler: {}, dersler: ["Türkçe", "Fizik"], yanlislar: [{ ders: "Türkçe", no: 2, durum: "yanlis" }, { ders: "Fizik", no: 1, durum: "yanlis", eslesen: "Basınç" }] }] }, BUGUN);
   const d = o.denemeler[0]; assert.deepEqual(Object.keys(d.bolumler), ["turkce"]); assert.equal(d.yanlislar.length, 2); assert.match(d.notlar.join(), /Fen Bilimleri: sayfada bütün/);
 });
+
+test("model kademesi: düzenli karne/tablo ucuz modelde kalır; el yazısı, konu analizi, tutarsızlık güçlü modele", async () => {
+  const { karneZoraGec } = await import("../functions/karne.js");
+  const tablo = { okunabildi: true, belgeTuru: "tablo", denemeler: [{ tur: "TYT", yayin: "345", tarih: "2026-08-20", bolumler: { turkce: { net: 36.25 }, sosyal: { net: 17.5 }, mat: { net: 26 }, fen: { net: 17.5 } }, toplamNet: 97.25 }] };
+  assert.equal(karneZoraGec(tablo, karneDuzelt(tablo, BUGUN), "end_turn"), null);
+  const karne = { okunabildi: true, belgeTuru: "karne", denemeler: [{ tur: "TYT", bolumler: { turkce: { d: 33, y: 4, net: 32 }, sosyal: { d: 20, y: 0, net: 20 }, mat: { d: 35, y: 1, net: 34.75 }, fen: { d: 18, y: 1, net: 17.75 } }, toplamNet: 104.5 }] };
+  assert.equal(karneZoraGec(karne, karneDuzelt(karne, BUGUN)), null);
+  const yanlisNet = { okunabildi: true, belgeTuru: "karne", denemeler: [{ tur: "TYT", bolumler: { turkce: { d: 33, y: 4, net: 30.23 } } }] };
+  assert.equal(karneZoraGec(yanlisNet, karneDuzelt(yanlisNet, BUGUN)), "tutarsiz");
+  const el = { okunabildi: true, belgeTuru: "el-yazisi", denemeler: [{ tur: "TYT", bolumler: { turkce: { net: 35.25 } } }] };
+  assert.equal(karneZoraGec(el, karneDuzelt(el, BUGUN)), "zor-belge");
+  const konu = { okunabildi: true, belgeTuru: "karne", denemeler: [{ tur: "TYT", bolumler: { turkce: { d: 33, y: 4 } }, yanlislar: [{ ders: "Türkçe", durum: "yanlis" }] }] };
+  assert.equal(karneZoraGec(konu, karneDuzelt(konu, BUGUN)), "konu-esleme");
+  assert.equal(karneZoraGec(null, null), "json-yok");
+  assert.equal(karneZoraGec(tablo, karneDuzelt(tablo, BUGUN), "max_tokens"), "kesildi");
+  assert.equal(karneZoraGec({ okunabildi: false }, karneDuzelt({ okunabildi: false }, BUGUN)), "okunamadi");
+});

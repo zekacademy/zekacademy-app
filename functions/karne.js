@@ -147,3 +147,18 @@ export function karneDuzelt(r, bugun){
   out.denemeler.sort((a, b) => (a.kaynak === "ana" ? 0 : 1) - (b.kaynak === "ana" ? 0 : 1) || String(b.tarih || "").localeCompare(String(a.tarih || "")));
   return out;
 }
+
+/* Ucuz model yetti mi? Düzenli belgelerde (karne ders analizi, net tablosu) aritmetik kontrolleri geçerse evet.
+   El yazısı, konu analizi (konu eşleme), okunamayan belge, tutarsız sayı ya da kesilen yanıtta güçlü modele geçilir. */
+export function karneZoraGec(ham, out, stop){
+  if (!ham) return "json-yok";
+  if (stop === "max_tokens") return "kesildi";
+  if (ham.okunabildi === false || !out.okunabildi) return "okunamadi";
+  if (!out.denemeler.length) return "deneme-yok";
+  const tur = String(ham.belgeTuru || "");
+  if (tur === "el-yazisi" || tur === "konu-analizi" || tur === "diger") return "zor-belge";
+  if (out.denemeler.some(d => !d.emin)) return "tutarsiz";
+  if (out.denemeler.some(d => (d.yanlislar || []).length)) return "konu-esleme";
+  if (out.denemeler.some(d => d.kaynak === "ana" && !Object.keys(d.bolumler).length)) return "net-yok";
+  return null;
+}
