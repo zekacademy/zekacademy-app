@@ -1795,7 +1795,7 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
 const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:50, uyari:40, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
-const callAi = (name, data) => window.ZK_ONZ ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
+const callAi = (name, data) => window.ZK_ONZ && name!=="denemeOku" ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
 const SZ_BOS = () => ({ foto:null, onizleme:"", key:"", mod:"coz", metin:"", data:null, shown:0, hints:0, busy:"", aciklama:{}, sohbet:[], benzer:null, benzerSec:"", hata:"", id:"", hak:0, model:"" });
 let SZ = SZ_BOS(); SZ.kalan = null; SZ.toplam = null;
 function szKullanimYukle(){ if(A() || !S.me) return; getDoc(doc(fdb, "aiKullanim", aiAy()+"_"+S.me)).then(d=>{ const k = d.exists() ? d.data() : {}, c = aiC();
