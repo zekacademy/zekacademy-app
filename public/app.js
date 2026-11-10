@@ -1855,7 +1855,7 @@ function pSoruCoz(){
       <label class="szdrop" for="szFoto">${SZ.onizleme ? `<img src="${SZ.onizleme}" alt="Seçilen soru"><span><b>Fotoğraf hazır</b><small>Değiştirmek için dokun</small></span>` : `<span class="szdic">${icon("note")}</span><span><b>Sorunun fotoğrafını ekle</b><small>Tek soru, net ve düz olsun</small></span>`}<input type="file" accept="image/*" id="szFoto" hidden></label>
       <div class="sqbtns"><label class="btn pri sm">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="szKamera" hidden></label><label class="btn sm">🖼️ Galeriden seç<input type="file" accept="image/*" id="szGaleri" hidden></label></div>
       <label class="f">Ya da soruyu yaz / not ekle<textarea id="szMetin" rows="2" placeholder="İsteğe bağlı · ör. 12. soru, 18 buldum ama şıklarda yok">${esc(SZ.metin)}</textarea></label>
-      <div class="f">Cevap anahtarı (biliyorsan)<div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}</div></div>
+      <div class="f szanahtar ${SZ.keyUyar?"uyar":""}">Cevap anahtarındaki doğru şık nedir?<small>Çözüm buna göre kontrol edilir, yanlış çözüm gösterilmez.</small><div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}<button class="szyok" data-act="szkey" data-v="yok" aria-pressed="${SZ.key==="yok"}">Anahtar yok</button></div></div>
       <div class="seg">${[["coz","Adım adım çöz"],["ipucu","Önce ipucu"]].map(([k,l])=>`<button data-act="szmod" data-v="${k}" aria-pressed="${SZ.mod===k}">${l}</button>`).join("")}</div>
       ${SZ.hata ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}
       <button class="btn pri full" data-act="szgonder" ${SZ.kalan===0?"disabled":""}>${SZ.mod==="coz" ? "Soruyu çöz" : "İpucu ver"}</button>
@@ -1866,17 +1866,18 @@ function pSoruCoz(){
   const sohbet = SZ.sohbet.map(m=>`<div class="szmsg ${m.r}">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : m.r==="me" ? szInline(m.t) : szMd(m.t)}</div>`).join("");
   const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
   return `${head}<div class="page sz">${SZ.data || yuk ? "" : bonus}${form}${yuk ? szYukleniyor() : ""}${SZ.hata && SZ.data ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}<div class="szsol">${szCozum()}</div>${szBenzer()}${sohbet ? `<div class="szchat">${sohbet}</div>` : ""}${devam}${alt}
-    ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarını girersen çözümü ona göre kontrol eder.</p>` : ""}</div>`;
+    ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarındaki şıkla karşılaştırarak kontrol eder; tutmazsa “emin değilim” der.</p>` : ""}</div>`;
 }
 async function szFotoSec(file){ if(!file) return; SZ.hata = ""; SZ.foto = file; try{ SZ.onizleme = await resimKucult(file, 360, 60000); }catch(e){ SZ.foto = null; SZ.hata = "Bu fotoğraf açılamadı. Başka bir fotoğraf dene."; } render(); }
 async function szGonder(tekrar){
   if(SZ.busy) return; const metin = SZ.metin.trim();
   if(!tekrar && !SZ.foto && !metin){ SZ.hata = "Önce sorunun fotoğrafını ekle ya da soruyu yaz."; render(); return; }
+  if(!tekrar && !SZ.key){ SZ.hata = "Önce cevap anahtarındaki doğru şıkkı seç. Anahtarın yoksa “Anahtar yok”a dokun."; SZ.keyUyar = true; render(); document.querySelector(".szanahtar")?.scrollIntoView({behavior:"smooth", block:"center"}); return; }
   SZ.hata = ""; SZ.busy = "coz"; if(!tekrar){ SZ.data = null; SZ.shown = 0; SZ.hints = 0; SZ.aciklama = {}; SZ.sohbet = []; SZ.benzer = null; SZ.benzerSec = ""; }
   const eski = tekrar && SZ.data ? szBaglam() : ""; SZ.data = null; render(); window.scrollTo(0,0); szAsamaBaslat();
   try{
     const [resim, kucuk] = SZ.foto ? await Promise.all([resimKucult(SZ.foto, 1568, 700000), resimKucult(SZ.foto, 240, 40000)]) : [null, null];
-    const r = await callAi("soruCoz", { resim, kucuk, metin, anahtar: SZ.key, tekrar: eski || undefined });
+    const r = await callAi("soruCoz", { resim, kucuk, metin, anahtar: SZ.key==="yok" ? "" : SZ.key, anahtarYok: SZ.key==="yok", tekrar: eski || undefined });
     SZ.data = r.cozum; SZ.id = r.id; SZ.model = r.model; SZ.hak = (tekrar ? SZ.hak : 0) + (r.hak||0);
     if(r.kalan!=null && !A()){ SZ.kalan = r.kalan; SZ.toplam = r.toplam; }
     SZ.shown = SZ.mod==="coz" ? 1 : 0; SZ.hints = 1;
@@ -1898,7 +1899,7 @@ async function szTakip(tur, gorunen, metin, adim){
 }
 function szAct(a, b, v){
   switch(a){
-    case "szkey": SZ.key = SZ.key===v ? "" : v; render(); return true;
+    case "szkey": SZ.key = SZ.key===v ? "" : v; SZ.keyUyar = false; if(SZ.hata && /anahtar/i.test(SZ.hata)) SZ.hata = ""; render(); return true;
     case "szmod": SZ.mod = v; render(); return true;
     case "szgonder": szGonder(false); return true;
     case "szyanlis": szGonder(true); return true;
