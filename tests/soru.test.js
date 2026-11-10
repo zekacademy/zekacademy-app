@@ -6,8 +6,8 @@ import { aiCfg, aiAcikMi, maliyet, kalanHak, zoraGec, jsonCikar, anahtarDurumu, 
 const c = aiCfg({});
 const iyi = { okunabildi: true, emin: true, zorluk: "kolay", cevap: { sik: "C" }, adimlar: [{ baslik: "x" }] };
 
-test("varsayılanlar: kapalı, 120 hak, 50 $ tavan; ayarlar üzerine yazar", () => {
-  assert.equal(c.acik, "kapali"); assert.equal(c.aylikHak, 120); assert.equal(c.tavan, 50);
+test("varsayılanlar: kapalı, 120 hak, 100 $ tavan; ayarlar üzerine yazar", () => {
+  assert.equal(c.acik, "kapali"); assert.equal(c.aylikHak, 120); assert.equal(c.tavan, 100);
   const c2 = aiCfg({ ai: { aylikHak: 80, fiyat: { zor: { in: 3, out: 15 } } } });
   assert.equal(c2.aylikHak, 80); assert.equal(c2.fiyat.zor.out, 15); assert.equal(c2.fiyat.kolay.in, 0.10);
 });
@@ -75,7 +75,7 @@ test("bonus: pay varsa hakkını kullanmış çalışkan öğrenciye, tavanı a�
   const r = bonusDagit(cc, { harcanan: 6, date: "2026-11-16", ogrenciler: ogr });
   assert.deepEqual(r.dagitim.map(x => x.sid), ["a", "d"]);
   assert.ok(r.dagitim.every(x => x.hak > 0 && x.hak <= cc.bonusTavan));
-  assert.equal(bonusDagit(cc, { harcanan: 40, date: "2026-11-16", ogrenciler: ogr }).dagitim.length, 0, "tahmin tavana yakınsa bonus yok");
+  assert.equal(bonusDagit(cc, { harcanan: 80, date: "2026-11-16", ogrenciler: ogr }).dagitim.length, 0, "tahmin tavana yakınsa bonus yok");
   assert.equal(bonusDagit({ ...cc, bonusAcik: false }, { harcanan: 1, date: "2026-11-16", ogrenciler: ogr }).dagitim.length, 0);
   assert.match(bonusMesaj({ hak: 20, uyum: 85 }), /%85 uydun, \+20 bonus/);
   assert.match(bonusMesaj({ hak: 12, uyum: null, gunlukDk: 200 }), /200 dk/);

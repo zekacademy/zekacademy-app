@@ -5,9 +5,9 @@ export const AI_VARSAYILAN = {
   acik: "kapali",            // "kapali" | "pilot" | "herkes"
   pilot: [],                 // pilot modunda açık öğrenci id'leri
   aylikHak: 120,             // öğrenci başı aylık soru hakkı
-  tavan: 50,                 // ayda en fazla harcanacak dolar
+  tavan: 100,                // ayda en fazla harcanacak dolar (Max planın aylık 100 $ API kredisi)
   yedek: 5,                  // bonus dağıtırken dokunulmayan pay ($)
-  uyari: 40,                 // bu tutara gelince koça bildirim ($)
+  uyari: 80,                 // bu tutara gelince koça bildirim ($)
   takipGunluk: 15,           // günlük "anlamadım / benzer soru" sınırı
   bonusAcik: true,
   bonusUyum: 70,             // bonus için en az haftalık program uyumu (%)
