@@ -113,6 +113,8 @@ function derle(ders) {
     for (const s of SINAV_SIRA) { const ls = listeler.filter(l => l.s.includes(s)); if (!ls.length) continue; Object.assign(konu, eslestir(konuListesi(ders, s), ls.flatMap(l => l.v))); }
     /* Bir sınavın listesinde olmayan konu, hocanın öbür sınav listesinde varsa oradan (ör. TYT Polinomlar → AYT listesi) */
     for (const s of ["TYT", "AYT"]) { if (!listeler.some(l => l.s.includes(s))) continue; const eksik = konuListesi(ders, s).filter(x => !konu[x.k]); const obur = listeler.filter(l => !l.s.includes(s)).flatMap(l => l.v); if (eksik.length && obur.length) Object.assign(konu, eslestir(eksik, obur)); }
+    /* AYT Felsefe Grubu: konu = dersin kendisi (Psikoloji, Sosyoloji, Mantık…); adında geçen listenin videoları */
+    if (ders === "fel") for (const { k, ad } of konuListesi("fel", "AYT")) { const l = listeler.find(l => l.s.includes("AYT") && sade(l.ad).includes(sade(ad))) || (ad === "Felsefe" && listeler.find(l => l.s.includes("AYT") && /felsefe grubu/.test(sade(l.ad)))); if (l) konu[k] = l.v.slice(0, 30).map(v => [v[0], 0]); }
     for (const [k, x] of elle) konu[k] = bolumEkle(k.split("|")[1], x.parca.map(p => [p[0], p[3] ? p[3] * 60 : 0]), tum);
     const toplam = SINAV_SIRA.filter(s => listeler.some(l => l.s.includes(s))).reduce((a, s) => a + konuListesi(ders, s).length, 0);
     ozet.push(`- ${h.ad}: ${listeler.length} liste, ${tum.length} video, ${Object.keys(konu).length}/${toplam} konu eşlendi`);

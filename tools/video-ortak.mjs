@@ -57,7 +57,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
   const re = VDERS[ders].re, f = sade(filtre), secim = {};
   for (const p of L) {
     const n = sade(p.ad);
-    if (!re.test(n) || (DISLA.test(n) && !/konu anlatim/.test(n)) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
+    if (!re.test(n) || (DISLA.test(n) && !/konu anlatim/.test(n) && !(/kamp/.test(n) && !/soru bankasi|cozum|deneme|tekrar|sorular/.test(n))) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
     const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
     const SL = sinavlar(p.ad); for (const s of (SL.length ? SL : VARSAYILAN[ders] || [])) {
       if (sabit.includes(s)) continue;
@@ -152,6 +152,36 @@ export const DIGER_AD = {
   "Ekosistem": ["Ekoloji", "Madde Döngüleri", "Besin Zinciri"], "Deyimler ve Atasözleri": ["Deyimler", "Atasözleri", "Söz Öbeklerinde Anlam"],
   "geo|Temel Kavramlar": ["Temel Kavramlar", "Doğruda Açılar"],
   "Sayı Problemleri": ["Sayı Problemi"], "İş, Güç ve Enerji": ["İş Güç", "Enerji"],
+  /* AYT */
+  "Binom ve Olasılık": ["Binom", "Olasılık"], "İstatistik": ["Veri Analizi", "Veri"],
+  "Atışlar": ["Serbest Düşme", "Atış Hareketi", "Yatay Atış", "Eğik Atış", "Düşey Atış"], "Enerji ve Hareket": ["İş ve Enerji", "Mekanik Enerji"],
+  "Tork Denge": ["Tork", "Denge"], "Eylemsizlik ve Açısal Momentum": ["Eylemsizlik Momenti", "Açısal Momentum", "Dönerek Öteleme"],
+  "Elektrik Alan ve Potansiyel": ["Elektriksel Kuvvet", "Elektrik Alan", "Elektriksel Potansiyel"], "Paralel Levhalar ve Sığa": ["Düzgün Elektrik Alan", "Sığa", "Sığaçlar", "Paralel Levhalar"],
+  "Manyetik Alan ve Manyetik Kuvvet": ["Manyetik Alan", "Manyetik Kuvvet", "Manyetizma"], "İndüksiyon, Alternatif Akım ve Transformatörler": ["İndüksiyon", "Alternatif Akım", "Transformatörler"],
+  "Büyük Patlama ve Parçacık Fiziği": ["Büyük Patlama", "Temel Parçacıklar", "Parçacık Fiziği"], "Kara Cisim Işıması": ["Siyah Cisim Işıması", "Elektromanyetik Dalgalar"],
+  "Fotoelektrik Olay ve Compton Olayı": ["Fotoelektrik", "Compton", "Hertz Deneyi"], "Modern Fiziğin Teknolojideki Uygulamaları": ["Görüntüleme Teknolojileri", "Yarı İletken", "Süper İletkenler", "Nanoteknoloji"],
+  "Dalga Mekaniği": ["Kırınım", "Girişim", "Doppler"], "Basit Makineler": ["Kuvvet Kazancı", "Kaldıraçlar", "Makaralar", "Palangalar", "Dişli Çarklar"],
+  "Düzgün Çembersel Hareket": ["Merkezcil Kuvvet", "Çembersel Hareket"], "Kütle Çekim Kuvveti": ["Kütle Çekim", "Kepler"], "Atom Modelleri": ["Atom Modeli", "Bohr Atom"],
+  "Radyoaktivite": ["Fisyon", "Işımaları", "Çekirdekler"], "Özel Görelilik": ["Göreli", "Michelson"],
+  "Modern Atom Teorisi": ["Atomun Kuantum Modeli"], "Sıvı Çözeltiler": ["Derişim Birimleri", "Çözücü ve Çözünen", "Koligatif"],
+  "Kimyasal Tepkimelerde Hız": ["Tepkime Hızları", "Tepkime Hızı", "Tepkime Hızının"], "Kimyasal Tepkimelerde Denge": ["Kimyasal Denge", "Denge Sabitleri"],
+  "Asit-Baz Dengesi": ["Asitler ve Bazlar", "Asit ve Baz", "Sulu Çözeltiler"], "Kimya ve Elektrik": ["Redoks", "Elektrokimyasal", "Elektroliz", "Elektrokimya"],
+  "Organik Kimyaya Giriş": ["Karbon Kimyasına Giriş"], "Hidrokarbonlar (Alkan, Alken, Alkin)": ["Hidrokarbonlar", "Alkanlar", "Alkenler", "Alkinler"],
+  "Aromatik Bileşikler": ["Aromatik", "Benzen"], "Karbonil Bileşikleri (Aldehit ve Keton)": ["Aldehit ve Ketonlar", "Aldehitler", "Karbonil"], "Organik Tepkimeler ve İzomeri": ["İzomeri"],
+  "Dolaşım ve Bağışıklık Sistemi": ["Dolaşım Sistemi", "Bağışıklık"], "Destek ve Hareket Sistemi": ["Destek ve Hareket", "İskelet Sistemi", "Kas Sistemi"],
+  "Üreme Sistemi ve Embriyonik Gelişim": ["Üreme Sistemi", "Embriyonik"], "Komünite ve Popülasyon Ekolojisi": ["Komünite", "Popülasyon"],
+  "Genetik Şifre-Protein Sentezi": ["Protein Sentezi", "Genetik Şifre", "Genden Proteine"], "Fotosentez – Kemosentez": ["Fotosentez", "Kemosentez"],
+  "Bitki Biyolojisi": ["Bitki"], "Endokrin Sistem": ["Endokrin", "Hormonlar"],
+  "Güzel Sanatlar ve Edebiyat": ["Güzel Sanatlar", "Edebiyata Giriş"], "Metinlerin Sınıflandırılması": ["Metin Türleri"],
+  "Şiir Bilgisi": ["Şiir Bilgisi", "Şiir, Biçim", "Şiirde Ahenk", "Şiir Türleri", "Nazım Biçimleri"], "Edebi Sanatlar": ["Söz Sanatları"],
+  "Türk Edebiyatı Dönemleri": ["Edebiyatının Dönemleri"], "İslamiyet Öncesi Türk Edebiyatı ve Geçiş Dönemi": ["İslamiyet Öncesi", "Geçiş Dönemi", "Destanlar"],
+  "Halk Edebiyatı": ["Halk Edebiyatı", "Âşık Edebiyatı", "Tasavvuf"], "Divan Edebiyatı": ["Divan Edebiyatı", "Divan Nesri", "Divan Sanatçıları", "Mesnevi"],
+  "Tanzimat Edebiyatı": ["Tanzimat"], "Servet-i Fünun Edebiyatı": ["Servetifünun", "Edebiyat-ı Cedide"], "Fecr-i Ati Edebiyatı": ["Fecriati"],
+  "Milli Edebiyat": ["Millî Edebiyat"], "Cumhuriyet Dönemi Edebiyatı": ["Cumhuriyet Dönemi", "Cumhuriyet Edebiyatı"], "Edebiyat Akımları": ["Edebî Akımlar", "Edebi Akımlar"], "Dünya Edebiyatı": ["Batı Edebiyatı"],
+  "I. Dünya Savaşı": ["Birinci Dünya Savaşı", "1. Dünya Savaşı", "20. Yüzyıl Başlarında Osmanlı"],
+  "Atatürk Sonrası Dış Politika ve Güncel Olaylar": ["II. Dünya Savaşı", "Soğuk Savaş", "Yumuşama Dönemi", "Küreselleşen Dünya"],
+  "Enerji Akışı ve Madde Döngüleri": ["Madde Döngüleri", "Enerji Akışı", "Ekosistem"], "Çevre Sorunları ve Ekstrem Doğa Olayları": ["Ekstrem Doğa Olayları", "Doğal Afetler"],
+  "Kalkınma Projeleri": ["Bölgesel Kalkınma"], "Ülkeler Arası Etkileşimler": ["Ülkeler Arası", "Küresel Ortam"],
 };
 export function benzerlik(konu, baslik) {
   const K = kelime(konu), B = kelime(baslik);
@@ -168,15 +198,22 @@ const puan = (ad, baslik, k) => Math.max(...adlar(ad, k).map((a, i) => benzerlik
 /* Konuları videolara eşle. konular: [{k, ad}], videolar: [[id, başlık, süre, bölümler]] → {k: [[id, sn], ...]}
    Konunun bütün konu anlatımı videoları sırayla alınır (soru çözümü videoları ancak konu anlatımı yoksa); hiçbiri yoksa uzun videonun bölümü. */
 export function eslestir(konular, videolar, esik = 0.75) {
-  const out = {};
+  const out = {}, dogrudan = {};
   for (const { k, ad } of konular) {
     const tut = videolar.map((v, i) => ({ v, i, p: puan(ad, v[1], k) })).filter(x => x.p >= esik);
     const konu = tut.filter(x => !SORU_RE.test(sade(x.v[1])));
     const L = (konu.length ? konu : tut);
-    if (L.length) { const en = Math.max(...L.map(x => x.p)); out[k] = L.filter(x => x.p >= en - 0.26).slice(0, 12).map(x => [x.v[0], 0]); continue; }
+    if (L.length) { const en = Math.max(...L.map(x => x.p)); dogrudan[k] = L.filter(x => x.p >= en - 0.26).map(x => x.i); continue; }
     let en = null;
     for (const v of videolar) for (const [sn, bad] of v[3] || []) { const q = puan(ad, bad, k) - 0.01 - (kelime(bad).length > kelime(ad).length + 2 ? 0.15 : 0); if (q >= 0.85 && (!en || q > en.p)) en = { p: q, v: [v[0], sn] }; }
     if (en) out[k] = [en.v];
+  }
+  /* Listeler konu sırasıyla gider: konunun ilk videosundan bir sonraki konunun ilk videosuna kadar olanlar da o konunundur (alt başlıklar, soru çözümleri) */
+  for (const [k, I] of Object.entries(dogrudan)) {
+    const ilk = Math.min(...I); let son = Infinity;
+    for (const [k2, I2] of Object.entries(dogrudan)) if (k2 !== k) for (const x of I2) if (x > ilk && x < son && !I.includes(x)) son = x;
+    const S = new Set(I.filter(x => x < son || son === Infinity)); if (son !== Infinity) for (let x = ilk; x < son; x++) S.add(x);
+    out[k] = [...S].sort((a, b) => a - b).slice(0, 30).map(x => [videolar[x][0], 0]);
   }
   return out;
 }

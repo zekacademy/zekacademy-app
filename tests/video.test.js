@@ -56,7 +56,7 @@ test("hocaların farklı konu adları: tarih yeni ünite adları, geometri temel
     ["d", "Türklerin İslamiyeti Kabulü - Konu Anlatımı", 1800, []], ["e", "Türklerin İslamiyeti Kabulü - Soru Çözümü", 1800, []], ["f", "KENARORTAY | 5.Hafta", 1800, []], ["g", "KENAR AÇI KENAR | 6.Hafta", 1800, []]];
   const E = eslestir([{ k: "geo|Temel Kavramlar", ad: "Temel Kavramlar" }, { k: "tar|İlk Türk İslam Devletleri", ad: "İlk Türk İslam Devletleri" }, { k: "geo|Kenarortay", ad: "Kenarortay" }, { k: "geo|Üçgende Açılar", ad: "Üçgende Açılar" }], V);
   assert.deepEqual(E["geo|Temel Kavramlar"], [["a", 0], ["b", 0]]);
-  assert.deepEqual(E["tar|İlk Türk İslam Devletleri"], [["d", 0]]);
+  assert.deepEqual(E["tar|İlk Türk İslam Devletleri"], [["d", 0], ["e", 0]]);   /* konunun ardından gelen soru çözümü de alınır */
   assert.deepEqual(E["geo|Kenarortay"], [["f", 0]]);
   assert.deepEqual(E["geo|Üçgende Açılar"], [["c", 0]]);
 });
