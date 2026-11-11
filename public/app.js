@@ -542,6 +542,12 @@ const SINIF_ADIM = [
   {view:"grup", nav:"grup", ic:"timer", b:"Nasıl çalışır?", t:"Kronometreyi ya da görevinin ▶ sayacını başlattığın an masanda yeşil ışık yanar ve hangi derse çalıştığın görünür. Durdurunca “Mola”ya geçersin; bugün hiç başlamadıysan “Gelmedi” yazar. Her masanın altında o günün toplam süresi var. “Sıralama” sekmesinde bugünün ve bu haftanın sıralamasını görürsün."},
   {view:"grup", nav:"grup", ic:"target", b:"Ligler ve alev 🔥", t:"Üst üste her gün 4+ saat çalışırsan Bronz, 5+ saatle Gümüş, 6+ saatle Altın, 7+ saatle Elmas lige yükselirsin; masan da ligine göre değişir. Bir gün 7 saati geçersen masanda alev yanar. Seriyi bozarsan lig düşer, o yüzden her gün az da olsa otur!"},
   {view:"grup", nav:"grup", ic:"user", b:"Gerçek adın görünmez", t:"Sınıfta herkes birbirini sadece takma adı ve karakteriyle görür; gerçek adın, okulun, netlerin kimseye görünmez. Sadece ne kadar çalıştığın görünür. Şimdi karakterini oluşturup masana oturalım!", sinifSon:true} ];
+const DERS_ADIM = [
+  {view:"ders", nav:"ders", ic:"book", b:"Ders bölümü yenilendi ✨", t:"Alttaki “Ders” artık tek sayfa: en üstte son denemenin neti ve net grafiğin, altında kaldığın video, takıldığın sorular, Öğrenme Merkezi ve derslerin. Ne çalışacağını aramadan buradan başla."},
+  {view:"ders", nav:"ders", ic:"chart", b:"Deneme grafiğin", t:"Grafikte son denemelerinin netleri ve kesikli çizgiyle hedefin var. Karta dokununca Deneme analizi açılır; “Karneden ekle” ile karnenin fotoğrafını yükle, netler kendiliğinden dolsun."},
+  {view:"videolar", nav:"ders", ic:"grad", b:"Yeni: Öğrenme Merkezi 🎓", t:"Koyu yeşil “Öğrenme Merkezi” kartında tüm derslerin konu anlatımları var: TYT, AYT ve 9-10-11 Maarif kampları, hoca hoca. Önce kendi hocanın videoları gelir; istersen başka hocadan da izleyebilirsin. Kaldığın yer kaydedilir."},
+  {view:"ders", nav:"ders", ic:"list", b:"Derslerim ve konular", t:"Bir derse dokun: konuların listelenir. Yeşil nokta bitti, sarı devam ediyor, boş başlanmadı. “Eksiklerim” ile sadece eksik konularını gör. Konunun yanındaki ▶ videoyu açar; konunun adına dokununca tekrar, soru bankası ve yanlışlarını işaretlersin."},
+  {view:"ders", nav:"ders", ic:"camera", b:"Takıldığım sorular", t:"Çözemediğin sorunun fotoğrafını çek ve biriktir; Ders sayfasındaki kutuda kaç soru beklediği görünür. Sonra dönüp çözünce “Çözüldü” yap."} ];
 const TUR = [
   {view:"home", ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin: programın, hedeflerin, denemelerin ve çalışma sürelerin hep burada. Yaptığın her şeyi koçun anında görür. Şimdi 2 dakikada her bölümü sırayla gezelim; her adımda arkada o sayfa açılacak."},
   {view:"home", ic:"phone", b:"Önce telefonuna kur", t:"Tarayıcıdan değil, uygulama gibi kullan: Android’de Chrome menüsünden (⋮) “Uygulamayı yükle”, iPhone’da Safari’de Paylaş (□↑) → “Ana Ekrana Ekle”. Böylece tek dokunuşla açılır ve bildirimler gelir.", kosul:"kurulmamis"},
@@ -552,7 +558,7 @@ const TUR = [
   {view:"program", nav:"program", ic:"target", b:"Bu haftanın hedefleri", t:"Programın altında her ders için bu hafta bitirmen gereken konular var. Konuyu bitirince hedefin yanındaki yuvarlağı işaretle; koçun hangi hedefin tamamlandığını buradan takip eder."},
   ...SINIF_ADIM.slice(0,-1).map(x=>({...x, b:x.b.replace("Yeni: ","")})),
   {view:"kronometre", nav:"daha", ic:"timer", b:"Kronometre ve çalışma süresi", t:"Daha Fazla → Kronometre. Görev dışı çalışmalarında da sayacı başlat, ders seç, bitince durdur. Unuttuysan süreyi elle de yazabilirsin. Günlük hedef sürene ne kadar yaklaştığını burada görürsün.", ornek:"sure"},
-  {view:"analiz", nav:"ders", ic:"chart", b:"Ders: deneme analizi", t:"Alttaki menüde Ders → Deneme analizi. Her denemeden sonra “Karneden ekle” ile karnenin fotoğrafını yükle ya da “Elle ekle” ile netlerini gir. Altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir. Netlerinin grafiği ve hedefe ne kadar kaldığı burada.", ornek:"yanlis"},
+  ...DERS_ADIM.map(x=>({...x, b:x.b.replace(/^Yeni: /,"").replace(" yenilendi ✨","")})),
   {view:"analiz", nav:"ders", ic:"cal", b:"Deneme takvimi", t:"Deneme analizi sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
   {view:"konular", nav:"ders", ic:"book", b:"Ders: konu ilerlemesi", t:"Ders → Konu ilerlemesi. Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
   {view:"cetele", nav:"ders", ic:"list", b:"Ders: yanlış çetelesi", t:"Ders → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
@@ -562,14 +568,14 @@ const TUR = [
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
   {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
-const YENILIK_SURUM = "2026-11-12";
+const YENILIK_SURUM = "2026-11-13";
 const YENILIK = [
-  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, senin için yeni özellikler ekledik. En büyüğü: artık bir sınıfın var! Kısaca göstereyim."},
-  ...SINIF_ADIM.slice(0, -1),
-  {view:"analiz", nav:"ders", ic:"book", b:"Yeni: Ders bölümü", t:"Derslerinle ilgili her şey artık alttaki “Ders” bölümünde, dört sekme olarak bir arada: Deneme analizi, Konu ilerlemesi, Yanlış çetelesi ve Takıldığım sorular."},
-  {view:"analiz", nav:"ders", ic:"camera", b:"Yeni: Karneden deneme ekle 📷", t:"Ders → Deneme analizi’nde “Karneden ekle”ye dokun, karnenin fotoğrafını ya da PDF’ini seç; netler ve yanlış konular kendiliğinden dolsun, sen sadece kontrol et."},
-  {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨"} ];
-const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : true);
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümünü senin için baştan tasarladık ve konu anlatım videolarını ekledik. 1 dakikada göstereyim."},
+  ...DERS_ADIM,
+  ...SINIF_ADIM.slice(0, -1).map(x=>({...x, kosul:"sinifyok"})),
+  {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨", kosul:"sinifyok"},
+  {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin {Ad}! Tanıtımı Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin.", kosul:"sinifvar"} ];
+const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
@@ -612,7 +618,7 @@ function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1],
   const son = vSon(), bek = soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length, subs = dersListesi(s, tur);
   const head = topbar(`<h1 class="ttl">Ders</h1>`, isMaarif(s) ? "" : `<div class="seg dsseg"><button data-act="ex" data-v="TYT" aria-pressed="${tur==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${tur==="AYT"}">AYT</button></div>`);
   const deneme = `<button class="card dsden" data-act="go" data-v="analiz">
-    ${last ? `<div class="dsdh"><div><small>Son ${tur} denemen · ${esc(last.yayin||"")}</small><div class="dsnet"><b class="num">${fmt(tot)}</b>${dl!=null?`<span class="${dl>=0?"up":"down"}">${dl>0?"↑ ":dl<0?"↓ ":""}${fmt(Math.abs(dl))} net</span>`:""}</div></div>${hedef!=null?`<div class="dshdf"><small>Hedef</small><b class="num">${fmt(hedef)}</b></div>`:""}</div>
+    ${last ? `<div class="dsdh"><div><small>Son ${tur} denemen · ${esc(last.yayin||"")}</small><div class="dsnet"><b class="num">${fmt(tot)}</b>${dl!=null?`<span class="${dl>=0?"up":"down"}">${dl>0?"↑ ":dl<0?"↓ ":""}${fmt(Math.abs(dl))} net</span>`:""}</div></div></div>
       <div class="dsgr">${netChart(s, tur)}</div>`
     : `<div class="dsdh"><div><small>${tur} denemeleri</small><div class="dsnet"><b style="font-size:18px">Henüz deneme yok</b></div></div></div><p class="muted small" style="margin:6px 0 0">İlk denemeni karnenin fotoğrafıyla ekle; grafik burada oluşur.</p>`}
     <span class="dsalt"><span class="muted">${last ? (hedef!=null && tot!=null ? `Hedefine <b>${fmt(Math.max(0, hedef-tot))}</b> net kaldı` : `${L.length} deneme`) : "Karneden ya da elle ekle"}</span><span class="dsgit">Deneme analizi ${icon("chev","xs")}</span></span></button>`;
@@ -922,21 +928,24 @@ function planEditor(s){
 }
 
 function netChart(s, tur){
-  const list = exams(s,tur).slice(-6); const max = tur==="TYT"?120:160; const hedef = num(s.hedef[tur.toLowerCase()]);
+  const list = exams(s,tur).slice(-8), max = tur==="TYT"?120:160, hedef = num(s.hedef[tur.toLowerCase()]);
   if(!list.length) return `<div class="empty">Deneme eklendikçe net grafiğin burada oluşur.</div>`;
-  const W=360,H=210,pl=26,pr=4,pt=16,pb=26, n=list.length;
-  const vals = list.map(totalOf); if(hedef!=null) vals.push(hedef);
-  const hi = Math.min(max, Math.max(20, Math.ceil((Math.max(...vals)+5)/20)*20));
-  const y = v => pt + (1-Math.max(0,v)/hi)*(H-pt-pb);
-  const slot = (W-pl-pr)/Math.max(n,4), bw = Math.min(42, slot*.66), x0 = pl + (W-pl-pr - slot*n)/2;
-  let g = `<defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ac2)"/><stop offset="1" stop-color="var(--ac)"/></linearGradient></defs>`;
-  for(let k=0;k<=4;k++){ const v = hi*k/4; g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-dasharray="3 6"/><text x="${pl-8}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--faint)">${Math.round(v)}</text>`; }
-  list.forEach((d,i)=>{ const v = totalOf(d), cx = x0 + slot*i + slot/2, top = y(v), son = i===n-1, h = H-pb-top;
-    g += `<rect x="${cx-bw/2}" y="${top}" width="${bw}" height="${Math.max(h,0)}" rx="${Math.min(14,bw/2.6)}" fill="${son?"url(#bg1)":"var(--ac)"}" fill-opacity="${son?1:.78}"/>`;
-    g += h>24 ? `<text x="${cx}" y="${top+17}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#fff">${fmt(v)}</text>` : `<text x="${cx}" y="${top-6}" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--fg)">${fmt(v)}</text>`;
-    g += `<text x="${cx}" y="${H-8}" text-anchor="middle" font-size="10" fill="var(--faint)">${shortDate(d.tarih)}</text>`; });
-  if(hedef!=null){ g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(hedef)}" y2="${y(hedef)}" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="6 5"/><text x="${W-pr}" y="${y(hedef)-5}" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--warn)">Hedef ${fmt(hedef)}</text>`; }
-  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${tur} net grafiği">${g}</svg></div>`;
+  const W=360, H=180, pl=8, pr=8, pt=20, pb=24, n=list.length, vals = list.map(totalOf);
+  const ust = Math.min(max, Math.max(...vals, hedef ?? 0) + 3), alt = Math.max(0, Math.min(...vals) - 12);
+  const y = v => pt + (1 - (Math.max(alt, v) - alt) / Math.max(1, ust - alt)) * (H - pt - pb);
+  const x = i => n===1 ? W/2 : pl + 18 + i * (W - pl - pr - 36) / (n - 1);
+  const P = vals.map((v,i)=>[x(i), y(v)]), yol = P.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ");
+  const gid = "ng" + tur;
+  let g = `<defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ac)" stop-opacity=".28"/><stop offset="1" stop-color="var(--ac)" stop-opacity="0"/></linearGradient></defs>`;
+  g += `<line x1="${pl}" x2="${W-pr}" y1="${H-pb}" y2="${H-pb}" stroke="var(--line)"/>`;
+  if(hedef!=null){ const hy = y(hedef); g += `<line x1="${pl}" x2="${W-pr}" y1="${hy}" y2="${hy}" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="5 5"/><text x="${pl}" y="${hy-6}" font-size="10.5" font-weight="700" fill="var(--warn)">Hedef ${fmt(hedef)}</text>`; }
+  if(n>1) g += `<path d="${yol} L${P[n-1][0].toFixed(1)} ${H-pb} L${P[0][0].toFixed(1)} ${H-pb} Z" fill="url(#${gid})"/><path d="${yol}" fill="none" stroke="var(--ac)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+  P.forEach(([cx,cy],i)=>{ const son = i===n-1, v = vals[i];
+    g += son ? `<circle cx="${cx}" cy="${cy}" r="7" fill="var(--surface)" stroke="var(--ac)" stroke-width="3.5"/>` : `<circle cx="${cx}" cy="${cy}" r="4" fill="var(--ac)"/>`;
+    const hy = hedef!=null ? y(hedef) : -99, alta = Math.abs(cy-(son?13:10)-hy) < 12 || cy < 30;
+    g += `<text x="${cx}" y="${alta ? cy+(son?24:20) : cy-(son?13:10)}" text-anchor="middle" font-size="${son?12.5:10.5}" font-weight="${son?800:600}" fill="${son?"var(--fg)":"var(--muted)"}">${fmt(v)}</text>`;
+    g += `<text x="${cx}" y="${H-7}" text-anchor="middle" font-size="10" fill="var(--faint)">${shortDate(list[i].tarih)}</text>`; });
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${tur} net grafiği: ${vals.map(fmt).join(", ")}${hedef!=null?`, hedef ${fmt(hedef)}`:""}">${g}</svg></div>`;
 }
 function pAnaliz(s){
   const tur = S.ex, F = tur==="TYT"?TYTF:AYTF, list = exams(s,tur), last = list[list.length-1], prev = list[list.length-2];
