@@ -693,6 +693,7 @@ function sMore(s){
       <button class="row" data-act="logout"><span class="ri">${icon("logout","sm")}</span><div><div class="rt">Çıkış yap</div><div class="rs">“Beni hatırla” bu cihazda sıfırlanır</div></div></button>
     </div>
     <p class="proto">Zekacademy</p>
+    ${[...GR.list.values()].some(zekVar) ? `<p class="faint" style="font-size:11px;text-align:center;margin:2px 12px 0;opacity:.75">Hakkında: Premium Sınıf'ta motivasyon için Zek AI çalışma arkadaşları da yer alır.</p>` : ""}
   </div>`;
 }
 
@@ -1219,19 +1220,42 @@ function otoSinif(){ if(!A() || window.ZK_ONZ || !GR.yuklu || !loaded.students |
   const g = GR.list.get(OTO_GRUP), uy = new Set(g?.uyeler||[]), haric = new Set(g?.haric||[]);
   const eksik = [...S.students.entries()].filter(([id,x])=>!x.silindi && id!==ONZ_ID && !uy.has(id) && !haric.has(id)).map(([id])=>id);
   if(g && !eksik.length) return;
-  otoBekle = true; const yeni = {ad: g?.ad || "Premium Sınıf", uyeler:[...uy, ...eksik], at: g?.at || Date.now(), oto:true, haric:[...haric]};
+  otoBekle = true; const yeni = {ad: g?.ad || "Premium Sınıf", uyeler:[...uy, ...eksik], at: g?.at || Date.now(), oto:true, haric:[...haric], ...(g && g.zek===false ? {zek:false} : {})};
   setDoc(doc(fdb,"gruplar",OTO_GRUP), yeni).then(()=>{ GR.list.set(OTO_GRUP, yeni); }).catch(e=>console.warn("premium sınıf", e)).finally(()=>{ otoBekle = false; }); }
 function grupTemizle(){ GR.list = new Map(); GR.canli = new Map(); GR.un = new Map(); GR.sec = ""; GR.sonImza = ""; }
 /* Öğrenci tarafında bir grubun üyeleri (sadece hâlâ üye olanlar; kendisi her zaman en güncel haliyle) */
 function grUyeler(gid){ const g = GR.list.get(gid); if(!g) return []; const C = GR.canli.get(gid) || new Map(), s = st();
-  return (g.uyeler||[]).map(u=> u===S.me ? {...ogrOzet(u, s), ben:true} : C.has(u) ? {...uyeOzet({uid:u, ...C.get(u), av:C.get(u).avatar || avVarsayilan(u)})} : null).filter(Boolean).filter(x=>x.ben || x.takma); }
+  const L = (g.uyeler||[]).map(u=> u===S.me ? {...ogrOzet(u, s), ben:true} : C.has(u) ? {...uyeOzet({uid:u, ...C.get(u), av:C.get(u).avatar || avVarsayilan(u)})} : null).filter(Boolean).filter(x=>x.ben || x.takma);
+  L.forEach((x,i)=>{ x.sira = i*1.6; }); return zekVar(g) ? [...L, ...zekBotlar()] : L; }
+/* Zek AI çalışma arkadaşları (Premium Sınıf): cihazda, tarih + kimlikten hesaplanır; veritabanına yazılmaz. Herkes aynı anda aynı şeyi görür. */
+const zekVar = g => !!(g && g.oto && g.zek !== false);
+const ZEK = [["Sabahçı","e",410,["mat","fiz","geo"],"pc",7.5,{sac:"kisa",aks:"kulaklik",giy:"kapus"}],["Lavanta","k",360,["bio","kim","tr"],"tel",9.3,{sac:"basortu",giy:"kazak"}],
+  ["Kuzey","e",300,["mat","tar","cog"],"tab",13.5,{sac:"fade",sakal:"hafif"}],["Nehir","k",455,["mat","fiz","kim"],"pc",8.4,{sac:"uzun",aks:"gozluk"}],
+  ["Tıpçı34","e",480,["bio","kim","mat"],"pc",7.6,{sac:"yan",aks:"gozluk",giy:"gomlek"}],["Asel","k",250,["tr","ede","tar"],"tel",14.5,{sac:"orgu"}],
+  ["Rüzgar","e",330,["geo","mat","fiz"],"tel",11.5,{sac:"kivircik"}],["Elif.k","k",390,["mat","tr","bio"],"tab",8.8,{sac:"bob",giy:"forma"}],
+  ["Hedef_ODTÜ","e",430,["mat","fiz","den"],"pc",9.0,{sac:"undercut",giy:"kapus"}],["Mavi","k",280,["kim","bio","cog"],"tel",12.5,{sac:"sal",giy:"kazak"}]];
+function zekRng(seed){ let a = strHash(seed) || 1; return ()=>{ a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ t>>>15, t | 1); t ^= t + Math.imul(t ^ t>>>7, t | 61); return ((t ^ t>>>14) >>> 0) / 4294967296; }; }
+/* Bir botun bir günlük oturumları: [[başlangıçDk, bitişDk, ders], ...] (gece yarısından itibaren dakika) */
+function zekGun(i, d){ const [, , taban, dersler, , bas] = ZEK[i], r = zekRng("zek"+i+":"+d);
+  if(r() < 0.1) return []; const hedef = taban*(0.72 + r()*0.5), O = []; let t = Math.round(bas*60 + r()*70 - 25), top = 0, n = 0;
+  while(top < hedef && t < 23*60+20){ const uz = Math.round(Math.min(hedef - top + 5, 38 + r()*80)); if(uz < 15) break; const bit = Math.min(t+uz, 23*60+40);
+    O.push([t, bit, dersler[(n + Math.floor(r()*3)) % dersler.length]]); top += bit - t; n++;
+    t = bit + Math.round(n%2===0 ? 50 + r()*80 : 12 + r()*30); }
+  return O; }
+function zekBotlar(){ const t = today(), simdi = new Date(), dkNow = simdi.getHours()*60 + simdi.getMinutes() + simdi.getSeconds()/60, gece = new Date(t+"T00:00:00").getTime();
+  return ZEK.map((z, i)=>{ const [takma, cins, , , cihaz, , av] = z, u = "__zek"+i, gunler = {};
+    for(let j=1;j<=13;j++){ const d = gEkle(t,-j); gunler[d] = zekGun(i, d).reduce((a,[b,e])=>a+e-b, 0); }
+    const O = zekGun(i, t); let bitti = 0, basla = null, ders = "";
+    O.forEach(([b,e,ds])=>{ if(e <= dkNow) bitti += e-b; else if(b <= dkNow){ basla = gece + b*60000; ders = ds; } });
+    const temel = avVarsayilan(u), sl = SAC_CINS[cins].filter(x=>x!=="bere" && x!=="kel");
+    return {...uyeOzet({uid:u, takma, av:{...temel, cins, sac: sl.includes(av.sac) ? av.sac : sl[0], ...av}, basla, ders, cihaz: basla ? cihaz : "", gun:t, bugunDk:Math.round(bitti), gunler}), zek:true, sira:i*1.6+0.8}; }); }
 function grSirala(L, sekme){ const k = sekme==="hafta" ? "hafta" : "bugun"; return [...L].sort((a,b)=> sekme==="hafta" ? b.hafta-a.hafta : (b.canli-a.canli) || (b.bugun-a.bugun)); }
 const dersEt = k => k ? (DERS_AD[k]||k) : "Serbest çalışma";
 function grSatir(x, i, sekme, koc){ const ad = koc ? x.ad : (x.takma || "Sen"), deger = sekme==="hafta" ? x.hafta : x.bugun;
   const alt = x.canli ? `<span class="gcanli"><i></i>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></span>`
     : sekme==="hafta" ? `<span class="faint">Bugün ${x.bugun ? fmtMin(x.bugun) : "başlamadı"}</span>` : `<span class="faint">${x.bugun ? "Şu an ara veriyor" : "Bugün henüz başlamadı"}</span>`;
   const bars = koc ? `<span class="g7">${pDays7().map(d=>{ const v = (x.gunler||{})[d] || 0; return `<i title="${GUNK[dIdx(d)]} ${fmtMin(v)}" style="--h:${Math.min(100, v/300*100)}%" class="${d===today()?"bg":""} ${v?"":"z"}"></i>`; }).join("")}</span>` : "";
-  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""} ${x.lig?ligRozet(x, true):""}${koc && x.takma?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}${x.bugun>=ALEV_DK?`<span class="galev" title="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
+  return `<div class="gsat ${x.ben?"ben":""} ${x.canli?"on":""} ${x.bugun>=ALEV_DK?"alev":""}"><span class="gsira num">${i+1}</span>${grAvatar(koc ? x.ad : ad, x.uid, x.canli)}<div class="gtx"><b>${esc(ad)}${x.ben?` <span class="pill ac">sen</span>`:""} ${x.lig?ligRozet(x, true):""}${koc && x.takma && !x.zek?` <span class="faint small">· ${esc(x.takma)}</span>`:""}</b><small>${alt}</small></div>${bars}${x.bugun>=ALEV_DK?`<span class="galev" title="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}<b class="gdk num" ${x.canli?`data-gt="${x.basla}" data-gb0="${deger - gecenSn(x.basla)/60}"`:""}>${fmtMin(deger)}</b></div>`; }
 const pDays7 = () => { const w = monday(today()); return [0,1,2,3,4,5,6].map(i=>iso(new Date(new Date(w+"T12:00:00").getTime()+i*864e5))); };
 function grSekme(){ return `<div class="seg"><button data-act="grsekme" data-v="bugun" aria-pressed="${GR.sekme!=="hafta"}">Bugün</button><button data-act="grsekme" data-v="hafta" aria-pressed="${GR.sekme==="hafta"}">Bu hafta</button></div>`; }
 /* Öğrenci: Çalışma grubum */
@@ -1242,7 +1266,7 @@ const ALEV_DK = 420; /* bugün 7 saati geçen alev alır */
 const ALEV_SVG = '<svg viewBox="0 0 24 32"><defs><linearGradient id="alv" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF3D00"/><stop offset=".55" stop-color="#FF9100"/><stop offset="1" stop-color="#FFD54F"/></linearGradient></defs><path class="a1" fill="url(#alv)" d="M12 1c1 5 7 8 7 16a7 7 0 0 1-14 0c0-4 2-6 3-8 0 3 1 4 2 4 0-4 0-8 2-12z"/><path class="a2" fill="#FFE082" d="M12 15c.6 3 3.5 4 3.5 8a3.5 3.5 0 0 1-7 0c0-2 1-3 1.6-4 .2 1.4.8 2 1.3 2-.2-2.2-.2-4.4.6-6z"/></svg>';
 /* Çalışma salonu: masalar, her masada 6 sandalye (3 üst, 3 alt). Oturma sırası grup listesindeki sıradır, böylece kimse yer değiştirmez. */
 function salonKoltuk(x, koc){
-  const ad = koc ? ilkAd(x.ad)+(x.ad.split(/\s+/)[1] ? " "+x.ad.split(/\s+/).slice(-1)[0][0]+"." : "") : (x.takma || "Sen"), alev = x.bugun>=ALEV_DK;
+  const ad = koc && x.zek ? x.takma+" 🤖" : koc ? ilkAd(x.ad)+(x.ad.split(/\s+/)[1] ? " "+x.ad.split(/\s+/).slice(-1)[0][0]+"." : "") : (x.takma || "Sen"), alev = x.bugun>=ALEV_DK;
   const sure = x.canli ? `<b class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</b>` : `<b class="num kz">00:00</b>`;
   const sahne = `<div class="ksah ${x.canli?"on":""} ${alev?"alev":""} ${x.lig?"l-"+x.lig.k:""}" style="--gc:${avRenk(x.uid)}">${alev?`<span class="kalev" aria-label="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}${x.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${ligArka(x)}${karakterSVG(x.av || avOf(x.uid), x.canli)}${masaSVG(x)}</div>`;
   return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${alev?"alev":""} ${x.lig?"lig l-"+x.lig.k:""}" title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">
@@ -1273,7 +1297,7 @@ function pGrup(s){ const head = topbar(`<h1 class="ttl">Sınıf</h1>`);
           ${sira ? `<span class="benm">${GR.sekme==="hafta"?"Bu hafta":"Bugün"} sıran <b>${sira}/${L.length}</b>${sira>1 ? ` · üstündekine ${fmtMin(Math.max(1, (GR.sekme==="hafta"?L[sira-2].hafta-ben.hafta:L[sira-2].bugun-ben.bugun)))}` : " · zirvedesin 🏆"}</span>` : ""}
           <div class="benbt">${run ? `<button class="btn sm" data-act="go" data-v="kronometre">Kronometre</button>` : `<button class="btn sm pri" data-act="go" data-v="kronometre">${icon("play","xs")} Çalışmaya başla</button>`}<button class="btn sm" data-act="sheet" data-v="takma">${icon("edit","xs")} Karakterim</button></div></div></div>` : ""}</div>
     ${gorSec()}
-    ${GR.gor==="liste" ? `${grSekme()}<div class="card glist">${L.map((x,i)=>grSatir(x, i, GR.sekme, false)).join("")}</div>` : salon(L.slice().sort((a,b)=>(g.uyeler||[]).indexOf(a.uid)-(g.uyeler||[]).indexOf(b.uid)), false)}
+    ${GR.gor==="liste" ? `${grSekme()}<div class="card glist">${L.map((x,i)=>grSatir(x, i, GR.sekme, false)).join("")}</div>` : salon(L.slice().sort((a,b)=>a.sira-b.sira), false)}
     <p class="faint small" style="text-align:center;margin:4px 0 0">Kronometre 4 saatten uzun açık kalırsa kendiliğinden kapanır.</p>
   </div>`; }
 /* Kronometre sayfasındaki küçük grup kartı */
@@ -1292,26 +1316,29 @@ function cGruplar(){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.s
     <div class="card ghero"><div class="ghh"><div><small>ŞU AN</small><h2><span class="num">${on.length}</span> öğrenci çalışıyor</h2><span class="gonl">${hepsi.filter(x=>x.bugun>0).length} öğrenci bugün çalıştı · ${hepsi.filter(x=>!x.bugun && !x.canli).length} öğrenci henüz başlamadı</span></div></div>
       ${on.length ? `<div class="gcanlilar">${on.map(x=>`<div class="gcc">${grAvatar(x.ad, x.uid, true)}<div><b>${esc(ilkAd(x.ad))}</b><small>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></small></div></div>`).join("")}</div>` : ""}</div>
     ${gorSec()}${GR.gor==="liste"?grSekme():""}
-    ${G.length && GR.gor!=="liste" ? G.map(([gid,g])=>{ const L = hepsi.filter(x=>(g.uyeler||[]).includes(x.uid)).sort((a,b)=>(g.uyeler||[]).indexOf(a.uid)-(g.uyeler||[]).indexOf(b.uid));
-      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(hepsi.filter(x=>(g.uyeler||[]).includes(x.uid)), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
+    ${G.length && GR.gor!=="liste" ? G.map(([gid,g])=>{ const L = kocUyeler(hepsi, g).sort((a,b)=>a.sira-b.sira);
+      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(kocUyeler(hepsi, g), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
       return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>
         ${L.length ? L.map((x,i)=>grSatir(x, i, GR.sekme, true)).join("") : `<p class="muted small">Bu grupta henüz öğrenci yok. Düzenle'ye dokunup öğrenci ekle.</p>`}</div>`; }).join("")}</div>`
       : `<div class="card"><div class="empty" style="padding:22px 8px">${icon("user")}<b>Henüz grup yok</b><p class="muted small">Öğrencilerini istediğin gibi gruplara ayır (ör. “Hedef Tıp”, “12. sınıflar”). Gruptakiler birbirinin şu an çalışıp çalışmadığını takma adla görür.</p><button class="btn pri" data-act="sheet" data-v="grup">${icon("plus","sm")} İlk grubu kur</button></div></div>`}
     ${disarda.length && G.length ? `<div class="card"><div class="sech"><h3>Gruba eklenmemiş</h3><span class="faint small">${disarda.length} öğrenci</span></div><p class="muted small" style="margin:6px 0 0">${esc(disarda.map(x=>x.ad).join(", "))}</p></div>` : ""}
   </div>`; }
+/* Koç görünümü: grup üyeleri + (Premium Sınıf'ta) 🤖 işaretli Zek AI arkadaşları */
+function kocUyeler(hepsi, g){ const U = g.uyeler||[], L = hepsi.filter(x=>U.includes(x.uid)).map(x=>({...x, sira:U.indexOf(x.uid)*1.6}));
+  return zekVar(g) ? [...L, ...zekBotlar().map(x=>({...x, ad:x.takma+" 🤖", takma:x.takma}))] : L; }
 function grupSheet(gid){ const g = gid ? GR.list.get(gid) : null, sec = new Set(g ? g.uyeler||[] : []);
   const L = [...S.students.entries()].filter(([,x])=>!x.silindi).sort((a,b)=>(a[1].name||"").localeCompare(b[1].name||"","tr"));
   const baska = id => [...GR.list.entries()].filter(([k,x])=>k!==gid && (x.uyeler||[]).includes(id)).map(([,x])=>x.ad);
   return sheet(`<h3>${g ? "Grubu düzenle" : "Yeni çalışma grubu"}</h3>
     <label class="f">Grup adı<input type="text" name="ad" id="gr-ad" maxlength="40" value="${esc(g ? g.ad : "")}" placeholder="ör. Hedef Tıp, 12. sınıflar"></label>
-    ${g && g.oto ? `<p class="small" style="margin:0;color:var(--ac)">Bu sınıfa yeni eklediğin her öğrenci kendiliğinden girer. Buradan çıkardığın öğrenci bir daha otomatik eklenmez.</p>` : ""}
+    ${g && g.oto ? `<p class="small" style="margin:0;color:var(--ac)">Bu sınıfa yeni eklediğin her öğrenci kendiliğinden girer. Buradan çıkardığın öğrenci bir daha otomatik eklenmez.</p><label class="gsl"><input type="checkbox" name="zek" ${g.zek!==false?"checked":""}><span class="av">🤖</span><span><b>Zek AI çalışma arkadaşları (${ZEK.length})</b><small class="faint">Öğrenciler bunları sınıfta gerçek öğrenci gibi görür; sadece sen 🤖 işaretiyle görürsün.</small></span></label>` : ""}
     <div class="sech"><b>Öğrenciler</b><span class="faint small" id="gr-say">${sec.size} seçili</span></div>
     <div class="gsec">${L.map(([id,x])=>`<label class="gsl"><input type="checkbox" name="u" value="${id}" ${sec.has(id)?"checked":""}><span class="av">${esc(initials(x.name))}</span><span><b>${esc(x.name)}</b><small class="faint">${esc(x.sinif||"")}${x.takma?` · takma ad: ${esc(x.takma)}`:" · takma ad seçmedi"}${baska(id).length?` · ${esc(baska(id).join(", "))}`:""}</small></span></label>`).join("")}</div>
     <div class="err" id="serr"></div>
     <div class="acts">${g ? `<button type="button" class="btn danger" style="margin-right:auto" data-act="grsil" data-v="${gid}">Grubu sil</button>` : ""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     async fd=>{ const ad = String(fd.get("ad")||"").trim(), uyeler = fd.getAll("u"); if(!ad) return sheetErr("Gruba bir ad ver.");
       const id = gid || uid(), ek = {};
-      if(g && g.oto){ const yeniSet = new Set(uyeler), cik = (g.uyeler||[]).filter(u=>!yeniSet.has(u)); ek.oto = true; ek.haric = [...new Set([...(g.haric||[]), ...cik])].filter(u=>!yeniSet.has(u)); }
+      if(g && g.oto){ const yeniSet = new Set(uyeler), cik = (g.uyeler||[]).filter(u=>!yeniSet.has(u)); ek.oto = true; ek.zek = fd.get("zek")==="on"; ek.haric = [...new Set([...(g.haric||[]), ...cik])].filter(u=>!yeniSet.has(u)); }
       try{ await setDoc(doc(fdb,"gruplar",id), {ad, uyeler, at: g ? (g.at||Date.now()) : Date.now(), ...ek}); closeSheet(); toast(g ? "Grup güncellendi" : "Grup kuruldu"); }catch(e){ sheetErr("Kaydedilemedi: "+(e.message||e)); } }); }
 const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR","sacAks"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["lig","masaSol","masaSag","masaOn"]]];
 function benOzet(){ return ogrOzet(S.me, st()); }
@@ -1338,7 +1365,7 @@ function takmaSheet(){ const s = st(), cur = takmaAd(s); S.avT = {...avVarsayila
     <div id="avsecw"></div>
     <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-act="avrast">🎲 Rastgele</button><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     fd=>{ const t = String(fd.get("t")||"").replace(/\s+/g," ").trim(); if(!S.avT.cins) return sheetErr("Önce Kadın ya da Erkek seç."); if(t.length<2 || t.length>16) return sheetErr("Takma ad 2 ile 16 karakter arasında olmalı.");
-      const al = [...GR.canli.values()].some(m=>[...m].some(([u,x])=>u!==S.me && trLow(x.takma||"")===trLow(t))); if(al) return sheetErr("Bu takma ad grubunda kullanılıyor, başka bir tane seç.");
+      const al = [...GR.canli.values()].some(m=>[...m].some(([u,x])=>u!==S.me && trLow(x.takma||"")===trLow(t))) || ([...GR.list.values()].some(zekVar) && ZEK.some(z=>trLow(z[0])===trLow(t))); if(al) return sheetErr("Bu takma ad grubunda kullanılıyor, başka bir tane seç.");
       const av = {...S.avT}; delete av._sacSecildi; mutate(x=>{ x.takma = t; x.avatar = av; }); closeSheet(); render(); toast("Profilin kaydedildi"); }); }
 
 /* Formdaki serbest alan yazısını SAY/EA/SÖZ'e çevir */
