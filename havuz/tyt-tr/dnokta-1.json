@@ -1,0 +1,1884 @@
+[
+ {
+  "id": "tyttr-dnokta-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Eş Görevli Sözcükler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Eş görevli sözcükler arasındaki virgülün gereksiz kullanıldığı cümleyi belirler.",
+  "tipId": "dnk-virgul-es",
+  "tip": "Virgül: eş görevli sözcükler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hangisinde olmaması gereken bir yere virgül (,) konmuştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sepete elma, armut ve incir koyduk.",
+   "B": "Sınıfta Elif, Kerem ve Defne ödevlerini bitirdi.",
+   "C": "Kırmızı, mavi ve sarı boyalarla resim yaptık.",
+   "D": "Dün akşam yağmurlu, soğuk, bir havada yürüdük.",
+   "E": "Bahçede gül, lale ve sümbül açmıştı."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Dün akşam yağmurlu, soğuk, bir havada yürüdük."
+  },
+  "celdiriciler": {
+   "A": "Sıralı adlar virgülle ayrılmış, “ve”den önce virgül yok; doğrudur.",
+   "B": "Eş görevli özneler virgülle ayrılmış; doğrudur.",
+   "C": "Eş görevli sıfatlar virgülle ayrılmış; doğrudur.",
+   "E": "Sıralı özneler virgülle ayrılmış; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Virgülün gereksiz kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   },
+   {
+    "ad": "Gereksiz virgül",
+    "ifade": "özne, nesne, tümleç ve yüklem arasına; “ve”den önce; sıfatla ad arasına virgül konmaz"
+   }
+  ],
+  "ipuclari": [
+   "Her virgülün iki yanındaki sözcükler birbirine eş görevli mi, yoksa tek bir öbeğin parçası mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Eş görevli ögeler virgülle ayrılır; son öge ile ad ya da “ve” arasına virgül konmaz.",
+    "islem": "sıralı öge: , · son öge: ,’sız"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: doğru · C: doğru · D: yanlış · E: doğru"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“Soğuk”tan sonraki virgül, son sıfatla “bir” ve ad arasına konmuştur; gereksizdir.",
+    "islem": "D: yanlış"
+   }
+  ],
+  "puf": "Virgül eş görevli ögeleri ayırır; öbeğin içindeki son sıfat ile ad arasına virgül girmez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-01 (Virgül: Eş Görevli Sözcükler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Eş Görevli Sözcükler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Sıralı adlar arasında virgül gereken yeri parçada bulur.",
+  "tipId": "dnk-virgul-es",
+  "tip": "Virgül: eş görevli sözcükler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Mutfağın raflarında (I) un (II) şeker ve tuz kavanozları sıralanmıştı. Annem (III) her sabah taze ekmek (IV) alıp kahvaltıyı hazırlardı. Biz de (V) sofraya oturmadan önce ellerimizi yıkardık.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "Yer tümleci ile sıralama başlamadan önce virgül gerekmez; bu yerde virgül yoktur.",
+   "C": "Özne ile zarf tümleci arasında; özne kısa olduğundan virgül gerekmez.",
+   "D": "Nesne ile zarf-fiil arasında virgül konmaz.",
+   "E": "“de” bağlacından sonra virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   }
+  ],
+  "ipuclari": [
+   "Parçada üç şeyin art arda sıralandığı bir yer var; onu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sıralanan eş görevli adlar virgülle ayrılır; son iki ad arasında “ve” varsa virgül konmaz.",
+    "islem": "un, şeker ve tuz"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✓ · III: ✗ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“un, şeker ve tuz”: eş görevli adlardan ilkinden sonra virgül gerekir.",
+    "islem": "II: gerekli"
+   }
+  ],
+  "puf": "Birden fazla eş görevli ad art arda sıralanıyorsa “ve”den önceki adlar virgülle ayrılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-01 (Virgül: Eş Görevli Sözcükler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Eş Görevli Sözcükler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Virgülün yerinde kullanıldığı tek cümleyi belirler.",
+  "tipId": "dnk-virgul-es",
+  "tip": "Virgül: eş görevli sözcükler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdakilerden hangisi virgül (,) bakımından doğru yazılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazardan domates, biber ve soğan aldık.",
+   "B": "Bu yaz Ayşe, ve Mert sahilde garsonluk yapacak.",
+   "C": "Teyzem bize, bahçesinden taze incir getirdi.",
+   "D": "Dolabın önünde kırmızı, bir kazak duruyordu.",
+   "E": "Mert ile, Kerem bahçede top oynuyor."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Pazardan domates, biber ve soğan aldık."
+  },
+  "celdiriciler": {
+   "B": "“ve” bağlacından önce virgül konmaz.",
+   "C": "Cümlenin ögeleri (tümleç ile nesne) arasına virgül konmaz.",
+   "D": "Sıfat ile ad arasına virgül konmaz.",
+   "E": "“ile” bağlacından sonra virgül konmaz; iki özne “ile” ile bağlanmıştır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   },
+   {
+    "ad": "Gereksiz virgül",
+    "ifade": "özne, nesne, tümleç ve yüklem arasına; “ve”den önce; sıfatla ad arasına virgül konmaz"
+   }
+  ],
+  "ipuclari": [
+   "Virgülün iki yanındaki sözcüklere tek tek bak: eş görevli mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Virgül yalnız eş görevli ögeleri ayırır; “ve”, “ile”nin iki yanına virgül konmaz.",
+    "islem": "ve/ile: virgülsüz"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Sıralı adlar virgülle ayrılmış, “ve”den önce virgül yok; doğrudur.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "“ve” ve “ile” bağlayıcıdır; yanına virgül gelmez, virgül sıralamayı yapar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-01 (Virgül: Eş Görevli Sözcükler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Eş Görevli Sözcükler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Eş görevli sıfatlar arasına virgül gereken yeri, öbek içindeki öteki yerlerden ayırır.",
+  "tipId": "dnk-virgul-es",
+  "tip": "Virgül: eş görevli sözcükler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Atölyemizin duvarlarında eski haritalar (I) ve fotoğraflar asılıdır. Masaların üzerindeki (II) boyalar (III) her sabah yeniden düzenlenir. Köşedeki (IV) rafta yaşlı (V) bilge bir ressamın kitapları durur.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "V"
+  },
+  "celdiriciler": {
+   "A": "“ve” bağlacından önce virgül konmaz.",
+   "B": "Sıfat-fiil öbeği ile ad arasına virgül konmaz.",
+   "C": "Özne ile zarf tümleci arasında; özne kısa olduğundan virgül gerekmez.",
+   "D": "Sıfat ile ad arasına virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Sıfatlar arasında virgül",
+    "ifade": "aynı adı niteleyen eş görevli sıfatlar virgülle ayrılır; son sıfatla ad arasına virgül konmaz · “uzun, ince bir yol”"
+   },
+   {
+    "ad": "Gereksiz virgül",
+    "ifade": "özne, nesne, tümleç ve yüklem arasına; “ve”den önce; sıfatla ad arasına virgül konmaz"
+   }
+  ],
+  "ipuclari": [
+   "Hangi iki sözcük aynı adı niteliyor ve sırayla sayılabilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Aynı adı niteleyen eş görevli sıfatlar virgülle ayrılır; son sıfat ile ad arasına virgül konmaz.",
+    "islem": "yaşlı, bilge bir ressam"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✗ · IV: ✗ · V: ✓"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“yaşlı” ve “bilge”: ressamı niteleyen iki eş görevli sıfat; aralarına virgül konur.",
+    "islem": "V: gerekli"
+   }
+  ],
+  "puf": "Bir adı art arda iki sıfat nitelerken, sıfatlardan ilki virgülle ayrılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-01 (Virgül: Eş Görevli Sözcükler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Hitap, Evet/Hayır ve Ara Söz",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Cümle başındaki cevap ve hitap sözcüklerinden sonra virgülün yerinde olduğu cümleyi bulur.",
+  "tipId": "dnk-virgul-hitap",
+  "tip": "Virgül: hitap, evet/hayır, ara söz",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hangi cümlede virgül (,) kuralına uyulmuştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Evet bu işi ben yaptım.",
+   "B": "Sevgili Ayşe yarın seni bekliyorum.",
+   "C": "Hayır, bu kitabı ben almadım.",
+   "D": "Annem, sofrayı kurdu.",
+   "E": "Öğrenciler sınıfa, girdi."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Hayır, bu kitabı ben almadım."
+  },
+  "celdiriciler": {
+   "A": "“Evet” cevap sözcüğünden sonra virgül konmalıdır; burada yoktur.",
+   "B": "“Sevgili Ayşe” hitaptır; sonrasına virgül konmalıdır, burada yoktur.",
+   "D": "Özne ile nesne arasında virgül konmaz; “annem” burada hitap değil öznedir.",
+   "E": "Yer tümleci ile yüklem arasında virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Hitap ve cevap sözcüğü",
+    "ifade": "cümle başındaki hitap ile evet/hayır sözcüklerinden sonra virgül konur · “Sevgili Defne, hoş geldin.” “Hayır, gelmedim.”"
+   }
+  ],
+  "ipuclari": [
+   "Cümlenin başındaki sözcük bir cevap ya da seslenme mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Cümle başındaki evet, hayır ve hitap sözcüklerinden sonra virgül konur.",
+    "islem": "Evet, … · Sevgili Ayşe, …"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: doğru · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Cevap sözcüğünden sonra virgül konmuş; doğrudur.",
+    "islem": "C: doğru"
+   }
+  ],
+  "puf": "Cümleye “Evet”, “Hayır” ya da bir seslenmeyle başlıyorsan hemen ardına virgül koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-02 (Virgül: Hitap, Evet/Hayır ve Ara Söz) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Hitap, Evet/Hayır ve Ara Söz",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Hitap sözcüğünden sonra virgül gereken yeri parçada belirler.",
+  "tipId": "dnk-virgul-hitap",
+  "tip": "Virgül: hitap, evet/hayır, ara söz",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Okul gazetemizin yeni sayısı çıktı. Genç yazarlarımız (I) bu sayı için aylarca emek verdi. Gezi yazıları ve röportajlar (II) sayfaları dolduruyor. Hazırlık sürecinde öğretmenlerimiz (III) bize destek oldu. Sevgili okurlar (IV) sizden gelecek yorumları sabırsızlıkla bekliyoruz. Gazetemizi (V) arkadaşlarınıza da önerin.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "IV"
+  },
+  "celdiriciler": {
+   "A": "“Genç yazarlarımız” üçüncü kişi öznedir, yüklem de “verdi”dir; hitap değildir, virgül gerekmez.",
+   "B": "Özne ile nesne arasında virgül konmaz.",
+   "C": "Özne ile dolaylı tümleç arasında virgül gerekmez.",
+   "E": "Nesne ile tümleç arasında virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Hitap ve cevap sözcüğü",
+    "ifade": "cümle başındaki hitap ile evet/hayır sözcüklerinden sonra virgül konur · “Sevgili Defne, hoş geldin.” “Hayır, gelmedim.”"
+   }
+  ],
+  "ipuclari": [
+   "Hangi cümlede okurlara doğrudan seslenilmiş?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Cümle başında seslenme için kullanılan hitap sözcüğünden sonra virgül konur.",
+    "islem": "Sevgili okurlar, …"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✗ · IV: ✓ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“Sevgili okurlar” seslenme sözüdür (hitap); sonrasına virgül konur.",
+    "islem": "IV: gerekli"
+   }
+  ],
+  "puf": "Seslenilen kişi cümlenin öznesi değilse ve ikinci kişiye yönelik konuşma varsa hitaptır; virgül ister.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-02 (Virgül: Hitap, Evet/Hayır ve Ara Söz) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Hitap, Evet/Hayır ve Ara Söz",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Ara sözün virgülle yanlış ayrıldığı cümleyi belirler.",
+  "tipId": "dnk-virgul-hitap",
+  "tip": "Virgül: hitap, evet/hayır, ara söz",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde virgül (,) yanlış kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kitabı, sanırım, dün akşam masanın üstüne bırakmışım.",
+   "B": "Komşumuz Ahmet Bey, emekli öğretmen yarın bize gelecek.",
+   "C": "Elif, benim en yakın arkadaşım, bu yıl İzmir’e taşındı.",
+   "D": "Bu proje, bence, listede ilk sırada yer almalı.",
+   "E": "Toplantıya, bildiğim kadarıyla, herkes katılacak."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Komşumuz Ahmet Bey, emekli öğretmen yarın bize gelecek."
+  },
+  "celdiriciler": {
+   "A": "Ara söz iki yanından virgülle ayrılmış; doğrudur.",
+   "C": "Açıklayıcı ara söz iki yanından virgülle ayrılmış; doğrudur.",
+   "D": "“bence” ara sözü iki yanından virgülle ayrılmış; doğrudur.",
+   "E": "Ara söz iki yanından virgülle ayrılmış; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Virgül kullanımı yanlış olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Ara söz",
+    "ifade": "cümle içinde araya giren söz iki yanından virgülle ayrılır · “Kerem, bence, haklıydı.”"
+   }
+  ],
+  "ipuclari": [
+   "Virgülle ayrılan söz atılınca cümlenin anlamı bozulmuyor mu? Virgüller çift mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Ara söz hem başından hem sonundan virgülle ayrılır; tek tarafına virgül konmaz.",
+    "islem": ", ara söz ,"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: yanlış · C: doğru · D: doğru · E: doğru"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“emekli öğretmen” ara sözdür; yalnız başına virgül konmuş, ikinci virgül eksiktir.",
+    "islem": "B: yanlış"
+   }
+  ],
+  "puf": "Ara söz iki virgül arasında yaşar; virgülleri say, çift değilse yanlış vardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-02 (Virgül: Hitap, Evet/Hayır ve Ara Söz) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Hitap, Evet/Hayır ve Ara Söz",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Açılış virgülü konmuş ara sözün kapanışına gelmesi gereken virgülü bulur.",
+  "tipId": "dnk-virgul-hitap",
+  "tip": "Virgül: hitap, evet/hayır, ara söz",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Okul takımının yeni kaptanı, herhâlde (I) bu yıl da Kerem olacak. Takımın (II) en genç oyuncusu da (III) Mert olacak. Antrenörler bu kararı (IV) toplantıda herkese (V) duyuracak.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "Tamlayan ile tamlanan arasına virgül konmaz.",
+   "C": "“da” bağlacından sonra virgül konmaz; özne ile yüklem arasında ayrıca virgül gerekmez.",
+   "D": "Nesne ile zarf tümleci arasında virgül konmaz.",
+   "E": "Dolaylı tümleç ile yüklem arasında virgül konmaz."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Ara söz",
+    "ifade": "cümle içinde araya giren söz iki yanından virgülle ayrılır · “Kerem, bence, haklıydı.”"
+   }
+  ],
+  "ipuclari": [
+   "Parçada tek bir virgül var; onun eşini nereye koymak gerekir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Ara söz iki yanından virgülle ayrılır; açılış virgülü konduysa kapanış virgülü de gelmelidir.",
+    "islem": "kaptanı, herhâlde, bu yıl"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✓ · II: ✗ · III: ✗ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“herhâlde” ara sözdür; “kaptanı,” ile açılan virgülün kapanışı burada gerekir.",
+    "islem": "I: gerekli"
+   }
+  ],
+  "puf": "Cümle içinde tek başına kalmış bir virgül, kapanmamış bir ara sözün işaretidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-02 (Virgül: Hitap, Evet/Hayır ve Ara Söz) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0009",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Sıralı Cümleler ve Ortak Yüklem",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Sıralı cümleler içinde gereksiz virgülü bulur.",
+  "tipId": "dnk-virgul-cumle",
+  "tip": "Virgül: sıralı cümle, ortak yüklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde virgül (,) gereksiz kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yağmur dindi, bulutlar dağıldı, güneş yeniden göründü.",
+   "B": "Çocuklar bahçeye koştu, annem yemeği hazırladı.",
+   "C": "Sınav bitti, öğrenciler sınıftan çıktı.",
+   "D": "Rüzgâr sertleşti, dalgalar yükseldi, tekneler limana döndü.",
+   "E": "Ali sınıfa, girdi, defterini çıkardı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Ali sınıfa, girdi, defterini çıkardı."
+  },
+  "celdiriciler": {
+   "A": "Sıralı cümleler virgülle ayrılmış; doğrudur.",
+   "B": "Sıralı iki cümle virgülle ayrılmış; doğrudur.",
+   "C": "Sıralı cümleler virgülle ayrılmış; doğrudur.",
+   "D": "Sıralı üç cümle virgülle ayrılmış; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Virgülün gereksiz kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Sıralı cümleler",
+    "ifade": "birbirine bağlı sıralı cümleler virgülle ayrılır; ortak ögeler tekrarlanmaz · “Yağmur dindi, güneş çıktı.”"
+   },
+   {
+    "ad": "Gereksiz virgül",
+    "ifade": "özne, nesne, tümleç ve yüklem arasına; “ve”den önce; sıfatla ad arasına virgül konmaz"
+   }
+  ],
+  "ipuclari": [
+   "Her virgül iki ayrı cümleyi mi ayırıyor, yoksa tek cümlenin ögelerini mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sıralı cümleler virgülle ayrılır; bir cümlenin kendi ögeleri arasına virgül konmaz.",
+    "islem": "cümle, cümle, cümle"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: doğru · C: doğru · D: doğru · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“sınıfa” ile “girdi” arasındaki virgül, tümleç ile yüklem arasına konmuştur; gereksizdir.",
+    "islem": "E: yanlış"
+   }
+  ],
+  "puf": "Bir cümlenin kendi ögeleri (özne, nesne, tümleç) ile yüklemi arasına virgül konmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-03 (Virgül: Sıralı Cümleler ve Ortak Yüklem) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0010",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Sıralı Cümleler ve Ortak Yüklem",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Sıralı cümleler arasında eksik virgülü bulur.",
+  "tipId": "dnk-virgul-cumle",
+  "tip": "Virgül: sıralı cümle, ortak yüklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Gün batarken sahil canlandı. Balıkçılar (I) ağlarını topladı, çocuklar (II) kumdan kaleler yaptı (III) yaşlılar bankalara oturup (IV) denizi izledi. Hava serinlerken kalabalık (V) dağılmaya başladı.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "Özne ile nesne arasında virgül konmaz.",
+   "B": "Özne ile nesne arasında virgül konmaz.",
+   "D": "Zarf-fiil öbeği ile nesne arasında virgül konmaz.",
+   "E": "Özne ile yüklem arasında virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Sıralı cümleler",
+    "ifade": "birbirine bağlı sıralı cümleler virgülle ayrılır; ortak ögeler tekrarlanmaz · “Yağmur dindi, güneş çıktı.”"
+   }
+  ],
+  "ipuclari": [
+   "Parçada art arda dizilen üç cümleden hangisinin sonunda ayraç eksik?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Art arda sıralanan yüklemli cümleler virgülle ayrılır.",
+    "islem": "cümle, cümle, cümle"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✓ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Sıralı cümleler virgülle ayrılır; “…topladı, …yaptı,” ile aynı sıra sürmektedir.",
+    "islem": "III: gerekli"
+   }
+  ],
+  "puf": "Aynı kalıpta sıralanan cümlelerden birinin sonunda virgül eksikse sıra bozulmuştur; ayırıcıyı tamamla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-03 (Virgül: Sıralı Cümleler ve Ortak Yüklem) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0011",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Sıralı Cümleler ve Ortak Yüklem",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Yüklemi ortak cümlelerde birinci cümlenin sonuna gelmesi gereken virgülü bulur.",
+  "tipId": "dnk-virgul-cumle",
+  "tip": "Virgül: sıralı cümle, ortak yüklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Hafta sonu bahçe (I) işleri paylaşıldı. Elif ağaçları (II) Kerem çiçekleri sulayacak. Annem bu çalışmayı (III) uzaktan izleyecek. Akşam hep birlikte (IV) bahçede çay içeceğiz. Gün batınca herkes (V) dinlenecek.\nBu parçada numaralanmış yerlerden hangisine virgül (,) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "Tamlayan ile tamlanan arasına virgül konmaz.",
+   "C": "Nesne ile zarf tümleci arasında virgül konmaz.",
+   "D": "Zarf tümleci ile yer tümleci arasında virgül konmaz.",
+   "E": "Özne ile yüklem arasında virgül konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Yüklemi aynı cümleler",
+    "ifade": "yüklemi ortak olan cümlelerde yüklem sonda tek kez söylenir, ondan önceki cümleler virgülle ayrılır · “Ali elmayı, Veli armudu yedi.”"
+   }
+  ],
+  "ipuclari": [
+   "Hangi cümlede iki kişi iş paylaşıyor ve yüklem yalnız bir kez söyleniyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Yüklemi ortak olan cümleler, yüklem sonda tek kez söylenerek virgülle ayrılır.",
+    "islem": "Elif ağaçları, Kerem çiçekleri sulayacak."
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✓ · III: ✗ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“Elif ağaçları” ile “Kerem çiçekleri” yüklemi ortak (sulayacak) iki cümledir; birincinin sonuna virgül konur.",
+    "islem": "II: gerekli"
+   }
+  ],
+  "puf": "Yüklem bir kez söylenip iki ayrı iş sayılıyorsa, ilk işin bittiği yerde virgül durur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-03 (Virgül: Sıralı Cümleler ve Ortak Yüklem) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0012",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Virgül: Sıralı Cümleler ve Ortak Yüklem",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Yüklemi aynı olan cümlelerde virgülün yerinde kullanıldığı cümleyi belirler.",
+  "tipId": "dnk-virgul-cumle",
+  "tip": "Virgül: sıralı cümle, ortak yüklem",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerden hangisinin virgül kullanımı kurallara uygundur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kerem tarihi Elif coğrafyayı Defne matematiği çok sevdi.",
+   "B": "Annem pazardan, babam marketten kardeşim fırından ekmek aldı.",
+   "C": "Kerem kırmızıyı, Ali maviyi Zeynep, sarıyı seçti.",
+   "D": "Dedem bahçeye, ninem mutfağa, çocuklar odaya çekildi.",
+   "E": "Babam çayı demledi annem, kahvaltıyı hazırladı."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Dedem bahçeye, ninem mutfağa, çocuklar odaya çekildi."
+  },
+  "celdiriciler": {
+   "A": "Yüklemi ortak olan cümleler virgülle ayrılmalıdır; hiç virgül yoktur.",
+   "B": "“babam marketten”den sonra virgül eksiktir; ortak yüklemli cümleler hepsi virgülle ayrılır.",
+   "C": "Virgül kişi adından sonraya kaymış; ortak yüklemli cümleler “kırmızıyı,” “maviyi,” biçiminde ayrılmalıdır.",
+   "E": "Virgül, ikinci cümlenin öznesi ile nesnesi arasına konmuş; cümleleri ayıran virgül “demledi”den sonra gelmeliydi."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Yüklemi aynı cümleler",
+    "ifade": "yüklemi ortak olan cümlelerde yüklem sonda tek kez söylenir, ondan önceki cümleler virgülle ayrılır · “Ali elmayı, Veli armudu yedi.”"
+   }
+  ],
+  "ipuclari": [
+   "Yüklem yalnız sonda söylenmiş; her cümlenin kendi bölümü virgülle nerede bitmeli?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Yüklemi ortak olan cümleler, yüklem sonda tek kez söylenerek virgülle ayrılır.",
+    "islem": "ögeler, ögeler, yüklem"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Yüklemi ortak cümleler virgülle ayrılmış, yüklem sonda; doğrudur.",
+    "islem": "D: doğru"
+   }
+  ],
+  "puf": "Ortak yüklemli cümlelerde virgül, her cümlenin son ögesinden sonra gelir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-03 (Virgül: Sıralı Cümleler ve Ortak Yüklem) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0013",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Noktalı Virgül: Ögeleri Virgüllü Cümleler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Noktalı virgülün yerinde kullanıldığı cümleyi belirler.",
+  "tipId": "dnk-noktalivirgul",
+  "tip": "Noktalı virgül",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisinde noktalı virgül (;) yerinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kerem sabah erkenden kalkıp koştu, duş aldı; Elif ise kahvaltıyı hazırlayıp çayı demledi.",
+   "B": "Evimizin bahçesinde bu bahar kırmızı gül; mor lale ve sarı sümbül açmıştı.",
+   "C": "Sevgili dostlarım; sizi yarın akşam bizimle yemek yemeye bekliyoruz.",
+   "D": "Yarın sabah; okula her zamankinden çok daha erken gitmeyi düşünüyorum.",
+   "E": "Geçen hafta okuduğumuz roman; hepimizi çok etkileyen sürükleyici bir kitaptı."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kerem sabah erkenden kalkıp koştu, duş aldı; Elif ise kahvaltıyı hazırlayıp çayı demledi."
+  },
+  "celdiriciler": {
+   "B": "Sıralı adlar virgülle ayrılır; noktalı virgül yerinde değildir.",
+   "C": "Hitap sözcüğünden sonra virgül konur; noktalı virgül yanlıştır.",
+   "D": "Zaman zarfı ile cümlenin devamı arasında noktalı virgül konmaz.",
+   "E": "Özne ile yüklem arasına noktalı virgül konmaz."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Noktalı virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "içinde virgül bulunan sıralı cümleleri ya da öbekleri birbirinden ayırır · “Annem pazara gitti, sebze aldı; babam yemeği hazırladı.”"
+   }
+  ],
+  "ipuclari": [
+   "Noktalı virgülün iki yanında da yüklemli birer cümle var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Noktalı virgül, içinde virgül bulunan sıralı cümleleri birbirinden ayırır.",
+    "islem": "…duş aldı ; Elif ise …"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Ögeleri virgülle ayrılmış sıralı cümleler noktalı virgülle ayrılmış; doğrudur.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "Noktalı virgülün iki yanında da kendi başına birer cümle ararsın.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-04 (Noktalı Virgül: Ögeleri Virgüllü Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0014",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Noktalı Virgül: Ögeleri Virgüllü Cümleler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "İki ayrı cümleyi, ögeleri virgüllü olduğunda ayıran noktalı virgülün yerini bulur.",
+  "tipId": "dnk-noktalivirgul",
+  "tip": "Noktalı virgül",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Okulumuzun kütüphanesi (I) iki bölümden oluşur. Girişte görevli (II) öğretmen kayıt defterini (III) tutar. Öğrenciler (IV) aradıkları kitabı bulmakta zorlanmaz. Birinci rafta romanlar, öyküler ve şiir kitapları (V) ikinci rafta sözlükler, ansiklopediler ve atlaslar bulunur.\nBu parçada numaralanmış yerlerden hangisine noktalı virgül (;) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "V"
+  },
+  "celdiriciler": {
+   "A": "Özne ile tümleç arasında hiçbir işaret gerekmez.",
+   "B": "Sıfat ile ad arasına işaret konmaz.",
+   "C": "Nesne ile yüklem arasına işaret konmaz.",
+   "D": "Özne ile nesne arasına işaret konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Noktalı virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "içinde virgül bulunan sıralı cümleleri ya da öbekleri birbirinden ayırır · “Annem pazara gitti, sebze aldı; babam yemeği hazırladı.”"
+   }
+  ],
+  "ipuclari": [
+   "Hangi yerde iki yan da kendi içinde virgülle sıralanmış?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Ögeleri virgülle ayrılmış sıralı cümleler noktalı virgülle ayrılır.",
+    "islem": "…kitapları ; …atlaslar bulunur"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✗ · IV: ✗ · V: ✓"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "İki cümlenin ögeleri de virgülle ayrılmıştır; bu yüzden cümleler birbirinden noktalı virgülle ayrılır.",
+    "islem": "V: gerekli"
+   }
+  ],
+  "puf": "İki yanı da virgüllü cümleleri yalnız virgülle ayırırsan okur sınırı kaybeder; sınıra noktalı virgül koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-04 (Noktalı Virgül: Ögeleri Virgüllü Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0015",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Noktalı Virgül: Ögeleri Virgüllü Cümleler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Ögeleri virgüllü öbekleri ayıran noktalı virgülün yerinde olduğu cümleyi belirler.",
+  "tipId": "dnk-noktalivirgul",
+  "tip": "Noktalı virgül",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdakilerden hangisinde noktalı virgül (;) doğru kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazardan elma, armut; portakal, muz ve kayısı alıp eve döndük.",
+   "B": "Dünkü toplantıya sınıfımızdan Elif; Kerem ve Ayşe de katıldı.",
+   "C": "Elif Hanım, öğretmen; Kerem Bey, müdür; Defne Hanım, hemşire geldi.",
+   "D": "Geçen hafta birlikte okuduğumuz romanın sonu; bizi çok şaşırttı.",
+   "E": "Sevgili anneanne; sana bu mektubu bütün sevgimle yazıyorum."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Elif Hanım, öğretmen; Kerem Bey, müdür; Defne Hanım, hemşire geldi."
+  },
+  "celdiriciler": {
+   "A": "Sıralı adlar arasında virgül kullanılır; noktalı virgül yerinde değildir.",
+   "B": "Eş görevli özneler virgülle ayrılır; noktalı virgül yanlıştır.",
+   "D": "Özne ile yüklem arasına noktalı virgül konmaz.",
+   "E": "Hitap sözcüğünden sonra virgül konur; noktalı virgül yanlıştır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Noktalı virgülün yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "içinde virgül bulunan sıralı cümleleri ya da öbekleri birbirinden ayırır · “Annem pazara gitti, sebze aldı; babam yemeği hazırladı.”"
+   }
+  ],
+  "ipuclari": [
+   "Noktalı virgülün ayırdığı parçaların içinde virgül var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Kendi içinde virgül bulunan öbekler noktalı virgülle ayrılır.",
+    "islem": "ad, unvan ; ad, unvan"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: doğru · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Kendi içinde virgül bulunan öbekler noktalı virgülle ayrılmış; doğrudur.",
+    "islem": "C: doğru"
+   }
+  ],
+  "puf": "Virgülle sıralanan parçaları kendi içinde virgül taşıyorsa noktalı virgülle ayır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-04 (Noktalı Virgül: Ögeleri Virgüllü Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0016",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Noktalı Virgül: Ögeleri Virgüllü Cümleler",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Kimi/kimi yapısındaki virgüllü cümleleri ayıran noktalı virgülü bulur.",
+  "tipId": "dnk-noktalivirgul",
+  "tip": "Noktalı virgül",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Kimi öğrenciler matematik, fizik ve kimya çalışıyor (I) kimi öğrenciler tarih, coğrafya ve felsefe okuyor. Sınav haftasında kütüphane (II) tıklım tıklım doluydu. Görevli (III) öğrencilere (IV) sessiz olmalarını hatırlatıyordu. Akşam kapı (V) kapanınca herkes evine döndü.\nBu parçada numaralanmış yerlerden hangisine noktalı virgül (;) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "Özne ile tümleç arasına işaret konmaz.",
+   "C": "Özne ile dolaylı tümleç arasına işaret konmaz.",
+   "D": "Dolaylı tümleç ile nesne arasına işaret konmaz.",
+   "E": "Özne ile yüklem arasına işaret konmaz."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Noktalı virgül getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "içinde virgül bulunan sıralı cümleleri ya da öbekleri birbirinden ayırır · “Annem pazara gitti, sebze aldı; babam yemeği hazırladı.”"
+   }
+  ],
+  "ipuclari": [
+   "Hangi iki cümlenin ikisi de içinde virgül taşıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Ögeleri virgülle ayrılmış sıralı cümleler noktalı virgülle ayrılır.",
+    "islem": "…kimya çalışıyor ; kimi…"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✓ · II: ✗ · III: ✗ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "İki yan da kendi içinde virgülle sıralanmış; cümleleri noktalı virgül ayırır.",
+    "islem": "I: gerekli"
+   }
+  ],
+  "puf": "Virgülü yoğun iki cümle yan yana geliyorsa onları noktalı virgül ayırır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-04 (Noktalı Virgül: Ögeleri Virgüllü Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0017",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · İki Nokta: Açıklama, Örnek ve Alıntı Öncesi",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "İki noktanın tamamlanmış cümleden sonra yerinde kullanıldığı cümleyi belirler.",
+  "tipId": "dnk-ikinokta",
+  "tip": "İki nokta",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisinde iki nokta (:) doğru yerde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Okulumuzda: spor, müzik, tiyatro ve resim kulüpleri bulunuyor.",
+   "B": "Yarın pikniğe şunları götüreceğiz: ekmek, peynir ve zeytin.",
+   "C": "Yarın: sabah erkenden yola çıkıp akşama kadar yürüyeceğiz.",
+   "D": "Dedem bana: köydeki bahçesini ve evini armağan etti.",
+   "E": "Kerem yemekte: sıcak tarhana çorbasını afiyetle içti."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yarın pikniğe şunları götüreceğiz: ekmek, peynir ve zeytin."
+  },
+  "celdiriciler": {
+   "A": "İki noktadan önceki bölüm tamamlanmış bir cümle değildir; yüklem sonra gelmektedir.",
+   "C": "Zaman zarfından sonra, cümle sürerken iki nokta konmaz.",
+   "D": "Dolaylı tümleçten sonra, cümle bitmeden iki nokta konmaz.",
+   "E": "Yer tümlecinden sonra, yüklem gelmeden iki nokta konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İki noktanın yerinde kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   }
+  ],
+  "ipuclari": [
+   "İki noktadan önceki bölüm kendi başına bir cümle mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "İki nokta, anlamı tamamlanmış bir cümleden sonra açıklama ya da sıralama gelecekse konur.",
+    "islem": "tam cümle : sıralama"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: doğru · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Cümle tamamlanmış, ardından sıralama gelmiştir; doğrudur.",
+    "islem": "B: doğru"
+   }
+  ],
+  "puf": "İki noktadan önceki bölümü tek başına oku; cümle bitmişse yerindedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-05 (İki Nokta: Açıklama, Örnek ve Alıntı Öncesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0018",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · İki Nokta: Açıklama, Örnek ve Alıntı Öncesi",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Örnek ve sıralama öncesi iki noktanın yerini parçada bulur.",
+  "tipId": "dnk-ikinokta",
+  "tip": "İki nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Yaz tatilinde (I) çocuklarla birlikte doğa yürüyüşlerine çıktık. Çantamıza hep (II) aynı şeyleri koyardık (III) su, bisküvi ve küçük bir battaniye. Yürüyüş sırasında (IV) kuşları (V) izlerdik.\nBu parçada numaralanmış yerlerden hangisine iki nokta (:) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "Zarf tümleci ile özne arasına işaret konmaz.",
+   "B": "Tümleç ile nesne arasına iki nokta konmaz; cümle henüz bitmemiştir.",
+   "D": "Zarf tümleci ile nesne arasına iki nokta konmaz.",
+   "E": "Nesne ile yüklem arasına iki nokta konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "İki nokta getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   }
+  ],
+  "ipuclari": [
+   "Hangi cümlenin sonunda bir sıralama başlıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Tamamlanmış cümleden sonra örnek ya da sıralama gelecekse iki nokta konur.",
+    "islem": "…koyardık: su, bisküvi…"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✓ · IV: ✗ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Cümle tamamlanmıştır ve ardından sıralanan örnekler gelmektedir; iki nokta konur.",
+    "islem": "III: gerekli"
+   }
+  ],
+  "puf": "Sıralama ya da örnek başlamadan hemen önce cümle tamamlanıyorsa iki nokta konur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-05 (İki Nokta: Açıklama, Örnek ve Alıntı Öncesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0019",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · İki Nokta: Açıklama, Örnek ve Alıntı Öncesi",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "İki noktanın cümle bitmeden gereksiz kullanıldığı cümleyi belirler.",
+  "tipId": "dnk-ikinokta",
+  "tip": "İki nokta",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde iki nokta (:) gereksiz kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Babam sık sık şöyle derdi: “Çalışan kazanır.”",
+   "B": "Pazar günü şu işlere bakacağız: bahçeyi sulamak, kapıyı boyamak, çatıyı onarmak.",
+   "C": "Tabloda üç rakam dikkat çekiyor: 12, 18 ve 24.",
+   "D": "Şu kuralı unutma: yanlış cevap puan kaybettirir.",
+   "E": "Sınıfta şu öğrenciler: Elif, Kerem ve Defne ödev yapıyordu."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Sınıfta şu öğrenciler: Elif, Kerem ve Defne ödev yapıyordu."
+  },
+  "celdiriciler": {
+   "A": "Alıntıdan önce tamamlanmış cümleden sonra iki nokta konmuş; doğrudur.",
+   "B": "Tamamlanmış cümleden sonra sıralama geldiği için iki nokta yerindedir.",
+   "C": "Cümle tamamlanmış, ardından sıralama gelmiştir; doğrudur.",
+   "D": "Açıklama öncesinde cümle tamamlanmıştır; doğrudur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "İki noktanın gereksiz kullanıldığı cümle.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   }
+  ],
+  "ipuclari": [
+   "İki noktadan önce yüklem söylenmiş mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "İki nokta, tamamlanmış bir cümleden sonra konur; yüklemden önce konmaz.",
+    "islem": "tam cümle : açıklama"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: doğru · C: doğru · D: doğru · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "İki noktadan önceki bölüm tamamlanmamıştır; yüklem sonradan gelir, bu yüzden iki nokta gereksizdir.",
+    "islem": "E: yanlış"
+   }
+  ],
+  "puf": "İki noktadan sonra yüklem geliyorsa iki nokta yanlış yerdedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-05 (İki Nokta: Açıklama, Örnek ve Alıntı Öncesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0020",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · İki Nokta: Açıklama, Örnek ve Alıntı Öncesi",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Alıntıdan önce iki noktanın yerini, benzer yerlerden ayırarak bulur.",
+  "tipId": "dnk-ikinokta",
+  "tip": "İki nokta",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Köyümüzdeki yaşlı ressam (I) çocuklara sabrın (II) önemini anlatırdı. Her derse (III) aynı sözle başlardı (IV) “Önce iyi bak, sonra çiz.” Çocuklar bu sözü (V) defterlerinin kapağına yazardı.\nBu parçada numaralanmış yerlerden hangisine iki nokta (:) getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "IV"
+  },
+  "celdiriciler": {
+   "A": "Özne ile dolaylı tümleç arasına işaret konmaz.",
+   "B": "Tamlayan ile tamlanan arasına işaret konmaz.",
+   "C": "Dolaylı tümleç ile zarf tümleci arasına işaret konmaz.",
+   "E": "Nesne ile dolaylı tümleç arasına işaret konmaz."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İki nokta getirilmesi gereken yer.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   }
+  ],
+  "ipuclari": [
+   "Tırnak içindeki söz hangi cümlenin hemen ardından geliyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Doğrudan alıntıdan önce, tamamlanmış cümleden sonra iki nokta konur.",
+    "islem": "…başlardı: “Önce …”"
+   },
+   {
+    "baslik": "Numaraları tek tek sına",
+    "aciklama": "Her numaralı yerde işaretin gerekip gerekmediğini kurala göre değerlendir.",
+    "islem": "I: ✗ · II: ✗ · III: ✗ · IV: ✓ · V: ✗"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Cümle tamamlanmış, ardından doğrudan alıntı gelmektedir; iki nokta konur.",
+    "islem": "IV: gerekli"
+   }
+  ],
+  "puf": "Tırnak içindeki söz yeni başlıyorsa, ondan önceki tamamlanmış cümleye iki nokta koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-05 (İki Nokta: Açıklama, Örnek ve Alıntı Öncesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0021",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Boşluk Sırası: Karışık İşaret Dizileri",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Cevap sözcüğü sonrası virgül ve cümle sonu noktayı birlikte uygular.",
+  "tipId": "dnk-bosluk",
+  "tip": "Boşluk sırası",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hayır ( ) o gün sinemaya gitmedik ( )\nAşağıdaki cümlede boş bırakılan yerlere sırasıyla hangi noktalama işaretleri getirilmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "(;) (.)",
+   "B": "(:) (.)",
+   "C": "(,) (.)",
+   "D": "(,) (;)",
+   "E": "(,) (:)"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "(,) (.)"
+  },
+  "celdiriciler": {
+   "A": "Cevap sözcüğünden sonra noktalı virgül değil virgül konur.",
+   "B": "İki nokta açıklama ya da sıralama öncesi konur; “Hayır”dan sonra konmaz.",
+   "D": "Cümle sonuna noktalı virgül değil nokta konur.",
+   "E": "Cümle sonuna iki nokta değil nokta konur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Boşluklara sırasıyla getirilecek işaretler.",
+  "bilgi": [
+   {
+    "ad": "Hitap ve cevap sözcüğü",
+    "ifade": "cümle başındaki hitap ile evet/hayır sözcüklerinden sonra virgül konur · “Sevgili Defne, hoş geldin.” “Hayır, gelmedim.”"
+   }
+  ],
+  "ipuclari": [
+   "Birinci boşlukta cevap sözcüğünden sonra, ikincisinde cümle sonunda ne gelir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Cevap sözcüğünden sonra virgül, bildirme cümlesinin sonuna nokta konur.",
+    "islem": "Hayır, … ."
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: doğru · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“Hayır”dan sonra virgül, bildirme cümlesinin sonuna nokta gelir.",
+    "islem": "C: doğru"
+   }
+  ],
+  "puf": "İşaret dizilerinde önce her boşluğun kuralını ayrı ayrı bul, sonra diziyi eşleştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-06 (Boşluk Sırası: Karışık İşaret Dizileri) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0022",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Boşluk Sırası: Karışık İşaret Dizileri",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Cevap sözcüğü, eş görevli özneler ve cümle sonu için işaret dizisini kurar.",
+  "tipId": "dnk-bosluk",
+  "tip": "Boşluk sırası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Evet ( ) Elif ( ) Kerem ve Defne bu sabah geldi ( )\nBu cümlede yay ayraçla belirtilen yerlere sırasıyla hangi işaretler konulmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "(,) (,) (.)",
+   "B": "(;) (,) (.)",
+   "C": "(,) (;) (.)",
+   "D": "(,) (,) (:)",
+   "E": "(,) (:) (.)"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "(,) (,) (.)"
+  },
+  "celdiriciler": {
+   "B": "Cevap sözcüğünden sonra noktalı virgül konmaz; virgül gelir.",
+   "C": "Eş görevli özneler arasına noktalı virgül değil virgül konur.",
+   "D": "Cümle sonuna iki nokta değil nokta konur.",
+   "E": "Eş görevli özneler arasına iki nokta konmaz; virgül konur."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Boşluklara sırasıyla getirilecek işaretler.",
+  "bilgi": [
+   {
+    "ad": "Hitap ve cevap sözcüğü",
+    "ifade": "cümle başındaki hitap ile evet/hayır sözcüklerinden sonra virgül konur · “Sevgili Defne, hoş geldin.” “Hayır, gelmedim.”"
+   },
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   }
+  ],
+  "ipuclari": [
+   "Her boşlukta önce hangi ögenin geldiğini belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Cevap sözcüğünden ve eş görevli ögelerden sonra virgül, bildirme cümlesinin sonuna nokta konur.",
+    "islem": "Evet, Elif, Kerem ve … ."
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: doğru · B: yanlış · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "“Evet”ten sonra virgül, eş görevli özneler arasında virgül, cümle sonunda nokta; doğrudur.",
+    "islem": "A: doğru"
+   }
+  ],
+  "puf": "Dizideki tek yanlış işaret, çeldiricinin bütün dizisini geçersiz kılar; her boşluğu ayrı sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-06 (Boşluk Sırası: Karışık İşaret Dizileri) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0023",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Boşluk Sırası: Karışık İşaret Dizileri",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Sıralama öncesi iki nokta, sıralı adlar arası virgül ve cümle sonu noktayı birleştirir.",
+  "tipId": "dnk-bosluk",
+  "tip": "Boşluk sırası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Atölyede şu araçları kullandık ( ) çekiç ( ) testere ve eğe ( )\nCümledeki boşluklara sırasıyla aşağıdaki dizilerden hangisi getirilirse noktalama doğru olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "(,) (,) (.)",
+   "B": "(:) (,) (.)",
+   "C": "(:) (;) (.)",
+   "D": "(:) (,) (;)",
+   "E": "(;) (,) (.)"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "(:) (,) (.)"
+  },
+  "celdiriciler": {
+   "A": "“Şu araçları kullandık” cümlesi sıralamaya hazırlar; birinci boşluğa virgül değil iki nokta konur.",
+   "C": "Sıralı adlar arasında noktalı virgül değil virgül kullanılır.",
+   "D": "Cümle sonuna noktalı virgül değil nokta konur.",
+   "E": "Sıralamadan önce noktalı virgül değil iki nokta konur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Boşluklara sırasıyla getirilecek işaretler.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   },
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   }
+  ],
+  "ipuclari": [
+   "İlk boşlukta cümle tamamlanıp sıralama başlıyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sıralama başlamadan önce iki nokta, sıralı adlar arasında virgül konur.",
+    "islem": "… kullandık: çekiç, testere ve eğe."
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: doğru · C: yanlış · D: yanlış · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Sıralama öncesi iki nokta, sıralı adlar arasında virgül, sonda nokta; doğrudur.",
+    "islem": "B: doğru"
+   }
+  ],
+  "puf": "Sıralama başlıyorsa iki nokta, sıralama sürüyorsa virgül.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-06 (Boşluk Sırası: Karışık İşaret Dizileri) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0024",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Boşluk Sırası: Karışık İşaret Dizileri",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Alıntı öncesi iki nokta, alıntı içinde hitap sonrası virgül ve cümle sonu nokta dizisini kurar.",
+  "tipId": "dnk-bosluk",
+  "tip": "Boşluk sırası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Öğretmen sınıfa şöyle seslendi ( ) “Çocuklar ( ) lütfen sessiz olun ( )”\nYukarıdaki cümlede ( ) ile gösterilen yerlere sırasıyla hangisindeki işaretler konursa cümle doğru noktalanmış olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "(,) (,) (.)",
+   "B": "(:) (;) (.)",
+   "C": "(:) (,) (:)",
+   "D": "(:) (.) (.)",
+   "E": "(:) (,) (.)"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "(:) (,) (.)"
+  },
+  "celdiriciler": {
+   "A": "Doğrudan alıntıdan önce, tamamlanmış cümleden sonra iki nokta konur; virgül değil.",
+   "B": "Hitap sözcüğünden sonra noktalı virgül değil virgül konur.",
+   "C": "Alıntının sonuna iki nokta değil nokta konur.",
+   "D": "Hitap sözcüğünden sonra nokta değil virgül konur; cümle sürmektedir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Boşluklara sırasıyla getirilecek işaretler.",
+  "bilgi": [
+   {
+    "ad": "İki nokta",
+    "ifade": "tamamlanmış cümleden sonra açıklama, örnek, sıralama ya da alıntı gelecekse konur · “Şunu söyledi: Yarın gelirim.”"
+   },
+   {
+    "ad": "Hitap ve cevap sözcüğü",
+    "ifade": "cümle başındaki hitap ile evet/hayır sözcüklerinden sonra virgül konur · “Sevgili Defne, hoş geldin.” “Hayır, gelmedim.”"
+   }
+  ],
+  "ipuclari": [
+   "Her boşluğun kendi kuralını (alıntı, hitap, bitiş) ayrı ayrı ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Alıntıdan önce iki nokta, alıntı içindeki hitaptan sonra virgül, cümle sonunda nokta konur.",
+    "islem": "… seslendi: “Çocuklar, … olun.”"
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: yanlış · E: doğru"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Alıntı öncesi iki nokta, hitaptan sonra virgül, alıntı sonunda nokta; doğrudur.",
+    "islem": "E: doğru"
+   }
+  ],
+  "puf": "İç içe yapılarda işaretleri dıştan içe, sırayla çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-06 (Boşluk Sırası: Karışık İşaret Dizileri) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dnokta-0025",
+  "ders": "TYT Türkçe",
+  "konu": "Noktalama İşaretleri · Boşluk Sırası: Karışık İşaret Dizileri",
+  "k": "tr|Noktalama İşaretleri",
+  "kazanim": "Virgüllü ilk cümleyi ayıran noktalı virgülü diziye yerleştirir.",
+  "tipId": "dnk-bosluk",
+  "tip": "Boşluk sırası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bahçeye gül ( ) lale ve sümbül dikildi ( ) bostana domates ( ) biber ve patlıcan ekildi ( )\nAşağıdaki cümlede ( ) bırakılan yerlere sırasıyla hangi noktalama işaretlerinin konması gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "(;) (;) (,) (.)",
+   "B": "(,) (,) (,) (.)",
+   "C": "(,) (;) (,) (;)",
+   "D": "(,) (;) (,) (.)",
+   "E": "(,) (:) (,) (.)"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "(,) (;) (,) (.)"
+  },
+  "celdiriciler": {
+   "A": "Sıralı adlar arasına noktalı virgül değil virgül konur.",
+   "B": "İki yan da kendi içinde virgülle sıralandığından cümleleri virgül değil noktalı virgül ayırır.",
+   "C": "Cümle sonuna noktalı virgül değil nokta konur.",
+   "E": "İkinci cümle ilkinin açıklaması değildir; iki nokta yerinde değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Boşluklara sırasıyla getirilecek işaretler.",
+  "bilgi": [
+   {
+    "ad": "Noktalı virgül",
+    "ifade": "içinde virgül bulunan sıralı cümleleri ya da öbekleri birbirinden ayırır · “Annem pazara gitti, sebze aldı; babam yemeği hazırladı.”"
+   },
+   {
+    "ad": "Eş görevli sözcükler",
+    "ifade": "sıralı sözcük ve öbekler virgülle ayrılır; son iki öge arasında “ve” varsa virgül konmaz · “çam, ladin ve kayın”"
+   }
+  ],
+  "ipuclari": [
+   "İki cümlenin de içindeki virgüllere bak; sınırı ona göre belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuralı hatırla",
+    "aciklama": "Sıralı adlar virgülle, içinde virgül bulunan cümleler noktalı virgülle ayrılır.",
+    "islem": "gül, lale ve sümbül dikildi ; … domates, biber … ."
+   },
+   {
+    "baslik": "Şıkları tek tek sına",
+    "aciklama": "Her şıktaki noktalamayı kurala göre değerlendir.",
+    "islem": "A: yanlış · B: yanlış · C: yanlış · D: doğru · E: yanlış"
+   },
+   {
+    "baslik": "Sonucu belirle",
+    "aciklama": "Sıralı adlar arasında virgül, virgüllü cümleleri ayıran noktalı virgül, sonda nokta; doğrudur.",
+    "islem": "D: doğru"
+   }
+  ],
+  "puf": "İki yanı da virgüllü cümleleri ayırırken virgül işe yaramaz; noktalı virgül gerekir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBNK-06 (Boşluk Sırası: Karışık İşaret Dizileri) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

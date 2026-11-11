@@ -1,0 +1,602 @@
+[
+ {
+  "id": "tyttr-dcumle-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yapısına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Fiilimsi içeren cümleyi birleşik cümle olarak ayırır.",
+  "tipId": "dct-yapi",
+  "tip": "Yapısına göre cümleler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisinde yüklem dışında bir fiilimsi bulunduğu için cümle birleşiktir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Annem akşam yemeğine çorba yaptı.",
+   "B": "Misafirler yarın sabah erkenden gelecek.",
+   "C": "Kardeşim yeni aldığı kitabı okuyor.",
+   "D": "Öğrenciler sınıfa sessizce girdi.",
+   "E": "Bahçedeki gül çok güzel kokuyor."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Kardeşim yeni aldığı kitabı okuyor."
+  },
+  "celdiriciler": {
+   "A": "Tek yargı ve tek yüklem var; fiilimsi yok. Basit cümledir.",
+   "B": "Yalnız bir yüklem var; fiilimsi içermez. Basit cümledir.",
+   "D": "Tek yüklemli, fiilimsisiz basit cümledir.",
+   "E": "“Bahçedeki” sıfat-fiil değil, ilgi ekli sıfattır; cümle basittir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Birleşik cümle.",
+  "bilgi": [
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   }
+  ],
+  "ipuclari": [
+   "Yüklem dışında bir fiilimsi var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Birleşik cümlede fiilimsi ya da şartlı/-ki’li yan yargı bulunur.",
+    "islem": "fiilimsi → birleşik"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A, B, D, E’de yüklem dışında fiilimsi yok; bahçe-de-ki ilgi ekli sıfattır.",
+    "islem": "A, B, D, E: basit"
+   },
+   {
+    "baslik": "Birleşiği seç",
+    "aciklama": "Al-dığ-ı: “kitabı” niteleyen sıfat-fiil; cümle birleşiktir.",
+    "islem": "C: birleşik"
+   }
+  ],
+  "puf": "Yüklem dışında fiil kökünden türemiş bir sözcük görüyorsan fiilimsidir; cümle birleşiktir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-01 (Yapısına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yüklemin Yeri ve Türü",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Yüklemi sonda olmayan (devrik) cümleyi bulur.",
+  "tipId": "dct-yer",
+  "tip": "Yüklemin yerine göre cümleler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki cümlelerin hangisi yüklemin yerine göre devrik cümledir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çok severdim ben o şehri.",
+   "B": "Bu yıl yaz erken geldi.",
+   "C": "Çocuklar akşam parka gitti.",
+   "D": "Sabah erkenden pazara çıktık.",
+   "E": "Yarınki toplantı saat ikide başlayacak."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Çok severdim ben o şehri."
+  },
+  "celdiriciler": {
+   "B": "Yüklem “geldi” sonda; kurallı cümledir.",
+   "C": "Yüklem “gitti” sonda; kurallı cümledir.",
+   "D": "Yüklem “çıktık” sonda; kurallı cümledir.",
+   "E": "Yüklem “başlayacak” sonda; kurallı cümledir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Devrik cümle.",
+  "bilgi": [
+   {
+    "ad": "Yüklemin yerine göre",
+    "ifade": "kurallı: yüklem sonda (Eve döndük) · devrik: yüklem sonda değil (Döndük eve)"
+   }
+  ],
+  "ipuclari": [
+   "Yüklemi cümlenin sonunda mı arıyorsun? Sonda olmayan devriktir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanımı hatırla",
+    "aciklama": "Yüklem cümlenin sonundaysa kurallı, başka yerdeyse devrik cümledir.",
+    "islem": "yüklem sonda → kurallı"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "geldi, gitti, çıktık, başlayacak: hepsi cümlenin son sözcüğü.",
+    "islem": "B, C, D, E: kurallı"
+   },
+   {
+    "baslik": "Devriği seç",
+    "aciklama": "“Severdim” yüklemi sonda değil; ardından “ben o şehri” gelmiş.",
+    "islem": "A: devrik"
+   }
+  ],
+  "puf": "Önce yüklemi bul, sonra ondan sonra kaç sözcük geldiğini say; sıfırdan fazlaysa devriktir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-02 (Yüklemin Yeri ve Türü) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Anlamına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Biçimce olumlu, anlamca olumsuz cümleyi bulur.",
+  "tipId": "dct-anlam",
+  "tip": "Anlamına göre cümleler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisi biçimce olumlu, anlamca olumsuzdur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Dün akşam eve uğramadım.",
+   "B": "Bu gece erken yatıp sabah erken kalkacağız.",
+   "C": "Yarın bize gelecek misin?",
+   "D": "Bu konudan ben ne anlarım?",
+   "E": "Bu sorunu kimse çözemedi."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Bu konudan ben ne anlarım?"
+  },
+  "celdiriciler": {
+   "A": "Yüklem olumsuz ve anlam da olumsuz; biçimce olumsuz cümledir.",
+   "B": "Yüklem olumlu ve anlam da olumlu cümledir.",
+   "C": "Yüklem olumlu, bilgi isteyen gerçek bir sorudur; anlam da olumludur.",
+   "E": "Yüklem olumsuz ve anlam olumsuz; biçimce olumsuz cümledir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Biçimce olumlu, anlamca olumsuz cümle.",
+  "bilgi": [
+   {
+    "ad": "Olumlu / olumsuz",
+    "ifade": "cümle yüklemine göre olumlu ya da olumsuzdur; fiilimsideki olumsuzluk cümleyi olumsuz yapmaz (Teşekkür etmeden ayrıldı: olumlu) · soru biçimi anlamca olumsuz olabilir (Bunu kim bilebilir? = kimse bilemez)"
+   }
+  ],
+  "ipuclari": [
+   "Yükleminin biçimine bak; sonra cümlenin gerçekte neyi reddettiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tanımı hatırla",
+    "aciklama": "Biçim yüklemin eki, anlam cümlenin verdiği hükümdür; ikisi farklı olabilir.",
+    "islem": "biçim ↔ anlam"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A ve E: olumsuz–olumsuz. B ve C: olumlu–olumlu.",
+    "islem": "A, B, C, E: ikisi de aynı"
+   },
+   {
+    "baslik": "Farklıyı seç",
+    "aciklama": "“Anlarım” olumlu biçimde, ama “Ben bu konudan hiçbir şey anlamam” demek istiyor.",
+    "islem": "D: olumlu biçim, olumsuz anlam"
+   }
+  ],
+  "puf": "Yüklemin ekine bak: olumluysa biçim olumlu; sonra cümle bir şeyi reddediyorsa anlam olumsuzdur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-03 (Anlamına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yapısına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Şartlı birleşik cümleyi diğer yapılardan ayırır.",
+  "tipId": "dct-yapi",
+  "tip": "Yapısına göre cümleler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisi şartlı birleşik cümledir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yağmur yağarsa maçı erteleyeceğiz.",
+   "B": "Maç yarın akşam saat sekizde başlayacak.",
+   "C": "Maçı izleyen taraftarlar çok sevindi.",
+   "D": "Takım sahaya çıkar çıkmaz bir gol buldu.",
+   "E": "Stat dolu, tribünler coşkuluydu."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yağmur yağarsa maçı erteleyeceğiz."
+  },
+  "celdiriciler": {
+   "B": "Tek yargı var; şart yok. Basit cümledir.",
+   "C": "“İzleyen” sıfat-fiil; cümle birleşiktir ama şartlı değildir.",
+   "D": "“Çıkar çıkmaz” zarf-fiil; cümle birleşiktir ama şartlı değildir.",
+   "E": "İki bağımsız yargı var; sıralı cümledir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Şartlı birleşik cümle.",
+  "bilgi": [
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   }
+  ],
+  "ipuclari": [
+   "Şart ekini (-sa/-se) taşıyan yan yargıyı ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şartlıyı tanı",
+    "aciklama": "Şartlı birleşik cümlede yüklem dışında -sa/-se eki taşıyan bir yan yargı bulunur.",
+    "islem": "-sa/-se → şart"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "B basit; C ve D fiilimsili birleşik (izleyen, çıkar çıkmaz); E sıralı.",
+    "islem": "B, C, D, E: şartlı değil"
+   },
+   {
+    "baslik": "Şartlıyı seç",
+    "aciklama": "Yağ-ar-sa: şart eki; “maçı erteleyeceğiz” ana yargı.",
+    "islem": "A: şartlı birleşik"
+   }
+  ],
+  "puf": "Cümlede -sa/-se ekli bir yan yargı varsa cümle şartlı birleşiktir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-01 (Yapısına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Anlamına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Olumsuz fiilimsi taşıyan olumlu cümleyi bulur.",
+  "tipId": "dct-anlam",
+  "tip": "Anlamına göre cümleler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde olumsuzluk eki taşıyan bir fiilimsi vardır, ancak cümle yüklemine göre olumludur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu sabah kimseyle konuşmadık.",
+   "B": "Çocuk kimseye görünmeden kapıdan çıktı.",
+   "C": "Bu yoldan geçen kimse olmadı.",
+   "D": "Annem akşamları ışığı söndürmez.",
+   "E": "Yarınki sınava iyi hazırlanmış çocuklar sevinçle çıktı."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Çocuk kimseye görünmeden kapıdan çıktı."
+  },
+  "celdiriciler": {
+   "A": "Yüklem olumsuz; fiilimsi yok. Cümle olumsuzdur.",
+   "C": "Yüklem “olmadı” olumsuz; cümle olumsuzdur. “Geçen” olumsuzluk eki almamıştır.",
+   "D": "Yüklem olumsuz; fiilimsi yok.",
+   "E": "Fiilimsi var ama olumsuz değil; yüklem olumludur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Olumsuz fiilimsili olumlu cümle.",
+  "bilgi": [
+   {
+    "ad": "Olumlu / olumsuz",
+    "ifade": "cümle yüklemine göre olumlu ya da olumsuzdur; fiilimsideki olumsuzluk cümleyi olumsuz yapmaz (Teşekkür etmeden ayrıldı: olumlu) · soru biçimi anlamca olumsuz olabilir (Bunu kim bilebilir? = kimse bilemez)"
+   },
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   }
+  ],
+  "ipuclari": [
+   "İki şeyi ayrı sına: fiilimsi olumsuz mu, yüklem olumlu mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki ölçütü yaz",
+    "aciklama": "Fiilimsi -ma/-me almış, yüklem olumlu olacak.",
+    "islem": "fiilimsi: -madan · yüklem: olumlu"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A, C, D’de yüklem olumsuz; E’de fiilimsi olumsuz değil.",
+    "islem": "A, C, D, E: ölçüt yok"
+   },
+   {
+    "baslik": "İkisini sağlayanı seç",
+    "aciklama": "Gör-ün-me-den: olumsuz zarf-fiil; “çıktı” olumlu.",
+    "islem": "B: doğru"
+   }
+  ],
+  "puf": "Olumsuzluk ekini bulunca nerede olduğuna bak: fiilimsideyse cümle olumsuz olmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-03 (Anlamına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yüklemin Yeri ve Türü",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Hem birleşik hem devrik cümleyi belirler.",
+  "tipId": "dct-yer",
+  "tip": "Yüklemin yerine göre cümleler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisi hem birleşik hem devrik bir cümledir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çocuklar parka gitti, babaları evde kaldı.",
+   "B": "Eve gelen misafirler çok memnun görünüyordu.",
+   "C": "Dün akşam çok güzel bir film seyrettik.",
+   "D": "Sevdim ben bu kasabayı.",
+   "E": "Yağmur yağınca çıkmadık dışarı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Yağmur yağınca çıkmadık dışarı."
+  },
+  "celdiriciler": {
+   "A": "İki bağımsız yargı: sıralı cümle; yüklemler sonda, kurallıdır.",
+   "B": "Birleşik (gelen) ama yüklem sonda; kurallıdır.",
+   "C": "Basit ve kurallı cümledir.",
+   "D": "Devrik ama tek yargılı; basit cümledir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Birleşik ve devrik cümle.",
+  "bilgi": [
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   },
+   {
+    "ad": "Yüklemin yerine göre",
+    "ifade": "kurallı: yüklem sonda (Eve döndük) · devrik: yüklem sonda değil (Döndük eve)"
+   }
+  ],
+  "ipuclari": [
+   "İki özelliği ayrı ayrı denetle: fiilimsi var mı, yüklem sonda mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İki ölçütü yaz",
+    "aciklama": "Cümlede fiilimsi ya da yan yargı olacak ve yüklem sonda olmayacak.",
+    "islem": "birleşik + devrik"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "A sıralı, B birleşik ama kurallı, C basit ve kurallı, D devrik ama basit.",
+    "islem": "A, B, C, D: ikisi birden yok"
+   },
+   {
+    "baslik": "İkisini içereni seç",
+    "aciklama": "“Yağınca” zarf-fiildir (birleşik); “çıkmadık” yüklemi sonda değil (devrik).",
+    "islem": "E: birleşik + devrik"
+   }
+  ],
+  "puf": "Karma soruda iki özelliği iki satırda ayrı ayrı yaz; ikisinin de “evet” çıktığı şıkkı seç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-02 (Yüklemin Yeri ve Türü) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yapısına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Sıralı cümleyi birleşik cümlelerden ayırır.",
+  "tipId": "dct-yapi",
+  "tip": "Yapısına göre cümleler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisi sıralı cümledir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Eve gelir gelmez ödevlerine başladı.",
+   "B": "Dışarıda kar yağıyor, biz içeride çay içiyoruz.",
+   "C": "Annemin bize anlattığı masalı hâlâ hatırlıyorum.",
+   "D": "Hava güzel olursa, hafta sonu pikniğe gideriz.",
+   "E": "Biliyorum ki sen bu işi başarırsın."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Dışarıda kar yağıyor, biz içeride çay içiyoruz."
+  },
+  "celdiriciler": {
+   "A": "Gel-ir gel-mez zarf-fiildir; cümle birleşiktir.",
+   "C": "Anlat-tığ-ı sıfat-fiildir; cümle birleşiktir.",
+   "D": "Ol-ur-sa şart ekli yan yargıdır; cümle birleşiktir.",
+   "E": "“Ki” ile bağlanmış yan yargı vardır; cümle birleşiktir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Sıralı cümle.",
+  "bilgi": [
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   }
+  ],
+  "ipuclari": [
+   "Yargıların birbirine bağlı mı, bağımsız mı olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Sıralı cümlede bağımsız yargılar yan yana gelir; birleşikte fiilimsi, şart ya da “ki” bir yan yargı kurar.",
+    "islem": "sıralı: bağımsız yargılar"
+   },
+   {
+    "baslik": "Şıkları çöz",
+    "aciklama": "Zarf-fiil, sıfat-fiil, şart eki ve “ki”: dördü de yan yargı kurar.",
+    "islem": "birleşik: zarf-fiil, sıfat-fiil, şart, ki"
+   },
+   {
+    "baslik": "Farklıyı seç",
+    "aciklama": "B: yağıyor ve içiyoruz; iki bağımsız yargı, fiilimsi yok; sıralı cümle.",
+    "islem": "B: sıralı"
+   }
+  ],
+  "puf": "Fiilimsi, şart eki ya da “ki” yoksa ve iki yüklem birbirinden bağımsızsa cümle sıralıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-01 (Yapısına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dcumle-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Cümle Türleri · Yapısına Göre Cümleler",
+  "k": "tr|Cümle Türleri",
+  "kazanim": "Numaralı cümleler arasında birleşik cümleyi bulur.",
+  "tipId": "dct-yapi",
+  "tip": "Yapısına göre cümleler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "(I) Kasaba dağların eteğinde kurulmuştur. (II) Sabahları sis gölün üzerinden yükselir. (III) Gölün kıyısında yürüyen yolcular, kuşların seslerini dinler. (IV) Akşamüstü çarşıda esnaf dükkânlarını kapatır. (V) Geceleri sokaklar sessizleşir.\nBu parçadaki numaralanmış cümlelerden hangisi birleşik cümledir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "Tek yargı ve tek yüklem var; fiilimsi yoktur. Basit cümledir.",
+   "B": "Tek yüklem (yükselir) var; basit cümledir.",
+   "D": "Tek yüklem (kapatır) var; fiilimsi yok, basit cümledir.",
+   "E": "Tek yüklem (sessizleşir) var; basit cümledir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Birleşik cümle.",
+  "bilgi": [
+   {
+    "ad": "Yapısına göre cümle",
+    "ifade": "basit: tek yargı, fiilimsi yok (Çocuk top oynadı) · birleşik: fiilimsi, şart ya da -ki’li yan yargı içerir (Sınava çalışırsa kazanır; Yazı yazarken güldü; Öyle yoruldum ki oturdum) · sıralı: birbirinden bağımsız birden çok yargı (Ali gitti, Ayşe geldi)"
+   }
+  ],
+  "ipuclari": [
+   "Her cümlede yüklem dışında fiilimsi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Birleşik cümlede yüklem dışında fiilimsi ya da yan yargı vardır.",
+    "islem": "fiilimsi → birleşik"
+   },
+   {
+    "baslik": "Cümleleri çöz",
+    "aciklama": "I kurulmuştur, II yükselir, IV kapatır, V sessizleşir: tek yüklem, fiilimsi yok.",
+    "islem": "I, II, IV, V: basit"
+   },
+   {
+    "baslik": "Birleşiği seç",
+    "aciklama": "Yürü-yen: “yolcular” ismini niteleyen sıfat-fiil; III birleşiktir.",
+    "islem": "III: birleşik"
+   }
+  ],
+  "puf": "Parçalı sorularda her cümlede önce yüklemi bul, sonra yüklem dışında fiilimsi var mı diye bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBCT-01 (Yapısına Göre Cümleler) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

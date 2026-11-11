@@ -1,0 +1,1190 @@
+[
+ {
+  "id": "tyttr-dses-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Büyük ve Küçük Ünlü Uyumu",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Büyük ünlü uyumunun bozulmasının ekten mi kökten mi kaynaklandığını ayırt eder.",
+  "tipId": "dss-uyum",
+  "tip": "Büyük ve küçük ünlü uyumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerin hangisinde büyük ünlü uyumunun bozulması yalnız ekten kaynaklanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "kitaplar",
+   "B": "evlerde",
+   "C": "okurken",
+   "D": "dağlarda",
+   "E": "kalemler"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "okurken"
+  },
+  "celdiriciler": {
+   "A": "kitaplar: kök kitap, i–a ünlüleriyle büyük ünlü uyumuna uymaz; aykırılık kökten gelir → bozulma kökten gelir, ekten gelmez.",
+   "B": "evlerde: e–e–e ünlüleri hep ince; uyuma uyar → uyuyor, aykırılık yok.",
+   "D": "dağlarda: a–a–a ünlüleri hep kalın; uyuma uyar → uyuyor, aykırılık yok.",
+   "E": "kalemler: kök kalem, a–e ünlüleriyle uyuma uymaz; aykırılık kökten gelir → bozulma kökten gelir, ekten gelmez."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Uyum bozukluğu yalnız ekten gelen sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü uyumları",
+    "ifade": "büyük ünlü uyumu: sözcükteki ünlüler hep kalın (a ı o u) ya da hep ince (e i ö ü) · küçük ünlü uyumu: düz ünlüden sonra düz, yuvarlak ünlüden sonra a, e, u, ü gelir · -ken, -yor, -ki, -leyin ünlü uyumuna girmez (okurken, gülüyor)"
+   }
+  ],
+  "ipuclari": [
+   "Önce kökün uyumlu olup olmadığına bak; sonra eki ekle ve uyumun bozulup bozulmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Kökü tek başına denetle; kök uyumlu, sözcük uyumsuzsa bozulma ekten gelir.",
+    "islem": "Uyum bozukluğu yalnız ekten gelen sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "kitaplar: kök ✗ · evlerde: uyuyor · okurken: kök ✓ ek ✗ · dağlarda: uyuyor · kalemler: kök ✗"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "okurken: kök oku- (o–u kalın) uyumlu; -ken eki kalın köke ince e ile gelir, uyuma girmez. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "okurken: kök ✓ ek ✗"
+   }
+  ],
+  "puf": "-ken, -yor, -ki, -leyin ünlü uyumuna girmez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-01 (Büyük ve Küçük Ünlü Uyumu) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Büyük ve Küçük Ünlü Uyumu",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Öncüllerdeki sözcüklerin büyük ve küçük ünlü uyumuna uyup uymadığını belirler.",
+  "tipId": "dss-uyum",
+  "tip": "Büyük ve küçük ünlü uyumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "I. gözlükçü\nII. kavunlar\nIII. okullarda\nIV. kitaplık\nV. ağaçlık\n\nYukarıdaki sözcüklerden hangileri hem büyük hem küçük ünlü uyumuna uyar?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "II ve IV",
+   "C": "III ve V",
+   "D": "I, III ve V",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I, III ve V"
+  },
+  "celdiriciler": {
+   "A": "I ve II → II. kavunlar iki uyuma birden uymuyor (a–u–a hepsi kalın; fakat düz a’dan sonra yuvarlak u geliyor, küçük ünlü uyumuna uymaz); III. okullarda iki uyuma da uyduğu hâlde alınmamış; V. ağaçlık iki uyuma da uyduğu hâlde alınmamış",
+   "B": "II ve IV → II. kavunlar iki uyuma birden uymuyor (a–u–a hepsi kalın; fakat düz a’dan sonra yuvarlak u geliyor, küçük ünlü uyumuna uymaz); IV. kitaplık iki uyuma birden uymuyor (kitap kökü i–a ünlüleriyle büyük ünlü uyumuna uymaz); I. gözlükçü iki uyuma da uyduğu hâlde alınmamış; III. okullarda iki uyuma da uyduğu hâlde alınmamış; V. ağaçlık iki uyuma da uyduğu hâlde alınmamış",
+   "C": "III ve V → I. gözlükçü iki uyuma da uyduğu hâlde alınmamış",
+   "E": "I, II ve III → II. kavunlar iki uyuma birden uymuyor (a–u–a hepsi kalın; fakat düz a’dan sonra yuvarlak u geliyor, küçük ünlü uyumuna uymaz); V. ağaçlık iki uyuma da uyduğu hâlde alınmamış"
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "İki ünlü uyumuna birden uyan sözcükler.",
+  "bilgi": [
+   {
+    "ad": "Ünlü uyumları",
+    "ifade": "büyük ünlü uyumu: sözcükteki ünlüler hep kalın (a ı o u) ya da hep ince (e i ö ü) · küçük ünlü uyumu: düz ünlüden sonra düz, yuvarlak ünlüden sonra a, e, u, ü gelir · -ken, -yor, -ki, -leyin ünlü uyumuna girmez (okurken, gülüyor)"
+   }
+  ],
+  "ipuclari": [
+   "Önce ünlülerin hepsi kalın ya da ince mi diye bak; sonra düz–yuvarlak sıralamasını denetle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Her sözcüğün ünlülerini sırala; önce kalın–ince denetimi, sonra düz–yuvarlak denetimi yap.",
+    "islem": "İki ünlü uyumuna birden uyan sözcükler."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Ünlüleri yaz: I ö–ü–ü · II a–u–a · III o–u–a–a · IV i–a–ı · V a–a–ı.",
+    "islem": "I: iki uyum ✓ · II: küçük ✗ · III: iki uyum ✓ · IV: büyük ✗ · V: iki uyum ✓"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "I, III ve V. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "I, III ve V: doğru küme"
+   }
+  ],
+  "puf": "Büyük uyuma uymayan sözcük küçük uyuma bakmadan elenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-01 (Büyük ve Küçük Ünlü Uyumu) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Büyük ve Küçük Ünlü Uyumu",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Büyük ünlü uyumuna uymayan sözcüğü belirler.",
+  "tipId": "dss-uyum",
+  "tip": "Büyük ve küçük ünlü uyumu",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki sözcüklerden hangisi büyük ünlü uyumuna uymaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "kapı",
+   "B": "anne",
+   "C": "ağaç",
+   "D": "yıldız",
+   "E": "gözlük"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "anne"
+  },
+  "celdiriciler": {
+   "A": "kapı: a–ı ünlüleri kalındır; uyar → ünlüleri aynı kalınlıkta; büyük ünlü uyumuna uyar.",
+   "C": "ağaç: a–a ünlüleri kalındır; uyar → ünlüleri aynı kalınlıkta; büyük ünlü uyumuna uyar.",
+   "D": "yıldız: ı–ı ünlüleri kalındır; uyar → ünlüleri aynı kalınlıkta; büyük ünlü uyumuna uyar.",
+   "E": "gözlük: ö–ü ünlüleri incedir; uyar → ünlüleri aynı kalınlıkta; büyük ünlü uyumuna uyar."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Büyük ünlü uyumuna uymayan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü uyumları",
+    "ifade": "büyük ünlü uyumu: sözcükteki ünlüler hep kalın (a ı o u) ya da hep ince (e i ö ü) · küçük ünlü uyumu: düz ünlüden sonra düz, yuvarlak ünlüden sonra a, e, u, ü gelir · -ken, -yor, -ki, -leyin ünlü uyumuna girmez (okurken, gülüyor)"
+   }
+  ],
+  "ipuclari": [
+   "Ünlüleri tek tek yaz; hepsi kalın ya da hepsi ince mi diye bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Ünlüleri kalın (a ı o u) ve ince (e i ö ü) diye sınıfla; karışık olan sözcük uyuma uymaz.",
+    "islem": "Büyük ünlü uyumuna uymayan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "kapı: uyar · anne: uymaz · ağaç: uyar · yıldız: uyar · gözlük: uyar"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "anne: a kalın, e ince; büyük ünlü uyumuna uymaz. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "anne: uymaz"
+   }
+  ],
+  "puf": "Kalın–ince karışıksa büyük ünlü uyumu bozulur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-01 (Büyük ve Küçük Ünlü Uyumu) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünlü Düşmesi ve Daralması",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünlü düşmesi olan sözcüğü belirler.",
+  "tipId": "dss-unlu",
+  "tip": "Ünlü düşmesi ve daralması",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünlü düşmesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "ağzı",
+   "B": "evi",
+   "C": "okula",
+   "D": "kanadı",
+   "E": "odaya"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "ağzı"
+  },
+  "celdiriciler": {
+   "B": "evi: ev + -i → ünsüz yumuşaması yok, ünlü düşmesi yok; ses olayı yoktur → ünlü düşmesi görülmez; ses olayı yoktur.",
+   "C": "okula: okul + -a → ses olayı yoktur → ünlü düşmesi görülmez; ses olayı yoktur.",
+   "D": "kanadı: kanat + -ı → ünsüz yumuşaması (t → d) → ünlü düşmesi görülmez; başka ses olayı: ünsüz yumuşaması.",
+   "E": "odaya: oda + -ya → kaynaştırma ünsüzü y → ünlü düşmesi görülmez; başka ses olayı: kaynaştırma."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ünlü düşmesi bulunan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü düşmesi / daralması",
+    "ifade": "ünlü düşmesi: ağız → ağzı, resim → resmi, kayıp → kaybı · ünlü daralması: -yor ekinden önceki a/e daralır: başla- → başlıyor, de- → diyor; geliyor, yazıyor’daki ı/i bağlama ünlüsüdür"
+   }
+  ],
+  "ipuclari": [
+   "Ekle birleşince kökteki bir ünlünün kaybolup kaybolmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Ek gelince kökün ikinci hecesindeki ünlü düşüyorsa ünlü düşmesi vardır (ağız → ağzı).",
+    "islem": "Ünlü düşmesi bulunan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "ağzı: ünlü düşmesi · evi: ses olayı yok · okula: ses olayı yok · kanadı: ünsüz yumuşaması · odaya: kaynaştırma"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "ağzı: ağız + -ı → ünlü düşmesi (ağız’daki ı düşer). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "ağzı: ünlü düşmesi"
+   }
+  ],
+  "puf": "ağız → ağzı: kök ünlüsünü yitirir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-02 (Ünlü Düşmesi ve Daralması) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünlü Düşmesi ve Daralması",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünlü daralması olan sözcüğü belirler.",
+  "tipId": "dss-unlu",
+  "tip": "Ünlü düşmesi ve daralması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünlü daralması vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "geliyor",
+   "B": "okuyor",
+   "C": "yazıyor",
+   "D": "gülüyor",
+   "E": "diyor"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "diyor"
+  },
+  "celdiriciler": {
+   "A": "geliyor: gel- + -i- + -yor → -i- bağlama ünlüsüdür; daralma yoktur → daralma yoktur; -i- bağlama ünlüsüdür; daralma yoktur",
+   "B": "okuyor: oku- + -yor → ünlü daralması yok (kök ünlüsü u değişmemiş) → daralma yoktur; ünlü daralması yok (kök ünlüsü u değişmemiş)",
+   "C": "yazıyor: yaz- + -ı- + -yor → -ı- bağlama ünlüsüdür; daralma yoktur → daralma yoktur; -ı- bağlama ünlüsüdür; daralma yoktur",
+   "D": "gülüyor: gül- + -ü- + -yor → -ü- bağlama ünlüsüdür; daralma yoktur → daralma yoktur; -ü- bağlama ünlüsüdür; daralma yoktur"
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Ünlü daralması bulunan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü düşmesi / daralması",
+    "ifade": "ünlü düşmesi: ağız → ağzı, resim → resmi, kayıp → kaybı · ünlü daralması: -yor ekinden önceki a/e daralır: başla- → başlıyor, de- → diyor; geliyor, yazıyor’daki ı/i bağlama ünlüsüdür"
+   }
+  ],
+  "ipuclari": [
+   "-yor ekinden önce a ya da e ile biten kök, ünlüsünü daraltır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Köke -yor gelince kökün sonundaki a/e ı/i/u/ü’ye dönüşüyorsa daralma vardır; ünsüzle biten köklerdeki ı, i, u, ü bağlama ünlüsüdür.",
+    "islem": "Ünlü daralması bulunan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "geliyor: ses olayı yok · okuyor: ses olayı yok · yazıyor: ses olayı yok · gülüyor: ses olayı yok · diyor: ünlü daralması"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "diyor: de- + -yor → ünlü daralması (e → i). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "diyor: ünlü daralması"
+   }
+  ],
+  "puf": "de- → diyor, başla- → başlıyor.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-02 (Ünlü Düşmesi ve Daralması) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünlü Düşmesi ve Daralması",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Öncüllerdeki sözcüklerde ünlü düşmesi olanları (yumuşamayla birlikte olanı da) bulur.",
+  "tipId": "dss-unlu",
+  "tip": "Ünlü düşmesi ve daralması",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. kaybı\nII. ağzı\nIII. kanadı\nIV. ağacı\nV. resmi\n\nYukarıdaki sözcüklerin hangilerinde ünlü düşmesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I ve II",
+   "B": "I, II ve V",
+   "C": "II, III ve IV",
+   "D": "III ve IV",
+   "E": "I, III ve IV"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I, II ve V"
+  },
+  "celdiriciler": {
+   "A": "I ve II → V. resmi: ünlü düşmesi olduğu hâlde alınmamış",
+   "C": "II, III ve IV → III. kanadı: ünlü düşmesi yok (ünsüz yumuşaması); IV. ağacı: ünlü düşmesi yok (ünsüz yumuşaması); I. kaybı: ünlü düşmesi olduğu hâlde alınmamış; V. resmi: ünlü düşmesi olduğu hâlde alınmamış",
+   "D": "III ve IV → III. kanadı: ünlü düşmesi yok (ünsüz yumuşaması); IV. ağacı: ünlü düşmesi yok (ünsüz yumuşaması); I. kaybı: ünlü düşmesi olduğu hâlde alınmamış; II. ağzı: ünlü düşmesi olduğu hâlde alınmamış; V. resmi: ünlü düşmesi olduğu hâlde alınmamış",
+   "E": "I, III ve IV → III. kanadı: ünlü düşmesi yok (ünsüz yumuşaması); IV. ağacı: ünlü düşmesi yok (ünsüz yumuşaması); II. ağzı: ünlü düşmesi olduğu hâlde alınmamış; V. resmi: ünlü düşmesi olduğu hâlde alınmamış"
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ünlü düşmesi olan sözcüklerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "Ünlü düşmesi / daralması",
+    "ifade": "ünlü düşmesi: ağız → ağzı, resim → resmi, kayıp → kaybı · ünlü daralması: -yor ekinden önceki a/e daralır: başla- → başlıyor, de- → diyor; geliyor, yazıyor’daki ı/i bağlama ünlüsüdür"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün kökünü yaz; ek gelince kökteki ünlü kayboluyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "kaybı (kayıp+ı) hem düşme hem yumuşama taşır; kanadı ve ağacı yalnız yumuşamadır.",
+    "islem": "Ünlü düşmesi olan sözcüklerin hangileri olduğu."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Kökleri yaz: I kayıp+ı · II ağız+ı · III kanat+ı · IV ağaç+ı · V resim+i.",
+    "islem": "I: ı düşer ✓ · II: ı düşer ✓ · III: yalnız t→d ✗ · IV: yalnız ç→c ✗ · V: i düşer ✓"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "I, II ve V. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "I, II ve V: doğru küme"
+   }
+  ],
+  "puf": "Ünlü kaybı varsa düşme; yalnız ünsüz değişimi varsa yumuşama.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-02 (Ünlü Düşmesi ve Daralması) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Yumuşaması ve Benzeşmesi",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Cümlede ünsüz benzeşmesi olan sözcüğü bulur.",
+  "tipId": "dss-unsuz",
+  "tip": "Ünsüz yumuşaması ve benzeşmesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki cümlelerin hangisinde ünsüz benzeşmesi (sertleşme) olan bir sözcük vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Elif saksıyı pencerenin önüne koydu.",
+   "B": "Çocuklar bahçede dün akşam top oynuyordu.",
+   "C": "Akşam yemeğini sokakta yedik.",
+   "D": "Ağacın gölgesinde bir süre dinlendik.",
+   "E": "Annem pazardan taze sebze aldı."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Akşam yemeğini sokakta yedik."
+  },
+  "celdiriciler": {
+   "A": "“Elif saksıyı pencerenin önüne koydu.” → saksıyı: kaynaştırma (y); benzeşme yok → ünsüz benzeşmesi görülmez.",
+   "B": "“Çocuklar bahçede dün akşam top oynuyordu.” → bahçede: bahçe ünlüyle biter, ek -de sertleşmez; benzeşme yok → ünsüz benzeşmesi görülmez.",
+   "D": "“Ağacın gölgesinde bir süre dinlendik.” → ağacın: ünsüz yumuşaması; benzeşme yok → ünsüz benzeşmesi görülmez.",
+   "E": "“Annem pazardan taze sebze aldı.” → pazardan: pazar r (ötümlü) ile biter, ek -dan sertleşmemiş; benzeşme yok → ünsüz benzeşmesi görülmez."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ünsüz benzeşmesi bulunan sözcük içeren cümle.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz yumuşaması / benzeşmesi",
+    "ifade": "yumuşama: p, ç, t, k → b, c, d, ğ (kitap → kitabı, ağaç → ağacı); sepet → sepeti, top → topu gibi bazı sözcükler yumuşamaz · benzeşme: sert ünsüzden sonra ek sertleşir (-da → -ta: kitapta, -cı → -çı: kitapçı)"
+   }
+  ],
+  "ipuclari": [
+   "Sert ünsüzle biten sözcüğe gelen ekin c, d, g yerine ç, t, k ile başlayıp başlamadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Sert ünsüzle (f s t k ç ş h p) biten sözcüğe gelen -da, -dan, -cı gibi eklerde d/c/g’nin t/ç/k’ye dönüşüp dönüşmediğini denetle.",
+    "islem": "Ünsüz benzeşmesi bulunan sözcük içeren cümle."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "Cümle A: benzeşme yok · Cümle B: benzeşme yok · Cümle C: benzeşme var · Cümle D: benzeşme yok · Cümle E: benzeşme yok"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "“Akşam yemeğini sokakta yedik.” → sokakta: -da → -ta ünsüz benzeşmesi. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "Akşam yemeğini sokakta yedik.: benzeşme var"
+   }
+  ],
+  "puf": "Ek sertleşiyorsa benzeşme, kök yumuşuyorsa yumuşamadır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-03 (Ünsüz Yumuşaması ve Benzeşmesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Yumuşaması ve Benzeşmesi",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünsüz yumuşaması göstermeyen sözcüğü belirler.",
+  "tipId": "dss-unsuz",
+  "tip": "Ünsüz yumuşaması ve benzeşmesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünsüz yumuşaması yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "ağacı",
+   "B": "kitabı",
+   "C": "ayağı",
+   "D": "kanadı",
+   "E": "sepeti"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "sepeti"
+  },
+  "celdiriciler": {
+   "A": "ağacı: ağaç + -ı → ünsüz yumuşaması (ç → c) → ünsüz yumuşaması vardır (ç → c).",
+   "B": "kitabı: kitap + -ı → ünsüz yumuşaması (p → b) → ünsüz yumuşaması vardır (p → b).",
+   "C": "ayağı: ayak + -ı → ünsüz yumuşaması (k → ğ) → ünsüz yumuşaması vardır (k → ğ).",
+   "D": "kanadı: kanat + -ı → ünsüz yumuşaması (t → d) → ünsüz yumuşaması vardır (t → d)."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Ünsüz yumuşaması olmayan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz yumuşaması / benzeşmesi",
+    "ifade": "yumuşama: p, ç, t, k → b, c, d, ğ (kitap → kitabı, ağaç → ağacı); sepet → sepeti, top → topu gibi bazı sözcükler yumuşamaz · benzeşme: sert ünsüzden sonra ek sertleşir (-da → -ta: kitapta, -cı → -çı: kitapçı)"
+   }
+  ],
+  "ipuclari": [
+   "Ekle birleşince kök sonundaki p, ç, t, k’nin b, c, d, ğ’ye dönüşüp dönüşmediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Dört sözcükte p, ç, k, t yumuşamıştır; biri ünlüyle başlayan eki alsa da sert ünsüzünü korur.",
+    "islem": "Ünsüz yumuşaması olmayan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "ağacı: ünsüz yumuşaması · kitabı: ünsüz yumuşaması · ayağı: ünsüz yumuşaması · kanadı: ünsüz yumuşaması · sepeti: ses olayı yok"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "sepeti: sepet + -i → ek ünlüyle başlıyor ama sözcük yumuşamaz; ses olayı yoktur. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "sepeti: ses olayı yok"
+   }
+  ],
+  "puf": "sepet → sepeti: t yumuşamaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-03 (Ünsüz Yumuşaması ve Benzeşmesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0009",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Yumuşaması ve Benzeşmesi",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Numaralı sözcüklerden hem yumuşama hem benzeşme olanı bulur.",
+  "tipId": "dss-unsuz",
+  "tip": "Ünsüz yumuşaması ve benzeşmesi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Dedem yıllar önce kendi yazdığı kitapçığı (I) bana armağan etti. Her sabah sokaktan (II) geçen çocuklar penceremize bakardı. Evimizin önündeki ağacın (III) gölgesinde otururduk. Kuşlar gelirdi, kanadı (IV) kırık bir serçeyi de getirirlerdi. Sonbaharda yaprakta (V) kalan son damlayı izlerdik.\n\nBu parçada numaralanmış sözcüklerden hangisinde hem ünsüz yumuşaması hem ünsüz benzeşmesi görülür?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "sokaktan: sokak + -tan → ünsüz benzeşmesi (-dan → -tan) → iki ses olayını birlikte taşımaz (ünsüz benzeşmesi).",
+   "C": "ağacın: ağaç + -ın → ünsüz yumuşaması (ç → c) → iki ses olayını birlikte taşımaz (ünsüz yumuşaması).",
+   "D": "kanadı: kanat + -ı → ünsüz yumuşaması (t → d) → iki ses olayını birlikte taşımaz (ünsüz yumuşaması).",
+   "E": "yaprakta: yaprak + -ta → ünsüz benzeşmesi (-da → -ta) → iki ses olayını birlikte taşımaz (ünsüz benzeşmesi)."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Hem yumuşama hem benzeşme olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz yumuşaması / benzeşmesi",
+    "ifade": "yumuşama: p, ç, t, k → b, c, d, ğ (kitap → kitabı, ağaç → ağacı); sepet → sepeti, top → topu gibi bazı sözcükler yumuşamaz · benzeşme: sert ünsüzden sonra ek sertleşir (-da → -ta: kitapta, -cı → -çı: kitapçı)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğü köküne ve eklerine ayır; hem kök sonu yumuşuyor hem ek sertleşiyorsa o sözcüğü seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Her numaralı sözcüğün hangi ses olaylarını taşıdığını yaz; ikisi birden olan sözcük aranan sözcüktür.",
+    "islem": "Hem yumuşama hem benzeşme olan numaralı sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "I (kitapçığı): ünsüz benzeşmesi, ünsüz yumuşaması · II (sokaktan): ünsüz benzeşmesi · III (ağacın): ünsüz yumuşaması · IV (kanadı): ünsüz yumuşaması · V (yaprakta): ünsüz benzeşmesi"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "kitapçığı: kitap + -çık + -ı → ünsüz benzeşmesi (-cık → -çık) ve ünsüz yumuşaması (k → ğ). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "I: ünsüz benzeşmesi, ünsüz yumuşaması"
+   }
+  ],
+  "puf": "kitapçık + ı: hem -cık → -çık hem k → ğ.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-03 (Ünsüz Yumuşaması ve Benzeşmesi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0010",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Düşmesi, Türemesi ve Kaynaştırma",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünsüz düşmesi olan sözcüğü belirler.",
+  "tipId": "dss-dusme",
+  "tip": "Ünsüz düşmesi, türemesi, kaynaştırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki sözcüklerden hangisinde ünsüz düşmesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "kısalmak",
+   "B": "küçülmek",
+   "C": "güzelleşmek",
+   "D": "sarılmak",
+   "E": "yazdırmak"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "küçülmek"
+  },
+  "celdiriciler": {
+   "A": "kısalmak: kısa + -l- + -mak → ünsüz düşmesi yok → ünsüz düşmesi görülmez.",
+   "C": "güzelleşmek: güzel + -leş- + -mek → ünsüz düşmesi yok → ünsüz düşmesi görülmez.",
+   "D": "sarılmak: sar- + -ıl- + -mak → ünsüz düşmesi yok → ünsüz düşmesi görülmez.",
+   "E": "yazdırmak: yaz- + -dır- + -mak → ünsüz düşmesi yok → ünsüz düşmesi görülmez."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ünsüz düşmesi olan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz düşmesi / türemesi / kaynaştırma",
+    "ifade": "düşme: küçük + -ül- → küçülmek · türeme: hak → hakkı, af → affı, sır → sırrı, his → hissi · kaynaştırma: ünlüyle biten sözcüğe ünlüyle başlayan ek gelirken araya y, s, ş, n girer (masa+ya, oda+sı)"
+   }
+  ],
+  "ipuclari": [
+   "Kök ile ek birleşince köke ait bir ünsüzün kaybolup kaybolmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "küçük + -ül- → küçülmek: kökteki k düşer.",
+    "islem": "Ünsüz düşmesi olan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "kısalmak: ses olayı yok · küçülmek: ünsüz düşmesi · güzelleşmek: ses olayı yok · sarılmak: ses olayı yok · yazdırmak: ses olayı yok"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "küçülmek: küçük + -ül- + -mek → ünsüz düşmesi (küçük’teki k düşer). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "küçülmek: ünsüz düşmesi"
+   }
+  ],
+  "puf": "Ek gelince kökün sonundaki ünsüz kayboluyorsa ünsüz düşmesidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-04 (Ünsüz Düşmesi, Türemesi ve Kaynaştırma) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0011",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Düşmesi, Türemesi ve Kaynaştırma",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Ünsüz türemesi olmayan sözcüğü belirler.",
+  "tipId": "dss-dusme",
+  "tip": "Ünsüz düşmesi, türemesi, kaynaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki sözcüklerin hangisinde ünsüz türemesi yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "hakkı",
+   "B": "sırrı",
+   "C": "hissi",
+   "D": "bakkala",
+   "E": "affı"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "bakkala"
+  },
+  "celdiriciler": {
+   "A": "hakkı: hak + -ı → ünsüz türemesi (k ikizleşir) → ünsüz türemesi (ikizleşme) vardır.",
+   "B": "sırrı: sır + -ı → ünsüz türemesi (r ikizleşir) → ünsüz türemesi (ikizleşme) vardır.",
+   "C": "hissi: his + -i → ünsüz türemesi (s ikizleşir) → ünsüz türemesi (ikizleşme) vardır.",
+   "E": "affı: af + -ı → ünsüz türemesi (f ikizleşir) → ünsüz türemesi (ikizleşme) vardır."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ünsüz türemesi olmayan sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz düşmesi / türemesi / kaynaştırma",
+    "ifade": "düşme: küçük + -ül- → küçülmek · türeme: hak → hakkı, af → affı, sır → sırrı, his → hissi · kaynaştırma: ünlüyle biten sözcüğe ünlüyle başlayan ek gelirken araya y, s, ş, n girer (masa+ya, oda+sı)"
+   }
+  ],
+  "ipuclari": [
+   "Ek gelince kökün son ünsüzünün ikizleşip ikizleşmediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "hak → hakkı, sır → sırrı, his → hissi, af → affı gibi sözcüklerde son ünsüz ikizleşir; bakkal → bakkala’da çift ünsüz kökte vardır, sonradan türememiştir.",
+    "islem": "Ünsüz türemesi olmayan sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "hakkı: ünsüz türemesi · sırrı: ünsüz türemesi · hissi: ünsüz türemesi · bakkala: ses olayı yok · affı: ünsüz türemesi"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "bakkala: bakkal + -a → çift ünsüz (ll) kökte vardır, sonradan türememiştir; ünsüz türemesi yoktur. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "bakkala: ses olayı yok"
+   }
+  ],
+  "puf": "Son ünsüz ikizleşiyorsa ünsüz türemesi vardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-04 (Ünsüz Düşmesi, Türemesi ve Kaynaştırma) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0012",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ünsüz Düşmesi, Türemesi ve Kaynaştırma",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Cümlede hem ünlü düşmesi hem kaynaştırma bulunduğunu belirler.",
+  "tipId": "dss-dusme",
+  "tip": "Ünsüz düşmesi, türemesi, kaynaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki cümlelerin hangisinde hem ünlü düşmesi hem kaynaştırma örneği vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kardeşim çantayı omzuna astı.",
+   "B": "Annem çiçeği vazoya koydu.",
+   "C": "Dün okula yürüyerek gittik.",
+   "D": "Ayağı yaralanan sporcu sedyeye alındı.",
+   "E": "Bahçeden gelen sesi duydum."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kardeşim çantayı omzuna astı."
+  },
+  "celdiriciler": {
+   "B": "“Annem çiçeği vazoya koydu.” → çiçeği: yumuşama; vazoya: kaynaştırma (y); ünlü düşmesi yok → iki ses olayını birlikte taşımaz.",
+   "C": "“Dün okula yürüyerek gittik.” → yürüyerek: kaynaştırma (y); ünlü düşmesi yok → iki ses olayını birlikte taşımaz.",
+   "D": "“Ayağı yaralanan sporcu sedyeye alındı.” → ayağı: yumuşama; sedyeye: kaynaştırma (y); ünlü düşmesi yok → iki ses olayını birlikte taşımaz.",
+   "E": "“Bahçeden gelen sesi duydum.” → kaynaştırma yok, ünlü düşmesi yok → iki ses olayını birlikte taşımaz."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Hem ünlü düşmesi hem kaynaştırma bulunan cümle.",
+  "bilgi": [
+   {
+    "ad": "Ünsüz düşmesi / türemesi / kaynaştırma",
+    "ifade": "düşme: küçük + -ül- → küçülmek · türeme: hak → hakkı, af → affı, sır → sırrı, his → hissi · kaynaştırma: ünlüyle biten sözcüğe ünlüyle başlayan ek gelirken araya y, s, ş, n girer (masa+ya, oda+sı)"
+   },
+   {
+    "ad": "Ünlü düşmesi / daralması",
+    "ifade": "ünlü düşmesi: ağız → ağzı, resim → resmi, kayıp → kaybı · ünlü daralması: -yor ekinden önceki a/e daralır: başla- → başlıyor, de- → diyor; geliyor, yazıyor’daki ı/i bağlama ünlüsüdür"
+   }
+  ],
+  "ipuclari": [
+   "Cümledeki sözcükleri ünlü kaybı ve araya giren y, s, ş, n bakımından sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Önce ünlü düşmesi olan sözcüğü (omuz → omzu), sonra ünlüyle biten sözcüğe gelen ekin kaynaştırma ünsüzünü ara.",
+    "islem": "Hem ünlü düşmesi hem kaynaştırma bulunan cümle."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "Cümle A: düşme ✓ kaynaştırma ✓ · Cümle B: düşme ✗ kaynaştırma ✓ · Cümle C: düşme ✗ kaynaştırma ✓ · Cümle D: düşme ✗ kaynaştırma ✓ · Cümle E: düşme ✗ kaynaştırma ✗"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "“Kardeşim çantayı omzuna astı.” → çantayı: kaynaştırma (y); omzuna: ünlü düşmesi (omuz → omzu) ve kaynaştırma (n). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "Kardeşim çantayı omzuna astı.: düşme ✓ kaynaştırma ✓"
+   }
+  ],
+  "puf": "Ünlüyle biten sözcük + ünlüyle başlayan ek arasında y, s, ş, n varsa kaynaştırmadır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-04 (Ünsüz Düşmesi, Türemesi ve Kaynaştırma) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0013",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ses Olayı Eşleştirme ve Numaralı Parça",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Sözcük–ses olayı eşleştirmesinde yanlış eşleşmeyi bulur.",
+  "tipId": "dss-eslestirme",
+  "tip": "Ses olayı eşleştirme ve numaralı parça",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki sözcüklerden hangisinin karşısında yazılan ses olayı yanlıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "ağzı – ünlü düşmesi",
+   "B": "ayağı – ünsüz yumuşaması",
+   "C": "başlıyor – ünlü düşmesi",
+   "D": "küçülmek – ünsüz düşmesi",
+   "E": "hakkı – ünsüz türemesi"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "başlıyor – ünlü düşmesi"
+  },
+  "celdiriciler": {
+   "A": "ağzı: ağız + -ı; ağız’daki ünlü düşer → bu eşleşme doğrudur; aranan yanlış eşleşme değildir.",
+   "B": "ayağı: ayak + -ı; k → ğ → bu eşleşme doğrudur; aranan yanlış eşleşme değildir.",
+   "D": "küçülmek: küçük + -ül-; k düşer → bu eşleşme doğrudur; aranan yanlış eşleşme değildir.",
+   "E": "hakkı: hak + -ı; k ikizleşir → bu eşleşme doğrudur; aranan yanlış eşleşme değildir."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ses olayı yanlış eşleştirilmiş sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ses olayları",
+    "ifade": "ünlü düşmesi · ünlü daralması · ünsüz yumuşaması · ünsüz benzeşmesi · ünsüz düşmesi · ünsüz türemesi · kaynaştırma · ulama (ünsüzle biten sözcükten sonra ünlüyle başlayan sözcük gelince söyleyişte kaynaşma: bir elma → bi-rel-ma)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcükte kökün ve ekin ne yaptığını yaz; ses olayının adı onunla uyuşuyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Ünlü kayboluyorsa düşme; ünlü başka ünlüye (a/e → ı/i) dönüşüyorsa daralmadır.",
+    "islem": "Ses olayı yanlış eşleştirilmiş sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "ağzı: eşleşme doğru · ayağı: eşleşme doğru · başlıyor: eşleşme yanlış · küçülmek: eşleşme doğru · hakkı: eşleşme doğru"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "başlıyor: başla- + -yor; a → ı bir ünlü daralmasıdır, düşme değil. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "başlıyor – ünlü düşmesi: eşleşme yanlış"
+   }
+  ],
+  "puf": "Düşme: ünlü yok olur. Daralma: ünlü başka ünlüye dönüşür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-05 (Ses Olayı Eşleştirme ve Numaralı Parça) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0014",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ses Olayı Eşleştirme ve Numaralı Parça",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Numaralı sözcüklerden ünlü düşmesi olanı bulur.",
+  "tipId": "dss-eslestirme",
+  "tip": "Ses olayı eşleştirme ve numaralı parça",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Hafta sonu dedemin evine gittik. Dedem sepeti (I) masanın üstüne bırakıp bizi bahçeye çağırdı. Sokakta (II) oynayan çocukları izledik. Annem sofrayı hazırlarken kardeşim tabakları mutfağa (III) taşıdı. Babam “Yarın da gelin,” diyerek (IV) bizi uğurladı. Küçük kardeşimin omzu (V) ağrıyormuş.\n\nBu parçada numaralanmış sözcüklerden hangisinde ünlü düşmesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "V"
+  },
+  "celdiriciler": {
+   "A": "sepeti: sepet + -i → ek ünlüyle başlıyor ama sözcük yumuşamaz; ses olayı yoktur → ünlü düşmesi görülmez; ses olayı: ses olayı yok.",
+   "B": "sokakta: sokak + -ta → ünsüz benzeşmesi (-da → -ta) → ünlü düşmesi görülmez; ses olayı: ünsüz benzeşmesi.",
+   "C": "mutfağa: mutfak + -a → ünsüz yumuşaması (k → ğ) → ünlü düşmesi görülmez; ses olayı: ünsüz yumuşaması.",
+   "D": "diyerek: de- + -yerek → ünlü daralması (e → i) → ünlü düşmesi görülmez; ses olayı: ünlü daralması."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "Ünlü düşmesi olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ünlü düşmesi / daralması",
+    "ifade": "ünlü düşmesi: ağız → ağzı, resim → resmi, kayıp → kaybı · ünlü daralması: -yor ekinden önceki a/e daralır: başla- → başlıyor, de- → diyor; geliyor, yazıyor’daki ı/i bağlama ünlüsüdür"
+   }
+  ],
+  "ipuclari": [
+   "Her numaralı sözcükte ek gelince kökten bir ünlünün düşüp düşmediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Her numaralı sözcüğün ses olayını adlandır; ünlü düşmesi olanı seç.",
+    "islem": "Ünlü düşmesi olan numaralı sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "I (sepeti): ses olayı yok · II (sokakta): ünsüz benzeşmesi · III (mutfağa): ünsüz yumuşaması · IV (diyerek): ünlü daralması · V (omzu): ünlü düşmesi"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "omzu: omuz + -u → ünlü düşmesi (omuz’daki u düşer). Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "V: ünlü düşmesi"
+   }
+  ],
+  "puf": "omuz → omzu: kök ünlüsü düşer.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-05 (Ses Olayı Eşleştirme ve Numaralı Parça) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0015",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ses Olayı Eşleştirme ve Numaralı Parça",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Numaralı sözcüklerden ses olayı bulunmayanı belirler.",
+  "tipId": "dss-eslestirme",
+  "tip": "Ses olayı eşleştirme ve numaralı parça",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Yaz tatilinde dedemin köyüne gittik. Ağzı (I) kulaklarına varan çocuklar bizi karşıladı. Akşam yemeğinden sonra kitapta (II) okuduğumuz oyunları oynadık. Gece olunca herkes küçük bir sırrı (III) saklamaya söz verdi. Evlerimizde (IV) bile yapmadığımız şeyleri orada yapmak güzeldi. Dönüşte kardeşimin ayağı (V) burkulunca onu sırtımızda taşıdık.\n\nBu parçada numaralanmış sözcüklerden hangisinde herhangi bir ses olayı görülmez?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "IV"
+  },
+  "celdiriciler": {
+   "A": "ağzı: ağız + -ı → ünlü düşmesi (ağız’daki ı düşer) → ses olayı vardır: ünlü düşmesi.",
+   "B": "kitapta: kitap + -ta → ünsüz benzeşmesi (-da → -ta) → ses olayı vardır: ünsüz benzeşmesi.",
+   "C": "sırrı: sır + -ı → ünsüz türemesi (r ikizleşir) → ses olayı vardır: ünsüz türemesi.",
+   "E": "ayağı: ayak + -ı → ünsüz yumuşaması (k → ğ) → ses olayı vardır: ünsüz yumuşaması."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Hiçbir ses olayı taşımayan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ses olayları",
+    "ifade": "ünlü düşmesi · ünlü daralması · ünsüz yumuşaması · ünsüz benzeşmesi · ünsüz düşmesi · ünsüz türemesi · kaynaştırma · ulama (ünsüzle biten sözcükten sonra ünlüyle başlayan sözcük gelince söyleyişte kaynaşma: bir elma → bi-rel-ma)"
+   }
+  ],
+  "ipuclari": [
+   "Her numaralı sözcüğü kök ve eklerine ayırıp ünlü ya da ünsüz değişimi var mı diye sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Dört sözcükte bir ses olayı vardır (düşme, benzeşme, kaynaştırma, yumuşama); biri kökünü ve ekini aynen korur.",
+    "islem": "Hiçbir ses olayı taşımayan numaralı sözcük."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "I (ağzı): ünlü düşmesi · II (kitapta): ünsüz benzeşmesi · III (sırrı): ünsüz türemesi · IV (evlerimizde): ses olayı yok · V (ayağı): ünsüz yumuşaması"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "evlerimizde: ev + -ler + -imiz + -de → ses olayı yoktur. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "IV: ses olayı yok"
+   }
+  ],
+  "puf": "Kök ve ek aynen korunuyorsa ses olayı yoktur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-05 (Ses Olayı Eşleştirme ve Numaralı Parça) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dses-0016",
+  "ders": "TYT Türkçe",
+  "konu": "Ses Bilgisi · Ses Olayı Eşleştirme ve Numaralı Parça",
+  "k": "tr|Ses Bilgisi",
+  "kazanim": "Numaralı söz öbeklerinden ulama olmayanı bulur.",
+  "tipId": "dss-eslestirme",
+  "tip": "Ses olayı eşleştirme ve numaralı parça",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Annem pazardan dört elma (I) aldı. Kapıda bir arkadaş (II) bekliyordu. Masada yedi ördek (III) yumurtası duruyordu. Ocakta kış akşamları (IV) hep çorba kaynardı. Yarın bir akşam (V) yemeğine davetliyiz.\n\nBu parçadaki numaralanmış söz öbeklerinden hangisinde söyleyişte ulama yoktur?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "dört elma: t + e → ünsüzle biten sözcükten sonra ünlüyle başlayan sözcük; ulama vardır → bu öbekte ulama vardır; aranan öbek değildir.",
+   "B": "bir arkadaş: r + a → ulama vardır → bu öbekte ulama vardır; aranan öbek değildir.",
+   "D": "kış akşamları: ş + a → ulama vardır → bu öbekte ulama vardır; aranan öbek değildir.",
+   "E": "bir akşam: r + a → ulama vardır → bu öbekte ulama vardır; aranan öbek değildir."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Ulama olmayan numaralı söz öbeği.",
+  "bilgi": [
+   {
+    "ad": "Ses olayları",
+    "ifade": "ünlü düşmesi · ünlü daralması · ünsüz yumuşaması · ünsüz benzeşmesi · ünsüz düşmesi · ünsüz türemesi · kaynaştırma · ulama (ünsüzle biten sözcükten sonra ünlüyle başlayan sözcük gelince söyleyişte kaynaşma: bir elma → bi-rel-ma)"
+   }
+  ],
+  "ipuclari": [
+   "Her öbekte birinci sözcüğün sonuna ve ikinci sözcüğün başına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü belirle",
+    "aciklama": "Ulama için öbekte ünsüzle biten sözcüğü ünlüyle başlayan sözcük izlemelidir.",
+    "islem": "Ulama olmayan numaralı söz öbeği."
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkkı ses olaylarına göre çözümleyip ölçüte göre sına.",
+    "islem": "I (dört elma): ulama var · II (bir arkadaş): ulama var · III (yedi ördek): ulama yok · IV (kış akşamları): ulama var · V (bir akşam): ulama var"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "yedi ördek: i + ö → ünlüyle biten sözcükten sonra ünlü gelir; ünsüz–ünlü birleşmesi olmadığı için ulama yoktur. Ölçüt yalnız bu şıkta sağlanır.",
+    "islem": "III: ulama yok"
+   }
+  ],
+  "puf": "ünsüz + ünlü = ulama; ünlü + ünlü ulama değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBSS-05 (Ses Olayı Eşleştirme ve Numaralı Parça) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

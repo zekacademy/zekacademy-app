@@ -1,0 +1,71 @@
+{
+ "konu": "Cümle Türleri",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-DBCT-01",
+   "konu": "Cümle Türleri",
+   "alt": "Yapısına Göre Cümleler",
+   "fikir": "Cümlenin basit, birleşik (fiilimsili, şartlı, -ki’li) ya da sıralı olduğunu yargı ve yüklem sayısına göre belirlemek.",
+   "tuzak": "Uzun cümleyi birleşik, fiilimsili cümleyi basit sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dct-yapi",
+   "tip": "Yapısına göre cümleler",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBCT-02",
+   "konu": "Cümle Türleri",
+   "alt": "Yüklemin Yeri ve Türü",
+   "fikir": "Yüklemin cümledeki yerine göre kurallı/devrik ayrımını yapmak; yapıyla birlikte değerlendirmek.",
+   "tuzak": "Devrik cümleyi yalnız yapıdan ayırmaya çalışmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dct-yer",
+   "tip": "Yüklemin yerine göre cümleler",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBCT-03",
+   "konu": "Cümle Türleri",
+   "alt": "Anlamına Göre Cümleler",
+   "fikir": "Cümlenin biçimce ve anlamca olumlu/olumsuz olup olmadığını yüklemine bakarak belirlemek.",
+   "tuzak": "Fiilimsideki olumsuzluğu yüklemin olumsuzluğu sanmak; soru biçimini anlamca olumlu saymak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dct-anlam",
+   "tip": "Anlamına göre cümleler",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "dct-yapi",
+   "ad": "Yapısına göre cümleler",
+   "kartlar": [
+    "K-DBCT-01"
+   ],
+   "uygulamaKonu": "tr|Cümle Türleri"
+  },
+  {
+   "tipId": "dct-yer",
+   "ad": "Yüklemin yerine göre cümleler",
+   "kartlar": [
+    "K-DBCT-02"
+   ],
+   "uygulamaKonu": "tr|Cümle Türleri"
+  },
+  {
+   "tipId": "dct-anlam",
+   "ad": "Anlamına göre cümleler",
+   "kartlar": [
+    "K-DBCT-03"
+   ],
+   "uygulamaKonu": "tr|Cümle Türleri"
+  }
+ ]
+}

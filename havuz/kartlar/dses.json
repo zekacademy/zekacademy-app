@@ -1,0 +1,113 @@
+{
+ "konu": "Ses Bilgisi",
+ "surum": 1,
+ "kartlar": [
+  {
+   "id": "K-DBSS-01",
+   "konu": "Ses Bilgisi",
+   "alt": "Büyük ve Küçük Ünlü Uyumu",
+   "fikir": "Sözcüğün ve ekin büyük ya da küçük ünlü uyumuna uyup uymadığını ünlüleri sınıflayarak belirlemek; uyuma girmeyen ekleri (-ken, -yor, -ki, -leyin) tanımak.",
+   "tuzak": "Ekten gelen aykırılığı kökten gelen sanmak; küçük ünlü uyumunu hiç denetlememek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dss-uyum",
+   "tip": "Büyük ve küçük ünlü uyumu",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBSS-02",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünlü Düşmesi ve Daralması",
+   "fikir": "Ünlü düşmesini (ağız → ağzı) ve ünlü daralmasını (başlıyor, diyor) ötekilerden ayırmak.",
+   "tuzak": "Bağlama ünlüsünü (geliyor, yazıyor) daralma sanmak; yumuşamayla düşmeyi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dss-unlu",
+   "tip": "Ünlü düşmesi ve daralması",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBSS-03",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünsüz Yumuşaması ve Benzeşmesi",
+   "fikir": "p, ç, t, k’nin yumuşamasını ve eklerdeki sertleşmeyi (benzeşme) birbirinden ayırmak; ikisini birlikte taşıyan sözcüğü bulmak.",
+   "tuzak": "Yumuşamayı benzeşme sanmak; yumuşama göstermeyen sözcükleri (sepeti, topu) yumuşamış saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dss-unsuz",
+   "tip": "Ünsüz yumuşaması ve benzeşmesi",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBSS-04",
+   "konu": "Ses Bilgisi",
+   "alt": "Ünsüz Düşmesi, Türemesi ve Kaynaştırma",
+   "fikir": "Ünsüz düşmesi (küçülmek), ünsüz türemesi (hakkı) ve kaynaştırma ünsüzlerini ayırt etmek.",
+   "tuzak": "Ünsüz türemesini yumuşama sanmak; kaynaştırmayı ünsüz türemesi saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "dss-dusme",
+   "tip": "Ünsüz düşmesi, türemesi, kaynaştırma",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  },
+  {
+   "id": "K-DBSS-05",
+   "konu": "Ses Bilgisi",
+   "alt": "Ses Olayı Eşleştirme ve Numaralı Parça",
+   "fikir": "Sözcüğün karşısındaki ses olayının adını doğrulamak; numaralı parçada ses olayı olmayan ya da farklı olan sözcüğü bulmak; ulamayı tanımak.",
+   "tuzak": "Ünlü daralmasını ünlü düşmesi sanmak; ünlü ünlüye çarpan söyleyişi ulama saymak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "dss-eslestirme",
+   "tip": "Ses olayı eşleştirme ve numaralı parça",
+   "kaynak": "ÖSYM TYT Türkçe 2018–2026 · Bilgi Sarmal Dil Bilgisi SB (ÖSYM Tipi) · TDK Yazım Kılavuzu"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "dss-uyum",
+   "ad": "Büyük ve küçük ünlü uyumu",
+   "kartlar": [
+    "K-DBSS-01"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "dss-unlu",
+   "ad": "Ünlü düşmesi ve daralması",
+   "kartlar": [
+    "K-DBSS-02"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "dss-unsuz",
+   "ad": "Ünsüz yumuşaması ve benzeşmesi",
+   "kartlar": [
+    "K-DBSS-03"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "dss-dusme",
+   "ad": "Ünsüz düşmesi, türemesi, kaynaştırma",
+   "kartlar": [
+    "K-DBSS-04"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  },
+  {
+   "tipId": "dss-eslestirme",
+   "ad": "Ses olayı eşleştirme ve numaralı parça",
+   "kartlar": [
+    "K-DBSS-05"
+   ],
+   "uygulamaKonu": "tr|Ses Bilgisi"
+  }
+ ]
+}

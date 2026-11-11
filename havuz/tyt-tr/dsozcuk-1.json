@@ -1,0 +1,3092 @@
+[
+ {
+  "id": "tyttr-dsozcuk-0001",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Tırnaklı sözcüğün topluluk adı olduğu cümleyi bulur.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Tırnak içine alınan sözcüklerden hangisi bir topluluk adıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bahçedeki “çocuklar” ağaca tırmandı.",
+   "B": "Masanın üstünde “kitap” duruyordu.",
+   "C": "Yamaçtaki “sürü” ağıla döndü.",
+   "D": "“Sevgi” insanı güzelleştirir.",
+   "E": "“Ankara” kışın soğuk olur."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Yamaçtaki “sürü” ağıla döndü."
+  },
+  "celdiriciler": {
+   "A": "“Çocuklar”, çoğul eki almış bir cins addır; tek başına topluluk anlamı yoktur.",
+   "B": "“Kitap”, tek bir varlığı anlatan somut bir cins addır.",
+   "D": "“Sevgi”, duyularla algılanmayan soyut bir addır.",
+   "E": "“Ankara”, tek bir şehre verilmiş özel addır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Tırnaklı sözcüğün topluluk adı olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Ad (isim)",
+    "ifade": "somut ad beş duyuyla algılanır (kitap) · soyut ad algılanmaz, düşünülür (sevgi) · topluluk adı tekil biçimiyle birden çok varlığı anlatır (sürü, ordu)"
+   }
+  ],
+  "ipuclari": [
+   "Tekil biçimde olup birçok varlığı bir arada anlatan sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Topluluk adı tekil biçimiyle birden çok varlığı anlatır.",
+    "islem": "topluluk adı: sürü, ordu, koro"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: çoğul cins ad · B: somut cins ad · C: topluluk adı · D: soyut ad · E: özel ad"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Sürü”, tekil biçimiyle birçok hayvanı birden anlatır; topluluk adıdır.",
+    "islem": "C: topluluk adı ✓"
+   }
+  ],
+  "puf": "Tekil görünüp çokluk bildiren ad topluluk adıdır; çoğul ekli sözcük topluluk adı sayılmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0002",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçadaki adlardan soyut olanı belirler.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Kış boyunca karla kaplı kalan köyde, bahar gelince herkesin yüzünde bir umut (I) belirdi. Çocuklar dere (II) kıyısında oyun oynadı, kadınlar taş fırında ekmek (III) pişirdi, erkekler bahçenin kapısını ve çiti (IV) onardı. Akşam olunca sofraya oturuldu; kimse çorba (V) içmeye acele etmedi.\nBu parçada numaralanmış sözcüklerden hangisi soyut addır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "“dere” (somut ad): gözle görülür, bir yer adı. Aranan sözcük bu değildir.",
+   "C": "“ekmek” (somut ad): dokunulup tadılabilir. Aranan sözcük bu değildir.",
+   "D": "“çiti” (somut ad): görülüp dokunulabilir. Aranan sözcük bu değildir.",
+   "E": "“çorba” (somut ad): tadılabilir, görülür. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Soyut ad olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ad (isim)",
+    "ifade": "somut ad beş duyuyla algılanır (kitap) · soyut ad algılanmaz, düşünülür (sevgi) · topluluk adı tekil biçimiyle birden çok varlığı anlatır (sürü, ordu)"
+   }
+  ],
+  "ipuclari": [
+   "Hangisini gözle görüp eline alamazsın?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Soyut ad beş duyuyla algılanamayan, yalnız zihinde var olan varlıkları adlandırır.",
+    "islem": "soyut: umut, sevgi, korku"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: umut soyut ad · II: dere somut ad · III: ekmek somut ad · IV: çiti somut ad · V: çorba somut ad"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“umut”: duyularla algılanmaz, yalnız düşünülür.",
+    "islem": "I: soyut ad ✓"
+   }
+  ],
+  "puf": "Beş duyunun hiçbiriyle algılanamayan ad soyuttur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0003",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İki tırnaklı adın soyut–somut sırasını belirler.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hangi cümlede tırnaklı adlardan birincisi soyut, ikincisi somut anlamlıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Korku” ve “umut” aynı yürekte yaşar.",
+   "B": "Yamaçtaki “ağaç” “kuşlara” yuva oldu.",
+   "C": "Kerem “kitabı” bitirince “mutluluk” duydu.",
+   "D": "“Sevgi” ve “saygı” komşuluğun temelidir.",
+   "E": "“Özgürlük” isteyen kuş “kafesten” kaçtı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "“Özgürlük” isteyen kuş “kafesten” kaçtı."
+  },
+  "celdiriciler": {
+   "A": "“Korku” da “umut” da algılanmayan, soyut adlardır; ikincisi somut değildir.",
+   "B": "“Ağaç” ve “kuşlar” görülebilen somut adlardır; ilki soyut değildir.",
+   "C": "Sıra ters: “kitap” somut, “mutluluk” soyuttur; istenen soyut–somut sırasıdır.",
+   "D": "“Sevgi” de “saygı” da soyut addır; ikincisi somut değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "İlki soyut, ikincisi somut ad olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Ad (isim)",
+    "ifade": "somut ad beş duyuyla algılanır (kitap) · soyut ad algılanmaz, düşünülür (sevgi) · topluluk adı tekil biçimiyle birden çok varlığı anlatır (sürü, ordu)"
+   }
+  ],
+  "ipuclari": [
+   "Her tırnaklı sözcüğü ayrı ayrı sına; sıraya da dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aranan sıra: önce soyut, sonra somut ad.",
+    "islem": "soyut: algılanmaz · somut: algılanır"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: soyut + soyut · B: somut + somut · C: somut + soyut · D: soyut + soyut · E: soyut + somut"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Özgürlük” soyut, “kafes” somut addır.",
+    "islem": "E: soyut + somut ✓"
+   }
+  ],
+  "puf": "İki sözcüklü sorularda hem türleri hem sırayı denetle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0004",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Sıfatın ad görevinde kullanıldığı sözcüğü bulur.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Eski (I) kütüphanenin kapısında bekleyen yaşlı (II) içeri alındı. Raflarda tozlu (III) kitaplar, renkli (IV) haritalar ve kalın (V) ciltler duruyordu.\nBu parçada numaralanmış sözcüklerden hangisi ad görevinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "“Eski” (sıfat): “eski kütüphane” biçiminde ismi niteler. Aranan sözcük bu değildir.",
+   "C": "“tozlu” (sıfat): “tozlu kitaplar” biçiminde ismi niteler. Aranan sözcük bu değildir.",
+   "D": "“renkli” (sıfat): “renkli haritalar” biçiminde ismi niteler. Aranan sözcük bu değildir.",
+   "E": "“kalın” (sıfat): “kalın ciltler” biçiminde ismi niteler. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Ad görevinde olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Adlaşma",
+    "ifade": "sıfat ismin yerine geçip ad görevinde kullanılırsa ad olur · yaşlı adam (sıfat), yaşlılar geldi (ad)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcüğün ardında nitelediği bir isim yok?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Nitelediği isim düşen sıfat, ismin yerini tutarsa ad görevindedir.",
+    "islem": "sıfat + isim → sıfat; sıfat tek başına öge → ad"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: Eski sıfat · II: yaşlı ad · III: tozlu sıfat · IV: renkli sıfat · V: kalın sıfat"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“yaşlı”: “bekleyen” sözcüğünün nitelediği isimdir; sıfat ismin yerine geçip özne olmuş, adlaşmıştır.",
+    "islem": "II: ad ✓"
+   }
+  ],
+  "puf": "Sıfat tek başına özne ya da nesneyse adlaşmıştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0005",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Tırnaklı sözcüğün cins ad olduğu cümleyi bulur.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Cins ad olarak kullanılan sözcük, hangi cümlede tırnak içine alınmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Elif” bu akşam bize gelecek.",
+   "B": "“Karadeniz” yaz aylarında kalabalıktır.",
+   "C": "Yıllar sonra “Sakarya” kıyısına döndü.",
+   "D": "“Kuş” pencereden içeri girdi.",
+   "E": "“Kerem” sınavı birinci bitirdi."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "“Kuş” pencereden içeri girdi."
+  },
+  "celdiriciler": {
+   "A": "“Elif”, tek bir kişiye verilmiş özel addır.",
+   "B": "“Karadeniz”, tek bir denizin özel adıdır.",
+   "C": "“Sakarya”, bir ırmağın özel adıdır.",
+   "E": "“Kerem”, bir kişi adı olduğundan özel addır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Cins ad olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Özel ve cins ad",
+    "ifade": "özel ad tek varlığa verilir (Ankara, Elif) · cins ad aynı türün tümüne verilir (şehir, kuş)"
+   }
+  ],
+  "ipuclari": [
+   "Tek bir varlığa mı, yoksa bir türün tümüne mi verilmiş ad?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aynı türdeki varlıkların hepsine verilen ad cins addır.",
+    "islem": "özel: tek varlık · cins: tür"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: özel ad · B: özel ad · C: özel ad · D: cins ad · E: özel ad"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Kuş”, aynı türün tümüne verilen ortak bir addır.",
+    "islem": "D: cins ad ✓"
+   }
+  ],
+  "puf": "Büyük harfle başlayan kişi, yer adları özel; türü anlatan ortak adlar cinstir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0006",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ad: somut, soyut, topluluk, özel, cins",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçadaki topluluk adını belirler.",
+  "tipId": "dst-ad",
+  "tip": "Ad (somut, soyut, topluluk, özel, cins)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Cumartesi sabahı otobüs (I) kalkarken öğrenci kafilesi (II) şarkılar söylüyordu. Yamaçlara (III) varınca Uludağ’ın (IV) karlı zirvesi göründü; herkes büyük bir sevinç (V) duydu.\nBu parçada numaralanmış sözcüklerden hangisi topluluk adıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "“otobüs” (somut cins ad): tek bir taşıtı anlatır. Aranan sözcük bu değildir.",
+   "C": "“Yamaçlara” (somut cins ad): bir yer şeklini anlatan ortak ad; çoğul ek almıştır. Aranan sözcük bu değildir.",
+   "D": "“Uludağ’ın” (özel ad): tek bir dağın adıdır. Aranan sözcük bu değildir.",
+   "E": "“sevinç” (soyut ad): algılanmayan bir duygudur. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Topluluk adı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ad (isim)",
+    "ifade": "somut ad beş duyuyla algılanır (kitap) · soyut ad algılanmaz, düşünülür (sevgi) · topluluk adı tekil biçimiyle birden çok varlığı anlatır (sürü, ordu)"
+   }
+  ],
+  "ipuclari": [
+   "Tekil olduğu hâlde birçok kişiyi anlatan sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Topluluk adı tekil biçimiyle birden çok varlığı anlatır.",
+    "islem": "topluluk adı: kafile, sürü, ordu"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: otobüs somut cins ad · II: kafile topluluk adı · III: Yamaçlara somut cins ad · IV: Uludağ’ın özel ad · V: sevinç soyut ad"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“kafile”: tekil biçimiyle birçok kişiyi bir arada anlatır.",
+    "islem": "II: topluluk adı ✓"
+   }
+  ],
+  "puf": "Çoğul eki almadan “birçok” anlamı veren ad topluluk adıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-01 (Ad: somut, soyut, topluluk, özel, cins) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0007",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Belgisiz sıfatı diğer sıfat türlerinden ayırır.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Varlıkların sayısını belirsiz bırakan sıfat, hangi cümlede tırnak içindedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Parkta “bazı” çocuklar oynuyordu.",
+   "B": "Raftan “bu” kitabı dün aldım.",
+   "C": "Elif “yeşil” bir kazak giymişti.",
+   "D": "Sen “hangi” yolu seçtin?",
+   "E": "Sınıfa “dört” yeni öğrenci geldi."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Parkta “bazı” çocuklar oynuyordu."
+  },
+  "celdiriciler": {
+   "B": "“Bu”, “kitap” ismini işaret ederek belirtir; işaret sıfatıdır.",
+   "C": "“Yeşil”, “kazak” ismini renk bakımından niteler; niteleme sıfatıdır.",
+   "D": "“Hangi”, “yol” ismini soruyla belirtir; soru sıfatıdır.",
+   "E": "“Dört”, “öğrenci” ismini sayısıyla belirtir; sayı sıfatıdır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Belgisiz sıfat olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   }
+  ],
+  "ipuclari": [
+   "Sayısı ya da miktarı belirsiz bırakan sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Belgisiz sıfat varlıkların sayısını belirsiz bırakarak belirtir (bazı, birkaç, her).",
+    "islem": "belgisiz sıfat: bazı, birkaç, her, bütün"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: belgisiz sıfat · B: işaret sıfatı · C: niteleme sıfatı · D: soru sıfatı · E: sayı sıfatı"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Bazı”, “çocuklar” ismini belirsiz bir sayıyla belirtir; belgisiz sıfattır.",
+    "islem": "A: belgisiz sıfat ✓"
+   }
+  ],
+  "puf": "Belirsizlik bildiren, isimden önce gelen sözcük belgisiz sıfattır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0008",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Niteleme sıfatını belirtme sıfatlarından ayırır.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İsme bir özellik katan (niteleme) sıfat, tırnak içinde hangisinde verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Şu” evde kimse oturmuyor.",
+   "B": "Sınıfa “iki” öğrenci katıldı.",
+   "C": "“Kaç” kişi geldi?",
+   "D": "“Soğuk” bir rüzgâr esiyordu.",
+   "E": "Sınavda “birkaç” soru zordu."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "“Soğuk” bir rüzgâr esiyordu."
+  },
+  "celdiriciler": {
+   "A": "“Şu”, “ev” ismini işaret eder; belirtme sıfatıdır, nitelik bildirmez.",
+   "B": "“İki”, sayı bildirir; belirtme sıfatıdır.",
+   "C": "“Kaç”, “kişi” ismini soruyla belirtir; belirtme sıfatıdır.",
+   "E": "“Birkaç”, soruların sayısını belirsiz bırakır; belirtme sıfatıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Niteleme sıfatı olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   }
+  ],
+  "ipuclari": [
+   "İsme sayı ya da yer göstermeyip özellik katan sözcüğü seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Niteleme sıfatı ismin renk, biçim, durum gibi özelliğini bildirir.",
+    "islem": "niteleme: özellik · belirtme: işaret, sayı, belgisiz, soru"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: işaret sıfatı · B: sayı sıfatı · C: soru sıfatı · D: niteleme sıfatı · E: belgisiz sıfat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Soğuk”, “rüzgâr” ismine bir nitelik katar; niteleme sıfatıdır.",
+    "islem": "D: niteleme sıfatı ✓"
+   }
+  ],
+  "puf": "Özellik bildiriyorsa niteleme, sayı/işaret/belirsizlik/soru bildiriyorsa belirtme sıfatıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0009",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Fiilden türeyen sıfat-fiilin sıfat görevini bulur.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Fiil kökünden türediği hâlde bir ismi niteleyen sözcük, hangi cümlede tırnak içindedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kitabı “okuyarak” öğrendi.",
+   "B": "“Okumak” insanı geliştirir.",
+   "C": "“Koşan” çocuk yorulup durdu.",
+   "D": "“Yazar” yeni romanını tanıttı.",
+   "E": "“Çalışanlar” erkenden işe başladı."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "“Koşan” çocuk yorulup durdu."
+  },
+  "celdiriciler": {
+   "A": "“Okuyarak”, “öğrendi” fiilini niteler; zarf-fiildir, zarf görevindedir.",
+   "B": "“Okumak”, cümlenin öznesi olan isim-fiildir; ad görevindedir.",
+   "D": "“Yazar”, fiil kökünden türemiş olsa da kalıcı ad olmuştur; fiilimsi değildir, ismi de niteleyen bir sözcük değildir.",
+   "E": "“Çalışanlar”, sıfat-fiilin adlaşmış hâlidir; cümlenin öznesi olarak ad görevindedir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Sıfat görevinde olan fiilden türemiş sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat-fiil",
+    "ifade": "-an, -ası, -mış, -ecek gibi ekler fiilden sıfat yapar; ismi niteliyorsa sıfat görevindedir · koşan çocuk"
+   }
+  ],
+  "ipuclari": [
+   "İsmin önünde duran, o ismi niteleyen sözcüğü bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Fiilimsinin görevi, cümlede ne işe yaradığıyla belirlenir.",
+    "islem": "sıfat-fiil + isim → sıfat"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: zarf görevli zarf-fiil · B: ad görevli isim-fiil · C: sıfat görevli sıfat-fiil · D: kalıcı ad · E: ad görevli sıfat-fiil"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Koşan”, “çocuk” ismini niteler; sıfat-fiildir, sıfat görevindedir.",
+    "islem": "C: sıfat görevli sıfat-fiil ✓"
+   }
+  ],
+  "puf": "Fiilimsi ismi niteliyorsa sıfat, fiili niteliyorsa zarf, özne ya da nesneyse ad görevindedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0010",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada sıfat olmayan sözcüğü bulur.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Şehir müzesinde büyük (I) bir sergi açıldı. İki (II) ressamın bazı (III) eserleri, ilginç (IV) bir heykel ve bir seramik grubu salonda yer aldı. Sergiyi gezenler (V) tabloları uzun uzun inceledi.\nBu parçada numaralanmış sözcüklerden hangisi sıfat değildir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "V"
+  },
+  "celdiriciler": {
+   "A": "“büyük” (niteleme sıfatı): “büyük sergi” biçiminde ismi niteler. Aranan sözcük bu değildir.",
+   "B": "“İki” (sayı sıfatı): “iki ressam” biçiminde ismi belirtir. Aranan sözcük bu değildir.",
+   "C": "“bazı” (belgisiz sıfat): “bazı eserler” biçiminde ismi belirtir. Aranan sözcük bu değildir.",
+   "D": "“ilginç” (niteleme sıfatı): “ilginç heykel” biçiminde ismi niteler. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Sıfat olmayan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   },
+   {
+    "ad": "Adlaşma",
+    "ifade": "sıfat ismin yerine geçip ad görevinde kullanılırsa ad olur · yaşlı adam (sıfat), yaşlılar geldi (ad)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcük bir ismi nitelemiyor, kendisi bir öge?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Sıfat bir ismi niteler ya da belirtir; tek başına özne olan sözcük ad görevindedir.",
+    "islem": "sıfat: isim niteler · tek başına öge: ad"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: büyük niteleme sıfatı · II: İki sayı sıfatı · III: bazı belgisiz sıfat · IV: ilginç niteleme sıfatı · V: gezenler ad"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“gezenler”: “gezen” sıfat-fiili ismin yerine geçip özne olmuştur; adlaşmıştır.",
+    "islem": "V: ad ✓"
+   }
+  ],
+  "puf": "İsmi nitelemeyen, kendisi özne ya da nesne olan sözcük sıfat değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0011",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İki tırnaklı sözcüğün zarf–sıfat sırasını belirler.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İlki fiili, ikincisi ismi niteleyen tırnaklı sözcükler hangi cümlededir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Kısa” bir yolu “hızlı” yürüdük.",
+   "B": "Rüzgâr “sert” esti, “kuru” yapraklar savruldu.",
+   "C": "Çocuk “erken” kalkıp “iyi” uyudu.",
+   "D": "“Sıcak” çorbayı “tatlı” bir gülümsemeyle sundu.",
+   "E": "“Yaşlı” kadın “torununa” baktı."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Rüzgâr “sert” esti, “kuru” yapraklar savruldu."
+  },
+  "celdiriciler": {
+   "A": "“Kısa”, “yol” ismini niteler (sıfat); “hızlı”, “yürüdük” fiilini niteler (zarf). Sıra ters.",
+   "C": "“Erken” ve “iyi” fiilleri niteler; ikisi de zarftır.",
+   "D": "“Sıcak” çorbayı, “tatlı” gülümsemeyi niteler; ikisi de sıfattır.",
+   "E": "“Yaşlı” sıfat; “torun” ise ad soylu bir sözcüktür, zarf değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İlki zarf, ikincisi sıfat olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Önce fiili, sonra ismi niteleyen sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aranan sıra: fiili niteleyen (zarf), sonra ismi niteleyen (sıfat).",
+    "islem": "zarf → fiil · sıfat → isim"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat + zarf · B: zarf + sıfat · C: zarf + zarf · D: sıfat + sıfat · E: sıfat + ad"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Sert”, “esti” fiilini niteler (zarf); “kuru”, “yapraklar” ismini niteler (sıfat).",
+    "islem": "B: zarf + sıfat ✓"
+   }
+  ],
+  "puf": "Her sözcüğün neyi nitelediğine bak, sonra sıraya bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0012",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Sıfat: niteleme ve belirtme",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada sayı sıfatını belirler.",
+  "tipId": "dst-sifat",
+  "tip": "Sıfat (niteleme, belirtme, sıfat-fiil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Yüksek (I) dağların eteğinde bazı (II) gruplar kamp kurmuştu. Akşam üç (III) çadırın önünde ateş yakıldı; bu (IV) sıcaklık herkese iyi geldi. Sabaha kadar her (V) çadırdan şarkı sesi yükseldi.\nBu parçada numaralanmış sözcüklerden hangisi sayı sıfatıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "“Yüksek” (niteleme sıfatı): “yüksek dağlar” biçiminde nitelik bildirir. Aranan sözcük bu değildir.",
+   "B": "“bazı” (belgisiz sıfat): “bazı gruplar” biçiminde belirsizlik bildirir. Aranan sözcük bu değildir.",
+   "D": "“bu” (işaret sıfatı): “bu sıcaklık” biçiminde işaret bildirir. Aranan sözcük bu değildir.",
+   "E": "“her” (belgisiz sıfat): “her çadır” biçiminde belirsizlik bildirir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Sayı sıfatı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   }
+  ],
+  "ipuclari": [
+   "İsmin kaç tane olduğunu belirten sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Sayı sıfatı varlıkların sayısını kesin olarak belirtir (üç çadır).",
+    "islem": "sayı sıfatı: iki, üç, ilk, ikişer"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: Yüksek niteleme sıfatı · II: bazı belgisiz sıfat · III: üç sayı sıfatı · IV: bu işaret sıfatı · V: her belgisiz sıfat"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“üç”: “üç çadır” biçiminde sayı bildirir.",
+    "islem": "III: sayı sıfatı ✓"
+   }
+  ],
+  "puf": "Sayıyı kesin bildiren, isimden önce gelen sözcük sayı sıfatıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-02 (Sıfat: niteleme ve belirtme) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0013",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Dönüşlülük zamirini diğer zamir türlerinden ayırır.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Eylemin yapana döndüğünü gösteren zamir, hangi cümlede tırnak içine alınmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Sen” bu akşam bize mutlaka gel.",
+   "B": "“Bunu” sana geçen hafta ben aldım.",
+   "C": "“Herkes” erkenden salona girdi.",
+   "D": "“Kim” bu saatte kapıyı çaldı?",
+   "E": "Elif “kendini” aynada izledi."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Elif “kendini” aynada izledi."
+  },
+  "celdiriciler": {
+   "A": "“Sen”, ikinci kişinin yerini tutan kişi zamiridir.",
+   "B": "“Bunu”, yakındaki bir varlığı gösterip adının yerini tutar; işaret zamiridir.",
+   "C": "“Herkes”, kimlikleri belirsiz bir topluluğun yerini tutar; belgisiz zamirdir.",
+   "D": "“Kim”, kişiyi sormak için kullanılan soru zamiridir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Dönüşlülük zamiri olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "İş yapanın kendisine döndüğü sözcüğü bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Dönüşlülük zamiri “kendi” sözcüğüdür; eylemin yapanın kendisine döndüğünü gösterir.",
+    "islem": "kendi (+ ek) → dönüşlülük zamiri"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: kişi zamiri · B: işaret zamiri · C: belgisiz zamir · D: soru zamiri · E: dönüşlülük zamiri"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Kendini”, eylemi yapanın kendisine döndüğünü gösteren dönüşlülük zamiridir.",
+    "islem": "E: dönüşlülük zamiri ✓"
+   }
+  ],
+  "puf": "“Kendi” ve ekli biçimleri dönüşlülük zamiridir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0014",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada zamir olmayan sözcüğü bulur.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bu (I) romanı bana Elif verdi; ben (II) de hemen okumaya başladım. Sayfaları çevirirken kendimi (III) hikâyenin içinde buldum. Kimse (IV) rahatsız etmesin diye kapıyı kapattım. Sonunda bunu (V) herkese önerdim.\nBu parçada numaralanmış sözcüklerden hangisi zamir değildir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "“ben” (kişi zamiri): birinci kişinin yerini tutar. Aranan sözcük bu değildir.",
+   "C": "“kendimi” (dönüşlülük zamiri): eylemin yapana döndüğünü gösterir. Aranan sözcük bu değildir.",
+   "D": "“Kimse” (belgisiz zamir): belirsiz bir kişinin yerini tutar. Aranan sözcük bu değildir.",
+   "E": "“bunu” (işaret zamiri): yakın bir varlığın yerini tutar. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Zamir olmayan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "Yanında nitelediği bir isim bulunan sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zamir ismin yerini tutar; ismi niteleyen sözcük sıfattır.",
+    "islem": "yerini tutuyor → zamir · niteliyor → sıfat"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: Bu işaret sıfatı · II: ben kişi zamiri · III: kendimi dönüşlülük zamiri · IV: Kimse belgisiz zamir · V: bunu işaret zamiri"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“Bu”: “bu roman” biçiminde isim niteler; ismin yerini tutmaz.",
+    "islem": "I: işaret sıfatı ✓"
+   }
+  ],
+  "puf": "Aynı biçimdeki sözcük isimle birlikteyse sıfat, tek başınaysa zamirdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0015",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İlgi zamirini -ki’li sıfatlardan ve öteki zamirlerden ayırır.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Tırnaklı sözcüklerden hangisi, bir ismin yerini tutan -ki’li bir zamirdir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Bugünkü” toplantı kısa sürdü.",
+   "B": "“Hiçbiri” yarın gelmeyecek.",
+   "C": "Haberleri “dünkü” gazeteden okudum.",
+   "D": "Defterim eksik, “seninki” tam.",
+   "E": "“Duvardaki” resim çok eskiydi."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Defterim eksik, “seninki” tam."
+  },
+  "celdiriciler": {
+   "A": "“Bugünkü”, “toplantı” ismini niteler; sıfattır, ismin yerini tutmaz.",
+   "B": "“Hiçbiri”, ismin yerini tutar ama -ki’li değildir; belgisiz zamirdir.",
+   "C": "“Dünkü”, “gazete” ismini niteler; sıfattır.",
+   "E": "“Duvardaki”, “resim” ismini niteler; sıfattır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlgi zamiri olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi -ki’li sözcüğün yanında nitelediği isim yok?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "İlgi zamiri, ismin yerini tutan -ki’li sözcüktür (seninki); isim niteleyen -ki’li sözcük sıfattır.",
+    "islem": "-ki + isim → sıfat · -ki tek başına → zamir"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat · B: belgisiz zamir · C: sıfat · D: ilgi zamiri · E: sıfat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Seninki”, “senin defterin” sözünün yerini tutar; ilgi zamiridir.",
+    "islem": "D: ilgi zamiri ✓"
+   }
+  ],
+  "puf": "-ki’li sözcüğün ardındaki isme bak: varsa sıfat, yoksa zamir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0016",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İki belgisiz sözcüğün zamir–sıfat sırasını belirler.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Tırnaktaki iki sözcükten birincisi ismin yerini tutuyor, ikincisi ismi niteliyorsa aranan cümle hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Kimi” çocuklar sustu, “kimi” oynadı.",
+   "B": "“Kimi” geldi, “bazı” konuklar kaldı.",
+   "C": "“Birkaç” kişi geldi, “bazı” konuklar da gitti.",
+   "D": "“Hepsi” geldi, “kimisi” gitti.",
+   "E": "“Birkaç” arkadaş geldi, “hepsi” sevindi."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "“Kimi” geldi, “bazı” konuklar kaldı."
+  },
+  "celdiriciler": {
+   "A": "İlk “kimi”, “çocuklar” ismini niteler (sıfat); ikincisi ismin yerini tutar (zamir). Sıra ters.",
+   "C": "İkisi de bir isim belirtir: birkaç kişi, bazı konuklar. İkisi de sıfattır.",
+   "D": "İkisi de ismin yerini tutar. İkisi de zamirdir.",
+   "E": "“Birkaç”, “arkadaş” ismini niteler (sıfat); “hepsi”, ismin yerini tutar (zamir). Sıra ters."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İlki zamir, ikincisi sıfat olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün yanında bir isim olup olmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aranan sıra: önce ismin yerini tutan (zamir), sonra ismi niteleyen (sıfat).",
+    "islem": "yerini tutar → zamir · isim niteler → sıfat"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat + zamir · B: zamir + sıfat · C: sıfat + sıfat · D: zamir + zamir · E: sıfat + zamir"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "İlk “kimi”, ismin yerini tutar (belgisiz zamir); “bazı”, “konuklar” ismini niteler (sıfat).",
+    "islem": "B: zamir + sıfat ✓"
+   }
+  ],
+  "puf": "Çift sorularında her sözcüğü ayrı çöz, sonra sıraya bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0017",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada belgisiz zamiri belirler.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Biz (I) kulübe varınca kendimizi (II) salona attık. Masanın başında biri (III) oturmuş gazete okuyordu. Ona selam verdik; o da bize şunu (IV) sordu: “Bugün ne (V) yaptınız?”\nBu parçada numaralanmış sözcüklerden hangisi belgisiz zamirdir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "“Biz” (kişi zamiri): birinci çoğul kişinin yerini tutar. Aranan sözcük bu değildir.",
+   "B": "“kendimizi” (dönüşlülük zamiri): eylemin yapana döndüğünü gösterir. Aranan sözcük bu değildir.",
+   "D": "“şunu” (işaret zamiri): gösterilen bir şeyin yerini tutar. Aranan sözcük bu değildir.",
+   "E": "“ne” (soru zamiri): bir şeyi sormak için kullanılır. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Belgisiz zamir olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "Kim olduğu belli olmayan bir kişiyi anlatan sözcük hangisi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Belgisiz zamir, belirsiz bir kişi ya da varlığın yerini tutar (biri, kimse, hepsi).",
+    "islem": "belgisiz zamir: biri, kimse, hepsi, herkes"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: Biz kişi zamiri · II: kendimizi dönüşlülük zamiri · III: biri belgisiz zamir · IV: şunu işaret zamiri · V: ne soru zamiri"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“biri”: kim olduğu belli olmayan bir kişinin yerini tutar.",
+    "islem": "III: belgisiz zamir ✓"
+   }
+  ],
+  "puf": "Kimliği belli olmayan kişi ya da şeyin yerini tutan sözcük belgisiz zamirdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0018",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Soru zamirini soru sıfatı ve soru zarfından ayırır.",
+  "tipId": "dst-zamir",
+  "tip": "Zamir (adıl)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Resepsiyondaki görevli yeni gelen misafirlere şunları sordu: “Rezervasyonu kim (I) yaptı? Hangi (II) odayı istiyorsunuz? Kaç (III) kişi kalacaksınız? Yolculuk nasıl (IV) geçti? Niçin (V) geciktiniz?”\nBu parçada numaralanmış sözcüklerden hangisi soru zamiridir?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "“Hangi” (soru sıfatı): “hangi oda” biçiminde ismi belirtir. Aranan sözcük bu değildir.",
+   "C": "“kaç” (soru sıfatı): “kaç kişi” biçiminde ismi belirtir. Aranan sözcük bu değildir.",
+   "D": "“nasıl” (soru zarfı): “geçti” fiilini niteler. Aranan sözcük bu değildir.",
+   "E": "“Niçin” (soru zarfı): “geciktiniz” fiilini niteler. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Soru zamiri olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Hangisi yanında isim almadan kişinin yerini tutuyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Soru sözcüğü isim yerini tutarsa zamir, isim niteliyorsa sıfat, fiil niteliyorsa zarftır.",
+    "islem": "yerini tutar → zamir · isim niteler → sıfat · fiil niteler → zarf"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: kim soru zamiri · II: Hangi soru sıfatı · III: kaç soru sıfatı · IV: nasıl soru zarfı · V: Niçin soru zarfı"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“kim”: rezervasyonu yapan kişinin yerini tutarak soru sorar.",
+    "islem": "I: soru zamiri ✓"
+   }
+  ],
+  "puf": "Soru sözcüğünün neyle ilişkili olduğuna bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-03 (Zamir: kişi, dönüşlülük, işaret, belgisiz, soru, ilgi) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0019",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zarf: durum, zaman, miktar, yer-yön, soru",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Zaman zarfını diğer zarf türlerinden ayırır.",
+  "tipId": "dst-zarf",
+  "tip": "Zarf",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Eylemin zamanını bildiren zarf, hangi cümlede tırnak içinde verilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Misafirler “içeri” girdi.",
+   "B": "Sınıf “oldukça” sessizdi.",
+   "C": "Kerem “güzel” konuştu.",
+   "D": "Kitabı “yarın” getireceğim.",
+   "E": "“Niçin” aradın?"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Kitabı “yarın” getireceğim."
+  },
+  "celdiriciler": {
+   "A": "“İçeri”, “girdi” fiilinin yönünü bildirir; yer-yön zarfıdır.",
+   "B": "“Oldukça”, “sessiz” sıfatının derecesini bildirir; miktar zarfıdır.",
+   "C": "“Güzel”, “konuştu” fiilinin nasıl yapıldığını bildirir; durum zarfıdır.",
+   "E": "“Niçin”, “aradın” fiilinin nedenini sorar; soru zarfıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Zaman zarfı olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Eylemin ne zaman olduğunu bildiren sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zaman zarfı eylemin ne zaman olduğunu bildirir (yarın, şimdi, dün).",
+    "islem": "zaman zarfı: ne zaman?"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: yer-yön zarfı · B: miktar zarfı · C: durum zarfı · D: zaman zarfı · E: soru zarfı"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Yarın”, “getireceğim” fiilinin zamanını bildirir; zaman zarfıdır.",
+    "islem": "D: zaman zarfı ✓"
+   }
+  ],
+  "puf": "Fiile “ne zaman?” diye sorunca cevap veren sözcük zaman zarfıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-04 (Zarf: durum, zaman, miktar, yer-yön, soru) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0020",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zarf: durum, zaman, miktar, yer-yön, soru",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Başka bir zarfı niteleyen zarfı bulur.",
+  "tipId": "dst-zarf",
+  "tip": "Zarf",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bir zarfı niteleyen zarf, hangi cümlede tırnak içindedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kış bu yıl “erken” bastırdı.",
+   "B": "Evde “çok” kitap ve defter var.",
+   "C": "Bu konu bugün “çok” zordu.",
+   "D": "Bu kitabı hepimiz “çok” sevdik.",
+   "E": "Kerem yarışı “pek” hızlı bitirdi."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Kerem yarışı “pek” hızlı bitirdi."
+  },
+  "celdiriciler": {
+   "A": "“Erken”, “bastırdı” fiilini niteler; zarfı değil fiili niteleyen zarftır.",
+   "B": "“Çok”, “kitap” ismini belirtir; sıfattır, zarf değildir.",
+   "C": "“Çok”, “zor” sıfatının derecesini bildirir; sıfatı niteleyen zarftır, zarfı değil.",
+   "D": "“Çok”, “sevdim” fiilini niteler; fiili niteleyen zarftır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Bir zarfı niteleyen zarfın olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Tırnaklı sözcüğün nitelediği sözcüğün de fiili niteleyip nitelemediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zarf yalnız fiili değil, sıfatı ve başka bir zarfı da niteleyebilir.",
+    "islem": "pek hızlı bitirdi: zarf → zarf"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: fiili niteleyen zarf · B: belgisiz sıfat · C: sıfatı niteleyen zarf · D: fiili niteleyen zarf · E: zarfı niteleyen zarf"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Pek”, “hızlı” durum zarfının derecesini bildirir; zarfı niteleyen zarftır.",
+    "islem": "E: zarfı niteleyen zarf ✓"
+   }
+  ],
+  "puf": "Tırnaklı sözcüğün nitelediği sözcüğün türüne bak: o da zarfsa aranan cümledir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-04 (Zarf: durum, zaman, miktar, yer-yön, soru) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0021",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zarf: durum, zaman, miktar, yer-yön, soru",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada yer-yön zarfını belirler.",
+  "tipId": "dst-zarf",
+  "tip": "Zarf",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Gezi otobüsünden inen çocuklar hemen (I) okula yöneldi. Kapıdan içeri (II) girip sessizce (III) sıraya dizildiler. Oldukça (IV) yorgundular, ama çantalarını dikkatlice (V) taşıdılar.\nBu parçada numaralanmış sözcüklerden hangisi yer-yön zarfıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "“hemen” (zaman zarfı): “yöneldi” eyleminin zamanını bildirir. Aranan sözcük bu değildir.",
+   "C": "“sessizce” (durum zarfı): “dizildiler” eyleminin nasıl yapıldığını bildirir. Aranan sözcük bu değildir.",
+   "D": "“Oldukça” (miktar zarfı): “yorgun” sıfatının derecesini bildirir. Aranan sözcük bu değildir.",
+   "E": "“dikkatlice” (durum zarfı): “taşıdılar” eyleminin nasıl yapıldığını bildirir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yer-yön zarfı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Eylemin hangi yöne ya da yere doğru olduğunu bildiren sözcük hangisi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Yer-yön zarfı eylemin yönünü bildirir (içeri, dışarı, yukarı, ileri).",
+    "islem": "yer-yön zarfı: nereye?"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: hemen zaman zarfı · II: içeri yer-yön zarfı · III: sessizce durum zarfı · IV: Oldukça miktar zarfı · V: dikkatlice durum zarfı"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“içeri”: “girip” eyleminin yönünü bildirir.",
+    "islem": "II: yer-yön zarfı ✓"
+   }
+  ],
+  "puf": "Fiile “nereye?” diye sorunca cevap veren yönlü sözcük yer-yön zarfıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-04 (Zarf: durum, zaman, miktar, yer-yön, soru) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0022",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zarf: durum, zaman, miktar, yer-yön, soru",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Aynı sözcüğün sıfat ve zarf kullanımını parçada ayırır.",
+  "tipId": "dst-zarf",
+  "tip": "Zarf",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Balıkçılar sabah erken (I) kalktı. Rüzgâr hızlı (II) esiyordu; bu yüzden hızlı (III) bir tekne seçtiler. Tekne yavaş (IV) ilerledi, ağlar aşağı (V) sarkıtıldı. Kıyıdaki çocuklar onları uzaktan izledi.\nBu parçada numaralanmış sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "“erken” (zaman zarfı): “kalktı” eyleminin zamanını bildirir. Aranan sözcük bu değildir.",
+   "B": "“hızlı” (durum zarfı): “esiyordu” eyleminin nasıl olduğunu bildirir. Aranan sözcük bu değildir.",
+   "D": "“yavaş” (durum zarfı): “ilerledi” eylemini niteler. Aranan sözcük bu değildir.",
+   "E": "“aşağı” (yer-yön zarfı): “sarkıtıldı” eyleminin yönünü bildirir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün neyi nitelediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Dört zarf, bir sıfat vardır; farklı olan isim niteleyendir.",
+    "islem": "sıfat → isim · zarf → fiil/sıfat"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: erken zaman zarfı · II: hızlı durum zarfı · III: hızlı niteleme sıfatı · IV: yavaş durum zarfı · V: aşağı yer-yön zarfı"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“hızlı”: “tekne” ismini niteler.",
+    "islem": "III: niteleme sıfatı ✓"
+   }
+  ],
+  "puf": "Aynı biçimli sözcüğün türünü, nitelediği sözcük belirler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-04 (Zarf: durum, zaman, miktar, yer-yön, soru) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0023",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Zarf: durum, zaman, miktar, yer-yön, soru",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Soru zarfını soru zamiri ve sıfatından ayırır.",
+  "tipId": "dst-zarf",
+  "tip": "Zarf",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hangi cümlede soru sözcüğü, zarf görevinde kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Niçin” erken ayrıldın?",
+   "B": "“Kim” erken ayrıldı?",
+   "C": "“Hangi” yoldan gideceğiz?",
+   "D": "Sınıfta “kaç” öğrenci var?",
+   "E": "“Ne” istersin?"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "“Niçin” erken ayrıldın?"
+  },
+  "celdiriciler": {
+   "B": "“Kim”, kişinin yerini tutar; soru zamiridir, zarf değildir.",
+   "C": "“Hangi”, “yol” ismini belirtir; soru sıfatıdır.",
+   "D": "“Kaç”, “öğrenci” ismini belirtir; soru sıfatıdır.",
+   "E": "“Ne”, bir şeyin yerini tutar; soru zamiridir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Soru zarfı olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   },
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi soru sözcüğü fiilin nedenini ya da biçimini sorar?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Soru zarfı fiilin nasıl, niçin, ne zaman yapıldığını sorar.",
+    "islem": "soru zarfı: nasıl, niçin, ne zaman"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: soru zarfı · B: soru zamiri · C: soru sıfatı · D: soru sıfatı · E: soru zamiri"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Niçin”, “ayrıldın” fiilinin nedenini sorar; soru zarfıdır.",
+    "islem": "A: soru zarfı ✓"
+   }
+  ],
+  "puf": "Soru sözcüğü fiili niteliyorsa soru zarfıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-04 (Zarf: durum, zaman, miktar, yer-yön, soru) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0024",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Edatı diğer sözcük türlerinden ayırır.",
+  "tipId": "dst-edat",
+  "tip": "Edat",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdakilerden hangisinde edat tırnak içine alınmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çocuk “hızlı” koştu.",
+   "B": "Ders çalıştım, “fakat” sınavı geçemedim.",
+   "C": "“Güzel” bir şarkı dinledik.",
+   "D": "“Kendini” çok zorladı.",
+   "E": "Kar “gibi” beyaz bir kazak aldı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Kar “gibi” beyaz bir kazak aldı."
+  },
+  "celdiriciler": {
+   "A": "“Hızlı”, “koştu” fiilini niteler; zarftır, edat değildir.",
+   "B": "“Fakat”, iki cümleyi karşıtlıkla bağlar; bağlaçtır.",
+   "C": "“Güzel”, “şarkı” ismini niteler; sıfattır.",
+   "D": "“Kendini”, ismin yerini tutan dönüşlülük zamiridir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Edat olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcük kendinden önceki sözcükle birlikte anlam kazanıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Edat tek başına anlamı olmayan, bir sözcükle birlikte görev yapan sözcüktür.",
+    "islem": "edat: gibi, için, göre, rağmen"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: zarf · B: bağlaç · C: sıfat · D: zamir · E: edat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Gibi”, “kar” sözcüğüyle birlikte benzetme bildirir; edattır.",
+    "islem": "E: edat ✓"
+   }
+  ],
+  "puf": "Benzetme (gibi), amaç/neden (için), ölçü (göre) bildiren yardımcı sözcükler edattır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-05 (Edat) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0025",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Edatları anlam ilişkilerine göre ayırır.",
+  "tipId": "dst-edat",
+  "tip": "Edat",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hangi cümlede tırnaklı edat, karşıtlık (ödün) anlamı katar?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu hediyeyi annem “için” aldım.",
+   "B": "Hava durumuna “göre” yarın yağmur yağacak.",
+   "C": "Kar “gibi” beyaz bir örtü serildi.",
+   "D": "Yağmura “rağmen” maça gittik.",
+   "E": "Hastalığından “dolayı” derse gelemedi."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Yağmura “rağmen” maça gittik."
+  },
+  "celdiriciler": {
+   "A": "“İçin”, amaç bildirir; karşıtlık değildir.",
+   "B": "“Göre”, ölçüt bildirir; karşıtlık değildir.",
+   "C": "“Gibi”, benzetme bildirir; karşıtlık değildir.",
+   "E": "“Dolayı”, neden bildirir; karşıtlık değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Karşıtlık bildiren edatın olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi edat “engele karşın” anlamı veriyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "“-e rağmen”, “-e karşın” edatları engele karşın eylemin yapıldığını bildirir.",
+    "islem": "rağmen/karşın: karşıtlık · için: amaç/neden · göre: ölçü"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: amaç bildiren edat · B: ölçü bildiren edat · C: benzetme bildiren edat · D: karşıtlık bildiren edat · E: neden bildiren edat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Rağmen”, “yağmur” engeline karşın eylemin gerçekleştiğini bildirir; karşıtlık anlamlıdır.",
+    "islem": "D: karşıtlık bildiren edat ✓"
+   }
+  ],
+  "puf": "Edatları anlam ilişkisine göre ayır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-05 (Edat) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0026",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada edatı belirler.",
+  "tipId": "dst-edat",
+  "tip": "Edat",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Elif sepeti (I) koluna asıp bir kuş gibi (II) hafif adımlarla pazara yürüdü. Kalabalığı görünce yavaşladı, ama (III) vazgeçmedi. Sonunda aradığı kirazları (IV) buldu ve bunu (V) annesine müjdeledi.\nBu parçada numaralanmış sözcüklerden hangisi edattır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "“sepeti” (ad): somut bir cins addır. Aranan sözcük bu değildir.",
+   "C": "“ama” (bağlaç): iki cümleyi karşıtlıkla bağlar. Aranan sözcük bu değildir.",
+   "D": "“kirazları” (ad): somut bir cins addır. Aranan sözcük bu değildir.",
+   "E": "“bunu” (zamir): işaret zamiridir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Edat olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "Benzetme bildiren yardımcı sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Edat bağlandığı sözcükle birlikte anlam ilişkisi kurar.",
+    "islem": "gibi + ad → edat öbeği"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: sepeti ad · II: gibi edat · III: ama bağlaç · IV: kirazları ad · V: bunu zamir"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“gibi”: “kuş” sözcüğüyle birlikte benzetme bildirir.",
+    "islem": "II: edat ✓"
+   }
+  ],
+  "puf": "Benzetme bildiren “gibi” edattır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-05 (Edat) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0027",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Edatı aynı cümlede başka türlerden ayırır.",
+  "tipId": "dst-edat",
+  "tip": "Edat",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hangi cümlede tırnaklı sözcük edat görevindedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kar yağdığı “için” bütün yollar kapandı.",
+   "B": "Dün gece “çok” yağmur yağdı, yollar ıslandı.",
+   "C": "Annem akşam yemeğine “hemen” geldi.",
+   "D": "Yarın akşam “bana” uğrar mısın, Kerem?",
+   "E": "Masada çay “ve” kahve hazırlanmıştı herkes için."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Kar yağdığı “için” bütün yollar kapandı."
+  },
+  "celdiriciler": {
+   "B": "“Çok”, “yağmur” ismini belirtir; sıfattır.",
+   "C": "“Hemen”, “geldi” fiilini niteler; zarftır.",
+   "D": "“Bana”, birinci kişinin yerini tutar; zamirdir.",
+   "E": "“Ve”, iki ismi bağlar; bağlaçtır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Edat görevinde olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcük bir sözcükle birlikte anlam ilişkisi kuruyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Edat, bağlandığı sözcükle birlikte neden, amaç, benzetme gibi ilişkiler kurar; tek başına anlamı yoktur.",
+    "islem": "için/gibi/göre → edat"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: edat · B: belgisiz sıfat · C: zaman zarfı · D: kişi zamiri · E: bağlaç"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“İçin”, “yağdığı” sözcüğüyle birlikte neden bildirir; edattır.",
+    "islem": "A: edat ✓"
+   }
+  ],
+  "puf": "Sözcüğün türünü cümledeki göreviyle belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-05 (Edat) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0028",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Edat",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada türce ötekilerden farklı sözcüğü bulur.",
+  "tipId": "dst-edat",
+  "tip": "Edat",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bu kitabı senin için (I) aldım. Hava durumuna göre (II) yarın (III) yağmur yağacak; yine de yağmura rağmen (IV) piknik planımızı bozmayacağız. Bahçe de evimiz gibi (V) rahat olacak.\nBu parçada numaralanmış sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "“için” (edat): “senin” sözcüğüyle birlikte amaç bildirir. Aranan sözcük bu değildir.",
+   "B": "“göre” (edat): “hava durumuna” sözcük öbeğiyle ölçüt bildirir. Aranan sözcük bu değildir.",
+   "D": "“rağmen” (edat): “yağmura” sözcüğüyle karşıtlık bildirir. Aranan sözcük bu değildir.",
+   "E": "“gibi” (edat): “evimiz” sözcüğüyle benzetme bildirir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün neye bağlandığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Dört edat, bir zarf vardır; zarf fiili niteler, edat bir sözcükle birlikte görev yapar.",
+    "islem": "edat → sözcüğe bağlı · zarf → fiili niteler"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: için edat · II: göre edat · III: yarın zaman zarfı · IV: rağmen edat · V: gibi edat"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“yarın”: “yağacak” eyleminin zamanını bildirir.",
+    "islem": "III: zaman zarfı ✓"
+   }
+  ],
+  "puf": "Edatlar bir sözcükle birlikte, zarflar fiille ilgilidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-05 (Edat) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0029",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Bağlaç: ve, ama, fakat, ki, de, ile",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Karşıtlık bağlacını öteki bağlaç türlerinden ayırır.",
+  "tipId": "dst-baglac",
+  "tip": "Bağlaç",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hangi cümlede tırnaklı bağlaç karşıtlık bildirir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Çay “veya” kahve içebilirsiniz.",
+   "B": "Hava soğuk “ve” yağmurluydu.",
+   "C": "Erken yattım, “çünkü” çok yorgundum.",
+   "D": "Çok çalıştı, “ama” kazanamadı.",
+   "E": "Öyle koştu “ki” nefes nefese kaldı."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Çok çalıştı, “ama” kazanamadı."
+  },
+  "celdiriciler": {
+   "A": "“Veya”, iki seçenekten birini sunar; karşıtlık bildirmez.",
+   "B": "“Ve”, iki durumu ekleyerek bağlar; karşıtlık bildirmez.",
+   "C": "“Çünkü”, neden bildirir; karşıtlık değildir.",
+   "E": "“Ki”, sonuç bildirir; karşıtlık değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Karşıtlık bildiren bağlacın olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   }
+  ],
+  "ipuclari": [
+   "İki yargı arasında beklenmeyen bir ters durum olan cümleyi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Karşıtlık bağlaçları: ama, fakat, lakin, ancak.",
+    "islem": "ama, fakat, lakin → karşıtlık"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: seçenek bağlacı · B: ekleme bağlacı · C: neden bağlacı · D: karşıtlık bağlacı · E: sonuç bağlacı"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Ama”, beklenenin tersini bildirerek iki cümleyi bağlar.",
+    "islem": "D: karşıtlık bağlacı ✓"
+   }
+  ],
+  "puf": "Bağlaçların anlam ilişkisini cümleye bakarak belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-06 (Bağlaç: ve, ama, fakat, ki, de, ile) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0030",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Bağlaç: ve, ama, fakat, ki, de, ile",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "“ile”nin bağlaç ve edat kullanımını ayırır.",
+  "tipId": "dst-baglac",
+  "tip": "Bağlaç",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "“İle” sözcüğünün bağlaç olarak kullanıldığı cümle, aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Sabah kuş sesi “ile” uyandık.",
+   "B": "Mektubu mavi kalem “ile” yazdı.",
+   "C": "Misafirleri güler yüz “ile” karşıladık.",
+   "D": "Eve uçak “ile” döndük.",
+   "E": "Elma “ile” armut sepetin içindeydi."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Elma “ile” armut sepetin içindeydi."
+  },
+  "celdiriciler": {
+   "A": "“İle”, neden ve araç bildirir; “ve” ile değiştirilemez, edattır.",
+   "B": "“İle”, aracı bildirir; “ve” ile değiştirilemez, edattır.",
+   "C": "“İle”, biçim bildirir; “ve” ile değiştirilemez, edattır.",
+   "D": "“İle”, aracı bildirir; “ve” ile değiştirilemez, edattır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "“ile”nin bağlaç olduğu cümle.",
+  "bilgi": [
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   },
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "“İle” yerine “ve” getirince anlam bozuluyor mu?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Eş görevli iki sözcüğü bağlayan, yerine “ve” getirilebilen “ile” bağlaçtır; araç, birliktelik bildirirse edattır.",
+    "islem": "ile ≈ ve → bağlaç · ile = araç/birliktelik → edat"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: edat · B: edat · C: edat · D: edat · E: bağlaç"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“İle”, “elma ve armut” biçiminde “ve” yerine geçer; bağlaçtır.",
+    "islem": "E: bağlaç ✓"
+   }
+  ],
+  "puf": "“Ve” testi: yerine ve konabiliyorsa bağlaçtır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-06 (Bağlaç: ve, ama, fakat, ki, de, ile) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0031",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Bağlaç: ve, ama, fakat, ki, de, ile",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada bağlacı belirler.",
+  "tipId": "dst-baglac",
+  "tip": "Bağlaç",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Kitaplığımızda roman ve (I) şiir kitapları bulunur. Bu (II) kitapları hızlı (III) okurum, bitirince (IV) sana da veririm. Kitaplar arkadaş gibi (V) vefalıdır.\nBu parçada numaralanmış sözcüklerden hangisi bağlaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "“Bu” (işaret sıfatı): “kitaplar” ismini belirtir. Aranan sözcük bu değildir.",
+   "C": "“hızlı” (durum zarfı): “okurum” fiilini niteler. Aranan sözcük bu değildir.",
+   "D": "“bitirince” (zarf-fiil): -ince ekiyle zaman bildiren fiilimsidir; bağlaç değildir. Aranan sözcük bu değildir.",
+   "E": "“gibi” (edat): “arkadaş” sözcüğüyle benzetme bildirir. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Bağlaç olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcük iki sözcüğü birbirine bağlıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Bağlaç eş görevli sözcükleri ya da cümleleri birbirine bağlar.",
+    "islem": "ve, ama, fakat → bağlaç"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: ve bağlaç · II: Bu işaret sıfatı · III: hızlı durum zarfı · IV: bitirince zarf-fiil · V: gibi edat"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“ve”: “roman” ve “şiir” sözcüklerini bağlar.",
+    "islem": "I: bağlaç ✓"
+   }
+  ],
+  "puf": "İki sözcüğü ya da cümleyi bağlayan sözcük bağlaçtır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-06 (Bağlaç: ve, ama, fakat, ki, de, ile) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0032",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Bağlaç: ve, ama, fakat, ki, de, ile",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Bağlaç “ki”yi ilgi zamirinden ve -ki’li sıfattan ayırır.",
+  "tipId": "dst-baglac",
+  "tip": "Bağlaç",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hangi cümlede tırnaklı sözcük, iki cümleyi birbirine bağlıyor?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Yarınki” maç ertelendi.",
+   "B": "Öyle yoruldu “ki” uyuyakaldı.",
+   "C": "Bu defter senin, “benimki” çantada.",
+   "D": "“Okuldaki” kantin bugün kapalıydı.",
+   "E": "Salondaki “herkes” ayağa kalktı."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Öyle yoruldu “ki” uyuyakaldı."
+  },
+  "celdiriciler": {
+   "A": "“Yarınki”, “maç” ismini niteler; sıfattır.",
+   "C": "“Benimki”, “benim defterim” yerine geçer; zamirdir.",
+   "D": "“Okuldaki”, “kantin” ismini niteler; sıfattır.",
+   "E": "“Herkes”, belirsiz bir topluluğun yerini tutar; belgisiz zamirdir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Bağlaç görevinde olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi “ki” ayrı yazılıyor ve cümleyi cümleye bağlıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Ayrı yazılan, cümleleri bağlayan “ki” bağlaçtır; sözcüğe bitişen -ki ilgi eki (sıfat ya da zamir) yapar.",
+    "islem": "ayrı “ki” → bağlaç · bitişik -ki → ek"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat · B: bağlaç · C: ilgi zamiri · D: sıfat · E: belgisiz zamir"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Ki”, iki cümleyi sonuç ilişkisiyle bağlar; bağlaçtır.",
+    "islem": "B: bağlaç ✓"
+   }
+  ],
+  "puf": "Yazılışına ve cümledeki göreve bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-06 (Bağlaç: ve, ama, fakat, ki, de, ile) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0033",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Bağlaç: ve, ama, fakat, ki, de, ile",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "“ile”nin edat kullanımını bağlaçlardan ayırır.",
+  "tipId": "dst-baglac",
+  "tip": "Bağlaç",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Elif mektubu özenle yazdı, ama (I) göndermeye çekindi. Önce zarfı kapattı ve (II) adresi mavi kalem ile (III) yazdı, çünkü (IV) mektubun yolda kaybolmasını istemiyordu. Kardeşi de (V) aynı şeyi söyledi.\nBu parçada numaralanmış sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "III"
+  },
+  "celdiriciler": {
+   "A": "“ama” (bağlaç): iki cümleyi karşıtlıkla bağlar. Aranan sözcük bu değildir.",
+   "B": "“ve” (bağlaç): iki eylemi ekleyerek bağlar. Aranan sözcük bu değildir.",
+   "D": "“çünkü” (bağlaç): iki cümleyi neden ilişkisiyle bağlar. Aranan sözcük bu değildir.",
+   "E": "“de” (bağlaç): “kardeşi” sözcüğünü önceki cümleye ekler. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   },
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   }
+  ],
+  "ipuclari": [
+   "Hangi sözcük “ve” ile değiştirilirse anlam bozulur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Dört bağlaç, bir edat vardır; “ile” araç bildirdiğinde edattır.",
+    "islem": "araç bildiren “ile” → edat"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: ama bağlaç · II: ve bağlaç · III: ile edat · IV: çünkü bağlaç · V: de bağlaç"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“ile”: araç bildirir; “ve” ile değiştirilemez.",
+    "islem": "III: edat ✓"
+   }
+  ],
+  "puf": "“İle”nin yerine “ve” getirip anlam bozulup bozulmadığına bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-06 (Bağlaç: ve, ama, fakat, ki, de, ile) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0034",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Türce farklı olan sözcük",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Ad görevindeki sıfatı sıfat görevlilerden ayırır.",
+  "tipId": "dst-farkli",
+  "tip": "Türce farklı olan sözcük",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Tırnak içindeki sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Güzel” bir şarkı dinledik.",
+   "B": "“Haftalık” plan masaya asıldı.",
+   "C": "Sınıfa “renkli” bir resim astık.",
+   "D": "Kerem “sessiz” bir gün geçirdi.",
+   "E": "“Güzeli” çirkinden ayırdı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "“Güzeli” çirkinden ayırdı."
+  },
+  "celdiriciler": {
+   "A": "“Güzel”, “şarkı” ismini niteler; sıfattır.",
+   "B": "“Haftalık”, “plan” ismini niteler; sıfattır.",
+   "C": "“Renkli”, “resim” ismini niteler; sıfattır.",
+   "D": "“Sessiz”, “gün” ismini niteler; sıfattır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Türce ötekilerden farklı olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Adlaşma",
+    "ifade": "sıfat ismin yerine geçip ad görevinde kullanılırsa ad olur · yaşlı adam (sıfat), yaşlılar geldi (ad)"
+   }
+  ],
+  "ipuclari": [
+   "Her cümlede tırnaklı sözcüğün neye bağlandığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Sıfat, ismin yerini tutarsa ad görevine geçer.",
+    "islem": "güzel + isim → sıfat · güzeli → ad"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat · B: sıfat · C: sıfat · D: sıfat · E: ad"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Güzeli”, sıfatın adlaşmış hâlidir; nesne olarak ad görevindedir.",
+    "islem": "E: ad ✓"
+   }
+  ],
+  "puf": "Aynı sözcüğün her cümledeki görevini ayrı ayrı belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-07 (Türce farklı olan sözcük) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0035",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Türce farklı olan sözcük",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "“Yeni” sözcüğünün zarf kullanımını bulur.",
+  "tipId": "dst-farkli",
+  "tip": "Türce farklı olan sözcük",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Hangi cümlede “yeni” sözcüğü, fiili niteleyen bir zarf olarak kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Yeni” bir kazak aldım.",
+   "B": "“Yenisini” beğenmedi.",
+   "C": "Sokaktaki “yeni” bina çok yüksek.",
+   "D": "Misafirler “yeni” geldi.",
+   "E": "“Yeni” ayakkabılarım çok rahat."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Misafirler “yeni” geldi."
+  },
+  "celdiriciler": {
+   "A": "“Yeni”, “kazak” ismini niteler; sıfattır.",
+   "B": "“Yenisini”, ismin yerini tutarak nesne olmuştur; ad görevindedir.",
+   "C": "“Yeni”, “bina” ismini niteler; sıfattır.",
+   "E": "“Yeni”, “ayakkabılar” ismini niteler; sıfattır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Zarf görevinde olan tırnaklı “yeni”.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "“Yeni” bir isme mi, yoksa bir fiile mi bağlı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Nitelediği sözcük isimse sıfat, fiilse zarf olur.",
+    "islem": "yeni + isim → sıfat · yeni + fiil → zarf"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: sıfat · B: ad · C: sıfat · D: zaman zarfı · E: sıfat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Yeni”, “geldi” fiilinin zamanını bildirir; zarftır.",
+    "islem": "D: zaman zarfı ✓"
+   }
+  ],
+  "puf": "Aynı biçimli sözcükte türü niteleme yönü belirler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-07 (Türce farklı olan sözcük) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0036",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Türce farklı olan sözcük",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada türce farklı olan sözcüğü bulur.",
+  "tipId": "dst-farkli",
+  "tip": "Türce farklı olan sözcük",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Bahçedeki kedi (I) yanımıza küçük (II) bir yavru (III) getirdi. Ona önce süt (IV), sonra mama (V) verdik.\nBu parçada numaralanmış sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "II"
+  },
+  "celdiriciler": {
+   "A": "“kedi” (ad): somut bir cins addır. Aranan sözcük bu değildir.",
+   "C": "“yavru” (ad): somut bir cins addır. Aranan sözcük bu değildir.",
+   "D": "“süt” (ad): somut bir cins addır. Aranan sözcük bu değildir.",
+   "E": "“mama” (ad): somut bir cins addır. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Ad (isim)",
+    "ifade": "somut ad beş duyuyla algılanır (kitap) · soyut ad algılanmaz, düşünülür (sevgi) · topluluk adı tekil biçimiyle birden çok varlığı anlatır (sürü, ordu)"
+   },
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   }
+  ],
+  "ipuclari": [
+   "Her sözcüğün varlık mı nitelik mi bildirdiğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Dört ad, bir sıfat vardır; sıfat ismi niteler.",
+    "islem": "ad: varlığı anlatır · sıfat: ismi niteler"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: kedi ad · II: küçük sıfat · III: yavru ad · IV: süt ad · V: mama ad"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“küçük”: “yavru” ismini niteler.",
+    "islem": "II: sıfat ✓"
+   }
+  ],
+  "puf": "Varlık adlandıran ad, nitelik katan sıfattır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-07 (Türce farklı olan sözcük) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0037",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Türce farklı olan sözcük",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Ad görevindeki renk sözcüğünü bulur.",
+  "tipId": "dst-farkli",
+  "tip": "Türce farklı olan sözcük",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Kız kırmızıyı (I) en çok sevdiği için mavi (II) önlüğünü giymedi; yeşil (III) şapkasını da takmayıp sarı (IV) bir fularla gri (V) paltosunu seçti.\nBu parçada numaralanmış sözcüklerden hangisi türce ötekilerden farklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "I",
+   "B": "II",
+   "C": "III",
+   "D": "IV",
+   "E": "V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "I"
+  },
+  "celdiriciler": {
+   "B": "“mavi” (sıfat): “önlük” ismini niteler. Aranan sözcük bu değildir.",
+   "C": "“yeşil” (sıfat): “şapka” ismini niteler. Aranan sözcük bu değildir.",
+   "D": "“sarı” (sıfat): “fular” ismini niteler. Aranan sözcük bu değildir.",
+   "E": "“gri” (sıfat): “palto” ismini niteler. Aranan sözcük bu değildir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Adlaşma",
+    "ifade": "sıfat ismin yerine geçip ad görevinde kullanılırsa ad olur · yaşlı adam (sıfat), yaşlılar geldi (ad)"
+   }
+  ],
+  "ipuclari": [
+   "Beş renk sözcüğünden hangisinin nitelediği bir isim yok?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Renk sözcükleri isimle birlikte sıfat, tek başına ad görevindedir.",
+    "islem": "renk + isim → sıfat · renk (nesne) → ad"
+   },
+   {
+    "baslik": "Numaraları tek tek çözümle",
+    "aciklama": "Her numaralı sözcüğün parçadaki göreve göre türü belirlenir.",
+    "islem": "I: kırmızıyı ad · II: mavi sıfat · III: yeşil sıfat · IV: sarı sıfat · V: gri sıfat"
+   },
+   {
+    "baslik": "Doğru numarayı seç",
+    "aciklama": "“kırmızıyı”: “sevdiği” fiilinin nesnesi olan bir renk adıdır; ad görevindedir.",
+    "islem": "I: ad ✓"
+   }
+  ],
+  "puf": "Her renk sözcüğünün yanında nitelediği isim olup olmadığına bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-07 (Türce farklı olan sözcük) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0038",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Türce farklı olan sözcük",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Aynı sözcüğün zarf ve sıfat kullanımını ayırır.",
+  "tipId": "dst-farkli",
+  "tip": "Türce farklı olan sözcük",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Hangisinde “aşağı” sözcüğü, öteki dört cümledekinden ayrı bir türde karşımıza çıkar?",
+  "sekil": null,
+  "siklar": {
+   "A": "Kedi “aşağı” baktı.",
+   "B": "Top merdivenlerden “aşağı” yuvarlandı.",
+   "C": "“Aşağı” mahallede oturuyoruz.",
+   "D": "Çantayı “aşağı” bıraktı.",
+   "E": "Asansörle “aşağı” indik."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "“Aşağı” mahallede oturuyoruz."
+  },
+  "celdiriciler": {
+   "A": "“Aşağı”, “baktı” fiilinin yönünü bildirir; zarftır.",
+   "B": "“Aşağı”, “yuvarlandı” fiilinin yönünü bildirir; zarftır.",
+   "D": "“Aşağı”, “bıraktı” fiilinin yönünü bildirir; zarftır.",
+   "E": "“Aşağı”, “indik” fiilinin yönünü bildirir; zarftır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Türce ötekilerden farklı olan tırnaklı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "“Aşağı” sözcüğünün bağlandığı sözcüğe bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aynı sözcük isim niteliyorsa sıfat, fiil niteliyorsa zarftır.",
+    "islem": "aşağı + isim → sıfat · aşağı + fiil → zarf"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: yer-yön zarfı · B: yer-yön zarfı · C: sıfat · D: yer-yön zarfı · E: yer-yön zarfı"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Aşağı”, “mahalle” ismini niteler; sıfattır.",
+    "islem": "C: sıfat ✓"
+   }
+  ],
+  "puf": "Önce sözcüğün neyi nitelediğini bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-07 (Türce farklı olan sözcük) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0039",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ortak özellik: iki sözcüğün türü",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İki tırnaklı sözcüğün edat–bağlaç sırasını belirler.",
+  "tipId": "dst-ortak",
+  "tip": "Ortak özellik (iki sözcüğün türü)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Tırnaklı sözcüklerin sırasıyla edat ve bağlaç olduğu cümle hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "“Ama” senin “gibi” düşünemem.",
+   "B": "Senin “için” yağmura “rağmen” geldi.",
+   "C": "Çay “veya” kahve ister misin, “yoksa” su mu?",
+   "D": "Bu senin “için” alındı, “ama” beğenmedin.",
+   "E": "“Bu” hediye “için” teşekkürler."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Bu senin “için” alındı, “ama” beğenmedin."
+  },
+  "celdiriciler": {
+   "A": "“Ama” bağlaç, “gibi” edattır; sıra ters.",
+   "B": "“İçin” de “rağmen” de edattır; ikinci sözcük bağlaç değildir.",
+   "C": "“Veya” da “yoksa” da bağlaçtır; ilk sözcük edat değildir.",
+   "E": "“Bu” sıfattır; ilk sözcük edat değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlki edat, ikincisi bağlaç olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Edat",
+    "ifade": "tek başına anlamı olmayan, bağlandığı sözcükle görev yapan sözcük: gibi, için, göre, rağmen, ile (araç, birliktelik)"
+   },
+   {
+    "ad": "Bağlaç",
+    "ifade": "sözcükleri ya da cümleleri bağlar: ve, ama, fakat, çünkü, veya, ki · ile, “ve” yerine konabiliyorsa bağlaçtır (kalem ile defter)"
+   }
+  ],
+  "ipuclari": [
+   "Önce bir sözcüğe bağlı olan, sonra cümleyi bağlayan sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aranan sıra: önce edat, sonra bağlaç.",
+    "islem": "edat → sözcüğe bağlı · bağlaç → cümleyi bağlar"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: bağlaç + edat · B: edat + edat · C: bağlaç + bağlaç · D: edat + bağlaç · E: sıfat + edat"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“İçin”, “senin” ile görev yapan edattır; “ama”, cümleleri bağlayan bağlaçtır.",
+    "islem": "D: edat + bağlaç ✓"
+   }
+  ],
+  "puf": "Her iki sözcüğü ayrı çöz ve sıraya dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-08 (Ortak özellik: iki sözcüğün türü) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0040",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ortak özellik: iki sözcüğün türü",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "İki tırnaklı sözcüğün zamir–zarf sırasını “çok” tuzağıyla belirler.",
+  "tipId": "dst-ortak",
+  "tip": "Ortak özellik (iki sözcüğün türü)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Hangi cümlede önce bir zamir, sonra bir zarf tırnak içine alınmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Elif “dün” “çok” yoruldu.",
+   "B": "“Çok” insan “çok” yoruldu.",
+   "C": "“Hepsi” “çok” kitap okudu.",
+   "D": "“Şimdi” “kimse” gelmedi.",
+   "E": "“Kimse” “çok” yorulmadı."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "“Kimse” “çok” yorulmadı."
+  },
+  "celdiriciler": {
+   "A": "“Dün” ve “çok” fiili niteler; ikisi de zarftır.",
+   "B": "İlk “çok”, “insan” ismini belirtir (sıfat); ilk sözcük zamir değildir.",
+   "C": "“Çok”, “kitap” ismini belirtir; ikinci sözcük sıfattır, zarf değildir.",
+   "D": "“Şimdi” zarf, “kimse” zamirdir; sıra ters."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "İlki zamir, ikincisi zarf olan cümle.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   },
+   {
+    "ad": "Zarf",
+    "ifade": "fiili, sıfatı ya da başka bir zarfı niteler: durum (yavaş), zaman (yarın), miktar (oldukça), yer-yön (içeri), soru (niçin)"
+   }
+  ],
+  "ipuclari": [
+   "Önce ismin yerini tutan, sonra fiili niteleyen sözcüğü ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Aranan sıra: önce zamir, sonra zarf.",
+    "islem": "zamir → isim yerine · zarf → fiil niteler"
+   },
+   {
+    "baslik": "Şıkları tek tek çözümle",
+    "aciklama": "Her şıkta tırnaklı sözcüğün cümledeki göreve göre türü belirlenir.",
+    "islem": "A: zarf + zarf · B: sıfat + zarf · C: zamir + sıfat · D: zarf + zamir · E: zamir + zarf"
+   },
+   {
+    "baslik": "Doğru şıkkı seç",
+    "aciklama": "“Kimse”, belirsiz bir kişinin yerini tutar (zamir); “çok”, “yorulmadı” fiilini niteler (zarf).",
+    "islem": "E: zamir + zarf ✓"
+   }
+  ],
+  "puf": "Çiftlerde her sözcüğü ayrı çöz, sonra sıraya bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-08 (Ortak özellik: iki sözcüğün türü) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tyttr-dsozcuk-0041",
+  "ders": "TYT Türkçe",
+  "konu": "Sözcük Türleri · Ortak özellik: iki sözcüğün türü",
+  "k": "tr|Sözcük Türleri",
+  "kazanim": "Parçada türce aynı olan iki sözcüğü belirler.",
+  "tipId": "dst-ortak",
+  "tip": "Ortak özellik (iki sözcüğün türü)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Ben (I) bu şehirde uzun (II) yıllar yaşadım. Sana yolu tarif edeyim: önce hızlı (III) yürü, sonra köprüden geç; karşıdaki (IV) çınarı (V) görünce sola dön.\nBu parçada numaralanmış sözcüklerden hangi ikisi türce aynıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "II ve IV",
+   "B": "I ve II",
+   "C": "III ve IV",
+   "D": "I ve V",
+   "E": "IV ve V"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "II ve IV"
+  },
+  "celdiriciler": {
+   "B": "“Ben” zamir, “uzun” sıfattır; türleri farklıdır.",
+   "C": "“Hızlı” zarf, “karşıdaki” sıfattır; türleri farklıdır.",
+   "D": "“Ben” zamir, “çınarı” ad soylu bir sözcüktür; türleri farklıdır.",
+   "E": "“Karşıdaki” sıfat, “çınarı” addır; türleri farklıdır."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Türce aynı olan iki numaralı sözcük.",
+  "bilgi": [
+   {
+    "ad": "Zamir (adıl)",
+    "ifade": "ismin yerini tutar: kişi (ben), dönüşlülük (kendi), işaret (bunu), belgisiz (herkes), soru (kim), ilgi (seninki) · ismi niteliyorsa sıfattır (bu kitap)"
+   },
+   {
+    "ad": "Sıfat",
+    "ifade": "ismi niteler (niteleme: soğuk hava) ya da belirtir (işaret: bu, şu · sayı: üç · belgisiz: bazı · soru: hangi, kaç)"
+   }
+  ],
+  "ipuclari": [
+   "Beş sözcüğün türünü yan yana yazıp aynı olanı ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ölçütü hatırla",
+    "aciklama": "Zamir ismin yerini tutar; sıfat ismi niteler; zarf fiili niteler; ad varlığı adlandırır.",
+    "islem": "zamir · sıfat · zarf · ad"
+   },
+   {
+    "baslik": "Numaraları çözümle",
+    "aciklama": "“Ben” kişi zamiri; “uzun” “yıllar” ismini niteler; “hızlı” “yürü” fiilini niteler; “karşıdaki” “çınar” ismini niteler; “çınarı” ağaç adıdır.",
+    "islem": "I: zamir · II: sıfat · III: zarf · IV: sıfat · V: ad"
+   },
+   {
+    "baslik": "Aynı türdekileri seç",
+    "aciklama": "Yalnız II ve IV aynı türdedir; ikisi de ismi niteleyen sıfattır.",
+    "islem": "A: II ve IV ✓"
+   }
+  ],
+  "puf": "Önce her numaranın türünü yaz, sonra şıklardaki çiftleri karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DBST-08 (Ortak özellik: iki sözcüğün türü) · özgün cümleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
