@@ -53,6 +53,7 @@ async function tumSayfalar(yol, p, max = 20) { const L = []; let token = "";
 const gecerliId = id => /^(PL|UU|OL|FL)[A-Za-z0-9_-]{16,}$/.test(id || "") && id.length >= 18 && id.length !== 13;
 
 async function kanalBul(h) {
+  if (h.kanalId) { KANAL[h.ad] = { id: h.kanalId, nasil: "kimlik" }; return h.kanalId; }
   const yanlis = h.yanlisKanal || [];
   if (KANAL[h.ad]?.id && !yanlis.includes(KANAL[h.ad].id) && (KANAL[h.ad].nasil !== "arama" || kanalUygun(h.ad, KANAL[h.ad].ad))) return KANAL[h.ad].id;
   delete KANAL[h.ad];
@@ -88,7 +89,7 @@ async function dersCek(ders) {
       secilen.push(...listeSec(await kanalL(), ders, kapsanan, h.filtre || ""));
       const L = [];
       for (const l of secilen) { const v = await videolar(l.id); if (v.length) L.push({ ...l, v }); }
-      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L, ...(L.length ? {} : { kanaldakiler: (kanalListeleri || []).map(p => [p.id, p.ad, p.sayi, (p.tarih || "").slice(0, 10)]) }) };
+      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L, kanaldakiler: (kanalListeleri || []).map(p => [p.id, p.ad, p.sayi, (p.tarih || "").slice(0, 10)]) };
       rapor.push(`- ${h.ad}: ${L.map(l => `${l.ad} [${l.sinav.join("/")}] · ${l.v.length} video`).join("; ") || "uygun güncel liste yok"}${KANAL[h.ad]?.kontrol ? ` ⚠️ kanal aramayla bulundu (${KANAL[h.ad].ad}), kontrol et` : ""}`);
     } catch (e) { if (/kota|anahtar|API v3/i.test(e.message)) throw e; rapor.push(`- ${h.ad}: hata (${e.message})`); }
   }
