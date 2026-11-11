@@ -22,3 +22,9 @@ YKS koçluk uygulaması: öğrenci paneli (telefona kurulabilir web uygulaması)
 - `coachNotes/{uid}` — koçun özel notları (sadece koç)
 - `settings/main` — mesajlar, süreler, konu listeleri (herkes okur, koç yazar)
 - `notifs/{id}` — koça bildirimler (yeni kayıt)
+
+## Video Kütüphanesi
+- Uygulama: Ders → Video Kütüphanesi (Ders → Hoca → TYT / AYT / Maarif). Konu ilerlemesi'nde ▶ öğrencinin hocasının videosunu açar. Koç, Öğrenciyi düzenle → "Ders videoları · hocası"ndan ders ders hoca seçer.
+- Veri `public/video/<ders>.json` dosyalarında; ders açılınca yüklenir.
+- Listeleri yenilemek: GitHub → Actions → "Video Kütüphanesi listeleri" (sır: `YOUTUBE_API_KEY`). Hocalar `data/video-kaynak.json`'da; sonuç raporu `data/video-rapor.md`.
+- Yerel derleme (API'siz): `node tools/youtube-listeler.mjs`
