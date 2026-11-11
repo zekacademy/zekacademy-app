@@ -1,0 +1,2102 @@
+[
+ {
+  "id": "tytmat-rasyonel-0001",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Dört İşlem",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Paydaları farklı kesirlerle toplama ve çıkarma işlemini yapar.",
+  "tipId": "rsy-islem",
+  "tip": "Dört işlem ve işlem önceliği",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "3/4 + 5/6 − 1/3\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "5/4",
+   "C": "3/2",
+   "D": "19/12",
+   "E": "23/12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5/4"
+  },
+  "celdiriciler": {
+   "A": "Payları ve paydaları ayrı ayrı toplayıp çıkarmış: (3 + 5 − 1)/(4 + 6 − 3).",
+   "D": "Sondaki − 1/3 terimini unutmuş.",
+   "E": "Payda eşitlemeyi doğru yapıp 1/3’ü çıkarmak yerine eklemiş.",
+   "C": "1/3’ü 12’lik paydaya genişletmeyi unutup 9/12 + 10/12 − 1/12 = 18/12 = 3/2 bulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat",
+   "C": "islem"
+  },
+  "istenen": "İşlemin sonucu.",
+  "bilgi": [
+   {
+    "ad": "Kesirle toplama",
+    "ifade": "paydalar eşitlenerek pay pay ile toplanır. Örnek: 1/2 + 1/3 = 3/6 + 2/6 = 5/6"
+   }
+  ],
+  "ipuclari": [
+   "Paydaları 12’de eşitle: 4, 6 ve 3’ün en küçük ortak katı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paydaları eşitle",
+    "aciklama": "4, 6 ve 3’ün ortak katı 12’dir; her kesri 12’lik paydaya genişlet.",
+    "islem": "3/4 = 9/12 · 5/6 = 10/12 · 1/3 = 4/12"
+   },
+   {
+    "baslik": "İşlemi yap",
+    "aciklama": "Paydalar eşit olunca paylar işlem görür, payda aynen kalır.",
+    "islem": "9/12 + 10/12 − 4/12 = 15/12"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Pay ve paydayı 3’e böl.",
+    "islem": "15/12 = 5/4 (1,25)"
+   }
+  ],
+  "puf": "Payda eşitledikten sonra yalnız paylarla işlem yap; paydalar ayrıca toplanmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-01 (dört işlem) · üç kesirli toplama–çıkarma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0002",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Günlük Ölçüm",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Kesir ve ondalık sayıyı çarparak tarif ölçüsünü büyütür.",
+  "tipId": "rsy-olcum",
+  "tip": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir kurabiye tarifinde 2/3 su bardağı un kullanılmaktadır.\nAşçı bu tarifin 4,5 katı kadar kurabiye yapacağına göre kaç su bardağı un kullanmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4/27",
+   "B": "8/3",
+   "C": "3",
+   "D": "10/3",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "Çarpmak yerine bölmüş: 2/3 ÷ 4,5.",
+   "D": "4,5’i 5’e yuvarlayıp 2/3 × 5 hesaplamış.",
+   "B": "4,5 katının ondalık kısmını atıp yalnız 4 katını (2/3 × 4) almış.",
+   "E": "4,5’i 45 gibi alarak virgülü atlamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "islem",
+   "B": "islem",
+   "E": "islem"
+  },
+  "istenen": "Gerekli un miktarı (su bardağı).",
+  "bilgi": [
+   {
+    "ad": "Ondalık sayılarla işlem",
+    "ifade": "virgül yokmuş gibi işlem yapılır, virgül sonra yerleştirilir. Örnek: 0,3 × 0,04 = 3 × 4 = 12 → 0,012 · 0,6 ÷ 0,02 = 60 ÷ 2 = 30"
+   },
+   {
+    "ad": "Kesirle çarpma",
+    "ifade": "paylar ve paydalar kendi aralarında çarpılır. Örnek: 2/3 × 9/2 = 18/6 = 3"
+   }
+  ],
+  "ipuclari": [
+   "4,5’i kesre çevir (9/2) ve çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ondalığı kesre çevir",
+    "aciklama": "4,5 = 9/2.",
+    "islem": "4,5 = 9/2"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Katı demek çarpmaktır; paylar ve paydalar çarpılır.",
+    "islem": "2/3 × 9/2 = 18/6"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Pay ve payda 6’ya bölünür.",
+    "islem": "18/6 = 3 su bardağı"
+   }
+  ],
+  "puf": "“Kaç katı” çarpma demektir; ondalığı kesre çevirince sadeleşme kolaylaşır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-06 (günlük ölçüm) · tarifin ondalık katı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0003",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesir Sıralama",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "İki kesir arasında kalan kesri ondalığa çevirerek belirler.",
+  "tipId": "rsy-siralama",
+  "tip": "Kesir sıralama ve karşılaştırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Aşağıdaki kesirlerden hangisi 3/5 ile 2/3 arasındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5/9",
+   "B": "4/7",
+   "C": "5/8",
+   "D": "9/13",
+   "E": "7/10"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5/8"
+  },
+  "celdiriciler": {
+   "B": "4/7’yi 0,6’dan büyük sanmış (4/7 ≈ 0,571).",
+   "E": "7/10 = 0,7’yi 2/3 = 0,667’den küçük sanmış.",
+   "A": "5/9 ≈ 0,556’yı 0,6’dan büyük sanmış.",
+   "D": "9/13 ≈ 0,692’yi 2/3’ten küçük sanmış."
+  },
+  "celTur": {
+   "B": "islem",
+   "E": "islem",
+   "A": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "3/5 ile 2/3 arasındaki kesir.",
+  "bilgi": [
+   {
+    "ad": "Kesirleri karşılaştırma",
+    "ifade": "paydalar eşitlenir ya da ondalığa çevrilir. Örnek: 3/5 = 0,6 ve 5/8 = 0,625 → 3/5 < 5/8"
+   }
+  ],
+  "ipuclari": [
+   "Beş kesri de ondalığa çevirip 0,6 ve 0,667 ile karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uçları ondalığa çevir",
+    "aciklama": "Pay ÷ payda.",
+    "islem": "3/5 = 0,6 · 2/3 ≈ 0,667"
+   },
+   {
+    "baslik": "Şıkları çevir",
+    "aciklama": "Her şıkkı ondalığa çevirip aralığa bak.",
+    "islem": "4/7 ≈ 0,571 · 5/8 = 0,625 · 5/9 ≈ 0,556 · 7/10 = 0,7 · 9/13 ≈ 0,692"
+   },
+   {
+    "baslik": "Seç",
+    "aciklama": "Yalnız 0,625 değeri 0,6 ile 0,667 arasındadır.",
+    "islem": "3/5 < 5/8 < 2/3"
+   }
+  ],
+  "puf": "Kesirleri karşılaştırırken en güvenli yol hepsini ondalığa ya da ortak paydaya çevirmektir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-02 (kesir sıralama) · iki kesir arasındaki kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0004",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Ondalık Sayılar",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Ondalık sayılarla bölme, çarpma ve çıkarmayı işlem önceliğiyle yapar.",
+  "tipId": "rsy-ondalik",
+  "tip": "Ondalık ve devirli ondalık sayılar",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "3,6 ÷ 0,12 − 0,4 × 5\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "28",
+   "B": "30",
+   "C": "32",
+   "D": "148",
+   "E": "298"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "28"
+  },
+  "celdiriciler": {
+   "B": "Bölmeyi doğru yapıp 0,4 × 5 çarpımını çıkarmayı unutmuş (30).",
+   "C": "Çıkarmak yerine 0,4 × 5 = 2’yi eklemiş (30 + 2).",
+   "D": "Çarpmayı yapmadan soldan sağa gidip (30 − 0,4) × 5 hesaplamış.",
+   "E": "3,6 ÷ 0,12’yi 300 bulmuş (virgül kaydırmayı bir basamak fazla yapmış)."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İşlemin sonucu.",
+  "bilgi": [
+   {
+    "ad": "Ondalık sayılarla işlem",
+    "ifade": "virgül yokmuş gibi işlem yapılır, virgül sonra yerleştirilir. Örnek: 0,3 × 0,04 = 3 × 4 = 12 → 0,012 · 0,6 ÷ 0,02 = 60 ÷ 2 = 30"
+   },
+   {
+    "ad": "İşlem önceliği",
+    "ifade": "önce parantez, sonra çarpma/bölme (soldan sağa), en son toplama/çıkarma yapılır. Örnek: 2 + 3 × 4 = 14"
+   }
+  ],
+  "ipuclari": [
+   "Bölmeyi ve çarpmayı ayrı ayrı yap, çıkarmayı en sona bırak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölmeyi yap",
+    "aciklama": "Virgülleri iki basamak kaydır: 360 ÷ 12.",
+    "islem": "3,6 ÷ 0,12 = 30"
+   },
+   {
+    "baslik": "Çarpmayı yap",
+    "aciklama": "4 × 5 = 20 ve virgül bir basamak geri gelir.",
+    "islem": "0,4 × 5 = 2"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Çıkarma en sonda yapılır.",
+    "islem": "30 − 2 = 28"
+   }
+  ],
+  "puf": "Bölenin virgülünü sağa kaydırırken bölünenin virgülünü de aynı kadar kaydır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-04 (ondalık işlem) · bölme ve çarpma sonra çıkarma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0005",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Sayı Doğrusu",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Sayı doğrusunda eş parçaya bölünmüş bir aralıktaki noktaların değerlerini bulur.",
+  "tipId": "rsy-dogru",
+  "tip": "Sayı doğrusu ve eşit aralıklara bölme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Sayı doğrusunda 1 ile 3 arası 5 eşit parçaya bölünmüştür. Bölme noktaları 1’den başlayarak sırasıyla K, L, M ve N’dir.\nBuna göre K ile M noktalarının gösterdiği sayıların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,6",
+   "B": "2,2",
+   "C": "3,6",
+   "D": "4",
+   "E": "4,4"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3,6"
+  },
+  "celdiriciler": {
+   "A": "1 ile 3 arasındaki parçaları 0’dan başlatıp K = 2/5, M = 6/5 almış.",
+   "D": "Aralığı 4 eş parçaya bölünmüş sanıp K = 3/2, M = 5/2 almış.",
+   "B": "Yalnız M noktasını bulup K’yi toplamamış.",
+   "E": "K ile M yerine L ile N noktalarını toplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "D": "bilgi",
+   "B": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "K ve M noktalarının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Sayı doğrusunda eşit parça",
+    "ifade": "iki sayı arası n eş parçaya bölünürse bir parçanın uzunluğu (fark) ÷ n olur. Örnek: 0 ile 1 arası 4 eş parça → her parça 1/4"
+   }
+  ],
+  "ipuclari": [
+   "Bir parçanın uzunluğunu bul ve 1’e kaç parça eklendiğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parça uzunluğu",
+    "aciklama": "Aralık 3 − 1 = 2 birimdir ve 5 eş parçaya ayrılmıştır.",
+    "islem": "2 ÷ 5 = 2/5"
+   },
+   {
+    "baslik": "Noktaları bul",
+    "aciklama": "K birinci, M üçüncü bölme noktasıdır; 1’e eklenir.",
+    "islem": "K = 1 + 2/5 = 7/5 · M = 1 + 6/5 = 11/5"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki değeri topla.",
+    "islem": "7/5 + 11/5 = 18/5 = 3,6"
+   }
+  ],
+  "puf": "Eş parçalarda ilerleme parçanın uzunluğu kadardır; başlangıç noktasını 0 sanma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-03 (sayı doğrusu) · 1 ile 3 arası 5 eş parça, K ve M noktaları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0006",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesrin Değeri",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Bir kesrin tam sayı olması koşulunu bölenler yoluyla inceler.",
+  "tipId": "rsy-kosul",
+  "tip": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x, 0 da dahil olmak üzere bir doğal sayı olmak üzere 12/(x + 1) ifadesi bir tam sayıdır.\nBuna göre x’in alabileceği kaç farklı değer vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "C": "x doğal sayı olduğundan 0’ı da denemesi gerekirken x = 0 için 12/1 = 12’yi atlamış.",
+   "E": "Negatif tam sayıları da sayarak x tam sayı sanmış (soruda x doğal sayı).",
+   "B": "Yalnız 1, 2, 3, 4 bölenlerini yazıp 6 ve 12’yi unutmuş.",
+   "A": "12’nin yalnız asal bölenlerini (2, 3) saymış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "E": "dikkat",
+   "B": "islem",
+   "A": "bilgi"
+  },
+  "istenen": "x’in alabileceği değerlerin sayısı.",
+  "bilgi": [
+   {
+    "ad": "Tam sayı değeri",
+    "ifade": "a/b bir tam sayıysa b, a’nın bölenidir. Örnek: 12/b tam sayı → b ∈ {±1, ±2, ±3, ±4, ±6, ±12}"
+   },
+   {
+    "ad": "Doğal sayılar",
+    "ifade": "0, 1, 2, 3, … sayılarıdır; 0 da bir doğal sayıdır"
+   }
+  ],
+  "ipuclari": [
+   "x + 1, 12’nin pozitif bir böleni olmalıdır; bu bölenleri yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölenleri yaz",
+    "aciklama": "x doğal sayı olduğundan x + 1 ≥ 1 olur; x + 1, 12’nin pozitif böleni olmalı.",
+    "islem": "x + 1 ∈ {1, 2, 3, 4, 6, 12}"
+   },
+   {
+    "baslik": "x değerlerini bul",
+    "aciklama": "Her bölenden 1 çıkar.",
+    "islem": "x ∈ {0, 1, 2, 3, 5, 11}"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Altı değer vardır; x = 0 da doğal sayıdır.",
+    "islem": "6"
+   }
+  ],
+  "puf": "“Kesir tam sayı” koşulunda paydanın bölenlerini yaz; doğal sayı, tam sayı ayrımına dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-05 (tam sayı değeri) · 12/(x+1) ve doğal sayı koşulu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0007",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Bileşik Kesir",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Merdiven biçimindeki kesri içten dışa açarak değerini bulur.",
+  "tipId": "rsy-islem",
+  "tip": "Dört işlem ve işlem önceliği",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "1 + 1/(1 + 1/(1 + 1/2))\nifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/2",
+   "B": "8/5",
+   "C": "5/3",
+   "D": "7/4",
+   "E": "8/3"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "8/5"
+  },
+  "celdiriciler": {
+   "E": "En içte tersini almayı unutup 1 + 5/3 yapmış.",
+   "C": "Hesabı bir basamak erken bırakmış (1 + 2/3).",
+   "A": "Yalnız en içteki 1 + 1/2’yi bulup bırakmış.",
+   "D": "En içteki 1/2’yi 2 yazarak (1 + 2 = 3) hesaplamış."
+  },
+  "celTur": {
+   "E": "islem",
+   "C": "dikkat",
+   "A": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "Ters kesir",
+    "ifade": "a/b kesrinin tersi b/a’dır; bir sayıyı kesre bölmek, kesrin tersiyle çarpmaktır. Örnek: 6 ÷ (2/3) = 6 × 3/2 = 9"
+   },
+   {
+    "ad": "İşlem önceliği",
+    "ifade": "önce parantez, sonra çarpma/bölme (soldan sağa), en son toplama/çıkarma yapılır. Örnek: 2 + 3 × 4 = 14"
+   }
+  ],
+  "ipuclari": [
+   "En içten başla: önce 1 + 1/2’yi hesapla, sonra tersini al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En içi hesapla",
+    "aciklama": "En içteki toplamı yap.",
+    "islem": "1 + 1/2 = 3/2"
+   },
+   {
+    "baslik": "Ters al ve topla",
+    "aciklama": "1/(3/2) = 2/3; sonra 1 ile topla.",
+    "islem": "1 + 2/3 = 5/3"
+   },
+   {
+    "baslik": "Son basamak",
+    "aciklama": "1/(5/3) = 3/5; dıştaki 1 ile topla.",
+    "islem": "1 + 3/5 = 8/5"
+   }
+  ],
+  "puf": "İç içe kesirlerde her seferinde yalnız en içteki kesri sadeleştirip dışa doğru ilerle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-01 (merdiven kesir) · üç katlı, toplamlı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0008",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesir Sıralama",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Pay ile payda farkı eşit olan kesirleri 1’e yakınlığına göre sıralar.",
+  "tipId": "rsy-siralama",
+  "tip": "Kesir sıralama ve karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x = 2013/2014, y = 2014/2015 ve z = 2012/2013\nolduğuna göre x, y ve z’nin sıralanışı aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "z < x < y",
+   "B": "x < y < z",
+   "C": "x < z < y",
+   "D": "y < x < z",
+   "E": "z < y < x"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "z < x < y"
+  },
+  "celdiriciler": {
+   "B": "Yalnız z’yi (payı en küçük) en büyük sanıp x < y ilişkisini doğru bırakmış.",
+   "C": "z’yi x’ten büyük sanmış; 2012/2013 = 1 − 1/2013 olup x’ten uzaktır, 1’e yakın değildir.",
+   "D": "Payda büyüdükçe kesir küçülür diye ters düşünmüş.",
+   "E": "x ile y’nin yerini karıştırmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kesirlerin küçükten büyüğe sıralanışı.",
+  "bilgi": [
+   {
+    "ad": "Kesirleri karşılaştırma",
+    "ifade": "paydalar eşitlenir ya da ondalığa çevrilir. Örnek: 3/5 = 0,6 ve 5/8 = 0,625 → 3/5 < 5/8"
+   },
+   {
+    "ad": "1’e yakınlık",
+    "ifade": "pay, paydadan 1 eksikse n/(n+1) = 1 − 1/(n+1); payda büyüdükçe kesir 1’e yaklaşır. Örnek: 2/3 < 3/4 < 4/5"
+   }
+  ],
+  "ipuclari": [
+   "Her kesri 1 − 1/payda biçiminde yaz; çıkan 1/payda büyüdükçe kesir küçülür."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Biçime getir",
+    "aciklama": "Her kesir, 1’den payda bölü 1 çıkarılmış gibidir.",
+    "islem": "x = 1 − 1/2014 · y = 1 − 1/2015 · z = 1 − 1/2013"
+   },
+   {
+    "baslik": "Çıkarılanı karşılaştır",
+    "aciklama": "Payda büyüdükçe 1/payda küçülür.",
+    "islem": "1/2013 > 1/2014 > 1/2015"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "Çıkarılan büyükse kesir küçüktür.",
+    "islem": "z < x < y"
+   }
+  ],
+  "puf": "Payı paydadan 1 eksik olan kesirlerde payda büyüdükçe kesir büyür (1’e yaklaşır).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-02 (pay–payda farkı) · farkı 1 olan üç kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0009",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesir Karşılaştırma",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Üç kesrin ondalık karşılığını bularak öncüllü karşılaştırma ifadelerini değerlendirir.",
+  "tipId": "rsy-siralama",
+  "tip": "Kesir sıralama ve karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "a = 7/9, b = 9/11 ve c = 11/14\nolduğuna göre,\nI. a < b\nII. b < c\nIII. a < c\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü denetlememiş; a ≈ 0,778 < c ≈ 0,786.",
+   "B": "1’e tamamlayan kısımları (2/9, 2/11, 3/14) karşılaştırıp küçük olanı küçük kesir sanmış (ters yorum); sonuçta yalnız II doğru çıkmış.",
+   "C": "a < b < c sırası bekleyip I ve II’yi doğru saymış; III’ü ayrıca denetlememiş.",
+   "E": "Payları da paydaları da arttığı için kesirlerin arttığını sanıp hepsini doğru saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Kesirleri karşılaştırma",
+    "ifade": "paydalar eşitlenir ya da ondalığa çevrilir. Örnek: 3/5 = 0,6 ve 5/8 = 0,625 → 3/5 < 5/8"
+   }
+  ],
+  "ipuclari": [
+   "Üç kesri de iki basamağa kadar ondalığa çevirip sırala."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ondalığa çevir",
+    "aciklama": "Pay ÷ payda.",
+    "islem": "a ≈ 0,778 · b ≈ 0,818 · c ≈ 0,786"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "Küçükten büyüğe diz.",
+    "islem": "a < c < b"
+   },
+   {
+    "baslik": "İfadeleri denetle",
+    "aciklama": "I: a < b doğru · II: b < c yanlış · III: a < c doğru",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Öncüllü sorularda önce tüm değerleri aynı biçime getir, sonra ifadeleri tek tek denetle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-02 (rasyonel karşılaştırma + doğru/yanlış) · öncüllü üç kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0010",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Aralıktaki Sayılar",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "İki rasyonel sayı arasında kalan tam sayıları belirler.",
+  "tipId": "rsy-siralama",
+  "tip": "Kesir sıralama ve karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "−7/3 ile 19/4 rasyonel sayıları arasında kaç tane tam sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "6",
+   "C": "7",
+   "D": "8",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Negatif tarafı atlayıp yalnız 0, 1, 2, 3, 4’ü saymış.",
+   "B": "19/4 = 4,75 olduğu hâlde 4’ü dışarıda bırakmış (−2’den 3’e).",
+   "D": "−7/3’ü −3 gibi yuvarlayıp −3’ten başlamış.",
+   "E": "Uçları −3 ve 5 olarak yuvarlayıp bunları da saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "İki sayı arasındaki tam sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Tam sayılar",
+    "ifade": "…, −2, −1, 0, 1, 2, … sayılarıdır; −2,33 ile 4,75 arasındaki tam sayılar −2’den 4’e kadar gider"
+   }
+  ],
+  "ipuclari": [
+   "−7/3 ≈ −2,33 ve 19/4 = 4,75; bu iki sayı arasındaki tam sayıları sırayla yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ondalığa çevir",
+    "aciklama": "Uçların ondalık değeri.",
+    "islem": "−7/3 ≈ −2,33 · 19/4 = 4,75"
+   },
+   {
+    "baslik": "Tam sayıları yaz",
+    "aciklama": "−2,33’ten büyük en küçük tam sayı −2, 4,75’ten küçük en büyük tam sayı 4’tür.",
+    "islem": "−2, −1, 0, 1, 2, 3, 4"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Yedi tam sayı vardır.",
+    "islem": "7"
+   }
+  ],
+  "puf": "Uçları ondalığa çevirip aralığın içindeki tam sayıları sıralı yaz; 0’ı ve negatifleri unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-02 (aralık sayma) · negatif ve pozitif uç, tam sayı sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0011",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Sayı Doğrusu",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Farklı sayıda eş parçaya bölünmüş iki aralıktaki noktaların farkını bulur.",
+  "tipId": "rsy-dogru",
+  "tip": "Sayı doğrusu ve eşit aralıklara bölme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Sayı doğrusunda 0 ile 1 arası 5 eşit parçaya, 1 ile 2 arası ise 4 eşit parçaya bölünmüştür. A noktası 0’ın sağında ve 0’a 3 parça uzaklıkta, B noktası da 1’in sağında ve 1’e 3 parça uzaklıktadır.\nBuna göre B ile A noktaları arasındaki uzaklık (B − A) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−1,15",
+   "B": "0,15",
+   "C": "1",
+   "D": "1,15",
+   "E": "1,75"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1,15"
+  },
+  "celdiriciler": {
+   "B": "B’yi bulurken 1’i eklemeyi unutup 3/4 almış.",
+   "C": "1 ile 2 arasını da 5 eş parça sanıp B = 1 + 3/5 almış.",
+   "A": "Farkı ters yönde (A − B) hesaplamış.",
+   "E": "B’yi bulup A’yı çıkarmamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "A": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "B − A farkı.",
+  "bilgi": [
+   {
+    "ad": "Sayı doğrusunda eşit parça",
+    "ifade": "iki sayı arası n eş parçaya bölünürse bir parçanın uzunluğu (fark) ÷ n olur. Örnek: 0 ile 1 arası 4 eş parça → her parça 1/4"
+   }
+  ],
+  "ipuclari": [
+   "Her aralığın bir parçası farklı uzunluktadır; A ve B’yi ayrı ayrı bul, B için 1’i unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A noktası",
+    "aciklama": "0 ile 1 arası 5 eş parça, parça 1/5; 3 parça ileri.",
+    "islem": "A = 3 × 1/5 = 3/5"
+   },
+   {
+    "baslik": "B noktası",
+    "aciklama": "1 ile 2 arası 4 eş parça, parça 1/4; 3 parça ilerisi 1’e eklenir.",
+    "islem": "B = 1 + 3 × 1/4 = 7/4"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "Paydayı 20’de eşitle.",
+    "islem": "7/4 − 3/5 = 35/20 − 12/20 = 23/20 = 1,15"
+   }
+  ],
+  "puf": "Her aralığın parça uzunluğu kendi parça sayısına bağlıdır; ikinci aralıktaki noktaya başlangıç değerini eklemeyi unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-03 (sayı doğrusu) · iki aralık farklı parça sayısıyla, iki nokta arasındaki fark",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0012",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Eşit Aralıklar",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Eşit aralıklı noktaların uçları verildiğinde ara noktaları bulup işlem yapar.",
+  "tipId": "rsy-dogru",
+  "tip": "Sayı doğrusu ve eşit aralıklara bölme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Sayı doğrusunda A, B, C ve D noktaları bu sırayla ve eşit aralıklarla yerleşmiştir. A noktası −3/4’ü, D noktası 9/4’ü göstermektedir.\nBuna göre B ile C noktalarının gösterdiği sayıların çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−1,6875",
+   "B": "0",
+   "C": "0,3125",
+   "D": "1,5",
+   "E": "2,1875"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "0,3125"
+  },
+  "celdiriciler": {
+   "B": "A ile D arasını 4 eş parçaya bölünmüş sanıp B = 0 almış (çarpım 0).",
+   "D": "Çarpım yerine B ile C’nin toplamını bulmuş.",
+   "E": "A’yı +3/4 okuyup aralığı (9/4 − 3/4) ÷ 3 = 1/2 bulmuş; B = 5/4, C = 7/4.",
+   "A": "B ile C yerine A ile D’nin çarpımını almış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "B ve C’nin çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Sayı doğrusunda eşit parça",
+    "ifade": "iki sayı arası n eş parçaya bölünürse bir parçanın uzunluğu (fark) ÷ n olur. Örnek: 0 ile 1 arası 4 eş parça → her parça 1/4"
+   }
+  ],
+  "ipuclari": [
+   "A’dan D’ye üç eşit aralık vardır; bir aralığın uzunluğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam uzaklık",
+    "aciklama": "A’dan D’ye uzaklık.",
+    "islem": "9/4 − (−3/4) = 12/4 = 3"
+   },
+   {
+    "baslik": "Aralık uzunluğu",
+    "aciklama": "4 nokta arasında 3 eşit aralık vardır.",
+    "islem": "3 ÷ 3 = 1"
+   },
+   {
+    "baslik": "Noktaları yaz",
+    "aciklama": "A’ya aralık ekleyerek ilerle.",
+    "islem": "B = −3/4 + 1 = 1/4 · C = 1/4 + 1 = 5/4"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Paylar ve paydalar çarpılır.",
+    "islem": "1/4 × 5/4 = 5/16 = 0,3125"
+   }
+  ],
+  "puf": "Toplam uzaklığı aralık sayısına (n nokta arasında n − 1 aralık) bölerek bir aralığı bul, sonra noktaları sırayla yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-03 (eşit aralıklı noktalar) · negatif başlangıç, ara iki nokta çarpımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0013",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Ondalık Sayılar",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Parantezli ondalık ifadede çarpma, toplama ve bölmeyi doğru sırayla yapar.",
+  "tipId": "rsy-ondalik",
+  "tip": "Ondalık ve devirli ondalık sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(1,2 + 0,8 × 0,5) ÷ 0,04\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "11,2",
+   "C": "25",
+   "D": "40",
+   "E": "400"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "C": "Çarpmayı toplamadan önce yapmayıp soldan sağa gitmiş: (1,2 + 0,8) × 0,5.",
+   "A": "0,04 ile bölmeyi 0,4 ile bölme gibi yapmış (virgülü bir basamak eksik kaydırmış).",
+   "B": "Toplamın tamamını bölmeyip yalnız 0,4’ü 0,04’e bölmüş.",
+   "E": "Virgülü iki basamak yerine üç basamak kaydırarak 400 bulmuş."
+  },
+  "celTur": {
+   "C": "bilgi",
+   "A": "islem",
+   "B": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İşlemin sonucu.",
+  "bilgi": [
+   {
+    "ad": "Ondalık sayılarla işlem",
+    "ifade": "virgül yokmuş gibi işlem yapılır, virgül sonra yerleştirilir. Örnek: 0,3 × 0,04 = 3 × 4 = 12 → 0,012 · 0,6 ÷ 0,02 = 60 ÷ 2 = 30"
+   },
+   {
+    "ad": "İşlem önceliği",
+    "ifade": "önce parantez, sonra çarpma/bölme (soldan sağa), en son toplama/çıkarma yapılır. Örnek: 2 + 3 × 4 = 14"
+   }
+  ],
+  "ipuclari": [
+   "Önce parantezin içinde çarpmayı, sonra toplamayı yap; en son 0,04’e böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parantezde çarp",
+    "aciklama": "Çarpma toplamadan önce yapılır.",
+    "islem": "0,8 × 0,5 = 0,4"
+   },
+   {
+    "baslik": "Parantezde topla",
+    "aciklama": "Toplamı yap.",
+    "islem": "1,2 + 0,4 = 1,6"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "Virgülü iki basamak sağa kaydır: 160 ÷ 4.",
+    "islem": "1,6 ÷ 0,04 = 40"
+   }
+  ],
+  "puf": "Ondalık bölmede bölen tam sayı olana kadar iki sayıda da virgülü aynı kadar sağa kaydır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-04 (ondalık işlem) · parantez içinde çarpma ve toplama",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0014",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Devirli Ondalık",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Devirli ondalık sayıları kesre çevirip toplar.",
+  "tipId": "rsy-ondalik",
+  "tip": "Ondalık ve devirli ondalık sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x = 0,(6) ve y = 0,1(6)\n(Parantez içindeki rakamlar sonsuza kadar tekrar eder.)\nolduğuna göre x + y toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2/3",
+   "B": "19/25",
+   "C": "82/99",
+   "D": "5/6",
+   "E": "38/45"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5/6"
+  },
+  "celdiriciler": {
+   "B": "Devirli sayıları sonlu ondalık gibi 0,6 + 0,16 = 0,76 toplamış.",
+   "E": "0,1(6) sayısını 16/90 almış; ondalık kısımdaki 1’i çıkarmayı unutmuş.",
+   "C": "0,1(6) sayısını 16/99 almış.",
+   "A": "Yalnız x’i bulup y’yi toplamamış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "E": "islem",
+   "C": "islem",
+   "A": "dikkat"
+  },
+  "istenen": "x + y toplamı.",
+  "bilgi": [
+   {
+    "ad": "Devirli ondalık sayı",
+    "ifade": "0,(a) = a/9 · 0,(ab) = ab/99 · 0,a(b) = (ab − a)/90. Parantez içi tekrar eden kısımdır. Örnek: 0,(3) = 3/9 = 1/3 · 0,1(6) = (16 − 1)/90 = 1/6"
+   }
+  ],
+  "ipuclari": [
+   "0,(a) = a/9 ve 0,a(b) = (ab − a)/90 kuralıyla iki sayıyı kesre çevir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "x’i kesre çevir",
+    "aciklama": "Devreden tek rakam: payda 9.",
+    "islem": "0,(6) = 6/9 = 2/3"
+   },
+   {
+    "baslik": "y’yi kesre çevir",
+    "aciklama": "Devretmeyen kısım 1, devreden 6: pay 16 − 1, payda 90.",
+    "islem": "0,1(6) = 15/90 = 1/6"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Paydayı 6’da eşitle.",
+    "islem": "2/3 + 1/6 = 4/6 + 1/6 = 5/6"
+   }
+  ],
+  "puf": "Devirli sayıyı kesre çevirmeden toplama; 0,(ab) için 99, devretmeyen rakam varsa 90’lı payda kullan.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-04 (devirli ondalık) · 0,(a) ve 0,a(b) toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0015",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Devirli Ondalık",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Devirli ondalık sayıyı sadeleşmiş kesre çevirip pay ve paydasını toplar.",
+  "tipId": "rsy-ondalik",
+  "tip": "Ondalık ve devirli ondalık sayılar",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "0,(81) devirli ondalık sayısında parantez içindeki rakamlar sonsuza kadar tekrar eder. Bu sayı, m ile n aralarında asal pozitif tam sayılar olmak üzere m/n biçiminde yazılıyor.\nBuna göre m + n toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "19",
+   "C": "20",
+   "D": "180",
+   "E": "181"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "B": "0,(81)’i 81/90 = 9/10 alıp 9 + 10 bulmuş.",
+   "D": "Kesri sadeleştirmeden 81 + 99 toplamış.",
+   "E": "Devirli sayıyı sonlu ondalık sanıp 81/100 almış, 81 + 100 bulmuş.",
+   "A": "Yalnız payı (9) vermiş; pay ile paydanın toplamı isteniyor."
+  },
+  "celTur": {
+   "B": "islem",
+   "D": "dikkat",
+   "E": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "m + n toplamı.",
+  "bilgi": [
+   {
+    "ad": "Devirli ondalık sayı",
+    "ifade": "0,(a) = a/9 · 0,(ab) = ab/99 · 0,a(b) = (ab − a)/90. Parantez içi tekrar eden kısımdır. Örnek: 0,(3) = 3/9 = 1/3 · 0,1(6) = (16 − 1)/90 = 1/6"
+   },
+   {
+    "ad": "Aralarında asal",
+    "ifade": "1’den başka ortak böleni olmayan sayılar. Örnek: 9 ve 11 aralarında asaldır, 81 ve 99 değildir (ortak bölenleri 9)"
+   }
+  ],
+  "ipuclari": [
+   "0,(ab) = ab/99 kuralıyla kesre çevir ve tam sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesre çevir",
+    "aciklama": "İki rakam devrediyor: payda 99.",
+    "islem": "0,(81) = 81/99"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Pay ve paydayı ortak bölen 9’a böl.",
+    "islem": "81/99 = 9/11"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "m = 9, n = 11.",
+    "islem": "9 + 11 = 20"
+   }
+  ],
+  "puf": "Devirli sayıdan çıkan kesri her zaman sadeleştir; pay ve payda aralarında asal olmalıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-04 (devirli ondalık) · 0,(ab) sadeleşmiş kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0016",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Tanımsızlık",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Paydayı sıfır yapan değerleri bulup toplar.",
+  "tipId": "rsy-kosul",
+  "tip": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x gerçek sayı olmak üzere\n5/(x² − 4x + 3)\nifadesini tanımsız yapan x değerlerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−4",
+   "B": "1",
+   "C": "2",
+   "D": "3",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "Çarpanlara ayırırken işaretleri ters alıp (x + 1)(x + 3) yazmış; köklerin toplamı −4 olmuş.",
+   "D": "Yalnız x = 3 kökünü bulmuş.",
+   "B": "Yalnız x = 1 kökünü bulmuş.",
+   "C": "Köklerin ortalamasını almış (toplam yerine)."
+  },
+  "celTur": {
+   "A": "islem",
+   "D": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat"
+  },
+  "istenen": "Tanımsızlık değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Tanımsız ifade",
+    "ifade": "paydası 0 olan kesir tanımsızdır. Örnek: 5/(x − 3) ifadesi x = 3 için tanımsızdır"
+   },
+   {
+    "ad": "Çarpanlara ayırma",
+    "ifade": "x² − 4x + 3, toplamı −4 çarpımı 3 olan iki sayıyla (−1) ve (−3) yazılır: (x − 1)(x − 3)"
+   }
+  ],
+  "ipuclari": [
+   "Paydayı çarpanlarına ayır ve her çarpanı 0’a eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paydayı 0 yap",
+    "aciklama": "Tanımsız olması için payda 0 olmalı.",
+    "islem": "x² − 4x + 3 = 0"
+   },
+   {
+    "baslik": "Çarpanlara ayır",
+    "aciklama": "Çarpımı 3, toplamı −4 olan sayılar −1 ve −3.",
+    "islem": "(x − 1)(x − 3) = 0"
+   },
+   {
+    "baslik": "Kökleri topla",
+    "aciklama": "Her çarpan sırayla 0’a eşitlenir.",
+    "islem": "x = 1 veya x = 3 · 1 + 3 = 4"
+   }
+  ],
+  "puf": "Tanımsızlık = payda 0; paydayı çarpanlarına ayırıp her çarpanı sıfıra eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-05 (tanımsızlık) · ikinci dereceden payda",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0017",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesrin Değeri",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Bir kesrin tam sayı olması için payı bölen biçimine getirip tüm n değerlerini toplar.",
+  "tipId": "rsy-kosul",
+  "tip": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "n bir tam sayı olmak üzere (3n + 14)/(n + 2) ifadesi bir tam sayıdır.\nBuna göre n’in alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−24",
+   "B": "−16",
+   "C": "7",
+   "D": "8",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−16"
+  },
+  "celdiriciler": {
+   "D": "Yalnız pozitif n değerlerini (2 ve 6) toplamış.",
+   "C": "n + 2 pozitif olan değerleri (−1, 0, 2, 6) toplamış; negatif bölenleri atlamış.",
+   "A": "Yalnız negatif n değerlerini toplamış.",
+   "E": "Doğru toplamı −16 yerine 16 yazmış (işareti atlamış)."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "C": "dikkat",
+   "A": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "n değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Tam sayı değeri",
+    "ifade": "a/b bir tam sayıysa b, a’nın bölenidir. Örnek: 12/b tam sayı → b ∈ {±1, ±2, ±3, ±4, ±6, ±12}"
+   }
+  ],
+  "ipuclari": [
+   "3n + 14 = 3 × (n + 2) + 8 yazıp kesri 3 + 8/(n + 2) biçimine getir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesri ayır",
+    "aciklama": "Payı payda cinsinden yaz.",
+    "islem": "(3n + 14)/(n + 2) = 3 + 8/(n + 2)"
+   },
+   {
+    "baslik": "Bölenleri yaz",
+    "aciklama": "8/(n + 2) tam sayı ise n + 2, 8’in böleni olmalı (negatifler dahil).",
+    "islem": "n + 2 ∈ {±1, ±2, ±4, ±8}"
+   },
+   {
+    "baslik": "n değerleri",
+    "aciklama": "Her bölenden 2 çıkar.",
+    "islem": "n ∈ {−1, 0, 2, 6, −3, −4, −6, −10}"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Pozitif ve negatifleri topla.",
+    "islem": "(−1 + 0 + 2 + 6) + (−3 − 4 − 6 − 10) = 7 − 23 = −16"
+   }
+  ],
+  "puf": "Kesri “tam kısım + kalan/payda” biçimine getir; payda kalanın böleni olmalıdır, negatif bölenleri de dene.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-05 (tam sayı değeri) · (3n + 14)/(n + 2), negatif bölenler dahil",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0018",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kesir Karşılaştırma",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Pozitif tam sayılarla yazılan kesirlerde pay ve paydaya sayı eklemenin etkisini değerlendirir.",
+  "tipId": "rsy-siralama",
+  "tip": "Kesir sıralama ve karşılaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "a ve b, a < b olan pozitif tam sayılardır.\nBuna göre,\nI. (a + 1)/(b + 1) > a/b\nII. a/(b + 1) > a/b\nIII. a/b > b/a\nifadelerinden hangileri her zaman doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "Payda büyüyünce kesrin büyüdüğünü sanıp II’yi doğru, ekleme sonrası kesrin küçüldüğünü sanıp I’i yanlış saymış.",
+   "C": "II’yi doğru saymış; paydaya 1 eklemenin kesri büyüttüğünü sanmış.",
+   "D": "III’ü doğru saymış; a < b iken a/b < 1 < b/a olduğunu görmemiş.",
+   "E": "Paydaya sayı eklemenin kesri küçülttüğünü ve a/b < 1 < b/a olduğunu görmemiş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Her zaman doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Kesirleri karşılaştırma",
+    "ifade": "paydalar eşitlenir ya da ondalığa çevrilir. Örnek: 3/5 = 0,6 ve 5/8 = 0,625 → 3/5 < 5/8"
+   }
+  ],
+  "ipuclari": [
+   "a = 2, b = 3 gibi küçük bir örnekle üç ifadeyi dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Örnek dene",
+    "aciklama": "a = 2, b = 3 için a/b = 2/3.",
+    "islem": "I: 3/4 > 2/3 doğru · II: 2/4 > 2/3 yanlış · III: 2/3 > 3/2 yanlış"
+   },
+   {
+    "baslik": "I’i doğrula",
+    "aciklama": "a < b iken payına ve paydasına 1 eklenen kesir 1’e yaklaşır, yani büyür.",
+    "islem": "(a + 1)/(b + 1) > a/b her zaman"
+   },
+   {
+    "baslik": "II ve III’ü çürüt",
+    "aciklama": "Payda büyüyünce kesir küçülür; a < b ise a/b < 1 < b/a.",
+    "islem": "II ve III yanlış → Yalnız I"
+   }
+  ],
+  "puf": "“Her zaman doğru” için tek karşı örnek ifadeyi çürütür; doğru görünenleri genel olarak gerekçelendir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-02 (rasyonel karşılaştırma + doğru/yanlış) · a < b iken pay–payda değişimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0019",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Günlük Ölçüm",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Kesir farkına karşılık gelen miktardan bütünü bulur.",
+  "tipId": "rsy-olcum",
+  "tip": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir su deposunun 2/5’i doludur. Depoya 36 litre su eklendiğinde deponun 7/10’u doluyor.\nBuna göre bu deponun tamamı kaç litre su alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10,8",
+   "B": "84",
+   "C": "90",
+   "D": "120",
+   "E": "156"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "C": "36 litreyi yalnız başlangıçtaki 2/5’e karşılık sanıp 36 ÷ (2/5) yapmış.",
+   "A": "36 litreyi kesirle çarpıp 3/10’un kendisini bulmuş (bölmesi gerekirken).",
+   "E": "Kapasiteyi 120 bulduktan sonra eklenen 36 litreyi bir de üstüne katmış.",
+   "B": "Kapasiteyi bulduktan sonra 36 litreyi çıkarmış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "A": "bilgi",
+   "E": "dikkat",
+   "B": "dikkat"
+  },
+  "istenen": "Deponun kapasitesi (litre).",
+  "bilgi": [
+   {
+    "ad": "Ters kesir",
+    "ifade": "a/b kesrinin tersi b/a’dır; bir sayıyı kesre bölmek, kesrin tersiyle çarpmaktır. Örnek: 6 ÷ (2/3) = 6 × 3/2 = 9"
+   },
+   {
+    "ad": "Parça ve bütün",
+    "ifade": "bir bütünün a/b’si P ise bütün = P ÷ (a/b). Örnek: bütünün 1/4’ü 10 ise bütün 10 × 4 = 40"
+   }
+  ],
+  "ipuclari": [
+   "Eklenen 36 litre, deponun kaçta kaçına denk geliyor? Kesirleri çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "Eklenen su, iki doluluk oranının farkıdır.",
+    "islem": "7/10 − 2/5 = 7/10 − 4/10 = 3/10"
+   },
+   {
+    "baslik": "Eşitlik kur",
+    "aciklama": "Deponun 3/10’u 36 litredir.",
+    "islem": "(3/10) × T = 36"
+   },
+   {
+    "baslik": "Bütünü bul",
+    "aciklama": "36’yı kesrin tersiyle çarp.",
+    "islem": "T = 36 × 10/3 = 120"
+   }
+  ],
+  "puf": "İki doluluk oranının farkı, eklenen miktarın bütüne oranıdır; bütünü bulmak için miktarı o kesre böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-06 (günlük ölçüm) · depoya eklenen su, kesir farkından bütün",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0020",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Günlük Ölçüm",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Dengedeki terazi eşitliğinden eşit ağırlıklı nesnenin ağırlığını bulur.",
+  "tipId": "rsy-olcum",
+  "tip": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Dengede duran bir terazinin sol kefesinde 4 elma ile 1/4 kg’lık bir ağırlık, sağ kefesinde ise 2 elma ile 1,25 kg’lık bir ağırlık vardır. Elmaların hepsi birbiriyle aynı ağırlıktadır.\nBuna göre 5 elma kaç kg çeker?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,25",
+   "B": "2,5",
+   "C": "3,125",
+   "D": "3,75",
+   "E": "5"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "2,5"
+  },
+  "celdiriciler": {
+   "A": "2 elmayı çıkarmak yerine ekleyip 6e = 1,5 yazmış, e = 0,25 bulmuş.",
+   "D": "1/4’ü yanlış tarafa geçirip 2e = 1,25 + 0,25 = 1,5 yazmış, e = 0,75 bulmuş.",
+   "E": "2e = 1 bulup 2’ye bölmeyi atlayarak e = 1 kg almış.",
+   "C": "1/4 kg’lık ağırlığı hesaba katmayıp 2e = 1,25 almış (e = 0,625)."
+  },
+  "celTur": {
+   "A": "islem",
+   "D": "islem",
+   "E": "islem",
+   "C": "dikkat"
+  },
+  "istenen": "5 elmanın ağırlığı (kg).",
+  "bilgi": [
+   {
+    "ad": "Denge eşitliği",
+    "ifade": "dengedeki terazide iki kefenin ağırlığı eşittir. Her iki taraftan aynı değer çıkarılınca denge bozulmaz"
+   }
+  ],
+  "ipuclari": [
+   "Bir elmanın ağırlığına e de; iki kefenin eşitliğini yazıp e’yi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği yaz",
+    "aciklama": "Bir elma e kg olsun.",
+    "islem": "4e + 1/4 = 2e + 5/4"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "İki taraftan 2e ve 1/4 çıkar.",
+    "islem": "2e = 5/4 − 1/4 = 1"
+   },
+   {
+    "baslik": "e ve sonucu bul",
+    "aciklama": "Bir elma 1/2 kg; 5 elma bunun 5 katıdır.",
+    "islem": "e = 1/2 · 5e = 5/2 = 2,5"
+   }
+  ],
+  "puf": "Terazi sorularında iki kefeyi eşitle, ortak terimleri iki taraftan da çıkararak bilinmeyeni yalnız bırak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-06 (günlük ölçüm) · terazi dengesi, bilinmeyenli kesirli ağırlık",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0021",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Basit ve Bileşik Kesir",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Payı paydasından büyük bir kesir ile sadeleşmeyen basit kesir koşullarını birlikte sağlayan tam sayıları belirler.",
+  "tipId": "rsy-kosul",
+  "tip": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x bir tam sayı olmak üzere 5/(x − 2) kesrinin payı da paydası da pozitiftir ve payı paydasından büyüktür. x/9 kesri ise sadeleşmeyen bir basit kesirdir.\nBuna göre x’in alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "16",
+   "C": "18",
+   "D": "24",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "B": "Pay > payda yerine pay ≥ payda alıp x = 7’yi de eklemiş (4 + 5 + 7).",
+   "C": "Pay > payda koşulunu doğru kullanmış ama x/9’un sadeleşmeyen olma koşulunu atlayıp 3, 4, 5, 6’yı toplamış.",
+   "D": "x/9 koşulunu uygulayıp 5/(x − 2)’nin payının paydadan büyük olması koşulunu hiç kullanmamış (4 + 5 + 7 + 8).",
+   "E": "Pay ≥ payda alıp sadeleşmeme koşulunu da atlayarak 3, 4, 5, 6, 7’yi toplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "x değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Basit ve bileşik kesir",
+    "ifade": "payı paydasından küçük olan kesir basit kesirdir (3/7); payı paydasından büyük ya da eşit olan kesir bileşik kesirdir (7/3). Sadeleşmeyen: pay ve payda aralarında asal (3/7)"
+   }
+  ],
+  "ipuclari": [
+   "İlk koşul x için bir aralık verir; bu aralıktaki değerlerden paydadaki sayıyla sadeleşenleri ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci koşul",
+    "aciklama": "Payda pozitif ve pay paydadan büyük olmalı.",
+    "islem": "0 < x − 2 < 5 → 3 ≤ x ≤ 6"
+   },
+   {
+    "baslik": "Basit kesir koşulu",
+    "aciklama": "x/9 basit ise x < 9; bu aralıkta zaten sağlanır.",
+    "islem": "x < 9"
+   },
+   {
+    "baslik": "Sadeleşmeme koşulu",
+    "aciklama": "x ile 9 aralarında asal olmalı; 3 ve 6, 9 ile sadeleşir.",
+    "islem": "3 ve 6 elenir → x ∈ {4, 5}"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Kalan değerleri topla.",
+    "islem": "4 + 5 = 9"
+   }
+  ],
+  "puf": "Kesir koşullarını tek tek aralığa çevir, sonra “sadeleşmeyen” gibi ek koşulla taranan değerleri ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-05 (basit/bileşik kesir) · payı paydasından büyük kesir + sadeleşmeyen basit kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0022",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Devirli Ondalık",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "İki devirli ondalık eşitliğini kesre çevirip rakamların toplam ve farkını bularak çarpımı hesaplar.",
+  "tipId": "rsy-ondalik",
+  "tip": "Ondalık ve devirli ondalık sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a ve b birer rakam olmak üzere\n0,(ab) + 0,(ba) = 1,(2)\n0,(ab) − 0,(ba) = 0,(27)\n(Parantez içindeki rakamlar sonsuza kadar tekrar eder.)\nolduğuna göre a × b çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "7",
+   "D": "11",
+   "E": "28"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "28"
+  },
+  "celdiriciler": {
+   "D": "a + b = 11’i bulup durmuş; çarpım isteniyor.",
+   "A": "a − b farkını (3) çarpım sanmış.",
+   "C": "a’yı bulup bırakmış.",
+   "B": "b’yi bulup bırakmış."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "A": "dikkat",
+   "C": "dikkat",
+   "B": "dikkat"
+  },
+  "istenen": "a × b çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Devirli ondalık sayı",
+    "ifade": "0,(a) = a/9 · 0,(ab) = ab/99 · 0,a(b) = (ab − a)/90. Parantez içi tekrar eden kısımdır. Örnek: 0,(3) = 3/9 = 1/3 · 0,1(6) = (16 − 1)/90 = 1/6"
+   },
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "ab = 10 × a + b. Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "0,(ab) = (10 × a + b)/99 olarak yaz; toplamda 11 × (a + b), farkta 9 × (a − b) çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitlikleri kesre çevir",
+    "aciklama": "1,(2) = 1 + 2/9 = 11/9; 0,(27) = 27/99.",
+    "islem": "(ab + ba)/99 = 11/9 · (ab − ba)/99 = 27/99"
+   },
+   {
+    "baslik": "Toplamdan",
+    "aciklama": "ab + ba = 11 × (a + b) olduğundan 11 × (a + b) = 121.",
+    "islem": "a + b = 11"
+   },
+   {
+    "baslik": "Farktan",
+    "aciklama": "ab − ba = 9 × (a − b) = 27.",
+    "islem": "a − b = 3"
+   },
+   {
+    "baslik": "Rakamları bul",
+    "aciklama": "İki denklemi çöz, çarp.",
+    "islem": "a = 7, b = 4 · a × b = 28"
+   }
+  ],
+  "puf": "ab ile ba’nın toplamı 11 × (a + b), farkı 9 × (a − b)’dir; devirli sayılarda bu çözümleme işi kısaltır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-04 (devirli ondalık) · 0,(ab) ve 0,(ba) toplam–farkı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0023",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Tanımlı İşlem",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Tersler toplamı biçiminde tanımlanan işlemi iki parantezli ifadede uygular.",
+  "tipId": "rsy-tanimli",
+  "tip": "Tanımlı işlem",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Sıfırdan farklı iki rasyonel sayı için\nm ⊙ n = 1/m + 1/n\nişlemi tanımlanıyor. Örneğin 2 ⊙ 4 = 1/2 + 1/4 = 3/4’tür.\nBuna göre (3 ⊙ 6) ⊙ (4 ⊙ 12) işleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5/6",
+   "B": "6/5",
+   "C": "9/4",
+   "D": "5",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Son adımda ⊙ yerine toplama yapıp 1/2 + 1/3 almış.",
+   "B": "Son adımda tanımı 1/(m + n) gibi uygulayıp 1/(1/2 + 1/3) = 6/5 bulmuş.",
+   "C": "4 ⊙ 12 işlemini yapmayıp ikinci işlenen olarak yalnız 4’ü alıp (3 ⊙ 6) ⊙ 4 hesaplamış.",
+   "E": "Son adımda tersleri toplamak yerine çarpıp 2 × 3 = 6 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "(3 ⊙ 6) ⊙ (4 ⊙ 12)’nin değeri.",
+  "bilgi": [
+   {
+    "ad": "Ters kesir",
+    "ifade": "a/b kesrinin tersi b/a’dır; bir sayıyı kesre bölmek, kesrin tersiyle çarpmaktır. Örnek: 6 ÷ (2/3) = 6 × 3/2 = 9"
+   },
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "soruda verilen kural, işlenen sayılar yerine konarak uygulanır. Örnek: m ⊙ n = 1/m + 1/n ise 5 ⊙ 10 = 1/5 + 1/10 = 3/10"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki parantezin içini ayrı ayrı hesapla; çıkan sonuçlar son işlemin işlenenleri olur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci parantez",
+    "aciklama": "Kuralı m = 3, n = 6 için uygula.",
+    "islem": "3 ⊙ 6 = 1/3 + 1/6 = 1/2"
+   },
+   {
+    "baslik": "İkinci parantez",
+    "aciklama": "Kuralı m = 4, n = 12 için uygula.",
+    "islem": "4 ⊙ 12 = 1/4 + 1/12 = 1/3"
+   },
+   {
+    "baslik": "Son işlem",
+    "aciklama": "İşlenenler artık 1/2 ve 1/3’tür; her birinin tersi alınır.",
+    "islem": "(1/2) ⊙ (1/3) = 1/(1/2) + 1/(1/3) = 2 + 3"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Toplamı yaz.",
+    "islem": "5"
+   }
+  ],
+  "puf": "Tanımlı işlemde parantezleri ayrı ayrı hesapla, sonuçları son adımın işlenenleri olarak aynen yerleştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-07 (tanımlı işlem) · m ⊙ n = 1/m + 1/n, iki parantezin birleşimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0024",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Kutulara Yerleştirme",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Dört rakamı iki kesirde yerleştirerek toplamı en küçük yapan düzeni bulur.",
+  "tipId": "rsy-yerlestirme",
+  "tip": "Kutulara yerleştirme ve rasyonel gruplama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki işlemde her kutuya 2, 3, 5 ve 7 rakamlarından biri, her rakam birer kez kullanılmak üzere yazılıyor:\n□/□ + □/□\nBuna göre bu işlemin sonucu en az kaç olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "29/35",
+   "B": "31/35",
+   "C": "29/21",
+   "D": "31/14",
+   "E": "31/6"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "29/35"
+  },
+  "celdiriciler": {
+   "B": "Küçük sayıları pay yapmış ama eşleştirmeyi ters kurup 2/7 + 3/5 almış (31/35).",
+   "C": "Küçük sayıları (2 ve 5) pay, 3 ve 7’yi payda yapıp 2/3 + 5/7 almış.",
+   "D": "3/2 + 5/7 yazarak payı büyük kesirleri karıştırmış; paydaya küçük rakam koymuş.",
+   "E": "“En az” yerine “en çok” okuyup 7/2 + 5/3 yazmış."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İşlemin alabileceği en küçük değer.",
+  "bilgi": [
+   {
+    "ad": "Kesirle toplama",
+    "ifade": "paydalar eşitlenerek pay pay ile toplanır. Örnek: 1/2 + 1/3 = 3/6 + 2/6 = 5/6"
+   },
+   {
+    "ad": "Kesirleri karşılaştırma",
+    "ifade": "paydalar eşitlenir ya da ondalığa çevrilir. Örnek: 3/5 = 0,6 ve 5/8 = 0,625 → 3/5 < 5/8"
+   }
+  ],
+  "ipuclari": [
+   "Toplamın küçük olması için pay mı, payda mı büyük olmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Pay ve paydaları seç",
+    "aciklama": "Kesirler küçük olsun diye küçük rakamlar (2, 3) paya, büyük rakamlar (5, 7) paydaya gider.",
+    "islem": "paylar: 2, 3 · paydalar: 5, 7"
+   },
+   {
+    "baslik": "Eşleştirmeleri dene",
+    "aciklama": "Hangi pay hangi paydanın üstünde olacak? İki durum var.",
+    "islem": "2/5 + 3/7 · 2/7 + 3/5"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Ortak payda 35.",
+    "islem": "2/5 + 3/7 = 14/35 + 15/35 = 29/35 · 2/7 + 3/5 = 10/35 + 21/35 = 31/35"
+   },
+   {
+    "baslik": "Karşılaştır",
+    "aciklama": "Küçük olanı seç.",
+    "islem": "29/35 en küçüktür"
+   }
+  ],
+  "puf": "Toplamı küçültmek için payları küçük, paydaları büyük seç; aynı rakam kümesinde eşleştirmeleri hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-08 (kutulara yerleştirme) · en küçük toplam için rakam yerleştirme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0025",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Gösterge Okuma",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Bölmeli yakıt göstergesi ve ikmal bilgisinden harcanan yakıtı bulup yol uzunluğuna çevirir.",
+  "tipId": "rsy-olcum",
+  "tip": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir aracın 48 litrelik yakıt deposunun göstergesi, boş ile dolu arasında 8 eş bölmeye ayrılmıştır. Yola çıkılırken gösterge 5 bölmeyi göstermektedir. Yolculuk sırasında depoya bir kez 12 litre yakıt eklenmiş, başka ikmal yapılmamıştır; yolculuk sonunda gösterge 2 bölmeyi göstermektedir. Araç her 100 km’de 7,5 litre yakıt harcamaktadır.\nBuna göre araç bu yolculukta kaç km yol almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "80",
+   "B": "225",
+   "C": "240",
+   "D": "320",
+   "E": "400"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "400"
+  },
+  "celdiriciler": {
+   "A": "Eklenen 12 litreyi ve gösterge farkını yanlış birleştirip 6 L bulmuş (18 − 12).",
+   "C": "Eklenen 12 litreyi hesaba katmamış; yalnız gösterge farkından 18 L bulmuş.",
+   "B": "30 litreyi 7,5 ile çarpmış (7,5’e bölmesi gerekirdi).",
+   "D": "Yolun sonunda kalan 2 bölmeyi (12 L) kullanılan yakıt sanıp eklenen 12 L ile toplamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "B": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "Alınan yol (km).",
+  "bilgi": [
+   {
+    "ad": "Bir bölmenin değeri",
+    "ifade": "iki işaret arasındaki değer farkı ÷ aradaki bölme sayısı. Örnek: 48 L’lik depo 8 bölmeye ayrılırsa bir bölme 48 ÷ 8 = 6 L"
+   },
+   {
+    "ad": "Oran kurma",
+    "ifade": "100 km’de 7,5 L harcanıyorsa t litre harcamak için yol = t ÷ 7,5 × 100 km. Örnek: 15 L → 15 ÷ 7,5 × 100 = 200 km"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıç ile bitiş arasındaki yakıt azalmasını bul; eklenen yakıt da harcanmış yakıta katılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir bölmenin değeri",
+    "aciklama": "48 litre 8 eş bölmeye ayrılmıştır.",
+    "islem": "48 ÷ 8 = 6 litre"
+   },
+   {
+    "baslik": "Göstergedeki azalma",
+    "aciklama": "Gösterge 5 bölmeden 2 bölmeye düşmüştür.",
+    "islem": "5 − 2 = 3 bölme = 3 × 6 = 18 litre"
+   },
+   {
+    "baslik": "Eklenen yakıt",
+    "aciklama": "Depoya yolda 12 litre eklendiği için harcanan yakıt, azalmadan 12 litre fazladır.",
+    "islem": "18 + 12 = 30 litre"
+   },
+   {
+    "baslik": "Yola çevir",
+    "aciklama": "100 km’de 7,5 litre harcandığına göre 30 litre kaç km yoldur?",
+    "islem": "30 ÷ 7,5 = 4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "4 tane 100 km’lik yol.",
+    "islem": "4 × 100 = 400 km"
+   }
+  ],
+  "puf": "Gösterge sorularında harcanan yakıt = göstergedeki azalma + yolda eklenen yakıttır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-06 (günlük ölçüm) · bölmeli yakıt göstergesi, yolda ikmal, tüketim oranı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0026",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Bileşik Kesir",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Merdiven biçimindeki kesir denkleminde bilinmeyeni dıştan içe çözer.",
+  "tipId": "rsy-islem",
+  "tip": "Dört işlem ve işlem önceliği",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "2 + 1/(1 + 1/(x − 1/2)) = 7/3\neşitliğini sağlayan x değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−1",
+   "B": "0",
+   "C": "1/2",
+   "D": "5/6",
+   "E": "1"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1"
+  },
+  "celdiriciler": {
+   "A": "1/(1 + u) = 1/3 eşitliğinden 1 + u = 1/3 alıp u = −2/3, x = −1 bulmuş (ters almayı hatalı yapmış).",
+   "C": "x − 1/2 = 1/2 bulup 1/2’yi eklemeyi unutarak x = 1/2 yazmış.",
+   "D": "1 + u = 3’ten u = 3 alıp x − 1/2 = 1/3 yazmış (1’i çıkarmamış), x = 5/6.",
+   "B": "x − 1/2 = 1/2’yi doğru bulmuş ama x’i 1/2 − 1/2 = 0 hesaplamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "islem",
+   "B": "islem"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "Ters kesir",
+    "ifade": "a/b kesrinin tersi b/a’dır; bir sayıyı kesre bölmek, kesrin tersiyle çarpmaktır. Örnek: 6 ÷ (2/3) = 6 × 3/2 = 9"
+   }
+  ],
+  "ipuclari": [
+   "Dıştan içe git: önce 2’yi çıkar, sonra tersleri al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dıştaki 2’yi çıkar",
+    "aciklama": "Eşitliğin iki yanından 2 çıkar.",
+    "islem": "1/(1 + 1/(x − 1/2)) = 7/3 − 2 = 1/3"
+   },
+   {
+    "baslik": "Ters al",
+    "aciklama": "Bir kesir 1/3 ise paydası 3’tür.",
+    "islem": "1 + 1/(x − 1/2) = 3"
+   },
+   {
+    "baslik": "1’i çıkar ve ters al",
+    "aciklama": "1’i çıkarınca 1/(x − 1/2) = 2 olur; tersini alınca x − 1/2 = 1/2 bulunur.",
+    "islem": "1 + 1/(x − 1/2) = 3 · 1/(x − 1/2) = 2 · x − 1/2 = 1/2"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "1/2 ekle.",
+    "islem": "x = 1"
+   }
+  ],
+  "puf": "İç içe kesir denkleminde dıştaki işlemleri tersleriyle sırayla kaldır; her adımda eşitliğin iki yanına aynı işlemi uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-01 (merdiven kesir) · bilinmeyen en içte, dıştan içe çözüm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rasyonel-0027",
+  "ders": "TYT Matematik",
+  "konu": "Rasyonel Sayılar · Rasyonel Gruplama",
+  "k": "mat|Rasyonel Sayılar",
+  "kazanim": "Kesirlerden toplamı 1 olan grupları sistemli bulur.",
+  "tipId": "rsy-yerlestirme",
+  "tip": "Kutulara yerleştirme ve rasyonel gruplama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bir torbada 1/2, 1/3, 1/4, 1/6 ve 1/12 yazılı beş kart vardır. Üzerindeki sayıların toplamı 1 olan her farklı kart grubu için gruptaki kart sayısı bir listeye yazılıyor.\nBuna göre listedeki sayıların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4",
+   "D": "5",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Toplamı 1 olan grupların sayısını (2) vermiş; listedeki sayıların toplamı isteniyor.",
+   "B": "Yalnız üç kartlı grubu (1/2 + 1/3 + 1/6) bulmuş.",
+   "C": "Yalnız dört kartlı grubu bulmuş.",
+   "D": "İki grupta geçen kartların birleşimini (tüm 5 kart) sayıp 5 yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Listedeki sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Kesirle toplama",
+    "ifade": "paydalar eşitlenerek pay pay ile toplanır. Örnek: 1/2 + 1/3 = 3/6 + 2/6 = 5/6"
+   }
+  ],
+  "ipuclari": [
+   "Beş kartın tüm toplamını bul; 1’e ulaşmak için dışarıda kalması gereken kartların toplamı ne olmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm toplam",
+    "aciklama": "Paydayı 12’de eşitle.",
+    "islem": "6/12 + 4/12 + 3/12 + 2/12 + 1/12 = 16/12 = 4/3"
+   },
+   {
+    "baslik": "Dışarıda kalan",
+    "aciklama": "Toplamı 1 yapmak için dışarıda kalan kartların toplamı 4/3 − 1 = 1/3 olmalı.",
+    "islem": "dışarıda kalan toplam = 4/12"
+   },
+   {
+    "baslik": "Dışarıdakileri bul",
+    "aciklama": "Toplamı 4/12 olan gruplar.",
+    "islem": "{1/3} ya da {1/4, 1/12}"
+   },
+   {
+    "baslik": "Grupları yaz",
+    "aciklama": "Kalan kartlar bir grup oluşturur.",
+    "islem": "{1/2, 1/4, 1/6, 1/12}: 4 kart · {1/2, 1/3, 1/6}: 3 kart → 3 + 4 = 7"
+   }
+  ],
+  "puf": "Toplamı verilen gruplarda, tüm toplamdan farkı kadar olan “dışarıda kalan” grubu bulmak aramayı kısaltır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RSYN-08 (rasyonel gruplama) · birim kesirlerden toplamı 1 olan gruplar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,135 @@
+{
+ "konu": "Basit Eşitsizlikler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ESZB-01",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Birinci dereceden eşitsizlik çözümü",
+   "fikir": "Eşitsizlik taşıma ve negatif sayıya bölme kuralıyla çözülür; sistem ya da çift taraflı biçimde kesişim alınıp tam sayı değerleri toplanır ya da sayılır.",
+   "tuzak": "Negatife bölünce işareti çevirmemek; uç noktayı (< ve ≤) yanlış dahil etmek; sistemde birleşim ile kesişimi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ezb-cozum",
+   "tip": "Eşitsizlik çözümü ve tam sayı değerleri",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ESZB-02",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Aralık işlemleri",
+   "fikir": "a < x < b ve c < y < d iken x + y, x − y, 2x − 3y gibi ifadelerin alt ve üst sınırı bulunur; açık uçlar nedeniyle en büyük ve en küçük tam sayı ya da tam sayı adedi hesaplanır.",
+   "tuzak": "Çıkarmada üst sınırdan üst sınırı çıkarmak; uç değeri dahil saymak; x ve y’yi birbirinden bağımsız sanıp bağımlı ifadeyi ayrı ayrı sınırlamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "ezb-aralik",
+   "tip": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ESZB-03",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Eşitsizlikle sıralama",
+   "fikir": "a < b < 0 gibi verilen sıralamada 1/a, a², a·b ya da ifadelerin büyüklüğü işaret ve yön kuralıyla karşılaştırılır; öncüllü ve zincir biçiminde sorulur.",
+   "tuzak": "Negatiflerde kare ve terslerde sıralamanın ters döneceğini unutmak; tek bir sayısal örnekle “kesinlikle” sonucuna varmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ezb-siralama",
+   "tip": "Eşitsizliklerde sıralama ve kesinlikle doğru ifadeler",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ESZB-04",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Eşitsizlikle modelleme",
+   "fikir": "Bütçe, kapasite ya da iki tarife karşılaştırması eşitsizliğe çevrilir; adet olan bilinmeyen için tam sayıya yuvarlanır ve kısıtlar birlikte düşünülür.",
+   "tuzak": "Eşitlik durumunda “fazla/az” ayrımını karıştırmak; yuvarlamayı yanlış yöne yapmak; sabit ücreti hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ezb-model",
+   "tip": "Eşitsizlikle modelleme (bütçe, kapasite, tarife)",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ESZB-05",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "0 < x < 1 için kare, kök ve ters",
+   "fikir": "0 ile 1 arasındaki x için x, x², √x ve 1/x sayıları sıralanır; bir sayıyla örnek denemek yerine işleme göre büyüyen ya da küçülen sayı belirlenir.",
+   "tuzak": "x² değerini x’ten büyük sanmak; 1/x’i 1’den küçük sanmak; kökün büyütmesini unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ezb-kare",
+   "tip": "Kare, kök ve ters ile sıralama (0 < x < 1)",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ESZB-06",
+   "konu": "Basit Eşitsizlikler",
+   "alt": "Tanımlı işlem ve eşitsizlik",
+   "fikir": "Yeni tanımlanan bir işlemin sonucu aralık bilgisinden sınırlanır; ifade değeri tam sayı adedi ya da sınırı sorulur.",
+   "tuzak": "Tanımı karıştırmak; açık uçları dahil saymak; uç sayısını fark almakla bulmak (+1/−1 hatası).",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ezb-yeni",
+   "tip": "Tanımlı işlemle aralık problemi",
+   "kaynak": "ÖSYM 2018–2026 (eşitsizlik, aralık, sıralama) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ezb-cozum",
+   "ad": "Eşitsizlik çözümü ve tam sayı değerleri",
+   "kartlar": [
+    "K-ESZB-01"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "ezb-aralik",
+   "ad": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+   "kartlar": [
+    "K-ESZB-02"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "ezb-siralama",
+   "ad": "Eşitsizliklerde sıralama ve kesinlikle doğru ifadeler",
+   "kartlar": [
+    "K-ESZB-03"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "ezb-model",
+   "ad": "Eşitsizlikle modelleme (bütçe, kapasite, tarife)",
+   "kartlar": [
+    "K-ESZB-04"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "ezb-kare",
+   "ad": "Kare, kök ve ters ile sıralama (0 < x < 1)",
+   "kartlar": [
+    "K-ESZB-05"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  },
+  {
+   "tipId": "ezb-yeni",
+   "ad": "Tanımlı işlemle aralık problemi",
+   "kartlar": [
+    "K-ESZB-06"
+   ],
+   "uygulamaKonu": "mat|Basit Eşitsizlikler"
+  }
+ ]
+}

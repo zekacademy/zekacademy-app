@@ -1,0 +1,135 @@
+{
+ "konu": "Mutlak Değer",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-MTDB-01",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak değerli ifadeyi işaretine göre açma",
+   "fikir": "Değişkenin aralığı verildiğinde her mutlak değerin içindeki ifadenin işareti belirlenip ifade açılır ve sadeleştirilir.",
+   "tuzak": "Negatif işaretli ifadede parantez kullanmamak; içeriğin işaretini yanlış belirlemek.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "mdb-ac",
+   "tip": "Mutlak değerli ifadeyi işaretine göre açma",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTDB-02",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak değerli denklem",
+   "fikir": "|A| = k ve |A| = |B| denklemleri iki duruma ayrılır; çözümlerin toplamı ya da çarpımı istenir, katsayılı ifadelerde önce mutlak değer yalnız bırakılır.",
+   "tuzak": "Yalnız bir durumu çözmek; mutlak değeri yalnız bırakmadan içeriği çözmek; iki duruma ayırırken işaret hatası yapmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "mdb-denklem",
+   "tip": "Mutlak değerli denklem ve çözümlerin çarpımı",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTDB-03",
+   "konu": "Mutlak Değer",
+   "alt": "Mutlak değerli eşitsizlik ve tam sayı adedi",
+   "fikir": "|x − a| < b, |x − a| > b ve |A| < |B| eşitsizlikleri aralık ya da uzaklıkla çözülür; belirli bir tam sayı aralığında sağlayan değerler sayılır.",
+   "tuzak": "< ile ≤ ve > ile ≥ ayrımını yapmamak; “>” biçiminde iki ayrı aralığı birleştirmek yerine birini almak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "mdb-esitsizlik",
+   "tip": "Mutlak değerli eşitsizlikte tam sayı adedi",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTDB-04",
+   "konu": "Mutlak Değer",
+   "alt": "Sayı doğrusunda uzaklık yorumu",
+   "fikir": "|x − a| + |x − b| gibi ifadelerde x’in iki noktaya uzaklıklar toplamı yorumlanır; en küçük değer iki nokta arasındaki uzaklıktır ve aralık içinde sabittir.",
+   "tuzak": "En küçük değeri bir uçta aramak; sabit bölge ile eğimli bölgeyi karıştırmak; birden çok terimde ortadaki noktayı seçmemek.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "mdb-uzaklik",
+   "tip": "Uzaklık toplamının en küçük değeri ve çözümleri",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTDB-05",
+   "konu": "Mutlak Değer",
+   "alt": "Tolerans ve sapma problemleri",
+   "fikir": "Hikâyedeki en çok sapma miktarı |x − a| ≤ k eşitsizliğine çevrilir; aralığın uçları ve iki değer arasındaki fark yorumlanır.",
+   "tuzak": "Sapma miktarını tam aralık genişliği sanmak; uçları dahil etmek ya da etmemek; tam sayı adedinde +1’i unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "mdb-model",
+   "tip": "Tolerans ve sapma problemleri",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTDB-06",
+   "konu": "Mutlak Değer",
+   "alt": "Öncüllü mutlak değer",
+   "fikir": "Verilen mutlak değer koşulundan x’in aralığı bulunur ve öncüllerdeki ifadeler uç değerler dahil denenerek kesinlikle doğru olanlar belirlenir.",
+   "tuzak": "Yalnız bir değer deneyip öncüle karar vermek; uç değerleri unutmak; < ile ≤’yi karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "mdb-onculu",
+   "tip": "Öncüllü mutlak değer ve aralık",
+   "kaynak": "ÖSYM 2018–2026 (mutlak değer, uzaklık, denklem ve eşitsizlik) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mdb-ac",
+   "ad": "Mutlak değerli ifadeyi işaretine göre açma",
+   "kartlar": [
+    "K-MTDB-01"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mdb-denklem",
+   "ad": "Mutlak değerli denklem ve çözümlerin çarpımı",
+   "kartlar": [
+    "K-MTDB-02"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mdb-esitsizlik",
+   "ad": "Mutlak değerli eşitsizlikte tam sayı adedi",
+   "kartlar": [
+    "K-MTDB-03"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mdb-uzaklik",
+   "ad": "Uzaklık toplamının en küçük değeri ve çözümleri",
+   "kartlar": [
+    "K-MTDB-04"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mdb-model",
+   "ad": "Tolerans ve sapma problemleri",
+   "kartlar": [
+    "K-MTDB-05"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mdb-onculu",
+   "ad": "Öncüllü mutlak değer ve aralık",
+   "kartlar": [
+    "K-MTDB-06"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  }
+ ]
+}

@@ -1,0 +1,1111 @@
+[
+ {
+  "id": "tytmat-esitiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Çözme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Negatif katsayılı birinci dereceden eşitsizliği çözerek açık uçlu çözüm kümesinin en büyük tam sayısını bulur.",
+  "tipId": "ezb-cozum",
+  "tip": "Eşitsizlik çözümü ve tam sayı değerleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x bir tam sayı olmak üzere\n5 − 2x > −7\neşitsizliği sağlanıyor.\nBuna göre x’in alabileceği en büyük değer kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−7",
+   "B": "0",
+   "C": "5",
+   "D": "6",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "D": "Eşitsizlik “>” olduğu halde x < 6 çözümünde 6’yı da almış; uç değer çözüme girmez.",
+   "B": "5’i karşı tarafa −7 + 5 = −2 diye geçirmiş; doğrusu −7 − 5 = −12’dir.",
+   "A": "−12’yi −2’ye bölünce işareti de ters çevirip x < −6 bulmuş; bölünce yalnız eşitsizlik yön değiştirir, sayı 6 olur.",
+   "E": "−2x terimindeki 2’yi unutup 5 − x > −7 gibi çözmüş; x < 12 bulup 11 demiş."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "B": "islem",
+   "A": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "x’in alabileceği en büyük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikte işaret kuralı",
+    "ifade": "iki tarafa aynı sayı eklenir ya da çıkarılır; negatif bir sayıyla çarpılıp bölünürse eşitsizlik yön değiştirir. Örnek: −2x > 6 → x < −3"
+   }
+  ],
+  "ipuclari": [
+   "Sabit terimi karşı tarafa geçirip −2’ye bölerken eşitsizliğin yönünü hatırla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabiti karşıya at",
+    "aciklama": "5’i eşitsizliğin diğer tarafına çıkarma ile geçir.",
+    "islem": "−2x > −7 − 5 = −12"
+   },
+   {
+    "baslik": "−2’ye böl",
+    "aciklama": "Negatif sayıya bölünce eşitsizlik yön değiştirir.",
+    "islem": "x < 6"
+   },
+   {
+    "baslik": "En büyük tam sayıyı seç",
+    "aciklama": "x < 6 olduğundan 6 çözüm değildir; 6’dan küçük en büyük tam sayı 5’tir.",
+    "islem": "x = 5 · kontrol: 5 − 2 × 5 = −5 > −7"
+   }
+  ],
+  "puf": "Negatif sayıya bölünce yönü çevir; “<” ile sınırlanmış çözümde sınır değer alınmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-01 (eşitsizlik çözümü) · negatif katsayılı eşitsizlikte açık uç ve en büyük tam sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralık İşlemleri",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Değişkenlerin aralığı verilen bir farkın alt sınırını bulup açık uca göre en küçük tam sayı değerini belirler.",
+  "tipId": "ezb-aralik",
+  "tip": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "a ve b gerçel sayıları için\n−5 < a < 2\n3 < b < 7\nolduğuna göre a − b farkının alabileceği en küçük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−12",
+   "B": "−11",
+   "C": "−8",
+   "D": "−5",
+   "E": "−2"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−11"
+  },
+  "celdiriciler": {
+   "A": "Alt sınır −5 − 7 = −12’yi bulmuş ama bu değer alınamaz (uçlar açık); en küçük tam sayı −11’dir.",
+   "C": "a’nın alt sınırından b’nin alt sınırını çıkarmış (−5 − 3); farkı küçültmek için b’nin üst sınırı gerekir.",
+   "D": "a’nın üst sınırından b’nin üst sınırını çıkarmış (2 − 7); en küçük değer için a küçük, b büyük olmalı.",
+   "E": "En küçük yerine en büyük tam sayıyı hesaplamış: 2 − 3 = −1 açık uç, en büyük tam sayı −2."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "a − b ifadesinin en küçük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Aralık işlemleri",
+    "ifade": "a < x < b ve c < y < d iken toplamda alt sınırlar kendi arasında, üst sınırlar kendi arasında toplanır. Çıkarmada −y için sınırlar ters çevrilir. Örnek: 1 < x < 3, 2 < y < 5 → x − y: 1 − 5 < x − y < 3 − 2"
+   }
+  ],
+  "ipuclari": [
+   "a − b en küçük olsun diye a’yı en küçük, b’yi en büyük al; sonra açık uca dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alt sınırı bul",
+    "aciklama": "a − b’yi en küçük yapmak için a en küçük, b en büyük alınır.",
+    "islem": "a − b > −5 − 7 = −12"
+   },
+   {
+    "baslik": "Üst sınırı bul",
+    "aciklama": "Tam aralığı görmek için üst sınır da hesaplanır.",
+    "islem": "a − b < 2 − 3 = −1 → −12 < a − b < −1"
+   },
+   {
+    "baslik": "Açık uca dikkat et",
+    "aciklama": "−12 değeri alınamaz; ondan büyük ilk tam sayı −11’dir.",
+    "islem": "en küçük tam sayı = −11"
+   }
+  ],
+  "puf": "Çıkarmada alt sınır için “a’nın alt − b’nin üst”, üst sınır için “a’nın üst − b’nin alt” alınır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-02 (aralık işlemleri) · a − b için alt sınır ve en küçük tam sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlikle Modelleme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Taşıma sınırı verilen bir problemi eşitsizlik kurup tam sayıya yuvarlayarak çözer.",
+  "tipId": "ezb-model",
+  "tip": "Eşitsizlikle modelleme (bütçe, kapasite, tarife)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bina asansörünün taşıma sınırı 700 kg’dır. Asansörde kütlesi 90 kg olan bir görevli bulunmaktadır ve asansöre binecek yolcuların her birinin kütlesi 75 kg olarak kabul edilmektedir.\nAsansörün sınırı aşılmayacağına göre görevliyle birlikte en çok kaç yolcu asansöre binebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "8",
+   "D": "9",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "D": "Görevlinin kütlesini hesaba katmadan 700 ÷ 75 işlemini yapıp 9’a yuvarlamış.",
+   "E": "700 ÷ 75 = 9,33’ü yukarı yuvarlayıp 10 demiş; hem görevli unutulmuş hem sınır aşılmıştır.",
+   "B": "Görevlinin kütlesini iki kez çıkarmış: 700 − 180 = 520, 520 ÷ 75 → 6.",
+   "A": "Görevlinin kütlesini her yolcuya eklemiş: (90 + 75) × n ≤ 700 → 4."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "E": "dikkat",
+   "B": "islem",
+   "A": "bilgi"
+  },
+  "istenen": "Asansöre binebilecek en çok yolcu sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikle modelleme",
+    "ifade": "“en az” ≥, “en çok” ≤, “aşmamalı” ≤ ile gösterilir; bilinmeyen adet ise çıkan sonuç uygun tam sayıya yuvarlanır. Örnek: 15n ≤ 100 → n ≤ 6,67 → en çok 6"
+   }
+  ],
+  "ipuclari": [
+   "Toplam kütle = görevli + yolcular ≤ 700 eşitsizliğini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitsizliği kur",
+    "aciklama": "n yolcu sayısıdır; görevli ve yolcuların toplam kütlesi sınırı aşmamalıdır.",
+    "islem": "90 + 75n ≤ 700"
+   },
+   {
+    "baslik": "n’yi çöz",
+    "aciklama": "90’ı karşıya at ve 75’e böl.",
+    "islem": "75n ≤ 610 → n ≤ 8,13"
+   },
+   {
+    "baslik": "Tam sayıya yuvarla",
+    "aciklama": "Yolcu sayısı tam sayı olmalı ve sınırı aşmamalı; aşağı yuvarlanır.",
+    "islem": "n = 8 · kontrol: 90 + 600 = 690 ≤ 700 ve 9 yolcu için 765 > 700"
+   }
+  ],
+  "puf": "“En çok” sorularında çıkan ondalık sonuç aşağı, “en az” sorularında yukarı yuvarlanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-04 (modelleme) · asansör kapasitesi, görevli kütlesi ve en çok yolcu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Çözme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Kesirli çift taraflı eşitsizliği çözerek sınırların dahil olup olmadığına göre tam sayı çözümlerinin toplamını bulur.",
+  "tipId": "ezb-cozum",
+  "tip": "Eşitsizlik çözümü ve tam sayı değerleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x bir tam sayıdır.\n−1 ≤ (7 − 2x)/3 < 3\nkoşulunu sağlayan tüm x değerlerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "10",
+   "C": "12",
+   "D": "14",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Negatife bölünce sınırları yer değiştirirken “≤” ve “<” işaretlerini de yer değiştirmemiş; −1 dahil, 5 hariç almış.",
+   "B": "Her iki ucu da çözüme almamış (0 ≤ x ≤ 4 gibi); oysa 5 dahildir, −1 değildir.",
+   "C": "Her tarafı 3 ile çarparken sağdaki 3’ü çarpmayı unutmuş: 7 − 2x < 3 almış.",
+   "D": "İki ucu da çözüme dahil almış (−1 ≤ x ≤ 5); eşitliğin hangi uçta olduğunu ayırt edememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "x tam sayılarının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Çift taraflı eşitsizlik",
+    "ifade": "a < f(x) < b biçimindeki eşitsizlikte işlemler üç tarafa birden uygulanır; negatif sayıyla bölünürse sınırlar yer değiştirir. Örnek: −6 < −2x < 4 → 3 > x > −2"
+   }
+  ],
+  "ipuclari": [
+   "Her yeri 3 ile çarp, 7’yi çıkar, sonra −2’ye bölerken sınırların yerini ve işaretlerini düzelt."
+  ],
+  "adimlar": [
+   {
+    "baslik": "3 ile çarp",
+    "aciklama": "Paydadan kurtulmak için üç tarafı 3 ile çarp.",
+    "islem": "−3 ≤ 7 − 2x < 9"
+   },
+   {
+    "baslik": "7’yi çıkar",
+    "aciklama": "Üç taraftan 7 çıkar.",
+    "islem": "−10 ≤ −2x < 2"
+   },
+   {
+    "baslik": "−2’ye böl",
+    "aciklama": "Sınırlar yer değiştirir ve işaretler de yer değiştirir: ≤ olan uç artık sağdadır.",
+    "islem": "−1 < x ≤ 5"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "x = 0, 1, 2, 3, 4, 5 sayılarını topla.",
+    "islem": "0 + 1 + 2 + 3 + 4 + 5 = 15"
+   }
+  ],
+  "puf": "Negatif sayıya bölünce yalnız sınırların yeri değil, hangi uçta eşitlik olduğu da yer değiştirir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-01 (eşitsizlik çözümü) · paydalı, negatif katsayılı çift taraflı eşitsizlik, uçların dahil olması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlik Sistemi",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "İki birinci dereceden eşitsizliğin ortak çözüm kümesini bulup tam sayı çözümlerinin toplamını hesaplar.",
+  "tipId": "ezb-cozum",
+  "tip": "Eşitsizlik çözümü ve tam sayı değerleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x bir tam sayı olmak üzere\n2(x + 1) ≥ x + 6\n5x − 3 < 3x + 15\neşitsizliklerinin ikisi birden sağlanıyor.\nBuna göre x’in alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "8",
+   "C": "9",
+   "D": "26",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "D": "İlk eşitsizlikte 2(x + 1)’i 2x + 1 diye açmış; x ≥ 5 bulup 5 + 6 + 7 + 8 = 26 yazmış.",
+   "A": "Çözüm sayısını (adet) yazmış; soru değerlerin toplamını istiyor.",
+   "B": "2x + 2 ≥ x + 6 çözümünde 2’yi yanlış taşıyıp x ≥ 8 bulmuş; yalnız 8 kalmış.",
+   "C": "İkinci eşitsizlikte 15 − (−3) yerine 15 − 3 = 12 yapmış; x < 6 bulup 4 + 5 = 9 yazmış."
+  },
+  "celTur": {
+   "D": "islem",
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem"
+  },
+  "istenen": "İki eşitsizliği birlikte sağlayan tam sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikte işaret kuralı",
+    "ifade": "iki tarafa aynı sayı eklenir ya da çıkarılır; negatif bir sayıyla çarpılıp bölünürse eşitsizlik yön değiştirir. Örnek: −2x > 6 → x < −3"
+   },
+   {
+    "ad": "Eşitsizlik sistemi",
+    "ifade": "iki eşitsizlik birlikte sağlanıyorsa çözüm kümesi, ikisinin ortak (kesişim) bölgesidir. Örnek: x ≥ 4 ve x < 9 için x = 4, 5, 6, 7, 8"
+   }
+  ],
+  "ipuclari": [
+   "Her eşitsizliği ayrı çöz, sonra ortak bölgeyi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birincisini çöz",
+    "aciklama": "Parantezi aç, x’leri bir tarafa topla.",
+    "islem": "2x + 2 ≥ x + 6 → x ≥ 4"
+   },
+   {
+    "baslik": "İkincisini çöz",
+    "aciklama": "x’leri sola, sayıları sağa topla.",
+    "islem": "2x < 18 → x < 9"
+   },
+   {
+    "baslik": "Ortak bölgeyi bul",
+    "aciklama": "İkisini birlikte sağlayan sayılar 4 ve 4’ten büyük, 9’dan küçüktür.",
+    "islem": "4 ≤ x < 9"
+   },
+   {
+    "baslik": "Toplamı hesapla",
+    "aciklama": "x = 4, 5, 6, 7, 8 sayılarını topla.",
+    "islem": "4 + 5 + 6 + 7 + 8 = 30"
+   }
+  ],
+  "puf": "Sistemde her eşitsizliği ayrı çöz; sonuç, ikisini birden sağlayan ortak bölgedir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-01 (eşitsizlik çözümü) · parantezli iki eşitsizlik, kesişim ve tam sayıların toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralık İşlemleri",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Katsayılı bir ifadenin alt sınırını iki değişkenin aralığından bulup açık uca göre en küçük tam sayı değerini belirler.",
+  "tipId": "ezb-aralik",
+  "tip": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x ve y gerçel sayılar olmak üzere\n−2 < x < 4\n1 < y < 4\nolduğuna göre 3x − 2y ifadesinin alabileceği en küçük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−14",
+   "B": "−13",
+   "C": "−7",
+   "D": "−5",
+   "E": "−3"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−13"
+  },
+  "celdiriciler": {
+   "A": "Alt sınır −14’ü bulmuş ama uçlar açık olduğundan −14 alınamaz; en küçük tam sayı −13’tür.",
+   "C": "−2y’nin alt sınırı için y’nin üst sınırını değil alt sınırını almış: 3 × (−2) − 2 × 1 = −8, açık uçtan −7.",
+   "E": "−2y yerine +2y kullanmış: 3 × (−2) + 2 × 1 = −4, açık uçtan −3.",
+   "D": "Katsayıları atlayıp x − y’nin alt sınırını bulmuş: −2 − 4 = −6, açık uçtan −5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "E": "islem",
+   "D": "islem"
+  },
+  "istenen": "3x − 2y ifadesinin en küçük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Aralık işlemleri",
+    "ifade": "a < x < b ve c < y < d iken toplamda alt sınırlar kendi arasında, üst sınırlar kendi arasında toplanır. Çıkarmada −y için sınırlar ters çevrilir. Örnek: 1 < x < 3, 2 < y < 5 → x − y: 1 − 5 < x − y < 3 − 2"
+   },
+   {
+    "ad": "Açık uç",
+    "ifade": "a < x < b için a ve b değerleri alınamaz; en büyük tam sayı b’den küçük olan son tam sayıdır. Örnek: x < 4 ise en büyük tam sayı 3"
+   }
+  ],
+  "ipuclari": [
+   "3x’i en küçük, 2y’yi en büyük yapacak sınırları seç; uçların açık olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "3x’in sınırı",
+    "aciklama": "−2 < x < 4 aralığını 3 ile çarp.",
+    "islem": "−6 < 3x < 12"
+   },
+   {
+    "baslik": "−2y’nin sınırı",
+    "aciklama": "1 < y < 4 aralığını −2 ile çarp, sınırlar yer değiştirir.",
+    "islem": "−8 < −2y < −2"
+   },
+   {
+    "baslik": "Topla ve tam sayıya bak",
+    "aciklama": "Alt sınırlar ve üst sınırlar ayrı toplanır; −14 alınamaz.",
+    "islem": "−14 < 3x − 2y < 10 → en küçük tam sayı = −13"
+   }
+  ],
+  "puf": "Negatif katsayılı terim aralığı çevirir: önce çarp, sonra alt ile alt, üst ile üstü topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-02 (aralık işlemleri) · 3x − 2y için en küçük tam sayı değeri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Kare ve Terslerle Sıralama",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "0 ile 1 arasındaki bir sayının kare, kök ve tersini karşılaştırarak doğru sıralamayı bulur.",
+  "tipId": "ezb-kare",
+  "tip": "Kare, kök ve ters ile sıralama (0 < x < 1)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "0 < x < 1 olmak üzere x, x², √x ve 1/x sayılarının küçükten büyüğe doğru sıralanışı aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "x² < x < √x < 1/x",
+   "B": "x < x² < √x < 1/x",
+   "C": "x² < √x < x < 1/x",
+   "D": "x² < x < 1/x < √x",
+   "E": "1/x < x² < x < √x"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "x² < x < √x < 1/x"
+  },
+  "celdiriciler": {
+   "B": "x² sayısını x’ten büyük sanmış; 0 ile 1 arasında kendisiyle çarpmak sayıyı küçültür.",
+   "C": "Köklü sayının x’ten küçük olduğunu düşünmüş; 0 ile 1 arasında kök almak sayıyı büyütür.",
+   "D": "√x’i 1’den büyük sanmış; √x yine 1’den küçüktür, 1/x ise 1’den büyüktür.",
+   "E": "1/x’i en küçük sanmış; payı paydadan küçük olan x için tersi 1’den büyük olur."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "x, x², √x ve 1/x sayılarının küçükten büyüğe sıralanışı.",
+  "bilgi": [
+   {
+    "ad": "Kare, kök ve ters (0 < x < 1)",
+    "ifade": "0 ile 1 arasındaki bir sayıyı kendisiyle çarpmak küçültür, kökünü almak büyütür, tersini almak 1’den büyük yapar. Örnek: x = 0,25 → x² = 0,0625 · √x = 0,5 · 1/x = 4"
+   }
+  ],
+  "ipuclari": [
+   "x yerine 0,25 gibi bir sayı koy; kare, kök ve tersini hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir örnek seç",
+    "aciklama": "0 < x < 1 olan bir sayıyı dene.",
+    "islem": "x = 0,25"
+   },
+   {
+    "baslik": "Değerleri hesapla",
+    "aciklama": "Dört sayıyı yaz ve karşılaştır.",
+    "islem": "x² = 0,0625 · x = 0,25 · √x = 0,5 · 1/x = 4"
+   },
+   {
+    "baslik": "Sırala ve genelle",
+    "aciklama": "Sıralama 0 < x < 1 için hep böyledir: kare en küçük, ters en büyük.",
+    "islem": "x² < x < √x < 1/x"
+   }
+  ],
+  "puf": "0 < x < 1 iken: kare küçültür, kök büyütür, ters 1’in üstüne çıkarır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-05 (0 < x < 1) · x, x², √x, 1/x sıralaması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Sıralama",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Negatif iki sayının terslerini, karelerini ve çarpımlarını karşılaştırarak öncüllerin doğruluğunu belirler.",
+  "tipId": "ezb-siralama",
+  "tip": "Eşitsizliklerde sıralama ve kesinlikle doğru ifadeler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "a ve b gerçel sayıları için\na < b < 0\nolduğu biliniyor.\nBuna göre\nI. 1/a > 1/b\nII. a² < b²\nIII. a · b > b²\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "C": "a < b olduğundan a² < b² sanmış; iki negatif sayıda mutlak değeri büyük olan sayının karesi de büyüktür (a = −3, b = −1 → 9 > 1).",
+   "A": "III’te a < b’yi negatif b ile çarparken yönü değiştirmemiş; a · b < b² bulup III’ü yanlış saymış.",
+   "B": "Terslerde sıranın korunduğunu sanıp I’i yanlış bulmuş; III’ü doğru çözmüş ve II’nin yanlışlığını görmüş.",
+   "E": "a < b’den hem 1/a < 1/b hem a² < b² çıkarmış (I yanlış, II doğru demiş); III’ü doğru bulmuş."
+  },
+  "celTur": {
+   "C": "bilgi",
+   "A": "bilgi",
+   "B": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikte çarpma ve ters alma",
+    "ifade": "a < b iken pozitif c ile çarpınca yön korunur, negatif c ile çarpınca yön değişir. İki sayı da aynı işaretliyse terslerinde sıralama ters döner. Örnek: −3 < −2 → 1/(−3) > 1/(−2)"
+   }
+  ],
+  "ipuclari": [
+   "a = −3, b = −1 gibi örnek dene; sonra a < b eşitsizliğini negatif b ile çarparak III’ü sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "a < b < 0 olduğundan a × b pozitiftir; a < b eşitsizliğini a × b’ye bölünce yön korunur ve terslerde sıra ters döner.",
+    "islem": "a < b → 1/b < 1/a → I doğru · örnek: a = −3, b = −1 → −1/3 > −1"
+   },
+   {
+    "baslik": "II’yi incele",
+    "aciklama": "Negatif sayılarda mutlak değeri büyük olan daha küçüktür; karesi ise daha büyüktür.",
+    "islem": "|a| > |b| → a² > b² → II yanlış"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "a < b eşitsizliğinin iki tarafını negatif b ile çarp; yön değişir.",
+    "islem": "a < b → a × b > b × b = b² → III doğru"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Kesinlikle doğru olanlar I ve III’tür.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Negatif sayılarda sıralama kare ve terste ters döner; negatif sayıyla çarpınca da yön değişir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-03 (eşitsizlikle sıralama) · a < b < 0 için ters, kare ve çarpım öncülleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlikle Modelleme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "İki tarifeyi karşılaştıran eşitsizliği kurup tam sayıya yuvarlayarak en az kullanım miktarını bulur.",
+  "tipId": "ezb-model",
+  "tip": "Eşitsizlikle modelleme (bütçe, kapasite, tarife)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir internet firmasının A tarifesinde aylık sabit ücret 60 TL’dir ve her GB için 5 TL ödenir. B tarifesinde aylık sabit ücret 100 TL’dir ve her GB için 2 TL ödenir. Aylık kullanım, tam GB olarak hesaplanır.\nB tarifesi A tarifesinden daha ucuz olsun isteniyorsa aylık kullanım en az kaç GB olmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "13",
+   "C": "14",
+   "D": "20",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "B": "13,33’ü “en çok” sorularındaki gibi aşağı yuvarlayıp 13 yazmış; oysa 13 GB’ta A 125 TL, B 126 TL olduğundan B hâlâ daha pahalıdır.",
+   "A": "40 ÷ 3’ü 12 bulup 12 GB demiş (işlem hatası); 12 GB’ta A 120 TL, B 124 TL olduğundan B daha pahalıdır.",
+   "D": "Yalnız B’nin birim ücretini kullanıp 40 ÷ 2 = 20 yazmış; iki tarifenin farkına (5 − 2) bölmesi gerekir.",
+   "E": "Sabit ücret farkını (40) cevap sanmış; 3g > 40 eşitsizliğini çözmemiş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "A": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "B tarifesinin daha ucuz olması için gereken en az GB.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikle modelleme",
+    "ifade": "“en az” ≥, “en çok” ≤, “aşmamalı” ≤ ile gösterilir; bilinmeyen adet ise çıkan sonuç uygun tam sayıya yuvarlanır. Örnek: 15n ≤ 100 → n ≤ 6,67 → en çok 6"
+   }
+  ],
+  "ipuclari": [
+   "g GB için iki ücreti yaz: A = 60 + 5g, B = 100 + 2g. B < A eşitsizliğini çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ücretleri yaz",
+    "aciklama": "g GB için iki tarifenin aylık ücretini yaz.",
+    "islem": "A: 60 + 5g · B: 100 + 2g"
+   },
+   {
+    "baslik": "B < A kur",
+    "aciklama": "B’nin ucuz olması için B’nin ücreti A’nınkinden az olmalı.",
+    "islem": "100 + 2g < 60 + 5g → 40 < 3g → g > 13,33"
+   },
+   {
+    "baslik": "Yuvarla ve kontrol et",
+    "aciklama": "Tam GB hesaplandığı için 13,33’ten büyük en küçük tam sayı 14’tür.",
+    "islem": "g = 14: A = 130, B = 128 · g = 13: A = 125, B = 126"
+   }
+  ],
+  "puf": "İki tarifeyi karşılaştırırken sabit ücret farkını birim ücret farkına böl; “daha ucuz” için eşitlik dahil değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-04 (modelleme) · sabit ücret ve kullanım ücretli iki tarifeden hangisinin ucuz olduğu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Tanımlı İşlem ve Aralık",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Yeni tanımlanan bir işlemin sonucunu değişkenlerin aralığından sınırlayıp aldığı tam sayı değerlerinin adedini bulur.",
+  "tipId": "ezb-yeni",
+  "tip": "Tanımlı işlemle aralık problemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılar kümesinde bir ⊕ işlemi\na ⊕ b = 4a − 3b + 1\nbiçiminde tanımlanıyor.\nx ve y gerçel sayıları için −1 < x < 3 ve 0 < y < 3 olduğuna göre x ⊕ y ifadesi kaç farklı tam sayı değeri alabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "18",
+   "C": "24",
+   "D": "25",
+   "E": "26"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "E": "Uçlardaki −12 ve 13 değerlerini de sayarak −12’den 13’e 26 tam sayı bulmuş; uçlar açık olduğundan alınamaz.",
+   "D": "Üst sınırdan alt sınırı çıkarıp 25 bulmuş; açık aralıkta tam sayı sayısı fark − 1’dir.",
+   "A": "Alt sınırı bulurken y’nin alt, üst sınırı bulurken y’nin üst değerini almış: (−3, 4) aralığından 6 tam sayı bulmuş.",
+   "B": "−3b yerine −b alarak katsayıyı yanlış kullanmış; (−6, 13) aralığından 18 tam sayı bulmuş."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "D": "islem",
+   "A": "bilgi",
+   "B": "islem"
+  },
+  "istenen": "x ⊕ y ifadesinin aldığı farklı tam sayı değerlerinin adedi.",
+  "bilgi": [
+   {
+    "ad": "Aralık işlemleri",
+    "ifade": "a < x < b ve c < y < d iken toplamda alt sınırlar kendi arasında, üst sınırlar kendi arasında toplanır. Çıkarmada −y için sınırlar ters çevrilir. Örnek: 1 < x < 3, 2 < y < 5 → x − y: 1 − 5 < x − y < 3 − 2"
+   },
+   {
+    "ad": "Açık uç",
+    "ifade": "a < x < b için a ve b değerleri alınamaz; en büyük tam sayı b’den küçük olan son tam sayıdır. Örnek: x < 4 ise en büyük tam sayı 3"
+   }
+  ],
+  "ipuclari": [
+   "4x ve −3y aralıklarını ayrı ayrı bul, sonra +1 ile birlikte topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "4x’in sınırı",
+    "aciklama": "−1 < x < 3 aralığını 4 ile çarp.",
+    "islem": "−4 < 4x < 12"
+   },
+   {
+    "baslik": "−3y’nin sınırı",
+    "aciklama": "0 < y < 3 aralığını −3 ile çarp, sınırlar yer değiştirir.",
+    "islem": "−9 < −3y < 0"
+   },
+   {
+    "baslik": "Toplayıp 1 ekle",
+    "aciklama": "Alt sınırlar ve üst sınırlar ayrı toplanır, sonra +1 eklenir.",
+    "islem": "−12 < x ⊕ y < 13"
+   },
+   {
+    "baslik": "Tam sayıları say",
+    "aciklama": "−12 ve 13 alınamaz; −11’den 12’ye kadar tam sayılar vardır.",
+    "islem": "12 − (−11) + 1 = 24"
+   }
+  ],
+  "puf": "Açık aralıkta (a, b) tam sayı sayısı b − a − 1’dir (uçlar tam sayı ise).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-06 (tanımlı işlem) · a ⊕ b = 4a − 3b + 1 işlemi ve x ⊕ y’nin tam sayı değer adedi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralıkta Çarpım",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "İki aralığın çarpımında dört uç çarpımı arasından üst sınırı bulup açık uca göre en büyük tam sayı değerini belirler.",
+  "tipId": "ezb-aralik",
+  "tip": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x ve y gerçel sayılar olmak üzere\n−3 < x < 2\n−4 < y < 1\nolduğuna göre x · y çarpımının alabileceği en büyük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−7",
+   "B": "−3",
+   "C": "2",
+   "D": "11",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "E": "Üst sınırı (−3) × (−4) = 12 bulup tam sayı olarak aynen almış; uçlar açık olduğundan 12 alınamaz, en büyük tam sayı 11’dir.",
+   "C": "İki üst sınırı çarpmış (2 × 1); negatif iki sayının çarpımı pozitif ve daha büyük olabilir.",
+   "B": "Yalnız x’in alt sınırı ile y’nin üst sınırını çarpmış (−3 × 1); dört uç çarpımından en büyüğünü seçmemiş.",
+   "A": "En büyük yerine en küçük tam sayıyı hesaplamış: alt sınır 2 × (−4) = −8, açık uçtan −7."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "C": "bilgi",
+   "B": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "x · y’nin en büyük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Çarpımda sınır bulma",
+    "ifade": "iki aralığın çarpımında en büyük ve en küçük değer, uç noktaların dört çarpımından birinde bulunur. Örnek: −2 < x < 3 ve −1 < y < 4 için uç çarpımlar 2, −8, −3, 12"
+   },
+   {
+    "ad": "Açık uç",
+    "ifade": "a < x < b için a ve b değerleri alınamaz; en büyük tam sayı b’den küçük olan son tam sayıdır. Örnek: x < 4 ise en büyük tam sayı 3"
+   }
+  ],
+  "ipuclari": [
+   "Çarpımda negatif sınırlar vardır; dört uç çarpımını yazıp en büyüğüne bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uç çarpımları yaz",
+    "aciklama": "Aralıkların uçlarını çaprazlama çarp.",
+    "islem": "(−3) × (−4) = 12 · (−3) × 1 = −3 · 2 × (−4) = −8 · 2 × 1 = 2"
+   },
+   {
+    "baslik": "Alt ve üst sınırı seç",
+    "aciklama": "En küçük −8, en büyük 12’dir; uçlar açık olduğundan çarpım bu değerlere ulaşmaz.",
+    "islem": "−8 < x × y < 12"
+   },
+   {
+    "baslik": "Alınabilirliği kontrol et",
+    "aciklama": "x ve y kendi aralıklarında sürekli değiştiğinden çarpım, (−8, 12) aralığındaki her değeri alır; 11 de bu aralıktadır.",
+    "islem": "−8 < 11 < 12 → 11 alınır"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "12 alınamayacağından en büyük tam sayı 11’dir.",
+    "islem": "11"
+   }
+  ],
+  "puf": "Çarpımda dört uç çarpımına bak; açık uçlu aralıkta uç değer alınamaz, ona en yakın tam sayı seçilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-02 (aralık işlemleri) · x·y için dört uç çarpımı ve açık uçlu en büyük tam sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Eşitsizlikle Modelleme",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Bütçe ve adet koşullarını eşitsizliğe çevirip birlikte düşünerek alınabilecek en çok ürün sayısını bulur.",
+  "tipId": "ezb-model",
+  "tip": "Eşitsizlikle modelleme (bütçe, kapasite, tarife)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir kafede kahvenin tanesi 40 TL, tatlının tanesi 70 TL’dir. Elinde 500 TL bulunan Burak, aldığı tatlı sayısının aldığı kahve sayısından fazla olmasını istiyor.\nBurak parasını aşmadan en çok toplam kaç ürün (kahve ve tatlı birlikte) alabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "8",
+   "C": "9",
+   "D": "10",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "E": "“Tatlı kahveden fazla olsun” koşulunu hiç kullanmayıp yalnız kahve alarak 500 ÷ 40 = 12 bulmuş.",
+   "A": "Yalnız kahve sayısından 1 fazla tatlı alınan durumu (3 kahve + 4 tatlı) denemiş; kalan parayı değerlendirmemiş.",
+   "C": "4 kahve + 5 tatlıyı (160 + 350 = 510 TL) bütçeyi aştığını denetlemeden alıp 9 demiş.",
+   "D": "Koşulu ters okuyup (kahve tatlıdan fazla) 7 kahve + 3 tatlıyı (280 + 210 = 490 TL) alıp 10 demiş."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Burak’ın alabileceği toplam ürün sayısının en büyük değeri.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikle modelleme",
+    "ifade": "“en az” ≥, “en çok” ≤, “aşmamalı” ≤ ile gösterilir; bilinmeyen adet ise çıkan sonuç uygun tam sayıya yuvarlanır. Örnek: 15n ≤ 100 → n ≤ 6,67 → en çok 6"
+   }
+  ],
+  "ipuclari": [
+   "k kahve, t tatlı için 40k + 70t ≤ 500 ve t > k koşullarını yaz; k’yi sırayla dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşulları yaz",
+    "aciklama": "k kahve sayısı, t tatlı sayısıdır; para ve adet koşulu birlikte sağlanmalıdır.",
+    "islem": "40k + 70t ≤ 500 · t ≥ k + 1"
+   },
+   {
+    "baslik": "k’yi sırayla dene",
+    "aciklama": "Her k için en çok kaç tatlı alınabileceğine bak ve t ≥ k + 1’i denetle.",
+    "islem": "k = 3: 70t ≤ 380 → t ≤ 5 → toplam 8 · k = 4: 70t ≤ 340 → t ≤ 4 < 5 olmaz"
+   },
+   {
+    "baslik": "Küçük k’ları karşılaştır",
+    "aciklama": "Az kahveyle tatlı sayısı artar ama tatlı pahalıdır.",
+    "islem": "k = 2: t ≤ 6 → 8 · k = 1: t ≤ 6 → 7 · k = 0: t ≤ 7 → 7"
+   },
+   {
+    "baslik": "En büyüğünü seç",
+    "aciklama": "Toplam ürün en çok 8 olur.",
+    "islem": "3 kahve + 5 tatlı = 120 + 350 = 470 TL · 2 kahve + 6 tatlı = 500 TL"
+   }
+  ],
+  "puf": "Bütçe ve adet koşulu birlikte varsa küçük adetten başlayıp denetle; yalnız kısıtların uç durumu her zaman en iyisi olmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-04 (modelleme) · bütçe ve “tatlı kahveden fazla olmalı” koşuluyla en çok ürün sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Sıralama",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "İşaret ve mutlak değer bilgisini birlikte kullanarak toplam ifadelerinin işaretini belirler ve öncüllerin kesinlikle doğru olup olmadığına karar verir.",
+  "tipId": "ezb-siralama",
+  "tip": "Eşitsizliklerde sıralama ve kesinlikle doğru ifadeler",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "a, b ve c gerçel sayıları için\na < b < 0 < c\n|b| < c < |a|\nolduğu biliniyor.\nBuna göre\nI. a + c < 0\nII. a + b + c > 0\nIII. b + c > 0\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’te b negatif diye b + c’yi negatif sanmış; |b| < c olduğundan c’den küçük bir sayı çıkarılır ve toplam pozitiftir.",
+   "C": "I ve III’ü bulup II’yi de doğru sanmış; a + c < 0 ve b < 0 olduğundan a + b + c negatiftir.",
+   "B": "I’de |a| > c bilgisini kullanmayıp a + c > 0 sanmış, III’ü yanlış saymış; a + b + c’yi de pozitif bulmuş.",
+   "E": "Üçünü de doğru sanmış; a + b + c için a + c < 0 olduğundan toplam negatiftir, II yanlıştır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "B": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Eşitsizlikte çarpma ve ters alma",
+    "ifade": "a < b iken pozitif c ile çarpınca yön korunur, negatif c ile çarpınca yön değişir. İki sayı da aynı işaretliyse terslerinde sıralama ters döner. Örnek: −3 < −2 → 1/(−3) > 1/(−2)"
+   },
+   {
+    "ad": "Mutlak değerle toplamın işareti",
+    "ifade": "Negatif x ile pozitif y için |x| < y ise x + y pozitif, |x| > y ise x + y negatiftir. Örnek: −2 + 5 = 3 > 0, −7 + 5 = −2 < 0"
+   }
+  ],
+  "ipuclari": [
+   "|b| < c ve c < |a| bilgisini kullanarak b + c ile a + c’nin işaretlerini ayrı ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "c < |a| olduğundan c, a’nın büyüklüğünden küçüktür; a + c negatif çıkar.",
+    "islem": "c < −a → a + c < 0 → I doğru"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "|b| < c olduğundan b + c pozitiftir.",
+    "islem": "−b < c → b + c > 0 → III doğru"
+   },
+   {
+    "baslik": "II’yi incele",
+    "aciklama": "a + c negatif ve b negatif; ikisinin toplamı pozitif olamaz.",
+    "islem": "a + b + c = (a + c) + b < 0 → II yanlış"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Kesinlikle doğru olanlar I ve III’tür.",
+    "islem": "I ve III · örnek a = −5, b = −1, c = 3 → −2, −3, 2"
+   }
+  ],
+  "puf": "Negatif ve pozitif sayının toplamında işareti mutlak değeri büyük olan belirler; üç terimde önce ikili toplamları değerlendir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-03 (eşitsizlikle sıralama) · a < b < 0 < c ve |b| < c < |a| koşuluyla toplam öncüllerinin işareti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-esitiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Basit Eşitsizlikler · Aralık İşlemleri",
+  "k": "mat|Basit Eşitsizlikler",
+  "kazanim": "Toplam ve fark aralığı verilen iki sayıdan oluşan bir ifadeyi bu iki ifadenin birleşimi olarak yazıp en büyük tam sayı değerini bulur.",
+  "tipId": "ezb-aralik",
+  "tip": "Aralık işlemleri ve ifadenin tam sayı değerleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "x ve y gerçel sayıları için\n1 < x + y < 5\n−2 < x − y < 4\nolduğuna göre x + 3y ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "12",
+   "C": "13",
+   "D": "14",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "B": "Üst sınırı 12 bulup açık uç olduğunu atlamış; 12 alınamaz, en büyük tam sayı 11’dir.",
+   "C": "x + 3y = 2(x + y) + (x − y) yazıp farkın işaretini yanlış almış; üst sınırı 2 × 5 + 4 = 14 bulmuş, uç açık olduğundan 13 yazmış.",
+   "D": "x ile y’nin aralığını ayrı ayrı bulup üst sınırlarını toplamış (x < 4,5 ve y < 3,5 → 15); x ve y birbirinden bağımsız değildir.",
+   "E": "x + 3y’yi 3(x + y) − 2(x − y) diye yazmış (x’in katsayısını denetlememiş, bu ifade x + 5y’dir); üst sınırı 15 + 4 = 19, açık uçtan 18 bulmuş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "x + 3y ifadesinin en büyük tam sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Aralık işlemleri",
+    "ifade": "a < x < b ve c < y < d iken toplamda alt sınırlar kendi arasında, üst sınırlar kendi arasında toplanır. Çıkarmada −y için sınırlar ters çevrilir. Örnek: 1 < x < 3, 2 < y < 5 → x − y: 1 − 5 < x − y < 3 − 2"
+   },
+   {
+    "ad": "Açık uç",
+    "ifade": "a < x < b için a ve b değerleri alınamaz; en büyük tam sayı b’den küçük olan son tam sayıdır. Örnek: x < 4 ise en büyük tam sayı 3"
+   },
+   {
+    "ad": "İfadeyi verilenlerin birleşimi yapma",
+    "ifade": "x + 3y gibi bir ifade, verilen iki ifadenin m ve n katsayılarıyla birleşimi olarak yazılır: m(x + y) + n(x − y). x ve y’nin katsayıları eşitlenir. Örnek: x + 2y = 1,5(x + y) − 0,5(x − y)"
+   }
+  ],
+  "ipuclari": [
+   "x + 3y = m(x + y) + n(x − y) olacak şekilde m ve n’yi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katsayıları bul",
+    "aciklama": "x + 3y = m(x + y) + n(x − y) olsun; x ve y’nin katsayılarını eşitle.",
+    "islem": "m + n = 1 · m − n = 3 → m = 2, n = −1"
+   },
+   {
+    "baslik": "İfadeyi yaz",
+    "aciklama": "Buna göre x + 3y, toplamın iki katından farkı çıkarmaktır.",
+    "islem": "x + 3y = 2(x + y) − (x − y)"
+   },
+   {
+    "baslik": "Aralıkları işle",
+    "aciklama": "2(x + y) için ve −(x − y) için sınırları ayrı bul (−1 ile çarpınca sınırlar yer değiştirir).",
+    "islem": "2 < 2(x + y) < 10 · −4 < −(x − y) < 2"
+   },
+   {
+    "baslik": "Topla ve tam sayıya bak",
+    "aciklama": "Alt ile alt, üst ile üstü topla; üst uç açıktır.",
+    "islem": "−2 < x + 3y < 12 → en büyük tam sayı = 11"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "x + y = s ve x − y = d bağımsız seçilebilir, bu yüzden bütün değerler alınır.",
+    "islem": "s = 4,5 ve d = −2 yakını iken 2 × 4,5 + 2 = 11 elde edilir (s, d aralıkta ayrı ayrı seçilir)"
+   }
+  ],
+  "puf": "İfade verilen iki ifadenin birleşimi olarak yazılabiliyorsa x ve y’yi ayırmadan doğrudan o ifadeyle aralığı bul; ayrı ayrı sınırlamak bağımlılığı bozar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ESZB-02 (aralık işlemleri) · x + y ve x − y aralığı verilip x + 3y için en büyük tam sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,177 @@
+{
+ "konu": "Rasyonel Sayılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-RSYN-01",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Dört işlem ve işlem önceliği",
+   "fikir": "Kesirler ve ondalıklarla yapılan işlemlerde paydalar eşitlenir, bölme ters çarpmaya çevrilir; merdiven kesirler içten dışa açılır.",
+   "tuzak": "İşlem önceliğini atlamak; ters çevirmeyi unutmak; merdiven kesirde bir basamakta durmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "rsy-islem",
+   "tip": "Dört işlem ve işlem önceliği",
+   "kaynak": "ÖSYM 2018–2025 (rasyonel işlem) · yayın: bileşik kesir, merdiven kesir"
+  },
+  {
+   "id": "K-RSYN-02",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Kesir sıralama ve karşılaştırma",
+   "fikir": "Payda eşitleme, ondalığa çevirme ve pay–payda farkı (aynı farklı kesirlerde payda büyüdükçe 1’e yaklaşma) ile sıralama ve aralık sorusu çözülür.",
+   "tuzak": "Pay büyük olan kesri büyük saymak; payda büyük olan kesri büyük saymak; aralığın uçlarını dahil saymak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "rsy-siralama",
+   "tip": "Kesir sıralama ve karşılaştırma",
+   "kaynak": "ÖSYM (rasyonel karşılaştırma + doğru/yanlış) · yayın: kesir sıralama"
+  },
+  {
+   "id": "K-RSYN-03",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Sayı doğrusu ve eşit aralıklar",
+   "fikir": "İki nokta arası eşit parçaya bölününce parça uzunluğu fark ÷ parça sayısıdır; işaretlenen noktalar bu adımla bulunur.",
+   "tuzak": "Parça sayısı ile nokta sayısını karıştırmak; başlangıcı 0 almak; farklı aralıkların parça sayısını eşit sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "rsy-dogru",
+   "tip": "Sayı doğrusu ve eşit aralıklara bölme",
+   "kaynak": "ÖSYM (sayı doğrusunda eşit aralıklar, ölçek okuma) · yayın: sayı doğrusu kesir"
+  },
+  {
+   "id": "K-RSYN-04",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Ondalık ve devirli ondalık sayılar",
+   "fikir": "Ondalık işlemlerde virgül kaydırma; devirli sayılar 0,(a) = a/9, 0,(ab) = ab/99, 0,a(b) = (ab − a)/90 ile kesre çevrilir.",
+   "tuzak": "Devirli sayıyı sonlu ondalık gibi toplamak; 99 yerine 90 ya da 100 kullanmak; virgülü yanlış kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "rsy-ondalik",
+   "tip": "Ondalık ve devirli ondalık sayılar",
+   "kaynak": "ÖSYM (ondalık/devirli) · yayın: devirli ondalık sayı soruları"
+  },
+  {
+   "id": "K-RSYN-05",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Tanımsızlık, tam sayı değeri, basit/bileşik kesir",
+   "fikir": "Paydanın 0 olması, kesrin tam sayı olması (bölenler) ve basit/bileşik/sadeleşmeyen kesir koşulları eşitsizlik ve bölen listeleriyle taranır.",
+   "tuzak": "Negatif bölenleri atlamak; 0’ı unutmak; “sadeleşmeyen” koşulunu atlamak; eşitliği (pay = payda) yanlış sınıflamak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "rsy-kosul",
+   "tip": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+   "kaynak": "ÖSYM (kesrin değeri tam sayı/tanımsız) · yayın: basit–bileşik kesir"
+  },
+  {
+   "id": "K-RSYN-06",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Günlük ölçüm (tarif, depo, tartı)",
+   "fikir": "Kesir–bütün ilişkisi (parça ÷ kesir = bütün), bölme ve ölçek okuma ile hikâyeli ölçüm sorusu denkleme çevrilir.",
+   "tuzak": "Kesri bütünle karıştırmak; kalan ile kullanılanı karıştırmak; ondalığı yanlış kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "rsy-olcum",
+   "tip": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+   "kaynak": "ÖSYM (kesirle ölçüm/tartı, depo göstergesi) · yayın: kesirli problemler"
+  },
+  {
+   "id": "K-RSYN-07",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Tanımlı işlem",
+   "fikir": "Soruda tanımlanan işlem verilen sayılara adım adım, parantezin içinden başlayarak uygulanır; çıkan sonuç bir sonraki adımda işlenen olur.",
+   "tuzak": "İşlem sırasını (parantez) atlamak; tanımı yanlış uygulamak; ters almayı unutmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "rsy-tanimli",
+   "tip": "Tanımlı işlem",
+   "kaynak": "ÖSYM (tanımlı işlem soruları) · yayın: yeni tanımlı işlem"
+  },
+  {
+   "id": "K-RSYN-08",
+   "konu": "Rasyonel Sayılar",
+   "alt": "Kutulara yerleştirme ve rasyonel gruplama",
+   "fikir": "Rakamların kesirde yerleşimi ve kesir kartlarından grup seçimi tüm olasılıklar sistemli taranarak ya da tümleyen grup düşünülerek çözülür.",
+   "tuzak": "Tüm yerleşimleri denemeden karar vermek; “en az” ile “en çok”u karıştırmak; bir grubu iki kez ya da hiç saymamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "rsy-yerlestirme",
+   "tip": "Kutulara yerleştirme ve rasyonel gruplama",
+   "kaynak": "ÖSYM (kutulara sayı yerleştirme, rasyonel gruplama) · yayın: kesir kartları"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "rsy-islem",
+   "ad": "Dört işlem ve işlem önceliği",
+   "kartlar": [
+    "K-RSYN-01"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-siralama",
+   "ad": "Kesir sıralama ve karşılaştırma",
+   "kartlar": [
+    "K-RSYN-02"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-dogru",
+   "ad": "Sayı doğrusu ve eşit aralıklara bölme",
+   "kartlar": [
+    "K-RSYN-03"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-ondalik",
+   "ad": "Ondalık ve devirli ondalık sayılar",
+   "kartlar": [
+    "K-RSYN-04"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-kosul",
+   "ad": "Tanımsız, tam sayı değeri ve basit/bileşik kesir koşulları",
+   "kartlar": [
+    "K-RSYN-05"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-olcum",
+   "ad": "Günlük ölçüm: tarif, depo göstergesi, tartı",
+   "kartlar": [
+    "K-RSYN-06"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-tanimli",
+   "ad": "Tanımlı işlem",
+   "kartlar": [
+    "K-RSYN-07"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  },
+  {
+   "tipId": "rsy-yerlestirme",
+   "ad": "Kutulara yerleştirme ve rasyonel gruplama",
+   "kartlar": [
+    "K-RSYN-08"
+   ],
+   "uygulamaKonu": "mat|Rasyonel Sayılar"
+  }
+ ]
+}

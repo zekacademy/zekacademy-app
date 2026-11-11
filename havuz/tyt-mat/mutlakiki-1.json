@@ -1,0 +1,701 @@
+[
+ {
+  "id": "tytmat-mutlakiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değer Açma",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Değişkenin aralığına göre iki mutlak değeri açıp toplayarak sabit bir değer bulur.",
+  "tipId": "mdb-ac",
+  "tip": "Mutlak değerli ifadeyi işaretine göre açma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "−3 < a < 2 olmak üzere\n|a + 3| + |a − 2|\nifadesi aşağıdakilerden hangisine eşittir?",
+  "sekil": null,
+  "siklar": {
+   "A": "−5",
+   "B": "−2a − 1",
+   "C": "2a + 1",
+   "D": "5",
+   "E": "a + 5"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "|a + 3|’ü −(a + 3), |a − 2|’yi (a − 2) açmış (iki işareti de ters yapmış): −(a + 3) + (a − 2) = −5.",
+   "B": "İki mutlak değeri de negatif işaretle açmış: −(a + 3) − (a − 2); a + 3 pozitiftir, a − 2 negatiftir.",
+   "E": "|a − 2| = 2 − a yazacakken yalnız 2 yazıp −a’yı unutmuş: (a + 3) + 2 = a + 5.",
+   "C": "İki mutlak değeri de pozitif açmış: (a + 3) + (a − 2); a − 2 negatiftir, mutlak değeri 2 − a’dır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "E": "islem",
+   "C": "bilgi"
+  },
+  "istenen": "|a + 3| + |a − 2| ifadesinin eşiti.",
+  "bilgi": [
+   {
+    "ad": "Mutlak değer",
+    "ifade": "|x| sayının sıfıra uzaklığıdır; x ≥ 0 ise |x| = x, x < 0 ise |x| = −x. Örnek: |5| = 5, |−5| = 5, |x − 2| için x < 2 ise 2 − x"
+   }
+  ],
+  "ipuclari": [
+   "−3 < a < 2 için a + 3 ve a − 2 sayılarının işaretlerini ayrı ayrı belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İşaretleri belirle",
+    "aciklama": "a > −3 olduğundan a + 3 pozitiftir; a < 2 olduğundan a − 2 negatiftir.",
+    "islem": "a + 3 > 0 · a − 2 < 0"
+   },
+   {
+    "baslik": "Mutlak değerleri aç",
+    "aciklama": "Pozitif ifade aynen, negatif ifade işareti değiştirilerek açılır.",
+    "islem": "|a + 3| = a + 3 · |a − 2| = −(a − 2) = 2 − a"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "a’lar birbirini götürür.",
+    "islem": "(a + 3) + (2 − a) = 5"
+   }
+  ],
+  "puf": "Mutlak değer içindeki ifadenin işaretini önce belirle; negatifse parantezle eksi koyup aç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-01 (işarete göre açma) · −3 < a < 2 iken |a + 3| + |a − 2| sabit değeri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Denklem",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Katsayılı mutlak değerli denklemi önce mutlak değeri yalnız bırakıp iki duruma ayırarak çözer ve köklerin çarpımını bulur.",
+  "tipId": "mdb-denklem",
+  "tip": "Mutlak değerli denklem ve çözümlerin çarpımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "2|x − 1| + 3 = 11\ndenkleminin çözüm kümesindeki elemanların çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−63",
+   "B": "−15",
+   "C": "2",
+   "D": "5",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−15"
+  },
+  "celdiriciler": {
+   "C": "Köklerin çarpımı yerine toplamını (5 + (−3) = 2) yazmış.",
+   "D": "Yalnız |x − 1| = 4 → x − 1 = 4 durumunu çözüp tek kök (5) bulmuş; x − 1 = −4 durumunu unutmuş.",
+   "E": "Kökleri −3 ve 5 bulmuş ama −3’ün işaretini atıp 3 × 5 = 15 yazmış.",
+   "A": "2’ye bölmeyi unutup |x − 1| = 8 çözmüş; kökler 9 ve −7, çarpım −63."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem",
+   "A": "islem"
+  },
+  "istenen": "Denklemin çözüm kümesindeki elemanların çarpımı.",
+  "bilgi": [
+   {
+    "ad": "|ifade| = k denklemi",
+    "ifade": "k > 0 iken |A| = k denklemi A = k ya da A = −k anlamına gelir; iki kök de ayrı ayrı bulunur. Örnek: |x − 1| = 4 → x = 5 ya da x = −3"
+   }
+  ],
+  "ipuclari": [
+   "Önce mutlak değeri yalnız bırak: 3’ü karşıya at, sonra 2’ye böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mutlak değeri yalnız bırak",
+    "aciklama": "3’ü karşıya at, sonra 2’ye böl.",
+    "islem": "2|x − 1| = 8 → |x − 1| = 4"
+   },
+   {
+    "baslik": "İki duruma ayır",
+    "aciklama": "İçerik 4 ya da −4 olur.",
+    "islem": "x − 1 = 4 → x = 5 · x − 1 = −4 → x = −3"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Köklerin çarpımını al.",
+    "islem": "5 × (−3) = −15"
+   }
+  ],
+  "puf": "Katsayı ve sabit varsa önce |…| yalnız bırakılır, sonra iki duruma ayrılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-02 (mutlak değerli denklem) · 2|x − 1| + 3 = 11 denkleminde kökler çarpımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Denklem",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki mutlak değerin eşitliğini iki duruma ayırarak çözer ve köklerin çarpımını bulur.",
+  "tipId": "mdb-denklem",
+  "tip": "Mutlak değerli denklem ve çözümlerin çarpımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "|3x − 2| = |x + 6|\neşitliğini sağlayan x değerlerinin çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−4",
+   "B": "−1",
+   "C": "3",
+   "D": "4",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−4"
+  },
+  "celdiriciler": {
+   "B": "Yalnız 3x − 2 = −(x + 6) durumunu çözüp tek kök (−1) bulmuş.",
+   "C": "İki kökün toplamını (4 + (−1) = 3) bulmuş; soru çarpımı istiyor.",
+   "D": "Yalnız 3x − 2 = x + 6 durumunu çözüp tek kök (4) bulmuş.",
+   "E": "İkinci durumda −(x + 6) yerine −x + 6 yazıp x = 2 bulmuş; çarpım 4 × 2 = 8."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Köklerin çarpımı.",
+  "bilgi": [
+   {
+    "ad": "İki mutlak değerin eşitliği",
+    "ifade": "|A| = |B| iken A = B ya da A = −B alınır. Örnek: |x| = |x − 4| → x = x − 4 (çözümsüz) ya da x = −(x − 4) → x = 2"
+   }
+  ],
+  "ipuclari": [
+   "|A| = |B| olduğunda A = B ya da A = −B durumlarını ayrı ayrı çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci durum",
+    "aciklama": "İki içeriği eşitle.",
+    "islem": "3x − 2 = x + 6 → 2x = 8 → x = 4"
+   },
+   {
+    "baslik": "İkinci durum",
+    "aciklama": "Bir tarafı eksiyle çarpıp eşitle; eksi tüm ifadeye geçer.",
+    "islem": "3x − 2 = −(x + 6) → 4x = −4 → x = −1"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İki kökü çarp.",
+    "islem": "4 × (−1) = −4 · kontrol: |10| = |10| ve |−5| = |5|"
+   }
+  ],
+  "puf": "|A| = |B| için A = B ve A = −B durumlarını çöz; eksi işaretini tüm parantezin başına koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-02 (mutlak değerli denklem) · |3x − 2| = |x + 6| ve köklerin çarpımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Mutlak Değerli Eşitsizlik",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "|x − a| > b eşitsizliğini iki ayrı aralığa dönüştürüp belirli bir tam sayı aralığında sağlayan değerleri sayar.",
+  "tipId": "mdb-esitsizlik",
+  "tip": "Mutlak değerli eşitsizlikte tam sayı adedi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x bir tam sayı ve −5 ≤ x ≤ 7 olmak üzere\n|x − 1| > 3\neşitsizliğini sağlayan kaç farklı x değeri vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "6",
+   "C": "7",
+   "D": "8",
+   "E": "13"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "|x − 1| > 3 için yalnız x − 1 > 3 durumunu almış (x = 5, 6, 7); x − 1 < −3 durumunu da eklemeliydi.",
+   "C": "Eşitsizliği ters yorumlayıp |x − 1| ≤ 3 sağlayan değerleri (−2’den 4’e kadar) saymış.",
+   "D": "“>” yerine “≥” kullanıp 4 ve −2’yi de saymış; 4 − 1 = 3 olduğundan eşitlik sağlanır, “>” sağlanmaz.",
+   "E": "Koşulu hiç uygulamayıp aralıktaki bütün tam sayıları saymış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eşitsizliği sağlayan tam sayı adedi.",
+  "bilgi": [
+   {
+    "ad": "|x − a| < b ve |x − a| > b",
+    "ifade": "|x − a| < b ise a − b < x < a + b (a’ya uzaklığı b’den az); |x − a| > b ise x < a − b ya da x > a + b. Örnek: |x − 1| < 3 → −2 < x < 4"
+   }
+  ],
+  "ipuclari": [
+   "|x − 1| > 3 koşulunu iki parçaya ayır: x − 1 > 3 ya da x − 1 < −3."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitsizliği ayır",
+    "aciklama": "Uzaklığı 3’ten büyük olan sayılar iki ayrı yerde bulunur.",
+    "islem": "x − 1 > 3 → x > 4 · x − 1 < −3 → x < −2"
+   },
+   {
+    "baslik": "Aralıkla kesiştir",
+    "aciklama": "−5 ≤ x ≤ 7 aralığındaki tam sayıları seç.",
+    "islem": "x = 5, 6, 7 · x = −5, −4, −3"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "İki gruptaki sayıları topla.",
+    "islem": "3 + 3 = 6"
+   }
+  ],
+  "puf": "|x − a| > b iki ayrı aralık verir (iki uç da hariç); tam sayıları iki yandan ayrı ayrı say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-03 (mutlak değerli eşitsizlik) · |x − 1| > 3 ve −5 ≤ x ≤ 7 aralığındaki tam sayılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Tolerans Problemleri",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "En çok sapma koşulunu mutlak değerli eşitsizliğe çevirip kabul edilen iki değer arasındaki en büyük farkı bulur.",
+  "tipId": "mdb-model",
+  "tip": "Tolerans ve sapma problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir ilaç fabrikasında üretilen tabletlerin kütlesi 250 mg’dan en çok 15 mg sapabilir; kütlesi bu sınırlar içinde (sınırlar dahil) kalan tabletler kabul edilir. Kabul edilen tabletlerin kütleleri gerçel sayıdır.\nKabul edilen iki tabletin kütleleri arasındaki fark en çok kaç mg olabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "28",
+   "C": "30",
+   "D": "31",
+   "E": "265"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Yalnız bir tarafın sapmasını (15 mg) fark sanmış; iki tablet zıt yönlerde sapabilir.",
+   "B": "Kütleleri tam sayı sanıp sınırları dışarıda tutarak 236 ile 264’ü almış: 264 − 236 = 28; oysa sınırlar dahildir ve kütle gerçel sayıdır.",
+   "D": "235’ten 265’e kadar tam sayıları sayıp 31 bulmuş; sorulan adet değil fark.",
+   "E": "Kabul edilen en büyük kütleyi (265 mg) yazmış; sorulan iki kütlenin farkıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kabul edilen iki tabletin kütle farkının en büyük değeri (mg).",
+  "bilgi": [
+   {
+    "ad": "Tolerans ve sapma",
+    "ifade": "“a’dan en çok k sapma” |x − a| ≤ k demektir ve a − k ≤ x ≤ a + k aralığını verir. Örnek: 250’den en çok 15 sapan değerler 235 ile 265 arasındadır"
+   }
+  ],
+  "ipuclari": [
+   "|m − 250| ≤ 15 koşulunu m’nin aralığı olarak yaz; en küçük ve en büyük kütleyi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitsizliği kur",
+    "aciklama": "Kütle m için 250’den sapma en çok 15’tir.",
+    "islem": "|m − 250| ≤ 15"
+   },
+   {
+    "baslik": "Aralığı yaz",
+    "aciklama": "Mutlak değeri aç.",
+    "islem": "−15 ≤ m − 250 ≤ 15 → 235 ≤ m ≤ 265"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "En büyük fark, en büyük ile en küçük kütlenin farkıdır.",
+    "islem": "265 − 235 = 30 mg"
+   }
+  ],
+  "puf": "“a’dan en çok k sapma” a − k ile a + k arasını verir; iki değer arasındaki en büyük fark 2k’dır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-05 (tolerans) · 250 mg’dan en çok 15 mg sapan tabletlerde iki tablet arasındaki en büyük fark",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Uzaklık Yorumu",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki noktaya uzaklıkların toplamı sınırlandığında, sayı doğrusunda mutlak değerli eşitsizliği kurup tam sayı konumlarını sayar.",
+  "tipId": "mdb-uzaklik",
+  "tip": "Uzaklık toplamının en küçük değeri ve çözümleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Düz bir yol üzerinde, başlangıç noktasına göre konumları −3 km ve 5 km olan iki market vardır. Bir ev, bu yol üzerinde konumu tam sayı (km) olan bir noktaya yapılacaktır. Evden iki markete olan uzaklıkların toplamı en çok 10 km olmalıdır.\nBuna göre ev kaç farklı konuma yapılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "8",
+   "C": "9",
+   "D": "10",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "Her marketin uzaklığının en çok 5 km olması gerektiğini sanıp iki koşulun ortak konumlarını (0, 1, 2) saymış.",
+   "B": "Uzaklıklar toplamının en küçük değerini (8) sayı adedi sanmış.",
+   "C": "Yalnız iki market arasındaki konumları (−3’ten 5’e) saymış; marketlerin dışında da konum olabilir.",
+   "D": "Konum sayısını uçların farkı (6 − (−4)) kadar bulmuş; uç değerler dahil olduğundan 1 fazla sayılmalıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "Evin yapılabileceği tam sayı konum adedi.",
+  "bilgi": [
+   {
+    "ad": "Sayı doğrusunda uzaklık",
+    "ifade": "|x − a|, x ile a arasındaki uzaklıktır; |x − a| + |x − b| toplamı x iki sayının arasındayken en küçük ve sabittir. Örnek: |x − 1| + |x − 5| ≥ 4, en küçük değer 1 ile 5 arasında alınır"
+   }
+  ],
+  "ipuclari": [
+   "Ev konumu x olsun: |x + 3| + |x − 5| ≤ 10. İki market arasında toplamın kaç olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitsizliği kur",
+    "aciklama": "Ev konumu x ise uzaklıklar |x + 3| ve |x − 5| olur.",
+    "islem": "|x + 3| + |x − 5| ≤ 10"
+   },
+   {
+    "baslik": "Arada toplamı bul",
+    "aciklama": "−3 ile 5 arasında toplam, marketler arası uzaklığa eşit ve sabittir.",
+    "islem": "−3 ≤ x ≤ 5 → toplam = 8 ≤ 10 (hepsi uygun)"
+   },
+   {
+    "baslik": "Dışarıda sınırı bul",
+    "aciklama": "5’in sağında toplam 2x − 2 olur; −3’ün solunda −2x + 2.",
+    "islem": "2x − 2 ≤ 10 → x ≤ 6 · −2x + 2 ≤ 10 → x ≥ −4"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "−4’ten 6’ya kadar tam sayılar.",
+    "islem": "6 − (−4) + 1 = 11"
+   }
+  ],
+  "puf": "İki noktanın arasında uzaklık toplamı sabittir; dışarıda her birim 2 artar, sınır buradan bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-04 (uzaklık yorumu) · iki marketin konumuna uzaklıklar toplamı en çok 10 km, tam sayı konum sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Uzaklık Yorumu",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Üç terimli uzaklık toplamının en küçük değerini ortadaki noktada bulup verilen değere ulaşan iki noktayı belirler.",
+  "tipId": "mdb-uzaklik",
+  "tip": "Uzaklık toplamının en küçük değeri ve çözümleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "x gerçel sayısı için\n|x + 4| + |x − 2| + |x − 8| = 16\neşitliğini sağlayan x değerlerinin çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−24",
+   "B": "−12",
+   "C": "−2",
+   "D": "4",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−12"
+  },
+  "celdiriciler": {
+   "A": "Sol kökü −4 (terimin sıfırı) sanıp 6 × (−4) = −24 yazmış; oysa f(−4) = 18 ≠ 16’dır.",
+   "C": "Yalnız soldaki kökü (−2) bulup sağdaki kökü (6) eklememiş.",
+   "D": "Köklerin (−2 ve 6) toplamını yazmış; soru çarpımı istiyor.",
+   "E": "Yalnız sağdaki kökü (6) bulup soldaki kökü (−2) eklememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eşitliği sağlayan x değerlerinin çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Sayı doğrusunda uzaklık",
+    "ifade": "|x − a|, x ile a arasındaki uzaklıktır; |x − a| + |x − b| toplamı x iki sayının arasındayken en küçük ve sabittir. Örnek: |x − 1| + |x − 5| ≥ 4, en küçük değer 1 ile 5 arasında alınır"
+   },
+   {
+    "ad": "Çok terimli uzaklık toplamı",
+    "ifade": "|x − a| + |x − b| + |x − c| toplamı, x en ortadaki sayıya eşit olunca en küçüktür; sağında ve solunda toplam her birim 1 artar (iki terim artar, bir terim azalır). Örnek: |x| + |x − 2| + |x − 6| en küçük değerini x = 2’de alır: 2 + 0 + 4 = 6"
+   }
+  ],
+  "ipuclari": [
+   "Üç uzaklık toplamı en küçük değerini ortadaki sayıda (2) alır; oradan başlayıp her yönde toplamın nasıl arttığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En küçük değeri bul",
+    "aciklama": "Üç sayının ortancası 2’dir; toplam x = 2’de en küçüktür.",
+    "islem": "f(2) = |6| + 0 + |−6| = 12"
+   },
+   {
+    "baslik": "Eğimi bul",
+    "aciklama": "2’nin sağında (8’e kadar) iki terim artar, bir terim azalır: f her birim 1 artar.",
+    "islem": "f(x) = 12 + (x − 2) → 12 + (x − 2) = 16 → x = 6"
+   },
+   {
+    "baslik": "Sol kökü bul",
+    "aciklama": "2’nin solunda (−4’e kadar) da f her birim 1 artar.",
+    "islem": "12 + (2 − x) = 16 → x = −2"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "İki kökü f’de dene.",
+    "islem": "f(6) = 10 + 4 + 2 = 16 · f(−2) = 2 + 4 + 10 = 16"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İki kökü çarp.",
+    "islem": "6 × (−2) = −12"
+   }
+  ],
+  "puf": "Üç terimli uzaklık toplamı ortancada en küçüktür ve iki yana birim başına 1 artar (iki terim artar, bir terim azalır).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-04 (uzaklık yorumu) · |x + 4| + |x − 2| + |x − 8| = 16 köklerinin çarpımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · Öncüllü Mutlak Değer",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "Mutlak değer koşulundan x’in aralığını bulup öncüllerdeki mutlak değerli ifadeleri uç değerler dahil değerlendirir.",
+  "tipId": "mdb-onculu",
+  "tip": "Öncüllü mutlak değer ve aralık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "x gerçel sayısı için\n|x − 3| ≤ 2\nolduğu biliniyor.\nBuna göre\nI. |x − 2| ≤ 3\nII. |x − 4| < 2\nIII. |x + 1| > 2\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "C": "II’yi x = 3 gibi tek bir değerle deneyip doğru sanmış; x = 1 için |x − 4| = 3 olur, “< 2” sağlanmaz.",
+   "B": "II’yi x = 1 ile doğru biçimde eleyip I’i x = 5 ile |5 − 2| = 3’ü “3’ten küçük değil” sayarak elemiş (“≤” unutulmuş); III’ü ise x = 3 ile deneyip doğru bulmuş.",
+   "D": "I’i x = 5 ile deneyip |5 − 2| = 3’ü “3’ten küçük değil” diye elemiş (oysa “≤” vardır); II ve III’ü x = 3 ile deneyip doğru bulmuş.",
+   "E": "x’i 3 ile 5 arasında sanıp (alt sınırı atlayıp) üçünü de doğru bulmuş; x aralığı 1 ≤ x ≤ 5’tir."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "|x − a| < b ve |x − a| > b",
+    "ifade": "|x − a| < b ise a − b < x < a + b (a’ya uzaklığı b’den az); |x − a| > b ise x < a − b ya da x > a + b. Örnek: |x − 1| < 3 → −2 < x < 4"
+   }
+  ],
+  "ipuclari": [
+   "Önce x’in aralığını bul; sonra her öncülü iki uç değerde (en küçük ve en büyük x) dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "x’in aralığını bul",
+    "aciklama": "|x − 3| ≤ 2 ise x’in 3’e uzaklığı en çok 2’dir.",
+    "islem": "1 ≤ x ≤ 5"
+   },
+   {
+    "baslik": "I’i uçlarda dene",
+    "aciklama": "x − 2, 1 ile 5 arasında değişen x için −1 ile 3 arasındadır.",
+    "islem": "|x − 2| ≤ 3 → I doğru"
+   },
+   {
+    "baslik": "II ve III’ü uçlarda dene",
+    "aciklama": "x = 1 için II: |1 − 4| = 3 < 2 değil. x = 1 için III: |1 + 1| = 2 > 2 değil.",
+    "islem": "II yanlış · III yanlış"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Kesinlikle doğru olan yalnız I’dir.",
+    "islem": "Yalnız I"
+   }
+  ],
+  "puf": "Öncüllerde “kesinlikle” için aralığın uç değerlerini de dene; “<” ve “≤” farkı çoğu zaman uçlarda ortaya çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-06 (öncüllü mutlak değer) · |x − 3| ≤ 2 için üç mutlak değer öncülü ve uç değer denetimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mutlakiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Mutlak Değer · İki Mutlak Değerli Eşitsizlik",
+  "k": "mat|Mutlak Değer",
+  "kazanim": "İki mutlak değerin karşılaştırıldığı ve bir üst sınırla birleştirilen çift taraflı eşitsizliği çözüp tam sayı çözümlerinin toplamını bulur.",
+  "tipId": "mdb-esitsizlik",
+  "tip": "Mutlak değerli eşitsizlikte tam sayı adedi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "x bir tam sayı olmak üzere\n|x − 4| < |x + 2| < 7\nkoşulunu sağlayan x değerlerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−26",
+   "B": "4",
+   "C": "9",
+   "D": "10",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "D": "İlk eşitsizlikte “<” yerine “≤” alıp x = 1’i de sayarak 1 + 2 + 3 + 4 = 10 bulmuş; 1 için |1 − 4| = |1 + 2| olur, “<” sağlanmaz.",
+   "E": "|x + 2| < 7’yi “≤ 7” alıp x = 5’i de sayarak 14 bulmuş; 5 için |5 + 2| = 7, “< 7” sağlanmaz.",
+   "B": "4 ile −2’nin orta noktasını 3 almış (x > 3); oysa orta nokta (4 + (−2)) ÷ 2 = 1’dir. Yalnız x = 4 kalmış.",
+   "A": "Yalnız |x + 2| < 7 koşulunu çözüp (−9 < x < 5) −8’den 4’e kadar tam sayıları toplamış; ilk eşitsizliği kullanmamış."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "E": "dikkat",
+   "B": "islem",
+   "A": "dikkat"
+  },
+  "istenen": "Koşulu sağlayan tam sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "İki uzaklığın karşılaştırılması",
+    "ifade": "|x − a| < |x − b| ise x, a’ya b’den daha yakındır; ayırıcı nokta (a + b) ÷ 2’dir. Örnek: |x − 1| < |x − 5| → x < 3. Bir de kare alarak çözülebilir: (x − 1)² < (x − 5)² → x < 3"
+   },
+   {
+    "ad": "|x − a| < b ve |x − a| > b",
+    "ifade": "|x − a| < b ise a − b < x < a + b (a’ya uzaklığı b’den az); |x − a| > b ise x < a − b ya da x > a + b. Örnek: |x − 1| < 3 → −2 < x < 4"
+   }
+  ],
+  "ipuclari": [
+   "Çift taraflı eşitsizliği ikiye ayır: |x − 4| < |x + 2| için x’in hangi sayıya daha yakın olduğuna bak, |x + 2| < 7’yi ayrı çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk eşitsizliği yorumla",
+    "aciklama": "x, 4’e −2’den daha yakın olmalı; ayırıcı nokta ortadır.",
+    "islem": "(4 + (−2)) ÷ 2 = 1 → x > 1"
+   },
+   {
+    "baslik": "İkinci eşitsizliği çöz",
+    "aciklama": "|x + 2| < 7, x’in −2’ye uzaklığının 7’den az olması demektir.",
+    "islem": "−7 < x + 2 < 7 → −9 < x < 5"
+   },
+   {
+    "baslik": "Kesiştir",
+    "aciklama": "İki koşulu birlikte sağlayan tam sayıları bul.",
+    "islem": "1 < x < 5 → x = 2, 3, 4"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Bulunan sayıları topla.",
+    "islem": "2 + 3 + 4 = 9"
+   }
+  ],
+  "puf": "|x − a| < |x − b| için x’i a ile b’nin orta noktasının a tarafında ara; ikinci koşulu ayrı bir aralıkla kesiştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MTDB-03 (mutlak değerli eşitsizlik) · |x − 4| < |x + 2| < 7 koşulunu sağlayan tam sayıların toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
