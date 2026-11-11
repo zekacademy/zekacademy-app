@@ -66,7 +66,7 @@
 - Deniz Hoca: TYT TÜRKÇE KAMPI 2027 [TYT] · 36 video ⚠️ kanal aramayla bulundu (Deniz Hoca), kontrol et
 - Emek Taştan: 2028 YKS İçin Maarif Türkçe Kampı🔥Türkçe İlk Aşama Soru Bankası Çözümleri [TYT] · 102 video ⚠️ kanal aramayla bulundu (Emek TAŞTAN), kontrol et
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
-- Önder Hoca: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Önder Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
 - Harun Ardıç: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
@@ -79,7 +79,7 @@
 - Deniz Hoca: 2026 AYT EDEBİYAT KAMPI (Hedef 24 NET) [AYT] · 62 video; 11.Sınıf Edebiyat Konu Anlatımı 2026 +PDF [M11] · 7 video; 10.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M10] · 33 video; 9.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M9] · 38 video ⚠️ kanal aramayla bulundu (Deniz Hoca), kontrol et
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
 - Harun Ardıç: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
-- Önder Hoca: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Önder Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Tonguç Akademi: 10. Sınıf Edebiyat Güncel Konu Anlatımı #2027 [M10] · 4 video ⚠️ kanal aramayla bulundu (tonguç 10. SINIF), kontrol et
@@ -108,7 +108,7 @@
 - Felsefe Atölyesi: 7 Günde TYT Felsefe Kampı 2027 [TYT] · 8 video; 10.SINIF FELSEFE KAMPI (MAARİF MODELİ) [M10] · 15 video
 - Can Köni: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Can Hoca ile LGS), kontrol et
 - Sosyal Hocam: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Sosyal Hocam), kontrol et
-- Sevgi Bilgin: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Sevgi Bilgin: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 10. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (kampusdizi), kontrol et
@@ -119,7 +119,7 @@
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (kampusdizi), kontrol et
 - Benim Hocam: 2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Video Ders Notları - Konu Anlatım Videoları - Çetin ZENCİR [TYT/AYT] · 16 video
 
-Kullanılan kota: ~1163 birim (günlük sınır 10.000)
+Kullanılan kota: ~1064 birim (günlük sınır 10.000)
 
 ## Matematik
 - Mert Hoca: 2 liste, 228 video, 43/45 konu eşlendi
