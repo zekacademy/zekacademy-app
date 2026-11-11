@@ -1,0 +1,73 @@
+name: Video Kütüphanesi listeleri
+
+# YouTube Data API v3 ile hocaların oynatma listelerini çeker, public/video/<ders>.json dosyalarını yeniler.
+# Anahtar GitHub sırrı YOUTUBE_API_KEY'de durur; dosyalara ve günlüklere yazılmaz.
+on:
+  workflow_dispatch:
+    inputs:
+      dersler:
+        description: "Sadece bu dersler (ör. mat,fiz). Boş = hepsi"
+        required: false
+        default: ""
+  push:
+    branches: ["video-*"]
+    paths: ["data/video-kaynak.json", "tools/youtube-listeler.mjs", "tools/video-ortak.mjs", ".github/workflows/video-listeler.yml"]
+  schedule:
+    - cron: "17 3 * * 1" # her pazartesi 06:17 (TR): kırık / kaldırılmış video kontrolü
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-listeler-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cek:
+    name: Listeleri çek ve derle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Anahtar var mı
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          if [ -z "$YOUTUBE_API_KEY" ]; then
+            echo "::error title=YOUTUBE_API_KEY yok::YouTube anahtarı henüz eklenmemiş. GitHub → depo Settings → Secrets and variables → Actions → New repository secret → Name: YOUTUBE_API_KEY. Ekledikten sonra bu iş akışını yeniden çalıştır."
+            echo "### ⛔ YOUTUBE_API_KEY sırrı yok" >> "$GITHUB_STEP_SUMMARY"
+            echo "Listeler çekilmedi. Sırrı ekleyip iş akışını yeniden çalıştır." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - name: Listeleri çek
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          DERSLER: ${{ github.event.inputs.dersler }}
+        run: |
+          if [ -n "$DERSLER" ]; then node tools/youtube-listeler.mjs --cek --ders "$DERSLER"; else node tools/youtube-listeler.mjs --cek; fi
+          cat data/video-rapor.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Sonuç dosyaları (indirilebilir)
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-listeleri
+          path: |
+            public/video/
+            data/youtube/
+            data/video-kanallar.json
+            data/video-rapor.md
+      - name: Dala kaydet (main hariç)
+        if: github.ref_name != 'main'
+        run: |
+          git config user.name "zekacademy-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/video data/youtube data/video-kanallar.json data/video-rapor.md
+          if git diff --cached --quiet; then echo "Değişiklik yok"; exit 0; fi
+          git commit -m "Video listeleri güncellendi ($(date -u +%F))"
+          git push
+      - name: main'de değişiklik raporu
+        if: github.ref_name == 'main'
+        run: |
+          git status --short public/video | head -50
+          echo "main'e doğrudan yazılmaz; değişiklikler artifact olarak indirilebilir ya da video-* dalında çalıştırılır." >> "$GITHUB_STEP_SUMMARY"

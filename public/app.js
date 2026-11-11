@@ -592,14 +592,14 @@ function studentShell(){
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
-  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular")};
+  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar")};
   const nots = studentNotices(s).length;
   return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","book","Ders"],["program","cal","Haftalık Program",true],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Ders: Deneme analizi + Konu ilerlemesi (öğrenci alt menüsünde tek bölüm) ---------- */
-const DERS_SEK = [["analiz","chart","Deneme analizi"],["konular","book","Konu ilerlemesi"],["cetele","list","Yanlış çetelesi"],["sorular","note","Takıldığım sorular"]];
+const DERS_SEK = [["analiz","chart","Deneme analizi"],["konular","book","Konu ilerlemesi"],["cetele","list","Yanlış çetelesi"],["sorular","note","Takıldığım sorular"],["videolar","play","Video Kütüphanesi"]];
 const dersGorunum = v => DERS_SEK.some(x=>x[0]===v);
-function dersSayfa(s, v){ let h = v==="analiz" ? pAnaliz(s) : v==="konular" ? pKonular(s) : v==="cetele" ? pCetele(s) : pSorular(s, S.me);
+function dersSayfa(s, v){ let h = v==="videolar" ? pVideoKutuphane(s) : v==="analiz" ? pAnaliz(s) : v==="konular" ? pKonular(s) : v==="cetele" ? pCetele(s) : pSorular(s, S.me);
   h = h.replace(/<h1 class="ttl">(Deneme Analizi|Konu Takibi|Yanlış Çetelesi|Takıldığım sorular)<\/h1>/, `<h1 class="ttl">Ders</h1>`).replace(/<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">[\s\S]*?<\/button>/, "");
   const sek = `<div class="derssek" role="tablist">${DERS_SEK.map(([k,ic,ad])=>`<button data-act="go" data-v="${k}" aria-pressed="${v===k}">${icon(ic,"xs")} ${ad}</button>`).join("")}</div>`;
   return h.replace(/(<div class="page[^"]*"[^>]*>)/, `$1${sek}`); }
@@ -951,7 +951,7 @@ function subColors(list){ const seen = {}; return list.map(sub=>{ const g = subG
 const trLow = x => String(x||"").toLocaleLowerCase("tr");
 
 function konuSatirlari(s, sub){ return sub.t.map(n=>{ const k=tkey(sub.k,n), t=s.topics[k]||{}, full=topicScore(t)>=1;
-        return `<div class="trow ${full?"full":""}"><div class="tn">${full?icon("check","xs"):""}${esc(n)}</div>
+        return `<div class="trow ${full?"full":""}"><div class="tn">${full?icon("check","xs"):""}${esc(n)}${vKonuBtn(k, sub)}</div>
           <div class="tctl"><span class="stepper lbl">Tekrar<button data-act="rep" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num">${t.r||0}</span><button data-act="rep" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span>
           <button class="tog" data-act="sb" data-f="s1" data-k="${esc(k)}" aria-pressed="${!!t.s1}">${t.s1?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[0]||"Soru B. 1")}</button>
           <button class="tog" data-act="sb" data-f="s2" data-k="${esc(k)}" aria-pressed="${!!t.s2}">${t.s2?icon("check","xs"):""}${esc(((s.sbAd||{})[sub.k]||[])[1]||"Soru B. 2")}</button></div>
@@ -2788,6 +2788,7 @@ function geriKoruma(){ try{ if(!geriKurulu){ history.replaceState({zk:"kok"}, ""
 window.addEventListener("popstate", ()=>{
   if(!S.role || !S.ready) return;
   const ana = A() ? "ozet" : "home";
+  if($("#vp")){ vpKapat(); geriKoruma(); return; }
   if($("#layer") && $("#layer").innerHTML.trim()){ closeSheet(); geriKoruma(); return; }
   if(S.view !== ana){ S.view = ana; S.q = ""; render(); window.scrollTo(0,0); geriKoruma(); return; }
   if(Date.now() - geriSon < 2000){ history.back(); return; }
@@ -3044,13 +3045,14 @@ function openSheet(kind, el){
         <span class="faint small">Öğrenci bir sonraki girişinde bu şifreyle girer ve kendi şifresini belirler.</span><div class="err" id="m-rerr"></div></div>`
         :`<div class="card" style="box-shadow:none;display:flex;flex-direction:column;gap:10px"><span class="muted small">${x?"Bu öğrencinin hesabı yok. Hesap açmak için “Yeni öğrenci” ile ekleyip bu kayıtla birleştirebilirsin.":"Öğrenci bu bilgilerle kendi paneline girer. İlk girişte şifresini değiştirmesi istenir."}</span>
         ${x?"":`<div class="two"><label class="f">Kullanıcı adı<input type="text" name="u" id="m-u" autocapitalize="none" autocomplete="off" placeholder="ör. ahmetguner" value="${esc(el.dataset.name?normU(el.dataset.name).replace(/[^a-z0-9]/g,"").slice(0,20):"")}"></label><label class="f">İlk şifre<input type="text" name="p" id="m-p" autocomplete="off" value="123456"></label></div>`}</div>`}
+      ${x?vHocaAlanlari(x):""}
       ${x?`<label class="f">Başka bir kayıtla birleştir<select name="merge" id="m-merge"><option value="">—</option>${sortedStudents().filter(([k])=>k!==id).map(([k,y])=>`<option value="${k}">${esc(y.name)} · ${esc(y.sinif)}${y.kullanici?" · @"+esc(y.kullanici):""}</option>`).join("")}</select><span class="faint small" style="font-weight:500">Seçtiğin eski kaydın tüm verisi bu kayda taşınır ve eski kayıt silinir.</span></label>`:""}
       <div class="err" id="serr"></div>
       <div class="acts">${x?`<button type="button" class="btn danger" id="m-del" style="margin-right:auto">Öğrenciyi sil</button>`:""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" data-label="${x?"Kaydet":"Ekle"}">${x?"Kaydet":"Ekle"}</button></div>`,
     async (fd, form)=>{ const name = String(fd.get("name")).trim(); if(!name) return sheetErr("Ad soyad gerekli.");
       const sn = fd.get("sinif"), okul = sn==="Mezun"?"":String(fd.get("okul")||"").trim();
       const tel = String(fd.get("tel")||"").trim(), paket = String(fd.get("paket")||paketOf(null).k);
-      if(x){ Object.assign(x,{name,alan:fd.get("alan"),sinif:sn,okul,tel,paket});
+      if(x){ Object.assign(x,{name,alan:fd.get("alan"),sinif:sn,okul,tel,paket,vhoca:vHocaOku(fd)});
         const mg = fd.get("merge");
         if(mg && S.students.has(mg)){ const o = S.students.get(mg);
           x.topics = {...o.topics, ...x.topics}; x.denemeler = [...(o.denemeler||[]), ...(x.denemeler||[])];
@@ -3346,6 +3348,189 @@ setInterval(()=>{
 }, 1000);
 
 render();
+/* ---------- Video Kütüphanesi: Ders → Hoca → TYT / AYT / Maarif listesi; konu ekranında öğrencinin hocasının videosu ----------
+   Veri: /video/<ders>.json (ders ders tembel yüklenir, açılış yükü artmaz). Üreten: tools/youtube-listeler.mjs (GitHub Actions). */
+const VD = [
+  {id:"mat", ad:"Matematik", g:"mat", k:["mat","prob","matd","amat"], m:["mat"]},
+  {id:"geo", ad:"Geometri", g:"mat", k:["geo"], m:[]},
+  {id:"fiz", ad:"Fizik", g:"fen", k:["fiz","afiz"], m:["fiz"]},
+  {id:"kim", ad:"Kimya", g:"fen", k:["kim","akim"], m:["kim"]},
+  {id:"bio", ad:"Biyoloji", g:"fen", k:["bio","abio"], m:["bio"]},
+  {id:"tr", ad:"Türkçe", g:"tr", k:["tr"], m:[]},
+  {id:"ede", ad:"Edebiyat", g:"tr", k:["aede"], m:["tde"]},
+  {id:"tar", ad:"Tarih", g:"sos", k:["tar","atar"], m:["tar"]},
+  {id:"cog", ad:"Coğrafya", g:"sos", k:["cog","acog"], m:["cog"]},
+  {id:"fel", ad:"Felsefe", g:"sos", k:["fel","afel"], m:["fel"]},
+  {id:"din", ad:"Din Kültürü", g:"sos", k:[], m:[]} ];
+/* Koçun hoca tablosu (öğrenci kaydındaki seçim listesi; veriler gelince kütüphanede yenileri de görünür) */
+const VHOCA = {mat:["Mert Hoca","Bıyıklı Matematik","Rehber Matematik","Şenol Hoca","Eyüp B","İlyas Güneş","Hocalara Geldik","Matematik Kafası","Selim Yavuz","Mete Ekol"], geo:["Mert Hoca","Kenan Kara","Şenol Hoca","Rehber Matematik","Bıyıklı Matematik","Farklı Ders"], fiz:["Özcan Aykın","Umut Öncül","Altuğ Güneş","VIP Fizik","Fizikle Barış","Ertan Sinan Şahin"], kim:["Görkem Şahin","Kimya Adası","Ferrum","Kimya Özel","Hocalara Geldik"], bio:["Betül Biyoloji","Dr. Biyoloji","Selin Hoca","Biosem","OnBilim","FUNDAmentals"], tr:["Rüştü Hoca","Deniz Hoca","Emek Taştan","Aker Hoca","Önder Hoca","Fulya Hoca"], ede:["Rüştü Hoca","Emek Taştan","Deniz Hoca","Aker Hoca","Harun Ardıç"], tar:["Tarihin Kodları","Soner Ardıç","KR Akademi","Selami Yalçın","Gökhan Öz"], cog:["Coğrafyanın Kodları","Bayram Meral","Yavuz Tuna","Sosyal Hocam"], fel:["Felsefe Atölyesi","Can Köni","Sosyal Hocam","Sevgi Bilgin"], din:["Hocalara Geldik","Tonguç Akademi","Kampüs","Benim Hocam"]};
+const vdById = id => VD.find(x=>x.id===id);
+const vdersOf = sub => VD.find(x=> sub.dk ? x.m.includes(sub.dk) : x.k.includes(sub.k)) || null;
+const vdersKey = k => { const sk = String(k).split("|")[0], m = sk.match(/^m(9|10|11)([a-z]+)\d+$/); return VD.find(x=> m ? x.m.includes(m[2]) : x.k.includes(sk)) || null; };
+const VK = {};   /* ders → veri | "yok" | Promise */
+function vkYukle(id){ if(VK[id] && !(VK[id] instanceof Promise)) return Promise.resolve(VK[id]); if(VK[id]) return VK[id];
+  return VK[id] = fetch(`/video/${id}.json`, {cache:"no-cache"}).then(r=>r.ok ? r.json() : null).catch(()=>null).then(j=>{ VK[id] = j && Array.isArray(j.hocalar) ? j : "yok"; return VK[id]; }); }
+const vkVeri = id => VK[id] && !(VK[id] instanceof Promise) && VK[id]!=="yok" ? VK[id] : null;
+const vkDolu = h => h && h.listeler && h.listeler.some(l=>l.v && l.v.length);
+const hocaEs = (a, b) => { const x = normName(a), y = normName(b); return !!x && !!y && (x===y || x.includes(y) || y.includes(x)); };
+/* Öğrencinin bu dersteki hocaları, öncelik sırasıyla: koçun video seçimi → takip ettiği hocalar → ana hoca → diğerleri */
+function vHocaSira(s, d, veri){ const H = (veri && veri.hocalar || []).filter(vkDolu), out = [], ekle = h => { if(h && !out.includes(h)) out.push(h); };
+  const sec = ((s && s.vhoca) || {})[d.ad]; if(sec) ekle(H.find(h=>hocaEs(h.ad, sec)));
+  kaynakBol(s ? hoca(s, d.ad) : "").forEach(n=>ekle(H.find(h=>hocaEs(h.ad, n))));
+  H.filter(h=>h.rol==="ana").forEach(ekle); H.filter(h=>h.rol==="yedek").forEach(ekle); H.forEach(ekle); return out; }
+function vHocaAdi(s, d){ const v = vkVeri(d.id); if(v){ const h = vHocaSira(s, d, v)[0]; if(h) return h.ad; }
+  const sec = ((s && s.vhoca) || {})[d.ad]; return sec || kaynakBol(s ? hoca(s, d.ad) : "")[0] || (VHOCA[d.id]||[])[0] || ""; }
+const vSure = t => { t = Math.round(t||0); if(!t) return ""; const h = Math.floor(t/3600), m = Math.floor(t%3600/60); return h ? `${h} sa ${m} dk` : `${Math.max(1,m)} dk`; };
+const vSn = t => { t = Math.max(0, Math.floor(t||0)); const h = Math.floor(t/3600), m = Math.floor(t%3600/60), sn = t%60; return (h ? h+":"+String(m).padStart(2,"0") : m) + ":" + String(sn).padStart(2,"0"); };
+const vThumb = id => `https://i.ytimg.com/vi/${id}/mqdefault.jpg`;
+/* İzleme ilerlemesi (bu cihazda): {videoId: [saniye, süre, zaman]} */
+const VIK = () => "zk-vi-" + (S.me || "koc");
+function vIz(){ try{ return JSON.parse(localStorage.getItem(VIK())||"{}"); }catch(e){ return {}; } }
+function vIzYaz(vid, t, d){ try{ const o = vIz(); o[vid] = [Math.round(t), Math.round(d||((o[vid]||[])[1])||0), Date.now()]; const L = Object.entries(o).sort((a,b)=>b[1][2]-a[1][2]).slice(0, 400); localStorage.setItem(VIK(), JSON.stringify(Object.fromEntries(L))); }catch(e){} }
+function vSon(){ try{ return JSON.parse(localStorage.getItem(VIK()+"-son")||"null"); }catch(e){ return null; } }
+const vYuzde = vid => { const x = vIz()[vid]; return x && x[1] ? Math.min(100, x[0]/x[1]*100) : 0; };
+
+/* ---------- Konu ekranı: ▶ ile öğrencinin hocasının videosu ---------- */
+function vKonuAc(k){ const d = vdersKey(k); if(!d) return toast("Bu dersin videoları yakında");
+  const ad = k.split("|").slice(1).join("|"), s = st();
+  toast("Video açılıyor…");
+  vkYukle(d.id).then(v=>{ if(v==="yok") return toast("Bu dersin videoları hazırlanıyor");
+    const sira = vHocaSira(s, d, v), varOlan = sira.filter(h=>h.konu && h.konu[k]);
+    if(!varOlan.length){ document.querySelectorAll(".toast").forEach(x=>x.remove()); return vYokSheet(d, ad); }
+    const h = varOlan[0], ist = ((s && s.vhoca) || {})[d.ad] || kaynakBol(s ? hoca(s, d.ad) : "")[0] || "", ilk = sira[0];
+    const not = ist && !hocaEs(h.ad, ist) ? (sira.some(x=>hocaEs(x.ad, ist)) ? `${ist} listesinde bu konu yok; ${h.ad} açıldı.` : `${ist} listeleri henüz eklenmedi; şimdilik ${h.ad} açıldı.`) : (ilk && ilk!==h ? `${ilk.ad} listesinde bu konu yok; ${h.ad} açıldı.` : "");
+    vKonuOynat(d, h, k, varOlan, not); }); }
+function vKonuOynat(d, h, k, varOlan, not){ const P = h.konu[k], tum = h.listeler.flatMap(l=>l.v), ad = k.split("|").slice(1).join("|");
+  const liste = P.map(([vid, sn])=>{ const v = tum.find(x=>x[0]===vid) || [vid, ad, 0, []]; return {v, sn}; });
+  vpAc({baslik:ad, alt:`${h.ad}${P.length>1?` · ${P.length} video`:""}`, hoca:h.ad, ders:d, k, liste:liste.map(x=>x.v), i:0, sn:liste[0].sn, basSn:liste.map(x=>x.sn), digerHoca:varOlan.filter(x=>x!==h).map(x=>x.ad), not}); }
+function vYokSheet(d, ad){ sheet(`<h3>${esc(ad)}</h3><p class="muted">Bu konunun videosu henüz eklenmedi. Video Kütüphanesi'nde ${esc(d.ad)} hocalarının tüm listelerine bakabilirsin.</p>
+  <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-vk="kutuphane" data-d="${d.id}">Video Kütüphanesi</button></div>`); }
+function vKonuBtn(k, sub){ return vdersOf(sub) && vdersOf(sub).id!=="din" ? `<button type="button" class="vkbtn" data-vk="konu" data-k="${esc(k)}" aria-label="${esc(k.split("|").slice(1).join("|"))} konu anlatımı videosu">${icon("play","xs")}</button>` : ""; }
+
+/* ---------- Video Kütüphanesi sayfası (Ders sekmesi) ---------- */
+function vSinavlar(h){ const S0 = new Set(h.listeler.flatMap(l=>l.s||[])); return ["TYT","AYT","M"].filter(x=> x==="M" ? [...S0].some(y=>/^M/.test(y)) : S0.has(x)); }
+const VSAD = {TYT:"TYT", AYT:"AYT", M:"Maarif"};
+function pVideoKutuphane(s){ const head = topbar(`<h1 class="ttl">Ders</h1>`);
+  const d = S.vkd ? vdById(S.vkd) : null;
+  if(!d) return `${head}<div class="page">${vkGiris(s)}</div>`;
+  const v = VK[d.id];
+  if(!v || v instanceof Promise){ vkYukle(d.id).then(()=>{ if(S.view==="videolar") render(); }); return `${head}<div class="page">${vkUst("Dersler", "dersler", d.ad)}<div class="card vkbos"><span class="vkspin"></span> ${esc(d.ad)} listeleri yükleniyor…</div></div>`; }
+  if(v==="yok") return `${head}<div class="page">${vkUst("Dersler", "dersler", d.ad)}<div class="card empty">${esc(d.ad)} listeleri hazırlanıyor. Yakında burada olacak.</div></div>`;
+  const h = S.vkh ? v.hocalar.find(x=>x.ad===S.vkh) : null;
+  return `${head}<div class="page">${h ? vkHoca(s, d, h) : vkHocalar(s, d, v)}</div>`; }
+const vkUst = (geri, hedef, baslik, alt) => `<div class="vkust"><button type="button" class="vkgeri" data-vk="${hedef}">${icon("back","xs")} ${esc(geri)}</button><div class="vkbas"><b>${esc(baslik)}</b>${alt?`<span class="faint small">${alt}</span>`:""}</div></div>`;
+function vkGiris(s){ const son = vSon();
+  return `<div class="card vkintro"><div class="sech"><h3>${icon("play","sm")} Video Kütüphanesi</h3></div><p class="muted small" style="margin:6px 0 0">Ders seç, sonra hocayı; hocanın TYT, AYT ve Maarif listeleri sırayla burada. Konu ilerlemesi'nde konunun yanındaki ▶ ile kendi hocanın videosu doğrudan açılır.</p></div>
+    ${son && son.v ? `<button type="button" class="card vkson" data-vk="son"><span class="vkr"><img src="${vThumb(son.v[0])}" alt="" loading="lazy"><span class="vkp">▶</span></span><span class="vksont"><small>Kaldığın yerden devam et</small><b>${esc(son.baslik||son.v[1])}</b><span class="faint small">${esc(son.alt||"")}</span><span class="vkbar"><i style="width:${vYuzde(son.v[0])}%"></i></span></span></button>` : ""}
+    <div class="vkdersler">${VD.map(d=>{ const hk = vHocaAdi(s, d);
+      return `<button type="button" class="vkders" data-vk="ders" data-d="${d.id}" style="--sc:var(--c-${d.g})"><span class="vkdi">${esc(d.ad.slice(0,2))}</span><span class="vkdt"><b>${esc(d.ad)}</b><span class="faint small">${hk?`Hocan: ${esc(hk)}`:"Hocalar"}</span></span>${icon("chev","xs")}</button>`; }).join("")}</div>`; }
+function vkHocalar(s, d, v){ const sira = vHocaSira(s, d, v), benim = sira[0], dolu = v.hocalar.filter(vkDolu), bos = v.hocalar.filter(h=>!vkDolu(h));
+  const sirali = [...(benim?[benim]:[]), ...dolu.filter(h=>h!==benim)];
+  const kart = h => { const sv = vSinavlar(h), n = h.listeler.reduce((a,l)=>a+l.v.length,0);
+    return `<button type="button" class="vkhoca ${h===benim?"benim":""}" data-vk="hoca" data-h="${esc(h.ad)}"><span class="vkav">${esc(initials(h.ad))}</span><span class="vkdt"><b>${esc(h.ad)}${h===benim?` <span class="pill ac">Senin hocan</span>`:""}</b><span class="vkcips">${sv.map(x=>`<i>${VSAD[x]}</i>`).join("")}<span class="faint small">${n} video</span></span></span>${icon("chev","xs")}</button>`; };
+  return `${vkUst("Dersler", "dersler", d.ad, `${dolu.length} hoca`)}
+    <div class="vkhocalar">${sirali.map(kart).join("") || `<div class="card empty">${esc(d.ad)} listeleri hazırlanıyor.</div>`}</div>
+    ${bos.length?`<details class="vkyakin"><summary class="faint small">Yakında eklenecek hocalar (${bos.length})</summary><div class="vkyl">${bos.map(h=>`<span>${esc(h.ad)}</span>`).join("")}</div></details>`:""}`; }
+function vkHoca(s, d, h){ const sv = vSinavlar(h); let ex = S.vks && sv.includes(S.vks) ? S.vks : (isMaarif(s) && sv.includes("M") ? "M" : sv[0]);
+  const sinif = isMaarif(s) ? "M" + parseInt(s.sinif) : null;
+  let L = h.listeler.filter(l=> ex==="M" ? (l.s||[]).some(x=>/^M/.test(x)) : (l.s||[]).includes(ex));
+  if(ex==="M") L = L.slice().sort((a,b)=> ((a.s||[]).includes(sinif) ? -1 : 0) - ((b.s||[]).includes(sinif) ? -1 : 0) || String(a.s).localeCompare(String(b.s), "tr", {numeric:true}));
+  const top = h.listeler.reduce((a,l)=>a+l.v.length,0);
+  return `${vkUst(d.ad, "hocalar", h.ad, `${top} video`)}
+    ${sv.length>1?`<div class="seg">${sv.map(x=>`<button data-vk="sinav" data-v="${x}" aria-pressed="${x===ex}">${VSAD[x]}</button>`).join("")}</div>`:""}
+    ${L.map((l, li)=>{ const toplam = l.v.reduce((a,x)=>a+(x[2]||0),0), gi = h.listeler.indexOf(l);
+      return `<div class="card vkliste"><div class="sech"><h3>${esc(l.ad)}</h3><span class="faint small">${l.v.length} video${toplam?` · ${vSure(toplam)}`:""}</span></div>
+        ${ex==="M"?`<div class="faint small">${(l.s||[]).filter(x=>/^M/.test(x)).map(x=>x.slice(1)+". sınıf").join(", ")}</div>`:""}
+        <ol class="vklist">${l.v.map((x, i)=>{ const p = vYuzde(x[0]), B = x[3]||[];
+          return `<li><button type="button" class="vkv" data-vk="oynat" data-h="${esc(h.ad)}" data-l="${gi}" data-i="${i}"><span class="vkno num">${i+1}</span><span class="vkr sm"><img src="${vThumb(x[0])}" alt="" loading="lazy">${p>=95?`<span class="vkok">✓</span>`:""}</span><span class="vkvt"><b>${esc(x[1])}</b><span class="faint small">${x[2]?vSure(x[2]):""}${B.length?` · ${B.length} bölüm`:""}${x[4]===0?" · YouTube'da açılır":""}</span>${p?`<span class="vkbar"><i style="width:${p}%"></i></span>`:""}</span></button>
+            ${B.length?`<details class="vkbl"><summary>Bölümler</summary><div>${B.map(([sn, ad])=>`<button type="button" data-vk="oynat" data-h="${esc(h.ad)}" data-l="${gi}" data-i="${i}" data-sn="${sn}"><span class="num">${vSn(sn)}</span>${esc(ad)}</button>`).join("")}</div></details>`:""}</li>`; }).join("")}</ol></div>`; }).join("") || `<div class="card empty">Bu sınav için liste yok.</div>`}
+    <p class="faint small" style="text-align:center">Videolar hocaların kendi YouTube kanallarından açılır.</p>`; }
+
+/* ---------- Oynatıcı: render()'dan bağımsız katman (video yeniden yüklenmesin), kumanda Zekacademy'nin ---------- */
+const VP = {p:null, o:null, oyn:false, tim:null, oyt:null};
+function ytHazir(){ return new Promise((res, rej)=>{ if(window.YT && YT.Player) return res(); const eski = window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady = ()=>{ eski && eski(); res(); };
+  if(!document.getElementById("ytapi")){ const sc = document.createElement("script"); sc.id = "ytapi"; sc.src = "https://www.youtube.com/iframe_api"; sc.onerror = rej; document.head.appendChild(sc); } setTimeout(()=>rej(new Error("zaman")), 9000); }); }
+const vpZaman = () => { try{ return VP.p && VP.p.getCurrentTime ? VP.p.getCurrentTime() : (VP.o||{}).sn||0; }catch(e){ return (VP.o||{}).sn||0; } };
+function vpKaydet(){ const o = VP.o; if(!o || !VP.p || !VP.p.getDuration) return; const t = vpZaman(), d = VP.p.getDuration(); if(!t) return; const v = o.liste[o.i]; vIzYaz(v[0], t, d);
+  try{ localStorage.setItem(VIK()+"-son", JSON.stringify({v, baslik:o.baslik, alt:o.alt, ders:o.ders.id, hoca:o.hoca, k:o.k||null, l:o.l, i:o.li!=null ? o.li+o.i : null})); }catch(e){} }
+function vpAc(o){ closeSheet(); vpKapat(true); VP.o = o; const v = o.liste[o.i], P = o.liste, B = v[3]||[];
+  if(o.sn==null){ const x = vIz()[v[0]]; o.sn = x && x[1] && x[0] < x[1]-20 ? x[0] : 0; }
+  const el = document.createElement("div"); el.id = "vp"; el.className = "vp"; el.setAttribute("role", "dialog"); el.setAttribute("aria-label", "Video");
+  el.innerHTML = `<div class="vpust"><button class="iconbtn" data-vp="kapat" aria-label="Geri">${icon("back")}</button><div class="vpbas"><b>${esc(o.baslik)}</b><span class="faint small">${esc(o.alt||"")}</span></div></div>
+    <div class="vpana"><div class="vpsol">
+    <div class="oyn" id="oyn"><div class="vpvid"><div id="ytp"></div></div>
+      <div class="oyb" id="oyb" hidden>
+        <div class="oyc" id="oyc" role="slider" aria-label="Videoda ilerle" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="oyct"><i class="oycy" id="oycy"></i><i class="oycd" id="oycd"></i>${B.slice(1).map(([t])=>`<b class="oybl" data-t="${t}"></b>`).join("")}</div><span class="oytop" id="oytop"></span></div>
+        <div class="oyr"><button class="oyd buyuk" data-oy="oynat" aria-label="Oynat" id="oyoynat">▶</button><button class="oyd" data-oy="geri" aria-label="10 saniye geri">⟲<small>10</small></button><button class="oyd" data-oy="ileri" aria-label="10 saniye ileri">⟳<small>10</small></button><span class="oyz" id="oyz">0:00</span><span class="oyara"></span><button class="oyd yazi" data-oy="cc" aria-label="Alt yazı" aria-pressed="false" id="oycc">CC</button><button class="oyd yazi" data-oy="hiz" aria-label="Oynatma hızı" id="oyhiz">${String(vpHiz()).replace(".",",")}x</button><button class="oyd" data-oy="tam" aria-label="Tam ekran">⛶</button></div>
+      </div></div>
+    <div class="vpbilgi"><b>${esc(v[1])}</b><span class="faint small">${esc(o.hoca)}${v[2]?" · "+vSure(v[2]):""} · <a href="https://www.youtube.com/watch?v=${esc(v[0])}${o.sn?"&t="+Math.floor(o.sn)+"s":""}" target="_blank" rel="noopener">YouTube'da aç</a></span>${o.not?`<span class="vpnot">${esc(o.not)}</span>`:""}</div>
+    ${B.length?`<div class="dkbolum"><div class="dkbh">Bölümler · ${B.length}</div><div class="dkbl" id="vpbl">${B.map(([t,ad],i)=>`<button data-vp="git" data-sn="${t}" data-bi="${i}"><span>${vSn(t)}</span>${esc(ad)}</button>`).join("")}</div></div>`:""}
+    ${o.digerHoca && o.digerHoca.length?`<div class="dkbolum"><div class="dkbh">Başka hocadan izle</div><div class="vpdh">${o.digerHoca.map(n=>`<button class="btn sm" data-vp="hoca" data-h="${esc(n)}">${esc(n)}</button>`).join("")}</div></div>`:""}
+    </div>${P.length>1?`<div class="vpsag"><div class="dkbh">${o.k?"Bu konunun videoları":"Listedeki videolar"} · ${P.length}</div><ol class="vpsira" id="vpsira">${P.map((x,i)=>`<li><button data-vp="parca" data-i="${i}" class="${i===o.i?"on":""}" ${i===o.i?'aria-current="true"':""}><span class="vkr sm"><img src="${vThumb(x[0])}" alt="" loading="lazy"></span><span class="vkvt"><b>${esc(x[1])}</b><span class="faint small">${x[2]?vSure(x[2]):""}</span></span></button></li>`).join("")}</ol></div>`:""}</div>`;
+  document.body.appendChild(el); document.body.classList.add("dersacik");
+  const aktif = el.querySelector("#vpsira .on"); if(aktif) setTimeout(()=>aktif.scrollIntoView({block:"nearest"}), 50);
+  const sade = () => { const y = $("#ytp"); if(y) y.outerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v[0]}?rel=0&playsinline=1&start=${Math.floor(o.sn||0)}" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; };
+  if(v[4]===0){ sade(); } else ytHazir().then(()=>{ if(VP.o!==o) return; VP.p = new YT.Player("ytp", { host:"https://www.youtube-nocookie.com", videoId:v[0], playerVars:{ start:Math.floor(o.sn||0), rel:0, playsinline:1, modestbranding:1, controls:0, fs:0, iv_load_policy:3, disablekb:1, cc_load_policy:0, cc_lang_pref:"tr" },
+    events:{ onReady: ev=>{ const b = $("#oyb"); if(b) b.hidden = false; oyBasla(); try{ ev.target.setPlaybackRate(vpHiz()); }catch(_){} },
+      onError: ()=>{ if(VP.o===o){ const b = $("#oyb"); if(b) b.hidden = true; sade(); } },
+      onStateChange: ev=>{ VP.oyn = ev.data===1; oyCiz(); if(ev.data===2 || ev.data===0) vpKaydet(); if(ev.data===0 && o.i < P.length-1){ toast("Sıradaki video açılıyor"); setTimeout(()=>{ if(VP.o===o) vpAc({...o, i:o.i+1, sn:(o.basSn||[])[o.i+1]||0}); }, 1200); } } } }); }).catch(sade);
+  clearInterval(VP.tim); VP.tim = setInterval(()=>{ if(!VP.oyn) return; vpKaydet(); bolumIsaretle(); }, 3000);
+  geriKoruma(); }
+function vpHiz(){ try{ return +localStorage.getItem("zk-vhiz") || 1; }catch(e){ return 1; } }
+function oyCiz(){ const p = VP.p; if(!p || !p.getDuration) return; let t = 0, d = 0, y = 0; try{ t = p.getCurrentTime()||0; d = p.getDuration()||0; y = p.getVideoLoadedFraction()||0; }catch(_){ return; } if(d) t = Math.min(t, d);
+  const f = $("#oycd"), yb = $("#oycy"), z = $("#oyz"), o = $("#oyoynat"), c = $("#oyc"); if(!f) return;
+  f.style.width = (d ? t/d*100 : 0) + "%"; yb.style.width = (y*100) + "%"; z.innerHTML = `${vSn(t)}<span class="oyzt"> / ${vSn(d)}</span>`; if(c) c.setAttribute("aria-valuenow", Math.round(d ? t/d*100 : 0));
+  o.textContent = VP.oyn ? "❚❚" : "▶"; o.setAttribute("aria-label", VP.oyn ? "Durdur" : "Oynat");
+  if(d) document.querySelectorAll("#oyc [data-t]").forEach(e=>{ e.style.left = (Math.min(1, +e.dataset.t/d)*100) + "%"; }); }
+function oyBasla(){ clearInterval(VP.oyt); VP.oyt = setInterval(()=>{ if(!$("#oyb")) return clearInterval(VP.oyt); oyCiz(); }, 250); oyCiz();
+  const c = $("#oyc"); if(!c) return; let sur = false;
+  const git = e => { const r = c.getBoundingClientRect(), x = Math.max(0, Math.min(1, (e.clientX - r.left)/r.width)); try{ const d = VP.p.getDuration(); VP.p.seekTo(x*d, true); const tp = $("#oytop"); if(tp){ tp.textContent = vSn(x*d); tp.style.left = (x*100)+"%"; } }catch(_){} oyCiz(); };
+  c.addEventListener("pointerdown", e=>{ sur = true; c.setPointerCapture(e.pointerId); c.classList.add("sur"); git(e); });
+  c.addEventListener("pointermove", e=>{ if(sur) git(e); });
+  const bit = ()=>{ if(!sur) return; sur = false; c.classList.remove("sur"); vpKaydet(); bolumIsaretle(); };
+  c.addEventListener("pointerup", bit); c.addEventListener("pointercancel", bit);
+  c.addEventListener("keydown", e=>{ if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); oyAtla(e.key==="ArrowRight"?5:-5); } }); }
+function oyAltYazi(acik){ const p = VP.p; if(!p) return; try{ if(acik){ p.loadModule("captions"); p.setOption("captions", "track", {languageCode:"tr"}); } else { p.setOption("captions", "track", {}); p.unloadModule("captions"); } }catch(_){} const b = $("#oycc"); if(b) b.setAttribute("aria-pressed", acik); }
+function oyAtla(sn){ try{ VP.p.seekTo(Math.max(0, VP.p.getCurrentTime()+sn), true); }catch(_){} oyCiz(); }
+function bolumIsaretle(){ const o = VP.o; if(!o) return; const B = o.liste[o.i][3]||[]; if(!B.length) return; const t = vpZaman(); let i = 0; B.forEach(([s],j)=>{ if(t>=s) i = j; }); document.querySelectorAll("#vpbl button").forEach(b=>b.classList.toggle("on", +b.dataset.bi===i)); }
+function vpKapat(sessiz){ const el = $("#vp"); if(!el) return; vpKaydet(); clearInterval(VP.tim); clearInterval(VP.oyt); try{ VP.p && VP.p.destroy && VP.p.destroy(); }catch(e){} VP.p = null; VP.o = null; VP.oyn = false; el.remove(); document.body.classList.remove("dersacik"); if(!sessiz) render(); }
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-oy]"); if(!b || !VP.p) return; const a = b.dataset.oy;
+  if(a==="oynat"){ try{ VP.oyn ? VP.p.pauseVideo() : VP.p.playVideo(); }catch(_){} }
+  else if(a==="cc"){ const acik = b.getAttribute("aria-pressed")!=="true"; oyAltYazi(acik); toast(acik ? "Alt yazı açık" : "Alt yazı kapalı"); }
+  else if(a==="geri") oyAtla(-10); else if(a==="ileri") oyAtla(10);
+  else if(a==="hiz"){ const L = [1,1.25,1.5,2], r = L[(L.indexOf(vpHiz())+1)%L.length]; try{ localStorage.setItem("zk-vhiz", r); }catch(_){} try{ VP.p.setPlaybackRate(r); }catch(_){} b.textContent = String(r).replace(".",",")+"x"; }
+  else if(a==="tam"){ const w = $("#oyn"); try{ if(document.fullscreenElement) document.exitFullscreen(); else if(w.requestFullscreen) w.requestFullscreen().then(()=>{ try{ screen.orientation.lock("landscape").catch(()=>{}); }catch(_){} }).catch(()=>{}); else if(w.webkitRequestFullscreen) w.webkitRequestFullscreen(); }catch(_){} }
+});
+document.addEventListener("keydown", e=>{ if(!VP.p || !$("#vp") || /input|textarea|select/i.test((e.target||{}).tagName||"")) return; if(e.key===" "||e.key==="k"){ e.preventDefault(); try{ VP.oyn ? VP.p.pauseVideo() : VP.p.playVideo(); }catch(_){} } else if(e.key==="j") oyAtla(-10); else if(e.key==="l") oyAtla(10); else if(e.key==="Escape") vpKapat(); });
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-vp]"); if(!b || !VP.o) return; const a = b.dataset.vp, o = VP.o;
+  if(a==="kapat") return vpKapat();
+  if(a==="git"){ const t = +b.dataset.sn; try{ VP.p.seekTo(t, true); VP.p.playVideo(); }catch(_){ o.sn = t; vpAc({...o}); return; } setTimeout(bolumIsaretle, 300); $("#vp").scrollTo({top:0, behavior:"smooth"}); return; }
+  if(a==="parca"){ vpKaydet(); const i = +b.dataset.i; vpAc({...o, i, sn:o.basSn ? (o.basSn[i]||0) : null}); return; }
+  if(a==="hoca"){ vpKaydet(); const v = vkVeri(o.ders.id); if(!v) return; const h = v.hocalar.find(x=>x.ad===b.dataset.h); if(!h || !h.konu[o.k]) return; const digerleri = vHocaSira(st(), o.ders, v).filter(x=>x.konu && x.konu[o.k]); vKonuOynat(o.ders, h, o.k, digerleri, ""); return; }
+});
+/* Kütüphane ve konu düğmeleri */
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-vk]"); if(!b) return; const a = b.dataset.vk; e.preventDefault();
+  if(a==="konu") return vKonuAc(b.dataset.k);
+  if(a==="kutuphane"){ closeSheet(); S.vkd = b.dataset.d; S.vkh = null; S.view = "videolar"; render(); window.scrollTo(0,0); return; }
+  if(a==="ders"){ S.vkd = b.dataset.d; S.vkh = null; S.vks = null; render(); window.scrollTo(0,0); return; }
+  if(a==="dersler"){ S.vkd = null; S.vkh = null; render(); window.scrollTo(0,0); return; }
+  if(a==="hoca"){ S.vkh = b.dataset.h; S.vks = null; render(); window.scrollTo(0,0); return; }
+  if(a==="hocalar"){ S.vkh = null; render(); window.scrollTo(0,0); return; }
+  if(a==="sinav"){ S.vks = b.dataset.v; render(); return; }
+  if(a==="oynat"){ const d = vdById(S.vkd), v = vkVeri(S.vkd); if(!d || !v) return; const h = v.hocalar.find(x=>x.ad===b.dataset.h), l = h && h.listeler[+b.dataset.l]; if(!l) return;
+    vpAc({baslik:l.ad, alt:h.ad, hoca:h.ad, ders:d, liste:l.v, i:+b.dataset.i, sn:b.dataset.sn!=null ? +b.dataset.sn : null, l:+b.dataset.l, li:0}); return; }
+  if(a==="son"){ const s0 = vSon(); if(!s0 || !s0.v) return; const d = vdById(s0.ders); if(!d) return;
+    vkYukle(d.id).then(v=>{ const h = v && v!=="yok" && v.hocalar.find(x=>x.ad===s0.hoca);
+      if(h && s0.k && h.konu[s0.k]) return vKonuOynat(d, h, s0.k, vHocaSira(st(), d, v).filter(x=>x!==h && x.konu && x.konu[s0.k]), "");
+      const l = h && h.listeler[s0.l]; const i = l ? l.v.findIndex(x=>x[0]===s0.v[0]) : -1;
+      vpAc(i>=0 ? {baslik:l.ad, alt:h.ad, hoca:h.ad, ders:d, liste:l.v, i, sn:null, l:s0.l, li:0} : {baslik:s0.baslik, alt:s0.alt, hoca:s0.hoca||"", ders:d, liste:[s0.v], i:0, sn:null}); }); return; }
+});
+/* Koç: öğrenci kaydında ders ders video hocası */
+function vHocaAlanlari(x){ const sec = (x && x.vhoca) || {};
+  return `<details class="vhsec" ${Object.keys(sec).length?"open":""}><summary><b>Ders videoları · hocası</b> <span class="faint small">konuya dokununca bu hocanın videosu açılır</span></summary><div class="vhgrid">${VD.filter(d=>d.id!=="din").map(d=>{ const v = vkVeri(d.id), adlar = [...new Set([...(VHOCA[d.id]||[]), ...((v && v.hocalar || []).map(h=>h.ad))])], oto = kaynakBol(x ? hoca(x, d.ad) : "")[0];
+    return `<label class="f">${esc(d.ad)}<select name="vh:${esc(d.ad)}"><option value="">Oto: ${esc(oto || (VHOCA[d.id]||[])[0] || "ana hoca")}</option>${adlar.map(n=>`<option ${sec[d.ad]===n?"selected":""}>${esc(n)}</option>`).join("")}</select></label>`; }).join("")}</div></details>`; }
+function vHocaOku(fd){ const o = {}; VD.forEach(d=>{ const v = String(fd.get("vh:"+d.ad)||""); if(v) o[d.ad] = v; }); return o; }
+
 init();
 
 

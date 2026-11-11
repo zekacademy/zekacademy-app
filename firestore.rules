@@ -8,7 +8,7 @@ service cloud.firestore {
     function signedIn() { return request.auth != null; }
     function isCoach() { return signedIn() && request.auth.token.email == 'zekacademy@app.zekacademy.com'; }
     function isSelf(uid) { return signedIn() && request.auth.uid == uid; }
-    function coachOnlyKeys() { return ['koctanNot', 'hedef', 'donem', 'programYeni', 'kullanici', 'sbAd', 'aiBonus']; }
+    function coachOnlyKeys() { return ['koctanNot', 'hedef', 'donem', 'programYeni', 'kullanici', 'sbAd', 'aiBonus', 'vhoca']; }
 
     match /students/{uid} {
       allow read: if isCoach() || isSelf(uid);

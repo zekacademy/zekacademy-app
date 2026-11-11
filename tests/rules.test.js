@@ -137,6 +137,7 @@ test("soru çözüm: öğrenci kendi kullanımını ve sorularını okur, başka
   await assertSucceeds(getDoc(doc(coach(), "aiKullanim/2026-11_genel")));
   await assertSucceeds(setDoc(doc(coach(), "aiKullanim/2026-11_ali"), { sid: "ali", ekHak: 10 }, { merge: true }));
   await assertFails(updateDoc(doc(ali(), "students/ali"), { aiBonus: { hak: 999 } }));
+  await assertFails(updateDoc(doc(ali(), "students/ali"), { vhoca: { Matematik: "Başka Hoca" } }));
 });
 
 test("çalışma grupları: üye grubu ve canlı özetleri okur, sadece kendi özetini yazar; üye olmayan göremez", async () => {

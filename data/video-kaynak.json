@@ -1,0 +1,667 @@
+{
+ "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; boşsa iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz.",
+ "dersler": {
+  "mat": {
+   "ad": "Matematik",
+   "hocalar": [
+    {
+     "ad": "Mert Hoca",
+     "rol": "ana",
+     "kanal": "@merthoca",
+     "listeler": [
+      {
+       "id": "PLxSXQclq3muCBnV2nFrC8FGaAFk9yJNRN",
+       "ad": "TYT Matematik Konu Anlatımı - 2027 (Tek Videolar)",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Bıyıklı Matematik",
+     "rol": "yedek",
+     "ara": "Bıyıklı Matematik YKS"
+    },
+    {
+     "ad": "Rehber Matematik",
+     "rol": "yedek",
+     "ara": "Rehber Matematik YKS"
+    },
+    {
+     "ad": "Şenol Hoca",
+     "rol": "diger",
+     "ara": "Şenol Hoca YKS"
+    },
+    {
+     "ad": "Eyüp B",
+     "rol": "diger",
+     "ara": "Eyüp B YKS"
+    },
+    {
+     "ad": "İlyas Güneş",
+     "rol": "diger",
+     "ara": "İlyas Güneş YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Matematik"
+    },
+    {
+     "ad": "Matematik Kafası",
+     "rol": "diger",
+     "ara": "Matematik Kafası YKS"
+    },
+    {
+     "ad": "Selim Yavuz",
+     "rol": "diger",
+     "ara": "Selim Yavuz YKS"
+    },
+    {
+     "ad": "Mete Ekol",
+     "rol": "diger",
+     "ara": "Mete Ekol YKS"
+    },
+    {
+     "ad": "Sıfırdan Sonsuza Matematik",
+     "rol": "diger",
+     "ara": "Sıfırdan Sonsuza Matematik YKS"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Matematik"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Matematik"
+    }
+   ]
+  },
+  "geo": {
+   "ad": "Geometri",
+   "hocalar": [
+    {
+     "ad": "Mert Hoca",
+     "rol": "ana",
+     "kanal": "@merthoca",
+     "listeler": [
+      {
+       "id": "PLxSXQclq3muBKKBXwyEAJP0shmedtEZQr",
+       "ad": "TYT-AYT Geometri Konu Anlatımı - 2027 (60 Günde Geometri)",
+       "sinav": [
+        "TYT",
+        "AYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Kenan Kara",
+     "rol": "yedek",
+     "ara": "Kenan Kara YKS"
+    },
+    {
+     "ad": "Şenol Hoca",
+     "rol": "diger",
+     "ara": "Şenol Hoca YKS"
+    },
+    {
+     "ad": "Rehber Matematik",
+     "rol": "diger",
+     "ara": "Rehber Matematik YKS"
+    },
+    {
+     "ad": "Bıyıklı Matematik",
+     "rol": "diger",
+     "ara": "Bıyıklı Matematik YKS"
+    },
+    {
+     "ad": "Farklı Ders",
+     "rol": "diger",
+     "ara": "Farklı Ders YKS"
+    },
+    {
+     "ad": "Eyüp B",
+     "rol": "diger",
+     "ara": "Eyüp B YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Geometri"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Geometri"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Geometri"
+    }
+   ]
+  },
+  "fiz": {
+   "ad": "Fizik",
+   "hocalar": [
+    {
+     "ad": "Özcan Aykın",
+     "rol": "ana",
+     "ara": "Özcan Aykın YKS",
+     "listeler": [
+      {
+       "id": "PLhhV4F6NB0-uEPdZncMf_qb0tSKyBM-Lf",
+       "ad": "2027 - 55 Günde TYT Fizik Kampı",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Umut Öncül",
+     "rol": "yedek",
+     "ara": "Umut Öncül YKS"
+    },
+    {
+     "ad": "Altuğ Güneş",
+     "rol": "diger",
+     "ara": "Altuğ Güneş YKS"
+    },
+    {
+     "ad": "VIP Fizik",
+     "rol": "diger",
+     "ara": "VIP Fizik YKS"
+    },
+    {
+     "ad": "Fizikle Barış",
+     "rol": "diger",
+     "ara": "Fizikle Barış YKS"
+    },
+    {
+     "ad": "Ertan Sinan Şahin",
+     "rol": "diger",
+     "ara": "Ertan Sinan Şahin YKS"
+    },
+    {
+     "ad": "Kolay Fizik",
+     "rol": "diger",
+     "ara": "Kolay Fizik YKS"
+    },
+    {
+     "ad": "Papatya Hoca",
+     "rol": "diger",
+     "ara": "Papatya Hoca YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Fizik"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Fizik"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Fizik"
+    }
+   ]
+  },
+  "kim": {
+   "ad": "Kimya",
+   "hocalar": [
+    {
+     "ad": "Görkem Şahin",
+     "rol": "ana",
+     "kanal": "@BenimHocam",
+     "filtre": "Görkem",
+     "listeler": [
+      {
+       "ad": "2027 / TYT Kimya Konu Anlatım Videoları - Görkem ŞAHİN",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Kimya Adası",
+     "rol": "yedek",
+     "ara": "Kimya Adası YKS"
+    },
+    {
+     "ad": "Ferrum",
+     "rol": "diger",
+     "ara": "Ferrum YKS"
+    },
+    {
+     "ad": "Kimya Özel",
+     "rol": "diger",
+     "ara": "Kimya Özel YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Kimya"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Kimya"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Kimya"
+    }
+   ]
+  },
+  "bio": {
+   "ad": "Biyoloji",
+   "hocalar": [
+    {
+     "ad": "Betül Biyoloji",
+     "rol": "ana",
+     "kanal": "@betulbiyoloji",
+     "listeler": [
+      {
+       "ad": "2027 TYT Biyoloji Kampı",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Dr. Biyoloji",
+     "rol": "yedek",
+     "ara": "Dr. Biyoloji YKS"
+    },
+    {
+     "ad": "Selin Hoca",
+     "rol": "diger",
+     "ara": "Selin Hoca YKS"
+    },
+    {
+     "ad": "Biosem",
+     "rol": "diger",
+     "ara": "Biosem YKS"
+    },
+    {
+     "ad": "OnBilim",
+     "rol": "diger",
+     "ara": "OnBilim YKS"
+    },
+    {
+     "ad": "FUNDAmentals",
+     "rol": "diger",
+     "ara": "FUNDAmentals YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Biyoloji"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Biyoloji"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Biyoloji"
+    }
+   ]
+  },
+  "tr": {
+   "ad": "Türkçe",
+   "hocalar": [
+    {
+     "ad": "Rüştü Hoca",
+     "rol": "ana",
+     "kanal": "@RüştüHocaileTürkçe",
+     "listeler": [
+      {
+       "ad": "Dil Bilgisinin Ritmi 2027",
+       "sinav": [
+        "TYT"
+       ]
+      },
+      {
+       "ad": "Paragrafın Ritmi 2027",
+       "sinav": [
+        "TYT"
+       ]
+      },
+      {
+       "id": "PLL4Uzg_MGO2J74Fma5G2VblIJV21t5s9W",
+       "ad": "49 Günde TYT Türkçe Kampı (2026 Tayfa)",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Deniz Hoca",
+     "rol": "yedek",
+     "ara": "Deniz Hoca YKS"
+    },
+    {
+     "ad": "Emek Taştan",
+     "rol": "diger",
+     "ara": "Emek Taştan YKS"
+    },
+    {
+     "ad": "Aker Hoca",
+     "rol": "diger",
+     "ara": "Aker Hoca YKS"
+    },
+    {
+     "ad": "Önder Hoca",
+     "rol": "diger",
+     "ara": "Önder Hoca YKS"
+    },
+    {
+     "ad": "Fulya Hoca",
+     "rol": "diger",
+     "ara": "Fulya Hoca YKS"
+    },
+    {
+     "ad": "Harun Ardıç",
+     "rol": "diger",
+     "ara": "Harun Ardıç YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Türkçe"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Türkçe"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Türkçe"
+    }
+   ]
+  },
+  "ede": {
+   "ad": "Edebiyat",
+   "hocalar": [
+    {
+     "ad": "Rüştü Hoca",
+     "rol": "ana",
+     "kanal": "@RüştüHocaileTürkçe"
+    },
+    {
+     "ad": "Emek Taştan",
+     "rol": "yedek",
+     "ara": "Emek Taştan YKS"
+    },
+    {
+     "ad": "Deniz Hoca",
+     "rol": "diger",
+     "ara": "Deniz Hoca YKS"
+    },
+    {
+     "ad": "Aker Hoca",
+     "rol": "diger",
+     "ara": "Aker Hoca YKS"
+    },
+    {
+     "ad": "Harun Ardıç",
+     "rol": "diger",
+     "ara": "Harun Ardıç YKS"
+    },
+    {
+     "ad": "Önder Hoca",
+     "rol": "diger",
+     "ara": "Önder Hoca YKS"
+    },
+    {
+     "ad": "Fulya Hoca",
+     "rol": "diger",
+     "ara": "Fulya Hoca YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Edebiyat"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Edebiyat"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Edebiyat"
+    }
+   ]
+  },
+  "tar": {
+   "ad": "Tarih",
+   "hocalar": [
+    {
+     "ad": "Tarihin Kodları",
+     "rol": "ana",
+     "kanal": "@Sadettin.Akyayla",
+     "listeler": [
+      {
+       "id": "PLCLfupK6Ie8Uow9njwNnXclaTqhLClYiA",
+       "ad": "TYT Tarih (Kodlarla Konu Anlatımı 2027)",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Soner Ardıç",
+     "rol": "yedek",
+     "ara": "Soner Ardıç YKS"
+    },
+    {
+     "ad": "KR Akademi",
+     "rol": "diger",
+     "ara": "KR Akademi YKS"
+    },
+    {
+     "ad": "Selami Yalçın",
+     "rol": "diger",
+     "ara": "Selami Yalçın YKS"
+    },
+    {
+     "ad": "Gökhan Öz",
+     "rol": "diger",
+     "ara": "Gökhan Öz YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Tarih"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Tarih"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Tarih"
+    }
+   ]
+  },
+  "cog": {
+   "ad": "Coğrafya",
+   "hocalar": [
+    {
+     "ad": "Coğrafyanın Kodları",
+     "rol": "ana",
+     "kanal": "@cografyaninkodlari",
+     "listeler": [
+      {
+       "id": "PLnBnugScc-7J3C3CJCelCOWIwUezzxBZI",
+       "ad": "39 Günde TYT Coğrafya Ayrıntılı Kampı 2027",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Bayram Meral",
+     "rol": "yedek",
+     "ara": "Bayram Meral YKS"
+    },
+    {
+     "ad": "Yavuz Tuna",
+     "rol": "diger",
+     "ara": "Yavuz Tuna YKS"
+    },
+    {
+     "ad": "Sosyal Hocam",
+     "rol": "diger",
+     "ara": "Sosyal Hocam YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Coğrafya"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Coğrafya"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Coğrafya"
+    }
+   ]
+  },
+  "fel": {
+   "ad": "Felsefe",
+   "hocalar": [
+    {
+     "ad": "Felsefe Atölyesi",
+     "rol": "ana",
+     "kanal": "@FelsefeAtölyesi",
+     "listeler": [
+      {
+       "id": "PL4P7Q5QUoe-iodiVl_7z0IinPm4weN4dn",
+       "ad": "7 Günde TYT Felsefe Kampı 2027",
+       "sinav": [
+        "TYT"
+       ]
+      }
+     ]
+    },
+    {
+     "ad": "Can Köni",
+     "rol": "yedek",
+     "ara": "Can Köni YKS"
+    },
+    {
+     "ad": "Sosyal Hocam",
+     "rol": "diger",
+     "ara": "Sosyal Hocam YKS"
+    },
+    {
+     "ad": "Sevgi Bilgin",
+     "rol": "diger",
+     "ara": "Sevgi Bilgin YKS"
+    },
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "diger",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Felsefe"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Felsefe"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Felsefe"
+    }
+   ]
+  },
+  "din": {
+   "ad": "Din Kültürü",
+   "hocalar": [
+    {
+     "ad": "Hocalara Geldik",
+     "rol": "yedek",
+     "ara": "Hocalara Geldik YKS",
+     "filtre": "Din"
+    },
+    {
+     "ad": "Tonguç Akademi",
+     "rol": "diger",
+     "ara": "Tonguç Akademi",
+     "filtre": "Din"
+    },
+    {
+     "ad": "Kampüs",
+     "rol": "diger",
+     "ara": "Kampüs",
+     "filtre": "Din"
+    },
+    {
+     "ad": "Benim Hocam",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Din"
+    }
+   ]
+  }
+ }
+}
