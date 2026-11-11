@@ -1,5 +1,5 @@
 {
- "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz.",
+ "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz. 'yanlisKanal': aramada yanlış çıkan kanal kimlikleri (bir daha seçilmez).",
  "dersler": {
   "mat": {
    "ad": "Matematik",
@@ -52,12 +52,18 @@
     {
      "ad": "Matematik Kafası",
      "rol": "diger",
-     "ara": "Matematik Kafası YKS"
+     "ara": "Matematik Kafası YKS",
+     "yanlisKanal": [
+      "UCIfa16ylC0VCIRCqTHNLLqA"
+     ]
     },
     {
      "ad": "Selim Yavuz",
      "rol": "diger",
-     "ara": "Selim Yavuz YKS"
+     "ara": "Selim Yavuz YKS",
+     "yanlisKanal": [
+      "UCYG_qnF52vsppTcbLDa8sXw"
+     ]
     },
     {
      "ad": "Mete Ekol",
@@ -73,13 +79,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Matematik"
+     "filtre": "Matematik",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Matematik"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Matematik",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -141,13 +153,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Geometri"
+     "filtre": "Geometri",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Geometri"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Geometri",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -213,13 +231,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Fizik"
+     "filtre": "Fizik",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Fizik"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Fizik",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -257,13 +281,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Kimya"
+     "filtre": "Kimya",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Kimya"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Kimya",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -318,13 +348,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Biyoloji"
+     "filtre": "Biyoloji",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Biyoloji"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Biyoloji",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -397,13 +433,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Türkçe"
+     "filtre": "Türkçe",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Türkçe"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Türkçe",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -455,13 +497,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Edebiyat"
+     "filtre": "Edebiyat",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Edebiyat"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Edebiyat",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -500,7 +548,10 @@
     {
      "ad": "Gökhan Öz",
      "rol": "diger",
-     "ara": "Gökhan Öz YKS"
+     "ara": "Gökhan Öz YKS",
+     "yanlisKanal": [
+      "UCbMXxr8nbwGq1AbnoTypUYg"
+     ]
     },
     {
      "ad": "Hocalara Geldik",
@@ -512,13 +563,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Tarih"
+     "filtre": "Tarih",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Tarih"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Tarih",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -542,7 +599,8 @@
     {
      "ad": "Bayram Meral",
      "rol": "yedek",
-     "ara": "Bayram Meral YKS"
+     "kanal": "@BenimHocam",
+     "filtre": "Bayram"
     },
     {
      "ad": "Yavuz Tuna",
@@ -564,13 +622,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Coğrafya"
+     "filtre": "Coğrafya",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Coğrafya"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Coğrafya",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -594,7 +658,10 @@
     {
      "ad": "Can Köni",
      "rol": "yedek",
-     "ara": "Can Köni YKS"
+     "ara": "Can Köni YKS",
+     "yanlisKanal": [
+      "UCOjaibUYMqyDZmnYgP8sOkA"
+     ]
     },
     {
      "ad": "Sosyal Hocam",
@@ -616,13 +683,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Felsefe"
+     "filtre": "Felsefe",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Felsefe"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Felsefe",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     }
    ]
   },
@@ -639,13 +712,19 @@
      "ad": "Tonguç Akademi",
      "rol": "diger",
      "ara": "Tonguç Akademi",
-     "filtre": "Din"
+     "filtre": "Din",
+     "yanlisKanal": [
+      "UC-5ku9Z61IGy12z8xVeFA6g"
+     ]
     },
     {
      "ad": "Kampüs",
      "rol": "diger",
-     "ara": "Kampüs",
-     "filtre": "Din"
+     "ara": "Tonguç Kampüs YKS",
+     "filtre": "Din",
+     "yanlisKanal": [
+      "UCaSWXAHmc3KkVVuC0gLM8Eg"
+     ]
     },
     {
      "ad": "Benim Hocam",

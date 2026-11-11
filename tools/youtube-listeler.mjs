@@ -53,12 +53,13 @@ async function tumSayfalar(yol, p, max = 20) { const L = []; let token = "";
 const gecerliId = id => /^(PL|UU|OL|FL)[A-Za-z0-9_-]{16,}$/.test(id || "") && id.length >= 18 && id.length !== 13;
 
 async function kanalBul(h) {
-  if (KANAL[h.ad]?.id && (KANAL[h.ad].nasil !== "arama" || kanalUygun(h.ad, KANAL[h.ad].ad))) return KANAL[h.ad].id;
+  const yanlis = h.yanlisKanal || [];
+  if (KANAL[h.ad]?.id && !yanlis.includes(KANAL[h.ad].id) && (KANAL[h.ad].nasil !== "arama" || kanalUygun(h.ad, KANAL[h.ad].ad))) return KANAL[h.ad].id;
   delete KANAL[h.ad];
   let id = "", nasil = "";
   if (h.kanal) { const j = await yt("channels", { part: "id,snippet", forHandle: h.kanal }); id = j.items?.[0]?.id || ""; nasil = "@ad"; }
   if (!id) { const sabit = (h.listeler || []).find(l => gecerliId(l.id)); if (sabit) { const j = await yt("playlists", { part: "snippet", id: sabit.id }); id = j.items?.[0]?.snippet?.channelId || ""; nasil = "liste"; } }
-  if (!id && h.ara) { const j = await yt("search", { part: "snippet", type: "channel", q: h.ara, maxResults: 3, regionCode: "TR", relevanceLanguage: "tr" }, 100); const it = (j.items || []).find(x => kanalUygun(h.ad, x.snippet.channelTitle)); id = it?.id?.channelId || ""; nasil = "arama"; if (it) KANAL[h.ad] = { id, ad: it.snippet.channelTitle, nasil, kontrol: true }; }
+  if (!id && h.ara) { const j = await yt("search", { part: "snippet", type: "channel", q: h.ara, maxResults: 3, regionCode: "TR", relevanceLanguage: "tr" }, 100); const it = (j.items || []).find(x => !yanlis.includes(x.id?.channelId) && kanalUygun(h.ad, x.snippet.channelTitle)); id = it?.id?.channelId || ""; nasil = "arama"; if (it) KANAL[h.ad] = { id, ad: it.snippet.channelTitle, nasil, kontrol: true }; }
   if (id && !KANAL[h.ad]) KANAL[h.ad] = { id, nasil };
   return id;
 }

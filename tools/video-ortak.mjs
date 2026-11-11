@@ -32,6 +32,8 @@ export function sinavlar(ad) {
   if (!L.length && /\byks\b/.test(n)) L.push("TYT", "AYT");
   return L;
 }
+/* Adında sınav geçmeyen liste: Türkçe → TYT, Edebiyat → AYT */
+const VARSAYILAN = { tr: ["TYT"], ede: ["AYT"] };
 
 /* Liste adının yıl puanı: 2027 ya da 2026-2027 en güncel (3), 2026 (2), daha eski (0) */
 export function yilPuan(ad, tarih) {
@@ -56,7 +58,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
     const n = sade(p.ad);
     if (!re.test(n) || (DISLA.test(n) && !/konu anlatim|kamp/.test(n)) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
     const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
-    for (const s of sinavlar(p.ad)) {
+    const SL = sinavlar(p.ad); for (const s of (SL.length ? SL : VARSAYILAN[ders] || [])) {
       if (sabit.includes(s)) continue;
       if (s.startsWith("M") ? !VDERS[ders].M.length : (VDERS[ders].yok || []).includes(s)) continue;
       const puan = yp * 1000 + (/konu|kamp|anlatim/.test(n) ? 300 : 0) + Math.min(200, p.sayi || 0) + (p.tarih ? Date.parse(p.tarih) / 1e12 : 0);
