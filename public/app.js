@@ -284,7 +284,7 @@ function applySnap(coll, snap){
   [...m.keys()].forEach(k=>{ if(!seen.has(k) && !dirty.has(coll+"/"+k) && k!==ONZ_ID) m.delete(k); });
 }
 function watchColl(coll, need){
-  unsubs.push(onSnapshot(collection(fdb, coll), snap=>{ applySnap(coll, snap); loaded[coll]=true; checkReady(need); render(true); },
+  unsubs.push(onSnapshot(collection(fdb, coll), snap=>{ applySnap(coll, snap); loaded[coll]=true; checkReady(need); render(true); if(coll==="students" && A()) setTimeout(otoSinif, 0); },
     e=>{ console.error(coll, e); loaded[coll]=true; checkReady(need); render(); }));
 }
 function watchSettings(need){
@@ -1206,12 +1206,21 @@ function canliSenk(){ if(A() || !S.me || !GR.list.size) return; const s = st(); 
   GR.list.forEach((g, gid)=>{ setDoc(doc(fdb,"gruplar",gid,"canli",S.me), {...b, at:Date.now()}).catch(e=>console.warn("canlı", e)); }); }
 function grupIzle(){ const q = A() ? collection(fdb,"gruplar") : query(collection(fdb,"gruplar"), where("uyeler","array-contains",S.me));
   unsubs.push(onSnapshot(q, snap=>{ if(window.ZK_ONZ){ window.ZK_ONZ.grList = new Map(snap.docs.map(d=>[d.id, d.data()])); return; } /* demo önizlemesinde örnek sınıf bozulmasın */
-    GR.list = new Map(snap.docs.map(d=>[d.id, d.data()]));
+    GR.list = new Map(snap.docs.map(d=>[d.id, d.data()])); GR.yuklu = true; if(A()) setTimeout(otoSinif, 0);
     if(!A()){ GR.un.forEach((u,gid)=>{ if(!GR.list.has(gid)){ try{ u(); }catch(e){} GR.un.delete(gid); GR.canli.delete(gid); } });
       GR.list.forEach((g,gid)=>{ if(GR.un.has(gid)) return; const u = onSnapshot(collection(fdb,"gruplar",gid,"canli"), sn=>{ GR.canli.set(gid, new Map(sn.docs.map(d=>[d.id, d.data()]))); render(true); }, e=>console.warn("canlı grup", e)); GR.un.set(gid, u); unsubs.push(u); });
       canliSenk(); }
     if(!GR.list.has(GR.sec)) GR.sec = [...GR.list.keys()][0] || "";
     render(true); }, e=>console.warn("gruplar", e))); }
+/* Premium Sınıf: koçun bütün öğrencileri kendiliğinden bu gruba girer (koçun gruptan çıkardıkları hariç) */
+const OTO_GRUP = "premium";
+let otoBekle = false;
+function otoSinif(){ if(!A() || window.ZK_ONZ || !GR.yuklu || !loaded.students || otoBekle || S.settings.otoSinif===false || !S.setYuklu) return;
+  const g = GR.list.get(OTO_GRUP), uy = new Set(g?.uyeler||[]), haric = new Set(g?.haric||[]);
+  const eksik = [...S.students.entries()].filter(([id,x])=>!x.silindi && id!==ONZ_ID && !uy.has(id) && !haric.has(id)).map(([id])=>id);
+  if(g && !eksik.length) return;
+  otoBekle = true; const yeni = {ad: g?.ad || "Premium Sınıf", uyeler:[...uy, ...eksik], at: g?.at || Date.now(), oto:true, haric:[...haric]};
+  setDoc(doc(fdb,"gruplar",OTO_GRUP), yeni).then(()=>{ GR.list.set(OTO_GRUP, yeni); }).catch(e=>console.warn("premium sınıf", e)).finally(()=>{ otoBekle = false; }); }
 function grupTemizle(){ GR.list = new Map(); GR.canli = new Map(); GR.un = new Map(); GR.sec = ""; GR.sonImza = ""; }
 /* Öğrenci tarafında bir grubun üyeleri (sadece hâlâ üye olanlar; kendisi her zaman en güncel haliyle) */
 function grUyeler(gid){ const g = GR.list.get(gid); if(!g) return []; const C = GR.canli.get(gid) || new Map(), s = st();
@@ -1295,12 +1304,15 @@ function grupSheet(gid){ const g = gid ? GR.list.get(gid) : null, sec = new Set(
   const baska = id => [...GR.list.entries()].filter(([k,x])=>k!==gid && (x.uyeler||[]).includes(id)).map(([,x])=>x.ad);
   return sheet(`<h3>${g ? "Grubu düzenle" : "Yeni çalışma grubu"}</h3>
     <label class="f">Grup adı<input type="text" name="ad" id="gr-ad" maxlength="40" value="${esc(g ? g.ad : "")}" placeholder="ör. Hedef Tıp, 12. sınıflar"></label>
+    ${g && g.oto ? `<p class="small" style="margin:0;color:var(--ac)">Bu sınıfa yeni eklediğin her öğrenci kendiliğinden girer. Buradan çıkardığın öğrenci bir daha otomatik eklenmez.</p>` : ""}
     <div class="sech"><b>Öğrenciler</b><span class="faint small" id="gr-say">${sec.size} seçili</span></div>
     <div class="gsec">${L.map(([id,x])=>`<label class="gsl"><input type="checkbox" name="u" value="${id}" ${sec.has(id)?"checked":""}><span class="av">${esc(initials(x.name))}</span><span><b>${esc(x.name)}</b><small class="faint">${esc(x.sinif||"")}${x.takma?` · takma ad: ${esc(x.takma)}`:" · takma ad seçmedi"}${baska(id).length?` · ${esc(baska(id).join(", "))}`:""}</small></span></label>`).join("")}</div>
     <div class="err" id="serr"></div>
     <div class="acts">${g ? `<button type="button" class="btn danger" style="margin-right:auto" data-act="grsil" data-v="${gid}">Grubu sil</button>` : ""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     async fd=>{ const ad = String(fd.get("ad")||"").trim(), uyeler = fd.getAll("u"); if(!ad) return sheetErr("Gruba bir ad ver.");
-      const id = gid || uid(); try{ await setDoc(doc(fdb,"gruplar",id), {ad, uyeler, at: g ? (g.at||Date.now()) : Date.now()}); closeSheet(); toast(g ? "Grup güncellendi" : "Grup kuruldu"); }catch(e){ sheetErr("Kaydedilemedi: "+(e.message||e)); } }); }
+      const id = gid || uid(), ek = {};
+      if(g && g.oto){ const yeniSet = new Set(uyeler), cik = (g.uyeler||[]).filter(u=>!yeniSet.has(u)); ek.oto = true; ek.haric = [...new Set([...(g.haric||[]), ...cik])].filter(u=>!yeniSet.has(u)); }
+      try{ await setDoc(doc(fdb,"gruplar",id), {ad, uyeler, at: g ? (g.at||Date.now()) : Date.now(), ...ek}); closeSheet(); toast(g ? "Grup güncellendi" : "Grup kuruldu"); }catch(e){ sheetErr("Kaydedilemedi: "+(e.message||e)); } }); }
 const AV_SEKME = [["yuz","Yüz",["ruh","ten","goz","kas","detay","sakal"]],["sac","Saç",["sac","sacR","basR","sacAks"]],["giy","Kıyafet",["giy","gom"]],["aks","Aksesuar",["aks"]],["masa","Masa",["lig","masaSol","masaSag","masaOn"]]];
 function benOzet(){ return ogrOzet(S.me, st()); }
 const CINS_ORNEK = {k:{cins:"k", ten:1, sac:"uzun", sacR:1, giy:"kazak", gom:0, aks:"yok", kas:"kavis"}, e:{cins:"e", ten:1, sac:"yan", sacR:1, giy:"kapus", gom:5, aks:"yok", kas:"duz"}};
@@ -3192,7 +3204,7 @@ document.addEventListener("click", e=>{
     case "avrast": { const r = L => L[Math.floor(Math.random()*L.length)], i = n => Math.floor(Math.random()*n); S.avT = {...S.avT, sacAks:S.avT.cins==="k" ? r(["yok","yok","toka","bant","kurdele"]) : "yok", ruh:r(AVK.ruh), detay:r(["yok","yok","cil","ben"]), ten:i(5), sac:r(SAC_CINS[S.avT.cins||"e"]), sacR:i(8), basR:i(8), giy:r(AVK.giy), gom:i(10), sakal:S.avT.cins==="k" ? "yok" : r(["yok","yok","hafif","biyik","keci","sakal"]), goz:r(AVK.goz), kas:r(AVK.kas), aks:r(["yok","yok","gozluk","yuvarlak","kulaklik"])}; avYenile(); break; }
     case "grfiltre": GR.filtre = v; render(); break;
     case "otoTamam": mutate(x=>{ delete x.kronOto; }); render(); break;
-    case "grsil": if(confirm("Bu grup silinsin mi? Öğrencilerin kayıtları silinmez.")){ (async()=>{ try{ await deleteDoc(doc(fdb,"gruplar",v)); closeSheet(); toast("Grup silindi"); }catch(e){ toast("Silinemedi"); } })(); } break;
+    case "grsil": if(confirm("Bu grup silinsin mi? Öğrencilerin kayıtları silinmez.")){ (async()=>{ try{ if(v===OTO_GRUP){ S.settings.otoSinif = false; saveSettings(); } await deleteDoc(doc(fdb,"gruplar",v)); closeSheet(); toast("Grup silindi"); }catch(e){ toast("Silinemedi"); } })(); } break;
     case "tstop": { const {added} = sayacDurdur(false); render(); toast(added>0?`+${fmtMin(added)} kaydedildi`:"1 dakikadan kısa süre kaydedilmedi"); break; }
     case "tgbasla": { const s0 = st(); if(s0 && s0.timer){ const r = sayacDurdur(false); if(r.added>0) toast(`Önceki sayaç durdu · +${fmtMin(r.added)}`); }
       mutate(s=>{ s.timer = {start:Date.now(), cihaz:cihazTur(), task:{id:b.dataset.id, date:b.dataset.date}}; }); render(); toast("Sayaç başladı · ara verirken “Durdur”a bas"); break; }
