@@ -1205,7 +1205,8 @@ function canliSenk(){ if(A() || !S.me || !GR.list.size) return; const s = st(); 
   const b = canliBelge(s), imza = JSON.stringify(b)+[...GR.list.keys()].join(","); if(imza===GR.sonImza) return; GR.sonImza = imza;
   GR.list.forEach((g, gid)=>{ setDoc(doc(fdb,"gruplar",gid,"canli",S.me), {...b, at:Date.now()}).catch(e=>console.warn("canlı", e)); }); }
 function grupIzle(){ const q = A() ? collection(fdb,"gruplar") : query(collection(fdb,"gruplar"), where("uyeler","array-contains",S.me));
-  unsubs.push(onSnapshot(q, snap=>{ GR.list = new Map(snap.docs.map(d=>[d.id, d.data()]));
+  unsubs.push(onSnapshot(q, snap=>{ if(window.ZK_ONZ){ window.ZK_ONZ.grList = new Map(snap.docs.map(d=>[d.id, d.data()])); return; } /* demo önizlemesinde örnek sınıf bozulmasın */
+    GR.list = new Map(snap.docs.map(d=>[d.id, d.data()]));
     if(!A()){ GR.un.forEach((u,gid)=>{ if(!GR.list.has(gid)){ try{ u(); }catch(e){} GR.un.delete(gid); GR.canli.delete(gid); } });
       GR.list.forEach((g,gid)=>{ if(GR.un.has(gid)) return; const u = onSnapshot(collection(fdb,"gruplar",gid,"canli"), sn=>{ GR.canli.set(gid, new Map(sn.docs.map(d=>[d.id, d.data()]))); render(true); }, e=>console.warn("canlı grup", e)); GR.un.set(gid, u); unsubs.push(u); });
       canliSenk(); }
@@ -2123,9 +2124,26 @@ function demoOgrenci(){
     kitaplar:{Matematik:"345 + Bilgi Sarmal", "Matematik|AYT":"Apotemi", Fizik:"345", Kimya:"Orbital", Biyoloji:"Biyotik", Geometri:"Bilgi Sarmal"}, hocalar:{Matematik:"Mert Hoca", Fizik:"Özcan Aykın", Kimya:"Görkem Şahin", Biyoloji:"Dr. Biyoloji"},
     denemeler:den, gunluk, timer:null, koctanNot:{text:"Bu hafta fonksiyonlara ağırlık verelim, her gün 20 problem. 💪", date:t}, notSeen:"", lastSeen:"", tanitim:false, yenilik:"" };
 }
-function onzAc(){ closeSheet(); window.ZK_ONZ = {view:S.view, cur:S.cur}; S.students.set(ONZ_ID, demoOgrenci());
+/* Demo önizlemesine özel örnek sınıf: yalnız bu cihazın hafızasında, kimseye görünmez, kaydedilmez */
+function demoSinif(){ const t = today(), simdi = Date.now(), dk = 60000;
+  const L = [["Kartal","fiz",38,190,"pc",5,320,{cins:"e",ten:1,sac:"fade",giy:"kapus",gom:0,sakal:"hafif",aks:"kulaklik",ruh:"kararli",masaSol:"kitaplar",masaSag:"kahve",masaOn:"yks"}],
+    ["Tıp2027","mat",72,385,"tel",15,440,{cins:"k",ten:0,sac:"basortu",giy:"forma",gom:0,ruh:"mutlu",masaSol:"kalemlik",masaSag:"su",masaOn:"postit",detay:"cil"}],
+    ["GeceKuşu","",0,120,"",0,0,{cins:"e",ten:3,sac:"kivircik",giy:"tisort",gom:7,sakal:"keci",ruh:"yorgun",masaSag:"su"}],
+    ["Papatya","kim",15,95,"tab",3,260,{cins:"k",ten:2,sac:"uzun",giy:"kazak",gom:4,aks:"gozluk",ruh:"heyecanli",masaSol:"kalemlik",masaOn:"yks"}],
+    ["Defne","bio",54,160,"tel",8,380,{cins:"k",ten:1,sac:"orgu",giy:"gomlek",gom:2,ruh:"odakli",masaSol:"kitaplar",masaSag:"kahve"}],
+    ["Sessiz","tr",44,430,"pc",1,250,{cins:"e",ten:2,sac:"yan",giy:"gomlek",gom:5,sakal:"biyik",ruh:"odakli",masaSol:"kitaplar",masaSag:"su"}],
+    ["Hedef1000","mat",9,60,"tel",0,0,{cins:"e",ten:0,sac:"kisa",giy:"kapus",gom:3,aks:"gozluk",ruh:"kararli",masaOn:"yks"}],
+    ["Baykuş","",0,70,"",0,0,{cins:"k",ten:3,sac:"sal",giy:"kazak",gom:6,ruh:"yorgun",masaSag:"kahve"}]];
+  const canli = new Map(), uyeler = [ONZ_ID];
+  L.forEach(([takma, ders, aktif, bugun, cihaz, seri, sDk, av], i)=>{ const u = "__ornek"+i, gunler = {};
+    for(let j=1;j<=13;j++){ const d = gEkle(t,-j); gunler[d] = j<=seri ? sDk + (j%3)*10 : [180,210,150,240,200,170][(i+j)%6] - i*10; }
+    canli.set(u, {takma, avatar:{...avVarsayilan(u), ...av}, basla: aktif ? simdi - aktif*dk : null, ders, cihaz: aktif ? cihaz : "", gun:t, bugunDk:bugun, gunler}); uyeler.push(u); });
+  return {gid:"__ornek_sinif", grup:{ad:"Örnek Sınıf", uyeler, at:simdi}, canli}; }
+function onzAc(){ closeSheet(); window.ZK_ONZ = {view:S.view, cur:S.cur, grList:GR.list, grCanli:GR.canli, grSec:GR.sec}; S.students.set(ONZ_ID, demoOgrenci());
+  const ds = demoSinif(); GR.list = new Map([[ds.gid, ds.grup]]); GR.canli = new Map([[ds.gid, ds.canli]]); GR.sec = ds.gid;
   S.role = "student"; S.me = ONZ_ID; S.view = "home"; S.tur = null; S.turKapandi = false; S.turListe = "tur"; window.scrollTo(0,0); render(); }
 function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ = null; S.students.delete(ONZ_ID);
+  GR.list = o.grList || new Map(); GR.canli = o.grCanli || new Map(); GR.sec = o.grSec || "";
   S.role = "admin"; S.me = null; S.tur = null; S.turKapandi = false; S.cur = o.cur ?? null; S.view = "daha"; window.scrollTo(0,0); render(); }
 
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
