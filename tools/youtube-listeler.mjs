@@ -100,7 +100,7 @@ const SINAV_SIRA = ["TYT", "AYT", "M9", "M10", "M11"];
 function derle(ders) {
   const K = KAYNAK[ders], onb = oku(`data/youtube/${ders}.json`, {}), ozet = [];
   const hocalar = K.hocalar.map(h => {
-    let listeler = (onb[h.ad]?.listeler || []).map(l => ({ id: l.id, ad: l.ad, s: l.sinav, v: l.v.map(v => v.slice(0, 4).concat(v[4] === 0 ? [0] : [])) }));
+    let listeler = (onb[h.ad]?.listeler || []).map(l => ({ id: l.id, ad: l.ad, s: l.sinav, v: l.v.filter(v => !/#shorts/i.test(v[1]) && !(v[2] && v[2] < 90)).map(v => v.slice(0, 4).concat(v[4] === 0 ? [0] : [])) }));
     /* Elle eşleme (önceki çalışma): konu → video */
     const elle = Object.entries(ELLE.konular).filter(([k, x]) => x.hoca === h.ad && SINAV_SIRA.slice(0, 2).some(s => VDERS[ders][s].includes(k.split("|")[0]) || (ders === "tr" && k.startsWith("tr|"))));
     if (!listeler.length && elle.length) { /* API verisi gelene kadar elle eşlenen videolardan liste */
@@ -109,6 +109,8 @@ function derle(ders) {
     }
     const tum = listeler.flatMap(l => l.v), konu = {};
     for (const s of SINAV_SIRA) { const ls = listeler.filter(l => l.s.includes(s)); if (!ls.length) continue; Object.assign(konu, eslestir(konuListesi(ders, s), ls.flatMap(l => l.v))); }
+    /* Bir sınavın listesinde olmayan konu, hocanın öbür sınav listesinde varsa oradan (ör. TYT Polinomlar → AYT listesi) */
+    for (const s of ["TYT", "AYT"]) { if (!listeler.some(l => l.s.includes(s))) continue; const eksik = konuListesi(ders, s).filter(x => !konu[x.k]); const obur = listeler.filter(l => !l.s.includes(s)).flatMap(l => l.v); if (eksik.length && obur.length) Object.assign(konu, eslestir(eksik, obur)); }
     for (const [k, x] of elle) konu[k] = bolumEkle(k.split("|")[1], x.parca.map(p => [p[0], p[3] ? p[3] * 60 : 0]), tum);
     const toplam = SINAV_SIRA.filter(s => listeler.some(l => l.s.includes(s))).reduce((a, s) => a + konuListesi(ders, s).length, 0);
     ozet.push(`- ${h.ad}: ${listeler.length} liste, ${tum.length} video, ${Object.keys(konu).length}/${toplam} konu eşlendi`);
