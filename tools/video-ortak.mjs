@@ -7,8 +7,8 @@ export const VDERS = {
   fiz: { TYT: ["fiz"], AYT: ["afiz"], M: ["fiz"], re: /fizik/ },
   kim: { TYT: ["kim"], AYT: ["akim"], M: ["kim"], re: /kimya/ },
   bio: { TYT: ["bio"], AYT: ["abio"], M: ["bio"], re: /biyoloji/ },
-  tr: { TYT: ["tr"], AYT: [], M: [], re: /turkce|paragraf|dil ?bilgisi/ },
-  ede: { TYT: [], AYT: ["aede"], M: ["tde"], re: /edebiyat/ },
+  tr: { TYT: ["tr"], AYT: [], M: [], yok: ["AYT"], re: /turkce|paragraf|dil ?bilgisi/ },
+  ede: { TYT: [], AYT: ["aede"], M: ["tde"], yok: ["TYT"], re: /edebiyat/ },
   tar: { TYT: ["tar"], AYT: ["atar"], M: ["tar"], re: /tarih|inkilap/ },
   cog: { TYT: ["cog"], AYT: ["acog"], M: ["cog"], re: /cografya/ },
   fel: { TYT: ["fel"], AYT: ["afel"], M: ["fel"], re: /felsefe|mantik|psikoloji|sosyoloji/ },
@@ -53,7 +53,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
     const yp = yilPuan(p.ad); if (!yp) continue;
     for (const s of sinavlar(p.ad)) {
       if (sabit.includes(s)) continue;
-      if (s.startsWith("M") ? !VDERS[ders].M.length : !VDERS[ders][s].length) continue;
+      if (s.startsWith("M") ? !VDERS[ders].M.length : (VDERS[ders].yok || []).includes(s)) continue;
       const puan = yp * 1000 + (/konu|kamp|anlatim/.test(n) ? 300 : 0) + Math.min(200, p.sayi || 0) + (p.tarih ? Date.parse(p.tarih) / 1e12 : 0);
       if (!secim[s] || puan > secim[s].puan) secim[s] = { ...p, puan };
     }

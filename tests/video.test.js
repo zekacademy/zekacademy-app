@@ -44,5 +44,6 @@ test("aramayla bulunan kanal hocanın adını taşımalı; Türkçe'de AYT liste
   assert.equal(kanalUygun("Kenan Kara", "Kenan Kara ile Geometri"), true);
   assert.equal(kanalUygun("Önder Hoca", "Kimya Rehberi"), false);
   assert.deepEqual(listeSec([{ id: "PL_t", ad: "2027 YKS | Dil Bilgisinin Ritmi | Yeni Kamp", sayi: 17 }], "tr", ["TYT"]), []);
+  assert.equal(listeSec([{ id: "PL_d", ad: "2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Konu Anlatım Videoları", sayi: 16 }], "din").length, 1);
   assert.deepEqual(listeSec([{ id: "PL_k", ad: "2026 KPSS - AYT TARİH DERSLERİ", sayi: 70 }], "tar"), []);
 });
