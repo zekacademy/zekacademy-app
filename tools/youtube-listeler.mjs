@@ -87,7 +87,7 @@ async function dersCek(ders) {
       secilen.push(...listeSec(await kanalL(), ders, kapsanan, h.filtre || ""));
       const L = [];
       for (const l of secilen) { const v = await videolar(l.id); if (v.length) L.push({ ...l, v }); }
-      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L };
+      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L, ...(L.length ? {} : { kanaldakiler: (kanalListeleri || []).map(p => [p.id, p.ad, p.sayi, (p.tarih || "").slice(0, 10)]) }) };
       rapor.push(`- ${h.ad}: ${L.map(l => `${l.ad} [${l.sinav.join("/")}] · ${l.v.length} video`).join("; ") || "uygun güncel liste yok"}${KANAL[h.ad]?.kontrol ? ` ⚠️ kanal aramayla bulundu (${KANAL[h.ad].ad}), kontrol et` : ""}`);
     } catch (e) { if (/kota|anahtar|API v3/i.test(e.message)) throw e; rapor.push(`- ${h.ad}: hata (${e.message})`); }
   }
