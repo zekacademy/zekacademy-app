@@ -2,7 +2,7 @@
 import { test, before, after, beforeEach } from "node:test";
 import { readFileSync } from "node:fs";
 import { initializeTestEnvironment, assertFails, assertSucceeds } from "@firebase/rules-unit-testing";
-import { doc, getDoc, setDoc, updateDoc, getDocs, collection, deleteDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, updateDoc, getDocs, collection, deleteDoc, query, where } from "firebase/firestore";
 
 let env;
 const COACH = { email: "zekacademy@app.zekacademy.com" };
@@ -137,4 +137,27 @@ test("soru çözüm: öğrenci kendi kullanımını ve sorularını okur, başka
   await assertSucceeds(getDoc(doc(coach(), "aiKullanim/2026-11_genel")));
   await assertSucceeds(setDoc(doc(coach(), "aiKullanim/2026-11_ali"), { sid: "ali", ekHak: 10 }, { merge: true }));
   await assertFails(updateDoc(doc(ali(), "students/ali"), { aiBonus: { hak: 999 } }));
+});
+
+test("çalışma grupları: üye grubu ve canlı özetleri okur, sadece kendi özetini yazar; üye olmayan göremez", async () => {
+  const veli = () => env.authenticatedContext("veli", { email: "veli@app.zekacademy.com" }).firestore();
+  const ozet = { takma: "Kartal", basla: null, ders: "", gun: "2026-11-09", bugunDk: 30, gunler: {}, at: 1 };
+  await env.withSecurityRulesDisabled(async ctx => {
+    const db = ctx.firestore();
+    await setDoc(doc(db, "gruplar/g1"), { ad: "Hedef Tıp", uyeler: ["ali", "ayse"] });
+    await setDoc(doc(db, "gruplar/g1/canli/ayse"), { ...ozet, takma: "Papatya" });
+  });
+  await assertSucceeds(getDoc(doc(ali(), "gruplar/g1")));
+  await assertSucceeds(getDocs(query(collection(ali(), "gruplar"), where("uyeler", "array-contains", "ali"))));
+  await assertSucceeds(getDocs(collection(ali(), "gruplar/g1/canli")));
+  await assertSucceeds(setDoc(doc(ali(), "gruplar/g1/canli/ali"), ozet));
+  await assertFails(setDoc(doc(ali(), "gruplar/g1/canli/ayse"), ozet));
+  await assertFails(setDoc(doc(ali(), "gruplar/g1/canli/ali"), { ...ozet, name: "Ali Veli" }));
+  await assertFails(setDoc(doc(ali(), "gruplar/g1"), { ad: "x", uyeler: ["ali"] }));
+  await assertFails(getDoc(doc(veli(), "gruplar/g1")));
+  await assertFails(getDocs(collection(veli(), "gruplar/g1/canli")));
+  await assertFails(setDoc(doc(veli(), "gruplar/g1/canli/veli"), ozet));
+  await assertSucceeds(setDoc(doc(coach(), "gruplar/g2"), { ad: "Mezunlar", uyeler: ["veli"] }));
+  await assertSucceeds(getDocs(collection(coach(), "gruplar/g1/canli")));
+  await assertSucceeds(updateDoc(doc(ali(), "students/ali"), { takma: "Kartal" }));
 });
