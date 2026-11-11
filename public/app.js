@@ -522,7 +522,7 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="analiz" && dersGorunum(S.view) && !A()) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="ders" && !A() && (dersGorunum(S.view) || S.view==="dersd")) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
   return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
@@ -552,12 +552,12 @@ const TUR = [
   {view:"program", nav:"program", ic:"target", b:"Bu haftanın hedefleri", t:"Programın altında her ders için bu hafta bitirmen gereken konular var. Konuyu bitirince hedefin yanındaki yuvarlağı işaretle; koçun hangi hedefin tamamlandığını buradan takip eder."},
   ...SINIF_ADIM.slice(0,-1).map(x=>({...x, b:x.b.replace("Yeni: ","")})),
   {view:"kronometre", nav:"daha", ic:"timer", b:"Kronometre ve çalışma süresi", t:"Daha Fazla → Kronometre. Görev dışı çalışmalarında da sayacı başlat, ders seç, bitince durdur. Unuttuysan süreyi elle de yazabilirsin. Günlük hedef sürene ne kadar yaklaştığını burada görürsün.", ornek:"sure"},
-  {view:"analiz", nav:"analiz", ic:"chart", b:"Ders: deneme analizi", t:"Alttaki menüde Ders → Deneme analizi. Her denemeden sonra “Karneden ekle” ile karnenin fotoğrafını yükle ya da “Elle ekle” ile netlerini gir. Altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir. Netlerinin grafiği ve hedefe ne kadar kaldığı burada.", ornek:"yanlis"},
-  {view:"analiz", nav:"analiz", ic:"cal", b:"Deneme takvimi", t:"Deneme analizi sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
-  {view:"konular", nav:"analiz", ic:"book", b:"Ders: konu ilerlemesi", t:"Ders → Konu ilerlemesi. Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
-  {view:"cetele", nav:"analiz", ic:"list", b:"Ders: yanlış çetelesi", t:"Ders → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
+  {view:"analiz", nav:"ders", ic:"chart", b:"Ders: deneme analizi", t:"Alttaki menüde Ders → Deneme analizi. Her denemeden sonra “Karneden ekle” ile karnenin fotoğrafını yükle ya da “Elle ekle” ile netlerini gir. Altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir. Netlerinin grafiği ve hedefe ne kadar kaldığı burada.", ornek:"yanlis"},
+  {view:"analiz", nav:"ders", ic:"cal", b:"Deneme takvimi", t:"Deneme analizi sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
+  {view:"konular", nav:"ders", ic:"book", b:"Ders: konu ilerlemesi", t:"Ders → Konu ilerlemesi. Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
+  {view:"cetele", nav:"ders", ic:"list", b:"Ders: yanlış çetelesi", t:"Ders → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
   {view:"socoz", nav:"daha", ic:"search", b:"Soru Çözüm (Zek AI)", t:"Takıldığın sorunun fotoğrafını çek; yapay zekâ adım adım çözsün. Ana sayfadaki “Soru Çözüm” kartından ya da Daha Fazla’dan açılır. Önce kendin dene, sonra bak!", kosul:"ai"},
-  {view:"sorular", nav:"analiz", ic:"note", b:"Ders: takıldığım sorular", t:"Ders → Takıldığım sorular. Çözemediğin soruların fotoğrafını çek, dersini seç ve burada biriktir. Sonra tekrar dönüp çözdüğünde “Çözüldü” yap."},
+  {view:"sorular", nav:"ders", ic:"note", b:"Ders: takıldığım sorular", t:"Ders → Takıldığım sorular. Çözemediğin soruların fotoğrafını çek, dersini seç ve burada biriktir. Sonra tekrar dönüp çözdüğünde “Çözüldü” yap."},
   {view:"bildirim", nav:"daha", ic:"bell", b:"Bildirimler", t:"Sabah günün mesajı, akşam eksik görev hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse mutlaka “İzin ver”e bas. Koçunun sana yazdığı notlar da burada."},
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
   {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
@@ -566,8 +566,8 @@ const YENILIK_SURUM = "2026-11-12";
 const YENILIK = [
   {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, senin için yeni özellikler ekledik. En büyüğü: artık bir sınıfın var! Kısaca göstereyim."},
   ...SINIF_ADIM.slice(0, -1),
-  {view:"analiz", nav:"analiz", ic:"book", b:"Yeni: Ders bölümü", t:"Derslerinle ilgili her şey artık alttaki “Ders” bölümünde, dört sekme olarak bir arada: Deneme analizi, Konu ilerlemesi, Yanlış çetelesi ve Takıldığım sorular."},
-  {view:"analiz", nav:"analiz", ic:"camera", b:"Yeni: Karneden deneme ekle 📷", t:"Ders → Deneme analizi’nde “Karneden ekle”ye dokun, karnenin fotoğrafını ya da PDF’ini seç; netler ve yanlış konular kendiliğinden dolsun, sen sadece kontrol et."},
+  {view:"analiz", nav:"ders", ic:"book", b:"Yeni: Ders bölümü", t:"Derslerinle ilgili her şey artık alttaki “Ders” bölümünde, dört sekme olarak bir arada: Deneme analizi, Konu ilerlemesi, Yanlış çetelesi ve Takıldığım sorular."},
+  {view:"analiz", nav:"ders", ic:"camera", b:"Yeni: Karneden deneme ekle 📷", t:"Ders → Deneme analizi’nde “Karneden ekle”ye dokun, karnenin fotoğrafını ya da PDF’ini seç; netler ve yanlış konular kendiliğinden dolsun, sen sadece kontrol et."},
   {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨"} ];
 const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
@@ -592,17 +592,66 @@ function studentShell(){
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
-  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar")};
+  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s)};
   const nots = studentNotices(s).length;
-  return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","book","Ders"],["program","cal","Haftalık Program",true],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
+  return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["ders","book","Ders"],["program","cal","Haftalık Program",true],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Ders: Deneme analizi + Konu ilerlemesi (öğrenci alt menüsünde tek bölüm) ---------- */
 const DERS_SEK = [["analiz","chart","Deneme analizi"],["konular","book","Konu ilerlemesi"],["cetele","list","Yanlış çetelesi"],["sorular","note","Takıldığım sorular"],["videolar","play","Video Kütüphanesi"]];
 const dersGorunum = v => DERS_SEK.some(x=>x[0]===v);
+const DERS_BASLIK = {analiz:"Deneme Analizi", konular:"Konu İlerlemesi", cetele:"Yanlış Çetelesi", sorular:"Takıldığım Sorular", videolar:"Öğrenme Merkezi"};
 function dersSayfa(s, v){ let h = v==="videolar" ? pVideoKutuphane(s) : v==="analiz" ? pAnaliz(s) : v==="konular" ? pKonular(s) : v==="cetele" ? pCetele(s) : pSorular(s, S.me);
-  h = h.replace(/<h1 class="ttl">(Deneme Analizi|Konu Takibi|Yanlış Çetelesi|Takıldığım sorular)<\/h1>/, `<h1 class="ttl">Ders</h1>`).replace(/<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">[\s\S]*?<\/button>/, "");
-  const sek = `<div class="derssek" role="tablist">${DERS_SEK.map(([k,ic,ad])=>`<button data-act="go" data-v="${k}" aria-pressed="${v===k}">${icon(ic,"xs")} ${ad}</button>`).join("")}</div>`;
-  return h.replace(/(<div class="page[^"]*"[^>]*>)/, `$1${sek}`); }
+  const geri = `<button class="iconbtn" data-act="go" data-v="ders" aria-label="Ders'e dön">${icon("back")}</button>`;
+  h = h.replace(/<button class="iconbtn" data-act="go" data-v="(daha|ogren|home)" aria-label="Geri">[\s\S]*?<\/button>/, "");
+  h = h.replace(/<h1 class="ttl">[^<]*<\/h1>/, `${geri}<h1 class="ttl">${DERS_BASLIK[v]}</h1>`);
+  return h; }
+/* ---------- Ders ana sayfası (öğrenci): deneme, kaldığın yer, takıldığım sorular, Öğrenme Merkezi, derslerim ---------- */
+const dersListesi = (s, tur) => isMaarif(s) ? [] : tur==="TYT" ? CURX().TYT : aytSubjects(s, false);
+function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1], prev = L[L.length-2];
+  const tot = last ? totalOf(last) : null, dl = last && prev ? tot - totalOf(prev) : null, hedef = num((s.hedef||{})[tur.toLowerCase()]);
+  const son = vSon(), bek = soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length, subs = dersListesi(s, tur);
+  const head = topbar(`<h1 class="ttl">Ders</h1>`, isMaarif(s) ? "" : `<div class="seg dsseg"><button data-act="ex" data-v="TYT" aria-pressed="${tur==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${tur==="AYT"}">AYT</button></div>`);
+  const deneme = `<button class="card dsden" data-act="go" data-v="analiz">
+    ${last ? `<div class="dsdh"><div><small>Son ${tur} denemen · ${esc(last.yayin||"")}</small><div class="dsnet"><b class="num">${fmt(tot)}</b>${dl!=null?`<span class="${dl>=0?"up":"down"}">${dl>0?"↑ ":dl<0?"↓ ":""}${fmt(Math.abs(dl))} net</span>`:""}</div></div>${hedef!=null?`<div class="dshdf"><small>Hedef</small><b class="num">${fmt(hedef)}</b></div>`:""}</div>
+      <div class="dsgr">${netChart(s, tur)}</div>`
+    : `<div class="dsdh"><div><small>${tur} denemeleri</small><div class="dsnet"><b style="font-size:18px">Henüz deneme yok</b></div></div></div><p class="muted small" style="margin:6px 0 0">İlk denemeni karnenin fotoğrafıyla ekle; grafik burada oluşur.</p>`}
+    <span class="dsalt"><span class="muted">${last ? (hedef!=null && tot!=null ? `Hedefine <b>${fmt(Math.max(0, hedef-tot))}</b> net kaldı` : `${L.length} deneme`) : "Karneden ya da elle ekle"}</span><span class="dsgit">Deneme analizi ${icon("chev","xs")}</span></span></button>`;
+  const ikili = `<div class="dsikili">
+    ${son && son.v ? `<button class="card dsk" data-vk="son"><span class="dski koyu">${icon("play","sm")}</span><span><b>${esc(son.baslik||son.v[1])}</b><small>Kaldığın yer${son.v && vIz()[son.v[0]] && vIz()[son.v[0]][1] ? ` · ${Math.max(1, Math.round((vIz()[son.v[0]][1]-vIz()[son.v[0]][0])/60))} dk kaldı` : ""}</small></span></button>`
+      : `<button class="card dsk" data-act="go" data-v="videolar"><span class="dski koyu">${icon("play","sm")}</span><span><b>Videoya başla</b><small>Konu anlatımları</small></span></button>`}
+    <button class="card dsk" data-act="go" data-v="sorular"><span class="dski sari">${icon("camera","sm")}${bek?`<i class="num">${bek}</i>`:""}</span><span><b>Takıldığım sorular</b><small>${bek ? `${bek} soru bekliyor` : "Soru biriktir"}</small></span></button></div>`;
+  const om = `<button class="dsom" data-act="go" data-v="videolar"><span class="dsomi">${icon("grad","sm")}</span><span><b>Öğrenme Merkezi</b><small>Konu anlatımları · TYT, AYT, Maarif</small></span>${icon("chev","xs")}</button>`;
+  const dersler = subs.length ? `<div class="card dsl"><div class="dslh"><b>Derslerim</b><span class="faint small">%${Math.round(examPct(s, tur)*100)} tamam</span></div>${subs.map(sub=>{ const p = subjPct(s, sub);
+      return `<button class="dsr" data-act="dersac" data-v="${esc(sub.k)}"><span class="dsra">${esc(sub.n)}</span><span class="dsrb"><i style="width:${p*100}%"></i></span><span class="num faint small">%${Math.round(p*100)}</span>${icon("chev","xs")}</button>`; }).join("")}</div>`
+    : `<button class="card dsl dsr" data-act="go" data-v="konular"><span class="dsra">Konu ilerlemesi</span>${icon("chev","xs")}</button>`;
+  return `${head}<div class="page dsana">${deneme}${ikili}${om}${dersler}
+    <div class="dslink"><button class="link small" data-act="go" data-v="cetele">${icon("list","xs")} Yanlış çetelesi</button><button class="link small" data-act="go" data-v="konular">${icon("book","xs")} Tüm konular</button></div></div>`; }
+/* Ders sayfası: konular, durum noktası, ▶ video; konuya dokununca alt pencere */
+function dersBul(s, k){ return [...CURX().TYT, ...CURX().AYT].find(x=>x.k===k) || null; }
+const konuDurum = t => topicScore(t) >= 1 ? "bitti" : ((t.r||0) || t.s1 || t.s2) ? "devam" : "yok";
+function konuAlt(s, sub, t){ const sb = (s.sbAd||{})[sub.k]||[], P = [];
+  if(t.r) P.push(`${t.r} tekrar`); if(t.s1) P.push(`${sb[0]||"SB1"} ✓`); if(t.s2) P.push(`${sb[1]||"SB2"} ✓`);
+  const y = t.y ? `<span class="dsyn">${t.y} yanlış</span>` : "";
+  return (P.length ? esc(P.join(" · ")) : "Başlanmadı") + (y ? " · " + y : ""); }
+function pDersDetay(s){ const sub = dersBul(s, S.dsk); if(!sub){ S.view = "ders"; return pDersAna(s); }
+  const tur = CURX().TYT.includes(sub) ? "TYT" : "AYT", d = vdersOf(sub), hk = d ? vHocaAdi(s, d) : "";
+  const T = sub.t.map(n=>{ const k = tkey(sub.k, n), t = s.topics[k]||{}; return {n, k, t, du: konuDurum(t)}; });
+  const bitti = T.filter(x=>x.du==="bitti").length, eksik = T.filter(x=>x.du!=="bitti" || (x.t.y||0)>0), F = S.dsf==="eksik" ? eksik : T;
+  const head = topbar(`<button class="iconbtn" data-act="go" data-v="ders" aria-label="Ders'e dön">${icon("back")}</button><div class="dstt"><h1 class="ttl">${tur} ${esc(sub.n)}</h1><span class="faint small">${bitti} / ${T.length} konu bitti${hk?` · Videolar: ${esc(hk)}`:""}</span></div>`);
+  return `${head}<div class="page">
+    <div class="seg"><button data-act="dsf" data-v="tum" aria-pressed="${S.dsf!=="eksik"}">Tüm konular · ${T.length}</button><button data-act="dsf" data-v="eksik" aria-pressed="${S.dsf==="eksik"}">Eksiklerim · ${eksik.length}</button></div>
+    <div class="card dskl">${F.map(x=>`<div class="dsko"><button class="dskb" data-act="konud" data-k="${esc(x.k)}"><i class="dsn ${x.du}" aria-hidden="true"></i><span><b>${esc(x.n)}</b><small>${konuAlt(s, sub, x.t)}</small></span></button>${vKonuBtn(x.k, sub)}</div>`).join("") || `<p class="muted small" style="padding:14px">Eksik konun yok, harika! 🎯</p>`}</div>
+  </div>`; }
+function konuDetaySheet(k){ const s = st(), sk = k.split("|")[0], sub = dersBul(s, sk), ad = k.split("|").slice(1).join("|"), t = s.topics[k]||{}, sb = (s.sbAd||{})[sk]||[];
+  const tur = sub && CURX().TYT.includes(sub) ? "TYT" : "AYT", d = sub && vdersOf(sub), hk = d ? vHocaAdi(s, d) : "";
+  sheet(`<div class="kdust"><div><small class="faint">${tur} ${esc(sub ? sub.n : "")}</small><h3 style="margin:2px 0 0">${esc(ad)}</h3></div><button type="button" class="iconbtn" data-close aria-label="Kapat">${icon("x")}</button></div>
+    ${d && d.id!=="din" ? `<button type="button" class="kdvid" data-vk="konu" data-k="${esc(k)}"><span class="dski koyu">${icon("play","sm")}</span><span><b>Konu anlatımı</b><small>${hk?esc(hk):"Videoyu izle"}</small></span><span class="btn sm pri">İzle</span></button>` : ""}
+    <div class="kdkut">
+      <div class="kdsat"><span>Tekrar</span><span class="stepper"><button type="button" data-act="kdsay" data-f="r" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num" id="kd-r">${t.r||0}</span><button type="button" data-act="kdsay" data-f="r" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span></div>
+      <div class="kdsat"><span>Soru bankası</span><span class="kdsb"><button type="button" class="tog" data-act="kdsb" data-f="s1" data-k="${esc(k)}" aria-pressed="${!!t.s1}">${esc(sb[0]||"SB1")}</button><button type="button" class="tog" data-act="kdsb" data-f="s2" data-k="${esc(k)}" aria-pressed="${!!t.s2}">${esc(sb[1]||"SB2")}</button></span></div>
+      <div class="kdsat"><span>Yanlış</span><span class="stepper yan"><button type="button" data-act="kdsay" data-f="y" data-k="${esc(k)}" data-d="-1" aria-label="Azalt">−</button><span class="num" id="kd-y">${t.y||0}</span><button type="button" data-act="kdsay" data-f="y" data-k="${esc(k)}" data-d="1" aria-label="Artır">+</button></span></div>
+    </div>
+    <div class="kdalt"><button type="button" class="btn" data-act="go" data-v="sorular">Takıldığım soru ekle</button>${d && d.id!=="din" ? `<button type="button" class="btn" data-vk="ders" data-d="${d.id}">Başka hocadan izle</button>` : ""}</div>`); }
 /* ---------- Deneme takvimi (Ayarlar'dan düzenlenir) + öğrencinin yazılıları ---------- */
 const DEF_TAKVIM = [{"bas":"2026-09-18","bit":"2026-09-19","yayin":"ÖZDEBİR","ad":"TYT İlk Prova"},{"bas":"2026-10-02","bit":"2026-10-05","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-10-16","bit":"2026-10-19","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 1"},{"bas":"2026-10-23","bit":"2026-10-26","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-11-09","bit":"2026-11-15","yayin":"MEBİ","ad":"YKS Denemesi 3"},{"bas":"2026-12-04","bit":"2026-12-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 2"},{"bas":"2026-12-10","bit":"2026-12-13","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2026-12-11","bit":"2026-12-14","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2026-12-14","bit":"2026-12-20","yayin":"MEBİ","ad":"YKS Denemesi 4"},{"bas":"2026-12-25","bit":"2026-12-28","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 3"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"4K Yayınları","ad":"Maarif TYT"},{"bas":"2027-01-11","bit":"2027-01-17","yayin":"MEBİ","ad":"YKS Denemesi 5"},{"bas":"2027-02-15","bit":"2027-02-21","yayin":"MEBİ","ad":"YKS Denemesi 6"},{"bas":"2027-02-19","bit":"2027-02-22","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2027-02-26","bit":"2027-03-01","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 4"},{"bas":"2027-03-15","bit":"2027-03-21","yayin":"MEBİ","ad":"YKS Denemesi 7"},{"bas":"2027-03-26","bit":"2027-03-29","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-02","bit":"2027-04-05","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 5"},{"bas":"2027-04-09","bit":"2027-04-12","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-12","bit":"2027-04-18","yayin":"MEBİ","ad":"YKS Denemesi 8"},{"bas":"2027-04-16","bit":"2027-04-19","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 2"},{"bas":"2027-05-07","bit":"2027-05-10","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 6"},{"bas":"2027-05-10","bit":"2027-05-16","yayin":"MEBİ","ad":"YKS Denemesi 9"},{"bas":"2027-05-17","bit":"2027-05-23","yayin":"MEBİ","ad":"YKS Denemesi 10"},{"bas":"2027-05-28","bit":"2027-05-31","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-05-31","bit":"2027-06-06","yayin":"MEBİ","ad":"YKS Denemesi 11"},{"bas":"2027-06-04","bit":"2027-06-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 7"},{"bas":"2027-06-07","bit":"2027-06-10","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-06-07","bit":"2027-06-13","yayin":"MEBİ","ad":"YKS Denemesi 12"},{"bas":"2027-06-08","bit":"2027-06-11","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 2"}];
 const takvim = () => (Array.isArray(S.settings.takvim) ? S.settings.takvim : DEF_TAKVIM).filter(x=>x && x.bas).slice().sort((a,b)=>a.bas.localeCompare(b.bas));
@@ -3141,6 +3190,11 @@ document.addEventListener("click", e=>{
     case "hgun": { const x = st(); S.view = "program"; S.pmode = "gun"; S.day = v; if(x) S.week = curStart(x); render(); window.scrollTo(0,0); break; }
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
     case "ex": S.ex=v; render(); break;
+    case "dersac": S.dsk=v; S.dsf="tum"; S.view="dersd"; render(); window.scrollTo(0,0); break;
+    case "dsf": S.dsf=v; render(); break;
+    case "konud": konuDetaySheet(b.dataset.k); break;
+    case "kdsay": { const f=b.dataset.f, k=b.dataset.k; let yeni=0; mutate(s=>{ const t=topic(s,k); t[f]=Math.max(0,(t[f]||0)+(+b.dataset.d)); yeni=t[f]; }); const el=$("#kd-"+f); if(el) el.textContent=yeni; render(true); break; }
+    case "kdsb": { const f=b.dataset.f, k=b.dataset.k; let on=false; mutate(s=>{ const t=topic(s,k); t[f]=!t[f]; on=t[f]; }); b.setAttribute("aria-pressed", String(on)); render(true); break; }
     case "aytall": S.aytAll=!S.aytAll; render(); break;
     case "mx": S.mx = +v; render(); break;
     case "odendi": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); render(); toast(`${S.students.get(id)?.name||""}: ${trDate(d)} ödemesi işlendi`); break; }
@@ -3510,7 +3564,7 @@ document.addEventListener("click", e=>{ const b = e.target.closest && e.target.c
 document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("[data-vk]"); if(!b) return; const a = b.dataset.vk; e.preventDefault();
   if(a==="konu") return vKonuAc(b.dataset.k);
   if(a==="kutuphane"){ closeSheet(); S.vkd = b.dataset.d; S.vkh = null; S.view = "videolar"; render(); window.scrollTo(0,0); return; }
-  if(a==="ders"){ S.vkd = b.dataset.d; S.vkh = null; S.vks = null; render(); window.scrollTo(0,0); return; }
+  if(a==="ders"){ S.vkd = b.dataset.d; S.vkh = null; S.vks = null; if(S.view!=="videolar"){ S.view = "videolar"; closeSheet(); } render(); window.scrollTo(0,0); return; }
   if(a==="dersler"){ S.vkd = null; S.vkh = null; render(); window.scrollTo(0,0); return; }
   if(a==="hoca"){ S.vkh = b.dataset.h; S.vks = null; render(); window.scrollTo(0,0); return; }
   if(a==="hocalar"){ S.vkh = null; render(); window.scrollTo(0,0); return; }
