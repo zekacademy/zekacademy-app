@@ -9,10 +9,9 @@
 - İlyas Güneş: 10.SINIF MAARİF MODEL MATEMATİK KONU ANLATIMI [M10] · 8 video; 60 GÜNDE TYT MATEMATİK ZİRVE KAMPI-İLYAS GÜNEŞ 2027 [TYT] · 74 video ⚠️ kanal aramayla bulundu (İlyas Güneş), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Matematik Kafası: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Math Kafası ), kontrol et
-- Selim Yavuz: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Selim Yavuz: hata (YouTube search: rateLimitExceeded)
 - Mete Ekol: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Mete Ekol Hoca), kontrol et
 - Sıfırdan Sonsuza Matematik: 2027 TYT Matematik KAMPI [TYT] · 22 video ⚠️ kanal aramayla bulundu (Sıfırdan Sonsuza Matematik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Geometri (çekilen)
@@ -24,7 +23,6 @@
 - Farklı Ders: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Farklı Kadro Yayınları), kontrol et
 - Eyüp B: 2027 YKS Geometri VDK [TYT/AYT] · 28 video ⚠️ kanal aramayla bulundu (Eyüp B. Matematik Geometri), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Fizik (çekilen)
@@ -35,9 +33,8 @@
 - Fizikle Barış: 34 GÜNDE 2027 AYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [AYT] · 18 video; 11.SINIF FİZİK MAARİF KAMPI [M11] · 10 video; 10.SINIF FİZİK MAARİF KAMPI [M10] · 10 video; 9.SINIF FİZİK MAARİF KAMPI [M9] · 8 video; 27 GÜNDE 2027 TYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [TYT] · 44 video ⚠️ kanal aramayla bulundu (Fizikle Barış ), kontrol et
 - Ertan Sinan Şahin: AYT Fizik Kampı - 2027 [AYT] · 29 video; TYT Fizik Kampı - 2027 [TYT] · 19 video ⚠️ kanal aramayla bulundu (Ertan Sinan Şahin), kontrol et
 - Kolay Fizik: TYT Fizik Konu Anlatımı [TYT] · 6 video ⚠️ kanal aramayla bulundu (Fizik Çok Kolay), kontrol et
-- Papatya Hoca: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Papatya Hoca: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Kimya (çekilen)
@@ -46,7 +43,6 @@
 - Ferrum: 9. Sınıf Maarif Kimya | Yeni Müfredat [M9] · 12 video; 10. Sınıf Maarif Kimya | Yeni Müfredat [M10] · 10 video; 11. Sınıf Maarif Kimya | Yeni Müfredat [M11] · 12 video; 2027 TYT Kimya Kampı [TYT] · 93 video; 46 Günde AYT Kimya Kampı | 2027 [AYT] · 166 video ⚠️ kanal aramayla bulundu (Ferrum), kontrol et
 - Kimya Özel: 2027 YKS - 50 derste AYT KİMYA KAMPI [AYT] · 74 video; 2027 YKS için 25 SAATTE TYT KİMYA KAMPI [TYT] · 23 video ⚠️ kanal aramayla bulundu (kimya özel), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Biyoloji (çekilen)
@@ -57,7 +53,6 @@
 - OnBilim: uygun güncel liste yok ⚠️ kanal aramayla bulundu (OnBilim Biyoloji), kontrol et
 - FUNDAmentals: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FUNDAmentals Biyoloji), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Türkçe (çekilen)
@@ -70,7 +65,6 @@
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
 - Harun Ardıç: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: 7. Sınıf Türkçe Konu Anlatımı 📙 2026 - 2027 [TYT] · 5 video ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Edebiyat (çekilen)
@@ -82,7 +76,6 @@
 - Önder Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Tarih (çekilen)
@@ -92,7 +85,6 @@
 - Selami Yalçın: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Selami Yalçın ile Tarih), kontrol et
 - Gökhan Öz: 5 Günde AYT Tarih [AYT] · 5 video ⚠️ kanal aramayla bulundu (Gökhan Öz Tarih), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Coğrafya (çekilen)
@@ -101,7 +93,6 @@
 - Yavuz Tuna: TYT HIZ KAMPI #tyt #tytcoğrafya #tytcoğrafyakampı [TYT] · 8 video; AYT COĞRAFYA DERSLERİ #ayt #aytcoğrafya [AYT] · 25 video ⚠️ kanal aramayla bulundu (YAVUZ TUNA COĞRAFYA), kontrol et
 - Sosyal Hocam: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Sosyal Hocam), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Felsefe (çekilen)
@@ -110,16 +101,14 @@
 - Sosyal Hocam: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Sosyal Hocam), kontrol et
 - Sevgi Bilgin: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
 ## Din Kültürü (çekilen)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
-- Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 - Benim Hocam: 2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Video Ders Notları - Konu Anlatım Videoları - Çetin ZENCİR [TYT/AYT] · 16 video
 
-Kullanılan kota: ~1414 birim (günlük sınır 10.000)
+Kullanılan kota: ~1179 birim (günlük sınır 10.000)
 
 ## Matematik
 - Mert Hoca: 2 liste, 228 video, 43/45 konu eşlendi
@@ -133,7 +122,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Selim Yavuz: 0 liste, 0 video, 0/0 konu eşlendi
 - Mete Ekol: 0 liste, 0 video, 0/0 konu eşlendi
 - Sıfırdan Sonsuza Matematik: 1 liste, 22 video, 17/30 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Geometri
@@ -145,7 +133,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Farklı Ders: 0 liste, 0 video, 0/0 konu eşlendi
 - Eyüp B: 1 liste, 28 video, 30/36 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Fizik
@@ -158,16 +145,14 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Kolay Fizik: 1 liste, 6 video, 2/12 konu eşlendi
 - Papatya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Kimya
 - Görkem Şahin: 2 liste, 116 video, 21/28 konu eşlendi
 - Kimya Adası: 4 liste, 198 video, 24/61 konu eşlendi
-- Ferrum: 5 liste, 277 video, 28/78 konu eşlendi
+- Ferrum: 5 liste, 293 video, 30/78 konu eşlendi
 - Kimya Özel: 2 liste, 97 video, 23/28 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Biyoloji
@@ -178,7 +163,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - OnBilim: 0 liste, 0 video, 0/0 konu eşlendi
 - FUNDAmentals: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Türkçe
@@ -190,7 +174,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Fulya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Harun Ardıç: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Edebiyat
@@ -202,7 +185,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Önder Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Fulya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Tarih
@@ -212,7 +194,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Selami Yalçın: 0 liste, 0 video, 0/0 konu eşlendi
 - Gökhan Öz: 1 liste, 5 video, 0/26 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Coğrafya
@@ -221,7 +202,6 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Yavuz Tuna: 2 liste, 31 video, 16/43 konu eşlendi
 - Sosyal Hocam: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Felsefe
@@ -230,12 +210,10 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 - Sosyal Hocam: 0 liste, 0 video, 0/0 konu eşlendi
 - Sevgi Bilgin: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
 ## Din Kültürü
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
-- Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 - Benim Hocam: 1 liste, 16 video, 0/0 konu eşlendi
 
