@@ -1,0 +1,1889 @@
+[
+ {
+  "id": "tytmat-basamak-0001",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "İki basamaklı bir sayıyı çözümleyerek rakamlar toplamı ve yer değiştirme koşullarından sayıyı bulur.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İki basamaklı bir sayının rakamları toplamı 13’tür. Bu sayının rakamlarının yerleri değiştirildiğinde elde edilen sayı, ilk sayıdan 27 fazladır.\nBuna göre ilk sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "49",
+   "B": "58",
+   "C": "67",
+   "D": "85",
+   "E": "94"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "58"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca rakamları toplamı 13 olan bir sayı seçmiş; 27 fazla koşulunu denememiş.",
+   "C": "Rakamları toplamı 13 olan bir sayıyı koşulu denemeden seçmiş (76 − 67 = 9, 27 değil).",
+   "D": "Rakamları 5 ve 8 bulmuş ama ilk sayı yerine yer değiştirmiş yeni sayıyı yazmış.",
+   "E": "Rakamları toplamı 13 olan 94’ü seçmiş; yer değişince sayının küçüldüğünü (49) görmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk sayı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "İki sayıyı basamak çözümlemesiyle yazıp farkta A ve B’nin katsayılarının ne olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çözümle",
+    "aciklama": "İlk sayı AB, yeni sayı BA olsun.",
+    "islem": "AB = 10 × A + B · BA = 10 × B + A"
+   },
+   {
+    "baslik": "Farkı sadeleştir",
+    "aciklama": "Çıkarınca her iki rakamın katsayısı 9 olur; 9’a bölünce rakam farkı çıkar.",
+    "islem": "BA − AB = 9 × B − 9 × A = 27 · B − A = 3"
+   },
+   {
+    "baslik": "Toplamla birleştir",
+    "aciklama": "Toplam 13, fark 3 olan iki rakamı bul.",
+    "islem": "A + B = 13 · B − A = 3 · B = 8, A = 5"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "Onlar basamağı 5, birler basamağı 8.",
+    "islem": "AB = 58 · 85 − 58 = 27"
+   }
+  ],
+  "puf": "Rakamlar yer değiştirince fark daima 9 × (rakamlar farkı) olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · rakamlar toplamı + yer değişince artış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0002",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak ve Sayı Değeri",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Bir rakamın sayı değeri ile basamak değerini ayırt ederek hesap yapar.",
+  "tipId": "bsm-deger",
+  "tip": "Basamak değeri ve 10ⁿ’li ifadeler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Dört basamaklı 3759 sayısında 7 rakamının basamak değeri ile 5 rakamının sayı değerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "705",
+   "B": "750",
+   "C": "7005",
+   "D": "7050",
+   "E": "7500"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "705"
+  },
+  "celdiriciler": {
+   "D": "7’yi binler basamağında sanıp 7000, 5’in basamak değerini de 50 almış.",
+   "E": "7’yi binler, 5’i yüzler basamağında sanıp 7000 + 500 almış.",
+   "B": "5’in basamak değerini (50) almış; soruda 5’in sayı değeri isteniyor.",
+   "C": "7’yi binler basamağında sanıp 7000 almış."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "E": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat"
+  },
+  "istenen": "7’nin basamak değeri + 5’in sayı değeri.",
+  "bilgi": [
+   {
+    "ad": "Sayı değeri ve basamak değeri",
+    "ifade": "rakamın kendisi sayı değeri, bulunduğu basamağa göre aldığı değer basamak değeridir. Örnek: 425 sayısında 2’nin sayı değeri 2, basamak değeri 2 × 10 = 20’dir"
+   }
+  ],
+  "ipuclari": [
+   "Sağdan sola basamaklar birler, onlar, yüzler, binlerdir; 7 hangi basamaktadır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Basamakları belirle",
+    "aciklama": "3759’da sağdan sola: 9 birler, 5 onlar, 7 yüzler, 3 binler basamağıdır.",
+    "islem": "7 yüzler basamağında"
+   },
+   {
+    "baslik": "Değerleri yaz",
+    "aciklama": "7’nin basamak değeri 7 × 100, 5’in sayı değeri kendisi olan 5’tir.",
+    "islem": "7 → 700 · 5 → 5"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki değeri topla.",
+    "islem": "700 + 5 = 705"
+   }
+  ],
+  "puf": "Basamak değeri basamağa göre, sayı değeri rakamın kendisidir; soruda hangisinin istendiğine bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-02 (basamak değeri) · bir rakamın basamak değeri + bir rakamın sayı değeri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0003",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakam Değiştirme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "İki rakamın yer değiştirmesiyle sayının ne kadar değiştiğini basamak değerleriyle hesaplar.",
+  "tipId": "bsm-degisim",
+  "tip": "Rakam yer değiştirme, silme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kargo aracının kilometre sayacında görünmesi gereken değer 4816’dır. Teknik bir arıza nedeniyle sayacın yüzler basamağındaki rakamla birler basamağındaki rakam birbirinin yerine geçmiştir.\nBuna göre sayaçta görünen değer, görünmesi gereken değerden kaç km eksiktir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "20",
+   "C": "180",
+   "D": "198",
+   "E": "200"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "198"
+  },
+  "celdiriciler": {
+   "A": "Yalnız rakam farkını (8 − 6) almış; basamak değerlerini hesaba katmamış.",
+   "B": "Rakamların yer değişimini onlar basamağı gibi (10 × 2) hesaplamış.",
+   "C": "Birler basamağındaki 6 → 8 değişimini onlar basamağı gibi (+20) hesaplamış (−200 + 20).",
+   "E": "Yüzler basamağındaki 200’lük kaybı bulmuş, birler basamağındaki 2’lik artışı eklememiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Sayaçtaki eksiklik (km).",
+  "bilgi": [
+   {
+    "ad": "Sayı değeri ve basamak değeri",
+    "ifade": "rakamın kendisi sayı değeri, bulunduğu basamağa göre aldığı değer basamak değeridir. Örnek: 425 sayısında 2’nin sayı değeri 2, basamak değeri 2 × 10 = 20’dir"
+   }
+  ],
+  "ipuclari": [
+   "Yer değişince yüzler basamağı 100 ile, birler basamağı 1 ile çarpılan rakamı değiştirir; her ikisinin etkisini ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Görünen değeri yaz",
+    "aciklama": "8 ile 6 yer değiştirir; sayaç 4618 gösterir.",
+    "islem": "4816 → 4618"
+   },
+   {
+    "baslik": "Değişimleri ayır",
+    "aciklama": "Yüzler basamağında 8 yerine 6 (100’lük basamak), birler basamağında 6 yerine 8 olur.",
+    "islem": "Yüzler: 800 → 600 (−200) · Birler: 6 → 8 (+2)"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "Değişimlerin toplamı sayaçtaki eksikliği verir.",
+    "islem": "−200 + 2 = −198 · 4816 − 4618 = 198"
+   }
+  ],
+  "puf": "Yüzler ile birler basamağındaki rakamlar yer değiştirirse sayı 99 × (rakamlar farkı) kadar değişir (8 − 6 = 2 → 198).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-03 (rakam yer değiştirme) · sayaç, yüzler ve birler basamağı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0004",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · 10ⁿ’li İfadeler",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "10’un kuvvetleriyle yazılmış bir ifadeyi sayıya çevirerek rakamlar toplamını bulur.",
+  "tipId": "bsm-deger",
+  "tip": "Basamak değeri ve 10ⁿ’li ifadeler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "A = 4 × 10⁵ + 7 × 10² + 6\nolduğuna göre A sayısının rakamları toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "10",
+   "C": "11",
+   "D": "13",
+   "E": "17"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "17"
+  },
+  "celdiriciler": {
+   "A": "Sorulan rakamları toplamı yerine A’nın basamak sayısını (6) bulmuş.",
+   "B": "7 × 10² terimini atlayıp yalnız 4 + 6 toplamış.",
+   "C": "Sondaki 6’yı katmayı unutmuş; yalnız 4 + 7 almış.",
+   "D": "Baştaki 4 × 10⁵ terimini atlayıp 7 + 6 toplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "A sayısının rakamları toplamı.",
+  "bilgi": [
+   {
+    "ad": "10’un kuvvetleri",
+    "ifade": "10ⁿ, 1’in sağına n tane sıfır yazılmış sayıdır; a × 10ⁿ, a’nın sağına n sıfır yazılmasıdır. Örnek: 10³ = 1000 · 5 × 10² = 500"
+   },
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 3507 için 3 + 5 + 0 + 7 = 15"
+   }
+  ],
+  "ipuclari": [
+   "Her terim, katsayının sağına üs kadar sıfır yazılmasıdır; önce sayıyı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Terimleri sayıya çevir",
+    "aciklama": "Katsayının sağına üs kadar sıfır yazılır.",
+    "islem": "4 × 10⁵ = 400000 · 7 × 10² = 700"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Terimlerin dolu basamakları çakışmadığı için sayı doğrudan yazılır.",
+    "islem": "400000 + 700 + 6 = 400706"
+   },
+   {
+    "baslik": "Rakamları topla",
+    "aciklama": "Sıfırlar toplamı değiştirmez.",
+    "islem": "4 + 0 + 0 + 7 + 0 + 6 = 17"
+   }
+  ],
+  "puf": "10ⁿ’li toplamlarda önce sayıyı yaz, sonra rakamlarını topla; üsler rakam değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-02 (10ⁿ’li ifade) · tek katsayılı terimlerin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0005",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamları toplamı verilen iki basamaklı sayıları sistemli olarak sayar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir otoparkta 10’dan 99’a kadar olan her iki basamaklı numara birer araca verilmiştir. Numarasındaki rakamların toplamı 8 olan araçlar “yeşil bölge”ye alınmaktadır.\nBuna göre yeşil bölgeye kaç araç alınır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "7",
+   "D": "8",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "AB ile BA’yı aynı sayıp (17 ile 71 gibi) 80’i de atlamış.",
+   "B": "AB ile BA’yı aynı sayıp 80’i ayrıca saymış.",
+   "C": "Birler basamağı 0 olan 80’i unutmuş.",
+   "E": "08’i de saymış; başa 0 gelemeyeceğini (iki basamaklı olmadığını) atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Rakamları toplamı 8 olan iki basamaklı sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 3507 için 3 + 5 + 0 + 7 = 15"
+   },
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "Onlar basamağını 1’den 9’a kadar sırayla deneyip her biri için birler basamağını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Onlar basamağını dene",
+    "aciklama": "Onlar basamağı A (1–9), birler basamağı 8 − A olmalıdır; 8 − A en az 0 olmalıdır.",
+    "islem": "A = 1 → 17 · A = 2 → 26 · A = 3 → 35 · A = 4 → 44"
+   },
+   {
+    "baslik": "Devam et",
+    "aciklama": "A = 8’e kadar gidilir; A = 9 olursa birler basamağı negatif olur.",
+    "islem": "A = 5 → 53 · A = 6 → 62 · A = 7 → 71 · A = 8 → 80"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Bulunan sayıların adedi.",
+    "islem": "17, 26, 35, 44, 53, 62, 71, 80 → 8 sayı"
+   }
+  ],
+  "puf": "Basamak sayarken önce baştaki rakamı sabitle, sonra kalan rakamın seçeneklerini yaz; başa 0 gelmez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (rakam koşullu sayma) · iki basamaklı, rakamlar toplamı 8",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0006",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Aynı rakamların farklı basamaklarda yer aldığı üç basamaklı sayıları çözümleyerek rakamları bulur.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A ve B birer rakam olmak üzere AAB ve ABB üç basamaklı doğal sayılardır.\nAAB + ABB = 492\nolduğuna göre A × B çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "8",
+   "C": "12",
+   "D": "26",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Çarpım yerine B − A farkını bulmuş.",
+   "B": "Çarpım yerine A + B toplamını bulmuş.",
+   "D": "A ile B’yi yan yana yazıp AB sayısını (26) vermiş.",
+   "E": "A × B yerine B × B hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "A × B çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   }
+  ],
+  "ipuclari": [
+   "İki sayıyı da yüzler, onlar, birler basamaklarına göre çözümle; toplamda A’nın ve B’nin katsayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çözümle",
+    "aciklama": "AAB’de A yüzler ve onlarda, ABB’de B onlar ve birlerde.",
+    "islem": "AAB = 100 × A + 10 × A + B = 110 × A + B · ABB = 100 × A + 10 × B + B = 100 × A + 11 × B"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Terimleri A’lar ve B’ler olarak topla, 2’ye böl.",
+    "islem": "210 × A + 12 × B = 492 · 35 × A + 2 × B = 82"
+   },
+   {
+    "baslik": "Rakamları bul",
+    "aciklama": "B en çok 9 olduğundan 2 × B ≤ 18; bu yüzden 35 × A en az 64 olmalı, A = 2.",
+    "islem": "A = 2 → 2 × B = 12 → B = 6"
+   },
+   {
+    "baslik": "Çarpımı yaz",
+    "aciklama": "A = 2, B = 6.",
+    "islem": "226 + 266 = 492 · A × B = 12"
+   }
+  ],
+  "puf": "Basamak çözümlemede A’lı ve B’li terimleri ayrı topla; rakam sınırı (0–9) çoğu zaman tek çözüm bırakır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · AAB + ABB, iki bilinmeyenli üç basamaklı toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0007",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "AB − BA farkının özelliklerini çözümleme ile inceler.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "A ve B sıfırdan farklı birer rakamdır. AB ve BA iki basamaklı doğal sayılar olup AB > BA’dır.\nBuna göre,\nI. A > B’dir.\nII. AB − BA farkı iki basamaklı bir sayıdır.\nIII. AB − BA farkı 9’un katıdır.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ün 9 × (A − B) olduğunu görmemiş.",
+   "B": "II’yi kesin doğru sanıp I ve III’ü çözümlememiş.",
+   "C": "II’yi kesin sanmış; 21 − 12 = 9 gibi tek basamaklı farkı denememiş, III’ü atlamış.",
+   "E": "II’yi de doğru sanmış; A − B = 1 durumunu (21 − 12 = 9) denememiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "AB − BA farkını 10 × A + B ve 10 × B + A ile yaz; A − B en küçük kaç olabilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "AB > BA ise 10 × A + B > 10 × B + A, yani 9 × A > 9 × B.",
+    "islem": "A > B doğru"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "Farkı çözümle.",
+    "islem": "AB − BA = 9 × A − 9 × B = 9 × (A − B) · 9’un katı, doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "A − B = 1 olursa fark 9 olur ve tek basamaklıdır.",
+    "islem": "21 − 12 = 9 · yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Kesin doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Öncüllü sorularda bir ifadeyi yanlışlamak için tek bir karşı örnek yeter.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · AB − BA için öncüllü ifadeler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0008",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Tanımlanan bir sayı türünün koşulunu basamaklara uygulayarak kaç sayı olduğunu bulur.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Üç basamaklı bir sayıda onlar basamağındaki rakam, yüzler ve birler basamaklarındaki rakamların toplamına eşitse bu sayıya “dengeli sayı” denir. Örneğin 275 dengeli sayıdır, çünkü 7 = 2 + 5.\nBuna göre üç basamaklı kaç dengeli sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "45",
+   "B": "54",
+   "C": "55",
+   "D": "81",
+   "E": "90"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "45"
+  },
+  "celdiriciler": {
+   "B": "Koşulu yüzler basamağı = onlar + birler olarak almış.",
+   "C": "Yüzler basamağına 0 koyup üç basamaklı olmayan sayıları da saymış.",
+   "D": "Yüzler basamağı için 9, birler basamağı için de 9 seçenek alıp onlar basamağının koşulunu seçenek sayısına katmamış (9 × 9).",
+   "E": "Yüzler için 9, birler için 10 seçenek çarpıp onlar basamağının koşulunu atlamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Dengeli sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   },
+   {
+    "ad": "Çarpma yoluyla sayma",
+    "ifade": "her basamak için seçenek sayıları çarpılır; sayının başına 0 gelemez. Örnek: rakamları farklı iki basamaklı sayıda onlar 1–9 (9 seçenek), birler kalan 9 rakam: 9 × 9 = 81"
+   }
+  ],
+  "ipuclari": [
+   "Sayı ABC ise koşul B = A + C’dir; her A için C’nin kaç değer alabileceğini yaz (B en çok 9 olabilir)."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşulu yaz",
+    "aciklama": "Sayı ABC ise B = A + C olmalı; A en az 1 olduğundan sayı üç basamaklı kalır.",
+    "islem": "B = A + C · 1 ≤ A ≤ 9"
+   },
+   {
+    "baslik": "Seçenekleri say",
+    "aciklama": "B bir rakam olduğundan A + C ≤ 9 olmalıdır; C, 0’dan 9 − A’ya kadar gider (10 − A seçenek).",
+    "islem": "A = 1 → 9 · A = 2 → 8 · … · A = 9 → 1"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Seçenekleri topla.",
+    "islem": "9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45"
+   }
+  ],
+  "puf": "Tanımlı sayı sorularında önce tanımı bir eşitliğe çevir, sonra baştaki rakamı sabitleyip diğerlerini say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (tanımlı sayı türü + sayma) · dengeli sayı: onlar = yüzler + birler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0009",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Üç basamaklı sayılar arasında rakamları toplamı koşulunu sağlayanları sistemli sayar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir fuarın biletleri 100’den 999’a kadar üç basamaklı numaralarla basılmıştır. Numarasındaki rakamların toplamı 4 olan biletlere ücretsiz yemek kuponu veriliyor.\nBuna göre kaç bilete ücretsiz yemek kuponu verilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "7",
+   "C": "9",
+   "D": "10",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Rakamları birbirinden farklı olanları (103, 130, 301, 310) saymış; böyle bir koşul yok.",
+   "B": "Yalnız yüzler basamağı 1 ve 2 olanları saymış (4 + 3).",
+   "C": "Yüzler basamağı 4 olan 400 sayısını saymayı unutmuş.",
+   "E": "Yüzler basamağına 0 koyup 004, 013 gibi sayıları da saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Rakamları toplamı 4 olan üç basamaklı sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 3507 için 3 + 5 + 0 + 7 = 15"
+   },
+   {
+    "ad": "Çarpma yoluyla sayma",
+    "ifade": "her basamak için seçenek sayıları çarpılır; sayının başına 0 gelemez. Örnek: rakamları farklı iki basamaklı sayıda onlar 1–9 (9 seçenek), birler kalan 9 rakam: 9 × 9 = 81"
+   }
+  ],
+  "ipuclari": [
+   "Yüzler basamağını 1, 2, 3, 4 olarak sırayla sabitle; kalan iki rakamın toplamını ne kadar yapmalısın?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüzler basamağını sabitle",
+    "aciklama": "Yüzler basamağı 1–4 olabilir (en az 1, en çok 4).",
+    "islem": "A = 1 → B + C = 3 · A = 2 → B + C = 2 · A = 3 → B + C = 1 · A = 4 → B + C = 0"
+   },
+   {
+    "baslik": "Her biri için say",
+    "aciklama": "B + C = k eşitliğinin (k + 1) çözümü vardır (B = 0’dan k’ye).",
+    "islem": "A = 1: 4 sayı · A = 2: 3 sayı · A = 3: 2 sayı · A = 4: 1 sayı"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Sayıları topla.",
+    "islem": "4 + 3 + 2 + 1 = 10 (103, 112, 121, 130, 202, 211, 220, 301, 310, 400)"
+   }
+  ],
+  "puf": "Rakamları toplamı küçük olan sayıları, baştaki rakamı sabitleyip kalan toplamı paylaştırarak say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (rakam koşullu sayma) · üç basamaklı, rakamlar toplamı 4",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0010",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak ve Sayı Değeri",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Basamak değeri ve sayı değeri koşullarından üç basamaklı sayıyı kurar.",
+  "tipId": "bsm-deger",
+  "tip": "Basamak değeri ve 10ⁿ’li ifadeler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Üç basamaklı bir sayıda yüzler basamağındaki rakamın basamak değeri ile birler basamağındaki rakamın sayı değerinin toplamı 407’dir. Bu sayının onlar basamağındaki rakam 3’tür.\nBuna göre bu sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "407",
+   "B": "437",
+   "C": "473",
+   "D": "734",
+   "E": "743"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "437"
+  },
+  "celdiriciler": {
+   "A": "Verilen 407’yi sayı sanmış; onlar basamağındaki 3’ü katmamış.",
+   "C": "Birler ile onlar basamağını karıştırmış (7 onlar, 3 birler).",
+   "D": "Rakamları tersten yazmış (437 yerine 734).",
+   "E": "Rakamları büyükten küçüğe sıralayıp (7, 4, 3) yazmış; yüzler basamağının basamak değeri koşulunu denetlememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Üç basamaklı sayı.",
+  "bilgi": [
+   {
+    "ad": "Sayı değeri ve basamak değeri",
+    "ifade": "rakamın kendisi sayı değeri, bulunduğu basamağa göre aldığı değer basamak değeridir. Örnek: 425 sayısında 2’nin sayı değeri 2, basamak değeri 2 × 10 = 20’dir"
+   },
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   }
+  ],
+  "ipuclari": [
+   "Yüzler basamağındaki rakamın basamak değeri 100 ile, birlerdeki rakamın sayı değeri 1 ile çarpılan değerdir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "Yüzler rakamı A, birler rakamı C olsun.",
+    "islem": "100 × A + C = 407"
+   },
+   {
+    "baslik": "Rakamları bul",
+    "aciklama": "C bir rakam olduğundan 100 × A, 407’ye 9’dan fazla uzak olamaz.",
+    "islem": "A = 4 · C = 407 − 400 = 7"
+   },
+   {
+    "baslik": "Sayıyı yaz",
+    "aciklama": "Yüzler 4, onlar 3, birler 7.",
+    "islem": "437"
+   }
+  ],
+  "puf": "Basamak değeri koşulu sayının o basamaktaki rakamını doğrudan verir; kalan, bir sonraki basamakları belirler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-02 (basamak değeri) · yüzlerin basamak değeri + birlerin sayı değeri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0011",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Koşullu En Büyük/En Küçük",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamları farklı, rakamları toplamı ve çift/tek koşulu verilen en küçük sayıyı basamak basamak kurar.",
+  "tipId": "bsm-yerlestir",
+  "tip": "Koşullu en büyük/en küçük ve kutulara yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Rakamları birbirinden farklı ve rakamları toplamı 12 olan üç basamaklı en küçük çift doğal sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "138",
+   "B": "147",
+   "C": "156",
+   "D": "174",
+   "E": "192"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "138"
+  },
+  "celdiriciler": {
+   "B": "Birler basamağına 7 (tek) koyup çift olma koşulunu uygulamamış.",
+   "C": "Çift olacak diye birler basamağına 6 koyup onlar basamağını gereğinden büyük (5) bırakmış.",
+   "D": "Birler basamağını 4 seçip onlar basamağını 7 yapmış; daha küçük bir seçenek var.",
+   "E": "Birler basamağına en küçük çift rakam 2’yi koyup onlar basamağını 9 yapmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "En küçük çift sayı.",
+  "bilgi": [
+   {
+    "ad": "Rakamları farklı sayı",
+    "ifade": "her rakam en fazla bir kez kullanılır. Örnek: 101’de 1 iki kez geçtiği için rakamları farklı değildir"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "birler basamağı 0, 2, 4, 6 ya da 8 olan sayı çifttir; 1, 3, 5, 7, 9 olan sayı tektir"
+   }
+  ],
+  "ipuclari": [
+   "Önce yüzler, sonra onlar basamağını mümkün olan en küçük yap; birler basamağı hem toplamı tamamlamalı hem de çift olmalı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüzler basamağı",
+    "aciklama": "Sayıyı küçültmek için yüzler basamağı en küçük olmalı.",
+    "islem": "A = 1 · B + C = 11"
+   },
+   {
+    "baslik": "Onlar basamağı",
+    "aciklama": "C çift olmalı ve C = 11 − B; B’yi küçükten başlayarak dene.",
+    "islem": "B = 2 → C = 9 (tek) · B = 3 → C = 8 (çift)"
+   },
+   {
+    "baslik": "Koşulları kontrol et",
+    "aciklama": "Rakamlar farklı, toplamı 12, birler çift.",
+    "islem": "1 + 3 + 8 = 12 · 138"
+   }
+  ],
+  "puf": "En küçük sayıda soldan sağa her basamağa koşulu bozmayan en küçük rakamı koy; çift/tek koşulu yalnız birler basamağını kısıtlar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-05 (koşullu en küçük) · farklı rakamlar + toplam 12 + çift",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0012",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakam Değiştirme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Birler basamağı silinen sayıda sayının değişimini bölüm–kalan ilişkisiyle bulur.",
+  "tipId": "bsm-degisim",
+  "tip": "Rakam yer değiştirme, silme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Selim, üç basamaklı bir kasa numarasının birler basamağındaki rakamı sildiğinde geriye kalan iki basamaklı sayının ilk sayıdan 464 eksik olduğunu görüyor.\nBuna göre ilk kasa numarası kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "51",
+   "B": "464",
+   "C": "505",
+   "D": "510",
+   "E": "515"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "515"
+  },
+  "celdiriciler": {
+   "A": "Kalan iki basamaklı sayıyı bulup ilk sayıyı sorduğunu unutmuş.",
+   "B": "Azalma miktarını sayının kendisi sanmış.",
+   "C": "Bölümü 464 ÷ 9 ≈ 50 yuvarlayıp sayıyı 505 yazmış.",
+   "D": "Birler basamağını 0 almış; 9 × 51 = 459 ile 464 arasındaki 5’i atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "İlk kasa numarası.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   }
+  ],
+  "ipuclari": [
+   "Sayı 10 × m + c ise birler silinince m kalır; farkı m ve c cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıyı çözümle",
+    "aciklama": "İlk sayı 10 × m + c (m kalan iki basamaklı sayı, c birler rakamı) olsun.",
+    "islem": "İlk sayı − kalan sayı = (10 × m + c) − m = 9 × m + c"
+   },
+   {
+    "baslik": "Bölme ile ayır",
+    "aciklama": "9 × m + c = 464 ve c bir rakam (c ≤ 9) olduğundan 464’ü 9’a bölüp kalan c’yi oku.",
+    "islem": "464 = 9 × 51 + 5 → m = 51, c = 5"
+   },
+   {
+    "baslik": "Sayıyı yaz",
+    "aciklama": "Kalan sayı 51, silinen rakam 5.",
+    "islem": "İlk sayı = 515 (515 − 51 = 464)"
+   }
+  ],
+  "puf": "Birler rakamı silinince sayı 10 ile bölünür gibi küçülür; azalma 9 × m + c olduğundan 9’a bölümden m ve c okunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-03 (rakam silme) · birler basamağı silinince azalma 464",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0013",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · 10ⁿ’li İfadeler",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Katsayısı 10’u aşan 10ⁿ’li terimler içeren ifadeyi sayıya çevirip rakamlar toplamını bulur.",
+  "tipId": "bsm-deger",
+  "tip": "Basamak değeri ve 10ⁿ’li ifadeler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "B = 3 × 10⁴ + 9 × 10³ + 14 × 10² + 7\nolduğuna göre B sayısının rakamları toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "8",
+   "C": "15",
+   "D": "24",
+   "E": "33"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Rakamları toplamı yerine B’nin basamak sayısını (5) bulmuş.",
+   "B": "Sondaki 7’yi katmayı unutmuş; 40400’ün rakamlarını toplamış.",
+   "D": "Katsayıların rakamlarını doğrudan toplamış (3 + 9 + 1 + 4 + 7); 14 × 10²’nin 9000’e taştığını görmemiş.",
+   "E": "Katsayıları doğrudan toplamış (3 + 9 + 14 + 7)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "B sayısının rakamları toplamı.",
+  "bilgi": [
+   {
+    "ad": "10’un kuvvetleri",
+    "ifade": "10ⁿ, 1’in sağına n tane sıfır yazılmış sayıdır; a × 10ⁿ, a’nın sağına n sıfır yazılmasıdır. Örnek: 10³ = 1000 · 5 × 10² = 500"
+   },
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 3507 için 3 + 5 + 0 + 7 = 15"
+   }
+  ],
+  "ipuclari": [
+   "14 × 10², 1400’dür ve 9 × 10³’ün yanında binler basamağını etkiler; önce toplamı sayı olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Terimleri yaz",
+    "aciklama": "Her terim katsayısının sağına üs kadar sıfır konularak bulunur.",
+    "islem": "30000 · 9000 · 1400 · 7"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Binler basamağı 9 + 1 = 10 olacağı için taşma olur; sayıyı doğrudan toplayarak yaz.",
+    "islem": "30000 + 9000 + 1400 + 7 = 40407"
+   },
+   {
+    "baslik": "Rakamları topla",
+    "aciklama": "Sıfırlar toplamı değiştirmez.",
+    "islem": "4 + 0 + 4 + 0 + 7 = 15"
+   }
+  ],
+  "puf": "Katsayısı 10 ve üzeri olan 10ⁿ’li terimler basamak taşırır; rakamları katsayılardan değil sayıdan topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-02 (10ⁿ’li ifade) · taşan katsayı (14 × 10²)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0014",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Kutulara Rakam Yerleştirme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Kutulara rakam yerleştirilen toplamın en büyük ve en küçük değerini basamak ağırlıklarıyla bulur.",
+  "tipId": "bsm-yerlestir",
+  "tip": "Koşullu en büyük/en küçük ve kutulara yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki kutulara 2, 3, 5 ve 8 rakamlarının her biri yalnızca bir kez yazılarak iki tane iki basamaklı sayı oluşturuluyor.\n▢▢ + ▢▢\nBuna göre bu toplamın en büyük değeri ile en küçük değeri arasındaki fark kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "63",
+   "C": "72",
+   "D": "80",
+   "E": "135"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "Fark hesabında onlar basamaklarının 10 ile çarpılacağını unutmuş (13 − 5).",
+   "B": "En küçük toplamı vermiş; fark istendiğini atlamış.",
+   "D": "Yalnız onlar basamaklarındaki farkı (10 × 8) almış, birlerdeki değişimi (−8) katmamış.",
+   "E": "En büyük toplamı vermiş; fark istendiğini atlamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "En büyük toplam − en küçük toplam.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "İki sayının toplamı 10 × (onlar basamaklarının toplamı) + (birler basamaklarının toplamı) olur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamı yaz",
+    "aciklama": "İki sayının toplamında onlar rakamları 10 ile, birler rakamları 1 ile çarpılır.",
+    "islem": "Toplam = 10 × (onlar toplamı) + (birler toplamı)"
+   },
+   {
+    "baslik": "En büyük ve en küçüğü bul",
+    "aciklama": "En büyük için büyük rakamlar onlara, en küçük için küçük rakamlar onlara konur.",
+    "islem": "En büyük: onlar 8 ve 5, birler 3 ve 2 → 130 + 5 = 135 · En küçük: onlar 2 ve 3, birler 5 ve 8 → 50 + 13 = 63"
+   },
+   {
+    "baslik": "Farkı bul",
+    "aciklama": "İki değerin farkı.",
+    "islem": "135 − 63 = 72"
+   }
+  ],
+  "puf": "Toplamda önce en büyük ağırlıklı basamağa büyük rakamları, en küçük toplamda ise küçük rakamları koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-05 (kutulara yerleştirme) · iki iki basamaklı sayının toplamı, en büyük − en küçük",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0015",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Verilen rakam kümesiyle, başa 0 gelmeme, birler basamağı ve rakamlar toplamı koşullarını birlikte uygulayarak sayı sayar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kasanın şifresi 0, 1, 2, 3 ve 5 rakamları kullanılarak oluşturuluyor. Şifre, rakamları birbirinden farklı, üç basamaklı ve 15’in katı olan bir doğal sayıdır.\nBuna göre bu kasa için kaç farklı şifre oluşturulabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "7",
+   "D": "8",
+   "E": "21"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Yalnız birler basamağı 5 olan şifreleri saymış; 0 ile bitenleri unutmuş.",
+   "B": "Yalnız birler basamağı 0 olan şifreleri saymış.",
+   "D": "Birler basamağı 5 iken yüzler basamağına 0 koyabileceğini düşünmüş (015 dahil 4 sayı saymış).",
+   "E": "3’e bölünme koşulunu uygulamadan yalnız 5’in katı olan şifreleri saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Oluşturulabilecek şifre sayısı.",
+  "bilgi": [
+   {
+    "ad": "Çarpma yoluyla sayma",
+    "ifade": "her basamak için seçenek sayıları çarpılır; sayının başına 0 gelemez. Örnek: rakamları farklı iki basamaklı sayıda onlar 1–9 (9 seçenek), birler kalan 9 rakam: 9 × 9 = 81"
+   },
+   {
+    "ad": "Rakamları farklı sayı",
+    "ifade": "her rakam en fazla bir kez kullanılır. Örnek: 101’de 1 iki kez geçtiği için rakamları farklı değildir"
+   },
+   {
+    "ad": "3 ile bölünebilme",
+    "ifade": "rakamları toplamı 3’ün katı olan sayı 3’e tam bölünür. Örnek: 135 → 1 + 3 + 5 = 9, 3’e bölünür"
+   }
+  ],
+  "ipuclari": [
+   "15’in katı hem 5’in hem 3’ün katıdır; birler basamağı 0 ya da 5 olmalı ve rakamlar toplamı 3’ün katı olmalıdır. İki durumu ayrı ayrı say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birler basamağı 0",
+    "aciklama": "Kalan {1, 2, 3, 5} rakamlarından seçilen yüzler ve onlar rakamlarının toplamı 3’ün katı olmalı.",
+    "islem": "1 + 2 = 3 · 1 + 5 = 6 → (1, 2), (1, 5) ve yer değişimleri: 120, 210, 150, 510 = 4 sayı"
+   },
+   {
+    "baslik": "Birler basamağı 5",
+    "aciklama": "Kalan {0, 1, 2, 3}’ten iki rakamın toplamı + 5, 3’ün katı olmalı: toplam 1 ya da 4 olmalı.",
+    "islem": "0 + 1 = 1 → 105 (015 olmaz) · 1 + 3 = 4 → 135, 315"
+   },
+   {
+    "baslik": "Birler 5 durumunu say",
+    "aciklama": "Üç sayı oluşur.",
+    "islem": "105, 135, 315 = 3 sayı"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki durum ayrık olduğundan toplanır.",
+    "islem": "4 + 3 = 7"
+   }
+  ],
+  "puf": "Bölünebilme koşulu olan sayma sorularında önce birler basamağını, sonra rakamlar toplamını sabitleyip adayları tek tek say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (rakam koşullu sayma) · kümedeki rakamlarla 15’in katı, başa 0 gelmez",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0016",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Soldan ve sağdan aynı okunan çift üç basamaklı sayıları, birler ve yüzler basamağı koşullarıyla sayar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Soldan okunuşu ile sağdan okunuşu aynı olan sayılara “simetrik sayı” denir. Örneğin 484 ve 353 üç basamaklı simetrik sayılardır.\nBuna göre üç basamaklı kaç çift simetrik sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "36",
+   "C": "40",
+   "D": "50",
+   "E": "90"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Ortadaki rakamı da çift sanıp yalnız 5 seçenek (0, 2, 4, 6, 8) saymış.",
+   "B": "Ortadaki rakamı 1–9 sanıp 0’ı saymamış (606 gibi sayıları atlamış).",
+   "D": "Baştaki rakam için 0’ı da çift sayıp 5 seçenek almış (0 başa gelemez).",
+   "E": "Çift olma koşulunu uygulamadan tüm simetrik sayıları saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Çift simetrik sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Çarpma yoluyla sayma",
+    "ifade": "her basamak için seçenek sayıları çarpılır; sayının başına 0 gelemez. Örnek: rakamları farklı iki basamaklı sayıda onlar 1–9 (9 seçenek), birler kalan 9 rakam: 9 × 9 = 81"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "birler basamağı 0, 2, 4, 6 ya da 8 olan sayı çifttir; 1, 3, 5, 7, 9 olan sayı tektir"
+   }
+  ],
+  "ipuclari": [
+   "Sayı ABA biçimindedir; A hem yüzler hem birler basamağı olduğundan çift olmalı ve 0 olamaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Biçimi yaz",
+    "aciklama": "Simetrik üç basamaklı sayı ABA’dır; birler basamağı A olduğundan çift olması için A çift olmalıdır.",
+    "islem": "A ∈ {2, 4, 6, 8} (0 başa gelemez) → 4 seçenek"
+   },
+   {
+    "baslik": "Ortadaki rakam",
+    "aciklama": "B’nin kısıtı yoktur, 0’dan 9’a kadar herhangi bir rakam olabilir.",
+    "islem": "B için 10 seçenek"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Basamak seçenekleri çarpılır.",
+    "islem": "4 × 10 = 40"
+   }
+  ],
+  "puf": "Simetrik sayılarda yalnız yarısını seçersin; kalan basamaklar onu aynalar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (tanımlı sayı türü + sayma) · simetrik (ABA) ve çift",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0017",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Sayı ile rakamları toplamı arasındaki farkı çözümleyerek koşulu sağlayan tüm sayıları bulur.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İki basamaklı bir doğal sayıdan, bu sayının rakamları toplamı çıkarıldığında 63 elde ediliyor.\nBuna göre bu koşulu sağlayan tüm doğal sayıların toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "77",
+   "B": "79",
+   "C": "675",
+   "D": "735",
+   "E": "745"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "745"
+  },
+  "celdiriciler": {
+   "A": "Yalnız iki rakamı da aynı (77) sayıyı almış.",
+   "B": "Yalnız en büyük sayıyı vermiş; tüm sayıların toplamı isteniyor.",
+   "C": "Birler basamağı 0 olan 70’i listeden çıkarıp 71–79’u toplamış.",
+   "D": "10 sayının ortalamasını 73,5 alıp 10 ile çarpmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "Koşulu sağlayan tüm sayıların toplamı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "AB’yi 10 × A + B yazıp rakamları toplamını çıkar; B’nin ne olduğuna bakmadan A bulunabilir mi?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çözümle",
+    "aciklama": "Sayı AB, rakamları toplamı A + B.",
+    "islem": "AB − (A + B) = 10 × A + B − A − B = 9 × A"
+   },
+   {
+    "baslik": "A’yı bul",
+    "aciklama": "Fark 63 olduğundan A sabit, B serbest.",
+    "islem": "9 × A = 63 → A = 7"
+   },
+   {
+    "baslik": "Sayıları topla",
+    "aciklama": "B, 0’dan 9’a kadar olabilir: 70, 71, …, 79 (10 sayı). Ortalama 74,5.",
+    "islem": "10 × 74,5 = 745"
+   }
+  ],
+  "puf": "Sayıdan rakamları toplamını çıkarırsan B kaybolur: AB − (A + B) = 9 × A.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · sayı − rakamlar toplamı, tüm çözümlerin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0018",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Kutulara Rakam Yerleştirme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Kutulara rakam yerleştirilen farkın en küçük pozitif değerini basamak ağırlıklarını dengeleyerek bulur.",
+  "tipId": "bsm-yerlestir",
+  "tip": "Koşullu en büyük/en küçük ve kutulara yerleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki kutulara 3, 4, 7 ve 9 rakamlarının her biri yalnızca bir kez yazılarak iki tane iki basamaklı sayı oluşturuluyor.\n▢▢ − ▢▢\nBuna göre bu farkın alabileceği en küçük pozitif değer kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "19",
+   "D": "24",
+   "E": "63"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "Onlar basamağına 4 ve 3’ü koymuş ama birlerde büyük rakamı (9) çıkarılan sayıya yazmayı düşünmemiş (49 − 37).",
+   "C": "Onlar basamaklarına 9 ve 7’yi koymuş; birler farkından 1 kaybettiği için 20 yerine 19 bulmuş.",
+   "D": "Onlar basamağında 7 ve 4’ü seçip farkı 30 − 6 yapmış; daha küçük onlar farkı var.",
+   "E": "Farkın en büyük değerini bulmuş (97 − 34); en küçük pozitif değer isteniyor."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "En küçük pozitif fark.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "AB = 10 × A + B (A onlar, B birler basamağı). Örnek: 74 = 10 × 7 + 4"
+   }
+  ],
+  "ipuclari": [
+   "Fark = 10 × (onlar farkı) + (birler farkı); onlar farkı en küçük kaç olabilir ve birler farkı bunu nasıl azaltır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı ağırlıklarıyla yaz",
+    "aciklama": "Çıkarılan sayıda onlar ve birler rakamları farklı işaretli gelir.",
+    "islem": "Fark = 10 × (onlar farkı) + (birler farkı)"
+   },
+   {
+    "baslik": "Onlar farkını küçült",
+    "aciklama": "Fark küçük olsun diye onlar rakamları birbirine en yakın seçilir: 4 ve 3 (fark 1). Onlar basamağına bunlar konunca birlerde 7 ve 9 kalır.",
+    "islem": "Onlar: 4 ve 3 → 10 + (birler farkı)"
+   },
+   {
+    "baslik": "Birlerde azalt",
+    "aciklama": "Büyük onlar rakamlı sayının birlerine 7, çıkarılan sayının birlerine 9 konursa birler farkı 7 − 9 = −2 olur ve fark küçülür.",
+    "islem": "47 − 39 = 10 − 2 = 8"
+   },
+   {
+    "baslik": "Diğer olasılıkları kontrol et",
+    "aciklama": "Onlar farkı 1 iken birler ters yazılırsa 49 − 37 = 12 olur; onlar farkı 2 olursa en az 20 − 1 = 19 gelir.",
+    "islem": "En küçük pozitif değer 8"
+   }
+  ],
+  "puf": "Kutulu fark sorularında önce onlar basamağından gelen payı küçült, kalan farkı birler basamağına yaptırarak azalt.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-05 (kutulara yerleştirme) · iki iki basamaklı sayının farkı, en küçük pozitif değer",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0019",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Tanımlı sayı türüne rakamların farklı olması ve tek olma koşullarını ekleyerek koşul taraması yapar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Üç basamaklı bir sayıda yüzler basamağındaki rakam, diğer iki basamaktaki rakamların toplamına eşitse bu sayıya “baskın sayı” denir. Örneğin 725 baskın sayıdır, çünkü 7 = 2 + 5.\nRakamları birbirinden farklı baskın sayılardan kaç tanesi tek sayıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "14",
+   "B": "18",
+   "C": "25",
+   "D": "32",
+   "E": "54"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "Tek sayıları değil çift sayıları saymış.",
+   "C": "Rakamların birbirinden farklı olması koşulunu uygulamamış.",
+   "D": "Tek sayı olma koşulunu uygulamamış; rakamları farklı tüm baskın sayıları saymış.",
+   "E": "Hem rakamların farklı olması hem tek olma koşulunu atlayıp tüm baskın sayıları saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Rakamları farklı, tek baskın sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   },
+   {
+    "ad": "Rakamları farklı sayı",
+    "ifade": "her rakam en fazla bir kez kullanılır. Örnek: 101’de 1 iki kez geçtiği için rakamları farklı değildir"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "birler basamağı 0, 2, 4, 6 ya da 8 olan sayı çifttir; 1, 3, 5, 7, 9 olan sayı tektir"
+   }
+  ],
+  "ipuclari": [
+   "Sayı ABC ise A = B + C’dir; tek olduğu için birler basamağı C’yi 1, 3, 5, 7, 9 olarak sırayla sabitleyip B’yi ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşulları yaz",
+    "aciklama": "A = B + C, C tek, A, B, C farklı. A ≤ 9 olduğundan B + C ≤ 9; B = C olamaz.",
+    "islem": "A = B + C ve B ≠ C, B ≠ 0 (aksi halde A = C olur)"
+   },
+   {
+    "baslik": "C’yi sabitle",
+    "aciklama": "Her tek C için B’yi 1’den 9 − C’ye kadar dene; B ≠ C olsun.",
+    "islem": "C = 1: B = 2…8 → 7 sayı · C = 3: B = 1, 2, 4, 5, 6 → 5 sayı"
+   },
+   {
+    "baslik": "Devam et",
+    "aciklama": "C = 5: B = 1, 2, 3, 4 → 4 sayı · C = 7: B = 1, 2 → 2 sayı · C = 9: B ≥ 1 olursa A ≥ 10 → 0 sayı",
+    "islem": "4 + 2 + 0"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Tüm durumları topla.",
+    "islem": "7 + 5 + 4 + 2 = 18"
+   }
+  ],
+  "puf": "Koşullu sayma sorularında birler gibi en kısıtlı basamağı sabitle, diğer basamakları o sabit için tara.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (tanımlı sayı türü + sayma) · baskın sayı + farklı rakamlar + tek",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0020",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakam Yazımı",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Ardışık sayıların yazımında kullanılan toplam rakam sayısından son sayıyı bulur.",
+  "tipId": "bsm-yazim",
+  "tip": "Ardışık yazılan sayılarda rakam sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kitabın sayfaları 1’den başlanarak ardışık olarak numaralanıyor ve bu numaralamada toplam 1089 rakam kullanılıyor.\nBuna göre bu kitap kaç sayfadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "363",
+   "C": "399",
+   "D": "400",
+   "E": "429"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "399"
+  },
+  "celdiriciler": {
+   "A": "Yalnız üç basamaklı sayfa numaralarının adedini (300) vermiş.",
+   "B": "Tüm numaraları üç basamaklı sanıp 1089 ÷ 3 yapmış.",
+   "D": "Üç basamaklı sayfa adedini bulduktan sonra 99 yerine 100 ekleyip bir fazla saymış.",
+   "E": "1–99 arası numaraların rakam sayısını 99 almış (iki basamaklıları 2 ile çarpmamış)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Kitabın sayfa sayısı.",
+  "bilgi": [
+   {
+    "ad": "Rakam sayısı",
+    "ifade": "1–9 arası 9 sayı, 1 rakamlı: 9 rakam · 10–99 arası 90 sayı, 2 rakamlı: 180 rakam · 100–999 arası sayılar 3 rakamlıdır"
+   }
+  ],
+  "ipuclari": [
+   "Önce 1–9 ve 10–99 numaralarında kaç rakam kullanıldığını bul, kalanı üç basamaklı numaralara ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tek ve iki basamaklılar",
+    "aciklama": "1’den 99’a kadar kullanılan rakamları say.",
+    "islem": "9 × 1 + 90 × 2 = 9 + 180 = 189"
+   },
+   {
+    "baslik": "Kalan rakamlar",
+    "aciklama": "Geriye kalan rakamlar üç basamaklı numaralara aittir.",
+    "islem": "1089 − 189 = 900"
+   },
+   {
+    "baslik": "Üç basamaklı numaralar",
+    "aciklama": "Her biri 3 rakam kullanır.",
+    "islem": "900 ÷ 3 = 300 numara"
+   },
+   {
+    "baslik": "Son sayfa",
+    "aciklama": "100’den başlayıp 300 numara: son numara 100 + 300 − 1.",
+    "islem": "100 + 299 = 399"
+   }
+  ],
+  "puf": "Rakam sayısı sorularında 9, 180 ve 2700 ara toplamlarını bilirsen kalanı grup grup bölebilirsin.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-06 (ardışık yazım) · toplam rakam sayısından sayfa sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0021",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakamlarla Sayma",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Rakamları çarpımı verilen üç basamaklı sayıları çarpan üçlülerini bularak sayar.",
+  "tipId": "bsm-sayma",
+  "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Rakamları çarpımı 24 olan üç basamaklı kaç doğal sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "18",
+   "D": "21",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "21"
+  },
+  "celdiriciler": {
+   "A": "Yalnız 1 rakamı içeren üçlüleri (1, 3, 8 ve 1, 4, 6) saymış.",
+   "B": "Üçlülerden birini (ör. 2, 3, 4) atlamış.",
+   "C": "2, 2, 6 üçlüsünü atlamış; 6 + 6 + 6 saymış.",
+   "E": "2, 2, 6 üçlüsünü 6 farklı sıralama sanmış; iki rakamı aynı olduğundan yalnız 3 sıralama vardır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Rakamları çarpımı 24 olan üç basamaklı sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Rakamları çarpımı",
+    "ifade": "rakamlar tek tek çarpılır. Örnek: 258 için 2 × 5 × 8 = 80. Rakamlardan biri 0 ise çarpım 0 olur"
+   }
+  ],
+  "ipuclari": [
+   "24’ü her biri 1–9 arasında olan üç çarpana ayır; sonra her çarpan üçlüsü için yazılabilecek sayıları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üçlüleri bul",
+    "aciklama": "Çarpımı 24 olan üç rakamı (hiçbiri 0 olamaz, hepsi ≤ 9) sırasız yaz.",
+    "islem": "1 × 3 × 8 · 1 × 4 × 6 · 2 × 2 × 6 · 2 × 3 × 4"
+   },
+   {
+    "baslik": "Üç farklı rakamlılar",
+    "aciklama": "Her üçlüden 3! = 6 sayı yazılır.",
+    "islem": "{1, 3, 8}, {1, 4, 6}, {2, 3, 4} → 3 × 6 = 18 sayı"
+   },
+   {
+    "baslik": "Tekrarlı üçlü",
+    "aciklama": "2 iki kez geçtiği için yalnız 3 yerleşim: 226, 262, 622.",
+    "islem": "{2, 2, 6} → 3 sayı"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Dört durumu topla.",
+    "islem": "18 + 3 = 21"
+   }
+  ],
+  "puf": "Rakam çarpımı sorularında çarpan üçlülerini sırasız bul; tekrarlı rakamlarda sıralama sayısı azalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-04 (rakam koşullu sayma) · rakamları çarpımı 24",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0022",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Çözümlemeden elde edilen bir ilişkiyle adayları bulup rakam koşullarıyla tek çözüme ulaşır.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Üç basamaklı bir sayı, rakamları toplamının 19 katına eşittir. Bu sayı tek sayıdır, rakamları birbirinden farklıdır ve onlar basamağındaki rakam yüzler basamağındaki rakamdan küçüktür.\nBuna göre bu sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "133",
+   "B": "209",
+   "C": "247",
+   "D": "285",
+   "E": "399"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "209"
+  },
+  "celdiriciler": {
+   "A": "Rakamları birbirinden farklı olma koşulunu denetlememiş (3 iki kez geçiyor).",
+   "E": "Rakamları farklı olma (9 iki kez) ve onlar–yüzler sıralaması koşullarını denetlememiş.",
+   "C": "Onlar basamağının yüzlerden küçük olması koşulunu (4 > 2) atlamış.",
+   "D": "Onlar basamağının yüzlerden küçük olması koşulunu (8 > 2) atlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "E": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Koşulları sağlayan üç basamaklı sayı.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   },
+   {
+    "ad": "Rakamları toplamı",
+    "ifade": "sayının rakamları tek tek toplanır. Örnek: 3507 için 3 + 5 + 0 + 7 = 15"
+   },
+   {
+    "ad": "Rakamları farklı sayı",
+    "ifade": "her rakam en fazla bir kez kullanılır. Örnek: 101’de 1 iki kez geçtiği için rakamları farklı değildir"
+   }
+  ],
+  "ipuclari": [
+   "Çözümleyip sadeleştirince B + 2 × C = 9 × A ilişkisi çıkar; bu ilişkiyi sağlayan sayılardan koşullara uyanı seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "Sayı ABC, rakamları toplamı A + B + C.",
+    "islem": "100 × A + 10 × B + C = 19 × (A + B + C)"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Eşitliğin iki yanını A, B, C cinsinden düzenle.",
+    "islem": "81 × A = 9 × B + 18 × C · 9 × A = B + 2 × C"
+   },
+   {
+    "baslik": "Adayları bul",
+    "aciklama": "Her A için B + 2 × C = 9 × A’yı sağlayan rakamlardan çıkan 19’un katları.",
+    "islem": "114, 133, 152, 171, 190, 209, 228, 247, 266, 285, 399"
+   },
+   {
+    "baslik": "Koşulları uygula",
+    "aciklama": "Tek, rakamları farklı, onlar < yüzler: yalnız 209 sağlar.",
+    "islem": "209: 2 + 0 + 9 = 11 · 19 × 11 = 209"
+   }
+  ],
+  "puf": "Koşulların çoğu olduğunda önce çözümlemeyle aday listesi çıkar, sonra koşulları tek tek ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · sayı = 19 × rakamlar toplamı, koşul taraması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0023",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Basamak Çözümleme",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "ABC − CBA farkını çözümleyerek farkın özelliklerini sorgular.",
+  "tipId": "bsm-cozumleme",
+  "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "A, B ve C sıfırdan farklı birer rakamdır ve A > C’dir. ABC ve CBA üç basamaklı doğal sayılardır.\nBuna göre ABC − CBA farkı için\nI. 99’un katıdır.\nII. Rakamları toplamı 18’dir.\nIII. Birler basamağındaki rakam A − C’ye eşittir.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Farkın 99’un katı olduğunu bulmuş ama II’yi birkaç örnekle denemeyip eleğe atmış.",
+   "C": "Birler basamağını A − C sanmış; 99 × 1 = 99 örneğinde birler 9’dur.",
+   "D": "Farkın 99’un katı olduğunu görmeyip I’i yanlış saymış.",
+   "E": "III’ün yalnız bazı değerlerde (A − C = 5, fark 495) sağlandığını görüp kesin doğru saymış; A − C = 1 için fark 99’dur, birler 9 ≠ 1."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Üç basamaklı sayı",
+    "ifade": "ABC = 100 × A + 10 × B + C. Örnek: 538 = 100 × 5 + 10 × 3 + 8. Baştaki rakam (A) 0 olamaz"
+   }
+  ],
+  "ipuclari": [
+   "Farkı 100 × A + 10 × B + C ve 100 × C + 10 × B + A ile yaz; fark A − C’nin hangi katı çıkar?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Farkı çözümle",
+    "aciklama": "B’li terimler sadeleşir.",
+    "islem": "ABC − CBA = 99 × A − 99 × C = 99 × (A − C) · I doğru"
+   },
+   {
+    "baslik": "Rakamlar toplamını incele",
+    "aciklama": "A − C = k (1–8) için 99 × k, 100 × (k − 1) + 90 + (10 − k) biçiminde yazılır.",
+    "islem": "k = 1: 099 · k = 2: 198 · k = 3: 297 · … · k = 8: 792"
+   },
+   {
+    "baslik": "II’yi doğrula",
+    "aciklama": "Her durumda rakamları toplamı 18.",
+    "islem": "0 + 9 + 9 = 18 · 1 + 9 + 8 = 18 · … · 7 + 9 + 2 = 18"
+   },
+   {
+    "baslik": "III’ü çürüt",
+    "aciklama": "k = 1 için fark 99’dur; birler rakamı 9, A − C = 1.",
+    "islem": "99 ≠ …1 · III yanlış → I ve II"
+   }
+  ],
+  "puf": "Öncüllü sorularda çözümlemeyle genel ifadeyi yaz, doğru görünen ifadeyi de tüm durumlarda kanıtla, yanlışı tek örnekle çürüt.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-01 (basamak çözümleme) · ABC − CBA için öncüllü ifadeler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-basamak-0024",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Basamakları · Rakam Yazımı",
+  "k": "mat|Sayı Basamakları",
+  "kazanim": "Ardışık yazılan sayılarda verilen sıradaki rakamı basamak gruplarını kullanarak bulur.",
+  "tipId": "bsm-yazim",
+  "tip": "Ardışık yazılan sayılarda rakam sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Doğal sayılar 1’den başlanarak yan yana yazılıyor ve\n1 2 3 4 5 6 7 8 9 1 0 1 1 1 2 1 3 …\nbiçiminde sonsuz bir rakam dizisi elde ediliyor.\nBuna göre bu dizide soldan 300. sırada yer alan rakam kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "3",
+   "C": "5",
+   "D": "6",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "136’nın yüzler basamağını (1) almış.",
+   "B": "136’nın onlar basamağını (3) almış.",
+   "C": "Bir sayı eksik sayıp 135’in birler basamağını almış.",
+   "E": "Bir sayı fazla sayıp 137’nin birler basamağını almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Dizideki 300. rakam.",
+  "bilgi": [
+   {
+    "ad": "Rakam sayısı",
+    "ifade": "1–9 arası 9 rakam; 10–99 arası 90 sayı × 2 = 180 rakam; 100’den sonra her sayı 3 rakam kullanır"
+   }
+  ],
+  "ipuclari": [
+   "Önce 1–99 arasındaki sayılarla kaç rakam yazıldığını bul, kalan sırayı üç basamaklı sayılara dağıt."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk iki grup",
+    "aciklama": "1–99 arası rakam sayısı.",
+    "islem": "9 + 180 = 189"
+   },
+   {
+    "baslik": "Kalan sıra",
+    "aciklama": "300. rakam üç basamaklı sayılar içinde kalır.",
+    "islem": "300 − 189 = 111. rakam (100’den itibaren)"
+   },
+   {
+    "baslik": "Hangi sayı?",
+    "aciklama": "Her sayı 3 rakam; 111 = 3 × 37, yani 37. üç basamaklı sayının son rakamı.",
+    "islem": "37. üç basamaklı sayı = 100 + 36 = 136"
+   },
+   {
+    "baslik": "Rakamı oku",
+    "aciklama": "111 tam üçe bölündüğü için 136’nın son rakamı.",
+    "islem": "136 → 6"
+   }
+  ],
+  "puf": "Sıra 3’e tam bölünüyorsa o sıradaki rakam üç basamaklı sayının birler basamağıdır; kalan 1 ya da 2 ise yüzler ya da onlar basamağına gider.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BSMK-06 (ardışık yazım) · dizide 300. rakam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,135 @@
+{
+ "konu": "Sayı Basamakları",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-BSMK-01",
+   "konu": "Sayı Basamakları",
+   "alt": "Basamak çözümleme",
+   "fikir": "Sayı 10 × A + B ya da 100 × A + 10 × B + C biçiminde yazılır; AB ± BA gibi ifadelerde katsayılar sadeleşir (9 ya da 99 çarpanı çıkar).",
+   "tuzak": "Rakamlar toplamı ile sayıyı karıştırmak; 9’un katı gerçeğini koşulda görmemek; koşulu yalnız bir örnekle denemek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bsm-cozumleme",
+   "tip": "Basamak çözümleme ve çözümleme ifadeleri",
+   "kaynak": "ÖSYM 2018–2025 (AB, BA, ABC) · yayın: sayı–rakam toplamı, AB+BA"
+  },
+  {
+   "id": "K-BSMK-02",
+   "konu": "Sayı Basamakları",
+   "alt": "Basamak değeri ve 10ⁿ",
+   "fikir": "Basamak değeri = rakam × basamağın değeri; a × 10ⁿ ifadeleri toplanırken basamaklar taşmasın diye sayı açık yazılır, sonra rakamları toplanır.",
+   "tuzak": "Sayı değeri ile basamak değerini karıştırmak; katsayıları rakam sanmak; taşan (10 ve üzeri) katsayıyı atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bsm-deger",
+   "tip": "Basamak değeri ve 10ⁿ’li ifadeler",
+   "kaynak": "ÖSYM (rakamlar toplamı, 10ⁿ’li ifade) · basamak değeri soruları"
+  },
+  {
+   "id": "K-BSMK-03",
+   "konu": "Sayı Basamakları",
+   "alt": "Rakam değiştirme",
+   "fikir": "Bir rakamın yeri ya da varlığı değişince sayının değişimi, her basamağın değerine göre hesaplanır: yer değiştirme 99 ya da 9’un katı, silme 9m + c.",
+   "tuzak": "Değişimi yalnız rakam farkı sanmak; basamak değerlerini 1 saymak; silinen rakamı kalanla karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "bsm-degisim",
+   "tip": "Rakam yer değiştirme, silme",
+   "kaynak": "ÖSYM (sayaç, şifre) · yayın: rakam silme/ekleme"
+  },
+  {
+   "id": "K-BSMK-04",
+   "konu": "Sayı Basamakları",
+   "alt": "Tanımlı sayı + sayma",
+   "fikir": "Sayı türü tanımı (dengeli, baskın, simetrik) koşula çevrilir; basamaklar tek tek incelenip çarpma ya da sistemli liste ile sayılır.",
+   "tuzak": "Başa 0 koymak; rakamları farklı ya da tek-çift koşulunu unutmak; bir türü iki kez saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "bsm-sayma",
+   "tip": "Tanımlı sayı türü ve rakam koşullu sayma",
+   "kaynak": "ÖSYM 2019–2025 (tanımlı sayı türü + sayma) · basamak çözümleme + sayma"
+  },
+  {
+   "id": "K-BSMK-05",
+   "konu": "Sayı Basamakları",
+   "alt": "Koşullu en büyük / en küçük",
+   "fikir": "Önce en etkili basamağa (en solda) en uygun rakam, sonra diğer basamaklar; kutulara rakam yerleştirmede toplam/fark basamak ağırlıklarıyla yazılır.",
+   "tuzak": "Çift/tek ya da rakamlar toplamı koşulunu sona bırakmak; birlerdeki değişimi hesaba katmamak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "bsm-yerlestir",
+   "tip": "Koşullu en büyük/en küçük ve kutulara yerleştirme",
+   "kaynak": "ÖSYM (kutulara sayı yerleştirme) · yayın: rakamları farklı en büyük/en küçük"
+  },
+  {
+   "id": "K-BSMK-06",
+   "konu": "Sayı Basamakları",
+   "alt": "Ardışık yazılan sayılarda rakam sayısı",
+   "fikir": "1–9: 9 rakam, 10–99: 90 × 2, 100–999: 900 × 3; rakam sayısı ya da sıra istenirse basamak gruplarına bölünür.",
+   "tuzak": "Grup sınırlarında 1 hata; iki basamaklı sayıları 1 rakam saymak; kalanı grup dışında bırakmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "bsm-yazim",
+   "tip": "Ardışık yazılan sayılarda rakam sayısı",
+   "kaynak": "ÖSYM (1’den n’ye kadar yazma) · yayın: sayfa numaralama"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bsm-cozumleme",
+   "ad": "Basamak çözümleme ve çözümleme ifadeleri",
+   "kartlar": [
+    "K-BSMK-01"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bsm-deger",
+   "ad": "Basamak değeri ve 10ⁿ’li ifadeler",
+   "kartlar": [
+    "K-BSMK-02"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bsm-degisim",
+   "ad": "Rakam yer değiştirme, silme",
+   "kartlar": [
+    "K-BSMK-03"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bsm-sayma",
+   "ad": "Tanımlı sayı türü ve rakam koşullu sayma",
+   "kartlar": [
+    "K-BSMK-04"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bsm-yerlestir",
+   "ad": "Koşullu en büyük/en küçük ve kutulara yerleştirme",
+   "kartlar": [
+    "K-BSMK-05"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bsm-yazim",
+   "ad": "Ardışık yazılan sayılarda rakam sayısı",
+   "kartlar": [
+    "K-BSMK-06"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  }
+ ]
+}
