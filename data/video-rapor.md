@@ -117,9 +117,9 @@
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 10. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (kampusdizi), kontrol et
-- Benim Hocam: uygun güncel liste yok
+- Benim Hocam: 2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Video Ders Notları - Konu Anlatım Videoları - Çetin ZENCİR [TYT/AYT] · 16 video
 
-Kullanılan kota: ~1412 birim (günlük sınır 10.000)
+Kullanılan kota: ~1114 birim (günlük sınır 10.000)
 
 ## Matematik
 - Mert Hoca: 2 liste, 228 video, 39/45 konu eşlendi
@@ -237,5 +237,5 @@ Kullanılan kota: ~1412 birim (günlük sınır 10.000)
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
 - Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
-- Benim Hocam: 0 liste, 0 video, 0/0 konu eşlendi
+- Benim Hocam: 1 liste, 16 video, 0/0 konu eşlendi
 
