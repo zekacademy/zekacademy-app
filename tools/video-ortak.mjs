@@ -57,6 +57,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
   const re = VDERS[ders].re, f = sade(filtre), secim = {};
   for (const p of L) {
     const n = sade(p.ad);
+    if (/kpss|\bags\b|oabt|\bdgs\b|\bales\b|\bmsu\b/.test(n) || ALT_SINIF.test(n)) continue;
     if (!re.test(n) || (DISLA.test(n) && !/konu anlatim/.test(n) && !(/kamp/.test(n) && !/soru bankasi|cozum|deneme|tekrar|sorular/.test(n))) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
     const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
     const SL = sinavlar(p.ad); for (const s of (SL.length ? SL : VARSAYILAN[ders] || [])) {
@@ -139,9 +140,9 @@ export const DIGER_AD = {
   "Atmosfer ve Sıcaklık": ["Atmosfer", "İklim Elemanları Sıcaklık"], "Basınç ve Rüzgarlar": ["Basınç", "Rüzgarlar"], "Nem, Yağış ve Buharlaşma": ["Nem ve Yağış", "Yağış"],
   "Su – Toprak ve Bitkiler": ["Su Kaynakları", "Toprak", "Bitki Örtüsü"], "Türkiye’nin Yer Şekilleri": ["Yer Şekilleri"],
   "İlk Türk İslam Devletleri": ["Türklerin İslamiyeti Kabulü", "Devletleşme Sürecinde Selçuklu"],
-  "Osmanlı Devletinde Arayış Yılları": ["Arayış Yılları", "Değişen Dünya Dengeleri Karşısında Osmanlı"],
-  "18. Yüzyılda Değişim ve Diplomasi": ["Uluslararası İlişkilerde Denge Stratejisi", "Değişim ve Diplomasi"],
-  "En Uzun Yüzyıl": ["Devrimler Çağında Değişen Devlet", "Değişen Sosyoekonomik Hayat"],
+  "Osmanlı Devletinde Arayış Yılları": ["Arayış Yılları", "XVII. Yüzyıl Osmanlı", "Değişen Dünya Dengeleri Karşısında Osmanlı"],
+  "18. Yüzyılda Değişim ve Diplomasi": ["XVIII. Yüzyıl Osmanlı", "Uluslararası İlişkilerde Denge Stratejisi", "Değişim ve Diplomasi"],
+  "En Uzun Yüzyıl": ["XIX. Yüzyıl Osmanlı", "Devrimler Çağında Değişen Devlet", "Değişen Sosyoekonomik Hayat"],
   "Osmanlı Kültür ve Medeniyeti": ["Klasik Çağda Osmanlı Toplum Düzeni", "Osmanlı Medeniyeti"],
   "20. Yüzyılda Osmanlı Devleti": ["20. Yüzyıl Başlarında Osmanlı"],
   "Mondros Ateşkesi, İşgaller ve Cemiyetler": ["Milli Mücadele", "Mondros"], "Kurtuluş Savaşına Hazırlık Dönemi": ["Milli Mücadele", "Hazırlık Dönemi"],
