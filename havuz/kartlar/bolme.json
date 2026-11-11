@@ -1,0 +1,135 @@
+{
+ "konu": "Bölme ve Bölünebilme",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-BLNB-01",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Bölme işlemi",
+   "fikir": "Bölünen = bölen × bölüm + kalan eşitliği ve kalan < bölen koşuluyla en büyük/en küçük bölünen, bölüm–kalan ilişkisi ve iki farklı bölenle yazılan eşitlik kurulur.",
+   "tuzak": "Kalanı bölene eşit ya da büyük almak; bölen ile bölümü karıştırmak; parantezi dağıtırken katsayıyı unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "blb-bolme",
+   "tip": "Bölme işlemi ve bölünen–bölen–bölüm–kalan ilişkisi",
+   "kaynak": "ÖSYM 2019–2026 (bölünebilme, kalan) · yayın soru bankaları (yalnız mantık) · MEB 6–9. sınıf"
+  },
+  {
+   "id": "K-BLNB-02",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "2, 4, 5, 8, 10 ile bölünebilme",
+   "fikir": "Son basamak, son iki ya da son üç basamak kuralı yalnızca o basamakları sınırlar; geri kalan rakamlar serbesttir.",
+   "tuzak": "Rakamlar toplamı kuralını karıştırmak; 4 yerine 2, 8 yerine 4 kuralını uygulamak; son iki basamağı eksik yazmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "blb-son",
+   "tip": "Son basamaklarla bölünebilme",
+   "kaynak": "ÖSYM (4, 8 ile bölünebilme) · yayın: 857a, 19321x tipi"
+  },
+  {
+   "id": "K-BLNB-03",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "3, 9, 11 ile bölünebilme",
+   "fikir": "Rakamlar toplamı (3, 9) ve artı–eksi (alternatif) toplam (11) kuralları aynı sayıya birlikte uygulanıp bilinmeyen rakamlar bulunur.",
+   "tuzak": "11 kuralında işaretleri yanlış sıralamak; 99’u 9 ve 11’e ayırmamak; birden çok çözümü elememek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "blb-rakam",
+   "tip": "Rakam toplamı ve 11 kuralıyla rakam bulma",
+   "kaynak": "ÖSYM (3, 9, 11) · yayın: 23a58b tipi"
+  },
+  {
+   "id": "K-BLNB-04",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Aralarında asal çarpanlarla bölünebilme",
+   "fikir": "6, 12, 15, 18, 36, 72 gibi sayılara bölünme, aralarında asal çarpanlarının koşullarıyla birlikte aranır ve adaylar taranır.",
+   "tuzak": "Çarpanları aralarında asal olmayan seçmek (36 = 6 × 6 gibi); koşullardan birini atlamak; rakamların farklı olması koşulunu unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "blb-asal",
+   "tip": "Aralarında asal çarpanlarla bölünebilme",
+   "kaynak": "ÖSYM (6, 12, 15, 18, 36 ile bölünebilme) · yayın: 6a7b, 8x46y, 325ab tipleri"
+  },
+  {
+   "id": "K-BLNB-05",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Kalan aritmetiği ve eş kalan",
+   "fikir": "Toplam ve çarpımın kalanı kalanlardan bulunur; birden çok bölende kalan koşulları ortak kat ve eşit kalan (n + k) fikriyle tek bir ifadeye indirilir; günlerde kalan 7’ye göre alınır.",
+   "tuzak": "Kalanları bölenden sonra yeniden indirgememek; kalan yerine bölümü almak; sayma başlangıcını yanlış seçmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "blb-kalan",
+   "tip": "Kalan aritmetiği ve ortak kalan koşulları",
+   "kaynak": "ÖSYM (gün/saat kalanı, artan eşya) · yayın: paketleme, nöbet ve gün soruları"
+  },
+  {
+   "id": "K-BLNB-06",
+   "konu": "Bölme ve Bölünebilme",
+   "alt": "Tanımlı sayılar ve makineler",
+   "fikir": "Soruda tanımlanan kalan koşulu ya da makine kuralı eşitliğe çevrilir, periyot (ortak kat) bulunur ve aralıktaki değerler sayılır.",
+   "tuzak": "Periyodu yanlış kurmak; ilk ve son değeri aralığa göre denetlememek; sınır değeri (0, 60) hesaba katmak ya da katmamak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "blb-tanimli",
+   "tip": "Kalan koşuluyla tanımlı sayılar ve makine soruları",
+   "kaynak": "ÖSYM 2022–2026 (yeni nesil tanımlı kavram) · yayın: kalan koşullu sayma"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "blb-bolme",
+   "ad": "Bölme işlemi ve bölünen–bölen–bölüm–kalan ilişkisi",
+   "kartlar": [
+    "K-BLNB-01"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "blb-son",
+   "ad": "Son basamaklarla bölünebilme",
+   "kartlar": [
+    "K-BLNB-02"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "blb-rakam",
+   "ad": "Rakam toplamı ve 11 kuralıyla rakam bulma",
+   "kartlar": [
+    "K-BLNB-03"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "blb-asal",
+   "ad": "Aralarında asal çarpanlarla bölünebilme",
+   "kartlar": [
+    "K-BLNB-04"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "blb-kalan",
+   "ad": "Kalan aritmetiği ve ortak kalan koşulları",
+   "kartlar": [
+    "K-BLNB-05"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  },
+  {
+   "tipId": "blb-tanimli",
+   "ad": "Kalan koşuluyla tanımlı sayılar ve makine soruları",
+   "kartlar": [
+    "K-BLNB-06"
+   ],
+   "uygulamaKonu": "mat|Bölme ve Bölünebilme"
+  }
+ ]
+}

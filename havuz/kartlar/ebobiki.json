@@ -1,0 +1,114 @@
+{
+ "konu": "EBOB – EKOK",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-EBKB-01",
+   "konu": "EBOB – EKOK",
+   "alt": "Asal çarpanlar ve bölen sayısı",
+   "fikir": "Sayı asal çarpanlarına ayrılır; üslerin bir fazlası çarpılarak bölen sayısı bulunur. Çift/tek bölen ve en küçük sayı koşullarında hangi asalın hangi üslerde bulunması gerektiği yazılır.",
+   "tuzak": "Üs toplamını ya da üs çarpımını bölen sayısı sanmak; 2⁰ ya da 3⁰ gibi 1’i veren üssü unutmak; koşulu (çift, 18’in katı) atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ekb-bolen",
+   "tip": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+   "kaynak": "ÖSYM 2019–2024 (bölen sayısı, asal çarpan) · yayın: bölen sayısı, kuvvetleri toplamı"
+  },
+  {
+   "id": "K-EBKB-02",
+   "konu": "EBOB – EKOK",
+   "alt": "Aralarında asal ve EBOB × EKOK = a × b",
+   "fikir": "İki sayı a = d·x, b = d·y yazılır (x, y aralarında asal); EBOB × EKOK = a × b ve asal çarpan üslerinden EBOB/EKOK kurulur. Aralarında asal sayıların özellikleri öncüllü sorulur.",
+   "tuzak": "EKOK yerine EBOB (ya da çarpım) vermek; aralarında asal sayısını sayarken ortak katları iki kez elemek; asalları üssüz almak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ekb-iliski",
+   "tip": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+   "kaynak": "ÖSYM 2018–2025 (EBOB–EKOK ilişkisi) · yayın: aralarında asal, EBOB + EKOK = k"
+  },
+  {
+   "id": "K-EBKB-03",
+   "konu": "EBOB – EKOK",
+   "alt": "EBOB ile en az parça (çevre)",
+   "fikir": "Aralık ya da parça uzunluğu hepsinin EBOB’udur; çevresel dizilimde köşe sayısı ile parça sayısı eşittir (çevre / aralık).",
+   "tuzak": "Çevresel dizilimde sona 1 eklemek; köşelerdeki parçayı iki kez saymak; EBOB’u sayı sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ekb-parca",
+   "tip": "Eş aralıklarla çevre dizilimi (EBOB)",
+   "kaynak": "ÖSYM (en büyük eş parça) · yayın: çevreye ağaç dikme"
+  },
+  {
+   "id": "K-EBKB-04",
+   "konu": "EBOB – EKOK",
+   "alt": "Birlikte karşılaşma ve tur sayısı (EKOK)",
+   "fikir": "Hareketler ya da çarklar ilk kez birlikte başlangıç konumunda buluşurken geçen süre/diş EKOK’tur; tur sayısı = EKOK / periyot. İkili ve üçlü çakışmalarda kapsama–dışlama yapılır.",
+   "tuzak": "EKOK’u tur sayısı sanmak; bir koşucuyu toplamda unutmak; üçlü anı üç çiftin her birinde saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "ekb-periyot",
+   "tip": "Koşu, dişli çark ve çakışma sayısı",
+   "kaynak": "ÖSYM 2020–2025 (periyot, EKOK) · yayın: koşu pisti, çark, zil"
+  },
+  {
+   "id": "K-EBKB-05",
+   "konu": "EBOB – EKOK",
+   "alt": "Ortak kat sayma ve kalan koşulu",
+   "fikir": "Kalan koşullu sayılar N = EKOK × k ± c biçimindedir; verilen aralıkta kaç tane olduğu k’nın sınırlarından bulunur (uç değerler dahil mi diye bak).",
+   "tuzak": "Aralıktaki ortak kat sayısını EBOB ile saymak; uç değerleri unutmak ya da fazla saymak; kalanı eklemek yerine çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ekb-kalan",
+   "tip": "Ortak katları sayma ve kalan koşulu",
+   "kaynak": "ÖSYM (kalan, ortak kat) · yayın: aralıkta kaç sayı"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ekb-bolen",
+   "ad": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+   "kartlar": [
+    "K-EBKB-01"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ekb-iliski",
+   "ad": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+   "kartlar": [
+    "K-EBKB-02"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ekb-parca",
+   "ad": "Eş aralıklarla çevre dizilimi (EBOB)",
+   "kartlar": [
+    "K-EBKB-03"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ekb-periyot",
+   "ad": "Koşu, dişli çark ve çakışma sayısı",
+   "kartlar": [
+    "K-EBKB-04"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  },
+  {
+   "tipId": "ekb-kalan",
+   "ad": "Ortak katları sayma ve kalan koşulu",
+   "kartlar": [
+    "K-EBKB-05"
+   ],
+   "uygulamaKonu": "mat|Ebob – ekok"
+  }
+ ]
+}

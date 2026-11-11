@@ -1,0 +1,1124 @@
+[
+ {
+  "id": "tytmat-ebobiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Pozitif Bölen Sayısı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Bir sayıyı asal çarpanlarına ayırıp pozitif bölenlerinin sayısını bulur.",
+  "tipId": "ekb-bolen",
+  "tip": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "720 sayısının pozitif tam bölenlerinin sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "7",
+   "C": "8",
+   "D": "10",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Farklı asal çarpanların sayısını (2, 3, 5) bölen sayısı sanmış.",
+   "B": "Üsleri toplamış (4 + 2 + 1); “üs + 1” çarpımını kullanmamış.",
+   "C": "Üsleri çarpmış (4 × 2 × 1); her üsse 1 eklemeyi unutmuş.",
+   "D": "Her üssün bir fazlasını almış ama çarpmak yerine toplamış (5 + 3 + 2)."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "720’nin pozitif bölenlerinin adedi.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "Pozitif bölen sayısı",
+    "ifade": "asal çarpanlara ayrılmış N = aᵐ × bⁿ × cᵖ için pozitif bölen sayısı (m + 1)(n + 1)(p + 1)’dir. Örnek: 12 = 2² × 3 → (2 + 1)(1 + 1) = 6 bölen: 1, 2, 3, 4, 6, 12"
+   }
+  ],
+  "ipuclari": [
+   "720’yi asal çarpanlarına ayır; her asalın üssüne 1 ekleyip sonuçları çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asal çarpanlara ayır",
+    "aciklama": "720 sırayla 2, 3, 5 asallarına bölünerek 1’e indirilir.",
+    "islem": "720 = 2 × 360 = 2⁴ × 45 = 2⁴ × 3² × 5"
+   },
+   {
+    "baslik": "Üslere 1 ekle",
+    "aciklama": "Her asalın bölende alabileceği üs sayısı, üssünün bir fazlasıdır (0’dan üsse kadar).",
+    "islem": "2⁴ → 5 seçenek · 3² → 3 seçenek · 5¹ → 2 seçenek"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Seçimler birbirinden bağımsız olduğundan çarpılır.",
+    "islem": "5 × 3 × 2 = 30"
+   }
+  ],
+  "puf": "N = aᵐ × bⁿ × … ise bölen sayısı (m + 1)(n + 1)… ; üsleri toplamak ya da çarpmak yanlıştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-01 (asal çarpan, bölen sayısı) · tek asal çarpanlı üslü yazım, doğrudan bölen sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · EBOB – EKOK İlişkisi",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "İki sayının çarpımı ile EBOB’u bilindiğinde EKOK’unu ilişkiden bulur.",
+  "tipId": "ekb-iliski",
+  "tip": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "İki pozitif tam sayının çarpımı 360, en büyük ortak böleni 6’dır.\nBuna göre bu iki sayının en küçük ortak katı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "60",
+   "C": "180",
+   "D": "360",
+   "E": "2160"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "EKOK yerine verilen EBOB’u cevap yazmış.",
+   "C": "Çarpımı yalnız 2’ye bölmüş; EBOB’a (6) bölmesi gerektiğini atlamış.",
+   "D": "EBOB × EKOK ilişkisini kullanmamış; verilen çarpımı EKOK sanmış.",
+   "E": "EKOK = çarpım × EBOB demiş (360 × 6); bölmesi gerekirken çarpmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İki sayının EKOK’u.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "iki sayıyı birlikte bölen en büyük sayıdır. Asal çarpanlarda ortak asalların küçük üssü alınır. Örnek: EBOB(12, 18) = 6"
+   },
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   },
+   {
+    "ad": "EBOB ile EKOK ilişkisi",
+    "ifade": "a × b = EBOB(a, b) × EKOK(a, b). Örnek: 12 × 18 = 216 = 6 × 36"
+   }
+  ],
+  "ipuclari": [
+   "Çarpım, EBOB ve EKOK arasında bir ilişki kurar; 12 ile 30 gibi bir örnekte dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlişkiyi yaz",
+    "aciklama": "İki sayının çarpımı EBOB × EKOK’a eşittir.",
+    "islem": "a × b = EBOB × EKOK · 360 = 6 × EKOK"
+   },
+   {
+    "baslik": "EKOK’u çek",
+    "aciklama": "Çarpımı EBOB’a böl.",
+    "islem": "EKOK = 360 ÷ 6 = 60"
+   },
+   {
+    "baslik": "Örnekle doğrula",
+    "aciklama": "12 ile 30 için EBOB 6, çarpım 360’tır; EKOK 60 çıkar.",
+    "islem": "12 × 30 = 360 = 6 × 60"
+   }
+  ],
+  "puf": "EKOK = (a × b) ÷ EBOB; çarpımı EBOB’a bölmek, iki sayıyı tek tek bulmadan sonuca götürür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-02 (EBOB × EKOK = a × b) · çarpım ve EBOB verilmiş, EKOK isteniyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Çevreye Ağaç Dikme",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Bir dikdörtgenin çevresine köşelerde de bulunacak biçimde eşit aralıklı dizilen en az nesne sayısını EBOB ile bulur.",
+  "tipId": "ekb-parca",
+  "tip": "Eş aralıklarla çevre dizilimi (EBOB)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kenar uzunlukları 60 m ve 36 m olan dikdörtgen biçimindeki bir parkın çevresine ağaç dikilecektir. Dört köşenin her birine bir ağaç dikilecek, ardışık iki ağaç arasındaki uzaklık her yerde eşit ve metre cinsinden tam sayı olacaktır.\nBuna göre bu iş için en az kaç ağaç gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "16",
+   "D": "17",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Çevre yerine yarı çevreyi (96 m) kullanıp 96 ÷ 12 = 8 bulmuş.",
+   "B": "Sorulan ağaç sayısı yerine ağaçlar arası uzaklığı (EBOB = 12) vermiş.",
+   "D": "Çevre kapalı bir hat olduğu halde 192 ÷ 12 = 16’ya bir ağaç daha eklemiş.",
+   "E": "Uzun kenara 6, kısa kenara 4 ağaç sayıp 2 × (6 + 4) = 20 yazmış; köşelerdeki ağaçları iki kez saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "En az ağaç sayısı.",
+  "bilgi": [
+   {
+    "ad": "EBOB",
+    "ifade": "iki sayıyı birlikte bölen en büyük sayıdır. Asal çarpanlarda ortak asalların küçük üssü alınır. Örnek: EBOB(12, 18) = 6"
+   }
+  ],
+  "ipuclari": [
+   "Aralık en çok kaç metre olabilir? Köşeler ağaçla dolu olduğu için aralık her iki kenarı da bölmelidir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aralığı belirle",
+    "aciklama": "Köşelere ağaç gelecek, bu yüzden aralık hem 60’ı hem 36’yı bölmelidir. Ağaç sayısı en az olsun diye aralık en büyük olmalıdır.",
+    "islem": "Aralık = EBOB(60, 36) = 12 m"
+   },
+   {
+    "baslik": "Çevreyi bul",
+    "aciklama": "Parkın çevresi iki uzun ve iki kısa kenardan oluşur.",
+    "islem": "Çevre = 2 × (60 + 36) = 192 m"
+   },
+   {
+    "baslik": "Ağaç sayısını bul",
+    "aciklama": "Kapalı bir çevrede ağaç sayısı, aralık sayısına eşittir.",
+    "islem": "192 ÷ 12 = 16 ağaç"
+   }
+  ],
+  "puf": "Kapalı bir hatta (çevre) ağaç sayısı aralık sayısına eşittir; “+1” yalnız iki ucu açık yolda eklenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-03 (çevre dizilimi) · dikdörtgen çevresine köşelerde ağaç, en az ağaç",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Çift Bölenlerin Sayısı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Bölen sayısı formülünü çift bölen koşuluna uyarlar.",
+  "tipId": "ekb-bolen",
+  "tip": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "540 sayısının pozitif tam bölenlerinden kaç tanesi çift sayıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "8",
+   "C": "12",
+   "D": "16",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Asal çarpanların üslerini toplamış (2 + 3 + 1); bölen sayısı formülünü kullanmamış.",
+   "B": "Tek bölenlerin sayısını (2’siz bölenler) bulmuş; çift bölenleri sormuş olduğunu atlamış.",
+   "C": "Tüm bölenlerin sayısını yarıya bölmüş (24 ÷ 2); çift bölenlerin yarıdan fazla olduğunu görmemiş.",
+   "E": "Bütün pozitif bölenleri saymış; çift olma koşulunu uygulamamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "540’ın çift olan pozitif bölenlerinin adedi.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "Pozitif bölen sayısı",
+    "ifade": "asal çarpanlara ayrılmış N = aᵐ × bⁿ × cᵖ için pozitif bölen sayısı (m + 1)(n + 1)(p + 1)’dir. Örnek: 12 = 2² × 3 → (2 + 1)(1 + 1) = 6 bölen: 1, 2, 3, 4, 6, 12"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "birler basamağı 0, 2, 4, 6 ya da 8 olan sayı çifttir, 1, 3, 5, 7, 9 olan sayı tektir. Çift bölen, 2’yi asal çarpan olarak içerir"
+   }
+  ],
+  "ipuclari": [
+   "Bölen çift olacağı için 2’nin üssü en az 1 olmalıdır; 2’nin üssü için kaç seçenek kalır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asal çarpanlara ayır",
+    "aciklama": "540’ı 2, 3, 5 asallarına ayır.",
+    "islem": "540 = 2² × 3³ × 5"
+   },
+   {
+    "baslik": "Çift olma koşulunu yaz",
+    "aciklama": "Bölen çift olmalı; 2’nin üssü 0 olamaz, 1 ya da 2 olabilir. 3’ün üssü 0, 1, 2, 3; 5’in üssü 0, 1 olabilir.",
+    "islem": "2 için 2 · 3 için 4 · 5 için 2 seçenek"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Her asal için seçenek sayıları çarpılır.",
+    "islem": "2 × 4 × 2 = 16"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "Tüm bölenler 3 × 4 × 2 = 24; tek bölenler 2’siz olan 3³ × 5’in bölenleri, yani 4 × 2 = 8.",
+    "islem": "24 − 8 = 16"
+   }
+  ],
+  "puf": "Çift bölen sayısı = toplam bölen sayısı − tek bölen sayısı; tek bölenler 2’yi içermeyen çarpanlardan gelir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-01 (bölen sayısı) · yalnız çift olan bölenlerin sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Aralarında Asal Olmayanları Sayma",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Bir sayıyla aralarında asal olmayan sayıların adedini asal çarpanları üzerinden sayar.",
+  "tipId": "ekb-iliski",
+  "tip": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "1’den 30’a kadar (1 ve 30 dahil) olan pozitif tam sayılardan kaç tanesi 30 ile aralarında asal değildir?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "10",
+   "C": "15",
+   "D": "20",
+   "E": "22"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "22"
+  },
+  "celdiriciler": {
+   "A": "30 ile aralarında asal olanları (8 tane) saymış; sorudaki “değildir” koşulunu atlamış.",
+   "B": "Yalnız 3’ün katlarını (10 tane) saymış; 2’nin ve 5’in katlarını atlamış.",
+   "C": "Yalnız çift sayıları (15 tane) saymış; 3’ün ve 5’in katlarını atlamış.",
+   "D": "5’in katlarını unutup 2’nin ve 3’ün katlarını (15 + 10 − 5) saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "30 ile EBOB’u 1’den büyük olan sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "Aralarında asal",
+    "ifade": "EBOB’u 1 olan iki sayıya aralarında asal denir; bunların EKOK’u çarpımlarına eşittir. Örnek: EBOB(8, 15) = 1, EKOK(8, 15) = 120"
+   }
+  ],
+  "ipuclari": [
+   "30 = 2 × 3 × 5; 30 ile ortak böleni olan sayı 2’ye, 3’e ya da 5’e bölünür. Kolay yol: aralarında asal olanları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asal çarpanları bul",
+    "aciklama": "30’un asal çarpanları 2, 3 ve 5’tir; bir sayı bunlardan birine bölünüyorsa 30 ile ortak böleni vardır.",
+    "islem": "30 = 2 × 3 × 5"
+   },
+   {
+    "baslik": "Aralarında asalları listele",
+    "aciklama": "Hiçbirine bölünmeyen sayılar 30 ile aralarında asaldır.",
+    "islem": "1, 7, 11, 13, 17, 19, 23, 29 → 8 sayı"
+   },
+   {
+    "baslik": "Eksik tamamla",
+    "aciklama": "Geri kalanlar aralarında asal değildir.",
+    "islem": "30 − 8 = 22"
+   },
+   {
+    "baslik": "Doğrula",
+    "aciklama": "2’nin katı 15, 3’ün katı 10, 5’in katı 6 tanedir; ortak sayılanlar çıkarılınca 22 kalır.",
+    "islem": "15 + 10 + 6 − 5 − 3 − 2 + 1 = 22"
+   }
+  ],
+  "puf": "“Aralarında asal olmayan” sorulunca aralarında asal olanları sayıp toplamdan çıkarmak çoğu zaman daha hızlıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-02 (aralarında asal) · 1’den 30’a 30 ile aralarında asal olmayanların sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Aralarında Asal Sayıların Özellikleri",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Aralarında asal iki sayıyla ilgili ifadelerin her zaman doğru olup olmadığını örnek ve ilişkiyle inceler.",
+  "tipId": "ekb-iliski",
+  "tip": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "a ve b pozitif tam sayılar olmak üzere a > b ve EBOB(a, b) = 1’dir.\nBuna göre,\nI. EBOB(a, a + b) = 1\nII. EBOB(a + b, a − b) = 1\nIII. EKOK(a, b) = a × b\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü çözmemiş; aralarında asal sayıların EKOK’unun çarpımlarına eşit olduğunu bilmiyor.",
+   "B": "I’i denemeden geçmiş, II’yi tek örnekle (a = 4, b = 1) doğru sanmış.",
+   "C": "II’yi doğru sanmış; a = 3, b = 1 için EBOB(4, 2) = 2 olduğunu denememiş.",
+   "E": "II’yi yalnız a = 4, b = 1 gibi bir örnekle denemiş (EBOB(5, 3) = 1); a = 3, b = 1 karşı örneğini bulmamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Aralarında asal",
+    "ifade": "EBOB’u 1 olan iki sayıya aralarında asal denir; bunların EKOK’u çarpımlarına eşittir. Örnek: EBOB(8, 15) = 1, EKOK(8, 15) = 120"
+   }
+  ],
+  "ipuclari": [
+   "II için a = 3, b = 1 gibi küçük bir değer dene; I için a ile a + b’nin ortak bölenlerini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "a ile a + b’yi bölen bir sayı, farkları olan b’yi de böler; yani a ve b’nin ortak böleni olur. Ortak bölen yalnız 1 olduğundan I doğrudur.",
+    "islem": "Ortak bölen ⇒ a ve b’nin ortak böleni ⇒ 1"
+   },
+   {
+    "baslik": "II’yi dene",
+    "aciklama": "Karşı örnek aramak yeterlidir: a = 3, b = 1 aralarında asal ve 3 > 1, fakat EBOB(4, 2) = 2.",
+    "islem": "EBOB(3 + 1, 3 − 1) = EBOB(4, 2) = 2 ≠ 1"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "Aralarında asal sayılarda EBOB = 1 olduğundan EKOK çarpıma eşittir.",
+    "islem": "a × b = 1 × EKOK ⇒ EKOK = a × b"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "I ve III kesinlikle doğru, II her zaman doğru değil.",
+    "islem": "Cevap: I ve III"
+   }
+  ],
+  "puf": "“Kesinlikle doğru” sorularında bir karşı örnek ifadeyi eler; doğru saydığın ifadeyi ise ilişkiyle (ortak bölen ⇒ ortak bölen) kanıtla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-02 (aralarında asal) · EBOB(a, a + b), EBOB(a + b, a − b), EKOK = a × b ifadeleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Aralıkta Ortak Kat Sayma",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "İki sayıya birlikte bölünen sayıların bir aralıktaki adedini EKOK ile bulur.",
+  "tipId": "ekb-kalan",
+  "tip": "Ortak katları sayma ve kalan koşulu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "100’den büyük, 400’den küçük kaç tane doğal sayı hem 12’ye hem 18’e tam olarak bölünür?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "10",
+   "C": "11",
+   "D": "25",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "D": "Yalnız 12’nin katlarını (108’den 396’ya) saymış; 18’e de bölünme koşulunu atlamış.",
+   "B": "400 ÷ 36’nın tam kısmı olan 11’den yalnız 1 çıkarmış; 100’ün altındaki 36’nın katlarının (36, 72) sayısını (2) düşmemiş.",
+   "C": "400 ÷ 36’nın tam kısmını (11) cevap almış; 100’ün altındaki ortak katları (36, 72) çıkarmamış.",
+   "E": "EKOK yerine EBOB’u (6) kullanıp 6’nın katlarını saymış."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Aralıktaki ortak katların adedi.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   },
+   {
+    "ad": "Ortak katlar",
+    "ifade": "iki sayının ortak katları EKOK’un katlarıdır. Örnek: 4 ve 6’nın ortak katları 12, 24, 36 … (12’nin katları)"
+   }
+  ],
+  "ipuclari": [
+   "Hem 12’ye hem 18’e bölünen sayılar, 12 ile 18’in EKOK’unun katlarıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "EKOK’u bul",
+    "aciklama": "12 = 2² × 3 ve 18 = 2 × 3²; büyük üsler alınır.",
+    "islem": "EKOK = 2² × 3² = 36"
+   },
+   {
+    "baslik": "Aralığı sınırla",
+    "aciklama": "Ortak katlar 36’nın katlarıdır. 100’den büyük ilk kat 108 (36 × 3), 400’den küçük son kat 396 (36 × 11).",
+    "islem": "108 = 36 × 3 · 396 = 36 × 11"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "3’ten 11’e kadar olan çarpanların sayısı.",
+    "islem": "11 − 3 + 1 = 9"
+   }
+  ],
+  "puf": "a’dan büyük, b’den küçük m’nin katları ⌊(b − 1)/m⌋ − ⌊a/m⌋ kadardır (b, m’nin katıysa b sayılmaz).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-05 (ortak kat sayma) · 12 ve 18’e bölünebilen, 100 ile 400 arasında",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Koşucuların Tur Sayıları",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Sabit hızla koşan üç kişinin ilk kez başlangıç noktasında buluştuğu süreyi EKOK ile bulup tur sayılarını hesaplar.",
+  "tipId": "ekb-periyot",
+  "tip": "Koşu, dişli çark ve çakışma sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Çembersel bir pistte üç koşucu, başlangıç noktasından aynı anda ve aynı yöne doğru sabit hızlarla koşmaya başlıyor. Koşucuların birer tur atma süreleri sırasıyla 24 saniye, 36 saniye ve 40 saniyedir.\nÜç koşucu başlangıç noktasında ilk kez yeniden bir araya geldiğinde, üçünün tamamladığı tur sayılarının toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "25",
+   "C": "34",
+   "D": "68",
+   "E": "360"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "34"
+  },
+  "celdiriciler": {
+   "A": "Yalnız en hızlı koşucunun (24 saniyelik) tur sayısını bulmuş.",
+   "D": "Buluşma süresini 720 saniye bulup tur sayılarını 30 + 20 + 18 toplamış.",
+   "B": "40 saniyede bir tur atan koşucunun turunu toplama katmamış (15 + 10).",
+   "E": "Buluşma süresini (EKOK = 360 saniye) tur sayıları toplamı yerine vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "D": "islem",
+   "B": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk buluşmaya kadar tamamlanan turların toplamı.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   }
+  ],
+  "ipuclari": [
+   "Üçü ancak her birinin tur süresinin ortak katı kadar zaman geçince başlangıçta buluşur; ilk kez olduğu için en küçüğü gerekir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Buluşma süresi",
+    "aciklama": "Başlangıçta buluşma için geçen süre, üç tur süresinin de katı olmalıdır; ilk kez olduğu için en küçük ortak kat alınır.",
+    "islem": "EKOK(24, 36, 40) = 360 saniye"
+   },
+   {
+    "baslik": "Tur sayıları",
+    "aciklama": "Her koşucunun turu = süre ÷ tur süresi.",
+    "islem": "360 ÷ 24 = 15 · 360 ÷ 36 = 10 · 360 ÷ 40 = 9"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Üçünün tur sayıları toplanır.",
+    "islem": "15 + 10 + 9 = 34"
+   }
+  ],
+  "puf": "İlk buluşmada her koşucunun tur sayısı EKOK ÷ tur süresidir; soru “tur sayısı” diyorsa EKOK’un kendisi cevap değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-04 (koşu pisti, EKOK) · tur süreleri 24, 36, 40 sn; tamamlanan turların toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Dişli Çarklar",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Birbirine geçmiş dişli çarkların işaretli dişlerinin yeniden karşılaşması için gereken dönüş sayısını EKOK ile bulur.",
+  "tipId": "ekb-periyot",
+  "tip": "Koşu, dişli çark ve çakışma sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Diş sayıları 24 ve 56 olan iki dişli çark birbirine geçmiştir. Başlangıçta küçük çarkın işaretli dişi ile büyük çarkın işaretli dişi birbirine değmektedir.\nÇarklar döndürülmeye başlandığında bu iki işaretli diş ilk kez yeniden birbirine değdiği anda küçük çark kaç tur atmış olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "7",
+   "C": "8",
+   "D": "10",
+   "E": "168"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Büyük çarkın tur sayısını (168 ÷ 56) bulmuş; soru küçük çarkı soruyor.",
+   "D": "İki çarkın tur sayılarını toplamış (7 + 3).",
+   "C": "EBOB(24, 56) = 8’i tur sayısı sanmış.",
+   "E": "İşaretli dişlerin yeniden değdiği anda geçen diş sayısını (EKOK) tur sayısı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "D": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Küçük çarkın attığı tur sayısı.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   }
+  ],
+  "ipuclari": [
+   "Çarklar birbirine geçtiği için her birinde aynı sayıda diş yer değiştirir; bu diş sayısı ikisinin de diş sayısının katı olunca işaretliler yeniden karşılaşır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Geçen diş sayısı",
+    "aciklama": "İki çarkta eşit sayıda diş yer değiştirir. İşaretli dişler yeniden değdiğinde bu sayı iki diş sayısının da katıdır; ilk kez için en küçük ortak kat alınır.",
+    "islem": "EKOK(24, 56) = 168 diş"
+   },
+   {
+    "baslik": "Küçük çarkın turu",
+    "aciklama": "Küçük çarkın tur sayısı = geçen diş ÷ 24.",
+    "islem": "168 ÷ 24 = 7"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "Büyük çark 168 ÷ 56 = 3 tur atmıştır; ikisi de tam sayı.",
+    "islem": "7 ve 3 tam tur"
+   }
+  ],
+  "puf": "Dişli çarklarda geçen diş sayısı ortaktır; tur sayısı = EKOK ÷ diş sayısı (küçük çark daha çok döner).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-04 (dişli çark, EKOK) · 24 ve 56 dişli çarklarda küçük çarkın tur sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Ortak Bölenlerin Sayısı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "İki sayının ortak pozitif bölenlerinin sayısını EBOB’un bölen sayısı olarak bulur.",
+  "tipId": "ekb-bolen",
+  "tip": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "144 ile 180 sayılarının her ikisini de tam bölen kaç tane pozitif tam sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "15",
+   "C": "18",
+   "D": "33",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "B": "Yalnız 144’ün pozitif bölen sayısını bulmuş.",
+   "C": "Yalnız 180’in pozitif bölen sayısını bulmuş.",
+   "D": "İki sayının bölen sayılarını toplamış (15 + 18); ortak bölenleri saymamış.",
+   "E": "Ortak bölenlerin en büyüğünü (EBOB = 36) bulup adedini sormayı atlamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "144 ve 180’in ortak pozitif bölenlerinin adedi.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "EBOB ve ortak bölenler",
+    "ifade": "EBOB, iki sayıyı birlikte bölen en büyük sayıdır ve ortak bölenler EBOB’un bölenleridir. Örnek: EBOB(12, 18) = 6; ortak bölenler 6’nın bölenleri olan 1, 2, 3, 6’dır"
+   },
+   {
+    "ad": "Pozitif bölen sayısı",
+    "ifade": "asal çarpanlara ayrılmış N = aᵐ × bⁿ × cᵖ için pozitif bölen sayısı (m + 1)(n + 1)(p + 1)’dir. Örnek: 12 = 2² × 3 → (2 + 1)(1 + 1) = 6 bölen: 1, 2, 3, 4, 6, 12"
+   }
+  ],
+  "ipuclari": [
+   "İki sayının ortak bölenleri, EBOB’un bölenleridir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asal çarpanlara ayır",
+    "aciklama": "Her iki sayıyı asal çarpanlarına ayır.",
+    "islem": "144 = 2⁴ × 3² · 180 = 2² × 3² × 5"
+   },
+   {
+    "baslik": "EBOB’u bul",
+    "aciklama": "Ortak asallar 2 ve 3; küçük üsler alınır.",
+    "islem": "EBOB = 2² × 3² = 36"
+   },
+   {
+    "baslik": "Bölen sayısı",
+    "aciklama": "Ortak bölenler EBOB’un bölenleridir; sayısı (üs + 1) çarpımıdır.",
+    "islem": "(2 + 1)(2 + 1) = 9"
+   }
+  ],
+  "puf": "Ortak bölen sayısı = EBOB’un bölen sayısı; ortak bölenleri tek tek listelemek yerine EBOB’u asal çarpanlarına ayır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-01 (bölen sayısı) · iki sayının ortak pozitif bölenlerinin sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Asal Çarpanlarla EBOB ve EKOK",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Asal çarpanlarına ayrılmış iki sayının EBOB ve EKOK’unu üslerden kurarak oranlar.",
+  "tipId": "ekb-iliski",
+  "tip": "Aralarında asal sayılar ve EBOB × EKOK = a × b",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A = 2³ × 3² × 5\nB = 2² × 3⁴ × 7\nolduğuna göre EKOK(A, B) ÷ EBOB(A, B) işleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "36",
+   "B": "210",
+   "C": "315",
+   "D": "630",
+   "E": "22680"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "630"
+  },
+  "celdiriciler": {
+   "A": "EKOK yerine EBOB’u (2² × 3²) bulmuş.",
+   "B": "Her asalı yalnız bir kez alıp çarpmış (2 × 3 × 5 × 7); üsleri hesaba katmamış.",
+   "C": "2’nin üs farkından gelen çarpanı (2³⁻² = 2) yazmayı unutmuş; yalnız 3² × 5 × 7 almış.",
+   "E": "Oranı değil yalnız EKOK’u hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "EKOK ÷ EBOB.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "EBOB",
+    "ifade": "iki sayıyı birlikte bölen en büyük sayıdır. Asal çarpanlarda ortak asalların küçük üssü alınır. Örnek: EBOB(12, 18) = 6"
+   },
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   }
+  ],
+  "ipuclari": [
+   "EBOB’ta ortak asalların küçük, EKOK’ta tüm asalların büyük üssü alınır; bölünce her asalın üs farkı kalır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "EBOB’u kur",
+    "aciklama": "Ortak asallar 2 ve 3, küçük üsler.",
+    "islem": "EBOB = 2² × 3²"
+   },
+   {
+    "baslik": "EKOK’u kur",
+    "aciklama": "Tüm asallar (2, 3, 5, 7), büyük üsler.",
+    "islem": "EKOK = 2³ × 3⁴ × 5 × 7"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "Aynı tabanlı üsler bölünürken üsler çıkarılır.",
+    "islem": "2³⁻² × 3⁴⁻² × 5 × 7 = 2 × 9 × 5 × 7 = 630"
+   }
+  ],
+  "puf": "EKOK ÷ EBOB = her asalın üs farkından gelen çarpımdır; sayıları açmadan, yalnız üslerle çalış.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-02 (EBOB × EKOK) · asal çarpanlı iki sayı, EKOK / EBOB oranı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Kalan Koşullu Sayıların Adedi",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Farklı kalan veren ama aynı eksiği olan koşulları EKOK ile birleştirip aralıktaki adedi bulur.",
+  "tipId": "ekb-kalan",
+  "tip": "Ortak katları sayma ve kalan koşulu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Bir N doğal sayısı 9’a bölündüğünde 4, 12’ye bölündüğünde 7 kalanını vermektedir.\n175 ≤ N ≤ 900 olduğuna göre bu koşulları sağlayan kaç farklı N sayısı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "20",
+   "C": "21",
+   "D": "25",
+   "E": "242"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "21"
+  },
+  "celdiriciler": {
+   "A": "EKOK yerine 9 × 12 = 108’i almış; sayıları 108 aralıklarla sıralamış.",
+   "B": "175 = 36 × 5 − 5 sayısının koşulu sağladığını görüp saymamış; alt sınırı dışarıda bırakmış.",
+   "D": "Yalnız üst sınıra bakıp (905 ÷ 36 = 25) alt sınırdan önceki sayıları (31, 67, 103, 139) çıkarmamış.",
+   "E": "EBOB’u (3) kullanıp N + 5’in 3’ün katı olmasına bakmış; 36’nın katı olması gerektiğini atlamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Koşulları sağlayan N sayısının adedi.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   },
+   {
+    "ad": "Kalan koşulu",
+    "ifade": "N, 9’a bölündüğünde 4 kalıyorsa N = 9k + 4’tür; bölenden kalan kadar eksik de yazılabilir: N + 5 = 9(k + 1). Örnek: 31 = 9 × 3 + 4 ve 31 + 5 = 36 = 9 × 4"
+   }
+  ],
+  "ipuclari": [
+   "9’a bölümde kalan 4 ise 5 eksik, 12’ye bölümde kalan 7 ise yine 5 eksiktir; N + 5 ne olmalıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eksiği yaz",
+    "aciklama": "9’a bölünce 4 kalıyorsa 9’a tamamlamak için 5 eksik; 12’de de 12 − 7 = 5 eksik.",
+    "islem": "N + 5 hem 9’un hem 12’nin katı"
+   },
+   {
+    "baslik": "EKOK’u uygula",
+    "aciklama": "N + 5 ortak kat olduğundan 36’nın katıdır.",
+    "islem": "EKOK(9, 12) = 36 · N = 36k − 5"
+   },
+   {
+    "baslik": "k’yı sınırla",
+    "aciklama": "175 ≤ 36k − 5 ≤ 900 ise 180 ≤ 36k ≤ 905; en küçük k = 5, en büyük k = 25 (36 × 25 = 900).",
+    "islem": "5 ≤ k ≤ 25"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "k tam sayı olarak 5’ten 25’e kadar değişir.",
+    "islem": "25 − 5 + 1 = 21"
+   }
+  ],
+  "puf": "Kalanlar farklı ama eksikler eşitse N + eksik ortak kat olur; sonra sınırlardan k’yı bul ve uç değerleri ayrı kontrol et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-05 (kalan koşulu + aralık) · 9’a bölümden kalan 4, 12’ye bölümden kalan 7",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Koşullu En Küçük Sayı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "Bölen sayısı ve katı olma koşulunu birlikte sağlayan en küçük sayıyı asal çarpan üslerini kurarak bulur.",
+  "tipId": "ekb-bolen",
+  "tip": "Asal çarpanlara ayırma ve pozitif bölen sayısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Tam 12 tane pozitif böleni olan ve 18’in katı olan en küçük pozitif tam sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "72",
+   "C": "90",
+   "D": "96",
+   "E": "108"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "18’in katı olma koşulunu atlayıp yalnızca 12 bölenli en küçük sayıyı (60) vermiş.",
+   "C": "2 × 3² × 5 yapısını denemiş; 2³ × 3² yapısının (72) daha küçük olduğunu görmemiş.",
+   "D": "2⁵ × 3 yapısını seçmiş; 18’in katı olması için 3’ün üssünün en az 2 olması gerektiğini atlamış.",
+   "E": "2² × 3³ yapısını seçmiş; 2³ × 3²’nin de 12 böleni olduğunu denememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Koşulları sağlayan en küçük sayı.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı ve asal çarpan",
+    "ifade": "1’den büyük ve yalnız 1 ile kendisine bölünen sayıya asal sayı denir (2, 3, 5, 7, 11 …). Bir sayıyı asal sayıların çarpımı olarak yazmaya asal çarpanlara ayırma denir. Örnek: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+   },
+   {
+    "ad": "Pozitif bölen sayısı",
+    "ifade": "asal çarpanlara ayrılmış N = aᵐ × bⁿ × cᵖ için pozitif bölen sayısı (m + 1)(n + 1)(p + 1)’dir. Örnek: 12 = 2² × 3 → (2 + 1)(1 + 1) = 6 bölen: 1, 2, 3, 4, 6, 12"
+   }
+  ],
+  "ipuclari": [
+   "18 = 2 × 3² olduğundan sayıda 2’nin üssü en az 1, 3’ün üssü en az 2 olmalıdır; bölen sayısı 12 olacak üs çiftlerini dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşulu yaz",
+    "aciklama": "Sayı 18’in katı olduğu için asal çarpanlarında en az 2¹ ve 3² bulunur.",
+    "islem": "N = 2ᵃ × 3ᵇ × … · a ≥ 1, b ≥ 2"
+   },
+   {
+    "baslik": "Bölen sayısını kur",
+    "aciklama": "(a + 1)(b + 1)(…) = 12. Yalnız 2 ve 3 kullanılırsa (a + 1)(b + 1) = 12 olmalıdır.",
+    "islem": "(a, b) = (1, 5), (2, 3), (3, 2) çiftleri; b ≥ 2 şartı sağlanıyor"
+   },
+   {
+    "baslik": "Üçüncü asalı da dene",
+    "aciklama": "Üçüncü bir asal (5) eklenirse (a + 1)(b + 1) × 2 = 12 ise (a + 1)(b + 1) = 6.",
+    "islem": "(a, b) = (1, 2) → N = 2 × 3² × 5 = 90"
+   },
+   {
+    "baslik": "En küçüğü seç",
+    "aciklama": "Adaylar: 2 × 3⁵ = 486, 2² × 3³ = 108, 2³ × 3² = 72, 90.",
+    "islem": "En küçüğü 72"
+   }
+  ],
+  "puf": "Koşullu bölen sayısı sorularında önce zorunlu asal çarpanları yaz, kalan üsleri bölen sayısı çarpımına uyacak biçimde dağıt; küçük asala büyük üs vermek sayıyı küçültür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-01 (bölen sayısı + koşul) · 18’in katı olan ve tam 12 pozitif böleni bulunan en küçük sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-ebobiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "EBOB – EKOK · Ortak Yanma Sayısı",
+  "k": "mat|Ebob – ekok",
+  "kazanim": "İki periyodik olayın birlikte gerçekleştiği anlardan üçüncüsünün de gerçekleştiği anları çıkararak sayar.",
+  "tipId": "ekb-periyot",
+  "tip": "Koşu, dişli çark ve çakışma sayısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir alışveriş merkezinin girişindeki üç ışıklı tabela sırasıyla 12 dakikada bir, 18 dakikada bir ve 20 dakikada bir yanıp sönmektedir. Üçü saat 08.00’de aynı anda yanıp sönmüştür.\nBuna göre saat 08.00’den sonra 14.00’e kadar (14.00 dahil, 08.00 hariç) birinci ve ikinci tabelanın aynı anda yanıp söndüğü, üçüncü tabelanın ise yanıp sönmediği kaç an vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "6",
+   "C": "8",
+   "D": "10",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "Yalnız üç tabelanın birlikte yandığı anları (180 dakikada bir) saymış.",
+   "B": "Birinci ve üçüncü tabelanın birlikte yandığı anları (60 dakikada bir) saymış.",
+   "D": "Yalnız birinci ve ikinci tabelanın birlikte yandığı anları saymış; üçüncünün yanmaması koşulunu atlamış.",
+   "E": "Üçüncünün yandığı anları çıkarmak yerine eklemiş (10 + 2)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Birinci ve ikinci tabela yanarken üçüncünün yanmadığı anların adedi.",
+  "bilgi": [
+   {
+    "ad": "EKOK",
+    "ifade": "iki sayının ortak katlarının en küçüğüdür. Asal çarpanlarda tüm asalların büyük üssü alınır. Örnek: EKOK(12, 18) = 36"
+   },
+   {
+    "ad": "Ortak katlar",
+    "ifade": "iki sayının ortak katları EKOK’un katlarıdır. Örnek: 4 ve 6’nın ortak katları 12, 24, 36 … (12’nin katları)"
+   }
+  ],
+  "ipuclari": [
+   "Önce ilk ikisinin birlikte yandığı anları say; bunların hangilerinde üçüncü de yanıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Süreyi dakikaya çevir",
+    "aciklama": "08.00 ile 14.00 arası 6 saattir.",
+    "islem": "6 × 60 = 360 dakika"
+   },
+   {
+    "baslik": "İlk ikisinin anları",
+    "aciklama": "İlk ikisi EKOK(12, 18) = 36 dakikada bir birlikte yanar.",
+    "islem": "360 ÷ 36 = 10 an"
+   },
+   {
+    "baslik": "Üçlü anları bul",
+    "aciklama": "Üçü birlikte EKOK(12, 18, 20) = 180 dakikada bir yanar; bu anlar yukarıdaki 10 anın içindedir.",
+    "islem": "360 ÷ 180 = 2 an"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "İlk ikisi yanarken üçüncünün yanmadığı anlar kalır.",
+    "islem": "10 − 2 = 8"
+   }
+  ],
+  "puf": "“A ve B olup C olmayan” sayılırken A ile B’nin ortak anlarından üçünün de ortak anlarını çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-EBKB-04 (çakışma sayısı) · 12, 18, 20 dakikalık üç tabela, ilk ikisi birlikte yanarken üçüncüsü yanmayan anlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
