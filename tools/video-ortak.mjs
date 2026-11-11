@@ -57,11 +57,12 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
   const re = VDERS[ders].re, f = sade(filtre), secim = {};
   for (const p of L) {
     const n = sade(p.ad);
-    if (!re.test(n) || (DISLA.test(n) && !/konu anlatim|kamp/.test(n)) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
+    if (!re.test(n) || (DISLA.test(n) && !/konu anlatim/.test(n)) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
     const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
     const SL = sinavlar(p.ad); for (const s of (SL.length ? SL : VARSAYILAN[ders] || [])) {
       if (sabit.includes(s)) continue;
       if (s.startsWith("M") ? !VDERS[ders].M.length : (VDERS[ders].yok || []).includes(s)) continue;
+      if (!s.startsWith("M") && /20(2[89]|3\d)/.test(p.ad)) continue;   /* 2028 ve sonrası YKS listeleri bugünkü TYT/AYT değil (Maarif öğrencileri için) */
       const puan = yp * 1000 + (/konu|kamp|anlatim/.test(n) ? 300 : 0) + Math.min(200, p.sayi || 0) + (p.tarih ? Date.parse(p.tarih) / 1e12 : 0);
       if (!secim[s] || puan > secim[s].puan) secim[s] = { ...p, puan };
     }

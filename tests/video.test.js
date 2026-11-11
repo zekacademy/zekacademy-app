@@ -46,5 +46,7 @@ test("aramayla bulunan kanal hocanın adını taşımalı; Türkçe'de AYT liste
   assert.deepEqual(listeSec([{ id: "PL_t", ad: "2027 YKS | Dil Bilgisinin Ritmi | Yeni Kamp", sayi: 17 }], "tr", ["TYT"]), []);
   assert.equal(listeSec([{ id: "PL_d", ad: "2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Konu Anlatım Videoları", sayi: 16 }], "din").length, 1);
   assert.deepEqual(listeSec([{ id: "PL_y", ad: "40 Günde TYT Matematik Uçuş Kampı", sayi: 40, tarih: "2026-07-10T00:00:00Z" }, { id: "PL_z", ad: "TYT Matematik 2024", sayi: 40, tarih: "2026-07-10T00:00:00Z" }], "mat").map(x => x.id), ["PL_y"]);
+  assert.deepEqual(listeSec([{ id: "PL_28", ad: "2028 TYT Matematik Kampı | Maarif Model 1. Aşama (9-10. Sınıf)", sayi: 100, tarih: "2026-08-01" }], "mat").map(x => x.sinav), [["M10"]]);
+  assert.deepEqual(listeSec([{ id: "PL_sb", ad: "2028 YKS İçin Maarif Türkçe Kampı Soru Bankası Çözümleri", sayi: 100, tarih: "2026-08-01" }], "tr"), []);
   assert.deepEqual(listeSec([{ id: "PL_k", ad: "2026 KPSS - AYT TARİH DERSLERİ", sayi: 70 }], "tar"), []);
 });
