@@ -48,10 +48,11 @@ export function yilPuan(ad, tarih) {
   return 0;
 }
 
-const DISLA = /kpss|\bags\b|oabt|sorular|soru ?coz|soru bankasi|deneme|shorts|tanitim|motivasyon|canli|kitap|taktik|tekrar(?! kampi)|ozet|son tekrar/;
+const DISLA = /\b[5-8] ?(?:\.|inci|nci)? ?sinif|lgs|ortaokul|kpss|\bags\b|oabt|sorular|soru ?coz|soru bankasi|deneme|shorts|tanitim|motivasyon|canli|kitap|taktik|tekrar(?! kampi)|ozet|son tekrar/;
 
 /* Bir kanalın oynatma listelerinden, eksik sınavlar için en güncel konu anlatımı listesini seç.
    L: [{id, ad, sayi, tarih}], ders: VDERS anahtarı, sabit: elle seçilmiş listelerin kapsadığı sınavlar */
+export const ALT_SINIF = /\b[5-8] ?(?:\.|inci|nci)? ?sinif|lgs|ortaokul/;
 export function listeSec(L, ders, sabit = [], filtre = "") {
   const re = VDERS[ders].re, f = sade(filtre), secim = {};
   for (const p of L) {

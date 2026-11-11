@@ -5,7 +5,7 @@
    Anahtar asla dosyaya ya da çıktıya yazılmaz. */
 import fs from "node:fs";
 import path from "node:path";
-import { VDERS, kanalUygun, listeSec, sureSn, bolumler, eslestir, bolumEkle } from "./video-ortak.mjs";
+import { VDERS, ALT_SINIF, sade, kanalUygun, listeSec, sureSn, bolumler, eslestir, bolumEkle } from "./video-ortak.mjs";
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const oku = (p, yoksa) => { try { return JSON.parse(fs.readFileSync(path.join(KOK, p), "utf8")); } catch { return yoksa; } };
@@ -101,7 +101,7 @@ const SINAV_SIRA = ["TYT", "AYT", "M9", "M10", "M11"];
 function derle(ders) {
   const K = KAYNAK[ders], onb = oku(`data/youtube/${ders}.json`, {}), ozet = [];
   const hocalar = K.hocalar.map(h => {
-    let listeler = (onb[h.ad]?.listeler || []).map(l => ({ id: l.id, ad: l.ad, s: l.sinav, v: l.v.filter(v => !/#shorts/i.test(v[1]) && !(v[2] && v[2] < 90)).map(v => v.slice(0, 4).concat(v[4] === 0 ? [0] : [])) }));
+    let listeler = (onb[h.ad]?.listeler || []).filter(l => l.elle || !ALT_SINIF.test(sade(l.ad))).map(l => ({ id: l.id, ad: l.ad, s: l.sinav, v: l.v.filter(v => !/#shorts/i.test(v[1]) && !(v[2] && v[2] < 90)).map(v => v.slice(0, 4).concat(v[4] === 0 ? [0] : [])) }));
     /* Elle eşleme (önceki çalışma): konu → video */
     const elle = Object.entries(ELLE.konular).filter(([k, x]) => x.hoca === h.ad && SINAV_SIRA.slice(0, 2).some(s => VDERS[ders][s].includes(k.split("|")[0]) || (ders === "tr" && k.startsWith("tr|"))));
     if (!listeler.length && elle.length) { /* API verisi gelene kadar elle eşlenen videolardan liste */
