@@ -35,7 +35,7 @@
 - Fizikle Barış: 34 GÜNDE 2027 AYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [AYT] · 18 video; 11.SINIF FİZİK MAARİF KAMPI [M11] · 10 video; 10.SINIF FİZİK MAARİF KAMPI [M10] · 10 video; 9.SINIF FİZİK MAARİF KAMPI [M9] · 8 video; 27 GÜNDE 2027 TYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [TYT] · 44 video ⚠️ kanal aramayla bulundu (Fizikle Barış ), kontrol et
 - Ertan Sinan Şahin: AYT Fizik Kampı - 2027 [AYT] · 29 video; TYT Fizik Kampı - 2027 [TYT] · 19 video ⚠️ kanal aramayla bulundu (Ertan Sinan Şahin), kontrol et
 - Kolay Fizik: TYT Fizik Konu Anlatımı [TYT] · 6 video ⚠️ kanal aramayla bulundu (Fizik Çok Kolay), kontrol et
-- Papatya Hoca: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Papatya Hoca: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Tonguç Akademi: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
@@ -64,11 +64,12 @@
 - Rüştü Hoca: "Paragrafın Ritmi 2027" listesi kanalda bulunamadı
 - Rüştü Hoca: Dil Bilgisinin Ritmi 2027 [TYT] · 17 video; 49 Günde TYT Türkçe Kampı (2026 Tayfa) [TYT] · 54 video
 - Deniz Hoca: TYT TÜRKÇE KAMPI 2027 [TYT] · 36 video ⚠️ kanal aramayla bulundu (Deniz Hoca), kontrol et
+- Kadir Gümüş: PARLA PARAGRAF [TYT] · 7 video
 - Emek Taştan: 39 GÜNDE TYT TÜRKÇE KAMPI 2027 [TYT] · 44 video ⚠️ kanal aramayla bulundu (Emek TAŞTAN), kontrol et
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
 - Önder Hoca: Dil Bilgisi / KONU [TYT] · 28 video ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
-- Harun Ardıç: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
+- Harun Ardıç: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Tonguç Akademi: 7. Sınıf Türkçe Konu Anlatımı 📙 2026 - 2027 [TYT] · 5 video ⚠️ kanal aramayla bulundu (tonguç 7. SINIF), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
@@ -76,6 +77,7 @@
 ## Edebiyat (çekilen)
 - Rüştü Hoca: 10.SINIF | Maarif Model | Türk Dili ve Edebiyatı | GÜNCEL [M10] · 6 video; 11.Sınıf | Maarif Model | Türk Dili ve Edebiyatı | GÜNCEL [M11] · 12 video; 9.Sınıf | Maarif Model | Türk Dili ve Edebiyatı | 2027 Güncel [M9] · 10 video; 65 Günde AYT Edebiyat Kampı [AYT] · 25 video
 - Emek Taştan: 10.SINIF MAARİF KAMPI - TÜRK DİLİ VE EDEBİYATI [M10] · 5 video; 9.SINIF TÜRK DİLİ VE EDEBİYATI TEMA KONU ANLATIM KAMPI [M9] · 13 video ⚠️ kanal aramayla bulundu (Emek TAŞTAN), kontrol et
+- Kadir Gümüş: 11. SINIF - MAARİF (ÖZET KONU ANLATIM) (TÜRK DİLİ VE EDEBİYATI) [M11] · 5 video; 10. SINIF - MAARİF (ÖZET KONU ANLATIM) (TÜRK DİLİ VE EDEBİYATI) [M10] · 10 video; 9. SINIF - MAARİF (ÖZET KONU ANLATIM) (TÜRK DİLİ VE EDEBİYATI) [M9] · 11 video; AYT EDEBİYAT - PARLA (TABLET) [AYT] · 6 video
 - Deniz Hoca: 2026 AYT EDEBİYAT KAMPI (Hedef 24 NET) [AYT] · 62 video; 11.Sınıf Edebiyat Konu Anlatımı 2026 +PDF [M11] · 7 video; 10.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M10] · 33 video; 9.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M9] · 38 video ⚠️ kanal aramayla bulundu (Deniz Hoca), kontrol et
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
 - Harun Ardıç: hata (YouTube search: rateLimitExceeded)
@@ -119,7 +121,7 @@
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 - Benim Hocam: 2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Video Ders Notları - Konu Anlatım Videoları - Çetin ZENCİR [TYT/AYT] · 16 video
 
-Kullanılan kota: ~1414 birim (günlük sınır 10.000)
+Kullanılan kota: ~1226 birim (günlük sınır 10.000)
 
 ## Matematik
 - Mert Hoca: 2 liste, 228 video, 43/45 konu eşlendi
@@ -164,7 +166,7 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 ## Kimya
 - Görkem Şahin: 2 liste, 116 video, 21/28 konu eşlendi
 - Kimya Adası: 4 liste, 198 video, 24/61 konu eşlendi
-- Ferrum: 5 liste, 277 video, 28/78 konu eşlendi
+- Ferrum: 5 liste, 293 video, 30/78 konu eşlendi
 - Kimya Özel: 2 liste, 97 video, 23/28 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
 - Tonguç Akademi: 0 liste, 0 video, 0/0 konu eşlendi
@@ -184,6 +186,7 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 ## Türkçe
 - Rüştü Hoca: 2 liste, 71 video, 14/14 konu eşlendi
 - Deniz Hoca: 1 liste, 36 video, 12/14 konu eşlendi
+- Kadir Gümüş: 1 liste, 7 video, 0/14 konu eşlendi
 - Emek Taştan: 1 liste, 44 video, 13/14 konu eşlendi
 - Aker Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Önder Hoca: 1 liste, 28 video, 7/14 konu eşlendi
@@ -196,6 +199,7 @@ Kullanılan kota: ~1414 birim (günlük sınır 10.000)
 ## Edebiyat
 - Rüştü Hoca: 4 liste, 53 video, 20/78 konu eşlendi
 - Emek Taştan: 2 liste, 18 video, 3/43 konu eşlendi
+- Kadir Gümüş: 4 liste, 32 video, 12/78 konu eşlendi
 - Deniz Hoca: 4 liste, 140 video, 39/78 konu eşlendi
 - Aker Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Harun Ardıç: 0 liste, 0 video, 0/0 konu eşlendi
