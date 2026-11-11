@@ -3045,14 +3045,13 @@ function openSheet(kind, el){
         <span class="faint small">Öğrenci bir sonraki girişinde bu şifreyle girer ve kendi şifresini belirler.</span><div class="err" id="m-rerr"></div></div>`
         :`<div class="card" style="box-shadow:none;display:flex;flex-direction:column;gap:10px"><span class="muted small">${x?"Bu öğrencinin hesabı yok. Hesap açmak için “Yeni öğrenci” ile ekleyip bu kayıtla birleştirebilirsin.":"Öğrenci bu bilgilerle kendi paneline girer. İlk girişte şifresini değiştirmesi istenir."}</span>
         ${x?"":`<div class="two"><label class="f">Kullanıcı adı<input type="text" name="u" id="m-u" autocapitalize="none" autocomplete="off" placeholder="ör. ahmetguner" value="${esc(el.dataset.name?normU(el.dataset.name).replace(/[^a-z0-9]/g,"").slice(0,20):"")}"></label><label class="f">İlk şifre<input type="text" name="p" id="m-p" autocomplete="off" value="123456"></label></div>`}</div>`}
-      ${x?vHocaAlanlari(x):""}
       ${x?`<label class="f">Başka bir kayıtla birleştir<select name="merge" id="m-merge"><option value="">—</option>${sortedStudents().filter(([k])=>k!==id).map(([k,y])=>`<option value="${k}">${esc(y.name)} · ${esc(y.sinif)}${y.kullanici?" · @"+esc(y.kullanici):""}</option>`).join("")}</select><span class="faint small" style="font-weight:500">Seçtiğin eski kaydın tüm verisi bu kayda taşınır ve eski kayıt silinir.</span></label>`:""}
       <div class="err" id="serr"></div>
       <div class="acts">${x?`<button type="button" class="btn danger" id="m-del" style="margin-right:auto">Öğrenciyi sil</button>`:""}<button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri" data-label="${x?"Kaydet":"Ekle"}">${x?"Kaydet":"Ekle"}</button></div>`,
     async (fd, form)=>{ const name = String(fd.get("name")).trim(); if(!name) return sheetErr("Ad soyad gerekli.");
       const sn = fd.get("sinif"), okul = sn==="Mezun"?"":String(fd.get("okul")||"").trim();
       const tel = String(fd.get("tel")||"").trim(), paket = String(fd.get("paket")||paketOf(null).k);
-      if(x){ Object.assign(x,{name,alan:fd.get("alan"),sinif:sn,okul,tel,paket,vhoca:vHocaOku(fd)});
+      if(x){ Object.assign(x,{name,alan:fd.get("alan"),sinif:sn,okul,tel,paket});
         const mg = fd.get("merge");
         if(mg && S.students.has(mg)){ const o = S.students.get(mg);
           x.topics = {...o.topics, ...x.topics}; x.denemeler = [...(o.denemeler||[]), ...(x.denemeler||[])];
@@ -3373,13 +3372,12 @@ function vkYukle(id){ if(VK[id] && !(VK[id] instanceof Promise)) return Promise.
 const vkVeri = id => VK[id] && !(VK[id] instanceof Promise) && VK[id]!=="yok" ? VK[id] : null;
 const vkDolu = h => h && h.listeler && h.listeler.some(l=>l.v && l.v.length);
 const hocaEs = (a, b) => { const x = normName(a), y = normName(b); return !!x && !!y && (x===y || x.includes(y) || y.includes(x)); };
-/* Öğrencinin bu dersteki hocaları, öncelik sırasıyla: koçun video seçimi → takip ettiği hocalar → ana hoca → diğerleri */
+/* Öğrencinin bu dersteki hocaları, öncelik sırasıyla: koçun programda seçtiği hoca(lar) → ana hoca → diğerleri */
 function vHocaSira(s, d, veri){ const H = (veri && veri.hocalar || []).filter(vkDolu), out = [], ekle = h => { if(h && !out.includes(h)) out.push(h); };
-  const sec = ((s && s.vhoca) || {})[d.ad]; if(sec) ekle(H.find(h=>hocaEs(h.ad, sec)));
   kaynakBol(s ? hoca(s, d.ad) : "").forEach(n=>ekle(H.find(h=>hocaEs(h.ad, n))));
   H.filter(h=>h.rol==="ana").forEach(ekle); H.filter(h=>h.rol==="yedek").forEach(ekle); H.forEach(ekle); return out; }
 function vHocaAdi(s, d){ const v = vkVeri(d.id); if(v){ const h = vHocaSira(s, d, v)[0]; if(h) return h.ad; }
-  const sec = ((s && s.vhoca) || {})[d.ad]; return sec || kaynakBol(s ? hoca(s, d.ad) : "")[0] || (VHOCA[d.id]||[])[0] || ""; }
+  return kaynakBol(s ? hoca(s, d.ad) : "")[0] || (VHOCA[d.id]||[])[0] || ""; }
 const vSure = t => { t = Math.round(t||0); if(!t) return ""; const h = Math.floor(t/3600), m = Math.floor(t%3600/60); return h ? `${h} sa ${m} dk` : `${Math.max(1,m)} dk`; };
 const vSn = t => { t = Math.max(0, Math.floor(t||0)); const h = Math.floor(t/3600), m = Math.floor(t%3600/60), sn = t%60; return (h ? h+":"+String(m).padStart(2,"0") : m) + ":" + String(sn).padStart(2,"0"); };
 const vThumb = id => `https://i.ytimg.com/vi/${id}/mqdefault.jpg`;
@@ -3397,7 +3395,7 @@ function vKonuAc(k){ const d = vdersKey(k); if(!d) return toast("Bu dersin video
   vkYukle(d.id).then(v=>{ if(v==="yok") return toast("Bu dersin videoları hazırlanıyor");
     const sira = vHocaSira(s, d, v), varOlan = sira.filter(h=>h.konu && h.konu[k]);
     if(!varOlan.length){ document.querySelectorAll(".toast").forEach(x=>x.remove()); return vYokSheet(d, ad); }
-    const h = varOlan[0], ist = ((s && s.vhoca) || {})[d.ad] || kaynakBol(s ? hoca(s, d.ad) : "")[0] || "", ilk = sira[0];
+    const h = varOlan[0], ist = kaynakBol(s ? hoca(s, d.ad) : "")[0] || "", ilk = sira[0];
     const not = ist && !hocaEs(h.ad, ist) ? (sira.some(x=>hocaEs(x.ad, ist)) ? `${ist} listesinde bu konu yok; ${h.ad} açıldı.` : `${ist} listeleri henüz eklenmedi; şimdilik ${h.ad} açıldı.`) : (ilk && ilk!==h ? `${ilk.ad} listesinde bu konu yok; ${h.ad} açıldı.` : "");
     vKonuOynat(d, h, k, varOlan, not); }); }
 function vKonuOynat(d, h, k, varOlan, not){ const P = h.konu[k], tum = h.listeler.flatMap(l=>l.v), ad = k.split("|").slice(1).join("|");
@@ -3525,11 +3523,6 @@ document.addEventListener("click", e=>{ const b = e.target.closest && e.target.c
       const l = h && h.listeler[s0.l]; const i = l ? l.v.findIndex(x=>x[0]===s0.v[0]) : -1;
       vpAc(i>=0 ? {baslik:l.ad, alt:h.ad, hoca:h.ad, ders:d, liste:l.v, i, sn:null, l:s0.l, li:0} : {baslik:s0.baslik, alt:s0.alt, hoca:s0.hoca||"", ders:d, liste:[s0.v], i:0, sn:null}); }); return; }
 });
-/* Koç: öğrenci kaydında ders ders video hocası */
-function vHocaAlanlari(x){ const sec = (x && x.vhoca) || {};
-  return `<details class="vhsec" ${Object.keys(sec).length?"open":""}><summary><b>Ders videoları · hocası</b> <span class="faint small">konuya dokununca bu hocanın videosu açılır</span></summary><div class="vhgrid">${VD.filter(d=>d.id!=="din").map(d=>{ const v = vkVeri(d.id), adlar = [...new Set([...(VHOCA[d.id]||[]), ...((v && v.hocalar || []).map(h=>h.ad))])], oto = kaynakBol(x ? hoca(x, d.ad) : "")[0];
-    return `<label class="f">${esc(d.ad)}<select name="vh:${esc(d.ad)}"><option value="">Oto: ${esc(oto || (VHOCA[d.id]||[])[0] || "ana hoca")}</option>${adlar.map(n=>`<option ${sec[d.ad]===n?"selected":""}>${esc(n)}</option>`).join("")}</select></label>`; }).join("")}</div></details>`; }
-function vHocaOku(fd){ const o = {}; VD.forEach(d=>{ const v = String(fd.get("vh:"+d.ad)||""); if(v) o[d.ad] = v; }); return o; }
 
 init();
 
