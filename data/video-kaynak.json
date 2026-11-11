@@ -1,5 +1,5 @@
 {
- "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; boşsa iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz.",
+ "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz.",
  "dersler": {
   "mat": {
    "ad": "Matematik",
@@ -230,15 +230,7 @@
      "ad": "Görkem Şahin",
      "rol": "ana",
      "kanal": "@BenimHocam",
-     "filtre": "Görkem",
-     "listeler": [
-      {
-       "ad": "2027 / TYT Kimya Konu Anlatım Videoları - Görkem ŞAHİN",
-       "sinav": [
-        "TYT"
-       ]
-      }
-     ]
+     "filtre": "Görkem"
     },
     {
      "ad": "Kimya Adası",

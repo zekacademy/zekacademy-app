@@ -1,7 +1,7 @@
 // Video Kütüphanesi yardımcıları: liste seçimi, bölümler, konu eşleştirme
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { listeSec, sinavlar, sureSn, bolumler, eslestir, bolumEkle } from "../tools/video-ortak.mjs";
+import { kanalUygun, listeSec, sinavlar, sureSn, bolumler, eslestir, bolumEkle } from "../tools/video-ortak.mjs";
 
 test("sınav ve yıl: en güncel TYT/AYT konu anlatımı listesi seçilir, soru çözümü ve eski yıllar elenir", () => {
   const L = [
@@ -37,4 +37,12 @@ test("konu ↔ video eşleştirme: başlıktan ya da uzun videonun bölümünden
   const K = [{ k: "mat|Üslü Sayılar", ad: "Üslü Sayılar" }, { k: "prob|Kesir Problemleri", ad: "Kesir Problemleri" }, { k: "mat|Mutlak Değer", ad: "Mutlak Değer" }];
   assert.deepEqual(eslestir(K, V), { "mat|Üslü Sayılar": [["v1", 0]], "prob|Kesir Problemleri": [["v2", 1900]] });
   assert.deepEqual(bolumEkle("Sayı Problemleri", [["v2", 0]], V), [["v2", 600]]);
+});
+
+test("aramayla bulunan kanal hocanın adını taşımalı; Türkçe'de AYT listesi olmaz", () => {
+  assert.equal(kanalUygun("Kolay Fizik", "Altuğ Güneş FİZİK"), false);
+  assert.equal(kanalUygun("Kenan Kara", "Kenan Kara ile Geometri"), true);
+  assert.equal(kanalUygun("Önder Hoca", "Kimya Rehberi"), false);
+  assert.deepEqual(listeSec([{ id: "PL_t", ad: "2027 YKS | Dil Bilgisinin Ritmi | Yeni Kamp", sayi: 17 }], "tr", ["TYT"]), []);
+  assert.deepEqual(listeSec([{ id: "PL_k", ad: "2026 KPSS - AYT TARİH DERSLERİ", sayi: 70 }], "tar"), []);
 });

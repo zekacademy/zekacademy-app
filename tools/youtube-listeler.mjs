@@ -5,7 +5,7 @@
    Anahtar asla dosyaya ya da çıktıya yazılmaz. */
 import fs from "node:fs";
 import path from "node:path";
-import { VDERS, listeSec, sureSn, bolumler, eslestir, bolumEkle } from "./video-ortak.mjs";
+import { VDERS, kanalUygun, listeSec, sureSn, bolumler, eslestir, bolumEkle } from "./video-ortak.mjs";
 
 const KOK = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const oku = (p, yoksa) => { try { return JSON.parse(fs.readFileSync(path.join(KOK, p), "utf8")); } catch { return yoksa; } };
@@ -53,11 +53,12 @@ async function tumSayfalar(yol, p, max = 20) { const L = []; let token = "";
 const gecerliId = id => /^(PL|UU|OL|FL)[A-Za-z0-9_-]{16,}$/.test(id || "") && id.length >= 18 && id.length !== 13;
 
 async function kanalBul(h) {
-  if (KANAL[h.ad]?.id) return KANAL[h.ad].id;
+  if (KANAL[h.ad]?.id && (KANAL[h.ad].nasil !== "arama" || kanalUygun(h.ad, KANAL[h.ad].ad))) return KANAL[h.ad].id;
+  delete KANAL[h.ad];
   let id = "", nasil = "";
   if (h.kanal) { const j = await yt("channels", { part: "id,snippet", forHandle: h.kanal }); id = j.items?.[0]?.id || ""; nasil = "@ad"; }
   if (!id) { const sabit = (h.listeler || []).find(l => gecerliId(l.id)); if (sabit) { const j = await yt("playlists", { part: "snippet", id: sabit.id }); id = j.items?.[0]?.snippet?.channelId || ""; nasil = "liste"; } }
-  if (!id && h.ara) { const j = await yt("search", { part: "snippet", type: "channel", q: h.ara, maxResults: 1, regionCode: "TR", relevanceLanguage: "tr" }, 100); const it = j.items?.[0]; id = it?.id?.channelId || ""; nasil = "arama"; if (it) KANAL[h.ad] = { id, ad: it.snippet.channelTitle, nasil, kontrol: true }; }
+  if (!id && h.ara) { const j = await yt("search", { part: "snippet", type: "channel", q: h.ara, maxResults: 3, regionCode: "TR", relevanceLanguage: "tr" }, 100); const it = (j.items || []).find(x => kanalUygun(h.ad, x.snippet.channelTitle)); id = it?.id?.channelId || ""; nasil = "arama"; if (it) KANAL[h.ad] = { id, ad: it.snippet.channelTitle, nasil, kontrol: true }; }
   if (id && !KANAL[h.ad]) KANAL[h.ad] = { id, nasil };
   return id;
 }
@@ -76,7 +77,7 @@ async function dersCek(ders) {
   for (const h of KAYNAK[ders].hocalar) {
     try {
       const kid = await kanalBul(h);
-      if (!kid) { rapor.push(`- ${h.ad}: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)`); continue; }
+      if (!kid) { delete onb[h.ad]; rapor.push(`- ${h.ad}: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)`); continue; }
       const sabit = h.listeler || [], kapsanan = sabit.flatMap(l => l.sinav || []);
       let kanalListeleri = null;
       const kanalL = async () => kanalListeleri ??= (await tumSayfalar("playlists", { part: "snippet,contentDetails", channelId: kid }, 6)).map(p => ({ id: p.id, ad: p.snippet.title, sayi: p.contentDetails?.itemCount, tarih: p.snippet.publishedAt }));

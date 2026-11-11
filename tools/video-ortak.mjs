@@ -41,7 +41,7 @@ export function yilPuan(ad) {
   return 0;
 }
 
-const DISLA = /soru ?coz|soru bankasi|deneme|shorts|tanitim|motivasyon|canli|kitap|taktik|tekrar(?! kampi)|ozet|son tekrar/;
+const DISLA = /kpss|\bags\b|oabt|sorular|soru ?coz|soru bankasi|deneme|shorts|tanitim|motivasyon|canli|kitap|taktik|tekrar(?! kampi)|ozet|son tekrar/;
 
 /* Bir kanalın oynatma listelerinden, eksik sınavlar için en güncel konu anlatımı listesini seç.
    L: [{id, ad, sayi, tarih}], ders: VDERS anahtarı, sabit: elle seçilmiş listelerin kapsadığı sınavlar */
@@ -53,7 +53,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
     const yp = yilPuan(p.ad); if (!yp) continue;
     for (const s of sinavlar(p.ad)) {
       if (sabit.includes(s)) continue;
-      if (s.startsWith("M") && !VDERS[ders].M.length) continue;
+      if (s.startsWith("M") ? !VDERS[ders].M.length : !VDERS[ders][s].length) continue;
       const puan = yp * 1000 + (/konu|kamp|anlatim/.test(n) ? 300 : 0) + Math.min(200, p.sayi || 0) + (p.tarih ? Date.parse(p.tarih) / 1e12 : 0);
       if (!secim[s] || puan > secim[s].puan) secim[s] = { ...p, puan };
     }
@@ -122,4 +122,11 @@ export function bolumEkle(ad, parca, videolar) {
     let en = null; for (const [s, b] of v[3]) { const p = benzerlik(ad, b); if (p >= 0.75 && (!en || p > en.p)) en = { p, s }; }
     return [id, en ? en.s : 0];
   });
+}
+
+/* Aramayla bulunan kanal hocanın kanalı mı: adındaki özel bir söz kanal adında geçmeli (ör. "Kolay Fizik" ≠ "Altuğ Güneş FİZİK") */
+const GENEL = new Set("hoca hocam hocasi fizik matematik kimya biyoloji tarih cografya felsefe edebiyat turkce akademi ders dersleri yks tyt ayt ile".split(" "));
+export function kanalUygun(hoca, kanalAdi) {
+  const H = sade(hoca).split(" ").filter(w => w.length > 2 && !GENEL.has(w)), K = sade(kanalAdi).split(" ").map(kok);
+  return !H.length || H.some(w => K.includes(kok(w)));
 }
