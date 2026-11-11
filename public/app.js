@@ -522,7 +522,7 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="analiz" && S.view==="konular" && !A()) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="analiz" && dersGorunum(S.view) && !A()) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
   return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
@@ -536,6 +536,12 @@ function studentNotices(s){
   return out;
 }
 /* ---------- İlk açılışta uygulama tanıtımı (öğrenci) ---------- */
+const SINIF_ADIM = [
+  {view:"grup", nav:"grup", ic:"user", b:"Yeni: Sınıf 🏫", t:"Alttaki menüde artık “Sınıf” var. Burası Zekeriya Hoca’nın öğrencilerinin birlikte çalıştığı sanal çalışma salonu. Herkesin bir masası var; kim şu an çalışıyor, kim molada, bugün kim kaç saat çalıştı, hepsini canlı görürsün."},
+  {view:"grup", nav:"grup", ic:"flame", b:"Zekeriya Hoca bu sınıfı neden kurdu?", t:"YKS uzun bir maraton ve evde tek başına çalışırken insan çok çabuk “bugün de olmadı” diyebiliyor. Kütüphanede ya da etüt salonunda yanındaki herkes çalışırken sen de kalkmak istemezsin, değil mi? Zekeriya Hoca o ortamı telefonuna taşıdı: aynı hedefe koşan arkadaşlarını masalarında görünce sen de oturup başlayasın, yalnız olmadığını bilesin ve birbirinizi yukarı çekesiniz diye."},
+  {view:"grup", nav:"grup", ic:"timer", b:"Nasıl çalışır?", t:"Kronometreyi ya da görevinin ▶ sayacını başlattığın an masanda yeşil ışık yanar ve hangi derse çalıştığın görünür. Durdurunca “Mola”ya geçersin; bugün hiç başlamadıysan “Gelmedi” yazar. Her masanın altında o günün toplam süresi var. “Sıralama” sekmesinde bugünün ve bu haftanın sıralamasını görürsün."},
+  {view:"grup", nav:"grup", ic:"target", b:"Ligler ve alev 🔥", t:"Üst üste her gün 4+ saat çalışırsan Bronz, 5+ saatle Gümüş, 6+ saatle Altın, 7+ saatle Elmas lige yükselirsin; masan da ligine göre değişir. Bir gün 7 saati geçersen masanda alev yanar. Seriyi bozarsan lig düşer, o yüzden her gün az da olsa otur!"},
+  {view:"grup", nav:"grup", ic:"user", b:"Gerçek adın görünmez", t:"Sınıfta herkes birbirini sadece takma adı ve karakteriyle görür; gerçek adın, okulun, netlerin kimseye görünmez. Sadece ne kadar çalıştığın görünür. Şimdi karakterini oluşturup masana oturalım!", sinifSon:true} ];
 const TUR = [
   {view:"home", ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin: programın, hedeflerin, denemelerin ve çalışma sürelerin hep burada. Yaptığın her şeyi koçun anında görür. Şimdi 2 dakikada her bölümü sırayla gezelim; her adımda arkada o sayfa açılacak."},
   {view:"home", ic:"phone", b:"Önce telefonuna kur", t:"Tarayıcıdan değil, uygulama gibi kullan: Android’de Chrome menüsünden (⋮) “Uygulamayı yükle”, iPhone’da Safari’de Paylaş (□↑) → “Ana Ekrana Ekle”. Böylece tek dokunuşla açılır ve bildirimler gelir.", kosul:"kurulmamis"},
@@ -544,24 +550,25 @@ const TUR = [
   {view:"home", nav:"home", ic:"target", b:"Görevin altındaki küçük yazı", t:"Her dersin altında o hafta bitireceğin konu 🎯, takip edeceğin kitap 📖 ve izleyeceğin hoca 👥 yazar. Ne çalışacağını düşünmene gerek yok, hepsi görevin altında.", ornek:"hedef"},
   {view:"program", nav:"program", ic:"cal", b:"Haftalık Program", t:"Alttaki ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık” sekmesinde bütün haftayı tek ekranda görürsün. Koçun her görüşmeden sonra yeni haftanı buraya yazar."},
   {view:"program", nav:"program", ic:"target", b:"Bu haftanın hedefleri", t:"Programın altında her ders için bu hafta bitirmen gereken konular var. Konuyu bitirince hedefin yanındaki yuvarlağı işaretle; koçun hangi hedefin tamamlandığını buradan takip eder."},
-  {view:"grup", nav:"grup", ic:"user", b:"Sınıf", t:"Koçunun kurduğu çalışma grubun burada. Kronometreyi başlatınca masanda çalışırken görünürsün; arkadaşların da kimin çalıştığını görür. Gerçek adın değil, kendi karakterin ve takma adın görünür. Üst üste çalıştıkça Bronz, Gümüş, Altın ve Elmas lige yükselirsin."},
+  ...SINIF_ADIM.slice(0,-1).map(x=>({...x, b:x.b.replace("Yeni: ","")})),
   {view:"kronometre", nav:"daha", ic:"timer", b:"Kronometre ve çalışma süresi", t:"Daha Fazla → Kronometre. Görev dışı çalışmalarında da sayacı başlat, ders seç, bitince durdur. Unuttuysan süreyi elle de yazabilirsin. Günlük hedef sürene ne kadar yaklaştığını burada görürsün.", ornek:"sure"},
   {view:"analiz", nav:"analiz", ic:"chart", b:"Ders: deneme analizi", t:"Alttaki menüde Ders → Deneme analizi. Her denemeden sonra “Karneden ekle” ile karnenin fotoğrafını yükle ya da “Elle ekle” ile netlerini gir. Altta yanlış yaptığın konuları seç; çeteleye kendiliğinden eklenir. Netlerinin grafiği ve hedefe ne kadar kaldığı burada.", ornek:"yanlis"},
   {view:"analiz", nav:"analiz", ic:"cal", b:"Deneme takvimi", t:"Deneme analizi sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
   {view:"konular", nav:"analiz", ic:"book", b:"Ders: konu ilerlemesi", t:"Ders → Konu ilerlemesi. Tüm TYT ve AYT konuların burada. Bir konuyu tekrar ettikçe tekrar sayısını artır, 1. ve 2. soru bankasını bitirince işaretle. Üçü tamamlanan konu yeşil olur; koçun eksik konularını buradan görür.", ornek:"konu"},
-  {view:"cetele", nav:"daha", ic:"list", b:"Yanlış çetelesi", t:"Daha Fazla → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
+  {view:"cetele", nav:"analiz", ic:"list", b:"Ders: yanlış çetelesi", t:"Ders → Yanlış çetelesi. Soru çözerken yanlış yaptığın konuya +1 ekle; örneğin Basınç’tan 3 yanlış → +3. Yanlışı çok olan konular programına tekrar olarak gelir."},
   {view:"socoz", nav:"daha", ic:"search", b:"Soru Çözüm (Zek AI)", t:"Takıldığın sorunun fotoğrafını çek; yapay zekâ adım adım çözsün. Ana sayfadaki “Soru Çözüm” kartından ya da Daha Fazla’dan açılır. Önce kendin dene, sonra bak!", kosul:"ai"},
-  {view:"sorular", nav:"daha", ic:"note", b:"Takıldığım sorular", t:"Daha Fazla → Takıldığım sorular. Çözemediğin soruların fotoğrafını çek, dersini seç ve burada biriktir. Sonra tekrar dönüp çözdüğünde “Çözüldü” yap."},
+  {view:"sorular", nav:"analiz", ic:"note", b:"Ders: takıldığım sorular", t:"Ders → Takıldığım sorular. Çözemediğin soruların fotoğrafını çek, dersini seç ve burada biriktir. Sonra tekrar dönüp çözdüğünde “Çözüldü” yap."},
   {view:"bildirim", nav:"daha", ic:"bell", b:"Bildirimler", t:"Sabah günün mesajı, akşam eksik görev hatırlatması ve görüşme hatırlatması gelir. Telefon izin isterse mutlaka “İzin ver”e bas. Koçunun sana yazdığı notlar da burada."},
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
   {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
-const YENILIK_SURUM = "2026-11-11";
+const YENILIK_SURUM = "2026-11-12";
 const YENILIK = [
-  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, senin için birkaç yeni özellik ekledik. 30 saniyede göstereyim."},
-  {view:"grup", nav:"grup", ic:"user", b:"Yeni: Sınıf 🏫", t:"Alttaki menüde artık Sınıf var; Konular ve Deneme analizi ise yeni Ders bölümünde birleşti. Koçunun kurduğu grupta kronometreyi başlatınca masanda çalışırken görünürsün. Önce takma adını ve karakterini oluştur; üst üste çalıştıkça Bronz’dan Elmas’a lige yükselirsin."},
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, senin için yeni özellikler ekledik. En büyüğü: artık bir sınıfın var! Kısaca göstereyim."},
+  ...SINIF_ADIM.slice(0, -1),
+  {view:"analiz", nav:"analiz", ic:"book", b:"Yeni: Ders bölümü", t:"Derslerinle ilgili her şey artık alttaki “Ders” bölümünde, dört sekme olarak bir arada: Deneme analizi, Konu ilerlemesi, Yanlış çetelesi ve Takıldığım sorular."},
   {view:"analiz", nav:"analiz", ic:"camera", b:"Yeni: Karneden deneme ekle 📷", t:"Ders → Deneme analizi’nde “Karneden ekle”ye dokun, karnenin fotoğrafını ya da PDF’ini seç; netler ve yanlış konular kendiliğinden dolsun, sen sadece kontrol et."},
-  {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin! Tanıtımları Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin."} ];
+  {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨"} ];
 const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
@@ -573,25 +580,28 @@ function turOrnek(k){
   if(k==="sure") return `<div class="turex turbig"><b class="num">5 sa 30 dk</b><span class="muted small">bugün çalıştın · hedef 7,5 saat</span></div>`;
   if(k==="konu") return `<div class="turex turkonu"><span>Basınç</span><span class="pill">2 tekrar</span><span class="pill ac">SB1 ✓</span><span class="pill ac">SB2 ✓</span></div>`;
   return ""; }
+const karakterSor = s => !A() && !window.ZK_ONZ && GR.list.size>0 && !profilVar(s);
 function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return "";
   return `<div class="turov" role="dialog" aria-modal="true" aria-label="Uygulama tanıtımı"><div class="turkart">
     <div class="turust"><span class="turic">${icon(a.ic)}</span><span class="faint small">${i+1} / ${L.length}</span><button class="link small" data-act="turbitir">Atla</button></div>
     <h2>${esc(a.b.replaceAll("{Ad}", ilkAd(s.name)))}</h2><p>${esc(a.t.replaceAll("{Ad}", ilkAd(s.name)))}</p>${a.ornek?turOrnek(a.ornek):""}
     <div class="turnok">${L.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
-    <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
+    <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(karakterSor(s)?"Karakterimi oluştur":S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
 function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
-  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>pCetele(s), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>pSorular(s, S.me)};
+  const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular")};
   const nots = studentNotices(s).length;
   return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["analiz","book","Ders"],["program","cal","Haftalık Program",true],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Ders: Deneme analizi + Konu ilerlemesi (öğrenci alt menüsünde tek bölüm) ---------- */
-function dersSayfa(s, v){ let h = v==="analiz" ? pAnaliz(s) : pKonular(s);
-  h = h.replace(/<h1 class="ttl">(Deneme Analizi|Konu Takibi)<\/h1>/, `<h1 class="ttl">Ders</h1>`);
-  const sek = `<div class="seg derssek"><button data-act="go" data-v="analiz" aria-pressed="${v==="analiz"}">${icon("chart","xs")} Deneme analizi</button><button data-act="go" data-v="konular" aria-pressed="${v==="konular"}">${icon("book","xs")} Konu ilerlemesi</button></div>`;
+const DERS_SEK = [["analiz","chart","Deneme analizi"],["konular","book","Konu ilerlemesi"],["cetele","list","Yanlış çetelesi"],["sorular","note","Takıldığım sorular"]];
+const dersGorunum = v => DERS_SEK.some(x=>x[0]===v);
+function dersSayfa(s, v){ let h = v==="analiz" ? pAnaliz(s) : v==="konular" ? pKonular(s) : v==="cetele" ? pCetele(s) : pSorular(s, S.me);
+  h = h.replace(/<h1 class="ttl">(Deneme Analizi|Konu Takibi|Yanlış Çetelesi|Takıldığım sorular)<\/h1>/, `<h1 class="ttl">Ders</h1>`).replace(/<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">[\s\S]*?<\/button>/, "");
+  const sek = `<div class="derssek" role="tablist">${DERS_SEK.map(([k,ic,ad])=>`<button data-act="go" data-v="${k}" aria-pressed="${v===k}">${icon(ic,"xs")} ${ad}</button>`).join("")}</div>`;
   return h.replace(/(<div class="page[^"]*"[^>]*>)/, `$1${sek}`); }
 /* ---------- Deneme takvimi (Ayarlar'dan düzenlenir) + öğrencinin yazılıları ---------- */
 const DEF_TAKVIM = [{"bas":"2026-09-18","bit":"2026-09-19","yayin":"ÖZDEBİR","ad":"TYT İlk Prova"},{"bas":"2026-10-02","bit":"2026-10-05","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-10-16","bit":"2026-10-19","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 1"},{"bas":"2026-10-23","bit":"2026-10-26","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 1"},{"bas":"2026-11-09","bit":"2026-11-15","yayin":"MEBİ","ad":"YKS Denemesi 3"},{"bas":"2026-12-04","bit":"2026-12-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 2"},{"bas":"2026-12-10","bit":"2026-12-13","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2026-12-11","bit":"2026-12-14","yayin":"4K Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2026-12-14","bit":"2026-12-20","yayin":"MEBİ","ad":"YKS Denemesi 4"},{"bas":"2026-12-25","bit":"2026-12-28","yayin":"3D Yayınları","ad":"TYT Türkiye Geneli 2"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 3"},{"bas":"2027-01-08","bit":"2027-01-11","yayin":"4K Yayınları","ad":"Maarif TYT"},{"bas":"2027-01-11","bit":"2027-01-17","yayin":"MEBİ","ad":"YKS Denemesi 5"},{"bas":"2027-02-15","bit":"2027-02-21","yayin":"MEBİ","ad":"YKS Denemesi 6"},{"bas":"2027-02-19","bit":"2027-02-22","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 1"},{"bas":"2027-02-26","bit":"2027-03-01","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 4"},{"bas":"2027-03-15","bit":"2027-03-21","yayin":"MEBİ","ad":"YKS Denemesi 7"},{"bas":"2027-03-26","bit":"2027-03-29","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-02","bit":"2027-04-05","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 5"},{"bas":"2027-04-09","bit":"2027-04-12","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 3"},{"bas":"2027-04-12","bit":"2027-04-18","yayin":"MEBİ","ad":"YKS Denemesi 8"},{"bas":"2027-04-16","bit":"2027-04-19","yayin":"Hız ve Renk","ad":"TYT-AYT Türkiye Geneli 2"},{"bas":"2027-05-07","bit":"2027-05-10","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 6"},{"bas":"2027-05-10","bit":"2027-05-16","yayin":"MEBİ","ad":"YKS Denemesi 9"},{"bas":"2027-05-17","bit":"2027-05-23","yayin":"MEBİ","ad":"YKS Denemesi 10"},{"bas":"2027-05-28","bit":"2027-05-31","yayin":"3D Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-05-31","bit":"2027-06-06","yayin":"MEBİ","ad":"YKS Denemesi 11"},{"bas":"2027-06-04","bit":"2027-06-07","yayin":"ÖZDEBİR","ad":"YKS Türkiye Geneli 7"},{"bas":"2027-06-07","bit":"2027-06-10","yayin":"4K Yayınları","ad":"TYT-AYT Türkiye Geneli 4"},{"bas":"2027-06-07","bit":"2027-06-13","yayin":"MEBİ","ad":"YKS Denemesi 12"},{"bas":"2027-06-08","bit":"2027-06-11","yayin":"Supara","ad":"TYT-AYT Türkiye Geneli 2"}];
@@ -3190,7 +3200,8 @@ document.addEventListener("click", e=>{
     case "tyapistir": { (S.pano||[]).forEach(t=>gunEkle(b.dataset.date, t)); toast(`${(S.pano||[]).length} görev yapıştırıldı`); break; }
     case "ptemizle": S.pano = []; panoGuncelle(); break;
     case "tur": if(b.dataset.l) S.turListe = b.dataset.l; S.tur = +v; render(); break;
-    case "turbitir": S.tur = null; S.turKapandi = true; if(!A()) S.view = "home"; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render(); break;
+    case "turbitir": { S.tur = null; S.turKapandi = true; const kar = st() && karakterSor(st()); if(!A()) S.view = kar ? "grup" : "home"; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render();
+      if(kar){ S.profilSinif = S.profilSoruldu = true; setTimeout(()=>{ if(!$("#layer .ov")) openSheet("takma"); }, 350); } break; }
     case "girisgonder": { const id = b.dataset.id, cn = {...(S.cnotes.get(id)||{}), girisGonderildi: nowISO()}; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0);
       setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
     case "geri": geriAl(false); break;
