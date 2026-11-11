@@ -34,10 +34,15 @@ export function sinavlar(ad) {
 }
 
 /* Liste adının yıl puanı: 2027 ya da 2026-2027 en güncel (3), 2026 (2), daha eski (0) */
-export function yilPuan(ad) {
+export function yilPuan(ad, tarih) {
   const n = String(ad || "");
   if (/2027/.test(n)) return 3;
   if (/2026/.test(n)) return 2;
+  if (/20(1\d|2[0-5])/.test(n)) return 0;   /* adında eski yıl var */
+  /* Adında yıl yoksa listenin açıldığı tarihe bak: 2026 yazından sonra açılan 2027 sezonu, öncesindeki yıl 2026 sezonu */
+  const t = String(tarih || "");
+  if (t >= "2026-06") return 3;
+  if (t >= "2025-06") return 2;
   return 0;
 }
 
@@ -50,7 +55,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
   for (const p of L) {
     const n = sade(p.ad);
     if (!re.test(n) || (DISLA.test(n) && !/konu anlatim|kamp/.test(n)) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
-    const yp = yilPuan(p.ad); if (!yp) continue;
+    const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
     for (const s of sinavlar(p.ad)) {
       if (sabit.includes(s)) continue;
       if (s.startsWith("M") ? !VDERS[ders].M.length : (VDERS[ders].yok || []).includes(s)) continue;
