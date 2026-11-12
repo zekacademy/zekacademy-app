@@ -1,0 +1,135 @@
+{
+ "konu": "Yaş Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-YASB-01",
+   "konu": "Yaş Problemleri",
+   "alt": "İki kişi: toplam, fark, oran",
+   "fikir": "İki kişinin yaşları toplamı, farkı ya da oranı verilir; büyük ve küçük yaş toplam–fark ya da k oranıyla ayrı ayrı bulunur.",
+   "tuzak": "Farkı almadan toplamı ikiye bölmek; sorulan kişiyi karıştırmak; oranda k yerine parça sayısını yaş sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ysb-toplamfark",
+   "tip": "İki kişinin yaşları: toplam, fark, oran",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-YASB-02",
+   "konu": "Yaş Problemleri",
+   "alt": "Yıl kaydırma ve oran değişimi",
+   "fikir": "t yıl önce ya da sonra herkesin yaşı t değişir, yaş farkı sabit kalır; oran ve toplam bilgisiyle bugünkü yaşlar bulunur.",
+   "tuzak": "Yıl kaydırırken yalnız bir kişiyi kaydırmak; iki kişinin toplamında t yılı bir kez saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ysb-yilkaydir",
+   "tip": "Yıl kaydırma ve yaşlar oranının değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-YASB-03",
+   "konu": "Yaş Problemleri",
+   "alt": "“Ben senin yaşındayken”",
+   "fikir": "Yaş farkı kadar geriye ya da ileriye gitmek; farkı bilinmeyen alıp toplam bilgisiyle yaşlar çözülür.",
+   "tuzak": "Yaş farkının zamanla değiştiğini sanmak; geçmişte ve gelecekte yalnız bir kişiyi kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ysb-benseninyas",
+   "tip": "“Ben senin yaşındayken” tipi sabit yaş farkı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-YASB-04",
+   "konu": "Yaş Problemleri",
+   "alt": "Aile ve yaş ortalaması",
+   "fikir": "Üç ya da dört kişilik ailelerde toplam = ortalama × kişi sayısı ve geçmişte doğmamış kişilerin sayılmaması birlikte kullanılır.",
+   "tuzak": "Doğmamış çocuğu da sayıp ortalamaya yıl eklemek; ortalamayı toplam yerine doğrudan kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ysb-aile",
+   "tip": "Üç ve dört kişilik aile, yaş ortalaması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-YASB-05",
+   "konu": "Yaş Problemleri",
+   "alt": "Doğum yılı ve takvim yılı",
+   "fikir": "Doğum yılı, yaş ve yıl arasındaki yaş = yıl − doğum yılı ilişkisi; yıl dönümü ve mum sayısı gibi tanımlı kurallarla birlikte işlenir.",
+   "tuzak": "Yaşı doğum yılıyla karıştırmak; yıl yerine yaş farkını yıl sanmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "ysb-yilhesap",
+   "tip": "Doğum yılı, takvim yılı ve yıl dönümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-YASB-06",
+   "konu": "Yaş Problemleri",
+   "alt": "Kaç yıl sonra eşitlenir",
+   "fikir": "Her kişi ayrı yaşlanır: bir tarafta 1 kişi, diğer tarafta n kişi varsa fark yılda n − 1 değişir; tablo, ikiz ve öncüllü kurgularla.",
+   "tuzak": "Babanın yaşını sabit tutmak; farkı kişi sayısına bölmemek; “önce/sonra” yönünü karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "ysb-esitlenme",
+   "tip": "Kaç yıl sonra eşitlenir: herkes ayrı yaşlanır",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (yaş problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ysb-toplamfark",
+   "ad": "İki kişinin yaşları: toplam, fark, oran",
+   "kartlar": [
+    "K-YASB-01"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "ysb-yilkaydir",
+   "ad": "Yıl kaydırma ve yaşlar oranının değişimi",
+   "kartlar": [
+    "K-YASB-02"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "ysb-benseninyas",
+   "ad": "“Ben senin yaşındayken” tipi sabit yaş farkı",
+   "kartlar": [
+    "K-YASB-03"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "ysb-aile",
+   "ad": "Üç ve dört kişilik aile, yaş ortalaması",
+   "kartlar": [
+    "K-YASB-04"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "ysb-yilhesap",
+   "ad": "Doğum yılı, takvim yılı ve yıl dönümü",
+   "kartlar": [
+    "K-YASB-05"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "ysb-esitlenme",
+   "ad": "Kaç yıl sonra eşitlenir: herkes ayrı yaşlanır",
+   "kartlar": [
+    "K-YASB-06"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "konu": "Denklem Çözme",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-DNKB-01",
+   "konu": "Denklem Çözme",
+   "alt": "Birinci dereceden denklem (paydalı, parantezli)",
+   "fikir": "Parantezleri aç, paydaları EKOK ile eşitle, bilinmeyenleri tek yana topla.",
+   "tuzak": "Eksi işaretli parantezde işareti değiştirmemek; sabit terimi EKOK ile çarpmamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dkb-birinci",
+   "tip": "Birinci dereceden denklem: paydalı ve parantezli",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-02",
+   "konu": "Denklem Çözme",
+   "alt": "Çözüm kümesi boş / sonsuz, parametre",
+   "fikir": "a·x = b biçimine getirip katsayı ve sabite göre çözüm sayısı ve parametre bulunur.",
+   "tuzak": "a = 0 iken b’ye bakmamak; iki ayrı özel durumu (∅ ve ℝ) karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "dkb-kume",
+   "tip": "Çözüm kümesi boş / sonsuz ve parametre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-03",
+   "konu": "Denklem Çözme",
+   "alt": "İki bilinmeyenli denklem sistemi",
+   "fikir": "Yok etme ya da yerine koymayla x ve y bulunur; x + y ve x − y için denklemler toplanır / çıkarılır.",
+   "tuzak": "İşareti hatalı toplamak; sorulan ifadeyi (x yerine x − y) değiştirmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dkb-sistem",
+   "tip": "İki bilinmeyenli denklem sistemi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-04",
+   "konu": "Denklem Çözme",
+   "alt": "Üç bilinmeyenli sistemde istenen toplam",
+   "fikir": "Denklemler taraf tarafa toplanıp katsayıya bölünerek istenen toplam bulunur.",
+   "tuzak": "Toplamı katsayıya bölmemek; yalnız bir bilinmeyeni hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "dkb-uclu",
+   "tip": "Üç bilinmeyenli sistemde toplam",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-05",
+   "konu": "Denklem Çözme",
+   "alt": "Oranlı denklem",
+   "fikir": "İçler dışlar çarpımı ya da oranı k ile yazma; x² terimleri sadeleşen denklemler birinci dereceye iner.",
+   "tuzak": "Çapraz çarpımı hatalı kurmak; paydayı sıfır yapan değeri kontrol etmemek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "dkb-oran",
+   "tip": "Oranlı denklem",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-06",
+   "konu": "Denklem Çözme",
+   "alt": "Denklem kurma (kısa hikâye)",
+   "fikir": "Hikâyedeki koşullar bir ya da iki bilinmeyenle denkleme çevrilir.",
+   "tuzak": "Farkı iki yerde saymak; sorulan nicelikle bulunan niceliği karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "dkb-kurma",
+   "tip": "Denklem kurma: fiyat, bilet, yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-DNKB-07",
+   "konu": "Denklem Çözme",
+   "alt": "Tanımlı işlem, makine ve işlem hatası",
+   "fikir": "Kural uygulanarak denklem kurulur; makinede ters işlemler ya da öğrencinin hatası yeniden kurularak doğru sonuç bulunur.",
+   "tuzak": "İşlem sırasını karıştırmak; hatalı ve doğru çözümü karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "dkb-islem",
+   "tip": "Tanımlı işlem, makine, işlem hatası",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (denklem çözme, denklem sistemleri) · yayın soru bankaları (yalnız mantık) · MEB 8–9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "dkb-birinci",
+   "ad": "Birinci dereceden denklem: paydalı ve parantezli",
+   "kartlar": [
+    "K-DNKB-01"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-kume",
+   "ad": "Çözüm kümesi boş / sonsuz ve parametre",
+   "kartlar": [
+    "K-DNKB-02"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-sistem",
+   "ad": "İki bilinmeyenli denklem sistemi",
+   "kartlar": [
+    "K-DNKB-03"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-uclu",
+   "ad": "Üç bilinmeyenli sistemde toplam",
+   "kartlar": [
+    "K-DNKB-04"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-oran",
+   "ad": "Oranlı denklem",
+   "kartlar": [
+    "K-DNKB-05"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-kurma",
+   "ad": "Denklem kurma: fiyat, bilet, yol",
+   "kartlar": [
+    "K-DNKB-06"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  },
+  {
+   "tipId": "dkb-islem",
+   "ad": "Tanımlı işlem, makine, işlem hatası",
+   "kartlar": [
+    "K-DNKB-07"
+   ],
+   "uygulamaKonu": "mat|Denklem Çözme"
+  }
+ ]
+}

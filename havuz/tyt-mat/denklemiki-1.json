@@ -1,0 +1,1854 @@
+[
+ {
+  "id": "tytmat-denklemiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Parantezli Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Eksi işaretli parantezleri açıp iki yanda x içeren denklemi çözer.",
+  "tipId": "dkb-birinci",
+  "tip": "Birinci dereceden denklem: paydalı ve parantezli",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "7 − 3(2 − x) = 4x − 3(x + 1)\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−4",
+   "B": "−2",
+   "C": "1",
+   "D": "2",
+   "E": "2,2"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−2"
+  },
+  "celdiriciler": {
+   "D": "−3(2 − x) = −6 − x yazmış; −3, x ile de çarpılmalı.",
+   "C": "−3(x + 1)’i −3x + 3 yazmış; −3, 1 ile çarpılınca −3 olur.",
+   "E": "7 − 3 = 4 yapıp 4(2 − x) yazmış; −3 yalnız parantezle çarpılır.",
+   "A": "2x = −4’te 2’ye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi",
+   "A": "islem"
+  },
+  "istenen": "Denklemi sağlayan x değeri.",
+  "bilgi": [
+   {
+    "ad": "Dağılma ve işaret",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır; önünde eksi varsa tüm terimlerin işareti değişir. Örnek: −2(3 − x) = −6 + 2x"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki parantezi aç; önündeki eksi işaretlerine dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parantezleri aç",
+    "aciklama": "−3, 2 ve −x ile; −3, x ve 1 ile çarpılır.",
+    "islem": "7 − 6 + 3x = 4x − 3x − 3"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Her yanda benzer terimleri topla.",
+    "islem": "3x + 1 = x − 3"
+   },
+   {
+    "baslik": "x’i yalnız bırak",
+    "aciklama": "x’leri sola, sayıları sağa topla.",
+    "islem": "3x − x = −3 − 1"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "Katsayıya böl.",
+    "islem": "2x = −4 → x = −2"
+   }
+  ],
+  "puf": "Eksi işaretli parantezi açarken tüm terimlerin işaretini değiştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-01 (birinci dereceden denklem) · iki yanda x ve eksi işaretli parantez",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Paydalı Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Paydaları EKOK ile eşitleyerek birinci dereceden denklemi çözer.",
+  "tipId": "dkb-birinci",
+  "tip": "Birinci dereceden denklem: paydalı ve parantezli",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "2x/3 − 5 = x/6 + 1\neşitliğini doğrulayan x gerçel sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−8",
+   "B": "2",
+   "C": "8",
+   "D": "12",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "6 ile çarparken −5 ve 1’i çarpmamış: 4x − 5 = x + 1.",
+   "C": "6 ile çarparken 1’i 6 yerine −6 yazmış: 4x − 30 = x − 6.",
+   "A": "3x = 6 − 30 = −24 yazmış; −30, karşı tarafa +30 geçer.",
+   "E": "3x = 36’da 3’e bölmeyi unutmuş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "A": "islem",
+   "E": "islem"
+  },
+  "istenen": "Denklemi sağlayan x değeri.",
+  "bilgi": [
+   {
+    "ad": "Paydaları eşitleme",
+    "ifade": "denklemin her iki tarafı paydaların EKOK’u ile çarpılır; sabit terimler de çarpılmayı unutmamalıdır. Örnek: x/2 + 1/3 = 2 için 6 ile çarp: 3x + 2 = 12"
+   }
+  ],
+  "ipuclari": [
+   "Paydaların EKOK’u olan sayıyla iki yanın her terimini çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "EKOK ile çarp",
+    "aciklama": "3 ve 6’nın EKOK’u 6; her terim 6 ile çarpılır.",
+    "islem": "4x − 30 = x + 6"
+   },
+   {
+    "baslik": "x’leri topla",
+    "aciklama": "x’ler sola, sayılar sağa.",
+    "islem": "4x − x = 6 + 30 → 3x = 36"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "Katsayıya böl.",
+    "islem": "x = 12"
+   }
+  ],
+  "puf": "Paydalı denklemde sabit terimler de EKOK ile çarpılır; yalnız kesirli terimleri çarpmak hatadır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-01 (birinci dereceden denklem) · iki yanda paydalı terim ve sabit",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Denklem Sistemi",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Denklemleri taraf tarafa toplayarak yok etme yöntemiyle y değerini bulur.",
+  "tipId": "dkb-sistem",
+  "tip": "İki bilinmeyenli denklem sistemi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x ve y gerçel sayılardır.\nx + y = 9\n2x − y = 3\nolduğuna göre y kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−3",
+   "B": "4",
+   "C": "5",
+   "D": "9",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "B": "x’i bulup y yerine x’i yazmış.",
+   "A": "y yerine 9 − x yazıp −(9 − x)’i −9 − x açmış; x = 12, y = −3 bulmuş.",
+   "D": "İlk denklemin sağ tarafını y’nin değeri sanmış.",
+   "E": "x · y çarpımını bulmuş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "A": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "y’nin değeri.",
+  "bilgi": [
+   {
+    "ad": "Denklem sistemi",
+    "ifade": "iki denklem taraf tarafa toplanır ya da çıkarılarak bir bilinmeyen yok edilir. Örnek: x + y = 5 ve x − y = 1 toplanırsa 2x = 6, x = 3, y = 2"
+   }
+  ],
+  "ipuclari": [
+   "İki denklemde y’nin katsayılarına bak; ne fark ediyorsun?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Topla",
+    "aciklama": "y’ler birbirini götürür.",
+    "islem": "(x + y) + (2x − y) = 9 + 3 → 3x = 12"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "3’e böl.",
+    "islem": "x = 4"
+   },
+   {
+    "baslik": "y’yi yaz",
+    "aciklama": "x’i ilk denklemde yerine koy.",
+    "islem": "4 + y = 9 → y = 5"
+   }
+  ],
+  "puf": "Katsayıları zıt işaretli bilinmeyeni yok etmek için denklemleri topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-03 (iki bilinmeyenli sistem) · toplayarak yok etme, y istenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Denklem Kurma",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Açılış ücreti ve kilometre ücretinden denklem kurarak gidilen yolu bulur.",
+  "tipId": "dkb-kurma",
+  "tip": "Denklem kurma: fiyat, bilet, yol",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir taksinin sayacı açılışta 50 TL gösteriyor ve sayaç, gidilen her kilometre için 25 TL artıyor (artış gidilen yolla orantılıdır). Başka bir ücret alınmıyor.\nBir yolcu yolculuk sonunda sayaçta 350 TL gördüğüne göre kaç kilometre yol gitmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "14",
+   "C": "16",
+   "D": "300",
+   "E": "325"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "Açılış ücretini düşmeden 350’yi 25’e bölmüş.",
+   "C": "Açılış ücretini düşmek yerine 350’ye eklemiş: (350 + 50) ÷ 25.",
+   "D": "Açılış ücretini düşüp 25’e bölmeyi unutmuş.",
+   "E": "Kilometre ücretini (25) açılış ücreti yerine 350’den çıkarmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Gidilen yol (km).",
+  "bilgi": [
+   {
+    "ad": "Denklem kurma",
+    "ifade": "soruda bilinmeyen bir harfle gösterilir, verilen koşullar eşitlik olarak yazılır ve çözülür. Örnek: bir sayının 3 katının 4 fazlası 19 ise 3x + 4 = 19, x = 5"
+   }
+  ],
+  "ipuclari": [
+   "Yol x km ise sayacın göstereceği tutarı x cinsinden yaz ve 350’ye eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "x km için tutar: açılış + 25x.",
+    "islem": "50 + 25x = 350"
+   },
+   {
+    "baslik": "Sabiti karşıya geç",
+    "aciklama": "50’yi 350’den çıkar.",
+    "islem": "25x = 300"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "25’e böl.",
+    "islem": "x = 12"
+   }
+  ],
+  "puf": "Sabit ücret + birim ücret × miktar = toplam; önce sabit ücreti çıkar, sonra birim ücrete böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-06 (denklem kurma) · sabit ücret + birim ücret",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Oranlı Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Eşitliğe dönüşen kesirli oranı içler dışlar çarpımıyla çözer.",
+  "tipId": "dkb-oran",
+  "tip": "Oranlı denklem",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(x + 3)/(x − 1) = 2\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−5",
+   "B": "−1",
+   "C": "1",
+   "D": "4",
+   "E": "5"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "x + 3 = 2x − 2’den −x = −5 yazıp x = −5 bulmuş.",
+   "B": "Yalnız payı 2’ye eşitlemiş: x + 3 = 2.",
+   "C": "x + 3 = 2x + 2 yazmış; 2(x − 1) = 2x − 2’dir.",
+   "D": "2(x − 1)’i 2x − 1 açmış; 2, −1 ile de çarpılmalı."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "İçler dışlar çarpımı",
+    "ifade": "a/b = c/d ise a·d = b·c. Örnek: 3/x = 6/4 ise 6x = 12, x = 2. Paydalar sıfır olamaz"
+   },
+   {
+    "ad": "Dağılma ve işaret",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır; önünde eksi varsa tüm terimlerin işareti değişir. Örnek: −2(3 − x) = −6 + 2x"
+   }
+  ],
+  "ipuclari": [
+   "Paydayı karşı yana çarpan olarak geçir: 2 ile (x − 1)’in tamamını çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paydayı kaldır",
+    "aciklama": "Her iki yanı (x − 1) ile çarp.",
+    "islem": "x + 3 = 2(x − 1)"
+   },
+   {
+    "baslik": "Parantezi aç",
+    "aciklama": "2 her terimle çarpılır.",
+    "islem": "x + 3 = 2x − 2"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "x’leri tek yana topla.",
+    "islem": "3 + 2 = 2x − x → x = 5"
+   }
+  ],
+  "puf": "Kesirli denklemde payda karşı yana çarpan olarak geçer; paydayı sıfır yapan değeri sonda denetle (x = 5 için payda 4).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-05 (oranlı denklem) · kesir = tam sayı, paydada x",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Denklem Sistemi",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Simetrik katsayılı sistemde denklemleri çıkararak x − y farkını bulur.",
+  "tipId": "dkb-sistem",
+  "tip": "İki bilinmeyenli denklem sistemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x ve y gerçel sayılardır.\n4x + 3y = 26\n3x + 4y = 23\nolduğuna göre x − y kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "7",
+   "D": "10",
+   "E": "49"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "B": "x’i bulup soruyu x sanmış.",
+   "C": "Denklemleri toplayıp 7(x + y) = 49’dan x + y = 7 bulmuş; fark sorulmuş.",
+   "D": "x ve y’yi bulup x · y çarpımını vermiş.",
+   "E": "Denklemleri toplayıp sonucu 7’ye bölmemiş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "x − y farkı.",
+  "bilgi": [
+   {
+    "ad": "Denklem sistemi",
+    "ifade": "iki denklem taraf tarafa toplanır ya da çıkarılarak bir bilinmeyen yok edilir. Örnek: x + y = 5 ve x − y = 1 toplanırsa 2x = 6, x = 3, y = 2"
+   }
+  ],
+  "ipuclari": [
+   "İki denklemin katsayıları arasında nasıl bir ilişki var? İstenen ifade bu ilişkiyle nasıl elde edilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Birinci denklemden ikinciyi çıkar.",
+    "islem": "(4x − 3x) + (3y − 4y) = 26 − 23"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Sol yan x − y olur.",
+    "islem": "x − y = 3"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Toplayarak x + y = 7 bulunur; x = 5, y = 2.",
+    "islem": "4 × 5 + 3 × 2 = 26 ✓"
+   }
+  ],
+  "puf": "Katsayıları yer değiştirmiş sistemlerde toplayınca x + y, çıkarınca x − y doğrudan çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-03 (iki bilinmeyenli sistem) · simetrik katsayı, fark istenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Üç Bilinmeyenli Sistem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "İkişerli toplamlardan üç niceliğin toplamını denklemleri toplayarak bulur.",
+  "tipId": "dkb-uclu",
+  "tip": "Üç bilinmeyenli sistemde toplam",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir depocu, K, L ve M kolilerini ikişerli tartıyor.\nK ile L’nin kütleleri toplamı 14 kg,\nL ile M’nin kütleleri toplamı 17 kg,\nK ile M’nin kütleleri toplamı 19 kg\nbulunuyor.\nBuna göre üç kolinin kütleleri toplamı kaç kilogramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "12,5",
+   "C": "25",
+   "D": "36",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "A": "K = (14 + 19 − 17) ÷ 2 = 8 bulup durmuş; üç kolinin toplamını hesaplamamış.",
+   "B": "Üç denklemi toplayıp sonucu 4’e bölmüş (50 ÷ 4).",
+   "D": "İki toplamı (17 + 19) toplayıp üçüncüsünü katmamış.",
+   "E": "Üç denklemi toplayıp sonucu 2’ye bölmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "K, L ve M kolilerinin toplam kütlesi (kg).",
+  "bilgi": [
+   {
+    "ad": "Denklemleri toplayarak sadeleştirme",
+    "ifade": "üç bilinmeyenli sistemde istenen toplam çoğu zaman denklemler taraf tarafa toplanıp ortak katsayıya bölünerek bulunur; her bilinmeyeni ayrı ayrı bulmak gerekmez. Örnek: a + b = 3, b + c = 4, a + c = 5 toplanırsa 2(a + b + c) = 12"
+   }
+  ],
+  "ipuclari": [
+   "Her koli kaç toplamda yer alıyor? İstenen toplam için bunu nasıl kullanırsın?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemleri topla",
+    "aciklama": "Her koli iki toplamda yer alır.",
+    "islem": "(K + L) + (L + M) + (K + M) = 14 + 17 + 19"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Sol yan her koliden iki tane içerir.",
+    "islem": "2(K + L + M) = 50"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "Toplamı 2’ye böl.",
+    "islem": "K + L + M = 25 kg"
+   }
+  ],
+  "puf": "İkişerli toplamlardan üçlü toplama giderken denklemleri toplayıp 2’ye böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-04 (üçlü sistem) · ikişerli tartım toplamları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Üç Bilinmeyenli Sistem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Katsayıları farklı iki denklemi toplayarak x + y + z toplamını bulur.",
+  "tipId": "dkb-uclu",
+  "tip": "Üç bilinmeyenli sistemde toplam",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x, y ve z gerçel sayılardır.\nx + 2y + 3z = 20\n3x + 2y + z = 28\nolduğuna göre x + y + z toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "12",
+   "C": "16",
+   "D": "24",
+   "E": "48"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Denklemleri çıkarıp x − z = 4 bulmuş; toplam sorulmuş.",
+   "C": "Toplayıp 48’i 3’e bölmüş; ortak katsayı 4’tür.",
+   "D": "Toplayıp 48’i 2’ye bölmüş; ortak katsayı 4’tür.",
+   "E": "Denklemleri toplayıp 4’e bölmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "x + y + z toplamı.",
+  "bilgi": [
+   {
+    "ad": "Denklemleri toplayarak sadeleştirme",
+    "ifade": "üç bilinmeyenli sistemde istenen toplam çoğu zaman denklemler taraf tarafa toplanıp ortak katsayıya bölünerek bulunur; her bilinmeyeni ayrı ayrı bulmak gerekmez. Örnek: a + b = 3, b + c = 4, a + c = 5 toplanırsa 2(a + b + c) = 12"
+   }
+  ],
+  "ipuclari": [
+   "İki denklemde aynı bilinmeyenin katsayılarını topla; ne görüyorsun?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Topla",
+    "aciklama": "Aynı bilinmeyenlerin katsayılarını topla.",
+    "islem": "(1 + 3)x + (2 + 2)y + (3 + 1)z = 20 + 28"
+   },
+   {
+    "baslik": "Ortak çarpanı gör",
+    "aciklama": "Her katsayı 4 çıkar.",
+    "islem": "4x + 4y + 4z = 48"
+   },
+   {
+    "baslik": "Böl",
+    "aciklama": "4’e böl.",
+    "islem": "x + y + z = 12"
+   }
+  ],
+  "puf": "Denklemleri toplayınca katsayılar eşitleniyorsa, bilinmeyenleri tek tek bulmadan toplam doğrudan çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-04 (üçlü sistem) · iki denklemden üçlü toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Oran ve Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Oranı k ile yazıp verilen denklemden x + y toplamını bulur.",
+  "tipId": "dkb-oran",
+  "tip": "Oranlı denklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x ve y, y ≠ 0 olan gerçel sayılardır.\nx/y = 3/4\n2x − y = 10\nolduğuna göre x + y toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "14",
+   "C": "15",
+   "D": "20",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "35"
+  },
+  "celdiriciler": {
+   "A": "Ortak değeri k = 5’i bulup x + y’yi hesaplamamış.",
+   "B": "Oranı ters yazıp x = 4k, y = 3k almış: 8k − 3k = 10, k = 2, x + y = 7k = 14.",
+   "C": "x’i bulup toplamı sormuş olduğunu unutmuş.",
+   "D": "y’yi bulup toplamı sormuş olduğunu unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "x + y toplamı.",
+  "bilgi": [
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "x/y = 3/4 ise x = 3k, y = 4k yazılır. Örnek: x/y = 3/4 ve x + y = 14 ise 7k = 14, k = 2 → x = 6, y = 8"
+   }
+  ],
+  "ipuclari": [
+   "x ve y’yi ortak bir k ile yaz, sonra verilen ikinci denkleme taşı."
+  ],
+  "adimlar": [
+   {
+    "baslik": "k ile yaz",
+    "aciklama": "x/y = 3/4 olduğundan.",
+    "islem": "x = 3k · y = 4k"
+   },
+   {
+    "baslik": "Denkleme taşı",
+    "aciklama": "2x − y = 10’da yerine yaz.",
+    "islem": "6k − 4k = 10 → k = 5"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "x + y = 7k.",
+    "islem": "7 × 5 = 35"
+   }
+  ],
+  "puf": "Oran verilince ortak k’yi seç; ikinci koşul k’yi bulmak için kullanılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-05 (oranlı denklem) · oranı k ile yazıp denkleme taşıma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · İçler Dışlar Çarpımı",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "x² terimleri sadeleşen oranlı denklemi içler dışlar çarpımıyla çözer.",
+  "tipId": "dkb-oran",
+  "tip": "Oranlı denklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(x − 1)/(x + 2) = (x + 3)/(x + 8)\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−2,6",
+   "B": "−1",
+   "C": "6,5",
+   "D": "7",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Payları kendi aralarında, paydaları kendi aralarında çarpmış: (x − 1)(x + 2) = (x + 3)(x + 8).",
+   "B": "(x − 1)(x + 8)’i x² + 7x + 8 açmış; −1 × 8 = −8’dir.",
+   "C": "(x + 3)(x + 2)’yi x² + 5x + 5 açmış; 3 × 2 = 6’dır.",
+   "E": "2x = 14’te 2’ye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "İçler dışlar çarpımı",
+    "ifade": "a/b = c/d ise a·d = b·c. Örnek: 3/x = 6/4 ise 6x = 12, x = 2. Paydalar sıfır olamaz"
+   }
+  ],
+  "ipuclari": [
+   "İçler dışlar çarpımı yap: birinci payı ikinci paydayla, ikinci payı birinci paydayla çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çapraz çarp",
+    "aciklama": "Pay × karşı payda.",
+    "islem": "(x − 1)(x + 8) = (x + 3)(x + 2)"
+   },
+   {
+    "baslik": "Çarpımları aç",
+    "aciklama": "x² terimleri iki yanda da var.",
+    "islem": "x² + 7x − 8 = x² + 5x + 6"
+   },
+   {
+    "baslik": "x²’leri sadeleştir",
+    "aciklama": "Kalan birinci derece denklemdir.",
+    "islem": "2x = 14 → x = 7"
+   }
+  ],
+  "puf": "İki yanda aynı x² görünüyorsa çarpımları açınca birbirini götürür; denklem birinci dereceye iner.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-05 (oranlı denklem) · iki kesrin eşitliği, x² sadeleşir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Özdeşlik",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Denklemin her x için sağlanması koşulundan parametreleri bulur.",
+  "tipId": "dkb-kume",
+  "tip": "Çözüm kümesi boş / sonsuz ve parametre",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a ve b gerçel sayılardır.\n(3a − 2)x + 2b + 1 = 10x − 5\neşitliği her x gerçel sayısı için sağlandığına göre a · b çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−50",
+   "B": "−12",
+   "C": "−8",
+   "D": "1",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "−12"
+  },
+  "celdiriciler": {
+   "A": "Katsayıları doğrudan a = 10, b = −5 almış; 3a − 2 = 10 ve 2b + 1 = −5 çözülmeli.",
+   "C": "2b = −5 + 1 = −4 yazıp b = −2 bulmuş; 1 karşıya −1 geçer.",
+   "D": "a + b toplamını vermiş.",
+   "E": "2b = −5 − 1 = −6’yı b = 3 yazmış; işareti kaçırmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "a · b çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Her x için sağlanan denklem",
+    "ifade": "p·x + q = r·x + s eşitliği her x için doğruysa x’in katsayıları ve sabitler ayrı ayrı eşittir: p = r ve q = s. Örnek: (a + 1)x + 3 = 5x + 3 her x için doğruysa a + 1 = 5"
+   }
+  ],
+  "ipuclari": [
+   "Eşitlik x’in hangi değerleri için sağlanmalı? İki yanı karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katsayıları eşitle",
+    "aciklama": "x’li terimler.",
+    "islem": "3a − 2 = 10 → a = 4"
+   },
+   {
+    "baslik": "Sabitleri eşitle",
+    "aciklama": "Sabit terimler.",
+    "islem": "2b + 1 = −5 → b = −3"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İstenen çarpım.",
+    "islem": "a × b = 4 × (−3) = −12"
+   }
+  ],
+  "puf": "“Her x için sağlanır” ifadesi katsayıların ve sabitlerin ayrı ayrı eşit olması demektir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-02 (çözüm kümesi, parametre) · her x için sağlanır, çarpım istenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Çözüm Kümesi Yorumu",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "a·x = b biçimindeki denklemin çözüm kümesini katsayı ve sabite göre yorumlar.",
+  "tipId": "dkb-kume",
+  "tip": "Çözüm kümesi boş / sonsuz ve parametre",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "a ve b gerçel sayılar olmak üzere, x’e bağlı\n(a − 2)x = b + 1\ndenklemi veriliyor.\nBuna göre,\nI. a = 2 ise çözüm kümesi boş kümedir.\nII. b = −1 ise çözüm kümesi gerçel sayılardır.\nIII. a ≠ 2 ise çözüm kümesi tek elemanlıdır.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız III"
+  },
+  "celdiriciler": {
+   "A": "a = 2 iken b’ye bakmadan boş küme sanmış; III’ü de işaretlememiş.",
+   "C": "a = 2 iken b’ye, b = −1 iken a’ya bakmadan ikisinin de geçerli olduğunu sanmış; (a = 2, b = −1) özel durumunu görmemiş.",
+   "D": "II’yi doğru sanmış; b = −1 iken a ≠ 2 ise tek çözüm vardır.",
+   "E": "I ve II’deki özel durumları (b’nin değeri, a’nın değeri) sınamadan hepsini doğru sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan öncüllerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "p·x = q denkleminin çözüm kümesi",
+    "ifade": "p ≠ 0 ise tek çözüm x = q/p; p = 0 ve q ≠ 0 ise çözüm yok (boş küme); p = 0 ve q = 0 ise her gerçel sayı çözümdür. Örnek: 0·x = 5 → boş küme · 0·x = 0 → ℝ"
+   }
+  ],
+  "ipuclari": [
+   "Her öncül için a ve b’ye uygun örnek değerler verip denklemi çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "a ≠ 2 durumu",
+    "aciklama": "Katsayı sıfırdan farklı; x = (b + 1)/(a − 2) tek değerdir.",
+    "islem": "III doğru"
+   },
+   {
+    "baslik": "a = 2 durumu",
+    "aciklama": "Denklem 0·x = b + 1 olur; b + 1 ≠ 0 ise boş küme, b + 1 = 0 ise ℝ.",
+    "islem": "I kesin değil (b = −1 iken ℝ)"
+   },
+   {
+    "baslik": "b = −1 durumu",
+    "aciklama": "Denklem (a − 2)x = 0; a ≠ 2 iken x = 0 tek çözüm.",
+    "islem": "II kesin değil"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız III her durumda doğrudur.",
+    "islem": "Yalnız III"
+   }
+  ],
+  "puf": "a·x = b denkleminde önce a’nın sıfır olup olmadığına, sonra b’ye bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-02 (çözüm kümesi, parametre) · öncüllü: a = 2 ve a ≠ 2 durumları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Denklem Kurma",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Biletler arasındaki fiyat farkını kullanarak toplam ödemeden bilet fiyatını bulur.",
+  "tipId": "dkb-kurma",
+  "tip": "Denklem kurma: fiyat, bilet, yol",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir konser salonunda tam bilet, öğrenci biletinden 20 TL daha pahalıdır.\nBir grup, 5 tam bilet ve 3 öğrenci bileti için toplam 740 TL ödemiştir.\nBuna göre bir tam biletin fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "80",
+   "B": "92,5",
+   "C": "100",
+   "D": "110",
+   "E": "148"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Öğrenci biletinin fiyatını bulup durmuş.",
+   "B": "20 TL farkı hiç kullanmayıp 740’ı 8’e bölmüş.",
+   "D": "20 TL farkı 5 bilet için yalnız bir kez eklemiş; öğrenci 90 çıkmış, tam bileti 110 bulmuş.",
+   "E": "740’ı yalnız tam bilet sayısına (5) bölmüş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Bir tam biletin fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Denklem kurma",
+    "ifade": "soruda bilinmeyen bir harfle gösterilir, verilen koşullar eşitlik olarak yazılır ve çözülür. Örnek: bir sayının 3 katının 4 fazlası 19 ise 3x + 4 = 19, x = 5"
+   }
+  ],
+  "ipuclari": [
+   "Öğrenci biletinin fiyatına x de; tam biletin fiyatını x cinsinden yaz ve toplam ödemeyi kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinmeyeni seç",
+    "aciklama": "Öğrenci bileti x TL ise tam bilet x + 20 TL.",
+    "islem": "tam = x + 20"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "5 tam + 3 öğrenci = 740.",
+    "islem": "5(x + 20) + 3x = 740 → 8x + 100 = 740"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Çöz.",
+    "islem": "8x = 640 → x = 80"
+   },
+   {
+    "baslik": "Tam bileti yaz",
+    "aciklama": "Sorulan tam biletin fiyatı.",
+    "islem": "80 + 20 = 100 TL"
+   }
+  ],
+  "puf": "Farkı bilinen iki fiyattan küçüğünü bilinmeyen seç; sorulan fiyatı çözümün sonunda ayrıca hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-06 (denklem kurma) · fark bilgisiyle fiyat denklemi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Tanımlı İşlem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Tanımlı işlemle kurulan denklemden bilinmeyeni bulup işlemi tekrar uygular.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılar kümesinde bir △ işlemi\na △ b = 3a − b + 2\nbiçiminde tanımlanıyor.\n(x △ 2) = (6 △ x)\neşitliğini sağlayan x için x △ x işleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "8",
+   "C": "10",
+   "D": "12",
+   "E": "17"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Denklemi çözüp x’i bulmuş; x △ x işlemini yapmamış.",
+   "B": "x △ x’i 3x − x − 2 yazmış; +2 sabit terimdir.",
+   "C": "6 △ x = 18 − x − 2 yazıp x = 4 bulmuş; x △ x = 3 × 4 − 4 + 2 = 10.",
+   "E": "x △ x’te −x terimini unutup 3x + 2 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "x △ x işleminin sonucu.",
+  "bilgi": [
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "işlem sembolü soruda verilen kurala göre uygulanır; parantez içi önce yapılır. Örnek: a ⊗ b = a + 2b ise 3 ⊗ 4 = 3 + 8 = 11, (1 ⊗ 2) ⊗ 3 = 5 ⊗ 3 = 11"
+   }
+  ],
+  "ipuclari": [
+   "Her iki △ işlemini tanıma göre yaz: ilk sayı 3 ile çarpılır, ikinci sayı çıkarılır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İşlemleri yaz",
+    "aciklama": "Sol: a = x, b = 2. Sağ: a = 6, b = x.",
+    "islem": "x △ 2 = 3x − 2 + 2 = 3x · 6 △ x = 18 − x + 2 = 20 − x"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "İki yanı eşitle.",
+    "islem": "3x = 20 − x → x = 5"
+   },
+   {
+    "baslik": "x △ x’i hesapla",
+    "aciklama": "a = b = 5.",
+    "islem": "3 × 5 − 5 + 2 = 12"
+   }
+  ],
+  "puf": "Tanımlı işlemde sayıları kuraldaki yerlerine koy; sıra değişirse sonuç da değişir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (tanımlı işlem) · iki yanda işlem, sonra x △ x",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Makine Sorusu",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Ardışık iki makinenin kuralını birleştirip çıktıdan girdiyi bulur.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Birinci makine girdiği sayıyı 2 ile çarpıp 3 ekler.\nİkinci makine girdiği sayıyı 3 ile çarpıp 5 çıkarır.\nBir x sayısı önce birinci, çıkan sonuç ikinci makineye girildiğinde son çıktı 40 oluyor.\nBuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "7",
+   "C": "12",
+   "D": "15",
+   "E": "18,5"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "B": "3(2x + 3) − 5’te 3’ü yalnız 2x ile çarpıp 6x + 3 − 5 yazmış.",
+   "C": "2x = 12’de 2’ye bölmeyi unutmuş.",
+   "D": "Birinci makinenin çıktısını (15) x sanmış.",
+   "E": "Yalnız birinci makineyi geri alıp 40’tan (40 − 3) ÷ 2 hesaplamış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Girilen x sayısı.",
+  "bilgi": [
+   {
+    "ad": "Makine kuralı",
+    "ifade": "makine girdiye kuralını uygular; iki makine ardışıksa birinin çıktısı diğerinin girdisidir. Örnek: kural n → 2n + 1 ise girdi 3 için çıktı 7, bu çıktı yine girilirse 15 olur"
+   }
+  ],
+  "ipuclari": [
+   "Birinci makinenin çıktısını 2x + 3 olarak yaz; bu ifade ikinci makineye girer."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çıktıyı yaz",
+    "aciklama": "Birinci makine: 2x + 3. İkinci makine bunu 3 ile çarpıp 5 çıkarır.",
+    "islem": "3(2x + 3) − 5 = 40"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Önce 5’i karşıya geçir.",
+    "islem": "3(2x + 3) = 45 → 2x + 3 = 15"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Ters işlemlerle.",
+    "islem": "2x = 12 → x = 6"
+   }
+  ],
+  "puf": "İç içe makinelerde çıktıyı ifade olarak ikinci makineye ver; sonra sondan başa ters işlem yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (makine) · iki makine, çıktıdan girdi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · İşlem Hatası",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Öğrencinin dağılma hatasını bulup doğru çözümle hatalı çözümü karşılaştırır.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Ayşe,\n5(x − 2) = 3x + 8\ndenklemini çözerken 5’i yalnız x ile çarpıp −2 ile çarpmayı unutuyor ve bu yüzden hatalı bir çözüm buluyor.\nBuna göre doğru çözümün, Ayşe’nin bulduğu hatalı çözümden farkı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "9",
+   "D": "14",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "E": "Doğru denklemde 2x = 18’i 2’ye bölmeden yazmış.",
+   "B": "Yalnız Ayşe’nin hatalı çözümünü bulup durmuş.",
+   "C": "Yalnız doğru çözümü bulup farkı almamış.",
+   "D": "İki çözümü toplamış (5 + 9)."
+  },
+  "celTur": {
+   "E": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru çözüm − hatalı çözüm.",
+  "bilgi": [
+   {
+    "ad": "Dağılma ve işaret",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır; önünde eksi varsa tüm terimlerin işareti değişir. Örnek: −2(3 − x) = −6 + 2x"
+   }
+  ],
+  "ipuclari": [
+   "Önce Ayşe’nin hatalı denklemini yaz ve çöz; sonra doğru denklemi çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hatalı çözüm",
+    "aciklama": "5x − 2 = 3x + 8.",
+    "islem": "2x = 10 → x = 5"
+   },
+   {
+    "baslik": "Doğru çözüm",
+    "aciklama": "5x − 10 = 3x + 8.",
+    "islem": "2x = 18 → x = 9"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "Doğru çözümden hatalı çözümü çıkar.",
+    "islem": "9 − 5 = 4"
+   }
+  ],
+  "puf": "Hatalı çözümü de kuralıyla yeniden kur; iki çözümü ayrı ayrı bulduktan sonra istenen işlemi yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (işlem hatası) · parantez açarken eksik çarpma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Sistemde Sonsuz Çözüm",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "İki bilinmeyenli sistemin sonsuz çözümlü olması koşulundan parametreleri bulur.",
+  "tipId": "dkb-kume",
+  "tip": "Çözüm kümesi boş / sonsuz ve parametre",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a ve b gerçel sayılardır.\n2x + 3y = 7\n4x + ay = b\ndenklem sisteminin çözüm kümesi sonsuz elemanlı olduğuna göre a + b toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "13",
+   "B": "14",
+   "C": "17",
+   "D": "20",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "E": "İkinci denklemi birincinin 4 katı sanmış: a = 12, b = 28.",
+   "A": "b’yi bulurken 7’yi çarpmamış: b = 7 yazmış.",
+   "B": "Yalnız b’yi bulmuş.",
+   "C": "a’yı bulurken 3’ü 2 ile çarpmayıp a = 3 yazmış."
+  },
+  "celTur": {
+   "E": "bilgi",
+   "A": "islem",
+   "B": "dikkat",
+   "C": "bilgi"
+  },
+  "istenen": "a + b toplamı.",
+  "bilgi": [
+   {
+    "ad": "Sistemin çözümü",
+    "ifade": "p·x + q·y = r ve s·x + t·y = u sisteminde p/s = q/t = r/u ise sonsuz çözüm; p/s = q/t ≠ r/u ise çözüm yoktur. Örnek: x + y = 2 ve 2x + 2y = 4 sonsuz çözümlüdür"
+   }
+  ],
+  "ipuclari": [
+   "İkinci denklemin x’li terimi birincininkinden nasıl elde edilir? Diğer terimler de aynı değişimi yaşamalı mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katı bul",
+    "aciklama": "x’in katsayısı 2’den 4’e çıkıyor.",
+    "islem": "İkinci denklem = 2 × birinci"
+   },
+   {
+    "baslik": "a ve b’yi bul",
+    "aciklama": "Diğer terimleri 2 ile çarp.",
+    "islem": "a = 2 × 3 = 6 · b = 2 × 7 = 14"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İstenen toplam.",
+    "islem": "6 + 14 = 20"
+   }
+  ],
+  "puf": "Sistem sonsuz çözümlüyse iki denklem aynı doğrudur: biri diğerinin katıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-02 (çözüm kümesi, parametre) · sistemde sonsuz çözüm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Paydalı Denklem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Üç farklı paydalı terimi EKOK ile eşitleyip parantezleri açarak denklemi çözer.",
+  "tipId": "dkb-birinci",
+  "tip": "Birinci dereceden denklem: paydalı ve parantezli",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "(2x − 1)/3 − (x + 4)/6 = (3x − 10)/4\ndenklemini sağlayan x değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−6",
+   "B": "6",
+   "C": "7",
+   "D": "9",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "6x − 12 = 9x − 30’da 3x = −18 yazıp x = −6 bulmuş.",
+   "C": "4(2x − 1)’i 8x − 1 açmış; 4, −1 ile de çarpılmalı.",
+   "D": "3x = 18’i 2’ye bölmüş; x’in katsayısı 3’tür.",
+   "E": "3x = 18’de 3’e bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Denklemi sağlayan x değeri.",
+  "bilgi": [
+   {
+    "ad": "Paydaları eşitleme",
+    "ifade": "denklemin her iki tarafı paydaların EKOK’u ile çarpılır; sabit terimler de çarpılmayı unutmamalıdır. Örnek: x/2 + 1/3 = 2 için 6 ile çarp: 3x + 2 = 12"
+   },
+   {
+    "ad": "Dağılma ve işaret",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır; önünde eksi varsa tüm terimlerin işareti değişir. Örnek: −2(3 − x) = −6 + 2x"
+   }
+  ],
+  "ipuclari": [
+   "Paydaların en küçük ortak katıyla her kesri çarp; ikinci kesrin önündeki eksi işaretini koru."
+  ],
+  "adimlar": [
+   {
+    "baslik": "EKOK’u bul",
+    "aciklama": "3, 6 ve 4’ün EKOK’u 12.",
+    "islem": "12 ile çarp"
+   },
+   {
+    "baslik": "Kesirleri kaldır",
+    "aciklama": "Her payı ilgili çarpanla çarp.",
+    "islem": "4(2x − 1) − 2(x + 4) = 3(3x − 10)"
+   },
+   {
+    "baslik": "Parantezleri aç",
+    "aciklama": "Eksi işaretini dağıt.",
+    "islem": "8x − 4 − 2x − 8 = 9x − 30"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Benzer terimleri topla.",
+    "islem": "6x − 12 = 9x − 30"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "x’leri tek yana topla.",
+    "islem": "−3x = −18 → x = 6"
+   }
+  ],
+  "puf": "Eksi işaretli kesirde payın tamamı parantez içinde düşünülmeli; EKOK ile çarpınca eksi işaret parantezin önünde kalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-01 (birinci dereceden denklem) · üç farklı payda, eksi işaretli kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Boş ve Sonsuz Çözüm",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "a² − 1 katsayılı denklemde çözüm kümesinin ℝ ve boş küme olduğu a değerlerini ayrı ayrı bulur.",
+  "tipId": "dkb-kume",
+  "tip": "Çözüm kümesi boş / sonsuz ve parametre",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "a bir gerçel sayı olmak üzere, x’e bağlı\n(a² − 1)x = a² + 3a + 2\ndenkleminin çözüm kümesi, a = k için gerçel sayıların tamamı, a = m için boş kümedir.\nBuna göre k − 2m kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−3",
+   "B": "−2",
+   "C": "−1",
+   "D": "1",
+   "E": "3"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−3"
+  },
+  "celdiriciler": {
+   "B": "2m yerine m’yi çıkarıp k − m hesaplamış.",
+   "C": "k − 2m yerine k · m çarpımını hesaplamış: (−1) × 1 = −1.",
+   "D": "k − 2m yerine k + 2m yazmış: −1 + 2 = 1.",
+   "E": "k ile m’yi karıştırıp m − 2k hesaplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "k − 2m değeri.",
+  "bilgi": [
+   {
+    "ad": "p·x = q denkleminin çözüm kümesi",
+    "ifade": "p ≠ 0 ise tek çözüm x = q/p; p = 0 ve q ≠ 0 ise çözüm yok (boş küme); p = 0 ve q = 0 ise her gerçel sayı çözümdür. Örnek: 0·x = 5 → boş küme · 0·x = 0 → ℝ"
+   }
+  ],
+  "ipuclari": [
+   "a² − 1 hangi a değerlerinde sıfır olur? Bu değerleri denkleme geri koyup ne olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katsayıyı sıfırla",
+    "aciklama": "a² − 1 = 0 için iki aday vardır.",
+    "islem": "a = 1 ya da a = −1"
+   },
+   {
+    "baslik": "a = 1 için bak",
+    "aciklama": "Sağ taraf 1 + 3 + 2 = 6.",
+    "islem": "0·x = 6 → boş küme, m = 1"
+   },
+   {
+    "baslik": "a = −1 için bak",
+    "aciklama": "Sağ taraf 1 − 3 + 2 = 0.",
+    "islem": "0·x = 0 → ℝ, k = −1"
+   },
+   {
+    "baslik": "İfadeyi hesapla",
+    "aciklama": "k − 2m.",
+    "islem": "−1 − 2 × 1 = −3"
+   }
+  ],
+  "puf": "Katsayı sıfır olduğunda çözüm sayısını sağ taraf belirler: sağ taraf 0 ise sonsuz, 0’dan farklıysa yok.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-02 (çözüm kümesi, parametre) · katsayı sıfırken sabite bakma, iki ayrı durum",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Tanımlı İşlem",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "İç içe tanımlı işlemden kurulan birinci dereceden denklemi çözer.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılar kümesinde bir ⊕ işlemi\na ⊕ b = 2a + b − 3\nbiçiminde tanımlanıyor.\n(x ⊕ 2) ⊕ x = 15\neşitliğini sağlayan x değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "2,8",
+   "C": "3",
+   "D": "3,8",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "5x − 5 = 15’i 5x = 10 yazıp x = 2 bulmuş.",
+   "B": "x ⊕ 2’yi 2x + 2 yazmış; −3’ü unutmuş.",
+   "C": "5x = 15 yazıp −5’i hesaba katmamış.",
+   "D": "2(2x − 1)’i 4x − 1 açmış; 2, −1 ile de çarpılmalı."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "işlem sembolü soruda verilen kurala göre uygulanır; parantez içi önce yapılır. Örnek: a ⊗ b = a + 2b ise 3 ⊗ 4 = 3 + 8 = 11, (1 ⊗ 2) ⊗ 3 = 5 ⊗ 3 = 11"
+   }
+  ],
+  "ipuclari": [
+   "Önce parantez içindeki x ⊕ 2’yi x cinsinden yaz; sonra bu ifadeyi ilk sayı yerine koy."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İç işlemi yap",
+    "aciklama": "a = x, b = 2.",
+    "islem": "x ⊕ 2 = 2x + 2 − 3 = 2x − 1"
+   },
+   {
+    "baslik": "Dış işlemi yaz",
+    "aciklama": "a = 2x − 1, b = x.",
+    "islem": "(2x − 1) ⊕ x = 2(2x − 1) + x − 3"
+   },
+   {
+    "baslik": "Aç ve topla",
+    "aciklama": "Parantezi aç.",
+    "islem": "4x − 2 + x − 3 = 5x − 5"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Denklemi kur.",
+    "islem": "5x − 5 = 15 → x = 4"
+   }
+  ],
+  "puf": "İç içe tanımlı işlemde önce parantezi bir ifadeye çevir, sonra onu dış işlemde ilgili yere koy.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (tanımlı işlem) · iç içe işlem, parantezli denklem",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Makine Sorusu",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Aynı makineden iki kez geçen sayıyı ifade olarak yazıp denklemi çözer.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir makine girdiği sayıyı 3 ile çarpıp 2 çıkarmaktadır.\nMakineye bir x sayısı girilmiş, çıkan sonuç aynı makineye yeniden girilmiştir. Bu ikinci çıktı, x’in 5 katının 4 fazlasına eşit olmuştur.\nBuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−3",
+   "B": "−1",
+   "C": "2",
+   "D": "3",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "Makineden yalnız bir kez geçirip 3x − 2 = 5x + 4 yazmış.",
+   "B": "9x − 8 = 5x + 4’te 4x = 4 − 8 = −4 yazıp x = −1 bulmuş.",
+   "C": "3(3x − 2) − 2’yi 9x − 2 − 2 yazmış; 3, −2 ile de çarpılmalı.",
+   "E": "4x = 12’de 4’e bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "Makine kuralı",
+    "ifade": "makine girdiye kuralını uygular; iki makine ardışıksa birinin çıktısı diğerinin girdisidir. Örnek: kural n → 2n + 1 ise girdi 3 için çıktı 7, bu çıktı yine girilirse 15 olur"
+   },
+   {
+    "ad": "Dağılma ve işaret",
+    "ifade": "parantezin önündeki sayı içerideki her terimle çarpılır; önünde eksi varsa tüm terimlerin işareti değişir. Örnek: −2(3 − x) = −6 + 2x"
+   }
+  ],
+  "ipuclari": [
+   "İlk çıktıyı x cinsinden yaz; bu ifadeye makinenin kuralını bir kez daha uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk çıktı",
+    "aciklama": "x girince 3x − 2 çıkar.",
+    "islem": "3x − 2"
+   },
+   {
+    "baslik": "İkinci çıktı",
+    "aciklama": "3x − 2 ifadesini yeniden makineye ver.",
+    "islem": "3(3x − 2) − 2 = 9x − 8"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "İkinci çıktıyı 5x + 4’e eşitle.",
+    "islem": "9x − 8 = 5x + 4"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "x’leri sola topla.",
+    "islem": "4x = 12 → x = 3"
+   }
+  ],
+  "puf": "Makineyi iki kez uygulamak, kuralı ifadenin tamamına ikinci kez uygulamaktır; parantezi unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (makine) · aynı makineden iki geçiş, iki yanda x",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Sistem Kurma",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "İki tür ürünün fiyatından sistem kurup yok etme yöntemiyle istenen toplam tutarı bulur.",
+  "tipId": "dkb-sistem",
+  "tip": "İki bilinmeyenli denklem sistemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir lokantada pizzaların tümü aynı fiyatlı, içeceklerin tümü aynı fiyatlıdır.\n2 pizza ile 3 içecek 330 TL, 3 pizza ile 1 içecek 320 TL’dir.\nBuna göre 4 pizza ile 5 içeceğin toplam fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "560",
+   "B": "610",
+   "C": "650",
+   "D": "760",
+   "E": "1110"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "610"
+  },
+  "celdiriciler": {
+   "A": "5 içecek yerine 4 içecek (4 × 90 + 4 × 50) hesaplamış.",
+   "C": "İki denklemi toplayıp 5 pizza + 4 içecek = 650’yi istenen sipariş sanmış.",
+   "D": "3i = 330 − 90 = 240 yazıp i = 80 bulmuş (2p yerine p çıkarmış); 4 × 90 + 5 × 80 = 760.",
+   "E": "3i = 150’yi 3’e bölmeden i = 150 almış; 4 × 90 + 5 × 150 = 1110."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "4 pizza ile 5 içeceğin toplam fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Denklem sistemi",
+    "ifade": "iki denklem taraf tarafa toplanır ya da çıkarılarak bir bilinmeyen yok edilir. Örnek: x + y = 5 ve x − y = 1 toplanırsa 2x = 6, x = 3, y = 2"
+   }
+  ],
+  "ipuclari": [
+   "İçecek sayılarını eşitlemek için hangi denklemi kaç ile çarpabilirsin?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sistemi kur",
+    "aciklama": "Pizza p, içecek i olsun.",
+    "islem": "2p + 3i = 330 · 3p + i = 320"
+   },
+   {
+    "baslik": "i’yi yok et",
+    "aciklama": "İkinci denklemi 3 ile çarp.",
+    "islem": "9p + 3i = 960"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Birinci denklemi çıkar.",
+    "islem": "7p = 630 → p = 90"
+   },
+   {
+    "baslik": "i’yi bul",
+    "aciklama": "Birinci denklemde yerine yaz.",
+    "islem": "180 + 3i = 330 → i = 50"
+   },
+   {
+    "baslik": "İstenen toplam",
+    "aciklama": "4 pizza + 5 içecek.",
+    "islem": "4 × 90 + 5 × 50 = 360 + 250 = 610 TL"
+   }
+  ],
+  "puf": "Fiyat sistemlerinde önce her ürünün fiyatını bul, sonra sorulan siparişi hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-03 (iki bilinmeyenli sistem) · fiyat sistemi, farklı adette sipariş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · İşlem Hatası",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Denklemin sağ tarafını EKOK ile çarpmayı unutan öğrencinin hatalı ve doğru çözümünü karşılaştırır.",
+  "tipId": "dkb-islem",
+  "tip": "Tanımlı işlem, makine, işlem hatası",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Mert,\n(2x + 1)/3 − (x − 2)/2 = 3\ndenklemini çözerken paydaları eşitlemek için iki tarafı 6 ile çarpıyor; ancak sağ taraftaki 3’ü 6 ile çarpmayı unutuyor ve hatalı bir çözüm buluyor.\nBuna göre doğru çözüm, Mert’in bulduğu hatalı çözümün kaç katıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−2",
+   "B": "−0,5",
+   "C": "2",
+   "D": "5",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−2"
+  },
+  "celdiriciler": {
+   "B": "Oranı ters kurup hatalı çözümü doğru çözüme bölmüş.",
+   "C": "Katı −2 yerine işaretsiz (2) yazmış; çözümler zıt işaretlidir.",
+   "D": "Doğru ve hatalı çözümü toplamış (10 + (−5)).",
+   "E": "Kat yerine farkı (10 − (−5)) hesaplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru çözüm ÷ hatalı çözüm.",
+  "bilgi": [
+   {
+    "ad": "Paydaları eşitleme",
+    "ifade": "denklemin her iki tarafı paydaların EKOK’u ile çarpılır; sabit terimler de çarpılmayı unutmamalıdır. Örnek: x/2 + 1/3 = 2 için 6 ile çarp: 3x + 2 = 12"
+   },
+   {
+    "ad": "Denklemin her iki yanına aynı işlem",
+    "ifade": "bir denklemin iki yanı da aynı sayıyla çarpılır ya da bölünürse eşitlik bozulmaz; hata, bir terimi atlamaktan doğar. Örnek: x/2 + 1 = 3 için 2 ile çarp: x + 2 = 6"
+   }
+  ],
+  "ipuclari": [
+   "Önce Mert’in hatalı denklemini kurup çöz; sonra sağ taraf da 6 ile çarpılmış doğru denklemi çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hatalı denklem",
+    "aciklama": "Sağ taraf 3 kalmış.",
+    "islem": "2(2x + 1) − 3(x − 2) = 3 → x + 8 = 3"
+   },
+   {
+    "baslik": "Hatalı çözüm",
+    "aciklama": "x’i bul.",
+    "islem": "x = −5"
+   },
+   {
+    "baslik": "Doğru denklem",
+    "aciklama": "Sağ taraf 3 × 6 = 18 olmalı.",
+    "islem": "x + 8 = 18 → x = 10"
+   },
+   {
+    "baslik": "Oranla",
+    "aciklama": "Doğru çözümü hatalı çözüme böl.",
+    "islem": "10 ÷ (−5) = −2"
+   }
+  ],
+  "puf": "Hatalı çözümü ve doğru çözümü ayrı ayrı bul; soru kat, fark ya da toplam istiyorsa ancak ondan sonra işlem yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-07 (işlem hatası) · EKOK ile çarparken sağ tarafı atlama",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-denklemiki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Denklem Çözme · Oranlı Denklem Yorumu",
+  "k": "mat|Denklem Çözme",
+  "kazanim": "Oranlı denklemi sadeleştirip x ile y arasındaki ilişkiyi öncüllerde sınar.",
+  "tipId": "dkb-oran",
+  "tip": "Oranlı denklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "x ve y, x ≠ y olan gerçel sayılardır.\n(x + y)/(x − y) = 5/3\nolduğuna göre,\nI. x = 4y’dir.\nII. x ve y pozitif tam sayı ise x + y toplamı 5’in katıdır.\nIII. x · y = 36 ise x + y = 15’tir.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’de x = 4y yazınca x + y = 5y olduğunu görmemiş.",
+   "B": "I’i sınamamış; içler dışlar çarpımından x = 4y çıktığını görmemiş.",
+   "D": "III’te y = 3, x = 12 bulup y = −3, x = −12 durumunu unutmuş; o durumda x + y = −15’tir.",
+   "E": "I’i yanlış sanmış; III’te de y’nin negatif değerini unutmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan öncüllerin hangileri olduğu.",
+  "bilgi": [
+   {
+    "ad": "İçler dışlar çarpımı",
+    "ifade": "a/b = c/d ise a·d = b·c. Örnek: 3/x = 6/4 ise 6x = 12, x = 2. Paydalar sıfır olamaz"
+   }
+  ],
+  "ipuclari": [
+   "İçler dışlar çarpımıyla x ile y arasındaki ilişkiyi bul; her öncülü bu ilişkiyle sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İçler dışlar",
+    "aciklama": "Paydalar sıfırdan farklı (x ≠ y).",
+    "islem": "3(x + y) = 5(x − y)"
+   },
+   {
+    "baslik": "İlişkiyi bul",
+    "aciklama": "Parantezleri aç, x ve y’yi ayır.",
+    "islem": "3x + 3y = 5x − 5y → 8y = 2x → x = 4y"
+   },
+   {
+    "baslik": "I ve II’yi sına",
+    "aciklama": "I doğru. II’de x + y = 5y, y tam sayı olduğundan 5’in katı.",
+    "islem": "I doğru · II doğru"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "x · y = 4y² = 36 → y = 3 ya da y = −3. İkincisinde x + y = −15.",
+    "islem": "III kesin değil"
+   }
+  ],
+  "puf": "Oranlı denklemden çıkan ilişkiyi öncüllere yerleştir; kare alınan durumlarda negatif kökü de düşün.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-DNKB-05 (oranlı denklem) · öncüllü: x = 4y ilişkisi ve işaret tuzağı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

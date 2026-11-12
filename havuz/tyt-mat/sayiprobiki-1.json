@@ -1,0 +1,2600 @@
+[
+ {
+  "id": "tytmat-sayiprobiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sözel İfade",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Sözel olarak verilen iki ifadeyi eşitleyerek bilinmeyen sayıyı bulur.",
+  "tipId": "spb-sozel",
+  "tip": "Sözel ifadeyi denkleme çevirme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Bir sayının 3 katının 7 eksiği, bu sayının 2 katının 5 fazlasına eşittir.\nBuna göre bu sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "19",
+   "C": "24",
+   "D": "29",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "Sayının 7 fazlasını (12 + 7) yazmış.",
+   "C": "Sayıyı değil, sayının 2 katını vermiş.",
+   "D": "Eşit oldukları değeri (3x − 7) vermiş; sayıyı sormuyor.",
+   "E": "Sayıyı değil, sayının 3 katını vermiş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Sayının kendisi.",
+  "bilgi": [
+   {
+    "ad": "Sözel ifadeyi denkleme çevirme",
+    "ifade": "“x’in 3 katının 5 fazlası” 3x + 5, “x’in 3 katından 5 eksiği” 3x − 5, “x’in 5 fazlasının 3 katı” 3(x + 5) demektir. Örnek: “bir sayının 2 katının 4 eksiği 10” ise 2x − 4 = 10, x = 7"
+   }
+  ],
+  "ipuclari": [
+   "Sayıya x de ve iki ifadeyi ayrı ayrı yaz; “eksiği” ve “fazlası” ifadelerinin işaretine dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İfadeleri yaz",
+    "aciklama": "Sayıya x denirse.",
+    "islem": "3x − 7 = 2x + 5"
+   },
+   {
+    "baslik": "x’i yalnız bırak",
+    "aciklama": "Bilinmeyenleri bir tarafa topla.",
+    "islem": "3x − 2x = 5 + 7 → x = 12"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İki yanı hesapla.",
+    "islem": "3·12 − 7 = 29 = 2·12 + 5 ✓"
+   }
+  ],
+  "puf": "“Fazlası” toplama, “eksiği” çıkarma, “katı” çarpma demektir; iki ifadeyi eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-01 (sözel ifade → denklem · katı, eksiği, fazlası)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sözel İfade",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Sözel ifadedeki işlem sırasını koruyarak denklem kurar ve çözer.",
+  "tipId": "spb-sozel",
+  "tip": "Sözel ifadeyi denkleme çevirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir sayının 5 katından 8 çıkarılıp sonuç 3’e bölündüğünde, bu sayının 2 fazlası elde ediliyor.\nBuna göre bu sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "2,5",
+   "C": "7",
+   "D": "9",
+   "E": "23"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "B": "3’e bölmeyi unutup 5x − 8 = x + 2 yazmış: 4x = 10.",
+   "E": "Bölmeyi 8’i çıkarmadan önce yapmış: 5(x − 8) = 3(x + 2).",
+   "A": "“2 fazlası” yerine “2 eksiği”ni almış: 5x − 8 = 3(x − 2).",
+   "D": "Sayıyı değil, elde edilen sonucu (x + 2) vermiş."
+  },
+  "celTur": {
+   "B": "islem",
+   "E": "dikkat",
+   "A": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Sayının kendisi.",
+  "bilgi": [
+   {
+    "ad": "Sözel ifadeyi denkleme çevirme",
+    "ifade": "“x’in 3 katının 5 fazlası” 3x + 5, “x’in 3 katından 5 eksiği” 3x − 5, “x’in 5 fazlasının 3 katı” 3(x + 5) demektir. Örnek: “bir sayının 2 katının 4 eksiği 10” ise 2x − 4 = 10, x = 7"
+   }
+  ],
+  "ipuclari": [
+   "İşlem sırasını sözdeki sıraya göre yaz; bölme işleminden sonra elde edilen değerin neye eşit olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Sayıya x denirse.",
+    "islem": "(5x − 8) ÷ 3 = x + 2"
+   },
+   {
+    "baslik": "Paydadan kurtul",
+    "aciklama": "İki yanı 3 ile çarp.",
+    "islem": "5x − 8 = 3x + 6"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Bilinmeyenleri topla.",
+    "islem": "2x = 14 → x = 7"
+   }
+  ],
+  "puf": "Sözde verilen işlem sırasını bozmadan yaz; bölme varsa iki tarafı bölenle çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-01 (sözel ifade → denklem · çıkarıp bölme)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sözel İfade",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplamı ve bir katlar ilişkisi verilen iki sayıyı bulur.",
+  "tipId": "spb-sozel",
+  "tip": "Sözel ifadeyi denkleme çevirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Toplamları 52 olan iki pozitif tam sayıdan büyüğünün 2 katı, küçüğünün 3 katından 24 fazladır.\nBuna göre bu sayıların büyüğü kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "20",
+   "C": "28",
+   "D": "32",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "Büyük sayı yerine küçük sayıyı bulmuş.",
+   "B": "Sayıların farkını (36 − 16) vermiş.",
+   "D": "Küçük sayının 2 katını (2 · 16) vermiş.",
+   "C": "Toplamdan 24 çıkarıp (52 − 24) cevap sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "C": "bilgi"
+  },
+  "istenen": "Büyük sayı.",
+  "bilgi": [
+   {
+    "ad": "Sözel ifadeyi denkleme çevirme",
+    "ifade": "“x’in 3 katının 5 fazlası” 3x + 5, “x’in 3 katından 5 eksiği” 3x − 5, “x’in 5 fazlasının 3 katı” 3(x + 5) demektir. Örnek: “bir sayının 2 katının 4 eksiği 10” ise 2x − 4 = 10, x = 7"
+   }
+  ],
+  "ipuclari": [
+   "Küçüğe b, büyüğe 52 − b de ve “2 katı, 3 katından 24 fazla” ifadesini bu iki terimle yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Küçük sayı b, büyük sayı 52 − b.",
+    "islem": "2(52 − b) = 3b + 24"
+   },
+   {
+    "baslik": "b’yi bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "104 − 2b = 3b + 24 → 5b = 80 → b = 16"
+   },
+   {
+    "baslik": "Büyüğü bul",
+    "aciklama": "Toplamdan küçüğü çıkar.",
+    "islem": "52 − 16 = 36"
+   }
+  ],
+  "puf": "İki sayının toplamı verilmişse birine x, diğerine toplam − x de; tek bilinmeyenli denklem elde edilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-01 (sözel ifade → denklem · iki sayı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Ardışık Sayılar",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplamı verilen ardışık tek sayıların en büyüğünü bulur.",
+  "tipId": "spb-ardisik",
+  "tip": "Ardışık sayı problemleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Ardışık üç pozitif tek sayının toplamı 99’dur.\nBuna göre bu sayıların en büyüğü kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "31",
+   "B": "33",
+   "C": "34",
+   "D": "35",
+   "E": "37"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "35"
+  },
+  "celdiriciler": {
+   "A": "En büyük yerine en küçük sayıyı vermiş.",
+   "B": "En büyük yerine ortanca sayıyı (99 ÷ 3) vermiş.",
+   "C": "Sayıları ardışık tam sayı sanıp (32, 33, 34) en büyüğünü yazmış.",
+   "E": "Ortancaya 4 ekleyerek en büyüğü bulduğunu sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Üç sayının en büyüğü.",
+  "bilgi": [
+   {
+    "ad": "Ardışık sayılar",
+    "ifade": "Ardışık tam sayılar x, x + 1, x + 2; ardışık çift ya da tek sayılar x, x + 2, x + 4 biçimindedir. Örnek: ardışık üç sayının toplamı, ortancanın 3 katıdır: 4 + 5 + 6 = 3 × 5"
+   },
+   {
+    "ad": "Ardışık sayıların ortancası",
+    "ifade": "Ardışık tek sayıda sayının toplamı, sayı adedi × ortanca terimdir. Örnek: ardışık 5 sayının toplamı 40 ise ortanca 8, sayılar 6, 7, 8, 9, 10’dur"
+   }
+  ],
+  "ipuclari": [
+   "Ardışık tek sayılarda birbirine komşu iki sayı arasındaki fark ne kadardır? Toplamı ortanca terim cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "Ortanca sayıya m denirse.",
+    "islem": "m − 2, m, m + 2"
+   },
+   {
+    "baslik": "Toplamı kur",
+    "aciklama": "Toplamda ±2 birbirini götürür.",
+    "islem": "3m = 99 → m = 33"
+   },
+   {
+    "baslik": "En büyüğü bul",
+    "aciklama": "En büyük sayı m + 2.",
+    "islem": "33 + 2 = 35"
+   }
+  ],
+  "puf": "Ardışık sayı sayısı tekse ortancayı değişken al; toplam, adet × ortancadır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-02 (ardışık sayılar · toplamdan ortanca)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Ardışık Sayılar",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Çift sayıda ardışık sayının toplamından en büyük sayıyı bulur.",
+  "tipId": "spb-ardisik",
+  "tip": "Ardışık sayı problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Ardışık 12 pozitif tam sayının toplamı 306’dır.\nBuna göre bu sayıların en büyüğü kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "25",
+   "C": "30",
+   "D": "31",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "31"
+  },
+  "celdiriciler": {
+   "A": "En büyük yerine en küçük sayıyı vermiş.",
+   "B": "Ortalama 25,5’i aşağı yuvarlayıp en büyük sanmış.",
+   "C": "12a + 78 = 306 yazmış (1 + … + 12 = 78); doğrusu 0 + … + 11 = 66.",
+   "E": "En büyük sayıyı a + 12 almış; 12 sayıda en büyük a + 11’dir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Sayıların en büyüğü.",
+  "bilgi": [
+   {
+    "ad": "Ardışık sayılar",
+    "ifade": "Ardışık tam sayılar x, x + 1, x + 2; ardışık çift ya da tek sayılar x, x + 2, x + 4 biçimindedir. Örnek: ardışık üç sayının toplamı, ortancanın 3 katıdır: 4 + 5 + 6 = 3 × 5"
+   }
+  ],
+  "ipuclari": [
+   "İlk sayıya a de; 12 sayının toplamında a’nın ve eklenen sabitlerin toplamını ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamı kur",
+    "aciklama": "İlk sayı a ise sayılar a, a + 1, …, a + 11.",
+    "islem": "12a + (0 + 1 + … + 11) = 12a + 66"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "Toplam 306’dır.",
+    "islem": "12a = 240 → a = 20"
+   },
+   {
+    "baslik": "En büyüğü bul",
+    "aciklama": "En büyük sayı a + 11.",
+    "islem": "20 + 11 = 31"
+   }
+  ],
+  "puf": "n tane ardışık sayının toplamı, n × ilk sayı + (0 + 1 + … + (n − 1)) olarak yazılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-02 (ardışık sayılar · çift adet)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Ardışık Sayılar",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplamı verilen ardışık tek sayılarla ilgili öncüllerin doğruluğunu sınar.",
+  "tipId": "spb-ardisik",
+  "tip": "Ardışık sayı problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "Ardışık üç pozitif tek sayının toplamı 75’tir.\nBuna göre,\nI. Ortanca sayı 25’tir.\nII. En büyük sayı ile en küçük sayının toplamı 52’dir.\nIII. En büyük sayı, en küçük sayıdan 4 fazladır.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü kontrol etmemiş: 27 − 23 = 4 olduğundan III de doğrudur.",
+   "B": "Ortancayı 26 bulup I’i yanlış saymış; ardışık tek sayılar arası fark 2 diye III’ü eleyip 26 + 26 = 52 ile II’yi doğru bulmuş.",
+   "C": "III’ü “fark 2” sanarak eleyip II’yi ortanca + en büyük (25 + 27 = 52) hesabıyla doğru bulmuş.",
+   "E": "II’yi sınamadan hepsini doğru kabul etmiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Ardışık sayılar",
+    "ifade": "Ardışık tam sayılar x, x + 1, x + 2; ardışık çift ya da tek sayılar x, x + 2, x + 4 biçimindedir. Örnek: ardışık üç sayının toplamı, ortancanın 3 katıdır: 4 + 5 + 6 = 3 × 5"
+   },
+   {
+    "ad": "Ardışık sayıların ortancası",
+    "ifade": "Ardışık tek sayıda sayının toplamı, sayı adedi × ortanca terimdir. Örnek: ardışık 5 sayının toplamı 40 ise ortanca 8, sayılar 6, 7, 8, 9, 10’dur"
+   }
+  ],
+  "ipuclari": [
+   "Önce sayıları bul, sonra her öncülü bulduğun sayılarla tek tek sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları bul",
+    "aciklama": "Ortanca m ise 3m = 75.",
+    "islem": "m = 25 → 23, 25, 27"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I: ortanca 25 ✓ · II: 23 + 27 = 50 ≠ 52 ✗ · III: 27 − 23 = 4 ✓",
+    "islem": "I ve III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III’tür.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Öncüllü sorularda önce verileni çöz, sonra her öncülü sayılarla ayrı ayrı sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-02 (ardışık sayılar · öncüllü)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Ardışık Sayılar",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki ayrı toplam arasındaki ilişkiyi kurarak ardışık tek sayıların toplamını bulur.",
+  "tipId": "spb-ardisik",
+  "tip": "Ardışık sayı problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Ardışık beş pozitif tek sayıdan ilk üçünün toplamı, son ikisinin toplamından 7 fazladır.\nBuna göre bu beş sayının toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "19",
+   "B": "25",
+   "C": "65",
+   "D": "85",
+   "E": "95"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "95"
+  },
+  "celdiriciler": {
+   "A": "Beş sayının toplamı yerine ortancayı (15 + 4) vermiş.",
+   "B": "“7 fazladır” yerine “7 eksiktir” kurmuş (sayılar 1, 3, 5, 7, 9).",
+   "C": "Sayıları ardışık tam sayı (x, x + 1, …) alıp 11 bulmuş.",
+   "D": "Beş sayının toplamını 5 × (ikinci sayı) diye hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "Beş sayının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Ardışık sayılar",
+    "ifade": "Ardışık tam sayılar x, x + 1, x + 2; ardışık çift ya da tek sayılar x, x + 2, x + 4 biçimindedir. Örnek: ardışık üç sayının toplamı, ortancanın 3 katıdır: 4 + 5 + 6 = 3 × 5"
+   }
+  ],
+  "ipuclari": [
+   "En küçük sayıya x de; beş sayıyı x, x + 2, … biçiminde yaz ve “ilk üçün toplamı” ile “son ikinin toplamı”nı ayrı ayrı x cinsinden bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "En küçük sayı x.",
+    "islem": "x, x + 2, x + 4, x + 6, x + 8"
+   },
+   {
+    "baslik": "Koşulu kur",
+    "aciklama": "İlk üç = son iki + 7.",
+    "islem": "(3x + 6) = (2x + 14) + 7"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "x = 15 → 15, 17, 19, 21, 23"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Beş sayıyı topla.",
+    "islem": "15 + 17 + 19 + 21 + 23 = 95"
+   }
+  ],
+  "puf": "Ardışık tek sayılarda sayılar x, x + 2, x + 4, … olur; iki ayrı toplamı x cinsinden yazıp eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-02 (ardışık sayılar · iki toplamın karşılaştırılması)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki Bilinmeyen",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Baş ve ayak sayısından iki tür hayvanın sayısını bulur.",
+  "tipId": "spb-ikibilinmeyen",
+  "tip": "Adet–değer ve basamak kurulumları",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir çiftlikte yalnızca tavuk ve koyun bulunmaktadır. Hayvanların sayısı 18, ayaklarının toplam sayısı 52’dir.\nBuna göre bu çiftlikte kaç tavuk vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "13",
+   "C": "18",
+   "D": "26",
+   "E": "52"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "B": "Ayak sayısını yalnız 4’e bölmüş (52 ÷ 4).",
+   "C": "Hayvan sayısını (18) tavuk sayısı sanmış.",
+   "D": "Ayak sayısını yalnız 2’ye bölmüş (52 ÷ 2).",
+   "E": "Ayak sayısını cevap olarak yazmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Tavuk sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
+   }
+  ],
+  "ipuclari": [
+   "Tavuk sayısına t, koyun sayısına 18 − t de ve ayakların toplamını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Tavuk t, koyun 18 − t.",
+    "islem": "2t + 4(18 − t) = 52"
+   },
+   {
+    "baslik": "t’yi bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "72 − 2t = 52 → t = 10"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Koyun 8; ayaklar 20 + 32 = 52 ✓",
+    "islem": "10 tavuk"
+   }
+  ],
+  "puf": "Baş sayısı toplamı, ayak sayısı ağırlıklı toplamı verir; biri öbürüne yerleştirilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-03 (iki bilinmeyen · baş ve ayak)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki Bilinmeyen",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Madeni para adedi ve toplam tutardan 1 TL’lik para sayısını bulur.",
+  "tipId": "spb-ikibilinmeyen",
+  "tip": "Adet–değer ve basamak kurulumları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kumbarada yalnızca 1 TL’lik ve 5 TL’lik madeni paralar vardır. Kumbarada toplam 37 madeni para ve 109 TL bulunduğuna göre 1 TL’lik madeni paraların sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "19",
+   "C": "21",
+   "D": "36",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "19"
+  },
+  "celdiriciler": {
+   "D": "5 TL ile 1 TL farkını 4 yerine 2 sanıp (109 − 37) ÷ 2 işlemini yapmış.",
+   "A": "1 TL’lik yerine 5 TL’lik paraların sayısını vermiş.",
+   "C": "109 ÷ 5 işleminin tam kısmını alıp cevap sanmış.",
+   "E": "Toplam tutardan para adedini çıkarıp (109 − 37) cevap saymış."
+  },
+  "celTur": {
+   "D": "islem",
+   "A": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "1 TL’lik madeni paraların sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
+   }
+  ],
+  "ipuclari": [
+   "1 TL’liklerin sayısına x de; 5 TL’liklerin sayısını x cinsinden yaz ve tutarı kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "1 TL’lik x, 5 TL’lik 37 − x tane.",
+    "islem": "x + 5(37 − x) = 109"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "185 − 4x = 109 → x = 19"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "5 TL’lik 18 tane; 19 + 90 = 109 ✓",
+    "islem": "19"
+   }
+  ],
+  "puf": "Adet toplamı ve tutar toplamı iki denklem verir; birini x cinsinden yazıp öbürüne yerleştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-03 (iki bilinmeyen · madeni para)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki Bilinmeyen",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Rakamları toplamı ve yer değiştirme farkı verilen sayının rakamları çarpımını bulur.",
+  "tipId": "spb-ikibilinmeyen",
+  "tip": "Adet–değer ve basamak kurulumları",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Rakamları toplamı 11 olan iki basamaklı bir sayının rakamlarının yerleri değiştirildiğinde elde edilen sayı, ilk sayıdan 27 fazladır.\nBuna göre ilk sayının rakamlarının çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "11",
+   "C": "28",
+   "D": "47",
+   "E": "74"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "28"
+  },
+  "celdiriciler": {
+   "A": "Rakamların farkını (7 − 4) vermiş.",
+   "B": "Verilen rakamlar toplamını cevap sanmış.",
+   "D": "İlk sayının kendisini vermiş; rakamların çarpımı sorulmuş.",
+   "E": "Yer değiştirmiş sayıyı vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk sayının rakamları çarpımı.",
+  "bilgi": [
+   {
+    "ad": "İki basamaklı sayı",
+    "ifade": "ab sayısı 10a + b’dir; rakamlar yer değiştirince sayı 10b + a olur ve aradaki fark 9(a − b) çıkar. Örnek: 52 − 25 = 27 = 9 · 3"
+   }
+  ],
+  "ipuclari": [
+   "Sayıyı 10a + b biçiminde yaz; yer değiştirmiş sayıyla farkını rakamlar cinsinden sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları yaz",
+    "aciklama": "Onlar basamağı a, birler basamağı b.",
+    "islem": "a + b = 11 · (10b + a) − (10a + b) = 27"
+   },
+   {
+    "baslik": "Farkı sadeleştir",
+    "aciklama": "9b − 9a = 27.",
+    "islem": "b − a = 3"
+   },
+   {
+    "baslik": "Rakamları bul",
+    "aciklama": "Topla ve çıkar.",
+    "islem": "b = 7, a = 4 → sayı 47"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Rakamları çarp.",
+    "islem": "4 · 7 = 28"
+   }
+  ],
+  "puf": "İki basamaklı sayıda yer değiştirme farkı 9(b − a) olur; rakamlar farkı hemen çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-03 (iki bilinmeyen · iki basamaklı sayı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · İki Bilinmeyen",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Araç ve tekerlek sayılarını üç türlü araç için kurup dört tekerlekli araç sayısını bulur.",
+  "tipId": "spb-ikibilinmeyen",
+  "tip": "Adet–değer ve basamak kurulumları",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir lunaparkta yalnızca bisiklet (2 tekerlekli), üç tekerlekli bisiklet ve dört tekerlekli elektrikli araç bulunmaktadır. Toplam 18 araç ve 50 tekerlek vardır. Bisikletlerin sayısı, üç tekerlekli bisikletlerin sayısının 2 katından 1 fazladır.\nBuna göre dört tekerlekli elektrikli araçların sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "9",
+   "D": "14",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Üç tekerlekli bisiklet sayısını vermiş.",
+   "C": "Bisiklet sayısını vermiş.",
+   "D": "Toplam araçtan yalnız üç tekerlekli sayısını çıkarmış (18 − 4).",
+   "E": "Toplam araç sayısını cevap yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Dört tekerlekli araç sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
+   }
+  ],
+  "ipuclari": [
+   "Üç tekerlekli sayısına t de; bisiklet ve dört tekerlekli sayısını t cinsinden yazıp tekerlek toplamını kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları t cinsinden yaz",
+    "aciklama": "Üç tekerlekli t, bisiklet 2t + 1, dört tekerlekli 18 − (3t + 1) = 17 − 3t.",
+    "islem": "b = 2t + 1 · k = 17 − 3t"
+   },
+   {
+    "baslik": "Tekerlekleri topla",
+    "aciklama": "2(2t + 1) + 3t + 4(17 − 3t) = 50.",
+    "islem": "70 − 5t = 50"
+   },
+   {
+    "baslik": "t’yi bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "t = 4 → bisiklet 9"
+   },
+   {
+    "baslik": "İstenen",
+    "aciklama": "k = 17 − 3·4.",
+    "islem": "5"
+   }
+  ],
+  "puf": "Üç tür varsa verilen ek ilişkiyle ikisini üçüncü cinsinden yaz; tek bilinmeyenli denklem kalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-03 (iki bilinmeyen · üç tür araç)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik – Fazla",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kişi başı iki ayrı dağıtımdaki artan ve eksik miktardan mal sayısını bulur.",
+  "tipId": "spb-eksikfazla",
+  "tip": "Eksik ve fazla ile paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir miktar fındık, bir grup çocuğa kişi başı 5 tane verilirse 12 tane artıyor, kişi başı 7 tane verilirse 8 tane eksik kalıyor.\nBuna göre fındık sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "12",
+   "C": "22",
+   "D": "50",
+   "E": "62"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "62"
+  },
+  "celdiriciler": {
+   "A": "Çocuk sayısını bulup fındık sayısı sanmış.",
+   "B": "Artan fındık sayısını vermiş.",
+   "C": "Çocuk sayısını (12 − 8) ÷ 2 = 2 bulmuş: 5·2 + 12.",
+   "D": "Yalnız 5 × 10 işlemini yapıp artanı eklememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "Fındık sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eksik–fazla paylaştırma",
+    "ifade": "Mal sayısı iki ayrı dağıtımla ifade edilip eşitlenir: artan miktar eklenir, eksik kalan miktar çıkarılır. Örnek: kişi başı 2 verilirse 5 artıyor, 3 verilirse 1 eksik kalıyorsa 2x + 5 = 3x − 1, x = 6"
+   }
+  ],
+  "ipuclari": [
+   "Çocuk sayısına x de; fındık sayısını iki dağıtımdan ayrı ayrı yaz ve eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "Artan eklenir, eksik çıkarılır.",
+    "islem": "5x + 12 = 7x − 8"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Bilinmeyenleri topla.",
+    "islem": "20 = 2x → x = 10"
+   },
+   {
+    "baslik": "Fındığı bul",
+    "aciklama": "5·10 + 12.",
+    "islem": "62 · kontrol: 7·10 − 8 = 62 ✓"
+   }
+  ],
+  "puf": "Artan miktar eklenir, eksik miktar çıkarılır; iki dağıtımdaki mal sayısını eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-04 (eksik–fazla · kişi başı iki dağıtım)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik – Fazla",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Sıralara oturma düzenlerinden öğrenci sayısını bulur.",
+  "tipId": "spb-eksikfazla",
+  "tip": "Eksik ve fazla ile paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir sınıfta öğrenciler sıralara üçer kişi oturduğunda 4 öğrenci ayakta kalıyor. Dörder kişi oturduklarında ise 2 sıra boş kalıyor, boş sıralar dışındaki sıraların hepsi tam dolu oluyor.\nBuna göre sınıfta kaç öğrenci vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "22",
+   "C": "36",
+   "D": "40",
+   "E": "48"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Sıra sayısını bulup öğrenci sayısı sanmış.",
+   "B": "“2 sıra boş” koşulunu “2 öğrenci eksik” diye okumuş: 3n + 4 = 4n − 2.",
+   "C": "Yalnız 3 × 12 işlemini yapıp ayakta kalan 4 öğrenciyi eklememiş.",
+   "E": "4 × 12 işlemini yapıp boş kalan 2 sırayı çıkarmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eksik–fazla paylaştırma",
+    "ifade": "Mal sayısı iki ayrı dağıtımla ifade edilip eşitlenir: artan miktar eklenir, eksik kalan miktar çıkarılır. Örnek: kişi başı 2 verilirse 5 artıyor, 3 verilirse 1 eksik kalıyorsa 2x + 5 = 3x − 1, x = 6"
+   }
+  ],
+  "ipuclari": [
+   "Sıra sayısına n de; öğrenci sayısını üçerli ve dörderli oturma durumlarından ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "Üçer: 3n + 4. Dörder: dolu sıra n − 2.",
+    "islem": "3n + 4 = 4(n − 2)"
+   },
+   {
+    "baslik": "n’i bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "3n + 4 = 4n − 8 → n = 12"
+   },
+   {
+    "baslik": "Öğrenci sayısı",
+    "aciklama": "3·12 + 4.",
+    "islem": "40 · kontrol: 4·10 = 40 ✓"
+   }
+  ],
+  "puf": "Boş kalan sıralar dağıtımı yapılan sıra sayısını azaltır; toplam sayıyı iki yoldan yaz ve eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-04 (eksik–fazla · sıra ve boş sıra)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik – Fazla",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Son kişiye kalan az miktarın bulunduğu paylaştırmada mal sayısını bulur.",
+  "tipId": "spb-eksikfazla",
+  "tip": "Eksik ve fazla ile paylaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir miktar kitap bir grup öğrenciye 6’şar tane dağıtılırsa 9 kitap artıyor. Aynı kitaplar 8’er tane dağıtılırsa son öğrenciye 3 kitap düşüyor ve hiç kitap kalmıyor.\nBuna göre kitap sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "27",
+   "C": "42",
+   "D": "48",
+   "E": "51"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "51"
+  },
+  "celdiriciler": {
+   "A": "Öğrenci sayısını bulup kitap sayısı sanmış.",
+   "B": "Son öğrenciyi de 8 almış sayıp 6n + 9 = 8n + 3 yazmış (n = 3).",
+   "C": "Yalnız 6 × 7 işlemini yapıp artan 9 kitabı eklememiş.",
+   "D": "Yalnız 8 × 6 işlemini yapıp son öğrencinin 3 kitabını eklememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Kitap sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eksik–fazla paylaştırma",
+    "ifade": "Mal sayısı iki ayrı dağıtımla ifade edilip eşitlenir: artan miktar eklenir, eksik kalan miktar çıkarılır. Örnek: kişi başı 2 verilirse 5 artıyor, 3 verilirse 1 eksik kalıyorsa 2x + 5 = 3x − 1, x = 6"
+   }
+  ],
+  "ipuclari": [
+   "Öğrenci sayısına n de; 8’erli dağıtımda son öğrenci dışındaki (n − 1) öğrenci 8’er kitap alır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk dağıtım",
+    "aciklama": "n öğrenci 6’şar alırsa 9 artar.",
+    "islem": "kitap = 6n + 9"
+   },
+   {
+    "baslik": "İkinci dağıtım",
+    "aciklama": "n − 1 öğrenci 8’er, son öğrenci 3.",
+    "islem": "kitap = 8(n − 1) + 3"
+   },
+   {
+    "baslik": "n’i bul",
+    "aciklama": "İki ifadeyi eşitle.",
+    "islem": "6n + 9 = 8n − 5 → n = 7"
+   },
+   {
+    "baslik": "Kitap sayısı",
+    "aciklama": "6·7 + 9.",
+    "islem": "51 · kontrol: 8·6 + 3 = 51 ✓"
+   }
+  ],
+  "puf": "Son kişiye tam pay düşmüyorsa önceki kişilerin payı ayrı, son kişinin payı ayrı yazılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-04 (eksik–fazla · son kişiye düşen pay)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Eksik – Fazla",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Öğrenci sayısı değişince oluşan dağıtım farkından mal sayısını bulur.",
+  "tipId": "spb-eksikfazla",
+  "tip": "Eksik ve fazla ile paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir miktar defter bir grup öğrenciye 5’er tane dağıtılırsa 14 defter artıyor. Öğrenci sayısı 4 az olsaydı aynı defterler 7’şer tane dağıtıldığında hiç defter artmayacaktı.\nBuna göre defter sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "21",
+   "B": "59",
+   "C": "105",
+   "D": "119",
+   "E": "147"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "119"
+  },
+  "celdiriciler": {
+   "A": "Öğrenci sayısını bulup defter sayısı sanmış.",
+   "B": "“Öğrenci sayısı 4 az” koşulunu 7n − 4 diye yazmış (n = 9).",
+   "C": "Yalnız 5 × 21 işlemini yapıp artan 14 defteri eklememiş.",
+   "E": "7 × 21 işlemini yapıp 4 öğrencilik farkı hesaba katmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Defter sayısı.",
+  "bilgi": [
+   {
+    "ad": "Eksik–fazla paylaştırma",
+    "ifade": "Mal sayısı iki ayrı dağıtımla ifade edilip eşitlenir: artan miktar eklenir, eksik kalan miktar çıkarılır. Örnek: kişi başı 2 verilirse 5 artıyor, 3 verilirse 1 eksik kalıyorsa 2x + 5 = 3x − 1, x = 6"
+   }
+  ],
+  "ipuclari": [
+   "Öğrenci sayısına n de; ikinci dağıtımda öğrenci sayısının n − 4 olduğunu unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği kur",
+    "aciklama": "İlk: 5n + 14. İkinci: n − 4 öğrenci 7’şer.",
+    "islem": "5n + 14 = 7(n − 4)"
+   },
+   {
+    "baslik": "n’i bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "5n + 14 = 7n − 28 → n = 21"
+   },
+   {
+    "baslik": "Defter sayısı",
+    "aciklama": "5·21 + 14.",
+    "islem": "119 · kontrol: 7·17 = 119 ✓"
+   }
+  ],
+  "puf": "Kişi sayısı değişiyorsa ikinci dağıtımda yeni kişi sayısını kullan; sonra toplamı eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-04 (eksik–fazla · kişi sayısı değişiyor)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sıra – Kuyruk",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Baştan ve sondan sıradan toplam kişi sayısını bulur.",
+  "tipId": "spb-sira",
+  "tip": "Sıra, kuyruk ve kat problemleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir kuyrukta Ali baştan 8., sondan 12. sıradadır.\nBuna göre bu kuyrukta kaç kişi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "18",
+   "C": "19",
+   "D": "20",
+   "E": "96"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "19"
+  },
+  "celdiriciler": {
+   "A": "Sıra numaralarının farkını (12 − 8) vermiş.",
+   "B": "8 + 12’den 2 çıkarmış; Ali’yi bir kez saymak gerekir.",
+   "D": "8 + 12 toplamını Ali’yi iki kez sayarak vermiş.",
+   "E": "Sıra numaralarını çarpmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kuyruktaki kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Sıra ve kuyruk",
+    "ifade": "Baştan a., sondan b. sıradaki kişi varsa kuyrukta a + b − 1 kişi vardır; sıra numaraları farkından 1 çıkarılırsa aradaki kişi sayısı bulunur. Örnek: 5. ile 9. arasında 9 − 5 − 1 = 3 kişi vardır"
+   }
+  ],
+  "ipuclari": [
+   "Ali’nin önündeki ve arkasındaki kişileri ayrı ayrı say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ali’nin önü",
+    "aciklama": "Baştan 8. ise önünde 7 kişi var.",
+    "islem": "7"
+   },
+   {
+    "baslik": "Ali’nin arkası",
+    "aciklama": "Sondan 12. ise arkasında 11 kişi var.",
+    "islem": "11"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Önündekiler + Ali + arkasındakiler.",
+    "islem": "7 + 1 + 11 = 19"
+   }
+  ],
+  "puf": "Baştan a., sondan b. sırada olan kişi için kuyruk a + b − 1 kişidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-05 (sıra ve kuyruk · baştan–sondan)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sıra – Kuyruk",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Daire numaralarından iki dairenin bulunduğu katlar arasındaki farkı bulur.",
+  "tipId": "spb-sira",
+  "tip": "Sıra, kuyruk ve kat problemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Her katında 6 daire bulunan bir apartmanda daireler, zemin kattan başlayarak 1’den itibaren ardışık olarak numaralanmıştır (zemin katta 1–6, birinci katta 7–12, … numaralı daireler bulunur).\nAli 22 numaralı dairede, Ayşe 41 numaralı dairede oturduğuna göre Ayşe, Ali’nin kaç kat üstünde oturmaktadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "6",
+   "D": "7",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "B": "Daire numaraları farkını (19) 6’ya bölüp yukarı yuvarlamış.",
+   "C": "Ayşe’nin bulunduğu katı (6. kat) cevap sanmış.",
+   "D": "Ayşe’nin dairesini 7. grupta bulup kat farkı yerine bu sayıyı vermiş.",
+   "E": "Daire numaralarının farkını vermiş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ayşe’nin Ali’nin kaç kat üstünde oturduğu.",
+  "bilgi": [
+   {
+    "ad": "Kat ve numara",
+    "ifade": "Her katta k daire varsa zemin kattan başlayarak 1’den numaralanan n numaralı dairenin üzerindeki kat sayısı (n − 1) ÷ k’nın tam kısmıdır. Örnek: katta 4 daire varsa 10 numaralı daire (10 − 1) ÷ 4 = 2 kat yukarıdadır"
+   }
+  ],
+  "ipuclari": [
+   "Her dairenin katını ayrı ayrı bul; zemin katın 0. kat olduğunu unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ali’nin katı",
+    "aciklama": "(22 − 1) ÷ 6’nın tam kısmı.",
+    "islem": "21 ÷ 6 = 3 kalan 3 → 3. kat"
+   },
+   {
+    "baslik": "Ayşe’nin katı",
+    "aciklama": "(41 − 1) ÷ 6’nın tam kısmı.",
+    "islem": "40 ÷ 6 = 6 kalan 4 → 6. kat"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "Kat numaralarını çıkar.",
+    "islem": "6 − 3 = 3"
+   }
+  ],
+  "puf": "Numara farkını doğrudan bölmek yerine her dairenin katını ayrı bul, sonra çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-05 (kat ve numara · zemin kattan başlayan numaralama)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sıra – Kuyruk",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Aradaki kişi sayısı ve orta kişi bilgisiyle sondan sırayı bulur.",
+  "tipId": "spb-sira",
+  "tip": "Sıra, kuyruk ve kat problemleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kuyrukta Cem baştan 6. sıradadır. Deniz, Cem’in arkasındadır ve Cem ile Deniz arasında 9 kişi vardır. Deniz sondan 5. sıradadır. Eda, Cem ile Deniz arasındaki bu 9 kişinin tam ortasındadır.\nBuna göre Eda sondan kaçıncı sıradadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "10",
+   "C": "11",
+   "D": "16",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Sondan sırayı 20 − 11 = 9 bulmuş; Eda’yı da saymak gerekir (+1).",
+   "C": "Eda’nın baştan sırasını vermiş.",
+   "D": "Deniz’in baştan sırasını vermiş.",
+   "E": "Kuyruktaki toplam kişi sayısını vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eda’nın sondan sırası.",
+  "bilgi": [
+   {
+    "ad": "Sıra ve kuyruk",
+    "ifade": "Baştan a., sondan b. sıradaki kişi varsa kuyrukta a + b − 1 kişi vardır; sıra numaraları farkından 1 çıkarılırsa aradaki kişi sayısı bulunur. Örnek: 5. ile 9. arasında 9 − 5 − 1 = 3 kişi vardır"
+   }
+  ],
+  "ipuclari": [
+   "Önce Deniz’in baştan sırasını, sonra kuyruğun toplam uzunluğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Deniz’in sırası",
+    "aciklama": "Cem 6., arada 9 kişi var.",
+    "islem": "6 + 9 + 1 = 16. sıra"
+   },
+   {
+    "baslik": "Kuyruk uzunluğu",
+    "aciklama": "Deniz sondan 5.",
+    "islem": "16 + 5 − 1 = 20 kişi"
+   },
+   {
+    "baslik": "Eda’nın sırası",
+    "aciklama": "9 kişinin ortası 5. kişidir.",
+    "islem": "6 + 5 = 11. sıra (baştan)"
+   },
+   {
+    "baslik": "Sondan sıra",
+    "aciklama": "Toplam − baştan sıra + 1.",
+    "islem": "20 − 11 + 1 = 10"
+   }
+  ],
+  "puf": "Arada n kişi varsa sıra farkı n + 1’dir; baştan sıradan sondan sıraya geçerken toplam − sıra + 1 kullan.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-05 (sıra ve kuyruk · arada kalan kişiler)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Alışveriş",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Para üstünden yararlanarak bir ürünün fiyatını bulur.",
+  "tipId": "spb-alisveris",
+  "tip": "Alışveriş, para üstü ve fiyat listesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir öğrenci, tanesi 38 TL olan 4 kalem ile 1 defter almak için kasiyere 200 TL veriyor ve 12 TL para üstü alıyor.\nBuna göre defterin fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "36",
+   "B": "48",
+   "C": "60",
+   "D": "152",
+   "E": "188"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "B": "Para üstünü hesaba katmamış: 200 − 152.",
+   "C": "Para üstünü çıkarmak yerine eklemiş: 200 − 152 + 12.",
+   "D": "Kalemlerin toplam fiyatını vermiş.",
+   "E": "Ödenen tutarı (200 − 12) vermiş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Defterin fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Alışveriş ve para üstü",
+    "ifade": "Verilen para = alınan malların bedeli + para üstü. Örnek: tanesi 20 TL olan 3 ürün için 100 TL verilirse para üstü 100 − 60 = 40 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Önce kasiyere gerçekte ne kadar ödendiğini bul, sonra kalemlerin bedelini çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ödenen tutar",
+    "aciklama": "Verilen para − para üstü.",
+    "islem": "200 − 12 = 188 TL"
+   },
+   {
+    "baslik": "Kalemlerin bedeli",
+    "aciklama": "4 kalem.",
+    "islem": "4 · 38 = 152 TL"
+   },
+   {
+    "baslik": "Defter",
+    "aciklama": "Ödenen − kalemler.",
+    "islem": "188 − 152 = 36 TL"
+   }
+  ],
+  "puf": "Verilen para = alınanların bedeli + para üstü; önce gerçek ödemeyi bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-06 (alışveriş · para üstü)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Alışveriş",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki hesap fişinden iki ürünün fiyat farkını bulur.",
+  "tipId": "spb-alisveris",
+  "tip": "Alışveriş, para üstü ve fiyat listesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir kafede çay ve tostun fiyatları sabittir. Aynı gün kesilen iki hesap fişinin içeriği şöyledir:\nFiş 1: 2 çay + 3 tost = 195 TL\nFiş 2: 3 çay + 1 tost = 100 TL\nBuna göre bir tost, bir çaydan kaç TL pahalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "40",
+   "C": "55",
+   "D": "70",
+   "E": "95"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Çayın fiyatını vermiş.",
+   "C": "Tostun fiyatını vermiş.",
+   "D": "Bir çay ile bir tostun toplam fiyatını vermiş.",
+   "E": "İki fişin toplam farkını (195 − 100) ürün farkı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Tost fiyatı ile çay fiyatı arasındaki fark (TL).",
+  "bilgi": [
+   {
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
+   }
+  ],
+  "ipuclari": [
+   "İki fişten birini seçip bir ürünü diğeri cinsinden ifade etmeyi dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemleri yaz",
+    "aciklama": "Çay c, tost t.",
+    "islem": "2c + 3t = 195 · 3c + t = 100"
+   },
+   {
+    "baslik": "Yerleştir",
+    "aciklama": "t = 100 − 3c.",
+    "islem": "2c + 300 − 9c = 195 → c = 15"
+   },
+   {
+    "baslik": "Tostu bul",
+    "aciklama": "t = 100 − 45.",
+    "islem": "t = 55"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "Tost − çay.",
+    "islem": "55 − 15 = 40"
+   }
+  ],
+  "puf": "İki fişten iki bilinmeyenli denklem kurulur; birinden bir ürünü çıkarıp öbürüne yerleştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-06 (alışveriş · fiyat listesi, iki fiş)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Alışveriş",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki ayrı alışveriş durumundan (artan ve eksik para) kişinin parasını bulur.",
+  "tipId": "spb-alisveris",
+  "tip": "Alışveriş, para üstü ve fiyat listesi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Can, parasıyla 3 gömlek ve 2 pantolon alırsa 90 TL artmakta, 2 gömlek ve 3 pantolon almak isterse 25 TL eksik kalmaktadır. Bir gömlek ile bir pantolonun birlikte fiyatı 715 TL’dir.\nBuna göre Can’ın parası kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "415",
+   "B": "715",
+   "C": "1730",
+   "D": "1820",
+   "E": "1845"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1820"
+  },
+  "celdiriciler": {
+   "A": "Pantolonun fiyatını vermiş.",
+   "B": "Verilen gömlek + pantolon fiyatını cevap sanmış.",
+   "C": "Artan 90 TL’yi paraya eklememiş (3 gömlek + 2 pantolon).",
+   "E": "İkinci alışverişin tutarını (parası + 25) vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Can’ın parası (TL).",
+  "bilgi": [
+   {
+    "ad": "Alışveriş ve para üstü",
+    "ifade": "Verilen para = alınan malların bedeli + para üstü. Örnek: tanesi 20 TL olan 3 ürün için 100 TL verilirse para üstü 100 − 60 = 40 TL’dir"
+   },
+   {
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
+   }
+  ],
+  "ipuclari": [
+   "Parası M olsun; iki alışverişin tutarını M cinsinden yaz ve farklarını al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tutarları M ile yaz",
+    "aciklama": "Artan çıkarılır, eksik eklenir.",
+    "islem": "3g + 2p = M − 90 · 2g + 3p = M + 25"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "İkinciden birinciyi çıkar.",
+    "islem": "p − g = 115"
+   },
+   {
+    "baslik": "Fiyatları bul",
+    "aciklama": "g + p = 715.",
+    "islem": "p = 415, g = 300"
+   },
+   {
+    "baslik": "Parayı bul",
+    "aciklama": "3·300 + 2·415 + 90.",
+    "islem": "900 + 830 + 90 = 1820 · kontrol: 600 + 1245 = 1845 = 1820 + 25 ✓"
+   }
+  ],
+  "puf": "Artan ve eksik para iki alışverişin tutar farkını verir; M kendiliğinden yok olur.",
+  "kisaYol": "İki alışverişi taraf tarafa topla: 5(g + p) = 2M − 65. g + p = 715 olduğundan 3575 = 2M − 65, M = 1820.",
+  "kardes": null,
+  "kaynakKart": "K-SPB-06 (alışveriş · artan ve eksik para)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Merdiven",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Katlar arasında eşit basamak sayısından istenen kata çıkılan basamak sayısını bulur.",
+  "tipId": "spb-periyot",
+  "tip": "Merdiven, takvim ve periyot",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir binada her iki kat arasındaki merdiven basamaklarının sayısı eşittir. Zemin kattan 3. kata çıkarken 54 basamak çıkılmaktadır.\nBuna göre zemin kattan 5. kata çıkarken kaç basamak çıkılır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "72",
+   "C": "90",
+   "D": "108",
+   "E": "270"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "Bir katın basamak sayısını vermiş.",
+   "B": "4. kata çıkılan basamağı hesaplamış (4 kat).",
+   "D": "6 kat saymış.",
+   "E": "54 ile 5’i çarpmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Zemin kattan 5. kata çıkılan basamak sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kat ve basamak",
+    "ifade": "n. kata çıkmak için n kat çıkılır; kat sayısı × bir katın basamak sayısı = toplam basamak. Örnek: bir katta 12 basamak varsa 4. kata 48 basamak çıkılır"
+   }
+  ],
+  "ipuclari": [
+   "Zemin kattan 3. kata kaç kat çıkıldığını sayarak bir katın basamak sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir kat",
+    "aciklama": "Zemin kattan 3. kata 3 kat çıkılır.",
+    "islem": "54 ÷ 3 = 18 basamak"
+   },
+   {
+    "baslik": "5 kat",
+    "aciklama": "Zemin kattan 5. kata 5 kat çıkılır.",
+    "islem": "5 · 18 = 90"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "3 kat için tekrar hesapla.",
+    "islem": "3 · 18 = 54 ✓"
+   }
+  ],
+  "puf": "Zemin kattan n. kata n kat çıkılır; önce bir katın değerini bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-07 (merdiven · eşit basamak)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Gündüz – Gece",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Gündüz çıkıp geceleyin kayan hareketle hedefe ulaşma gününü bulur.",
+  "tipId": "spb-periyot",
+  "tip": "Merdiven, takvim ve periyot",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kurbağa, 17 metre derinliğindeki bir kuyudan çıkmaya çalışmaktadır. Her gün gündüz 5 metre yukarı tırmanmakta, her gece 2 metre aşağı kaymaktadır. Kurbağa ilk gün sabahı kuyunun dibinden başlamıştır.\nBuna göre kurbağa kuyunun ağzına kaçıncı gün ulaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "6",
+   "D": "7",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Kaymayı hiç hesaba katmamış: 17 ÷ 5’i yukarı yuvarlamış.",
+   "C": "Her gün net 3 metre sanıp 17 ÷ 3’ü yukarı yuvarlamış.",
+   "D": "Gün sonunda yüksekliği 3n − 2 almış (3n − 2 ≥ 17).",
+   "E": "Yalnız gecelik kaymayı sayıp 17 ÷ 2’yi yukarı yuvarlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kurbağanın kuyunun ağzına ulaştığı gün.",
+  "bilgi": [
+   {
+    "ad": "Gündüz çıkıp geceleyin kayma",
+    "ifade": "Her gün net kazanç, çıkış ile kaymanın farkıdır; ama son gün hedefe ulaşılınca kayma olmaz. Örnek: 2 m çıkıp 1 m kayan ve 6 m’ye varması gereken birinin n. gün sonu en yüksek noktası (n − 1) × 1 + 2’dir"
+   }
+  ],
+  "ipuclari": [
+   "İlk n − 1 günün sonundaki yüksekliği bul; son gün gündüz çıkışın bitirip bitirmediğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Net kazanç",
+    "aciklama": "Bir günde gündüz 5, gece −2.",
+    "islem": "5 − 2 = 3 m/gün"
+   },
+   {
+    "baslik": "Son günden önce",
+    "aciklama": "n − 1 gün sonunda yükseklik 3(n − 1); son gün 5 m çıkış yeter.",
+    "islem": "3(n − 1) + 5 ≥ 17"
+   },
+   {
+    "baslik": "n’i bul",
+    "aciklama": "En küçük tam sayı.",
+    "islem": "3(n − 1) ≥ 12 → n ≥ 5"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "4. gün en yüksek nokta 14 < 17; 5. gün 17 ✓",
+    "islem": "5. gün"
+   }
+  ],
+  "puf": "Hedefe son gün kayma olmadan ulaşılır; son günün çıkışını ayrı tut, önceki günleri net kazançla say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-07 (gündüz çıkma, gece kayma)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kalan Koşulları",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Farklı gruplamalarda artan bilye sayılarından bilye sayısını bulur.",
+  "tipId": "spb-periyot",
+  "tip": "Merdiven, takvim ve periyot",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kutudaki bilyelerin sayısı 100’den büyük ve 130’dan küçüktür. Bilyeler 3’erli gruplanınca 2, 4’erli gruplanınca 3, 5’erli gruplanınca 4 bilye artmaktadır.\nBuna göre kutuda kaç bilye vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "118",
+   "B": "119",
+   "C": "120",
+   "D": "121",
+   "E": "124"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "119"
+  },
+  "celdiriciler": {
+   "A": "Bilye sayısını 60’ın katından 2 eksik almış (N = 60k − 2).",
+   "C": "Artanları yok sayıp 3, 4 ve 5’in ortak katını (60’ın katı) almış.",
+   "D": "Bütün artanları 1 sanıp N = 60k + 1 almış.",
+   "E": "Bütün gruplamalarda artanı 4 almış (N = 60k + 4)."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kutudaki bilye sayısı.",
+  "bilgi": [
+   {
+    "ad": "Ortak katlar",
+    "ifade": "3, 4 ve 5’e tam bölünen sayılar, bu sayıların en küçük ortak katı olan 60’ın katlarıdır. Örnek: 2 ve 3’e tam bölünen sayılar 6’nın katlarıdır: 6, 12, 18, …"
+   }
+  ],
+  "ipuclari": [
+   "Her gruplamada artanı grup büyüklüğüyle karşılaştır; ortak bir durum var mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Artanlara bak",
+    "aciklama": "Artan her seferinde grup büyüklüğünden 1 eksik.",
+    "islem": "3 − 2 = 4 − 3 = 5 − 4 = 1"
+   },
+   {
+    "baslik": "Bir ekle",
+    "aciklama": "N + 1 sayısı 3, 4 ve 5’e tam bölünür.",
+    "islem": "N + 1, 60’ın katı"
+   },
+   {
+    "baslik": "Aralığı uygula",
+    "aciklama": "100 < N < 130.",
+    "islem": "N + 1 = 120 → N = 119"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "119 = 3·39 + 2 = 4·29 + 3 = 5·23 + 4 ✓",
+    "islem": "119"
+   }
+  ],
+  "puf": "Artanlar grup büyüklüğünden hep aynı miktar eksikse sayıya bu miktarı ekle; ortak kat bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-07 (kalan koşulları · gruplama)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0025",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Takvim",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Ayların gün sayılarından yola çıkarak iki tarih arasındaki gün farkıyla haftanın gününü bulur.",
+  "tipId": "spb-periyot",
+  "tip": "Merdiven, takvim ve periyot",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Artık yıl olmayan bir yılın 1 Ocak günü Perşembe’dir.\nBuna göre aynı yılın 1 Eylül günü haftanın hangi günüdür?",
+  "sekil": null,
+  "siklar": {
+   "A": "Pazartesi",
+   "B": "Salı",
+   "C": "Çarşamba",
+   "D": "Cumartesi",
+   "E": "Pazar"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Salı"
+  },
+  "celdiriciler": {
+   "C": "Şubat’ı 29 gün saymış (artık yıl varsaymış).",
+   "A": "Ağustos’u 30 gün alıp 242 gün saymış.",
+   "D": "Her ayı 30 gün sayıp 8 × 30 = 240 gün hesaplamış.",
+   "E": "Her ayı 31 gün sayıp 8 × 31 = 248 gün hesaplamış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "A": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Haftanın günü.",
+  "bilgi": [
+   {
+    "ad": "Periyot ve kalan",
+    "ifade": "n gün sonrasının haftanın günü, n’nin 7’ye bölümünden kalanla bulunur; ortak katlar ve kalanlı koşullarda “kalan + 1 = ortak bölen” gibi eşitlikler aranır. Örnek: Salı’dan 10 gün sonrası için 10 = 7 + 3, Cuma gelir"
+   }
+  ],
+  "ipuclari": [
+   "1 Ocak ile 1 Eylül arasında kaç gün geçtiğini ay ay topla ve 7’ye böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gün sayısı",
+    "aciklama": "Ocak’tan Ağustos’a kadar 8 ay.",
+    "islem": "31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 = 243 gün"
+   },
+   {
+    "baslik": "7’ye böl",
+    "aciklama": "Tam haftaları at.",
+    "islem": "243 = 7·34 + 5 → kalan 5"
+   },
+   {
+    "baslik": "Günü bul",
+    "aciklama": "Perşembe’den 5 gün sonrası.",
+    "islem": "Cuma, Cumartesi, Pazar, Pazartesi, Salı → Salı"
+   }
+  ],
+  "puf": "Tarihler arası gün sayısını bulup 7’ye böl; yalnız kalan günü ileri sayılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-07 (takvim · yıl içinde haftanın günü)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0026",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Puanlama",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Doğru ve yanlış cevap puanlarından doğru sayısını bulur.",
+  "tipId": "spb-puan",
+  "tip": "Doğru–yanlış puanlama ve puan sistemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir testte 30 soru vardır. Her doğru cevap için 5 puan verilmekte, her yanlış cevap için 2 puan düşülmekte, boş bırakılan sorulara puan verilmemekte ve puan düşülmemektedir. Tüm soruları cevaplayan Deniz’in puanı 108’dir.\nBuna göre Deniz kaç soruyu doğru cevaplamıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "16",
+   "C": "21",
+   "D": "22",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "Doğru yerine yanlış sayısını vermiş.",
+   "B": "Yanlışın puanını eklemiş: 5d + 2(30 − d) = 108.",
+   "C": "108 ÷ 5 işleminin tam kısmını vermiş.",
+   "D": "108 ÷ 5 işlemini yukarı yuvarlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru cevap sayısı.",
+  "bilgi": [
+   {
+    "ad": "Puanlama ve net",
+    "ifade": "puan = doğru × a − yanlış × b; boş soru puan getirmez, yanlış götürmez. Örnek: +4 ve −1 puanla 10 soruda 7 doğru 3 yanlış varsa puan 28 − 3 = 25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Doğru sayısına d de; yanlış sayısını 30 − d yaz ve puanı doğru − yanlış olarak kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Puan denklemini kur",
+    "aciklama": "Doğru d, yanlış 30 − d.",
+    "islem": "5d − 2(30 − d) = 108"
+   },
+   {
+    "baslik": "d’yi bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "7d − 60 = 108 → d = 24"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Yanlış 6; 120 − 12 = 108 ✓",
+    "islem": "24"
+   }
+  ],
+  "puf": "Tüm sorular cevaplanmışsa yanlış sayısı toplamdan doğruyu çıkararak yazılır; puan farkı kurulur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-08 (puanlama · doğru ve yanlış)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0027",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Puanlama",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Boş sayısı ve net bilgisinden doğru sayısını bulur.",
+  "tipId": "spb-puan",
+  "tip": "Doğru–yanlış puanlama ve puan sistemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir testte 40 soru vardır. Her 4 yanlış cevap 1 doğru cevabı götürmektedir. Ece 6 soruyu boş bırakmış ve neti 24 olmuştur.\nBuna göre Ece kaç soruyu doğru cevaplamıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "24",
+   "C": "26",
+   "D": "32",
+   "E": "34"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "26"
+  },
+  "celdiriciler": {
+   "A": "Doğru yerine yanlış sayısını vermiş.",
+   "B": "Neti doğru sayısı sanmış.",
+   "D": "Neti yanlış sayısıyla (8) düzeltmiş; doğrusu yanlışın dörtte biri.",
+   "E": "Cevaplanan soru sayısını (doğru + yanlış) vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru cevap sayısı.",
+  "bilgi": [
+   {
+    "ad": "Puanlama ve net",
+    "ifade": "puan = doğru × a − yanlış × b; boş soru puan getirmez, yanlış götürmez. Örnek: +4 ve −1 puanla 10 soruda 7 doğru 3 yanlış varsa puan 28 − 3 = 25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Cevaplanan soru sayısını bul; doğruya d, yanlışa 34 − d de ve net formülüne yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Cevaplanan soru",
+    "aciklama": "40 − 6.",
+    "islem": "d + y = 34"
+   },
+   {
+    "baslik": "Net denklemi",
+    "aciklama": "Net = doğru − yanlış ÷ 4.",
+    "islem": "d − (34 − d)/4 = 24"
+   },
+   {
+    "baslik": "d’yi bul",
+    "aciklama": "4 ile çarp.",
+    "islem": "4d − 34 + d = 96 → d = 26"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Yanlış 8; 26 − 2 = 24 ✓",
+    "islem": "26"
+   }
+  ],
+  "puf": "Net = doğru − yanlış ÷ 4; boşlar cevaplanan soru sayısından düşülür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-08 (puanlama · net hesabı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0028",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Puanlama",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki ayrı puanlama kuralında eşit puan ve toplam doğru koşulundan puanı bulur.",
+  "tipId": "spb-puan",
+  "tip": "Doğru–yanlış puanlama ve puan sistemleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ece, her birinde tüm soruları cevapladığı iki sınava girmiştir. Birinci sınav 25 sorudan oluşmakta, her doğru cevap 4 puan, her yanlış cevap −1 puan getirmektedir. İkinci sınav 20 sorudan oluşmakta, her doğru cevap 5 puan, her yanlış cevap −2 puan getirmektedir. Ece iki sınavdan eşit puan almış ve toplam 21 soruyu doğru cevaplamıştır.\nBuna göre Ece’nin bir sınavdan aldığı puan kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "11",
+   "C": "21",
+   "D": "30",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "İkinci sınavdaki doğru sayısını vermiş.",
+   "B": "Birinci sınavdaki doğru sayısını vermiş.",
+   "C": "Toplam doğru sayısını puan sanmış.",
+   "E": "İki sınavın puanını toplamış (30 + 30)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Ece’nin bir sınavdan aldığı puan.",
+  "bilgi": [
+   {
+    "ad": "Puanlama ve net",
+    "ifade": "puan = doğru × a − yanlış × b; boş soru puan getirmez, yanlış götürmez. Örnek: +4 ve −1 puanla 10 soruda 7 doğru 3 yanlış varsa puan 28 − 3 = 25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Birinci sınavdaki doğru sayısına d de; ikinci sınavdaki doğru sayısını toplam doğrudan yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Puanları yaz",
+    "aciklama": "Birinci: 4d − (25 − d) = 5d − 25. İkinci doğru 21 − d: 5(21 − d) − 2(d − 1) = 107 − 7d.",
+    "islem": "5d − 25 ve 107 − 7d"
+   },
+   {
+    "baslik": "Eşitle",
+    "aciklama": "İki puan eşit.",
+    "islem": "5d − 25 = 107 − 7d → d = 11"
+   },
+   {
+    "baslik": "Puanı bul",
+    "aciklama": "Birinci sınavda 11 doğru, 14 yanlış.",
+    "islem": "44 − 14 = 30"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İkinci: 10 doğru, 10 yanlış.",
+    "islem": "50 − 20 = 30 ✓"
+   }
+  ],
+  "puf": "İki kuralda puanı doğru sayısı cinsinden yaz; toplam doğru koşuluyla tek bilinmeyene indir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-08 (puanlama · iki sınav)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0029",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Puan Sistemi",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Galibiyet, beraberlik ve mağlubiyet puanlarıyla beraberlik sayısını bulur.",
+  "tipId": "spb-puan",
+  "tip": "Doğru–yanlış puanlama ve puan sistemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir turnuvada her maç sonunda galibiyet 3 puan, beraberlik 1 puan, mağlubiyet 0 puan getirmektedir. Bir takım bu turnuvada 13 maç oynamış ve 23 puan toplamıştır. Takımın galibiyet sayısı, mağlubiyet sayısının 3 katıdır.\nBuna göre bu takımın beraberlik sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "5",
+   "C": "6",
+   "D": "8",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "Mağlubiyet sayısını vermiş.",
+   "C": "Galibiyet sayısını vermiş.",
+   "D": "Galibiyet ve mağlubiyet toplamını vermiş.",
+   "E": "Galibiyetlerden gelen puanı (3 · 6) vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Beraberlik sayısı.",
+  "bilgi": [
+   {
+    "ad": "Puan sistemi",
+    "ifade": "Her sonucun puanı, o sonucun sayısıyla çarpılıp toplanır; toplam maç = galibiyet + beraberlik + mağlubiyet. Örnek: 2 galibiyet, 1 beraberlik 3 − 1 − 0 puanlı sistemde 2·3 + 1·1 = 7 puandır"
+   }
+  ],
+  "ipuclari": [
+   "Mağlubiyet sayısına m de; galibiyet ve beraberlik sayısını m cinsinden yaz ve puan toplamını kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sayıları m ile yaz",
+    "aciklama": "Mağlubiyet m, galibiyet 3m, beraberlik 13 − 4m.",
+    "islem": "3·3m + (13 − 4m) = 23"
+   },
+   {
+    "baslik": "m’yi bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "5m + 13 = 23 → m = 2"
+   },
+   {
+    "baslik": "Beraberlik",
+    "aciklama": "13 − 4·2.",
+    "islem": "5 · kontrol: 18 + 5 = 23 ✓"
+   }
+  ],
+  "puf": "Puan sisteminde her sonucun puanını kendi sayısıyla çarp; toplam maç ve toplam puan iki denklem verir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-08 (puan sistemi · galibiyet–beraberlik–mağlubiyet)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0030",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Terazi",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kefelerdeki özdeş nesnelerin dengesinden bir nesnenin ağırlığını bulur.",
+  "tipId": "spb-sinir",
+  "tip": "Terazi ve en az–en çok",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Özdeş yumurtalarla yapılan bir tartıda, terazinin bir kefesinde 4 yumurta ve 180 gramlık bir ağırlık, diğer kefesinde 7 yumurta bulunmaktadır. Terazi dengededir.\nBuna göre bir yumurta kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "90",
+   "C": "180",
+   "D": "540",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "B": "Yumurta farkını 3 yerine 2 alıp 180 ÷ 2 yapmış.",
+   "C": "Verilen ağırlığı cevap sanmış.",
+   "D": "180 ile yumurta farkı olan 3’ü çarpmış.",
+   "E": "180 ile 4’ü çarpmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Bir yumurtanın ağırlığı (gram).",
+  "bilgi": [
+   {
+    "ad": "Terazi dengesi",
+    "ifade": "Denge durumunda iki kefenin ağırlığı eşittir. Örnek: bir kefede 1 kg’lık ağırlık, diğerinde 500 g’lık ağırlık ve bir kutu varsa kutu 500 g’dır"
+   }
+  ],
+  "ipuclari": [
+   "İki kefedeki ortak kısmı sadeleştirmeyi dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği yaz",
+    "aciklama": "Yumurta k gram.",
+    "islem": "4k + 180 = 7k"
+   },
+   {
+    "baslik": "Ortak yumurtaları at",
+    "aciklama": "Her iki yandan 4k çıkar.",
+    "islem": "180 = 3k"
+   },
+   {
+    "baslik": "k’yı bul",
+    "aciklama": "Böl.",
+    "islem": "k = 60 g"
+   }
+  ],
+  "puf": "Dengede iki kefenin ağırlığı eşittir; ortak nesneleri iki yandan çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-09 (terazi · özdeş nesneler)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0031",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · En Az – En Çok",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Bütçe ve en az alım koşuluyla alınabilecek en çok ürün sayısını bulur.",
+  "tipId": "spb-sinir",
+  "tip": "Terazi ve en az–en çok",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir okul kantininde simit 27 TL, poğaça 42 TL’dir. Elinde 300 TL bulunan Selin, bu kantinden en az 4 simit ve en az 3 poğaça almak koşuluyla en çok kaç ürün alabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "8",
+   "C": "9",
+   "D": "10",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "Yalnız zorunlu ürünleri (4 + 3) almış; artan parayla ürün almamış.",
+   "B": "Artan parayla (66 TL) yalnız poğaça almış.",
+   "D": "Artan 66 TL’yi 27’ye bölüp yukarı yuvarlamış (3 simit).",
+   "E": "Bütün parayı simide verip (300 ÷ 27) zorunlu poğaçaları unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Alınabilecek en çok ürün sayısı.",
+  "bilgi": [
+   {
+    "ad": "En az – en çok",
+    "ifade": "Bir değeri en çok (en az) yapmak için diğer değerler ters yönde uç değerlerde alınır. Örnek: toplamı 10 olan iki pozitif tam sayıdan büyük olan en çok 9, küçük olan en az 1’dir"
+   }
+  ],
+  "ipuclari": [
+   "Zorunlu alımı yaptıktan sonra elde kalan parayı nasıl harcarsan ürün sayısı artar?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Zorunlu alım",
+    "aciklama": "4 simit + 3 poğaça.",
+    "islem": "4·27 + 3·42 = 234 TL"
+   },
+   {
+    "baslik": "Artan para",
+    "aciklama": "300 − 234.",
+    "islem": "66 TL"
+   },
+   {
+    "baslik": "En ucuz ürün",
+    "aciklama": "Simitten 66 ÷ 27’nin tam kısmı.",
+    "islem": "2 simit (54 TL)"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "4 + 3 + 2.",
+    "islem": "9 ürün"
+   }
+  ],
+  "puf": "Ürün sayısını en çok yapmak için zorunlu alımdan sonra artan parayı en ucuz ürüne ver.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-09 (en çok – en az · bütçeyle alım)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0032",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · En Az – En Çok",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Toplamı verilen farklı sayılardan en büyüğünün alabileceği en büyük değeri bulur.",
+  "tipId": "spb-sinir",
+  "tip": "Terazi ve en az–en çok",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Birbirinden farklı beş pozitif tam sayının toplamı 40’tır.\nBuna göre bu sayıların en büyüğü en çok kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "26",
+   "B": "29",
+   "C": "30",
+   "D": "34",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Diğer dört sayıyı 2’den başlatmış (2 + 3 + 4 + 5).",
+   "B": "Diğer sayıları 1, 2, 3, 5 almış; 4’ü atlamış.",
+   "D": "Diğer dört sayıyı 0, 1, 2, 3 almış; 0 pozitif değildir.",
+   "E": "“Farklı” koşulunu unutup diğer dört sayıyı 1 almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "En büyük sayının alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "En az – en çok",
+    "ifade": "Bir değeri en çok (en az) yapmak için diğer değerler ters yönde uç değerlerde alınır. Örnek: toplamı 10 olan iki pozitif tam sayıdan büyük olan en çok 9, küçük olan en az 1’dir"
+   }
+  ],
+  "ipuclari": [
+   "En büyük sayı büyük olsun diye diğerlerinden ne beklersin? “Farklı” koşuluna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Diğer dört sayı",
+    "aciklama": "En küçük farklı pozitif tam sayılar.",
+    "islem": "1, 2, 3, 4 → toplam 10"
+   },
+   {
+    "baslik": "En büyük",
+    "aciklama": "Toplamdan çıkar.",
+    "islem": "40 − 10 = 30"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "1 + 2 + 3 + 4 + 30 = 40 ve sayılar farklı pozitif tam sayı.",
+    "islem": "30"
+   }
+  ],
+  "puf": "En büyüğü en çok yapmak için diğerleri en küçük farklı pozitif tam sayılar olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-09 (en çok – en az · farklı pozitif tam sayılar)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0033",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Geriye Çözme",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Zincir işlemlerin sonucundan geriye giderek ilk sayıyı bulur.",
+  "tipId": "spb-geriye",
+  "tip": "Geriye giderek çözme ve işlem zinciri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir sayı önce 4 ile çarpılıyor, çıkan sonuçtan 6 çıkarılıyor, elde edilen sayı 2’ye bölünüyor ve son olarak bölümün 7 fazlası alınıyor. Sonuç 28 bulunuyor.\nBuna göre ilk sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "12",
+   "C": "19",
+   "D": "21",
+   "E": "28"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Geri giderken 6’yı çıkarmış (eklemesi gerekirken): (21·2 − 6) ÷ 4.",
+   "C": "Sonda eklenen 7’yi yeniden eklemiş: (35·2 + 6) ÷ 4.",
+   "D": "Yalnız son işlemi geri almış (28 − 7).",
+   "E": "Verilen sonucu ilk sayı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk sayı.",
+  "bilgi": [
+   {
+    "ad": "Geriye giderek çözme",
+    "ifade": "Sonuçtan başlanır, her işlemin tersi ters sırayla uygulanır. Örnek: bir sayı 2 ile çarpılıp 3 eklenince 11 oluyorsa sayı (11 − 3) ÷ 2 = 4’tür"
+   }
+  ],
+  "ipuclari": [
+   "Sondan başa doğru her işlemin tersini ters sırada uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Son işlemi geri al",
+    "aciklama": "Bölümün 7 fazlası 28 ise bölüm.",
+    "islem": "28 − 7 = 21"
+   },
+   {
+    "baslik": "Bölmeyi geri al",
+    "aciklama": "2’ye bölünmüştü.",
+    "islem": "21 · 2 = 42"
+   },
+   {
+    "baslik": "Çıkarmayı geri al",
+    "aciklama": "6 çıkarılmıştı.",
+    "islem": "42 + 6 = 48"
+   },
+   {
+    "baslik": "Çarpmayı geri al",
+    "aciklama": "4 ile çarpılmıştı.",
+    "islem": "48 ÷ 4 = 12"
+   }
+  ],
+  "puf": "Zincir işlemlerde sonuçtan başla; her işlemin tersini ters sırayla uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-10 (geriye giderek çözme · dört işlem)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayiprobiki-0034",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Makine",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki makinenin zincirinde çıktıdan girdiyi bulup zinciri ters sırayla yeniden uygular.",
+  "tipId": "spb-geriye",
+  "tip": "Geriye giderek çözme ve işlem zinciri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Birinci makine girdiği sayıyı 2 ile çarpıp 3 çıkararak, ikinci makine ise girdiği sayıyı 3 ile çarpıp 4 çıkararak çıktı verir. Bir sayı sırasıyla birinci, ikinci ve tekrar birinci makineye girdiğinde çıktı 31 olmuştur.\nAynı sayı sırasıyla ikinci, birinci ve tekrar ikinci makineye girerse çıktı kaç olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "19",
+   "C": "31",
+   "D": "53",
+   "E": "89"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "53"
+  },
+  "celdiriciler": {
+   "A": "Yalnız girdiyi bulup durmuş.",
+   "E": "Geri gitmeyi bir adım erken bırakıp girdiyi 7 sanmış: 3·7 − 4 = 17 → 2·17 − 3 = 31 → 3·31 − 4 = 89.",
+   "B": "İkinci zincirde yalnız ilk iki makineyi uygulamış.",
+   "C": "Verilen çıktıyı (ilk zincir) cevap sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "E": "islem",
+   "B": "dikkat",
+   "C": "dikkat"
+  },
+  "istenen": "İkinci zincirin çıktısı.",
+  "bilgi": [
+   {
+    "ad": "Geriye giderek çözme",
+    "ifade": "Sonuçtan başlanır, her işlemin tersi ters sırayla uygulanır. Örnek: bir sayı 2 ile çarpılıp 3 eklenince 11 oluyorsa sayı (11 − 3) ÷ 2 = 4’tür"
+   }
+  ],
+  "ipuclari": [
+   "Önce birinci zincirin sonundan geri giderek girdiyi bul; sonra yeni sırayla ileri doğru uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Geri git",
+    "aciklama": "Son makine 2v − 3 = 31.",
+    "islem": "v = 17"
+   },
+   {
+    "baslik": "Bir geri daha",
+    "aciklama": "İkinci makine 3u − 4 = 17.",
+    "islem": "u = 7"
+   },
+   {
+    "baslik": "Girdiyi bul",
+    "aciklama": "Birinci makine 2x − 3 = 7.",
+    "islem": "x = 5"
+   },
+   {
+    "baslik": "Yeni zincir",
+    "aciklama": "İkinci → birinci → ikinci.",
+    "islem": "3·5 − 4 = 11 → 2·11 − 3 = 19 → 3·19 − 4 = 53"
+   }
+  ],
+  "puf": "Çıktıdan geriye giderek girdiyi bul; sonra yeni sıralamayı baştan ileri doğru uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SPB-10 (geriye giderek çözme · makine zinciri)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

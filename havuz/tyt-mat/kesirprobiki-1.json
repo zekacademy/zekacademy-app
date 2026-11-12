@@ -1,0 +1,1858 @@
+[
+ {
+  "id": "tytmat-kesirprobiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kalanın Kesri",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bütünün ve kalanın kesirleriyle ardışık harcamalardan ara bir tutarı bulur.",
+  "tipId": "ksb-zincir",
+  "tip": "Bütünün ve kalanın kesri zinciri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Efe, harçlığının 3/8’ini oyuncağa harcamış, kalan parasının 1/5’ini de bir hayvan barınağına bağışlamıştır.\nGeriye 100 TL’si kaldığına göre Efe’nin barınağa bağışladığı para kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "25",
+   "C": "40",
+   "D": "75",
+   "E": "200"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "A": "Bağışı kalan 100 TL’nin 1/5’i olarak hesaplamış; bağış, oyuncaktan sonraki paranın 1/5’idir.",
+   "C": "1/5’i harçlığın tamamına uygulamış; “kalanın” 1/5’i demek bütünün değil.",
+   "D": "Barınağa değil oyuncağa harcanan parayı (3/8) bulmuş.",
+   "E": "Harçlığın tamamını bulup durmuş; bağışı hesaplamamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Barınağa bağışlanan para (TL).",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/4’ü” ifadesi, o ana kadar geriye kalan miktarın 1/4’üdür; bütünün değil. Örnek: 80’in 1/2’si harcandıktan sonra kalanın 1/4’ü 10’dur"
+   }
+  ],
+  "ipuclari": [
+   "Oyuncaktan sonra kalan parayı harçlığın kesriyle yaz; 100 TL’nin bunun hangi kesrine karşılık geldiğini bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesirleri yaz",
+    "aciklama": "Oyuncaktan sonra 5/8 kalır, bağıştan sonra bunun 4/5’i kalır.",
+    "islem": "5/8 × 4/5 = 1/2 → harçlığın yarısı 100 TL"
+   },
+   {
+    "baslik": "Harçlığı bul",
+    "aciklama": "Yarısı 100 TL ise tamamı 200 TL.",
+    "islem": "100 × 2 = 200 TL"
+   },
+   {
+    "baslik": "Bağışı hesapla",
+    "aciklama": "Bağış, kalan 5/8’in 1/5’idir; yani bütünün 1/8’i.",
+    "islem": "5/8 × 1/5 = 1/8 → 200 ÷ 8 = 25 TL"
+   }
+  ],
+  "puf": "“Kalanın” kesirlerinde önce her adımdan sonra bütünün kaçta kaçı kaldığını yaz, sonra verilen sayıdan bütüne geç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-01 (zincir) · harçlık ve bağış, ara tutar isteniyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Yol Problemi",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Üç günde tamamlanan bir yolda ikinci günün uzunluğunu kalanın kesriyle bulur.",
+  "tipId": "ksb-zincir",
+  "tip": "Bütünün ve kalanın kesri zinciri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir doğa yürüyüşçüsü bir patikayı üç günde tamamlamıştır.\nİlk gün patikanın 1/5’ini, ikinci gün kalan yolun 3/8’ini yürümüş; üçüncü gün de kalan 40 km’yi yürümüştür.\nBuna göre yürüyüşçü ikinci gün kaç km yol almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "24",
+   "C": "30",
+   "D": "40",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "İlk günün yolunu (patikanın 1/5’i) bulmuş.",
+   "C": "3/8’i patikanın tamamına uygulamış; “kalan yolun” 3/8’i demek.",
+   "D": "Üçüncü günün yolunu vermiş.",
+   "E": "Patikanın tamamını bulup durmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İkinci gün yürünen yol (km).",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/4’ü” ifadesi, o ana kadar geriye kalan miktarın 1/4’üdür; bütünün değil. Örnek: 80’in 1/2’si harcandıktan sonra kalanın 1/4’ü 10’dur"
+   },
+   {
+    "ad": "Ardışık kalan kesirler",
+    "ifade": "ilk adımda 1/3 kullanılırsa 2/3 kalır; sonra kalanın 1/4’ü kullanılırsa kalanın 3/4’ü kalır: 2/3 × 3/4 = 1/2. Örnek: 120 TL’nin sonda kalanı 60 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Üçüncü günde kalan 40 km, patikanın kaçta kaçıdır? Bunu önce bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesri bul",
+    "aciklama": "İlk günden sonra 4/5 kalır; ikinci günde bunun 3/8’i gidilir, 5/8’i kalır.",
+    "islem": "4/5 × 5/8 = 1/2"
+   },
+   {
+    "baslik": "Patikanın tamamı",
+    "aciklama": "Yolun yarısı 40 km.",
+    "islem": "40 × 2 = 80 km"
+   },
+   {
+    "baslik": "İkinci günün yolu",
+    "aciklama": "Kalan 4/5’in 3/8’i bütünün 3/10’udur.",
+    "islem": "80 × 4/5 = 64 → 64 × 3/8 = 24 km"
+   }
+  ],
+  "puf": "Verilen miktar son kalansa önce o kalanın bütündeki kesrini bul; tamamını bulduktan sonra ara adımı hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-01 (zincir) · patika yürüyüşü, üç gün",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kitap Sayfası",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Üç ardışık okumadan sonra kalan sayfadan kitabın toplam sayfa sayısını bulur.",
+  "tipId": "ksb-zincir",
+  "tip": "Bütünün ve kalanın kesri zinciri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Zeynep bir romanı günlere bölerek okumaktadır.\nİlk gün kitabın 1/6’sını, ikinci gün kalan sayfaların 1/5’ini, üçüncü gün de o anda geriye kalan sayfaların 3/8’ini okumuştur.\nDördüncü güne okunacak 100 sayfa kaldığına göre bu romanın tamamı kaç sayfadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "150",
+   "B": "160",
+   "C": "192",
+   "D": "200",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "240"
+  },
+  "celdiriciler": {
+   "A": "Üçüncü günün kesrini hesaba katmamış; kalan 5/6 × 4/5 = 2/3 imiş gibi yapmış.",
+   "B": "Yalnız son günün kesrini (kalan 5/8) kullanmış; önceki günleri hesaba katmamış.",
+   "C": "İkinci günün kesrini hesaba katmamış; kalan 5/6 × 5/8 imiş gibi yapmış.",
+   "D": "İlk günün kesrini hesaba katmamış; kalan 4/5 × 5/8 imiş gibi yapmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Romanın toplam sayfa sayısı.",
+  "bilgi": [
+   {
+    "ad": "Ardışık kalan kesirler",
+    "ifade": "ilk adımda 1/3 kullanılırsa 2/3 kalır; sonra kalanın 1/4’ü kullanılırsa kalanın 3/4’ü kalır: 2/3 × 3/4 = 1/2. Örnek: 120 TL’nin sonda kalanı 60 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Her günden sonra kitabın kaçta kaçının kaldığını sırayla yaz; kalanlar çarpılarak ilerler."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan kesirleri çarp",
+    "aciklama": "Günlerden sonra kalan oranlar: 5/6, 4/5, 5/8.",
+    "islem": "5/6 × 4/5 × 5/8 = 5/12"
+   },
+   {
+    "baslik": "Kalanı eşitle",
+    "aciklama": "Sonda kalan 100 sayfa kitabın 5/12’sidir.",
+    "islem": "5/12 → 100 sayfa"
+   },
+   {
+    "baslik": "Tamamını bul",
+    "aciklama": "Bir parça 20 sayfa; 12 parçanın hepsi.",
+    "islem": "100 ÷ 5 = 20 → 20 × 12 = 240 sayfa"
+   }
+  ],
+  "puf": "Her adımda “kalanın kesri” bir çarpan olur: 1 − kesir. Tüm çarpanları çarpıp sondaki kalanla eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-01 (zincir) · roman okuma, üç kalan",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kalan ve Toplam",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Üç günlük satış düzeninde üçüncü günün satışını önceki günlerin toplamına bağlayarak toplam miktarı bulur.",
+  "tipId": "ksb-zincir",
+  "tip": "Bütünün ve kalanın kesri zinciri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kırtasiye toptancısı, elindeki defter kolilerini üç günde satmıştır.\nİlk gün kolilerin 1/3’ünü, ikinci gün kalan kolilerin 1/4’ünü satmıştır. Üçüncü gün ise ilk iki günde satılan kolilerin toplamının 2/3’ü kadar koli satmıştır.\nGeriye 30 koli kaldığına göre toptancının başlangıçta kaç kolisi vardı?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "72",
+   "C": "90",
+   "D": "108",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "180"
+  },
+  "celdiriciler": {
+   "A": "Üçüncü günün satışını hesaba katmamış; ilk iki günden sonra kalan 1/2 = 30 koli demiş.",
+   "B": "İkinci günün 1/4’ünü kalan yerine bütüne uygulamış; üçüncü günü de hesaba katmamış.",
+   "C": "Üçüncü günün satışını (1/3) doğru bulmuş ama ikinci günün satışını toplama katmamış; 1/3 + 1/3 = 2/3 satılmış sayıp kalan 1/3 = 30 demiş.",
+   "D": "Üçüncü günü yalnız ilk günün satışının 2/3’ü olarak almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Başlangıçtaki koli sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/4’ü” ifadesi, o ana kadar geriye kalan miktarın 1/4’üdür; bütünün değil. Örnek: 80’in 1/2’si harcandıktan sonra kalanın 1/4’ü 10’dur"
+   },
+   {
+    "ad": "Ardışık kalan kesirler",
+    "ifade": "ilk adımda 1/3 kullanılırsa 2/3 kalır; sonra kalanın 1/4’ü kullanılırsa kalanın 3/4’ü kalır: 2/3 × 3/4 = 1/2. Örnek: 120 TL’nin sonda kalanı 60 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Satışları bütünün kesri olarak yaz; üçüncü günün satışı için önce ilk iki günün toplamını kesir olarak bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk iki gün",
+    "aciklama": "İlk gün 1/3; kalan 2/3’ün 1/4’ü bütünün 1/6’sıdır.",
+    "islem": "1/3 + 1/6 = 1/2"
+   },
+   {
+    "baslik": "Üçüncü gün",
+    "aciklama": "Toplamın 2/3’ü satılır.",
+    "islem": "1/2 × 2/3 = 1/3"
+   },
+   {
+    "baslik": "Kalanı bul",
+    "aciklama": "Üç günde satılan 1/2 + 1/3 = 5/6’dır.",
+    "islem": "1 − 5/6 = 1/6"
+   },
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "Bütünün 1/6’sı 30 koli.",
+    "islem": "30 × 6 = 180 koli"
+   }
+  ],
+  "puf": "Bir adımın miktarı önceki adımların toplamına bağlıysa önce hepsini bütünün kesri olarak yaz, sonra toplamı 1’den çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-01 (zincir) · koli satışı, üçüncü gün öncekilerin toplamına bağlı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Bütünü Bulma",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bir kesrin karşılığı verilen sayıdan bütünü bulur.",
+  "tipId": "ksb-tamami",
+  "tip": "Kesrin tamamını bulma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir basketbolcu, sezon boyunca attığı serbest atışların 3/7’sini basket yapmıştır.\nBasketle sonuçlanan atış sayısı 21 olduğuna göre bu oyuncu sezon boyunca toplam kaç serbest atış yapmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "28",
+   "C": "49",
+   "D": "63",
+   "E": "147"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "49"
+  },
+  "celdiriciler": {
+   "A": "21’i yalnız paya (3) değil paydaya (7) bölmüş.",
+   "B": "Basket olmayan atış sayısını bulmuş.",
+   "D": "21’i pay (3) ile çarpmış.",
+   "E": "21’i paydayla çarpmış; paya bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Toplam serbest atış sayısı.",
+  "bilgi": [
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "21 atış, atışların 3/7’sine karşılık geliyor; 1/7’si kaç atıştır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir parça",
+    "aciklama": "3/7 = 21 ise 1/7 bunun üçte biridir.",
+    "islem": "21 ÷ 3 = 7 atış"
+   },
+   {
+    "baslik": "Tamamı",
+    "aciklama": "7 parçanın hepsi.",
+    "islem": "7 × 7 = 49 atış"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "49 atışın 3/7’si basket olmalı.",
+    "islem": "49 ÷ 7 × 3 = 21 ✓"
+   }
+  ],
+  "puf": "Bir miktarın a/b’si verildiyse önce a’ya bölerek 1/b’yi, sonra b ile çarparak bütünü bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-02 (kesrin tamamı) · basketbol isabeti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Aynı Miktar",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Aynı sayıyı iki kesirle ifade eden verilerden iki çokluğun oranını kurup toplamdan birini bulur.",
+  "tipId": "ksb-iki",
+  "tip": "İki farklı kesirle ifade edilen aynı miktar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Mert ile Ece’nin toplam 54 koleksiyon kartı vardır.\nMert’in kartlarının 3/5’i, Ece’nin kartlarının 3/4’üne eşittir.\nBuna göre Mert’in kaç kartı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "24",
+   "C": "27",
+   "D": "30",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Eşit olan ortak sayıyı (3/5’in karşılığı) kart sayısı sanmış.",
+   "B": "Oranı 4 : 5 kurmuş; Mert’e 4 parça (24) vermiş.",
+   "C": "Toplamı ikiye bölmüş; iki arkadaşın eşit kartı olduğunu sanmış.",
+   "E": "Ortak değere k deyip M = 3k/5, E = 3k/4 yazmış; 27k/20 = 54 → k = 40 bulup k’yı Mert’in kartı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Mert’in kart sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki kesirle ifade edilen aynı miktar",
+    "ifade": "A’nın 2/3’ü B’nin 3/4’üne eşitse 2A/3 = 3B/4 yazılıp ortak değer k ile A = 3k/2, B = 4k/3 bulunur; en küçük ortak payda ile oran kurulur. Örnek: 2A/3 = 3B/4 ise A : B = 9 : 8"
+   }
+  ],
+  "ipuclari": [
+   "Ortak değere k de; Mert’in ve Ece’nin kart sayısını k cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitliği yaz",
+    "aciklama": "Mert’in 3/5’i Ece’nin 3/4’üne eşit.",
+    "islem": "3M/5 = 3E/4"
+   },
+   {
+    "baslik": "Çapraz çarp",
+    "aciklama": "Payları sadeleştirip içler dışlar çarpımı yap.",
+    "islem": "M/5 = E/4 → 4M = 5E → M : E = 5 : 4"
+   },
+   {
+    "baslik": "Toplamla eşitle",
+    "aciklama": "Toplam 9 parça, bir parça 6 kart.",
+    "islem": "54 ÷ 9 = 6 → M = 5 × 6 = 30"
+   }
+  ],
+  "puf": "Payları eşit iki kesir birbirine eşitse çokluklar paydalarla doğru orantılıdır: 3M/5 = 3E/4 ise M : E = 5 : 4. Paylar farklıysa önce payları eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-04 (iki kesir) · koleksiyon kartları, toplam bilinen",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kız ve Erkek Öğrenciler",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bir sınıftaki iki grubun farklı kesirlerini birleştirip toplam üzerinden istenen alt grubu bulur.",
+  "tipId": "ksb-iki",
+  "tip": "İki farklı kesirle ifade edilen aynı miktar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir sınıftaki öğrencilerin 3/5’i kızdır.\nKız öğrencilerin 1/4’ü, erkek öğrencilerin 1/3’ü gözlüklü olup sınıfta toplam 34 gözlüklü öğrenci vardır.\nBuna göre bu sınıfta gözlüğü olmayan erkek öğrenci sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "32",
+   "C": "48",
+   "D": "54",
+   "E": "86"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "Gözlüklü erkek öğrenci sayısını bulmuş.",
+   "C": "Sınıftaki erkek öğrenci sayısını bulmuş.",
+   "D": "Gözlüksüz kız öğrenci sayısını bulmuş.",
+   "E": "Sınıftaki gözlüksüz öğrencilerin tamamını bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Gözlüğü olmayan erkek öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "Sınıf mevcuduna n de; gözlüklü kız ve gözlüklü erkek sayılarını n’nin kesri olarak yazıp toplamı 34’e eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gruplar",
+    "aciklama": "Kızlar 3/5, erkekler 2/5.",
+    "islem": "Gözlüklü kız: 3/5 × 1/4 = 3/20 · gözlüklü erkek: 2/5 × 1/3 = 2/15"
+   },
+   {
+    "baslik": "Toplam gözlüklü",
+    "aciklama": "Paydalar 60’ta eşitlenir.",
+    "islem": "9/60 + 8/60 = 17/60"
+   },
+   {
+    "baslik": "Sınıf mevcudu",
+    "aciklama": "17/60 = 34 ise 1/60 = 2.",
+    "islem": "n = 2 × 60 = 120"
+   },
+   {
+    "baslik": "Gözlüksüz erkek",
+    "aciklama": "Erkekler 48, bunların 1/3’ü gözlüklü.",
+    "islem": "48 × 2/3 = 32"
+   }
+  ],
+  "puf": "Alt grupların kesirleri farklı bütünlere uygulanıyorsa hepsini sınıf mevcudunun kesri haline getirip topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-04 (iki kesir) · sınıfta gözlüklü kız ve erkek öğrenciler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Artan Miktar",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Doluluk farkından yakıt tankının kapasitesini bulur.",
+  "tipId": "ksb-kap",
+  "tip": "Artan–eksilen miktarlar (depo, pil)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir otomobilin yakıt tankının 2/5’i doludur.\nTanka 18 litre benzin eklendiğinde tankın 7/10’u dolmaktadır.\nBuna göre bu tankın kapasitesi kaç litredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "36",
+   "C": "42",
+   "D": "60",
+   "E": "180"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "Farkı 3/10 bulup bir parçayı 6 L hesaplamış; tankı 5 parça (2/5’in paydası) sanıp 6 × 5 yapmış.",
+   "B": "Doluluk farkını payları çıkararak 5/10 bulmuş: 18 ÷ 5 × 10.",
+   "C": "Bir parçayı (6 L) bulup 7 ile çarpmış; bu, tankın yalnız 7/10’u.",
+   "E": "18 L’yi 1/10’a karşılık sanıp paydayla çarpmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Tankın kapasitesi (L).",
+  "bilgi": [
+   {
+    "ad": "Kesirlerde fark",
+    "ifade": "iki kesrin farkı için paydalar eşitlenir. Örnek: 3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   },
+   {
+    "ad": "Kabın dolulukları",
+    "ifade": "dolulukların farkı eklenen ya da alınan miktarın kapasitedeki kesridir. Örnek: 1/5 dolu kaba 15 L eklenince 1/2 dolarsa 15 L, kapasitenin 3/10’udur → kapasite 50 L"
+   }
+  ],
+  "ipuclari": [
+   "Eklenen 18 litre, tankın kaçta kaçıdır? Dolulukların farkını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Doluluk farkı",
+    "aciklama": "2/5 = 4/10; fark eklenen benzindir.",
+    "islem": "7/10 − 4/10 = 3/10"
+   },
+   {
+    "baslik": "Tank kapasitesi",
+    "aciklama": "Tankın 3/10’u 18 L ise 1/10’u 6 L.",
+    "islem": "18 ÷ 3 = 6 → 6 × 10 = 60 L"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "60 L’nin 2/5’i ile 7/10’u arasındaki fark 18 L olmalı.",
+    "islem": "24 L → 42 L, 42 − 24 = 18 ✓"
+   }
+  ],
+  "puf": "Eklenen ya da alınan miktar, iki doluluk kesrinin farkına karşılık gelir; önce paydaları eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-03 (artan–eksilen) · yakıt tankı, doluluk farkı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Eksilen Miktar",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Pil doluluk değişiminden kullanım süresini sabit hızla orantılar.",
+  "tipId": "ksb-kap",
+  "tip": "Artan–eksilen miktarlar (depo, pil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir telefonun kullanımına başlandığında pilin 5/6’sı doludur.\n45 dakika sonra pilin 1/3’ü kalıyor.\nPil sabit hızla boşaldığına göre telefon kullanıma başlandığı andan itibaren kaç dakika sonra tamamen boşalır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "45",
+   "C": "75",
+   "D": "90",
+   "E": "135"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "75"
+  },
+  "celdiriciler": {
+   "A": "Kalan şarjın (1/3) bitme süresini hesaplamış.",
+   "B": "Verilen süreyi cevap sanmış; telefonun tamamen boşalmasını hesaplamamış.",
+   "D": "Pilin tamamen doluyken bitme süresini (90 dk) bulmuş.",
+   "E": "45 dakikada pilin 1/3’ünün bittiğini sanıp tam dolu pil süresini bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "5/6 doluluktan tamamen boşalmaya kadar geçen süre (dk).",
+  "bilgi": [
+   {
+    "ad": "Kesirlerde fark",
+    "ifade": "iki kesrin farkı için paydalar eşitlenir. Örnek: 3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   }
+  ],
+  "ipuclari": [
+   "45 dakikada pilin kaçta kaçı bitmiştir? Pil sabit hızla boşalıyor."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Harcanan şarj",
+    "aciklama": "5/6’dan 1/3’e inildi.",
+    "islem": "5/6 − 1/3 = 5/6 − 2/6 = 1/2"
+   },
+   {
+    "baslik": "Tam pil süresi",
+    "aciklama": "Pilin yarısı 45 dakika ise tamamı 90 dakika.",
+    "islem": "45 × 2 = 90 dk"
+   },
+   {
+    "baslik": "İstenen süre",
+    "aciklama": "Başlangıçta pilin 5/6’sı var.",
+    "islem": "90 × 5/6 = 75 dk"
+   }
+  ],
+  "puf": "Sabit hızla boşalan pilde süre, harcanan şarj kesriyle doğru orantılıdır; önce tam pilin süresini bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-03 (artan–eksilen) · telefon pili, süre",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Alınan ve Eklenen",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Önce alınan sonra eklenen su miktarlarını doluluk kesirleriyle ilişkilendirip alınan miktarı bulur.",
+  "tipId": "ksb-kap",
+  "tip": "Artan–eksilen miktarlar (depo, pil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir akvaryumun 3/4’ü suyla doluyken akvaryumdan bir miktar su boşaltılıyor ve akvaryumun 1/3’ü dolu kalıyor.\nDaha sonra akvaryuma 60 litre su eklenince akvaryumun 5/6’sı doluyor.\nBuna göre akvaryumdan boşaltılan su kaç litredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "50",
+   "C": "60",
+   "D": "90",
+   "E": "120"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "50"
+  },
+  "celdiriciler": {
+   "A": "Boşaltmadan sonra akvaryumda kalan suyu (kapasitenin 1/3’ü) bulmuş.",
+   "C": "Eklenen suyu boşaltılan su sanmış.",
+   "D": "Başlangıçta akvaryumdaki suyu (3/4) bulmuş.",
+   "E": "Akvaryumun kapasitesini bulup durmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Boşaltılan su miktarı (L).",
+  "bilgi": [
+   {
+    "ad": "Kesirlerde fark",
+    "ifade": "iki kesrin farkı için paydalar eşitlenir. Örnek: 3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   },
+   {
+    "ad": "Kabın dolulukları",
+    "ifade": "dolulukların farkı eklenen ya da alınan miktarın kapasitedeki kesridir. Örnek: 1/5 dolu kaba 15 L eklenince 1/2 dolarsa 15 L, kapasitenin 3/10’udur → kapasite 50 L"
+   }
+  ],
+  "ipuclari": [
+   "Önce eklenen 60 litrenin, kapasitenin kaçta kaçı olduğunu doluluk farkından bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kapasiteyi bul",
+    "aciklama": "Eklenen su 1/3’ten 5/6’ya çıkarmıştır.",
+    "islem": "5/6 − 1/3 = 1/2 → kapasite 60 × 2 = 120 L"
+   },
+   {
+    "baslik": "Boşaltılan kesir",
+    "aciklama": "3/4’ten 1/3’e inilmiştir.",
+    "islem": "3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   },
+   {
+    "baslik": "Boşaltılan su",
+    "aciklama": "Kapasitenin 5/12’si.",
+    "islem": "120 × 5/12 = 50 L"
+   }
+  ],
+  "puf": "Önce verilen miktarı doluluk farkına bağlayıp kapasiteyi bul; sonra istenen farkı kapasitenin kesri olarak hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-03 (artan–eksilen) · akvaryum, boşaltma ve ekleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Boşaltma ve Doldurma",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Boşaltılan kesir ile sonradan eklenen miktarı birleştirip başlangıçtaki su miktarını bulur.",
+  "tipId": "ksb-kap",
+  "tip": "Artan–eksilen miktarlar (depo, pil)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir su deposunun 5/8’i doludur.\nDepodaki suyun 2/5’i boşaltılıyor, ardından depoya 36 litre su eklenince depo tam yarısına kadar doluyor.\nBuna göre başlangıçta depoda kaç litre su vardı?",
+  "sekil": null,
+  "siklar": {
+   "A": "72",
+   "B": "108",
+   "C": "144",
+   "D": "180",
+   "E": "288"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "180"
+  },
+  "celdiriciler": {
+   "A": "Boşaltılan su miktarını (suyun 2/5’i) vermiş.",
+   "B": "Boşaltmadan sonra depoda kalan suyu vermiş.",
+   "C": "Son durumdaki suyu (deponun yarısı) vermiş.",
+   "E": "Deponun kapasitesini vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Başlangıçtaki su miktarı (L).",
+  "bilgi": [
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/4’ü” ifadesi, o ana kadar geriye kalan miktarın 1/4’üdür; bütünün değil. Örnek: 80’in 1/2’si harcandıktan sonra kalanın 1/4’ü 10’dur"
+   },
+   {
+    "ad": "Kabın dolulukları",
+    "ifade": "dolulukların farkı eklenen ya da alınan miktarın kapasitedeki kesridir. Örnek: 1/5 dolu kaba 15 L eklenince 1/2 dolarsa 15 L, kapasitenin 3/10’udur → kapasite 50 L"
+   }
+  ],
+  "ipuclari": [
+   "Boşaltmadan sonra depoda kalan suyu deponun kesri olarak yaz; 36 litre bu kesri nereye getirmiş?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Boşaltmadan sonra",
+    "aciklama": "Suyun 2/5’i çıkarsa 3/5’i kalır.",
+    "islem": "5/8 × 3/5 = 3/8 (deponun)"
+   },
+   {
+    "baslik": "Eklenen kesir",
+    "aciklama": "3/8’den 1/2’ye çıkmıştır.",
+    "islem": "1/2 − 3/8 = 1/8 → 36 L"
+   },
+   {
+    "baslik": "Kapasite",
+    "aciklama": "Deponun 1/8’i 36 L.",
+    "islem": "36 × 8 = 288 L"
+   },
+   {
+    "baslik": "Başlangıç",
+    "aciklama": "Başlangıçta deponun 5/8’i doluydu.",
+    "islem": "288 × 5/8 = 180 L"
+   }
+  ],
+  "puf": "Kesirli boşaltma ve ekleme sorularında her aşamadaki doluluğu deponun kesri olarak yaz; verilen miktarı doluluk farkına bağla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-03 (artan–eksilen) · su deposu, suyun 2/5’i boşaltılıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Aynı Miktar",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Aynı sayının iki kesriyle verilen bilgiden okul mevcudunu bulur.",
+  "tipId": "ksb-tamami",
+  "tip": "Kesrin tamamını bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir okulda yurtta kalan öğrencilerin sayısı, okuldaki tüm öğrencilerin 2/7’sine eşittir.\nBu sayı, servis kullanan öğrencilerin 4/5’ine de eşittir.\nServis kullanan öğrenci sayısı 70 olduğuna göre bu okuldaki öğrenci sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "56",
+   "C": "196",
+   "D": "245",
+   "E": "392"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "196"
+  },
+  "celdiriciler": {
+   "A": "Yurtta kalanları servis kullananların 2/7’si olarak hesaplamış.",
+   "B": "Yurtta kalan öğrenci sayısını bulup durmuş.",
+   "D": "70’i okulun 2/7’sine karşılık sanıp 70 ÷ 2 × 7 yapmış.",
+   "E": "56’yı 7 ile çarpıp 2’ye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Okuldaki öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   },
+   {
+    "ad": "İki kesirle ifade edilen aynı miktar",
+    "ifade": "A’nın 2/3’ü B’nin 3/4’üne eşitse 2A/3 = 3B/4 yazılıp ortak değer k ile A = 3k/2, B = 4k/3 bulunur; en küçük ortak payda ile oran kurulur. Örnek: 2A/3 = 3B/4 ise A : B = 9 : 8"
+   }
+  ],
+  "ipuclari": [
+   "Yurtta kalan sayı, servis kullananların 4/5’i olarak da yazılır; önce bunu hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yurtta kalan sayısı",
+    "aciklama": "Servis kullananların 4/5’i.",
+    "islem": "70 × 4/5 = 56"
+   },
+   {
+    "baslik": "Okul mevcudu",
+    "aciklama": "56, okulun 2/7’si ise 1/7’si 28’dir.",
+    "islem": "56 ÷ 2 = 28"
+   },
+   {
+    "baslik": "Tamamı",
+    "aciklama": "7 parçanın hepsi.",
+    "islem": "28 × 7 = 196"
+   }
+  ],
+  "puf": "Aynı sayı iki farklı bütünün kesriyle verilmişse önce bilinen bütünden sayıyı bul, sonra diğer bütüne geç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-02 (kesrin tamamı) · yurtta kalan öğrenciler ve servis",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kesir Kadar Artış",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Fiyatın kesri kadar artırılmasından eski fiyatı bulur.",
+  "tipId": "ksb-artir",
+  "tip": "Kesir kadar artırma ve azaltma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir konser biletinin fiyatı, fiyatının 1/6’sı kadar artırılarak 84 TL olmuştur.\nBuna göre biletin artırmadan önceki fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "14",
+   "C": "70",
+   "D": "72",
+   "E": "98"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "Eski fiyatın 1/6’sı olan artış miktarını vermiş.",
+   "B": "84’ün 1/6’sını artış sanıp onu bulmuş.",
+   "C": "84’ten 84’ün 1/6’sını çıkarmış; artışı yeni fiyatın kesri almış.",
+   "E": "84’ü 7/6 ile çarpmış; eski fiyattan yeniye gitmiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Biletin artırmadan önceki fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kesir kadar artırma ve azaltma",
+    "ifade": "bir miktar 1/4’ü kadar artırılırsa yeni miktar 5/4 katıdır; 1/5’i kadar azaltılırsa 4/5 katıdır. Örnek: 40 TL 1/4’ü kadar artarsa 40 × 5/4 = 50 TL olur"
+   }
+  ],
+  "ipuclari": [
+   "Eski fiyata 6 parça diyelim; artırılmış fiyat kaç parçadır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Artırılmış fiyat",
+    "aciklama": "Eski fiyatın 1/6’sı kadar artış, yeni fiyatı 7/6 katı yapar.",
+    "islem": "7/6 × eski = 84"
+   },
+   {
+    "baslik": "Eski fiyat",
+    "aciklama": "7 parça 84 TL ise 1 parça 12 TL.",
+    "islem": "84 ÷ 7 = 12 → 12 × 6 = 72 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "72 TL’nin 1/6’sı kadar artış 12 TL’dir.",
+    "islem": "72 + 12 = 84 ✓"
+   }
+  ],
+  "puf": "“1/6’sı kadar artırma” miktarı 7/6 katına çıkarır; “1/6’sı kadar azaltma” ise 5/6 katına indirir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-05 (artırma) · konser bileti, tek artış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Ardışık Değişim",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Zam ve indirimi yeni fiyatın kesriyle uygulayıp ilk fiyatı bulur.",
+  "tipId": "ksb-artir",
+  "tip": "Kesir kadar artırma ve azaltma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir mağaza bir montun fiyatına, fiyatının 1/2’si kadar zam yapmıştır. Bir süre sonra zamlı fiyatın 1/4’ü kadar indirim yapmıştır.\nMontun son fiyatı 540 TL olduğuna göre zamdan önceki fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "360",
+   "B": "405",
+   "C": "432",
+   "D": "480",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "480"
+  },
+  "celdiriciler": {
+   "A": "Yalnız zammı geri almış: 540 × 2/3.",
+   "B": "İndirimi geri alırken 3/4 çarpanını ters yönde kullanıp 540 × 3/4 yapmış.",
+   "C": "Net artışı 1/2 − 1/4 = 1/4 sanıp 540 ÷ 5/4 hesaplamış.",
+   "E": "Yalnız indirimi geri almış: 540 × 4/3."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Zamdan önceki fiyat (TL).",
+  "bilgi": [
+   {
+    "ad": "Kesir kadar artırma ve azaltma",
+    "ifade": "bir miktar 1/4’ü kadar artırılırsa yeni miktar 5/4 katıdır; 1/5’i kadar azaltılırsa 4/5 katıdır. Örnek: 40 TL 1/4’ü kadar artarsa 40 × 5/4 = 50 TL olur"
+   },
+   {
+    "ad": "Ardışık artış ve azalış",
+    "ifade": "her değişimde çarpan ardışık uygulanır; ikincisi yeni miktarın kesriyle yapılır. Örnek: 1/2 artış sonra 1/3 azalış çarpanı 3/2 × 2/3 = 1 olur"
+   }
+  ],
+  "ipuclari": [
+   "Zam ve indirimin çarpanlarını ayrı ayrı yaz ve çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpanlar",
+    "aciklama": "1/2 zam → 3/2 katı; zamlı fiyatın 1/4’ü indirim → 3/4 katı.",
+    "islem": "3/2 × 3/4 = 9/8"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Son fiyat ilk fiyatın 9/8’idir.",
+    "islem": "9/8 × ilk fiyat = 540"
+   },
+   {
+    "baslik": "İlk fiyat",
+    "aciklama": "9 parça 540 TL ise 1 parça 60 TL.",
+    "islem": "540 ÷ 9 = 60 → 60 × 8 = 480 TL"
+   }
+  ],
+  "puf": "Artış ve azalış çarpanlarını çarpıp son miktarı bu net çarpana eşitle; net değişimi kesirleri toplayarak bulma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-05 (artırma-azaltma) · mont, zam ve indirim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Ardışık Uzama",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "İki haftalık uzamayı ardışık kesirlerle hesaplayıp toplam uzamayı bulur.",
+  "tipId": "ksb-artir",
+  "tip": "Kesir kadar artırma ve azaltma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir sarmaşığın boyu ilk hafta boyunun 1/3’ü kadar uzamış, ikinci hafta da ilk haftanın sonundaki boyunun 1/5’i kadar uzamıştır.\nİki haftanın sonunda sarmaşığın boyu 96 cm olduğuna göre sarmaşık bu iki haftada toplam kaç cm uzamıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "16",
+   "C": "20",
+   "D": "36",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "İkinci haftadaki uzamayı ilk boyun 1/5’i olarak hesaplamış.",
+   "B": "Yalnız ikinci haftadaki uzamayı bulmuş.",
+   "C": "Yalnız ilk haftadaki uzamayı bulmuş.",
+   "E": "İlk boyu bulup uzamayı hesaplamamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İki haftadaki toplam uzama (cm).",
+  "bilgi": [
+   {
+    "ad": "Kesir kadar artırma ve azaltma",
+    "ifade": "bir miktar 1/4’ü kadar artırılırsa yeni miktar 5/4 katıdır; 1/5’i kadar azaltılırsa 4/5 katıdır. Örnek: 40 TL 1/4’ü kadar artarsa 40 × 5/4 = 50 TL olur"
+   }
+  ],
+  "ipuclari": [
+   "Her haftanın çarpanını yaz (örneğin 1/3’ü kadar uzama kaç katına çıkarır?) ve çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpanlar",
+    "aciklama": "Birinci hafta 4/3, ikinci hafta 6/5 katı.",
+    "islem": "4/3 × 6/5 = 8/5"
+   },
+   {
+    "baslik": "İlk boy",
+    "aciklama": "Son boy ilk boyun 8/5’i.",
+    "islem": "96 ÷ 8 × 5 = 60 cm"
+   },
+   {
+    "baslik": "Toplam uzama",
+    "aciklama": "Son boydan ilk boyu çıkar.",
+    "islem": "96 − 60 = 36 cm"
+   }
+  ],
+  "puf": "Ardışık uzamalarda çarpanları çarpıp son boydan ilk boyu bul; uzama miktarı son boy ile ilk boyun farkıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-05 (artırma) · sarmaşığın boyu, iki hafta",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Fark Kesri",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Bir kişinin parasının diğerinden kesir kadar fazla olmasını iki harcamanın ardından kalan toplamla birleştirir.",
+  "tipId": "ksb-artir",
+  "tip": "Kesir kadar artırma ve azaltma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ali’nin parası, Veli’nin parasından Veli’nin parasının 1/3’ü kadar fazladır.\nAli kendi parasının 1/4’ünü, Veli de kendi parasının 1/3’ünü harcadıktan sonra ikisinin kalan paraları toplamı 40 TL olmaktadır.\nBuna göre Ali’nin başlangıçtaki parası kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "24",
+   "C": "32",
+   "D": "40",
+   "E": "56"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "Veli’nin harcamadan sonra kalan parasını vermiş.",
+   "B": "Veli’nin başlangıçtaki parasını vermiş.",
+   "D": "Harcamalardan sonra kalan toplamı cevap sanmış.",
+   "E": "İki kişinin başlangıçtaki toplam parasını vermiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ali’nin başlangıçtaki parası (TL).",
+  "bilgi": [
+   {
+    "ad": "Kesir kadar artırma ve azaltma",
+    "ifade": "bir miktar 1/4’ü kadar artırılırsa yeni miktar 5/4 katıdır; 1/5’i kadar azaltılırsa 4/5 katıdır. Örnek: 40 TL 1/4’ü kadar artarsa 40 × 5/4 = 50 TL olur"
+   }
+  ],
+  "ipuclari": [
+   "Veli’nin parasını 3 birim alırsan Ali’nin parası kaç birimdir? Harcamadan sonra kalanları birim cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parayı birimle yaz",
+    "aciklama": "Veli 3m, Ali 3m + m = 4m.",
+    "islem": "Ali = 4m · Veli = 3m"
+   },
+   {
+    "baslik": "Kalanları yaz",
+    "aciklama": "Ali’nin 3/4’ü, Veli’nin 2/3’ü kalır.",
+    "islem": "4m × 3/4 = 3m · 3m × 2/3 = 2m"
+   },
+   {
+    "baslik": "Birimi bul",
+    "aciklama": "Kalanların toplamı 40 TL.",
+    "islem": "3m + 2m = 5m = 40 → m = 8"
+   },
+   {
+    "baslik": "Ali’nin parası",
+    "aciklama": "Ali 4 birim.",
+    "islem": "4 × 8 = 32 TL"
+   }
+  ],
+  "puf": "“Birinin parası diğerinden kesir kadar fazla” ifadesini iki parayı aynı birimle (3m ve 4m) yazarak ele al; kesirlerle uğraşma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-05 (artırma) · Ali’nin parası Veli’ninkinden 1/3’ü kadar fazla",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Eşit Paylaşım",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Pastanın bir kesrinin eşit paylaşılmasından pastanın tamamını bulur.",
+  "tipId": "ksb-paylas",
+  "tip": "Eşit paylaşım ve kesirlerin karşılaştırılması",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir pastanın 3/4’ü 6 kişiye eşit olarak paylaştırılmış ve her kişi 150 gram pasta almıştır.\nBuna göre pastanın tamamı kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "675",
+   "C": "900",
+   "D": "1200",
+   "E": "3600"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1200"
+  },
+  "celdiriciler": {
+   "A": "Paylaştırılan 900 gramı 3’e bölüp bir parçayı (1/4) vermiş.",
+   "B": "900 gramın 3/4’ünü almış; kesri ters kullanmış.",
+   "C": "Paylaştırılan pasta miktarını tamamı sanmış.",
+   "E": "900’ü 1/4’e bölmüş; pay yerine tamamlayıcı kesri (1/4) kullanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Pastanın tamamı (g).",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "bir miktar n kişiye eşit paylaştırılırsa her pay miktarın 1/n’idir. Örnek: pastanın 1/4’ü 2 kişiye eşit bölünürse her pay pastanın 1/8’idir"
+   },
+   {
+    "ad": "Parçadan bütüne",
+    "ifade": "bütünün a/b’si X ise bütün = X ÷ a × b. Örnek: 3/5’i 60 olan sayı 60 ÷ 3 × 5 = 100"
+   }
+  ],
+  "ipuclari": [
+   "Önce 6 kişinin aldığı pasta toplam kaç gramdır? Bu miktar pastanın kaçta kaçıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Paylaşılan miktar",
+    "aciklama": "6 kişi 150 gram aldı.",
+    "islem": "6 × 150 = 900 g (pastanın 3/4’ü)"
+   },
+   {
+    "baslik": "Pastanın tamamı",
+    "aciklama": "3/4’ü 900 g ise 1/4’ü 300 g.",
+    "islem": "900 ÷ 3 × 4 = 1200 g"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "1200 g’ın 3/4’ü 6 kişiye 150 g’dan dağılmalı.",
+    "islem": "1200 × 3/4 = 900 = 6 × 150 ✓"
+   }
+  ],
+  "puf": "Eşit paylaşımda önce paylaşılan toplam miktarı (kişi sayısı × pay) bul, sonra bu miktarın bütünün hangi kesri olduğuna bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-06 (paylaşım) · pastanın 3/4’ü altı kişiye",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Pay Farkı",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Kişi sayısı artınca eşit payın kesirce değişimini bir ağırlık farkına bağlar.",
+  "tipId": "ksb-paylas",
+  "tip": "Eşit paylaşım ve kesirlerin karşılaştırılması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir pizza 5 kişi arasında eşit olarak paylaştırılacakken bir kişi daha gelmiş ve pizza 6 kişi arasında eşit olarak paylaştırılmıştır.\nBu durumda her kişinin payı 40 gram azaldığına göre pizzanın tamamı kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "200",
+   "C": "240",
+   "D": "440",
+   "E": "1200"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1200"
+  },
+  "celdiriciler": {
+   "A": "Azalma miktarını pizzanın ağırlığı sanmış.",
+   "B": "Azalmayı pizzanın 1/5’ine eşitlemiş (40 × 5).",
+   "C": "Azalmayı pizzanın 1/6’sına eşitlemiş (40 × 6).",
+   "D": "Kişi sayılarını toplayıp 40 ile çarpmış (40 × 11)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Pizzanın tamamı (g).",
+  "bilgi": [
+   {
+    "ad": "Eşit paylaşım",
+    "ifade": "bir miktar n kişiye eşit paylaştırılırsa her pay miktarın 1/n’idir. Örnek: pastanın 1/4’ü 2 kişiye eşit bölünürse her pay pastanın 1/8’idir"
+   },
+   {
+    "ad": "Kesirlerde fark",
+    "ifade": "iki kesrin farkı için paydalar eşitlenir. Örnek: 3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   }
+  ],
+  "ipuclari": [
+   "Beş kişide bir kişinin payı pizzanın 1/5’i; altı kişide kaçta kaçı? İkisinin farkı kaç gram?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "5 kişide pay 1/5, 6 kişide 1/6.",
+    "islem": "1/5 ve 1/6"
+   },
+   {
+    "baslik": "Pay farkı",
+    "aciklama": "Paydalar 30’da eşitlenir.",
+    "islem": "1/5 − 1/6 = 6/30 − 5/30 = 1/30"
+   },
+   {
+    "baslik": "Pizzanın tamamı",
+    "aciklama": "Pizzanın 1/30’u 40 g.",
+    "islem": "40 × 30 = 1200 g"
+   }
+  ],
+  "puf": "Kişi sayısı değişince pay farkı 1/n − 1/(n+1) = 1/(n(n+1)) olur; bu farkı verilen miktara eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-06 (paylaşım) · pizza, bir kişi daha katılıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Geri Sarma",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Her ay tekrarlanan bir artış ve sabit kayıp düzeninde iki ay sonraki değerden başlangıcı bulur.",
+  "tipId": "ksb-yeni",
+  "tip": "Yeni nesil, kural tanımlı ve geri sarma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir yerel haber kanalında her ay, ayın başındaki abone sayısının 1/4’ü kadar yeni abone katılmakta ve ayın sonunda 25 abone kanaldan ayrılmaktadır.\nBu düzen iki ay boyunca aynen sürmüş ve ikinci ayın sonunda, ayrılanlar da düşüldükten sonra kanalın 75 abonesi kalmıştır.\nBuna göre kanalın ilk ayın başındaki abone sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "48",
+   "C": "75",
+   "D": "80",
+   "E": "84"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "84"
+  },
+  "celdiriciler": {
+   "A": "Geri giderken ayrılanları eklemek yerine çıkarmış: (75 − 25) ÷ 5 × 4, sonra bir kez daha.",
+   "B": "Ayrılan 25 abonenin etkisini yok sayıp yalnız 4/5 ile iki kez geri gitmiş.",
+   "C": "Son abone sayısını başlangıç sanmış.",
+   "D": "Yalnız bir ayı geri almış; birinci ayın sonundaki sayıyı bulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "İlk ayın başındaki abone sayısı.",
+  "bilgi": [
+   {
+    "ad": "Geri sarma",
+    "ifade": "son durumdan başlanıp işlemler ters sırayla geri alınır: toplama çıkarmaya, çarpma bölmeye döner. Örnek: x × 3 + 4 = 19 ise x = (19 − 4) ÷ 3 = 5"
+   }
+  ],
+  "ipuclari": [
+   "Son durumdan geriye doğru git; her ayda yapılan işlemleri ters sırayla geri almayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir ay nasıl işliyor",
+    "aciklama": "x abone → x × 5/4 − 25.",
+    "islem": "x → 5x/4 − 25"
+   },
+   {
+    "baslik": "İkinci ayı geri al",
+    "aciklama": "Önce 25’i ekle, sonra 5/4’e böl.",
+    "islem": "(75 + 25) × 4/5 = 80"
+   },
+   {
+    "baslik": "Birinci ayı geri al",
+    "aciklama": "Aynı işlemi tekrarla.",
+    "islem": "(80 + 25) × 4/5 = 84"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "84 × 5/4 − 25 = 80 ve 80 × 5/4 − 25 = 75.",
+    "islem": "84 → 80 → 75 ✓"
+   }
+  ],
+  "puf": "Her adımda “artır, sonra çıkar” işlemini tersine çevirmek için önce çıkarılanı geri ekle, sonra çarpanı böl; işlem sırasını ters çevir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-07 (geri sarma) · kanal aboneleri, 1/4 artış ve 25 kayıp",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Kesirleri Karşılaştırma",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Aynı parkurun farklı kesirlerini karşılaştırıp bir ara farktan parkur uzunluğunu ve istenen farkı bulur.",
+  "tipId": "ksb-paylas",
+  "tip": "Eşit paylaşım ve kesirlerin karşılaştırılması",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Üç bisikletçi aynı parkuru sürmektedir. Belirli bir anda Ali parkurun 5/8’ini, Bora 7/12’sini, Can ise 3/5’ini tamamlamıştır.\nCan ile Bora arasındaki yol farkı 4 km olduğuna göre bu anda en çok yol almış olan bisikletçi ile en az yol almış olan bisikletçi arasındaki fark kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "10",
+   "D": "120",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Verilen farkı (Can ile Bora) cevap sanmış.",
+   "B": "En çok yol alan Ali ile Can arasındaki farkı bulmuş.",
+   "D": "Pay ve paydaları ayrı ayrı çıkarıp 5/8 − 7/12’yi (5 − 7)/(8 − 12) = 1/2 bulmuş.",
+   "E": "Parkurun uzunluğunu bulup durmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "En çok ve en az yol alan bisikletçiler arasındaki fark (km).",
+  "bilgi": [
+   {
+    "ad": "Kesirlerde fark",
+    "ifade": "iki kesrin farkı için paydalar eşitlenir. Örnek: 3/4 − 1/3 = 9/12 − 4/12 = 5/12"
+   }
+  ],
+  "ipuclari": [
+   "Üç kesri 120’lik paydada yazıp kimin önde, kimin geride olduğunu belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesirleri karşılaştır",
+    "aciklama": "Payda 120: Ali 75/120, Bora 70/120, Can 72/120.",
+    "islem": "Ali en önde, Bora en geride"
+   },
+   {
+    "baslik": "Parkuru bul",
+    "aciklama": "Can − Bora farkı 2/120 = 1/60 ve 4 km.",
+    "islem": "4 × 60 = 240 km"
+   },
+   {
+    "baslik": "İstenen fark",
+    "aciklama": "Ali − Bora farkı 5/120 = 1/24.",
+    "islem": "240 × 1/24 = 10 km"
+   }
+  ],
+  "puf": "Kesirleri ortak paydada yaz; sıralamayı ve aralarındaki farkları pay farkından oku.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-06 (karşılaştırma) · bisiklet turu, üç sürücü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Öncüllü Kesir",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Aynı miktarı farklı kesirlerle ifade eden paralardan çıkan sonuçları öncüllerle sınar.",
+  "tipId": "ksb-iki",
+  "tip": "İki farklı kesirle ifade edilen aynı miktar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Ali, Bora ve Can’ın toplam 245 TL’si vardır.\nAli’nin parasının 2/3’ü, Bora’nın parasının 3/4’ü ve Can’ın parasının 4/5’i birbirine eşittir.\nBuna göre,\nI. Ali’nin parası 90 TL’dir.\nII. Üç kişi arasında en az parası olan Ali’dir.\nIII. Ali ile Bora’nın paraları arasındaki fark 5 TL’dir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "Kesri en küçük olanın (2/3) parasının da en az olduğunu sanmış; Ali’nin parasını da hatalı bulmuş.",
+   "C": "Ali’nin parasını doğru bulmuş; ama en küçük kesre sahip Ali’nin en az parası olduğunu sanmış.",
+   "D": "Ali ile Bora arasındaki farkı (10 TL) Bora ile Can arasındaki farkla (5 TL) karıştırmış.",
+   "E": "Hem küçük kesri küçük para sanmış hem de farkı 5 TL bulmuş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "İki kesirle ifade edilen aynı miktar",
+    "ifade": "A’nın 2/3’ü B’nin 3/4’üne eşitse 2A/3 = 3B/4 yazılıp ortak değer k ile A = 3k/2, B = 4k/3 bulunur; en küçük ortak payda ile oran kurulur. Örnek: 2A/3 = 3B/4 ise A : B = 9 : 8"
+   }
+  ],
+  "ipuclari": [
+   "Eşit değere k de; üç paranın k cinsinden değerini yazıp toplamı 245’e eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Oranı kur",
+    "aciklama": "Eşit değerde paralar, kesirlerin tersiyle orantılıdır.",
+    "islem": "A : B : C = 3/2 : 4/3 : 5/4 = 18 : 16 : 15"
+   },
+   {
+    "baslik": "Parçayı bul",
+    "aciklama": "Toplam 49 parça 245 TL.",
+    "islem": "245 ÷ 49 = 5 TL"
+   },
+   {
+    "baslik": "Paraları bul",
+    "aciklama": "Her parça 5 TL.",
+    "islem": "A = 90 · B = 80 · C = 75"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I doğru; II yanlış (en az para 75 ile Can’da); III yanlış (90 − 80 = 10).",
+    "islem": "Yalnız I"
+   }
+  ],
+  "puf": "Eşit kesirli ifadelerde ortak değere k de; her çokluk k’nın bir katı olur, toplamdan k bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-04 (iki kesir) · Ali, Bora ve Can’ın parası, öncüllü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Genel Oran",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Tanımlanan genel isabet oranı kuralını uygulayarak bilinmeyen atış sayısını bulur.",
+  "tipId": "ksb-yeni",
+  "tip": "Yeni nesil, kural tanımlı ve geri sarma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir basketbolcunun birden fazla maçtaki toplam isabetli atış sayısının, toplam atış sayısına oranına “genel isabet oranı” denir.\nBu oyuncu birinci maçta x atıştan 3’ünü, ikinci maçta 8 atıştan 5’ini isabet ettirmiş ve iki maçtaki genel isabet oranı 2/3 olmuştur.\nBuna göre x pozitif tam sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "8",
+   "C": "12",
+   "D": "20",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "B": "2(x + 8) = 24 eşitliğini açarken 16’yı unutup 2x + 8 = 24 yazmış.",
+   "C": "x + 8 = 12 bulup paydadaki 8’i çıkarmayı unutmuş.",
+   "D": "x + 8 = 12 bulduktan sonra 8’i çıkarmak yerine eklemiş.",
+   "E": "Genel oranı iki maçın oranlarının toplamı sanmış: 3/x + 5/8 = 2/3."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Genel oran",
+    "ifade": "toplam isabet ÷ toplam atış; maç oranları toplanmaz. Örnek: 2 maçta 3/5 ve 1/5 isabet için genel oran (3 + 1)/(5 + 5) = 4/10 = 2/5"
+   }
+  ],
+  "ipuclari": [
+   "Toplam isabetli atış sayısını ve toplam atış sayısını x cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Genel oranı yaz",
+    "aciklama": "İsabetler ve atışlar ayrı ayrı toplanır.",
+    "islem": "(3 + 5)/(x + 8) = 8/(x + 8) = 2/3"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "İçler dışlar çarpımı yap.",
+    "islem": "2(x + 8) = 24"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "x + 8 = 12 → x = 4"
+   }
+  ],
+  "puf": "Genel oran sorularında oranları değil payları ve paydaları ayrı ayrı topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-07 (yeni nesil) · genel isabet oranı tanımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Adım Kuralı",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "Her adımda kalanın değişen bir kesrinin alındığı süreçte kalan mesafeyi sadeleştirerek belirli bir adımın uzunluğunu bulur.",
+  "tipId": "ksb-yeni",
+  "tip": "Yeni nesil, kural tanımlı ve geri sarma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Uzaktan kumandalı bir robot, hedefine şu kurala göre adım adım ilerliyor:\nk. adımda robot, o adımın başında hedefe kalan uzaklığın 1/(k + 1)’i kadar yol alıyor.\n(Yani 1. adımda kalanın 1/2’sini, 2. adımda kalanın 1/3’ünü, 3. adımda kalanın 1/4’ünü, … alıyor.)\n5. adımın sonunda robotun hedefe 40 metre kaldığına göre robotun 4. adımda aldığı yol kaç metredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "40",
+   "C": "48",
+   "D": "60",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "E": "2. adımdan sonra kalan mesafeyi (uzaklığın 1/3’ü) vermiş.",
+   "B": "5. adımdan sonra kalan mesafeyi vermiş.",
+   "C": "4. adımın kesrini (1/5) toplam uzaklığa uygulamış.",
+   "D": "4. adımın başında kalan mesafeyi (3. adımdan sonra) vermiş."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "4. adımda alınan yol (m).",
+  "bilgi": [
+   {
+    "ad": "Kural tanımı",
+    "ifade": "soruda verilen kural olduğu gibi uygulanır, bildiğin işlemle karıştırılmaz. Örnek: a ★ b = a + 2b ise 3 ★ 4 = 3 + 8 = 11"
+   },
+   {
+    "ad": "Kalanın kesri",
+    "ifade": "“kalanın 1/4’ü” ifadesi, o ana kadar geriye kalan miktarın 1/4’üdür; bütünün değil. Örnek: 80’in 1/2’si harcandıktan sonra kalanın 1/4’ü 10’dur"
+   }
+  ],
+  "ipuclari": [
+   "Her adımdan sonra kalan mesafeyi toplam uzaklığın kesri olarak yaz; çarpımlardaki sadeleşmeyi gözle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her adımdan sonra kalan",
+    "aciklama": "k. adımdan sonra kalanın çarpanı k/(k + 1).",
+    "islem": "1/2, 1/2 × 2/3 = 1/3, 1/3 × 3/4 = 1/4, 1/4 × 4/5 = 1/5, 1/5 × 5/6 = 1/6"
+   },
+   {
+    "baslik": "Toplam uzaklık",
+    "aciklama": "5 adım sonra uzaklığın 1/6’sı kalmış.",
+    "islem": "40 × 6 = 240 m"
+   },
+   {
+    "baslik": "4. adımın başı",
+    "aciklama": "3. adımdan sonra uzaklığın 1/4’ü kalmıştı.",
+    "islem": "240 × 1/4 = 60 m"
+   },
+   {
+    "baslik": "4. adımın yolu",
+    "aciklama": "Bunun 1/5’i alınır.",
+    "islem": "60 × 1/5 = 12 m"
+   }
+  ],
+  "puf": "Her adımda kalan çarpanları zincir halinde çarpılırsa payda ile pay birbirini götürür; k adım sonra kalan 1/(k + 1) olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-07 (yeni nesil) · robot, k. adımda kalanın 1/(k+1)’i",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kesirprobiki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Kesir Problemleri · Aktarma",
+  "k": "prob|Kesir Problemleri",
+  "kazanim": "İki depodaki miktarların farklı kesirlerle eşitliğini kurup bir aktarmadan sonraki farktan toplamı bulur.",
+  "tipId": "ksb-iki",
+  "tip": "İki farklı kesirle ifade edilen aynı miktar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "İki ambarda bulunan buğdaydan, birinci ambardakinin 2/5’i ikinci ambardakinin 1/3’üne eşittir.\nBirinci ambardaki buğdayın 1/5’i ikinci ambara aktarılınca ikinci ambardaki buğday, birinci ambardakinden 36 ton fazla olmuştur.\nBuna göre iki ambarda başlangıçta toplam kaç ton buğday vardı?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "72",
+   "C": "132",
+   "D": "198",
+   "E": "396"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "132"
+  },
+  "celdiriciler": {
+   "A": "Birinci ambarın başlangıçtaki miktarını (5 parça) vermiş.",
+   "B": "İkinci ambarın başlangıçtaki miktarını (6 parça) vermiş.",
+   "D": "Aktarma sonrası farkı 2 parça sanıp (7 − 5) bir parçayı 18 bulmuş.",
+   "E": "Aktarma sonrası farkı (3 parça) bir parça sanmış; parçayı 36 almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Başlangıçtaki toplam buğday (ton).",
+  "bilgi": [
+   {
+    "ad": "İki kesirle ifade edilen aynı miktar",
+    "ifade": "A’nın 2/3’ü B’nin 3/4’üne eşitse 2A/3 = 3B/4 yazılıp ortak değer k ile A = 3k/2, B = 4k/3 bulunur; en küçük ortak payda ile oran kurulur. Örnek: 2A/3 = 3B/4 ise A : B = 9 : 8"
+   }
+  ],
+  "ipuclari": [
+   "İki ambarın başlangıç miktarlarını aynı birimle yaz; ardından aktarmayı bu birimle uygula."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç oranı",
+    "aciklama": "2A/5 = B/3 ise A : B = 5 : 6.",
+    "islem": "A = 5m · B = 6m"
+   },
+   {
+    "baslik": "Aktarma",
+    "aciklama": "A’nın 1/5’i (m) B’ye gider.",
+    "islem": "A = 4m · B = 7m"
+   },
+   {
+    "baslik": "Birimi bul",
+    "aciklama": "Fark 36 ton.",
+    "islem": "7m − 4m = 3m = 36 → m = 12"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Başlangıçta 5m + 6m.",
+    "islem": "11 × 12 = 132 ton"
+   }
+  ],
+  "puf": "İki farklı kesirle verilen eşitlikten oran çıkar; sonrasında tüm değişimleri aynı birimle (m) yaz ve verilen farkı birime bağla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KESB-04 (iki kesir) · iki ambarda buğday, aktarma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
