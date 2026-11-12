@@ -60,3 +60,10 @@ test("hocaların farklı konu adları: tarih yeni ünite adları, geometri temel
   assert.deepEqual(E["geo|Kenarortay"], [["f", 0]]);
   assert.deepEqual(E["geo|Üçgende Açılar"], [["c", 0]]);
 });
+
+test("güncel seri yoksa hocanın en son eski serisi alınır; güncel varsa o seçilir", () => {
+  const L = [{ id: "PL_o1", ad: "2024 TYT TARİH KONU ANLATIM", sayi: 40, tarih: "2023-09-01" }, { id: "PL_o2", ad: "2022 TYT Tarih Konu Anlatımı", sayi: 40, tarih: "2021-09-01" }];
+  assert.deepEqual(listeSec(L, "tar").map(x => [x.id, x.eski]), [["PL_o1", true]]);
+  assert.deepEqual(listeSec([...L, { id: "PL_n", ad: "TYT Tarih Kampı 2027", sayi: 20, tarih: "2026-08-01" }], "tar").map(x => [x.id, x.eski]), [["PL_n", undefined]]);
+  assert.deepEqual(listeSec([{ id: "PL_g", ad: "TYT - FİZİK - GENEL TEKRAR", sayi: 14, tarih: "2026-04-13" }], "fiz", [], "", "genel tekrar").map(x => x.id), ["PL_g"]);
+});

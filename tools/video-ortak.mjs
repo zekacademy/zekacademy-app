@@ -53,15 +53,19 @@ const DISLA = /\b[5-8] ?(?:\.|inci|nci)? ?sinif|lgs|ortaokul|kpss|\bags\b|oabt|s
 /* Bir kanalın oynatma listelerinden, eksik sınavlar için en güncel konu anlatımı listesini seç.
    L: [{id, ad, sayi, tarih}], ders: VDERS anahtarı, sabit: elle seçilmiş listelerin kapsadığı sınavlar */
 export const ALT_SINIF = /\b[5-8] ?(?:\.|inci|nci)? ?sinif|lgs|ortaokul/;
-export function listeSec(L, ders, sabit = [], filtre = "") {
-  const re = VDERS[ders].re, f = sade(filtre), secim = {};
+export function listeSec(L, ders, sabit = [], filtre = "", izin = "") {
+  const re = VDERS[ders].re, f = sade(filtre), iz = sade(izin), secim = {};
   for (const p of L) {
     const n = sade(p.ad);
     if (/kpss|\bags\b|oabt|\bdgs\b|\bales\b|\bmsu\b/.test(n) || ALT_SINIF.test(n)) continue;
-    if (!re.test(n) || (DISLA.test(n) && !/konu anlatim/.test(n) && !(/kamp/.test(n) && !/soru bankasi|cozum|deneme|tekrar|sorular/.test(n))) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
-    const yp = yilPuan(p.ad, p.tarih); if (!yp) continue;
+    if (!re.test(n) || (DISLA.test(n) && !(iz && n.includes(iz)) && !/konu anlatim/.test(n) && !(/kamp/.test(n) && !/soru bankasi|cozum|deneme|tekrar|sorular/.test(n))) || (f && !n.includes(f)) || (p.sayi != null && p.sayi < 3)) continue;
+    let yp = yilPuan(p.ad, p.tarih);
+    if (!yp) { /* Güncel seri yoksa hocanın en son eski serisi (yalnız TYT/AYT; güncel olan her zaman öne geçer) */
+      if (!(p.sayi >= 5) || !/konu|kamp|anlatim|ders/.test(n) || /soru/.test(n)) continue;
+      const y = Math.max(...(String(p.ad).match(/20[12]\d/g) || [String(p.tarih || "2015").slice(0, 4)]).map(Number)); yp = Math.max(0.01, (y - 2014) / 20); }
     const SL = sinavlar(p.ad); for (const s of (SL.length ? SL : VARSAYILAN[ders] || [])) {
       if (sabit.includes(s)) continue;
+      if (yp < 1 && s.startsWith("M")) continue;
       if (s.startsWith("M") ? !VDERS[ders].M.length : (VDERS[ders].yok || []).includes(s)) continue;
       if (!s.startsWith("M") && /20(2[89]|3\d)/.test(p.ad)) continue;   /* 2028 ve sonrası YKS listeleri bugünkü TYT/AYT değil (Maarif öğrencileri için) */
       const puan = yp * 1000 + (/konu|kamp|anlatim/.test(n) ? 300 : 0) + Math.min(200, p.sayi || 0) + (p.tarih ? Date.parse(p.tarih) / 1e12 : 0);
@@ -70,7 +74,7 @@ export function listeSec(L, ders, sabit = [], filtre = "") {
   }
   /* Aynı liste birden çok sınavı kapsıyorsa tek kayıt */
   const out = {};
-  for (const [s, p] of Object.entries(secim)) { (out[p.id] = out[p.id] || { id: p.id, ad: p.ad, sinav: [] }).sinav.push(s); }
+  for (const [s, p] of Object.entries(secim)) { (out[p.id] = out[p.id] || { id: p.id, ad: p.ad, sinav: [], ...(p.puan < 1000 ? { eski: true } : {}) }).sinav.push(s); }
   return Object.values(out);
 }
 

@@ -1,5 +1,5 @@
 {
- "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz. 'yanlisKanal': aramada yanlış çıkan kanal kimlikleri (bir daha seçilmez).",
+ "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz. 'yanlisKanal': aramada yanlış çıkan kanal kimlikleri (bir daha seçilmez). 'izin': normalde elenen ama bu hocada kabul edilen liste türü (ör. 'genel tekrar').",
  "dersler": {
   "mat": {
    "ad": "Matematik",
@@ -53,7 +53,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Matematik"
+     "filtre": "Matematik",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Matematik Kafası",
@@ -145,7 +146,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Geometri"
+     "filtre": "Geometri",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -220,7 +222,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Fizik"
+     "filtre": "Fizik",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -261,7 +264,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Kimya"
+     "filtre": "Kimya",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -325,7 +329,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Biyoloji"
+     "filtre": "Biyoloji",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -407,7 +412,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Türkçe"
+     "filtre": "Türkçe",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -468,7 +474,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Edebiyat"
+     "filtre": "Edebiyat",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -529,7 +536,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Tarih"
+     "filtre": "Tarih",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -579,7 +587,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Coğrafya"
+     "filtre": "Coğrafya",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -655,7 +664,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Felsefe"
+     "filtre": "Felsefe",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -675,7 +685,8 @@
      "ad": "Hocalara Geldik",
      "rol": "yedek",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Din"
+     "filtre": "Din",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
