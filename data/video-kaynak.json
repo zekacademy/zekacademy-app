@@ -1,5 +1,5 @@
 {
- "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz. 'yanlisKanal': aramada yanlış çıkan kanal kimlikleri (bir daha seçilmez).",
+ "_aciklama": "Video Kütüphanesi kaynak listesi. Her ders için hocalar (sıra: ana, yedek, diğer). 'kanal' YouTube @adı; yoksa iş akışı 'ara' ile kanalı bulur ve data/video-kanallar.json'a yazar. 'listeler' elle seçilmiş oynatma listeleri; bunların kapsamadığı sınavlar için iş akışı hocanın kanalındaki en güncel (2027 / 2026-2027, yoksa son 2026) TYT, AYT ve 9-10-11. sınıf Maarif listelerini kendisi seçer. 'filtre': aynı kanalda birden çok hoca varsa liste adında geçmesi gereken söz. 'yanlisKanal': aramada yanlış çıkan kanal kimlikleri (bir daha seçilmez). 'izin': normalde elenen ama bu hocada kabul edilen liste türü (ör. 'genel tekrar').",
  "dersler": {
   "mat": {
    "ad": "Matematik",
@@ -29,6 +29,12 @@
      "ara": "Rehber Matematik YKS"
     },
     {
+     "ad": "Nagihan Damargüç",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Nagihan"
+    },
+    {
      "ad": "Şenol Hoca",
      "rol": "diger",
      "kanal": "@senolhoca"
@@ -47,7 +53,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Matematik"
+     "filtre": "Matematik",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Matematik Kafası",
@@ -130,7 +137,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Geometri"
+     "filtre": "Geometri",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -166,6 +174,12 @@
      "ara": "Umut Öncül YKS"
     },
     {
+     "ad": "Veli İpekçi",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Veli"
+    },
+    {
      "ad": "Altuğ Güneş",
      "rol": "diger",
      "ara": "Altuğ Güneş YKS"
@@ -194,7 +208,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Fizik"
+     "filtre": "Fizik",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -235,7 +250,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Kimya"
+     "filtre": "Kimya",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -270,6 +286,12 @@
      "ara": "Dr. Biyoloji YKS"
     },
     {
+     "ad": "Zeliha Yücel",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Zeliha"
+    },
+    {
      "ad": "Selin Hoca",
      "rol": "diger",
      "ara": "Selin Hoca YKS"
@@ -293,7 +315,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Biyoloji"
+     "filtre": "Biyoloji",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -341,6 +364,12 @@
      "ara": "Deniz Hoca YKS"
     },
     {
+     "ad": "Kadir Gümüş",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Kadir G"
+    },
+    {
      "ad": "Emek Taştan",
      "rol": "diger",
      "ara": "Emek Taştan YKS"
@@ -364,7 +393,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Türkçe"
+     "filtre": "Türkçe",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -391,6 +421,12 @@
      "ara": "Emek Taştan YKS"
     },
     {
+     "ad": "Kadir Gümüş",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Kadir G"
+    },
+    {
      "ad": "Deniz Hoca",
      "rol": "diger",
      "ara": "Deniz Hoca YKS"
@@ -414,7 +450,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Edebiyat"
+     "filtre": "Edebiyat",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -441,6 +478,12 @@
        "sinav": [
         "TYT"
        ]
+      },
+      {
+       "ad": "AYT TARİH KAMPI-2025",
+       "sinav": [
+        "AYT"
+       ]
       }
      ]
     },
@@ -462,16 +505,15 @@
     {
      "ad": "Gökhan Öz",
      "rol": "diger",
-     "ara": "Gökhan Öz YKS",
-     "yanlisKanal": [
-      "UCbMXxr8nbwGq1AbnoTypUYg"
-     ]
+     "kanal": "@BenimHocam",
+     "filtre": "Gökhan"
     },
     {
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Tarih"
+     "filtre": "Tarih",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -521,7 +563,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Coğrafya"
+     "filtre": "Coğrafya",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -548,6 +591,24 @@
        "sinav": [
         "TYT"
        ]
+      },
+      {
+       "ad": "PSİKOLOJİ KONU ANLATIMI VE SORU ÇÖZÜMÜ 2027",
+       "sinav": [
+        "AYT"
+       ]
+      },
+      {
+       "ad": "SOSYOLOJİ KONU ANLATIMI VE SORU ÇÖZÜMÜ 2027",
+       "sinav": [
+        "AYT"
+       ]
+      },
+      {
+       "ad": "MANTIK KONU ANLATIMI VE SORU ÇÖZÜMÜ 2027",
+       "sinav": [
+        "AYT"
+       ]
       }
      ]
     },
@@ -558,6 +619,12 @@
      "yanlisKanal": [
       "UCOjaibUYMqyDZmnYgP8sOkA"
      ]
+    },
+    {
+     "ad": "Erdal Aydemir",
+     "rol": "diger",
+     "kanal": "@BenimHocam",
+     "filtre": "Erdal"
     },
     {
      "ad": "Sosyal Hocam",
@@ -573,7 +640,8 @@
      "ad": "Hocalara Geldik",
      "rol": "diger",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Felsefe"
+     "filtre": "Felsefe",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
@@ -593,7 +661,8 @@
      "ad": "Hocalara Geldik",
      "rol": "yedek",
      "ara": "Hocalara Geldik YKS",
-     "filtre": "Din"
+     "filtre": "Din",
+     "izin": "genel tekrar"
     },
     {
      "ad": "Kampüs",
