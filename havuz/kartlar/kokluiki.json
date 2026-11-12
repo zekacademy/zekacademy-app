@@ -1,0 +1,289 @@
+{
+ "konu": "Köklü Sayılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KKLB-01",
+   "konu": "Köklü Sayılar",
+   "alt": "Kök dışına çıkarma, toplama ve çıkarma",
+   "fikir": "Kök içleri tam kare çarpanlarıyla ayrılır, benzer köklerin katsayıları toplanıp çıkarılır.",
+   "tuzak": "Kök içlerini toplayıp çıkarmak; dışarı çıkan sayının kökünü almayı unutmak; çıkarılan terimin işaretini kaçırmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kkb-disari",
+   "tip": "Kök dışına çıkarma, toplama ve çıkarma",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-02",
+   "konu": "Köklü Sayılar",
+   "alt": "Ondalık sayıların karekökü",
+   "fikir": "Ondalık sayılar 100’ün kesri olarak yazılıp kök alınır; virgülün kayması kontrol edilir.",
+   "tuzak": "Virgülü kök sonrası yanlış kaydırmak; ondalıktaki sıfır sayısını yarılamamak; işareti atlamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kkb-ondalik",
+   "tip": "Ondalık sayıların karekökü",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-03",
+   "konu": "Köklü Sayılar",
+   "alt": "Katsayılı köklerde çarpma ve bölme",
+   "fikir": "Katsayılar katsayılarla, kök içleri kök içleriyle çarpılıp bölünür ve sonuç sadeleştirilir.",
+   "tuzak": "Katsayıları toplamak; kök içi tam karenin kökünü almamak; kök dışındaki sayıyı bölmeye katmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kkb-carpma",
+   "tip": "Katsayılı köklerde çarpma ve bölme",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-04",
+   "konu": "Köklü Sayılar",
+   "alt": "Paydayı rasyonel yapma",
+   "fikir": "Paydadaki iki terimli köklü ifade eşlenikle genişletilip payda tam sayı yapılır.",
+   "tuzak": "Eşleniği aynı işaretle almak; paydayı hesaplayıp pay ile bölmeyi unutmak; kök içlerini toplamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kkb-eslenik",
+   "tip": "Paydayı rasyonel yapma ve eşlenik",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-05",
+   "konu": "Köklü Sayılar",
+   "alt": "√(a²) = |a| ve işaret koşulu",
+   "fikir": "Değişkenin işareti verilir; kök altındaki kareler mutlak değere, mutlak değerler işarete göre açılır.",
+   "tuzak": "√(a²) = a yazmak; mutlak değeri işaret koşulundan bağımsız açmak; negatif sayıdan sonra işareti kaybetmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kkb-mutlak",
+   "tip": "Kök içindeki kare ve mutlak değer",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-06",
+   "konu": "Köklü Sayılar",
+   "alt": "Köklü ifadenin iki ardışık tam sayı arasındaki yeri",
+   "fikir": "Her kök, tam kareler arasında sıkıştırılarak tahmin edilir; sınırlar iki aralığa yayılırsa toplamın karesi alınıp tam karelerle sınırlanır.",
+   "tuzak": "Kök içlerini toplayıp tek köke dönüştürmek; üst ya da alt sınırlardan birini almak; yuvarlama hatası.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kkb-siralama",
+   "tip": "Köklü sayıların tahmini ve ardışık tam sayılar",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-07",
+   "konu": "Köklü Sayılar",
+   "alt": "İç içe kökler (içten dışa)",
+   "fikir": "İçteki kök hesaplanır, toplamı alınır ve bir dıştaki kök alınır; her adımda tam kare aranır.",
+   "tuzak": "Dıştaki kökü almayı unutmak; √16 = 8 yazmak; bir toplamı atlamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kkb-ic",
+   "tip": "İç içe kökler",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-08",
+   "konu": "Köklü Sayılar",
+   "alt": "Basit köklü denklem",
+   "fikir": "Kök içleri eşitlenecek biçimde iki tarafın karesi alınır; katsayı da kareye girer, çıkan değer kök içlerinin tanım koşuluyla denenir.",
+   "tuzak": "Katsayıyı karesiz almak; parantezi dağıtmamak; taşıma hatası.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kkb-denklem",
+   "tip": "Basit köklü denklem",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-09",
+   "konu": "Köklü Sayılar",
+   "alt": "Kare alanından kenar ve çevre (sözel bağlam)",
+   "fikir": "Alandan kenar kök dışına çıkarılarak bulunur; çevre ve aralıkla ilgili sayma sorusu köklü oranla çözülür.",
+   "tuzak": "Kenarı yanlış sadeleştirmek; çevreyi 2 × kenar almak; kapalı çevrede aralık sayısı ile direk sayısını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kkb-baglam",
+   "tip": "Kare ve dikdörtgen bağlamında köklü işlemler",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-10",
+   "konu": "Köklü Sayılar",
+   "alt": "Köklü ifadelerle öncüllü sorular",
+   "fikir": "Her öncül kök dışına çıkarma, eşlenik çarpımı ya da ondalık kökle ayrı ayrı kanıtlanır.",
+   "tuzak": "Kök içlerini toplamak; (a − b)(a + b) = a − b sanmak; ondalık kökte basamak hatası.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "kkb-oncul",
+   "tip": "Köklü ifadelerde öncüllü sorular",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-11",
+   "konu": "Köklü Sayılar",
+   "alt": "Eşlenik değerlerle simetrik ifade",
+   "fikir": "x = √7 + √3 ve y = √7 − √3 için x² + y² ve x × y özdeşliklerle bulunur; oran hesaplanır.",
+   "tuzak": "x²+y² yerine (x+y)² ya da (x−y)² yazmak; x × y için kök içlerini çıkarmak; çarpım yerine toplam almak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "kkb-ozdeslik",
+   "tip": "Köklü ifadelerde özdeşlik ve işlem",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-12",
+   "konu": "Köklü Sayılar",
+   "alt": "Eşlenikle iki kesrin toplamı",
+   "fikir": "İki kesir de eşlenikle genişletilip payda 1 yapılır, sonra toplanır.",
+   "tuzak": "Eşlenikteki işareti karıştırmak; paydayı 1 sanıp payı genişletmemek; toplama yerine çarpma yapmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kkb-eslenik",
+   "tip": "Paydayı rasyonel yapma ve eşlenik",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKLB-13",
+   "konu": "Köklü Sayılar",
+   "alt": "Tanımlı kavram: kök dışına çıkarılabilen sayı",
+   "fikir": "Tanım sadeleşebilen ama tam sayı olmayan kökleri seçer; kare çarpanı olan sayılar sayılıp tam kareler ayıklanır.",
+   "tuzak": "Tam kareleri de saymak; kare çarpanları kümelerini atlamak; çakışan sayıları iki kez saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "kkb-tanimli",
+   "tip": "Tanımlı kök dışına çıkarılabilir sayıları sayma",
+   "kaynak": "ÖSYM 2022–2026 (yeni nesil tanımlı kavram) · yayın: kök dışına çıkabilen sayıları sayma"
+  },
+  {
+   "id": "K-KKLB-14",
+   "konu": "Köklü Sayılar",
+   "alt": "Dikdörtgenin çevre–alan oranı (sözel bağlam)",
+   "fikir": "Kenarlar √48 ve √75 kök dışına çıkarılır; çevre ve alan hesaplanır, oran sadeleştirilir.",
+   "tuzak": "Çevreyi 2 ile çarpmamak; alanı kök içlerini toplayarak bulmak; √3 × √3 = 3’ü unutmak; oranı ters kurmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kkb-baglam",
+   "tip": "Kare ve dikdörtgen bağlamında köklü işlemler",
+   "kaynak": "ÖSYM 2018–2026 (köklü ifadeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kkb-disari",
+   "ad": "Kök dışına çıkarma, toplama ve çıkarma",
+   "kartlar": [
+    "K-KKLB-01"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-ondalik",
+   "ad": "Ondalık sayıların karekökü",
+   "kartlar": [
+    "K-KKLB-02"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-carpma",
+   "ad": "Katsayılı köklerde çarpma ve bölme",
+   "kartlar": [
+    "K-KKLB-03"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-eslenik",
+   "ad": "Paydayı rasyonel yapma ve eşlenik",
+   "kartlar": [
+    "K-KKLB-04",
+    "K-KKLB-12"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-mutlak",
+   "ad": "Kök içindeki kare ve mutlak değer",
+   "kartlar": [
+    "K-KKLB-05"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-siralama",
+   "ad": "Köklü sayıların tahmini ve ardışık tam sayılar",
+   "kartlar": [
+    "K-KKLB-06"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-ic",
+   "ad": "İç içe kökler",
+   "kartlar": [
+    "K-KKLB-07"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-denklem",
+   "ad": "Basit köklü denklem",
+   "kartlar": [
+    "K-KKLB-08"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-baglam",
+   "ad": "Kare ve dikdörtgen bağlamında köklü işlemler",
+   "kartlar": [
+    "K-KKLB-09",
+    "K-KKLB-14"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-oncul",
+   "ad": "Köklü ifadelerde öncüllü sorular",
+   "kartlar": [
+    "K-KKLB-10"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-ozdeslik",
+   "ad": "Köklü ifadelerde özdeşlik ve işlem",
+   "kartlar": [
+    "K-KKLB-11"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kkb-tanimli",
+   "ad": "Tanımlı kök dışına çıkarılabilir sayıları sayma",
+   "kartlar": [
+    "K-KKLB-13"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "konu": "Üslü Sayılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-USLB-01",
+   "konu": "Üslü Sayılar",
+   "alt": "Farklı tabanları eşitleyerek sadeleştirme",
+   "fikir": "Çarpım ve bölümdeki tabanlar aynı asal tabana çevrilir (4 = 2², 8 = 2³), kuvvetin kuvveti ile üsler çarpılıp aynı tabanda üsler toplanıp çıkarılır.",
+   "tuzak": "Farklı tabanlıyken üsleri toplayıp çıkarmak; 8² gibi kuvvetin kuvvetini 8 × 2 yapmak; tabanı çevirip üssü çevirmeyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "usb-kural",
+   "tip": "Üslü ifadelerde sadeleştirme ve negatif üs işlemleri",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-02",
+   "konu": "Üslü Sayılar",
+   "alt": "Negatif tabanın tek ve çift kuvveti",
+   "fikir": "Parantezli negatif tabanın çift kuvveti pozitif, tek kuvveti negatiftir; terimler ayrı ayrı değerlendirilip toplanır.",
+   "tuzak": "(−3)² ile −3²’yi karıştırmak; tek üssün işaretini kaçırmak; üssü çarpma gibi okumak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "usb-negatif",
+   "tip": "Negatif tabanın kuvveti ve işaret çözümlemesi",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-03",
+   "konu": "Üslü Sayılar",
+   "alt": "Bilimsel gösterimle ölçü ve bölme",
+   "fikir": "Büyüklükler a × 10ⁿ biçiminde yazılıp katsayılar ve 10’un kuvvetleri ayrı ayrı çarpılır ya da bölünür; sonuç istenen birime çevrilir.",
+   "tuzak": "Birim çevirmede üssü yanlış kaydırmak; bölmede katsayıları ters bölmek; katsayıyı 10’dan büyük bırakıp üssü düzeltmemek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "usb-bilimsel",
+   "tip": "Bilimsel gösterim ve 10’un kuvvetleri",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-04",
+   "konu": "Üslü Sayılar",
+   "alt": "Ortak çarpan parantezi (kesirli ifade)",
+   "fikir": "Pay ve paydadaki farklı üslü terimlerde en küçük kuvvet ortak çarpan yapılır; kalan çarpanlar sayısal parantez olarak hesaplanıp 2ⁿ gibi ifadeler sadeleşir.",
+   "tuzak": "Parantez içindeki işareti yanlış kurmak; 2ⁿ⁺¹ = 2ⁿ × 2 yerine 2ⁿ⁻¹ × 2 sanmak; pay ve paydayı ayrı hesaplayıp çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-ortak",
+   "tip": "Ortak çarpan parantezi ve sadeleştirme",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-05",
+   "konu": "Üslü Sayılar",
+   "alt": "Ortak tabana çevirerek üslü denklem",
+   "fikir": "Kesirli ve tam sayı tabanlar aynı asal tabana çevrilir (1/4 = 2⁻²), üsler çarpılıp toplanır ve eşitlenerek denklem çözülür.",
+   "tuzak": "Negatif üssün işaretini yanlış taşımak; 16 = 2⁴ yerine 2² yazmak; kuvvetin kuvvetinde parantezin tamamıyla çarpmamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-denklem",
+   "tip": "Aynı tabana çevirerek ve değişken değiştirerek üslü denklem",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-06",
+   "konu": "Üslü Sayılar",
+   "alt": "2ˣ = 3 verilince üslü ifadenin değeri",
+   "fikir": "4ˣ = (2ˣ)², 2ˣ⁺³ = 8 × 2ˣ ve 2ˣ⁺¹ = 2 × 2ˣ yazılır; verilen değer yerine konup üç terim hesaplanır.",
+   "tuzak": "Üsleri toplayarak 2ˣ + 3 gibi yazmak; 4ˣ⁺¹’i (4 × 2ˣ)² yapmak; çıkarılan terimi toplamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "usb-ortak",
+   "tip": "Ortak çarpan parantezi ve sadeleştirme",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-07",
+   "konu": "Üslü Sayılar",
+   "alt": "Negatif üslü sayıların sıralanması",
+   "fikir": "Tüm sayılar aynı tabana çevrilir (kesir tabanlar ve negatif üsler dahil), üsler karşılaştırılarak küçükten büyüğe sıralanır.",
+   "tuzak": "Negatif üssü yok saymak; kesir tabanda üssün yönünü karıştırmak; negatif üssü sayının eksi işareti sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-siralama",
+   "tip": "Üslü sayıları sıralama (negatif üs ve kesir taban)",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-08",
+   "konu": "Üslü Sayılar",
+   "alt": "Yarısı, çeyreği, 4 katı ile üslü ifade",
+   "fikir": "“Çeyreği”, “yarısı”, “4 katı” 2’nin kuvvetlerinde üs değişimi olarak yazılır ve terimler 2’nin ortak kuvvetiyle toplanır.",
+   "tuzak": "Çeyreği ile 4 katını karıştırmak; 4 = 2³ sanmak; toplanan kuvvetlerin üslerini toplamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-oran",
+   "tip": "“Yarısı, çeyreği, 4 katı” ile üslü ifade",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-09",
+   "konu": "Üslü Sayılar",
+   "alt": "2ᵃ × 5ᵇ biçiminde basamak sayısı",
+   "fikir": "2’nin ve 5’in kuvvetleri eşlenerek 10’un kuvveti elde edilir, kalan çarpan ile birlikte basamak sayısı bulunur.",
+   "tuzak": "Basamak sayısını üsle karıştırmak; 1 fazlasını yanlış saymak; üsleri toplamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-basamak",
+   "tip": "2ᵃ × 5ᵇ biçimli sayının basamak sayısı",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-10",
+   "konu": "Üslü Sayılar",
+   "alt": "Üslü ifade öncülleri",
+   "fikir": "Her öncül n’nin tek ve çift olduğu durumlar ayrı incelenerek kanıtlanır ya da bir karşıt örnekle çürütülür.",
+   "tuzak": "Tek bir n değeriyle “kesinlikle” sonucuna varmak; 2n + 1’i çift sanmak; (−1)ⁿ’in işaretini karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "usb-negatif",
+   "tip": "Negatif tabanın kuvveti ve işaret çözümlemesi",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-11",
+   "konu": "Üslü Sayılar",
+   "alt": "Negatif üslü terimlerle bölme",
+   "fikir": "Negatif üslü terimler kesre çevrilip toplanır; ters kesirle bölme yapılır, ya da ortak çarpan kuralıyla üsler birleştirilir.",
+   "tuzak": "Üsleri toplayıp aynı tabana sığdırmak; bölmeyi çarpma gibi yapmak; terimlerden birini unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "usb-kural",
+   "tip": "Üslü ifadelerde sadeleştirme ve negatif üs işlemleri",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-12",
+   "konu": "Üslü Sayılar",
+   "alt": "Katlanarak artış (kâğıt katlama)",
+   "fikir": "Başlangıç değeri 2⁻⁴ gibi bir kuvvettir; her katlamada 2 ile çarpılır, birim eşitlenip 2ⁿ⁻⁴ ile verilen eşik karşılaştırılır.",
+   "tuzak": "Başlangıcı yok saymak; birimi (m–mm) karıştırmak; eşiği aşan ilk üssün bir eksik ya da fazlasını almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "usb-buyume",
+   "tip": "Katlanarak artan nicelikte eşik problemi",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-13",
+   "konu": "Üslü Sayılar",
+   "alt": "Mikroskop ve bilimsel gösterimle bölme",
+   "fikir": "Görüntü boyutundan gerçek boyut bulunur, birim çevrilir ve toplam uzunluğun bir hücreye oranından hücre sayısı hesaplanır.",
+   "tuzak": "Birimi yanlış çevirmek (cm, mm); büyütmeyi çarpma gibi kullanmak; oranı ters kurmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "usb-bilimsel",
+   "tip": "Bilimsel gösterim ve 10’un kuvvetleri",
+   "kaynak": "ÖSYM 2018–2026 (üslü ifadeler, bilimsel gösterim) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-USLB-14",
+   "konu": "Üslü Sayılar",
+   "alt": "2ᵃ × 3ᵇ biçimli sayıları sayma",
+   "fikir": "Tanımlı sayı kümesi b değerlerine göre gruplanır; her grupta 2ᵃ çarpanıyla sınırın altında kalan sayılar sayılır ve toplanır.",
+   "tuzak": "b = 0 ve a = 0 durumlarını atlamak; b’nin büyük değerlerini unutmak; sınırın kendisini (100’ü) saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "usb-tanimli",
+   "tip": "Tanımlı üslü sayı kümesinde sayma",
+   "kaynak": "ÖSYM 2022–2026 (yeni nesil tanımlı kavram) · yayın: 2ᵃ·3ᵇ biçimli sayıları sayma"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "usb-kural",
+   "ad": "Üslü ifadelerde sadeleştirme ve negatif üs işlemleri",
+   "kartlar": [
+    "K-USLB-01",
+    "K-USLB-11"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-negatif",
+   "ad": "Negatif tabanın kuvveti ve işaret çözümlemesi",
+   "kartlar": [
+    "K-USLB-02",
+    "K-USLB-10"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-bilimsel",
+   "ad": "Bilimsel gösterim ve 10’un kuvvetleri",
+   "kartlar": [
+    "K-USLB-03",
+    "K-USLB-13"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-ortak",
+   "ad": "Ortak çarpan parantezi ve sadeleştirme",
+   "kartlar": [
+    "K-USLB-04",
+    "K-USLB-06"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-denklem",
+   "ad": "Aynı tabana çevirerek ve değişken değiştirerek üslü denklem",
+   "kartlar": [
+    "K-USLB-05"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-siralama",
+   "ad": "Üslü sayıları sıralama (negatif üs ve kesir taban)",
+   "kartlar": [
+    "K-USLB-07"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-oran",
+   "ad": "“Yarısı, çeyreği, 4 katı” ile üslü ifade",
+   "kartlar": [
+    "K-USLB-08"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-basamak",
+   "ad": "2ᵃ × 5ᵇ biçimli sayının basamak sayısı",
+   "kartlar": [
+    "K-USLB-09"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-buyume",
+   "ad": "Katlanarak artan nicelikte eşik problemi",
+   "kartlar": [
+    "K-USLB-12"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  },
+  {
+   "tipId": "usb-tanimli",
+   "ad": "Tanımlı üslü sayı kümesinde sayma",
+   "kartlar": [
+    "K-USLB-14"
+   ],
+   "uygulamaKonu": "mat|Üslü Sayılar"
+  }
+ ]
+}

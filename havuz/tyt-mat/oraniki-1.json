@@ -1,0 +1,1469 @@
+[
+ {
+  "id": "tytmat-oraniki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Oran Özellikleri",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Eşit oranlar verildiğinde ortak değeri bulup istenen terimi hesaplar.",
+  "tipId": "orb-oran",
+  "tip": "Oran ve orantı özellikleri (a/b = c/d = k)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "a, b ve c pozitif gerçel sayılardır.\na/3 = b/4 = c/7\na + b + c = 56\nolduğuna göre b kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "12",
+   "C": "14",
+   "D": "16",
+   "E": "28"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Ortak değeri (k) bulup b = 4k adımını yapmamış.",
+   "B": "b yerine a’yı (3k) hesaplamış.",
+   "C": "Toplamı yalnızca b’nin katsayısına bölmüş: 56 ÷ 4.",
+   "E": "b yerine c’yi (7k) hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "b’nin değeri.",
+  "bilgi": [
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "a/3 = b/4 ise ortak değere k denir: a = 3k, b = 4k. Örnek: a/3 = b/4 ve a + b = 14 ise 7k = 14, k = 2 → a = 6, b = 8"
+   }
+  ],
+  "ipuclari": [
+   "Üç oranın ortak değerine k de; a, b ve c’yi k cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "k ile yaz",
+    "aciklama": "Ortak değer k olsun.",
+    "islem": "a = 3k · b = 4k · c = 7k"
+   },
+   {
+    "baslik": "Toplamı kur",
+    "aciklama": "Üç sayının toplamı 56’dır.",
+    "islem": "3k + 4k + 7k = 14k = 56 → k = 4"
+   },
+   {
+    "baslik": "b’yi bul",
+    "aciklama": "b = 4k.",
+    "islem": "b = 4 × 4 = 16"
+   }
+  ],
+  "puf": "a/m = b/n = c/p gibi eşit oranlarda ortak değere k de; her terim m·k, n·k, p·k olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-01 (oran özellikleri) · üçlü eşit oran ve toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Hız ve Süre",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Yol sabitken hız ile süre arasındaki ters orantıyı kullanarak süredeki değişimi bulur.",
+  "tipId": "orb-hiz",
+  "tip": "Hız–zaman ters orantısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir kargo treni, iki istasyon arasındaki yolu sabit 40 km/sa hızla 9 saatte alıyor.\nTren aynı yolu sabit 60 km/sa hızla gitseydi yolculuk süresi kaç saat kısalırdı?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,5",
+   "B": "3",
+   "C": "4,5",
+   "D": "6",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "Hızlar oranı olan 60/40 = 1,5’i süredeki kısalma saati sanmış.",
+   "C": "Doğru orantı kurup yeni süreyi 13,5 saat bulmuş, farkı 13,5 − 9 = 4,5 yazmış.",
+   "D": "Yeni süreyi (6 saat) bulup kısalmayı değil süreyi vermiş.",
+   "E": "Hız değişse de süre kısalmaz sanmış; ilk süreyi yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yolculuk süresindeki kısalma (saat).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, süre",
+    "ifade": "yol = hız × süre. Yol sabitse hız ile süre ters orantılıdır. Örnek: 60 km/sa ile 4 saatte alınan 240 km’lik yol 80 km/sa ile 3 saatte alınır"
+   }
+  ],
+  "ipuclari": [
+   "Yol sabit; yolu hız × süre ile bul, yeni hızla süreyi hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yolu bul",
+    "aciklama": "yol = hız × süre.",
+    "islem": "40 × 9 = 360 km"
+   },
+   {
+    "baslik": "Yeni süreyi bul",
+    "aciklama": "Aynı yolu 60 km/sa ile gitmek.",
+    "islem": "360 ÷ 60 = 6 saat"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "Önceki süreden yeni süreyi çıkar.",
+    "islem": "9 − 6 = 3 saat"
+   }
+  ],
+  "puf": "Yol sabitken hız artarsa süre aynı oranda azalır; önce yolu bul, sonra yeni süreyi hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-08 (hız–zaman ters orantısı) · süre kısalması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Ölçek",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Harita ölçeği ve haritadaki uzunluktan gerçek uzaklığı kilometre cinsinden bulur.",
+  "tipId": "orb-olcek",
+  "tip": "Ölçek ve harita",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Ölçeği 1/250 000 olan bir haritada iki şehir arasındaki uzaklık 8 cm olarak ölçülüyor.\nBuna göre bu iki şehir arasındaki gerçek uzaklık kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "200",
+   "C": "2000",
+   "D": "20000",
+   "E": "2000000"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "E": "Santimetre cinsinden bulduğu 2 000 000’i kilometreye çevirmeyi unutmuş.",
+   "D": "Santimetreyi metreye çevirip (20 000) kilometreye geçmeyi unutmuş.",
+   "C": "1 km’yi 1000 cm sanmış.",
+   "B": "1 km’yi 10 000 cm sanmış."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "D": "dikkat",
+   "C": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "Gerçek uzaklık (km).",
+  "bilgi": [
+   {
+    "ad": "Ölçek",
+    "ifade": "1/250 000 ölçeğinde haritadaki 1 cm gerçekte 250 000 cm’dir. 1 km = 1000 m = 100 000 cm. Örnek: 2 cm → 500 000 cm = 5 km"
+   }
+  ],
+  "ipuclari": [
+   "Haritadaki 1 cm gerçekte kaç cm eder? Sonra cm’yi km’ye çevir (1 km = 100 000 cm)."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gerçek uzunluğu cm yap",
+    "aciklama": "Ölçek 1/250 000: 1 cm = 250 000 cm.",
+    "islem": "8 × 250 000 = 2 000 000 cm"
+   },
+   {
+    "baslik": "km’ye çevir",
+    "aciklama": "1 km = 100 000 cm.",
+    "islem": "2 000 000 ÷ 100 000 = 20 km"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Haritadaki 1 cm gerçekte 2,5 km eder, 8 cm bunun 8 katıdır.",
+    "islem": "8 × 2,5 = 20 km ✓"
+   }
+  ],
+  "puf": "Ölçek sorularında önce santimetre cinsinden gerçek uzunluğu bul, sonra 100 000’e bölerek kilometreye çevir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-06 (ölçek) · 1/250 000 ölçekli harita",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Karışım",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Hacim oranı verilen bir karışımın toplamından bileşenin miktarını bulur.",
+  "tipId": "orb-karisim",
+  "tip": "Karışım ve tarif oranı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Bir limonata, hacimce su ve limon suyu 7 : 2 oranında karıştırılarak hazırlanıyor.\nHazırlanan limonata 450 mL olduğuna göre bu limonatadaki limon suyu kaç mL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "100",
+   "B": "225",
+   "C": "350",
+   "D": "900",
+   "E": "3150"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "B": "Oranı 1/2 sanıp 450’nin yarısını almış.",
+   "C": "Limon suyu yerine suyun miktarını (7 parça) bulmuş.",
+   "D": "Limon suyu payı olan 2 ile 450’yi çarpmış; parça değerini bulmamış.",
+   "E": "7 ile 450’yi çarpmış; toplamı parçalara bölmemiş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "Limon suyu miktarı (mL).",
+  "bilgi": [
+   {
+    "ad": "Karışım oranı",
+    "ifade": "su : limon = 7 : 2 ise karışımın 9 parçasının 7’si su, 2’si limondur. Örnek: 18 L karışımda bir parça 2 L, limon 4 L’dir"
+   }
+  ],
+  "ipuclari": [
+   "Toplam kaç eşit parçadır? Bir parçanın hacmini bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parçaları say",
+    "aciklama": "7 + 2 = 9 eşit parça.",
+    "islem": "9 parça = 450 mL"
+   },
+   {
+    "baslik": "Bir parçayı bul",
+    "aciklama": "450’yi 9’a böl.",
+    "islem": "450 ÷ 9 = 50 mL"
+   },
+   {
+    "baslik": "Limon suyu",
+    "aciklama": "Limon suyu 2 parçadır.",
+    "islem": "2 × 50 = 100 mL"
+   }
+  ],
+  "puf": "Karışımda toplam parça sayısını bul, bir parçanın değerini hesapla, sonra istenen bileşenin parça sayısıyla çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-07 (karışım oranı) · su ve limon suyu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Ters Orantı",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Ters orantılı iki çokluğun tablosundaki eksik değerleri bulur.",
+  "tipId": "orb-dogruters",
+  "tip": "Doğru ve ters orantı: tablo",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki tabloda x ile y ters orantılıdır.\nx : 4 | 6 | a\ny : b | 8 | 3\nBuna göre a · b çarpımı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "16",
+   "C": "48",
+   "D": "110",
+   "E": "192"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "192"
+  },
+  "celdiriciler": {
+   "C": "Sabit çarpımı (6 × 8 = 48) bulup a · b çarpımı sanmış.",
+   "A": "Yalnız b’yi bulup durmuş.",
+   "B": "Yalnız a’yı bulup durmuş.",
+   "D": "Ters orantı yerine toplamları sabit sanmış: 4 + b = 6 + 8 = a + 3 yazıp b = 10, a = 11 bulmuş."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "a · b çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Ters orantı",
+    "ifade": "biri kaç katına çıkarsa diğeri o kadar kata bölünür; çarpımları sabittir. Örnek: 4 kişi 6 günde bitiriyorsa 8 kişi 3 günde bitirir (4 × 6 = 8 × 3)"
+   }
+  ],
+  "ipuclari": [
+   "Ters orantıda x · y çarpımı sabittir; bilinen sütundan sabiti bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabiti bul",
+    "aciklama": "Tam bilinen sütun 6 ve 8’dir.",
+    "islem": "x × y = 6 × 8 = 48"
+   },
+   {
+    "baslik": "b ve a’yı bul",
+    "aciklama": "Diğer sütunlarda da çarpım 48’dir.",
+    "islem": "4 × b = 48 → b = 12 · a × 3 = 48 → a = 16"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "İstenen çarpımı hesapla.",
+    "islem": "a × b = 16 × 12 = 192"
+   }
+  ],
+  "puf": "Ters orantılı tablolarda her sütunun çarpımı aynıdır; tam bilinen sütundan sabiti bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-02 (doğru–ters orantı, tablo) · eksik iki değer ve çarpım",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Bileşik Orantı",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İşçi sayısı, gün ve günlük çalışma saati arasındaki bileşik orantıyı kurarak gün sayısını bulur.",
+  "tipId": "orb-bilesik",
+  "tip": "Bileşik orantı (işçi–gün–saat)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Eşit verimle çalışan 5 işçi, günde 8 saat çalışarak bir işi 12 günde bitirmektedir.\nBu işi, aynı verimle çalışan 6 işçi günde 10 saat çalışarak kaç günde bitirir?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "9,6",
+   "C": "10",
+   "D": "14,4",
+   "E": "18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "Yalnız günlük saati (8 → 10) dikkate alıp 12 × 8/10 hesaplamış; işçi artışını unutmuş.",
+   "C": "Yalnız işçi sayısını (5 → 6) dikkate alıp 12 × 5/6 hesaplamış.",
+   "D": "İşçi sayısını doğru orantılı alıp 12 × 6/5 yazmış.",
+   "E": "Üç çokluğu da doğru orantılı alıp 12 × (6/5) × (10/8) hesaplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İşin bitme süresi (gün).",
+  "bilgi": [
+   {
+    "ad": "Bileşik orantı",
+    "ifade": "işçi sayısı, gün ve günlük saat çarpımı (toplam işçi–saat) iş miktarına eşittir. Örnek: 3 işçi günde 4 saat 5 gün çalışırsa 3 × 4 × 5 = 60 işçi–saat iş yapar"
+   }
+  ],
+  "ipuclari": [
+   "İş miktarını işçi × saat × gün çarpımı olarak yaz; yeni durumda da aynı çarpımı kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İş miktarını bul",
+    "aciklama": "İşçi × günlük saat × gün.",
+    "islem": "5 × 8 × 12 = 480 işçi–saat"
+   },
+   {
+    "baslik": "Yeni durumu kur",
+    "aciklama": "6 işçi, günde 10 saat, x gün.",
+    "islem": "6 × 10 × x = 480"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "60x = 480 → x = 8 gün"
+   }
+  ],
+  "puf": "İş sabitken işçi, günlük saat ve gün sayısı birbirleriyle ters orantılıdır; çarpımları değişmez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-03 (bileşik orantı) · işçi ve günlük saat birlikte değişiyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Orantılı Paylaştırma",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Doğru orantılı paylaştırmada pay farkından toplam tutarı bulur.",
+  "tipId": "orb-paylastirma",
+  "tip": "Doğru ve ters orantılı paylaştırma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Üç ortak, bir işletmenin kârını 2, 3 ve 5 ile doğru orantılı olacak biçimde paylaşmıştır.\nEn çok pay alan ortak, en az pay alan ortaktan 450 TL fazla aldığına göre kârın tamamı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "450",
+   "B": "750",
+   "C": "1050",
+   "D": "1500",
+   "E": "2250"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "1500"
+  },
+  "celdiriciler": {
+   "A": "Verilen farkı kârın tamamı sanmış.",
+   "B": "En çok pay alanın payını (5k) bulup toplam sanmış.",
+   "C": "En az ve en çok payların toplamını (7k) bulup tüm payı eklememiş.",
+   "E": "Fark olan 450’yi 5 ile çarpmış; parça değerini hesaplamamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Kârın tamamı (TL).",
+  "bilgi": [
+   {
+    "ad": "Doğru orantılı paylaştırma",
+    "ifade": "2, 3 ve 5 ile doğru orantılı paylar 2k, 3k ve 5k’dir. Örnek: toplam 100 ise 10k = 100, k = 10 → 20, 30, 50"
+   }
+  ],
+  "ipuclari": [
+   "Paylar 2k, 3k, 5k; en çok ile en az payın farkı kaç k eder?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "2, 3 ve 5 ile doğru orantılı.",
+    "islem": "2k · 3k · 5k"
+   },
+   {
+    "baslik": "k’yi bul",
+    "aciklama": "En çok − en az = 5k − 2k.",
+    "islem": "3k = 450 → k = 150"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Toplam 10k.",
+    "islem": "10 × 150 = 1500 TL"
+   }
+  ],
+  "puf": "Paylaştırmada verilen farkı ya da payı k cinsinden yaz; k’yi bulunca toplam parça sayısıyla çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-04 (orantılı paylaştırma) · pay farkından toplam",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Orantılı Paylaştırma",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Ters orantılı paylaştırmada payları bulup en çok ve en az pay arasındaki farkı hesaplar.",
+  "tipId": "orb-paylastirma",
+  "tip": "Doğru ve ters orantılı paylaştırma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir dede, 1320 TL’lik harçlığı yaşları 2, 3 ve 6 olan üç torununa, yaşlarıyla ters orantılı olacak biçimde dağıtmıştır.\nBuna göre en çok harçlık alan torun ile en az alan torun arasındaki fark kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "440",
+   "B": "480",
+   "C": "660",
+   "D": "720",
+   "E": "880"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "440"
+  },
+  "celdiriciler": {
+   "D": "Doğru orantılı dağıtıp en çok payı (6 × 120 = 720) fark sanmış.",
+   "B": "Doğru orantılı dağıtıp (2 : 3 : 6) farkı 6 − 2 = 4 parça olarak almış.",
+   "C": "Ters orantılı payı doğru bulmuş ama en çok payı (3 parça) fark sanmış.",
+   "E": "En çok ve en az payları çıkarmak yerine toplamış: 660 + 220."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "En çok ve en az ikramiye arasındaki fark (TL).",
+  "bilgi": [
+   {
+    "ad": "Ters orantılı paylaştırma",
+    "ifade": "2, 3 ve 6 ile ters orantılı paylar 1/2, 1/3 ve 1/6 ile doğru orantılıdır; paydalar eşitlenince 3 : 2 : 1 olur. Örnek: toplam 60 ise 6k = 60, k = 10 → 30, 20, 10"
+   }
+  ],
+  "ipuclari": [
+   "Ters orantı için 1/2, 1/3, 1/6 ile doğru orantılı paylaştır; paydaları eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Oranı bul",
+    "aciklama": "1/2 : 1/3 : 1/6 = 3/6 : 2/6 : 1/6.",
+    "islem": "3 : 2 : 1 (toplam 6 parça)"
+   },
+   {
+    "baslik": "Parçayı bul",
+    "aciklama": "1320’yi 6 parçaya böl.",
+    "islem": "1320 ÷ 6 = 220 TL"
+   },
+   {
+    "baslik": "Payları yaz",
+    "aciklama": "En çok 3 parça, en az 1 parça.",
+    "islem": "660, 440, 220 TL"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "En çok − en az.",
+    "islem": "660 − 220 = 440 TL"
+   }
+  ],
+  "puf": "Ters orantılı paylaştırmada sayıların çarpmaya göre tersleriyle (1/2, 1/3, 1/6) doğru orantılı paylaştır; küçük sayı büyük pay alır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-04 (orantılı paylaştırma) · yaşlarla ters orantılı harçlık",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Aritmetik Ortalama",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Sayıların toplamı ile ortalama arasındaki ilişkiden çıkarılan sayıyı bulur.",
+  "tipId": "orb-ortalama",
+  "tip": "Aritmetik ortalama değişimi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Beş sayının aritmetik ortalaması 12’dir. Bu sayılardan biri çıkarılınca kalan dört sayının aritmetik ortalaması 10 oluyor.\nBuna göre çıkarılan sayı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "12",
+   "C": "20",
+   "D": "40",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "İki ortalamanın farkını (12 − 10) çıkarılan sayı sanmış.",
+   "B": "İlk ortalamayı çıkarılan sayı sanmış.",
+   "D": "Kalan dört sayının toplamını bulup çıkarılan sayı sanmış.",
+   "E": "Beş sayının toplamını çıkarılan sayı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Çıkarılan sayı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "sayıların toplamı ÷ adedi aritmetik ortalamadır; toplam = ortalama × adet. Örnek: 4, 6 ve 11’in ortalaması 21 ÷ 3 = 7, toplamları 7 × 3 = 21"
+   }
+  ],
+  "ipuclari": [
+   "Toplam = ortalama × adet; çıkarmadan önceki ve sonraki toplamların farkına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk toplam",
+    "aciklama": "5 sayının toplamı.",
+    "islem": "5 × 12 = 60"
+   },
+   {
+    "baslik": "Kalan toplam",
+    "aciklama": "4 sayının toplamı.",
+    "islem": "4 × 10 = 40"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "Çıkarılan sayı iki toplamın farkıdır.",
+    "islem": "60 − 40 = 20"
+   }
+  ],
+  "puf": "Ortalama sorularında ortalamaları toplama çevir (toplam = ortalama × adet); eklenen ya da çıkan sayı toplamların farkıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-05 (ortalama değişimi) · bir sayı çıkarılınca ortalama azalıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Aritmetik Ortalama",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İki sayının aritmetik ortalaması ve çarpımından sayıları bulup farkını hesaplar.",
+  "tipId": "orb-ortalama",
+  "tip": "Aritmetik ortalama değişimi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "İki pozitif gerçel sayının aritmetik ortalaması 10, çarpımı 36’dır.\nBuna göre bu iki sayının farkı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "14",
+   "C": "16",
+   "D": "18",
+   "E": "256"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Sayıları bulup küçük olanı fark sanmış.",
+   "B": "Toplamdan (20) çarpımın karekökünü (6) çıkarmış.",
+   "D": "Sayıları bulup büyük olanı fark sanmış.",
+   "E": "(a − b)² = 256 bulup karekök almayı unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İki sayının farkı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "sayıların toplamı ÷ adedi aritmetik ortalamadır; toplam = ortalama × adet. Örnek: 4, 6 ve 11’in ortalaması 21 ÷ 3 = 7, toplamları 7 × 3 = 21"
+   },
+   {
+    "ad": "Tam kare farkı",
+    "ifade": "(a − b)² = (a + b)² − 4ab. Örnek: a + b = 7, ab = 12 ise (a − b)² = 49 − 48 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Ortalamadan toplamı bul; (a − b)² = (a + b)² − 4ab açılımını kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Toplam = ortalama × adet.",
+    "islem": "a + b = 2 × 10 = 20 · ab = 36"
+   },
+   {
+    "baslik": "Farkın karesi",
+    "aciklama": "Tam kare açılımından.",
+    "islem": "(a − b)² = 20² − 4 × 36 = 400 − 144 = 256"
+   },
+   {
+    "baslik": "Karekök al",
+    "aciklama": "Fark pozitif alınır.",
+    "islem": "a − b = 16 (sayılar 18 ve 2)"
+   }
+  ],
+  "puf": "Ortalama toplamı verir; toplam ve çarpım bilinince (a − b)² = (a + b)² − 4ab ile fark bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-05 (aritmetik ortalama) · ortalama ve çarpımdan fark",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Oran Özellikleri",
+  "k": "mat|Oran Orantı",
+  "kazanim": "a/b = c/d = k özelliğini katsayılı toplamlara uygulayarak bilinmeyen toplamı bulur.",
+  "tipId": "orb-oran",
+  "tip": "Oran ve orantı özellikleri (a/b = c/d = k)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a, b, c ve d pozitif gerçel sayılardır.\na/b = c/d = 2/5\n3a + 2c = 28\nolduğuna göre 3b + 2d kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11,2",
+   "B": "25",
+   "C": "28",
+   "D": "70",
+   "E": "140"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "70"
+  },
+  "celdiriciler": {
+   "A": "Oran özelliğini ters kurup 28 × 2/5 hesaplamış.",
+   "C": "Oran özelliğinde toplamın değişmeyeceğini sanmış: 3b + 2d = 3a + 2c.",
+   "E": "28’i 5 ile çarpıp 2’ye bölmeyi unutmuş.",
+   "B": "b = 5 ve d = 5 yazıp 3 × 5 + 2 × 5 hesaplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "E": "islem",
+   "B": "bilgi"
+  },
+  "istenen": "3b + 2d değeri.",
+  "bilgi": [
+   {
+    "ad": "Oran özelliği",
+    "ifade": "a/b = c/d = k ise (m·a + n·c)/(m·b + n·d) = k olur. Örnek: 1/2 = 3/6 ise (1 + 3)/(2 + 6) = 4/8 = 1/2"
+   },
+   {
+    "ad": "Oranı k ile yazmak",
+    "ifade": "a/3 = b/4 ise ortak değere k denir: a = 3k, b = 4k. Örnek: a/3 = b/4 ve a + b = 14 ise 7k = 14, k = 2 → a = 6, b = 8"
+   }
+  ],
+  "ipuclari": [
+   "a = 2s, b = 5s, c = 2t, d = 5t yaz; 3a + 2c ile 3b + 2d arasındaki oranı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Oranı yaz",
+    "aciklama": "a/b = c/d = 2/5 olduğundan katsayılı toplamlar da aynı orandadır.",
+    "islem": "(3a + 2c)/(3b + 2d) = 2/5"
+   },
+   {
+    "baslik": "Değeri yerine koy",
+    "aciklama": "3a + 2c = 28.",
+    "islem": "28/(3b + 2d) = 2/5"
+   },
+   {
+    "baslik": "İçler dışlar",
+    "aciklama": "Çapraz çarp.",
+    "islem": "2 × (3b + 2d) = 140 → 3b + 2d = 70"
+   }
+  ],
+  "puf": "a/b = c/d = k ise pay ile paydalarda aynı katsayılarla yapılan toplamlar da k oranını korur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-01 (oran özellikleri) · katsayılı toplamın oran özelliği",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Kur Çevirme",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İki farklı döviz kurunu kullanarak bir para birimini diğerine çevirir.",
+  "tipId": "orb-yeninesil",
+  "tip": "Yeni nesil orantı: dişli, kur çevirme, tarif",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir döviz bürosunda 1 dolar 32 TL, 1 euro 40 TL’dir. Büro komisyon almamakta; alış ve satış kuru aynıdır.\nBu bürodan 640 dolarını euroya çeviren bir kişi kaç euro alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "512",
+   "C": "640",
+   "D": "800",
+   "E": "20480"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "512"
+  },
+  "celdiriciler": {
+   "A": "640’ı yalnız euro kuruna bölmüş (640 ÷ 40); dolar kurunu kullanmamış.",
+   "C": "Dolar ile euroyu birbirine eşit varsaymış.",
+   "D": "Kurları ters kullanıp 640 × 40 ÷ 32 hesaplamış.",
+   "E": "640 doları TL’ye çevirip durmuş; euro kuruna bölmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Alınan euro miktarı.",
+  "bilgi": [
+   {
+    "ad": "Kur ile çevirme",
+    "ifade": "1 dolar = 32 TL ise 640 dolar = 640 × 32 TL’dir. Bir parayı başka parayla ifade etmek için önce TL’ye, sonra TL’yi hedef paranın kuruna bölünür. Örnek: 1 euro = 40 TL ise 80 TL = 80 ÷ 40 = 2 euro"
+   }
+  ],
+  "ipuclari": [
+   "Önce dolarları TL’ye çevir, sonra TL’yi euro kuruna böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "TL’ye çevir",
+    "aciklama": "1 dolar 32 TL.",
+    "islem": "640 × 32 = 20 480 TL"
+   },
+   {
+    "baslik": "Euroya çevir",
+    "aciklama": "1 euro 40 TL.",
+    "islem": "20 480 ÷ 40 = 512 euro"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Geri çevirince aynı TL değeri çıkmalı.",
+    "islem": "512 × 40 = 20 480 TL ✓"
+   }
+  ],
+  "puf": "İki döviz arasında çevirmede önce ortak birime (TL) geç, sonra hedef paranın kuruna böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-09 (kur çevirme) · dolardan euroya",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Oran Özellikleri",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Ortak terimle birleştirilen oranlardan çıkan değerler için öncüllerin kesin doğruluğunu sınar.",
+  "tipId": "orb-oncullu",
+  "tip": "Öncüllü oran yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "a, b ve c pozitif tam sayılardır.\na/b = 3/4\nb/c = 2/5\nolduğuna göre,\nI. a + b + c toplamı 17’nin katıdır.\nII. c, 4’ün katıdır.\nIII. b, 4’ün katıdır.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "b = 4k olduğunu fark etmeyip III’ü yanlış saymış.",
+   "B": "Toplamı 17k yazamayıp I’i, b = 4k’yı görmeyip III’ü yanlış saymış; II’yi yalnız k = 2 ile doğrulamış.",
+   "C": "II’yi yalnız k = 2 için (c = 20) doğrulamış; III’ü sınamamış.",
+   "E": "II’yi yalnız k = 2 için (c = 20) doğrulayıp kesin saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Ortak terimi eşitleme",
+    "ifade": "a/b = 3/4 ve b/c = 2/5 ise b iki oranda eşitlenir: 2/5 = 4/10 ⇒ a : b : c = 3 : 4 : 10. Örnek: pozitif tam sayılar için a = 3k, b = 4k, c = 10k (k pozitif tam sayı)"
+   },
+   {
+    "ad": "Katlar",
+    "ifade": "4’ün katı 4 × m biçimindedir. Örnek: 4k her k için 4’ün katıdır; 10k yalnız k çift iken 4’ün katıdır (k = 2 → 20)"
+   }
+  ],
+  "ipuclari": [
+   "Ortak terim b’yi 4’e eşitle: b/c = 2/5 oranını 4/10 yaz; sonra a, b, c’yi k cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "b’yi eşitle",
+    "aciklama": "b/c = 2/5 = 4/10; böylece b = 4 olur.",
+    "islem": "a : b : c = 3 : 4 : 10"
+   },
+   {
+    "baslik": "k ile yaz",
+    "aciklama": "Pozitif tam sayılar için a = 3k, b = 4k, c = 10k.",
+    "islem": "a + b + c = 17k"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I: 17k, 17’nin katıdır. II: k = 1 için c = 10, 4’ün katı değildir. III: b = 4k her zaman 4’ün katıdır.",
+    "islem": "I doğru · II yanlış · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Kesinlikle doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Ortak terimle oranları birleştirip her terimi k ile yaz; k’ye bağlı olarak değişen ifadeleri bir örnekle çürüt, her k için geçerli olanları kanıtla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-10 (öncüllü oran) · a/b = 3/4 ve b/c = 2/5",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Dişli Çarkları",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Kenetli ve aynı mildeki dişlilerden oluşan bir düzenekte ters orantıyı iki kez kullanarak dönme sayısını bulur.",
+  "tipId": "orb-yeninesil",
+  "tip": "Yeni nesil orantı: dişli, kur çevirme, tarif",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir düzenekte 36 dişli A dişlisi ile 12 dişli B dişlisi birbirine kenetlidir. 24 dişli C dişlisi, B ile aynı mil üzerindedir ve B ile birlikte döner. 9 dişli D dişlisi ise C ile kenetlidir.\nA dişlisi 6 tam tur döndüğünde D dişlisi kaç tur döner?",
+  "sekil": null,
+  "siklar": {
+   "A": "6,75",
+   "B": "8",
+   "C": "18",
+   "D": "24",
+   "E": "48"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "İkinci kademeyi doğru orantılı alıp 18 × 9/24 hesaplamış.",
+   "B": "Dişli oranlarını (3 ve 8/3) çarpıp 8 bulmuş; A’nın tur sayısıyla çarpmamış.",
+   "C": "B’nin (ve C’nin) tur sayısını bulup D’yi hesaplamamış.",
+   "D": "A ile D’yi doğrudan kenetli sanıp 6 × 36/9 hesaplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "D dişlisinin tur sayısı.",
+  "bilgi": [
+   {
+    "ad": "Dişlilerde dönme",
+    "ifade": "kenetli iki dişlide (diş sayısı × tur sayısı) eşittir; yani diş sayısı ile tur sayısı ters orantılıdır. Aynı mildeki dişliler birlikte döner. Örnek: 20 dişli 6 tur atarsa kenetli 30 dişli 4 tur atar"
+   }
+  ],
+  "ipuclari": [
+   "Kenetli dişlilerde diş sayısı × tur sayısı eşittir; aynı mildeki dişliler aynı tur sayısına sahiptir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A ile B",
+    "aciklama": "Kenetli: diş sayısı × tur eşit.",
+    "islem": "36 × 6 = 12 × tB → tB = 18 tur"
+   },
+   {
+    "baslik": "B ile C",
+    "aciklama": "Aynı mildedir, tur sayıları eşittir.",
+    "islem": "tC = 18 tur"
+   },
+   {
+    "baslik": "C ile D",
+    "aciklama": "Kenetli: 24 × 18 = 9 × tD.",
+    "islem": "432 = 9 × tD"
+   },
+   {
+    "baslik": "D’nin turu",
+    "aciklama": "Denklemi çöz.",
+    "islem": "tD = 48 tur"
+   }
+  ],
+  "puf": "Dişli düzeneklerinde kenetli çiftte diş × tur sabittir; aynı mildeki dişliler aynı turu atar. Kademeleri sırayla uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-09 (dişli düzeneği) · iki kademeli dişli, A dönüyor D sorulur",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · İşçi Problemleri",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İşçi sayısı ve günlük çalışma saati birlikte değişen bir işte yapılan ve kalan işi işçi–saat cinsinden ayırarak toplam süreyi bulur.",
+  "tipId": "orb-bilesik",
+  "tip": "Bileşik orantı (işçi–gün–saat)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Eşit verimle çalışan 6 işçi, günde 8 saat çalışarak bir işi 20 günde bitirebilmektedir. İşçiler günde 8 saat çalışarak 5 gün çalıştıktan sonra 2 işçi işten ayrılıyor; kalan işçiler günlük çalışma süresini 10 saate çıkarıyor.\nBuna göre bu iş toplam kaç günde biter?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "20",
+   "C": "23",
+   "D": "24",
+   "E": "27,5"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "Değişimden sonra geçen süreyi (18 gün) toplam süre sanmış.",
+   "B": "İşçi ayrılması ve saat artışını dikkate almayıp ilk süreyi yazmış.",
+   "E": "Günlük saat artışını unutup kalan işi 4 işçi × 8 saat ile hesaplamış: 5 + 22,5.",
+   "D": "4 işçi, günde 10 saatle işin tamamını baştan yapıyormuş gibi 960 ÷ 40 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "E": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "İşin toplam bitme süresi (gün).",
+  "bilgi": [
+   {
+    "ad": "Bileşik orantı",
+    "ifade": "işçi sayısı, gün ve günlük saat çarpımı (toplam işçi–saat) iş miktarına eşittir. Örnek: 3 işçi günde 4 saat 5 gün çalışırsa 3 × 4 × 5 = 60 işçi–saat iş yapar"
+   }
+  ],
+  "ipuclari": [
+   "İşi işçi–saat cinsinden bul; ilk 5 günde yapılanı çıkar, kalanı yeni işçi ve saat sayısına böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam iş",
+    "aciklama": "İşçi × günlük saat × gün.",
+    "islem": "6 × 8 × 20 = 960 işçi–saat"
+   },
+   {
+    "baslik": "İlk 5 gün",
+    "aciklama": "6 işçi, günde 8 saat.",
+    "islem": "6 × 8 × 5 = 240 işçi–saat"
+   },
+   {
+    "baslik": "Kalan iş",
+    "aciklama": "Toplamdan çıkar.",
+    "islem": "960 − 240 = 720 işçi–saat"
+   },
+   {
+    "baslik": "Yeni düzen",
+    "aciklama": "4 işçi, günde 10 saat: günde 40 işçi–saat.",
+    "islem": "720 ÷ 40 = 18 gün"
+   },
+   {
+    "baslik": "Toplam süre",
+    "aciklama": "İlk 5 gün ile 18 günü topla.",
+    "islem": "5 + 18 = 23 gün"
+   }
+  ],
+  "puf": "Çalışma sırasında işçi sayısı ya da günlük saat değişirse işi işçi–saat birimiyle yaz; yapılan kısmı çıkar, kalanı yeni işçi × saat değerine böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-03 (bileşik orantı) · işçi ayrılıyor, günlük saat artıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Ortalama Hız",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Gidiş ve dönüş hızları farklı olan bir yolculukta toplam yolu toplam süreye bölerek ortalama hızı bulur.",
+  "tipId": "orb-hiz",
+  "tip": "Hız–zaman ters orantısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir bisikletli, A noktasından B noktasına sabit 12 km/sa hızla gidiyor ve aynı yoldan sabit 20 km/sa hızla geri dönüyor.\nOrtalama hız, toplam yolun toplam süreye bölümü olduğuna göre bisikletlinin tüm yolculuktaki ortalama hızı kaç km/sa’tir?",
+  "sekil": null,
+  "siklar": {
+   "A": "7,5",
+   "B": "15",
+   "C": "16",
+   "D": "32",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Formülde 2’yi unutup 12 × 20 ÷ (12 + 20) hesaplamış.",
+   "C": "Ortalama hızı iki hızın aritmetik ortalaması (12 + 20)/2 sanmış; süreler eşit değildir.",
+   "D": "İki hızı toplamış.",
+   "E": "İki hızı çarpmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ortalama hız (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, süre",
+    "ifade": "yol = hız × süre. Yol sabitse hız ile süre ters orantılıdır. Örnek: 60 km/sa ile 4 saatte alınan 240 km’lik yol 80 km/sa ile 3 saatte alınır"
+   }
+  ],
+  "ipuclari": [
+   "Yolun uzunluğuna 60 km de; gidiş ve dönüş sürelerini ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yolu seç",
+    "aciklama": "Sonuç yoldan bağımsızdır; AB = 60 km alınabilir.",
+    "islem": "toplam yol = 120 km"
+   },
+   {
+    "baslik": "Gidiş süresi",
+    "aciklama": "60 ÷ 12.",
+    "islem": "5 saat"
+   },
+   {
+    "baslik": "Dönüş süresi",
+    "aciklama": "60 ÷ 20.",
+    "islem": "3 saat"
+   },
+   {
+    "baslik": "Ortalama hız",
+    "aciklama": "Toplam yol ÷ toplam süre.",
+    "islem": "120 ÷ 8 = 15 km/sa"
+   }
+  ],
+  "puf": "Gidiş–dönüş yolculuğunda ortalama hız, hızların aritmetik ortalaması değildir; toplam yolu toplam süreye böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-08 (hız–zaman ters orantısı) · gidiş–dönüş ortalama hızı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Aritmetik Ortalama",
+  "k": "mat|Oran Orantı",
+  "kazanim": "İki yeni değer eklenince değişen ortalamadan eklenenlerin toplamını bulup aralarındaki farktan değerleri hesaplar.",
+  "tipId": "orb-ortalama",
+  "tip": "Aritmetik ortalama değişimi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir sınıftaki 6 öğrencinin matematik sınavı puan ortalaması 70’tir. Sınıfa katılan iki yeni öğrenci de aynı sınava girince 8 öğrencinin puan ortalaması 74 olmuştur.\nYeni öğrencilerden biri diğerinden 8 puan fazla aldığına göre yüksek puan alan yeni öğrencinin puanı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "82",
+   "C": "86",
+   "D": "90",
+   "E": "164"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "Verilen farkı (8) puan sanmış.",
+   "B": "Düşük puanı bulup yüksek puanı sormuş.",
+   "C": "İki yeni öğrenciyi eşit puanlı sayıp toplamı ikiye bölmüş: 172 ÷ 2.",
+   "E": "172 − 8 = 164’ü ikiye bölmeden yüksek puan sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Yüksek puan alan yeni öğrencinin puanı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "sayıların toplamı ÷ adedi aritmetik ortalamadır; toplam = ortalama × adet. Örnek: 4, 6 ve 11’in ortalaması 21 ÷ 3 = 7, toplamları 7 × 3 = 21"
+   }
+  ],
+  "ipuclari": [
+   "Önce 6 ve 8 öğrencinin puan toplamlarını bul; farkları yeni iki öğrencinin toplamıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamları bul",
+    "aciklama": "Ortalama × adet.",
+    "islem": "6 × 70 = 420 · 8 × 74 = 592"
+   },
+   {
+    "baslik": "Yeni öğrencilerin toplamı",
+    "aciklama": "Fark, yeni iki puanın toplamıdır.",
+    "islem": "592 − 420 = 172"
+   },
+   {
+    "baslik": "Düşük puanı bul",
+    "aciklama": "Düşük x, yüksek x + 8.",
+    "islem": "x + (x + 8) = 172 → x = 82"
+   },
+   {
+    "baslik": "Yüksek puanı yaz",
+    "aciklama": "Yüksek puan x + 8.",
+    "islem": "82 + 8 = 90"
+   }
+  ],
+  "puf": "Değer eklenince toplamlar farkı eklenenlerin toplamını verir; farkları da verilirse iki bilinmeyenli küçük bir denklem kurulur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-05 (ortalama değişimi) · sınıfa iki öğrenci katılıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Orantılı Paylaştırma",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Çalışma gününe doğru, hata sayısına ters orantılı paylaştırmada payları bulup toplam tutarı hesaplar.",
+  "tipId": "orb-paylastirma",
+  "tip": "Doğru ve ters orantılı paylaştırma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir şirket, ikramiyeyi üç çalışana paylaştırıyor. Her çalışanın payı, çalışma gün sayısıyla doğru, hata sayısıyla ters orantılıdır.\nÇalışanlar sırasıyla 18, 20 ve 16 gün çalışmış; sırasıyla 3, 4 ve 4 hata yapmıştır.\nBirinci çalışan, üçüncü çalışandan 600 TL fazla aldığına göre ikramiyenin tamamı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "1800",
+   "B": "4500",
+   "C": "6000",
+   "D": "9000",
+   "E": "16200"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "4500"
+  },
+  "celdiriciler": {
+   "A": "Birinci çalışanın payını bulup toplam sanmış.",
+   "C": "Yalnız hata sayılarına göre ters orantılı paylaştırmış (4 : 3 : 3).",
+   "D": "600 TL’lik farkı bir parça sanıp toplam 15 parçayı 600 ile çarpmış; fark 2 parçadır.",
+   "E": "Yalnız çalışılan günlere göre paylaştırmış (9 : 10 : 8)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "İkramiyenin tamamı (TL).",
+  "bilgi": [
+   {
+    "ad": "Doğru orantılı paylaştırma",
+    "ifade": "2, 3 ve 5 ile doğru orantılı paylar 2k, 3k ve 5k’dir. Örnek: toplam 100 ise 10k = 100, k = 10 → 20, 30, 50"
+   },
+   {
+    "ad": "Ters orantılı paylaştırma",
+    "ifade": "2, 3 ve 6 ile ters orantılı paylar 1/2, 1/3 ve 1/6 ile doğru orantılıdır; paydalar eşitlenince 3 : 2 : 1 olur. Örnek: toplam 60 ise 6k = 60, k = 10 → 30, 20, 10"
+   }
+  ],
+  "ipuclari": [
+   "Her çalışanın payı gün ÷ hata ile doğru orantılıdır; bu üç oranı sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Pay oranlarını yaz",
+    "aciklama": "Pay, gün ÷ hata ile orantılı.",
+    "islem": "18/3 : 20/4 : 16/4 = 6 : 5 : 4"
+   },
+   {
+    "baslik": "Farkı parçalarla yaz",
+    "aciklama": "Birinci ile üçüncü arasındaki fark 6k − 4k.",
+    "islem": "2k = 600 → k = 300"
+   },
+   {
+    "baslik": "Toplam parça",
+    "aciklama": "6 + 5 + 4 = 15 parça.",
+    "islem": "15k"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Parçayı çarp.",
+    "islem": "15 × 300 = 4500 TL"
+   }
+  ],
+  "puf": "Bir pay hem doğru hem ters orantılı etkileniyorsa pay ∝ doğru ÷ ters oranı olarak yazılır; sadeleştirince tam sayı parçalar çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-04 (orantılı paylaştırma) · gün ile doğru, hata ile ters orantılı ikramiye",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-oraniki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Oran Orantı · Tarif Ölçekleme",
+  "k": "mat|Oran Orantı",
+  "kazanim": "Her malzemenin kişi sayısıyla doğru orantılı kullanıldığı bir tarifte eldeki stoğa göre yapılabilecek en çok kişi sayısını bulur.",
+  "tipId": "orb-yeninesil",
+  "tip": "Yeni nesil orantı: dişli, kur çevirme, tarif",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir kek tarifinde 6 kişilik için 450 g un, 180 g şeker ve 120 g tereyağı gerekiyor. Her malzeme, kişi sayısıyla doğru orantılı olarak kullanılıyor ve kişi sayısı tam sayı olmak zorunda.\nElde 1200 g un, 560 g şeker ve 300 g tereyağı bulunan bir pastane, en çok kaç kişilik kek yapabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "16",
+   "D": "18",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Tarifi yalnızca 6 kişilik bütün olarak katlayabileceğini sanıp 2 tarif (12 kişi) bulmuş.",
+   "C": "Yalnız unu (1200 ÷ 75) dikkate almış; tereyağı yetmez.",
+   "D": "Yalnız şekeri dikkate alıp 560 ÷ 30 = 18,67’yi aşağı yuvarlamış; tereyağı yetmez.",
+   "E": "Şekerden çıkan 18,67’yi yukarı yuvarlamış; hem tam sayı olmaz hem de tereyağı yetmez."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Yapılabilecek en çok kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Tarif ölçekleme",
+    "ifade": "tarifteki her malzeme kişi sayısıyla doğru orantılıdır; kişi başına düşen miktar bulunur. Örnek: 6 kişilik 450 g un → kişi başı 75 g"
+   }
+  ],
+  "ipuclari": [
+   "Her malzeme için kişi başına düşen miktarı bul; stoğu bu miktara bölüp en küçük sonucu seç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kişi başı miktar",
+    "aciklama": "Tarifi 6’ya böl.",
+    "islem": "un 75 g · şeker 30 g · tereyağı 20 g"
+   },
+   {
+    "baslik": "Her malzemeyle kaç kişi",
+    "aciklama": "Stok ÷ kişi başı miktar.",
+    "islem": "un: 1200 ÷ 75 = 16 · şeker: 560 ÷ 30 = 18,67 → 18 · tereyağı: 300 ÷ 20 = 15"
+   },
+   {
+    "baslik": "Kısıtlayıcıyı seç",
+    "aciklama": "Hepsi birden yeterli olmalı, en küçük değer sınırdır.",
+    "islem": "en küçük = 15"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "15 kişi için gerekenler stoğu aşmaz.",
+    "islem": "un 1125 ≤ 1200 · şeker 450 ≤ 560 · tereyağı 300 ≤ 300"
+   }
+  ],
+  "puf": "Birden çok malzemeli ölçeklemede her malzemenin yetebileceği kişi sayısını ayrı bul; en küçüğü sınırdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-ORNB-09 (tarif ölçekleme) · en kısıtlayıcı malzeme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

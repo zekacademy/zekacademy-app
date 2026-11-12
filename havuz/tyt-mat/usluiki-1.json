@@ -1,0 +1,1132 @@
+[
+ {
+  "id": "tytmat-usluiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Üslü İfadelerde İşlemler",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Farklı tabanlı çarpım ve bölümü aynı tabana çevirip üs kurallarıyla sadeleştirir.",
+  "tipId": "usb-kural",
+  "tip": "Üslü ifadelerde sadeleştirme ve negatif üs işlemleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "(2⁵ × 4³) ÷ 8²\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "16",
+   "C": "32",
+   "D": "64",
+   "E": "128"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "D": "Tabanlar farklı olduğu halde üsleri toplayıp çıkarmış: 2⁵⁺³⁻² = 2⁶. Tabanlar önce eşitlenmelidir.",
+   "E": "8² yerine 8 × 2 = 16 yazmış; kuvvet, tabanın üs kadar kendisiyle çarpımıdır, 8² = 64.",
+   "B": "4³ için 2^(2+3) = 2⁵ yazmış; kuvvetin kuvvetinde üsler çarpılır: 4³ = (2²)³ = 2⁶.",
+   "A": "4’ü 2² yapıp dış üssü 3’ü 2’yle çarpmayı unutmuş: 4³ = 2³ almış."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "E": "bilgi",
+   "B": "bilgi",
+   "A": "islem"
+  },
+  "istenen": "İfadenin sayısal değeri.",
+  "bilgi": [
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 4³ = (2²)³ = 2⁶ · 8² = (2³)² = 2⁶"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "4 ve 8’i 2’nin kuvveti olarak yaz, sonra aynı tabanda üsleri toplayıp çıkar."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tabanları eşitle",
+    "aciklama": "4 = 2² ve 8 = 2³ olduğundan hepsi 2 tabanına çevrilir; kuvvetin kuvvetinde üsler çarpılır.",
+    "islem": "4³ = 2⁶ · 8² = 2⁶"
+   },
+   {
+    "baslik": "İfadeyi yeniden yaz",
+    "aciklama": "Artık tüm tabanlar 2.",
+    "islem": "(2⁵ × 2⁶) ÷ 2⁶"
+   },
+   {
+    "baslik": "Üsleri işle",
+    "aciklama": "Çarpmada üsler toplanır, bölmede çıkarılır.",
+    "islem": "2⁵⁺⁶⁻⁶ = 2⁵ = 32"
+   }
+  ],
+  "puf": "Tabanlar farklıysa önce ortak asal tabana çevir; üs kuralları ancak aynı tabanda çalışır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-01 (tabanları eşitleyerek sadeleştirme) · 2, 4 ve 8 tabanlı çarpım–bölüm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Negatif Taban",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Parantezli ve parantezsiz negatif tabanlı üslü ifadelerin işaretini belirleyerek verilen ifadenin değerini bulur.",
+  "tipId": "usb-negatif",
+  "tip": "Negatif tabanın kuvveti ve işaret çözümlemesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "a = (−3)²\nb = −3²\nc = (−2)³\nolduğuna göre a − b + c ifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−8",
+   "B": "7",
+   "C": "10",
+   "D": "12",
+   "E": "26"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "b = −3²’yi (−3)² gibi okuyup +9 almış; parantez yoksa üs yalnız 3’e aittir, −3² = −9.",
+   "E": "c = (−2)³’ü +8 almış; negatif tabanın tek kuvveti negatiftir, c = −8.",
+   "B": "a = (−3)² yerine 3 × 2 = 6 yazmış; üs çarpma değil tekrarlı çarpmadır, a = 9.",
+   "D": "(−2)³’ü −2 × 3 = −6 hesaplamış; (−2)³ = (−2) × (−2) × (−2) = −8."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "E": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "a − b + c ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Negatif tabanın kuvveti",
+    "ifade": "(−a)ⁿ: n çift ise sonuç pozitif, n tek ise negatiftir. Parantez önemlidir: (−3)² = 9 ama −3² = −9. Örnek: (−2)³ = −8 · (−2)⁴ = 16"
+   }
+  ],
+  "ipuclari": [
+   "a, b ve c’yi ayrı ayrı hesapla; parantezli ve parantezsiz negatif tabanı karıştırma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri bul",
+    "aciklama": "Parantezli negatif tabanın çift kuvveti pozitif, tek kuvveti negatiftir; parantezsiz −3² = −(3²).",
+    "islem": "a = (−3)² = 9 · b = −3² = −9 · c = (−2)³ = −8"
+   },
+   {
+    "baslik": "Yerine yaz",
+    "aciklama": "Çıkarılan b negatif olduğundan işaret değişir.",
+    "islem": "a − b + c = 9 − (−9) + (−8)"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Sırayla topla ve çıkar.",
+    "islem": "9 + 9 − 8 = 10"
+   }
+  ],
+  "puf": "Parantezli negatif tabanda üs çiftse sonuç pozitiftir; parantezsiz −3² ise −(3²) = −9’dur. Çıkarmada işareti bir kez daha değiştirmeyi unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-02 (negatif tabanın tek ve çift kuvveti) · a = (−3)², b = −3², c = (−2)³ değişkenli kurgu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Bilimsel Gösterim",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Bilimsel gösterimle verilen iki büyüklüğün oranını bulur ve sonucu bilimsel gösterimle yazar.",
+  "tipId": "usb-bilimsel",
+  "tip": "Bilimsel gösterim ve 10’un kuvvetleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 2,
+  "metin": "Kapasitesi 3 × 10¹⁰ bayt olan bir depolama alanına, her biri 6 × 10⁴ bayt boyutunda özdeş fotoğraflar yükleniyor.\nDepolama alanı tam dolana kadar fotoğraf yüklendiğine göre kaç fotoğraf yüklenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2 × 10⁻⁶",
+   "B": "5 × 10⁵",
+   "C": "2 × 10⁶",
+   "D": "5 × 10⁶",
+   "E": "5 × 10¹³"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5 × 10⁵"
+  },
+  "celdiriciler": {
+   "C": "Katsayıları ters bölmüş: 6 ÷ 3 = 2 almış (doğrusu 3 ÷ 6 = 0,5); üsleri 10 − 4 = 6 doğru çıkarmış.",
+   "D": "3 ÷ 6 = 0,5 bulup 0,5 × 10⁶ ifadesini 5 × 10⁶ yazmış; virgülü bir basamak kaydırınca üs bir azalmalıdır.",
+   "E": "Bölme yerine üsleri toplamış: 10¹⁰ × 10⁴ = 10¹⁴ ve 0,5 × 10¹⁴ = 5 × 10¹³.",
+   "A": "Oranı ters kurmuş: fotoğraf boyutunu alana bölmüş (6 × 10⁴ ÷ 3 × 10¹⁰)."
+  },
+  "celTur": {
+   "C": "islem",
+   "D": "islem",
+   "E": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "Yüklenen fotoğraf sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bilimsel gösterim",
+    "ifade": "Sayı, a × 10ⁿ biçiminde yazılır (1 ≤ a < 10). 10’un kuvvetleri kendi arasında, katsayılar kendi arasında işlenir. Örnek: (3 × 10⁴) × (2 × 10⁻¹) = 6 × 10³"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Fotoğraf sayısı = alan ÷ fotoğraf boyutu; katsayıları ve 10’un kuvvetlerini ayrı ayrı böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İşlemi kur",
+    "aciklama": "Alan, fotoğraf boyutuna bölünür.",
+    "islem": "(3 × 10¹⁰) ÷ (6 × 10⁴)"
+   },
+   {
+    "baslik": "Katsayıları ve kuvvetleri ayrı böl",
+    "aciklama": "3 ÷ 6 = 0,5 ve 10¹⁰ ÷ 10⁴ = 10⁶.",
+    "islem": "0,5 × 10⁶"
+   },
+   {
+    "baslik": "Bilimsel gösterime çevir",
+    "aciklama": "Katsayı 1 ile 10 arasında olmalı; virgül bir basamak sağa kayınca üs bir azalır.",
+    "islem": "0,5 × 10⁶ = 5 × 10⁵ = 500000"
+   }
+  ],
+  "puf": "Bilimsel gösterimde böl: katsayılar kendi arasında, 10’un kuvvetleri kendi arasında; sonunda katsayıyı 1 ile 10 arasına getir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-03 (bilimsel gösterimle ölçü ve bölme) · depolama alanı ve fotoğraf boyutu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Ortak Çarpan",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Pay ve paydadaki üslü terimleri ortak çarpan parantezine alarak ifadenin değerini bulur.",
+  "tipId": "usb-ortak",
+  "tip": "Ortak çarpan parantezi ve sadeleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "n bir tam sayı olmak üzere\n(2ⁿ⁺⁴ − 2ⁿ) ÷ (2ⁿ⁺¹ − 2ⁿ⁻¹)\nifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "5",
+   "C": "10",
+   "D": "15",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "2ⁿ⁺⁴’ü 2ⁿ × 4 sanıp payı 3 × 2ⁿ bulmuş; 2ⁿ⁺⁴ = 2ⁿ × 2⁴ = 2ⁿ × 16’dır.",
+   "D": "Paydada 2ⁿ⁺¹ − 2ⁿ⁻¹ farkından 2ⁿ’yi ortak çarpan alıp (2 − 1) yazmış; 2ⁿ⁻¹, 2ⁿ’nin yarısıdır.",
+   "B": "2ⁿ ile 2ⁿ⁻¹’in aynı olduğunu sanıp 15 ÷ 3 = 5 bulmuş; 2ⁿ⁻¹ = 2ⁿ ÷ 2’dir.",
+   "E": "2ⁿ⁺¹’i 2ⁿ⁻¹ × 2 yazıp paydayı 2ⁿ⁻¹ × (2 − 1) bulmuş; 2ⁿ⁺¹ = 2ⁿ⁻¹ × 2² = 2ⁿ⁻¹ × 4’tür."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "islem",
+   "B": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "İfadenin sayısal değeri.",
+  "bilgi": [
+   {
+    "ad": "Ortak çarpan",
+    "ifade": "aⁿ⁺ᵏ = aⁿ × aᵏ ve aⁿ⁻ᵏ = aⁿ ÷ aᵏ; en küçük kuvveti parantez dışına al. Örnek: 2ⁿ⁺³ − 2ⁿ = 2ⁿ × (8 − 1) = 7 × 2ⁿ"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Payda en küçük kuvvet 2ⁿ⁻¹; her iki terimi de 2ⁿ⁻¹ cinsinden yaz. Payı ise 2ⁿ ortak çarpanıyla yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Payı çarpanlara ayır",
+    "aciklama": "2ⁿ ortak çarpan; 2ⁿ⁺⁴ = 2ⁿ × 16.",
+    "islem": "2ⁿ⁺⁴ − 2ⁿ = 2ⁿ × (16 − 1) = 15 × 2ⁿ"
+   },
+   {
+    "baslik": "Paydayı çarpanlara ayır",
+    "aciklama": "En küçük kuvvet 2ⁿ⁻¹; 2ⁿ⁺¹ = 2ⁿ⁻¹ × 2² = 2ⁿ⁻¹ × 4.",
+    "islem": "2ⁿ⁺¹ − 2ⁿ⁻¹ = 2ⁿ⁻¹ × (4 − 1) = 3 × 2ⁿ⁻¹"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "2ⁿ = 2ⁿ⁻¹ × 2 olduğundan oran 2’ye bölünür.",
+    "islem": "(15 × 2ⁿ) ÷ (3 × 2ⁿ⁻¹) = 5 × 2 = 10"
+   }
+  ],
+  "puf": "Kesirde pay ve paydadaki üslü farkları ayrı ayrı ortak çarpan parantezine al; ortak üslü çarpanı sadeleştirirken 2ⁿ ile 2ⁿ⁻¹ arasındaki 2 katı unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-04 (ortak çarpan parantezi) · pay ve paydada 2ⁿ’li fark, sabit değerli kesir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Üslü Denklem",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Kesirli ve tam sayı tabanları 2 tabanında birleştirip üsleri eşitleyerek denklemi çözer.",
+  "tipId": "usb-denklem",
+  "tip": "Aynı tabana çevirerek ve değişken değiştirerek üslü denklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(1/4)ˣ⁺¹ × 8ˣ = 16\nolduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4",
+   "D": "5",
+   "E": "6"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "Üs eşitliğini x − 2 = 4 yazıp 4’ü karşıya geçirirken x = 4 − 2 = 2 bulmuş; doğrusu x = 4 + 2.",
+   "B": "(2⁻²)ˣ⁺¹’i 2⁻²ˣ⁺¹ yazmış; −2 üssü x + 1’in her iki terimiyle çarpılmalıdır (−2x − 2).",
+   "C": "16’yı 2² almış (16 = 2⁴); 2⁴ yerine 2² yazınca x − 2 = 2 çıkmış.",
+   "D": "16’yı 2³ almış (aynı soruda geçen 8 = 2³ ile karıştırmış): x − 2 = 3 ⇒ x = 5; oysa 16 = 2⁴’tür."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Negatif üs",
+    "ifade": "a⁻ⁿ = 1/aⁿ (a ≠ 0); işaret değişmez, sayı ters çevrilir. Örnek: 2⁻³ = 1/8 · 5⁻¹ = 1/5"
+   },
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 4³ = (2²)³ = 2⁶ · 8² = (2³)² = 2⁶"
+   }
+  ],
+  "ipuclari": [
+   "Her tabanı 2’nin kuvveti olarak yaz: 1/4 = 2⁻², 8 = 2³, 16 = 2⁴."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Aynı tabana çevir",
+    "aciklama": "1/4 = 2⁻², 8 = 2³, 16 = 2⁴.",
+    "islem": "(2⁻²)ˣ⁺¹ × (2³)ˣ = 2⁴"
+   },
+   {
+    "baslik": "Kuvvetin kuvveti, sonra çarpma",
+    "aciklama": "Üsler çarpılır; parantez içindeki x + 1’in her iki terimi çarpılmalı. Aynı tabanda çarpmada üsler toplanır.",
+    "islem": "2⁻²ˣ⁻² × 2³ˣ = 2ˣ⁻²"
+   },
+   {
+    "baslik": "Üsleri eşitle",
+    "aciklama": "Tabanlar aynı olduğundan üsler eşit.",
+    "islem": "x − 2 = 4 ⇒ x = 6"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "x = 6: (1/4)⁷ × 8⁶ = 2⁻¹⁴ × 2¹⁸.",
+    "islem": "2⁻¹⁴ × 2¹⁸ = 2⁴ = 16 ✓"
+   }
+  ],
+  "puf": "Kesirli tabanı negatif üsle yaz (1/4 = 2⁻²); parantezli üstleri çarparken parantezin her terimini çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-05 (ortak tabana çevirerek denklem) · 1/4, 8 ve 16 tabanları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Üslü Sayıları Sıralama",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Negatif üslü ve kesir tabanlı sayıları aynı tabana çevirerek küçükten büyüğe sıralar.",
+  "tipId": "usb-siralama",
+  "tip": "Üslü sayıları sıralama (negatif üs ve kesir taban)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a = 8⁻³\nb = (1/4)⁻⁵\nc = (1/2)⁷\nolduğuna göre a, b ve c sayılarının küçükten büyüğe doğru sıralanışı aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "a < b < c",
+   "B": "a < c < b",
+   "C": "b < a < c",
+   "D": "b < c < a",
+   "E": "c < a < b"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "a < c < b"
+  },
+  "celdiriciler": {
+   "D": "8⁻³ ve (1/4)⁻⁵’teki negatif üssü yok sayıp 8³ ve (1/4)⁵ gibi hesaplamış; negatif üs sayıyı ters çevirir.",
+   "C": "Kesir tabanları yok sayıp 4⁻⁵ ve 2⁷ yazmış; (1/4)⁻⁵ = 4⁵ = 2¹⁰ ve (1/2)⁷ = 2⁻⁷ olmalıydı.",
+   "A": "(1/4)⁻⁵’te üsleri çarpmak yerine toplamış (2⁻²⁻⁵ = 2⁻⁷) ve (1/2)⁷’yi 2⁷ okumuş: a = 2⁻⁹ < b = 2⁻⁷ < c = 2⁷.",
+   "E": "Yalnız 8⁻³’ü 8³ okumuş (2⁹); b ve c doğru çevrilince c < a < b çıkmış."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "C": "bilgi",
+   "A": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Üç sayının küçükten büyüğe sıralanışı.",
+  "bilgi": [
+   {
+    "ad": "Negatif üs",
+    "ifade": "a⁻ⁿ = 1/aⁿ (a ≠ 0); işaret değişmez, sayı ters çevrilir. Örnek: 2⁻³ = 1/8 · 5⁻¹ = 1/5"
+   },
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 4³ = (2²)³ = 2⁶ · 8² = (2³)² = 2⁶"
+   }
+  ],
+  "ipuclari": [
+   "Üçünü de 2’nin kuvveti olarak yaz; negatif üs ve kesir tabana dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "2 tabanına çevir",
+    "aciklama": "8 = 2³, 1/4 = 2⁻², 1/2 = 2⁻¹.",
+    "islem": "a = (2³)⁻³ · b = (2⁻²)⁻⁵ · c = (2⁻¹)⁷"
+   },
+   {
+    "baslik": "Üsleri çarp",
+    "aciklama": "Kuvvetin kuvvetinde üsler çarpılır.",
+    "islem": "a = 2⁻⁹ · b = 2¹⁰ · c = 2⁻⁷"
+   },
+   {
+    "baslik": "Üsleri karşılaştır",
+    "aciklama": "Taban 2 > 1 olduğundan büyük üs büyük sayıyı verir.",
+    "islem": "−9 < −7 < 10 ⇒ a < c < b"
+   }
+  ],
+  "puf": "Tabanı 1’den büyük bir sayıda üs büyüdükçe sayı büyür; negatif üsler küçük (negatif) üstür, sayı 0’a yaklaşır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-07 (negatif üslü sayıların sıralanması) · 8⁻³, (1/4)⁻⁵, (1/2)⁷",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Yarısı, Çeyreği, Katı",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Bir üslü sayının çeyreği ve 4 katını 2’nin kuvvetleriyle yazıp toplamını bulur.",
+  "tipId": "usb-oran",
+  "tip": "“Yarısı, çeyreği, 4 katı” ile üslü ifade",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x = 2¹²\ny = 2⁹\nolduğuna göre x sayısının çeyreği ile y sayısının 4 katının toplamı aşağıdakilerden hangisine eşittir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3 × 2¹⁰",
+   "B": "2¹²",
+   "C": "5 × 2¹⁰",
+   "D": "9 × 2¹¹",
+   "E": "2²¹"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3 × 2¹⁰"
+  },
+  "celdiriciler": {
+   "B": "Çeyreği yerine yarısını alıp x ÷ 2 = 2¹¹ bulmuş; 2¹¹ + 2¹¹ = 2¹² çıkmış. Çeyrek, 4’e bölmektir (2¹⁰).",
+   "C": "y’nin 4 katını 2⁹ × 2³ = 2¹² yazmış (4 = 2³ sanmış) ve 2¹⁰ + 2¹² = 5 × 2¹⁰ bulmuş; 4 = 2² olduğundan 4 katı 2¹¹’dir.",
+   "D": "Çeyreği yerine 4 katını almış: x × 4 = 2¹⁴ ve 2¹⁴ + 2¹¹ = 9 × 2¹¹.",
+   "E": "Terimleri 2¹⁰ + 2¹¹ diye doğru bulup toplarken üsleri toplamış (10 + 11 = 21); toplamada üsler toplanmaz."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "x’in çeyreği ile y’nin 4 katının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Yarısı, çeyreği, katı",
+    "ifade": "Bir sayının yarısı 2’ye, çeyreği 4’e bölmek; 4 katı ise 4 ile çarpmaktır. 2’nin kuvvetlerinde: 2ⁿ ÷ 4 = 2ⁿ⁻², 4 × 2ⁿ = 2ⁿ⁺². Örnek: 2⁵’in çeyreği 2³ = 8"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Çeyrek 4’e bölmek, 4 katı 4 ile çarpmaktır; 4 = 2² yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Terimleri ayrı ayrı yaz",
+    "aciklama": "Çeyreği için 4’e böl, 4 katı için 4 ile çarp; 4 = 2².",
+    "islem": "x ÷ 4 = 2¹² ÷ 2² = 2¹⁰ · 4 × y = 2² × 2⁹ = 2¹¹"
+   },
+   {
+    "baslik": "Toplamı kur",
+    "aciklama": "Terimlerin üsleri farklı; küçük olan 2¹⁰ ortak çarpan olur.",
+    "islem": "2¹⁰ + 2¹¹ = 2¹⁰ × (1 + 2)"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Parantezi bul.",
+    "islem": "2¹⁰ × 3 = 3 × 2¹⁰"
+   }
+  ],
+  "puf": "Aynı tabanlı kuvvetler toplanırken üsler toplanmaz; küçük kuvveti ortak çarpan yapıp parantez içini hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-08 (yarısı, çeyreği, 4 katı) · x = 2¹², y = 2⁹",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Basamak Sayısı",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "2 ve 5 tabanlı üslü çarpımı 10’un kuvvetiyle yazarak sayının basamak sayısını bulur.",
+  "tipId": "usb-basamak",
+  "tip": "2ᵃ × 5ᵇ biçimli sayının basamak sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "2¹⁵ × 5¹²\nsayısı kaç basamaklıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "13",
+   "C": "14",
+   "D": "15",
+   "E": "27"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "13"
+  },
+  "celdiriciler": {
+   "A": "10¹² sayısındaki sıfır sayısını (12) basamak sayısı sanmış ve 8 çarpanını saymamış.",
+   "C": "8 × 10¹²’yi 8’in bir basamağı ve 10¹²’nin 13 basamağı diye sayıp 14 bulmuş; 10¹² zaten 13 basamaklıdır.",
+   "D": "2³’ün üssünü (3) kalan üsse eklemiş: 3 + 12 = 15 basamak sanmış.",
+   "E": "Üsleri toplayıp 15 + 12 = 27 yazmış; sayı 10’un kuvvetine çevrilmeden basamak sayısı üslerin toplamından bulunamaz."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Sayının basamak sayısı.",
+  "bilgi": [
+   {
+    "ad": "Basamak sayısı",
+    "ifade": "k × 10ⁿ sayısında k kaç basamaklıysa sayı onun n fazlası kadar basamaklıdır. Örnek: 8 × 10⁵ = 800000 → 1 + 5 = 6 basamak"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "2 ile 5’i eşleştirip 10’un kuvvetini oluştur; arta kalan çarpanı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "2 ve 5’i eşleştir",
+    "aciklama": "5¹² ile 2¹²’den 10¹² oluşur; 2¹⁵ = 2³ × 2¹².",
+    "islem": "2¹⁵ × 5¹² = 2³ × (2¹² × 5¹²)"
+   },
+   {
+    "baslik": "10’un kuvvetini yaz",
+    "aciklama": "Aynı üslü çarpımlar birleştirilir.",
+    "islem": "2³ × 10¹² = 8 × 10¹²"
+   },
+   {
+    "baslik": "Basamak sayısını bul",
+    "aciklama": "8 bir basamaklı; 12 sıfır eklenince sayı 8000000000000 olur.",
+    "islem": "1 + 12 = 13 basamak"
+   }
+  ],
+  "puf": "2ᵃ × 5ᵇ sayısında küçük üssü kadar 2 ile 5’i eşleştirip 10’un kuvveti yap; arta kalan çarpanla birlikte basamak sayısını say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-09 (2ᵃ × 5ᵇ ile basamak sayısı) · 2¹⁵ × 5¹²",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Verilen Değerle Üslü İfade",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "2ˣ değeri verildiğinde 4ˣ⁺¹, 2ˣ⁺³ ve 2ˣ⁺¹ terimlerini 2ˣ cinsinden yazıp ifadenin değerini bulur.",
+  "tipId": "usb-ortak",
+  "tip": "Ortak çarpan parantezi ve sadeleştirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "2ˣ = 3\nolduğuna göre 4ˣ⁺¹ − 2ˣ⁺³ + 2ˣ⁺¹ ifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "34",
+   "C": "36",
+   "D": "66",
+   "E": "126"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "B": "2ˣ⁺³’ü 3 + 3 = 6 ve 2ˣ⁺¹’i 3 + 1 = 4 yazmış (üsleri tabanla toplamış); 2ˣ⁺³ = 2ˣ × 2³ = 24, 2ˣ⁺¹ = 6’dır.",
+   "C": "2ˣ⁺³ ve 2ˣ⁺¹ için 2ˣ’e 3 ekleyip (3 + 3 = 6) işlem yapmış; üsteki sayı çarpan olur: 2³ ve 2¹.",
+   "D": "Çıkarılan terimi de toplamış: 36 + 24 + 6.",
+   "E": "4ˣ⁺¹’i (4 × 2ˣ)² = 144 yazmış; 4ˣ⁺¹ = 4 × (2ˣ)² = 4 × 9 = 36’dır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İfadenin sayısal değeri.",
+  "bilgi": [
+   {
+    "ad": "Kuvvetin kuvveti",
+    "ifade": "(aᵐ)ⁿ = aᵐⁿ, yani üsler çarpılır. Örnek: 4³ = (2²)³ = 2⁶ · 8² = (2³)² = 2⁶"
+   },
+   {
+    "ad": "Ortak çarpan",
+    "ifade": "aⁿ⁺ᵏ = aⁿ × aᵏ ve aⁿ⁻ᵏ = aⁿ ÷ aᵏ; en küçük kuvveti parantez dışına al. Örnek: 2ⁿ⁺³ − 2ⁿ = 2ⁿ × (8 − 1) = 7 × 2ⁿ"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Her terimi 2ˣ cinsinden yaz: 4ˣ = (2ˣ)², 2ˣ⁺³ = 2ˣ × 2³."
+  ],
+  "adimlar": [
+   {
+    "baslik": "4ˣ⁺¹’i çevir",
+    "aciklama": "4 = 2² olduğundan 4ˣ = (2ˣ)²; 4ˣ⁺¹ = 4 × 4ˣ.",
+    "islem": "4ˣ⁺¹ = 4 × (2ˣ)² = 4 × 3² = 36"
+   },
+   {
+    "baslik": "2ˣ⁺³’ü çevir",
+    "aciklama": "Üsteki toplam, çarpan olur.",
+    "islem": "2ˣ⁺³ = 2ˣ × 2³ = 3 × 8 = 24"
+   },
+   {
+    "baslik": "2ˣ⁺¹’i çevir",
+    "aciklama": "Aynı kurala göre.",
+    "islem": "2ˣ⁺¹ = 2ˣ × 2 = 3 × 2 = 6"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Çıkarma ve toplamayı sırayla yap.",
+    "islem": "36 − 24 + 6 = 18"
+   }
+  ],
+  "puf": "2ˣ değeri verildiğinde her terimi 2ˣ’in kuvveti ve sabit çarpan olarak yaz: aˣ⁺ᵏ = aˣ × aᵏ ve a²ˣ = (aˣ)².",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-06 (2ˣ = 3 verilince üslü ifade) · 4ˣ⁺¹ − 2ˣ⁺³ + 2ˣ⁺¹",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Negatif Taban",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Negatif tabanlı üslü ifadelerin işaretini n’nin tek ve çift olmasına göre inceleyerek kesinlikle doğru olanları belirler.",
+  "tipId": "usb-negatif",
+  "tip": "Negatif tabanın kuvveti ve işaret çözümlemesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "n pozitif bir tam sayı olmak üzere,\nI. (−1)ⁿ + (−1)ⁿ⁺¹ = 0\nII. (−2)ⁿ + 2ⁿ = 0\nIII. (−5)²ⁿ⁺¹ < 0\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’te üssün 2n’li göründüğü için çift sayı olduğunu sanıp (−5)²ⁿ⁺¹’i pozitif saymış; 2n + 1 her zaman tektir.",
+   "B": "I’de n’ye göre iki terimin işareti değişir diye toplamın 0 olmayabileceğini sanmış; terimlerin işareti hep zıttır, toplam 0’dır.",
+   "C": "II’yi yalnız n = 1 ile deneyip doğru sanmış; III’te 2n + 1’i çift sanıp (−5)²ⁿ⁺¹’i pozitif bulmuş (iki hata birlikte).",
+   "E": "II’yi yalnız n = 1 ile denemiş; kesinlikle doğru için n’nin çift değerleri de denenmelidir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Negatif tabanın kuvveti",
+    "ifade": "(−a)ⁿ: n çift ise sonuç pozitif, n tek ise negatiftir. Parantez önemlidir: (−3)² = 9 ama −3² = −9. Örnek: (−2)³ = −8 · (−2)⁴ = 16"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "2 ile bölünen sayı çifttir, bölünmeyen tektir. 2n her zaman çifttir, 2n + 1 her zaman tektir. Örnek: n = 3 için 2n = 6 çift, 2n + 1 = 7 tek"
+   }
+  ],
+  "ipuclari": [
+   "n çift ve n tek durumlarını ayrı ayrı dene; (−1)ⁿ ile (−1)ⁿ⁺¹ ardışık kuvvetlerdir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "n ile n + 1’den biri çift, diğeri tektir; (−1)’in çift kuvveti 1, tek kuvveti −1 olur.",
+    "islem": "(−1)ⁿ + (−1)ⁿ⁺¹ = 1 + (−1) = 0 · her n için doğru"
+   },
+   {
+    "baslik": "II’yi çürüt",
+    "aciklama": "n = 1’de sağlanır, fakat n çiftse iki terim de pozitiftir.",
+    "islem": "n = 2: (−2)² + 2² = 4 + 4 = 8 ≠ 0 · yanlış"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "2n çifttir, 2n + 1 her zaman tektir; negatif tabanın tek kuvveti negatiftir.",
+    "islem": "(−5)²ⁿ⁺¹ < 0 · her n için doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve III kesinlikle doğru.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "“Kesinlikle doğru” için n’nin tek ve çift durumlarını ayrı ayrı incele; bir tek örnek doğru çıkarsa ifade kesin olmaz, bir karşıt örnek ifadeyi çürütür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-10 (üslü ifade öncülleri) · (−1)ⁿ, (−2)ⁿ ve (−5)²ⁿ⁺¹",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Negatif Üs",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Negatif üslü terimleri kesre çevirerek toplayıp negatif üslü bir terime bölme işlemini yapar.",
+  "tipId": "usb-kural",
+  "tip": "Üslü ifadelerde sadeleştirme ve negatif üs işlemleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(5⁻¹ + 5⁻²) ÷ 5⁻³\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−30",
+   "B": "1",
+   "C": "6",
+   "D": "25",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "B": "5⁻¹ + 5⁻² = 5⁻³ yazıp (üsleri toplamış) 5⁻³ ÷ 5⁻³ = 1 bulmuş; farklı üslü terimler toplanırken üsler toplanmaz.",
+   "C": "Böleni 5⁻³ yerine 5⁻² (= 1/25) almış; 5⁻³ = 1/125’tir.",
+   "D": "İkinci terimi (5⁻²) unutup yalnız 5⁻¹ ÷ 5⁻³ = 25 hesaplamış.",
+   "A": "5⁻³’ü −1/125 almış; negatif üs sayıyı negatif yapmaz, ters çevirir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "dikkat",
+   "A": "bilgi"
+  },
+  "istenen": "İfadenin sayısal değeri.",
+  "bilgi": [
+   {
+    "ad": "Negatif üs",
+    "ifade": "a⁻ⁿ = 1/aⁿ (a ≠ 0); işaret değişmez, sayı ters çevrilir. Örnek: 2⁻³ = 1/8 · 5⁻¹ = 1/5"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Her terimi kesre çevir: 5⁻¹ = 1/5, 5⁻² = 1/25, 5⁻³ = 1/125."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Negatif üsleri kesre çevir",
+    "aciklama": "Üs negatifse sayı ters çevrilir.",
+    "islem": "5⁻¹ = 1/5 · 5⁻² = 1/25 · 5⁻³ = 1/125"
+   },
+   {
+    "baslik": "Paydaları eşitleyip topla",
+    "aciklama": "Paydalar 25’te eşitlenir.",
+    "islem": "1/5 + 1/25 = 5/25 + 1/25 = 6/25"
+   },
+   {
+    "baslik": "Ters kesirle çarp",
+    "aciklama": "Bir kesre bölmek, tersiyle çarpmaktır.",
+    "islem": "(6/25) ÷ (1/125) = 6/25 × 125 = 30"
+   }
+  ],
+  "puf": "Negatif üslü terimleri toplamadan önce kesre çevir; üslü terimler toplanırken üsler asla toplanmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-11 (negatif üslü terimlerle bölme) · (5⁻¹ + 5⁻²) ÷ 5⁻³",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Katlanarak Artış",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Başlangıç değeri üslü verilen ve her adımda iki katına çıkan bir niceliğin eşiği aşması için gereken adım sayısını bulur.",
+  "tipId": "usb-buyume",
+  "tip": "Katlanarak artan nicelikte eşik problemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Kalınlığı 2⁻⁴ milimetre olan çok ince bir kâğıt art arda ikiye katlanıyor ve her katlamada oluşan yığının kalınlığı bir önceki katlamadaki kalınlığın 2 katı oluyor. (2¹⁰ = 1024 olduğu bilinmektedir.)\nYığının kalınlığının ilk kez 1 metreyi aşması için kâğıt en az kaç kez katlanmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "10",
+   "C": "11",
+   "D": "13",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "Kalınlığı 2ⁿ × 2⁴ yazmış (2⁻⁴’ü 2⁴ almış); 2ⁿ⁺⁴ > 1000 için n + 4 = 10, n = 6 bulmuş.",
+   "B": "Başlangıç kalınlığını (2⁻⁴ mm) hesaba katmamış; 2ⁿ > 1000 için n = 10 almış.",
+   "C": "1 m’yi 100 mm sanıp 2ⁿ⁻⁴ > 100 koşulundan (2⁷ = 128) n = 11 bulmuş.",
+   "D": "2ⁿ⁻⁴ > 1000 koşulunda üssü 9 almış (2⁹ = 512); 512 henüz 1000’i aşmaz, üs 10 olmalıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "islem"
+  },
+  "istenen": "Kâğıdın en az katlanma sayısı.",
+  "bilgi": [
+   {
+    "ad": "Katlanarak artış",
+    "ifade": "Her adımda sayı r katına çıkıyorsa k adım sonra başlangıç değeri rᵏ ile çarpılmış olur. Örnek: kalınlık 3 mm, her adımda 2 katı → 4 adım sonra 3 × 2⁴ = 48 mm"
+   },
+   {
+    "ad": "Uzunluk birimleri",
+    "ifade": "1 m = 10² cm = 10³ mm, yani 1 cm = 10⁻² m ve 1 mm = 10⁻³ m. Örnek: 2 × 10⁻⁵ m = 2 × 10⁻³ cm"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "n katlama sonunda kalınlık 2⁻⁴ × 2ⁿ = 2ⁿ⁻⁴ milimetre; 1 m = 1000 mm ile karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalınlığı yaz",
+    "aciklama": "Her katlamada 2 ile çarpılır, n katlamada 2ⁿ ile.",
+    "islem": "kalınlık = 2⁻⁴ × 2ⁿ = 2ⁿ⁻⁴ mm"
+   },
+   {
+    "baslik": "Birimi eşitle",
+    "aciklama": "1 m = 1000 mm; kalınlık milimetre cinsinden 1000’i aşmalı.",
+    "islem": "2ⁿ⁻⁴ > 1000"
+   },
+   {
+    "baslik": "Üssü bul",
+    "aciklama": "2⁹ = 512 < 1000 ve 2¹⁰ = 1024 > 1000 olduğundan üs en az 10 olmalı.",
+    "islem": "n − 4 ≥ 10"
+   },
+   {
+    "baslik": "n’yi hesapla",
+    "aciklama": "Eşitsizliği çöz.",
+    "islem": "n ≥ 14 ⇒ en az 14 katlama"
+   }
+  ],
+  "puf": "Katlanarak artan niceliklerde başlangıç değeri de üslüdür; kalınlığı 2ⁿ⁻⁴ gibi tek üslü ifadeyle yazıp 2’nin kuvvetlerinden eşiği bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-12 (katlanarak artış, kâğıt katlama) · kalınlık 2⁻⁴ mm, eşik 1 m",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Bilimsel Gösterim",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Görüntü boyutu ve büyütme oranından gerçek boyutu bulup birim çevirerek hücre sayısını hesaplar.",
+  "tipId": "usb-bilimsel",
+  "tip": "Bilimsel gösterim ve 10’un kuvvetleri",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir mikroskop cisimleri 3 × 10³ kat büyütmektedir. Bu mikroskopla özdeş hücrelerden biri incelendiğinde hücrenin görüntüsünün çapı 6 × 10⁻² metre ölçülmüştür.\nBu hücrelerden kaç tanesi aralarında boşluk kalmadan yan yana dizilirse dizinin uzunluğu 1 santimetre olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,002",
+   "B": "5",
+   "C": "50",
+   "D": "500",
+   "E": "5000"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "500"
+  },
+  "celdiriciler": {
+   "A": "Oranı ters kurmuş: hücre çapını 1 cm’ye bölmüş (2 × 10⁻⁵ ÷ 10⁻² = 2 × 10⁻³).",
+   "B": "1 cm’yi 10⁻⁴ m almış; 1 cm = 10⁻² m’dir.",
+   "C": "1 cm’yi 1 mm (10⁻³ m) ile karıştırmış: 10⁻³ ÷ 2 × 10⁻⁵ = 50.",
+   "E": "Hücre çapını bulurken 10⁻² ÷ 10³ için −2 − 3 = −6 yazmış (2 × 10⁻⁶ m); doğru üs −5’tir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Dizinin 1 cm olması için gereken hücre sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bilimsel gösterim",
+    "ifade": "Sayı, a × 10ⁿ biçiminde yazılır (1 ≤ a < 10). 10’un kuvvetleri kendi arasında, katsayılar kendi arasında işlenir. Örnek: (3 × 10⁴) × (2 × 10⁻¹) = 6 × 10³"
+   },
+   {
+    "ad": "Uzunluk birimleri",
+    "ifade": "1 m = 10² cm = 10³ mm, yani 1 cm = 10⁻² m ve 1 mm = 10⁻³ m. Örnek: 2 × 10⁻⁵ m = 2 × 10⁻³ cm"
+   },
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   }
+  ],
+  "ipuclari": [
+   "Gerçek çap = görüntü çapı ÷ büyütme; sonra 1 cm = 10⁻² m’yi gerçek çapa böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gerçek çapı bul",
+    "aciklama": "Görüntü, gerçek boyutun büyütme katıdır; bu yüzden bölünür.",
+    "islem": "(6 × 10⁻²) ÷ (3 × 10³) = 2 × 10⁻⁵ m"
+   },
+   {
+    "baslik": "Birimi eşitle",
+    "aciklama": "1 cm = 10⁻² m.",
+    "islem": "uzunluk = 10⁻² m"
+   },
+   {
+    "baslik": "Oranı kur",
+    "aciklama": "Hücre sayısı, toplam uzunluğun bir hücrenin çapına oranıdır.",
+    "islem": "10⁻² ÷ (2 × 10⁻⁵) = 0,5 × 10³"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "0,5 × 10³ = 5 × 10².",
+    "islem": "5 × 10² = 500 hücre"
+   }
+  ],
+  "puf": "Mikroskop sorularında önce görüntüyü büyütmeye böl, sonra birimleri aynı birime getirip bilimsel gösterimde böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-13 (mikroskop ve bilimsel gösterimle bölme) · büyütme 3 × 10³, görüntü 6 × 10⁻² m, 1 cm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-usluiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Üslü Sayılar · Tanımlı Sayı Kümesi",
+  "k": "mat|Üslü Sayılar",
+  "kazanim": "Tanımlanan 2ᵃ × 3ᵇ biçimindeki sayıları üs çiftlerine göre gruplayıp sınırın altında kalanları sayar.",
+  "tipId": "usb-tanimli",
+  "tip": "Tanımlı üslü sayı kümesinde sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "a ve b negatif olmayan tam sayılar olmak üzere, 2ᵃ × 3ᵇ biçiminde yazılabilen doğal sayılara “ikiüçlü sayı” denir. Örneğin 1 = 2⁰ × 3⁰ ve 12 = 2² × 3¹ sayıları ikiüçlü sayıdır.\n100’den küçük kaç tane ikiüçlü sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "13",
+   "C": "17",
+   "D": "19",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "a ve b’yi en az 1 almış (a ≥ 1, b ≥ 1); 2ᵃ yalnız ya da 3ᵇ yalnız olan sayılar (1, 2, 4, 3, 9, …) da ikiüçlüdür.",
+   "B": "Yalnız b = 0 ve b = 1 gruplarını saymış (7 + 6); b = 2, 3, 4 gruplarını unutmuş.",
+   "C": "b = 0, 1, 2 gruplarını sayıp (7 + 6 + 4) 27 ve 54’ü, 81’i unutmuş.",
+   "D": "1 = 2⁰ × 3⁰ sayısını ikiüçlü saymamış; a = b = 0 da tanıma uyar."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "100’den küçük ikiüçlü sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Aynı tabanda çarpma ve bölme",
+    "ifade": "aᵐ × aⁿ = aᵐ⁺ⁿ · aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Tabanlar farklıysa üsler toplanıp çıkarılamaz, önce tabanlar eşitlenir. Örnek: 3⁵ ÷ 3² = 3³"
+   },
+   {
+    "ad": "Sıfırıncı kuvvet",
+    "ifade": "Sıfırdan farklı her sayının 0. kuvveti 1’dir. Örnek: 2⁰ = 1 · 3⁰ = 1 · 2⁰ × 3² = 9"
+   }
+  ],
+  "ipuclari": [
+   "b = 0, 1, 2, … için 2ᵃ × 3ᵇ < 100 koşulunu sağlayan a değerlerini say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "b’ye göre grupla",
+    "aciklama": "Her b için 3ᵇ sabit; 2ᵃ × 3ᵇ < 100 olan a değerleri aranır.",
+    "islem": "3⁰ = 1 · 3¹ = 3 · 3² = 9 · 3³ = 27 · 3⁴ = 81 (3⁵ = 243 > 100)"
+   },
+   {
+    "baslik": "b = 0, 1 grupları",
+    "aciklama": "Çarpan 1: 1, 2, 4, 8, 16, 32, 64. Çarpan 3: 3, 6, 12, 24, 48, 96.",
+    "islem": "7 + 6 = 13 sayı"
+   },
+   {
+    "baslik": "b = 2, 3, 4 grupları",
+    "aciklama": "Çarpan 9: 9, 18, 36, 72. Çarpan 27: 27, 54. Çarpan 81: 81.",
+    "islem": "4 + 2 + 1 = 7 sayı"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Hiçbir sayı iki grupta yer almaz (asal çarpanlara ayrılış tektir).",
+    "islem": "13 + 7 = 20"
+   }
+  ],
+  "puf": "Tanımlı biçimdeki sayıları saymak için bir üssü sabitleyip diğerinin alabileceği değerleri say; hiçbir durumu (a = 0, b = 0) atlama.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-USLB-14 (2ᵃ × 3ᵇ biçimli sayıları sayma) · “ikiüçlü sayı”, 100’den küçük kaç tane",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

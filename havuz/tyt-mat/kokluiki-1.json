@@ -1,0 +1,1082 @@
+[
+ {
+  "id": "tytmat-kokluiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Kök Dışına Çıkarma",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Kök içlerini tam kare çarpanlarına ayırıp benzer köklerin katsayılarını toplar ve çıkarır.",
+  "tipId": "kkb-disari",
+  "tip": "Kök dışına çıkarma, toplama ve çıkarma",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "√45 + √80 − √20\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "√105",
+   "B": "5√5",
+   "C": "7√5",
+   "D": "9√5",
+   "E": "17√5"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5√5"
+  },
+  "celdiriciler": {
+   "C": "−√20 terimini işleme katmamış: 3√5 + 4√5 = 7√5.",
+   "D": "Çıkarılan terimi toplamış: 3√5 + 4√5 + 2√5 = 9√5.",
+   "E": "√80’i 16√5 yazmış; 16 tam karedir, dışarı kökü olan 4 çıkar (√80 = 4√5).",
+   "A": "Kök içlerini doğrudan işleme sokmuş: 45 + 80 − 20 = 105; köklerin toplamı kök içlerinin toplamının köküne eşit değildir."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "islem",
+   "E": "bilgi",
+   "A": "bilgi"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "Kök dışına çıkarma",
+    "ifade": "kök içini “tam kare × kalan” biçiminde yaz, tam karenin kökünü dışarı al. Benzer köklerin katsayıları toplanır ya da çıkarılır. Örnek: √12 = √(4 × 3) = 2√3 · 2√3 + 5√3 = 7√3"
+   }
+  ],
+  "ipuclari": [
+   "Her kök içini “tam kare × kalan” olarak yaz: 45 = 9 × 5 gibi."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kök dışına çıkar",
+    "aciklama": "Her kök içinde 5’i bırakacak tam kare çarpanı ara.",
+    "islem": "√45 = √(9 × 5) = 3√5 · √80 = √(16 × 5) = 4√5 · √20 = √(4 × 5) = 2√5"
+   },
+   {
+    "baslik": "İfadeyi yeniden yaz",
+    "aciklama": "Üç terim de √5’li olduğundan ortak kök parantez dışında kalır.",
+    "islem": "3√5 + 4√5 − 2√5 = (3 + 4 − 2)√5"
+   },
+   {
+    "baslik": "Katsayıları işle",
+    "aciklama": "Önce toplama, sonra çıkarma yapılır.",
+    "islem": "(3 + 4 − 2)√5 = 5√5"
+   }
+  ],
+  "puf": "Köklü toplama–çıkarmada önce kök içlerini aynı kök biçimine getir; ancak köklü kısımları aynı olan terimlerin katsayıları toplanıp çıkarılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-01 (kök dışına çıkarma, toplama–çıkarma) · √45 + √80 − √20",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Ondalık Sayıların Kökü",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Ondalık sayıların karekökünü virgülün yerine dikkat ederek bulup toplama–çıkarma yapar.",
+  "tipId": "kkb-ondalik",
+  "tip": "Ondalık sayıların karekökü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "√1,21 + √0,49 − √0,04\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,16",
+   "B": "1,15",
+   "C": "1,6",
+   "D": "2",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1,6"
+  },
+  "celdiriciler": {
+   "B": "√0,49 ve √0,04’ü 0,07 ve 0,02 almış; ondalık sayının kökünde virgülden sonraki basamak sayısı yarıya iner (2 basamak → 1 basamak).",
+   "D": "−√0,04’ü işaretini değiştirip eklemiş: 1,1 + 0,7 + 0,2.",
+   "E": "Virgülleri yok sayıp √121 + √49 − √4 = 11 + 7 − 2 = 16 hesaplamış; sonuçta virgülü geri koymamış.",
+   "A": "16 bulduktan sonra virgülü iki basamak kaydırmış; kökte virgül yalnız bir basamak kayar (÷ 10)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat",
+   "A": "islem"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "Ondalık sayının karekökü",
+    "ifade": "ondalık sayıyı 100’ün (ya da 10000’in) bölümü olarak yaz: √0,09 = √(9/100) = 3/10 = 0,3. Örnek: √0,0025 = 5/100 = 0,05"
+   }
+  ],
+  "ipuclari": [
+   "Her sayıyı 100’e bölünen bir tam sayı olarak yaz: 1,21 = 121/100."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesre çevir",
+    "aciklama": "Ondalık sayılar 100’ün kesri olarak yazılırsa pay ve payda ayrı ayrı kök alınabilir.",
+    "islem": "√(121/100) = 11/10 · √(49/100) = 7/10 · √(4/100) = 2/10"
+   },
+   {
+    "baslik": "Kökleri yerine yaz",
+    "aciklama": "Kök içleri artık sade kesirlerdir.",
+    "islem": "11/10 + 7/10 − 2/10"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Kesirler aynı paydalı; payları işle.",
+    "islem": "16/10 = 1,6"
+   }
+  ],
+  "puf": "Ondalık sayının karekökünü almak için sayıyı 100’lü ya da 10000’li kesre çevir; virgülden sonraki basamak sayısı yarıya iner.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-02 (ondalık sayıların karekökü) · √1,21 + √0,49 − √0,04",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Köklerde Çarpma ve Bölme",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Katsayılı köklü ifadelerde çarpma ve bölmeyi katsayılar ve kök içleri için ayrı ayrı yapar.",
+  "tipId": "kkb-carpma",
+  "tip": "Katsayılı köklerde çarpma ve bölme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "(3√10 × 2√5) ÷ √2\nişleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "10",
+   "C": "15",
+   "D": "25",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "D": "Katsayıları çarpmak yerine toplamış: (3 + 2) × √25 = 5 × 5.",
+   "A": "Katsayıları (3 ve 2) hesaba katmamış, yalnızca √25 = 5 yazmış.",
+   "C": "Katsayılardan yalnız 3’ü alıp (2’yi unutmuş) √25 = 5 ile çarpmış: 3 × 5 = 15.",
+   "B": "Katsayılardan yalnız 2’yi alıp (3’ü unutmuş) √25 = 5 ile çarpmış: 2 × 5 = 10."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "A": "dikkat",
+   "C": "dikkat",
+   "B": "dikkat"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "Köklerde çarpma ve bölme",
+    "ifade": "√a × √b = √(a × b) ve √a ÷ √b = √(a ÷ b); katsayılar katsayılarla çarpılır. Örnek: 2√3 × 4√3 = 8 × √9 = 24"
+   }
+  ],
+  "ipuclari": [
+   "Katsayıları kendi aralarında, kök içlerini kendi aralarında çarp ve böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Katsayılar ve kök içleri",
+    "aciklama": "Katsayılar 3 × 2 = 6; kök içlerinde çarpma ve bölme yapılır.",
+    "islem": "3 × 2 = 6 · √(10 × 5 ÷ 2) = √25 = 5"
+   },
+   {
+    "baslik": "Kök içini sadeleştir",
+    "aciklama": "Çarpma ve bölme sonrası kök içi tam kare olur.",
+    "islem": "√25 = 5"
+   },
+   {
+    "baslik": "Sonucu bul",
+    "aciklama": "Katsayı ile kökün değerini çarp.",
+    "islem": "6 × 5 = 30"
+   }
+  ],
+  "puf": "Köklü çarpmada katsayıları katsayılarla, kök içlerini kök içleriyle işle; kök içi tam kareye dönüşünce kökü al.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-03 (katsayılı çarpma–bölme) · (3√10 × 2√5) ÷ √2",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Paydayı Rasyonel Yapma",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Paydası iki terimli köklü ifade olan kesri eşlenikle genişleterek paydayı rasyonel yapar.",
+  "tipId": "kkb-eslenik",
+  "tip": "Paydayı rasyonel yapma ve eşlenik",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "6/(√5 − √2)\nifadesinin paydası rasyonel yapıldığında aşağıdakilerden hangisi elde edilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2√5 − 2√2",
+   "B": "2",
+   "C": "2√7",
+   "D": "2√5 + 2√2",
+   "E": "6√5 + 6√2"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "2√5 + 2√2"
+  },
+  "celdiriciler": {
+   "A": "Paydayı eşlenikle doğru hesaplayıp 3 bulmuş ama payı paydadan kopyalayarak 6(√5 − √2)/3 yazmış; pay da (√5 + √2) ile çarpılmalıdır.",
+   "E": "Paydadaki 5 − 2 = 3’e bölmeyi unutmuş: 6(√5 + √2).",
+   "C": "√5 + √2 = √7 yazmış; farklı kök içli köklerin toplamı tek kökte birleşmez.",
+   "B": "Yalnız paydayı rasyonel yapıp (5 − 2 = 3) payı eşlenikle çarpmayı unutmuş: 6/3 = 2."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "E": "dikkat",
+   "C": "bilgi",
+   "B": "dikkat"
+  },
+  "istenen": "Paydası rasyonel yapılmış eşit ifade.",
+  "bilgi": [
+   {
+    "ad": "Paydayı rasyonel yapma (eşlenik)",
+    "ifade": "paydası √a − √b olan kesir, √a + √b ile genişletilir: (√a − √b)(√a + √b) = a − b. Örnek: 1/(√3 − 1) = (√3 + 1)/(3 − 1)"
+   }
+  ],
+  "ipuclari": [
+   "Payı ve paydayı, paydanın eşleniği olan (√5 + √2) ile çarp."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşlenikle genişlet",
+    "aciklama": "Payda √5 − √2 ise eşleniği √5 + √2’dir; pay ve payda aynı ifadeyle çarpılır.",
+    "islem": "6/(√5 − √2) = 6(√5 + √2)/((√5 − √2)(√5 + √2))"
+   },
+   {
+    "baslik": "Paydayı hesapla",
+    "aciklama": "(a − b)(a + b) = a² − b².",
+    "islem": "(√5)² − (√2)² = 5 − 2 = 3"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "6 ile 3 sadeleşir.",
+    "islem": "6(√5 + √2)/3 = 2(√5 + √2) = 2√5 + 2√2"
+   }
+  ],
+  "puf": "Paydada √a − √b varsa eşlenik √a + √b ile genişlet; payda a − b olur ve tam sayıya dönüşür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-04 (paydayı rasyonel yapma) · 6/(√5 − √2)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Kök İçinde Kare",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Kök içindeki kareyi mutlak değerle açıp işaret bilgisine göre mutlak değerleri kaldırarak ifadeyi sadeleştirir.",
+  "tipId": "kkb-mutlak",
+  "tip": "Kök içindeki kare ve mutlak değer",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "a < 0 < b olmak üzere\n√(a²) − √(b²) + |a − b|\nifadesinin en sade biçimi aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "−2a",
+   "B": "−2b",
+   "C": "0",
+   "D": "2a − 2b",
+   "E": "2b − 2a"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "−2a"
+  },
+  "celdiriciler": {
+   "B": "|a − b|’yi a − b olarak açmış; a < b olduğundan a − b negatiftir, |a − b| = b − a.",
+   "C": "√(a²) = a yazmış; a negatif olduğu için √(a²) = |a| = −a’dır.",
+   "D": "√(a²) = a ve |a − b| = a − b yazmış; iki hata birlikte.",
+   "E": "√(b²)’yi −b almış; b pozitif olduğundan √(b²) = b’dir."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İfadenin en sade biçimi.",
+  "bilgi": [
+   {
+    "ad": "√(a²) = |a|",
+    "ifade": "karekök negatif olamaz; bu yüzden √(a²) = |a| olur: a ≥ 0 ise a, a < 0 ise −a. Örnek: √((−4)²) = 4 · a < 0 ise |a − 3| = 3 − a"
+   }
+  ],
+  "ipuclari": [
+   "√(a²) = |a| ve a < 0 < b koşulundan |a|, |b| ve |a − b| işaretlerini ayrı ayrı belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kök ve mutlak değerleri aç",
+    "aciklama": "a < 0 olduğundan |a| = −a; b > 0 olduğundan |b| = b; a − b negatif olduğundan |a − b| = −(a − b) = b − a.",
+    "islem": "√(a²) = |a| = −a · √(b²) = b · |a − b| = b − a"
+   },
+   {
+    "baslik": "Yerine yaz",
+    "aciklama": "Terimlerin işaretlerine dikkat et.",
+    "islem": "(−a) − b + (b − a)"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "b terimleri birbirini götürür.",
+    "islem": "−a − b + b − a = −2a"
+   }
+  ],
+  "puf": "Karekök içinde kare gördüğünde mutlak değere dön; işareti verilen değişkenle mutlak değerleri tek tek aç, çıkarmadan sonra parantezdeki işareti dikkatle dağıt.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-05 (√(a²) = |a| ve işaret koşulu) · a < 0 < b için √(a²) − √(b²) + |a − b|",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Tahmin ve Sıralama",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "İki karekökün toplamının hangi ardışık iki tam sayı arasında olduğunu tam karelerle sınırlayarak bulur.",
+  "tipId": "kkb-siralama",
+  "tip": "Köklü sayıların tahmini ve ardışık tam sayılar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "√7 + √11 sayısı aşağıdaki ardışık tam sayı çiftlerinden hangisinin arasındadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0 ile 1",
+   "B": "3 ile 4",
+   "C": "4 ile 5",
+   "D": "5 ile 6",
+   "E": "6 ile 7"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5 ile 6"
+  },
+  "celdiriciler": {
+   "A": "Toplama yerine fark almış: √11 − √7 yaklaşık 0,67.",
+   "E": "√7 ≈ 3 ve √11 ≈ 4 diye üste yuvarlayıp 3 + 4 = 7 bulmuş ve 7’nin altındaki aralığı seçmiş.",
+   "B": "Yalnız √11’i (3 ile 4 arası) hesaba katmış, √7’yi yok saymış.",
+   "C": "Kök içlerini toplayıp √18 yazmış (4 ile 5 arası); √7 + √11 ≠ √18."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "E": "islem",
+   "B": "dikkat",
+   "C": "bilgi"
+  },
+  "istenen": "Sayının bulunduğu ardışık iki tam sayı.",
+  "bilgi": [
+   {
+    "ad": "Karekök tahmini",
+    "ifade": "a² < n < b² ise a < √n < b olur. Örnek: 16 < 18 < 25 olduğundan 4 < √18 < 5"
+   }
+  ],
+  "ipuclari": [
+   "Her kökü ardışık iki tam sayı arasına sıkıştır; sınırlar iki aralığa yayılıyorsa toplamın karesini alıp tam karelerle sınırla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kökleri sınırla",
+    "aciklama": "4 < 7 < 9 ve 9 < 11 < 16 olduğundan √7 ve √11 için alt ve üst sınırlar bulunur.",
+    "islem": "2 < √7 < 3 · 3 < √11 < 4"
+   },
+   {
+    "baslik": "Toplamı sınırla",
+    "aciklama": "Alt sınırlar ve üst sınırlar ayrı ayrı toplanır; aralık 5 ile 7 arasında kalır, iki ardışık tam sayıya sığmaz.",
+    "islem": "5 < √7 + √11 < 7"
+   },
+   {
+    "baslik": "Karesini al",
+    "aciklama": "Toplamın karesi 18 + 2√77 olur; √77 < 9 olduğundan kare 36’dan küçüktür, yani toplam 6’dan küçüktür.",
+    "islem": "(√7 + √11)² = 18 + 2√77"
+   },
+   {
+    "baslik": "Aralığı daralt",
+    "aciklama": "2√77 < 18 olduğundan kare 36’dan küçüktür; kare 25’ten büyük olduğundan toplam 5’ten büyüktür.",
+    "islem": "18 + 2√77 < 36 ⇒ 5 < √7 + √11 < 6"
+   }
+  ],
+  "puf": "İki karekökün toplamı iki ardışık tam sayı aralığına sığmıyorsa karesini alıp hangi tam karelerin arasında kaldığına bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-06 (ardışık tam sayılar arasında) · √7 + √11",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · İç İçe Kökler",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "İç içe karekökleri içten dışa doğru hesaplayarak ifadenin değerini bulur.",
+  "tipId": "kkb-ic",
+  "tip": "İç içe kökler",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "√(5 + √(7 + √81))\nifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "√13",
+   "C": "4",
+   "D": "9",
+   "E": "13"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "C": "En dıştaki 5’i işleme katmayıp yalnız √(7 + √81) = 4 hesaplamış.",
+   "D": "Dıştaki kökü almayı unutmuş: 5 + 4 = 9.",
+   "E": "√16’yı 8 almış (kökü yarıya bölmüş), 5 + 8 = 13 bulup dıştaki kökü almamış.",
+   "B": "√16’yı 8 almış (kökü yarıya bölmüş) ve 5 + 8 = 13’ün kökünü almış; √16 = 4’tür."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "İfadenin değeri.",
+  "bilgi": [
+   {
+    "ad": "İç içe kökler",
+    "ifade": "içteki kök önce hesaplanır, sonra bir dıştaki kök alınır. Örnek: √(1 + √(9 + 7)) = √(1 + 4) = √5"
+   }
+  ],
+  "ipuclari": [
+   "En içteki kökten başla: önce √81, sonra bir dıştaki kök içini topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En içten başla",
+    "aciklama": "√81 = 9.",
+    "islem": "√(5 + √(7 + 9))"
+   },
+   {
+    "baslik": "Bir dıştaki kök",
+    "aciklama": "7 + 9 = 16 ve √16 = 4.",
+    "islem": "√(5 + 4)"
+   },
+   {
+    "baslik": "Son kök",
+    "aciklama": "5 + 4 = 9 ve √9 = 3.",
+    "islem": "√9 = 3"
+   }
+  ],
+  "puf": "İç içe köklerde içten dışa doğru ilerle; her adımda kök içindeki sayının tam kare olup olmadığını kontrol et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-07 (iç içe kökler) · √(5 + √(7 + √81))",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Köklü Denklem",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Köklü bir denklemin iki tarafının karesini alarak kök içlerini eşitleyip bilinmeyeni bulur.",
+  "tipId": "kkb-denklem",
+  "tip": "Basit köklü denklem",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "x gerçek sayı olmak üzere\n2√(x + 1) = √(x + 13)\neşitliğini sağlayan x değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,8",
+   "B": "3",
+   "C": "4",
+   "D": "6",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "4(x + 1) = x + 13 eşitliğinde 4x + 4 + x = 13 yazmış (x’i yanlış tarafa işaret değiştirmeden taşımış): x = 9/5.",
+   "C": "2’nin karesini parantezle çarpmayıp 4x + 1 = x + 13 yazmış; 4(x + 1) = 4x + 4 olmalı.",
+   "D": "3x = 9 bulduktan sonra x = 9 − 3 = 6 yazmış; 3 çarpandır, bölünmelidir.",
+   "E": "Katsayı 2’nin karesini almayıp 2(x + 1) = x + 13 yazmış: x = 11."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Köklü denklem",
+    "ifade": "iki tarafın karesi alınır; (a√b)² = a² × b olduğundan katsayı da karesiyle girer. Bulunan değer kök içlerini negatif yapmamalıdır. Örnek: 3√x = √(x + 8) → 9x = x + 8 → x = 1"
+   }
+  ],
+  "ipuclari": [
+   "İki tarafın karesini al; katsayı 2’nin de karesi (4) alınır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Karesini al",
+    "aciklama": "Sol taraftaki 2 katsayısı da kareye girer.",
+    "islem": "(2√(x + 1))² = (√(x + 13))² ⇒ 4(x + 1) = x + 13"
+   },
+   {
+    "baslik": "Denklemi çöz",
+    "aciklama": "Parantezi aç, x’leri bir tarafa topla.",
+    "islem": "4x + 4 = x + 13 ⇒ 3x = 9 ⇒ x = 3"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "Kök içleri negatif olmamalı.",
+    "islem": "2√4 = 4 ve √16 = 4 ✓"
+   }
+  ],
+  "puf": "Köklü denklemde karesini alırken kökün önündeki katsayının da karesini al; sonunda kök içlerinin negatif olmadığını kontrol et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-08 (basit köklü denklem) · 2√(x + 1) = √(x + 13)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Kare ve Çevre",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Alanı verilen karenin kenarını kök dışına çıkararak bulur ve çevre boyunca eşit aralıklı direk sayısını hesaplar.",
+  "tipId": "kkb-baglam",
+  "tip": "Kare ve dikdörtgen bağlamında köklü işlemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Alanı 180 m² olan kare biçimli bir tarlanın çevresine, bir köşeden başlanarak ardışık iki direk arası 3√5 metre olacak biçimde direkler dikiliyor. Çevre boyunca bir tam tur tamamlanıp başlangıç noktasına dönülüyor ve başlangıçtaki direk bir kez sayılıyor.\nBuna göre kaç direk dikilmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "8",
+   "D": "9",
+   "E": "48"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "Yalnız bir kenarı düşünmüş: 6√5 ÷ 3√5 = 2; çevre dört kenarın toplamıdır.",
+   "B": "Çevreyi 2 × kenar almış: 12√5 ÷ 3√5 = 4; kare çevresi 4 × kenardır.",
+   "D": "8 aralık bulup bir direk daha eklemiş; kapalı çevrede son direk başlangıçtaki direktir, direk sayısı aralık sayısına eşittir.",
+   "E": "√180’i 36√5 yazmış (36’yı kökten çıkarırken karekökünü almamış); doğrusu 6√5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Dikilen toplam direk sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kare: alan ve kenar",
+    "ifade": "alanı A olan karenin kenarı √A, çevresi 4√A’dır. Örnek: alan 50 → kenar √50 = 5√2, çevre 20√2"
+   },
+   {
+    "ad": "Kök dışına çıkarma",
+    "ifade": "kök içini “tam kare × kalan” biçiminde yaz, tam karenin kökünü dışarı al. Benzer köklerin katsayıları toplanır ya da çıkarılır. Örnek: √12 = √(4 × 3) = 2√3 · 2√3 + 5√3 = 7√3"
+   }
+  ],
+  "ipuclari": [
+   "Önce karenin kenarını √180 = 6√5 olarak bul, sonra çevreyi aralığa böl."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kenarı bul",
+    "aciklama": "Alan 180 ise kenar √180; kök içindeki 36 tam kare çarpanı dışarı çıkar.",
+    "islem": "√180 = √(36 × 5) = 6√5 m"
+   },
+   {
+    "baslik": "Çevreyi hesapla",
+    "aciklama": "Kare çevresi 4 × kenar.",
+    "islem": "4 × 6√5 = 24√5 m"
+   },
+   {
+    "baslik": "Direk sayısını bul",
+    "aciklama": "Çevre aralık uzunluğuna bölünür; kapalı çevrede aralık sayısı direk sayısına eşittir.",
+    "islem": "24√5 ÷ 3√5 = 8 direk"
+   }
+  ],
+  "puf": "Kapalı bir çevrede (tur biçiminde) eşit aralıklı noktaların sayısı aralık sayısına eşittir; açık bir yolda ise bir fazladır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-09 (kare alanı → kenar, çevre) · alan 180 m², aralık 3√5 m",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Köklü İfadeler",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Köklü eşitlikleri kök dışına çıkarma, ondalık kök ve eşlenik çarpımıyla değerlendirerek doğru olanları belirler.",
+  "tipId": "kkb-oncul",
+  "tip": "Köklü ifadelerde öncüllü sorular",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "I. √18 + √8 = √50\nII. √0,16 = 0,04\nIII. (√7 − 2)(√7 + 2) = 5\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "I’de √18 + √8 = √26 sanıp II’de √0,16 = 0,04 almış; III’ü de yanlış bulmuş.",
+   "C": "I’de kök içlerini toplayıp √26 bulmuş; III’te (√7 − 2)(√7 + 2) = 7 − 2 = 5 yazmış.",
+   "D": "II’de √0,16 = 0,04 yazmış; kök alınınca virgülden sonraki basamak sayısı yarıya iner, √0,16 = 0,4.",
+   "E": "III’te (√7 − 2)(√7 + 2) için 7 − 2 = 5 yazmış; doğrusu 7 − 4 = 3’tür (2² = 4)."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Kök dışına çıkarma",
+    "ifade": "kök içini “tam kare × kalan” biçiminde yaz, tam karenin kökünü dışarı al. Benzer köklerin katsayıları toplanır ya da çıkarılır. Örnek: √12 = √(4 × 3) = 2√3 · 2√3 + 5√3 = 7√3"
+   },
+   {
+    "ad": "Ondalık sayının karekökü",
+    "ifade": "ondalık sayıyı 100’ün (ya da 10000’in) bölümü olarak yaz: √0,09 = √(9/100) = 3/10 = 0,3. Örnek: √0,0025 = 5/100 = 0,05"
+   },
+   {
+    "ad": "Paydayı rasyonel yapma (eşlenik)",
+    "ifade": "paydası √a − √b olan kesir, √a + √b ile genişletilir: (√a − √b)(√a + √b) = a − b. Örnek: 1/(√3 − 1) = (√3 + 1)/(3 − 1)"
+   }
+  ],
+  "ipuclari": [
+   "Her eşitliği ayrı ayrı hesapla: kök dışına çıkar, ondalığı kesre çevir, çarpımı a² − b² ile aç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i incele",
+    "aciklama": "Kök dışına çıkarıp toplamayı karşılaştır.",
+    "islem": "√18 = 3√2 · √8 = 2√2 · 3√2 + 2√2 = 5√2 = √50 · I doğru"
+   },
+   {
+    "baslik": "II’yi incele",
+    "aciklama": "Ondalığı 100’lü kesre çevir.",
+    "islem": "√0,16 = √(16/100) = 4/10 = 0,4 ≠ 0,04 · II yanlış"
+   },
+   {
+    "baslik": "III’ü incele",
+    "aciklama": "(a − b)(a + b) = a² − b².",
+    "islem": "(√7)² − 2² = 7 − 4 = 3 ≠ 5 · III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız I doğrudur.",
+    "islem": "Yalnız I"
+   }
+  ],
+  "puf": "Öncüllerde her eşitliği ayrı hesapla; kök içlerini toplayarak ya da (a − b)(a + b) = a − b yazarak yapılan işlemler tipik tuzaklardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-10 (köklü öncüllü sorular) · √18 + √8, √0,16, (√7 − 2)(√7 + 2)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Eşlenik Değerler",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "İki köklü sayının kareleri toplamını ve çarpımını özdeşliklerle bulup oranlarını hesaplar.",
+  "tipId": "kkb-ozdeslik",
+  "tip": "Köklü ifadelerde özdeşlik ve işlem",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x = √7 + √3\ny = √7 − √3\nolduğuna göre x/y + y/x ifadesinin değeri kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "5",
+   "D": "7",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "E": "x × y = √(7 − 3) = 2 yazmış (kök içlerini çıkarmış); (√7 + √3)(√7 − √3) = 7 − 3 = 4’tür.",
+   "B": "x² + y² yerine (x − y)² = 12 almış (2xy terimini unutmuş): 12 ÷ 4 = 3.",
+   "D": "x² + y² yerine (x + y)² = 28 almış (iki çarpım terimi fazladan eklenmiş): 28 ÷ 4 = 7.",
+   "A": "x × y yerine x + y’nin kök içlerini toplayıp 10 almış: 20 ÷ 10 = 2."
+  },
+  "celTur": {
+   "E": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "x/y + y/x ifadesinin değeri.",
+  "bilgi": [
+   {
+    "ad": "Paydayı rasyonel yapma (eşlenik)",
+    "ifade": "paydası √a − √b olan kesir, √a + √b ile genişletilir: (√a − √b)(√a + √b) = a − b. Örnek: 1/(√3 − 1) = (√3 + 1)/(3 − 1)"
+   },
+   {
+    "ad": "Özdeşlik",
+    "ifade": "(a + b)² = a² + 2ab + b² ve (a − b)² = a² − 2ab + b². Örnek: (√3 + 1)² + (√3 − 1)² = 2 × (3 + 1) = 8"
+   }
+  ],
+  "ipuclari": [
+   "x/y + y/x = (x² + y²)/(x × y); pay ve paydayı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesirleri birleştir",
+    "aciklama": "Ortak payda x × y olur.",
+    "islem": "x/y + y/x = (x² + y²)/(x × y)"
+   },
+   {
+    "baslik": "x × y’yi bul",
+    "aciklama": "(a + b)(a − b) = a² − b².",
+    "islem": "x × y = 7 − 3 = 4"
+   },
+   {
+    "baslik": "x² + y²’yi bul",
+    "aciklama": "Çarpım terimleri birbirini götürür.",
+    "islem": "(√7 + √3)² + (√7 − √3)² = 2 × (7 + 3) = 20"
+   },
+   {
+    "baslik": "Oranı hesapla",
+    "aciklama": "Payı paydaya böl.",
+    "islem": "20 ÷ 4 = 5"
+   }
+  ],
+  "puf": "x² + y² gibi toplamlarda çapraz terimler (±2xy) birbirini götürür: (a + b)² + (a − b)² = 2(a² + b²).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-11 (eşlenik değerlerle simetrik ifade) · x = √7 + √3, y = √7 − √3, x/y + y/x",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Eşlenik ve Toplam",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "İki kesrin paydalarını eşlenikle rasyonel yapıp toplamı bulur.",
+  "tipId": "kkb-eslenik",
+  "tip": "Paydayı rasyonel yapma ve eşlenik",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "1/(√3 − √2) + 1/(√3 + √2)\ntoplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "√3",
+   "C": "2",
+   "D": "2√2",
+   "E": "2√3"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "2√3"
+  },
+  "celdiriciler": {
+   "A": "Kesirleri √3 + √2 ve √3 − √2 bulup toplamak yerine çarpmış: (√3 + √2)(√3 − √2) = 1.",
+   "B": "Toplam 2√3 olduğu halde katsayı 2’yi unutmuş.",
+   "C": "Paydaları 3 − 2 = 1 bulup pay (√3 ± √2) ile genişletmeden 1 + 1 = 2 toplamış.",
+   "D": "İkinci kesirde eşlenik işaretini yanlış alıp (√2 − √3) bulmuş: (√3 + √2) + (√2 − √3) = 2√2."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "Toplamın değeri.",
+  "bilgi": [
+   {
+    "ad": "Paydayı rasyonel yapma (eşlenik)",
+    "ifade": "paydası √a − √b olan kesir, √a + √b ile genişletilir: (√a − √b)(√a + √b) = a − b. Örnek: 1/(√3 − 1) = (√3 + 1)/(3 − 1)"
+   }
+  ],
+  "ipuclari": [
+   "Her kesri paydasının eşleniğiyle genişlet; payda 1 olacak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birinci kesri düzenle",
+    "aciklama": "Eşlenik √3 + √2; payda 3 − 2 = 1.",
+    "islem": "1/(√3 − √2) = (√3 + √2)/(3 − 2) = √3 + √2"
+   },
+   {
+    "baslik": "İkinci kesri düzenle",
+    "aciklama": "Eşlenik √3 − √2; payda yine 1.",
+    "islem": "1/(√3 + √2) = (√3 − √2)/(3 − 2) = √3 − √2"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "√2’li terimler birbirini götürür.",
+    "islem": "(√3 + √2) + (√3 − √2) = 2√3"
+   }
+  ],
+  "puf": "Eşlenik paydalı iki kesrin toplamında √2’li terimler götürülür; payda 1 olduğu için her kesir doğrudan sadeleşir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-12 (eşlenikle iki kesrin toplamı) · 1/(√3 − √2) + 1/(√3 + √2)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Tanımlı Kavram",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Tanımlanan “çıkarılabilir sayı” kavramını kare çarpanı olan ve tam kare olmayan sayılar olarak yorumlayıp 1’den 50’ye kadar sayar.",
+  "tipId": "kkb-tanimli",
+  "tip": "Tanımlı kök dışına çıkarılabilir sayıları sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "a ve b, 2 ya da daha büyük tam sayılar ve b, 1’den büyük hiçbir tam sayının karesine bölünemeyen bir sayı olmak üzere, √n = a√b biçiminde yazılabilen n doğal sayılarına “çıkarılabilir sayı” denir. Örneğin √12 = 2√3 olduğundan 12 çıkarılabilir sayıdır; √16 = 4 ve √10 sadeleşmediği için 16 ve 10 çıkarılabilir sayı değildir.\n1’den 50’ye kadar (1 ve 50 dahil) kaç tane çıkarılabilir sayı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "9",
+   "C": "12",
+   "D": "13",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "13"
+  },
+  "celdiriciler": {
+   "A": "Yalnız kök dışına tam sayı olarak çıkan tam kareleri (4, 9, 16, 25, 36, 49) saymış; bunlar tanıma uymaz, √n = a√b’de b ≥ 2 olmalıdır.",
+   "B": "4’ün katlarından tam kareleri (4, 16, 36) çıkarmış: 12 − 3 = 9; 9 ve 25’in katlarını hesaba katmamış.",
+   "C": "Yalnız 4’ün katlarını (tam kareler dahil) saymış: 12 tane.",
+   "E": "Kare çarpanı olan tüm sayıları (19 tane) saymış; tam kareleri (4, 9, 16, 25, 36, 49) çıkarmayı unutmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "1’den 50’ye kadar çıkarılabilir sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Kareköklü tam sayı koşulu",
+    "ifade": "√n bir tam sayı ise n tam karedir; n = a² × b (b kare çarpanı olmayan) ise √n = a√b olur. Örnek: 12 = 2² × 3 → √12 = 2√3 · 16 = 4² → √16 = 4"
+   },
+   {
+    "ad": "Kök dışına çıkarma",
+    "ifade": "kök içini “tam kare × kalan” biçiminde yaz, tam karenin kökünü dışarı al. Benzer köklerin katsayıları toplanır ya da çıkarılır. Örnek: √12 = √(4 × 3) = 2√3 · 2√3 + 5√3 = 7√3"
+   }
+  ],
+  "ipuclari": [
+   "Önce 12 ile 16 örneğini incele: hangi sayılar çıkarılabilir, hangileri değil?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kare çarpanlı sayıları listele",
+    "aciklama": "En az bir tam kare çarpanı (4, 9, 25, 49) olan sayılar bulunur; 36 hem 4’ün hem 9’un katı olduğu için bir kez sayılır.",
+    "islem": "4’ün katları: 12 · 9’un katları: 5 · 25’in katları: 2 · 49: 1 · 36 çift sayıldı → 12 + 5 + 2 + 1 − 1 = 19"
+   },
+   {
+    "baslik": "Tam kareleri ayır",
+    "aciklama": "Tam kareler 4, 9, 16, 25, 36, 49; bunların kökü tam sayı olduğundan çıkarılabilir değildir.",
+    "islem": "19 − 6 = 13"
+   },
+   {
+    "baslik": "Doğrula",
+    "aciklama": "Kalan sayılar: 8, 12, 18, 20, 24, 27, 28, 32, 40, 44, 45, 48, 50. Her biri a√b biçimindedir.",
+    "islem": "√8 = 2√2, √12 = 2√3, √18 = 3√2, …, √50 = 5√2"
+   }
+  ],
+  "puf": "Tanımlı kavramı önce bir örnekle yorumla (12 evet, 16 hayır); sonra sayma işleminde çakışan sayıları iki kez saymamaya ve tam kareleri ayırmaya dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-13 (tanımlı kavram: çıkarılabilir sayı) · 1’den 50’ye kaç tane",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kokluiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Köklü Sayılar · Dikdörtgen ve Çevre",
+  "k": "mat|Köklü Sayılar",
+  "kazanim": "Kenarları köklü verilen dikdörtgenin çevresini ve alanını kök dışına çıkararak hesaplayıp oranını sadeleştirir.",
+  "tipId": "kkb-baglam",
+  "tip": "Kare ve dikdörtgen bağlamında köklü işlemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Kenar uzunlukları √48 cm ve √75 cm olan dikdörtgen biçimli bir kartonun çevresi, alanının kaç katıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6√3/41",
+   "B": "3√3/20",
+   "C": "3√3/10",
+   "D": "9/10",
+   "E": "10√3/9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3√3/10"
+  },
+  "celdiriciler": {
+   "B": "Çevreyi 2 ile çarpmadan yalnız iki kenarın toplamı (9√3) almış: 9√3 ÷ 60.",
+   "A": "Alanı kök içlerini toplayarak 48 + 75 = 123 almış: 18√3 ÷ 123.",
+   "D": "Alanı 4√3 × 5√3 = 20√3 bulmuş (√3 × √3 = 3’ü unutmuş): 18√3 ÷ 20√3.",
+   "E": "Oranı ters kurmuş: alanı çevreye bölmüş (60 ÷ 18√3)."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "A": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Çevrenin alana oranı.",
+  "bilgi": [
+   {
+    "ad": "Kök dışına çıkarma",
+    "ifade": "kök içini “tam kare × kalan” biçiminde yaz, tam karenin kökünü dışarı al. Benzer köklerin katsayıları toplanır ya da çıkarılır. Örnek: √12 = √(4 × 3) = 2√3 · 2√3 + 5√3 = 7√3"
+   },
+   {
+    "ad": "Köklerde çarpma ve bölme",
+    "ifade": "√a × √b = √(a × b) ve √a ÷ √b = √(a ÷ b); katsayılar katsayılarla çarpılır. Örnek: 2√3 × 4√3 = 8 × √9 = 24"
+   }
+  ],
+  "ipuclari": [
+   "Kenarları kök dışına çıkararak yaz: 48 = 16 × 3 ve 75 = 25 × 3."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kenarları sadeleştir",
+    "aciklama": "Kök içlerini tam kare × kalan biçiminde yaz.",
+    "islem": "√48 = 4√3 · √75 = 5√3"
+   },
+   {
+    "baslik": "Çevreyi bul",
+    "aciklama": "Dikdörtgenin çevresi 2 × (kısa + uzun kenar).",
+    "islem": "2 × (4√3 + 5√3) = 18√3"
+   },
+   {
+    "baslik": "Alanı bul",
+    "aciklama": "Alan, iki kenarın çarpımıdır; √3 × √3 = 3.",
+    "islem": "4√3 × 5√3 = 20 × 3 = 60"
+   },
+   {
+    "baslik": "Oranla",
+    "aciklama": "Çevreyi alana böl ve sadeleştir.",
+    "islem": "18√3 ÷ 60 = 3√3/10"
+   }
+  ],
+  "puf": "Köklü kenarlı şekillerde önce her kenarı kök dışına çıkar; çarpımda √a × √a = a olduğunu unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KKLB-14 (dikdörtgenin çevre–alan oranı) · kenarlar √48 cm ve √75 cm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
