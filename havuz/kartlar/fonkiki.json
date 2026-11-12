@@ -1,0 +1,135 @@
+{
+ "konu": "Fonksiyonlar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FNB-01",
+   "konu": "Fonksiyonlar",
+   "alt": "Fonksiyonda değer bulma",
+   "fikir": "f(x + k) biçiminde verilen kuraldan istenen noktadaki değer bulunur.",
+   "tuzak": "x yerine istenen sayıyı doğrudan yazmak; k’yı ters yönde çıkarmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "fnb-deger",
+   "tip": "Fonksiyonda değer: f(x + k)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FNB-02",
+   "konu": "Fonksiyonlar",
+   "alt": "Doğrusal fonksiyon ve doğrusal model",
+   "fikir": "İki noktadan eğim ve kural; hikâyeli doğrusal modelde sabit ücret ve birim ücret.",
+   "tuzak": "Eğimi bulup sabit terimi unutmak; sabit terimi verilen değer sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "fnb-dogrusal",
+   "tip": "Doğrusal fonksiyon ve model",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FNB-03",
+   "konu": "Fonksiyonlar",
+   "alt": "Bileşke ve ters fonksiyon",
+   "fikir": "Bileşke fonksiyonun kuralı ve değeri; doğrusal fonksiyonun tersi.",
+   "tuzak": "Bileşke sırasını ters almak; ters alırken işlem işaretini yanlış çevirmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "fnb-bileske",
+   "tip": "Bileşke ve ters fonksiyon",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FNB-04",
+   "konu": "Fonksiyonlar",
+   "alt": "Birebir, örten ve fonksiyon sayısı",
+   "fikir": "Sonlu kümelerde eşleme, birebir–örten ayrımı ve koşullu fonksiyon sayısı.",
+   "tuzak": "Eleman sayılarını ters çarpmak; koşulları birbirine karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "fnb-eslesme",
+   "tip": "Eşleme, birebir ve örten, fonksiyon sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FNB-05",
+   "konu": "Fonksiyonlar",
+   "alt": "Parçalı ve tablo ile verilen fonksiyon",
+   "fikir": "Parçalı kuralda doğru aralık seçimi; tablodan değer ve ters değer okuma.",
+   "tuzak": "Aralığa bakmadan tek kural uygulamak; f⁻¹ yerine f okumak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "fnb-tablo",
+   "tip": "Parçalı fonksiyon ve tablo",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-FNB-06",
+   "konu": "Fonksiyonlar",
+   "alt": "Doğrusal fonksiyonun kendisiyle bileşkesi",
+   "fikir": "f(f(x)) = px + q verilen doğrusal f’nin kuralı katsayı karşılaştırmasıyla bulunur.",
+   "tuzak": "Artan/azalan koşulunu yok sayıp işaret seçmek; sabit terimi atlamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "fnb-ffx",
+   "tip": "Doğrusal fonksiyonun kendisiyle bileşkesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (fonksiyonlar) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fnb-deger",
+   "ad": "Fonksiyonda değer: f(x + k)",
+   "kartlar": [
+    "K-FNB-01"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  },
+  {
+   "tipId": "fnb-dogrusal",
+   "ad": "Doğrusal fonksiyon ve model",
+   "kartlar": [
+    "K-FNB-02"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  },
+  {
+   "tipId": "fnb-bileske",
+   "ad": "Bileşke ve ters fonksiyon",
+   "kartlar": [
+    "K-FNB-03"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  },
+  {
+   "tipId": "fnb-eslesme",
+   "ad": "Eşleme, birebir ve örten, fonksiyon sayısı",
+   "kartlar": [
+    "K-FNB-04"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  },
+  {
+   "tipId": "fnb-tablo",
+   "ad": "Parçalı fonksiyon ve tablo",
+   "kartlar": [
+    "K-FNB-05"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  },
+  {
+   "tipId": "fnb-ffx",
+   "ad": "Doğrusal fonksiyonun kendisiyle bileşkesi",
+   "kartlar": [
+    "K-FNB-06"
+   ],
+   "uygulamaKonu": "matd|Fonksiyonlar"
+  }
+ ]
+}

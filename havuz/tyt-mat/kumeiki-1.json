@@ -1,0 +1,1078 @@
+[
+ {
+  "id": "tytmat-kumeiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Küme Gösterimi",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Eşitsizlikle tanımlı kümenin elemanlarını bulup sayar.",
+  "tipId": "kmb-gosterim",
+  "tip": "Küme gösterimi ve eleman sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "A = {x : x ∈ ℤ ve −5 < 2x + 1 ≤ 11}\nkümesi veriliyor.\nBuna göre A kümesinin eleman sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "6",
+   "C": "7",
+   "D": "8",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "Negatif tam sayıları kümeye almamış; yalnız 0, 1, …, 5 değerlerini (doğal sayıları) saymış.",
+   "C": "2x + 1 ≤ 11 koşulunda eşitliği dışlayıp x = 5’i saymamış.",
+   "E": "−5 < 2x + 1 koşulunda eşitliği de kabul edip x = −3’ü eklemiş.",
+   "A": "Yalnız pozitif tam sayıları (1, 2, …, 5) kümeye almış; 0 ve negatifleri saymamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat",
+   "A": "dikkat"
+  },
+  "istenen": "A kümesinin eleman sayısı.",
+  "bilgi": [
+   {
+    "ad": "Küme gösterimi",
+    "ifade": "{x : x ∈ ℤ ve a < x ≤ b} kümesine aralığa uyan tam sayılar yazılır; ≤ olan uç dahil, < olan uç dahil değildir. Örnek: {x : x ∈ ℤ ve 1 < x ≤ 4} = {2, 3, 4} olup 3 elemanlıdır"
+   }
+  ],
+  "ipuclari": [
+   "Eşitsizliği x yalnız kalacak biçimde düzenle; sonra aralığa uyan tam sayıları tek tek yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "x’i yalnız bırak",
+    "aciklama": "Her tarafa 1 çıkarıp 2’ye böl.",
+    "islem": "−6 < 2x ≤ 10 → −3 < x ≤ 5"
+   },
+   {
+    "baslik": "Tam sayıları yaz",
+    "aciklama": "−3 dahil değil, 5 dahil.",
+    "islem": "A = {−2, −1, 0, 1, 2, 3, 4, 5}"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Elemanları say.",
+    "islem": "s(A) = 8"
+   }
+  ],
+  "puf": "Eşitsizlikte < ucu aralığa dahil değildir, ≤ ucu dahildir; elemanları yazıp saymak en güvenli yoldur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-01 · eşitsizlikle tanımlı tam sayı kümesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Küme İşlemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Birleşimin eleman sayısını iki kümenin ve kesişimin eleman sayısından hesaplar.",
+  "tipId": "kmb-islem",
+  "tip": "Küme işlemleri ve eleman sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "A ve B sonlu iki kümedir.\ns(A) = 17\ns(B) = 12\ns(A ∩ B) = 7\nolduğuna göre A ∪ B kümesinin eleman sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "10",
+   "C": "22",
+   "D": "29",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "22"
+  },
+  "celdiriciler": {
+   "A": "B kümesinden yalnızca ortak elemanları çıkarıp B \\ A’nın eleman sayısını (12 − 7) vermiş.",
+   "B": "A kümesinden ortak elemanları çıkarıp A \\ B’nin eleman sayısını (17 − 7) vermiş.",
+   "D": "Ortak elemanları iki kez sayıp s(A) + s(B) toplamını vermiş.",
+   "E": "Kesişimi çıkarmak yerine eklemiş: 17 + 12 + 7."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "s(A ∪ B).",
+  "bilgi": [
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B). Ayrıca s(A \\ B) = s(A) − s(A ∩ B). Örnek: s(A) = 5, s(B) = 4, s(A ∩ B) = 2 ise s(A ∪ B) = 5 + 4 − 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "A ile B toplanırken ortak elemanlar kaç kez sayılır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortakları düzelt",
+    "aciklama": "Ortak elemanlar iki kümede de vardır, birleşimde bir kez sayılmalıdır.",
+    "islem": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B)"
+   },
+   {
+    "baslik": "Toplamı yaz",
+    "aciklama": "Önce iki kümenin elemanlarını topla.",
+    "islem": "17 + 12 = 29"
+   },
+   {
+    "baslik": "Ortakları çıkar",
+    "aciklama": "Ortak elemanlar iki kez sayıldı, bir kez çıkar.",
+    "islem": "29 − 7 = 22"
+   }
+  ],
+  "puf": "Birleşimde ortak elemanlar bir kez sayılır; toplamdan kesişimin eleman sayısı çıkarılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-03 · s(A ∪ B) hesabı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Kartezyen Çarpım",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Koşulla verilen iki kümenin eleman sayılarından kartezyen çarpımın eleman sayısını bulur.",
+  "tipId": "kmb-kartezyen",
+  "tip": "Kartezyen çarpım",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A = {x : x asal sayı ve x < 20}\nB = {y : y ∈ ℤ ve −2 ≤ y < 3}\nkümeleri veriliyor.\nBuna göre A × B kümesinin eleman sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "13",
+   "B": "24",
+   "C": "32",
+   "D": "35",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Eleman sayılarını çarpmak yerine toplamış: 8 + 5.",
+   "B": "B kümesinde negatif tam sayıları almayıp B’yi {0, 1, 2} sanmış: 8 · 3.",
+   "C": "B kümesinden 0’ı saymayıp 4 eleman almış: 8 · 4.",
+   "D": "2’yi çift olduğu için asal saymayıp A’yı 7 elemanlı almış: 7 · 5."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "s(A × B).",
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük olup yalnız 1’e ve kendisine bölünebilen doğal sayıdır. Örnek: 2, 3, 5, 7, 11 asal; 1 ve 9 asal değildir"
+   },
+   {
+    "ad": "Kartezyen çarpım",
+    "ifade": "s(A × B) = s(A) · s(B) ve (a, b) sıralı ikilisinde sıra önemlidir: (1, 2) ≠ (2, 1). Örnek: A = {1, 2}, B = {3, 4, 5} için s(A × B) = 2 · 3 = 6; (A × B) ∩ (B × A) = (A ∩ B) × (A ∩ B)"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki kümenin elemanlarını ayrı ayrı yazıp say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A’yı yaz",
+    "aciklama": "20’den küçük asal sayılar.",
+    "islem": "A = {2, 3, 5, 7, 11, 13, 17, 19} → s(A) = 8"
+   },
+   {
+    "baslik": "B’yi yaz",
+    "aciklama": "−2 dahil, 3 dahil değil.",
+    "islem": "B = {−2, −1, 0, 1, 2} → s(B) = 5"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "s(A × B) = s(A) · s(B).",
+    "islem": "8 · 5 = 40"
+   }
+  ],
+  "puf": "Kartezyen çarpımın eleman sayısı, kümelerin eleman sayılarının çarpımıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-05 · asal sayılar ve tam sayı aralığı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Alt Küme",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Alt küme sayıları farkından eleman sayısını bulur.",
+  "tipId": "kmb-altkume",
+  "tip": "Alt küme sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A ve B sonlu kümeleri için s(A) = s(B) + 3 tür.\nA kümesinin alt küme sayısı, B kümesinin alt küme sayısından 224 fazla olduğuna göre s(A) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "7",
+   "D": "8",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "Eleman sayıları arasındaki farkı (3) cevap sanmış.",
+   "B": "s(B) değerini bulup s(A) yerine onu vermiş.",
+   "C": "Parantezdeki farkı 8 − 1 = 7 bulup 7’yi s(A) sanmış.",
+   "E": "B kümesinin alt küme sayısını (2⁵) bulup eleman sayısı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "s(A).",
+  "bilgi": [
+   {
+    "ad": "Alt küme sayısı",
+    "ifade": "n elemanlı bir kümenin 2ⁿ alt kümesi vardır; bazı elemanların bulunması ya da bulunmaması şart koşulunca o elemanlar sabitlenir, kalan elemanlar serbesttir. Örnek: {a, b, c, d} kümesinin a’yı içeren alt kümeleri 2³ = 8 tanedir"
+   }
+  ],
+  "ipuclari": [
+   "s(B) = n alıp iki alt küme sayısını n cinsinden yaz; farkı ortak çarpanla sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alt küme sayılarını yaz",
+    "aciklama": "s(B) = n olsun, s(A) = n + 3.",
+    "islem": "2ⁿ⁺³ − 2ⁿ = 224"
+   },
+   {
+    "baslik": "Ortak çarpan",
+    "aciklama": "2ⁿ parantezine al.",
+    "islem": "2ⁿ · (8 − 1) = 7 · 2ⁿ = 224 → 2ⁿ = 32 → n = 5"
+   },
+   {
+    "baslik": "s(A)",
+    "aciklama": "n + 3.",
+    "islem": "5 + 3 = 8"
+   }
+  ],
+  "puf": "Alt küme sayıları farkında ortak 2ⁿ çarpanını dışarı al; üstler farkı çarpanı verir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-02 · alt küme sayıları farkı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Tümleyen",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Tümleyen eleman sayısından birleşimi, buradan da kesişimin eleman sayısını bulur.",
+  "tipId": "kmb-islem",
+  "tip": "Küme işlemleri ve eleman sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "E evrensel küme ve A, B kümeleri E’nin alt kümeleridir.\ns(E) = 40\ns(A) = 24\ns(B) = 18\ns((A ∪ B)′) = 6\nolduğuna göre s(A ∩ B) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "10",
+   "C": "16",
+   "D": "34",
+   "E": "42"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "D": "Birleşimin eleman sayısını (40 − 6) bulup kesişim sanmış.",
+   "E": "İki kümenin eleman sayılarını toplayıp (24 + 18) kesişimi çıkarmamış.",
+   "B": "Kesişimi bulduktan sonra B \\ A’nın eleman sayısını (18 − 8) vermiş.",
+   "C": "Kesişimi bulduktan sonra A \\ B’nin eleman sayısını (24 − 8) vermiş."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "E": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat"
+  },
+  "istenen": "s(A ∩ B).",
+  "bilgi": [
+   {
+    "ad": "Tümleyen",
+    "ifade": "Evrensel küme E iken s(A′) = s(E) − s(A) olur; (A ∪ B)′ kümesi hiçbirinde olmayan elemanlardır. Örnek: s(E) = 10, s(A ∪ B) = 8 ise s((A ∪ B)′) = 2"
+   },
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B). Ayrıca s(A \\ B) = s(A) − s(A ∩ B). Örnek: s(A) = 5, s(B) = 4, s(A ∩ B) = 2 ise s(A ∪ B) = 5 + 4 − 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Evrensel kümede birleşimin dışında kalanlar tümleyen kümedir; önce birleşimin eleman sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birleşimi bul",
+    "aciklama": "s(A ∪ B) = s(E) − s((A ∪ B)′).",
+    "islem": "40 − 6 = 34"
+   },
+   {
+    "baslik": "Formülü kur",
+    "aciklama": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B).",
+    "islem": "34 = 24 + 18 − s(A ∩ B)"
+   },
+   {
+    "baslik": "Kesişimi bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "s(A ∩ B) = 42 − 34 = 8"
+   }
+  ],
+  "puf": "Önce tümleyen yardımıyla birleşimin eleman sayısını bul, sonra s(A ∪ B) formülünü kesişim için çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-03 · tümleyen ve kesişim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Alt Küme İlişkileri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Öz alt küme ilişkisinden tümleyen ve fark kümeleri hakkında kesin sonuçları belirler.",
+  "tipId": "kmb-islem",
+  "tip": "Küme işlemleri ve eleman sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "E evrensel küme ve A, B kümeleri E’nin alt kümeleridir. A ⊂ B ve A ≠ B dir.\nBuna göre,\nI. A ∩ B′ = ∅\nII. A′ ⊂ B′\nIII. B \\ A ≠ ∅\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü sınarken A ⊂ B olduğundan B \\ A kümesini boş sanmış; II’yi de yanlış bulmuş.",
+   "B": "I’de A ∩ B′ kümesini A sanıp boş olmadığını düşünmüş; II’yi yanlış bulmuş.",
+   "C": "II’de kapsama yönünün tümleyende ters döndüğünü görmeyip doğru saymış; III’ü A \\ B ile karıştırıp yanlış bulmuş.",
+   "E": "II’yi kesin doğru saymış; kapsama yönünün tümleyende de aynı kaldığını sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Alt küme ve tümleyen",
+    "ifade": "A ⊂ B ise A′ ⊃ B′ olur: kapsama yönü ters döner. A ∩ B′ = A \\ B kümesidir. Örnek: E = {1, 2, 3}, A = {1}, B = {1, 2} için A′ = {2, 3}, B′ = {3}; B′ ⊂ A′"
+   }
+  ],
+  "ipuclari": [
+   "E = {1, 2, 3} alıp A = {1}, B = {1, 2} gibi küçük bir örnekle her ifadeyi dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "A ∩ B′ = A \\ B; A ⊂ B olduğundan A’nın B dışında elemanı yoktur.",
+    "islem": "I doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "Örnek: A = {1}, B = {1, 2}, E = {1, 2, 3} için A′ = {2, 3}, B′ = {3}; A′ ⊄ B′ (doğrusu B′ ⊂ A′).",
+    "islem": "II yanlış"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "A ≠ B ve A ⊂ B olduğundan B’de A’da olmayan bir eleman vardır.",
+    "islem": "III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Kesinlikle doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Kapsama ilişkilerini küçük bir örnekle dene; tümleyen alınınca kapsama yönünün tersine döndüğünü hatırla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-03 · A ⊂ B iken tümleyen ve fark",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Venn Problemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Hiçbirini içermeyenler bilinen iki kümeli bir problemde yalnız bir kümeye ait elemanların sayısını bulur.",
+  "tipId": "kmb-venn",
+  "tip": "İki ve üç kümeli problemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir sitede oturan 120 ailenin 74’ü kedi, 58’i köpek beslemektedir. Ne kedi ne de köpek besleyen 12 aile vardır.\nBuna göre yalnızca bir tür hayvan (kedi ya da köpek) besleyen kaç aile vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "24",
+   "B": "84",
+   "C": "96",
+   "D": "108",
+   "E": "132"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "84"
+  },
+  "celdiriciler": {
+   "A": "Hem kedi hem köpek besleyen aile sayısında bırakmış.",
+   "C": "Yalnız bir tür besleyenlere ne kedi ne köpek besleyen 12 aileyi de eklemiş.",
+   "D": "En az bir hayvan besleyen aile sayısını (120 − 12) vermiş.",
+   "E": "Kedi ve köpek besleyenleri toplayıp (74 + 58) ortak aileleri iki kez saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yalnızca bir tür hayvan besleyen aile sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki kümeli problem",
+    "ifade": "Her kişi yalnız A, yalnız B, ikisi ya da hiçbiri bölgelerinden tam birindedir; bölge sayılarının toplamı toplam kişi sayısına eşittir. Örnek: 20 kişide 12 A, 10 B, 5 ortak ise en az birinde olan 12 + 10 − 5 = 17 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Hiçbirini beslemeyenleri 120’den çıkarıp en az birini besleyenleri bul; sonra ortak aile sayısına ulaş."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En az birini besleyenler",
+    "aciklama": "120 − 12.",
+    "islem": "108 aile"
+   },
+   {
+    "baslik": "Her ikisini besleyenler",
+    "aciklama": "74 + 58 − x = 108.",
+    "islem": "x = 132 − 108 = 24"
+   },
+   {
+    "baslik": "Yalnız kedi, yalnız köpek",
+    "aciklama": "Toplamlardan ortakları çıkar.",
+    "islem": "74 − 24 = 50 · 58 − 24 = 34"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Yalnız bir tür besleyenler.",
+    "islem": "50 + 34 = 84"
+   }
+  ],
+  "puf": "Önce hiçbirinde olmayanları çıkar, sonra kesişimi bul; yalnız bölgeler toplamdan kesişim çıkarılarak elde edilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-04 · sitede kedi ve köpek besleyen aileler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Venn Problemleri",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Katı ilişkisi ve kesişim bilgisiyle bir kümenin eleman sayısını bulur.",
+  "tipId": "kmb-venn",
+  "tip": "İki ve üç kümeli problemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "36 öğrencilik bir sınıfta futbol oynayan öğrencilerin sayısı voleybol oynayan öğrencilerin sayısının 2 katıdır. Her ikisini de oynayan 3 öğrenci vardır, bu iki spordan hiçbirini oynamayan 6 öğrenci vardır.\nBuna göre futbol oynayan kaç öğrenci vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "11",
+   "C": "19",
+   "D": "20",
+   "E": "22"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "22"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca voleybol oynayanların sayısını (11 − 3) bulmuş.",
+   "B": "Voleybol oynayanların sayısını bulup futbol oynayanların sayısı sanmış.",
+   "C": "Yalnızca futbol oynayanların sayısını (22 − 3) vermiş.",
+   "D": "Ortak oynayanları hesaba katmayıp f + v = 30 alarak v = 10, f = 20 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Futbol oynayan öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "İki kümeli problem",
+    "ifade": "Her kişi yalnız A, yalnız B, ikisi ya da hiçbiri bölgelerinden tam birindedir; bölge sayılarının toplamı toplam kişi sayısına eşittir. Örnek: 20 kişide 12 A, 10 B, 5 ortak ise en az birinde olan 12 + 10 − 5 = 17 kişidir"
+   }
+  ],
+  "ipuclari": [
+   "Voleybol oynayanlara v de; en az birini oynayanlar için kesişimi de içeren bir denklem yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En az birini oynayanlar",
+    "aciklama": "36 − 6.",
+    "islem": "30 öğrenci"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Voleybol v, futbol 2v.",
+    "islem": "2v + v − 3 = 30 → v = 11"
+   },
+   {
+    "baslik": "Futbol oynayanlar",
+    "aciklama": "2v.",
+    "islem": "2 · 11 = 22"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Yalnız futbol 19, yalnız voleybol 8, ikisi 3, hiçbiri 6.",
+    "islem": "19 + 8 + 3 + 6 = 36 ✓"
+   }
+  ],
+  "puf": "Katı ilişkisi verilen toplamlara v gibi tek bir bilinmeyen koyup s(A ∪ B) formülünde yerine yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-04 · sınıfta futbol ve voleybol oynayanlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Üç Kümeli Sayma",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Bölgeleri verilen üç kümeli problemde bilinmeyen bölgeyi toplamdan bulup bir kümenin eleman sayısını hesaplar.",
+  "tipId": "kmb-venn",
+  "tip": "İki ve üç kümeli problemler",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir okuldaki 45 öğrencinin her biri fotoğraf, tiyatro ve müzik kulüplerinden en fazla üçüne üye olabilmektedir. Hiçbir kulübe üye olmayan 5 öğrenci vardır.\nYalnızca fotoğraf kulübüne 8, yalnızca tiyatro kulübüne 6, yalnızca müzik kulübüne 9 öğrenci üyedir. Tam olarak iki kulübe üye olan öğrencilerden fotoğraf ile tiyatroya 5, tiyatro ile müziğe 4, fotoğraf ile müziğe 3 öğrenci üyedir.\nBuna göre tiyatro kulübüne üye olan öğrenci sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "15",
+   "C": "20",
+   "D": "25",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca tiyatro kulübüne üye olanları vermiş.",
+   "B": "Üç kulübe birden üye olanları tiyatro kulübünden saymamış.",
+   "D": "Hiçbir kulübe üye olmayan 5 öğrenciyi de tiyatro kulübüne eklemiş.",
+   "E": "Üçüne de üye olanları iki ikili bölgeye ve ayrıca ayrı bölgeye ekleyip üç kez saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Tiyatro kulübüne üye öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Üç kümeli sayma",
+    "ifade": "Üç kümeli Venn şemasında 8 bölge vardır (7 bölge ve dışarısı); her kişi tam bir bölgededir. Bir kümenin elemanları, o kümeyi içeren 4 bölgenin toplamıdır. Örnek: A kümesi = yalnız A + A ile B + A ile C + üçü birden"
+   }
+  ],
+  "ipuclari": [
+   "Toplam 45 öğrenciyi bölgelere ayır; verilmeyen tek bölgenin sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üçüne de üye olanlar",
+    "aciklama": "Toplam, verilen bölgeler ve x’in toplamıdır.",
+    "islem": "8 + 6 + 9 + 5 + 4 + 3 + 5 + x = 45 → x = 5"
+   },
+   {
+    "baslik": "Tiyatro bölgeleri",
+    "aciklama": "Tiyatroyu içeren dört bölge: yalnız tiyatro, fotoğrafla, müzikle ve üçü birden.",
+    "islem": "6 + 5 + 4 + 5"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Dört bölgenin toplamı.",
+    "islem": "20"
+   }
+  ],
+  "puf": "Verilmeyen bölgeyi toplam üzerinden bul; bir kümenin eleman sayısı, onu içeren dört bölgenin toplamıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-04 · fotoğraf, tiyatro ve müzik kulüpleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Kartezyen Çarpım",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Kartezyen çarpımdaki sıralı ikilileri bir bileşen koşuluna göre sayar.",
+  "tipId": "kmb-kartezyen",
+  "tip": "Kartezyen çarpım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A = {1, 2, 3, 4, 5, 6}\nB = {2, 4, 6, 8}\nkümeleri veriliyor.\nA × B kümesinin birinci bileşeni ikinci bileşeninden küçük olan kaç elemanı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "15",
+   "C": "18",
+   "D": "21",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Koşulu ters okuyup birinci bileşeni ikincisinden büyük olanları saymış.",
+   "C": "Birinci bileşeni ikincisine eşit olanları da (2, 4 ve 6) saymış.",
+   "D": "İki bileşeni birbirinden farklı olan ikilileri saymış.",
+   "E": "Koşulu uygulamayıp tüm ikilileri saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşulu sağlayan sıralı ikili sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kartezyen çarpım",
+    "ifade": "s(A × B) = s(A) · s(B) ve (a, b) sıralı ikilisinde sıra önemlidir: (1, 2) ≠ (2, 1). Örnek: A = {1, 2}, B = {3, 4, 5} için s(A × B) = 2 · 3 = 6; (A × B) ∩ (B × A) = (A ∩ B) × (A ∩ B)"
+   }
+  ],
+  "ipuclari": [
+   "İkinci bileşeni 2, 4, 6, 8 için ayrı ayrı düşün; her birinde birinci bileşen olabilecek elemanları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İkinci bileşen 2",
+    "aciklama": "Birinci bileşen 2’den küçük.",
+    "islem": "1 → 1 ikili"
+   },
+   {
+    "baslik": "İkinci bileşen 4, 6, 8",
+    "aciklama": "Birinci bileşen sırasıyla 4, 6, 8’den küçük (A’da 6’ya kadar).",
+    "islem": "3 + 5 + 6 ikili"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Tüm ikililer.",
+    "islem": "1 + 3 + 5 + 6 = 15"
+   }
+  ],
+  "puf": "Koşullu ikilileri saymak için bir bileşeni sabitleyip diğerinin koşulu sağlayan elemanlarını say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-05 · birinci bileşeni ikinci bileşeninden küçük ikililer",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Koşullu Alt Küme",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Birbirine bağlı iki koşul ve bir dışlama koşuluyla alt küme sayısını bulur.",
+  "tipId": "kmb-altkume",
+  "tip": "Alt küme sayısı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Boş küme de sayılmak üzere, A = {1, 2, 3, 4, 5, 6, 7} kümesinin alt kümelerinden, 1 elemanını içeren her alt kümede 2 elemanı da bulunan ve 7 elemanını hiç içermeyen kaç tanesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "48",
+   "C": "64",
+   "D": "96",
+   "E": "128"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "48"
+  },
+  "celdiriciler": {
+   "A": "1 ve 2’yi yalnız birlikte bulunan durumla sınırlayıp 2⁴ saymış.",
+   "C": "1 ve 2’yi bağımsız sayıp 7’yi dışlamış: 4 · 2⁴.",
+   "D": "7’nin bulunmama koşulunu uygulamayıp 3 · 2⁵ saymış.",
+   "E": "Koşulları hiç uygulamayıp tüm alt kümeleri (2⁷) saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşulları sağlayan alt küme sayısı.",
+  "bilgi": [
+   {
+    "ad": "Alt küme sayısı",
+    "ifade": "n elemanlı bir kümenin 2ⁿ alt kümesi vardır; bazı elemanların bulunması ya da bulunmaması şart koşulunca o elemanlar sabitlenir, kalan elemanlar serbesttir. Örnek: {a, b, c, d} kümesinin a’yı içeren alt kümeleri 2³ = 8 tanedir"
+   }
+  ],
+  "ipuclari": [
+   "1 ve 2 için hangi durumlar mümkün? Sonra 3, 4, 5, 6 elemanlarının serbest olduğunu kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "1 ve 2’nin durumları",
+    "aciklama": "(1 yok, 2 yok), (1 yok, 2 var), (1 var, 2 var) olabilir; (1 var, 2 yok) olamaz.",
+    "islem": "3 durum"
+   },
+   {
+    "baslik": "7 elemanı",
+    "aciklama": "Alt kümede bulunamaz.",
+    "islem": "1 durum"
+   },
+   {
+    "baslik": "Serbest elemanlar",
+    "aciklama": "3, 4, 5, 6 elemanları her iki durumda da olabilir.",
+    "islem": "2⁴ = 16"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Durumları çarp.",
+    "islem": "3 · 16 = 48"
+   }
+  ],
+  "puf": "Birbirine bağlı koşullarda mümkün durumları tek tek yaz; serbest elemanları 2 üzeri adetle çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-02 · 1 varsa 2 de var, 7 yok",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Üç Kümeli Sayma",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Her kümenin eleman sayıları toplamını bölge ağırlıklarıyla ilişkilendirerek üç kümeli bir problemde üçlü kesişimi bulur.",
+  "tipId": "kmb-venn",
+  "tip": "İki ve üç kümeli problemler",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir dil kursundaki 50 öğrenciden 4’ü hiçbir dil bilmemektedir. Öğrencilerden 30’u İngilizce, 24’ü Almanca, 20’si Fransızca bilmektedir. Tam olarak iki dil bilen 14 öğrenci vardır.\nBuna göre üç dili de bilen kaç öğrenci vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "14",
+   "C": "25",
+   "D": "28",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "B": "Dil sayıları toplamı ile en az bir dil bilenlerin sayısı farkından (74 − 46 = 28) tam iki dil bilenleri çıkarıp (28 − 14) sonucu üçlü kesişim sanmış; üçlü kesişimin farka 2 kat girdiğini görmemiş.",
+   "C": "Yalnızca bir dil bilenlerin sayısını (46 − 14 − 7) bulup üç dil bilenler sanmış.",
+   "D": "Dil sayıları toplamı ile en az bir dil bilen sayısı farkını (74 − 46) üç dil bilenler sanmış.",
+   "E": "En az bir dil bilenlerden tam iki dil bilenleri çıkarıp (46 − 14) yalnızca bir ya da üç dil bilenleri üç dil bilenler sanmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Üç dili de bilen öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Üç kümeli sayma",
+    "ifade": "Üç kümeli Venn şemasında 8 bölge vardır (7 bölge ve dışarısı); her kişi tam bir bölgededir. Bir kümenin elemanları, o kümeyi içeren 4 bölgenin toplamıdır. Örnek: A kümesi = yalnız A + A ile B + A ile C + üçü birden"
+   },
+   {
+    "ad": "Üyelik toplamı",
+    "ifade": "Kümelerin eleman sayıları toplanınca yalnız bir kümede olan 1, iki kümede olan 2, üç kümede olan 3 kez sayılır. Örnek: 5 kişi yalnız A’da, 2 kişi A ile B’de ise s(A) + s(B) toplamına bunlar 5 · 1 + 2 · 2 kadar girer"
+   }
+  ],
+  "ipuclari": [
+   "Dil sayılarının toplamını, öğrencilerin kaç dil bildiğine göre (1, 2 ve 3 dil) iki farklı biçimde yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "En az bir dil bilenler",
+    "aciklama": "50 − 4.",
+    "islem": "46 = a + 14 + c (a: yalnız bir dil, c: üç dil)"
+   },
+   {
+    "baslik": "Dil sayıları toplamı",
+    "aciklama": "Her öğrenci bildiği dil sayısı kadar sayılır.",
+    "islem": "30 + 24 + 20 = 74 = a + 2 · 14 + 3c"
+   },
+   {
+    "baslik": "İki denklemi çöz",
+    "aciklama": "İkinciden birinciyi çıkar.",
+    "islem": "74 − 46 = 14 + 2c → c = 7"
+   }
+  ],
+  "puf": "Kümelerin eleman sayıları toplamı; yalnız bir, tam iki ve üç kümeli öğrencileri 1, 2 ve 3 ağırlığıyla sayar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-04 · dil kursunda üç dil",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Tanımlı İşlem",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "Tanımlı simetrik fark işleminin eleman sayısını birleşim ve kesişimle ilişkilendirerek bilinmeyen eleman sayısını bulur.",
+  "tipId": "kmb-yeninesil",
+  "tip": "Yeni nesil: tanımlı küme işlemi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "İki kümenin yalnız birinde bulunan elemanlardan oluşan küme için\nA ⊕ B = (A \\ B) ∪ (B \\ A)\nişlemi tanımlanıyor.\nA ve B sonlu kümeleri için s(A) = 10, s(A ⊕ B) = 11 ve s(A ∪ B) = 15 olduğuna göre s(B) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "4",
+   "C": "5",
+   "D": "9",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "s(A ⊕ B) − s(A) farkını (11 − 10) B’nin eleman sayısı sanmış.",
+   "B": "Kesişimin eleman sayısını bulup durmuş.",
+   "C": "Birleşimden A’yı çıkarıp (15 − 10) yalnızca B’de olanları s(B) sanmış; ortak elemanları katmamış.",
+   "E": "Birleşim ile kesişimi toplayıp (15 + 4) A’yı çıkarmayı unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "s(B).",
+  "bilgi": [
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "Soruda tanımlanan işlem, bilinen küme işlemleriyle yazılır ve verilen bilgiye uygulanır. Örnek: A ∗ B = A ∪ B tanımında s(A ∗ B) = s(A ∪ B) olur"
+   },
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B). Ayrıca s(A \\ B) = s(A) − s(A ∩ B). Örnek: s(A) = 5, s(B) = 4, s(A ∩ B) = 2 ise s(A ∪ B) = 5 + 4 − 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Birleşim, yalnız bir kümede olanlar ile ortak elemanlardan oluşur; buradan ortak eleman sayısını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesişimi bul",
+    "aciklama": "A ⊕ B yalnız bir kümede olanlardır; birleşimden çıkınca ortaklar kalır.",
+    "islem": "s(A ∩ B) = 15 − 11 = 4"
+   },
+   {
+    "baslik": "B’ye ulaş",
+    "aciklama": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B).",
+    "islem": "15 = 10 + s(B) − 4"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "s(B) yalnız bırakılır.",
+    "islem": "s(B) = 15 − 10 + 4 = 9"
+   }
+  ],
+  "puf": "Tanımı bilinen bölgelere çevir: ⊕ yalnız bir kümede olanları, birleşim bunlara ortakları ekler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-06 · simetrik fark tanımı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-kumeiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Kümeler ve Kartezyen Çarpım · Kartezyen Çarpım",
+  "k": "matd|Kümeler-Kartezyen Çarpım",
+  "kazanim": "İki kartezyen çarpımın kesişimini kümelerin kesişimiyle ilişkilendirip birleşimin eleman sayısını bulur.",
+  "tipId": "kmb-kartezyen",
+  "tip": "Kartezyen çarpım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "A ve B sonlu kümeleri için s(A × B) = 42 ve s(A) > s(B) dir.\n(A × B) ∩ (B × A) kümesinin 16 elemanı olduğuna göre A ∪ B kümesinin eleman sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "9",
+   "D": "13",
+   "E": "17"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "A \\ B kümesinin eleman sayısını (7 − 4) vermiş.",
+   "B": "Birleşim yerine yalnız bir kümede olan elemanların sayısını (13 − 8) bulmuş.",
+   "D": "Kesişimi çıkarmayıp s(A) + s(B) toplamını vermiş.",
+   "E": "Kesişimi çıkarmak yerine eklemiş: 13 + 4."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "s(A ∪ B).",
+  "bilgi": [
+   {
+    "ad": "Kartezyen çarpım",
+    "ifade": "s(A × B) = s(A) · s(B) ve (a, b) sıralı ikilisinde sıra önemlidir: (1, 2) ≠ (2, 1). Örnek: A = {1, 2}, B = {3, 4, 5} için s(A × B) = 2 · 3 = 6; (A × B) ∩ (B × A) = (A ∩ B) × (A ∩ B)"
+   },
+   {
+    "ad": "Birleşimin eleman sayısı",
+    "ifade": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B). Ayrıca s(A \\ B) = s(A) − s(A ∩ B). Örnek: s(A) = 5, s(B) = 4, s(A ∩ B) = 2 ise s(A ∪ B) = 5 + 4 − 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "(A × B) ∩ (B × A) kümesinin elemanları hem A × B hem B × A’da bulunur; bileşenlerinin hangi kümelerde olması gerektiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesişimi bul",
+    "aciklama": "(A × B) ∩ (B × A) = (A ∩ B) × (A ∩ B).",
+    "islem": "s(A ∩ B)² = 16 → s(A ∩ B) = 4"
+   },
+   {
+    "baslik": "s(A) ve s(B)",
+    "aciklama": "s(A) · s(B) = 42, s(A) > s(B) ve s(B) ≥ 4 olmalı.",
+    "islem": "s(A) = 7, s(B) = 6"
+   },
+   {
+    "baslik": "Birleşimi bul",
+    "aciklama": "s(A ∪ B) = s(A) + s(B) − s(A ∩ B).",
+    "islem": "7 + 6 − 4 = 9"
+   }
+  ],
+  "puf": "(A × B) ∩ (B × A), A ∩ B kümesinin kendisiyle kartezyen çarpımıdır; eleman sayısı s(A ∩ B)² olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KMB-05 · (A × B) ∩ (B × A)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

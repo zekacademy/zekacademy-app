@@ -1,0 +1,135 @@
+{
+ "konu": "Permütasyon ve Kombinasyon",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-PKB-01",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Toplama–çarpma ile sayma",
+   "fikir": "Ardışık aşamalar çarpılır, alternatif durumlar toplanır; birleşik durumlarda parantezleme doğru yapılır.",
+   "tuzak": "Alternatifleri çarpmak ya da aşamaları toplamak; bir aşamayı tüm durumlara uygulamayı unutmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "pkb-sayma",
+   "tip": "Toplama ve çarpma ilkesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  },
+  {
+   "id": "K-PKB-02",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Koşullu sayı yazma",
+   "fikir": "Rakam koşulları (farklı, çift, aralık) en kısıtlı basamaktan başlanarak ve gerekirse durumlara ayrılarak sayılır.",
+   "tuzak": "Sıfırın başa gelmesine izin vermek; tekrar yasağını ya da aralık koşulunu atlamak; durumları ayırmadan tek çarpım yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "pkb-sayi",
+   "tip": "Koşullu sayı yazma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  },
+  {
+   "id": "K-PKB-03",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Sıralama ve tekrarlı permütasyon",
+   "fikir": "Yan yana gelme (blok), gelmeme (tümleyen), uçlarda durma ve aynı harfli kelimeler sayılır.",
+   "tuzak": "Bloğun iç sıralamasını unutmak; aynı nesneleri farklı saymak; koşulu yanlış okumak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "pkb-sira",
+   "tip": "Koşullu sıralama ve tekrarlı permütasyon",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  },
+  {
+   "id": "K-PKB-04",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Kombinasyonla seçme ve eşleşme",
+   "fikir": "Sırasız seçim kombinasyonla, “en az bir” koşulu tümleyenle, ikili eşleşmeler C(n, 2) ile sayılır.",
+   "tuzak": "Sırasız seçimi sıralı saymak; “en az bir”i “tam bir” sanmak; seçimde fazla saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "pkb-secme",
+   "tip": "Kombinasyonla seçme ve ikili eşleşme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  },
+  {
+   "id": "K-PKB-05",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Nokta, üçgen ve yol sayma",
+   "fikir": "Doğrusal noktalardan üçgen sayısı C ile, ızgarada en kısa yol adım sıralamasıyla bulunur.",
+   "tuzak": "Doğrusal noktaları da üçgen saymak; adımları farklı nesne gibi sıralamak; koşullu uç adımları atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "pkb-nokta",
+   "tip": "Üçgen ve en kısa yol sayma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  },
+  {
+   "id": "K-PKB-06",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Yeni nesil ve öncüllü sayma",
+   "fikir": "Kural ya da ifade verilen sayma kurgularında her koşul ayrı sayılır, öncüllerin değeri tek tek hesaplanır.",
+   "tuzak": "Kuralları yanlış birleştirmek; sıra önemli mi sorusunu atlamak; öncülleri hesaplamadan karar vermek.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pkb-yeninesil",
+   "tip": "Yeni nesil ve öncüllü sayma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayma, permütasyon, kombinasyon) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Sayma"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pkb-sayma",
+   "ad": "Toplama ve çarpma ilkesi",
+   "kartlar": [
+    "K-PKB-01"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pkb-sayi",
+   "ad": "Koşullu sayı yazma",
+   "kartlar": [
+    "K-PKB-02"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pkb-sira",
+   "ad": "Koşullu sıralama ve tekrarlı permütasyon",
+   "kartlar": [
+    "K-PKB-03"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pkb-secme",
+   "ad": "Kombinasyonla seçme ve ikili eşleşme",
+   "kartlar": [
+    "K-PKB-04"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pkb-nokta",
+   "ad": "Üçgen ve en kısa yol sayma",
+   "kartlar": [
+    "K-PKB-05"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pkb-yeninesil",
+   "ad": "Yeni nesil ve öncüllü sayma",
+   "kartlar": [
+    "K-PKB-06"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  }
+ ]
+}

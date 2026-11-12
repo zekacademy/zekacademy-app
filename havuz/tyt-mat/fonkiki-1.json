@@ -1,0 +1,1080 @@
+[
+ {
+  "id": "tytmat-fonkiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Fonksiyonda Değer",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "f(x + k) kuralı verilen fonksiyonda istenen noktadaki değeri bulur.",
+  "tipId": "fnb-deger",
+  "tip": "Fonksiyonda değer: f(x + k)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "Gerçel sayılarda tanımlı f fonksiyonu için\nf(x + 2) = 3x − 1\neşitliği veriliyor.\nBuna göre f(5) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "11",
+   "C": "14",
+   "D": "16",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "x + 2 = 5 için x yerine 4 yazmış (2 yerine 1 çıkarmış).",
+   "C": "Kuraldaki x yerine doğrudan 5 yazmış: 3 · 5 − 1.",
+   "D": "Doğrudan 3 · 5 − 1 = 14 bulup 2’yi eklemiş.",
+   "E": "x + 2 = 5 için x’i 5 + 2 = 7 almış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "f(5).",
+  "bilgi": [
+   {
+    "ad": "Fonksiyonda değer",
+    "ifade": "f(x + k) biçiminde verilen kuralda f(a) için x + k = a olacak biçimde x bulunur ve kurala yazılır. Örnek: f(x + 1) = 2x ise f(5) için x = 4 alınır, f(5) = 8"
+   }
+  ],
+  "ipuclari": [
+   "Parantezin içi 5 olacak biçimde x’in değerini bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "x’i bul",
+    "aciklama": "x + 2 = 5 olmalı.",
+    "islem": "x = 3"
+   },
+   {
+    "baslik": "Kurala yaz",
+    "aciklama": "x = 3 için.",
+    "islem": "f(5) = 3 · 3 − 1"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "İşlemi yap.",
+    "islem": "9 − 1 = 8"
+   }
+  ],
+  "puf": "f(x + k) = … verildiğinde istenen noktayı x + k’ya eşitleyip x’i bul, sonra kurala yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-01 · f(x + 2) = 3x − 1",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Doğrusal Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "İki noktası verilen doğrusal fonksiyonun kuralını bulup değer hesaplar.",
+  "tipId": "fnb-dogrusal",
+  "tip": "Doğrusal fonksiyon ve model",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılarda tanımlı f doğrusal bir fonksiyondur.\nf(1) = 5\nf(4) = 14\nolduğuna göre f(10) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "32",
+   "C": "35",
+   "D": "44",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "Eğimi bulup sabit terimi hesaplamamış: 3 · 10.",
+   "C": "Sabit terimi f(1) = 5 sanmış: 3 · 10 + 5.",
+   "D": "Eğimi bulup f(4) = 14 değerine 3 · 10 eklemiş.",
+   "E": "f(1) = 5’i eğim sanıp 5 · 10 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "f(10).",
+  "bilgi": [
+   {
+    "ad": "Doğrusal fonksiyon",
+    "ifade": "f(x) = ax + b ve a = (f(x₂) − f(x₁)) / (x₂ − x₁) eğimidir; sonra b bir noktadan bulunur. Örnek: f(1) = 3, f(3) = 7 ise a = 2, b = 1 ve f(x) = 2x + 1"
+   }
+  ],
+  "ipuclari": [
+   "Doğrusal fonksiyonu f(x) = ax + b yazıp iki noktayı kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eğimi bul",
+    "aciklama": "Değer farkı ÷ x farkı.",
+    "islem": "a = (14 − 5)/(4 − 1) = 3"
+   },
+   {
+    "baslik": "Sabiti bul",
+    "aciklama": "f(1) = 5 noktası.",
+    "islem": "3 + b = 5 → b = 2"
+   },
+   {
+    "baslik": "Değeri hesapla",
+    "aciklama": "f(x) = 3x + 2.",
+    "islem": "f(10) = 32"
+   }
+  ],
+  "puf": "Doğrusal fonksiyonda önce eğimi, sonra bir noktadan sabit terimi bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-02 · iki noktadan doğrusal fonksiyon",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Fonksiyon Sayısı",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Sonlu kümeler arasında tanımlanabilecek fonksiyon sayısını bulur.",
+  "tipId": "fnb-eslesme",
+  "tip": "Eşleme, birebir ve örten, fonksiyon sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 2,
+  "metin": "A = {1, 2, 3, 4} ve B = {a, b, c} kümeleri veriliyor.\nA’dan B’ye tanımlanabilen kaç farklı fonksiyon vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "12",
+   "C": "24",
+   "D": "64",
+   "E": "81"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "81"
+  },
+  "celdiriciler": {
+   "A": "Eleman sayılarını toplamış: 4 + 3.",
+   "B": "Kartezyen çarpımın eleman sayısını (4 · 3) vermiş.",
+   "C": "Her elemana farklı görüntü seçilir sanıp azalan seçenekleri sayarak 4 · 3 · 2 hesaplamış.",
+   "D": "Üs ile taban yer değiştirmiş: 4³."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Fonksiyon sayısı.",
+  "bilgi": [
+   {
+    "ad": "Fonksiyon sayısı",
+    "ifade": "s(A) = m ve s(B) = n ise A’dan B’ye nᵐ tane fonksiyon vardır; her eleman için görüntü n seçenekten seçilir. Örnek: A = {1, 2}, B = {a, b, c} için 3² = 9 fonksiyon"
+   }
+  ],
+  "ipuclari": [
+   "A’nın her elemanı için görüntüsünün kaç seçeneği olduğunu düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Her eleman için seçenek",
+    "aciklama": "1, 2, 3 ve 4’ün her biri B’nin 3 elemanından birine gider.",
+    "islem": "3 seçenek × 4 eleman"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Seçimler birbirinden bağımsız.",
+    "islem": "3 · 3 · 3 · 3"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Çarpımı bul.",
+    "islem": "3⁴ = 81"
+   }
+  ],
+  "puf": "Fonksiyon sayısı, değer kümesinin eleman sayısının tanım kümesinin eleman sayısı kadar kuvvetidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-04 · A → B fonksiyon sayısı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Doğrusal Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Eşit aralıklardaki değer farkından eğimi bulup doğrusal fonksiyonun değerini hesaplar.",
+  "tipId": "fnb-dogrusal",
+  "tip": "Doğrusal fonksiyon ve model",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılarda tanımlı f doğrusal bir fonksiyondur.\nf(x + 3) − f(x) = 12\nf(2) = 5\nolduğuna göre f(10) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "13",
+   "B": "17",
+   "C": "37",
+   "D": "45",
+   "E": "101"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "37"
+  },
+  "celdiriciler": {
+   "A": "Eğimi hesaba katmayıp x farkı kadar (10 − 2 = 8) f(2)’ye eklemiş: 5 + 8.",
+   "B": "12 farkını bir kez f(2)’ye eklemiş.",
+   "D": "f(2) = 5’i sabit terim sanıp 4 · 10 + 5 hesaplamış.",
+   "E": "12’yi eğim sanıp 5 + 12 · 8 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "f(10).",
+  "bilgi": [
+   {
+    "ad": "Doğrusal fonksiyon",
+    "ifade": "f(x) = ax + b ve a = (f(x₂) − f(x₁)) / (x₂ − x₁) eğimidir; sonra b bir noktadan bulunur. Örnek: f(1) = 3, f(3) = 7 ise a = 2, b = 1 ve f(x) = 2x + 1"
+   }
+  ],
+  "ipuclari": [
+   "f(x) = ax + b için f(x + 3) − f(x) ifadesini a cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eğimi bul",
+    "aciklama": "f(x + 3) − f(x) = a(x + 3) + b − ax − b = 3a.",
+    "islem": "3a = 12 → a = 4"
+   },
+   {
+    "baslik": "Sabiti bul",
+    "aciklama": "f(2) = 5.",
+    "islem": "8 + b = 5 → b = −3"
+   },
+   {
+    "baslik": "Değeri hesapla",
+    "aciklama": "f(x) = 4x − 3.",
+    "islem": "f(10) = 37"
+   }
+  ],
+  "puf": "Doğrusal fonksiyonda x, h kadar artınca değer a · h kadar artar; farktan eğime ulaşılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-02 · f(x + 3) − f(x) farkı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Bileşke Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Bileşke fonksiyonun kuralı ve bir fonksiyon verildiğinde diğerinin kuralını bulur.",
+  "tipId": "fnb-bileske",
+  "tip": "Bileşke ve ters fonksiyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılarda tanımlı f ve g fonksiyonları için\nf(x) = 2x − 1\n(f ∘ g)(x) = 4x + 5\nolduğuna göre g(5) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "12",
+   "C": "12,5",
+   "D": "13",
+   "E": "21"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "13"
+  },
+  "celdiriciler": {
+   "A": "g(5) yerine f(5) değerini hesaplamış.",
+   "B": "2g(x) − 1 = 4x + 5 denkleminde −1’i taşırken işareti ters çevirmiş: g(x) = (4x + 5 − 1)/2.",
+   "C": "−1 terimini hiç hesaba katmayıp g(x) = (4x + 5)/2 bulmuş.",
+   "E": "g(5) yerine (g ∘ f)(5) = g(f(5)) hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "g(5).",
+  "bilgi": [
+   {
+    "ad": "Bileşke fonksiyon",
+    "ifade": "(f ∘ g)(x) = f(g(x)) olup önce g, sonra f uygulanır. Örnek: f(x) = x + 1, g(x) = 2x ise (f ∘ g)(3) = f(6) = 7 ve (g ∘ f)(3) = g(4) = 8"
+   }
+  ],
+  "ipuclari": [
+   "(f ∘ g)(x) = f(g(x)) olduğundan f kuralında x yerine g(x) yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bileşkeyi aç",
+    "aciklama": "f(g(x)) = 2g(x) − 1.",
+    "islem": "2g(x) − 1 = 4x + 5"
+   },
+   {
+    "baslik": "g(x)’i bul",
+    "aciklama": "−1’i diğer tarafa at, 2’ye böl.",
+    "islem": "g(x) = 2x + 3"
+   },
+   {
+    "baslik": "Değeri hesapla",
+    "aciklama": "x = 5.",
+    "islem": "g(5) = 13"
+   }
+  ],
+  "puf": "(f ∘ g)(x) = f(g(x)) olduğundan f’nin kuralında x yerine g(x) yazıp g(x)’i yalnız bırak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-03 · (f ∘ g)(x) verilmiş, g aranıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Ters Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Doğrusal fonksiyonun tersinin kuralını bulup değer hesaplar.",
+  "tipId": "fnb-bileske",
+  "tip": "Bileşke ve ters fonksiyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "f: ℝ → ℝ, birebir ve örten bir fonksiyon olup\nf(x) = (2x − 1)/3\nkuralıyla tanımlanıyor.\nBuna göre f⁻¹(7) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "11",
+   "C": "13",
+   "D": "21",
+   "E": "22"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "Ters kuralı bulurken +1’i −1 yapmış: (3 · 7 − 1)/2.",
+   "C": "f’nin payını (2 · 7 − 1) hesaplamış; ters almamış.",
+   "D": "Yalnızca 3 ile çarpıp +1 ve 2’ye bölme adımlarını yapmamış.",
+   "E": "3 · 7 + 1 bulup 2’ye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "islem"
+  },
+  "istenen": "f⁻¹(7).",
+  "bilgi": [
+   {
+    "ad": "Ters fonksiyon",
+    "ifade": "y = f(x) eşitliğinde x yalnız bırakılırsa f⁻¹ bulunur; f⁻¹(b) = a ile f(a) = b aynı şeydir. Örnek: f(x) = 2x + 4 için x = (y − 4)/2 olduğundan f⁻¹(6) = 1"
+   }
+  ],
+  "ipuclari": [
+   "f⁻¹(7) = a ise f(a) = 7 olur; bu denklemi kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "f⁻¹(7) = a ise f(a) = 7.",
+    "islem": "(2a − 1)/3 = 7"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Önce 3 ile çarp, sonra 1 ekle, 2’ye böl.",
+    "islem": "2a − 1 = 21 → 2a = 22 → a = 11"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "f(11) = (22 − 1)/3.",
+    "islem": "f(11) = 7 ✓"
+   }
+  ],
+  "puf": "f⁻¹(b) = a eşitliği f(a) = b ile aynıdır; ters kuralı bulmak yerine f(a) = b denklemini çözebilirsin.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-03 · kesirli doğrusal fonksiyonun tersi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Birebir ve Örten",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Birebir ve örten fonksiyonun tablosundan bilinmeyen değerleri eşleyerek ifade değerini bulur.",
+  "tipId": "fnb-eslesme",
+  "tip": "Eşleme, birebir ve örten, fonksiyon sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "A = {1, 2, 3, 4} ve B = {1, 3, 5, 7} kümeleri için f: A → B fonksiyonu aşağıdaki tabloda verilmiştir.\nf birebir ve örten bir fonksiyondur ve a > b dir.\nBuna göre 3a + b kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 290 56\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"286\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"85.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"141.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"201.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"261.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">f(x)</text><text x=\"85.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">a + 1</text><text x=\"141.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"201.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2b − 1</text><text x=\"261.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">7</text><line x1=\"2\" y1=\"2\" x2=\"288\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"288\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"288\" y2=\"54\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"54\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"54\" stroke-width=\"1\"/><line x1=\"114\" y1=\"2\" x2=\"114\" y2=\"54\" stroke-width=\"1\"/><line x1=\"168\" y1=\"2\" x2=\"168\" y2=\"54\" stroke-width=\"1\"/><line x1=\"234\" y1=\"2\" x2=\"234\" y2=\"54\" stroke-width=\"1\"/><line x1=\"288\" y1=\"2\" x2=\"288\" y2=\"54\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "6",
+   "D": "7",
+   "E": "10"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Eşlemeyi ters seçip a + 1 = 1 ve 2b − 1 = 3 almış (a < b); a > b koşulunu sınamamış.",
+   "B": "Sorulan ifadeyi yanlış okuyup a + b değerini vermiş.",
+   "C": "2b − 1 = 1 denkleminde −1’i karşıya −1 olarak atıp 2b = 1 − 1 = 0, b = 0 bulmuş; a = 2 ile 3a + b = 6.",
+   "E": "a + 1 = 3 yerine a = 3 almış: 3 · 3 + 1."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "3a + b.",
+  "bilgi": [
+   {
+    "ad": "Birebir ve örten",
+    "ifade": "Birebir fonksiyonda farklı elemanların görüntüleri farklıdır; örten fonksiyonda değer kümesinin her elemanı en az bir elemanın görüntüsüdür. Örnek: A = {1, 2}, B = {a, b} için f(1) = a, f(2) = b birebir ve örtendir"
+   }
+  ],
+  "ipuclari": [
+   "Değer kümesinin tüm elemanları tabloda tam bir kez bulunmalı; hangi değerler a + 1 ve 2b − 1’e kalıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalan değerler",
+    "aciklama": "Tabloda 5 ve 7 var; B’den 1 ve 3 kalıyor.",
+    "islem": "a + 1 ve 2b − 1 sayıları 1 ile 3’tür"
+   },
+   {
+    "baslik": "İki durum",
+    "aciklama": "Durum 1: a + 1 = 3, 2b − 1 = 1 → a = 2, b = 1. Durum 2: a + 1 = 1, 2b − 1 = 3 → a = 0, b = 2.",
+    "islem": "a > b yalnız Durum 1’de sağlanır"
+   },
+   {
+    "baslik": "İfade",
+    "aciklama": "a = 2, b = 1.",
+    "islem": "3a + b = 7"
+   }
+  ],
+  "puf": "Birebir ve örten fonksiyonda değer kümesinin her elemanı tam bir kez kullanılır; kalan değerlerle ek koşulu sınayarak eşlemeyi belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-04 · tabloda birebir ve örten eşleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Birebir ve Örten",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Eleman sayıları farklı iki küme arasındaki fonksiyonlarda birebirlik ve örtenlik olasılıklarını yorumlar.",
+  "tipId": "fnb-eslesme",
+  "tip": "Eşleme, birebir ve örten, fonksiyon sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 3,
+  "metin": "A = {1, 2, 3, 4} ve B = {a, b, c} kümeleri için f: A → B bir fonksiyondur.\nBuna göre,\nI. f birebir olabilir.\nII. f örten olabilir.\nIII. f örten olmak zorundadır.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "B": "II’de 4 elemanın 3 elemana örten gidemeyeceğini sanıp yanlış bulmuş; III’ü “örten olmayan fonksiyon olmaz” diye doğru saymış.",
+   "C": "I’de A’nın 4 elemanının B’nin 3 elemanına birebir gidebileceğini sanmış; III’ü yanlış bulmuş.",
+   "D": "III’ü doğru saymış (her fonksiyonun örten olduğunu sanmış); I’i yanlış bulmuş.",
+   "E": "Üç ifadeyi de “olabilir” diye okuyup hepsini doğru saymış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Birebir ve örten",
+    "ifade": "Birebir fonksiyonda farklı elemanların görüntüleri farklıdır; örten fonksiyonda değer kümesinin her elemanı en az bir elemanın görüntüsüdür. Örnek: A = {1, 2}, B = {a, b} için f(1) = a, f(2) = b birebir ve örtendir"
+   }
+  ],
+  "ipuclari": [
+   "A’nın eleman sayısı B’ninkinden fazla; her ifadede “olabilir” mi “zorunlu” mu diye ayırıp küçük örnek fonksiyonlar dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "4 eleman, 3 farklı görüntüye sığmaz; iki eleman aynı görüntüye gider.",
+    "islem": "I yanlış"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "f(1) = a, f(2) = b, f(3) = c, f(4) = a örten bir fonksiyondur.",
+    "islem": "II doğru"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "f(1) = f(2) = f(3) = f(4) = a sabit fonksiyonu örten değildir.",
+    "islem": "III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız II doğrudur.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Tanım kümesi daha kalabalıksa birebir fonksiyon olmaz; “olabilir” ve “zorunlu” ifadelerini bir örnek fonksiyonla ayrı ayrı sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-04 · 4 elemanlı kümeden 3 elemanlı kümeye",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Parçalı Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Üç parçalı fonksiyonda iç içe değeri aralıklara bakarak hesaplar.",
+  "tipId": "fnb-tablo",
+  "tip": "Parçalı fonksiyon ve tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılarda tanımlı f fonksiyonu\nf(x) = 4 − x², x < 0 ise\nf(x) = 3x + 1, 0 ≤ x < 3 ise\nf(x) = 12 − x, x ≥ 3 ise\nbiçiminde veriliyor.\nBuna göre f(−1) + f(f(2)) toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "8",
+   "D": "10",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "A": "f(−1) için aralığa bakmayıp 3x + 1 kuralını uygulamış (−2); f(7) = 5’i doğru bulmuş.",
+   "B": "f(2) için aralığa bakmayıp 4 − x² uygulamış (f(2) = 0), f(0) = 1 bulmuş.",
+   "D": "f(f(2)) yerine f(2) = 7 değerini toplamış.",
+   "E": "f(7) için 3x + 1 kuralını uygulamış (22)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "f(−1) + f(f(2)).",
+  "bilgi": [
+   {
+    "ad": "Parçalı fonksiyon",
+    "ifade": "Fonksiyonun kuralı x’in bulunduğu aralığa göre seçilir; iç içe değerlerde önce içteki hesaplanır, sonucun aralığına bakılır. Örnek: f(x) = x + 1 (x < 2), 3x (x ≥ 2) ise f(f(1)) = f(2) = 6"
+   }
+  ],
+  "ipuclari": [
+   "Her değerde önce x’in hangi aralıkta olduğuna bak; iç içe olanda içteki sonucun aralığına da bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "f(−1)",
+    "aciklama": "−1 < 0 olduğundan ilk kural.",
+    "islem": "4 − 1 = 3"
+   },
+   {
+    "baslik": "f(2)",
+    "aciklama": "0 ≤ 2 < 3 olduğundan ikinci kural.",
+    "islem": "3 · 2 + 1 = 7"
+   },
+   {
+    "baslik": "f(7)",
+    "aciklama": "7 ≥ 3 olduğundan üçüncü kural.",
+    "islem": "12 − 7 = 5"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "f(−1) + f(f(2)).",
+    "islem": "3 + 5 = 8"
+   }
+  ],
+  "puf": "Parçalı fonksiyonda her adımda x’in aralığını kontrol et; iç içe değerde önce içteki sonucun aralığına bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-05 · üç parçalı fonksiyon, f(−1) + f(f(2))",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Tablo ile Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Tabloyla verilen birebir ve örten fonksiyonda bileşke ve ters değerleri okur.",
+  "tipId": "fnb-tablo",
+  "tip": "Parçalı fonksiyon ve tablo",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "A = {1, 2, 3, 4, 5} kümesinde tanımlı f fonksiyonu aşağıdaki tabloda verilmiştir.\nf birebir ve örten olduğuna göre f(f(2)) + f⁻¹(2) toplamı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 328 56\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"324\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"83.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"137.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"191.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"245.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text><text x=\"299.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">5</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">f(x)</text><text x=\"83.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"137.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"191.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"245.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"299.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"2\" y1=\"2\" x2=\"326\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"326\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"326\" y2=\"54\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"54\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"54\" stroke-width=\"1\"/><line x1=\"110\" y1=\"2\" x2=\"110\" y2=\"54\" stroke-width=\"1\"/><line x1=\"164\" y1=\"2\" x2=\"164\" y2=\"54\" stroke-width=\"1\"/><line x1=\"218\" y1=\"2\" x2=\"218\" y2=\"54\" stroke-width=\"1\"/><line x1=\"272\" y1=\"2\" x2=\"272\" y2=\"54\" stroke-width=\"1\"/><line x1=\"326\" y1=\"2\" x2=\"326\" y2=\"54\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "6",
+   "D": "8",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "f⁻¹(2) yerine 2 yazıp f(f(2)) = 1 ile toplamış.",
+   "B": "f⁻¹(2) yerine f(2) = 4 okumuş: 1 + 4.",
+   "D": "f(f(2)) yerine f(2) = 4 alıp f⁻¹(2) yerine de f(2) = 4 okumuş.",
+   "E": "f(f(2)) yerine tek adım f(2) = 4 alıp f⁻¹(2) = 5 ile toplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "f(f(2)) + f⁻¹(2).",
+  "bilgi": [
+   {
+    "ad": "Tablodan okuma",
+    "ifade": "Tabloda f(a) değeri, x = a sütunundaki sayıdır; f⁻¹(b) ise f(x) = b olan sütunun x değeridir. Örnek: x = 1, 2 için f(x) = 5, 7 ise f(2) = 7 ve f⁻¹(5) = 1"
+   }
+  ],
+  "ipuclari": [
+   "f⁻¹(2) için tabloda f(x) satırında 2’nin bulunduğu sütunun x değerine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "f(f(2))",
+    "aciklama": "f(2) = 4, sonra f(4).",
+    "islem": "f(f(2)) = f(4) = 1"
+   },
+   {
+    "baslik": "f⁻¹(2)",
+    "aciklama": "f(x) = 2 olan x.",
+    "islem": "f(5) = 2 olduğundan f⁻¹(2) = 5"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki değeri topla.",
+    "islem": "1 + 5 = 6"
+   }
+  ],
+  "puf": "Tabloda f(a) için a sütununa, f⁻¹(b) için f(x) satırında b’nin olduğu sütuna bak.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-05 · tabloda f(f(2)) ve f⁻¹(2)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Bileşke ve Ters",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "f(2x + 1) biçiminde verilen kuraldan f(x)’i bulup bileşke ve ters fonksiyon koşulundan bilinmeyeni hesaplar.",
+  "tipId": "fnb-bileske",
+  "tip": "Bileşke ve ters fonksiyon",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılarda tanımlı f ve g fonksiyonları için\nf(2x + 1) = 6x + 7\ng(x) = 2x − 5\nveriliyor. f birebir ve örtendir.\n(g ∘ f⁻¹)(a) = 7 olduğuna göre a kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "15",
+   "C": "22",
+   "D": "25",
+   "E": "43"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "22"
+  },
+  "celdiriciler": {
+   "A": "f⁻¹(a) = 6 bulup a yerine bu değeri vermiş.",
+   "B": "(g ∘ f⁻¹)(a) yerine (f⁻¹ ∘ g)(a) = 7 okumuş: g(a) = f(7) = 25, a = 15.",
+   "D": "f(x) kuralını f(x) = 3x + 7 bulup f(6) hesaplamış.",
+   "E": "6x + 7’yi doğrudan f(x) sanıp f(6) hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "a.",
+  "bilgi": [
+   {
+    "ad": "Fonksiyonda değer",
+    "ifade": "f(x + k) biçiminde verilen kuralda f(a) için x + k = a olacak biçimde x bulunur ve kurala yazılır. Örnek: f(x + 1) = 2x ise f(5) için x = 4 alınır, f(5) = 8"
+   },
+   {
+    "ad": "Bileşke fonksiyon",
+    "ifade": "(f ∘ g)(x) = f(g(x)) olup önce g, sonra f uygulanır. Örnek: f(x) = x + 1, g(x) = 2x ise (f ∘ g)(3) = f(6) = 7 ve (g ∘ f)(3) = g(4) = 8"
+   },
+   {
+    "ad": "Ters fonksiyon",
+    "ifade": "y = f(x) eşitliğinde x yalnız bırakılırsa f⁻¹ bulunur; f⁻¹(b) = a ile f(a) = b aynı şeydir. Örnek: f(x) = 2x + 4 için x = (y − 4)/2 olduğundan f⁻¹(6) = 1"
+   }
+  ],
+  "ipuclari": [
+   "Önce 2x + 1 = t diyerek f(t) kuralını bul; sonra g ile ters fonksiyonu sırayla çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "f(x)’i bul",
+    "aciklama": "2x + 1 = t → x = (t − 1)/2.",
+    "islem": "f(t) = 6 · (t − 1)/2 + 7 = 3t + 4"
+   },
+   {
+    "baslik": "g’yi çöz",
+    "aciklama": "g(f⁻¹(a)) = 7.",
+    "islem": "2 · f⁻¹(a) − 5 = 7 → f⁻¹(a) = 6"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "f⁻¹(a) = 6 ise a = f(6).",
+    "islem": "a = 3 · 6 + 4 = 22"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "f⁻¹(22) = 6, g(6) = 7.",
+    "islem": "7 ✓"
+   }
+  ],
+  "puf": "f(2x + 1) biçiminde verilen kuralda 2x + 1 = t dönüşümü yap; bileşkeyi içten dışa doğru aç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-03 · f(2x + 1) kuralı, g ∘ f⁻¹",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Bileşke Fonksiyon",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "Doğrusal fonksiyonun kendisiyle bileşkesinden kuralı bulup değer hesaplar.",
+  "tipId": "fnb-ffx",
+  "tip": "Doğrusal fonksiyonun kendisiyle bileşkesi",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılarda tanımlı f, artan ve doğrusal bir fonksiyondur.\n(f ∘ f)(x) = 4x + 9\nolduğuna göre f(11) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "−31",
+   "B": "4",
+   "C": "19",
+   "D": "22",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "A": "“Artan” koşulunu yok sayıp a = −2 almış: f(x) = −2x − 9.",
+   "B": "f(11) yerine f⁻¹(11) değerini hesaplamış.",
+   "C": "f(x) = 2x + 3 bulduktan sonra sabit terimin işaretini ters alıp 2 · 11 − 3 hesaplamış.",
+   "D": "Sabit terimi bulmayıp yalnızca a = 2 ile 2 · 11 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat"
+  },
+  "istenen": "f(11).",
+  "bilgi": [
+   {
+    "ad": "Doğrusal fonksiyon",
+    "ifade": "f(x) = ax + b ve a = (f(x₂) − f(x₁)) / (x₂ − x₁) eğimidir; sonra b bir noktadan bulunur. Örnek: f(1) = 3, f(3) = 7 ise a = 2, b = 1 ve f(x) = 2x + 1"
+   },
+   {
+    "ad": "Bileşke fonksiyon",
+    "ifade": "(f ∘ g)(x) = f(g(x)) olup önce g, sonra f uygulanır. Örnek: f(x) = x + 1, g(x) = 2x ise (f ∘ g)(3) = f(6) = 7 ve (g ∘ f)(3) = g(4) = 8"
+   }
+  ],
+  "ipuclari": [
+   "f(x) = ax + b yazıp f(f(x)) ifadesini a ve b cinsinden aç; x’li ve sabit terimleri ayrı ayrı eşitle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bileşkeyi aç",
+    "aciklama": "f(f(x)) = a(ax + b) + b.",
+    "islem": "a²x + ab + b = 4x + 9"
+   },
+   {
+    "baslik": "a’yı bul",
+    "aciklama": "x’in katsayıları eşit; f artan olduğundan a > 0.",
+    "islem": "a² = 4 → a = 2"
+   },
+   {
+    "baslik": "b’yi bul",
+    "aciklama": "Sabit terimler eşit.",
+    "islem": "2b + b = 9 → b = 3"
+   },
+   {
+    "baslik": "Değeri hesapla",
+    "aciklama": "f(x) = 2x + 3.",
+    "islem": "f(11) = 25"
+   }
+  ],
+  "puf": "Doğrusal fonksiyonun kendisiyle bileşkesinde x’in katsayısından eğimi, sabit terimden b’yi bul; “artan” koşulu işareti belirler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-06 · (f ∘ f)(x) = 4x + 9, f artan doğrusal",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Fonksiyon Sayısı",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "İki koşulu birlikte sağlayan fonksiyonların sayısını seçimleri çarparak bulur.",
+  "tipId": "fnb-eslesme",
+  "tip": "Eşleme, birebir ve örten, fonksiyon sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "A = {1, 2, 3, 4} ve B = {a, b, c, d, e} kümeleri veriliyor.\nA’dan B’ye tanımlanan f fonksiyonlarından f(1) = f(2) ve f(3) ≠ f(4) koşullarını sağlayan kaç tanesi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "25",
+   "B": "100",
+   "C": "125",
+   "D": "500",
+   "E": "625"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "f(3) ≠ f(4) koşulunu f(3) = f(4) okuyup 5 · 5 · 1 = 25 bulmuş.",
+   "C": "f(3) ≠ f(4) koşulunu uygulamayıp f(3) ve f(4) için 5 · 5 seçenek saymış.",
+   "D": "f(1) = f(2) koşulunu uygulamayıp f(1) ve f(2) için 5 · 5 seçenek saymış.",
+   "E": "Koşulları uygulamadan tüm fonksiyonları (5⁴) saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşulları sağlayan fonksiyon sayısı.",
+  "bilgi": [
+   {
+    "ad": "Fonksiyon sayısı",
+    "ifade": "s(A) = m ve s(B) = n ise A’dan B’ye nᵐ tane fonksiyon vardır; her eleman için görüntü n seçenekten seçilir. Örnek: A = {1, 2}, B = {a, b, c} için 3² = 9 fonksiyon"
+   }
+  ],
+  "ipuclari": [
+   "f(1) = f(2) olduğunda bu iki eleman için kaç seçim yapılır? f(3) seçildikten sonra f(4) kaç şekilde seçilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "f(1) = f(2)",
+    "aciklama": "İkisi aynı görüntüye gider.",
+    "islem": "5 seçenek"
+   },
+   {
+    "baslik": "f(3)",
+    "aciklama": "Serbest.",
+    "islem": "5 seçenek"
+   },
+   {
+    "baslik": "f(4)",
+    "aciklama": "f(3)’ten farklı olmalı.",
+    "islem": "4 seçenek"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Seçimler bağımsız.",
+    "islem": "5 · 5 · 4 = 100"
+   }
+  ],
+  "puf": "Koşullu fonksiyon sayısında her elemanın seçenek sayısını koşula göre belirleyip çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-04 · f(1) = f(2) ve f(3) ≠ f(4)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-fonkiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Fonksiyonlar · Doğrusal Model",
+  "k": "matd|Fonksiyonlar",
+  "kazanim": "İki doğrusal ücret modelini karşılaştırıp tam sayı koşuluyla ücret farkını hesaplar.",
+  "tipId": "fnb-dogrusal",
+  "tip": "Doğrusal fonksiyon ve model",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir taksi durağında iki araç vardır. A aracı açılışta 60 TL, ardından her kilometre için 38 TL almaktadır. B aracı açılışta 114 TL, ardından her kilometre için 28 TL almaktadır. Ücretler yalnızca tam kilometre üzerinden hesaplanmaktadır.\nBir yolcu, B aracının A aracından daha ucuz olduğu en küçük tam sayı kilometrelik yolculuğu yapıyor.\nBuna göre iki aracın bu yolculuk için aldığı ücretler arasındaki fark kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "10",
+   "D": "16",
+   "E": "54"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "Dönüm noktasını 5,4 km bulup 5 km almış; bu yolculukta B daha pahalı olur, farkı 4 TL bulmuş.",
+   "C": "Kilometre başına ücret farkını (38 − 28) cevap sanmış.",
+   "D": "Dönüm noktasından sonra bir kilometre fazla alıp 7 km için farkı bulmuş.",
+   "E": "Açılış ücretleri arasındaki farkı (114 − 60) cevap sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ücret farkı (TL).",
+  "bilgi": [
+   {
+    "ad": "Doğrusal ücret modeli",
+    "ifade": "Sabit ücret + birim ücret × miktar biçimindeki ücret f(x) = ax + b ile yazılır. Örnek: açılış 20 TL, km başına 10 TL ise 3 km için f(3) = 20 + 30 = 50 TL"
+   }
+  ],
+  "ipuclari": [
+   "Her aracın ücretini kilometre sayısı x cinsinden yaz; x için eşitsizlik kur ve tam sayı koşulunu unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ücretleri yaz",
+    "aciklama": "x kilometre için.",
+    "islem": "A(x) = 60 + 38x · B(x) = 114 + 28x"
+   },
+   {
+    "baslik": "Eşitsizliği çöz",
+    "aciklama": "B(x) < A(x).",
+    "islem": "114 + 28x < 60 + 38x → 54 < 10x → x > 5,4 → en küçük tam sayı x = 6"
+   },
+   {
+    "baslik": "Ücretleri bul",
+    "aciklama": "x = 6.",
+    "islem": "A(6) = 288 · B(6) = 282"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "A(6) − B(6).",
+    "islem": "288 − 282 = 6 TL"
+   }
+  ],
+  "puf": "İki doğrusal modeli karşılaştırırken eşitsizliği çöz ve sonucu tam sayıya yuvarlarken yönüne dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-FNB-02 · iki taksinin ücret karşılaştırması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

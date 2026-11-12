@@ -1,0 +1,2632 @@
+[
+ {
+  "id": "tytmat-rutiniki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tanımlı İşlem",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Tanımlı işlem kuralını iç içe uygulayarak sonucu hesaplar.",
+  "tipId": "rtb-kural",
+  "tip": "Tanımlı işlem ve sayı türü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Gerçel sayılar kümesinde ★ işlemi\na ★ b = 2a − b + 1\nbiçiminde tanımlanıyor.\nBuna göre (5 ★ 2) ★ 4 işleminin sonucu kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "9",
+   "C": "10",
+   "D": "12",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "C": "Parantezi dikkate almadan sağdan işlem yapmış: 5 ★ (2 ★ 4) hesaplamış.",
+   "B": "a ile b’nin yerlerini değiştirmiş: a ★ b yerine 2b − a + 1 kullanmış.",
+   "D": "Kuralın sonundaki + 1’i atlamış.",
+   "A": "Kuralı 2(a − b) + 1 diye okumuş; çarpanı parantezle b’ye de dağıtmış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "A": "islem"
+  },
+  "istenen": "(5 ★ 2) ★ 4 işleminin değeri.",
+  "bilgi": [
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "a ★ b = 2a − b + 1 gibi bir kuralda a ve b yerine verilen sayılar yazılır; parantez içi önce yapılır. Örnek: a ★ b = a + 2b ise 3 ★ 1 = 3 + 2 = 5"
+   }
+  ],
+  "ipuclari": [
+   "Önce parantezin içindeki işlemi, kuralda a yerine 5, b yerine 2 yazarak yap."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İçteki işlemi yap",
+    "aciklama": "5 ★ 2 için a = 5, b = 2.",
+    "islem": "2 · 5 − 2 + 1 = 9"
+   },
+   {
+    "baslik": "Sonucu yerine koy",
+    "aciklama": "Şimdi 9 ★ 4 hesaplanır: a = 9, b = 4.",
+    "islem": "2 · 9 − 4 + 1 = 15"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "İçteki işlemin sonucunu yeniden denetle.",
+    "islem": "5 ★ 2 = 9 ✓ → 15"
+   }
+  ],
+  "puf": "Parantezli tanımlı işlemde önce parantezi hesapla, çıkan sayıyı kuralda a ya da b yerine yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-01 (tanımlı işlem) · iç içe uygulama",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Periyodik Düzen",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Tekrar eden bir renk düzeninde belirli rengin sayısını tur ve kalan yardımıyla bulur.",
+  "tipId": "rtb-periyot",
+  "tip": "Periyodik durum (takvim, lamba, tren)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir tabelada ışıklar sırayla yanmaktadır. Işıkların renkleri kırmızı, sarı, yeşil, mavi, mor, beyaz sırasıyla yinelenmekte ve bu düzen hiç ara verilmeden sürmektedir. İlk yanan ışık kırmızıdır.\nBuna göre tabelada yanan ilk 100 ışığın kaç tanesi mordur?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "16",
+   "C": "17",
+   "D": "20",
+   "E": "96"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Bölümden kalan 4’ü mor ışık sayısı sanmış.",
+   "C": "100 ÷ 6 = 16,67’yi yukarı yuvarlamış; kalan 4 ışıkta mor yoktur.",
+   "D": "Mor 5. sırada olduğu için 100’ü 5’e bölmüş.",
+   "E": "Tam turlardaki ışık sayısını (16 · 6) mor ışık sayısı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "İlk 100 ışık içindeki mor ışık sayısı.",
+  "bilgi": [
+   {
+    "ad": "Periyodik düzen",
+    "ifade": "Bir düzen her p adımda kendini yineliyorsa n. adımın durumu, n sayısının p ile bölümünden kalana bakılarak bulunur. Örnek: 3 renkli düzende 10. sıra için 10 = 3 · 3 + 1 olduğundan 1. renktir"
+   }
+  ],
+  "ipuclari": [
+   "100 ışığın kaç tam tur ve kaç artan ışıktan oluştuğunu bul; artan ışıklarda mor var mı diye bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Turları bul",
+    "aciklama": "Düzen 6 ışıktan oluşur.",
+    "islem": "100 = 6 · 16 + 4"
+   },
+   {
+    "baslik": "Tam turlarda say",
+    "aciklama": "Her turda 1 mor ışık vardır.",
+    "islem": "16 tur → 16 mor"
+   },
+   {
+    "baslik": "Kalanı kontrol et",
+    "aciklama": "Kalan 4 ışık kırmızı, sarı, yeşil, mavi’dir; mor 5. sıradadır.",
+    "islem": "Ek mor yok → 16"
+   }
+  ],
+  "puf": "Tekrar eden düzende önce tam tur sayısını, sonra kalan kısmın içeriğini incele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-03 (periyodik durum) · renk dizisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Şekil Örüntüsü",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Şekil örüntüsünde adım sayısıyla çöp sayısı arasındaki ilişkiyi bulup büyük bir adımı hesaplar.",
+  "tipId": "rtb-oruntu",
+  "tip": "Örüntü, dizi ve konum",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kibrit çöpleriyle yan yana kareler yapılıyor. Komşu iki kare bir çöpü ortak kullanıyor. 1 kare için 4, 2 kare için 7, 3 kare için 10 çöp gerekiyor.\nBu düzen aynı biçimde sürdürülürse yan yana 20 kare yapmak için kaç çöp gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "61",
+   "C": "62",
+   "D": "64",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "61"
+  },
+  "celdiriciler": {
+   "E": "Her kareyi ayrı 4 çöple yapıp ortak çöpleri düşmemiş.",
+   "A": "Her kare için yalnızca 3 çöp saymış; ilk karenin 4. çöpünü unutmuş.",
+   "D": "İlk kare 4 çöp, sonraki her biri 3 çöp kuralını 20 adım uygulamış: 4 + 3 · 20.",
+   "C": "Her kareye 3 çöp sayıp yalnız 2 ekleme yapmış: 3 · 20 + 2."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "A": "dikkat",
+   "D": "islem",
+   "C": "dikkat"
+  },
+  "istenen": "Yan yana 20 kare için gereken çöp sayısı.",
+  "bilgi": [
+   {
+    "ad": "Örüntü",
+    "ifade": "Her adımda sabit miktar artan örüntüde n. terim = ilk terim + (n − 1) · artış. Örnek: 4, 7, 10, … örüntüsünde 5. terim 4 + 4 · 3 = 16’dır"
+   }
+  ],
+  "ipuclari": [
+   "Her yeni kare eklenince çöp sayısı kaç artıyor? İlk kareden sonra kaç kare ekleniyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Artışı bul",
+    "aciklama": "4, 7, 10 → her yeni kare 3 çöp ekler.",
+    "islem": "artış = 3"
+   },
+   {
+    "baslik": "Kuralı yaz",
+    "aciklama": "İlk kare 4 çöp, sonraki 19 kare 3’er çöp.",
+    "islem": "4 + 3 · 19"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Toplam çöp.",
+    "islem": "4 + 57 = 61"
+   }
+  ],
+  "puf": "n. şekil için ilk şekli yaz, sonra (n − 1) kez artışı ekle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-02 (örüntü) · kibrit çöpü kareleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · İkili Sayma",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Toplam tokalaşma sayısından katılımcı sayısını bulur.",
+  "tipId": "rtb-sayma",
+  "tip": "Sayma: tokalaşma, yol, maç sayısı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir toplantıya katılan herkes, toplantının sonunda diğer katılımcıların her biriyle yalnızca bir kez el sıkışmıştır. Toplantıda toplam 66 el sıkışma yapılmıştır.\nBuna göre toplantıya kaç kişi katılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "12",
+   "C": "33",
+   "D": "66",
+   "E": "132"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Bir kişinin yaptığı el sıkışma sayısını (n − 1 = 11) katılımcı sayısı sanmış.",
+   "C": "Her el sıkışmada iki kişi olduğu için 66’yı 2’ye bölüp sonucu kişi sayısı yazmış.",
+   "D": "El sıkışma sayısını kişi sayısı sanmış.",
+   "E": "Her el sıkışmayı iki kez sayıp 66 · 2 yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Toplantıya katılan kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "İkili seçimler",
+    "ifade": "n kişiden iki kişi seçmenin yolu n · (n − 1) / 2’dir (sıra önemsizse). Örnek: 5 kişinin birbiriyle birer kez tokalaşması 5 · 4 / 2 = 10 tokalaşmadır"
+   }
+  ],
+  "ipuclari": [
+   "Katılımcı sayısına n de ve toplam el sıkışma sayısını n cinsinden yazmayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "n kişi için n(n − 1)/2 el sıkışma olur.",
+    "islem": "n(n − 1)/2 = 66"
+   },
+   {
+    "baslik": "Çarpımı bul",
+    "aciklama": "Her iki yanı 2 ile çarp.",
+    "islem": "n(n − 1) = 132"
+   },
+   {
+    "baslik": "Ardışık sayıları bul",
+    "aciklama": "132 = 12 · 11.",
+    "islem": "n = 12"
+   }
+  ],
+  "puf": "Herkesin herkesle bir kez yaptığı ikili işlemler n(n − 1)/2’dir; toplam verilmişse ardışık iki sayının çarpımı aranır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-08 (sayma) · tokalaşma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Şifre Sayma",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Koşullu 4 basamaklı şifre sayısını basamak basamak çarparak bulur.",
+  "tipId": "rtb-sifre",
+  "tip": "Şifre ve kod kuralı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir kapı kilidinin şifresi 4 basamaklıdır ve her basamağında 1, 2, 3, 4 ya da 5 rakamlarından biri bulunur; rakamlar tekrar edebilir. Şifrenin ilk rakamı son rakamıyla aynıdır, ikinci rakamı ise üçüncü rakamından farklıdır.\nBuna göre bu kurallara uyan kaç farklı şifre oluşturulabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "80",
+   "C": "100",
+   "D": "125",
+   "E": "500"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "B": "İkinci rakamın ilk rakamdan da farklı olması gerektiğini sanmış: 5 · 4 · 4.",
+   "D": "İkinci ve üçüncü rakamların farklı olması koşulunu unutmuş: 5 · 5 · 5.",
+   "E": "İlk ile son rakamın aynı olması koşulunu unutmuş: 5 · 5 · 4 · 5.",
+   "A": "İlk ve son rakamı hiç saymayıp yalnız ortadaki iki rakamın sıralı seçimini yazmış: 5 · 4."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat",
+   "A": "dikkat"
+  },
+  "istenen": "Şifre sayısı.",
+  "bilgi": [
+   {
+    "ad": "Şifre sayma",
+    "ifade": "Her basamak için seçenekler, koşullara uyularak çarpılır. Örnek: ilk basamak 0 olamayan 3 basamaklı sayılar 9 · 10 · 10 = 900 tanedir"
+   }
+  ],
+  "ipuclari": [
+   "Önce ilk rakamı seç; son rakam kaç türlü seçilebilir? Sonra ortadaki iki rakamın sıralı seçimini say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk ve son rakam",
+    "aciklama": "İlk rakam 5 türlü; son rakam ilkine eşit.",
+    "islem": "5 · 1 = 5"
+   },
+   {
+    "baslik": "Ortadaki rakamlar",
+    "aciklama": "İkinci 5 türlü, üçüncü ikincisinden farklı: 4 türlü.",
+    "islem": "5 · 4 = 20"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Birbirinden bağımsız seçimler çarpılır.",
+    "islem": "5 · 20 = 100"
+   }
+  ],
+  "puf": "Koşullu şifre sayarken bağlı basamakları birlikte, serbest olanları ayrı ayrı say ve çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-07 (şifre) · koşullu basamaklar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Terazi Mantığı",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Eşit kollu terazide hafif bilyeyi bulmak için gereken en az tartım sayısını belirler.",
+  "tipId": "rtb-optimizasyon",
+  "tip": "Optimizasyon (en az hamle, en az süre)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Dışarıdan birbirinden ayırt edilemeyen 9 bilyenin biri diğer sekizinden daha hafiftir; diğer sekizi birbirine eşit ağırlıktadır. Ağırlık ölçeği olmayan, eşit kollu bir terazide yalnızca iki kefedeki bilyeler karşılaştırılabilmektedir.\nHafif bilyenin hangisi olduğu hangi durumda olursa olsun kesin olarak bulunacaksa, en az kaç tartım yapılması gerekir?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "3",
+   "D": "4",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "Kefelere 4 ve 4 bilye koyup tek tartımda hafif bilyeyi doğrudan bulacağını sanmış.",
+   "C": "4 – 4 – 1 gruplarına ayırmış: hafif grup 4 bilye kalır, 2 – 2 ve 1 – 1 ile 3 tartım yapmış.",
+   "D": "Bilyeleri ikişerli karşılaştırmış (1–2, 3–4, 5–6, 7–8); en kötü durumda 4 tartım yapmış.",
+   "E": "Bir bilyeyi diğerlerinin her biriyle tek tek karşılaştırmış; en kötü durumda 8 tartım."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Gerekli en az tartım sayısı.",
+  "bilgi": [
+   {
+    "ad": "Terazi mantığı",
+    "ifade": "Bir tartımın üç sonucu vardır (sol ağır, sağ ağır, eşit); n tartımda en çok 3ⁿ seçenek ayırt edilir. Örnek: 1 tartımda en çok 3 bilye arasından hafif olan bulunur"
+   }
+  ],
+  "ipuclari": [
+   "En kötü durumda bile kesin sonuç için her tartımın eleyebileceği bilye sayısını düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üç gruba ayır",
+    "aciklama": "9 bilyeyi 3 + 3 + 3 olarak böl; iki grubu tart.",
+    "islem": "1. tartım: 3 – 3"
+   },
+   {
+    "baslik": "Hafif grubu bul",
+    "aciklama": "Terazi bir tarafa eğilirse hafif grup oradadır; eşit kalırsa dışarıda kalan gruptadır.",
+    "islem": "Hafif bilye 3 bilyelik bir grupta"
+   },
+   {
+    "baslik": "İkinci tartım",
+    "aciklama": "Gruptan 1 – 1 bilye tart; eğilirse hafif olan, eşit kalırsa dışarıdaki bilye hafiftir.",
+    "islem": "2. tartım → bulundu"
+   }
+  ],
+  "puf": "Terazide her tartım 3 sonuç verir; adayları üç eşit gruba bölmek en az tartım sağlar (9 = 3²).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-09 (optimizasyon) · terazi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tarife Karşılaştırma",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Sabit ücret, dahil dakika ve aşım ücretine göre en uygun tarifenin ücretini tablodan hesaplar.",
+  "tipId": "rtb-yasam",
+  "tip": "Yaşam becerisi: tarife, kampanya, tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki tabloda bir operatörün üç tarifesi verilmiştir. Dahil dakika bittikten sonra konuşulan her ek dakika için tabloda yazılı aşım ücreti ayrıca ödenir.\nHer ay tam 450 dakika konuşan bir abone, bu üç tarifeden aylık toplam ücreti en düşük olanı seçerse ayda kaç TL öder?",
+  "sekil": "<svg viewBox=\"0 0 444 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"440\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"35.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Tarife</text><text x=\"141.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Aylık ücret (TL)</text><text x=\"271.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Dahil dakika</text><text x=\"385.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Aşım (TL/dk)</text><text x=\"35.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"141.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">120</text><text x=\"271.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">300</text><text x=\"385.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0,60</text><text x=\"35.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"141.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">150</text><text x=\"271.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">400</text><text x=\"385.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0,50</text><text x=\"35.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">C</text><text x=\"141.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">200</text><text x=\"271.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">500</text><text x=\"385.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0,40</text><line x1=\"2\" y1=\"2\" x2=\"442\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"442\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"442\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"442\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"442\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"68\" y1=\"2\" x2=\"68\" y2=\"106\" stroke-width=\"1\"/><line x1=\"214\" y1=\"2\" x2=\"214\" y2=\"106\" stroke-width=\"1\"/><line x1=\"328\" y1=\"2\" x2=\"328\" y2=\"106\" stroke-width=\"1\"/><line x1=\"442\" y1=\"2\" x2=\"442\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "120",
+   "B": "150",
+   "C": "175",
+   "D": "200",
+   "E": "210"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "175"
+  },
+  "celdiriciler": {
+   "A": "Yalnız aylık sabit ücrete bakmış; A tarifesindeki aşımı hesaba katmamış.",
+   "B": "B tarifesinin sabit ücretini toplam ücret saymış; 50 dakikalık aşımı eklememiş.",
+   "D": "Dahil dakikası en yüksek olan C tarifesini seçmiş; aşım olmasa da sabit ücret yüksektir.",
+   "E": "A tarifesinin toplamını (120 + 150 · 0,60) en düşük sanmış; B tarifesini hesaplamamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Üç tarifeden en düşük aylık toplam ücret (TL).",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "Önce her seçeneğin toplam maliyetini ayrı ayrı hesapla, sonra karşılaştır. Örnek: sabit 100 TL + dakikası 2 TL olan tarife 30 dakikada 100 + 60 = 160 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Her tarife için önce aşım dakikasını, sonra toplam ücreti ayrı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A tarifesi",
+    "aciklama": "Aşım: 450 − 300 = 150 dakika.",
+    "islem": "120 + 150 · 0,60 = 210 TL"
+   },
+   {
+    "baslik": "B tarifesi",
+    "aciklama": "Aşım: 450 − 400 = 50 dakika.",
+    "islem": "150 + 50 · 0,50 = 175 TL"
+   },
+   {
+    "baslik": "C tarifesi",
+    "aciklama": "450 dakika dahil dakika içindedir.",
+    "islem": "200 TL"
+   },
+   {
+    "baslik": "En düşüğü seç",
+    "aciklama": "Üçünü karşılaştır.",
+    "islem": "175 TL"
+   }
+  ],
+  "puf": "Sabit ücreti en düşük tarife, kullanım arttığında en ucuz olmayabilir; her tarifenin toplamını hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-10 (yaşam becerisi) · cep telefonu tarifeleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Takvim",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Her 9 günde bir tekrarlanan etkinliğin haftanın aynı gününe yeniden denk geldiği toplantıyı bulur.",
+  "tipId": "rtb-periyot",
+  "tip": "Periyodik durum (takvim, lamba, tren)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kurul ilk toplantısını bir pazartesi günü yapmıştır. Bundan sonra her toplantıyı bir önceki toplantıdan tam 9 gün sonra yapmaktadır.\nİlk toplantıdan sonra yapılan toplantılar içinde, pazartesi gününe rastlayan ilk toplantı, ilk toplantıdan sonraki kaçıncı toplantıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "7",
+   "C": "8",
+   "D": "9",
+   "E": "63"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "7"
+  },
+  "celdiriciler": {
+   "A": "Her toplantıda günün 9 mod 7 = 2 gün kaydığını bulup bu sayıyı toplantı sırası sanmış.",
+   "C": "İlk toplantıyı da sayarak toplantının genel sırasını (8.) yazmış.",
+   "D": "Toplantılar arası gün sayısını (9) sıra sanmış.",
+   "E": "Pazartesiye yeniden gelinen gün sayısını (63) toplantı sırası sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk toplantıdan sonraki toplantı sırası.",
+  "bilgi": [
+   {
+    "ad": "Periyodik düzen",
+    "ifade": "Bir düzen her p adımda kendini yineliyorsa n. adımın durumu, n sayısının p ile bölümünden kalana bakılarak bulunur. Örnek: 3 renkli düzende 10. sıra için 10 = 3 · 3 + 1 olduğundan 1. renktir"
+   }
+  ],
+  "ipuclari": [
+   "İlk birkaç toplantının haftanın hangi gününe denk geldiğini yazarak bir düzen ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kaymayı bul",
+    "aciklama": "9 = 7 + 2: her toplantıda gün 2 ileri kayar.",
+    "islem": "kayma = 2 gün"
+   },
+   {
+    "baslik": "Koşulu yaz",
+    "aciklama": "k toplantı sonra kayma 2k gün; 7’nin katı olmalı.",
+    "islem": "2k ≡ 0 (mod 7)"
+   },
+   {
+    "baslik": "En küçük k",
+    "aciklama": "2 ile 7 aralarında asaldır.",
+    "islem": "k = 7"
+   }
+  ],
+  "puf": "Haftalık düzende kalan sınıflarına bak: her adımda kayan gün sayısı 7’nin katı olunca gün yeniden aynı olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-03 (periyodik durum) · takvim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Lamba Durumu",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Her lambanın kaç kez değiştirildiğini bölen sayısıyla bularak son durumdaki açık lambaları sayar.",
+  "tipId": "rtb-periyot",
+  "tip": "Periyodik durum (takvim, lamba, tren)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir koridorda 1’den 40’a kadar numaralanmış 40 lamba vardır ve başlangıçta hepsi kapalıdır. 40 kişi sırayla koridordan geçmektedir. k. kişi, numarası k’nin katı olan her lambanın düğmesine bir kez basmaktadır (açık lamba kapanır, kapalı lamba açılır).\n40 kişi de geçtikten sonra kaç lamba açıktır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "7",
+   "C": "20",
+   "D": "34",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "B": "√40 ≈ 6,3 değerini yukarı yuvarlayıp 7 yazmış.",
+   "C": "Yalnız çift numaralı lambaların açıldığını sanmış.",
+   "D": "Kapalı kalan lambaların sayısını yazmış.",
+   "E": "Her lambanın bir kez açıldığını sanmış."
+  },
+  "celTur": {
+   "B": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Açık kalan lamba sayısı.",
+  "bilgi": [
+   {
+    "ad": "Bölen sayısı",
+    "ifade": "Bir doğal sayının pozitif bölenleri d ve n/d biçiminde çiftler oluşturur; d = n/d olursa (sayı tam kare ise) bölen sayısı tek olur. Örnek: 36’nın bölenleri 1, 2, 3, 4, 6, 9, 12, 18, 36 (9 tane, tek)"
+   }
+  ],
+  "ipuclari": [
+   "Bir lambaya kaç kez basıldığını lamba numarasıyla ilişkilendir; birkaç küçük numara için tek tek dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Basış sayısını yorumla",
+    "aciklama": "Lamba n’ye, n’nin her böleni kadar kişi basar.",
+    "islem": "basış sayısı = bölen sayısı"
+   },
+   {
+    "baslik": "Açık kalma koşulu",
+    "aciklama": "Tek sayıda basılan lamba açık kalır.",
+    "islem": "bölen sayısı tek olmalı"
+   },
+   {
+    "baslik": "Bu sayıları bul",
+    "aciklama": "Bölen sayısı tek olanlar tam kare sayılardır.",
+    "islem": "1, 4, 9, 16, 25, 36"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "1’den 40’a kadar 6 tam kare vardır.",
+    "islem": "6 lamba"
+   }
+  ],
+  "puf": "Bir lambaya basış sayısı bölen sayısıdır; bölen sayısı tek olan sayılar tam karelerdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-03 (periyodik durum) · düğme değiştirme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Çubuk Oyunu",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Kaybettiren konumları küçük sayılardan başlayarak tarar ve ikinci oyuncunun kazandığı başlangıç sayısını bulur.",
+  "tipId": "rtb-oyun",
+  "tip": "Oyun stratejisi ve puanlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Masada N çubuk bulunmaktadır. İki oyuncu sırayla oynamakta ve her hamlede 1, 2 ya da 3 çubuk almaktadır. Son çubuğu almak zorunda kalan oyuncu oyunu kaybeder. İki oyuncu da en iyi biçimde oynamaktadır.\nBuna göre aşağıdaki başlangıç sayılarından hangisinde ikinci oynayan oyuncu kazanmayı garantiler?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "19",
+   "C": "20",
+   "D": "22",
+   "E": "25"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "A": "Kaybettiren konumun 4k + 2 biçiminde olduğunu sanmış; ilk oyuncu 1 alıp 17 bırakır ve kazanır.",
+   "B": "Kaybettiren konumun 4k + 3 biçiminde olduğunu sanmış; ilk oyuncu 2 alıp 17 bırakır ve kazanır.",
+   "C": "Son çubuğu alanın kazandığı oyunu sanıp 4’ün katını seçmiş; bu oyunda ilk oyuncu 3 alıp 17 bırakır.",
+   "D": "Kaybettiren konumun 4k + 2 biçiminde olduğunu sanmış; ilk oyuncu 1 alıp 21 bırakır ve kazanır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "İkinci oyuncunun kazanmayı garantilediği N.",
+  "bilgi": [
+   {
+    "ad": "Kaybettiren konum",
+    "ifade": "Sırası gelen oyuncunun ne yaparsa yapsın rakibin kazandığı konuma kaybettiren konum denir. Örnek: 1 ya da 2 çubuk alınan ve son çubuğu almak zorunda kalanın kaybettiği oyunda 4 çubuk kalan oyuncu kaybeder"
+   }
+  ],
+  "ipuclari": [
+   "Küçük sayılardan başlayarak her çubuk sayısı için sırası gelen oyuncunun kazanıp kazanmadığını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Küçük sayıları tara",
+    "aciklama": "1 çubuk kalan oyuncu son çubuğu almak zorundadır ve kaybeder; 2, 3 ya da 4 çubukta oyuncu 1, 2 ya da 3 alıp rakibe 1 çubuk bırakır.",
+    "islem": "1 kaybettirir · 2, 3, 4 kazandırır"
+   },
+   {
+    "baslik": "Deseni bul",
+    "aciklama": "5 çubukta ne alınırsa alınsın rakip 4, 3 ya da 2 çubukla karşılaşıp kazanır.",
+    "islem": "Kaybettirenler: 1, 5, 9, …"
+   },
+   {
+    "baslik": "Şıkları tara",
+    "aciklama": "Kaybettiren sayılar 4k + 1 biçimindedir; şıklardan yalnızca 25 = 4 · 6 + 1 böyledir.",
+    "islem": "N = 25"
+   }
+  ],
+  "puf": "Birbirini tamamlayan hamleli oyunlarda kaybettiren sayılar aralıklı tekrar eder; ilk kaybettiren konumdan başlayarak deseni bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-05 (oyun stratejisi) · çubuk oyunu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kap ile Ölçme",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Ölçeksiz iki kapla belirli miktar su ölçmek için gereken en az işlem sayısını bulur.",
+  "tipId": "rtb-optimizasyon",
+  "tip": "Optimizasyon (en az hamle, en az süre)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Üzerinde ölçek bulunmayan 5 litrelik ve 3 litrelik iki kap ile sınırsız su vardır. Bir işlem şunlardan biridir: bir kabı ağzına kadar doldurmak, bir kabı tamamen boşaltmak ya da bir kaptaki suyu, kendi suyu bitene veya diğer kap dolana kadar diğerine aktarmak. Başlangıçta iki kap da boştur.\n5 litrelik kapta tam 4 litre su elde etmek için yapılması gereken en az işlem sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "5",
+   "C": "6",
+   "D": "7",
+   "E": "8"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "Yalnız aktarma işlemlerini (3 tane) saymış.",
+   "B": "Doldurma ve aktarmaları saymış (2 + 3); boşaltmayı işlem saymamış.",
+   "D": "Başlangıçtaki boş durumu da bir işlem olarak saymış.",
+   "E": "Önce 3 litrelik kabı doldurarak başlamış; bu yoldan 4 litreye en az 8 işlemde ulaşılır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "En az işlem sayısı.",
+  "bilgi": [
+   {
+    "ad": "Su ölçme",
+    "ifade": "İki kaptan hangisinin önce doldurulduğuna göre ulaşılan durumlar farklıdır; yollar karşılaştırılır. Örnek: 4 L ve 3 L kapla 2 L ölçmek için önce hangi kabı doldurmanın daha kısa olduğuna bakılır"
+   }
+  ],
+  "ipuclari": [
+   "İki kaptan hangisini önce doldurduğunda hangi durumlara ulaşıldığını yazarak yolları karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Büyük kabı doldur",
+    "aciklama": "5 L’yi doldur, 3 L’ye aktar.",
+    "islem": "(5, 0) → (2, 3)"
+   },
+   {
+    "baslik": "Küçük kabı boşalt",
+    "aciklama": "3 L’yi boşalt, 5 L’deki 2 L’yi aktar.",
+    "islem": "(2, 0) → (0, 2)"
+   },
+   {
+    "baslik": "Yeniden doldur",
+    "aciklama": "5 L’yi doldur, 3 L dolana kadar aktar (1 L geçer).",
+    "islem": "(5, 2) → (4, 3)"
+   },
+   {
+    "baslik": "İşlemleri say",
+    "aciklama": "Doldur, aktar, boşalt, aktar, doldur, aktar.",
+    "islem": "6 işlem"
+   }
+  ],
+  "puf": "Su ölçme problemlerinde iki başlangıç yolunu da dene ve her yolun işlem sayısını karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-09 (optimizasyon) · su kapları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Atış Puanı",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Toplam puan ve atış sayısı koşullarını birlikte sağlayan tek dağılımı tarayarak bulur.",
+  "tipId": "rtb-oyun",
+  "tip": "Oyun stratejisi ve puanlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir atış yarışmasında hedefin üç bölgesi vardır ve bu bölgelere isabet eden atışlar sırasıyla 4, 7 ve 10 puan kazandırır. Bir yarışmacı 7 atış yapmış, atışlarının hepsi hedefe isabet etmiş, her bölgeye en az bir atışı isabet etmiş ve toplam 58 puan toplamıştır.\nBuna göre bu yarışmacının 10 puanlık bölgeye isabet eden atış sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "3",
+   "D": "4",
+   "E": "5"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "A": "4 puanlık bölgedeki atış sayısını (1) yazmış.",
+   "B": "7 puanlık bölgedeki atış sayısını (2) yazmış.",
+   "C": "\"Her bölgeye en az bir\" koşulunu atlayıp 4 puanlık bölgesiz (0, 4, 3) dağılımını bulmuş.",
+   "E": "\"Her bölgeye en az bir\" koşulunu atlayıp 7 puanlık bölgesiz (2, 0, 5) dağılımını bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "10 puanlık bölgeye isabet eden atış sayısı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu tarama",
+    "ifade": "Koşullardan sayıyı en çok daraltanı seç; kalan durumları tek tek say. Örnek: iki basamaklı, rakamları toplamı 5 olan sayılar 14, 23, 32, 41, 50’dir"
+   }
+  ],
+  "ipuclari": [
+   "Her bölgedeki atış sayısına bir harf ver ve verilen bilgileri eşitlik olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eşitlikleri yaz",
+    "aciklama": "a + b + c = 7 ve 4a + 7b + 10c = 58.",
+    "islem": "a + b + c = 7 · 4a + 7b + 10c = 58"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Birinci eşitliği 4 ile çarpıp çıkar.",
+    "islem": "3b + 6c = 30 → b + 2c = 10"
+   },
+   {
+    "baslik": "Koşula uyanı tara",
+    "aciklama": "a, b, c ≥ 1: (b, c) = (2, 4) → a = 1; (4, 3) → a = 0 ✗; (6, 2) → a = −1 ✗.",
+    "islem": "(a, b, c) = (1, 2, 4)"
+   },
+   {
+    "baslik": "Cevabı seç",
+    "aciklama": "10 puanlık atış sayısı c.",
+    "islem": "c = 4"
+   }
+  ],
+  "puf": "İki bilinmeyenli tam sayı koşullarında b + 2c = sabit gibi bir ilişki bulup bütün çözümleri tara, ek koşullarla ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-05 (puanlama) · hedef atışı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kat Eşleştirme",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Konum koşullarını birlikte sağlayan tek yerleşimi tarayarak bir kişinin katını bulur.",
+  "tipId": "rtb-cikarim",
+  "tip": "Mantık ve çıkarım (sıralama, eşleştirme)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Beş katlı bir apartmanın her katında bir kişi oturmaktadır. Ali, Banu, Cem, Deniz ve Ece bu apartmanda farklı katlarda oturmaktadır (katlar yerden başlayarak 1’den 5’e numaralanmıştır). Oturanlarla ilgili şunlar bilinmektedir:\n• Banu, Cem’in oturduğu katın hemen üstündeki katta oturmaktadır.\n• Ali, Ece’den daha üst katta oturmaktadır.\n• Deniz, Banu’dan daha alt katta oturmaktadır.\n• Ece 1. katta oturmamaktadır.\n• Ali 5. katta oturmamaktadır.\nBuna göre Ali kaçıncı katta oturmaktadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "2",
+   "C": "3",
+   "D": "4",
+   "E": "5"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "\"Ali, Ece’den üstte\" koşulunu ters okumuş (Ali Ece’nin altında); bu durumda Ali 1. kata yerleşir.",
+   "B": "\"Ali, Ece’den üstte\" koşulunu ters okumuş; Ece’yi 3. kata alıp Ali’yi 2. kata yerleştirmiş.",
+   "D": "\"Hemen üstünde\" koşulunu \"üstünde\" okumuş; Banu 5, Cem 3 alarak Ali’yi 4. kata yerleştirmiş.",
+   "E": "Ali 5. katta oturmaz koşulunu gözden kaçırmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Ali’nin oturduğu kat.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "Önce birbirine en sıkı bağlı koşuldan başla: Banu ile Cem’in katları ardışıktır. Sonra Deniz’i yerleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Banu–Cem çiftini tara",
+    "aciklama": "Banu, Cem’in hemen üstünde: (Banu, Cem) = (2, 1), (3, 2), (4, 3) ya da (5, 4).",
+    "islem": "4 olasılık"
+   },
+   {
+    "baslik": "Çiftleri ele",
+    "aciklama": "Banu 2 ise Deniz için alt kat kalmaz. Banu 3 ya da 4 ise Ali 5. katta oturamayacağından Ece 5. kata kalır ve Ali Ece’nin üstünde olamaz.",
+    "islem": "Yalnız Banu 5, Cem 4 kalır"
+   },
+   {
+    "baslik": "Kalan katları yerleştir",
+    "aciklama": "1, 2 ve 3. katlar Ali, Deniz ve Ece’nindir; Ece 1. katta değil, Ali Ece’nin üstünde.",
+    "islem": "Ece 2, Ali 3, Deniz 1"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Beş koşulu birden sağlayan tek yerleşim bulundu.",
+    "islem": "Ali 3. kattadır"
+   }
+  ],
+  "puf": "Mantık sorularında bütün koşulları sağlayan yerleşimleri tara; kesin bilgiyi tek çözüme ulaşana kadar daralt.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-04 (mantık ve çıkarım) · kat eşleştirme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Sihirli Kare",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Satır, sütun ve köşegen toplamı eşit olan 3 × 3 yerleştirmede bilinen iki sayıdan eksik kutuyu bulur.",
+  "tipId": "rtb-yerlestirme",
+  "tip": "Sayı yerleştirme (ızgara, rakam koşulu)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki 3 × 3 tablonun boş kutularına, 1’den 9’a kadar olan tam sayıların her biri tam bir kez kullanılacak biçimde sayılar yazılarak her satırdaki, her sütundaki ve iki köşegendeki sayıların toplamı 15 yapılacaktır. Bazı kutulardaki sayılar verilmiştir.\nBuna göre tabloda ? ile gösterilen kutuya hangi sayı yazılmalıdır?",
+  "sekil": "<svg viewBox=\"0 0 250 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"246\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"43.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1. sütun</text><text x=\"125.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2. sütun</text><text x=\"207.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3. sütun</text><text x=\"43.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"125.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"207.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"43.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text><text x=\"125.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"207.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"43.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">?</text><text x=\"125.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"207.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><line x1=\"2\" y1=\"2\" x2=\"248\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"248\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"248\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"248\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"248\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"84\" y1=\"2\" x2=\"84\" y2=\"106\" stroke-width=\"1\"/><line x1=\"166\" y1=\"2\" x2=\"166\" y2=\"106\" stroke-width=\"1\"/><line x1=\"248\" y1=\"2\" x2=\"248\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "1",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "Sütun toplamlarını kontrol etmemiş; satırları ve köşegenleri sağlayan bir yerleşimde ? kutusuna 1 yazmış.",
+   "B": "Yalnız sütun toplamlarına bakıp satırları ve köşegenleri kontrol etmemiş; ? kutusuna 4 yazmış.",
+   "C": "Yalnız köşegen toplamlarına bakmış; ? kutusuna 5 yazmış.",
+   "E": "Köşegen toplamlarını kontrol etmemiş; satırları ve sütunları sağlayan bir yerleşimde ? kutusuna 9 yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "? kutusundaki sayı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "Bilinen sayılardan başlayıp her satır, sütun ve köşegendeki eksik sayıları sırayla belirlemeye çalış."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Orta kutuyu bul",
+    "aciklama": "Toplamlar 15, dokuz sayının toplamı 45; orta satır, orta sütun ve iki köşegen orta kutuyu içerir.",
+    "islem": "4 · 15 = 60 = 45 + 3 · orta → orta = 5"
+   },
+   {
+    "baslik": "Orta satırı tamamla",
+    "aciklama": "Orta satırda ? + 5 + 3 = 15.",
+    "islem": "orta satırın 1. kutusu 7"
+   },
+   {
+    "baslik": "1. sütunu kullan",
+    "aciklama": "1. sütunda 2 + 7 + ? = 15.",
+    "islem": "? = 6"
+   }
+  ],
+  "puf": "Eşit toplamlı ızgaralarda önce ortak kutuları (özellikle orta kutuyu) toplamlardan çıkar, sonra koşulları tek tek uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-06 (sayı yerleştirme) · 3 × 3 ızgara",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Yol Sayma",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Kapalı bir kavşak bulunan ızgara yolunda en kısa yol sayısını toplama yöntemiyle bulur.",
+  "tipId": "rtb-sayma",
+  "tip": "Sayma: tokalaşma, yol, maç sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir şehirde yollar, kare ızgara oluşturacak biçimde birbirine bağlanmıştır. Bir araç, A kavşağından 4 birim doğuda ve 3 birim kuzeyde bulunan B kavşağına, yalnızca doğuya ya da kuzeye 1 birimlik yol parçalarını kullanarak gidecektir. A’nın 2 birim doğusunda ve 1 birim kuzeyinde bulunan kavşak yol çalışması nedeniyle kapalıdır; araç bu kavşaktan geçemez.\nBuna göre araç A’dan B’ye en kısa yoldan kaç farklı biçimde gidebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "18",
+   "C": "29",
+   "D": "32",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "17"
+  },
+  "celdiriciler": {
+   "E": "Kapalı kavşağı hiç dikkate almamış: C(7, 3) = 35.",
+   "B": "Kapalı kavşaktan geçen yolların sayısını (3 · 6) cevap sanmış.",
+   "C": "Kapalı kavşaktan geçen yollardan yalnız ikinci parçayı (6) çıkarmış: 35 − 6.",
+   "D": "Kapalı kavşaktan geçen yollardan yalnız ilk parçayı (3) çıkarmış: 35 − 3."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "D": "islem"
+  },
+  "istenen": "A’dan B’ye en kısa yol sayısı.",
+  "bilgi": [
+   {
+    "ad": "Izgarada yol sayma",
+    "ifade": "a birim doğu ve b birim kuzey adımı sıralı dizilir; bu dizilişlerin sayısı C(a + b, a)’dır. Örnek: 2 doğu, 1 kuzey adımı için C(3, 1) = 3 yol vardır"
+   }
+  ],
+  "ipuclari": [
+   "Gidilecek adımları bir sıra olarak düşün; kapalı kavşağın yolları nasıl kısıtladığını incele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bütün en kısa yollar",
+    "aciklama": "7 adımın 3’ü kuzey yönündedir.",
+    "islem": "C(7, 3) = 35"
+   },
+   {
+    "baslik": "Kapalı kavşağa kadar",
+    "aciklama": "A’dan (2, 1)’e 3 adım, 1’i kuzey.",
+    "islem": "C(3, 1) = 3"
+   },
+   {
+    "baslik": "Kapalı kavşaktan sonra",
+    "aciklama": "(2, 1)’den (4, 3)’e 4 adım, 2’si kuzey.",
+    "islem": "C(4, 2) = 6"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Kapalı kavşaktan geçen yollar 3 · 6 = 18.",
+    "islem": "35 − 18 = 17"
+   }
+  ],
+  "puf": "Yasak noktalı yol sorularında tüm yolların sayısından yasak noktadan geçenlerin sayısını (iki parçanın çarpımı) çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-08 (sayma) · kapalı kavşaklı yol",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Maç Sayısı",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Gruplu turnuvada grup, yarı final, final ve üçüncülük maçlarını ayrı ayrı sayarak toplam maç sayısını bulur.",
+  "tipId": "rtb-sayma",
+  "tip": "Sayma: tokalaşma, yol, maç sayısı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir voleybol turnuvasına 12 takım katılmıştır. Takımlar 6’şarlık iki gruba ayrılmış ve her takım, kendi grubundaki diğer takımlarla birer maç yapmıştır. Daha sonra her grubun puan sıralamasında ilk iki sırayı alan takımlar, bir grubun birincisi diğer grubun ikincisiyle eşleşecek biçimde yarı final oynamıştır. Yarı finali kazananlar finalde, kaybedenler üçüncülük maçında birer kez karşılaşmıştır. Bütün maçlar tek maç olarak oynanmış ve hepsinde bir galip çıkmıştır.\nBuna göre turnuvada toplam kaç maç oynanmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "32",
+   "C": "33",
+   "D": "34",
+   "E": "66"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "34"
+  },
+  "celdiriciler": {
+   "A": "Yalnız grup maçlarını saymış (2 · 15).",
+   "B": "Grup maçlarına yalnız yarı final maçlarını eklemiş; final ve üçüncülük maçını unutmuş.",
+   "C": "Üçüncülük maçını saymayı unutmuş: 30 + 2 + 1.",
+   "E": "12 takımın birbiriyle birer maç yaptığını sanmış: C(12, 2)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Turnuvadaki toplam maç sayısı.",
+  "bilgi": [
+   {
+    "ad": "İkili seçimler",
+    "ifade": "n kişiden iki kişi seçmenin yolu n · (n − 1) / 2’dir (sıra önemsizse). Örnek: 5 kişinin birbiriyle birer kez tokalaşması 5 · 4 / 2 = 10 tokalaşmadır"
+   }
+  ],
+  "ipuclari": [
+   "Maçları aşamalara ayır: grup maçları, yarı final, final ve üçüncülük maçı. Her grupta kaç maç var?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grup maçları",
+    "aciklama": "Her grupta 6 takım birbiriyle birer maç yapar.",
+    "islem": "C(6, 2) = 15 · iki grup: 30"
+   },
+   {
+    "baslik": "Yarı finaller",
+    "aciklama": "Dört takım, iki eşleşme.",
+    "islem": "2 maç"
+   },
+   {
+    "baslik": "Final ve üçüncülük",
+    "aciklama": "Biri kazananlar, biri kaybedenler için.",
+    "islem": "1 + 1 = 2 maç"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Aşamaları ekle.",
+    "islem": "30 + 2 + 2 = 34"
+   }
+  ],
+  "puf": "Çok aşamalı turnuvada her aşamanın maç sayısını ayrı bul ve topla; hiçbir aşamayı (özellikle üçüncülük maçını) unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-08 (sayma) · gruplu turnuva",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kodlama Kuralı",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Alfabede kaydırmalı bir şifreleme kuralını (sona gelince başa dönerek) bir sözcüğe uygular.",
+  "tipId": "rtb-sifre",
+  "tip": "Şifre ve kod kuralı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir şifreleme yönteminde her harf, Türk alfabesinde kendisinden 3 harf sonra gelen harfle değiştirilir; alfabenin sonuna gelindiğinde başa dönülür (Z harfinden sonra A, B, C, … gelir). Türk alfabesi 29 harflidir ve sırası aşağıdaki gibidir:\nA, B, C, Ç, D, E, F, G, Ğ, H, I, İ, J, K, L, M, N, O, Ö, P, R, S, Ş, T, U, Ü, V, Y, Z\nA harfinin sıra numarası 1, B’nin 2, …, Z’nin 29’dur.\nBu yöntemle ZAFER sözcüğü şifrelendiğinde elde edilen sözcükteki harflerin sıra numaralarının toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "50",
+   "B": "53",
+   "C": "64",
+   "D": "67",
+   "E": "79"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "50"
+  },
+  "celdiriciler": {
+   "B": "Alfabeyi 26 harfli sanıp Z için başa dönüşte 26’yı çıkarmış.",
+   "C": "Kaydırmayı hiç uygulamayıp ZAFER’in harf numaraları toplamını yazmış.",
+   "D": "3’ü yalnız bir kez (toplama) eklemiş: 64 + 3.",
+   "E": "Başa dönmeyi unutmuş: Z için 29 + 3 = 32’yi sıra numarası kabul etmiş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Şifreli sözcükteki harf numaralarının toplamı.",
+  "bilgi": [
+   {
+    "ad": "Kuralla üretilen dizi",
+    "ifade": "Bir sonraki terim kuralla bulunur; terimler sırayla yazılarak ilerlenir. Örnek: a₁ = 3 ve her terim öncekinin 2 katı ise 3, 6, 12, 24, …"
+   }
+  ],
+  "ipuclari": [
+   "Her harfin numarasını yaz ve kuralı uygula; alfabenin sonuna gelindiğinde ne olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Harf numaraları",
+    "aciklama": "Z = 29, A = 1, F = 7, E = 6, R = 21.",
+    "islem": "29, 1, 7, 6, 21"
+   },
+   {
+    "baslik": "3 ekle",
+    "aciklama": "29 + 3 = 32 başa döner: 32 − 29 = 3.",
+    "islem": "3, 4, 10, 9, 24"
+   },
+   {
+    "baslik": "Harfleri kontrol et",
+    "aciklama": "Yeni harfler.",
+    "islem": "C, Ç, H, Ğ, T"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Yeni numaraları ekle.",
+    "islem": "3 + 4 + 10 + 9 + 24 = 50"
+   }
+  ],
+  "puf": "Dairesel kaydırmada numara toplam harf sayısını (29) aşınca 29 çıkarılır; alfabenin Türkçe uzunluğuna dikkat et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-07 (şifre) · harf kaydırma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Ulaşım Seçimi",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Tablodaki yürüyüş, bekleme, yolculuk ve aktarma bilgilerini birleştirerek en kısa toplam süreyi bulur.",
+  "tipId": "rtb-yasam",
+  "tip": "Yaşam becerisi: tarife, kampanya, tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir öğrenci okula üç ayrı yolla gidebilmektedir. Aşağıdaki tabloda her yol için evden durağa yürüyüş, ortalama bekleme ve araçta geçen süre ile aktarma sayısı verilmiştir. Her aktarma için ayrıca 6 dakika yürüme ve bekleme süresi harcanmaktadır.\nBu öğrenci toplam süresi en kısa olan yolu seçerse evden okula kaç dakikada ulaşır?",
+  "sekil": "<svg viewBox=\"0 0 482 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"478\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Yol</text><text x=\"113.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Yürüyüş (dk)</text><text x=\"227.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Bekleme (dk)</text><text x=\"345.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Yolculuk (dk)</text><text x=\"443.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Aktarma</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"113.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"227.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><text x=\"345.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">35</text><text x=\"443.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"113.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">12</text><text x=\"227.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"345.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"443.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">C</text><text x=\"113.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"227.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">15</text><text x=\"345.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">32</text><text x=\"443.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"2\" y1=\"2\" x2=\"480\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"480\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"480\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"480\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"480\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"106\" stroke-width=\"1\"/><line x1=\"170\" y1=\"2\" x2=\"170\" y2=\"106\" stroke-width=\"1\"/><line x1=\"284\" y1=\"2\" x2=\"284\" y2=\"106\" stroke-width=\"1\"/><line x1=\"406\" y1=\"2\" x2=\"406\" y2=\"106\" stroke-width=\"1\"/><line x1=\"480\" y1=\"2\" x2=\"480\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "37",
+   "B": "46",
+   "C": "48",
+   "D": "52",
+   "E": "58"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "52"
+  },
+  "celdiriciler": {
+   "A": "Bekleme süresini hesaba katmamış; en kısa süreyi 37 dakika bulmuş.",
+   "B": "Aktarma süresini hiç eklememiş; en kısa süreyi 46 dakika bulmuş.",
+   "C": "Aktarma sayısını dakika sanıp (6 dakika yerine 1 ve 2) eklemiş; 48 dakika bulmuş.",
+   "E": "Yolculuk süresi en kısa olan B yolunu seçip onun toplamını (58) yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "En kısa toplam süre (dakika).",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "Önce her seçeneğin toplam maliyetini ayrı ayrı hesapla, sonra karşılaştır. Örnek: sabit 100 TL + dakikası 2 TL olan tarife 30 dakikada 100 + 60 = 160 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Her yol için bütün süreleri ve aktarmaların toplam süresini ayrı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A yolu",
+    "aciklama": "Yürüyüş + bekleme + yolculuk + 1 aktarma.",
+    "islem": "8 + 10 + 35 + 6 = 59 dk"
+   },
+   {
+    "baslik": "B yolu",
+    "aciklama": "2 aktarma: 12 dakika.",
+    "islem": "12 + 4 + 30 + 12 = 58 dk"
+   },
+   {
+    "baslik": "C yolu",
+    "aciklama": "Aktarma yok.",
+    "islem": "5 + 15 + 32 = 52 dk"
+   },
+   {
+    "baslik": "En kısayı seç",
+    "aciklama": "Üçünü karşılaştır.",
+    "islem": "52 dk"
+   }
+  ],
+  "puf": "Parçalı sürelerde her seçeneğin toplamını ayrı hesapla; aktarma gibi ek süreleri unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-10 (yaşam becerisi) · ulaşım süresi karşılaştırma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kademeli Fatura",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Kademeli su tarifesini tüketimin ilgili dilimlerine ayrı ayrı uygulayarak fatura tutarını hesaplar.",
+  "tipId": "rtb-yasam",
+  "tip": "Yaşam becerisi: tarife, kampanya, tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir belediyenin su tarifesi aşağıdaki tabloda verilmiştir. Her kademenin birim fiyatı yalnız o kademeye giren tüketime uygulanır.\nBir ayda 32 m³ su tüketen bir abonenin fatura tutarı kaç TL’dir?",
+  "sekil": "<svg viewBox=\"0 0 442 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"438\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"47.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kademe</text><text x=\"181.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Aylık tüketim dilimi</text><text x=\"355.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Birim fiyat (TL/m³)</text><text x=\"47.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1. kademe</text><text x=\"181.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">ilk 10 m³</text><text x=\"355.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">20</text><text x=\"47.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2. kademe</text><text x=\"181.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">sonraki 15 m³</text><text x=\"355.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">35</text><text x=\"47.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3. kademe</text><text x=\"181.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">25 m³’ten sonrası</text><text x=\"355.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"2\" y1=\"2\" x2=\"440\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"440\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"440\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"440\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"440\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"92\" y1=\"2\" x2=\"92\" y2=\"106\" stroke-width=\"1\"/><line x1=\"270\" y1=\"2\" x2=\"270\" y2=\"106\" stroke-width=\"1\"/><line x1=\"440\" y1=\"2\" x2=\"440\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "970",
+   "B": "1120",
+   "C": "1145",
+   "D": "1345",
+   "E": "1920"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1145"
+  },
+  "celdiriciler": {
+   "A": "3. kademeyi atlayıp ilk 10 m³’ten sonraki bütün tüketime 2. kademe fiyatını uygulamış: 10 · 20 + 22 · 35.",
+   "B": "Bütün tüketime 2. kademe fiyatını uygulamış: 32 · 35.",
+   "D": "Fiyatları kademelerle karıştırmış: 10 · 20 + 15 · 60 + 7 · 35.",
+   "E": "Bütün tüketime en yüksek kademenin fiyatını uygulamış: 32 · 60."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Fatura tutarı (TL).",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "Önce her seçeneğin toplam maliyetini ayrı ayrı hesapla, sonra karşılaştır. Örnek: sabit 100 TL + dakikası 2 TL olan tarife 30 dakikada 100 + 60 = 160 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Tüketimi kademelere ayır: önce ilk 10 m³, sonra 15 m³, kalanı üçüncü kademe."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüketimi ayır",
+    "aciklama": "32 m³ = 10 + 15 + 7.",
+    "islem": "1. kademe 10 · 2. kademe 15 · 3. kademe 7"
+   },
+   {
+    "baslik": "Her dilimi fiyatla",
+    "aciklama": "Birim fiyatla çarp.",
+    "islem": "10 · 20 = 200 · 15 · 35 = 525 · 7 · 60 = 420"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Üç tutarı ekle.",
+    "islem": "200 + 525 + 420 = 1145 TL"
+   }
+  ],
+  "puf": "Kademeli tarifede her birim fiyat yalnız kendi dilimine uygulanır; tüketimi dilimlere bölüp tutarları topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-10 (yaşam becerisi) · kademeli tarife",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tanımlı İşlem",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Tanımlı bir işlemin değişme, etkisiz eleman ve sıfır çarpım özelliklerini sınar.",
+  "tipId": "rtb-kural",
+  "tip": "Tanımlı işlem ve sayı türü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Gerçel sayılar kümesinde ⊕ işlemi\na ⊕ b = a · b + a\nbiçiminde tanımlanıyor.\nI. (−2) ⊕ 3 = 3 ⊕ (−2) dir.\nII. Her a gerçel sayısı için a ⊕ 0 = a dır.\nIII. a ⊕ b = 0 ise a = 0 ya da b = −1 dir.\nyargılarından hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "I’i hesaplamadan işlemi değişmeli sanıp doğru kabul etmiş; II ve III’ü sınamamış.",
+   "B": "III’ü sınarken a ⊕ b = a(b + 1) çarpımını sıfıra eşitlemeyi atlamış.",
+   "C": "I’i denemeden işlemi çarpma gibi değişmeli sanmış; III’ün b = −1 durumunu kaçırmış.",
+   "D": "I’i değişmeli sanmış; II’de a ⊕ 0 = a · 0 + a işleminde a’yı unutup sonucu 0 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Tanımlı işlem",
+    "ifade": "a ★ b = 2a − b + 1 gibi bir kuralda a ve b yerine verilen sayılar yazılır; parantez içi önce yapılır. Örnek: a ★ b = a + 2b ise 3 ★ 1 = 3 + 2 = 5"
+   }
+  ],
+  "ipuclari": [
+   "Her yargıyı ayrı ayrı sına: I için iki tarafı da hesapla; II ve III için kuralı sade biçimde yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i sına",
+    "aciklama": "İki yanı ayrı ayrı hesapla.",
+    "islem": "(−2) ⊕ 3 = −8 · 3 ⊕ (−2) = −3 → eşit değil"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "a ⊕ 0 = a · 0 + a.",
+    "islem": "= a → doğru"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "a ⊕ b = a(b + 1) = 0 ise a = 0 ya da b = −1.",
+    "islem": "doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "II ve III doğru.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "Tanımlı işlemde bir özellik tek örnekle çürütülebilir; doğru olduğunu göstermek için cebirsel hesap gerekir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-01 (tanımlı işlem) · öncüllü işlem özellikleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Dairesel Eleme",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Dairesel sayımla elemeyi tur tur uygulayarak son kalan kişinin sıra numarasını bulur.",
+  "tipId": "rtb-oruntu",
+  "tip": "Örüntü, dizi ve konum",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir çemberin çevresinde saat yönünde 1’den 12’ye kadar numaralanmış 12 kişi durmaktadır. Sayım 1 numaralı kişiden başlayıp saat yönünde “bir, iki, üç” diye sürmekte ve “üç” diyen kişi çemberden çıkmaktadır. Sayım, çıkan kişiden sonraki kişiden yeniden “bir” diyerek devam etmektedir. Bu işlem çemberde tek kişi kalana kadar sürmektedir.\nBuna göre çemberde son kalan kişinin numarası kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "9",
+   "D": "10",
+   "E": "11"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Sayımı saat yönünün tersine yapmış.",
+   "B": "Son iki kişi (5 ve 10) arasında kalmış; çıkan son kişiyi kalan sanmış.",
+   "C": "Çıkan kişiyi de sayarak “bir, iki” demiş; yani her seferinde 2. kişiyi çıkarmış.",
+   "E": "Sayıma 1 yerine 2 numaralı kişiden başlamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Son kalan kişinin numarası.",
+  "bilgi": [
+   {
+    "ad": "Dairesel sayım",
+    "ifade": "Çemberde sayım bir kişi çıkınca çıkan kişinin ardındaki kişiden sürer; kalanlar sırayla listelenir. Örnek: 1, 2, 3, 4, 5 çemberinde 2’şer sayılıp 2. kişi çıkarılırsa çıkanlar 2, 4, 1, 5, kalan 3 olur"
+   }
+  ],
+  "ipuclari": [
+   "Çıkan kişileri sırayla yaz; çember küçüldükçe sayımın nereden devam ettiğine dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk tur",
+    "aciklama": "3, 6, 9, 12 çıkar; sayım 1’den sürer.",
+    "islem": "Çıkanlar: 3, 6, 9, 12 · kalanlar: 1, 2, 4, 5, 7, 8, 10, 11"
+   },
+   {
+    "baslik": "İkinci tur",
+    "aciklama": "Sayım 1’den başlar: 4, 8 ve 1 sırayla çıkar.",
+    "islem": "Çıkanlar: 4, 8, 1 · kalanlar: 2, 5, 7, 10, 11"
+   },
+   {
+    "baslik": "Üçüncü tur",
+    "aciklama": "Sayım 2’den devam eder: 7, 2, 11 sırayla çıkar.",
+    "islem": "Kalanlar: 5, 10"
+   },
+   {
+    "baslik": "Son aşama",
+    "aciklama": "Sayım 5’ten devam eder: 5 çıkar.",
+    "islem": "Kalan: 10"
+   }
+  ],
+  "puf": "Dairesel elemede her çıkıştan sonra sayımın yeniden başladığı kişiyi işaretle ve kalanları listele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-02 (konum) · dairesel eleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tanımlı Sayı Türü",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Verilen sayı türü tanımına göre sayıları sınar ve ifadelerin doğruluğunu karar verir.",
+  "tipId": "rtb-kural",
+  "tip": "Tanımlı işlem ve sayı türü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir doğal sayının kendisi dışındaki pozitif bölenlerinin toplamı kendisinden büyükse bu sayıya “bol sayı” denir. Örneğin 12’nin kendisi dışındaki pozitif bölenlerinin toplamı 1 + 2 + 3 + 4 + 6 = 16 > 12 olduğundan 12 bol sayıdır.\nI. 18 bol sayıdır.\nII. Hiçbir 2 kuvveti (1, 2, 4, 8, …) bol sayı değildir.\nIII. 6’dan büyük, 30’dan küçük bol sayıların sayısı 5’tir.\nyargılarından hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’yi 2 kuvvetlerinin bölenlerini toplayıp denemeden yanlış saymış.",
+   "B": "18’in bölenlerini 1 + 2 + 3 + 6 = 12 diye eksik toplayıp (9’u atlayıp) I’i yanlış bulmuş.",
+   "C": "28’i de bol sayı sayıp III’ü doğru bulmuş; I ve II’yi sınamamış.",
+   "E": "28’i de bol sayı sayıp III’ü doğru bulmuş; II’yi sınamamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Bölenler toplamı",
+    "ifade": "Bir sayının kendisi dışındaki bölenleri yazılıp toplanır. Örnek: 6 için 1 + 2 + 3 = 6; 8 için 1 + 2 + 4 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Her yargı için ilgili sayıların kendisi dışındaki bölenlerini yazıp toplamları kendileriyle karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i sına",
+    "aciklama": "18’in bölenleri 1, 2, 3, 6, 9.",
+    "islem": "1 + 2 + 3 + 6 + 9 = 21 > 18 → doğru"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "2ⁿ’nin kendisi dışındaki bölenleri 1, 2, 4, …, 2ⁿ⁻¹.",
+    "islem": "toplam = 2ⁿ − 1 < 2ⁿ → doğru"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "7’den 29’a bol sayılar: 12, 18, 20, 24 (28’in toplamı 28, bol değil).",
+    "islem": "4 tane → III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve II doğru.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Bir tanımı sınamak için sayıların bölenlerini tek tek yaz; genel bir yargıyı bir örnekle değil, genel bir toplamla doğrula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-01 (tanımlı sayı türü) · bol sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Tablo Yorumlama",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Aylık satış tablosundan toplam, karşılaştırma ve en büyük değer yargılarını sınar.",
+  "tipId": "rtb-yasam",
+  "tip": "Yaşam becerisi: tarife, kampanya, tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir kırtasiyenin dört ay boyunca sattığı A, B ve C ürünlerinin adetleri aşağıdaki tabloda verilmiştir.\nI. B ürününün dört aydaki toplam satışı, C ürününün toplam satışının 1,3 katından fazladır.\nII. Her ay A ürünü, C ürününden daha çok satılmıştır.\nIII. Üç ürünün toplam satışının en fazla olduğu ay Mart’tır.\nyargılarından hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 284 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"280\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"31.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ay</text><text x=\"97.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">A ürünü</text><text x=\"171.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">B ürünü</text><text x=\"245.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">C ürünü</text><text x=\"31.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ocak</text><text x=\"97.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><text x=\"171.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"245.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">20</text><text x=\"31.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şubat</text><text x=\"97.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">35</text><text x=\"171.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">45</text><text x=\"245.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">25</text><text x=\"31.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Mart</text><text x=\"97.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">50</text><text x=\"171.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><text x=\"245.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><text x=\"31.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Nisan</text><text x=\"97.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">45</text><text x=\"171.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">35</text><text x=\"245.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"2\" y1=\"2\" x2=\"282\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"282\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"282\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"282\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"282\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"282\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"60\" y1=\"2\" x2=\"60\" y2=\"132\" stroke-width=\"1\"/><line x1=\"134\" y1=\"2\" x2=\"134\" y2=\"132\" stroke-width=\"1\"/><line x1=\"208\" y1=\"2\" x2=\"208\" y2=\"132\" stroke-width=\"1\"/><line x1=\"282\" y1=\"2\" x2=\"282\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "III için yalnız B ürününün en yüksek olduğu Şubat’a (45) bakıp Mart’ı en fazla satış ayı saymamış; III’ü yanlış bulmuş.",
+   "B": "II’de Mart ayında C’nin 40’ını A’nın 50’siyle değil Ocak’taki 40’la karşılaştırıp “eşit” bulmuş; II’yi yanlış saymış.",
+   "C": "I’de 1,3 katını hesaplamadan 140 > 115 diye yargıyı doğru saymış; III’ü Şubat’ı en yüksek sanıp yanlış bulmuş.",
+   "D": "I’de 1,3 katını hesaplamadan 140 > 115 diye yargıyı doğru saymış; II’yi denememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Tablo okuma",
+    "ifade": "Önce her seçeneğin toplam maliyetini ayrı ayrı hesapla, sonra karşılaştır. Örnek: sabit 100 TL + dakikası 2 TL olan tarife 30 dakikada 100 + 60 = 160 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Her yargı için gerekli toplamları tablodan ayrı ayrı hesapla; I için 1,3 ile çarpmayı unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i sına",
+    "aciklama": "B toplamı 30 + 45 + 30 + 35 = 140; C toplamı 20 + 25 + 40 + 30 = 115; 1,3 · 115 = 149,5.",
+    "islem": "140 < 149,5 → I yanlış"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "Her ayda A ile C karşılaştırılır.",
+    "islem": "40 > 20 · 35 > 25 · 50 > 40 · 45 > 30 → doğru"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "Aylık toplamlar.",
+    "islem": "90 · 105 · 120 · 110 → Mart en fazla → doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "II ve III doğru.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "Tablo yargılarını tek tek sına; \"katından fazla\" gibi ifadelerde önce çarpımı hesapla, sonra karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-10 (tablo yorumu) · satış tablosu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Eşleştirme",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Beş koşuldan Berna’nın şehrini ve sporunu eleme yoluyla bulur.",
+  "tipId": "rtb-cikarim",
+  "tip": "Mantık ve çıkarım (sıralama, eşleştirme)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Ahmet, Berna, Cemil ve Derya’nın her biri İzmir, Ankara, Bursa ve Konya’dan farklı birinde yaşamakta; ayrıca her biri yüzme, tenis, basketbol ve voleybol sporlarından farklı birini yapmaktadır. Şunlar bilinmektedir:\n• Yüzme yapan kişi İzmir’de yaşamaktadır.\n• Ankara’da yaşayan kişi tenis oynamaktadır.\n• Ahmet ne İzmir’de ne de Ankara’da yaşamaktadır.\n• Ahmet basketbol oynamamaktadır.\n• Berna ne yüzme ne de basketbol yapmaktadır.\nBuna göre Berna’nın yaşadığı şehir ve yaptığı spor aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bursa – voleybol",
+   "B": "Ankara – voleybol",
+   "C": "Ankara – tenis",
+   "D": "Konya – basketbol",
+   "E": "İzmir – yüzme"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Ankara – tenis"
+  },
+  "celdiriciler": {
+   "A": "1. bilgiyi gözden kaçırıp (Bursa – voleybol) yerleşimini de olası saymış.",
+   "B": "2. bilgiyi gözden kaçırıp (Ankara – voleybol) yerleşimini de olası saymış.",
+   "D": "5. bilgiyi gözden kaçırıp (Konya – basketbol) yerleşimini de olası saymış.",
+   "E": "5. bilgiyi gözden kaçırıp (İzmir – yüzme) yerleşimini de olası saymış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Berna’nın şehri ve sporu.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "Önce Ahmet’in yapabileceği sporları ele; sonra Berna için kalan sporlara bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ahmet’i bul",
+    "aciklama": "Ahmet basketbol oynamıyor; yüzücü İzmir’de, tenisçi Ankara’da yaşadığından Ahmet yüzme ve tenis de yapamaz.",
+    "islem": "Ahmet voleybol oynar"
+   },
+   {
+    "baslik": "Berna’yı bul",
+    "aciklama": "Berna ne yüzme ne basketbol yapıyor; voleybol Ahmet’te.",
+    "islem": "Berna tenis oynar"
+   },
+   {
+    "baslik": "Şehri bul",
+    "aciklama": "Tenis oynayan kişi Ankara’da yaşıyor.",
+    "islem": "Berna Ankara’da yaşar"
+   }
+  ],
+  "puf": "Eşleştirme sorularında önce en çok koşulu olan kişiden başla; her kişi için olanaksız seçenekleri çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-04 (mantık ve çıkarım) · şehir ve spor eşleştirme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0025",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Boy Sıralaması",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Eksik sıralama bilgisinde bütün olası dizilişleri tarayarak kesin doğru yargıları ayırt eder.",
+  "tipId": "rtb-cikarim",
+  "tip": "Mantık ve çıkarım (sıralama, eşleştirme)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Elif, Ferit, Gül, Hakan ve İrem’in boyları birbirinden farklıdır. Boylarıyla ilgili şunlar bilinmektedir:\n• Elif, Hakan’dan uzundur.\n• Hakan, Gül’den ve İrem’den uzundur.\n• Gül, Ferit’ten kısadır.\n• Ferit, Elif’ten kısadır.\nBuna göre,\nI. Elif en uzun kişidir.\nII. Hakan, Ferit’ten uzundur.\nIII. En kısa kişi Gül ya da İrem’dir.\nyargılarından hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü sınarken Ferit’in de en kısa olabileceğini düşünmüş; oysa Ferit Gül’den uzundur.",
+   "B": "I’i, Elif’in Hakan’dan ve Ferit’ten uzun olduğunu görüp zinciri Gül ve İrem’e kadar tamamlamadığı için kesin saymamış.",
+   "C": "II’yi, Hakan’ın Gül ve İrem’den uzun olmasından yola çıkarak Ferit’ten de uzun sanmış; Ferit–Hakan sırası verilmemiştir.",
+   "E": "II’yi kesin doğru sanmış (Hakan–Ferit sırası bilgiden çıkmaz)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "Koşullardan bir boy zinciri kur. Zincirde sırası belli olmayan kişi çiftlerini bul ve her iki durumu da dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Zinciri kur",
+    "aciklama": "Elif > Hakan > Gül ve İrem; Elif > Ferit > Gül.",
+    "islem": "Elif en üstte"
+   },
+   {
+    "baslik": "Belirsizliği bul",
+    "aciklama": "Hakan ile Ferit, İrem ile Ferit ve Gül ile İrem arasında sıra verilmemiş.",
+    "islem": "Beş olası dizilişin tamamı yazılır"
+   },
+   {
+    "baslik": "Yargıları sına",
+    "aciklama": "I: Elif her dizilişte en uzun. II: Ferit Hakan’dan uzun olduğu dizilişler var. III: En kısa kişi Gül ya da İrem.",
+    "islem": "I doğru · II kesin değil · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Kesin doğrular I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "“Kesinlikle doğru” sorusunda yargı, koşulları sağlayan bütün dizilişlerde doğru olmalıdır; tek bir karşı örnek yeter.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-04 (mantık ve çıkarım) · öncüllü sıralama",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0026",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Konum Örüntüsü",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "İleri ve geri hareketlerin değiştiği bir kuralda konum örüntüsünü bulup hedef konuma ilk ulaşılan hamleyi belirler.",
+  "tipId": "rtb-oruntu",
+  "tip": "Örüntü, dizi ve konum",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Sayı doğrusu üzerinde 0 noktasında duran bir robot, n. hamlesinde n birim yol gitmektedir: n tek sayı ise pozitif yönde, n çift sayı ise negatif yönde. (Örneğin 1. hamlede 1 birim sağa, 2. hamlede 2 birim sola gider.)\nRobot, 20 noktasında ilk kez hangi hamlenin sonunda bulunur?",
+  "sekil": null,
+  "siklar": {
+   "A": "19",
+   "B": "20",
+   "C": "39",
+   "D": "40",
+   "E": "41"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "39"
+  },
+  "celdiriciler": {
+   "A": "İkişerli hamlelerin sayısını (m = 19) hamle numarası sanmış.",
+   "B": "n. hamlenin sonunda robotun n noktasında olduğunu sanmış.",
+   "D": "Her iki hamlede 1 birim ilerlediğini sanıp hamle sayısını 2 · 20 bulmuş.",
+   "E": "2m + 1. hamlede konumu m (m + 1 yerine) sanıp m = 20 için 41 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Robotun 20 noktasında ilk kez bulunduğu hamle numarası.",
+  "bilgi": [
+   {
+    "ad": "Örüntü",
+    "ifade": "Her adımda sabit miktar artan örüntüde n. terim = ilk terim + (n − 1) · artış. Örnek: 4, 7, 10, … örüntüsünde 5. terim 4 + 4 · 3 = 16’dır"
+   },
+   {
+    "ad": "Tek ve çift sayılar",
+    "ifade": "2m çift, 2m + 1 tek sayıdır; ardışık iki sayıdan biri tek, biri çifttir. Örnek: 7 = 2 · 3 + 1 tektir, 8 = 2 · 4 çifttir"
+   }
+  ],
+  "ipuclari": [
+   "İlk birkaç hamleden sonraki konumları yazıp bir düzen ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk konumları yaz",
+    "aciklama": "Konumlar: 1, −1, 2, −2, 3, −3, …",
+    "islem": "1. hamle: 1 · 2: −1 · 3: 2 · 4: −2"
+   },
+   {
+    "baslik": "Kuralı çıkar",
+    "aciklama": "2m hamleden sonra konum −m; 2m + 1 hamleden sonra konum m + 1.",
+    "islem": "2m → −m · 2m + 1 → m + 1"
+   },
+   {
+    "baslik": "Hedefi çöz",
+    "aciklama": "Pozitif konumlara yalnız tek hamlelerde ulaşılır.",
+    "islem": "m + 1 = 20 → m = 19"
+   },
+   {
+    "baslik": "Hamle numarası",
+    "aciklama": "2m + 1.",
+    "islem": "2 · 19 + 1 = 39"
+   }
+  ],
+  "puf": "Sırayla değişen kurallı hareketlerde, iki hamleyi bir grup alıp konumun grup sayısına göre değişimini yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-02 (konum örüntüsü) · ileri–geri hamleler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0027",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Rakam Koşulu",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Rakamları farklı, rakam toplamı belli çift dört basamaklı sayıları kümelere ayırarak sayar.",
+  "tipId": "rtb-yerlestirme",
+  "tip": "Sayı yerleştirme (ızgara, rakam koşulu)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Rakamları birbirinden farklı olan ve rakamları toplamı 10 olan 4 basamaklı çift doğal sayıların sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "52",
+   "C": "60",
+   "D": "96",
+   "E": "124"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "52"
+  },
+  "celdiriciler": {
+   "A": "Yalnız 1, 2, 3, 4 rakamlarını kullanmış; sıfır içeren kümeleri atlamış.",
+   "C": "Baştaki rakamın 0 olamayacağını unutmuş; 0 ile başlayan yazılışları da saymış.",
+   "D": "Sayının çift olması koşulunu unutmuş.",
+   "E": "Rakamların farklı olması koşulunu unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Koşulu sağlayan sayıların sayısı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu tarama",
+    "ifade": "Koşullardan sayıyı en çok daraltanı seç; kalan durumları tek tek say. Örnek: iki basamaklı, rakamları toplamı 5 olan sayılar 14, 23, 32, 41, 50’dir"
+   }
+  ],
+  "ipuclari": [
+   "Önce rakamları farklı ve toplamı 10 olan dört rakamlı kümeleri bul; sonra her küme için çift ve geçerli yazılışları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kümeleri bul",
+    "aciklama": "Farklı dört rakamın toplamı 10.",
+    "islem": "{0,1,2,7} {0,1,3,6} {0,1,4,5} {0,2,3,5} {1,2,3,4}"
+   },
+   {
+    "baslik": "Sıfırsız küme",
+    "aciklama": "{1,2,3,4}: son rakam 2 ya da 4 (2 seçenek), kalan 3 rakam 3! yolla.",
+    "islem": "2 · 6 = 12"
+   },
+   {
+    "baslik": "Sıfırlı kümeler",
+    "aciklama": "Son rakam çift, baş rakam 0 değil: {0,1,2,7} 10, {0,1,3,6} 10, {0,1,4,5} 10, {0,2,3,5} 10 sayı.",
+    "islem": "4 · 10 = 40"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki durumu ekle.",
+    "islem": "12 + 40 = 52"
+   }
+  ],
+  "puf": "Koşullu tarama: önce rakam kümelerini bul, sonra son basamak ve baştaki sıfır koşullarıyla yazılışları say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-06 (koşullu tarama) · rakam toplamı ve çift sayı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0028",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Kutu Seçimi",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Farklı boyutlu kutularla tam sayıda ürün almak için en az kutu sayısını sistemli taramayla bulur.",
+  "tipId": "rtb-optimizasyon",
+  "tip": "Optimizasyon (en az hamle, en az süre)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir kırtasiyede kalemler yalnızca 3’lü, 7’li ve 12’li kutularda satılmaktadır. Kutular açılamaz ve her kutudan istenildiği kadar vardır.\nTam 40 kalem almak isteyen bir müşteri en az kaç kutu almalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "5",
+   "C": "6",
+   "D": "8",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "40 ÷ 12 ≈ 3,3’ü yukarı yuvarlayıp 4 kutu yazmış; 4 kutu 48 kalem eder, 40 etmez.",
+   "C": "En büyük kutudan başlayıp (2 tane 12’lik) kalanı 3’lü ve 7’lilerle tamamlamış: 2 + 4 = 6.",
+   "D": "12’lik kutuyu hiç kullanmamış: 4 tane 7’li ve 4 tane 3’lü.",
+   "E": "40 ÷ 3 = 13,3’ü yukarı yuvarlayıp 14 tane 3’lü kutu yazmış; 42 kalem eder."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Gerekli en az kutu sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kutularla sayma",
+    "ifade": "En büyük kutudan başlamak her zaman en az kutuyu vermez. Örnek: 3’lü ve 5’li kutularla 11 kalem için 5 + 3 + 3 = 3 kutu gerekir"
+   }
+  ],
+  "ipuclari": [
+   "En büyük kutudan başlamak her zaman en iyi sonucu vermez; farklı kutu karışımlarını sistemli dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üç 12’lik",
+    "aciklama": "3 · 12 = 36; kalan 4 kalem 3’lü ve 7’lilerle tamamlanamaz.",
+    "islem": "olmaz"
+   },
+   {
+    "baslik": "İki 12’lik",
+    "aciklama": "24; kalan 16 = 7 + 3 · 3 → 4 kutu.",
+    "islem": "2 + 4 = 6 kutu"
+   },
+   {
+    "baslik": "Bir 12’lik",
+    "aciklama": "12; kalan 28 = 4 · 7.",
+    "islem": "1 + 4 = 5 kutu"
+   },
+   {
+    "baslik": "Sıfır 12’lik ve karşılaştır",
+    "aciklama": "40 = 4 · 7 + 4 · 3 → 8 kutu; hepsini karşılaştır.",
+    "islem": "En az 5 kutu"
+   }
+  ],
+  "puf": "En büyük birimden başlamak her zaman en az sayıyı vermez; büyük birimin sayısını değiştirerek bütün durumları tara.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-09 (optimizasyon) · en az kutu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0029",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Sefer Çizelgesi",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "İki periyodik seferin ortak ve ayrı kalkış anlarını EKOK ve sayma yoluyla ayırır.",
+  "tipId": "rtb-periyot",
+  "tip": "Periyodik durum (takvim, lamba, tren)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir istasyondan A treni her 12 dakikada, B treni her 18 dakikada bir kalkmaktadır. İki tren de saat 08.00’de birlikte kalkmış ve bu düzen sabit kalmıştır. Saat 08.00 ile 14.00 arasında (iki saat de dahil) yalnızca bir trenin kalktığı kaç ayrı kalkış anı vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "11",
+   "B": "20",
+   "C": "30",
+   "D": "41",
+   "E": "52"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Yalnız iki trenin birlikte kalktığı anların sayısını yazmış.",
+   "B": "Yalnız A treninin tek başına kalktığı anları saymış: 31 − 11.",
+   "D": "En az bir trenin kalktığı anların sayısını yazmış: 31 + 21 − 11.",
+   "E": "İki trenin kalkış sayılarını doğrudan toplamış: 31 + 21."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yalnız bir trenin kalktığı kalkış anı sayısı.",
+  "bilgi": [
+   {
+    "ad": "Periyodik düzen",
+    "ifade": "Bir düzen her p adımda kendini yineliyorsa n. adımın durumu, n sayısının p ile bölümünden kalana bakılarak bulunur. Örnek: 3 renkli düzende 10. sıra için 10 = 3 · 3 + 1 olduğundan 1. renktir"
+   }
+  ],
+  "ipuclari": [
+   "Önce iki trenin birlikte kalktığı anları bul; sonra her trenin 08.00–14.00 arasındaki kalkışlarını say ve ortak anları ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A ve B’nin kalkış sayıları",
+    "aciklama": "6 saat = 360 dakika; 08.00 dahil.",
+    "islem": "A: 360 ÷ 12 + 1 = 31 · B: 360 ÷ 18 + 1 = 21"
+   },
+   {
+    "baslik": "Ortak kalkışlar",
+    "aciklama": "Birlikte kalkış 12 ve 18’in EKOK’u olan 36 dakikada bir.",
+    "islem": "360 ÷ 36 + 1 = 11"
+   },
+   {
+    "baslik": "Yalnız bir tren",
+    "aciklama": "Her trenin ortak anları dışındaki kalkışları.",
+    "islem": "A: 31 − 11 = 20 · B: 21 − 11 = 10"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "İki sonucu ekle.",
+    "islem": "20 + 10 = 30"
+   }
+  ],
+  "puf": "Periyodik olaylarda ortak anlar EKOK’la bulunur; “yalnız biri” sayılırken ortak anlar her iki sayımdan da çıkarılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-03 (periyodik durum) · tren seferleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0030",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Şifre Bulma",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Geri bildirimli üç denemeden tek şifreyi eleyerek bulur.",
+  "tipId": "rtb-sifre",
+  "tip": "Şifre ve kod kuralı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir kasanın şifresi, rakamları birbirinden farklı 3 basamaklı bir koddur (ilk rakam 0 da olabilir). Şifreyle ilgili üç deneme yapılmış ve her deneme için şu bilgiler verilmiştir:\n• 563  →  1 rakam doğru yerde, 0 rakam yanlış yerde\n• 954  →  1 rakam doğru yerde, 1 rakam yanlış yerde\n• 650  →  0 rakam doğru yerde, 0 rakam yanlış yerde\n(“Doğru yerde” bir rakamın şifrede aynı basamakta bulunması, “yanlış yerde” ise şifrede olup başka basamakta bulunması demektir.)\nBuna göre şifrenin rakamları toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "8",
+   "C": "14",
+   "D": "15",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "C": "1. ipucunu gözden kaçırıp 194 şifresini bulmuş.",
+   "D": "1. ipucunu gözden kaçırıp 294 şifresini bulmuş.",
+   "A": "2. ipucunu gözden kaçırıp 123 şifresini bulmuş.",
+   "B": "2. ipucunu gözden kaçırıp 143 şifresini bulmuş."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "dikkat",
+   "A": "dikkat",
+   "B": "dikkat"
+  },
+  "istenen": "Şifrenin rakamları toplamı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu tarama",
+    "ifade": "Koşullardan sayıyı en çok daraltanı seç; kalan durumları tek tek say. Örnek: iki basamaklı, rakamları toplamı 5 olan sayılar 14, 23, 32, 41, 50’dir"
+   }
+  ],
+  "ipuclari": [
+   "Şifrede hiçbir rakamı bulunmayan denemeyi bul ve o rakamları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Olmayan rakamlar",
+    "aciklama": "3. denemede (6 5 0) hiçbir rakam şifrede yok.",
+    "islem": "6, 5, 0 şifrede yok"
+   },
+   {
+    "baslik": "Son rakam",
+    "aciklama": "1. denemede (5 6 3) bir rakam doğru yerde; 5 ve 6 yok.",
+    "islem": "3 şifrenin 3. rakamı"
+   },
+   {
+    "baslik": "Diğer rakamlar",
+    "aciklama": "2. denemede (9 5 4) 5 yok; 9 ve 4 şifrede, biri doğru yerde biri yanlış yerde. 4 üçüncü basamakta olamaz.",
+    "islem": "9 birinci, 4 ikinci basamakta"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Şifre 9 4 3.",
+    "islem": "9 + 4 + 3 = 16"
+   }
+  ],
+  "puf": "Geri bildirimli şifre sorularında önce hiçbir rakamı olmayan denemeyle rakamları ele, sonra yerleri belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-07 (şifre) · ipuçlarından şifre bulma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0031",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Izgara Yerleştirme",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Her satır, sütun ve 2 × 2 bölgede 1–4 sayılarının birer kez bulunduğu ızgarada eksik kutuları belirler.",
+  "tipId": "rtb-yerlestirme",
+  "tip": "Sayı yerleştirme (ızgara, rakam koşulu)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Aşağıdaki 4 × 4 tablonun boş kutuları, 1, 2, 3 ve 4 sayılarıyla; her satırda, her sütunda ve tablonun dört 2 × 2’lik bölgesinin (sol üst, sağ üst, sol alt, sağ alt) her birinde her sayı tam bir kez kullanılacak biçimde doldurulacaktır. Bazı kutulardaki sayılar verilmiştir.\nBuna göre tabloda ? ile gösterilen iki kutudaki sayıların çarpımı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 332 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"328\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"43.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1. sütun</text><text x=\"125.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2. sütun</text><text x=\"207.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3. sütun</text><text x=\"289.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">4. sütun</text><text x=\"43.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">?</text><text x=\"125.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"207.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"289.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"43.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text><text x=\"125.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"207.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"289.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"43.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text><text x=\"125.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"207.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"289.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"43.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text><text x=\"125.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"207.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\"></text><text x=\"289.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"2\" y1=\"2\" x2=\"330\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"330\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"330\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"330\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"330\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"330\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"84\" y1=\"2\" x2=\"84\" y2=\"132\" stroke-width=\"1\"/><line x1=\"166\" y1=\"2\" x2=\"166\" y2=\"132\" stroke-width=\"1\"/><line x1=\"248\" y1=\"2\" x2=\"248\" y2=\"132\" stroke-width=\"1\"/><line x1=\"330\" y1=\"2\" x2=\"330\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "1",
+   "B": "4",
+   "C": "6",
+   "D": "9",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1"
+  },
+  "celdiriciler": {
+   "B": "Satır kuralını atlayıp ? kutularına 1 ve 4 yazmış.",
+   "C": "Sütun kuralını atlayıp ? kutularına 3 ve 2 yazmış.",
+   "D": "Sütun kuralını atlayıp ? kutularına 3 ve 3 yazmış.",
+   "E": "Satır kuralını atlayıp ? kutularına 4 ve 3 yazmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "? ile gösterilen iki kutudaki sayıların çarpımı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "Önce satır ya da sütunu en çok dolu olan çizgiden başla; her kutu için kalan seçenekleri liste hâlinde tut."
+  ],
+  "adimlar": [
+   {
+    "baslik": "2. sütunu tamamla",
+    "aciklama": "2. sütunda 2, 4 ve 1 var; kalan sayı 3.",
+    "islem": "2. satırın 2. kutusu 3"
+   },
+   {
+    "baslik": "3. ve 4. satırları tamamla",
+    "aciklama": "3. satırda kalan 1 ve 3’ten 3, 4. sütunda zaten var → 3. satır 3 4 2 1; 4. satırda kalan 2 ve 4’ten 2, 3. sütunda zaten var → 4. satır 2 1 4 3.",
+    "islem": "3. satır: 3 4 2 1 · 4. satır: 2 1 4 3"
+   },
+   {
+    "baslik": "3. sütunu tamamla",
+    "aciklama": "3. sütunda 2 ve 4 var; 1. ve 2. satırlara 1 ile 3 kalır; 2. satırda 3 olduğundan 2. satırın 3. kutusu 1, 1. satırın 3. kutusu 3.",
+    "islem": "2. satır: ? 3 1 ?"
+   },
+   {
+    "baslik": "Kalanı bul",
+    "aciklama": "1. sütunda 3 ve 2 var; 2. satırın 1. kutusu 4 ya da 1; 2. satırda 1 var → 4. Bu durumda 1. satırın 1. kutusu 1.",
+    "islem": "? kutuları 1 ve 1 → çarpım 1"
+   }
+  ],
+  "puf": "Izgara yerleştirmede satır, sütun ve bölge kurallarını birlikte kullan; en az seçeneği kalan kutudan başla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-06 (sayı yerleştirme) · 4 × 4 ızgara",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0032",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Çıkarma Oyunu",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Hamle kümesi {2, 5} olan oyunda kaybettiren başlangıç sayısını küçük sayılardan başlayarak bulur.",
+  "tipId": "rtb-oyun",
+  "tip": "Oyun stratejisi ve puanlama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Masada N taş bulunmaktadır. İki oyuncu sırayla oynamakta ve her hamlede masadan tam 2 ya da tam 5 taş almaktadır. Sırası gelen oyuncu hamle yapamıyorsa (masada 2’den az taş kalmışsa) oyunu kaybeder. İki oyuncu da en iyi biçimde oynamaktadır.\nBuna göre aşağıdaki N değerlerinden hangisinde ikinci oynayan oyuncu kazanmayı garantiler?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "10",
+   "C": "12",
+   "D": "13",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "İkinci oyuncunun her hamleyi 7’ye (2 + 5) tamamladığını sanmış; oysa ilk oyuncu 2 alıp 7 bırakır ve kazanır.",
+   "B": "Hamle yapamayanın kazandığını sanmış; oysa ilk oyuncu 2 alıp 8 bırakır ve kazanır.",
+   "C": "Son taşı alanın kaybettiğini sanmış; oysa ilk oyuncu 5 alıp 7 bırakır ve kazanır.",
+   "D": "Hamle yapamayanın kazandığını sanmış; oysa ilk oyuncu 2 alıp 11 bırakır ve kazanır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "İkinci oyuncunun kazanmayı garantilediği N.",
+  "bilgi": [
+   {
+    "ad": "Kazanan konum",
+    "ifade": "Hamle yapamayan kaybediyorsa, rakibe kaybettiren bir konum bırakabiliyorsan o konumdasın kazanırsın. Örnek: 1, 2 ya da 3 çubuk alınan oyunda 4 çubuk kalan oyuncu kaybeder"
+   }
+  ],
+  "ipuclari": [
+   "0 ve 1 taş kalan oyuncu kaybeder. Küçük sayılardan başlayarak her N için sırası gelenin kazanıp kazanmadığını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Küçük sayıları tara",
+    "aciklama": "0 ve 1: hamle yok, kaybeder. 2, 3: 2 alıp 0 ya da 1 bırakır, kazanır. 4: yalnız 2 alabilir, rakip kalan 2’yi alır; kaybeder.",
+    "islem": "Kaybettirenler: 0, 1, 4"
+   },
+   {
+    "baslik": "Tabloyu sürdür",
+    "aciklama": "Bir sayı, 2 ya da 5 çıkarınca kaybettiren sayıya ulaşıyorsa kazandırır: 5, 6 kazandırır; 7 ve 8 kaybettirir; 9, 10 kazandırır.",
+    "islem": "Kaybettirenler: 0, 1, 4, 7, 8, 11, 14"
+   },
+   {
+    "baslik": "Şıkları tara",
+    "aciklama": "9, 10, 12 ve 13 kazandırır (2 ya da 5 alarak sırasıyla 7, 8, 7, 11’e getirilir); 14 kaybettirir.",
+    "islem": "N = 14"
+   }
+  ],
+  "puf": "Çıkarma oyunlarında kaybettiren sayıları sırayla belirle; her sayı kendinden 2 ve 5 küçük sayılara bakılarak değerlendirilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-05 (oyun stratejisi) · {2, 5} çıkarma oyunu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0033",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Doğrucu ve Yalancı",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Dört kişinin birbirini ilgilendiren ifadelerinden doğrucu–yalancı dağılımını tüm olasılıkları sınayarak bulur.",
+  "tipId": "rtb-cikarim",
+  "tip": "Mantık ve çıkarım (sıralama, eşleştirme)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir adada herkes ya her zaman doğruyu söyleyen bir doğrucu ya da her zaman yalan söyleyen bir yalancıdır. A, B, C ve D adlı dört kişi şunları söylemiştir:\nA: “Aramızda en az iki yalancı vardır.”\nB: “Aramızda tam iki doğrucu vardır.”\nC: “A yalancıdır.”\nD: “B ile C aynı türdendir (ikisi de doğrucu ya da ikisi de yalancıdır).”\nBuna göre bu dört kişiden doğrucu olanlar hangileridir?",
+  "sekil": null,
+  "siklar": {
+   "A": "A ve B",
+   "B": "A ve C",
+   "C": "B ve D",
+   "D": "C ve D",
+   "E": "A, B ve C"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "A ve B"
+  },
+  "celdiriciler": {
+   "B": "Doğrucuları A ve C alıp durumu sınamamış; bu durumda B’nin ifadesi çelişir.",
+   "C": "Doğrucuları B ve D alıp durumu sınamamış; bu durumda A’nin ifadesi çelişir.",
+   "D": "Doğrucuları C ve D alıp durumu sınamamış; bu durumda A’nin ifadesi çelişir.",
+   "E": "Doğrucuları A, B ve C alıp durumu sınamamış; bu durumda A’nin ifadesi çelişir."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğrucu olanlar.",
+  "bilgi": [
+   {
+    "ad": "Koşullu çıkarım",
+    "ifade": "Kesin bilgiler tabloya işlenir; bir seçenek bütün koşullarla çelişiyorsa elenir. Örnek: \"A, B’den uzundur\" ve \"B, C’den uzundur\" ise A, C’den de uzundur"
+   }
+  ],
+  "ipuclari": [
+   "16 olasılığı tek tek yazmak yerine A’nın doğrucu ya da yalancı olması durumlarını ayrı ayrı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A doğrucu ise",
+    "aciklama": "A doğrucuysa C’nin “A yalancı” ifadesi yalandır.",
+    "islem": "A doğrucu, C yalancı"
+   },
+   {
+    "baslik": "B ve D’yi sına",
+    "aciklama": "B doğrucuysa B ile C farklı türden olduğundan D’nin ifadesi yalandır; D yalancıdır. Bu durumda 2 doğrucu, 2 yalancı vardır ve dört ifade tutarlıdır. B yalancıysa D de yalancı olur ve B, C aynı türden çıkar; D’nin ifadesi doğru çıkar, çelişir.",
+    "islem": "A, B doğrucu · C, D yalancı"
+   },
+   {
+    "baslik": "A yalancı ise",
+    "aciklama": "A yalancıysa en çok 1 yalancı olmalıdır; A tek yalancıdır, B doğrucudur ve “tam iki doğrucu” demiştir, oysa 3 doğrucu vardır.",
+    "islem": "Çelişki → A doğrucudur"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Tek tutarlı dağılım.",
+    "islem": "Doğrucular A ve B"
+   }
+  ],
+  "puf": "Doğrucu–yalancı sorularında bir kişinin türünü varsayıp ifadelerin tutarlılığını sına; çelişki varsa varsayımı ele.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-04 (mantık ve çıkarım) · doğrucu–yalancı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-rutiniki-0034",
+  "ders": "TYT Matematik",
+  "konu": "Rutin Olmayan Problemler · Köprü Geçişi",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "kazanim": "Tek fenerli köprü geçişinde bütün geçiş stratejilerini karşılaştırarak en kısa süreyi bulur.",
+  "tipId": "rtb-optimizasyon",
+  "tip": "Optimizasyon (en az hamle, en az süre)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Dört yürüyüşçü, karanlıkta tek bir fenerle dar bir köprüden karşıya geçecektir. Köprüden aynı anda en çok iki kişi geçebilir ve geçişler fenerle yapılmalıdır; feneri karşıdan geri getirmek için bir kişinin geri yürümesi gerekir. İki kişi birlikte geçiyorsa yavaş olanın süresi kadar zaman geçer. Yürüyüşçülerin köprüyü tek başına geçme süreleri sırasıyla 1, 2, 5 ve 10 dakikadır.\nDördünün de karşıya geçmesi için gereken en kısa süre kaç dakikadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "18",
+   "C": "19",
+   "D": "21",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "17"
+  },
+  "celdiriciler": {
+   "B": "Dördünün süreleri toplamını (1 + 2 + 5 + 10) yazmış; geri dönüşleri hesaba katmamış.",
+   "C": "En hızlı kişiyi her geçişte eşlik ettirmiş: 2 + 1 + 5 + 1 + 10.",
+   "D": "2 dakikalık kişiyi eşlikçi seçmiş: 10 + 2 + 5 + 2 + 2.",
+   "E": "En yavaş iki kişiyi (10 ve 5) önce geçirip 5 dakikalık kişiyle geri dönmüş: 10 + 5 + 5 + 2 + 2."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "En kısa toplam süre (dakika).",
+  "bilgi": [
+   {
+    "ad": "En az süre",
+    "ifade": "Birden çok strateji varsa her birinin toplam süresini hesaplayıp karşılaştır; ilk bulunan çözüm en iyisi olmayabilir. Örnek: bir yolu otobüs + yürüyüşle 20 + 15 = 35 dakikada, taksiyle 30 dakikada gidebilen kişi 30 dakikayı seçer"
+   }
+  ],
+  "ipuclari": [
+   "Geri dönüş süreleri de toplam süreye girer; feneri geri getirecek kişiyi farklı biçimlerde seçip toplam süreleri karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk geçiş ve dönüş",
+    "aciklama": "1 ve 2 geçer (2 dk), 1 geri döner (1 dk).",
+    "islem": "2 + 1 = 3 dk"
+   },
+   {
+    "baslik": "Yavaşlar birlikte",
+    "aciklama": "5 ve 10 birlikte geçer (10 dk); karşıdaki 2 geri döner (2 dk).",
+    "islem": "10 + 2 = 12 dk"
+   },
+   {
+    "baslik": "Son geçiş",
+    "aciklama": "1 ve 2 son kez geçer.",
+    "islem": "2 dk"
+   },
+   {
+    "baslik": "Topla ve karşılaştır",
+    "aciklama": "3 + 12 + 2 = 17; diğer stratejiler 18–24 dk.",
+    "islem": "En kısa 17 dk"
+   }
+  ],
+  "puf": "Köprü sorusunda en yavaş iki kişiyi aynı geçişte götürüp geri dönüşleri hızlı kişilere yaptırmak süreyi azaltır; stratejileri tek tek karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-RTB-09 (optimizasyon) · fenerli köprü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

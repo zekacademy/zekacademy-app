@@ -1,0 +1,1111 @@
+[
+ {
+  "id": "tytmat-olasiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Basit Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "İki zar atılışında örnek uzayı sayıp toplam koşulunu sağlayan sonuçların olasılığını bulur.",
+  "tipId": "olb-temel",
+  "tip": "Örnek uzay ve olay",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Biri kırmızı, diğeri mavi olan iki hilesiz zar aynı anda atılıyor.\nÜst yüzlerde görülen sayıların toplamının 9 ya da daha büyük olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "5/18",
+   "B": "2/7",
+   "C": "4/11",
+   "D": "5/12",
+   "E": "13/18"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "5/18"
+  },
+  "celdiriciler": {
+   "B": "Zarları ayırt edilmez sayıp 21 sonuçtan 6’sını (6/21) almış; (3, 6) ile (6, 3) gibi sonuçlar ayrı sonuçlardır.",
+   "C": "2’den 12’ye kadar 11 toplamı eşit olasılıklı sanmış; 9, 10, 11 ve 12 olmak üzere 4/11 bulmuş.",
+   "D": "“9 ya da daha büyük” yerine “8 ya da daha büyük” sonuçları (15/36) saymış.",
+   "E": "Toplamın 9’dan küçük olma olasılığını (26/36) bulup istenen olayın tümleyenini yazmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Toplamın en az 9 olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   }
+  ],
+  "ipuclari": [
+   "Zarlar ayırt edilebildiğine göre örnek uzayda kaç sonuç vardır? Toplamı koşula uyanları gruplayarak say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Örnek uzay",
+    "aciklama": "Her zar 6 sonuç verir ve zarlar ayırt edilebilir.",
+    "islem": "6 × 6 = 36 sonuç"
+   },
+   {
+    "baslik": "İstenen sonuçlar",
+    "aciklama": "Toplam 9: 4, toplam 10: 3, toplam 11: 2, toplam 12: 1 sonuç.",
+    "islem": "4 + 3 + 2 + 1 = 10 sonuç"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen sonuç sayısını örnek uzaya böl.",
+    "islem": "10/36 = 5/18"
+   }
+  ],
+  "puf": "İki zarın sonuçları sıralı ikililerdir; 36 sonuç eşit olasılıklıdır, toplamlar eşit olasılıklı değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-01 (örnek uzay, iki zar) · toplam 9 ya da daha büyük",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Basit Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "Art arda atılan paranın örnek uzayını sayıp tam iki kez tura gelme olasılığını bulur.",
+  "tipId": "olb-temel",
+  "tip": "Örnek uzay ve olay",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Hilesiz bir madeni para art arda 4 kez atılıyor.\nBu atışların tam 2 tanesinde tura gelme olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/16",
+   "B": "1/8",
+   "C": "1/4",
+   "D": "3/8",
+   "E": "1/2"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "3/8"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca TTYY dizilişini saymış: 1/16.",
+   "B": "Yalnızca TTYY ve YYTT dizilişlerini saymış: 2/16.",
+   "C": "Yalnızca iki turanın geldiğini (1/2)² olarak hesaplayıp yazıları ve turaların yerini katmamış.",
+   "E": "Dört atışın yarısında tura geleceğini düşünüp 1/2 almış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "4 atışta tam iki tura gelme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   }
+  ],
+  "ipuclari": [
+   "Her atışta iki sonuç olduğuna göre 4 atışın örnek uzayı kaç sonuçludur? İki turanın yeri kaç farklı biçimde seçilebilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Örnek uzay",
+    "aciklama": "Her atış 2 sonuçlu; 4 atış art arda.",
+    "islem": "2 × 2 × 2 × 2 = 16 sonuç"
+   },
+   {
+    "baslik": "İstenen sonuçlar",
+    "aciklama": "4 atıştan 2’sinin yeri tura için seçilir.",
+    "islem": "C(4, 2) = 6 sonuç"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen sonuç sayısını örnek uzaya böl.",
+    "islem": "6/16 = 3/8"
+   }
+  ],
+  "puf": "Art arda atışlarda örnek uzay 2ⁿ sonuçludur; turaların yerini seçmek kombinasyonla sayılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-01 (örnek uzay, para) · 4 atışta tam 2 tura",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Basit Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "Numaralı kartlardan asal numaralı olanları sayıp basit olayın olasılığını bulur.",
+  "tipId": "olb-temel",
+  "tip": "Örnek uzay ve olay",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir torbada 1’den 30’a kadar numaralanmış, birbirinin aynı görünen 30 kart vardır. Torbadan rastgele bir kart çekiliyor.\nÇekilen kartın numarasının asal sayı olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/3",
+   "B": "11/30",
+   "C": "1/2",
+   "D": "19/30",
+   "E": "2/3"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1/3"
+  },
+  "celdiriciler": {
+   "B": "1’i de asal sayı sayıp 11 kart bulmuş.",
+   "C": "Tek sayıları asal sanıp 15 kart saymış.",
+   "D": "Bileşik (asal olmayan, 1’den büyük) sayıların olasılığını bulmuş: 19/30.",
+   "E": "Asal olmayan sayıların olasılığını (20/30) bulup tümleyeni yazmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kart numarasının asal olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Asal sayı",
+    "ifade": "1’den büyük olup yalnızca 1’e ve kendisine bölünebilen doğal sayılara asal sayı denir. Örnek: 2, 3, 5, 7, 11 asaldır; 1 ve 9 asal değildir"
+   },
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   }
+  ],
+  "ipuclari": [
+   "1’den 30’a kadar hangi sayıların asal olduğunu tek tek belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asalları yaz",
+    "aciklama": "1’den 30’a kadar asal sayılar.",
+    "islem": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29 → 10 sayı"
+   },
+   {
+    "baslik": "Örnek uzay",
+    "aciklama": "Torbada 30 kart var.",
+    "islem": "30 sonuç"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "Asal sayıların adedini kart sayısına böl.",
+    "islem": "10/30 = 1/3"
+   }
+  ],
+  "puf": "Asal sayılar listesini küçük sayılardan başlayıp 1’i dışarıda bırakarak yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-01 (numaralı kart) · asal numara",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Art Arda Çekiliş",
+  "k": "matd|Olasılık",
+  "kazanim": "Geri konmadan art arda çekilişte üç farklı renk gelme olasılığını sıraları da hesaba katarak bulur.",
+  "tipId": "olb-ardisik",
+  "tip": "Art arda çekiliş",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir torbada 4 beyaz, 3 yeşil ve 2 mor bilye vardır. Torbadan art arda, geri konmadan 3 bilye çekiliyor.\nÇekilen üç bilyenin üçünün de farklı renkte olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/21",
+   "B": "3/28",
+   "C": "16/81",
+   "D": "2/9",
+   "E": "2/7"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "2/7"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca beyaz–yeşil–mor sırasını hesaplamış; 3! = 6 farklı sırayı atlamış: 4/9 × 3/8 × 2/7.",
+   "B": "Pay yerine renk sayılarını toplamış: (4 + 3 + 2)/C(9, 3).",
+   "C": "Bilyeleri geri koyarak çektiğini düşünüp paydayı 9 almış: 6 × (4 × 3 × 2)/9³.",
+   "D": "Her çekilişte üç rengi eşit olasılıklı sanıp 3!/3³ hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Üç bilyenin de farklı renkte olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Geri konarak ve geri konmadan çekiliş",
+    "ifade": "Çekilen nesne geri konursa her çekilişte seçenekler aynı kalır; geri konmazsa torbadaki sayı azalır. Örnek: 3 kırmızı, 2 mavi bilyeden art arda iki çekilişte ikisinin kırmızı olması geri konarak (3/5)² = 9/25, geri konmadan 3/5 × 2/4 = 3/10’dur"
+   },
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   }
+  ],
+  "ipuclari": [
+   "Üç farklı rengin çekilişlere hangi sıralarla dağılabileceğini ve her sırada olasılığın ne olduğunu düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir sıranın olasılığı",
+    "aciklama": "Beyaz, yeşil, mor sırasıyla; her çekilişte torbadaki sayı azalır.",
+    "islem": "4/9 × 3/8 × 2/7 = 24/504 = 1/21"
+   },
+   {
+    "baslik": "Sıra sayısı",
+    "aciklama": "Üç rengin 3 çekilişe dağılma biçimi; her sıranın olasılığı aynıdır.",
+    "islem": "3! = 6"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Sıralar birbirinden ayrı olaylardır, olasılıkları toplanır.",
+    "islem": "6 × 1/21 = 6/21 = 2/7"
+   }
+  ],
+  "puf": "Geri konmadan çekimde her aşamada payda bir azalır; renklerin farklı sıraları ayrı ayrı sayılıp toplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-02 (geri konmadan çekiliş) · üç farklı renk",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Bağımsız Olaylar",
+  "k": "matd|Olasılık",
+  "kazanim": "Bağımsız üç olayda “en az ikisi” olayını tam iki ve üçü de durumlarına ayırarak olasılığını bulur.",
+  "tipId": "olb-bagimsiz",
+  "tip": "Bağımsız olaylar ve en az bir",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Zeynep, Ahmet ve Deniz aynı gün ayrı salonlarda ehliyet sınavına giriyor. Sınavı geçme olasılıkları sırasıyla 4/5, 3/4 ve 2/3’tür; üç kişinin sınav sonuçları birbirini etkilememektedir.\nBu üç kişiden en az ikisinin sınavı geçme olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/20",
+   "B": "2/5",
+   "C": "13/30",
+   "D": "5/6",
+   "E": "59/60"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "5/6"
+  },
+  "celdiriciler": {
+   "A": "“En az ikisi” yerine yalnızca birinin geçme olasılığını bulmuş.",
+   "B": "Yalnızca üçünün de geçme olasılığını bulmuş: 4/5 × 3/4 × 2/3.",
+   "C": "“En az iki” yerine “tam iki kişi” geçme olasılığını bulmuş; üçünün de geçtiği durumu eklememiş.",
+   "E": "“En az biri geçer” olasılığını bulmuş: 1 − 1/5 × 1/4 × 1/3."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "En az iki kişinin geçme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Bağımsız olaylar",
+    "ifade": "Birbirini etkilemeyen olayların ikisinin birden olma olasılığı olasılıkların çarpımıdır. Örnek: olasılıkları 1/2 ve 1/3 olan iki bağımsız olayın ikisinin birden olma olasılığı 1/6’dır"
+   },
+   {
+    "ad": "Olayları toplama",
+    "ifade": "Aynı anda gerçekleşemeyen iki olayın “ya da” ile birleşiminin olasılığı olasılıkların toplamıdır. Örnek: zarda 1 gelmesi ile 6 gelmesi birlikte olamaz; biri gelme olasılığı 1/6 + 1/6 = 1/3’tür"
+   }
+  ],
+  "ipuclari": [
+   "“En az iki” olayını kaç ayrı duruma bölebilirsin? Her durumun olasılığını ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Durumları ayır",
+    "aciklama": "En az iki kişi geçer: tam iki kişi geçer ya da üçü de geçer.",
+    "islem": "2 grup durum"
+   },
+   {
+    "baslik": "Üçü de geçer",
+    "aciklama": "Bağımsız olaylar; olasılıklar çarpılır.",
+    "islem": "4/5 × 3/4 × 2/3 = 2/5"
+   },
+   {
+    "baslik": "Tam iki kişi geçer",
+    "aciklama": "Üç ayrı durum: Deniz kalır, Ahmet kalır ya da Zeynep kalır.",
+    "islem": "4/5 × 3/4 × 1/3 + 4/5 × 1/4 × 2/3 + 1/5 × 3/4 × 2/3 = 6/30 + 4/30 + 3/30 = 13/30"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Durumlar aynı anda olamaz; olasılıkları topla.",
+    "islem": "2/5 + 13/30 = 12/30 + 13/30 = 25/30 = 5/6"
+   }
+  ],
+  "puf": "“En az iki” = “tam iki” ya da “üçü de”; bağımsız olaylarda her durumun olasılığı çarpılır, durumlar toplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-03 (bağımsız olaylar) · ehliyet sınavında en az ikisinin geçmesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Kombinasyonla Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Aynı anda yapılan seçimde iki ayrı grubun durumlarını kombinasyonla sayarak olasılığı bulur.",
+  "tipId": "olb-sayma",
+  "tip": "Kombinasyonla olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir mimarlık ofisinde 5 mühendis ve 4 mimar çalışmaktadır. Bu 9 kişi arasından, aynı anda rastgele 3 kişi seçilerek bir heyet oluşturuluyor (heyette görev ayrımı yoktur, sıra önemsizdir).\nHeyetteki üç kişinin de aynı meslekten olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/21",
+   "B": "5/42",
+   "C": "1/6",
+   "D": "4/9",
+   "E": "5/6"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1/6"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca üç mimarın seçildiği durumu saymış: C(4, 3)/C(9, 3).",
+   "B": "Yalnızca üç mühendisin seçildiği durumu saymış: C(5, 3)/C(9, 3).",
+   "D": "Yalnızca ilk iki kişinin aynı meslekten olma olasılığını bulmuş.",
+   "E": "Üç kişinin aynı meslekten olmama olasılığını (tümleyenini) bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Heyetin üç üyesinin de aynı meslekten olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyonla olasılık",
+    "ifade": "Sırasız ya da aynı anda yapılan seçimlerde durum sayıları C(n, r) ile bulunur. Örnek: 5 bilyeden 2’sinin seçilmesi C(5, 2) = 10 biçimdedir"
+   },
+   {
+    "ad": "Olayları toplama",
+    "ifade": "Aynı anda gerçekleşemeyen iki olayın “ya da” ile birleşiminin olasılığı olasılıkların toplamıdır. Örnek: zarda 1 gelmesi ile 6 gelmesi birlikte olamaz; biri gelme olasılığı 1/6 + 1/6 = 1/3’tür"
+   }
+  ],
+  "ipuclari": [
+   "Aynı meslekten olmanın hangi iki ayrı biçimde gerçekleşebileceğini bul; tüm seçimlerin sayısıyla karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm seçimler",
+    "aciklama": "9 kişiden 3 kişi, aynı anda.",
+    "islem": "C(9, 3) = 84"
+   },
+   {
+    "baslik": "İstenen seçimler",
+    "aciklama": "Üçü de mühendis ya da üçü de mimar.",
+    "islem": "C(5, 3) + C(4, 3) = 10 + 4 = 14"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen seçimleri tüm seçimlere böl.",
+    "islem": "14/84 = 1/6"
+   }
+  ],
+  "puf": "Aynı anda seçimde pay ve payda kombinasyonla, ikisi de sırasız sayılır; “ya da” durumları toplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-04 (kombinasyonla olasılık) · heyetin tamamı aynı meslekten",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · En Az Bir",
+  "k": "matd|Olasılık",
+  "kazanim": "Bağımsız denemelerde “en az bir” olayının olasılığını tümleyen olayla bulur.",
+  "tipId": "olb-bagimsiz",
+  "tip": "Bağımsız olaylar ve en az bir",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bilgi testinde her sorunun 4 şıkkı vardır ve şıklardan yalnızca biri doğrudur. Bir öğrenci 3 soruyu şıkları rastgele işaretleyerek cevaplıyor; soruların cevapları birbirini etkilemiyor.\nÖğrencinin bu 3 sorudan en az birini doğru cevaplama olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/64",
+   "B": "9/64",
+   "C": "27/64",
+   "D": "37/64",
+   "E": "63/64"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "37/64"
+  },
+  "celdiriciler": {
+   "A": "Üç sorunun da doğru olma olasılığını bulmuş: (1/4)³.",
+   "B": "“En az bir” yerine “tam iki soru doğru” olasılığını bulmuş: 3 × (1/4)² × 3/4.",
+   "C": "Hiç doğru olmama olasılığını bulup tümleyeni almamış: (3/4)³.",
+   "E": "Hiç doğru olmama olasılığında yanlış şık olasılığı 3/4 yerine 1/4 alıp 1 − (1/4)³ hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "En az bir sorunun doğru cevaplanma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Tümleyen olay",
+    "ifade": "Bir olayın olmama olasılığı 1 eksi olma olasılığıdır; “en az bir” olayının tümleyeni “hiç olmaması”dır. Örnek: hilesiz 3 paranın en az birinin yazı gelme olasılığı 1 − (1/2)³ = 7/8"
+   },
+   {
+    "ad": "Bağımsız olaylar",
+    "ifade": "Birbirini etkilemeyen olayların ikisinin birden olma olasılığı olasılıkların çarpımıdır. Örnek: olasılıkları 1/2 ve 1/3 olan iki bağımsız olayın ikisinin birden olma olasılığı 1/6’dır"
+   }
+  ],
+  "ipuclari": [
+   "“En az bir doğru” olayının tersi olan olayın olasılığı kolay mı hesaplanır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir soruda yanlış",
+    "aciklama": "Rastgele işaretlemede yanlış şık seçme olasılığı.",
+    "islem": "3/4"
+   },
+   {
+    "baslik": "Üçünde de yanlış",
+    "aciklama": "Sorular bağımsız; olasılıklar çarpılır.",
+    "islem": "(3/4)³ = 27/64"
+   },
+   {
+    "baslik": "Tümleyen",
+    "aciklama": "En az bir doğru = 1 − hiç doğru yok.",
+    "islem": "1 − 27/64 = 37/64"
+   }
+  ],
+  "puf": "“En az bir” görünce “hiç yok” olasılığını bul ve 1’den çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-03 (en az bir, tümleyen) · 4 şıklı testte rastgele işaretleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Geometrik Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Dilimlerin merkez açılarıyla orantılı olasılığı toplam açıya oranlayarak bulur.",
+  "tipId": "olb-geometrik",
+  "tip": "Geometrik olasılık",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir çark, merkezi etrafında 5 dilime ayrılmıştır; dilimlerin merkez açıları sırasıyla 40°, 60°, 80°, 100° ve 80°’dir. Çark çevrilip bırakıldığında ibre, bir dilimde durur; ibrenin bir dilimde durma olasılığı o dilimin merkez açısıyla doğru orantılıdır (ibre dilim sınırında durmaz).\nİbrenin 40°’lik dilimde ya da 80°’lik dilimlerden birinde durma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4/9",
+   "B": "5/9",
+   "C": "3/5",
+   "D": "13/18",
+   "E": "7/9"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5/9"
+  },
+  "celdiriciler": {
+   "A": "İstenen olmayan dilimlerin (60° ve 100°) olasılığını bulmuş: 160/360.",
+   "C": "Dilimleri eşit olasılıklı sanmış: 5 dilimden 3’ü.",
+   "D": "100°’lik dilimde durmama olasılığını bulmuş: (360 − 100)/360.",
+   "E": "80°’lik dilimi üç kez sayıp (40 + 3 × 80)/360 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İbrenin istenen dilimlerde durma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Geometrik olasılık",
+    "ifade": "Rastgele bir noktanın bir bölgede olma olasılığı, o bölgenin ölçüsünün (alan ya da merkez açı) tüm bölgenin ölçüsüne oranıdır. Örnek: merkez açısı 90° olan dilimin olasılığı 90/360 = 1/4’tür"
+   },
+   {
+    "ad": "Olayları toplama",
+    "ifade": "Aynı anda gerçekleşemeyen iki olayın “ya da” ile birleşiminin olasılığı olasılıkların toplamıdır. Örnek: zarda 1 gelmesi ile 6 gelmesi birlikte olamaz; biri gelme olasılığı 1/6 + 1/6 = 1/3’tür"
+   }
+  ],
+  "ipuclari": [
+   "Dilimlerin sayısı mı yoksa açıları mı olasılığı belirliyor? İstenen dilimlerin açılarını topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İstenen dilimler",
+    "aciklama": "40°’lik dilim ve 80°’lik iki dilim.",
+    "islem": "40° + 80° + 80° = 200°"
+   },
+   {
+    "baslik": "Tüm çark",
+    "aciklama": "Dilimlerin açıları toplamı bir tam turdur.",
+    "islem": "360°"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "İstenen açıyı toplam açıya böl.",
+    "islem": "200/360 = 5/9"
+   }
+  ],
+  "puf": "Olasılık dilim sayısına değil, dilimin merkez açısına bağlıdır; açıları toplayıp 360°’ye böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-05 (çark, merkez açı oranı) · 40°, 60°, 80°, 100°, 80° dilimleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Geometrik Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Eş merkezli dairelerde alan oranıyla geometrik olasılığı bulur.",
+  "tipId": "olb-geometrik",
+  "tip": "Geometrik olasılık",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Yarıçapları 2 cm, 4 cm ve 6 cm olan eş merkezli üç çember, bir hedef tahtasını oluşturuyor; tahta, yarıçapı 6 cm olan dairesel bölgedir. Bir ok, tahtanın her noktasına eşit olasılıkla saplanıyor; okun çizgiler üzerine saplanma olasılığı sıfırdır.\nOkun yarıçapı 4 cm olan dairenin içine saplanma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/9",
+   "B": "1/3",
+   "C": "4/9",
+   "D": "2/3",
+   "E": "8/9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4/9"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca en içteki dairenin (r = 2 cm) olasılığını bulmuş: 4π/36π.",
+   "B": "Yalnızca ortadaki halkanın alanını almış: (16π − 4π)/36π.",
+   "D": "Yarıçap oranını (4/6) olasılık sanmış; alan oranı yarıçapların karelerinin oranıdır.",
+   "E": "En içteki daire dışında kalan bölgenin alanını almış: (36π − 4π)/36π."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Okun yarıçapı 4 cm olan dairenin içine saplanma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Geometrik olasılık",
+    "ifade": "Rastgele bir noktanın bir bölgede olma olasılığı, o bölgenin ölçüsünün (alan ya da merkez açı) tüm bölgenin ölçüsüne oranıdır. Örnek: merkez açısı 90° olan dilimin olasılığı 90/360 = 1/4’tür"
+   }
+  ],
+  "ipuclari": [
+   "Olasılık hangi iki büyüklüğün oranıdır? Alan formülünde yarıçap nasıl yer alır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İstenen bölgenin alanı",
+    "aciklama": "Yarıçapı 4 cm olan daire.",
+    "islem": "π × 4² = 16π"
+   },
+   {
+    "baslik": "Tüm tahtanın alanı",
+    "aciklama": "Yarıçapı 6 cm olan daire.",
+    "islem": "π × 6² = 36π"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "Alanları oranla.",
+    "islem": "16π/36π = 4/9"
+   }
+  ],
+  "puf": "Geometrik olasılıkta alanlar oranlanır; yarıçap oranı değil, yarıçapların kareleri oranı alınır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-05 (hedef tahtası, alan oranı) · yarıçapları 2, 4, 6 cm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Basit Olay",
+  "k": "matd|Olasılık",
+  "kazanim": "Zar ve paranın birlikte atıldığı deneyde örnek uzayı sayıp birleşik bir olayın olasılığını bulur.",
+  "tipId": "olb-temel",
+  "tip": "Örnek uzay ve olay",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Hilesiz bir zar ile hilesiz bir madeni para birlikte atılıyor.\n(Zarın 4’ten büyük gelmesi ve paranın tura gelmesi) olayı ya da (zarın çift gelmesi ve paranın yazı gelmesi) olayından en az birinin gerçekleşme olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/6",
+   "B": "5/12",
+   "C": "7/12",
+   "D": "2/3",
+   "E": "5/6"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "5/12"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca ilk olayı (zar 4’ten büyük ve tura) saymış: 2/12.",
+   "C": "Olayın olasılığını bulup tümleyenini yazmış: 1 − 5/12.",
+   "D": "Paranın sonucunu hiç kullanmayıp zarın “4’ten büyük ya da çift” gelme olasılığını bulmuş.",
+   "E": "Zar olaylarının olasılıklarını (1/3 + 1/2) toplamış; paranın sonucunu ve ortak durumu hesaba katmamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "İstenen iki durumdan birinin gerçekleşme olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   },
+   {
+    "ad": "Olayları toplama",
+    "ifade": "Aynı anda gerçekleşemeyen iki olayın “ya da” ile birleşiminin olasılığı olasılıkların toplamıdır. Örnek: zarda 1 gelmesi ile 6 gelmesi birlikte olamaz; biri gelme olasılığı 1/6 + 1/6 = 1/3’tür"
+   }
+  ],
+  "ipuclari": [
+   "Zar ve paranın birlikte oluşturduğu örnek uzayı sırala; her koşul için paranın sonucunu da kontrol et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Örnek uzay",
+    "aciklama": "Zarın 6, paranın 2 sonucu var.",
+    "islem": "6 × 2 = 12 sonuç"
+   },
+   {
+    "baslik": "Birinci durum",
+    "aciklama": "Zar 5 ya da 6 ve para tura.",
+    "islem": "(5, T), (6, T) → 2 sonuç"
+   },
+   {
+    "baslik": "İkinci durum",
+    "aciklama": "Zar 2, 4 ya da 6 ve para yazı; paranın sonucu farklı olduğundan iki durum ayrıdır.",
+    "islem": "(2, Y), (4, Y), (6, Y) → 3 sonuç"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "Sonuçları topla, örnek uzaya böl.",
+    "islem": "(2 + 3)/12 = 5/12"
+   }
+  ],
+  "puf": "Birlikte yapılan deneylerde örnek uzay sonuçların çarpımıdır; durumların aynı anda olup olmadığını kontrol ederek say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-01 (örnek uzay, zar ve para) · iki ayrı koşullu olay",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Kombinasyonla Olasılık",
+  "k": "matd|Olasılık",
+  "kazanim": "Kura çekilişinde “en az bir bilet kazanır” olasılığını kombinasyon ve tümleyen olayla bulur.",
+  "tipId": "olb-sayma",
+  "tip": "Kombinasyonla olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir okulun kermesinde 1’den 20’ye kadar numaralanmış 20 bilet satılmıştır ve her bilet bir kişiye aittir. Kuradan 3 ödül verilecektir: ödüllü biletler, torbadan geri konmadan art arda 3 bilet çekilerek belirlenir (ödüllerin sırası önemli değildir, aynı bilet iki ödül kazanamaz).\nAli’nin 2 bileti olduğuna göre Ali’nin en az bir ödül kazanma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/190",
+   "B": "1/10",
+   "C": "51/190",
+   "D": "271/1000",
+   "E": "27/95"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "27/95"
+  },
+  "celdiriciler": {
+   "A": "Ali’nin iki biletinin de ödül kazanma olasılığını bulmuş: C(2, 2) × 18/C(20, 3).",
+   "B": "Tek çekilişteki olasılığı (2/20) vermiş.",
+   "C": "“En az bir” yerine “tam bir ödül” olasılığını bulmuş: 2 × C(18, 2)/C(20, 3).",
+   "D": "Biletleri geri koyarak çekilmiş gibi 1 − (18/20)³ hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Ali’nin en az bir ödül kazanma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyonla olasılık",
+    "ifade": "Sırasız ya da aynı anda yapılan seçimlerde durum sayıları C(n, r) ile bulunur. Örnek: 5 bilyeden 2’sinin seçilmesi C(5, 2) = 10 biçimdedir"
+   },
+   {
+    "ad": "Tümleyen olay",
+    "ifade": "Bir olayın olmama olasılığı 1 eksi olma olasılığıdır; “en az bir” olayının tümleyeni “hiç olmaması”dır. Örnek: hilesiz 3 paranın en az birinin yazı gelme olasılığı 1 − (1/2)³ = 7/8"
+   }
+  ],
+  "ipuclari": [
+   "Ali’nin biletleri hangi çekiliş sonuçlarında hiç yer almaz?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm çekilişler",
+    "aciklama": "20 biletten 3 bilet, sıra önemsiz.",
+    "islem": "C(20, 3) = 1140"
+   },
+   {
+    "baslik": "Ali hiç kazanmaz",
+    "aciklama": "3 ödüllü bilet Ali’nin olmayan 18 biletten çıkar.",
+    "islem": "C(18, 3) = 816"
+   },
+   {
+    "baslik": "Hiç kazanmama olasılığı",
+    "aciklama": "Sayıları oranla.",
+    "islem": "816/1140 = 68/95"
+   },
+   {
+    "baslik": "Tümleyen",
+    "aciklama": "En az bir = 1 − hiç kazanmama.",
+    "islem": "1 − 68/95 = 27/95"
+   }
+  ],
+  "puf": "“En az bir” kazanmanın tersi “hiç kazanmama”dır; aynı çekilişte pay ve paydayı sırasız (kombinasyonla) say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-04 (kombinasyonla olasılık, tümleyen) · kura",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Hikâyeli",
+  "k": "matd|Olasılık",
+  "kazanim": "Koşullu şifre sayısını sayma ilkesiyle bulup iki denemede doğru tahmin olasılığını hesaplar.",
+  "tipId": "olb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Mert, kasasının 4 haneli şifresini unutmuştur. Şifrenin rakamlarının 1, 2, 3, 4, 5, 6 rakamlarından seçildiğini, birbirinden farklı olduğunu, ilk rakamının çift ve son rakamının tek olduğunu hatırlamaktadır. Bu koşullara uyan şifreler arasından rastgele iki farklı şifreyi deneyecektir (aynı şifreyi iki kez denemeyecektir).\nBuna göre Mert’in iki denemeden en az birinde şifreyi bulma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1/180",
+   "B": "1/162",
+   "C": "1/108",
+   "D": "1/90",
+   "E": "1/54"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1/54"
+  },
+  "celdiriciler": {
+   "A": "İlk ve son rakam koşullarını uygulamadan yalnızca rakamların farklı olmasıyla 6 × 5 × 4 × 3 = 360 şifre sayıp 2/360 bulmuş.",
+   "B": "Rakamların tekrar edebileceğini düşünüp 3 × 6 × 6 × 3 = 324 şifre sayıp 2/324 bulmuş.",
+   "C": "Yalnızca bir deneme hakkı olduğunu düşünüp 1/108 bulmuş.",
+   "D": "İlk rakamın çift olma koşulunu unutup yalnızca son rakamın tek olmasını uygulamış (180 şifre): 2/180."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "İki denemeden birinde doğru şifreyi bulma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   },
+   {
+    "ad": "Koşullu şifre sayma",
+    "ifade": "Önce koşullu basamakları doldur, sonra kalan basamakları kalan rakamlarla sırala; seçenek sayıları çarpılır. Örnek: rakamları farklı ve ilk rakamı 1 ya da 2 olan 3 basamaklı şifreler (rakamlar 1, 2, 3, 4) için 2 × 3 × 2 = 12 şifre vardır"
+   }
+  ],
+  "ipuclari": [
+   "Mert’in hatırladığı koşullara uyan kaç farklı şifre vardır? Sonra denemelerin hangi şifrelere denk geldiğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Koşullu şifre sayısı",
+    "aciklama": "İlk rakam çift (2, 4, 6), son rakam tek (1, 3, 5), ortadaki iki rakam kalan 4 rakamdan sıralı.",
+    "islem": "3 × 3 × 4 × 3 = 108"
+   },
+   {
+    "baslik": "İki farklı deneme",
+    "aciklama": "Aranan şifre bu 108 şifreden biri; Mert 2 farklı şifre dener.",
+    "islem": "2 şifre"
+   },
+   {
+    "baslik": "Olasılık",
+    "aciklama": "Denenen şifre sayısını tüm şifrelere oranla.",
+    "islem": "2/108 = 1/54"
+   }
+  ],
+  "puf": "Önce koşullara uyan tüm şifrelerin sayısını bul; farklı iki deneme olduğundan deneme sayısı paya yazılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-06 (şifre tahmini) · ilk rakam çift, son rakam tek, iki deneme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Yeni Nesil",
+  "k": "matd|Olasılık",
+  "kazanim": "Çok aşamalı bir oyun kuralında her durumun olasılığını bulup toplam kazanma olasılığını hesaplar.",
+  "tipId": "olb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü olasılık",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir oyunda oyuncu, biri kırmızı biri mavi olan iki hilesiz zarı birlikte atar ve üst yüzlerdeki sayıların toplamına bakılır. Oyunun kuralı şöyledir:\n• Toplam 8 ya da daha büyükse oyuncu oyunu kazanır.\n• Toplam 4, 5, 6 ya da 7 ise oyuncu iki zarı bir kez daha atar; bu ikinci atışta toplam 7 ya da daha büyükse oyunu kazanır, değilse kaybeder.\n• Toplam 4’ten küçükse oyuncu oyunu kaybeder.\nBuna göre bir oyuncunun oyunu kazanma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "35/144",
+   "B": "5/12",
+   "C": "7/12",
+   "D": "17/24",
+   "E": "109/144"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "17/24"
+  },
+  "celdiriciler": {
+   "A": "İki aşamayı da çarpıp 5/12 × 7/12 hesaplamış.",
+   "B": "Yalnızca ilk atıştaki kazanma olasılığını bulmuş; ikinci atış hakkını atlamış.",
+   "C": "Yalnızca ikinci atışın kazanma olasılığını bulmuş.",
+   "E": "Toplamı 4’ten küçük olanların da ikinci atış hakkı olduğunu sanmış: 5/12 + 7/12 × 7/12."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Oyunu kazanma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Olasılık",
+    "ifade": "Her sonucun eşit şansla gerçekleştiği deneylerde olasılık = istenen sonuç sayısı / tüm sonuç sayısıdır. Örnek: hilesiz bir zarda çift gelme olasılığı 3/6 = 1/2"
+   },
+   {
+    "ad": "Olayları toplama",
+    "ifade": "Aynı anda gerçekleşemeyen iki olayın “ya da” ile birleşiminin olasılığı olasılıkların toplamıdır. Örnek: zarda 1 gelmesi ile 6 gelmesi birlikte olamaz; biri gelme olasılığı 1/6 + 1/6 = 1/3’tür"
+   }
+  ],
+  "ipuclari": [
+   "İlk atışın sonucuna göre oyunun kaç farklı yönde ilerlediğini ayır; her yönün olasılığını ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk atışta kazanma",
+    "aciklama": "Toplam 8, 9, 10, 11, 12: 5 + 4 + 3 + 2 + 1 = 15 sonuç.",
+    "islem": "15/36 = 5/12"
+   },
+   {
+    "baslik": "İkinci atışa kalma",
+    "aciklama": "Toplam 4, 5, 6, 7: 3 + 4 + 5 + 6 = 18 sonuç.",
+    "islem": "18/36 = 1/2"
+   },
+   {
+    "baslik": "İkinci atışta kazanma",
+    "aciklama": "İkinci atışta toplam 7 ya da daha büyük: 6 + 5 + 4 + 3 + 2 + 1 = 21 sonuç.",
+    "islem": "21/36 = 7/12"
+   },
+   {
+    "baslik": "Toplam kazanma",
+    "aciklama": "İki ayrı yoldan kazanma olasılıkları toplanır.",
+    "islem": "5/12 + 1/2 × 7/12 = 10/24 + 7/24 = 17/24"
+   }
+  ],
+  "puf": "Çok aşamalı kurallarda her yolu ayrı ayrı yaz: yol üzerindeki olasılıklar çarpılır, kazanan yollar toplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-06 (yeni nesil, oyun kuralı) · iki aşamalı zar oyunu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-olasiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Olasılık · Öncüllü",
+  "k": "matd|Olasılık",
+  "kazanim": "Geri konmadan, aynı anda ve art arda çekiliş durumlarının olasılıklarını ayrı ayrı hesaplayıp öncülleri değerlendirir.",
+  "tipId": "olb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü olasılık",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir torbada 4 kırmızı ve 2 mavi bilye vardır. Bu torbadan aşağıdaki çekilişler ayrı ayrı yapılıyor.\nI. Art arda, geri konmadan 2 bilye çekiliyor; çekilenlerin en az birinin mavi olması.\nII. Aynı anda 3 bilye çekiliyor; çekilenlerin 2’sinin kırmızı, 1’inin mavi olması.\nIII. Aynı anda 2 bilye çekiliyor; çekilenlerin farklı renkte olması.\nBu olayların hangilerinin olasılığı 3/5’tir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’yi yalnızca kırmızı–kırmızı–mavi sırası için hesaplamış: 4/6 × 3/5 × 2/4 = 1/5; mavinin yerini seçmeyi atlamış.",
+   "B": "I’de bilyeleri geri koymuş gibi 1 − (2/3)² = 5/9 bulup I’i yanlış saymış.",
+   "D": "II’yi yalnızca bir sırayla hesaplayıp 1/5 bulmuş; III’te “farklı renk” yerine “en az bir mavi” hesabıyla 1 − 6/15 = 3/5 bulmuş.",
+   "E": "III’te “farklı renk” yerine “en az bir mavi” olasılığını (3/5) hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Olasılığı 3/5 olan olaylar.",
+  "bilgi": [
+   {
+    "ad": "Geri konarak ve geri konmadan çekiliş",
+    "ifade": "Çekilen nesne geri konursa her çekilişte seçenekler aynı kalır; geri konmazsa torbadaki sayı azalır. Örnek: 3 kırmızı, 2 mavi bilyeden art arda iki çekilişte ikisinin kırmızı olması geri konarak (3/5)² = 9/25, geri konmadan 3/5 × 2/4 = 3/10’dur"
+   },
+   {
+    "ad": "Kombinasyonla olasılık",
+    "ifade": "Sırasız ya da aynı anda yapılan seçimlerde durum sayıları C(n, r) ile bulunur. Örnek: 5 bilyeden 2’sinin seçilmesi C(5, 2) = 10 biçimdedir"
+   },
+   {
+    "ad": "Tümleyen olay",
+    "ifade": "Bir olayın olmama olasılığı 1 eksi olma olasılığıdır; “en az bir” olayının tümleyeni “hiç olmaması”dır. Örnek: hilesiz 3 paranın en az birinin yazı gelme olasılığı 1 − (1/2)³ = 7/8"
+   }
+  ],
+  "ipuclari": [
+   "Her çekilişte tüm durumların sayısını ve istenen durumların sayısını ayrı bul; çekiliş türünün (geri konmadan art arda / aynı anda) olasılığı nasıl etkilediğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I",
+    "aciklama": "Hiç mavi gelmeme olasılığı 4/6 × 3/5 = 2/5; tümleyeni alınır.",
+    "islem": "1 − 2/5 = 3/5"
+   },
+   {
+    "baslik": "II",
+    "aciklama": "Aynı anda 3 bilye; 2 kırmızı ve 1 mavi seçimi.",
+    "islem": "C(4, 2) × C(2, 1)/C(6, 3) = 12/20 = 3/5"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "Aynı anda 2 bilye; 1 kırmızı ve 1 mavi seçimi.",
+    "islem": "C(4, 1) × C(2, 1)/C(6, 2) = 8/15"
+   },
+   {
+    "baslik": "Karşılaştır",
+    "aciklama": "I ve II’nin değeri 3/5’tir; III 3/5 değildir.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Aynı anda çekilişte sıra önemsizdir; her öncülün olasılığını ayrı ayrı hesapla, çekiliş türünü (geri konmadan, aynı anda) belirle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-OLB-06 (öncüllü) · 4 kırmızı 2 mavi bilyeli torba, üç ayrı çekiliş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

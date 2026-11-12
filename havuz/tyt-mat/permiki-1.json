@@ -1,0 +1,1093 @@
+[
+ {
+  "id": "tytmat-permiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Saymanın Temel İlkesi",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Ardışık yolları çarpıp doğrudan yolları ekleyerek toplam yol sayısını bulur.",
+  "tipId": "pkb-sayma",
+  "tip": "Toplama ve çarpma ilkesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "A, B ve C kasabaları arasında yalnızca şu yollar vardır: A ile B arasında 3, B ile C arasında 4 ve A ile C arasında doğrudan 2 farklı yol. Yolların hepsi çift yönlüdür.\nBir sürücü A’dan C’ye gidecek; yolculuğunda B’ye uğrayabilir ya da uğramayabilir ve hiçbir kasabaya ikinci kez uğramayacaktır.\nBuna göre sürücü A’dan C’ye kaç farklı biçimde gidebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "12",
+   "C": "14",
+   "D": "18",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "14"
+  },
+  "celdiriciler": {
+   "A": "Tüm yol sayılarını toplamış: 3 + 4 + 2.",
+   "B": "Yalnızca B üzerinden gidilen yolları (3 × 4) saymış, doğrudan yolları unutmuş.",
+   "D": "Doğrudan 2 yolu B’den sonraki 4 yola ekleyip 3 × (4 + 2) hesaplamış.",
+   "E": "Tüm yol sayılarını çarpmış: 3 × 4 × 2."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "A’dan C’ye gidiş sayısı.",
+  "bilgi": [
+   {
+    "ad": "Toplama ve çarpma ilkesi",
+    "ifade": "Birbirini izleyen aşamalar çarpılır, birbirinin yerine seçilen durumlar toplanır. Örnek: 2 gömlek ve 3 pantolondan birer tane giymek 2 × 3 = 6 biçimde, bir gömlek ya da bir pantolon seçmek 2 + 3 = 5 biçimde olur"
+   }
+  ],
+  "ipuclari": [
+   "Yolculuğu hangi iki farklı biçimde yapabilirsin? Her biçimde seçenekleri ayrı say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "B’ye uğrayarak",
+    "aciklama": "A–B ve B–C yolları art arda kullanılır; aşamalar çarpılır.",
+    "islem": "3 × 4 = 12"
+   },
+   {
+    "baslik": "Doğrudan",
+    "aciklama": "A–C yollarından biri tek başına seçilir.",
+    "islem": "2"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "İki biçim birbirinin yerine seçilir; sayılar toplanır.",
+    "islem": "12 + 2 = 14"
+   }
+  ],
+  "puf": "Art arda yapılan aşamalar çarpılır, biri ya da diğeri seçilen durumlar toplanır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-01 (toplama–çarpma) · B’ye uğrayarak ya da doğrudan yol",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Saymanın Temel İlkesi",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Alternatif ve ardışık seçimleri içeren kombin sayısını toplama ve çarpma ilkeleriyle bulur.",
+  "tipId": "pkb-sayma",
+  "tip": "Toplama ve çarpma ilkesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir mağazada 3 farklı elbise, 5 farklı tişört, 4 farklı pantolon ve 3 farklı ayakkabı satılmaktadır.\nSelin ya tek bir elbise ya da bir tişört ile bir pantolon seçecek; ardından bir ayakkabı seçecektir.\nBuna göre Selin kaç farklı kombin oluşturabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "23",
+   "C": "29",
+   "D": "60",
+   "E": "69"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "69"
+  },
+  "celdiriciler": {
+   "B": "Ayakkabı seçimini hiç saymamış: 3 + 5 × 4.",
+   "C": "Ayakkabıyı yalnızca elbiseyle çarpmış: 3 × 3 + 5 × 4.",
+   "A": "Tüm sayıları toplamış: 3 + 5 + 4 + 3.",
+   "D": "Elbiseyi saymayıp yalnızca tişört–pantolon seçeneklerini ayakkabıyla çarpmış: 5 × 4 × 3."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "A": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Farklı kombin sayısı.",
+  "bilgi": [
+   {
+    "ad": "Toplama ve çarpma ilkesi",
+    "ifade": "Birbirini izleyen aşamalar çarpılır, birbirinin yerine seçilen durumlar toplanır. Örnek: 2 gömlek ve 3 pantolondan birer tane giymek 2 × 3 = 6 biçimde, bir gömlek ya da bir pantolon seçmek 2 + 3 = 5 biçimde olur"
+   }
+  ],
+  "ipuclari": [
+   "Giyim kısmını kaç farklı biçimde oluşturabilirsin? Ayakkabı seçimi bu seçimin hangi kısmını etkiler?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Giyim seçenekleri",
+    "aciklama": "Elbise ya da (tişört ve pantolon).",
+    "islem": "3 + 5 × 4 = 3 + 20 = 23"
+   },
+   {
+    "baslik": "Ayakkabı",
+    "aciklama": "Her giyim seçeneği için 3 ayakkabı seçilebilir.",
+    "islem": "× 3"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Giyim sayısını ayakkabıyla çarp.",
+    "islem": "23 × 3 = 69"
+   }
+  ],
+  "puf": "Alternatifleri önce kendi içinde topla, sonra sonraki aşamayla çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-01 (toplama–çarpma) · elbise ya da tişört–pantolon, sonra ayakkabı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Kombinasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Herkesin birbiriyle birer kez oynadığı turnuvadaki maç sayısını C(n, 2) ile bulur.",
+  "tipId": "pkb-secme",
+  "tip": "Kombinasyonla seçme ve ikili eşleşme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir satranç turnuvasına 9 sporcu katılmıştır. Her sporcu, diğer sporcuların her biriyle tam birer maç yapacaktır.\nBuna göre bu turnuvada toplam kaç maç oynanır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "36",
+   "C": "45",
+   "D": "72",
+   "E": "81"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "Maçı iki sporcunun yaptığını görüp 9 × 2 yazmış, sporcu çiftlerini saymamış.",
+   "C": "Toplamı 1 + 2 + … + 9 olarak almış; ilk sporcunun 9 değil 8 maç yaptığını gözden kaçırmış.",
+   "D": "9 × 8 hesaplamış; her maçı iki kez (A–B ve B–A) saymış.",
+   "E": "Her sporcu kendisi dahil 9 sporcuyla oynuyor sanıp 9 × 9 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Toplam maç sayısı.",
+  "bilgi": [
+   {
+    "ad": "İkili eşleşmeler",
+    "ifade": "n kişi arasında her iki kişi birer kez eşleşirse C(n, 2) eşleşme olur; yön ayrımı varsa (A→B ile B→A farklı) n × (n − 1) olur. Örnek: 5 kişi arasında C(5, 2) = 10 maç, 5 × 4 = 20 mesaj"
+   }
+  ],
+  "ipuclari": [
+   "Bir maçı iki sporcu birlikte yapar; sporcu çiftlerini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maçı çift olarak gör",
+    "aciklama": "Her maç, 9 sporcudan seçilen 2 sporcudur; sıra önemli değildir.",
+    "islem": "C(9, 2)"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Kombinasyonu aç.",
+    "islem": "9 × 8/2 = 36"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "1. sporcu 8, 2. sporcu yeni 7, … son sporcu 0 maç ekler.",
+    "islem": "8 + 7 + … + 1 = 36"
+   }
+  ],
+  "puf": "Herkesin herkesle birer kez oynadığı durumlarda eşleşme sayısı C(n, 2)’dir; sıra önemsizdir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-04 (ikili eşleşme) · satranç turnuvası",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Sayı Yazma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Rakamları farklı ve 400’den büyük olan üç basamaklı sayıların sayısını basamak koşullarına göre bulur.",
+  "tipId": "pkb-sayi",
+  "tip": "Koşullu sayı yazma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "0, 1, 2, 3, 4 ve 5 rakamları kullanılarak yazılan, rakamları birbirinden farklı üç basamaklı doğal sayılardan kaç tanesi 400’den büyüktür?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "40",
+   "C": "50",
+   "D": "72",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "C": "Rakamların farklı olması koşulunu birler basamağında unutmuş: 2 × 5 × 5.",
+   "D": "Rakamların tekrar edebileceğini düşünmüş: 2 × 6 × 6.",
+   "E": "400’den büyük olma koşulunu unutup tüm farklı rakamlı sayıları saymış: 5 × 5 × 4.",
+   "A": "“400’den büyük”ü “yüzler basamağı 4’ten büyük” okuyup yalnızca 5’i almış: 1 × 5 × 4."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat",
+   "A": "dikkat"
+  },
+  "istenen": "Koşulu sağlayan sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Basamak koşulları",
+    "ifade": "Çok basamaklı bir sayının ilk basamağı 0 olamaz; çift sayılar 0, 2, 4, 6, 8 ile, tek sayılar 1, 3, 5, 7, 9 ile biter. Önce en kısıtlı basamağı doldur. Örnek: rakamları farklı üç basamaklı tek sayılar için birler 5, yüzler 8, onlar 8 seçenek: 5 × 8 × 8 = 320"
+   }
+  ],
+  "ipuclari": [
+   "Önce yüzler basamağında hangi rakamlar bulunabilir? Diğer basamaklarda kalan rakamları say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yüzler basamağı",
+    "aciklama": "Sayı 400’den büyük ve en az 4xx olmalı; yüzler basamağı 4 ya da 5 olur.",
+    "islem": "2 seçenek"
+   },
+   {
+    "baslik": "Onlar basamağı",
+    "aciklama": "Yüzler basamağında kullanılan rakam dışındaki 5 rakamdan biri gelir.",
+    "islem": "5 seçenek"
+   },
+   {
+    "baslik": "Birler basamağı",
+    "aciklama": "Kalan 4 rakamdan biri gelir; 4 seçenek vardır. Sonra çarp.",
+    "islem": "2 × 5 × 4 = 40"
+   }
+  ],
+  "puf": "Basamak koşullarında en kısıtlı basamaktan başla; rakamlar farklıysa sonraki basamaklarda seçenek bir azalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-02 (koşullu sayı yazma) · rakamları farklı, 400’den büyük",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Sayı Yazma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Rakamları farklı, çift ve binler basamağı koşullu dört basamaklı sayıları birler basamağına göre durumlara ayırarak sayar.",
+  "tipId": "pkb-sayi",
+  "tip": "Koşullu sayı yazma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "Rakamları birbirinden farklı olan ve binler basamağındaki rakam 5’ten büyük olan dört basamaklı çift doğal sayılar kaç tanedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "784",
+   "B": "1008",
+   "C": "1120",
+   "D": "1288",
+   "E": "2000"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1008"
+  },
+  "celdiriciler": {
+   "A": "Sıfırla biten sayıları saymamış; yalnızca 2, 4, 6, 8 ile biten sayıları hesaplamış (1008 − 224).",
+   "D": "Binler basamağını “5 ve daha büyük” alıp 5’i de katmış.",
+   "C": "Birler basamağı için 5 çift rakam, binler için 4 seçenek alıp ikisinin çakışmasını (6 ve 8) hesaba katmamış: 4 × 5 × 8 × 7.",
+   "E": "Rakamların farklı olması koşulunu atlamış: 4 × 10 × 10 × 5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "D": "dikkat",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Koşulu sağlayan sayıların adedi.",
+  "bilgi": [
+   {
+    "ad": "Basamak koşulları",
+    "ifade": "Çok basamaklı bir sayının ilk basamağı 0 olamaz; çift sayılar 0, 2, 4, 6, 8 ile, tek sayılar 1, 3, 5, 7, 9 ile biter. Önce en kısıtlı basamağı doldur. Örnek: rakamları farklı üç basamaklı tek sayılar için birler 5, yüzler 8, onlar 8 seçenek: 5 × 8 × 8 = 320"
+   }
+  ],
+  "ipuclari": [
+   "Birler basamağı sıfır olduğunda ve olmadığında binler basamağındaki seçeneklerin sayısı aynı mı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Birler basamağı 0",
+    "aciklama": "Binler basamağı 6, 7, 8, 9’dan biri; onlar ve yüzler kalan rakamlardan.",
+    "islem": "4 × 8 × 7 = 224"
+   },
+   {
+    "baslik": "Birler basamağı 2 veya 4",
+    "aciklama": "Binler basamağı yine 4 seçenek (6, 7, 8, 9); onlar 8, yüzler 7 seçenek.",
+    "islem": "2 × 4 × 8 × 7 = 448"
+   },
+   {
+    "baslik": "Birler basamağı 6 veya 8",
+    "aciklama": "Binler basamağında birler basamağındaki rakam kullanıldığından 3 seçenek kalır.",
+    "islem": "2 × 3 × 8 × 7 = 336"
+   },
+   {
+    "baslik": "Durumları topla",
+    "aciklama": "Üç durum birbirinden ayrıdır.",
+    "islem": "224 + 448 + 336 = 1008"
+   }
+  ],
+  "puf": "Bir rakam iki farklı koşulda geçiyorsa (burada 6 ve 8) durumlara ayır; seçenek sayısı duruma göre değişir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-02 (koşullu sayı yazma) · çift, binler basamağı 5’ten büyük",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Sıralama",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Üç nesnenin birden ardışık olmadığı sıralamaları, ardışık olanları tümünden çıkararak sayar.",
+  "tipId": "pkb-sira",
+  "tip": "Koşullu sıralama ve tekrarlı permütasyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Birbirinden farklı 3 matematik ve 2 fizik kitabı bir rafa yan yana dizilecektir.\nMatematik kitaplarının üçü birden art arda (yan yana) gelmeyecek biçimde bu 5 kitap kaç farklı sırayla dizilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "36",
+   "C": "84",
+   "D": "114",
+   "E": "120"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "84"
+  },
+  "celdiriciler": {
+   "A": "“Üçü birden yan yana olmasın” koşulunu “hiçbir ikisi yan yana olmasın” diye okumuş: fizikleri dizip aralarına matematikleri yerleştirmiş, 2 × 6.",
+   "B": "Matematik kitaplarının üçünün birden yan yana olduğu durumları saymış, çıkarmamış.",
+   "D": "Üç kitaplık bloğun kendi içindeki sıralamasını (3!) unutup yan yana olan dizilişleri yalnızca 3! = 6 saymış: 120 − 6.",
+   "E": "Koşulu hiç uygulamamış: 5 kitabı serbestçe sıralamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Koşula uygun diziliş sayısı.",
+  "bilgi": [
+   {
+    "ad": "Sıralama",
+    "ifade": "n farklı nesne yan yana n! (n faktöriyel = n × (n − 1) × … × 1) biçimde sıralanır. Yan yana durması istenenler tek nesne sayılır ve kendi içinde ayrıca sıralanır. Örnek: 3 kişi 3 × 2 × 1 = 6 biçimde sıralanır"
+   },
+   {
+    "ad": "Birlikte olmasın koşulu",
+    "ifade": "Birlikte olmaması istenen nesnelerin yan yana olduğu dizilişler tüm dizilişlerden çıkarılır; yan yana olanlar tek blok sayılır, blok kendi içinde de sıralanır. Örnek: 3 kişiden A ile B yan yana olmasın: 3! − 2! × 2! = 2"
+   }
+  ],
+  "ipuclari": [
+   "Üç matematik kitabının raftaki konumlarını düşün; koşula uymayan dizilişlerin ortak özelliği ne?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm dizilişler",
+    "aciklama": "5 farklı kitap serbestçe sıralanır.",
+    "islem": "5! = 120"
+   },
+   {
+    "baslik": "Üçü birden yan yana",
+    "aciklama": "3 matematik kitabını tek blok say: blok ve 2 fizik kitabı 3 nesnedir; blok kendi içinde de sıralanır.",
+    "islem": "3! × 3! = 36"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Tümünden istenmeyen dizilişleri çıkar.",
+    "islem": "120 − 36 = 84"
+   }
+  ],
+  "puf": "“Birlikte olmasın” koşulunda tüm sıralamalardan birlikte olanları çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-03 (yan yana gelmeme) · kitap rafı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Sıralama",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "İki kişinin sıranın iki ucuna oturma koşuluyla yapılan sıralamaları sayar.",
+  "tipId": "pkb-sira",
+  "tip": "Koşullu sıralama ve tekrarlı permütasyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir panelde 7 farklı konuşmacı, sahnedeki yan yana dizilmiş 7 sandalyeye oturacaktır. Sandalyeler tek sıra hâlindedir.\nKonuşmacılardan Taner ile Selma, sıranın iki ucundaki sandalyelere (biri bir ucuna, diğeri öbür ucuna) oturacaktır.\nBuna göre konuşmacılar kaç farklı biçimde oturabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "120",
+   "B": "240",
+   "C": "720",
+   "D": "1440",
+   "E": "5040"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "240"
+  },
+  "celdiriciler": {
+   "A": "İki ucu tek biçim saymış: Taner ile Selma’nın uçlarda yer değiştirebileceğini atlamış, 5!.",
+   "C": "Yalnız Taner’i sol uca koyup kalan 6 kişiyi sıralamış; Selma’nın koşulunu uygulamamış (6!).",
+   "D": "Yalnız Taner’in iki uçtan birine oturduğunu düşünüp 2 × 6! hesaplamış.",
+   "E": "Koşulu hiç uygulamamış: 7!."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Farklı oturma düzeni sayısı.",
+  "bilgi": [
+   {
+    "ad": "Sıralama",
+    "ifade": "n farklı nesne yan yana n! (n faktöriyel = n × (n − 1) × … × 1) biçimde sıralanır. Yan yana durması istenenler tek nesne sayılır ve kendi içinde ayrıca sıralanır. Örnek: 3 kişi 3 × 2 × 1 = 6 biçimde sıralanır"
+   }
+  ],
+  "ipuclari": [
+   "Önce uçlardaki iki sandalyeyi doldur; kalan sandalyelere kimlerin oturabileceğine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Uçlar",
+    "aciklama": "Taner sol uçta Selma sağ uçta ya da tersi.",
+    "islem": "2 biçim"
+   },
+   {
+    "baslik": "Ortadaki sandalyeler",
+    "aciklama": "Kalan 5 kişi ortadaki 5 sandalyeye oturur.",
+    "islem": "5! = 120"
+   },
+   {
+    "baslik": "Çarp",
+    "aciklama": "Uç düzeni ile ortadaki düzen ardışık aşamalardır.",
+    "islem": "2 × 120 = 240"
+   }
+  ],
+  "puf": "Koşullu kişileri önce yerleştir, kalanları serbest sırala; yer değiştirme sayısını da çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-03 (uçta durma) · panel konuşmacıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Tekrarlı Permütasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Aynı harfli kelimelerde başlangıç harfi ve harflerin yan yana gelmemesi koşullarını birlikte uygulayarak sayar.",
+  "tipId": "pkb-sira",
+  "tip": "Koşullu sıralama ve tekrarlı permütasyon",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "SAKARYA kelimesindeki 7 harfin hepsi kullanılarak, anlamlı ya da anlamsız 7 harfli kelimeler yazılıyor.\nİlk harfi S olan ve üç A harfinin üçü birden art arda (yan yana) gelmeyen kaç farklı kelime yazılabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "96",
+   "B": "120",
+   "C": "576",
+   "D": "720",
+   "E": "840"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "96"
+  },
+  "celdiriciler": {
+   "B": "Üç A’nın yan yana gelmeme koşulunu uygulamamış; yalnızca ilk harfi S yapıp 6!/3! hesaplamış.",
+   "C": "Üç A’yı birbirinden farklı sanmış: 6! − 4! × 3!.",
+   "D": "İlk harfin S olması koşulunu atlamış: 7!/3! − 5! = 840 − 120.",
+   "E": "Hiçbir koşulu uygulamamış: 7!/3!."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Koşula uygun kelime sayısı.",
+  "bilgi": [
+   {
+    "ad": "Tekrarlı permütasyon",
+    "ifade": "n nesnenin a tanesi birbirinin aynı, b tanesi birbirinin aynı ise sıralama sayısı n!/(a! × b!) olur. Örnek: AABC harfleriyle 4!/2! = 12 kelime yazılır"
+   },
+   {
+    "ad": "Birlikte olmasın koşulu",
+    "ifade": "Birlikte olmaması istenen nesnelerin yan yana olduğu dizilişler tüm dizilişlerden çıkarılır; yan yana olanlar tek blok sayılır, blok kendi içinde de sıralanır. Örnek: 3 kişiden A ile B yan yana olmasın: 3! − 2! × 2! = 2"
+   }
+  ],
+  "ipuclari": [
+   "S sabitlendikten sonra kalan 6 harfle ilgili koşulsuz ve koşulu bozan durumları ayrı say."
+  ],
+  "adimlar": [
+   {
+    "baslik": "S başa sabit",
+    "aciklama": "Kalan harfler K, R, Y, A, A, A; üç A aynıdır.",
+    "islem": "6!/3! = 120"
+   },
+   {
+    "baslik": "Üç A birden yan yana",
+    "aciklama": "AAA tek blok; blok ve K, R, Y toplam 4 nesne olur.",
+    "islem": "4! = 24"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Koşulu bozanları tümünden çıkar.",
+    "islem": "120 − 24 = 96"
+   }
+  ],
+  "puf": "Aynı harfler varsa önce tekrarlı permütasyonla say; “birlikte olmasın” koşulunda birlikte olanları blok yapıp çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-03 (tekrarlı permütasyon) · SAKARYA, ilk harf S, üç A birden art arda değil",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Kombinasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "“En az bir” koşullu seçimi tümleyen yoluyla kombinasyonla sayar.",
+  "tipId": "pkb-secme",
+  "tip": "Kombinasyonla seçme ve ikili eşleşme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir apartmanda 6 kadın ve 5 erkek oturmaktadır. Bu 11 kişi arasından 4 kişilik bir yönetim kurulu seçilecektir; kurulda görev ayrımı yoktur ve sıra önemli değildir.\nKurulda en az bir kadın bulunması istendiğine göre kurul kaç farklı biçimde seçilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "5",
+   "B": "60",
+   "C": "120",
+   "D": "325",
+   "E": "330"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "325"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca hiç kadının bulunmadığı seçimleri sayıp C(5, 4) = 5’te kalmış.",
+   "B": "“En az bir”i “tam bir” sanmış: 6 × C(5, 3).",
+   "E": "Kadın koşulunu uygulamamış: C(11, 4).",
+   "C": "Belirli bir kadını kurula sabit alıp kalan 3 üyeyi diğer 10 kişiden seçmiş: C(10, 3)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "E": "dikkat",
+   "C": "islem"
+  },
+  "istenen": "Farklı yönetim kurulu sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) = n!/(r! × (n − r)!) biçimde seçilir; C(n, r) = C(n, n − r). Örnek: C(5, 2) = 5 × 4/2 = 10"
+   },
+   {
+    "ad": "“En az bir” koşulu",
+    "ifade": "“En az bir” koşullu seçimlerde tüm durumlardan “hiç yok” durumu çıkarılır. Örnek: 5 kişiden 2 kişilik seçimde en az bir kız olması isteniyorsa tüm seçimlerden kızsız seçimler çıkarılır"
+   }
+  ],
+  "ipuclari": [
+   "Önce koşulsuz kaç kurul seçilebileceğini bul; koşul hangi kurulları dışarıda bırakıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm kurullar",
+    "aciklama": "11 kişiden 4 kişi, sıra önemsiz.",
+    "islem": "C(11, 4) = 330"
+   },
+   {
+    "baslik": "Hiç kadın yok",
+    "aciklama": "Kurulun tamamı 5 erkekten seçilir.",
+    "islem": "C(5, 4) = 5"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "En az bir kadın = tüm kurullar − kadınsız kurullar.",
+    "islem": "330 − 5 = 325"
+   }
+  ],
+  "puf": "“En az bir” görünce tümleyeni düşün: tüm durumlar eksi “hiç yok” durumu.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-04 (en az bir) · apartman yönetim kurulu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Doğru ve Üçgen Sayma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Doğrusal noktaları dışlayarak köşeleri verilen noktalardan seçilen üçgenlerin sayısını bulur.",
+  "tipId": "pkb-nokta",
+  "tip": "Üçgen ve en kısa yol sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Bir düzlemde, bir d doğrusu üzerinde 6 nokta ve d doğrusu üzerinde olmayan 4 nokta daha işaretlenmiştir. Bu 10 noktanın doğrusal olan üçlüleri yalnızca d doğrusu üzerindeki noktalardan oluşan üçlülerdir; başka hiçbir üç nokta doğrusal değildir.\nKöşeleri bu 10 noktadan seçilen kaç farklı üçgen çizilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "96",
+   "C": "100",
+   "D": "120",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca doğru üzerindeki 3’lü seçimleri saymış: C(6, 3).",
+   "B": "d üzerindeki 3’lüleri çıkarmış ama d dışındaki 4 noktadan oluşan üçgenleri de çıkarmış (4 üçgen eksik).",
+   "D": "Doğrusal noktaları fark etmeyip tüm 3’lü seçimleri üçgen saymış: C(10, 3).",
+   "E": "Köşelerin sırasını önemli sanmış: P(10, 3) − P(6, 3)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Çizilebilecek üçgen sayısı.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) = n!/(r! × (n − r)!) biçimde seçilir; C(n, r) = C(n, n − r). Örnek: C(5, 2) = 5 × 4/2 = 10"
+   },
+   {
+    "ad": "Doğrusal noktalar",
+    "ifade": "Üçgenin köşeleri doğrusal olmayan üç noktadır; aynı doğru üzerindeki üç nokta üçgen oluşturmaz. Örnek: 5 noktadan 3’lü seçim C(5, 3) = 10’dur; bu noktaların 3’ü bir doğru üzerindeyse bu seçimlerden 1’i üçgen vermez"
+   }
+  ],
+  "ipuclari": [
+   "Üç noktanın üçgen oluşturması için ne gerekir? Tüm üçlüleri bu açıdan ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tüm 3’lü seçimler",
+    "aciklama": "10 noktadan 3 nokta, sıra önemsiz.",
+    "islem": "C(10, 3) = 120"
+   },
+   {
+    "baslik": "Üçgen vermeyenler",
+    "aciklama": "Doğrusal üçlüler yalnızca d üzerindeki 6 noktadan seçilir.",
+    "islem": "C(6, 3) = 20"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Üçgen = tüm seçimler − doğrusal seçimler.",
+    "islem": "120 − 20 = 100"
+   }
+  ],
+  "puf": "Doğrusal üç nokta üçgen oluşturmaz; tüm üçlülerden doğrusal olanları çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-05 (doğrusal noktalardan üçgen) · 6 doğrusal nokta ve 4 nokta",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Yol Sayma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Başlangıç ve bitiş adımı belirli en kısa yolları kalan adımların sıralamasıyla sayar.",
+  "tipId": "pkb-nokta",
+  "tip": "Üçgen ve en kısa yol sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Sokakları birbirine dik, eş uzunlukta bloklardan oluşan bir mahallede bir kurye, evinden bir müşterinin kapısına yalnızca doğuya ya da kuzeye doğru birer blok ilerleyerek gidecektir. Müşteri, kuryenin evinden 4 blok doğuda ve 4 blok kuzeydedir.\nKurye ilk bloğu doğuya, son bloğu kuzeye doğru yürüyeceğine göre kaç farklı en kısa yoldan gidebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "35",
+   "C": "56",
+   "D": "70",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "C": "Doğu adımı sayısını 3, kuzey adımı sayısını 5 sanıp C(8, 3) hesaplamış.",
+   "B": "Yalnızca ilk adımın doğu olması koşulunu uygulamış: C(7, 3).",
+   "D": "Hiçbir uç koşulu uygulamamış: C(8, 4).",
+   "E": "6 adımı birbirinden farklı sanıp 6! hesaplamış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Kuryenin gidebileceği en kısa yol sayısı.",
+  "bilgi": [
+   {
+    "ad": "En kısa yol sayma",
+    "ifade": "Yalnızca doğuya (D) ve kuzeye (K) giden yolda adımların sırası yolu belirler: 2 D ve 1 K adımı C(3, 1) = 3 yol verir. Örnek: 2 D ve 2 K adım için C(4, 2) = 6 yol vardır"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) = n!/(r! × (n − r)!) biçimde seçilir; C(n, r) = C(n, n − r). Örnek: C(5, 2) = 5 × 4/2 = 10"
+   }
+  ],
+  "ipuclari": [
+   "İlk ve son adım belli iken yolun hangi kısmı serbestçe düzenlenebilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam adım",
+    "aciklama": "4 doğu ve 4 kuzey adımı gerekir.",
+    "islem": "8 adım"
+   },
+   {
+    "baslik": "Serbest adımlar",
+    "aciklama": "İlk adım D, son adım K sabit; kalan 6 adımda 3 D ve 3 K bulunur.",
+    "islem": "6 adım"
+   },
+   {
+    "baslik": "Adımları sırala",
+    "aciklama": "6 adımdan 3’ünün yeri D için seçilir.",
+    "islem": "C(6, 3) = 20"
+   }
+  ],
+  "puf": "Yalnızca iki yöne giden yolda hangi adımların doğu olacağını seçmek yeterlidir; sabit adımları baştan ayır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-05 (ızgarada en kısa yol) · ilk adım doğu, son adım kuzey",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Öncüllü Sayma",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Sıra önemli ve önemsiz seçimlerin sayısını hesaplayıp öncülleri değerlendirir.",
+  "tipId": "pkb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü sayma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "8 öğrenci arasından aşağıdaki seçimler ayrı ayrı yapılacaktır.\nI. Bir başkan ile bir başkan yardımcısı seçmek (aynı öğrenci iki görevde bulunamaz).\nII. 2 kişilik bir temsilci grubu seçmek (görev ayrımı yoktur, sıra önemsizdir).\nIII. 5 kişilik bir komite seçmek (görev ayrımı yoktur, sıra önemsizdir).\nBu seçimlerden hangilerinin yapılış sayısı 56’dır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü sıralı sayıp 8 × 7 × 6 × 5 × 4 = 6720 bulmuş; III’ün 56 olduğunu görememiş.",
+   "B": "I’de sıranın önemli olduğunu unutup C(8, 2) = 28 bulmuş; III’ü doğru hesaplamış.",
+   "C": "II’yi sıralı saymış (8 × 7 = 56); III’te C(8, 5) yerine 8 × 5 = 40 yazmış.",
+   "E": "II’de sıranın önemsiz olduğunu atlayıp 8 × 7 = 56 bulmuş; II’yi de 56 saymış."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Yapılış sayısı 56 olan seçimler.",
+  "bilgi": [
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) = n!/(r! × (n − r)!) biçimde seçilir; C(n, r) = C(n, n − r). Örnek: C(5, 2) = 5 × 4/2 = 10"
+   },
+   {
+    "ad": "Sıralama",
+    "ifade": "n farklı nesne yan yana n! (n faktöriyel = n × (n − 1) × … × 1) biçimde sıralanır. Yan yana durması istenenler tek nesne sayılır ve kendi içinde ayrıca sıralanır. Örnek: 3 kişi 3 × 2 × 1 = 6 biçimde sıralanır"
+   }
+  ],
+  "ipuclari": [
+   "Her seçimde sıranın önemli olup olmadığına bak ve her öncülün sayısını ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I",
+    "aciklama": "Görevler farklı olduğundan sıra önemlidir: önce başkan, sonra yardımcı.",
+    "islem": "8 × 7 = 56"
+   },
+   {
+    "baslik": "II",
+    "aciklama": "Görev ayrımı yok; 8 öğrenciden 2’si seçilir.",
+    "islem": "C(8, 2) = 28 (56 değil)"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "8 öğrenciden 5’i seçilir; C(8, 5) = C(8, 3).",
+    "islem": "C(8, 5) = 56"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve III’ün değeri 56’dır.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Görevler farklıysa sıra önemlidir (çarpma); görev ayrımı yoksa kombinasyon kullan.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-06 (öncüllü) · başkan–yardımcı, 2 kişilik grup, 5 kişilik komite",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Kombinasyon",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Sıralı ikili ilişkiden öğrenci sayısını bulup koşullu bir kombinasyon seçimini hesaplar.",
+  "tipId": "pkb-secme",
+  "tip": "Kombinasyonla seçme ve ikili eşleşme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir sınıftaki her öğrenci, sınıftaki diğer her öğrenciye tam birer mektup yazmıştır; kimse kendine mektup yazmamıştır. Toplam 342 mektup yazılmıştır.\nBu sınıftan 3 kişilik bir nöbet ekibi seçilecektir (görev ayrımı yoktur, sıra önemli değildir). Sınıfın öğrencilerinden Ayşe ile Burak ekipte birlikte bulunmayacaktır (ikisinden biri bulunabilir ya da hiçbiri bulunmayabilir).\nBuna göre nöbet ekibi kaç farklı biçimde seçilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "17",
+   "B": "800",
+   "C": "935",
+   "D": "952",
+   "E": "969"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "952"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca Ayşe ile Burak’ın birlikte bulunduğu ekipleri saymış: 17.",
+   "B": "Öğrenci sayısını n × (n + 1) = 342 alıp 18 bulmuş: C(18, 3) − 16.",
+   "C": "Ayşe ile Burak’ın birlikte olduğu ekipleri 2 × 17 sayıp çıkarmış (ikisinin sırasını farklı saymış).",
+   "E": "Birlikte bulunmama koşulunu uygulamamış: C(19, 3)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Koşula uygun nöbet ekibi sayısı.",
+  "bilgi": [
+   {
+    "ad": "İkili eşleşmeler",
+    "ifade": "n kişi arasında her iki kişi birer kez eşleşirse C(n, 2) eşleşme olur; yön ayrımı varsa (A→B ile B→A farklı) n × (n − 1) olur. Örnek: 5 kişi arasında C(5, 2) = 10 maç, 5 × 4 = 20 mesaj"
+   },
+   {
+    "ad": "Kombinasyon",
+    "ifade": "n nesneden sırası önemsiz r tanesi C(n, r) = n!/(r! × (n − r)!) biçimde seçilir; C(n, r) = C(n, n − r). Örnek: C(5, 2) = 5 × 4/2 = 10"
+   },
+   {
+    "ad": "“En az bir” koşulu",
+    "ifade": "“En az bir” koşullu seçimlerde tüm durumlardan “hiç yok” durumu çıkarılır. Örnek: 5 kişiden 2 kişilik seçimde en az bir kız olması isteniyorsa tüm seçimlerden kızsız seçimler çıkarılır"
+   }
+  ],
+  "ipuclari": [
+   "Önce her öğrencinin kaç mektup yazdığını sınıf mevcudu cinsinden düşün; sonra ekip seçimine geç."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Öğrenci sayısı",
+    "aciklama": "Her öğrenci (n − 1) mektup yazar; toplam n × (n − 1).",
+    "islem": "n × (n − 1) = 342 → 19 × 18 → n = 19"
+   },
+   {
+    "baslik": "Tüm ekipler",
+    "aciklama": "19 öğrenciden 3 kişi, sıra önemsiz.",
+    "islem": "C(19, 3) = 969"
+   },
+   {
+    "baslik": "Birlikte bulunanlar",
+    "aciklama": "Ayşe ve Burak ekipte; üçüncü kişi kalan 17 öğrenciden biri.",
+    "islem": "17"
+   },
+   {
+    "baslik": "Çıkar",
+    "aciklama": "Koşula uygun ekipler = tümü − birlikte bulunanlar.",
+    "islem": "969 − 17 = 952"
+   }
+  ],
+  "puf": "n × (n − 1) sıralı ikililerin sayısıdır; “birlikte olmasın” koşulunda birlikte olan seçimleri tümünden çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-04 (n(n − 1) ve kombinasyon) · mektuplaşma ve nöbet ekibi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-permiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Permütasyon ve Kombinasyon · Yeni Nesil",
+  "k": "matd|Permütasyon ve Kombinasyon",
+  "kazanim": "Harf ve rakam kısımları için verilen kuralları ayrı ayrı sayıp çarparak şifre sayısını bulur.",
+  "tipId": "pkb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü sayma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir uygulamada şifre, önce 3 harf, ardından 2 rakamdan oluşmaktadır ve şu kurallara uymak zorundadır:\n• Harfler A, E, İ, K, M, T harflerinden seçilir ve birbirinden farklıdır; sesli harfler A, E, İ’dir. Harf kısmında en az bir sesli harf bulunmalıdır.\n• Rakamlar 0, 1, …, 9 rakamlarından seçilir ve birbirinden farklıdır. İki rakamın toplamı çift olmalıdır.\nHarflerin ve rakamların yeri sıralıdır (sıra önemlidir).\nBuna göre bu kurallara uyan kaç farklı şifre oluşturulabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "760",
+   "B": "2160",
+   "C": "2280",
+   "D": "4560",
+   "E": "4800"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "4560"
+  },
+  "celdiriciler": {
+   "E": "En az bir sesli harf koşulunu atlayıp 6 × 5 × 4 × 40 hesaplamış.",
+   "A": "Harfleri sırasız seçmiş: (C(6, 3) − C(3, 3)) × 40 = 19 × 40.",
+   "B": "Harf kısmında “en az bir” yerine “tam bir” sesli harf almış: 54 × 40.",
+   "C": "Rakam çiftlerini sırasız sayıp C(5, 2) + C(5, 2) = 20 bulmuş: 114 × 20."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat"
+  },
+  "istenen": "Kurallara uyan şifre sayısı.",
+  "bilgi": [
+   {
+    "ad": "Toplama ve çarpma ilkesi",
+    "ifade": "Birbirini izleyen aşamalar çarpılır, birbirinin yerine seçilen durumlar toplanır. Örnek: 2 gömlek ve 3 pantolondan birer tane giymek 2 × 3 = 6 biçimde, bir gömlek ya da bir pantolon seçmek 2 + 3 = 5 biçimde olur"
+   },
+   {
+    "ad": "“En az bir” koşulu",
+    "ifade": "“En az bir” koşullu seçimlerde tüm durumlardan “hiç yok” durumu çıkarılır. Örnek: 5 kişiden 2 kişilik seçimde en az bir kız olması isteniyorsa tüm seçimlerden kızsız seçimler çıkarılır"
+   },
+   {
+    "ad": "Toplamı çift iki rakam",
+    "ifade": "İki rakamın toplamı çift ise rakamların ikisi de çift ya da ikisi de tektir. Örnek: 2 + 6 = 8 ve 3 + 7 = 10 çifttir, 2 + 3 = 5 çift değildir"
+   }
+  ],
+  "ipuclari": [
+   "Harf kısmı ile rakam kısmını birbirinden bağımsız iki sayma problemi olarak ele al."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Harf kısmı",
+    "aciklama": "Tüm farklı üçlü diziler eksi hiç sesli harf içermeyenler (yalnız K, M, T).",
+    "islem": "6 × 5 × 4 − 3 × 2 × 1 = 114"
+   },
+   {
+    "baslik": "Rakam kısmı",
+    "aciklama": "Toplam çift için iki rakam da çift ya da ikisi de tek; sıralı ve farklı.",
+    "islem": "5 × 4 + 5 × 4 = 40"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Harf ve rakam kısımları art arda yazılır; çarp.",
+    "islem": "114 × 40 = 4560"
+   }
+  ],
+  "puf": "Bağımsız kısımlar ayrı sayılıp çarpılır; “en az bir” koşulu tümleyenle, “toplamı çift” koşulu aynı çift/tek durumlarıyla çözülür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-PKB-06 (yeni nesil, şifre kuralı) · en az bir sesli harf ve toplamı çift rakamlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

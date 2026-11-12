@@ -1,0 +1,135 @@
+{
+ "konu": "Kümeler ve Kartezyen Çarpım",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KMB-01",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Küme gösterimi ve eleman sayısı",
+   "fikir": "Koşulla verilen kümenin elemanları (eşitsizlik, asal, tam sayı) yazılıp sayılır.",
+   "tuzak": "Aralığın uçlarını yanlış dahil etmek; tam sayı yerine doğal sayı almak; koşulu x yerine ifadeye değil x’e uygulamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kmb-gosterim",
+   "tip": "Küme gösterimi ve eleman sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMB-02",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Alt küme sayısı",
+   "fikir": "Eleman sayısından alt küme sayısı ya da koşullu (belirli eleman bulunan/bulunmayan) alt küme sayısı 2 üzeri serbest eleman ile bulunur.",
+   "tuzak": "Koşullu elemanları serbest saymak; birbirine bağlı iki koşulu bağımsız saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kmb-altkume",
+   "tip": "Alt küme sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMB-03",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Küme işlemleri ve s(A ∪ B)",
+   "fikir": "Birleşim, kesişim, fark ve tümleyen eleman sayıları ve alt küme ilişkileri üzerinden yorum.",
+   "tuzak": "Kesişimi iki kez saymak; fark ile tümleyeni karıştırmak; alt küme kavramını ters okumak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "kmb-islem",
+   "tip": "Küme işlemleri ve eleman sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMB-04",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "İki ve üç kümeli problemler",
+   "fikir": "Hikâyeli iki kümeli (yalnız, en az, hiçbiri) ve bölgeleri verilen üç kümeli sayma.",
+   "tuzak": "Kesişimi iki kez eklemek; hiçbirine ait olanı unutmak ya da fazla saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kmb-venn",
+   "tip": "İki ve üç kümeli problemler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMB-05",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Kartezyen çarpım",
+   "fikir": "Eleman sayısı çarpımı, koşullu ikililerin sayılması, (A×B)∩(B×A) ilişkisi.",
+   "tuzak": "Sıralı ikilide sırayı önemsememek; koşulu yalnız bir bileşene uygulamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "kmb-kartezyen",
+   "tip": "Kartezyen çarpım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMB-06",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Tanımlı küme işlemi (yeni nesil)",
+   "fikir": "Soruda tanımlanan yeni işlem bilinen küme işlemlerine çevrilir.",
+   "tuzak": "Tanımı yanlış okumak; ortak elemanları sayıma almak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "kmb-yeninesil",
+   "tip": "Yeni nesil: tanımlı küme işlemi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (kümeler) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kmb-gosterim",
+   "ad": "Küme gösterimi ve eleman sayısı",
+   "kartlar": [
+    "K-KMB-01"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kmb-altkume",
+   "ad": "Alt küme sayısı",
+   "kartlar": [
+    "K-KMB-02"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kmb-islem",
+   "ad": "Küme işlemleri ve eleman sayısı",
+   "kartlar": [
+    "K-KMB-03"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kmb-venn",
+   "ad": "İki ve üç kümeli problemler",
+   "kartlar": [
+    "K-KMB-04"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kmb-kartezyen",
+   "ad": "Kartezyen çarpım",
+   "kartlar": [
+    "K-KMB-05"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kmb-yeninesil",
+   "ad": "Yeni nesil: tanımlı küme işlemi",
+   "kartlar": [
+    "K-KMB-06"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  }
+ ]
+}

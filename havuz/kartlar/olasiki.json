@@ -1,0 +1,135 @@
+{
+ "konu": "Olasılık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-OLB-01",
+   "konu": "Olasılık",
+   "alt": "Örnek uzay ve olay (zar, para, kart)",
+   "fikir": "Örnek uzay sayılır, istenen olayın sonuçları ayrıca sayılıp oranlanır; sonuçlar ayırt edilebiliyorsa sıralı çiftler alınır.",
+   "tuzak": "Sonuçları eşit olasılıklı sanmak (ör. toplamlar); sırasız çiftleri saymak; sınırı dahil etmek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "olb-temel",
+   "tip": "Örnek uzay ve olay",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  },
+  {
+   "id": "K-OLB-02",
+   "konu": "Olasılık",
+   "alt": "Geri konarak ve geri konmadan çekiliş",
+   "fikir": "Art arda çekilişte her aşamanın olasılığı çarpılır; geri konmadan çekimde torbadaki sayı azalır, sıralar birlikte düşünülür.",
+   "tuzak": "Geri konmadan çekimde paydayı değiştirmemek; sıraları atlayıp tek dizilişi saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "olb-ardisik",
+   "tip": "Art arda çekiliş",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  },
+  {
+   "id": "K-OLB-03",
+   "konu": "Olasılık",
+   "alt": "Bağımsız olaylar ve “en az bir”",
+   "fikir": "Bağımsız olayların olasılıkları çarpılır; “yalnızca biri” iki ayrı durumun toplamıdır; “en az bir” tümleyenle bulunur.",
+   "tuzak": "“Yalnızca biri” ile “en az biri”ni karıştırmak; tümleyeni cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "olb-bagimsiz",
+   "tip": "Bağımsız olaylar ve en az bir",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  },
+  {
+   "id": "K-OLB-04",
+   "konu": "Olasılık",
+   "alt": "Kombinasyonla olasılık",
+   "fikir": "Aynı anda yapılan seçimlerde pay ve payda kombinasyonla sayılır; “en az bir” için tümleyen kullanılır.",
+   "tuzak": "Payı sıralı, paydayı sırasız saymak (ya da tersi); tümleyeni cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "olb-sayma",
+   "tip": "Kombinasyonla olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  },
+  {
+   "id": "K-OLB-05",
+   "konu": "Olasılık",
+   "alt": "Geometrik olasılık (çark ve hedef)",
+   "fikir": "Olasılık, istenen bölgenin alanının ya da merkez açısının tüm bölgeye oranıdır.",
+   "tuzak": "Dilim ya da halka sayısıyla oranlamak; yarıçap oranını alan oranı sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "olb-geometrik",
+   "tip": "Geometrik olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  },
+  {
+   "id": "K-OLB-06",
+   "konu": "Olasılık",
+   "alt": "Yeni nesil, hikâyeli ve öncüllü olasılık",
+   "fikir": "Kural ya da öncüllerle verilen kurgularda her durum ayrı ayrı sayılır ya da hesaplanır, sonra birleştirilir.",
+   "tuzak": "Kuralın bir durumunu atlamak; öncülleri hesaplamadan karar vermek; sıralı ve sırasız sayımı karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "olb-yeninesil",
+   "tip": "Yeni nesil ve öncüllü olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (olasılık) · yayın soru bankaları (yalnız mantık) · MEB 10. sınıf Basit Olayların Olasılığı"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "olb-temel",
+   "ad": "Örnek uzay ve olay",
+   "kartlar": [
+    "K-OLB-01"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "olb-ardisik",
+   "ad": "Art arda çekiliş",
+   "kartlar": [
+    "K-OLB-02"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "olb-bagimsiz",
+   "ad": "Bağımsız olaylar ve en az bir",
+   "kartlar": [
+    "K-OLB-03"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "olb-sayma",
+   "ad": "Kombinasyonla olasılık",
+   "kartlar": [
+    "K-OLB-04"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "olb-geometrik",
+   "ad": "Geometrik olasılık",
+   "kartlar": [
+    "K-OLB-05"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "olb-yeninesil",
+   "ad": "Yeni nesil ve öncüllü olasılık",
+   "kartlar": [
+    "K-OLB-06"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  }
+ ]
+}

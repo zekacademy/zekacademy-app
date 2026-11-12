@@ -1,0 +1,219 @@
+{
+ "konu": "Rutin Olmayan Problemler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-RTB-01",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Tanımlı kural, işlem ve sayı türü",
+   "fikir": "Verilen işlem kuralı ya da sayı türü tanımına göre değer hesaplanır ve ifadeler tek tek sınanır.",
+   "tuzak": "Parantez sırasını ya da argüman sırasını karıştırmak; bir örnekle doğrulanan ifadeyi her zaman doğru sanmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "rtb-kural",
+   "tip": "Tanımlı işlem ve sayı türü",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-02",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Örüntü ve dizi",
+   "fikir": "Şekil ve sayı örüntüsünde n. terim bulunur; kuralla üretilen konum ve dairesel eleme sorularında adım adım ilerlenir.",
+   "tuzak": "İlk terimle artışı karıştırmak (n yerine n − 1); sayımı yanlış yerden başlatmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "rtb-oruntu",
+   "tip": "Örüntü, dizi ve konum",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-03",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Periyodik durum",
+   "fikir": "Lamba, takvim, tren ve renk dizilerinde tekrar eden düzenin periyodu bulunur; kalan ya da ortak kat kullanılır.",
+   "tuzak": "Kalanı sayı sanmak; ilk ve son durumu iki kez ya da hiç saymamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "rtb-periyot",
+   "tip": "Periyodik durum (takvim, lamba, tren)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-04",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Mantık ve çıkarım",
+   "fikir": "Sıralama, eşleştirme ve doğru–yalan bilgisinden tüm olasılıklar taranarak tek çözüm bulunur.",
+   "tuzak": "Bir koşulu atlayıp birden çok çözümün içinden birini seçmek; \"kesinlikle\" ifadesini \"olabilir\" ile karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "rtb-cikarim",
+   "tip": "Mantık ve çıkarım (sıralama, eşleştirme)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-05",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Oyun ve puanlama",
+   "fikir": "Kazanan konumlar geriden ileriye taranır; puan toplamından atış sayısı çıkarılır.",
+   "tuzak": "Oyunu bitirme kuralını yanlış okumak; \"her bölgeye en az bir\" koşulunu unutmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "rtb-oyun",
+   "tip": "Oyun stratejisi ve puanlama",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-06",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Sayı yerleştirme ve koşullu tarama",
+   "fikir": "Küçük ızgara ve rakam koşullarında seçenekler sistemli taranarak yerleştirme tamamlanır.",
+   "tuzak": "Bir kural satırda uygulanıp sütunda unutulmak; baştaki sıfırı saymak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "rtb-yerlestirme",
+   "tip": "Sayı yerleştirme (ızgara, rakam koşulu)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-07",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Şifre ve kod kuralı",
+   "fikir": "Şifre sayısı koşullu çarpma ile, kodlama kuralı alfabe üzerinde adım adım, ipucundan şifre bulma tarama ile çözülür.",
+   "tuzak": "Alfabe uzunluğunu yanlış almak; ipuçlarından birini gözden kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "rtb-sifre",
+   "tip": "Şifre ve kod kuralı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-08",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Sayma: tokalaşma, yol, maç",
+   "fikir": "İkili seçimler, kapalı noktalı en kısa yol ve turnuva maç sayısı parça parça sayılır.",
+   "tuzak": "Aynı ikiliyi iki kez saymak; bir aşamanın maçlarını unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "rtb-sayma",
+   "tip": "Sayma: tokalaşma, yol, maç sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-09",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Optimizasyon: en az, en çok",
+   "fikir": "En az hamle, en az kutu ve en kısa sürenin bulunması için bütün stratejiler sistemli denenir.",
+   "tuzak": "İlk akla gelen (açgözlü) yolu en iyi sanmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "rtb-optimizasyon",
+   "tip": "Optimizasyon (en az hamle, en az süre)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-RTB-10",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Yaşam becerisi ve tablo yorumu",
+   "fikir": "Tarife, kampanya ve kademeli fatura hesaplanır; tabloya dayalı ifadeler tek tek sınanır.",
+   "tuzak": "Kademeli fiyatı tüm tüketime uygulamak; yalnız sabit ücrete bakmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "rtb-yasam",
+   "tip": "Yaşam becerisi: tarife, kampanya, tablo",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (mantık–muhakeme, problemler, sayı kümeleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "rtb-kural",
+   "ad": "Tanımlı işlem ve sayı türü",
+   "kartlar": [
+    "K-RTB-01"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-oruntu",
+   "ad": "Örüntü, dizi ve konum",
+   "kartlar": [
+    "K-RTB-02"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-periyot",
+   "ad": "Periyodik durum (takvim, lamba, tren)",
+   "kartlar": [
+    "K-RTB-03"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-cikarim",
+   "ad": "Mantık ve çıkarım (sıralama, eşleştirme)",
+   "kartlar": [
+    "K-RTB-04"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-oyun",
+   "ad": "Oyun stratejisi ve puanlama",
+   "kartlar": [
+    "K-RTB-05"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-yerlestirme",
+   "ad": "Sayı yerleştirme (ızgara, rakam koşulu)",
+   "kartlar": [
+    "K-RTB-06"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-sifre",
+   "ad": "Şifre ve kod kuralı",
+   "kartlar": [
+    "K-RTB-07"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-sayma",
+   "ad": "Sayma: tokalaşma, yol, maç sayısı",
+   "kartlar": [
+    "K-RTB-08"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-optimizasyon",
+   "ad": "Optimizasyon (en az hamle, en az süre)",
+   "kartlar": [
+    "K-RTB-09"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rtb-yasam",
+   "ad": "Yaşam becerisi: tarife, kampanya, tablo",
+   "kartlar": [
+    "K-RTB-10"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  }
+ ]
+}
