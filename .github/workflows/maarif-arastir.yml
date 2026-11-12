@@ -1,0 +1,31 @@
+name: Maarif liste araştırması
+
+# Yalnız araştırma: YouTube'da Maarif (9-10-11, 1. Aşama) oynatma listelerini arar, raporu dala yazar. Uygulamayı değiştirmez.
+on:
+  push:
+    branches: ["video-maarif*"]
+    paths: ["tools/maarif-arastir.mjs", ".github/workflows/maarif-arastir.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  ara:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Ara
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node tools/maarif-arastir.mjs
+      - name: Dala kaydet
+        run: |
+          git config user.name "zekacademy-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/maarif-arastirma.json data/maarif-arastirma.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Maarif araştırma raporu ($(date -u +%F))"
+          git push
