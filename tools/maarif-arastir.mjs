@@ -4,16 +4,22 @@ import fs from "node:fs";
 const KEY = process.env.YOUTUBE_API_KEY; if (!KEY) { console.error("::error::YOUTUBE_API_KEY yok"); process.exit(2); }
 let birim = 0;
 async function yt(yol, p, b = 1) { const u = new URL("https://www.googleapis.com/youtube/v3/" + yol); Object.entries({ ...p, key: KEY }).forEach(([k, v]) => u.searchParams.set(k, v));
-  const r = await fetch(u); birim += b; const j = await r.json(); if (!r.ok) throw new Error(j?.error?.errors?.[0]?.reason || r.status); return j; }
+  for (let d = 0; ; d++) { const r = await fetch(u); birim += b; const j = await r.json(); if (r.ok) return j; const n = j?.error?.errors?.[0]?.reason || r.status;
+    if (n === "rateLimitExceeded" && d < 4) { await new Promise(z => setTimeout(z, 20000 * (d + 1))); continue; } throw new Error(n); } }
+const bekle = ms => new Promise(z => setTimeout(z, ms));
 const DERS = { Matematik: "matematik", Fizik: "fizik", Kimya: "kimya", Biyoloji: "biyoloji", Edebiyat: "türk dili ve edebiyatı", Tarih: "tarih", "Coğrafya": "coğrafya", Felsefe: "felsefe" };
 const SORGU = [["9", d => `9. sınıf ${d} maarif model konu anlatımı`], ["10", d => `10. sınıf ${d} maarif model konu anlatımı`], ["11", d => `11. sınıf ${d} maarif model konu anlatımı 2026-2027`], ["1A", d => `2028 maarif model 1. aşama ${d} kampı`]];
 const EK = ["Yaşar Hoca MathMan maarif", "Sinan İhtiyaroğlu maarif", "2028 YKS maarif model TYT kampı", "maarif model 1. oturum kampı 9 10. sınıf"];
 const L = new Map(), hata = [];
-async function ara(q, ders, sinif) { try { const j = await yt("search", { part: "snippet", type: "playlist", q, maxResults: 50, regionCode: "TR", relevanceLanguage: "tr" }, 100);
+async function ara(q, ders, sinif) { await bekle(2500); try { const j = await yt("search", { part: "snippet", type: "playlist", q, maxResults: 50, regionCode: "TR", relevanceLanguage: "tr" }, 100);
   for (const it of j.items || []) { const id = it.id?.playlistId; if (!id) continue; const x = L.get(id) || { id, ad: it.snippet.title, kanal: it.snippet.channelTitle, kanalId: it.snippet.channelId, tarih: (it.snippet.publishedAt || "").slice(0, 10), bulundu: [] }; x.bulundu.push(`${ders}/${sinif}`); L.set(id, x); } } catch (e) { hata.push(`${q}: ${e.message}`); } }
 for (const [ders, d] of Object.entries(DERS)) for (const [s, f] of SORGU) { if (ders === "Felsefe" && s === "9") continue; await ara(f(d), ders, s); }
 for (const q of EK) await ara(q, "ek", "-");
-const ids = [...L.keys()];
+/* Bulunan kanalların bütün listeleri (aramada çıkmayan sınıflar da gelsin) */
+const kanallar = new Map(); for (const x of L.values()) kanallar.set(x.kanalId, x.kanal);
+for (const [kid, kad] of kanallar) { try { let token = ""; for (let i = 0; i < 6; i++) { const j = await yt("playlists", { part: "snippet,contentDetails", channelId: kid, maxResults: 50, ...(token ? { pageToken: token } : {}) });
+  for (const p of j.items || []) if (!L.has(p.id)) L.set(p.id, { id: p.id, ad: p.snippet.title, kanal: kad, kanalId: kid, tarih: (p.snippet.publishedAt || "").slice(0, 10), sayi: p.contentDetails?.itemCount, bulundu: ["kanal"] }); token = j.nextPageToken; if (!token) break; } } catch (e) { hata.push(kad + ": " + e.message); } }
+const ids = [...L.values()].filter(x => x.sayi == null).map(x => x.id);
 for (let i = 0; i < ids.length; i += 50) { try { const j = await yt("playlists", { part: "contentDetails,snippet", id: ids.slice(i, i + 50).join(","), maxResults: 50 }); for (const p of j.items || []) { const x = L.get(p.id); x.sayi = p.contentDetails?.itemCount; x.ad = p.snippet.title; } } catch (e) { hata.push("playlists: " + e.message); } }
 const sade = x => String(x || "").toLocaleLowerCase("tr");
 const sinifOf = ad => { const n = sade(ad), S = []; for (const g of ["9", "10", "11"]) if (new RegExp(`(^|[^0-9])${g}\\s*\\.?\\s*s[ıi]n[ıi]f`).test(n)) S.push(g); if (/2028|1\.?\s*(aşama|oturum)|ilk aşama/.test(n)) S.push("1A"); return S; };
