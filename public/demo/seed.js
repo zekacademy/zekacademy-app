@@ -104,10 +104,12 @@
   localStorage.removeItem("mockUser");
   localStorage.setItem("zk-demo-v", "10");
 })();
+if (window.ZK_TANITIM_GIRIS){ localStorage.setItem("mockUser", JSON.stringify({uid:"demo1", email:"demo@app.zekacademy.com"}));
+  try{ var tdb = JSON.parse(localStorage.getItem("mockDb")); var d1 = tdb["students/demo1"]; if(d1){ d1.tanitim = false; delete d1.yenilik; localStorage.setItem("mockDb", JSON.stringify(tdb)); } }catch(e){} }
 document.addEventListener("DOMContentLoaded", function(){
   var b = document.createElement("div");
-  b.innerHTML = 'DEMO · gerçek veri değil · <a href="/?demo=0" style="color:inherit;text-decoration:underline">çık</a> · <a href="#" id="demoSifirla" style="color:inherit;text-decoration:underline">sıfırla</a>';
+  b.innerHTML = localStorage.getItem("zk-tanitim")==="1" ? 'Zekacademy tanıtımı · örnek öğrenci · <a href="#" id="demoSifirla" style="color:inherit;text-decoration:underline">baştan başla</a>' : 'DEMO · gerçek veri değil · <a href="/?demo=0" style="color:inherit;text-decoration:underline">çık</a> · <a href="#" id="demoSifirla" style="color:inherit;text-decoration:underline">sıfırla</a>';
   b.style.cssText = "position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 96px);left:50%;transform:translateX(-50%);z-index:99;background:#F59E0B;color:#1F1300;font:700 11px/1 system-ui,sans-serif;padding:5px 10px;border-radius:99px;box-shadow:0 2px 8px rgba(0,0,0,.15);white-space:nowrap";
   document.body.appendChild(b);
-  document.getElementById("demoSifirla").onclick = function(e){ e.preventDefault(); ["mockDb","mockUsers","mockUser","zk-demo-v"].forEach(function(k){ localStorage.removeItem(k); }); location.reload(); };
+  document.getElementById("demoSifirla").onclick = function(e){ e.preventDefault(); ["mockDb","mockUsers","mockUser","zk-demo-v"].forEach(function(k){ localStorage.removeItem(k); }); if(localStorage.getItem("zk-tanitim")==="1") location.href = "/?tanitim=1"; else location.reload(); };
 });

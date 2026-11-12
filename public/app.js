@@ -2134,6 +2134,7 @@ function cMore(){
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
     ${(n=>`<button class="row" data-act="go" data-v="gruplar"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("timer","sm")}</span><div><div class="rt">Çalışma grupları</div><div class="rs">${n?`${n} öğrenci şu an çalışıyor`:"Şu an çalışan yok"} · ${GR.list.size} grup</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>x.timer && canliMi(x.timer.start)).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
+    <button class="row" data-act="sheet" data-v="tanitim"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("users","sm")}</span><div><div class="rt">Tanıtım linki</div><div class="rs">Aday öğrenci ve velilere gönder: uygulamayı örnek bir öğrenciyle gezsinler</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="onzac"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("user","sm")}</span><div><div class="rt">Demo öğrenci</div><div class="rs">Uygulamayı öğrenci gözünden gör, yenilikleri dene (kaydedilmez)</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="go" data-v="ayarlar"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("edit","sm")}</span><div><div class="rt">Ayarlar</div><div class="rs">Mesajlar, süreler, hızlı ekle, konu listeleri, şifre</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="sheet" data-v="tema"><span class="ri">${icon("palette","sm")}</span><div><div class="rt">Görünüm</div><div class="rs">Açık / koyu mod ve tema rengi</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -2859,6 +2860,12 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 function openSheet(kind, el){
   const s = st();
   if(kind==="grup") return grupSheet(el && el.dataset.id);
+  if(kind==="tanitim"){ const link = location.origin + "/?tanitim=1", msj = `Zekacademy koçluk uygulamasını örnek bir öğrenciyle gezmek ister misin? Giriş gerekmiyor, sadece linke dokun: ${link}`;
+    return sheet(`<h3>Tanıtım linki</h3><p class="muted small" style="margin:0">Bu linki açan kişi giriş yapmadan, örnek verilerle dolu bir öğrenci hesabıyla uygulamayı gezer: programı, deneme grafiği, Ders bölümü, Öğrenme Merkezi, Sınıf. Hiçbir şey gerçek veritabanına yazılmaz, gerçek öğrencilerin hiçbiri görünmez.</p>
+      <label class="f">Link<input type="text" readonly value="${esc(link)}" id="tnLink" onclick="this.select()"></label>
+      <div class="kdalt" style="margin-top:4px"><button type="button" class="btn pri" data-act="tnkopya">${icon("copy","sm")} Kopyala</button><a class="btn" href="https://wa.me/?text=${encodeURIComponent(msj)}" target="_blank" rel="noopener">WhatsApp'ta paylaş</a></div>
+      <p class="faint small" style="margin:10px 0 0">Kendin bakmak için linki gizli sekmede aç. Bu cihazda normal sekmede açarsan uygulama tanıtım moduna geçer; koç paneline dönmek için app.zekacademy.com/?demo=0 adresini aç.</p>
+      <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`); }
   if(kind==="takma"){ takmaSheet(); avYenile(); return; }
   if(kind==="takvim"){ const t = today(), L = takvim().filter(x=>(x.bit||x.bas) >= t).map(x=>({...x, tip:"deneme"})); Object.values(s?.plan||{}).forEach(p=>(p.yazilar||[]).forEach(y=>{ if(y.tarih && y.tarih>=t) L.push({bas:y.tarih, bit:y.tarih, yayin:"Yazılı", ad:y.ders, tip:"yazili"}); })); L.sort((a,b)=>a.bas.localeCompare(b.bas));
     return sheet(`<h3>Deneme takvimi</h3><p class="muted small" style="margin:0">Türkiye geneli denemeler${s?" ve yazılıların":""}. Tarihler yayınevlerinin açıkladığı programlardan; değişebilir.</p><div class="tkl" style="max-height:60vh;overflow:auto">${L.map(takvimSatir).join("") || `<div class="empty">Yaklaşan deneme yok.</div>`}</div><div class="acts"><button type="button" class="btn pri" data-close>Kapat</button></div>`); }
@@ -3199,6 +3206,7 @@ document.addEventListener("click", e=>{
     case "hgun": { const x = st(); S.view = "program"; S.pmode = "gun"; S.day = v; if(x) S.week = curStart(x); render(); window.scrollTo(0,0); break; }
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
     case "ex": S.ex=v; render(); break;
+    case "tnkopya": { const i = $("#tnLink"); try{ navigator.clipboard.writeText(i.value).then(()=>toast("Link kopyalandı"), ()=>{ i.select(); document.execCommand("copy"); toast("Link kopyalandı"); }); }catch(e){ i.select(); document.execCommand("copy"); toast("Link kopyalandı"); } break; }
     case "dersac": S.dsk=v; S.dsf="tum"; S.view="dersd"; render(); window.scrollTo(0,0); break;
     case "dsf": S.dsf=v; render(); break;
     case "konud": konuDetaySheet(b.dataset.k); break;

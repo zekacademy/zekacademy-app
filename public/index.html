@@ -1422,7 +1422,9 @@ body.dersacik{overflow:hidden}
 <noscript>Bu uygulama için JavaScript gerekli.</noscript>
 <script>/* Demo modu (?demo=1): gerçek Firebase yerine tarayıcı içi sahte veri; ?demo=0 ile çıkılır */
 (function(){ try{ var q = new URLSearchParams(location.search);
-  if(q.get("demo")==="1") localStorage.setItem("zk-demo","1"); if(q.get("demo")==="0") localStorage.removeItem("zk-demo");
+  if(q.get("demo")==="1") localStorage.setItem("zk-demo","1"); if(q.get("demo")==="0"){ localStorage.removeItem("zk-demo"); localStorage.removeItem("zk-tanitim"); }
+  /* Aday öğrenci/veli tanıtım linki (?tanitim=1): her açılışta temiz örnek verilerle, örnek öğrenci olarak doğrudan girer */
+  if(q.get("tanitim")==="1"){ localStorage.setItem("zk-demo","1"); localStorage.setItem("zk-tanitim","1"); ["mockDb","mockUsers","mockUser","zk-demo-v"].forEach(function(k){ localStorage.removeItem(k); }); window.ZK_TANITIM_GIRIS = true; history.replaceState(null, "", location.pathname); }
   if(localStorage.getItem("zk-demo")!=="1") return;
   var V = "https://www.gstatic.com/firebasejs/10.14.1/firebase-", m = {};
   [["app","app"],["auth","auth"],["firestore","fs"],["messaging","messaging"],["functions","functions"]].forEach(function(x){ m[V+x[0]+".js"] = "/demo/"+x[1]+".js"; });
