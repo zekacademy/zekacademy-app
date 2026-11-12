@@ -1,0 +1,2430 @@
+[
+ {
+  "id": "tytmat-veri-0001",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Aritmetik Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Ortalama ve terim sayısından toplamı bulup eklenen terimin değerini hesaplar.",
+  "tipId": "vri-ort",
+  "tip": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir öğrencinin matematik dersinin ilk 4 yazılısından aldığı puanların aritmetik ortalaması 70’tir. Öğrenci 5. yazılıdan da puan alınca beş yazılının aritmetik ortalaması 72 olmuştur.\nBuna göre öğrenci 5. yazılıdan kaç puan almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "8",
+   "C": "71",
+   "D": "72",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "80"
+  },
+  "celdiriciler": {
+   "A": "İki ortalama arasındaki farkı (72 − 70) 5. yazılının puanı sanmış.",
+   "B": "Ortalamadaki artışı yalnız ilk dört sınavın sayısıyla çarpıp (4 × 2) ek puan saymış.",
+   "D": "Yeni ortalamayı 5. sınavın puanı sanmış.",
+   "C": "İki ortalamanın ortalamasını (70 ile 72’nin ortası) 5. sınavın puanı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "C": "bilgi"
+  },
+  "istenen": "5. yazılıdan alınan puan.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "İki ortalamayı da toplam puana çevirip karşılaştır: bunun için her ortalamayı hangi sayıyla çarpmalısın?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk dört sınavın toplamı",
+    "aciklama": "Toplam = ortalama × sınav sayısı.",
+    "islem": "4 × 70 = 280"
+   },
+   {
+    "baslik": "Beş sınavın toplamı",
+    "aciklama": "Yeni ortalama 72 ve sınav sayısı 5.",
+    "islem": "5 × 72 = 360"
+   },
+   {
+    "baslik": "5. sınavın puanı",
+    "aciklama": "İki toplamın farkı 5. sınavdır.",
+    "islem": "360 − 280 = 80"
+   }
+  ],
+  "puf": "Ortalama ve terim sayısı bilindiğinde önce toplamı bul; yeni terimin değeri iki toplamın farkıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-01 (eleman ekleme) · ilk dört yazılı ve beşinci yazılı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0002",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Aritmetik Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Bir veri grubunun ortalaması verildiğinde eksik terimi bulur.",
+  "tipId": "vri-ort",
+  "tip": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kuryenin 5 gün boyunca günlük teslim ettiği paket sayıları sırasıyla 18, 24, x, 30 ve 21’dir. Bu veri grubunun aritmetik ortalaması 25’tir.\nBuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7",
+   "B": "25",
+   "C": "32",
+   "D": "53",
+   "E": "125"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "32"
+  },
+  "celdiriciler": {
+   "A": "Toplamı 5 yerine 4 veriyle (4 × 25) kurup bilinen dört sayının toplamını çıkarmış.",
+   "B": "Ortalamanın bütün verilere eşit olduğunu düşünüp x’i ortalamaya eşitlemiş.",
+   "D": "5 × 25’ten yalnız üç bilinen sayıyı (18 + 24 + 30) çıkarıp 21’i unutmuş.",
+   "E": "Beş verinin toplamını (5 × 25) bulup bilinen sayıları çıkarmayı unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eksik paket sayısı x.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "Beş verinin toplamı ortalamayla nasıl ilişkilidir? Bilinen dört sayının toplamını da bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Beş verinin toplamı ortalama × 5’tir.",
+    "islem": "5 × 25 = 125"
+   },
+   {
+    "baslik": "Bilinen sayıların toplamı",
+    "aciklama": "x dışındaki dört sayıyı topla.",
+    "islem": "18 + 24 + 30 + 21 = 93"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Toplamdan bilinenleri çıkar.",
+    "islem": "x = 125 − 93 = 32"
+   }
+  ],
+  "puf": "Eksik terim = (ortalama × terim sayısı) − bilinen terimlerin toplamı.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-01 (eksik veri) · kuryenin günlük paketleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0003",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ortanca",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Çift sayıda terimi olan veride ortancayı ortadaki iki terimin ortalaması olarak bulur.",
+  "tipId": "vri-medmod",
+  "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kafede ardışık 6 gün boyunca satılan tatlı sayıları günlere göre sırasıyla 12, 7, 19, 5, 14 ve 9’dur.\nBuna göre bu veri grubunun ortancası (medyanı) kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "9",
+   "B": "10,5",
+   "C": "11",
+   "D": "12",
+   "E": "14"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10,5"
+  },
+  "celdiriciler": {
+   "A": "Çift sayıda terimde ortadaki iki sayıdan yalnız küçüğünü (9) almış.",
+   "C": "Ortanca yerine aritmetik ortalamayı (66 ÷ 6) bulmuş.",
+   "D": "Veriyi sıralamadan, yazıldığı sıradaki ortadaki iki sayının (19 ve 5) ortalamasını almış.",
+   "E": "Ortanca yerine açıklığı (19 − 5) bulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Veri grubunun ortancası.",
+  "bilgi": [
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Önce sayıları küçükten büyüğe diz; kaç terim olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sırala",
+    "aciklama": "Sayıları küçükten büyüğe diz.",
+    "islem": "5, 7, 9, 12, 14, 19"
+   },
+   {
+    "baslik": "Ortadakileri bul",
+    "aciklama": "6 terim vardır; 3. ve 4. terim ortadadır.",
+    "islem": "9 ve 12"
+   },
+   {
+    "baslik": "Ortalamalarını al",
+    "aciklama": "Çift sayıda terimde ortanca ortadaki ikilinin ortalamasıdır.",
+    "islem": "(9 + 12) ÷ 2 = 10,5"
+   }
+  ],
+  "puf": "Ortanca bulurken önce sırala; terim sayısı çiftse ortadaki iki sayının ortalamasını al.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-03 (çift sayıda ortanca) · kafede satılan tatlılar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0004",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tepe Değer ve Açıklık",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Sıklık tablosundan tepe değeri ve açıklığı bulur.",
+  "tipId": "vri-medmod",
+  "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir spor salonundaki 40 üyenin giydiği ayakkabı numaraları ve her numarayı giyen üye sayısı aşağıdaki tabloda verilmiştir.\nBuna göre bu veri grubunun tepe değeri ile açıklığının toplamı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 256 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"252\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"79.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ayakkabı numarası</text><text x=\"205.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Üye sayısı</text><text x=\"79.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">36</text><text x=\"205.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"79.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">37</text><text x=\"205.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">9</text><text x=\"79.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">38</text><text x=\"205.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">12</text><text x=\"79.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">39</text><text x=\"205.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"79.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">40</text><text x=\"205.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"2\" y1=\"2\" x2=\"254\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"254\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"254\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"254\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"254\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"254\" y2=\"132\" stroke-width=\"1\"/><line x1=\"2\" y1=\"158\" x2=\"254\" y2=\"158\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"158\" stroke-width=\"1\"/><line x1=\"156\" y1=\"2\" x2=\"156\" y2=\"158\" stroke-width=\"1\"/><line x1=\"254\" y1=\"2\" x2=\"254\" y2=\"158\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "4",
+   "B": "16",
+   "C": "38",
+   "D": "42",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "42"
+  },
+  "celdiriciler": {
+   "A": "Yalnız açıklığı (40 − 36) bulmuş; tepe değeri toplamaya katmamış.",
+   "B": "Tepe değer yerine en büyük sıklığı (12) alıp açıklığa (4) eklemiş.",
+   "C": "Yalnız tepe değeri bulup açıklığı toplamaya katmamış.",
+   "E": "Açıklığı sıklıkların farkı (12 − 5 = 7) olarak alıp tepe değere (38) eklemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Tepe değer ile açıklığın toplamı.",
+  "bilgi": [
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   },
+   {
+    "ad": "Açıklık",
+    "ifade": "en büyük değer ile en küçük değerin farkıdır. Örnek: 4, 9, 15 → açıklık 15 − 4 = 11"
+   }
+  ],
+  "ipuclari": [
+   "Tepe değer, en çok tekrar eden numaradır. Açıklık ise numaralar üzerinden bulunur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tepe değer",
+    "aciklama": "En büyük sıklık 12 olan numara en çok giyilendir.",
+    "islem": "Tepe değer = 38"
+   },
+   {
+    "baslik": "Açıklık",
+    "aciklama": "Açıklık numaralar arasındaki farktır; sıklıklara bakılmaz.",
+    "islem": "40 − 36 = 4"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Tepe değer ile açıklığı topla.",
+    "islem": "38 + 4 = 42"
+   }
+  ],
+  "puf": "Tepe değer sıklığı en büyük olan değerdir (sıklık değil); açıklık ise değerlerden bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-03 (tepe değer, açıklık, tablo) · spor salonu üyelerinin ayakkabı numaraları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0005",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Standart Sapma",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Ortalamaları eşit veri gruplarının standart sapmalarını ortalamaya uzaklıklarına bakarak karşılaştırır.",
+  "tipId": "vri-sapma",
+  "tip": "Standart sapma ve tanımlı sapma ölçüleri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki veri gruplarının her birinin aritmetik ortalaması 20’dir.\nBuna göre bu veri gruplarından hangisinin standart sapması en büyüktür?",
+  "sekil": null,
+  "siklar": {
+   "A": "20, 20, 20, 20",
+   "B": "18, 19, 21, 22",
+   "C": "14, 18, 22, 26",
+   "D": "8, 20, 20, 32",
+   "E": "10, 10, 30, 30"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "10, 10, 30, 30"
+  },
+  "celdiriciler": {
+   "A": "Bütün sayıları aynı olan grubu “sapması en büyük” sanmış; bu grupta sapma sıfırdır, en küçüktür.",
+   "B": "Sayıları birbirine en yakın ve ardışık gibi duran grubu seçmiş; bu grup ortalamaya çok yakındır.",
+   "C": "Sayıların eşit aralıklı dizilmesini büyük dağılım sanmış; bu gruptaki sayılar daha çok ortalamaya yakındır.",
+   "D": "Yalnız en küçük ile en büyük sayıya (açıklık 24) bakmış; ortadaki iki sayı ortalamaya eşit olduğu için sapma 10, 10, 30, 30’dan küçüktür."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Standart sapması en büyük olan veri grubu.",
+  "bilgi": [
+   {
+    "ad": "Standart sapma",
+    "ifade": "veriler ortalamadan ne kadar uzaksa sapma o kadar büyüktür. Bu soruda s = √[ (her verinin ortalamadan farkının karelerinin toplamı) ÷ (veri sayısı − 1) ] alınır. Örnek: 2, 4, 6 → ortalama 4, farklar −2, 0, 2, s = √(8 ÷ 2) = 2"
+   }
+  ],
+  "ipuclari": [
+   "Her sayının ortalamaya (20) uzaklığını yaz; uzaklıkların hangi grupta genel olarak en büyük olduğuna bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortalamadan farkları yaz",
+    "aciklama": "Her grup için sayıların 20’den farkına bak.",
+    "islem": "20, 20, 20, 20 → 0, 0, 0, 0 · 18, 19, 21, 22 → −2, −1, 1, 2 · 14, 18, 22, 26 → −6, −2, 2, 6 · 8, 20, 20, 32 → −12, 0, 0, 12 · 10, 10, 30, 30 → −10, −10, 10, 10"
+   },
+   {
+    "baslik": "Farkların karelerini topla",
+    "aciklama": "Standart sapma farkların karelerine dayanır.",
+    "islem": "0 · 10 · 80 · 288 · 400"
+   },
+   {
+    "baslik": "En büyüğü seç",
+    "aciklama": "Kareler toplamı en büyük olan grubun standart sapması en büyüktür.",
+    "islem": "10, 10, 30, 30"
+   }
+  ],
+  "puf": "Ortalamaları eşit gruplarda standart sapma, sayıların ortalamaya uzaklıklarının karelerinin toplamıyla büyür; yalnız uç değerlere (açıklığa) bakma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-06 (standart sapma, karşılaştırma) · ortalamaları eşit dört elemanlı gruplar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0006",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Veriyi Dönüştürme",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Bir veri grubunun her terimine aynı işlem uygulanınca ortalamanın aynı işlemle değiştiğini kullanır.",
+  "tipId": "vri-donusum",
+  "tip": "Sabit toplama ve çarpmanın ölçülere etkisi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aritmetik ortalaması 8 olan bir veri grubundaki her terim önce 3 ile çarpılmış, sonra elde edilen sayılara 4 eklenmiştir.\nBuna göre yeni veri grubunun aritmetik ortalaması kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "20",
+   "D": "24",
+   "E": "28"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "28"
+  },
+  "celdiriciler": {
+   "A": "Yalnız 4 ekleme işlemini uygulamış (8 + 4).",
+   "B": "Çarpmayı yapmamış; 3 ve 4’ü ortalamaya toplamış (8 + 3 + 4).",
+   "D": "Yalnız 3 ile çarpmayı yapıp 4’ü eklemeyi unutmuş.",
+   "C": "Çarpanı 3 ile eklenen 4’ü çarpıp (3 × 4) ortalamaya eklemiş: 8 + 12."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "C": "islem"
+  },
+  "istenen": "Yeni veri grubunun aritmetik ortalaması.",
+  "bilgi": [
+   {
+    "ad": "Veriyi dönüştürme",
+    "ifade": "her veri a ile çarpılıp b eklenirse ortalama ve ortanca da aynı işlemden geçer (a × ort + b); açıklık ve standart sapma |a| ile çarpılır, b etkisizdir. Örnek: 2, 4, 6 → 2x + 1 → 5, 9, 13 ve ortalama 4 → 9, açıklık 4 → 8"
+   }
+  ],
+  "ipuclari": [
+   "Toplam ve terim sayısı değişirken ortalama ne olur? Önce çarpmanın, sonra eklemenin etkisini ayrı düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpmanın etkisi",
+    "aciklama": "Her terim 3 katı olunca toplam da ortalama da 3 katı olur.",
+    "islem": "3 × 8 = 24"
+   },
+   {
+    "baslik": "Eklemenin etkisi",
+    "aciklama": "Her terime 4 eklenince ortalama 4 artar.",
+    "islem": "24 + 4 = 28"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "Örnek: 7, 9 → ortalama 8; 3x + 4 → 25, 31 → ortalama 28.",
+    "islem": "(25 + 31) ÷ 2 = 28"
+   }
+  ],
+  "puf": "Her terime aynı işlem uygulanınca ortalama da aynı işlemden geçer: yeni ortalama = çarpan × eski ortalama + eklenen.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-07 (çarp ve ekle, ortalama) · ortalaması 8 olan veri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0007",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ağırlıklı Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "İki grubun ortalamalarından ve kişi sayılarından birleşik ortalamayı hesaplar.",
+  "tipId": "vri-agirlik",
+  "tip": "Ağırlıklı ve gruplu ortalama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir okulda 9-A sınıfındaki 24 öğrencinin matematik sınavı puanlarının aritmetik ortalaması 65, 9-B sınıfındaki 16 öğrencinin ortalaması 80’dir.\nBuna göre iki sınıftaki 40 öğrencinin sınav puanlarının aritmetik ortalaması kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "71",
+   "B": "72,5",
+   "C": "74",
+   "D": "75",
+   "E": "2840"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "71"
+  },
+  "celdiriciler": {
+   "B": "İki sınıfın ortalamasını öğrenci sayılarını hesaba katmadan (65 + 80) ÷ 2 olarak almış.",
+   "C": "Ağırlıkları ters eşleştirmiş: 65’i 16 ile, 80’i 24 ile çarpmış.",
+   "D": "65 ile 80 arasındaki farkın 16 ÷ 24 kadarını 65’e eklemiş; oranı toplam kişiye (16 ÷ 40) göre almamış.",
+   "E": "Toplam puanı bulmuş ama 40 öğrenciye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "İki sınıfın birleşik puan ortalaması.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ağırlıklı ortalama",
+    "ifade": "her değer kendi ağırlığıyla çarpılıp toplanır, ağırlıklar toplamına bölünür. Örnek: 2 tanesi 10, 3 tanesi 20 olan değerlerin ortalaması (2 × 10 + 3 × 20) ÷ 5 = 16"
+   }
+  ],
+  "ipuclari": [
+   "Her sınıfın toplam puanını bulup birleştir; toplam öğrenci sayısına bölmek için sınıfların toplam puanına ihtiyacın var."
+  ],
+  "adimlar": [
+   {
+    "baslik": "9-A’nın toplam puanı",
+    "aciklama": "Toplam = ortalama × kişi sayısı.",
+    "islem": "24 × 65 = 1 560"
+   },
+   {
+    "baslik": "9-B’nin toplam puanı",
+    "aciklama": "Aynı işlem.",
+    "islem": "16 × 80 = 1 280"
+   },
+   {
+    "baslik": "Birleşik ortalama",
+    "aciklama": "Toplam puanı toplam kişiye böl.",
+    "islem": "(1 560 + 1 280) ÷ 40 = 2 840 ÷ 40 = 71"
+   }
+  ],
+  "puf": "İki grubun ortalaması, kişi sayılarıyla ağırlıklandırılarak birleştirilir; ortalamaların ortalaması alınmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-02 (gruplu ortalama) · iki şubenin matematik sınavı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0008",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Aritmetik Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Bir elemanın çıkarılması sonucu değişen ortalamadan çıkarılan elemanı bulur.",
+  "tipId": "vri-ort",
+  "tip": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir ofiste çalışan 6 kişinin aylık maaşlarının aritmetik ortalaması 30 bin TL’dir. Bu çalışanlardan biri işten ayrılınca kalan 5 kişinin maaşlarının aritmetik ortalaması 27 bin TL olmuştur.\nBuna göre işten ayrılan kişinin aylık maaşı kaç bin TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "15",
+   "C": "27",
+   "D": "33",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "45"
+  },
+  "celdiriciler": {
+   "A": "Ortalamalar arasındaki farkı (30 − 27) ayrılan kişinin maaşı sanmış.",
+   "C": "Yeni ortalamayı ayrılan kişinin maaşı sanmış.",
+   "D": "Ortalamanın 3 düştüğünü görüp ayrılanın maaşını ortalamanın 3 fazlası (30 + 3) almış.",
+   "B": "Ortalamadaki düşüşü (3) kalan kişi sayısıyla (5) çarpıp ayrılanın maaşı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "B": "islem"
+  },
+  "istenen": "Ayrılan kişinin aylık maaşı (bin TL).",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "İlk durumdaki toplam maaşı ve ayrıldıktan sonra kalan kişilerin toplam maaşını ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk toplam",
+    "aciklama": "6 kişinin toplam maaşı.",
+    "islem": "6 × 30 = 180"
+   },
+   {
+    "baslik": "Kalanların toplamı",
+    "aciklama": "5 kişinin toplam maaşı.",
+    "islem": "5 × 27 = 135"
+   },
+   {
+    "baslik": "Ayrılanın maaşı",
+    "aciklama": "İki toplamın farkıdır.",
+    "islem": "180 − 135 = 45 bin TL"
+   }
+  ],
+  "puf": "Bir terim çıkınca değişen toplam, çıkan terimin değeridir: ilk toplam − kalan toplam.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-01 (eleman çıkarma) · küçük bir ofisin maaşları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0009",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ortalama, Ortanca, Tepe Değer",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Aritmetik ortalama, ortanca ve tepe değerin eşitliğinden bilinmeyen terimi bulur.",
+  "tipId": "vri-birlikte",
+  "tip": "Merkezi eğilim ölçülerinin birlikte yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x pozitif bir tam sayı olmak üzere 4, 6, x, 20, x veri grubunun aritmetik ortalaması, ortancası ve tepe değeri birbirine eşittir.\nBuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7,5",
+   "B": "10",
+   "C": "13",
+   "D": "15",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Toplamda x’i yalnız bir kez sayıp (30 + x = 5x) x = 7,5 bulmuş.",
+   "C": "Ortanca olarak 6 ile 20’nin ortalamasını alıp x’i ona eşitlemiş.",
+   "D": "Toplamı 30 + 2x olarak yazıp 5 yerine yalnız x’li terim sayısına (2) bölerek 30 ÷ 2 = 15 bulmuş.",
+   "E": "En büyük sayıyı (20) tepe değer sanıp x’i ona eşitlemiş."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   },
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   }
+  ],
+  "ipuclari": [
+   "Tepe değerin x olması için x kaç kez geçmeli? Ortalamayı x’e eşitlerken kaç terim olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tepe değer ve ortanca",
+    "aciklama": "x iki kez geçtiğinden tepe değerdir. Ortanca da x ise x, 4 ile 20 arasında ve sıralamada ortadadır.",
+    "islem": "4, 6, x, x, 20 → ortanca x (6 ≤ x ≤ 20)"
+   },
+   {
+    "baslik": "Ortalamayı yaz",
+    "aciklama": "Beş terimin ortalaması x olmalı.",
+    "islem": "(4 + 6 + 20 + 2x) ÷ 5 = x"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Eşitliği düzenle.",
+    "islem": "30 + 2x = 5x ⇒ 3x = 30 ⇒ x = 10"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "10 koşulları sağlar.",
+    "islem": "4, 6, 10, 10, 20 → ortalama 10, ortanca 10, tepe değer 10"
+   }
+  ],
+  "puf": "Ölçüler eşitse her biri için ayrı koşul yaz; ortalama eşitliği genellikle bilinmeyeni verir, ortanca ve tepe değer yerleşimi doğrular.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-04 (üç ölçünün eşitliği) · x’in iki kez geçtiği beş elemanlı veri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0010",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ortanca",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Çift terimli bir veride ortancanın bilinen değerinden bilinmeyen terimi bulur.",
+  "tipId": "vri-medmod",
+  "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir atletizm antrenörü, 6 sporcunun bir antrenmanda attığı tur sayılarını 15, 4, 9, x, 6 ve 12 olarak kaydetmiştir. Bu veri grubunun ortancası 10’dur.\nBuna göre x pozitif tam sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "10",
+   "C": "11",
+   "D": "14",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "11"
+  },
+  "celdiriciler": {
+   "A": "Ortadaki ikiliyi 9 yerine 12 alıp 2 × 10 − 12 hesaplamış.",
+   "B": "Ortancayı x’in kendisi sanmış.",
+   "D": "Ortancayı aritmetik ortalama sanmış: 6 × 10 − (15 + 4 + 9 + 6 + 12) = 60 − 46 = 14.",
+   "E": "Ortadaki iki sayının toplamının 2 × 10 = 20 olduğunu bulup 9’u çıkarmayı unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Bilinen beş sayıyı sırala. 6 terimde ortadaki iki sayıdan biri x olmak zorunda mı, bu iki sayı hangileri olabilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinen sayıları sırala",
+    "aciklama": "4, 6, 9, 12, 15; ortancanın 10 olması için x yalnız 9 ile 12 arasında olabilir.",
+    "islem": "4, 6, 9, 12, 15"
+   },
+   {
+    "baslik": "Ortadaki ikiliyi belirle",
+    "aciklama": "x, 9 ile 12 arasındaysa 3. ve 4. terimler 9 ve x olur.",
+    "islem": "4, 6, 9, x, 12, 15"
+   },
+   {
+    "baslik": "Ortanca denklemi",
+    "aciklama": "İkilinin ortalaması 10 olmalı.",
+    "islem": "(9 + x) ÷ 2 = 10 ⇒ x = 11"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "11, 9 ile 12 arasındadır; ortanca 10 olur.",
+    "islem": "4, 6, 9, 11, 12, 15 → (9 + 11) ÷ 2 = 10"
+   }
+  ],
+  "puf": "Ortancası verilen çift terimli veride, bilinmeyenin sıradaki yerini ortancanın bulunduğu bölgeden bul, sonra ortanca denklemini yaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-03 (ortanca verilip x) · antrenmandaki tur sayıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0011",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Açıklık",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Açıklığı verilen veride bilinmeyen terimin en küçük ya da en büyük olma durumlarını ayrı inceler.",
+  "tipId": "vri-aciklik",
+  "tip": "Açıklık ve çeyrekler açıklığı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "x bir doğal sayı olmak üzere 6, 11, 9, x, 14 veri grubunun açıklığı 12’dir.\nBuna göre x’in alabileceği değerlerin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "8",
+   "C": "12",
+   "D": "18",
+   "E": "20"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Yalnız x’in en küçük terim olduğu durumu (14 − x = 12) incelemiş.",
+   "B": "x’i dikkate almadan mevcut açıklığı (14 − 6) yazmış.",
+   "D": "Yalnız x’in en büyük terim olduğu durumu (x − 6 = 12) incelemiş.",
+   "C": "Açıklık olan 12’yi x’in değeri sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "C": "dikkat"
+  },
+  "istenen": "x’in alabileceği değerlerin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Açıklık",
+    "ifade": "en büyük değer ile en küçük değerin farkıdır. Örnek: 4, 9, 15 → açıklık 15 − 4 = 11"
+   }
+  ],
+  "ipuclari": [
+   "Veride x hariç en küçük ve en büyük terim hangileri? x bu terimlerin dışına çıkarsa açıklığı nasıl değişir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Mevcut açıklık",
+    "aciklama": "x dışındaki en küçük 6, en büyük 14’tür.",
+    "islem": "14 − 6 = 8 (≠ 12)"
+   },
+   {
+    "baslik": "x en küçükse",
+    "aciklama": "Açıklık 14 − x olur.",
+    "islem": "14 − x = 12 ⇒ x = 2"
+   },
+   {
+    "baslik": "x en büyükse",
+    "aciklama": "Açıklık x − 6 olur.",
+    "islem": "x − 6 = 12 ⇒ x = 18"
+   },
+   {
+    "baslik": "Değerleri topla",
+    "aciklama": "İki değer de doğal sayıdır.",
+    "islem": "2 + 18 = 20"
+   }
+  ],
+  "puf": "Açıklığı verilen veride bilinmeyen, ya yeni en küçük ya da yeni en büyük terim olur; iki durumu da ayrı ayrı çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-05 (açıklık verilip x) · doğal sayı dizisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0012",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Çeyrekler Açıklığı",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Tek sayıda terimli bir veride ortancayı iki yarıya katmadan çeyrekler açıklığını hesaplar.",
+  "tipId": "vri-aciklik",
+  "tip": "Açıklık ve çeyrekler açıklığı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir atış yarışmasında 9 sporcunun aldığı puanlar 14, 3, 22, 9, 17, 5, 11, 16 ve 8’dir.\nSıralı bir veri grubunda ortanca, grubu alt ve üst olmak üzere iki yarıya ayırır (terim sayısı tek ise ortanca iki yarıya da katılmaz). Alt yarının ortancasına Q1, üst yarının ortancasına Q3 denir ve çeyrekler açıklığı Q3 − Q1 olarak tanımlanır.\nBuna göre bu veri grubunun çeyrekler açıklığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6,5",
+   "B": "8",
+   "C": "10",
+   "D": "16,5",
+   "E": "19"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Yalnız Q1’i (6,5) bulup cevap olarak yazmış.",
+   "B": "Ortancayı (11) iki yarıya da katmış: Q1 = 8, Q3 = 16.",
+   "D": "Yalnız Q3’ü (16,5) bulup cevap olarak yazmış.",
+   "E": "Çeyrekler açıklığı yerine açıklığı (22 − 3) bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Veri grubunun çeyrekler açıklığı.",
+  "bilgi": [
+   {
+    "ad": "Çeyrekler açıklığı",
+    "ifade": "sıralı veride ortanca grubu iki yarıya ayırır (terim sayısı tekse ortanca iki yarıya da katılmaz). Alt yarının ortancası Q1, üst yarının ortancası Q3 olur; çeyrekler açıklığı Q3 − Q1’dir. Örnek: 1, 3, 5, 7, 9, 11, 13 → Q1 = 3, Q3 = 11, fark 8"
+   }
+  ],
+  "ipuclari": [
+   "Önce veriyi sırala, ortancayı işaretle ve alt ile üst yarıları ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sırala",
+    "aciklama": "Dokuz sayıyı küçükten büyüğe diz.",
+    "islem": "3, 5, 8, 9, 11, 14, 16, 17, 22"
+   },
+   {
+    "baslik": "Yarılara ayır",
+    "aciklama": "Ortanca 5. terim (11); iki yarıya katılmaz.",
+    "islem": "Alt yarı: 3, 5, 8, 9 · Üst yarı: 14, 16, 17, 22"
+   },
+   {
+    "baslik": "Q1 ve Q3",
+    "aciklama": "Her yarının ortancası.",
+    "islem": "Q1 = (5 + 8) ÷ 2 = 6,5 · Q3 = (16 + 17) ÷ 2 = 16,5"
+   },
+   {
+    "baslik": "Farkı al",
+    "aciklama": "Çeyrekler açıklığı Q3 − Q1.",
+    "islem": "16,5 − 6,5 = 10"
+   }
+  ],
+  "puf": "Terim sayısı tekse ortancayı iki yarıya katma; Q1 ve Q3’ü yarıların ortancalarından bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-05 (çeyrekler açıklığı) · atış yarışması puanları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0013",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Standart Sapma",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Küçük bir veri grubunun standart sapmasını tanıma göre hesaplar.",
+  "tipId": "vri-sapma",
+  "tip": "Standart sapma ve tanımlı sapma ölçüleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir öğrenci, bir ders için girdiği beş denemede sırasıyla 2, 3, 3, 5 ve 7 yanlış yapmıştır.\nBir veri grubunda her verinin aritmetik ortalamadan farkının karesi alınıp bu kareler toplanır; toplam (veri sayısı − 1)’e bölünür ve sonucun kareköküne standart sapma denir.\nBuna göre bu öğrencinin yanlış sayılarının standart sapması kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,6",
+   "B": "2",
+   "C": "3,2",
+   "D": "4",
+   "E": "16"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "A": "Farkların mutlak değerlerinin ortalamasını (8 ÷ 5) bulmuş.",
+   "C": "Kareler toplamını (veri sayısı − 1) yerine 5’e bölüp kök almayı bırakmış.",
+   "D": "Kareler toplamını 4’e bölüp kök almayı unutmuş (varyans).",
+   "E": "Yalnız farkların karelerinin toplamını bulup durmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yanlış sayılarının standart sapması.",
+  "bilgi": [
+   {
+    "ad": "Standart sapma",
+    "ifade": "veriler ortalamadan ne kadar uzaksa sapma o kadar büyüktür. Bu soruda s = √[ (her verinin ortalamadan farkının karelerinin toplamı) ÷ (veri sayısı − 1) ] alınır. Örnek: 2, 4, 6 → ortalama 4, farklar −2, 0, 2, s = √(8 ÷ 2) = 2"
+   }
+  ],
+  "ipuclari": [
+   "Önce aritmetik ortalamayı bul; sonra her verinin ortalamadan farkını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortalama",
+    "aciklama": "Beş verinin toplamı 20.",
+    "islem": "20 ÷ 5 = 4"
+   },
+   {
+    "baslik": "Ortalamadan farklar",
+    "aciklama": "Her veriden 4 çıkar.",
+    "islem": "−2, −1, −1, 1, 3"
+   },
+   {
+    "baslik": "Karelerin toplamı",
+    "aciklama": "Farkların karelerini topla.",
+    "islem": "4 + 1 + 1 + 1 + 9 = 16"
+   },
+   {
+    "baslik": "Standart sapma",
+    "aciklama": "(n − 1) = 4’e böl, kök al.",
+    "islem": "√(16 ÷ 4) = √4 = 2"
+   }
+  ],
+  "puf": "Standart sapma = √(farkların kareleri toplamı ÷ (n − 1)); kök almayı ve doğru bölenle bölmeyi unutma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-06 (standart sapma hesabı) · beş denemedeki yanlış sayıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0014",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Veriyi Dönüştürme",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Her veriye aynı doğrusal işlem uygulandığında ortalama, açıklık ve standart sapmanın nasıl değiştiğini ayırt eder.",
+  "tipId": "vri-donusum",
+  "tip": "Sabit toplama ve çarpmanın ölçülere etkisi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir veri grubundaki her x değeri için y = 2x + 3 işlemi uygulanarak yeni bir veri grubu oluşturulmuştur.\nI. Yeni grubun aritmetik ortalaması, eski grubun ortalamasının 2 katından 3 fazladır.\nII. Yeni grubun açıklığı, eski grubun açıklığının 2 katıdır.\nIII. Yeni grubun standart sapması, eski grubun standart sapmasının 2 katından 3 fazladır.\nBuna göre bu ifadelerden hangileri her zaman doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Açıklıkta da toplanan 3’ün etkili olduğunu sanıp II’yi yanlış saymış; yalnız I’i doğru bulmuş.",
+   "B": "Ortalamanın da aynı işlemden geçtiğini bilmeyip I’i yanlış saymış.",
+   "D": "Standart sapmaya da +3’ün uygulanacağını sanıp III’ü doğru, ortalamayı bozulmaz sanıp I’i yanlış saymış.",
+   "E": "Standart sapmanın da ortalama gibi 2x + 3 işleminden geçeceğini sanmış; toplama standart sapmayı etkilemez."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Her zaman doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Veriyi dönüştürme",
+    "ifade": "her veri a ile çarpılıp b eklenirse ortalama ve ortanca da aynı işlemden geçer (a × ort + b); açıklık ve standart sapma |a| ile çarpılır, b etkisizdir. Örnek: 2, 4, 6 → 2x + 1 → 5, 9, 13 ve ortalama 4 → 9, açıklık 4 → 8"
+   }
+  ],
+  "ipuclari": [
+   "Örnek bir veri grubunda (ör. 3, 5, 7) üç ölçüyü önce, sonra dönüşümden sonra karşılaştır. Toplanan sabit hangi ölçüleri etkiler?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. ifade",
+    "aciklama": "Ortalama, verilerle aynı işlemden geçer.",
+    "islem": "ort(y) = 2 × ort(x) + 3 → doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "Açıklık fark olduğu için toplanan 3 sadeleşir, çarpan kalır.",
+    "islem": "(2 × maks + 3) − (2 × min + 3) = 2 × açıklık → doğru"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "Sapmalar ortalamadan farklardır; 3 eklemesi farkları değiştirmez, çarpan 2 farkları 2 katına çıkarır.",
+    "islem": "s(y) = 2 × s(x), +3 yok → yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Verilere sabit eklemek yayılım ölçülerini (açıklık, standart sapma) değiştirmez; çarpmak onları |çarpan| katına çıkarır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-07 (y = 2x + 3 dönüşümü, öncüllü) · ortalama, açıklık, standart sapma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0015",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Aritmetik Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Terim çıkarılınca değişen ortalamadan çıkarılan terimlerin toplamını bulur.",
+  "tipId": "vri-ort",
+  "tip": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir çiçekçi 10 hafta boyunca haftalık sipariş sayısını kaydetmiş ve ortalamasını 12 bulmuştur. Bayram haftası olan iki hafta kayıttan çıkarılınca kalan 8 haftanın sipariş sayılarının aritmetik ortalaması 13 olmuştur.\nBuna göre kayıttan çıkarılan iki haftanın sipariş sayıları toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1",
+   "B": "8",
+   "C": "10",
+   "D": "16",
+   "E": "104"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Ortalamalar arasındaki farkı (13 − 12) çıkarılan toplam sanmış.",
+   "B": "Çıkarılan iki haftanın toplamı yerine ortalamasını (16 ÷ 2) vermiş.",
+   "C": "Kalan toplamı 8 yerine 10 haftayla (10 × 13) kurmuş: 130 − 120.",
+   "E": "Kalan 8 haftanın toplamını (8 × 13) çıkarılanların toplamı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Kayıttan çıkarılan iki haftanın sipariş sayıları toplamı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "İlk durumdaki toplamı ve kalan haftaların toplamını ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk toplam",
+    "aciklama": "10 haftanın toplamı.",
+    "islem": "10 × 12 = 120"
+   },
+   {
+    "baslik": "Kalan toplam",
+    "aciklama": "8 haftanın toplamı.",
+    "islem": "8 × 13 = 104"
+   },
+   {
+    "baslik": "Çıkarılanların toplamı",
+    "aciklama": "İki toplamın farkıdır.",
+    "islem": "120 − 104 = 16"
+   }
+  ],
+  "puf": "Çıkarılan terimlerin toplamı, ilk toplam ile kalan toplamın farkıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-01 (iki terimin toplamı) · çiçekçinin haftalık siparişleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0016",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ağırlıklı Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Ağırlıklı ortalama koşulundan eksik notu hesaplar.",
+  "tipId": "vri-agirlik",
+  "tip": "Ağırlıklı ve gruplu ortalama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir derste dönem puanı, 1. yazılı, 2. yazılı ve proje notlarının sırasıyla 2, 3 ve 5 ağırlıkla alınan ağırlıklı aritmetik ortalamasıdır. Bir öğrenci 1. yazılıdan 70, 2. yazılıdan 80 almıştır.\nÖğrencinin dönem puanının 78 olması için proje notu kaç olmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "80",
+   "C": "82",
+   "D": "84",
+   "E": "95"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "80"
+  },
+  "celdiriciler": {
+   "A": "Proje katkısını (780 − 380 = 400) projenin ağırlığı 5 yerine ağırlıklar toplamı olan 10’a bölmüş.",
+   "C": "Ağırlıkları yanlış eşleştirmiş: 1. yazılıya 3, 2. yazılıya 2 vermiş.",
+   "D": "Ağırlıkları hiç kullanmamış: 3 × 78 − (70 + 80) hesaplamış.",
+   "E": "Ağırlıkları tersine eşleştirmiş (5, 3, 2) ve proje ağırlığını 2 almış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "islem",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Dönem puanının 78 olması için gereken proje notu.",
+  "bilgi": [
+   {
+    "ad": "Ağırlıklı ortalama",
+    "ifade": "her değer kendi ağırlığıyla çarpılıp toplanır, ağırlıklar toplamına bölünür. Örnek: 2 tanesi 10, 3 tanesi 20 olan değerlerin ortalaması (2 × 10 + 3 × 20) ÷ 5 = 16"
+   }
+  ],
+  "ipuclari": [
+   "Ağırlıklar toplamı kaç? Dönem puanının ağırlıklarla çarpımını yazıp bilinenleri ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ağırlıklı toplam",
+    "aciklama": "Dönem puanı 78 ve ağırlıklar toplamı 2 + 3 + 5 = 10.",
+    "islem": "78 × 10 = 780"
+   },
+   {
+    "baslik": "Bilinen notların katkısı",
+    "aciklama": "1. ve 2. yazılı ağırlıklarıyla çarpılır.",
+    "islem": "2 × 70 + 3 × 80 = 140 + 240 = 380"
+   },
+   {
+    "baslik": "Projenin katkısı",
+    "aciklama": "Toplamdan çıkar.",
+    "islem": "780 − 380 = 400"
+   },
+   {
+    "baslik": "Proje notu",
+    "aciklama": "Projenin ağırlığı 5.",
+    "islem": "400 ÷ 5 = 80"
+   }
+  ],
+  "puf": "Ağırlıklı ortalamada her notu ağırlığıyla çarp; hedef toplamı (ortalama × ağırlıklar toplamı) kur, bilinenleri çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-02 (ağırlıklı ortalama, hedef not) · ders geçme notu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0017",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tablodan Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Sıklık tablosundaki değerleri sıklıklarıyla çarparak aritmetik ortalamayı hesaplar.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir basketbolcunun bir sezonda oynadığı 20 maçta attığı sayılar ve bu sayıları kaç maçta attığı aşağıdaki tabloda verilmiştir.\nBuna göre basketbolcunun maç başına attığı sayıların aritmetik ortalaması kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 208 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"204\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"55.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Attığı sayı</text><text x=\"157.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Maç sayısı</text><text x=\"55.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">60</text><text x=\"157.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"55.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">70</text><text x=\"157.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"55.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">80</text><text x=\"157.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"55.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">90</text><text x=\"157.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"55.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">100</text><text x=\"157.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"2\" y1=\"2\" x2=\"206\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"206\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"206\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"206\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"206\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"206\" y2=\"132\" stroke-width=\"1\"/><line x1=\"2\" y1=\"158\" x2=\"206\" y2=\"158\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"158\" stroke-width=\"1\"/><line x1=\"108\" y1=\"2\" x2=\"108\" y2=\"158\" stroke-width=\"1\"/><line x1=\"206\" y1=\"2\" x2=\"206\" y2=\"158\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "4",
+   "B": "79",
+   "C": "80",
+   "D": "316",
+   "E": "1580"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "79"
+  },
+  "celdiriciler": {
+   "A": "Sıklıkların (maç sayılarının) ortalamasını (20 ÷ 5) bulmuş.",
+   "C": "Tablodaki sayıların (60, 70, 80, 90, 100) basit ortalamasını almış; sıklıkları hesaba katmamış.",
+   "D": "Toplam sayıyı 20 maça değil, tablodaki 5 satıra bölmüş.",
+   "E": "Toplam sayıyı bulmuş ama maç sayısına bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Maç başına atılan sayıların aritmetik ortalaması.",
+  "bilgi": [
+   {
+    "ad": "Sıklık tablosu",
+    "ifade": "tablodaki her değer, yanındaki sıklık kadar tekrar eden veri demektir. Örnek: “3 → 2 kez, 5 → 1 kez” veri grubu 3, 3, 5 demektir; toplam veri sayısı sıklıkların toplamıdır"
+   },
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "Her satırdaki sayıyı o sayıyı kaç maçta attığıyla çarp; toplam maç sayısını da ayrıca bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam maç",
+    "aciklama": "Sıklıkların toplamı.",
+    "islem": "2 + 5 + 8 + 3 + 2 = 20"
+   },
+   {
+    "baslik": "Toplam sayı",
+    "aciklama": "Her sayıyı sıklığıyla çarpıp topla.",
+    "islem": "60 × 2 + 70 × 5 + 80 × 8 + 90 × 3 + 100 × 2 = 120 + 350 + 640 + 270 + 200 = 1 580"
+   },
+   {
+    "baslik": "Ortalama",
+    "aciklama": "Toplam sayıyı maç sayısına böl.",
+    "islem": "1 580 ÷ 20 = 79"
+   }
+  ],
+  "puf": "Sıklık tablosunda ortalama = (her değer × kendi sıklığı)’nın toplamı ÷ sıklıkların toplamı.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (tablodan ortalama) · basketbolcunun maçlardaki sayıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0018",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tablodan Ortanca ve Tepe Değer",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Birikimli sıklıkla ortanca konumunu bulup tepe değerle karşılaştırır.",
+  "tipId": "vri-medmod",
+  "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir kütüphanenin 30 üyesinin bir ayda ödünç aldığı kitap sayıları ve bu kadar kitap alan üye sayıları aşağıdaki tabloda verilmiştir.\nBuna göre tepe değer ile ortancanın farkı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 320 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"316\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"111.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Ödünç alınan kitap sayısı</text><text x=\"269.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Üye sayısı</text><text x=\"111.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"269.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"111.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"269.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><text x=\"111.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"269.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><text x=\"111.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">4</text><text x=\"269.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">11</text><text x=\"111.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">5</text><text x=\"269.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><line x1=\"2\" y1=\"2\" x2=\"318\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"318\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"318\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"318\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"318\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"318\" y2=\"132\" stroke-width=\"1\"/><line x1=\"2\" y1=\"158\" x2=\"318\" y2=\"158\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"158\" stroke-width=\"1\"/><line x1=\"220\" y1=\"2\" x2=\"220\" y2=\"158\" stroke-width=\"1\"/><line x1=\"318\" y1=\"2\" x2=\"318\" y2=\"158\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "1",
+   "B": "1,5",
+   "C": "2",
+   "D": "2,5",
+   "E": "4"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1,5"
+  },
+  "celdiriciler": {
+   "A": "Ortancayı 16. terim olan 3 alıp ortadaki iki terimin ortalamasını almamış.",
+   "C": "Ortancayı 15. terim olan 2 alıp ortadaki iki terimin ortalamasını almamış.",
+   "D": "Tepe değer yerine ortancayı sonuç yazmış.",
+   "E": "Farkı hesaplamak yerine tepe değeri (4) yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Tepe değer ile ortancanın farkı.",
+  "bilgi": [
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   },
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   },
+   {
+    "ad": "Sıklık tablosu",
+    "ifade": "tablodaki her değer, yanındaki sıklık kadar tekrar eden veri demektir. Örnek: “3 → 2 kez, 5 → 1 kez” veri grubu 3, 3, 5 demektir; toplam veri sayısı sıklıkların toplamıdır"
+   }
+  ],
+  "ipuclari": [
+   "Üye sayıları toplamı 30; ortanca hangi sıradaki terimlerin ortalamasıdır? Birikimli sıklığı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tepe değer",
+    "aciklama": "En büyük sıklık 11 olan kitap sayısı.",
+    "islem": "Tepe değer = 4"
+   },
+   {
+    "baslik": "Birikimli sıklık",
+    "aciklama": "Değerleri sıraladıkça kaç veri geçildiğine bak.",
+    "islem": "1 → 5 · 2 → 15 · 3 → 18 · 4 → 29 · 5 → 30"
+   },
+   {
+    "baslik": "Ortanca",
+    "aciklama": "30 veri var; 15. ve 16. terim ortadadır. 15. terim 2, 16. terim 3’tür.",
+    "islem": "(2 + 3) ÷ 2 = 2,5"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "Tepe değerden ortancayı çıkar.",
+    "islem": "4 − 2,5 = 1,5"
+   }
+  ],
+  "puf": "Sıklık tablosunda ortancayı bulmak için birikimli sıklığı yaz ve ortadaki sıra numarasını bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-03 (tablodan ortanca ve tepe değer) · kütüphane üyelerinin ödünç aldığı kitaplar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0019",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tablodan Eksik Sıklık",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Aritmetik ortalaması verilen bir sıklık tablosunda bilinmeyen sıklığı bulur.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir sınıftaki öğrencilerin kardeş sayıları ve bu kadar kardeşi olan öğrenci sayıları aşağıdaki tabloda verilmiştir. Hiç kardeşi olmayan öğrenci sayısı x’tir ve sınıftaki öğrencilerin kardeş sayılarının aritmetik ortalaması 1,3’tür.\nBuna göre x kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 256 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"252\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"63.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kardeş sayısı</text><text x=\"189.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Öğrenci sayısı</text><text x=\"63.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">0</text><text x=\"189.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"63.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"189.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"63.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"189.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">6</text><text x=\"63.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"189.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"2\" y1=\"2\" x2=\"254\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"254\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"254\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"254\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"254\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"254\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"124\" y1=\"2\" x2=\"124\" y2=\"132\" stroke-width=\"1\"/><line x1=\"254\" y1=\"2\" x2=\"254\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "16",
+   "D": "20",
+   "E": "26"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "4"
+  },
+  "celdiriciler": {
+   "B": "Toplam öğrenciyi 26 ÷ 1,3 = 20 bulup bilinen öğrencilerden yalnız 8 + 6’yı çıkarmış; 3 kardeşli 2 öğrenciyi unutmuş: 20 − 14 = 6.",
+   "C": "Tabloda bilinen öğrenci sayılarının toplamını (8 + 6 + 2) x sanmış.",
+   "D": "Toplam öğrenci sayısını (26 ÷ 1,3 = 20) x olarak yazmış.",
+   "E": "Toplam kardeş sayısını (8 + 12 + 6) x sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Hiç kardeşi olmayan öğrenci sayısı x.",
+  "bilgi": [
+   {
+    "ad": "Sıklık tablosu",
+    "ifade": "tablodaki her değer, yanındaki sıklık kadar tekrar eden veri demektir. Örnek: “3 → 2 kez, 5 → 1 kez” veri grubu 3, 3, 5 demektir; toplam veri sayısı sıklıkların toplamıdır"
+   },
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "Toplam kardeş sayısını ve toplam öğrenci sayısını (x cinsinden) yaz; ortalama bu ikisinin oranıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam kardeş sayısı",
+    "aciklama": "Her kardeş sayısını öğrenci sayısıyla çarp; 0 kardeşliler katkı vermez.",
+    "islem": "0 × x + 1 × 8 + 2 × 6 + 3 × 2 = 26"
+   },
+   {
+    "baslik": "Toplam öğrenci",
+    "aciklama": "Sıklıkların toplamı.",
+    "islem": "x + 8 + 6 + 2 = x + 16"
+   },
+   {
+    "baslik": "Ortalama denklemi",
+    "aciklama": "Toplam kardeş ÷ toplam öğrenci = 1,3.",
+    "islem": "26 ÷ (x + 16) = 1,3 ⇒ x + 16 = 20"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "x = 4"
+   }
+  ],
+  "puf": "Sıklık tablosunda bilinmeyen sıklık varsa toplam değeri ve toplam sıklığı x cinsinden yaz, ortalama eşitliğiyle çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (tablodan eksik sıklık) · öğrencilerin kardeş sayıları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0020",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Sütun Grafiği Ortalama ve Ortanca",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Sütun grafiğinden okunan değerlerin ortalamasını ve ortancasını karşılaştırır.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 4,
+  "metin": "Bir limonata standında bir haftanın ilk beş günü satılan bardak sayıları aşağıdaki sütun grafiğinde gösterilmiştir.\nBuna göre bu veri grubunun aritmetik ortalaması ile ortancasının farkı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 330 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"154.0\" x2=\"322\" y2=\"154.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"158.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"46\" y1=\"124.0\" x2=\"322\" y2=\"124.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"128.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"46\" y1=\"94.0\" x2=\"322\" y2=\"94.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"98.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"46\" y1=\"64.0\" x2=\"322\" y2=\"64.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"68.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">80</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">100</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"58.4\" y=\"154.0\" width=\"30.4\" height=\"30.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"73.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Pzt</text><rect x=\"113.6\" y=\"94.0\" width=\"30.4\" height=\"90.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"128.8\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sal</text><rect x=\"168.8\" y=\"34.0\" width=\"30.4\" height=\"150.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"184.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Çar</text><rect x=\"224.0\" y=\"124.0\" width=\"30.4\" height=\"60.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"239.2\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Per</text><rect x=\"279.2\" y=\"124.0\" width=\"30.4\" height=\"60.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"294.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cum</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Bardak</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Gün</text></svg>",
+  "siklar": {
+   "A": "12",
+   "B": "40",
+   "C": "48",
+   "D": "52",
+   "E": "92"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "Farkı bulmak yerine yalnız ortancayı yazmış.",
+   "C": "Verileri sıralamadan ortadaki sütunu (Çarşamba, 100) ortanca sanıp ortalamayla farkını (100 − 52) almış.",
+   "D": "Farkı bulmak yerine yalnız ortalamayı yazmış.",
+   "E": "Ortalama ile ortancayı çıkarmak yerine toplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Aritmetik ortalama ile ortancanın farkı.",
+  "bilgi": [
+   {
+    "ad": "Grafikten veri okuma",
+    "ifade": "sütunun ya da noktanın yüksekliği eksendeki değeri verir; bu değerler listelenip ölçüler hesaplanır. Örnek: yükseklikleri 20, 40, 40 olan üç sütun → veri 20, 40, 40"
+   },
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "Beş sütunun değerlerini okuyup liste yap. Ortanca için sıralama gerekir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri oku",
+    "aciklama": "Sütunların yükseklikleri.",
+    "islem": "20, 60, 100, 40, 40"
+   },
+   {
+    "baslik": "Ortalama",
+    "aciklama": "Toplam 260, 5 gün.",
+    "islem": "260 ÷ 5 = 52"
+   },
+   {
+    "baslik": "Ortanca",
+    "aciklama": "Sıralanmış: 20, 40, 40, 60, 100; ortadaki 3. terim.",
+    "islem": "Ortanca = 40"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "Ortalamadan ortancayı çıkar.",
+    "islem": "52 − 40 = 12"
+   }
+  ],
+  "puf": "Grafikteki sütun sırası ortancayı vermez; değerleri okuyup önce sırala.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (sütun grafiği, ortalama–ortanca) · limonata standının satışları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0021",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Çizgi Grafiği Ölçüleri",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Çizgi grafiğinden okunan veride ortalama, ortanca, tepe değer ve açıklıkla ilgili ifadeleri değerlendirir.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir kentte bir haftanın günlük en yüksek sıcaklıkları (°C) aşağıdaki çizgi grafiğinde gösterilmiştir.\nI. Sıcaklıkların aritmetik ortalaması ortancasına eşittir.\nII. Veri grubunun tek bir tepe değeri vardır ve bu 16’dır.\nIII. Veri grubunun açıklığı 8 °C’dir.\nBuna göre bu ifadelerden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"169.0\" x2=\"318\" y2=\"169.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"173.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"46\" y1=\"154.0\" x2=\"318\" y2=\"154.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"158.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"46\" y1=\"139.0\" x2=\"318\" y2=\"139.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"143.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"46\" y1=\"124.0\" x2=\"318\" y2=\"124.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"128.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">8</text><line x1=\"46\" y1=\"109.0\" x2=\"318\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"46\" y1=\"94.0\" x2=\"318\" y2=\"94.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"98.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">12</text><line x1=\"46\" y1=\"79.0\" x2=\"318\" y2=\"79.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"83.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">14</text><line x1=\"46\" y1=\"64.0\" x2=\"318\" y2=\"64.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"68.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">16</text><line x1=\"46\" y1=\"49.0\" x2=\"318\" y2=\"49.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"53.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">18</text><line x1=\"46\" y1=\"34.0\" x2=\"318\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"65.4\" y1=\"94.0\" x2=\"65.4\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"65.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Pzt</text><line x1=\"104.3\" y1=\"64.0\" x2=\"104.3\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"104.3\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sal</text><line x1=\"143.1\" y1=\"109.0\" x2=\"143.1\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"143.1\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Çar</text><line x1=\"182.0\" y1=\"49.0\" x2=\"182.0\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"182.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Per</text><line x1=\"220.9\" y1=\"64.0\" x2=\"220.9\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"220.9\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cum</text><line x1=\"259.7\" y1=\"79.0\" x2=\"259.7\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"259.7\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cmt</text><line x1=\"298.6\" y1=\"94.0\" x2=\"298.6\" y2=\"184\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".55\"/><text x=\"298.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Paz</text><polyline points=\"65.4,94.0 104.3,64.0 143.1,109.0 182.0,49.0 220.9,64.0 259.7,79.0 298.6,94.0\" stroke-width=\"2.4\" style=\"stroke:var(--acc,#16A34A)\"/><circle cx=\"65.4\" cy=\"94.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"104.3\" cy=\"64.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"143.1\" cy=\"109.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"182.0\" cy=\"49.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"220.9\" cy=\"64.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"259.7\" cy=\"79.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><circle cx=\"298.6\" cy=\"94.0\" r=\"3.6\" style=\"fill:var(--acc,#16A34A);stroke:var(--acc,#16A34A)\"/><line x1=\"46\" y1=\"184\" x2=\"318\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Sıcaklık (°C)</text><text x=\"182.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Gün</text></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "Açıklığı 18 − 12 = 6 hesaplayıp (en küçük sıcaklığı 12 sanarak) III’ü yanlış saymış.",
+   "B": "Ortalama ile ortancanın eşit olduğunu görmeyip I’i yanlış saymış (ortancayı sıralamadan okumuş).",
+   "C": "12 ve 16 iki kez geçtiği hâlde 16’yı tek tepe değer sanmış; açıklığı da kontrol etmemiş.",
+   "E": "Ortalamayı yanlış (örn. 15) bulup I’i yanlış saymış; 16’nın tek tepe değer olduğunu sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Grafikten veri okuma",
+    "ifade": "sütunun ya da noktanın yüksekliği eksendeki değeri verir; bu değerler listelenip ölçüler hesaplanır. Örnek: yükseklikleri 20, 40, 40 olan üç sütun → veri 20, 40, 40"
+   },
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   }
+  ],
+  "ipuclari": [
+   "Yedi sıcaklığı okuyup listele; her ifadeyi ayrı ayrı bu listeden kontrol et. Hangi değerler kaç kez geçiyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri oku",
+    "aciklama": "Noktaların yükseklikleri.",
+    "islem": "12, 16, 10, 18, 16, 14, 12"
+   },
+   {
+    "baslik": "I. ifade",
+    "aciklama": "Toplam 98; ortalama 98 ÷ 7. Sıralı: 10, 12, 12, 14, 16, 16, 18; ortanca 4. terim.",
+    "islem": "Ortalama = 14, ortanca = 14 → doğru"
+   },
+   {
+    "baslik": "II. ifade",
+    "aciklama": "12 ve 16 ikişer kez geçer; ikisi de tepe değerdir.",
+    "islem": "Tepe değerler 12 ve 16 → yanlış"
+   },
+   {
+    "baslik": "III. ifade",
+    "aciklama": "En büyük 18, en küçük 10.",
+    "islem": "18 − 10 = 8 → doğru"
+   }
+  ],
+  "puf": "Tepe değer birden fazla olabilir; “tek tepe değer” iddiasında en yüksek sıklığa sahip tüm değerleri say.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (çizgi grafiği, ölçülerin yorumu) · bir haftanın en yüksek sıcaklıkları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0022",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Gruplu Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "İki grubun ve birleşik grubun ortalamalarından bilinmeyen grup büyüklüğünü bulur.",
+  "tipId": "vri-agirlik",
+  "tip": "Ağırlıklı ve gruplu ortalama",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kursta sabah grubunda 8 kişi vardır ve bu grubun yaş ortalaması 42’dir. Akşam grubunun yaş ortalaması 36’dır. Kursun bütün katılımcılarının yaş ortalaması 38’dir.\nBuna göre akşam grubunda kaç kişi vardır?",
+  "sekil": null,
+  "siklar": {
+   "A": "4",
+   "B": "6",
+   "C": "8",
+   "D": "16",
+   "E": "32"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Ortalamaya yakınlık oranını ters kurup (42 − 38) : (38 − 36) = 2 : 1 oranının tersiyle 8 ÷ 2 hesaplamış.",
+   "B": "İki grubun ortalama farkını (42 − 36) kişi sayısı sanmış.",
+   "C": "Birleşik ortalamanın iki ortalamanın tam ortasında olmadığını görmeyip grupları eşit büyüklükte sanmış.",
+   "E": "Sabah grubunun sayısını ortalama farkıyla (8 × 4) çarpmış; (38 − 36) = 2’ye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Akşam grubundaki kişi sayısı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ağırlıklı ortalama",
+    "ifade": "her değer kendi ağırlığıyla çarpılıp toplanır, ağırlıklar toplamına bölünür. Örnek: 2 tanesi 10, 3 tanesi 20 olan değerlerin ortalaması (2 × 10 + 3 × 20) ÷ 5 = 16"
+   }
+  ],
+  "ipuclari": [
+   "Akşam grubunun kişi sayısına b de; üç ortalamayı toplam yaşlarla ilişkilendirip denklem kur."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sabah grubunun toplam yaşı",
+    "aciklama": "Toplam = ortalama × kişi.",
+    "islem": "8 × 42 = 336"
+   },
+   {
+    "baslik": "Akşam grubu ve toplam",
+    "aciklama": "Akşam grubunda b kişi olsun; tüm katılımcıların toplam yaşı 38 × (8 + b).",
+    "islem": "336 + 36b = 38 × (8 + b)"
+   },
+   {
+    "baslik": "Denklemi çöz",
+    "aciklama": "Parantezi aç.",
+    "islem": "336 + 36b = 304 + 38b ⇒ 32 = 2b"
+   },
+   {
+    "baslik": "Kişi sayısı",
+    "aciklama": "b’yi bul.",
+    "islem": "b = 16"
+   }
+  ],
+  "puf": "Gruplu ortalamada toplam değerleri (ortalama × kişi sayısı) yazıp birleşik ortalamayla eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-02 (gruplu ortalama, kişi sayısı bulma) · kursun sabah ve akşam grupları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0023",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Ortalama, Ortanca, Tepe Değer",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Tepe değerin tek olması, ortancanın ve ortalamanın verilmesi koşullarını birlikte kullanarak en büyük terimin alabileceği en büyük değeri bulur.",
+  "tipId": "vri-birlikte",
+  "tip": "Merkezi eğilim ölçülerinin birlikte yorumu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 5,
+  "metin": "Küçükten büyüğe doğru sıralanmış beş elemanlı bir veri grubunun elemanları pozitif tam sayılardır. Bu veri grubunun tek bir tepe değeri vardır ve bu değer 3’tür. Ortancası 5, aritmetik ortalaması 7’dir.\nBuna göre bu veri grubunun en büyük elemanı en çok kaç olabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "18",
+   "C": "19",
+   "D": "23",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "A": "Dördüncü ve beşinci elemanı eşit paylaştırmış (12 ve 12); bu durumda 12 de iki kez geçer, tepe değer tek olmaz ve en büyük değer de aranmamış olur.",
+   "C": "4. elemanı 5 almış; 5 iki kez geçeceği için tepe değer yalnız 3 olmaz.",
+   "D": "Eleman toplamından yalnız 3, 3 ve 5’i çıkarıp 4. elemanı 1 almış; ama sıralamada 4. eleman ortancadan küçük olamaz.",
+   "E": "Eleman toplamından 3, 3 ve 5’i çıkarıp 4. elemanı hiç saymamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "En büyük elemanın alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   },
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   },
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   }
+  ],
+  "ipuclari": [
+   "Ortancanın ve sıralamanın 3. ve 4. elemanı hakkında ne söylediğine bak; 3’ün tek tepe değer olması başka hangi sayıların kaç kez geçebileceğini kısıtlar?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sıralamayı yaz",
+    "aciklama": "Tepe değer 3 en az 2 kez geçer; ortanca 3. terim olan 5’tir.",
+    "islem": "3, 3, 5, d, e (3 ≤ 3 ≤ 5 ≤ d ≤ e)"
+   },
+   {
+    "baslik": "Toplamı kullan",
+    "aciklama": "Ortalama 7 olduğundan toplam 35 olmalıdır.",
+    "islem": "3 + 3 + 5 + d + e = 35 ⇒ d + e = 24"
+   },
+   {
+    "baslik": "d’yi kısıtla",
+    "aciklama": "d ≥ 5 olmalı; d = 5 olursa 5 de iki kez geçer ve tepe değer yalnız 3 olmaz. Bu yüzden d ≥ 6.",
+    "islem": "d ≥ 6"
+   },
+   {
+    "baslik": "e’yi büyük yap",
+    "aciklama": "e’nin en büyük olması için d en küçük alınır.",
+    "islem": "d = 6 ⇒ e = 18"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "3, 3, 5, 6, 18 → ortalama 7, ortanca 5, tek tepe değer 3.",
+    "islem": "e en çok 18"
+   }
+  ],
+  "puf": "Tepe değerin “tek” olması, öteki değerlerin tekrar sayısını sınırlar; bu sınırı atlarsan uç değer yanlış çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-04 (tepe değer–ortanca–ortalama birlikte, en büyük terim) · beş elemanlı pozitif tam sayı grubu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0024",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Sütun Grafiği Eksik Sütun",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Ortalama ile ortancanın eşitliğinden grafikte gösterilmeyen sütunun değerini sıralamayı da gözeterek bulur.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "grafik",
+  "adimSayisi": 5,
+  "metin": "Bir mağazanın bir haftanın ilk beş günü sattığı ürün adetleri aşağıdaki sütun grafiğinde gösterilmiştir. Çarşamba gününe ait sütun çizilmemiş, “?” ile belirtilmiştir. Çarşamba günü satılan ürün adedi pozitif bir tam sayıdır ve beş günün satış adetlerinin aritmetik ortalaması, ortancasına eşittir.\nBuna göre Çarşamba günü kaç adet ürün satılmıştır?",
+  "sekil": "<svg viewBox=\"0 0 340 226\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><line x1=\"46\" y1=\"169.0\" x2=\"332\" y2=\"169.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"173.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">10</text><line x1=\"46\" y1=\"154.0\" x2=\"332\" y2=\"154.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"158.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">20</text><line x1=\"46\" y1=\"139.0\" x2=\"332\" y2=\"139.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"143.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">30</text><line x1=\"46\" y1=\"124.0\" x2=\"332\" y2=\"124.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"128.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"46\" y1=\"109.0\" x2=\"332\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><line x1=\"46\" y1=\"94.0\" x2=\"332\" y2=\"94.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"98.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><line x1=\"46\" y1=\"79.0\" x2=\"332\" y2=\"79.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"83.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">70</text><line x1=\"46\" y1=\"64.0\" x2=\"332\" y2=\"64.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"68.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">80</text><line x1=\"46\" y1=\"49.0\" x2=\"332\" y2=\"49.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"53.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"46\" y1=\"34.0\" x2=\"332\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">100</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"58.9\" y=\"139.0\" width=\"31.5\" height=\"45.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"74.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Pzt</text><rect x=\"116.1\" y=\"49.0\" width=\"31.5\" height=\"135.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"131.8\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Sal</text><rect x=\"173.3\" y=\"34.0\" width=\"31.5\" height=\"150.0\" fill=\"none\" stroke-width=\"1.4\" stroke-dasharray=\"5 4\" opacity=\".7\"/><text x=\"189.0\" y=\"109.0\" text-anchor=\"middle\" font-size=\"18\" style=\"fill:var(--acc,#16A34A);stroke:none;font-weight:700\">?</text><text x=\"189.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Çar</text><rect x=\"230.5\" y=\"154.0\" width=\"31.5\" height=\"30.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"246.2\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Per</text><rect x=\"287.7\" y=\"109.0\" width=\"31.5\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"303.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">Cum</text><line x1=\"46\" y1=\"184\" x2=\"332\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Satış (adet)</text><text x=\"189.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Gün</text></svg>",
+  "siklar": {
+   "A": "10",
+   "B": "40",
+   "C": "47",
+   "D": "50",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "Toplamı 5 yerine 4 terime göre kurmuş: 4 × 50 − 190.",
+   "C": "x’i ortanca sanıp 190 = 4x denkleminden 47,5 bulmuş; tam sayı olması gerektiğini görmeden yuvarlamış.",
+   "D": "Ortancayı (50) bulup Çarşamba değerinin de ortanca kadar olduğunu sanmış.",
+   "B": "Bilinen sütunların toplamını yanlış (210) toplayıp 250 − 210 hesaplamış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "bilgi",
+   "B": "islem"
+  },
+  "istenen": "Çarşamba günü satılan ürün adedi.",
+  "bilgi": [
+   {
+    "ad": "Grafikten veri okuma",
+    "ifade": "sütunun ya da noktanın yüksekliği eksendeki değeri verir; bu değerler listelenip ölçüler hesaplanır. Örnek: yükseklikleri 20, 40, 40 olan üç sütun → veri 20, 40, 40"
+   },
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   }
+  ],
+  "ipuclari": [
+   "x’in sıralamadaki yerine göre ortancanın hangi değer olabileceğini düşün; ortalamayı x cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinen değerler",
+    "aciklama": "Grafikten okunan dört sütun.",
+    "islem": "30, 90, 20, 50 (toplam 190)"
+   },
+   {
+    "baslik": "Ortalamayı yaz",
+    "aciklama": "Beş günün ortalaması x’e bağlıdır.",
+    "islem": "Ortalama = (190 + x) ÷ 5"
+   },
+   {
+    "baslik": "Durumları incele",
+    "aciklama": "x ≤ 30 iken ortanca 30: (190 + x) ÷ 5 = 30 ⇒ x = −40 olamaz. 30 ≤ x ≤ 50 iken ortanca x: 190 = 4x ⇒ x = 47,5 tam sayı değil. x ≥ 50 iken ortanca 50.",
+    "islem": "x ≥ 50 durumu kalır"
+   },
+   {
+    "baslik": "x ≥ 50 durumunda çöz",
+    "aciklama": "Ortalama 50 olmalı.",
+    "islem": "(190 + x) ÷ 5 = 50 ⇒ x = 60"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "60, 50 ile 90 arasında olduğundan ortanca gerçekten 50’dir.",
+    "islem": "20, 30, 50, 60, 90 → ortalama 50, ortanca 50"
+   }
+  ],
+  "puf": "Ortalama ve ortanca birlikte verildiğinde bilinmeyenin sıradaki yerine göre durumları ayrı ayrı dene ve sonucu sıralamayla doğrula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (eksik sütun, ortalama = ortanca) · bir mağazanın günlük satışları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0025",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Standart Sapma",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Küçük bir veri grubunun standart sapmasını hesaplayıp doğrusal dönüşümdeki değişimini bulur.",
+  "tipId": "vri-sapma",
+  "tip": "Standart sapma ve tanımlı sapma ölçüleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir mağazada ardışık 4 günde satılan ürün sayıları 2, 2, 10 ve 14’tür. Bu satış sayılarının her biri 2 ile çarpılıp 3 çıkarılarak yeni bir veri grubu oluşturulmuştur.\nBir veri grubunda her verinin aritmetik ortalamadan farkının karesi alınıp bu kareler toplanır; toplam (veri sayısı − 1)’e bölünür ve sonucun kareköküne standart sapma denir.\nBuna göre yeni veri grubunun standart sapması kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "9",
+   "C": "12",
+   "D": "36",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Yeni grubun değil, ilk grubun standart sapmasını vermiş (çarpmanın etkisini unutmuş).",
+   "B": "Standart sapmaya da dönüşümü uygulamış: 2 × 6 − 3.",
+   "D": "Yeni grubun değil, ilk grubun varyansını (kareler toplamı ÷ 3) vermiş.",
+   "E": "Varyansı (36) 2 ile çarpıp standart sapma sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yeni veri grubunun standart sapması.",
+  "bilgi": [
+   {
+    "ad": "Standart sapma",
+    "ifade": "veriler ortalamadan ne kadar uzaksa sapma o kadar büyüktür. Bu soruda s = √[ (her verinin ortalamadan farkının karelerinin toplamı) ÷ (veri sayısı − 1) ] alınır. Örnek: 2, 4, 6 → ortalama 4, farklar −2, 0, 2, s = √(8 ÷ 2) = 2"
+   },
+   {
+    "ad": "Veriyi dönüştürme",
+    "ifade": "her veri a ile çarpılıp b eklenirse ortalama ve ortanca da aynı işlemden geçer (a × ort + b); açıklık ve standart sapma |a| ile çarpılır, b etkisizdir. Örnek: 2, 4, 6 → 2x + 1 → 5, 9, 13 ve ortalama 4 → 9, açıklık 4 → 8"
+   }
+  ],
+  "ipuclari": [
+   "Önce ilk gruptaki sapmayı hesapla; sonra verilere yapılan işlemlerin hangisinin sapmayı etkilediğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortalama",
+    "aciklama": "Dört verinin toplamı 28.",
+    "islem": "28 ÷ 4 = 7"
+   },
+   {
+    "baslik": "Farklar ve kareleri",
+    "aciklama": "Her veriden 7 çıkar, karesini al.",
+    "islem": "−5, −5, 3, 7 → 25 + 25 + 9 + 49 = 108"
+   },
+   {
+    "baslik": "İlk grubun standart sapması",
+    "aciklama": "(n − 1) = 3’e böl, kök al.",
+    "islem": "√(108 ÷ 3) = √36 = 6"
+   },
+   {
+    "baslik": "Dönüşümün etkisi",
+    "aciklama": "Çıkarma sapmayı değiştirmez, 2 ile çarpma 2 katına çıkarır.",
+    "islem": "2 × 6 = 12"
+   }
+  ],
+  "puf": "Verilere sabit çıkarmak standart sapmayı değiştirmez; |çarpan| ile çarpmak standart sapmayı aynı oranda büyütür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-06 (standart sapma hesabı ve dönüşüm) · dört günlük satışlar",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0026",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Gruplu Ortalama",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "İki ortalamadan oranı, üçüncü ortalamadan toplam sayıyı bularak grup büyüklüğünü hesaplar.",
+  "tipId": "vri-agirlik",
+  "tip": "Ağırlıklı ve gruplu ortalama",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir lisede yapılan ortak sınavın ilk gününde sınava giren kız öğrencilerin puan ortalaması 70, erkek öğrencilerin puan ortalaması 60’tır. İlk gün sınava giren tüm öğrencilerin puan ortalaması 64’tür.\nİkinci gün sınava 10 öğrenci daha girmiş ve bu 10 öğrencinin puan ortalaması 50 olmuştur. Böylece sınava giren tüm öğrencilerin puan ortalaması 60 olmuştur.\nBuna göre ilk gün sınava giren kız öğrenci sayısı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "14",
+   "C": "15",
+   "D": "25",
+   "E": "35"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "B": "Kız:erkek oranını 2:3 bulmuş ama toplamı 25 yerine 35 (ikinci gün girenlerle birlikte) alıp 35 × 2 ÷ 5 hesaplamış.",
+   "C": "Oranı ters yorumlayıp (3:2) kız öğrenci sayısını erkeklerin sayısı olan 15 bulmuş.",
+   "D": "İlk gün sınava giren öğrencilerin toplamını (25) kız öğrenci sayısı sanmış.",
+   "E": "Sınava giren tüm öğrencilerin sayısını (35) kız öğrenci sayısı sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "İlk gün sınava giren kız öğrenci sayısı.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Ağırlıklı ortalama",
+    "ifade": "her değer kendi ağırlığıyla çarpılıp toplanır, ağırlıklar toplamına bölünür. Örnek: 2 tanesi 10, 3 tanesi 20 olan değerlerin ortalaması (2 × 10 + 3 × 20) ÷ 5 = 16"
+   }
+  ],
+  "ipuclari": [
+   "Önce 64 ortalamasını kullanıp kız ve erkek sayıları arasındaki oranı bul; ardından ikinci gün ve 60 ortalamasıyla toplam sayıyı belirle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kız–erkek oranı",
+    "aciklama": "Kız sayısı k, erkek sayısı e olsun. Toplam puanı iki biçimde yaz.",
+    "islem": "70k + 60e = 64(k + e) ⇒ 6k = 4e ⇒ k : e = 2 : 3"
+   },
+   {
+    "baslik": "Sayıları t cinsinden yaz",
+    "aciklama": "k = 2t, e = 3t ise ilk gün giren 5t kişidir.",
+    "islem": "k = 2t, e = 3t, toplam 5t"
+   },
+   {
+    "baslik": "İkinci gün denklemi",
+    "aciklama": "İlk gün toplam puan 64 × 5t, ikinci gün toplam puan 50 × 10.",
+    "islem": "64 × 5t + 500 = 60 × (5t + 10)"
+   },
+   {
+    "baslik": "t’yi bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "320t + 500 = 300t + 600 ⇒ 20t = 100 ⇒ t = 5"
+   },
+   {
+    "baslik": "Kız sayısı",
+    "aciklama": "k = 2t.",
+    "islem": "2 × 5 = 10"
+   }
+  ],
+  "puf": "İki ortalamanın birleşiminde oran, ortalamaların birleşik ortalamaya uzaklıklarının tersiyle kurulur; sonra toplam sayıyı ikinci koşuldan bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-02 (gruplu ortalama, iki aşamalı) · ortak sınava giren öğrenciler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0027",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Çeyrekler Açıklığı",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Çeyrekler açıklığı verilen sekiz elemanlı veride bilinmeyen terimin sıralamadaki yerini bularak değerini hesaplar.",
+  "tipId": "vri-aciklik",
+  "tip": "Açıklık ve çeyrekler açıklığı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir okulda 8 öğrencinin bir günde kitap okuma süreleri (dakika) 11, 26, 5, 17, x, 14, 21 ve 8’dir. Burada x pozitif bir tam sayıdır.\nSıralı bir veri grubunda ortanca, grubu alt ve üst olmak üzere eşit sayıda terimli iki yarıya ayırır. Alt yarının ortancasına Q1, üst yarının ortancasına Q3 denir ve çeyrekler açıklığı Q3 − Q1 olarak tanımlanır.\nBu veri grubunun çeyrekler açıklığı 13 olduğuna göre x kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "13",
+   "B": "19",
+   "C": "21",
+   "D": "24",
+   "E": "28"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "x’i çeyrekler açıklığının kendisine (13) eşitlemiş.",
+   "B": "Q3’ü (x + 26) ÷ 2 yazarak x’in en büyük iki terimden biri olduğunu varsaymış (x = 19).",
+   "C": "Q1 yerine alt yarının 2. terimini (8) alıp Q3 = 8 + 13 = 21 bulmuş ve x’i 21 sanmış.",
+   "E": "Q3’ü (17 + x) ÷ 2 yazarak x’i 17’den büyük, 21’den küçük bir yere yerleştirmemiş (x = 28)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "x’in değeri.",
+  "bilgi": [
+   {
+    "ad": "Çeyrekler açıklığı",
+    "ifade": "sıralı veride ortanca grubu iki yarıya ayırır (terim sayısı tekse ortanca iki yarıya da katılmaz). Alt yarının ortancası Q1, üst yarının ortancası Q3 olur; çeyrekler açıklığı Q3 − Q1’dir. Örnek: 1, 3, 5, 7, 9, 11, 13 → Q1 = 3, Q3 = 11, fark 8"
+   }
+  ],
+  "ipuclari": [
+   "Bilinen yedi sayıyı sırala. Q1 ve Q3’ün x’e bağlı olup olmadığını x’in sıralamadaki olası yerlerine göre incele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinen sayıları sırala",
+    "aciklama": "Yedi sayı sıralanır.",
+    "islem": "5, 8, 11, 14, 17, 21, 26"
+   },
+   {
+    "baslik": "Q1’i bul",
+    "aciklama": "x büyük çıkarsa alt yarı 5, 8, 11, 14 olur.",
+    "islem": "Q1 = (8 + 11) ÷ 2 = 9,5"
+   },
+   {
+    "baslik": "Q3’ü yaz",
+    "aciklama": "Q3 = Q1 + 13 olmalı.",
+    "islem": "Q3 = 9,5 + 13 = 22,5"
+   },
+   {
+    "baslik": "x’i yerleştir",
+    "aciklama": "Üst yarı 17, 21, 26 ve x’ten oluşur; Q3 ortadaki iki terimin ortalamasıdır. Q3 = 22,5 için x, 21 ile 26 arasında olmalı.",
+    "islem": "(21 + x) ÷ 2 = 22,5 ⇒ x = 24"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "24 sıralamaya uyar.",
+    "islem": "5, 8, 11, 14, 17, 21, 24, 26 → Q1 = 9,5, Q3 = 22,5, fark 13"
+   }
+  ],
+  "puf": "Çeyrekler açıklığında bilinmeyenin yerine göre Q1 ya da Q3 değişir; yerini varsayıp sonucu sıralamayla doğrula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-05 (çeyrekler açıklığı verilip x) · öğrencilerin günlük kitap okuma süreleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0028",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tabloda Ortanca Koşulu",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Ortancası verilen sıklık tablosunda bilinmeyen sıklığın alabileceği en büyük değeri birikimli sıklıkla bulur.",
+  "tipId": "vri-medmod",
+  "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir bilgi yarışmasına katılanların aldığı puanlar ve her puanı alan yarışmacı sayısı aşağıdaki tabloda verilmiştir. 50 puan alan yarışmacı sayısı x’tir ve x pozitif bir tam sayıdır. Yarışmacıların puanlarının ortancası 60’tır.\nBuna göre x en çok kaç olabilir?",
+  "sekil": "<svg viewBox=\"0 0 204 160\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"200\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text><text x=\"129.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Yarışmacı sayısı</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">40</text><text x=\"129.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">50</text><text x=\"129.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">x</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">60</text><text x=\"129.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">7</text><text x=\"29.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">70</text><text x=\"129.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">5</text><text x=\"29.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">80</text><text x=\"129.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3</text><line x1=\"2\" y1=\"2\" x2=\"202\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"202\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"202\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"202\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"202\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"202\" y2=\"132\" stroke-width=\"1\"/><line x1=\"2\" y1=\"158\" x2=\"202\" y2=\"158\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"158\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"158\" stroke-width=\"1\"/><line x1=\"202\" y1=\"2\" x2=\"202\" y2=\"158\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "4",
+   "B": "7",
+   "C": "10",
+   "D": "11",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "A": "Ortancanın 60 olması için 50 puanlıların sayısını 40 puanlıların sayısıyla (4) sınırlamış.",
+   "B": "50 puanlıların sayısını 60 puanlıların sayısıyla (7) sınırlamış.",
+   "D": "x = 11 için ortadaki terimlerin 15. ve 16. olduğunu, 15. terimin 50 olması nedeniyle ortancanın 55 çıkacağını denetlememiş.",
+   "E": "Tek terimli durumdaki eşitsizliği (x < 12) kullanıp sınırı dahil etmiş ve çift terim durumunu incelememiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "x’in alabileceği en büyük değer.",
+  "bilgi": [
+   {
+    "ad": "Ortanca (medyan)",
+    "ifade": "veri küçükten büyüğe sıralanır; terim sayısı tekse ortadaki, çiftse ortadaki iki sayının ortalaması ortancadır. Örnek: 3, 5, 9, 12 → (5 + 9) ÷ 2 = 7"
+   },
+   {
+    "ad": "Sıklık tablosu",
+    "ifade": "tablodaki her değer, yanındaki sıklık kadar tekrar eden veri demektir. Örnek: “3 → 2 kez, 5 → 1 kez” veri grubu 3, 3, 5 demektir; toplam veri sayısı sıklıkların toplamıdır"
+   }
+  ],
+  "ipuclari": [
+   "Birikimli sıklığı x cinsinden yaz. Ortanca 60 olacaksa ortadaki terim(ler) hangi sıra numaralarında olmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam ve birikimli sıklık",
+    "aciklama": "Veri sayısı x + 19. 40 puana kadar 4 kişi, 50 puana kadar 4 + x kişi, 60 puana kadar 11 + x kişi vardır.",
+    "islem": "n = x + 19 · 40: 4 · 50: 4 + x · 60: 11 + x"
+   },
+   {
+    "baslik": "Ortanca 60 olmalı",
+    "aciklama": "Ortadaki terim(ler) 60 puanlıların arasında olmalı; yani sıra numarası 4 + x’ten büyük olmalıdır.",
+    "islem": "Ortadaki sıra > 4 + x"
+   },
+   {
+    "baslik": "Çift ve tek durum",
+    "aciklama": "n tekse ortadaki sıra (x + 20) ÷ 2 > 4 + x ⇒ x < 12. n çiftse n ÷ 2 = (x + 19) ÷ 2 > 4 + x ⇒ x < 11.",
+    "islem": "x tek ⇒ x ≤ 9 · x çift ⇒ x ≤ 10"
+   },
+   {
+    "baslik": "En büyük x",
+    "aciklama": "x = 11 için n = 30; 15. terim 50, 16. terim 60 ⇒ ortanca 55; x = 10 için n = 29 ve 15. terim 60’tır.",
+    "islem": "x en çok 10"
+   }
+  ],
+  "puf": "Tabloda ortanca koşulu verildiğinde birikimli sıklıkla ortanca sırasının hangi değer aralığına düştüğünü bul; tek ve çift terim sayısını ayrı denetle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-03 (tabloda ortanca koşulu, en büyük x) · bilgi yarışması puanları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0029",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · Tanımlı Sapma Ölçüsü",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "Soruda tanımlanan ortalama mutlak sapma ölçüsünü, önce eksik terimi bularak hesaplar.",
+  "tipId": "vri-sapma",
+  "tip": "Standart sapma ve tanımlı sapma ölçüleri",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir veri grubundaki her verinin aritmetik ortalamadan farkının mutlak değeri alınıp bu mutlak değerlerin aritmetik ortalamasına “ortalama mutlak sapma” denir. Örneğin 2, 4, 9 veri grubunun aritmetik ortalaması 5, ortalama mutlak sapması (3 + 1 + 4) ÷ 3 = 8 ÷ 3’tür.\n5, 9, 13, x veri grubunun aritmetik ortalaması 10’dur.\nBuna göre bu veri grubunun ortalama mutlak sapması kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "2,25",
+   "C": "3",
+   "D": "4",
+   "E": "12"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "A": "Farkların işaretlerini koruyup toplamış; −5, −1, 3, 3’ün toplamı 0 çıkmış.",
+   "B": "x’i ortalamaya (10) eşitlemiş; gerçek değeri 13’tür.",
+   "D": "Mutlak sapmaların toplamını (12) veri sayısı 4 yerine 3’e bölmüş.",
+   "E": "Mutlak sapmaların toplamını bulup veri sayısına bölmeyi unutmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Veri grubunun ortalama mutlak sapması.",
+  "bilgi": [
+   {
+    "ad": "Aritmetik ortalama",
+    "ifade": "ortalama = verilerin toplamı ÷ veri sayısı, yani toplam = ortalama × veri sayısı. Örnek: 4, 6, 8 için ortalama 18 ÷ 3 = 6, toplam 6 × 3 = 18"
+   },
+   {
+    "ad": "Mutlak değer",
+    "ifade": "bir sayının sıfıra uzaklığıdır; farkın işareti önemsizdir. Örnek: |−5| = 5, |3| = 3"
+   }
+  ],
+  "ipuclari": [
+   "Tanımdaki ortalamayı almak için hangi bilgiler gerekir? Örnekteki işlem sırasını izle."
+  ],
+  "adimlar": [
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Ortalama 10 olduğundan dört verinin toplamı 40’tır.",
+    "islem": "5 + 9 + 13 + x = 40 ⇒ x = 13"
+   },
+   {
+    "baslik": "Ortalamadan farklar",
+    "aciklama": "Her veriden 10 çıkar.",
+    "islem": "−5, −1, 3, 3"
+   },
+   {
+    "baslik": "Mutlak değerler",
+    "aciklama": "İşaretleri at ve topla.",
+    "islem": "5 + 1 + 3 + 3 = 12"
+   },
+   {
+    "baslik": "Ortalamasını al",
+    "aciklama": "Veri sayısı 4’e böl.",
+    "islem": "12 ÷ 4 = 3"
+   }
+  ],
+  "puf": "Tanımlı bir ölçüde önce tanımı örnekle eşleştir; ortalama gibi eksik bir veri varsa önce onu bul, sonra tanımdaki işlemleri sırayla uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-06 (tanımlı sapma ölçüsü: ortalama mutlak sapma) · dört elemanlı veri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-veri-0030",
+  "ders": "TYT Matematik",
+  "konu": "Veri ve İstatistik · İki Sütun Grafiği Karşılaştırma",
+  "k": "matd|Veri ve İstatistik",
+  "kazanim": "İki sınıfın puan dağılımını gösteren sütun grafiklerinden ortalama, standart sapma ve tepe değerleri karşılaştırır.",
+  "tipId": "vri-sekil",
+  "tip": "Tablo ve grafikten ölçü hesabı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir okulda 20’şer öğrencinin bulunduğu A ve B sınıflarının bir denemeden aldıkları puanların dağılımı, her puanı alan öğrenci sayısı olarak Şekil 1 ve Şekil 2’deki sütun grafiklerinde gösterilmiştir.\nI. A sınıfının puanlarının standart sapması, B sınıfınınkinden büyüktür.\nII. İki sınıfın puanlarının aritmetik ortalaması birbirine eşittir.\nIII. B sınıfının puanlarının iki tepe değeri vardır.\nBuna göre bu ifadelerden hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 504\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><text x=\"165.0\" y=\"14.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 1 · A sınıfı</text><g transform=\"translate(0.0,20)\"><line x1=\"46\" y1=\"146.5\" x2=\"322\" y2=\"146.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"150.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"46\" y1=\"109.0\" x2=\"322\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"46\" y1=\"71.5\" x2=\"322\" y2=\"71.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"75.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"58.4\" y=\"146.5\" width=\"30.4\" height=\"37.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"73.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><rect x=\"113.6\" y=\"109.0\" width=\"30.4\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"128.8\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><rect x=\"168.8\" y=\"34.0\" width=\"30.4\" height=\"150.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"184.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">70</text><rect x=\"224.0\" y=\"109.0\" width=\"30.4\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"239.2\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">80</text><rect x=\"279.2\" y=\"146.5\" width=\"30.4\" height=\"37.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"294.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Öğrenci sayısı</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text></g><text x=\"165.0\" y=\"266.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Şekil 2 · B sınıfı</text><g transform=\"translate(0.0,272)\"><line x1=\"46\" y1=\"146.5\" x2=\"322\" y2=\"146.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"150.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">2</text><line x1=\"46\" y1=\"109.0\" x2=\"322\" y2=\"109.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"113.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">4</text><line x1=\"46\" y1=\"71.5\" x2=\"322\" y2=\"71.5\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"75.5\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">6</text><line x1=\"46\" y1=\"34.0\" x2=\"322\" y2=\"34.0\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"/><text x=\"40.0\" y=\"38.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">8</text><text x=\"40.0\" y=\"188.0\" text-anchor=\"end\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">0</text><rect x=\"58.4\" y=\"71.5\" width=\"30.4\" height=\"112.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"73.6\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">50</text><rect x=\"113.6\" y=\"146.5\" width=\"30.4\" height=\"37.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"128.8\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">60</text><rect x=\"168.8\" y=\"109.0\" width=\"30.4\" height=\"75.0\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"184.0\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">70</text><rect x=\"224.0\" y=\"146.5\" width=\"30.4\" height=\"37.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"239.2\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">80</text><rect x=\"279.2\" y=\"71.5\" width=\"30.4\" height=\"112.5\" stroke-width=\"1.2\" style=\"fill:var(--acc,#16A34A)\" fill-opacity=\".55\"/><text x=\"294.4\" y=\"199.0\" text-anchor=\"middle\" font-size=\"10\" style=\"fill:currentColor;stroke:none\">90</text><line x1=\"46\" y1=\"184\" x2=\"322\" y2=\"184\" stroke-width=\"1.6\"/><line x1=\"46\" y1=\"184\" x2=\"46\" y2=\"26\" stroke-width=\"1.6\"/><path d=\"M42 30 L46 22 L50 30\" stroke-width=\"1.4\"/><text x=\"6.0\" y=\"16.0\" text-anchor=\"start\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Öğrenci sayısı</text><text x=\"184.0\" y=\"220.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text></g></svg>",
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "B sınıfındaki 50 ve 90 sütunlarının ikisinin de en yüksek olduğunu görmeyip III’ü yanlış saymış.",
+   "B": "İki grafiğin simetrik olması nedeniyle ortalamaların eşit olduğunu (ikisi de 70) fark etmeyip II’yi yanlış saymış.",
+   "C": "A sınıfının tepe değerinin tek (70) olmasına bakıp B’deki iki tepe değeri sayamamış; standart sapmayı da ters yorumlamış.",
+   "E": "Verilerin uçlarda toplanmasının standart sapmayı artıracağını görmeyip, A sınıfındaki yığılmayı büyük yayılım sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Grafikten veri okuma",
+    "ifade": "sütunun ya da noktanın yüksekliği eksendeki değeri verir; bu değerler listelenip ölçüler hesaplanır. Örnek: yükseklikleri 20, 40, 40 olan üç sütun → veri 20, 40, 40"
+   },
+   {
+    "ad": "Standart sapma",
+    "ifade": "veriler ortalamadan ne kadar uzaksa sapma o kadar büyüktür. Bu soruda s = √[ (her verinin ortalamadan farkının karelerinin toplamı) ÷ (veri sayısı − 1) ] alınır. Örnek: 2, 4, 6 → ortalama 4, farklar −2, 0, 2, s = √(8 ÷ 2) = 2"
+   },
+   {
+    "ad": "Tepe değer (mod)",
+    "ifade": "veri grubunda en çok tekrar eden değerdir. Örnek: 2, 3, 3, 5, 3, 5 → tepe değer 3 (3 kez geçer)"
+   }
+  ],
+  "ipuclari": [
+   "Her grafikten puanları ve sıklıkları oku; ortalama ve tepe değeri hesapla, sonra verilerin ortalamadan ne kadar uzak olduğunu karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Değerleri oku",
+    "aciklama": "Sütunlar öğrenci sayısını verir.",
+    "islem": "A: 50 → 2, 60 → 4, 70 → 8, 80 → 4, 90 → 2 · B: 50 → 6, 60 → 2, 70 → 4, 80 → 2, 90 → 6"
+   },
+   {
+    "baslik": "Ortalamalar",
+    "aciklama": "Her sınıf için puan toplamı ÷ 20.",
+    "islem": "A: (100 + 240 + 560 + 320 + 180) ÷ 20 = 70 · B: (300 + 120 + 280 + 160 + 540) ÷ 20 = 70 → II doğru"
+   },
+   {
+    "baslik": "Tepe değerler",
+    "aciklama": "A’da en yüksek sütun 70; B’de 50 ve 90 sütunları 6’şar öğrencili.",
+    "islem": "A: 70 · B: 50 ve 90 → III doğru"
+   },
+   {
+    "baslik": "Standart sapma",
+    "aciklama": "Ortalama (70) aynı; B’nin verileri ortalamadan daha uzakta toplandığı için standart sapması daha büyüktür.",
+    "islem": "A’nın standart sapması < B’nin standart sapması → I yanlış"
+   }
+  ],
+  "puf": "Ortalamaları eşit iki gruptan, verileri ortalamadan daha uzağa yığılmış olanın standart sapması daha büyüktür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-VRI-08 (iki sıklık grafiği, ölçülerin karşılaştırılması) · iki sınıfın deneme puanları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

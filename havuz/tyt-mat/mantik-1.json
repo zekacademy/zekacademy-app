@@ -1,0 +1,2023 @@
+[
+ {
+  "id": "tytmat-mantik-0001",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Önerme ve Doğruluk Değeri",
+  "k": "matd|Mantık",
+  "kazanim": "Önerme olan ve olmayan cümleleri ayırt edip doğruluk değeri 0 olan önermeyi bulur.",
+  "tipId": "mnt-temel",
+  "tip": "Önerme, değil, ve/veya ve doğruluk değeri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "Aşağıdakilerden hangisi doğruluk değeri 0 olan bir önermedir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bir haftada yedi gün vardır.",
+   "B": "Her asal sayı tek sayıdır.",
+   "C": "x + 3 = 7",
+   "D": "Yarınki sınavın saati kaçta?",
+   "E": "Matematik en güzel derstir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Her asal sayı tek sayıdır."
+  },
+  "celdiriciler": {
+   "A": "Önerme olduğunu görmüş ama değerinin 1 olduğunu fark etmeyip soru kökündeki “0” koşulunu atlamış.",
+   "C": "x’e bağlı açık ifadeyi yanlış önerme sanmış; x = 4 için doğru olduğundan değeri belli değildir.",
+   "D": "Soru cümlesini yanlış bir önerme saymış; soru cümlelerine doğru/yanlış hükmü verilmez.",
+   "E": "Kişiden kişiye değişen yargıyı yanlış bir önerme saymış; öznel yargı önerme değildir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğruluk değeri 0 olan önerme.",
+  "bilgi": [
+   {
+    "ad": "Önerme",
+    "ifade": "Doğru ya da yanlış hükmü verilebilen cümleye önerme denir; doğruysa doğruluk değeri 1, yanlışsa 0’dır. Soru, emir, ünlem, öznel yargı ve x’e bağlı ifade önerme değildir. Örnek: “5 asaldır” (1) ve “4 tektir” (0) önermedir; “Kaç yaşındasın?” önerme değildir"
+   }
+  ],
+  "ipuclari": [
+   "Şıkları tek tek incele; hangilerine doğru ya da yanlış hükmü verilebildiğine, sonra bunların değerlerine bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Önermeleri ayır",
+    "aciklama": "C, x’e bağlı bir açık ifadedir; D bir soru cümlesidir; E öznel bir yargıdır.",
+    "islem": "Önerme olanlar: A ve B"
+   },
+   {
+    "baslik": "Değerlerine bak",
+    "aciklama": "Haftada 7 gün vardır; ama 2 asaldır ve çifttir.",
+    "islem": "A = 1 · B = 0 (2 asal ve çift)"
+   },
+   {
+    "baslik": "Cevabı seç",
+    "aciklama": "Doğruluk değeri 0 olan önerme B’dir.",
+    "islem": "B: Her asal sayı tek sayıdır."
+   }
+  ],
+  "puf": "Önce önerme olup olmadığına, sonra doğruluk değerine bak; soru, emir ve öznel yargı önerme değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-01 (önerme tanıma) · yanlış değerli önerme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0002",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Bileşik Önermeler",
+  "k": "matd|Mantık",
+  "kazanim": "p, q, r önermelerinin doğruluk değerlerini bulup bileşik önermenin değerini hesaplar.",
+  "tipId": "mnt-temel",
+  "tip": "Önerme, değil, ve/veya ve doğruluk değeri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "p : 12 sayısı 4’e tam bölünür.\nq : √16 = 8\nr : 2³ < 3²\nBuna göre, aşağıdaki bileşik önermelerden hangisinin doğruluk değeri 1’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "(p ∧ q) ∨ r′",
+   "B": "p ⇒ (q ∨ r′)",
+   "C": "(p ∨ q)′ ∧ r",
+   "D": "(p ⇒ q) ∧ r",
+   "E": "(p ⇒ q)′ ∧ r"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "(p ⇒ q)′ ∧ r"
+  },
+  "celdiriciler": {
+   "A": "r′ yerine r’yi almış: (p ∧ q) ∨ r = 0 ∨ 1 = 1 bulmuş.",
+   "B": "r′ değerini 1 sanmış (r = 1 iken değilini almamış): q ∨ 1 = 1 ve p ⇒ 1 = 1 bulmuş.",
+   "C": "Parantezin değilini unutmuş: p ∨ q = 1 alıp 1 ∧ r = 1 bulmuş.",
+   "D": "1 ⇒ 0 değerini 1 sanmış (yalnız 0 ⇒ 1’i yanlış saymış): 1 ∧ 1 = 1 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Doğruluk değeri 1 olan bileşik önerme.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Değil (olumsuz)",
+    "ifade": "p′, p’nin değilidir ve p’nin doğruluk değerini tersine çevirir. Örnek: p = 1 ise p′ = 0; (p′)′ ≡ p"
+   }
+  ],
+  "ipuclari": [
+   "Önce üç önermenin doğru mu yanlış mı olduğunu belirle; sonra şıkları içten dışa doğru değerlendir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "p, q, r değerleri",
+    "aciklama": "12 = 4 × 3 olduğundan p doğru; √16 = 4 olduğundan q yanlış; 8 < 9 olduğundan r doğru.",
+    "islem": "p = 1 · q = 0 · r = 1"
+   },
+   {
+    "baslik": "E’yi hesapla",
+    "aciklama": "p ⇒ q = 1 ⇒ 0 = 0; değili 1; r ile ve bağlacı.",
+    "islem": "(p ⇒ q)′ ∧ r = 1 ∧ 1 = 1"
+   },
+   {
+    "baslik": "Diğerlerini ele",
+    "aciklama": "Dört şıkkın değeri de 0 çıkar.",
+    "islem": "A = 0 · B = 0 · C = 0 · D = 0"
+   }
+  ],
+  "puf": "Bileşik önermeyi önce parçaların 1/0 değerlerine çevirip içten dışa değerlendir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-01 (doğruluk değeri) · koşullu ve değilli bileşik önerme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0003",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Bileşik Önermeler",
+  "k": "matd|Mantık",
+  "kazanim": "“Ne … ne de” önermesinin yanlış olmasından kesin sonucu çıkarır.",
+  "tipId": "mnt-temel",
+  "tip": "Önerme, değil, ve/veya ve doğruluk değeri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir hava durumu programında\np : Bugün hava yağmurludur.\nq : Bugün hava soğuktur.\nönermeleri veriliyor.\n“Bugün hava ne yağmurlu ne de soğuktur.” önermesinin yanlış olduğu bilindiğine göre, aşağıdakilerden hangisi kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bugün hava yağmurlu veya soğuktur (en az biri doğrudur).",
+   "B": "Bugün hava hem yağmurlu hem soğuktur.",
+   "C": "Bugün hava yağmurludur.",
+   "D": "Bugün hava soğuk değildir.",
+   "E": "Bugün hava yağmurlu değildir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Bugün hava yağmurlu veya soğuktur (en az biri doğrudur)."
+  },
+  "celdiriciler": {
+   "B": "“Ne … ne de” yanlışsa ikisinin de doğru olması gerektiğini sanmış; yalnız biri doğruyken de “veya” doğrudur, (1, 0) ve (0, 1) durumlarını unutmuş.",
+   "C": "Yağmurlu olmasının kesin olduğunu sanmış; hava yalnız soğuk da olabilir.",
+   "D": "p′ ∧ q′ yanlışsa p′ yanlış, q′ doğru sanmış; oysa hangisinin yanlış olduğu belli değildir: (0, 1) için q′ = 0.",
+   "E": "p′ ∧ q′ yanlışsa p′ doğru sanmış; hava yağmurlu olup soğuk olmayabilir."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifade.",
+  "bilgi": [
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Verilen cümleyi p′ ve q′ ile sembolle yaz; “yanlış” bilgisini bu ifadenin değerine yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Cümleyi yaz",
+    "aciklama": "“Ne yağmurlu ne soğuk” = yağmurlu değil ve soğuk değil.",
+    "islem": "p′ ∧ q′ yanlış"
+   },
+   {
+    "baslik": "Değilini al",
+    "aciklama": "Yanlış önermenin değili doğrudur; De Morgan uygula.",
+    "islem": "(p′ ∧ q′)′ ≡ p ∨ q doğru"
+   },
+   {
+    "baslik": "Şıkları sına",
+    "aciklama": "p ∨ q (kapsayıcı veya) doğruysa (1, 1), (1, 0), (0, 1) modellerinden biri vardır.",
+    "islem": "Her modelde doğru olan yalnız p ∨ q"
+   }
+  ],
+  "puf": "“Ne … ne de” cümlesi yanlışsa, iki durumdan en az biri gerçekleşmiştir (p ∨ q).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-01 (ve/veya, değil) · “ne yağmurlu ne soğuk” yanlış",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0004",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Bileşik Önermeler",
+  "k": "matd|Mantık",
+  "kazanim": "İki yönlü koşullu önermenin doğruluk tablosunu değilli bir terimle oluşturur.",
+  "tipId": "mnt-temel",
+  "tip": "Önerme, değil, ve/veya ve doğruluk değeri",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki tabloda p′ ⇔ q bileşik önermesinin doğruluk değerleri a, b, c ve d ile gösterilmiştir.\nBuna göre, a, b, c, d sırasıyla aşağıdakilerden hangisidir?",
+  "sekil": "<svg viewBox=\"0 0 178 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"174\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">p</text><text x=\"83.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">q</text><text x=\"143.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">p′ ⇔ q</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"83.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"143.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">a</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"83.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"143.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">b</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">0</text><text x=\"83.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"143.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">c</text><text x=\"29.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">0</text><text x=\"83.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"143.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">d</text><line x1=\"2\" y1=\"2\" x2=\"176\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"176\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"176\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"176\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"176\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"176\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"132\" stroke-width=\"1\"/><line x1=\"110\" y1=\"2\" x2=\"110\" y2=\"132\" stroke-width=\"1\"/><line x1=\"176\" y1=\"2\" x2=\"176\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "0, 1, 1, 0",
+   "B": "1, 0, 0, 1",
+   "C": "1, 0, 1, 1",
+   "D": "0, 0, 1, 0",
+   "E": "1, 1, 1, 0"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "0, 1, 1, 0"
+  },
+  "celdiriciler": {
+   "B": "p′ yerine p’yi kullanıp p ⇔ q’nun tablosunu yazmış.",
+   "C": "⇔ bağlacını “veya” gibi okuyup p′ ∨ q’nun tablosunu yazmış.",
+   "D": "⇔ bağlacını “ve” gibi okuyup p′ ∧ q’nun tablosunu yazmış.",
+   "E": "⇔ bağlacını ⇒ gibi okuyup p′ ⇒ q’nun tablosunu yazmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "a, b, c, d değerlerinin sırası.",
+  "bilgi": [
+   {
+    "ad": "İki yönlü koşullu",
+    "ifade": "p ⇔ q, p ile q aynı değeri aldığında 1, farklı değer aldığında 0’dır. Örnek: 0 ⇔ 0 = 1 ve 1 ⇔ 0 = 0"
+   },
+   {
+    "ad": "Değil (olumsuz)",
+    "ifade": "p′, p’nin değilidir ve p’nin doğruluk değerini tersine çevirir. Örnek: p = 1 ise p′ = 0; (p′)′ ≡ p"
+   }
+  ],
+  "ipuclari": [
+   "Her satır için önce p′ değerini yaz, sonra p′ ile q’nun aynı olup olmadığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "p′ değerleri",
+    "aciklama": "p′, p’nin tersidir.",
+    "islem": "p = 1, 1, 0, 0 → p′ = 0, 0, 1, 1"
+   },
+   {
+    "baslik": "Satırları karşılaştır",
+    "aciklama": "⇔, iki tarafın değeri aynıysa 1 verir.",
+    "islem": "(0, 1) → 0 · (0, 0) → 1 · (1, 1) → 1 · (1, 0) → 0"
+   },
+   {
+    "baslik": "Sırala",
+    "aciklama": "a, b, c, d değerlerini yaz.",
+    "islem": "a = 0 · b = 1 · c = 1 · d = 0"
+   }
+  ],
+  "puf": "Tablo sorularında değilli sütunu önce ayrıca yaz; sonra bağlacı satır satır uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-01 (doğruluk tablosu) · p′ ⇔ q",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0005",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Koşullu Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Günlük bir koşullu cümlenin karşıt tersini (denk ifadesini) bulur.",
+  "tipId": "mnt-kosullu",
+  "tip": "Koşullu ve iki yönlü koşullu önerme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "“Kar yağarsa okullar tatil edilir.” önermesine denk olan önerme aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Okullar tatil edilmediyse kar yağmamıştır.",
+   "B": "Okullar tatil edildiyse kar yağmıştır.",
+   "C": "Kar yağmazsa okullar tatil edilmez.",
+   "D": "Kar yağmış ve okullar tatil edilmemiştir.",
+   "E": "Kar yağarsa ve ancak o zaman okullar tatil edilir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Okullar tatil edilmediyse kar yağmamıştır."
+  },
+  "celdiriciler": {
+   "B": "Koşullunun karşıtını (q ⇒ p) karşıt tersi sanmış.",
+   "C": "Koşullunun tersini (p′ ⇒ q′) karşıt tersi sanmış.",
+   "D": "Koşullunun olumsuzu olan p ∧ q′ ile kendisini karıştırmış.",
+   "E": "“ise” ile “ancak ve ancak” bağlacını aynı sanmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilen önermeye denk olan önerme.",
+  "bilgi": [
+   {
+    "ad": "Koşulluya denk ifadeler",
+    "ifade": "p ⇒ q ≡ q′ ⇒ p′ (karşıt tersi) ≡ p′ ∨ q. Karşıtı (q ⇒ p) ve tersi (p′ ⇒ q′) p ⇒ q ile denk değildir. Örnek: “Yağmur yağarsa ıslanırım” ≡ “Islanmadıysam yağmur yağmamıştır”"
+   }
+  ],
+  "ipuclari": [
+   "Cümleyi p ve q ile sembole çevirip sırasıyla her şıkkın hangi sembolle yazıldığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sembolle yaz",
+    "aciklama": "p : Kar yağar. q : Okullar tatil edilir.",
+    "islem": "Verilen: p ⇒ q"
+   },
+   {
+    "baslik": "Karşıt tersini kur",
+    "aciklama": "Önce yer değiştir, sonra ikisini de değille.",
+    "islem": "q′ ⇒ p′"
+   },
+   {
+    "baslik": "Şıkla eşle",
+    "aciklama": "“Tatil edilmediyse kar yağmamıştır.”",
+    "islem": "q′ ⇒ p′ ≡ p ⇒ q"
+   }
+  ],
+  "puf": "p ⇒ q ile denk olan koşullu yalnız karşıt tersidir: q′ ⇒ p′.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-02 (karşıt tersi) · kar ve okul tatili",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0006",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Doğruluk Değerinden Önerme Bulma",
+  "k": "matd|Mantık",
+  "kazanim": "Bileşik önermenin doğru olmasından p, q, r değerlerini bulup günlük durumu belirler.",
+  "tipId": "mnt-bulma",
+  "tip": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir manav, sepetine koyduğu meyveler için\np : Sepette elma vardır.\nq : Sepette armut vardır.\nr : Sepette kiraz vardır.\nönermelerini yazıyor. Sepette bu üç meyveden başka meyve olmadığı ve (p ∨ q)′ ∧ r önermesinin doğru olduğu bilindiğine göre, sepettekiler aşağıdakilerden hangisi olabilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnızca elma vardır.",
+   "B": "Elma, armut ve kiraz vardır.",
+   "C": "Yalnızca armut ve kiraz vardır.",
+   "D": "Sepet boştur.",
+   "E": "Yalnızca kiraz vardır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Yalnızca kiraz vardır."
+  },
+  "celdiriciler": {
+   "A": "Değilleri her önermeye ayrı uygulayıp (p ∨ q) ∧ r′ gibi okumuş; bu ifade elma için 1 olur.",
+   "B": "(p ∨ q)′ ifadesinin değilini hiç almamış: (p ∨ q) ∧ r = 1 bulmuş.",
+   "C": "De Morgan’da bağlacı değiştirmeyip (p ∨ q)′ yerine p′ ∨ q′ almış; armut ve kiraz için bu değer 1 çıkar.",
+   "D": "(p ∨ q)′ = 1 bulmuş ama r = 1 koşulunu denetlememiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Sepette bulunan meyveler.",
+  "bilgi": [
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Doğru olan bir “ve” önermesinde iki tarafın aldığı değere bak; sonra değilli parçanın içini çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ve bağlacını aç",
+    "aciklama": "Bir “∧” önermesi, ancak iki tarafı da doğruysa doğrudur.",
+    "islem": "(p ∨ q)′ = 1 ve r = 1"
+   },
+   {
+    "baslik": "Değili çöz",
+    "aciklama": "(p ∨ q)′ = 1 ise p ∨ q = 0; “veya” yalnız ikisi de 0 iken 0’dır.",
+    "islem": "p = 0 · q = 0"
+   },
+   {
+    "baslik": "Meyveleri yaz",
+    "aciklama": "Elma yok, armut yok, kiraz var; başka meyve de yok.",
+    "islem": "Yalnızca kiraz vardır."
+   }
+  ],
+  "puf": "Doğru bir “ve” bileşiğinde her bileşen 1’dir; “veya”nın yanlışlığı iki tarafın da 0 olması demektir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-03 (p, q, r bulma) · sepetteki meyveler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0007",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Doğruluk Değerinden Önerme Bulma",
+  "k": "matd|Mantık",
+  "kazanim": "Değilli “veya” ve değilli koşullu önermenin doğru olmasından p, q, r değerlerini bulur.",
+  "tipId": "mnt-bulma",
+  "tip": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "p, q ve r önermeleri için\n(p ∨ q′) ∧ (q ⇒ r)′\nönermesi doğrudur.\nBuna göre, (p, q, r) doğruluk değeri üçlüsü aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0, 1, 0",
+   "B": "1, 1, 0",
+   "C": "1, 0, 0",
+   "D": "1, 1, 1",
+   "E": "0, 0, 1"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1, 1, 0"
+  },
+  "celdiriciler": {
+   "A": "p ∨ q′ ifadesini p′ ∨ q′ gibi okumuş; (0, 1) için bu okuma 1 verir.",
+   "C": "Değili parantez içine dağıtıp (q ⇒ r)′ yerine q′ ⇒ r′ yazmış; (q, r) = (0, 0) için bu 1 olur.",
+   "D": "(q ⇒ r)′ ifadesinin değilini hiç almamış; q ⇒ r = 1 ⇒ 1 = 1 bulmuş.",
+   "E": "(q ⇒ r)′ ifadesini q ⇒ r′ gibi okumuş; (q, r) = (0, 1) için bu 1 olur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "p, q, r değerleri.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   },
+   {
+    "ad": "Değil (olumsuz)",
+    "ifade": "p′, p’nin değilidir ve p’nin doğruluk değerini tersine çevirir. Örnek: p = 1 ise p′ = 0; (p′)′ ≡ p"
+   }
+  ],
+  "ipuclari": [
+   "Önce “ve” bileşiğinin iki yanını ayrı ayrı 1 yap; önce yalnız bir değer veren tarafı çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ve bağlacını aç",
+    "aciklama": "Her iki taraf da doğru olmalı.",
+    "islem": "p ∨ q′ = 1 ve (q ⇒ r)′ = 1"
+   },
+   {
+    "baslik": "Koşulluyu çöz",
+    "aciklama": "(q ⇒ r)′ = 1 ise q ⇒ r yanlıştır; bu yalnız q = 1, r = 0 iken olur.",
+    "islem": "q = 1 · r = 0"
+   },
+   {
+    "baslik": "Veya’yı çöz",
+    "aciklama": "q = 1 iken q′ = 0; p ∨ 0 doğruysa p = 1.",
+    "islem": "p = 1"
+   },
+   {
+    "baslik": "Cevap",
+    "aciklama": "Değerleri sırala.",
+    "islem": "p = 1 · q = 1 · r = 0"
+   }
+  ],
+  "puf": "Yanlış bir koşullunun olumsuzu tek bir değer çifti verir; önce onu çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-03 (p, q, r bulma) · değilli veya ve değilli koşullu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0008",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Koşullu Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Koşullu önermenin yanlış olmasından p ve q’nun değerlerini bulup kesin doğru olan bileşik önermeyi seçer.",
+  "tipId": "mnt-kosullu",
+  "tip": "Koşullu ve iki yönlü koşullu önerme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "p ⇒ q önermesi yanlış olduğuna göre, aşağıdaki önermelerden hangisinin doğruluk değeri kesinlikle 1’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "p ∧ q′",
+   "B": "p′ ∧ q′",
+   "C": "p′ ∧ q",
+   "D": "p ⇔ q",
+   "E": "p′ ∨ q"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "p ∧ q′"
+  },
+  "celdiriciler": {
+   "B": "p ⇒ q yanlışken p = 0 ve q = 0 sanmış; bu değerlerde p′ ∧ q′ = 1 olur.",
+   "C": "p ⇒ q yanlışken p = 0, q = 1 almış; bu değerlerde p′ ∧ q = 1 olur.",
+   "D": "Yanlış koşulludan p ve q’nun eşit değerli olduğunu sanmış; oysa p = 1, q = 0’dır.",
+   "E": "p′ ∨ q ≡ p ⇒ q olduğunu görmemiş; bu önerme de yanlıştır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan bileşik önerme.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   }
+  ],
+  "ipuclari": [
+   "Koşullu önerme ancak bir tek durumda yanlıştır; o durumda p ile q’nun aldığı değerleri bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "p ile q’yu bul",
+    "aciklama": "p ⇒ q yalnız p = 1, q = 0 iken yanlıştır.",
+    "islem": "p = 1 · q = 0"
+   },
+   {
+    "baslik": "Şıkları hesapla",
+    "aciklama": "p′ = 0, q′ = 1 değerlerini yerine koy.",
+    "islem": "p′ ∧ q′ = 0 · p′ ∧ q = 0 · p ⇔ q = 0 · p′ ∨ q = 0"
+   },
+   {
+    "baslik": "Doğru olanı seç",
+    "aciklama": "Geriye kalan şık 1 olur.",
+    "islem": "p ∧ q′ = 1 ∧ 1 = 1"
+   }
+  ],
+  "puf": "p ⇒ q yanlışsa p = 1 ve q = 0’dır; p ∧ q′ onun olumsuzudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-02 (p ⇒ q yanlış) · kesin doğru olan bileşik önerme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0009",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Koşullu Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Koşullu önermeye denk olan ifadeleri karşıt tersi ve De Morgan ile belirler.",
+  "tipId": "mnt-kosullu",
+  "tip": "Koşullu ve iki yönlü koşullu önerme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. q′ ⇒ p′\nII. (p ∧ q′)′\nIII. p′ ⇒ q′\nYukarıdaki önermelerden hangileri p ⇒ q önermesine denktir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’yi açamamış: (p ∧ q′)′ ≡ p′ ∨ q ≡ p ⇒ q olduğunu görememiş.",
+   "B": "q′ ⇒ p′ ifadesini q ⇒ p gibi okuyup I’i denk saymamış.",
+   "D": "Tersi (p′ ⇒ q′) denk saymış; II’yi De Morgan ile açamamış.",
+   "E": "Tersini (p′ ⇒ q′) karşıt tersi ile karıştırıp III’ü de denk saymış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "p ⇒ q önermesine denk olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Koşulluya denk ifadeler",
+    "ifade": "p ⇒ q ≡ q′ ⇒ p′ (karşıt tersi) ≡ p′ ∨ q. Karşıtı (q ⇒ p) ve tersi (p′ ⇒ q′) p ⇒ q ile denk değildir. Örnek: “Yağmur yağarsa ıslanırım” ≡ “Islanmadıysam yağmur yağmamıştır”"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Öncülleri sırayla p ⇒ q ile tablo ya da bilinen denkliklerle karşılaştır; olumsuz önermeyi açmayı unutma."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinen denkler",
+    "aciklama": "p ⇒ q ≡ q′ ⇒ p′ ≡ p′ ∨ q",
+    "islem": "I doğrudan karşıt tersidir"
+   },
+   {
+    "baslik": "II’yi aç",
+    "aciklama": "De Morgan: (p ∧ q′)′ ≡ p′ ∨ (q′)′.",
+    "islem": "(p ∧ q′)′ ≡ p′ ∨ q ≡ p ⇒ q"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "p′ ⇒ q′ tersidir; p = 0, q = 1 için p′ ⇒ q′ = 1 ⇒ 0 = 0, p ⇒ q = 1.",
+    "islem": "III denk değil"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve II denk, III denk değil.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Koşulluya yalnız karşıt tersi (q′ ⇒ p′) ve p′ ∨ q ile (p ∧ q′)′ denktir; karşıt ve ters değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-02 (denk önermeler) · karşıt tersi ve olumsuzun olumsuzu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0010",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Koşullu Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "İki yönlü koşullu ve koşullu önermelerden birlikte kesin sonuç çıkarır.",
+  "tipId": "mnt-kosullu",
+  "tip": "Koşullu ve iki yönlü koşullu önerme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir bilgi yarışmasının kuralları şöyledir:\n• Bir yarışmacı ancak ve ancak finale kalırsa ödül alır.\n• Ödül alan her yarışmacıya tören davetiyesi verilir.\nBu yarışmada ödül alan Selin için aşağıdakilerden hangisi kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Selin finale kalmış, ama tören davetiyesi almamıştır.",
+   "B": "Selin finale kalmamış, ama tören davetiyesi almıştır.",
+   "C": "Selin finale kalmamış ve tören davetiyesi almamıştır.",
+   "D": "Selin finale kalmamış veya tören davetiyesi almamıştır.",
+   "E": "Selin finale kalmış ve tören davetiyesi almıştır."
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Selin finale kalmış ve tören davetiyesi almıştır."
+  },
+  "celdiriciler": {
+   "A": "İkinci kuralı (ödül ⇒ davetiye) kullanmayıp davetiye almadığını sanmış.",
+   "B": "“Ancak ve ancak” kuralını ters okuyup ödül alanın finale kalmadığını düşünmüş; davetiyeyi doğru bulmuş.",
+   "C": "Hem “ancak ve ancak” kuralını ters okumuş hem de davetiyeyi ödülle ilişkilendirmemiş.",
+   "D": "Doğru sonuç olan “finale kaldı ve davetiye aldı” ifadesinin değilini alıp seçmiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Selin için kesinlikle doğru olan ifade.",
+  "bilgi": [
+   {
+    "ad": "İki yönlü koşullu",
+    "ifade": "p ⇔ q, p ile q aynı değeri aldığında 1, farklı değer aldığında 0’dır. Örnek: 0 ⇔ 0 = 1 ve 1 ⇔ 0 = 0"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Koşullu önermeden çıkarım",
+    "ifade": "p ⇒ q ve p doğruysa q doğrudur; p ⇒ q ve q′ doğruysa p′ doğrudur. q doğruysa p hakkında, p′ doğruysa q hakkında kesin bir şey söylenemez. Örnek: “Kar yağarsa okul tatil olur” ve “okul tatil değil” ise kar yağmamıştır"
+   }
+  ],
+  "ipuclari": [
+   "Ödül almayı q diye adlandır; iki kuralın q’ya hangi sonuçları verdiğini ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Önermeleri adlandır",
+    "aciklama": "p : Finale kaldı. q : Ödül aldı. r : Davetiye aldı.",
+    "islem": "Kurallar: p ⇔ q ve q ⇒ r"
+   },
+   {
+    "baslik": "İki yönlü kuralı kullan",
+    "aciklama": "q = 1 ise p ile q aynı değerde olmalıdır.",
+    "islem": "p = 1"
+   },
+   {
+    "baslik": "Koşullu kuralı kullan",
+    "aciklama": "q = 1 ve q ⇒ r doğru olduğundan r doğrudur.",
+    "islem": "r = 1"
+   },
+   {
+    "baslik": "Şıkla eşle",
+    "aciklama": "Selin finale kalmış ve davetiye almıştır.",
+    "islem": "p ∧ r = 1"
+   }
+  ],
+  "puf": "“Ancak ve ancak” iki yönde de çıkarım verir; koşullu ise yalnız “ise” yönünde.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-02 (⇔ ve ⇒) · yarışma finali ve davetiye",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0011",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Koşullu Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "“Ve” koşullu bir cümlenin sonucunun gerçekleşmemesinden kesin çıkarımı yapar.",
+  "tipId": "mnt-kosullu",
+  "tip": "Koşullu ve iki yönlü koşullu önerme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Ece, “Sınavı geçersem ve ödevimi teslim edersem tatile çıkacağım.” demiştir. Ece’nin tatile çıkmadığı bilindiğine göre, aşağıdakilerden hangisi kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Ece sınavı geçmemiş ve ödevi teslim etmemiştir.",
+   "B": "Ece sınavı geçmişse ödevi teslim etmemiştir.",
+   "C": "Ece sınavı geçmemiştir.",
+   "D": "Ece ödevi teslim etmemiştir.",
+   "E": "Ece sınavı geçmemişse ödevi teslim etmiştir."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Ece sınavı geçmişse ödevi teslim etmemiştir."
+  },
+  "celdiriciler": {
+   "A": "Koşulun (p ∧ q) yanlış olması için her iki parçanın da yanlış olması gerektiğini sanmış.",
+   "C": "Koşul yanlışken ilk parçayı kesin yanlış saymış; ödev de teslim edilmemiş olabilir.",
+   "D": "Koşul yanlışken ikinci parçayı kesin yanlış saymış; sınav geçilmemiş olabilir.",
+   "E": "(p′ ∨ q′) bilgisini p′ ⇒ q diye yazmış; oysa p′ ⇒ q ≡ p ∨ q’dur ve kesin değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önermeden çıkarım",
+    "ifade": "p ⇒ q ve p doğruysa q doğrudur; p ⇒ q ve q′ doğruysa p′ doğrudur. q doğruysa p hakkında, p′ doğruysa q hakkında kesin bir şey söylenemez. Örnek: “Kar yağarsa okul tatil olur” ve “okul tatil değil” ise kar yağmamıştır"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Tatile çıkılmadığı bilgisi hangi koşulun gerçekleşmediğini söyler; bu koşulun olumsuzunu yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sembolle yaz",
+    "aciklama": "p : Sınavı geçti. q : Ödevi teslim etti. r : Tatile çıktı.",
+    "islem": "(p ∧ q) ⇒ r ve r′"
+   },
+   {
+    "baslik": "Karşıt tersi",
+    "aciklama": "r′ doğruysa koşul gerçekleşmemiştir.",
+    "islem": "(p ∧ q)′ doğru"
+   },
+   {
+    "baslik": "De Morgan",
+    "aciklama": "Değili aç.",
+    "islem": "p′ ∨ q′ ≡ p ⇒ q′"
+   },
+   {
+    "baslik": "Şıkla eşle",
+    "aciklama": "“Sınavı geçmişse ödevi teslim etmemiştir.”",
+    "islem": "B"
+   }
+  ],
+  "puf": "“A ve B ise C” ve C gerçekleşmediyse A ve B’den en az biri gerçekleşmemiştir; hangisinin olduğu belli değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-02 (koşulda ∧) · sınav, ödev ve tatil",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0012",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · De Morgan ve Denklik",
+  "k": "matd|Mantık",
+  "kazanim": "De Morgan kuralını uygulayıp bileşik önermeyi en sade denk biçime getirir.",
+  "tipId": "mnt-denk",
+  "tip": "Denk önermeler, De Morgan ve totoloji",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "(p′ ∨ q′)′ ∧ (q ∨ r)\nönermesine denk olan en sade önerme aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "p ∧ q",
+   "B": "q ∨ (p ∧ r)",
+   "C": "p′ ∧ q′ ∧ r",
+   "D": "p ∧ (q ∨ r)",
+   "E": "p ∧ q ∧ r"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "p ∧ q"
+  },
+  "celdiriciler": {
+   "B": "De Morgan’da bağlacı değiştirmeyip (p′ ∨ q′)′ yerine p ∨ q yazmış; (p ∨ q) ∧ (q ∨ r) ≡ q ∨ (p ∧ r) bulmuş.",
+   "C": "Dıştaki değili dağıtırken içteki değilleri koruyup yalnız bağlacı değiştirmiş: p′ ∧ q′; p′ ∧ q′ ∧ (q ∨ r) ≡ p′ ∧ q′ ∧ r bulmuş.",
+   "D": "p ∧ q ∧ (q ∨ r) içinde q ∧ (q ∨ r) yerine q ∨ r yazmış (yutma kuralını karıştırmış).",
+   "E": "q ∨ r ifadesini q ∧ r gibi okumuş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Verilen önermeye denk olan en sade önerme.",
+  "bilgi": [
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Önce soldaki değilli parantezi aç; sonra ortaya çıkan ifadeyi (q ∨ r) ile birlikte sadeleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "De Morgan",
+    "aciklama": "(p′ ∨ q′)′ ≡ (p′)′ ∧ (q′)′.",
+    "islem": "(p′ ∨ q′)′ ≡ p ∧ q"
+   },
+   {
+    "baslik": "İfadeyi yaz",
+    "aciklama": "Sonucu (q ∨ r) ile birleştir.",
+    "islem": "p ∧ q ∧ (q ∨ r)"
+   },
+   {
+    "baslik": "Yut",
+    "aciklama": "q doğruysa q ∨ r zaten doğrudur.",
+    "islem": "q ∧ (q ∨ r) ≡ q"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Geriye p ∧ q kalır.",
+    "islem": "p ∧ q"
+   }
+  ],
+  "puf": "Değilli parantezi önce De Morgan ile aç; ∧ içinde q ve q ∨ r birlikteyse q yeterlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-04 (De Morgan, sadeleştirme) · değilli bileşiğin sadeleşmesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0013",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · De Morgan ve Denklik",
+  "k": "matd|Mantık",
+  "kazanim": "Günlük bir koşullu cümlenin olumsuzunu (p ∧ q ∧ r′) bulur.",
+  "tipId": "mnt-denk",
+  "tip": "Denk önermeler, De Morgan ve totoloji",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "“Hava güneşliyse ve gün hafta sonuysa Dilek piknik yapar.” önermesinin olumsuzu aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Hava güneşli değilse veya gün hafta sonu değilse Dilek piknik yapmaz.",
+   "B": "Hava güneşli, gün hafta sonu olduğu hâlde Dilek piknik yapmaz.",
+   "C": "Hava güneşli değilse ve gün hafta sonu değilse Dilek piknik yapar.",
+   "D": "Hava güneşli ve gün hafta sonu ise Dilek piknik yapmaz.",
+   "E": "Hava güneşli veya gün hafta sonu olduğu hâlde Dilek piknik yapmaz."
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Hava güneşli, gün hafta sonu olduğu hâlde Dilek piknik yapmaz."
+  },
+  "celdiriciler": {
+   "A": "Koşulun parçalarını değilleyip bağlacı değiştirmiş, sonucu da değillemiş; ama koşullu yine koşullu olarak kalmış.",
+   "C": "Yalnız koşuldaki önermeleri değilleyip sonucu aynen bırakmış.",
+   "D": "Yalnız sonucu değillemiş; koşullunun olumsuzunun yine koşullu olamayacağını görmemiş.",
+   "E": "Koşuldaki “ve” bağlacını “veya”ya çevirmiş, ⇒ yerine ∧ yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilen önermenin olumsuzu.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Önce cümleyi p, q, r ile sembole çevir; koşullu önermenin hangi durumda yanlış olduğunu düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sembolle yaz",
+    "aciklama": "p : Hava güneşli. q : Gün hafta sonu. r : Dilek piknik yapar.",
+    "islem": "(p ∧ q) ⇒ r"
+   },
+   {
+    "baslik": "Koşulluyu değille",
+    "aciklama": "(a ⇒ b)′ ≡ a ∧ b′.",
+    "islem": "((p ∧ q) ⇒ r)′ ≡ (p ∧ q) ∧ r′"
+   },
+   {
+    "baslik": "Cümleye çevir",
+    "aciklama": "Güneşli, hafta sonu ve piknik yapılmıyor.",
+    "islem": "p ∧ q ∧ r′"
+   }
+  ],
+  "puf": "Koşullunun olumsuzu koşullu değildir: (a ⇒ b)′ ≡ a ∧ b′.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-04 (koşulluyu olumsuzlama) · güneşli hafta sonu pikniği",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0014",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · De Morgan ve Denklik",
+  "k": "matd|Mantık",
+  "kazanim": "Verilen bileşik önermelerden hangilerinin totoloji olduğunu tablo ile belirler.",
+  "tipId": "mnt-denk",
+  "tip": "Denk önermeler, De Morgan ve totoloji",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "I. (p ⇒ q) ∨ (q ⇒ p)\nII. (p ∨ q) ⇒ p\nIII. (p ∧ q) ⇒ (p ∨ q)\nYukarıdaki önermelerden hangileri totolojidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ün her durumda doğru olduğunu görmeyip sınamamış.",
+   "B": "I’de p = 1, q = 0 satırında p ⇒ q = 0 görüp “veya” ile bağlı q ⇒ p = 1’i hesaba katmamış; I’i totoloji saymamış.",
+   "C": "II’yi p = 0, q = 1 satırında sınamamış; orada (0 ∨ 1) ⇒ 0 yanlıştır.",
+   "E": "II’yi yalnız p = 1 satırlarına bakarak totoloji sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Totoloji olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "Totoloji ve çelişki",
+    "ifade": "Bütün durumlarda 1 olan önermeye totoloji, bütün durumlarda 0 olan önermeye çelişki denir. Örnek: p ∨ p′ totoloji, p ∧ p′ çelişkidir"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   }
+  ],
+  "ipuclari": [
+   "Her öncül için dört (p, q) satırını da dene; bir satırda bile 0 çıkıyorsa totoloji değildir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I’i sına",
+    "aciklama": "Her satırda p ⇒ q ya da q ⇒ p’den en az biri doğrudur.",
+    "islem": "Satırlar: 1 · 1 · 1 · 1 → totoloji"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "p = 0, q = 1 için (0 ∨ 1) ⇒ 0 = 1 ⇒ 0 = 0.",
+    "islem": "II totoloji değil"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "p ∧ q doğruysa p ∨ q de doğrudur; koşul 1 iken sonuç hep 1.",
+    "islem": "Satırlar: 1 · 1 · 1 · 1 → totoloji"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve III totolojidir.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Totoloji kanıtı için bütün satırlar taranır; çürütmek için tek bir 0 satırı yeter.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-04 (totoloji) · koşullu bileşikler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0015",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Niceleyiciler",
+  "k": "matd|Mantık",
+  "kazanim": "“Her” niceleyicili önermenin olumsuzunu (∃ ve değillenmiş özellik) yazar.",
+  "tipId": "mnt-nicelik",
+  "tip": "Niceleyiciler ve olumsuzu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "(∀x ∈ ℝ) x² ≥ x\nönermesinin olumsuzu aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "(∃x ∈ ℝ) x² ≤ x",
+   "B": "(∀x ∈ ℝ) x² < x",
+   "C": "(∃x ∈ ℝ) x² < x",
+   "D": "(∀x ∈ ℝ) x² ≤ x",
+   "E": "(∃x ∈ ℝ) x² > x"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "(∃x ∈ ℝ) x² < x"
+  },
+  "celdiriciler": {
+   "A": "∀ yerine ∃ yazmış ama ≥’nin değilini ≤ almış; doğrusu <’dir.",
+   "B": "Özelliği doğru değillemiş (<) ama ∀ niceleyicisini ∃ yapmayı unutmuş.",
+   "D": "Niceleyiciyi değiştirmemiş, özelliği de ≤ olarak değillemiş.",
+   "E": "Niceleyiciyi ∃ yapmış ama özelliği değillemeden ≥ yerine > yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilen önermenin olumsuzu.",
+  "bilgi": [
+   {
+    "ad": "Niceleyiciler",
+    "ifade": "∀ “her”, ∃ “bazı” (en az bir) demektir. (∀x, P(x))′ ≡ ∃x, P(x)′ ve (∃x, P(x))′ ≡ ∀x, P(x)′. Örnek: “Her kuş uçar”ın olumsuzu “Uçmayan en az bir kuş vardır”dır"
+   }
+  ],
+  "ipuclari": [
+   "“Her” sözcüğünün olumsuzunu ve ≥ ifadesinin tam tersini ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Niceleyiciyi değiştir",
+    "aciklama": "“Her” değillenince “bazı” olur.",
+    "islem": "∀ → ∃"
+   },
+   {
+    "baslik": "Özelliği değille",
+    "aciklama": "x² ≥ x’in değili x² < x’tir (≤ değil).",
+    "islem": "x² ≥ x → x² < x"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Hepsini yaz.",
+    "islem": "(∃x ∈ ℝ) x² < x"
+   }
+  ],
+  "puf": "(∀x, P)′ ≡ ∃x, P′; ≥’nin değili <’dir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-05 (∀ olumsuzu) · x² ≥ x",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0016",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Niceleyiciler",
+  "k": "matd|Mantık",
+  "kazanim": "“Her” niceleyicili günlük cümlenin olumsuzunu seçer.",
+  "tipId": "mnt-nicelik",
+  "tip": "Niceleyiciler ve olumsuzu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "“Bu kursta her öğrenci sınava girmiştir.” önermesinin olumsuzu aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "Bu kursta hiçbir öğrenci sınava girmemiştir.",
+   "B": "Bu kursta sınava giren en az bir öğrenci vardır.",
+   "C": "Bu kursta sınava girmeyen en az bir öğrenci vardır.",
+   "D": "Bu kursta hem sınava giren hem de girmeyen öğrenci vardır.",
+   "E": "Bu kursta sınava girmeyen öğrenci yoktur."
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "Bu kursta sınava girmeyen en az bir öğrenci vardır."
+  },
+  "celdiriciler": {
+   "A": "“Her öğrenci girmiştir”in olumsuzunu “hiçbiri girmemiştir” sanmış; “her”i koruyup yalnız özelliği değillemiş.",
+   "B": "“Her”i “en az bir”e çevirmiş ama “girmiştir” özelliğini değillememiş.",
+   "D": "Girmeyen öğrenci olduğunu bulmuş, yanına “giren de vardır” koşulunu da eklemiş; bu koşul olumsuzun gereği değildir.",
+   "E": "Olumsuzu almak yerine aynı şeyi söyleyen bir ifade yazmış: girmeyen öğrencinin olmaması, her öğrencinin girmesidir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Verilen önermenin olumsuzu.",
+  "bilgi": [
+   {
+    "ad": "Niceleyiciler",
+    "ifade": "∀ “her”, ∃ “bazı” (en az bir) demektir. (∀x, P(x))′ ≡ ∃x, P(x)′ ve (∃x, P(x))′ ≡ ∀x, P(x)′. Örnek: “Her kuş uçar”ın olumsuzu “Uçmayan en az bir kuş vardır”dır"
+   }
+  ],
+  "ipuclari": [
+   "Cümlenin yanlış olması için kursta ne olması gerektiğini, “her” sözcüğünün karşıtını düşünerek yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Niceleyiciyi değiştir",
+    "aciklama": "“Her öğrenci” yerine “en az bir öğrenci” gelir.",
+    "islem": "∀ → ∃"
+   },
+   {
+    "baslik": "Özelliği değille",
+    "aciklama": "“Girmiştir” yerine “girmemiştir” yazılır.",
+    "islem": "P(x) → P(x)′"
+   },
+   {
+    "baslik": "Cümle kur",
+    "aciklama": "Sınava girmeyen en az bir öğrenci vardır.",
+    "islem": "(∃x) P(x)′"
+   }
+  ],
+  "puf": "“Her … dir”in olumsuzu “… olmayan en az bir … vardır”dır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-05 (∀ olumsuzu, günlük dil) · kursta sınav",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0017",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Açık Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Koşullu bir açık önermenin doğruluk kümesinin eleman sayısını bulur.",
+  "tipId": "mnt-acik",
+  "tip": "Açık önerme, doğruluk kümesi ve tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 3,
+  "metin": "A = {1, 2, 3, 4, 5, 6, 7, 8} kümesinde tanımlı\np(x) : x çift sayıdır.\nq(x) : x > 5\naçık önermeleri veriliyor.\nBuna göre, p(x) ⇒ q(x) önermesinin doğruluk kümesi kaç elemanlıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "7"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "⇒ yerine ∧ kullanmış: x çift ve 5’ten büyük olan {6, 8} kümesini bulmuş.",
+   "B": "p(x)’in değilinin (tek sayılar) doğruluk kümesini bulmuş; q(x)’in doğru olduğu çift sayıları katmamış.",
+   "C": "⇒ yerine ∨ kullanmış: {2, 4, 6, 7, 8} kümesini saymış.",
+   "E": "Koşullunun yönünü ters okuyup q(x) ⇒ p(x)’in doğruluk kümesini bulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "p(x) ⇒ q(x)’in doğruluk kümesinin eleman sayısı.",
+  "bilgi": [
+   {
+    "ad": "Açık önerme ve doğruluk kümesi",
+    "ifade": "x’e değer verilince doğru ya da yanlış olan ifadeye açık önerme, onu doğru yapan x değerlerinin kümesine doğruluk kümesi denir. Örnek: x ∈ {1, 2, 3, 4} için “x çift” ifadesinin doğruluk kümesi {2, 4}"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "2’ye tam bölünen sayı çifttir, bölünmeyen sayı tektir. Örnek: 6 ve 12 çift, 7 ve 9 tektir"
+   }
+  ],
+  "ipuclari": [
+   "Her x için önce p(x) ve q(x)’in değerine bak; koşullu hangi x değerlerinde yanlıştır, onları ele."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yanlış olduğu değerler",
+    "aciklama": "p ⇒ q yalnız p doğru, q yanlış iken yanlıştır.",
+    "islem": "x çift ve x ≤ 5: {2, 4}"
+   },
+   {
+    "baslik": "Diğerleri doğru",
+    "aciklama": "Bütün A’dan bu iki değeri çıkar.",
+    "islem": "{1, 3, 5, 6, 7, 8}"
+   },
+   {
+    "baslik": "Say",
+    "aciklama": "Doğruluk kümesinin eleman sayısı.",
+    "islem": "8 − 2 = 6"
+   }
+  ],
+  "puf": "Koşullunun doğruluk kümesi, yanlış yapan değerlerin tümleyenidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-07 (doğruluk kümesi) · p(x) ⇒ q(x)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0018",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Çıkarım",
+  "k": "matd|Mantık",
+  "kazanim": "“Veya” koşullu bir kuralın sonucundan hangi ifadelerin kesin olduğunu belirler.",
+  "tipId": "mnt-cikarim",
+  "tip": "Hikâyeli çıkarım (kesinlikle doğru olan)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir sitenin yönetimi şu kuralı koymuştur: “Asansör bozulursa veya elektrik kesilirse jeneratör çalıştırılır.” Bir gün jeneratörün çalıştırılmadığı biliniyor.\nBuna göre,\nI. Asansör bozulmuştur.\nII. Elektrik kesilmemiştir.\nIII. Asansör bozulmamıştır ve elektrik kesilmemiştir.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "Jeneratör çalışmadığı için asansörün bozulduğunu sanmış; sonucu koşul yerine koymuş.",
+   "B": "Elektrik kesilmediğini bulmuş ama “veya” koşulunun asansörü de kapsadığını görüp III’ü sınamamış.",
+   "C": "(a ∨ e)′ ≡ a ∧ e′ yazmış: De Morgan’da yalnız bir terimi değillemiş.",
+   "E": "I’deki “bozulmuştur” ifadesini “bozulmamıştır” gibi okuyup üçünü de kesin saymış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önermeden çıkarım",
+    "ifade": "p ⇒ q ve p doğruysa q doğrudur; p ⇒ q ve q′ doğruysa p′ doğrudur. q doğruysa p hakkında, p′ doğruysa q hakkında kesin bir şey söylenemez. Örnek: “Kar yağarsa okul tatil olur” ve “okul tatil değil” ise kar yağmamıştır"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Kuralın sonucu gerçekleşmediğinde, kuralın koşulundaki iki durumdan her biri için ne söylenebileceğini ayrı ayrı sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Önermeleri yaz",
+    "aciklama": "a : Asansör bozuldu. e : Elektrik kesildi. k : Jeneratör çalıştırıldı.",
+    "islem": "(a ∨ e) ⇒ k ve k′"
+   },
+   {
+    "baslik": "Karşıt tersi",
+    "aciklama": "k′ doğruysa koşul gerçekleşmemiştir.",
+    "islem": "(a ∨ e)′ doğru"
+   },
+   {
+    "baslik": "De Morgan",
+    "aciklama": "Değili aç.",
+    "islem": "a′ ∧ e′ doğru"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "Asansör bozulmamış ve elektrik kesilmemiştir; I yanlış, II ve III doğrudur.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "“A veya B” koşulu gerçekleşmeden sonuç yoksa, hem A hem B gerçekleşmemiştir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-06 (hikâyeli çıkarım) · asansör, elektrik ve jeneratör",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0019",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Açık Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Üç açık önermeden kurulan koşullu önermeyi yanlış yapan değerleri bulup toplar.",
+  "tipId": "mnt-acik",
+  "tip": "Açık önerme, doğruluk kümesi ve tablo",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "A = {1, 2, 3, …, 12} kümesinde tanımlı\np(x) : x, 3’ün katıdır.\nq(x) : x ≤ 5\nr(x) : x tek sayıdır.\naçık önermeleri veriliyor.\nBuna göre, (p(x) ∨ q(x)) ⇒ r(x) önermesini yanlış yapan x değerlerinin toplamı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "18",
+   "C": "24",
+   "D": "42",
+   "E": "54"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "Yanlış yapan çiftlerden yalnız q(x)’i sağlayan {2, 4} değerlerini toplamış; 3’ün katı olan çiftleri unutmuş.",
+   "B": "Yalnız p(x)’i sağlayan çiftleri ({6, 12}) toplamış; x ≤ 5 olan çiftleri unutmuş.",
+   "D": "Yanlış yapan değerler yerine koşulun “∨” kısmını sağlayan tüm x değerlerini toplamış.",
+   "E": "Önermeyi yanlış yapanlar yerine doğru yapan x değerlerini toplamış (78 − 24)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Önermeyi yanlış yapan x değerlerinin toplamı.",
+  "bilgi": [
+   {
+    "ad": "Açık önerme ve doğruluk kümesi",
+    "ifade": "x’e değer verilince doğru ya da yanlış olan ifadeye açık önerme, onu doğru yapan x değerlerinin kümesine doğruluk kümesi denir. Örnek: x ∈ {1, 2, 3, 4} için “x çift” ifadesinin doğruluk kümesi {2, 4}"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Tek ve çift sayı",
+    "ifade": "2’ye tam bölünen sayı çifttir, bölünmeyen sayı tektir. Örnek: 6 ve 12 çift, 7 ve 9 tektir"
+   }
+  ],
+  "ipuclari": [
+   "Koşullu önermenin yanlış olduğu durumu yaz; sonra bu durumun x için ne demek olduğunu 1’den 12’ye kadar sayılarda ara."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yanlış olma şartı",
+    "aciklama": "a ⇒ b yalnız a doğru, b yanlış iken yanlıştır.",
+    "islem": "(p ∨ q) doğru ve r yanlış"
+   },
+   {
+    "baslik": "r yanlış",
+    "aciklama": "r(x) yanlışsa x çift sayıdır.",
+    "islem": "x ∈ {2, 4, 6, 8, 10, 12}"
+   },
+   {
+    "baslik": "p ∨ q doğru",
+    "aciklama": "Çiftlerden 3’ün katı olan ya da 5’e kadar olanlar.",
+    "islem": "2, 4 (≤ 5) · 6, 12 (3’ün katı)"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Yanlış yapan değerler {2, 4, 6, 12}.",
+    "islem": "2 + 4 + 6 + 12 = 24"
+   }
+  ],
+  "puf": "Koşullunun yanlış olduğu durumu (a doğru, b yanlış) bulup sayılarda ara; doğru yapanları toplamak tuzaktır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-07 (açık önerme, doğruluk kümesi) · yanlış yapan değerlerin toplamı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0020",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Doğruluk Değerinden Önerme Bulma",
+  "k": "matd|Mantık",
+  "kazanim": "Bileşik önermeyi doğru yapan (p, q, r, s) doğruluk değeri dörtlülerinin sayısını tarama mantığıyla bulur.",
+  "tipId": "mnt-bulma",
+  "tip": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "p, q, r ve s birer önermedir.\n(p ⇒ q) ∧ (r ⇒ s) ∧ (p ∨ r)\nbileşik önermesinin doğru olması için p, q, r ve s önermelerinin doğruluk değerleri kaç farklı şekilde seçilebilir?",
+  "sekil": null,
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "5"
+  },
+  "celdiriciler": {
+   "A": "⇒ bağlaçlarını ⇔ gibi okumuş: (p, q) ve (r, s) eşit değerli, p ∨ r şartıyla 2 × 2 − 1 = 3 bulmuş.",
+   "B": "p ∨ r şartını “ya p ya da r (yalnız biri)” okuyup ikisi birden doğru olan durumu saymamış.",
+   "D": "p ∨ r için p doğru olan 3 durumu ve r doğru olan 3 durumu toplamış; ikisinin birden doğru olduğu durumu iki kez saymış.",
+   "E": "p ∨ r şartını hiç uygulamamış; yalnız iki koşullu önermeyi 3 × 3 olarak saymış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Doğruluk değerlerinin farklı seçim sayısı.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Önce (p, q) ve (r, s) ikilileri için koşullunun doğru olduğu durumları say; sonra “veya” koşulunu kaldır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "(p, q) seçenekleri",
+    "aciklama": "p ⇒ q yalnız (1, 0) iken yanlıştır.",
+    "islem": "(0, 0); (0, 1); (1, 1): 3 durum"
+   },
+   {
+    "baslik": "(r, s) seçenekleri",
+    "aciklama": "r ⇒ s için de aynı.",
+    "islem": "(0, 0); (0, 1); (1, 1): 3 durum"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "Üç ve üç durum birlikte seçilir.",
+    "islem": "3 × 3 = 9"
+   },
+   {
+    "baslik": "p ∨ r şartı",
+    "aciklama": "p = 0 ve r = 0 olan durumlar çıkarılır: (p, q) ∈ {(0, 0), (0, 1)} ve (r, s) ∈ {(0, 0), (0, 1)}.",
+    "islem": "9 − 2 × 2 = 5"
+   }
+  ],
+  "puf": "“Veya”nın yanlış olduğu (ikisi de 0) durumları toplamdan çıkar; çift sayım yapma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-03 (model sayma) · iki koşullu ve bir “veya”",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0021",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Doğruluk Değerinden Önerme Bulma",
+  "k": "matd|Mantık",
+  "kazanim": "Üç parçalı bileşik önermenin doğruluğundan dört önermenin değerlerini zincirleme bulur.",
+  "tipId": "mnt-bulma",
+  "tip": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Deniz’in hafta sonu gezisi için\np : Bisiklet kiraladı.\nq : Sahilde yürüyüş yaptı.\nr : Müzeyi gezdi.\ns : Akşam yemeğini balıkçıda yedi.\nönermeleri veriliyor. (p ⇒ q)′ ∧ (r ⇒ p′) ∧ (s ∨ r) önermesinin doğru olduğu bilindiğine göre, Deniz bu gezide aşağıdakilerden hangisini yapmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnızca balıkçıda yemek yemiştir.",
+   "B": "Yalnızca bisiklet kiralamış ve sahilde yürümüştür.",
+   "C": "Yalnızca sahilde yürümüş ve balıkçıda yemek yemiştir.",
+   "D": "Yalnızca bisiklet kiralamış ve balıkçıda yemek yemiştir.",
+   "E": "Yalnızca bisiklet kiralamış, müzeyi gezmiş ve balıkçıda yemek yemiştir."
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "Yalnızca bisiklet kiralamış ve balıkçıda yemek yemiştir."
+  },
+  "celdiriciler": {
+   "A": "(p ⇒ q)′ doğruluğundan p = 0 sonucunu çıkarmış; oysa koşullunun yanlış olması p = 1, q = 0 demektir.",
+   "B": "p ⇒ q yanlışken q = 1 almış ve s ∨ r şartını denetlememiş.",
+   "C": "p ⇒ q yanlışken p = 0, q = 1 almış; böylece r ⇒ p′ ve s ∨ r şartlarını sağlamış sanmış.",
+   "E": "r ⇒ p′ koşulunu r ⇒ p gibi okumuş; r = 1 ve p = 1 alınca “doğru” sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Deniz’in gezide yaptığı etkinlikler.",
+  "bilgi": [
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   }
+  ],
+  "ipuclari": [
+   "Üç parçalı “ve” bileşiğinin doğru olması için üç parçanın da 1 olması gerektiğini kullan; en kesin bilgi veren parçadan başla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parçaları ayır",
+    "aciklama": "“Ve” bileşiği doğruysa üçü de doğrudur.",
+    "islem": "(p ⇒ q)′ = 1 · r ⇒ p′ = 1 · s ∨ r = 1"
+   },
+   {
+    "baslik": "Birinci parça",
+    "aciklama": "(p ⇒ q)′ = 1 ise p ⇒ q yanlıştır.",
+    "islem": "p = 1 · q = 0"
+   },
+   {
+    "baslik": "İkinci parça",
+    "aciklama": "p = 1 iken p′ = 0; r ⇒ 0 doğruysa r = 0 olmalıdır.",
+    "islem": "r = 0"
+   },
+   {
+    "baslik": "Üçüncü parça",
+    "aciklama": "r = 0 iken s ∨ r doğruysa s = 1.",
+    "islem": "s = 1"
+   },
+   {
+    "baslik": "Cevap",
+    "aciklama": "Bisiklet kiralamış, balıkçıda yemiş; yürüyüş ve müze yok.",
+    "islem": "p = 1 · q = 0 · r = 0 · s = 1"
+   }
+  ],
+  "puf": "Koşullunun yanlışlığı kesin değer verir (1, 0); sonra diğer parçaları bu değerlerle sırayla çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-03 (p, q, r, s bulma) · hafta sonu gezisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0022",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Çıkarım",
+  "k": "matd|Mantık",
+  "kazanim": "Koşullu önermelerden oluşan zincirde karşıt tersi kullanıp kesin sonuçları bulur; ters hatasını eler.",
+  "tipId": "mnt-cikarim",
+  "tip": "Hikâyeli çıkarım (kesinlikle doğru olan)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Murat’ın bir günü için şu bilgiler veriliyor:\n• Yağmur yağarsa maç ertelenir.\n• Maç ertelenirse Murat ödevini yapar.\n• Murat sinemaya giderse maç ertelenmemiştir.\nMurat’ın o gün sinemaya gittiği bilindiğine göre,\nI. Murat ödevini yapmamıştır.\nII. Yağmur yağmamıştır.\nIII. Maç ertelenmemiştir.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız II",
+   "B": "Yalnız III",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "Yağmurun yağmadığını görmüş ama maçın ertelenmediği ara sonucunu kesin saymamış.",
+   "B": "Zinciri bir adım yürütüp durmuş; maç ertelenmediyse yağmurun da yağmadığını (karşıt tersi) görmemiş.",
+   "C": "Maç ertelenmediği için ödevin yapılmadığını sanmış (b ⇒ c’nin tersini kullanmış); yağmura kadar zinciri sürdürmemiş.",
+   "E": "Maç ertelenmedi diye ödev yapılmadı sanmış (ters hatası); doğru sonuçları da bulduğu için üçünü seçmiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önermeden çıkarım",
+    "ifade": "p ⇒ q ve p doğruysa q doğrudur; p ⇒ q ve q′ doğruysa p′ doğrudur. q doğruysa p hakkında, p′ doğruysa q hakkında kesin bir şey söylenemez. Örnek: “Kar yağarsa okul tatil olur” ve “okul tatil değil” ise kar yağmamıştır"
+   },
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   }
+  ],
+  "ipuclari": [
+   "Murat’ın sinemaya gittiği bilgisinden başla; her koşullunun karşıt tersini hangi yönde işletebildiğini ayrı ayrı sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Önermeleri yaz",
+    "aciklama": "a : Yağmur yağdı. b : Maç ertelendi. c : Murat ödevini yaptı. d : Murat sinemaya gitti.",
+    "islem": "a ⇒ b; b ⇒ c; d ⇒ b′; d = 1"
+   },
+   {
+    "baslik": "Maçı bul",
+    "aciklama": "d doğru ve d ⇒ b′ doğru olduğundan b′ doğrudur.",
+    "islem": "Maç ertelenmemiştir (III)"
+   },
+   {
+    "baslik": "Yağmuru bul",
+    "aciklama": "a ⇒ b’nin karşıt tersi: b′ ⇒ a′.",
+    "islem": "Yağmur yağmamıştır (II)"
+   },
+   {
+    "baslik": "Ödevi sına",
+    "aciklama": "b = 0 iken b ⇒ c hakkında bilgi vermez; ödev yapılmış da yapılmamış da olabilir.",
+    "islem": "I kesin değildir"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "II ve III kesinlikle doğrudur.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "Koşullunun “ise” kısmı gerçekleşmediyse sonuç hakkında bilgi yoktur; kesin olan karşıt tersi yönüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-06 (hikâyeli çıkarım) · yağmur, maç ve ödev zinciri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0023",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Çıkarım",
+  "k": "matd|Mantık",
+  "kazanim": "“Veya” ve iki koşullu önermeyi birlikte kullanarak üç kesin sonuca ulaşır.",
+  "tipId": "mnt-cikarim",
+  "tip": "Hikâyeli çıkarım (kesinlikle doğru olan)",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir basketbol antrenörü maç kadrosu için şunları söylüyor:\n• Ali ile Burak’tan en az biri oynayacak.\n• Ali oynarsa Can da oynayacak.\n• Burak oynarsa Deniz oynamayacak.\nCan’ın oynamadığı bilindiğine göre,\nI. Ali oynamamıştır.\nII. Burak oynamıştır.\nIII. Deniz oynamamıştır.\nifadelerinden hangileri kesinlikle doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "I ve II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "I, II ve III"
+  },
+  "celdiriciler": {
+   "A": "Ali’nin oynamadığını bulup durmuş; “en az biri” koşulundan Burak’ın oynadığını çıkarmamış.",
+   "B": "Burak oynarsa Deniz oynamaz koşulunu son adımda kullanmayı unutmuş.",
+   "C": "“Ali oynamadı” sonucundan Deniz’e atlamış; Burak’ın oynadığı ara halkasını görmemiş.",
+   "D": "Ali’nin oynamamasını (karşıt tersi) bulamayıp Burak’ı doğrudan “Can oynamadı” bilgisinden çıkarmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önermeden çıkarım",
+    "ifade": "p ⇒ q ve p doğruysa q doğrudur; p ⇒ q ve q′ doğruysa p′ doğrudur. q doğruysa p hakkında, p′ doğruysa q hakkında kesin bir şey söylenemez. Örnek: “Kar yağarsa okul tatil olur” ve “okul tatil değil” ise kar yağmamıştır"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Can’ın oynamaması hangi koşulun sonucunu ortadan kaldırır? Çıkardığın her sonucu sıradaki koşulda kullan."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Önermeleri yaz",
+    "aciklama": "a, b, c, d: Ali, Burak, Can, Deniz oynadı.",
+    "islem": "a ∨ b; a ⇒ c; b ⇒ d′; c′"
+   },
+   {
+    "baslik": "Ali’yi bul",
+    "aciklama": "c′ ve a ⇒ c: karşıt tersiyle a′.",
+    "islem": "Ali oynamamıştır (I)"
+   },
+   {
+    "baslik": "Burak’ı bul",
+    "aciklama": "a ∨ b doğru, a yanlış ise b doğrudur.",
+    "islem": "Burak oynamıştır (II)"
+   },
+   {
+    "baslik": "Deniz’i bul",
+    "aciklama": "b doğru ve b ⇒ d′ doğru olduğundan d′ doğrudur.",
+    "islem": "Deniz oynamamıştır (III)"
+   }
+  ],
+  "puf": "Kesin bilgiyle başlayıp her çıkarımı bir sonraki koşulda kullan; zincirin her halkası kesindir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-06 (hikâyeli çıkarım) · antrenörün kadro kuralları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0024",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Niceleyiciler",
+  "k": "matd|Mantık",
+  "kazanim": "“Ve” ile bağlı ∀ ve ∃ niceleyicili bileşik önermenin olumsuzunu bulur.",
+  "tipId": "mnt-nicelik",
+  "tip": "Niceleyiciler ve olumsuzu",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "düz",
+  "adimSayisi": 4,
+  "metin": "[(∀x ∈ ℝ) x² ≥ 0]  ∧  [(∃x ∈ ℝ) x + 1 = 0]\nönermesinin olumsuzu aşağıdakilerden hangisidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "(∃x ∈ ℝ) x² < 0  ∧  (∀x ∈ ℝ) x + 1 ≠ 0",
+   "B": "(∀x ∈ ℝ) x² < 0  ∨  (∃x ∈ ℝ) x + 1 ≠ 0",
+   "C": "(∃x ∈ ℝ) x² ≤ 0  ∨  (∀x ∈ ℝ) x + 1 ≠ 0",
+   "D": "(∃x ∈ ℝ) x² < 0  ∨  (∀x ∈ ℝ) x + 1 ≠ 0",
+   "E": "(∃x ∈ ℝ) x² < 0  ∨  (∃x ∈ ℝ) x + 1 ≠ 0"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "(∃x ∈ ℝ) x² < 0  ∨  (∀x ∈ ℝ) x + 1 ≠ 0"
+  },
+  "celdiriciler": {
+   "A": "Bağlacı değiştirmemiş: “ve”nin olumsuzunu yine “ve” yazmış; niceleyicileri ve özellikleri doğru değillemiş.",
+   "B": "Bağlacı değiştirmiş ama niceleyicileri değiştirmemiş: ∀ ve ∃’yı yerinde bırakıp yalnız özellikleri değillemiş.",
+   "C": "x² ≥ 0 özelliğinin değilini x² ≤ 0 almış; x = 0 için x² ≥ 0 ve x² ≤ 0 ikisi de doğrudur.",
+   "E": "İkinci niceleyiciyi ∃ olarak bırakmış; ∃x, Q’nun değili ∀x, Q′ olmalıdır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Verilen önermenin olumsuzu.",
+  "bilgi": [
+   {
+    "ad": "Niceleyiciler",
+    "ifade": "∀ “her”, ∃ “bazı” (en az bir) demektir. (∀x, P(x))′ ≡ ∃x, P(x)′ ve (∃x, P(x))′ ≡ ∀x, P(x)′. Örnek: “Her kuş uçar”ın olumsuzu “Uçmayan en az bir kuş vardır”dır"
+   },
+   {
+    "ad": "De Morgan kuralları",
+    "ifade": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′; değil alınırken bağlaç değişir. Örnek: “Ne çay ne kahve içti” = “çay içmedi ve kahve içmedi”"
+   }
+  ],
+  "ipuclari": [
+   "Önce “ve” ile bağlı iki parçanın her birini ayrı ayrı değille; sonra bağlacı düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bağlaç",
+    "aciklama": "(a ∧ b)′ ≡ a′ ∨ b′.",
+    "islem": "Olumsuz “veya” ile bağlanır"
+   },
+   {
+    "baslik": "Birinci parça",
+    "aciklama": "(∀x, x² ≥ 0)′ ≡ ∃x, x² < 0.",
+    "islem": "(∃x ∈ ℝ) x² < 0"
+   },
+   {
+    "baslik": "İkinci parça",
+    "aciklama": "(∃x, x + 1 = 0)′ ≡ ∀x, x + 1 ≠ 0.",
+    "islem": "(∀x ∈ ℝ) x + 1 ≠ 0"
+   },
+   {
+    "baslik": "Birleştir",
+    "aciklama": "İki olumsuzu “veya” ile bağla.",
+    "islem": "(∃x ∈ ℝ) x² < 0 ∨ (∀x ∈ ℝ) x + 1 ≠ 0"
+   }
+  ],
+  "puf": "Bileşik niceleyicili önermede önce bağlacı De Morgan ile değiştir, sonra her parçada ∀ ↔ ∃ yapıp özelliği değille.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-05 (bileşik niceleyici olumsuzu) · ∀ ∧ ∃",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-mantik-0025",
+  "ders": "TYT Matematik",
+  "konu": "Mantık · Açık Önerme",
+  "k": "matd|Mantık",
+  "kazanim": "Tabloda verilen doğruluk değerlerine iki koşullu bileşik önermeyi satır satır uygulayıp doğru olanları belirler.",
+  "tipId": "mnt-acik",
+  "tip": "Açık önerme, doğruluk kümesi ve tablo",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Bir lig maçı öncesinde takımlar için\np : Takım ev sahibidir.\nq : Takım önceki maçını kazanmıştır.\nr : Takımın sakat oyuncusu vardır.\nönermeleri yazılıyor. Aşağıdaki tabloda her takım için bu önermelerin doğruluk değerleri verilmiştir.\nBuna göre, (p ⇒ q) ∧ (q ⇒ r′) önermesi hangi takımlar için doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 240 186\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"236\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"39.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Takım</text><text x=\"103.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">p</text><text x=\"157.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">q</text><text x=\"211.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">r</text><text x=\"39.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Akasya</text><text x=\"103.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"157.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"211.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"39.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Bozkır</text><text x=\"103.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"157.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"211.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"39.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Çınar</text><text x=\"103.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"157.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"211.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"39.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Doğan</text><text x=\"103.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"157.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"211.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"39.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Erguvan</text><text x=\"103.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"157.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"211.0\" y=\"149.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"39.0\" y=\"175.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Fidan</text><text x=\"103.0\" y=\"175.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><text x=\"157.0\" y=\"175.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"211.0\" y=\"175.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">0</text><line x1=\"2\" y1=\"2\" x2=\"238\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"238\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"238\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"238\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"238\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"238\" y2=\"132\" stroke-width=\"1\"/><line x1=\"2\" y1=\"158\" x2=\"238\" y2=\"158\" stroke-width=\"1\"/><line x1=\"2\" y1=\"184\" x2=\"238\" y2=\"184\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"184\" stroke-width=\"1\"/><line x1=\"76\" y1=\"2\" x2=\"76\" y2=\"184\" stroke-width=\"1\"/><line x1=\"130\" y1=\"2\" x2=\"130\" y2=\"184\" stroke-width=\"1\"/><line x1=\"184\" y1=\"2\" x2=\"184\" y2=\"184\" stroke-width=\"1\"/><line x1=\"238\" y1=\"2\" x2=\"238\" y2=\"184\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "Çınar, Doğan, Erguvan",
+   "B": "Akasya, Çınar",
+   "C": "Akasya, Doğan, Erguvan, Fidan",
+   "D": "Akasya, Bozkır, Çınar, Fidan",
+   "E": "Akasya, Çınar, Fidan"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Akasya, Çınar, Fidan"
+  },
+  "celdiriciler": {
+   "A": "r′ yerine r’yi almış: (p ⇒ q) ∧ (q ⇒ r) önermesini hesaplamış.",
+   "B": "p ⇒ q koşullusunu p ⇔ q gibi okumuş; p = 0, q = 1 satırlarını yanlış saymış.",
+   "C": "İkinci koşulluyu karşıt tersi yerine ters yönlü (r′ ⇒ q) yazmış.",
+   "D": "İlk koşullu p ⇒ q’yu hesaba katmamış; yalnız q ⇒ r′’ya bakmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Önermenin doğru olduğu takımlar.",
+  "bilgi": [
+   {
+    "ad": "Koşullu önerme",
+    "ifade": "p ⇒ q yalnız p = 1 ve q = 0 iken 0’dır; diğer üç durumda 1’dir. Örnek: 0 ⇒ 1 = 1, 1 ⇒ 0 = 0. Ayrıca p ⇒ q ≡ p′ ∨ q ve (p ⇒ q)′ ≡ p ∧ q′"
+   },
+   {
+    "ad": "Ve, veya",
+    "ifade": "p ∧ q yalnız ikisi de 1 iken 1’dir; p ∨ q yalnız ikisi de 0 iken 0’dır. Örnek: 1 ∧ 0 = 0 ve 1 ∨ 0 = 1"
+   }
+  ],
+  "ipuclari": [
+   "Her takımın satırı için önce iki koşullunun değerini ayrı ayrı bul; sonra “ve” ile birleştir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satır satır p ⇒ q",
+    "aciklama": "p = 1, q = 0 olan takım yanlış verir.",
+    "islem": "Bozkır’da 1 ⇒ 0 = 0; diğerlerinde 1"
+   },
+   {
+    "baslik": "Satır satır q ⇒ r′",
+    "aciklama": "q = 1 ve r = 1 olan takım yanlış verir.",
+    "islem": "Doğan (1, 1) ve Erguvan (1, 1) yanlış"
+   },
+   {
+    "baslik": "İkisini birleştir",
+    "aciklama": "İki koşullu da doğruysa bileşik doğrudur.",
+    "islem": "Akasya, Çınar, Fidan"
+   }
+  ],
+  "puf": "Tabloda her satıra bileşiğin parçalarını ayrı ayrı uygula; koşullu yalnız (1, 0) satırında yanlıştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-MNT-07 (tablodan değer bulma) · takımların durumları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -683,74 +683,69 @@
   "ders": "TYT Matematik",
   "konu": "Sayı Problemleri · İki Bilinmeyen",
   "k": "prob|Sayı Problemleri",
-  "kazanim": "Rakamları toplamı ve yer değiştirme farkı verilen sayının rakamları çarpımını bulur.",
+  "kazanim": "Koli sayısı ve toplam ağırlıktan 10 kg’lık kolilerin sayısını bulur.",
   "tipId": "spb-ikibilinmeyen",
   "tip": "Adet–değer ve basamak kurulumları",
   "zorluk": "orta",
   "seviye": "ÖSYM",
-  "kalip": "düz",
+  "kalip": "hikâyeli",
   "adimSayisi": 3,
-  "metin": "Rakamları toplamı 11 olan iki basamaklı bir sayının rakamlarının yerleri değiştirildiğinde elde edilen sayı, ilk sayıdan 27 fazladır.\nBuna göre ilk sayının rakamlarının çarpımı kaçtır?",
+  "metin": "Bir manav, yalnızca 5 kg’lık ve 10 kg’lık portakal kolileri satın almıştır. Toplam 24 koli almış ve bu kolilerin toplam ağırlığı 170 kg olmuştur.\nBuna göre manav kaç tane 10 kg’lık koli almıştır?",
   "sekil": null,
   "siklar": {
-   "A": "3",
-   "B": "11",
-   "C": "28",
-   "D": "47",
-   "E": "74"
+   "A": "5",
+   "B": "7",
+   "C": "10",
+   "D": "14",
+   "E": "17"
   },
   "cevap": {
    "sik": "C",
-   "deger": "28"
+   "deger": "10"
   },
   "celdiriciler": {
-   "A": "Rakamların farkını (7 − 4) vermiş.",
-   "B": "Verilen rakamlar toplamını cevap sanmış.",
-   "D": "İlk sayının kendisini vermiş; rakamların çarpımı sorulmuş.",
-   "E": "Yer değiştirmiş sayıyı vermiş."
+   "A": "Hepsi 5 kg sayıp farkı (50 kg) 10’a bölmüş; birim fark 5 kg’dır.",
+   "B": "170 ÷ 10 = 17 koliyi 10 kg’lık sanıp toplamdan çıkarmış (24 − 17).",
+   "D": "10 kg’lık yerine 5 kg’lık kolilerin sayısını vermiş.",
+   "E": "Bütün kolileri 10 kg’lık sayıp 170 ÷ 10 yapmış."
   },
   "celTur": {
-   "A": "dikkat",
-   "B": "dikkat",
+   "A": "islem",
+   "B": "bilgi",
    "D": "dikkat",
-   "E": "dikkat"
+   "E": "bilgi"
   },
-  "istenen": "İlk sayının rakamları çarpımı.",
+  "istenen": "10 kg’lık kolilerin sayısı.",
   "bilgi": [
    {
-    "ad": "İki basamaklı sayı",
-    "ifade": "ab sayısı 10a + b’dir; rakamlar yer değiştirince sayı 10b + a olur ve aradaki fark 9(a − b) çıkar. Örnek: 52 − 25 = 27 = 9 · 3"
+    "ad": "İki bilinmeyenli kurulum",
+    "ifade": "Nesne türlerinin adedi ve toplam değeri iki denklem verir; biri öbürüne yerleştirilir. Örnek: 10 baş ve 28 ayak için x + y = 10, 2x + 4y = 28 ise y = 4"
    }
   ],
   "ipuclari": [
-   "Sayıyı 10a + b biçiminde yaz; yer değiştirmiş sayıyla farkını rakamlar cinsinden sadeleştir."
+   "Ağır kolilerin sayısına x de; hafif kolilerin sayısını x cinsinden yaz ve toplam ağırlığı kur."
   ],
   "adimlar": [
    {
-    "baslik": "Sayıları yaz",
-    "aciklama": "Onlar basamağı a, birler basamağı b.",
-    "islem": "a + b = 11 · (10b + a) − (10a + b) = 27"
+    "baslik": "Denklemi kur",
+    "aciklama": "10 kg’lık x, 5 kg’lık 24 − x tane.",
+    "islem": "10x + 5(24 − x) = 170"
    },
    {
-    "baslik": "Farkı sadeleştir",
-    "aciklama": "9b − 9a = 27.",
-    "islem": "b − a = 3"
+    "baslik": "x’i bul",
+    "aciklama": "Parantezi aç.",
+    "islem": "5x + 120 = 170 → x = 10"
    },
    {
-    "baslik": "Rakamları bul",
-    "aciklama": "Topla ve çıkar.",
-    "islem": "b = 7, a = 4 → sayı 47"
-   },
-   {
-    "baslik": "Çarp",
-    "aciklama": "Rakamları çarp.",
-    "islem": "4 · 7 = 28"
+    "baslik": "Kontrol",
+    "aciklama": "5 kg’lık 14 tane: 10·10 + 14·5.",
+    "islem": "100 + 70 = 170 ✓"
    }
   ],
-  "puf": "İki basamaklı sayıda yer değiştirme farkı 9(b − a) olur; rakamlar farkı hemen çıkar.",
+  "puf": "Adet toplamı ve ağırlık toplamı iki denklem verir; birini x cinsinden yazıp öbürüne yerleştir.",
   "kisaYol": null,
   "kardes": null,
-  "kaynakKart": "K-SPB-03 (iki bilinmeyen · iki basamaklı sayı)",
+  "kaynakKart": "K-SPB-03 (iki bilinmeyen · iki ağırlık türü)",
   "dogrulama": {
    "yontem2": true,
    "tarama": true,

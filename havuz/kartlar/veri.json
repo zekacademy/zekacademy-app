@@ -1,0 +1,177 @@
+{
+ "konu": "Veri ve İstatistik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-VRI-01",
+   "konu": "Veri ve İstatistik",
+   "alt": "Aritmetik ortalama: eleman ekleme, çıkarma, eksik veri",
+   "fikir": "Ortalama × terim sayısı = toplam eşitliğiyle eklenen, çıkarılan ya da eksik elemanın değeri bulunur.",
+   "tuzak": "Yeni terim sayısını kullanmamak; ortalamaların farkını elemanın kendisi sanmak; toplamı yanlış terim sayısına bölmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "vri-ort",
+   "tip": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-02",
+   "konu": "Veri ve İstatistik",
+   "alt": "Ağırlıklı ve gruplu ortalama",
+   "fikir": "Grupların toplam değerleri (ortalama × kişi sayısı) birleştirilip toplam sayıya bölünür; ağırlıklı ortalamada eksik değer denklemle bulunur.",
+   "tuzak": "Basit ortalama almak; ağırlıkları ters eşleştirmek; toplam kişi sayısına bölmeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "vri-agirlik",
+   "tip": "Ağırlıklı ve gruplu ortalama",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-03",
+   "konu": "Veri ve İstatistik",
+   "alt": "Ortanca ve tepe değer",
+   "fikir": "Veriyi sıralayıp ortadaki terimi (ya da ortadaki ikiliyi) bulma; sıklık tablosunda birikimli sıklıkla ortanca konumu belirleme; en çok tekrarlanan değer.",
+   "tuzak": "Sıralamadan ortadakini almak; çift terimde tek terim seçmek; sıklığı değer sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "vri-medmod",
+   "tip": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-04",
+   "konu": "Veri ve İstatistik",
+   "alt": "Ortalama–ortanca–tepe değer koşulları",
+   "fikir": "Ölçülerin eşitliği ya da birbirine göre konumu eşitlik/eşitsizlik olarak yazılır; sıralama ve tekrar koşulları denetlenir.",
+   "tuzak": "Tek tepe değer koşulunu atlamak; sıralamayı gözetmemek; tüm çözümleri taramamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "vri-birlikte",
+   "tip": "Merkezi eğilim ölçülerinin birlikte yorumu",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-05",
+   "konu": "Veri ve İstatistik",
+   "alt": "Açıklık ve çeyrekler açıklığı",
+   "fikir": "Bilinmeyen terimin en küçük/en büyük olma durumları ayrı ayrı incelenir; çeyrekler Q1 ve Q3 sıralı veriden bulunur.",
+   "tuzak": "Bilinmeyenin yalnız bir durumunu almak; ortancayı iki yarıya da katmak; Q3 − Q1 yerine açıklık vermek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "vri-aciklik",
+   "tip": "Açıklık ve çeyrekler açıklığı",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-06",
+   "konu": "Veri ve İstatistik",
+   "alt": "Standart sapma",
+   "fikir": "Ortalamadan farkların karelerinin toplamı (n − 1’e bölünerek) kök altına alınır; karşılaştırmada ölçüt dağılımın ortalamadan uzaklığıdır, açıklık değildir.",
+   "tuzak": "n yerine n − 1 kullanmak; kök almayı unutmak; açıklığı standart sapma ile karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "vri-sapma",
+   "tip": "Standart sapma ve tanımlı sapma ölçüleri",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-07",
+   "konu": "Veri ve İstatistik",
+   "alt": "Veri grubunu dönüştürme",
+   "fikir": "Her veriye aynı işlem uygulanınca ortalama aynı işlemle, açıklık ve standart sapma |çarpan| ile değişir; toplama etkisizdir.",
+   "tuzak": "Standart sapmaya da toplamayı uygulamak; çarpma sırasını karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "vri-donusum",
+   "tip": "Sabit toplama ve çarpmanın ölçülere etkisi",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  },
+  {
+   "id": "K-VRI-08",
+   "konu": "Veri ve İstatistik",
+   "alt": "Tablo ve grafikten ölçü hesabı",
+   "fikir": "Tablodan ya da grafikten okunan değerler tek listede toplanır; ortalama, ortanca, tepe değer ve eksik sıklık/sütun aynı veri listesinden bulunur.",
+   "tuzak": "Sıklığı veri sanmak; ortalamayı değerlerin ortalaması sanmak; grafikten yanlış okumak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "vri-sekil",
+   "tip": "Tablo ve grafikten ölçü hesabı",
+   "kaynak": "ÖSYM 2018–2026 (veri/istatistik soruları) · MEB 9. sınıf Veri · yayın soru bankaları (yalnız mantık)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "vri-ort",
+   "ad": "Aritmetik ortalama: eleman ekleme, çıkarma ve eksik veri",
+   "kartlar": [
+    "K-VRI-01"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-agirlik",
+   "ad": "Ağırlıklı ve gruplu ortalama",
+   "kartlar": [
+    "K-VRI-02"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-medmod",
+   "ad": "Ortanca ve tepe değer (sıralı ve sıklık tablolu)",
+   "kartlar": [
+    "K-VRI-03"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-birlikte",
+   "ad": "Merkezi eğilim ölçülerinin birlikte yorumu",
+   "kartlar": [
+    "K-VRI-04"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-aciklik",
+   "ad": "Açıklık ve çeyrekler açıklığı",
+   "kartlar": [
+    "K-VRI-05"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-sapma",
+   "ad": "Standart sapma ve tanımlı sapma ölçüleri",
+   "kartlar": [
+    "K-VRI-06"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-donusum",
+   "ad": "Sabit toplama ve çarpmanın ölçülere etkisi",
+   "kartlar": [
+    "K-VRI-07"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  },
+  {
+   "tipId": "vri-sekil",
+   "ad": "Tablo ve grafikten ölçü hesabı",
+   "kartlar": [
+    "K-VRI-08"
+   ],
+   "uygulamaKonu": "matd|Veri ve İstatistik"
+  }
+ ]
+}

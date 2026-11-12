@@ -137,15 +137,15 @@ S('0009','03','orta','İki Bilinmeyen','Madeni para adedi ve toplam tutardan 1 T
  [A('Denklemi kur','1 TL’lik x, 5 TL’lik 37 − x tane.','x + 5(37 − x) = 109'),A('x’i bul','Parantezi aç.','185 − 4x = 109 → x = 19'),A('Kontrol','5 TL’lik 18 tane; 19 + 90 = 109 ✓','19')],
  'Adet toplamı ve tutar toplamı iki denklem verir; birini x cinsinden yazıp öbürüne yerleştir.')
 
-# ---------- 0010 orta · basamak
-assert 4+7==11 and 74-47==27 and 4*7==28 and 7-4==3
-assert [n for n in range(10,100) if n//10+n%10==11 and (n%10)*10+n//10-n==27]==[47]
-S('0010','03','orta','İki Bilinmeyen','Rakamları toplamı ve yer değiştirme farkı verilen sayının rakamları çarpımını bulur.','düz',3,'iki bilinmeyen · iki basamaklı sayı',
- 'Rakamları toplamı 11 olan iki basamaklı bir sayının rakamlarının yerleri değiştirildiğinde elde edilen sayı, ilk sayıdan 27 fazladır.\nBuna göre ilk sayının rakamlarının çarpımı kaçtır?',
- 28,[(3,'Rakamların farkını (7 − 4) vermiş.','dikkat'),(11,'Verilen rakamlar toplamını cevap sanmış.','dikkat'),(47,'İlk sayının kendisini vermiş; rakamların çarpımı sorulmuş.','dikkat'),(74,'Yer değiştirmiş sayıyı vermiş.','dikkat')],
- 'İlk sayının rakamları çarpımı.','Sayıyı 10a + b biçiminde yaz; yer değiştirmiş sayıyla farkını rakamlar cinsinden sadeleştir.',[BAS],
- [A('Sayıları yaz','Onlar basamağı a, birler basamağı b.','a + b = 11 · (10b + a) − (10a + b) = 27'),A('Farkı sadeleştir','9b − 9a = 27.','b − a = 3'),A('Rakamları bul','Topla ve çıkar.','b = 7, a = 4 → sayı 47'),A('Çarp','Rakamları çarp.','4 · 7 = 28')],
- 'İki basamaklı sayıda yer değiştirme farkı 9(b − a) olur; rakamlar farkı hemen çıkar.')
+# ---------- 0010 orta · koli (iki ağırlık türü)
+b_,a_=10,14; assert a_+b_==24 and 5*a_+10*b_==170 and 170//10==17 and 24-17==7 and (170-24*5)//10==5
+assert [(x_,24-x_) for x_ in range(25) if 5*x_+10*(24-x_)==170]==[(14,10)]
+S('0010','03','orta','İki Bilinmeyen','Koli sayısı ve toplam ağırlıktan 10 kg’lık kolilerin sayısını bulur.','hikâyeli',3,'iki bilinmeyen · iki ağırlık türü',
+ 'Bir manav, yalnızca 5 kg’lık ve 10 kg’lık portakal kolileri satın almıştır. Toplam 24 koli almış ve bu kolilerin toplam ağırlığı 170 kg olmuştur.\nBuna göre manav kaç tane 10 kg’lık koli almıştır?',
+ 10,[(5,'Hepsi 5 kg sayıp farkı (50 kg) 10’a bölmüş; birim fark 5 kg’dır.','islem'),(7,'170 ÷ 10 = 17 koliyi 10 kg’lık sanıp toplamdan çıkarmış (24 − 17).','bilgi'),(14,'10 kg’lık yerine 5 kg’lık kolilerin sayısını vermiş.','dikkat'),(17,'Bütün kolileri 10 kg’lık sayıp 170 ÷ 10 yapmış.','bilgi')],
+ '10 kg’lık kolilerin sayısı.','Ağır kolilerin sayısına x de; hafif kolilerin sayısını x cinsinden yaz ve toplam ağırlığı kur.',[IKI],
+ [A('Denklemi kur','10 kg’lık x, 5 kg’lık 24 − x tane.','10x + 5(24 − x) = 170'),A('x’i bul','Parantezi aç.','5x + 120 = 170 → x = 10'),A('Kontrol','5 kg’lık 14 tane: 10·10 + 14·5.','100 + 70 = 170 ✓')],
+ 'Adet toplamı ve ağırlık toplamı iki denklem verir; birini x cinsinden yazıp öbürüne yerleştir.')
 
 # ---------- 0011 zor · üç tür tekerlek
 b_,t_,k_=9,4,5; assert b_==2*t_+1 and b_+t_+k_==18 and 2*b_+3*t_+4*k_==50 and 18-4==14

@@ -1,0 +1,156 @@
+{
+ "konu": "Mantık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-MNT-01",
+   "konu": "Mantık",
+   "alt": "Önerme, değil, ve/veya",
+   "fikir": "Önerme olup olmadığını ayırt eder; p, q, r değerleri verilen bileşik önermenin değerini ve tablosunu bulur.",
+   "tuzak": "Soru/emir/öznel yargıyı önerme saymak; değil işaretini atlamak; 1 ⇒ 0’ı 1 sanmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "mnt-temel",
+   "tip": "Önerme, değil, ve/veya ve doğruluk değeri",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-02",
+   "konu": "Mantık",
+   "alt": "Koşullu ve iki yönlü koşullu",
+   "fikir": "p ⇒ q ve p ⇔ q yorumlanır; karşıt, ters, karşıt tersi ve p ∨ q′ biçimindeki denklikler ayrılır; günlük “ise/ancak ve ancak” cümleleri çözülür.",
+   "tuzak": "Karşıt ya da tersi karşıt tersi ile karıştırmak; p ⇒ q yanlışken hangi değerlerin kesin olduğunu atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "mnt-kosullu",
+   "tip": "Koşullu ve iki yönlü koşullu önerme",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-03",
+   "konu": "Mantık",
+   "alt": "Doğruluk değerinden p, q, r bulma",
+   "fikir": "Bileşik önermenin doğru/yanlış olduğu bilgisinden önermelerin değerleri geriye doğru çözülür; modeller taranır, olabilecek durum seçilir.",
+   "tuzak": "Değilleri her önermeye ayrı dağıtmak; tek model olmayan durumda “olabilir” ile “kesin” ayrımını kaçırmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "mnt-bulma",
+   "tip": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-04",
+   "konu": "Mantık",
+   "alt": "De Morgan, denklik, totoloji",
+   "fikir": "Değilin dağılması, denk ifade seçme, totoloji; günlük cümlenin olumsuzu.",
+   "tuzak": "De Morgan’da bağlacı değiştirmemek; koşullunun olumsuzunu yine koşullu yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "mnt-denk",
+   "tip": "Denk önermeler, De Morgan ve totoloji",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-05",
+   "konu": "Mantık",
+   "alt": "Niceleyiciler ve olumsuzu",
+   "fikir": "∀ ile ∃ yer değiştirir, özellik değillenir; iç içe ve bileşik niceleyicili önermelerin olumsuzu.",
+   "tuzak": "∀’yı ∃ yapıp özelliği değillemeyi unutmak; ≥ ın değilini ≤ yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "mnt-nicelik",
+   "tip": "Niceleyiciler ve olumsuzu",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-06",
+   "konu": "Mantık",
+   "alt": "Hikâyeli çıkarım",
+   "fikir": "Günlük cümlelerle verilen koşullu önermelerden “kesinlikle doğru” olanlar (karşıt tersi zinciri) bulunur.",
+   "tuzak": "Ters ve karşıt hatası; ara halkada durmak; “kesin” yerine “olabilir” seçmek.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "mnt-cikarim",
+   "tip": "Hikâyeli çıkarım (kesinlikle doğru olan)",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNT-07",
+   "konu": "Mantık",
+   "alt": "Açık önerme, doğruluk kümesi, tablo",
+   "fikir": "Açık önermelerin bileşiklerinin doğruluk kümesi ve tablodaki satırlara bileşik önerme uygulanır; model sayma.",
+   "tuzak": "⇒ yerine ∧/∨ kullanmak; tabloda satırı atlamak; model sayarken ∨’da çift sayım.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "mnt-acik",
+   "tip": "Açık önerme, doğruluk kümesi ve tablo",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mnt-temel",
+   "ad": "Önerme, değil, ve/veya ve doğruluk değeri",
+   "kartlar": [
+    "K-MNT-01"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-kosullu",
+   "ad": "Koşullu ve iki yönlü koşullu önerme",
+   "kartlar": [
+    "K-MNT-02"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-bulma",
+   "ad": "Bileşik önermenin doğruluk değerinden p, q, r bulma",
+   "kartlar": [
+    "K-MNT-03"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-denk",
+   "ad": "Denk önermeler, De Morgan ve totoloji",
+   "kartlar": [
+    "K-MNT-04"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-nicelik",
+   "ad": "Niceleyiciler ve olumsuzu",
+   "kartlar": [
+    "K-MNT-05"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-cikarim",
+   "ad": "Hikâyeli çıkarım (kesinlikle doğru olan)",
+   "kartlar": [
+    "K-MNT-06"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mnt-acik",
+   "ad": "Açık önerme, doğruluk kümesi ve tablo",
+   "kartlar": [
+    "K-MNT-07"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  }
+ ]
+}
