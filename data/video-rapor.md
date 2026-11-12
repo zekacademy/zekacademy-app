@@ -1,4 +1,4 @@
-# Video Kütüphanesi raporu (2026-11-11)
+# Video Kütüphanesi raporu (2026-11-12)
 
 ## Matematik (çekilen)
 - Mert Hoca: TYT Matematik Konu Anlatımı - 2027 (Tek Videolar) [TYT] · 31 video; 90 Günde AYT Matematik - 2027 (Konu Anlatımı) [AYT] · 197 video
@@ -9,7 +9,6 @@
 - İlyas Güneş: 10.SINIF MAARİF MODEL MATEMATİK KONU ANLATIMI [M10] · 8 video; 60 GÜNDE TYT MATEMATİK ZİRVE KAMPI-İLYAS GÜNEŞ 2027 [TYT] · 74 video ⚠️ kanal aramayla bulundu (İlyas Güneş), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Matematik Kafası: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Math Kafası ), kontrol et
-- Selim Yavuz: hata (YouTube search: rateLimitExceeded)
 - Mete Ekol: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Mete Ekol Hoca), kontrol et
 - Sıfırdan Sonsuza Matematik: 2027 TYT Matematik KAMPI [TYT] · 22 video ⚠️ kanal aramayla bulundu (Sıfırdan Sonsuza Matematik), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
@@ -33,7 +32,6 @@
 - Fizikle Barış: 34 GÜNDE 2027 AYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [AYT] · 18 video; 11.SINIF FİZİK MAARİF KAMPI [M11] · 10 video; 10.SINIF FİZİK MAARİF KAMPI [M10] · 10 video; 9.SINIF FİZİK MAARİF KAMPI [M9] · 8 video; 27 GÜNDE 2027 TYT FİZİK KAMPI BİLGİ SARMAL YAYINLARI| FİZİKLE BARIŞ [TYT] · 44 video ⚠️ kanal aramayla bulundu (Fizikle Barış ), kontrol et
 - Ertan Sinan Şahin: AYT Fizik Kampı - 2027 [AYT] · 29 video; TYT Fizik Kampı - 2027 [TYT] · 19 video ⚠️ kanal aramayla bulundu (Ertan Sinan Şahin), kontrol et
 - Kolay Fizik: TYT Fizik Konu Anlatımı [TYT] · 6 video ⚠️ kanal aramayla bulundu (Fizik Çok Kolay), kontrol et
-- Papatya Hoca: hata (YouTube search: rateLimitExceeded)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
@@ -63,7 +61,6 @@
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
 - Önder Hoca: Dil Bilgisi / KONU [TYT] · 28 video ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
-- Harun Ardıç: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
@@ -72,7 +69,6 @@
 - Emek Taştan: 10.SINIF MAARİF KAMPI - TÜRK DİLİ VE EDEBİYATI [M10] · 5 video; 9.SINIF TÜRK DİLİ VE EDEBİYATI TEMA KONU ANLATIM KAMPI [M9] · 13 video ⚠️ kanal aramayla bulundu (Emek TAŞTAN), kontrol et
 - Deniz Hoca: 2026 AYT EDEBİYAT KAMPI (Hedef 24 NET) [AYT] · 62 video; 11.Sınıf Edebiyat Konu Anlatımı 2026 +PDF [M11] · 7 video; 10.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M10] · 33 video; 9.Sınıf Edebiyat Maarif Konu Anlatımı 2026 +PDF [M9] · 38 video ⚠️ kanal aramayla bulundu (Deniz Hoca), kontrol et
 - Aker Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Aker Kartal), kontrol et
-- Harun Ardıç: hata (YouTube search: rateLimitExceeded)
 - Önder Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Önder Hoca), kontrol et
 - Fulya Hoca: uygun güncel liste yok ⚠️ kanal aramayla bulundu (FULYA HOCA), kontrol et
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
@@ -97,9 +93,9 @@
 
 ## Felsefe (çekilen)
 - Felsefe Atölyesi: 7 Günde TYT Felsefe Kampı 2027 [TYT] · 8 video; 10.SINIF FELSEFE KAMPI (MAARİF MODELİ) [M10] · 15 video
-- Can Köni: hata (YouTube search: rateLimitExceeded)
+- Can Köni: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
 - Sosyal Hocam: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Sosyal Hocam), kontrol et
-- Sevgi Bilgin: hata (YouTube search: rateLimitExceeded)
+- Sevgi Bilgin: kanal bulunamadı (data/video-kaynak.json'a "kanal": "@..." ekle)
 - Hocalara Geldik: uygun güncel liste yok ⚠️ kanal aramayla bulundu (Hocalara Geldik), kontrol et
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 
@@ -108,7 +104,7 @@
 - Kampüs: uygun güncel liste yok ⚠️ kanal aramayla bulundu (tonguç KAMPÜS), kontrol et
 - Benim Hocam: 2027 / TYT - AYT Din Kültürü ve Ahlak Bilgisi - Video Ders Notları - Konu Anlatım Videoları - Çetin ZENCİR [TYT/AYT] · 16 video
 
-Kullanılan kota: ~1179 birim (günlük sınır 10.000)
+Kullanılan kota: ~779 birim (günlük sınır 10.000)
 
 ## Matematik
 - Mert Hoca: 2 liste, 228 video, 43/45 konu eşlendi
@@ -119,7 +115,6 @@ Kullanılan kota: ~1179 birim (günlük sınır 10.000)
 - İlyas Güneş: 2 liste, 82 video, 31/51 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
 - Matematik Kafası: 0 liste, 0 video, 0/0 konu eşlendi
-- Selim Yavuz: 0 liste, 0 video, 0/0 konu eşlendi
 - Mete Ekol: 0 liste, 0 video, 0/0 konu eşlendi
 - Sıfırdan Sonsuza Matematik: 1 liste, 22 video, 17/30 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
@@ -143,7 +138,6 @@ Kullanılan kota: ~1179 birim (günlük sınır 10.000)
 - Fizikle Barış: 5 liste, 90 video, 29/94 konu eşlendi
 - Ertan Sinan Şahin: 2 liste, 48 video, 36/38 konu eşlendi
 - Kolay Fizik: 1 liste, 6 video, 2/12 konu eşlendi
-- Papatya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
@@ -172,7 +166,6 @@ Kullanılan kota: ~1179 birim (günlük sınır 10.000)
 - Aker Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Önder Hoca: 1 liste, 28 video, 7/14 konu eşlendi
 - Fulya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
-- Harun Ardıç: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
 - Kampüs: 0 liste, 0 video, 0/0 konu eşlendi
 
@@ -181,7 +174,6 @@ Kullanılan kota: ~1179 birim (günlük sınır 10.000)
 - Emek Taştan: 2 liste, 18 video, 3/43 konu eşlendi
 - Deniz Hoca: 4 liste, 140 video, 39/78 konu eşlendi
 - Aker Hoca: 0 liste, 0 video, 0/0 konu eşlendi
-- Harun Ardıç: 0 liste, 0 video, 0/0 konu eşlendi
 - Önder Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Fulya Hoca: 0 liste, 0 video, 0/0 konu eşlendi
 - Hocalara Geldik: 0 liste, 0 video, 0/0 konu eşlendi
