@@ -53,6 +53,7 @@ async function tumSayfalar(yol, p, max = 20) { const L = []; let token = "";
 const gecerliId = id => /^(PL|UU|OL|FL)[A-Za-z0-9_-]{16,}$/.test(id || "") && id.length >= 18 && id.length !== 13;
 
 async function kanalBul(h) {
+  if (h.kanalId) { KANAL[h.ad] = { id: h.kanalId, nasil: "kimlik" }; return h.kanalId; }
   const yanlis = h.yanlisKanal || [];
   if (KANAL[h.ad]?.id && !yanlis.includes(KANAL[h.ad].id) && (KANAL[h.ad].nasil !== "arama" || kanalUygun(h.ad, KANAL[h.ad].ad))) return KANAL[h.ad].id;
   delete KANAL[h.ad];
@@ -85,10 +86,10 @@ async function dersCek(ders) {
       const secilen = [];
       for (const l of sabit) { let id = gecerliId(l.id) ? l.id : ""; if (!id) { const k = (await kanalL()).find(p => p.ad.trim() === l.ad.trim()) || (await kanalL()).find(p => p.ad.toLocaleLowerCase("tr").includes(l.ad.toLocaleLowerCase("tr").slice(0, 18))); id = k?.id || ""; }
         if (id) secilen.push({ id, ad: l.ad, sinav: l.sinav, elle: true }); else rapor.push(`- ${h.ad}: "${l.ad}" listesi kanalda bulunamadı`); }
-      secilen.push(...listeSec(await kanalL(), ders, kapsanan, h.filtre || ""));
+      secilen.push(...listeSec(await kanalL(), ders, kapsanan, h.filtre || "", h.izin || ""));
       const L = [];
       for (const l of secilen) { const v = await videolar(l.id); if (v.length) L.push({ ...l, v }); }
-      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L, ...(L.length ? {} : { kanaldakiler: (kanalListeleri || []).map(p => [p.id, p.ad, p.sayi, (p.tarih || "").slice(0, 10)]) }) };
+      onb[h.ad] = { kanal: kid, at: new Date().toISOString().slice(0, 10), listeler: L, kanaldakiler: (kanalListeleri || []).map(p => [p.id, p.ad, p.sayi, (p.tarih || "").slice(0, 10)]) };
       rapor.push(`- ${h.ad}: ${L.map(l => `${l.ad} [${l.sinav.join("/")}] · ${l.v.length} video`).join("; ") || "uygun güncel liste yok"}${KANAL[h.ad]?.kontrol ? ` ⚠️ kanal aramayla bulundu (${KANAL[h.ad].ad}), kontrol et` : ""}`);
     } catch (e) { if (/kota|anahtar|API v3/i.test(e.message)) throw e; rapor.push(`- ${h.ad}: hata (${e.message})`); }
   }
@@ -112,6 +113,11 @@ function derle(ders) {
     for (const s of SINAV_SIRA) { const ls = listeler.filter(l => l.s.includes(s)); if (!ls.length) continue; Object.assign(konu, eslestir(konuListesi(ders, s), ls.flatMap(l => l.v))); }
     /* Bir sınavın listesinde olmayan konu, hocanın öbür sınav listesinde varsa oradan (ör. TYT Polinomlar → AYT listesi) */
     for (const s of ["TYT", "AYT"]) { if (!listeler.some(l => l.s.includes(s))) continue; const eksik = konuListesi(ders, s).filter(x => !konu[x.k]); const obur = listeler.filter(l => !l.s.includes(s)).flatMap(l => l.v); if (eksik.length && obur.length) Object.assign(konu, eslestir(eksik, obur)); }
+    /* AYT Felsefe Grubu: konu = dersin kendisi (Psikoloji, Sosyoloji, Mantık…). Adı liste adında geçiyorsa o listenin videoları; Felsefe = "Felsefe Grubu" listesi ya da TYT felsefe konu listesi */
+    if (ders === "fel" && listeler.length) { delete konu["afel|Felsefe"]; delete konu["afel|Din"];
+      for (const { k, ad } of konuListesi("fel", "AYT")) { const a = sade(ad);
+        const l = listeler.find(l => l.s.includes("AYT") && sade(l.ad).includes(a) && !/felsefe grubu/.test(sade(l.ad))) || (ad === "Felsefe" && (listeler.find(l => /felsefe grubu/.test(sade(l.ad))) || listeler.find(l => l.s.includes("TYT") && /felsefe/.test(sade(l.ad)) && !/soru/.test(sade(l.ad)))));
+        if (l) konu[k] = l.v.slice(0, 30).map(v => [v[0], 0]); } }
     for (const [k, x] of elle) konu[k] = bolumEkle(k.split("|")[1], x.parca.map(p => [p[0], p[3] ? p[3] * 60 : 0]), tum);
     const toplam = SINAV_SIRA.filter(s => listeler.some(l => l.s.includes(s))).reduce((a, s) => a + konuListesi(ders, s).length, 0);
     ozet.push(`- ${h.ad}: ${listeler.length} liste, ${tum.length} video, ${Object.keys(konu).length}/${toplam} konu eşlendi`);
