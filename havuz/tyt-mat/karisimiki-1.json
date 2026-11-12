@@ -1,0 +1,1513 @@
+[
+ {
+  "id": "tytmat-karisimiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Su Ekleme",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışıma saf su eklendiğinde alkol miktarının değişmediğini kullanarak yeni oranı bulur.",
+  "tipId": "krb-ekleme",
+  "tip": "Madde veya su ekleme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Hacimce %60’ı alkol olan 300 mL kolonyaya 100 mL saf su ekleniyor ve karışım iyice karıştırılıyor.\nBuna göre oluşan karışımın alkol oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "25",
+   "B": "45",
+   "C": "60",
+   "D": "70",
+   "E": "90"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "45"
+  },
+  "celdiriciler": {
+   "A": "Eklenen suyun hacmini toplam hacme bölmüş (100 ÷ 400).",
+   "C": "Su eklense de oranın aynı kaldığını sanmış.",
+   "D": "Eklenen suyu da alkol sayıp (180 + 100) ÷ 400 hesaplamış.",
+   "E": "Toplam hacmi büyütmek yerine 300 − 100 = 200 almış: 180 ÷ 200."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Karışımın alkol oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Karışımda oran",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g karışımda 50 g tuz varsa tuz oranı 50 ÷ 200 = %25"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçta 300 mL’nin içinde kaç mL alkol var? Su eklenince bu miktar için ne olur, toplam hacim kaç olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alkol miktarı",
+    "aciklama": "300 mL’nin %60’ı alkoldür.",
+    "islem": "300 × 0,60 = 180 mL"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "Eklenen su toplam hacmi büyütür.",
+    "islem": "300 + 100 = 400 mL"
+   },
+   {
+    "baslik": "Yeni oran",
+    "aciklama": "Alkol miktarı ÷ yeni toplam.",
+    "islem": "180 ÷ 400 = %45"
+   }
+  ],
+  "puf": "Saf su eklenince madde miktarı sabit kalır, yalnız toplam büyür; yeni oranı hep madde ÷ yeni toplam ile bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-01 (su ekleme) · alkollü kolonyaya saf su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Fiyat Karışımı",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Birim fiyatları farklı iki kahveyi karıştırınca toplam maliyeti toplam kütleye bölerek karışımın kilogram fiyatını bulur.",
+  "tipId": "krb-fiyat",
+  "tip": "Fiyat karışımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kahve dükkânı, kilogramı 120 TL olan kahveden 30 kg ile kilogramı 170 TL olan kahveden 20 kg’ı karıştırarak yeni bir harman hazırlıyor.\nBu harmanın kilogramı, toplam maliyetin toplam kütleye bölünmesiyle bulunduğuna göre kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "140",
+   "B": "145",
+   "C": "150",
+   "D": "350",
+   "E": "7000"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "140"
+  },
+  "celdiriciler": {
+   "B": "İki fiyatın aritmetik ortalamasını almış; miktarlar farklı.",
+   "C": "Miktarları fiyatlarla ters eşleştirmiş: (20 × 120 + 30 × 170) ÷ 50.",
+   "D": "Toplam maliyeti 50 yerine 20 kg’a bölmüş.",
+   "E": "Toplam maliyeti bulup kütleye bölmeyi unutmuş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Harmanın kilogram fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Fiyat karışımı",
+    "ifade": "karışımın birim fiyatı = toplam maliyet ÷ toplam miktar. Örnek: 2 kg 10 TL’lik ile 3 kg 20 TL’lik karışırsa (20 + 60) ÷ 5 = 16 TL/kg"
+   }
+  ],
+  "ipuclari": [
+   "Önce her kahveden alınan miktarın toplam maliyetini ayrı ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maliyetleri bul",
+    "aciklama": "Miktar × birim fiyat.",
+    "islem": "30 × 120 = 3600 TL · 20 × 170 = 3400 TL"
+   },
+   {
+    "baslik": "Toplamlar",
+    "aciklama": "Maliyet ve kütle toplamı.",
+    "islem": "3600 + 3400 = 7000 TL · 30 + 20 = 50 kg"
+   },
+   {
+    "baslik": "Birim fiyat",
+    "aciklama": "Toplam maliyet ÷ toplam kütle.",
+    "islem": "7000 ÷ 50 = 140 TL/kg"
+   }
+  ],
+  "puf": "Fiyat karışımında birim fiyat, fiyatların aritmetik ortalaması değil; toplam maliyetin toplam miktara bölümüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-05 (fiyat karışımı) · iki cins çekirdek kahve",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Oranlı Karışım",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Hacim oranı verilen iki meyve suyunun meyve oranlarını ağırlıklandırarak karışımın oranını bulur.",
+  "tipId": "krb-birlestirme",
+  "tip": "Karışımları birleştirme ve oranlı karışım",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Hacimce %10’u meyve olan meyve suyu ile hacimce %40’ı meyve olan meyve suyu, hacimce sırasıyla 2 : 1 oranında karıştırılıyor.\nBuna göre oluşan meyve suyunun meyve oranı (hacimce) yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "25",
+   "C": "30",
+   "D": "50",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "B": "İki yüzdenin aritmetik ortalamasını almış (10 + 40) ÷ 2.",
+   "C": "Oranları ters eşleştirmiş: (1 × 10 + 2 × 40) ÷ 3.",
+   "D": "Yüzdeleri toplayıp karışım oranı sanmış.",
+   "E": "Meyve miktarını (20 + 40 = 60) bulup toplam parçaya bölmeyi unutmuş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Karışımın meyve oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Oranlı karışım",
+    "ifade": "a : b oranıyla karışan miktarlar a·k ve b·k olarak yazılır; madde miktarı her bileşende miktar × oran ile bulunur. Örnek: %10’luk ile %40’lık 1 : 1 karışırsa (10 + 40) ÷ 2 = %25"
+   }
+  ],
+  "ipuclari": [
+   "Hacimleri 2k ve k diye adlandır; her meyve suyunda ne kadar meyve olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hacimleri yaz",
+    "aciklama": "Birincisi 2k, ikincisi k hacmindedir.",
+    "islem": "toplam hacim = 3k"
+   },
+   {
+    "baslik": "Meyve miktarları",
+    "aciklama": "Her hacmin kendi oranı kadar meyvesi vardır.",
+    "islem": "0,10 × 2k = 0,2k · 0,40 × k = 0,4k"
+   },
+   {
+    "baslik": "Oran",
+    "aciklama": "Toplam meyve ÷ toplam hacim.",
+    "islem": "0,6k ÷ 3k = 0,20 → %20"
+   }
+  ],
+  "puf": "Oranla verilen karışımda hacimleri a·k ve b·k yaz; k sadeleşir. Yüzdelerin ortalaması yalnız eşit miktarlarda doğrudur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-03 (oranlı karışım) · 2 : 1 hacim oranlı meyve suları",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İstenen Oran İçin Su",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Asit miktarı sabit kalacak biçimde istenen oranı sağlayan toplam hacmi bulup eklenecek suyu hesaplar.",
+  "tipId": "krb-ekleme",
+  "tip": "Madde veya su ekleme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Hacimce %30’u asit olan 400 mL asit çözeltisine saf su eklenerek hacimce asit oranı %20’ye düşürülüyor.\nBuna göre çözeltiye kaç mL su eklenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "80",
+   "C": "120",
+   "D": "200",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "200"
+  },
+  "celdiriciler": {
+   "E": "Yeni toplam hacmi (600 mL) eklenen su sanmış.",
+   "C": "Asit miktarını (120 mL) eklenen su sanmış.",
+   "A": "Yüzde farkının (10) 400 mL’deki karşılığını almış.",
+   "B": "Eklenen suyu 400 mL’nin %20’si sanmış."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "C": "dikkat",
+   "A": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "Eklenen su miktarı (mL).",
+  "bilgi": [
+   {
+    "ad": "Karışımda oran",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g karışımda 50 g tuz varsa tuz oranı 50 ÷ 200 = %25"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "Çözeltideki asit miktarı kaç mL? Bu miktar yeni karışımın %20’si olunca toplam kaç mL olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Asit miktarı",
+    "aciklama": "400 mL’nin %30’u asittir.",
+    "islem": "400 × 0,30 = 120 mL"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "120 mL, yeni toplamın %20’sidir.",
+    "islem": "120 ÷ 0,20 = 600 mL"
+   },
+   {
+    "baslik": "Eklenen su",
+    "aciklama": "Yeni toplamdan ilk hacmi çıkar.",
+    "islem": "600 − 400 = 200 mL"
+   }
+  ],
+  "puf": "Su eklenirken madde sabit kalır; maddeyi yeni orana bölerek yeni toplamı bul, sonra ilk toplamı çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-01 (istenen oran için su) · asit çözeltisi seyreltme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Buharlaşma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Buharlaşmada tuz miktarının sabit kaldığını kullanarak istenen oranı sağlayan buharlaşan su miktarını bulur.",
+  "tipId": "krb-buharlasma",
+  "tip": "Buharlaşma ve kuruma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kütlece %4’ü tuz olan 900 kg deniz suyundan bir miktar su buharlaştırılarak tuz oranı kütlece %6’ya çıkarılıyor.\nBuna göre kaç kg su buharlaşmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "18",
+   "B": "36",
+   "C": "150",
+   "D": "300",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "300"
+  },
+  "celdiriciler": {
+   "E": "Buharlaşmadan sonra kalan karışımın kütlesini (600 kg) buharlaşan su sanmış.",
+   "B": "Tuz miktarını (36 kg) buharlaşan su sanmış.",
+   "A": "Yüzde farkının (2) 900 kg’daki karşılığını almış.",
+   "C": "Yeni oran olan 6’yı kütleye bölüp 900 ÷ 6 hesaplamış."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "B": "dikkat",
+   "A": "bilgi",
+   "C": "islem"
+  },
+  "istenen": "Buharlaşan su miktarı (kg).",
+  "bilgi": [
+   {
+    "ad": "Buharlaşma",
+    "ifade": "buharlaşırken yalnız su azalır, çözünen madde olduğu gibi kalır. Örnek: 200 g’da 20 g tuz varsa 100 g su buharlaşınca oran 20 ÷ 100 = %20"
+   }
+  ],
+  "ipuclari": [
+   "Başlangıçta 900 kg’ın içinde kaç kg tuz var? Buharlaşma bu miktarı etkiler mi, yeni toplam kaç kg olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz miktarı",
+    "aciklama": "900 kg’ın %4’ü tuzdur.",
+    "islem": "900 × 0,04 = 36 kg"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "Tuz aynı kalır ve yeni karışımın %6’sıdır.",
+    "islem": "36 ÷ 0,06 = 600 kg"
+   },
+   {
+    "baslik": "Buharlaşan su",
+    "aciklama": "İlk kütleden yeni kütleyi çıkar.",
+    "islem": "900 − 600 = 300 kg"
+   }
+  ],
+  "puf": "Buharlaşmada tuz sabit kalır; tuzu yeni orana bölerek yeni kütleyi bul, ilk kütleden çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-02 (buharlaşma) · tuzla (saline) havuzu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Madde Ekleme",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Su miktarı sabit kalırken eklenen şekerle istenen oranı sağlayan şeker miktarını bulur.",
+  "tipId": "krb-ekleme",
+  "tip": "Madde veya su ekleme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kütlece %20’si şeker olan 400 gramlık şerbete bir miktar şeker ekleniyor ve şekerin tamamı çözünüyor.\nŞerbetin şeker oranı kütlece %50 olduğuna göre kaç gram şeker eklenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "120",
+   "C": "240",
+   "D": "400",
+   "E": "640"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "240"
+  },
+  "celdiriciler": {
+   "E": "Yeni toplam kütleyi (640 g) eklenen şeker sanmış.",
+   "D": "İlk kütleyi (400 g) eklenen şeker sanmış.",
+   "B": "Yüzde farkının (30) 400 g’daki karşılığını almış; toplamın da büyüdüğünü unutmuş.",
+   "A": "Yüzde farkını doğrudan gram sanmış."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "D": "dikkat",
+   "B": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "Eklenen şeker miktarı (g).",
+  "bilgi": [
+   {
+    "ad": "Karışımda oran",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g karışımda 50 g tuz varsa tuz oranı 50 ÷ 200 = %25"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "Şerbetteki suyun kütlesini bul. Şeker eklenirken bu miktar değişir mi; yeni karışımda suyun oranı kaç olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk şeker ve su",
+    "aciklama": "400 g’ın %20’si şeker, kalanı sudur.",
+    "islem": "şeker 80 g · su 320 g"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "Su sabittir ve yeni karışımın %50’sidir.",
+    "islem": "320 ÷ 0,50 = 640 g"
+   },
+   {
+    "baslik": "Eklenen şeker",
+    "aciklama": "Yeni toplamdan ilk toplamı çıkar.",
+    "islem": "640 − 400 = 240 g"
+   }
+  ],
+  "puf": "Madde eklenirken diğer bileşen (su) sabit kalır; sabit bileşeni onun yeni oranına bölerek yeni toplamı bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-01 (madde ekleme) · şerbete şeker eklenerek oran artırılıyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İstenen Oran İçin Karışım",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "İki farklı derişimdeki çözeltinin toplamı ve son oranı verildiğinde bileşenlerden birinin miktarını denklemle bulur.",
+  "tipId": "krb-birlestirme",
+  "tip": "Karışımları birleştirme ve oranlı karışım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Hacimce %30 alkollü ile hacimce %75 alkollü iki alkol çözeltisi karıştırılarak hacimce %50 alkollü 900 mL çözelti hazırlanıyor.\nBuna göre %30 alkollü çözeltiden kaç mL kullanılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "180",
+   "B": "225",
+   "C": "400",
+   "D": "450",
+   "E": "500"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "500"
+  },
+  "celdiriciler": {
+   "C": "%75 alkollü çözeltinin miktarını (400 mL) bulup sorulan %30 alkollü yerine yazmış.",
+   "D": "Eşit miktarda karıştırıldığını sanmış.",
+   "A": "Yüzde farkını (20) 900 mL’deki karşılığına çevirip bilinmeyen miktar sanmış.",
+   "B": "Yüzde farkını (25) 900 mL’deki karşılığına çevirip bilinmeyen miktar sanmış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "D": "bilgi",
+   "A": "islem",
+   "B": "islem"
+  },
+  "istenen": "%30 alkollü çözeltinin miktarı (mL).",
+  "bilgi": [
+   {
+    "ad": "Karışımları birleştirme",
+    "ifade": "madde miktarları ve toplam miktarlar ayrı ayrı toplanır. Örnek: 100 g %10’luk ile 100 g %30’luk karışırsa (10 + 30) ÷ 200 = %20"
+   }
+  ],
+  "ipuclari": [
+   "%75 alkollü çözelti x mL ise %30’luk kaç mL olur? Her ikisindeki alkol miktarını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Miktarları yaz",
+    "aciklama": "%75 alkollü x mL ise %30’luk (900 − x) mL’dir.",
+    "islem": "x + (900 − x) = 900"
+   },
+   {
+    "baslik": "Alkol denklemi",
+    "aciklama": "Alkol miktarları toplamı son karışımdaki alkole eşittir.",
+    "islem": "0,75x + 0,30 (900 − x) = 0,50 × 900 = 450"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Denklemi sadeleştir.",
+    "islem": "0,45x + 270 = 450 → 0,45x = 180"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Bölme yap.",
+    "islem": "x = 400 mL (%75 alkollü)"
+   },
+   {
+    "baslik": "İstenen miktar",
+    "aciklama": "Toplamdan çıkar.",
+    "islem": "900 − 400 = 500 mL (%30 alkollü)"
+   }
+  ],
+  "puf": "Birleştirmede madde toplamı korunur: iki bileşenin madde miktarları toplamı son karışımdaki madde miktarına eşittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-03 (birleştirme, bilinmeyen miktar) · iki alkol çözeltisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Fiyat ve Kâr",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "İki cins çayı verilen oranda karıştırıp maliyeti bulur ve yüzde kârla satış fiyatını hesaplar.",
+  "tipId": "krb-fiyat",
+  "tip": "Fiyat karışımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Kilogramı 150 TL olan çay ile kilogramı 100 TL olan çay, kütlece sırasıyla 2 : 3 oranında karıştırılıyor. Elde edilen karışım, maliyetinin %20 fazlasına satılıyor.\nBuna göre karışımın kilogramı kaç TL’ye satılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "96",
+   "B": "120",
+   "C": "125",
+   "D": "140",
+   "E": "144"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "144"
+  },
+  "celdiriciler": {
+   "B": "Kâr eklemeyi unutup maliyeti yazmış.",
+   "D": "%20’yi 20 TL olarak maliyete eklemiş.",
+   "C": "Kârı unutup fiyatların aritmetik ortalamasını (125 TL) yazmış.",
+   "A": "Kâr yerine %20 indirim uygulamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "D": "bilgi",
+   "C": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "Karışımın kilogram satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Fiyat karışımı",
+    "ifade": "karışımın birim fiyatı = toplam maliyet ÷ toplam miktar. Örnek: 2 kg 10 TL’lik ile 3 kg 20 TL’lik karışırsa (20 + 60) ÷ 5 = 16 TL/kg"
+   },
+   {
+    "ad": "Oranlı karışım",
+    "ifade": "a : b oranıyla karışan miktarlar a·k ve b·k olarak yazılır; madde miktarı her bileşende miktar × oran ile bulunur. Örnek: %10’luk ile %40’lık 1 : 1 karışırsa (10 + 40) ÷ 2 = %25"
+   }
+  ],
+  "ipuclari": [
+   "Çayları 2k ve 3k kg diye adlandır; toplam maliyeti ve toplam kütleyi bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maliyetler",
+    "aciklama": "2k kg 150 TL’den, 3k kg 100 TL’den.",
+    "islem": "2k × 150 = 300k · 3k × 100 = 300k"
+   },
+   {
+    "baslik": "Kilogram maliyeti",
+    "aciklama": "Toplam maliyet ÷ toplam kütle.",
+    "islem": "600k ÷ 5k = 120 TL"
+   },
+   {
+    "baslik": "Satış fiyatı",
+    "aciklama": "Maliyetin %20 fazlası.",
+    "islem": "120 × 1,20 = 144 TL"
+   }
+  ],
+  "puf": "Önce karışımın kilogram maliyetini toplam maliyet ÷ toplam kütle ile bul; kârı bu maliyet üzerinden yüzde olarak uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-05 (fiyat karışımı, kâr) · iki cins çay 2 : 3",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Üç Bileşenli Karışım",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Hacim oranı verilen üç bileşenin (biri saf su) pigment miktarlarını toplayıp karışımın pigment oranını bulur.",
+  "tipId": "krb-birlestirme",
+  "tip": "Karışımları birleştirme ve oranlı karışım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Hacimce %60’ı pigment olan X boyası, hacimce %30’u pigment olan Y boyası ve saf su, hacimce sırasıyla 2 : 3 : 5 oranında karıştırılarak yeni bir boya elde ediliyor.\nBuna göre yeni boyanın pigment oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "21",
+   "B": "30",
+   "C": "39",
+   "D": "42",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "21"
+  },
+  "celdiriciler": {
+   "B": "Üç bileşenin yüzdelerinin aritmetik ortalamasını almış.",
+   "C": "Oranları ters sıralamış (5 : 3 : 2).",
+   "D": "Suyu hesaba katmayıp yalnız iki boyanın toplam hacmine (5 parça) bölmüş.",
+   "E": "Yalnız iki boyanın yüzdelerinin ortalamasını almış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Yeni boyanın pigment oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Oranlı karışım",
+    "ifade": "a : b oranıyla karışan miktarlar a·k ve b·k olarak yazılır; madde miktarı her bileşende miktar × oran ile bulunur. Örnek: %10’luk ile %40’lık 1 : 1 karışırsa (10 + 40) ÷ 2 = %25"
+   }
+  ],
+  "ipuclari": [
+   "Hacimleri 2k, 3k ve 5k alıp her bileşendeki pigment miktarını yaz; suyun pigment miktarı kaçtır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hacimler",
+    "aciklama": "Toplam hacim 2k + 3k + 5k.",
+    "islem": "10k"
+   },
+   {
+    "baslik": "Pigment miktarları",
+    "aciklama": "Her bileşenin pigmenti kendi oranı kadardır.",
+    "islem": "0,60 × 2k = 1,2k · 0,30 × 3k = 0,9k · su: 0"
+   },
+   {
+    "baslik": "Oran",
+    "aciklama": "Toplam pigment ÷ toplam hacim.",
+    "islem": "2,1k ÷ 10k = 0,21 → %21"
+   }
+  ],
+  "puf": "Saf su da hacmi büyüten ama madde katmayan bir bileşendir; toplam hacme mutlaka dahil edilir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-03 (oranlı karışım, üç bileşen) · iki boya ve su",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Alıp Saf Madde Koyma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışımdan alınan kısmın maddesini düşüp yerine konan saf maddeyi ekleyerek yeni oranı bulur.",
+  "tipId": "krb-cekme",
+  "tip": "Karışımdan alma ve yerine koyma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir depoda hacimce %40’ı zeytinyağı, kalanı ayçiçek yağı olan 50 L yağ karışımı vardır. Depodan 10 L karışım alınıyor ve yerine 10 L saf zeytinyağı konarak karıştırılıyor.\nBuna göre depodaki karışımın zeytinyağı oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "32",
+   "B": "40",
+   "C": "48",
+   "D": "50",
+   "E": "52"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "52"
+  },
+  "celdiriciler": {
+   "D": "Oranı 10 puan artırıp %50 yazmış.",
+   "A": "Yerine konan saf zeytinyağını eklememiş: 16 ÷ 50.",
+   "C": "Alınan karışımdaki zeytinyağını düşmek yerine eklemiş: (20 + 4) ÷ 50.",
+   "B": "Alma ve koymadan sonra oranın değişmediğini sanmış."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "A": "dikkat",
+   "C": "dikkat",
+   "B": "bilgi"
+  },
+  "istenen": "Son zeytinyağı oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Karışımdan alıp yerine koyma",
+    "ifade": "alınan kısım karışımla aynı oranda madde taşır; geriye kalan madde = ilk madde − alınan kısımdaki madde. Örnek: 100 g %20’lik tuzlu sudan 50 g alınırsa 10 g tuz gider, 10 g tuz kalır"
+   }
+  ],
+  "ipuclari": [
+   "Alınan 10 L’de kaç L zeytinyağı var? Depoda başlangıçtaki zeytinyağından bu kadar çıkınca ne kalır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk zeytinyağı",
+    "aciklama": "50 L’nin %40’ı.",
+    "islem": "50 × 0,40 = 20 L"
+   },
+   {
+    "baslik": "Alınan kısım",
+    "aciklama": "10 L karışımın %40’ı zeytinyağıdır.",
+    "islem": "10 × 0,40 = 4 L → kalan 20 − 4 = 16 L"
+   },
+   {
+    "baslik": "Yeni zeytinyağı",
+    "aciklama": "Eklenen 10 L saf zeytinyağı.",
+    "islem": "16 + 10 = 26 L (toplam yine 50 L)"
+   },
+   {
+    "baslik": "Yeni oran",
+    "aciklama": "Zeytinyağı ÷ toplam.",
+    "islem": "26 ÷ 50 = %52"
+   }
+  ],
+  "puf": "Alınan kısım, karışımla aynı oranda madde götürür; yerine konan saf kısım ise tamamen maddedir. Toplam hacim değişmez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-04 (alıp yerine saf madde koyma) · zeytinyağı–ayçiçek yağı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Öncüllü Karışım",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Şerbete su ekleme, buharlaşma ve şeker ekleme işlemlerinin sonucunu ayrı ayrı sınayarak doğru öncülleri belirler.",
+  "tipId": "krb-yorum",
+  "tip": "Yorum ve yeni nesil karışım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Kütlece %25’i şeker olan 400 gram şerbet vardır. Buna göre,\nI. Şerbete 100 gram su eklenirse şeker oranı %20 olur.\nII. Şerbetten 200 gram su buharlaştırılırsa şeker oranı %50 olur.\nIII. Şerbete 100 gram şeker eklenip tamamen çözülürse şeker oranı %50 olur.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II’de buharlaşan 200 g’ı toplamdan çıkarmak yerine ekleyip 100 ÷ 600 bulmuş ve II’yi yanlış saymış.",
+   "B": "I’de su eklenince toplamı büyütmeyip 100 ÷ 400 = %25 bulmuş.",
+   "D": "II’de buharlaşan suyu toplama ekleyip yanlış saymış; III’te toplamı büyütmeyip 200 ÷ 400 = %50 bulmuş.",
+   "E": "III’te şeker eklenince toplamı da büyütmeyip 200 ÷ 400 = %50 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Karışımda oran",
+    "ifade": "oran = maddenin miktarı ÷ karışımın toplam miktarı. Örnek: 200 g karışımda 50 g tuz varsa tuz oranı 50 ÷ 200 = %25"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   },
+   {
+    "ad": "Buharlaşma",
+    "ifade": "buharlaşırken yalnız su azalır, çözünen madde olduğu gibi kalır. Örnek: 200 g’da 20 g tuz varsa 100 g su buharlaşınca oran 20 ÷ 100 = %20"
+   }
+  ],
+  "ipuclari": [
+   "Şerbetteki şekerin gram cinsinden miktarını bul; üç ifadeyi ayrı ayrı yeni şeker ve yeni toplam ile sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şeker miktarı",
+    "aciklama": "400 g’ın %25’i.",
+    "islem": "100 g şeker"
+   },
+   {
+    "baslik": "I ve II",
+    "aciklama": "I: şeker 100, toplam 500. II: şeker 100, toplam 200.",
+    "islem": "100 ÷ 500 = %20 ✓ · 100 ÷ 200 = %50 ✓"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "Şeker 200, toplam 500.",
+    "islem": "200 ÷ 500 = %40 ≠ %50 ✗"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "I ve II doğru, III yanlıştır.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Her işlemde yeni şeker ve yeni toplamı ayrı yaz: su eklemek toplamı büyütür, buharlaşma toplamı azaltır, şeker eklemek ikisini de büyütür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-06 (öncüllü karışım) · şerbet: su ekleme, buharlaşma, şeker ekleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Brix Değeri",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Tanımı verilen Brix değerini 100 g çözeltideki şeker miktarı olarak kullanıp istenen Brix için eklenecek su miktarını bulur.",
+  "tipId": "krb-yorum",
+  "tip": "Yorum ve yeni nesil karışım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Bir meyve suyunun Brix değeri, 100 gram meyve suyunda bulunan çözünmüş şekerin gram cinsinden miktarıdır. Örneğin Brix değeri 10 olan 100 gram meyve suyunda 10 gram şeker vardır.\nBrix değeri 60 olan 100 gram konsantreye saf su eklenerek Brix değeri 12 olan meyve suyu elde ediliyor.\nBuna göre konsantreye kaç gram su eklenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "48",
+   "B": "60",
+   "C": "72",
+   "D": "400",
+   "E": "500"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "400"
+  },
+  "celdiriciler": {
+   "A": "Brix farkının (48) 100 g’daki karşılığını eklenen su sanmış.",
+   "B": "Konsantredeki şeker miktarını (60 g) eklenen su sanmış.",
+   "C": "İki Brix değerini toplayıp eklenen su sanmış.",
+   "E": "Yeni toplam kütleyi (500 g) eklenen su sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eklenen su miktarı (g).",
+  "bilgi": [
+   {
+    "ad": "Brix tanımı",
+    "ifade": "Brix = 100 g çözeltideki şeker gramı. Örnek: Brix 20 olan 50 g çözeltide 10 g şeker vardır"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "Tanıma göre 100 g konsantrede kaç g şeker var? Yeni meyve suyunun kaç gramında bu şeker 12 gram olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şeker miktarı",
+    "aciklama": "Brix 60: 100 g’da 60 g şeker.",
+    "islem": "100 g konsantrede 60 g şeker"
+   },
+   {
+    "baslik": "Yeni toplam",
+    "aciklama": "Şeker aynı kalır; 100 g’ında 12 g şeker olacak.",
+    "islem": "60 ÷ 12 × 100 = 500 g"
+   },
+   {
+    "baslik": "Eklenen su",
+    "aciklama": "Yeni toplamdan konsantre kütlesini çıkar.",
+    "islem": "500 − 100 = 400 g"
+   }
+  ],
+  "puf": "Yeni nesil sorularda önce verilen tanımı oku; Brix gibi bir ölçü, oranın başka bir adıdır ve madde sabitliği aynen geçerlidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-06 (yeni nesil) · Brix tanımı, konsantre seyreltme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Karışımdan Kısım Ayırma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışımdan ayrılan kısmın içerdiği maddeyi düşerek kalan karışımın oranını bulur.",
+  "tipId": "krb-cekme",
+  "tip": "Karışımdan alma ve yerine koyma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Hacimce %6’sı yağ olan 600 L süt, bir ayırıcıdan geçirilerek hacimce %30’u yağ olan 100 L krema ve geriye kalan süt olarak ikiye ayrılıyor.\nBuna göre kalan sütün yağ oranı hacimce yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,2",
+   "B": "6",
+   "C": "7,2",
+   "D": "30",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1,2"
+  },
+  "celdiriciler": {
+   "C": "Ayrılan kremadaki yağı düşmeden 36 ÷ 500 hesaplamış.",
+   "B": "Bir kısım ayrıldığı için oranın değişmediğini sanmış.",
+   "E": "İlk yağ miktarını (36 L) oran sanmış.",
+   "D": "Ayrılan kremanın yağ oranını kalan sütünkü sanmış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "B": "bilgi",
+   "E": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Kalan sütün yağ oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Ayrılan kısım",
+    "ifade": "ayrılan kısımdaki madde, o kısmın kendi oranıyla bulunur; kalan madde = ilk madde − ayrılan kısımdaki madde. Örnek: 100 L’de 20 L madde varken 30 L’lik kısımda 3 L madde ayrılırsa kalan 70 L’de 17 L madde vardır"
+   }
+  ],
+  "ipuclari": [
+   "600 L sütte kaç L yağ var? Ayrılan kremayla bunun ne kadarı gitti, kalan sütün hacmi kaç L?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk yağ",
+    "aciklama": "600 L’nin %6’sı.",
+    "islem": "36 L"
+   },
+   {
+    "baslik": "Ayrılan yağ",
+    "aciklama": "100 L kremanın %30’u.",
+    "islem": "30 L → kalan yağ 36 − 30 = 6 L"
+   },
+   {
+    "baslik": "Kalan süt",
+    "aciklama": "Hacim azalır.",
+    "islem": "600 − 100 = 500 L"
+   },
+   {
+    "baslik": "Yeni oran",
+    "aciklama": "Kalan yağ ÷ kalan süt.",
+    "islem": "6 ÷ 500 = %1,2"
+   }
+  ],
+  "puf": "Ayrılan kısmın yağı kendi oranına göre hesaplanır; kalan yağı kalan hacme böl. Ayrılan kısmın oranı ile kalanın oranı aynı değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-04 (karışımdan kısım ayırma) · süt ve krema",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · İstenen Oran İçin Alınacak Miktar",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Alınıp yerine saf su konan karışımda istenen son orana göre alınması gereken miktarı bilinmeyenli denklemle bulur.",
+  "tipId": "krb-cekme",
+  "tip": "Karışımdan alma ve yerine koyma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "80 litrelik bir kapta hacimce %60’ı alkol olan antiseptik çözelti vardır. Kaptan bir miktar çözelti alınıp yerine aynı hacimde saf su konuyor ve karıştırılıyor. Son durumda çözeltinin alkol oranı %45 olmuştur.\nBuna göre kaptan kaç litre çözelti alınmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "20",
+   "D": "36",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Alınan miktarın tamamını alkol sayıp 48 − 36 = 12 bulmuş.",
+   "B": "Yüzde farkını (15) doğrudan litre sanmış.",
+   "D": "Son alkol miktarını (36 L) alınan çözelti sanmış.",
+   "E": "Kapta kalan çözelti miktarını (60 L) bulup alınan yerine yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Alınan çözelti miktarı (L).",
+  "bilgi": [
+   {
+    "ad": "Karışımdan alıp yerine koyma",
+    "ifade": "alınan kısım karışımla aynı oranda madde taşır; geriye kalan madde = ilk madde − alınan kısımdaki madde. Örnek: 100 g %20’lik tuzlu sudan 50 g alınırsa 10 g tuz gider, 10 g tuz kalır"
+   }
+  ],
+  "ipuclari": [
+   "Alınan çözelti x L ise bunun içinde kaç L alkol vardır? Son durumda kapta kaç L alkol olmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk ve son alkol",
+    "aciklama": "İlk: 80 L’nin %60’ı. Son: 80 L’nin %45’i (toplam değişmez).",
+    "islem": "48 L → 36 L"
+   },
+   {
+    "baslik": "Alınan x L’nin alkolü",
+    "aciklama": "Alınan kısım %60 alkollüdür.",
+    "islem": "0,60x L alkol çıkar"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "İlk alkol − çıkan alkol = son alkol (su alkolsüzdür).",
+    "islem": "48 − 0,60x = 36"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "0,60x = 12 → x = 20 L"
+   }
+  ],
+  "puf": "Alınan kısım karışımla aynı oranda madde götürür; yerine konan su madde getirmez. Toplam sabitse son madde miktarı ilk madde − 0,oran × alınan olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-04 (alıp su koyma, bilinmeyen miktar) · antiseptik çözelti",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Alıp Başka Karışım Koyma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışımdan alınan kısmın yerine daha yüksek oranlı karışım konup ardından su eklenmesiyle oluşan son oranı bulur.",
+  "tipId": "krb-cekme",
+  "tip": "Karışımdan alma ve yerine koyma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Hacimce %50’si alkol olan 60 L çözeltiden 20 L alınıyor ve yerine hacimce %80’i alkol olan 20 L çözelti konuyor. Karıştırıldıktan sonra karışıma 40 L saf su ekleniyor.\nBuna göre son karışımın alkol oranı yüzde kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "36",
+   "B": "45",
+   "C": "46",
+   "D": "50",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "C": "Alınan 20 L’deki alkolü (10 L) düşmemiş: (30 + 16) ÷ 100.",
+   "E": "Su eklemeyi toplam hacme katmamış: 36 ÷ 60.",
+   "B": "Toplamı 60 + 20 = 80 L almış: 36 ÷ 80.",
+   "D": "Alma ve koymadan sonra ilk oranın değişmediğini sanıp suyu da atlamış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "E": "dikkat",
+   "B": "islem",
+   "D": "bilgi"
+  },
+  "istenen": "Son karışımın alkol oranı (%).",
+  "bilgi": [
+   {
+    "ad": "Karışımdan alıp yerine koyma",
+    "ifade": "alınan kısım karışımla aynı oranda madde taşır; geriye kalan madde = ilk madde − alınan kısımdaki madde. Örnek: 100 g %20’lik tuzlu sudan 50 g alınırsa 10 g tuz gider, 10 g tuz kalır"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "60 L çözeltide kaç L alkol var? Alınan 20 L ve konan 20 L alkolü ne kadar değiştirir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk alkol",
+    "aciklama": "60 L’nin %50’si.",
+    "islem": "30 L"
+   },
+   {
+    "baslik": "Alınan kısım",
+    "aciklama": "20 L’nin %50’si alkoldür.",
+    "islem": "10 L → kalan 30 − 10 = 20 L"
+   },
+   {
+    "baslik": "Konan kısım",
+    "aciklama": "20 L’nin %80’i alkoldür.",
+    "islem": "16 L → 20 + 16 = 36 L alkol (toplam 60 L)"
+   },
+   {
+    "baslik": "Su ekleme",
+    "aciklama": "Toplam 40 L artar, alkol sabit.",
+    "islem": "60 + 40 = 100 L"
+   },
+   {
+    "baslik": "Son oran",
+    "aciklama": "Alkol ÷ toplam.",
+    "islem": "36 ÷ 100 = %36"
+   }
+  ],
+  "puf": "Aşamaları sırayla yaz: her aşamada alkol miktarını ve toplam hacmi ayrı güncelle; oranı yalnız en sonda hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-04 (alıp başka karışım koyma, ardından su) · alkol çözeltisi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Fiyat ve Eklenen Miktar",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Karışımın kilogram maliyetini ve yeni kilogram maliyetini kullanarak eklenen kuru üzüm miktarını bilinmeyenli denklemle bulur.",
+  "tipId": "krb-fiyat",
+  "tip": "Fiyat karışımı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Kilogramı 300 TL olan fındık içi ile kilogramı 100 TL olan kuru üzüm karıştırılarak kilogramı 160 TL’ye mal olan 40 kg’lık bir karışım hazırlanıyor. Bu karışıma kilogramı 100 TL olan kuru üzümden bir miktar daha eklenince karışımın kilogram maliyeti 148 TL oluyor.\nBuna göre karışıma kaç kg kuru üzüm eklenmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2,4",
+   "B": "10",
+   "C": "12",
+   "D": "40",
+   "E": "48"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "10"
+  },
+  "celdiriciler": {
+   "C": "Fiyat farkını (12) eklenen miktar sanmış.",
+   "E": "Yeni fiyatla üzüm fiyatı arasındaki farkı (48) eklenen miktar sanmış.",
+   "D": "İlk karışımın kütlesini (40 kg) eklenen miktar sanmış.",
+   "A": "Fiyat farkını (12) ilk kütleyle çarpıp fındık–üzüm fiyat farkına (200) bölmüş."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "E": "dikkat",
+   "D": "dikkat",
+   "A": "islem"
+  },
+  "istenen": "Eklenen kuru üzüm miktarı (kg).",
+  "bilgi": [
+   {
+    "ad": "Fiyat karışımı",
+    "ifade": "karışımın birim fiyatı = toplam maliyet ÷ toplam miktar. Örnek: 2 kg 10 TL’lik ile 3 kg 20 TL’lik karışırsa (20 + 60) ÷ 5 = 16 TL/kg"
+   }
+  ],
+  "ipuclari": [
+   "Eklenen miktara x kg de; yeni karışımın toplam maliyetini ve toplam kütlesini x cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk toplam maliyet",
+    "aciklama": "40 kg, kilogramı 160 TL.",
+    "islem": "40 × 160 = 6400 TL"
+   },
+   {
+    "baslik": "Yeni toplamlar",
+    "aciklama": "x kg üzüm 100 TL’den eklenir.",
+    "islem": "maliyet 6400 + 100x · kütle 40 + x"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "Yeni kilogram maliyeti 148 TL.",
+    "islem": "(6400 + 100x) ÷ (40 + x) = 148 → 6400 + 100x = 5920 + 148x"
+   },
+   {
+    "baslik": "x’i bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "480 = 48x → x = 10 kg"
+   }
+  ],
+  "puf": "Karışıma yeni miktar eklenince toplam maliyet ve toplam kütle birlikte güncellenir; yeni birim fiyat bunların bölümüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-05 (fiyat karışımı, bilinmeyen ek miktar) · fındık içi ve kuru üzüm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Kuruma",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Kuruma sırasında kuru maddenin sabit kaldığını kullanarak kuru ürünün kütlesini ve paket sayısını bulur.",
+  "tipId": "krb-buharlasma",
+  "tip": "Buharlaşma ve kuruma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Kütlece %85’i su olan 400 kg taze üzüm kurutulup kütlece %20’si su olan kuru üzüm haline getiriliyor. Elde edilen kuru üzümün tamamı 250 gramlık paketlere eksiksiz olarak dolduruluyor.\nBuna göre kaç paket doldurulmuştur?",
+  "sekil": null,
+  "siklar": {
+   "A": "240",
+   "B": "300",
+   "C": "320",
+   "D": "1280",
+   "E": "1360"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "300"
+  },
+  "celdiriciler": {
+   "A": "Kuru madde miktarını (60 kg) kuru üzümün kütlesi sanmış.",
+   "C": "Kuru üzümü taze üzümün %20’si (80 kg) almış.",
+   "D": "Kuru üzümü taze üzümün %80’i (320 kg) almış.",
+   "E": "Suyun kütlesini (340 kg) kuru üzüm sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Doldurulan paket sayısı.",
+  "bilgi": [
+   {
+    "ad": "Değişmeyen miktar",
+    "ifade": "kuruma sırasında yalnız su kaybolur, kuru madde kütlesi sabit kalır. Örnek: %90’ı su olan 100 kg üzümde kuru madde 10 kg’dır"
+   }
+  ],
+  "ipuclari": [
+   "Kuruma sırasında kütlesi değişmeyen kısım hangisidir? Taze üzümde bu kısım kaç kg’dır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kuru madde",
+    "aciklama": "Taze üzümde su %85, kuru madde %15.",
+    "islem": "400 × 0,15 = 60 kg"
+   },
+   {
+    "baslik": "Kuru üzümün kütlesi",
+    "aciklama": "Kuru üzümde su %20, yani kuru madde %80’dir.",
+    "islem": "60 ÷ 0,80 = 75 kg"
+   },
+   {
+    "baslik": "Gram’a çevir",
+    "aciklama": "1 kg = 1000 g.",
+    "islem": "75 × 1000 = 75 000 g"
+   },
+   {
+    "baslik": "Paket sayısı",
+    "aciklama": "Toplam ÷ paket kütlesi.",
+    "islem": "75 000 ÷ 250 = 300"
+   }
+  ],
+  "puf": "Kurumada su azalır, kuru madde sabit kalır; kuru maddeyi kuruma sonundaki kuru madde yüzdesine bölerek yeni kütleyi bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-02 (kuruma) · taze üzüm",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Öncüllü Karışım",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "İki tuzlu su çözeltisinin karışımına yapılan işlemlerin sonuçlarını ayrı ayrı sınayarak doğru öncülleri belirler.",
+  "tipId": "krb-yorum",
+  "tip": "Yorum ve yeni nesil karışım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 5,
+  "metin": "Kütlece %5’i tuz olan 300 gram tuzlu su ile kütlece %15’i tuz olan 200 gram tuzlu su bir kapta karıştırılıyor. Buna göre,\nI. Karışımın tuz oranı %10’dur.\nII. Karışıma 100 gram su eklenirse tuz oranı %7,5 olur.\nIII. Karışıma 50 gram tuz eklenip tamamen çözülürse tuz oranı %19 olur.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "I’de iki yüzdenin ortalamasını (10) alıp doğru saymış; II’de eklenen 100 g’ı tuz sayıp II’yi yanlış bulmuş.",
+   "C": "I’de iki yüzdenin ortalamasını (10) alıp I’i doğru saymış.",
+   "D": "III’te tuz eklenince toplamı 500 g bırakıp 95 ÷ 500 = %19 bulmuş.",
+   "E": "I’de yüzdelerin ortalamasını alıp, III’te tuz eklenince toplamı büyütmeden 95 ÷ 500 hesaplamış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Karışımları birleştirme",
+    "ifade": "madde miktarları ve toplam miktarlar ayrı ayrı toplanır. Örnek: 100 g %10’luk ile 100 g %30’luk karışırsa (10 + 30) ÷ 200 = %20"
+   },
+   {
+    "ad": "Madde veya su ekleme",
+    "ifade": "su eklenince yalnız toplam büyür; madde eklenince hem madde hem toplam artar. Örnek: 100 g’da 20 g tuz varsa 100 g su eklenince oran 20 ÷ 200 = %10"
+   }
+  ],
+  "ipuclari": [
+   "İki çözeltideki tuzu ayrı ayrı gram olarak bul; üç ifadeyi karışımın tuz ve toplam miktarıyla tek tek sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tuz miktarları",
+    "aciklama": "300 g’ın %5’i ve 200 g’ın %15’i.",
+    "islem": "15 g + 30 g = 45 g tuz · toplam 500 g"
+   },
+   {
+    "baslik": "I",
+    "aciklama": "Tuz ÷ toplam.",
+    "islem": "45 ÷ 500 = %9 ≠ %10 ✗"
+   },
+   {
+    "baslik": "II",
+    "aciklama": "Su tuzu değiştirmez, toplam 600 g.",
+    "islem": "45 ÷ 600 = %7,5 ✓"
+   },
+   {
+    "baslik": "III",
+    "aciklama": "Tuz 95 g, toplam 550 g.",
+    "islem": "95 ÷ 550 ≈ %17,3 ≠ %19 ✗"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Yalnız II doğrudur.",
+    "islem": "Yalnız II"
+   }
+  ],
+  "puf": "Önce karışımın toplam tuzunu ve toplam kütlesini bul; sonraki her ifadeyi bu iki sayıyı güncelleyerek ayrı ayrı sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-06 (öncüllü karışım) · iki tuzlu suyun birleştirilmesi ve eklemeler",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karisimiki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Karışım Problemleri · Şeker Puanı",
+  "k": "prob|Karışım Problemleri",
+  "kazanim": "Tanımı verilen şeker puanını şekerin suya oranı olarak kullanıp buharlaşma ve şeker eklemeyi birlikte içeren bir durumda eklenecek şekeri bulur.",
+  "tipId": "krb-yorum",
+  "tip": "Yorum ve yeni nesil karışım",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir şerbetin şeker puanı, şerbetteki şeker kütlesinin su kütlesine oranının yüzde cinsinden değeridir. Örneğin 10 gram şeker ile 40 gram sudan oluşan şerbetin şeker puanı 25’tir.\nŞeker puanı 25 olan 600 gramlık şerbetten 160 gram su buharlaştırılıyor, ardından bir miktar şeker eklenerek tamamen çözülüyor ve şeker puanı 100 oluyor.\nBuna göre eklenen şeker kaç gramdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "140",
+   "B": "200",
+   "C": "320",
+   "D": "360",
+   "E": "480"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "200"
+  },
+  "celdiriciler": {
+   "A": "Şeker puanını şeker oranıyla karıştırıp ilk şekeri 150 g, suyu 450 g almış ve 290 − 150 = 140 bulmuş.",
+   "D": "Buharlaşmayı hesaba katmayıp su 480 g iken 480 − 120 = 360 g şeker eklemiş.",
+   "C": "Son şeker miktarını (320 g) eklenen şeker sanmış.",
+   "E": "Su miktarını (480 g) eklenen şeker sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "D": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Eklenen şeker miktarı (g).",
+  "bilgi": [
+   {
+    "ad": "Şeker puanı tanımı",
+    "ifade": "şeker puanı = (şeker kütlesi ÷ su kütlesi) × 100. Örnek: 20 g şeker ve 80 g suda puan 25’tir"
+   },
+   {
+    "ad": "Buharlaşma",
+    "ifade": "buharlaşırken yalnız su azalır, çözünen madde olduğu gibi kalır. Örnek: 200 g’da 20 g tuz varsa 100 g su buharlaşınca oran 20 ÷ 100 = %20"
+   }
+  ],
+  "ipuclari": [
+   "Tanıma göre ilk şerbette şeker ve su kütlelerini ayrı ayrı bul; buharlaşmadan sonra hangisi değişir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Şeker ve su",
+    "aciklama": "Puan 25: şeker : su = 1 : 4, toplam 600 g.",
+    "islem": "şeker 120 g · su 480 g"
+   },
+   {
+    "baslik": "Buharlaşma",
+    "aciklama": "Yalnız su azalır.",
+    "islem": "su 480 − 160 = 320 g · şeker 120 g"
+   },
+   {
+    "baslik": "Yeni şeker",
+    "aciklama": "Puan 100: şeker kütlesi su kütlesine eşit.",
+    "islem": "şeker = 320 g"
+   },
+   {
+    "baslik": "Eklenen şeker",
+    "aciklama": "Yeni şekerden ilk şekeri çıkar.",
+    "islem": "320 − 120 = 200 g"
+   }
+  ],
+  "puf": "Yeni nesil sorularda ölçü tanımını aynen uygula: burada payda toplam değil yalnız su kütlesidir; buharlaşma suyu azaltır, şeker eklemek şekeri artırır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KRB-06 (yeni nesil) · şeker puanı tanımı, buharlaşma ve şeker ekleme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

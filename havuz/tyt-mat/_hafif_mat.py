@@ -52,3 +52,17 @@ def ok(x1,y1,x2,y2,renk=None,w=2):
     a=math.atan2(y2-y1,x2-x1); s=renk or 'currentColor'
     p1=(x2-8*math.cos(a-0.4),y2-8*math.sin(a-0.4)); p2=(x2-8*math.cos(a+0.4),y2-8*math.sin(a+0.4))
     return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke-width="{w}" style="stroke:{s}"/><path d="M{x2:.1f} {y2:.1f} L{p1[0]:.1f} {p1[1]:.1f} M{x2:.1f} {y2:.1f} L{p2[0]:.1f} {p2[1]:.1f}" stroke-width="{w}" style="stroke:{s}"/>'
+def tablo_svg(bas,sat):
+    """Basit tablo SVG'si (sekil alanı için). bas: başlık listesi; sat: satır listeleri (hücreler metin). Sütun genişliği içeriğe göre."""
+    n=len(bas); assert all(len(r)==n for r in sat)
+    gen=[max(54,8*max(len(str(x)) for x in [bas[j]]+[r[j] for r in sat])+18) for j in range(n)]
+    W=sum(gen)+4; assert W<=640,'tablo çok geniş'; h=26; Hh=h*(len(sat)+1)+4; b=[]; xs=[2]
+    for g in gen: xs.append(xs[-1]+g)
+    b.append(f'<rect x="2" y="2" width="{W-4}" height="{h}" style="fill:currentColor;stroke:none" fill-opacity=".08"/>')
+    for j,s in enumerate(bas): b.append(G._t((xs[j]+xs[j+1])/2,2+h/2+4,str(s),size=11,bold=True))
+    for i,row in enumerate(sat):
+        y=2+h*(i+1)
+        for j,s in enumerate(row): b.append(G._t((xs[j]+xs[j+1])/2,y+h/2+4,str(s),size=11,bold=(j==0)))
+    for i in range(len(sat)+2): b.append(f'<line x1="2" y1="{2+h*i}" x2="{W-2}" y2="{2+h*i}" stroke-width="{1.4 if i in (0,1,len(sat)+1) else 1}"/>')
+    for x in xs: b.append(f'<line x1="{x}" y1="2" x2="{x}" y2="{2+h*(len(sat)+1)}" stroke-width="1"/>')
+    return G._svg(W,Hh,''.join(b))

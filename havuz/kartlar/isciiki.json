@@ -1,0 +1,135 @@
+{
+ "konu": "İşçi Emek Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ISB-01",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Birlikte ve dönüşümlü çalışma",
+   "fikir": "Kişilerin günlük işleri toplanır; ikişerli süreler verilen üç kişide toplam hız, ikili hızların toplamının yarısıdır. Dönüşümlü çalışmada bir turluk iş toplanıp tam turlar sayılır, kalan iş sıradaki kişiyle bitirilir.",
+   "tuzak": "Süreleri toplamak ya da ortalamasını almak; ikişerli toplamlarda yarıya bölmeyi unutmak; son turun yarım kalabileceğini gözden kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "isb-birlikte",
+   "tip": "Birlikte ve dönüşümlü çalışma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISB-02",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Ayrılma, katılma ve işin kesri",
+   "fikir": "Yapılan iş ve kalan iş kesirle yazılır; sonradan katılan ya da ayrılan kişiye göre kalan işin süresi bulunur.",
+   "tuzak": "Kalan işi yeni hızla bölmeyi unutmak; geçen süreyi toplam süreye eklememek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "isb-kismi",
+   "tip": "Ayrılma, katılma ve işin kesri",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISB-03",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Verim ve kapasite değişimi",
+   "fikir": "Hız değişimi süreyle ters orantılıdır; farklı verimli işçiler ortak bir birime çevrilerek karşılaştırılır.",
+   "tuzak": "Hız artışını süre azalışı sanmak; yüzde artışı süreye aynı yüzdeyle uygulamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "isb-verim",
+   "tip": "Verim ve kapasite değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISB-04",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Havuz–musluk ve makine–ürün",
+   "fikir": "Dolduran ve boşaltan hızlar işaretli toplanır; makinelerde üretim hız × süre ile bulunur; aşamalı sorularda her aşamanın işi ayrı yazılır.",
+   "tuzak": "Boşaltanı doldurucu saymak; aşamaların sürelerini birlikte almak; birim dönüşümünü atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "isb-hiz",
+   "tip": "Havuz–musluk ve makine–ürün",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISB-05",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Ücret paylaşımı",
+   "fikir": "Ücret yapılan iş oranında bölünür; her kişinin yaptığı iş hızı ile çalıştığı sürenin çarpımıdır.",
+   "tuzak": "Ücreti çalışılan günle orantılamak; sonradan katılanın çalışma süresini yanlış bulmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "isb-ucret",
+   "tip": "Ücret paylaşımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISB-06",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Yeni nesil ve öncüllü",
+   "fikir": "Tanımlı işlem ve öncüllü ifadeler, birlikte çalışma ve kısmi iş kesirleriyle ayrı ayrı sınanır.",
+   "tuzak": "Tanımı değiştirmek; öncülleri sınamadan tahminle işaretlemek.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "isb-yorum",
+   "tip": "Yeni nesil ve öncüllü işçi sorusu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (işçi, havuz problemleri) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "isb-birlikte",
+   "ad": "Birlikte ve dönüşümlü çalışma",
+   "kartlar": [
+    "K-ISB-01"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isb-kismi",
+   "ad": "Ayrılma, katılma ve işin kesri",
+   "kartlar": [
+    "K-ISB-02"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isb-verim",
+   "ad": "Verim ve kapasite değişimi",
+   "kartlar": [
+    "K-ISB-03"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isb-hiz",
+   "ad": "Havuz–musluk ve makine–ürün",
+   "kartlar": [
+    "K-ISB-04"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isb-ucret",
+   "ad": "Ücret paylaşımı",
+   "kartlar": [
+    "K-ISB-05"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isb-yorum",
+   "ad": "Yeni nesil ve öncüllü işçi sorusu",
+   "kartlar": [
+    "K-ISB-06"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  }
+ ]
+}

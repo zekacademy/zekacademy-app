@@ -1,0 +1,2379 @@
+[
+ {
+  "id": "tytmat-hareketiki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Birim Çevirme",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Saniyede metre cinsinden verilen hızı saatte kilometreye çevirir.",
+  "tipId": "hrb-temel",
+  "tip": "Yol–hız–zaman ve birim çevirme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bisikletli, düz bir yolda sabit 5 m/sn hızla ilerlemektedir.\nBuna göre bisikletlinin hızı saatte kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,3",
+   "B": "1,8",
+   "C": "18",
+   "D": "180",
+   "E": "18000"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "18"
+  },
+  "celdiriciler": {
+   "E": "Bir saatteki metreyi (18 000 m) bulup kilometreye çevirmeyi unutmuş.",
+   "D": "1 km’yi 100 m sanmış.",
+   "B": "1 km’yi 10 000 m sanmış.",
+   "A": "Dakikadaki metreyi (300 m) bulup saate çıkmamış, yalnızca kilometreye çevirmiş."
+  },
+  "celTur": {
+   "E": "dikkat",
+   "D": "bilgi",
+   "B": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "Bisikletlinin hızı (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Hızın metre ve saniye cinsinden değerini kilometre ve saat cinsinden yazmak için hangi iki dönüşüm gerekir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bir saatteki yol",
+    "aciklama": "1 saatte 3600 sn vardır.",
+    "islem": "5 × 3600 = 18 000 m"
+   },
+   {
+    "baslik": "Kilometreye çevir",
+    "aciklama": "1 km = 1000 m.",
+    "islem": "18 000 ÷ 1000 = 18 km"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bir saatte alınan yol hızdır.",
+    "islem": "18 km/sa"
+   }
+  ],
+  "puf": "m/sn değerini km/sa’ya çevirmek için 3,6 ile çarp; km/sa değerini m/sn’ye çevirmek için 3,6’ya böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-01 (yol–hız–zaman, birim çevirme) · m/sn → km/sa",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yol–Hız–Zaman",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Dakika cinsinden verilen süreyi saate çevirerek alınan yolu hesaplar.",
+  "tipId": "hrb-temel",
+  "tip": "Yol–hız–zaman ve birim çevirme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir motosikletli, sabit 80 km/sa hızla 45 dakika yol alıyor.\nBuna göre motosikletli bu sürede kaç kilometre yol almıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "36",
+   "B": "60",
+   "C": "120",
+   "D": "360",
+   "E": "3600"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "45 dakikayı 0,45 saat sanmış.",
+   "C": "45 dakikayı 1,5 saat sanmış.",
+   "D": "45 dakikayı 4,5 saat sanmış.",
+   "E": "Hızı dakika ile çarpmış, süreyi saate çevirmemiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Alınan yol (km).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Hız saat başına verildiği için süreyi hangi birimde yazman gerekir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Süreyi saate çevir",
+    "aciklama": "1 saat = 60 dakika.",
+    "islem": "45 dakika = 45/60 = 3/4 saat"
+   },
+   {
+    "baslik": "Yolu hesapla",
+    "aciklama": "yol = hız × zaman.",
+    "islem": "80 × 3/4"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Çarpımı bul.",
+    "islem": "60 km"
+   }
+  ],
+  "puf": "Hız saatle verilmişse süreyi önce saate çevir: dakika ÷ 60.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-01 (yol–hız–zaman) · dakikadan yol",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Karşılaşma",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Birbirine doğru giden iki trenin karşılaşma süresini hızlar toplamıyla bulur.",
+  "tipId": "hrb-karsilasma",
+  "tip": "Karşılaşma ve yetişme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Aralarında 360 km bulunan iki istasyondan iki tren aynı anda birbirine doğru hareket ediyor. Trenler sabit 90 km/sa ve 150 km/sa hızla gidiyor.\nBuna göre trenler kaç dakika sonra karşılaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1,5",
+   "B": "90",
+   "C": "144",
+   "D": "240",
+   "E": "360"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "E": "Hızların farkını (60 km/sa) kullanıp 6 saati dakikaya çevirmiş.",
+   "C": "Yolu yalnızca hızlı trenin hızına bölmüş.",
+   "D": "Yolu yalnızca yavaş trenin hızına bölmüş.",
+   "A": "Saat cinsinden bulduğu 1,5’i dakikaya çevirmeyi unutmuş."
+  },
+  "celTur": {
+   "E": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "A": "dikkat"
+  },
+  "istenen": "Karşılaşma süresi (dakika).",
+  "bilgi": [
+   {
+    "ad": "Karşılaşma",
+    "ifade": "birbirine doğru giden iki hareketlide aradaki yol her saat hızlar toplamı kadar azalır. Örnek: 50 ve 70 km/sa ile 240 km arayla çıkanlar 240 ÷ 120 = 2 saat sonra karşılaşır"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Aradaki yol her saat toplam kaç km kısalıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yaklaşma hızı",
+    "aciklama": "Zıt yönde hızlar toplanır.",
+    "islem": "90 + 150 = 240 km/sa"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "360 ÷ 240 = 1,5 saat"
+   },
+   {
+    "baslik": "Dakikaya çevir",
+    "aciklama": "1 saat = 60 dakika.",
+    "islem": "1,5 × 60 = 90 dakika"
+   }
+  ],
+  "puf": "Birbirine doğru giden iki hareketlinin karşılaşma süresi, aradaki yolun hızlar toplamına bölümüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-03 (karşılaşma) · iki tren, süre dakika olarak",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yürüyen Bant",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yürüyen bantta hareketsiz duran kişinin bant hızıyla gittiği süreyi bulur.",
+  "tipId": "hrb-akinti",
+  "tip": "Akıntı ve yürüyen merdiven",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir havalimanındaki yürüyen bant, sabit 0,5 m/sn hızla ilerlemektedir. Bandın uzunluğu 30 m’dir.\nBandın üzerinde hareketsiz duran bir yolcu, bandın bir ucundan diğer ucuna kaç saniyede ulaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "15",
+   "C": "29,5",
+   "D": "60",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "B": "Uzunluğu hızla çarpmış: 30 × 0,5.",
+   "A": "0,5 yerine 5 alarak 30 ÷ 5 hesaplamış.",
+   "C": "Uzunluktan hızı çıkarmış: 30 − 0,5.",
+   "E": "0,5’i 0,05 sanıp 30 ÷ 0,05 hesaplamış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "A": "islem",
+   "C": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Yolcunun bandın sonuna ulaşma süresi (sn).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Yolcu kendisi yürümediğine göre yalnızca bandın hızıyla ilerler; hız, yol ve süre arasındaki bağıntıyı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yolcunun hızı",
+    "aciklama": "Yolcu yürümüyor, hızı bandın hızıdır.",
+    "islem": "v = 0,5 m/sn"
+   },
+   {
+    "baslik": "Süre formülü",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "t = 30 ÷ 0,5"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bölmeyi yap.",
+    "islem": "60 sn"
+   }
+  ],
+  "puf": "Süre = yol ÷ hız; ondalık hıza bölerken hem yolu hem hızı 10 ile genişletmek işi kolaylaştırır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-07 (yürüyen bant) · hareketsiz yolcu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yolun Kesri",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yolun bir kesri için geçen süreyi yol ÷ hız ile bulur.",
+  "tipId": "hrb-temel",
+  "tip": "Yol–hız–zaman ve birim çevirme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bisikletli 36 km uzunluğundaki bir yolun 2/3’ünü sabit 12 km/sa hızla gidiyor.\nBuna göre bu bölümü kaç saatte alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "2",
+   "B": "3",
+   "C": "4,5",
+   "D": "6",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "D": "Kesri 2/3 yerine 2 ile çarpmış: 36 × 2 ÷ 12.",
+   "B": "Yolun tamamını (36 ÷ 12) hesaplamış.",
+   "C": "Kesri ters kullanıp yolun 3/2’sini almış.",
+   "E": "Yolun 2/3’ünü (24 km) bulup hıza bölmeyi unutmuş."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yolun 2/3’ünü alma süresi (saat).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Önce gidilen bölümün kaç km olduğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölümün uzunluğu",
+    "aciklama": "Yolun 2/3’ü.",
+    "islem": "36 × 2/3 = 24 km"
+   },
+   {
+    "baslik": "Süre formülü",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "24 ÷ 12"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bölmeyi yap.",
+    "islem": "2 saat"
+   }
+  ],
+  "puf": "Yolun bir kesri sorulduğunda önce o kesrin kaç km olduğunu bul, sonra hıza böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-01 (yol–hız–zaman) · yolun kesri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Etaplı Yolculuk",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Etaplara ait süre ve hız bilgisinden toplam yolu hesaplar.",
+  "tipId": "hrb-temel",
+  "tip": "Yol–hız–zaman ve birim çevirme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 4,
+  "metin": "Bir kurye aracının bir sabahki yolculuğu, her etapta sabit hızla olmak üzere aşağıdaki tabloda verilmiştir.\nBuna göre araç bu yolculukta toplam kaç kilometre yol almıştır?",
+  "sekil": "<svg viewBox=\"0 0 206 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"202\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Etap</text><text x=\"89.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Süre</text><text x=\"163.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Hız</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"89.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2 saat</text><text x=\"163.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">30 km/sa</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"89.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1 saat</text><text x=\"163.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">60 km/sa</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"89.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">3 saat</text><text x=\"163.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">45 km/sa</text><line x1=\"2\" y1=\"2\" x2=\"204\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"204\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"204\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"204\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"204\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"106\" stroke-width=\"1\"/><line x1=\"122\" y1=\"2\" x2=\"122\" y2=\"106\" stroke-width=\"1\"/><line x1=\"204\" y1=\"2\" x2=\"204\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "120",
+   "B": "135",
+   "C": "255",
+   "D": "270",
+   "E": "360"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "255"
+  },
+  "celdiriciler": {
+   "A": "Üçüncü etabı hesaba katmamış.",
+   "B": "Üç hızı toplamış.",
+   "D": "Hızların aritmetik ortalaması olan 45’i toplam süreyle (6 saat) çarpmış.",
+   "E": "Toplam süreyi (6 saat) en yüksek hızla çarpmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Toplam yol (km).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Her etapta yolu ayrı ayrı bulmak için tablonun hangi iki sütununu kullanmalısın?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "1. etap",
+    "aciklama": "yol = hız × zaman.",
+    "islem": "30 × 2 = 60 km"
+   },
+   {
+    "baslik": "2. etap",
+    "aciklama": "Aynı bağıntıyı uygula.",
+    "islem": "60 × 1 = 60 km"
+   },
+   {
+    "baslik": "3. etap",
+    "aciklama": "Aynı bağıntıyı uygula.",
+    "islem": "45 × 3 = 135 km"
+   },
+   {
+    "baslik": "Topla",
+    "aciklama": "Etap yollarını topla.",
+    "islem": "60 + 60 + 135 = 255 km"
+   }
+  ],
+  "puf": "Etaplı yolculukta her etabın yolunu hız × süre ile ayrı bul, sonra topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-01 (yol–hız–zaman) · tabloda üç etap",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Geç Varış",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Planlanan hız ve gerçek hızdaki süre farkından yolu bulur.",
+  "tipId": "hrb-erkengec",
+  "tip": "Farklı hızla aynı yol (erken/geç varma, planlanan süre)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir yolcu treni, A ile B arasındaki yolu tarifeye göre sabit 90 km/sa hızla alacaktır. Arıza nedeniyle tren yolun tamamında sabit 60 km/sa hızla gidiyor ve B’ye tarifeden 1 saat 20 dakika geç varıyor.\nBuna göre A ile B arasındaki yol kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "80",
+   "C": "120",
+   "D": "216",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "240"
+  },
+  "celdiriciler": {
+   "A": "Hızlar farkını (30 km/sa) gecikmeyle çarpmış.",
+   "B": "Gecikmeyi yalnızca yavaş hızla çarpmış: 60 × 4/3.",
+   "C": "Gecikmeyi yalnızca tarifedeki hızla çarpmış: 90 × 4/3.",
+   "D": "1 saat 20 dakikayı 1,2 saat sanmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "A ile B arasındaki yol (km).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Sabit yolda hız ve süre",
+    "ifade": "yol sabitse süre = yol ÷ hız olur; hız azalınca süre uzar. Örnek: 120 km yol 60 km/sa ile 2, 40 km/sa ile 3 saatte alınır"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Yol aynı olduğuna göre iki durumdaki süreleri yola bağlı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Süreleri yazma",
+    "aciklama": "Yol d olsun. t = d ÷ hız.",
+    "islem": "tarife: d/90 · gerçek: d/60"
+   },
+   {
+    "baslik": "Gecikmeyi kur",
+    "aciklama": "1 saat 20 dk = 4/3 saat.",
+    "islem": "d/60 − d/90 = 4/3"
+   },
+   {
+    "baslik": "Denklemi çöz",
+    "aciklama": "Paydaları 180’de eşitle.",
+    "islem": "(3d − 2d)/180 = 4/3 → d/180 = 4/3"
+   },
+   {
+    "baslik": "Yolu bul",
+    "aciklama": "Her iki yanı 180 ile çarp.",
+    "islem": "d = 240 km"
+   }
+  ],
+  "puf": "Yol sabitse süre farkı, yolun hıza bölümlerinin farkıdır: d/v₂ − d/v₁ = fark.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-02 (hız değişince süre) · arızalı tren, tek geç kalma",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yetişme",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Aynı yönde giden iki hareketlinin yetişme süresini hız farkıyla bulur ve alınan yolu hesaplar.",
+  "tipId": "hrb-karsilasma",
+  "tip": "Karşılaşma ve yetişme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bisiklet yolunda Hakan, Gizem’in 10 km önündedir. Hakan ve Gizem aynı anda, aynı yönde yola çıkıyor; Hakan sabit 15 km/sa, Gizem sabit 20 km/sa hızla gidiyor.\nBuna göre Gizem, Hakan’a yetiştiği anda yola çıktığı yerden itibaren kaç km yol almış olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "10",
+   "B": "30",
+   "C": "40",
+   "D": "50",
+   "E": "70"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "Başlangıçtaki uzaklığı (10 km) yol sanmış.",
+   "B": "Hakan’ın aldığı yolu bulmuş.",
+   "D": "Gizem’in yoluna başlangıç farkını da eklemiş.",
+   "E": "İki hareketlinin aldığı yolların toplamını yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Gizem’in yetişme anına kadar aldığı yol (km).",
+  "bilgi": [
+   {
+    "ad": "Yetişme",
+    "ifade": "aynı yönde giden iki hareketlide arkadaki, her saat hızlar farkı kadar yaklaşır. Örnek: 10 km önde olan 15 km/sa’lik hareketliye 25 km/sa’lik hareketli 10 ÷ 10 = 1 saatte yetişir"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Gizem her saat Hakan’a kaç km yaklaşıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yaklaşma hızı",
+    "aciklama": "Aynı yönde hızlar çıkarılır.",
+    "islem": "20 − 15 = 5 km/sa"
+   },
+   {
+    "baslik": "Yetişme süresi",
+    "aciklama": "Başlangıç farkını kapatma süresi.",
+    "islem": "10 ÷ 5 = 2 saat"
+   },
+   {
+    "baslik": "Gizem’in yolu",
+    "aciklama": "yol = hız × zaman.",
+    "islem": "20 × 2 = 40 km"
+   }
+  ],
+  "puf": "Aynı yönde giden iki hareketlide başlangıç farkı, hızlar farkına bölünerek yetişme süresi bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-03 (yetişme) · iki bisikletli, aynı anda, aralarında fark",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Çembersel Pist",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Çembersel parkurda zıt yöne çıkan iki hareketlinin ilk karşılaşma süresini hızlar toplamıyla bulur.",
+  "tipId": "hrb-cember",
+  "tip": "Çembersel pistte karşılaşma ve yetişme",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Çevresi 3 km olan dairesel bir göl çevresi parkurunda iki bisikletli, aynı noktadan aynı anda zıt yönlere doğru yola çıkıyor. Bisikletliler sabit 18 km/sa ve 12 km/sa hızla gidiyor.\nBuna göre bisikletliler, başlangıç anı sayılmazsa, ilk kez kaç dakika sonra karşılaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0,1",
+   "B": "6",
+   "C": "10",
+   "D": "15",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "A": "Saat cinsinden bulduğu 0,1’i dakikaya çevirmeyi unutmuş.",
+   "C": "Çevreyi yalnızca hızlı bisikletlinin hızına bölmüş.",
+   "D": "Çevreyi yalnızca yavaş bisikletlinin hızına bölmüş.",
+   "E": "Hızların farkını almış: 3 ÷ 6 = 0,5 saat = 30 dakika."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İlk karşılaşma süresi (dakika).",
+  "bilgi": [
+   {
+    "ad": "Çembersel pist",
+    "ifade": "dairesel parkurda aynı noktadan zıt yöne çıkanlar, aralarındaki yol çevre kadar kapandığında karşılaşır (hızlar toplamı). Aynı yöne çıkanlar, hızlı olan yavaşı bir çevre kadar kazandığında yetişir (hızlar farkı). Örnek: çevre 100 m, hızlar 3 ve 2 m/sn ise zıt yönde 100 ÷ 5 = 20 sn, aynı yönde 100 ÷ 1 = 100 sn"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Zıt yönde giden iki bisikletli arasındaki yol, ilk karşılaşmada toplam ne kadar kapanmış olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kapanan yol",
+    "aciklama": "İlk karşılaşmada ikisi toplam bir çevre kadar yol alır.",
+    "islem": "3 km"
+   },
+   {
+    "baslik": "Hızlar toplamı",
+    "aciklama": "Zıt yönde hızlar toplanır.",
+    "islem": "18 + 12 = 30 km/sa"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "3 ÷ 30 = 0,1 saat.",
+    "islem": "0,1 × 60 = 6 dakika"
+   }
+  ],
+  "puf": "Çembersel pistte zıt yönlerde ilk karşılaşma süresi, çevrenin hızlar toplamına bölümüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-05 (çembersel pist) · zıt yön, km ve dakika",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Karşılaşma Noktası",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Çembersel pistte zıt yönlü üçüncü karşılaşmanın konumunu başlangıç noktasına göre bulur.",
+  "tipId": "hrb-cember",
+  "tip": "Çembersel pistte karşılaşma ve yetişme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Çevresi 500 m olan dairesel bir koşu pistinde Ece ile Tolga, pistin O noktasından aynı anda zıt yönlerde koşmaya başlıyor. Ece sabit 4 m/sn, Tolga sabit 6 m/sn hızla koşuyor.\nBaşlangıç anı sayılmadığına göre, ikisinin üçüncü kez karşılaştığı nokta O noktasına pist üzerinde en kısa yoldan kaç metre uzaklıktadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "100",
+   "B": "200",
+   "C": "400",
+   "D": "600",
+   "E": "900"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "B": "İlk karşılaşmanın (Ece 50 sn × 4 m/sn) uzaklığını yazmış.",
+   "C": "Uzaklığı 500 − 100 hesaplayıp uzun yoldan ölçmüş.",
+   "D": "Ece’nin 150 saniyede koştuğu yolu O’ya uzaklık sanmış; tam turu çıkarmamış.",
+   "E": "Tolga’nın koştuğu yolu O’ya uzaklık sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Üçüncü karşılaşma noktasının O’ya pist üzerindeki en kısa uzaklığı (m).",
+  "bilgi": [
+   {
+    "ad": "Çembersel pist",
+    "ifade": "dairesel parkurda aynı noktadan zıt yöne çıkanlar, aralarındaki yol çevre kadar kapandığında karşılaşır (hızlar toplamı). Aynı yöne çıkanlar, hızlı olan yavaşı bir çevre kadar kazandığında yetişir (hızlar farkı). Örnek: çevre 100 m, hızlar 3 ve 2 m/sn ise zıt yönde 100 ÷ 5 = 20 sn, aynı yönde 100 ÷ 1 = 100 sn"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Üçüncü karşılaşmaya kadar geçen süreyi bulup bir koşucunun aldığı yolu çevreyle karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Karşılaşma aralığı",
+    "aciklama": "Zıt yönde hızlar toplanır; her karşılaşmada bir çevre kapanır.",
+    "islem": "500 ÷ (4 + 6) = 50 sn"
+   },
+   {
+    "baslik": "Üçüncü karşılaşma",
+    "aciklama": "3 × 50 sn.",
+    "islem": "150 sn"
+   },
+   {
+    "baslik": "Ece’nin yolu",
+    "aciklama": "yol = hız × zaman.",
+    "islem": "4 × 150 = 600 m"
+   },
+   {
+    "baslik": "Tam turu çıkar",
+    "aciklama": "Bir tur 500 m.",
+    "islem": "600 − 500 = 100 m"
+   },
+   {
+    "baslik": "En kısa uzaklık",
+    "aciklama": "100 m ile 500 − 100 = 400 m’den küçüğü.",
+    "islem": "100 m"
+   }
+  ],
+  "puf": "Çembersel pistte konum için aldığı yoldan tam turları çıkar; kalan yol ile çevreden kalanın küçüğü en kısa uzaklıktır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-05 (çembersel pist) · üçüncü karşılaşmanın konumu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Tünelden Geçiş",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Boyu olan trenin tüneli tamamen geçme süresini tren boyu ile tünel boyunu toplayarak bulur.",
+  "tipId": "hrb-tunel",
+  "tip": "Tren, tünel ve köprü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Boyu 150 m olan bir tren, uzunluğu 450 m olan bir tünele sabit 72 km/sa hızla giriyor.\nTrenin ön ucu tünele girdiği andan arka ucu tünelden tamamen çıktığı ana kadar kaç saniye geçer?",
+  "sekil": null,
+  "siklar": {
+   "A": "7,5",
+   "B": "15",
+   "C": "22,5",
+   "D": "30",
+   "E": "37,5"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca tren boyunu (150 m) hıza bölmüş.",
+   "B": "Trenin tünelde tamamen içeride kaldığı süreyi bulmuş: (450 − 150) ÷ 20.",
+   "C": "Yalnızca tünel boyunu (450 m) hıza bölmüş.",
+   "E": "Tren boyunu iki kez eklemiş: (450 + 150 + 150) ÷ 20."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Geçiş süresi (sn).",
+  "bilgi": [
+   {
+    "ad": "Uzunluklu cisim",
+    "ifade": "tren gibi boyu olan bir cismin tünel ya da köprüyü tamamen geçmesi için aldığı yol, tren boyu + tünel boyu kadardır. Örnek: 100 m’lik tren 200 m’lik tüneli 20 m/sn ile (100 + 200) ÷ 20 = 15 sn’de geçer"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Trenin son vagonu tünelden çıktığında, ön ucu giriş noktasına göre ne kadar yol almış olur?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hızı m/sn yap",
+    "aciklama": "72 km/sa ÷ 3,6.",
+    "islem": "72 ÷ 3,6 = 20 m/sn"
+   },
+   {
+    "baslik": "Alınan yol",
+    "aciklama": "Ön uç, tünelin uzunluğu ile tren boyu kadar ilerler.",
+    "islem": "450 + 150 = 600 m"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "600 ÷ 20 = 30 sn"
+   }
+  ],
+  "puf": "Tren tüneli (köprüyü) tamamen geçerken alınan yol = tren boyu + tünel boyu.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-06 (tren–tünel) · km/sa dönüşümlü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Köprü ve Direk",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Köprüyü geçiş ve direği geçiş sürelerinden tren boyunu ve hızını bulur.",
+  "tipId": "hrb-tunel",
+  "tip": "Tren, tünel ve köprü",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Sabit hızla giden bir tren, 480 m uzunluğundaki bir köprüye girdiği andan tamamen çıktığı ana kadar 40 saniye geçiriyor. Aynı tren köprü üzerindeki bir ışık direğinin yanından 16 saniyede geçiyor.\nBuna göre trenin hızı saatte kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "28,8",
+   "C": "30",
+   "D": "43,2",
+   "E": "72"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "72"
+  },
+  "celdiriciler": {
+   "A": "Hızı m/sn olarak bulup km/sa’ya çevirmemiş.",
+   "C": "Köprü boyunu direği geçiş süresine bölüp m/sn değerini km/sa sanmış.",
+   "D": "Köprü boyunu tüm geçiş süresine bölüp (12 m/sn) tren boyunu hesaba katmamış.",
+   "B": "Tren boyunu (320 m) köprü geçiş süresine bölüp 8 m/sn bulmuş: 8 × 3,6 = 28,8 km/sa."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "Trenin hızı (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Uzunluklu cisim",
+    "ifade": "tren gibi boyu olan bir cismin tünel ya da köprüyü tamamen geçmesi için aldığı yol, tren boyu + tünel boyu kadardır. Örnek: 100 m’lik tren 200 m’lik tüneli 20 m/sn ile (100 + 200) ÷ 20 = 15 sn’de geçer"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Direğin yanından geçerken ve köprüden geçerken tren hangi uzunluklar kadar yol alır; ikisini karşılaştır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Boyu hıza bağla",
+    "aciklama": "Direği geçerken yol tren boyu L’dir; hız v = L ÷ 16.",
+    "islem": "L = 16v"
+   },
+   {
+    "baslik": "Köprü geçişi",
+    "aciklama": "Yol = L + 480, süre 40 sn.",
+    "islem": "L + 480 = 40v"
+   },
+   {
+    "baslik": "Boyu çıkar",
+    "aciklama": "L yerine 16v yaz.",
+    "islem": "16v + 480 = 40v → 24v = 480"
+   },
+   {
+    "baslik": "Hızı bul",
+    "aciklama": "Önce m/sn.",
+    "islem": "v = 20 m/sn (tren boyu 320 m)"
+   },
+   {
+    "baslik": "km/sa’ya çevir",
+    "aciklama": "m/sn değerini 3,6 ile çarp.",
+    "islem": "20 × 3,6 = 72 km/sa"
+   }
+  ],
+  "puf": "İki farklı engelin geçiş süreleri verildiğinde tren boyunu L, hızını v alıp iki denklemi karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-06 (tren–köprü–direk) · iki süreden hız",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · İki Trenin Geçişi",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Zıt yönde giden iki trenin birbirini geçme süresini boyları toplayıp hızlar toplamına bölerek bulur.",
+  "tipId": "hrb-tunel",
+  "tip": "Tren, tünel ve köprü",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Boyları 100 m ve 260 m olan iki tren, paralel raylarda birbirine doğru sırasıyla sabit 54 km/sa ve 90 km/sa hızla gidiyor.\nTrenlerin ön uçları yan yana geldiği andan arka uçları yan yana geldiği ana kadar kaç saniye geçer?",
+  "sekil": null,
+  "siklar": {
+   "A": "6,5",
+   "B": "9",
+   "C": "14,4",
+   "D": "24",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca uzun trenin boyunu hesaba katmış.",
+   "C": "Toplam boyu yalnızca hızlı trenin hızına bölmüş.",
+   "D": "Toplam boyu yalnızca yavaş trenin hızına bölmüş.",
+   "E": "Zıt yönde olmalarına rağmen hızları çıkarmış (aynı yönde gibi)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Geçiş süresi (sn).",
+  "bilgi": [
+   {
+    "ad": "Uzunluklu cisim",
+    "ifade": "tren gibi boyu olan bir cismin tünel ya da köprüyü tamamen geçmesi için aldığı yol, tren boyu + tünel boyu kadardır. Örnek: 100 m’lik tren 200 m’lik tüneli 20 m/sn ile (100 + 200) ÷ 20 = 15 sn’de geçer"
+   },
+   {
+    "ad": "Karşılaşma",
+    "ifade": "birbirine doğru giden iki hareketlide aradaki yol her saat hızlar toplamı kadar azalır. Örnek: 50 ve 70 km/sa ile 240 km arayla çıkanlar 240 ÷ 120 = 2 saat sonra karşılaşır"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "İki trenin birbirini tamamen geçmesi için birlikte ne kadar yol almaları gerekir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hızları m/sn yap",
+    "aciklama": "km/sa değerlerini 3,6’ya böl.",
+    "islem": "54 ÷ 3,6 = 15 m/sn · 90 ÷ 3,6 = 25 m/sn"
+   },
+   {
+    "baslik": "Yaklaşma hızı",
+    "aciklama": "Zıt yönde hızlar toplanır.",
+    "islem": "15 + 25 = 40 m/sn"
+   },
+   {
+    "baslik": "Toplam yol",
+    "aciklama": "İki trenin boyları toplanır.",
+    "islem": "100 + 260 = 360 m"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "360 ÷ 40.",
+    "islem": "9 sn"
+   }
+  ],
+  "puf": "İki tren birbirini geçerken alınan yol boyların toplamıdır; zıt yönde hızlar toplanır, aynı yönde çıkarılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-06 (iki tren) · zıt yönde birbirini geçme",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Akıntı",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "İki yöndeki sürelerden akıntı hızını bulup akıntıyla sürüklenen cismin süresini hesaplar.",
+  "tipId": "hrb-akinti",
+  "tip": "Akıntı ve yürüyen merdiven",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir nehirde iki iskele arasındaki yol 60 km’dir. Durgun suda sabit hızla giden bir tekne bu yolu akıntı yönünde 3 saatte, akıntıya karşı 5 saatte alıyor. Akıntının hızı da sabittir.\nAkıntı yönünde bırakılan bir tahta parçası, yalnızca akıntıyla sürüklenerek aynı iki iskele arasındaki yolu kaç saatte alır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3,75",
+   "B": "5",
+   "C": "7,5",
+   "D": "8",
+   "E": "15"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Teknenin durgun sudaki hızını (16 km/sa) tahtanın hızı sanmış.",
+   "B": "Teknenin akıntıya karşı yolculuk süresini yazmış.",
+   "C": "İki yöndeki hızların farkını (8 km/sa) akıntı hızı sanmış.",
+   "D": "İki yolculuğun sürelerini toplamış: 3 + 5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat"
+  },
+  "istenen": "Tahta parçasının iki iskele arasını alma süresi (saat).",
+  "bilgi": [
+   {
+    "ad": "Akıntı",
+    "ifade": "akıntı yönünde hız = tekne hızı + akıntı hızı; akıntıya karşı hız = tekne hızı − akıntı hızı. Örnek: tekne 10 km/sa, akıntı 2 km/sa ise yön boyunca 12, karşı yönde 8 km/sa"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Tahta parçasının hızı, tekne hızından bağımsız olarak hangi büyüklüğe eşittir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bileşke hızlar",
+    "aciklama": "hız = yol ÷ süre.",
+    "islem": "akıntı yönünde 60 ÷ 3 = 20 · karşı yönde 60 ÷ 5 = 12"
+   },
+   {
+    "baslik": "Denklemleri yaz",
+    "aciklama": "Tekne hızı v, akıntı hızı u.",
+    "islem": "v + u = 20 · v − u = 12"
+   },
+   {
+    "baslik": "Akıntı hızı",
+    "aciklama": "Taraf tarafa çıkar.",
+    "islem": "2u = 8 → u = 4 km/sa"
+   },
+   {
+    "baslik": "Tahtanın hızı",
+    "aciklama": "Tahta yalnızca akıntıyla gider.",
+    "islem": "4 km/sa"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "60 ÷ 4 = 15 saat"
+   }
+  ],
+  "puf": "Akıntıyla sürüklenen cismin hızı akıntı hızına eşittir; akıntı hızı iki bileşke hızın farkının yarısıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-07 (akıntı) · iki süreden akıntıyla sürüklenen cisim",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Gidiş–Dönüş Akıntı",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Akıntı yönü ve karşısındaki hızlarla gidiş–dönüş süresini ve beklemeyi birleştirerek dönüş saatini bulur.",
+  "tipId": "hrb-akinti",
+  "tip": "Akıntı ve yürüyen merdiven",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Durgun suda sabit 12 km/sa hızla giden bir tekne, akıntının sabit 4 km/sa hızla aktığı bir nehirde A iskelesinden saat 08.00’de hareket edip akıntı yönünde 48 km uzaktaki B iskelesine gidiyor. Tekne B’de 30 dakika bekledikten sonra aynı yoldan A’ya dönüyor. İskelelere yanaşma ve kalkış için ayrıca süre harcanmıyor.\nBuna göre tekne A’ya saat kaçta döner?",
+  "sekil": null,
+  "siklar": {
+   "A": "14.30",
+   "B": "16.30",
+   "C": "17.00",
+   "D": "17.30",
+   "E": "20.30"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "17.30"
+  },
+  "celdiriciler": {
+   "A": "Dönüşü de akıntı yönünde hesaplamış: 3 + 3 + 0,5.",
+   "B": "Akıntıyı yok sayıp tekne hızını (12 km/sa) kullanmış: 4 + 4 + 0,5.",
+   "C": "30 dakikalık beklemeyi eklememiş.",
+   "E": "Gidişi de akıntıya karşı hesaplamış: 6 + 6 + 0,5."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Teknenin A’ya dönüş saati.",
+  "bilgi": [
+   {
+    "ad": "Akıntı",
+    "ifade": "akıntı yönünde hız = tekne hızı + akıntı hızı; akıntıya karşı hız = tekne hızı − akıntı hızı. Örnek: tekne 10 km/sa, akıntı 2 km/sa ise yön boyunca 12, karşı yönde 8 km/sa"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Gidiş ve dönüşte tekneyi etkileyen hızı ayrı ayrı yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gidiş hızı ve süresi",
+    "aciklama": "Akıntı yönünde hızlar toplanır.",
+    "islem": "12 + 4 = 16 km/sa · 48 ÷ 16 = 3 saat"
+   },
+   {
+    "baslik": "Dönüş hızı ve süresi",
+    "aciklama": "Akıntıya karşı hızlar çıkarılır.",
+    "islem": "12 − 4 = 8 km/sa · 48 ÷ 8 = 6 saat"
+   },
+   {
+    "baslik": "Toplam süre",
+    "aciklama": "Bekleme süresi de eklenir.",
+    "islem": "3 + 0,5 + 6 = 9,5 saat"
+   },
+   {
+    "baslik": "Saati bul",
+    "aciklama": "08.00 + 9 saat 30 dakika.",
+    "islem": "17.30"
+   }
+  ],
+  "puf": "Akıntılı gidiş–dönüşte iki yönün hızları ayrı alınır; bekleme süresi toplam süreye eklenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-07 (akıntı) · gidiş–dönüş ve bekleme, saat sorusu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yürüyen Merdiven",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yürüyen merdivende kişi ve merdivenin hızlarını ayırarak durmuş merdivendeki süreyi bulur.",
+  "tipId": "hrb-akinti",
+  "tip": "Akıntı ve yürüyen merdiven",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir alışveriş merkezindeki yürüyen merdivenin tam çıkış yolunu, merdivende hareketsiz duran bir kişi 40 saniyede çıkıyor. Aynı kişi, çalışan merdivende sabit hızla yürüyerek aynı yolu 24 saniyede çıkıyor.\nBuna göre bu kişi, çalışmayan (durmuş) merdiveni aynı hızla yürüyerek kaç saniyede çıkar?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "16",
+   "C": "24",
+   "D": "32",
+   "E": "60"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "İki hızın toplamına karşılık gelen süreyi bulmuş: 1 ÷ (1/24 + 1/40).",
+   "B": "İki süreyi çıkarmış: 40 − 24.",
+   "D": "İki sürenin aritmetik ortalamasını almış.",
+   "C": "Kişinin çalışan merdivende yürüyerek çıkma süresini (24 sn) yazmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "C": "dikkat"
+  },
+  "istenen": "Kişinin durmuş merdiveni yürüyerek çıkma süresi (sn).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Hızların toplanması",
+    "ifade": "merdiven ve kişi aynı yönde ilerliyorsa yer hızları toplanır. Örnek: merdiven 1 m/sn, kişi 2 m/sn ise toplam 3 m/sn"
+   }
+  ],
+  "ipuclari": [
+   "Yolu 1 birim alıp her durumdaki hızı birim/saniye olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yolu 1 birim al",
+    "aciklama": "Her durum için hız = 1 ÷ süre.",
+    "islem": "merdiven: 1/40 · merdiven + kişi: 1/24"
+   },
+   {
+    "baslik": "Kişinin hızı",
+    "aciklama": "Toplam hızdan merdivenin hızını çıkar.",
+    "islem": "1/24 − 1/40 = (5 − 3)/120"
+   },
+   {
+    "baslik": "Sadeleştir",
+    "aciklama": "Payı ve paydayı ikiye böl.",
+    "islem": "1/60 birim/sn"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "1 ÷ (1/60) = 60 sn"
+   }
+  ],
+  "puf": "Yürüyen merdivende yolu 1 birim alıp hızları 1/süre olarak yaz; kişinin kendi hızı toplam hızdan merdiven hızı çıkarılarak bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-07 (yürüyen merdiven) · iki süreden kişinin kendi hızı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Öncüllü Yetişme",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Geç çıkan aracın yetişme saatini, yetişme noktasını ve ilk aracın yolda kalma süresini öncüllerle sınar.",
+  "tipId": "hrb-oncullu",
+  "tip": "Öncüllü hareket yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir servis aracı saat 08.00’de A noktasından sabit 40 km/sa hızla yola çıkıyor. İkinci bir araç, saat 09.00’da aynı noktadan aynı yolu izleyerek sabit 60 km/sa hızla yola çıkıyor. İki araç da yol boyunca hiç durmuyor.\nBuna göre,\nI. İkinci araç, birinciye saat 11.00’de yetişir.\nII. Yetişme noktası A’dan 100 km uzaklıktadır.\nIII. Yetişme anında birinci araç 3 saattir yoldadır.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "II’yi doğru eleyip birinci aracın yetişme anında 2 saattir yolda olduğunu sanarak III’ü yanlış bulmuş.",
+   "B": "Yetişme noktasını yanlış bulup I ve III’ü doğrulamamış.",
+   "C": "II’yi sınamadan doğru saymış ve birinci aracın yetişme anında 2 saat yolda olduğunu sanıp III’ü yanlış bulmuş.",
+   "E": "II’yi sınamadan doğru saymış; yetişme noktasının 120 km olduğunu görmemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Yetişme",
+    "ifade": "aynı yönde giden iki hareketlide arkadaki, her saat hızlar farkı kadar yaklaşır. Örnek: 10 km önde olan 15 km/sa’lik hareketliye 25 km/sa’lik hareketli 10 ÷ 10 = 1 saatte yetişir"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Önce ikinci aracın yola çıktığı anda birinci aracın ne kadar önde olduğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Başlangıç farkı",
+    "aciklama": "İkinci araç yola çıkarken birinci araç 1 saat yol almıştır.",
+    "islem": "40 × 1 = 40 km"
+   },
+   {
+    "baslik": "Yetişme süresi",
+    "aciklama": "Aynı yönde hızlar çıkarılır.",
+    "islem": "40 ÷ (60 − 40) = 2 saat"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I: 09.00 + 2 saat = 11.00 doğru. II: 60 × 2 = 120 km, 100 değil. III: 08.00’den 11.00’e 3 saat, doğru.",
+    "islem": "I doğru · II yanlış · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve III.",
+    "islem": "I ve III"
+   }
+  ],
+  "puf": "Öncüllü hareket sorularında önce temel büyüklüğü (süre, yol) bul, her ifadeyi bu değerle tek tek sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-09 (öncüllü hareket) · yetişme, doğru I ve III",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Öncüllü Karşılaşma",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Karşılaşma süresi, alınan yollar ve belli bir andaki uzaklığı öncüllerle sınar.",
+  "tipId": "hrb-oncullu",
+  "tip": "Öncüllü hareket yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Aralarında 280 km bulunan iki limandan iki feribot aynı anda birbirine doğru hareket ediyor. Feribotlar sabit 30 km/sa ve 40 km/sa hızla gidiyor.\nBuna göre,\nI. Feribotlar 7 saat sonra karşılaşır.\nII. Hızlı feribot, karşılaşana kadar 160 km yol alır.\nIII. Hareketten 2 saat sonra feribotlar arasındaki uzaklık 140 km’dir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "II ve III"
+  },
+  "celdiriciler": {
+   "A": "I’i doğru sanmış: yolu yalnızca hızlı feribotun hızına bölüp 7 saat bulmuş; II ve III’ü sınamamış.",
+   "B": "III’ü sınamamış ya da 2 saatte kapanan yolu 70 km sanmış.",
+   "C": "Karşılaşma süresini 7 saat bulup I’i doğru saymış, II’yi sınamamış.",
+   "E": "I’i sınamadan doğru saymış; karşılaşma 4 saat sonradır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Karşılaşma",
+    "ifade": "birbirine doğru giden iki hareketlide aradaki yol her saat hızlar toplamı kadar azalır. Örnek: 50 ve 70 km/sa ile 240 km arayla çıkanlar 240 ÷ 120 = 2 saat sonra karşılaşır"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Aradaki yol her saat toplam kaç km kısalıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yaklaşma hızı",
+    "aciklama": "Zıt yönde hızlar toplanır.",
+    "islem": "30 + 40 = 70 km/sa"
+   },
+   {
+    "baslik": "Karşılaşma süresi",
+    "aciklama": "280 ÷ 70.",
+    "islem": "4 saat"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I: 4 saat, 7 değil. II: 40 × 4 = 160 km doğru. III: 280 − 70 × 2 = 140 km doğru.",
+    "islem": "I yanlış · II doğru · III doğru"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar II ve III.",
+    "islem": "II ve III"
+   }
+  ],
+  "puf": "Karşılaşma sorularında hızlar toplamını bir kez bulup her öncülü bu değerle sına.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-09 (öncüllü hareket) · karşılaşma, doğru II ve III",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Öncüllü Ortalama Hız",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Gidiş–dönüş yolculuğunda ortalama hız, süre farkı ve toplam yol ifadelerini sınar.",
+  "tipId": "hrb-oncullu",
+  "tip": "Öncüllü hareket yorumu",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir otomobil, A ile B arasındaki 180 km’lik yolu giderken sabit 60 km/sa, aynı yoldan dönerken sabit 90 km/sa hızla gidiyor. Otomobil yolda hiç durmuyor.\nBuna göre,\nI. Otomobilin gidiş–dönüş yolculuğundaki ortalama hızı 72 km/sa’tir.\nII. Dönüş yolculuğu, gidiş yolculuğundan 1 saat kısa sürmüştür.\nIII. Otomobilin gidiş–dönüşte aldığı toplam yol 180 km’dir.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "Süre farkını sınamamış ya da gidiş–dönüş sürelerini eşit sanmış.",
+   "B": "Ortalama hızı aritmetik ortalama (75) sanıp I’i yanlış saymış.",
+   "D": "I’i doğru bulmuş ama gidiş–dönüşte toplam yolu 180 km sanıp III’ü doğru saymış; II’yi sınamamış.",
+   "E": "III’ü sınamadan doğru saymış; toplam yol 360 km’dir."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan ifadeler.",
+  "bilgi": [
+   {
+    "ad": "Ortalama hız",
+    "ifade": "ortalama hız = toplam yol ÷ toplam süre; hızların ortalaması değildir. Örnek: 60 km’yi 30 km/sa ile (2 sa), 60 km’yi 60 km/sa ile (1 sa) giden araçta ortalama 120 ÷ 3 = 40 km/sa"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Önce gidiş ve dönüş sürelerini ayrı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Süreleri bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "gidiş 180 ÷ 60 = 3 sa · dönüş 180 ÷ 90 = 2 sa"
+   },
+   {
+    "baslik": "Ortalama hız",
+    "aciklama": "Toplam yol ÷ toplam süre.",
+    "islem": "360 ÷ 5 = 72 km/sa"
+   },
+   {
+    "baslik": "Öncülleri sına",
+    "aciklama": "I: 72 km/sa doğru. II: 3 − 2 = 1 saat doğru. III: toplam yol 360 km, 180 değil.",
+    "islem": "I doğru · II doğru · III yanlış"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Doğru olanlar I ve II.",
+    "islem": "I ve II"
+   }
+  ],
+  "puf": "Gidiş–dönüşte toplam yol iki katıdır; ortalama hız hızların aritmetik ortalaması değil, toplam yolun toplam süreye bölümüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-09 (öncüllü hareket) · gidiş–dönüş, doğru I ve II",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Ortalama Hız",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yolun iki yarısı farklı hızla gidilen yolculukta ortalama hızı toplam yol ÷ toplam süre ile bulur.",
+  "tipId": "hrb-ortalama",
+  "tip": "Ortalama hız ve mola",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir kamyon, A ile B arasındaki yolun ilk yarısını sabit 30 km/sa, ikinci yarısını sabit 90 km/sa hızla gidiyor.\nBuna göre kamyonun tüm yol boyunca ortalama hızı saatte kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "45",
+   "B": "60",
+   "C": "90",
+   "D": "120",
+   "E": "2700"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "45"
+  },
+  "celdiriciler": {
+   "C": "İkinci yarıdaki hızı (90 km/sa) yazmış.",
+   "B": "Hızların aritmetik ortalamasını (30 + 90) ÷ 2 almış.",
+   "D": "İki hızı toplamış.",
+   "E": "İki hızı çarpmış."
+  },
+  "celTur": {
+   "C": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kamyonun ortalama hızı (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Ortalama hız",
+    "ifade": "ortalama hız = toplam yol ÷ toplam süre; hızların ortalaması değildir. Örnek: 60 km’yi 30 km/sa ile (2 sa), 60 km’yi 60 km/sa ile (1 sa) giden araçta ortalama 120 ÷ 3 = 40 km/sa"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Yolun uzunluğu cevabı etkiliyor mu? Her yarının süresini yolun uzunluğu cinsinden yazmayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kolay bir yol seç",
+    "aciklama": "Her yarı 90 km olsun; yol 180 km.",
+    "islem": "yarı = 90 km"
+   },
+   {
+    "baslik": "Süreleri bul",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "90 ÷ 30 = 3 sa · 90 ÷ 90 = 1 sa"
+   },
+   {
+    "baslik": "Toplam süre",
+    "aciklama": "İki süreyi topla.",
+    "islem": "3 + 1 = 4 sa"
+   },
+   {
+    "baslik": "Ortalama hız",
+    "aciklama": "Toplam yol ÷ toplam süre.",
+    "islem": "180 ÷ 4 = 45 km/sa"
+   }
+  ],
+  "puf": "Yolun yarıları farklı hızla gidilirse ortalama hız 2·v₁·v₂ ÷ (v₁ + v₂) olur; hızların aritmetik ortalaması değildir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-04 (ortalama hız) · yolun yarıları farklı hızda",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Mola",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Toplam süreden mola süresini ayırarak hareket hızını bulur.",
+  "tipId": "hrb-ortalama",
+  "tip": "Ortalama hız ve mola",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir şehirlerarası yolcu otobüsü, 360 km’lik yolu yolda verdiği tek mola dahil toplam 7 saat 30 dakikada alıyor. Mola 1 saat 30 dakika sürüyor ve otobüs hareket hâlindeyken hep aynı hızla gidiyor.\nBuna göre otobüsün hareket hâlindeki hızı saatte kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "40",
+   "B": "48",
+   "C": "60",
+   "D": "80",
+   "E": "240"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "60"
+  },
+  "celdiriciler": {
+   "A": "Mola süresini toplam süreye bir kez daha eklemiş: 360 ÷ 9.",
+   "B": "Mola süresini çıkarmamış: 360 ÷ 7,5.",
+   "D": "Mola süresini iki kez çıkarmış: 360 ÷ 4,5.",
+   "E": "Yolu yalnızca mola süresine bölmüş: 360 ÷ 1,5."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Otobüsün hareket hâlindeki hızı (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Otobüs mola sırasında yol almadığına göre hız hangi süreyle hesaplanmalı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Hareket süresi",
+    "aciklama": "Mola sırasında yol alınmaz.",
+    "islem": "7,5 − 1,5 = 6 saat"
+   },
+   {
+    "baslik": "Hız formülü",
+    "aciklama": "hız = yol ÷ hareket süresi.",
+    "islem": "360 ÷ 6"
+   },
+   {
+    "baslik": "Sonuç",
+    "aciklama": "Bölmeyi yap.",
+    "islem": "60 km/sa"
+   }
+  ],
+  "puf": "Mola süresi toplam süreye dahilse hareket hızı hesaplanırken molayı toplam süreden çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-04 (mola) · hareket hızı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Planlanan Süre",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "İki farklı hızdaki gecikmelerden yolu ve planlanan süreyi bulur.",
+  "tipId": "hrb-erkengec",
+  "tip": "Farklı hızla aynı yol (erken/geç varma, planlanan süre)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir esnaf, malları motosikletiyle depodan dükkâna taşıyor. Saatte 30 km sabit hızla giderse dükkâna planlanan saatten 40 dakika geç, saatte 40 km sabit hızla giderse 10 dakika geç varıyor. Her iki durumda da depodan aynı anda çıkıyor.\nBuna göre planlanan yolculuk süresi kaç dakikadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "60",
+   "B": "80",
+   "C": "90",
+   "D": "120",
+   "E": "160"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "80"
+  },
+  "celdiriciler": {
+   "A": "Yolun uzunluğunu (60 km) süre olarak yazmış.",
+   "C": "Yalnızca 40 km/sa ile gidiş süresini bulmuş.",
+   "D": "Yalnızca 30 km/sa ile gidiş süresini bulmuş.",
+   "E": "Gecikmeyi planlanan süreden çıkarmak yerine eklemiş: 120 + 40."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Planlanan yolculuk süresi (dakika).",
+  "bilgi": [
+   {
+    "ad": "Sabit yolda hız ve süre",
+    "ifade": "yol sabitse süre = yol ÷ hız olur; hız azalınca süre uzar. Örnek: 120 km yol 60 km/sa ile 2, 40 km/sa ile 3 saatte alınır"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Her iki durumda da planlanan varış saati aynı; gecikme miktarları arasındaki fark neyi ifade eder?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Süre farkı",
+    "aciklama": "Gecikmeler 40 dk ve 10 dk.",
+    "islem": "40 − 10 = 30 dk = 1/2 saat"
+   },
+   {
+    "baslik": "Yolu bul",
+    "aciklama": "d ÷ 30 − d ÷ 40 = 1/2.",
+    "islem": "d/120 = 1/2 → d = 60 km"
+   },
+   {
+    "baslik": "Gerçek süreler",
+    "aciklama": "30 km/sa ile 2 saat = 120 dk. 40 km/sa ile 1,5 saat = 90 dk.",
+    "islem": "120 dk · 90 dk"
+   },
+   {
+    "baslik": "Planlanan süre",
+    "aciklama": "Geç kalmayı çıkar.",
+    "islem": "120 − 40 = 80 dk (90 − 10 = 80 ✓)"
+   }
+  ],
+  "puf": "Geç ya da erken varma farkı, iki hızdaki sürelerin farkına eşittir; yolu bulunca planlanan süre geç kalmayı çıkararak bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-02 (hız değişince süre) · iki geç kalma, planlanan süre",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Navigasyon",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Kurala göre tahmin edilen ve gerçekleşen varış süresi arasındaki farkı bulur.",
+  "tipId": "hrb-yeninesil",
+  "tip": "Yeni nesil hareket: navigasyon ve dron",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir navigasyon uygulaması, tahmini varış süresini “kalan yol ÷ aracın o andaki hızı” işlemiyle hesaplamaktadır.\nSaat 10.00’da varış noktasına 150 km kalmıştır ve araç o anda 100 km/sa hızla gitmektedir. Sürücü, 10.00’dan sonraki ilk 30 dakikayı trafik nedeniyle sabit 60 km/sa hızla, kalan yolu ise sabit 100 km/sa hızla gidiyor.\nBuna göre aracın gerçek varış saati, 10.00’daki tahmini varış saatinden kaç dakika sonradır?",
+  "sekil": null,
+  "siklar": {
+   "A": "12",
+   "B": "20",
+   "C": "30",
+   "D": "72",
+   "E": "102"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "Yavaş sürüşte geri kalınan yolu (20 km) süre olarak yazmış.",
+   "C": "Yavaş gidilen süreyi gecikme sanmış.",
+   "D": "Yalnızca kalan 120 km’lik bölümün süresini bulmuş.",
+   "E": "Yavaş gidilen 30 dakika ile son bölümün süresini (72 dk) toplamış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Gerçek ve tahmini varış saatleri arasındaki fark (dakika).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Önce uygulamanın 10.00’daki tahmini süresini bul, sonra gerçek toplam süreyi hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Tahmini süre",
+    "aciklama": "kalan yol ÷ hız.",
+    "islem": "150 ÷ 100 = 1,5 saat = 90 dk"
+   },
+   {
+    "baslik": "Yavaş bölüm",
+    "aciklama": "30 dk = 0,5 saat.",
+    "islem": "60 × 0,5 = 30 km"
+   },
+   {
+    "baslik": "Kalan bölüm",
+    "aciklama": "150 − 30 = 120 km, hız 100 km/sa.",
+    "islem": "120 ÷ 100 = 1,2 saat = 72 dk"
+   },
+   {
+    "baslik": "Gerçek süre ve fark",
+    "aciklama": "30 dk + 72 dk = 102 dk.",
+    "islem": "102 − 90 = 12 dk"
+   }
+  ],
+  "puf": "Kural verilen sorularda önce kuralı verilen duruma uygula, sonra gerçek durumu ayrı hesaplayıp karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-08 (navigasyon) · tahmini varış ile gerçek varış farkı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Geç Başlayan Koşucu",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Çembersel pistte geç başlayan zıt yönlü koşucunun karşılaşma süresini başlangıç farkını kullanarak bulur.",
+  "tipId": "hrb-cember",
+  "tip": "Çembersel pistte karşılaşma ve yetişme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Çevresi 800 m olan dairesel bir koşu pistinde Kaan, bir noktadan sabit 4 m/sn hızla koşmaya başlıyor. Kaan’dan 40 saniye sonra Mira, aynı noktadan Kaan’a zıt yönde sabit 6 m/sn hızla koşmaya başlıyor.\nBuna göre Kaan ile Mira, Mira koşuya başladıktan kaç saniye sonra ilk kez karşılaşır?",
+  "sekil": null,
+  "siklar": {
+   "A": "64",
+   "B": "80",
+   "C": "104",
+   "D": "320",
+   "E": "400"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "64"
+  },
+  "celdiriciler": {
+   "E": "Zıt yön yerine aynı yönde, başlangıç farkını da yok sayarak 800 ÷ 2 hesaplamış.",
+   "B": "Kaan’ın 40 saniyede koştuğunu unutup çevreyi hızlar toplamına bölmüş.",
+   "C": "Bulduğu 64 saniyeye Kaan’ın başlangıç süresini (40 sn) eklemiş.",
+   "D": "Zıt yön yerine aynı yönmüş gibi hızları çıkarmış: 640 ÷ 2."
+  },
+  "celTur": {
+   "E": "bilgi",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Mira’nın koşuya başlamasından ilk karşılaşmaya kadar geçen süre (sn).",
+  "bilgi": [
+   {
+    "ad": "Çembersel pist",
+    "ifade": "dairesel parkurda aynı noktadan zıt yöne çıkanlar, aralarındaki yol çevre kadar kapandığında karşılaşır (hızlar toplamı). Aynı yöne çıkanlar, hızlı olan yavaşı bir çevre kadar kazandığında yetişir (hızlar farkı). Örnek: çevre 100 m, hızlar 3 ve 2 m/sn ise zıt yönde 100 ÷ 5 = 20 sn, aynı yönde 100 ÷ 1 = 100 sn"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "Mira başladığında Kaan başlangıç noktasından ne kadar uzaklaşmış, aralarında (zıt yönden) kalan yol ne kadardır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kaan’ın ilk yolu",
+    "aciklama": "Mira başlarken Kaan 40 sn koşmuştur.",
+    "islem": "4 × 40 = 160 m"
+   },
+   {
+    "baslik": "Aradaki yol",
+    "aciklama": "Mira zıt yönde olduğundan aralarındaki yol çevreden bu kadar eksiktir.",
+    "islem": "800 − 160 = 640 m"
+   },
+   {
+    "baslik": "Yaklaşma hızı",
+    "aciklama": "Zıt yönde hızlar toplanır.",
+    "islem": "4 + 6 = 10 m/sn"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "640 ÷ 10.",
+    "islem": "64 sn"
+   }
+  ],
+  "puf": "Geç başlayan olduğunda erken başlayanın aldığı yolu bul, aralarındaki yolu çevreden (zıt yönde) ya da doğrudan farktan hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-05 (çembersel pist) · geç başlayan, zıt yön",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0025",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Kargo Dronu",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yer hızı kuralını iki yönlü uçuşa uygulayarak dronun rüzgârsız hızını ve süreyi bulur.",
+  "tipId": "hrb-yeninesil",
+  "tip": "Yeni nesil hareket: navigasyon ve dron",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir dronun yere göre hızı, rüzgârla aynı yönde uçarken dronun kendi hızı ile rüzgâr hızının toplamına, rüzgâra karşı uçarken bu iki hızın farkına eşittir.\nSabit hızla uçan bir kargo dronu, 1440 m uzaklıktaki iki nokta arasında rüzgârla aynı yönde 60 saniyede, rüzgâra karşı 90 saniyede uçuyor. Rüzgârın hızı da sabittir.\nBuna göre aynı dron, rüzgârsız havada 2400 m’yi kaç saniyede uçar?",
+  "sekil": null,
+  "siklar": {
+   "A": "120",
+   "B": "125",
+   "C": "150",
+   "D": "300",
+   "E": "600"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "D": "İki yer hızının farkını (8 m/sn) dronun hızı sanmış.",
+   "B": "2400 m için iki yer hızıyla süreleri bulup (100 sn ve 150 sn) ortalamasını (125) almış.",
+   "C": "Yalnızca rüzgâra karşı yer hızını (16 m/sn) kullanmış.",
+   "E": "Rüzgâr hızını (4 m/sn) dronun kendi hızı sanmış."
+  },
+  "celTur": {
+   "D": "bilgi",
+   "B": "islem",
+   "C": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Rüzgârsız havada 2400 m için geçen süre (sn).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Akıntı",
+    "ifade": "akıntı yönünde hız = tekne hızı + akıntı hızı; akıntıya karşı hız = tekne hızı − akıntı hızı. Örnek: tekne 10 km/sa, akıntı 2 km/sa ise yön boyunca 12, karşı yönde 8 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "İki yöndeki yer hızlarını bulup dronun kendi hızıyla rüzgâr hızını ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yer hızları",
+    "aciklama": "hız = yol ÷ süre.",
+    "islem": "rüzgârla 1440 ÷ 60 = 24 · rüzgâra karşı 1440 ÷ 90 = 16 m/sn"
+   },
+   {
+    "baslik": "Denklemleri yaz",
+    "aciklama": "Dron hızı v, rüzgâr hızı w.",
+    "islem": "v + w = 24 · v − w = 16"
+   },
+   {
+    "baslik": "Dronun hızı",
+    "aciklama": "Taraf tarafa topla.",
+    "islem": "2v = 40 → v = 20 m/sn"
+   },
+   {
+    "baslik": "Süreyi bul",
+    "aciklama": "Rüzgârsız havada hız 20 m/sn.",
+    "islem": "2400 ÷ 20 = 120 sn"
+   }
+  ],
+  "puf": "Yer hızı iki yönde verilirse iki hızın ortalaması (toplamının yarısı) kaynağın kendi hızıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-08 (kargo dronu) · rüzgâr yönü ve karşı yön",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0026",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Yolun Bölümleri",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Yolun üç bölümü farklı hızlarla gidildiğinde toplam süreden yolu bulur.",
+  "tipId": "hrb-temel",
+  "tip": "Yol–hız–zaman ve birim çevirme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir otomobil, bir yolun ilk yarısını sabit 40 km/sa, sonraki 1/4’ünü sabit 60 km/sa, son 1/4’ünü sabit 120 km/sa hızla gidiyor ve tüm yolu toplam 6 saatte alıyor.\nBuna göre yolun uzunluğu kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "240",
+   "B": "320",
+   "C": "360",
+   "D": "390",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "320"
+  },
+  "celdiriciler": {
+   "A": "Tüm yolu ilk hızla gidilmiş sanmış: 40 × 6.",
+   "C": "Tüm yolu ikinci hızla gidilmiş sanmış: 60 × 6.",
+   "D": "Hızların yol kesirlerine göre ağırlıklı ortalamasını (65 km/sa) süreyle çarpmış.",
+   "E": "Tüm yolu en yüksek hızla gidilmiş sanmış: 120 × 6."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yolun uzunluğu (km).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Sabit yolda hız ve süre",
+    "ifade": "yol sabitse süre = yol ÷ hız olur; hız azalınca süre uzar. Örnek: 120 km yol 60 km/sa ile 2, 40 km/sa ile 3 saatte alınır"
+   }
+  ],
+  "ipuclari": [
+   "Yolun uzunluğuna x diyerek üç bölümün sürelerini x cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bölümleri yaz",
+    "aciklama": "Yol x km olsun.",
+    "islem": "x/2 · x/4 · x/4"
+   },
+   {
+    "baslik": "Süreleri yaz",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "(x/2) ÷ 40 = x/80 · (x/4) ÷ 60 = x/240 · (x/4) ÷ 120 = x/480"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Toplam süre 6 saat; paydayı 480’de eşitle.",
+    "islem": "(6x + 2x + x)/480 = 6"
+   },
+   {
+    "baslik": "Yolu bul",
+    "aciklama": "9x/480 = 6.",
+    "islem": "x = 320 km"
+   }
+  ],
+  "puf": "Yolun bölümleri farklı hızla gidiliyorsa her bölümün süresini yolun uzunluğu x cinsinden yazıp toplam süreye eşitle.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-01 (yol–hız–zaman) · yolun 1/2, 1/4, 1/4 bölümleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0027",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · İkinci Yarı Hızı",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Planlanan süreyi koruyabilmek için kalan yarının hızını süre bütçesinden bulur.",
+  "tipId": "hrb-erkengec",
+  "tip": "Farklı hızla aynı yol (erken/geç varma, planlanan süre)",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir otobüs, 180 km uzunluğundaki yolu sabit 60 km/sa hızla 3 saatte almayı planlıyor. Otobüs yolun ilk yarısını sabit 45 km/sa hızla gidiyor.\nBuna göre otobüs toplam süreyi 3 saatte tutabilmek için yolun kalan yarısını kaç km/sa sabit hızla gitmelidir?",
+  "sekil": null,
+  "siklar": {
+   "A": "45",
+   "B": "60",
+   "C": "75",
+   "D": "90",
+   "E": "105"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "İlk yarıdaki hızı (45 km/sa) tekrar yazmış.",
+   "B": "Planlanan hıza (60 km/sa) dönmenin yeterli olduğunu sanmış.",
+   "C": "Ortalama 60 olsun diye (45 + x) ÷ 2 = 60 yazarak 75 bulmuş.",
+   "E": "İki hızı toplamış: 60 + 45."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Yolun ikinci yarısındaki hız (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   },
+   {
+    "ad": "Ortalama hız",
+    "ifade": "ortalama hız = toplam yol ÷ toplam süre; hızların ortalaması değildir. Örnek: 60 km’yi 30 km/sa ile (2 sa), 60 km’yi 60 km/sa ile (1 sa) giden araçta ortalama 120 ÷ 3 = 40 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Toplam süre sabit kaldığına göre ilk yarıya harcanan süre, ikinci yarıya ne kadar süre bırakır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yarı yol",
+    "aciklama": "180 km’nin yarısı.",
+    "islem": "90 km"
+   },
+   {
+    "baslik": "İlk yarının süresi",
+    "aciklama": "süre = yol ÷ hız.",
+    "islem": "90 ÷ 45 = 2 saat"
+   },
+   {
+    "baslik": "Kalan süre",
+    "aciklama": "Toplam süre 3 saat.",
+    "islem": "3 − 2 = 1 saat"
+   },
+   {
+    "baslik": "Gerekli hız",
+    "aciklama": "İkinci yarı 90 km, süre 1 saat.",
+    "islem": "90 ÷ 1 = 90 km/sa"
+   }
+  ],
+  "puf": "Ortalama hız hızların aritmetik ortalaması değildir; belirli bir toplam süre isteniyorsa süre bütçesi üzerinden hesap yap.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-02 (planlanan süre) · ikinci yarıda gerekli hız",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0028",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Aynı Yönde Geçiş",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Aynı yönde giden iki trenin geçiş süresinden hızı bulur.",
+  "tipId": "hrb-tunel",
+  "tip": "Tren, tünel ve köprü",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Boyu 150 m olan bir yolcu treni, paralel raylarda aynı yönde sabit 36 km/sa hızla giden boyu 250 m olan bir yük trenini geçiyor. Yolcu treninin ön ucu yük treninin arka ucuyla yan yana geldiği andan, yolcu treninin arka ucu yük treninin ön ucuyla yan yana geldiği ana kadar 20 saniye geçiyor.\nBuna göre yolcu treninin hızı saatte kaç kilometredir?",
+  "sekil": null,
+  "siklar": {
+   "A": "30",
+   "B": "36",
+   "C": "63",
+   "D": "72",
+   "E": "108"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "108"
+  },
+  "celdiriciler": {
+   "A": "Hızı m/sn olarak bulup km/sa’ya çevirmemiş.",
+   "B": "Hızları toplanıyormuş gibi (v + 10 = 20) kurup 10 m/sn = 36 km/sa bulmuş; bu yük treninin hızına eşit çıkar ve geçiş olamaz.",
+   "C": "Toplam boy yerine yalnızca yolcu treninin boyunu (150 m) almış.",
+   "D": "Hız farkını (20 m/sn) yolcu treninin hızı sanıp km/sa’ya çevirmiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi"
+  },
+  "istenen": "Yolcu treninin hızı (km/sa).",
+  "bilgi": [
+   {
+    "ad": "Uzunluklu cisim",
+    "ifade": "tren gibi boyu olan bir cismin tünel ya da köprüyü tamamen geçmesi için aldığı yol, tren boyu + tünel boyu kadardır. Örnek: 100 m’lik tren 200 m’lik tüneli 20 m/sn ile (100 + 200) ÷ 20 = 15 sn’de geçer"
+   },
+   {
+    "ad": "Yetişme",
+    "ifade": "aynı yönde giden iki hareketlide arkadaki, her saat hızlar farkı kadar yaklaşır. Örnek: 10 km önde olan 15 km/sa’lik hareketliye 25 km/sa’lik hareketli 10 ÷ 10 = 1 saatte yetişir"
+   },
+   {
+    "ad": "Birim çevirme",
+    "ifade": "1 km = 1000 m ve 1 saat = 3600 sn; 1 saat = 60 dakika. Örnek: 30 dakika = 30/60 = 0,5 saattir; 1 m/sn = 3600/1000 = 3,6 km/sa"
+   }
+  ],
+  "ipuclari": [
+   "Geçiş boyunca yolcu treni yük trenine göre ne kadar yol almıştır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Göreli yol",
+    "aciklama": "Geçiş için iki trenin boyları toplanır.",
+    "islem": "150 + 250 = 400 m"
+   },
+   {
+    "baslik": "Göreli hız",
+    "aciklama": "400 m, 20 sn’de alınır.",
+    "islem": "400 ÷ 20 = 20 m/sn (hızlar farkı)"
+   },
+   {
+    "baslik": "Yük treninin hızı",
+    "aciklama": "36 km/sa ÷ 3,6.",
+    "islem": "10 m/sn"
+   },
+   {
+    "baslik": "Yolcu treninin hızı",
+    "aciklama": "Fark + yük treni hızı.",
+    "islem": "20 + 10 = 30 m/sn = 108 km/sa"
+   }
+  ],
+  "puf": "Aynı yönde geçişte alınan yol boyların toplamı, süreye bölününce hızlar farkını verir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-06 (iki tren) · aynı yönde geçiş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-hareketiki-0029",
+  "ders": "TYT Matematik",
+  "konu": "Hareket Hız Problemleri · Dönüşte Karşılaşma",
+  "k": "prob|Hareket Hız Problemleri",
+  "kazanim": "Varış noktasında dönen hareketlinin yeniden karşılaşma noktasını iki aşamada bulur.",
+  "tipId": "hrb-karsilasma",
+  "tip": "Karşılaşma ve yetişme",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "A kentinden B kentine uzanan 120 km’lik yolda iki kamyon aynı anda A’dan, B’ye doğru yola çıkıyor. Birinci kamyon sabit 40 km/sa, ikinci kamyon sabit 60 km/sa hızla gidiyor. İkinci kamyon B’ye varır varmaz bekleme yapmadan aynı yoldan sabit 60 km/sa hızla A’ya doğru dönüyor.\nBuna göre kamyonlar karşılaştıklarında karşılaşma noktası B’ye kaç km uzaklıktadır?",
+  "sekil": null,
+  "siklar": {
+   "A": "16",
+   "B": "24",
+   "C": "40",
+   "D": "80",
+   "E": "96"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "24"
+  },
+  "celdiriciler": {
+   "A": "Birinci kamyonun, ikinci kamyon döndükten sonra aldığı yolu bulmuş.",
+   "C": "İkinci kamyon B’ye vardığı anda aralarındaki uzaklığı bulup durmuş.",
+   "D": "İkinci kamyon B’ye vardığı anda birinci kamyonun aldığı yolu yazmış.",
+   "E": "Karşılaşma noktasının A’dan uzaklığını bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Karşılaşma noktasının B’ye uzaklığı (km).",
+  "bilgi": [
+   {
+    "ad": "Karşılaşma",
+    "ifade": "birbirine doğru giden iki hareketlide aradaki yol her saat hızlar toplamı kadar azalır. Örnek: 50 ve 70 km/sa ile 240 km arayla çıkanlar 240 ÷ 120 = 2 saat sonra karşılaşır"
+   },
+   {
+    "ad": "Yol, hız, zaman",
+    "ifade": "yol = hız × zaman. Örnek: saatte 60 km hızla 3 saatte 60 × 3 = 180 km gidilir"
+   }
+  ],
+  "ipuclari": [
+   "İkinci kamyon B’ye vardığında birinci kamyon A’dan ne kadar yol almıştır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "B’ye varış süresi",
+    "aciklama": "120 ÷ 60.",
+    "islem": "2 saat"
+   },
+   {
+    "baslik": "Birinci kamyonun yeri",
+    "aciklama": "2 saatte alınan yol.",
+    "islem": "40 × 2 = 80 km (B’ye 40 km kalır)"
+   },
+   {
+    "baslik": "Karşılaşma süresi",
+    "aciklama": "Şimdi iki kamyon birbirine doğru gidiyor, aradaki yol 40 km.",
+    "islem": "40 ÷ (40 + 60) = 2/5 saat"
+   },
+   {
+    "baslik": "B’ye uzaklık",
+    "aciklama": "İkinci kamyon dönüşte 2/5 saat gider.",
+    "islem": "60 × 2/5 = 24 km"
+   }
+  ],
+  "puf": "Dönüş yapan hareketlide dönüş anını yeni başlangıç say; o anki uzaklığı zıt yönlü karşılaşma gibi çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-HRB-03 (karşılaşma) · hızlı araç dönüyor",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

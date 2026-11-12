@@ -1,0 +1,1951 @@
+[
+ {
+  "id": "tytmat-karzarariki-0001",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Kâr Yüzdesi",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Alış ve satış fiyatından kâr yüzdesini bulur.",
+  "tipId": "kzb-temel",
+  "tip": "Alış, satış, kâr ve zarar yüzdesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir market, tanesini 24 TL’ye aldığı makarnayı 30 TL’ye satmaktadır.\nBuna göre marketin bu satıştaki kâr yüzdesi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "6",
+   "B": "20",
+   "C": "25",
+   "D": "80",
+   "E": "125"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "25"
+  },
+  "celdiriciler": {
+   "B": "Kârı (6 TL) satış fiyatına (30 TL) bölmüş. Kâr yüzdesi alış fiyatına göredir.",
+   "A": "Kâr tutarını (6 TL) yüzde olarak yazmış.",
+   "D": "Alış fiyatını satış fiyatına bölüp (24/30) bunu kâr yüzdesi sanmış.",
+   "E": "Satış fiyatını alışa bölüp (30/24) kâr yüzdesi sanmış; satışın alışa oranı 125’tir, kâr 25 puandır."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "A": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Marketin kâr yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Kâr yüzdesi hangi fiyata göre hesaplanır? Önce kârın kaç TL olduğunu bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kârı bul",
+    "aciklama": "Kâr, satış fiyatı ile alış fiyatı arasındaki farktır.",
+    "islem": "30 − 24 = 6 TL"
+   },
+   {
+    "baslik": "Alışa oranla",
+    "aciklama": "Kâr yüzdesi alış fiyatına göre bulunur.",
+    "islem": "6/24 = 1/4"
+   },
+   {
+    "baslik": "Yüzdeye çevir",
+    "aciklama": "Kesri yüzde olarak yaz.",
+    "islem": "1/4 = %25"
+   }
+  ],
+  "puf": "Kâr yüzdesini bulurken kârı her zaman alış fiyatına böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-01 (alış–satış → kâr yüzdesi) · market, makarna",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0002",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Zarar Tutarı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Zarar yüzdesi ve satış fiyatından alış fiyatını ve zarar tutarını bulur.",
+  "tipId": "kzb-temel",
+  "tip": "Alış, satış, kâr ve zarar yüzdesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir elektrikli ev aletleri mağazası, bir ütüyü %10 zararla 1260 TL’ye satmıştır.\nBuna göre mağaza bu satıştan kaç TL zarar etmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "126",
+   "B": "140",
+   "C": "1134",
+   "D": "1386",
+   "E": "1400"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "140"
+  },
+  "celdiriciler": {
+   "A": "1260’ın %10’unu almış; zarar yüzdesi alış fiyatına göredir, satış fiyatına göre değil.",
+   "C": "Satıştan %10 düşüp (1260 − 126) alışı satıştan küçük sanmış; zararda alış, satıştan büyüktür.",
+   "D": "1260’a %10 ekleyip alış fiyatı sanmış; alış, satışın 1/0,9 katıdır.",
+   "E": "Alış fiyatını (1400 TL) bulup zararı hesaplamayı unutmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Mağazanın zararı (TL).",
+  "bilgi": [
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Satış fiyatı, alış fiyatının yüzde kaçıdır? Önce alış fiyatını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satışı alışla yaz",
+    "aciklama": "Alış x olsun; %10 zararla satış alışın %90’ıdır.",
+    "islem": "0,9 × x = 1260"
+   },
+   {
+    "baslik": "Alışı bul",
+    "aciklama": "Denklemi çöz.",
+    "islem": "x = 1260 ÷ 0,9 = 1400 TL"
+   },
+   {
+    "baslik": "Zararı bul",
+    "aciklama": "Zarar, alış ile satış farkıdır.",
+    "islem": "1400 − 1260 = 140 TL"
+   }
+  ],
+  "puf": "Zararda satış, alışın (100 − p) yüzdesidir; alışı bulmadan zarar tutarı bulunmaz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-01 (zarar yüzdesi, satıştan zarar) · ütü",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0003",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Hedef Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Alış fiyatı ve kâr yüzdesinden satış fiyatını bulur.",
+  "tipId": "kzb-temel",
+  "tip": "Alış, satış, kâr ve zarar yüzdesi",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir atölye, maliyeti 1500 TL olan bir ahşap masayı maliyetinin %20’si kadar kârla satmak istemektedir.\nBuna göre masanın satış fiyatı kaç TL olmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "1200",
+   "C": "1800",
+   "D": "1875",
+   "E": "2100"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1800"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca kârı (300 TL) bulup satış fiyatı sanmış.",
+   "B": "Maliyetin %80’ini almış; kârda satış fiyatı maliyetten büyüktür.",
+   "D": "Maliyeti 0,8’e bölmüş; kârı satış fiyatının %20’si saymış. Soruda kâr maliyete göredir.",
+   "E": "Kârı iki kez ekleyerek 1500 + 300 + 300 bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Masanın satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   }
+  ],
+  "ipuclari": [
+   "Kâr yüzdesi hangi fiyata göre verilmiş? Önce kâr tutarını TL olarak bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kâr tutarını bul",
+    "aciklama": "Kâr maliyetin %20’sidir.",
+    "islem": "1500 × 0,2 = 300 TL"
+   },
+   {
+    "baslik": "Satışa ekle",
+    "aciklama": "Satış = maliyet + kâr.",
+    "islem": "1500 + 300 = 1800 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Satış maliyetin %120’sidir.",
+    "islem": "1500 × 1,2 = 1800 ✓"
+   }
+  ],
+  "puf": "Kâr maliyetin yüzdesi olarak verilmişse satış = maliyet × (1 + p/100) yazılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-01 (hedef kâr → satış fiyatı) · ahşap masa",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0004",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Üç Al İki Öde",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "“3 al 2 öde” kampanyasında ödenecek tutarı bulur.",
+  "tipId": "kzb-kampanya",
+  "tip": "Kampanya ve taksit",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir markette tanesi 48 TL olan bisküvi paketlerinde “3 al 2 öde” kampanyası vardır. Kampanya her üçlü grup için ayrı ayrı geçerlidir; üçlü grubu tamamlamayan paketler için indirim yoktur.\nBuna göre bu marketten 10 paket bisküvi alan bir müşteri toplam kaç TL öder?",
+  "sekil": null,
+  "siklar": {
+   "A": "288",
+   "B": "320",
+   "C": "336",
+   "D": "384",
+   "E": "480"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "336"
+  },
+  "celdiriciler": {
+   "A": "Kalan 1 paketi unutup yalnızca 3 grubun bedelini (6 paket) ödemiş.",
+   "B": "Kampanyayı 10 pakete orantılı uygulayıp 10 × 2/3 paket saymış; gruplar tam sayıdır.",
+   "D": "Yalnız 2 tam grup görüp (10 = 3 + 3 + 4) 2 × 2 + 4 = 8 paket bedeli ödemiş.",
+   "E": "Kampanyayı hiç uygulamamış (10 × 48)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Müşterinin ödeyeceği toplam tutar (TL).",
+  "bilgi": [
+   {
+    "ad": "Kampanya hesabı",
+    "ifade": "kampanya gruplarını sayıp ödenecek ürün sayısını bul. Örnek: “3 al 2 öde”de 6 ürün alan 4 ürün bedeli öder; “ikincisi %50” kampanyasında 2 ürünün bedeli 1 + 0,5 = 1,5 ürün bedelidir"
+   }
+  ],
+  "ipuclari": [
+   "10 paketin kaçı üçlü gruplara girer? Her gruptan ve kalandan kaç paketin parası ödenir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Grupları say",
+    "aciklama": "10 = 3 + 3 + 3 + 1; üç tam grup vardır.",
+    "islem": "3 grup + 1 paket"
+   },
+   {
+    "baslik": "Ödenen paketi bul",
+    "aciklama": "Her grupta 2 paket, kalan 1 paket ücretlidir.",
+    "islem": "3 × 2 + 1 = 7 paket"
+   },
+   {
+    "baslik": "Tutarı hesapla",
+    "aciklama": "Ödenen paket sayısı × fiyat.",
+    "islem": "7 × 48 = 336 TL"
+   }
+  ],
+  "puf": "Kampanyalarda önce tam grupları say; kalan ürünler tam fiyattan ödenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-03 (3 al 2 öde) · bisküvi, 10 paket",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0005",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Taksit Tutarı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Peşin fiyata vade farkı ekleyerek aylık taksit tutarını bulur.",
+  "tipId": "kzb-kampanya",
+  "tip": "Kampanya ve taksit",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Peşin fiyatı 12 000 TL olan bir çamaşır makinesi, taksitli satışta peşin fiyatın %15 fazlasına 6 eşit taksitle satılmaktadır.\nBuna göre aylık taksit tutarı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "300",
+   "B": "1800",
+   "C": "2000",
+   "D": "2300",
+   "E": "3800"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "2300"
+  },
+  "celdiriciler": {
+   "A": "Yalnız vade farkını (1800 TL) taksit sayısına bölmüş.",
+   "E": "Vade farkının tamamını (1800 TL) her taksite eklemiş: 2000 + 1800.",
+   "B": "Vade farkını (peşin fiyatın %15’i) taksit tutarı sanmış.",
+   "C": "Peşin fiyatı 6’ya bölmüş; vade farkını eklememiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "E": "islem",
+   "B": "dikkat",
+   "C": "dikkat"
+  },
+  "istenen": "Aylık taksit tutarı (TL).",
+  "bilgi": [
+   {
+    "ad": "Taksitli satış",
+    "ifade": "taksitli toplam ödeme = peşin fiyat + vade farkı; aylık taksit = toplam ÷ taksit sayısı. Örnek: peşin 1000 TL, %20 vade farkı, 5 taksit → 1200 ÷ 5 = 240 TL"
+   }
+  ],
+  "ipuclari": [
+   "Taksitli satışta toplam ödenecek tutar peşin fiyatın kaç katıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam ödemeyi bul",
+    "aciklama": "Taksitli fiyat peşin fiyatın %115’idir.",
+    "islem": "12 000 × 1,15 = 13 800 TL"
+   },
+   {
+    "baslik": "Taksitlere böl",
+    "aciklama": "6 eşit taksit.",
+    "islem": "13 800 ÷ 6 = 2300 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "6 taksit toplamı vade farkıyla peşini verir.",
+    "islem": "6 × 2300 = 13 800 = 12 000 + 1800 ✓"
+   }
+  ],
+  "puf": "Vade farkı peşin fiyata eklenir, toplam taksit sayısına bölünür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-03 (peşin–taksit farkı) · çamaşır makinesi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0006",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Maliyetine Satış",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Etiket fiyatının alıştan fazlalığı verilen ürün için maliyetine satış indirimini bulur.",
+  "tipId": "kzb-etiket",
+  "tip": "Etiket fiyatı, indirim ve kâr",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir mağaza, bir ürünün etiket fiyatını alış fiyatının %25 fazlası olarak belirlemiştir.\nMağaza bu ürünü etiket fiyatı üzerinden yüzde kaç indirimle satarsa ürünü maliyetine satmış olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "25",
+   "C": "75",
+   "D": "80",
+   "E": "125"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "B": "İndirim yüzdesini etiketteki fazlalık yüzdesine eşit sanmış; indirim etiket fiyatına göredir.",
+   "C": "Etiketin %25 fazla olmasından alışın etiketin %75’i olduğunu çıkarmış.",
+   "D": "Alışın etiketin %80’i olduğunu bulup 80’i indirim yüzdesi sanmış.",
+   "E": "Etiketin alışa oranı olan %125’i indirim yüzdesi sanmış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Maliyetine satış için gereken indirim yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   }
+  ],
+  "ipuclari": [
+   "Alış fiyatına bir değer ver (örneğin 100 TL) ve etiketi bu değerden hesapla. İndirim hangi fiyata göre yüzde olarak alınıyor?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Fiyatları yaz",
+    "aciklama": "Alış 100 TL ise etiket 125 TL.",
+    "islem": "alış = 100 · etiket = 125"
+   },
+   {
+    "baslik": "Satışı alışa eşitle",
+    "aciklama": "Maliyetine satış: satış fiyatı alışa eşit.",
+    "islem": "satış = 100 TL"
+   },
+   {
+    "baslik": "İndirimi hesapla",
+    "aciklama": "İndirim etiket fiyatına oranlanır.",
+    "islem": "(125 − 100)/125 = 25/125 = 1/5 = %20"
+   }
+  ],
+  "puf": "İndirim her zaman etiket fiyatına göre hesaplanır; alış fiyatına bir değer vererek çarpanları somutlaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-02 (maliyetine satış sınırı) · etiket %25 fazla",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0007",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · İki İndirim ve Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Etiket fiyatına ardışık iki indirim uygulanan ürünün kâr yüzdesini bulur.",
+  "tipId": "kzb-etiket",
+  "tip": "Etiket fiyatı, indirim ve kâr",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Alış fiyatı 2500 TL, etiket fiyatı 5000 TL olan bir tablet bilgisayara mağaza önce %20 indirim yapmıştır. Daha sonra kasada, indirimli fiyat üzerinden ayrıca %15 indirim uygulanmıştır.\nBuna göre mağaza bu satıştan yüzde kaç kâr etmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "32",
+   "B": "35",
+   "C": "36",
+   "D": "60",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "36"
+  },
+  "celdiriciler": {
+   "A": "Toplam indirimi (%32) hesaplayıp kâr yüzdesi sanmış.",
+   "B": "İki indirim yüzdesini toplayıp (20 + 15) bunu kâr yüzdesi sanmış.",
+   "D": "Yalnız ilk indirimi uygulamış: 4000 − 2500 = 1500, kâr %60.",
+   "E": "Etiketin alışa göre fazlalığını (%100) kâr yüzdesi sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Mağazanın kâr yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Ardışık indirim",
+    "ifade": "ikinci indirim, birinci indirimli fiyat üzerinden yapılır; yüzdeler toplanmaz, çarpanlar çarpılır. Örnek: önce %20, sonra %10 indirim → 0,8 × 0,9 = 0,72 (toplam %28 indirim)"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "İkinci indirimin hangi fiyat üzerinden yapıldığına dikkat et; son satış fiyatını bulduktan sonra alışla karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "İlk indirim",
+    "aciklama": "Etiketin %80’i.",
+    "islem": "5000 × 0,8 = 4000 TL"
+   },
+   {
+    "baslik": "İkinci indirim",
+    "aciklama": "İndirimli fiyatın %85’i.",
+    "islem": "4000 × 0,85 = 3400 TL"
+   },
+   {
+    "baslik": "Kârı bul",
+    "aciklama": "Satış − alış.",
+    "islem": "3400 − 2500 = 900 TL"
+   },
+   {
+    "baslik": "Yüzdeye çevir",
+    "aciklama": "Kâr alışa oranlanır.",
+    "islem": "900/2500 = 0,36 = %36"
+   }
+  ],
+  "puf": "Ardışık indirimlerde her indirim bir önceki fiyat üzerinden yapılır; kâr yüzdesi son satış fiyatıyla alıştan bulunur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-02 (ardışık indirim → kâr yüzdesi) · tablet",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0008",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Eşit Satış Fiyatı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "İki ürünü eşit fiyata biri kârla biri zararla satan satıcının toplam sonucunu bulur.",
+  "tipId": "kzb-ikiurun",
+  "tip": "İki ürün: kâr ve zarar birlikte",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "İkinci el eşya alım satımı yapan bir satıcı, iki saatin her birini 1200 TL’ye satmıştır. Saatlerden birini %20 kârla, diğerini %20 zararla sattığına göre satıcı bu iki satıştan toplam kaç TL zarar etmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "96",
+   "B": "100",
+   "C": "200",
+   "D": "240",
+   "E": "300"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Kâr–zarar farkı %4 diye ezberleyip alış toplamı (2500) yerine satış toplamının (2400) %4’ünü almış.",
+   "C": "Yalnız kârlı satıştaki kârı (200 TL) zarar sanmış.",
+   "D": "Satış fiyatının %20’sini (240 TL) toplam zarar sanmış.",
+   "E": "Yalnız zararlı satıştaki zararı (300 TL) bulup bırakmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Satıcının toplam zararı (TL).",
+  "bilgi": [
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Her saatin alış fiyatını satıştan ayrı ayrı hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kârlı saatin alışı",
+    "aciklama": "Satış, alışın %120’si.",
+    "islem": "1,2 × x = 1200 → x = 1000 TL"
+   },
+   {
+    "baslik": "Zararlı saatin alışı",
+    "aciklama": "Satış, alışın %80’i.",
+    "islem": "0,8 × y = 1200 → y = 1500 TL"
+   },
+   {
+    "baslik": "Toplamları karşılaştır",
+    "aciklama": "Alış toplamı ile satış toplamı.",
+    "islem": "alış: 1000 + 1500 = 2500 · satış: 2 × 1200 = 2400"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Alış satıştan fazla.",
+    "islem": "2500 − 2400 = 100 TL zarar"
+   }
+  ],
+  "puf": "Aynı satış fiyatıyla eşit yüzdede kâr ve zarar, alışlar farklı olduğu için sonuçta zarar bırakır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-04 (aynı satış, %20 kâr–%20 zarar) · ikinci el saat",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0009",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Fire ve Hedef Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Satılamayan mal olduğunda hedef kâr için satış fiyatını bulur.",
+  "tipId": "kzb-toplu",
+  "tip": "Toplu alım, fire ve parça satış",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir market, tanesini 6 TL’den 400 yumurta satın almıştır. Yumurtalardan 80’i kırıldığı için satılamamıştır. Market, sağlam kalan yumurtaların hepsini aynı fiyattan satacak ve yumurtalara ödediği paranın tamamına göre %20 kâr elde etmek istemektedir.\nBuna göre bir yumurta kaç TL’ye satılmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "7,2",
+   "B": "8,4",
+   "C": "8,64",
+   "D": "9",
+   "E": "9,375"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "9"
+  },
+  "celdiriciler": {
+   "A": "Kırık yumurtaları hesaba katmamış; 6 × 1,2 = 7,2 TL bulmuş.",
+   "B": "Kırık yüzdesini (%20) kâr yüzdesine (%20) ekleyip %40 kâr hesaplamış: 6 × 1,4 = 8,4.",
+   "C": "7,2 TL’ye ayrıca %20 kırık payı eklemiş: 7,2 × 1,2 = 8,64.",
+   "E": "Kârı satış gelirinin %20’si sanmış: (2400 ÷ 0,8) ÷ 320 = 9,375."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "islem",
+   "E": "bilgi"
+  },
+  "istenen": "Bir yumurtanın satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satılamayan mal",
+    "ifade": "alış bedeli, satın alınan tüm mal için ödenmiştir; kâr hesabında satılamayan malın bedeli de maliyete dahildir. Örnek: 100 adet 5 TL’den alınıp 10’u satılamazsa maliyet 500 TL, satılan adet 90’dır"
+   }
+  ],
+  "ipuclari": [
+   "Toplam maliyet kaç TL? Satış geliri bu maliyetin kaç katı olmalı ve gelir kaç yumurtadan elde edilecek?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Maliyeti bul",
+    "aciklama": "Tüm yumurtalar için ödenen para.",
+    "islem": "400 × 6 = 2400 TL"
+   },
+   {
+    "baslik": "Hedef geliri bul",
+    "aciklama": "Kâr %20 olacak.",
+    "islem": "2400 × 1,2 = 2880 TL"
+   },
+   {
+    "baslik": "Satılacak yumurta",
+    "aciklama": "Kırıklar satılamaz.",
+    "islem": "400 − 80 = 320 yumurta"
+   },
+   {
+    "baslik": "Fiyatı bul",
+    "aciklama": "Geliri satılan yumurtaya böl.",
+    "islem": "2880 ÷ 320 = 9 TL"
+   }
+  ],
+  "puf": "Satılamayan mal maliyete dahildir ama satış gelirine katkı yapmaz; hedef geliri yalnız satılabilen mala böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-05 (toplu alım, kırık mal, hedef kâr) · yumurta",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0010",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Satışa Göre Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kârın satış fiyatının yüzdesi olarak verildiği durumda satış fiyatını bulur.",
+  "tipId": "kzb-oran",
+  "tip": "Kârın hangi fiyata göre verildiği",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir mağaza, alış fiyatı 1200 TL olan bir yazıcıyı satmak istemektedir. Mağaza, kârın satış fiyatının %20’si olmasını hedeflemektedir.\nBuna göre yazıcının satış fiyatı kaç TL olmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "240",
+   "B": "960",
+   "C": "1200",
+   "D": "1440",
+   "E": "1500"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "1500"
+  },
+  "celdiriciler": {
+   "A": "Yalnızca kârı (alışın %20’si) bulmuş.",
+   "C": "Alış fiyatını satış fiyatı sanmış; kâr eklememiş.",
+   "D": "Kârı alışın %20’si almış; kâr satış fiyatının %20’sidir.",
+   "B": "Alışın %80’ini almış; kâr satışın %20’si ise alış satışın %80’idir, satış alıştan büyüktür."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "B": "bilgi"
+  },
+  "istenen": "Yazıcının satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Satış fiyatına göre oran",
+    "ifade": "“kâr, satış fiyatının %20’si” denirse kâr = 0,2 × satış ve alış = 0,8 × satış olur; “kâr, alışın %20’si” denirse satış = 1,2 × alış olur. Örnek: satış 100 TL ise birincide alış 80 TL, ikincide alış 100/1,2 TL’dir"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Kâr hangi fiyatın yüzdesi olarak verilmiş? Alışı satış cinsinden yazmayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alışı satışa bağla",
+    "aciklama": "Satış s olsun; kâr 0,2 s ise alış 0,8 s.",
+    "islem": "alış = s − 0,2 × s = 0,8 × s"
+   },
+   {
+    "baslik": "Denklemi kur",
+    "aciklama": "Alış 1200 TL.",
+    "islem": "0,8 × s = 1200"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Her iki tarafı 0,8’e böl.",
+    "islem": "s = 1200 ÷ 0,8 = 1500 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Kâr satışın %20’si mi?",
+    "islem": "kâr = 1500 − 1200 = 300 = 1500 × 0,2 ✓"
+   }
+  ],
+  "puf": "Kâr satışın yüzdesi ise alış = satış × (1 − p/100); alışın yüzdesi ise satış = alış × (1 + p/100).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-06 (kâr satış fiyatının %20’si) · yazıcı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0011",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Kârdan Alış Fiyatı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "İndirimli satış ve kâr yüzdesinden alış fiyatını bulur.",
+  "tipId": "kzb-etiket",
+  "tip": "Etiket fiyatı, indirim ve kâr",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Etiket fiyatı 3600 TL olan bir akıllı saat, etiket fiyatı üzerinden %25 indirimle satılınca mağaza %20 kâr elde etmiştir.\nBuna göre bu akıllı saatin alış fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2160",
+   "B": "2250",
+   "C": "2700",
+   "D": "2880",
+   "E": "3240"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "2250"
+  },
+  "celdiriciler": {
+   "A": "Satış fiyatının %80’ini alış sanmış; kâr yüzdesi alışa göre olduğundan satış, alışın %120’sidir.",
+   "C": "İndirimli satış fiyatını alış fiyatı sanmış.",
+   "D": "Etiket fiyatından %20 düşmüş; %20 kâr satış fiyatı ile alış arasındadır.",
+   "E": "İndirimli fiyatı 1,2 ile çarpmış; alışı bulmak için bölmek gerekir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "islem"
+  },
+  "istenen": "Akıllı saatin alış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   }
+  ],
+  "ipuclari": [
+   "Satış fiyatı etiket fiyatının kaçta kaçıdır? Satış fiyatı alışın yüzde kaçına eşittir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satış fiyatını bul",
+    "aciklama": "Etiketin %75’i.",
+    "islem": "3600 × 0,75 = 2700 TL"
+   },
+   {
+    "baslik": "Alışla ilişkilendir",
+    "aciklama": "%20 kârla satış alışın %120’sidir.",
+    "islem": "1,2 × x = 2700"
+   },
+   {
+    "baslik": "Alışı bul",
+    "aciklama": "1,2’ye böl.",
+    "islem": "x = 2700 ÷ 1,2 = 2250 TL"
+   }
+  ],
+  "puf": "Önce satış fiyatını indirimden bul, sonra “satış = alış × (1 + kâr)” ilişkisini alış için çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-02 (indirim + kâr → alış fiyatı) · akıllı saat",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0012",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Taksitli Satışta Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Taksitli satış toplamından peşin fiyatı ve alış fiyatını bulup taksitli satıştaki kâr yüzdesini hesaplar.",
+  "tipId": "kzb-kampanya",
+  "tip": "Kampanya ve taksit",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir mobilya mağazası, ürünleri alış fiyatının %25 fazlasına peşin satmaktadır. Taksitli satışta ise peşin fiyata %24 vade farkı eklenmekte ve tutar 12 eşit taksitte tahsil edilmektedir.\nAylık taksit tutarı 1550 TL olan bir ürün için mağazanın taksitli satıştaki kâr yüzdesi kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "24",
+   "B": "25",
+   "C": "49",
+   "D": "55",
+   "E": "155"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "55"
+  },
+  "celdiriciler": {
+   "A": "Vade farkı yüzdesini kâr yüzdesi sanmış.",
+   "B": "Peşin satıştaki kâr yüzdesini vermiş; taksitli satışta vade farkı da kâra katılır.",
+   "C": "Peşin kâr ile vade farkı yüzdelerini toplamış (25 + 24); vade farkı peşin fiyata uygulanır, alışa değil.",
+   "E": "Taksitli satışın alışa oranını (%155) kâr yüzdesi sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Taksitli satıştaki kâr yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "Taksitli satış",
+    "ifade": "taksitli toplam ödeme = peşin fiyat + vade farkı; aylık taksit = toplam ÷ taksit sayısı. Örnek: peşin 1000 TL, %20 vade farkı, 5 taksit → 1200 ÷ 5 = 240 TL"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Toplam taksit tutarı peşin fiyatın kaç katıdır? Peşin fiyat da alışın kaç katıdır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam ödeme",
+    "aciklama": "12 taksit.",
+    "islem": "1550 × 12 = 18 600 TL"
+   },
+   {
+    "baslik": "Peşin fiyatı bul",
+    "aciklama": "Toplam, peşin fiyatın %124’ü.",
+    "islem": "1,24 × P = 18 600 → P = 15 000 TL"
+   },
+   {
+    "baslik": "Alış fiyatını bul",
+    "aciklama": "Peşin fiyat, alışın %125’i.",
+    "islem": "1,25 × A = 15 000 → A = 12 000 TL"
+   },
+   {
+    "baslik": "Kâr yüzdesi",
+    "aciklama": "Taksitli satışta kâr = toplam − alış.",
+    "islem": "18 600 − 12 000 = 6600 · 6600/12 000 = %55"
+   }
+  ],
+  "puf": "Vade farkı peşin fiyata, kâr yüzdesi alışa göredir; zinciri peşin fiyat üzerinden alışa kadar geri çöz.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-03 (vade farkı + peşin kâr → taksitli kâr) · mobilya",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0013",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Karışım Satışı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Farklı fiyatlı iki malın karışımını hedef kârla satacak fiyatı bulur.",
+  "tipId": "kzb-toplu",
+  "tip": "Toplu alım, fire ve parça satış",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir kuruyemişçi, kilogramı 400 TL olan fındık ile kilogramı 600 TL olan bademi 3 : 2 kütle oranında karıştırmıştır. Karışımı, maliyetinin %20 fazlasına satacaktır.\nBuna göre karışımın kilogram satış fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "96",
+   "B": "480",
+   "C": "576",
+   "D": "600",
+   "E": "720"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "576"
+  },
+  "celdiriciler": {
+   "A": "Karışımın kilogram kârını (96 TL) satış fiyatı sanmış.",
+   "B": "Karışımın maliyetini (480 TL) satış fiyatı sanmış; kâr eklememiş.",
+   "D": "İki fiyatın aritmetik ortalamasını (500 TL) alıp üstüne %20 eklemiş; karışım 3 : 2 olduğundan fındık ağırlıklıdır.",
+   "E": "Pahalı ürünün fiyatına (600 TL) %20 eklemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Karışımın kilogram satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Karışım maliyeti",
+    "ifade": "karışımın maliyeti, bileşenlerin kütle × fiyat toplamıdır; kilogram maliyeti toplam maliyet ÷ toplam kütledir. Örnek: 1 kg 10 TL + 1 kg 20 TL = 30 TL, kilogramı 15 TL"
+   }
+  ],
+  "ipuclari": [
+   "5 kg karışımın toplam maliyetini bul; kilogram başına maliyeti hesaplamadan kâr ekleme."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Parçaların maliyeti",
+    "aciklama": "3 kg fındık ve 2 kg badem alalım.",
+    "islem": "3 × 400 = 1200 · 2 × 600 = 1200"
+   },
+   {
+    "baslik": "Kilogram maliyeti",
+    "aciklama": "Toplam maliyet ÷ 5 kg.",
+    "islem": "(1200 + 1200) ÷ 5 = 480 TL"
+   },
+   {
+    "baslik": "Kâr ekle",
+    "aciklama": "Maliyetin %120’si.",
+    "islem": "480 × 1,2 = 576 TL"
+   }
+  ],
+  "puf": "Karışımın birim maliyeti, ağırlıklı ortalamayla bulunur; kâr bu birim maliyete eklenir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-05 (karışım maliyeti, hedef kâr) · kuruyemiş",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0014",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Kademeli İndirim",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kademeli indirim kuralını sepet tutarına uygulayarak ödenecek tutarı bulur.",
+  "tipId": "kzb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü kâr-zarar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 5,
+  "metin": "Bir mağazada sepet tutarına göre kademeli indirim uygulanmaktadır. Sepet tutarının ilk 1000 TL’lik kısmına indirim yapılmaz, 1000 TL ile 3000 TL arasındaki kısmına %10, 3000 TL’yi aşan kısmına %25 indirim yapılır. Her indirim yalnız ait olduğu kademedeki tutara uygulanır.\nİndirimsiz tutarı 4400 TL olan bir sepet için müşteri kaç TL öder?",
+  "sekil": null,
+  "siklar": {
+   "A": "2860",
+   "B": "3300",
+   "C": "3550",
+   "D": "3750",
+   "E": "3850"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "3850"
+  },
+  "celdiriciler": {
+   "A": "%10 ile %25’i toplayıp tüm tutara %35 indirim uygulamış.",
+   "B": "Tüm tutara en yüksek oran olan %25’i uygulamış.",
+   "C": "1000 TL’nin üzerindeki tüm tutara (3400 TL) %25 uygulamış.",
+   "D": "İlk 1000 TL’ye de %10 indirim uygulamış: 900 + 1800 + 1050."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Müşterinin ödeyeceği tutar (TL).",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   }
+  ],
+  "ipuclari": [
+   "Sepeti kademelere ayır: her kademedeki tutarı ve o kademenin indirim oranını yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kademelere ayır",
+    "aciklama": "4400 TL, üç kısma bölünür.",
+    "islem": "1000 + 2000 + 1400 = 4400"
+   },
+   {
+    "baslik": "Birinci kademe",
+    "aciklama": "İndirim yok.",
+    "islem": "1000 TL"
+   },
+   {
+    "baslik": "İkinci kademe",
+    "aciklama": "%10 indirimle.",
+    "islem": "2000 × 0,9 = 1800 TL"
+   },
+   {
+    "baslik": "Üçüncü kademe",
+    "aciklama": "%25 indirimle.",
+    "islem": "1400 × 0,75 = 1050 TL"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "Üç kademenin toplamı.",
+    "islem": "1000 + 1800 + 1050 = 3850 TL"
+   }
+  ],
+  "puf": "Kademeli kurallarda her oran yalnız kendi aralığına uygulanır; kademeleri ayrı hesaplayıp topla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-07 (kademeli indirim kuralı) · sepet indirimi",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0015",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Öncüllü Kâr Yüzdesi",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kâr tutarı ve kâr yüzdesinden alış ve satış fiyatını bulup öncülleri sınar.",
+  "tipId": "kzb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü kâr-zarar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir ürün, alış fiyatının %20 fazlasına satıldığında 450 TL kâr elde edilmektedir.\nBuna göre,\nI. Ürünün alış fiyatı 2250 TL’dir.\nII. Kâr, ürünün satış fiyatının %20’sidir.\nIII. Ürün 2400 TL’ye satılsaydı %10 kâr elde edilirdi.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "Yalnız I"
+  },
+  "celdiriciler": {
+   "B": "Kârı satış fiyatının %20’si alıp satışı 2250 bulmuş; bu yüzden I’i eleyip II’yi doğru saymış.",
+   "C": "I’i doğru bulmuş; II’de 450/2700’ü %20 sanmış, oysa %16,7’dir.",
+   "D": "III’te 2400 − 2250 = 150 TL’yi alışın %10’u sanmış; oysa %6,7’dir.",
+   "E": "Öncülleri tek tek sınamadan hepsini doğru kabul etmiş."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "islem",
+   "D": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan öncüllerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satış fiyatına göre oran",
+    "ifade": "“kâr, satış fiyatının %20’si” denirse kâr = 0,2 × satış ve alış = 0,8 × satış olur; “kâr, alışın %20’si” denirse satış = 1,2 × alış olur. Örnek: satış 100 TL ise birincide alış 80 TL, ikincide alış 100/1,2 TL’dir"
+   }
+  ],
+  "ipuclari": [
+   "Kâr, alış fiyatının yüzde kaçı olarak verilmiş? Önce alış ve satış fiyatını bul, sonra öncülleri sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alışı bul",
+    "aciklama": "Kâr alışın %20’si.",
+    "islem": "0,2 × A = 450 → A = 2250 TL → I doğru"
+   },
+   {
+    "baslik": "Satışı bul",
+    "aciklama": "Satış = alış + kâr.",
+    "islem": "2250 + 450 = 2700 TL"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "Kârın satışa oranı.",
+    "islem": "450/2700 = %16,7 ≠ %20 → II yanlış"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "2400 TL’de kâr 150 TL.",
+    "islem": "150/2250 = %6,7 ≠ %10 → III yanlış"
+   }
+  ],
+  "puf": "Öncülleri sınamadan önce alış ve satış fiyatını bul; yüzdelerin hangi fiyata göre olduğunu her öncülde ayrı ayrı kontrol et.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-07 (öncüllü: kâr tutarından alış fiyatı)",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0016",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · İki Ürün, İki Oran",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kârı satışa göre ve alışa göre verilen iki ürünün toplam kârını bulur.",
+  "tipId": "kzb-ikiurun",
+  "tip": "İki ürün: kâr ve zarar birlikte",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir hediyelik eşya mağazası, 2000 TL’ye sattığı seramik vazoda satış fiyatının %25’i kadar kâr, 1200 TL’ye sattığı tabloda ise alış fiyatının %25’i kadar kâr etmiştir.\nBuna göre mağazanın bu iki satıştan toplam kârı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "240",
+   "B": "500",
+   "C": "640",
+   "D": "740",
+   "E": "800"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "740"
+  },
+  "celdiriciler": {
+   "A": "Yalnız tablodaki kârı bulup bırakmış.",
+   "B": "Yalnız vazodaki kârı bulup bırakmış.",
+   "C": "Vazodaki %25 kârı alışa göre sanıp (400 TL) tablonun kârıyla toplamış.",
+   "E": "Tablodaki %25 kârı satış fiyatına göre almış (300 TL)."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Toplam kâr (TL).",
+  "bilgi": [
+   {
+    "ad": "Satış fiyatına göre oran",
+    "ifade": "“kâr, satış fiyatının %20’si” denirse kâr = 0,2 × satış ve alış = 0,8 × satış olur; “kâr, alışın %20’si” denirse satış = 1,2 × alış olur. Örnek: satış 100 TL ise birincide alış 80 TL, ikincide alış 100/1,2 TL’dir"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Her üründe kârın hangi fiyata göre verildiğine bak; iki kârı ayrı ayrı hesaplayıp topla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Vazonun kârı",
+    "aciklama": "Kâr satışın %25’i.",
+    "islem": "2000 × 0,25 = 500 TL"
+   },
+   {
+    "baslik": "Tablonun alışı",
+    "aciklama": "Satış alışın %125’i.",
+    "islem": "1,25 × x = 1200 → x = 960 TL"
+   },
+   {
+    "baslik": "Tablonun kârı",
+    "aciklama": "Satış − alış.",
+    "islem": "1200 − 960 = 240 TL"
+   },
+   {
+    "baslik": "Toplamı bul",
+    "aciklama": "İki kâr toplanır.",
+    "islem": "500 + 240 = 740 TL"
+   }
+  ],
+  "puf": "Kârın satışa mı alışa mı göre verildiğini her üründe ayrı ayrı oku; ikisi aynı sonucu vermez.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-04 (iki ürün; satışa göre / alışa göre kâr) · seramik vazo ve tablo",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0017",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Zarar Yüzdesi",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "İndirimli satışta alışın altında kalan satıştan zarar yüzdesini bulur.",
+  "tipId": "kzb-temel",
+  "tip": "Alış, satış, kâr ve zarar yüzdesi",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Alış fiyatı 3750 TL, etiket fiyatı 5000 TL olan bir robot süpürge, stok erimesi için etiket fiyatı üzerinden %40 indirimle satılmıştır.\nBuna göre mağaza bu satıştan yüzde kaç zarar etmiştir?",
+  "sekil": null,
+  "siklar": {
+   "A": "15",
+   "B": "20",
+   "C": "25",
+   "D": "40",
+   "E": "80"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Zararı (750 TL) etiket fiyatına bölmüş. Zarar yüzdesi alış fiyatına göredir.",
+   "C": "Zararı satış fiyatına (3000 TL) bölmüş.",
+   "D": "İndirim yüzdesini zarar yüzdesi sanmış.",
+   "E": "Satışın alışa oranını (%80) zarar yüzdesi sanmış; zarar %20’dir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Mağazanın zarar yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Önce indirimli satış fiyatını bul; sonra alışla karşılaştırıp zararın hangi fiyata oranlanacağını düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satış fiyatını bul",
+    "aciklama": "Etiketin %60’ı.",
+    "islem": "5000 × 0,6 = 3000 TL"
+   },
+   {
+    "baslik": "Zararı bul",
+    "aciklama": "Alış − satış.",
+    "islem": "3750 − 3000 = 750 TL"
+   },
+   {
+    "baslik": "Alışa oranla",
+    "aciklama": "Zarar yüzdesi alışa göre.",
+    "islem": "750/3750 = 1/5 = %20"
+   }
+  ],
+  "puf": "Zarar yüzdesi de kâr gibi alış fiyatına göre bulunur; önce indirimli satış fiyatını hesapla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-01 (etiket + indirim → zarar yüzdesi) · robot süpürge",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0018",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · İkincisi Yarı Fiyatına",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "“İkinci ürün yarı fiyatına” kampanyasında toplam indirim yüzdesini bulur.",
+  "tipId": "kzb-kampanya",
+  "tip": "Kampanya ve taksit",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir giyim mağazasında tanesi 640 TL olan pantolonlarda “ikinci ürün %50 indirimli” kampanyası vardır. Alınan pantolonlar ikişerli gruplanır ve her gruptaki ikinci pantolon yarı fiyatına satılır; grubu tamamlamayan pantolon için indirim yoktur.\nBu mağazadan 5 pantolon alan bir müşteri, indirimsiz toplam tutara göre yüzde kaç indirim kazanmış olur?",
+  "sekil": null,
+  "siklar": {
+   "A": "20",
+   "B": "25",
+   "C": "30",
+   "D": "40",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "B": "İndirimi ödenen tutara (2560 TL) oranlamış: 640/2560 = %25. İndirimsiz toplam 3200 TL’dir.",
+   "C": "Üç pantolonda yarı fiyat indirimi olduğunu sanmış (3 × 320 = 960).",
+   "D": "İkinci pantolonu bedava sanmış (2 × 640 = 1280 indirim).",
+   "E": "Kampanya yüzdesini (%50) toplam indirim yüzdesi sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Toplam indirim yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "Kampanya hesabı",
+    "ifade": "kampanya gruplarını sayıp ödenecek ürün sayısını bul. Örnek: “3 al 2 öde”de 6 ürün alan 4 ürün bedeli öder; “ikincisi %50” kampanyasında 2 ürünün bedeli 1 + 0,5 = 1,5 ürün bedelidir"
+   },
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   }
+  ],
+  "ipuclari": [
+   "5 pantolonun kaç ikili grubu vardır? Kaç pantolonda yarı fiyat indirimi uygulanır?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "İndirimsiz tutar",
+    "aciklama": "5 pantolon tam fiyat.",
+    "islem": "5 × 640 = 3200 TL"
+   },
+   {
+    "baslik": "İndirimli pantolon sayısı",
+    "aciklama": "2 grup vardır, her grupta 1 pantolon yarı fiyat.",
+    "islem": "2 pantolon yarı fiyatına"
+   },
+   {
+    "baslik": "İndirim tutarı",
+    "aciklama": "Yarı fiyat = 320 TL indirim.",
+    "islem": "2 × 320 = 640 TL"
+   },
+   {
+    "baslik": "Yüzdeye çevir",
+    "aciklama": "Toplam tutara oranla.",
+    "islem": "640/3200 = 1/5 = %20"
+   }
+  ],
+  "puf": "Kampanya indirimini TL olarak bul, indirimsiz toplama böl; kampanya oranı ile toplam indirim oranı farklıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-03 (ikincisi %50) · pantolon, 5 adet",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0019",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Kampanya ve Kasa İndirimi",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Etiket, “ikincisi yarı fiyatına” kampanyası ve kasa indirimini birlikte uygulayıp kâr yüzdesini bulur.",
+  "tipId": "kzb-kampanya",
+  "tip": "Kampanya ve taksit",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 5,
+  "metin": "Bir mağaza, alış fiyatı 1000 TL olan termos bardakların etiket fiyatını alış fiyatının %60 fazlası olarak belirlemiştir. Mağazada “ikinci ürün %50 indirimli” kampanyası vardır; alınan bardaklar ikişerli gruplanır ve her gruptaki ikinci bardak yarı fiyatına satılır. Ayrıca kasada, kampanyalı toplam tutar üzerinden %10 indirim yapılmaktadır.\nBir müşteri bu bardaklardan 4 tane aldığına göre mağaza bu satıştan yüzde kaç kâr eder?",
+  "sekil": null,
+  "siklar": {
+   "A": "8",
+   "B": "20",
+   "C": "25",
+   "D": "44",
+   "E": "50"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "8"
+  },
+  "celdiriciler": {
+   "B": "Kasadaki %10 indirimi uygulamamış: 4800 − 4000 = 800, kâr %20.",
+   "C": "Kampanyanın toplam indirimini (%25) ve kasa indirimini (%10) toplayıp 60 − (25 + 10) = 25 bulmuş; indirimler farklı tutarlar üzerindendir.",
+   "D": "Kampanyayı unutup yalnız %10 kasa indirimi uygulamış: 6400 × 0,9 = 5760, kâr %44.",
+   "E": "60’tan yalnız kasa indirimini (%10) çıkarmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Mağazanın kâr yüzdesi.",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Kampanya hesabı",
+    "ifade": "kampanya gruplarını sayıp ödenecek ürün sayısını bul. Örnek: “3 al 2 öde”de 6 ürün alan 4 ürün bedeli öder; “ikincisi %50” kampanyasında 2 ürünün bedeli 1 + 0,5 = 1,5 ürün bedelidir"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Etiket fiyatını bulduktan sonra 4 bardağın kampanyalı toplamını, sonra kasa indirimli tutarı bul; kâr yüzdesinde paydaya dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Etiket fiyatı",
+    "aciklama": "Alışın %160’ı.",
+    "islem": "1000 × 1,6 = 1600 TL"
+   },
+   {
+    "baslik": "Kampanyalı tutar",
+    "aciklama": "2 grup; her grupta 1600 + 800.",
+    "islem": "2 × (1600 + 800) = 4800 TL"
+   },
+   {
+    "baslik": "Kasa indirimi",
+    "aciklama": "Kampanyalı tutarın %90’ı.",
+    "islem": "4800 × 0,9 = 4320 TL"
+   },
+   {
+    "baslik": "Kârı bul",
+    "aciklama": "Alış toplamı 4 × 1000.",
+    "islem": "4320 − 4000 = 320 TL"
+   },
+   {
+    "baslik": "Yüzdeye çevir",
+    "aciklama": "Kâr toplam alışa oranlanır.",
+    "islem": "320/4000 = 0,08 = %8"
+   }
+  ],
+  "puf": "Kampanya ve kasa indirimi ayrı aşamalardır; her aşamayı sırayla uygula, kârı en sonda toplam alışa oranla.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-03 (etiket + ikincisi %50 + kasa %10 → kâr) · termos bardak",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0020",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Toplam Sonuçtan Alış",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Toplam alış ve toplam kârdan iki ürünün alış fiyatlarını bulup zararla satılan ürünün satışını hesaplar.",
+  "tipId": "kzb-ikiurun",
+  "tip": "İki ürün: kâr ve zarar birlikte",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir mağaza, alış fiyatları toplamı 5000 TL olan iki ürünün birini %15 kârla, diğerini %10 zararla satmış ve bu iki satıştan toplam alış fiyatına göre %5 kâr elde etmiştir.\nBuna göre zararla satılan ürün kaç TL’ye satılmıştır?",
+  "sekil": null,
+  "siklar": {
+   "A": "1800",
+   "B": "2000",
+   "C": "2200",
+   "D": "3000",
+   "E": "3450"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "1800"
+  },
+  "celdiriciler": {
+   "B": "Zararla satılan ürünün alış fiyatını (2000 TL) bulup bırakmış.",
+   "C": "Zararda satış fiyatını alışın %110’u olarak hesaplamış (2000 × 1,1).",
+   "D": "Kârla satılan ürünün alış fiyatını bulup bırakmış.",
+   "E": "Kârla satılan ürünün satış fiyatını bulup bırakmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Zararla satılan ürünün satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   }
+  ],
+  "ipuclari": [
+   "Kârla satılan ürünün alışına x de; zararlı ürünün alışını x cinsinden yaz. Toplam kârı iki farklı yoldan ifade et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bilinmeyenleri tanımla",
+    "aciklama": "Kârlı ürünün alışı x, diğerinin alışı 5000 − x.",
+    "islem": "x + y = 5000"
+   },
+   {
+    "baslik": "Toplam kâr",
+    "aciklama": "Toplamda %5 kâr: 5000 × 0,05 = 250 TL.",
+    "islem": "0,15 x − 0,10 (5000 − x) = 250"
+   },
+   {
+    "baslik": "Denklemi çöz",
+    "aciklama": "Parantezi aç, düzenle.",
+    "islem": "0,25 x − 500 = 250 → x = 3000 · y = 2000"
+   },
+   {
+    "baslik": "Satışı bul",
+    "aciklama": "Zararlı ürün alışın %90’ına satıldı.",
+    "islem": "2000 × 0,9 = 1800 TL"
+   }
+  ],
+  "puf": "Toplam sonuç verildiğinde her ürünün kâr–zararını tek denklemde topla; bilinmeyenleri alış fiyatları olarak seç.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-04 (toplam alış, toplam kâr, denklem) · iki ürün, toplam sonuç",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0021",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Parça Parça Satış",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kırık malı maliyete katarak iki farklı fiyattan yapılan satıştan sonra kalan mal için hedef kâr fiyatını bulur.",
+  "tipId": "kzb-toplu",
+  "tip": "Toplu alım, fire ve parça satış",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir toptancı, tanesini 80 TL’den 500 bardak satın almıştır. Bardakların 60’ı taşınırken kırıldığı için satılamamıştır. Sağlam kalan bardakların yarısı tanesi 105 TL’den, geri kalanların yarısı tanesi 100 TL’den satılmıştır.\nToptancı, bardaklara ödediği paranın tamamına göre %10 kâr elde etmek istediğine göre, hâlâ satılmamış olan bardakların her birini kaç TL’den satmalıdır?",
+  "sekil": null,
+  "siklar": {
+   "A": "88",
+   "B": "90",
+   "C": "95",
+   "D": "100",
+   "E": "190"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "90"
+  },
+  "celdiriciler": {
+   "A": "Hedef geliri kırık bardaklar dahil 500 bardağa bölmüş: 44 000 ÷ 500.",
+   "C": "İkinci parti satışın gelirini hesaba katmamış: (44 000 − 23 100) ÷ 220 = 95.",
+   "D": "Hedef geliri sağlam bardaklara bölüp (44 000 ÷ 440) ortalama fiyatı kalan bardakların fiyatı sanmış.",
+   "E": "İkinci parti satışın gelirini unutup kalan 110 bardağa yüklemiş: (44 000 − 23 100) ÷ 110."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Kalan bardakların tanesinin satış fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satılamayan mal",
+    "ifade": "alış bedeli, satın alınan tüm mal için ödenmiştir; kâr hesabında satılamayan malın bedeli de maliyete dahildir. Örnek: 100 adet 5 TL’den alınıp 10’u satılamazsa maliyet 500 TL, satılan adet 90’dır"
+   }
+  ],
+  "ipuclari": [
+   "Önce kaç bardağın sağlam olduğunu ve her satış partisinde kaç bardak satıldığını bul; hedef geliri toplam maliyetten hesapla."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Sağlam ve partiler",
+    "aciklama": "500 − 60 = 440 sağlam bardak.",
+    "islem": "1. parti 220 · 2. parti 110 · kalan 110"
+   },
+   {
+    "baslik": "Maliyet ve hedef gelir",
+    "aciklama": "Tüm bardaklar için ödenen paranın %110’u.",
+    "islem": "500 × 80 = 40 000 · 40 000 × 1,1 = 44 000 TL"
+   },
+   {
+    "baslik": "Önceki gelirler",
+    "aciklama": "İki parti satış.",
+    "islem": "220 × 105 = 23 100 · 110 × 100 = 11 000 → 34 100 TL"
+   },
+   {
+    "baslik": "Kalan bardak fiyatı",
+    "aciklama": "Eksik gelir ÷ kalan bardak.",
+    "islem": "(44 000 − 34 100) ÷ 110 = 9900 ÷ 110 = 90 TL"
+   }
+  ],
+  "puf": "Hedef geliri toplam maliyetten bul, elde edilen gelirleri çıkar, kalanı satılmamış mal sayısına böl.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-05 (kırık mal + iki parti satış + hedef kâr) · bardak",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0022",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Kâr Payı",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Kârın satış fiyatına oranı olarak tanımlanan kâr payından etiket fiyatını bulur.",
+  "tipId": "kzb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü kâr-zarar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Bir mağazada “kâr payı”, bir ürünün satışından elde edilen kârın satış fiyatına oranı olarak tanımlanmaktadır. Yani kâr payı = kâr ÷ satış fiyatıdır.\nAlış fiyatı 1800 TL olan bir ürün, etiket fiyatı üzerinden %20 indirimle satıldığında kâr payı %25 olmaktadır.\nBuna göre bu ürünün etiket fiyatı kaç TL’dir?",
+  "sekil": null,
+  "siklar": {
+   "A": "2400",
+   "B": "2700",
+   "C": "2812,5",
+   "D": "2880",
+   "E": "3000"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "3000"
+  },
+  "celdiriciler": {
+   "A": "İndirimli satış fiyatını (2400 TL) etiket fiyatı sanmış.",
+   "C": "Satışı 2250 bulup etiketi 2250 ÷ 0,8 = 2812,5 hesaplamış.",
+   "D": "İndirimli fiyatı 1,2 ile çarpmış; etiket, indirimli fiyatın 1/0,8 katıdır.",
+   "B": "Satışı 2250 bulup üstüne %20 eklemiş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "islem",
+   "B": "bilgi"
+  },
+  "istenen": "Ürünün etiket fiyatı (TL).",
+  "bilgi": [
+   {
+    "ad": "Satış fiyatına göre oran",
+    "ifade": "“kâr, satış fiyatının %20’si” denirse kâr = 0,2 × satış ve alış = 0,8 × satış olur; “kâr, alışın %20’si” denirse satış = 1,2 × alış olur. Örnek: satış 100 TL ise birincide alış 80 TL, ikincide alış 100/1,2 TL’dir"
+   },
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   }
+  ],
+  "ipuclari": [
+   "Kâr payı hangi fiyata göre tanımlı? Alışı o fiyat cinsinden yazmayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alışı satışa bağla",
+    "aciklama": "Satış s olsun; kâr payı %25 ise kâr 0,25 s.",
+    "islem": "alış = s − 0,25 s = 0,75 s"
+   },
+   {
+    "baslik": "Satış fiyatını bul",
+    "aciklama": "Alış 1800 TL.",
+    "islem": "0,75 × s = 1800 → s = 2400 TL"
+   },
+   {
+    "baslik": "Etikete geç",
+    "aciklama": "Satış, etiketin %80’i.",
+    "islem": "0,8 × E = 2400 → E = 3000 TL"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Kâr payı tanıma uyuyor mu?",
+    "islem": "kâr = 2400 − 1800 = 600 · 600/2400 = %25 ✓"
+   }
+  ],
+  "puf": "Tanımda oranın hangi fiyata göre olduğunu bul; denklemi o fiyat üzerinden kur, sonra indirimi geri al.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-07 (tanımlı kavram: kâr payı = kâr ÷ satış) · etiket fiyatı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0023",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Öncüllü Zarar ve Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Etiket ve alış ilişkisinden farklı indirimlerin kâr–zarar sonucunu öncüllerle sınar.",
+  "tipId": "kzb-yeninesil",
+  "tip": "Yeni nesil ve öncüllü kâr-zarar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir ürün, etiket fiyatı üzerinden %20 indirimle satıldığında alış fiyatına göre %12 kâr edilmektedir.\nBuna göre,\nI. Etiket fiyatı alış fiyatının %40 fazlasıdır.\nII. Ürün etiket fiyatı üzerinden %25 indirimle satılsaydı %10 kâr edilirdi.\nIII. Ürün etiket fiyatı üzerinden %30 indirimle satılsaydı %2 zarar edilirdi.\nifadelerinden hangileri doğrudur?",
+  "sekil": null,
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü sınarken 1,4 × 0,7 = 0,98 sonucunu zarar olarak görmemiş; yalnız I’i doğru bulmuş.",
+   "B": "I’i %40 yerine %32 (12 + 20) bulup eleyip II’yi doğru saymış.",
+   "C": "III’te 0,98 A’yı zarar olarak görmeyip eleyip II’de 0,75 × 1,4’ü 1,1 hesaplamış.",
+   "E": "II’de 0,75 × 1,4’ü 1,1 hesaplayıp üç öncülü de doğru bulmuş."
+  },
+  "celTur": {
+   "A": "islem",
+   "B": "bilgi",
+   "C": "islem",
+   "E": "islem"
+  },
+  "istenen": "Doğru olan öncüllerin belirlenmesi.",
+  "bilgi": [
+   {
+    "ad": "İndirim",
+    "ifade": "indirim etiket fiyatı üzerinden hesaplanır: indirimli fiyat = etiket × (1 − p/100). Örnek: 800 TL etiketli ürüne %25 indirim yapılırsa 800 × 0,75 = 600 TL ödenir"
+   },
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   }
+  ],
+  "ipuclari": [
+   "Alış fiyatına bir değer ver; önce etiket fiyatını bul, sonra her indirim için satışı hesaplayıp alışla karşılaştır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Etiketi bul",
+    "aciklama": "Satış etiketin %80’i ve alışın %112’si.",
+    "islem": "0,8 × E = 1,12 × A → E = 1,4 × A"
+   },
+   {
+    "baslik": "I’i sına",
+    "aciklama": "Etiket alışın 1,4 katı.",
+    "islem": "%40 fazla → I doğru"
+   },
+   {
+    "baslik": "II’yi sına",
+    "aciklama": "%25 indirimle satış etiketin %75’i.",
+    "islem": "0,75 × 1,4 A = 1,05 A → %5 kâr → II yanlış"
+   },
+   {
+    "baslik": "III’ü sına",
+    "aciklama": "%30 indirimle satış etiketin %70’i.",
+    "islem": "0,7 × 1,4 A = 0,98 A → %2 zarar → III doğru"
+   }
+  ],
+  "puf": "Etiketi alışın katı olarak yaz; her öncül için satış fiyatını bu katsayıyla bulup alışla karşılaştır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-07 (öncüllü: %12 kâr, farklı indirimler) · etiket fiyatı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-karzarariki-0024",
+  "ders": "TYT Matematik",
+  "konu": "Kâr Zarar Problemleri · Zincirleme Kâr",
+  "k": "prob|Kar Zarar Problemleri",
+  "kazanim": "Alış–satış zincirinde iki aracının kârları arasındaki farkı bulur.",
+  "tipId": "kzb-oran",
+  "tip": "Kârın hangi fiyata göre verildiği",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir toptancı, bir ürünü kendi alış fiyatının %20 fazlasına perakendeciye satmaktadır. Perakendeci de bu ürünü, kendi alış fiyatının %25 fazlasına müşteriye 3000 TL’ye satmaktadır.\nBuna göre perakendecinin bu üründen elde ettiği kâr, toptancının elde ettiği kârdan kaç TL fazladır?",
+  "sekil": null,
+  "siklar": {
+   "A": "200",
+   "B": "375",
+   "C": "400",
+   "D": "600",
+   "E": "1000"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "200"
+  },
+  "celdiriciler": {
+   "B": "Perakendecinin kârını satışın %25’i (750 TL) alıp alışını 2250 bulmuş; toptancı kârı 375, fark 375.",
+   "C": "Yalnız toptancının kârını bulup bırakmış.",
+   "D": "Yalnız perakendecinin kârını bulup bırakmış.",
+   "E": "İki kârı toplamış; soru farkı soruyor."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Perakendecinin kârı ile toptancının kârı arasındaki fark (TL).",
+  "bilgi": [
+   {
+    "ad": "Kâr ve zarar yüzdesi",
+    "ifade": "aksi söylenmedikçe alış (maliyet) fiyatına göre hesaplanır; kâr = satış − alış. Örnek: 200 TL’ye alınıp 250 TL’ye satılan ürünün kârı 50 TL, kâr yüzdesi 50/200 = %25’tir"
+   },
+   {
+    "ad": "Satış fiyatı",
+    "ifade": "kârda satış = alış × (1 + p/100), zararda satış = alış × (1 − p/100). Örnek: 500 TL’lik ürün %20 zararla 500 × 0,8 = 400 TL’ye satılır"
+   }
+  ],
+  "ipuclari": [
+   "Zinciri sondan başa doğru çöz: perakendecinin alışı toptancının satışıdır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Perakendecinin alışı",
+    "aciklama": "Satış, alışın %125’i.",
+    "islem": "1,25 × x = 3000 → x = 2400 TL"
+   },
+   {
+    "baslik": "Perakendecinin kârı",
+    "aciklama": "Satış − alış.",
+    "islem": "3000 − 2400 = 600 TL"
+   },
+   {
+    "baslik": "Toptancının alışı",
+    "aciklama": "Toptancı satışı 2400 TL, alışın %120’si.",
+    "islem": "1,2 × y = 2400 → y = 2000 TL"
+   },
+   {
+    "baslik": "Kârları karşılaştır",
+    "aciklama": "Toptancı kârı 400 TL.",
+    "islem": "600 − 400 = 200 TL"
+   }
+  ],
+  "puf": "Zincirlerde bir aracının satış fiyatı sonrakinin alış fiyatıdır; her halkada yüzdeyi o halkanın alışına uygula.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-KZB-06 (toptancı %20, perakendeci %25 zincir kârı) · ürün",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

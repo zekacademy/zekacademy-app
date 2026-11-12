@@ -1,0 +1,135 @@
+{
+ "konu": "Karışım Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KRB-01",
+   "konu": "Karışım Problemleri",
+   "alt": "Madde veya su ekleme",
+   "fikir": "Eklenen su yalnız toplamı, eklenen madde hem maddeyi hem toplamı büyütür; yeni oran = yeni madde ÷ yeni toplam. İstenen oran için eklenecek miktar da aynı kurulumla bulunur.",
+   "tuzak": "Eklenen suyu madde saymak; toplamı güncellememek; oran farkını doğrudan miktar sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krb-ekleme",
+   "tip": "Madde veya su ekleme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRB-02",
+   "konu": "Karışım Problemleri",
+   "alt": "Buharlaşma ve kuruma",
+   "fikir": "Buharlaşma ve kurumada çözünen madde (kuru madde) sabittir; yeni toplam = madde ÷ yeni oran.",
+   "tuzak": "Buharlaşan miktarı yeni toplam sanmak; madde miktarını da azaltmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krb-buharlasma",
+   "tip": "Buharlaşma ve kuruma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRB-03",
+   "konu": "Karışım Problemleri",
+   "alt": "İki ya da daha çok karışımı birleştirme",
+   "fikir": "Madde ve toplam ayrı toplanır; oranla verilen karışımda oran parçaları miktar yerine geçer; istenen oran için bilinmeyen miktar denklemle bulunur.",
+   "tuzak": "Yüzdelerin aritmetik ortalamasını almak; oranları ters kullanmak; suyu hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krb-birlestirme",
+   "tip": "Karışımları birleştirme ve oranlı karışım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRB-04",
+   "konu": "Karışım Problemleri",
+   "alt": "Karışımdan alma ve yerine koyma",
+   "fikir": "Alınan kısım aynı oranda madde taşır; geride kalan madde hesaplanır, yerine konan kısmın maddesi eklenir ve toplam korunur. Tek turlu sorularda istenen oran için alınacak miktar da aranır.",
+   "tuzak": "Alınan kısmın maddesini düşmemek; yerine konan kısmı saf madde sanmak; toplamı yanlış almak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "krb-cekme",
+   "tip": "Karışımdan alma ve yerine koyma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRB-05",
+   "konu": "Karışım Problemleri",
+   "alt": "Fiyat karışımı",
+   "fikir": "Karışımın birim fiyatı toplam maliyetin toplam miktara bölümüdür; istenen fiyat için cinslerin miktar oranı fiyat farklarından bulunur.",
+   "tuzak": "Fiyatların aritmetik ortalamasını almak; oranı ters yazmak; kârı maliyete eklerken yüzdeyi yanlış tabana uygulamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krb-fiyat",
+   "tip": "Fiyat karışımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KRB-06",
+   "konu": "Karışım Problemleri",
+   "alt": "Yorum ve yeni nesil karışım",
+   "fikir": "Tanımlanan yeni bir ölçü (Brix, tuz puanı gibi) ya da öncüllü ifadeler, karışımın temel ilişkileri (madde sabit, toplam değişir) üzerinden sınanır.",
+   "tuzak": "Tanımı gözetmeden alışılmış oran formülünü kullanmak; ifadeleri sınamadan tahmin etmek.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "krb-yorum",
+   "tip": "Yorum ve yeni nesil karışım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (karışım, yüzde) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "krb-ekleme",
+   "ad": "Madde veya su ekleme",
+   "kartlar": [
+    "K-KRB-01"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krb-buharlasma",
+   "ad": "Buharlaşma ve kuruma",
+   "kartlar": [
+    "K-KRB-02"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krb-birlestirme",
+   "ad": "Karışımları birleştirme ve oranlı karışım",
+   "kartlar": [
+    "K-KRB-03"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krb-cekme",
+   "ad": "Karışımdan alma ve yerine koyma",
+   "kartlar": [
+    "K-KRB-04"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krb-fiyat",
+   "ad": "Fiyat karışımı",
+   "kartlar": [
+    "K-KRB-05"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krb-yorum",
+   "ad": "Yorum ve yeni nesil karışım",
+   "kartlar": [
+    "K-KRB-06"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  }
+ ]
+}
