@@ -549,6 +549,11 @@ const DERS_ADIM = [
   {view:"videolar", nav:"ders", ic:"grad", b:"Yeni: Öğrenme Merkezi 🎓", t:"Koyu yeşil “Öğrenme Merkezi” kartında tüm derslerin konu anlatımları var: TYT, AYT ve 9-10-11 Maarif kampları, hoca hoca. Önce kendi hocanın videoları gelir; istersen başka hocadan da izleyebilirsin. Kaldığın yer kaydedilir."},
   {view:"ders", nav:"ders", ic:"list", b:"Derslerim ve konular", t:"Bir derse dokun: konuların listelenir. Yeşil nokta bitti, sarı devam ediyor, boş başlanmadı. “Eksiklerim” ile sadece eksik konularını gör. Konunun yanındaki ▶ videoyu açar; konunun adına dokununca tekrar, soru bankası ve yanlışlarını işaretlersin."},
   {view:"ders", nav:"ders", ic:"camera", b:"Takıldığım sorular", t:"Çözemediğin sorunun fotoğrafını çek ve biriktir; Ders sayfasındaki kutuda kaç soru beklediği görünür. Sonra dönüp çözünce “Çözüldü” yap."} ];
+const ODUL_ADIM = [
+  {view:"grup", nav:"grup", ic:"flame", b:"Yeni: Ödül ve Sıralama Sistemi 🏆", t:"Sınıfta artık her sabah sınıfın dünkü birincisi, her pazartesi sabahı da haftanın ilk 5'i açıklanıyor. Sıralama, gün boyu kronometreyle çalıştığın süreye göre; sınıftaki herkes yarışta."},
+  {view:"grup", nav:"grup", ic:"target", b:"Günün birincisi ★", t:"Dün sınıfta en çok çalışan birinci olur: masasında bütün gün bir yıldız parlar, +3 soru hakkı kazanır ve Zekeriya Hoca'dan tebrik mesajı alır. Herkese de “Dünün birincisi” duyurusu gider."},
+  {view:"grup", nav:"grup", ic:"chart", b:"Haftanın ilk 5'i 👑", t:"Pazartesi sabahı geçen haftanın ilk 5'i kürsüye çıkar. 1. bir hafta boyunca masasında altın taç taşır ve +20 soru hakkı kazanır; 2. ve 3. madalya ve +10, 4. ve 5. kupa ve +5 soru hakkı alır. Hepsine Zekeriya Hoca'dan tebrik gelir."},
+  {view:"grup", nav:"grup", ic:"timer", b:"Nasıl birinci olursun?", t:"Çalışmaya başlarken kronometreyi ya da görevinin ▶ sayacını aç, bitince durdur. Sayılan sadece kaydettiğin süre. Her gün az da olsa otur; hem serin büyür hem kürsüye yaklaşırsın. Bu hafta taç senin olsun!"} ];
 const TUR = [
   {view:"home", ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin: programın, hedeflerin, denemelerin ve çalışma sürelerin hep burada. Yaptığın her şeyi koçun anında görür. Şimdi 2 dakikada her bölümü sırayla gezelim; her adımda arkada o sayfa açılacak."},
   {view:"home", ic:"phone", b:"Önce telefonuna kur", t:"Tarayıcıdan değil, uygulama gibi kullan: Android’de Chrome menüsünden (⋮) “Uygulamayı yükle”, iPhone’da Safari’de Paylaş (□↑) → “Ana Ekrana Ekle”. Böylece tek dokunuşla açılır ve bildirimler gelir.", kosul:"kurulmamis"},
@@ -558,6 +563,7 @@ const TUR = [
   {view:"program", nav:"program", ic:"cal", b:"Haftalık Program", t:"Alttaki ortadaki yeşil düğme. Üstteki günlere dokunarak başka günlere geç; “Haftalık” sekmesinde bütün haftayı tek ekranda görürsün. Koçun her görüşmeden sonra yeni haftanı buraya yazar."},
   {view:"program", nav:"program", ic:"target", b:"Bu haftanın hedefleri", t:"Programın altında her ders için bu hafta bitirmen gereken konular var. Konuyu bitirince hedefin yanındaki yuvarlağı işaretle; koçun hangi hedefin tamamlandığını buradan takip eder."},
   ...SINIF_ADIM.slice(0,-1).map(x=>({...x, b:x.b.replace("Yeni: ","")})),
+  ...ODUL_ADIM.slice(1,3),
   {view:"kronometre", nav:"daha", ic:"timer", b:"Kronometre ve çalışma süresi", t:"Daha Fazla → Kronometre. Görev dışı çalışmalarında da sayacı başlat, ders seç, bitince durdur. Unuttuysan süreyi elle de yazabilirsin. Günlük hedef sürene ne kadar yaklaştığını burada görürsün.", ornek:"sure"},
   ...DERS_ADIM.map(x=>({...x, b:x.b.replace(/^Yeni: /,"").replace(" yenilendi ✨","")})),
   {view:"analiz", nav:"ders", ic:"cal", b:"Deneme takvimi", t:"Deneme analizi sayfasının üstündeki takvim simgesinde yaklaşan Türkiye geneli denemeler var. Ana sayfada da sıradaki deneme hatırlatılır."},
@@ -569,14 +575,15 @@ const TUR = [
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
   {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
-const YENILIK_SURUM = "2026-11-13";
+const YENILIK_SURUM = "2026-11-16";
 const YENILIK = [
-  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümünü senin için baştan tasarladık ve konu anlatım videolarını ekledik. 1 dakikada göstereyim."},
-  ...DERS_ADIM,
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Sınıf'a Ödül ve Sıralama Sistemi geldi: günün birincisi ve haftanın ilk 5'i artık ödüllendiriliyor. Kısaca göstereyim."},
+  ...ODUL_ADIM,
+  ...DERS_ADIM.map(x=>({...x, kosul:"derseski"})),
   ...SINIF_ADIM.slice(0, -1).map(x=>({...x, kosul:"sinifyok"})),
   {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨", kosul:"sinifyok"},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin {Ad}! Tanıtımı Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin.", kosul:"sinifvar"} ];
-const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
+const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
