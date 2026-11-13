@@ -26,3 +26,5 @@ test("ödüller ve metinler", () => {
   assert.equal(duyuruMetni("hafta", [{ takma: "A", dk: 1 }, { takma: "B", dk: 1 }]), "📊 Haftanın ilk 5'i: 1. A · 2. B");
   assert.equal(gunEkle("2026-11-16", -7), "2026-11-09"); assert.equal(haftaGunu("2026-11-16"), 1);
 });
+
+test("yarış başlangıcı", async () => { const m = await import("../functions/odul.js"); assert.equal(m.ODUL_BASLA, "2026-11-16"); });

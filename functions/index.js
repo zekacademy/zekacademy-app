@@ -14,7 +14,7 @@ import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
-import { ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
+import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
 initializeApp();
@@ -448,8 +448,8 @@ export const sinifOdul = onSchedule({ schedule: "0 8 * * *", timeZone: TZ, retry
   for (const gd of gruplar.docs){ const g = gd.data(); if (!(g.uyeler || []).length) continue;
     try {
       const canli = new Map((await gd.ref.collection("canli").get()).docs.map(d => [d.id, d.data()])), L = yarisanlar(g, canli);
-      const isler = [["gun", `gun-${dun}`, [dun], 3]];
-      if (pzt){ const bas = gunEkle(date, -7); isler.push(["hafta", `hafta-${bas}`, Array.from({ length: 7 }, (_, i) => gunEkle(bas, i)), 5]); }
+      const isler = dun >= ODUL_BASLA ? [["gun", `gun-${dun}`, [dun], 3]] : [];
+      if (pzt && gunEkle(date, -7) >= ODUL_BASLA){ const bas = gunEkle(date, -7); isler.push(["hafta", `hafta-${bas}`, Array.from({ length: 7 }, (_, i) => gunEkle(bas, i)), 5]); }
       for (const [tur, id, gunler, n] of isler){
         const ref = gd.ref.collection("odul").doc(id); if ((await ref.get()).exists) continue;
         const liste = siralama(L, gunler, n); if (!liste.length) continue;
