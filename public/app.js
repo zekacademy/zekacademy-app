@@ -2083,16 +2083,15 @@ function veliSheet(s){ const v = s.veli || {}, acik = !!v.acik;
     <p class="muted small" style="margin:-6px 0 0">İstersen velin her pazartesi sabahı haftanla ilgili kısa bir e-posta alır.</p>
     <label class="inline"><input type="checkbox" name="acik" id="ve-acik" ${acik?"checked":""}>Velime haftalık özet gönderilsin</label>
     <label class="f">Velinin e-posta adresi<input type="text" name="eposta" id="ve-eposta" inputmode="email" autocomplete="off" placeholder="ornek@gmail.com" value="${esc(v.eposta||"")}"></label>
-    <label class="f">Veli adı (isteğe bağlı)<input type="text" name="ad" id="ve-ad" maxlength="40" placeholder="Örn. Ayşe Hanım" value="${esc(v.ad||"")}"></label>
     <p class="faint small" style="margin:0">${v.son?`Son gönderim: ${trDate(v.son)}. `:""}İstediğin zaman buradan kapatabilir ya da adresi değiştirebilirsin.</p>
     <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
-  fd=>{ const ac = !!fd.get("acik"), ep = String(fd.get("eposta")||"").trim().toLowerCase(), ad = String(fd.get("ad")||"").trim().slice(0,40);
+  fd=>{ const ac = !!fd.get("acik"), ep = String(fd.get("eposta")||"").trim().toLowerCase();
     if(ac && !epostaOk(ep)) return sheetErr("Geçerli bir e-posta adresi yaz (örn. ornek@gmail.com).");
-    mutate(x=>{ x.veli = {...(x.veli||{}), acik:ac, eposta:ep, ad, at:new Date().toISOString()}; });
+    mutate(x=>{ x.veli = {...(x.veli||{}), acik:ac, eposta:ep, at:new Date().toISOString()}; });
     closeSheet(); render(); toast(ac ? "Veli özeti açıldı · ilk e-posta pazartesi sabahı gider" : "Veli özeti kapalı"); }); }
 function veliKocKart(s){ const v = s.veli; if(!v || !v.eposta) return "";
   return `<div class="card"><div class="sech"><h3>${icon("users","sm")} Veli bilgilendirme</h3><span class="pill ${v.acik?"good":""}">${v.acik?"Açık":"Kapalı"}</span></div>
-    <div class="small muted">${v.acik?`Her pazartesi kısa özet gidiyor: ${esc(v.ad?v.ad+" · ":"")}${esc(v.eposta)}`:"Öğrenci veli özetini kapattı."}${v.son?` · Son gönderim ${trDate(v.son)}`:""}</div></div>`; }
+    <div class="small muted">${v.acik?`Her pazartesi kısa özet gidiyor: ${esc(v.eposta)}`:"Öğrenci veli özetini kapattı."}${v.son?` · Son gönderim ${trDate(v.son)}`:""}</div></div>`; }
 function cSummary(s){
   const m = coachMetrics(s), la = exams(s,"AYT").pop();
   const weak = [];

@@ -439,11 +439,15 @@ export const veliRapor = onSchedule({ schedule: "30 9 * * 1", timeZone: TZ, retr
   const { date } = istanbulNow(), bas = new Date(Date.parse(date + "T12:00:00Z") - 7 * 864e5).toISOString().slice(0, 10);
   const posta = nodemailer.createTransport({ service: "gmail", auth: { user: k.kullanici, pass: k.sifre } });
   const studs = (await db.collection("students").get()).docs.filter(d => { const v = d.data().veli; return v && v.acik && epostaGecerli(v.eposta) && v.son !== date; });
+  if (!studs.length) return;
+  const bit = new Date(Date.parse(bas + "T12:00:00Z") + 6 * 864e5).toISOString().slice(0, 10);
+  const [ayar, gq] = await Promise.all([db.doc("settings/main").get(), db.collection("gorusmeler").where("tarih", ">=", bas).where("tarih", "<=", bit).get()]);
+  const sinav = (ayar.data() || {}).examDate || "", G = gq.docs.map(x => x.data());
   let giden = 0;
   for (const d of studs) {
     const s = d.data(), v = s.veli;
     try {
-      const e = veliEposta(s, veliOzet(s, bas), { veliAd: v.ad || "" });
+      const e = veliEposta(s, veliOzet(s, bas, { gorusmeler: G.filter(g => g.sid === d.id), sinav, bugun: date }));
       await posta.sendMail({ from: `"Zekacademy" <${k.kullanici}>`, to: v.eposta, subject: e.konu, text: e.text, html: e.html });
       await d.ref.update({ "veli.son": date }); giden++;
     } catch (err) { logger.error("veli raporu gönderilemedi", { sid: d.id, hata: String(err && err.message || err) }); }
