@@ -751,6 +751,7 @@ function sMore(s){
       ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span><div><div class="rt">Soru Çözüm</div><div class="rs">Fotoğrafla, yapay zekâ adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="sheet" data-v="veli"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("users","sm")}</span><div><div class="rt">Veli bilgilendirme</div><div class="rs">${s.veli&&s.veli.acik?`Açık · her pazartesi ${esc(s.veli.eposta)}`:"İstersen velin haftalık kısa bir özet alsın"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="tur" data-v="0" data-l="tur"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="tur" data-v="0" data-l="yeni"><span class="ri">${icon("flame","sm")}</span><div><div class="rt">Yenilikler</div><div class="rs">Son eklenen özellikler</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1935,7 +1936,7 @@ function cDetail(){
   const sqb = soruList(S.cur).filter(([,q])=>q.durum!=="cozuldu").length;
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
-  const body = {ozet:()=>cSummary(s)+kvKocKart(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
+  const body = {ozet:()=>cSummary(s)+veliKocKart(s)+kvKocKart(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
   return `${topbar(`<div class="tttl"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
@@ -2075,6 +2076,22 @@ function netYolculugu(s){ const b = s.baslangic||{};
       <span class="nyok">→</span>
       <div class="nyg"><small>Son ${o?o.n:5} deneme ort.</small><b class="num">${o?fmt(Math.round(o.v*100)/100):"—"}</b>${fark!=null?`<span class="${fark>=0?"up":"down"} small" style="font-weight:800">${fark>=0?"+":""}${fmt(Math.round(fark*100)/100)}</span>`:""}</div></div>`; };
   return `<div class="card"><h3>Net yolculuğu</h3><div class="nyl">${sat("TYT","tyt")}${s.alan==="DİL"?"":sat("AYT","ayt")}</div></div>`; }
+/* ---------- Veli bilgilendirme (öğrenci açar; her pazartesi kısa e-posta) ---------- */
+const epostaOk = e => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(e||"").trim());
+function veliSheet(s){ const v = s.veli || {}, acik = !!v.acik;
+  return sheet(`<h3>Veli bilgilendirme</h3>
+    <p class="muted small" style="margin:-6px 0 0">İstersen velin her pazartesi sabahı haftanla ilgili kısa bir e-posta alır.</p>
+    <label class="inline"><input type="checkbox" name="acik" id="ve-acik" ${acik?"checked":""}>Velime haftalık özet gönderilsin</label>
+    <label class="f">Velinin e-posta adresi<input type="text" name="eposta" id="ve-eposta" inputmode="email" autocomplete="off" placeholder="ornek@gmail.com" value="${esc(v.eposta||"")}"></label>
+    <p class="faint small" style="margin:0">${v.son?`Son gönderim: ${trDate(v.son)}. `:""}İstediğin zaman buradan kapatabilir ya da adresi değiştirebilirsin.</p>
+    <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
+  fd=>{ const ac = !!fd.get("acik"), ep = String(fd.get("eposta")||"").trim().toLowerCase();
+    if(ac && !epostaOk(ep)) return sheetErr("Geçerli bir e-posta adresi yaz (örn. ornek@gmail.com).");
+    mutate(x=>{ x.veli = {...(x.veli||{}), acik:ac, eposta:ep, at:new Date().toISOString()}; });
+    closeSheet(); render(); toast(ac ? "Veli özeti açıldı · ilk e-posta pazartesi sabahı gider" : "Veli özeti kapalı"); }); }
+function veliKocKart(s){ const v = s.veli; if(!v || !v.eposta) return "";
+  return `<div class="card"><div class="sech"><h3>${icon("users","sm")} Veli bilgilendirme</h3><span class="pill ${v.acik?"good":""}">${v.acik?"Açık":"Kapalı"}</span></div>
+    <div class="small muted">${v.acik?`Her pazartesi kısa özet gidiyor: ${esc(v.eposta)}`:"Öğrenci veli özetini kapattı."}${v.son?` · Son gönderim ${trDate(v.son)}`:""}</div></div>`; }
 function cSummary(s){
   const m = coachMetrics(s), la = exams(s,"AYT").pop();
   const weak = [];
@@ -3026,6 +3043,7 @@ function openSheet(kind, el){
     <label class="inline"><input type="checkbox" id="sesAcik" ${SES.acik?"checked":""}>Ses efektleri (dokunma ve görev tamamlama sesleri)</label>
     <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`);
+  if(kind==="veli") return veliSheet(s);
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
     <label class="f">Sınav tarihi<input type="date" name="d" id="m-exam" value="${S.settings.examDate}"></label>
     <label class="inline"><input type="checkbox" name="t" id="m-tah" ${S.settings.tahmini?"checked":""}>ÖSYM henüz açıklamadı (tahmini)</label>
