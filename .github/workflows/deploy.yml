@@ -100,6 +100,12 @@ jobs:
         run: |
           npm --prefix functions install --no-audit --no-fund > /dev/null
           node tools/ai-anahtar.mjs
+      - name: Veli e-postası hesabı (main)
+        if: github.event_name != 'pull_request'
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: node tools/eposta-anahtar.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
