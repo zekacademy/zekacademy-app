@@ -1652,13 +1652,14 @@ function paketOzet(){ const L = cfg().paketler, m = new Map(L.map(p=>[p.k, {p, n
   return [...m.values()]; }
 function seansGunu(sid, d){ const z = duzenOf(sid), x = S.students.get(sid);
   if(isWA(x)){ if(z && z.gun!=null && z.gun!=="") return z.gun===dIdx(d); return pStart(x, d)===d; } /* WhatsApp paketi: döngü gününde haftalık rapor, saat yok */
+  const o = sonSaat(sid, d); if(o) return dIdx(o.tarih)===dIdx(d); /* geçen hafta(lar)daki son görüşme hangi gündeyse bu hafta da o gün */
   if(!z) return false; const gunVar = z.gun!=null && z.gun!=="";
-  if(!z.saat && !sonSaat(sid, d)) return gunVar && z.gun===dIdx(d); /* saati henüz girilmemiş: günü belli, listede "saat yok" olarak görünür */
+  if(!z.saat) return gunVar && z.gun===dIdx(d); /* saati henüz girilmemiş: günü belli, listede "saat yok" olarak görünür */
   if(gunVar) return z.gun===dIdx(d);
   return !!x && pStart(x, d)===d; }
-/* Öğrencinin önceki haftalardaki en son görüşme saati: yeni hafta bunu devralır ("Sadece bu hafta" denenler ve düzen değiştikten önceki kayıtlar hariç) */
+/* Öğrencinin önceki haftalardaki en son görüşmesi: yeni hafta onun gününü ve saatini devralır ("Sadece bu hafta" denenler ve düzen değiştikten önceki kayıtlar hariç) */
 function sonSaat(sid, d){ const z = duzenOf(sid) || {}, w = monday(d); let son = null;
-  S.gorus.forEach(g=>{ if(g.sid!==sid || g.kaynak!=="duzen" || g.tek || !g.saat || !g.tarih) return;
+  S.gorus.forEach(g=>{ if(g.sid!==sid || g.tek || !g.saat || !g.tarih || g.durum==="iptal" || g.tur==="ilk" || g.tur==="rapor" || (g.kaynak!=="duzen" && g.tur!=="seans")) return;
     if((g.hafta || monday(g.tarih)) >= w || (z.degis && w >= monday(z.degis) && g.tarih < z.degis)) return;
     if(!son || g.tarih > son.tarih) son = g; });
   return son; }
@@ -1673,7 +1674,7 @@ function gunGorusme(d){
   const real = [...S.gorus.entries()].filter(([,g])=>g.tarih===d).map(([id,g])=>({...g, id}));
   const w = monday(d), virt = [];
   S.students.forEach((x,sid)=>{ const z = duzenOf(sid); if(!seansGunu(sid, d) || (z && z.bas && d < z.bas)) return;
-    if([...S.gorus.values()].some(g=>g.sid===sid && g.kaynak==="duzen" && (g.hafta || monday(g.tarih))===w)) return;
+    if([...S.gorus.values()].some(g=>g.sid===sid && (g.kaynak==="duzen" || g.tur==="seans") && (g.hafta || monday(g.tarih))===w)) return;
     virt.push({id:"v:"+sid+":"+d, sanal:true, ...sanalKayit(sid, d)}); });
   const all = [...real, ...virt].sort((a,b)=>saatSira(a)-saatSira(b) || (a.ad||"").localeCompare(b.ad||"","tr"));
   const akt = all.filter(g=>g.durum!=="iptal" && g.tur!=="rapor" && g.saat);
