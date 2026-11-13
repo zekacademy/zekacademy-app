@@ -1410,6 +1410,15 @@ body.dersacik{overflow:hidden}
 .kvr{display:flex;align-items:center;gap:6px;border-top:1px solid var(--line);padding:6px 0}.kvr:first-of-type{border-top:0}
 .kvo,.kvk{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;text-decoration:none;padding:2px 0}
 .kvo .vkvt,.kvk .vkvt{min-width:0}.kvo b,.kvk b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+/* Sınıf canlı şerit */
+.scanli{display:flex;flex-direction:column;gap:8px}
+.schd{display:flex;justify-content:space-between;align-items:flex-end}.schd small{display:block;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.3px}.schd b{font-size:18px}.schy{font-weight:800;color:var(--ac)}
+.schbar{height:10px;border-radius:5px;background:var(--sunk);overflow:hidden}.schbar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--ac),#22C55E);transition:width .6s}
+.syil{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;background:var(--warns)}.syil>span:nth-child(2){flex:1;min-width:0}.syil small{display:block;font-size:11px;color:var(--warn);font-weight:700}.syil b{display:block}.syili{font-size:20px;color:#F59E0B}
+.sakis{display:flex;flex-direction:column;gap:4px}
+.sak{display:flex;align-items:center;gap:8px;font-size:13px;animation:sakin .5s ease-out both}.sak i{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.18);flex:none}.sak span{color:var(--muted);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sak em{font-style:normal;color:var(--faint);font-size:12px}
+@keyframes sakin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
