@@ -1935,7 +1935,7 @@ function cDetail(){
   const sqb = soruList(S.cur).filter(([,q])=>q.durum!=="cozuldu").length;
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
-  const body = {ozet:()=>cSummary(s)+kvKocKart(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
+  const body = {ozet:()=>cSummary(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
   return `${topbar(`<div class="tttl"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
@@ -3200,9 +3200,6 @@ document.addEventListener("click", e=>{
     case "hgun": { const x = st(); S.view = "program"; S.pmode = "gun"; S.day = v; if(x) S.week = curStart(x); render(); window.scrollTo(0,0); break; }
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
     case "ex": S.ex=v; render(); break;
-    case "kvekle": kvEkle(); break;
-    case "kvoyn": { const x = kvListe(st()).find(y=>y.id===v); if(x) kvOynat(x); break; }
-    case "kvsil": mutate(x=>{ x.kvid = kvListe(x).filter(y=>y.id!==v); }); save(); render(); toast("Listeden çıkarıldı"); break;
     case "dersac": S.dsk=v; S.dsf="tum"; S.view="dersd"; render(); window.scrollTo(0,0); break;
     case "dsf": S.dsf=v; render(); break;
     case "konud": konuDetaySheet(b.dataset.k); break;
@@ -3484,38 +3481,8 @@ function pVideoKutuphane(s){ const head = topbar(`<h1 class="ttl">Ders</h1>`);
   const h = S.vkh ? v.hocalar.find(x=>x.ad===S.vkh) : null;
   return `${head}<div class="page">${h ? vkHoca(s, d, h) : vkHocalar(s, d, v)}</div>`; }
 const vkUst = (geri, hedef, baslik, alt) => `<div class="vkust"><button type="button" class="vkgeri" data-vk="${hedef}">${icon("back","xs")} ${esc(geri)}</button><div class="vkbas"><b>${esc(baslik)}</b>${alt?`<span class="faint small">${alt}</span>`:""}</div></div>`;
-/* ---------- Kendi videolarım: öğrenci YouTube linkini yapıştırıp bizim oynatıcıda izler; koç listeyi görür ---------- */
-function ytAyikla(u){ u = String(u||"").trim(); if(/^[\w-]{11}$/.test(u)) return u;
-  try{ const x = new URL(/^https?:/i.test(u) ? u : "https://"+u), h = x.hostname.replace(/^(www|m|music)\./,"");
-    if(h==="youtu.be") return (x.pathname.slice(1).match(/^[\w-]{11}/)||[])[0] || null;
-    if(/(^|\.)youtube(-nocookie)?\.com$/.test(h)){ const v = x.searchParams.get("v"); if(v && /^[\w-]{11}$/.test(v)) return v;
-      const m = x.pathname.match(/^\/(shorts|live|embed|v)\/([\w-]{11})/); if(m) return m[2]; } }catch(e){} return null; }
-const kvListe = s => Array.isArray(s && s.kvid) ? s.kvid : [];
-const KV_DERS = {id:"kendi", ad:"Kendi videolarım"};
-function kvOynat(v){ vpAc({baslik:v.b || "YouTube videosu", alt:"Kendi videom", hoca:"YouTube", ders:KV_DERS, k:null, liste:[[v.id, v.b || "YouTube videosu", 0, []]], i:0, sn:null}); }
-async function kvBaslik(id){ try{ const c = new AbortController(), t = setTimeout(()=>c.abort(), 4000);
-    const r = await fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent("https://www.youtube.com/watch?v="+id)}`, {signal:c.signal}); clearTimeout(t);
-    if(!r.ok) return {b:"", yok:r.status===401||r.status===403}; const j = await r.json(); return {b:String(j.title||"").slice(0,140), kanal:String(j.author_name||"").slice(0,60)}; }catch(e){ return {b:""}; } }
-async function kvEkle(){ const i = $("#kvLink"), id = ytAyikla(i && i.value);
-  if(!id){ if(i && /list=/.test(i.value)) return toast("Oynatma listesinden izlemek istediğin videoyu açıp onun linkini yapıştır"); return toast("Geçerli bir YouTube video linki yapıştır"); }
-  const btn = $("#kvBtn"); if(btn){ btn.disabled = true; btn.textContent = "Açılıyor…"; }
-  const m = await kvBaslik(id), v = {id, b:m.b || "YouTube videosu", ...(m.kanal?{k:m.kanal}:{}), at:Date.now()};
-  mutate(x=>{ x.kvid = [v, ...kvListe(x).filter(y=>y.id!==id)].slice(0, 60); }); save(); render();
-  if(m.yok) toast("Bu video uygulama içinde oynatılamayabilir; açılmazsa “YouTube'da aç”a dokun");
-  kvOynat(v); }
-function kvKart(s){ const L = kvListe(s);
-  return `<div class="card kvkart"><div class="sech"><h3>${icon("plus","sm")} Linkle izle</h3></div>
-    <p class="muted small" style="margin:4px 0 8px">Başka bir YouTube videosunu buradan izlemek için linkini yapıştır. Kaldığın yer kaydedilir; eklediğin videolar aşağıda birikir.</p>
-    <div class="kvsat"><input type="url" id="kvLink" inputmode="url" placeholder="youtube.com/watch?v=… ya da youtu.be/…" aria-label="YouTube linki" autocomplete="off"><button type="button" class="btn pri" id="kvBtn" data-act="kvekle">İzle</button></div>
-    ${L.length ? `<div class="kvl"><div class="dkbh">Kendi videolarım · ${L.length}</div>${L.map(v=>{ const p = vYuzde(v.id);
-      return `<div class="kvr"><button type="button" class="kvo" data-act="kvoyn" data-v="${esc(v.id)}"><span class="vkr sm"><img src="${vThumb(v.id)}" alt="" loading="lazy">${p>=95?`<span class="vkok">✓</span>`:""}</span><span class="vkvt"><b>${esc(v.b)}</b><span class="faint small">${v.k?esc(v.k)+" · ":""}${p?`%${Math.round(p)} izlendi`:"izlenmedi"}</span></span></button><button type="button" class="iconbtn sm" data-act="kvsil" data-v="${esc(v.id)}" aria-label="Listeden çıkar">${icon("trash","sm")}</button></div>`; }).join("")}</div>` : ""}
-  </div>`; }
-/* Koç: öğrencinin kendi eklediği videolar */
-function kvKocKart(s){ const L = kvListe(s); if(!L.length) return "";
-  return `<div class="card"><div class="sech"><h3>${icon("play","sm")} Kendi eklediği videolar</h3><span class="faint small">${L.length} video</span></div>
-    <div class="kvl">${L.map(v=>`<a class="kvr kvk" href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener"><span class="vkr sm"><img src="${vThumb(v.id)}" alt="" loading="lazy"></span><span class="vkvt"><b>${esc(v.b)}</b><span class="faint small">${v.k?esc(v.k)+" · ":""}${v.at?trDate(iso(new Date(v.at))):""}</span></span></a>`).join("")}</div></div>`; }
 function vkGiris(s){ const son = vSon();
-  return `${A() ? "" : kvKart(s)}<div class="card vkintro"><div class="sech"><h3>${icon("play","sm")} Video Kütüphanesi</h3></div><p class="muted small" style="margin:6px 0 0">Ders seç, sonra hocayı; hocanın TYT, AYT ve Maarif listeleri sırayla burada. Konu ilerlemesi'nde konunun yanındaki ▶ ile kendi hocanın videosu doğrudan açılır.</p></div>
+  return `<div class="card vkintro"><div class="sech"><h3>${icon("play","sm")} Video Kütüphanesi</h3></div><p class="muted small" style="margin:6px 0 0">Ders seç, sonra hocayı; hocanın TYT, AYT ve Maarif listeleri sırayla burada. Konu ilerlemesi'nde konunun yanındaki ▶ ile kendi hocanın videosu doğrudan açılır.</p></div>
     ${son && son.v ? `<button type="button" class="card vkson" data-vk="son"><span class="vkr"><img src="${vThumb(son.v[0])}" alt="" loading="lazy"><span class="vkp">▶</span></span><span class="vksont"><small>Kaldığın yerden devam et</small><b>${esc(son.baslik||son.v[1])}</b><span class="faint small">${esc(son.alt||"")}</span><span class="vkbar"><i style="width:${vYuzde(son.v[0])}%"></i></span></span></button>` : ""}
     <div class="vkdersler">${VD.map(d=>{ const hk = vHocaAdi(s, d);
       return `<button type="button" class="vkders" data-vk="ders" data-d="${d.id}" style="--sc:var(--c-${d.g})"><span class="vkdi">${esc(d.ad.slice(0,2))}</span><span class="vkdt"><b>${esc(d.ad)}</b><span class="faint small">${hk?`Hocan: ${esc(hk)}`:"Hocalar"}</span></span>${icon("chev","xs")}</button>`; }).join("")}</div>`; }
@@ -3614,7 +3581,7 @@ document.addEventListener("click", e=>{ const b = e.target.closest && e.target.c
   if(a==="sinav"){ S.vks = b.dataset.v; render(); return; }
   if(a==="oynat"){ const d = vdById(S.vkd), v = vkVeri(S.vkd); if(!d || !v) return; const h = v.hocalar.find(x=>x.ad===b.dataset.h), l = h && h.listeler[+b.dataset.l]; if(!l) return;
     vpAc({baslik:l.ad, alt:h.ad, hoca:h.ad, ders:d, liste:l.v, i:+b.dataset.i, sn:b.dataset.sn!=null ? +b.dataset.sn : null, l:+b.dataset.l, li:0}); return; }
-  if(a==="son"){ const s0 = vSon(); if(!s0 || !s0.v) return; if(s0.ders==="kendi") return kvOynat({id:s0.v[0], b:s0.baslik}); const d = vdById(s0.ders); if(!d) return;
+  if(a==="son"){ const s0 = vSon(); if(!s0 || !s0.v) return; const d = vdById(s0.ders); if(!d) return;
     vkYukle(d.id).then(v=>{ const h = v && v!=="yok" && v.hocalar.find(x=>x.ad===s0.hoca);
       if(h && s0.k && h.konu[s0.k]) return vKonuOynat(d, h, s0.k, vHocaSira(st(), d, v).filter(x=>x!==h && x.konu && x.konu[s0.k]), "");
       const l = h && h.listeler[s0.l]; const i = l ? l.v.findIndex(x=>x[0]===s0.v[0]) : -1;
