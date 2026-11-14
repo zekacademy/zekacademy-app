@@ -13,8 +13,6 @@ import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
-import nodemailer from "nodemailer";
-import { veliOzet, veliEposta, epostaGecerli } from "./veli.js";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
@@ -430,27 +428,4 @@ export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retry
     const r = await pushTo(studentTokens(o.s), "Soru Çözüm 🎉", mesaj, "/?ac=socoz"); await dropBadStudentTokens(b.sid, r.bad);
   }
   await gRef.set({ bonusTarih: date, bonusGecmis: FieldValue.arrayUnion({ date, kisi: sonuc.dagitim.length, hak: sonuc.dagitim.reduce((a, b) => a + b.hak, 0), tahmin: Math.round(sonuc.tahmin * 100) / 100 }) }, { merge: true });
-});
-
-/* Haftalık veli özeti: her pazartesi 09:30, yalnızca öğrencinin kendisinin açtığı veli e-postasına (geçen pazartesi–pazar) */
-export const veliRapor = onSchedule({ schedule: "30 9 * * 1", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
-  const k = (await db.doc("system/eposta").get()).data() || {};
-  if (!k.kullanici || !k.sifre) { logger.warn("veli raporu: e-posta hesabı tanımlı değil"); return; }
-  const { date } = istanbulNow(), bas = new Date(Date.parse(date + "T12:00:00Z") - 7 * 864e5).toISOString().slice(0, 10);
-  const posta = nodemailer.createTransport({ service: "gmail", auth: { user: k.kullanici, pass: k.sifre } });
-  const studs = (await db.collection("students").get()).docs.filter(d => { const v = d.data().veli; return v && v.acik && epostaGecerli(v.eposta) && v.son !== date; });
-  if (!studs.length) return;
-  const bit = new Date(Date.parse(bas + "T12:00:00Z") + 6 * 864e5).toISOString().slice(0, 10);
-  const [ayar, gq] = await Promise.all([db.doc("settings/main").get(), db.collection("gorusmeler").where("tarih", ">=", bas).where("tarih", "<=", bit).get()]);
-  const sinav = (ayar.data() || {}).examDate || "", G = gq.docs.map(x => x.data());
-  let giden = 0;
-  for (const d of studs) {
-    const s = d.data(), v = s.veli;
-    try {
-      const e = veliEposta(s, veliOzet(s, bas, { gorusmeler: G.filter(g => g.sid === d.id), sinav, bugun: date }));
-      await posta.sendMail({ from: `"Zekacademy" <${k.kullanici}>`, to: v.eposta, subject: e.konu, text: e.text, html: e.html });
-      await d.ref.update({ "veli.son": date }); giden++;
-    } catch (err) { logger.error("veli raporu gönderilemedi", { sid: d.id, hata: String(err && err.message || err) }); }
-  }
-  logger.info("veli raporu", { date, giden, toplam: studs.length });
 });
