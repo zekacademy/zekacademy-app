@@ -1,0 +1,219 @@
+{
+ "konu": "Geometri (pilot)",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GEOP-01",
+   "konu": "Üçgende Açılar",
+   "alt": "İç ve dış açı, ikizkenar",
+   "fikir": "İkizkenar üçgende taban açıları tepe açısından bulunur; dış açı komşu iç açının bütünleri ya da uzak iki iç açının toplamıdır.",
+   "tuzak": "Verilen 50° açısını taban açısı sanmak; dış açı yerine iç açıyı yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "gep-ucgen-aci",
+   "tip": "İkizkenar üçgende iç ve dış açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-02",
+   "konu": "Dik Üçgen",
+   "alt": "Hipotenüse inen yükseklik",
+   "fikir": "Hipotenüse indirilen yükseklikle oluşan iki küçük dik üçgende Öklid ve Pisagor birlikte kullanılır; bulunan kenarlarla çevre toplanır.",
+   "tuzak": "Yüksekliği çevreye katmak; yalnız küçük üçgenin çevresini almak; hipotenüsü unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-dik-yukseklik",
+   "tip": "Hipotenüse indirilen yükseklikli dik üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-03",
+   "konu": "Üçgende Benzerlik",
+   "alt": "Paralel doğruyla benzerlik",
+   "fikir": "Kenara paralel doğru oranı AD/AB = AE/AC = DE/BC verir; hangi parçanın hangi bütüne oranlandığına dikkat edilip iki uzunluk bulunur.",
+   "tuzak": "AD/DB ile AD/AB oranını karıştırmak; EC yerine AC ya da AE almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-benzer-paralel",
+   "tip": "Kenara paralel doğruyla temel benzerlik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-04",
+   "konu": "Üçgende Alan",
+   "alt": "Ortak yükseklikle alan oranı",
+   "fikir": "Aynı köşeden çizilen tabanlar üzerinde alanlar tabanlarla orantılıdır; iki ardışık oranla büyük alandan istenen üçgene inilir.",
+   "tuzak": "Oranları ters yazmak; yalnız bir oranı uygulamak; taralı alan yerine komşu üçgenin alanını vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "gep-alan-oran",
+   "tip": "Ortak yükseklikle alan oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-05",
+   "konu": "Yamuk",
+   "alt": "Yamukta köşegenlerle alan",
+   "fikir": "Köşegenler iki benzer üçgen ve eş alanlı iki yan üçgen oluşturur; benzerlik oranının karesi alan oranını verir.",
+   "tuzak": "Alan oranı yerine uzunluk oranını kullanmak; yan üçgenleri ABE ya da CDE’ye eşit sanmak; bir yan üçgeni saymamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-yamuk-kosegen",
+   "tip": "Yamukta köşegenlerin oluşturduğu üçgenlerin alanları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-06",
+   "konu": "Dikdörtgen",
+   "alt": "Katlama",
+   "fikir": "Katlanan köşe E’ye gelince |AE| = |AB| ve |FE| = |FB| olur; DE ve EC Pisagorla bulunur, ECF dik üçgeninde Pisagor yeniden uygulanır.",
+   "tuzak": "Katlanan uzunlukların eşitliğini görememek; BF ile FC’yi karıştırmak; DE yerine EC’yi vermek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "gep-katlama",
+   "tip": "Dikdörtgen kâğıdı köşeden katlama",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-07",
+   "konu": "Çemberde Açı",
+   "alt": "Teğetler ve çevre açı",
+   "fikir": "İki teğetin yaptığı açıdan merkez açı (360° − 90° − 90° − P) bulunur, çevre açı bunun yarısıdır.",
+   "tuzak": "Merkez açıyı çevre açı sanmak; çevre açıyı küçük yaydan görmek; P açısını doğrudan yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "gep-cember-teget",
+   "tip": "İki teğet ve çevre açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-08",
+   "konu": "Dairede Çevre ve Alan",
+   "alt": "Teğet çemberler ve taralı alan",
+   "fikir": "Eş teğet çemberlerin yarıçapı kenar uzunluğundan bulunur; taralı alan dikdörtgenden dairelerin alanları çıkarılarak π cinsinden yazılır.",
+   "tuzak": "Daire alanı yerine çevre formülü; daire sayısını yanlış almak; yarıçapı yanlış bölmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-daire-taralı",
+   "tip": "Teğet daireler ve taralı alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-09",
+   "konu": "Katı Cisimler",
+   "alt": "Cisim köşegeni ve yüzey alanı",
+   "fikir": "Cisim köşegeninden yükseklik √(d² − 2a²) ile bulunur; tüm yüzey alanı iki taban + dört yan yüzdür.",
+   "tuzak": "Yanal alanı ya da yalnız bir tabanı saymak; hacimle karıştırmak; yan yüzleri iki tane saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-prizma-yuzey",
+   "tip": "Kare dik prizmada cisim köşegeni ve yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEOP-10",
+   "konu": "Silindir",
+   "alt": "Silindir içinde koni",
+   "fikir": "Ana doğrudan koninin yüksekliği Pisagorla bulunur; silindir ve koni hacimleri farkı π cinsinden yazılır.",
+   "tuzak": "Yüksekliği yerine ana doğruyu kullanmak; koni hacmindeki 1/3 katsayısını unutmak; yalnız koni ya da silindiri hesaplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "gep-silindir-koni",
+   "tip": "Silindir içine yerleştirilmiş koni",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "gep-ucgen-aci",
+   "ad": "İkizkenar üçgende iç ve dış açı",
+   "kartlar": [
+    "K-GEOP-01"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "gep-dik-yukseklik",
+   "ad": "Hipotenüse indirilen yükseklikli dik üçgen",
+   "kartlar": [
+    "K-GEOP-02"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "gep-benzer-paralel",
+   "ad": "Kenara paralel doğruyla temel benzerlik",
+   "kartlar": [
+    "K-GEOP-03"
+   ],
+   "uygulamaKonu": "geo|Üçgende Benzerlik"
+  },
+  {
+   "tipId": "gep-alan-oran",
+   "ad": "Ortak yükseklikle alan oranı",
+   "kartlar": [
+    "K-GEOP-04"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "gep-yamuk-kosegen",
+   "ad": "Yamukta köşegenlerin oluşturduğu üçgenlerin alanları",
+   "kartlar": [
+    "K-GEOP-05"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "gep-katlama",
+   "ad": "Dikdörtgen kâğıdı köşeden katlama",
+   "kartlar": [
+    "K-GEOP-06"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  },
+  {
+   "tipId": "gep-cember-teget",
+   "ad": "İki teğet ve çevre açı",
+   "kartlar": [
+    "K-GEOP-07"
+   ],
+   "uygulamaKonu": "geo|Çemberde Açı"
+  },
+  {
+   "tipId": "gep-daire-taralı",
+   "ad": "Teğet daireler ve taralı alan",
+   "kartlar": [
+    "K-GEOP-08"
+   ],
+   "uygulamaKonu": "geo|Dairede Çevre ve Alan"
+  },
+  {
+   "tipId": "gep-prizma-yuzey",
+   "ad": "Kare dik prizmada cisim köşegeni ve yüzey alanı",
+   "kartlar": [
+    "K-GEOP-09"
+   ],
+   "uygulamaKonu": "geo|Katı Cisimler"
+  },
+  {
+   "tipId": "gep-silindir-koni",
+   "ad": "Silindir içine yerleştirilmiş koni",
+   "kartlar": [
+    "K-GEOP-10"
+   ],
+   "uygulamaKonu": "geo|Silindir"
+  }
+ ]
+}
