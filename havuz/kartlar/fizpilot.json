@@ -1,0 +1,135 @@
+{
+ "konu": "Fizik (pilot)",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları (yalnız mantık), MEB 9–10. sınıf fizik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZP-01",
+   "konu": "Dinamik",
+   "alt": "Eğik düzlemde sürtünmeli makara sistemi",
+   "fikir": "Her cisim için hareket denklemi yazılır: eğik düzlemdeki cisme düzleme paralel bileşen ve kinetik sürtünme, asılı cisme ağırlık etki eder; ortak ivmeden ipteki gerilme bulunur.",
+   "tuzak": "Sürtünmeyi unutmak; ağırlığın eğik düzleme paralel bileşenini (mg·sinθ) atlamak; gerilmeyi asılı cismin ağırlığına eşit almak; gerilme denkleminde işaret hatası yapmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fzp-dinamik-egik",
+   "tip": "Eğik düzlem ve makaralı iki cisim sisteminde ip gerilmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZP-02",
+   "konu": "Elektrik",
+   "alt": "Seri–paralel devrede ölçü aletleri",
+   "fikir": "Paralel kolların uçları arasındaki gerilim ortaktır; kol akımları toplanıp ana kol akımı bulunur ve seri direnç üzerindeki gerilim eklenerek üretecin gerilimi elde edilir.",
+   "tuzak": "Ampermetrenin gösterdiği akımı ana kol akımı sanmak; paralel kol gerilimlerini toplamak; paralel kolları seri gibi toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fzp-devre-olcu",
+   "tip": "Ampermetre ve voltmetreli seri–paralel devre",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZP-03",
+   "konu": "Optik",
+   "alt": "İnce kenarlı merceğin görüntü boyu",
+   "fikir": "Odak uzaklığı ve cisim uzaklığıyla görüntü uzaklığı mercek denkleminden bulunur; büyütme görüntü ve cisim uzaklıklarının oranıdır.",
+   "tuzak": "Büyütmeyi yanlış oranla almak (d/f, v/f gibi); cismi 2F ile F arasında sanıp görüntüyü aynı boyda varsaymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fzp-mercek-goruntu",
+   "tip": "İnce kenarlı mercekte görüntü boyu",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZP-04",
+   "konu": "Sıvıların Kaldırma Kuvveti",
+   "alt": "Yüzen ve batan cisimlerde sıvı seviyesi ve taban basıncı",
+   "fikir": "Yüzen cisim kendi ağırlığı kadar sıvıyı yer değiştirir (batan hacim = ağırlık ÷ sıvı özkütlesi), batan cisim kendi hacmi kadar; toplam yer değiştiren hacim kesit alanına bölünüp seviye artışı ve basınç bulunur.",
+   "tuzak": "Yüzen cismin tüm hacmini sıvıya katmak; yalnız batan cismi ya da yalnız yüzeni saymak; seviye artışını hesaplayıp ilk seviyeyi unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fzp-sivi-seviye",
+   "tip": "Yüzen ve batan cisimlerle sıvı seviyesi ve taban basıncı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZP-05",
+   "konu": "Hareket ve Kuvvet",
+   "alt": "Konum–zaman grafiğinde ortalama hız",
+   "fikir": "Ortalama hız yer değiştirmenin geçen süreye oranıdır; grafikten başlangıç ve bitiş konumları okunur, yol ile yer değiştirme karıştırılmaz.",
+   "tuzak": "Ortalama hız yerine ortalama sürati (toplam yol ÷ süre) bulmak; yer değiştirmeyi süreye bölmemek; durma süresini katmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fzp-xt-hiz",
+   "tip": "Konum–zaman grafiğinden ortalama hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZP-06",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Sürtünmesiz rayda mekanik enerjinin korunumu",
+   "fikir": "Sürtünmesiz rayda mekanik enerji korunur; iki nokta arasında kinetik enerji artışı yükseklik farkından kaybedilen potansiyel enerjiye eşittir.",
+   "tuzak": "Potansiyel enerjiyi (m·g·h_L) ya da toplam enerjiyi (m·g·h_K) kinetik enerji sanmak; yükseklik farkı yerine yükseklikleri toplamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fzp-enerji-ray",
+   "tip": "Sürtünmesiz rayda iki nokta arasındaki kinetik enerji",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fzp-dinamik-egik",
+   "ad": "Eğik düzlem ve makaralı iki cisim sisteminde ip gerilmesi",
+   "kartlar": [
+    "K-FZP-01"
+   ],
+   "uygulamaKonu": "fiz|Dinamik"
+  },
+  {
+   "tipId": "fzp-devre-olcu",
+   "ad": "Ampermetre ve voltmetreli seri–paralel devre",
+   "kartlar": [
+    "K-FZP-02"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fzp-mercek-goruntu",
+   "ad": "İnce kenarlı mercekte görüntü boyu",
+   "kartlar": [
+    "K-FZP-03"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fzp-sivi-seviye",
+   "ad": "Yüzen ve batan cisimlerle sıvı seviyesi ve taban basıncı",
+   "kartlar": [
+    "K-FZP-04"
+   ],
+   "uygulamaKonu": "fiz|Sıvıların Kaldırma Kuvveti"
+  },
+  {
+   "tipId": "fzp-xt-hiz",
+   "ad": "Konum–zaman grafiğinden ortalama hız",
+   "kartlar": [
+    "K-FZP-05"
+   ],
+   "uygulamaKonu": "fiz|Hareket ve Kuvvet"
+  },
+  {
+   "tipId": "fzp-enerji-ray",
+   "ad": "Sürtünmesiz rayda iki nokta arasındaki kinetik enerji",
+   "kartlar": [
+    "K-FZP-06"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  }
+ ]
+}
