@@ -100,6 +100,9 @@ jobs:
         run: |
           npm --prefix functions install --no-audit --no-fund > /dev/null
           node tools/ai-anahtar.mjs
+      - name: Tek seferlik ödeme temizliği (main)
+        if: github.event_name != 'pull_request'
+        run: node tools/odeme-temizle.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
