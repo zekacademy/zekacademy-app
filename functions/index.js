@@ -14,6 +14,7 @@ import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
+import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
 import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
 
 initializeApp();
@@ -428,4 +429,35 @@ export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retry
     const r = await pushTo(studentTokens(o.s), "Soru Çözüm 🎉", mesaj, "/?ac=socoz"); await dropBadStudentTokens(b.sid, r.bad);
   }
   await gRef.set({ bonusTarih: date, bonusGecmis: FieldValue.arrayUnion({ date, kisi: sonuc.dagitim.length, hak: sonuc.dagitim.reduce((a, b) => a + b.hak, 0), tahmin: Math.round(sonuc.tahmin * 100) / 100 }) }, { merge: true });
+});
+
+/* Her sabah 08:00: her sınıfta dünün 1.'si; pazartesi ayrıca geçen haftanın ilk 5'i. Sonuç gruplar/{gid}/odul altına yazılır,
+   gerçek kazananlara ekstra soru hakkı + koçtan tebrik bildirimi, diğer üyelere duyuru gider. Aynı gün ikinci kez çalışırsa tekrar vermez. */
+export const sinifOdul = onSchedule({ schedule: "0 8 * * *", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
+  const settings = (await db.doc("settings/main").get()).data() || {}, c = aiCfg(settings);
+  const { date } = istanbulNow(), dun = gunEkle(date, -1), ay = ayOf(date), pzt = haftaGunu(date) === 1;
+  const ogrCache = new Map(), ogr = async sid => { if (!ogrCache.has(sid)) ogrCache.set(sid, (await db.doc(`students/${sid}`).get()).data() || null); return ogrCache.get(sid); };
+  async function odul(sid, hak, metin){ const s = await ogr(sid); if (!s) return;
+    const ver = hak && c.acik !== "kapali" && aiAcikMi(c, sid);
+    if (ver){ await db.doc(`aiKullanim/${kullanimId(ay, sid)}`).set({ sid, ay, bonus: FieldValue.increment(hak) }, { merge: true });
+      await db.doc(`students/${sid}`).update({ aiBonus: { hak, mesaj: metin, at: new Date().toISOString() } }).catch(() => {}); }
+    const r = await pushTo(studentTokens(s), "Zekeriya Hoca'dan tebrik 🎉", ver ? metin : metin.replace(/ \+\d+ soru hakkı kazandın\./, ""), "/?ac=grup"); await dropBadStudentTokens(sid, r.bad); }
+  async function duyur(uyeler, haric, metin){ for (const sid of uyeler){ if (haric.has(sid)) continue; const s = await ogr(sid); if (!s) continue;
+    const r = await pushTo(studentTokens(s), "Sınıf", metin, "/?ac=grup"); await dropBadStudentTokens(sid, r.bad); } }
+  const gruplar = await db.collection("gruplar").get();
+  for (const gd of gruplar.docs){ const g = gd.data(); if (!(g.uyeler || []).length) continue;
+    try {
+      const canli = new Map((await gd.ref.collection("canli").get()).docs.map(d => [d.id, d.data()])), L = yarisanlar(g, canli);
+      const isler = dun >= ODUL_BASLA ? [["gun", `gun-${dun}`, [dun], 3]] : [];
+      if (pzt && gunEkle(date, -7) >= ODUL_BASLA){ const bas = gunEkle(date, -7); isler.push(["hafta", `hafta-${bas}`, Array.from({ length: 7 }, (_, i) => gunEkle(bas, i)), 5]); }
+      for (const [tur, id, gunler, n] of isler){
+        const ref = gd.ref.collection("odul").doc(id); if ((await ref.get()).exists) continue;
+        const liste = siralama(L, gunler, n); if (!liste.length) continue;
+        await ref.set({ tur, tarih: gunler[0], bitis: gunler[gunler.length - 1], liste, at: Date.now() });
+        const kazanan = new Set();
+        for (let i = 0; i < liste.length; i++){ const x = liste[i]; if (x.zek) continue; if (tur === "gun" && i > 0) break;
+          const hak = (ODUL[tur][i] || 0); kazanan.add(x.uid); await odul(x.uid, hak, tebrikMetni(tur, i + 1, x.dk, hak)); }
+        await duyur(g.uyeler || [], kazanan, duyuruMetni(tur, liste));
+        logger.info("sınıf ödülü", { gid: gd.id, tur, id, ilk: liste[0].takma }); }
+    } catch (e) { logger.error("sınıf ödülü", gd.id, e); } }
 });
