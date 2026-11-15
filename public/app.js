@@ -90,6 +90,7 @@ const ADMIN_U = "zekacademy";
 
 /* ---------- İkonlar ---------- */
 const IC = {
+  pause:'<path d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
   chat:'<path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
   camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
   phone:'<path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2.5v13h8v-13zm3 15h2v1.5h-2z"/><path d="M11 6.5h2v4h2l-3 3.5-3-3.5h2z"/>',
@@ -522,7 +523,7 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  const nb = ([v,ic,l,fab,cnt]) => `<button class="nb ${fab?"fab":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="ders" && !A() && (dersGorunum(S.view) || S.view==="dersd")) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  const nb = ([v,ic,l,fab,cnt,canli]) => `<button class="nb ${fab?"fab":""} ${canli?"canli":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="ders" && !A() && (dersGorunum(S.view) || S.view==="dersd")) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${canli?`<b class="num" data-tlive>${clock(timerMin(st())*60)}</b>`:l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
   return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
@@ -600,7 +601,7 @@ function studentShell(){
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
   const pages = {home:sHome, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s)};
   const nots = studentNotices(s).length;
-  return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["ders","book","Ders"],["program","cal","Haftalık Program",true],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
+  return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["ders","book","Ders"],["program",(s.timer&&s.timer.start)?"timer":"cal",(s.timer&&s.timer.start)?"Çalışıyorsun":"Haftalık Program",true,0,!!(s.timer&&s.timer.start)],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
 }
 /* ---------- Ders: Deneme analizi + Konu ilerlemesi (öğrenci alt menüsünde tek bölüm) ---------- */
 const DERS_SEK = [["analiz","chart","Deneme analizi"],["konular","book","Konu ilerlemesi"],["cetele","list","Yanlış çetelesi"],["sorular","note","Takıldığım sorular"],["videolar","play","Video Kütüphanesi"]];
@@ -831,9 +832,10 @@ function taskRow(t, date, opts={}){
   const h = parseHours(taskText(t)), s = opts.s, ogr = s && !A(), run = !!(s && s.timer && s.timer.task && s.timer.task.id===t.id);
   const sayac = run ? `<div class="trun"><span class="tlive num" data-tlive>${clock(timerMin(s)*60)}</span><button class="btn sm" data-act="tgbitir" data-v="ara">${icon("stop","xs")} Durdur</button></div>` : "";
   const sag = `<div class="tright">${h?`<span class="pill">${icon("clock","xs")}${fmtH(h)}</span>`:""}${ogr && !t.done && !run && date<=today() ? `<button class="tplay" data-act="tgbasla" data-date="${date}" data-id="${t.id}" aria-label="Bu görev için sayacı başlat" title="Sayacı başlat">${icon("play","xs")}</button>`:""}</div>`;
-  return `<div class="task ${t.done?"done":""} ${run?"running":""}">
+  const sira = opts.next===t.id && !run;
+  return `<div class="task ${t.done?"done":""} ${run?"running":""} ${sira?"sira":""}">
     <button class="tick" data-act="tick" data-date="${date}" data-id="${t.id}" aria-pressed="${!!t.done}" aria-label="${t.done?"Tamamlandı":"Tamamla"}">${icon("check","sm")}</button>
-    <div style="min-width:0"><div class="tt" style="font-weight:600">${esc(taskText(t))}</div>${gorevHedef(s, date, taskText(t))}${t.dk?`<div class="thd"><span>${icon("timer","xs")}${fmtMin(t.dk)} çalıştın</span></div>`:""}${sayac}</div>
+    <div style="min-width:0">${sira?`<span class="siratag">Sıradaki</span>`:""}<div class="tt" style="font-weight:600">${esc(taskText(t))}</div>${gorevHedef(s, date, taskText(t))}${t.dk?`<div class="thd"><span>${icon("timer","xs")}${fmtMin(t.dk)} çalıştın</span></div>`:""}${sayac}</div>
     ${sag}
   </div>`;
 }
@@ -869,6 +871,30 @@ function pProgram(s, edit){ return edit ? planEditor(s) : studentProgram(s); }
 function weekNav(s){ const w = S.week, an = (s.donem||[]).includes(w);
   return `<div class="wknav"><button class="iconbtn" data-act="wk" data-d="-1" aria-label="Önceki hafta">${icon("back","sm")}</button><b>${shortDate(w)} – ${shortDate(pEnd(s,w))}${w===curStart(s)?` <span class="pill ac">Bu hafta</span>`:""}${an?`<div class="faint small" style="font-weight:600">Görüşme: ${GUN[dIdx(w)]} ${shortDate(w)}</div>`:""}</b><button class="iconbtn" data-act="wk" data-d="1" aria-label="Sonraki hafta">${icon("chev","sm")}</button></div>`; }
 
+/* ---------- Çalışma kartı: program + kronometre bir arada (bugün) ---------- */
+function siradaki(s, d){ return dayTasks(s,d).find(x=>!x.done) || null; }
+function halka(p){ const r = 46, c = 2*Math.PI*r, o = c*(1-Math.min(1,Math.max(0,p)));
+  return `<svg class="halka" viewBox="0 0 108 108" aria-hidden="true"><circle cx="54" cy="54" r="${r}" class="hz"/><circle cx="54" cy="54" r="${r}" class="hd" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${o.toFixed(1)}" transform="rotate(-90 54 54)"/></svg>`; }
+function calismaKart(s, sira){
+  const t = today(), run = !!(s.timer && s.timer.start), m = minutes(s,t), tg = dayTarget(s,t), p = tg ? m/60/tg : 0;
+  const l = dayTasks(s,t), dn = l.filter(x=>x.done).length, kalan = tg ? Math.max(0, tg*60 - m) : 0;
+  const ozet = `<div class="ckozet"><div class="ckh">${halka(p)}<span class="ckp num">%${Math.round(Math.min(1,p)*100)}</span></div>
+    <div class="ckm"><div class="ckb"><b class="num" id="liveMin">${fmtMin(m)}</b>${tg?` <span>/ ${fmtH(tg)}</span>`:""}</div>
+    <div class="cks">${tg ? (kalan ? `Bugünkü hedefe ${fmtMin(kalan)} kaldı` : "Bugünün süre hedefi tamam 🎉") : "Bugün çalıştığın süre"}${l.length?` · ${dn}/${l.length} görev`:""}</div></div></div>`;
+  if(run){ const it = s.timer.task ? dayTasks(s, s.timer.task.date).find(x=>x.id===s.timer.task.id) : null, ders = timerDers(s);
+    return `<div class="card ck run">
+      <div class="ckust"><span class="ckdot"></span>${it ? "Göreve çalışıyorsun" : ders ? esc(dersEt(ders))+" çalışıyorsun" : "Serbest çalışıyorsun"}</div>
+      <div class="ckclock num" data-tlive>${clock(timerMin(s)*60)}</div>
+      ${it ? `<div class="ckgorev">${esc(taskText(it))}</div>` : ""}
+      <div class="ckbtns">${it ? `<button class="ckbtn ara" data-act="tgbitir" data-v="ara">${icon("pause","sm")} Ara ver</button><button class="ckbtn bitti" data-act="tgbitir" data-v="bitti">${icon("check","sm")} Bitirdim</button>`
+        : `<button class="ckbtn bitti" data-act="tstop">${icon("stop","sm")} Bitir ve kaydet</button>`}</div>
+      ${ozet}</div>`; }
+  return `<div class="card ck">
+    ${ozet}
+    ${sira ? `<div class="cksira"><div style="min-width:0;flex:1"><span class="cksl">Sıradaki görev</span><div class="ckst">${esc(taskText(sira))}</div></div>
+      <button class="ckbtn go" data-act="tgbasla" data-date="${t}" data-id="${sira.id}">${icon("play","sm")} Başla</button></div>`
+      : `<div class="cksira"><div class="ckst">${l.length ? "Bugünün görevlerini bitirdin 💪" : "Bugün için görev yok"}</div></div>`}
+    <button class="cklink" data-act="tstart">${icon("timer","xs")} Görev seçmeden serbest çalış</button></div>`; }
 function studentProgram(s){
   const w = S.week, t = today(), ws = weekStats(s,w), g = weekGoals(s,w);
   const PD = pDays(s,w); let tgW = 0; PD.forEach(d=>tgW += dayTarget(s, d));
@@ -878,10 +904,10 @@ function studentProgram(s){
   let body;
   if(S.pmode==="gun"){
     const d = S.day && PD.includes(S.day) ? S.day : (PD.includes(t) ? t : w);
-    const l = dayTasks(s,d), dn = l.filter(x=>x.done).length;
-    body = `<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}${yaziliGun(s,d).map(x=>` <span class="pill warn">${esc(x)} yazılısı</span>`).join("")}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
-      <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{s})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${dayFooter(s,d)}
-      ${d===t?`<button class="btn full" style="margin-top:12px" data-act="go" data-v="kronometre">${icon("timer","sm")} Kronometreyi aç</button>`:""}</div>
+    const l = dayTasks(s,d), dn = l.filter(x=>x.done).length, sira = d===t ? siradaki(s,t) : null;
+    body = `${d===t?calismaKart(s, sira):""}<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}${yaziliGun(s,d).map(x=>` <span class="pill warn">${esc(x)} yazılısı</span>`).join("")}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
+      <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{s, next:sira&&sira.id})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${d===t?"":dayFooter(s,d)}
+      ${d===t?`<button class="btn full" style="margin-top:12px" data-act="go" data-v="kronometre">${icon("chart","sm")} Haftalık çalışma grafiğim</button>`:""}</div>
       ${goalsCard(s,w)}`;
   } else {
     let rows = "";
@@ -893,7 +919,7 @@ function studentProgram(s){
   return `${topbar(`<h1 class="ttl">Programım</h1>`, `<button class="iconbtn" data-act="wk" data-d="0" aria-label="Bu haftaya dön">${icon("cal")}</button>`)}
   <div class="page">
     <div class="seg"><button data-act="pmode" data-v="gun" aria-pressed="${S.pmode==="gun"}">Günlük</button><button data-act="pmode" data-v="hafta" aria-pressed="${S.pmode==="hafta"}">Haftalık</button></div>
-    ${weekNav(s)}${yaziliKart(s, w, false)}${S.pmode==="gun"?strip:""}${hero}${body}
+    ${weekNav(s)}${yaziliKart(s, w, false)}${S.pmode==="gun"?strip:""}${S.pmode==="gun" && (S.day && PD.includes(S.day) ? S.day : (PD.includes(t) ? t : w))===t ? "" : hero}${body}
     <p class="faint small" style="text-align:center">Programını koçun hazırlıyor. Bitirdiğin satırı ve hedef konuyu işaretle; koçun anında görür.</p>
   </div>`;
 }

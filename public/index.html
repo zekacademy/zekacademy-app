@@ -1410,6 +1410,37 @@ body.dersacik{overflow:hidden}
 .kvr{display:flex;align-items:center;gap:6px;border-top:1px solid var(--line);padding:6px 0}.kvr:first-of-type{border-top:0}
 .kvo,.kvk{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;text-decoration:none;padding:2px 0}
 .kvo .vkvt,.kvk .vkvt{min-width:0}.kvo b,.kvk b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+/* Çalışma kartı (program + kronometre) */
+.ck{display:flex;flex-direction:column;gap:14px;border:0;background:var(--surface)}
+.ckozet{display:flex;align-items:center;gap:14px}
+.ckh{position:relative;width:74px;height:74px;flex:none}
+.halka{width:74px;height:74px;display:block}.halka .hz{fill:none;stroke:var(--line);stroke-width:10}.halka .hd{fill:none;stroke:var(--ac);stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset .6s}
+.ckp{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:15px}
+.ckm{min-width:0}.ckb{font-size:15px;color:var(--muted)}.ckb b{font-size:24px;color:var(--fg);font-weight:800;letter-spacing:-.02em}
+.cks{font-size:13px;color:var(--muted);margin-top:2px}
+.cksira{display:flex;align-items:center;gap:12px;background:var(--acs);border-radius:16px;padding:12px 12px 12px 14px}
+.cksl{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ac)}
+.ckst{font-weight:700;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.ckbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:0 18px;border-radius:14px;border:0;font:inherit;font-weight:800;font-size:15px;cursor:pointer;flex:none}
+.ckbtn.go{background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg);box-shadow:0 6px 16px color-mix(in srgb,var(--ac) 35%,transparent)}
+.cklink{align-self:center;background:none;border:0;color:var(--muted);font:inherit;font-size:13px;font-weight:700;display:inline-flex;gap:6px;align-items:center;cursor:pointer;min-height:36px}
+.ck.run{background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg);align-items:stretch;text-align:center}
+.ck.run .ckust{display:flex;justify-content:center;align-items:center;gap:8px;font-weight:700;font-size:14px;opacity:.95}
+.ckdot{width:9px;height:9px;border-radius:50%;background:#fff;animation:ckp 1.4s infinite}
+@keyframes ckp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.ckclock{font-size:54px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.ckgorev{font-weight:700;font-size:15px;background:rgba(255,255,255,.16);border-radius:12px;padding:8px 12px;align-self:center;max-width:100%;overflow-wrap:anywhere}
+.ckbtns{display:flex;gap:10px}.ckbtns .ckbtn{flex:1}
+.ck.run .ckbtn.ara{background:rgba(255,255,255,.18);color:#fff}.ck.run .ckbtn.bitti{background:#fff;color:var(--ac)}
+.ck.run .ckozet{background:rgba(255,255,255,.12);border-radius:16px;padding:10px 12px;text-align:left}
+.ck.run .halka .hz{stroke:rgba(255,255,255,.25)}.ck.run .halka .hd{stroke:#fff}.ck.run .ckb,.ck.run .cks,.ck.run .ckb b{color:#fff}
+.task.sira{background:var(--acs);border-radius:14px;box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--ac) 45%,transparent)}
+.siratag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--acfg);background:var(--ac);border-radius:6px;padding:2px 6px;margin-bottom:3px}
+.nb.fab.canli .bub{animation:fabp 2s infinite}
+@keyframes fabp{0%,100%{box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent),0 0 0 0 color-mix(in srgb,var(--ac) 45%,transparent)}50%{box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent),0 0 0 9px color-mix(in srgb,var(--ac) 0%,transparent)}}
+.nb.fab.canli span.l b{font-size:13px;font-weight:800}
+@media (prefers-reduced-motion:reduce){.ckdot,.nb.fab.canli .bub{animation:none}}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
