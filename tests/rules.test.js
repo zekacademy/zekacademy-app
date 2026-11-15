@@ -160,6 +160,8 @@ test("çalışma grupları: üye grubu ve canlı özetleri okur, sadece kendi ö
   await assertSucceeds(setDoc(doc(coach(), "gruplar/g2"), { ad: "Mezunlar", uyeler: ["veli"] }));
   await assertSucceeds(getDocs(collection(coach(), "gruplar/g1/canli")));
   await assertSucceeds(updateDoc(doc(ali(), "students/ali"), { takma: "Kartal" }));
+});
+
 test("mesajlaşma: öğrenci kendi sohbetini okur ve kendi adına yazar; başkasınınkini göremez, koç adına yazamaz", async () => {
   await env.withSecurityRulesDisabled(async ctx => {
     const db = ctx.firestore();
@@ -177,5 +179,7 @@ test("mesajlaşma: öğrenci kendi sohbetini okur ve kendi adına yazar; başkas
   await assertSucceeds(setDoc(doc(ali(), "sohbetler/ali"), { sid: "ali", okunmadiOgr: 0 }, { merge: true }));
   await assertFails(setDoc(doc(ali(), "sohbetler/ayse"), { sid: "ayse" }, { merge: true }));
   await assertSucceeds(setDoc(doc(coach(), "sohbetler/ayse/mesajlar/m7"), { kim: "koc", metin: "Duyuru", at: "x", duyuru: true }));
+  await assertSucceeds(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m8"), { kim: "ogr", metin: "", at: "x", ses: "data:audio/webm;base64,AAAA", sesSn: 3 }));
+  await assertFails(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m9"), { kim: "ogr", metin: "", at: "x", ses: "x".repeat(950000) }));
   await assertFails(getDoc(doc(anon(), "sohbetler/ali/mesajlar/m1")));
 });
