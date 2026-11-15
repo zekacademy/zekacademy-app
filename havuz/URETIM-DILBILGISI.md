@@ -1,5 +1,7 @@
 # Dil bilgisi genişletme talimatı (TYT Türkçe · koç onayı 10 Kasım 2026)
 
+> **15 Kasım 2026 ek:** Bu talimata ek olarak `havuz/URETIM-OSYM-PROFIL.md` (ÖSYM ders profili: görsel oranı, kök uzunluğu, olumsuz kök, öncüllü oran, şık dizilimi) zorunludur; paket denetiminde `--profil` kullan.
+
 Önce `havuz/URETIM.md`, `havuz/URETIM-DERSLER.md` ve `havuz/URETIM-PARAGRAF.md` dosyalarını oku; burada yazmayan her kural oradan gelir. Bu dosya **dil bilgisi genişletmesinin** farklarını anlatır. Hedef: dil bilgisinde toplam ~300 soru (42 iskelet + ~258 yeni).
 
 ## Dağılım (yeni soru sayısı · önek · uygulama anahtarı · kart öneki · tipId öneki)

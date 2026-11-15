@@ -1,5 +1,7 @@
 # Ek talimat: Matematik dışındaki TYT dersleri ve Geometri
 
+> **15 Kasım 2026 ek:** Bu talimata ek olarak `havuz/URETIM-OSYM-PROFIL.md` (ÖSYM ders profili: görsel oranı, kök uzunluğu, olumsuz kök, öncüllü oran, şık dizilimi) zorunludur; paket denetiminde `--profil` kullan.
+
 Önce `havuz/URETIM.md` dosyasını oku; oradaki her kural geçerlidir. Bu dosya yalnızca **farkları** anlatır.
 
 ## Kaynaklar

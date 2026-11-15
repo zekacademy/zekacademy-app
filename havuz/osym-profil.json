@@ -1,0 +1,38 @@
+{
+ "ad": "ÖSYM TYT ders profili ve üretim hedefleri",
+ "tarih": "2026-11-15",
+ "kaynak": "MEB OGM 'YKS Çıkmış Sorular TYT 2018–2026' metin dökümü (dersler/osym_*.txt, osym_cevap.txt) ve havuz/osym-harita.json. Ölçüm metin taramasıdır (iki sütunlu sayfadan soruların %50–75'i ayrıştırıldı); görsel oranları 'şekil, grafik, tablo, harita, gösterilen, numaralandırılan…' ipuçlarına dayanır ve ALT SINIRDIR. Kesin sayım için PDF sayfaları görsel olarak sayılmalı.",
+ "olcum_osym": {
+  "turkce":   {"orneklem": 184, "gorsel": 0.18, "oncullu": 0.03, "olumsuz_kok": 0.29, "kok_kelime_medyan": 102},
+  "matematik":{"orneklem": 271, "gorsel": 0.40, "oncullu": 0.04, "olumsuz_kok": 0.0, "kok_kelime_medyan": 54, "kalip": {"hikâyeli": 0.53, "düz": 0.23, "şekilli": 0.30, "grafik": 0.07, "tablo": 0.05, "yeni nesil": 0.09}},
+  "geometri": {"orneklem": 88,  "gorsel": 0.85, "oncullu": 0.03, "kok_kelime_medyan": 55},
+  "fizik":    {"orneklem": 35,  "gorsel": 0.74, "oncullu": 0.63, "olumsuz_kok": 0.0,  "kok_kelime_medyan": 94},
+  "kimya":    {"orneklem": 37,  "gorsel": 0.16, "oncullu": 0.38, "olumsuz_kok": 0.08, "kok_kelime_medyan": 48},
+  "biyoloji": {"orneklem": 30,  "gorsel": 0.33, "oncullu": 0.40, "olumsuz_kok": 0.27, "kok_kelime_medyan": 34},
+  "tarih":    {"orneklem": 27,  "gorsel": 0.11, "oncullu": 0.37, "olumsuz_kok": 0.41, "kok_kelime_medyan": 72},
+  "cografya": {"orneklem": 33,  "gorsel": 0.70, "oncullu": 0.18, "olumsuz_kok": 0.24, "kok_kelime_medyan": 40}
+ },
+ "cevap_harfi_osym": {
+  "turkce": {"A": 0.17, "B": 0.19, "C": 0.21, "D": 0.23, "E": 0.19},
+  "matematik": {"A": 0.18, "B": 0.22, "C": 0.21, "D": 0.21, "E": 0.19},
+  "fizik": {"A": 0.24, "B": 0.16, "C": 0.13, "D": 0.27, "E": 0.21},
+  "kimya": {"A": 0.13, "B": 0.13, "C": 0.20, "D": 0.23, "E": 0.31},
+  "cografya": {"A": 0.18, "B": 0.18, "C": 0.27, "D": 0.22, "E": 0.16},
+  "not": "ÖSYM harfleri her yıl kabaca dengeli; küçük derslerdeki sapma örneklem küçüklüğünden. Havuz hedefi dengeli dağılım."
+ },
+ "hedef": {
+  "_aciklama": "Paket (en az 20 soru) ve ders bazında hedef. gorsel = sekil alanı dolu (SVG şekil, grafik, tablo, harita). Oranlar ÖSYM ölçümüne yakın tutulur; görsel ölçümü alt sınır olduğu için hedef biraz üstündedir.",
+  "harf_aralik": [0.15, 0.25],
+  "dersler": {
+   "tyt-mat": {"gorsel_min": 0.35, "oncullu": [0.02, 0.08], "olumsuz_kok_max": 0.05, "kok_kelime_medyan": [40, 65], "kalip": {"hikâyeli": [0.45, 0.60], "düz_max": 0.25, "yeni nesil_min": 0.08}},
+   "tyt-geo": {"gorsel_min": 0.85, "oncullu": [0.0, 0.06], "kok_kelime_medyan": [35, 65]},
+   "tyt-fiz": {"gorsel_min": 0.70, "oncullu": [0.40, 0.60], "olumsuz_kok_max": 0.05, "kok_kelime_medyan": [50, 95]},
+   "tyt-kim": {"gorsel_min": 0.25, "oncullu": [0.30, 0.45], "olumsuz_kok": [0.05, 0.15], "kok_kelime_medyan": [35, 60]},
+   "tyt-bio": {"gorsel_min": 0.35, "oncullu": [0.30, 0.45], "olumsuz_kok": [0.20, 0.30], "kok_kelime_medyan": [30, 50]},
+   "tyt-tar": {"gorsel_min": 0.08, "oncullu": [0.25, 0.40], "olumsuz_kok": [0.30, 0.45], "kok_kelime_medyan": [55, 80]},
+   "tyt-cog": {"gorsel_min": 0.65, "oncullu": [0.15, 0.25], "olumsuz_kok": [0.20, 0.30], "kok_kelime_medyan": [35, 55]},
+   "tyt-fel": {"gorsel_min": 0.0, "oncullu": [0.0, 0.10], "olumsuz_kok": [0.25, 0.40], "kok_kelime_medyan": [90, 140]},
+   "tyt-tr":  {"gorsel_min": 0.12, "oncullu": [0.0, 0.08], "olumsuz_kok": [0.25, 0.35]}
+  }
+ }
+}
