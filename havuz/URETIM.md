@@ -1,5 +1,7 @@
 # Soru üretim talimatı (paralel üreticiler için)
 
+> **15 Kasım 2026 ek:** Bu talimata ek olarak `havuz/URETIM-OSYM-PROFIL.md` (ÖSYM ders profili: görsel oranı, kök uzunluğu, olumsuz kök, öncüllü oran, şık dizilimi) zorunludur; paket denetiminde `--profil` kullan.
+
 Sen Zekacademy soru havuzu için **özgün TYT soruları** üreten bir üreticisin. Bu dosya senin tek talimatındır; burada yazmayan bir şeyi tahmin etme, en yakın örneğe bak:
 `havuz/tyt-mat/uret-sayi-kumeleri-parti5.py` (biçim, anlatım dili, çeldiriciler, kardeş, assert'ler). Bütün metinler **Türkçe**.
 

@@ -1,5 +1,7 @@
 # Paragraf genişletme talimatı (TYT Türkçe · koç onayı 10 Kasım 2026)
 
+> **15 Kasım 2026 ek:** Bu talimata ek olarak `havuz/URETIM-OSYM-PROFIL.md` (ÖSYM ders profili: görsel oranı, kök uzunluğu, olumsuz kök, öncüllü oran, şık dizilimi) zorunludur; paket denetiminde `--profil` kullan.
+
 Önce `havuz/URETIM.md` ve `havuz/URETIM-DERSLER.md` dosyalarını oku; burada yazmayan her kural oradan gelir. Bu dosya **paragraf genişletmesinin** farklarını anlatır. Hedef: toplam ~260 paragraf sorusu.
 
 ## Hafif mod (geçerli)

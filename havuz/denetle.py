@@ -121,12 +121,48 @@ def tablo(Q):
     satir=[f"{'Soru tipi':40} kolay orta zor"]
     for t in sorted(tz): satir.append(f"{t:40} {tz[t]['kolay']:5} {tz[t]['orta']:4} {tz[t]['zor']:3}")
     return '\n'.join(satir)
+
+NEG_KOK=re.compile(r'değildir|olamaz|ulaşılamaz|söylenemez|yoktur|yanlıştır|değinilmemiştir|bulunmaz|çıkarılamaz|gösterilemez|gerekmez|beklenemez|kullanılmamıştır|başvurulmamıştır|ortak değil',re.I)
+def profil(Q,dosyalar):
+    """ÖSYM profil hedefleriyle karşılaştırma (havuz/osym-profil.json). Yalnız uyarı üretir."""
+    yol=os.path.join(os.path.dirname(os.path.abspath(__file__)),'osym-profil.json')
+    P=json.load(open(yol))['hedef']; uy=[]; satir=[]
+    gruplar=defaultdict(list)
+    for f in dosyalar:
+        m=re.search(r'(tyt-[a-z]+)',f); gruplar[m.group(1)]+=json.load(open(f))
+    import statistics as _st
+    for kl,G in gruplar.items():
+        n=len(G); H=P['dersler'].get(kl)
+        if not H or n==0: continue
+        kok=lambda q:q['metin'].strip().split('\n')[-1]
+        r=dict(gorsel=sum(1 for q in G if q.get('sekil'))/n,
+               oncullu=sum(1 for q in G if re.search(r'(?m)^I\.\s',q['metin']) and 'II.' in q['metin'])/n,
+               olumsuz_kok=sum(1 for q in G if NEG_KOK.search(kok(q)))/n,
+               kok_kelime_medyan=_st.median(len(q['metin'].split()) for q in G))
+        satir.append(f"{kl}: {n} soru · görsel %{r['gorsel']*100:.0f} · öncüllü %{r['oncullu']*100:.0f} · olumsuz kök %{r['olumsuz_kok']*100:.0f} · kök medyan {r['kok_kelime_medyan']:.0f} kelime")
+        if n<20: satir.append('  (20 sorudan küçük grup: oranlar yalnız bilgi amaçlı)')
+        if r['gorsel']<H.get('gorsel_min',0)-1e-9: uy.append(f"{kl}: görsel oranı %{r['gorsel']*100:.0f} < hedef %{H['gorsel_min']*100:.0f}")
+        for a in ('oncullu','olumsuz_kok'):
+            if a in H and not (H[a][0]-1e-9<=r[a]<=H[a][1]+1e-9): uy.append(f"{kl}: {a} %{r[a]*100:.0f} hedef aralık dışı (%{H[a][0]*100:.0f}–%{H[a][1]*100:.0f})")
+        if 'olumsuz_kok_max' in H and r['olumsuz_kok']>H['olumsuz_kok_max']: uy.append(f"{kl}: olumsuz kök %{r['olumsuz_kok']*100:.0f} > %{H['olumsuz_kok_max']*100:.0f}")
+        if 'kok_kelime_medyan' in H and not (H['kok_kelime_medyan'][0]<=r['kok_kelime_medyan']<=H['kok_kelime_medyan'][1]): uy.append(f"{kl}: kök medyanı {r['kok_kelime_medyan']:.0f} kelime, hedef {H['kok_kelime_medyan'][0]}–{H['kok_kelime_medyan'][1]}")
+        c=Counter(q['cevap']['sik'] for q in G); a,b=P['harf_aralik']
+        if n>=20:
+            for h in 'ABCDE':
+                if not a<=c[h]/n<=b: uy.append(f"{kl}: {h} harfi %{c[h]/n*100:.0f} (hedef %{a*100:.0f}–%{b*100:.0f})")
+        K=H.get('kalip')
+        if K:
+            kc=Counter(q.get('kalip') for q in G)
+            if 'hikâyeli' in K and not K['hikâyeli'][0]<=kc['hikâyeli']/n<=K['hikâyeli'][1]: uy.append(f"{kl}: hikâyeli %{kc['hikâyeli']/n*100:.0f} hedef dışı")
+            if 'düz_max' in K and kc['düz']/n>K['düz_max']: uy.append(f"{kl}: düz kalıp %{kc['düz']/n*100:.0f} > %{K['düz_max']*100:.0f}")
+            if 'yeni nesil_min' in K and kc['yeni nesil']/n<K['yeni nesil_min']: uy.append(f"{kl}: yeni nesil %{kc['yeni nesil']/n*100:.0f} < %{K['yeni nesil_min']*100:.0f}")
+    return satir,uy
 if __name__=='__main__':
     dosyalar=[a for a in sys.argv[1:] if a.endswith('.json') and re.search(r'tyt-[a-z]+',a) and '--benzerlik' not in a and 'kutup' not in a]
     korpus=None
     if '--benzerlik' in sys.argv:
         korpus=[]
-        for f in sys.argv[sys.argv.index('--benzerlik')+1:]:
+        for f in [a for a in sys.argv[sys.argv.index('--benzerlik')+1:] if not a.startswith('--')]:
             if f.endswith('.txt'):  # MEB kitabından ders metni: sayfaları soru numarasına göre parçala
                 for sn,sayfa in enumerate(open(f).read().split('=== PDF sayfa')):
                     for pn,parca in enumerate(re.split(r'\n\s*\d{1,3}\.\s+',sayfa)):
@@ -143,4 +179,9 @@ if __name__=='__main__':
     for x in u: print('uyarı',x)
     print('Cevap harfleri:',dict(sorted(Counter(q['cevap']['sik'] for q in Q).items())),'· Zorluk:',dict(Counter(q['zorluk'] for q in Q)))
     print(tablo(Q))
+    if '--profil' in sys.argv:
+        st_,uy_=profil(Q,dosyalar)
+        print('--- ÖSYM profil karşılaştırması (osym-profil.json) ---')
+        for x in st_: print(x)
+        for x in uy_: print('profil uyarısı',x)
     sys.exit(1 if h else 0)
