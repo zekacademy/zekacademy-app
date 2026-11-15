@@ -9,7 +9,8 @@ import { pStart, addDays } from "../functions/logic.js";
 const require = createRequire(new URL("../functions/package.json", import.meta.url));
 const FA = process.env.PROJE ? { ...require("firebase-admin/app"), ...require("firebase-admin/firestore") } : {};
 const { initializeApp, getFirestore, FieldPath } = FA;
-const db = process.env.PROJE ? (initializeApp({ projectId: process.env.PROJE }), getFirestore()) : null, KIP = process.env.KIP || "kuru", isaret = db && db.doc("system/temizlik"), ANAHTAR = "hafta-kopya-2026-11-16";
+const ANA = process.argv[1] && import.meta.url === new URL("file://" + process.argv[1]).href;
+const db = process.env.PROJE && ANA ? (initializeApp({ projectId: process.env.PROJE }), getFirestore()) : null, KIP = process.env.KIP || "kuru", isaret = db && db.doc("system/temizlik"), ANAHTAR = "hafta-kopya-2026-11-16";
 const BAS = "2026-11-16", GUN = ["Pzt","Sal","Çar","Per","Cum","Cmt","Paz"];
 if (db && KIP === "uygula" && ((await isaret.get()).data() || {})[ANAHTAR]) { console.log("::notice::16–22 Kasım kopyası daha önce yapılmış; atlandı."); process.exit(0); }
 const dDiff = (a, b) => Math.round((Date.parse(b + "T12:00:00Z") - Date.parse(a + "T12:00:00Z")) / 864e5);
@@ -38,7 +39,7 @@ export function kopyaPlani(s){
   }
   return { yaz, ozet };
 }
-if (process.env.PROJE) {
+if (db) {
 const satir = []; let topGorev = 0, topOgr = 0;
 for (const doc of (await db.collection("students").get()).docs) {
   const s = doc.data(), ad = s.name || doc.id, { yaz: Y, ozet } = kopyaPlani(s), yaz = Y.flatMap(([p, v]) => [new FieldPath(...p), v]);
