@@ -1,7 +1,7 @@
 /* Tek seferlik (koçun isteği, 15 Kasım 2026): 16–22 Kasım'ı her öğrencide bir önceki haftanın aynısıyla doldurur.
    Gün gün çalışır: 16 Kasım'a 9 Kasım'ın, 17'ye 10'unun ... görevleri gelir (uygulamadaki "Geçen haftanın programını aktar" ile aynı biçimde,
    işaretler sıfır). O günün çalışma süresi hedefi ve haftanın hedef konuları da aktarılır.
-   Hiçbir şeyin üstüne yazılmaz: yeni haftada dolu olan gün / süre / hedef olduğu gibi kalır. Yalnızca ilgili alanlar güncellenir.
+   Hiçbir şeyin üstüne yazılmaz: 16–22 Kasım'ında herhangi bir güne görev girilmiş öğrenci tamamen atlanır; boş süre/hedef alanları doldurulur. Yalnızca ilgili alanlar güncellenir.
    KIP=kuru → sadece rapor; KIP=uygula → yazar (bir kez; system/temizlik işaretiyle kilitlenir). */
 import { createRequire } from "node:module";
 import { randomBytes } from "node:crypto";
@@ -30,6 +30,7 @@ export function kopyaPlani(s){
     const sv = (plan(s, wk).saat || {})[ik];
     if (!bos(sv) && bos((plan(s, wx).saat || {})[ix])) { yaz.push([["plan", wx, "saat", String(ix)], sv]); ozet.saat++; }
   }
+  if (ozet.dolu.length) return { yaz: [], ozet }; /* yeni haftasına zaten bir şey girilmiş öğrenciye hiç dokunma */
   const yeniHaftalar = [...new Set([...Array(7)].map((_, i) => pStart(s, addDays(BAS, i))))];
   for (const w of yeniHaftalar) {
     const eskiW = pStart(s, addDays(w < BAS ? BAS : w, -7)), H = plan(s, eskiW).hedef || {}, mevcut = plan(s, w).hedef || {};
