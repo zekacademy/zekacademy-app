@@ -523,7 +523,7 @@ function render(fromSnap){
   window.scrollTo(0, y);
 }
 function navHTML(items){
-  const nb = ([v,ic,l,fab,cnt,canli]) => `<button class="nb ${fab?"fab":""} ${canli?"canli":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="ders" && !A() && (dersGorunum(S.view) || S.view==="dersd")) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${icon(ic)}</span>`:icon(ic)}<span class="l">${canli?`<b class="num" data-tlive>${clock(timerMin(st())*60)}</b>`:l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
+  const nb = ([v,ic,l,fab,cnt,canli]) => `<button class="nb ${fab?"fab":""} ${canli?"canli":""}" data-act="go" data-v="${v}" aria-current="${S.view===v || (v==="ders" && !A() && (dersGorunum(S.view) || S.view==="dersd")) ?"page":"false"}" ${fab?`aria-label="${l}"`:""}>${fab?`<span class="bub">${canli?`<b class="num fabt" data-tlive>${clock(timerMin(st())*60)}</b>`:icon(ic)}</span>`:icon(ic)}<span class="l">${l}</span>${cnt?`<span class="cnt">${cnt}</span>`:""}</button>`;
   return `<nav class="nav" aria-label="Menü"><div class="navin"><div class="navpill">${items.filter(x=>!x[3]).map(nb).join("")}</div>${items.filter(x=>x[3]).map(nb).join("")}</div></nav>`;
 }
 
@@ -2474,31 +2474,56 @@ function msgOkuIsaretle(){ const sid = MSG.sid; if(!sid || !(S.view==="mesaj"||S
   const c = S.sohbet && S.sohbet.get(sid), alan = A() ? "okunmadiKoc" : "okunmadiOgr", gor = A() ? "kocGordu" : "ogrGordu";
   const son = MSG.liste.length ? MSG.liste[MSG.liste.length-1].at : ""; if(c && !c[alan] && (c[gor]||"") >= son) return;
   const yeni = {sid, [alan]:0, [gor]:nowISO()}; S.sohbet.set(sid, {...(c||{}), ...yeni}); setDoc(doc(fdb,"sohbetler",sid), yeni, {merge:true}).catch(()=>{}); }
-async function msgGonder(sid, metin, foto, duyuru){
-  metin = String(metin||"").trim(); if(!metin && !foto) return false;
+async function msgGonder(sid, metin, foto, duyuru, ses){
+  metin = String(metin||"").trim(); if(!metin && !foto && !ses) return false;
   const at = nowISO(), kim = A() ? "koc" : "ogr", id = uid(), c = (S.sohbet && S.sohbet.get(sid)) || {};
-  const m = {kim, metin, at, ...(foto?{foto}:{}), ...(duyuru?{duyuru:true}:{})};
+  const m = {kim, metin, at, ...(foto?{foto}:{}), ...(ses?{ses:ses.url, sesSn:ses.sn}:{}), ...(duyuru?{duyuru:true}:{})};
   await setDoc(doc(fdb,"sohbetler",sid,"mesajlar",id), m);
-  const ust = {sid, son:{metin: metin || "📷 Fotoğraf", at, kim}, ...(kim==="koc" ? {okunmadiOgr:(c.okunmadiOgr||0)+1, kocGordu:at} : {okunmadiKoc:(c.okunmadiKoc||0)+1, ogrGordu:at})};
+  const ust = {sid, son:{metin: metin || (ses ? "🎤 Sesli mesaj" : "📷 Fotoğraf"), at, kim}, ...(kim==="koc" ? {okunmadiOgr:(c.okunmadiOgr||0)+1, kocGordu:at} : {okunmadiKoc:(c.okunmadiKoc||0)+1, ogrGordu:at})};
   S.sohbet.set(sid, {...c, ...ust}); await setDoc(doc(fdb,"sohbetler",sid), ust, {merge:true}); return true; }
 function msgGun(d){ const t = today(); return d===t ? "Bugün" : d===addDays(t,-1) ? "Dün" : `${GUN[dIdx(d)]}, ${trDate(d)}`; }
 const msgSaat = at => new Date(at).toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"});
 const msgLink = s => esc(s).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
 function msgBaloncuklar(sid){ const c = (S.sohbet && S.sohbet.get(sid)) || {}, ben = A() ? "koc" : "ogr", karsiGordu = A() ? c.ogrGordu||"" : c.kocGordu||"";
-  if(!MSG.liste.length) return `<div class="msgbos"><span>${icon("chat")}</span><b>${A() ? "Henüz mesaj yok" : "Koçuna buradan yazabilirsin"}</b><small>${A() ? "İlk mesajı sen gönder." : "Sorunu, deneme sonucunu ya da aklına takılanı yaz. Fotoğraf da gönderebilirsin."}</small></div>`;
+  if(!MSG.liste.length) return `<div class="msgbos">${A() ? `<span>${icon("chat")}</span>` : `<img class="msgbosav" src="/zekeriya.jpg" alt="Zekeriya Hoca">`}<b>${A() ? "Henüz mesaj yok" : "Zekeriya Hoca'ya buradan yazabilirsin"}</b><small>${A() ? "İlk mesajı sen gönder." : "Sorunu, deneme sonucunu ya da aklına takılanı yaz. Fotoğraf ve sesli mesaj da gönderebilirsin; mesajını doğrudan Zekeriya Hoca okur."}</small></div>`;
   let h = "", sonGun = "";
   MSG.liste.forEach((m,i)=>{ const g = iso(new Date(m.at)); if(g!==sonGun){ h += `<div class="msggun"><span>${msgGun(g)}</span></div>`; sonGun = g; }
     const benim = m.kim===ben, sonraki = MSG.liste[i+1], grupSonu = !sonraki || sonraki.kim!==m.kim || iso(new Date(sonraki.at))!==g;
-    h += `<div class="msg ${benim?"ben":"o"} ${grupSonu?"son":""}">${m.duyuru?`<span class="msgduy">📢 Duyuru</span>`:""}${m.foto?`<img src="${m.foto}" alt="Fotoğraf" data-act="msgfoto" data-id="${m.id}" class="${MSG.buyuk===m.id?"buyuk":""}">`:""}${m.metin?`<p>${msgLink(m.metin)}</p>`:""}<span class="msgt">${msgSaat(m.at)}${benim?` <b class="${karsiGordu>=m.at?"okundu":""}">${karsiGordu>=m.at?"✓✓":"✓"}</b>`:""}</span></div>`; });
+    const kocO = !A() && !benim;
+    h += `${kocO ? `<div class="msgo">${grupSonu ? `<img class="msgkocav" src="/zekeriya.jpg" alt="">` : `<span class="msgkocav"></span>`}` : ""}<div class="msg ${benim?"ben":"o"} ${grupSonu?"son":""}">${m.duyuru?`<span class="msgduy">📢 Duyuru</span>`:""}${m.foto?`<img src="${m.foto}" alt="Fotoğraf" data-act="msgfoto" data-id="${m.id}" class="${MSG.buyuk===m.id?"buyuk":""}">`:""}${m.ses?msgSesHTML(m):""}${m.metin?`<p>${msgLink(m.metin)}</p>`:""}<span class="msgt">${msgSaat(m.at)}${benim?` <b class="${karsiGordu>=m.at?"okundu":""}">${karsiGordu>=m.at?"✓✓":"✓"}</b>`:""}</span></div>${kocO?"</div>":""}`; });
   return h; }
 function msgYazmaCubugu(sid){ const hazir = A() ? (S.settings.mesaj && S.settings.mesaj.hazir) || DEF_HAZIR : [];
   return `<div class="msgbar">${hazir.length ? `<div class="msghazir">${hazir.map((t,i)=>`<button class="chip" data-act="msghazir" data-v="${i}">${esc(t)}</button>`).join("")}</div>` : ""}
     ${MSG.fotoOn ? `<div class="msgfotoon"><img src="${MSG.fotoOn}" alt=""><span>Fotoğraf eklendi</span><button class="iconbtn sm" data-act="msgfotosil" aria-label="Fotoğrafı kaldır">${icon("x","sm")}</button></div>` : ""}
-    <div class="msgsatir"><label class="iconbtn msgek" aria-label="Fotoğraf ekle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><input type="file" accept="image/*" id="msgFoto" hidden></label>
+    ${MSG.kayit ? `<div class="msgsatir msgkayit"><button class="iconbtn" data-act="msgsesiptal" aria-label="Kaydı iptal et">${icon("trash","sm")}</button><span class="kayitnokta"></span><b class="num" id="kayitSure">${clock(MSG.kayit.sn||0)}</b><span class="faint small" style="flex:1">Kaydediliyor… (en fazla 2 dk)</span><button class="msggon" data-act="msgsesgonder" aria-label="Sesli mesajı gönder"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12 2-12 2z"/></svg></button></div>` :
+    `<div class="msgsatir"><label class="iconbtn msgek" aria-label="Fotoğraf ekle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><input type="file" accept="image/*" id="msgFoto" hidden></label>
       <textarea id="msgYaz" rows="1" placeholder="Mesaj yaz…" aria-label="Mesaj">${esc(MSG.taslak[sid]||"")}</textarea>
-      <button class="msggon" data-act="msggonder" aria-label="Gönder" ${MSG.gonderiyor?"disabled":""}><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12 2-12 2z"/></svg></button></div></div>`; }
+      <button class="iconbtn msgmik" data-act="msgseskaydet" aria-label="Sesli mesaj kaydet" ${MSG.gonderiyor?"disabled":""}>${MIK_SVG}</button>
+      <button class="msggon" data-act="msggonder" aria-label="Gönder" ${MSG.gonderiyor?"disabled":""}><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12 2-12 2z"/></svg></button></div>`}</div>`; }
+const MIK_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>`;
+function msgSesHTML(m){ return `<div class="msgses"><span class="msgsesic">${MIK_SVG}</span><audio controls preload="metadata" src="${m.ses}"></audio>${m.sesSn?`<small class="num">${clock(m.sesSn)}</small>`:""}</div>`; }
+/* Sesli mesaj: MediaRecorder (Android Chrome: webm/opus, iPhone: mp4/aac), en fazla 2 dk, düşük bit hızı */
+const SES_MAX = 120;
+async function sesBasla(){
+  if(!navigator.mediaDevices || !window.MediaRecorder){ toast("Bu cihazda ses kaydı desteklenmiyor"); return; }
+  let akis; try{ akis = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true, noiseSuppression:true}}); }catch(e){ toast("Mikrofon izni verilmedi"); return; }
+  const tip = ["audio/webm;codecs=opus","audio/mp4","audio/webm","audio/ogg;codecs=opus"].find(t=>MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) || "";
+  const rec = new MediaRecorder(akis, {...(tip?{mimeType:tip}:{}), audioBitsPerSecond:24000}), parca = [];
+  rec.ondataavailable = e=>{ if(e.data && e.data.size) parca.push(e.data); };
+  MSG.kayit = {rec, akis, parca, bas:Date.now(), sn:0, tip:rec.mimeType||tip||"audio/webm"};
+  MSG.kayit.zam = setInterval(()=>{ if(!MSG.kayit) return; MSG.kayit.sn = Math.floor((Date.now()-MSG.kayit.bas)/1000); const el = $("#kayitSure"); if(el) el.textContent = clock(MSG.kayit.sn); if(MSG.kayit.sn >= SES_MAX) sesBitir(true); }, 250);
+  rec.start(1000); render(); }
+function sesBitir(gonder){ const k = MSG.kayit; if(!k) return; MSG.kayit = null; clearInterval(k.zam);
+  k.rec.onstop = async ()=>{ k.akis.getTracks().forEach(t=>t.stop()); render();
+    if(!gonder) return; const sn = Math.max(1, Math.round((Date.now()-k.bas)/1000)); if(sn < 1) return;
+    const blob = new Blob(k.parca, {type:k.tip}); if(blob.size > 650000){ toast("Kayıt çok uzun, daha kısa bir mesaj kaydet"); return; }
+    const url = await new Promise((ok,no)=>{ const r = new FileReader(); r.onload = ()=>ok(r.result); r.onerror = no; r.readAsDataURL(blob); });
+    const sid = A() ? S.msgSid : S.me; MSG.gonderiyor = true; render();
+    try{ await msgGonder(sid, "", null, false, {url, sn}); sesCal && sesCal("tik"); }catch(e){ toast("Sesli mesaj gönderilemedi"); }
+    MSG.gonderiyor = false; render(); msgAsagi(); };
+  try{ k.rec.stop(); }catch(e){ k.akis.getTracks().forEach(t=>t.stop()); render(); } }
 function sMesaj(){ msgAc(S.me);
-  const head = topbar(`<div class="msgkim"><span class="msgav koc">${LOGO}</span><div><b>Koçun</b><small>${esc(cfg().kurum)} · genelde gün içinde cevaplar</small></div></div>`, "", `<button class="iconbtn" data-act="msgcik" aria-label="Geri">${icon("back")}</button>`);
+  const head = topbar(`<div class="msgkim"><img class="msgav foto" src="/zekeriya.jpg" alt=""><div><b>Zekeriya Hoca</b><small>Koçun · genelde gün içinde cevaplar</small></div></div>`, "", `<button class="iconbtn" data-act="msgcik" aria-label="Geri">${icon("back")}</button>`);
   return `${head}<div class="page msgpage">${msgBaloncuklar(S.me)}</div>${msgYazmaCubugu(S.me)}`; }
 function cSohbet(){ const sid = S.msgSid, x = S.students.get(sid); if(!x){ S.view = "mesajlar"; return cMesajlar(); } msgAc(sid);
   const head = topbar(`<button class="msgkim" data-act="msgprofil"><span class="msgav">${esc(initials(x.name))}</span><div><b>${esc(x.name)}</b><small>${(d=>d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.toLocaleLowerCase("tr"))(girisDurum(x))}</small></div></button>`, "", `<button class="iconbtn" data-act="msgcik" aria-label="Geri">${icon("back")}</button>`);
@@ -2535,13 +2560,16 @@ function msgAct(a, b, v){
     case "msgcik": msgKapat(); S.view = A() ? (S.msgDon || "mesajlar") : "home"; S.msgDon = ""; render(); window.scrollTo(0,0); return true;
     case "msgprofil": msgKapat(); S.cur = S.msgSid; S.view = "detay"; S.dtab = "ozet"; render(); window.scrollTo(0,0); return true;
     case "msgfotosil": MSG.foto = null; MSG.fotoOn = ""; render(); return true;
+    case "msgseskaydet": sesBasla(); return true;
+    case "msgsesgonder": sesBitir(true); return true;
+    case "msgsesiptal": sesBitir(false); toast("Kayıt silindi"); return true;
     case "msgfoto": MSG.buyuk = MSG.buyuk===b.dataset.id ? "" : b.dataset.id; render(); return true;
     case "msgogr": S.msgSid = b.dataset.id; S.msgDon = "detay"; S.view = "sohbet"; render(); msgAsagi("auto"); return true;
   }
   return false; }
 const msgBtn = () => { const n = msgToplamOkunmadi();
   return A() ? `<button class="iconbtn msgvurgu" data-act="go" data-v="mesajlar" aria-label="Mesajlar">${icon("chat")}${n?`<span class="dot">${n}</span>`:""}</button>`
-    : `<button class="msgpill ${n?"yeni":""}" data-act="go" data-v="mesaj" aria-label="Zekeriya Hoca'ya mesaj${n?` · ${n} yeni`:""}">${icon("chat")}<span>Hocama yaz</span>${n?`<span class="dot">${n}</span>`:""}</button>`; };
+    : `<button class="msgpill ${n?"yeni":""}" data-act="go" data-v="mesaj" aria-label="Zekeriya Hoca'ya mesaj${n?` · ${n} yeni`:""}"><img src="/zekeriya.jpg" alt=""><i class="msgpillic">${icon("chat")}</i><span>Hocama yaz</span>${n?`<span class="dot">${n}</span>`:""}</button>`; };
 
 /* ---------- Ayarlar (koç) ---------- */
 const clone = x => JSON.parse(JSON.stringify(x));

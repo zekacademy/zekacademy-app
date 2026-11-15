@@ -1482,18 +1482,36 @@ body.dersacik{overflow:hidden}
 .siratag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--acfg);background:var(--ac);border-radius:6px;padding:2px 6px;margin-bottom:3px}
 .nb.fab.canli .bub{animation:fabp 2s infinite}
 @keyframes fabp{0%,100%{box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent),0 0 0 0 color-mix(in srgb,var(--ac) 45%,transparent)}50%{box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent),0 0 0 9px color-mix(in srgb,var(--ac) 0%,transparent)}}
-.nb.fab.canli span.l b{font-size:13px;font-weight:800}
+.nb.fab .bub .fabt{font-size:14px;font-weight:800;letter-spacing:-.02em;color:var(--acfg)}
 @media (prefers-reduced-motion:reduce){.ckdot,.nb.fab.canli .bub{animation:none}}
 
-/* Mesaj düğmesi: üst çubukta belirgin */
-.msgpill{position:relative;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 13px 0 11px;border:0;border-radius:999px;background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg);font:inherit;font-weight:800;font-size:13px;cursor:pointer;flex:none;box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent);white-space:nowrap}
-.msgpill svg{width:18px;height:18px}
+/* Mesaj düğmesi: üst çubukta belirgin, hocanın fotoğrafıyla */
+.msgpill{position:relative;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 14px 0 3px;border:0;border-radius:999px;background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg);font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;flex:none;box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent);white-space:nowrap}
+.msgpill img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #fff;flex:none}
+.msgpill .msgpillic{display:none}
 .msgpill .dot{position:absolute;top:-5px;right:-5px}
 .msgpill.yeni{animation:msgp 1.8s infinite}
-@keyframes msgp{0%,100%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 0 color-mix(in srgb,var(--ac) 50%,transparent)}50%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 7px transparent}}
+@keyframes msgp{0%,100%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 0 color-mix(in srgb,var(--ac) 50%,transparent)}50%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 8px transparent}}
 .iconbtn.msgvurgu{background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg)}
-@media (max-width:370px){.msgpill span:not(.dot){display:none}.msgpill{padding:0;width:36px;justify-content:center}}
+@media (max-width:440px){.msgpill{padding:0;width:44px;height:44px;justify-content:center;background:none;box-shadow:none}.msgpill>span:not(.dot){display:none}
+  .msgpill img{width:44px;height:44px;border:3px solid var(--ac);box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent)}
+  .msgpill .msgpillic{display:grid;place-items:center;position:absolute;right:-4px;bottom:-3px;width:21px;height:21px;border-radius:50%;background:var(--ac);color:var(--acfg);border:2px solid var(--surface)}.msgpill .msgpillic svg{width:11px;height:11px}
+  .msgpill .dot{top:-4px;right:-4px}}
 @media (prefers-reduced-motion:reduce){.msgpill.yeni{animation:none}}
+/* Sohbette hocanın fotoğrafı ve sesli mesaj */
+.msgav.foto{object-fit:cover;padding:0;border:2px solid var(--ac)}
+.msgo{display:flex;align-items:flex-end;gap:6px;align-self:flex-start;max-width:min(88%,560px)}
+.msgo .msg{margin-left:0;max-width:none;min-width:0}
+.msgkocav{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none}
+.msgbos .msgbosav{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--ac);margin-bottom:6px}
+.msgses{display:flex;align-items:center;gap:8px;min-width:0}
+.msgses audio{height:36px;max-width:210px;min-width:0;flex:1}
+.msgsesic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,currentColor 12%,transparent);flex:none}
+.msgses small{opacity:.75;font-size:11px}
+.msgmik{flex:none}
+.msgkayit{align-items:center;gap:10px}
+.kayitnokta{width:11px;height:11px;border-radius:50%;background:#dc2626;animation:ckp 1s infinite;flex:none}
+#kayitSure{font-size:16px;font-weight:800}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

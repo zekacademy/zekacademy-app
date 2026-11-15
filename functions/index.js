@@ -433,7 +433,7 @@ export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retry
 /* ===================== Mesajlaşma: yeni mesajda karşı tarafa bildirim ===================== */
 export const yeniMesaj = onDocumentCreated("sohbetler/{sid}/mesajlar/{mid}", async (event) => {
   const m = event.data && event.data.data(); if (!m) return; const sid = event.params.sid;
-  const metin = String(m.metin || "").slice(0, 140) || "📷 Fotoğraf";
+  const metin = String(m.metin || "").slice(0, 140) || (m.ses ? "🎤 Sesli mesaj" : "📷 Fotoğraf");
   const sSnap = await db.doc(`students/${sid}`).get(); const s = sSnap.data() || {};
   if (m.kim === "ogr") {
     const tokens = await coachTokens(), mid = yeniMid();
