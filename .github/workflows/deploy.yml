@@ -108,7 +108,7 @@ jobs:
       - name: 16–22 Kasım program kopyası (main)
         if: github.event_name != 'pull_request'
         env:
-          KIP: kuru
+          KIP: uygula
         run: node tools/hafta-kopya.mjs
       - name: Temizlik
         if: always()
