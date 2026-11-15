@@ -109,7 +109,9 @@ jobs:
         if: github.event_name != 'pull_request'
         env:
           KIP: uygula
-        run: node tools/hafta-kopya.mjs
+        run: |
+          node tools/hafta-kopya.mjs
+          node tools/safanur-hafta.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
