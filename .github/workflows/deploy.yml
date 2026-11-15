@@ -105,6 +105,11 @@ jobs:
         run: |
           node tools/odeme-temizle.mjs
           node tools/odeme-geri.mjs
+      - name: 16–22 Kasım program kopyası (main)
+        if: github.event_name != 'pull_request'
+        env:
+          KIP: kuru
+        run: node tools/hafta-kopya.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
