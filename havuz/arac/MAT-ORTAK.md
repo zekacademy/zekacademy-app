@@ -2,7 +2,8 @@
 Depo: /home/claude/zekacademy-app (git commit/push YOK, GitHub YOK, artifact YOK).
 Önce oku: havuz/URETIM.md (kardeş kuralları HARİÇ), havuz/tyt-mat/_hafif_mat.py (kart(), mk(), bitir()), ÖRNEK betikler havuz/tyt-mat/uret-bolme.py ve uret-oraniki.py (aynı biçim: assert'ler, anlatım dili).
 Kurallar:
-- Kardeş YOK, ipucu tam 1 (yönlendirir, cevabı ve anahtar fikri söylemez). ŞEKİL KULLANMA (sekil=None); tablo gerekiyorsa metin içinde düz yazıyla ver.
+- Kardeş YOK, ipucu tam 1 (yönlendirir, cevabı ve anahtar fikri söylemez).
+- **ŞEKİL:** önce `havuz/URETIM-SEKIL.md` dosyasını oku ve uygula. Paketteki şekilli + grafik + tablo sorularının payı o dosyadaki hedef orana ulaşmalı (matematikte en az %25–30). Çizim `havuz/cizim.py` → `tikz_svg`, tablo `tablo_svg`; her şeklin PNG'sine Read ile bakmak zorunlu.
 - Her doğru cevap Python'da (Fraction / tarama) hesaplanıp assert edilir; her çeldirici DEĞERİ de açıklamasındaki hatadan hesaplanıp assert edilir. Çeldirici = gerçek öğrenci hatası (yapay "±1", "yarısı" yok).
 - Konu adı ve uygulama anahtarı mevcut dosyadakiyle AYNEN. Mevcut soruları oku, kurgu ve sayı yapısını TEKRARLAMA; kendi dosyanda da aynı kurguyu iki kez kullanma (otobüs, ikramiye, havuz… her biri bir kez).
 - Soru metni tek anlamlı: koşullar eksiksiz ("sabit hızla", "eşit kapasiteli", "pozitif tam sayı", "0 dahil doğal sayı", aralık uçları, "başka ekleme yapılmamıştır"). Gerçekçi kurgu ve sayılar; Türkçesi doğal; ÖSYM üslubu ("Buna göre, … kaçtır?").

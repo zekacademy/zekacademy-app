@@ -5,6 +5,10 @@ HD=os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0,os.path.join(HD,'..'))
 from ortak import *
 import gorsel as G
+try:
+    from cizim import tikz_svg   # TikZ ile şekil (bkz. havuz/URETIM-SEKIL.md)
+except Exception:
+    tikz_svg=None
 from fractions import Fraction as Fr
 def fm(x):
     x=Fr(x).limit_denominator(10**6); n=x<0; x=abs(x)

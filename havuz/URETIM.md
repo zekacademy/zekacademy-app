@@ -64,3 +64,5 @@ Aynı tip ve zorluk, **yeni kurgu ve yeni sayılar**; metni ve şık kümesi ana
 - `havuz/gorsel.py`, `havuz/ortak.py`, `havuz/denetle.py` ve başka üreticilerin dosyalarını **değiştirme**. Yeni bir çizim yardımcısı gerekirse üretim betiğinin içine yaz (aynı stil: `G._svg`, `G._t`, `G.ACC`).
 - Konuları sırayla bitir; her konu denetimden 0 hatayla geçince bir sonrakine geç. Bir konu bitince `havuz/tyt-mat/<onek>-1.HAZIR` adlı boş bir dosya oluştur (koordinatör bunu görünce kör çözüme alır).
 - Takıldığın bir soruyu zorlama: değiştir ya da yerine başka bir soru yaz. Kaliteden ödün verme; hız için soru sayısını değil, gereksiz uzunluğu azalt.
+
+> **Şekil (15 Kasım 2026):** şekil, grafik ve tablo kullanımı için `havuz/URETIM-SEKIL.md` zorunlu ektir (hedef oranlar, `cizim.py`, çizim kuralları, PNG kontrolü).

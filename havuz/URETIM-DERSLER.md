@@ -34,3 +34,5 @@ Dosya adları: `havuz/<klasör>/uret-<onek>.py`, `<onek>-1.json`, `<onek>-1-kard
 
 ## Kapsam
 Konu başına 8 ana + 8 kardeş (2 kolay, 4 orta, 2 zor). Uygulama konusu çok dar ise (ör. "Kimya Her Yerde") 6 ana + 6 kardeş yeterli.
+
+> **Şekil (15 Kasım 2026):** geometri, fizik, kimya, biyoloji ve coğrafya şekilleri için `havuz/URETIM-SEKIL.md` zorunlu ektir.
