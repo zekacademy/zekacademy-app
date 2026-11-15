@@ -11,3 +11,6 @@ Her soru için:
 8. Kalıp etiketi doğru mu; öncüllü şık dizilimi alışılmış mı.
 9. Dosya içinde aynı kurgu / aynı çözüm kalıbı tekrar ediyor mu.
 Çıktı: belirtilen dosyaya her soru tek satır: `id | TAMAM` ya da `id | SORUN | alan | ne | somut düzeltme`. Doğrulama betiklerini /tmp/kor/dogr/ altına yaz. Bitince SORUN sayısını ve en ciddi 5 sorunu kısaca raporla.
+
+## Şekilli sorular için ek (şekil eleştirisi)
+Her sorunun PNG'sini (`/tmp/kor/<id>.png`) Read ile aç ve ayrıca denetle: etiket çakışması/taşması; yazıların okunaklılığı (çok küçük yazı SORUN); metindeki her verinin şekilde olması ve şekilde fazladan veri olmaması; şeklin metin ve çözümle tutarlılığı (sayıları şekilden yeniden oku ve cevabı onunla hesapla); ölçek/oran; şeklin cevabı ele vermesi (renk, etiket); şekil olmadan da çözülebiliyorsa (şekil süs ise) not et; kalıp etiketi ('şekilli'/'tablo'/'grafik'). Kurallar: /home/claude/zekacademy-app/havuz/URETIM-SEKIL.md.

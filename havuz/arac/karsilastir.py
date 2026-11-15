@@ -1,6 +1,6 @@
 """karsilastir.py <paket> <asama> onek...
 asama=ilk : kör çözüm (/tmp/kor/<paket>-cevap.txt) ile anahtarı karşılaştırır.
-asama=son : düzeltmeden sonra; metni ve doğru değeri aynı kalanları <paket>-son.txt'ye yazar, değişenleri <paket>-mini.txt'ye.
+asama=son : düzeltmeden sonra; metni ve doğru değeri aynı kalanları <paket>-son.txt'ye yazar, değişenleri <paket>-mini.txt'ye. Şekli değişip metni aynı kalanlar için ZORLA=ebobsek-0005,... ortam değişkeni.
 asama=bitir: <paket>-mini-cevap.txt'yi ekler, kor_isle çalıştırır, denetler."""
 import json,re,sys,subprocess,os
 P,A=sys.argv[1],sys.argv[2]; O=sys.argv[3:]; H='/home/claude/zekacademy-app/havuz'
@@ -24,12 +24,12 @@ elif A=='son':
     old={}
     for o in O:
         for b in open(f'/tmp/kor/{o}-once.txt').read().split('### ')[1:]:
-            L=b.strip().split('\n'); old[L[0].strip()]=({x[0]:x[3:] for x in L if re.match(r'[A-E]\) ',x)},'\n'.join(x for x in L[1:] if not re.match(r'[A-E]\) ',x)).strip())
+            L=b.strip().split('\n'); old[L[0].strip()]=({x[0]:x[3:] for x in L if re.match(r'[A-E]\) ',x)},'\n'.join(x for x in L[1:] if not re.match(r'[A-E]\) |\[ŞEKİL',x)).strip())
     out=open(f'/tmp/kor/{P}-son.txt','w'); mini=open(f'/tmp/kor/{P}-mini.txt','w'); n=0
     for o in O:
         for q in Q[o]:
             i=q['id']; c=cev.get(i)
-            if c and not c[1] and i in old and old[i][1]==q['metin'].strip() and old[i][0].get(c[0])==q['cevap']['deger']: out.write(f"{i} | {q['cevap']['sik']}\n")
+            if not any(i.endswith(z) for z in os.environ.get('ZORLA','').split(',') if z) and c and not c[1] and i in old and old[i][1]==q['metin'].strip() and old[i][0].get(c[0])==q['cevap']['deger']: out.write(f"{i} | {q['cevap']['sik']}\n")
             else: n+=1; mini.write(f"### {i}\n{q['metin']}\n"+('[ŞEKİL: /tmp/kor/'+i+'.png]\n' if q.get('sekil') else '')+''.join(f"{k}) {v}\n" for k,v in q['siklar'].items())+'\n')
     print('mini kör çözüme giden',n)
 elif A=='bitir':

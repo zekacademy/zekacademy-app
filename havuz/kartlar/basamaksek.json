@@ -1,0 +1,261 @@
+{
+ "konu": "Sayı Basamakları",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-BSS-01",
+   "konu": "Sayı Basamakları",
+   "alt": "Abaküs",
+   "fikir": "Abaküsten rakamlar okunur, sayı tersiyle yazılıp fark alınır; boş çubuk sıfır rakamıdır.",
+   "tuzak": "Boş çubuğu (0) atlayıp sayıyı üç basamaklı okumak; ters yazarken rakam sırasını bozmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bss-abakus",
+   "tip": "Abaküsten sayı okuma ve rakamları tersine yazma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-02",
+   "konu": "Sayı Basamakları",
+   "alt": "Basamak tablosu",
+   "fikir": "İki sayının basamak tablosundan rakamlar okunur; rakamların yerleri değişince her sayının değişimi basamak değeriyle hesaplanır.",
+   "tuzak": "Değişimi yalnız bir sayı için hesaplamak; yüzler yerine onlar basamağını okumak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "bss-tablo",
+   "tip": "Basamak tablosunda rakam değiştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-03",
+   "konu": "Sayı Basamakları",
+   "alt": "Şifre kilidi",
+   "fikir": "Her tekerlekteki ilerleme ve geri dönüş 10’a göre kalan alınarak hesaplanır.",
+   "tuzak": "Geri dönüşte mutlak değer almak; tekerlek ile ok eşleşmesini karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bss-kilit",
+   "tip": "Şifre çarkında dairesel dönme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-04",
+   "konu": "Sayı Basamakları",
+   "alt": "Elektrik sayacı",
+   "fikir": "Sayaca eklenen değer elde kuralıyla basamak basamak toplanır ve yeni rakamların toplamı alınır.",
+   "tuzak": "Eldeyi unutmak; eklenen sayının rakamlarını yanlış basamağa hizalamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bss-sayac",
+   "tip": "Sayaçta elde ve rakamlar toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-05",
+   "konu": "Sayı Basamakları",
+   "alt": "Rakam kartları",
+   "fikir": "6 kartı ters çevrilince 9 olur; en büyük ve en küçük dört basamaklı sayılar kurallara göre kurulur ve fark alınır.",
+   "tuzak": "6’yı ters çevirmeyi unutmak; en küçük sayıyı 0 ile başlatmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bss-kart",
+   "tip": "Rakam kartlarıyla en büyük ve en küçük sayı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-06",
+   "konu": "Sayı Basamakları",
+   "alt": "Harfli toplama",
+   "fikir": "Aynı rakamlarla yazılan üç sayının toplamı 111 × (A + B + C) olur; toplamdan rakamlar toplamı ve en küçük sayı bulunur.",
+   "tuzak": "Toplamı 22 gibi başka bir değer sanmak; en küçük sayıda rakam sıralamasını bozmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bss-harfli",
+   "tip": "Harfli toplamada rakamlar toplamı ve en küçük sayı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-07",
+   "konu": "Sayı Basamakları",
+   "alt": "Kutulara rakam yerleştirme",
+   "fikir": "İki üç basamaklı sayının farkı en küçük olsun diye yüzler basamakları birbirine yakın seçilir, kalan rakamlar ters yönde dizilir.",
+   "tuzak": "Yüzler basamağı rakamlarını en yakın seçmeyip yalnız onlar ve birlere bakmak; kalan rakamları yanlış yöne yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bss-kutu",
+   "tip": "Kutulara rakam yerleştirip en küçük pozitif fark",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-08",
+   "konu": "Sayı Basamakları",
+   "alt": "Kod biçimi",
+   "fikir": "Simetrik kodda seçilen rakamlar ve koşullar çarpma kuralıyla sayılır; 0 ve farklılık koşulları ayrı durumlar yaratır.",
+   "tuzak": "İlk rakamın 0 olamayacağını atlamak; 0’ı çift saymamak; farklılık koşulunu uygulamamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bss-kod",
+   "tip": "Simetrik kod biçiminde sayma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-09",
+   "konu": "Sayı Basamakları",
+   "alt": "Dijital saat",
+   "fikir": "Ekrandaki rakamların kuralına uyan ilk an bulunur ve iki an arasındaki süre dakika olarak hesaplanır.",
+   "tuzak": "Dakika çıkarmada saat ödünç alırken 100 almak; yalnız saat farkını yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bss-saat",
+   "tip": "Dijital saatte rakam kuralı ve süre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-10",
+   "konu": "Sayı Basamakları",
+   "alt": "Dijital saatte sayma",
+   "fikir": "Her saat için dakika rakamları toplamı bulunur; saat 00–23, dakika 00–59 sınırlarıyla sayılır.",
+   "tuzak": "Saati 29’a ya da dakikayı 99’a kadar saymak; 23:59 gibi uç durumu unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "bss-saatsay",
+   "tip": "Dijital saatte rakamlar toplamına göre sayma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-11",
+   "konu": "Sayı Basamakları",
+   "alt": "Eksik rakamlı toplama",
+   "fikir": "Alt alta toplamada birler basamağından başlanır, elde izlenir ve eksik rakamlar tek tek bulunur.",
+   "tuzak": "Eldeyi unutmak; birler basamağındaki 1’i doğrudan eksik rakam sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bss-elde",
+   "tip": "Eksik rakamlı alt alta toplama",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-BSS-12",
+   "konu": "Sayı Basamakları",
+   "alt": "Simetrik sayı",
+   "fikir": "Basamak tablosundan numara okunur, sonraki simetrik (palindrom) sayı bulunur ve aradaki fark hesaplanır.",
+   "tuzak": "Önceki simetrik sayıyı sonraki sanmak; ortadaki rakamı artırmak yerine baştakini artırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "bss-pal",
+   "tip": "Basamak tablosunda sonraki simetrik sayı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (sayı basamakları, şekilli/tablolu sorular; yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bss-abakus",
+   "ad": "Abaküsten sayı okuma ve rakamları tersine yazma",
+   "kartlar": [
+    "K-BSS-01"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-tablo",
+   "ad": "Basamak tablosunda rakam değiştirme",
+   "kartlar": [
+    "K-BSS-02"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-kilit",
+   "ad": "Şifre çarkında dairesel dönme",
+   "kartlar": [
+    "K-BSS-03"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-sayac",
+   "ad": "Sayaçta elde ve rakamlar toplamı",
+   "kartlar": [
+    "K-BSS-04"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-kart",
+   "ad": "Rakam kartlarıyla en büyük ve en küçük sayı",
+   "kartlar": [
+    "K-BSS-05"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-harfli",
+   "ad": "Harfli toplamada rakamlar toplamı ve en küçük sayı",
+   "kartlar": [
+    "K-BSS-06"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-kutu",
+   "ad": "Kutulara rakam yerleştirip en küçük pozitif fark",
+   "kartlar": [
+    "K-BSS-07"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-kod",
+   "ad": "Simetrik kod biçiminde sayma",
+   "kartlar": [
+    "K-BSS-08"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-saat",
+   "ad": "Dijital saatte rakam kuralı ve süre",
+   "kartlar": [
+    "K-BSS-09"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-saatsay",
+   "ad": "Dijital saatte rakamlar toplamına göre sayma",
+   "kartlar": [
+    "K-BSS-10"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-elde",
+   "ad": "Eksik rakamlı alt alta toplama",
+   "kartlar": [
+    "K-BSS-11"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  },
+  {
+   "tipId": "bss-pal",
+   "ad": "Basamak tablosunda sonraki simetrik sayı",
+   "kartlar": [
+    "K-BSS-12"
+   ],
+   "uygulamaKonu": "mat|Sayı Basamakları"
+  }
+ ]
+}
