@@ -1,0 +1,156 @@
+{
+ "konu": "Mutlak Değer",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-MTS-01",
+   "konu": "Mutlak Değer",
+   "alt": "Sayı doğrusunda uzaklık",
+   "fikir": "Noktaların yerleri şekilden okunur; verilen uzaklığı sağlayan her nokta bulunup diğer noktaya uzaklıkları ayrı ayrı hesaplanır.",
+   "tuzak": "Yalnız tek noktayı bulmak; verilen uzaklığı toplam sanmak; iki noktanın uzaklığını yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "mts-uzaklik",
+   "tip": "Sayı doğrusunda uzaklık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-02",
+   "konu": "Mutlak Değer",
+   "alt": "Yol üzerinde konum koşulları",
+   "fikir": "Her uzaklık koşulu bir aralık verir; aralıkların kesişimindeki tam sayılar sayılır.",
+   "tuzak": "Uçları yanlış dahil etmek; bir koşulu unutmak; iki yönlü çözümü tek yön almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mts-yol",
+   "tip": "Yol üzerinde uzaklık koşulları",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-03",
+   "konu": "Mutlak Değer",
+   "alt": "Tolerans etiketi",
+   "fikir": "Etiketteki “m ± d” bir mutlak değer eşitsizliğidir; iki toleransın ortak aralığındaki tam sayılar sayılır.",
+   "tuzak": "Uçları dahil saymamak; birleşim almak; tek aralığın tam sayısını yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mts-tolerans",
+   "tip": "Tolerans etiketi ve ortak aralık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-04",
+   "konu": "Mutlak Değer",
+   "alt": "Asansör kat şeması",
+   "fikir": "Kat farkları mutlak değer ile alınır; bodrum katlar negatif sayıdır; durakların farklarının mutlak değerleri toplanır.",
+   "tuzak": "Bodrumu pozitif saymak; işaretli farkları toplamak; bir durağı atlamak; durak sayısını kat sayısına eklemek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "mts-kat",
+   "tip": "Asansör kat şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-05",
+   "konu": "Mutlak Değer",
+   "alt": "Sıcaklık tablosu",
+   "fikir": "Tablodaki her değer için mutlak değer koşulu ayrı sınanıp koşulu sağlayan günler sayılır.",
+   "tuzak": "Sınır değeri dahil saymak; işareti ters kullanmak; eşitsizlik yönünü ters çevirmek.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "mts-sicaklik",
+   "tip": "Tabloda mutlak değer koşulu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-06",
+   "konu": "Mutlak Değer",
+   "alt": "İşaretli noktalarla |x − a| yorumu",
+   "fikir": "Yakınlık koşulu orta noktaya, uzaklık koşulları aralıklara çevrilir; tam sayı değerleri sayılır.",
+   "tuzak": "Orta noktada eşitliği dahil etmek; yakınlık yönünü ters okumak; bir koşulu unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mts-yakin",
+   "tip": "Sayı doğrusunda yakınlık ve uzaklık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-MTS-07",
+   "konu": "Mutlak Değer",
+   "alt": "|x − a| + b grafiği",
+   "fikir": "Grafikten tepe noktası okunur; doğruyla kesim noktaları mutlak değer denkleminden bulunur; üçgenin alanı hesaplanır.",
+   "tuzak": "Alan için yarıyı unutmak; yüksekliği eksenden almak; tepe noktasını yanlış okumak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "mts-grafik",
+   "tip": "Mutlak değer grafiği ve alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli mutlak değer, uzaklık soruları, yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mts-uzaklik",
+   "ad": "Sayı doğrusunda uzaklık",
+   "kartlar": [
+    "K-MTS-01"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-yol",
+   "ad": "Yol üzerinde uzaklık koşulları",
+   "kartlar": [
+    "K-MTS-02"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-tolerans",
+   "ad": "Tolerans etiketi ve ortak aralık",
+   "kartlar": [
+    "K-MTS-03"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-kat",
+   "ad": "Asansör kat şeması",
+   "kartlar": [
+    "K-MTS-04"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-sicaklik",
+   "ad": "Tabloda mutlak değer koşulu",
+   "kartlar": [
+    "K-MTS-05"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-yakin",
+   "ad": "Sayı doğrusunda yakınlık ve uzaklık",
+   "kartlar": [
+    "K-MTS-06"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  },
+  {
+   "tipId": "mts-grafik",
+   "ad": "Mutlak değer grafiği ve alan",
+   "kartlar": [
+    "K-MTS-07"
+   ],
+   "uygulamaKonu": "mat|Mutlak Değer"
+  }
+ ]
+}

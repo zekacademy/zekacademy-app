@@ -15,3 +15,13 @@ Kurallar:
 - Denetim: `python3 havuz/denetle.py havuz/tyt-mat/<onek>-1.json --benzerlik /home/claude/kutup/osym_metin.json /home/claude/kutup/sorular.json` → 0 HATA (0,15 üstü benzerlik uyarısında kurguyu değiştir); ayrıca mevcut dosyalarla birlikte çalıştırıp havuz içi tekrar HATA'sı olmadığını gör.
 - Bitince kısa rapor: sayı, zorluk, harf dağılımı, kartlar, "emin olmadıklarım".
 - EK (12 Kasım): ipucu anahtar fikri söylemesin; `adimSayisi` = adım listesinin uzunluğu; sayılar/fiyatlar/hızlar gerçekçi; derişimlerde "kütlece/hacimce" açık. Çeldirici açıklaması o değeri TEK tutarlı hata zinciriyle üretsin (öncüllülerde: hangi öncül neden doğru/yanlış sanıldı). Metin içinde boru (|) işaretli tablo YASAK: tablo gerekiyorsa `from _hafif_mat import tablo_svg` → `sekil=tablo_svg(['Başlık1','Başlık2'],[['a','b'],...])`, metinde "aşağıdaki tabloda" de, kalıp 'tablo'.
+
+## Şekilli ek paketleri için dersler (15 Kasım, sek1 turundan)
+- Şekil VERİ taşır: şekilde verilen sayı metinde tekrar edilmez; şekil çıkarılınca soru çözülemiyor olmalı. Süs şekil yasak.
+- Şekil ölçekli çizilince cevabı gözle ele veriyorsa (sayı doğrusunda nokta yeri, ibre) şematik çiz ya da soruyu değiştir.
+- Yazılar 500 px genişlikte en az 11–12 px; küçük nesneler (kap, nokta, diş) iri çizilir; okunacak uçlar kılavuz çizgiyle bir bölme çizgisine oturur. Dosya 40 KB'ı geçmesin (tarama deseni yerine düz dolgu).
+- Nesne ne ise şekilde/lejantta yazsın ("● : 1 kalem"); metindeki sözcük ile şekildeki nesne aynı olsun.
+- "bilgi" örneği sorunun kendi sayılarıyla yazılmaz (cevap zincirini sızdırır).
+- Çeldiriciler metindeki bir koşulla hesapsız elenmesin (ör. kapasiteyi aşan değer).
+- Aynı pakette aynı şekil türü en çok 2 kez; aynı kurgu 1 kez.
+- Kurgu kendi içinde tutarlı: kapasite aşılmaz, sıra belirsiz kalmaz.

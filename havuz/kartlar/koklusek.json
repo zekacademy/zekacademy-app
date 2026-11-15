@@ -1,0 +1,177 @@
+{
+ "konu": "Köklü Sayılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KKS-01",
+   "konu": "Köklü Sayılar",
+   "alt": "Alanı verilen karelerin çevresi",
+   "fikir": "Alanı verilen karenin kenarı alanın karekökü olarak yazılıp sadeleştirilir; kök içleri aynı olan kenarlar toplanır, çevre 4 × kenar toplamıdır.",
+   "tuzak": "Çevre yerine kenar toplamını almak; alanları toplayıp kök almak; √2 çarpanını unutmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "kks-alan",
+   "tip": "Alanı verilen karelerin çevresi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-02",
+   "konu": "Köklü Sayılar",
+   "alt": "Kareli zeminde köşegen yolu",
+   "fikir": "Kareli zeminde bir birim kareyi köşegenle geçmek √2 uzunluğundadır; adım sayıları toplanıp √2 ile çarpılır.",
+   "tuzak": "Köşegeni 1 ya da √3 sanmak; yatay ve dikey adımları toplamak; adım sayısını yanlış okumak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "kks-kare",
+   "tip": "Kareli zeminde köşegen yolu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-03",
+   "konu": "Köklü Sayılar",
+   "alt": "Sayı doğrusunda kök yeri",
+   "fikir": "Sayı doğrusunda bir noktanın iki tam sayı arasında olması, kök içinin bu tam sayıların karelerinin arasında olması demektir; uç değerler kök içi tam kare olduğundan dışarıda kalır.",
+   "tuzak": "Kare olan uç değerleri dahil etmek; en büyük ve en küçük değerleri karıştırmak; aralığı yanlış okumak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kks-dogru",
+   "tip": "Sayı doğrusunda kök yeri ve aralık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-04",
+   "konu": "Köklü Sayılar",
+   "alt": "Dikdörtgenin çevresi ve köşegeni",
+   "fikir": "Köklü kenarlar sadeleştirilir; çevre, kenarlar toplamıyla; köşegen Pisagor ile bulunur; fark kök içleri aynı olduğu için doğrudan yapılır.",
+   "tuzak": "Kök içlerini toplamak; çevre yerine yarı çevreyi ya da yalnız köşegeni yazmak; Pisagorda karekökü unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kks-dikdortgen",
+   "tip": "Dikdörtgenin çevresi ve köşegeni",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-05",
+   "konu": "Köklü Sayılar",
+   "alt": "Basamaklı kare dizisi",
+   "fikir": "Alanlardan kenarlar bulunur, kenarların √2 katsayıları ardışık artar; ilk n kenarın toplamı katsayı toplamı × √2’dir.",
+   "tuzak": "Alan toplamını kenar toplamı sanmak; √2 çarpanını unutmak; katsayıların toplamında hata yapmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kks-merdiven",
+   "tip": "Basamaklı kare dizisinde kenar toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-06",
+   "konu": "Köklü Sayılar",
+   "alt": "İç içe iki kare",
+   "fikir": "Alanlardan kenarlar bulunur; çevreler farkı, kenar farkının 4 katıdır; kök içleri aynı olduğundan fark sadeleşir.",
+   "tuzak": "Alan farkını çevre farkı sanmak; √2 çarpanını unutmak; kenar farkını 4 ile çarpmamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kks-icice",
+   "tip": "İç içe karelerde çevre farkı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-07",
+   "konu": "Köklü Sayılar",
+   "alt": "Kumaş parçalarının alanı",
+   "fikir": "Tabloda köklü kenarlar çarpılır; √a · √b = √(ab) ile çarpım tam kareye dönüşür; alanlar toplanır.",
+   "tuzak": "Kök içlerini toplamak; √2 · √2’yi 1 almak; bir satırı atlamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "kks-tablo",
+   "tip": "Tabloda köklü kenarların alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KKS-08",
+   "konu": "Köklü Sayılar",
+   "alt": "Pisagor sarmalı",
+   "fikir": "Ardışık dik üçgenlerde hipotenüsün karesi bir artar; n. hipotenüs √(n + 1)’dir; tam sayı olanlar kök içi tam kare olan terimlerdir.",
+   "tuzak": "Tam kare kök içlerini yanlış belirlemek; adedi toplam sanmak; son tam kareyi (36) atlamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kks-sarmal",
+   "tip": "Pisagor sarmalında tam sayı hipotenüsler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu köklü sayı soruları, yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kks-alan",
+   "ad": "Alanı verilen karelerin çevresi",
+   "kartlar": [
+    "K-KKS-01"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-kare",
+   "ad": "Kareli zeminde köşegen yolu",
+   "kartlar": [
+    "K-KKS-02"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-dogru",
+   "ad": "Sayı doğrusunda kök yeri ve aralık",
+   "kartlar": [
+    "K-KKS-03"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-dikdortgen",
+   "ad": "Dikdörtgenin çevresi ve köşegeni",
+   "kartlar": [
+    "K-KKS-04"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-merdiven",
+   "ad": "Basamaklı kare dizisinde kenar toplamı",
+   "kartlar": [
+    "K-KKS-05"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-icice",
+   "ad": "İç içe karelerde çevre farkı",
+   "kartlar": [
+    "K-KKS-06"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-tablo",
+   "ad": "Tabloda köklü kenarların alanı",
+   "kartlar": [
+    "K-KKS-07"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  },
+  {
+   "tipId": "kks-sarmal",
+   "ad": "Pisagor sarmalında tam sayı hipotenüsler",
+   "kartlar": [
+    "K-KKS-08"
+   ],
+   "uygulamaKonu": "mat|Köklü Sayılar"
+  }
+ ]
+}

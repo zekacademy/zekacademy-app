@@ -1,0 +1,575 @@
+[
+ {
+  "id": "tytmat-carpansek-0001",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · İki Kare Farkı",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Dış ve iç kare kenarlarını şekilden okuyup aradaki yolun alanını iki kare farkı özdeşliğiyle hesaplar.",
+  "tipId": "cas-cerceve",
+  "tip": "Kare çerçevede iki kare farkı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Kare biçimli bir bahçenin tam ortasına, kenarları bahçenin kenarlarına paralel olacak biçimde kare biçimli bir havuz yapılmıştır. Bahçe ile havuz arasında kalan boşluk, şekilde gölgeli olarak gösterilen yürüyüş yoludur.\nBuna göre bu yolun alanı kaç m²’dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:192px;height:auto\" role=\"img\" viewBox=\"0 0 101.168 116.073\">\n<defs>\n<g>\n<g id=\"t14cd4a-glyph-0-0\">\n<rect x=\"-3.1\" y=\"-5\" width=\"37.2\" height=\"60\" mask=\"url(#t14cd4a-mask-0)\" transform=\"matrix(0.118992, 0, 0, 0.118992, 0.356976, -5.830601)\"/>\n</g>\n<g id=\"t14cd4a-glyph-0-1\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#t14cd4a-mask-1)\" transform=\"matrix(0.118992, 0, 0, 0.118992, 0.237984, -5.830601)\"/>\n</g>\n<g id=\"t14cd4a-glyph-0-2\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#t14cd4a-mask-2)\" transform=\"matrix(0.118992, 0, 0, 0.118992, 0.713951, -4.045723)\"/>\n</g>\n<g id=\"t14cd4a-glyph-0-3\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#t14cd4a-mask-3)\" transform=\"matrix(0.118992, 0, 0, 0.118992, 0.356976, -6.068584)\"/>\n</g>\n<g id=\"t14cd4a-glyph-0-4\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t14cd4a-mask-4)\" transform=\"matrix(0.118992, 0, 0, 0.118992, 0.356976, -6.068584)\"/>\n</g>\n</g>\n<image id=\"t14cd4a-source-90\" x=\"0\" y=\"0\" width=\"31\" height=\"50\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAyCAAAAACB918NAAAAAmJLR0QA/4ePzL8AAAB+SURBVDiNxZRRDsAgCEPX3f/O7Mdsii0Rsk3/zEsrIAA7wnPG+HMOSSzmDcf+kHpr5kJ/V43rn9go70Kv5N9nTvhQmLz/WNe03n2L1/t24/5QfOrWUn9B8XkYmB6Kk1kqxAfF2ajm/aE43QSvzzcU54to9/5Z7n9z95/e380vK5gTV5H+Bt0AAAAASUVORK5CYII=\"/>\n<mask id=\"t14cd4a-mask-0\">\n<use xlink:href=\"#t14cd4a-source-90\"/>\n</mask>\n<image id=\"t14cd4a-source-98\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"t14cd4a-mask-1\">\n<use xlink:href=\"#t14cd4a-source-98\"/>\n</mask>\n<image id=\"t14cd4a-source-144\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t14cd4a-mask-2\">\n<use xlink:href=\"#t14cd4a-source-144\"/>\n</mask>\n<image id=\"t14cd4a-source-228\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t14cd4a-mask-3\">\n<use xlink:href=\"#t14cd4a-source-228\"/>\n</mask>\n<image id=\"t14cd4a-source-236\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADHSURBVDiNtZTbEsIwCEQD4///Mj40NAvdTaujeXAMh1uAYqOdyD8Gvxd4spekx/E9Bk7x8p/YqsAqrukugcJTIjHmz/AhC4mH7XHxv+XcfLgq3EP/dlNH7C9EitTA/gbR1f2dcTM8eQXOF2aJqhZVv7/CGYapcIbhsq9/yPqmurd7P4/7zwOE791/7/9XXGZW7OUM/z9/keAcOC/Xz/2r7z9lwv4M53Tql3O+X1fEanvddnaxHUW37YWO+zruGF8dBNeqkDX8BpNTL13R54DNAAAAAElFTkSuQmCC\"/>\n<mask id=\"t14cd4a-mask-4\">\n<use xlink:href=\"#t14cd4a-source-236\"/>\n</mask>\n</defs>\n<path fill-rule=\"evenodd\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" d=\"M 3.359375 96.996094 L 3.359375 3.371094 L 96.984375 3.371094 L 96.984375 96.996094 Z M 33.722656 66.632812 L 33.722656 33.738281 L 66.621094 33.738281 L 66.621094 66.632812 Z M 33.722656 66.632812 \"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.00000231298 0.00100472 L 0.00000231298 94.395972 L 94.394969 94.395972 L 94.394969 0.00100472 Z M 0.00000231298 0.00100472 \" transform=\"matrix(0.991843, 0, 0, -0.991843, 3.359373, 96.99709)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 30.612989 30.613992 L 30.612989 63.779046 L 63.781982 63.779046 L 63.781982 30.613992 Z M 30.612989 30.613992 \" transform=\"matrix(0.991843, 0, 0, -0.991843, 3.359373, 96.99709)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t14cd4a-glyph-0-0\" x=\"40.450339\" y=\"108.882347\"/>\n<use xlink:href=\"#t14cd4a-glyph-0-1\" x=\"45.019626\" y=\"108.882347\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t14cd4a-glyph-0-2\" x=\"52.630408\" y=\"108.882347\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t14cd4a-glyph-0-3\" x=\"40.450339\" y=\"53.074309\"/>\n<use xlink:href=\"#t14cd4a-glyph-0-4\" x=\"45.019626\" y=\"53.074309\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t14cd4a-glyph-0-2\" x=\"52.630408\" y=\"53.074309\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "100",
+   "B": "2304",
+   "C": "4800",
+   "D": "5476",
+   "E": "6152"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "4800"
+  },
+  "celdiriciler": {
+   "A": "Kenarların toplamını (74 + 26) yol alanı sanmış; fark ile çarpmayı unutmuş.",
+   "B": "(74 − 26)² hesaplamış; kareler farkı, farkın karesine eşit değildir.",
+   "D": "Yalnız bahçenin (dış karenin) alanını yazmış; havuzun alanını çıkarmamış.",
+   "E": "Havuzun alanını çıkarmak yerine eklemiş: 74² + 26²."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "Yolun alanı.",
+  "bilgi": [
+   {
+    "ad": "İki kare farkı",
+    "ifade": "a² − b² = (a − b)(a + b). Örnek: 9² − 4² = (9 − 4)(9 + 4) = 65"
+   }
+  ],
+  "ipuclari": [
+   "Yolun alanını iki karenin alanı cinsinden yaz; sayıların büyük olduğuna dikkat et."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Alanı kur",
+    "aciklama": "Yol alanı, dış kare ile iç karenin alanları farkıdır.",
+    "islem": "74² − 26²"
+   },
+   {
+    "baslik": "Özdeşlik",
+    "aciklama": "İki kare farkı: a² − b² = (a − b)(a + b).",
+    "islem": "(74 − 26)(74 + 26)"
+   },
+   {
+    "baslik": "Hesapla",
+    "aciklama": "Parantezleri hesapla.",
+    "islem": "48 × 100 = 4800"
+   }
+  ],
+  "puf": "İki karenin alanları farkı istendiğinde karelerin ayrı ayrı hesabı yerine (a − b)(a + b) kullanılır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-01 (bahçe ve havuz arası yol alanı) · 74 m dış kare, 26 m iç kare",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0002",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Dört parçaya bölünmüş dikdörtgenin parça alanlarını toplayıp çarpanlara ayırarak kenarları ve çevreyi kullanıp x’i bulur.",
+  "tipId": "cas-parca",
+  "tip": "Alan parçalarından kenar ve çevre",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekilde, dikdörtgen biçimli bir karton, kenarları dikdörtgenin kenarlarına paralel doğrularla dört dikdörtgen parçaya ayrılmıştır. x² cm² alanlı parça karedir; parçaların alanları cm² cinsinden verilmiştir. x pozitif bir gerçek sayıdır.\nKartonun çevresi 38 cm olduğuna göre x kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:297px;height:auto\" role=\"img\" viewBox=\"0 0 156.427 82.091\">\n<defs>\n<g>\n<g id=\"t55ba50-glyph-0-0\">\n<path d=\"M 2.8125 -2.03125 L 4.875 -3.9375 L 4.125 -3.9375 L 2.59375 -2.5 L 1.671875 -3.9375 L 0.890625 -3.9375 L 2.203125 -2.03125 L 0 0 L 0.765625 0 L 2.421875 -1.65625 L 3.421875 0 L 4.203125 0 Z M 2.8125 -2.03125 \"/>\n</g>\n<g id=\"t55ba50-glyph-1-0\">\n<path d=\"M 1.671875 -0.453125 C 1.59375 -0.453125 1.53125 -0.453125 1.453125 -0.453125 L 0.78125 -0.453125 L 1.703125 -1.265625 C 1.8125 -1.359375 2.09375 -1.578125 2.203125 -1.671875 C 2.46875 -1.90625 2.8125 -2.203125 2.8125 -2.71875 C 2.8125 -3.390625 2.328125 -4 1.484375 -4 C 0.84375 -4 0.453125 -3.65625 0.265625 -3.0625 L 0.53125 -2.71875 C 0.671875 -3.203125 0.875 -3.59375 1.390625 -3.59375 C 1.890625 -3.59375 2.265625 -3.25 2.265625 -2.71875 C 2.265625 -2.21875 1.984375 -1.9375 1.625 -1.609375 C 1.5 -1.484375 1.1875 -1.21875 1.0625 -1.109375 C 0.890625 -0.953125 0.484375 -0.5625 0.3125 -0.40625 L 0.3125 0 L 2.8125 0 L 2.8125 -0.453125 Z M 1.671875 -0.453125 \"/>\n</g>\n<g id=\"t55ba50-glyph-2-0\">\n<path d=\"M 1.40625 -5.203125 L 3.796875 -5.203125 L 3.796875 -5.796875 L 0.71875 -5.796875 L 0.71875 -2.5 L 1.359375 -2.5 C 1.640625 -3.15625 2.1875 -3.203125 2.359375 -3.203125 C 2.71875 -3.203125 3.25 -2.921875 3.25 -1.8125 C 3.25 -0.734375 2.609375 -0.375 2.078125 -0.375 C 1.609375 -0.375 1.015625 -0.609375 0.671875 -1.203125 L 0.34375 -0.671875 C 0.484375 -0.484375 1.078125 0.1875 2.078125 0.1875 C 3.1875 0.1875 4.09375 -0.6875 4.09375 -1.796875 C 4.09375 -2.90625 3.3125 -3.78125 2.375 -3.78125 C 2.25 -3.78125 1.8125 -3.78125 1.40625 -3.421875 Z M 1.40625 -5.203125 \"/>\n</g>\n<g id=\"t55ba50-glyph-2-1\">\n<path d=\"M 2.4375 -0.671875 C 2.328125 -0.671875 2.21875 -0.65625 2.109375 -0.65625 L 1.140625 -0.65625 C 1.40625 -0.921875 2.3125 -1.75 2.59375 -1.984375 C 3.515625 -2.75 4.09375 -3.21875 4.09375 -4.078125 C 4.09375 -5.109375 3.359375 -6 2.15625 -6 C 1.21875 -6 0.65625 -5.453125 0.375 -4.578125 L 0.796875 -4.0625 C 1.015625 -5.109375 1.484375 -5.390625 2.03125 -5.390625 C 2.828125 -5.390625 3.3125 -4.796875 3.3125 -4.0625 C 3.3125 -3.25 2.75 -2.75 2.09375 -2.15625 L 0.453125 -0.609375 L 0.453125 0 L 4.09375 0 L 4.09375 -0.671875 Z M 2.4375 -0.671875 \"/>\n</g>\n<g id=\"t55ba50-glyph-2-2\">\n<path d=\"M 2.75 -6 L 2.5625 -6 C 1.96875 -5.421875 1.109375 -5.421875 0.796875 -5.421875 L 0.796875 -4.875 C 1.046875 -4.875 1.5 -4.875 1.984375 -5.078125 L 1.984375 -0.546875 L 0.859375 -0.546875 L 0.859375 0 L 3.875 0 L 3.875 -0.546875 L 2.75 -0.546875 Z M 2.75 -6 \"/>\n</g>\n<g id=\"t55ba50-glyph-2-3\">\n<path d=\"M 4.1875 -2.890625 C 4.1875 -3.734375 4.125 -4.515625 3.703125 -5.203125 C 3.421875 -5.703125 2.859375 -6 2.28125 -6 C 1.84375 -6 1.203125 -5.828125 0.8125 -5.140625 C 0.390625 -4.4375 0.359375 -3.5 0.359375 -2.890625 C 0.359375 -2.4375 0.359375 -1.421875 0.765625 -0.703125 C 1.203125 0.078125 1.875 0.1875 2.265625 0.1875 C 2.78125 0.1875 3.421875 -0.015625 3.8125 -0.75 C 4.140625 -1.40625 4.1875 -2.171875 4.1875 -2.890625 Z M 2.28125 -0.375 C 1.09375 -0.375 1.09375 -2.15625 1.09375 -2.984375 C 1.09375 -3.546875 1.09375 -4 1.234375 -4.46875 C 1.40625 -5.078125 1.765625 -5.421875 2.265625 -5.421875 C 3.453125 -5.421875 3.453125 -3.8125 3.453125 -2.984375 C 3.453125 -2.390625 3.453125 -1.78125 3.25 -1.203125 C 3.046875 -0.578125 2.625 -0.375 2.28125 -0.375 Z M 2.28125 -0.375 \"/>\n</g>\n<g id=\"t55ba50-glyph-3-0\">\n<rect x=\"-1.7\" y=\"-6.7\" width=\"20.4\" height=\"80.4\" mask=\"url(#t55ba50-mask-0)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.593576, -5.935758)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-1\">\n<rect x=\"-2.5\" y=\"-3.3\" width=\"30\" height=\"39.6\" mask=\"url(#t55ba50-mask-1)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.356145, -3.798885)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-2\">\n<rect x=\"-0.6\" y=\"-4.7\" width=\"7.2\" height=\"56.4\" mask=\"url(#t55ba50-mask-2)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.593576, -5.579613)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-3\">\n<rect x=\"-2.5\" y=\"-3.1\" width=\"30\" height=\"37.2\" mask=\"url(#t55ba50-mask-3)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.593576, -3.68017)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-4\">\n<rect x=\"-1.7\" y=\"-3.1\" width=\"20.4\" height=\"37.2\" mask=\"url(#t55ba50-mask-4)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.593576, -3.68017)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-5\">\n<rect x=\"-2.6\" y=\"-3.3\" width=\"31.2\" height=\"39.6\" mask=\"url(#t55ba50-mask-5)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.23743, -3.798885)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-6\">\n<rect x=\"-4.6\" y=\"-3.1\" width=\"55.2\" height=\"37.2\" mask=\"url(#t55ba50-mask-6)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.593576, -3.68017)\"/>\n</g>\n<g id=\"t55ba50-glyph-3-7\">\n<rect x=\"-1.7\" y=\"-6.7\" width=\"20.4\" height=\"80.4\" mask=\"url(#t55ba50-mask-7)\" transform=\"matrix(0.118715, 0, 0, 0.118715, 0.474861, -5.935758)\"/>\n</g>\n</g>\n<image id=\"t55ba50-source-166\" x=\"0\" y=\"0\" width=\"17\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAABDCAAAAABfQLHaAAAAAmJLR0QA/4ePzL8AAACDSURBVDiN3ZRBDsQwCAPt/P/P3kuyNRDalZrT5jgaA4oEhD0BAAtgMVgiIwDACFZVpszX0eWNlFnEFHdoxBVzaCQoacJAaESN8wOhETXOW0KlVscq/ysh8ped68XGUSEPldk4zX4twkJibCBLVkdOuHemNIlJDALLhNru191t2dyfiT7SRxh6HGtKugAAAABJRU5ErkJggg==\"/>\n<mask id=\"t55ba50-mask-0\">\n<use xlink:href=\"#t55ba50-source-166\"/>\n</mask>\n<image id=\"t55ba50-source-174\" x=\"0\" y=\"0\" width=\"25\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAhCAAAAAAJq19/AAAAAmJLR0QA/4ePzL8AAACBSURBVCiRvZJLEoAgDEMThvtfuS4s9GOY0Y1u0LwUSyjhj/lKlJclZ40PfSEKcKPxlH2XXcMkAqATNj8ADgDMYLtGLRCO/v9Tb3+S0ptJogNXcev7WcSa0YUZoAU1TcpxHhHspwzsZU3qPIa1jG1y8JDAaUZ1B2vGeqLxXW6hJHEBv70cL6U2DCMAAAAASUVORK5CYII=\"/>\n<mask id=\"t55ba50-mask-1\">\n<use xlink:href=\"#t55ba50-source-174\"/>\n</mask>\n<image id=\"t55ba50-source-182\" x=\"0\" y=\"0\" width=\"6\" height=\"47\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAvCAAAAADlBORqAAAAAmJLR0QA/4ePzL8AAAAVSURBVBiVY/zPwMDAwMDEMEpRRgEAhHcBXWjcwn8AAAAASUVORK5CYII=\"/>\n<mask id=\"t55ba50-mask-2\">\n<use xlink:href=\"#t55ba50-source-182\"/>\n</mask>\n<image id=\"t55ba50-source-190\" x=\"0\" y=\"0\" width=\"25\" height=\"31\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAfCAAAAAA32zmiAAAAAmJLR0QA/4ePzL8AAABLSURBVCiR7Y0xDgAgCANb4v+/XAcThTo4OJnYAQMHJ5Gi8XBUzUZrhQBi7suOo4oSoo2WsFV5Og4DIJ0QNYod0G2eI/Ff7myfPEc6b7oLP3b5HQ0AAAAASUVORK5CYII=\"/>\n<mask id=\"t55ba50-mask-3\">\n<use xlink:href=\"#t55ba50-source-190\"/>\n</mask>\n<image id=\"t55ba50-source-236\" x=\"0\" y=\"0\" width=\"17\" height=\"31\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAfCAAAAAAkDHlWAAAAAmJLR0QA/4ePzL8AAABDSURBVCiR7c1RFgAgBETRN532v2X9RKIl5M/FELkMkAEoepjXHGBUCAnwqw2K5NOnHIckqr8c8lURNWk7avLI+fKWBe3ECEBAjF9TAAAAAElFTkSuQmCC\"/>\n<mask id=\"t55ba50-mask-4\">\n<use xlink:href=\"#t55ba50-source-236\"/>\n</mask>\n<image id=\"t55ba50-source-320\" x=\"0\" y=\"0\" width=\"26\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAhCAAAAADinOR8AAAAAmJLR0QA/4ePzL8AAABtSURBVCiRzZPBDsAgCENb//+f2WEhwoCabJd5MMqzjSGF2Mv8wLAn4HW2AADIibiqIzey9M7v3IRBYQDXwzr8gVGe1yqVYDOJlEoZjn4vDX+CvjWqicBqe5QNi8yGbMCOiVI5VOlVmVeTgjpfF9VuGSuqhBatAAAAAElFTkSuQmCC\"/>\n<mask id=\"t55ba50-mask-5\">\n<use xlink:href=\"#t55ba50-source-320\"/>\n</mask>\n<image id=\"t55ba50-source-328\" x=\"0\" y=\"0\" width=\"46\" height=\"31\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAfCAAAAAC99KDjAAAAAmJLR0QA/4ePzL8AAABhSURBVDiN7ZA7DsAwCEMx6v2vTJeSWHyktEMnWKI8PxErEBp7TrQMti5GEoLsbOkcuJ+ZFmv8XjBEtncVCa5U2C0rGO3Y32HSMWhO4nPcXosEPVN5Nd/0o+Z/lRl99NHz3M09FT5O855NAAAAAElFTkSuQmCC\"/>\n<mask id=\"t55ba50-mask-6\">\n<use xlink:href=\"#t55ba50-source-328\"/>\n</mask>\n<image id=\"t55ba50-source-374\" x=\"0\" y=\"0\" width=\"17\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAABDCAAAAABfQLHaAAAAAmJLR0QA/4ePzL8AAACJSURBVDiN7ZQxEsMgDATv+P+flcIhLELyOEW60Nis98RYM8ghSdZaVkZWRlZGY74ECevOHXNjfQwS5uC8paEs0bmkSVw7ioNszvlfn9hNqiBunPiyTk/Yq2icP+FCx66G+VdnGSQa5wFxd7/uUgaJ2jHIUjbHIFDoGI9tKIyUqe5XNVuO+XPMqBfmCRh7PmTuMQAAAABJRU5ErkJggg==\"/>\n<mask id=\"t55ba50-mask-7\">\n<use xlink:href=\"#t55ba50-source-374\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00126192 -0.00171987 L -0.00126192 68.03244 L 93.542745 68.03244 L 93.542745 -0.00171987 Z M -0.00126192 -0.00171987 \" transform=\"matrix(0.989048, 0, 0, -0.989048, 3.923123, 77.842049)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 51.022383 -0.00171987 L 51.022383 68.03244 \" transform=\"matrix(0.989048, 0, 0, -0.989048, 3.923123, 77.842049)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00126192 17.008795 L 93.542745 17.008795 \" transform=\"matrix(0.989048, 0, 0, -0.989048, 3.923123, 77.842049)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-0-0\" x=\"24.831602\" y=\"39.61138\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-1-0\" x=\"29.846076\" y=\"35.844096\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-2-0\" x=\"70.629478\" y=\"38.688598\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-0-0\" x=\"75.187013\" y=\"38.688598\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-2-1\" x=\"24.369716\" y=\"72.332061\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-0-0\" x=\"28.92725\" y=\"72.332061\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-2-2\" x=\"70.857949\" y=\"72.332061\"/>\n<use xlink:href=\"#t55ba50-glyph-2-3\" x=\"75.415317\" y=\"72.332061\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-3-0\" x=\"102.72607\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-1\" x=\"105.982427\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-2\" x=\"110.004497\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-1\" x=\"112.002473\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-3\" x=\"116.024543\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-2\" x=\"120.348149\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-1\" x=\"122.346126\" y=\"12.901145\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-3-4\" x=\"126.139594\" y=\"12.901145\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-3-5\" x=\"131.789958\" y=\"12.901145\"/>\n<use xlink:href=\"#t55ba50-glyph-3-6\" x=\"135.511678\" y=\"12.901145\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-1-0\" x=\"142.157444\" y=\"10.118952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t55ba50-glyph-3-7\" x=\"145.791207\" y=\"12.901145\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "6",
+   "B": "7",
+   "C": "12",
+   "D": "19",
+   "E": "24"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "6"
+  },
+  "celdiriciler": {
+   "B": "Kenarları (x + 5) ve x almış (2 cm’lik parça payını unutmuş): 4x + 10 = 38 → x = 7.",
+   "C": "Çevre denkleminde 4x + 14 = 38’den 4x = 24 bulup 4’e bölmek yerine 2’ye bölmüş.",
+   "D": "Çevreyi yarı çevre sanıp 38 ÷ 2 = 19 yazmış.",
+   "E": "4x = 24’ü bulduktan sonra 4’e bölmeyi unutmuş."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "islem"
+  },
+  "istenen": "x değeri.",
+  "bilgi": [
+   {
+    "ad": "x² + px + q çarpanlara ayırma",
+    "ifade": "çarpımı q, toplamı p olan iki sayı bulunursa x² + px + q = (x + m)(x + n) olur. Örnek: x² + 9x + 20 = (x + 4)(x + 5)"
+   },
+   {
+    "ad": "Dikdörtgenin alanı ve çevresi",
+    "ifade": "kenarları a ve b olan dikdörtgenin alanı ab, çevresi 2(a + b)’dir. Örnek: kenarları 4 ve 7 olan dikdörtgenin alanı 28, çevresi 22"
+   }
+  ],
+  "ipuclari": [
+   "Dört parçanın alanlarını topla ve ortaya çıkan ifadeyi çarpanlarına ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam alan",
+    "aciklama": "Parça alanları toplanır.",
+    "islem": "x² + 5x + 2x + 10 = x² + 7x + 10"
+   },
+   {
+    "baslik": "Kenarlar",
+    "aciklama": "Çarpımı 10, toplamı 7 olan sayılar 2 ve 5’tir.",
+    "islem": "(x + 2)(x + 5) → kenarlar x + 2 ve x + 5"
+   },
+   {
+    "baslik": "Çevre",
+    "aciklama": "Çevre, iki komşu kenar toplamının 2 katıdır.",
+    "islem": "2(2x + 7) = 38"
+   },
+   {
+    "baslik": "Çöz",
+    "aciklama": "Denklemi çöz.",
+    "islem": "4x + 14 = 38 → x = 6"
+   }
+  ],
+  "puf": "Alan parçalarını toplayıp çarpanlarına ayırınca kenarlar ortaya çıkar; çevre için iki kenarı topla ve 2 ile çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-02 (alan parçalarından çevre) · x², 5x, 2x, 10 parçaları, çevre 38",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0003",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Karelere ve dikdörtgenlere bölünmüş büyük karenin kenarını iki karenin kenarlarının toplamı olarak bulup alanı hesaplar.",
+  "tipId": "cas-kare",
+  "tip": "Kareyi karelere ve dikdörtgenlere bölme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Kare biçimli bir arsa, şekildeki gibi kenarları arsanın kenarlarına paralel doğrularla iki kare ve iki dikdörtgene ayrılmıştır. Şekilde boyalı olan karelerin alanları verilmiştir.\nBuna göre arsanın tamamının alanı kaç m²’dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:282px;height:auto\" role=\"img\" viewBox=\"0 0 148.507 148.507\">\n<defs>\n<g>\n<g id=\"t56154b-glyph-0-0\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t56154b-mask-0)\" transform=\"matrix(0.119573, 0, 0, 0.119573, 0.35872, -6.098248)\"/>\n</g>\n<g id=\"t56154b-glyph-0-1\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t56154b-mask-1)\" transform=\"matrix(0.119573, 0, 0, 0.119573, 0.35872, -6.098248)\"/>\n</g>\n<g id=\"t56154b-glyph-0-2\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#t56154b-mask-2)\" transform=\"matrix(0.119573, 0, 0, 0.119573, 0.717441, -4.065498)\"/>\n</g>\n<g id=\"t56154b-glyph-1-0\">\n<path d=\"M 1.6875 -0.453125 C 1.609375 -0.453125 1.546875 -0.453125 1.46875 -0.453125 L 0.796875 -0.453125 L 1.71875 -1.265625 C 1.828125 -1.359375 2.109375 -1.578125 2.21875 -1.671875 C 2.484375 -1.921875 2.84375 -2.21875 2.84375 -2.75 C 2.84375 -3.421875 2.34375 -4.03125 1.484375 -4.03125 C 0.859375 -4.03125 0.46875 -3.6875 0.265625 -3.078125 L 0.546875 -2.734375 C 0.671875 -3.234375 0.890625 -3.625 1.40625 -3.625 C 1.90625 -3.625 2.28125 -3.265625 2.28125 -2.734375 C 2.28125 -2.234375 2 -1.953125 1.640625 -1.625 C 1.515625 -1.5 1.203125 -1.234375 1.078125 -1.109375 C 0.90625 -0.953125 0.484375 -0.5625 0.3125 -0.40625 L 0.3125 0 L 2.84375 0 L 2.84375 -0.453125 Z M 1.6875 -0.453125 \"/>\n</g>\n<g id=\"t56154b-glyph-2-0\">\n<rect x=\"-2.3\" y=\"-4.5\" width=\"27.6\" height=\"54\" mask=\"url(#t56154b-mask-3)\" transform=\"matrix(0.119633, 0, 0, 0.119633, 0.598163, -5.383465)\"/>\n</g>\n<g id=\"t56154b-glyph-2-1\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#t56154b-mask-4)\" transform=\"matrix(0.119633, 0, 0, 0.119633, 0.358898, -5.383465)\"/>\n</g>\n<g id=\"t56154b-glyph-2-2\">\n<rect x=\"-4.6\" y=\"-3.1\" width=\"55.2\" height=\"37.2\" mask=\"url(#t56154b-mask-5)\" transform=\"matrix(0.119633, 0, 0, 0.119633, 0.598163, -3.708609)\"/>\n</g>\n</g>\n<image id=\"t56154b-source-90\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"t56154b-mask-0\">\n<use xlink:href=\"#t56154b-source-90\"/>\n</mask>\n<image id=\"t56154b-source-98\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADHSURBVDiNtZTbEsIwCEQD4///Mj40NAvdTaujeXAMh1uAYqOdyD8Gvxd4spekx/E9Bk7x8p/YqsAqrukugcJTIjHmz/AhC4mH7XHxv+XcfLgq3EP/dlNH7C9EitTA/gbR1f2dcTM8eQXOF2aJqhZVv7/CGYapcIbhsq9/yPqmurd7P4/7zwOE791/7/9XXGZW7OUM/z9/keAcOC/Xz/2r7z9lwv4M53Tql3O+X1fEanvddnaxHUW37YWO+zruGF8dBNeqkDX8BpNTL13R54DNAAAAAElFTkSuQmCC\"/>\n<mask id=\"t56154b-mask-1\">\n<use xlink:href=\"#t56154b-source-98\"/>\n</mask>\n<image id=\"t56154b-source-144\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t56154b-mask-2\">\n<use xlink:href=\"#t56154b-source-144\"/>\n</mask>\n<image id=\"t56154b-source-231\" x=\"0\" y=\"0\" width=\"23\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAtCAAAAABgoK+3AAAAAmJLR0QA/4ePzL8AAAA9SURBVDiNY2BABv//w1hMKMIIJgtWUYQ4iiADAwMLugA280kQZ2REM58Rm2ryzR8VHxUfDuKMGDmRuuYDAE+FB1xtReYdAAAAAElFTkSuQmCC\"/>\n<mask id=\"t56154b-mask-3\">\n<use xlink:href=\"#t56154b-source-231\"/>\n</mask>\n<image id=\"t56154b-source-239\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNtZTBDsQgCERniP//y+xhxTJCjclmObTi61BElBDz+WZ6bijA6NHX7MCWskELLsbsi6PphesdmhMvDDywtJTGeBCelQE7IYbUZlvuqAjwiVPhawiLQFvlHQDMt5CZyq5w+4zPmFkEgCkh1pFV9gRoKxTOVW3VZn9Y9u6Uf4Z9KqJsj8pPCXU/ndtr4t6Ejb4wPYVvSi9C7ansEIeYLHeCsrVKr6g2q0zm+pT75gOjJixSmvrekwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t56154b-mask-4\">\n<use xlink:href=\"#t56154b-source-239\"/>\n</mask>\n<image id=\"t56154b-source-285\" x=\"0\" y=\"0\" width=\"46\" height=\"31\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAfCAAAAAC99KDjAAAAAmJLR0QA/4ePzL8AAABhSURBVDiN7ZA7DsAwCEMx6v2vTJeSWHyktEMnWKI8PxErEBp7TrQMti5GEoLsbOkcuJ+ZFmv8XjBEtncVCa5U2C0rGO3Y32HSMWhO4nPcXosEPVN5Nd/0o+Z/lRl99NHz3M09FT5O855NAAAAAElFTkSuQmCC\"/>\n<mask id=\"t56154b-mask-5\">\n<use xlink:href=\"#t56154b-source-285\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.000795983 -0.000789761 L -0.000795983 141.733796 L 141.73379 141.733796 L 141.73379 -0.000789761 Z M -0.000795983 -0.000789761 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.000795983 -0.000789761 L -0.000795983 85.042313 L 85.042307 85.042313 L 85.042307 -0.000789761 Z M -0.000795983 -0.000789761 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 85.042307 85.042313 L 85.042307 141.733796 L 141.73379 141.733796 L 141.73379 85.042313 Z M 85.042307 85.042313 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 85.042307 -0.000789761 L 85.042307 85.042313 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.000795983 85.042313 L 85.042307 85.042313 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 85.042307 85.042313 L 141.73379 85.042313 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 85.042307 85.042313 L 85.042307 141.733796 \" transform=\"matrix(0.996691, 0, 0, -0.996691, 3.375793, 144.639838)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-0-0\" x=\"34.155613\" y=\"106.113733\"/>\n<use xlink:href=\"#t56154b-glyph-0-1\" x=\"38.747235\" y=\"106.113733\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-0-2\" x=\"46.395219\" y=\"106.113733\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-1-0\" x=\"53.692756\" y=\"102.317336\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-2-0\" x=\"105.579507\" y=\"34.985857\"/>\n<use xlink:href=\"#t56154b-glyph-2-1\" x=\"109.798947\" y=\"34.985857\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-2-2\" x=\"116.830468\" y=\"34.985857\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t56154b-glyph-1-0\" x=\"123.53191\" y=\"32.182165\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "36",
+   "B": "52",
+   "C": "76",
+   "D": "84",
+   "E": "100"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "100"
+  },
+  "celdiriciler": {
+   "A": "Yalnız boyalı karelerden büyüğünün alanını yazmış.",
+   "B": "Yalnız iki karenin alanını (36 + 16) toplamış; iki dikdörtgenin alanlarını katmamış.",
+   "C": "İki dikdörtgenden yalnız birini (24) hesaba katmış.",
+   "D": "Dikdörtgenlerin alanını küçük karenin alanı (16) gibi alıp 36 + 16 + 2 × 16 hesaplamış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "islem"
+  },
+  "istenen": "Arsanın alanı.",
+  "bilgi": [
+   {
+    "ad": "Tam kare açılımı",
+    "ifade": "(a + b)² = a² + 2ab + b². Örnek: (5 + 2)² = 25 + 20 + 4 = 49"
+   },
+   {
+    "ad": "Karenin kenarı",
+    "ifade": "alanı A olan karenin kenarı √A’dır. Örnek: alanı 49 olan karenin kenarı 7"
+   }
+  ],
+  "ipuclari": [
+   "Boyalı karelerin kenarlarını bul; arsanın kenarı bu kenarlarla nasıl ilişkili?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kenarları bul",
+    "aciklama": "Karelerin kenarı alanlarının karekökü.",
+    "islem": "√36 = 6 · √16 = 4"
+   },
+   {
+    "baslik": "Arsanın kenarı",
+    "aciklama": "Bir kenar, iki karenin kenarlarının toplamıdır.",
+    "islem": "6 + 4 = 10"
+   },
+   {
+    "baslik": "Alan",
+    "aciklama": "Karenin alanı kenarın karesi.",
+    "islem": "10² = 100"
+   }
+  ],
+  "puf": "Kare iki kare ve iki dikdörtgene bölünmüşse kenarı a + b, alanı a² + 2ab + b² = (a + b)² olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-03 (karelerle bölünmüş kare) · 36 ve 16 m² kareler, büyük karenin alanı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0004",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Cebir karolarının alanlarını toplayıp çarpanlarına ayırarak oluşan dikdörtgenin kenarları, çevresi ve alanı hakkındaki ifadeleri değerlendirir.",
+  "tipId": "cas-karo",
+  "tip": "Cebir karolarıyla dikdörtgen oluşturma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Şekilde, kenarları x ve 1 birim olan karolar ile adetleri gösterilmiştir (x > 1). Bu karoların hepsi kullanılarak, karolar boşluk kalmadan ve üst üste binmeden yan yana dizilip tek bir dikdörtgen oluşturuluyor.\nBu dikdörtgen için,\nI. Kenar uzunlukları x + 2 ve x + 3 birimdir.\nII. Çevresi 4x + 12 birimdir.\nIII. x = 4 iken alanı 42 birim karedir.\nifadelerinden hangileri doğrudur?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:345px;height:auto\" role=\"img\" viewBox=\"0 0 181.782 68.884\">\n<defs>\n<g>\n<g id=\"te49daf-glyph-0-0\">\n<path d=\"M 2.84375 -2.046875 L 4.921875 -3.96875 L 4.15625 -3.96875 L 2.625 -2.515625 L 1.6875 -3.96875 L 0.890625 -3.96875 L 2.21875 -2.046875 L 0 0 L 0.78125 0 L 2.4375 -1.671875 L 3.453125 0 L 4.234375 0 Z M 2.84375 -2.046875 \"/>\n</g>\n<g id=\"te49daf-glyph-1-0\">\n<path d=\"M 2.765625 -6.046875 L 2.578125 -6.046875 C 1.984375 -5.46875 1.125 -5.46875 0.8125 -5.46875 L 0.8125 -4.921875 C 1.0625 -4.921875 1.515625 -4.921875 2 -5.125 L 2 -0.5625 L 0.859375 -0.5625 L 0.859375 0 L 3.90625 0 L 3.90625 -0.5625 L 2.765625 -0.5625 Z M 2.765625 -6.046875 \"/>\n</g>\n<g id=\"te49daf-glyph-2-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#te49daf-mask-0)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.718612, -6.108206)\"/>\n</g>\n<g id=\"te49daf-glyph-2-1\">\n<rect x=\"-2.7\" y=\"-3.6\" width=\"32.4\" height=\"43.2\" mask=\"url(#te49daf-mask-1)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.359306, -4.191906)\"/>\n</g>\n<g id=\"te49daf-glyph-2-2\">\n<rect x=\"-3\" y=\"-5.5\" width=\"36\" height=\"66\" mask=\"url(#te49daf-mask-2)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.359306, -6.467512)\"/>\n</g>\n<g id=\"te49daf-glyph-2-3\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#te49daf-mask-3)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.359306, -4.191906)\"/>\n</g>\n<g id=\"te49daf-glyph-2-4\">\n<rect x=\"-2.4\" y=\"-4.4\" width=\"28.8\" height=\"52.8\" mask=\"url(#te49daf-mask-4)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.119769, -5.150056)\"/>\n</g>\n<g id=\"te49daf-glyph-2-5\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#te49daf-mask-5)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.359306, -5.868668)\"/>\n</g>\n<g id=\"te49daf-glyph-2-6\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#te49daf-mask-6)\" transform=\"matrix(0.119769, 0, 0, 0.119769, 0.359306, -6.108206)\"/>\n</g>\n</g>\n<image id=\"te49daf-source-52\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"te49daf-mask-0\">\n<use xlink:href=\"#te49daf-source-52\"/>\n</mask>\n<image id=\"te49daf-source-98\" x=\"0\" y=\"0\" width=\"27\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAkCAAAAABdkx7xAAAAAmJLR0QA/4ePzL8AAACGSURBVCiRxZNLDsAgCERnjPe/Ml1Ylc+wa1I2Gp6MCEgcs3cl4sbgjW6J5Lgp0fIP4d9SLi5dTcycHHjo0uRFTnXEoKAhAnICEnZv+IOlPK1hpR3swGGKyN5ye6ZHKbFZx8uxjgDDWvRtPS0w+XjW4bDCRPnY1BK+eJoVuLXq/7uny+dx9gCi4iEzdjjubAAAAABJRU5ErkJggg==\"/>\n<mask id=\"te49daf-mask-1\">\n<use xlink:href=\"#te49daf-source-98\"/>\n</mask>\n<image id=\"te49daf-source-220\" x=\"0\" y=\"0\" width=\"30\" height=\"55\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA3CAAAAAA++KWAAAAAAmJLR0QA/4ePzL8AAACGSURBVDiN7ZNBDoAwCAQX4/+/XA9NKLuFJkY9mNRTZVqoOBiKpwEAjgpj441v4nMsu12wiE2gB1vEEfZwNFWpByyl2dW8VOMAZeINltGxYbSFqH7BRHkE07OP/xj19u3k/8WTAR/U1uxuS2H6Mnn0b22qvqnniykpusIjqC7ZtMgLhnPZPFz+TCBZYSgbjwAAAABJRU5ErkJggg==\"/>\n<mask id=\"te49daf-mask-2\">\n<use xlink:href=\"#te49daf-source-220\"/>\n</mask>\n<image id=\"te49daf-source-228\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAACFSURBVDiNvZPBDsAgCEOp2f//MjuoCKwQT/Ni7JOiCYWcpXODCcjIqyDIZFC2dHA2ATzLB5BX6hfCeeoUBmN7DaJZ88EL0VRGW9ZRBNVz9MDW9lf4iJQ/ubEt/tNXFu18JfdtbXE1CcRY2fTZbT+qZP68ZQpHGQdyN7KUgVjGwxsimPgWX0eXITK3gRqSAAAAAElFTkSuQmCC\"/>\n<mask id=\"te49daf-mask-3\">\n<use xlink:href=\"#te49daf-source-228\"/>\n</mask>\n<image id=\"te49daf-source-236\" x=\"0\" y=\"0\" width=\"24\" height=\"44\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAsCAAAAABa9yefAAAAAmJLR0QA/4ePzL8AAABOSURBVDiN7ZI7CsAwDEOfcv87K0PJxwGHTBnaerHxkxEYCQAMgBhVSOotQE72V8yf9sG3/2APnIFZoihWm7WAA/MevvVkpNJxPcXVQVsBbBELTY777mMAAAAASUVORK5CYII=\"/>\n<mask id=\"te49daf-mask-4\">\n<use xlink:href=\"#te49daf-source-236\"/>\n</mask>\n<image id=\"te49daf-source-282\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACTSURBVDiN5ZQxFoAwCEMTXu9/ZRy0FWjB56CDshT9ArHGEoAiCUIytMejuBkdb8/+K27uajcGl1hN0p9gYibWs/VC2injbE6rgQHTV4KuOWOmFt/w2iiXcCdES0lRdL0tH8fJtvRPKsW5dTQvuCzhsIugLOf0Yziv0eQzBSejjknRyGEsovEj7MvEGVZdwZVg95Ib4YIfXnocVDYAAAAASUVORK5CYII=\"/>\n<mask id=\"te49daf-mask-5\">\n<use xlink:href=\"#te49daf-source-282\"/>\n</mask>\n<image id=\"te49daf-source-328\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADHSURBVDiNtZTbEsIwCEQD4///Mj40NAvdTaujeXAMh1uAYqOdyD8Gvxd4spekx/E9Bk7x8p/YqsAqrukugcJTIjHmz/AhC4mH7XHxv+XcfLgq3EP/dlNH7C9EitTA/gbR1f2dcTM8eQXOF2aJqhZVv7/CGYapcIbhsq9/yPqmurd7P4/7zwOE791/7/9XXGZW7OUM/z9/keAcOC/Xz/2r7z9lwv4M53Tql3O+X1fEanvddnaxHUW37YWO+zruGF8dBNeqkDX8BpNTL13R54DNAAAAAElFTkSuQmCC\"/>\n<mask id=\"te49daf-mask-6\">\n<use xlink:href=\"#te49daf-source-328\"/>\n</mask>\n</defs>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00189532 -0.000367437 L -0.00189532 34.01776 L 34.016232 34.01776 L 34.016232 -0.000367437 Z M -0.00189532 -0.000367437 \" transform=\"matrix(0.998319, 0, 0, -0.998319, 15.947205, 49.319946)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-0-0\" x=\"30.395873\" y=\"10.275696\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-0-0\" x=\"6.341381\" y=\"34.330188\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(90.861511%, 96.392822%, 92.901611%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 68.030447 -0.000367437 L 68.030447 11.339008 L 102.048574 11.339008 L 102.048574 -0.000367437 Z M 68.030447 -0.000367437 \" transform=\"matrix(0.998319, 0, 0, -0.998319, 15.947205, 49.319946)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-0-0\" x=\"98.312502\" y=\"32.91557\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-1-0\" x=\"74.48962\" y=\"46.588545\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(90.861511%, 96.392822%, 92.901611%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 141.732477 -0.000367437 L 141.732477 11.339008 L 153.071852 11.339008 L 153.071852 -0.000367437 Z M 141.732477 -0.000367437 \" transform=\"matrix(0.998319, 0, 0, -0.998319, 15.947205, 49.319946)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-1-0\" x=\"160.800273\" y=\"33.854989\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-1-0\" x=\"148.066717\" y=\"46.588545\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-0\" x=\"20.804026\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-1\" x=\"28.47345\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-2\" x=\"32.883966\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-3\" x=\"37.635192\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-4\" x=\"41.722899\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-5\" x=\"88.721653\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-1\" x=\"96.382126\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-2\" x=\"100.801593\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-3\" x=\"105.552819\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-4\" x=\"109.640526\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-6\" x=\"150.978813\" y=\"62.469801\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#te49daf-glyph-2-1\" x=\"158.639286\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-2\" x=\"163.058753\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-3\" x=\"167.809979\" y=\"62.469801\"/>\n<use xlink:href=\"#te49daf-glyph-2-4\" x=\"171.897686\" y=\"62.469801\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız III",
+   "C": "I ve II",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III’ü yanlış sanmış: x = 4 iken alanı 16 + 20 + 6 = 42 hesaplayıp doğruladığını görmeliydi.",
+   "B": "I’i yanlış sanmış: x² + 5x + 6 = (x + 2)(x + 3) olduğundan kenarlar doğrudur.",
+   "C": "Çevreyi 4x + 12 sanmış: çevre 2[(x + 2) + (x + 3)] = 4x + 10’dur; III’ü de yanlış değerlendirmiş.",
+   "E": "I’i yanlış değerlendirip II’yi doğru sanmış: çevre 4x + 10 olduğundan II yanlıştır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "islem",
+   "E": "dikkat"
+  },
+  "istenen": "Doğru olan öncüller.",
+  "bilgi": [
+   {
+    "ad": "x² + px + q çarpanlara ayırma",
+    "ifade": "çarpımı q, toplamı p olan iki sayı bulunursa x² + px + q = (x + m)(x + n) olur. Örnek: x² + 9x + 20 = (x + 4)(x + 5)"
+   },
+   {
+    "ad": "Dikdörtgenin alanı ve çevresi",
+    "ifade": "kenarları a ve b olan dikdörtgenin alanı ab, çevresi 2(a + b)’dir. Örnek: kenarları 4 ve 7 olan dikdörtgenin alanı 28, çevresi 22"
+   }
+  ],
+  "ipuclari": [
+   "Karoların alanlarını toplayıp ifadeyi çarpanlarına ayır; her öncülü bu kenarlarla ayrı ayrı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Toplam alan",
+    "aciklama": "Karoların alanları toplanır.",
+    "islem": "x² + 5x + 6"
+   },
+   {
+    "baslik": "Çarpanlar",
+    "aciklama": "Çarpımı 6, toplamı 5 olan sayılar 2 ve 3’tür; I doğrudur.",
+    "islem": "(x + 2)(x + 3)"
+   },
+   {
+    "baslik": "II’yi dene",
+    "aciklama": "Çevre iki komşu kenarın toplamının 2 katıdır; 4x + 10 olur, II yanlıştır.",
+    "islem": "2(2x + 5) = 4x + 10"
+   },
+   {
+    "baslik": "III’ü dene",
+    "aciklama": "x = 4 için kenarlar 6 ve 7 birimdir; III doğrudur.",
+    "islem": "6 × 7 = 42"
+   }
+  ],
+  "puf": "Öncüllü sorularda her ifadeyi bulduğun çarpanlı biçimden ayrı ayrı doğrula; çevre ve alanı karıştırma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-04 (cebir karoları) · x², 5 · x, 6 · 1 karoları, çevre ve alan öncülleri",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0005",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Dikdörtgen bahçenin çevresindeki yolun alanını dış ve iç dikdörtgenlerin farkı olarak yazıp ikinci dereceden ifadeyi çarpanlarına ayırarak yol genişliğini bulur.",
+  "tipId": "cas-yol",
+  "tip": "Dikdörtgen bahçede yol genişliği",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 5,
+  "metin": "Şekilde, boyutları verilen dikdörtgen biçimli bir bahçenin dışında, bahçeyi dört yandan çevreleyen ve her yerde aynı genişlikte (x metre) olan bir yürüyüş yolu yapılmıştır. Gölgeli bölge yolu göstermektedir. Yolun alanı 208 m²’dir.\nBuna göre yolun genişliği x kaç metredir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:302px;height:auto\" role=\"img\" viewBox=\"0 0 159.166 87.845\">\n<defs>\n<g>\n<g id=\"tbf309b-glyph-0-0\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tbf309b-mask-0)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.358035, -6.086599)\"/>\n</g>\n<g id=\"tbf309b-glyph-0-1\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tbf309b-mask-1)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.358035, -6.086599)\"/>\n</g>\n<g id=\"tbf309b-glyph-0-2\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#tbf309b-mask-2)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.716071, -4.057733)\"/>\n</g>\n<g id=\"tbf309b-glyph-1-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#tbf309b-mask-3)\" transform=\"matrix(0, -0.119345, 0.119345, 0, -6.086599, -0.716071)\"/>\n</g>\n<g id=\"tbf309b-glyph-1-1\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tbf309b-mask-4)\" transform=\"matrix(0, -0.119345, 0.119345, 0, -6.086599, -0.358035)\"/>\n</g>\n<g id=\"tbf309b-glyph-1-2\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#tbf309b-mask-5)\" transform=\"matrix(0, -0.119345, 0.119345, 0, -4.057733, -0.716071)\"/>\n</g>\n<g id=\"tbf309b-glyph-2-0\">\n<path d=\"M 2.828125 -2.046875 L 4.90625 -3.96875 L 4.140625 -3.96875 L 2.609375 -2.5 L 1.671875 -3.96875 L 0.890625 -3.96875 L 2.21875 -2.046875 L 0 0 L 0.78125 0 L 2.4375 -1.671875 L 3.4375 0 L 4.21875 0 Z M 2.828125 -2.046875 \"/>\n</g>\n</g>\n<image id=\"tbf309b-source-90\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"tbf309b-mask-0\">\n<use xlink:href=\"#tbf309b-source-90\"/>\n</mask>\n<image id=\"tbf309b-source-98\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAACZSURBVDiN7ZXNDoAwCIMp8f1fGQ/up2NseDDxoCZG18+0kGwIocuuB0iCh05GiLuOGDeABa4EA8a0YMXXgnLPbXVFg075XSNMKw1r7zG6hKM/nI7G1/Yidts/4T6+KbqLF7GH8n/+UY6yv6cNWOT364sLrOJt//EcGfH57FF492cD40/S+bebn0dc1uifzud8/qf/j6gPETkBSo4iXB9pR80AAAAASUVORK5CYII=\"/>\n<mask id=\"tbf309b-mask-1\">\n<use xlink:href=\"#tbf309b-source-98\"/>\n</mask>\n<image id=\"tbf309b-source-144\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"tbf309b-mask-2\">\n<use xlink:href=\"#tbf309b-source-144\"/>\n</mask>\n<image id=\"tbf309b-source-231\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tbf309b-mask-3\">\n<use xlink:href=\"#tbf309b-source-231\"/>\n</mask>\n<image id=\"tbf309b-source-239\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAAC6SURBVDiNzZXbDsQgCEQZ0///ZfZhq8IA6l6yWZKmkRNGFEohxvT5gnGBIbmRUQNQ4E5Q4RvBYhLD/cS0p+eKBxERDI1WbN5lWhZu1m0RLqI9nsOHpwXg7Uc8HkI7j6lPw9BnAXO/tQBcfUP9wP3h64/oInErqhn1ySnDF+LX/e8a2C1Ozh+wcSHF0/ml/i0N6e4zgz/p77c58usdF/y5/ln9qEyuVVfz72R+bufvwfe1mf/b/welPewBFAE2TzVOgCAAAAAASUVORK5CYII=\"/>\n<mask id=\"tbf309b-mask-4\">\n<use xlink:href=\"#tbf309b-source-239\"/>\n</mask>\n<image id=\"tbf309b-source-285\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"tbf309b-mask-5\">\n<use xlink:href=\"#tbf309b-source-285\"/>\n</mask>\n</defs>\n<path fill-rule=\"evenodd\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" d=\"M 3.371094 84.167969 L 3.371094 3.519531 L 128.007812 3.519531 L 128.007812 84.167969 Z M 10.699219 76.839844 L 10.699219 10.851562 L 120.675781 10.851562 L 120.675781 76.839844 Z M 10.699219 76.839844 \"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -7.368242 -7.368347 L -7.368242 73.702673 L 117.921549 73.702673 L 117.921549 -7.368347 Z M -7.368242 -7.368347 \" transform=\"matrix(0.994787, 0, 0, -0.994787, 10.700929, 76.838029)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00171935 -0.00182446 L -0.00171935 66.332223 L 110.5511 66.332223 L 110.5511 -0.00182446 Z M -0.00171935 -0.00182446 \" transform=\"matrix(0.994787, 0, 0, -0.994787, 10.700929, 76.838029)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tbf309b-glyph-0-0\" x=\"55.938891\" y=\"22.209273\"/>\n<use xlink:href=\"#tbf309b-glyph-0-1\" x=\"60.521742\" y=\"22.209273\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tbf309b-glyph-0-2\" x=\"68.155118\" y=\"22.209273\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tbf309b-glyph-1-0\" x=\"22.057423\" y=\"53.595814\"/>\n<use xlink:href=\"#tbf309b-glyph-1-1\" x=\"22.057423\" y=\"49.012962\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tbf309b-glyph-1-2\" x=\"22.057423\" y=\"41.379586\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 133.514547 33.167163 L 113.825983 33.167163 \" transform=\"matrix(0.994787, 0, 0, -0.994787, 10.700929, 76.838029)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 3.685519 -0.00145264 L 0.642312 1.145149 L 1.643625 -0.00145264 L 0.642312 -1.148054 Z M 3.685519 -0.00145264 \" transform=\"matrix(-0.994787, 0, 0, 0.994787, 125.470996, 43.845195)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 133.514547 33.167163 L 120.061611 33.167163 \" transform=\"matrix(0.994787, 0, 0, -0.994787, 10.700929, 76.838029)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 3.686211 -0.00145264 L 0.643004 1.145149 L 1.644317 -0.00145264 L 0.643004 -1.148054 Z M 3.686211 -0.00145264 \" transform=\"matrix(-0.994787, 0, 0, 0.994787, 131.674809, 43.845195)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tbf309b-glyph-2-0\" x=\"147.017655\" y=\"45.827518\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "2",
+   "B": "4",
+   "C": "14",
+   "D": "26",
+   "E": "52"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "2"
+  },
+  "celdiriciler": {
+   "B": "Yolun her kenarda iki kez eklendiğini görüp 2x = 4’ü x sanmış.",
+   "C": "x² + 24x − 52 = 0’ı (x + 12)² = 196 yazıp x + 12 = 14’te durmuş; 12’yi çıkarmamış.",
+   "D": "(x + 26)(x − 2) = 0 çarpanlarında kökü seçerken 26’yı almış (negatif kök −26’nın mutlak değeri).",
+   "E": "Denklemdeki sabit terimi (52) çözüm sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "islem",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yolun genişliği x.",
+  "bilgi": [
+   {
+    "ad": "x² + px + q çarpanlara ayırma",
+    "ifade": "çarpımı q, toplamı p olan iki sayı bulunursa x² + px + q = (x + m)(x + n) olur. Örnek: x² + 9x + 20 = (x + 4)(x + 5)"
+   },
+   {
+    "ad": "Dikdörtgenin alanı ve çevresi",
+    "ifade": "kenarları a ve b olan dikdörtgenin alanı ab, çevresi 2(a + b)’dir. Örnek: kenarları 4 ve 7 olan dikdörtgenin alanı 28, çevresi 22"
+   }
+  ],
+  "ipuclari": [
+   "Dış dikdörtgenin kenarları bahçenin kenarlarından kaç birim uzundur? Yolun alanını dış ile iç alanların farkı olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dış kenarlar",
+    "aciklama": "Yol her yanda x genişliğinde olduğundan her kenar 2x uzar.",
+    "islem": "(30 + 2x) ve (18 + 2x)"
+   },
+   {
+    "baslik": "Yol alanı",
+    "aciklama": "Dış alandan iç alan çıkarılır.",
+    "islem": "(30 + 2x)(18 + 2x) − 30 · 18 = 4x² + 96x"
+   },
+   {
+    "baslik": "Denklem",
+    "aciklama": "Yolun alanı 208’e eşitlenir ve sadeleştirilir.",
+    "islem": "4x² + 96x = 208 → x² + 24x − 52 = 0"
+   },
+   {
+    "baslik": "Çarpanla",
+    "aciklama": "Çarpımı −52, toplamı 24 olan sayılar 26 ve −2’dir.",
+    "islem": "(x + 26)(x − 2) = 0"
+   },
+   {
+    "baslik": "Uzunluk",
+    "aciklama": "Genişlik pozitif olduğundan x = 2.",
+    "islem": "x = 2"
+   }
+  ],
+  "puf": "Yol genişliği her iki yanda eklendiğinden dış kenar 2x artar; ikinci dereceden denklemde yalnız pozitif kök uzunluk olur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-05 (dikdörtgen bahçe ve yol) · 30 × 18 m bahçe, yol alanı 208 m²",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0006",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · İki Kare Farkı",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Yan yana iki karenin kenarları toplamı ve alanları farkı verildiğinde iki kare farkı özdeşliğiyle kenarları bulur.",
+  "tipId": "cas-yan",
+  "tip": "Yan yana iki karede iki kare farkı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekilde, alt kenarları aynı doğru üzerinde olacak biçimde yan yana konulmuş iki kare ve alt kenarların toplam uzunluğu gösterilmiştir. Büyük karenin alanı, küçük karenin alanından 56 cm² fazladır.\nBuna göre küçük karenin çevresi kaç cm’dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:239px;height:auto\" role=\"img\" viewBox=\"0 0 125.83 106.718\">\n<defs>\n<g>\n<g id=\"t391f46-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#t391f46-mask-0)\" transform=\"matrix(0.119654, 0, 0, 0.119654, 0.717925, -6.102367)\"/>\n</g>\n<g id=\"t391f46-glyph-0-1\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#t391f46-mask-1)\" transform=\"matrix(0.119654, 0, 0, 0.119654, 0.239308, -5.863058)\"/>\n</g>\n<g id=\"t391f46-glyph-0-2\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#t391f46-mask-2)\" transform=\"matrix(0.119654, 0, 0, 0.119654, 0.358963, -4.187899)\"/>\n</g>\n<g id=\"t391f46-glyph-0-3\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#t391f46-mask-3)\" transform=\"matrix(0.119654, 0, 0, 0.119654, 0.717925, -4.068244)\"/>\n</g>\n</g>\n<clipPath id=\"t391f46-clip-0\">\n<path clip-rule=\"nonzero\" d=\"M 0.0820312 81 L 14 81 L 14 96 L 0.0820312 96 Z M 0.0820312 81 \"/>\n</clipPath>\n<clipPath id=\"t391f46-clip-1\">\n<path clip-rule=\"nonzero\" d=\"M 112 81 L 125.578125 81 L 125.578125 96 L 112 96 Z M 112 81 \"/>\n</clipPath>\n<image id=\"t391f46-source-90\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t391f46-mask-0\">\n<use xlink:href=\"#t391f46-source-90\"/>\n</mask>\n<image id=\"t391f46-source-98\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"t391f46-mask-1\">\n<use xlink:href=\"#t391f46-source-98\"/>\n</mask>\n<image id=\"t391f46-source-182\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAAB0SURBVDiN1ZM7DsAgDEPt3v/O6VCI8meoOpSFwMNRAIcwQ3ZANzmkgDV6OHumypItKP7oXjPGBpM1AyAWBra2WoarLFOVvXBWzmmHrC/S/gt+9bbDZ4sqszkFrYfkYE0Hk/+943O1LWXfgrRF5N71F4jNdgN24B8pp2f/NAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t391f46-mask-2\">\n<use xlink:href=\"#t391f46-source-182\"/>\n</mask>\n<image id=\"t391f46-source-190\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t391f46-mask-3\">\n<use xlink:href=\"#t391f46-source-190\"/>\n</mask>\n</defs>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.00183143 0.00142808 L 0.00183143 76.535165 L 76.535568 76.535165 L 76.535568 0.00142808 Z M 0.00183143 0.00142808 \" transform=\"matrix(0.997364, 0, 0, -0.997364, 3.459111, 79.712362)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(90.861511%, 96.392822%, 92.901611%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 76.535568 0.00142808 L 76.535568 42.519736 L 119.057793 42.519736 L 119.057793 0.00142808 Z M 76.535568 0.00142808 \" transform=\"matrix(0.997364, 0, 0, -0.997364, 3.459111, 79.712362)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 3.064591 -8.505367 L 115.991117 -8.505367 \" transform=\"matrix(0.997364, 0, 0, -0.997364, 3.459111, 79.712362)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" d=\"M 4.023438 88.195312 L 7.585938 89.535156 L 6.414062 88.195312 L 7.585938 86.851562 Z M 4.023438 88.195312 \"/>\n<g clip-path=\"url(#t391f46-clip-0)\">\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 4.216272 0.0012467 L 0.644358 1.344631 L 1.81933 0.0012467 L 0.644358 -1.346054 Z M 4.216272 0.0012467 \" transform=\"matrix(-0.997364, 0, 0, 0.997364, 8.228598, 88.194069)\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" d=\"M 121.636719 88.195312 L 118.074219 86.851562 L 119.246094 88.195312 L 118.074219 89.535156 Z M 121.636719 88.195312 \"/>\n<g clip-path=\"url(#t391f46-clip-1)\">\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 4.21549 -0.0012467 L 0.643576 1.346054 L 1.818547 -0.0012467 L 0.643576 -1.344631 Z M 4.21549 -0.0012467 \" transform=\"matrix(0.997364, 0, 0, -0.997364, 117.432339, 88.194069)\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t391f46-glyph-0-0\" x=\"51.012452\" y=\"100.144371\"/>\n<use xlink:href=\"#t391f46-glyph-0-1\" x=\"55.607175\" y=\"100.144371\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t391f46-glyph-0-2\" x=\"63.269268\" y=\"100.144371\"/>\n<use xlink:href=\"#t391f46-glyph-0-3\" x=\"67.353068\" y=\"100.144371\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "16",
+   "B": "20",
+   "C": "28",
+   "D": "36",
+   "E": "56"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "20"
+  },
+  "celdiriciler": {
+   "A": "Kenarlar farkını (4) bulup çevre sanarak 4 × 4 = 16 yazmış.",
+   "C": "Toplam uzunluğun (14) 2 katını çevre almış.",
+   "D": "Büyük karenin çevresini (4 × 9) yazmış.",
+   "E": "Alanlar farkını çevre olarak yazmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Küçük karenin çevresi.",
+  "bilgi": [
+   {
+    "ad": "İki kare farkı",
+    "ifade": "a² − b² = (a − b)(a + b). Örnek: 9² − 4² = (9 − 4)(9 + 4) = 65"
+   }
+  ],
+  "ipuclari": [
+   "Karelerin alanları farkını, kenarların toplamı ve farkı cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Özdeşlik",
+    "aciklama": "Kenarlar a (büyük) ve b (küçük) olsun; alanlar farkı iki kare farkıdır.",
+    "islem": "a² − b² = (a − b)(a + b) = 56"
+   },
+   {
+    "baslik": "Kenar farkı",
+    "aciklama": "Kenarlar toplamı 14’tür.",
+    "islem": "(a − b) · 14 = 56 → a − b = 4"
+   },
+   {
+    "baslik": "Kenarlar",
+    "aciklama": "Toplam ve farktan kenarlar bulunur.",
+    "islem": "a = 9, b = 5"
+   },
+   {
+    "baslik": "Çevre",
+    "aciklama": "Küçük karenin çevresi.",
+    "islem": "4 × 5 = 20"
+   }
+  ],
+  "puf": "Alanlar farkı ve kenarlar toplamı verildiğinde iki kare farkından kenarlar farkını (a − b) bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-06 (yan yana iki kare) · kenarlar toplamı 14 cm, alan farkı 56 cm²",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-carpansek-0007",
+  "ders": "TYT Matematik",
+  "konu": "Çarpanlara Ayırma · Alan Modeli",
+  "k": "mat|Çarpanlara Ayırma",
+  "kazanim": "Alanı cebirsel verilen dikdörtgenin diğer kenarını çarpanlara ayırma ile bulup çevre bilgisinden x’i çözerek alanı hesaplar.",
+  "tipId": "cas-cebir",
+  "tip": "Cebirsel kenarlı dikdörtgende alan",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 5,
+  "metin": "Şekilde bir kenarı ve alanı verilen dikdörtgen biçimli kartonun çevresi 54 cm’dir.\nBuna göre kartonun alanı kaç cm²’dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:294px;height:auto\" role=\"img\" viewBox=\"0 0 154.777 52.129\">\n<defs>\n<g>\n<g id=\"t792792-glyph-0-0\">\n<path d=\"M 4.734375 -6.109375 L 3.90625 -6.109375 L 0.25 0 L 0.953125 0 L 2 -1.75 L 4.625 -1.75 L 4.921875 0 L 5.796875 0 Z M 4.09375 -5.46875 L 4.515625 -2.28125 L 2.3125 -2.28125 Z M 4.09375 -5.46875 \"/>\n</g>\n<g id=\"t792792-glyph-0-1\">\n<path d=\"M 2.796875 -2.015625 L 4.84375 -3.90625 L 4.09375 -3.90625 L 2.578125 -2.46875 L 1.65625 -3.90625 L 0.875 -3.90625 L 2.1875 -2.015625 L 0 0 L 0.765625 0 L 2.40625 -1.640625 L 3.390625 0 L 4.171875 0 Z M 2.796875 -2.015625 \"/>\n</g>\n<g id=\"t792792-glyph-1-0\">\n<path d=\"M 6.234375 -2.9375 C 6.359375 -2.9375 6.53125 -2.9375 6.53125 -3.125 C 6.53125 -3.328125 6.34375 -3.328125 6.203125 -3.328125 L 0.828125 -3.328125 C 0.703125 -3.328125 0.5 -3.328125 0.5 -3.125 C 0.5 -2.9375 0.671875 -2.9375 0.796875 -2.9375 Z M 6.203125 -1.09375 C 6.34375 -1.09375 6.53125 -1.09375 6.53125 -1.28125 C 6.53125 -1.46875 6.359375 -1.46875 6.234375 -1.46875 L 0.796875 -1.46875 C 0.671875 -1.46875 0.5 -1.46875 0.5 -1.28125 C 0.5 -1.09375 0.703125 -1.09375 0.828125 -1.09375 Z M 6.203125 -1.09375 \"/>\n</g>\n<g id=\"t792792-glyph-1-1\">\n<path d=\"M 1.390625 -5.171875 L 3.765625 -5.171875 L 3.765625 -5.765625 L 0.71875 -5.765625 L 0.71875 -2.484375 L 1.34375 -2.484375 C 1.625 -3.140625 2.171875 -3.1875 2.328125 -3.1875 C 2.703125 -3.1875 3.21875 -2.90625 3.21875 -1.796875 C 3.21875 -0.71875 2.59375 -0.375 2.0625 -0.375 C 1.609375 -0.375 1 -0.59375 0.65625 -1.1875 L 0.34375 -0.671875 C 0.484375 -0.46875 1.078125 0.1875 2.078125 0.1875 C 3.171875 0.1875 4.078125 -0.6875 4.078125 -1.78125 C 4.078125 -2.875 3.28125 -3.75 2.359375 -3.75 C 2.234375 -3.75 1.8125 -3.75 1.390625 -3.40625 Z M 1.390625 -5.171875 \"/>\n</g>\n<g id=\"t792792-glyph-1-2\">\n<path d=\"M 2.71875 -5.953125 L 2.53125 -5.953125 C 1.953125 -5.390625 1.09375 -5.390625 0.796875 -5.390625 L 0.796875 -4.84375 C 1.046875 -4.84375 1.484375 -4.84375 1.96875 -5.046875 L 1.96875 -0.546875 L 0.84375 -0.546875 L 0.84375 0 L 3.84375 0 L 3.84375 -0.546875 L 2.71875 -0.546875 Z M 2.71875 -5.953125 \"/>\n</g>\n<g id=\"t792792-glyph-1-3\">\n<path d=\"M 3.390625 -1.46875 L 4.265625 -1.46875 L 4.265625 -2.046875 L 3.390625 -2.046875 L 3.390625 -5.765625 L 2.53125 -5.765625 L 0.25 -2.046875 L 0.25 -1.46875 L 2.640625 -1.46875 L 2.640625 0 L 3.390625 0 Z M 0.984375 -2.046875 L 1.53125 -2.921875 C 1.78125 -3.375 2.703125 -4.90625 2.703125 -5.359375 L 2.703125 -2.046875 Z M 0.984375 -2.046875 \"/>\n</g>\n<g id=\"t792792-glyph-2-0\">\n<path d=\"M 1.65625 -0.453125 C 1.59375 -0.453125 1.515625 -0.453125 1.453125 -0.453125 L 0.78125 -0.453125 L 1.6875 -1.25 C 1.796875 -1.34375 2.078125 -1.5625 2.203125 -1.65625 C 2.453125 -1.890625 2.796875 -2.203125 2.796875 -2.703125 C 2.796875 -3.375 2.3125 -3.984375 1.46875 -3.984375 C 0.84375 -3.984375 0.453125 -3.640625 0.265625 -3.046875 L 0.53125 -2.703125 C 0.671875 -3.1875 0.875 -3.578125 1.390625 -3.578125 C 1.875 -3.578125 2.25 -3.21875 2.25 -2.703125 C 2.25 -2.203125 1.96875 -1.9375 1.609375 -1.59375 C 1.5 -1.484375 1.1875 -1.21875 1.0625 -1.09375 C 0.890625 -0.953125 0.484375 -0.546875 0.3125 -0.40625 L 0.3125 0 L 2.796875 0 L 2.796875 -0.453125 Z M 1.65625 -0.453125 \"/>\n</g>\n<g id=\"t792792-glyph-3-0\">\n<path d=\"M 5.953125 -2.015625 C 6.109375 -2.015625 6.28125 -2.015625 6.28125 -2.21875 C 6.28125 -2.390625 6.09375 -2.390625 5.953125 -2.390625 L 1.078125 -2.390625 C 0.9375 -2.390625 0.765625 -2.390625 0.765625 -2.21875 C 0.765625 -2.015625 0.921875 -2.015625 1.078125 -2.015625 Z M 5.953125 -2.015625 \"/>\n</g>\n<g id=\"t792792-glyph-4-0\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#t792792-mask-0)\" transform=\"matrix(0.117999, 0, 0, 0.117999, 0.353997, -4.129959)\"/>\n</g>\n<g id=\"t792792-glyph-4-1\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#t792792-mask-1)\" transform=\"matrix(0.117999, 0, 0, 0.117999, 0.707993, -4.011961)\"/>\n</g>\n<g id=\"t792792-glyph-5-0\">\n<path d=\"M -2.015625 -2.796875 L -3.90625 -4.84375 L -3.90625 -4.09375 L -2.46875 -2.578125 L -3.90625 -1.65625 L -3.90625 -0.875 L -2.015625 -2.1875 L 0 0 L 0 -0.765625 L -1.640625 -2.40625 L 0 -3.390625 L 0 -4.171875 Z M -2.015625 -2.796875 \"/>\n</g>\n<g id=\"t792792-glyph-6-0\">\n<path d=\"M -2.015625 -5.953125 C -2.015625 -6.109375 -2.015625 -6.28125 -2.21875 -6.28125 C -2.390625 -6.28125 -2.390625 -6.09375 -2.390625 -5.953125 L -2.390625 -1.078125 C -2.390625 -0.9375 -2.390625 -0.765625 -2.21875 -0.765625 C -2.015625 -0.765625 -2.015625 -0.921875 -2.015625 -1.078125 Z M -2.015625 -5.953125 \"/>\n</g>\n<g id=\"t792792-glyph-7-0\">\n<path d=\"M -5.109375 -2.109375 C -5.109375 -2.21875 -5.109375 -2.3125 -5.109375 -2.421875 L -5.109375 -3.5 C -3.671875 -2.125 -1.890625 -1.359375 0.09375 -1.359375 L 0.09375 -2.15625 C -2.171875 -2.15625 -4.03125 -3.125 -5.15625 -4.140625 L -5.765625 -4.140625 L -5.765625 -0.375 L -5.109375 -0.375 Z M -5.109375 -2.109375 \"/>\n</g>\n<g id=\"t792792-glyph-8-0\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#t792792-mask-2)\" transform=\"matrix(0, -0.117999, 0.117999, 0, -4.129959, -0.353997)\"/>\n</g>\n<g id=\"t792792-glyph-8-1\">\n<rect x=\"-4.8\" y=\"-3.4\" width=\"57.6\" height=\"40.8\" mask=\"url(#t792792-mask-3)\" transform=\"matrix(0, -0.117999, 0.117999, 0, -4.011961, -0.707993)\"/>\n</g>\n</g>\n<image id=\"t792792-source-90\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAAB0SURBVDiN1ZM7DsAgDEPt3v/O6VCI8meoOpSFwMNRAIcwQ3ZANzmkgDV6OHumypItKP7oXjPGBpM1AyAWBra2WoarLFOVvXBWzmmHrC/S/gt+9bbDZ4sqszkFrYfkYE0Hk/+943O1LWXfgrRF5N71F4jNdgN24B8pp2f/NAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t792792-mask-0\">\n<use xlink:href=\"#t792792-source-90\"/>\n</mask>\n<image id=\"t792792-source-98\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t792792-mask-1\">\n<use xlink:href=\"#t792792-source-98\"/>\n</mask>\n<image id=\"t792792-source-185\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAAB0SURBVDiN1ZM7DsAgDEPt3v/O6VCI8meoOpSFwMNRAIcwQ3ZANzmkgDV6OHumypItKP7oXjPGBpM1AyAWBra2WoarLFOVvXBWzmmHrC/S/gt+9bbDZ4sqszkFrYfkYE0Hk/+943O1LWXfgrRF5N71F4jNdgN24B8pp2f/NAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t792792-mask-2\">\n<use xlink:href=\"#t792792-source-185\"/>\n</mask>\n<image id=\"t792792-source-193\" x=\"0\" y=\"0\" width=\"48\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAAAAAA8dwXLAAAAAmJLR0QA/4ePzL8AAABoSURBVDiN7ZFBDsAgCARd0v9/mR5sBXRrogfTA14Mww4aRfFL64YJhLZKfQoxbVD6QbEaofD8UxN48fg3hKOIsdrqoQn2NMMMB03wT0mGNChlcb1C+CtM4PYJqwJYj8JjV0ohhRT+KdwEIBk96ANczAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t792792-mask-3\">\n<use xlink:href=\"#t792792-source-193\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.00173301 -0.000437631 L 0.00173301 45.354295 L 124.727249 45.354295 L 124.727249 -0.000437631 Z M 0.00173301 -0.000437631 \" transform=\"matrix(0.983566, 0, 0, -0.983566, 27.38892, 47.940976)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-0-0\" x=\"46.057004\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-1-0\" x=\"54.630749\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-0-1\" x=\"64.198879\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-2-0\" x=\"69.184576\" y=\"25.283549\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-3-0\" x=\"74.812541\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-1-1\" x=\"83.876102\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-0-1\" x=\"88.408374\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-3-0\" x=\"95.408413\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-1-2\" x=\"104.471974\" y=\"29.029952\"/>\n<use xlink:href=\"#t792792-glyph-1-3\" x=\"109.004082\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-4-0\" x=\"116.55705\" y=\"29.029952\"/>\n<use xlink:href=\"#t792792-glyph-4-1\" x=\"120.584351\" y=\"29.029952\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-2-0\" x=\"127.781506\" y=\"25.283549\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-5-0\" x=\"13.137049\" y=\"43.056587\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-6-0\" x=\"13.137049\" y=\"36.055564\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-7-0\" x=\"13.137049\" y=\"26.992003\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t792792-glyph-8-0\" x=\"13.137049\" y=\"19.439199\"/>\n<use xlink:href=\"#t792792-glyph-8-1\" x=\"13.137049\" y=\"15.411899\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "81",
+   "B": "144",
+   "C": "162",
+   "D": "288",
+   "E": "324"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "162"
+  },
+  "celdiriciler": {
+   "A": "Kenarın (x − 7 = 9) karesini alan sanmış.",
+   "B": "x ile bilinen kenarı (16 × 9) çarpmış.",
+   "D": "x ile diğer kenarı (16 × 18) çarpmış.",
+   "E": "Uzun kenarın karesini (18²) alan sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Kartonun alanı.",
+  "bilgi": [
+   {
+    "ad": "x² + px + q çarpanlara ayırma",
+    "ifade": "çarpımı q, toplamı p olan iki sayı bulunursa x² + px + q = (x + m)(x + n) olur. Örnek: x² + 9x + 20 = (x + 4)(x + 5)"
+   },
+   {
+    "ad": "Dikdörtgenin alanı ve çevresi",
+    "ifade": "kenarları a ve b olan dikdörtgenin alanı ab, çevresi 2(a + b)’dir. Örnek: kenarları 4 ve 7 olan dikdörtgenin alanı 28, çevresi 22"
+   }
+  ],
+  "ipuclari": [
+   "Alan ifadesini çarpanlarına ayırıp bilinen kenarla karşılaştır; diğer kenarı x cinsinden yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çarpanlar",
+    "aciklama": "Çarpımı −14, toplamı −5 olan sayılar −7 ve 2’dir.",
+    "islem": "x² − 5x − 14 = (x − 7)(x + 2)"
+   },
+   {
+    "baslik": "Kenarlar",
+    "aciklama": "Kenarlardan biri x − 7 olduğundan diğeri x + 2’dir.",
+    "islem": "x − 7 ve x + 2"
+   },
+   {
+    "baslik": "Çevre",
+    "aciklama": "Çevreden x çözülür.",
+    "islem": "2(2x − 5) = 54 → x = 16"
+   },
+   {
+    "baslik": "Kenarlar ve alan",
+    "aciklama": "x = 16 yazılır.",
+    "islem": "9 × 18 = 162 cm²"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Alan ifadesine de yazılabilir.",
+    "islem": "16² − 5 · 16 − 14 = 162"
+   }
+  ],
+  "puf": "Alan ifadesini çarpanlarına ayırıp verilen kenarı eşleştir; kalan çarpan diğer kenardır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-CAS-07 (cebirsel kenarlı dikdörtgen) · kısa kenar x − 7, alan x² − 5x − 14, çevre 54",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]
