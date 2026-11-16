@@ -845,7 +845,7 @@ function taskRow(t, date, opts={}){
   const sira = opts.next===t.id && !run;
   return `<div class="task ${t.done?"done":""} ${run?"running":""} ${sira?"sira":""}">
     <button class="tick" data-act="tick" data-date="${date}" data-id="${t.id}" aria-pressed="${!!t.done}" aria-label="${t.done?"Tamamlandı":"Tamamla"}">${icon("check","sm")}</button>
-    <div style="min-width:0">${sira?`<span class="siratag">Sıradaki</span>`:""}<div class="tt" style="font-weight:600">${esc(taskText(t))}</div>${gorevHedef(s, date, taskText(t))}${t.dk?`<div class="thd"><span>${icon("timer","xs")}${fmtMin(t.dk)} çalıştın</span></div>`:""}${sayac}</div>
+    <div style="min-width:0">${sira?`<span class="siratag">Seçili</span>`:""}<div class="tt" style="font-weight:600">${esc(taskText(t))}</div>${gorevHedef(s, date, taskText(t))}${t.dk?`<div class="thd"><span>${icon("timer","xs")}${fmtMin(t.dk)} çalıştın</span></div>`:""}${sayac}</div>
     ${sag}
   </div>`;
 }
@@ -901,8 +901,10 @@ function calismaKart(s, sira){
       ${ozet}</div>`; }
   return `<div class="card ck">
     ${ozet}
-    ${sira ? `<div class="cksira"><div style="min-width:0;flex:1"><span class="cksl">Sıradaki görev</span><div class="ckst">${esc(taskText(sira))}</div></div>
-      <button class="ckbtn go" data-act="tgbasla" data-date="${t}" data-id="${sira.id}">${icon("play","sm")} Başla</button></div>`
+    ${sira ? (()=>{ const acik = l.filter(x=>!x.done), sec = acik.find(x=>x.id===S.ckSec) || sira, cok = acik.length > 1;
+      return `<div class="cksec"><span class="cksl">${cok ? "Hangi göreve çalışacaksın?" : "Sıradaki görev"}</span>
+        <div class="cklist" role="radiogroup" aria-label="Görev seç">${acik.map(x=>`<button class="ckg ${x.id===sec.id?"on":""}" role="radio" aria-checked="${x.id===sec.id}" data-act="cksec" data-v="${x.id}"><i></i><span>${esc(taskText(x))}</span></button>`).join("")}</div>
+        <button class="ckbtn go full" data-act="tgbasla" data-date="${t}" data-id="${sec.id}">${icon("play","sm")} Başla</button></div>`; })()
       : `<div class="cksira"><div class="ckst">${l.length ? "Bugünün görevlerini bitirdin 💪" : "Bugün için görev yok"}</div></div>`}
     <button class="cklink" data-act="tstart">${icon("timer","xs")} Görev seçmeden serbest çalış</button></div>`; }
 function studentProgram(s){
@@ -914,7 +916,7 @@ function studentProgram(s){
   let body;
   if(S.pmode==="gun"){
     const d = S.day && PD.includes(S.day) ? S.day : (PD.includes(t) ? t : w);
-    const l = dayTasks(s,d), dn = l.filter(x=>x.done).length, sira = d===t ? siradaki(s,t) : null;
+    const l = dayTasks(s,d), dn = l.filter(x=>x.done).length, sira = d===t ? (l.find(x=>!x.done && x.id===S.ckSec) || siradaki(s,t)) : null;
     body = `${d===t?calismaKart(s, sira):""}<div class="card"><div class="sech"><h3>${GUN[dIdx(d)]}, ${shortDate(d)}${yaziliGun(s,d).map(x=>` <span class="pill warn">${esc(x)} yazılısı</span>`).join("")}</h3><span class="small ${dn===l.length&&l.length?"up":"muted"}" style="font-weight:700">${l.length?`${dn}/${l.length}`:""}</span></div>
       <div class="tasks" style="margin-top:4px">${l.length? l.map(x=>taskRow(x,d,{s, next:sira&&sira.id})).join("") : `<div class="empty">Bu gün için görev yok.</div>`}</div>${d===t?"":dayFooter(s,d)}
       ${d===t?`<button class="btn full" style="margin-top:12px" data-act="go" data-v="kronometre">${icon("chart","sm")} Haftalık çalışma grafiğim</button>`:""}</div>
@@ -3477,6 +3479,7 @@ document.addEventListener("click", e=>{
     case "sb": mutate(s=>{ const t=topic(s,b.dataset.k); t[b.dataset.f]=!t[b.dataset.f]; }); keepOpen(()=>render()); break;
     case "ddel": { if(!b.dataset.armed){ b.dataset.armed="1"; b.style.color="var(--bad)"; b.style.borderColor="var(--bad)"; toast("Silmek için tekrar dokun"); setTimeout(()=>{ if(b.isConnected){ delete b.dataset.armed; b.style.color=""; b.style.borderColor=""; } },2500); break; }
       mutate(s=>{ const dd = (s.denemeler||[]).find(d=>d.id===b.dataset.id); if(dd && dd.yk) Object.entries(dd.yk).forEach(([k,n])=>{ const tp = (s.topics||{})[k]; if(tp){ tp.y = Math.max(0,(tp.y||0)-n); if(!tp.y) delete tp.y; } }); s.denemeler=s.denemeler.filter(d=>d.id!==b.dataset.id); }); render(); toast("Deneme silindi"); break; }
+    case "cksec": S.ckSec = v; render(); break;
     case "tstart": mutate(s=>{ s.timer={start:Date.now(), cihaz:cihazTur(), ...(S.kDers?{ders:S.kDers}:{})}; }); render(); break;
     case "kders": S.kDers = S.kDers===v ? "" : v; render(); break;
     case "grsec": GR.sec = v; render(); break;

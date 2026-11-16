@@ -1485,17 +1485,17 @@ body.dersacik{overflow:hidden}
 .nb.fab .bub .fabt{font-size:14px;font-weight:800;letter-spacing:-.02em;color:var(--acfg)}
 @media (prefers-reduced-motion:reduce){.ckdot,.nb.fab.canli .bub{animation:none}}
 
-/* Mesaj düğmesi: üst çubukta belirgin, hocanın fotoğrafıyla */
-.msgpill{position:relative;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 14px 0 3px;border:0;border-radius:999px;background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg);font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;flex:none;box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent);white-space:nowrap}
-.msgpill img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #fff;flex:none}
+/* Mesaj düğmesi: üst çubukta, hocanın fotoğrafıyla (sade; yeni mesajda canlanır) */
+.msgpill{position:relative;display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px 0 3px;border:0;border-radius:999px;background:var(--surface);color:var(--ac);font:inherit;font-weight:800;font-size:13px;cursor:pointer;flex:none;box-shadow:var(--shadow);white-space:nowrap}
+.msgpill img{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
 .msgpill .msgpillic{display:none}
 .msgpill .dot{position:absolute;top:-5px;right:-5px}
 .msgpill.yeni{animation:msgp 1.8s infinite}
-@keyframes msgp{0%,100%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 0 color-mix(in srgb,var(--ac) 50%,transparent)}50%{box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent),0 0 0 8px transparent}}
-.iconbtn.msgvurgu{background:linear-gradient(160deg,var(--ac),var(--ac2));color:var(--acfg)}
-@media (max-width:440px){.msgpill{padding:0;width:44px;height:44px;justify-content:center;background:none;box-shadow:none}.msgpill>span:not(.dot){display:none}
-  .msgpill img{width:44px;height:44px;border:3px solid var(--ac);box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent)}
-  .msgpill .msgpillic{display:grid;place-items:center;position:absolute;right:-4px;bottom:-3px;width:21px;height:21px;border-radius:50%;background:var(--ac);color:var(--acfg);border:2px solid var(--surface)}.msgpill .msgpillic svg{width:11px;height:11px}
+@keyframes msgp{0%,100%{box-shadow:var(--shadow),0 0 0 0 color-mix(in srgb,var(--ac) 45%,transparent)}50%{box-shadow:var(--shadow),0 0 0 7px transparent}}
+.iconbtn.msgvurgu{color:var(--ac)}
+@media (max-width:440px){.msgpill{padding:0;width:36px;height:36px;justify-content:center;background:none;box-shadow:none}.msgpill>span:not(.dot){display:none}
+  .msgpill img{width:36px;height:36px;border:2px solid var(--surface);box-shadow:var(--shadow)}
+  .msgpill .msgpillic{display:grid;place-items:center;position:absolute;right:-3px;bottom:-2px;width:17px;height:17px;border-radius:50%;background:var(--ac);color:var(--acfg);border:2px solid var(--surface)}.msgpill .msgpillic svg{width:9px;height:9px}
   .msgpill .dot{top:-4px;right:-4px}}
 @media (prefers-reduced-motion:reduce){.msgpill.yeni{animation:none}}
 /* Sohbette hocanın fotoğrafı ve sesli mesaj */
@@ -1533,6 +1533,18 @@ body.dersacik{overflow:hidden}
 .k1 .kpb{height:64px;background:linear-gradient(#F5B301,#D69E2E)}.k1 .kpb svg{width:28px}.k2 .kpb{height:46px;background:linear-gradient(#CBD5E1,#94A3B8)}.k3 .kpb{height:34px;background:linear-gradient(#F59E0B,#B45309)}
 .kalt{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin-top:8px;font-size:13px}.kalt small{color:var(--muted)}
 .odben{margin:0;text-align:center;font-weight:700;color:var(--ac)}
+
+/* Çalışma kartı: görev seçimi */
+.cksec{display:flex;flex-direction:column;gap:8px;background:var(--acs);border-radius:16px;padding:12px}
+.cklist{display:flex;flex-direction:column;gap:6px;max-height:252px;overflow:auto;margin:0 -2px;padding:0 2px}
+.ckg{display:flex;align-items:center;gap:10px;min-height:46px;padding:8px 12px;border-radius:12px;border:2px solid transparent;background:var(--surface);color:var(--fg);font:inherit;font-weight:600;font-size:14.5px;text-align:left;cursor:pointer}
+.ckg i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center}
+.ckg span{flex:1;min-width:0;overflow-wrap:anywhere;line-height:1.3}
+.ckg small{color:var(--muted);font-weight:700;flex:none}
+.ckg.on{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 8%,var(--surface))}
+.ckg.on i{border-color:var(--ac);background:radial-gradient(circle,var(--ac) 0 45%,transparent 50%)}
+.ckbtn.full{width:100%;flex-wrap:wrap;min-height:52px}
+.ckbas{display:block;width:100%;font-size:12px;font-weight:600;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:-2px}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;
