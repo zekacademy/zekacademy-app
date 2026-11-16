@@ -183,3 +183,11 @@ test("mesajlaşma: öğrenci kendi sohbetini okur ve kendi adına yazar; başkas
   await assertFails(setDoc(doc(ali(), "sohbetler/ali/mesajlar/m9"), { kim: "ogr", metin: "", at: "x", ses: "x".repeat(950000) }));
   await assertFails(getDoc(doc(anon(), "sohbetler/ali/mesajlar/m1")));
 });
+
+test("Zek AI gerçek hataları: yalnız koç okur, kimse istemciden yazamaz", async () => {
+  await env.withSecurityRulesDisabled(async ctx => { await setDoc(doc(ctx.firestore(), "aiHatalar/h1"), { neden: "anahtar-uyusmuyor", at: "2026-11-16T10:00:00Z" }); });
+  await assertSucceeds(getDoc(doc(coach(), "aiHatalar/h1")));
+  await assertFails(getDoc(doc(ali(), "aiHatalar/h1")));
+  await assertFails(setDoc(doc(ali(), "aiHatalar/h2"), { neden: "x" }));
+  await assertFails(setDoc(doc(coach(), "aiHatalar/h3"), { neden: "x" }));
+});

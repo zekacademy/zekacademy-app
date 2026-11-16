@@ -99,3 +99,24 @@ test("şekilli sorular: geometri/grafik ve kolay olmayan soru güçlü modele ge
   assert.equal(zoraGec({ ...tamam, sekil: { var: false, tur: "yok" } }, ""), null);
   const q = cozIstegi({}); assert.match(q, /ŞEKİL VE RESİM OKUMA/); assert.match(q, /ölçekli değildir/); assert.match(q, /"sekil"/);
 });
+
+test("çözüm akışı: talimat önbellek için sabit/değişken ayrımı, beceriler, ikinci bakış", async () => {
+  const { COZ_SABIT, cozDegisken, sozelMi } = await import("../functions/soru.js");
+  const { COZUM_BILGI } = await import("../functions/cozum-bilgi.js");
+  assert.ok(COZ_SABIT.includes(COZUM_BILGI)); assert.match(COZ_SABIT, /ŞEKİL VE RESİM OKUMA/); assert.match(COZ_SABIT, /EN YAKIN rakip şık/);
+  assert.ok(COZUM_BILGI.split(/\s+/).length < 1800, "beceri metni kısa kalmalı (her istekte gidiyor)");
+  assert.doesNotMatch(cozDegisken({}), /ŞEKİL VE RESİM/); /* değişken kısım sabiti tekrar etmez */
+  assert.match(cozDegisken({ anahtar: "C" }), /C şıkkı/); assert.match(cozDegisken({ ikinci: true }), /E'den A'ya/);
+  assert.equal(sozelMi("TYT Türkçe"), true); assert.equal(sozelMi("TYT Coğrafya"), true); assert.equal(sozelMi("TYT Matematik"), false); assert.equal(sozelMi("AYT Fizik"), false);
+});
+
+test("hakem ve anahtar seçimi", async () => {
+  const { hakemSonucu, anahtarlaSec } = await import("../functions/soru.js");
+  const H = { cevap: { sik: "B" }, emin: true, ad: "h" }, G = { cevap: { sik: "D" }, emin: true, ad: "g" };
+  assert.equal(hakemSonucu(H, G, { sik: "D", emin: true }).r.ad, "g");
+  const h1 = hakemSonucu(H, G, { sik: "B", emin: true }); assert.equal(h1.r.ad, "h"); assert.equal(h1.kim, "hizli");
+  const h2 = hakemSonucu(H, G, { sik: "A" }); assert.equal(h2.r.ad, "g"); assert.equal(h2.r.emin, false);
+  assert.equal(hakemSonucu(H, G, null).r.emin, false);
+  assert.equal(anahtarlaSec(H, G, "B").r.ad, "h"); assert.equal(anahtarlaSec(H, G, "D").r.ad, "g");
+  const a3 = anahtarlaSec(H, G, "E"); assert.equal(a3.r.ad, "g"); assert.equal(a3.r.emin, false);
+});

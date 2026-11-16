@@ -15,7 +15,7 @@ import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hati
 import { getStorage } from "firebase-admin/storage";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
-import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
+import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -285,7 +285,7 @@ async function aiAnahtar(){
   if (AI_ANAHTAR.v && Date.now() - AI_ANAHTAR.at < 5 * 60e3) return AI_ANAHTAR.v;
   const v = ((await db.doc("system/ai").get()).data() || {}).anahtar || ""; AI_ANAHTAR = { v, at: Date.now() }; return v;
 }
-async function claude(model, content, maxTokens, sistem = SISTEM){
+async function claude(model, content, maxTokens, sistem = SISTEM){ /* sistem: metin ya da önbellek işaretli bloklar dizisi */
   const key = await aiAnahtar(); if (!key) throw new HttpsError("failed-precondition", "anahtar-yok");
   const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
@@ -329,15 +329,36 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   if (!x.koc && c.sinirsiz) { const a = adilKalan(c, k, x.date); if (a.gun <= 0) throw new HttpsError("resource-exhausted", "adil-gunluk"); if (a.ay <= 0) throw new HttpsError("resource-exhausted", "adil-aylik"); }
   else if (!x.koc && kalanHak(c, k) <= 0) throw new HttpsError("resource-exhausted", "hak");
   if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
-  const icerik = [...(resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : []), { type: "text", text: cozIstegi({ metin, anahtar, tekrar }) }];
-  let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null;
+  /* Talimat önbellekte: sabit kısım (şema + kurallar + beceriler) system'de cache_control ile; soruya özgü kısım mesajda */
+  const SIS = [{ type: "text", text: SISTEM }, { type: "text", text: COZ_SABIT, cache_control: { type: "ephemeral" } }];
+  const resimP = resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : [];
+  const icerik = (ek = {}) => [...resimP, { type: "text", text: cozDegisken({ metin, anahtar, tekrar, ...ek }) }];
+  let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null, hizli = null, guclu = null, hakem = null, kim = "hizli";
   if (!tekrar) {
-    const a = await claude(c.modelKolay, icerik, 2500); dolar += maliyet(c, "kolay", a.usage); r = jsonCikar(a.text);
+    const a = await claude(c.modelKolay, icerik(), 2500, SIS); dolar += maliyet(c, "kolay", a.usage); r = hizli = jsonCikar(a.text);
     neden = zoraGec(r, anahtar);
+    /* Sözelde ikinci oy (anahtar yoksa): hızlı model ikinci kez, şıkları tersten eleyerek; farklıysa güçlüye */
+    if (!neden && !anahtar && r && r.okunabildi !== false && sozelMi(r.ders)) {
+      try { const a2 = await claude(c.modelKolay, icerik({ ikinci: true }), 2500, SIS); dolar += maliyet(c, "kolay", a2.usage); const r2 = jsonCikar(a2.text);
+        if (r2 && sikOf(r2) && sikOf(r2) !== sikOf(r)) neden = "sozel-oy"; }
+      catch (e) { logger.warn("ikinci oy", e.message); }
+    }
   }
   if (neden) {
-    try { const b = await claude(c.modelZor, icerik, 3500); dolar += maliyet(c, "zor", b.usage); const r2 = jsonCikar(b.text); if (r2) { r = r2; model = "zor"; } }
+    try { const b = await claude(c.modelZor, icerik(), 3500, SIS); dolar += maliyet(c, "zor", b.usage); guclu = jsonCikar(b.text); }
     catch (e) { logger.warn("güçlü model", e.message); if (!r) throw e; }
+    if (guclu) {
+      model = "zor"; r = guclu; kim = "guclu";
+      if (hizli && sikOf(hizli) && sikOf(guclu) && sikOf(hizli) !== sikOf(guclu)) {
+        if (anahtar) ({ r, kim } = anahtarlaSec(hizli, guclu, anahtar));
+        else {
+          /* Hakem: iki model farklı şık buldu; güçlü model lehine ama gerekçeye bakarak karar */
+          try { const h = await claude(c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 800, SIS); dolar += maliyet(c, "zor", h.usage); hakem = jsonCikar(h.text); }
+          catch (e) { logger.warn("hakem", e.message); }
+          ({ r, kim } = hakemSonucu(hizli, guclu, hakem));
+        }
+      }
+    }
   }
   if (!r) { await aiKaydet(x, { dolar }); throw new HttpsError("unavailable", "cozum-okunamadi"); }
   delete r.kontrol; r.anahtar = anahtarDurumu(r, anahtar); if (r.anahtar === "uyumsuz") r.emin = false;
@@ -346,6 +367,11 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   const kucuk = typeof d.kucuk === "string" && d.kucuk.startsWith("data:image/jpeg;base64,") && d.kucuk.length < 60000 ? d.kucuk : null;
   const ref = await db.collection("aiSorular").add({ sid: x.sid, ay: x.ay, at: new Date().toISOString(), ders: r.ders || "", konu: r.konu || "", zorluk: r.zorluk || "", soru: String(r.soru || "").slice(0, 400),
     cevap: (r.cevap && r.cevap.sik) || "", anahtar: r.anahtar, emin: r.emin !== false, model, neden: neden || null, hak, dolar: Math.round(dolar * 1e5) / 1e5, kucuk, okunabildi: r.okunabildi !== false });
+  /* Gerçek hatalardan öğrenme: anahtar uyuşmazlığı, öğrencinin "yanlış" demesi, model anlaşmazlığı → aiHatalar (anonim) */
+  const hataNeden = tekrar ? "ogrenci-yanlis-dedi" : r.anahtar === "uyumsuz" ? "anahtar-uyusmuyor" : (hizli && guclu && sikOf(hizli) !== sikOf(guclu)) ? "model-anlasmazligi" : neden === "sozel-oy" ? "sozel-oy" : "";
+  if (hataNeden) await db.collection("aiHatalar").add({ at: new Date().toISOString(), soruId: ref.id, neden: hataNeden, ders: r.ders || "", konu: r.konu || "", soru: String(r.soru || "").slice(0, 600), siklar: r.siklar || null,
+    anahtar: anahtar || "", hizli: hizli ? sikOf(hizli) : "", guclu: guclu ? sikOf(guclu) : "", hakem: hakem ? { sik: hakem.sik || "", secim: hakem.secim || "", ayrisma: String(hakem.ayrisma || "").slice(0, 300) } : null,
+    son: sikOf(r), kim, emin: r.emin !== false, okunan: ((r.sekil || {}).okunan || []).slice(0, 10), kucuk }).catch(e => logger.warn("aiHatalar", e.message));
   const k2 = (await kRef.get()).data() || {};
   return { cozum: r, id: ref.id, model, hak, kalan: kalanHak(c, k2), toplam: toplamHak(c, k2), sinirsiz: !!c.sinirsiz };
 });
