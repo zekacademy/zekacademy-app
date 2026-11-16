@@ -108,3 +108,6 @@ export function gunGorusmeleri(students, notes, gorusmeler, d, waKeys = ["whatsa
   return out; }
 /* Şu an hatırlatılacaklar: başlangıcına 0-60 dk kalan, planlı ve daha önce gönderilmemiş */
 export function hatirlatilacak(list, nowMinutes, gonderilen){ return list.filter(g=>g.durum==="planli" && !gonderilen[g.key] && hmDk(g.saat)-nowMinutes > 0 && hmDk(g.saat)-nowMinutes <= 60); }
+
+/* Mesaj bildirimi için sessiz saat (ör. 23:00–08:00, gece yarısını aşabilir) */
+export function sessizMi(dakika, bas = "23:00", bit = "08:00"){ const a = hm(bas), b = hm(bit); return a === b ? false : a < b ? (dakika >= a && dakika < b) : (dakika >= a || dakika < b); }
