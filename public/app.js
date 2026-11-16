@@ -309,7 +309,7 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
     Object.keys(K).forEach(d=>{ const parca = String(K[d]).split(/\s+·\s+/), kal = parca.filter(p=>!saat.test(p.trim())); if(kal.length !== parca.length){ deg = true; if(kal.length) K[d] = kal.join(" · "); else delete K[d]; } });
     if(deg){ n++; persistDoc("students", id, 0); } });
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
-function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
+function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ duzenSabitle(); kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
 function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
 function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); grupTemizle(); S.ready = false; }
 
@@ -1721,6 +1721,13 @@ function sanalKayit(sid, d){ const x = S.students.get(sid), z = duzenOf(sid) || 
   const o = sonSaat(sid, d), aktar = !!o && o.saat!==z.saat;
   return {sid, ad:x?.name||"", tarih:d, hafta:monday(d), saat:(o&&o.saat)||z.saat||null, sure:(o&&o.sure)||z.sure||SURE_SEANS, tur:"seans", durum:"planli", kaynak:"duzen", ...(aktar?{aktar:true}:{})}; }
 const saatSira = g => g.saat ? hmTo(g.saat) : 99999;
+/* Öğrencinin şu an geçerli görüşme günü: geçen haftaların son görüşmesi, yoksa düzende seçilen gün, o da yoksa program döngüsünün günü */
+function gecerliGun(sid){ const z = duzenOf(sid) || {}, x = S.students.get(sid);
+  const o = isWA(x) ? null : sonSaat(sid, today()); if(o) return dIdx(o.tarih);
+  return z.gun!=null && z.gun!=="" ? +z.gun : otoGun(sid); }
+/* "Otomatik gün" kaldırıldı: günü boş olan düzenlere bir kez, şu an göründüğü gün yazılır (sonra hiç kaymaz) */
+function duzenSabitle(){ S.students.forEach((x,sid)=>{ const z = duzenOf(sid); if(!z || (z.gun!=null && z.gun!=="")) return; if(!isWA(x) && !z.saat) return;
+  const cn = {...(S.cnotes.get(sid)||{})}; cn.duzen = {...z, gun: gecerliGun(sid)}; S.cnotes.set(sid, cn); persistDoc("coachNotes", sid, 300); }); }
 function otoGun(sid){ const x = S.students.get(sid); return x ? dIdx(curStart(x)) : 0; }
 /* Bir günün görüşmeleri: kayıtlı olanlar + haftalık düzenden gelenler (o hafta için ayrıca kaydı yoksa) */
 function gunGorusme(d){
@@ -1906,7 +1913,7 @@ const ODEME_ETIKET = {kirmizi:"5 günü geçti", pembe:"Gecikti", turuncu:"Yakla
 const fmtTL = v => v==null || v==="" ? "" : Number(v).toLocaleString("tr-TR")+" ₺";
 function odemeSay(){ const c = {kirmizi:0, pembe:0, turuncu:0, yok:0, tamam:0}; S.students.forEach((_,id)=>c[odemeDurum(id).k]++); return c; }
 function setDuzen(id, z){ const cn = {...(S.cnotes.get(id)||{})}, eski = cn.duzen || {};
-  if(z && (z.saat!==eski.saat || (z.sure||null)!==(eski.sure||null))){
+  if(z && (z.saat!==eski.saat || (z.sure||null)!==(eski.sure||null) || (z.gun??null)!==(eski.gun??null))){
     /* Gün "otomatik" iken görüşme, geçen haftaların son görüşmesinin gününde görünüyordu; saat değişince o kayıtlar artık devralınmadığı için gün kaymasın: o günü sabitle */
     if((z.gun==null || z.gun==="") && !isWA(S.students.get(id))){ const o = sonSaat(id, today()); if(o) z = {...z, gun: dIdx(o.tarih)}; }
     z = {...z, degis: z.degis || today()}; } /* düzen saati elle değişti: önceki haftaların saati artık devralınmaz */
@@ -3195,15 +3202,15 @@ function openSheet(kind, el){
           if(g.kaynak==="duzen" && fd.get("kapsam")==="hafta" && (saat!==g0.saat || sure!==(g0.sure||SURE_SEANS))) g.tek = true; }); }
       else { const nid = uid(); S.gorus.set(nid, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:"planli", ...(bid?{bid}:{})}); persistDoc("gorusmeler", nid, 0); }
       S.gday = tarih; closeSheet(); if(!["basvuru","detay"].includes(S.view)) S.view = "gorusme"; render(); toast("Görüşme kaydedildi"); }); }
-  if(kind==="duzen"){ const gunOpt = (v, oto) => `<option value="">Otomatik · ${GUN[oto]}</option>${GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("")}`;
-    return sheet(`<h3>Haftalık düzen</h3><p class="muted small" style="margin:-6px 0 0">Gün, öğrencinin program döngüsünden (son görüşme günü) otomatik gelir; “Yeni görüşme” ile döngü kayarsa seans da kayar. Sen sadece saati gir. Saati boş bırakılan öğrenci takvime gelmez. Bir öğrencinin günü sabit başka bir güne geçtiyse günü elle seç.</p>
-      <div class="dzlist">${sortedStudents().map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(z.gun??null, otoGun(id))}</select>${isWA(x)?`<span class="dzwa">${icon("chat","xs")} Rapor</span>`:`<input type="time" step="300" name="s_${id}" value="${esc(z.saat||"")}" aria-label="${esc(x.name)} saati">`}</div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
+  if(kind==="duzen"){ const gunOpt = v => GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("");
+    return sheet(`<h3>Haftalık düzen</h3><p class="muted small" style="margin:-6px 0 0">Her hafta, geçen hafta ayarladığın gün ve saatte görüşme olur. Burada değiştirirsen sonraki haftalar da öyle devam eder. Saati boş bırakılan öğrenci takvime gelmez.</p>
+      <div class="dzlist">${sortedStudents().map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(gecerliGun(id))}</select>${isWA(x)?`<span class="dzwa">${icon("chat","xs")} Rapor</span>`:`<input type="time" step="300" name="s_${id}" value="${esc((sonSaat(id, today())||{}).saat||z.saat||"")}" aria-label="${esc(x.name)} saati">`}</div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
       <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     fd=>{ let n = 0; const w = monday(today());
-      for(const [id,x] of sortedStudents()){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id), gun = g==="" || g==null ? null : +g;
-        if(isWA(x)){ if((z?.gun??null)!==gun){ setDuzen(id, gun==null ? null : {gun, bas:z?.bas||w}); n++; } continue; }
+      for(const [id,x] of sortedStudents()){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id), gun = g==="" || g==null ? null : +g, eskiGun = gecerliGun(id), o = isWA(x) ? null : sonSaat(id, today()), eskiSaat = (o&&o.saat) || z?.saat || "";
+        if(isWA(x)){ if(gun!==eskiGun || (z?.gun??null)!==gun){ setDuzen(id, gun==null ? null : {gun, bas:z?.bas||w}); n++; } continue; }
         if(!sa){ if(z){ setDuzen(id, null); n++; } continue; }
-        if(!z || (z.gun??null)!==gun || z.saat!==sa){ setDuzen(id, {gun, saat:sa, sure:z?.sure||SURE_SEANS, bas:z?.bas||w}); n++; } }
+        if(!z || gun!==eskiGun || sa!==eskiSaat || (z.gun??null)!==gun || z.saat!==sa){ setDuzen(id, {...(z||{}), gun, saat:sa, sure:z?.sure||SURE_SEANS, bas:z?.bas||w}); n++; } }
       closeSheet(); render(); toast(n?`${n} öğrencinin düzeni güncellendi`:"Değişiklik yok"); }); }
   if(kind==="wa"){ const sid = el.dataset.sid, x = S.students.get(sid); if(!x) return;
     const g = sonrakiGorusme(sid);
