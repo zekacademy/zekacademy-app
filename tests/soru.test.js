@@ -89,3 +89,13 @@ test("adil kullanım: günlük ve aylık kalan soru (sınırsız düzen)", async
   assert.deepEqual(adilKalan(c, { soru: 600, ekHak: 10, gunSoru: {} }, "2026-11-16"), { gun: 30, ay: 10 });
   assert.equal(adilKalan(c, { soru: 5, gunSoru: { "2026-11-16": 30 } }, "2026-11-16").gun, 0);
 });
+
+test("şekilli sorular: geometri/grafik ve kolay olmayan soru güçlü modele geçer, okuma kuralları istekte", async () => {
+  const { zoraGec, cozIstegi } = await import("../functions/soru.js");
+  const tamam = { okunabildi: true, emin: true, zorluk: "orta", adimlar: [{ baslik: "x" }], cevap: { sik: "C" } };
+  assert.equal(zoraGec({ ...tamam, sekil: { var: true, tur: "geometri", okunan: ["AB = 6"] } }, ""), "sekil");
+  assert.equal(zoraGec({ ...tamam, zorluk: "kolay", sekil: { var: true, tur: "geometri" } }, ""), null);
+  assert.equal(zoraGec({ ...tamam, sekil: { var: true, tur: "tablo" } }, ""), null);
+  assert.equal(zoraGec({ ...tamam, sekil: { var: false, tur: "yok" } }, ""), null);
+  const q = cozIstegi({}); assert.match(q, /ŞEKİL VE RESİM OKUMA/); assert.match(q, /ölçekli değildir/); assert.match(q, /"sekil"/);
+});

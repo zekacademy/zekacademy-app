@@ -48,6 +48,8 @@ export function zoraGec(r, anahtar){
   if (r.okunabildi === false) return null;                       // fotoğraf okunmadı: büyük model de okuyamaz, öğrenciye net fotoğraf iste
   if (r.emin === false) return "emin-degil";
   if (String(r.zorluk || "").toLowerCase() === "zor") return "zor";
+  const sk = r.sekil || {}; /* şekle dayanan, kolay olmayan sorularda (geometri, grafik, devre, düzenek) güçlü modelle kontrol */
+  if (sk.var && ["geometri", "grafik", "devre", "duzenek"].includes(String(sk.tur || "").toLowerCase()) && String(r.zorluk || "").toLowerCase() !== "kolay") return "sekil";
   const k = String(anahtar || "").trim().toUpperCase();
   const s = String((r.cevap && r.cevap.sik) || "").trim().toUpperCase();
   if (k && s && k !== s) return "anahtar-uyusmuyor";
@@ -123,6 +125,7 @@ export const SEMA = [
   ' "kontrol": "kısa hesap kontrolü",',
   ' "okunabildi": true,',
   ' "sorun": "",',
+  ' "sekil": {"var": true, "tur": "geometri | grafik | tablo | devre | duzenek | biyoloji | kimya | harita | gorsel | yok", "okunan": ["AB = 6 cm", "m(BAC) = 40°", "AD ⊥ BC (dik açı işareti var)"], "not": ""},',
   ' "soru": "Sorunun kısa özeti, en fazla 2 cümle",',
   ' "siklar": {"A":"...","B":"...","C":"...","D":"...","E":"..."},',
   ' "ders": "TYT Matematik",',
@@ -136,6 +139,15 @@ export const SEMA = [
   ' "emin": true,',
   ' "puf": "Sınavda zaman kazandıran yol ya da sık yapılan hata, 1-2 cümle"',
   "}",
+  "ŞEKİL VE RESİM OKUMA (çözmeden ÖNCE yap, sonucu 'sekil' alanına yaz):",
+  "- Şekil, grafik, tablo, düzenek ya da resim varsa önce onu ayrıntılı oku. 'okunan' listesine şekilde gerçekten yazan ya da işaretle gösterilen her bilgiyi tek tek yaz: harfler ve noktalar, uzunluklar, açı değerleri, eşitlik çentikleri, dik açı kutusu, paralellik okları, teğetlik, merkez; grafikte eksen adları, birimleri, ölçek aralığı ve okunan noktaların koordinatları; tabloda bütün satır ve sütunlar; devrede her elemanın değeri ve bağlanma biçimi; düzenekte kütleler, ipler, makaralar, yüzeyler, yönler; biyoloji/kimya şeklinde etiketli yapılar.",
+  "- Şekilden göz kararı ölçü ÇIKARMA: ÖSYM şekilleri ölçekli değildir. Bir uzunluğun ya da açının eşitliğini sadece yazılı değer ya da işaret varsa kabul et; 'dik görünüyor', 'eşit görünüyor' diye varsayım yapma.",
+  "- Grafikte değeri ızgara çizgilerinden ve eksen bölmelerinden say; iki çizgi arasında kalan değeri uydurma. Okuyamadığın değer çözüm için gerekliyse emin=false yap.",
+  "- Fotoğraf eğik, gölgeli ya da kitap kıvrımlı olabilir; düz metin gibi oku. Öğrencinin kurşun kalemle yaptığı karalamaları, işaretlediği şıkkı ve kenar notlarını sorunun parçası sayma.",
+  "- Sayfada birden fazla soru varsa öğrencinin işaretlediği ya da ortada, tamamı görünen soruyu çöz; hangisi olduğu anlaşılmıyorsa okunabildi=false yap ve sorun alanına 'birden fazla soru var, sadece birini çek' yaz.",
+  "- Resim/görsel sorularında (harita, tarihî görsel, karikatür, deney fotoğrafı, organ çizimi) önce görseldeki öğeleri tek tek tanımla, sonra soruyla ilişkilendir; görselde olmayan bir şeyi görmüş gibi yazma.",
+  "- Çözüm şekle dayanıyorsa ama şeklin önemli bir kısmı okunmuyorsa tahmin yürütme: okunabildi=false yap ve sorun alanına neyin okunmadığını yaz (ör. 'BC kenarındaki sayı okunmuyor').",
+  "- Şekil yoksa sekil = {\"var\": false, \"tur\": \"yok\", \"okunan\": [], \"not\": \"\"}. okunan en fazla 10 madde, her biri kısa.",
   "Kurallar: siklar yoksa null; bilgi 0-2 tane; ipuclari cevabı söylemeden 3 tane; adimlar 3-6 tane, her adımda tek iş, islem yoksa \"\".",
   "Fotoğraf bulanık, soru kesik ya da şıklar okunmuyorsa tahmin yürütme: okunabildi=false yap ve sorun alanına neyin okunmadığını yaz.",
   "Zorluk: AYT matematik/fizik/kimya ya da çok adımlı akıl yürütme gerektiren sorular için \"zor\". Çözümünden tam emin değilsen emin=false yap; yanlış bir çözümü asla emin gibi sunma.",

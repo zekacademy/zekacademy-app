@@ -13,7 +13,7 @@ const DEMO_KARNE = { okunabildi:true, belgeTuru:"karne", uyarilar:["Demo modu: g
   { tur:"TYT", yayin:"Sıfır Pozitif", sinavAdi:"SIFIR POZİTİF TG TYT", tarih:"2026-10-18", kaynak:"gecmis", toplam:89.25, emin:true, notlar:[], altDersler:{}, bolumler:{ turkce:{net:24}, sosyal:{net:18}, mat:{net:28.5}, fen:{net:18.75} }, yanlislar:[] } ] };
 
 /* Demo: Soru Çözüm her fotoğrafta aynı örnek çözümü döndürür */
-const DEMO_SORU = { cozum: { okunabildi:true, emin:true, anahtar:"uyumlu", ders:"Matematik", konu:"Ondalık Sayılar", zorluk:"kolay",
+const DEMO_SORU = { cozum: { okunabildi:true, emin:true, anahtar:"uyumlu", ders:"Matematik", konu:"Ondalık Sayılar", zorluk:"kolay", sekil:{var:true, tur:"grafik", okunan:["1. sap: 17,9 cm","2. sap: 16,8 cm","3. sap: 19,2 cm","4. sap: 20 cm","Uzunluklar sütun grafiğinde verilmiş"], not:""},
   soru:"Dört çiçeğin sap uzunlukları 17,9 cm; 16,8 cm; 19,2 cm ve 20 cm'dir. Hepsi en kısa sapla eşit olacak şekilde kesilirse toplam kaç cm kesilir?",
   siklar:{A:"6,3",B:"6,5",C:"6,7",D:"7,1",E:"7,3"}, istenen:"Üç saptan kesilen parçaların toplam uzunluğu.",
   bilgi:[{ad:"Kullanacağımız bilgi", ifade:"Kesilen = sap uzunluğu − en kısa sap"}],

@@ -2342,12 +2342,18 @@ function szBaglam(){ const d = SZ.data || {}; return JSON.stringify({ soru:d.sor
 function szYukleniyor(){ return `${SZ.fotoUrl || SZ.onizleme ? `<div class="szscan"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"><i></i><span>Gönderdiğin soru</span></div>` : ""}<div class="szload"><div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
 let szAsama = null;
 function szAsamaBaslat(){ clearInterval(szAsama); let i = 0; szAsama = setInterval(()=>{ const ph = document.querySelectorAll(".szph"); if(!ph.length || i >= ph.length-1){ return; } ph[i].className = "szph ok"; i++; ph[i].className = "szph on"; }, 8000); }
+/* Zek AI'nin şekilden / resimden okuduğu bilgiler: öğrenci yanlış okuma var mı kontrol edebilsin */
+const SEKIL_TUR = {geometri:"Şekilden okuduklarım", grafik:"Grafikten okuduklarım", tablo:"Tablodan okuduklarım", devre:"Devreden okuduklarım", duzenek:"Düzenekten okuduklarım", biyoloji:"Şekilden okuduklarım", kimya:"Şekilden okuduklarım", harita:"Haritadan okuduklarım", gorsel:"Görselden okuduklarım"};
+function szSekilOkunan(d){ const k = d && d.sekil; if(!k || !k.var || !Array.isArray(k.okunan) || !k.okunan.length) return "";
+  return `<details class="szsekil"><summary>${icon("eye","xs")} ${SEKIL_TUR[String(k.tur||"").toLowerCase()] || "Şekilden okuduklarım"} <span class="faint">(${k.okunan.length})</span></summary>
+    <div class="szsekl">${k.okunan.slice(0,10).map(x=>`<span>${szInline(String(x))}</span>`).join("")}</div>
+    <p class="faint small" style="margin:6px 0 0">Bir değeri yanlış okuduysam aşağıdaki “daha güçlü modelle tekrar çözdür”e dokun.</p></details>`; }
 function szCozum(){ const d = SZ.data; if(!d) return "";
   if(d.okunabildi===false) return `<div class="szalert warn"><b>Soruyu tam okuyamadım.</b><br>${szInline(d.sorun || "Fotoğraf bulanık ya da soru kesik olabilir.")}<br>Daha net, düz ve tek soruyu gösteren bir fotoğrafla tekrar dene.${aiC().sinirsiz?"":" <b>Hakkın düşmedi.</b>"}</div>`;
   const ust = [d.ders, d.konu].filter(Boolean).map(esc).join(" · "), anh = SZ.key && SZ.key!=="yok" ? ` · Anahtar: ${esc(SZ.key)}` : "";
   let h = "";
   if(SZ.fotoUrl || SZ.onizleme){ h = `<div class="szfotokart"><button class="szfotob ${SZ.fotoBuyuk?"buyuk":""}" data-act="szfotobuyut" aria-label="Sorunun fotoğrafını büyüt"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"></button>
-    <div class="szfk">${ust ? `<b>${ust}</b> · ` : ""}Senin fotoğrafın${anh}</div></div>`; }
+    <div class="szfk">${ust ? `<b>${ust}</b> · ` : ""}Senin fotoğrafın${anh}</div>${szSekilOkunan(d)}</div>`; }
   else h += `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
   if(d.anahtar==="uyumsuz" || d.emin===false) h += `<div class="szalert warn">⚠️ <b>Bu soruda emin olamadım.</b> ${d.anahtar==="uyumsuz" ? "Bulduğum cevap girdiğin cevap anahtarıyla uyuşmuyor; anahtarda baskı hatası da olabilir. " : ""}Kitabın çözümüne de bir göz at.</div>`;
   else if(d.anahtar==="uyumlu") h += `<div class="szalert ok">✓ Cevap anahtarıyla kontrol edildi, uyuşuyor.</div>`;
