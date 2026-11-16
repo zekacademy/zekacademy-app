@@ -1,0 +1,156 @@
+{
+ "konu": "Küp",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GKP-01",
+   "konu": "Küp",
+   "alt": "Cisim köşegeninden ayrıt",
+   "fikir": "Cisim köşegeni a√3 olduğundan ayrıt köşegenin √3’e bölümüyle bulunur; küpün 12 ayrıtı vardır.",
+   "tuzak": "Cisim köşegenini ayrıt sanmak; ayrıt sayısını 8 ya da 6 almak; hacim hesaplamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kp-kosegen",
+   "tip": "Küpte yüz ve cisim köşegeni",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-02",
+   "konu": "Küp",
+   "alt": "Yüzey alanından yüz köşegeni",
+   "fikir": "Yüzey alanı 6a² olduğundan ayrıt bulunur; yüz köşegeni ayrıtın √2 katıdır.",
+   "tuzak": "Yüz köşegenini ayrıt ya da cisim köşegeni sanmak; yüzey alanını bir yüzün alanı sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kp-kosegen",
+   "tip": "Küpte yüz ve cisim köşegeni",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-03",
+   "konu": "Küp",
+   "alt": "Yüz köşegenleriyle oluşan eşkenar üçgen",
+   "fikir": "Küpün bir köşesinden çıkan üç yüz köşegeni eşit olduğundan ACF eşkenar üçgendir; kenarı a√2, alanı (a√2)²√3/4 tür.",
+   "tuzak": "Kenarı ayrıt sanmak; eşkenar üçgen alanında 4’e bölmeyi unutmak; ACF’yi dik üçgen sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-kp-ucgen",
+   "tip": "Küpte köşelerle oluşan eşkenar üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-04",
+   "konu": "Küp",
+   "alt": "Boyanıp küçük küplere bölünen küp",
+   "fikir": "İki yüzü boyalı küçük küpler yalnız ayrıtların üzerinde, köşelerin dışındadır; her ayrıtta n − 2 tane vardır.",
+   "tuzak": "Köşe küplerini de saymak; yüz içi küpleri saymak; boyasız küplerle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kp-boya",
+   "tip": "Boyanıp küçük küplere bölünen küp",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-05",
+   "konu": "Küp",
+   "alt": "Beş yüzü boyanan küpte boyasız küpler",
+   "fikir": "Alt yüz boyanmadığından boyasız küpler yalnız yan ve üst yüzlerin içinde kalanlardır; alt katman boyasız sayılır.",
+   "tuzak": "Altı yüzün de boyalı olduğunu sanıp (n − 2)³ almak; alt katmanı unutmak; boyalı küp sayısını vermek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-kp-boya",
+   "tip": "Boyanıp küçük küplere bölünen küp",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-06",
+   "konu": "Küp",
+   "alt": "Zıt köşeye yüzeyden en kısa yol",
+   "fikir": "İki komşu yüz aynı düzleme serilince A ve G, ayrıtı ve iki katı dik kenar olan dikdörtgenin zıt köşeleri olur; en kısa yol a√5 tir.",
+   "tuzak": "Cisim köşegenini (a√3) yüzeyden yürünebilir sanmak; yan yana ayrıtları toplamak; yüz köşegeni artı ayrıt almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kp-yol",
+   "tip": "Küp yüzeyinde en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-07",
+   "konu": "Küp",
+   "alt": "Üst ayrıt orta noktasına en kısa yol",
+   "fikir": "Ön ve üst yüz açılınca M noktası ayrıtı yatay, 1,5 katı düşey kenar olan dikdörtgenin köşesine düşer; farklı açınımlar karşılaştırılır.",
+   "tuzak": "Yalnız tek açınımı denemek; M’yi köşe sanmak; yatay uzaklığı yarım almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-kp-yol",
+   "tip": "Küp yüzeyinde en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKP-08",
+   "konu": "Küp",
+   "alt": "Orta noktalardan köşe kesme",
+   "fikir": "Kesilen köşede üç yüzden dik üçgenler gider, yerine eşkenar üçgen yüz gelir; yüzey alanı bu üç değişimle hesaplanır.",
+   "tuzak": "Yeni üçgen yüzü saymamak; kaybolan üçgenleri çıkarmamak; kayıp üçgenin alanını yanlış hesaplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-kp-kose",
+   "tip": "Küpte köşe kesme ve yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-kp-kosegen",
+   "ad": "Küpte yüz ve cisim köşegeni",
+   "kartlar": [
+    "K-GKP-01",
+    "K-GKP-02"
+   ],
+   "uygulamaKonu": "geo|Küp"
+  },
+  {
+   "tipId": "ge-kp-ucgen",
+   "ad": "Küpte köşelerle oluşan eşkenar üçgen",
+   "kartlar": [
+    "K-GKP-03"
+   ],
+   "uygulamaKonu": "geo|Küp"
+  },
+  {
+   "tipId": "ge-kp-boya",
+   "ad": "Boyanıp küçük küplere bölünen küp",
+   "kartlar": [
+    "K-GKP-04",
+    "K-GKP-05"
+   ],
+   "uygulamaKonu": "geo|Küp"
+  },
+  {
+   "tipId": "ge-kp-yol",
+   "ad": "Küp yüzeyinde en kısa yol",
+   "kartlar": [
+    "K-GKP-06",
+    "K-GKP-07"
+   ],
+   "uygulamaKonu": "geo|Küp"
+  },
+  {
+   "tipId": "ge-kp-kose",
+   "ad": "Küpte köşe kesme ve yüzey alanı",
+   "kartlar": [
+    "K-GKP-08"
+   ],
+   "uygulamaKonu": "geo|Küp"
+  }
+ ]
+}

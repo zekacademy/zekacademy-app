@@ -1,0 +1,184 @@
+{
+ "konu": "Dik Üçgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDU-01",
+   "konu": "Dik Üçgen",
+   "alt": "Duvara dayalı merdiven",
+   "fikir": "Duvar, zemin ve merdiven dik üçgen oluşturur; merdiven hipotenüstür. Pisagor üçlüsü (5-12-13) tanınırsa işlem kısalır.",
+   "tuzak": "Hipotenüsü dik kenar sanıp toplama ya da çıkarma yapmak; karekök almayı unutmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-du-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-02",
+   "konu": "Dik Üçgen",
+   "alt": "30°-60°-90° üçgende kenar",
+   "fikir": "Hipotenüs verilince 30°’nin karşısı yarısı, 60°’nin karşısı bunun √3 katıdır.",
+   "tuzak": "Karşı kenarları karıştırmak (60°’nin karşısına 30° kuralını uygulamak); √2 ile √3’ü karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-du-ozel",
+   "tip": "Özel dik üçgenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-03",
+   "konu": "Dik Üçgen",
+   "alt": "Hipotenüse inen yükseklik ve Öklid",
+   "fikir": "Yükseklik ve bir parça verilince Öklid’den öbür parça, sonra dik kenar bulunur; kök a√b biçiminde kalır.",
+   "tuzak": "Öklid’i yanlış parçayla kurmak; AC² = AD × BC gibi yanlış çarpım; komşu olmayan parçayı kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-du-oklid",
+   "tip": "Öklid bağıntıları ile dik kenar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-04",
+   "konu": "Dik Üçgen",
+   "alt": "Hipotenüse ait kenarortay",
+   "fikir": "Hipotenüse ait kenarortay hipotenüsün yarısıdır; ADC üçgeninde |AD| = |DC| olur ve çevre kolayca yazılır.",
+   "tuzak": "Kenarortayı dik kenarlardan biri sanmak; yanlış üçgenin çevresini almak; hipotenüsü Pisagor’la bulmayı atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-du-kenarortay",
+   "tip": "Hipotenüse ait kenarortay",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-05",
+   "konu": "Dik Üçgen",
+   "alt": "Kenar oranı 3:4:5 ve alan",
+   "fikir": "Çevreden k bulunur, dik kenarlardan alan hesaplanır; dik kenarlar yerine hipotenüs kullanılmaz.",
+   "tuzak": "Alanda yarıyı unutmak; hipotenüsü dik kenar sanmak; çevreyi alan sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-du-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-06",
+   "konu": "Dik Üçgen",
+   "alt": "Dik üçgen kâğıdı köşeden katlama",
+   "fikir": "C köşesi B’ye gelince kat izi [BC]’nin orta dikmesidir; E noktasında |EB| = |EC| olur ve ABE üçgeninin çevresi |AB| + |AC|’ye eşit çıkar.",
+   "tuzak": "|EB| ile |EC|’yi eşitlemeyi görememek; kat izinin uzunluğunu sormak sanmak; çevreye yanlış kenarı katmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-du-katlama",
+   "tip": "Dik üçgen kâğıdı köşeden katlama",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-07",
+   "konu": "Dik Üçgen",
+   "alt": "Yükseklik, kenarortay ve alan",
+   "fikir": "AH ve HM’den AM Pisagorla bulunur; AM = BC/2 olduğundan BC iki katıdır ve alan hipotenüs × yükseklik ÷ 2 ile bulunur.",
+   "tuzak": "AM’yi hipotenüs sanmak; alanda yükseklik yerine HM’yi kullanmak; yarıyı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-du-kenarortay",
+   "tip": "Hipotenüse ait kenarortay",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-08",
+   "konu": "Dik Üçgen",
+   "alt": "Kayan merdiven",
+   "fikir": "Merdiven boyu sabit; iki konumda 7-24-25 ve 15-20-25 üçgenleri oluşur. Alt ucun kayması yeni ve eski uzaklığın farkıdır.",
+   "tuzak": "Eşit kayma sanmak; yeni uzaklığı kayma sanmak; yüksekliği kayma sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-du-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-09",
+   "konu": "Dik Üçgen",
+   "alt": "Dikdörtgenin köşegeni ve kestirme yol",
+   "fikir": "Köşegen dik üçgenin hipotenüsüdür (9-40-41); kenar boyunca yürümek ile köşegen arasında 49 − 41 fark vardır.",
+   "tuzak": "İki kenarı toplayıp köşegen sanmak; kenar farkını almak; köşegenin 2 × uzun kenar olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-du-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDU-10",
+   "konu": "Dik Üçgen",
+   "alt": "İkizkenar dik üçgende yükseklik",
+   "fikir": "45°-45°-90° üçgende hipotenüs dik kenarın √2 katıdır; hipotenüse inen yükseklik aynı zamanda kenarortaydır, hipotenüsün yarısıdır.",
+   "tuzak": "Hipotenüsü dik kenar sanmak; yüksekliği dik kenarın yarısı sanmak; √2 yerine √3 kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-du-ozel",
+   "tip": "Özel dik üçgenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-du-pisagor",
+   "ad": "Pisagor bağıntısı ve üçlüleri",
+   "kartlar": [
+    "K-GDU-01",
+    "K-GDU-05",
+    "K-GDU-08",
+    "K-GDU-09"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-du-ozel",
+   "ad": "Özel dik üçgenler",
+   "kartlar": [
+    "K-GDU-02",
+    "K-GDU-10"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-du-oklid",
+   "ad": "Öklid bağıntıları ile dik kenar",
+   "kartlar": [
+    "K-GDU-03"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-du-kenarortay",
+   "ad": "Hipotenüse ait kenarortay",
+   "kartlar": [
+    "K-GDU-04",
+    "K-GDU-07"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-du-katlama",
+   "ad": "Dik üçgen kâğıdı köşeden katlama",
+   "kartlar": [
+    "K-GDU-06"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  }
+ ]
+}

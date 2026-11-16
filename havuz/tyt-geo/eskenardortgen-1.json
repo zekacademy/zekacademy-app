@@ -1,0 +1,481 @@
+[
+ {
+  "id": "tytgeo-eskenardortgen-0001",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · Köşegenler ve Çevre",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Yarım köşegenlerle Pisagor uygulayıp eşkenar dörtgenin kenarını ve çevresini bulur.",
+  "tipId": "ge-ed-kosegen",
+  "tip": "Köşegenlerden kenar ve çevre",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Aylin, şekildeki gibi eşkenar dörtgen biçiminde bir pano yapmıştır. Panonun köşegenleri O noktasında dik olarak kesişmekte ve uzunlukları |AC| = 16 cm, |BD| = 12 cm olmaktadır. Panonun dört kenarının tamamına, uçları üst üste binmeyecek biçimde, tek parça bir kurdele geçirilecektir.\nBuna göre, kurdelenin uzunluğu en az kaç cm olmalıdır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:345px;height:auto\" role=\"img\" viewBox=\"0 0 181.595 145.089\">\n<defs>\n<g>\n<g id=\"tcfd873-glyph-0-0\">\n<path d=\"M 4.78125 -6.1875 L 3.953125 -6.1875 L 0.265625 0 L 0.96875 0 L 2.015625 -1.765625 L 4.671875 -1.765625 L 4.96875 0 L 5.84375 0 Z M 4.140625 -5.515625 L 4.5625 -2.296875 L 2.34375 -2.296875 Z M 4.140625 -5.515625 \"/>\n</g>\n<g id=\"tcfd873-glyph-0-1\">\n<path d=\"M 2.1875 -6.1875 L 0.875 0 L 3.328125 0 C 4.75 0 5.96875 -0.96875 5.96875 -1.921875 C 5.96875 -2.59375 5.328125 -3.109375 4.53125 -3.234375 C 5.46875 -3.453125 6.34375 -4.0625 6.34375 -4.84375 C 6.34375 -5.578125 5.546875 -6.1875 4.375 -6.1875 Z M 2.421875 -3.5 L 2.875 -5.65625 L 4.015625 -5.65625 C 4.90625 -5.65625 5.578125 -5.265625 5.578125 -4.75 C 5.578125 -4.1875 4.796875 -3.5 3.46875 -3.5 Z M 1.796875 -0.53125 L 2.296875 -2.921875 L 3.609375 -2.921875 C 4.421875 -2.921875 5.1875 -2.515625 5.1875 -1.859375 C 5.1875 -1.125 4.21875 -0.53125 3.15625 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"tcfd873-glyph-0-2\">\n<path d=\"M 6.5625 -5.96875 C 6.046875 -6.1875 5.5 -6.28125 4.953125 -6.28125 C 2.9375 -6.28125 1.171875 -4.359375 1.171875 -2.375 C 1.171875 -1.046875 2.09375 0.09375 3.46875 0.09375 C 4.40625 0.09375 4.65625 0 5.46875 -0.40625 C 5.5 -0.609375 5.53125 -0.84375 5.546875 -1.046875 C 4.828125 -0.609375 4.34375 -0.515625 3.6875 -0.515625 C 2.625 -0.515625 2.03125 -1.4375 2.03125 -2.4375 C 2.03125 -4.125 3.40625 -5.671875 4.75 -5.671875 C 5.359375 -5.671875 5.8125 -5.546875 6.25 -5.1875 Z M 6.5625 -5.96875 \"/>\n</g>\n<g id=\"tcfd873-glyph-0-3\">\n<path d=\"M 2.1875 -6.1875 L 0.859375 0 L 3.296875 0 C 5.0625 0 6.828125 -1.75 6.828125 -3.765625 C 6.828125 -5.234375 5.875 -6.1875 4.609375 -6.1875 Z M 2.890625 -5.65625 L 4.265625 -5.65625 C 5.359375 -5.65625 6 -4.875 6 -3.765625 C 6 -2.140625 4.8125 -0.53125 3.171875 -0.53125 L 1.8125 -0.53125 Z M 2.890625 -5.65625 \"/>\n</g>\n<g id=\"tcfd873-glyph-0-4\">\n<path d=\"M 6.984375 -3.859375 C 6.984375 -5.328125 6.0625 -6.375 4.734375 -6.375 C 2.890625 -6.375 1.078125 -4.375 1.078125 -2.296875 C 1.078125 -0.765625 2.0625 0.203125 3.34375 0.203125 C 5.15625 0.203125 6.984375 -1.75 6.984375 -3.859375 Z M 3.46875 -0.421875 C 2.59375 -0.421875 1.953125 -1.171875 1.953125 -2.375 C 1.953125 -4.265625 3.296875 -5.765625 4.59375 -5.765625 C 5.53125 -5.765625 6.15625 -5 6.15625 -3.921875 C 6.15625 -2.328125 4.921875 -0.421875 3.46875 -0.421875 Z M 3.46875 -0.421875 \"/>\n</g>\n<g id=\"tcfd873-glyph-1-0\">\n<path d=\"M 2.75 -6.015625 L 2.5625 -6.015625 C 1.96875 -5.4375 1.109375 -5.4375 0.796875 -5.4375 L 0.796875 -4.890625 C 1.046875 -4.890625 1.5 -4.890625 2 -5.09375 L 2 -0.546875 L 0.859375 -0.546875 L 0.859375 0 L 3.890625 0 L 3.890625 -0.546875 L 2.75 -0.546875 Z M 2.75 -6.015625 \"/>\n</g>\n<g id=\"tcfd873-glyph-1-1\">\n<path d=\"M 3.796875 -5.84375 C 3.359375 -6 3.015625 -6.015625 2.828125 -6.015625 C 1.546875 -6.015625 0.390625 -4.78125 0.390625 -2.859375 C 0.390625 -0.421875 1.453125 0.203125 2.296875 0.203125 C 2.84375 0.203125 3.234375 0 3.59375 -0.40625 C 4.015625 -0.875 4.1875 -1.28125 4.1875 -1.984375 C 4.1875 -2.484375 4.109375 -2.9375 3.8125 -3.40625 C 3.453125 -3.96875 3.140625 -4.125 2.71875 -4.125 C 2.390625 -4.125 1.734375 -4.03125 1.171875 -3.390625 C 1.28125 -4.59375 1.875 -5.46875 2.828125 -5.46875 C 3.015625 -5.46875 3.34375 -5.453125 3.796875 -5.28125 Z M 1.1875 -1.953125 C 1.1875 -2.078125 1.1875 -2.09375 1.1875 -2.1875 C 1.1875 -2.875 1.625 -3.546875 2.34375 -3.546875 C 2.6875 -3.546875 2.984375 -3.421875 3.21875 -3 C 3.390625 -2.6875 3.40625 -2.390625 3.40625 -1.984375 C 3.40625 -1.640625 3.40625 -1.28125 3.171875 -0.890625 C 3.015625 -0.625 2.765625 -0.390625 2.296875 -0.390625 C 1.34375 -0.390625 1.21875 -1.65625 1.1875 -1.953125 Z M 1.1875 -1.953125 \"/>\n</g>\n<g id=\"tcfd873-glyph-1-2\">\n<path d=\"M 2.4375 -0.671875 C 2.328125 -0.671875 2.234375 -0.65625 2.125 -0.65625 L 1.140625 -0.65625 C 1.40625 -0.921875 2.328125 -1.75 2.59375 -1.984375 C 3.53125 -2.75 4.109375 -3.234375 4.109375 -4.09375 C 4.109375 -5.125 3.375 -6.015625 2.171875 -6.015625 C 1.21875 -6.015625 0.65625 -5.484375 0.390625 -4.59375 L 0.796875 -4.078125 C 1.03125 -5.125 1.484375 -5.421875 2.046875 -5.421875 C 2.828125 -5.421875 3.328125 -4.8125 3.328125 -4.078125 C 3.328125 -3.265625 2.765625 -2.75 2.109375 -2.171875 L 0.453125 -0.609375 L 0.453125 0 L 4.109375 0 L 4.109375 -0.671875 Z M 2.4375 -0.671875 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -61.22915 -0.000610346 L 0.000563068 -45.919947 L 61.230276 -0.000610346 L 0.000563068 45.922657 Z M -61.22915 -0.000610346 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -61.22915 -0.000610346 L 61.230276 -0.000610346 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000563068 -45.919947 L 0.000563068 45.922657 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.668743 -0.000610346 L 5.668743 5.66757 L 0.000563068 5.66757 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-0-0\" x=\"6.633955\" y=\"66.543182\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-0-1\" x=\"75.569118\" y=\"120.628585\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-0-2\" x=\"144.832221\" y=\"66.543182\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-0-3\" x=\"75.347509\" y=\"12.456785\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-0-4\" x=\"69.641338\" y=\"72.176809\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -61.22915 -0.000610346 L -61.22915 -67.18152 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 61.230276 -0.000610346 L 61.230276 -67.18152 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -60.832141 -64.347429 L 60.829337 -64.347429 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.072789 2.389972 C -1.695435 0.955238 -0.850318 0.279145 -0.00126981 0.0000593675 C -0.850318 -0.279026 -1.695435 -0.955119 -2.072789 -2.389853 \" transform=\"matrix(-0.99376, 0, 0, 0.99376, 18.342488, 127.394472)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.071663 2.389853 C -1.694309 0.955119 -0.849192 0.279026 -0.000143674 -0.0000593675 C -0.849192 -0.279145 -1.694309 -0.955238 -2.071663 -2.389972 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 139.640768, 127.394472)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-1-0\" x=\"74.412381\" y=\"137.914051\"/>\n<use xlink:href=\"#tcfd873-glyph-1-1\" x=\"78.991462\" y=\"137.914051\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 0.000563068 -45.919947 L 86.741018 -45.919947 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 0.000563068 45.922657 L 86.741018 45.922657 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 83.906928 -45.522938 L 83.906928 45.521718 \" transform=\"matrix(0.99376, 0, 0, -0.99376, 78.991628, 63.448612)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.070541 2.390101 C -1.693187 0.955367 -0.84807 0.279273 0.000978077 0.000188299 C -0.84807 -0.278897 -1.693187 -0.954991 -2.070541 -2.389724 \" transform=\"matrix(0, 0.99376, 0.99376, 0, 162.374813, 108.885747)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.071762 2.389724 C -1.694407 0.954991 -0.84929 0.278897 -0.000242615 -0.000188299 C -0.84929 -0.279273 -1.694407 -0.955367 -2.071762 -2.390101 \" transform=\"matrix(0, -0.99376, -0.99376, 0, 162.374813, 18.011478)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcfd873-glyph-1-0\" x=\"165.400078\" y=\"66.364305\"/>\n<use xlink:href=\"#tcfd873-glyph-1-2\" x=\"169.979159\" y=\"66.364305\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "28",
+   "B": "40",
+   "C": "48",
+   "D": "56",
+   "E": "64"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "40"
+  },
+  "celdiriciler": {
+   "A": "İki köşegenin uzunluğunu toplamış (16 + 12 = 28); çevre kenarlardan oluşur.",
+   "C": "Kısa köşegeni (12) kenar sanıp 4 × 12 = 48 bulmuş.",
+   "D": "Yarım köşegenleri (8 + 6 = 14) kenar sanıp 4 × 14 = 56 bulmuş; kenarı Pisagor ile bulmamış.",
+   "E": "Uzun köşegeni (16) kenar sanıp 4 × 16 = 64 bulmuş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Eşkenar dörtgenin çevresi (cm).",
+  "bilgi": [
+   {
+    "ad": "Eşkenar dörtgen",
+    "ifade": "dört kenarı eşit olan paralelkenardır; köşegenleri birbirini dik ortalar ve köşelerdeki açıları ikiye böler. Alan = köşegenler çarpımı ÷ 2. Örnek: köşegenleri 18 ve 24 ise yarım köşegenler 9 ve 12, kenar 15, alan 216"
+   },
+   {
+    "ad": "Pisagor bağıntısı",
+    "ifade": "dik üçgende dik kenarların kareleri toplamı hipotenüsün karesine eşittir. Örnek: 3, 4, 5 üçgeni için 3² + 4² = 5²"
+   }
+  ],
+  "ipuclari": [
+   "Köşegenlerin kesişim noktasında oluşan küçük üçgenlerden birinin dik kenarlarını düşün; eşkenar dörtgenin kenarı onun hangi kenarı?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yarım köşegenleri yaz",
+    "aciklama": "Köşegenler birbirini ortalar.",
+    "islem": "|AO| = 16 ÷ 2 = 8 · |BO| = 12 ÷ 2 = 6"
+   },
+   {
+    "baslik": "Kenarı bul",
+    "aciklama": "AOB üçgeni O’da diktir; hipotenüs eşkenar dörtgenin kenarıdır.",
+    "islem": "|AB|² = 8² + 6² = 100 → |AB| = 10"
+   },
+   {
+    "baslik": "Çevreyi hesapla",
+    "aciklama": "Dört kenar eşittir.",
+    "islem": "Ç = 4 × 10 = 40 cm"
+   }
+  ],
+  "puf": "Eşkenar dörtgende kenar, yarım köşegenlerin oluşturduğu dik üçgenin hipotenüsüdür.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-01 (köşegenlerden kenar) · köşegenler 16 ve 12",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytgeo-eskenardortgen-0002",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · Alan Hesabı",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Kenar ve bir köşegenden diğer köşegeni bulup eşkenar dörtgenin alanını hesaplar.",
+  "tipId": "ge-ed-alan",
+  "tip": "Kenar ve köşegenden alan",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir cam sanatçısı, şekildeki gibi eşkenar dörtgen biçiminde bir vitray parçası kesmiştir. Parçanın kenar uzunluğu 13 cm, uzun köşegeninin uzunluğu |AC| = 24 cm dir (şekil ölçekli değildir). Sanatçı, parçanın üzerine sürülecek cilanın miktarını yüzey alanına göre ayarlayacaktır.\nBuna göre, vitray parçasının yüzey alanı kaç cm² dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:392px;height:auto\" role=\"img\" viewBox=\"0 0 206.26 124.113\">\n<defs>\n<g>\n<g id=\"tdd5f87-glyph-0-0\">\n<path d=\"M 4.78125 -6.1875 L 3.953125 -6.1875 L 0.265625 0 L 0.96875 0 L 2.015625 -1.765625 L 4.671875 -1.765625 L 4.96875 0 L 5.84375 0 Z M 4.140625 -5.515625 L 4.5625 -2.296875 L 2.34375 -2.296875 Z M 4.140625 -5.515625 \"/>\n</g>\n<g id=\"tdd5f87-glyph-0-1\">\n<path d=\"M 2.1875 -6.1875 L 0.875 0 L 3.328125 0 C 4.75 0 5.96875 -0.96875 5.96875 -1.921875 C 5.96875 -2.59375 5.328125 -3.109375 4.53125 -3.234375 C 5.46875 -3.453125 6.34375 -4.0625 6.34375 -4.84375 C 6.34375 -5.578125 5.546875 -6.1875 4.375 -6.1875 Z M 2.421875 -3.5 L 2.875 -5.65625 L 4.015625 -5.65625 C 4.90625 -5.65625 5.578125 -5.265625 5.578125 -4.75 C 5.578125 -4.1875 4.796875 -3.5 3.46875 -3.5 Z M 1.796875 -0.53125 L 2.296875 -2.921875 L 3.609375 -2.921875 C 4.421875 -2.921875 5.1875 -2.515625 5.1875 -1.859375 C 5.1875 -1.125 4.21875 -0.53125 3.15625 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"tdd5f87-glyph-0-2\">\n<path d=\"M 6.5625 -5.96875 C 6.046875 -6.1875 5.5 -6.28125 4.953125 -6.28125 C 2.9375 -6.28125 1.171875 -4.359375 1.171875 -2.375 C 1.171875 -1.046875 2.09375 0.09375 3.46875 0.09375 C 4.40625 0.09375 4.65625 0 5.46875 -0.40625 C 5.5 -0.609375 5.53125 -0.84375 5.546875 -1.046875 C 4.828125 -0.609375 4.34375 -0.515625 3.6875 -0.515625 C 2.625 -0.515625 2.03125 -1.4375 2.03125 -2.4375 C 2.03125 -4.125 3.40625 -5.671875 4.75 -5.671875 C 5.359375 -5.671875 5.8125 -5.546875 6.25 -5.1875 Z M 6.5625 -5.96875 \"/>\n</g>\n<g id=\"tdd5f87-glyph-0-3\">\n<path d=\"M 2.1875 -6.1875 L 0.859375 0 L 3.296875 0 C 5.0625 0 6.828125 -1.75 6.828125 -3.765625 C 6.828125 -5.234375 5.875 -6.1875 4.609375 -6.1875 Z M 2.890625 -5.65625 L 4.265625 -5.65625 C 5.359375 -5.65625 6 -4.875 6 -3.765625 C 6 -2.140625 4.8125 -0.53125 3.171875 -0.53125 L 1.8125 -0.53125 Z M 2.890625 -5.65625 \"/>\n</g>\n<g id=\"tdd5f87-glyph-1-0\">\n<path d=\"M 2.4375 -0.671875 C 2.328125 -0.671875 2.234375 -0.65625 2.125 -0.65625 L 1.140625 -0.65625 C 1.40625 -0.921875 2.328125 -1.75 2.59375 -1.984375 C 3.53125 -2.75 4.109375 -3.234375 4.109375 -4.09375 C 4.109375 -5.125 3.375 -6.015625 2.171875 -6.015625 C 1.21875 -6.015625 0.65625 -5.484375 0.390625 -4.59375 L 0.796875 -4.078125 C 1.03125 -5.125 1.484375 -5.421875 2.046875 -5.421875 C 2.828125 -5.421875 3.328125 -4.8125 3.328125 -4.078125 C 3.328125 -3.265625 2.765625 -2.75 2.109375 -2.171875 L 0.453125 -0.609375 L 0.453125 0 L 4.109375 0 L 4.109375 -0.671875 Z M 2.4375 -0.671875 \"/>\n</g>\n<g id=\"tdd5f87-glyph-1-1\">\n<path d=\"M 3.421875 -1.484375 L 4.3125 -1.484375 L 4.3125 -2.0625 L 3.421875 -2.0625 L 3.421875 -5.828125 L 2.5625 -5.828125 L 0.265625 -2.0625 L 0.265625 -1.484375 L 2.671875 -1.484375 L 2.671875 0 L 3.421875 0 Z M 1 -2.0625 L 1.546875 -2.953125 C 1.8125 -3.40625 2.71875 -4.953125 2.71875 -5.421875 L 2.71875 -2.0625 Z M 1 -2.0625 \"/>\n</g>\n<g id=\"tdd5f87-glyph-1-2\">\n<path d=\"M 2.75 -6.015625 L 2.5625 -6.015625 C 1.96875 -5.4375 1.109375 -5.4375 0.796875 -5.4375 L 0.796875 -4.890625 C 1.046875 -4.890625 1.5 -4.890625 2 -5.09375 L 2 -0.546875 L 0.859375 -0.546875 L 0.859375 0 L 3.890625 0 L 3.890625 -0.546875 L 2.75 -0.546875 Z M 2.75 -6.015625 \"/>\n</g>\n<g id=\"tdd5f87-glyph-1-3\">\n<path d=\"M 0.859375 -4.5625 C 1.25 -5.34375 1.921875 -5.46875 2.25 -5.46875 C 2.703125 -5.46875 3.15625 -5.21875 3.15625 -4.65625 C 3.15625 -4.328125 2.96875 -3.5625 2 -3.46875 C 1.828125 -3.453125 1.6875 -3.453125 1.515625 -3.4375 L 1.515625 -2.859375 L 2.1875 -2.859375 C 3.0625 -2.859375 3.328125 -2.15625 3.328125 -1.625 C 3.328125 -0.921875 2.90625 -0.390625 2.234375 -0.390625 C 1.5 -0.390625 0.828125 -0.78125 0.484375 -1.265625 C 0.421875 -0.90625 0.421875 -0.890625 0.390625 -0.6875 C 0.8125 -0.171875 1.5 0.203125 2.25 0.203125 C 3.375 0.203125 4.1875 -0.671875 4.1875 -1.609375 C 4.1875 -2.3125 3.671875 -2.90625 2.9375 -3.140625 C 3.5625 -3.46875 3.9375 -4.046875 3.9375 -4.65625 C 3.9375 -5.421875 3.171875 -6.015625 2.265625 -6.015625 C 1.515625 -6.015625 0.875 -5.640625 0.5 -5.078125 Z M 0.859375 -4.5625 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -85.039572 -0.000104959 L 0.00137841 -35.435146 L 85.042329 -0.000104959 L 0.00137841 35.434936 Z M -85.039572 -0.000104959 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"2.98883 2.98883\" stroke-miterlimit=\"10\" d=\"M -85.039572 -0.000104959 L 85.042329 -0.000104959 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"2.98883 2.98883\" stroke-miterlimit=\"10\" d=\"M 0.00137841 -35.435146 L 0.00137841 35.434936 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-0-0\" x=\"6.627674\" y=\"56.072268\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-0-1\" x=\"99.145476\" y=\"99.697491\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-0-2\" x=\"191.990936\" y=\"56.072268\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-0-3\" x=\"98.924059\" y=\"12.447045\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -85.039572 -0.000104959 L -85.039572 -56.695383 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 85.042329 -0.000104959 L 85.042329 -56.695383 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -84.642221 -53.858849 L 84.641044 -53.858849 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 102.565038, 52.980365)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.071612 2.392073 C -1.693932 0.956102 -0.848086 0.279425 0.00169384 0.0000991073 C -0.848086 -0.279227 -1.693932 -0.955903 -2.071612 -2.391874 \" transform=\"matrix(-0.992904, 0, 0, 0.992904, 18.325901, 106.456933)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.072789 2.391874 C -1.695109 0.955903 -0.849264 0.279227 0.000516483 -0.0000991073 C -0.849264 -0.279425 -1.695109 -0.956102 -2.072789 -2.392073 \" transform=\"matrix(0.992904, 0, 0, -0.992904, 186.804175, 106.456933)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-1-0\" x=\"97.989736\" y=\"116.968063\"/>\n<use xlink:href=\"#tdd5f87-glyph-1-1\" x=\"102.564872\" y=\"116.968063\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tdd5f87-glyph-1-2\" x=\"52.732179\" y=\"80.745932\"/>\n<use xlink:href=\"#tdd5f87-glyph-1-3\" x=\"57.307315\" y=\"80.745932\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "52",
+   "B": "60",
+   "C": "65",
+   "D": "78",
+   "E": "120"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "120"
+  },
+  "celdiriciler": {
+   "A": "Çevreyi (4 × 13) hesaplamış; soru alanı istiyor.",
+   "B": "Yarım köşegenleri çarpıp (12 × 5) alan saymış; köşegenler çarpımı ÷ 2 gerekir.",
+   "C": "Kenar ile kısa yarım köşegeni çarpmış (13 × 5).",
+   "D": "Kenar ile yarım köşegenin çarpımının yarısını (13 × 12 ÷ 2) alan sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "islem",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Eşkenar dörtgen biçimli parçanın alanı (cm²).",
+  "bilgi": [
+   {
+    "ad": "Eşkenar dörtgen",
+    "ifade": "dört kenarı eşit olan paralelkenardır; köşegenleri birbirini dik ortalar ve köşelerdeki açıları ikiye böler. Alan = köşegenler çarpımı ÷ 2. Örnek: köşegenleri 18 ve 24 ise yarım köşegenler 9 ve 12, kenar 15, alan 216"
+   },
+   {
+    "ad": "Pisagor bağıntısı",
+    "ifade": "dik üçgende dik kenarların kareleri toplamı hipotenüsün karesine eşittir. Örnek: 3, 4, 5 üçgeni için 3² + 4² = 5²"
+   }
+  ],
+  "ipuclari": [
+   "Alan için iki köşegen gerekir; verilmeyen köşegenin yarısını kenar ve verilen yarım köşegenle bir dik üçgenden bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Yarım köşegeni al",
+    "aciklama": "Köşegenler birbirini ortalar; uzun köşegenin yarısı 12 cm’dir.",
+    "islem": "|AO| = 24 ÷ 2 = 12"
+   },
+   {
+    "baslik": "Kısa yarım köşegeni bul",
+    "aciklama": "AOB dik üçgeninde hipotenüs 13’tür.",
+    "islem": "|BO|² = 13² − 12² = 25 → |BO| = 5"
+   },
+   {
+    "baslik": "Köşegeni tamamla",
+    "aciklama": "Kısa köşegen yarımın iki katıdır.",
+    "islem": "|BD| = 2 × 5 = 10 cm"
+   },
+   {
+    "baslik": "Alanı hesapla",
+    "aciklama": "Alan = köşegenler çarpımı ÷ 2.",
+    "islem": "24 × 10 ÷ 2 = 120 cm²"
+   }
+  ],
+  "puf": "Kenar ve bir köşegen verilince diğer köşegen yarım köşegenlerle Pisagordan bulunur; alan köşegenlerin çarpımının yarısıdır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-02 (kenar + köşegen) · kenar 13, köşegen 24",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytgeo-eskenardortgen-0003",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · Köşegen ve Açılar",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Komşu açıları ve köşegenin açıortay olduğunu kullanarak köşegenle oluşan açıyı bulur.",
+  "tipId": "ge-ed-aci",
+  "tip": "Köşedeki açılar ve köşegen",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Ece, eşkenar dörtgen biçimli bir kâğıdın köşegenleri boyunca iki kat izi oluşturmuştur; kat izleri şekildeki gibi O noktasında kesişmektedir. Kâğıdın A köşesindeki açı m(DAB) = 64° olarak ölçülmüştür.\nŞekil ölçekli değildir.\nBuna göre, x = m(OBC) kaç derecedir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:550px;height:auto\" role=\"img\" viewBox=\"0 0 289.317 186.087\">\n<defs>\n<g>\n<g id=\"t2c2c8e-glyph-0-0\">\n<path d=\"M 3.796875 -5.859375 C 3.375 -6.015625 3.03125 -6.03125 2.828125 -6.03125 C 1.546875 -6.03125 0.390625 -4.78125 0.390625 -2.859375 C 0.390625 -0.421875 1.46875 0.203125 2.296875 0.203125 C 2.84375 0.203125 3.234375 0 3.59375 -0.40625 C 4.03125 -0.875 4.1875 -1.28125 4.1875 -1.984375 C 4.1875 -2.484375 4.125 -2.9375 3.8125 -3.421875 C 3.46875 -3.984375 3.15625 -4.125 2.734375 -4.125 C 2.390625 -4.125 1.734375 -4.03125 1.171875 -3.40625 C 1.28125 -4.59375 1.875 -5.484375 2.84375 -5.484375 C 3.015625 -5.484375 3.34375 -5.46875 3.796875 -5.296875 Z M 1.1875 -1.953125 C 1.1875 -2.078125 1.1875 -2.09375 1.203125 -2.1875 C 1.203125 -2.875 1.625 -3.546875 2.34375 -3.546875 C 2.6875 -3.546875 2.984375 -3.421875 3.21875 -3 C 3.40625 -2.6875 3.421875 -2.40625 3.421875 -1.984375 C 3.421875 -1.640625 3.421875 -1.28125 3.1875 -0.890625 C 3.015625 -0.625 2.765625 -0.390625 2.296875 -0.390625 C 1.34375 -0.390625 1.21875 -1.65625 1.1875 -1.953125 Z M 1.1875 -1.953125 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-0-1\">\n<path d=\"M 3.421875 -1.484375 L 4.3125 -1.484375 L 4.3125 -2.0625 L 3.421875 -2.0625 L 3.421875 -5.828125 L 2.5625 -5.828125 L 0.265625 -2.0625 L 0.265625 -1.484375 L 2.671875 -1.484375 L 2.671875 0 L 3.421875 0 Z M 1 -2.0625 L 1.546875 -2.96875 C 1.8125 -3.421875 2.734375 -4.96875 2.734375 -5.421875 L 2.734375 -2.0625 Z M 1 -2.0625 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-1-0\">\n<path d=\"M 3.25 -1.484375 C 3.25 -2.25 2.640625 -2.84375 1.90625 -2.84375 C 1.15625 -2.84375 0.546875 -2.234375 0.546875 -1.484375 C 0.546875 -0.734375 1.15625 -0.140625 1.90625 -0.140625 C 2.640625 -0.140625 3.25 -0.734375 3.25 -1.484375 Z M 1.90625 -0.453125 C 1.328125 -0.453125 0.859375 -0.90625 0.859375 -1.484375 C 0.859375 -2.078125 1.328125 -2.53125 1.90625 -2.53125 C 2.46875 -2.53125 2.9375 -2.078125 2.9375 -1.484375 C 2.9375 -0.90625 2.46875 -0.453125 1.90625 -0.453125 Z M 1.90625 -0.453125 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-0\">\n<path d=\"M 2.828125 -2.046875 L 4.90625 -3.96875 L 4.140625 -3.96875 L 2.609375 -2.5 L 1.671875 -3.96875 L 0.890625 -3.96875 L 2.21875 -2.046875 L 0 0 L 0.78125 0 L 2.4375 -1.671875 L 3.4375 0 L 4.21875 0 Z M 2.828125 -2.046875 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-1\">\n<path d=\"M 2.1875 -6.1875 L 0.875 0 L 3.328125 0 C 4.765625 0 5.984375 -0.96875 5.984375 -1.921875 C 5.984375 -2.59375 5.328125 -3.109375 4.53125 -3.234375 C 5.484375 -3.46875 6.359375 -4.0625 6.359375 -4.859375 C 6.359375 -5.59375 5.546875 -6.1875 4.390625 -6.1875 Z M 2.421875 -3.5 L 2.875 -5.671875 L 4.03125 -5.671875 C 4.921875 -5.671875 5.59375 -5.265625 5.59375 -4.75 C 5.59375 -4.203125 4.796875 -3.5 3.46875 -3.5 Z M 1.796875 -0.53125 L 2.296875 -2.921875 L 3.609375 -2.921875 C 4.4375 -2.921875 5.203125 -2.515625 5.203125 -1.859375 C 5.203125 -1.125 4.21875 -0.53125 3.171875 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-2\">\n<path d=\"M 6.5625 -5.984375 C 6.0625 -6.1875 5.515625 -6.296875 4.96875 -6.296875 C 2.9375 -6.296875 1.171875 -4.375 1.171875 -2.375 C 1.171875 -1.046875 2.09375 0.09375 3.484375 0.09375 C 4.40625 0.09375 4.65625 0 5.484375 -0.40625 C 5.515625 -0.609375 5.546875 -0.84375 5.5625 -1.046875 C 4.828125 -0.609375 4.359375 -0.515625 3.6875 -0.515625 C 2.625 -0.515625 2.03125 -1.4375 2.03125 -2.4375 C 2.03125 -4.125 3.421875 -5.6875 4.765625 -5.6875 C 5.359375 -5.6875 5.828125 -5.546875 6.265625 -5.203125 Z M 6.5625 -5.984375 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-3\">\n<path d=\"M 2.1875 -6.1875 L 0.859375 0 L 3.296875 0 C 5.0625 0 6.828125 -1.75 6.828125 -3.78125 C 6.828125 -5.234375 5.890625 -6.1875 4.609375 -6.1875 Z M 2.90625 -5.671875 L 4.28125 -5.671875 C 5.359375 -5.671875 6.015625 -4.890625 6.015625 -3.78125 C 6.015625 -2.140625 4.828125 -0.53125 3.1875 -0.53125 L 1.8125 -0.53125 Z M 2.90625 -5.671875 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-4\">\n<path d=\"M 4.796875 -6.1875 L 3.96875 -6.1875 L 0.265625 0 L 0.96875 0 L 2.03125 -1.78125 L 4.671875 -1.78125 L 4.984375 0 L 5.859375 0 Z M 4.15625 -5.53125 L 4.5625 -2.296875 L 2.34375 -2.296875 Z M 4.15625 -5.53125 \"/>\n</g>\n<g id=\"t2c2c8e-glyph-2-5\">\n<path d=\"M 7 -3.859375 C 7 -5.328125 6.0625 -6.390625 4.734375 -6.390625 C 2.90625 -6.390625 1.078125 -4.390625 1.078125 -2.296875 C 1.078125 -0.765625 2.0625 0.203125 3.34375 0.203125 C 5.171875 0.203125 7 -1.75 7 -3.859375 Z M 3.46875 -0.421875 C 2.609375 -0.421875 1.953125 -1.171875 1.953125 -2.375 C 1.953125 -4.28125 3.296875 -5.78125 4.609375 -5.78125 C 5.546875 -5.78125 6.171875 -5.015625 6.171875 -3.9375 C 6.171875 -2.34375 4.9375 -0.421875 3.46875 -0.421875 Z M 3.46875 -0.421875 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -120.191533 -0.00111797 L 0.000756872 -75.117864 L 120.189121 -0.00111797 L 0.000756872 75.119554 Z M -120.191533 -0.00111797 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -120.191533 -0.00111797 L 120.189121 -0.00111797 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000756872 -75.117864 L 0.000756872 75.119554 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.669057 -0.00111797 L 5.669057 5.671107 L 0.000756872 5.671107 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -100.9727 -12.02074 C -96.376039 -4.668437 -96.376039 4.662275 -100.9727 12.014578 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-0-0\" x=\"6.643643\" y=\"95.902473\"/>\n<use xlink:href=\"#t2c2c8e-glyph-0-1\" x=\"11.228979\" y=\"95.902473\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-1-0\" x=\"15.814648\" y=\"92.11207\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000756872 -55.27489 C 6.842756 -55.27489 13.201928 -58.803839 16.829012 -64.605602 \" transform=\"matrix(0.995118, 0, 0, -0.995118, 150.467997, 92.588731)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-0\" x=\"162.303926\" y=\"143.400433\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-1\" x=\"147.041807\" y=\"178.90026\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-2\" x=\"275.072648\" y=\"95.687528\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-3\" x=\"146.819896\" y=\"12.4738\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-4\" x=\"26.392748\" y=\"83.839657\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2c2c8e-glyph-2-5\" x=\"141.10593\" y=\"101.893081\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "26",
+   "B": "32",
+   "C": "45",
+   "D": "58",
+   "E": "64"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "58"
+  },
+  "celdiriciler": {
+   "A": "Dik üçgende 90° − 64° = 26° hesaplamış; x açısı B köşesindeki açının yarısıdır.",
+   "B": "A köşesindeki açıyı ikiye bölüp (64° ÷ 2) bunu x sanmış.",
+   "C": "Köşegenlerin dik kesiştiğini görüp 90° yi ikiye bölmüş.",
+   "E": "Karşılıklı açıların eşitliğini kullanıp C köşesindeki açıyı (64°) x kabul etmiş."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "C": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "x = m(OBC) açısının ölçüsü.",
+  "bilgi": [
+   {
+    "ad": "Eşkenar dörtgende açılar",
+    "ifade": "karşılıklı açılar eşit, komşu açılar bütünlerdir (toplamları 180°). Köşegen köşedeki açıyı ikiye böler. Örnek: bir köşedeki açı 80° ise komşusu 100°, köşegenle ayrılan parça 40°"
+   }
+  ],
+  "ipuclari": [
+   "Komşu açıların toplamını düşün; köşegenler köşedeki açıya ne yapar?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "B köşesindeki açıyı bul",
+    "aciklama": "A ve B komşu açılardır; toplamları 180°’dir.",
+    "islem": "m(ABC) = 180° − 64° = 116°"
+   },
+   {
+    "baslik": "Köşegenle böl",
+    "aciklama": "[BD] köşegeni B köşesindeki açıyı ikiye böler.",
+    "islem": "x = 116° ÷ 2 = 58°"
+   },
+   {
+    "baslik": "Kontrol et",
+    "aciklama": "AOB dik üçgeninde diğer dar açı 90° − 58° = 32° = 64° ÷ 2 olmalıdır.",
+    "islem": "90° − 58° = 32°"
+   }
+  ],
+  "puf": "Eşkenar dörtgende komşu açılar bütünler, köşegenler açıortaydır; ABO dik üçgeninde dar açılar toplamı 90°’dir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-03 (açılar) · m(DAB) = 64°, m(OBC) istenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytgeo-eskenardortgen-0004",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · 60° Açılı Eşkenar Dörtgen",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Açılı dik üçgenden yüksekliği bulup eşkenar dörtgenin alanını hesaplar.",
+  "tipId": "ge-ed-yukseklik",
+  "tip": "Kenar ve açıdan alan",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 3,
+  "metin": "Şekildeki ABCD eşkenar dörtgeninde |AB| = 6 cm ve m(DAB) = 60° dir. D noktasından [AB] kenarına indirilen dikme [AB] kenarını E noktasında kesmektedir. Şekil ölçekli değildir.\nBuna göre, ABCD eşkenar dörtgeninin alanı kaç cm² dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:326px;height:auto\" role=\"img\" viewBox=\"0 0 171.507 131.908\">\n<defs>\n<g>\n<g id=\"t7fa44f-glyph-0-0\">\n<path d=\"M 3.8125 -5.859375 C 3.375 -6.03125 3.03125 -6.046875 2.828125 -6.046875 C 1.546875 -6.046875 0.390625 -4.796875 0.390625 -2.875 C 0.390625 -0.421875 1.46875 0.203125 2.3125 0.203125 C 2.84375 0.203125 3.25 0 3.609375 -0.40625 C 4.03125 -0.875 4.203125 -1.28125 4.203125 -2 C 4.203125 -2.5 4.125 -2.9375 3.828125 -3.421875 C 3.46875 -3.984375 3.15625 -4.140625 2.734375 -4.140625 C 2.390625 -4.140625 1.734375 -4.046875 1.1875 -3.40625 C 1.28125 -4.609375 1.890625 -5.484375 2.84375 -5.484375 C 3.015625 -5.484375 3.359375 -5.484375 3.8125 -5.296875 Z M 1.1875 -1.953125 C 1.1875 -2.078125 1.1875 -2.09375 1.203125 -2.203125 C 1.203125 -2.875 1.625 -3.5625 2.34375 -3.5625 C 2.6875 -3.5625 3 -3.4375 3.21875 -3.015625 C 3.40625 -2.6875 3.421875 -2.40625 3.421875 -2 C 3.421875 -1.640625 3.421875 -1.28125 3.1875 -0.890625 C 3.015625 -0.625 2.765625 -0.390625 2.3125 -0.390625 C 1.34375 -0.390625 1.21875 -1.65625 1.1875 -1.953125 Z M 1.1875 -1.953125 \"/>\n</g>\n<g id=\"t7fa44f-glyph-0-1\">\n<path d=\"M 4.21875 -2.90625 C 4.21875 -3.75 4.15625 -4.546875 3.734375 -5.25 C 3.4375 -5.734375 2.890625 -6.046875 2.296875 -6.046875 C 1.84375 -6.046875 1.21875 -5.875 0.8125 -5.171875 C 0.390625 -4.46875 0.359375 -3.515625 0.359375 -2.90625 C 0.359375 -2.453125 0.359375 -1.4375 0.765625 -0.71875 C 1.21875 0.078125 1.890625 0.203125 2.28125 0.203125 C 2.8125 0.203125 3.453125 -0.015625 3.828125 -0.765625 C 4.171875 -1.40625 4.21875 -2.1875 4.21875 -2.90625 Z M 2.296875 -0.390625 C 1.109375 -0.390625 1.109375 -2.171875 1.109375 -3.015625 C 1.109375 -3.578125 1.109375 -4.03125 1.25 -4.5 C 1.40625 -5.109375 1.78125 -5.453125 2.28125 -5.453125 C 3.484375 -5.453125 3.484375 -3.84375 3.484375 -3.015625 C 3.484375 -2.40625 3.484375 -1.78125 3.265625 -1.203125 C 3.0625 -0.59375 2.640625 -0.390625 2.296875 -0.390625 Z M 2.296875 -0.390625 \"/>\n</g>\n<g id=\"t7fa44f-glyph-1-0\">\n<path d=\"M 3.25 -1.484375 C 3.25 -2.25 2.640625 -2.84375 1.90625 -2.84375 C 1.15625 -2.84375 0.546875 -2.234375 0.546875 -1.484375 C 0.546875 -0.734375 1.15625 -0.140625 1.90625 -0.140625 C 2.640625 -0.140625 3.25 -0.734375 3.25 -1.484375 Z M 1.90625 -0.453125 C 1.328125 -0.453125 0.859375 -0.90625 0.859375 -1.484375 C 0.859375 -2.078125 1.328125 -2.53125 1.90625 -2.53125 C 2.46875 -2.53125 2.9375 -2.078125 2.9375 -1.484375 C 2.9375 -0.90625 2.46875 -0.453125 1.90625 -0.453125 Z M 1.90625 -0.453125 \"/>\n</g>\n<g id=\"t7fa44f-glyph-2-0\">\n<path d=\"M 4.796875 -6.203125 L 3.96875 -6.203125 L 0.265625 0 L 0.96875 0 L 2.03125 -1.78125 L 4.6875 -1.78125 L 4.984375 0 L 5.875 0 Z M 4.15625 -5.546875 L 4.578125 -2.3125 L 2.34375 -2.3125 Z M 4.15625 -5.546875 \"/>\n</g>\n<g id=\"t7fa44f-glyph-2-1\">\n<path d=\"M 2.203125 -6.203125 L 0.875 0 L 3.328125 0 C 4.765625 0 6 -0.96875 6 -1.921875 C 6 -2.59375 5.34375 -3.125 4.546875 -3.25 C 5.484375 -3.46875 6.359375 -4.078125 6.359375 -4.859375 C 6.359375 -5.609375 5.5625 -6.203125 4.390625 -6.203125 Z M 2.4375 -3.515625 L 2.890625 -5.671875 L 4.03125 -5.671875 C 4.921875 -5.671875 5.609375 -5.28125 5.609375 -4.765625 C 5.609375 -4.203125 4.8125 -3.515625 3.484375 -3.515625 Z M 1.796875 -0.53125 L 2.3125 -2.9375 L 3.625 -2.9375 C 4.4375 -2.9375 5.203125 -2.515625 5.203125 -1.859375 C 5.203125 -1.125 4.234375 -0.53125 3.171875 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"t7fa44f-glyph-2-2\">\n<path d=\"M 6.578125 -6 C 6.0625 -6.203125 5.515625 -6.3125 4.984375 -6.3125 C 2.953125 -6.3125 1.1875 -4.375 1.1875 -2.390625 C 1.1875 -1.046875 2.09375 0.09375 3.484375 0.09375 C 4.421875 0.09375 4.671875 0 5.484375 -0.40625 C 5.515625 -0.609375 5.546875 -0.84375 5.5625 -1.046875 C 4.84375 -0.609375 4.359375 -0.515625 3.703125 -0.515625 C 2.625 -0.515625 2.03125 -1.4375 2.03125 -2.4375 C 2.03125 -4.140625 3.421875 -5.6875 4.765625 -5.6875 C 5.375 -5.6875 5.84375 -5.5625 6.28125 -5.203125 Z M 6.578125 -6 \"/>\n</g>\n<g id=\"t7fa44f-glyph-2-3\">\n<path d=\"M 2.1875 -6.203125 L 0.859375 0 L 3.3125 0 C 5.078125 0 6.84375 -1.765625 6.84375 -3.78125 C 6.84375 -5.25 5.90625 -6.203125 4.625 -6.203125 Z M 2.90625 -5.671875 L 4.28125 -5.671875 C 5.375 -5.671875 6.03125 -4.890625 6.03125 -3.78125 C 6.03125 -2.140625 4.828125 -0.53125 3.1875 -0.53125 L 1.8125 -0.53125 Z M 2.90625 -5.671875 \"/>\n</g>\n<g id=\"t7fa44f-glyph-2-4\">\n<path d=\"M 2.328125 -2.921875 L 5.359375 -2.921875 L 5.484375 -3.5 L 2.453125 -3.5 L 2.890625 -5.5625 L 3.21875 -5.5625 C 3.953125 -5.5625 4.6875 -5.546875 5.40625 -5.546875 L 6.171875 -5.546875 L 6.3125 -6.171875 L 2.15625 -6.171875 L 0.84375 0 L 5.125 0 L 5.265625 -0.671875 L 4.375 -0.671875 C 3.53125 -0.671875 2.6875 -0.65625 1.84375 -0.65625 Z M 2.328125 -2.921875 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00130915 -0.00195693 L 93.544162 -0.00195693 L 140.314939 81.015418 L 46.773385 81.015418 Z M -0.00130915 -0.00195693 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"2.98883 2.98883\" stroke-miterlimit=\"10\" d=\"M 46.773385 81.015418 L 46.773385 -0.00195693 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 46.773385 5.670552 L 41.100876 5.670552 L 41.100876 -0.00195693 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 21.258847 -0.00195693 C 21.258847 7.594034 17.208174 14.614156 10.630728 18.410192 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-0-0\" x=\"37.973843\" y=\"84.792847\"/>\n<use xlink:href=\"#t7fa44f-glyph-0-1\" x=\"42.568469\" y=\"84.792847\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-1-0\" x=\"47.162431\" y=\"80.994765\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-2-0\" x=\"6.290917\" y=\"107.528493\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-2-1\" x=\"111.186393\" y=\"107.528493\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-2-2\" x=\"157.790429\" y=\"14.762152\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-2-3\" x=\"55.903305\" y=\"12.642246\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-2-4\" x=\"58.698271\" y=\"108.602406\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -0.00130915 -0.00195693 L -0.00130915 -18.425859 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 93.544162 -0.00195693 L 93.544162 -18.425859 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.398274 -15.589604 L 93.144579 -15.589604 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 15.352868, 98.431642)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.071578 2.392364 C -1.6955 0.954649 -0.849325 0.280843 0.000767746 -0.00121577 C -0.849325 -0.279357 -1.6955 -0.957081 -2.071578 -2.390878 \" transform=\"matrix(-0.997134, 0, 0, 0.997134, 15.551547, 113.977775)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.073266 2.390878 C -1.69327 0.957081 -0.851012 0.279357 -0.000919385 0.00121577 C -0.851012 -0.280843 -1.69327 -0.954649 -2.073266 -2.392364 \" transform=\"matrix(0.997134, 0, 0, -0.997134, 108.430604, 113.977775)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t7fa44f-glyph-0-0\" x=\"59.692413\" y=\"125.382173\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "9√3",
+   "B": "18",
+   "C": "18√3",
+   "D": "36",
+   "E": "36√3"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "18√3"
+  },
+  "celdiriciler": {
+   "A": "Yalnız ABD üçgeninin alanını (6 × 3√3 ÷ 2) bulmuş; soru paralelkenarın alanını istiyor.",
+   "B": "Yüksekliği 3 almış (60° ile 30° yu karıştırmış): 6 × 3.",
+   "D": "Eşkenar dörtgeni kare sanıp 6 × 6 = 36 yazmış.",
+   "E": "Yüksekliği 6√3 almış (√3 çarpanını kenara uygulamış): 6 × 6√3."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "ABCD eşkenar dörtgeninin alanı (cm²).",
+  "bilgi": [
+   {
+    "ad": "Paralelkenarın alanı",
+    "ifade": "taban × yüksekliktir; eşkenar dörtgende de geçerlidir. 30°-60°-90° üçgende kenarlar 1 : √3 : 2 oranındadır. Örnek: hipotenüsü 8 olan böyle bir üçgende kısa dik kenar 4, uzun dik kenar 4√3’tür"
+   }
+  ],
+  "ipuclari": [
+   "ADE dik üçgeninin açılarına bak; dik kenarlarla hipotenüs arasındaki özel oranı hatırla, sonra alanı taban × yükseklik olarak yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Üçgeni tanı",
+    "aciklama": "ADE dik üçgeninde m(DAE) = 60° ve |AD| = 6; açılar 30°, 60°, 90° dir.",
+    "islem": "|AE| = 6 ÷ 2 = 3"
+   },
+   {
+    "baslik": "Yüksekliği bul",
+    "aciklama": "Pisagor ya da 30-60-90 oranı (1 : √3 : 2).",
+    "islem": "|DE| = 3√3"
+   },
+   {
+    "baslik": "Alanı hesapla",
+    "aciklama": "Alan = taban × yükseklik.",
+    "islem": "6 × 3√3 = 18√3 cm²"
+   }
+  ],
+  "puf": "Açısı verilen paralelkenarda yükseklik, dik üçgenin özel açı oranlarından bulunur; alan = taban × yükseklik.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-04 (yükseklik, alan) · kenar 6, açı 60°",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytgeo-eskenardortgen-0005",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · İç Teğet Çember",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Köşegenlerden kenar ve alanı bulup iç teğet çemberin yarıçapını hesaplar.",
+  "tipId": "ge-ed-icteget",
+  "tip": "İç teğet çemberin yarıçapı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekildeki ABCD eşkenar dörtgeninin köşegenleri O noktasında kesişmekte ve |AC| = 40 cm, |BD| = 30 cm olmaktadır. Merkezi O olan çember, eşkenar dörtgenin dört kenarına teğettir. Şekil ölçekli değildir.\nBuna göre, bu çemberin yarıçapı kaç cm dir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:392px;height:auto\" role=\"img\" viewBox=\"0 0 206.539 163.797\">\n<defs>\n<g>\n<g id=\"tc841b2-glyph-0-0\">\n<path d=\"M 4.8125 -6.21875 L 3.96875 -6.21875 L 0.265625 0 L 0.96875 0 L 2.03125 -1.78125 L 4.6875 -1.78125 L 5 0 L 5.875 0 Z M 4.15625 -5.546875 L 4.578125 -2.3125 L 2.359375 -2.3125 Z M 4.15625 -5.546875 \"/>\n</g>\n<g id=\"tc841b2-glyph-0-1\">\n<path d=\"M 2.203125 -6.21875 L 0.875 0 L 3.34375 0 C 4.78125 0 6 -0.96875 6 -1.921875 C 6 -2.609375 5.359375 -3.125 4.546875 -3.25 C 5.5 -3.46875 6.375 -4.078125 6.375 -4.875 C 6.375 -5.609375 5.5625 -6.21875 4.40625 -6.21875 Z M 2.4375 -3.515625 L 2.890625 -5.6875 L 4.03125 -5.6875 C 4.9375 -5.6875 5.609375 -5.296875 5.609375 -4.765625 C 5.609375 -4.21875 4.8125 -3.515625 3.484375 -3.515625 Z M 1.796875 -0.53125 L 2.3125 -2.9375 L 3.625 -2.9375 C 4.453125 -2.9375 5.21875 -2.53125 5.21875 -1.859375 C 5.21875 -1.125 4.234375 -0.53125 3.171875 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"tc841b2-glyph-0-2\">\n<path d=\"M 6.59375 -6 C 6.078125 -6.21875 5.53125 -6.328125 4.984375 -6.328125 C 2.953125 -6.328125 1.1875 -4.390625 1.1875 -2.390625 C 1.1875 -1.046875 2.109375 0.09375 3.484375 0.09375 C 4.421875 0.09375 4.671875 0 5.5 -0.40625 C 5.53125 -0.625 5.5625 -0.84375 5.578125 -1.0625 C 4.859375 -0.609375 4.375 -0.515625 3.703125 -0.515625 C 2.625 -0.515625 2.046875 -1.4375 2.046875 -2.4375 C 2.046875 -4.140625 3.421875 -5.703125 4.78125 -5.703125 C 5.375 -5.703125 5.84375 -5.5625 6.28125 -5.21875 Z M 6.59375 -6 \"/>\n</g>\n<g id=\"tc841b2-glyph-0-3\">\n<path d=\"M 2.1875 -6.21875 L 0.875 0 L 3.3125 0 C 5.078125 0 6.859375 -1.765625 6.859375 -3.78125 C 6.859375 -5.25 5.90625 -6.21875 4.625 -6.21875 Z M 2.90625 -5.6875 L 4.28125 -5.6875 C 5.375 -5.6875 6.03125 -4.90625 6.03125 -3.78125 C 6.03125 -2.15625 4.84375 -0.53125 3.203125 -0.53125 L 1.8125 -0.53125 Z M 2.90625 -5.6875 \"/>\n</g>\n<g id=\"tc841b2-glyph-0-4\">\n<path d=\"M 7.015625 -3.875 C 7.015625 -5.359375 6.09375 -6.40625 4.75 -6.40625 C 2.90625 -6.40625 1.078125 -4.40625 1.078125 -2.3125 C 1.078125 -0.765625 2.078125 0.203125 3.359375 0.203125 C 5.1875 0.203125 7.015625 -1.75 7.015625 -3.875 Z M 3.484375 -0.4375 C 2.609375 -0.4375 1.953125 -1.171875 1.953125 -2.375 C 1.953125 -4.28125 3.3125 -5.796875 4.625 -5.796875 C 5.5625 -5.796875 6.1875 -5.03125 6.1875 -3.953125 C 6.1875 -2.34375 4.953125 -0.4375 3.484375 -0.4375 Z M 3.484375 -0.4375 \"/>\n</g>\n<g id=\"tc841b2-glyph-1-0\">\n<path d=\"M 3.4375 -1.5 L 4.328125 -1.5 L 4.328125 -2.078125 L 3.4375 -2.078125 L 3.4375 -5.859375 L 2.5625 -5.859375 L 0.265625 -2.078125 L 0.265625 -1.5 L 2.6875 -1.5 L 2.6875 0 L 3.4375 0 Z M 1 -2.078125 L 1.546875 -2.96875 C 1.8125 -3.421875 2.734375 -4.984375 2.734375 -5.4375 L 2.734375 -2.078125 Z M 1 -2.078125 \"/>\n</g>\n<g id=\"tc841b2-glyph-1-1\">\n<path d=\"M 4.21875 -2.90625 C 4.21875 -3.765625 4.15625 -4.546875 3.75 -5.25 C 3.453125 -5.75 2.890625 -6.046875 2.296875 -6.046875 C 1.859375 -6.046875 1.21875 -5.875 0.8125 -5.1875 C 0.390625 -4.46875 0.359375 -3.53125 0.359375 -2.90625 C 0.359375 -2.46875 0.359375 -1.4375 0.765625 -0.71875 C 1.21875 0.078125 1.890625 0.203125 2.296875 0.203125 C 2.8125 0.203125 3.453125 -0.015625 3.84375 -0.765625 C 4.1875 -1.421875 4.21875 -2.1875 4.21875 -2.90625 Z M 2.296875 -0.390625 C 1.109375 -0.390625 1.109375 -2.171875 1.109375 -3.015625 C 1.109375 -3.578125 1.109375 -4.03125 1.25 -4.5 C 1.421875 -5.125 1.78125 -5.46875 2.296875 -5.46875 C 3.484375 -5.46875 3.484375 -3.84375 3.484375 -3.015625 C 3.484375 -2.40625 3.484375 -1.796875 3.28125 -1.203125 C 3.078125 -0.59375 2.65625 -0.390625 2.296875 -0.390625 Z M 2.296875 -0.390625 \"/>\n</g>\n<g id=\"tc841b2-glyph-1-2\">\n<path d=\"M 0.859375 -4.59375 C 1.25 -5.375 1.9375 -5.5 2.265625 -5.5 C 2.71875 -5.5 3.171875 -5.25 3.171875 -4.6875 C 3.171875 -4.34375 2.984375 -3.578125 2.015625 -3.484375 C 1.84375 -3.46875 1.703125 -3.46875 1.53125 -3.453125 L 1.53125 -2.875 L 2.203125 -2.875 C 3.078125 -2.875 3.34375 -2.171875 3.34375 -1.625 C 3.34375 -0.921875 2.921875 -0.390625 2.25 -0.390625 C 1.515625 -0.390625 0.828125 -0.78125 0.5 -1.265625 C 0.421875 -0.90625 0.421875 -0.890625 0.390625 -0.703125 C 0.828125 -0.171875 1.5 0.203125 2.265625 0.203125 C 3.390625 0.203125 4.203125 -0.6875 4.203125 -1.625 C 4.203125 -2.328125 3.6875 -2.921875 2.953125 -3.15625 C 3.578125 -3.484375 3.953125 -4.0625 3.953125 -4.6875 C 3.953125 -5.453125 3.203125 -6.046875 2.28125 -6.046875 C 1.515625 -6.046875 0.890625 -5.671875 0.515625 -5.109375 Z M 0.859375 -4.59375 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -73.700592 0.0019126 L -0.0013039 -55.277447 L 73.7019 0.0019126 L -0.0013039 55.277358 Z M -73.700592 0.0019126 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"2.98883 2.98883\" stroke-miterlimit=\"10\" d=\"M -73.700592 0.0019126 L 73.7019 0.0019126 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"2.98883 2.98883\" stroke-miterlimit=\"10\" d=\"M -0.0013039 -55.277447 L -0.0013039 55.277358 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(8.625793%, 63.920593%, 29.019165%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 44.222184 0.0019126 C 44.222184 24.423488 24.424187 44.221486 -0.0013039 44.221486 C -24.42288 44.221486 -44.220877 24.423488 -44.220877 0.0019126 C -44.220877 -24.423578 -24.42288 -44.221575 -0.0013039 -44.221575 C 24.424187 -44.221575 44.222184 -24.423578 44.222184 0.0019126 Z M 44.222184 0.0019126 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-0-0\" x=\"6.293952\" y=\"76.225163\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-0-1\" x=\"87.95169\" y=\"139.863122\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-0-2\" x=\"169.939691\" y=\"76.225163\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-0-3\" x=\"87.729186\" y=\"12.588202\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-0-4\" x=\"92.747984\" y=\"71.134525\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" d=\"M 92.382812 73.117188 C 92.382812 72.570312 91.9375 72.125 91.386719 72.125 C 90.839844 72.125 90.394531 72.570312 90.394531 73.117188 C 90.394531 73.667969 90.839844 74.113281 91.386719 74.113281 C 91.9375 74.113281 92.382812 73.667969 92.382812 73.117188 Z M 92.382812 73.117188 \"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -73.700592 0.0019126 L -73.700592 -76.535728 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M 73.7019 0.0019126 L 73.7019 -76.535728 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -73.305181 -73.701291 L 73.302573 -73.701291 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.0727 2.391477 C -1.692948 0.954683 -0.851229 0.277394 -0.00168103 -0.000569149 C -0.851229 -0.278532 -1.692948 -0.955822 -2.0727 -2.392615 \" transform=\"matrix(-0.997773, 0, 0, 0.997773, 18.049104, 146.656818)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.071392 2.392615 C -1.695555 0.955822 -0.849922 0.278532 -0.000373863 0.000569149 C -0.849922 -0.277394 -1.695555 -0.954683 -2.071392 -2.391477 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 164.726936, 146.656818)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-1-0\" x=\"86.790282\" y=\"157.218384\"/>\n<use xlink:href=\"#tc841b2-glyph-1-1\" x=\"91.387853\" y=\"157.218384\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -0.0013039 -55.277447 L 99.215752 -55.277447 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-dasharray=\"0.3985 1.99255\" stroke-miterlimit=\"10\" d=\"M -0.0013039 55.277358 L 99.215752 55.277358 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.377399 -54.878121 L 96.377399 54.878031 \" transform=\"matrix(0.997773, 0, 0, -0.997773, 91.38802, 73.119096)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.074079 2.390475 C -1.694327 0.957596 -0.848694 0.280307 0.000854061 -0.00157091 C -0.848694 -0.279534 -1.694327 -0.956823 -2.074079 -2.389702 \" transform=\"matrix(0, 0.997773, 0.997773, 0, 187.552349, 128.073367)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.074169 2.389702 C -1.694417 0.956823 -0.848784 0.279534 0.000764293 0.00157091 C -0.848784 -0.280307 -1.694417 -0.957596 -2.074169 -2.390475 \" transform=\"matrix(0, -0.997773, -0.997773, 0, 187.552349, 18.164825)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc841b2-glyph-1-2\" x=\"190.589599\" y=\"76.045564\"/>\n<use xlink:href=\"#tc841b2-glyph-1-1\" x=\"195.187171\" y=\"76.045564\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "24",
+   "D": "25",
+   "E": "30"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "B": "Kısa yarım köşegeni (15) yarıçap sanmış; çember köşegenlere değil kenarlara teğettir.",
+   "C": "Alanı kenara bölüp (600 ÷ 25) yüksekliği bulmuş; yarıçap yüksekliğin yarısıdır.",
+   "D": "Kenar uzunluğunu (25) yarıçap sanmış.",
+   "E": "Kısa köşegeni (30) yarıçap olarak almış."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Çemberin yarıçapı (cm).",
+  "bilgi": [
+   {
+    "ad": "Eşkenar dörtgen",
+    "ifade": "dört kenarı eşit olan paralelkenardır; köşegenleri birbirini dik ortalar ve köşelerdeki açıları ikiye böler. Alan = köşegenler çarpımı ÷ 2. Örnek: köşegenleri 18 ve 24 ise yarım köşegenler 9 ve 12, kenar 15, alan 216"
+   },
+   {
+    "ad": "İç teğet çember",
+    "ifade": "eşkenar dörtgenin iç teğet çemberinin merkezi köşegenlerin kesişim noktasıdır; yarıçap, merkezin bir kenara olan uzaklığıdır. Teğet, değme noktasındaki yarıçapa diktir"
+   }
+  ],
+  "ipuclari": [
+   "Çemberin yarıçapı, O noktasından bir kenara indirilen dikmedir. Aynı dikmeyi alan formülüyle iki farklı biçimde yazmayı dene."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kenarı bul",
+    "aciklama": "Yarım köşegenler 20 ve 15; Pisagor uygula.",
+    "islem": "|AB|² = 20² + 15² = 625 → |AB| = 25"
+   },
+   {
+    "baslik": "Alanı bul",
+    "aciklama": "Alan = köşegenler çarpımı ÷ 2.",
+    "islem": "40 × 30 ÷ 2 = 600"
+   },
+   {
+    "baslik": "Yüksekliği yaz",
+    "aciklama": "Alan = kenar × yükseklik.",
+    "islem": "h = 600 ÷ 25 = 24"
+   },
+   {
+    "baslik": "Yarıçapı bul",
+    "aciklama": "Çember iki karşı kenara da değer; yarıçap yüksekliğin yarısıdır.",
+    "islem": "r = 24 ÷ 2 = 12 cm"
+   }
+  ],
+  "puf": "Eşkenar dörtgenin iç teğet çemberinin çapı, karşılıklı kenarlar arasındaki uzaklığa (yüksekliğe) eşittir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-05 (iç teğet çember) · köşegenler 30 ve 40",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytgeo-eskenardortgen-0006",
+  "ders": "TYT Geometri",
+  "konu": "Eşkenar Dörtgen · Orta Nokta ve Dikme",
+  "k": "geo|Eşkenar Dörtgen",
+  "kazanim": "Orta nokta ve dikme koşulundan eşkenar üçgeni fark edip eşkenar dörtgende istenen açıyı bulur.",
+  "tipId": "ge-ed-aci-karma",
+  "tip": "Orta nokta ve dikmeyle açı bulma",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekildeki ABCD eşkenar dörtgeninde E noktası [BC] kenarının orta noktasıdır ve [AE] ⊥ [BC] dir. [BD] köşegeni çizilmiştir. Şekil ölçekli değildir.\nBuna göre, x = m(BDC) kaç derecedir?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:328px;height:auto\" role=\"img\" viewBox=\"0 0 172.685 115.874\">\n<defs>\n<g>\n<g id=\"tfac8e3-glyph-0-0\">\n<path d=\"M 2.84375 -2.046875 L 4.921875 -3.96875 L 4.15625 -3.96875 L 2.625 -2.515625 L 1.6875 -3.96875 L 0.890625 -3.96875 L 2.21875 -2.046875 L 0 0 L 0.78125 0 L 2.4375 -1.671875 L 3.453125 0 L 4.234375 0 Z M 2.84375 -2.046875 \"/>\n</g>\n<g id=\"tfac8e3-glyph-0-1\">\n<path d=\"M 4.8125 -6.21875 L 3.96875 -6.21875 L 0.265625 0 L 0.96875 0 L 2.03125 -1.78125 L 4.6875 -1.78125 L 5 0 L 5.875 0 Z M 4.15625 -5.546875 L 4.578125 -2.3125 L 2.359375 -2.3125 Z M 4.15625 -5.546875 \"/>\n</g>\n<g id=\"tfac8e3-glyph-0-2\">\n<path d=\"M 2.203125 -6.21875 L 0.875 0 L 3.34375 0 C 4.78125 0 6 -0.96875 6 -1.921875 C 6 -2.609375 5.359375 -3.125 4.546875 -3.25 C 5.5 -3.46875 6.375 -4.078125 6.375 -4.875 C 6.375 -5.609375 5.5625 -6.21875 4.40625 -6.21875 Z M 2.4375 -3.515625 L 2.890625 -5.6875 L 4.03125 -5.6875 C 4.9375 -5.6875 5.609375 -5.296875 5.609375 -4.765625 C 5.609375 -4.21875 4.8125 -3.515625 3.484375 -3.515625 Z M 1.796875 -0.53125 L 2.3125 -2.9375 L 3.625 -2.9375 C 4.453125 -2.9375 5.21875 -2.53125 5.21875 -1.859375 C 5.21875 -1.125 4.234375 -0.53125 3.171875 -0.53125 Z M 1.796875 -0.53125 \"/>\n</g>\n<g id=\"tfac8e3-glyph-0-3\">\n<path d=\"M 6.59375 -6 C 6.078125 -6.21875 5.53125 -6.328125 4.984375 -6.328125 C 2.953125 -6.328125 1.1875 -4.390625 1.1875 -2.390625 C 1.1875 -1.046875 2.109375 0.09375 3.484375 0.09375 C 4.421875 0.09375 4.671875 0 5.5 -0.40625 C 5.53125 -0.625 5.5625 -0.84375 5.578125 -1.0625 C 4.859375 -0.609375 4.375 -0.515625 3.703125 -0.515625 C 2.625 -0.515625 2.046875 -1.4375 2.046875 -2.4375 C 2.046875 -4.140625 3.421875 -5.703125 4.78125 -5.703125 C 5.375 -5.703125 5.84375 -5.5625 6.28125 -5.21875 Z M 6.59375 -6 \"/>\n</g>\n<g id=\"tfac8e3-glyph-0-4\">\n<path d=\"M 2.1875 -6.21875 L 0.875 0 L 3.3125 0 C 5.078125 0 6.859375 -1.765625 6.859375 -3.78125 C 6.859375 -5.25 5.90625 -6.21875 4.625 -6.21875 Z M 2.90625 -5.6875 L 4.28125 -5.6875 C 5.375 -5.6875 6.03125 -4.90625 6.03125 -3.78125 C 6.03125 -2.15625 4.84375 -0.53125 3.203125 -0.53125 L 1.8125 -0.53125 Z M 2.90625 -5.6875 \"/>\n</g>\n<g id=\"tfac8e3-glyph-0-5\">\n<path d=\"M 2.328125 -2.921875 L 5.375 -2.921875 L 5.484375 -3.515625 L 2.453125 -3.515625 L 2.890625 -5.578125 L 3.234375 -5.578125 C 3.953125 -5.578125 4.6875 -5.5625 5.421875 -5.5625 L 6.1875 -5.5625 L 6.328125 -6.1875 L 2.171875 -6.1875 L 0.84375 0 L 5.125 0 L 5.265625 -0.6875 L 4.375 -0.6875 C 3.53125 -0.6875 2.6875 -0.65625 1.859375 -0.65625 Z M 2.328125 -2.921875 \"/>\n</g>\n</g>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 46.773741 81.015604 L 0.00107656 0.000904581 L 93.546405 0.000904581 L 140.315155 81.015604 Z M 46.773741 81.015604 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.00107656 0.000904581 L 140.315155 81.015604 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 46.773741 81.015604 L 46.773741 0.000904581 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 46.773741 5.667472 L 52.440308 5.667472 L 52.440308 0.000904581 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 23.387409 2.552425 L 23.387409 -2.550616 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 70.160073 2.552425 L 70.160073 -2.550616 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 118.235891 68.258 C 120.474342 64.383758 123.69505 61.159137 127.573205 58.920686 \" transform=\"matrix(0.998179, 0, 0, -0.998179, 15.7333, 98.18059)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-0\" x=\"126.24072\" y=\"46.324183\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-1\" x=\"56.205474\" y=\"12.555781\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-2\" x=\"6.296514\" y=\"107.286979\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-3\" x=\"108.06787\" y=\"109.409108\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-4\" x=\"158.753413\" y=\"15.130085\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfac8e3-glyph-0-5\" x=\"59.12415\" y=\"108.362018\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "15",
+   "B": "30",
+   "C": "60",
+   "D": "90",
+   "E": "120"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "30"
+  },
+  "celdiriciler": {
+   "A": "Köşegenin açıyı ikiye böldüğünü iki kez uygulayıp 30° yı bir kez daha yarılamış.",
+   "C": "D köşesindeki açının (60°) tamamını x sanmış; [BD] bu açıyı ikiye böler.",
+   "D": "[AE] ⊥ [BC] işaretini x açısı sanmış.",
+   "E": "C köşesindeki açıyı (120°) x olarak yazmış."
+  },
+  "celTur": {
+   "A": "islem",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "x = m(BDC) açısının ölçüsü.",
+  "bilgi": [
+   {
+    "ad": "Eşkenar dörtgen",
+    "ifade": "dört kenarı eşit olan paralelkenardır; köşegenleri birbirini dik ortalar ve köşelerdeki açıları ikiye böler. Alan = köşegenler çarpımı ÷ 2. Örnek: köşegenleri 18 ve 24 ise yarım köşegenler 9 ve 12, kenar 15, alan 216"
+   },
+   {
+    "ad": "Eşkenar dörtgende açılar",
+    "ifade": "karşılıklı açılar eşit, komşu açılar bütünlerdir (toplamları 180°). Köşegen köşedeki açıyı ikiye böler. Örnek: bir köşedeki açı 80° ise komşusu 100°, köşegenle ayrılan parça 40°"
+   },
+   {
+    "ad": "İkizkenar üçgen",
+    "ifade": "eşit kenarların karşısındaki açılar eşittir; iç açıların toplamı 180°’dir. Örnek: tepe açısı 100° ise taban açıları 40°’dir"
+   }
+  ],
+  "ipuclari": [
+   "[AE] hem yükseklik hem kenar ortay olduğunda ABC üçgeninin kenarları hakkında ne söylenebilir?"
+  ],
+  "adimlar": [
+   {
+    "baslik": "ABC üçgenini incele",
+    "aciklama": "E, [BC]’nin orta noktası ve [AE] ⊥ [BC] olduğundan [AE] orta dikmedir: |AB| = |AC|.",
+    "islem": "|AB| = |AC|"
+   },
+   {
+    "baslik": "Eşkenar üçgeni fark et",
+    "aciklama": "|AB| = |BC| eşkenar dörtgen kenarlarıdır; böylece üç kenar eşit.",
+    "islem": "ABC eşkenar → m(ABC) = 60°"
+   },
+   {
+    "baslik": "Köşelerdeki açıları bul",
+    "aciklama": "Karşılıklı açılar eşit, komşu açılar bütünler.",
+    "islem": "m(BCD) = 180° − 60° = 120° · m(BAD) = 120°"
+   },
+   {
+    "baslik": "x açısını bul",
+    "aciklama": "BCD ikizkenar üçgeninde |CB| = |CD| ve tepe açısı 120°’dir.",
+    "islem": "x = (180° − 120°) ÷ 2 = 30°"
+   }
+  ],
+  "puf": "Bir kenarın orta noktasına inen dikme kenar ortay olur; eşkenar dörtgende iki kenar daha eşitse üçgen eşkenar çıkar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-GED-06 (orta nokta, dikme) · m(BDC) istenir",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

@@ -1,0 +1,135 @@
+{
+ "konu": "Küre",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GKU-01",
+   "konu": "Küre",
+   "alt": "Kürenin hacmi",
+   "fikir": "V = 4πr³ ÷ 3; yarıçap şekilden okunur.",
+   "tuzak": "Yüzey alanı formülüyle karıştırmak; 1/3 çarpanını unutmak; yarıçap yerine çap kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ku-hacim",
+   "tip": "Kürenin hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKU-02",
+   "konu": "Küre",
+   "alt": "Yüzey alanından hacme",
+   "fikir": "Yüzey alanı 4πr² ile yarıçap bulunur, sonra hacim hesaplanır.",
+   "tuzak": "Yarıçap yerine r² değerini kullanmak; yarım küre formülüyle karıştırmak; 1/3 çarpanını unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ku-yuzey",
+   "tip": "Yüzey alanından hacme geçiş",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKU-03",
+   "konu": "Küre",
+   "alt": "Silindirin içindeki küre",
+   "fikir": "Silindir 2πr³, küre 4πr³ ÷ 3; küre silindirin üçte ikisidir.",
+   "tuzak": "Oranı ters yazmak (3/2); 1/3 ya da 1/2 almak; silindir hacmini cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ku-silindir",
+   "tip": "Silindire teğet küre hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKU-04",
+   "konu": "Küre",
+   "alt": "Kürenin düzlemle kesiti",
+   "fikir": "Kesit dairenin yarıçapı R² = r² + d² ile bulunur; sonra alan hesaplanır.",
+   "tuzak": "Yarıçaptan uzaklığı çıkarmak (R − d); büyük dairenin alanını almak; çapı yarıçap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ku-kesit",
+   "tip": "Kürenin kesit dairesinin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKU-05",
+   "konu": "Küre",
+   "alt": "Kutudaki toplar",
+   "fikir": "Kutu hacminden topların hacmi çıkarılır; boş kalan hacim bulunur.",
+   "tuzak": "Çapı yarıçap sanmak; yalnız kutuyu ya da yalnız topları hesaplamak; topu da kutuya eklemek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-ku-toplar",
+   "tip": "Kutuda boş kalan hacim",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKU-06",
+   "konu": "Küre",
+   "alt": "Yarım kürenin tüm yüzeyi",
+   "fikir": "Yarım kürenin yüzeyi eğri yüzey (2πr²) + taban dairesi (πr²) = 3πr².",
+   "tuzak": "Tam küre yüzeyini almak; tabanı unutmak; tam küre yüzeyine tabanı eklemek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-ku-yarim",
+   "tip": "Yarım kürenin tüm yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ku-hacim",
+   "ad": "Kürenin hacmi",
+   "kartlar": [
+    "K-GKU-01"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  },
+  {
+   "tipId": "ge-ku-yuzey",
+   "ad": "Yüzey alanından hacme geçiş",
+   "kartlar": [
+    "K-GKU-02"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  },
+  {
+   "tipId": "ge-ku-silindir",
+   "ad": "Silindire teğet küre hacmi",
+   "kartlar": [
+    "K-GKU-03"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  },
+  {
+   "tipId": "ge-ku-kesit",
+   "ad": "Kürenin kesit dairesinin alanı",
+   "kartlar": [
+    "K-GKU-04"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  },
+  {
+   "tipId": "ge-ku-toplar",
+   "ad": "Kutuda boş kalan hacim",
+   "kartlar": [
+    "K-GKU-05"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  },
+  {
+   "tipId": "ge-ku-yarim",
+   "ad": "Yarım kürenin tüm yüzey alanı",
+   "kartlar": [
+    "K-GKU-06"
+   ],
+   "uygulamaKonu": "geo|Küre"
+  }
+ ]
+}

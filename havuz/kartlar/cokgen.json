@@ -1,0 +1,128 @@
+{
+ "konu": "Çokgenler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GCK-01",
+   "konu": "Çokgenler",
+   "alt": "Beşgende iç açılar toplamı",
+   "fikir": "Beşgenin iç açıları toplamı 3 × 180° = 540° dır; bilinen açılar çıkarılıp kalan eşit iki açıya bölünür.",
+   "tuzak": "Dörtgen ya da altıgen toplamını kullanmak; iki açının toplamını tek açı sanmak; dış açıyı bulmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "cg-ic-toplam",
+   "tip": "Çokgende iç açılar toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCK-02",
+   "konu": "Çokgenler",
+   "alt": "Düzgün çokgende dış açı",
+   "fikir": "Düzgün beşgende dış açı 72° dir; uzatılan iki kenar ile BC kenarı bir üçgen oluşturur, üçüncü açı 180° den çıkarılarak bulunur.",
+   "tuzak": "Dış açı yerine iç açıyı (108°) kullanmak; üçgen açılar toplamını unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-duzgun-aci",
+   "tip": "Düzgün çokgende iç ve dış açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCK-03",
+   "konu": "Çokgenler",
+   "alt": "Köşegen sayısı",
+   "fikir": "Bir köşeden çizilen köşegenler çokgeni n − 2 üçgene ayırır; üçgen sayısından kenar sayısı, sonra toplam köşegen sayısı bulunur.",
+   "tuzak": "Bir köşeden çıkan köşegen sayısını ya da kenar sayısını cevap sanmak; kenarları da saymak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "cg-kosegen",
+   "tip": "Çokgende köşegen sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCK-04",
+   "konu": "Çokgenler",
+   "alt": "İç açıdan köşegen sayısı",
+   "fikir": "Verilen iç açının dış açısı 360° ye bölünerek kenar sayısı, ardından köşegen sayısı bulunur.",
+   "tuzak": "Dış açı yerine iç açıyı bölmek; köşegen sayısını ikiye bölmemek; kenarları da saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-kosegen",
+   "tip": "Çokgende köşegen sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCK-05",
+   "konu": "Çokgenler",
+   "alt": "Düzgün altıgenin alanı",
+   "fikir": "Düzgün altıgen, merkezden köşelere çizilen doğru parçalarıyla 6 eş eşkenar üçgene ayrılır; alan = 6 × eşkenar üçgenin alanı.",
+   "tuzak": "Üçgen sayısını yanlış saymak; √3 çarpanını unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "cg-altigen-alan",
+   "tip": "Düzgün altıgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCK-06",
+   "konu": "Çokgenler",
+   "alt": "Altıgen ve iç üçgen",
+   "fikir": "Taralı bölge = altıgenin alanı − ACE üçgeninin alanı; |AC| = a√3 olduğundan ACE nin kenarı da a√3 dür.",
+   "tuzak": "ACE nin kenarını a sanmak; ACE yi altıgenin üçte biri sanmak; altıgenin tamamını cevap yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "cg-altigen-bolme",
+   "tip": "Düzgün altıgende bölgelerin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "cg-ic-toplam",
+   "ad": "Çokgende iç açılar toplamı",
+   "kartlar": [
+    "K-GCK-01"
+   ],
+   "uygulamaKonu": "geo|Çokgenler"
+  },
+  {
+   "tipId": "cg-duzgun-aci",
+   "ad": "Düzgün çokgende iç ve dış açı",
+   "kartlar": [
+    "K-GCK-02"
+   ],
+   "uygulamaKonu": "geo|Çokgenler"
+  },
+  {
+   "tipId": "cg-kosegen",
+   "ad": "Çokgende köşegen sayısı",
+   "kartlar": [
+    "K-GCK-03",
+    "K-GCK-04"
+   ],
+   "uygulamaKonu": "geo|Çokgenler"
+  },
+  {
+   "tipId": "cg-altigen-alan",
+   "ad": "Düzgün altıgenin alanı",
+   "kartlar": [
+    "K-GCK-05"
+   ],
+   "uygulamaKonu": "geo|Çokgenler"
+  },
+  {
+   "tipId": "cg-altigen-bolme",
+   "ad": "Düzgün altıgende bölgelerin alanı",
+   "kartlar": [
+    "K-GCK-06"
+   ],
+   "uygulamaKonu": "geo|Çokgenler"
+  }
+ ]
+}

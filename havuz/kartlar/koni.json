@@ -1,0 +1,135 @@
+{
+ "konu": "Koni",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GKN-01",
+   "konu": "Koni",
+   "alt": "Koninin hacmi",
+   "fikir": "Hacim = π r² h ÷ 3; yarıçap ve yükseklik şekilden okunur.",
+   "tuzak": "1/3 çarpanını unutmak; ana doğruyu yükseklik sanmak; yarıçap yerine çap kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kn-hacim",
+   "tip": "Koninin hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKN-02",
+   "konu": "Koni",
+   "alt": "Ana doğru (Pisagor)",
+   "fikir": "Yarıçap, yükseklik ve ana doğru dik üçgen oluşturur; ana doğru hipotenüstür.",
+   "tuzak": "Toplama ya da çıkarma yapmak; karekökü unutmak; hipotenüs yerine dik kenarı bulmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kn-anadogru",
+   "tip": "Koninin ana doğrusu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKN-03",
+   "konu": "Koni",
+   "alt": "Yanal alan π r ℓ",
+   "fikir": "Önce ana doğru Pisagorla bulunur, sonra yanal alan π × r × ℓ hesaplanır.",
+   "tuzak": "Yanal alan yerine tüm alan ya da taban alanı; ℓ yerine h kullanmak; 2π r ℓ.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kn-yanal",
+   "tip": "Koninin yanal alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKN-04",
+   "konu": "Koni",
+   "alt": "Açınımda daire dilimi açısı",
+   "fikir": "Dilimin yay uzunluğu taban çemberine eşittir: α = 360° × r ÷ ℓ.",
+   "tuzak": "Çap kullanmak; r yerine yükseklik ya da ℓ − r almak; 360° ÷ ℓ yapmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-kn-acinim",
+   "tip": "Koni açınımı: daire dilimi açısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKN-05",
+   "konu": "Koni",
+   "alt": "Daire diliminden külah",
+   "fikir": "Dilimin yarıçapı ana doğru, yayı taban çemberi olur; r bulunur, h Pisagorla, hacim hesaplanır.",
+   "tuzak": "Dilimin yarıçapını koninin yarıçapı sanmak; yüksekliği ana doğru almak; 1/3 unutmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-kn-kulah",
+   "tip": "Daire diliminden külah hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKN-06",
+   "konu": "Koni",
+   "alt": "Huniden silindire su aktarma",
+   "fikir": "Koni hacmi = silindirdeki su hacmi; yükseklik bulunur.",
+   "tuzak": "Koni hacminde 1/3 unutmak; silindirde π r² yerine π r kullanmak; yüksekliği aynı sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-kn-huni",
+   "tip": "Huniden silindire su aktarma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-kn-hacim",
+   "ad": "Koninin hacmi",
+   "kartlar": [
+    "K-GKN-01"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  },
+  {
+   "tipId": "ge-kn-anadogru",
+   "ad": "Koninin ana doğrusu",
+   "kartlar": [
+    "K-GKN-02"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  },
+  {
+   "tipId": "ge-kn-yanal",
+   "ad": "Koninin yanal alanı",
+   "kartlar": [
+    "K-GKN-03"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  },
+  {
+   "tipId": "ge-kn-acinim",
+   "ad": "Koni açınımı: daire dilimi açısı",
+   "kartlar": [
+    "K-GKN-04"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  },
+  {
+   "tipId": "ge-kn-kulah",
+   "ad": "Daire diliminden külah hacmi",
+   "kartlar": [
+    "K-GKN-05"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  },
+  {
+   "tipId": "ge-kn-huni",
+   "ad": "Huniden silindire su aktarma",
+   "kartlar": [
+    "K-GKN-06"
+   ],
+   "uygulamaKonu": "geo|Koni"
+  }
+ ]
+}

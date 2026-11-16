@@ -1,0 +1,135 @@
+{
+ "konu": "Eşkenar Dörtgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GED-01",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "Köşegenlerden kenar ve çevre",
+   "fikir": "Köşegenler birbirini dik ortalar; yarım köşegenlerle Pisagor kenarı verir, çevre kenarın dört katıdır.",
+   "tuzak": "Köşegeni kenar sanmak; yarım köşegenlerin toplamını kenar almak; yalnız bir kenarı vermek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ed-kosegen",
+   "tip": "Köşegenlerden kenar ve çevre",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GED-02",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "Kenar ve bir köşegenden alan",
+   "fikir": "Kenar ile bir yarım köşegenden Pisagor diğer yarım köşegeni verir; alan köşegenler çarpımının yarısıdır.",
+   "tuzak": "Alanı kenar × köşegen sanmak; yarım köşegenlerle alanı hesaplamak; ÷ 2’yi unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ed-alan",
+   "tip": "Kenar ve köşegenden alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GED-03",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "Köşegen ve açılar",
+   "fikir": "Komşu açılar bütünlerdir; köşegen köşedeki açıyı ikiye böler.",
+   "tuzak": "Köşegenin açıyı ikiye böldüğünü unutmak; komşu açı yerine karşılıklı açıyı almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ed-aci",
+   "tip": "Köşedeki açılar ve köşegen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GED-04",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "60° açılı eşkenar dörtgenin alanı",
+   "fikir": "Dik üçgenden yükseklik bulunur; alan taban × yükseklik.",
+   "tuzak": "Alanı kenar × kenar almak; üçgenin alanını bulup bırakmak; yüksekliği kenarın yarısı sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ed-yukseklik",
+   "tip": "Kenar ve açıdan alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GED-05",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "İç teğet çemberin yarıçapı",
+   "fikir": "Çemberin merkezi köşegenlerin kesişimidir; yarıçap, merkezin kenara uzaklığı olup yüksekliğin yarısıdır (alan ÷ (2 × kenar)).",
+   "tuzak": "Yarıçapı yüksekliğe eşit almak; alanı çevreye bölmek; yarım köşegeni yarıçap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ed-icteget",
+   "tip": "İç teğet çemberin yarıçapı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GED-06",
+   "konu": "Eşkenar Dörtgen",
+   "alt": "Orta nokta ve dikme ile açı",
+   "fikir": "Orta nokta ve dikme koşulu üçgeni eşkenar yapar; ardından ikizkenar üçgende taban açısı bulunur.",
+   "tuzak": "60° ile 30° açılarını karıştırmak; köşegenin açıyı yarıladığını iki kez uygulamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-ed-aci-karma",
+   "tip": "Orta nokta ve dikmeyle açı bulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ed-kosegen",
+   "ad": "Köşegenlerden kenar ve çevre",
+   "kartlar": [
+    "K-GED-01"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  },
+  {
+   "tipId": "ge-ed-alan",
+   "ad": "Kenar ve köşegenden alan",
+   "kartlar": [
+    "K-GED-02"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  },
+  {
+   "tipId": "ge-ed-aci",
+   "ad": "Köşedeki açılar ve köşegen",
+   "kartlar": [
+    "K-GED-03"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  },
+  {
+   "tipId": "ge-ed-yukseklik",
+   "ad": "Kenar ve açıdan alan",
+   "kartlar": [
+    "K-GED-04"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  },
+  {
+   "tipId": "ge-ed-icteget",
+   "ad": "İç teğet çemberin yarıçapı",
+   "kartlar": [
+    "K-GED-05"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  },
+  {
+   "tipId": "ge-ed-aci-karma",
+   "ad": "Orta nokta ve dikmeyle açı bulma",
+   "kartlar": [
+    "K-GED-06"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Dörtgen"
+  }
+ ]
+}

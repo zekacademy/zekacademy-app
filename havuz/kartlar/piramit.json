@@ -1,0 +1,135 @@
+{
+ "konu": "Piramit",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GPM-01",
+   "konu": "Piramit",
+   "alt": "Kare dik piramidin hacmi",
+   "fikir": "Hacim = taban alanı × yükseklik ÷ 3; taban kare olduğundan taban alanı kenarın karesidir.",
+   "tuzak": "1/3 çarpanını unutmak; taban alanı yerine çevre ya da kenar kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "ge-pm-hacim",
+   "tip": "Kare dik piramidin hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPM-02",
+   "konu": "Piramit",
+   "alt": "Tabana paralel kesit",
+   "fikir": "Yüksekliğin ortasından tabana paralel kesit, tabana benzerdir: kenar oranı 1/2, alan oranı 1/4.",
+   "tuzak": "Alan oranı yerine kenar oranını almak (1/2); taban alanını yazmak; çevreyle karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pm-kesit",
+   "tip": "Tabana paralel kesitin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPM-03",
+   "konu": "Piramit",
+   "alt": "Yüzey alanı (çadır)",
+   "fikir": "Tüm yüzey = taban + 4 eş üçgen; yan yüz yüksekliği verilmiştir.",
+   "tuzak": "Yalnız yanal alanı ya da bir yan yüzü saymak; zemini eklemeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-pm-yuzey",
+   "tip": "Kare dik piramidin yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPM-04",
+   "konu": "Piramit",
+   "alt": "Düzgün dörtyüzlü",
+   "fikir": "Yüzün alanından eşkenar üçgenin kenarı bulunur; dörtyüzlünün 6 ayrıtı eşittir.",
+   "tuzak": "Ayrıt sayısını 12 ya da 9 almak; yalnız bir yüzün çevresini hesaplamak; kenarı bulmadan kareyi vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pm-dortyuzlu",
+   "tip": "Düzgün dörtyüzlünün ayrıtları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPM-05",
+   "konu": "Piramit",
+   "alt": "Piramit açınımı",
+   "fikir": "Açınımdan taban kenarı ve yan yüz yüksekliği okunur; yükseklik Pisagorla bulunup hacim hesaplanır.",
+   "tuzak": "Yan yüz yüksekliğini piramidin yüksekliği sanmak; 1/3 çarpanını unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pm-acinim",
+   "tip": "Kare dik piramidin açınımı ve hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPM-06",
+   "konu": "Piramit",
+   "alt": "Hacimden yüksekliğe, yanal alan",
+   "fikir": "Hacimden yükseklik bulunur, yükseklikten yan yüz yüksekliği, ondan yanal alan.",
+   "tuzak": "Yan yüz yüksekliği yerine yüksekliği kullanmak; hacim formülünde 3 ile çarpmayı unutmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-pm-yanal",
+   "tip": "Hacimden yanal alana",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-pm-hacim",
+   "ad": "Kare dik piramidin hacmi",
+   "kartlar": [
+    "K-GPM-01"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  },
+  {
+   "tipId": "ge-pm-kesit",
+   "ad": "Tabana paralel kesitin alanı",
+   "kartlar": [
+    "K-GPM-02"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  },
+  {
+   "tipId": "ge-pm-yuzey",
+   "ad": "Kare dik piramidin yüzey alanı",
+   "kartlar": [
+    "K-GPM-03"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  },
+  {
+   "tipId": "ge-pm-dortyuzlu",
+   "ad": "Düzgün dörtyüzlünün ayrıtları",
+   "kartlar": [
+    "K-GPM-04"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  },
+  {
+   "tipId": "ge-pm-acinim",
+   "ad": "Kare dik piramidin açınımı ve hacmi",
+   "kartlar": [
+    "K-GPM-05"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  },
+  {
+   "tipId": "ge-pm-yanal",
+   "ad": "Hacimden yanal alana",
+   "kartlar": [
+    "K-GPM-06"
+   ],
+   "uygulamaKonu": "geo|Piramit"
+  }
+ ]
+}

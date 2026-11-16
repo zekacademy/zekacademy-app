@@ -1,0 +1,135 @@
+{
+ "konu": "Deltoid",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDL-01",
+   "konu": "Deltoid",
+   "alt": "Köşegenlerden alan",
+   "fikir": "Deltoidde köşegenler dik; simetri ekseni diğer köşegeni ortalar. Alan köşegenler çarpımının yarısıdır.",
+   "tuzak": "Alanı köşegenler çarpımı sanmak (÷ 2 unutmak); yalnız bir üçgenin alanını bulmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dl-alan",
+   "tip": "Köşegenlerden alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDL-02",
+   "konu": "Deltoid",
+   "alt": "Kenarlardan alan",
+   "fikir": "Kenar ve BD ile iki dik üçgende Pisagor, simetri eksenini verir; alan köşegenler çarpımının yarısıdır.",
+   "tuzak": "Yalnız bir üçgenin alanını almak; kenarlar çarpımını alan saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dl-alan-kenar",
+   "tip": "Kenarlardan alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDL-03",
+   "konu": "Deltoid",
+   "alt": "Uçurtma iskeleti",
+   "fikir": "Kenar çıtalar ve kısa çıtadan Pisagorla uzun çıta bulunur; toplam çıta uzunluğu kenarlar ve köşegenlerin toplamıdır.",
+   "tuzak": "Uzun çıtayı unutmak ya da kısa çıtayı iki kez saymak; çevreyi toplam sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dl-ucurtma",
+   "tip": "Uçurtma iskeleti ve çıta uzunluğu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDL-04",
+   "konu": "Deltoid",
+   "alt": "Deltoidde açılar",
+   "fikir": "Eksen dışındaki iki açı eşittir; dörtgenin iç açıları toplamı 360°; köşegen eksendeki açıyı ikiye böler.",
+   "tuzak": "Köşegenin açıyı yarıladığını unutmak; B ve D açılarının eşit olduğunu görmemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dl-aci",
+   "tip": "Deltoidde açılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDL-05",
+   "konu": "Deltoid",
+   "alt": "Katlama ve kenar eşitliği",
+   "fikir": "Köşegen boyunca katlanınca çakışan kenarlar eşittir; cebirsel ifadeler eşitlenir ve çevre bulunur.",
+   "tuzak": "Yanlış kenar çiftlerini eşitlemek; çevrede bir kenarı eksik saymak; deltoidi eşkenar dörtgen sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dl-simetri",
+   "tip": "Simetri ve çevre",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDL-06",
+   "konu": "Deltoid",
+   "alt": "Köşegenin böldüğü üçgenlerin alanları",
+   "fikir": "BD ortak taban olduğundan ABD ve CBD üçgenlerinin alanları yükseklikleri |AO| ve |OC| ile orantılıdır.",
+   "tuzak": "Oranı ters yazmak; iki üçgeni eş sanmak; yalnız bir üçgenin alanını sonuç saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dl-karma",
+   "tip": "Alan oranı ve köşegen parçaları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-dl-alan",
+   "ad": "Köşegenlerden alan",
+   "kartlar": [
+    "K-GDL-01"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  },
+  {
+   "tipId": "ge-dl-alan-kenar",
+   "ad": "Kenarlardan alan",
+   "kartlar": [
+    "K-GDL-02"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  },
+  {
+   "tipId": "ge-dl-ucurtma",
+   "ad": "Uçurtma iskeleti ve çıta uzunluğu",
+   "kartlar": [
+    "K-GDL-03"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  },
+  {
+   "tipId": "ge-dl-aci",
+   "ad": "Deltoidde açılar",
+   "kartlar": [
+    "K-GDL-04"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  },
+  {
+   "tipId": "ge-dl-simetri",
+   "ad": "Simetri ve çevre",
+   "kartlar": [
+    "K-GDL-05"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  },
+  {
+   "tipId": "ge-dl-karma",
+   "ad": "Alan oranı ve köşegen parçaları",
+   "kartlar": [
+    "K-GDL-06"
+   ],
+   "uygulamaKonu": "geo|Deltoid"
+  }
+ ]
+}

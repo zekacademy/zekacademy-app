@@ -1,0 +1,163 @@
+{
+ "konu": "Noktanın Analitiği",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GNA-01",
+   "konu": "Noktanın Analitiği",
+   "alt": "İki nokta arası uzaklık",
+   "fikir": "Izgaradan okunan iki noktanın yatay ve dikey farkları bulunur; uzaklık formülüyle (ya da 3-4-5 benzeri dik üçgenle) |AB| hesaplanır.",
+   "tuzak": "Farkları toplamak; karekökü almamak; yalnız dikey farkı vermek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-na-uzaklik",
+   "tip": "İki nokta arası uzaklık",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-02",
+   "konu": "Noktanın Analitiği",
+   "alt": "Orta nokta",
+   "fikir": "İki ucun koordinatları ızgaradan okunup ayrı ayrı toplanır ve ikiye bölünür.",
+   "tuzak": "Bölmeyi unutmak; farkı ikiye bölmek; bir koordinatta toplama, ötekinde çıkarma yapmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ge-na-orta",
+   "tip": "Orta nokta koordinatları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-03",
+   "konu": "Noktanın Analitiği",
+   "alt": "Doğru parçasını bölen nokta",
+   "fikir": "Verilen oran, parçayı kaç eş parçaya bölündüğünü gösterir; başlangıç noktasına toplam parçaya göre kesirle gidilir.",
+   "tuzak": "Oranı ters kullanmak; orta nokta almak; yalnız vektör farkını eklemek, başlangıç noktasını unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-na-bolen",
+   "tip": "Oranla bölen nokta",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-04",
+   "konu": "Noktanın Analitiği",
+   "alt": "Ağırlık merkezi",
+   "fikir": "Köşelerin koordinatları ızgaradan okunur; apsis ve ordinatlar ayrı ayrı toplanıp üçe bölünür.",
+   "tuzak": "Üçe bölmemek; ikiye bölmek; yalnız bir koordinatı vermek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-na-agirlik",
+   "tip": "Üçgenin ağırlık merkezi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-05",
+   "konu": "Noktanın Analitiği",
+   "alt": "Dörtgenin alanı (kareli zemin)",
+   "fikir": "Köşeleri ızgaradan okunan dörtgenin alanı, dikdörtgenden köşe üçgenleri çıkarılarak ya da köşegen formülüyle bulunur.",
+   "tuzak": "Dörtgeni saran dikdörtgenin alanını vermek; yarıya bölmeyi unutmak; yalnız bir üçgenin alanını vermek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-na-alan",
+   "tip": "Köşeleri verilen çokgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-06",
+   "konu": "Noktanın Analitiği",
+   "alt": "Bölgeler ve işaretler",
+   "fikir": "A noktasının bölgesinden a ve b’nin işareti çıkarılır; her öncüldeki yeni noktanın iki koordinatının işareti ayrı ayrı belirlenir.",
+   "tuzak": "Koordinatları yer değiştirince bölgenin değişmediğini sanmak; çarpım ve farkın işaretini yanlış bulmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ge-na-bolge",
+   "tip": "Bölgeler ve koordinat işaretleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-07",
+   "konu": "Noktanın Analitiği",
+   "alt": "Eksen üzerinde eşit uzaklıkta nokta",
+   "fikir": "x ekseni üzerindeki C(a, 0) noktası için |AC|² = |BC|² denklemi kurulur; a bulunur ve uzaklık hesaplanır.",
+   "tuzak": "C’yi orta noktanın izdüşümü sanmak; |AC|² yerine |AC| vermek; a’yı cevap sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-na-uzaklik",
+   "tip": "İki nokta arası uzaklık",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GNA-08",
+   "konu": "Noktanın Analitiği",
+   "alt": "Paralelkenarın dördüncü köşesi ve alanı",
+   "fikir": "Köşegenlerin orta noktası ortaktır: D = A + C − B bulunur; sonra köşe koordinatlarıyla ya da saran dikdörtgenle alan hesaplanır.",
+   "tuzak": "D’yi yanlış bulmak; ABC üçgeninin alanını vermek; saran dikdörtgenin alanını vermek; taban × yükseklikte eğik kenarı hesaba katmamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-na-alan",
+   "tip": "Köşeleri verilen çokgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-na-uzaklik",
+   "ad": "İki nokta arası uzaklık",
+   "kartlar": [
+    "K-GNA-01",
+    "K-GNA-07"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  },
+  {
+   "tipId": "ge-na-orta",
+   "ad": "Orta nokta koordinatları",
+   "kartlar": [
+    "K-GNA-02"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  },
+  {
+   "tipId": "ge-na-bolen",
+   "ad": "Oranla bölen nokta",
+   "kartlar": [
+    "K-GNA-03"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  },
+  {
+   "tipId": "ge-na-agirlik",
+   "ad": "Üçgenin ağırlık merkezi",
+   "kartlar": [
+    "K-GNA-04"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  },
+  {
+   "tipId": "ge-na-alan",
+   "ad": "Köşeleri verilen çokgenin alanı",
+   "kartlar": [
+    "K-GNA-05",
+    "K-GNA-08"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  },
+  {
+   "tipId": "ge-na-bolge",
+   "ad": "Bölgeler ve koordinat işaretleri",
+   "kartlar": [
+    "K-GNA-06"
+   ],
+   "uygulamaKonu": "geo|Noktanın Analitiği"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "konu": "Eşlik ve Benzerlik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GES-01",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Eş üçgenlerde karşılıklı kenar",
+   "fikir": "Eş üçgenlerin karşılıklı kenarları eşittir; eşleşme köşe sırasından okunur ve denklem kurulur.",
+   "tuzak": "Eşleşmeyi harf sırasına bakmadan kurmak; x’i cevap sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-es-esit-eleman",
+   "tip": "Eş üçgenlerde karşılıklı elemanlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GES-02",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Eşlik koşulları",
+   "fikir": "Verilen eşitliklerin KAK, AKA ya da KKK koşullarından birini oluşturup oluşturmadığına bakılır; KKA, AA ve AAA eşlik koşulu değildir.",
+   "tuzak": "KKA’yı eşlik koşulu saymak; AAA ya da AA’yı eşlik sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-es-kosul",
+   "tip": "Eşlik koşulları (KAK, AKA, KKK)",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GES-03",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Harita ölçeği ve alan",
+   "fikir": "Haritadaki bir uzunluğun gerçeği bilinirse ölçek bulunur; alan, uzunluk oranının karesiyle büyür.",
+   "tuzak": "Alanı uzunluk oranıyla çarpmak; dik kenarların çarpımını alan sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-es-harita",
+   "tip": "Harita ölçeği ile gerçek alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GES-04",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Gölge ve benzerlik",
+   "fikir": "Aynı anda güneş ışınları paralel olduğundan boy ve gölge dik üçgenleri benzerdir.",
+   "tuzak": "Oranı ters kurmak; gölgeyi yükseklik sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-es-golge",
+   "tip": "Gölge problemi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GES-05",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Köşegenle bölünen dörtgende eşlik",
+   "fikir": "İki çift eşit kenar ve ortak köşegen KKK ile eş üçgenler verir; eş üçgenlerin karşılıklı açıları eşitlenip denklem kurulur.",
+   "tuzak": "Karşılıklı açıları yanlış eşleştirmek; x’i cevap sanmak; yalnız bir tarafın açısını ikiye katlamayı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-es-kkk",
+   "tip": "KKK eşliği ve karşılıklı açılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GES-06",
+   "konu": "Eşlik ve Benzerlik",
+   "alt": "Kare içinde eşlik ve Öklid",
+   "fikir": "Kare içinde eş üçgenlerden dik açı bulunur; dik üçgende yükseklik bağıntısıyla parçalar hesaplanır.",
+   "tuzak": "Eşliği fark etmeyip uzunlukları şekilden tahmin etmek; parçaları karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-es-kare-oklid",
+   "tip": "Kare içinde eş üçgenler ve Öklid",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-es-esit-eleman",
+   "ad": "Eş üçgenlerde karşılıklı elemanlar",
+   "kartlar": [
+    "K-GES-01"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  },
+  {
+   "tipId": "ge-es-kosul",
+   "ad": "Eşlik koşulları (KAK, AKA, KKK)",
+   "kartlar": [
+    "K-GES-02"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  },
+  {
+   "tipId": "ge-es-harita",
+   "ad": "Harita ölçeği ile gerçek alan",
+   "kartlar": [
+    "K-GES-03"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  },
+  {
+   "tipId": "ge-es-golge",
+   "ad": "Gölge problemi",
+   "kartlar": [
+    "K-GES-04"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  },
+  {
+   "tipId": "ge-es-kkk",
+   "ad": "KKK eşliği ve karşılıklı açılar",
+   "kartlar": [
+    "K-GES-05"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  },
+  {
+   "tipId": "ge-es-kare-oklid",
+   "ad": "Kare içinde eş üçgenler ve Öklid",
+   "kartlar": [
+    "K-GES-06"
+   ],
+   "uygulamaKonu": "geo|Eşlik ve Benzerlik"
+  }
+ ]
+}

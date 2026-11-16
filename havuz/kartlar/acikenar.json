@@ -1,0 +1,128 @@
+{
+ "konu": "Açı Kenar Bağıntıları",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GAK-01",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "Üçüncü kenarın sınırları",
+   "fikir": "İki kenarın farkı < üçüncü kenar < toplamı kuralıyla tam sayı x’in en büyük değeri bulunur ve çevre hesaplanır.",
+   "tuzak": "Sınırları dahil saymak (x = 19); farkı ve toplamı karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-ak-esitsizlik",
+   "tip": "Üçüncü kenarın alabileceği değerler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAK-02",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "Büyük açı karşısında büyük kenar",
+   "fikir": "Her açının karşısındaki kenar belirlenir; açılar küçükten büyüğe sıralanıp kenarlar aynı sırayla yazılır.",
+   "tuzak": "Kenarı komşu açıyla eşlemek; sıralamayı ters yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ak-siralama",
+   "tip": "Açılara göre kenar sıralaması",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAK-03",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "İkizkenar koşulu ve üçgen eşitsizliği",
+   "fikir": "Hangi kenarın diğerine eşit olabileceği üçgen eşitsizliğiyle sınanır; geçerli durumda çevre hesaplanır.",
+   "tuzak": "Eşitlikte geçersiz durumu (5, 5, 11) seçmek; çevreyi eksik hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-ak-sayi",
+   "tip": "İkizkenar koşuluyla kenar ve çevre",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAK-04",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "Köşegenle bölünen dörtgende en uzun kenar",
+   "fikir": "Her üçgende açılardan kenar sıralaması yapılır; ortak [AC] kenarı iki sıralamayı birbirine bağlar.",
+   "tuzak": "Yalnız bir üçgene bakmak; ortak kenarı gözden kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ak-siralama",
+   "tip": "Açılara göre kenar sıralaması",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAK-05",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "Geniş açılı üçgende kenar sayısı",
+   "fikir": "Üçgen eşitsizliği aralığı bulunur; x en uzun ya da en uzun değil durumlarında a² + b² < c² koşulu ayrı ayrı yazılıp değerler sayılır.",
+   "tuzak": "Yalnız x’in en uzun olduğu durumu saymak; üçgen eşitsizliği aralığını unutmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-ak-pisagor",
+   "tip": "Geniş açılı üçgende kenar sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAK-06",
+   "konu": "Açı Kenar Bağıntıları",
+   "alt": "Açı sıralamasından kenar eşitsizliği",
+   "fikir": "Açı sıralaması karşıdaki kenar sıralamasına çevrilir, ifadelerle eşitsizlikler kurulur ve üçgen eşitsizliğiyle ortak çözüm sayılır.",
+   "tuzak": "Sıralamayı ters çevirmek; üçgen eşitsizliğini atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-ak-aci-kenar",
+   "tip": "Açı sıralamasından kenar ifadelerine",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ak-esitsizlik",
+   "ad": "Üçüncü kenarın alabileceği değerler",
+   "kartlar": [
+    "K-GAK-01"
+   ],
+   "uygulamaKonu": "geo|Açı Kenar Bağıntıları"
+  },
+  {
+   "tipId": "ge-ak-siralama",
+   "ad": "Açılara göre kenar sıralaması",
+   "kartlar": [
+    "K-GAK-02",
+    "K-GAK-04"
+   ],
+   "uygulamaKonu": "geo|Açı Kenar Bağıntıları"
+  },
+  {
+   "tipId": "ge-ak-sayi",
+   "ad": "İkizkenar koşuluyla kenar ve çevre",
+   "kartlar": [
+    "K-GAK-03"
+   ],
+   "uygulamaKonu": "geo|Açı Kenar Bağıntıları"
+  },
+  {
+   "tipId": "ge-ak-pisagor",
+   "ad": "Geniş açılı üçgende kenar sayısı",
+   "kartlar": [
+    "K-GAK-05"
+   ],
+   "uygulamaKonu": "geo|Açı Kenar Bağıntıları"
+  },
+  {
+   "tipId": "ge-ak-aci-kenar",
+   "ad": "Açı sıralamasından kenar ifadelerine",
+   "kartlar": [
+    "K-GAK-06"
+   ],
+   "uygulamaKonu": "geo|Açı Kenar Bağıntıları"
+  }
+ ]
+}

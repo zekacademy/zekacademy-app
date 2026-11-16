@@ -1,0 +1,93 @@
+{
+ "konu": "Çemberin Analitiği",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GCN-01",
+   "konu": "Çemberin Analitiği",
+   "alt": "Merkez ve yarıçaptan denklem",
+   "fikir": "Merkez ve yarıçap ızgaradan okunur; (x − a)² + (y − b)² = r² biçiminde, işaretlere ve r² ye dikkat edilerek yazılır.",
+   "tuzak": "Merkezin işaretini aynen yazmak; r yerine r² yi yazmamak; yarıçap yerine çapı almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-cn-denklem",
+   "tip": "Merkez ve yarıçaptan çember denklemi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCN-02",
+   "konu": "Çemberin Analitiği",
+   "alt": "Denklemden merkez ve yarıçap okuma",
+   "fikir": "Standart denklemden merkez (ters işaretle) ve yarıçap (karekök) okunur; merkezin x eksenine uzaklığı ordinatın mutlak değeridir.",
+   "tuzak": "Merkezin işaretini aynen almak; r² yi yarıçap sanmak; x eksenine uzaklık yerine apsisi almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-cn-okuma",
+   "tip": "Denklemden merkez ve yarıçap okuma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCN-03",
+   "konu": "Çemberin Analitiği",
+   "alt": "Eksene teğet çemberin denklemi",
+   "fikir": "Merkez ızgaradan okunur; teğet olunan eksene uzaklık yarıçap olur ve denklem yazılır.",
+   "tuzak": "Yarıçap yerine diğer koordinatın mutlak değerini almak; r yi r² yerine yazmak; işareti aynen yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-cn-teget",
+   "tip": "Eksene teğet çember",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GCN-04",
+   "konu": "Çemberin Analitiği",
+   "alt": "Noktanın çembere göre konumu",
+   "fikir": "Her noktanın koordinatları (x − a)² + (y − b)² ifadesine yazılır ve r² ile karşılaştırılır.",
+   "tuzak": "Sonucu r ile kıyaslamak; işaret hatası; eşit olma durumunu (çember üzerinde) iç sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ge-cn-konum",
+   "tip": "Noktanın çembere göre konumu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-cn-denklem",
+   "ad": "Merkez ve yarıçaptan çember denklemi",
+   "kartlar": [
+    "K-GCN-01"
+   ],
+   "uygulamaKonu": "geo|Çemberin Analitiği"
+  },
+  {
+   "tipId": "ge-cn-okuma",
+   "ad": "Denklemden merkez ve yarıçap okuma",
+   "kartlar": [
+    "K-GCN-02"
+   ],
+   "uygulamaKonu": "geo|Çemberin Analitiği"
+  },
+  {
+   "tipId": "ge-cn-teget",
+   "ad": "Eksene teğet çember",
+   "kartlar": [
+    "K-GCN-03"
+   ],
+   "uygulamaKonu": "geo|Çemberin Analitiği"
+  },
+  {
+   "tipId": "ge-cn-konum",
+   "ad": "Noktanın çembere göre konumu",
+   "kartlar": [
+    "K-GCN-04"
+   ],
+   "uygulamaKonu": "geo|Çemberin Analitiği"
+  }
+ ]
+}

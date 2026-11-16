@@ -1,0 +1,135 @@
+{
+ "konu": "Kenarortay",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GKO-01",
+   "konu": "Kenarortay",
+   "alt": "Ağırlık merkezinde 2:1",
+   "fikir": "Kenarortay ağırlık merkezinde köşeden itibaren 2 : 1 bölünür; parçalardan tüm uzunluk bulunur.",
+   "tuzak": "Oranı ters yazmak; yalnız köşeye yakın parçayı vermek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ko-agirlik",
+   "tip": "Ağırlık merkezinin kenarortayı bölme oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKO-02",
+   "konu": "Kenarortay",
+   "alt": "Kenarortay ve eşit alanlı parçalar",
+   "fikir": "Üç kenarortay alanları eşit altı parça oluşturur; bir kenarortay da alanı ikiye böler. Taralı parçadan toplam alana, oradan istenen bölgeye gidilir.",
+   "tuzak": "Parça sayısını yanlış belirlemek; ABE’yi 1/3 ya da 1/4 sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ko-alan-alti",
+   "tip": "Kenarortayların oluşturduğu eşit alanlı parçalar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKO-03",
+   "konu": "Kenarortay",
+   "alt": "Hipotenüs kenarortayı",
+   "fikir": "Dik üçgende hipotenüsün orta noktası köşelere eşit uzaklıktadır; kenarortay hipotenüsün yarısıdır.",
+   "tuzak": "Kenarortayı hipotenüsün kendisi sanmak; katsayıyı iki ile çarpmak yerine yarılamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ko-hipotenus",
+   "tip": "Dik üçgende hipotenüs kenarortayı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKO-04",
+   "konu": "Kenarortay",
+   "alt": "Ağırlık merkezinden paralel",
+   "fikir": "Ağırlık merkezi tabana 2/3 oranında yaklaşır; paralel doğru benzer küçük üçgen verir ve oran 2/3 olur.",
+   "tuzak": "1/3 ya da 1/2 oranını kullanmak; AG yerine GM oranını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ko-paralel",
+   "tip": "Ağırlık merkezinden tabana paralel",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKO-05",
+   "konu": "Kenarortay",
+   "alt": "Dörtgen bölgenin alanı",
+   "fikir": "İki kenarortayın kesişiminde oluşan dörtgen, 6 eşit parçadan 2’sini kapsar; toplam alan oradan bulunur.",
+   "tuzak": "Dörtgeni 3 parçadan biri saymak; parça sayısını yanlış belirlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ko-alan-bolge",
+   "tip": "İki kenarortaydan oluşan bölgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GKO-06",
+   "konu": "Kenarortay",
+   "alt": "Dik üçgende ağırlık merkezi",
+   "fikir": "Ağırlık merkezi 2:1 ile hipotenüs kenarortayı bulunur; hipotenüs 2 katıdır; Pisagor ile diğer dik kenar hesaplanır.",
+   "tuzak": "Kenarortayı hipotenüs sanmak; 2:1 oranını yanlış yönde uygulamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ko-agirlik-hipotenus",
+   "tip": "Dik üçgende ağırlık merkezi ve Pisagor",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ko-agirlik",
+   "ad": "Ağırlık merkezinin kenarortayı bölme oranı",
+   "kartlar": [
+    "K-GKO-01"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  },
+  {
+   "tipId": "ge-ko-alan-alti",
+   "ad": "Kenarortayların oluşturduğu eşit alanlı parçalar",
+   "kartlar": [
+    "K-GKO-02"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  },
+  {
+   "tipId": "ge-ko-hipotenus",
+   "ad": "Dik üçgende hipotenüs kenarortayı",
+   "kartlar": [
+    "K-GKO-03"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  },
+  {
+   "tipId": "ge-ko-paralel",
+   "ad": "Ağırlık merkezinden tabana paralel",
+   "kartlar": [
+    "K-GKO-04"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  },
+  {
+   "tipId": "ge-ko-alan-bolge",
+   "ad": "İki kenarortaydan oluşan bölgenin alanı",
+   "kartlar": [
+    "K-GKO-05"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  },
+  {
+   "tipId": "ge-ko-agirlik-hipotenus",
+   "ad": "Dik üçgende ağırlık merkezi ve Pisagor",
+   "kartlar": [
+    "K-GKO-06"
+   ],
+   "uygulamaKonu": "geo|Kenarortay"
+  }
+ ]
+}

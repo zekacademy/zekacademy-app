@@ -1,0 +1,156 @@
+{
+ "konu": "Prizmalar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GPR-01",
+   "konu": "Prizmalar",
+   "alt": "Dikdörtgenler prizmasının yüzey alanı",
+   "fikir": "Altı yüz üç çift eş dikdörtgendir; yüzey alanı 2(ab + bc + ca) ile bulunur.",
+   "tuzak": "Yüz çiftlerinden yalnız birer yüzü saymak; tabanları unutmak; hacimle karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pr-dik",
+   "tip": "Dikdörtgenler prizmasının yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-02",
+   "konu": "Prizmalar",
+   "alt": "Üçgen prizmanın yüzey alanı",
+   "fikir": "Taban dik üçgenin alanı ve çevresi bulunur; yanal alan çevre × yükseklik, tüm alan iki taban ile yanal alanın toplamıdır.",
+   "tuzak": "Üçgenin alanında 1/2 çarpanını unutmak; hipotenüsü yan yüzlerde saymamak; yalnız yanal alanı vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pr-ucgen",
+   "tip": "Üçgen prizmanın yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-03",
+   "konu": "Prizmalar",
+   "alt": "Köşeden parça çıkarılan prizma",
+   "fikir": "Köşeden dikdörtgenler prizması biçiminde parça çıkarılınca alan kaybı ile çukurun iç yüzleri eşittir; yüzey alanı değişmez.",
+   "tuzak": "Çıkarılan parçanın yüzlerini toplam alandan çıkarmak ya da eklemek; hacmi alan sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pr-kesme",
+   "tip": "Prizmadan parça kesme ve yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-04",
+   "konu": "Prizmalar",
+   "alt": "Dikdörtgen prizma kapta su dolumu",
+   "fikir": "Su hacmi taban alanı × su yüksekliğidir; cm³ litreye çevrilip musluğun debisine bölünür.",
+   "tuzak": "Kabın tüm yüksekliğini kullanmak; litre–cm³ dönüşümünü yanlış yapmak; hacmi debiye bölmemek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pr-su",
+   "tip": "Prizma biçimli kapta su doldurma, aktarma ve boşaltma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-05",
+   "konu": "Prizmalar",
+   "alt": "İki kap arasında su aktarma",
+   "fikir": "A kabındaki suyun hacmi B kabındaki suya eklenir; toplam hacim B’nin taban alanına bölünerek yeni su yüksekliği bulunur.",
+   "tuzak": "Yükseklikleri toplamak; A’nın taban alanına bölmek; B’deki ilk suyu unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pr-su",
+   "tip": "Prizma biçimli kapta su doldurma, aktarma ve boşaltma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-06",
+   "konu": "Prizmalar",
+   "alt": "Prizmayı köşegen düzlemle ikiye bölme",
+   "fikir": "Taban köşegeni Pisagorla bulunur; üçgen prizmanın alanı iki üçgen taban, üç dikdörtgen yan yüz ve kesit yüzünden oluşur.",
+   "tuzak": "Kesit yüzünü saymamak; tabanlardan birini unutmak; yarım prizma alanını bütünün yarısı sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pr-kesme",
+   "tip": "Prizmadan parça kesme ve yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-07",
+   "konu": "Prizmalar",
+   "alt": "Koliye kutu yerleştirme",
+   "fikir": "Her ayrıt boyunca sığan kutu sayısı bölümün tam kısmıdır; üç sayı çarpılır. Yönler yanlış eşleştirilirse sayı değişir.",
+   "tuzak": "Kutuyu yanlış yönde dizmek; hacim oranını alıp tam sayıya bakmamak; üç sayıyı toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pr-yerles",
+   "tip": "Koliye kutu yerleştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPR-08",
+   "konu": "Prizmalar",
+   "alt": "Dolum ve tahliye birlikte",
+   "fikir": "Depo hacmi litreye çevrilir; kalan boş hacmi, dolum ile boşaltma hızı farkı olan net hıza bölmek süreyi verir.",
+   "tuzak": "Başlangıçtaki suyu unutmak; hızları toplamak; yalnız dolum ya da boşaltma hızıyla hesap yapmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-pr-su",
+   "tip": "Prizma biçimli kapta su doldurma, aktarma ve boşaltma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-pr-dik",
+   "ad": "Dikdörtgenler prizmasının yüzey alanı",
+   "kartlar": [
+    "K-GPR-01"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "ge-pr-ucgen",
+   "ad": "Üçgen prizmanın yüzey alanı",
+   "kartlar": [
+    "K-GPR-02"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "ge-pr-kesme",
+   "ad": "Prizmadan parça kesme ve yüzey alanı",
+   "kartlar": [
+    "K-GPR-03",
+    "K-GPR-06"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "ge-pr-su",
+   "ad": "Prizma biçimli kapta su doldurma, aktarma ve boşaltma",
+   "kartlar": [
+    "K-GPR-04",
+    "K-GPR-05",
+    "K-GPR-08"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "ge-pr-yerles",
+   "ad": "Koliye kutu yerleştirme",
+   "kartlar": [
+    "K-GPR-07"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  }
+ ]
+}

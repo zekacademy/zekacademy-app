@@ -1,0 +1,135 @@
+{
+ "konu": "Açıortay",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GAO-01",
+   "konu": "Açıortay",
+   "alt": "İç açıortay teoremi",
+   "fikir": "Açıortay karşı kenarı komşu kenarların oranında böler; kenar toplamı verilen kenara bölünüp parçalar bulunur.",
+   "tuzak": "Oranı ters kurmak; D’yi [BC]’nin orta noktası sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ao-ic-oran",
+   "tip": "İç açıortay teoremi ile kenar oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAO-02",
+   "konu": "Açıortay",
+   "alt": "Açıortay üzerinde eşit uzaklık",
+   "fikir": "Açıortay üzerindeki nokta kollara eşit uzaklıktadır; iki uzaklık eşitlenip denklem çözülür.",
+   "tuzak": "Bulunan x’i cevap sanmak; yalnız bir uzaklığı vermek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ao-uzaklik",
+   "tip": "Açıortay üzerindeki noktanın kollara uzaklığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAO-03",
+   "konu": "Açıortay",
+   "alt": "Dış açıortay teoremi",
+   "fikir": "Dış açıortay karşı kenarın uzantısını komşu kenarların oranında dıştan böler; uzantı parçası denklemle bulunur.",
+   "tuzak": "İç açıortay teoremini uygulamak; uzantı yerine iç parçayı bulmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ao-dis-oran",
+   "tip": "Dış açıortay ile uzantı oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAO-04",
+   "konu": "Açıortay",
+   "alt": "İç teğet merkezi ve BIC açısı",
+   "fikir": "İç açıortayların kesişimi I için m(BIC) = 90° + A/2 bağıntısı kullanılır; A açısı bulunur.",
+   "tuzak": "180° − BIC ile A’yı bulmak; yarıyı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ao-merkez-aci",
+   "tip": "İç açıortayların kesişimi ve açılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAO-05",
+   "konu": "Açıortay",
+   "alt": "İç teğet merkezinden paralel ve çevre",
+   "fikir": "Açıortay ve paralellik ikizkenar üçgenler doğurur; küçük üçgenin çevresi iki kenar uzunluğunun toplamına dönüşür.",
+   "tuzak": "Çevreyi üç kenarla (BC dahil) hesaplamaya çalışmak; DE’yi BC sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ao-merkez-paralel",
+   "tip": "İç teğet merkezinden kenara paralel",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAO-06",
+   "konu": "Açıortay",
+   "alt": "İç açıortay ve alan oranı",
+   "fikir": "Açıortay karşı kenarı oranlar; yüksekliği ortak üçgenlerde alanlar bu orana eşittir.",
+   "tuzak": "Alan oranı yerine kenar oranının karesini almak; oranı ters yazmak; toplam alanı vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ao-ic-alan",
+   "tip": "İç açıortay ve ortak yükseklikli üçgenlerde alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ao-ic-oran",
+   "ad": "İç açıortay teoremi ile kenar oranı",
+   "kartlar": [
+    "K-GAO-01"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ge-ao-uzaklik",
+   "ad": "Açıortay üzerindeki noktanın kollara uzaklığı",
+   "kartlar": [
+    "K-GAO-02"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ge-ao-dis-oran",
+   "ad": "Dış açıortay ile uzantı oranı",
+   "kartlar": [
+    "K-GAO-03"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ge-ao-merkez-aci",
+   "ad": "İç açıortayların kesişimi ve açılar",
+   "kartlar": [
+    "K-GAO-04"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ge-ao-merkez-paralel",
+   "ad": "İç teğet merkezinden kenara paralel",
+   "kartlar": [
+    "K-GAO-05"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ge-ao-ic-alan",
+   "ad": "İç açıortay ve ortak yükseklikli üçgenlerde alan",
+   "kartlar": [
+    "K-GAO-06"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  }
+ ]
+}

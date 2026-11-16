@@ -1,0 +1,205 @@
+{
+ "konu": "Üçgende Alan",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GUL-01",
+   "konu": "Üçgende Alan",
+   "alt": "Taban ve yükseklik",
+   "fikir": "Alan = taban × yükseklik ÷ 2; yükseklik tabanın uzantısına inse de aynı formül kullanılır.",
+   "tuzak": "İkiye bölmeyi unutmak; alan yerine uzunlukları toplamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ul-taban-yuk",
+   "tip": "Taban ve yükseklikle alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-02",
+   "konu": "Üçgende Alan",
+   "alt": "İki kenar ve aradaki açı",
+   "fikir": "İki kenar ve aralarındaki açı verilince alan ½ · a · b · sin C; 30° için sin = ½.",
+   "tuzak": "Sinüs değerini ya da ½ çarpanını unutmak; sin 30° yerine cos 30° almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ul-sinus",
+   "tip": "İki kenar ve aradaki açıyla alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-03",
+   "konu": "Üçgende Alan",
+   "alt": "Ortak yükseklikli üçgenler",
+   "fikir": "Aynı köşeden aynı doğru üzerindeki tabanlara inen yükseklik ortaktır; alanlar taban oranında olur.",
+   "tuzak": "Oranı ters yazmak; alanı tabanla çarpmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ul-alan-oran",
+   "tip": "Ortak yükseklikle alan oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-04",
+   "konu": "Üçgende Alan",
+   "alt": "Kareli zeminde üçgen",
+   "fikir": "Üçgeni saran dikdörtgenden köşelerdeki dik üçgenler çıkarılır.",
+   "tuzak": "Dikdörtgenin alanını ya da yarısını cevap sanmak; köşedeki üçgenlerin toplamını cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ul-kareli",
+   "tip": "Kareli zeminde üçgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-05",
+   "konu": "Üçgende Alan",
+   "alt": "Ardışık iki taban oranı",
+   "fikir": "İki ardışık ortak yükseklik oranı uygulanır: önce ABC’den DBC, sonra DBE bulunur.",
+   "tuzak": "Yalnız bir oranı uygulamak; AD ve DB oranlarını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ul-alan-oran",
+   "tip": "Ortak yükseklikle alan oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-06",
+   "konu": "Üçgende Alan",
+   "alt": "Kenarortay ve iç noktadan alan",
+   "fikir": "Kenarortay alanı ikiye böler; AD üzerindeki E noktasından BED ve CED üçgenleri, ABD ve ACD nin aynı oranda küçülmüş halleridir.",
+   "tuzak": "Yalnız bir kenarortay üçgenini bulup E’nin oranını atlamak; AE oranını ED oranıyla karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ul-kenarortay",
+   "tip": "Kenarortay ve alan bölüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-07",
+   "konu": "Üçgende Alan",
+   "alt": "Benzer üçgenlerde alan oranı",
+   "fikir": "Tabana paralel doğru benzer üçgen oluşturur; alanlar oranı benzerlik oranının karesidir; yamuk alanı büyük üçgenden küçüğün farkıdır.",
+   "tuzak": "Alan oranı yerine uzunluk oranını kullanmak; oranı yamuğa uygulamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ul-benzer-alan",
+   "tip": "Benzer üçgenlerde alan oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-08",
+   "konu": "Üçgende Alan",
+   "alt": "Paralelkenarda köşelerle bölünme",
+   "fikir": "Taralı üçgen = paralelkenar − üç köşe üçgeni; her biri taban/yükseklik ve ortak yükseklik oranlarıyla bulunur.",
+   "tuzak": "Köşe üçgenlerinden birini çıkarmamak; oranları ters yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ul-paralelkenar",
+   "tip": "Paralelkenarda alan bölüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-09",
+   "konu": "Üçgende Alan",
+   "alt": "Alandan açıyı bulma",
+   "fikir": "Alan formülünden sin A hesaplanır; özel açı tablosunda iki açı vardır, geniş açı koşuluyla biri seçilir.",
+   "tuzak": "Dar açıyı seçmek; sin değerini başka açıyla eşlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ul-sinus",
+   "tip": "İki kenar ve aradaki açıyla alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUL-10",
+   "konu": "Üçgende Alan",
+   "alt": "Orta noktalar zinciri",
+   "fikir": "D ve E orta noktalarıyla orta taban/paralel kurulur, [AC] üzerinde F nin 1 : 2 oranı bulunur; alan ADC den AEF çıkarılır.",
+   "tuzak": "F yi [AC] nin orta noktası sanmak; ADC yi cevap sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 6,
+   "tipId": "ul-orta-nokta",
+   "tip": "Orta noktalarla alan bölüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ul-taban-yuk",
+   "ad": "Taban ve yükseklikle alan",
+   "kartlar": [
+    "K-GUL-01"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-sinus",
+   "ad": "İki kenar ve aradaki açıyla alan",
+   "kartlar": [
+    "K-GUL-02",
+    "K-GUL-09"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-alan-oran",
+   "ad": "Ortak yükseklikle alan oranı",
+   "kartlar": [
+    "K-GUL-03",
+    "K-GUL-05"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-kareli",
+   "ad": "Kareli zeminde üçgenin alanı",
+   "kartlar": [
+    "K-GUL-04"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-kenarortay",
+   "ad": "Kenarortay ve alan bölüşümü",
+   "kartlar": [
+    "K-GUL-06"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-benzer-alan",
+   "ad": "Benzer üçgenlerde alan oranı",
+   "kartlar": [
+    "K-GUL-07"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-paralelkenar",
+   "ad": "Paralelkenarda alan bölüşümü",
+   "kartlar": [
+    "K-GUL-08"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ul-orta-nokta",
+   "ad": "Orta noktalarla alan bölüşümü",
+   "kartlar": [
+    "K-GUL-10"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  }
+ ]
+}

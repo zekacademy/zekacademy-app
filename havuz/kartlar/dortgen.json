@@ -1,0 +1,128 @@
+{
+ "konu": "Dörtgenler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDR-01",
+   "konu": "Dörtgenler",
+   "alt": "Dörtgenin iç açıları",
+   "fikir": "İç açılar toplamı 360° dir; verilenler çıkarılıp kalan, açıların oranına göre paylaştırılır.",
+   "tuzak": "Kalanı eşit bölmek; sorulan açı yerine komşusunu yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "dg-ic-aci",
+   "tip": "Dörtgende iç açılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDR-02",
+   "konu": "Dörtgenler",
+   "alt": "Köşegenleri dik dörtgen",
+   "fikir": "Köşegenleri dik kesişen dörtgenin alanı köşegenler çarpımının yarısıdır; köşegen parçaları toplanarak köşegenler bulunur.",
+   "tuzak": "Köşegen parçalarından yalnızca ikisini kullanmak; ikiye bölmeyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "dg-dik-kosegen",
+   "tip": "Köşegenleri dik dörtgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDR-03",
+   "konu": "Dörtgenler",
+   "alt": "Dörtgende açıortaylar",
+   "fikir": "Komşu iki açının açıortayları AKB üçgeni oluşturur; A + B toplamı C ve D den bulunur ve yarısı üçgende kullanılır.",
+   "tuzak": "Yarıyı almayı unutmak; C ve D toplamını doğrudan cevap yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "dg-aciortay",
+   "tip": "Dörtgende açıortayların kesişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDR-04",
+   "konu": "Dörtgenler",
+   "alt": "Orta noktalardan paralelkenar",
+   "fikir": "Ardışık kenar orta noktaları, köşegenlere paralel ve yarı uzunlukta kenarlı bir paralelkenar oluşturur; çevresi köşegenler toplamıdır.",
+   "tuzak": "Çevre yerine yarı toplam ya da alan hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "dg-orta-nokta",
+   "tip": "Kenar orta noktalarını birleştiren dörtgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDR-05",
+   "konu": "Dörtgenler",
+   "alt": "Eşit köşegenler ve orta noktalar",
+   "fikir": "Köşegenleri eşit olan dörtgenin kenar orta noktaları eşkenar dörtgen oluşturur; her kenarı köşegenin yarısıdır, çevresi köşegenin iki katıdır.",
+   "tuzak": "Çevreyi köşegen sanmak; bir kenarı köşegen sanmak; yarıyı iki kez almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "dg-orta-nokta",
+   "tip": "Kenar orta noktalarını birleştiren dörtgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDR-06",
+   "konu": "Dörtgenler",
+   "alt": "Köşegenlerle alan bölüşümü",
+   "fikir": "Dörtgen köşegenlerle dört üçgene ayrılır; karşılıklı iki üçgenin alanlarının çarpımı eşittir ya da ortak yükseklik oranlarıyla dördüncü üçgen bulunur.",
+   "tuzak": "Dördüncü üçgenin alanını komşu üçgene eşit sanmak; üç üçgeni toplayıp bırakmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "dg-kosegen-bolme",
+   "tip": "Köşegenlerle bölünen dörtgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "dg-ic-aci",
+   "ad": "Dörtgende iç açılar",
+   "kartlar": [
+    "K-GDR-01"
+   ],
+   "uygulamaKonu": "geo|Dörtgenler"
+  },
+  {
+   "tipId": "dg-dik-kosegen",
+   "ad": "Köşegenleri dik dörtgenin alanı",
+   "kartlar": [
+    "K-GDR-02"
+   ],
+   "uygulamaKonu": "geo|Dörtgenler"
+  },
+  {
+   "tipId": "dg-aciortay",
+   "ad": "Dörtgende açıortayların kesişimi",
+   "kartlar": [
+    "K-GDR-03"
+   ],
+   "uygulamaKonu": "geo|Dörtgenler"
+  },
+  {
+   "tipId": "dg-orta-nokta",
+   "ad": "Kenar orta noktalarını birleştiren dörtgen",
+   "kartlar": [
+    "K-GDR-04",
+    "K-GDR-05"
+   ],
+   "uygulamaKonu": "geo|Dörtgenler"
+  },
+  {
+   "tipId": "dg-kosegen-bolme",
+   "ad": "Köşegenlerle bölünen dörtgenin alanı",
+   "kartlar": [
+    "K-GDR-06"
+   ],
+   "uygulamaKonu": "geo|Dörtgenler"
+  }
+ ]
+}

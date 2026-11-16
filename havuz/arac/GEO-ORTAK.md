@@ -11,9 +11,16 @@ Depo: /home/claude/zekacademy-app/havuz (git commit/push YOK, GitHub YOK, artifa
 - Çeldirici = gerçek öğrenci hatası (yanlış benzerlik oranı, alan yerine çevre, yarıçap–çap karışıklığı, dış açı–iç açı, π'yi 3 almamak gibi; π kullanımı metinde açık).
 - Kökte "şekil ölçekli değildir", "|AB| = 6 cm", "m(ABC) = 40°" ÖSYM yazımı. Uzunluk gösterimi |AB|; açı m(ABC).
 ## Kaynak (yalnız mantık kartı; metin/sayı/şekil kopyalama YOK)
-- ÖSYM: `/home/claude/kutup/osym_metin.json` (geometri soruları matematik bölümünde), `havuz/osym-harita.json` (bölüm "Geometri"). Yayın: koçun geometri kitapları (`/home/claude/kutup/geometri/` altında metin varsa).
+- ÖSYM: `/home/claude/kutup/osym_metin.json` (geometri soruları matematik bölümünde), `havuz/osym-harita.json` (bölüm "Geometri"). Yayın: `/home/claude/kutup/geometri/yayin_orijinal.txt` (Orijinal TYT–AYT Geometri; sayfalar `\f` ile; şekiller metinde yok, yalnız soru metni) ve yazı tanımayla çıkarılan `/home/claude/kutup/geometri/yayin_kenankara.txt` (henüz yoksa birkaç dakika sonra bak; hatalı karakter olabilir). İkisi de TYT ve AYT içerir; yalnız TYT düzeyini al.
 ## Dosyalar
 Her konu için ayrı önek: `tyt-geo/uret-<onek>.py` → `tyt-geo/<onek>-1.json`, kartlar `kartlar/<onek>.json`. `Parti('<onek>','<Konu adı>','geo|<Konu adı>',ders='TYT Geometri',idon='tytgeo')` (konu adı uygulama anahtarındaki adla AYNEN). Kart kimliği öneki görevde. Zorluk ≈ %25 kolay, %50 orta, %25 zor. Kardeş yok, ipucu 1.
 ## Denetim
-`python3 denetle.py tyt-geo/<onek>-1.json --profil --benzerlik /home/claude/kutup/osym_metin.json /home/claude/kutup/sorular.json` → 0 HATA; tüm `tyt-geo/*-1.json` ile birlikte 0 HATA. PNG: `python3 kalite.py tyt-geo/<onek> <onek>` → `/tmp/kor/tytgeo-<onek>-00NN.png`; HER PNG'yi Read ile aç ve düzelt. hazirla.sh ÇALIŞTIRMA. SVG ≤ 40 KB.
+`python3 denetle.py tyt-geo/<onek>-1.json --profil --benzerlik /home/claude/kutup/osym_metin.json /home/claude/kutup/geometri/yayin_orijinal.txt` → 0 HATA; tüm `tyt-geo/*-1.json` ile birlikte 0 HATA. PNG: `python3 kalite.py tyt-geo/<onek> <onek>` → `/tmp/kor/tytgeo-<onek>-00NN.png`; HER PNG'yi Read ile aç ve düzelt. hazirla.sh ÇALIŞTIRMA. SVG ≤ 40 KB.
 Rapor KISA (en çok 8 satır).
+## Düzeltme turu dersleri (17 Kasım gece; doğrulayıcı bulguları)
+- Ölçekli çizilmiş ve bilinmeyeni gözle okunabilen HER soruya kökte "Şekil ölçekli değildir." notu ekle (en sık bulgu).
+- Uzunluk etiketleri hangi parçaya ait olduğu belli olacak biçimde: ölçü oku/kavsi ya da parça ortasına yakın; "10" BG mi BC mi tartışılmasın. Metindeki veri (köşegen vb.) şekilde de görünsün ya da yalnız metinde olsun, ikisi çelişmesin.
+- Şekil çözümün kanıtlanacak adımını vermesin (ör. kanıtlanacak dik açıyı işaretleme).
+- Bilgi kartı/ipucu/puf sonucu ya da formülün sorudaki özel hâlini vermesin.
+- Aynı kurgu/sayı üçlüsü (5-12-13, 8-6-10) dosyalar arasında tekrar etmesin; yalnız TYT kapsamı (eğik kesilmiş silindir, "vektör" yok).
+- Şık sırası sayısal değere göre (π ve kök içerenlerde gerçek değere göre); harf dengesi.

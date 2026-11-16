@@ -1,0 +1,163 @@
+{
+ "konu": "Paralelkenar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GPK-01",
+   "konu": "Paralelkenar",
+   "alt": "Karşılıklı ve komşu açılar",
+   "fikir": "Komşu açılar bütünlerdir; x bulunur, karşılıklı açı komşu açının bütünleri (ya da köşenin kendisi) olarak yazılır.",
+   "tuzak": "Komşu açıları eşit sanmak; x’i cevap sanmak; karşılıklı açıyı komşu açının bütünleri yerine kendisine eşitlemek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pk-aci",
+   "tip": "Paralelkenarda açıları bulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-02",
+   "konu": "Paralelkenar",
+   "alt": "Karşılıklı kenarlar ve çevre",
+   "fikir": "Karşılıklı kenarlar eşit olduğundan x denklemden bulunur; çevre iki komşu kenarın toplamının iki katıdır.",
+   "tuzak": "Çevreyi yalnız iki kenar toplamı almak; karşılıklı kenarları farklı sanmak; x yerine kenar yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pk-cevre",
+   "tip": "Paralelkenarın çevresi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-03",
+   "konu": "Paralelkenar",
+   "alt": "Köşegenler birbirini ortalar",
+   "fikir": "Köşegenler birbirini ortaladığından |AE| = |EC| denklemiyle x bulunur; iki köşegenin uzunluğu yarıların iki katıdır.",
+   "tuzak": "Yalnız yarım köşegenleri toplamak; BD’yi AC’ye eşit sanmak; iki köşegeni karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pk-kosegen",
+   "tip": "Köşegenler birbirini ortalar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-04",
+   "konu": "Paralelkenar",
+   "alt": "Alan: taban × yükseklik",
+   "fikir": "Yan kenar ve 45° açıdan ikizkenar dik üçgenle yükseklik bulunur; alan taban çarpı yüksekliktir.",
+   "tuzak": "Yan kenarı yükseklik sanmak; 30° kuralını 45°’ye uygulamak; alanı yarılamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pk-alan",
+   "tip": "Paralelkenarın alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-05",
+   "konu": "Paralelkenar",
+   "alt": "Köşegenle bölünen alanlar",
+   "fikir": "Köşegen alanı ikiye böler; köşegenin orta noktasıyla ve taban oranıyla ardışık oranlar uygulanarak taralı üçgenin alanı bulunur.",
+   "tuzak": "Oranı ters kurmak; yalnız bir oranı uygulamak; köşegen yarısını atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pk-alan",
+   "tip": "Paralelkenarın alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-06",
+   "konu": "Paralelkenar",
+   "alt": "Açıortay ve ikizkenar üçgen",
+   "fikir": "Paralelkenarda iki köşenin açıortayı karşı kenarda ikizkenar üçgenler oluşturur; kesişince parçaların toplamı taban uzunluğunu aşar.",
+   "tuzak": "Kesişmeyi görmeyip DE + CF toplamını EF sanmak; yan kenar yerine taban almak; EF yerine DE’yi yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-pk-aciortay",
+   "tip": "Açıortayların karşı kenarda ayırdığı parça",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-07",
+   "konu": "Paralelkenar",
+   "alt": "İçteki noktanın oluşturduğu üçgenler",
+   "fikir": "İçteki bir noktadan karşılıklı üçgen çiftlerinin alanları toplamı paralelkenar alanının yarısıdır; iki çiftten eşitlik kurulup bilinmeyen bulunur.",
+   "tuzak": "Karşılıklı üçgenleri eşit sanmak; dört alanı toplayıp cevap yazmak; paralelkenarın alanını sormak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-pk-ic",
+   "tip": "İçteki noktanın oluşturduğu üçgenlerin alanları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPK-08",
+   "konu": "Paralelkenar",
+   "alt": "Köşegen kesiminden geçen doğru",
+   "fikir": "Kesim noktasından geçen doğru paralelkenarı iki eş parçaya ayırır; |CL| = |AK| ve |LK| = 2 · |OK| olur, bir parçanın çevresi bunlarla yazılır.",
+   "tuzak": "|LK| yerine |OK| kullanmak; KB yerine AK almak; paralelkenarın çevresini cevap sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-pk-kosegen",
+   "tip": "Köşegenler birbirini ortalar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-pk-aci",
+   "ad": "Paralelkenarda açıları bulma",
+   "kartlar": [
+    "K-GPK-01"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  },
+  {
+   "tipId": "ge-pk-cevre",
+   "ad": "Paralelkenarın çevresi",
+   "kartlar": [
+    "K-GPK-02"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  },
+  {
+   "tipId": "ge-pk-kosegen",
+   "ad": "Köşegenler birbirini ortalar",
+   "kartlar": [
+    "K-GPK-03",
+    "K-GPK-08"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  },
+  {
+   "tipId": "ge-pk-alan",
+   "ad": "Paralelkenarın alanı",
+   "kartlar": [
+    "K-GPK-04",
+    "K-GPK-05"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  },
+  {
+   "tipId": "ge-pk-aciortay",
+   "ad": "Açıortayların karşı kenarda ayırdığı parça",
+   "kartlar": [
+    "K-GPK-06"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  },
+  {
+   "tipId": "ge-pk-ic",
+   "ad": "İçteki noktanın oluşturduğu üçgenlerin alanları",
+   "kartlar": [
+    "K-GPK-07"
+   ],
+   "uygulamaKonu": "geo|Paralelkenar"
+  }
+ ]
+}

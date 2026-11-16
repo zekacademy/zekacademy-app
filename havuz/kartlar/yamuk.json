@@ -1,0 +1,163 @@
+{
+ "konu": "Yamuk",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GYM-01",
+   "konu": "Yamuk",
+   "alt": "Yamukta yan kenar açıları",
+   "fikir": "Yan kenarın iki ucundaki açılar bütünlerdir; önce bilinmeyen x bir yan kenardan bulunur, sonra diğer yan kenara geçilir.",
+   "tuzak": "Karşı köşedeki açıyı eşit sanmak; aynı taban üzerindeki açıları eşit ya da bütünler sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ym-aci",
+   "tip": "Yamukta açıları bulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-02",
+   "konu": "Yamuk",
+   "alt": "Orta taban",
+   "fikir": "Orta taban tabanların aritmetik ortalamasıdır; verilen cebirsel ifadelerle denklem kurulup x bulunur, sonra istenen taban hesaplanır.",
+   "tuzak": "Orta tabanı iki tabanın toplamına eşit almak; x’i cevap sanmak; alt taban yerine üst tabanı yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ym-orta",
+   "tip": "Orta taban uzunluğu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-03",
+   "konu": "Yamuk",
+   "alt": "İkizkenar yamukta iç ters açı",
+   "fikir": "Eşit kenarlardan ikizkenar üçgen, paralel kenarlardan iç ters açı bulunur; köşegen bir taban açısını ikiye böler.",
+   "tuzak": "Köşegeni açıortay sanıp 70°’yi ikiye bölmeden kullanmak; yamukta açıları 180° sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ym-ikiz",
+   "tip": "İkizkenar yamukta köşegenle oluşan açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-04",
+   "konu": "Yamuk",
+   "alt": "Dik yamukta alan",
+   "fikir": "Eğik yan kenar ile taban farkından yükseklik Pisagorla bulunur; alan tabanlar toplamının yarısı çarpı yüksekliktir.",
+   "tuzak": "Eğik kenarı yükseklik sanmak; tabanlar toplamını yarılamamak; üst tabanı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ym-alan",
+   "tip": "Yamuğun alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-05",
+   "konu": "Yamuk",
+   "alt": "Orta tabanın böldüğü alanlar",
+   "fikir": "Orta taban yamuğu eşit yüksekli iki yamuğa böler; alanlar kendi taban toplamlarıyla orantılıdır, toplam alandan parça bulunur.",
+   "tuzak": "Alanı yarı yarıya bölmek; alanı yalnız üst tabanla orantılamak; orta tabanı toplam saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ym-alan",
+   "tip": "Yamuğun alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-06",
+   "konu": "Yamuk",
+   "alt": "Yamukta köşegen üçgenleri",
+   "fikir": "Taban oranı köşegen parçalarının oranını verir; verilen yan üçgenden başlayarak ortak köşeli üçgenlerde alan oranıyla diğer üçgenler bulunur.",
+   "tuzak": "Yan üçgenleri farklı sanmak; benzerlik oranının karesini ortak yükseklikli üçgenlere uygulamak; yalnız bir üçgeni hesaplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ym-kelebek",
+   "tip": "Yamukta köşegenlerin oluşturduğu üçgenlerin alanları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-07",
+   "konu": "Yamuk",
+   "alt": "Köşegen kesişiminden geçen paralel",
+   "fikir": "Köşegen kesişim noktasında tabanlara paralel çizilen doğrunun yan kenarlardaki parçası, benzer üçgenlerle bulunur; tamamı iki eş parçanın toplamıdır.",
+   "tuzak": "Orta tabanı (aritmetik ortalama) kullanmak; yalnız bir parçayı cevap sanmak; oranı ters kurmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ym-benzer",
+   "tip": "Yamukta benzerlik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GYM-08",
+   "konu": "Yamuk",
+   "alt": "Yan kenarların uzantılarıyla benzerlik",
+   "fikir": "Yan kenarlar uzatılınca oluşan büyük ve küçük üçgenler benzerdir; oran tabanlardan kurulur, tüm kenardan parça çıkarılır.",
+   "tuzak": "Oranı parça/parça yerine parça/bütün kurmak; ters oran; |EA| ile |ED|’yi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ym-benzer",
+   "tip": "Yamukta benzerlik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ym-aci",
+   "ad": "Yamukta açıları bulma",
+   "kartlar": [
+    "K-GYM-01"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "ge-ym-orta",
+   "ad": "Orta taban uzunluğu",
+   "kartlar": [
+    "K-GYM-02"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "ge-ym-ikiz",
+   "ad": "İkizkenar yamukta köşegenle oluşan açı",
+   "kartlar": [
+    "K-GYM-03"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "ge-ym-alan",
+   "ad": "Yamuğun alanı",
+   "kartlar": [
+    "K-GYM-04",
+    "K-GYM-05"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "ge-ym-kelebek",
+   "ad": "Yamukta köşegenlerin oluşturduğu üçgenlerin alanları",
+   "kartlar": [
+    "K-GYM-06"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  },
+  {
+   "tipId": "ge-ym-benzer",
+   "ad": "Yamukta benzerlik",
+   "kartlar": [
+    "K-GYM-07",
+    "K-GYM-08"
+   ],
+   "uygulamaKonu": "geo|Yamuk"
+  }
+ ]
+}

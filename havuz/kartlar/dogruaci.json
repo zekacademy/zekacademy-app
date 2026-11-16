@@ -1,0 +1,135 @@
+{
+ "konu": "Doğruda Açılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDA-01",
+   "konu": "Doğruda Açılar",
+   "alt": "Doğru üzerinde bitişik açılar",
+   "fikir": "Doğru üzerindeki bitişik açıların toplamı 180°’dir; dik açı 90° verir. Denklem kurup x bulunur, sonra istenen açı hesaplanır.",
+   "tuzak": "x değerini bulup durmak; istenen açının ifadesine geri yazmayı unutmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-da-bitisik",
+   "tip": "Doğru üzerinde bitişik açılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDA-02",
+   "konu": "Doğruda Açılar",
+   "alt": "Ters açılar, bütünler yan açı",
+   "fikir": "İç ters açıların eşitliğinden x bulunur; kesenin aynı noktasındaki yan açı 180°’ye tamamlanır.",
+   "tuzak": "Ters açıları bütünler sanmak; x bulup bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-da-paralel",
+   "tip": "Paralel iki doğru ve kesen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDA-03",
+   "konu": "Doğruda Açılar",
+   "alt": "Zigzag kuralı",
+   "fikir": "Paralel doğrular arasındaki kırık çizgide açılar açıldıkları yöne göre gruplanır ve gruplar arasında denklem kurulur.",
+   "tuzak": "Hangi açıların aynı yöne baktığını karıştırmak; x’i tek bir açıya eşitlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-da-zigzag",
+   "tip": "Paralel doğrular arasında zigzag",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDA-04",
+   "konu": "Doğruda Açılar",
+   "alt": "İki açıortay arasındaki açı",
+   "fikir": "Açıortay açıyı iki eş açıya ayırır; açıortaylarla oluşan açı verilerle ilişkilendirilip denklem kurulur.",
+   "tuzak": "Yarıyı unutmak; istenen açı yerine x ya da toplam açıyı vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-da-aciortay",
+   "tip": "Ardışık açıların açıortayları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDA-05",
+   "konu": "Doğruda Açılar",
+   "alt": "Saatte akrep-yelkovan açısı",
+   "fikir": "Akrebin dakikada 0,5°, yelkovanın 6° döndüğü bilgisiyle iki kolun konumu derece cinsinden yazılıp fark alınır; akrebin saat içindeki ilerlemesi unutulmaz.",
+   "tuzak": "Akrebi tam saat rakamında sanmak; 180°’den büyük açıyı vermek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-da-saat",
+   "tip": "Saatte akrep ve yelkovan açısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDA-06",
+   "konu": "Doğruda Açılar",
+   "alt": "Katlanmış şeritte açı",
+   "fikir": "Katlayınca açılar korunur: katlanan kenar ile kat doğrusu arasındaki açı 180° − α dır ve bu açı aynı zamanda (katlanan açı + α) toplamına eşittir.",
+   "tuzak": "Katlanan açıyı kat doğrusundaki açıya eşitlemek; x bulup sorulan açıya dönmemek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-da-serit",
+   "tip": "Katlanmış kâğıt şerit",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-da-bitisik",
+   "ad": "Doğru üzerinde bitişik açılar",
+   "kartlar": [
+    "K-GDA-01"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  },
+  {
+   "tipId": "ge-da-paralel",
+   "ad": "Paralel iki doğru ve kesen",
+   "kartlar": [
+    "K-GDA-02"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  },
+  {
+   "tipId": "ge-da-zigzag",
+   "ad": "Paralel doğrular arasında zigzag",
+   "kartlar": [
+    "K-GDA-03"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  },
+  {
+   "tipId": "ge-da-aciortay",
+   "ad": "Ardışık açıların açıortayları",
+   "kartlar": [
+    "K-GDA-04"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  },
+  {
+   "tipId": "ge-da-saat",
+   "ad": "Saatte akrep ve yelkovan açısı",
+   "kartlar": [
+    "K-GDA-05"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  },
+  {
+   "tipId": "ge-da-serit",
+   "ad": "Katlanmış kâğıt şerit",
+   "kartlar": [
+    "K-GDA-06"
+   ],
+   "uygulamaKonu": "geo|Doğruda Açılar"
+  }
+ ]
+}

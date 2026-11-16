@@ -1,0 +1,121 @@
+{
+ "konu": "Eşkenar Üçgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GEU-01",
+   "konu": "Eşkenar Üçgen",
+   "alt": "Eşkenar üçgenin yüksekliği",
+   "fikir": "Yükseklik tabanı ortalar; 30°-60°-90° üçgenden h = a√3/2 bulunur.",
+   "tuzak": "Yüksekliği kenara ya da yarım kenara eşitlemek; √3 yerine √2 almak; kenarı √3 ile çarpmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "ge-eu-yukseklik",
+   "tip": "Eşkenar üçgende yükseklik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEU-02",
+   "konu": "Eşkenar Üçgen",
+   "alt": "Eşkenar üçgenin alanı",
+   "fikir": "Alan = a²√3/4; a = 6 için 9√3. Alternatif: yükseklik 3√3 ve taban 6 ile 6 × 3√3 ÷ 2.",
+   "tuzak": "√3 çarpanını unutmak; yarıyı unutmak; 45° kuralını uygulamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "ge-eu-alan",
+   "tip": "Eşkenar üçgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEU-03",
+   "konu": "Eşkenar Üçgen",
+   "alt": "İç noktadan kenarlara uzaklıklar toplamı",
+   "fikir": "Uzaklıklar toplamı yüksekliğe eşittir; yükseklikten kenar a = 2h ÷ √3 ile bulunur.",
+   "tuzak": "Toplamı kenar sanmak; a = h√3 yazmak; 2 katını unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-eu-uzaklik",
+   "tip": "Eşkenar üçgende iç noktanın uzaklıkları toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEU-04",
+   "konu": "Eşkenar Üçgen",
+   "alt": "Karenin içinde eşkenar üçgen",
+   "fikir": "ABE eşkenar olduğundan |AE| = |AD| ve m(DAE) = 30°; ADE üçgeni ikizkenar (75°-75°). Aynı biçimde BEC. DEC açısı 360° içinden çıkarılır.",
+   "tuzak": "AED açısını DEC sanmak; 60° + 60° gibi yanlış toplam; 90° − 60° = 30°da bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-eu-bilesik",
+   "tip": "Eşkenar üçgenlerle oluşan şekiller",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEU-05",
+   "konu": "Eşkenar Üçgen",
+   "alt": "Kenarları üçe bölünmüş eşkenar üçgen",
+   "fikir": "Kenarlara paralel doğrular 9 eş eşkenar üçgen oluşturur; her birinin alanı büyüğün 1/9’udur ve taralı alan sayılıp çarpılır.",
+   "tuzak": "Küçük üçgenleri yanlış saymak; küçük üçgenin kenarını 3 sanmak; tüm alanı taralı sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-eu-bilesik",
+   "tip": "Eşkenar üçgenlerle oluşan şekiller",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GEU-06",
+   "konu": "Eşkenar Üçgen",
+   "alt": "Eşkenar üçgende kenar üzerindeki noktaya uzaklık",
+   "fikir": "A’dan BC’ye inen yükseklikle ADH dik üçgeni kurulur: |AH| = 6√3, |HD| = 2; Pisagor ile |AD| = 4√7.",
+   "tuzak": "D’yi orta nokta sanmak; ABD’yi dik üçgen sanıp Pisagor uygulamak; 30°-60°-90° kuralını D için kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-eu-yukseklik",
+   "tip": "Eşkenar üçgende yükseklik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-eu-yukseklik",
+   "ad": "Eşkenar üçgende yükseklik",
+   "kartlar": [
+    "K-GEU-01",
+    "K-GEU-06"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Üçgen"
+  },
+  {
+   "tipId": "ge-eu-alan",
+   "ad": "Eşkenar üçgenin alanı",
+   "kartlar": [
+    "K-GEU-02"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Üçgen"
+  },
+  {
+   "tipId": "ge-eu-uzaklik",
+   "ad": "Eşkenar üçgende iç noktanın uzaklıkları toplamı",
+   "kartlar": [
+    "K-GEU-03"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Üçgen"
+  },
+  {
+   "tipId": "ge-eu-bilesik",
+   "ad": "Eşkenar üçgenlerle oluşan şekiller",
+   "kartlar": [
+    "K-GEU-04",
+    "K-GEU-05"
+   ],
+   "uygulamaKonu": "geo|Eşkenar Üçgen"
+  }
+ ]
+}

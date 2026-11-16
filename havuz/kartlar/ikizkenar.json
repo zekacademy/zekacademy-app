@@ -1,0 +1,121 @@
+{
+ "konu": "İkizkenar Üçgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GIK-01",
+   "konu": "İkizkenar Üçgen",
+   "alt": "Taban açıları ve cebirsel açı",
+   "fikir": "Taban açıları eşit ve iç açılar toplamı 180° olduğundan x için bir denklem kurulur; sonra istenen açı hesaplanır.",
+   "tuzak": "x’i bulup bırakmak; taban açısını tepe açısı sanmak; iki taban açısını tek açı almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ik-taban",
+   "tip": "İkizkenar üçgende taban açıları",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GIK-02",
+   "konu": "İkizkenar Üçgen",
+   "alt": "Tepe yüksekliği",
+   "fikir": "Tepeden tabana inen yükseklik tabanı ortalar; yarım taban, yükseklik ve eş kenar dik üçgen oluşturur (6-8-10).",
+   "tuzak": "Yüksekliği eş kenar ya da yarım taban sanmak; tabanı bölmeyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-ik-yukseklik",
+   "tip": "İkizkenar üçgende yükseklik ve alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GIK-03",
+   "konu": "İkizkenar Üçgen",
+   "alt": "Eş kenara inen yükseklik",
+   "fikir": "Tepe yüksekliği Pisagorla bulunur, alan iki farklı tabanla yazılıp eş kenara inen yükseklik çıkarılır.",
+   "tuzak": "Tepe yüksekliğini (8) istenen sanmak; alanı ikiye bölmeyi unutmak; yarım tabanı yükseklik sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-ik-yukseklik",
+   "tip": "İkizkenar üçgende yükseklik ve alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GIK-04",
+   "konu": "İkizkenar Üçgen",
+   "alt": "Art arda ikizkenar üçgenler (açı zinciri)",
+   "fikir": "|AD| = |DC| ve |AB| = |AD| eşitlikleri açıları zincirleme x cinsinden yazdırır: C = x, DAC = x, ADB = 2x, ABD = 2x.",
+   "tuzak": "Dış açıyı (2x) görememek; ABC’yi ikizkenar sanmak; 4x yerine 3x yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ik-zincir",
+   "tip": "Art arda ikizkenar üçgenler (açı zinciri)",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GIK-05",
+   "konu": "İkizkenar Üçgen",
+   "alt": "Eş kenarın karşı kenara oturan ikizkenar üçgen",
+   "fikir": "Tepe açısından taban açıları bulunur; küçük ikizkenar üçgende (|BD| = |BC|) açılar yazılarak ABD açısı fark olarak çıkar.",
+   "tuzak": "BD’yi açıortay sanmak; BDC yerine BCD’yi unutmak; 70° − 40° farkını alamamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ik-zincir",
+   "tip": "Art arda ikizkenar üçgenler (açı zinciri)",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GIK-06",
+   "konu": "İkizkenar Üçgen",
+   "alt": "İkizkenar üçgen ve uzatılan taban",
+   "fikir": "|AB| = |AC| ve |CA| = |CD| iki ikizkenar üçgen kurar; ACD üçgeninin dış açısı x cinsinden yazılarak tepe açısı bulunur.",
+   "tuzak": "D açısını taban açısı sanmak; dış açıyı iç açıyla karıştırmak; 4 adımlık zinciri yarıda bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-ik-dis",
+   "tip": "İkizkenar üçgenler ve dış açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ik-taban",
+   "ad": "İkizkenar üçgende taban açıları",
+   "kartlar": [
+    "K-GIK-01"
+   ],
+   "uygulamaKonu": "geo|İkizkenar Üçgen"
+  },
+  {
+   "tipId": "ge-ik-yukseklik",
+   "ad": "İkizkenar üçgende yükseklik ve alan",
+   "kartlar": [
+    "K-GIK-02",
+    "K-GIK-03"
+   ],
+   "uygulamaKonu": "geo|İkizkenar Üçgen"
+  },
+  {
+   "tipId": "ge-ik-zincir",
+   "ad": "Art arda ikizkenar üçgenler (açı zinciri)",
+   "kartlar": [
+    "K-GIK-04",
+    "K-GIK-05"
+   ],
+   "uygulamaKonu": "geo|İkizkenar Üçgen"
+  },
+  {
+   "tipId": "ge-ik-dis",
+   "ad": "İkizkenar üçgenler ve dış açı",
+   "kartlar": [
+    "K-GIK-06"
+   ],
+   "uygulamaKonu": "geo|İkizkenar Üçgen"
+  }
+ ]
+}

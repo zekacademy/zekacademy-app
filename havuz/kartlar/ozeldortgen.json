@@ -1,0 +1,128 @@
+{
+ "konu": "Özel Dörtgenler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GOD-01",
+   "konu": "Özel Dörtgenler",
+   "alt": "Özellik tablosunda hata",
+   "fikir": "Her dörtgenin köşegen özelliklerini (eşit, dik, açıortay) tek tek hatırlayıp tablodaki yanlış işareti bulmak.",
+   "tuzak": "Eşkenar dörtgende köşegenleri eşit sanmak; dikdörtgende köşegenleri açıortay sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "ge-od-tablo",
+   "tip": "Özellik tablosunda hatalı hücreyi bulma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GOD-02",
+   "konu": "Özel Dörtgenler",
+   "alt": "Köşegen bilgisinden dörtgen türü",
+   "fikir": "Köşegenlerin birbirini ortalaması paralelkenarı, ek olarak dik olması eşkenar dörtgeni verir; eşit olması bilinmeden kare ya da dikdörtgen denemez.",
+   "tuzak": "Dik ortalamayı kare sanmak; eşkenar dörtgenin paralelkenar olduğunu unutmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ge-od-oncul",
+   "tip": "Köşegen bilgisinden dörtgen türünü belirleme",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GOD-03",
+   "konu": "Özel Dörtgenler",
+   "alt": "Açı ve kenardan dörtgen türü",
+   "fikir": "Karşılıklı açıları eşit dörtgen paralelkenardır; yanındaki iki kenar da eşitse eşkenar dörtgen olur; açılar 90° olmadığından dikdörtgen ya da kare değildir.",
+   "tuzak": "Açıları ikişer ikişer eşit görüp dikdörtgen demek; eşkenar dörtgeni yamukla karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-od-belirle",
+   "tip": "Açı ve kenar bilgisinden dörtgen türünü belirleme",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GOD-04",
+   "konu": "Özel Dörtgenler",
+   "alt": "Kâğıt şeritlerin kesişimi",
+   "fikir": "Eşit genişlikli iki şeridin ortak parçası eşkenar dörtgendir; kenar, genişlik ve şeritler arasındaki açıdan 30°–60°–90° üçgeniyle bulunur.",
+   "tuzak": "Genişliği kenar sanmak; alan ile çevreyi karıştırmak; 30°’nin karşısındaki kenarı yanlış katlamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-od-kagit",
+   "tip": "Kâğıt kesme ve şeritle oluşan dörtgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GOD-05",
+   "konu": "Özel Dörtgenler",
+   "alt": "Kâğıt kesme: kenar orta noktaları",
+   "fikir": "Dikdörtgenin kenar orta noktaları birleştirilince eşkenar dörtgen oluşur; kenarı yarı kenarlardan Pisagorla bulunur.",
+   "tuzak": "Kenarı yarı kenarların toplamı sanmak; dikdörtgenin çevresini vermek; yalnız bir kenarı yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-od-kagit",
+   "tip": "Kâğıt kesme ve şeritle oluşan dörtgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GOD-06",
+   "konu": "Özel Dörtgenler",
+   "alt": "Dörtgen sınıflandırma şeması",
+   "fikir": "Paralelkenar, dikdörtgen ve eşkenar dörtgen kümelerinin kesişimi karedir; köşegen özellikleri hangi bölgeye ait olduğunu belirler.",
+   "tuzak": "Karenin yalnız dikdörtgen bölgesinde sanılması; eşit ve dik köşegen özelliklerinin karıştırılması.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-od-sema",
+   "tip": "Dörtgen şemasında bölge eşleştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-od-tablo",
+   "ad": "Özellik tablosunda hatalı hücreyi bulma",
+   "kartlar": [
+    "K-GOD-01"
+   ],
+   "uygulamaKonu": "geo|Özel Dörtgenler"
+  },
+  {
+   "tipId": "ge-od-oncul",
+   "ad": "Köşegen bilgisinden dörtgen türünü belirleme",
+   "kartlar": [
+    "K-GOD-02"
+   ],
+   "uygulamaKonu": "geo|Özel Dörtgenler"
+  },
+  {
+   "tipId": "ge-od-belirle",
+   "ad": "Açı ve kenar bilgisinden dörtgen türünü belirleme",
+   "kartlar": [
+    "K-GOD-03"
+   ],
+   "uygulamaKonu": "geo|Özel Dörtgenler"
+  },
+  {
+   "tipId": "ge-od-kagit",
+   "ad": "Kâğıt kesme ve şeritle oluşan dörtgen",
+   "kartlar": [
+    "K-GOD-04",
+    "K-GOD-05"
+   ],
+   "uygulamaKonu": "geo|Özel Dörtgenler"
+  },
+  {
+   "tipId": "ge-od-sema",
+   "ad": "Dörtgen şemasında bölge eşleştirme",
+   "kartlar": [
+    "K-GOD-06"
+   ],
+   "uygulamaKonu": "geo|Özel Dörtgenler"
+  }
+ ]
+}

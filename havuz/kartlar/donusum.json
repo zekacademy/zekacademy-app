@@ -1,0 +1,135 @@
+{
+ "konu": "Dönüşüm Geometrisi",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDN-01",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "Öteleme miktarı",
+   "fikir": "Karşılık gelen iki noktanın koordinat (kare) farkından öteleme miktarı okunur; işaretler yöne göre verilir.",
+   "tuzak": "Yön işaretini unutmak; a·b yerine a + b ya da |a| + |b| almak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-dn-otele",
+   "tip": "Kareli zeminde öteleme miktarı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDN-02",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "Eksenlere göre ardışık yansıma",
+   "fikir": "Önce x eksenine, sonra y eksenine yansıma orijine göre yansımadır: (x, y) → (−x, −y); uzaklık Pisagorla bulunur.",
+   "tuzak": "Yalnız tek yansımayı uygulamak; iki nokta arası uzaklıkta yalnız bir farkı almak ya da farkları toplamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-dn-yansima",
+   "tip": "Eksenlere göre ardışık yansıma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDN-03",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "y = x doğrusuna göre yansıma",
+   "fikir": "y = x doğrusuna göre yansımada koordinatlar yer değiştirir: (x, y) → (y, x).",
+   "tuzak": "Koordinatları yer değiştirmemek; x eksenine ya da y eksenine göre yansıma yapmak; y = −x ile karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dn-yansima-yx",
+   "tip": "y = x doğrusuna göre yansıma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDN-04",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "Orijin etrafında 90° dönme",
+   "fikir": "Saat yönünde 90° dönmede (x, y) → (y, −x); köşelerin yeni koordinatlarından orta nokta bulunur.",
+   "tuzak": "Dönme yönünü karıştırmak (saatin tersi); 180° almak; döndürmeden hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dn-donme",
+   "tip": "Orijin etrafında 90° dönme",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDN-05",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "Simetri ekseni sayısı",
+   "fikir": "Dikdörtgenin 2, ikizkenar yamuğun 1, düzgün altıgenin 6 simetri ekseni vardır.",
+   "tuzak": "Dikdörtgene 4 eksen vermek; yamuğa 0 ya da 2 eksen vermek; altıgene 3 eksen vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dn-simetri",
+   "tip": "Şekillerin simetri ekseni sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDN-06",
+   "konu": "Dönüşüm Geometrisi",
+   "alt": "Bir nokta etrafında dönme",
+   "fikir": "Dönme merkezine göre yer farkı döndürülür; dönmede merkeze uzaklık korunur, iki nokta arası uzaklık Pisagorla bulunur.",
+   "tuzak": "Dönme merkezini orijin sanmak; yönü karıştırmak; 180° almak; dik kenarları toplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-dn-donme-nokta",
+   "tip": "Bir nokta etrafında 90° dönme ve uzaklık",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-dn-otele",
+   "ad": "Kareli zeminde öteleme miktarı",
+   "kartlar": [
+    "K-GDN-01"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  },
+  {
+   "tipId": "ge-dn-yansima",
+   "ad": "Eksenlere göre ardışık yansıma",
+   "kartlar": [
+    "K-GDN-02"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  },
+  {
+   "tipId": "ge-dn-yansima-yx",
+   "ad": "y = x doğrusuna göre yansıma",
+   "kartlar": [
+    "K-GDN-03"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  },
+  {
+   "tipId": "ge-dn-donme",
+   "ad": "Orijin etrafında 90° dönme",
+   "kartlar": [
+    "K-GDN-04"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  },
+  {
+   "tipId": "ge-dn-simetri",
+   "ad": "Şekillerin simetri ekseni sayısı",
+   "kartlar": [
+    "K-GDN-05"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  },
+  {
+   "tipId": "ge-dn-donme-nokta",
+   "ad": "Bir nokta etrafında 90° dönme ve uzaklık",
+   "kartlar": [
+    "K-GDN-06"
+   ],
+   "uygulamaKonu": "geo|Dönüşüm Geometrisi"
+  }
+ ]
+}

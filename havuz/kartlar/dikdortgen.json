@@ -1,0 +1,156 @@
+{
+ "konu": "Dikdörtgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDD-01",
+   "konu": "Dikdörtgen",
+   "alt": "Köşegen yolu ve kenar yolu",
+   "fikir": "Köşegen, kenarlarla dik üçgen kurar (Pisagor); kenar yolu iki kenarın toplamıdır, fark istenir.",
+   "tuzak": "Köşegenle kenarı karıştırmak; kenar yolunun iki kenar toplamı olduğunu unutmak; farkı yanlış okumak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dd-kosegen",
+   "tip": "Köşegen ve kenar yolu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-02",
+   "konu": "Dikdörtgen",
+   "alt": "Çevre ve bir kenardan alan",
+   "fikir": "Çevreden yarım çevre bulunur; bilinen kenar çıkarılınca diğer kenar elde edilir ve alan hesaplanır.",
+   "tuzak": "Çevreyi kenarlar toplamı sanmak; çevreden kenarı bir kez çıkarıp bırakmak; kareye çevirmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dd-cevre-alan",
+   "tip": "Çevre ve bir kenardan alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-03",
+   "konu": "Dikdörtgen",
+   "alt": "İç noktanın köşelere uzaklığı",
+   "fikir": "Noktadan kenarlara indirilen dikmelerle dik üçgen kurulur; uzaklık Pisagorla bulunur.",
+   "tuzak": "Uzaklığı kenar farkı yerine toplamla bulmak; köşegeni uzaklık sanmak; yalnız bir dik kenarı vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-dd-nokta",
+   "tip": "İç noktanın köşelere uzaklığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-04",
+   "konu": "Dikdörtgen",
+   "alt": "Köşeyi karşı köşeye katlama",
+   "fikir": "Kat izi AC nin orta dikmesidir; benzer üçgenlerle ya da orta dikme eşitlikleriyle uzunluğu bulunur.",
+   "tuzak": "Kat izini köşegenle ya da kenarla karıştırmak; benzerlik oranını ters yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-dd-katlama",
+   "tip": "Katlama ve kat izi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-05",
+   "konu": "Dikdörtgen",
+   "alt": "Köşeyi karşı kenara katlama",
+   "fikir": "Katlanan kenarların eşitliğinden Pisagorla bir parça bulunur; kalan parçalarla ikinci Pisagor denklemi kurulur.",
+   "tuzak": "Katlanan uzunluğu (|AE| = |AB|) görmemek; yanlış üçgende Pisagor uygulamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-dd-katlama",
+   "tip": "Katlama ve kat izi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-06",
+   "konu": "Dikdörtgen",
+   "alt": "Parçalanmış dikdörtgende alan",
+   "fikir": "Aynı yükseklikli parçaların alanları tabanlarıyla orantılıdır: karşılıklı çarpımlar eşittir (A₁ × A₄ = A₂ × A₃).",
+   "tuzak": "Dördüncü parçayı toplamsal tahmin etmek; üç alanı toplayıp bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dd-parca",
+   "tip": "Parçalara ayrılmış dikdörtgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-07",
+   "konu": "Dikdörtgen",
+   "alt": "Çevresindeki yolun alanı",
+   "fikir": "Yolun alanı = dış dikdörtgen − iç dikdörtgen; iç ölçüler her kenardan iki kez yol genişliği kadar küçülür.",
+   "tuzak": "İç kenarları yalnız bir yol genişliği kadar küçültmek; çevreyi alan saymak; yalnız iki şeridi hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dd-cevre-alan",
+   "tip": "Çevre ve bir kenardan alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDD-08",
+   "konu": "Dikdörtgen",
+   "alt": "Oranlı kenarlar ve köşegen",
+   "fikir": "Kenarlar 3a ve 4a ise köşegen 5a dır; köşegenden a bulunur, çevre hesaplanır.",
+   "tuzak": "Köşegeni bir kenara eşitlemek; kenarları toplayıp çevre saymak; çevre yerine yarım çevre vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-dd-kosegen",
+   "tip": "Köşegen ve kenar yolu",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-dd-kosegen",
+   "ad": "Köşegen ve kenar yolu",
+   "kartlar": [
+    "K-GDD-01",
+    "K-GDD-08"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  },
+  {
+   "tipId": "ge-dd-cevre-alan",
+   "ad": "Çevre ve bir kenardan alan",
+   "kartlar": [
+    "K-GDD-02",
+    "K-GDD-07"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  },
+  {
+   "tipId": "ge-dd-nokta",
+   "ad": "İç noktanın köşelere uzaklığı",
+   "kartlar": [
+    "K-GDD-03"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  },
+  {
+   "tipId": "ge-dd-katlama",
+   "ad": "Katlama ve kat izi",
+   "kartlar": [
+    "K-GDD-04",
+    "K-GDD-05"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  },
+  {
+   "tipId": "ge-dd-parca",
+   "ad": "Parçalara ayrılmış dikdörtgen",
+   "kartlar": [
+    "K-GDD-06"
+   ],
+   "uygulamaKonu": "geo|Dikdörtgen"
+  }
+ ]
+}
