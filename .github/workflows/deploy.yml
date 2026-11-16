@@ -112,6 +112,7 @@ jobs:
         run: |
           node tools/hafta-kopya.mjs
           node tools/safanur-hafta.mjs
+          node tools/dilbeste-hafta.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
