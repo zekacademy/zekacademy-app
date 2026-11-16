@@ -82,6 +82,10 @@ service cloud.firestore {
     match /gruplar/{gid} {
       allow read: if isCoach() || (signedIn() && request.auth.uid in resource.data.uyeler);
       allow write: if isCoach();
+      match /odul/{id} {
+        allow read: if isCoach() || grupUyesi(gid);
+        allow write: if false; // sadece sunucu yazar
+      }
       match /canli/{uid} {
         allow read: if isCoach() || grupUyesi(gid);
         allow delete: if isCoach();
