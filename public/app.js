@@ -1906,7 +1906,10 @@ const ODEME_ETIKET = {kirmizi:"5 günü geçti", pembe:"Gecikti", turuncu:"Yakla
 const fmtTL = v => v==null || v==="" ? "" : Number(v).toLocaleString("tr-TR")+" ₺";
 function odemeSay(){ const c = {kirmizi:0, pembe:0, turuncu:0, yok:0, tamam:0}; S.students.forEach((_,id)=>c[odemeDurum(id).k]++); return c; }
 function setDuzen(id, z){ const cn = {...(S.cnotes.get(id)||{})}, eski = cn.duzen || {};
-  if(z && (z.saat!==eski.saat || (z.sure||null)!==(eski.sure||null))) z = {...z, degis: z.degis || today()}; /* düzen saati elle değişti: önceki haftaların saati artık devralınmaz */
+  if(z && (z.saat!==eski.saat || (z.sure||null)!==(eski.sure||null))){
+    /* Gün "otomatik" iken görüşme, geçen haftaların son görüşmesinin gününde görünüyordu; saat değişince o kayıtlar artık devralınmadığı için gün kaymasın: o günü sabitle */
+    if((z.gun==null || z.gun==="") && !isWA(S.students.get(id))){ const o = sonSaat(id, today()); if(o) z = {...z, gun: dIdx(o.tarih)}; }
+    z = {...z, degis: z.degis || today()}; } /* düzen saati elle değişti: önceki haftaların saati artık devralınmaz */
   cn.duzen = z; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 300); }
 function setOdeme(id, fn){ const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = {...(cn.odeme||{})}; fn(cn.odeme); if(!cn.odeme.bas) delete cn.odeme; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 300); }
 function cOdeme(){
@@ -3185,7 +3188,7 @@ function openSheet(kind, el){
       if(!kim && !ad) return sheetErr("Kiminle görüşeceğini seç ya da adını yaz."); if(!tarih || !saat) return sheetErr("Tarih ve saati seç.");
       if(!g0 && kim && fd.get("tekrar")){ setDuzen(kim, {gun:dIdx(tarih), saat, sure, bas:monday(tarih)}); if(not){ gorusSet("v:"+kim+":"+tarih, g=>{ g.not = not; }); } }
       else if(g0 && fd.get("kapsam")==="hep" && kim){ const eski = duzenOf(kim)||{}, gunDegisti = dIdx(tarih)!==dIdx(g0.tarih);
-        setDuzen(kim, {...eski, saat, sure, gun: gunDegisti ? dIdx(tarih) : (eski.gun ?? null), bas: eski.bas || monday(g0.tarih), degis: monday(tarih)});
+        setDuzen(kim, {...eski, saat, sure, gun: dIdx(tarih), bas: eski.bas || monday(g0.tarih), degis: monday(tarih)}); /* düzenlenen görüşmenin günü sabitlenir: saat değişince başka güne kaymaz */
         if(!g0.sanal) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||g.durum||"planli"}); delete g.tek; delete g.aktar; });
         else if(not || (fd.get("durum")||"planli")!=="planli" || gunDegisti) gorusSet(gid, g=>{ Object.assign(g, {tarih, saat, sure, not, durum:fd.get("durum")||"planli"}); delete g.aktar; }); }
       else if(g0){ gorusSet(gid, g=>{ Object.assign(g, {sid:kim||null, ad:kim?S.students.get(kim)?.name:ad, tarih, saat, sure, tur, not, durum:fd.get("durum")||g.durum||"planli"}); if(bid) g.bid = bid; delete g.aktar;
