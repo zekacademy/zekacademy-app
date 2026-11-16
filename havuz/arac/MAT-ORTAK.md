@@ -25,3 +25,4 @@ Kurallar:
 - Çeldiriciler metindeki bir koşulla hesapsız elenmesin (ör. kapasiteyi aşan değer).
 - Aynı pakette aynı şekil türü en çok 2 kez; aynı kurgu 1 kez.
 - Kurgu kendi içinde tutarlı: kapasite aşılmaz, sıra belirsiz kalmaz.
+- (16 Kasım) Şekilli problem sorularında da kalıp etiketi doğru: günlük bağlamlı soru 'hikâyeli' (şekli olsa da; şekil `sekil` alanında zaten sayılır), tanımlı işlem/kural 'yeni nesil', grafik okuma 'grafik', tablo 'tablo'. Kök medyanı 40–65 kelime: gerçek bir durum anlat, süs cümlesi yok.

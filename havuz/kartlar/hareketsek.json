@@ -1,0 +1,219 @@
+{
+ "konu": "Hareket Hız Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-HRS-01",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Karşılaşma noktalı yol şeması",
+   "fikir": "Aynı anda çıkan araçlar karşılaşana kadar aynı süre gittiğinden, şemadaki iki yol parçası hızlarla orantılıdır; bilinen hızdan bilinmeyen hız bulunur.",
+   "tuzak": "Hızları ters orantılı sanmak; yol parçasını hız sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "hrs-yol",
+   "tip": "Karşılaşma noktalı yol şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-02",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Molalı konum–zaman grafiği",
+   "fikir": "Grafikteki yatay parça molayı gösterir; hareket süresi ve toplam yol ayrı ayrı okunarak ortalama hız hesaplanır.",
+   "tuzak": "Molayı süreye katmak; hızların ortalamasını almak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hrs-konum",
+   "tip": "Konum–zaman grafiği ve ortalama hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-03",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Basamaklı hız–zaman grafiği",
+   "fikir": "Hız–zaman grafiğinde her basamağın alanı o bölümde alınan yoldur; alanlar toplanır.",
+   "tuzak": "En büyük hızı tüm süreye uygulamak; süreleri karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hrs-hizzaman",
+   "tip": "Hız–zaman grafiğinde alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-04",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Dairesel pist ve yay uzunluğu",
+   "fikir": "Pistteki yay uzunluğu ilk yetişmeyi, çevre ise ardışık yan yana gelmeler arası farkı verir; süreler hız farkıyla hesaplanır.",
+   "tuzak": "Diğer yayı kullanmak; ilk yetişmeyi son cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrs-pist",
+   "tip": "Dairesel pistte tekrarlı yan yana gelme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-05",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Farklı zamanda çıkan araçların grafiği",
+   "fikir": "Grafikteki çıkış zamanlarından ve uç noktalardan hızlar bulunur; geç çıkanın yetişme süresi ve yol hesaplanır.",
+   "tuzak": "Yetişme yolunu ilk aracın yoluyla karıştırmak; çıkış gecikmesini unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "hrs-yetisme",
+   "tip": "Konum–zaman grafiğiyle yetişme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-06",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Tren ve tünel çizimi",
+   "fikir": "Trenin tünelde tamamen içinde kaldığı sürede alınan yol, tünel boyundan tren boyunun farkıdır; hız birimi dönüştürülür.",
+   "tuzak": "Geçiş yolunu (toplam) kullanmak; km/sa–m/sn dönüşümünü yanlış yapmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "hrs-tunel",
+   "tip": "Tünelde tamamen kalma süresi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-07",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Üç iskeleli nehir yolculuğu",
+   "fikir": "Akıntı yönündeki bölümde hız tekne + akıntı, karşıt bölümde tekne − akıntıdır; her bölümün süresi ayrı hesaplanıp toplanır.",
+   "tuzak": "Dönüşte de akıntı yönünü kullanmak; dönüş uzunluğunu yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrs-nehir2",
+   "tip": "Üç iskeleli nehir yolculuğu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-08",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Sefer tarifesi tablosu",
+   "fikir": "Birinci seferin kalkış–varış saatlerinden süre, süre ve hızdan yol bulunur; yol ikinci seferin hızına bölünür.",
+   "tuzak": "Süreyi hız oranına ters ya da doğru yanlış kurmak; saat–dakika dönüşümünü karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "hrs-tablo",
+   "tip": "Tarife tablosu ve süre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-09",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Akıntıda sürüklenen tahta",
+   "fikir": "Tahtanın yol süresi akıntı hızını verir; kayığın gidiş süresinden durgun su hızı ve dönüş süresi hesaplanır.",
+   "tuzak": "Akıntıyı dönüşte bir kez çıkarmak; durgun su hızını gidiş hızı sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "hrs-nehir",
+   "tip": "Akıntı ve sürüklenen cisim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HRS-10",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "İkinci karşılaşma",
+   "fikir": "İlk karşılaşmada toplam bir, ikincisinde toplam üç yol uzunluğu alınır; sürenin üç katı kullanılarak konum bulunur.",
+   "tuzak": "İkinci karşılaşmayı ilk sanmak; konumu karşı uçtan ölçmek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrs-ikinci",
+   "tip": "İkinci karşılaşma noktası",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "hrs-yol",
+   "ad": "Karşılaşma noktalı yol şeması",
+   "kartlar": [
+    "K-HRS-01"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-konum",
+   "ad": "Konum–zaman grafiği ve ortalama hız",
+   "kartlar": [
+    "K-HRS-02"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-hizzaman",
+   "ad": "Hız–zaman grafiğinde alan",
+   "kartlar": [
+    "K-HRS-03"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-pist",
+   "ad": "Dairesel pistte tekrarlı yan yana gelme",
+   "kartlar": [
+    "K-HRS-04"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-yetisme",
+   "ad": "Konum–zaman grafiğiyle yetişme",
+   "kartlar": [
+    "K-HRS-05"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-tunel",
+   "ad": "Tünelde tamamen kalma süresi",
+   "kartlar": [
+    "K-HRS-06"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-nehir2",
+   "ad": "Üç iskeleli nehir yolculuğu",
+   "kartlar": [
+    "K-HRS-07"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-tablo",
+   "ad": "Tarife tablosu ve süre",
+   "kartlar": [
+    "K-HRS-08"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-nehir",
+   "ad": "Akıntı ve sürüklenen cisim",
+   "kartlar": [
+    "K-HRS-09"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrs-ikinci",
+   "ad": "İkinci karşılaşma noktası",
+   "kartlar": [
+    "K-HRS-10"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  }
+ ]
+}

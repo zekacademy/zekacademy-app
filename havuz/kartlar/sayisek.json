@@ -1,0 +1,219 @@
+{
+ "konu": "Sayı Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-SYS-01",
+   "konu": "Sayı Problemleri",
+   "alt": "Fiyat etiketli raf ve para üstü",
+   "fikir": "Etiketlerden birim fiyatlar okunur; adetle çarpılıp toplanır, verilen paradan çıkarılarak para üstü bulunur.",
+   "tuzak": "Bir adedin fiyatını tüm adetlere uygulamak; toplamı para üstü sanmak; bir ürünü atlamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "sys-raf",
+   "tip": "Fiyat etiketli raf",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-02",
+   "konu": "Sayı Problemleri",
+   "alt": "Kasa fişi tablosu",
+   "fikir": "Fişteki bilinen satırların tutarları toplamdan çıkarılır; kalan tutar adede bölünerek birim fiyat bulunur.",
+   "tuzak": "Kalan tutarı birim fiyat sanmak; bir satırı çıkarmayı unutmak; birim fiyatı tutar sanmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "sys-fis",
+   "tip": "Kasa fişi tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-03",
+   "konu": "Sayı Problemleri",
+   "alt": "Kutu–paket düzeni",
+   "fikir": "Üstten görünüşteki paket sayısı kat sayısıyla, sonra koli sayısı ve paketteki adetle çarpılır; toplam eşit paylaştırılır.",
+   "tuzak": "Kat sayısını unutmak; paket içindeki adedi katmamak; toplamı paylaştırmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "sys-koli",
+   "tip": "Kutu–paket düzeni",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-04",
+   "konu": "Sayı Problemleri",
+   "alt": "Sayı makinesi şeması",
+   "fikir": "Çıkıştan girişe doğru her işlemin tersi sırayla uygulanır.",
+   "tuzak": "İşlemin tersini almamak; bir işlemi atlamak; çıkışı girişten ileri doğru işlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "sys-makine",
+   "tip": "Sayı makinesi şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-05",
+   "konu": "Sayı Problemleri",
+   "alt": "Bozuk para dizilimi",
+   "fikir": "Her bozuk para türünün adedi şekilden sayılıp değeriyle çarpılarak toplam bulunur; kurulan denklemden diğer kişinin parası, sonra adet bulunur.",
+   "tuzak": "Adet ile TL’yi karıştırmak; 3 katını unutmak; son adımda bozuk para değerine bölmemek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "sys-para",
+   "tip": "Bozuk para dizilimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-06",
+   "konu": "Sayı Problemleri",
+   "alt": "Sinema koltuk düzeni",
+   "fikir": "Satır başına koltuk sayıları ve dolu koltuklar şekilden sayılır; hasılattan bilet fiyatı, fiyattan tam doluluk hasılatı bulunur.",
+   "tuzak": "Boş koltukları saymak; satır sayısını koltuk sayısı sanmak; bir satırı atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "sys-koltuk",
+   "tip": "Sinema koltuk düzeni",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-07",
+   "konu": "Sayı Problemleri",
+   "alt": "Skor tablosu ve fark",
+   "fikir": "Bilinen çeyrekler toplanır; fark bilgisiyle diğer takımın toplamından aranan çeyrek bulunur.",
+   "tuzak": "Farkın yönünü ters almak; “4 eksik” koşulunu artı almak; toplam yerine çeyrek değerini kullanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "sys-puan",
+   "tip": "Puan tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-08",
+   "konu": "Sayı Problemleri",
+   "alt": "İki terazi ve kütle",
+   "fikir": "İlk dengeden bir bağıntı, ikinci dengeden ikinci bağıntı kurulur; yok edilerek her cismin kütlesi, sonra istenen toplam bulunur.",
+   "tuzak": "Ağırlığı yanlış kefeye yazmak; tek terazi kullanmak; sorulan cisim yerine başka cismi bulmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "sys-terazi",
+   "tip": "İki terazi ve kütle",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-09",
+   "konu": "Sayı Problemleri",
+   "alt": "Fiyat menüsü ve koşullu sipariş",
+   "fikir": "Toplam adet, fiyat toplamı ve oran koşulundan tek bilinmeyenli denklem kurulur; bulunan adetler koşullarla denetlenir.",
+   "tuzak": "Oran koşulunu ters yorumlamak; orta boyu unutmak; sorulan toplam yerine tek bir boyu vermek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "sys-menu",
+   "tip": "Fiyat menüsü ve koşullu sipariş",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-SYS-10",
+   "konu": "Sayı Problemleri",
+   "alt": "Sayı piramidi",
+   "fikir": "Her kutuyu altındaki iki kutunun toplamı olarak yaz; tepe, tabanın katsayılı toplamıdır; bilinmeyenleri toplamlı çöz.",
+   "tuzak": "Tepeyi yalnız tabanın toplamı sanmak; ortadaki kutuların kat sayısını yanlış almak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "sys-piramit",
+   "tip": "Sayı piramidi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu problem soruları; yalnız mantık) · MEB 8–9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "sys-raf",
+   "ad": "Fiyat etiketli raf",
+   "kartlar": [
+    "K-SYS-01"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-fis",
+   "ad": "Kasa fişi tablosu",
+   "kartlar": [
+    "K-SYS-02"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-koli",
+   "ad": "Kutu–paket düzeni",
+   "kartlar": [
+    "K-SYS-03"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-makine",
+   "ad": "Sayı makinesi şeması",
+   "kartlar": [
+    "K-SYS-04"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-para",
+   "ad": "Bozuk para dizilimi",
+   "kartlar": [
+    "K-SYS-05"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-koltuk",
+   "ad": "Sinema koltuk düzeni",
+   "kartlar": [
+    "K-SYS-06"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-puan",
+   "ad": "Puan tablosu",
+   "kartlar": [
+    "K-SYS-07"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-terazi",
+   "ad": "İki terazi ve kütle",
+   "kartlar": [
+    "K-SYS-08"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-menu",
+   "ad": "Fiyat menüsü ve koşullu sipariş",
+   "kartlar": [
+    "K-SYS-09"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "sys-piramit",
+   "ad": "Sayı piramidi",
+   "kartlar": [
+    "K-SYS-10"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "konu": "İşçi Emek Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ISS-01",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "İlerleme çubuğu",
+   "fikir": "Eş bölümlü çubuktan tamamlanan kesir okunur; geçen süre bu kesre bölünerek birim hız, kalan bölümle çarpılarak kalan süre bulunur.",
+   "tuzak": "Toplam süreyi kalan süre sanmak; geçen süreyi tekrar yazmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "iss-cubuk",
+   "tip": "İlerleme çubuğu ve kalan süre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-02",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "İş–zaman grafiği (tek işçi)",
+   "fikir": "Grafikteki bir noktadan işin birim zamandaki yüzdesi bulunur; istenen yüzdeye ulaşma süresi orantıyla hesaplanır.",
+   "tuzak": "Yüzdeyi saat gibi kullanmak; toplamsal düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "iss-grafik",
+   "tip": "İş–zaman grafiği ve orantı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-03",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Kısmen dolu depo",
+   "fikir": "Depodaki dolu bölme sayısından kalan kesir bulunur; dolduran ve boşaltan boruların net payıyla bölünür.",
+   "tuzak": "Boşaltanı hesaba katmamak; kalan yerine dolu kısmı kullanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "iss-depo",
+   "tip": "Doldurma–boşaltma düzeneği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-04",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Çalışma çizelgesi",
+   "fikir": "Çizelgeden her işçinin çalıştığı gün sayısı okunur; bilinen işçilerin yaptığı iş toplamının tamamlayıcısı bilinmeyen işçiye aittir.",
+   "tuzak": "Gün sayısını uç noktalardan yanlış saymak; bölümlerden birini atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "iss-takvim",
+   "tip": "Çalışma çizelgesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-05",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "İki işçinin iş–zaman grafiği",
+   "fikir": "Her doğrudan işçinin tek başına süresi bulunur; paylar toplanarak birlikte çalışma süresi hesaplanır.",
+   "tuzak": "Sürelerin ortalamasını almak; süreleri toplamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "iss-grafik2",
+   "tip": "İki doğrulu iş–zaman grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-06",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Makine tablosu",
+   "fikir": "Tabloda her makinenin üretimi saatlik üretim × süre ile bulunur; toplam siparişten çıkarılan miktar bilinmeyen makineye düşer.",
+   "tuzak": "Bir makineyi atlamak; kalan üretimi saatlik hıza bölmeyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "iss-makine",
+   "tip": "Makine üretim tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-07",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Aşamalı çalışma çizelgesi",
+   "fikir": "İş, işçi-gün biriminde ifade edilir; çizelgedeki aşamalarda yapılan iş çıkarılır, kalan iş son aşamanın işçi sayısına bölünür.",
+   "tuzak": "Aşama değişimini hesaba katmamak; gecikme yerine bitiş gününü yazmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "iss-ekip",
+   "tip": "Aşamalı işçi çizelgesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-ISS-08",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Usta ve kalfa tablosu",
+   "fikir": "İki durumdaki işçi–gün toplamları eşitlenerek usta ve kalfanın verimi arasındaki oran bulunur; iş bu orana göre ifade edilir.",
+   "tuzak": "Bütün işçileri eşit verimli saymak; yalnız bir durumu kullanmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "iss-tablo",
+   "tip": "Farklı verimli işçiler tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-emek soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "iss-cubuk",
+   "ad": "İlerleme çubuğu ve kalan süre",
+   "kartlar": [
+    "K-ISS-01"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-grafik",
+   "ad": "İş–zaman grafiği ve orantı",
+   "kartlar": [
+    "K-ISS-02"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-depo",
+   "ad": "Doldurma–boşaltma düzeneği",
+   "kartlar": [
+    "K-ISS-03"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-takvim",
+   "ad": "Çalışma çizelgesi",
+   "kartlar": [
+    "K-ISS-04"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-grafik2",
+   "ad": "İki doğrulu iş–zaman grafiği",
+   "kartlar": [
+    "K-ISS-05"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-makine",
+   "ad": "Makine üretim tablosu",
+   "kartlar": [
+    "K-ISS-06"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-ekip",
+   "ad": "Aşamalı işçi çizelgesi",
+   "kartlar": [
+    "K-ISS-07"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "iss-tablo",
+   "ad": "Farklı verimli işçiler tablosu",
+   "kartlar": [
+    "K-ISS-08"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  }
+ ]
+}

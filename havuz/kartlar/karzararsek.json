@@ -1,0 +1,198 @@
+{
+ "konu": "Kâr Zarar Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KZS-01",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Etiket kartı ve kâr tutarı",
+   "fikir": "Etiket fiyatından indirimli satış fiyatı bulunur; satış fiyatından alış fiyatı çıkarılarak kâr tutarı elde edilir.",
+   "tuzak": "İndirim tutarını kâr sanmak; kâr yüzdesini TL yazmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "kzs-etiket",
+   "tip": "Etiket kartı ve indirim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-02",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Alış–satış tablosu",
+   "fikir": "Her modelin birim kârı (negatif olabilir) adetle çarpılır; kâr ve zarar işaretli toplanır.",
+   "tuzak": "Zararı yok saymak ya da kâr gibi toplamak; adedi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "kzs-tablo",
+   "tip": "Alış–satış tablosu ve net kâr",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-03",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Aylık satış sütun grafiği",
+   "fikir": "Sütunlardan adetler okunur; indirimli ayın birim kârı ayrı hesaplanır; adetle çarpılıp toplanır.",
+   "tuzak": "İndirimli ayı da aynı birim kârla hesaplamak; kâr yerine ciro bulmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "kzs-sutun",
+   "tip": "Aylık satış grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-04",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Kâr–adet doğrusal grafiği",
+   "fikir": "Grafikteki iki noktadan adet başına kâr (eğim) ve sabit gider bulunur; istenen kâr için adet hesaplanır.",
+   "tuzak": "Sabit gideri hesaba katmamak ya da ters işaretle kullanmak; eğimi yanlış okumak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "kzs-dogru",
+   "tip": "Kâr–adet doğrusu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-05",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Fatura ve KDV",
+   "fikir": "Faturadan ara toplam hesaplanır; KDV satıcıya kalmadığı için kâr ara toplam ile alış bedeli arasındaki farktır.",
+   "tuzak": "KDV dahil tutarı satış saymak; kârı satışa oranlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "kzs-fatura",
+   "tip": "Fatura ve KDV",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-06",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Kademeli fiyat tablosu",
+   "fikir": "Müşterinin aldığı adet hangi aralıktaysa o birim fiyat bütün adetlere uygulanır; her müşterinin kârı ayrı bulunup toplanır.",
+   "tuzak": "Aralıkları artımlı uygulamak; müşterileri birleştirip tek fiyat kullanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "kzs-kademe",
+   "tip": "Kademeli fiyat tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-07",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Fiyat akış şeması",
+   "fikir": "Akış şemasındaki işlemler sırayla uygulanır: önce yüzde artış, sonra yüzde indirim, sonra sabit tutarlı düşüm; son fiyattan alış çıkarılır.",
+   "tuzak": "Yüzdeleri toplayıp tek işlem yapmak; kuponu yanlış yönde kullanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kzs-akis",
+   "tip": "Fiyat belirleme akışı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-08",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "Kâr–zarar yüzdesi sütun grafiği",
+   "fikir": "Eşit alış fiyatlı ürünlerin kâr–zarar yüzdeleri işaretli toplanıp toplam satıştan alış fiyatı bulunur.",
+   "tuzak": "Zararı çıkarmamak; grafiği yanlış okumak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "kzs-yuzde",
+   "tip": "Kâr–zarar yüzdesi grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KZS-09",
+   "konu": "Kâr Zarar Problemleri",
+   "alt": "İki etiket kartı",
+   "fikir": "Bir mağazanın kâr yüzdesinden alış fiyatı bulunur; ikinci mağazanın indirimli fiyatından aynı alış fiyatı çıkarılır.",
+   "tuzak": "İndirim oranını kâr sanmak; iki mağazanın kârını karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kzs-iki-etiket",
+   "tip": "Etiket kartları karşılaştırma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli kâr-zarar soruları; yalnız mantık) · MEB 8–9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kzs-etiket",
+   "ad": "Etiket kartı ve indirim",
+   "kartlar": [
+    "K-KZS-01"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-tablo",
+   "ad": "Alış–satış tablosu ve net kâr",
+   "kartlar": [
+    "K-KZS-02"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-sutun",
+   "ad": "Aylık satış grafiği",
+   "kartlar": [
+    "K-KZS-03"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-dogru",
+   "ad": "Kâr–adet doğrusu",
+   "kartlar": [
+    "K-KZS-04"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-fatura",
+   "ad": "Fatura ve KDV",
+   "kartlar": [
+    "K-KZS-05"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-kademe",
+   "ad": "Kademeli fiyat tablosu",
+   "kartlar": [
+    "K-KZS-06"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-akis",
+   "ad": "Fiyat belirleme akışı",
+   "kartlar": [
+    "K-KZS-07"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-yuzde",
+   "ad": "Kâr–zarar yüzdesi grafiği",
+   "kartlar": [
+    "K-KZS-08"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  },
+  {
+   "tipId": "kzs-iki-etiket",
+   "ad": "Etiket kartları karşılaştırma",
+   "kartlar": [
+    "K-KZS-09"
+   ],
+   "uygulamaKonu": "prob|Kar Zarar Problemleri"
+  }
+ ]
+}

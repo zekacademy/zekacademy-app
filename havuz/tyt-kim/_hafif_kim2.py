@@ -50,3 +50,7 @@ def ok(x1,y1,x2,y2,renk=None,w=2):
     a=math.atan2(y2-y1,x2-x1); s=renk or 'currentColor'
     p1=(x2-8*math.cos(a-0.4),y2-8*math.sin(a-0.4)); p2=(x2-8*math.cos(a+0.4),y2-8*math.sin(a+0.4))
     return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke-width="{w}" style="stroke:{s}"/><path d="M{x2:.1f} {y2:.1f} L{p1[0]:.1f} {p1[1]:.1f} M{x2:.1f} {y2:.1f} L{p2[0]:.1f} {p2[1]:.1f}" stroke-width="{w}" style="stroke:{s}"/>'
+# 16 Kasım: şekil yardımcıları (bkz. havuz/URETIM-SEKIL.md)
+from cizim import tikz_svg
+sys.path.insert(0,os.path.join(HD,'..','tyt-mat'))
+from _hafif_mat import tablo_svg

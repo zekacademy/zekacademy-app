@@ -1,0 +1,177 @@
+{
+ "konu": "Karışım Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KRS-01",
+   "konu": "Karışım Problemleri",
+   "alt": "Hacim çizgili kaplarda karışım",
+   "fikir": "Kaplardaki hacimler çizgilerden okunur; her kaptaki alkol miktarı hacim × oran ile bulunur; toplam alkol toplam hacme bölünür.",
+   "tuzak": "Oranların aritmetik ortalamasını almak; ağırlıkları ters kullanmak; alkol hacmini oran sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krs-kaplar",
+   "tip": "Kaplarda karışım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-02",
+   "konu": "Karışım Problemleri",
+   "alt": "Alaşım çubuğu",
+   "fikir": "Bölmeli çubukta bakırın bölme sayısı ve kütlesi bir bölmenin kütlesini verir; diğer metaller bölme sayısıyla bulunur.",
+   "tuzak": "Yalnız bir metali hesaplamak; bölme kütlesi yerine toplamı yazmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "krs-alasim",
+   "tip": "Alaşım çubuğu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-03",
+   "konu": "Karışım Problemleri",
+   "alt": "Derişim–kütle tablosu",
+   "fikir": "Her çözeltideki tuz miktarı kütle × oran ile bulunur; toplam tuz toplam kütleye oranlanıp bilinmeyen oran çözülür.",
+   "tuzak": "Oranları ağırlıksız ortalamak; tuz miktarını oran sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "krs-tablo",
+   "tip": "Derişim tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-04",
+   "konu": "Karışım Problemleri",
+   "alt": "Kaplar arası aktarım",
+   "fikir": "İki çözeltinin karışımında oranlar arası farklar, hacimlerin ters oranını verir; aktarılan hacim denklemle bulunur.",
+   "tuzak": "Farkları ters kurmak; B’nin kendi hacmini hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "krs-aktarim",
+   "tip": "Kaplar arası aktarım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-05",
+   "konu": "Karışım Problemleri",
+   "alt": "İki depodan karışım düzeneği",
+   "fikir": "Debi × süre ile akıtılan hacimler bulunur; alkol miktarı toplanır; eklenen saf su yalnız toplam hacmi büyütür.",
+   "tuzak": "Eklenen suyu hesaba katmamak; yüzde puanı çıkarmak; oranların ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "krs-akis",
+   "tip": "Depolardan karışım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-06",
+   "konu": "Karışım Problemleri",
+   "alt": "Ağzına kadar doldurma",
+   "fikir": "Kapta kalan boşluk, ölçek çizgilerinden bulunur; eklenen çözeltinin alkol miktarı toplanıp tüm kapasiteye bölünür.",
+   "tuzak": "Eklenen hacmi yanlış almak; ağırlıkları ters kullanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "krs-doldur",
+   "tip": "Kabı doldurma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-07",
+   "konu": "Karışım Problemleri",
+   "alt": "Ayar çubuğu",
+   "fikir": "Ayar, 24 bölmede altın bölme sayısıdır; bakır miktarı değişmeyeceğinden yeni ayardan toplam kütle bulunur.",
+   "tuzak": "Altını değil bakırı sabit sanmamak; ayarları kütle oranı gibi kullanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "krs-ayar",
+   "tip": "Ayar ve alaşım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-KRS-08",
+   "konu": "Karışım Problemleri",
+   "alt": "Üç çözelti tablosu",
+   "fikir": "Tablodaki üç çözeltinin madde miktarları a cinsinden yazılır; toplam miktar denklemle bilinmeyen hacmi verir.",
+   "tuzak": "Saf suyu hesaba katmamak; denklemi hatalı kurmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "krs-tablo2",
+   "tip": "Üç çözelti ve bilinmeyen hacim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu karışım soruları; yalnız mantık) · MEB 8–9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "krs-kaplar",
+   "ad": "Kaplarda karışım",
+   "kartlar": [
+    "K-KRS-01"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-alasim",
+   "ad": "Alaşım çubuğu",
+   "kartlar": [
+    "K-KRS-02"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-tablo",
+   "ad": "Derişim tablosu",
+   "kartlar": [
+    "K-KRS-03"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-aktarim",
+   "ad": "Kaplar arası aktarım",
+   "kartlar": [
+    "K-KRS-04"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-akis",
+   "ad": "Depolardan karışım",
+   "kartlar": [
+    "K-KRS-05"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-doldur",
+   "ad": "Kabı doldurma",
+   "kartlar": [
+    "K-KRS-06"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-ayar",
+   "ad": "Ayar ve alaşım",
+   "kartlar": [
+    "K-KRS-07"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  },
+  {
+   "tipId": "krs-tablo2",
+   "ad": "Üç çözelti ve bilinmeyen hacim",
+   "kartlar": [
+    "K-KRS-08"
+   ],
+   "uygulamaKonu": "prob|Karışım Problemleri"
+  }
+ ]
+}

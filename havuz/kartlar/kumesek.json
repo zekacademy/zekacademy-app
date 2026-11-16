@@ -1,0 +1,149 @@
+{
+ "konu": "Kümeler ve Kartezyen Çarpım",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KMS-01",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Sayı doğrusunda aralıklardan oluşan kümeler",
+   "fikir": "Dolu nokta uç noktayı kümeye katar, boş nokta katmaz; her aralıktaki tam sayılar yazılıp fark/kesişim alınır.",
+   "tuzak": "Boş noktayı dolu sanmak; A\\B yerine B\\A ya da A∩B almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "kms-dogru",
+   "tip": "Sayı doğrusunda aralıklar ve kümeler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-02",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Koordinat ızgarasında bağıntı noktaları",
+   "fikir": "Izgaranın eksenlerinden A ve B okunur; dolu ve boş noktaların koordinatları koşulla karşılaştırılıp sayılır.",
+   "tuzak": "Dolu noktayı da saymak; tüm A×B üzerinden saymak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "kms-izgara",
+   "tip": "Koordinat ızgarasında Kartezyen çarpım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-03",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Anket tablosu ve ortak kısım",
+   "fikir": "Tablodaki toplamlardan eksik hücreler bulunur; yalnız bir gruba ait olanlar toplamdan ortak kısım çıkarılarak hesaplanır.",
+   "tuzak": "Ortak kısmı iki kez saymak; kulüp toplamlarını “yalnız” sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "kms-tablo",
+   "tip": "Anket tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-04",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Eksi bileşenli Kartezyen çarpım",
+   "fikir": "Eksenlerden A ve B okunur; her bileşenin işareti ve toplamı koşulla birlikte denetlenerek sıralı ikililer sayılır.",
+   "tuzak": "Sıfırlı ikilileri dahil etmek; işaret koşulunu unutmak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "kms-izgara",
+   "tip": "Koordinat ızgarasında Kartezyen çarpım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-05",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Kartlardan oluşan kümenin alt kümeleri",
+   "fikir": "Kartlar tek ve çift olarak ayrılır; her gruptan en az bir eleman seçilen alt kümeler, grupların boş olmayan alt küme sayıları çarpılarak bulunur.",
+   "tuzak": "Boş alt kümeyi iki kez çıkarmak; yalnız ikili çiftleri saymak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "kms-altkume",
+   "tip": "Kartlarla alt küme sayma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-06",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Üç kümeli Venn şeması okuma",
+   "fikir": "Bölgelerdeki sayılar kümelerin eleman sayılarını verir; eşitlikten bilinmeyen bulunur, kalan evrensel kümeden çıkarılır.",
+   "tuzak": "Kesişim bölgesini eksik toplamak; bilinmeyeni tek bölgeye bağlamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "kms-venn3",
+   "tip": "Üç kümeli Venn şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KMS-07",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Taralı bölge ve cebirsel Venn",
+   "fikir": "Bölgelerdeki ifadelerin toplamı evrensel kümeye eşitlenip bilinmeyen bulunur; taralı bölgeler toplanır.",
+   "tuzak": "Taralı bölgeyi yanlış okumak; dışarıdaki bölgeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kms-venn2",
+   "tip": "İki kümeli Venn ve taralı bölge",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu küme soruları; yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kms-dogru",
+   "ad": "Sayı doğrusunda aralıklar ve kümeler",
+   "kartlar": [
+    "K-KMS-01"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kms-izgara",
+   "ad": "Koordinat ızgarasında Kartezyen çarpım",
+   "kartlar": [
+    "K-KMS-02",
+    "K-KMS-04"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kms-tablo",
+   "ad": "Anket tablosu",
+   "kartlar": [
+    "K-KMS-03"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kms-altkume",
+   "ad": "Kartlarla alt küme sayma",
+   "kartlar": [
+    "K-KMS-05"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kms-venn3",
+   "ad": "Üç kümeli Venn şeması",
+   "kartlar": [
+    "K-KMS-06"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kms-venn2",
+   "ad": "İki kümeli Venn ve taralı bölge",
+   "kartlar": [
+    "K-KMS-07"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  }
+ ]
+}

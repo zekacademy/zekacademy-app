@@ -1,0 +1,135 @@
+{
+ "konu": "Mantık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-MNS-01",
+   "konu": "Mantık",
+   "alt": "Venn şemasında niceleyiciler",
+   "fikir": "Şemadaki elemanlar bölgelerden okunur; “her” için karşı örnek, “en az bir” için örnek aranır.",
+   "tuzak": "“Her” önermesini tek örnekle doğrulamak; kesişimi boş sanmak; dışarıdaki elemanları unutmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "mns-venn",
+   "tip": "Venn şeması ve niceleyiciler",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNS-02",
+   "konu": "Mantık",
+   "alt": "Niceleyicili önermenin olumsuzu ve Venn",
+   "fikir": "Olumsuzu doğru olan, kendisi yanlış olan önermedir; her önerme şemadaki elemanlarla sınanır.",
+   "tuzak": "Olumsuzu alıp yanlış yöne yorumlamak; “her”i tek örnekle doğrulamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mns-nicelik",
+   "tip": "Olumsuzu doğru olan önerme",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNS-03",
+   "konu": "Mantık",
+   "alt": "Doğruluk tablosunda bilinmeyen hücreler",
+   "fikir": "Bileşik önerme, her satırdaki p, q, r değerleriyle içten dışa hesaplanır.",
+   "tuzak": "⇒ işlemini “ve” gibi hesaplamak; olumsuzu atlamak; ⇔ ile ⇒’yı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "mns-tablo",
+   "tip": "Doğruluk tablosu tamamlama",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNS-04",
+   "konu": "Mantık",
+   "alt": "Anahtarlı devrede akım geçen durumlar",
+   "fikir": "Seri “ve”, paralel “veya” ile ifade yazılır; anahtar durumları taranıp akım geçenler sayılır.",
+   "tuzak": "Seri ile paraleli karıştırmak; yalnız akım geçmeyenleri saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mns-devre",
+   "tip": "Devre durumları sayma",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNS-05",
+   "konu": "Mantık",
+   "alt": "Devrenin denk ifadesi",
+   "fikir": "Devrenin ifadesi yazılıp sadeleştirilir; seçenekler doğruluk tablosuyla sınanır.",
+   "tuzak": "Alt koldaki ortak anahtarı unutmak; seri-paralel yerini değiştirmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mns-denk",
+   "tip": "Devrenin sade ifadesi",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  },
+  {
+   "id": "K-MNS-06",
+   "konu": "Mantık",
+   "alt": "Karşıt, ters ve karşıt ters kartları",
+   "fikir": "Kartlardaki koşullu cümleler p ve q ile ifade edilir; p ⇒ q doğru iken her durumda doğru kalanlar seçilir.",
+   "tuzak": "Tersi ile karşıt tersi karıştırmak; karşıtı denk sanmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "mns-kart",
+   "tip": "Koşullu önerme kartları",
+   "kaynak": "ÖSYM 2021–2026 TYT Matematik (Mantık, her yıl 1 soru; şekilli/tablolu/devre örnekleri; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 9. sınıf Mantık"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mns-venn",
+   "ad": "Venn şeması ve niceleyiciler",
+   "kartlar": [
+    "K-MNS-01"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mns-nicelik",
+   "ad": "Olumsuzu doğru olan önerme",
+   "kartlar": [
+    "K-MNS-02"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mns-tablo",
+   "ad": "Doğruluk tablosu tamamlama",
+   "kartlar": [
+    "K-MNS-03"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mns-devre",
+   "ad": "Devre durumları sayma",
+   "kartlar": [
+    "K-MNS-04"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mns-denk",
+   "ad": "Devrenin sade ifadesi",
+   "kartlar": [
+    "K-MNS-05"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  },
+  {
+   "tipId": "mns-kart",
+   "ad": "Koşullu önerme kartları",
+   "kartlar": [
+    "K-MNS-06"
+   ],
+   "uygulamaKonu": "matd|Mantık"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "konu": "Yaş Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-YSS-01",
+   "konu": "Yaş Problemleri",
+   "alt": "Sütun grafiği ve toplam yaş",
+   "fikir": "Sütunlardan yaşlar okunur, toplam bulunur; annenin yaşı toplamla ilişkilendirilir ve çocuğun doğduğu yaştaki anne yaşı yaş farkıyla bulunur.",
+   "tuzak": "Annenin yaşını sorulan yaş sanmak; toplama 4’ü eklemeyi unutmak; yanlış çocuğu seçmek.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "yss-grafik",
+   "tip": "Sütun grafiği ve yaş toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-02",
+   "konu": "Yaş Problemleri",
+   "alt": "Soy ağacı ve doğum yılı",
+   "fikir": "Doğum yıllarından yaş bulunur; iki kişinin yaşları toplanır.",
+   "tuzak": "Yaş yerine doğum yıllarını işleme sokmak; yanlış kişiyi seçmek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "yss-agac",
+   "tip": "Soy ağacı ve doğum yılı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-03",
+   "konu": "Yaş Problemleri",
+   "alt": "Zaman çizelgesi ve yaş farkının katı",
+   "fikir": "Çizelgeden doğum yılları okunur; yıl t için yaşlar t − doğum yılı biçiminde yazılır ve verilen katsayı ilişkisi denklem olur.",
+   "tuzak": "Katı yanlış tarafa yazmak; yıl ile yaşı karıştırmak; yaşları toplamak yerine tek çocuğu almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yss-zaman",
+   "tip": "Zaman çizelgesi ve yaş farkının katı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-04",
+   "konu": "Yaş Problemleri",
+   "alt": "Yaş tablosu",
+   "fikir": "Tablodaki yaşlar bugüne çekilir; kişiler aynı hızla büyüdüğünden iki taraf arasındaki fark her yıl bir kapanır ya da açılır.",
+   "tuzak": "Tablodaki ham değerleri bugünkü yaş sanmak; farkı yıl başına yanlış hızla bölmek.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "yss-tablo",
+   "tip": "Geçmiş–gelecek yaş tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-05",
+   "konu": "Yaş Problemleri",
+   "alt": "Zaman çizelgesi ve yaş farkı",
+   "fikir": "Çizelgedeki süreler doğumlar arasındaki yaş farkıdır; toplam fark, torun ile dedenin yaş farkını verir ve katı ilişkisi bunu torunun yaşına bağlar.",
+   "tuzak": "Farkı dedenin yaşı sanmak; bir yaş farkını yanlış kişiye eklemek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yss-fark",
+   "tip": "Zaman çizelgesi ve yaş farkı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-06",
+   "konu": "Yaş Problemleri",
+   "alt": "Farklı yıllarda verilmiş yaşlar",
+   "fikir": "Bütün yaşlar aynı yıla çekilir; toplam yaşlar her yıl kişi sayısı kadar artar ve eşitlik denklemi kurulur.",
+   "tuzak": "Yaşları güncellemeden toplamak; çocuk sayısını yanlış almak; yılı yaş sanmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "yss-yillar",
+   "tip": "Farklı yıllara ait yaşlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  },
+  {
+   "id": "K-YSS-07",
+   "konu": "Yaş Problemleri",
+   "alt": "Aile şeması ve yaş farkları",
+   "fikir": "Yol boyunca yaş farkları toplanır; iki torunun dede ile farkı eşit çıkar, böylece yaşları eşittir; toplamdan her birinin yaşı ve dedenin yaşı bulunur.",
+   "tuzak": "Farkı yaş sanmak; torunların eşit yaşta olduğunu görmeyip tek bir farkı kullanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "yss-sema",
+   "tip": "Aile şeması ve yaş farkları",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli yaş soruları; yalnız mantık) · MEB 8–9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "yss-grafik",
+   "ad": "Sütun grafiği ve yaş toplamı",
+   "kartlar": [
+    "K-YSS-01"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-agac",
+   "ad": "Soy ağacı ve doğum yılı",
+   "kartlar": [
+    "K-YSS-02"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-zaman",
+   "ad": "Zaman çizelgesi ve yaş farkının katı",
+   "kartlar": [
+    "K-YSS-03"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-tablo",
+   "ad": "Geçmiş–gelecek yaş tablosu",
+   "kartlar": [
+    "K-YSS-04"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-fark",
+   "ad": "Zaman çizelgesi ve yaş farkı",
+   "kartlar": [
+    "K-YSS-05"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-yillar",
+   "ad": "Farklı yıllara ait yaşlar",
+   "kartlar": [
+    "K-YSS-06"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  },
+  {
+   "tipId": "yss-sema",
+   "ad": "Aile şeması ve yaş farkları",
+   "kartlar": [
+    "K-YSS-07"
+   ],
+   "uygulamaKonu": "prob|Yaş Problemleri"
+  }
+ ]
+}

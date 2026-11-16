@@ -1,0 +1,170 @@
+{
+ "konu": "Kimyasal Hesaplamalar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KMHS2-01",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Mol, kütle ve tanecik dönüşümleri",
+   "fikir": "n = m ÷ MA; tanecik sayısı = n × N_A; atom kütlesi mol kütlesinden, mol kütlesi atom sayısına bölünerek bulunur.",
+   "tuzak": "Molekül kütlesini atom kütlesi sanmak; n = m × M ya da n = M ÷ m yazmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "km-hs2-mol",
+   "tip": "Mol, tanecik ve mol kütlesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-02",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Gaz hacmi, mol ve atom sayısı",
+   "fikir": "NK’da n = V ÷ 22,4; toplam atom sayısı = n × molekül başına atom × N_A.",
+   "tuzak": "Molekül ve atom sayısını karıştırmak; 22,4 yerine 11,2 almak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "km-hs2-mol",
+   "tip": "Mol, tanecik ve mol kütlesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-03",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Bileşik formülünden kütlece yüzde",
+   "fikir": "Yüzde = (elementin toplam kütlesi ÷ mol kütlesi) × 100; indis atom sayısını verir.",
+   "tuzak": "İndisi unutmak; atom sayısıyla kütleyi karıştırmak; O için 32 almak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "km-hs2-yuzde",
+   "tip": "Bileşikte kütlece yüzde",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-04",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Basit formül ve molekül formülü",
+   "fikir": "Kütleleri mol sayısına çevir, en küçük tam sayı oranına getir; molekül formülü = basit formül × (mol kütlesi ÷ basit formül kütlesi).",
+   "tuzak": "Kütle oranını atom oranı sanmak; sadeleştirmemek; basit ile molekül formülünü karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "km-hs2-formul",
+   "tip": "Basit formül ve molekül formülü",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-05",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Denklemden mol–kütle–hacim",
+   "fikir": "Katsayı oranı mol oranıdır; önce mol, sonra istenen büyüklük hesaplanır.",
+   "tuzak": "Katsayıyı kullanmamak; oranı ters kurmak; yanlış maddenin katsayısını almak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "km-hs2-tepkime",
+   "tip": "Tepkimede mol–kütle–hacim ilişkisi",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-06",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Sınırlayıcı bileşen ve artan madde",
+   "fikir": "Her maddenin mol sayısı katsayısına bölünür; en küçük olan sınırlayıcıdır, ürünü o belirler.",
+   "tuzak": "1 : 1 oranı varsaymak; artanı tepkimeye girenle karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "km-hs2-sinirlayici",
+   "tip": "Sınırlayıcı bileşen ve artan madde",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-07",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Yüzde verim",
+   "fikir": "Verim = (gerçek ürün ÷ teorik ürün) × 100; teorik ürün sınırlayıcıdan hesaplanır.",
+   "tuzak": "Verimi kayıp sanmak; teorik ürünü katsayısız hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "km-hs2-verim",
+   "tip": "Tepkime verimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  },
+  {
+   "id": "K-KMHS2-08",
+   "konu": "Kimyasal Hesaplamalar",
+   "alt": "Karışımlarda tepkime",
+   "fikir": "Tepkime vermeyen bileşen hesaba girmez; ürün miktarından tepkimeye giren bileşenin kütlesi bulunup karışıma oranlanır.",
+   "tuzak": "Karışımın tamamını tepkimeye sokmak; katsayıyı kullanmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "km-hs2-karisim",
+   "tip": "Karışımlarda tepkime",
+   "kaynak": "ÖSYM 2018–2026 TYT Kimya (yalnız mantık) · MEB 10. sınıf Kimyasal Hesaplamalar"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "km-hs2-mol",
+   "ad": "Mol, tanecik ve mol kütlesi",
+   "kartlar": [
+    "K-KMHS2-01",
+    "K-KMHS2-02"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-yuzde",
+   "ad": "Bileşikte kütlece yüzde",
+   "kartlar": [
+    "K-KMHS2-03"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-formul",
+   "ad": "Basit formül ve molekül formülü",
+   "kartlar": [
+    "K-KMHS2-04"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-tepkime",
+   "ad": "Tepkimede mol–kütle–hacim ilişkisi",
+   "kartlar": [
+    "K-KMHS2-05"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-sinirlayici",
+   "ad": "Sınırlayıcı bileşen ve artan madde",
+   "kartlar": [
+    "K-KMHS2-06"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-verim",
+   "ad": "Tepkime verimi",
+   "kartlar": [
+    "K-KMHS2-07"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  },
+  {
+   "tipId": "km-hs2-karisim",
+   "ad": "Karışımlarda tepkime",
+   "kartlar": [
+    "K-KMHS2-08"
+   ],
+   "uygulamaKonu": "kim|Kimyasal Hesaplamalar"
+  }
+ ]
+}

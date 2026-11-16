@@ -1,0 +1,156 @@
+{
+ "konu": "Permütasyon ve Kombinasyon",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-PSK-01",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Şehirler arası yol ağı",
+   "fikir": "Şekildeki çizgi sayılarından her iki ara şehir üzerinden geçen yollar çarpılır; farklı ara şehirler üzerinden gidenler toplanır.",
+   "tuzak": "Bütün yolları toplamak; iki ayrı rotayı da çarpmak; yolları yanlış eşleştirmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "psk-yolagi",
+   "tip": "Yol ağı ve çarpma ilkesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-02",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Şifre kutuları ve koşul",
+   "fikir": "Her kutunun seçenek sayısı şekilden okunur; koşullu kutu çiftinde ikinci kutu bir seçenek eksik sayılır; kutuların seçenekleri çarpılır.",
+   "tuzak": "Koşulu atlamak; sıra önemsiz sanıp kombinasyon almak; bir kutuyu saymamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "psk-kutu",
+   "tip": "Şifre kutuları",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-03",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Tabloda verilen gruplardan takım seçimi",
+   "fikir": "Her gruptan istenen sayıda kişi sırasız seçilir (kombinasyon); gruplar çarpılır.",
+   "tuzak": "Sıralı seçim (permütasyon) yapmak; seçilecek kişi sayısını atlamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "psk-tablo",
+   "tip": "Tablodaki gruplardan seçim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-04",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Yuvarlak masada kısmen dolu oturma",
+   "fikir": "Boş koltuklar arasında yan yana olan çiftleri şekilden say; her çift için iki sıralama ve kalan kişilerin sıralaması çarpılır.",
+   "tuzak": "Her boş koltuğu komşu saymak; çift içi sıralamayı unutmak; kalan kişileri hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "psk-masa",
+   "tip": "Masa düzeni (bazı yerler dolu)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-05",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Izgarada yasak kavşak",
+   "fikir": "Tüm en kısa yollardan, yasak noktadan geçenler çıkarılır; yasak noktadan geçenler iki parça yolun çarpımıdır.",
+   "tuzak": "Yasak noktadan geçenleri çıkarmamak; yalnız bir parçayı çıkarmak; geçenleri cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "psk-izgara",
+   "tip": "Izgarada yasak nokta",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-06",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Komşu bölgeleri farklı renge boyama",
+   "fikir": "Merkez bölge için renk seçilir; çevredeki halkada komşu bölgelerin renkleri farklı olacak biçimde döngüsel sayım yapılır.",
+   "tuzak": "İlk ve son bölgenin komşu olduğunu unutmak; tüm bölgelerin farklı renkte olması gerektiğini sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "psk-boyama",
+   "tip": "Bölge boyama",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-PSK-07",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Koltuk planında koşullu oturma",
+   "fikir": "Her sırada ardışık boş koltuk grupları sayılır, üçlü pencereler toplanır; koşula uygun sıralama sayısıyla çarpılır.",
+   "tuzak": "Pencereleri grup sayısı sanmak; koşulu atlamak; sıralamayı yanlış saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "psk-koltuk",
+   "tip": "Koltuk planı ve koşullu sıralama",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayma soruları; yalnız mantık) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "psk-yolagi",
+   "ad": "Yol ağı ve çarpma ilkesi",
+   "kartlar": [
+    "K-PSK-01"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-kutu",
+   "ad": "Şifre kutuları",
+   "kartlar": [
+    "K-PSK-02"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-tablo",
+   "ad": "Tablodaki gruplardan seçim",
+   "kartlar": [
+    "K-PSK-03"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-masa",
+   "ad": "Masa düzeni (bazı yerler dolu)",
+   "kartlar": [
+    "K-PSK-04"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-izgara",
+   "ad": "Izgarada yasak nokta",
+   "kartlar": [
+    "K-PSK-05"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-boyama",
+   "ad": "Bölge boyama",
+   "kartlar": [
+    "K-PSK-06"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "psk-koltuk",
+   "ad": "Koltuk planı ve koşullu sıralama",
+   "kartlar": [
+    "K-PSK-07"
+   ],
+   "uygulamaKonu": "matd|Permütasyon ve Kombinasyon"
+  }
+ ]
+}

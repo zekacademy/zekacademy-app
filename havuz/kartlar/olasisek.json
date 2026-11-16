@@ -1,0 +1,156 @@
+{
+ "konu": "Olasılık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-OLS-01",
+   "konu": "Olasılık",
+   "alt": "Eşit dilimli çark",
+   "fikir": "Dilimler üzerindeki sayılardan koşula uyanlar tek tek sayılır; dilim sayısına bölünür.",
+   "tuzak": "Farklı sayıları sayıp aynı sayılı dilimleri tek saymak; “ya da”da çarpmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ols-cark",
+   "tip": "Eşit dilimli çark",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-02",
+   "konu": "Olasılık",
+   "alt": "Tablodan olasılık (kız-erkek, branş)",
+   "fikir": "Tablodaki sayılar toplanır; koşulu sağlayanlar ortak kısım bir kez sayılarak bulunur, toplama oranlanır.",
+   "tuzak": "Ortak kısmı iki kez saymak; yanlış satırı seçmek.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "ols-tablo",
+   "tip": "Tablodan olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-03",
+   "konu": "Olasılık",
+   "alt": "Hedef tahtası ve iki atış",
+   "fikir": "Eşit alanlı bölgelerin her birine isabet olasılığı eşittir; iki atışın puan toplamı koşuluna uyan sıralı çiftler sayılır.",
+   "tuzak": "Aynı puanlı bölgeleri tek saymak; sırayı hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ols-hedef",
+   "tip": "Hedef tahtası ve iki atış",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-04",
+   "konu": "Olasılık",
+   "alt": "İki torbadan birer top",
+   "fikir": "Her torbanın top sayılarından renk olasılıkları bulunur; aynı renk olasılığı renk renk çarpılıp toplanır.",
+   "tuzak": "Torbaları birleştirip tek torba gibi çekmek; bir rengi atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ols-torba",
+   "tip": "İki torbadan birer top çekme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-05",
+   "konu": "Olasılık",
+   "alt": "İki özel zarın toplam tablosu",
+   "fikir": "Tablodaki 36 hücrenin kaçının koşulu sağladığı sayılır; tekrarlanan toplamlar ayrı hücrelerdir.",
+   "tuzak": "Farklı toplamları sayıp hücreleri saymamak; 2’yi asal saymamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "ols-zar",
+   "tip": "Zar tablosu",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-06",
+   "konu": "Olasılık",
+   "alt": "Ağaç diyagramı ve toplam olasılık",
+   "fikir": "Her dal boyunca olasılıklar çarpılır; istenen sonucu veren dalların çarpımları toplanır.",
+   "tuzak": "Dalları ağırlıksız ortalamak; bir dalı unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ols-agac",
+   "tip": "Ağaç diyagramı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OLS-07",
+   "konu": "Olasılık",
+   "alt": "Kart destesi ve geri konmadan çekiliş",
+   "fikir": "Kartların simge ve sayı özelliklerine göre gruplar ayrılır; her gruptan uygun ikililer kombinasyonla sayılıp tüm ikililere oranlanır.",
+   "tuzak": "Geri koyarak çekmiş gibi hesaplamak; koşullardan birini unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ols-deste",
+   "tip": "Kart destesi şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ols-cark",
+   "ad": "Eşit dilimli çark",
+   "kartlar": [
+    "K-OLS-01"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-tablo",
+   "ad": "Tablodan olasılık",
+   "kartlar": [
+    "K-OLS-02"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-hedef",
+   "ad": "Hedef tahtası ve iki atış",
+   "kartlar": [
+    "K-OLS-03"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-torba",
+   "ad": "İki torbadan birer top çekme",
+   "kartlar": [
+    "K-OLS-04"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-zar",
+   "ad": "Zar tablosu",
+   "kartlar": [
+    "K-OLS-05"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-agac",
+   "ad": "Ağaç diyagramı",
+   "kartlar": [
+    "K-OLS-06"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "ols-deste",
+   "ad": "Kart destesi şeması",
+   "kartlar": [
+    "K-OLS-07"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  }
+ ]
+}
