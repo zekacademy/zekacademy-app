@@ -20,7 +20,7 @@ test("sıralama: çalışmayan dışarıda, en çok çalışan önde; çalışma
   assert.equal(yarisanlar({ uyeler: ["a"] }, canli).length, 1);
 });
 test("ödüller ve metinler", () => {
-  assert.deepEqual(ODUL.hafta, [20, 10, 10, 5, 5]); assert.equal(ODUL.gun[0], 3);
+  assert.deepEqual(ODUL.hafta, [0, 0, 0, 0, 0]); assert.equal(ODUL.gun[0], 0);
   assert.match(tebrikMetni("gun", 1, 455, 3), /birincisi sendin! 7 sa 35 dk.*\+3 soru/);
   assert.match(tebrikMetni("hafta", 2, 600, 10), /2\. oldun! 🥈 10 sa/);
   assert.equal(duyuruMetni("hafta", [{ takma: "A", dk: 1 }, { takma: "B", dk: 1 }]), "📊 Haftanın ilk 5'i: 1. A · 2. B");

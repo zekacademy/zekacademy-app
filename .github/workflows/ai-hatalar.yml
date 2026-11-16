@@ -1,0 +1,41 @@
+name: Zek AI gerçek hatalar (eğitim için)
+on:
+  schedule:
+    - cron: "10 2 */2 * *"   # iki günde bir 05:10 (İstanbul), eğitim görevinden önce
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  disa:
+    runs-on: ubuntu-latest
+    env:
+      PROJE: zekacademy-59b2f
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Hizmet hesabı
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$SA" ]; then echo "::error::FIREBASE_SERVICE_ACCOUNT sırrı yok"; exit 1; fi
+          echo "$SA" > "$RUNNER_TEMP/sa.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/sa.json" >> "$GITHUB_ENV"
+      - name: Dışa aktar
+        run: |
+          npm --prefix functions install --no-audit --no-fund > /dev/null
+          node tools/ai-hatalar-disa.mjs "$RUNNER_TEMP/out"
+      - name: ai-hatalar dalına yaz
+        run: |
+          git config user.name "zekacademy-bot"; git config user.email "bot@zekacademy.com"
+          git fetch origin ai-hatalar || true
+          git checkout --orphan ai-hatalar-yeni
+          git rm -rf --quiet . > /dev/null
+          cp -r "$RUNNER_TEMP/out/." .
+          git add -A
+          git commit -q -m "aiHatalar dışa aktarım $(date -u +%F)" || exit 0
+          git push -f origin ai-hatalar-yeni:ai-hatalar
+      - name: Temizlik
+        if: always()
+        run: rm -f "$RUNNER_TEMP/sa.json"

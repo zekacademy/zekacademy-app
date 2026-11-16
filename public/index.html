@@ -1545,6 +1545,29 @@ body.dersacik{overflow:hidden}
 .ckg.on i{border-color:var(--ac);background:radial-gradient(circle,var(--ac) 0 45%,transparent 50%)}
 .ckbtn.full{width:100%;flex-wrap:wrap;min-height:52px}
 .ckbas{display:block;width:100%;font-size:12px;font-weight:600;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:-2px}
+
+/* Soru Çözüm: sınırsız şeridi ve çözülürken gönderilen fotoğraf */
+.szhak.sinirsiz{justify-content:center;font-weight:800;color:var(--ac)}
+.szscan{position:relative;border-radius:16px;overflow:hidden;background:#000;max-height:300px;display:grid;place-items:center;margin-bottom:12px}
+.szscan img{width:100%;max-height:300px;object-fit:contain;display:block;opacity:.92}
+.szscan i{position:absolute;left:0;right:0;height:3px;top:0;background:linear-gradient(90deg,transparent,var(--ac),transparent);box-shadow:0 0 14px 4px color-mix(in srgb,var(--ac) 55%,transparent);animation:szt 2.2s ease-in-out infinite alternate}
+@keyframes szt{from{top:2%}to{top:96%}}
+.szscan span{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;border-radius:8px;padding:3px 8px}
+@media (prefers-reduced-motion:reduce){.szscan i{animation:none;top:50%}}
+
+.szfotokart{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:10px 10px 12px;display:flex;flex-direction:column;gap:10px}
+.szfotob{display:block;width:100%;border:0;padding:0;border-radius:14px;overflow:hidden;background:#fff;cursor:zoom-in}
+.szfotob img{display:block;width:100%;max-height:48vh;object-fit:contain}
+.szfk{font-size:13px;color:var(--muted);padding:0 4px;line-height:1.4}.szfk b{color:var(--ac)}
+
+.szsekil{border-top:1px solid var(--line);padding:8px 4px 0}
+.szsekil summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--ac);display:flex;align-items:center;gap:6px;list-style:none}
+.szsekil summary::-webkit-details-marker{display:none}
+.szsekl{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.szsekl span{background:var(--acs);border-radius:8px;padding:4px 8px;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+
+.szanahtar.vurgu{background:var(--acs);border-radius:16px;padding:12px 14px;border:2px solid color-mix(in srgb,var(--ac) 35%,transparent)}
+.szanahtar .szak{display:block;font-weight:800;font-size:15.5px;color:var(--fg)}
 </style>
 <script>/* Açılış animasyonu: en az ~1,6 sn görünür, uygulama hazır olunca kaybolur; her durumda en geç 5 sn */
 (function(){ var t0 = Date.now(), az = matchMedia("(prefers-reduced-motion: reduce)").matches ? 500 : 1600, kapandi = false;

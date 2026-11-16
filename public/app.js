@@ -552,8 +552,8 @@ const DERS_ADIM = [
   {view:"ders", nav:"ders", ic:"camera", b:"Takıldığım sorular", t:"Çözemediğin sorunun fotoğrafını çek ve biriktir; Ders sayfasındaki kutuda kaç soru beklediği görünür. Sonra dönüp çözünce “Çözüldü” yap."} ];
 const ODUL_ADIM = [
   {view:"grup", nav:"grup", ic:"flame", b:"Yeni: Ödül ve Sıralama Sistemi 🏆", t:"Yarış bugün başlıyor! Bundan sonra her sabah sınıfın dünkü birincisi, her pazartesi sabahı da haftanın ilk 5'i açıklanacak. İlk birinci yarın sabah, ilk 5 gelecek pazartesi belli olacak. Sıralama, kronometreyle kaydettiğin çalışma süresine göre; sınıftaki herkes yarışta."},
-  {view:"grup", nav:"grup", ic:"target", b:"Günün birincisi ★", t:"Dün sınıfta en çok çalışan birinci olur: masasında bütün gün bir yıldız parlar, +3 soru hakkı kazanır ve Zekeriya Hoca'dan tebrik mesajı alır. Herkese de “Dünün birincisi” duyurusu gider."},
-  {view:"grup", nav:"grup", ic:"chart", b:"Haftanın ilk 5'i 👑", t:"Pazartesi sabahı geçen haftanın ilk 5'i kürsüye çıkar. 1. bir hafta boyunca masasında altın taç taşır ve +20 soru hakkı kazanır; 2. ve 3. madalya ve +10, 4. ve 5. kupa ve +5 soru hakkı alır. Hepsine Zekeriya Hoca'dan tebrik gelir."},
+  {view:"grup", nav:"grup", ic:"target", b:"Günün birincisi ★", t:"Dün sınıfta en çok çalışan birinci olur: masasında bütün gün bir yıldız parlar ve Zekeriya Hoca'dan tebrik mesajı alır. Herkese de “Dünün birincisi” duyurusu gider."},
+  {view:"grup", nav:"grup", ic:"chart", b:"Haftanın ilk 5'i 👑", t:"Pazartesi sabahı geçen haftanın ilk 5'i kürsüye çıkar. 1. bir hafta boyunca masasında altın taç taşır; 2. ve 3. madalya, 4. ve 5. kupa alır. Hepsi bir hafta masalarında durur ve hepsine Zekeriya Hoca'dan tebrik gelir."},
   {view:"grup", nav:"grup", ic:"timer", b:"Nasıl birinci olursun?", t:"Çalışmaya başlarken kronometreyi ya da görevinin ▶ sayacını aç, bitince durdur. Sayılan sadece kaydettiğin süre. Her gün az da olsa otur; hem serin büyür hem kürsüye yaklaşırsın. Bu hafta taç senin olsun!"} ];
 const TUR = [
   {view:"home", ic:"grad", b:"Hoş geldin {Ad}! 👋", t:"Bu uygulama koçunla senin ortak defterin: programın, hedeflerin, denemelerin ve çalışma sürelerin hep burada. Yaptığın her şeyi koçun anında görür. Şimdi 2 dakikada her bölümü sırayla gezelim; her adımda arkada o sayfa açılacak."},
@@ -2310,7 +2310,7 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
   S.role = "admin"; S.me = null; S.tur = null; S.turKapandi = false; S.cur = o.cur ?? null; S.view = "daha"; window.scrollTo(0,0); render(); }
 
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
-const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:100, uyari:80, takipGunluk:15, bonusAcik:true, bonusUyum:70, ...(S.settings.ai||{}) });
+const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:100, uyari:80, takipGunluk:15, bonusAcik:true, bonusUyum:70, sinirsiz:true, gunlukSoru:30, aylikSoru:600, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
 const callAi = (name, data) => window.ZK_ONZ && name!=="denemeOku" ? Promise.reject(new Error("Önizlemede soru çözülmez")) : httpsCallable(fns, name, { timeout: 200000 })(data).then(r => r.data);
@@ -2319,6 +2319,8 @@ let SZ = SZ_BOS(); SZ.kalan = null; SZ.toplam = null;
 function szKullanimYukle(){ if(A() || !S.me) return; getDoc(doc(fdb, "aiKullanim", aiAy()+"_"+S.me)).then(d=>{ const k = d.exists() ? d.data() : {}, c = aiC();
   SZ.toplam = c.aylikHak + (k.bonus||0) + (k.ekHak||0); SZ.kalan = Math.max(0, SZ.toplam - (k.kullanilan||0)); if(S.view==="socoz") render(true); }).catch(()=>{}); }
 function szHata(e){ const m = String((e && e.message) || "");
+  if(/adil-gunluk/.test(m)) return "Bugün çok çalıştın 💪 Soru Çözüm yarın sabah yeniden açılacak. Kalan soruları not et, yarın ilk iş bakalım.";
+  if(/adil-aylik/.test(m)) return "Bu ay çok soru çözdürdün 💪 Devam etmek için Zekeriya Hoca'ya yaz, sana ek hak açabilir.";
   if(/hak/.test(m) && !/takip/.test(m)) return "Bu ayın soru hakkın bitti. Koçun ek hak verebilir; ayın başında hakların yenilenir.";
   if(/takip/.test(m)) return "Bugünkü “anlamadım / benzer soru” hakkın doldu. Yarın yenilenir.";
   if(/butce/.test(m)) return "Bu ayın Soru Çözüm bütçesi doldu. Ayın başında yeniden açılacak.";
@@ -2326,7 +2328,7 @@ function szHata(e){ const m = String((e && e.message) || "");
   if(/anahtar-yok/.test(m)) return "Soru Çözüm henüz kurulmadı. Koçuna haber ver.";
   if(/resim-buyuk/.test(m)) return "Fotoğraf çok büyük. Sadece soruyu içine alacak şekilde tekrar çek.";
   if(/deadline|timeout/i.test(m)) return "Çözüm çok uzun sürdü. Bir kez daha dene.";
-  return "Şu an çözemedim, bağlantıda bir sorun var. Biraz sonra tekrar dene. (Hakkın düşmedi.)"; }
+  return "Şu an çözemedim, bağlantıda bir sorun var. Biraz sonra tekrar dene."+(aiC().sinirsiz?"":" (Hakkın düşmedi.)"); }
 /* İşlem satırı: ";" ile ayrılmış işlemler alt alta (telefonda yana kaydırma olmasın) */
 const szSatir = t => String(t==null?"":t).split(/\s*;\s*/).filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join("");
 const szInline = s => esc(String(s==null?"":s)).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
@@ -2337,13 +2339,22 @@ function szMd(src){ const out = []; let list = null; const close = () => { if(li
     if((m = l.match(/^\s*[-*•]\s+(.*)$/))){ if(list!=="ul"){ close(); out.push("<ul>"); list = "ul"; } out.push(`<li>${szInline(m[1])}</li>`); return; }
     close(); out.push(`<p>${szInline(l)}</p>`); }); close(); return out.join(""); }
 function szBaglam(){ const d = SZ.data || {}; return JSON.stringify({ soru:d.soru, siklar:d.siklar, ders:d.ders, konu:d.konu, adimlar:d.adimlar, cevap:d.cevap }); }
-function szYukleniyor(){ return `<div class="szload"><div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
+function szYukleniyor(){ return `${SZ.fotoUrl || SZ.onizleme ? `<div class="szscan"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"><i></i><span>Gönderdiğin soru</span></div>` : ""}<div class="szload"><div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
 let szAsama = null;
 function szAsamaBaslat(){ clearInterval(szAsama); let i = 0; szAsama = setInterval(()=>{ const ph = document.querySelectorAll(".szph"); if(!ph.length || i >= ph.length-1){ return; } ph[i].className = "szph ok"; i++; ph[i].className = "szph on"; }, 8000); }
+/* Zek AI'nin şekilden / resimden okuduğu bilgiler: öğrenci yanlış okuma var mı kontrol edebilsin */
+const SEKIL_TUR = {geometri:"Şekilden okuduklarım", grafik:"Grafikten okuduklarım", tablo:"Tablodan okuduklarım", devre:"Devreden okuduklarım", duzenek:"Düzenekten okuduklarım", biyoloji:"Şekilden okuduklarım", kimya:"Şekilden okuduklarım", harita:"Haritadan okuduklarım", gorsel:"Görselden okuduklarım"};
+function szSekilOkunan(d){ const k = d && d.sekil; if(!k || !k.var || !Array.isArray(k.okunan) || !k.okunan.length) return "";
+  return `<details class="szsekil"><summary>${icon("eye","xs")} ${SEKIL_TUR[String(k.tur||"").toLowerCase()] || "Şekilden okuduklarım"} <span class="faint">(${k.okunan.length})</span></summary>
+    <div class="szsekl">${k.okunan.slice(0,10).map(x=>`<span>${szInline(String(x))}</span>`).join("")}</div>
+    <p class="faint small" style="margin:6px 0 0">Bir değeri yanlış okuduysam aşağıdaki “daha güçlü modelle tekrar çözdür”e dokun.</p></details>`; }
 function szCozum(){ const d = SZ.data; if(!d) return "";
-  if(d.okunabildi===false) return `<div class="szalert warn"><b>Soruyu tam okuyamadım.</b><br>${szInline(d.sorun || "Fotoğraf bulanık ya da soru kesik olabilir.")}<br>Daha net, düz ve tek soruyu gösteren bir fotoğrafla tekrar dene. <b>Hakkın düşmedi.</b></div>`;
-  let h = SZ.fotoUrl ? `<button class="szfoto" data-act="szfotobuyut" aria-label="Sorunun fotoğrafını büyüt"><img src="${SZ.fotoUrl}" alt="Sorunun fotoğrafı"><span>${icon("search","xs")} Büyüt</span></button>` : "";
-  h += `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
+  if(d.okunabildi===false) return `<div class="szalert warn"><b>Soruyu tam okuyamadım.</b><br>${szInline(d.sorun || "Fotoğraf bulanık ya da soru kesik olabilir.")}<br>Daha net, düz ve tek soruyu gösteren bir fotoğrafla tekrar dene.${aiC().sinirsiz?"":" <b>Hakkın düşmedi.</b>"}</div>`;
+  const ust = [d.ders, d.konu].filter(Boolean).map(esc).join(" · "), anh = SZ.key && SZ.key!=="yok" ? ` · Anahtar: ${esc(SZ.key)}` : "";
+  let h = "";
+  if(SZ.fotoUrl || SZ.onizleme){ h = `<div class="szfotokart"><button class="szfotob ${SZ.fotoBuyuk?"buyuk":""}" data-act="szfotobuyut" aria-label="Sorunun fotoğrafını büyüt"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"></button>
+    <div class="szfk">${ust ? `<b>${ust}</b> · ` : ""}Senin fotoğrafın${anh}</div>${szSekilOkunan(d)}</div>`; }
+  else h += `<div class="szq"><div class="sztags">${d.ders?`<span class="sztag">${esc(d.ders)}</span>`:""}${d.konu?`<span class="sztag k">${esc(d.konu)}</span>`:""}</div><p class="szqt">${szInline(d.soru||"")}</p>${d.siklar && typeof d.siklar==="object" ? `<div class="szqo">${Object.keys(d.siklar).map(k=>`<span><b>${esc(k)})</b> ${esc(d.siklar[k])}</span>`).join("")}</div>` : ""}</div>`;
   if(d.anahtar==="uyumsuz" || d.emin===false) h += `<div class="szalert warn">⚠️ <b>Bu soruda emin olamadım.</b> ${d.anahtar==="uyumsuz" ? "Bulduğum cevap girdiğin cevap anahtarıyla uyuşmuyor; anahtarda baskı hatası da olabilir. " : ""}Kitabın çözümüne de bir göz at.</div>`;
   else if(d.anahtar==="uyumlu") h += `<div class="szalert ok">✓ Cevap anahtarıyla kontrol edildi, uyuşuyor.</div>`;
   if(d.istenen) h += `<div class="szgoal"><span>🎯</span><div><small>Ne isteniyor?</small><p>${szInline(d.istenen)}</p></div></div>`;
@@ -2359,7 +2370,7 @@ function szCozum(){ const d = SZ.data; if(!d) return "";
   if(n < A2.length) return h + `<div class="pills"><button class="btn pri" data-act="szsonraki">${n===0?"1. adımı göster":"Sonraki adım →"}</button><button class="btn" data-act="szhepsi">Hepsini göster</button></div>`;
   if(d.cevap) h += `<div class="szans"><span class="szbig">${esc(d.cevap.sik||"✓")}</span><div><small>Cevap</small><b>${d.cevap.sik?esc(d.cevap.sik)+" şıkkı":""}${d.cevap.deger?" · "+esc(d.cevap.deger):""}</b></div></div>`;
   if(d.puf) h += `<div class="sztip"><span>💡</span><div><small>Püf noktası</small><p>${szInline(d.puf)}</p></div></div>`;
-  if(SZ.model!=="zor" && !A()) h += `<p class="small muted" style="margin:0;text-align:center">Çözüm yanlış görünüyorsa <button class="link small" data-act="szyanlis" ${SZ.busy?"disabled":""}>daha güçlü modelle tekrar çözdür</button> (2 hak).</p>`;
+  if(SZ.model!=="zor" && !A()) h += `<p class="small muted" style="margin:0;text-align:center">Çözüm yanlış görünüyorsa <button class="link small" data-act="szyanlis" ${SZ.busy?"disabled":""}>daha güçlü modelle tekrar çözdür</button>${aiC().sinirsiz?"":" (2 hak)"}.</p>`;
   return h; }
 function szBenzer(){ const q = SZ.benzer; if(!q) return ""; const dogru = String(q.dogru||"").trim().toUpperCase().charAt(0), sec = SZ.benzerSec;
   return `<div class="szquiz"><h3>🔁 Şimdi sıra sende</h3><p class="szqt" style="color:var(--fg)">${szInline(q.soru)}</p><div class="szopts">${Object.keys(q.siklar||{}).map(k=>`<button class="szopt ${sec ? (k===dogru?"dogru":k===sec?"yanlis":"") : ""}" data-act="szsec" data-v="${esc(k)}" ${sec?"disabled":""}><span>${esc(k)}</span>${esc(q.siklar[k])}</button>`).join("")}</div>
@@ -2367,22 +2378,22 @@ function szBenzer(){ const q = SZ.benzer; if(!q) return ""; const dogru = String
 function pSoruCoz(){
   const s = !A() && st(), c = aiC(), yuk = SZ.busy==="coz";
   const head = topbar(`<h1 class="ttl">Soru Çözüm</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"ayarlar":"home"}" aria-label="Geri">${icon("back")}</button>`);
-  const hakSerit = SZ.kalan!=null ? `<div class="szhak"><span>Bu ay soru hakkın</span><b class="num">${SZ.kalan}</b><span>/ ${SZ.toplam}</span><i style="--w:${SZ.toplam ? Math.round(SZ.kalan/SZ.toplam*100) : 0}%"></i></div>` : A() ? `<div class="szhak"><span>Koç denemesi · hak düşmez</span></div>` : "";
-  const bonus = s && s.aiBonus && s.aiBonus.at && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<div class="szbonus"><span>🎉</span><p>${esc(s.aiBonus.mesaj)}</p><button class="iconbtn sm" data-act="szbonuskapat" aria-label="Kapat">${icon("x","sm")}</button></div>` : "";
+  const hakSerit = !A() && aiC().sinirsiz ? `<div class="szhak sinirsiz"><span>✨ Sınırsız Soru Çözüm</span></div>` : SZ.kalan!=null ? `<div class="szhak"><span>Bu ay soru hakkın</span><b class="num">${SZ.kalan}</b><span>/ ${SZ.toplam}</span><i style="--w:${SZ.toplam ? Math.round(SZ.kalan/SZ.toplam*100) : 0}%"></i></div>` : A() ? `<div class="szhak"><span>Koç denemesi · hak düşmez</span></div>` : "";
+  const bonus = s && !aiC().sinirsiz && s.aiBonus && s.aiBonus.at && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<div class="szbonus"><span>🎉</span><p>${esc(s.aiBonus.mesaj)}</p><button class="iconbtn sm" data-act="szbonuskapat" aria-label="Kapat">${icon("x","sm")}</button></div>` : "";
   const form = SZ.data || yuk ? "" : `${hakSerit}<div class="card szform">
       <label class="szdrop" for="szFoto">${SZ.onizleme ? `<img src="${SZ.onizleme}" alt="Seçilen soru"><span><b>Fotoğraf hazır</b><small>Değiştirmek için dokun</small></span>` : `<span class="szdic">${icon("note")}</span><span><b>Sorunun fotoğrafını ekle</b><small>Tek soru, net ve düz olsun</small></span>`}<input type="file" accept="image/*" id="szFoto" hidden></label>
       <div class="sqbtns"><label class="btn pri sm">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="szKamera" hidden></label><label class="btn sm">🖼️ Galeriden seç<input type="file" accept="image/*" id="szGaleri" hidden></label></div>
       <label class="f">Ya da soruyu yaz / not ekle<textarea id="szMetin" rows="2" placeholder="İsteğe bağlı · ör. 12. soru, 18 buldum ama şıklarda yok">${esc(SZ.metin)}</textarea></label>
-      <div class="f szanahtar ${SZ.keyUyar?"uyar":""}">Cevap anahtarındaki doğru şık nedir?<small>Çözüm buna göre kontrol edilir, yanlış çözüm gösterilmez.</small><div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}<button class="szyok" data-act="szkey" data-v="yok" aria-pressed="${SZ.key==="yok"}">Anahtar yok</button></div></div>
+      <div class="f szanahtar vurgu ${SZ.keyUyar?"uyar":""}"><span class="szak">🔑 Cevap anahtarında doğru şık hangisi?</span><small>Kitabının ya da denemenin cevap anahtarına bak. Anahtarı seçersen çözüm ona göre kontrol edilir; yanlış çözüm gösterilmez.</small><div class="szkeys">${["A","B","C","D","E"].map(k=>`<button data-act="szkey" data-v="${k}" aria-pressed="${SZ.key===k}">${k}</button>`).join("")}<button class="szyok" data-act="szkey" data-v="yok" aria-pressed="${SZ.key==="yok"}">Anahtar yok</button></div>${SZ.key==="yok"?`<small style="margin:8px 0 0">Anahtarsız da çözerim ama anahtarla çözüm her zaman daha güvenilir.</small>`:""}</div>
       <div class="seg">${[["coz","Adım adım çöz"],["ipucu","Önce ipucu"]].map(([k,l])=>`<button data-act="szmod" data-v="${k}" aria-pressed="${SZ.mod===k}">${l}</button>`).join("")}</div>
       ${SZ.hata ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}
-      <button class="btn pri full" data-act="szgonder" ${SZ.kalan===0?"disabled":""}>${SZ.mod==="coz" ? "Soruyu çöz" : "İpucu ver"}</button>
-      <p class="faint small" style="margin:0;text-align:center">Kolay sorular 1 hak, zor sorular 3 hak. Okunamayan fotoğraf hak düşürmez.</p></div>`;
+      <button class="btn pri full" data-act="szgonder" ${SZ.kalan===0 && !aiC().sinirsiz?"disabled":""}>${SZ.mod==="coz" ? "Soruyu çöz" : "İpucu ver"}</button>
+      ${aiC().sinirsiz ? `<p class="faint small" style="margin:0;text-align:center">Önce kendin dene, takıldığın yerde fotoğrafını at.</p>` : `<p class="faint small" style="margin:0;text-align:center">Kolay sorular 1 hak, zor sorular 3 hak. Okunamayan fotoğraf hak düşürmez.</p>`}</div>`;
   const devam = SZ.data && SZ.data.okunabildi!==false && (SZ.shown >= (SZ.data.adimlar||[]).length || SZ.mod==="ipucu") ? `<div class="card szdevam">
       <b class="small">Aklına takılanı sor</b>
       <div class="szask"><textarea id="szSor" rows="1" placeholder="ör. 2. adımda neden 16,8'i çıkardık?"></textarea><button class="btn pri" data-act="szsor" ${SZ.busy?"disabled":""}>Sor</button></div></div>` : "";
   const sohbet = SZ.sohbet.map(m=>`<div class="szmsg ${m.r}">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : m.r==="me" ? szInline(m.t) : szMd(m.t)}</div>`).join("");
-  const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
+  const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak && !aiC().sinirsiz ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
   return `${head}<div class="page sz">${SZ.data || yuk ? "" : bonus}${form}${yuk ? szYukleniyor() : ""}${SZ.hata && SZ.data ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}<div class="szsol">${szCozum()}</div>${szBenzer()}${sohbet ? `<div class="szchat">${sohbet}</div>` : ""}${devam}${alt}
     ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarındaki şıkla karşılaştırarak kontrol eder; tutmazsa “emin değilim” der.</p>` : ""}</div>`;
 }
@@ -2441,13 +2452,15 @@ function aiSet(k, v){ S.settings.ai = { ...(S.settings.ai||{}), [k]: v }; saveSe
 function aiAyarHTML(){ const c = aiC();
   return `<div class="f">Durum<div class="seg">${[["kapali","Kapalı"],["pilot","Sadece seçtiklerim"],["herkes","Tüm öğrenciler"]].map(([k,l])=>`<label class="segr"><input type="radio" name="aiacik" data-aiacik="1" value="${k}" ${c.acik===k?"checked":""}><span>${l}</span></label>`).join("")}</div></div>
     ${c.acik==="pilot" ? `<div class="f">Deneme öğrencileri<div class="aipil">${sortedStudents().map(([id,x])=>`<label class="inline"><input type="checkbox" data-aipilot="${id}" ${(c.pilot||[]).includes(id)?"checked":""}>${esc(x.name)}</label>`).join("")}</div></div>` : ""}
-    <div class="two"><label class="f">Öğrenci başı aylık soru hakkı<input type="number" min="0" step="10" data-ainum="aylikHak" value="${c.aylikHak}"></label>
-      <label class="f">Aylık bütçe tavanı ($)<input type="number" min="1" step="5" data-ainum="tavan" value="${c.tavan}"></label></div>
+    <label class="inline"><input type="checkbox" data-aibool="sinirsiz" ${c.sinirsiz?"checked":""}>Öğrenciye “Sınırsız Soru Çözüm” göster (arka planda adil kullanım sınırı)</label>
+    ${c.sinirsiz ? `<div class="two"><label class="f">Adil kullanım: günde en fazla soru<input type="number" min="1" step="5" data-ainum="gunlukSoru" value="${c.gunlukSoru}"></label>
+      <label class="f">Adil kullanım: ayda en fazla soru<input type="number" min="1" step="50" data-ainum="aylikSoru" value="${c.aylikSoru}"></label></div>` : `<label class="f">Öğrenci başı aylık soru hakkı<input type="number" min="0" step="10" data-ainum="aylikHak" value="${c.aylikHak}"></label>`}
+    <label class="f">Aylık bütçe tavanı ($)<input type="number" min="1" step="5" data-ainum="tavan" value="${c.tavan}"></label>
     <div class="two"><label class="f">Uyarı tutarı ($)<input type="number" min="1" step="5" data-ainum="uyari" value="${c.uyari}"></label>
       <label class="f">Günlük “anlamadım / benzer soru” sınırı<input type="number" min="0" step="1" data-ainum="takipGunluk" value="${c.takipGunluk}"></label></div>
-    <label class="inline"><input type="checkbox" data-aibool="bonusAcik" ${c.bonusAcik?"checked":""}>Bütçe artarsa her pazartesi çalışkan öğrencilere bonus soru hakkı dağıt</label>
-    <label class="f">Bonus için en az haftalık program uyumu (%)<input type="number" min="0" max="100" step="5" data-ainum="bonusUyum" value="${c.bonusUyum}"></label>
-    <p class="faint small" style="margin:0">Kolay sorular 1 hak (hızlı model), zor ya da cevap anahtarıyla uyuşmayan sorular 3 hak (güçlü model). Bütçe tavana gelince sistem kendiliğinden durur. Kurulum için Anthropic API anahtarının GitHub'a eklenmiş olması gerekir.</p>
+    ${c.sinirsiz ? "" : `<label class="inline"><input type="checkbox" data-aibool="bonusAcik" ${c.bonusAcik?"checked":""}>Bütçe artarsa her pazartesi çalışkan öğrencilere bonus soru hakkı dağıt</label>
+    <label class="f">Bonus için en az haftalık program uyumu (%)<input type="number" min="0" max="100" step="5" data-ainum="bonusUyum" value="${c.bonusUyum}"></label>`}
+    <p class="faint small" style="margin:0">${c.sinirsiz ? "Öğrenci kalan hak görmez; günlük ya da aylık sınıra gelince nazik bir mesaj görür. Harcama panelinden bir öğrenciye “+10” ile ek soru açabilirsin." : "Kolay sorular 1 hak (hızlı model), zor ya da cevap anahtarıyla uyuşmayan sorular 3 hak (güçlü model)."} Bütçe tavana gelince sistem kendiliğinden durur. Kurulum için Anthropic API anahtarının GitHub'a eklenmiş olması gerekir.</p>
     <div class="pills"><button class="btn sm pri" data-act="go" data-v="aipanel">${icon("chart","xs")} Kullanım ve harcama</button><button class="btn sm" data-act="go" data-v="socoz">${icon("search","xs")} Kendin dene</button></div>`; }
 const AIP = { ay:"", kul:[], sorular:[], yuk:false, hata:"" };
 function aipYukle(){ const ay = aiAy(); AIP.ay = ay; AIP.yuk = true; AIP.hata = ""; let n = 0; const bitti = () => { if(++n===2){ AIP.yuk = false; if(S.view==="aipanel") render(true); } };
@@ -2458,7 +2471,7 @@ function cAiPanel(){
   const c = aiC(), g = AIP.kul.find(k=>k.id.endsWith("_genel")) || {}, harc = g.dolar || 0, t = today(), gun = +t.slice(8,10), gs = new Date(+t.slice(0,4), +t.slice(5,7), 0).getDate();
   const tahmin = harc / Math.max(1, gun) * gs, zorOran = g.soru ? Math.round((g.zor||0)/g.soru*100) : 0;
   const days = [...Array(gs)].map((_,i)=>`${t.slice(0,8)}${String(i+1).padStart(2,"0")}`), gv = days.map(d=>(g.gun||{})[d]||0), mx = Math.max(0.01,...gv);
-  const ogr = sortedStudents().map(([id,x])=>{ const k = AIP.kul.find(z=>z.id===`${AIP.ay}_${id}`) || {}; const top = c.aylikHak+(k.bonus||0)+(k.ekHak||0); return {id, x, k, top}; })
+  const ogr = sortedStudents().map(([id,x])=>{ const k = AIP.kul.find(z=>z.id===`${AIP.ay}_${id}`) || {}; const top = c.sinirsiz ? c.aylikSoru+(k.ekHak||0) : c.aylikHak+(k.bonus||0)+(k.ekHak||0); return {id, x, k, top}; })
     .filter(o=>aiAcik(o.id) || o.k.soru).sort((a,b)=>(b.k.kullanilan||0)-(a.k.kullanilan||0));
   const back = `<button class="iconbtn" data-act="go" data-v="ayarlar" aria-label="Geri">${icon("back")}</button>`;
   return `${topbar(`<h1 class="ttl">AI harcama</h1>`, `<button class="iconbtn" data-act="aipyenile" aria-label="Yenile">${icon("trend")}</button>`, back)}
@@ -2467,7 +2480,7 @@ function cAiPanel(){
     <div class="kpis">${tile(harc >= c.uyari ? "t-r" : "t-g","chart",`${harc.toFixed(2)} $`,`Bu ay harcanan · tavan ${c.tavan} $`)}${tile(tahmin > c.tavan ? "t-r" : "t-a","trend",`${tahmin.toFixed(2)} $`,"Bu hızla ay sonu tahmini")}${tile("t-w","search",String(g.soru||0),`Çözülen soru · %${zorOran} güçlü model`)}${tile("t-g","flame",String((g.bonusGecmis||[]).reduce((a,b)=>a+(b.hak||0),0)),"Dağıtılan bonus hak")}</div>
     <div class="card"><div class="sech"><h3>Günlük harcama</h3><span class="faint small">${shortDate(days[0])} – ${shortDate(days[gs-1])}</span></div><div class="aip-bar" style="margin-top:10px">${gv.map((v,i)=>`<i style="height:${v/mx*100}%;${days[i]===t?"opacity:1;background:var(--ac2)":""}" title="${shortDate(days[i])}: ${v.toFixed(3)} $"></i>`).join("")}</div></div>
     <div class="card"><div class="sech"><h3>Öğrenciler</h3><span class="faint small">${c.acik==="kapali" ? "Soru Çözüm kapalı" : c.acik==="pilot" ? "Sadece seçilen öğrenciler" : "Tüm öğrenciler"}</span></div>
-      ${ogr.length ? `<div style="overflow-x:auto"><table class="aip-tbl"><thead><tr><th>Öğrenci</th><th class="num">Hak</th><th class="num">Soru</th><th class="num">Güçlü</th><th class="num">$</th><th></th></tr></thead><tbody>${ogr.map(o=>`<tr><td>${esc(o.x.name)}${o.k.bonus?` <span class="pill ac">+${o.k.bonus} bonus</span>`:""}</td><td class="num">${o.k.kullanilan||0}/${o.top}</td><td class="num">${o.k.soru||0}</td><td class="num">${o.k.zor||0}</td><td class="num">${(o.k.dolar||0).toFixed(2)}</td><td><button class="btn sm" data-act="aiekhak" data-id="${o.id}">+10 hak</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty">${AIP.yuk ? "Yükleniyor…" : "Henüz kullanan yok. Ayarlar'dan Soru Çözüm'ü açabilirsin."}</div>`}</div>
+      ${ogr.length ? `<div style="overflow-x:auto"><table class="aip-tbl"><thead><tr><th>Öğrenci</th><th class="num">Hak</th><th class="num">Soru</th><th class="num">Güçlü</th><th class="num">$</th><th></th></tr></thead><tbody>${ogr.map(o=>`<tr><td>${esc(o.x.name)}${o.k.bonus?` <span class="pill ac">+${o.k.bonus} bonus</span>`:""}</td><td class="num">${c.sinirsiz ? (o.k.soru||0) : (o.k.kullanilan||0)}/${o.top}</td><td class="num">${o.k.soru||0}</td><td class="num">${o.k.zor||0}</td><td class="num">${(o.k.dolar||0).toFixed(2)}</td><td><button class="btn sm" data-act="aiekhak" data-id="${o.id}">+10 hak</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty">${AIP.yuk ? "Yükleniyor…" : "Henüz kullanan yok. Ayarlar'dan Soru Çözüm'ü açabilirsin."}</div>`}</div>
     <div class="card"><div class="sech"><h3>Son sorular</h3><span class="faint small">${AIP.sorular.length} soru</span></div>
       ${AIP.sorular.length ? AIP.sorular.map(q=>`<div class="aip-q">${q.kucuk?`<img src="${q.kucuk}" alt="">`:`<span class="ri">${icon("note","sm")}</span>`}<div style="min-width:0;flex:1"><b class="small">${esc(S.students.get(q.sid)?.name || "Koç denemesi")}</b> <span class="faint small">· ${ago(q.at)}</span><div class="small muted">${esc([q.ders, q.konu].filter(Boolean).join(" · ") || "—")}</div></div><span class="pill ${q.model==="zor"?"":"ac"}">${q.model==="zor"?"Güçlü":"Hızlı"}</span>${q.anahtar==="uyumsuz"||q.emin===false?`<span class="pill" style="background:var(--warns);color:var(--warn)">emin değil</span>`:""}</div>`).join("") : `<div class="empty">Bu ay henüz soru yok.</div>`}</div>
   </div>`; }
@@ -2650,7 +2663,7 @@ function cSettings(){
       <label class="f">Dene: bir satır yaz<input type="text" id="sr-test" data-act="stest" placeholder="ör. AYT Fen Branş x2"></label><div class="small" id="sr-out" style="font-weight:700"></div>`, "sureler")}
     ${sec("Hızlı ekle listesi",`${c.quick.length} satır`,`<div class="f">Program yazarken “+ Hızlı ekle” menüsünde çıkan satırlar <span class="faint" style="font-weight:500">· her satır bir seçenek</span>${ta("st-quick","quick",c.quick,8)}</div>`, "quick")}
     ${sec("Haftalık hedef dersleri",`${c.hedefDers.length} ders`,`<div class="f">“Bitirilecek konu / Takip edilen kitaplar” tablosundaki dersler <span class="faint" style="font-weight:500">· her satır bir ders</span>${ta("st-hd","hedefDers",c.hedefDers,6)}</div>`, "hedefDers")}
-    ${sec("Soru Çözüm (yapay zekâ)", (c=>c.acik==="kapali" ? "Kapalı" : c.acik==="pilot" ? `Deneme · ${(c.pilot||[]).length} öğrenci` : `Açık · aylık ${c.aylikHak} hak · tavan ${c.tavan} $`)(aiC()), aiAyarHTML())}
+    ${sec("Soru Çözüm (yapay zekâ)", (c=>c.acik==="kapali" ? "Kapalı" : c.acik==="pilot" ? `Deneme · ${(c.pilot||[]).length} öğrenci` : `Açık · ${c.sinirsiz ? `sınırsız (adil kullanım ${c.gunlukSoru}/gün)` : `aylık ${c.aylikHak} hak`} · tavan ${c.tavan} $`)(aiC()), aiAyarHTML())}
     ${sec("Bildirimler (koç)", `Bu cihaz: ${typeof Notification==="undefined" ? "desteklemiyor" : Notification.permission==="granted" ? "açık" : Notification.permission==="denied" ? "kapalı" : "izin verilmedi"}`, `
       <p class="muted small" style="margin:0">Yeni kayıt ve başvuru bildirimleri, bildirim izni verdiğin cihazlara gelir. Gelmiyorsa önce bu cihazda bildirimleri yenile, sonra test gönder.</p>
       <div class="pills"><button class="btn sm" data-act="pushyenile">${icon("bell","xs")} Bu cihazda bildirimleri aç / yenile</button><button class="btn sm pri" data-act="bildirimtest">Test bildirimi gönder</button></div>
@@ -2709,7 +2722,7 @@ function cSettings(){
 function setPath(path, val){ const ks = path.split("."); let o = S.settings; for(let i=0;i<ks.length-1;i++){ o[ks[i]] = o[ks[i]] ? o[ks[i]] : clone(cfg()[ks[i]]); o = o[ks[i]]; } o[ks[ks.length-1]] = val; }
 function onSetting(t, isChange){
   if(t.dataset.ainum!=null){ const v = Math.max(0, Number(t.value)||0); aiSet(t.dataset.ainum, v); return true; }
-  if(t.dataset.aibool!=null && isChange){ aiSet(t.dataset.aibool, t.checked); return true; }
+  if(t.dataset.aibool!=null && isChange){ aiSet(t.dataset.aibool, t.checked); if(t.dataset.aibool==="sinirsiz") keepSettingsOpen(); return true; }
   if(t.dataset.aiacik!=null && isChange){ aiSet("acik", t.value); keepSettingsOpen(); return true; }
   if(t.dataset.aipilot!=null && isChange){ const L = new Set(aiC().pilot||[]); if(t.checked) L.add(t.dataset.aipilot); else L.delete(t.dataset.aipilot); aiSet("pilot", [...L]); return true; }
   if(t.dataset.setb2!=null){ S.settings.bmesaj = {...(S.settings.bmesaj||{}), [t.dataset.setb2]: t.value}; saveSettings(700); return true; }

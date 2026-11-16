@@ -1,5 +1,6 @@
 /* Soru Çözüm Merkezi: saf mantık (model seçimi, hak, bütçe, bonus). Testleri: tests/soru.test.js */
 import { addDays, dayTasks } from "./logic.js";
+import { COZUM_BILGI } from "./cozum-bilgi.js";
 
 export const AI_VARSAYILAN = {
   acik: "kapali",            // "kapali" | "pilot" | "herkes"
@@ -10,6 +11,9 @@ export const AI_VARSAYILAN = {
   uyari: 80,                 // bu tutara gelince koça bildirim ($)
   takipGunluk: 15,           // günlük "anlamadım / benzer soru" sınırı
   bonusAcik: true,
+  sinirsiz: true,            // öğrenciye "Sınırsız" gösterilir; arka planda adil kullanım sınırı uygulanır
+  gunlukSoru: 30,            // adil kullanım: günde en fazla çözülen soru
+  aylikSoru: 600,            // adil kullanım: ayda en fazla çözülen soru
   bonusUyum: 70,             // bonus için en az haftalık program uyumu (%)
   bonusDakika: 180,          // ya da günlük ortalama çalışma (dk)
   bonusKullanim: 0.7,        // hakkının en az bu oranını kullanmış olmalı
@@ -34,6 +38,9 @@ export function maliyet(c, tur, usage){ const f = c.fiyat[tur] || c.fiyat.kolay;
 
 /* Kalan hak */
 export function kalanHak(c, k = {}){ return Math.max(0, (c.aylikHak + (k.bonus || 0) + (k.ekHak || 0)) - (k.kullanilan || 0)); }
+/* Adil kullanım (sınırsız düzen): bugün ve bu ay kalan soru; null = sınır yok */
+export function adilKalan(c, k = {}, date = ""){ const gun = ((k.gunSoru || {})[date] || 0), ay = (k.soru || 0);
+  return { gun: Math.max(0, c.gunlukSoru - gun), ay: Math.max(0, c.aylikSoru + (k.ekHak || 0) - ay) }; }
 export function toplamHak(c, k = {}){ return c.aylikHak + (k.bonus || 0) + (k.ekHak || 0); }
 
 /* Haiku'nun çözümünden sonra Sonnet'e geçilmeli mi? */
@@ -42,6 +49,8 @@ export function zoraGec(r, anahtar){
   if (r.okunabildi === false) return null;                       // fotoğraf okunmadı: büyük model de okuyamaz, öğrenciye net fotoğraf iste
   if (r.emin === false) return "emin-degil";
   if (String(r.zorluk || "").toLowerCase() === "zor") return "zor";
+  const sk = r.sekil || {}; /* şekle dayanan, kolay olmayan sorularda (geometri, grafik, devre, düzenek) güçlü modelle kontrol */
+  if (sk.var && ["geometri", "grafik", "devre", "duzenek"].includes(String(sk.tur || "").toLowerCase()) && String(r.zorluk || "").toLowerCase() !== "kolay") return "sekil";
   const k = String(anahtar || "").trim().toUpperCase();
   const s = String((r.cevap && r.cevap.sik) || "").trim().toUpperCase();
   if (k && s && k !== s) return "anahtar-uyusmuyor";
@@ -114,9 +123,10 @@ export const SISTEM = [
 export const SEMA = [
   "Soruyu çöz ve YALNIZCA şu biçimde bir JSON nesnesi döndür (başka metin yok). İlk alan 'kontrol': çözümü orada kısaca kontrol et, öğrenci bunu görmez.",
   "{",
-  ' "kontrol": "kısa hesap kontrolü",',
+  ' "kontrol": "soru kökündeki olumsuz/özel ifade (varsa); seçtiğin şık neden doğru; EN YAKIN rakip şık neden elenir (tek cümle); kısa hesap kontrolü",',
   ' "okunabildi": true,',
   ' "sorun": "",',
+  ' "sekil": {"var": true, "tur": "geometri | grafik | tablo | devre | duzenek | biyoloji | kimya | harita | gorsel | yok", "okunan": ["AB = 6 cm", "m(BAC) = 40°", "AD ⊥ BC (dik açı işareti var)"], "not": ""},',
   ' "soru": "Sorunun kısa özeti, en fazla 2 cümle",',
   ' "siklar": {"A":"...","B":"...","C":"...","D":"...","E":"..."},',
   ' "ders": "TYT Matematik",',
@@ -130,17 +140,64 @@ export const SEMA = [
   ' "emin": true,',
   ' "puf": "Sınavda zaman kazandıran yol ya da sık yapılan hata, 1-2 cümle"',
   "}",
+  "ŞEKİL VE RESİM OKUMA (çözmeden ÖNCE yap, sonucu 'sekil' alanına yaz):",
+  "- Şekil, grafik, tablo, düzenek ya da resim varsa önce onu ayrıntılı oku. 'okunan' listesine şekilde gerçekten yazan ya da işaretle gösterilen her bilgiyi tek tek yaz: harfler ve noktalar, uzunluklar, açı değerleri, eşitlik çentikleri, dik açı kutusu, paralellik okları, teğetlik, merkez; grafikte eksen adları, birimleri, ölçek aralığı ve okunan noktaların koordinatları; tabloda bütün satır ve sütunlar; devrede her elemanın değeri ve bağlanma biçimi; düzenekte kütleler, ipler, makaralar, yüzeyler, yönler; biyoloji/kimya şeklinde etiketli yapılar.",
+  "- Şekilden göz kararı ölçü ÇIKARMA: ÖSYM şekilleri ölçekli değildir. Bir uzunluğun ya da açının eşitliğini sadece yazılı değer ya da işaret varsa kabul et; 'dik görünüyor', 'eşit görünüyor' diye varsayım yapma.",
+  "- Grafikte değeri ızgara çizgilerinden ve eksen bölmelerinden say; iki çizgi arasında kalan değeri uydurma. Okuyamadığın değer çözüm için gerekliyse emin=false yap.",
+  "- Fotoğraf eğik, gölgeli ya da kitap kıvrımlı olabilir; düz metin gibi oku. Öğrencinin kurşun kalemle yaptığı karalamaları, işaretlediği şıkkı ve kenar notlarını sorunun parçası sayma.",
+  "- Sayfada birden fazla soru varsa öğrencinin işaretlediği ya da ortada, tamamı görünen soruyu çöz; hangisi olduğu anlaşılmıyorsa okunabildi=false yap ve sorun alanına 'birden fazla soru var, sadece birini çek' yaz.",
+  "- Resim/görsel sorularında (harita, tarihî görsel, karikatür, deney fotoğrafı, organ çizimi) önce görseldeki öğeleri tek tek tanımla, sonra soruyla ilişkilendir; görselde olmayan bir şeyi görmüş gibi yazma.",
+  "- Çözüm şekle dayanıyorsa ama şeklin önemli bir kısmı okunmuyorsa tahmin yürütme: okunabildi=false yap ve sorun alanına neyin okunmadığını yaz (ör. 'BC kenarındaki sayı okunmuyor').",
+  "- Şekil yoksa sekil = {\"var\": false, \"tur\": \"yok\", \"okunan\": [], \"not\": \"\"}. okunan en fazla 10 madde, her biri kısa.",
   "Kurallar: siklar yoksa null; bilgi 0-2 tane; ipuclari cevabı söylemeden 3 tane; adimlar 3-6 tane, her adımda tek iş, islem yoksa \"\".",
   "Fotoğraf bulanık, soru kesik ya da şıklar okunmuyorsa tahmin yürütme: okunabildi=false yap ve sorun alanına neyin okunmadığını yaz.",
   "Zorluk: AYT matematik/fizik/kimya ya da çok adımlı akıl yürütme gerektiren sorular için \"zor\". Çözümünden tam emin değilsen emin=false yap; yanlış bir çözümü asla emin gibi sunma.",
 ].join("\n");
 
+/* Önbelleğe alınan sabit kısım (her soruda aynı): şema + kurallar + çözüm becerileri */
+export const COZ_SABIT = SEMA + "\n\n" + COZUM_BILGI;
+/* Soruya özgü (önbelleğe alınmayan) kısım */
+export function cozDegisken({ metin, anahtar, tekrar, ikinci }){
+  return (metin ? `Öğrencinin notu / soru metni: ${String(metin).slice(0, 1500)}\n\n` : "")
+    + (anahtar ? `Cevap anahtarına göre doğru cevap: ${anahtar} şıkkı. Çözümünü buna göre kontrol et; uyuşmuyorsa soruyu baştan farklı bir yoldan tekrar çöz, yine uyuşmuyorsa emin=false yap ve kendi bulduğun en doğru çözümü göster.` : "Cevap anahtarı verilmedi.")
+    + (tekrar ? `\n\nÖğrenci önceki çözümün yanlış olabileceğini söyledi. Önceki çözüm özeti: ${String(tekrar).slice(0, 2000)}\nSoruyu baştan, çok dikkatli çöz.` : "")
+    + (ikinci ? "\n\nİKİNCİ BAKIŞ: Bu soruyu daha önce başka biri çözdü; ilk izlenimine güvenme. Şıkları E'den A'ya doğru tek tek ele, her birinin parçayla/soru köküyle tam uyup uymadığını kontrol et, sonra karar ver." : "")
+    + "\n\nJSON'u şimdi yaz.";
+}
 export function cozIstegi({ metin, anahtar, tekrar }){
-  return SEMA
+  return COZ_SABIT + "\n\n"
     + (metin ? `\n\nÖğrencinin notu / soru metni: ${String(metin).slice(0, 1500)}` : "")
     + (anahtar ? `\n\nCevap anahtarına göre doğru cevap: ${anahtar} şıkkı. Çözümünü buna göre kontrol et; uyuşmuyorsa soruyu baştan farklı bir yoldan tekrar çöz, yine uyuşmuyorsa emin=false yap ve kendi bulduğun en doğru çözümü göster.` : "\n\nCevap anahtarı verilmedi.")
     + (tekrar ? `\n\nÖğrenci önceki çözümün yanlış olabileceğini söyledi. Önceki çözüm özeti: ${String(tekrar).slice(0, 2000)}\nSoruyu baştan, çok dikkatli çöz.` : "");
 }
+
+/* Sözel ders mi? (ikinci oy yalnız sözelde: Türkçe, edebiyat, tarih, coğrafya, felsefe, din, sosyal) */
+export function sozelMi(ders){ return /türkçe|turkce|edebiyat|tarih|coğrafya|cografya|felsefe|psikoloji|sosyoloji|mantık|din|sosyal|inkılap|paragraf/i.test(String(ders || "")); }
+const sikOf = r => String((r && r.cevap && r.cevap.sik) || "").trim().toUpperCase();
+/* Hakem isteği: iki çözüm farklı şık bulduğunda */
+export function hakemIstegi(hizli, guclu, anahtar){
+  const ozet = r => JSON.stringify({ cevap: r.cevap, kontrol: r.kontrol, adimlar: (r.adimlar || []).map(a => [a.baslik, a.islem].filter(Boolean).join(": ")), okunan: (r.sekil || {}).okunan || [] }).slice(0, 3500);
+  return `Aynı soru için iki çözüm var ve farklı şıklar buldular.\n\nÇÖZÜM 1 (hızlı model): ${ozet(hizli)}\n\nÇÖZÜM 2 (güçlü model): ${ozet(guclu)}\n\n`
+    + (anahtar ? `Cevap anahtarı: ${anahtar}.\n\n` : "")
+    + "Sen hakemsin. Güçlü modelin çözümü genelde daha güvenilirdir ama o da yanılabilir; adına göre değil, gerekçeye göre karar ver. Soruyu görselden yeniden oku, iki çözümün hangi adımda ayrıştığını bul, o adımı kendin doğrula ve doğru şıkkı seç. İkisi de yanlışsa doğru şıkkı kendin bul. "
+    + 'YALNIZCA şu JSON: {"ayrisma":"iki çözümün ayrıştığı nokta, tek cümle","sik":"C","secim":"1 | 2 | ikisi-de-yanlis","emin":true}';
+}
+/* Hakem sonucuna göre son çözümü seç (saf mantık; testli) */
+export function hakemSonucu(hizli, guclu, h){
+  const hs = String((h && h.sik) || "").trim().toUpperCase();
+  if (!h || !hs) return { r: { ...guclu, emin: false }, kim: "guclu" };
+  if (hs === sikOf(guclu)) return { r: { ...guclu, emin: guclu.emin !== false && h.emin !== false }, kim: "guclu" };
+  if (hs === sikOf(hizli)) return { r: { ...hizli, emin: h.emin !== false }, kim: "hizli" };
+  return { r: { ...guclu, emin: false }, kim: "guclu" }; /* hakem üçüncü bir şık dedi: güçlüyü göster, emin değil işaretle */
+}
+/* Anahtar varken iki çözümden anahtarla uyanı seç */
+export function anahtarlaSec(hizli, guclu, anahtar){
+  const k = String(anahtar || "").trim().toUpperCase();
+  if (guclu && sikOf(guclu) === k) return { r: guclu, kim: "guclu" };
+  if (hizli && sikOf(hizli) === k) return { r: hizli, kim: "hizli" };
+  return { r: guclu ? { ...guclu, emin: false } : { ...hizli, emin: false }, kim: guclu ? "guclu" : "hizli" };
+}
+export { sikOf };
 
 export function takipIstegi(tur, baglam, metin, adim){
   const b = `Üzerinde çalıştığımız soru: ${String(baglam || "").slice(0, 6000)}`;
