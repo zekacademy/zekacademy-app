@@ -446,6 +446,8 @@ export const yeniMesaj = onDocumentCreated("sohbetler/{sid}/mesajlar/{mid}", asy
   if (sessizMi(istanbulNow().minutes, ayar.sessizBas || "23:00", ayar.sessizBit || "08:00")) return; /* gece: bildirim yok, mesaj sabah görünür */
   const r = await pushTo(studentTokens(s), m.duyuru ? "📢 Koçundan duyuru" : "💬 Koçundan mesaj", metin, "/?ac=mesaj");
   await dropBadStudentTokens(sid, r.bad);
+});
+
 /* Her sabah 08:00: her sınıfta dünün 1.'si; pazartesi ayrıca geçen haftanın ilk 5'i. Sonuç gruplar/{gid}/odul altına yazılır,
    gerçek kazananlara ekstra soru hakkı + koçtan tebrik bildirimi, diğer üyelere duyuru gider. Aynı gün ikinci kez çalışırsa tekrar vermez. */
 export const sinifOdul = onSchedule({ schedule: "0 8 * * *", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
