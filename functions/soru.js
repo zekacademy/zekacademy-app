@@ -10,6 +10,9 @@ export const AI_VARSAYILAN = {
   uyari: 80,                 // bu tutara gelince koça bildirim ($)
   takipGunluk: 15,           // günlük "anlamadım / benzer soru" sınırı
   bonusAcik: true,
+  sinirsiz: true,            // öğrenciye "Sınırsız" gösterilir; arka planda adil kullanım sınırı uygulanır
+  gunlukSoru: 30,            // adil kullanım: günde en fazla çözülen soru
+  aylikSoru: 600,            // adil kullanım: ayda en fazla çözülen soru
   bonusUyum: 70,             // bonus için en az haftalık program uyumu (%)
   bonusDakika: 180,          // ya da günlük ortalama çalışma (dk)
   bonusKullanim: 0.7,        // hakkının en az bu oranını kullanmış olmalı
@@ -34,6 +37,9 @@ export function maliyet(c, tur, usage){ const f = c.fiyat[tur] || c.fiyat.kolay;
 
 /* Kalan hak */
 export function kalanHak(c, k = {}){ return Math.max(0, (c.aylikHak + (k.bonus || 0) + (k.ekHak || 0)) - (k.kullanilan || 0)); }
+/* Adil kullanım (sınırsız düzen): bugün ve bu ay kalan soru; null = sınır yok */
+export function adilKalan(c, k = {}, date = ""){ const gun = ((k.gunSoru || {})[date] || 0), ay = (k.soru || 0);
+  return { gun: Math.max(0, c.gunlukSoru - gun), ay: Math.max(0, c.aylikSoru + (k.ekHak || 0) - ay) }; }
 export function toplamHak(c, k = {}){ return c.aylikHak + (k.bonus || 0) + (k.ekHak || 0); }
 
 /* Haiku'nun çözümünden sonra Sonnet'e geçilmeli mi? */

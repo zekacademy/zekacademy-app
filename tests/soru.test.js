@@ -80,3 +80,12 @@ test("bonus: pay varsa hakkını kullanmış çalışkan öğrenciye, tavanı a�
   assert.match(bonusMesaj({ hak: 20, uyum: 85 }), /%85 uydun, \+20 bonus/);
   assert.match(bonusMesaj({ hak: 12, uyum: null, gunlukDk: 200 }), /200 dk/);
 });
+
+test("adil kullanım: günlük ve aylık kalan soru (sınırsız düzen)", async () => {
+  const { aiCfg, adilKalan } = await import("../functions/soru.js");
+  const c = aiCfg({});
+  assert.equal(c.sinirsiz, true); assert.equal(c.gunlukSoru, 30); assert.equal(c.aylikSoru, 600);
+  assert.deepEqual(adilKalan(c, { soru: 100, gunSoru: { "2026-11-16": 28 } }, "2026-11-16"), { gun: 2, ay: 500 });
+  assert.deepEqual(adilKalan(c, { soru: 600, ekHak: 10, gunSoru: {} }, "2026-11-16"), { gun: 30, ay: 10 });
+  assert.equal(adilKalan(c, { soru: 5, gunSoru: { "2026-11-16": 30 } }, "2026-11-16").gun, 0);
+});

@@ -2,7 +2,7 @@
    Günün 1.'si her sabah, haftanın ilk 5'i pazartesi sabahı açıklanır; çalışma arkadaşları da yarışır ama ödül sadece gerçek öğrenciye işler. */
 import { ZEK, zekGunDk } from "./zek.js";
 export const ODUL_BASLA = "2026-11-16"; /* yarış bu pazartesi başlar: önceki günler sayılmaz */
-export const ODUL = { gun: [3], hafta: [20, 10, 10, 5, 5] };            /* ekstra soru hakkı: sıraya göre */
+export const ODUL = { gun: [0], hafta: [0, 0, 0, 0, 0] };              /* 16 Kasım: soru hakkı ödülü kaldırıldı (Soru Çözüm sınırsız); ödül masa süsleri ve tebrik */
 export const UNVAN = ["Haftanın Şampiyonu", "Haftanın 2.'si", "Haftanın 3.'sü", "İlk 5", "İlk 5"];
 export const gunEkle = (d, n) => new Date(Date.parse(d + "T12:00:00Z") + n * 864e5).toISOString().slice(0, 10);
 export const haftaGunu = d => new Date(d + "T12:00:00Z").getUTCDay();   /* 0 pazar, 1 pazartesi */
