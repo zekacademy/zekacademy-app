@@ -1,0 +1,471 @@
+{
+ "konu": "Isı, Sıcaklık ve Genleşme",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZIS2-01",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isı, sıcaklık ve iç enerji ayrımı",
+   "fikir": "Sıcaklık ortalama kinetik enerjiyle, iç enerji tanecik sayısı ve sıcaklıkla ilgilidir; ısı yalnız sıcaklık farkından dolayı aktarılan enerjidir.",
+   "tuzak": "Isı ile sıcaklığı karıştırmak; kütlesi fazla olana “daha sıcak” demek; aynı sıcaklıktaki cisimler arasında da ısı akışı sanmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-is2-ayrim",
+   "tip": "Isı, sıcaklık ve iç enerji ayrımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-02",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "X termometresi ölçek dönüşümü",
+   "fikir": "İki sabit nokta arasındaki bölme sayısı oranlanır: (X − X₀)/(X₁ − X₀) = C/100.",
+   "tuzak": "Başlangıç değerini çıkarmadan oranlamak; bölme oranını ters çarpmak; kaynama noktasından saymak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-is2-xtermo",
+   "tip": "X termometresi ile Celsius dönüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-03",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Kelvin ve Fahrenheit dönüşümü",
+   "fikir": "K = °C + 273; °F = 1,8·°C + 32. Sıcaklıkları ortak ölçeğe çevirip karşılaştırmak gerekir.",
+   "tuzak": "Kelvin için 273 yerine eklemek yerine çıkarmak; Fahrenheit’ı doğrudan karşılaştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-is2-kelvinF",
+   "tip": "Celsius, Kelvin ve Fahrenheit ölçekleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-04",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "İki termometrenin aynı değeri okuması",
+   "fikir": "Her termometrenin okuması Celsius’un doğrusal fonksiyonudur; iki doğru eşitlenerek ortak okuma bulunur.",
+   "tuzak": "Ortak sıcaklığı (Celsius) ortak okuma sanmak; sabit nokta ortalamalarını almak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-is2-iki-termo",
+   "tip": "İki termometrenin ortak okuması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-05",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isı sığası ve öz ısı karşılaştırması",
+   "fikir": "Isı sığası C = m·c; aynı ısıyla sıcaklık artışı ΔT = Q/C, ısı sığasıyla ters orantılıdır.",
+   "tuzak": "Öz ısıyı ısı sığasıyla karıştırmak; öz ısısı küçük olana “ısı sığası da küçük” demek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-is2-isisigasi",
+   "tip": "Isı sığası ve öz ısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-06",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isı–sıcaklık grafiğinde öz ısı oranı",
+   "fikir": "c = Q/(m·ΔT); grafikte aynı ısıyla oluşan sıcaklık artışı ve kütle birlikte kullanılır.",
+   "tuzak": "Yalnız ΔT oranına ya da yalnız kütle oranına bakmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-is2-qt-oran",
+   "tip": "Isı–sıcaklık grafiğinden öz ısı oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-07",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Hâl değişimi grafiğini yorumlama",
+   "fikir": "Hâl değişimi sırasında sıcaklık sabit kalır, alınan ısı potansiyel enerjiyi artırır; eğimi küçük olan bölgede öz ısı büyüktür.",
+   "tuzak": "Isı alırken sıcaklığın artması gerektiğini sanmak; eğim–öz ısı ilişkisini ters kurmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-is2-hal-grafik",
+   "tip": "Hâl değişimi grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-08",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Buz–su karışımında artan buz",
+   "fikir": "Suyun 0 °C’ye inerken verdiği ısı ile buzun tamamını eritmek için gereken ısı karşılaştırılır; fark kadarı buz kalır.",
+   "tuzak": "Buzun tamamen eridiğini sanmak; erime ısısını hesaba katmamak; suyun kütlesi yerine buzun kütlesini kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-buz-kalan",
+   "tip": "Buz–su karışımında kalan buz",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-09",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isıtıcıyla ısıtılan suyun buharlaşması",
+   "fikir": "Önce suyu kaynama sıcaklığına getirmek için gereken ısı, kalan ısı ise buharlaşma ısısıyla kütleye çevrilir.",
+   "tuzak": "Isınma ısısını unutmak; suyu 0 °C’den başlatmak; kaynamaya hiç ulaşmadığını sanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 5,
+   "tipId": "fz-is2-buharlasma",
+   "tip": "Isıtıcıyla suyun buharlaşması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-10",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Farklı maddelerin ısıl dengesi",
+   "fikir": "Verilen ısı alınan ısıya eşit: m₁c₁(T₁ − T) = m₂c₂(T − T₂).",
+   "tuzak": "Öz ısıları hesaba katmayıp kütlelerle ortalama almak; ısı sığalarını ters yerleştirmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-metal-su",
+   "tip": "Metal ve su arasında ısıl denge",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-11",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isıl denge grafiğini yorumlama",
+   "fikir": "Verilen ısı alınan ısıya eşit: C_A·ΔT_A = C_B·ΔT_B; denge sıcaklığı sıcaklıkların ortalaması olmak zorunda değildir.",
+   "tuzak": "Denge sıcaklığını ortalama almak; ΔT büyük olana büyük ısı sığası demek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-is2-denge-grafik",
+   "tip": "Isıl denge sıcaklığı–zaman grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-12",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Üç enerji iletim yolunu ayırt etme",
+   "fikir": "İletimde madde taşınmadan tanecikler aracılığıyla, konveksiyonda akışkanın yer değiştirmesiyle, ışımada ortamsız enerji aktarılır.",
+   "tuzak": "İletimde de maddenin taşındığını sanmak; ışımayı ortam gerektiren sanmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-is2-iletim-yol",
+   "tip": "Enerji iletim yolları",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-13",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Kara–deniz meltemi",
+   "fikir": "Kara öz ısısı küçük olduğundan gündüz daha çok ısınır; sıcak havanın yükselmesiyle alt katmanda denizden karaya, üst katmanda karadan denize hava akımı oluşur.",
+   "tuzak": "Alt ve üst katman akımlarını karıştırmak; gece–gündüz yönünü ters kurmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-meltem",
+   "tip": "Kara–deniz meltemi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-14",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isı iletim hızı oranı",
+   "fikir": "İletilen ısı akışı, kesit alanı ve sıcaklık farkıyla doğru, uzunlukla ters orantılıdır (aynı maddede).",
+   "tuzak": "Uzunluğu çarpan, sıcaklık farkını atlama; kesit alanı oranını ters yazma.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-iletim-hizi",
+   "tip": "Isı iletim hızı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-15",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Isı yalıtımı (termos)",
+   "fikir": "Vakum iletim ve konveksiyonu, parlak yüzey ışımayı, yalıtkan kapak iletimi azaltır; vakum ışımayı azaltmaz.",
+   "tuzak": "Vakumun ışımayı da önlediğini sanmak; parlak yüzeyi iletimle ilişkilendirmek.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-is2-yalitim",
+   "tip": "Isı yalıtımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-16",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Boyca genleşmeyle ray aralığı",
+   "fikir": "ΔL = α · L₀ · ΔT; iki ray birbirine doğru genleşir, aralıktan toplam uzama çıkarılır.",
+   "tuzak": "Yalnız bir rayın uzamasını almak; aralığı toplam uzamaya eşit saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-ray",
+   "tip": "Boyca genleşme ile ray aralığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-17",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Boyca, yüzeyce ve hacimce genleşme ilişkisi",
+   "fikir": "Küçük genleşmelerde yüzde artışlar boy : yüzey : hacim = 1 : 2 : 3 oranındadır.",
+   "tuzak": "Yüzeyin ve hacmin de boy kadar genleştiğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-yuzey-hacim",
+   "tip": "Yüzeyce ve hacimce genleşme",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-18",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Bimetalin soğutulunca bükülmesi",
+   "fikir": "Genleşme katsayısı büyük metal ısıtılınca daha çok uzar, soğutulunca daha çok kısalır; bimetal küçük katsayılı metale doğru ısıtmada, büyük katsayılı metale doğru soğutmada bükülür.",
+   "tuzak": "Isıtma ve soğutmada bükülme yönünü aynı sanmak; hangi yüzün daha çok kısaldığını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-is2-bimetal-sogut",
+   "tip": "Bimetalin soğutulunca bükülmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-19",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Bimetalli yangın alarmı",
+   "fikir": "Isınan bimetal küçük katsayılı metale doğru bükülür; bu hareket devreyi kapatıp açabilir.",
+   "tuzak": "Üst–alt metal yerini değiştirmenin bükülme yönünü etkilemediğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-is2-bimetal-alarm",
+   "tip": "Bimetalli alarm devresi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-20",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Suyun hacim–sıcaklık grafiği",
+   "fikir": "Su 0–4 °C arasında ısıtılınca büzülür, 4 °C’de hacmi en küçük, özkütlesi en büyüktür; 4 °C’den sonra genleşir.",
+   "tuzak": "Su da diğer maddeler gibi her sıcaklıkta ısınınca genleşir sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-is2-su-grafik",
+   "tip": "Suyun genleşme ayrıcalığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-21",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Donan suyun hacmi",
+   "fikir": "Su donunca kütle değişmez, özkütle azalır, hacim artar (V = m/d).",
+   "tuzak": "Hacmin azaldığını sanmak; özkütle oranını ters kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-is2-buz-hacim",
+   "tip": "Suyun donarken hacminin artması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "id": "K-FZIS2-22",
+   "konu": "Isı, Sıcaklık ve Genleşme",
+   "alt": "Küresel ısınma (nitel)",
+   "fikir": "Sera gazları yer yüzeyinden yayılan ışımayı tutarak ortalama sıcaklığı artırır; ısınma buzulları eritir ve okyanus suyunu genleştirerek deniz seviyesini yükseltir.",
+   "tuzak": "Ozon incelmesini küresel ısınmanın nedeni saymak; sera gazlarının ısıyı tümüyle uzaya kaçırdığını sanmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-is2-kuresel",
+   "tip": "Küresel ısınma",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (yalnız mantık) · MEB 9. sınıf Isı, Sıcaklık ve Genleşme"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-is2-ayrim",
+   "ad": "Isı, sıcaklık ve iç enerji ayrımı",
+   "kartlar": [
+    "K-FZIS2-01"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-xtermo",
+   "ad": "X termometresi ile Celsius dönüşümü",
+   "kartlar": [
+    "K-FZIS2-02"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-kelvinF",
+   "ad": "Celsius, Kelvin ve Fahrenheit ölçekleri",
+   "kartlar": [
+    "K-FZIS2-03"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-iki-termo",
+   "ad": "İki termometrenin ortak okuması",
+   "kartlar": [
+    "K-FZIS2-04"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-isisigasi",
+   "ad": "Isı sığası ve öz ısı",
+   "kartlar": [
+    "K-FZIS2-05"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-qt-oran",
+   "ad": "Isı–sıcaklık grafiğinden öz ısı oranı",
+   "kartlar": [
+    "K-FZIS2-06"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-hal-grafik",
+   "ad": "Hâl değişimi grafiği",
+   "kartlar": [
+    "K-FZIS2-07"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-buz-kalan",
+   "ad": "Buz–su karışımında kalan buz",
+   "kartlar": [
+    "K-FZIS2-08"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-buharlasma",
+   "ad": "Isıtıcıyla suyun buharlaşması",
+   "kartlar": [
+    "K-FZIS2-09"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-metal-su",
+   "ad": "Metal ve su arasında ısıl denge",
+   "kartlar": [
+    "K-FZIS2-10"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-denge-grafik",
+   "ad": "Isıl denge sıcaklığı–zaman grafiği",
+   "kartlar": [
+    "K-FZIS2-11"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-iletim-yol",
+   "ad": "Enerji iletim yolları",
+   "kartlar": [
+    "K-FZIS2-12"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-meltem",
+   "ad": "Kara–deniz meltemi",
+   "kartlar": [
+    "K-FZIS2-13"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-iletim-hizi",
+   "ad": "Isı iletim hızı",
+   "kartlar": [
+    "K-FZIS2-14"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-yalitim",
+   "ad": "Isı yalıtımı",
+   "kartlar": [
+    "K-FZIS2-15"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-ray",
+   "ad": "Boyca genleşme ile ray aralığı",
+   "kartlar": [
+    "K-FZIS2-16"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-yuzey-hacim",
+   "ad": "Yüzeyce ve hacimce genleşme",
+   "kartlar": [
+    "K-FZIS2-17"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-bimetal-sogut",
+   "ad": "Bimetalin soğutulunca bükülmesi",
+   "kartlar": [
+    "K-FZIS2-18"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-bimetal-alarm",
+   "ad": "Bimetalli alarm devresi",
+   "kartlar": [
+    "K-FZIS2-19"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-su-grafik",
+   "ad": "Suyun genleşme ayrıcalığı",
+   "kartlar": [
+    "K-FZIS2-20"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-buz-hacim",
+   "ad": "Suyun donarken hacminin artması",
+   "kartlar": [
+    "K-FZIS2-21"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  },
+  {
+   "tipId": "fz-is2-kuresel",
+   "ad": "Küresel ısınma",
+   "kartlar": [
+    "K-FZIS2-22"
+   ],
+   "uygulamaKonu": "fiz|Isı, Sıcaklık ve Genleşme"
+  }
+ ]
+}

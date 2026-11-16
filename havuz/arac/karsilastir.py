@@ -11,7 +11,8 @@ def oku(f):
         if m: c[m.group(1)]=(m.group(2),'EMİN' in l)
     return c
 cev=oku(f'/tmp/kor/{P}-cevap.txt')
-Q={o:json.load(open(f'{H}/tyt-mat/{o}-1.json')) for o in O}
+D=os.environ.get('DERS','tyt-mat'); BZ=os.environ.get('BENZER','/home/claude/kutup/osym_metin.json /home/claude/kutup/sorular.json').split()
+Q={o:json.load(open(f'{H}/{D}/{o}-1.json')) for o in O}
 if A=='ilk':
     n=0
     for o in O:
@@ -38,8 +39,8 @@ elif A=='bitir':
         for i,(s,e) in m.items():
             if e: print('EMİN DEĞİLİM',i)
             else: f.write(f'{i} | {s}\n')
-    fs=[f'{H}/tyt-mat/{o}-1.json' for o in O]
+    fs=[f'{H}/{D}/{o}-1.json' for o in O]
     print(subprocess.run(['python3',f'{H}/kor_isle.py',f'/tmp/kor/{P}-son.txt']+fs,capture_output=True,text=True).stdout)
-    r=subprocess.run(['python3',f'{H}/denetle.py']+fs+['--benzerlik','/home/claude/kutup/osym_metin.json','/home/claude/kutup/sorular.json'],capture_output=True,text=True).stdout.split('\n')
+    r=subprocess.run(['python3',f'{H}/denetle.py']+fs+['--benzerlik']+BZ,capture_output=True,text=True).stdout.split('\n')
     print('\n'.join(r[:3])); print([l for l in r if 'HATA' in l][:5])
-    for o in O: print(o,'bayraksız',[q['id'][-4:] for q in json.load(open(f'{H}/tyt-mat/{o}-1.json')) if not q['dogrulama']['korCozum']])
+    for o in O: print(o,'bayraksız',[q['id'][-4:] for q in json.load(open(f'{H}/{D}/{o}-1.json')) if not q['dogrulama']['korCozum']])

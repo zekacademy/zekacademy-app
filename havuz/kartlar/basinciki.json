@@ -1,0 +1,429 @@
+{
+ "konu": "Basınç",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZBS2-01",
+   "konu": "Basınç",
+   "alt": "Katı Basıncı",
+   "fikir": "Aynı cismin farklı yüzleri üzerinde durmasında basınç kuvveti (ağırlık) değişmez, temas alanı değişir; basınç alanla ters orantılıdır.",
+   "tuzak": "Basınç kuvveti ile basıncı karıştırmak; en büyük yüzü “en büyük basınç” sanmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-kati-konum",
+   "tip": "Cismi çevirince katı basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-02",
+   "konu": "Basınç",
+   "alt": "Katı Basıncı",
+   "fikir": "Basınç P = F ÷ A; her satırda kuvvet ve alandan basınç hesaplanır, sonra en büyük/en küçük karşılaştırılır.",
+   "tuzak": "Yalnız ağırlığa ya da yalnız alana bakıp karar vermek; cm²’yi m²’ye çevirirken oranı bozmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "fz-bs2-kati-tablo",
+   "tip": "Katı basıncını karşılaştırma",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-03",
+   "konu": "Basınç",
+   "alt": "Katı Basıncı",
+   "fikir": "Homojen prizmada P = d·g·h; yatay kesimde yükseklik, düşey kesimde ağırlık ve alan aynı oranda değişir; üst üste koyma alanı yarıya indirir.",
+   "tuzak": "Yarı parçayı atınca basıncın da yarıya ineceğini sanmak (düşey kesimde alan da yarıya iner).",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-kesme",
+   "tip": "Prizmayı kesince ve yeniden dizince basınç",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-04",
+   "konu": "Basınç",
+   "alt": "Katı Basıncı",
+   "fikir": "Aynı maddeden yapılmış dik silindirlerde basınç yalnız yüksekliğe bağlıdır; yarıçap ağırlığı ve alanı aynı oranda değiştirir.",
+   "tuzak": "Daha geniş silindirin daha çok bastığını sanmak; yalnız ağırlık ya da yalnız alan oranını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-bs2-silindir",
+   "tip": "Homojen prizma ve silindirde P = d·g·h",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-05",
+   "konu": "Basınç",
+   "alt": "Katı Basıncı",
+   "fikir": "K bloğunun L’ye yaptığı basınç K’nin ağırlığı ve temas yüzü ile, L’nin zemine yaptığı basınç ise toplam ağırlık ve L’nin tabanı ile hesaplanır; K’yi çevirince yalnız ilki değişir.",
+   "tuzak": "İki basıncı aynı alanla hesaplamak; K’yi çevirince zemindeki basıncın da değiştiğini sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-bs2-yigin",
+   "tip": "Üst üste konan bloklarda iki yüzeyin basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-06",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı ve Basınç Kuvveti",
+   "fikir": "Sıvı basıncı yalnız derinliğe ve özkütleye bağlıdır; taban kuvveti P·A’dır ve sıvının ağırlığına eşit olmak zorunda değildir.",
+   "tuzak": "Kap şeklinin taban basıncını değiştirdiğini sanmak; taban kuvvetini sıvının ağırlığına eşitlemek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-kap",
+   "tip": "Kap şekli ve taban basıncı–kuvveti",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-07",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı",
+   "fikir": "Sıvı içindeki bir noktada toplam basınç, açık hava basıncı ile sıvı basıncının (d·g·h) toplamıdır.",
+   "tuzak": "Yalnız sıvı basıncını ya da yalnız açık hava basıncını vermek; derinliği yanlış birimle kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-bs2-derinlik",
+   "tip": "Aynı sıvıda iki derinlik arasındaki basınç farkı",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-08",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı",
+   "fikir": "Ayrım düzeyinde iki koldaki basınç eşittir: d₁·h₁ = d₂·h₂; sütun yüksekliği ile özkütle ters orantılıdır.",
+   "tuzak": "Oranı ters kurmak; yüksekliklerin toplamını ya da farkını kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-bs2-uboru",
+   "tip": "U borusunda özkütle bulma",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-09",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı",
+   "fikir": "Katmanlı sıvıda iki nokta arasındaki basınç farkı, aradaki katman parçalarının d·g·h değerlerinin toplamıdır.",
+   "tuzak": "K noktasını katman sınırında sanmak; aradaki tüm kalınlığı tek özkütleyle hesaplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-bs2-katman",
+   "tip": "Üç katmanlı sıvıda ara nokta basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-10",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı",
+   "fikir": "Farklı sıvılı bağlantılı kaplarda akış yönü, musluk düzeyindeki basınçların karşılaştırılmasıyla belirlenir; yükseklik tek başına belirleyici değildir.",
+   "tuzak": "Yüksek olan sıvıdan alçak olana akacağını sanmak; sıvı miktarına bakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-bs2-bilesik",
+   "tip": "Bileşik kapta musluk açılınca akış yönü",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-11",
+   "konu": "Basınç",
+   "alt": "Sıvı Basıncı ve Basınç Kuvveti",
+   "fikir": "Sıvı basıncı derinlikle doğru orantılıdır, yatay konuma ve çevredeki su miktarına bağlı değildir; bir noktada her yöne eşit etkir.",
+   "tuzak": "Havuzun yatay genişliğine bakmak; basıncın yalnız aşağı yönlü olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-havuz",
+   "tip": "Sıvı basıncının derinlik ve yönle ilişkisi",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-12",
+   "konu": "Basınç",
+   "alt": "Pascal İlkesi",
+   "fikir": "Pistonların altında basınç eşittir (F₁ ÷ A₁ = F₂ ÷ A₂); sıvı hacmi korunduğundan yer değiştirmeler alanla ters orantılıdır ve iş değişmez.",
+   "tuzak": "Kuvvet kazancını yol ya da iş kazancı sanmak; yer değiştirmeyi alan oranıyla çarpmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-bs2-hidrolik",
+   "tip": "Hidrolik pres: kuvvet, yer değiştirme, iş",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-13",
+   "konu": "Basınç",
+   "alt": "Pascal İlkesi",
+   "fikir": "Ana silindirdeki basınç aynen her tekerlek silindirine iletilir; farklı alanlı silindirlerdeki kuvvetler ortak basınçla kendi alanlarının çarpımıdır, toplam kuvvet bunların toplamıdır.",
+   "tuzak": "Alanları toplamak ya da bütün silindirleri aynı alanlı saymak; yalnız bir çifti hesaplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-bs2-fren",
+   "tip": "Hidrolik fren sistemi",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-14",
+   "konu": "Basınç",
+   "alt": "Açık Hava Basıncı",
+   "fikir": "Torricelli deneyinde cıva sütununun düşey yüksekliği açık hava basıncını belirler; tüpün eğimi, kesiti ve kaptaki yeri bu yüksekliği değiştirmez.",
+   "tuzak": "Tüp eğilince ya da kalınlaşınca düşey yüksekliğin değiştiğini sanmak; sütun boyu ile düşey yüksekliği karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-torricelli",
+   "tip": "Torricelli deneyinde tüp değişiklikleri",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-15",
+   "konu": "Basınç",
+   "alt": "Gaz Basıncı",
+   "fikir": "Açık uçlu manometrede gaz basıncı, açık hava basıncı ile seviye farkının toplamı ya da farkıdır; cıvası daha yüksek olan kol daha düşük basınçtadır.",
+   "tuzak": "Seviye farkını yanlış işaretle eklemek; yalnız seviye farkını almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-bs2-manometre",
+   "tip": "Açık uçlu manometre",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-16",
+   "konu": "Basınç",
+   "alt": "Açık Hava Basıncı",
+   "fikir": "Yükseldikçe açık hava basıncı azalır; cıvalı barometrede sütun kısalır. Düşük basınçta suyun kaynama sıcaklığı da düşer.",
+   "tuzak": "Yükseldikçe basıncın arttığını sanmak; daha kısa cıva sütununu daha düşük rakım sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "fz-bs2-barometre",
+   "tip": "Barometre ve yükselti",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-17",
+   "konu": "Basınç",
+   "alt": "Gaz Basıncı",
+   "fikir": "Gaz basıncı, moleküllerin kap çeperine çarpmasından doğar; molekül sayısı arttıkça ve hacim küçüldükçe ya da sıcaklık arttıkça basınç büyür.",
+   "tuzak": "Hacmi büyük kapta basıncın da büyük olacağını sanmak; sıcaklık artınca basıncın azalacağını sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-gaz",
+   "tip": "Kapalı kapta gaz basıncı",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-18",
+   "konu": "Basınç",
+   "alt": "Akışkanların Basıncı",
+   "fikir": "Kesit alanı küçüldükçe akışkanın hızı artar ve basıncı azalır; kararlı akışta her kesitten birim zamanda geçen hacim aynıdır.",
+   "tuzak": "Dar yerde basıncın büyük olduğunu sanmak; hızı kesitle doğru orantılı almak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-bs2-bernoulli-boru",
+   "tip": "Kesit, hız ve basınç ilişkisi",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-19",
+   "konu": "Basınç",
+   "alt": "Akışkanların Basıncı",
+   "fikir": "Hızlı akan havada basınç düşer; aradaki basınç azalınca dışarıdaki büyük basınç cisimleri birbirine yaklaştırır.",
+   "tuzak": "Hızlanan havada basıncın arttığını sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-bs2-bernoulli-gunluk",
+   "tip": "Bernoulli ilkesinin günlük örnekleri",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZBS2-20",
+   "konu": "Basınç",
+   "alt": "Basıncın Hâl Değişimine Etkisi",
+   "fikir": "Suyun kaynama sıcaklığı dış basınçla artar; grafikten farklı basınçlardaki kaynama sıcaklıkları okunup farkları hesaplanır.",
+   "tuzak": "Basınç ile sıcaklık farkını karıştırmak; iki okuma arasındaki yanlış çifti çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "fz-bs2-hal-degisimi",
+   "tip": "Basıncın kaynama sıcaklığına etkisi",
+   "kaynak": "ÖSYM 2018–2025 (basınç, yalnız mantık) · MEB 10. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-bs2-kati-konum",
+   "ad": "Cismi çevirince katı basıncı",
+   "kartlar": [
+    "K-FZBS2-01"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-kati-tablo",
+   "ad": "Katı basıncını karşılaştırma",
+   "kartlar": [
+    "K-FZBS2-02"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-kesme",
+   "ad": "Prizmayı kesince ve yeniden dizince basınç",
+   "kartlar": [
+    "K-FZBS2-03"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-silindir",
+   "ad": "Homojen prizma ve silindirde P = d·g·h",
+   "kartlar": [
+    "K-FZBS2-04"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-yigin",
+   "ad": "Üst üste konan bloklarda iki yüzeyin basıncı",
+   "kartlar": [
+    "K-FZBS2-05"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-kap",
+   "ad": "Kap şekli ve taban basıncı–kuvveti",
+   "kartlar": [
+    "K-FZBS2-06"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-derinlik",
+   "ad": "Aynı sıvıda iki derinlik arasındaki basınç farkı",
+   "kartlar": [
+    "K-FZBS2-07"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-uboru",
+   "ad": "U borusunda özkütle bulma",
+   "kartlar": [
+    "K-FZBS2-08"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-katman",
+   "ad": "Üç katmanlı sıvıda ara nokta basıncı",
+   "kartlar": [
+    "K-FZBS2-09"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-bilesik",
+   "ad": "Bileşik kapta musluk açılınca akış yönü",
+   "kartlar": [
+    "K-FZBS2-10"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-havuz",
+   "ad": "Sıvı basıncının derinlik ve yönle ilişkisi",
+   "kartlar": [
+    "K-FZBS2-11"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-hidrolik",
+   "ad": "Hidrolik pres: kuvvet, yer değiştirme, iş",
+   "kartlar": [
+    "K-FZBS2-12"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-fren",
+   "ad": "Hidrolik fren sistemi",
+   "kartlar": [
+    "K-FZBS2-13"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-torricelli",
+   "ad": "Torricelli deneyinde tüp değişiklikleri",
+   "kartlar": [
+    "K-FZBS2-14"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-manometre",
+   "ad": "Açık uçlu manometre",
+   "kartlar": [
+    "K-FZBS2-15"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-barometre",
+   "ad": "Barometre ve yükselti",
+   "kartlar": [
+    "K-FZBS2-16"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-gaz",
+   "ad": "Kapalı kapta gaz basıncı",
+   "kartlar": [
+    "K-FZBS2-17"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-bernoulli-boru",
+   "ad": "Kesit, hız ve basınç ilişkisi",
+   "kartlar": [
+    "K-FZBS2-18"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-bernoulli-gunluk",
+   "ad": "Bernoulli ilkesinin günlük örnekleri",
+   "kartlar": [
+    "K-FZBS2-19"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  },
+  {
+   "tipId": "fz-bs2-hal-degisimi",
+   "ad": "Basıncın kaynama sıcaklığına etkisi",
+   "kartlar": [
+    "K-FZBS2-20"
+   ],
+   "uygulamaKonu": "fiz|Basınç"
+  }
+ ]
+}

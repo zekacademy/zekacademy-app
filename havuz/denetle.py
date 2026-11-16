@@ -40,7 +40,7 @@ def denetle(Q,korpus=None):
         else:
             if t['ad']!=q.get('tip'): H_('tip adı uyuşmuyor')
             if t.get('uygulamaKonu') and t['uygulamaKonu']!=q.get('k'): H_('k, tipin uygulama konusu değil')
-        m=re.match(r'(K-[A-Z]+-\d+)',q.get('kaynakKart',''))
+        m=re.match(r'(K-[A-Z0-9]+-\d+)',q.get('kaynakKart',''))
         if not m or m.group(1) not in KART: H_('kaynak kart bulunamadı')
         elif t and KART[m.group(1)].get('tipId')!=q.get('tipId'): H_('kartın tipi ile sorunun tipi farklı')
         s=q.get('siklar',{})

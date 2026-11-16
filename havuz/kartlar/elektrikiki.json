@@ -1,0 +1,555 @@
+{
+ "konu": "Elektrik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZEL2-01",
+   "konu": "Elektrik",
+   "alt": "Elektriklenme türleri",
+   "fikir": "Dokunmadan yaklaştırılan yüklü çubuk, iletkendeki serbest elektronları yer değiştirir; toplam yük değişmez, yükler ayrışır ve çubuk gidince geri döner.",
+   "tuzak": "Yük ayrışmasını toplam yük değişimi sanmak; çubuk uzaklaşınca yaprakların açık kalacağını düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-elektroskop-etki",
+   "tip": "Elektroskopa yaklaştırılan yüklü çubuk (etkiyle yük ayrışması)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-02",
+   "konu": "Elektrik",
+   "alt": "İletken kürelerde yük paylaşımı",
+   "fikir": "Özdeş iletken kürelerde dokunduktan sonra toplam yük eşit paylaşılır; her aşamada yalnızca dokunan küreler hesaba katılır.",
+   "tuzak": "Aşamaların sırasını karıştırmak; yükleri paylaştırmak yerine toplamak; bir küreyi dokunmamış olmasına rağmen hesaba katmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el2-yuk-paylasim-uc",
+   "tip": "Üç özdeş iletken kürede ardışık yük paylaşımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-03",
+   "konu": "Elektrik",
+   "alt": "Topraklama",
+   "fikir": "Çubuk yerindeyken topraklanan küre, çubukla zıt işaretli yüklü kalır; topraklama kesilmeden çubuk çekilirse yük toprağa geri döner.",
+   "tuzak": "Elektronların akış yönünü ters düşünmek; işlemlerin sırasını (çubuk-tel) gözetmemek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-etki-topraklama",
+   "tip": "Etkiyle yükleme ve topraklama sırası",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-04",
+   "konu": "Elektrik",
+   "alt": "Elektriklenme türleri",
+   "fikir": "Sürtünmede elektronlar bir cisimden diğerine geçer; iki cismin yükleri zıt işaretli ve eşit büyüklüktedir; nötr yalıtkan etkiyle çekilir.",
+   "tuzak": "Yük aktarıcısının proton olduğunu sanmak; nötr cismin yüklü cisme çekilemeyeceğini düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-el2-surtunme",
+   "tip": "Sürtünme ile yüklenme ve nötr cismin çekilmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-05",
+   "konu": "Elektrik",
+   "alt": "Coulomb kuvveti",
+   "fikir": "F, yüklerin çarpımıyla doğru, aralarındaki uzaklığın karesiyle ters orantılıdır; değişen büyüklükler oran olarak çarpılır.",
+   "tuzak": "Uzaklığın karesini unutmak; yükleri çarpmak yerine toplamak; uzaklık artınca kuvvetin de arttığını sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el2-coulomb-oran",
+   "tip": "Coulomb kuvvetinin yük ve uzaklıkla değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-06",
+   "konu": "Elektrik",
+   "alt": "Elektriklenme türleri",
+   "fikir": "İtme yalnızca aynı işaretli yükler arasında olur; çekme zıt işaretli ya da nötr cisimle olabilir. Kesin sonuç yalnızca itmeden çıkar.",
+   "tuzak": "Çekimin yalnızca zıt işaretli cisimler arasında olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-asili-kureler",
+   "tip": "İpe asılı kürelerin çekim–itme durumundan yük işareti çıkarma",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-07",
+   "konu": "Elektrik",
+   "alt": "Topraklama",
+   "fikir": "Pozitif yüklü iletken topraklanınca topraktan elektron gelir ve cisim nötrleşir; yapraklar kapanır.",
+   "tuzak": "Elektron akış yönünü ters düşünmek; topraklamanın kalıcı yük bıraktığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-elektroskop-toprak",
+   "tip": "Yüklü elektroskopun topraklanması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-08",
+   "konu": "Elektrik",
+   "alt": "Elektroskop",
+   "fikir": "Yaprak açıklığı artıyorsa yapraklara elektronlar (aynı işaretli yük) gelmiştir; yaklaştırılan cisim elektroskopla aynı işaretlidir.",
+   "tuzak": "Yaprakların açılmasını yüklü cisim ile çubuğun çekmesine bağlamak; açıklığın azalmasını artmasıyla karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el2-yaprak-aciklik",
+   "tip": "Yaprak açıklığındaki değişimden yaklaşan yükün işareti",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-09",
+   "konu": "Elektrik",
+   "alt": "Elektriklenme türleri",
+   "fikir": "Elde tutulan iletken çubukta fazla yük, vücut aracılığıyla toprağa akar; yalıtılmış iletken yük tutar; yalıtkanda yük bulunduğu yerde kalır.",
+   "tuzak": "Her cismin sürtünmeyle yüklenebileceğini, iletkenin elde de yük tutacağını sanmak; yalıtkanda yükün yayıldığını düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-el2-iletken-yalitkan",
+   "tip": "İletken ve yalıtkan çubuğun sürtünmeyle yüklenmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-10",
+   "konu": "Elektrik",
+   "alt": "Coulomb kuvveti",
+   "fikir": "Her yükün uyguladığı kuvvet ayrı ayrı oranlanır; aynı işaretli yük iter, zıt işaretli yük çeker; kuvvetler yönlerine göre toplanır.",
+   "tuzak": "Yönleri gözetmeden mutlak değerleri toplamak ya da çıkarmak; uzaklığın karesini unutmak; yanlış uzaklık almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el2-net-kuvvet",
+   "tip": "Doğru üzerinde üç noktasal yükte net Coulomb kuvveti",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-11",
+   "konu": "Elektrik",
+   "alt": "Ohm yasası",
+   "fikir": "Ohm yasasında V–I grafiğinin eğimi direnci verir; seri bağlı dirençlerin eşdeğeri toplamdır ve akım V ÷ R_eş ile bulunur.",
+   "tuzak": "Grafiği I ÷ V olarak okumak; yalnız bir direnci hesaba katmak; seri yerine paralel eşdeğer almak; dirençlerin ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-el2-vi-grafik",
+   "tip": "Gerilim–akım grafiğinden direnç okuma ve seri bağlama",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-12",
+   "konu": "Elektrik",
+   "alt": "Direncin bağlı olduğu etkenler",
+   "fikir": "Telin direnci uzunluğuyla doğru, kesit alanıyla ters orantılıdır (R ∝ ℓ ÷ A); oranlar tablodan okunarak karşılaştırılır.",
+   "tuzak": "Kesit alanının direnci artırdığını sanmak; uzunluk ve kesit değişimini birbirine karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "fz-el2-direnc-tablo",
+   "tip": "Tellerin direncini karşılaştırma (uzunluk, kesit)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-13",
+   "konu": "Elektrik",
+   "alt": "Elektrik devreleri",
+   "fikir": "Paralel kollarda gerilim üreteç gerilimine eşittir; seri koldaki akım, kol eşdeğerine Ohm yasası uygulanarak bulunur ve gerilim V = I·R ile hesaplanır.",
+   "tuzak": "Kolun gerilimini seri dirençlerden birine vermek; akımı gerilim sanmak; gerilimi eşit paylaştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el2-karisik-devre",
+   "tip": "Paralel kolların birinde seri direnç bulunan devre",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-14",
+   "konu": "Elektrik",
+   "alt": "Anahtar açma ve kapama",
+   "fikir": "Özdeş ve simetrik kollarda orta düğümlerin potansiyeli eşittir; aralarına bağlanan anahtardan akım geçmez ve hiçbir şey değişmez.",
+   "tuzak": "Kapalı anahtarın akım geçmesine ve eşdeğer direncin düşmesine yol açtığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-kopru-lamba",
+   "tip": "Simetrik devrede anahtarın kapatılması (lamba parlaklığı)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-15",
+   "konu": "Elektrik",
+   "alt": "Ampermetre ve voltmetre",
+   "fikir": "Seri devrede akım her yerde aynıdır; voltmetre okuması ve direnç değeriyle akım bulunur, üreteç gerilimi toplam dirençle çarpılarak elde edilir.",
+   "tuzak": "Voltmetre okumasını üreteç gerilimi sanmak; dirençlerden birini unutmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el2-seri-emk",
+   "tip": "Seri devrede voltmetre okumasından üreteç gerilimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-16",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Enerji = güç × süre; adetle çarpılır, kW × saat = kWh olarak toplanır ve tüketim birim fiyatla çarpılır.",
+   "tuzak": "Adedi unutmak; W–kW dönüşümünü yanlış yapmak; gün sayısını ya da birim fiyatı unutmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "fz-el2-fatura",
+   "tip": "Elektrik enerjisi tüketimi ve fatura hesabı (tablo)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-17",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Etiket değerleri direnci verir (R = V² ÷ P); seri bağlamada akım ortaktır, güç P = I²R olduğundan direnci büyük lamba daha parlak yanar.",
+   "tuzak": "Gücü büyük lambanın her durumda daha parlak olduğunu sanmak; seri bağlamada güçleri toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-etiket-seri",
+   "tip": "Üzerinde etiket bulunan lambaların seri bağlanması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-18",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Paralel kollarda gerilim ortaktır; ana akım ve eşdeğer dirençle gerilim bulunur, güç P = V² ÷ R ile hesaplanır.",
+   "tuzak": "Ana akımla tek dirençte güç hesaplamak; başka direnci okumak; toplam gücü vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el2-paralel-guc",
+   "tip": "Paralel dirençlerde bir dirençte harcanan güç",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-19",
+   "konu": "Elektrik",
+   "alt": "Kısa devre",
+   "fikir": "Anahtar bir direnci kısa devre yaparsa akım dirençten değil telden geçer; eşdeğer direnç azalır, akım artar; güç P = I²R ile iki durumda ayrı bulunup farkı alınır.",
+   "tuzak": "Kısa devre olan direnci değil başka direnci çıkarmak; yalnız son ya da ilk gücü vermek; gerilimle akım artışını çarpmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-kisa-devre",
+   "tip": "Anahtar kapatılınca bir direncin kısa devre olması ve güç değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-20",
+   "konu": "Elektrik",
+   "alt": "Sigorta ve güvenlik",
+   "fikir": "Kısa devrede direnç çok küçüldüğünden akım çok artar; sigorta ana koldaki seri elemandır ve aşırı akımda eriyerek bütün devreyi açar.",
+   "tuzak": "Sigortayı paralel sanmak; kısa devrede akımın azaldığını düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-sigorta-kisa",
+   "tip": "Kısa devrede akımın artması ve sigortanın görevi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-21",
+   "konu": "Elektrik",
+   "alt": "Sigorta ve güvenlik",
+   "fikir": "Paralel bağlı cihazların güçleri toplanır; P = V·I ile sigortanın taşıyabileceği en büyük güç bulunur; kalan güç tek cihazın gücüne bölünüp tam sayıya (aşağı) yuvarlanır.",
+   "tuzak": "Çalışan ütüyü hesaba katmamak; sayıyı yukarı yuvarlamak; gerilimi yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el2-sigorta-sayi",
+   "tip": "Sigortanın atmaması için çalışabilecek cihaz sayısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-22",
+   "konu": "Elektrik",
+   "alt": "Üreteçlerin bağlanması",
+   "fikir": "Seri bağlı özdeş üreteçlerde emk toplanır; paralel bağlı özdeş üreteçlerde emk tek üretecinkine eşittir ve akım üreteçlerce eşit paylaşılır.",
+   "tuzak": "Paralel bağlamada da gerilimin toplandığını sanmak; seri bağlamada gerilimin değişmediğini düşünmek; akımın paylaşılmadığını düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-ureteç-baglama",
+   "tip": "Özdeş üreteçlerin seri ve paralel bağlanması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-23",
+   "konu": "Elektrik",
+   "alt": "Elektrik akımı",
+   "fikir": "Elektrik akımı birim zamanda geçen yüktür (Q = I·t); akım sabit aralıkların her birinde yük ayrı bulunup toplanır.",
+   "tuzak": "Aralık sürelerini eşit almak; akımları toplamak; en büyük akımla bütün süreyi çarpmak; bir aralığı atlamak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-el2-akim-yuk",
+   "tip": "Akım–zaman grafiğinden geçen yük",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-24",
+   "konu": "Elektrik",
+   "alt": "Ampermetre ve voltmetre",
+   "fikir": "Ampermetre bağlı olduğu koldaki akımı ölçer; voltmetre paralel bağlandığı elemanın gerilimini gösterir; paralel kolların gerilimi ortaktır.",
+   "tuzak": "Ampermetrenin ana kol akımını ölçtüğünü sanmak; voltmetrenin yalnızca paralel olduğu dirençte okuma yaptığını düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el2-olcu-aletleri",
+   "tip": "Ampermetre ve voltmetrenin ölçtüğü büyüklükler",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-25",
+   "konu": "Elektrik",
+   "alt": "Sigorta ve güvenlik",
+   "fikir": "Topraklı priz kaçak akıma düşük dirençli yol sunar; ıslak deri direnci azaltır ve akımı artırır; sigorta yerine kalın tel takmak devre korumasını kaldırır.",
+   "tuzak": "Islak elin direnci artırdığını sanmak; kalın telin sigortadan daha güvenli olduğunu düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "fz-el2-guvenlik",
+   "tip": "Elektrik güvenliği (topraklama, ıslak eller, sigorta)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL2-26",
+   "konu": "Elektrik",
+   "alt": "Direncin bağlı olduğu etkenler",
+   "fikir": "R = ρ·ℓ ÷ A ve kesit A ∝ d²; uzunluk 3 katına, çap 2 katına çıkarsa direnç 3 ÷ 2² = 3/4 katı olur.",
+   "tuzak": "Kesit yerine çapı oranlamak; kesit arttığında direncin arttığını sanmak; çapı hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el2-tel-cap",
+   "tip": "Telin boyu ve çapı değişince direncin değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-el2-elektroskop-etki",
+   "ad": "Elektroskopa yaklaştırılan yüklü çubuk (etkiyle yük ayrışması)",
+   "kartlar": [
+    "K-FZEL2-01"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-yuk-paylasim-uc",
+   "ad": "Üç özdeş iletken kürede ardışık yük paylaşımı",
+   "kartlar": [
+    "K-FZEL2-02"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-etki-topraklama",
+   "ad": "Etkiyle yükleme ve topraklama sırası",
+   "kartlar": [
+    "K-FZEL2-03"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-surtunme",
+   "ad": "Sürtünme ile yüklenme ve nötr cismin çekilmesi",
+   "kartlar": [
+    "K-FZEL2-04"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-coulomb-oran",
+   "ad": "Coulomb kuvvetinin yük ve uzaklıkla değişimi",
+   "kartlar": [
+    "K-FZEL2-05"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-asili-kureler",
+   "ad": "İpe asılı kürelerin çekim–itme durumundan yük işareti çıkarma",
+   "kartlar": [
+    "K-FZEL2-06"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-elektroskop-toprak",
+   "ad": "Yüklü elektroskopun topraklanması",
+   "kartlar": [
+    "K-FZEL2-07"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-yaprak-aciklik",
+   "ad": "Yaprak açıklığındaki değişimden yaklaşan yükün işareti",
+   "kartlar": [
+    "K-FZEL2-08"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-iletken-yalitkan",
+   "ad": "İletken ve yalıtkan çubuğun sürtünmeyle yüklenmesi",
+   "kartlar": [
+    "K-FZEL2-09"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-net-kuvvet",
+   "ad": "Doğru üzerinde üç noktasal yükte net Coulomb kuvveti",
+   "kartlar": [
+    "K-FZEL2-10"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-vi-grafik",
+   "ad": "Gerilim–akım grafiğinden direnç okuma ve seri bağlama",
+   "kartlar": [
+    "K-FZEL2-11"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-direnc-tablo",
+   "ad": "Tellerin direncini karşılaştırma (uzunluk, kesit)",
+   "kartlar": [
+    "K-FZEL2-12"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-karisik-devre",
+   "ad": "Paralel kolların birinde seri direnç bulunan devre",
+   "kartlar": [
+    "K-FZEL2-13"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-kopru-lamba",
+   "ad": "Simetrik devrede anahtarın kapatılması (lamba parlaklığı)",
+   "kartlar": [
+    "K-FZEL2-14"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-seri-emk",
+   "ad": "Seri devrede voltmetre okumasından üreteç gerilimi",
+   "kartlar": [
+    "K-FZEL2-15"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-fatura",
+   "ad": "Elektrik enerjisi tüketimi ve fatura hesabı (tablo)",
+   "kartlar": [
+    "K-FZEL2-16"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-etiket-seri",
+   "ad": "Üzerinde etiket bulunan lambaların seri bağlanması",
+   "kartlar": [
+    "K-FZEL2-17"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-paralel-guc",
+   "ad": "Paralel dirençlerde bir dirençte harcanan güç",
+   "kartlar": [
+    "K-FZEL2-18"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-kisa-devre",
+   "ad": "Anahtar kapatılınca bir direncin kısa devre olması ve güç değişimi",
+   "kartlar": [
+    "K-FZEL2-19"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-sigorta-kisa",
+   "ad": "Kısa devrede akımın artması ve sigortanın görevi",
+   "kartlar": [
+    "K-FZEL2-20"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-sigorta-sayi",
+   "ad": "Sigortanın atmaması için çalışabilecek cihaz sayısı",
+   "kartlar": [
+    "K-FZEL2-21"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-ureteç-baglama",
+   "ad": "Özdeş üreteçlerin seri ve paralel bağlanması",
+   "kartlar": [
+    "K-FZEL2-22"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-akim-yuk",
+   "ad": "Akım–zaman grafiğinden geçen yük",
+   "kartlar": [
+    "K-FZEL2-23"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-olcu-aletleri",
+   "ad": "Ampermetre ve voltmetrenin ölçtüğü büyüklükler",
+   "kartlar": [
+    "K-FZEL2-24"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-guvenlik",
+   "ad": "Elektrik güvenliği (topraklama, ıslak eller, sigorta)",
+   "kartlar": [
+    "K-FZEL2-25"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el2-tel-cap",
+   "ad": "Telin boyu ve çapı değişince direncin değişimi",
+   "kartlar": [
+    "K-FZEL2-26"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  }
+ ]
+}

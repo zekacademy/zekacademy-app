@@ -1,0 +1,471 @@
+{
+ "konu": "İş, Güç ve Enerji",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZEN2-01",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Fiziksel anlamda iş",
+   "fikir": "İş için kuvvetin yer değiştirme doğrultusunda bileşeni olmalı; yer değiştirme yoksa ya da kuvvet yola dikse iş sıfırdır.",
+   "tuzak": "Kuvvet uygulamakla iş yapmayı, yük taşımakla da iş yapmayı karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "fz-en2-is-yok",
+   "tip": "İş yapılmayan durumlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-02",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "İş",
+   "fikir": "Bölgelerde sabit kuvvetlerin işi ayrı ayrı hesaplanıp toplanır.",
+   "tuzak": "Ortalama ya da en büyük kuvveti tüm yola uygulamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "fz-en2-bolge-is",
+   "tip": "Bölgeli yolda kuvvetten iş",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-03",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Kuvvet–yol grafiği",
+   "fikir": "Yamuk grafikte parça parça iş hesaplanır; sürtünmesiz yolda toplam iş kinetik enerjiye eşittir.",
+   "tuzak": "Üçgen alanda ½ çarpanını unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "fz-en2-grafik-yamuk",
+   "tip": "Yamuk kuvvet–yol grafiği ve kinetik enerji",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-04",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Güç",
+   "fikir": "Güç = iş ÷ süre; en çok iş yapan en güçlü değildir.",
+   "tuzak": "İşi güçle, gücü işle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "fz-en2-guc-tablo",
+   "tip": "Tablodan güç karşılaştırması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-05",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Güç",
+   "fikir": "İş–zaman grafiğinde eğim gücü verir; doğrusal grafikte güç sabittir.",
+   "tuzak": "Eğimi güç yerine iş sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "fz-en2-guc-grafik",
+   "tip": "İş–zaman grafiğinden güç",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-06",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Kinetik enerji",
+   "fikir": "E_k = ½mv²; kütle ve hız oranlarından kinetik enerji oranı bulunur.",
+   "tuzak": "Hızın karesini almamak; kütle ve hızı doğrudan çarpmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 2,
+   "tipId": "fz-en2-kinetik-oran",
+   "tip": "Kinetik enerji oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-07",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Kinetik enerji",
+   "fikir": "Net kuvvetin yaptığı iş kinetik enerji değişimine eşittir.",
+   "tuzak": "Sürtünmeyi eklemek ya da atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-en2-kinetik-net",
+   "tip": "Net iş ve kinetik enerji",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-08",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Yer çekimi potansiyel enerjisi",
+   "fikir": "E_p = m g h; referans seviyesine bağlıdır; enerji yalnız yüksekliğe bağlı sanılmaz.",
+   "tuzak": "Yalnız yüksekliğe bakmak; kütleyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "fz-en2-potansiyel-ref",
+   "tip": "Potansiyel enerji ve referans seviyesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-09",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Yer çekimi potansiyel enerjisi",
+   "fikir": "Aynı yüksekliğe çıkarken sürtünmesiz rampalarda iş yoldan bağımsızdır; uzun rampada kuvvet küçüktür.",
+   "tuzak": "Uzun rampada işin de küçük olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-en2-rampa-is",
+   "tip": "İki rampada iş ve kuvvet",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-10",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Esneklik potansiyel enerjisi",
+   "fikir": "Yayı uzatan kuvvet–uzama grafiğinde alan, yayda depolanan enerjidir; birimler SI’ya çevrilir.",
+   "tuzak": "cm’yi m’ye çevirmemek; ½ çarpanını unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "fz-en2-yay-grafik",
+   "tip": "Yay kuvvet–uzama grafiğinden iş",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-11",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Esneklik potansiyel enerjisi",
+   "fikir": "Yayda depolanan enerji sıkışmanın karesiyle artar; bırakılınca kinetik enerjiye dönüşür.",
+   "tuzak": "Enerjinin sıkışmayla doğru orantılı olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-en2-yay-nitel",
+   "tip": "Yayda enerji depolanması (nitel)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-12",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Esneklik potansiyel enerjisi",
+   "fikir": "Verilen yay enerjisi kinetik enerjiye, sürtünme kaybı çıkınca potansiyel enerjiye dönüşür.",
+   "tuzak": "Sürtünme kaybını atlamak ya da iki kez çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-en2-yay-yukseklik",
+   "tip": "Yay, sürtünme ve eğik düzlem",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-13",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Mekanik enerjinin korunumu",
+   "fikir": "Sarkaçta ip gerilmesi iş yapmaz; bırakıldığı noktayla en alt nokta arasındaki düşey yükseklik farkı kullanılır.",
+   "tuzak": "İp boyunu düşey yükseklik sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-en2-sarkac",
+   "tip": "Sarkaçta en alt noktadaki hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-14",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Mekanik enerjinin korunumu",
+   "fikir": "Sürtünmesiz rayda yükseklik azaldıkça kinetik enerji artar; toplam mekanik enerji sabit kalır.",
+   "tuzak": "Yüksek noktada hızın büyük olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "fz-en2-ray-nitel",
+   "tip": "Rayda enerji karşılaştırması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-15",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Mekanik enerjinin korunumu",
+   "fikir": "Başlangıç hızı olan cisimde v² = v₀² ± 2gΔh; hız toplanmaz, kareler toplanır.",
+   "tuzak": "Başlangıç hızını atlamak; hızları toplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-en2-ray-hiz",
+   "tip": "Başlangıç hızlı cismin tepedeki hızı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-16",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Sürtünmeli yüzeyde ısı",
+   "fikir": "Isıya dönüşen enerji = ilk mekanik enerji − son mekanik enerji.",
+   "tuzak": "Yalnız kinetik ya da yalnız potansiyel enerjiyi vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-en2-surtunme-isi",
+   "tip": "Eğik düzlemde ısıya dönüşen enerji",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-17",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Sürtünmeli yüzeyde ısı",
+   "fikir": "Aynı yüzeyde kütle ne olursa olsun durma yolu aynıdır; ısı kütleyle artar.",
+   "tuzak": "Ağır cismin daha uzağa gideceğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "fz-en2-surtunme-nitel",
+   "tip": "Sürtünmeli yatayda durma ve ısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-18",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Kinetik enerji–yol grafiği",
+   "fikir": "Kinetik enerji–yol grafiğinin eğimi net kuvvettir; sürtünme kuvveti ikinci bölümden bulunur.",
+   "tuzak": "Net kuvveti uygulanan kuvvet sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "fz-en2-kinetik-grafik",
+   "tip": "Kinetik enerji–yol grafiğinden kuvvet",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-19",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Enerji dönüşümleri",
+   "fikir": "Lambada elektrik enerjisi ışığa ve ısıya dönüşür; ışığa dönüşen pay verimi belirler.",
+   "tuzak": "Enerjinin lambada tükendiğini sanmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 2,
+   "tipId": "fz-en2-lamba-tablo",
+   "tip": "Lambalarda enerji dönüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-20",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Verim",
+   "fikir": "Eğik düzlemde verim = yararlı iş (m g h) ÷ çekme işi (F ℓ).",
+   "tuzak": "Verimi h ÷ ℓ ile karıştırmak; oranı ters almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-en2-verim-egik",
+   "tip": "Eğik düzlemin verimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-21",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Verim",
+   "fikir": "Ardışık sistemlerde verimler çarpılır; güç, saniyedeki enerjidir.",
+   "tuzak": "Verimleri toplamak ya da ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-en2-verim-zincir",
+   "tip": "Seri verim ve elektriksel güç",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  },
+  {
+   "id": "K-FZEN2-22",
+   "konu": "İş, Güç ve Enerji",
+   "alt": "Yenilenebilir ve yenilenemez enerji kaynakları",
+   "fikir": "Güneş, rüzgâr, hidroelektrik, jeotermal ve biyokütle yenilenebilir; kömür, petrol ve doğal gaz yenilenemez.",
+   "tuzak": "Jeotermal ya da hidroelektriği yenilenemez saymak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 2,
+   "tipId": "fz-en2-kaynak-tablo",
+   "tip": "Elektrik üretiminde yenilenemez kaynak payı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik (iş, güç, enerji; yalnız mantık) · MEB 9. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-en2-is-yok",
+   "ad": "İş yapılmayan durumlar",
+   "kartlar": [
+    "K-FZEN2-01"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-bolge-is",
+   "ad": "Bölgeli yolda kuvvetten iş",
+   "kartlar": [
+    "K-FZEN2-02"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-grafik-yamuk",
+   "ad": "Yamuk kuvvet–yol grafiği ve kinetik enerji",
+   "kartlar": [
+    "K-FZEN2-03"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-guc-tablo",
+   "ad": "Tablodan güç karşılaştırması",
+   "kartlar": [
+    "K-FZEN2-04"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-guc-grafik",
+   "ad": "İş–zaman grafiğinden güç",
+   "kartlar": [
+    "K-FZEN2-05"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-kinetik-oran",
+   "ad": "Kinetik enerji oranı",
+   "kartlar": [
+    "K-FZEN2-06"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-kinetik-net",
+   "ad": "Net iş ve kinetik enerji",
+   "kartlar": [
+    "K-FZEN2-07"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-potansiyel-ref",
+   "ad": "Potansiyel enerji ve referans seviyesi",
+   "kartlar": [
+    "K-FZEN2-08"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-rampa-is",
+   "ad": "İki rampada iş ve kuvvet",
+   "kartlar": [
+    "K-FZEN2-09"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-yay-grafik",
+   "ad": "Yay kuvvet–uzama grafiğinden iş",
+   "kartlar": [
+    "K-FZEN2-10"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-yay-nitel",
+   "ad": "Yayda enerji depolanması (nitel)",
+   "kartlar": [
+    "K-FZEN2-11"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-yay-yukseklik",
+   "ad": "Yay, sürtünme ve eğik düzlem",
+   "kartlar": [
+    "K-FZEN2-12"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-sarkac",
+   "ad": "Sarkaçta en alt noktadaki hız",
+   "kartlar": [
+    "K-FZEN2-13"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-ray-nitel",
+   "ad": "Rayda enerji karşılaştırması",
+   "kartlar": [
+    "K-FZEN2-14"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-ray-hiz",
+   "ad": "Başlangıç hızlı cismin tepedeki hızı",
+   "kartlar": [
+    "K-FZEN2-15"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-surtunme-isi",
+   "ad": "Eğik düzlemde ısıya dönüşen enerji",
+   "kartlar": [
+    "K-FZEN2-16"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-surtunme-nitel",
+   "ad": "Sürtünmeli yatayda durma ve ısı",
+   "kartlar": [
+    "K-FZEN2-17"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-kinetik-grafik",
+   "ad": "Kinetik enerji–yol grafiğinden kuvvet",
+   "kartlar": [
+    "K-FZEN2-18"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-lamba-tablo",
+   "ad": "Lambalarda enerji dönüşümü",
+   "kartlar": [
+    "K-FZEN2-19"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-verim-egik",
+   "ad": "Eğik düzlemin verimi",
+   "kartlar": [
+    "K-FZEN2-20"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-verim-zincir",
+   "ad": "Seri verim ve elektriksel güç",
+   "kartlar": [
+    "K-FZEN2-21"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  },
+  {
+   "tipId": "fz-en2-kaynak-tablo",
+   "ad": "Elektrik üretiminde yenilenemez kaynak payı",
+   "kartlar": [
+    "K-FZEN2-22"
+   ],
+   "uygulamaKonu": "fiz|İş, Güç ve Enerji"
+  }
+ ]
+}

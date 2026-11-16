@@ -1,0 +1,513 @@
+{
+ "konu": "Optik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZOP2-01",
+   "konu": "Optik",
+   "alt": "Aynı demetin farklı uzaklıktaki perdelerde aydınlanması",
+   "fikir": "Işık akısı demetin taşıdığı ışık miktarıdır ve perdenin uzaklığından bağımsızdır; demet kesiti uzaklığın karesiyle büyüdüğünden aydınlanma şiddeti (E = Φ/A) uzaklığın karesiyle ters orantılı azalır.",
+   "tuzak": "Aydınlanma şiddetini uzaklıkla doğru orantılı ya da ters orantılı (kare almadan) sanmak; akının uzaklıkla azaldığını düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-aydinlanma-demet",
+   "tip": "Işık akısı ve aydınlanma şiddeti (demet)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-02",
+   "konu": "Optik",
+   "alt": "İki ayrı lamba–perde düzeninde aydınlanma şiddeti oranı",
+   "fikir": "E = I/d² bağıntısı her düzen için ayrı yazılır; ışık şiddeti ve uzaklığın karesi birlikte değerlendirilir, sonra oran alınır.",
+   "tuzak": "Uzaklığın karesini almamak; yalnız ışık şiddetlerini oranlamak; oranı ters yazmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "fz-op2-aydinlanma-oran",
+   "tip": "İki ayrı düzende aydınlanma şiddeti oranı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-03",
+   "konu": "Optik",
+   "alt": "Aynı doğru üzerindeki iki lambanın bir noktadaki toplam aydınlanması",
+   "fikir": "Her lambanın aydınlanma şiddeti ayrı hesaplanır (E = I/d²) ve toplanır; lamba çıkarılıp yer değiştirildiğinde yeniden hesaplanıp karşılaştırılır.",
+   "tuzak": "Lambaların aydınlanmalarını toplamamak; ışık şiddetini daha büyük olan lambanın hep baskın olduğunu sanmak; uzaklığın karesini unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-aydinlanma-iki-lamba",
+   "tip": "İki lambanın toplam aydınlanma şiddeti (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-04",
+   "konu": "Optik",
+   "alt": "Geniş (çubuk) kaynakla oluşan tam gölge ve yarı gölge bölgeleri",
+   "fikir": "Kaynağın hiçbir noktasından ışık alamayan bölge tam gölge, bir kısmından ışık alan bölge yarı gölgedir; engel kaynağa yaklaşırsa yarı gölge genişler.",
+   "tuzak": "Yarı gölgeyi kaynağın tüm noktalarından ışık alan bölge sanmak; tam gölgeyi perdeye ışık gelmeyen her yer saymak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-golge-genis",
+   "tip": "Geniş kaynakta tam gölge ve yarı gölge (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-05",
+   "konu": "Optik",
+   "alt": "Noktasal kaynakta engel kayınca gölge çapı",
+   "fikir": "Benzer üçgenlerden gölge boyu = engel boyu × (kaynak–perde uzaklığı) ÷ (kaynak–engel uzaklığı); engel perdeye yaklaşınca gölge küçülür.",
+   "tuzak": "Gölgenin değişmediğini sanmak; engeli kaynağa yaklaşmış gibi hesaplamak; oranı ters yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-golge-boyut",
+   "tip": "Noktasal kaynakta gölge çapı (benzer üçgen)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-06",
+   "konu": "Optik",
+   "alt": "Güneş–Dünya–Ay konumlarına göre tutulma türü",
+   "fikir": "Ay Güneş ile Dünya arasındayken Ay’ın gölgesi Dünya’ya düşer (Güneş tutulması); Ay, Dünya’nın tam gölgesine girerse tam Ay tutulması, yalnız yarı gölgesine girerse tam tutulma olmaz.",
+   "tuzak": "Ay’ın yarı gölgeye girmesini tam Ay tutulması sanmak; Güneş tutulmasını Ay tutulması ile karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-tutulma",
+   "tip": "Güneş ve Ay tutulması (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-07",
+   "konu": "Optik",
+   "alt": "Yansıma yasasıyla gelen ve yansıyan ışın arasındaki açı",
+   "fikir": "Gelme açısı normalle ölçülür ve yansıma açısına eşittir; yüzeyle yapılan açı verildiyse normalle açı 90°’den çıkarılarak bulunur, gelen ve yansıyan ışın arasındaki açı bunların toplamıdır.",
+   "tuzak": "Yüzeyle yapılan açıyı gelme açısı sanmak; gelen–yansıyan arasını yüzeyle yapılan açı ya da gelme açısı olarak yazmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-yansima-aci",
+   "tip": "Yansıma yasası ile ışınlar arası açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-08",
+   "konu": "Optik",
+   "alt": "Düzlem ayna döndürülünce yansıyan ışının dönmesi",
+   "fikir": "Gelen ışın sabitken ayna α kadar dönerse yansıyan ışın 2α kadar döner (normal de α döner, gelme ve yansıma açıları ikişer kez değişir).",
+   "tuzak": "Işının da aynayla aynı açıda döndüğünü sanmak; yansıyan ışının yarım açı döndüğünü düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-ayna-donme",
+   "tip": "Dönen düzlem aynada yansıyan ışının dönme açısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-09",
+   "konu": "Optik",
+   "alt": "Düzlem aynada görüntü uzaklığı ve ayna kaydırma",
+   "fikir": "Görüntü, aynanın cisim kadar gerisinde sanal ve düz oluşur; ayna cisme x kadar yaklaşırsa cisimle görüntü arası 2x azalır; görüntünün boyu aynanın boyutundan bağımsızdır.",
+   "tuzak": "Ayna x kadar kayınca görüntünün de yalnız x kadar kaydığını sanmak; aynanın boyutuyla görüntü boyunu ilişkilendirmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-duzlem-goruntu",
+   "tip": "Düzlem aynada görüntü uzaklığı (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-10",
+   "konu": "Optik",
+   "alt": "Düzlem aynada görüş alanı (gözün görüntüsünden bakış)",
+   "fikir": "Gözün görüntüsü aynanın arkasında göz kadar uzakta bulunur; ayna kenarlarından geçen doğrular gözün görüntüsünden çıkıyormuş gibi çizilip karşı duvarda görülebilen bölüm benzer üçgenlerle bulunur.",
+   "tuzak": "Ayna genişliğini görüş alanı sanmak; gözün aynaya olan uzaklığını iki kez saymak ya da hiç saymamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-gorus-alani",
+   "tip": "Düzlem aynada görüş alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-11",
+   "konu": "Optik",
+   "alt": "Birbirine dik iki düzlem aynada ışının yolu",
+   "fikir": "Dik iki düzlem aynaya gelen ışın iki yansımadan sonra gelen ışına paralel ve ters yönde çıkar; ikinci aynadaki gelme açısı birinci aynadakinin tamamlayıcısıdır.",
+   "tuzak": "Çıkan ışının gelen ışına dik ya da aynı yönlü olduğunu sanmak; ikinci yansımada açıyı birinci aynaya göre ölçmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-kesisen-ayna",
+   "tip": "Dik iki düzlem aynada ışın yolu (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-12",
+   "konu": "Optik",
+   "alt": "Çukur aynada özel ışınların yansıma yolları",
+   "fikir": "Optik eksene paralel gelen ışın yansıyınca odaktan geçer; odaktan gelen ışın eksene paralel yansır; eğrilik merkezinden gelen ışın aynaya dik çarpar ve kendi üzerinden döner.",
+   "tuzak": "Paralel ışının eğrilik merkezinden geçeceğini sanmak; merkezden gelen ışının odaktan geçeceğini düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-cukur-ozel",
+   "tip": "Çukur aynada özel ışınlar (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-13",
+   "konu": "Optik",
+   "alt": "Çukur aynada F ile M arasındaki cismin görüntü özellikleri",
+   "fikir": "Cisim F ile M arasındayken görüntü M’nin ötesinde, gerçek, ters ve cisimden büyük oluşur; perdede yakalanabilir.",
+   "tuzak": "Görüntüyü F ile ayna arasında sanmak; gerçek görüntünün düz olduğunu düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-cukur-goruntu",
+   "tip": "Çukur aynada görüntü özellikleri (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-14",
+   "konu": "Optik",
+   "alt": "Tümsek aynada görüntü ve kullanım alanı",
+   "fikir": "Tümsek aynada cisim nerede olursa olsun görüntü ayna arkasında sanal, düz ve küçük oluşur; geniş görüş alanı sağladığı için dikiz aynası ve güvenlik aynası olarak kullanılır.",
+   "tuzak": "Çukur aynadaki gerçek–ters görüntü kurallarını tümsek aynaya uygulamak; ışınların yansıdıktan sonra odakta kesiştiğini sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-tumsek",
+   "tip": "Tümsek aynada görüntü ve kullanım alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-15",
+   "konu": "Optik",
+   "alt": "Üç ortamdan geçen ışının yoluna göre ışık hızı ve kırılma indisi",
+   "fikir": "Işık normale yaklaşarak kırılıyorsa ikinci ortamın kırılma indisi daha büyük, ışığın hızı daha küçüktür; gelme (kırılma) açısı büyük olan ortamda kırılma indisi küçük, ışık hızı büyüktür.",
+   "tuzak": "Normale yaklaşan ışığın hızlandığını sanmak; kırılma açısı büyük olan ortamın daha yoğun olduğunu düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-kirilma-ortamlar",
+   "tip": "Üç ortamda kırılma, ışık hızı ve kırılma indisi (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-16",
+   "konu": "Optik",
+   "alt": "Sudaki cismin görünür derinliği ve ışının kırılma yönü",
+   "fikir": "Sudan havaya geçen ışın normalden uzaklaşır; gözlemci ışının uzantısında gördüğü için sudaki cismi gerçek konumundan daha sığda görür.",
+   "tuzak": "Işığın doğrusal gittiği için cismin gerçek yerinde görüneceğini sanmak; ışının sudan havaya geçerken normale yaklaştığını düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-gorunur-derinlik",
+   "tip": "Görünür derinlik ve ışının kırılma yönü",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-17",
+   "konu": "Optik",
+   "alt": "Cam–hava ara yüzeyinde sınır açısı ve tam yansıma",
+   "fikir": "Işık yoğun ortamdan az yoğun ortama geçerken gelme açısı sınır açısından küçükse kırılır, sınır açısına eşitse kırılma açısı 90° olur, büyükse tam yansıma yapar; tam yansıma yalnız yoğun ortamdan az yoğun ortama gelirken olur.",
+   "tuzak": "Sınır açısından küçük açıyı tam yansıma sanmak; tam yansımanın havadan cama geçerken de olabileceğini düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-tam-yansima",
+   "tip": "Sınır açısı ve tam yansıma (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-18",
+   "konu": "Optik",
+   "alt": "Fiber optik kablonun çalışma ilkesi",
+   "fikir": "Fiber optik kabloda çekirdeğin kırılma indisi kılıftan büyüktür; ışık çekirdek–kılıf ara yüzeyine sınır açısından büyük açıyla çarpıp tam yansıyarak ilerler.",
+   "tuzak": "Işığın kılıfa kırılarak geçtiğini sanmak; kılıfın kırılma indisinin daha büyük olması gerektiğini düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-fiber",
+   "tip": "Fiber optik kabloda tam yansıma",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-19",
+   "konu": "Optik",
+   "alt": "Kalın kenarlı (ıraksak) merceğin görüntü özellikleri",
+   "fikir": "Kalın kenarlı mercek cismin konumu ne olursa olsun mercek önünde sanal, düz ve cisimden küçük görüntü verir; miyop gözlüklerinde kullanılır.",
+   "tuzak": "İnce kenarlı merceğin gerçek–ters görüntü kurallarını kalın kenarlı mercek için de geçerli saymak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-iraksak",
+   "tip": "Kalın kenarlı merceğin görüntü özellikleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-20",
+   "konu": "Optik",
+   "alt": "İnce kenarlı merceğin farklı cisim konumlarında görüntü özellikleri",
+   "fikir": "Cisim 2F’nin ötesindeyse görüntü F ile 2F arasında küçük ve ters, F ile 2F arasındaysa 2F’nin ötesinde büyük ve ters, F içindeyse sanal, düz ve büyüktür.",
+   "tuzak": "Görüntü konumunu cismin konumuyla karıştırmak; F içindeki cismin görüntüsünü gerçek sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-mercek-konum",
+   "tip": "İnce kenarlı merceğin görüntü özellikleri (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-21",
+   "konu": "Optik",
+   "alt": "Göz kusurunun ışın çiziminden belirlenmesi ve gözlük seçimi",
+   "fikir": "Uzaktan gelen paralel ışınlar retinadan önce toplanıyorsa miyoplukturr ve ışınları dağıtan kalın kenarlı mercekli gözlükle düzeltilir; retinadan sonra toplanıyorsa hipermetroptur, ince kenarlı mercek gerekir.",
+   "tuzak": "Miyop gözün ince kenarlı mercekle düzeltildiğini sanmak; miyopluk ile hipermetropluğu karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-goz-kusuru",
+   "tip": "Göz kusuru ve gözlük türü",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-22",
+   "konu": "Optik",
+   "alt": "Prizmada ışığın renklere ayrılması, kırılma indisi, hız ve frekans",
+   "fikir": "Beyaz ışık prizmada renklere ayrılır; kırmızı en az, mor en çok kırılır; kırılma indisi mor için en büyük, ışık hızı mor için en küçük, frekans mor için en büyüktür.",
+   "tuzak": "Çok kırılan ışığın hızının daha büyük olduğunu sanmak; frekansın kırılma indisiyle ters ilişkili olduğunu düşünmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-prizma",
+   "tip": "Prizmada renklere ayrılma (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-23",
+   "konu": "Optik",
+   "alt": "Ardışık ışık filtrelerinden geçen beyaz ışık",
+   "fikir": "Her filtre yalnızca kendi renginin bileşenlerini (kırmızı, yeşil, mavi ana ışıklardan) geçirir; ardışık filtrelerde son görülen renk, filtrelerin ortak geçirdiği ana ışıktır.",
+   "tuzak": "Yalnız ilk ya da son filtreye bakmak; ortak ana ışık olmayınca siyah sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-op2-filtre",
+   "tip": "Ardışık filtreler ve perdede görülen renk",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  },
+  {
+   "id": "K-FZOP2-24",
+   "konu": "Optik",
+   "alt": "Renkli ışık altında cisimlerin görünen rengi",
+   "fikir": "Bir cisim, rengini oluşturan ana ışıklardan yalnız gelen ışıkta bulunanları yansıtır; hiçbirini bulamazsa siyah görünür.",
+   "tuzak": "Cismin rengini ışığın rengiyle karıştırmak; sarı cismin macenta ışıkta sarı kaldığını sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-op2-cisim-renk",
+   "tip": "Renkli ışıkta cisimlerin görünümü (öncüllü)",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · Fizikpedia (yalnız mantık) · MEB 10. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-op2-aydinlanma-demet",
+   "ad": "Işık akısı ve aydınlanma şiddeti (demet)",
+   "kartlar": [
+    "K-FZOP2-01"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-aydinlanma-oran",
+   "ad": "İki ayrı düzende aydınlanma şiddeti oranı",
+   "kartlar": [
+    "K-FZOP2-02"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-aydinlanma-iki-lamba",
+   "ad": "İki lambanın toplam aydınlanma şiddeti (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-03"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-golge-genis",
+   "ad": "Geniş kaynakta tam gölge ve yarı gölge (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-04"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-golge-boyut",
+   "ad": "Noktasal kaynakta gölge çapı (benzer üçgen)",
+   "kartlar": [
+    "K-FZOP2-05"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-tutulma",
+   "ad": "Güneş ve Ay tutulması (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-06"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-yansima-aci",
+   "ad": "Yansıma yasası ile ışınlar arası açı",
+   "kartlar": [
+    "K-FZOP2-07"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-ayna-donme",
+   "ad": "Dönen düzlem aynada yansıyan ışının dönme açısı",
+   "kartlar": [
+    "K-FZOP2-08"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-duzlem-goruntu",
+   "ad": "Düzlem aynada görüntü uzaklığı (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-09"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-gorus-alani",
+   "ad": "Düzlem aynada görüş alanı",
+   "kartlar": [
+    "K-FZOP2-10"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-kesisen-ayna",
+   "ad": "Dik iki düzlem aynada ışın yolu (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-11"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-cukur-ozel",
+   "ad": "Çukur aynada özel ışınlar (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-12"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-cukur-goruntu",
+   "ad": "Çukur aynada görüntü özellikleri (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-13"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-tumsek",
+   "ad": "Tümsek aynada görüntü ve kullanım alanı",
+   "kartlar": [
+    "K-FZOP2-14"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-kirilma-ortamlar",
+   "ad": "Üç ortamda kırılma, ışık hızı ve kırılma indisi (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-15"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-gorunur-derinlik",
+   "ad": "Görünür derinlik ve ışının kırılma yönü",
+   "kartlar": [
+    "K-FZOP2-16"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-tam-yansima",
+   "ad": "Sınır açısı ve tam yansıma (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-17"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-fiber",
+   "ad": "Fiber optik kabloda tam yansıma",
+   "kartlar": [
+    "K-FZOP2-18"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-iraksak",
+   "ad": "Kalın kenarlı merceğin görüntü özellikleri",
+   "kartlar": [
+    "K-FZOP2-19"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-mercek-konum",
+   "ad": "İnce kenarlı merceğin görüntü özellikleri (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-20"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-goz-kusuru",
+   "ad": "Göz kusuru ve gözlük türü",
+   "kartlar": [
+    "K-FZOP2-21"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-prizma",
+   "ad": "Prizmada renklere ayrılma (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-22"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-filtre",
+   "ad": "Ardışık filtreler ve perdede görülen renk",
+   "kartlar": [
+    "K-FZOP2-23"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  },
+  {
+   "tipId": "fz-op2-cisim-renk",
+   "ad": "Renkli ışıkta cisimlerin görünümü (öncüllü)",
+   "kartlar": [
+    "K-FZOP2-24"
+   ],
+   "uygulamaKonu": "fiz|Optik"
+  }
+ ]
+}
