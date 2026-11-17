@@ -479,7 +479,10 @@ function coachMetrics(s){
   const lt = last ? tytTotal(last) : null, dlt = last && prev ? tytTotal(last)-tytTotal(prev) : null;
   const la = lastActivity(s); const idle = la ? Math.round((new Date(today()+"T12:00:00")-new Date(la+"T12:00:00"))/864e5) : null;
   const flags = [];
-  if(w.pct!=null && w.pct<0.5 && pIdx(s,today())>=2) flags.push(["bad","Program uyumu düşük"]);
+  /* "Program uyumu düşük": sadece biten günlere bakılır (bugün sayılmaz) ve öğrenci hedef süresinin %70'ini çalıştıysa uyarı verilmez (görevi işaretlemeyi unutan ama iyi çalışan öğrenci) */
+  { const t0 = today(), gd = pDays(s, curStart(s)).filter(d=>d < t0); let all=0, done=0, dk=0, hed=0;
+    gd.forEach(d=>{ const l = dayTasks(s,d); all += l.length; done += l.filter(x=>x.done).length; dk += minutes(s,d,false); hed += (dayTarget(s,d)||0)*60; });
+    if(gd.length>=2 && all && done/all<0.5 && !(hed && dk >= hed*0.7)) flags.push(["bad","Program uyumu düşük"]); }
   if(idle==null) flags.push(["warn","Henüz hareket yok"]); else if(idle>=3) flags.push(["bad",idle+" gündür hareket yok"]);
   if(dlt!=null && dlt<0) flags.push(["warn","Son TYT’de düşüş"]);
   if(w.all===0) flags.push(["warn","Bu hafta programı yok"]);
