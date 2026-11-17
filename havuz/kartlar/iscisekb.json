@@ -1,0 +1,219 @@
+{
+ "konu": "İşçi Emek Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ISC-01",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Daire grafiğinde iş payları",
+   "fikir": "Aynı sürede yapılan iş kesirleri hızları verir; kalan iş ve yeni ekibin hızı bulunur.",
+   "tuzak": "Kalan işi tüm iş sanmak; ayrılan işçiyi saymak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "isc-daire",
+   "tip": "Daire grafiğinden iş payı ve kalan süre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-02",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Günlük üretim sütun grafiği",
+   "fikir": "Grafikten yapılan toplam iş bulunur; ekip küçülünce günlük hız değişir ve kalan iş yeni hızla bölünür.",
+   "tuzak": "Ayrılmayı unutmak; kalan işi eski hızla bölmek; gün sayısını saymayı unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "isc-sutun",
+   "tip": "Günlük üretim sütun grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-03",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Izgarada boyama",
+   "fikir": "Boyalı birim sayısından hız bulunur; birlikte çalışmada hızlar toplanır.",
+   "tuzak": "Eski boyanmış kısmı hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "isc-izgara",
+   "tip": "Izgara üzerinde boyanan kısım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-04",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Havuz seviye göstergesi",
+   "fikir": "Seviye göstergesinden dolum kesri okunur; ikinci musluk açılınca hızlar toplanır.",
+   "tuzak": "Havuzun tamamını yeniden doldurmak; bölme sayısını yanlış okumak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "isc-seviye",
+   "tip": "Havuz seviyesi ve ikinci musluk",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-05",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Kalan iş grafiği",
+   "fikir": "Doğru parçalarının eğimlerinden hızlar bulunur; ayrılan işçiden sonraki hız kullanılır.",
+   "tuzak": "Eğimi birlikte hız yerine tek hız sanmak; süreyi eklemeyi unutmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "isc-kalan",
+   "tip": "Kalan iş–zaman grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-06",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "İş günü takvimi",
+   "fikir": "İki işçinin birleşik hızından gerekli iş günü bulunur; takvimde hafta sonu ve tatiller atlanır.",
+   "tuzak": "Hafta sonunu saymak; tatili iş günü saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "isc-takvim",
+   "tip": "Tatilli takvimde bitiş günü",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-07",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "İşçi sayısı basamak grafiği",
+   "fikir": "Grafikten işçi-gün toplamı bulunur; planlanan toplam işten çıkarılıp kalan gün hesaplanır.",
+   "tuzak": "Planlanan işçi sayısını sabit varsaymak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "isc-basamak",
+   "tip": "Gün gün işçi sayısı grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-08",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Gösterge okuma",
+   "fikir": "İki göstergenin aynı sürede gösterdiği yüzdeler toplanıp birlikte hız bulunur.",
+   "tuzak": "Yüzdeleri birlikte tamamlanma yüzdesi sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "isc-kadran",
+   "tip": "İş göstergeleri ve birlikte çalışma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-09",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Emek tablosu ve ücret",
+   "fikir": "Her kişinin işin kaçta kaçını yaptığı çalışılan gün ÷ tek başına gün ile bulunur; ücret bu kesirlerle paylaşılır.",
+   "tuzak": "Ücreti çalışılan günle orantılamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "isc-ucret",
+   "tip": "Çalışma tablosundan ücret paylaşımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-ISC-10",
+   "konu": "İşçi Emek Problemleri",
+   "alt": "Depo hacim grafiği",
+   "fikir": "Eğimlerden dolum ve gider hızı bulunur; gider kapanınca kalan hacim dolum hızıyla doldurulur.",
+   "tuzak": "Ayrı eğimleri birbirine karıştırmak; süreyi yalnız kalan bölüm sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "isc-depo",
+   "tip": "Dolum–gider hacim grafiği",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu/grafikli işçi-havuz soruları; yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "isc-daire",
+   "ad": "Daire grafiğinden iş payı ve kalan süre",
+   "kartlar": [
+    "K-ISC-01"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-sutun",
+   "ad": "Günlük üretim sütun grafiği",
+   "kartlar": [
+    "K-ISC-02"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-izgara",
+   "ad": "Izgara üzerinde boyanan kısım",
+   "kartlar": [
+    "K-ISC-03"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-seviye",
+   "ad": "Havuz seviyesi ve ikinci musluk",
+   "kartlar": [
+    "K-ISC-04"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-kalan",
+   "ad": "Kalan iş–zaman grafiği",
+   "kartlar": [
+    "K-ISC-05"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-takvim",
+   "ad": "Tatilli takvimde bitiş günü",
+   "kartlar": [
+    "K-ISC-06"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-basamak",
+   "ad": "Gün gün işçi sayısı grafiği",
+   "kartlar": [
+    "K-ISC-07"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-kadran",
+   "ad": "İş göstergeleri ve birlikte çalışma",
+   "kartlar": [
+    "K-ISC-08"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-ucret",
+   "ad": "Çalışma tablosundan ücret paylaşımı",
+   "kartlar": [
+    "K-ISC-09"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  },
+  {
+   "tipId": "isc-depo",
+   "ad": "Dolum–gider hacim grafiği",
+   "kartlar": [
+    "K-ISC-10"
+   ],
+   "uygulamaKonu": "prob|İşçi Emek Problemleri"
+  }
+ ]
+}
