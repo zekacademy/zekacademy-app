@@ -2166,11 +2166,22 @@ function karneVeri(s, bas = karneBas()){
   const den = D.filter(d=>d.tarih>=bas && d.tarih<=bit).map(d=>{ const once = D.filter(x=>x.tur===d.tur && x.tarih<d.tarih).pop(), n = Math.round(totalOf(d)*100)/100;
     return {tur:d.tur, ad:d.ad||d.yayin||"", net:n, fark: once ? Math.round((n-totalOf(once))*100)/100 : null}; });
   const hedef = Object.entries(((s.plan||{})[pStart(s, addDays(bas,3))]||{}).hedef||{}).filter(([,v])=>v&&v.konu).map(([ders,v])=>({ders, konu:v.konu, done:!!v.done}));
-  const biten = Object.entries(s.topics||{}).filter(([,t])=>t && t.bitAt && t.bitAt>=bas && t.bitAt<=bit && topicScore(t)>=1).map(([k])=>{ const [d, ...n] = k.split('|'); return {ders:(dersBul(s, d)||{}).ders || (dersBul(s, d)||{}).n || d, konu:n.join('|')}; });
+  const biten = Object.entries(s.topics||{}).filter(([,t])=>t && t.bitAt && t.bitAt>=bas && t.bitAt<=bit && topicScore(t)>=1).map(([k])=>{ const [d, ...n] = k.split('|'), x = dersBul(s, d), sin = CURX().TYT.some(y=>y.k===d) ? "TYT" : "AYT";
+    return {grup: x ? `${sin} ${String(x.n).split(" · ")[0]}` : d, konu:n.join('|')}; });
   return {bas, bit, gunler, dk, gun, den, hedef, biten}; }
+/* Bitirilen konular: ders ders başlık + yan yana sığan kutucuklar (hepsi görünür, "+N konu" yok) */
+function konuYerles(L, W){ if(!L.length) return {h:0, ogeler:[]}; const g = document.createElement("canvas").getContext("2d"), ogeler = [];
+  const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`; let y = 0;
+  const gruplar = [...new Set(L.map(x=>x.grup))];
+  for(const gr of gruplar){ ogeler.push({tip:"grup", t:gr, x:0, y}); y += 40; let x = 0;
+    for(const k of L.filter(z=>z.grup===gr)){ g.font = F(600,26); let t = k.konu; const max = W - 72;
+      while(t.length > 1 && g.measureText(t).width > max) t = t.slice(0,-1); if(t !== k.konu) t = t.slice(0,-1) + "…";
+      const w = Math.ceil(g.measureText(t).width) + 72; if(x && x + w > W){ x = 0; y += 68; } ogeler.push({tip:"konu", t, x, y, w}); x += w + 12; }
+    y += 68 + 16; }
+  return {h: y - 16, ogeler}; }
 function karneCiz(s, v){
-  const blok = n => n ? 60 + n*84 + 44 : 0, nb = Math.min(v.biten.length, 4);
-  const W = 1080, H = Math.max(1350, Math.min(1920, 1035 + blok(Math.min(v.den.length,3)) + blok(nb) + blok(v.hedef.length) + 120)), c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const blok = n => n ? 60 + n*84 + 44 : 0, kb = konuYerles(v.biten, 1080-128);
+  const W = 1080, H = Math.max(1350, Math.min(3000, 1035 + blok(Math.min(v.den.length,3)) + (kb.h ? 60 + kb.h + 44 : 0) + blok(v.hedef.length) + 120)), c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
   const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, YES = "#14532D", YES2 = "#15803D", ACIK = "#EEF6F0", GRI = "#4B5E54";
   const kisalt = (t, max, font) => { g.font = font; if(g.measureText(t).width <= max) return t; while(t.length > 1 && g.measureText(t+"…").width > max) t = t.slice(0,-1); return t+"…"; };
   const rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
@@ -2197,13 +2208,17 @@ function karneCiz(s, v){
   const kalan = () => H - 110 - y;
   if(v.den.length){ g.fillStyle = YES; g.font = F(800,32); g.fillText("Denemeler", 64, y); y += 24;
     v.den.slice(0,3).forEach(d=>{ if(kalan() < 84) return; satir(`${d.tur}${d.ad?` · ${d.ad}`:""}`, `${String(d.net).replace(".",",")} net${d.fark==null?"":` (${d.fark>=0?"+":""}${String(d.fark).replace(".",",")})`}`); }); y += 44; }
-  if(v.biten.length && kalan() > 140){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Bu hafta bitirdiği konular · ${v.biten.length}`, 64, y); y += 24;
-    const L = v.biten.slice(0, 4); for(let i=0;i<L.length;i++){ if(kalan() < 84) break; if(i===3 && v.biten.length>4){ satir(`+${v.biten.length-3} konu daha`, ""); break; } satir(`${L[i].ders}: ${L[i].konu}`, "✓", YES2); } y += 44; }
+  if(kb.h){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Bu hafta bitirdiği konular · ${v.biten.length}`, 64, y); y += 24;
+    for(const it of kb.ogeler){ if(it.tip==="grup"){ g.fillStyle = GRI; g.font = F(800,24); g.fillText(it.t.toLocaleUpperCase("tr"), 64+it.x, y+it.y+24); }
+      else { g.fillStyle = "#fff"; rr(64+it.x, y+it.y, it.w, 56, 28); g.fill(); g.fillStyle = YES2; g.font = F(800,26); g.fillText("✓", 64+it.x+20, y+it.y+37); g.fillStyle = "#0F2A1D"; g.font = F(600,26); g.fillText(it.t, 64+it.x+52, y+it.y+37); } }
+    y += kb.h + 44; }
   if(v.hedef.length && kalan() > 140){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Konu hedefleri · ${v.hedef.filter(h=>h.done).length}/${v.hedef.length}`, 64, y); y += 24;
     for(const h of v.hedef){ if(kalan() < 84) break; satir(`${h.ders}: ${h.konu}`, h.done ? "✓ Bitti" : "", YES2); } }
   if(!v.dk && !v.den.length){ g.fillStyle = GRI; g.font = F(500,30); g.fillText("Bu hafta uygulamaya çalışma kaydı girilmedi.", 64, y+20); }
-  g.fillStyle = GRI; g.font = F(600,28); g.textAlign = "center"; g.fillText("Zekeriya Hoca · Zekacademy", W/2, H-56); g.textAlign = "left";
-  return c; }
+  /* boşluk kalmasın: içerik bittiği yerde kes (en az 1350, telefona uygun 4:5) */
+  const H2 = Math.min(H, Math.max(1350, y + 130)), c2 = document.createElement("canvas"); c2.width = W; c2.height = H2; const g2 = c2.getContext("2d");
+  g2.drawImage(c, 0, 0); g2.fillStyle = GRI; g2.font = F(600,28); g2.textAlign = "center"; g2.fillText("Zekeriya Hoca · Zekacademy", W/2, H2-56);
+  return c2; }
 async function karnePaylas(){ const s = st(); if(!s) return; const v = karneVeri(s), c = karneCiz(s, v);
   const b = await new Promise(r=>c.toBlob(r, "image/png")), ad = (adSoyad(s.name||"")||"Öğrenci").split(" ")[0];
   const f = new File([b], `karne-${v.bas}.png`, {type:"image/png"}), text = A() ? `Merhaba değerli velim, ${ad}'in ${tYaz(v.bas)} – ${tYaz(v.bit)} haftalık karnesi 📊 — Zekeriya Hoca` : `${tYaz(v.bas)} – ${tYaz(v.bit)} haftalık karnem 📊 — Zekacademy`;
