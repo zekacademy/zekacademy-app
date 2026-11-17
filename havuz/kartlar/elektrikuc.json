@@ -1,0 +1,219 @@
+{
+ "konu": "Elektrik",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Fizik çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-FZEL3-01",
+   "konu": "Elektrik",
+   "alt": "Anahtar açma ve kapama",
+   "fikir": "Anahtar kapanınca L lambası kısa devre olur: akım anahtardan geçer. Kolun direnci azalacağından K’nin akımı artar; ideal üretecin uçlarına paralel bağlı M’nin gerilimi ve akımı ise değişmez.",
+   "tuzak": "Kısa devre olan lambanın da yandığını sanmak; ideal üretece paralel kolun parlaklığının değiştiğini düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el3-lamba-kisa-devre",
+   "tip": "Anahtar kapatılınca bir lambanın kısa devre olması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-02",
+   "konu": "Elektrik",
+   "alt": "Ampermetre ve voltmetre",
+   "fikir": "Voltmetreden R₁ üzerindeki gerilimle devre akımı bulunur; paralel kolların gerilimi ortaktır, akım dirençle ters orantılı bölünür ve ampermetre yalnız bir koldan geçen akımı gösterir.",
+   "tuzak": "Ampermetreyi ana kolda sanmak; akımı iki kola eşit bölmek; akım bölme oranını ters kurmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el3-akim-bolunme",
+   "tip": "Voltmetre okumasından ana akım ve paralel koldaki ampermetre okuması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-03",
+   "konu": "Elektrik",
+   "alt": "Ampermetre ve voltmetre",
+   "fikir": "İdeal voltmetrenin direnci çok büyüktür; seri bağlanırsa devre akımı hemen hemen sıfır olur, lamba ışık vermez ve üretecin gerilimi voltmetre üzerinde ölçülür.",
+   "tuzak": "Voltmetreyi her bağlantıda lambanın gerilimini ölçen alet saymak; seri bağlı voltmetreden akım geçeceğini düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el3-voltmetre-seri",
+   "tip": "Voltmetrenin lambaya seri bağlanması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-04",
+   "konu": "Elektrik",
+   "alt": "Eşdeğer direnç",
+   "fikir": "Bağlantı telinin birleştirdiği noktalar aynı düğümdür; 12 Ω ve 4 Ω’luk dirençlerin iki ucu da aynı düğümlere bağlı olduğundan paraleldir ve 3 Ω ile seri toplanır.",
+   "tuzak": "Dirençlerin hepsini seri toplamak; teli yok sayıp bir direncin akım taşımadığını sanmak; hepsini paralel almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el3-esdeger-tel",
+   "tip": "Aynı iki düğüm arasında kalan dirençlerin eşdeğeri",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-05",
+   "konu": "Elektrik",
+   "alt": "Lamba parlaklığı",
+   "fikir": "Ana koldaki akım, paralel kollara dirençleriyle ters orantılı bölünür: tek lambalı kol 2/3, iki lambalı kol 1/3 pay alır. Parlaklık P = I²R ile akımın karesiyle orantılıdır.",
+   "tuzak": "Paralel kollara akımın eşit bölündüğünü sanmak; seri lambalarda akımın azaldığını düşünmek; paralel koldaki lambayı ana koldakinden parlak sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el3-parlaklik-siralama",
+   "tip": "Karışık bağlı özdeş lambaların parlaklık sıralaması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-06",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Tüketim, iki sayaç okuması arasındaki farktır; kademeli tarifede her dilimin kWh’si kendi birim fiyatıyla çarpılıp toplanır.",
+   "tuzak": "Son okumayı tüketim sanmak; tüm tüketimi tek fiyatla çarpmak; fiyat dilimlerini ters uygulamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "fz-el3-sayac-tarife",
+   "tip": "Elektrik sayacı okumasından kademeli tarifeyle fatura",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-07",
+   "konu": "Elektrik",
+   "alt": "Elektroskop",
+   "fikir": "İletken telle bağlanan özdeş iletkenler arasında yük, potansiyeller eşitleninceye kadar geçer ve yarı yarıya paylaşılır; bağlantı kesilirse paylaşılan yükler kendi yerinde kalır.",
+   "tuzak": "Yük paylaşımında yüklü cismin açıklığının değişmeyeceğini düşünmek; tel çekilince yükün geri döneceğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el3-iki-elektroskop",
+   "tip": "Yüklü ve nötr iki elektroskopun iletken telle bağlanması",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-08",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Etiketteki gerilim ve güçten lambanın normal akımı (I = P ÷ V) bulunur; seri bağlı dirençten de aynı akım geçer ve gerilimin lambada düşmeyen kısmı bu dirençte düşer.",
+   "tuzak": "Lamba direncini ya da üreteç gerilimini doğrudan seri dirence uygulamak; akımı yanlış gerilimle hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "fz-el3-etiketli-lamba",
+   "tip": "Etiketli lambanın normal parlaklıkta çalışması için seri direnç",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-09",
+   "konu": "Elektrik",
+   "alt": "Lamba parlaklığı",
+   "fikir": "K söküldüğünde paralel bölümün direnci artar, toplam direnç büyür ve üreteçten çekilen akım azalır. N’nin akımı azaldığı için sönükleşir; L ise artık tüm akımı taşıdığından parlaklığı artar.",
+   "tuzak": "Bir lamba sökülünce paralel koldaki lambanın etkilenmediğini düşünmek; ana koldaki lambanın parlaklığının arttığını sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "fz-el3-lamba-sokme",
+   "tip": "Paralel kollardan bir lambanın sökülmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  },
+  {
+   "id": "K-FZEL3-10",
+   "konu": "Elektrik",
+   "alt": "Elektriksel enerji ve güç",
+   "fikir": "Enerji E = P·t’dir; aynı sürede güç büyük olan cihaz daha çok enerji harcar. Enerji farkı güç farkı ile süre çarpılarak, oran ise güç oranıyla bulunur.",
+   "tuzak": "Güç oranını yanlış hesaplamak (ör. 10 W’ı 15 W’ın yarısı saymak); W ile kW’ı karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "fz-el3-lamba-turleri",
+   "tip": "Aynı ışığı veren lamba türlerinin enerji tüketimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Fizik soruları (yalnız mantık) · MEB 9–10. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "fz-el3-lamba-kisa-devre",
+   "ad": "Anahtar kapatılınca bir lambanın kısa devre olması",
+   "kartlar": [
+    "K-FZEL3-01"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-akim-bolunme",
+   "ad": "Voltmetre okumasından ana akım ve paralel koldaki ampermetre okuması",
+   "kartlar": [
+    "K-FZEL3-02"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-voltmetre-seri",
+   "ad": "Voltmetrenin lambaya seri bağlanması",
+   "kartlar": [
+    "K-FZEL3-03"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-esdeger-tel",
+   "ad": "Aynı iki düğüm arasında kalan dirençlerin eşdeğeri",
+   "kartlar": [
+    "K-FZEL3-04"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-parlaklik-siralama",
+   "ad": "Karışık bağlı özdeş lambaların parlaklık sıralaması",
+   "kartlar": [
+    "K-FZEL3-05"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-sayac-tarife",
+   "ad": "Elektrik sayacı okumasından kademeli tarifeyle fatura",
+   "kartlar": [
+    "K-FZEL3-06"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-iki-elektroskop",
+   "ad": "Yüklü ve nötr iki elektroskopun iletken telle bağlanması",
+   "kartlar": [
+    "K-FZEL3-07"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-etiketli-lamba",
+   "ad": "Etiketli lambanın normal parlaklıkta çalışması için seri direnç",
+   "kartlar": [
+    "K-FZEL3-08"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-lamba-sokme",
+   "ad": "Paralel kollardan bir lambanın sökülmesi",
+   "kartlar": [
+    "K-FZEL3-09"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  },
+  {
+   "tipId": "fz-el3-lamba-turleri",
+   "ad": "Aynı ışığı veren lamba türlerinin enerji tüketimi",
+   "kartlar": [
+    "K-FZEL3-10"
+   ],
+   "uygulamaKonu": "fiz|Elektrik"
+  }
+ ]
+}

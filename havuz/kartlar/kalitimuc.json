@@ -1,0 +1,191 @@
+{
+ "konu": "Kalıtım",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Biyoloji çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-BYKL3-01",
+   "konu": "Kalıtım",
+   "alt": "ABO – çocuklardan ebeveyn genotipi",
+   "fikir": "Çocukların kan grubu kümesinden (A, B, AB, O hepsi) ebeveynlerin taşıdığı alel kümesi çıkarılır: AB çocuk için bir ebeveynde A, diğerinde B; O çocuk için ikisinde de O aleli gerekir.",
+   "tuzak": "AB çocuğu olan ailede ebeveynlerden birinin AB olması gerektiğini sanmak; ebeveynleri homozigot varsaymak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "by-kl3-abo",
+   "tip": "Kan grupları ve ABO kalıtımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-02",
+   "konu": "Kalıtım",
+   "alt": "Soyağacı – otozomal baskın",
+   "fikir": "Hasta ebeveynlerin sağlıklı çocuğu otozomal çekinik ve eşeye bağlı kalıtımları dışlar; baskın kalıtımda sağlıklı bireyler çekinik homozigottur, hasta bireylerin genotipi çocuk ve ebeveynlerinden çıkarılır.",
+   "tuzak": "Hasta bireylerin hepsini homozigot saymak; çocuğu sağlıklı olan hasta ebeveynin heterozigot olacağını gözden kaçırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "by-kl3-soyagaci",
+   "tip": "Soyağacından kalıtım biçimi ve genotip",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-03",
+   "konu": "Kalıtım",
+   "alt": "Soyağacı – kesin ve belirsiz genotipler",
+   "fikir": "Otozomal çekinik soyağacında genotipi kesinleşenler (hasta, hasta çocuğu olan sağlıklı) ile belirsiz kalanlar (yalnız sağlıklı çocuğu olan ya da sağlıklı kardeşi hastaya sahip bireyler) ayrılır; “kesin” için tüm olası genotipler taranır.",
+   "tuzak": "Sağlıklı bireyi homozigot baskın sanmak; “taşıyıcı olabilir” ile “taşıyıcıdır” ayrımını yapmamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "by-kl3-soyagaci",
+   "tip": "Soyağacından kalıtım biçimi ve genotip",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-04",
+   "konu": "Kalıtım",
+   "alt": "Eşeye bağlı soyağacında olasılık",
+   "fikir": "Sağlıklı annenin hasta oğlu varsa anne taşıyıcıdır; taşıyıcı annenin sağlıklı kızı 1/2 olasılıkla taşıyıcıdır. Hasta çocuk olasılığı taşıyıcılık olasılığı, çocuğun cinsiyeti ve aldığı X kromozomu olasılıklarının çarpımıdır.",
+   "tuzak": "Kızı kesin taşıyıcı saymak; taşıyıcılık olasılığını iki kez ya da hiç çarpmamak; otozomal çekinik gibi 2/3 almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "by-kl3-soyagaci-olasilik",
+   "tip": "Soyağacında olasılık hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-05",
+   "konu": "Kalıtım",
+   "alt": "Dihibrit çaprazda görülmeyen genotip/fenotip",
+   "fikir": "Her gen çifti ayrı çaprazlanır; ebeveynlerden biri bir gen yeri bakımından homozigot baskınsa çekinik fenotip hiç görülmez. Görülemeyen sınıf tüm gamet birleşimleri taranarak bulunur.",
+   "tuzak": "Dihibriti 9:3:3:1 sanmak; homozigot baskın ebeveynin çekinik alel aktaramayacağını unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "by-kl3-dihibrit",
+   "tip": "Dihibrit çaprazlama ve olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-06",
+   "konu": "Kalıtım",
+   "alt": "Eşeye bağlı ve otozomal gen birlikte",
+   "fikir": "Eşeye bağlı gen (göz rengi) ve otozomal gen (kanat) ayrı hesaplanıp çarpılır; belirli cinsiyet seçildiğinde o cinsiyet içindeki oran alınır.",
+   "tuzak": "Cinsiyet koşulunu bir kez daha çarpmak; göz rengini de otozomal sanmak; erkek yavruyu seçtikten sonra tüm yavrular üzerinden hesap yapmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "by-kl3-dihibrit",
+   "tip": "Dihibrit çaprazlama ve olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-07",
+   "konu": "Kalıtım",
+   "alt": "ABO ve Rh birlikte – oluşamayacak çocuk",
+   "fikir": "AB anne ile O baba çiftinin çocukları yalnız A ya da B olabilir; Rh özelliği bağımsız kalıtılır. İlk çocuğun Rh− olması Rh+ babanın heterozigot olduğunu gösterir.",
+   "tuzak": "AB × O çiftinden AB ya da O çocuk bekleme; Rh+ babayı homozigot varsayma.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "by-kl3-abo",
+   "tip": "Kan grupları ve ABO kalıtımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-08",
+   "konu": "Kalıtım",
+   "alt": "Üç ailede X’e bağlı çekinik – kesin genotip",
+   "fikir": "Hasta oğlu olan sağlıklı anne kesin taşıyıcıdır; hasta anne tüm oğullarına çekinik alel aktarır ve kızlarını taşıyıcı yapar; yalnız sağlıklı çocuğu olan annenin genotipi belirsizdir.",
+   "tuzak": "Sağlıklı anneyi homozigot baskın sanmak; hasta annenin kızlarını hasta saymak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "by-kl3-eseye",
+   "tip": "Eşeye bağlı kalıtım",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-09",
+   "konu": "Kalıtım",
+   "alt": "Çaprazlama sonuç tablosu – 1:1:1:1",
+   "fikir": "Yavru fenotip oranı 1:1:1:1 ise ebeveyn çifti yalnız AaBb × aabb değil, Aabb × aaBb de olabilir; “kesin” yargılar tüm ebeveyn genotip çiftleri taranarak bulunur.",
+   "tuzak": "1:1:1:1 görüp “ebeveynlerden biri çift çekiniktir” demek; iki seçeneği taramamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "by-kl3-capraz-tablo",
+   "tip": "Çaprazlama sonuç tablosundan genotip çıkarma",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  },
+  {
+   "id": "K-BYKL3-10",
+   "konu": "Kalıtım",
+   "alt": "Normal görüşlü çiftin renk körü oğlu",
+   "fikir": "Sağlıklı annenin hasta oğlu varsa anne taşıyıcıdır; baba sağlıklı olduğundan XDY’dir. Taşıyıcı anne × sağlıklı baba çaprazında her çocuk için olasılıklar bağımsızdır; cinsiyet ve aleller ayrı çarpılır.",
+   "tuzak": "Önceki çocuğun durumunu sonraki çocuğu etkiler sanmak; “taşıyıcı kız” olasılığında cinsiyeti hesaba katmamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "by-kl3-eseye",
+   "tip": "Eşeye bağlı kalıtım",
+   "kaynak": "ÖSYM 2018–2026 TYT Biyoloji (yalnız mantık) · MEB 10. sınıf Kalıtım"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "by-kl3-abo",
+   "ad": "Kan grupları ve ABO kalıtımı",
+   "kartlar": [
+    "K-BYKL3-01",
+    "K-BYKL3-07"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  },
+  {
+   "tipId": "by-kl3-soyagaci",
+   "ad": "Soyağacından kalıtım biçimi ve genotip",
+   "kartlar": [
+    "K-BYKL3-02",
+    "K-BYKL3-03"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  },
+  {
+   "tipId": "by-kl3-soyagaci-olasilik",
+   "ad": "Soyağacında olasılık hesabı",
+   "kartlar": [
+    "K-BYKL3-04"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  },
+  {
+   "tipId": "by-kl3-dihibrit",
+   "ad": "Dihibrit çaprazlama ve olasılık",
+   "kartlar": [
+    "K-BYKL3-05",
+    "K-BYKL3-06"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  },
+  {
+   "tipId": "by-kl3-eseye",
+   "ad": "Eşeye bağlı kalıtım",
+   "kartlar": [
+    "K-BYKL3-08",
+    "K-BYKL3-10"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  },
+  {
+   "tipId": "by-kl3-capraz-tablo",
+   "ad": "Çaprazlama sonuç tablosundan genotip çıkarma",
+   "kartlar": [
+    "K-BYKL3-09"
+   ],
+   "uygulamaKonu": "bio|Kalıtım"
+  }
+ ]
+}

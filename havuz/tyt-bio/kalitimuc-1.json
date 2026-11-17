@@ -1,0 +1,821 @@
+[
+ {
+  "id": "tytbio-kalitimuc-0001",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Kan Grupları",
+  "k": "bio|Kalıtım",
+  "kazanim": "Çocukların kan grupları tablosundan ebeveyn genotiplerini belirler ve sonraki çocuk için olasılık yorumlar.",
+  "tipId": "by-kl3-abo",
+  "tip": "Kan grupları ve ABO kalıtımı",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 4,
+  "metin": "Bir ailenin dört çocuğunun cinsiyeti ve ABO kan grupları aşağıdaki tabloda verilmiştir. Ebeveynlerin kan grupları bilinmemektedir; ABO kan grubu tek gen yerindeki üç alelle (A, B, O) belirlenir ve mutasyon gerçekleşmemiştir.\nBuna göre,\nI. Ebeveynlerden biri A, diğeri B kan grubundandır.\nII. Ebeveynlerin ikisi de heterozigot genotiptedir.\nIII. Çiftin beşinci çocuğunun AB kan grubundan olma olasılığı 1/2’dir.\nyargılarından hangileri doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 258 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"254\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"43.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Çocuk</text><text x=\"125.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Cinsiyet</text><text x=\"211.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kan grubu</text><text x=\"43.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1. çocuk</text><text x=\"125.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kız</text><text x=\"211.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">A</text><text x=\"43.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2. çocuk</text><text x=\"125.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Erkek</text><text x=\"211.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">B</text><text x=\"43.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3. çocuk</text><text x=\"125.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kız</text><text x=\"211.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">AB</text><text x=\"43.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">4. çocuk</text><text x=\"125.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Erkek</text><text x=\"211.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">O</text><line x1=\"2\" y1=\"2\" x2=\"256\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"256\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"256\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"256\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"256\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"256\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"84\" y1=\"2\" x2=\"84\" y2=\"132\" stroke-width=\"1\"/><line x1=\"166\" y1=\"2\" x2=\"166\" y2=\"132\" stroke-width=\"1\"/><line x1=\"256\" y1=\"2\" x2=\"256\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve II"
+  },
+  "celdiriciler": {
+   "A": "II atlanmış: O kan grubundaki çocuk her ebeveynden bir O aleli almıştır; ebeveynler A ve B grubu olduklarından AO ve BO, yani heterozigottur.",
+   "B": "I atlanmış: AB çocuk için bir ebeveynde A, diğerinde B aleli; O çocuk için de ikisinde O aleli gerekir. Bu yalnız AO × BO çiftinde olur, yani biri A diğeri B grubundadır.",
+   "C": "III gereksiz seçilmiş: AO × BO çaprazında A, B, AB ve O çocukların her biri 1/4 olasılıklıdır; AB olasılığı 1/2 değil 1/4’tür. · I atlanmış: AB çocuk için bir ebeveynde A, diğerinde B aleli; O çocuk için de ikisinde O aleli gerekir. Bu yalnız AO × BO çiftinde olur, yani biri A diğeri B grubundadır. · II atlanmış: O kan grubundaki çocuk her ebeveynden bir O aleli almıştır; ebeveynler A ve B grubu olduklarından AO ve BO, yani heterozigottur.",
+   "E": "III gereksiz seçilmiş: AO × BO çaprazında A, B, AB ve O çocukların her biri 1/4 olasılıklıdır; AB olasılığı 1/2 değil 1/4’tür. · II atlanmış: O kan grubundaki çocuk her ebeveynden bir O aleli almıştır; ebeveynler A ve B grubu olduklarından AO ve BO, yani heterozigottur."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "ABO alelleri",
+    "ifade": "A ve B aleli O aleline baskındır, A ile B birbirine eş baskındır · A grubu AA ya da AO, B grubu BB ya da BO, AB grubu AB, O grubu OO genotiplidir · Her çocuk ebeveynlerinden birer alel alır"
+   }
+  ],
+  "ipuclari": [
+   "AB ve O kan grubundaki çocukların her birinin ebeveynlerinden hangi alelleri almış olması gerektiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "I. yargıyı değerlendir",
+    "aciklama": "AB çocuk için bir ebeveynde A, diğerinde B aleli; O çocuk için de ikisinde O aleli gerekir. Bu yalnız AO × BO çiftinde olur, yani biri A diğeri B grubundadır.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II. yargıyı değerlendir",
+    "aciklama": "O kan grubundaki çocuk her ebeveynden bir O aleli almıştır; ebeveynler A ve B grubu olduklarından AO ve BO, yani heterozigottur.",
+    "islem": "II: doğru"
+   },
+   {
+    "baslik": "III. yargıyı değerlendir",
+    "aciklama": "AO × BO çaprazında A, B, AB ve O çocukların her biri 1/4 olasılıklıdır; AB olasılığı 1/2 değil 1/4’tür.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "Sonucu birleştir",
+    "aciklama": "Doğru yargılar yukarıdaki değerlendirmeden alınır.",
+    "islem": "Cevap: I ve II"
+   }
+  ],
+  "puf": "AB ve O çocuk aynı ailedeyse ebeveynler AO ve BO’dur; çocuğun kan grubundaki her alel ebeveynlerden birinden gelmelidir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-01 (kan grupları ve abo kalıtımı) · dört çocuğun kan grupları tablosu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0002",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Soyağacı",
+  "k": "bio|Kalıtım",
+  "kazanim": "Soyağacından kalıtım biçimini belirler ve bireylerin genotipini yorumlar.",
+  "tipId": "by-kl3-soyagaci",
+  "tip": "Soyağacından kalıtım biçimi ve genotip",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 4,
+  "metin": "Şekilde, tek bir gen çiftiyle belirlenen ve otozomal ya da eşeye bağlı kalıtıma sahip olabilen bir hastalığın üç kuşaklık soyağacı verilmiştir. Dolu semboller hastalığı gösteren, boş semboller göstermeyen bireyleri; kareler erkekleri, daireler kadınları simgelemektedir. Bireyler kuşak ve soldan sağa sıra numarasıyla anılır (II-2, ikinci kuşaktaki ikinci bireydir). Mutasyon gerçekleşmemiştir.\nBuna göre, aşağıdakilerden hangisi yanlıştır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:387px;height:auto\" role=\"img\" viewBox=\"0 0 203.509 151.088\">\n<defs>\n<g>\n<g id=\"tb99ad4-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#tb99ad4-mask-0)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.715504, -6.081781)\"/>\n</g>\n<g id=\"tb99ad4-glyph-0-1\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#tb99ad4-mask-1)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"tb99ad4-glyph-0-2\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tb99ad4-mask-2)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"tb99ad4-glyph-0-3\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#tb99ad4-mask-3)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.238501, -5.84328)\"/>\n</g>\n<g id=\"tb99ad4-glyph-1-0\">\n<rect x=\"-1.2\" y=\"-5.8\" width=\"14.4\" height=\"69.6\" mask=\"url(#tb99ad4-mask-4)\" transform=\"matrix(0.11923, 0, 0, 0.11923, 0.83461, -6.91534)\"/>\n</g>\n</g>\n<image id=\"tb99ad4-source-52\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tb99ad4-mask-0\">\n<use xlink:href=\"#tb99ad4-source-52\"/>\n</mask>\n<image id=\"tb99ad4-source-98\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tb99ad4-mask-1\">\n<use xlink:href=\"#tb99ad4-source-98\"/>\n</mask>\n<image id=\"tb99ad4-source-144\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"tb99ad4-mask-2\">\n<use xlink:href=\"#tb99ad4-source-144\"/>\n</mask>\n<image id=\"tb99ad4-source-190\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"tb99ad4-mask-3\">\n<use xlink:href=\"#tb99ad4-source-190\"/>\n</mask>\n<image id=\"tb99ad4-source-239\" x=\"0\" y=\"0\" width=\"12\" height=\"58\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAA6CAAAAAChPeeLAAAAAmJLR0QA/4ePzL8AAAAlSURBVCiRY2Rg+M8ABYyMCDYDAyMSm4GJYZQzyhlCHNSkjJzIAW2FBW2AkhW7AAAAAElFTkSuQmCC\"/>\n<mask id=\"tb99ad4-mask-4\">\n<use xlink:href=\"#tb99ad4-source-239\"/>\n</mask>\n</defs>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 15.59235 116.223784 L 15.59235 133.228154 L 32.59672 133.228154 L 32.59672 116.223784 Z M 15.59235 116.223784 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-0\" x=\"61.602864\" y=\"31.205636\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 80.788213 124.724004 C 80.788213 129.424079 76.980209 133.228154 72.284063 133.228154 C 67.587918 133.228154 63.779913 129.424079 63.779913 124.724004 C 63.779913 120.027858 67.587918 116.219854 72.284063 116.219854 C 76.980209 116.219854 80.788213 120.027858 80.788213 124.724004 Z M 80.788213 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-1\" x=\"109.50273\" y=\"31.205636\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 8.502939 68.032291 C 8.502939 72.728437 4.694935 76.536441 -0.00121102 76.536441 C -4.697357 76.536441 -8.505361 72.728437 -8.505361 68.032291 C -8.505361 63.336146 -4.697357 59.528141 -0.00121102 59.528141 C 4.694935 59.528141 8.502939 63.336146 8.502939 68.032291 Z M 8.502939 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-0\" x=\"37.653428\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 56.694432 68.032291 C 56.694432 72.728437 52.886427 76.536441 48.190282 76.536441 C 43.494136 76.536441 39.686132 72.728437 39.686132 68.032291 C 39.686132 63.336146 43.494136 59.528141 48.190282 59.528141 C 52.886427 59.528141 56.694432 63.336146 56.694432 68.032291 Z M 56.694432 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-1\" x=\"85.5523\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 87.873695 59.528141 L 87.873695 76.536441 L 104.881994 76.536441 L 104.881994 59.528141 Z M 87.873695 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-2\" x=\"133.452166\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 153.073487 68.032291 C 153.073487 72.728437 149.265483 76.536441 144.569337 76.536441 C 139.873192 76.536441 136.065187 72.728437 136.065187 68.032291 C 136.065187 63.336146 139.873192 59.528141 144.569337 59.528141 C 149.265483 59.528141 153.073487 63.336146 153.073487 68.032291 Z M 153.073487 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-3\" x=\"181.353026\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 80.788213 2.836429 L 80.788213 19.840799 L 97.796513 19.840799 L 97.796513 2.836429 Z M 80.788213 2.836429 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-0\" x=\"126.408682\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 128.979706 11.336649 C 128.979706 16.036724 125.171701 19.840799 120.475556 19.840799 C 115.77548 19.840799 111.971406 16.036724 111.971406 11.336649 C 111.971406 6.640503 115.77548 2.832499 120.475556 2.832499 C 125.171701 2.832499 128.979706 6.640503 128.979706 11.336649 Z M 128.979706 11.336649 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-1\" x=\"157.402596\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 143.150669 2.836429 L 143.150669 19.840799 L 160.158969 19.840799 L 160.158969 2.836429 Z M 143.150669 2.836429 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-0-2\" x=\"188.39651\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 32.59672 124.724004 L 63.779913 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.190282 124.724004 L 48.190282 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00121102 96.378148 L 96.377845 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00121102 96.378148 L -0.00121102 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.190282 96.378148 L 48.190282 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.377845 96.378148 L 96.377845 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.881994 68.032291 L 136.065187 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 120.475556 68.032291 L 120.475556 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.292363 39.686435 L 151.654819 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.292363 39.686435 L 89.292363 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 120.475556 39.686435 L 120.475556 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 151.654819 39.686435 L 151.654819 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.94261, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"10.1574\" y=\"15.407\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"8.397026\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"11.922031\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"6.637646\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"10.152749\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb99ad4-glyph-1-0\" x=\"13.677754\" y=\"128.11169\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "II-3 bireyi homozigot baskın genotiptedir.",
+   "B": "Hastalık otozomal baskın alelle belirlenir.",
+   "C": "I-1 ve I-2 bireylerinin ikisi de heterozigot genotiptedir.",
+   "D": "III-1 bireyi heterozigot genotiptedir.",
+   "E": "II-1 ve II-4 bireyleri aynı genotiptedir."
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "II-3 bireyi homozigot baskın genotiptedir."
+  },
+  "celdiriciler": {
+   "B": "Hasta ebeveynlerin (I-1, I-2) sağlıklı kızı vardır; bu yalnız baskın kalıtımda olur. İfade doğrudur, “hasta çocuğu yok = çekinik” gibi düşünülerek yanlış sanılmış.",
+   "C": "Sağlıklı kızları II-1 (aa) olduğuna göre iki ebeveyn de a aleli taşır; hasta oldukları için Aa’dır. İfade doğrudur.",
+   "D": "III-1’in annesi II-4 aa’dır; hasta olduğuna göre baskın aleli babadan almıştır ve Aa’dır. İfade doğrudur; “hasta = homozigot” sanılmış.",
+   "E": "II-1 ve II-4 sağlıklıdır; baskın kalıtımda ikisi de aa’dır. İfade doğrudur."
+  },
+  "celTur": {
+   "B": "bilgi",
+   "C": "dikkat",
+   "D": "bilgi",
+   "E": "dikkat"
+  },
+  "istenen": "Soyağacına göre yanlış olan ifade.",
+  "bilgi": [
+   {
+    "ad": "Soyağacında kalıtım biçimi",
+    "ifade": "Sağlıklı ebeveynlerin hasta çocuğu varsa hastalık çekiniktir · Hasta ebeveynlerin sağlıklı çocuğu varsa hastalık baskındır ve ebeveynler heterozigottur · Eşeye bağlı çekinikte hasta kızın babası da hastadır"
+   },
+   {
+    "ad": "Genotip yazımı",
+    "ifade": "Çekinik özelliği gösteren birey aa, baskın özelliği gösteren birey AA ya da Aa’dır · Baskın özellikte sağlıklı bireyin aa olduğu kesindir"
+   }
+  ],
+  "ipuclari": [
+   "Önce hasta ve sağlıklı ebeveynlerin çocuklarına bakarak kalıtım biçimini belirle, sonra her ifadeyi bu biçime göre sına."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalıtım biçimini bul",
+    "aciklama": "Hasta I-1 ile I-2’nin sağlıklı kızı II-1 var; bu, hastalığın çekinik olmadığını ve hasta babanın kızı sağlıklı olduğu için eşeye bağlı olmadığını gösterir.",
+    "islem": "Otozomal baskın"
+   },
+   {
+    "baslik": "Sağlıklı bireylerin genotipini yaz",
+    "aciklama": "Baskın kalıtımda sağlıklı bireyler çekinik homozigottur.",
+    "islem": "II-1, II-4, III-2, III-3 = aa"
+   },
+   {
+    "baslik": "Hasta bireyleri çöz",
+    "aciklama": "Hasta I-1, I-2 ve II-3 sağlıklı çocuk verdiği için Aa’dır; Aa × aa çaprazının hasta çocuğu III-1 de Aa’dır.",
+    "islem": "I-1, I-2, II-3, III-1 = Aa"
+   },
+   {
+    "baslik": "Yargıları karşılaştır",
+    "aciklama": "II-3 heterozigot olduğundan “homozigot baskın” demek yanlıştır; diğer ifadeler bu genotiplerle uyuşur.",
+    "islem": "Yanlış ifade: II-3 homozigot baskındır"
+   }
+  ],
+  "puf": "Hasta ebeveynlerden sağlıklı çocuk doğuyorsa hastalık baskındır ve iki ebeveyn de heterozigottur.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-02 (soyağacından kalıtım biçimi ve genotip) · üç kuşak, hasta ebeveynlerin sağlıklı çocuğu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0003",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Soyağacı",
+  "k": "bio|Kalıtım",
+  "kazanim": "Otozomal çekinik soyağacında genotipi kesin olan bireyleri belirler.",
+  "tipId": "by-kl3-soyagaci",
+  "tip": "Soyağacından kalıtım biçimi ve genotip",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "öncüllü",
+  "adimSayisi": 6,
+  "metin": "Şekilde, otozomal çekinik tek bir gen çiftiyle belirlenen bir hastalığın üç kuşaklık soyağacı verilmiştir. Dolu semboller hasta, boş semboller sağlıklı bireyleri; kareler erkekleri, daireler kadınları göstermektedir. Bireyler kuşak ve soldan sağa sıra numarasıyla anılır; II-4 ailenin dışından evlenmiştir.\nBuna göre,\nI. II-3 ve II-4 bireylerinin ikisi de heterozigot genotiptedir.\nII. II-1 bireyi heterozigot genotiptedir.\nIII. I-1 ve I-2 bireyleri aynı genotiptedir.\nyargılarından hangileri kesinlikle doğrudur?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:373px;height:auto\" role=\"img\" viewBox=\"0 0 196.423 151.088\">\n<defs>\n<g>\n<g id=\"t35d3d8-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#t35d3d8-mask-0)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.715504, -6.081781)\"/>\n</g>\n<g id=\"t35d3d8-glyph-0-1\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#t35d3d8-mask-1)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"t35d3d8-glyph-0-2\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t35d3d8-mask-2)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"t35d3d8-glyph-0-3\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#t35d3d8-mask-3)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.238501, -5.84328)\"/>\n</g>\n<g id=\"t35d3d8-glyph-1-0\">\n<rect x=\"-1.2\" y=\"-5.8\" width=\"14.4\" height=\"69.6\" mask=\"url(#t35d3d8-mask-4)\" transform=\"matrix(0.11923, 0, 0, 0.11923, 0.83461, -6.91534)\"/>\n</g>\n</g>\n<image id=\"t35d3d8-source-52\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t35d3d8-mask-0\">\n<use xlink:href=\"#t35d3d8-source-52\"/>\n</mask>\n<image id=\"t35d3d8-source-98\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t35d3d8-mask-1\">\n<use xlink:href=\"#t35d3d8-source-98\"/>\n</mask>\n<image id=\"t35d3d8-source-144\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"t35d3d8-mask-2\">\n<use xlink:href=\"#t35d3d8-source-144\"/>\n</mask>\n<image id=\"t35d3d8-source-190\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"t35d3d8-mask-3\">\n<use xlink:href=\"#t35d3d8-source-190\"/>\n</mask>\n<image id=\"t35d3d8-source-239\" x=\"0\" y=\"0\" width=\"12\" height=\"58\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAA6CAAAAAChPeeLAAAAAmJLR0QA/4ePzL8AAAAlSURBVCiRY2Rg+M8ABYyMCDYDAyMSm4GJYZQzyhlCHNSkjJzIAW2FBW2AkhW7AAAAAElFTkSuQmCC\"/>\n<mask id=\"t35d3d8-mask-4\">\n<use xlink:href=\"#t35d3d8-source-239\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 15.58993 116.223784 L 15.58993 133.228154 L 32.598229 133.228154 L 32.598229 116.223784 Z M 15.58993 116.223784 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-0\" x=\"61.538864\" y=\"31.205636\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 80.789722 124.724004 C 80.789722 129.424079 76.981718 133.228154 72.285572 133.228154 C 67.589427 133.228154 63.781422 129.424079 63.781422 124.724004 C 63.781422 120.027858 67.589427 116.219854 72.285572 116.219854 C 76.981718 116.219854 80.789722 120.027858 80.789722 124.724004 Z M 80.789722 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-1\" x=\"109.43873\" y=\"31.205636\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -8.503852 59.528141 L -8.503852 76.536441 L 8.504448 76.536441 L 8.504448 59.528141 Z M -8.503852 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-0\" x=\"37.589428\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 56.692011 68.032291 C 56.692011 72.728437 52.887936 76.536441 48.187861 76.536441 C 43.491715 76.536441 39.683711 72.728437 39.683711 68.032291 C 39.683711 63.336146 43.491715 59.528141 48.187861 59.528141 C 52.887936 59.528141 56.692011 63.336146 56.692011 68.032291 Z M 56.692011 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-1\" x=\"85.4883\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 87.875204 59.528141 L 87.875204 76.536441 L 104.883504 76.536441 L 104.883504 59.528141 Z M 87.875204 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-2\" x=\"133.388166\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 153.071066 68.032291 C 153.071066 72.728437 149.266992 76.536441 144.570846 76.536441 C 139.870771 76.536441 136.066696 72.728437 136.066696 68.032291 C 136.066696 63.336146 139.870771 59.528141 144.570846 59.528141 C 149.266992 59.528141 153.071066 63.336146 153.071066 68.032291 Z M 153.071066 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-3\" x=\"181.289026\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.883504 11.336649 C 104.883504 16.036724 101.075499 19.840799 96.379354 19.840799 C 91.683208 19.840799 87.875204 16.036724 87.875204 11.336649 C 87.875204 6.640503 91.683208 2.832499 96.379354 2.832499 C 101.075499 2.832499 104.883504 6.640503 104.883504 11.336649 Z M 104.883504 11.336649 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-0\" x=\"133.388166\" y=\"143.910326\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 136.066696 2.836429 L 136.066696 19.840799 L 153.071066 19.840799 L 153.071066 2.836429 Z M 136.066696 2.836429 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-0-1\" x=\"181.289026\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 32.598229 124.724004 L 63.781422 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.187861 124.724004 L 48.187861 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000298038 96.378148 L 96.379354 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000298038 96.378148 L 0.000298038 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.187861 96.378148 L 48.187861 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.379354 96.378148 L 96.379354 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.883504 68.032291 L 136.066696 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 120.473135 68.032291 L 120.473135 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.379354 39.686435 L 144.570846 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.379354 39.686435 L 96.379354 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 144.570846 39.686435 L 144.570846 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87861, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"10.0934\" y=\"15.407\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"8.333026\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"11.858031\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"6.572652\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"10.097657\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t35d3d8-glyph-1-0\" x=\"13.61276\" y=\"128.11169\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve III",
+   "E": "II ve III"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III atlanmış: Hasta kızları II-2 olduğundan I-1 ve I-2’nin ikisi de çekinik alel taşır; sağlıklı oldukları için ikisi de Aa’dır, aynı genotiptedirler.",
+   "B": "II gereksiz seçilmiş: II-1’in ebeveynleri Aa × Aa’dır; II-1 sağlıklıdır ve AA (1/3) ya da Aa (2/3) olabilir. Heterozigot olduğu kesin değildir. · I atlanmış: II-3 ile II-4’ün hasta çocuğu III-2 vardır; hastanın iki aleli de çekiniktir ve her biri bir ebeveynden gelir. Sağlıklı oldukları için ikisi de Aa’dır. · III atlanmış: Hasta kızları II-2 olduğundan I-1 ve I-2’nin ikisi de çekinik alel taşır; sağlıklı oldukları için ikisi de Aa’dır, aynı genotiptedirler.",
+   "C": "I atlanmış: II-3 ile II-4’ün hasta çocuğu III-2 vardır; hastanın iki aleli de çekiniktir ve her biri bir ebeveynden gelir. Sağlıklı oldukları için ikisi de Aa’dır.",
+   "E": "II gereksiz seçilmiş: II-1’in ebeveynleri Aa × Aa’dır; II-1 sağlıklıdır ve AA (1/3) ya da Aa (2/3) olabilir. Heterozigot olduğu kesin değildir. · I atlanmış: II-3 ile II-4’ün hasta çocuğu III-2 vardır; hastanın iki aleli de çekiniktir ve her biri bir ebeveynden gelir. Sağlıklı oldukları için ikisi de Aa’dır."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "C": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Soyağacına göre kesinlikle doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Genotip belirleme",
+    "ifade": "Hasta birey aa’dır · Sağlıklı ebeveynlerin hasta çocuğu varsa ebeveynlerin ikisi de Aa’dır · Aa × Aa çaprazındaki sağlıklı çocuk AA ya da Aa olabilir, hangisi olduğu başka bilgi yoksa kesin değildir"
+   }
+  ],
+  "ipuclari": [
+   "Hangi bireylerin genotipinin ebeveyn ya da çocuklarından mutlaka çıkarılabildiğini, hangilerinin iki olasılık taşıdığını ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kesin genotipleri yaz",
+    "aciklama": "Hasta çocuğu olan sağlıklı ebeveynler heterozigottur: I-1, I-2, II-3 ve II-4 için Aa.",
+    "islem": "I-1 = I-2 = II-3 = II-4 = Aa"
+   },
+   {
+    "baslik": "Belirsiz bireyleri ayır",
+    "aciklama": "Ebeveynleri taşıyıcı olan sağlıklı II-1 ve III-1, AA ya da Aa olabilir.",
+    "islem": "II-1 ve III-1: AA veya Aa"
+   },
+   {
+    "baslik": "I. yargıyı değerlendir",
+    "aciklama": "II-3 ile II-4’ün hasta çocuğu III-2 vardır; hastanın iki aleli de çekiniktir ve her biri bir ebeveynden gelir. Sağlıklı oldukları için ikisi de Aa’dır.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II. yargıyı değerlendir",
+    "aciklama": "II-1’in ebeveynleri Aa × Aa’dır; II-1 sağlıklıdır ve AA (1/3) ya da Aa (2/3) olabilir. Heterozigot olduğu kesin değildir.",
+    "islem": "II: yanlış"
+   },
+   {
+    "baslik": "III. yargıyı değerlendir",
+    "aciklama": "Hasta kızları II-2 olduğundan I-1 ve I-2’nin ikisi de çekinik alel taşır; sağlıklı oldukları için ikisi de Aa’dır, aynı genotiptedirler.",
+    "islem": "III: doğru"
+   },
+   {
+    "baslik": "Sonucu birleştir",
+    "aciklama": "Doğru yargılar yukarıdaki değerlendirmeden alınır.",
+    "islem": "Cevap: I ve III"
+   }
+  ],
+  "puf": "Kesinlik yalnız hasta çocuğu olan ebeveynlerde vardır; yalnız sağlıklı çocuğu ya da sağlıklı ebeveyni olan bireylerde “AA veya Aa” belirsizliği kalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-03 (soyağacından kalıtım biçimi ve genotip) · iki sağlıklı ebeveynin hasta çocuğu, genotip taraması",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0004",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Soyağacı",
+  "k": "bio|Kalıtım",
+  "kazanim": "Eşeye bağlı soyağacında taşıyıcılık olasılığını bulup çocuğun hasta olma olasılığını hesaplar.",
+  "tipId": "by-kl3-soyagaci-olasilik",
+  "tip": "Soyağacında olasılık hesabı",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "şekilli",
+  "adimSayisi": 5,
+  "metin": "Şekilde, X kromozomu üzerindeki çekinik bir alelle belirlenen ve Y kromozomunda karşılığı bulunmayan bir hastalığın üç kuşaklık soyağacı verilmiştir. Dolu semboller hasta, boş semboller sağlıklı bireyleri; kareler erkekleri, daireler kadınları göstermektedir. Bireyler kuşak ve soldan sağa sıra numarasıyla anılır; II-1 ailenin dışından evlenmiştir. Mutasyon gerçekleşmemiştir.\nIII-2 bireyi, ailesinde bu hastalık öyküsü bulunmayan sağlıklı bir erkekle evleniyor.\nBuna göre, bu çiftin ilk çocuğunun hasta olma olasılığı kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:373px;height:auto\" role=\"img\" viewBox=\"0 0 196.422 151.088\">\n<defs>\n<g>\n<g id=\"t6eea69-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#t6eea69-mask-0)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.715504, -6.081781)\"/>\n</g>\n<g id=\"t6eea69-glyph-0-1\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#t6eea69-mask-1)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"t6eea69-glyph-0-2\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t6eea69-mask-2)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.357752, -6.081781)\"/>\n</g>\n<g id=\"t6eea69-glyph-0-3\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#t6eea69-mask-3)\" transform=\"matrix(0.119251, 0, 0, 0.119251, 0.238501, -5.84328)\"/>\n</g>\n<g id=\"t6eea69-glyph-1-0\">\n<rect x=\"-1.2\" y=\"-5.8\" width=\"14.4\" height=\"69.6\" mask=\"url(#t6eea69-mask-4)\" transform=\"matrix(0.11923, 0, 0, 0.11923, 0.83461, -6.91534)\"/>\n</g>\n</g>\n<image id=\"t6eea69-source-52\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t6eea69-mask-0\">\n<use xlink:href=\"#t6eea69-source-52\"/>\n</mask>\n<image id=\"t6eea69-source-98\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t6eea69-mask-1\">\n<use xlink:href=\"#t6eea69-source-98\"/>\n</mask>\n<image id=\"t6eea69-source-144\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"t6eea69-mask-2\">\n<use xlink:href=\"#t6eea69-source-144\"/>\n</mask>\n<image id=\"t6eea69-source-190\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"t6eea69-mask-3\">\n<use xlink:href=\"#t6eea69-source-190\"/>\n</mask>\n<image id=\"t6eea69-source-239\" x=\"0\" y=\"0\" width=\"12\" height=\"58\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAA6CAAAAAChPeeLAAAAAmJLR0QA/4ePzL8AAAAlSURBVCiRY2Rg+M8ABYyMCDYDAyMSm4GJYZQzyhlCHNSkjJzIAW2FBW2AkhW7AAAAAElFTkSuQmCC\"/>\n<mask id=\"t6eea69-mask-4\">\n<use xlink:href=\"#t6eea69-source-239\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 63.781925 116.223784 L 63.781925 133.228154 L 80.790225 133.228154 L 80.790225 116.223784 Z M 63.781925 116.223784 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-0\" x=\"109.43823\" y=\"31.205636\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 128.977788 124.724004 C 128.977788 129.424079 125.169784 133.228154 120.473638 133.228154 C 115.777492 133.228154 111.969488 129.424079 111.969488 124.724004 C 111.969488 120.027858 115.777492 116.219854 120.473638 116.219854 C 125.169784 116.219854 128.977788 120.027858 128.977788 124.724004 Z M 128.977788 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-1\" x=\"157.338096\" y=\"31.205636\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -8.503349 59.528141 L -8.503349 76.536441 L 8.504951 76.536441 L 8.504951 59.528141 Z M -8.503349 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-0\" x=\"37.588928\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 56.692514 68.032291 C 56.692514 72.728437 52.88451 76.536441 48.188364 76.536441 C 43.492218 76.536441 39.684214 72.728437 39.684214 68.032291 C 39.684214 63.336146 43.492218 59.528141 48.188364 59.528141 C 52.88451 59.528141 56.692514 63.336146 56.692514 68.032291 Z M 56.692514 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-1\" x=\"85.4878\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 87.875707 59.528141 L 87.875707 76.536441 L 104.884007 76.536441 L 104.884007 59.528141 Z M 87.875707 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-2\" x=\"133.387666\" y=\"87.558478\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 136.06327 59.528141 L 136.06327 76.536441 L 153.071569 76.536441 L 153.071569 59.528141 Z M 136.06327 59.528141 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-3\" x=\"181.288526\" y=\"87.558478\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -8.503349 2.836429 L -8.503349 19.840799 L 8.504951 19.840799 L 8.504951 2.836429 Z M -8.503349 2.836429 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-0\" x=\"37.588928\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 56.692514 11.336649 C 56.692514 16.036724 52.88451 19.840799 48.188364 19.840799 C 43.492218 19.840799 39.684214 16.036724 39.684214 11.336649 C 39.684214 6.640503 43.492218 2.832499 48.188364 2.832499 C 52.88451 2.832499 56.692514 6.640503 56.692514 11.336649 Z M 56.692514 11.336649 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-0-1\" x=\"85.4878\" y=\"143.910326\"/>\n</g>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 80.790225 124.724004 L 111.969488 124.724004 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.379857 124.724004 L 96.379857 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.188364 96.378148 L 144.56742 96.378148 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.188364 96.378148 L 48.188364 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 96.379857 96.378148 L 96.379857 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 144.56742 96.378148 L 144.56742 76.536441 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 8.504951 68.032291 L 39.684214 68.032291 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 24.094582 68.032291 L 24.094582 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000801056 39.686435 L 48.188364 39.686435 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.000801056 39.686435 L 0.000801056 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<path fill=\"none\" stroke-width=\"1.0959\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 48.188364 39.686435 L 48.188364 19.840799 \" transform=\"matrix(0.994, 0, 0, -0.994, 39.87811, 135.94441)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"10.0929\" y=\"15.407\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"8.332526\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"11.857531\" y=\"71.758848\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"6.572152\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"10.097157\" y=\"128.11169\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t6eea69-glyph-1-0\" x=\"13.61226\" y=\"128.11169\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "1/16",
+   "B": "1/8",
+   "C": "1/6",
+   "D": "1/4",
+   "E": "1/2"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "1/8"
+  },
+  "celdiriciler": {
+   "A": "III-2’nin taşıyıcı olma olasılığını (1/2) iki kez hesaba katmış: 1/2 × 1/2 × 1/2 × 1/2.",
+   "C": "Hastalığı otozomal çekinik sanıp sağlıklı III-2’nin taşıyıcı olma olasılığını 2/3 almış: 2/3 × 1/4.",
+   "D": "III-2’yi kesin taşıyıcı saymış: taşıyıcı annenin hasta çocuk olasılığı 1/4, ama III-2’nin taşıyıcılığı yalnızca 1/2 olasılıklıdır.",
+   "E": "Cinsiyet olasılığını hesaba katmamış; taşıyıcı annenin her çocuğunun yarısının hasta olacağını sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Çiftin ilk çocuğunun hasta olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Eşeye bağlı çekinik kalıtım",
+    "ifade": "Erkeğin tek X’i vardır, çekinik alel taşıyorsa hastadır · Taşıyıcı anne (XRXr) ile sağlıklı baba (XRY) çaprazında yalnız erkek çocuklar hasta olabilir · Birbirini izleyen bağımsız olayların olasılıkları çarpılır"
+   }
+  ],
+  "ipuclari": [
+   "III-2’nin taşıyıcı olma olasılığını ayrı hesapla; sonra taşıyıcı bir annenin ve sağlıklı bir babanın çocuğunda hastalığın görülme olasılığını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Kalıtım biçimini kullan",
+    "aciklama": "Hastalık X’e bağlı çekiniktir; erkekte tek çekinik alel hastalık yapar, kızın hasta olması için iki çekinik alel gerekir.",
+    "islem": "Erkek: XrY hasta · Kız: XrXr hasta"
+   },
+   {
+    "baslik": "II-2’nin genotipini bul",
+    "aciklama": "II-2 sağlıklı olduğu halde hasta oğlu III-1’i vardır; oğlu Xr’yi yalnız annesinden alabilir.",
+    "islem": "II-2 = XRXr (kesin taşıyıcı)"
+   },
+   {
+    "baslik": "III-2’nin taşıyıcılığını hesapla",
+    "aciklama": "III-2, babası II-1’den XR alır; annesinden XR ya da Xr alması eşit olasılıklıdır.",
+    "islem": "P(taşıyıcı) = 1/2"
+   },
+   {
+    "baslik": "Çocuğun hasta olma olasılığı",
+    "aciklama": "Taşıyıcı anne ile sağlıklı babanın hasta çocuğu yalnız erkek (1/2) ve Xr almış (1/2) olabilir.",
+    "islem": "1/2 × 1/2 = 1/4"
+   },
+   {
+    "baslik": "Olasılıkları çarp",
+    "aciklama": "Önce III-2’nin taşıyıcı olması gerekir.",
+    "islem": "1/2 × 1/4 = 1/8"
+   }
+  ],
+  "puf": "Önce “anne taşıyıcı mı, olasılığı nedir?” sorusunu çöz, sonra taşıyıcı anne için çocuk olasılığını (1/4) bununla çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-04 (soyağacında olasılık hesabı) · X’e bağlı çekinik, III-2 taşıyıcılık olasılığı",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0005",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Dihibrit Çaprazlama",
+  "k": "bio|Kalıtım",
+  "kazanim": "Dihibrit çaprazlamada oluşabilecek ve oluşamayacak genotip ve fenotipleri belirler.",
+  "tipId": "by-kl3-dihibrit",
+  "tip": "Dihibrit çaprazlama ve olasılık",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Domateslerde kırmızı meyve (K), sarı meyve (k) üzerine; yüksek boy (B), bodur boy (b) üzerine tam baskındır ve iki gen çifti farklı kromozomlardadır. Bir araştırmacı, kırmızı meyveli ve boyu heterozigot yüksek (KKBb) bir bitkiyi, sarı meyveli ve boyu heterozigot yüksek (kkBb) bir bitkiyle çaprazlıyor. Krossing-over ve mutasyon gerçekleşmemiştir.\nBuna göre, bu çaprazlamadan elde edilen yavru bitkiler arasında aşağıdakilerden hangisi bulunmaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "Meyvesi kırmızı ve boyu yüksek olan bir domates bitkisi",
+   "B": "Meyvesi kırmızı ve boyu bodur olan bir domates bitkisi",
+   "C": "KkBb genotipli bir domates bitkisi",
+   "D": "Kkbb genotipli bir domates bitkisi",
+   "E": "Meyvesi sarı ve boyu yüksek olan bir domates bitkisi"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "Meyvesi sarı ve boyu yüksek olan bir domates bitkisi"
+  },
+  "celdiriciler": {
+   "A": "KkB_ genotipli yavrular vardır: Bb × Bb çaprazında yüksek boylu yavrular 3/4 oranındadır ve hepsi Kk olduğundan kırmızıdır. Bu fenotip gözlenir.",
+   "B": "Bb × Bb çaprazında bb (1/4) oluşur ve yavrular Kk’dır; kırmızı ve bodur yavrular gözlenir.",
+   "C": "Yavrular Kk’dır ve Bb × Bb çaprazında Bb (1/2) oluşur; KkBb genotipi gözlenir.",
+   "D": "Kk’ye bb (1/4) eşlik edebilir; Kkbb genotipi oluşur."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
+  },
+  "istenen": "Yavrular arasında gözlenmeyen sınıf.",
+  "bilgi": [
+   {
+    "ad": "Dihibrit çaprazlama",
+    "ifade": "Bağımsız ayrılan gen çiftleri ayrı ayrı çaprazlanıp sonuçlar çarpılır · Heterozigot × heterozigot (Aa × Aa) çaprazında çekinik fenotip 1/4 oranındadır"
+   }
+  ],
+  "ipuclari": [
+   "Her gen çiftini ayrı ayrı çaprazla ve oluşabilecek yavru genotiplerini yaz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gametleri yaz",
+    "aciklama": "KKBb bireyi KB ve Kb, kkBb bireyi kB ve kb gameti oluşturur.",
+    "islem": "KKBb: KB, Kb · kkBb: kB, kb"
+   },
+   {
+    "baslik": "Her gen çiftini ayrı çaprazla",
+    "aciklama": "K geni için KK × kk, B geni için Bb × Bb çaprazlanır.",
+    "islem": "Meyve rengi: tamamı Kk · Boy: 1 BB : 2 Bb : 1 bb"
+   },
+   {
+    "baslik": "Oluşan genotipleri birleştir",
+    "aciklama": "Yavruların hepsi Kk’dır; boy bakımından BB, Bb ya da bb olabilir.",
+    "islem": "KkBB, KkBb, Kkbb"
+   },
+   {
+    "baslik": "Fenotipleri değerlendir",
+    "aciklama": "Tüm yavrular kırmızı meyvelidir; sarı meyveli (kk) yavru oluşmaz.",
+    "islem": "Sarı meyveli bitki gözlenmez"
+   }
+  ],
+  "puf": "Gen çiftlerini ayrı ele alıp olası gamet birleşimlerini yazarak hangi sınıfların oluştuğunu tara.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-05 (dihibrit çaprazlama ve olasılık) · AABb tipi homozigot ebeveyn, görülmeyen fenotip",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0006",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Eşeye Bağlı ve Bağımsız Kalıtım",
+  "k": "bio|Kalıtım",
+  "kazanim": "Eşeye bağlı ve otozomal gen çiftini birlikte içeren çaprazlamada koşullu olasılık hesaplar.",
+  "tipId": "by-kl3-dihibrit",
+  "tip": "Dihibrit çaprazlama ve olasılık",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Meyve sineklerinde kırmızı göz (W), beyaz göz (w) üzerine baskındır ve göz rengi geni X kromozomundadır; Y’de karşılığı yoktur. Uzun kanat (V), kısa kanat (v) üzerine baskındır ve kanat geni otozomaldir; iki gen yeri bağımsız ayrılır. Göz rengi bakımından taşıyıcı, kanat bakımından heterozigot bir dişi sinek ile kırmızı gözlü, heterozigot uzun kanatlı bir erkek sinek çiftleştiriliyor.\nBuna göre, bu çiftleşmeden doğan yavrular arasından rastgele seçilen bir erkek sineğin beyaz gözlü ve uzun kanatlı olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "3/16",
+   "B": "1/4",
+   "C": "3/8",
+   "D": "1/2",
+   "E": "9/16"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "3/8"
+  },
+  "celdiriciler": {
+   "A": "Zaten erkek yavru seçildiği halde erkek olma olasılığını (1/2) bir kez daha çarpmış: 1/2 × 3/8.",
+   "B": "Kanat bakımından uzun kanat olasılığını 1/2 almış (Vv × vv çaprazı gibi düşünmüş); oysa Vv × Vv çaprazında 3/4’tür: 1/2 × 1/2.",
+   "D": "Kanat özelliğini hiç hesaba katmamış; yalnızca erkeklerin beyaz gözlü olma olasılığını (1/2) vermiş.",
+   "E": "Göz rengini de otozomal sanıp iki özelliği de baskın hesaplamış: 3/4 × 3/4. Oysa istenen beyaz gözlüdür ve göz rengi X’e bağlıdır."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "bilgi",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "Seçilen erkek yavrunun beyaz gözlü ve uzun kanatlı olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Bağımsız özelliklerde olasılık",
+    "ifade": "Farklı kromozomlardaki gen çiftleri bağımsız ayrılır; olasılıklar çarpılır · Eşeye bağlı genlerde erkek X’ini yalnız annesinden alır, Y’yi babadan"
+   }
+  ],
+  "ipuclari": [
+   "Göz rengi ve kanat özelliğini ayrı gen yerleri olarak ele al; “erkek yavru seçildi” bilgisinin hangi olasılığı değiştirdiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Gametleri yaz",
+    "aciklama": "Dişi XWXw Vv; erkek XWY Vv. Göz rengi için X’ler, kanat için V alelleri ayrılır.",
+    "islem": "Dişi: XW/Xw ve V/v · Erkek: XW/Y ve V/v"
+   },
+   {
+    "baslik": "Göz rengini erkekler için hesapla",
+    "aciklama": "Erkek yavru Y’yi babadan, X’i annesinden alır; Xw alma olasılığı 1/2’dir.",
+    "islem": "Erkeklerde beyaz göz: 1/2"
+   },
+   {
+    "baslik": "Kanat için hesapla",
+    "aciklama": "Vv × Vv çaprazında uzun kanat (VV, Vv) olasılığı 3/4’tür.",
+    "islem": "Uzun kanat: 3/4"
+   },
+   {
+    "baslik": "Olasılıkları çarp",
+    "aciklama": "Gen yerleri bağımsız olduğundan oranlar çarpılır; erkek seçildiği için cinsiyet olasılığı katılmaz.",
+    "islem": "1/2 × 3/4 = 3/8"
+   }
+  ],
+  "puf": "Gen çiftlerini ayrı hesapla ve çarp; cinsiyet zaten verilmişse cinsiyet olasılığını bir daha katma.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-06 (dihibrit çaprazlama ve olasılık) · meyve sineği, X’e bağlı göz rengi + otozomal kanat",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0007",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Kan Grupları",
+  "k": "bio|Kalıtım",
+  "kazanim": "ABO ve Rh kan gruplarını birlikte değerlendirerek oluşabilecek ve oluşamayacak çocuk özelliklerini belirler.",
+  "tipId": "by-kl3-abo",
+  "tip": "Kan grupları ve ABO kalıtımı",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir çiftin annesi AB kan grubundan ve Rh−, babası O kan grubundan ve Rh+’dır. Çiftin ilk çocuğu Rh− doğmuştur. ABO ve Rh kan grubu özellikleri bağımsız kalıtılmaktadır ve ailede mutasyon gerçekleşmemiştir.\nBuna göre, bu çiftin ikinci çocuğunun kan grubu özellikleri bakımından aşağıdakilerden hangisi olamaz?",
+  "sekil": null,
+  "siklar": {
+   "A": "AB kan grubundan, Rh+",
+   "B": "A kan grubundan, Rh+",
+   "C": "A kan grubundan, Rh−",
+   "D": "B kan grubundan, Rh+",
+   "E": "B kan grubundan, Rh−"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "AB kan grubundan, Rh+"
+  },
+  "celdiriciler": {
+   "B": "Anne AB, baba O olduğundan A grubu (AO) oluşabilir; baba Rr olduğu için Rh+ (Rr) da oluşur. Bu kombinasyon beklenir.",
+   "C": "AO genotipi ve Rh− (rr) birlikte oluşabilir; baba Rr’dir ve r aleli aktarabilir.",
+   "D": "BO genotipi ve Rh+ (Rr) birlikte oluşabilir; kan grubu ve Rh bağımsız kalıtılır.",
+   "E": "BO genotipi ve Rh− (rr) birlikte oluşabilir; ikisi de annenin ve babanın verebileceği alellerdendir."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "İkinci çocukta beklenmeyen kan grubu özelliği.",
+  "bilgi": [
+   {
+    "ad": "ABO ve Rh",
+    "ifade": "ABO ve Rh farklı gen yerlerindedir, birbirinden bağımsız kalıtılır · Rh+ baskın (R), Rh− çekinik (rr)’dir · AB grubu çocuk için bir ebeveynden A, diğerinden B aleli gelmelidir"
+   }
+  ],
+  "ipuclari": [
+   "Babanın hangi ABO alelini aktarabileceğine bak; AB grubu için çocukta hangi iki alelin birleşmesi gerektiğini düşün."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ebeveynlerin genotipini yaz",
+    "aciklama": "Anne AB ve Rh−’dir (rr). Baba O (OO) ve Rh+’dır; ilk çocuk Rh− olduğundan baba heterozigottur (Rr).",
+    "islem": "Anne: ABrr · Baba: OORr"
+   },
+   {
+    "baslik": "ABO kan grubunu bul",
+    "aciklama": "Anne A ya da B aleli, baba yalnız O aleli aktarır.",
+    "islem": "Çocuk: AO (A) ya da BO (B)"
+   },
+   {
+    "baslik": "Rh’yi bul",
+    "aciklama": "Anne yalnız r, baba R ya da r aktarır; çocuk Rh+ ya da Rh− olabilir.",
+    "islem": "Rh+ veya Rh−"
+   },
+   {
+    "baslik": "Oluşamayacak sınıfı seç",
+    "aciklama": "ABO ve Rh bağımsızdır; çocuk AB ya da O olamaz.",
+    "islem": "AB grubundan çocuk gözlenmez"
+   }
+  ],
+  "puf": "AB çocuk için ebeveynlerden birinde A, diğerinde B aleli gerekir; ebeveynlerden biri O (OO) ise çocuk AB ya da O olamaz (diğeri AB ise).",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-07 (kan grupları ve abo kalıtımı) · AB Rh− anne × O Rh+ baba, ilk çocuk Rh−",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0008",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Eşeye Bağlı Kalıtım",
+  "k": "bio|Kalıtım",
+  "kazanim": "Üç ailenin verisinden X’e bağlı çekinik kalıtımda kesin genotipleri belirler.",
+  "tipId": "by-kl3-eseye",
+  "tip": "Eşeye bağlı kalıtım",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 5,
+  "metin": "Bir hastalığın X kromozomu üzerindeki çekinik bir alelle belirlendiği, Y kromozomunda bu gen yerinin bulunmadığı bilinmektedir. Üç ailenin her birinin ebeveyn, bir oğul ve bir kız çocuğunun durumu aşağıdaki tabloda verilmiştir. Ailelerde mutasyon gerçekleşmemiştir.\nBuna göre,\nI. 1. ailenin annesi taşıyıcıdır.\nII. 3. ailenin annesi homozigot baskındır.\nIII. 2. ailenin kız çocuğu hasta olmayıp taşıyıcıdır.\nyargılarından hangileri kesinlikle doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 338 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"334\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Aile</text><text x=\"91.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Anne</text><text x=\"161.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Baba</text><text x=\"231.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Oğul</text><text x=\"301.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kız</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">1</text><text x=\"91.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"161.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"231.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Hasta</text><text x=\"301.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">2</text><text x=\"91.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Hasta</text><text x=\"161.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"231.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Hasta</text><text x=\"301.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">3</text><text x=\"91.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"161.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Hasta</text><text x=\"231.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><text x=\"301.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Sağlıklı</text><line x1=\"2\" y1=\"2\" x2=\"336\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"336\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"336\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"336\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"336\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"106\" stroke-width=\"1\"/><line x1=\"126\" y1=\"2\" x2=\"126\" y2=\"106\" stroke-width=\"1\"/><line x1=\"196\" y1=\"2\" x2=\"196\" y2=\"106\" stroke-width=\"1\"/><line x1=\"266\" y1=\"2\" x2=\"266\" y2=\"106\" stroke-width=\"1\"/><line x1=\"336\" y1=\"2\" x2=\"336\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "I ve III",
+   "D": "II ve III",
+   "E": "I, II ve III"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "I ve III"
+  },
+  "celdiriciler": {
+   "A": "III atlanmış: 2. ailede anne hastadır (XdXd) ve baba sağlıklıdır; kızlar babadan XD, anneden Xd alır. Kız çocuğu taşıyıcıdır, oğul hastadır.",
+   "B": "II gereksiz seçilmiş: 3. ailede baba hastadır ve çocukların hepsi sağlıklıdır; anne XDXD ya da XDXd olabilir. Annenin taşıyıcı olmadığı kesin değildir. · I atlanmış: 1. ailede sağlıklı anne hasta bir oğul doğurmuştur; oğul Xd’yi yalnız annesinden alabileceği için anne XDXd taşıyıcıdır. · III atlanmış: 2. ailede anne hastadır (XdXd) ve baba sağlıklıdır; kızlar babadan XD, anneden Xd alır. Kız çocuğu taşıyıcıdır, oğul hastadır.",
+   "D": "II gereksiz seçilmiş: 3. ailede baba hastadır ve çocukların hepsi sağlıklıdır; anne XDXD ya da XDXd olabilir. Annenin taşıyıcı olmadığı kesin değildir. · I atlanmış: 1. ailede sağlıklı anne hasta bir oğul doğurmuştur; oğul Xd’yi yalnız annesinden alabileceği için anne XDXd taşıyıcıdır.",
+   "E": "II gereksiz seçilmiş: 3. ailede baba hastadır ve çocukların hepsi sağlıklıdır; anne XDXD ya da XDXd olabilir. Annenin taşıyıcı olmadığı kesin değildir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "X’e bağlı çekinik kalıtım",
+    "ifade": "Erkek çocuk X’ini yalnız annesinden alır · Hasta annenin (XdXd) oğulları hastadır, kızları sağlıklı baba ile taşıyıcıdır · Sağlıklı annenin hasta oğlu varsa anne taşıyıcıdır"
+   }
+  ],
+  "ipuclari": [
+   "Her ailede çocukların durumundan, ebeveynlerin taşıyabileceği X alellerini ayrı ayrı belirle; birden çok olasılık kalan aileyi ayır."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Anne ve baba genotiplerini tara",
+    "aciklama": "Her ailede çocukların durumuna uyan tüm ebeveyn genotipleri taranır.",
+    "islem": "1. aile: anne XDXd · 2. aile: anne XdXd · 3. aile: anne XDXD veya XDXd"
+   },
+   {
+    "baslik": "I. yargıyı değerlendir",
+    "aciklama": "1. ailede sağlıklı anne hasta bir oğul doğurmuştur; oğul Xd’yi yalnız annesinden alabileceği için anne XDXd taşıyıcıdır.",
+    "islem": "I: doğru"
+   },
+   {
+    "baslik": "II. yargıyı değerlendir",
+    "aciklama": "3. ailede baba hastadır ve çocukların hepsi sağlıklıdır; anne XDXD ya da XDXd olabilir. Annenin taşıyıcı olmadığı kesin değildir.",
+    "islem": "II: yanlış"
+   },
+   {
+    "baslik": "III. yargıyı değerlendir",
+    "aciklama": "2. ailede anne hastadır (XdXd) ve baba sağlıklıdır; kızlar babadan XD, anneden Xd alır. Kız çocuğu taşıyıcıdır, oğul hastadır.",
+    "islem": "III: doğru"
+   },
+   {
+    "baslik": "Sonucu birleştir",
+    "aciklama": "Doğru yargılar yukarıdaki değerlendirmeden alınır.",
+    "islem": "Cevap: I ve III"
+   }
+  ],
+  "puf": "Hasta oğlu ya da hasta kızı olan sağlıklı annenin genotipi kesindir (taşıyıcı); yalnız sağlıklı çocukları olan annede AA/Aa belirsizliği kalır.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-08 (eşeye bağlı kalıtım) · üç aile tablosu, X’e bağlı çekinik hastalık",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0009",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Çaprazlama Sonuçları",
+  "k": "bio|Kalıtım",
+  "kazanim": "Yavru fenotip sayılarından ebeveyn genotipleri hakkında kesin çıkarımları belirler.",
+  "tipId": "by-kl3-capraz-tablo",
+  "tip": "Çaprazlama sonuç tablosundan genotip çıkarma",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 6,
+  "metin": "Hamsterlerde sarı tüy (A), kahverengi tüy (a) üzerine; kısa tüy (B), uzun tüy (b) üzerine tam baskındır ve genler farklı kromozomlardadır. İki ebeveynin çaprazlanmasından elde edilen 160 yavrunun fenotip sayıları aşağıdaki tabloda verilmiştir. Ebeveyn genotipleri bilinmemektedir; mutasyon gerçekleşmemiştir.\nBuna göre,\nI. Ebeveynlerden biri her iki özellik bakımından çekinik homozigottur.\nII. Yavruların yarısı sarı tüylüdür.\nIII. Ebeveynlerin ikisi de her iki gen çifti bakımından heterozigottur.\nyargılarından hangileri kesinlikle doğrudur?",
+  "sekil": "<svg viewBox=\"0 0 330 134\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"326\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"51.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Tüy rengi</text><text x=\"157.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Tüy uzunluğu</text><text x=\"271.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Yavru sayısı</text><text x=\"51.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Sarı</text><text x=\"157.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kısa</text><text x=\"271.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><text x=\"51.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Sarı</text><text x=\"157.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Uzun</text><text x=\"271.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><text x=\"51.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kahverengi</text><text x=\"157.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Kısa</text><text x=\"271.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><text x=\"51.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Kahverengi</text><text x=\"157.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">Uzun</text><text x=\"271.0\" y=\"123.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">40</text><line x1=\"2\" y1=\"2\" x2=\"328\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"328\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"328\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"328\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"328\" y2=\"106\" stroke-width=\"1\"/><line x1=\"2\" y1=\"132\" x2=\"328\" y2=\"132\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"132\" stroke-width=\"1\"/><line x1=\"100\" y1=\"2\" x2=\"100\" y2=\"132\" stroke-width=\"1\"/><line x1=\"214\" y1=\"2\" x2=\"214\" y2=\"132\" stroke-width=\"1\"/><line x1=\"328\" y1=\"2\" x2=\"328\" y2=\"132\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "Yalnız I",
+   "B": "Yalnız II",
+   "C": "Yalnız III",
+   "D": "I ve II",
+   "E": "I ve III"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "Yalnız II"
+  },
+  "celdiriciler": {
+   "A": "I gereksiz seçilmiş: 1:1:1:1 oranı AaBb × aabb çaprazından gelebilir; ancak Aabb × aaBb çaprazı da aynı oranı verir. Bu durumda ebeveynlerin hiçbiri çift çekinik değildir; yargı kesin değildir. · II atlanmış: Her iki çaprazda da bir gen çifti Aa × aa, diğeri Bb × bb ya da bb × Bb biçimindedir; her özellikte yavruların yarısı baskın, yarısı çekinik fenotiplidir.",
+   "C": "III gereksiz seçilmiş: AaBb × AaBb çaprazı 9:3:3:1 oranı verir; yavruların 1:1:1:1 dağılması iki ebeveynin ikisinin birden AaBb olduğunu göstermez. · II atlanmış: Her iki çaprazda da bir gen çifti Aa × aa, diğeri Bb × bb ya da bb × Bb biçimindedir; her özellikte yavruların yarısı baskın, yarısı çekinik fenotiplidir.",
+   "D": "I gereksiz seçilmiş: 1:1:1:1 oranı AaBb × aabb çaprazından gelebilir; ancak Aabb × aaBb çaprazı da aynı oranı verir. Bu durumda ebeveynlerin hiçbiri çift çekinik değildir; yargı kesin değildir.",
+   "E": "I gereksiz seçilmiş: 1:1:1:1 oranı AaBb × aabb çaprazından gelebilir; ancak Aabb × aaBb çaprazı da aynı oranı verir. Bu durumda ebeveynlerin hiçbiri çift çekinik değildir; yargı kesin değildir. · III gereksiz seçilmiş: AaBb × AaBb çaprazı 9:3:3:1 oranı verir; yavruların 1:1:1:1 dağılması iki ebeveynin ikisinin birden AaBb olduğunu göstermez. · II atlanmış: Her iki çaprazda da bir gen çifti Aa × aa, diğeri Bb × bb ya da bb × Bb biçimindedir; her özellikte yavruların yarısı baskın, yarısı çekinik fenotiplidir."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi",
+   "E": "bilgi"
+  },
+  "istenen": "Kesinlikle doğru olan yargılar.",
+  "bilgi": [
+   {
+    "ad": "Fenotip oranı ve genotip",
+    "ifade": "Fenotip oranları ebeveyn gametlerinin birleşimlerinden bulunur · Örnek: AaBb × AaBb çaprazı 9:3:3:1 oranını verir · Aynı oranı veren birden çok ebeveyn genotip çifti bulunabilir"
+   }
+  ],
+  "ipuclari": [
+   "Tablodaki sayıların oranını yaz ve bu oranı veren bütün ebeveyn genotip çiftlerini ayrı ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Fenotip oranını yaz",
+    "aciklama": "Dört fenotip sınıfında yavru sayıları eşittir.",
+    "islem": "1 : 1 : 1 : 1"
+   },
+   {
+    "baslik": "Ebeveyn çiftlerini tara",
+    "aciklama": "Bu oran AaBb × aabb ya da Aabb × aaBb çaprazından gelir.",
+    "islem": "İki olası çift"
+   },
+   {
+    "baslik": "I. yargıyı değerlendir",
+    "aciklama": "1:1:1:1 oranı AaBb × aabb çaprazından gelebilir; ancak Aabb × aaBb çaprazı da aynı oranı verir. Bu durumda ebeveynlerin hiçbiri çift çekinik değildir; yargı kesin değildir.",
+    "islem": "I: yanlış"
+   },
+   {
+    "baslik": "II. yargıyı değerlendir",
+    "aciklama": "Her iki çaprazda da bir gen çifti Aa × aa, diğeri Bb × bb ya da bb × Bb biçimindedir; her özellikte yavruların yarısı baskın, yarısı çekinik fenotiplidir.",
+    "islem": "II: doğru"
+   },
+   {
+    "baslik": "III. yargıyı değerlendir",
+    "aciklama": "AaBb × AaBb çaprazı 9:3:3:1 oranı verir; yavruların 1:1:1:1 dağılması iki ebeveynin ikisinin birden AaBb olduğunu göstermez.",
+    "islem": "III: yanlış"
+   },
+   {
+    "baslik": "Sonucu birleştir",
+    "aciklama": "Doğru yargılar yukarıdaki değerlendirmeden alınır.",
+    "islem": "Cevap: Yalnız II"
+   }
+  ],
+  "puf": "Oranı verebilen tüm ebeveyn çiftlerini yaz; yalnızca hepsinde geçerli olan yargı “kesin”dir.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-09 (çaprazlama sonuç tablosundan genotip çıkarma) · hamster, fenotip sayıları tablosu",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytbio-kalitimuc-0010",
+  "ders": "TYT Biyoloji",
+  "konu": "Kalıtım · Eşeye Bağlı Kalıtım",
+  "k": "bio|Kalıtım",
+  "kazanim": "Eşeye bağlı kalıtımda çocuğun taşıyıcı kız olma olasılığını hesaplar.",
+  "tipId": "by-kl3-eseye",
+  "tip": "Eşeye bağlı kalıtım",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Renk körlüğü X kromozomu üzerindeki çekinik bir alelle (Xd) belirlenir ve Y kromozomunda karşılığı yoktur. Normal görüşlü bir anne ile normal görüşlü bir babanın ilk çocukları renk körü bir erkektir. Aile ikinci bir çocuk sahibi olmayı planlamaktadır. Ailede mutasyon gerçekleşmemiştir.\nBuna göre, ikinci çocuklarının renk körlüğü bakımından taşıyıcı bir kız olma olasılığı kaçtır?",
+  "sekil": null,
+  "siklar": {
+   "A": "0",
+   "B": "1/8",
+   "C": "1/4",
+   "D": "1/2",
+   "E": "3/4"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "1/4"
+  },
+  "celdiriciler": {
+   "A": "Kızların renk körlüğü geninin hiç taşınmayacağını sanmış; oysa kızlar annelerinden Xd alabilir ve taşıyıcı olur.",
+   "B": "Cinsiyet olasılığı ile aleli alma olasılığını yetmezmiş gibi bir kez daha (1/2) çarpmış: 1/2 × 1/2 × 1/2.",
+   "D": "Cinsiyeti hesaba katmamış; kız çocukların yarısının taşıyıcı olduğunu bulup bunu tüm çocuklara uygulamış.",
+   "E": "Sağlıklı görünen çocukların olasılığını (3/4) vermiş; taşıyıcı olma ile sağlıklı olmayı karıştırmış."
+  },
+  "celTur": {
+   "A": "bilgi",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "bilgi"
+  },
+  "istenen": "İkinci çocuğun taşıyıcı kız olma olasılığı.",
+  "bilgi": [
+   {
+    "ad": "Taşıyıcı birey",
+    "ifade": "Taşıyıcı kız, çekinik aleli taşıyan ama hastalığı göstermeyen kızdır (XDXd) · Olasılıklar her doğumda aynıdır"
+   }
+  ],
+  "ipuclari": [
+   "Önce ilk çocuğun durumundan ebeveyn genotiplerine ulaş."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ebeveyn genotiplerini yaz",
+    "aciklama": "Oğlu renk körü olan sağlıklı annenin Xd’yi taşıdığı kesindir; baba sağlıklı olduğundan XDY’dir.",
+    "islem": "Anne: XDXd · Baba: XDY"
+   },
+   {
+    "baslik": "Kız ve taşıyıcı olma olasılığını bul",
+    "aciklama": "Kız olması 1/2; annenin Xd aktarması 1/2.",
+    "islem": "1/2 × 1/2"
+   },
+   {
+    "baslik": "Sonucu yaz",
+    "aciklama": "Önceki çocuğun durumu sonraki çocuğu etkilemez.",
+    "islem": "1/4"
+   }
+  ],
+  "puf": "Önce annenin genotipini çocuğun fenotipinden bul; sonra cinsiyet ve alel olasılıklarını ayrı ayrı çarp.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-BYKL3-10 (eşeye bağlı kalıtım) · renk körü oğlu olan normal görüşlü çift",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

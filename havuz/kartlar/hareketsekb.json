@@ -1,0 +1,219 @@
+{
+ "konu": "Hareket Hız Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-HSB-01",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Üç bölümlü yol şeması",
+   "fikir": "Her bölümün yolu ve hızı şemadan okunur; bölüm süreleri toplanır, toplam yol toplam süreye bölünür.",
+   "tuzak": "Hızların ortalamasını almak; bir bölümün süresini atlamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrb-sema",
+   "tip": "Yol şeması ve ortalama hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-02",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Sokak ızgarası",
+   "fikir": "Olası yolların uzunlukları ayrı ayrı toplanıp en küçüğü seçilir; km/sa m/sn’ye çevrilerek süre bulunur.",
+   "tuzak": "Önce yatay gitmeyi en kısa sanmak; km/sa ile m/sn’yi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrb-izgara",
+   "tip": "Sokak ızgarası ve en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-03",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Hareket–bekleme çizelgesi",
+   "fikir": "Boyalı bölümlerin yolları toplanır; ortalama hız toplam süreye (bekleme dahil) bölünür.",
+   "tuzak": "Beklemeyi süreye katmamak; hızların ortalamasını almak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "hrb-gantt",
+   "tip": "Zaman çizelgesi ve ortalama hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-04",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Kilometre sayacı okuması",
+   "fikir": "İki sayaç okumasının farkından yol, saat farkından süre bulunup hız hesaplanır; kalan yol aynı hızla süreye çevrilir.",
+   "tuzak": "Saat farkını ondalık sanmak; hız yerine yolu kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hrb-sayac",
+   "tip": "Kilometre sayacı ve süre",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-05",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Dikdörtgen pistte karşılaşma",
+   "fikir": "Başlangıçtaki yay uzunluğu ile hızlar toplamından ilk karşılaşma süresi, çevre ile hızlar toplamından sonrakiler bulunur.",
+   "tuzak": "Her karşılaşma arasını ilk karşılaşma süresi saymak; çevreyi yanlış toplamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrb-dortgen",
+   "tip": "Dikdörtgen pistte karşılaşma",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-06",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Tırmanış–iniş profili",
+   "fikir": "Tırmanış ve inişin süreleri ayrı bulunup toplanır, gidiş-dönüş için iki katı alınır.",
+   "tuzak": "İniş hızını tırmanış hızı sanmak; hızların ortalamasıyla süre bulmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "hrb-profil",
+   "tip": "Tırmanış ve iniş süresi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-07",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Eşit aralıklı direkler",
+   "fikir": "Direk numaralarının farkı aralık sayısını verir; şemadaki bilinen aralıktan bir aralığın uzunluğu bulunur; hız km/sa’ye çevrilir.",
+   "tuzak": "Direk sayısını aralık sanmak; dönüşümü ters yapmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrb-direk",
+   "tip": "Eşit aralıklı direkler ve hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-08",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Ortalama hız denetimi",
+   "fikir": "İki kamera arası uzaklık hız sınırına bölünüp saat cinsinden süre bulunur ve saniyeye çevrilir.",
+   "tuzak": "Saati dakika ya da saniye sanmak; km/sa ile m/sn’yi karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "hrb-radar",
+   "tip": "Ortalama hız denetimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-09",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Tekerlek çevresi ve hız",
+   "fikir": "Yarıçaptan çevre, devir sayısından dakikadaki yol, oradan km/sa hesaplanır.",
+   "tuzak": "Yarıçap yerine çap kullanmak; yalnız πr almak; birim çevirmek.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "hrb-tekerlek",
+   "tip": "Tekerlek devri ve hız",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  },
+  {
+   "id": "K-HSB-10",
+   "konu": "Hareket Hız Problemleri",
+   "alt": "Üçgen yol, iki güzergâh",
+   "fikir": "Eksik kenar bulunur; iki güzergâhın uzunlukları ve süreleri eşitlenip bekleme süresi çıkarılarak hız bulunur.",
+   "tuzak": "Beklemeyi süreye eklemek; yolları eşit sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "hrb-ucgen",
+   "tip": "Üçgen yol ve aynı anda varış",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu hareket soruları; yalnız mantık) · MEB 9. sınıf problemler"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "hrb-sema",
+   "ad": "Yol şeması ve ortalama hız",
+   "kartlar": [
+    "K-HSB-01"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-izgara",
+   "ad": "Sokak ızgarası ve en kısa yol",
+   "kartlar": [
+    "K-HSB-02"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-gantt",
+   "ad": "Zaman çizelgesi ve ortalama hız",
+   "kartlar": [
+    "K-HSB-03"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-sayac",
+   "ad": "Kilometre sayacı ve süre",
+   "kartlar": [
+    "K-HSB-04"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-dortgen",
+   "ad": "Dikdörtgen pistte karşılaşma",
+   "kartlar": [
+    "K-HSB-05"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-profil",
+   "ad": "Tırmanış ve iniş süresi",
+   "kartlar": [
+    "K-HSB-06"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-direk",
+   "ad": "Eşit aralıklı direkler ve hız",
+   "kartlar": [
+    "K-HSB-07"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-radar",
+   "ad": "Ortalama hız denetimi",
+   "kartlar": [
+    "K-HSB-08"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-tekerlek",
+   "ad": "Tekerlek devri ve hız",
+   "kartlar": [
+    "K-HSB-09"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  },
+  {
+   "tipId": "hrb-ucgen",
+   "ad": "Üçgen yol ve aynı anda varış",
+   "kartlar": [
+    "K-HSB-10"
+   ],
+   "uygulamaKonu": "prob|Hareket Hız Problemleri"
+  }
+ ]
+}
