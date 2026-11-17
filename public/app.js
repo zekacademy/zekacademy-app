@@ -438,8 +438,8 @@ const dayTasks = (s, date) => ((s.weeks||{})[pStart(s,date)]||{})[pIdx(s,date)] 
 function setDayTasks(s, date, list){ const w = pStart(s,date); s.weeks = s.weeks||{}; s.weeks[w] = s.weeks[w]||{}; s.weeks[w][pIdx(s,date)] = list; }
 function timerMin(s){ return s.timer && s.timer.start ? Math.min(240, (Date.now()-s.timer.start)/60000) : 0; } /* 4 saat tavan (KRON_TAVAN) */
 function minutes(s, date, live=true){ let m = (s.gunluk||{})[date]||0; if(live && s.timer && s.timer.start && iso(new Date(s.timer.start))===date) m += timerMin(s); return m; }
-/* gecen=true: sadece bugüne kadarki günler (Salı günü haftanın 1. ve 2. günü) — uyum, haftanın bitmemiş günlerini saymaz */
-function weekStats(s, w, gecen=false){ let all=0,done=0,min=0; const t = today(); for(const d of pDays(s,w)){ if(gecen && d > t) continue; const l=dayTasks(s,d); all+=l.length; done+=l.filter(t=>t.done).length; min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
+/* gecen=true: uyum gece 00:00'da skorlanır — sadece biten günler (haftanın başından dünkü güne kadar) sayılır; çalışma süresi bugün dahil. "hepsi": haftanın tüm görevleri */
+function weekStats(s, w, gecen=false){ let all=0,done=0,min=0,hepsi=0; const t = today(); for(const d of pDays(s,w)){ const l=dayTasks(s,d); hepsi += l.length; if(gecen && d > t) continue; min+=minutes(s,d); if(gecen && d===t) continue; all+=l.length; done+=l.filter(x=>x.done).length; } return {all,done,min,hepsi,pct: all? done/all : null}; }
 function active(s, d){ return minutes(s,d,false)>0 || dayTasks(s,d).some(t=>t.done) || (s.timer && iso(new Date(s.timer.start))===d); }
 function streak(s){ let c=0, d=today(); if(!active(s,d)) d=addDays(d,-1); while(active(s,d) && c<400){ c++; d=addDays(d,-1); } return c; }
 /* ---------- Giriş takibi (koç) ---------- */
@@ -485,7 +485,7 @@ function coachMetrics(s){
     if(gd.length>=2 && all && done/all<0.5 && !(hed && dk >= hed*0.7)) flags.push(["bad","Program uyumu düşük"]); }
   if(idle==null) flags.push(["warn","Henüz hareket yok"]); else if(idle>=3) flags.push(["bad",idle+" gündür hareket yok"]);
   if(dlt!=null && dlt<0) flags.push(["warn","Son TYT’de düşüş"]);
-  if(w.all===0) flags.push(["warn","Bu hafta programı yok"]);
+  if(w.hepsi===0) flags.push(["warn","Bu hafta programı yok"]);
   const score = flags.reduce((a,f)=>a+(f[0]==="bad"?2:1),0);
   return {w, lt, dlt, idle, flags, score, streak:streak(s)};
 }
