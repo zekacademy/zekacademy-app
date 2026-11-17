@@ -49,7 +49,6 @@ export function veliEposta(s, o, { kocAd = "Zekeriya Hoca" } = {}){
     ...(degisim != null && Math.abs(degisim) >= 30 ? [["Geçen haftaya göre", `${degisim > 0 ? "+" : "−"}${sureYaz(Math.abs(degisim))}`]] : []),
     ["Çalıştığı gün", `${o.gun} / 7`],
     ...(o.enIyi ? [["En verimli günü", `${o.enIyi.tam} · ${sureYaz(o.enIyi.dk)}`]] : []),
-    ...(o.gorev.hepsi ? [["Tamamlanan görev", `${o.gorev.biten} / ${o.gorev.hepsi} (%${o.uyum})`]] : []),
     ...(o.gorusme ? [["Koçuyla haftalık görüşme", "Yapıldı ✓"]] : []),
     ...(o.kalan != null ? [["YKS'ye kalan", `${o.kalan} gün`]] : [])];
   const den = o.denemeler.map(d => `${d.tur} denemesi${d.ad ? ` (${d.ad})` : ""}: ${virgul(d.net)} net${farkYaz(d.fark)}`);
