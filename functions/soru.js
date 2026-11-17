@@ -1,6 +1,7 @@
 /* Soru Çözüm Merkezi: saf mantık (model seçimi, hak, bütçe, bonus). Testleri: tests/soru.test.js */
 import { addDays, dayTasks } from "./logic.js";
 import { COZUM_BILGI } from "./cozum-bilgi.js";
+import { TURKCE_BECERI } from "./turkce-beceri.js";
 
 export const AI_VARSAYILAN = {
   acik: "kapali",            // "kapali" | "pilot" | "herkes"
@@ -170,6 +171,10 @@ export function cozIstegi({ metin, anahtar, tekrar }){
     + (anahtar ? `\n\nCevap anahtarına göre doğru cevap: ${anahtar} şıkkı. Çözümünü buna göre kontrol et; uyuşmuyorsa soruyu baştan farklı bir yoldan tekrar çöz, yine uyuşmuyorsa emin=false yap ve kendi bulduğun en doğru çözümü göster.` : "\n\nCevap anahtarı verilmedi.")
     + (tekrar ? `\n\nÖğrenci önceki çözümün yanlış olabileceğini söyledi. Önceki çözüm özeti: ${String(tekrar).slice(0, 2000)}\nSoruyu baştan, çok dikkatli çöz.` : "");
 }
+
+/* Türkçe sorusu mu? (Türkçe becerisi yalnız bunlarda eklenir) */
+export function turkceMi(ders){ return /türkçe|turkce|paragraf/i.test(String(ders || "")); }
+export { TURKCE_BECERI };
 
 /* Sözel ders mi? (ikinci oy yalnız sözelde: Türkçe, edebiyat, tarih, coğrafya, felsefe, din, sosyal) */
 export function sozelMi(ders){ return /türkçe|turkce|edebiyat|tarih|coğrafya|cografya|felsefe|psikoloji|sosyoloji|mantık|din|sosyal|inkılap|paragraf/i.test(String(ders || "")); }

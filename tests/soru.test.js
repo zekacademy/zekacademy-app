@@ -120,3 +120,12 @@ test("hakem ve anahtar seçimi", async () => {
   assert.equal(anahtarlaSec(H, G, "B").r.ad, "h"); assert.equal(anahtarlaSec(H, G, "D").r.ad, "g");
   const a3 = anahtarlaSec(H, G, "E"); assert.equal(a3.r.ad, "g"); assert.equal(a3.r.emin, false);
 });
+
+test("Türkçe becerisi: yalnız Türkçe sorularında, sabit kısımdan ayrı ve sınırlı uzunlukta", async () => {
+  const { turkceMi, TURKCE_BECERI, COZ_SABIT } = await import("../functions/soru.js");
+  assert.equal(turkceMi("TYT Türkçe"), true); assert.equal(turkceMi("Paragraf"), true);
+  assert.equal(turkceMi("TYT Tarih"), false); assert.equal(turkceMi("TYT Matematik"), false); assert.equal(turkceMi(undefined), false);
+  assert.match(TURKCE_BECERI, /HER ŞIKKI ETİKETLE/); assert.match(TURKCE_BECERI, /KARAR VERMEDEN ÖNCE TARA/);
+  assert.ok(!COZ_SABIT.includes(TURKCE_BECERI), "beceri her soruda değil, yalnız Türkçede gider");
+  assert.ok(TURKCE_BECERI.split(/\s+/).length < 2000, "Türkçe becerisi kısa kalmalı");
+});
