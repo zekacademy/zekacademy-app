@@ -11,14 +11,19 @@ test("haftalık özet", () => {
   assert.equal(o.deneme.net, 78.5); assert.equal(o.deneme.fark, 6.5); assert.equal(o.enIyi.g, "Cmt"); assert.equal(o.gunler.length, 7);
   assert.equal(veliOzet({ name: "X" }, "2026-11-09").durum, "kayit-yok");
 });
-test("e-posta metni ayrıntıya girmez, sıralamayı yazar", () => {
-  const e = veliEposta(s, veliOzet(s, "2026-11-09"), { sira: 2 });
+test("e-posta metni ayrıntıya girmez, sıralama yok, günlük süre var", () => {
+  const e = veliEposta(s, veliOzet(s, "2026-11-09"));
   assert.equal(e.konu, "Elif'in haftalık özeti (9 Kasım – 15 Kasım)");
-  assert.match(e.text, /Merhaba değerli velim,/); assert.match(e.text, /32 saat 5 dakika/); assert.match(e.text, /78,5 net \(\+6,5\)/); assert.match(e.text, /sınıfında 2\. oldu/);
+  assert.match(e.text, /Merhaba değerli velim,/); assert.match(e.text, /32 saat 5 dakika/); assert.match(e.text, /78,5 net \(\+6,5\)/); assert.doesNotMatch(e.text, /sıralama|sınıfında/i); assert.match(e.text, /Pazartesi \(9 Kasım\): 5 saat 20 dakika/); assert.match(e.text, /Pazar \(15 Kasım\): çalışma kaydı yok/);
   assert.match(e.html, /Zekacademy/); assert.doesNotMatch(e.text, /yanlış|konu/i);
 });
 test("görüşme ve YKS'ye kalan gün", () => {
   const o = veliOzet(s, "2026-11-09", { gorusmeler: [{ durum: "yapildi", tur: "seans" }], sinav: "2027-06-19", bugun: "2026-11-16" });
   assert.equal(o.gorusme, "yapildi"); assert.equal(o.kalan, 215);
   const e = veliEposta(s, o); assert.match(e.text, /Koçuyla haftalık görüşme: Yapıldı/); assert.match(e.text, /YKS'ye kalan: 215 gün/);
+});
+test("küçük not hazır listeden otomatik seçilir, haftadan haftaya değişir", async () => {
+  const { oneriSec } = await import("../functions/veli.js");
+  const a = oneriSec("iyi", "2026-11-09"), b = oneriSec("iyi", "2026-11-16");
+  assert.ok(a && b); assert.notEqual(a, b);
 });
