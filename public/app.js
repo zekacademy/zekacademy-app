@@ -2166,9 +2166,11 @@ function karneVeri(s, bas = karneBas()){
   const den = D.filter(d=>d.tarih>=bas && d.tarih<=bit).map(d=>{ const once = D.filter(x=>x.tur===d.tur && x.tarih<d.tarih).pop(), n = Math.round(totalOf(d)*100)/100;
     return {tur:d.tur, ad:d.ad||d.yayin||"", net:n, fark: once ? Math.round((n-totalOf(once))*100)/100 : null}; });
   const hedef = Object.entries(((s.plan||{})[pStart(s, addDays(bas,3))]||{}).hedef||{}).filter(([,v])=>v&&v.konu).map(([ders,v])=>({ders, konu:v.konu, done:!!v.done}));
-  return {bas, bit, gunler, dk, gun, den, hedef}; }
+  const biten = Object.entries(s.topics||{}).filter(([,t])=>t && t.bitAt && t.bitAt>=bas && t.bitAt<=bit && topicScore(t)>=1).map(([k])=>{ const [d, ...n] = k.split('|'); return {ders:(dersBul(s, d)||{}).ders || (dersBul(s, d)||{}).n || d, konu:n.join('|')}; });
+  return {bas, bit, gunler, dk, gun, den, hedef, biten}; }
 function karneCiz(s, v){
-  const W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const blok = n => n ? 60 + n*84 + 44 : 0, nb = Math.min(v.biten.length, 4);
+  const W = 1080, H = Math.max(1350, Math.min(1920, 1035 + blok(Math.min(v.den.length,3)) + blok(nb) + blok(v.hedef.length) + 120)), c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
   const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, YES = "#14532D", YES2 = "#15803D", ACIK = "#EEF6F0", GRI = "#4B5E54";
   const kisalt = (t, max, font) => { g.font = font; if(g.measureText(t).width <= max) return t; while(t.length > 1 && g.measureText(t+"…").width > max) t = t.slice(0,-1); return t+"…"; };
   const rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
@@ -2194,7 +2196,9 @@ function karneCiz(s, v){
     g.fillText(kisalt(sol, W-128-56-(sag?260:0), F(600,28)), 92, y+46); if(sag){ g.textAlign = "right"; g.fillStyle = renk||YES; g.font = F(800,28); g.fillText(sag, W-92, y+46); g.textAlign = "left"; } y += 84; };
   const kalan = () => H - 110 - y;
   if(v.den.length){ g.fillStyle = YES; g.font = F(800,32); g.fillText("Denemeler", 64, y); y += 24;
-    v.den.slice(0,3).forEach(d=>{ if(kalan() < 84) return; satir(`${d.tur}${d.ad?` · ${d.ad}`:""}`, `${String(d.net).replace(".",",")} net${d.fark==null?"":` (${d.fark>=0?"+":""}${String(d.fark).replace(".",",")})`}`); }); y += 20; }
+    v.den.slice(0,3).forEach(d=>{ if(kalan() < 84) return; satir(`${d.tur}${d.ad?` · ${d.ad}`:""}`, `${String(d.net).replace(".",",")} net${d.fark==null?"":` (${d.fark>=0?"+":""}${String(d.fark).replace(".",",")})`}`); }); y += 44; }
+  if(v.biten.length && kalan() > 140){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Bu hafta bitirdiği konular · ${v.biten.length}`, 64, y); y += 24;
+    const L = v.biten.slice(0, 4); for(let i=0;i<L.length;i++){ if(kalan() < 84) break; if(i===3 && v.biten.length>4){ satir(`+${v.biten.length-3} konu daha`, ""); break; } satir(`${L[i].ders}: ${L[i].konu}`, "✓", YES2); } y += 44; }
   if(v.hedef.length && kalan() > 140){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Konu hedefleri · ${v.hedef.filter(h=>h.done).length}/${v.hedef.length}`, 64, y); y += 24;
     for(const h of v.hedef){ if(kalan() < 84) break; satir(`${h.ders}: ${h.konu}`, h.done ? "✓ Bitti" : "", YES2); } }
   if(!v.dk && !v.den.length){ g.fillStyle = GRI; g.font = F(500,30); g.fillText("Bu hafta uygulamaya çalışma kaydı girilmedi.", 64, y+20); }
@@ -3445,9 +3449,13 @@ function updateNets(){
 /* ---------- Etkileşim ---------- */
 /* Geri al / ileri al (⌘Z, ⇧⌘Z): öğrenci kaydındaki her değişiklik; art arda yazma tek adım sayılır */
 const HIST = {};
-function mutate(fn){ const s = st(); if(!s) return; const id = sid(), once = A() ? JSON.stringify(s) : null; fn(s);
+function mutate(fn){ const s = st(); if(!s) return; const id = sid(), once = A() ? JSON.stringify(s) : null, onceBit = konuBitler(s); fn(s); konuBitTarih(s, onceBit);
   if(once && once !== JSON.stringify(s)){ const h = HIST[id] = HIST[id] || {u:[], r:[], t:0}, now = Date.now(); if(now - h.t > 900 || !h.u.length){ h.u.push(once); if(h.u.length > 150) h.u.shift(); } h.t = now; h.r = []; geriDurum(); }
   save(); }
+/* Konu bitirme tarihi: konu "bitti" durumuna geçtiği gün topics[k].bitAt yazılır (haftalık karnede "bu hafta bitirdiği konular") */
+function konuBitler(s){ const o = new Set(); Object.entries(s.topics||{}).forEach(([k,t])=>{ if(topicScore(t)>=1) o.add(k); }); return o; }
+function konuBitTarih(s, once){ Object.entries(s.topics||{}).forEach(([k,t])=>{ if(!t) return; const bitti = topicScore(t)>=1;
+  if(bitti && !once.has(k) && !t.bitAt) t.bitAt = today(); else if(!bitti && t.bitAt) delete t.bitAt; }); }
 function geriDurum(){ const h = HIST[sid()] || {u:[], r:[]}; document.querySelectorAll("[data-act=geri]").forEach(b=>b.disabled = !h.u.length); document.querySelectorAll("[data-act=ileri]").forEach(b=>b.disabled = !h.r.length); }
 function geriAl(ileri){ if(!A() || !st()) return; const id = sid(), h = HIST[id]; const src = h && (ileri ? h.r : h.u), dst = h && (ileri ? h.u : h.r);
   if(!src || !src.length){ toast(ileri ? "İleri alınacak işlem yok" : "Geri alınacak işlem yok"); return; }

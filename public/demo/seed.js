@@ -44,7 +44,7 @@
    ["kim",["Kimya Bilimi","Atom ve Yapısı","Periyodik Sistem"]],
    ["amat",["Polinomlar","Fonksiyonlar","2.Dereceden Denklemler"]],
    ["afiz",["Vektörler","Bağıl Hareket"]], ["akim",["Modern Atom Teorisi","Gazlar"]]
-  ].forEach(function(x){ x[1].forEach(function(k, j){ topics[x[0] + "|" + k] = j < x[1].length - 1 ? {r:1, s1:1, s2: j % 2 ? 1 : 0, y: j % 3} : {r:1}; }); });
+  ].forEach(function(x){ x[1].forEach(function(k, j){ topics[x[0] + "|" + k] = j < x[1].length - 1 ? {r:1, s1:1, s2: j % 2 ? 1 : 0, y: j % 3} : {r:1}; if (j % 2 && j < x[1].length - 1 && j < 4) topics[x[0] + "|" + k].bitAt = ekle(gecen, j + 1); }); });
   var plan = {}; plan[pzt] = {saat:{0:5,1:5,2:5,3:5,4:5,5:7.5,6:7.5}, hedef:{
     "Matematik":{konu:"Mutlak Değer, Basit Eşitsizlikler", done:false}, "Fizik":{konu:"Basınç", done:false},
     "Kimya":{konu:"Periyodik Sistem", done:true}, "Biyoloji":{konu:"Hücre", done:false}, "Türkçe":{konu:"Cümlede Anlam", done:false}}};
