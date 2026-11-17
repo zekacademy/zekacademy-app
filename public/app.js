@@ -310,7 +310,7 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
     if(deg){ n++; persistDoc("students", id, 0); } });
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ duzenSabitle(); kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
-function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
+function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="karne" && !A()){ S.view="daha"; setTimeout(()=>openSheet("hkarne"), 300); } else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
 function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); grupTemizle(); S.ready = false; }
 
 let authResolved = false;
@@ -761,7 +761,7 @@ function sMore(s){
       ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span><div><div class="rt">Soru Çözüm</div><div class="rs">Fotoğrafla, yapay zekâ adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
-      <button class="row" data-act="sheet" data-v="veli"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("users","sm")}</span><div><div class="rt">Veli bilgilendirme</div><div class="rs">${s.veli&&s.veli.acik?`Açık · her pazartesi ${esc(s.veli.eposta)}`:"İstersen velin haftalık kısa bir özet alsın"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="sheet" data-v="hkarne"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("chart","sm")}</span><div><div class="rt">Haftalık karnem</div><div class="rs">${(s.karnePay||{})[karneBas()]?"Velinle paylaştın ✓":"Dilersen velinle WhatsApp'tan paylaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="mesaj"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("chat","sm")}</span><div><div class="rt">Koçuma yaz</div><div class="rs">${msgOkunmadi(S.me)?`${msgOkunmadi(S.me)} yeni mesaj`:"Uygulamadan koçunla mesajlaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="bildirim"><span class="ri">${icon("bell","sm")}</span><div><div class="rt">Bildirimler</div><div class="rs">Hatırlatmalar ve koçundan notlar</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="tur" data-v="0" data-l="tur"><span class="ri">${icon("grad","sm")}</span><div><div class="rt">Uygulamayı tanı</div><div class="rs">Kısa tanıtımı tekrar izle</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -2000,7 +2000,7 @@ function cDetail(){
   const sqb = soruList(S.cur).filter(([,q])=>q.durum!=="cozuldu").length;
   const tabs = [["ozet","Özet"],["program","Program"],["analiz","Analiz"],["konular","Konular"],["cetele","Çetele"],["calisma","Çalışma"],["sorular",`Sorular${sqb?` <span class="tcnt">${sqb}</span>`:""}`]];
   const acc = accountOf(S.cur);
-  const body = {ozet:()=>cSummary(s)+veliKocKart(s)+kvKocKart(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
+  const body = {ozet:()=>cSummary(s)+karneKocKart(s)+veliKocKart(s)+kvKocKart(s), program:()=>pProgram(s,true), analiz:()=>pAnaliz(s), konular:()=>pKonular(s), cetele:()=>pCetele(s), calisma:()=>pCalisma(s), sorular:()=>{ sorularOgrenci(S.cur); return pSorular(s, S.cur); }}[S.dtab] || (()=>cSummary(s));
   return `${topbar(`<div class="tttl"><h1 class="ttl" style="font-size:20px">${esc(s.name)}</h1><div class="faint small">${esc(s.alan)} · ${esc(s.sinif)}${isWA(s)?" · WhatsApp koçluğu":""}${s.okul?" · "+esc(s.okul):""}${acc?" · @"+esc(acc.u):" · hesap yok"}${(d=>` · <span class="gtdur ${d.k}" style="font-size:11px;padding:1px 6px">${d.k==="hic"?"hiç girmedi":"son giriş "+d.yazi.charAt(0).toLocaleLowerCase("tr")+d.yazi.slice(1)}</span>`)(girisDurum(s))}</div></div>`, `<button class="iconbtn" data-act="msgogr" data-id="${S.cur}" aria-label="Uygulamadan mesaj">${icon("chat")}${msgOkunmadi(S.cur)?`<span class="dot">${msgOkunmadi(S.cur)}</span>`:""}</button><button class="iconbtn" data-act="sheet" data-v="wa" data-sid="${S.cur}" aria-label="WhatsApp mesajı">${icon("chat")}</button><button class="iconbtn" data-act="sheet" data-v="ogrenci" data-id="${S.cur}" aria-label="Öğrenciyi düzenle">${icon("edit")}</button>`, `<button class="iconbtn" data-act="go" data-v="ozet" aria-label="Geri">${icon("back")}</button>`)}
   <div class="page wide"><div class="tabs">${tabs.map(([k,n])=>`<button data-act="dtab" data-v="${k}" aria-pressed="${S.dtab===k}">${n}</button>`).join("")}</div>${body()}</div>`;
 }
@@ -2153,6 +2153,67 @@ function veliSheet(s){ const v = s.veli || {}, acik = !!v.acik;
     if(ac && !epostaOk(ep)) return sheetErr("Geçerli bir e-posta adresi yaz (örn. ornek@gmail.com).");
     mutate(x=>{ x.veli = {...(x.veli||{}), acik:ac, eposta:ep, at:new Date().toISOString()}; });
     closeSheet(); render(); toast(ac ? "Veli özeti açıldı · ilk e-posta pazartesi sabahı gider" : "Veli özeti kapalı"); }); }
+/* ---------- Haftalık karne: öğrenci (ya da koç) görseli WhatsApp'tan veliye gönderir. Görsel telefonda çizilir; ücretsizdir ---------- */
+const GUNK3 = ["Pzt","Sal","Çar","Per","Cum","Cmt","Paz"], AYKT = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+const tYaz = d => { const [,m,g] = d.split("-").map(Number); return `${g} ${AYKT[m-1]}`; };
+const sYaz = dk => { dk = Math.round(dk); const h = Math.floor(dk/60), m = dk%60; return h ? `${h} sa${m?` ${m} dk`:""}` : `${m} dk`; };
+/* Karne haftası: biten son hafta (Pazartesi–Pazar). Pazar gece 00:00'da yeni karne hazır olur. */
+const karneBas = () => addDays(monday(today()), -7);
+function karneVeri(s, bas = karneBas()){
+  const gunler = [0,1,2,3,4,5,6].map(i=>{ const d = addDays(bas,i); return {g:GUNK3[i], d, dk:Math.round(minutes(s,d,false))}; });
+  const dk = gunler.reduce((a,x)=>a+x.dk,0), gun = gunler.filter(x=>x.dk>=30).length, bit = addDays(bas,6);
+  const D = (s.denemeler||[]).filter(d=>d && d.tur && d.tarih).sort((a,b)=>a.tarih<b.tarih?-1:1);
+  const den = D.filter(d=>d.tarih>=bas && d.tarih<=bit).map(d=>{ const once = D.filter(x=>x.tur===d.tur && x.tarih<d.tarih).pop(), n = Math.round(totalOf(d)*100)/100;
+    return {tur:d.tur, ad:d.ad||d.yayin||"", net:n, fark: once ? Math.round((n-totalOf(once))*100)/100 : null}; });
+  const hedef = Object.entries(((s.plan||{})[pStart(s, addDays(bas,3))]||{}).hedef||{}).filter(([,v])=>v&&v.konu).map(([ders,v])=>({ders, konu:v.konu, done:!!v.done}));
+  return {bas, bit, gunler, dk, gun, den, hedef}; }
+function karneCiz(s, v){
+  const W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, YES = "#14532D", YES2 = "#15803D", ACIK = "#EEF6F0", GRI = "#4B5E54";
+  const kisalt = (t, max, font) => { g.font = font; if(g.measureText(t).width <= max) return t; while(t.length > 1 && g.measureText(t+"…").width > max) t = t.slice(0,-1); return t+"…"; };
+  const rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
+  g.fillStyle = "#F4F8F5"; g.fillRect(0,0,W,H);
+  g.fillStyle = YES; rr(0,0,W,250,0); g.fill();
+  g.fillStyle = "rgba(255,255,255,.8)"; g.font = F(600,30); g.fillText("ZEKACADEMY · HAFTALIK KARNE", 64, 84);
+  g.fillStyle = "#fff"; g.font = F(800,64); g.fillText(kisalt(adSoyad(s.name||""), W-128, F(800,64)), 64, 162);
+  g.font = F(500,34); g.fillStyle = "rgba(255,255,255,.9)"; g.fillText(`${tYaz(v.bas)} – ${tYaz(v.bit)}`, 64, 214);
+  /* özet kutuları */
+  const kutu = (x, y, w, bas, deg) => { g.fillStyle = "#fff"; rr(x,y,w,150,24); g.fill(); g.fillStyle = GRI; g.font = F(600,26); g.fillText(bas, x+28, y+52); g.fillStyle = YES; let z = 46; g.font = F(800,z); while(z > 28 && g.measureText(deg).width > w-56){ z -= 2; g.font = F(800,z); } g.fillText(kisalt(deg, w-56, F(800,z)), x+28, y+116); };
+  const ex = examDays(); const kw = (W-128-48)/3;
+  kutu(64, 290, kw, "Toplam çalışma", v.dk ? sYaz(v.dk) : "—"); kutu(64+kw+24, 290, kw, "Çalıştığı gün", `${v.gun} / 7`); kutu(64+2*(kw+24), 290, kw, "YKS'ye kalan", `${ex} gün`);
+  /* günlük çubuklar */
+  let y = 500; g.fillStyle = YES; g.font = F(800,32); g.fillText("Günlük çalışma süresi", 64, y);
+  const max = Math.max(60, ...v.gunler.map(x=>x.dk)), bw = (W-128)/7, bh = 230; y += 30;
+  v.gunler.forEach((x,i)=>{ const h = x.dk ? Math.max(10, Math.round(x.dk/max*bh)) : 6, bx = 64 + i*bw + 14, w = bw-28;
+    g.fillStyle = x.dk>=30 ? YES2 : "#C9DDD0"; rr(bx, y+40+bh-h, w, h, 12); g.fill();
+    g.fillStyle = GRI; g.font = F(700,24); g.textAlign = "center"; g.fillText(x.dk ? (x.dk>=60 ? `${String(Math.round(x.dk/6)/10).replace(".",",")} sa` : `${x.dk} dk`) : "—", bx+w/2, y+28+bh-h);
+    g.font = F(600,26); g.fillText(x.g, bx+w/2, y+bh+80); g.textAlign = "left"; });
+  y += bh + 165;
+  /* denemeler + hedefler */
+  const satir = (sol, sag, renk) => { g.fillStyle = "#fff"; rr(64, y, W-128, 72, 18); g.fill(); g.fillStyle = "#0F2A1D"; g.font = F(600,28);
+    g.fillText(kisalt(sol, W-128-56-(sag?260:0), F(600,28)), 92, y+46); if(sag){ g.textAlign = "right"; g.fillStyle = renk||YES; g.font = F(800,28); g.fillText(sag, W-92, y+46); g.textAlign = "left"; } y += 84; };
+  const kalan = () => H - 110 - y;
+  if(v.den.length){ g.fillStyle = YES; g.font = F(800,32); g.fillText("Denemeler", 64, y); y += 24;
+    v.den.slice(0,3).forEach(d=>{ if(kalan() < 84) return; satir(`${d.tur}${d.ad?` · ${d.ad}`:""}`, `${String(d.net).replace(".",",")} net${d.fark==null?"":` (${d.fark>=0?"+":""}${String(d.fark).replace(".",",")})`}`); }); y += 20; }
+  if(v.hedef.length && kalan() > 140){ g.fillStyle = YES; g.font = F(800,32); g.fillText(`Konu hedefleri · ${v.hedef.filter(h=>h.done).length}/${v.hedef.length}`, 64, y); y += 24;
+    for(const h of v.hedef){ if(kalan() < 84) break; satir(`${h.ders}: ${h.konu}`, h.done ? "✓ Bitti" : "", YES2); } }
+  if(!v.dk && !v.den.length){ g.fillStyle = GRI; g.font = F(500,30); g.fillText("Bu hafta uygulamaya çalışma kaydı girilmedi.", 64, y+20); }
+  g.fillStyle = GRI; g.font = F(600,28); g.textAlign = "center"; g.fillText("Zekeriya Hoca · Zekacademy", W/2, H-56); g.textAlign = "left";
+  return c; }
+async function karnePaylas(){ const s = st(); if(!s) return; const v = karneVeri(s), c = karneCiz(s, v);
+  const b = await new Promise(r=>c.toBlob(r, "image/png")), ad = (adSoyad(s.name||"")||"Öğrenci").split(" ")[0];
+  const f = new File([b], `karne-${v.bas}.png`, {type:"image/png"}), text = A() ? `Merhaba değerli velim, ${ad}'in ${tYaz(v.bas)} – ${tYaz(v.bit)} haftalık karnesi 📊 — Zekeriya Hoca` : `${tYaz(v.bas)} – ${tYaz(v.bit)} haftalık karnem 📊 — Zekacademy`;
+  let gitti = false;
+  if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f], text}); gitti = true; }catch(e){ if(e && e.name==="AbortError") return; } }
+  if(!gitti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Karne indirildi; WhatsApp'ta fotoğraf olarak gönderebilirsin"); }
+  if(!A()) mutate(x=>{ x.karnePay = {...(x.karnePay||{}), [v.bas]: nowISO()}; }); render(); if(gitti) toast("Karne paylaşıldı 👏"); }
+function hkarneSheet(){ const s = st(); if(!s) return; const v = karneVeri(s), url = karneCiz(s, v).toDataURL("image/png"), pay = (s.karnePay||{})[v.bas];
+  return sheet(`<h3>Haftalık karne</h3><p class="muted small" style="margin:-6px 0 0">${A() ? "Veliye WhatsApp'tan fotoğraf olarak gönderebilirsin." : "Dilersen velinle paylaşabilirsin: “Velime gönder”e dokun, WhatsApp'ı seç."}${pay?` · ${A()?"Öğrenci bu karneyi paylaştı":"Bu karneyi paylaştın"} ✓`:""}</p>
+    <img src="${url}" alt="Haftalık karne" style="width:100%;border-radius:14px;border:1px solid var(--line);margin-top:6px">
+    <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="karnepaylas">${icon("chat","xs")} ${A()?"Veliye gönder":"Velime gönder"}</button></div>`); }
+function karneKocKart(s){ const bas = karneBas(), pay = (s.karnePay||{})[bas];
+  return `<div class="card"><div class="sech"><h3>${icon("chart","sm")} Haftalık karne</h3><span class="pill ${pay?"good":""}">${pay?"Velisine gönderdi ✓":"Henüz gönderilmedi"}</span></div>
+    <div class="small muted">${tYaz(bas)} – ${tYaz(addDays(bas,6))}</div><div class="pills" style="margin-top:8px"><button class="btn sm" data-act="sheet" data-v="hkarne">${icon("chat","xs")} Karneyi gör / veliye gönder</button></div></div>`; }
 function veliKocKart(s){ const v = s.veli; if(!v || !v.eposta) return "";
   return `<div class="card"><div class="sech"><h3>${icon("users","sm")} Veli bilgilendirme</h3><span class="pill ${v.acik?"good":""}">${v.acik?"Açık":"Kapalı"}</span></div>
     <div class="small muted">${v.acik?`Her pazartesi kısa özet gidiyor: ${esc(v.eposta)}`:"Öğrenci veli özetini kapattı."}${v.son?` · Son gönderim ${trDate(v.son)}`:""}</div></div>`; }
@@ -3244,6 +3305,7 @@ function openSheet(kind, el){
     <div class="f">Tema rengi<div class="swatch">${[["green","#1E9E4A","Yeşil"],["blue","#2563EB","Mavi"],["red","#DC2F3C","Kırmızı"]].map(([k,c,l])=>`<button type="button" class="sw" style="background:${c}" data-act="accent" data-v="${k}" aria-pressed="${THEME.accent===k}" aria-label="${l}">${THEME.accent===k?icon("check","sm"):""}</button>`).join("")}</div></div>
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`);
   if(kind==="veli") return veliSheet(s);
+  if(kind==="hkarne") return hkarneSheet();
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
     <label class="f">Sınav tarihi<input type="date" name="d" id="m-exam" value="${S.settings.examDate}"></label>
     <label class="inline"><input type="checkbox" name="t" id="m-tah" ${S.settings.tahmini?"checked":""}>ÖSYM henüz açıklamadı (tahmini)</label>
@@ -3448,6 +3510,7 @@ document.addEventListener("click", e=>{
     case "wagonder": waAc(b.dataset.sid, waDoldur(wmesajlar()[+b.dataset.i], b.dataset.sid)); break;
     case "gwk": S.gday = addDays(monday(S.gday||today()), +b.dataset.d); render(); break;
     case "gdurum": gorusSet(b.dataset.id, g=>{ g.durum = v; }); render(); break;
+    case "karnepaylas": karnePaylas(); break;
     case "gsil": { const id=b.dataset.id; S.gorus.delete(id); persistDoc("gorusmeler", id, 0); closeSheet(); render(); toast("Görüşme silindi"); break; }
     case "gtaslak": S.gelirTaslak = v==="1"; render(); break;
     case "brehber": rehbereKaydet(b.dataset.id); break;

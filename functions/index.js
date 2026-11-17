@@ -483,6 +483,15 @@ export const veliRapor = onSchedule({ schedule: "30 9 * * 1", timeZone: TZ, retr
   logger.info("veli raporu", { date, giden, toplam: studs.length });
 });
 
+/* Haftalık karne: Pazar gecesi 00:00 (Pazartesi'ye geçerken) her öğrenciye "karnen hazır" bildirimi; karne görseli telefonda çizilir, öğrenci dilerse velisine gönderir */
+export const karneHazir = onSchedule({ schedule: "0 0 * * 1", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
+  const q = await db.collection("students").get(); let giden = 0;
+  for (const d of q.docs) { const s = d.data(), tk = studentTokens(s); if (!tk.length) continue;
+    try { const r = await pushTo(tk, "📊 Haftalık karnen hazır", "Dilersen velinle paylaşabilirsin.", "/?ac=karne"); await dropBadStudentTokens(d.id, r.bad); giden++; }
+    catch (e) { logger.error("karne bildirimi", d.id, e); } }
+  logger.info("karne bildirimi", { giden, toplam: q.size });
+});
+
 /* ===================== Mesajlaşma: yeni mesajda karşı tarafa bildirim ===================== */
 export const yeniMesaj = onDocumentCreated("sohbetler/{sid}/mesajlar/{mid}", async (event) => {
   const m = event.data && event.data.data(); if (!m) return; const sid = event.params.sid;
