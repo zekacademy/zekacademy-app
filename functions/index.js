@@ -11,12 +11,13 @@ import { getFirestore, FieldValue, FieldPath } from "firebase-admin/firestore";
 import { getAuth } from "firebase-admin/auth";
 import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
-import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak } from "./logic.js";
+import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak, sessizMi } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
 import nodemailer from "nodemailer";
 import { veliOzet, veliEposta, epostaGecerli } from "./veli.js";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
-import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi } from "./soru.js";
+import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
+import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -286,7 +287,7 @@ async function aiAnahtar(){
   if (AI_ANAHTAR.v && Date.now() - AI_ANAHTAR.at < 5 * 60e3) return AI_ANAHTAR.v;
   const v = ((await db.doc("system/ai").get()).data() || {}).anahtar || ""; AI_ANAHTAR = { v, at: Date.now() }; return v;
 }
-async function claude(model, content, maxTokens, sistem = SISTEM){
+async function claude(model, content, maxTokens, sistem = SISTEM){ /* sistem: metin ya da önbellek işaretli bloklar dizisi */
   const key = await aiAnahtar(); if (!key) throw new HttpsError("failed-precondition", "anahtar-yok");
   const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
@@ -307,7 +308,7 @@ async function aiBaglam(req){
 async function aiKaydet(x, { hak = 0, dolar = 0, soru = 0, zor = 0, takip = 0 }){
   const { kRef, gRef, sid, ay, date, c } = x;
   const inc = FieldValue.increment;
-  await kRef.set({ sid, ay, kullanilan: inc(hak), dolar: inc(dolar), soru: inc(soru), zor: inc(zor), son: new Date().toISOString(), ...(takip ? { takip: { [date]: inc(takip) } } : {}) }, { merge: true });
+  await kRef.set({ sid, ay, kullanilan: inc(hak), dolar: inc(dolar), soru: inc(soru), zor: inc(zor), son: new Date().toISOString(), ...(soru ? { gunSoru: { [date]: inc(soru) } } : {}), ...(takip ? { takip: { [date]: inc(takip) } } : {}) }, { merge: true });
   await gRef.set({ ay, dolar: inc(dolar), soru: inc(soru), zor: inc(zor), gun: { [date]: inc(dolar) } }, { merge: true });
   const g = (await gRef.get()).data() || {};
   if (g.dolar >= c.uyari && !g.uyarildi) {
@@ -327,17 +328,39 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   if (!resim && !metin) throw new HttpsError("invalid-argument", "soru-yok");
   if (resim.length > 800000) throw new HttpsError("invalid-argument", "resim-buyuk");
   const [kS, gS] = await Promise.all([kRef.get(), gRef.get()]); const k = kS.data() || {}, g = gS.data() || {};
-  if (!x.koc && kalanHak(c, k) <= 0) throw new HttpsError("resource-exhausted", "hak");
+  if (!x.koc && c.sinirsiz) { const a = adilKalan(c, k, x.date); if (a.gun <= 0) throw new HttpsError("resource-exhausted", "adil-gunluk"); if (a.ay <= 0) throw new HttpsError("resource-exhausted", "adil-aylik"); }
+  else if (!x.koc && kalanHak(c, k) <= 0) throw new HttpsError("resource-exhausted", "hak");
   if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
-  const icerik = [...(resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : []), { type: "text", text: cozIstegi({ metin, anahtar, tekrar }) }];
-  let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null;
+  /* Talimat önbellekte: sabit kısım (şema + kurallar + beceriler) system'de cache_control ile; soruya özgü kısım mesajda */
+  const SIS = [{ type: "text", text: SISTEM }, { type: "text", text: COZ_SABIT, cache_control: { type: "ephemeral" } }];
+  const resimP = resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : [];
+  const icerik = (ek = {}) => [...resimP, { type: "text", text: cozDegisken({ metin, anahtar, tekrar, ...ek }) }];
+  let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null, hizli = null, guclu = null, hakem = null, kim = "hizli";
   if (!tekrar) {
-    const a = await claude(c.modelKolay, icerik, 2500); dolar += maliyet(c, "kolay", a.usage); r = jsonCikar(a.text);
+    const a = await claude(c.modelKolay, icerik(), 2500, SIS); dolar += maliyet(c, "kolay", a.usage); r = hizli = jsonCikar(a.text);
     neden = zoraGec(r, anahtar);
+    /* Sözelde ikinci oy (anahtar yoksa): hızlı model ikinci kez, şıkları tersten eleyerek; farklıysa güçlüye */
+    if (!neden && !anahtar && r && r.okunabildi !== false && sozelMi(r.ders)) {
+      try { const a2 = await claude(c.modelKolay, icerik({ ikinci: true }), 2500, SIS); dolar += maliyet(c, "kolay", a2.usage); const r2 = jsonCikar(a2.text);
+        if (r2 && sikOf(r2) && sikOf(r2) !== sikOf(r)) neden = "sozel-oy"; }
+      catch (e) { logger.warn("ikinci oy", e.message); }
+    }
   }
   if (neden) {
-    try { const b = await claude(c.modelZor, icerik, 3500); dolar += maliyet(c, "zor", b.usage); const r2 = jsonCikar(b.text); if (r2) { r = r2; model = "zor"; } }
+    try { const b = await claude(c.modelZor, icerik(), 3500, SIS); dolar += maliyet(c, "zor", b.usage); guclu = jsonCikar(b.text); }
     catch (e) { logger.warn("güçlü model", e.message); if (!r) throw e; }
+    if (guclu) {
+      model = "zor"; r = guclu; kim = "guclu";
+      if (hizli && sikOf(hizli) && sikOf(guclu) && sikOf(hizli) !== sikOf(guclu)) {
+        if (anahtar) ({ r, kim } = anahtarlaSec(hizli, guclu, anahtar));
+        else {
+          /* Hakem: iki model farklı şık buldu; güçlü model lehine ama gerekçeye bakarak karar */
+          try { const h = await claude(c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 800, SIS); dolar += maliyet(c, "zor", h.usage); hakem = jsonCikar(h.text); }
+          catch (e) { logger.warn("hakem", e.message); }
+          ({ r, kim } = hakemSonucu(hizli, guclu, hakem));
+        }
+      }
+    }
   }
   if (!r) { await aiKaydet(x, { dolar }); throw new HttpsError("unavailable", "cozum-okunamadi"); }
   delete r.kontrol; r.anahtar = anahtarDurumu(r, anahtar); if (r.anahtar === "uyumsuz") r.emin = false;
@@ -346,8 +369,13 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   const kucuk = typeof d.kucuk === "string" && d.kucuk.startsWith("data:image/jpeg;base64,") && d.kucuk.length < 60000 ? d.kucuk : null;
   const ref = await db.collection("aiSorular").add({ sid: x.sid, ay: x.ay, at: new Date().toISOString(), ders: r.ders || "", konu: r.konu || "", zorluk: r.zorluk || "", soru: String(r.soru || "").slice(0, 400),
     cevap: (r.cevap && r.cevap.sik) || "", anahtar: r.anahtar, emin: r.emin !== false, model, neden: neden || null, hak, dolar: Math.round(dolar * 1e5) / 1e5, kucuk, okunabildi: r.okunabildi !== false });
+  /* Gerçek hatalardan öğrenme: anahtar uyuşmazlığı, öğrencinin "yanlış" demesi, model anlaşmazlığı → aiHatalar (anonim) */
+  const hataNeden = tekrar ? "ogrenci-yanlis-dedi" : r.anahtar === "uyumsuz" ? "anahtar-uyusmuyor" : (hizli && guclu && sikOf(hizli) !== sikOf(guclu)) ? "model-anlasmazligi" : neden === "sozel-oy" ? "sozel-oy" : "";
+  if (hataNeden) await db.collection("aiHatalar").add({ at: new Date().toISOString(), soruId: ref.id, neden: hataNeden, ders: r.ders || "", konu: r.konu || "", soru: String(r.soru || "").slice(0, 600), siklar: r.siklar || null,
+    anahtar: anahtar || "", hizli: hizli ? sikOf(hizli) : "", guclu: guclu ? sikOf(guclu) : "", hakem: hakem ? { sik: hakem.sik || "", secim: hakem.secim || "", ayrisma: String(hakem.ayrisma || "").slice(0, 300) } : null,
+    son: sikOf(r), kim, emin: r.emin !== false, okunan: ((r.sekil || {}).okunan || []).slice(0, 10), kucuk }).catch(e => logger.warn("aiHatalar", e.message));
   const k2 = (await kRef.get()).data() || {};
-  return { cozum: r, id: ref.id, model, hak, kalan: kalanHak(c, k2), toplam: toplamHak(c, k2) };
+  return { cozum: r, id: ref.id, model, hak, kalan: kalanHak(c, k2), toplam: toplamHak(c, k2), sinirsiz: !!c.sinirsiz };
 });
 
 /* Takip: adımı açıkla / benzer soru / soru sor (kolay model, günlük sınırlı, hak düşmez) */
@@ -417,7 +445,7 @@ export const aiGunluk = onSchedule({ schedule: "20 3 * * *", timeZone: TZ, retry
   const { date } = istanbulNow(), ay = ayOf(date), gRef = db.doc(`aiKullanim/${ay}_genel`);
   const g = (await gRef.get()).data() || {};
   const pazartesi = new Date(date + "T12:00:00Z").getUTCDay() === 1;
-  if (!pazartesi || !c.bonusAcik || g.bonusTarih === date) return;
+  if (!pazartesi || !c.bonusAcik || c.sinirsiz || g.bonusTarih === date) return; /* sınırsız düzende bonus hak dağıtılmaz */
   const studs = (await db.collection("students").get()).docs.filter(s => aiAcikMi(c, s.id));
   const ks = await Promise.all(studs.map(s => db.doc(`aiKullanim/${kullanimId(ay, s.id)}`).get()));
   const ogrenciler = studs.map((s, i) => ({ sid: s.id, s: s.data(), k: ks[i].data() || {}, perf: haftalikPerformans(s.data(), date) }));
@@ -453,4 +481,52 @@ export const veliRapor = onSchedule({ schedule: "30 9 * * 1", timeZone: TZ, retr
     } catch (err) { logger.error("veli raporu gönderilemedi", { sid: d.id, hata: String(err && err.message || err) }); }
   }
   logger.info("veli raporu", { date, giden, toplam: studs.length });
+});
+
+/* ===================== Mesajlaşma: yeni mesajda karşı tarafa bildirim ===================== */
+export const yeniMesaj = onDocumentCreated("sohbetler/{sid}/mesajlar/{mid}", async (event) => {
+  const m = event.data && event.data.data(); if (!m) return; const sid = event.params.sid;
+  const metin = String(m.metin || "").slice(0, 140) || (m.ses ? "🎤 Sesli mesaj" : "📷 Fotoğraf");
+  const sSnap = await db.doc(`students/${sid}`).get(); const s = sSnap.data() || {};
+  if (m.kim === "ogr") {
+    const tokens = await coachTokens(), mid = yeniMid();
+    const r = await pushTo(tokens, `💬 ${s.name || "Öğrenci"}`, metin, `/?ac=sohbet-${sid}`, mid);
+    for (const t of r.bad) await db.collection("coachDevices").where("token", "==", t).get().then(q => Promise.all(q.docs.map(x => x.ref.delete())));
+    return;
+  }
+  const ayar = (((await db.doc("settings/main").get()).data() || {}).mesaj) || {};
+  if (sessizMi(istanbulNow().minutes, ayar.sessizBas || "23:00", ayar.sessizBit || "08:00")) return; /* gece: bildirim yok, mesaj sabah görünür */
+  const r = await pushTo(studentTokens(s), m.duyuru ? "📢 Koçundan duyuru" : "💬 Koçundan mesaj", metin, "/?ac=mesaj");
+  await dropBadStudentTokens(sid, r.bad);
+});
+
+/* Her sabah 08:00: her sınıfta dünün 1.'si; pazartesi ayrıca geçen haftanın ilk 5'i. Sonuç gruplar/{gid}/odul altına yazılır,
+   gerçek kazananlara ekstra soru hakkı + koçtan tebrik bildirimi, diğer üyelere duyuru gider. Aynı gün ikinci kez çalışırsa tekrar vermez. */
+export const sinifOdul = onSchedule({ schedule: "0 8 * * *", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
+  const settings = (await db.doc("settings/main").get()).data() || {}, c = aiCfg(settings);
+  const { date } = istanbulNow(), dun = gunEkle(date, -1), ay = ayOf(date), pzt = haftaGunu(date) === 1;
+  const ogrCache = new Map(), ogr = async sid => { if (!ogrCache.has(sid)) ogrCache.set(sid, (await db.doc(`students/${sid}`).get()).data() || null); return ogrCache.get(sid); };
+  async function odul(sid, hak, metin){ const s = await ogr(sid); if (!s) return;
+    const ver = false; /* koçun kararı (16 Kasım): sınıf ödülünde soru hakkı yok; ödül taç, madalya, yıldız ve tebrik */
+    if (ver){ await db.doc(`aiKullanim/${kullanimId(ay, sid)}`).set({ sid, ay, bonus: FieldValue.increment(hak) }, { merge: true });
+      await db.doc(`students/${sid}`).update({ aiBonus: { hak, mesaj: metin, at: new Date().toISOString() } }).catch(() => {}); }
+    const r = await pushTo(studentTokens(s), "Zekeriya Hoca'dan tebrik 🎉", ver ? metin : metin.replace(/ \+\d+ soru hakkı kazandın\./, ""), "/?ac=grup"); await dropBadStudentTokens(sid, r.bad); }
+  async function duyur(uyeler, haric, metin){ for (const sid of uyeler){ if (haric.has(sid)) continue; const s = await ogr(sid); if (!s) continue;
+    const r = await pushTo(studentTokens(s), "Sınıf", metin, "/?ac=grup"); await dropBadStudentTokens(sid, r.bad); } }
+  const gruplar = await db.collection("gruplar").get();
+  for (const gd of gruplar.docs){ const g = gd.data(); if (!(g.uyeler || []).length) continue;
+    try {
+      const canli = new Map((await gd.ref.collection("canli").get()).docs.map(d => [d.id, d.data()])), L = yarisanlar(g, canli);
+      const isler = dun >= ODUL_BASLA ? [["gun", `gun-${dun}`, [dun], 3]] : [];
+      if (pzt && gunEkle(date, -7) >= ODUL_BASLA){ const bas = gunEkle(date, -7); isler.push(["hafta", `hafta-${bas}`, Array.from({ length: 7 }, (_, i) => gunEkle(bas, i)), 5]); }
+      for (const [tur, id, gunler, n] of isler){
+        const ref = gd.ref.collection("odul").doc(id); if ((await ref.get()).exists) continue;
+        const liste = siralama(L, gunler, n); if (!liste.length) continue;
+        await ref.set({ tur, tarih: gunler[0], bitis: gunler[gunler.length - 1], liste, at: Date.now() });
+        const kazanan = new Set();
+        for (let i = 0; i < liste.length; i++){ const x = liste[i]; if (x.zek) continue; if (tur === "gun" && i > 0) break;
+          const hak = (ODUL[tur][i] || 0); kazanan.add(x.uid); await odul(x.uid, hak, tebrikMetni(tur, i + 1, x.dk, hak)); }
+        await duyur(g.uyeler || [], kazanan, duyuruMetni(tur, liste));
+        logger.info("sınıf ödülü", { gid: gd.id, tur, id, ilk: liste[0].takma }); }
+    } catch (e) { logger.error("sınıf ödülü", gd.id, e); } }
 });

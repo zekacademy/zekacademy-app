@@ -106,6 +106,19 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: node tools/eposta-anahtar.mjs
+      - name: Tek seferlik ödeme temizliği (main)
+        if: github.event_name != 'pull_request'
+        run: |
+          node tools/odeme-temizle.mjs
+          node tools/odeme-geri.mjs
+      - name: 16–22 Kasım program kopyası (main)
+        if: github.event_name != 'pull_request'
+        env:
+          KIP: uygula
+        run: |
+          node tools/hafta-kopya.mjs
+          node tools/safanur-hafta.mjs
+          node tools/dilbeste-hafta.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"

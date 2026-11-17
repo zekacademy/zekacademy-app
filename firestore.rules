@@ -61,6 +61,22 @@ service cloud.firestore {
       allow create: if isCoach() || (signedIn() && request.resource.data.sid == request.auth.uid && request.resource.data.data.size() < 900000);
       allow update: if isCoach();
     }
+    // Mesajlaşma: koç ↔ öğrenci birebir; öğrenci sadece kendi sohbetini görür, sadece kendi adına yazar
+    match /sohbetler/{sid} {
+      allow read: if isCoach() || isSelf(sid);
+      allow create, update: if isCoach() || (isSelf(sid) && request.resource.data.sid == sid);
+      allow delete: if isCoach();
+      match /mesajlar/{mid} {
+        allow read: if isCoach() || isSelf(sid);
+        allow create: if (isCoach() && request.resource.data.kim == 'koc')
+          || (isSelf(sid) && request.resource.data.kim == 'ogr'
+              && request.resource.data.metin is string && request.resource.data.metin.size() <= 4000
+              && (!('foto' in request.resource.data) || request.resource.data.foto.size() < 450000)
+              && (!('ses' in request.resource.data) || (request.resource.data.ses is string && request.resource.data.ses.size() < 900000))
+              && !('duyuru' in request.resource.data));
+        allow update, delete: if isCoach();
+      }
+    }
     // Soru Çözüm: kullanım sayaçları ve soru kayıtları sadece sunucu tarafından yazılır; öğrenci kendisininkini okur
     match /aiKullanim/{id} {
       allow read: if isCoach() || (signedIn() && resource.data.sid == request.auth.uid);
@@ -68,6 +84,11 @@ service cloud.firestore {
     }
     // Deneme karnesi okuma kayıtları (maliyet takibi): yalnız sunucu yazar, koç okur
     match /aiKarne/{id} {
+      allow read, delete: if isCoach();
+      allow create, update: if false;
+    }
+    // Zek AI gerçek hataları (anonim): sunucu yazar, koç okur; eğitim için dışa aktarılır
+    match /aiHatalar/{id} {
       allow read, delete: if isCoach();
       allow create, update: if false;
     }
@@ -82,6 +103,10 @@ service cloud.firestore {
     match /gruplar/{gid} {
       allow read: if isCoach() || (signedIn() && request.auth.uid in resource.data.uyeler);
       allow write: if isCoach();
+      match /odul/{id} {
+        allow read: if isCoach() || grupUyesi(gid);
+        allow write: if false; // sadece sunucu yazar
+      }
       match /canli/{uid} {
         allow read: if isCoach() || grupUyesi(gid);
         allow delete: if isCoach();
