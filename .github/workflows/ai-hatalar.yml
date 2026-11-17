@@ -32,6 +32,7 @@ jobs:
           git fetch origin ai-hatalar || true
           git checkout --orphan ai-hatalar-yeni
           git rm -rf --quiet . > /dev/null
+          git clean -fdxq   # npm install'ın bıraktığı node_modules vb. dala girmesin
           cp -r "$RUNNER_TEMP/out/." .
           git add -A
           git commit -q -m "aiHatalar dışa aktarım $(date -u +%F)" || exit 0
