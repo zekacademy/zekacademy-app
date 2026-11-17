@@ -438,7 +438,8 @@ const dayTasks = (s, date) => ((s.weeks||{})[pStart(s,date)]||{})[pIdx(s,date)] 
 function setDayTasks(s, date, list){ const w = pStart(s,date); s.weeks = s.weeks||{}; s.weeks[w] = s.weeks[w]||{}; s.weeks[w][pIdx(s,date)] = list; }
 function timerMin(s){ return s.timer && s.timer.start ? Math.min(240, (Date.now()-s.timer.start)/60000) : 0; } /* 4 saat tavan (KRON_TAVAN) */
 function minutes(s, date, live=true){ let m = (s.gunluk||{})[date]||0; if(live && s.timer && s.timer.start && iso(new Date(s.timer.start))===date) m += timerMin(s); return m; }
-function weekStats(s, w){ let all=0,done=0,min=0; for(const d of pDays(s,w)){ const l=dayTasks(s,d); all+=l.length; done+=l.filter(t=>t.done).length; min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
+/* gecen=true: sadece bugüne kadarki günler (Salı günü haftanın 1. ve 2. günü) — uyum, haftanın bitmemiş günlerini saymaz */
+function weekStats(s, w, gecen=false){ let all=0,done=0,min=0; const t = today(); for(const d of pDays(s,w)){ if(gecen && d > t) continue; const l=dayTasks(s,d); all+=l.length; done+=l.filter(t=>t.done).length; min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
 function active(s, d){ return minutes(s,d,false)>0 || dayTasks(s,d).some(t=>t.done) || (s.timer && iso(new Date(s.timer.start))===d); }
 function streak(s){ let c=0, d=today(); if(!active(s,d)) d=addDays(d,-1); while(active(s,d) && c<400){ c++; d=addDays(d,-1); } return c; }
 /* ---------- Giriş takibi (koç) ---------- */
@@ -473,7 +474,7 @@ function lastActivity(s){
   return best;
 }
 function coachMetrics(s){
-  const w = weekStats(s, curStart(s));
+  const w = weekStats(s, curStart(s), true);
   const t = exams(s,"TYT"), last = t[t.length-1], prev = t[t.length-2];
   const lt = last ? tytTotal(last) : null, dlt = last && prev ? tytTotal(last)-tytTotal(prev) : null;
   const la = lastActivity(s); const idle = la ? Math.round((new Date(today()+"T12:00:00")-new Date(la+"T12:00:00"))/864e5) : null;
@@ -683,7 +684,7 @@ function takvimKart(s, gun, baslik){ const L = yaklasan(s, gun); if(!L.length) r
 function sHome(s){
   if(GR.list.size && !profilVar(s) && !S.profilSoruldu && S.tur==null && !S.view_ilk){ S.profilSoruldu = true; setTimeout(()=>{ if(!$("#layer .ov") && S.view==="home") { openSheet("takma"); } }, 600); }
   const t = today(), tl = dayTasks(s,t), done = tl.filter(x=>x.done).length;
-  const w = weekStats(s, curStart(s));
+  const w = weekStats(s, curStart(s), true);
   const lt = exams(s,"TYT").pop();
   const h = new Date().getHours();
   const nots = studentNotices(s);
