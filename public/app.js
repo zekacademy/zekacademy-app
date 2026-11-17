@@ -439,7 +439,7 @@ function setDayTasks(s, date, list){ const w = pStart(s,date); s.weeks = s.weeks
 function timerMin(s){ return s.timer && s.timer.start ? Math.min(240, (Date.now()-s.timer.start)/60000) : 0; } /* 4 saat tavan (KRON_TAVAN) */
 function minutes(s, date, live=true){ let m = (s.gunluk||{})[date]||0; if(live && s.timer && s.timer.start && iso(new Date(s.timer.start))===date) m += timerMin(s); return m; }
 /* gecen=true: sadece bugüne kadarki günler (Salı günü haftanın 1. ve 2. günü) — uyum, haftanın bitmemiş günlerini saymaz */
-function weekStats(s, w, gecen=false){ let all=0,done=0,min=0; const t = today(); for(const d of pDays(s,w)){ if(gecen && d > t) continue; const l=dayTasks(s,d); all+=l.length; done+=l.filter(t=>t.done).length; min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
+function weekStats(s, w, gecen=false){ let all=0,done=0,min=0; const t = today(); for(const d of pDays(s,w)){ if(gecen && d > t) continue; const l=dayTasks(s,d), b=l.filter(x=>x.done).length; all += (gecen && d===t) ? b : l.length; done += b; /* bugün: sadece yapılanlar sayılır, henüz yapılmayanlar uyumu düşürmez */ min+=minutes(s,d); } return {all,done,min,pct: all? done/all : null}; }
 function active(s, d){ return minutes(s,d,false)>0 || dayTasks(s,d).some(t=>t.done) || (s.timer && iso(new Date(s.timer.start))===d); }
 function streak(s){ let c=0, d=today(); if(!active(s,d)) d=addDays(d,-1); while(active(s,d) && c<400){ c++; d=addDays(d,-1); } return c; }
 /* ---------- Giriş takibi (koç) ---------- */
