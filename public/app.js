@@ -644,7 +644,9 @@ function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1],
   const dersler = subs.length ? `<div class="card dsl"><div class="dslh"><b>Derslerim</b><span class="faint small">%${Math.round(examPct(s, tur)*100)} tamam</span></div>${subs.map(sub=>{ const p = subjPct(s, sub);
       return `<button class="dsr" data-act="dersac" data-v="${esc(sub.k)}"><span class="dsra">${esc(sub.n)}</span><span class="dsrb"><i style="width:${p*100}%"></i></span><span class="num faint small">%${Math.round(p*100)}</span>${icon("chev","xs")}</button>`; }).join("")}</div>`
     : `<button class="card dsl dsr" data-act="go" data-v="konular"><span class="dsra">Konu ilerlemesi</span>${icon("chev","xs")}</button>`;
-  return `${head}<div class="page dsana">${deneme}${ikili}${om}${dersler}
+  /* ZEK AI butonu: deneme grafiğinin hemen altında, tek başına tüm satırı kaplar (koç ZEK AI'ı öğrencilere açınca görünür) */
+  const zkBtn = aiAcik(S.me) && zkGoster() ? `<button class="zkders" data-act="go" data-v="socoz"><img src="/zekai-cozuyor.webp" alt="" width="84" height="84"><span><b>ZEK AI ile soru çöz</b><small>Takıldığın sorunun fotoğrafını çek, adım adım birlikte çözelim</small><em>SORU ÇÖZÜM ASİSTANI</em></span>${icon("chev")}</button>` : "";
+  return `${head}<div class="page dsana">${deneme}${zkBtn}${ikili}${om}${dersler}
     <div class="dslink"><button class="link small" data-act="go" data-v="cetele">${icon("list","xs")} Yanlış çetelesi</button><button class="link small" data-act="go" data-v="konular">${icon("book","xs")} Tüm konular</button></div></div>`; }
 /* Ders sayfası: konular, durum noktası, ▶ video; konuya dokununca alt pencere */
 function dersBul(s, k){ return [...CURX().TYT, ...CURX().AYT].find(x=>x.k===k) || null; }
@@ -2478,7 +2480,7 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
 
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
 /* ZEK AI avatarı: şimdilik yalnız koçta görünür; öğrencilere açmak için ayarlarda ai.avatar = "herkes" */
-const zkGoster = () => A() || (S.settings.ai||{}).avatar === "herkes";
+const zkGoster = () => A() || (S.settings.ai||{}).avatar === "herkes" || (S.settings.ai||{}).avatarHerkes === true;
 const zkAd = () => zkGoster() ? "ZEK AI" : "Zek AI";
 const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:100, uyari:80, takipGunluk:15, bonusAcik:true, bonusUyum:70, sinirsiz:true, gunlukSoru:30, aylikSoru:600, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
@@ -2623,6 +2625,7 @@ function aiSet(k, v){ S.settings.ai = { ...(S.settings.ai||{}), [k]: v }; saveSe
 function aiAyarHTML(){ const c = aiC();
   return `<div class="f">Durum<div class="seg">${[["kapali","Kapalı"],["pilot","Sadece seçtiklerim"],["herkes","Tüm öğrenciler"]].map(([k,l])=>`<label class="segr"><input type="radio" name="aiacik" data-aiacik="1" value="${k}" ${c.acik===k?"checked":""}><span>${l}</span></label>`).join("")}</div></div>
     ${c.acik==="pilot" ? `<div class="f">Deneme öğrencileri<div class="aipil">${sortedStudents().map(([id,x])=>`<label class="inline"><input type="checkbox" data-aipilot="${id}" ${(c.pilot||[]).includes(id)?"checked":""}>${esc(x.name)}</label>`).join("")}</div></div>` : ""}
+    <label class="inline"><input type="checkbox" data-aibool="avatarHerkes" ${c.avatar==="herkes"||c.avatarHerkes?"checked":""}>ZEK AI'ı öğrencilere aç (avatar, ana sayfa kartı ve Ders ekranındaki büyük ZEK AI butonu)</label>
     <label class="inline"><input type="checkbox" data-aibool="sinirsiz" ${c.sinirsiz?"checked":""}>Öğrenciye “Sınırsız Soru Çözüm” göster (arka planda adil kullanım sınırı)</label>
     ${c.sinirsiz ? `<div class="two"><label class="f">Adil kullanım: günde en fazla soru<input type="number" min="1" step="5" data-ainum="gunlukSoru" value="${c.gunlukSoru}"></label>
       <label class="f">Adil kullanım: ayda en fazla soru<input type="number" min="1" step="50" data-ainum="aylikSoru" value="${c.aylikSoru}"></label></div>` : `<label class="f">Öğrenci başı aylık soru hakkı<input type="number" min="0" step="10" data-ainum="aylikHak" value="${c.aylikHak}"></label>`}
