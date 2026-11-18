@@ -584,7 +584,8 @@ const YENILIK_SURUM = "2026-11-18";
 const YENILIK = [
   {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne iki yenilik geldi: soru çözüm asistanın ZEK AI ve konu konu çözebileceğin SORU HAVUZU. Kısaca göstereyim.", kosul:"zekai"},
   {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne SORU HAVUZU geldi: TYT ve AYT sorularını konu konu, çözümleriyle çözebilirsin. Kısaca göstereyim.", kosul:"zekaiyok"},
-  {view:"ders", nav:"ders", ic:"search", b:"Yeni: ZEK AI 🤖", t:"Ders bölümünün üstündeki mor ZEK AI butonu senin soru çözüm asistanın. Takıldığın sorunun fotoğrafını çek, ZEK AI adım adım birlikte çözsün. Önce kendin dene, sonra bak!", kosul:"zekai"},
+  {view:"ders", nav:"ders", ic:"search", b:"Yeni: ZEK AI 🤖", t:"Soru çözüm asistanın ZEK AI geldi! Ders ekranında, deneme grafiğinin hemen altındaki büyük mor ZEK AI butonunu gör.", kosul:"zekai"},
+  {view:"socoz", nav:"ders", ic:"note", b:"Takıldığın soruyu fotoğrafla 📷", t:"Sorunun fotoğrafını çek, cevap anahtarındaki şıkkı seç; ZEK AI adım adım birlikte çözsün. Anlamadığın adımda “Bu adımı anlamadım”a dokun, daha basit anlatsın. Önce kendin dene, takıldığın yerde sor!", kosul:"zekai"},
   {view:"ders", nav:"ders", ic:"book", b:"Yeni: SORU HAVUZU 📚", t:"Ders bölümünde ZEK AI'ın altındaki turuncu SORU HAVUZU butonuna dokun. Ders ve konu seç, şıkkı işaretle: doğru mu yanlış mı hemen görürsün. Yanlışsa çözüm adım adım açılır, “Benzer soruyu dene” ile aynı konudan yeni bir soruya geçersin."},
   ...ODUL_ADIM.map(x=>({...x, kosul:"oduleski"})),
   ...DERS_ADIM.map(x=>({...x, kosul:"derseski"})),
