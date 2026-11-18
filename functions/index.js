@@ -17,7 +17,7 @@ import nodemailer from "nodemailer";
 import { veliOzet, veliEposta, epostaGecerli } from "./veli.js";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
-import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
+import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, turkceMi, TURKCE_BECERI, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -333,21 +333,25 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
   /* Talimat önbellekte: sabit kısım (şema + kurallar + beceriler) system'de cache_control ile; soruya özgü kısım mesajda */
   const SIS = [{ type: "text", text: SISTEM }, { type: "text", text: COZ_SABIT, cache_control: { type: "ephemeral" } }];
+  /* Türkçe becerisi: Türkçe sorusunda (öğrenci "Türkçe" seçtiyse ya da ilk çözüm Türkçe dediyse) ikinci önbellek bloğu olarak eklenir */
+  const SIS_TR = [...SIS, { type: "text", text: TURKCE_BECERI, cache_control: { type: "ephemeral" } }];
+  let sis = turkceMi(d.ders) ? SIS_TR : SIS;
   const resimP = resim ? [{ type: "image", source: { type: "base64", media_type: "image/jpeg", data: resim } }] : [];
   const icerik = (ek = {}) => [...resimP, { type: "text", text: cozDegisken({ metin, anahtar, tekrar, ...ek }) }];
   let dolar = 0, model = "kolay", r = null, neden = tekrar ? "ogrenci-yanlis-dedi" : null, hizli = null, guclu = null, hakem = null, kim = "hizli";
   if (!tekrar) {
-    const a = await claude(c.modelKolay, icerik(), 2500, SIS); dolar += maliyet(c, "kolay", a.usage); r = hizli = jsonCikar(a.text);
+    const a = await claude(c.modelKolay, icerik(), 2500, sis); dolar += maliyet(c, "kolay", a.usage); r = hizli = jsonCikar(a.text);
+    if (r && turkceMi(r.ders)) sis = SIS_TR;
     neden = zoraGec(r, anahtar);
     /* Sözelde ikinci oy (anahtar yoksa): hızlı model ikinci kez, şıkları tersten eleyerek; farklıysa güçlüye */
     if (!neden && !anahtar && r && r.okunabildi !== false && sozelMi(r.ders)) {
-      try { const a2 = await claude(c.modelKolay, icerik({ ikinci: true }), 2500, SIS); dolar += maliyet(c, "kolay", a2.usage); const r2 = jsonCikar(a2.text);
+      try { const a2 = await claude(c.modelKolay, icerik({ ikinci: true }), 2500, sis); dolar += maliyet(c, "kolay", a2.usage); const r2 = jsonCikar(a2.text);
         if (r2 && sikOf(r2) && sikOf(r2) !== sikOf(r)) neden = "sozel-oy"; }
       catch (e) { logger.warn("ikinci oy", e.message); }
     }
   }
   if (neden) {
-    try { const b = await claude(c.modelZor, icerik(), 3500, SIS); dolar += maliyet(c, "zor", b.usage); guclu = jsonCikar(b.text); }
+    try { const b = await claude(c.modelZor, icerik(), 3500, sis); dolar += maliyet(c, "zor", b.usage); guclu = jsonCikar(b.text); }
     catch (e) { logger.warn("güçlü model", e.message); if (!r) throw e; }
     if (guclu) {
       model = "zor"; r = guclu; kim = "guclu";
@@ -355,7 +359,7 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
         if (anahtar) ({ r, kim } = anahtarlaSec(hizli, guclu, anahtar));
         else {
           /* Hakem: iki model farklı şık buldu; güçlü model lehine ama gerekçeye bakarak karar */
-          try { const h = await claude(c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 800, SIS); dolar += maliyet(c, "zor", h.usage); hakem = jsonCikar(h.text); }
+          try { const h = await claude(c.modelHakem || c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 1500, sis); dolar += maliyet(c, c.modelHakem ? "hakem" : "zor", h.usage); hakem = jsonCikar(h.text); }
           catch (e) { logger.warn("hakem", e.message); }
           ({ r, kim } = hakemSonucu(hizli, guclu, hakem));
         }
