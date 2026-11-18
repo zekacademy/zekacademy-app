@@ -611,7 +611,7 @@ function studentShell(){
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
-  const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s)};
+  const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s), havuz:cHavuz};
   const nots = studentNotices(s).length;
   if(S.view==="mesaj") return `<div class="shell msgshell">${sMesaj()}</div>`;
   return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["ders","book","Ders"],["program",(s.timer&&s.timer.start)?"timer":"cal",(s.timer&&s.timer.start)?"Çalışıyorsun":"Haftalık Program",true,0,!!(s.timer&&s.timer.start)],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
@@ -646,7 +646,8 @@ function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1],
     : `<button class="card dsl dsr" data-act="go" data-v="konular"><span class="dsra">Konu ilerlemesi</span>${icon("chev","xs")}</button>`;
   /* ZEK AI butonu: deneme grafiğinin hemen altında, tek başına tüm satırı kaplar (koç ZEK AI'ı öğrencilere açınca görünür) */
   const zkBtn = aiAcik(S.me) && zkGoster() ? `<button class="zkders" data-act="go" data-v="socoz"><img src="/zekai-cozuyor.webp" alt="" width="84" height="84"><span><b>ZEK AI <i>(Türkiye 1.si)</i></b><em>SORU ÇÖZÜM ASİSTANI</em></span>${icon("chev")}</button>` : "";
-  return `${head}<div class="page dsana">${deneme}${zkBtn}${ikili}${om}${dersler}
+  const hvBtn = `<button class="zkders hvbtn" data-act="go" data-v="havuz"><img src="/soru-havuzu.webp" alt="" width="84" height="84"><span><b>SORU HAVUZU</b><em>TYT · AYT · KONU KONU ÇÖZ</em></span>${icon("chev")}</button>`;
+  return `${head}<div class="page dsana">${deneme}<div class="dsust">${zkBtn}${hvBtn}</div>${ikili}${om}${dersler}
     <div class="dslink"><button class="link small" data-act="go" data-v="cetele">${icon("list","xs")} Yanlış çetelesi</button><button class="link small" data-act="go" data-v="konular">${icon("book","xs")} Tüm konular</button></div></div>`; }
 /* Ders sayfası: konular, durum noktası, ▶ video; konuya dokununca alt pencere */
 function dersBul(s, k){ return [...CURX().TYT, ...CURX().AYT].find(x=>x.k===k) || null; }
@@ -2357,7 +2358,7 @@ function cMore(){
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     ${(n=>`<button class="row" data-act="go" data-v="mesajlar"><span class="ri" style="${n?"background:var(--acs);color:var(--ac)":""}">${icon("chat","sm")}</span><div><div class="rt">Mesajlar${n?` <span class="pill ac">${n} yeni</span>`:""}</div><div class="rs">Öğrencilerinle uygulama içinden yazış, duyuru gönder</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(msgToplamOkunmadi())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
-    <button class="row" data-act="go" data-v="havuz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("note","sm")}</span><div><div class="rt">Soru Havuzu</div><div class="rs">TYT soruları konu konu, çözümleri ve konu tekrarı kartlarıyla (sadece koç)</div></div><span class="rx">${icon("chev","sm")}</span></button>
+    <button class="row" data-act="go" data-v="havuz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("note","sm")}</span><div><div class="rt">Soru Havuzu</div><div class="rs">TYT soruları konu konu, çözümleri ve konu tekrarı kartlarıyla (öğrenciler Ders bölümünden açar)</div></div><span class="rx">${icon("chev","sm")}</span></button>
     ${(n=>`<button class="row" data-act="go" data-v="gruplar"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("timer","sm")}</span><div><div class="rt">Çalışma grupları</div><div class="rs">${n?`${n} öğrenci şu an çalışıyor`:"Şu an çalışan yok"} · ${GR.list.size} grup</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>x.timer && canliMi(x.timer.start)).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
     <button class="row" data-act="onzac"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("user","sm")}</span><div><div class="rt">Demo öğrenci</div><div class="rs">Uygulamayı öğrenci gözünden gör, yenilikleri dene (kaydedilmez)</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -2374,7 +2375,7 @@ const hvMd = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 const hvImg = (svg, png) => png ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="${esc(png)}">` : svg ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}">` : "";
 const hvHata = e => /permission-denied/.test(e && (e.code||e.message)||"") ? "Bu bölümü sadece koç görebilir." : "Veri yüklenemedi. Bağlantını kontrol edip tekrar dene.";
 function hvTazele(){ if(S.view==="havuz") render(true); }
-function havuzAc(){ if(!A() || HV.index || HV.yuk) return; HV.yuk = true; HV.hata = "";
+function havuzAc(){ if(HV.index || HV.yuk) return; HV.yuk = true; HV.hata = "";
   callFn("havuzGetir", {tur:"index"}).then(r=>{ HV.index = r; }).catch(e=>{ HV.hata = hvHata(e); }).finally(()=>{ HV.yuk = false; hvTazele(); }); }
 function havuzDers(id){ HV.ders = id; HV.konu = null; HV.zor = "tum"; HV.ac = new Set(); window.scrollTo(0,0); render(); }
 function havuzKonu(dosya){ HV.konu = dosya; HV.zor = "tum"; HV.ac = new Set(); HV.konuHata = ""; window.scrollTo(0,0);
@@ -2410,8 +2411,7 @@ function hvSoru(q, no, kartlar){
       ${Object.keys(cel).length ? `<h4>Çeldiriciler</h4><ul>${Object.keys(cel).sort().map(h=>`<li><b>${esc(h)}:</b> ${esc(cel[h])}</li>`).join("")}</ul>` : ""}
       ${q.kartId ? (kartlar ? hvKart(kartlar[q.kartId]) : `<p class="faint small">Konu tekrarı kartı yükleniyor…</p>`) : ""}</div>` : ""}</div>`; }
 function cHavuz(){
-  if(!A()) return "";
-  const geri = `<button class="iconbtn" data-act="${HV.konu?"hvg":"go"}" data-v="daha" aria-label="Geri">${icon("back")}</button>`;
+  const geri = `<button class="iconbtn" data-act="${HV.konu?"hvg":"go"}" data-v="${A()?"daha":"ders"}" aria-label="Geri">${icon("back")}</button>`;
   const dersler = (HV.index && HV.index.dersler) || [], d = dersler.find(x=>x.id===HV.ders), k = d && HV.konu ? d.konular.find(x=>x.dosya===HV.konu) : null;
   const tabs = `<div class="seg hvtab">${dersler.map(x=>`<button data-act="hvd" data-v="${x.id}" aria-pressed="${x.id===HV.ders}">${esc(x.ad.replace(/^TYT /,""))}</button>`).join("")}</div>`;
   let body;
@@ -3640,14 +3640,14 @@ document.addEventListener("click", e=>{
     case "kvsil": mutate(x=>{ x.kvid = kvListe(x).filter(y=>y.id!==v); }); save(); render(); toast("Listeden çıkarıldı"); break;
     case "dersac": S.dsk=v; S.dsf="tum"; S.view="dersd"; render(); window.scrollTo(0,0); break;
     case "dsf": S.dsf=v; render(); break;
-    case "hvd": if(A()) havuzDers(v); break;
-    case "hvk": if(A()) havuzKonu(v); break;
+    case "hvd": havuzDers(v); break;
+    case "hvk": havuzKonu(v); break;
     case "hvg": HV.konu = null; render(); window.scrollTo(0,0); break;
     case "hvz": HV.zor = v; render(true); break;
-    case "hvs": if(A() && !HV.sec.has(b.dataset.id)){ HV.sec.set(b.dataset.id, v); HV.ac.add(b.dataset.id); render(true); } break;
+    case "hvs": if(!HV.sec.has(b.dataset.id)){ HV.sec.set(b.dataset.id, v); HV.ac.add(b.dataset.id); render(true); } break;
     case "hvr": HV.sec.delete(b.dataset.id); HV.ac.delete(b.dataset.id); render(true); break;
     case "hvb": { HV.zor = "tum"; render(true); const e = document.getElementById("hvq-"+b.dataset.id); if(e){ e.scrollIntoView({behavior:"smooth", block:"start"}); e.classList.add("hvvurgu"); setTimeout(()=>e.classList.remove("hvvurgu"), 1600); } break; }
-    case "hvc": if(A()){ HV.ac.has(b.dataset.id) ? HV.ac.delete(b.dataset.id) : HV.ac.add(b.dataset.id); render(true); } break;
+    case "hvc": { HV.ac.has(b.dataset.id) ? HV.ac.delete(b.dataset.id) : HV.ac.add(b.dataset.id); render(true); } break;
     case "hvyeni": HV.hata = ""; havuzAc(); render(); break;
     case "konud": konuDetaySheet(b.dataset.k); break;
     case "kdsay": { const f=b.dataset.f, k=b.dataset.k; let yeni=0; mutate(s=>{ const t=topic(s,k); t[f]=Math.max(0,(t[f]||0)+(+b.dataset.d)); yeni=t[f]; }); const el=$("#kd-"+f); if(el) el.textContent=yeni; render(true); break; }
