@@ -1447,11 +1447,11 @@ const gunSonu = n => { const d = new Date(); d.setHours(24,0,0,0); return d.getT
 const DSURE = [[1,"Sadece bugün (gece 00:00'a kadar)"],[2,"2 gün"],[3,"3 gün"],[7,"1 hafta"],[14,"2 hafta"],[30,"1 ay"]];
 function kocDurum(gid){ return A() ? (GR.koc.get(gid) || null) : ((GR.canli.get(gid) || new Map()).get(KOC_UID) || null); }
 function kocBugun(k){ if(!k) return 0; const t = today(); return (k.gun===t ? (k.bugunDk||0) : 0) + (canliMi(k.basla) && iso(new Date(k.basla))===t ? gecenSn(k.basla)/60 : 0); }
-function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null, on = k && canliMi(k.basla), bg = kocBugun(k);
-  if(!on && !bg && !not && !yil) return "";
+function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null, on = k && canliMi(k.basla);
+  if(!on && !not && !yil) return ""; /* koçun günlük toplamı öğrencilere gösterilmez (koçun isteği) */
   const benim = yil && yil.uid===S.me;
   return `<div class="card skoc"><div class="skh"><img class="skav ${on?"on":""}" src="/zekeriya.jpg" alt="Zekeriya Hoca"><div style="min-width:0"><b>Zekeriya Hoca</b><small class="faint">Koçun · sınıfta</small>
-      <div class="small">${on ? `<span class="gcanli"><i></i>Şu an çalışıyor · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : bg ? `Bugün ${fmtMin(bg)} çalıştı` : ""}</div></div></div>
+      <div class="small">${on ? `<span class="gcanli"><i></i>Şu an çalışıyor · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : ""}</div></div></div>
     ${not ? `<div class="sknot">📢 ${waBicim(not.metin)}</div>` : ""}
     ${yil ? `<div class="skyil">⭐ ${benim ? `<b>Koçun yıldızı sensin!</b>` : `Koçun yıldızı: <b>${esc(yil.takma||"")}</b>`}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</div>`; }
 /* Koç panelinde sınıfın altında: yazdığın duyuru ve yıldız (öğrencilerin gördüğü gibi); dokununca düzenlenir */
@@ -1471,7 +1471,7 @@ async function kocKronometre(){ const t = today(), now = Date.now(), on = kocCal
   render(); try{ await Promise.all(isler); toast(on ? "Kronometren durdu; sınıfta bugünkü süren güncellendi" : "Sınıflarda “Zekeriya Hoca şu an çalışıyor” görünüyor"); }catch(e){ toast("Kaydedilemedi, internetini kontrol et"); } }
 function kocHeroKart(){ if(!GR.list.size) return ""; const on = kocCalisiyor(), k = [...GR.koc.values()].find(Boolean), bg = kocBugun(k);
   return `<div class="card skoc"><div class="skh"><img class="skav ${on?"on":""}" src="/zekeriya.jpg" alt=""><div style="min-width:0;flex:1"><b>Sınıfta sen</b>
-    <div class="small muted">${on ? `<span class="gcanli"><i></i>Çalışıyorsun · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : `Öğrencilerin seni “Zekeriya Hoca · şu an çalışıyor” diye görür.${bg?` Bugün ${fmtMin(bg)}.`:""}`}</div></div>
+    <div class="small muted">${on ? `<span class="gcanli"><i></i>Çalışıyorsun · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : `Öğrencilerin seni “Zekeriya Hoca · şu an çalışıyor” diye görür; günlük toplamını görmezler.${bg?` Bugün ${fmtMin(bg)}.`:""}`}</div></div>
     <button class="btn sm ${on?"":"pri"}" data-act="kockron">${icon(on?"stop":"play","xs")} ${on?"Durdur":"Ben de çalışıyorum"}</button></div>
     <p class="faint small" style="margin:8px 0 0">Sıralamaya ve ödüllere girmezsin; sınıfın üstünde ayrı görünürsün.</p></div>`; }
 function grKocSheet(gid){ const g = GR.list.get(gid); if(!g) return; const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null;
