@@ -204,8 +204,8 @@ async function havuzOku(rel){
   if (!havuzOnbellek.has(rel)) havuzOnbellek.set(rel, JSON.parse(gunzipSync(await readFile(HAVUZ_DIR + rel + ".gz")).toString("utf8")));
   return havuzOnbellek.get(rel);
 }
-export const havuzGetir = onCall({ timeoutSeconds: 60, memory: "512MiB", maxInstances: 5 }, async (req) => {
-  requireCoach(req);
+export const havuzGetir = onCall({ timeoutSeconds: 60, memory: "512MiB", maxInstances: 10 }, async (req) => {
+  if (!req.auth) throw new HttpsError("unauthenticated", "Önce giriş yapmalısın.");
   const d = req.data || {};
   try {
     const index = await havuzOku("index.json");
