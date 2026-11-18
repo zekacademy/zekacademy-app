@@ -1,0 +1,362 @@
+[
+ {
+  "id": "bio-canlilarin-ortak-02",
+  "k": "bio",
+  "baslik": "Metabolizma ve sıcaklık grafiği",
+  "olcer": "Metabolizma hızının sıcaklıkla nasıl değiştiğini grafikten okuyup anabolik ile katabolik tepkimeyi ayırabilmeni.",
+  "kural": "**Anabolizma** küçük moleküllerden büyük molekül yapar ve enerji harcar. **Katabolizma** büyük molekülü yıkar ve enerji açığa çıkarır. Metabolizma enzimlerle yürür: hız optimum sıcaklığa kadar artar, daha yüksek sıcaklıkta enzimler bozulduğu için düşer.",
+  "formul": "Anabolizma: yapım, enerji harcar · Katabolizma: yıkım, enerji verir",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\" width=\"320\" height=\"180\"><path d=\"M40 20 V140 H300\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><path d=\"M40 130 C100 125 130 50 170 40 C200 36 215 60 235 135\" stroke=\"#2563eb\" fill=\"none\" stroke-width=\"3\"/><path d=\"M170 40 V140\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" fill=\"none\"/><text x=\"170\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >optimum</text><text x=\"170\" y=\"175\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >sıcaklık</text><text x=\"52\" y=\"16\" text-anchor=\"start\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >hız</text><text x=\"95\" y=\"85\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >artar</text><text x=\"262\" y=\"70\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >enzim</text><text x=\"262\" y=\"86\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >bozulur</text></svg>",
+  "ornek": {
+   "soru": "Bir hücrede metabolizma hızı 15 °C'ta 4, 35 °C'ta 12, 65 °C'ta 1 birim ölçülüyor. Hız 15 °C'tan 35 °C'a kaç kat artmıştır ve 65 °C'taki düşüşün nedeni nedir?",
+   "adimlar": [
+    "Artışı oranla: 12 ÷ 4 = 3 kat.",
+    "35 °C optimuma yakındır, hız yükselmiştir.",
+    "65 °C çok yüksektir; enzimlerin yapısı bozulmuştur, hız düşer."
+   ],
+   "cevap": "3 kat artmıştır; düşüşün nedeni yüksek sıcaklıkta enzimlerin bozulmasıdır."
+  },
+  "hata": "Sıcaklık arttıkça hızın sürekli arttığını sanmak. Grafikte tepe noktasından sonra eğri düşer; her aralığı ayrı ayrı oku.",
+  "akilda": "Önce yükselir, optimumdan sonra düşer"
+ },
+ {
+  "id": "bio-canlilarin-ortak-04",
+  "k": "bio",
+  "baslik": "Canlı–cansız ayrımı ve çoğalma",
+  "olcer": "Tablodaki özelliklerden canlı ile cansızı ayırıp bakteri çoğalmasını hesaplayabilmeni.",
+  "kural": "Canlılar hücresel yapıdadır; beslenir, solunum yapar, boşaltım yapar, uyarılara tepki verir, büyür ve ürer. **Cansızlar bu özelliklerin hiçbirini** göstermez. Virüsler hücresel yapıda değildir. Bakteriler ikiye bölünerek çoğalır: n bölünmede **2 üzeri n** bakteri olur.",
+  "formul": "n bölünme sonunda bakteri sayısı = 2ⁿ",
+  "sekil": null,
+  "ornek": {
+   "soru": "Her 20 dakikada bir ikiye bölünen tek bakteri 1 saat sonra kaç bakteri olur?",
+   "adimlar": [
+    "1 saat = 60 dakika.",
+    "Bölünme sayısı: 60 ÷ 20 = 3.",
+    "Bakteri sayısı: 2 üzeri 3 = 8."
+   ],
+   "cevap": "8 bakteri."
+  },
+  "hata": "Bölünme sayısını bakteri sayısı sanmak (3 demek). Önce bölünme sayısını bul, sonra 2'nin o kuvvetini al; sütunu özellik özellik oku.",
+  "akilda": "Hepsi varsa canlı, hiçbiri yoksa cansız"
+ },
+ {
+  "id": "bio-canlilarin-siniflandirilmasi-02",
+  "k": "bio",
+  "baslik": "Dikotom anahtar ve dallanma",
+  "olcer": "Dikotom anahtarı basamak basamak izleyip canlının hangi gruba gittiğini bulabilmeni.",
+  "kural": "Dikotom anahtarda her basamakta **iki seçenek** vardır. Canlının özelliğine uyan seçeneği seçer, gösterilen basamağa gidersin. Bir grup adına ulaşınca durursun. Dallanma şemasında dalların ayrıldığı nokta **ortak atayı** gösterir; ortak atası yakın olanlar daha akrabadır.",
+  "formul": null,
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 190\" width=\"340\" height=\"190\"><rect x=\"100\" y=\"8\" width=\"140\" height=\"34\" rx=\"6\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"170.0\" y=\"29.0\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >1. Hücre duvarı var mı?</text><path d=\"M140 42 L70 78 M200 42 L270 78\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"88\" y=\"62\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >yok</text><text x=\"252\" y=\"62\" text-anchor=\"start\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >var</text><rect x=\"15\" y=\"78\" width=\"110\" height=\"34\" rx=\"6\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"70.0\" y=\"99.0\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Hayvanlar</text><rect x=\"215\" y=\"78\" width=\"110\" height=\"34\" rx=\"6\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"270.0\" y=\"99.0\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >2. Duvar neden?</text><path d=\"M245 112 L205 148 M295 112 L300 148\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><rect x=\"150\" y=\"148\" width=\"70\" height=\"34\" rx=\"6\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"185.0\" y=\"169.0\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Mantar</text><rect x=\"262\" y=\"148\" width=\"70\" height=\"34\" rx=\"6\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"297.0\" y=\"169.0\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Bitki</text><text x=\"215\" y=\"134\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >kitin</text><text x=\"300\" y=\"134\" text-anchor=\"start\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >selüloz</text></svg>",
+  "ornek": {
+   "soru": "Yukarıdaki anahtarda hücre duvarı selülozdan oluşan, ototrof bir canlı hangi gruba girer?",
+   "adimlar": [
+    "1. basamak: hücre duvarı var, bu yüzden 2. basamağa geç.",
+    "2. basamak: duvar selülozdan, yani sağ seçenek.",
+    "Sağ seçenek Bitki grubunu gösterir."
+   ],
+   "cevap": "Bitkiler."
+  },
+  "hata": "Bir özelliği görmeyip yanlış yöne gitmek (ör. çok hücreli ya da duvar bilgisini atlamak). Her basamakta yalnız o basamağın sorusuna bak.",
+  "akilda": "Her basamakta uyan seçeneği izle"
+ },
+ {
+  "id": "bio-canlilarin-siniflandirilmasi-04",
+  "k": "bio",
+  "baslik": "Bitki ve hayvan grupları",
+  "olcer": "Bitki ve omurgasız hayvan gruplarını ortak ve farklı özelliklerine göre ayırabilmeni.",
+  "kural": "Bitkiler **damarsız** ve **damarlı** diye ayrılır. Damarlılar tohumsuz ve tohumlu olur; tohumlular açık ya da kapalı tohumludur. Tohumsuz bitkiler **sporla** ürer. Omurgasız gruplarda her özellik her grupta bulunmaz; ifadeyi tablodaki sütunla karşılaştır.",
+  "formul": "Bitkiler → damarlı → tohumlu → kapalı tohumlu",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kozalaklı ağaç, eğrelti otu ve kara yosunundan hangisi damarlı ama tohumsuzdur?",
+   "adimlar": [
+    "Kara yosunu damarsızdır, elenir.",
+    "Kozalaklı ağaç damarlı ve tohumludur (açık tohumlu), elenir.",
+    "Eğrelti otu damarlıdır ve sporla ürer, tohumsuzdur."
+   ],
+   "cevap": "Eğrelti otu."
+  },
+  "hata": "\"Hepsi\" ya da \"tek\" gibi kapsamlı sözleri tüm satırlarda sınamamak. Bir satır uymuyorsa ifade yanlıştır; her gruba tek tek bak.",
+  "akilda": "Tohumsuz bitki sporla ürer"
+ },
+ {
+  "id": "bio-canlilarin-temel-01",
+  "k": "bio",
+  "baslik": "Enzimlerin özellikleri ve grafikleri",
+  "olcer": "Enzimin ne yaptığını, ürün–zaman grafiğinde enzim miktarının ve sıcaklığın etkisini yorumlayabilmeni.",
+  "kural": "Enzim tepkimeyi hızlandıran **biyolojik katalizördür**; genellikle proteindir. Aktivasyon enerjisini düşürür, tepkime sonunda **harcanmaz**, her enzim belirli bir substrata etki eder (özgüldür). Aşırı sıcakta yapısı bozulur. Kontrollü deneyde yalnız bir etken değiştirilir.",
+  "formul": "Enzim: hızlandırır · harcanmaz · özgüldür",
+  "sekil": null,
+  "ornek": {
+   "soru": "Aynı miktar substratla iki tüp kuruluyor: 1. tüpte 1 birim, 2. tüpte 2 birim enzim var. Ürün–zaman grafiğinde fark ne olur?",
+   "adimlar": [
+    "Enzim fazlaysa tepkime daha hızlı ilerler: 2. tüpün eğrisi daha dik yükselir.",
+    "Substrat miktarı aynıdır; en sonda oluşan toplam ürün de aynı olur.",
+    "Enzim harcanmadığı için ikisinde de plato aynı yükseklikte biter."
+   ],
+   "cevap": "2. tüp daha hızlı yükselir, ikisi de aynı en yüksek ürün miktarına ulaşır."
+  },
+  "hata": "Enzimin tepkimede harcandığını sanmak. Enzim yalnız süreyi kısaltır, ürün miktarını artırmaz; grafikte plato yüksekliğine bak.",
+  "akilda": "Enzim hızlandırır, harcanmaz, özgüdür"
+ },
+ {
+  "id": "bio-canlilarin-temel-03",
+  "k": "bio",
+  "baslik": "Peptit bağı ve su sayısı",
+  "olcer": "Amino asit ve zincir sayısından peptit bağı ile su sayısını bulabilmeni.",
+  "kural": "Amino asitler **peptit bağıyla** bağlanır. Her bağ kurulurken 1 su molekülü çıkar (dehidrasyon). Hidrolizde ise bağ kopması için su **kullanılır**. Tek zincirli proteinde bağ sayısı amino asit sayısından 1 eksiktir; zincir sayısı artarsa o kadar eksik olur.",
+  "formul": "Bağ = su = amino asit sayısı − zincir sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "3 zincirli, 150 amino asitli bir proteinde kaç peptit bağı vardır? Bağların 10 tanesi hidrolizle koparılırsa kaç bağ kalır?",
+   "adimlar": [
+    "Bağ sayısı: 150 − 3 = 147.",
+    "Sentezde 147 su açığa çıkmıştır.",
+    "Hidrolizle 10 bağ koparsa kalan: 147 − 10 = 137."
+   ],
+   "cevap": "147 bağ; 10 tanesi kopunca 137 bağ kalır."
+  },
+  "hata": "Zincir sayısını 1 sanıp amino asit sayısından yalnız 1 çıkarmak ya da amino asit sayısını bölmek. Zincir sayısını soru metninde ara.",
+  "akilda": "Su = bağ = amino asit − zincir"
+ },
+ {
+  "id": "bio-canlilarin-temel-05",
+  "k": "bio",
+  "baslik": "Yapıtaşları, su ve mineraller",
+  "olcer": "Organik bileşiklerin yapıtaşlarını eşleştirip su, mineral ve vitaminlerin görevlerini ayırt edebilmeni.",
+  "kural": "**Amino asit** proteinin, **nükleotit** nükleik asidin, **monosakkarit** polisakkaritin yapıtaşıdır; yağ gliserol ve yağ asitlerinden oluşur. Su çözücüdür, madde taşır, hidrolize girer, ısı kapasitesi yüksektir ama enerji vermez. Mineraller de enerji vermez.",
+  "formul": "Protein ← amino asit · Nükleik asit ← nükleotit",
+  "sekil": null,
+  "ornek": {
+   "soru": "Glikoz, amino asit, nükleotit ve gliserol ile yağ asidi hangi bileşiklerin yapıtaşıdır?",
+   "adimlar": [
+    "Glikoz bir monosakkarittir: nişasta gibi polisakkaritleri kurar.",
+    "Amino asitler protein, nükleotitler DNA ve RNA oluşturur.",
+    "Gliserol ile yağ asitleri birleşip yağı oluşturur."
+   ],
+   "cevap": "Glikoz: polisakkarit, amino asit: protein, nükleotit: nükleik asit, gliserol ve yağ asidi: yağ."
+  },
+  "hata": "Karbonhidrat yapıtaşını protein ya da nükleotitle karıştırmak. Bileşiğin adından ters çalış: protein dendiyse amino asit.",
+  "akilda": "Protein amino asit, DNA nükleotit"
+ },
+ {
+  "id": "bio-ekosistem-02",
+  "k": "bio",
+  "baslik": "Çevre sorunları ve doğal kaynaklar",
+  "olcer": "Besin tuzu artışının alg ve oksijen düzeyine etkisini zaman sırasıyla yorumlayabilmeni.",
+  "kural": "Azot ve fosfor gibi **besin tuzları** artınca algler çoğalır. Algler ölünce ayrıştırıcılar onları parçalarken suyun **oksijenini** kullanır, oksijen düşer. Yenilenebilir kaynaklar kullanılma hızından hızlı ya da sürekli yenilenir; yenilenemeyenler tükenir.",
+  "formul": "Besin tuzu ↑ → alg ↑ → alg ölümü → oksijen ↓",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 190\" width=\"340\" height=\"190\"><path d=\"M45 20 V150 H320\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><path d=\"M45 140 C70 60 90 50 320 48\" stroke=\"#dc2626\" fill=\"none\" stroke-width=\"3\"/><path d=\"M45 140 C100 138 130 130 160 70 C180 35 200 40 220 80 C240 125 270 142 320 144\" stroke=\"#16a34a\" fill=\"none\" stroke-width=\"3\"/><path d=\"M45 60 C150 58 200 58 235 75 C270 95 290 125 320 132\" stroke=\"#2563eb\" fill=\"none\" stroke-width=\"3\"/><text x=\"180\" y=\"172\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >zaman (yıl)</text><text x=\"55\" y=\"14\" text-anchor=\"start\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >miktar</text><text x=\"180\" y=\"40\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#dc2626\">fosfat</text><text x=\"122\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#16a34a\">alg</text><text x=\"100\" y=\"54\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#2563eb\">oksijen</text></svg>",
+  "ornek": {
+   "soru": "Bir göle 2. yılda fazla fosfat karışıyor. Alg 4. yılda en yüksek değere çıkıyor, çözünmüş oksijen 7. yıldan sonra düşüyor. Olayları sırala.",
+   "adimlar": [
+    "Önce fosfat artar (2. yıl).",
+    "Sonra alg miktarı yükselir (4. yıl zirve).",
+    "Algler ölür, ayrıştırıcılar çoğalıp oksijeni kullanır; oksijen 7. yıldan sonra düşer."
+   ],
+   "cevap": "Fosfat artışı, alg artışı, alg ölümü ve oksijenin düşmesi."
+  },
+  "hata": "Alg azalırken fosfatın azaldığını sanmak. Eğrilerin değişime başladığı zamanları yan yana yaz; olay sırası zaman sırasıdır.",
+  "akilda": "Eğriler hangi sırayla döndü, olay o sıra"
+ },
+ {
+  "id": "bio-ekosistem-04",
+  "k": "bio",
+  "baslik": "Popülasyon ve ekolojik ilişkiler",
+  "olcer": "Doğum, ölüm ve göçten popülasyon büyüklüğünü ve yoğunluğunu bulup ilişki türlerini ayırabilmeni.",
+  "kural": "**Mutualizm**: iki taraf da yararlanır (liken). **Parazitizm**: biri yararlanır, konak zarar görür (kene). **Kommensalizm**: biri yararlanır, diğeri etkilenmez. Popülasyon büyüklüğü doğum ve göçle girenle artar, ölüm ve göçle çıkanla azalır.",
+  "formul": "Yoğunluk = birey sayısı ÷ alan",
+  "sekil": null,
+  "ornek": {
+   "soru": "Yıl başında 300 birey, 5 km² alanda yaşıyor. Yıl içinde 60 doğum, 40 ölüm, 20 göçle giriş, 10 göçle çıkış oluyor. Yıl sonu yoğunluğu kaçtır?",
+   "adimlar": [
+    "Büyüklük: 300 + 60 − 40 + 20 − 10 = 330.",
+    "Alan 5 km² olduğundan yoğunluk = 330 ÷ 5.",
+    "Sonuç 66."
+   ],
+   "cevap": "66 birey/km²."
+  },
+  "hata": "Yıl başı sayıya değişimi eklemeyi unutmak ya da göçü yanlış yöne yazmak. Girenleri topla, çıkanları çıkar; ilişkide önce kim yararlanıyor diye sor.",
+  "akilda": "Kim yararlanıyor, kim zarar görüyor?"
+ },
+ {
+  "id": "bio-hucre-ve-01",
+  "k": "bio",
+  "baslik": "Hücre teorisi ve bilim insanları",
+  "olcer": "Hücreyi adlandıran bilim insanı ile hücre teorisine katkı yapanları ayırabilmeni.",
+  "kural": "**Hooke** mantar kesitinde odacıkları görüp onlara hücre adını verdi. Leeuwenhoek mikroskopla tek hücreli canlıları gözledi. Schleiden bitkilerin, Schwann hayvanların hücrelerden oluştuğunu söyledi. Virchow hücrenin hücreden oluştuğunu belirtti. Teori bu **katkıların birleşmesiyle** doğdu.",
+  "formul": null,
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir öğrenci \"bitkilerin hücrelerden oluştuğunu söyleyen bilim insanı hücreyi de adlandırmıştır\" diyor. Doğru mu?",
+   "adimlar": [
+    "Hücre adını mantar kesitinde odacıkları gören Hooke verdi.",
+    "Bitkilerin hücreli yapısını söyleyen Schleiden'dir.",
+    "İkisi ayrı olaylardır; öğrenci birbirine karıştırmıştır."
+   ],
+   "cevap": "Yanlış; adı Hooke verdi."
+  },
+  "hata": "Bitki ya da hayvan dokusunun hücreli olduğunu söyleyeni, hücreyi adlandıran sanmak. \"Gördü ve adını koydu\" ile \"dokunun hücreli olduğunu söyledi\" farklı işlerdir.",
+  "akilda": "Hücre adı Hooke, bitki Schleiden"
+ },
+ {
+  "id": "bio-hucre-ve-03",
+  "k": "bio",
+  "baslik": "Organeller ve görevleri",
+  "olcer": "Organellerin görevlerini eşleştirip salgı proteininin hücre içindeki yolunu sıralayabilmeni.",
+  "kural": "Hücre dışına salgılanan protein **ribozomlu** yapıda üretilir, ER ve **Golgi** içinden geçip keseciklerle zara taşınır. Plastitler çift zarlıdır: kloroplast klorofil, kromoplast renkli pigment taşır; lökoplast renksizdir ve besin depolar.",
+  "formul": "Ribozom → granüllü ER → Golgi → kesecik → zar",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir hücrede salgılanan sindirim enzimi için Golgi cisimciğinden hemen önce hangi yapıdan geçer, hemen sonra hangisine geçer?",
+   "adimlar": [
+    "Protein ribozomda yapılır, granüllü ER'ye girer.",
+    "Granüllü ER'den Golgi'ye geçer: Golgi'den önceki yapı granüllü ER'dir.",
+    "Golgi'den kesecikler kopar; sonraki yapı kesecik, sonra zardır."
+   ],
+   "cevap": "Önce granüllü ER, sonra kesecik."
+  },
+  "hata": "Sırayı tersine ya da Golgi ile keseciği yer değiştirerek yazmak. Radyoaktivite zirvesi erken olan yapı yolun başındadır; kesecik Golgi'den koptuğu için ondan sonra gelir.",
+  "akilda": "Tepe erkense yol başındadır"
+ },
+ {
+  "id": "bio-hucre-ve-05",
+  "k": "bio",
+  "baslik": "Zardan madde geçişi ve ozmoz",
+  "olcer": "Ozmoz yönünü, deney değişkenlerini ve yüzey/hacim oranını yorumlayabilmeni.",
+  "kural": "Su, yarı geçirgen zardan çözünen derişiminin **düşük** olduğu yerden **yüksek** olduğu yere geçer. Çözünen madde geçemiyorsa yalnız su hareket eder. Küpte yüzey alanı kenarın karesiyle, hacim küpüyle orantılıdır; hücre büyüdükçe **yüzey/hacim oranı küçülür**.",
+  "formul": "Su: seyrek ortamdan → derişik ortama",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\" width=\"320\" height=\"180\"><rect x=\"20\" y=\"30\" width=\"280\" height=\"130\" rx=\"10\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><ellipse cx=\"160\" cy=\"104\" rx=\"70\" ry=\"34\" stroke=\"#2563eb\" fill=\"none\" stroke-width=\"3\"/><text x=\"160\" y=\"108\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >kese %25</text><text x=\"160\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >beher %10</text><text x=\"160\" y=\"155\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#2563eb\">su içeri girer</text><path d=\"M60 70 L105 88 M260 70 L215 88\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/></svg>",
+  "ornek": {
+   "soru": "İçinde %25 şeker çözeltisi olan selofan kese %10 şekerli çözeltiye batırılıyor; şeker selofandan geçemiyor. Kese kütlesi nasıl değişir? Kenarı 2 cm ve 4 cm olan küplerin yüzey/hacim oranını da bul.",
+   "adimlar": [
+    "Kese daha derişik: su beherden içeri girer, kütle artar.",
+    "Küpte oran: 6a² ÷ a³ = 6 ÷ a.",
+    "a = 2 cm için 3; a = 4 cm için 1,5."
+   ],
+   "cevap": "Kese kütlesi artar; oran 3 ve 1,5 olur, büyük küpte oran küçüktür."
+  },
+  "hata": "Suyun çözünen yönüne gitmesini ters sanmak ya da kesede derişimi bağımsız değişken saymamak. Önce \"neyi değiştirdim, neyi ölçtüm?\" sorusunu sor.",
+  "akilda": "Su derişik tarafa akar"
+ },
+ {
+  "id": "bio-hucrede-bolunme-02",
+  "k": "bio",
+  "baslik": "Mayoz ve kalıtsal çeşitlilik",
+  "olcer": "Mayozun evrelerindeki kromozom ve kromatit sayısını ve çeşitlilik kaynaklarını belirleyebilmeni.",
+  "kural": "**Mayoz I**'de homolog kromozomlar ayrılır; kromozom sayısı yarıya iner (n), kromozomlar çift kromatitli kalır. **Mayoz II**'de kardeş kromatitler ayrılır. Krossing-over, homologların kardeş olmayan kromatitleri arasında parça değişimidir ve çeşitlilik sağlar.",
+  "formul": "Mayoz I: homolog ayrılır · Mayoz II: kromatit ayrılır",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kromozom sayısı 2n = 10 olan bir hücre mayoza girer. Mayoz I sonunda bir hücrede kaç kromozom ve kaç kromatit vardır? Mayoz II sonunda?",
+   "adimlar": [
+    "Mayoz I'de sayı yarıya iner: 10 ÷ 2 = 5 kromozom.",
+    "Kromozomlar hâlâ çift kromatitlidir: 5 × 2 = 10 kromatit.",
+    "Mayoz II'de kromatitler ayrılır: 5 kromozom ve 5 kromatit."
+   ],
+   "cevap": "Mayoz I sonu: 5 kromozom, 10 kromatit; mayoz II sonu: 5 kromozom, 5 kromatit."
+  },
+  "hata": "Kardeş kromatitlerin mayoz I'de ayrıldığını sanmak. Mayoz I'de ayrılan homologlardır; kromatit sayısını hücredeki toplamla da karıştırma.",
+  "akilda": "Mayoz I homolog, II kromatit ayırır"
+ },
+ {
+  "id": "bio-hucrede-bolunme-04",
+  "k": "bio",
+  "baslik": "Bölünmede kromozom ve hücre hesabı",
+  "olcer": "Döngü süresinden hücre sayısını, evrelerden kromozom ve kromatit sayısını hesaplayabilmeni.",
+  "kural": "Her mitozda hücre sayısı **iki katına** çıkar; n bölünmede 2 üzeri n hücre olur. Önce toplam süreyi döngü süresine bölüp **tam** döngü sayısını bul. DNA eşlenince her kromozom iki kardeş kromatitli olur; mitozda yavru hücre ana hücreyle aynı kromozom sayısındadır.",
+  "formul": "Hücre sayısı = 2 üzeri tam bölünme sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "Döngüsü 6 saat süren bir hücre 28 saatte en çok kaç hücre olur?",
+   "adimlar": [
+    "Tam bölünme sayısı: 28 ÷ 6 = 4,66; tam sayı 4.",
+    "Tamamlanmamış beşinci bölünme sayılmaz.",
+    "Hücre sayısı: 2 üzeri 4 = 16."
+   ],
+   "cevap": "16 hücre."
+  },
+  "hata": "Bölünme sayısını hücre sayısı sanmak ya da 4,66'yı 5'e yuvarlamak. Yalnız biten döngüler sayılır; sonra 2'nin kuvvetini al.",
+  "akilda": "Tam döngüyü say, 2 üzeri al"
+ },
+ {
+  "id": "bio-kalitim-01",
+  "k": "bio",
+  "baslik": "ABO ve Rh kan grupları",
+  "olcer": "Kan gruplarından genotipleri bulup ABO ve Rh olasılıklarını birlikte hesaplayabilmeni.",
+  "kural": "A ve B alelleri O'ya baskındır, birbirine **eş baskındır**. A grubu AA ya da AO, B grubu BB ya da BO, AB grubu AB, O grubu OO'dur. O grubu çocuk her ebeveynden **bir O aleli** almıştır. Ayrı özelliklerin olasılıkları çarpılır.",
+  "formul": "Bağımsız özellikler: olasılıklar çarpılır",
+  "sekil": null,
+  "ornek": {
+   "soru": "Anne AO ve Rh pozitif (Rr), baba BO ve Rh negatif (rr). Çocuğun O grubu ve Rh negatif olma olasılığı nedir?",
+   "adimlar": [
+    "O grubu için: AO × BO, 4 birleşmeden 1'i OO, yani 1/4.",
+    "Rh negatif için: Rr × rr, 1/2 rr.",
+    "Birlikte: 1/4 × 1/2 = 1/8."
+   ],
+   "cevap": "1/8."
+  },
+  "hata": "İlk çocuğun O olmasından sonra AB olamayacağını sanmak; her doğum bağımsızdır. Gametleri çarpıp bir de bölmek de yanlıştır.",
+  "akilda": "O çocuk, her ebeveynden bir O"
+ },
+ {
+  "id": "bio-kalitim-03",
+  "k": "bio",
+  "baslik": "Soy ağacı analizi",
+  "olcer": "Soy ağacından kalıtım biçimini ve ebeveyn genotiplerini çıkarabilmeni.",
+  "kural": "Ebeveynde görülmeyen özellik çocukta ortaya çıkıyorsa özellik **çekiniktir** ve ebeveynler **taşıyıcıdır** (Aa). Hasta kızın babası sağlıklıysa özellik eşeye bağlı çekinik olamaz. Dolu simge özelliği gösteren bireyi belirtir.",
+  "formul": "Aa × Aa → 1 AA : 2 Aa : 1 aa",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\"><rect x=\"86\" y=\"16\" width=\"28\" height=\"28\" stroke=\"#334155\" stroke-width=\"2\" fill=\"#ffffff\"/><circle cx=\"200\" cy=\"30\" r=\"14\" stroke=\"#334155\" stroke-width=\"2\" fill=\"#ffffff\"/><path d=\"M114 30 H186 M150 30 V90 M70 90 H230 M70 90 V100 M150 90 V100 M230 90 V100\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><rect x=\"56\" y=\"101\" width=\"28\" height=\"28\" stroke=\"#334155\" stroke-width=\"2\" fill=\"#ffffff\"/><circle cx=\"150\" cy=\"115\" r=\"14\" stroke=\"#334155\" stroke-width=\"2\" fill=\"#ffffff\"/><rect x=\"216\" y=\"101\" width=\"28\" height=\"28\" stroke=\"#334155\" stroke-width=\"2\" fill=\"#334155\"/><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Dolu simge: özelliği gösterir.</text><text x=\"150\" y=\"183\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Ebeveynde yok, çocukta var.</text></svg>",
+  "ornek": {
+   "soru": "Sağlıklı ebeveynlerin ilk çocuğu hasta. İkinci çocuğun da hasta olma olasılığı nedir?",
+   "adimlar": [
+    "Sağlıklı ebeveynde hasta çocuk: hastalık çekiniktir.",
+    "Ebeveynler taşıyıcıdır: Aa × Aa.",
+    "aa olasılığı 1/4."
+   ],
+   "cevap": "1/4."
+  },
+  "hata": "Ebeveynlerin heterozigot olduğunu fark etmemek ya da Aa × Aa'da çekinik olasılığını 1/2 sanmak. Sağlıklı iki ebeveyn, hasta çocuk: hep 1/4.",
+  "akilda": "Ebeveynde yok, çocukta var: çekinik"
+ },
+ {
+  "id": "bio-kalitim-05",
+  "k": "bio",
+  "baslik": "Gamet çeşidi sayısı",
+  "olcer": "Bir genotipten kaç çeşit gamet oluşabileceğini bulabilmeni.",
+  "kural": "Heterozigot gen çifti (Aa) **2 çeşit** gamet verir; homozigot çift (AA, aa) **1 çeşit**. Çeşit sayısı, **2 üzeri heterozigot çift sayısıdır**; örneğin AaBb için 4.",
+  "formul": "Çeşit = 2 üzeri heterozigot çift sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "AaBBCcDd genotipli bir bireyden kaç çeşit gamet oluşur?",
+   "adimlar": [
+    "Heterozigot çiftleri say: Aa, Cc, Dd = 3 tane.",
+    "BB homozigottur, çeşit katmaz.",
+    "2 üzeri 3 = 8."
+   ],
+   "cevap": "8 çeşit."
+  },
+  "hata": "Gen çifti sayısını 2 ile çarpmak ya da homozigot BB çiftini de 2 çeşit saymak. Yalnız heterozigot çiftleri say.",
+  "akilda": "Gamet çeşidi: 2 üzeri heterozigot"
+ },
+ {
+  "id": "bio-kalitim-07",
+  "k": "bio",
+  "baslik": "Monohibrit ve dihibrit çaprazlama",
+  "olcer": "Tek ve iki karakterli çaprazlamada genotip ile fenotip olasılıklarını hesaplayabilmeni.",
+  "kural": "Önce her ebeveynin **gametlerini** yaz, sonra kareyi doldur. Aa × Aa → 1 AA : 2 Aa : 1 aa; baskın görünüş **3 : 1**. Bağımsız iki özellikte olasılıklar **çarpılır**; baskın özellik heterozigotta da görünür.",
+  "formul": "Aa × Aa → AA : Aa : aa = 1 : 2 : 1",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 190\" width=\"320\" height=\"190\"><text x=\"125\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >A</text><text x=\"205\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >a</text><text x=\"48\" y=\"70\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >A</text><text x=\"48\" y=\"130\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >a</text><rect x=\"85\" y=\"36\" width=\"80\" height=\"60\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><rect x=\"165\" y=\"36\" width=\"80\" height=\"60\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><rect x=\"85\" y=\"96\" width=\"80\" height=\"60\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><rect x=\"165\" y=\"96\" width=\"80\" height=\"60\" stroke=\"#334155\" fill=\"none\" stroke-width=\"2\"/><text x=\"125\" y=\"72\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >AA</text><text x=\"205\" y=\"72\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Aa</text><text x=\"125\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Aa</text><text x=\"205\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >aa</text><text x=\"160\" y=\"180\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" >Üstte bir, solda öteki ebeveynin gametleri</text></svg>",
+  "ornek": {
+   "soru": "Yuvarlak (R) tohum buruşuğa, sarı (S) renk yeşile baskın. RrSs × RrSs çaprazlamasında yavrunun yuvarlak ve yeşil olma olasılığı nedir?",
+   "adimlar": [
+    "Yuvarlak için Rr × Rr: R_ olasılığı 3/4.",
+    "Yeşil için Ss × Ss: ss olasılığı 1/4.",
+    "Çarp: 3/4 × 1/4 = 3/16."
+   ],
+   "cevap": "3/16."
+  },
+  "hata": "Heterozigot ebeveynden çekinik yavru çıkmayacağını sanmak ya da dört birleşmeyi 16 sanıp olasılığı küçültmek. Her özelliği ayrı kareyle bul, sonra çarp.",
+  "akilda": "Önce gamet, sonra kare"
+ }
+]

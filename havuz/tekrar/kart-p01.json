@@ -1,0 +1,344 @@
+[
+ {
+  "id": "bio-canlilarin-ortak-01",
+  "k": "bio",
+  "baslik": "Bilimsel yöntem ve deney değişkenleri",
+  "olcer": "Bir ifadeyi bilimsel yöntem basamağıyla eşleştirip deneyde değişkenleri ve kontrol grubunu ayırabildiğini.",
+  "kural": "Sıra: **gözlem → problem → hipotez → kontrollü deney → veri yorumu → sonuç**. Hipotez, deneyle sınanabilen geçici tahmindir. Araştırmacının değiştirdiği etken **bağımsız**, ölçtüğü sonuç **bağımlı** değişkendir; diğer koşullar sabit tutulur. Denenen etkenin uygulanmadığı grup **kontrol grubudur**.",
+  "formul": "Gözlem → Problem → Hipotez → Deney → Veri → Sonuç",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir öğrenci aynı cins fasulyeleri farklı miktarda ışık alan üç saksıya koyup iki hafta sonra boylarını ölçüyor. Bağımsız ve bağımlı değişken nedir?",
+   "adimlar": [
+    "Öğrencinin kendi değiştirdiği etken ışık miktarıdır: bağımsız değişken.",
+    "Ölçtüğü sonuç fasulyenin boyudur: bağımlı değişken.",
+    "Fasulye cinsi, su ve toprak her saksıda aynı tutulur: sabit değişkenler."
+   ],
+   "cevap": "Bağımsız: ışık miktarı. Bağımlı: bitki boyu."
+  },
+  "hata": "Nedeni tahmin eden cümleyi gözlem sanmak. Gözlem yalnız görüleni yazar; **neden** söylüyorsa hipotezdir. Deney yapılmadıysa sonuç da yazılamaz.",
+  "akilda": "Gözlem görür, hipotez tahmin eder"
+ },
+ {
+  "id": "bio-canlilarin-ortak-03",
+  "k": "bio",
+  "baslik": "Homeostazi, tepki ve adaptasyon",
+  "olcer": "İç dengenin korunmasını, uyarana tepkiyi ve adaptasyonu ayırt edip değişim grafiğini yorumlayabildiğini.",
+  "kural": "**Homeostazi**, iç ortamın uygun sınırlar içinde tutulmasıdır; değer değişse de yeniden uygun düzeye döner. **Tepki**, bir uyarana verilen anlık karşılıktır. **Adaptasyon**, popülasyonun uzun sürede kazandığı kalıtsal uyumdur. Grafikte değeri düzelten ve sınıra geri döndüren olay homeostazidir.",
+  "formul": "Homeostazi: değer değişir → düzeltilir → denge korunur",
+  "sekil": null,
+  "ornek": {
+   "soru": "Yemekten sonra kan şekeri 90'dan 140'a çıkıyor, birkaç saat içinde yeniden 95'e iniyor. Bu olay hangi kavramı örnekler?",
+   "adimlar": [
+    "Değer önce yükseldi: iç ortam dengeden uzaklaştı.",
+    "Sonra uygun düzeye geri döndü: düzeltme var.",
+    "Olay kısa sürede bireyde oldu, kalıtsal değişim yok: adaptasyon değil."
+   ],
+   "cevap": "Homeostazi (kan şekeri dengesi)."
+  },
+  "hata": "Grafikte tek noktaya bakıp 'sürekli arttı' gibi yorumlamak. Yorumdan önce **bütün değerleri sırayla oku**. Kalıtsal olmayan kısa süreli değişimi adaptasyon sanma.",
+  "akilda": "Değişir, düzelir; denge budur"
+ },
+ {
+  "id": "bio-canlilarin-siniflandirilmasi-01",
+  "k": "bio",
+  "baslik": "Bakteri büyümesi ve antibiyotik deneyi",
+  "olcer": "Grafik ve deney sonuçlarından bakteri sayısını, antibiyotik etkisini ve birlikte yaşamın sonucunu yorumlayabildiğini.",
+  "kural": "Bakteriler **ikiye bölünerek** çoğalır; her bölünme süresinde sayı **2 katına** çıkar. Önce bölünme süresini bul, toplam süreyi ona böl: n bölünme olursa sayı **2ⁿ** kat artar. Antibiyotik bakterinin üremesini durdurur; dirençli bakteri etkilenmez. Birlikte yaşamda iki canlı da fayda görebilir.",
+  "formul": "Son sayı = ilk sayı × 2ⁿ,  n = süre ÷ bölünme süresi",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bölünme süresi 20 dakika olan 50 bakteri, 100 dakika sonra kaç olur?",
+   "adimlar": [
+    "Bölünme sayısı: 100 ÷ 20 = 5.",
+    "Sayı 2⁵ = 32 katına çıkar.",
+    "50 × 32 = 1600."
+   ],
+   "cevap": "1600 bakteri."
+  },
+  "hata": "Bölünme sayılarını birbirine bölmek ya da çıkarıp sayı oranı sanmak. Sayı oranı **2'nin kuvvetidir**: bölünme sayısı farkı kuvvet olarak yazılır.",
+  "akilda": "Bölünme sayısı kuvvet olur"
+ },
+ {
+  "id": "bio-canlilarin-siniflandirilmasi-03",
+  "k": "bio",
+  "baslik": "İkili adlandırma ve sınıflandırma basamakları",
+  "olcer": "Basamakları küçükten büyüğe sıralayıp bilimsel addan cins ve tür ilişkisini okuyabildiğini.",
+  "kural": "Küçükten büyüğe: **tür → cins → familya → takım → sınıf → şube → âlem**. Tür en küçük, âlem en büyük basamaktır; küçük basamakta benzerlik fazladır. Bilimsel ad **cins + tür** adıdır: cins büyük, tür küçük harfle başlar. Cins adı aynıysa canlılar aynı cinstendir.",
+  "formul": "Tür → Cins → Familya → Takım → Sınıf → Şube → Âlem",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Sınıflandırma basamakları: üstte en küçük tür, altta en büyük âlem\"><rect x=\"105.0\" y=\"4\" width=\"70\" height=\"21\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"19\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Tür</text><rect x=\"90.0\" y=\"27\" width=\"100\" height=\"21\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"42\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Cins</text><rect x=\"75.0\" y=\"50\" width=\"130\" height=\"21\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"65\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Familya</text><rect x=\"60.0\" y=\"73\" width=\"160\" height=\"21\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"88\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Takım</text><rect x=\"45.0\" y=\"96\" width=\"190\" height=\"21\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"111\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Sınıf</text><rect x=\"30.0\" y=\"119\" width=\"220\" height=\"21\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"134\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Şube</text><rect x=\"15.0\" y=\"142\" width=\"250\" height=\"21\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"157\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Âlem</text></svg>",
+  "ornek": {
+   "soru": "Panthera leo (aslan) ile Panthera tigris (kaplan) aynı cinste mi, aynı türde mi?",
+   "adimlar": [
+    "İlk sözcük cins adıdır: ikisinde de Panthera.",
+    "İkinci sözcük tür adıdır: leo ile tigris farklı.",
+    "Cins aynı, tür farklı."
+   ],
+   "cevap": "Aynı cinse, farklı türe aittirler."
+  },
+  "hata": "Basamak sırasını karıştırmak: cinsi familyadan büyük, şubeyi sınıftan küçük sanmak. **Tür en küçük, âlem en büyük** diye başlayıp aradakileri sırayla say.",
+  "akilda": "Tür en küçük, âlem en büyük"
+ },
+ {
+  "id": "bio-canlilarin-siniflandirilmasi-05",
+  "k": "bio",
+  "baslik": "Âlemler ve virüsler",
+  "olcer": "Hücre tipi, beslenme ve hücre duvarı özelliğinden canlının âlemini belirleyebildiğini.",
+  "kural": "**Bakteri**: prokaryot. **Protista**: ökaryot, çoğu tek hücreli. **Mantar**: ökaryot, heterotrof, duvarı **kitin**. **Bitki**: ökaryot, ototrof, duvarı **selüloz**. **Hayvan**: ökaryot, heterotrof, hücre duvarı yok. **Virüsler** hücresel değildir; protein kılıf ve nükleik asitten oluşur.",
+  "formul": "Hücre tipi → beslenme → hücre duvarı → âlem",
+  "sekil": null,
+  "ornek": {
+   "soru": "Ökaryot, heterotrof, hücre duvarı kitinli, tek hücreli bir canlı hangi âlemdedir?",
+   "adimlar": [
+    "Ökaryot olduğu için bakteri değildir.",
+    "Heterotrof olduğu için bitki değildir.",
+    "Kitinli duvar mantarlara özgüdür."
+   ],
+   "cevap": "Mantarlar âlemi."
+  },
+  "hata": "Kitinli duvarı bakterilere vermek ya da duvarsız canlıyı protista sanmak. Duvarsız ve heterotrofsa önce **hayvanı** düşün. Virüsün hücresi olmadığını unutma.",
+  "akilda": "Önce hücre tipi, sonra beslenme, sonra duvar"
+ },
+ {
+  "id": "bio-canlilarin-temel-02",
+  "k": "bio",
+  "baslik": "DNA'da baz ve hidrojen bağı",
+  "olcer": "Baz yüzdesi ya da sayısından eşleşen baz çiftlerini bulup toplam hidrojen bağını hesaplayabildiğini.",
+  "kural": "Çift zincirli DNA'da **A = T** ve **G = C** olur. A–T çifti **2**, G–C çifti **3** hidrojen bağı yapar. Nükleotit; fosfat, pentoz şeker ve organik bazdan oluşur. DNA'da şeker deoksiriboz, RNA'da riboz; DNA'da T, RNA'da U bulunur.",
+  "formul": "Bağ sayısı = (A–T çifti × 2) + (G–C çifti × 3)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Çift zincirli bir DNA'da toplam 200 nükleotit var ve 60'ı adenindir. Kaç hidrojen bağı vardır?",
+   "adimlar": [
+    "A = T = 60 olduğundan 60 tane A–T çifti vardır.",
+    "Kalan 200 − 120 = 80 nükleotit G ve C'dir: G = C = 40, yani 40 G–C çifti.",
+    "Bağ: 60 × 2 + 40 × 3 = 240."
+   ],
+   "cevap": "240 hidrojen bağı."
+  },
+  "hata": "Bütün çiftleri 2 ya da 3 bağlı saymak. A ve T'yi ayrı ayrı çift sayıp ikiyle çarpmak da yanlıştır: **bir çift = bir A + bir T**. Önce çifti say.",
+  "akilda": "Önce çift say, sonra bağ say"
+ },
+ {
+  "id": "bio-canlilarin-temel-04",
+  "k": "bio",
+  "baslik": "Karbonhidrat, lipit ve besin enerjisi",
+  "olcer": "Karbonhidrat çeşitlerini ve görevlerini bilip besindeki organik maddelerden toplam enerjiyi hesaplayabildiğini.",
+  "kural": "Glikoz, fruktoz **monosakkarit**; sükroz, maltoz **disakkarit**. **Nişasta** bitkide, **glikojen** hayvanda depo polisakkarittir; selüloz bitki hücre duvarını yapar. Karbonhidrat ve protein 1 g'da 4, yağ 9 kcal verir; su ve mineral enerji vermez. Lugol nişastayı, biüret proteini, Sudan III yağı gösterir.",
+  "formul": "Enerji = 4 × karbonhidrat + 4 × protein + 9 × yağ",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir besinde 30 g karbonhidrat, 10 g protein, 5 g yağ ve 55 g su var. Toplam enerji kaç kcal?",
+   "adimlar": [
+    "Karbonhidrat: 30 × 4 = 120. Protein: 10 × 4 = 40.",
+    "Yağ: 5 × 9 = 45.",
+    "Su enerji vermez. Toplam: 120 + 40 + 45 = 205."
+   ],
+   "cevap": "205 kcal."
+  },
+  "hata": "Nişastayı hayvanda, glikojeni bitkide depo sanmak. Suyu enerji kaynağı saymak da sık hatadır: **su ve mineral enerji vermez**. Gramı kaç kcal verdiğini karıştırma.",
+  "akilda": "Nişasta bitkide, glikojen hayvanda"
+ },
+ {
+  "id": "bio-ekosistem-01",
+  "k": "bio",
+  "baslik": "Madde döngüleri ve enerji akışı",
+  "olcer": "Azot döngüsü basamaklarını bakterilerle eşleştirip enerjinin tek yönlü, maddenin döngüsel olduğunu bilebildiğini.",
+  "kural": "**Azot bağlayıcı** bakteri N₂'yi amonyağa çevirir. **Nitrifikasyon** bakterisi amonyağı nitrata çevirir. **Denitrifikasyon** bakterisi nitratı yeniden N₂'ye çevirir. Enerji besin zincirinde **tek yönlü** akar; madde canlılar ile cansız çevre arasında **döngüsel** dolaşır.",
+  "formul": "N₂ → amonyak → nitrat → N₂",
+  "sekil": null,
+  "ornek": {
+   "soru": "Baklagil köklerindeki bakteriler havadaki N₂'yi amonyağa çeviriyor. Bu bakteriler hangi gruptandır, bundan sonraki basamak nedir?",
+   "adimlar": [
+    "N₂'nin amonyağa çevrilmesi azot bağlamadır: azot bağlayıcı bakteriler.",
+    "Sonraki basamak amonyağın nitrata çevrilmesidir.",
+    "Bunu nitrifikasyon bakterileri yapar."
+   ],
+   "cevap": "Azot bağlayıcı bakteriler; sonra nitrifikasyon."
+  },
+  "hata": "Nitrifikasyon ile denitrifikasyonu karıştırmak ya da basamakları ters yazmak. **De-** öneki geri almadır: nitrat yeniden N₂ olur. Basamağı fotosentez sanma.",
+  "akilda": "Bağla, nitrata çevir, gaza döndür"
+ },
+ {
+  "id": "bio-ekosistem-03",
+  "k": "bio",
+  "baslik": "Besin ağı ve %10 kuralı",
+  "olcer": "Besin ağındaki zincirleri sayıp basamaklar arasındaki enerji miktarını %10 kuralıyla hesaplayabildiğini.",
+  "kural": "Zincir **üreticiyle** başlar, hiçbir canlı tarafından yenmeyen canlıyla biter. Besin ağı zincirlerin birleşimidir; zincir sayısını üreticiden başlayıp **tüm yolları** sayarak bul. Her basamakta enerjinin yaklaşık **%10'u** üst basamağa geçer, kalanı ısı olarak kaybolur.",
+  "formul": "Üst basamağın enerjisi = alt basamağın enerjisi ÷ 10",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Enerji piramidi: üretici 1000, otçul 100, etçil 10, üst etçil 1 kilojul\"><rect x=\"90.0\" y=\"6\" width=\"100\" height=\"30\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"26\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Üst etçil 1 kJ</text><rect x=\"65.0\" y=\"40\" width=\"150\" height=\"30\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"60\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Etçil 10 kJ</text><rect x=\"40.0\" y=\"74\" width=\"200\" height=\"30\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"94\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Otçul 100 kJ</text><rect x=\"15.0\" y=\"108\" width=\"250\" height=\"30\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"128\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Üretici 1000 kJ</text><text x=\"140\" y=\"164\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Her basamakta enerjinin %10'u geçer</text></svg>",
+  "ornek": {
+   "soru": "Üretici 8000 kJ ise üretici → otçul → birincil etçil → ikincil etçil zincirinde ikincil etçile kaç kJ ulaşır?",
+   "adimlar": [
+    "Otçul: 8000 ÷ 10 = 800.",
+    "Birincil etçil: 800 ÷ 10 = 80.",
+    "İkincil etçil: 80 ÷ 10 = 8."
+   ],
+   "cevap": "8 kJ."
+  },
+  "hata": "Aktarım sayısını yanlış saymak: dört basamaklı zincirde **üç** aktarım vardır. Birini atlayınca ya da fazla yapınca sonuç kayar. Önce basamakları numaralandır.",
+  "akilda": "Enerji her basamakta ona bölünür"
+ },
+ {
+  "id": "bio-ekosistem-05",
+  "k": "bio",
+  "baslik": "Biyotik ve abiyotik faktörler",
+  "olcer": "Bir ekosistemdeki etmenlerin canlı mı cansız mı olduğunu ve canlı bileşenlerin görevini ayırt edebildiğini.",
+  "kural": "**Abiyotik** etmenler cansızdır: ışık, sıcaklık, su, rüzgâr, toprak yapısı, pH. **Biyotik** etmenler canlıdır: üretici, tüketici, ayrıştırıcı, parazit, rakip. Üreticiler organik madde üretir, tüketiciler besini hazır alır, ayrıştırıcılar ölüleri inorganik maddeye dönüştürür.",
+  "formul": "Cansız etmen = abiyotik · Canlı etmen = biyotik",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir gölde su sıcaklığı, alg, pH, balık ve rüzgâr var. Hangileri abiyotiktir?",
+   "adimlar": [
+    "Canlı olanları ayır: alg ve balık biyotiktir.",
+    "Kalanlar cansızdır: sıcaklık, pH, rüzgâr."
+   ],
+   "cevap": "Sıcaklık, pH ve rüzgâr."
+  },
+  "hata": "Işık şiddetini ya da rüzgârı canlı etmen sanmak. Canlıyı etkilese de etmenin kendisi cansızsa abiyotiktir. Her etmene sor: **kendisi canlı mı?**",
+  "akilda": "Cansız etmen abiyotiktir"
+ },
+ {
+  "id": "bio-hucre-ve-02",
+  "k": "bio",
+  "baslik": "Prokaryot-ökaryot ve organeller",
+  "olcer": "Prokaryot ile ökaryot hücreyi ayırıp organel bolluğundan hücrenin işlevini çıkarabildiğini.",
+  "kural": "**Prokaryotta** (bakteri) çekirdek zarı ve zarlı organel yoktur; DNA sitoplazmadadır, tek organel **ribozomdur**. Ökaryotta çekirdek ve zarlı organeller vardır. Bol organel işi gösterir: **mitokondri** enerji, **Golgi** salgı, **lizozom** sindirim, **kloroplast** fotosentez.",
+  "formul": "Prokaryot: zarlı organel yok, ribozom var",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir hücrede çekirdek zarı yok, DNA sitoplazmada ve yalnız ribozom görülüyor. Bu hücrede mitokondri bulunur mu?",
+   "adimlar": [
+    "Çekirdek zarı yok: prokaryot hücre.",
+    "Prokaryotta tek organel ribozomdur.",
+    "Mitokondri zarlı organeldir, bulunmaz."
+   ],
+   "cevap": "Hayır, bulunmaz."
+  },
+  "hata": "Bakteriyi ökaryot gibi düşünüp zarlı organel aramak. Organel zarlıysa prokaryotta yoktur. Çok enerji harcayan hücrede **mitokondrinin** bol olacağını da unutma.",
+  "akilda": "Prokaryotta yalnız ribozom vardır"
+ },
+ {
+  "id": "bio-hucre-ve-04",
+  "k": "bio",
+  "baslik": "Ozmoz ve hücrenin su dengesi",
+  "olcer": "Suyun yarı geçirgen zardan hangi yöne geçtiğini bulup ozmozu difüzyondan ayırabildiğini.",
+  "kural": "**Ozmoz**, suyun yarı geçirgen zardan geçişidir; su, çözünen derişimi **düşük** taraftan **yüksek** tarafa gider. Hipotonik ortamda hayvan hücresi su alıp şişer, hipertonik ortamda su verip büzüşür. **Difüzyon**, taneciklerin derişimi çok yerden az yere yayılmasıdır; zar gerekmez.",
+  "formul": "Su: seyreltik taraf → derişik taraf",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Yarı geçirgen zarla ayrılmış U borusu: solda yüzde 10, sağda yüzde 20 şeker, su sağa geçiyor\"><rect x=\"40\" y=\"30\" width=\"200\" height=\"120\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><rect x=\"41\" y=\"70\" width=\"99\" height=\"79\" fill=\"var(--brand-soft)\" stroke=\"none\" stroke-width=\"1.5\"/><rect x=\"140\" y=\"70\" width=\"99\" height=\"79\" fill=\"var(--rule-soft)\" stroke=\"none\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"150\" stroke=\"var(--brand)\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"140\" y=\"22\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">yarı geçirgen zar</text><text x=\"90\" y=\"118\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">%10</text><text x=\"90\" y=\"136\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">şeker</text><text x=\"190\" y=\"118\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">%20</text><text x=\"190\" y=\"136\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">şeker</text><line x1=\"100\" y1=\"56\" x2=\"176\" y2=\"56\" stroke=\"var(--brand)\" stroke-width=\"2.5\"/><polygon points=\"176,50 188,56 176,62\" fill=\"var(--brand)\"/><text x=\"118\" y=\"48\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">su</text></svg>",
+  "ornek": {
+   "soru": "Yarı geçirgen zarla ayrılmış U borusunun sol kolunda %10, sağ kolunda %20 şeker çözeltisi var. Su hangi yöne geçer?",
+   "adimlar": [
+    "Çözünen derişimi sağ kolda daha yüksek.",
+    "Su, derişimi düşük taraftan yüksek tarafa geçer."
+   ],
+   "cevap": "Sol koldan sağ kola."
+  },
+  "hata": "Suyun değil çözünenin hareket ettiğini sanmak ya da tuzlu ortamda hücreye su girdiğini düşünmek. Ortam hücreye göre **derişikse** su hücreden çıkar; hücre büzülür.",
+  "akilda": "Su derişik tarafa doğru gider"
+ },
+ {
+  "id": "bio-hucrede-bolunme-01",
+  "birlesti": "bio-hucrede-bolunme-05"
+ },
+ {
+  "id": "bio-hucrede-bolunme-03",
+  "k": "bio",
+  "baslik": "Hücre döngüsü ve mitoz evreleri",
+  "olcer": "Döngünün evrelerini ve her evrede olanları ilişkilendirip mitozun evrelerini kromozom görünümüne göre sıralayabildiğini.",
+  "kural": "Döngü **interfaz** (G1 → S → G2) ve **mitoz** (M) evrelerinden oluşur. G1'de hücre büyür, **S'de DNA eşlenir**, G2'de mitoza hazırlanır. Mitoz: profaz, metafaz, anafaz, telofaz. Kardeş kromatitler **anafazda** ayrılır; sitokinezle sitoplazma ikiye bölünür.",
+  "formul": "G1 → S → G2 → Mitoz (P–M–A–T) → Sitokinez",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Hücre döngüsü: G1, S ve G2 interfazı, M evresi bölünmeyi oluşturur\"><rect x=\"20\" y=\"70\" width=\"60\" height=\"34\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"50.0\" y=\"92\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">G1</text><rect x=\"80\" y=\"70\" width=\"65\" height=\"34\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"112.5\" y=\"92\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">S</text><rect x=\"145\" y=\"70\" width=\"60\" height=\"34\" fill=\"var(--brand-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"175.0\" y=\"92\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">G2</text><rect x=\"205\" y=\"70\" width=\"55\" height=\"34\" fill=\"var(--warn-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"232.5\" y=\"92\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">M</text><line x1=\"20\" y1=\"60\" x2=\"205\" y2=\"60\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"112\" y=\"52\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">İnterfaz</text><line x1=\"205\" y1=\"60\" x2=\"260\" y2=\"60\" stroke=\"var(--warn)\" stroke-width=\"1.5\"/><text x=\"232\" y=\"52\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Bölünme</text><text x=\"50\" y=\"124\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">büyür</text><text x=\"112\" y=\"124\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">DNA</text><text x=\"112\" y=\"139\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">eşlenir</text><text x=\"175\" y=\"124\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">hazırlık</text><text x=\"232\" y=\"124\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">bölünür</text></svg>",
+  "ornek": {
+   "soru": "Bir hücre döngüsünde G1 = 6, S = 8, G2 = 4, M = 2 saat sürüyor. İnterfaz kaç saattir, DNA hangi evrede eşlenir?",
+   "adimlar": [
+    "İnterfaz G1 + S + G2'dir: 6 + 8 + 4 = 18 saat.",
+    "DNA eşlenmesi her zaman S evresindedir.",
+    "M evresi bölünmedir, interfaza katılmaz."
+   ],
+   "cevap": "18 saat; DNA S evresinde eşlenir."
+  },
+  "hata": "G1, S ve G2'yi bölünmenin parçası saymak. Bölünme yalnız **M evresidir**; interfaz bölünme değildir. DNA eşlenmesini mitozun içinde aramak da yanlıştır.",
+  "akilda": "DNA hep S evresinde eşlenir"
+ },
+ {
+  "id": "bio-hucrede-bolunme-05",
+  "k": "bio",
+  "baslik": "Eşeysiz üreme türleri",
+  "olcer": "Canlıları eşeysiz üreme biçimleriyle eşleştirip yavruların ana canlıyla özdeş olduğunu yorumlayabildiğini.",
+  "kural": "Eşeysiz üremede gametler birleşmez; yavrular **mitozla** oluşur ve ana canlıyla genetik olarak **özdeştir**. Türler: ikiye bölünme (amip), tomurcuklanma (hidra, maya), sporla üreme (eğrelti otu), rejenerasyon (planarya), **vejetatif üreme** (bitkide kök, gövde, yaprak parçası). Aşılama ve klonlama da eşeysizdir.",
+  "formul": "Gamet birleşmez → mitoz → özdeş yavru",
+  "sekil": null,
+  "ornek": {
+   "soru": "Çilek bitkisinin yere uzanan gövdesinden yeni bir bitki oluşuyor. Bu hangi üreme türüdür, yavru ana bitkiye genetik olarak benzer mi?",
+   "adimlar": [
+    "Yeni birey gövde parçasından oluştu: vejetatif üreme.",
+    "Gametler birleşmedi, hücreler mitozla çoğaldı.",
+    "Mitoz kopya üretir: yavru genetik olarak özdeştir."
+   ],
+   "cevap": "Vejetatif üreme; genetik olarak özdeş."
+  },
+  "hata": "Bir eşleştirmeyi bilmeyip yanlış seçmek ve eşeysiz üremede **çeşitlilik** beklemek. Mitozla oluşan yavrular ana canlıyla aynıdır; aşıda kalemin genotipi anaçtan etkilenmez.",
+  "akilda": "Gamet yoksa eşeysiz, yavru özdeş"
+ },
+ {
+  "id": "bio-kalitim-02",
+  "k": "bio",
+  "baslik": "Eşeye bağlı kalıtım",
+  "olcer": "Eşeye bağlı çekinik özellikte cinsiyeti ve fenotipi birlikte düşünüp çocuğun olasılığını hesaplayabildiğini.",
+  "kural": "Renk körlüğü ve hemofili **X kromozomundaki çekinik** alellerle taşınır. Kadın XX, erkek XY'dir. Erkekte tek X olduğundan çekinik alel **tek başına** etkili olur; kadında iki çekinik alel gerekir. Cinsiyet de olasılığa girer: soruda koşul yoksa kutuların **hepsi** sayılır.",
+  "formul": "Taşıyıcı anne × sağlıklı baba → 4 kutudan 1'i renk körü erkek",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Taşıyıcı anne ile sağlıklı babanın Punnett karesi: XRXR, XRXr, XRY, XrY\"><text x=\"130\" y=\"26\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"var(--brand)\">X<tspan dy=\"-5\" font-size=\"11\">R</tspan></text><text x=\"200\" y=\"26\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"var(--brand)\">X<tspan dy=\"-5\" font-size=\"11\">r</tspan></text><text x=\"76\" y=\"70\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"var(--memo)\">X<tspan dy=\"-5\" font-size=\"11\">R</tspan></text><text x=\"76\" y=\"130\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"var(--memo)\">Y</text><rect x=\"95\" y=\"35\" width=\"70\" height=\"60\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"130\" y=\"70\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">X<tspan dy=\"-5\" font-size=\"11\">R</tspan><tspan dy=\"5\">X</tspan><tspan dy=\"-5\" font-size=\"11\">R</tspan></text><rect x=\"165\" y=\"35\" width=\"70\" height=\"60\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"200\" y=\"70\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">X<tspan dy=\"-5\" font-size=\"11\">R</tspan><tspan dy=\"5\">X</tspan><tspan dy=\"-5\" font-size=\"11\">r</tspan></text><rect x=\"95\" y=\"95\" width=\"70\" height=\"60\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"130\" y=\"130\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">X<tspan dy=\"-5\" font-size=\"11\">R</tspan><tspan dy=\"5\">Y</tspan></text><rect x=\"165\" y=\"95\" width=\"70\" height=\"60\" fill=\"var(--warn-soft)\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"200\" y=\"130\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">X<tspan dy=\"-5\" font-size=\"11\">r</tspan><tspan dy=\"5\">Y</tspan></text><text x=\"60\" y=\"22\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Anne</text><text x=\"48\" y=\"112\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Baba</text></svg>",
+  "ornek": {
+   "soru": "Renk körlüğü alelini (r) taşıyan anne (XRXr) ile sağlıklı baba (XRY) çocuk sahibi oluyor. İlk çocuğun renk körü olma olasılığı kaçtır?",
+   "adimlar": [
+    "Anne gametleri XR, Xr; baba gametleri XR, Y.",
+    "Kare: XRXR, XRXr, XRY, XrY.",
+    "Renk körü yalnız XrY: dört kutudan biri."
+   ],
+   "cevap": "1/4."
+  },
+  "hata": "Olasılıkları toplamak ya da erkek olmayı soruda yokken koşul saymak. Koşul yoksa **kutuların hepsini** paydaya yaz; yalnız 'erkek çocuklar arasında' denirse payda küçülür.",
+  "akilda": "Cinsiyeti de kareye kat"
+ },
+ {
+  "id": "bio-kalitim-04",
+  "k": "bio",
+  "baslik": "Mutasyon, modifikasyon ve varyasyon",
+  "olcer": "Kalıtsal değişimi çevre etkisiyle oluşandan ayırıp mutasyonun ne zaman yavruya geçtiğini bilebildiğini.",
+  "kural": "**Mutasyon**, genetik bilgide kalıcı değişikliktir. **Gamet** hücresinde olursa yavruya geçebilir; **vücut hücresindeki** mutasyon yavruya geçmez. **Modifikasyon**, çevrenin fenotipte yaptığı değişimdir; genotip aynıdır, kalıtsal değildir. Genetik çeşitlilik, bireyler arasında alel farkı demektir.",
+  "formul": "Mutasyon: gen değişir · Modifikasyon: yalnız fenotip değişir",
+  "sekil": null,
+  "ornek": {
+   "soru": "Aynı genotipli iki bitkiden biri güneşte, diğeri gölgede büyüyor ve boyları farklı oluyor. Bu fark yavrulara geçer mi?",
+   "adimlar": [
+    "Genotip aynı, fark yalnız ortamdan: modifikasyon.",
+    "Modifikasyon genleri değiştirmez.",
+    "Gametlerin genotipi aynı kalır, fark yavruya geçmez."
+   ],
+   "cevap": "Geçmez; bu bir modifikasyondur."
+  },
+  "hata": "Vücut hücresindeki mutasyonun yavruya geçtiğini sanmak ya da çevreyle oluşan her değişimi mutasyon saymak. Önce hücrenin **gamet mi vücut hücresi mi** olduğuna, sonra genin değişip değişmediğine bak.",
+  "akilda": "Yavruya geçmesi için gamette olmalı"
+ },
+ {
+  "id": "bio-kalitim-06",
+  "k": "bio",
+  "baslik": "Baskınlık ve test çaprazlaması",
+  "olcer": "Yavru oranlarına bakarak baskın fenotipli bireyin genotipini ve gamet çeşidini belirleyebildiğini.",
+  "kural": "**Baskın** alel heterozigotta da görünür; çekinik alel yalnız **homozigotta** görünür. Baskın fenotipli bireyin genotipini bulmak için onu **çekinikle (aa)** çaprazla: yavruların hepsi baskınsa birey AA, **yarısı çekinikse Aa**'dır. Her heterozigot gen çifti 2 çeşit gamet verir.",
+  "formul": "Aa × aa → 1 Aa : 1 aa · gamet çeşidi = 2ⁿ (n: heterozigot çift)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kahverengi tüy (B), siyaha (b) baskındır. Kahverengi bir tavşan siyahla çaprazlanıyor, 8 yavrunun 4'ü siyah çıkıyor. Tavşanın genotipi nedir?",
+   "adimlar": [
+    "Siyah yavru (bb) var: her ebeveyn yavruya b vermiştir.",
+    "Kahverengi tavşan b taşıyorsa genotipi Bb'dir.",
+    "Bb × bb → 1 Bb : 1 bb; 4 kahverengi, 4 siyah sonucuyla uyuşur."
+   ],
+   "cevap": "Bb (heterozigot)."
+  },
+  "hata": "Yavrular arasında çıkan çekinik fenotipin anlamını görmemek. Çekinik yavru varsa baskın ebeveyn **heterozigottur**. Heterozigotun gamet çeşidini 1 saymak da sık hatadır: Aa 2 çeşit verir.",
+  "akilda": "Çekinik yavru çıkarsa ebeveyn Aa"
+ }
+]

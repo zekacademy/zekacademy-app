@@ -1,0 +1,389 @@
+[
+ {
+  "id": "kim-asitler-bazlar-02",
+  "k": "kim|Asitler, Bazlar ve Tuzlar",
+  "baslik": "Nötrleşme ve tuz formülü",
+  "olcer": "Asit–baz ve asit–metal tepkimelerinde oluşan tuzun formülünü ve gazın miktarını bulabilmeni.",
+  "kural": "Asit + baz → **tuz + su**. Tuz, bazdaki metal iyonu ile asittaki negatif iyondan oluşur. Formülde **yükleri çaprazla**: katyonun yükü anyonun indisi olur. Asit + metal tepkimesinde tuz ile H₂ gazı çıkar; miktarı mol hesabıyla bulunur.",
+  "formul": "Ca²⁺ + PO₄³⁻ → Ca₃(PO₄)₂",
+  "sekil": null,
+  "ornek": {
+   "soru": "Zn + 2HCl → ZnCl₂ + H₂ tepkimesinde 13 g Zn harcanırsa kaç g H₂ çıkar? (Zn: 65, H: 1 g/mol)",
+   "adimlar": [
+    "Zn mol sayısı: 13 ÷ 65 = 0,2 mol",
+    "Denklemde 1 Zn → 1 H₂ olduğundan 0,2 mol H₂ oluşur",
+    "H₂ kütlesi: 0,2 × 2 = 0,4 g"
+   ],
+   "cevap": "0,4 g H₂"
+  },
+  "hata": "Yükleri çaprazlamayı unutmak ya da ters çaprazlamak. Kontrol: toplam artı yük, toplam eksi yüke eşit olmalı; Al₂(SO₄)₃'te 2 × 3 = 3 × 2.",
+  "akilda": "Yükleri çaprazla, sonra sıfırı kontrol et."
+ },
+ {
+  "id": "kim-atom-ve-01",
+  "k": "kim|Atom ve Yapısı",
+  "baslik": "Atom modelleri ve katkıları",
+  "olcer": "Atom modellerini bilim insanlarıyla ve her modelin getirdiği yenilikle eşleştirebilmeni.",
+  "kural": "Dalton: bölünemeyen küre. Thomson: elektronun keşfi; artı yüklü kütle içinde elektronlar. Rutherford: alfa saçılmasıyla **çekirdeğin varlığı**. Bohr: **belirli enerjili katmanlar**. Her model, öncekinin açıklayamadığı bir gözlemle ortaya çıkmıştır.",
+  "formul": "Dalton → Thomson → Rutherford → Bohr",
+  "sekil": null,
+  "ornek": {
+   "soru": "Altın levhaya gönderilen alfa parçacıklarının çoğu levhadan geçiyor, çok azı geri dönüyor. Atom için ne söylenebilir?",
+   "adimlar": [
+    "Çoğu geçiyor: atomun büyük kısmı boşluktur",
+    "Çok azı geri dönüyor: aynı yüklü, küçük ve yoğun bir bölge onları itiyor",
+    "Bu artı yüklü bölge çekirdektir"
+   ],
+   "cevap": "Atomda küçük, yoğun, artı yüklü bir çekirdek vardır."
+  },
+  "hata": "Thomson ile Rutherford'u karıştırmak. Kontrol: dağınık elektronlu \"üzümlü kek\" modelinde çekirdek yoktur; çekirdek Rutherford'la, katmanlar Bohr'la gelir.",
+  "akilda": "Çekirdek Rutherford, katmanlar Bohr."
+ },
+ {
+  "id": "kim-atom-ve-03",
+  "k": "kim|Atom ve Yapısı",
+  "baslik": "İyon ve izoelektronik tanecikler",
+  "olcer": "İyonun proton, nötron ve elektron sayısını yükünden ve kütle numarasından bulabilmeni.",
+  "kural": "Kütle numarası = proton + nötron; elektron katılmaz. Nötr atomda elektron = proton. **Artı yüklü iyonda elektron = proton − yük**; **eksi yüklü iyonda elektron = proton + yük**. Elektron sayıları eşit taneciklere izoelektronik denir.",
+  "formul": "elektron = proton − yük (yük işaretiyle)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kütle numarası 31, nötron sayısı 16 olan X taneciği 3− yüklüdür. Kaç elektronu vardır?",
+   "adimlar": [
+    "Proton: 31 − 16 = 15",
+    "Yük 3−: elektron protondan 3 fazladır",
+    "Elektron: 15 + 3 = 18"
+   ],
+   "cevap": "18 elektron"
+  },
+  "hata": "Eksi yükü elektrondan çıkarmak. Kontrol: eksi yük elektron fazlalığıdır, yani elektron protondan çoktur. Artı yükte elektron protondan azdır; iyonda ikisi eşit olmaz.",
+  "akilda": "Eksi yük, fazla elektron demektir."
+ },
+ {
+  "id": "kim-karisimlar-01",
+  "kapsamDisi": true,
+  "neden": "Koligatif özellikler TYT (MEB 9–10) kapsamı dışında; yalnız 2 soru."
+ },
+ {
+  "id": "kim-karisimlar-03",
+  "k": "kim|Karışımlar",
+  "baslik": "Çözünme ve çözelti iletkenliği",
+  "olcer": "Çözünme türüne göre çözeltide iyon mu molekül mü bulunduğunu ve iletkenliği yorumlayabilmeni.",
+  "kural": "**İyonik** bileşikler çözününce iyonlarına ayrışır; serbest iyonlar akımı iletir. **Moleküler** maddeler çözününce yüksüz molekülleri dağılır; çözelti iletmez. Benzer benzeri çözer. Doygun çözeltide fazla madde çözünmez; sıcaklık düşünce çözünürlük azalır ve fazlası çöker.",
+  "formul": "İyonik → iyon → iletir · Moleküler → molekül → iletmez",
+  "sekil": null,
+  "ornek": {
+   "soru": "Potasyum bromür (KBr) ve gliserin ayrı ayrı suda çözünüyor. Hangi çözelti elektrik akımını iletir?",
+   "adimlar": [
+    "KBr iyoniktir; çözününce K⁺ ve Br⁻ serbest iyonları oluşur",
+    "Gliserin moleküler maddedir; yüksüz molekülleri bozulmadan dağılır",
+    "Yük taşıyıcı yalnız KBr çözeltisinde vardır"
+   ],
+   "cevap": "Yalnız KBr çözeltisi iletir."
+  },
+  "hata": "Her çözeltinin iletken olduğunu sanmak. Kendine sor: çözününce ne oluştu? Serbest iyon varsa çözelti iletir, yalnız yüksüz molekül varsa iletmez.",
+  "akilda": "İyon varsa iletir, molekül varsa iletmez."
+ },
+ {
+  "id": "kim-kimya-bilimi-01",
+  "k": "kim|Kimya Bilimi",
+  "baslik": "Atom sayma ve denkleştirme",
+  "olcer": "Katsayı ve indislerle formülde atom sayısını bulup denklemi denkleştirebilmeni.",
+  "kural": "**Katsayı** bütün formül birimini çoğaltır. **Parantez dışındaki indis**, paranteze giren her atomu çoğaltır. Denkleştirirken yalnız katsayı değişir, indis değişmez. Her atom, tepkimenin iki yanında eşit sayıda olmalıdır.",
+  "formul": "4Mg(NO₃)₂ → Mg: 4 · N: 4×2 = 8 · O: 4×2×3 = 24",
+  "sekil": null,
+  "ornek": {
+   "soru": "C₃H₈ + O₂ → CO₂ + H₂O denklemini denkleştirirsen katsayılar toplamı kaç olur?",
+   "adimlar": [
+    "C: 3 olduğundan 3CO₂; H: 8 olduğundan 4H₂O",
+    "Sağdaki O: 3 × 2 + 4 = 10, yani 5O₂",
+    "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O; toplam 1 + 5 + 3 + 4 = 13"
+   ],
+   "cevap": "13"
+  },
+  "hata": "Katsayıyı ya da parantez dışı indisi hesaba katmamak. Kontrol: önce parantezi aç, sonra katsayıyla çarp; 3Ca(OH)₂'de O sayısı 3 × 2 = 6'dır.",
+  "akilda": "Önce parantezi aç, sonra katsayıyla çarp."
+ },
+ {
+  "id": "kim-kimya-bilimi-03",
+  "k": "kim|Kimya Bilimi",
+  "baslik": "Laboratuvar güvenliği ve malzemeleri",
+  "olcer": "Güvenli ve güvensiz laboratuvar davranışlarını ayırt edip malzemeleri kullanım amacına göre eşleştirebilmeni.",
+  "kural": "Asit suya **azar azar** eklenir. Koku, elle yelpazelenerek anlaşılır. Artan kimyasal şişeye geri konmaz. Zehirli gazlarda **çeker ocak** kullanılır. Dereceli silindir hacim ölçer; beherglas hazırlama ve ısıtmada, erlenmayer çalkalamada kullanılır. Alev yanıcı, kuru kafa zehirli demektir.",
+  "formul": null,
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir öğrenci derişik sülfürik asidi seyreltmek için asidin üzerine su döküyor. Bu davranış doğru mu?",
+   "adimlar": [
+    "Asit ile su karışırken çok ısı açığa çıkar",
+    "Suyu asidin üstüne dökersen karışım kaynayıp sıçrayabilir",
+    "Doğrusu: asit suya azar azar ve karıştırılarak eklenir"
+   ],
+   "cevap": "Yanlış; asit suya eklenmeli."
+  },
+  "hata": "Kimyasalla doğrudan temas ya da kirletme içeren davranışı doğru sanmak (koklamak, artanı şişeye geri koymak). Kontrol: davranış seni zehirliyor ya da kimyasalı kirletiyor mu?",
+  "akilda": "Asit suya azar azar eklenir."
+ },
+ {
+  "id": "kim-kimya-her-02",
+  "k": "kim|Kimya Her Yerde",
+  "baslik": "Sabun ve deterjan",
+  "olcer": "Sabun molekülünün polar ve apolar kısımlarının suyla ve yağla nasıl etkileştiğini yorumlayabilmeni.",
+  "kural": "Sabun molekülünün bir ucu **iyonik (polar)**, öbür ucu **apolar hidrokarbon zinciridir**. Polar uç suya, apolar zincir yağa çekilir; sabun yağı suda dağıtıp temizler. Temizlik maddeleri kendi ambalajında, çocukların ulaşamayacağı yerde saklanır.",
+  "formul": "Polar uç ↔ su · Apolar zincir ↔ yağ",
+  "sekil": "<svg viewBox=\"0 0 280 176\" role=\"img\" aria-label=\"Yağ damlasının çevresinde sabun molekülleri: apolar zincirler damlaya, polar başlar suya dönük\"><circle cx=\"140\" cy=\"82\" r=\"26\" fill=\"var(--warn-soft)\" stroke=\"var(--warn)\" stroke-width=\"2\"/><text x=\"132\" y=\"86\" font-size=\"12\">yağ</text><line x1=\"166.0\" y1=\"82.0\" x2=\"190.0\" y2=\"82.0\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"196.0\" cy=\"82.0\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"161.0\" y1=\"97.3\" x2=\"180.5\" y2=\"111.4\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"185.3\" cy=\"114.9\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"148.0\" y1=\"106.7\" x2=\"155.5\" y2=\"129.6\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"157.3\" cy=\"135.3\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"132.0\" y1=\"106.7\" x2=\"124.5\" y2=\"129.6\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"122.7\" cy=\"135.3\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"119.0\" y1=\"97.3\" x2=\"99.5\" y2=\"111.4\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"94.7\" cy=\"114.9\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"114.0\" y1=\"82.0\" x2=\"90.0\" y2=\"82.0\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"84.0\" cy=\"82.0\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"119.0\" y1=\"66.7\" x2=\"99.5\" y2=\"52.6\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"94.7\" cy=\"49.1\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"132.0\" y1=\"57.3\" x2=\"124.5\" y2=\"34.4\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"122.7\" cy=\"28.7\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"148.0\" y1=\"57.3\" x2=\"155.5\" y2=\"34.4\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"157.3\" cy=\"28.7\" r=\"6\" fill=\"var(--brand)\"/><line x1=\"161.0\" y1=\"66.7\" x2=\"180.5\" y2=\"52.6\" stroke=\"var(--warn)\" stroke-width=\"2\"/><circle cx=\"185.3\" cy=\"49.1\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"14\" cy=\"148\" r=\"6\" fill=\"var(--brand)\"/><text x=\"26\" y=\"152\" font-size=\"12\">polar baş: suya dönük</text><line x1=\"8\" y1=\"164\" x2=\"20\" y2=\"164\" stroke=\"var(--warn)\" stroke-width=\"2\"/><text x=\"26\" y=\"168\" font-size=\"12\">apolar zincir: yağa dönük</text></svg>",
+  "ornek": {
+   "soru": "Sabun yağlı bir bardağı yıkarken sabun moleküllerinin hangi ucu yağ damlasına dönük olur?",
+   "adimlar": [
+    "Yağ apolardır; benzer benzeri çözer",
+    "Apolar uç hidrokarbon zinciridir, yağa yönelir",
+    "İyonik uç suya dönük kalır; damla suda dağılır"
+   ],
+   "cevap": "Hidrokarbon zinciri (apolar uç) yağa dönük olur."
+  },
+  "hata": "Zincirin de suyu sevdiğini sanmak. Kontrol: hidrokarbon zinciri apolardır, suda iyi çözünmez; suya dönük olan yalnız iyonik uçtur.",
+  "akilda": "İyonik uç suyu, zincir yağı sever."
+ },
+ {
+  "id": "kim-kimyanin-temel-01",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "baslik": "Gaz hacim oranları ve Avogadro",
+  "olcer": "Tepkimede gazların hacimlerini katsayı oranından bulup artan gazı hesaba katabilmeni.",
+  "kural": "Aynı sıcaklık ve basınçta gazlar **katsayı oranında hacimle** birleşir. Eşit hacimli gazlar (Avogadro) **eşit sayıda tanecik** içerir. Önce sınırlayıcı gazı bul; ürünü ve artan gazı ayrı hesapla. Toplam hacim genelde korunmaz.",
+  "formul": "2CO + O₂ → 2CO₂ : hacim oranı 2 : 1 : 2",
+  "sekil": "<svg viewBox=\"0 0 280 134\" role=\"img\" aria-label=\"2CO + O₂ → 2CO₂ tepkimesinde hacim oranı 2 : 1 : 2\"><rect x=\"20\" y=\"46\" width=\"30\" height=\"30\" rx=\"3\" fill=\"var(--brand-soft)\" stroke=\"var(--brand)\" stroke-width=\"2\"/><rect x=\"54\" y=\"46\" width=\"30\" height=\"30\" rx=\"3\" fill=\"var(--brand-soft)\" stroke=\"var(--brand)\" stroke-width=\"2\"/><rect x=\"122\" y=\"46\" width=\"30\" height=\"30\" rx=\"3\" fill=\"var(--brand-soft)\" stroke=\"var(--brand)\" stroke-width=\"2\"/><rect x=\"196\" y=\"46\" width=\"30\" height=\"30\" rx=\"3\" fill=\"var(--brand-soft)\" stroke=\"var(--brand)\" stroke-width=\"2\"/><rect x=\"230\" y=\"46\" width=\"30\" height=\"30\" rx=\"3\" fill=\"var(--brand-soft)\" stroke=\"var(--brand)\" stroke-width=\"2\"/><text x=\"94\" y=\"68\" font-size=\"18\">+</text><text x=\"158\" y=\"68\" font-size=\"18\">→</text><text x=\"30\" y=\"100\" font-size=\"13\" font-weight=\"600\">CO</text><text x=\"124\" y=\"100\" font-size=\"13\" font-weight=\"600\">O₂</text><text x=\"206\" y=\"100\" font-size=\"13\" font-weight=\"600\">CO₂</text><text x=\"22\" y=\"120\" font-size=\"12\">2 hacim</text><text x=\"116\" y=\"120\" font-size=\"12\">1 hacim</text><text x=\"198\" y=\"120\" font-size=\"12\">2 hacim</text></svg>",
+  "ornek": {
+   "soru": "Aynı koşullarda 2CO + O₂ → 2CO₂ tepkimesine 12 L CO ile 9 L O₂ giriyor. Tepkime sonunda kaptaki toplam gaz hacmi kaç L'dir?",
+   "adimlar": [
+    "12 L CO için 12 ÷ 2 = 6 L O₂ gerekir; CO sınırlayıcıdır",
+    "Artan O₂: 9 − 6 = 3 L",
+    "CO₂ hacmi CO ile aynı katsayıda: 12 L",
+    "Toplam: 12 + 3 = 15 L"
+   ],
+   "cevap": "15 L"
+  },
+  "hata": "Yalnız ürünün hacmini yazıp artan gazı unutmak. Kontrol: soru \"kaptaki toplam gaz\" diyorsa ürünü ve artan gazı birlikte topla.",
+  "akilda": "Katsayı oranı, hacim oranıdır."
+ },
+ {
+  "id": "kim-kimyanin-temel-03",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "baslik": "Sabit oranlar kanunu",
+  "olcer": "Elementlerin sabit kütle oranından artan maddeyi ve oluşan bileşiğin kütlesini bulabilmeni.",
+  "kural": "Bir bileşikte elementlerin **kütlece oranı sabittir**. Oranı koruyacak kadar madde birleşir, **fazla gelen madde artar**. Oluşan bileşiğin kütlesi yalnız birleşenlerin toplamıdır; artan madde ürüne katılmaz.",
+  "formul": "Ürün kütlesi = birleşen A + birleşen B",
+  "sekil": null,
+  "ornek": {
+   "soru": "Ca ve O kütlece 5/2 oranında birleşir. 20 g Ca ile 10 g O tepkimeye girerse kaç g bileşik oluşur?",
+   "adimlar": [
+    "20 g Ca ile birleşen O: 20 × 2 ÷ 5 = 8 g",
+    "O 10 g olduğundan 2 g artar; Ca sınırlayıcıdır",
+    "Ürün: 20 + 8 = 28 g"
+   ],
+   "cevap": "28 g"
+  },
+  "hata": "Girenlerin tamamını ürün sanmak. Kontrol: artan madde tepkimeye girmemiştir; ürün kütlesi yalnız gerçekten birleşenlerin toplamıdır.",
+  "akilda": "Önce oranı kur, artanı ayır."
+ },
+ {
+  "id": "kim-kimyasal-hesaplamalar-01",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "baslik": "Sınırlayıcı bileşen ve artan madde",
+  "olcer": "Hangi maddenin önce bittiğini bulup ürün ve artan madde miktarını hesaplayabilmeni.",
+  "kural": "Mol = kütle ÷ mol kütlesi. Her maddenin mol sayısını **katsayısına böl**; **en küçük değer sınırlayıcıdır**, önce biter ve ürünü o belirler. Artan miktar, eldeki moldan harcananın çıkarılmasıyla bulunur. Verim varsa gerçek ürün = teorik ürün × verim.",
+  "formul": "mol ÷ katsayı: en küçük → sınırlayıcı",
+  "sekil": null,
+  "ornek": {
+   "soru": "2Na + Cl₂ → 2NaCl tepkimesinde 4,6 g Na ile 0,3 mol Cl₂ tepkimeye giriyor. Kaç g Cl₂ artar? (Na: 23, Cl: 35,5 g/mol)",
+   "adimlar": [
+    "Na: 4,6 ÷ 23 = 0,2 mol. Katsayıya böl: Na 0,2 ÷ 2 = 0,1; Cl₂ 0,3 ÷ 1 = 0,3",
+    "En küçük Na'dadır, sınırlayıcı Na'dır",
+    "0,2 mol Na, 0,1 mol Cl₂ harcar; artan 0,3 − 0,1 = 0,2 mol",
+    "Kütle: 0,2 × 71 = 14,2 g"
+   ],
+   "cevap": "14,2 g Cl₂"
+  },
+  "hata": "Maddeleri 1 : 1 oranında tepkimeye sokmak ya da eklenen maddenin tamamını artan saymak. Kontrol: mol sayılarını daima denklemdeki katsayıyla karşılaştır.",
+  "akilda": "Mol ÷ katsayı, en küçük sınırlar."
+ },
+ {
+  "id": "kim-kimyasal-hesaplamalar-03",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "baslik": "Kütlece yüzde ve basit formül",
+  "olcer": "Bileşiğin formülünden kütlece yüzdeyi, kütle verilerinden basit formülü bulabilmeni.",
+  "kural": "**Kütlece yüzde** = (formüldeki elementin toplam kütlesi ÷ bileşiğin mol kütlesi) × 100. İndis, kütleyi o sayıda artırır. **Basit formül** için kütleler atom kütlesine bölünür, oran en küçük tam sayılara getirilir. Molekül formülü basit formülün katıdır.",
+  "formul": "% X = (indis × atom kütlesi ÷ mol kütlesi) × 100",
+  "sekil": null,
+  "ornek": {
+   "soru": "CaCO₃ bileşiğinde oksijen kütlece yüzde kaçtır? (Ca: 40, C: 12, O: 16)",
+   "adimlar": [
+    "Mol kütlesi: 40 + 12 + 3 × 16 = 100",
+    "Oksijenin toplam kütlesi: 3 × 16 = 48",
+    "Yüzde: 48 ÷ 100 × 100 = 48"
+   ],
+   "cevap": "%48"
+  },
+  "hata": "Atom sayısına bakıp yüzdeyi bulmak (4 atomdan 1'i → %25). Kontrol: yüzde kütleyle hesaplanır; atom kütlesini indisle çarpmayı unutma.",
+  "akilda": "Yüzde atom sayısıyla değil kütleyle bulunur."
+ },
+ {
+  "id": "kim-kimyasal-turler-01",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "baslik": "Zayıf etkileşimler ve kaynama noktası",
+  "olcer": "Moleküllerin yapısından baskın zayıf etkileşimi belirleyip kaynama noktalarını karşılaştırabilmeni.",
+  "kural": "Apolar moleküller arasında London, polar moleküller arasında dipol–dipol vardır. H atomu F, O ya da N'ye bağlıysa **hidrojen bağı** oluşur. Etkileşim güçlendikçe **kaynama noktası yükselir**. Apolar maddelerde mol kütlesi büyüdükçe London kuvvetleri artar.",
+  "formul": "London < dipol–dipol < hidrojen bağı",
+  "sekil": null,
+  "ornek": {
+   "soru": "CH₃OH ile C₂H₆ moleküllerinin baskın etkileşimlerini yaz. Hangisi daha yüksek sıcaklıkta kaynar?",
+   "adimlar": [
+    "CH₃OH: H, O atomuna bağlı, yani hidrojen bağı vardır",
+    "C₂H₆ apolardır, baskın etkileşim London kuvvetleridir",
+    "Hidrojen bağı London kuvvetinden güçlüdür, CH₃OH daha yüksek kaynar"
+   ],
+   "cevap": "CH₃OH daha yüksek sıcaklıkta kaynar."
+  },
+  "hata": "H içeren her molekülde hidrojen bağı sanmak. Kontrol: H, doğrudan F, O ya da N atomuna bağlı olmalıdır; HBr ve CH₄'te hidrojen bağı yoktur.",
+  "akilda": "H, F, O, N'ye bağlıysa hidrojen bağı."
+ },
+ {
+  "id": "kim-kimyasal-turler-03",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "baslik": "Çözünme ve fiziksel–kimyasal değişim",
+  "olcer": "Maddelerin polarlığına göre çözünmeyi yorumlayıp hangi etkileşimlerin koptuğunu ayırt edebilmeni.",
+  "kural": "**Benzer benzeri çözer**: polar ve iyonik maddeler polar çözücüde (su), apolar maddeler apolar çözücüde (CCl₄) çözünür. Fiziksel değişimde madde kimliği değişmez, yalnız moleküller arası etkileşim kopar. **Kimyasal değişimde** atomlar arası bağlar kopar, yeni madde oluşur.",
+  "formul": "Fiziksel: moleküller arası kopar · Kimyasal: bağlar kopar",
+  "sekil": null,
+  "ornek": {
+   "soru": "Şekerin suda çözünmesi ile kâğıdın yanmasından hangisinde atomlar arası bağlar kopar?",
+   "adimlar": [
+    "Şekerin çözünmesi fiziksel olaydır; madde kimliği aynı kalır",
+    "Kâğıdın yanması kimyasal olaydır; yeni maddeler oluşur",
+    "Yanmada atomlar arası bağlar kopar; çözünmede ve hâl değişiminde yalnız moleküller arası etkileşim kopar"
+   ],
+   "cevap": "Kâğıdın yanmasında."
+  },
+  "hata": "Hâl değişiminde atomlar arası bağların koptuğunu sanmak. Kontrol: kaynayan suda H–O bağları sağlam kalır, yalnız moleküller arası etkileşim kopar; yeni madde oluşmadıysa değişim fizikseldir.",
+  "akilda": "Önce etiketle: polar, apolar, iyonik."
+ },
+ {
+  "id": "kim-kimyasal-turler-05",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "baslik": "Bağ türü ve bileşik formülü",
+  "olcer": "Elementlerin türünden bağ türünü, atom numarasından bileşik formülünü bulabilmeni.",
+  "kural": "**Metal + ametal**: elektron aktarımıyla iyonik bağ. **Ametal + ametal**: ortak elektron kullanımıyla kovalent bağ. Elektronlar katmanlara 2, 8, 8 sırasıyla dizilir. Metal son katmanındaki elektronları verir, ametal oktetini tamamlayacak kadar alır; verilen ve alınan sayılar eşitlenir.",
+  "formul": "Metal + ametal → iyonik · Ametal + ametal → kovalent",
+  "sekil": null,
+  "ornek": {
+   "soru": "Atom numarası 12 olan X ile atom numarası 9 olan Y arasında oluşan bileşiğin formülü ve bağ türü nedir?",
+   "adimlar": [
+    "X: 2, 8, 2 (2 elektron verir, metal). Y: 2, 7 (1 elektron alır, ametal)",
+    "Verilen ve alınan eşit olsun: 1 X için 2 Y gerekir, formül XY₂",
+    "Metal + ametal olduğundan bağ iyoniktir"
+   ],
+   "cevap": "XY₂, iyonik bağ"
+  },
+  "hata": "Elementlerin metal mi ametal mi olduğuna bakmadan bağ türüne karar vermek. Kontrol: yalnız ametaller (C, H, O gibi) varsa bağ kovalenttir.",
+  "akilda": "Metal varsa iyonik, yoksa kovalent."
+ },
+ {
+  "id": "kim-maddenin-halleri-02",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Hâl değişimleri ve ısıtma grafiği",
+  "olcer": "Isıtma grafiğinin her aralığında maddenin hangi hâlde bulunduğunu belirleyebilmeni.",
+  "kural": "Saf maddede sıcaklığın arttığı eğimli aralıkta madde **tek hâldedir**. Sıcaklığın sabit kaldığı yatay aralıkta hâl değişimi olur ve **iki hâl birlikte** bulunur. Karışımda hâl değişimi sırasında sıcaklık sabit kalmaz, bir sıcaklık aralığında gerçekleşir.",
+  "formul": "Eğimli → tek hâl · Yatay → iki hâl birlikte",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Isıtma grafiği: eğimli aralıklarda tek hâl, yatay aralıklarda iki hâl birlikte\"><line x1=\"40\" y1=\"145\" x2=\"268\" y2=\"145\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"145\" x2=\"40\" y2=\"20\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><polyline points=\"46,140 80,115 120,115 150,80 205,80 250,58\" fill=\"none\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><text x=\"4\" y=\"14\" font-size=\"12\">Sıcaklık</text><text x=\"222\" y=\"162\" font-size=\"12\">Isı</text><text x=\"42\" y=\"106\" font-size=\"11\">katı</text><text x=\"76\" y=\"106\" font-size=\"11\" fill=\"var(--warn)\">katı + sıvı</text><text x=\"124\" y=\"134\" font-size=\"11\">sıvı</text><text x=\"154\" y=\"72\" font-size=\"11\" fill=\"var(--warn)\">sıvı + gaz</text><text x=\"218\" y=\"98\" font-size=\"11\">gaz</text></svg>",
+  "ornek": {
+   "soru": "Katı hâldeki saf X maddesi ısıtılıyor; sıcaklık 20 °C'den 60 °C'ye çıkıyor, 60 °C'de 5 dakika sabit kalıyor, sonra yeniden artıyor. Sabit kalan aralıkta madde hangi hâllerdedir?",
+   "adimlar": [
+    "Sıcaklığın sabit kalması hâl değişimini gösterir",
+    "60 °C altında madde katıdır, üstünde sıvı olur: bu aralık erimedir",
+    "Erimede katı ve sıvı birlikte bulunur"
+   ],
+   "cevap": "Katı + sıvı"
+  },
+  "hata": "Yatay aralıkta maddenin yalnız sıvı (ya da yalnız gaz) olduğunu sanmak. Kontrol: sıcaklık sabitse hâl değişimi sürüyordur, iki hâl birlikte bulunur.",
+  "akilda": "Eğim tek hâl, yatay iki hâl."
+ },
+ {
+  "id": "kim-maddenin-halleri-04",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Katı türleri ve özellikleri",
+  "olcer": "İletkenlik ve erime noktası verilerinden katının iyonik, metalik, kovalent ağ ya da moleküler olduğunu bulabilmeni.",
+  "kural": "Katı hâlde **iletiyorsa metaliktir**. Katıda iletmeyip sıvıda ya da çözeltide **iletiyorsa iyoniktir**. Hiç iletmeyen ve erime noktası çok yüksek olan kovalent ağ, düşük olan moleküler katıdır. Kristal katı belirli sıcaklıkta erir; amorf katı (cam) giderek yumuşar.",
+  "formul": "katıda iletir → metalik · sıvıda iletir → iyonik",
+  "sekil": null,
+  "ornek": {
+   "soru": "X katısı katı hâlde iletmiyor, sıvı hâlde iletiyor. Y katısı hiçbir hâlde iletmiyor ve erime noktası çok yüksek. X ve Y hangi katı türüdür?",
+   "adimlar": [
+    "X: katıda iletmez, sıvıda iletir; bu iyonik katıdır",
+    "Y: hiç iletmez ve erime noktası çok yüksek; bu kovalent ağ katısıdır",
+    "Y'nin erime noktası düşük olsaydı moleküler katı olurdu"
+   ],
+   "cevap": "X iyonik, Y kovalent ağ katısı."
+  },
+  "hata": "Sıvıda iletmeyi metalik katı belirtisi sanmak. Kontrol: metaller katıyken de iletir; katıda iletmeyip yalnız sıvıda ileten madde iyoniktir.",
+  "akilda": "Katıda iletir metalik, sıvıda iletir iyonik."
+ },
+ {
+  "id": "kim-maddenin-halleri-06",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Hâllerin tanecik modeli ve plazma",
+  "olcer": "Kaplardaki tanecik dizilişine bakıp katı, sıvı, gaz ve plazma hâllerini ayırt edebilmeni.",
+  "kural": "Katıda tanecikler **düzenli ve sıkı** dizilir, yerinde titreşir. Sıvıda düzensiz ama yakındır, birbiri üzerinde kayar. Gazda birbirinden çok uzaktır, kabın tamamına yayılır. Plazma **iyonlaşmış gazdır**; serbest iyon ve elektron içerdiği için iletir. Tanecikleri uzaklaştıran hâl değişimi ısı alır.",
+  "formul": "Düzenli-sıkı: katı · yakın-düzensiz: sıvı · uzak: gaz",
+  "sekil": "<svg viewBox=\"0 0 280 164\" role=\"img\" aria-label=\"Katıda düzenli sıkı, sıvıda düzensiz yakın, gazda uzak dağınık tanecikler\"><rect x=\"10\" y=\"14\" width=\"80\" height=\"96\" rx=\"6\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"38\" y=\"132\" font-size=\"13\" font-weight=\"600\">Katı</text><rect x=\"100\" y=\"14\" width=\"80\" height=\"96\" rx=\"6\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"128\" y=\"132\" font-size=\"13\" font-weight=\"600\">Sıvı</text><rect x=\"190\" y=\"14\" width=\"80\" height=\"96\" rx=\"6\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><text x=\"218\" y=\"132\" font-size=\"13\" font-weight=\"600\">Gaz</text><circle cx=\"26\" cy=\"30\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"42\" cy=\"30\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"58\" cy=\"30\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"74\" cy=\"30\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"26\" cy=\"50\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"42\" cy=\"50\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"58\" cy=\"50\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"74\" cy=\"50\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"26\" cy=\"70\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"42\" cy=\"70\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"58\" cy=\"70\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"74\" cy=\"70\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"26\" cy=\"90\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"42\" cy=\"90\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"58\" cy=\"90\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"74\" cy=\"90\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"112\" cy=\"100\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"126\" cy=\"96\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"140\" cy=\"102\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"154\" cy=\"98\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"116\" cy=\"80\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"132\" cy=\"76\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"148\" cy=\"82\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"160\" cy=\"78\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"112\" cy=\"60\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"128\" cy=\"56\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"144\" cy=\"62\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"158\" cy=\"58\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"118\" cy=\"38\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"134\" cy=\"34\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"150\" cy=\"40\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"204\" cy=\"28\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"246\" cy=\"40\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"222\" cy=\"64\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"258\" cy=\"92\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"206\" cy=\"96\" r=\"6\" fill=\"var(--brand)\"/><circle cx=\"240\" cy=\"102\" r=\"6\" fill=\"var(--brand)\"/><text x=\"10\" y=\"156\" font-size=\"11\">Plazma: iyon + serbest elektron (iletir)</text></svg>",
+  "ornek": {
+   "soru": "Bir kapta tanecikler düzensiz ama birbirine yakın ve birbiri üzerinde kayıyor. Bu maddenin tanecikleri birbirinden çok uzaklaşırsa hangi hâl değişimi olur, ısı alınır mı verilir mi?",
+   "adimlar": [
+    "Düzensiz ama yakın dizilim: madde sıvıdır",
+    "Tanecikler çok uzaklaşınca gaz olur; sıvıdan gaza geçiş buharlaşmadır",
+    "Tanecikleri uzaklaştıran değişim ısı alır"
+   ],
+   "cevap": "Buharlaşma; ısı alınır."
+  },
+  "hata": "Düzensiz ama yakın dizilimi gaza, çok uzak dağınık dizilimi katıya yormak. Kontrol: önce taneciklerin aralığına ve düzenine bak.",
+  "akilda": "Düzenli katı, yakın sıvı, uzak gaz."
+ },
+ {
+  "id": "kim-periyodik-sistem-02",
+  "k": "kim|Periyodik Sistem",
+  "baslik": "Periyodik özelliklerin değişimi",
+  "olcer": "Atom yarıçapı, elektronegatiflik ve metalik karakterin periyotta ve grupta nasıl değiştiğini kullanabilmeni.",
+  "kural": "Periyotta soldan sağa çekirdek yükü artar: **yarıçap azalır, elektronegatiflik artar**, metalik karakter azalır. Grupta yukarıdan aşağı katman sayısı artar: yarıçap artar, iyonlaşma enerjisi ve elektronegatiflik azalır. Grafikteki değer karşılaştırmalarını grafikten yap.",
+  "formul": "Periyotta → : r ↓ EN ↑ · Grupta ↓ : r ↑ EN ↓",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Periyotta soldan sağa ve grupta yukarıdan aşağı periyodik özelliklerin değişimi\"><defs><marker id=\"ok\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"var(--brand)\"/></marker></defs><line x1=\"30\" y1=\"14\" x2=\"264\" y2=\"14\" stroke=\"var(--brand)\" stroke-width=\"2.5\" marker-end=\"url(#ok)\"/><line x1=\"14\" y1=\"26\" x2=\"14\" y2=\"160\" stroke=\"var(--brand)\" stroke-width=\"2.5\" marker-end=\"url(#ok)\"/><rect x=\"30\" y=\"28\" width=\"236\" height=\"132\" rx=\"8\" fill=\"var(--rule-soft)\" stroke=\"var(--muted)\"/><text x=\"40\" y=\"48\" font-size=\"12\" font-weight=\"600\" fill=\"var(--rule)\">Periyotta soldan sağa</text><text x=\"40\" y=\"66\" font-size=\"12\">yarıçap azalır</text><text x=\"40\" y=\"82\" font-size=\"12\">elektronegatiflik artar</text><text x=\"40\" y=\"98\" font-size=\"12\">metalik karakter azalır</text><text x=\"40\" y=\"122\" font-size=\"12\" font-weight=\"600\" fill=\"var(--warn)\">Grupta yukarıdan aşağı</text><text x=\"40\" y=\"140\" font-size=\"12\">yarıçap artar</text><text x=\"40\" y=\"156\" font-size=\"12\">elektronegatiflik azalır</text></svg>",
+  "ornek": {
+   "soru": "Aynı periyotta X (1A), Y (5A) ve Z (7A) elementleri bulunuyor. Atom yarıçapı ve elektronegatiflik sıralamasını yaz.",
+   "adimlar": [
+    "Aynı periyotta soldan sağa sıra X, Y, Z'dir",
+    "Yarıçap azalır: X > Y > Z",
+    "Elektronegatiflik artar: Z > Y > X"
+   ],
+   "cevap": "Yarıçap X > Y > Z; elektronegatiflik Z > Y > X"
+  },
+  "hata": "Elektronegatifliği elektron verme eğilimi sanmak. Kontrol: elektronegatiflik bağ elektronunu çekme eğilimidir; ametalde yüksek, metalde düşüktür; arttıkça metalik karakter azalır.",
+  "akilda": "Sağa ve yukarı çıktıkça elektronegatiflik artar."
+ },
+ {
+  "id": "kim-periyodik-sistem-04",
+  "k": "kim|Periyodik Sistem",
+  "baslik": "Element sınıfları ve grup adları",
+  "olcer": "Periyodik sistemdeki konumdan elementin metal, yarı metal ya da ametal olduğunu ve özelliklerini bulabilmeni.",
+  "kural": "**A grubu numarası değerlik elektron sayısını verir.** 1A ve 2A (H hariç) metaldir; 6A ve 7A ametaldir; 8A soy gazdır. Metaller parlak, işlenebilir ve iyi iletkendir. Ametaller genellikle kırılgan ve kötü iletkendir. Yarı metaller bu ikisinin arasındadır.",
+  "formul": "Grup numarası = değerlik elektron sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "Elektron dizilimi 2, 8, 6 olan elementin periyodu, grubu ve sınıfı nedir?",
+   "adimlar": [
+    "Üç katman dolu: 3. periyot",
+    "Son katmanda 6 elektron: 6A grubu",
+    "6A grubu ametaldir"
+   ],
+   "cevap": "3. periyot, 6A, ametal"
+  },
+  "hata": "Elementin sınıfını görünüşüne bakarak seçmek. Kontrol: önce tablodaki konumuna bak; parlaklık, işlenebilirlik ve iletkenlik yalnız metal bölgesindeki elementlerde beklenir.",
+  "akilda": "Önce konuma bak, sonra sınıfı söyle."
+ }
+]

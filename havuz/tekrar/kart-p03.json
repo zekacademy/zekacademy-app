@@ -1,0 +1,480 @@
+[
+ {
+  "id": "fiz-basinc-01",
+  "k": "fiz|Basınç",
+  "baslik": "Pascal ilkesi ve hidrolik sistem",
+  "olcer": "Kapalı sıvıda basıncın aynen iletildiğini ve küçük kuvvetin alan oranıyla büyüdüğünü kullanabilmeni.",
+  "kural": "Kapalı kaptaki sıvıya uygulanan basınç **her yöne aynen iletilir**. Bu yüzden iki pistonda da kuvvet bölü alan aynıdır. Dairesel pistonda alan yarıçapın karesiyle büyür: yarıçap 2 katına çıkarsa alan 4 katına, dengeleyen kuvvet de 4 katına çıkar.",
+  "formul": "F₁ / A₁ = F₂ / A₂ ,  A = π · r²",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Hidrolik sistem: küçük ve büyük piston sıvıyla bağlı\"><rect x=\"40\" y=\"50\" width=\"40\" height=\"90\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"2\"/><rect x=\"140\" y=\"50\" width=\"100\" height=\"90\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"2\"/><rect x=\"80\" y=\"110\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"2\"/><rect x=\"42\" y=\"76\" width=\"36\" height=\"62\" fill=\"var(--brand-soft)\"/><rect x=\"82\" y=\"112\" width=\"56\" height=\"26\" fill=\"var(--brand-soft)\"/><rect x=\"142\" y=\"76\" width=\"96\" height=\"62\" fill=\"var(--brand-soft)\"/><rect x=\"42\" y=\"64\" width=\"36\" height=\"12\" fill=\"var(--warn-soft)\" stroke=\"var(--warn)\" stroke-width=\"2\"/><rect x=\"142\" y=\"64\" width=\"96\" height=\"12\" fill=\"var(--warn-soft)\" stroke=\"var(--warn)\" stroke-width=\"2\"/><line x1=\"60\" y1=\"18\" x2=\"60\" y2=\"60\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"60,60 56.0,52.0 64.0,52.0\" fill=\"var(--rule)\"/><text x=\"68\" y=\"30\" font-size=\"14\" font-weight=\"600\">F₁</text><line x1=\"190\" y1=\"60\" x2=\"190\" y2=\"20\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"190,20 194.0,28.0 186.0,28.0\" fill=\"var(--rule)\"/><text x=\"198\" y=\"34\" font-size=\"14\" font-weight=\"600\">F₂</text><text x=\"46\" y=\"102\" font-size=\"12\" >A₁</text><text x=\"176\" y=\"102\" font-size=\"12\" >A₂</text><text x=\"90\" y=\"130\" font-size=\"12\" >sıvı</text></svg>",
+  "ornek": {
+   "soru": "Küçük pistonun yarıçapı 2 cm, büyük pistonun yarıçapı 6 cm. Küçük pistona 15 N kuvvet uygulanırsa büyük piston kaç N’luk yükü dengeler?",
+   "adimlar": [
+    "Alan oranı, yarıçap oranının karesidir: (6 ÷ 2)² = 9",
+    "Kuvvet de alan oranı kadar büyür: F₂ = 15 × 9 = 135 N"
+   ],
+   "cevap": "135 N"
+  },
+  "hata": "Alan oranı yerine yarıçap oranını kullanmak (burada 3 almak). Kuvvet oranını yazmadan önce yarıçap oranının karesini al; alan hep yarıçapın karesiyle orantılıdır.",
+  "akilda": "Kuvvet oranı, alan oranıdır."
+ },
+ {
+  "id": "fiz-basinc-03",
+  "k": "fiz|Basınç",
+  "baslik": "Sıvı basıncı ve katmanlar",
+  "olcer": "Karışmayan sıvılı kapta taban basıncını katman katman hesaplayıp toplayabildiğini.",
+  "kural": "Sıvı basıncı **P = d · g · h** ile bulunur; h yüzeyden olan derinliktir. Kap şekli ve sıvı miktarı sonucu değiştirmez. Karışmayan sıvılarda her katmanın basıncı kendi özkütlesi ve kalınlığıyla ayrı hesaplanır, sonra **toplanır**.",
+  "formul": "P = d₁·g·h₁ + d₂·g·h₂",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Üst üste iki karışmayan sıvı: X üstte, Y altta\"><rect x=\"40\" y=\"20\" width=\"110\" height=\"130\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"2\"/><rect x=\"42\" y=\"40\" width=\"106\" height=\"50\" fill=\"var(--warn-soft)\"/><rect x=\"42\" y=\"90\" width=\"106\" height=\"58\" fill=\"var(--brand-soft)\"/><line x1=\"42\" y1=\"90\" x2=\"148\" y2=\"90\" stroke=\"var(--muted)\" stroke-dasharray=\"4 3\"/><text x=\"70\" y=\"70\" font-size=\"13\" font-weight=\"600\">X: d₁</text><text x=\"70\" y=\"125\" font-size=\"13\" font-weight=\"600\">Y: d₂</text><line x1=\"170\" y1=\"64\" x2=\"170\" y2=\"40\" stroke=\"var(--rule)\" stroke-width=\"2\"/><polygon points=\"170,40 174.0,48.0 166.0,48.0\" fill=\"var(--rule)\"/><line x1=\"170\" y1=\"66\" x2=\"170\" y2=\"88\" stroke=\"var(--rule)\" stroke-width=\"2\"/><polygon points=\"170,88 166.0,80.0 174.0,80.0\" fill=\"var(--rule)\"/><text x=\"180\" y=\"70\" font-size=\"12\" >h₁</text><line x1=\"220\" y1=\"120\" x2=\"220\" y2=\"92\" stroke=\"var(--rule)\" stroke-width=\"2\"/><polygon points=\"220,92 224.0,100.0 216.0,100.0\" fill=\"var(--rule)\"/><line x1=\"220\" y1=\"122\" x2=\"220\" y2=\"148\" stroke=\"var(--rule)\" stroke-width=\"2\"/><polygon points=\"220,148 216.0,140.0 224.0,140.0\" fill=\"var(--rule)\"/><text x=\"230\" y=\"126\" font-size=\"12\" >h₂</text><text x=\"158\" y=\"154\" font-size=\"12\" fill=\"var(--muted)\">taban</text></svg>",
+  "ornek": {
+   "soru": "Kapta üstte 10 cm yüksekliğinde özkütlesi 800 kg/m³ olan X, altta 20 cm yüksekliğinde özkütlesi 1200 kg/m³ olan Y sıvısı var (g = 10 m/s²). Taban basıncı kaç Pa’dır?",
+   "adimlar": [
+    "X katmanı: 800 · 10 · 0,1 = 800 Pa",
+    "Y katmanı: 1200 · 10 · 0,2 = 2400 Pa",
+    "Toplam: 800 + 2400 = 3200 Pa"
+   ],
+   "cevap": "3200 Pa"
+  },
+  "hata": "Bütün sıvıyı tek özkütleyle hesaplamak ya da yalnız bir katmanı saymak. Taban, üstündeki bütün katmanların ağırlığını taşır; katman sayısı kadar terim yaz.",
+  "akilda": "Her katman için d·g·h, sonra topla."
+ },
+ {
+  "id": "fiz-dalgalar-01",
+  "k": "fiz|Dalgalar",
+  "baslik": "Deprem dalgaları ve uzaklık",
+  "olcer": "Deprem dalgalarının varış sırasını ve P–S farkından merkeze uzaklığı yorumlayabildiğini.",
+  "kural": "**P dalgası** boyunadır, en hızlıdır ve istasyona ilk gelir. **S dalgası** enine dalgadır ve ikinci gelir. Yüzey dalgaları en yavaştır, en son gelir ve en büyük genliği yapar. Süre = yol ÷ hız olduğundan P ile S arasındaki fark büyüdükçe merkez uzaklaşır.",
+  "formul": "t = x / v  →  Δt = x / v_S − x / v_P",
+  "sekil": null,
+  "ornek": {
+   "soru": "P dalgasının hızı 8 km/s, S dalgasının hızı 4 km/s’dir. Bir istasyona S dalgası P’den 20 s sonra ulaşıyor. Deprem merkezi kaç km uzaktadır?",
+   "adimlar": [
+    "Uzaklığa x diyelim: P dalgası x ÷ 8, S dalgası x ÷ 4 sürede gelir",
+    "Fark: x ÷ 4 − x ÷ 8 = x ÷ 8 = 20 s",
+    "x = 20 × 8 = 160 km"
+   ],
+   "cevap": "160 km"
+  },
+  "hata": "P’yi enine, S’yi boyuna sanmak ya da ilk gelen dalganın yavaş olduğunu düşünmek. Aynı yolu önce alan dalga daha hızlıdır; sıra P, S, yüzey dalgalarıdır.",
+  "akilda": "Önce P, sonra S, en son yüzey."
+ },
+ {
+  "id": "fiz-dalgalar-03",
+  "k": "fiz|Dalgalar",
+  "baslik": "Yayda atmalar ve yansıma",
+  "olcer": "Atmaların karşılaşma anını, üst üste binmesini ve uçlardan yansımasını yorumlayabildiğini.",
+  "kural": "Karşılaşan atmaların yer değiştirmeleri **toplanır**; eşit genlikli tepe ve çukur anlık düz görünür, sonra atmalar yollarına devam eder. Sabit uçtan yansıyan atma **ters döner**, serbest uçtan aynı yönlü döner. Aynı yaydaki atmaların hızı eşittir; zıt gelenler orta noktada buluşur.",
+  "formul": "t = (L ÷ 2) ÷ v",
+  "sekil": null,
+  "ornek": {
+   "soru": "24 m uzunluğundaki yayın iki ucundan, hızları 4 m/s olan eşit boyutlu bir tepe ve bir çukur atma birbirine doğru gönderiliyor. Yay kaç s sonra düz görünür?",
+   "adimlar": [
+    "Atmalar zıt yönden eşit hızla geldiği için orta noktada buluşur: 24 ÷ 2 = 12 m",
+    "Her biri 12 m yol alır: t = 12 ÷ 4 = 3 s"
+   ],
+   "cevap": "3 s"
+  },
+  "hata": "Toplam uzunluğu tek atmanın hızına bölmek (24 ÷ 4). Atmalar birbirine doğru geldiği için her biri yolun yalnız yarısını alır.",
+  "akilda": "Zıt gelen atmalar ortada buluşur."
+ },
+ {
+  "id": "fiz-dalgalar-05",
+  "k": "fiz|Dalgalar",
+  "baslik": "Dalga türleri ve dalga hızı",
+  "olcer": "Dalgaları türlerine göre ayırıp dalga boyu ve frekanstan hızı bulabildiğini.",
+  "kural": "Titreşim yayılmaya dikse dalga **enine** (su, ışık, yay), paralelse **boyuna** (ses) olur. Ortam isteyen dalga mekaniktir (ses, su, yay); **ışık ve radyo dalgaları** ortamsız yayılır. Ardışık iki tepe arası bir dalga boyudur ve hız v = λ · f ile bulunur.",
+  "formul": "v = λ · f ,  T = 1 / f",
+  "sekil": "<svg viewBox=\"0 0 280 130\" role=\"img\" aria-label=\"Sinüs biçimli dalga; iki tepe arası dalga boyu, eksenden tepeye genlik\"><line x1=\"15\" y1=\"80\" x2=\"270\" y2=\"80\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><path d=\"M20,80 Q50,20 80,80 T140,80 T200,80 T260,80\" fill=\"none\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"26\" stroke=\"var(--muted)\" stroke-dasharray=\"3 3\"/><line x1=\"170\" y1=\"50\" x2=\"170\" y2=\"26\" stroke=\"var(--muted)\" stroke-dasharray=\"3 3\"/><line x1=\"52\" y1=\"30\" x2=\"168\" y2=\"30\" stroke=\"var(--brand)\" stroke-width=\"2\"/><polygon points=\"168,30 160.0,34.0 160.0,26.0\" fill=\"var(--brand)\"/><line x1=\"168\" y1=\"30\" x2=\"52\" y2=\"30\" stroke=\"var(--brand)\" stroke-width=\"2\"/><polygon points=\"52,30 60.0,26.0 60.0,34.0\" fill=\"var(--brand)\"/><text x=\"104\" y=\"22\" font-size=\"15\" font-weight=\"600\" fill=\"var(--brand)\">λ</text><line x1=\"230\" y1=\"80\" x2=\"230\" y2=\"110\" stroke=\"var(--warn)\" stroke-width=\"2.5\"/><text x=\"190\" y=\"124\" font-size=\"12\" fill=\"var(--warn)\">genlik (A)</text></svg>",
+  "ornek": {
+   "soru": "Bir ipte ardışık iki tepe arası 0,5 m’dir ve dalga kaynağı saniyede 6 titreşim yapar. Dalganın hızı kaç m/s’dir?",
+   "adimlar": [
+    "Ardışık iki tepe arası bir dalga boyudur: λ = 0,5 m",
+    "Saniyedeki titreşim frekanstır: f = 6 Hz",
+    "v = λ · f = 0,5 × 6 = 3 m/s"
+   ],
+   "cevap": "3 m/s"
+  },
+  "hata": "Işığı ya da suyu boyuna sanmak; tepe ile komşu çukur arasını dalga boyu almak (o λ ÷ 2’dir). Dalga boyu, aynı fazdaki iki nokta arasındaki uzaklıktır.",
+  "akilda": "Ses boyuna, ışık enine ve ortamsız."
+ },
+ {
+  "id": "fiz-dinamik-02",
+  "k": "fiz|Dinamik",
+  "baslik": "İp gerilmesi ve ortak ivme",
+  "olcer": "İpe bağlı cisimlerde önce ortak ivmeyi, sonra ip gerilmesini bulabildiğini.",
+  "kural": "İpe bağlı cisimler **aynı büyüklükte ivmeyle** hareket eder. Önce bütün sisteme ΣF = m_toplam · a yaz ve ortak ivmeyi bul. Sonra **tek bir cisme** ΣF = m · a uygula ve gerilmeyi çıkar. İvmeli harekette gerilme, asılı cismin ağırlığına eşit değildir.",
+  "formul": "a = ΣF ÷ m_toplam  →  T (tek cisimden)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Sürtünmesiz yatay masadaki 3 kg’lık cisim, makaradan geçen iple 2 kg’lık asılı cisme bağlı (g = 10 m/s²). İp gerilmesi kaç N’dur?",
+   "adimlar": [
+    "Sistemi hareket ettiren kuvvet asılı cismin ağırlığıdır: 2 · 10 = 20 N",
+    "Ortak ivme: a = 20 ÷ (3 + 2) = 4 m/s²",
+    "Masadaki cisme: T = 3 · 4 = 12 N (kontrol: 20 − 12 = 2 · 4)"
+   ],
+   "cevap": "12 N"
+  },
+  "hata": "İp gerilmesini asılı cismin ağırlığına (20 N) eşit almak. Cisim ivmeyle indiği için T < m·g çıkmalı; sonucu asılı cisme uygulayıp kontrol et.",
+  "akilda": "Önce ortak ivme, sonra gerilme."
+ },
+ {
+  "id": "fiz-dinamik-04",
+  "k": "fiz|Dinamik",
+  "baslik": "Newton yasaları ve eylemsizlik",
+  "olcer": "Araçtaki asılı cismin sapmasından ivme yönünü ve hızın artıp azaldığını yorumlayabildiğini.",
+  "kural": "Net kuvvet sıfırsa cisim durgun kalır ya da **sabit hızla** gider; hareket değişimine direnmeye **eylemsizlik** denir. Araç hızlanırken asılı cisim geride kalır, yavaşlarken öne savrulur: cisim ivmenin **ters yönüne** sapar. Hız ve ivme aynı yönlüyse hız artar, zıt yönlüyse azalır.",
+  "formul": "ΣF = m · a",
+  "sekil": null,
+  "ornek": {
+   "soru": "Doğuya doğru giden otobüste tavana asılı ip doğu yönüne (öne) sapmıştır. Otobüsün hızı artıyor mu, azalıyor mu?",
+   "adimlar": [
+    "İp ivmenin ters yönüne sapar; ip doğuya sapmışsa ivme batıya doğrudur",
+    "Hız doğuya, ivme batıya: yönler zıt",
+    "Zıt yönlü ivme hızı azaltır"
+   ],
+   "cevap": "Hızı azalıyor"
+  },
+  "hata": "Sabit hızda da ipin eğik kalacağını sanmak. Sabit hızda ivme sıfırdır ve ip düşey durur; eğik ip her zaman ivme demektir.",
+  "akilda": "İp ivmenin ters yönüne sapar."
+ },
+ {
+  "id": "fiz-elektrik-02",
+  "k": "fiz|Elektrik",
+  "baslik": "Anahtar, parlaklık ve kısa devre",
+  "olcer": "Anahtar kapanınca devre direncinin, akımın ve lamba parlaklığının nasıl değiştiğini yorumlayabildiğini.",
+  "kural": "Parlaklık lambanın gücüne (P = I² · R) bağlıdır; **akımı değişmeyen lamba aynı parlaklıkta** kalır. Aynı potansiyeldeki iki nokta arasındaki iletkenden akım geçmez. Bir lambaya **paralel** kapalı anahtar o lambayı **kısa devre** yapar: lamba söner, eşdeğer direnç azalır, ana akım artar.",
+  "formul": "Kısa devre → R_eş azalır → I artar",
+  "sekil": null,
+  "ornek": {
+   "soru": "12 V’luk ideal üretece 4 Ω’luk K, L, M lambaları seri bağlı. L’ye paralel anahtar kapatılırsa K’den geçen akım kaç A’dan kaç A’ya çıkar?",
+   "adimlar": [
+    "Önce: R = 12 Ω, I = 12 ÷ 12 = 1 A",
+    "Anahtar kapanınca L kısa devre olur: R = 8 Ω",
+    "Sonra: I = 12 ÷ 8 = 1,5 A (K ve M daha parlak, L söner)"
+   ],
+   "cevap": "1 A’dan 1,5 A’ya"
+  },
+  "hata": "Anahtar kapanınca direncin hep azalacağını varsaymak. Önce anahtarın uçları arasında gerilim var mı bak; yoksa devre hiç değişmez.",
+  "akilda": "Uçları eş potansiyelse devre değişmez."
+ },
+ {
+  "id": "fiz-elektrik-04",
+  "k": "fiz|Elektrik",
+  "baslik": "Akım, gerilim ve ölçü aletleri",
+  "olcer": "Ampermetre ve voltmetre okumalarından kol akımlarını, ana akımı ve üreteç gerilimini bulabildiğini.",
+  "kural": "**Ampermetre** hangi koldaysa o kolun akımını verir ve seri bağlanır. **Voltmetre** elemana paralel bağlanır. Paralel kolların uçlarındaki gerilim aynıdır, ana akım **kol akımlarının toplamıdır**. Üreteç gerilimi, seri bölümlerdeki gerilimlerin toplamına eşittir.",
+  "formul": "V = I · R ,  I_ana = I₁ + I₂",
+  "sekil": null,
+  "ornek": {
+   "soru": "Ana kolda R₁ = 2 Ω, ardından paralel R₂ = 6 Ω ve R₃ = 3 Ω kolları var. R₂ koluna bağlı ampermetre 1 A gösteriyor. Üreteç gerilimi kaç V’tur?",
+   "adimlar": [
+    "Paralel gerilim: V = 1 · 6 = 6 V",
+    "R₃ akımı 6 ÷ 3 = 2 A; ana akım 1 + 2 = 3 A",
+    "R₁ gerilimi 3 · 2 = 6 V; üreteç: 6 + 6 = 12 V"
+   ],
+   "cevap": "12 V"
+  },
+  "hata": "Ampermetredeki akımı ana akım sanmak ya da R₁ üzerindeki gerilimi eklememek. Önce okumanın hangi koldan olduğuna bak, akımları topla, sonra bütün gerilimleri ekle.",
+  "akilda": "Okuma hangi koldaysa akım onundur."
+ },
+ {
+  "id": "fiz-fizik-bilimine-01",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "baslik": "Bilimsel yöntem ve değişkenler",
+  "olcer": "Bilimsel yöntem basamaklarını ve deneydeki değişkenleri ayırt edebildiğini.",
+  "kural": "Sıra: **gözlem, hipotez, deney, sonuç**. Hipotez sınanabilir bir tahmindir. Araştırılan etken **bağımsız**, ölçülen sonuç **bağımlı**, sabit tutulanlar **kontrol değişkenidir**; deneyde yalnız bir etken değiştirilir. Alt dalı, olayda öne çıkan nicelik belirler: kuvvet mekanik, ısı termodinamik, ışık optik.",
+  "formul": "Gözlem → Hipotez → Deney → Sonuç",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir öğrenci gübre miktarının fasulye boyuna etkisini inceliyor. Aynı toprak, su ve ışıkta farklı gübre miktarları deniyor. Hangisi bağımsız, bağımlı, kontrol değişkenidir?",
+   "adimlar": [
+    "Değiştirdiği etken gübre miktarıdır: bağımsız değişken",
+    "Ölçtüğü sonuç fasulye boyudur: bağımlı değişken",
+    "Sabit tuttukları toprak, su ve ışıktır: kontrol değişkenleri"
+   ],
+   "cevap": "Bağımsız: gübre; bağımlı: boy; kontrol: toprak, su, ışık"
+  },
+  "hata": "Ölçülen sonucu bağımsız değişken sanmak. Kendine sor: ben neyi değiştiriyorum, neyi ölçüyorum? Alt dalı da olayın bildik adına göre değil, öne çıkan niceliğe göre seç.",
+  "akilda": "Değiştirdiğin bağımsız, ölçtüğün bağımlı."
+ },
+ {
+  "id": "fiz-fizik-bilimine-03",
+  "k": "fiz|Fizik Bilimine Giriş",
+  "baslik": "SI birimleri ve dönüşüm",
+  "olcer": "Ölçülen değerleri SI birimine çevirip özkütle gibi bir niceliği doğru hesaplayabildiğini.",
+  "kural": "Düzgün olmayan cismin hacmi, dereceli silindirde **son seviye − ilk seviye** ile bulunur. Sonra SI birimine çevir: **1 kg = 1000 g**, 1 mL = 1 cm³ = 10⁻⁶ m³, 1 saat = 3600 s. Özkütlenin SI birimi kg/m³’tür; 1 g/cm³ = 1000 kg/m³.",
+  "formul": "d = m / V ,  1 g/cm³ = 1000 kg/m³",
+  "sekil": null,
+  "ornek": {
+   "soru": "Dereceli silindirde su seviyesi 30 mL’dir. 180 g’lık bir taş bırakılınca seviye 75 mL oluyor. Taşın özkütlesi kaç kg/m³’tür?",
+   "adimlar": [
+    "Hacim: 75 − 30 = 45 cm³",
+    "d = 180 ÷ 45 = 4 g/cm³",
+    "SI birimine çevir: 4 × 1000 = 4000 kg/m³"
+   ],
+   "cevap": "4000 kg/m³"
+  },
+  "hata": "Son seviyeyi cismin hacmi sanmak ya da g ve cm³ değerlerini çevirmeden SI birimi gibi yazmak. Hacim hep seviye farkıdır; sonuçta birimi bir kez daha kontrol et.",
+  "akilda": "Hacim seviye farkıdır, birimi çevir."
+ },
+ {
+  "id": "fiz-hareket-ve-02",
+  "k": "fiz|Hareket ve Kuvvet",
+  "baslik": "İvme ve hız–zaman grafiği",
+  "olcer": "İvmeyi hız değişiminden bulup v–t grafiğinin eğimiyle karşılaştırabildiğini.",
+  "kural": "İvme, **birim zamandaki hız değişimidir**; son hıza değil, hız farkına bakılır. v–t grafiğinde doğrunun **eğimi** ivmeyi verir: doğru ne kadar dikse ivme o kadar büyüktür. Hız sabitse ivme sıfırdır. Hız ve ivme zıt yönlüyse cisim yavaşlar.",
+  "formul": "a = Δv / Δt",
+  "sekil": "<svg viewBox=\"0 0 280 150\" role=\"img\" aria-label=\"v–t grafiği: dik doğrunun ivmesi büyüktür\"><line x1=\"40\" y1=\"130\" x2=\"260\" y2=\"130\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"14\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"100\" x2=\"150\" y2=\"22\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><line x1=\"40\" y1=\"130\" x2=\"240\" y2=\"50\" stroke=\"var(--brand)\" stroke-width=\"2.5\"/><text x=\"156\" y=\"26\" font-size=\"14\" font-weight=\"600\" fill=\"var(--rule)\">K</text><text x=\"244\" y=\"54\" font-size=\"14\" font-weight=\"600\" fill=\"var(--brand)\">L</text><text x=\"8\" y=\"12\" font-size=\"12\" >v</text><text x=\"250\" y=\"146\" font-size=\"12\" >t</text><text x=\"120\" y=\"146\" font-size=\"12\" fill=\"var(--muted)\">eğim = ivme</text></svg>",
+  "ornek": {
+   "soru": "K aracı 2 s’de hızını 5 m/s’den 15 m/s’ye, L aracı 4 s’de 0’dan 12 m/s’ye çıkarıyor. a_K ÷ a_L oranı kaçtır?",
+   "adimlar": [
+    "a_K = (15 − 5) ÷ 2 = 5 m/s²",
+    "a_L = (12 − 0) ÷ 4 = 3 m/s²",
+    "Oran: 5 ÷ 3"
+   ],
+   "cevap": "5/3 (K’nin ivmesi daha büyük)"
+  },
+  "hata": "Son hızları ya da ortalama hızları karşılaştırmak. İvme hız değişimi ve süreden bulunur; oranı da sorulan sıraya göre kur (a_K ÷ a_L).",
+  "akilda": "İvme hız değişiminden bulunur."
+ },
+ {
+  "id": "fiz-isi-sicaklik-01",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "baslik": "Sıcaklık ölçekleri ve termometre",
+  "olcer": "Sabit noktaları verilen termometre okumasını Celsius ölçeğine oranla çevirebildiğini.",
+  "kural": "Eşit bölmeli termometrelerde, ilk sabit noktadan okunan uzaklığın toplam aralığa oranı **her ölçekte aynıdır**. Celsius’ta aralık 100 bölmedir. Kelvin için **K = °C + 273**, Fahrenheit için °F = 1,8 · °C + 32 yazılır. Sıcaklık farkı Celsius ve Kelvin’de aynıdır.",
+  "formul": "(X − X₀) / (X₁ − X₀) = C / 100",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"İki termometre ölçeği: X ölçeği ve Celsius, aynı oran\"><line x1=\"90\" y1=\"20\" x2=\"90\" y2=\"140\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"190\" y1=\"20\" x2=\"190\" y2=\"140\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"84\" y1=\"20\" x2=\"96\" y2=\"20\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"84\" y1=\"90\" x2=\"96\" y2=\"90\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"84\" y1=\"140\" x2=\"96\" y2=\"140\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"184\" y1=\"20\" x2=\"196\" y2=\"20\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"184\" y1=\"90\" x2=\"196\" y2=\"90\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"184\" y1=\"140\" x2=\"196\" y2=\"140\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"90\" y1=\"90\" x2=\"190\" y2=\"90\" stroke=\"var(--rule)\" stroke-dasharray=\"4 3\" stroke-width=\"2\"/><text x=\"50\" y=\"24\" font-size=\"13\" >X₁</text><text x=\"58\" y=\"94\" font-size=\"13\" >X</text><text x=\"50\" y=\"144\" font-size=\"13\" >X₀</text><text x=\"200\" y=\"24\" font-size=\"13\" >100 °C</text><text x=\"200\" y=\"94\" font-size=\"13\" >C</text><text x=\"200\" y=\"144\" font-size=\"13\" >0 °C</text><text x=\"104\" y=\"62\" font-size=\"12\" fill=\"var(--rule)\">oran aynı</text></svg>",
+  "ornek": {
+   "soru": "X termometresi buzun erime noktasında −10, suyun kaynama noktasında 110 gösteriyor. X termometresi 20 gösterirken sıcaklık kaç °C’tur?",
+   "adimlar": [
+    "X aralığı: 110 − (−10) = 120 bölme",
+    "X’in ilk noktadan uzaklığı: 20 − (−10) = 30 bölme",
+    "30 ÷ 120 = C ÷ 100 → C = 25 °C"
+   ],
+   "cevap": "25 °C"
+  },
+  "hata": "Yalnız başlangıcı çıkarıp bölme sayılarındaki farkı (120’ye karşı 100) hesaba katmamak ya da oranı ters kurmak. Sonuç mantıklı mı diye bak: 0 ile 100 arasında olmalı.",
+  "akilda": "Önce uzaklığı bul, sonra oranla."
+ },
+ {
+  "id": "fiz-isi-sicaklik-03",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "baslik": "Enerji iletim yolları",
+  "olcer": "İletim, konveksiyon ve ışımanın hangisinde maddesel ortam gerektiğini ayırt edebildiğini.",
+  "kural": "**İletim**: enerji taneciklerden taneciğe aktarılır (katılarda baskın). **Konveksiyon**: ısınan sıvı ya da gaz yer değiştirir. İkisi de **maddesel ortam ister**. **Işıma** ortam gerektirmez, boşlukta da yayılır; Güneş enerjisi Dünya’ya ışımayla gelir. Meltemde kara çabuk ısınır, çabuk soğur.",
+  "formul": "İletim ve konveksiyon: madde şart · Işıma: madde gerekmez",
+  "sekil": null,
+  "ornek": {
+   "soru": "I. Metal kaşığın sıcak çorbada ısınması. II. Kalorifer ile odadaki havanın dolaşarak ısınması. III. Ateşin önünde otururken yüzün ısınması. Hangileri maddesel ortam gerektirir?",
+   "adimlar": [
+    "I: enerji kaşık boyunca taneciklerden aktarılır → iletim, madde gerekir",
+    "II: ısınan hava yer değiştirir → konveksiyon, madde gerekir",
+    "III: ışıma, ortam gerekmez"
+   ],
+   "cevap": "I ve II"
+  },
+  "hata": "Sıvı ya da gaz akışıyla olan ısınmanın (konveksiyon) de ortam gerektirdiğini görememek. Önce her olayın yolunu adlandır, sonra ışıma dışındakilere madde şartını uygula.",
+  "akilda": "Işıma dışındaki yollar madde ister."
+ },
+ {
+  "id": "fiz-isi-sicaklik-05",
+  "k": "fiz|Isı, Sıcaklık ve Genleşme",
+  "baslik": "Isıl denge ve öz ısı",
+  "olcer": "Isı alışverişinde verilen ve alınan ısıyı eşitleyip denge sıcaklığını bulabildiğini.",
+  "kural": "Isıl dengede sıcak madde verdiği kadar ısıyı soğuk madde alır: **Q_verilen = Q_alınan**, Q = m · c · ΔT. Aynı maddede c sadeleşir. Denge sıcaklığı iki sıcaklığın arasındadır ve **kütlesi büyük olan maddenin sıcaklığına daha yakındır**. Aritmetik ortalama yalnız kütleler eşitse doğrudur.",
+  "formul": "T = (m₁T₁ + m₂T₂) / (m₁ + m₂)",
+  "sekil": null,
+  "ornek": {
+   "soru": "100 g, 80 °C’lik su ile 300 g, 20 °C’lik su karıştırılıyor (ısı kaybı yok). Denge sıcaklığı kaç °C olur?",
+   "adimlar": [
+    "Sıcak su verir: 100 · (80 − T); soğuk su alır: 300 · (T − 20)",
+    "Eşitle: 8000 − 100T = 300T − 6000",
+    "400T = 14000 → T = 35 °C"
+   ],
+   "cevap": "35 °C"
+  },
+  "hata": "İki sıcaklığın ortalamasını almak (50 °C). Kütleler farklıysa sonuç çok kütleli olana yakın çıkar; cevabın o yöne kaydığını kontrol et.",
+  "akilda": "Verilen ısı, alınan ısıya eşittir."
+ },
+ {
+  "id": "fiz-madde-ve-02",
+  "k": "fiz|Madde ve Özellikleri",
+  "baslik": "Özkütle ve karışımlar",
+  "olcer": "Hacmi ölçüp özkütleyi bulabildiğini ve karışımın özkütlesini toplam kütle ile toplam hacimden hesaplayabildiğini.",
+  "kural": "Özkütle **d = m ÷ V**’dir. Düzgün olmayan cismin hacmi dereceli silindirde **seviye farkıdır**. Kütle–hacim grafiğinde orijinden geçen doğrunun **eğimi özkütleyi** verir; dik doğru daha özkütlelidir. Karışımın özkütlesi **toplam kütle ÷ toplam hacim** ile bulunur, özkütlelerin ortalaması alınmaz.",
+  "formul": "d_karışım = (m₁ + m₂) / (V₁ + V₂)",
+  "sekil": "<svg viewBox=\"0 0 280 150\" role=\"img\" aria-label=\"Kütle–hacim grafiği: dik doğrunun özkütlesi büyüktür\"><line x1=\"40\" y1=\"130\" x2=\"260\" y2=\"130\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"14\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"130\" x2=\"150\" y2=\"22\" stroke=\"var(--warn)\" stroke-width=\"2.5\"/><line x1=\"40\" y1=\"130\" x2=\"240\" y2=\"70\" stroke=\"var(--brand)\" stroke-width=\"2.5\"/><text x=\"156\" y=\"28\" font-size=\"14\" font-weight=\"600\" fill=\"var(--warn)\">X</text><text x=\"244\" y=\"74\" font-size=\"14\" font-weight=\"600\" fill=\"var(--brand)\">Y</text><text x=\"8\" y=\"12\" font-size=\"12\" >m</text><text x=\"250\" y=\"146\" font-size=\"12\" >V</text><text x=\"120\" y=\"146\" font-size=\"12\" fill=\"var(--muted)\">eğim = özkütle</text></svg>",
+  "ornek": {
+   "soru": "X sıvısından 20 cm³ (d = 3 g/cm³) ile Y sıvısından 30 cm³ (d = 2 g/cm³) karıştırılıyor. Hacim korunduğuna göre karışımın özkütlesi kaç g/cm³’tür?",
+   "adimlar": [
+    "m_X = 3 · 20 = 60 g, m_Y = 2 · 30 = 60 g",
+    "Toplam kütle 120 g, toplam hacim 50 cm³",
+    "d = 120 ÷ 50 = 2,4 g/cm³"
+   ],
+   "cevap": "2,4 g/cm³"
+  },
+  "hata": "Özkütlelerin ortalamasını almak (2,5) ya da seviyeyi doğrudan hacim saymak. Karışımda her zaman önce kütleleri, sonra hacimleri topla.",
+  "akilda": "Karışımda kütleyi topla, hacmi topla."
+ },
+ {
+  "id": "fiz-manyetizma-01",
+  "k": "fiz|Manyetizma",
+  "baslik": "Akımın manyetik alanı",
+  "olcer": "Akım taşıyan telin ve elektromıknatısın manyetik etkisini yön ve şiddet açısından yorumlayabildiğini.",
+  "kural": "Akım taşıyan telin çevresinde **halka biçiminde** manyetik alan oluşur. **Sağ el kuralı**: başparmak akım yönünü gösterirse kıvrılan parmaklar alanın yönünü gösterir. Akım yönü değişince alan yönü de değişir. Elektromıknatıs **akım, sarım sayısı ve demir çekirdekle** güçlenir. Pusula iğnesi halkanın teğetini gösterir.",
+  "formul": "Başparmak: akım · Dört parmak: manyetik alan",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Sayfaya giren akımlı telin çevresinde saat yönünde manyetik alan halkası\"><circle cx=\"140\" cy=\"80\" r=\"46\" fill=\"none\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"148,34 136,28 136,40\" fill=\"var(--rule)\"/><polygon points=\"186,88 180,76 192,76\" fill=\"var(--rule)\"/><polygon points=\"132,126 144,120 144,132\" fill=\"var(--rule)\"/><polygon points=\"94,72 88,84 100,84\" fill=\"var(--rule)\"/><circle cx=\"140\" cy=\"80\" r=\"12\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"132\" y1=\"72\" x2=\"148\" y2=\"88\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"148\" y1=\"72\" x2=\"132\" y2=\"88\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"14\" y=\"24\" font-size=\"12\" >Akım sayfaya girer (⊗)</text><text x=\"14\" y=\"150\" font-size=\"12\" fill=\"var(--rule)\">Alan: saat yönünde</text></svg>",
+  "ornek": {
+   "soru": "Akım sayfaya girerken (⊗) telin altındaki bir noktaya pusula konuyor. Pusulanın N ucu hangi yönü gösterir?",
+   "adimlar": [
+    "Sayfaya giren akımda alan, sayfaya bakınca saat yönünde döner",
+    "Saat yönünde dönen halkanın alt noktasında alan sola doğrudur",
+    "N ucu alanın yönünü gösterir"
+   ],
+   "cevap": "Sola"
+  },
+  "hata": "Sağ el kuralını ters uygulamak. Kontrol: sayfadan çıkan akımda alan saat yönünün tersine, sayfaya giren akımda saat yönünde döner.",
+  "akilda": "Başparmak akım, parmaklar alan."
+ },
+ {
+  "id": "fiz-optik-01",
+  "k": "fiz|Optik",
+  "baslik": "Işığın kırılması",
+  "olcer": "Kırılma yönünden ortamların kırılma indisini ve ışık hızını sıralayıp hesaplayabildiğini.",
+  "kural": "Işık, kırılma indisi küçük ortamdan büyüğe geçerken **normale yaklaşır** ve yavaşlar; büyükten küçüğe geçerken normalden uzaklaşır ve hızlanır. Snell yasası: n₁ · sin θ₁ = n₂ · sin θ₂; açılar **normalden** ölçülür. Ortamdaki hız v = c ÷ n’dir, frekans değişmez.",
+  "formul": "n₁ · sin θ₁ = n₂ · sin θ₂ ,  v = c / n",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Havadan ortama geçen ışın normale yaklaşır\"><rect x=\"20\" y=\"80\" width=\"240\" height=\"70\" fill=\"var(--brand-soft)\"/><line x1=\"20\" y1=\"80\" x2=\"260\" y2=\"80\" stroke=\"var(--muted)\" stroke-width=\"2\"/><line x1=\"140\" y1=\"14\" x2=\"140\" y2=\"150\" stroke=\"var(--muted)\" stroke-dasharray=\"4 3\"/><line x1=\"60\" y1=\"20\" x2=\"138\" y2=\"79\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"138,79 129.2,77.4 134.0,71.0\" fill=\"var(--rule)\"/><line x1=\"140\" y1=\"80\" x2=\"175\" y2=\"140\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"175,140 167.5,135.1 174.4,131.1\" fill=\"var(--rule)\"/><text x=\"112\" y=\"54\" font-size=\"13\" >θ₁</text><text x=\"148\" y=\"118\" font-size=\"13\" >θ₂</text><text x=\"176\" y=\"36\" font-size=\"12\" >hava (n = 1)</text><text x=\"190\" y=\"124\" font-size=\"12\" >ortam (n)</text><text x=\"146\" y=\"24\" font-size=\"11\" fill=\"var(--muted)\">normal</text></svg>",
+  "ornek": {
+   "soru": "Havadan bir ortama gelen ışın normalle 53°, kırılan ışın 30° yapıyor (sin 53° = 0,8; sin 30° = 0,5). Ortamın kırılma indisi ve ışığın ortamdaki hızı nedir? (c = 3 · 10⁸ m/s)",
+   "adimlar": [
+    "Snell: 1 · 0,8 = n · 0,5 → n = 1,6",
+    "v = c ÷ n = 3 · 10⁸ ÷ 1,6",
+    "v = 1,875 · 10⁸ m/s"
+   ],
+   "cevap": "n = 1,6 ve v = 1,875 · 10⁸ m/s"
+  },
+  "hata": "Sinüs değerini hız oranı sanmak ya da v = c · n yazmak. Hız, indisle ters orantılıdır: indis büyükse ışık daha yavaştır.",
+  "akilda": "Normale yaklaşan ışın yavaşlar."
+ },
+ {
+  "id": "fiz-optik-03",
+  "k": "fiz|Optik",
+  "baslik": "Aydınlanma şiddeti",
+  "olcer": "Noktasal kaynağın aydınlanmasının uzaklıkla nasıl değiştiğini oran kurarak bulabildiğini.",
+  "kural": "Noktasal kaynağın aydınlanma şiddeti **uzaklığın karesiyle ters orantılıdır**: E = I ÷ d². Uzaklık 2 katına çıkarsa aydınlanma **4’te 1’ine**, 3 katına çıkarsa 9’da 1’ine düşer. Yüzeye dik düşen akıda E = Φ ÷ A’dır. İki kaynağın aydınlanması eşitse uzaklıklar, ışık şiddetlerinin kareköküyle orantılıdır.",
+  "formul": "E₂ / E₁ = (d₁ / d₂)²",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir lambanın 2 m uzağındaki ekranda aydınlanma 36 lx’tir. Ekran 6 m uzağa alınırsa aydınlanma kaç lx olur?",
+   "adimlar": [
+    "Uzaklık 6 ÷ 2 = 3 kat arttı",
+    "Aydınlanma 3² = 9 kat azalır",
+    "36 ÷ 9 = 4 lx"
+   ],
+   "cevap": "4 lx"
+  },
+  "hata": "Oranı ters kurmak ya da kare almayı unutup 3’e bölmek (36 ÷ 3 = 12). Uzaklık arttıkça aydınlanma azalır ve bu azalma kareyle olur.",
+  "akilda": "Uzaklık kaç katsa, kareye böl."
+ },
+ {
+  "id": "fiz-optik-05",
+  "k": "fiz|Optik",
+  "baslik": "Çukur ayna ve görüntü",
+  "olcer": "Cismin ayna önündeki konumundan görüntünün yerini ve özelliklerini belirleyebildiğini.",
+  "kural": "Çukur aynada **M = 2F**’dir. Cisim **M’nin ötesindeyse** görüntü F–M arasında, gerçek, ters, küçüktür. Cisim **F ile M arasındaysa** görüntü M’nin ötesinde, gerçek, ters, büyüktür. Cisim **F’nin içindeyse** görüntü sanal, düz, büyüktür. Eksene paralel ışın yansıyınca F’den geçer.",
+  "formul": "M = 2F · F dışı: gerçek, ters · F içi: sanal, düz",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Çukur ayna: cisim F ile M arasında, görüntü M nin ötesinde gerçek ve ters\"><line x1=\"10\" y1=\"80\" x2=\"270\" y2=\"80\" stroke=\"var(--muted)\" stroke-width=\"1.5\"/><path d=\"M230,20 Q262,80 230,140\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"3\"/><line x1=\"206\" y1=\"74\" x2=\"206\" y2=\"86\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"166\" y1=\"74\" x2=\"166\" y2=\"86\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"202\" y=\"100\" font-size=\"13\" >F</text><text x=\"161\" y=\"100\" font-size=\"13\" >M</text><line x1=\"186\" y1=\"80\" x2=\"186\" y2=\"58\" stroke=\"var(--warn)\" stroke-width=\"2.5\"/><polygon points=\"186,58 190.0,66.0 182.0,66.0\" fill=\"var(--warn)\"/><text x=\"176\" y=\"52\" font-size=\"12\" fill=\"var(--warn)\">cisim</text><line x1=\"126\" y1=\"80\" x2=\"126\" y2=\"122\" stroke=\"var(--rule)\" stroke-width=\"2.5\"/><polygon points=\"126,122 122.0,114.0 130.0,114.0\" fill=\"var(--rule)\"/><text x=\"96\" y=\"138\" font-size=\"12\" fill=\"var(--rule)\">görüntü</text><line x1=\"186\" y1=\"60\" x2=\"244\" y2=\"60\" stroke=\"var(--brand)\" stroke-width=\"1.5\"/><line x1=\"244\" y1=\"60\" x2=\"126\" y2=\"120\" stroke=\"var(--brand)\" stroke-width=\"1.5\"/></svg>",
+  "ornek": {
+   "soru": "Odak uzaklığı 10 cm olan çukur aynanın önünde, aynadan 15 cm uzağa bir cisim konuyor. Görüntünün yerini ve özelliklerini yaz.",
+   "adimlar": [
+    "M = 2F = 20 cm. Cisim 15 cm’de: F ile M arasında",
+    "Bu konumda görüntü M’nin ötesinde oluşur",
+    "Özellikleri: gerçek, ters, büyük"
+   ],
+   "cevap": "M’nin ötesinde; gerçek, ters, büyük"
+  },
+  "hata": "M’nin ötesindeki cismin görüntüsünü büyük sanmak ya da görüntünün gerçek olduğunu atlamak. Önce cismi F ve M’ye göre yerleştir, sonra konuma göre sonucu oku.",
+  "akilda": "F dışındaki cismin görüntüsü gerçek, ters."
+ },
+ {
+  "id": "fiz-sivilarin-kaldirma-01",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "baslik": "Sıvı seviyesi ve taban basıncı",
+  "olcer": "Yüzen ve batan cisimlerin yer değiştirdiği sıvı hacminden seviye artışını ve taban basıncını bulabildiğini.",
+  "kural": "**Yüzen cisim kendi ağırlığı kadar** sıvıyı yer değiştirir (V = m ÷ d_sıvı). **Batan cisim kendi hacmi kadar** yer değiştirir. Toplam yer değiştiren hacim seviyeyi yükseltir: Δh = V ÷ kesit alanı. Taban basıncı, yeni yükseklikle P = h · d · g’den bulunur.",
+  "formul": "Δh = V_yer değiştiren / A ,  P = h · d · g",
+  "sekil": null,
+  "ornek": {
+   "soru": "50 cm² kesitli kapta su 20 cm yüksekliğinde. Kaba 160 g’lık yüzen bir blok ve 90 cm³ hacimli batan bir taş bırakılıyor (d_su = 1000 kg/m³, g = 10 m/s²). Taban basıncı kaç Pa olur?",
+   "adimlar": [
+    "Yüzen blok 160 g su, yani 160 cm³ yer değiştirir; taş 90 cm³. Toplam 250 cm³",
+    "Seviye artışı: 250 ÷ 50 = 5 cm → yeni yükseklik 25 cm",
+    "P = 1000 · 10 · 0,25 = 2500 Pa"
+   ],
+   "cevap": "2500 Pa"
+  },
+  "hata": "Yalnız batan cismin hacmini saymak ya da ilk seviyedeki basıncı yazmak. Yüzen cismin batan kısmını da say ve basıncı yeni seviyeden hesapla.",
+  "akilda": "Seviye artışı toplam hacimden bulunur."
+ },
+ {
+  "id": "fiz-sivilarin-kaldirma-03",
+  "k": "fiz|Sıvıların Kaldırma Kuvveti",
+  "baslik": "Kaldırma kuvveti ve dinamometre",
+  "olcer": "Dinamometre ve taşan sıvı verilerinden kaldırma kuvvetini, hacmi ve özkütleyi bulabildiğini.",
+  "kural": "Kaldırma kuvveti **cismin yerini tuttuğu sıvının ağırlığıdır**: F_k = d_sıvı · V_batan · g. Dinamometre havada ağırlığı, sıvıda **ağırlık − F_k** değerini gösterir. Seviye farkı batan hacmi verir. Kütleyi ağırlığa çevirirken **g ile çarpmayı** unutma.",
+  "formul": "F_k = G_hava − G_sıvıda = d_sıvı · V · g",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir cisim dinamometrede havada 6 N, suda 4 N gösteriyor (d_su = 1000 kg/m³, g = 10 m/s²). Cismin hacmi ve özkütlesi nedir?",
+   "adimlar": [
+    "F_k = 6 − 4 = 2 N",
+    "V = 2 ÷ (1000 · 10) = 2 · 10⁻⁴ m³ = 200 cm³",
+    "m = 6 ÷ 10 = 0,6 kg; d = 0,6 ÷ (2 · 10⁻⁴) = 3000 kg/m³"
+   ],
+   "cevap": "V = 200 cm³, d = 3000 kg/m³"
+  },
+  "hata": "Kütleyi g ile çarpmadan ağırlık yerine kullanmak ya da ilk su ağırlığını kaldırma kuvveti sanmak. Kuvvet hesabında kg değil, N kullan.",
+  "akilda": "Kayıp ağırlık, kaldırma kuvvetidir."
+ },
+ {
+  "id": "fiz-is-guc-01",
+  "k": "fiz|İş, Güç ve Enerji",
+  "baslik": "Güç ve verim",
+  "olcer": "İş ve süreden gücü, harcanan ve yararlı enerjiden verimi hesaplayabildiğini.",
+  "kural": "Güç, **birim zamandaki iştir**: P = W ÷ t (birim watt). İş–zaman grafiğinde doğrunun **eğimi** gücü verir. Çok iş yapmak yüksek güç demek değildir; süreye de bak. Verim, **yararlı enerjinin harcanan enerjiye oranıdır** ve %100’den küçüktür.",
+  "formul": "P = W / t ,  Verim = Yararlı / Harcanan",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir motor 10 s boyunca 2000 J enerji harcayıp 1500 J yararlı iş yapıyor. Motorun yararlı gücü ve verimi nedir?",
+   "adimlar": [
+    "Yararlı güç: 1500 ÷ 10 = 150 W",
+    "Verim: 1500 ÷ 2000 = 0,75",
+    "Yüzde olarak %75"
+   ],
+   "cevap": "150 W ve %75"
+  },
+  "hata": "Gücü yalnız yapılan işe göre karşılaştırmak. İşi büyük diye gücü büyük sanma; her makine için iş ÷ süre oranını ayrı hesapla.",
+  "akilda": "Güç, iş bölü süredir."
+ },
+ {
+  "id": "fiz-is-guc-03",
+  "k": "fiz|İş, Güç ve Enerji",
+  "baslik": "Mekanik enerjinin korunumu",
+  "olcer": "Sürtünmesiz ortamda yükseklik farkından kinetik enerji kazancını hesaplayabildiğini.",
+  "kural": "Sürtünmesiz ortamda **E_K + E_P = sabit** kalır. Alçalan cisim kaybettiği potansiyel enerji kadar kinetik enerji kazanır: **ΔE_K = m · g · Δh**. Bu bağıntıda ½ çarpanı yoktur. Sürtünme varsa kaybolan enerji ısıya dönüşür. Yay bırakılınca esneklik enerjisi kinetik enerjiye döner.",
+  "formul": "ΔE_K = m · g · Δh",
+  "sekil": null,
+  "ornek": {
+   "soru": "Sürtünmesiz rayda 1,5 kg’lık cisim durgun hâlde 4 m yükseklikten bırakılıyor. 1 m yükseklikteki noktadan geçerken kinetik enerjisi kaç J’dir? (g = 10 m/s²)",
+   "adimlar": [
+    "Yükseklik kaybı: 4 − 1 = 3 m",
+    "Kaybedilen potansiyel enerji: 1,5 · 10 · 3 = 45 J",
+    "Başlangıçta kinetik enerji 0 olduğundan E_K = 45 J"
+   ],
+   "cevap": "45 J"
+  },
+  "hata": "Yükseklik farkından gelen enerjiye ½ çarpanını eklemek ya da tek bir noktadaki potansiyel enerjiyi kinetik sanmak. Kazanç, yükseklik farkından bulunur.",
+  "akilda": "Kinetik kazanç, kaybedilen potansiyeldir."
+ }
+]

@@ -1,0 +1,400 @@
+[
+ {
+  "id": "kim-asitler-bazlar-01",
+  "k": "kim|Asitler, Bazlar ve Tuzlar",
+  "baslik": "Günlük hayatta asit, baz ve tuz",
+  "olcer": "Günlük hayattaki asit, baz ve tuzların özelliklerini ve asit yağmurunu doğru ifadelerle eşleştirebilmeni.",
+  "kural": "pH değeri 7'den küçükse madde asidik, büyükse bazik, eşitse nötrdür. **Sabun, kireç suyu ve çamaşır suyu bazik**; limon, sirke ve mide özsuyu asidiktir. SO₂ ve NO₂ gazları yağmur suyunda çözünüp **asit yağmuru** oluşturur. Tuzların da gübre, alçı gibi kullanım alanları vardır.",
+  "formul": "pH < 7 asit · pH = 7 nötr · pH > 7 baz",
+  "sekil": null,
+  "ornek": {
+   "soru": "Limonlu su, sabunlu su ve saf suyu pH'a göre nasıl sınıflarsın?",
+   "adimlar": [
+    "Limonlu su ekşidir ve pH'ı 7'den küçüktür: asit.",
+    "Sabunlu su bazik özelliktedir, pH'ı 7'den büyüktür: baz.",
+    "Saf suyun pH'ı tam 7'dir: nötr."
+   ],
+   "cevap": "Limonlu su asit, sabunlu su baz, saf su nötr."
+  },
+  "hata": "Doğru ifadeyi yanlış sanmak: asit ve bazlar suda iyon verdiği için sulu çözeltileri elektriği iletir. Olumsuz kökte ifadeleri tek tek sına, bilimsel gerçekle çelişen tek ifade cevaptır.",
+  "akilda": "Sabun bazik, limon asidik."
+ },
+ {
+  "id": "kim-asitler-bazlar-03",
+  "k": "kim|Asitler, Bazlar ve Tuzlar",
+  "baslik": "İndikatör, pH ve asit özellikleri",
+  "olcer": "Turnusol ve fenolftalein renklerinden ve pH değerinden çözeltinin asit, baz ya da nötr olduğunu belirleyebilmeni.",
+  "kural": "Asit mavi turnusolu kırmızıya, **baz kırmızı turnusolu maviye** çevirir ve fenolftaleini pembe yapar. Nötr çözelti renk değiştirmez. Asit sulu çözeltisinde iyon verir, elektriği iletir; aktif metalle tepkimesinde **hidrojen gazı** çıkar. pH küçüldükçe asitlik artar.",
+  "formul": "pH < 7 asit · pH = 7 nötr · pH > 7 baz",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"pH ölçeği: 0 ile 7 arası asit, 7 nötr, 7 ile 14 arası baz\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><rect x=\"20.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(220,70,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"37.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(201,88,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"55.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(183,106,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"72.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(164,125,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"90.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(146,143,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"107.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(127,162,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"125.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(109,180,70)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"142.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(95,184,83)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"160.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(86,173,109)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"177.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(76,163,135)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"195.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(67,152,161)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"212.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(58,141,187)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"230.0\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(49,130,213)\" stroke=\"currentColor\" stroke-width=\".5\"/><rect x=\"247.5\" y=\"50\" width=\"17.5\" height=\"34\" fill=\"rgb(40,120,240)\" stroke=\"currentColor\" stroke-width=\".5\"/><text x=\"16.0\" y=\"102\" font-size=\"12\">0</text><text x=\"138.5\" y=\"102\" font-size=\"12\">7</text><text x=\"257.0\" y=\"102\" font-size=\"12\">14</text><text x=\"30\" y=\"40\" font-size=\"13\" font-weight=\"600\">asit</text><text x=\"124\" y=\"40\" font-size=\"13\" font-weight=\"600\">nötr</text><text x=\"215\" y=\"40\" font-size=\"13\" font-weight=\"600\">baz</text><text x=\"60\" y=\"128\" font-size=\"12\">baz eklenince pH artar →</text><text x=\"60\" y=\"146\" font-size=\"12\">← asit eklenince pH azalır</text></g></svg>",
+  "ornek": {
+   "soru": "pH'ı 3 olan X ile pH'ı 6 olan Y çözeltisi var. Hangisi daha asidiktir? X'e baz eklenirse pH nasıl değişir?",
+   "adimlar": [
+    "pH ne kadar küçükse çözelti o kadar asidiktir: 3 < 6.",
+    "Demek ki X daha asidiktir.",
+    "Asite baz eklenince asitlik azalır, pH artar ve 7'ye doğru yükselir."
+   ],
+   "cevap": "X daha asidik; baz eklenince pH artar."
+  },
+  "hata": "Aktif metal ile asit tepkimesinde oksijen çıktığını sanmak. Çıkan gaz hep hidrojendir. Ayrıca pH 2'yi pH 5'ten daha az asidik sanmak da sık görülür.",
+  "akilda": "Asit + aktif metal: hidrojen."
+ },
+ {
+  "id": "kim-atom-ve-02",
+  "k": "kim|Atom ve Yapısı",
+  "baslik": "Katman diyagramından atom numarası",
+  "olcer": "Katman diyagramındaki elektronları sayıp atom numarasını, kütle numarasını ve tanecik türünü bulabilmeni.",
+  "kural": "Her çember bir katmandır, noktalar elektrondur. **Nötr atomda elektron sayısı proton sayısına, yani atom numarasına eşittir.** Kütle numarası proton ile nötron toplamıdır. Proton elektrondan fazlaysa katyon, azsa anyondur. K katmanı en çok 2, L en çok 8 elektron alır.",
+  "formul": "Kütle no = proton + nötron",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Üç katmanlı katman diyagramı: 2, 8 ve 5 elektron\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><circle cx=\"100\" cy=\"85\" r=\"9\" fill=\"#c2410c\"/><circle cx=\"100\" cy=\"85\" r=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"100.0\" cy=\"61.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"100.0\" cy=\"109.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"100\" cy=\"85\" r=\"44\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"100.0\" cy=\"41.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"131.1\" cy=\"53.9\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"144.0\" cy=\"85.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"131.1\" cy=\"116.1\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"100.0\" cy=\"129.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"68.9\" cy=\"116.1\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"56.0\" cy=\"85.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"68.9\" cy=\"53.9\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"100\" cy=\"85\" r=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"100.0\" cy=\"21.0\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"160.9\" cy=\"65.2\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"137.6\" cy=\"136.8\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"62.4\" cy=\"136.8\" r=\"4.5\" fill=\"#2f5bea\"/><circle cx=\"39.1\" cy=\"65.2\" r=\"4.5\" fill=\"#2f5bea\"/><text x=\"190\" y=\"52\" font-size=\"12\">K katmanı: 2</text><text x=\"190\" y=\"85\" font-size=\"12\">L katmanı: 8</text><text x=\"190\" y=\"118\" font-size=\"12\">M katmanı: 5</text><text x=\"190\" y=\"146\" font-size=\"12\" font-weight=\"600\">toplam: 15 e⁻</text></g></svg>",
+  "ornek": {
+   "soru": "Katmanlarında 2, 8 ve 5 elektron bulunan nötr atomun 16 nötronu varsa kütle numarası kaçtır?",
+   "adimlar": [
+    "Toplam elektron: 2 + 8 + 5 = 15.",
+    "Nötr atomda proton = elektron, atom numarası 15.",
+    "Kütle numarası = 15 + 16 = 31."
+   ],
+   "cevap": "Atom numarası 15, kütle numarası 31."
+  },
+  "hata": "Atom numarasını kütle numarası sanmak ya da son katmandaki elektronları nötron diye toplamaya eklemek. Elektronlar çekirdekte değil katmanlardadır, kütle numarasına girmez.",
+  "akilda": "Toplam elektron, nötr atomun atom numarasıdır."
+ },
+ {
+  "id": "kim-atom-ve-04",
+  "k": "kim|Atom ve Yapısı",
+  "baslik": "İzotop, izobar, izoton ve ortalama kütle",
+  "olcer": "Atomların proton, nötron ve kütle numarasını karşılaştırıp izotop, izobar ve izoton ilişkisini ayırt edebilmeni.",
+  "kural": "Önce her atomun proton ve nötron sayısını yaz. **İzotop: proton aynı. İzobar: kütle numarası aynı. İzoton: nötron aynı.** Proton ve nötronun kütlesi yaklaşık eşit, elektron çok hafiftir. Ortalama atom kütlesi, izotop kütlelerinin bolluk oranıyla ağırlıklı ortalamasıdır.",
+  "formul": "Nötron = kütle no − proton no",
+  "sekil": null,
+  "ornek": {
+   "soru": "₁₇X³⁵, ₁₇Y³⁷ ve ₁₈Z³⁷ atomlarından hangi çiftler izotop, hangileri izobardır?",
+   "adimlar": [
+    "Nötronlar: X için 35 − 17 = 18, Y için 37 − 17 = 20, Z için 37 − 18 = 19.",
+    "Proton sayısı aynı olan X ile Y izotoptur.",
+    "Kütle numarası aynı olan Y ile Z izobardır; nötron sayıları 18, 20, 19 olduğundan izoton çifti yoktur."
+   ],
+   "cevap": "X–Y izotop, Y–Z izobar."
+  },
+  "hata": "İzo- sözcüklerini ezberden karıştırmak ve nötron sayısını hesaplamadan izoton demek. Sayıları yazmadan karar verme, her atom için proton ve nötronu yan yana yaz.",
+  "akilda": "Proton aynıysa izotop, kütle aynıysa izobar."
+ },
+ {
+  "id": "kim-karisimlar-02",
+  "k": "kim|Karışımlar",
+  "baslik": "Karışım türleri ve ayırma",
+  "olcer": "Tanecik modeli ve gözlemden saf madde, homojen ya da heterojen karışımı ve çözelti, kolloit, süspansiyonu ayırt edebilmeni.",
+  "kural": "Saf madde tek tür tanecikten oluşur. İki tür tanecik **her yerde düzgün karışmışsa homojen**, ayrı bölgelerde toplanmışsa **heterojen** karışımdır. Çözelti ışığı saçmaz, çökmez. Kolloit ışığı saçar, çökmez. Süspansiyon ışığı saçar, bekletilince çöker, süzgeçte kalır.",
+  "formul": "Çözelti · Kolloit · Süspansiyon: ışık, süzgeç, çökme",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir karışım ışığı saçıyor, süzgeçten geçiyor ve bekletilince çökmüyor. Karışım hangi türdür?",
+   "adimlar": [
+    "Işığı saçtığı için çözelti olamaz; çözelti ışığı saçmaz.",
+    "Bekletilince çökmediği için süspansiyon da olamaz.",
+    "Işığı saçıp süzgeçten geçen ve çökmeyen karışım kolloittir."
+   ],
+   "cevap": "Kolloit."
+  },
+  "hata": "Tek fazlı görünen her karışımı çözelti saymak ya da iki tür tanecik ayrı bölgelerdeyken karışımı homojen demek. Önce taneciklerin dağılışına bak, sonra ışık, süzgeç ve çökme gözlemlerine.",
+  "akilda": "Her yerde aynıysa homojen, ayrıysa heterojen."
+ },
+ {
+  "id": "kim-karisimlar-04",
+  "k": "kim|Karışımlar",
+  "baslik": "Derişim: yüzde, ppm, seyreltme",
+  "olcer": "Kütlece ya da hacimce yüzdeden çözünen ve çözücü miktarını bulup buharlaştırma ve karıştırma sorularını çözebilmeni.",
+  "kural": "**Yüzde derişim = çözünen ÷ çözelti × 100.** Çözücü miktarı, çözeltiden çözüneni çıkararak bulunur. Seyreltmede ve karıştırmada **çözünen miktarı toplanır**. Buharlaştırmada yalnız çözücü azalır, çözünen sabit kalır. Sulu çözeltide 1 ppm = 1 mg çözünen / 1 kg çözelti.",
+  "formul": "Yüzde = çözünen / çözelti × 100",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kütlece %20'lik 150 g tuzlu sudan 50 g su buharlaştırılırsa yeni derişim yüzde kaç olur?",
+   "adimlar": [
+    "Çözünen tuz: 150 × 20 / 100 = 30 g. Buharlaşmada değişmez.",
+    "Yeni çözelti kütlesi: 150 − 50 = 100 g.",
+    "Derişim: 30 / 100 × 100 = %30."
+   ],
+   "cevap": "%30"
+  },
+  "hata": "Soruda suyun yüzdesi ya da hacmi sorulurken çözünenin değerini yazmak. Yüzde değerini mL ya da g sanmak da sık görülür. Cevaptan önce sorunun neyi istediğini bir daha oku.",
+  "akilda": "Çözünen sabit, çözelti değişir."
+ },
+ {
+  "id": "kim-kimya-bilimi-02",
+  "k": "kim|Kimya Bilimi",
+  "baslik": "Kimya disiplinleri ve simya",
+  "olcer": "Bir çalışmanın hangi kimya dalına girdiğini amacına bakarak seçebilmeni ve simyanın kimyaya katkısını bilmeni.",
+  "kural": "Dalı çalışmanın **amacı** belirler. Madde türünü ve miktarını belirleyen dal **analitik kimyadır**. Canlılardaki olayları inceleyen dal biyokimya, maddenin yapısını ve tepkimelerini inceleyen dal organik ve anorganik kimyadır. Simyacılar altın yapmaya çalışırken damıtma ve süzme gibi yöntemleri geliştirdi.",
+  "formul": null,
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir fabrika, atık sudaki kurşun miktarını ölçüyor. Bu çalışma hangi kimya dalına girer?",
+   "adimlar": [
+    "Çalışmada maddenin kendisi değil, ne kadar bulunduğu soruluyor.",
+    "Madde türünü ve miktarını belirleme analitik kimyanın işidir.",
+    "Su numunesi canlıyla ilgili olmadığından biyokimya değildir."
+   ],
+   "cevap": "Analitik kimya."
+  },
+  "hata": "Disiplini numunenin türüne bakarak seçmek, örneğin sudan dolayı biyokimya demek. Numune ne olursa olsun disiplini çalışmanın amacı belirler: tür mü, miktar mı, üretim mi?",
+  "akilda": "Dalı, maddeye değil amaca bakarak seç."
+ },
+ {
+  "id": "kim-kimya-her-01",
+  "k": "kim|Kimya Her Yerde",
+  "baslik": "Polimerler ve geri dönüşüm",
+  "olcer": "Polimerin monomerini, tekrar eden birimini ve zincirdeki toplam atom sayısını bulabilmeni.",
+  "kural": "Monomer, polimeri oluşturan küçük moleküldür. Polimerde **tekrar eden birim** zincir boyunca sıralanır. Monomerin çift bağı açılarak polimer oluşur. **Zincirdeki atom sayısı = birimdeki atom sayısı × birim sayısı.** Geri dönüşüm hammadde ve enerji tasarrufu sağlar.",
+  "formul": "Toplam atom = birimdeki atom × birim sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "Tekrar eden birimi C₂H₃Cl olan polimerde 200 birim varsa zincirde toplam kaç atom bulunur?",
+   "adimlar": [
+    "Birimdeki atomlar: 2 C + 3 H + 1 Cl = 6 atom.",
+    "Birim sayısıyla çarp: 6 × 200 = 1200."
+   ],
+   "cevap": "1200 atom"
+  },
+  "hata": "Yalnız karbon ya da yalnız bir cins atomu saymak. Birimdeki her atomu, indisleriyle birlikte topla. Formülde indis yazmayan atomun sayısı 1'dir.",
+  "akilda": "Önce birimdeki tüm atomları say."
+ },
+ {
+  "id": "kim-kimya-her-03",
+  "k": "kim|Kimya Her Yerde",
+  "baslik": "Gıda katkıları ve saklama",
+  "olcer": "Gıda saklama yöntemlerinin ilkesini ve katkı kodları ile güvenlik işaretlerinin anlamını değerlendirebilmeni.",
+  "kural": "Gıda saklamanın amacı **mikroorganizmaların çoğalmasını engellemektir**. Isıtma onları öldürür; kurutma, tuzlama ve şekerleme onların ihtiyaç duyduğu suyu azaltır. Soğuk onları öldürmez, yalnız yavaşlatır. E kodlu katkılar kullanım izni olan maddelerdir, sayı grubu gösterir.",
+  "formul": null,
+  "sekil": null,
+  "ornek": {
+   "soru": "Reçelde yüksek şeker oranı gıdanın bozulmasını neden geciktirir?",
+   "adimlar": [
+    "Mikroorganizmaların çoğalması için suya ihtiyaç vardır.",
+    "Çok şeker, ortamdaki suyu tutar ve mikroorganizmaların kullanabileceği su azalır.",
+    "Böylece mikroorganizmalar çoğalamaz, bozulma gecikir."
+   ],
+   "cevap": "Şeker suyu tutar, mikroorganizma çoğalamaz."
+  },
+  "hata": "Soğutmanın mikroorganizmaları öldürdüğünü sanmak. Soğuk ancak çoğalmayı yavaşlatır. Ayrıca olumsuz kökte doğru ifadeleri yanlış sanıp elemek sık yapılan bir hatadır.",
+  "akilda": "Saklama, mikroorganizmaları durdurmaktır."
+ },
+ {
+  "id": "kim-kimyanin-temel-02",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "baslik": "Katlı oranlar kanunu",
+  "olcer": "Aynı iki elementten oluşan iki bileşikte kütle oranından ikinci bileşiğin formülünü bulabilmeni.",
+  "kural": "Aynı iki elementten oluşan bileşiklerde **birinin sabit kütlesiyle birleşen diğerinin kütleleri arasında küçük tam sayılı oran vardır.** Önce sabit elementin kütlesini eşitle, sonra öteki elementin kütle oranını bul. Bu oranı ilgili indise çarparak yeni formüle ulaş.",
+  "formul": "Oran = Y₂ / Y₁ → yeni indis = eski indis × oran",
+  "sekil": null,
+  "ornek": {
+   "soru": "I. bileşik XY₂'dir; 6 g X ile 16 g Y birleşiyor. II. bileşikte 6 g X ile 32 g Y birleşiyorsa II. bileşiğin formülü nedir?",
+   "adimlar": [
+    "X kütlesi iki bileşikte de 6 g, yani sabit.",
+    "Y kütleleri oranı: 32 / 16 = 2.",
+    "I. bileşikteki Y indisi 2 olduğundan II. bileşikte 2 × 2 = 4 olur."
+   ],
+   "cevap": "XY₄"
+  },
+  "hata": "Kütle oranını doğrudan indis sanmak ya da indise eklemek. Oran, eski indisle çarpılır. Sabit elementin kütlesi eşit değilse önce eşitle.",
+  "akilda": "Oranı indisle çarp, ekleme."
+ },
+ {
+  "id": "kim-kimyanin-temel-04",
+  "k": "kim|Kimyanın Temel Kanunları",
+  "baslik": "Kütlenin korunumu",
+  "olcer": "Kapalı ve açık kapta tepkimeden önce ve sonraki kütleleri kütlenin korunumuyla karşılaştırabilmeni.",
+  "kural": "**Kapalı kapta girenlerin toplam kütlesi ürünlerin toplam kütlesine eşittir.** Bilinmeyen bir kütle varsa iki tarafın toplamını eşitle. Açık kapta gaz kaçabileceğinden kap kütlesi değişebilir. Denklemi denkleştirmek atom sayısını eşitler, kütle zaten korunur.",
+  "formul": "Σ m(giren) = Σ m(ürün)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kapalı kapta 8 g CH₄ ile 32 g O₂ tam verimle tepkimeye girip 22 g CO₂ oluşturuyor. Oluşan H₂O kaç gramdır?",
+   "adimlar": [
+    "Girenlerin toplamı: 8 + 32 = 40 g.",
+    "Ürünlerin toplamı da 40 g olmalıdır.",
+    "H₂O = 40 − 22 = 18 g."
+   ],
+   "cevap": "18 g"
+  },
+  "hata": "Girenlerden yalnız birinin kütlesini ürün sanmak ya da mol kütlesini harcanan madde kütlesi saymak. Soruda verilen gram değerleriyle iki tarafı toplayıp eşitle.",
+  "akilda": "Giren toplam kütle, ürün toplam kütleye eşit."
+ },
+ {
+  "id": "kim-kimyasal-hesaplamalar-02",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "baslik": "Tepkimede mol, kütle ve hacim",
+  "olcer": "Denkleştirilmiş tepkimedeki katsayılardan mol oranı kurup kütle ve normal koşullardaki gaz hacmini hesaplayabilmeni.",
+  "kural": "**Katsayı oranı mol oranıdır.** Önce verilen maddeyi mole çevir: n = kütle ÷ mol kütlesi. Sonra katsayılarla istenen maddenin molünü bul. Son adımda grama ya da hacme dön: **NK'da 1 mol gaz 22,4 L** kaplar.",
+  "formul": "n = m / M · V(NK) = n × 22,4 L",
+  "sekil": null,
+  "ornek": {
+   "soru": "N₂ + 3H₂ → 2NH₃ tepkimesinde 1,5 mol NH₃ oluşması için NK'da kaç litre H₂ harcanır?",
+   "adimlar": [
+    "Katsayılar: 3 mol H₂ ile 2 mol NH₃ oluşur.",
+    "H₂ molü: 1,5 × 3 / 2 = 2,25 mol.",
+    "Hacim: 2,25 × 22,4 = 50,4 L."
+   ],
+   "cevap": "50,4 L"
+  },
+  "hata": "Katsayıyı kullanmadan molleri eşit almak ya da yanlış maddenin katsayısını kullanmak. İstenen ve verilen maddenin katsayısını ayrı ayrı yaz, oranı bunlarla kur.",
+  "akilda": "Katsayı oranı, mol oranıdır."
+ },
+ {
+  "id": "kim-kimyasal-hesaplamalar-04",
+  "k": "kim|Kimyasal Hesaplamalar",
+  "baslik": "Mol, tanecik ve atom sayısı",
+  "olcer": "Kütleden mol, molekül ve toplam atom sayısına ilerleyip farklı gazları karşılaştırabilmeni.",
+  "kural": "**Mol sayısı n = kütle ÷ mol kütlesi.** 1 mol = 6 × 10²³ tanecik. Molekül sayısı n × NA'dır. **Atom sayısı = mol × molekül başına atom × NA.** Molekülün her cins atomunu sayarak topla, örneğin NH₃'te 1 N ve 3 H, yani 4 atom vardır.",
+  "formul": "Atom sayısı = n × (molekülündeki atom) × NA",
+  "sekil": null,
+  "ornek": {
+   "soru": "34 g NH₃ (mol kütlesi 17 g/mol) kaç atom içerir? (NA = 6 × 10²³)",
+   "adimlar": [
+    "Mol sayısı: 34 / 17 = 2 mol NH₃.",
+    "Bir NH₃ molekülünde 1 + 3 = 4 atom var: 2 × 4 = 8 mol atom.",
+    "Atom sayısı: 8 × 6 × 10²³ = 4,8 × 10²⁴."
+   ],
+   "cevap": "4,8 × 10²⁴ atom"
+  },
+  "hata": "Molekül sayısında durup atom sayısına geçmemek ya da yalnız tek cins atomu saymak. Soru \"atom\" diyorsa molekül başına tüm atomlar çarpılır.",
+  "akilda": "Mol, molekül başına atom, sonra NA."
+ },
+ {
+  "id": "kim-kimyasal-turler-02",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "baslik": "Lewis yapısı ve bağ polarlığı",
+  "olcer": "Atomların yapması gereken bağ sayısından çoklu bağı bulabilmeni ve elektronegatiflik farkından bağ polarlığını karşılaştırabilmeni.",
+  "kural": "Ametal atom oktetini tamamlamak için **8 − değerlik elektronu** kadar bağ yapar: H 1, O 2, N 3, C 4. Tek bağla doymayan atomlar **çift ya da üçlü bağ** kurar. Elektronegatiflik farkı büyüdükçe bağ daha polardır; aynı atomlar arasındaki bağ apolardır.",
+  "formul": "H 1 · O 2 · N 3 · C 4 bağ",
+  "sekil": null,
+  "ornek": {
+   "soru": "HCN molekülünde (H, C, N atomları bu sırayla bağlı) C ile N arasında kaç bağ vardır?",
+   "adimlar": [
+    "H bir bağ yapar: H–C. C dört bağ yapacağından 3 bağı daha var.",
+    "N üç bağ yapmalıdır ve N'nin başka komşusu yok.",
+    "C ile N arasında 3 ortak çift gerekir: H–C≡N."
+   ],
+   "cevap": "Üçlü bağ."
+  },
+  "hata": "H₂O ya da NH₃ gibi moleküllerde çoklu bağ aramak ya da CO₂ ve C₂H₄'teki çift bağı atlamak. Önce her atomun bağ sayısını yaz, eksik kalan bağlar çoklu bağdır.",
+  "akilda": "Bağ sayısı eksikse çoklu bağ kur."
+ },
+ {
+  "id": "kim-kimyasal-turler-04",
+  "k": "kim|Kimyasal Türler Arası Etkileşimler",
+  "baslik": "Katı türleri ve erime noktası",
+  "olcer": "Erime noktası ve yapı bilgisinden kovalent ağ ile moleküler katıyı ayırt edip erimede hangi etkileşimin koptuğunu bilmeni.",
+  "kural": "**Kovalent ağ katılarda** (elmas, kuvars) atomlar ağ biçiminde bağlıdır; erimek için kovalent bağlar kopar, erime noktası çok yüksektir. **Moleküler katılarda** erirken yalnız moleküller arası zayıf kuvvetler gevşer, molekül içi bağlar kopmaz, erime noktası düşüktür.",
+  "formul": "Çok yüksek erime noktası → ağ · düşük → moleküler",
+  "sekil": "<svg viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"Kovalent ağ katıda atomlar ağ biçiminde bağlı; moleküler katıda moleküller zayıf kuvvetle bir arada\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><line x1=\"30\" y1=\"50\" x2=\"30\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"62\" y1=\"50\" x2=\"62\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"94\" y1=\"50\" x2=\"94\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"30\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"30\" y1=\"82\" x2=\"94\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"30\" y1=\"114\" x2=\"94\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"50\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"30\" cy=\"82\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"30\" cy=\"114\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"62\" cy=\"50\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"62\" cy=\"82\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"62\" cy=\"114\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"94\" cy=\"50\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"94\" cy=\"82\" r=\"6\" fill=\"#2f5bea\"/><circle cx=\"94\" cy=\"114\" r=\"6\" fill=\"#2f5bea\"/><text x=\"22\" y=\"28\" font-size=\"12\" font-weight=\"600\">kovalent ağ</text><text x=\"14\" y=\"134\" font-size=\"12\">tüm bağlar kopar</text><line x1=\"170\" y1=\"55\" x2=\"188\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"55\" r=\"6\" fill=\"#0f8a6a\"/><circle cx=\"188\" cy=\"55\" r=\"6\" fill=\"#0f8a6a\"/><line x1=\"225\" y1=\"55\" x2=\"243\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"225\" cy=\"55\" r=\"6\" fill=\"#0f8a6a\"/><circle cx=\"243\" cy=\"55\" r=\"6\" fill=\"#0f8a6a\"/><line x1=\"170\" y1=\"100\" x2=\"188\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"100\" r=\"6\" fill=\"#0f8a6a\"/><circle cx=\"188\" cy=\"100\" r=\"6\" fill=\"#0f8a6a\"/><line x1=\"225\" y1=\"100\" x2=\"243\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"225\" cy=\"100\" r=\"6\" fill=\"#0f8a6a\"/><circle cx=\"243\" cy=\"100\" r=\"6\" fill=\"#0f8a6a\"/><line x1=\"196\" y1=\"55\" x2=\"219\" y2=\"55\" stroke=\"#c2410c\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"196\" y1=\"100\" x2=\"219\" y2=\"100\" stroke=\"#c2410c\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"170\" y=\"28\" font-size=\"12\" font-weight=\"600\">moleküler</text><text x=\"150\" y=\"134\" font-size=\"12\">zayıf çekim gevşer</text></g></svg>",
+  "ornek": {
+   "soru": "Naftalin 80 °C'de, kuvars 1700 °C'de eriyor. Hangisi erirken kovalent bağlar kopar?",
+   "adimlar": [
+    "Naftalinin erime noktası düşüktür: moleküler katıdır.",
+    "Moleküler katı erirken yalnız zayıf çekim kuvvetleri gevşer.",
+    "Kuvars çok yüksek sıcaklıkta erir: ağ yapılıdır, erimede kovalent bağlar kopar."
+   ],
+   "cevap": "Kuvars."
+  },
+  "hata": "Erimede molekül içi bağların koptuğunu sanmak. N≡N gibi bir bağ erirken kopmaz. Düşük erime noktası, moleküller arası çekimlerin zayıflığından kaynaklanır.",
+  "akilda": "Moleküler katı erirken molekül bozulmaz."
+ },
+ {
+  "id": "kim-maddenin-halleri-01",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Buharlaşma ve buhar basıncı",
+  "olcer": "Buharlaşma hızını etkileyen etmenleri ve buhar basıncıyla kaynama noktası ilişkisini yorumlayabilmeni.",
+  "kural": "Sıcaklık ve yüzey alanı arttıkça **buharlaşma hızlanır**. Buharlaşma her sıcaklıkta yüzeyde, kaynama belirli sıcaklıkta her yerde olur. Buhar basıncı sıcaklıkla artar, sıvı miktarına bağlı değildir. **Buhar basıncı dış basınca eşitlenince sıvı kaynar**; buhar basıncı büyük olan daha düşük sıcaklıkta kaynar.",
+  "formul": "Buhar basıncı = dış basınç → kaynama",
+  "sekil": "<svg viewBox=\"0 0 280 164\" role=\"img\" aria-label=\"Buhar basıncı sıcaklık grafiği: B eğrisi dış basınca daha düşük sıcaklıkta ulaşır\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><line x1=\"40\" y1=\"140\" x2=\"262\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"40\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"50\" x2=\"262\" y2=\"50\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"5 3\"/><polyline points=\"40.0,140.0 45.2,139.6 50.4,139.1 55.6,138.6 60.8,138.0 66.0,137.4 71.2,136.7 76.4,136.0 81.6,135.2 86.8,134.4 92.0,133.5 97.2,132.5 102.4,131.4 107.6,130.3 112.8,129.0 118.0,127.7 123.2,126.2 128.4,124.6 133.6,122.9 138.8,121.0 144.0,119.0 149.2,116.8 154.4,114.4 159.6,111.9 164.8,109.1 170.0,106.1 175.2,102.8 180.4,99.3 185.6,95.4 190.8,91.3 196.0,86.8 201.2,81.9 206.4,76.6 211.6,70.9 216.8,64.7 222.0,58.0 227.2,50.7 232.4,42.8 237.6,34.3 242.8,25.0 248.0,15.0\" fill=\"none\" stroke=\"#0f8a6a\" stroke-width=\"2.5\"/><polyline points=\"40.0,140.0 45.2,139.8 50.4,139.7 55.6,139.5 60.8,139.3 66.0,139.0 71.2,138.8 76.4,138.5 81.6,138.1 86.8,137.8 92.0,137.4 97.2,136.9 102.4,136.4 107.6,135.8 112.8,135.2 118.0,134.4 123.2,133.6 128.4,132.8 133.6,131.8 138.8,130.6 144.0,129.4 149.2,128.0 154.4,126.5 159.6,124.7 164.8,122.8 170.0,120.7 175.2,118.3 180.4,115.6 185.6,112.6 190.8,109.2 196.0,105.5 201.2,101.3 206.4,96.7 211.6,91.5 216.8,85.7 222.0,79.3 227.2,72.0 232.4,64.0 237.6,55.0 242.8,45.0 248.0,33.8\" fill=\"none\" stroke=\"#c2410c\" stroke-width=\"2.5\"/><text x=\"46\" y=\"44\" font-size=\"12\" fill=\"#7c3aed\">dış basınç</text><text x=\"150\" y=\"30\" font-size=\"13\" font-weight=\"600\" fill=\"#0f8a6a\">B</text><text x=\"214\" y=\"30\" font-size=\"13\" font-weight=\"600\" fill=\"#c2410c\">A</text><text x=\"190\" y=\"156\" font-size=\"12\">Sıcaklık</text><text x=\"4\" y=\"12\" font-size=\"12\">Buhar basıncı</text></g></svg>",
+  "ornek": {
+   "soru": "Aynı sıcaklıkta A sıvısının buhar basıncı 40, B sıvısınınki 90 mmHg ise hangisinin kaynama noktası daha düşüktür?",
+   "adimlar": [
+    "Buhar basıncı büyük olan sıvı daha kolay buharlaşır, yani daha uçucudur.",
+    "B daha kolay buharlaştığı için dış basınca daha düşük sıcaklıkta ulaşır."
+   ],
+   "cevap": "B sıvısı."
+  },
+  "hata": "Yüzey alanı ya da sıcaklığın etkisini ters yorumlamak. İkisi de arttıkça buharlaşma hızlanır. Süre ile hız ters yönde sıralanır: hızlı olan kısa sürede biter.",
+  "akilda": "Sıcak ve geniş yüzey, çabuk buharlaşır."
+ },
+ {
+  "id": "kim-maddenin-halleri-03",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Viskozite ve yüzey gerilimi",
+  "olcer": "Bilyenin düşme süresinden viskoziteyi ve sıcaklık ile tanecikler arası etkileşimin sıvı özelliklerine etkisini yorumlayabilmeni.",
+  "kural": "**Viskozite akmaya karşı dirençtir.** Tanecikler arası etkileşim arttıkça artar, sıcaklık arttıkça azalır. Akışkanlık viskozitenin tersidir. Bilye sıvıda geç iniyorsa viskozite büyüktür. Yüzey gerilimi, yüzeydeki moleküllerin içeri çekilmesiyle yüzeyin gergin zar gibi davranmasıdır.",
+  "formul": "Viskozite ↑ → akışkanlık ↓",
+  "sekil": null,
+  "ornek": {
+   "soru": "Aynı sıcaklıkta bilye X sıvısında 6 s, Y sıvısında 2 s'de iniyor. Hangisinin viskozitesi büyük, hangisi daha akışkandır?",
+   "adimlar": [
+    "Bilye X'te daha geç indiği için X akmaya daha çok direnir.",
+    "Demek ki X'in viskozitesi büyüktür, X'te tanecikler arası etkileşim daha güçlüdür.",
+    "Akışkanlık viskozitenin tersidir: Y daha akışkandır."
+   ],
+   "cevap": "X'in viskozitesi büyük, Y daha akışkan."
+  },
+  "hata": "Viskoziteyi sıcaklıkla aynı yönde değiştiğini sanmak. Isınınca viskozite azalır, akışkanlık artar. Küçük viskoziteyi yanlış yorumlayıp akıcılığın düştüğünü düşünmek de sık görülür.",
+  "akilda": "Bilye geç iniyorsa viskozite büyük."
+ },
+ {
+  "id": "kim-maddenin-halleri-05",
+  "k": "kim|Maddenin Halleri",
+  "baslik": "Gazların özellikleri ve basıncı",
+  "olcer": "Gazların sıkıştırılabilirliğini, difüzyonu ve basıncı tanecik hareketi ile uzaklığına dayanarak açıklayabilmeni.",
+  "kural": "Gazlarda tanecikler arası boşluk çok büyüktür, bu yüzden **gaz kolay sıkıştırılır**. Sıkıştırınca taneciklerin boyu değil, **aralarındaki uzaklık azalır**. Sıvı ve katıda boşluk az olduğundan zor sıkışır. Difüzyon sıcaklıkla hızlanır. Basınç taneciklerin duvara çarpmasından doğar.",
+  "formul": null,
+  "sekil": "<svg viewBox=\"0 0 280 168\" role=\"img\" aria-label=\"Sıkıştırılan gazda taneciklerin boyu aynı kalır, aralarındaki uzaklık azalır\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><rect x=\"20\" y=\"40\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"56.0\" y=\"32\" font-size=\"12\">önce</text><rect x=\"170\" y=\"40\" width=\"55\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"183.5\" y=\"32\" font-size=\"12\">sonra</text><circle cx=\"35\" cy=\"60\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"70\" cy=\"55\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"100\" cy=\"70\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"50\" cy=\"90\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"85\" cy=\"100\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"35\" cy=\"120\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"70\" cy=\"130\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"105\" cy=\"120\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"182\" cy=\"60\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"205\" cy=\"58\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"190\" cy=\"80\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"213\" cy=\"85\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"182\" cy=\"100\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"205\" cy=\"108\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"190\" cy=\"125\" r=\"5\" fill=\"#2f5bea\"/><circle cx=\"212\" cy=\"128\" r=\"5\" fill=\"#2f5bea\"/><path d=\"M130,90 L158,90\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M152,84 L160,90 L152,96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"20\" y=\"158\" font-size=\"12\">boşluk çok</text><text x=\"165\" y=\"158\" font-size=\"12\">boşluk az</text></g></svg>",
+  "ornek": {
+   "soru": "Hava dolu şırınganın pistonu itilip hacim yarıya indiriliyor. Tanecik sayısı, tanecik boyu ve tanecikler arası uzaklık nasıl değişir?",
+   "adimlar": [
+    "Şırınga kapalı, tanecik sayısı değişmez.",
+    "Taneciklerin kendisi küçülmez, boyları aynı kalır.",
+    "Yalnız aralarındaki uzaklık azalır."
+   ],
+   "cevap": "Sayı ve boy aynı kalır, uzaklık azalır."
+  },
+  "hata": "Gaz sıkıştırılınca taneciklerin küçüldüğünü sanmak. Küçülen taneciklerin kendisi değil, aralarındaki boşluktur. Sıvıların neredeyse sıkışmamasını da boşluğun azlığıyla açıkla.",
+  "akilda": "Sıkışan boşluktur, tanecik değil."
+ },
+ {
+  "id": "kim-periyodik-sistem-01",
+  "k": "kim|Periyodik Sistem",
+  "baslik": "İyonlaşma enerjisi ve iyon yarıçapı",
+  "olcer": "Ardışık iyonlaşma enerjilerinden grubu bulabilmeni ve elektron sayısı eşit iyonları proton sayısına göre karşılaştırabilmeni.",
+  "kural": "Her elektron koparken gereken enerji artar. **Değerlik elektronları bitince enerji aniden büyük sıçrar**; sıçramadan önceki sayı değerlik elektronudur. Bir periyotta iyonlaşma enerjisi genelde artar. **Elektron sayısı eşit iyonlarda proton arttıkça yarıçap küçülür.**",
+  "formul": "Sıçramadan önceki enerji sayısı = değerlik elektronu",
+  "sekil": "<svg viewBox=\"0 0 280 164\" role=\"img\" aria-label=\"Ardışık iyonlaşma enerjileri: üçüncü enerjide büyük sıçrama var\" xmlns=\"http://www.w3.org/2000/svg\"><g font-family=\"Lexend,system-ui,sans-serif\" font-size=\"12\" fill=\"currentColor\"><line x1=\"40\" y1=\"140\" x2=\"262\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"40\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"62\" y=\"131.7\" width=\"32\" height=\"8.3\" fill=\"#2f5bea\"/><text x=\"68\" y=\"156\" font-size=\"12\">IE1</text><rect x=\"112\" y=\"123.8\" width=\"32\" height=\"16.2\" fill=\"#2f5bea\"/><text x=\"118\" y=\"156\" font-size=\"12\">IE2</text><rect x=\"162\" y=\"53.5\" width=\"32\" height=\"86.5\" fill=\"#c2410c\"/><text x=\"168\" y=\"156\" font-size=\"12\">IE3</text><rect x=\"212\" y=\"22.0\" width=\"32\" height=\"118.0\" fill=\"#2f5bea\"/><text x=\"218\" y=\"156\" font-size=\"12\">IE4</text><text x=\"4\" y=\"12\" font-size=\"12\">Enerji (kJ/mol)</text><text x=\"60\" y=\"40\" font-size=\"12\" fill=\"#c2410c\">büyük sıçrama (IE3)</text></g></svg>",
+  "ornek": {
+   "soru": "Bir atomun ardışık iyonlaşma enerjileri 738, 1450, 7730, 10540 kJ/mol'dür. Atom kaç değerlik elektronludur?",
+   "adimlar": [
+    "Enerjiler arası oranlar: 1450/738 ≈ 2, 7730/1450 ≈ 5,3, 10540/7730 ≈ 1,4.",
+    "Büyük sıçrama 2. ile 3. enerji arasındadır.",
+    "İki elektron kolay koptu: 2 değerlik elektronu (2A grubu)."
+   ],
+   "cevap": "2 değerlik elektronu, 2A grubu."
+  },
+  "hata": "Elektron sayısı eşit iyonlarda yarıçapı katman sayısıyla yorumlamak. Hepsinin katmanı aynıdır, fark proton sayısındadır. Proton fazla olan iyon daha küçüktür.",
+  "akilda": "Elektron eşitse proton belirler."
+ },
+ {
+  "id": "kim-periyodik-sistem-03",
+  "k": "kim|Periyodik Sistem",
+  "baslik": "Periyot, grup ve atom numarası",
+  "olcer": "Atom numarası, iyon ya da tablodaki konumdan elementin periyodunu, grubunu ve B grubu olup olmadığını belirleyebilmeni.",
+  "kural": "Katman sayısı periyodu, **son katmandaki elektron sayısı A grubunu** gösterir. İyonda atomun elektronunu bulmak için katyonda yükü ekle, anyonda yükü çıkar. Tabloda etiketsiz orta sütunlar **B grubudur** (4. periyottan itibaren). Her periyodun son sütunu soy gazdır.",
+  "formul": "Periyot = katman sayısı · Grup = son katman e⁻",
+  "sekil": null,
+  "ornek": {
+   "soru": "Atom numarası 35 olan elementin periyodunu ve grubunu bul.",
+   "adimlar": [
+    "Elektron dizilimi: 2, 8, 18, 7 (toplam 35).",
+    "Dört katman var: 4. periyot.",
+    "Son katmanda 7 elektron var: 7A grubu (halojen)."
+   ],
+   "cevap": "4. periyot, 7A grubu."
+  },
+  "hata": "Etiketsiz orta sütunları A grubu sanmak ya da aynı sütundaki elementleri aynı grup saymayı unutmak. Önce konumu elektron dizilimiyle doğrula, sonra periyodik özelliği yorumla.",
+  "akilda": "Katman periyot, son katman elektronu gruptur."
+ }
+]

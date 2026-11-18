@@ -1,0 +1,465 @@
+[
+ {
+  "id": "prob-grafik-problemleri-01",
+  "k": "prob|Grafik Problemleri",
+  "baslik": "Doğrusal grafikte eğim ve hız",
+  "olcer": "Doğrusal grafiğin eğimini hız ya da akış hızı olarak okuyup verilen süre için yolu veya miktarı bulabilmeni.",
+  "kural": "Doğrusal grafikte **eğim** sabit hızı verir: eğim = değişen miktar ÷ geçen süre. Önce grafikten bir noktanın değerini oku, hızı bul, sonra **soruda istenen süreyle çarp**. Parçalı grafikte her doğru parçasının eğimini ayrı hesapla.",
+  "formul": "hız = yol farkı ÷ süre farkı · yol = hız × süre",
+  "sekil": "<svg viewBox=\"0 0 280 166\" role=\"img\" aria-label=\"Başlangıçtan geçen doğrusal yol-zaman grafiği; 3 saatte 270 km\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"140\" x2=\"262\" y2=\"140\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"40\" y2=\"18\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"160\" y2=\"32\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"32\" x2=\"160\" y2=\"140\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"40\" y1=\"32\" x2=\"160\" y2=\"32\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><circle cx=\"160\" cy=\"32\" r=\"4\" fill=\"var(--rule,#0f8a6a)\"/><text x=\"160\" y=\"156\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">3 sa</text><text x=\"2\" y=\"36\" font-size=\"12\" text-anchor=\"start\" fill=\"var(--ink,#18212f)\">270 km</text><text x=\"262\" y=\"156\" font-size=\"12\" text-anchor=\"end\" fill=\"var(--ink,#18212f)\">Zaman</text><text x=\"46\" y=\"14\" font-size=\"12\" text-anchor=\"start\" fill=\"var(--ink,#18212f)\">Yol</text></svg>",
+  "ornek": {
+   "soru": "Başlangıçtan geçen yol–zaman grafiğinde bir araç 3 saatte 270 km gidiyor. Aynı hızla 5 saatte kaç km gider?",
+   "adimlar": [
+    "Grafikten bir nokta oku: 3 saatte 270 km.",
+    "Hız = 270 ÷ 3 = 90 km/sa.",
+    "İstenen süre 5 saat: yol = 90 × 5 = 450 km."
+   ],
+   "cevap": "450 km"
+  },
+  "hata": "Hızı bulup soruda istenen süreyle çarpmayı unutmak ya da grafikteki son değeri cevap sanmak. Cevaptan önce sorulan sürenin kaç saat olduğunu bir kez daha oku.",
+  "akilda": "Eğim hızdır, hız çarpı süre yoldur."
+ },
+ {
+  "id": "prob-grafik-problemleri-03",
+  "k": "prob|Grafik Problemleri",
+  "baslik": "İki kaynağı birlikte yorumlama",
+  "olcer": "İki grafiği ya da tabloyu birlikte okuyup ortak büyüklükten eksik değeri ve sorulan grubu bulabilmeni.",
+  "kural": "İki kaynağı birlikte okurken her birinden **ortak büyüklüğü** al. Daire grafiğinde dilim = toplam × açı ÷ 360; tabloda gelir = fiyat × adet. Eksik hücreyi bulmak için bilinen satırların hepsini **toplamdan düş**, sonra sorulan grubu seç.",
+  "formul": "dilim = toplam × açı ÷ 360 · gelir = fiyat × adet",
+  "sekil": "<svg viewBox=\"0 0 280 172\" role=\"img\" aria-label=\"Daire grafiğinde 150 derecelik bir dilim\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"85\" r=\"62\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.5\"/><path d=\"M110,85 L110.0,23.0 A62,62 0 0 1 141.0,138.7 Z\" fill=\"var(--rule-soft,#e3f5ef)\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><text x=\"143\" y=\"76\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">150°</text><text x=\"190\" y=\"50\" font-size=\"13\" text-anchor=\"start\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">Futbol</text><text x=\"190\" y=\"70\" font-size=\"12\" text-anchor=\"start\" fill=\"var(--ink,#18212f)\">dilimi</text><text x=\"110\" y=\"165\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--muted,#5b6678)\">Tüm daire 360°</text></svg>",
+  "ornek": {
+   "soru": "240 kişilik bir grubun tercihleri daire grafiğiyle gösteriliyor. Futbol dilimi 150° ise futbolu seçen kaç kişidir?",
+   "adimlar": [
+    "Tüm daire 360°, grubun toplamı 240 kişi.",
+    "Dilim = toplam × açı ÷ 360.",
+    "240 × 150 ÷ 360 = 100 kişi."
+   ],
+   "cevap": "100 kişi"
+  },
+  "hata": "Soru tüm grubu isterken tek satırı ya da tek dilimi cevap yapmak, toplama bir grubu katmamak. Cevaptan önce sorunun hangi grupları kapsadığını işaretle.",
+  "akilda": "Toplamdan bilinenleri düş, kalan senin."
+ },
+ {
+  "id": "prob-grafik-problemleri-05",
+  "k": "prob|Grafik Problemleri",
+  "baslik": "Sütun grafiği ve ölçek",
+  "olcer": "Eksendeki değerler yazılmamış olsa da sütunları bölme sayısıyla okuyup toplam ve yüzde hesaplayabilmeni.",
+  "kural": "Sütunun değerini üst ucundan **yatay çizgiyi izleyerek** oku. Eksende sayı yoksa bilinen bir sütundan **bir bölmenin değerini** bul, diğer sütunları bölme sayısıyla çarp. Yüzde için parça ÷ bütün × 100 al. Bir aralık birden çok dilimi kapsıyorsa hepsini topla.",
+  "formul": "1 bölme = bilinen değer ÷ bölme sayısı",
+  "sekil": "<svg viewBox=\"0 0 280 166\" role=\"img\" aria-label=\"Değerleri yazılmamış sütun grafiği; A sütunu 5 bölme ve 30\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"125\" x2=\"250\" y2=\"125\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"110\" x2=\"250\" y2=\"110\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"95\" x2=\"250\" y2=\"95\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"80\" x2=\"250\" y2=\"80\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"65\" x2=\"250\" y2=\"65\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"50\" x2=\"250\" y2=\"50\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"35\" x2=\"250\" y2=\"35\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"20\" x2=\"250\" y2=\"20\" stroke=\"var(--line,#dde3ec)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"40\" y2=\"15\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"65\" width=\"44\" height=\"75\" fill=\"var(--rule-soft,#e3f5ef)\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><text x=\"82\" y=\"156\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">A</text><rect x=\"120\" y=\"20\" width=\"44\" height=\"120\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--brand,#2f5bea)\" stroke-width=\"2\"/><text x=\"142\" y=\"156\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">B</text><rect x=\"180\" y=\"95\" width=\"44\" height=\"45\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"2\"/><text x=\"202\" y=\"156\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">C</text><text x=\"82\" y=\"59\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">30</text><text x=\"262\" y=\"30\" font-size=\"12\" text-anchor=\"end\" fill=\"var(--muted,#5b6678)\">1 bölme = ?</text></svg>",
+  "ornek": {
+   "soru": "Değerleri yazılmamış grafikte A sütunu 5 bölmelik ve 30 öğrenciyi gösteriyor. B sütunu 8, C sütunu 3 bölmelik. Üç sütunun toplamı kaç öğrencidir?",
+   "adimlar": [
+    "Bir bölme = 30 ÷ 5 = 6 öğrenci.",
+    "Toplam bölme: 5 + 8 + 3 = 16.",
+    "Toplam öğrenci: 16 × 6 = 96."
+   ],
+   "cevap": "96 öğrenci"
+  },
+  "hata": "Bir zaman aralığını tek dilimle sınırlamak ya da bütünü yanlış almak. Aralığın kapsadığı dilimleri tek tek işaretle, sonra toplamı bütüne böl.",
+  "akilda": "Önce bir bölmeyi bul."
+ },
+ {
+  "id": "prob-hareket-hiz-02",
+  "k": "prob|Hareket Hız Problemleri",
+  "baslik": "Tren, tünel ve köprü",
+  "olcer": "Boyu olan trenin tüneli geçme ve tünelde tamamen kalma sürelerini doğru yolla hesaplayabilmeni.",
+  "kural": "Tren boyu olan bir cisimdir. Tüneli **tamamen geçerken** yol = tren boyu + tünel boyu. Tünelde **tamamen içinde kalırken** yol = tünel boyu − tren boyu. Hız km/sa ise **3,6'ya bölerek** m/sn yap.",
+  "formul": "geçme: (tren + tünel) ÷ hız · içinde: (tünel − tren) ÷ hız",
+  "sekil": "<svg viewBox=\"0 0 280 170\" role=\"img\" aria-label=\"Tren tünelden geçerken ve tünelin içindeyken alınan yol\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"4\" y=\"12\" font-size=\"12\" text-anchor=\"start\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">Tamamen geçme</text><rect x=\"90\" y=\"20\" width=\"150\" height=\"28\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--brand,#2f5bea)\" stroke-width=\"2\"/><rect x=\"30\" y=\"26\" width=\"60\" height=\"16\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"2\"/><text x=\"165\" y=\"38\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">tünel</text><line x1=\"30\" y1=\"60\" x2=\"240\" y2=\"60\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><line x1=\"30\" y1=\"55\" x2=\"30\" y2=\"65\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><line x1=\"240\" y1=\"55\" x2=\"240\" y2=\"65\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><text x=\"135\" y=\"77\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">yol = tren + tünel</text><text x=\"4\" y=\"100\" font-size=\"12\" text-anchor=\"start\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">Tamamen içinde kalma</text><rect x=\"90\" y=\"108\" width=\"150\" height=\"28\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--brand,#2f5bea)\" stroke-width=\"2\"/><rect x=\"90\" y=\"114\" width=\"60\" height=\"16\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"2\"/><text x=\"200\" y=\"126\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">tünel</text><line x1=\"150\" y1=\"146\" x2=\"240\" y2=\"146\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><line x1=\"150\" y1=\"141\" x2=\"150\" y2=\"151\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><line x1=\"240\" y1=\"141\" x2=\"240\" y2=\"151\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"2\"/><text x=\"195\" y=\"163\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">yol = tünel − tren</text></svg>",
+  "ornek": {
+   "soru": "120 m boyundaki tren 72 km/sa hızla 480 m uzunluğundaki bir tünelden geçiyor. Trenin tünelde tamamen içinde kaldığı süre kaç saniyedir?",
+   "adimlar": [
+    "Hızı çevir: 72 ÷ 3,6 = 20 m/sn.",
+    "Tamamen içindeyken arka uç girişte, ön uç çıkışta olana kadar yol = 480 − 120 = 360 m.",
+    "Süre = 360 ÷ 20 = 18 sn."
+   ],
+   "cevap": "18 sn"
+  },
+  "hata": "İçinde kalma süresine tren ve tünel boyunu toplamak ya da yalnız tünel veya yalnız tren boyunu kullanmak. Sorunun geçme mi, içinde kalma mı olduğunu işaretle.",
+  "akilda": "Geçerken topla, içindeyken çıkar."
+ },
+ {
+  "id": "prob-hareket-hiz-04",
+  "k": "prob|Hareket Hız Problemleri",
+  "baslik": "Yetişme ve karşılaşma öncülleri",
+  "olcer": "Yetişme ve karşılaşma sorularında temel süreyi bulup her öncülü ayrı ayrı sınayabilmeni.",
+  "kural": "Aynı yönde giden iki aracın arası her saat **hızlar farkı** kadar kapanır; zıt yönde **hızlar toplamı** kadar. Önce temel büyüklüğü (süre, yol) bul. Sonra her öncülü bu değerle **tek tek sına**. Geç çıkan araç, ilk araçtan daha kısa süre yolda kalır.",
+  "formul": "yetişme: süre = ön fark ÷ hızlar farkı",
+  "sekil": null,
+  "ornek": {
+   "soru": "A aracı 08.00'de 40 km/sa ile yola çıkıyor. B aracı 10.00'da aynı yönde 60 km/sa ile çıkıyor. B, A'ya kaçta yetişir ve A o ana kadar kaç km gitmiş olur?",
+   "adimlar": [
+    "A, 2 saatte 40 × 2 = 80 km önde.",
+    "B her saat 60 − 40 = 20 km yaklaşır: 80 ÷ 20 = 4 saat.",
+    "B, 10.00 + 4 saat = 14.00'te yetişir.",
+    "A, 08.00–14.00 arası 6 saat gitti: 40 × 6 = 240 km."
+   ],
+   "cevap": "14.00, 240 km"
+  },
+  "hata": "Geç çıkan aracın yolda kalma süresiyle ilk aracınkini karıştırmak. Yetişme anında ilk araç daha uzun süredir yoldadır. Her öncülde hangi aracın süresinin sorulduğunu işaretle.",
+  "akilda": "Önce süreyi bul, sonra öncülleri sına."
+ },
+ {
+  "id": "prob-hareket-hiz-06",
+  "k": "prob|Hareket Hız Problemleri",
+  "baslik": "Ortalama hız",
+  "olcer": "Parçalı yolculukta toplam yolu toplam süreye bölerek ortalama hızı bulabilmeni.",
+  "kural": "Ortalama hız = **toplam yol ÷ toplam süre**; hızların ortalaması değildir. Her parçanın süresini ayrı bul: süre = yol ÷ hız, yol = hız × süre. Birimleri eşitle: dakikayı 60'a bölerek saate, km/sa'i 3,6'ya bölerek m/sn'ye çevir.",
+  "formul": "ortalama hız = toplam yol ÷ toplam süre",
+  "sekil": null,
+  "ornek": {
+   "soru": "120 km'lik bir yol gidişte 40 km/sa, dönüşte 60 km/sa hızla alınıyor. Gidiş–dönüş ortalama hızı kaç km/sa'tir?",
+   "adimlar": [
+    "Gidiş süresi 120 ÷ 40 = 3 saat, dönüş süresi 120 ÷ 60 = 2 saat.",
+    "Toplam yol 240 km, toplam süre 5 saat.",
+    "Ortalama hız = 240 ÷ 5 = 48 km/sa."
+   ],
+   "cevap": "48 km/sa"
+  },
+  "hata": "İki hızın aritmetik ortalamasını almak ya da toplam yolu tek parçanın süresine bölmek. Yavaş bölüm daha uzun sürdüğü için sonuç iki hızın ortalamasından küçük çıkar.",
+  "akilda": "Toplam yol bölü toplam süre."
+ },
+ {
+  "id": "prob-kar-zarar-02",
+  "k": "prob|Kar Zarar Problemleri",
+  "baslik": "Kâr, zarar ve yüzde",
+  "olcer": "Alış, satış ve zararı doğru işaretle toplayıp kâr ya da zarar yüzdesini alışa göre bulabilmeni.",
+  "kural": "Kâr = satış − alış; zarar = alış − satış. Kâr ya da zarar **yüzdesi alış fiyatına göre** hesaplanır. Birden çok ürün varsa **zararı eksi işaretle** kâra kat. İndirimli fiyat = etiket × (100 − indirim) ÷ 100.",
+  "formul": "kâr % = (satış − alış) ÷ alış × 100",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir mağaza 250 TL'ye aldığı ürünü 300 TL'ye, 400 TL'ye aldığı ürünü 340 TL'ye satıyor. Toplamda kâr mı zarar mı eder, kaç TL?",
+   "adimlar": [
+    "1. ürün: 300 − 250 = +50 TL kâr.",
+    "2. ürün: 340 − 400 = −60 TL, yani zarar.",
+    "Toplam: +50 − 60 = −10 TL."
+   ],
+   "cevap": "10 TL zarar"
+  },
+  "hata": "Zarar eden ürünü de kâr gibi toplamak ya da kâr yerine alış tutarını yazmak. Her ürünün işaretini ayrı yaz, topla ve sorunun neyi istediğine bak.",
+  "akilda": "Zarar eksidir, yüzde alışa göredir."
+ },
+ {
+  "id": "prob-karisim-problemleri-01",
+  "k": "prob|Karışım Problemleri",
+  "baslik": "Fiyat karışımı ve alaşım",
+  "olcer": "Karışımda toplam maliyetten ortalama fiyatı, bölmeli alaşım çubuğundan metal kütlelerini bulabilmeni.",
+  "kural": "Karışımda **toplam miktar** üzerinden düşün: ortalama fiyat = toplam maliyet ÷ toplam miktar. Bölmeli alaşım çubuğunda bilinen metalden **bir bölmenin kütlesini** bul, diğer metalleri bölme sayısıyla çarp. Ayar, alaşımın kaç bölmesinin saf altın olduğunu gösterir.",
+  "formul": "ortalama fiyat = toplam maliyet ÷ toplam miktar",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kilosu 80 TL olan çaydan 3 kg ile kilosu 120 TL olan çaydan 2 kg karıştırılıyor. Karışımın kilosu kaç TL'dir?",
+   "adimlar": [
+    "Maliyet: 80 × 3 + 120 × 2 = 240 + 240 = 480 TL.",
+    "Toplam miktar: 3 + 2 = 5 kg.",
+    "Kilo fiyatı: 480 ÷ 5 = 96 TL."
+   ],
+   "cevap": "96 TL"
+  },
+  "hata": "Sorulan metal yerine bildiğin metalin ya da başka bir metalin kütlesini yazmak. Bir bölmenin kütlesini bulduktan sonra hangi metalin istendiğini altını çizerek kontrol et.",
+  "akilda": "Bilinen parçadan bir bölmeye geç."
+ },
+ {
+  "id": "prob-karisim-problemleri-03",
+  "k": "prob|Karışım Problemleri",
+  "baslik": "Su ekleme ve buharlaşma",
+  "olcer": "Su eklenince ya da buharlaşınca değişmeyen maddeyi bulup yeni toplamı ve oranı hesaplayabilmeni.",
+  "kural": "Su eklenirken ya da buharlaşırken **madde (tuz, şeker) miktarı değişmez**; yalnız karışımın toplamı değişir. Önce madde miktarını bul: madde = oran × toplam. Sonra yeni toplam = madde ÷ yeni oran. İki toplamın farkı eklenen ya da buharlaşan suyu verir.",
+  "formul": "yeni toplam = madde ÷ yeni oran",
+  "sekil": null,
+  "ornek": {
+   "soru": "300 g %20'lik şekerli sudan kaç g su buharlaştırılırsa karışım %30'luk olur?",
+   "adimlar": [
+    "Şeker: 300 × 0,20 = 60 g, buharlaşınca değişmez.",
+    "Yeni toplam: 60 ÷ 0,30 = 200 g.",
+    "Buharlaşan su: 300 − 200 = 100 g."
+   ],
+   "cevap": "100 g"
+  },
+  "hata": "Oran farkını toplamla çarpmak ya da madde miktarını eklenen su sanmak. Sorunun eklenen suyu mu, yeni toplamı mı, başlangıç suyunu mu istediğini kontrol et.",
+  "akilda": "Madde sabit, toplam değişir."
+ },
+ {
+  "id": "prob-kesir-problemleri-01",
+  "k": "prob|Kesir Problemleri",
+  "baslik": "Şekil ve modelle kesir",
+  "olcer": "Şekil ve modelde eş bölmeleri sayıp bilinen kısımdan bütünü ve kalan kısmı bulabilmeni.",
+  "kural": "Şekil ya da modelde önce **eş bölme sayısını** say. Bilinen bölmelerin değerinden **bir bölmeyi** bul: bir bölme = değer ÷ bölme sayısı. Bütün = bir bölme × toplam bölme sayısı. Kalan kısım için verilen payları toplam bölmeden çıkar.",
+  "formul": "1 bölme = bilinen değer ÷ bölme sayısı",
+  "sekil": "<svg viewBox=\"0 0 280 136\" role=\"img\" aria-label=\"Sekiz eş bölmeli şerit: 3 bölme kira, 2 bölme market, 3 bölme birikim\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"140\" y=\"26\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">8 eş bölme</text><line x1=\"28\" y1=\"34\" x2=\"252\" y2=\"34\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"1.2\"/><rect x=\"28\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"1.5\"/><rect x=\"56\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"1.5\"/><rect x=\"84\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--warn-soft,#fff1e8)\" stroke=\"var(--warn,#c2410c)\" stroke-width=\"1.5\"/><text x=\"70.0\" y=\"106\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--warn,#c2410c)\">kira</text><rect x=\"112\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--brand,#2f5bea)\" stroke-width=\"1.5\"/><rect x=\"140\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--brand-soft,#e7edff)\" stroke=\"var(--brand,#2f5bea)\" stroke-width=\"1.5\"/><text x=\"140.0\" y=\"106\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--brand,#2f5bea)\">market</text><rect x=\"168\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--rule-soft,#e3f5ef)\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"1.5\"/><rect x=\"196\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--rule-soft,#e3f5ef)\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"1.5\"/><rect x=\"224\" y=\"44\" width=\"28\" height=\"40\" fill=\"var(--rule-soft,#e3f5ef)\" stroke=\"var(--rule,#0f8a6a)\" stroke-width=\"1.5\"/><text x=\"210.0\" y=\"106\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">birikim</text><text x=\"210.0\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--rule,#0f8a6a)\">450 TL</text></svg>",
+  "ornek": {
+   "soru": "Bir gelir 8 eş bölmeli şeritle gösterilmiş: 3 bölme kira, 2 bölme market, kalan bölmeler birikim. Birikim 450 TL ise gelirin tamamı kaç TL'dir?",
+   "adimlar": [
+    "Birikim bölmesi: 8 − 3 − 2 = 3.",
+    "Bir bölme: 450 ÷ 3 = 150 TL.",
+    "Bütün: 150 × 8 = 1200 TL."
+   ],
+   "cevap": "1200 TL"
+  },
+  "hata": "Sorulan kısım yerine verilen kısmı bulmak ya da kalanı bulmak için verilenleri çıkarmayı unutmak. Sonucun sorudaki \"kalan\" ya da \"tamamı\" ifadesine uyup uymadığına bak.",
+  "akilda": "Önce bir bölme, sonra bütün."
+ },
+ {
+  "id": "prob-kesir-problemleri-03",
+  "k": "prob|Kesir Problemleri",
+  "baslik": "Doluluk farkı ve kesir",
+  "olcer": "Doluluk kesirlerinin farkından eklenen miktarı kapasiteyle ilişkilendirip kapasiteyi bulabilmeni.",
+  "kural": "Kabın doluluğu değişince **kesirlerin farkı**, eklenen ya da alınan miktarın kapasitedeki kesridir. Paydaları eşitleyip farkı bul. Farka karşılık gelen miktardan **bir parçayı**, sonra bütünü bul. Pil ya da yakıtta kullanım süresi de aynı orantıyla bulunur.",
+  "formul": "kapasite = eklenen miktar ÷ doluluk farkı",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir depo 2/9 doluyken 20 L su eklenince 2/3 doluyor. Deponun kapasitesi kaç litredir?",
+   "adimlar": [
+    "Doluluk farkı: 2/3 − 2/9 = 6/9 − 2/9 = 4/9.",
+    "4/9 kapasite 20 L ise 1/9 kapasite 20 ÷ 4 = 5 L.",
+    "Kapasite: 5 × 9 = 45 L."
+   ],
+   "cevap": "45 L"
+  },
+  "hata": "Paydaları eşitlemeden payları çıkarmak ya da bir parçayı bulup yanlış sayıyla çarpmak. Parça sayısı ortak paydadır; bulduğun kapasiteyi geri yerine koyup kontrol et.",
+  "akilda": "Kesir farkı, eklenen miktarı gösterir."
+ },
+ {
+  "id": "prob-rutin-olmayan-01",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "baslik": "Şifre sayma ve oyun",
+  "olcer": "Koşullu şifre ve oyun sorularında seçenekleri basamak basamak sayıp çarpabilmeni.",
+  "kural": "Her basamağın seçenek sayısını koşullara uyarak bul ve **çarp**. En sıkı koşullu basamaktan başla. Bağlı basamaklar birlikte, serbest basamaklar ayrı ayrı sayılır. Oyunlarda **kaybettiren konumları** küçük sayılardan başlayarak bul.",
+  "formul": "toplam = seçenek₁ × seçenek₂ × seçenek₃",
+  "sekil": null,
+  "ornek": {
+   "soru": "1, 2, 3, 4, 5, 6 rakamlarıyla yazılan, rakamları farklı 3 basamaklı sayılardan kaç tanesinin ilk rakamı çifttir?",
+   "adimlar": [
+    "İlk rakam çift: 2, 4 ya da 6, yani 3 seçenek.",
+    "İkinci rakam kalan 5 rakamdan biri: 5 seçenek.",
+    "Üçüncü rakam kalan 4 rakamdan biri: 4 seçenek.",
+    "Toplam: 3 · 5 · 4 = 60."
+   ],
+   "cevap": "60"
+  },
+  "hata": "Rakamların farklı olma koşulunu unutmak ya da olmayan bir koşulu eklemek. Her basamak için önce yasak rakamları yaz, sonra seçenekleri say.",
+  "akilda": "Sıkı koşuldan başla, basamakları çarp."
+ },
+ {
+  "id": "prob-rutin-olmayan-03",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "baslik": "Periyodik düzen ve kalan",
+  "olcer": "Tekrar eden düzende tam tur sayısı ile kalanı kullanarak istenen sıradaki durumu bulabilmeni.",
+  "kural": "Düzen her **p adımda** tekrar ediyorsa n'yi p'ye böl. **Bölüm** tam tur sayısını, **kalan** son turda kaçıncı sırada olduğunu verir. Kalan 0 ise son tur tamamlanmıştır. Sabit artan örüntüde n. terim = ilk terim + (n − 1) · artış.",
+  "formul": "n = p · tur + kalan",
+  "sekil": null,
+  "ornek": {
+   "soru": "Kırmızı, yeşil, mavi, sarı sırasıyla yanan bir lambanın düzeni sürekli tekrar ediyor. İlk 50 ışıkta kaç tane kırmızı vardır?",
+   "adimlar": [
+    "Düzen 4 ışıkta tekrar eder: 50 = 4 · 12 + 2.",
+    "12 tam turda 12 kırmızı vardır.",
+    "Kalan 2 ışık kırmızı ve yeşildir: 1 kırmızı daha.",
+    "Toplam: 12 + 1 = 13."
+   ],
+   "cevap": "13"
+  },
+  "hata": "Kalanı sayılacak nesnenin sayısı sanmak ya da bölümü yukarı yuvarlamak. Kalan kısımda aranan nesne var mı, tek tek yazarak bak.",
+  "akilda": "Önce tam tur, sonra kalan."
+ },
+ {
+  "id": "prob-rutin-olmayan-05",
+  "k": "prob|Rutin Olmayan Problemleri",
+  "baslik": "Sayma ve durum tarama",
+  "olcer": "Sayma ve en az-en çok sorularında bütün uygun durumları düzenli listeleyebilmeni.",
+  "kural": "Sayma sorularında **sıra önemli mi** diye bak. Sıra önemsizse n kişiden ikili seçim sayısı n·(n − 1) ÷ 2'dir. Durum taramada koşulları yaz, uygun **bütün durumları listele**, sonra en çok ya da en az sorusuna göre seç. Boş cevap puanı değiştirmez.",
+  "formul": "n kişiden ikili seçim: n · (n − 1) ÷ 2",
+  "sekil": null,
+  "ornek": {
+   "soru": "8 takımlı bir turnuvada her takım diğer takımların her biriyle bir kez oynuyor. Toplam kaç maç oynanır?",
+   "adimlar": [
+    "Her takım 7 takımla oynar: 8 · 7 = 56.",
+    "Her maç iki kez sayıldı, çünkü sıra önemsiz.",
+    "56 ÷ 2 = 28."
+   ],
+   "cevap": "28 maç"
+  },
+  "hata": "\"En çok\" sorusunda en küçük uygun değeri yazmak ya da yanlış cevabı puan kazandıran saymak. Bütün uygun durumları listele, sonra istenen uç değeri seç.",
+  "akilda": "Bütün durumları yaz, sonra seç."
+ },
+ {
+  "id": "prob-sayi-problemleri-02",
+  "k": "prob|Sayı Problemleri",
+  "baslik": "Terazi ve geriye çözme",
+  "olcer": "Terazi dengesinden ağırlık bulup işlem zincirini sondan başa ters işlemlerle çözebilmeni.",
+  "kural": "Terazi dengedeyse iki kefenin ağırlığı **eşittir**; iki yandan ortak nesneleri çıkarıp denklemi sadeleştir. İşlem zincirinde sonuçtan başla ve işlemleri **ters sırayla, tersiyle** yap (+ ↔ −, × ↔ ÷). En az–en çok sorularında diğer değerleri ters uca al.",
+  "formul": "sol kefe = sağ kefe",
+  "sekil": null,
+  "ornek": {
+   "soru": "Dengedeki terazinin sol kefesinde 1 kutu ve 300 g, sağ kefesinde 2 kutu ve 100 g var. Bir kutu kaç gramdır?",
+   "adimlar": [
+    "Sağdan ve soldan 1 kutu çıkar: 300 = 1 kutu + 100.",
+    "Bir kutu = 300 − 100 = 200 g.",
+    "Kontrol: sol 200 + 300 = 500, sağ 400 + 100 = 500."
+   ],
+   "cevap": "200 g"
+  },
+  "hata": "Verilen ağırlığı cevap sanmak ya da farkla çarpma yerine bölme yapmak. Ortak nesneleri çıkardıktan sonra kalan eşitliği yaz, bulduğun değeri iki kefeye koyup doğrula.",
+  "akilda": "Ortak nesneyi çıkar, tersten geri git."
+ },
+ {
+  "id": "prob-sayi-problemleri-04",
+  "k": "prob|Sayı Problemleri",
+  "baslik": "Alışveriş ve para üstü",
+  "olcer": "Verilen paradan para üstünü düşerek gerçek bedeli bulup fiyat denklemini kurabilmeni.",
+  "kural": "Alışverişte **verilen para = bedel + para üstü**. Önce gerçekte ödenen bedeli bul: bedel = verilen − para üstü. İki tür nesnede adet ve tutardan iki denklem kur, birini öbürüne yerleştir. Puanlamada her doğru ve yanlışın puanını ayrı yaz.",
+  "formul": "bedel = verilen para − para üstü",
+  "sekil": null,
+  "ornek": {
+   "soru": "Tanesi 15 TL olan 4 defter ve 1 kalem için 100 TL verilip 7 TL para üstü alınıyor. Kalem kaç TL'dir?",
+   "adimlar": [
+    "Ödenen bedel: 100 − 7 = 93 TL.",
+    "Defterler: 15 × 4 = 60 TL.",
+    "Kalem: 93 − 60 = 33 TL."
+   ],
+   "cevap": "33 TL"
+  },
+  "hata": "Para üstünü hesaba katmamak ya da çıkarmak yerine eklemek. Bedeli bulmadan fiyat hesabına geçme; bulduğun fiyatları ödenen bedelle toplayarak kontrol et.",
+  "akilda": "Önce gerçek ödemeyi bul."
+ },
+ {
+  "id": "prob-yas-problemleri-01",
+  "k": "prob|Yaş Problemleri",
+  "baslik": "Yaş ortalaması",
+  "olcer": "Ortalamadan toplam yaşa geçip gruba katılan ya da ayrılan kişinin etkisini hesaplayabilmeni.",
+  "kural": "Ortalama = yaşlar toplamı ÷ kişi sayısı; bu yüzden **toplam = ortalama × kişi sayısı**. Gruba biri katılınca ya da ayrılınca önce toplamı bul, yaşı ekle ya da çıkar, **yeni kişi sayısına böl**. İki kişinin **yaş farkı hiç değişmez**.",
+  "formul": "toplam yaş = ortalama × kişi sayısı",
+  "sekil": null,
+  "ornek": {
+   "soru": "5 kişilik bir grubun yaş ortalaması 18'dir. 22 yaşındaki biri gruptan ayrılırsa kalan 4 kişinin yaş ortalaması kaç olur?",
+   "adimlar": [
+    "İlk toplam: 18 × 5 = 90.",
+    "Ayrılınca toplam: 90 − 22 = 68.",
+    "Yeni ortalama: 68 ÷ 4 = 17."
+   ],
+   "cevap": "17"
+  },
+  "hata": "Ortalamadan doğrudan yaş çıkarmak ya da yaş farkını yıllarla değiştirmek. Her zaman önce toplam yaşa geç; farkları aynı kişiden iki yolla bulup eşitle.",
+  "akilda": "Ortalamayı kişiyle çarp, toplama geç."
+ },
+ {
+  "id": "prob-yas-problemleri-03",
+  "k": "prob|Yaş Problemleri",
+  "baslik": "Doğum yılı ve yaş",
+  "olcer": "Doğum yılı ve takvim yılından yaşları, yaş farklarını ve kuşak aralıklarını bulabilmeni.",
+  "kural": "Yaş = **takvim yılı − doğum yılı**. İki kişinin yaş farkı doğum yıllarının farkıdır ve değişmez. n kişi arasında **n − 1 aralık** vardır. Ortalama aralık için aralıkların toplamını n − 1'e böl.",
+  "formul": "yaş = takvim yılı − doğum yılı",
+  "sekil": "<svg viewBox=\"0 0 280 112\" role=\"img\" aria-label=\"Doğum yılı çizelgesi: 1950, 1976 ve 2008; iki aralık\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"56\" x2=\"250\" y2=\"56\" stroke=\"var(--muted,#5b6678)\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"56\" r=\"5\" fill=\"var(--rule,#0f8a6a)\"/><text x=\"40\" y=\"38\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">1950</text><text x=\"40\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">Dede</text><circle cx=\"130\" cy=\"56\" r=\"5\" fill=\"var(--rule,#0f8a6a)\"/><text x=\"130\" y=\"38\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">1976</text><text x=\"130\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">Baba</text><circle cx=\"240\" cy=\"56\" r=\"5\" fill=\"var(--rule,#0f8a6a)\"/><text x=\"240\" y=\"38\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--ink,#18212f)\">2008</text><text x=\"240\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink,#18212f)\">Çocuk</text><text x=\"85\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--brand,#2f5bea)\">26 yıl</text><text x=\"185\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\" fill=\"var(--brand,#2f5bea)\">32 yıl</text></svg>",
+  "ornek": {
+   "soru": "Dede 1950, baba 1976, çocuk 2008 doğumludur. Üç kişi arasındaki kuşak aralıklarının ortalaması kaç yıldır?",
+   "adimlar": [
+    "Üç kişi arasında 2 aralık vardır.",
+    "Aralıklar: 1976 − 1950 = 26 ve 2008 − 1976 = 32.",
+    "Ortalama: (26 + 32) ÷ 2 = 29."
+   ],
+   "cevap": "29 yıl"
+  },
+  "hata": "Yalnız bir aralığı ortalama sanmak ya da aralıkların toplamını ortalama yazmak. Kaç kişi varsa aralık sayısı bir eksiktir; bölmeden önce aralıkları say.",
+  "akilda": "Üç kişi arasında iki aralık var."
+ },
+ {
+  "id": "prob-yuzde-problemleri-01",
+  "k": "prob|Yüzde Problemleri",
+  "baslik": "İndirim ve KDV",
+  "olcer": "İndirim ve KDV'yi liste fiyatının yüzdesi olarak hesaplayıp ödenecek tutarı bulabilmeni.",
+  "kural": "İndirimli fiyat = etiket × (100 − indirim) ÷ 100: ödenen, **liste fiyatının kalan yüzdesidir**. KDV dahil fiyat = KDV hariç × (100 + KDV) ÷ 100. Önce bir ürünün fiyatını bul, sonra **adetle çarp**. Kupon ve kademe sorularında kuralı sırayla uygula.",
+  "formul": "ödenen = etiket × (100 − indirim) ÷ 100",
+  "sekil": null,
+  "ornek": {
+   "soru": "Etiketi 800 TL olan montta %40 indirim yapılıyor. Böyle 2 mont için kaç TL ödenir?",
+   "adimlar": [
+    "%40 indirimde ödenen, liste fiyatının %60'ıdır.",
+    "Bir mont: 800 × 0,60 = 480 TL.",
+    "İki mont: 2 × 480 = 960 TL."
+   ],
+   "cevap": "960 TL"
+  },
+  "hata": "İndirim tutarını ödenen tutar sanmak, adetle çarpmayı unutmak ya da %40'ı 40 TL gibi düşmek. Sonda sorunun ödenen mi, indirim mi sorduğuna bak.",
+  "akilda": "İndirimde ödenen, kalan yüzdedir."
+ },
+ {
+  "id": "prob-yuzde-problemleri-03",
+  "k": "prob|Yüzde Problemleri",
+  "baslik": "Yüzde kaç fazlası ve aktarım",
+  "olcer": "Yüzdenin hangi niceliğe göre alınacağını ayırt edip aktarım ve karşılaştırma sorularını çözebilmeni.",
+  "kural": "Eşitlemede **farkın yarısı** aktarılır. \"A, B'nin yüzde kaç fazlası\" sorusunda **fark ÷ B** alınır: yüzde, \"-nin\" dediğin niceliğe göre hesaplanır. Yüzde puan, iki yüzdenin farkıdır; yüzde değişim değildir. Aktarım yüzdesini çıkış yaptığı yere göre bul.",
+  "formul": "yüzde = fark ÷ karşılaştırılan sayı × 100",
+  "sekil": null,
+  "ornek": {
+   "soru": "A kabında 80 L, B kabında 40 L su var. İki kap eşitlenene kadar A'dan B'ye su aktarılıyor. Aktarılan su, A'daki başlangıç suyunun yüzde kaçıdır?",
+   "adimlar": [
+    "Fark: 80 − 40 = 40 L.",
+    "Eşitlemek için farkın yarısı aktarılır: 20 L.",
+    "A'ya göre yüzde: 20 ÷ 80 × 100 = %25."
+   ],
+   "cevap": "%25"
+  },
+  "hata": "Aktarılan miktarı yanlış kaba bölmek ya da eşitlendikten sonraki mevcudu cevap sanmak. Yüzdenin neye göre sorulduğunu bul ve paydaya o sayıyı yaz.",
+  "akilda": "Paydaya sorulan niceliği yaz."
+ },
+ {
+  "id": "prob-yuzde-problemleri-05",
+  "k": "prob|Yüzde Problemleri",
+  "baslik": "Parçadan bütüne yüzde",
+  "olcer": "Yüzdesi bilinen parçadan bütünü ve kalan kısmı bulup payı doğru bütüne oranlayabilmeni.",
+  "kural": "Yüzdesi bilinen parçadan bütünü bulmak için **parça ÷ yüzde oranı** al. Yüzdeler toplamı %100'dür: kalan kısım 100 − verilen yüzdedir. Payı bulurken **hangi bütüne göre** (toplam mı, geçerli mi) hesapladığına dikkat et. Oranı yüzdeye çevirmek için parça ÷ bütün × 100 yap.",
+  "formul": "bütün = parça ÷ (yüzde ÷ 100)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir sınıfın %30'u gözlüklüdür. Gözlüksüz 28 öğrenci varsa sınıf mevcudu kaçtır?",
+   "adimlar": [
+    "Gözlüksüz öğrenciler %100 − %30 = %70'tir.",
+    "Sınıfın %70'i 28 ise bütün = 28 ÷ 0,70.",
+    "Mevcut 40 öğrencidir."
+   ],
+   "cevap": "40 öğrenci"
+  },
+  "hata": "Kalan kısmın yüzdesini istenen payla karıştırmak ya da payı yanlış bütüne oranlamak. Bütünün toplam mı, geçerli mi olduğunu yaz; paydaya o sayıyı koy.",
+  "akilda": "Önce bütünü, sonra payı bul."
+ },
+ {
+  "id": "prob-isci-emek-01",
+  "k": "prob|İşçi Emek Problemleri",
+  "baslik": "Ayrılma ve sonradan katılma",
+  "olcer": "İşi evrelere ayırıp ayrılan ya da sonradan katılan kişilerle kalan işi hesaplayabilmeni.",
+  "kural": "Bir işi a günde bitiren, günde işin **1/a'sını** yapar. İşi evrelere ayır: her evrede çalışanların günlük işini topla, süreyle çarp. Kalan iş = 1 − yapılan iş. Bir kişinin toplam süresi sorulduysa **o kişinin bütün evrelerini** topla.",
+  "formul": "kalan iş = 1 − (günlük iş × gün)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Ali bir işi 12 günde, Veli 6 günde bitiriyor. İkisi 2 gün birlikte çalışıp Veli ayrılıyor. Ali kalan işi kaç günde bitirir?",
+   "adimlar": [
+    "Birlikte günlük iş: 1/12 + 1/6 = 1/4.",
+    "2 günde yapılan iş: 2 · 1/4 = 1/2, kalan iş 1/2.",
+    "Ali günde 1/12 yapar: (1/2) ÷ (1/12) = 6 gün."
+   ],
+   "cevap": "6 gün"
+  },
+  "hata": "İlk evrede çalışan diğer kişinin işini saymamak ya da yalnız son evrenin süresini cevap yapmak. Her evre için kimin, kaç gün çalıştığını ayrı satıra yaz.",
+  "akilda": "Evreleri ayır, her evrenin işini yaz."
+ },
+ {
+  "id": "prob-isci-emek-03",
+  "k": "prob|İşçi Emek Problemleri",
+  "baslik": "Birlikte çalışma ve ücret",
+  "olcer": "Birlikte çalışanların birim zamandaki işlerini toplayıp süre, verim ve ücret paylaşımını bulabilmeni.",
+  "kural": "Birlikte çalışmada **süreler değil, birim zamandaki işler toplanır**. Günlük işlerin toplamı 1/t ise iş t günde biter. Eşit verimli işçilerde toplam iş = işçi × gün. Ücret, **yapılan işle orantılı** paylaştırılır.",
+  "formul": "1/t = 1/a + 1/b",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir makine bir işi 20 günde, bir başkası 5 günde bitiriyor. İkisi birlikte çalışırsa iş kaç günde biter?",
+   "adimlar": [
+    "Günlük işler: 1/20 ve 1/5 = 4/20.",
+    "Birlikte: 1/20 + 4/20 = 5/20 = 1/4.",
+    "Günde işin 1/4'ü bitiyorsa iş 4 günde biter."
+   ],
+   "cevap": "4 gün"
+  },
+  "hata": "Sürelerin ortalamasını ya da farkını almak. Birlikte çalışınca süre her ikisinden de kısadır; bulduğun sürenin en hızlı kişinin süresinden küçük olduğunu kontrol et.",
+  "akilda": "Süreleri değil, günlük işleri topla."
+ }
+]

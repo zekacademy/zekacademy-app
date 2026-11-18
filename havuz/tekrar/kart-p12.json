@@ -1,0 +1,480 @@
+[
+ {
+  "id": "mat-basit-esitsizlikler-02",
+  "k": "mat",
+  "baslik": "Eşitsizlikte aralık ve işaret",
+  "olcer": "Verilen aralıklardan yeni bir ifadenin aralığını bulup alabileceği tam sayıları sayabilmeni.",
+  "kural": "Aynı yönlü eşitsizlikler taraf tarafa **toplanır**, çıkarılmaz. a − b için önce −b'nin aralığını bul: negatifle çarpınca **yön değişir**, uçlar yer değiştirir. Sonra iki aralığı topla; kesin eşitsizlikte uçlar sayılmaz.",
+  "formul": "1 < b < 5 ⇒ −5 < −b < −1",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 145\" role=\"img\" aria-label=\"1 küçüktür b küçüktür 5 aralığı ve −b için −5 küçüktür −b küçüktür −1 aralığı sayı doğrusunda\"><line x1=\"12\" y1=\"120\" x2=\"268\" y2=\"120\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><line x1=\"20.0\" y1=\"116\" x2=\"20.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"20.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−6</text><line x1=\"40.0\" y1=\"116\" x2=\"40.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"40.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−5</text><line x1=\"60.0\" y1=\"116\" x2=\"60.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"60.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−4</text><line x1=\"80.0\" y1=\"116\" x2=\"80.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"80.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−3</text><line x1=\"100.0\" y1=\"116\" x2=\"100.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"100.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−2</text><line x1=\"120.0\" y1=\"116\" x2=\"120.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"120.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−1</text><line x1=\"140.0\" y1=\"116\" x2=\"140.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"140.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">0</text><line x1=\"160.0\" y1=\"116\" x2=\"160.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"160.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">1</text><line x1=\"180.0\" y1=\"116\" x2=\"180.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"180.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">2</text><line x1=\"200.0\" y1=\"116\" x2=\"200.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"200.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">3</text><line x1=\"220.0\" y1=\"116\" x2=\"220.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"220.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">4</text><line x1=\"240.0\" y1=\"116\" x2=\"240.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"240.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">5</text><line x1=\"260.0\" y1=\"116\" x2=\"260.0\" y2=\"124\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"260.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">6</text><line x1=\"160.0\" y1=\"78\" x2=\"240.0\" y2=\"78\" stroke=\"#2f5bea\" stroke-width=\"4\"/><circle cx=\"160.0\" cy=\"78\" r=\"5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"240.0\" cy=\"78\" r=\"5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"none\"/><text x=\"200.0\" y=\"66\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#2f5bea\">b</text><line x1=\"40.0\" y1=\"38\" x2=\"120.0\" y2=\"38\" stroke=\"#c2410c\" stroke-width=\"4\"/><circle cx=\"40.0\" cy=\"38\" r=\"5\" stroke=\"#c2410c\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120.0\" cy=\"38\" r=\"5\" stroke=\"#c2410c\" stroke-width=\"2\" fill=\"none\"/><text x=\"80.0\" y=\"26\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#c2410c\">−b</text></svg>",
+  "ornek": {
+   "soru": "2 < a < 7 ve 1 < b < 4 ise a − 2b ifadesi kaç farklı tam sayı değeri alır?",
+   "adimlar": [
+    "b'yi 2 ile çarp: 2 < 2b < 8. Eksiyle çarp: −8 < −2b < −2.",
+    "Taraf tarafa topla: 2 − 8 < a − 2b < 7 − 2, yani −6 < a − 2b < 5.",
+    "Uçlar dahil değil: −5, −4, …, 4 tam sayıları kalır."
+   ],
+   "cevap": "10 tam sayı"
+  },
+  "hata": "a ile b'nin en büyük değerlerini koyup sonucu en büyük sanmak. b büyüdükçe a − 2b küçülür; en büyük sonucu çıkarılan terimin en küçük değeri verir.",
+  "akilda": "Çıkarılan küçükse sonuç büyük."
+ },
+ {
+  "id": "mat-bolme-ve-01",
+  "k": "mat",
+  "baslik": "Bölünebilme kuralları",
+  "olcer": "Bölünebilme kuralını doğru basamaklara uygulayıp bilinmeyen rakamı bulabilmeni.",
+  "kural": "**4** ile bölünmede yalnız son iki basamağa, **8** ile bölünmede son üç basamağa bak. **3** ve **9** için rakamlar toplamı, **11** için sağdan +, −, + işaretli toplam kullanılır. Bileşik sayıda aralarında asal çarpanlara ayır: 12 için hem 4 hem 3.",
+  "formul": "12 | N ⇔ 4 | N ve 3 | N",
+  "sekil": null,
+  "ornek": {
+   "soru": "6A4 üç basamaklı sayısı 12 ile bölünebiliyorsa A kaç olabilir?",
+   "adimlar": [
+    "12 = 4 × 3 olduğundan sayı hem 4'e hem 3'e bölünmeli.",
+    "4 için A4 sayısına bak: 10A + 4 yalnız A çiftken 4'ün katıdır: 0, 2, 4, 6, 8.",
+    "3 için 6 + A + 4 = 10 + A, 3'ün katı olmalı: A = 2, 5, 8. Ortak olanlar: 2 ve 8."
+   ],
+   "cevap": "A = 2 ya da 8"
+  },
+  "hata": "Kuralı yanlış basamak sayısına uygulamak: 4 için üç basamağa, 8 için iki basamağa bakmak. Bulduğun rakamı sayıya koyup bölerek kontrol et.",
+  "akilda": "Dört iki basamak, sekiz üç basamak."
+ },
+ {
+  "id": "mat-bolme-ve-03",
+  "k": "mat",
+  "baslik": "Kalan aritmetiği ve periyot",
+  "olcer": "Kalanı kullanarak tekrarlanan bir olayda haftanın gününü ya da konumu bulabilmeni.",
+  "kural": "Toplamın ya da çarpımın kalanı, **kalanların** toplamının ya da çarpımının kalanıdır. İlk işten n. işe **(n − 1) aralık** vardır. Toplam günü 7'ye böl; ilerlemen gereken gün sayısı **kalandır**.",
+  "formul": "bölünen = bölen × bölüm + kalan  (0 ≤ kalan < bölen)",
+  "sekil": null,
+  "ornek": {
+   "soru": "Ali ilacı her 5 günde bir içiyor. 1. ilacı Salı günü içtiyse 9. ilacı hangi gün içer?",
+   "adimlar": [
+    "1. ilaçtan 9. ilaca 9 − 1 = 8 aralık var: 8 × 5 = 40 gün.",
+    "40'ı 7'ye böl: 40 = 5 × 7 + 5, kalan 5.",
+    "Salı gününden 5 gün ilerle: Çarşamba, Perşembe, Cuma, Cumartesi, Pazar."
+   ],
+   "cevap": "Pazar"
+  },
+  "hata": "Aralık yerine ilaç sayısıyla çarpmak (9 × 5) ya da başlangıç gününü de sayıp bir gün fazla ilerlemek. Kalan 0 ise aynı güne dönersin.",
+  "akilda": "Aralık say, yediye böl, kalan kadar ilerle."
+ },
+ {
+  "id": "mat-denklem-cozme-02",
+  "k": "mat",
+  "baslik": "Kök ve parametreli denklem",
+  "olcer": "Kökü verilen denklemde x yerine koyarak parametreyi, ya da çözüm kümesinin boş olduğu değeri bulabilmeni.",
+  "kural": "Denklemin kökü, denklemi sağlayan x değeridir: x yerine **kökü koy**. Parantezi dağıtırken işaretlere dikkat et: eksi × eksi = artı. ax = b denkleminde a = 0 ve b ≠ 0 ise çözüm **boştur**, a = 0 ve b = 0 ise **sonsuz** çözüm vardır.",
+  "formul": "ax = b:  a = 0, b ≠ 0 ⇒ çözüm kümesi boş",
+  "sekil": null,
+  "ornek": {
+   "soru": "(a − 2)x + 4 = a − 10 denkleminin bir kökü x = −3 ise a kaçtır?",
+   "adimlar": [
+    "x yerine −3 koy: (a − 2)(−3) + 4 = a − 10.",
+    "Dağıt: −3a + 6 + 4 = a − 10, yani −3a + 10 = a − 10.",
+    "a'ları topla: 20 = 4a, a = 5."
+   ],
+   "cevap": "a = 5"
+  },
+  "hata": "(−3) × (−2) çarpımını −6 almak ya da (a − 2)x ifadesini ax − 2 yazmak. Parametreyi bulunca denklemde yerine koyup eşitliği kontrol et.",
+  "akilda": "Kök verildi: x yerine koy."
+ },
+ {
+  "id": "mat-denklem-cozme-04",
+  "k": "mat",
+  "baslik": "Birinci dereceden denklem çözme",
+  "olcer": "Parantezli ve kesirli birinci dereceden denklemi doğru dağılma ve işaretle çözebilmeni.",
+  "kural": "Parantezin önündeki sayı **her terimle** çarpılır. Kesirli denklemde her terimi paydaların **EKOK'uyla** çarp. x'li terimleri bir yana, sayıları öbür yana topla. Sonuç −x = k çıkarsa iki tarafı −1 ile çarp.",
+  "formul": "−x = k ⇒ x = −k",
+  "sekil": null,
+  "ornek": {
+   "soru": "(x + 1)/2 − x/3 = 2 denklemini çöz.",
+   "adimlar": [
+    "Paydaların EKOK'u 6: her terimi 6 ile çarp: 3(x + 1) − 2x = 12.",
+    "Dağıt: 3x + 3 − 2x = 12, yani x + 3 = 12.",
+    "x = 9. Kontrol: 10/2 − 9/3 = 5 − 3 = 2."
+   ],
+   "cevap": "x = 9"
+  },
+  "hata": "Önünde eksi olan parantezde ikinci terimin işaretini değiştirmemek: −2(x − 5) ifadesini −2x − 10 yazmak. Doğrusu −2x + 10. Sonucu denklemde dene.",
+  "akilda": "Dağıt, işarete bak, sonucu dene."
+ },
+ {
+  "id": "mat-ebob-ekok-01",
+  "k": "mat",
+  "baslik": "EBOB–EKOK ilişkisi",
+  "olcer": "Verilen EBOB bilgisinden sayıları EBOB·m ve EBOB·n biçiminde yazıp EKOK'u ya da olası ikilileri bulabilmeni.",
+  "kural": "EBOB(a, b) = d ise a = d·m ve b = d·n yazılır; m ile n **aralarında asal**dır. EKOK = **d·m·n** olur. Ayrıca iki sayının çarpımı **EBOB × EKOK**'a eşittir. Önce m ile n'nin olası ikililerini tara.",
+  "formul": "EBOB × EKOK = a × b",
+  "sekil": null,
+  "ornek": {
+   "soru": "EBOB'u 5 ve toplamı 45 olan iki doğal sayının EKOK'u en çok kaç olabilir?",
+   "adimlar": [
+    "Sayılar 5m ve 5n; toplam 5(m + n) = 45 ⇒ m + n = 9.",
+    "Aralarında asal ikililer: (1, 8), (2, 7), (4, 5). (3, 6) olmaz, çünkü ortak böleni 3.",
+    "EKOK = 5·m·n: 40, 70, 100. En büyüğü (4, 5) ikilisinden gelir: sayılar 20 ve 25."
+   ],
+   "cevap": "100"
+  },
+  "hata": "Soru EKOK'u sorarken EBOB'u ya da m·n'yi yazmak; ya da (3, 6) gibi aralarında asal olmayan ikiliyi taramaya katmak. Sorunun istediği değere bir kez daha bak.",
+  "akilda": "Sayı = EBOB × aralarında asal çarpan."
+ },
+ {
+  "id": "mat-ebob-ekok-03",
+  "k": "mat",
+  "baslik": "EBOB ile eş parçalara bölme",
+  "olcer": "Artmadan, eş ve olabildiğince büyük parçalara bölme isteyen problemi EBOB'a çevirebilmeni.",
+  "kural": "“Artmadan, eş ve en **büyük** parça” görürsen **EBOB** kullan. Parça sayısı için her uzunluğu EBOB'a böl, sonuçları topla. Dikdörtgeni eş karelere bölerken kare kenarı EBOB'dur. Yan yana n parça varsa uçlar dahil n + 1 nokta vardır.",
+  "formul": "parça sayısı = Σ (uzunluk ÷ EBOB)",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"40 m ile 24 m boyutlu dikdörtgen zemin 8 m kenarlı 15 kareye bölünmüş\"><rect x=\"50\" y=\"24\" width=\"180\" height=\"108\" stroke=\"#7a8599\" stroke-width=\"1.5\" fill=\"#2f5bea\" fill-opacity=\".10\"/><line x1=\"86\" y1=\"24\" x2=\"86\" y2=\"132\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><line x1=\"158\" y1=\"24\" x2=\"158\" y2=\"132\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><line x1=\"194\" y1=\"24\" x2=\"194\" y2=\"132\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><line x1=\"50\" y1=\"60\" x2=\"230\" y2=\"60\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><line x1=\"50\" y1=\"96\" x2=\"230\" y2=\"96\" stroke=\"#2f5bea\" stroke-width=\"1.2\"/><text x=\"140\" y=\"16\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">40 m</text><text x=\"24\" y=\"82\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">24 m</text><text x=\"68\" y=\"47\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\" fill=\"#2f5bea\">8</text><text x=\"140\" y=\"152\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">kare kenarı = EBOB = 8</text></svg>",
+  "ornek": {
+   "soru": "24 m × 40 m'lik dikdörtgen zemin, hiç artmadan en büyük eş karelerle kaplanacak. Kaç kare gerekir?",
+   "adimlar": [
+    "Kare kenarı EBOB(24, 40) = 8 m.",
+    "Uzun kenara 40 ÷ 8 = 5, kısa kenara 24 ÷ 8 = 3 kare sığar.",
+    "Toplam kare: 5 × 3 = 15."
+   ],
+   "cevap": "15 kare"
+  },
+  "hata": "Parça sayısı sorulurken EBOB'u (parça uzunluğunu) yazmak ya da ortak bölenlerden en büyüğünü seçmeyip 4 gibi küçük bir değer almak.",
+  "akilda": "En büyük eş parça: EBOB."
+ },
+ {
+  "id": "mat-koklu-sayilar-02",
+  "k": "mat",
+  "baslik": "Köklü sayıları tahmin ve sıralama",
+  "olcer": "Köklü sayıların yerini tam karelerle sınırlayıp büyüklük sırasına koyabilmeni.",
+  "kural": "a² < n < b² ise **a < √n < b** olur. Köklü sayıları sıralarken katsayıyı köke sok: **a√b = √(a²·b)**. Pozitif köklerde kök içi büyük olan büyüktür. İki kök toplanıyorsa her kökü ayrı sınırla, sınırları topla.",
+  "formul": "a√b = √(a² · b)",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 135\" role=\"img\" aria-label=\"√23, 2√6 ve 3√3 sayıları sayı doğrusunda soldan sağa bu sırayla dizili\"><line x1=\"20\" y1=\"80\" x2=\"260\" y2=\"80\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><line x1=\"20.0\" y1=\"76\" x2=\"20.0\" y2=\"84\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"20.0\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">4,5</text><line x1=\"140.0\" y1=\"76\" x2=\"140.0\" y2=\"84\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"140.0\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">5</text><line x1=\"260.0\" y1=\"76\" x2=\"260.0\" y2=\"84\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"260.0\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">5,5</text><circle cx=\"91.0\" cy=\"80\" r=\"4.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><text x=\"91.0\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#2f5bea\">√23</text><circle cx=\"115.8\" cy=\"80\" r=\"4.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><text x=\"115.8\" y=\"122\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#2f5bea\">2√6</text><circle cx=\"187.1\" cy=\"80\" r=\"4.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><text x=\"187.1\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#2f5bea\">3√3</text></svg>",
+  "ornek": {
+   "soru": "√23, 2√6 ve 3√3 sayılarını küçükten büyüğe sırala.",
+   "adimlar": [
+    "Katsayıları köke sok: 2√6 = √(4 · 6) = √24.",
+    "3√3 = √(9 · 3) = √27.",
+    "Kök içleri 23 < 24 < 27, o hâlde √23 < √24 < √27."
+   ],
+   "cevap": "√23 < 2√6 < 3√3"
+  },
+  "hata": "Katsayının kendisini köke sokmak: 2√6 ifadesini √12 yazmak. Doğrusu karesi girer. Kontrol: 2√6 yaklaşık 2 × 2,4 = 4,9 olmalı.",
+  "akilda": "Katsayının karesi köke girer."
+ },
+ {
+  "id": "mat-koklu-sayilar-04",
+  "k": "mat",
+  "baslik": "Kök dışına çıkarma ve işlemler",
+  "olcer": "Köklü ifadeleri kök dışına çıkarıp benzer köklerle toplama, çıkarma ve çarpma yapabilmeni.",
+  "kural": "Kök içini **tam kare × kalan** yaz, tam karenin kökünü dışarı al. Yalnız **benzer köklerin** katsayıları toplanır ya da çıkarılır. Çarpmada katsayılar katsayılarla, kök içleri kök içleriyle çarpılır. Ondalık sayıyı 100'lü ya da 10 000'li paya çevirerek kökünü al.",
+  "formul": "a√n ± b√n = (a ± b)√n",
+  "sekil": null,
+  "ornek": {
+   "soru": "√75 − √12 + 2√27 işleminin sonucu kaçtır?",
+   "adimlar": [
+    "Her kökü sadeleştir: √75 = 5√3, √12 = 2√3, √27 = 3√3.",
+    "Yerine yaz: 5√3 − 2√3 + 2 · 3√3 = 5√3 − 2√3 + 6√3.",
+    "Katsayıları işle: 5 − 2 + 6 = 9."
+   ],
+   "cevap": "9√3"
+  },
+  "hata": "Kök içleri farklı terimleri doğrudan toplamak (√8 + √18 = √26) ya da çıkarılan terimin işaretini unutmak. Önce hepsini aynı köke getir.",
+  "akilda": "Önce kökü sadeleştir, sonra topla."
+ },
+ {
+  "id": "mat-mutlak-deger-02",
+  "k": "mat",
+  "baslik": "Mutlak değerli eşitsizlikler",
+  "olcer": "Mutlak değerli eşitsizliği çift taraflı eşitsizliğe çevirip tam sayı çözümlerini sayabilmeni.",
+  "kural": "|ifade| < k ise **−k < ifade < k**. |ifade| > k ise **ifade > k ya da ifade < −k**. Sonra x'i yalnız bırak. Kesin eşitsizlikte (<, >) uçlar **sayılmaz**, ≤ ya da ≥ ise uçlar sayılır.",
+  "formul": "|x − a| ≤ k ⇒ a − k ≤ x ≤ a + k",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 125\" role=\"img\" aria-label=\"−2 ile 5 arasındaki açık aralık ve içindeki tam sayılar sayı doğrusunda\"><line x1=\"22\" y1=\"90\" x2=\"266\" y2=\"90\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><line x1=\"30.0\" y1=\"86\" x2=\"30.0\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"30.0\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−3</text><line x1=\"55.33333333333333\" y1=\"86\" x2=\"55.33333333333333\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"55.33333333333333\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−2</text><line x1=\"80.66666666666666\" y1=\"86\" x2=\"80.66666666666666\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"80.66666666666666\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−1</text><line x1=\"106.0\" y1=\"86\" x2=\"106.0\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"106.0\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">0</text><line x1=\"131.33333333333331\" y1=\"86\" x2=\"131.33333333333331\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"131.33333333333331\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">1</text><line x1=\"156.66666666666666\" y1=\"86\" x2=\"156.66666666666666\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"156.66666666666666\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">2</text><line x1=\"182.0\" y1=\"86\" x2=\"182.0\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"182.0\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">3</text><line x1=\"207.33333333333331\" y1=\"86\" x2=\"207.33333333333331\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"207.33333333333331\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">4</text><line x1=\"232.66666666666666\" y1=\"86\" x2=\"232.66666666666666\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"232.66666666666666\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">5</text><line x1=\"258.0\" y1=\"86\" x2=\"258.0\" y2=\"94\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><text x=\"258.0\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">6</text><line x1=\"55.33333333333333\" y1=\"50\" x2=\"232.66666666666666\" y2=\"50\" stroke=\"#0f8a6a\" stroke-width=\"4\"/><circle cx=\"55.33333333333333\" cy=\"50\" r=\"5\" stroke=\"#0f8a6a\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"232.66666666666666\" cy=\"50\" r=\"5\" stroke=\"#0f8a6a\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"80.66666666666666\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><circle cx=\"106.0\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><circle cx=\"131.33333333333331\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><circle cx=\"156.66666666666666\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><circle cx=\"182.0\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><circle cx=\"207.33333333333331\" cy=\"90\" r=\"3.5\" stroke=\"#2f5bea\" stroke-width=\"2\" fill=\"#2f5bea\"/><text x=\"144.0\" y=\"38\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\" fill=\"#0f8a6a\">−2 &lt; x &lt; 5</text></svg>",
+  "ornek": {
+   "soru": "|2x − 3| < 7 eşitsizliğini sağlayan tam sayıların toplamı kaçtır?",
+   "adimlar": [
+    "Çift taraflı yaz: −7 < 2x − 3 < 7.",
+    "Her yana 3 ekle: −4 < 2x < 10. Sonra 2'ye böl: −2 < x < 5.",
+    "Uçlar dahil değil: −1, 0, 1, 2, 3, 4. Toplam: 9."
+   ],
+   "cevap": "9"
+  },
+  "hata": "Kesin eşitsizlikte uçlardan birini saymak ya da yalnız bir tarafı çözüp öbürünü unutmak. Uçları ana eşitsizliğe koyarak kontrol et.",
+  "akilda": "Kesinse uç yok, eşitse uç var."
+ },
+ {
+  "id": "mat-mutlak-deger-04",
+  "k": "mat",
+  "baslik": "Mutlak değerin tanımı ve açma",
+  "olcer": "Mutlak değeri işarete göre açabilmeni ve bir aralığı |x − merkez| ≤ yarıçap biçiminde yazabilmeni.",
+  "kural": "a ≥ 0 ise |a| = a; a < 0 ise **|a| = −a**. Önce içerinin işaretine bak. Önünde eksi olan mutlak değeri açınca sonucu **paranteze al**. Aralık için merkez = (m + M) ÷ 2, yarıçap = (M − m) ÷ 2.",
+  "formul": "m ≤ x ≤ M ⇒ |x − merkez| ≤ yarıçap",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" role=\"img\" aria-label=\"y = |x| grafiği: x negatifken −x doğrusu, x pozitifken x doğrusu\"><line x1=\"30\" y1=\"120\" x2=\"250\" y2=\"120\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"135\" stroke=\"#7a8599\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"30\" x2=\"140\" y2=\"120\" stroke=\"#0f8a6a\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"220\" y2=\"30\" stroke=\"#2f5bea\" stroke-width=\"3\"/><text x=\"60\" y=\"130\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">−3</text><text x=\"220\" y=\"136\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">3</text><text x=\"150\" y=\"17\" font-size=\"12\" text-anchor=\"start\" font-weight=\"400\">y</text><text x=\"256\" y=\"124\" font-size=\"12\" text-anchor=\"start\" font-weight=\"400\">x</text><text x=\"76\" y=\"82\" font-size=\"12\" text-anchor=\"end\" font-weight=\"400\" fill=\"#0f8a6a\">x &lt; 0: −x</text><text x=\"204\" y=\"82\" font-size=\"12\" text-anchor=\"start\" font-weight=\"400\" fill=\"#2f5bea\">x ≥ 0: x</text><text x=\"140\" y=\"152\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">y = |x| grafiği</text></svg>",
+  "ornek": {
+   "soru": "Bir deponun sıcaklığı 14 °C ile 26 °C arasında (uçlar dahil) tutuluyor. Bunu |x − a| ≤ r biçiminde yaz.",
+   "adimlar": [
+    "Merkez: (14 + 26) ÷ 2 = 20.",
+    "Yarıçap: (26 − 14) ÷ 2 = 6.",
+    "Yaz: |x − 20| ≤ 6. Kontrol: x = 14 ve x = 26 uçları eşitliği sağlar."
+   ],
+   "cevap": "|x − 20| ≤ 6"
+  },
+  "hata": "x negatifken |x| ifadesini x olarak bırakmak ya da |2x| için 2x yazmak. Mutlak değerin sonucu negatif çıkamaz; çıktıysa işareti yanlış açmışsındır.",
+  "akilda": "Mutlak değer negatif olamaz."
+ },
+ {
+  "id": "mat-oran-oranti-02",
+  "k": "mat",
+  "baslik": "Ortak terimle oran birleştirme",
+  "olcer": "Oranları ortak terimle birleştirip oranı k ile yazarak istenen parçayı bulabilmeni.",
+  "kural": "a/b = 2/3 ise **a = 2k, b = 3k** yazılır. İki oranda ortak harf varsa onu **eşitle**: a/b ve b/c oranlarındaki b aynı sayı olmalı. Toplam biliniyorsa parça sayıları toplamından k bulunur. Sonra **istenen parçayı** hesapla.",
+  "formul": "a/b = 3/4 ve b/c = 2/5 ⇒ a : b : c = 3 : 4 : 10",
+  "sekil": null,
+  "ornek": {
+   "soru": "a/b = 3/4, b/c = 2/5 ve a + b + c = 85 ise c kaçtır?",
+   "adimlar": [
+    "b'yi eşitle: 2/5 = 4/10, böylece a : b : c = 3 : 4 : 10.",
+    "Toplam parça 3 + 4 + 10 = 17; 17k = 85, k = 5.",
+    "c = 10k = 50."
+   ],
+   "cevap": "50"
+  },
+  "hata": "k değerini (5) cevap sanmak ya da başka bir parçayı yazmak. Bulduğun sayı sorulan harfe mi ait, son adımda bir kez daha bak.",
+  "akilda": "Ortak terimi eşitle, k ile yaz."
+ },
+ {
+  "id": "mat-oran-oranti-04",
+  "k": "mat",
+  "baslik": "Doğru, ters ve bileşik orantı",
+  "olcer": "Soruda doğru mu ters mi orantı olduğunu ayırt edip bilinmeyeni bulabilmeni.",
+  "kural": "Doğru orantıda biri artınca diğeri de artar; **bölümleri sabit**tir. Ters orantıda biri artınca diğeri azalır; **çarpımları sabit**tir. İşçi–gün–saat gibi bileşik sorularda her değişkenin güne etkisini ayrı ayrı belirle.",
+  "formul": "doğru: a/b = sabit   ·   ters: a × b = sabit",
+  "sekil": null,
+  "ornek": {
+   "soru": "6 işçi günde 8 saat çalışarak bir işi 15 günde bitiriyor. 10 işçi günde 9 saat çalışırsa iş kaç günde biter?",
+   "adimlar": [
+    "İşçi ve saat arttıkça gün azalır: ikisi de gün ile ters orantılı.",
+    "Çarpım sabit: 6 · 8 · 15 = 10 · 9 · x.",
+    "720 = 90x ⇒ x = 8."
+   ],
+   "cevap": "8 gün"
+  },
+  "hata": "Orantı türünü yanlış seçip ters orantıda bölmek. Kontrol: işçi sayısı artınca iş daha çabuk bitmeli, yani cevap 15'ten küçük çıkmalı.",
+  "akilda": "Biri artınca diğeri azalıyorsa çarp."
+ },
+ {
+  "id": "mat-rasyonel-sayilar-02",
+  "k": "mat",
+  "baslik": "Kesirli ölçüm problemleri",
+  "olcer": "Kesirli uzunluk, tarif ve terazi problemlerinde toplama, çıkarma ve denge kurabilmeni.",
+  "kural": "Kesirlerde **paydaları eşitle**, yalnız paylar işlem görür. Üst üste binen bölüm toplamda **iki kez** sayılır; bir kez çıkarmalısın. Terazide denge varsa iki kefedeki kütleler **eşittir**; özdeş cisimler aynı kütlededir.",
+  "formul": "birleşik uzunluk = şeritlerin toplamı − bindirmeler",
+  "sekil": null,
+  "ornek": {
+   "soru": "3/4 m ve 5/6 m uzunluğundaki iki şerit, 1/3 m bindirilerek uç uca ekleniyor. Toplam uzunluk kaç metredir?",
+   "adimlar": [
+    "Şeritleri topla: 3/4 + 5/6 = 9/12 + 10/12 = 19/12.",
+    "Bindirilen kısım iki kez sayıldı, bir kez çıkar: 1/3 = 4/12.",
+    "19/12 − 4/12 = 15/12 = 5/4."
+   ],
+   "cevap": "5/4 m"
+  },
+  "hata": "Bindirme bölümünü hiç çıkarmamak ya da toplama eklemek. Kontrol: birleşik şerit, şeritlerin toplamından kısa olmalı.",
+  "akilda": "Üst üste binen bir kez sayılır."
+ },
+ {
+  "id": "mat-rasyonel-sayilar-04",
+  "k": "mat",
+  "baslik": "Kesirleri sıralama ve dört işlem",
+  "olcer": "Kesirleri ortak paydada karşılaştırıp sıralayabilmeni ve dört işlemi doğru sırayla yapabilmeni.",
+  "kural": "Paydalar eşitse **payı büyük** olan kesir büyüktür; paydalar farklıysa **EKOK'ta eşitle**. Bir sayının a/b'si için önce b'ye böl, sonra a ile çarp. Parçanın parçası **çarpılarak** bulunur. İşlem sırası: parantez, çarpma–bölme, toplama–çıkarma.",
+  "formul": "a/b < c/d ⇔ a·d < c·b  (paydalar pozitif)",
+  "sekil": null,
+  "ornek": {
+   "soru": "3/5, 5/8 ve 7/12 kesirlerini küçükten büyüğe sırala.",
+   "adimlar": [
+    "Paydaların EKOK'u 120: 3/5 = 72/120, 5/8 = 75/120, 7/12 = 70/120.",
+    "Payları karşılaştır: 70 < 72 < 75."
+   ],
+   "cevap": "7/12 < 3/5 < 5/8"
+  },
+  "hata": "Payı büyük olan kesri her zaman büyük sanmak: 7/12 kesrini 3/5'ten büyük görmek. Pay ve paydayı birlikte değerlendirmek için paydaları eşitle.",
+  "akilda": "Karşılaştırmadan önce paydaları eşitle."
+ },
+ {
+  "id": "mat-sayi-basamaklari-02",
+  "k": "mat",
+  "baslik": "Rakamlarla en büyük–en küçük sayı",
+  "olcer": "Basamak çözümlemesiyle koşulu kurup rakamlarla yazılabilen en büyük ya da en küçük sayıyı bulabilmeni.",
+  "kural": "Sayıyı çözümle: **ABC = 100A + 10B + C**. Koşulu tek harfe indir. En büyük sayı için yüksek basamaktan başla, en büyük rakamı dene ve koşulu **kontrol et**. En küçük sayıda baştaki rakam **0 olamaz**.",
+  "formul": "ABC = 100A + 10B + C",
+  "sekil": null,
+  "ornek": {
+   "soru": "Rakamları birbirinden farklı ve rakamları toplamı 10 olan üç basamaklı en küçük sayı kaçtır?",
+   "adimlar": [
+    "Yüzler basamağı 0 olamaz, en küçüğü 1 al.",
+    "Onlar basamağına en küçük rakam 0'ı koy.",
+    "Birler 10 − 1 − 0 = 9; rakamlar 1, 0, 9 farklı, koşul sağlanıyor."
+   ],
+   "cevap": "109"
+  },
+  "hata": "Koşulu kontrol etmeden ilk bulduğun sayıyı seçmek ya da yüzler basamağına 0 koymak (019 gibi). Seçtiğin sayıyı koşula koyup sına.",
+  "akilda": "Yüksek basamaktan başla, koşulu kontrol et."
+ },
+ {
+  "id": "mat-sayi-basamaklari-04",
+  "k": "mat",
+  "baslik": "Rakam yer değiştirme ve silme",
+  "olcer": "Rakamlar yer değiştirince ya da silinince sayının ne kadar değiştiğini basamak değerleriyle hesaplayabilmeni.",
+  "kural": "Rakamın sayıya katkısı **rakam × basamak değeri**dir. Değişim, rakam farkı ile basamak değerinin çarpımıdır. Yüzler ile birler basamağı yer değiştirirse sayı **99 × rakam farkı** kadar değişir. Baştaki rakam 0 olamaz.",
+  "formul": "ABC → CBA: fark = 99 × (A − C)",
+  "sekil": null,
+  "ornek": {
+   "soru": "925 sayısında yüzler ile birler basamağındaki rakamlar yer değiştirirse sayı ne kadar azalır?",
+   "adimlar": [
+    "Yeni sayı 529.",
+    "Fark: 925 − 529 = 396.",
+    "Kontrol: 99 × (9 − 5) = 99 × 4 = 396."
+   ],
+   "cevap": "396"
+  },
+  "hata": "Yalnız rakam farkını (9 − 5) almak ya da yer değişimini onlar basamağı gibi (10 × 4) hesaplamak. Rakamların hangi basamakta olduğuna bak.",
+  "akilda": "Fark = basamak değeri × rakam farkı."
+ },
+ {
+  "id": "mat-temel-kavramlar-02",
+  "k": "mat",
+  "baslik": "Tek–çift ve ardışık sayılar",
+  "olcer": "Tek–çift kurallarıyla bir ifadenin her zaman tek ya da çift olup olmadığına karar verebilmeni.",
+  "kural": "Tek + tek = çift, çift + çift = çift, tek + çift = tek. Çarpımda çarpanlardan biri çiftse çarpım **çift**, hepsi tekse **tek**dir. “Her zaman” sorularında harflere farklı tek–çift değerler ver; bir durumda bozulursa ifade **her zaman** değildir. Ardışık tek sayılar 2'şer artar.",
+  "formul": "çift × herhangi sayı = çift",
+  "sekil": null,
+  "ornek": {
+   "soru": "a tek, b çift sayıdır. 3a + b + 1 ifadesi tek mi çifttir?",
+   "adimlar": [
+    "3a: tek × tek = tek.",
+    "3a + b: tek + çift = tek.",
+    "Üstüne 1 ekle: tek + tek = çift."
+   ],
+   "cevap": "Her zaman çift"
+  },
+  "hata": "Tek bir sayı deneyip karar vermek. Bir ifade bir durumda tek çıkıyor diye her zaman tek değildir; harflerin tek ve çift hâllerini ayrı ayrı düşün.",
+  "akilda": "Çarpanlardan biri çiftse çarpım çift."
+ },
+ {
+  "id": "mat-temel-kavramlar-04",
+  "k": "mat",
+  "baslik": "Örüntü, döngü ve zar açınımı",
+  "olcer": "Zar açınımında karşılıklı yüzleri belirleyip örüntü ve döngü sorularında toplam ya da kalanı bulabilmeni.",
+  "kural": "Açınımda aynı sırada, **aralarında bir kare** bulunan iki kare karşılıklı yüzdür; yan yana kareler komşudur. Yan yüzlerin toplamı = **tümü − karşılıklı bir çift**. Döngülerde (saat, gün) toplam adımı periyoda böl, yalnız **kalan** önemlidir.",
+  "formul": "yan yüzler = tüm yüzler − ön − arka",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 155\" role=\"img\" aria-label=\"Zar açınımı: yan yana dört kare, ikinci karenin üstünde ve altında birer kare; aynı renkli kareler karşılıklı yüzdür\"><rect x=\"74\" y=\"10\" width=\"44\" height=\"44\" stroke=\"#c2410c\" stroke-width=\"1.5\" fill=\"#c2410c\" fill-opacity=\".22\"/><text x=\"96.0\" y=\"38.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">5</text><rect x=\"30\" y=\"54\" width=\"44\" height=\"44\" stroke=\"#2f5bea\" stroke-width=\"1.5\" fill=\"#2f5bea\" fill-opacity=\".22\"/><text x=\"52.0\" y=\"82.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">4</text><rect x=\"74\" y=\"54\" width=\"44\" height=\"44\" stroke=\"#0f8a6a\" stroke-width=\"1.5\" fill=\"#0f8a6a\" fill-opacity=\".22\"/><text x=\"96.0\" y=\"82.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">7</text><rect x=\"118\" y=\"54\" width=\"44\" height=\"44\" stroke=\"#2f5bea\" stroke-width=\"1.5\" fill=\"#2f5bea\" fill-opacity=\".22\"/><text x=\"140.0\" y=\"82.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">9</text><rect x=\"162\" y=\"54\" width=\"44\" height=\"44\" stroke=\"#0f8a6a\" stroke-width=\"1.5\" fill=\"#0f8a6a\" fill-opacity=\".22\"/><text x=\"184.0\" y=\"82.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">2</text><rect x=\"74\" y=\"98\" width=\"44\" height=\"44\" stroke=\"#c2410c\" stroke-width=\"1.5\" fill=\"#c2410c\" fill-opacity=\".22\"/><text x=\"96.0\" y=\"126.0\" font-size=\"16\" text-anchor=\"middle\" font-weight=\"600\">6</text><text x=\"140\" y=\"124\" font-size=\"12\" text-anchor=\"start\" font-weight=\"400\">Aynı renk:</text><text x=\"140\" y=\"142\" font-size=\"12\" text-anchor=\"start\" font-weight=\"400\">karşılıklı yüz</text></svg>",
+  "ornek": {
+   "soru": "Şekildeki açınım zar olacak biçimde katlanıyor. 7 yazan yüz ön yüzse, ön ve arka yüz dışındaki yüzlerin toplamı kaçtır?",
+   "adimlar": [
+    "7'nin karşısı, aralarında bir kare olan 2'dir (arka yüz).",
+    "Tüm yüzlerin toplamı: 4 + 7 + 9 + 2 + 5 + 6 = 33.",
+    "33 − 7 − 2 = 24."
+   ],
+   "cevap": "24"
+  },
+  "hata": "Yan yana duran kareyi karşılıklı yüz sanmak. Karşılıklı yüzler arasında her zaman bir kare vardır; üst ve alt kareler birbirinin karşısıdır.",
+  "akilda": "Karşılıklı yüz, arada bir kare."
+ },
+ {
+  "id": "mat-temel-kavramlar-06",
+  "k": "mat",
+  "baslik": "Günlük ölçü ve model problemleri",
+  "olcer": "Kalanın kesri ve cetvel okuma gibi günlük problemleri adımlara bölüp bütünü bulabilmeni.",
+  "kural": "Bütünün a/b'si ayrılınca kalan **1 − a/b**'dir. Kalanın c/d'si, bütünün **(1 − a/b) · c/d**'sidir. Bütünü bulmak için verilen parçayı **bütüne düşen kesre böl**. Cetvelde önce bir bölmenin değerini bul: 1 cm = 10 mm.",
+  "formul": "bütün = parça ÷ parçanın bütüne oranı",
+  "sekil": null,
+  "ornek": {
+   "soru": "Bir bahçenin 1/4'üne marul, kalanın 2/3'üne havuç ekilmiştir. Havuç bölümü 90 m² ise bahçe kaç m²'dir?",
+   "adimlar": [
+    "Marul sonrası kalan 1 − 1/4 = 3/4.",
+    "Havuç bütünün 3/4 · 2/3 = 1/2'sidir.",
+    "Bütün = 90 ÷ 1/2 = 180."
+   ],
+   "cevap": "180 m²"
+  },
+  "hata": "Kalanın kesrini bütünün kesri sanmak: havuç 2/3 diyerek 90 ÷ 2/3 = 135 bulmak. Kalan, bütünün tamamı değildir; önce kalanla çarp.",
+  "akilda": "Kalanın kesrini bütüne çevir, sonra böl."
+ },
+ {
+  "id": "mat-carpanlara-ayirma-02",
+  "k": "mat",
+  "baslik": "Ortak çarpan ve gruplama",
+  "olcer": "Ortak çarpan parantezine alıp gruplayarak ifadeyi çarpanlarına ayırabilmeni.",
+  "kural": "Önce bütün terimlerdeki **ortak çarpanı** dışarı al. Dört terimde ikişer terimi **grupla**, her gruptan ortak çarpanı al; kalan parantezler **aynı** olmalı. Eksi işaretli terimde ortak çarpanı eksiyle birlikte al.",
+  "formul": "ac + ad + bc + bd = (a + b)(c + d)",
+  "sekil": null,
+  "ornek": {
+   "soru": "xy − 3x + 4y − 12 ifadesini çarpanlarına ayır; x = 7, y = 5 için değerini bul.",
+   "adimlar": [
+    "İkişer grupla: x(y − 3) + 4(y − 3).",
+    "Ortak parantezi al: (x + 4)(y − 3).",
+    "Değer: (7 + 4)(5 − 3) = 11 · 2 = 22."
+   ],
+   "cevap": "22"
+  },
+  "hata": "Eksi terimden çarpan alırken işareti atlamak; −12'yi dışarı alınca (y + 3) elde etmek. İki parantez eşleşmiyorsa işaretlerini yeniden kontrol et.",
+  "akilda": "İki parantez aynı çıkmalı."
+ },
+ {
+  "id": "mat-carpanlara-ayirma-04",
+  "k": "mat",
+  "baslik": "Alan modelleri ve çarpanlara ayırma",
+  "olcer": "Alan problemlerini iki kare farkı ya da ortak çarpanla çarpanlara ayırıp kenarları bulabilmeni.",
+  "kural": "Kareden kare kesilince kalan alan **a² − b²** olur ve **(a − b)(a + b)** biçiminde çarpanlanır. Kenar toplamı ya da farkı verilince diğerini bölerek bul. Şerit kesilirse kalan alan **x(x − y)** biçiminde ortak çarpanla yazılır.",
+  "formul": "a² − b² = (a − b)(a + b)",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 175\" role=\"img\" aria-label=\"Kenarı a olan kareden kenarı b olan küçük kare köşeden kesilmiş\"><polygon points=\"60,20 132,20 132,78 190,78 190,150 60,150\" fill=\"#0f8a6a\" fill-opacity=\".2\" stroke=\"#0f8a6a\" stroke-width=\"2\"/><rect x=\"132\" y=\"20\" width=\"58\" height=\"58\" fill=\"none\" stroke=\"#7a8599\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"44\" y=\"90\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">a</text><text x=\"125\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">a</text><text x=\"161\" y=\"14\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">b</text><text x=\"204\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">b</text><text x=\"110\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"400\">kalan alan</text><text x=\"110\" y=\"118\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">a² − b²</text></svg>",
+  "ornek": {
+   "soru": "Kenarı a olan kareden kenarı b olan kare kesilince kalan alan 65 cm² oluyor. a + b = 13 ise b kaçtır?",
+   "adimlar": [
+    "65 = (a − b)(a + b) = (a − b) · 13, yani a − b = 5.",
+    "a + b = 13 ve a − b = 5 taraf tarafa toplanır: 2a = 18, a = 9.",
+    "b = 13 − 9 = 4."
+   ],
+   "cevap": "b = 4 cm"
+  },
+  "hata": "Bulduğun ilk değeri (a − b = 5 ya da a = 9) cevap yazmak. Soru hangi kenarı istiyor, son adımda bir kez daha oku.",
+  "akilda": "Alan farkı: (a − b)(a + b)."
+ },
+ {
+  "id": "mat-uslu-sayilar-02",
+  "k": "mat",
+  "baslik": "Üslü denklemler",
+  "olcer": "Üslü denklemde tabanları ortak tabana çevirip üsleri eşitleyebilmeni.",
+  "kural": "Bütün tabanları **aynı tabana** çevir; taban eşitse **üsler eşittir**. Kesirli tabanı negatif üsle yaz: 1/4 = 2⁻². Kuvvetin kuvvetinde üsler çarpılır; parantezli üssü çarparken **her terimi** çarp.",
+  "formul": "aˣ = aʸ ⇒ x = y  (a ≠ 0, 1)",
+  "sekil": null,
+  "ornek": {
+   "soru": "(1/4)^(x+2) = 8^(x−3) denkleminde x kaçtır?",
+   "adimlar": [
+    "Tabanı 2 yap: (2⁻²)^(x+2) = (2³)^(x−3), yani 2^(−2x−4) = 2^(3x−9).",
+    "Üsleri eşitle: −2x − 4 = 3x − 9.",
+    "5 = 5x, x = 1."
+   ],
+   "cevap": "x = 1"
+  },
+  "hata": "Kesirli tabandaki negatif işareti atmak: (1/4)^(x+2) ifadesini 2^(2x+4) yazmak. Doğrusu 2^(−2x−4). Sonucu iki tarafa koyup kontrol et.",
+  "akilda": "Önce tabanı eşitle, sonra üsleri."
+ },
+ {
+  "id": "mat-uslu-sayilar-04",
+  "k": "mat",
+  "baslik": "Üslü sayıları sıralama",
+  "olcer": "Üslü sayıları ortak tabana çevirerek büyüklük sırasına koyabilmeni.",
+  "kural": "Negatif üs sayıyı **ters çevirir**: a⁻ⁿ = 1/aⁿ. Tabanları aynı tabana getir; taban 1'den büyükse **üssü büyük olan** büyüktür. Tabanlar ortaklaşmıyorsa üsleri ortak bölenle eşitle. Tabanı 1'den büyük ve üssü negatif sayı 0'a yakındır, küçüktür.",
+  "formul": "(1/a)ⁿ = a⁻ⁿ",
+  "sekil": null,
+  "ornek": {
+   "soru": "A = (1/9)², B = 27⁻¹, C = (1/3)⁻² sayılarını küçükten büyüğe sırala.",
+   "adimlar": [
+    "Tabanı 3 yap: A = (3⁻²)² = 3⁻⁴, B = (3³)⁻¹ = 3⁻³, C = (3⁻¹)⁻² = 3².",
+    "Taban 3 > 1, üs büyük olan büyük: −4 < −3 < 2."
+   ],
+   "cevap": "A < B < C"
+  },
+  "hata": "Negatif üssü yok sayıp 27⁻¹ değerini 27 gibi büyük almak. Negatif üs sayıyı ters çevirir; sonuç 0'a yakın küçük bir kesirdir.",
+  "akilda": "Negatif üs sayıyı ters çevirir."
+ }
+]
