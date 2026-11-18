@@ -1122,7 +1122,7 @@ const clock = sec => { sec=Math.floor(sec); const h=Math.floor(sec/3600), m=Math
    Öğrenciler birbirini sadece takma ad + avatarla görür; koç gerçek adları görür.
    4 saatten uzun açık kalan kronometre kendiliğinden kapanır (KRON_TAVAN). */
 const KRON_TAVAN = 240;
-const GR = { list:new Map(), canli:new Map(), un:new Map(), sec:"", sekme:"bugun", sonImza:"", odul:new Map(), oun:new Map() };
+const GR = { list:new Map(), canli:new Map(), un:new Map(), sec:"", sekme:"bugun", sonImza:"", odul:new Map(), oun:new Map(), koc:new Map(), kun:new Map() };
 const GDERS = ["mat","geo","fiz","kim","bio","tr","ede","tar","cog","fel","den"];
 const GDERS_K = {mat:"Mat", geo:"Geo", fiz:"Fizik", kim:"Kimya", bio:"Biyo", tr:"Türkçe", ede:"Edebiyat", tar:"Tarih", cog:"Coğrafya", fel:"Felsefe", den:"Deneme"};
 const takmaAd = s => (s && s.takma) || "";
@@ -1319,6 +1319,7 @@ function canliSenk(){ if(A() || !S.me || !GR.list.size) return; const s = st(); 
 function grupIzle(){ const q = A() ? collection(fdb,"gruplar") : query(collection(fdb,"gruplar"), where("uyeler","array-contains",S.me));
   unsubs.push(onSnapshot(q, snap=>{ if(window.ZK_ONZ){ window.ZK_ONZ.grList = new Map(snap.docs.map(d=>[d.id, d.data()])); return; } /* demo önizlemesinde örnek sınıf bozulmasın */
     GR.list = new Map(snap.docs.map(d=>[d.id, d.data()])); GR.yuklu = true; if(A()) setTimeout(otoSinif, 0);
+    if(A()) GR.list.forEach((g,gid)=>{ if(GR.kun.has(gid)) return; const u = onSnapshot(doc(fdb,"gruplar",gid,"canli",KOC_UID), d=>{ GR.koc.set(gid, d.exists() ? d.data() : null); render(true); }, ()=>{}); GR.kun.set(gid, u); unsubs.push(u); });
     if(!A()){ GR.un.forEach((u,gid)=>{ if(!GR.list.has(gid)){ try{ u(); }catch(e){} GR.un.delete(gid); GR.canli.delete(gid); } });
       GR.list.forEach((g,gid)=>{ if(GR.oun.has(gid)) return; const t0 = today(), O = {gun:null, hafta:null}; GR.odul.set(gid, O); /* dünün 1.'si ve geçen haftanın ilk 5'i */
         const izle = (k, id) => { const u = onSnapshot(doc(fdb,"gruplar",gid,"odul",id), d=>{ O[k] = d.exists() ? d.data() : null; render(true); }, ()=>{}); unsubs.push(u); return u; };
@@ -1336,7 +1337,7 @@ function otoSinif(){ if(!A() || window.ZK_ONZ || !GR.yuklu || !loaded.students |
   if(g && !eksik.length) return;
   otoBekle = true; const yeni = {ad: g?.ad || "Premium Sınıf", uyeler:[...uy, ...eksik], at: g?.at || Date.now(), oto:true, haric:[...haric], ...(g && g.zek===false ? {zek:false} : {})};
   setDoc(doc(fdb,"gruplar",OTO_GRUP), yeni).then(()=>{ GR.list.set(OTO_GRUP, yeni); }).catch(e=>console.warn("premium sınıf", e)).finally(()=>{ otoBekle = false; }); }
-function grupTemizle(){ GR.list = new Map(); GR.canli = new Map(); GR.un = new Map(); GR.sec = ""; GR.sonImza = ""; GR.odul = new Map(); GR.oun = new Map(); }
+function grupTemizle(){ GR.list = new Map(); GR.canli = new Map(); GR.un = new Map(); GR.sec = ""; GR.sonImza = ""; GR.odul = new Map(); GR.oun = new Map(); GR.koc = new Map(); GR.kun = new Map(); }
 /* Öğrenci tarafında bir grubun üyeleri (sadece hâlâ üye olanlar; kendisi her zaman en güncel haliyle) */
 function grUyeler(gid){ const g = GR.list.get(gid); if(!g) return []; const C = GR.canli.get(gid) || new Map(), s = st();
   const L = (g.uyeler||[]).map(u=> u===S.me ? {...ogrOzet(u, s), ben:true} : C.has(u) ? {...uyeOzet({uid:u, ...C.get(u), av:C.get(u).avatar || avVarsayilan(u)})} : null).filter(Boolean).filter(x=>x.ben || x.takma);
@@ -1413,6 +1414,7 @@ function pGrup(s){ const head = topbar(`<h1 class="ttl">Sınıf</h1>`);
   return `${head}<div class="page">
     ${GR.list.size>1 ? `<div class="pills">${[...GR.list].map(([id,x])=>`<button class="btn sm ${id===gid?"pri":""}" data-act="grsec" data-v="${id}">${esc(x.ad)}</button>`).join("")}</div>` : ""}
     ${(ODR = GR.odul.get(gid) || null, odulKart(L))}
+    ${kocSinifKart(gid, g)}
     <div class="card ghero"><div class="ghh"><div><small>ÇALIŞMA GRUBU</small><h2>${esc(g.ad)}</h2><span class="gonl"><i></i><b class="num">${on}</b> kişi şu an çalışıyor · ${L.length} üye</span></div>
       <div class="gyig">${L.filter(x=>x.canli).slice(0,4).map(x=>grAvatar(x.ben?(x.takma||"Sen"):x.takma, x.uid, true)).join("")}</div></div>
       ${ben ? `<div class="benk"><div class="ksah ${ben.canli?"on":""} ${ben.bugun>=ALEV_DK?"alev":""} ${ben.lig?"l-"+ben.lig.k:""}" style="--gc:${avRenk(S.me)}">${ben.bugun>=ALEV_DK?`<span class="kalev">${ALEV_SVG}</span>`:""}${ben.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${ligArka(ben)}${karakterSVG(ben.av, ben.canli)}${masaSVG(ben)}</div>
@@ -1433,6 +1435,46 @@ function grupKart(s){ if(!GR.list.size) return ""; const gid = GR.list.has(GR.se
 function kronOtoKapat(){ if(!S.role || A()) return; const s = st(); if(!s || !s.timer || !s.timer.start) return; if(Date.now()-s.timer.start < KRON_TAVAN*60000) return;
   const d = iso(new Date(s.timer.start)); sayacDurdur(false); mutate(x=>{ x.kronOto = d; }); render(); toast("Kronometre 4 saat açık kaldığı için kendiliğinden kapandı"); }
 function otoKapanmaKart(s){ if(!s.kronOto) return ""; return `<div class="card gotok"><b>${icon("timer","sm")} Kronometren kendiliğinden kapandı</b><p class="small" style="margin:4px 0 10px">${GUN[dIdx(s.kronOto)]} günü kronometre 4 saatten uzun açık kaldı. 4 saat kaydedildi; daha az çalıştıysan düzelt.</p><div class="pills"><button class="btn sm pri" data-act="sheet" data-v="sure" data-date="${s.kronOto}">Süreyi düzelt</button><button class="btn sm" data-act="otoTamam">Doğru, kalsın</button></div></div>`; }
+/* ---------- Koç sınıfta: "Zekeriya Hoca" kartı, koçun kronometresi, sınıf duyurusu ve koçun yıldızı ----------
+   gruplar/{gid}/canli/koc: koçun çalışma durumu (koç yazar, üyeler okur). Sıralamaya ve ödüllere GİRMEZ (yalnız uyeler sıralanır).
+   gruplar/{gid}.kocNot {metin, at} · .kocYildiz {uid, takma, not, at}: koç yazar; 7 gün görünür. */
+const KOC_UID = "koc", KOC_GUN = 7;
+const tazeMi = x => !!(x && x.at && Date.now() - x.at < KOC_GUN*864e5);
+function kocDurum(gid){ return A() ? (GR.koc.get(gid) || null) : ((GR.canli.get(gid) || new Map()).get(KOC_UID) || null); }
+function kocBugun(k){ if(!k) return 0; const t = today(); return (k.gun===t ? (k.bugunDk||0) : 0) + (canliMi(k.basla) && iso(new Date(k.basla))===t ? gecenSn(k.basla)/60 : 0); }
+function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null, on = k && canliMi(k.basla), bg = kocBugun(k);
+  if(!on && !bg && !not && !yil) return "";
+  const benim = yil && yil.uid===S.me;
+  return `<div class="card skoc"><div class="skh"><img class="skav ${on?"on":""}" src="/zekeriya.jpg" alt="Zekeriya Hoca"><div style="min-width:0"><b>Zekeriya Hoca</b><small class="faint">Koçun · sınıfta</small>
+      <div class="small">${on ? `<span class="gcanli"><i></i>Şu an çalışıyor · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : bg ? `Bugün ${fmtMin(bg)} çalıştı` : ""}</div></div></div>
+    ${not ? `<div class="sknot">📢 ${esc(not.metin)}</div>` : ""}
+    ${yil ? `<div class="skyil">⭐ ${benim ? `<b>Koçun yıldızı sensin!</b>` : `Koçun yıldızı: <b>${esc(yil.takma||"")}</b>`}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</div>`; }
+/* Koç: sınıfta kendi kronometresi (bütün sınıflarda aynı anda görünür) */
+function kocCalisiyor(){ return [...GR.koc.values()].some(k=>k && canliMi(k.basla)); }
+async function kocKronometre(){ const t = today(), now = Date.now(), on = kocCalisiyor();
+  const isler = [...GR.list.keys()].map(gid=>{ const k = GR.koc.get(gid) || {}, bugun = k.gun===t ? (k.bugunDk||0) : 0;
+    let yeni;
+    if(on){ const ek = canliMi(k.basla) ? Math.min(KRON_TAVAN, (now - k.basla)/60000) : 0; yeni = {takma:"Zekeriya Hoca", basla:null, gun:t, bugunDk:Math.round(bugun + (iso(new Date(k.basla||now))===t ? ek : 0)), at:now}; }
+    else yeni = {takma:"Zekeriya Hoca", basla:now, gun:t, bugunDk:Math.round(bugun), at:now};
+    GR.koc.set(gid, yeni); return setDoc(doc(fdb,"gruplar",gid,"canli",KOC_UID), yeni); });
+  render(); try{ await Promise.all(isler); toast(on ? "Kronometren durdu; sınıfta bugünkü süren güncellendi" : "Sınıflarda “Zekeriya Hoca şu an çalışıyor” görünüyor"); }catch(e){ toast("Kaydedilemedi, internetini kontrol et"); } }
+function kocHeroKart(){ if(!GR.list.size) return ""; const on = kocCalisiyor(), k = [...GR.koc.values()].find(Boolean), bg = kocBugun(k);
+  return `<div class="card skoc"><div class="skh"><img class="skav ${on?"on":""}" src="/zekeriya.jpg" alt=""><div style="min-width:0;flex:1"><b>Sınıfta sen</b>
+    <div class="small muted">${on ? `<span class="gcanli"><i></i>Çalışıyorsun · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : `Öğrencilerin seni “Zekeriya Hoca · şu an çalışıyor” diye görür.${bg?` Bugün ${fmtMin(bg)}.`:""}`}</div></div>
+    <button class="btn sm ${on?"":"pri"}" data-act="kockron">${icon(on?"stop":"play","xs")} ${on?"Durdur":"Ben de çalışıyorum"}</button></div>
+    <p class="faint small" style="margin:8px 0 0">Sıralamaya ve ödüllere girmezsin; sınıfın üstünde ayrı görünürsün.</p></div>`; }
+function grKocSheet(gid){ const g = GR.list.get(gid); if(!g) return; const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null;
+  const uy = (g.uyeler||[]).map(id=>[id, S.students.get(id)]).filter(([,x])=>x && !x.silindi).sort((a,b)=>(a[1].name||"").localeCompare(b[1].name||"","tr"));
+  return sheet(`<h3>${esc(g.ad)} · duyuru ve yıldız</h3><p class="muted small" style="margin:-6px 0 0">Sınıftaki herkes görür, ${KOC_GUN} gün kalır. Öğrenciler birbirini takma adıyla görür.</p>
+    <label class="f">Sınıfa duyuru<textarea name="metin" rows="2" maxlength="200" placeholder="ör. Bu hafta hedefimiz kişi başı 25 saat 💪">${esc(not ? not.metin : "")}</textarea></label>
+    <label class="f">Koçun yıldızı<select name="uid"><option value="">— Yok —</option>${uy.map(([id,x])=>`<option value="${id}" ${yil&&yil.uid===id?"selected":""}>${esc(x.name)}${takmaAd(x)?` (${esc(takmaAd(x))})`:""}</option>`).join("")}</select></label>
+    <label class="f">Yıldız notu<input type="text" name="ynot" maxlength="80" value="${esc(yil ? (yil.not||"") : "")}" placeholder="ör. Bu hafta istikrarıyla örnek oldu"></label>
+    <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
+  fd=>{ const metin = String(fd.get("metin")||"").trim(), uid = fd.get("uid"), ynot = String(fd.get("ynot")||"").trim(), x = uid ? S.students.get(uid) : null;
+    if(uid && x && !takmaAd(x)) return sheetErr("Bu öğrenci henüz sınıfa girmemiş (takma adı yok); sınıftakiler onu göremez.");
+    const now = Date.now(), yeni = {...g, kocNot: metin ? {metin, at: (not && not.metin===metin) ? not.at : now} : null, kocYildiz: uid ? {uid, takma: takmaAd(x), not: ynot, at: (yil && yil.uid===uid && yil.not===ynot) ? yil.at : now} : null};
+    GR.list.set(gid, yeni); setDoc(doc(fdb,"gruplar",gid), {kocNot: yeni.kocNot, kocYildiz: yeni.kocYildiz}, {merge:true}).then(()=>toast("Sınıfa kaydedildi")).catch(()=>toast("Kaydedilemedi"));
+    closeSheet(); render(); }); }
 /* Koç: Çalışma grupları paneli */
 function cGruplar(){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>ogrOzet(id,x)), on = hepsi.filter(x=>x.canli).sort((a,b)=>a.basla-b.basla);
   const gruplu = new Set([...GR.list.values()].flatMap(g=>g.uyeler||[])), disarda = hepsi.filter(x=>!gruplu.has(x.uid));
@@ -1441,10 +1483,11 @@ function cGruplar(){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.s
   <div class="page wide">
     <div class="card ghero"><div class="ghh"><div><small>ŞU AN</small><h2><span class="num">${on.length}</span> öğrenci çalışıyor</h2><span class="gonl">${hepsi.filter(x=>x.bugun>0).length} öğrenci bugün çalıştı · ${hepsi.filter(x=>!x.bugun && !x.canli).length} öğrenci henüz başlamadı</span></div></div>
       ${on.length ? `<div class="gcanlilar">${on.map(x=>`<div class="gcc">${grAvatar(x.ad, x.uid, true)}<div><b>${esc(ilkAd(x.ad))}</b><small>${esc(dersEt(x.ders))} · <span class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</span></small></div></div>`).join("")}</div>` : ""}</div>
+    ${kocHeroKart()}
     ${gorSec()}${GR.gor==="liste"?grSekme():""}
     ${G.length && GR.gor!=="liste" ? G.map(([gid,g])=>{ const L = kocUyeler(hepsi, g).sort((a,b)=>a.sira-b.sira);
-      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(kocUyeler(hepsi, g), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
-      return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>
+      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(kocUyeler(hepsi, g), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
+      return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>
         ${L.length ? L.map((x,i)=>grSatir(x, i, GR.sekme, true)).join("") : `<p class="muted small">Bu grupta henüz öğrenci yok. Düzenle'ye dokunup öğrenci ekle.</p>`}</div>`; }).join("")}</div>`
       : `<div class="card"><div class="empty" style="padding:22px 8px">${icon("user")}<b>Henüz grup yok</b><p class="muted small">Öğrencilerini istediğin gibi gruplara ayır (ör. “Hedef Tıp”, “12. sınıflar”). Gruptakiler birbirinin şu an çalışıp çalışmadığını takma adla görür.</p><button class="btn pri" data-act="sheet" data-v="grup">${icon("plus","sm")} İlk grubu kur</button></div></div>`}
     ${disarda.length && G.length ? `<div class="card"><div class="sech"><h3>Gruba eklenmemiş</h3><span class="faint small">${disarda.length} öğrenci</span></div><p class="muted small" style="margin:6px 0 0">${esc(disarda.map(x=>x.ad).join(", "))}</p></div>` : ""}
@@ -3160,6 +3203,7 @@ const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 function openSheet(kind, el){
   const s = st();
   if(kind==="grup") return grupSheet(el && el.dataset.id);
+  if(kind==="grkoc") return grKocSheet(el && el.dataset.id);
   if(kind==="takma"){ takmaSheet(); avYenile(); return; }
   if(kind==="takvim"){ const t = today(), L = takvim().filter(x=>(x.bit||x.bas) >= t).map(x=>({...x, tip:"deneme"})); Object.values(s?.plan||{}).forEach(p=>(p.yazilar||[]).forEach(y=>{ if(y.tarih && y.tarih>=t) L.push({bas:y.tarih, bit:y.tarih, yayin:"Yazılı", ad:y.ders, tip:"yazili"}); })); L.sort((a,b)=>a.bas.localeCompare(b.bas));
     return sheet(`<h3>Deneme takvimi</h3><p class="muted small" style="margin:0">Türkiye geneli denemeler${s?" ve yazılıların":""}. Tarihler yayınevlerinin açıkladığı programlardan; değişebilir.</p><div class="tkl" style="max-height:60vh;overflow:auto">${L.map(takvimSatir).join("") || `<div class="empty">Yaklaşan deneme yok.</div>`}</div><div class="acts"><button type="button" class="btn pri" data-close>Kapat</button></div>`); }
@@ -3614,6 +3658,7 @@ document.addEventListener("click", e=>{
     case "tstart": mutate(s=>{ s.timer={start:Date.now(), cihaz:cihazTur(), ...(S.kDers?{ders:S.kDers}:{})}; }); render(); break;
     case "kders": S.kDers = S.kDers===v ? "" : v; render(); break;
     case "grsec": GR.sec = v; render(); break;
+    case "kockron": kocKronometre(); break;
     case "grsekme": GR.sekme = v; render(); break;
     case "grgor": GR.gor = v; render(); break;
     case "avsec": { const k = b.dataset.k; if(k==="masaR"){ S.avT.masaR = +v; } else if(k==="masaSol"||k==="masaSag"||k==="masaOn"){ const ms = masaSecim(S.avT); S.avT.masaSol = ms.sol; S.avT.masaSag = ms.sag; S.avT.masaOn = ms.on; S.avT[k] = v; S.avT.masa = []; } else { S.avT[k] = ["ten","sacR","basR","gom"].includes(k) ? +v : v; if(k==="sac") S.avT._sacSecildi = true; } avYenile(); break; }
