@@ -95,7 +95,11 @@ test("şekilli sorular: geometri/grafik ve kolay olmayan soru güçlü modele ge
   const tamam = { okunabildi: true, emin: true, zorluk: "orta", adimlar: [{ baslik: "x" }], cevap: { sik: "C" } };
   assert.equal(zoraGec({ ...tamam, sekil: { var: true, tur: "geometri", okunan: ["AB = 6"] } }, ""), "sekil");
   assert.equal(zoraGec({ ...tamam, zorluk: "kolay", sekil: { var: true, tur: "geometri" } }, ""), null);
-  assert.equal(zoraGec({ ...tamam, sekil: { var: true, tur: "tablo" } }, ""), null);
+  assert.equal(zoraGec({ ...tamam, ders: "TYT Coğrafya", sekil: { var: true, tur: "tablo" } }, ""), null, "sözelde tablo tek başına güçlü modele götürmez");
+  assert.equal(zoraGec({ ...tamam, ders: "TYT Matematik", sekil: { var: true, tur: "tablo" } }, ""), "sekil", "sayısalda şekilli/tablolu yeni nesil soru güçlüye");
+  assert.equal(zoraGec({ ...tamam, ders: "TYT Matematik", zorluk: "kolay", sekil: { var: true, tur: "gorsel" } }, ""), null);
+  assert.equal(zoraGec({ ...tamam, ders: "AYT Fizik" }, ""), "ayt-fen"); assert.equal(zoraGec({ ...tamam, ders: "AYT Kimya" }, ""), "ayt-fen");
+  assert.equal(zoraGec({ ...tamam, ders: "TYT Fizik" }, ""), null);
   assert.equal(zoraGec({ ...tamam, sekil: { var: false, tur: "yok" } }, ""), null);
   const q = cozIstegi({}); assert.match(q, /ŞEKİL VE RESİM OKUMA/); assert.match(q, /ölçekli değildir/); assert.match(q, /"sekil"/);
 });
@@ -128,4 +132,12 @@ test("Türkçe becerisi: yalnız Türkçe sorularında, sabit kısımdan ayrı v
   assert.match(TURKCE_BECERI, /HER ŞIKKI ETİKETLE/); assert.match(TURKCE_BECERI, /KARAR VERMEDEN ÖNCE TARA/);
   assert.ok(!COZ_SABIT.includes(TURKCE_BECERI), "beceri her soruda değil, yalnız Türkçede gider");
   assert.ok(TURKCE_BECERI.split(/\s+/).length < 2000, "Türkçe becerisi kısa kalmalı");
+});
+
+test("hakem: daha güçlü model, modele göre değil gerekçeye göre karar", async () => {
+  const { aiCfg, hakemIstegi, maliyet } = await import("../functions/soru.js");
+  const c = aiCfg({}); assert.match(c.modelHakem, /opus/); assert.ok(c.fiyat.hakem.in > c.fiyat.zor.in);
+  const q = hakemIstegi({ cevap: { sik: "A" } }, { cevap: { sik: "B" } }, "");
+  assert.match(q, /kendin baştan çöz/); assert.doesNotMatch(q, /genelde daha güvenilirdir/);
+  assert.ok(maliyet(c, "hakem", { input_tokens: 1e6 }) === 5);
 });

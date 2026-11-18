@@ -21,7 +21,8 @@ export const AI_VARSAYILAN = {
   bonusTavan: 30,            // bir öğrenciye haftalık en fazla bonus
   modelKolay: "claude-haiku-5-5",
   modelZor: "claude-sonnet-5-5",
-  fiyat: { kolay: { in: 0.10, out: 0.50 }, zor: { in: 2.00, out: 10.00 } }, // $ / 1M token
+  modelHakem: "claude-opus-5-5", // yalnız Haiku ile Sonnet farklı şık bulunca (soruların ~%6'sı)
+  fiyat: { kolay: { in: 0.10, out: 0.50 }, zor: { in: 2.00, out: 10.00 }, hakem: { in: 5.00, out: 25.00 } }, // $ / 1M token
   hakKolay: 1, hakZor: 3, hakTekrar: 2,
 };
 export function aiCfg(settings = {}){ const x = settings.ai || {}; return { ...AI_VARSAYILAN, ...x, fiyat: { ...AI_VARSAYILAN.fiyat, ...(x.fiyat || {}) } }; }
@@ -50,8 +51,13 @@ export function zoraGec(r, anahtar){
   if (r.okunabildi === false) return null;                       // fotoğraf okunmadı: büyük model de okuyamaz, öğrenciye net fotoğraf iste
   if (r.emin === false) return "emin-degil";
   if (String(r.zorluk || "").toLowerCase() === "zor") return "zor";
-  const sk = r.sekil || {}; /* şekle dayanan, kolay olmayan sorularda (geometri, grafik, devre, düzenek) güçlü modelle kontrol */
-  if (sk.var && ["geometri", "grafik", "devre", "duzenek"].includes(String(sk.tur || "").toLowerCase()) && String(r.zorluk || "").toLowerCase() !== "kolay") return "sekil";
+  /* AYT fen (fizik, kimya, biyoloji): 2023-2025 kör testinde "emin" Haiku yanlışları burada; her zaman güçlü modelle kontrol */
+  const ders = String(r.ders || "");
+  if (/ayt/i.test(ders) && /fizik|kimya|biyoloji|fen/i.test(ders)) return "ayt-fen";
+  const sk = r.sekil || {}, tur = String(sk.tur || "").toLowerCase(); /* şekle dayanan, kolay olmayan sorular güçlü modelle kontrol:
+     geometri/grafik/devre/düzenek her derste; tablo, görsel vb. sayısal derslerde (yeni nesil uzun sorular) */
+  if (sk.var && tur && tur !== "yok" && String(r.zorluk || "").toLowerCase() !== "kolay"
+    && (["geometri", "grafik", "devre", "duzenek"].includes(tur) || !sozelMi(ders))) return "sekil";
   const k = String(anahtar || "").trim().toUpperCase();
   const s = String((r.cevap && r.cevap.sik) || "").trim().toUpperCase();
   if (k && s && k !== s) return "anahtar-uyusmuyor";
@@ -184,7 +190,7 @@ export function hakemIstegi(hizli, guclu, anahtar){
   const ozet = r => JSON.stringify({ cevap: r.cevap, kontrol: r.kontrol, adimlar: (r.adimlar || []).map(a => [a.baslik, a.islem].filter(Boolean).join(": ")), okunan: (r.sekil || {}).okunan || [] }).slice(0, 3500);
   return `Aynı soru için iki çözüm var ve farklı şıklar buldular.\n\nÇÖZÜM 1 (hızlı model): ${ozet(hizli)}\n\nÇÖZÜM 2 (güçlü model): ${ozet(guclu)}\n\n`
     + (anahtar ? `Cevap anahtarı: ${anahtar}.\n\n` : "")
-    + "Sen hakemsin. Güçlü modelin çözümü genelde daha güvenilirdir ama o da yanılabilir; adına göre değil, gerekçeye göre karar ver. Soruyu görselden yeniden oku, iki çözümün hangi adımda ayrıştığını bul, o adımı kendin doğrula ve doğru şıkkı seç. İkisi de yanlışsa doğru şıkkı kendin bul. "
+    + "Sen hakemsin. İki çözümden hiçbirine modelin adına ya da gücüne göre güvenme; ikisi de yanılmış olabilir. Önce soruyu görselden kendin baştan çöz (şekil varsa önce şekildeki her bilgiyi oku), sonra iki çözümle karşılaştır. Soruyu görselden yeniden oku, iki çözümün hangi adımda ayrıştığını bul, o adımı kendin doğrula ve doğru şıkkı seç. İkisi de yanlışsa doğru şıkkı kendin bul. "
     + 'YALNIZCA şu JSON: {"ayrisma":"iki çözümün ayrıştığı nokta, tek cümle","sik":"C","secim":"1 | 2 | ikisi-de-yanlis","emin":true}';
 }
 /* Hakem sonucuna göre son çözümü seç (saf mantık; testli) */

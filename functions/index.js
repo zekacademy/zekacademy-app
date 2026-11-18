@@ -357,7 +357,7 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
         if (anahtar) ({ r, kim } = anahtarlaSec(hizli, guclu, anahtar));
         else {
           /* Hakem: iki model farklı şık buldu; güçlü model lehine ama gerekçeye bakarak karar */
-          try { const h = await claude(c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 800, sis); dolar += maliyet(c, "zor", h.usage); hakem = jsonCikar(h.text); }
+          try { const h = await claude(c.modelHakem || c.modelZor, [...resimP, { type: "text", text: hakemIstegi(hizli, guclu, anahtar) }], 1500, sis); dolar += maliyet(c, c.modelHakem ? "hakem" : "zor", h.usage); hakem = jsonCikar(h.text); }
           catch (e) { logger.warn("hakem", e.message); }
           ({ r, kim } = hakemSonucu(hizli, guclu, hakem));
         }
