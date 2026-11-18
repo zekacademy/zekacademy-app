@@ -1,0 +1,191 @@
+{
+ "konu": "Sayı Problemleri",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-SYB-01",
+   "konu": "Sayı Problemleri",
+   "alt": "Kutu modeli",
+   "fikir": "Sabit parça toplamdan çıkarılıp eş kutulara bölünür; istenen fark kutulardan bulunur.",
+   "tuzak": "Sabit parçayı kutulara dağıtmak; kutu sayısını yanlış saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "syb-model",
+   "tip": "Kutu modeli",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-02",
+   "konu": "Sayı Problemleri",
+   "alt": "Kibrit çöpü örüntüsü",
+   "fikir": "Şekillerdeki çöp sayısından genel terim yazılır, verilen toplamdan şekil numarası bulunur.",
+   "tuzak": "Her şekle aynı sayıda çöp eklemek; ortak kenarı atlamamak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "syb-oruntu",
+   "tip": "Şekil örüntüsü",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-03",
+   "konu": "Sayı Problemleri",
+   "alt": "Sihirli kare",
+   "fikir": "Tam bilinen doğrudan ortak toplam bulunur; diğer hücreler sırayla eşitlikten çıkar.",
+   "tuzak": "Ortak toplamı tek satırdan tahmin etmek; hücreyi sütundan değil satırdan almak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "syb-yerlestirme",
+   "tip": "Sayı yerleştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-04",
+   "konu": "Sayı Problemleri",
+   "alt": "Üçgen dizilim",
+   "fikir": "Kenar toplamları eşitlenir; kalan sayılar eşitliklere yerleştirilir.",
+   "tuzak": "Bir sayıyı iki kez kullanmak; kenar toplamını yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "syb-yerlestirme",
+   "tip": "Sayı yerleştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-05",
+   "konu": "Sayı Problemleri",
+   "alt": "Çarpım tablosu",
+   "fikir": "Satır oranlarından sütun başlıkları arasındaki oran, sonra istenen kutu bulunur.",
+   "tuzak": "Kutuları toplamak; oranı ters almak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "syb-tablo",
+   "tip": "Tablo ve sayılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-06",
+   "konu": "Sayı Problemleri",
+   "alt": "Kuyrukta sıra",
+   "fikir": "Aralarındaki kişilerle iki kişinin sırası, sondan sırasından toplam, oradan ortadaki kişi bulunur.",
+   "tuzak": "Aradaki kişi sayısına iki kişiyi katmamak; ortadaki sırayı yarıya yuvarlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "syb-sira",
+   "tip": "Sıra ve dizilim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-07",
+   "konu": "Sayı Problemleri",
+   "alt": "Optik form",
+   "fikir": "Her öğrencide doğru, yanlış ve boş sayılır; puan kuralıyla toplanır.",
+   "tuzak": "Boşları yanlış saymak; yanlışları düşmemek.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "syb-tablo",
+   "tip": "Tablo ve sayılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-08",
+   "konu": "Sayı Problemleri",
+   "alt": "Puan durumu",
+   "fikir": "Satırlardaki eksik kutular maç ve puan toplamlarından çözülür; son satırdaki koşul kullanılır.",
+   "tuzak": "Beraberliği atlamak; maç sayısını puana katmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "syb-tablo",
+   "tip": "Tablo ve sayılar",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-09",
+   "konu": "Sayı Problemleri",
+   "alt": "Yılan dizilim",
+   "fikir": "Sayının satırı bölmeyle bulunur; satırın yönüne göre sütun, alt satır aynı sütunda hesaplanır.",
+   "tuzak": "Yönü unutmak; satır numarasını yuvarlamamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "syb-sira",
+   "tip": "Sıra ve dizilim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-SYB-10",
+   "konu": "Sayı Problemleri",
+   "alt": "Cebirsel Venn şeması",
+   "fikir": "İki koşuldan evrensel küme ve dışarıdaki bölge çözülür; x bulunup istenen bölge hesaplanır.",
+   "tuzak": "Dışarıdaki bölgeyi toplama katmamak; ortak bölgeyi iki kez saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "syb-venn",
+   "tip": "Cebirsel Venn şeması",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli/tablolu sayı problemleri; yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "syb-model",
+   "ad": "Kutu modeli",
+   "kartlar": [
+    "K-SYB-01"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "syb-oruntu",
+   "ad": "Şekil örüntüsü",
+   "kartlar": [
+    "K-SYB-02"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "syb-yerlestirme",
+   "ad": "Sayı yerleştirme",
+   "kartlar": [
+    "K-SYB-03",
+    "K-SYB-04"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "syb-tablo",
+   "ad": "Tablo ve sayılar",
+   "kartlar": [
+    "K-SYB-05",
+    "K-SYB-07",
+    "K-SYB-08"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "syb-sira",
+   "ad": "Sıra ve dizilim",
+   "kartlar": [
+    "K-SYB-06",
+    "K-SYB-09"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  },
+  {
+   "tipId": "syb-venn",
+   "ad": "Cebirsel Venn şeması",
+   "kartlar": [
+    "K-SYB-10"
+   ],
+   "uygulamaKonu": "prob|Sayı Problemleri"
+  }
+ ]
+}

@@ -1,0 +1,762 @@
+[
+ {
+  "id": "tytmat-sayisekb-0001",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kutu Modeli",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Eş kutulu modelden iki sayıyı bulup farkını hesaplar.",
+  "tipId": "syb-model",
+  "tip": "Kutu modeli",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir bilye koleksiyoncusu, K ve L kutularındaki bilyelerin sayısını şekildeki çubuklarla göstermiştir. Aynı biçimli kutucuklar birbirinin aynı sayıda bilyeyi, boş kutucuk ise yazılı sayıdaki bilyeyi gösterir. İki kutudaki bilyelerin sayısı toplam 53’tür.\nBuna göre, K kutusundaki bilye sayısı ile L kutusundaki bilye sayısı arasındaki fark kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:288px;height:auto\" role=\"img\" viewBox=\"0 0 151.522 54.565\">\n<defs>\n<g>\n<g id=\"tb65169-glyph-0-0\">\n<rect x=\"-4.2\" y=\"-5.2\" width=\"50.4\" height=\"62.4\" mask=\"url(#tb65169-mask-0)\" transform=\"matrix(0.119022, 0, 0, 0.119022, 0.833151, -6.189122)\"/>\n</g>\n<g id=\"tb65169-glyph-0-1\">\n<rect x=\"-3.1\" y=\"-5.2\" width=\"37.2\" height=\"62.4\" mask=\"url(#tb65169-mask-1)\" transform=\"matrix(0.119022, 0, 0, 0.119022, 0.833151, -6.189122)\"/>\n</g>\n<g id=\"tb65169-glyph-0-2\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tb65169-mask-2)\" transform=\"matrix(0.119022, 0, 0, 0.119022, 0.357065, -6.0701)\"/>\n</g>\n</g>\n<image id=\"tb65169-source-52\" x=\"0\" y=\"0\" width=\"42\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA0CAAAAADZdPVsAAAAAmJLR0QA/4ePzL8AAADHSURBVEiJldVBDsQwCANA4P9/Zi9VG8DG2V4SNSNkVZB6mpmZubHnAeZBSZem6CcVPaSgp9xpkSutcqNNLrRLToekdEpGgSQUSUyhhBRLRIlcvuvo4Elprw/Kp6LTZX7iWjaabeUUCkgTbhEtx8BGP+R3RzA5y3p95dc94FuEGLKHh9TbmpQ62GEKzhPTImGEQPKqCbcIjIIItOrFbPEIerhT0z+ujBFhoy3CWlXfhCTCTksEUVVf8DCCokcEWVX/t0AETd8IP2KMMWervIQlAAAAAElFTkSuQmCC\"/>\n<mask id=\"tb65169-mask-0\">\n<use xlink:href=\"#tb65169-source-52\"/>\n</mask>\n<image id=\"tb65169-source-98\" x=\"0\" y=\"0\" width=\"31\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA0CAAAAABXrrwQAAAAAmJLR0QA/4ePzL8AAAAqSURBVDiNY/zPwMDAwMDAyIAdMOEQH5UflR+VH5UflR/c8oz/B9Z+QvIAdbICZpF5JskAAAAASUVORK5CYII=\"/>\n<mask id=\"tb65169-mask-1\">\n<use xlink:href=\"#tb65169-source-98\"/>\n</mask>\n<image id=\"tb65169-source-144\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAAC6SURBVDiNzZXbDsQgCEQZ0///ZfZhq8IA6l6yWZKmkRNGFEohxvT5gnGBIbmRUQNQ4E5Q4RvBYhLD/cS0p+eKBxERDI1WbN5lWhZu1m0RLqI9nsOHpwXg7Uc8HkI7j6lPw9BnAXO/tQBcfUP9wP3h64/oInErqhn1ySnDF+LX/e8a2C1Ozh+wcSHF0/ml/i0N6e4zgz/p77c58usdF/y5/ln9qEyuVVfz72R+bufvwfe1mf/b/welPewBFAE2TzVOgCAAAAAASUVORK5CYII=\"/>\n<mask id=\"tb65169-mask-2\">\n<use xlink:href=\"#tb65169-source-144\"/>\n</mask>\n</defs>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb65169-glyph-0-0\" x=\"6.6202\" y=\"17.499492\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb65169-glyph-0-1\" x=\"8.000199\" y=\"42.809715\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.90155%, 51.13678%, 23.214722%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.0000772702 0.000277307 L -0.0000772702 22.675713 L 51.024575 22.675713 L 51.024575 0.000277307 Z M -0.0000772702 0.000277307 \" transform=\"matrix(0.992091, 0, 0, -0.992091, 19.285233, 25.660431)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.90155%, 51.13678%, 23.214722%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 51.024575 0.000277307 L 51.024575 22.675713 L 102.049227 22.675713 L 102.049227 0.000277307 Z M 51.024575 0.000277307 \" transform=\"matrix(0.992091, 0, 0, -0.992091, 19.285233, 25.660431)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.90155%, 51.13678%, 23.214722%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 102.049227 0.000277307 L 102.049227 22.675713 L 129.260538 22.675713 L 129.260538 0.000277307 Z M 102.049227 0.000277307 \" transform=\"matrix(0.992091, 0, 0, -0.992091, 19.285233, 25.660431)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tb65169-glyph-0-2\" x=\"131.738737\" y=\"17.301073\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(77.154541%, 90.979004%, 82.255554%)\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.90155%, 51.13678%, 23.214722%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.0000772702 -25.51008 L -0.0000772702 -2.834644 L 51.024575 -2.834644 L 51.024575 -25.51008 Z M -0.0000772702 -25.51008 \" transform=\"matrix(0.992091, 0, 0, -0.992091, 19.285233, 25.660431)\"/>\n</svg>",
+  "siklar": {
+   "A": "8",
+   "B": "15",
+   "C": "23",
+   "D": "38",
+   "E": "45"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "23"
+  },
+  "celdiriciler": {
+   "A": "Boş kutucuktaki sayıyı fark sanmış.",
+   "B": "Bir eş kutucuğun değerini fark sanmış.",
+   "D": "K kutusundaki bilye sayısını fark sanmış.",
+   "E": "Toplamdan yalnız 8 çıkarıp farkı bulduğunu sanmış: 53 − 8."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "K ile L arasındaki fark.",
+  "bilgi": [
+   {
+    "ad": "Kutu modeli",
+    "ifade": "eş kutular aynı değeri gösterir; toplam, eş kutuların ve sabit parçanın toplamıdır. Örnek: iki eş kutu ve 5’lik parça toplam 25’i gösteriyorsa bir kutu 10’dur"
+   }
+  ],
+  "ipuclari": [
+   "Çubuklardaki eş kutucukların sayısını ve boş kutucuğu ayrı değerlendir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Eş kutucuklar",
+    "aciklama": "Toplamdan boş kutucuk çıkarılır, 3 eş kutucuk kalır.",
+    "islem": "53 − 8 = 45; 45 ÷ 3 = 15"
+   },
+   {
+    "baslik": "Sayılar",
+    "aciklama": "K iki kutucuk ile 8, L bir kutucuktur.",
+    "islem": "K = 38, L = 15"
+   },
+   {
+    "baslik": "Fark",
+    "aciklama": "K − L.",
+    "islem": "38 − 15 = 23"
+   }
+  ],
+  "puf": "Önce bir eş kutucuğun değerini bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-01 · K = 2 kutu + 8, L = 1 kutu; toplam 53",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0002",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kibrit Çöpü Örüntüsü",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kibrit çöplerinden oluşan şekil örüntüsünde genel terimi yazıp verilen çöp sayısından şekil numarasını bulur.",
+  "tipId": "syb-oruntu",
+  "tip": "Şekil örüntüsü",
+  "zorluk": "kolay",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir çocuk, kibrit çöplerini yan yana ekleyerek şekildeki kare dizilerini oluşturmuş ve bu düzeni aynı biçimde sürdürmeye karar vermiştir; her şekilde, bir önceki şekle bir kare eklenmiştir. Çocuğun elinde tam 100 kibrit çöpü vardır ve yaptığı şekilde hiç çöp artmamıştır.\nBuna göre, çocuk kaç kareli şekil yapmıştır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:447px;height:auto\" role=\"img\" viewBox=\"0 0 235.369 52.574\">\n<defs>\n<g>\n<g id=\"tf96565-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#tf96565-mask-0)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.714037, -6.069313)\"/>\n</g>\n<g id=\"tf96565-glyph-0-1\">\n<rect x=\"-0.7\" y=\"-0.7\" width=\"8.4\" height=\"8.4\" mask=\"url(#tf96565-mask-1)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.833043, -0.833043)\"/>\n</g>\n<g id=\"tf96565-glyph-0-2\">\n<rect x=\"-2.5\" y=\"-5\" width=\"30\" height=\"60\" mask=\"url(#tf96565-mask-2)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.238012, -4.165215)\"/>\n</g>\n<g id=\"tf96565-glyph-0-3\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#tf96565-mask-3)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.357018, -4.165215)\"/>\n</g>\n<g id=\"tf96565-glyph-0-4\">\n<rect x=\"-3\" y=\"-5.4\" width=\"36\" height=\"64.8\" mask=\"url(#tf96565-mask-4)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.714037, -6.426332)\"/>\n</g>\n<g id=\"tf96565-glyph-0-5\">\n<rect x=\"-0.7\" y=\"-5.2\" width=\"8.4\" height=\"62.4\" mask=\"url(#tf96565-mask-5)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.595031, -6.188319)\"/>\n</g>\n<g id=\"tf96565-glyph-0-6\">\n<rect x=\"-0.6\" y=\"-5.4\" width=\"7.2\" height=\"64.8\" mask=\"url(#tf96565-mask-6)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.714037, -6.426332)\"/>\n</g>\n<g id=\"tf96565-glyph-0-7\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#tf96565-mask-7)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.357018, -6.069313)\"/>\n</g>\n<g id=\"tf96565-glyph-0-8\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#tf96565-mask-8)\" transform=\"matrix(0.119006, 0, 0, 0.119006, 0.357018, -6.069313)\"/>\n</g>\n</g>\n<image id=\"tf96565-source-90\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tf96565-mask-0\">\n<use xlink:href=\"#tf96565-source-90\"/>\n</mask>\n<image id=\"tf96565-source-98\" x=\"0\" y=\"0\" width=\"7\" height=\"7\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAAAAADhOQgPAAAAAmJLR0QA/4ePzL8AAAAUSURBVAiZY/zPwMDAwMDAxEAaDQA4iQENDkJBFQAAAABJRU5ErkJggg==\"/>\n<mask id=\"tf96565-mask-1\">\n<use xlink:href=\"#tf96565-source-98\"/>\n</mask>\n<image id=\"tf96565-source-296\" x=\"0\" y=\"0\" width=\"25\" height=\"50\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAyCAAAAACM6S9KAAAAAmJLR0QA/4ePzL8AAACsSURBVDiNrZNJFoMwDEOlPO5/ZXfRNJ5kFgUvgPg/xRMmvmb4GdPb/e5k9283JQCIpQGAqwY2d1gCGxJYHezDBWEEgDXEf0RkG+x8TaTS3rc4hRqE/mzx6VohOzFbtJRrSrNW4eU1ctjcN6HZov+mMP1Vq9cfcjMlI+vgrJEqua10WAU9ubNZkNv4roVbLZ9XBsFKpRSkFZw1FKT3KGkoiGhr1FAQNYmgKU3+AH1XJkdbSqkJAAAAAElFTkSuQmCC\"/>\n<mask id=\"tf96565-mask-2\">\n<use xlink:href=\"#tf96565-source-296\"/>\n</mask>\n<image id=\"tf96565-source-304\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAACFSURBVDiNvZPBDsAgCEOp2f//MjuoCKwQT/Ni7JOiCYWcpXODCcjIqyDIZFC2dHA2ATzLB5BX6hfCeeoUBmN7DaJZ88EL0VRGW9ZRBNVz9MDW9lf4iJQ/ubEt/tNXFu18JfdtbXE1CcRY2fTZbT+qZP68ZQpHGQdyN7KUgVjGwxsimPgWX0eXITK3gRqSAAAAAElFTkSuQmCC\"/>\n<mask id=\"tf96565-mask-3\">\n<use xlink:href=\"#tf96565-source-304\"/>\n</mask>\n<image id=\"tf96565-source-312\" x=\"0\" y=\"0\" width=\"30\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA2CAAAAAD1pHYlAAAAAmJLR0QA/4ePzL8AAACGSURBVDiN7dTBDoAwCANQIP7/L+NFN0qLB+NRLkt4odlcnKeZmbnpiqH/889f86Gaea0up7cqLiq4KjMoMWrnpo27IpMCs1YWWljpZqmL02Q59XW4rvlKiN3JC6vHK0BpPKqyByhtL5q2DdDBMJ7PDT5+tZxY37eMl+HbX/3Aa3yYvv05PE9A/R1wNZfxDgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tf96565-mask-4\">\n<use xlink:href=\"#tf96565-source-312\"/>\n</mask>\n<image id=\"tf96565-source-320\" x=\"0\" y=\"0\" width=\"7\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAA0CAAAAABj130MAAAAAmJLR0QA/4ePzL8AAAAeSURBVBiVY/zPwMDAwMDAxEAaTWvAyPCfLHcNNxoA2fECTc+qt30AAAAASUVORK5CYII=\"/>\n<mask id=\"tf96565-mask-5\">\n<use xlink:href=\"#tf96565-source-320\"/>\n</mask>\n<image id=\"tf96565-source-328\" x=\"0\" y=\"0\" width=\"6\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAA2CAAAAADB3bc5AAAAAmJLR0QA/4ePzL8AAAAVSURBVBiVY/zPwMDAwMDEMErRmQIAyMwBazeLJUoAAAAASUVORK5CYII=\"/>\n<mask id=\"tf96565-mask-6\">\n<use xlink:href=\"#tf96565-source-328\"/>\n</mask>\n<image id=\"tf96565-source-374\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tf96565-mask-7\">\n<use xlink:href=\"#tf96565-source-374\"/>\n</mask>\n<image id=\"tf96565-source-420\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"tf96565-mask-8\">\n<use xlink:href=\"#tf96565-source-420\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.000569136 0.00111541 L 25.513097 0.00111541 L 25.513097 25.510843 L -0.000569136 25.510843 Z M -0.000569136 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 62.363982 0.00111541 L 87.87371 0.00111541 L 87.87371 25.510843 L 62.363982 25.510843 Z M 62.363982 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 87.87371 0.00111541 L 113.387376 0.00111541 L 113.387376 25.510843 L 87.87371 25.510843 Z M 87.87371 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 147.402972 0.00111541 L 172.916637 0.00111541 L 172.916637 25.510843 L 147.402972 25.510843 Z M 147.402972 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 172.916637 0.00111541 L 198.426365 0.00111541 L 198.426365 25.510843 L 172.916637 25.510843 Z M 172.916637 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<path fill=\"none\" stroke-width=\"1.99255\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"rgb(6.039429%, 44.744873%, 20.3125%)\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 198.426365 0.00111541 L 223.940031 0.00111541 L 223.940031 25.510843 L 198.426365 25.510843 Z M 198.426365 0.00111541 \" transform=\"matrix(0.991962, 0, 0, -0.991962, 8.020096, 29.258919)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-0\" x=\"6.890251\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-1\" x=\"11.460087\" y=\"44.380392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-2\" x=\"18.063197\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-3\" x=\"21.566737\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-4\" x=\"25.628417\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-5\" x=\"30.094718\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-6\" x=\"32.2761\" y=\"44.380392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-7\" x=\"81.405464\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-1\" x=\"85.9753\" y=\"44.380392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-2\" x=\"92.57841\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-3\" x=\"96.081951\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-4\" x=\"100.14363\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-5\" x=\"104.609931\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-6\" x=\"106.791313\" y=\"44.380392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-8\" x=\"178.414414\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-1\" x=\"182.98425\" y=\"44.380392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tf96565-glyph-0-2\" x=\"189.58736\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-3\" x=\"193.0909\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-4\" x=\"197.15258\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-5\" x=\"201.61888\" y=\"44.380392\"/>\n<use xlink:href=\"#tf96565-glyph-0-6\" x=\"203.800263\" y=\"44.380392\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "25",
+   "B": "32",
+   "C": "33",
+   "D": "34",
+   "E": "99"
+  },
+  "cevap": {
+   "sik": "C",
+   "deger": "33"
+  },
+  "celdiriciler": {
+   "A": "Her kareyi bağımsız 4 çöple yapıp 100 ÷ 4 almış.",
+   "B": "Genel terimi 3n + 4 yazmış.",
+   "D": "3n = 100 çözümünü yukarı yuvarlamış.",
+   "E": "Toplamdan 1 çıkarıp kare sayısı sanmış: 100 − 1."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yapılan şekildeki kare sayısı.",
+  "bilgi": [
+   {
+    "ad": "Şekil örüntüsü",
+    "ifade": "şekiller arasındaki artış sabitse n. şekildeki sayı, ilk değer ve artışla yazılır. Örnek: 1. şekilde 3, her adımda 2 artan dizide n. şekil 2n + 1 ögedir"
+   }
+  ],
+  "ipuclari": [
+   "Şekillerdeki çöp sayılarının her adımda nasıl arttığına bak."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Çöp sayıları",
+    "aciklama": "1, 2, 3 kareli şekillerde 4, 7, 10 çöp vardır; her adımda 3 artar.",
+    "islem": "4, 7, 10"
+   },
+   {
+    "baslik": "Genel terim",
+    "aciklama": "n kareli şekilde 4 + 3(n − 1).",
+    "islem": "3n + 1"
+   },
+   {
+    "baslik": "Kare sayısı",
+    "aciklama": "3n + 1 = 100.",
+    "islem": "n = 33"
+   }
+  ],
+  "puf": "Her yeni kare üç çöp ister.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-02 · 4, 7, 10 çöp → 3n + 1; 100 çöp",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0003",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Sihirli Kare",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Kısmen doldurulmuş sihirli karede ortak toplamı bulup ? ile gösterilen sayıyı hesaplar.",
+  "tipId": "syb-yerlestirme",
+  "tip": "Sayı yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Şekildeki 3 × 3 tabloda her satırın, her sütunun ve iki köşegenin sayıları toplamı aynıdır; bu ortak toplam bilinmemektedir. Tabloda dört kutu doldurulmuş, ? ile gösterilen kutudaki sayı sorulmaktadır.\nBuna göre, ? ile gösterilen kutuda hangi sayı vardır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:174px;height:auto\" role=\"img\" viewBox=\"0 0 91.814 91.814\">\n<defs>\n<g>\n<g id=\"td530f2-glyph-0-0\">\n<rect x=\"-3.3\" y=\"-6.7\" width=\"39.6\" height=\"80.4\" mask=\"url(#td530f2-mask-0)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.9583, -8.025765)\"/>\n</g>\n<g id=\"td530f2-glyph-0-1\">\n<rect x=\"-4\" y=\"-6.7\" width=\"48\" height=\"80.4\" mask=\"url(#td530f2-mask-1)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.359363, -7.78619)\"/>\n</g>\n<g id=\"td530f2-glyph-0-2\">\n<rect x=\"-4\" y=\"-6.9\" width=\"48\" height=\"82.8\" mask=\"url(#td530f2-mask-2)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.47915, -8.025765)\"/>\n</g>\n<g id=\"td530f2-glyph-0-3\">\n<rect x=\"-4\" y=\"-6.9\" width=\"48\" height=\"82.8\" mask=\"url(#td530f2-mask-3)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.47915, -8.025765)\"/>\n</g>\n<g id=\"td530f2-glyph-0-4\">\n<rect x=\"-3.5\" y=\"-7.4\" width=\"42\" height=\"88.8\" mask=\"url(#td530f2-mask-4)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.598938, -8.864278)\"/>\n</g>\n<g id=\"td530f2-glyph-0-5\">\n<rect x=\"-4\" y=\"-6.9\" width=\"48\" height=\"82.8\" mask=\"url(#td530f2-mask-5)\" transform=\"matrix(0.119788, 0, 0, 0.119788, 0.47915, -8.025765)\"/>\n</g>\n</g>\n<image id=\"td530f2-source-90\" x=\"0\" y=\"0\" width=\"33\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAABDCAAAAAA3szPiAAAAAmJLR0QA/4ePzL8AAABSSURBVEiJ7dU7CgAgDETBVXL/K2snIR8VUatNF94g6QT8tKY38d3sdQXsG64bEXQtwgxAsjDGXfpelEjIPAOQLJzeQUFBQUFBsSVK+s/+veOG6Fd2CYz3qujXAAAAAElFTkSuQmCC\"/>\n<mask id=\"td530f2-mask-0\">\n<use xlink:href=\"#td530f2-source-90\"/>\n</mask>\n<image id=\"td530f2-source-98\" x=\"0\" y=\"0\" width=\"40\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABDCAAAAADLphgoAAAAAmJLR0QA/4ePzL8AAADMSURBVEiJ7ZbRDsMgCEXvJf7/L7OXOlFATLcsWVKewB4uaC0pAUBRGAGpmG7/ADYb8KelH/AB74PNL/WPl1tQrWtRSTkAakL6x7N11XIzXaTetealubRLRMfD4Uz5a2kGvgYgw0gduJkpsuWM5K3bExQekq1oLe7xE5DOyez8UjzgV8Hqzbzni5z8KVyl9YgsehyTTaBnxWXOTAUhuiWHMRmwq6DZjNecJOjGlk/s4KRFh11L5WjuqcwaXEsEpSLMehHK0HUo0yA9KgAvHlUrfHaHXaYAAAAASUVORK5CYII=\"/>\n<mask id=\"td530f2-mask-1\">\n<use xlink:href=\"#td530f2-source-98\"/>\n</mask>\n<image id=\"td530f2-source-144\" x=\"0\" y=\"0\" width=\"40\" height=\"69\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABFCAAAAAAd//s1AAAAAmJLR0QA/4ePzL8AAAD3SURBVEiJ3ZZLDsMwCEQzVu9/ZXcRp+Y7JpGVRb2I2vI0UAwEHPr06wOMASEV2JBixgqCKTs4NwFwbJKwHJwH/J7dUgbFeKSp6/L35sN2p5/WnmNSsolY6WnMKJPczq9LwaG45o5Ww4ZihaR/5hFIveqEv+k6q57HikqQKLImDzlQ0LcRK2xlZ7NHmXl6hMynhnFFFUk5xgXI03NEiczv2lxNucz2tkJftrSIc0+7SsmXJ4X0vd/1n4HsXa2vkJL3XYMWpa3HinOQ17VqxOaXjUTRzupEUG8pyXyZfe2WnGDq3tukGGmnWUYGw54Nx3Qb87Z0H3OGL6g7OGq0JmNXAAAAAElFTkSuQmCC\"/>\n<mask id=\"td530f2-mask-2\">\n<use xlink:href=\"#td530f2-source-144\"/>\n</mask>\n<image id=\"td530f2-source-190\" x=\"0\" y=\"0\" width=\"40\" height=\"69\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABFCAAAAAAd//s1AAAAAmJLR0QA/4ePzL8AAADCSURBVEiJ7VZJDsQwCMNR//9l5jKdsA8cKrVSuVTFxoGsgIzx9wvjR8gKMKQ0g6LiSRgVTRLwh/djHAngAmEEd1LGpePjyQIR0YoSj34hQu1iKGA5MDFUghKaKBaCAmwrzonxyNu9iu0gjK/MsUtMatlAX7FVNBHfoOqX+BKfRUzPqTaciulhPIEnVH2Hyz6eSZbExtoMn7j5M+yylI4VS/lRVY5Gkh2736XIaNv3pA1SsoXHvVm/2xv0j/2OVHEt8AE2rSt6gJY90gAAAABJRU5ErkJggg==\"/>\n<mask id=\"td530f2-mask-3\">\n<use xlink:href=\"#td530f2-source-190\"/>\n</mask>\n<image id=\"td530f2-source-236\" x=\"0\" y=\"0\" width=\"35\" height=\"74\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABKCAAAAAAUSbIXAAAAAmJLR0QA/4ePzL8AAADDSURBVEiJ7ZRLDsMwCEQZ3//OZNGm5jNQK5EiqyqbOOhlAAeATNN5hHHPF5VgiKdEWAolMSk0xAmhRV4QNDhierCMK9dg+MQKhIEgg4pYl74ZghjnEBSIg7VEtEwkMaMPsyXT1XX+jQUd3Myn6hqCoNaphq0IVDAuF874dCkTKmJMLLq7Q4QnkTE9/02FMXn+U6wUqY5lv73Sh2zsrvcYOoYuPqqDBWYpn47he5jpxDvbbbf8KvO3Z8z1N9k9smFvPMkcaeMgb9ZXUy4AAAAASUVORK5CYII=\"/>\n<mask id=\"td530f2-mask-4\">\n<use xlink:href=\"#td530f2-source-236\"/>\n</mask>\n<image id=\"td530f2-source-282\" x=\"0\" y=\"0\" width=\"40\" height=\"69\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABFCAAAAAAd//s1AAAAAmJLR0QA/4ePzL8AAAEVSURBVEiJvVZJEsMwCIuY/v/L7qVeALE0zZRLJkIWxsEEXMbG5wmDg7KIDyHNeJHxTjdS3uFHztsEOB7o+3wMA3tIr1cHMjwxOGQFSyOPMYl+fwSQ+OvqPUjoNWulIThDN2x0iacij7xRiQ4xVMxt3Njjr8SVzeOhx/+TaRPXh+srFmXoQ1fF8VQyO46Q7nND8VgsFOWK+cVnoa2kelfdjLe90+X664IwXS8SDmSda83asJWFbI7wdtaMqbC490AjOxmcG/UBqrqduXxTZk3rEXGvHlPBnBjVY6laCa6/a0srISZDUBx4XwW3wP5LxeA8rr6FdPoCIbILpC9X3EvsEFeNKdeRdUFjsxnnhdNeOgPxXvWxNwrxQHImhjEWAAAAAElFTkSuQmCC\"/>\n<mask id=\"td530f2-mask-5\">\n<use xlink:href=\"#td530f2-source-282\"/>\n</mask>\n</defs>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -14.174249 -14.175037 L 14.172123 -14.175037 L 14.172123 14.175249 L -14.174249 14.175249 Z M -14.174249 -14.175037 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td530f2-glyph-0-0\" x=\"11.685327\" y=\"21.437571\"/>\n<use xlink:href=\"#td530f2-glyph-0-1\" x=\"17.52497\" y=\"21.437571\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 14.172123 -14.175037 L 42.518494 -14.175037 L 42.518494 14.175249 L 14.172123 14.175249 Z M 14.172123 -14.175037 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 42.518494 -14.175037 L 70.86878 -14.175037 L 70.86878 14.175249 L 42.518494 14.175249 Z M 42.518494 -14.175037 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td530f2-glyph-0-0\" x=\"68.262711\" y=\"21.437571\"/>\n<use xlink:href=\"#td530f2-glyph-0-2\" x=\"74.102354\" y=\"21.437571\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -14.174249 -42.521408 L 14.172123 -42.521408 L 14.172123 -14.175037 L -14.174249 -14.175037 Z M -14.174249 -42.521408 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td530f2-glyph-0-0\" x=\"11.684329\" y=\"49.727261\"/>\n<use xlink:href=\"#td530f2-glyph-0-3\" x=\"17.523972\" y=\"49.727261\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 14.172123 -42.521408 L 42.518494 -42.521408 L 42.518494 -14.175037 L 14.172123 -14.175037 Z M 14.172123 -42.521408 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 42.518494 -42.521408 L 70.86878 -42.521408 L 70.86878 -14.175037 L 42.518494 -14.175037 Z M 42.518494 -42.521408 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -14.174249 -70.86778 L 14.172123 -70.86778 L 14.172123 -42.521408 L -14.174249 -42.521408 Z M -14.174249 -70.86778 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(81.724548%, 92.782593%, 85.804749%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 14.172123 -70.86778 L 42.518494 -70.86778 L 42.518494 -42.521408 L 14.172123 -42.521408 Z M 14.172123 -70.86778 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td530f2-glyph-0-4\" x=\"43.055776\" y=\"78.452069\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 42.518494 -70.86778 L 70.86878 -70.86778 L 70.86878 -42.521408 L 42.518494 -42.521408 Z M 42.518494 -70.86778 \" transform=\"matrix(0.997978, 0, 0, -0.997978, 17.524498, 17.525496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td530f2-glyph-0-5\" x=\"71.182795\" y=\"78.015953\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "14",
+   "D": "16",
+   "E": "36"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "16"
+  },
+  "celdiriciler": {
+   "A": "Üst satırın orta kutusunu bulup sorulan kutu sanmış.",
+   "B": "Merkezdeki sayıyı sorulan kutu sanmış.",
+   "C": "Orta satırın son kutusunu sorulan kutu sanmış.",
+   "E": "Ortak toplamı sorulan sayı sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "? ile gösterilen kutudaki sayı.",
+  "bilgi": [
+   {
+    "ad": "Eşit toplamlı dizilim",
+    "ifade": "sihirli karede her satır, sütun ve köşegenin toplamı eşittir; iki eşit toplamı karşılaştırınca ortak kutular sadeleşir. Örnek: köşegen 2 + m + 6 ile satır 4 + m + 4 eşit toplamlıysa 8 = 8 olduğundan ortak toplam 8 + m bulunur"
+   }
+  ],
+  "ipuclari": [
+   "Merkez m, ortak toplam T olsun; iki köşegen ve sol sütun üç denklem verir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak toplam",
+    "aciklama": "Köşegenlerden 15 + m + 9 = T ve 13 + m + g = T (g, sol alt kutu); sol sütun 15 + 10 + g = T.",
+    "islem": "15 + m + 9 = T ve 13 + m + g = T ⇒ g = 11 ⇒ T = 36"
+   },
+   {
+    "baslik": "Üst ve orta",
+    "aciklama": "Üst satır: 15 + b + 13 = 36; merkez = 36 − 24 = 12.",
+    "islem": "b = 8, m = 12"
+   },
+   {
+    "baslik": "Orta sütun",
+    "aciklama": "b + m + ? = 36.",
+    "islem": "8 + 12 + ? = 36 ⇒ ? = 16"
+   }
+  ],
+  "puf": "Önce ortak toplamı bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-03 · ortak toplam 36; ? = 16",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0004",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Üçgen Dizilim",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Her kenarındaki sayılar toplamı eşit olan üçgen dizilimde eksik sayıyı bulur.",
+  "tipId": "syb-yerlestirme",
+  "tip": "Sayı yerleştirme",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 3,
+  "metin": "Şekildeki üçgenin köşelerine ve kenar ortalarına 1’den 6’ya kadar olan sayılar birer kez yazılmaktadır; her kenar üzerindeki üç sayının toplamı birbirine eşittir. Şekilde üç dairedeki sayı yazılmış, sağ alt köşesindeki sayı ? ile gösterilmiş ve diğer daireler boş bırakılmıştır.\nBuna göre, ? yerine hangi sayı yazılmalıdır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:363px;height:auto\" role=\"img\" viewBox=\"0 0 191.026 117.326\">\n<defs>\n<g>\n<g id=\"t04fe5b-glyph-0-0\">\n<rect x=\"-3.3\" y=\"-6.7\" width=\"39.6\" height=\"80.4\" mask=\"url(#t04fe5b-mask-0)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.954757, -7.996089)\"/>\n</g>\n<g id=\"t04fe5b-glyph-0-1\">\n<rect x=\"-3.5\" y=\"-7.4\" width=\"42\" height=\"88.8\" mask=\"url(#t04fe5b-mask-1)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.596723, -8.831501)\"/>\n</g>\n<g id=\"t04fe5b-glyph-0-2\">\n<rect x=\"-3.9\" y=\"-6.7\" width=\"46.8\" height=\"80.4\" mask=\"url(#t04fe5b-mask-2)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.477378, -7.996089)\"/>\n</g>\n<g id=\"t04fe5b-glyph-0-3\">\n<rect x=\"-4\" y=\"-6.9\" width=\"48\" height=\"82.8\" mask=\"url(#t04fe5b-mask-3)\" transform=\"matrix(0.119345, 0, 0, 0.119345, 0.477378, -7.996089)\"/>\n</g>\n</g>\n<image id=\"t04fe5b-source-52\" x=\"0\" y=\"0\" width=\"33\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAABDCAAAAAA3szPiAAAAAmJLR0QA/4ePzL8AAABSSURBVEiJ7dU7CgAgDETBVXL/K2snIR8VUatNF94g6QT8tKY38d3sdQXsG64bEXQtwgxAsjDGXfpelEjIPAOQLJzeQUFBQUFBsSVK+s/+veOG6Fd2CYz3qujXAAAAAElFTkSuQmCC\"/>\n<mask id=\"t04fe5b-mask-0\">\n<use xlink:href=\"#t04fe5b-source-52\"/>\n</mask>\n<image id=\"t04fe5b-source-98\" x=\"0\" y=\"0\" width=\"35\" height=\"74\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABKCAAAAAAUSbIXAAAAAmJLR0QA/4ePzL8AAADDSURBVEiJ7ZRLDsMwCEQZ3//OZNGm5jNQK5EiqyqbOOhlAAeATNN5hHHPF5VgiKdEWAolMSk0xAmhRV4QNDhierCMK9dg+MQKhIEgg4pYl74ZghjnEBSIg7VEtEwkMaMPsyXT1XX+jQUd3Myn6hqCoNaphq0IVDAuF874dCkTKmJMLLq7Q4QnkTE9/02FMXn+U6wUqY5lv73Sh2zsrvcYOoYuPqqDBWYpn47he5jpxDvbbbf8KvO3Z8z1N9k9smFvPMkcaeMgb9ZXUy4AAAAASUVORK5CYII=\"/>\n<mask id=\"t04fe5b-mask-1\">\n<use xlink:href=\"#t04fe5b-source-98\"/>\n</mask>\n<image id=\"t04fe5b-source-144\" x=\"0\" y=\"0\" width=\"39\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAABDCAAAAAA6rUOlAAAAAmJLR0QA/4ePzL8AAAD9SURBVEiJxZVJFoMwDEOj3P/O7qIleJCHBW2z4EHykXGIZSwz5LqBnTfPUqwhpewqKkwto8RuAA12EbAYew3nIpZy6OEkUiHIjqmFCXlzXaprab0gZ79g91ti9Ljc/Rc2XY9jF2GNshRh1SbuKk8dt9wQzZVhNTcS3CO1njn5ToJ+gWu+71TEb+PehfiInqrriR6aPMSxfdRJXO1XhdwHSPVcHWZ63uoSLjgi56JxUo74K+OYDROOYYTjbh24xNQTk89NvcbcTIrZqRxjrYpufTwvtfMfueRg+L6fnTPMMNf38yrADDN9v/IGzDDV92vnwgxbqPq0Gv/qC09zL64hM2Q2hOlAAAAAAElFTkSuQmCC\"/>\n<mask id=\"t04fe5b-mask-2\">\n<use xlink:href=\"#t04fe5b-source-144\"/>\n</mask>\n<image id=\"t04fe5b-source-190\" x=\"0\" y=\"0\" width=\"40\" height=\"69\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABFCAAAAAAd//s1AAAAAmJLR0QA/4ePzL8AAAESSURBVEiJrZZJEsQgCEXByv2vTC8ywWe0K66UevkMKpEpGnJPmPzMU4ZwoKDhYo4Wu8YachYsOONacexMHHA2QTnX3HHOKiXmg8k4KE/O3WBVGC3ROgbXBXeCvWOrWAnSGgpieUZg6ZnW0PPc9Xse3fGw0TDsCsbxoHBnXLwSglFaEoBx+gIgxxfpIQ+BL5+bhJ3Fro2WuW4r52xly4Or17PzKN1eq093jtlEUhRYC/51FUrfY0XZd93k8l0yL+j7f6P4fYxj12PFHuyy2FTkFyz7xF4ysyCVYtXLmNZg91AxkFTdeNFQsuy4ur2zN4Uc1lEyLn/goCH6DdnhXnsJyYRgSCYPTYdyOHUkpwvKKkpEPwxyPXzLkYjcAAAAAElFTkSuQmCC\"/>\n<mask id=\"t04fe5b-mask-3\">\n<use xlink:href=\"#t04fe5b-source-190\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00144619 85.040012 L 79.369881 -0.000414695 L -79.372773 -0.000414695 Z M -0.00144619 85.040012 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.755011 85.040012 C 12.755011 92.084154 7.046624 97.796469 -0.00144619 97.796469 C -7.045588 97.796469 -12.757903 92.084154 -12.757903 85.040012 C -12.757903 77.995871 -7.045588 72.283555 -0.00144619 72.283555 C 7.046624 72.283555 12.755011 77.995871 12.755011 85.040012 Z M 12.755011 85.040012 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t04fe5b-glyph-0-0\" x=\"92.119495\" y=\"19.949397\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(81.724548%, 92.782593%, 85.804749%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 92.126338 -0.000414695 C 92.126338 7.043727 86.417951 12.756042 79.369881 12.756042 C 72.325739 12.756042 66.613424 7.043727 66.613424 -0.000414695 C 66.613424 -7.044556 72.325739 -12.756872 79.369881 -12.756872 C 86.417951 -12.756872 92.126338 -7.044556 92.126338 -0.000414695 Z M 92.126338 -0.000414695 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t04fe5b-glyph-0-1\" x=\"171.198213\" y=\"104.93717\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -66.616316 -0.000414695 C -66.616316 7.043727 -72.324703 12.756042 -79.372773 12.756042 C -86.416915 12.756042 -92.125301 7.043727 -92.125301 -0.000414695 C -92.125301 -7.044556 -86.416915 -12.756872 -79.372773 -12.756872 C -72.324703 -12.756872 -66.616316 -7.044556 -66.616316 -0.000414695 Z M -66.616316 -0.000414695 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t04fe5b-glyph-0-2\" x=\"13.202845\" y=\"104.50366\"/>\n</g>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 52.442639 42.519799 C 52.442639 49.56394 46.730323 55.276256 39.686182 55.276256 C 32.64204 55.276256 26.929725 49.56394 26.929725 42.519799 C 26.929725 35.475657 32.64204 29.763342 39.686182 29.763342 C 46.730323 29.763342 52.442639 35.475657 52.442639 42.519799 Z M 52.442639 42.519799 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.755011 -0.000414695 C 12.755011 7.043727 7.046624 12.756042 -0.00144619 12.756042 C -7.045588 12.756042 -12.757903 7.043727 -12.757903 -0.000414695 C -12.757903 -7.044556 -7.045588 -12.756872 -0.00144619 -12.756872 C 7.046624 -12.756872 12.755011 -7.044556 12.755011 -0.000414695 Z M 12.755011 -0.000414695 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(100%, 100%, 100%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -26.928688 42.519799 C -26.928688 49.56394 -32.641004 55.276256 -39.685145 55.276256 C -46.729287 55.276256 -52.441602 49.56394 -52.441602 42.519799 C -52.441602 35.475657 -46.729287 29.763342 -39.685145 29.763342 C -32.641004 29.763342 -26.928688 35.475657 -26.928688 42.519799 Z M -26.928688 42.519799 \" transform=\"matrix(0.994288, 0, 0, -0.994288, 95.028782, 100.605056)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t04fe5b-glyph-0-3\" x=\"52.66117\" y=\"62.226529\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "3",
+   "B": "4",
+   "C": "5",
+   "D": "6",
+   "E": "9"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "3"
+  },
+  "celdiriciler": {
+   "B": "Alt kenarın orta sayısını (4) sorulan sanmış.",
+   "C": "Sağ kenarın orta sayısını B sanmış.",
+   "D": "Şekilde verilen 6’yı B sanmış.",
+   "E": "Kenar toplamını B sanmış."
+  },
+  "celTur": {
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "? yerine yazılacak sayı.",
+  "bilgi": [
+   {
+    "ad": "Her kenarı eşit toplamlı şekil",
+    "ifade": "her kenardaki sayıların toplamı aynıdır; tam bilinen kenar ortak toplamı verir. Örnek: bir kenarda 1, 2, 6 varsa ortak toplam 9’dur"
+   }
+  ],
+  "ipuclari": [
+   "Üzerinde üç sayısı da bilinen kenardan her kenarın ortak toplamını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ortak toplam",
+    "aciklama": "Sol kenar: 1 + 6 + 2.",
+    "islem": "9"
+   },
+   {
+    "baslik": "Kalan sayılar",
+    "aciklama": "3, 4, 5 boş dairelere yerleşir; sağ kenar B + orta + 1 = 9, alt kenar B + orta + 2 = 9.",
+    "islem": "B + 5 = 8 veya B + 4 = 7"
+   },
+   {
+    "baslik": "B",
+    "aciklama": "İki eşitliği sağlayan sayı.",
+    "islem": "B = 3"
+   }
+  ],
+  "puf": "Önce her kenarın toplamını bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-04 · 1–6 sayıları, kenar toplamı 9; B = 3",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0005",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Çarpım Tablosu",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Çarpım tablosunda satır oranlarından sütun başlıklarını karşılaştırıp istenen kutuyu bulur.",
+  "tipId": "syb-tablo",
+  "tip": "Tablo ve sayılar",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 3,
+  "metin": "Aşağıdaki tabloda satır başlıkları p, q, r; sütun başlıkları x, y, z ile gösterilmiştir. Tablonun her kutusuna, o kutunun satır ve sütun başlıklarına karşılık gelen pozitif tam sayıların çarpımı yazılmıştır; başlıklardaki sayılar bilinmemektedir ve “–” bulunan kutular boş bırakılmıştır.\nBuna göre, tabloda ? ile gösterilen kutudaki sayı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 220 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"216\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"29.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\"></text><text x=\"83.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">x</text><text x=\"137.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">y</text><text x=\"191.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">z</text><text x=\"29.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">p</text><text x=\"83.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">12</text><text x=\"137.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">18</text><text x=\"191.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">–</text><text x=\"29.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">q</text><text x=\"83.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">–</text><text x=\"137.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">12</text><text x=\"191.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">6</text><text x=\"29.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">r</text><text x=\"83.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">20</text><text x=\"137.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">–</text><text x=\"191.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><line x1=\"2\" y1=\"2\" x2=\"218\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"218\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"218\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"218\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"218\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"56\" y1=\"2\" x2=\"56\" y2=\"106\" stroke-width=\"1\"/><line x1=\"110\" y1=\"2\" x2=\"110\" y2=\"106\" stroke-width=\"1\"/><line x1=\"164\" y1=\"2\" x2=\"164\" y2=\"106\" stroke-width=\"1\"/><line x1=\"218\" y1=\"2\" x2=\"218\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "12",
+   "B": "15",
+   "C": "18",
+   "D": "30",
+   "E": "40"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "15"
+  },
+  "celdiriciler": {
+   "A": "Tablodaki başka bir kutuyu (q satırı, y sütunu) sorulan kutu sanmış.",
+   "C": "p satırı, y sütunundaki sayıyı sorulan kutu sanmış.",
+   "D": "z/x oranını 3/2 almış: 20 × 3/2.",
+   "E": "z’yi x’in 2 katı sanmış: 20 × 2."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "? ile gösterilen kutudaki sayı.",
+  "bilgi": [
+   {
+    "ad": "Çarpım tablosu",
+    "ifade": "tablodaki her kutu satır ve sütun başlıklarının çarpımıdır; aynı satırdaki iki kutunun oranı sütun başlıklarının oranına eşittir. Örnek: bir satırda 6 ve 9 varsa sütun başlıkları 2 : 3 oranındadır"
+   }
+  ],
+  "ipuclari": [
+   "p ve q satırlarındaki kutulardan x, y, z arasındaki ilişkiyi kurmaya çalış."
+  ],
+  "adimlar": [
+   {
+    "baslik": "y : x",
+    "aciklama": "p satırı: 18 ÷ 12.",
+    "islem": "y : x = 3 : 2"
+   },
+   {
+    "baslik": "y : z",
+    "aciklama": "q satırı: 12 ÷ 6.",
+    "islem": "y : z = 2 : 1 ⇒ z : x = 3 : 4"
+   },
+   {
+    "baslik": "? kutusu",
+    "aciklama": "r satırında x sütunundaki 20’nin z : x oranı kadarı.",
+    "islem": "20 × 3/4 = 15"
+   }
+  ],
+  "puf": "Önce sütun başlıkları arasındaki ilişkiyi bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-05 · p,q,r = 3,2,5; x,y,z = 4,6,3; ? = 15",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0006",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Kuyrukta Sıra",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "İki kişinin sırasından ve aralarındaki kişi sayısından kuyruktaki toplam kişiyi bulup ortadaki kişinin sırasını hesaplar.",
+  "tipId": "syb-sira",
+  "tip": "Sıra ve dizilim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir konser gişesinde kuyruğun başı ve kuyruktaki Ali ile Bora’nın yerleri şekilde gösterilmiştir; aralarında şekilde yazılı sayıda kişi vardır ve Bora’dan sonra da kişiler gelmektedir. Bora, kuyruğun sonundan sayıldığında 7. sıradadır. Kuyruktaki kişi sayısı tektir ve organizatör kuyruğun tam ortasındaki kişiye hediye verecektir.\nBuna göre, hediyeyi alacak kişi kuyruğun başından sayıldığında kaçıncı sıradadır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:496px;height:auto\" role=\"img\" viewBox=\"0 0 261.159 57.253\">\n<defs>\n<g>\n<g id=\"t2afd59-glyph-0-0\">\n<rect x=\"-4.6\" y=\"-5.2\" width=\"55.2\" height=\"62.4\" mask=\"url(#t2afd59-mask-0)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.236851, -6.158115)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-1\">\n<rect x=\"-0.6\" y=\"-5.4\" width=\"7.2\" height=\"64.8\" mask=\"url(#t2afd59-mask-1)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -6.394966)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-2\">\n<rect x=\"-0.7\" y=\"-5.2\" width=\"8.4\" height=\"62.4\" mask=\"url(#t2afd59-mask-2)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.592126, -6.158115)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-3\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#t2afd59-mask-3)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.828977, -6.158115)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-4\">\n<rect x=\"-3.3\" y=\"-3.6\" width=\"39.6\" height=\"43.2\" mask=\"url(#t2afd59-mask-4)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.236851, -4.144885)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-5\">\n<rect x=\"-1.8\" y=\"-3.4\" width=\"21.6\" height=\"40.8\" mask=\"url(#t2afd59-mask-5)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -4.02646)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-6\">\n<rect x=\"-2.7\" y=\"-3.6\" width=\"32.4\" height=\"43.2\" mask=\"url(#t2afd59-mask-6)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.355276, -4.144885)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-7\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t2afd59-mask-7)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.355276, -6.03969)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-8\">\n<rect x=\"-3\" y=\"-5.4\" width=\"36\" height=\"64.8\" mask=\"url(#t2afd59-mask-8)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -6.394966)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-9\">\n<rect x=\"-2.5\" y=\"-5\" width=\"30\" height=\"60\" mask=\"url(#t2afd59-mask-9)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.236851, -4.144885)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-10\">\n<rect x=\"-2.7\" y=\"-3.4\" width=\"32.4\" height=\"40.8\" mask=\"url(#t2afd59-mask-10)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -3.908035)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-11\">\n<rect x=\"-3.2\" y=\"-4.9\" width=\"38.4\" height=\"58.8\" mask=\"url(#t2afd59-mask-11)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.118425, -3.908035)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-12\">\n<rect x=\"-3.4\" y=\"-6.5\" width=\"40.8\" height=\"78\" mask=\"url(#t2afd59-mask-12)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.236851, -5.684414)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-13\">\n<rect x=\"-2.7\" y=\"-3.4\" width=\"32.4\" height=\"40.8\" mask=\"url(#t2afd59-mask-13)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -4.02646)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-14\">\n<rect x=\"-3\" y=\"-5.5\" width=\"36\" height=\"66\" mask=\"url(#t2afd59-mask-14)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -6.394966)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-15\">\n<rect x=\"-0.6\" y=\"-3.3\" width=\"7.2\" height=\"39.6\" mask=\"url(#t2afd59-mask-15)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.710552, -3.908035)\"/>\n</g>\n<g id=\"t2afd59-glyph-0-16\">\n<rect x=\"-0.7\" y=\"-0.7\" width=\"8.4\" height=\"8.4\" mask=\"url(#t2afd59-mask-16)\" transform=\"matrix(0.118425, 0, 0, 0.118425, 0.828977, -0.828977)\"/>\n</g>\n</g>\n<image id=\"t2afd59-source-128\" x=\"0\" y=\"0\" width=\"46\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA0CAAAAADQn1UWAAAAAmJLR0QA/4ePzL8AAADYSURBVEiJvZXBDsQgCESR7P//MntobVkZcIzbcjGVyfBQTJvEsHNtMaVAXsSiHBS0IvksTJTbjWGEXHBHidzSj9w99d9s1TWKaP517hh+kNuotFK+BuO9GrIH7umVbsL8FkY00b1i2YEZbxzQBPeSxcvj24n2myNWszh5ZAE0CvM0DCtHLJFGUXbujs2v6OkP3J26kwGfWC5842djHmwMc0rnPj30Lp832kUEu6+qcLeEoVgOGXOQrq6CvRqGHQCx250zF2UbPey5mblq6xKLtHK6PIeIiHwB5wwmYTORPpwAAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-0\">\n<use xlink:href=\"#t2afd59-source-128\"/>\n</mask>\n<image id=\"t2afd59-source-136\" x=\"0\" y=\"0\" width=\"6\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAA2CAAAAADB3bc5AAAAAmJLR0QA/4ePzL8AAAAVSURBVBiVY/zPwMDAwMDEMErRmQIAyMwBazeLJUoAAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-1\">\n<use xlink:href=\"#t2afd59-source-136\"/>\n</mask>\n<image id=\"t2afd59-source-144\" x=\"0\" y=\"0\" width=\"7\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAA0CAAAAABj130MAAAAAmJLR0QA/4ePzL8AAAAeSURBVBiVY/zPwMDAwMDAxEAaTWvAyPCfLHcNNxoA2fECTc+qt30AAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-2\">\n<use xlink:href=\"#t2afd59-source-144\"/>\n</mask>\n<image id=\"t2afd59-source-228\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAAC5SURBVEiJzZVBDgMhDANx1f9/mR5WgQQldipRqdxWDAYSm8Uc6cD5XXAnyzhPcm6TL44NkzE9pLN7JucCC74v4Bew83mQ3sMdht8XS1DUZSmq+v059zQFitt9ppzrPeO8a96aAuO2VvRfNaxx9b4jGIZxv8xlkqOZkWXejsKU/Vhxk3lDP2/f5mhe870JXssRmlxXr8vNu3pmk64ez8f6K7TeA6EXnKpz/rRE5Ui9G5Fq++rCuxGT+gF7zCV5FzKLQAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-3\">\n<use xlink:href=\"#t2afd59-source-228\"/>\n</mask>\n<image id=\"t2afd59-source-236\" x=\"0\" y=\"0\" width=\"33\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAkCAAAAAAiQgwAAAAAAmJLR0QA/4ePzL8AAACKSURBVDiN3VRBEsQgCDNM//9lemgXMYaVcznYmSQFgyJGDn8+yBg2mnFIPjOoBEGhFPw4LALSI5bdQkJQeJyYCX+D3boQjAkbE8JRkSKSnHOY2uaCmexmrtWu8iWF6sqLmepmjv65iDIeiv9l0g3iJD41p5t8noZr+U9NIHaIyPZkN16HxgvDFiJugK4iOb91KoQAAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-4\">\n<use xlink:href=\"#t2afd59-source-236\"/>\n</mask>\n<image id=\"t2afd59-source-320\" x=\"0\" y=\"0\" width=\"18\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAiCAAAAAB339YmAAAAAmJLR0QA/4ePzL8AAABKSURBVCiR7c4xDsAgDATBvSj//zIUET7bpECp447RAhZlBqABoDgDVy0A7g6uLIuS+OIzih8TlErteYspJK/aSTu9VDvpqPrpO02ZJAhIKvmAtgAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-5\">\n<use xlink:href=\"#t2afd59-source-320\"/>\n</mask>\n<image id=\"t2afd59-source-328\" x=\"0\" y=\"0\" width=\"27\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAkCAAAAABdkx7xAAAAAmJLR0QA/4ePzL8AAACGSURBVCiRxZNLDsAgCERnjPe/Ml1Ylc+wa1I2Gp6MCEgcs3cl4sbgjW6J5Lgp0fIP4d9SLi5dTcycHHjo0uRFTnXEoKAhAnICEnZv+IOlPK1hpR3swGGKyN5ye6ZHKbFZx8uxjgDDWvRtPS0w+XjW4bDCRPnY1BK+eJoVuLXq/7uny+dx9gCi4iEzdjjubAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-6\">\n<use xlink:href=\"#t2afd59-source-328\"/>\n</mask>\n<image id=\"t2afd59-source-374\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADKSURBVDiNtZXdFoQgCIQZTu//yuyFP0041B7b9cbkixENCEYj2gQyIcNkhcJkh8YToMCD4IKxLNiSY4GZuToWHdCVkXb14c6YVi7xGYcrO42KDz2/kTeLbf1Hjpf+bcTf4nvLe1L4NcF+ph+JVxt4mTlJPyQ2qPymd9eKGQnbpkPLpvoV1dtVPG2dQ/FsMDPQ6pgeovnUid9Dwtf3X42ysDrc8z+Ldsufat5tvX5uCf37IlPur/z+lFq4jgs3vbn0R36Mgor/R7qQDzdpMVnmhdeXAAAAAElFTkSuQmCC\"/>\n<mask id=\"t2afd59-mask-7\">\n<use xlink:href=\"#t2afd59-source-374\"/>\n</mask>\n<image id=\"t2afd59-source-420\" x=\"0\" y=\"0\" width=\"30\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA2CAAAAAD1pHYlAAAAAmJLR0QA/4ePzL8AAACGSURBVDiN7dTBDoAwCANQIP7/L+NFN0qLB+NRLkt4odlcnKeZmbnpiqH/889f86Gaea0up7cqLiq4KjMoMWrnpo27IpMCs1YWWljpZqmL02Q59XW4rvlKiN3JC6vHK0BpPKqyByhtL5q2DdDBMJ7PDT5+tZxY37eMl+HbX/3Aa3yYvv05PE9A/R1wNZfxDgAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-8\">\n<use xlink:href=\"#t2afd59-source-420\"/>\n</mask>\n<image id=\"t2afd59-source-466\" x=\"0\" y=\"0\" width=\"25\" height=\"50\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAyCAAAAACM6S9KAAAAAmJLR0QA/4ePzL8AAACsSURBVDiNrZNJFoMwDEOlPO5/ZXfRNJ5kFgUvgPg/xRMmvmb4GdPb/e5k9283JQCIpQGAqwY2d1gCGxJYHezDBWEEgDXEf0RkG+x8TaTS3rc4hRqE/mzx6VohOzFbtJRrSrNW4eU1ctjcN6HZov+mMP1Vq9cfcjMlI+vgrJEqua10WAU9ubNZkNv4roVbLZ9XBsFKpRSkFZw1FKT3KGkoiGhr1FAQNYmgKU3+AH1XJkdbSqkJAAAAAElFTkSuQmCC\"/>\n<mask id=\"t2afd59-mask-9\">\n<use xlink:href=\"#t2afd59-source-466\"/>\n</mask>\n<image id=\"t2afd59-source-626\" x=\"0\" y=\"0\" width=\"27\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAAAAACLyv3sAAAAAmJLR0QA/4ePzL8AAABESURBVCiR7dMxCgAwCEPRn97/znYQoUqFjh3MJD6ELMoAECm+XPQZG/vSrDfLd3YhFJOqgNLJQxeFqSNUijicT1kLeTYoJww7MtaxjgAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-10\">\n<use xlink:href=\"#t2afd59-source-626\"/>\n</mask>\n<image id=\"t2afd59-source-634\" x=\"0\" y=\"0\" width=\"32\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAxCAAAAACem/QWAAAAAmJLR0QA/4ePzL8AAAC9SURBVDiNnZPLEsUgCEMDc///l+nC9pZHoLWunDGeIBIxAAAEZa0TJSf+XLQ7v5aecOsFs8Mt6BBKH3ADnEWDUN6DxyL/DkswvXRqlGSBkd0pGMocLMQLYpm+3J4gUdBWEQlWHHoLyYLOIxHscpAqaBAvhjYiSkwqIf26FwjZbdXAV3wcSfImIXXxFeGLQAYByU4lyJNgIrB0FkKeG57NgVAGT3ngwg1b9+o3AAB+w2VSAxn9vUax7Lgw8GgdLNkfZHGyckEAAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-11\">\n<use xlink:href=\"#t2afd59-source-634\"/>\n</mask>\n<image id=\"t2afd59-source-642\" x=\"0\" y=\"0\" width=\"34\" height=\"65\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAABBCAAAAACRTCnqAAAAAmJLR0QA/4ePzL8AAADxSURBVEiJ1ZbbDoQgDERnCP//y+4DCr2jidns9kUYjqVpKUoAOACAULa0hq0t5PBOhlEItMQQunqTkcNQ1GuX84CheXqGbmAghsNFmSz+kMnIXLCj2rTABc0p89S5jXKiLKNCZKAuaKGasOa0adiMDFLG4ntEKY+a5C+QlV3bC0F2b2x0BKO10Y1KB8fFdmNJJOGqmrao0vrAdKEnTS8vsuRCeLmMm24s7sICEVhWALFYeTmXue/5VhOQaQ/a8ZR7BAAUVEu3mZdTC50o7dsNGwW9spF9g6aenheZPD0J1jdl5PYwEDLNGfD0O+3/NoZ9AIQIPV2Zx7lmAAAAAElFTkSuQmCC\"/>\n<mask id=\"t2afd59-mask-12\">\n<use xlink:href=\"#t2afd59-source-642\"/>\n</mask>\n<image id=\"t2afd59-source-650\" x=\"0\" y=\"0\" width=\"27\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAAAAACLyv3sAAAAAmJLR0QA/4ePzL8AAABSSURBVCiR7Y5BDsAgDMMcxP+/3B22dhFiCO1MLlUwLghP3EPPiGrhtwS00bHW5ggC+pz4e/aFOlAfCKhoeXr9hI3vJHMty463YFqwvzsPO6xyASyLDUOjrmOtAAAAAElFTkSuQmCC\"/>\n<mask id=\"t2afd59-mask-13\">\n<use xlink:href=\"#t2afd59-source-650\"/>\n</mask>\n<image id=\"t2afd59-source-734\" x=\"0\" y=\"0\" width=\"30\" height=\"55\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA3CAAAAAA++KWAAAAAAmJLR0QA/4ePzL8AAACQSURBVDiN7ZXBDoQwCERniP//y+xhrdCBmrgbL0YuBh6d0DpaOgCA6MMW9Re/+DLe5vTrvLDeVhkAHw0h7o7aai08OLUcQcGUCZhH4/HMK1zovD/raGTW0RBZHOpo/+uV+AqXM/9B/IF499It4uNHbDkVmn3eUCZxLxTnPtfPYA7izKmcRlOuZiIbKqvKtfQBjX4ebbXZr3cAAAAASUVORK5CYII=\"/>\n<mask id=\"t2afd59-mask-14\">\n<use xlink:href=\"#t2afd59-source-734\"/>\n</mask>\n<image id=\"t2afd59-source-742\" x=\"0\" y=\"0\" width=\"6\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAhCAAAAADfDoUaAAAAAmJLR0QA/4ePzL8AAAATSURBVAiZY/zPwMDAwMDEMLwpAAPXAUFcQ5YgAAAAAElFTkSuQmCC\"/>\n<mask id=\"t2afd59-mask-15\">\n<use xlink:href=\"#t2afd59-source-742\"/>\n</mask>\n<image id=\"t2afd59-source-788\" x=\"0\" y=\"0\" width=\"7\" height=\"7\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAAAAADhOQgPAAAAAmJLR0QA/4ePzL8AAAAUSURBVAiZY/zPwMDAwMDAxEAaDQA4iQENDkJBFQAAAABJRU5ErkJggg==\"/>\n<mask id=\"t2afd59-mask-16\">\n<use xlink:href=\"#t2afd59-source-788\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.671186 0.000390678 C 5.671186 3.130549 3.130653 5.671082 0.000495371 5.671082 C -3.129663 5.671082 -5.670195 3.130549 -5.670195 0.000390678 C -5.670195 -3.129767 -3.129663 -5.6703 0.000495371 -5.6703 C 3.130653 -5.6703 5.671186 -3.129767 5.671186 0.000390678 Z M 5.671186 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 19.276096 0.000390678 C 19.276096 3.130549 16.735563 5.671082 13.605405 5.671082 C 10.475247 5.671082 7.938671 3.130549 7.938671 0.000390678 C 7.938671 -3.129767 10.475247 -5.6703 13.605405 -5.6703 C 16.735563 -5.6703 19.276096 -3.129767 19.276096 0.000390678 Z M 19.276096 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 32.881005 0.000390678 C 32.881005 3.130549 30.344429 5.671082 27.214271 5.671082 C 24.080156 5.671082 21.54358 3.130549 21.54358 0.000390678 C 21.54358 -3.129767 24.080156 -5.6703 27.214271 -5.6703 C 30.344429 -5.6703 32.881005 -3.129767 32.881005 0.000390678 Z M 32.881005 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 46.489871 0.000390678 C 46.489871 3.130549 43.949339 5.671082 40.819181 5.671082 C 37.689023 5.671082 35.14849 3.130549 35.14849 0.000390678 C 35.14849 -3.129767 37.689023 -5.6703 40.819181 -5.6703 C 43.949339 -5.6703 46.489871 -3.129767 46.489871 0.000390678 Z M 46.489871 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 60.094781 0.000390678 C 60.094781 3.130549 57.558205 5.671082 54.42409 5.671082 C 51.293932 5.671082 48.757356 3.130549 48.757356 0.000390678 C 48.757356 -3.129767 51.293932 -5.6703 54.42409 -5.6703 C 57.558205 -5.6703 60.094781 -3.129767 60.094781 0.000390678 Z M 60.094781 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 73.69969 0.000390678 C 73.69969 3.130549 71.163115 5.671082 68.032957 5.671082 C 64.902799 5.671082 62.362266 3.130549 62.362266 0.000390678 C 62.362266 -3.129767 64.902799 -5.6703 68.032957 -5.6703 C 71.163115 -5.6703 73.69969 -3.129767 73.69969 0.000390678 Z M 73.69969 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(63.449097%, 85.566711%, 71.607971%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 87.308557 0.000390678 C 87.308557 3.130549 84.771981 5.671082 81.637866 5.671082 C 78.507708 5.671082 75.971132 3.130549 75.971132 0.000390678 C 75.971132 -3.129767 78.507708 -5.6703 81.637866 -5.6703 C 84.771981 -5.6703 87.308557 -3.129767 87.308557 0.000390678 Z M 87.308557 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-0\" x=\"88.184641\" y=\"12.645016\"/>\n<use xlink:href=\"#t2afd59-glyph-0-1\" x=\"94.261043\" y=\"12.645016\"/>\n<use xlink:href=\"#t2afd59-glyph-0-2\" x=\"96.431778\" y=\"12.645016\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 100.913466 0.000390678 C 100.913466 3.130549 98.37689 5.671082 95.246732 5.671082 C 92.112617 5.671082 89.576042 3.130549 89.576042 0.000390678 C 89.576042 -3.129767 92.112617 -5.6703 95.246732 -5.6703 C 98.37689 -5.6703 100.913466 -3.129767 100.913466 0.000390678 Z M 100.913466 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 114.522333 0.000390678 C 114.522333 3.130549 111.9818 5.671082 108.851642 5.671082 C 105.721484 5.671082 103.180951 3.130549 103.180951 0.000390678 C 103.180951 -3.129767 105.721484 -5.6703 108.851642 -5.6703 C 111.9818 -5.6703 114.522333 -3.129767 114.522333 0.000390678 Z M 114.522333 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 128.127242 0.000390678 C 128.127242 3.130549 125.590666 5.671082 122.456551 5.671082 C 119.326393 5.671082 116.789818 3.130549 116.789818 0.000390678 C 116.789818 -3.129767 119.326393 -5.6703 122.456551 -5.6703 C 125.590666 -5.6703 128.127242 -3.129767 128.127242 0.000390678 Z M 128.127242 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 141.732151 0.000390678 C 141.732151 3.130549 139.195576 5.671082 136.065418 5.671082 C 132.93526 5.671082 130.394727 3.130549 130.394727 0.000390678 C 130.394727 -3.129767 132.93526 -5.6703 136.065418 -5.6703 C 139.195576 -5.6703 141.732151 -3.129767 141.732151 0.000390678 Z M 141.732151 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 155.341018 0.000390678 C 155.341018 3.130549 152.800485 5.671082 149.670327 5.671082 C 146.540169 5.671082 144.003593 3.130549 144.003593 0.000390678 C 144.003593 -3.129767 146.540169 -5.6703 149.670327 -5.6703 C 152.800485 -5.6703 155.341018 -3.129767 155.341018 0.000390678 Z M 155.341018 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 168.945927 0.000390678 C 168.945927 3.130549 166.409352 5.671082 163.279194 5.671082 C 160.145078 5.671082 157.608503 3.130549 157.608503 0.000390678 C 157.608503 -3.129767 160.145078 -5.6703 163.279194 -5.6703 C 166.409352 -5.6703 168.945927 -3.129767 168.945927 0.000390678 Z M 168.945927 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 182.554794 0.000390678 C 182.554794 3.130549 180.014261 5.671082 176.884103 5.671082 C 173.753945 5.671082 171.213412 3.130549 171.213412 0.000390678 C 171.213412 -3.129767 173.753945 -5.6703 176.884103 -5.6703 C 180.014261 -5.6703 182.554794 -3.129767 182.554794 0.000390678 Z M 182.554794 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 196.159703 0.000390678 C 196.159703 3.130549 193.623128 5.671082 190.489012 5.671082 C 187.358854 5.671082 184.822279 3.130549 184.822279 0.000390678 C 184.822279 -3.129767 187.358854 -5.6703 190.489012 -5.6703 C 193.623128 -5.6703 196.159703 -3.129767 196.159703 0.000390678 Z M 196.159703 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 209.764613 0.000390678 C 209.764613 3.130549 207.228037 5.671082 204.097879 5.671082 C 200.967721 5.671082 198.427188 3.130549 198.427188 0.000390678 C 198.427188 -3.129767 200.967721 -5.6703 204.097879 -5.6703 C 207.228037 -5.6703 209.764613 -3.129767 209.764613 0.000390678 Z M 209.764613 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(63.449097%, 85.566711%, 71.607971%)\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 223.373479 0.000390678 C 223.373479 3.130549 220.832946 5.671082 217.702788 5.671082 C 214.57263 5.671082 212.032097 3.130549 212.032097 0.000390678 C 212.032097 -3.129767 214.57263 -5.6703 217.702788 -5.6703 C 220.832946 -5.6703 223.373479 -3.129767 223.373479 0.000390678 Z M 223.373479 0.000390678 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-3\" x=\"218.784656\" y=\"12.645016\"/>\n<use xlink:href=\"#t2afd59-glyph-0-4\" x=\"224.853953\" y=\"12.645016\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-5\" x=\"229.144807\" y=\"12.645016\"/>\n<use xlink:href=\"#t2afd59-glyph-0-6\" x=\"232.251103\" y=\"12.645016\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.97572 -14.174358 L 209.368891 -14.174358 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.072234 2.391126 C -1.692341 0.954657 -0.849454 0.277973 0.00134756 0.000967807 C -0.849454 -0.279995 -1.692341 -0.956679 -2.072234 -2.389191 \" transform=\"matrix(-0.987121, 0, 0, 0.987121, 101.427111, 35.026388)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -2.07379 2.389191 C -1.693897 0.956679 -0.85101 0.279995 -0.000208275 -0.000967807 C -0.85101 -0.277973 -1.693897 -0.954657 -2.07379 -2.391126 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 219.675987, 35.026388)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-7\" x=\"150.623973\" y=\"45.902099\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-8\" x=\"158.198518\" y=\"45.902099\"/>\n<use xlink:href=\"#t2afd59-glyph-0-2\" x=\"162.64302\" y=\"45.902099\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-9\" x=\"164.822606\" y=\"45.902099\"/>\n<use xlink:href=\"#t2afd59-glyph-0-2\" x=\"168.309047\" y=\"45.902099\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -8.503562 -25.511782 L 33.787207 -25.511782 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 12.808105, 21.035542)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 4.215391 0.000147735 L 0.642025 1.345601 L 1.817318 0.000147735 L 0.642025 -1.345306 Z M 4.215391 0.000147735 \" transform=\"matrix(0.987121, 0, 0, -0.987121, 44.4639, 46.218896)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-8\" x=\"54.624511\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-10\" x=\"59.069013\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-11\" x=\"63.766944\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-5\" x=\"67.9592\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-10\" x=\"71.065495\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-12\" x=\"75.763427\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-10\" x=\"80.310958\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-13\" x=\"85.008889\" y=\"48.567325\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-14\" x=\"92.733835\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-6\" x=\"97.431767\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-9\" x=\"101.80166\" y=\"48.567325\"/>\n<use xlink:href=\"#t2afd59-glyph-0-15\" x=\"105.288101\" y=\"48.567325\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-16\" x=\"240.708607\" y=\"21.418545\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-16\" x=\"244.748126\" y=\"21.418545\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t2afd59-glyph-0-16\" x=\"248.796495\" y=\"21.418545\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "11",
+   "B": "12",
+   "C": "13",
+   "D": "17",
+   "E": "23"
+  },
+  "cevap": {
+   "sik": "B",
+   "deger": "12"
+  },
+  "celdiriciler": {
+   "A": "Toplam 23 kişinin yarısını aşağı yuvarlamış (23 ÷ 2 ≈ 11).",
+   "C": "Ortayı 12. değil, bir sonraki sıra sanmış.",
+   "D": "Bora’nın sırasını ortadaki kişinin sırası sanmış.",
+   "E": "Kuyruktaki toplam kişi sayısını sorulan sıra sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Hediyeyi alacak kişinin baştan sırası.",
+  "bilgi": [
+   {
+    "ad": "Sıra ve toplam",
+    "ifade": "iki kişinin sıraları ve aralarındaki kişi sayısından, sondan sırasından toplam kişi bulunur; baştan sırası + sondan sırası − 1 toplamı verir. Örnek: baştan 4., sondan 6. olan kişi için kuyrukta 9 kişi vardır"
+   }
+  ],
+  "ipuclari": [
+   "Şekildeki iki kişinin ve aradaki kişilerin sayısıyla Bora’nın baştan sırasını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Bora’nın sırası",
+    "aciklama": "Ali 7., arada 9 kişi, ardından Bora.",
+    "islem": "7 + 9 + 1 = 17"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Baştan sıra + sondan sıra − 1.",
+    "islem": "17 + 7 − 1 = 23"
+   },
+   {
+    "baslik": "Ortadaki",
+    "aciklama": "Tek sayıda kişide ortadaki, (n + 1)/2. sıradadır.",
+    "islem": "(23 + 1) ÷ 2 = 12"
+   }
+  ],
+  "puf": "Baştan ve sondan sıralar bir kişiyi iki kez sayar.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-06 · Ali 7., Bora 17., Bora sondan 7.; n = 23; orta 12.",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0007",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Optik Form",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Üç öğrencinin optik form cevaplarını anahtarla karşılaştırıp doğru, yanlış, boş sayılarından toplam puanı bulur.",
+  "tipId": "syb-tablo",
+  "tip": "Tablo ve sayılar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 4,
+  "metin": "Bir deneme sınavının 12 soruluk bölümünün cevap anahtarı ile üç öğrencinin işaretlediği cevaplar şekilde verilmiştir; “–” işareti soruyu boş bıraktığını gösterir. Bu bölümde her doğru cevap 5 puan getirir, her yanlış cevap 2 puan götürür ve boş cevaplar puanı etkilemez. Okul, üç öğrencinin bu bölümden aldığı puanların toplamını duyuracaktır.\nBuna göre, bu toplam puan kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:409px;height:auto\" role=\"img\" viewBox=\"0 0 215.524 70.782\">\n<defs>\n<g>\n<g id=\"td24542-glyph-0-0\">\n<rect x=\"-2.3\" y=\"-4.5\" width=\"27.6\" height=\"54\" mask=\"url(#td24542-mask-0)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.598306, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-1\">\n<rect x=\"-2.8\" y=\"-4.5\" width=\"33.6\" height=\"54\" mask=\"url(#td24542-mask-1)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-2\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#td24542-mask-2)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-3\">\n<rect x=\"-3\" y=\"-4.4\" width=\"36\" height=\"52.8\" mask=\"url(#td24542-mask-3)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.239322, -5.265091)\"/>\n</g>\n<g id=\"td24542-glyph-0-4\">\n<rect x=\"-2.9\" y=\"-4.5\" width=\"34.8\" height=\"54\" mask=\"url(#td24542-mask-4)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.239322, -5.265091)\"/>\n</g>\n<g id=\"td24542-glyph-0-5\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#td24542-mask-5)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-6\">\n<rect x=\"-2.8\" y=\"-4.5\" width=\"33.6\" height=\"54\" mask=\"url(#td24542-mask-6)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.265091)\"/>\n</g>\n<g id=\"td24542-glyph-0-7\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#td24542-mask-7)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-8\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#td24542-mask-8)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-0-9\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#td24542-mask-9)\" transform=\"matrix(0.119661, 0, 0, 0.119661, 0.358983, -5.384752)\"/>\n</g>\n<g id=\"td24542-glyph-1-0\">\n<rect x=\"-4.6\" y=\"-5.2\" width=\"55.2\" height=\"62.4\" mask=\"url(#td24542-mask-10)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.239204, -6.219308)\"/>\n</g>\n<g id=\"td24542-glyph-1-1\">\n<rect x=\"-2.7\" y=\"-3.4\" width=\"32.4\" height=\"40.8\" mask=\"url(#td24542-mask-11)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.717612, -4.06647)\"/>\n</g>\n<g id=\"td24542-glyph-1-2\">\n<rect x=\"-2.7\" y=\"-3.6\" width=\"32.4\" height=\"43.2\" mask=\"url(#td24542-mask-12)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.358806, -4.186073)\"/>\n</g>\n<g id=\"td24542-glyph-1-3\">\n<rect x=\"-2.7\" y=\"-5.4\" width=\"32.4\" height=\"64.8\" mask=\"url(#td24542-mask-13)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.717612, -6.458512)\"/>\n</g>\n<g id=\"td24542-glyph-1-4\">\n<rect x=\"-2.4\" y=\"-4.4\" width=\"28.8\" height=\"52.8\" mask=\"url(#td24542-mask-14)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.119602, -5.142889)\"/>\n</g>\n<g id=\"td24542-glyph-1-5\">\n<rect x=\"-1.8\" y=\"-3.4\" width=\"21.6\" height=\"40.8\" mask=\"url(#td24542-mask-15)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.717612, -4.06647)\"/>\n</g>\n<g id=\"td24542-glyph-1-6\">\n<rect x=\"-3.9\" y=\"-5.6\" width=\"46.8\" height=\"67.2\" mask=\"url(#td24542-mask-16)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.59801, -6.458512)\"/>\n</g>\n<g id=\"td24542-glyph-1-7\">\n<rect x=\"-4.4\" y=\"-5.2\" width=\"52.8\" height=\"62.4\" mask=\"url(#td24542-mask-17)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.837215, -6.219308)\"/>\n</g>\n<g id=\"td24542-glyph-1-8\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#td24542-mask-18)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.837215, -6.219308)\"/>\n</g>\n<g id=\"td24542-glyph-1-9\">\n<rect x=\"-3.5\" y=\"-5.2\" width=\"42\" height=\"62.4\" mask=\"url(#td24542-mask-19)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.837215, -6.219308)\"/>\n</g>\n<g id=\"td24542-glyph-1-10\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#td24542-mask-20)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.358806, -4.186073)\"/>\n</g>\n<g id=\"td24542-glyph-1-11\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#td24542-mask-21)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.358806, -4.186073)\"/>\n</g>\n<g id=\"td24542-glyph-1-12\">\n<rect x=\"-3.7\" y=\"-0.5\" width=\"44.4\" height=\"6\" mask=\"url(#td24542-mask-22)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0, -2.750848)\"/>\n</g>\n<g id=\"td24542-glyph-1-13\">\n<rect x=\"-0.7\" y=\"-5.2\" width=\"8.4\" height=\"62.4\" mask=\"url(#td24542-mask-23)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.59801, -6.219308)\"/>\n</g>\n<g id=\"td24542-glyph-1-14\">\n<rect x=\"-2.8\" y=\"-3.3\" width=\"33.6\" height=\"39.6\" mask=\"url(#td24542-mask-24)\" transform=\"matrix(0.119602, 0, 0, 0.119602, 0.239204, -3.946868)\"/>\n</g>\n</g>\n<image id=\"td24542-source-52\" x=\"0\" y=\"0\" width=\"23\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAtCAAAAABgoK+3AAAAAmJLR0QA/4ePzL8AAAA9SURBVDiNY2BABv//w1hMKMIIJgtWUYQ4iiADAwMLugA280kQZ2REM58Rm2ryzR8VHxUfDuKMGDmRuuYDAE+FB1xtReYdAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-0\">\n<use xlink:href=\"#td24542-source-52\"/>\n</mask>\n<image id=\"td24542-source-98\" x=\"0\" y=\"0\" width=\"28\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAtCAAAAACYQFRAAAAAAmJLR0QA/4ePzL8AAACgSURBVDiNvdPBEsQgCANQ4///M3vYKiFEO3tZLlXeiLQdMFbE88TO7GWM0ZPolGlYe/Lw9gVs0wuQSD1m27MZrae+W+5iTNsNn4Qk134qUMQ0B6msI2jftWI2dAp/Mtadl7ghfr8zHnIn9+c+l4Utu4o6TOtI1pBNsZhgtYpiBdVo2Yg2xmQ+pXdcrMxW+1q4GA2v+T9mPhnPNvA6gn/GD8HAI0OyHqVfAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-1\">\n<use xlink:href=\"#td24542-source-98\"/>\n</mask>\n<image id=\"td24542-source-144\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAAC0SURBVDiNpZTJDgQhCESrTP//LzOHVkApnGTGQ7fyZAmLhC97fwwJd7ILKZhLKZDLqdkLnmAsDriOEWREzXef4k+3B3iyuDKaWAAAA6BUnLBl0qzd4FXTwxLQMteMyuyRW4m4wb1uvEQ7VZ4edWanVJutXbpbaMqc2+RCv3VCt0zDY1a01x874U8oB9A1K10pGt3wAgDrBJ65NasMPryhno/sXK5iK5r6tmCm7/15w/kcAQA+t1gpSOyhJpEAAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-2\">\n<use xlink:href=\"#td24542-source-144\"/>\n</mask>\n<image id=\"td24542-source-190\" x=\"0\" y=\"0\" width=\"30\" height=\"44\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAsCAAAAABX6VfYAAAAAmJLR0QA/4ePzL8AAAB5SURBVDiN1ZLBCsAgDEPT/v8/u8N0aExLhcFYLx4eL6aigafdhwEAPKB9GK90t3uqxiQLO8Esr7jx1SfhW/RuW4iFPGFFOdwiLGWyWX6wlgduWq69WiSX7FCGx63XcCXDs+hCtUyGJ70AWI6P/vnLWCw0b/pltf/iC3HzFE+nVkvgAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-3\">\n<use xlink:href=\"#td24542-source-190\"/>\n</mask>\n<image id=\"td24542-source-236\" x=\"0\" y=\"0\" width=\"29\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAtCAAAAAB3gj9+AAAAAmJLR0QA/4ePzL8AAACLSURBVDiN3ZTNDoAgDINbwvu/8jzIz+YKnjRGDjrySUu2RgIwyEWgaNLWc7T6S7zo+z9a/aYNmoqaKzi/U9ng1tf2t7KsTO/PSBnOAfTKIhxFQXaJfa9U1oYzt/Sj07+lYry90QW2+jN05SVm65kUBpHxjCbT8IcN15k8SUjShfVnwgyvyJkKEU3gAGZYHk4GCvgEAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-4\">\n<use xlink:href=\"#td24542-source-236\"/>\n</mask>\n<image id=\"td24542-source-282\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNtZTBDsQgCERniP//y+xhxTJCjclmObTi61BElBDz+WZ6bijA6NHX7MCWskELLsbsi6PphesdmhMvDDywtJTGeBCelQE7IYbUZlvuqAjwiVPhawiLQFvlHQDMt5CZyq5w+4zPmFkEgCkh1pFV9gRoKxTOVW3VZn9Y9u6Uf4Z9KqJsj8pPCXU/ndtr4t6Ejb4wPYVvSi9C7ansEIeYLHeCsrVKr6g2q0zm+pT75gOjJixSmvrekwAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-5\">\n<use xlink:href=\"#td24542-source-282\"/>\n</mask>\n<image id=\"td24542-source-328\" x=\"0\" y=\"0\" width=\"28\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAtCAAAAACYQFRAAAAAAmJLR0QA/4ePzL8AAABwSURBVDiNxZNBDgAhCAOt//8zXnQ34khCopGbjq2EFFnZVw3YLSi+tgB2FtiKldY9SfnNBZR/M7s/VRCae8GmyQlNo6nERqGtELpYkFIIfZ5AKYRLEJMZEsI13jlbIYSlObcOQkh7+nI/bT6+a+gSbDSVEVBGQVVtAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-6\">\n<use xlink:href=\"#td24542-source-328\"/>\n</mask>\n<image id=\"td24542-source-374\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAACaSURBVDiNxVRBDsAgCLP8/8/uMEEoBheXZVyEVhmDKppZHysMAVMeRKYmjCU3cKy5m0CqxEWwaBZpgKSynSuZ87/SE6eZIa2wb0nqUVeSCzXDbJ/fo4AEgNwwFZ7Cg2HXMgks2Il54Ze9hmKSqCH+utdQ6lCDKoE6PLByZFgd1KM/auiAPG+ChL0UlJd3d+3rB6OWyUvdLh7GC61AL0CQ8z/CAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-7\">\n<use xlink:href=\"#td24542-source-374\"/>\n</mask>\n<image id=\"td24542-source-420\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAAC0SURBVDiNrVTbDoUwCKPE//9lzgsyLhVjckiMph3dhA5IhPkbgaBTGQThAgWhAgblHM9kUYE/Ro8GER1c+lKyYcjrWJ5CGXiv1L7jCeOZq+xO4j3T/r3nSlohSUdFRGlRN1lrpBFO0ExS1qG7ufuXH/XJmnBEZbYa7cMq5fa4qlAVuYZWirUrtLS3Iz9nhpW/Zp47MDNbPcSSQC5GFKtOjjMwnq5vcgI5JctsLWOzjYy38t8/v5srRwDI1NEAAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-8\">\n<use xlink:href=\"#td24542-source-420\"/>\n</mask>\n<image id=\"td24542-source-466\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAACBSURBVDiN7ZRJDsAgDANt1P9/mR4QoTFhkVB7ak7gkYtZGqJVBgCwCfTEiwyYqQyQ6YxZAZcKunYOlyeQ+tx8St32TEmYFAOjWafOHei/WqdzZ3R0NdZxoB9+Djlm9YHJledXA538K73V5kkkty3XEyhj1xP09a9bzciz1d4kSqkb6scdUShIIIgAAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-9\">\n<use xlink:href=\"#td24542-source-466\"/>\n</mask>\n<image id=\"td24542-source-667\" x=\"0\" y=\"0\" width=\"46\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA0CAAAAADQn1UWAAAAAmJLR0QA/4ePzL8AAADYSURBVEiJvZXBDsQgCESR7P//MntobVkZcIzbcjGVyfBQTJvEsHNtMaVAXsSiHBS0IvksTJTbjWGEXHBHidzSj9w99d9s1TWKaP517hh+kNuotFK+BuO9GrIH7umVbsL8FkY00b1i2YEZbxzQBPeSxcvj24n2myNWszh5ZAE0CvM0DCtHLJFGUXbujs2v6OkP3J26kwGfWC5842djHmwMc0rnPj30Lp832kUEu6+qcLeEoVgOGXOQrq6CvRqGHQCx250zF2UbPey5mblq6xKLtHK6PIeIiHwB5wwmYTORPpwAAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-10\">\n<use xlink:href=\"#td24542-source-667\"/>\n</mask>\n<image id=\"td24542-source-675\" x=\"0\" y=\"0\" width=\"27\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAAAAACLyv3sAAAAAmJLR0QA/4ePzL8AAABSSURBVCiR7Y5BDsAgDMMcxP+/3B22dhFiCO1MLlUwLghP3EPPiGrhtwS00bHW5ggC+pz4e/aFOlAfCKhoeXr9hI3vJHMty463YFqwvzsPO6xyASyLDUOjrmOtAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-11\">\n<use xlink:href=\"#td24542-source-675\"/>\n</mask>\n<image id=\"td24542-source-683\" x=\"0\" y=\"0\" width=\"27\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAkCAAAAABdkx7xAAAAAmJLR0QA/4ePzL8AAACGSURBVCiRxZNLDsAgCERnjPe/Ml1Ylc+wa1I2Gp6MCEgcs3cl4sbgjW6J5Lgp0fIP4d9SLi5dTcycHHjo0uRFTnXEoKAhAnICEnZv+IOlPK1hpR3swGGKyN5ye6ZHKbFZx8uxjgDDWvRtPS0w+XjW4bDCRPnY1BK+eJoVuLXq/7uny+dx9gCi4iEzdjjubAAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-12\">\n<use xlink:href=\"#td24542-source-683\"/>\n</mask>\n<image id=\"td24542-source-691\" x=\"0\" y=\"0\" width=\"27\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAA2CAAAAAATjb1hAAAAAmJLR0QA/4ePzL8AAABcSURBVDiN7ZPBDsAgCENbw///sjugTBwxXDwNT9AnkJDCDgAggtcisdivmbhMzTPdIx+gEV3PF82sxQjo1nMnOnZR6b9RNgLQqNWtrh9aZi/uWJivO7C6v2JX2QPRUg5vYBV+GwAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-13\">\n<use xlink:href=\"#td24542-source-691\"/>\n</mask>\n<image id=\"td24542-source-699\" x=\"0\" y=\"0\" width=\"24\" height=\"44\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAsCAAAAABa9yefAAAAAmJLR0QA/4ePzL8AAABOSURBVDiN7ZI7CsAwDEOfcv87K0PJxwGHTBnaerHxkxEYCQAMgBhVSOotQE72V8yf9sG3/2APnIFZoihWm7WAA/MevvVkpNJxPcXVQVsBbBELTY777mMAAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-14\">\n<use xlink:href=\"#td24542-source-699\"/>\n</mask>\n<image id=\"td24542-source-745\" x=\"0\" y=\"0\" width=\"18\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAiCAAAAAB339YmAAAAAmJLR0QA/4ePzL8AAABKSURBVCiR7c4xDsAgDATBvSj//zIUET7bpECp447RAhZlBqABoDgDVy0A7g6uLIuS+OIzih8TlErteYspJK/aSTu9VDvpqPrpO02ZJAhIKvmAtgAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-15\">\n<use xlink:href=\"#td24542-source-745\"/>\n</mask>\n<image id=\"td24542-source-791\" x=\"0\" y=\"0\" width=\"39\" height=\"56\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA4CAAAAABbSL6nAAAAAmJLR0QA/4ePzL8AAACmSURBVEiJ7ZbBEkAwDER3jf//5ThQVKJZdIaDnjrJ82QMXUSwbN3RbQJojzCBCkkBA8BRoQCMIUZXoseCUbgVLaSWBt0d/HMCDMSQY+DaaGIAUHwZNrcsxWpfY1HTXfEpugs+SSf7enPUxnttvp97xn3+/ev+vXU/D7qfV4qw8jWChjVxZjQlF+ZkyEFTcmup81ioq+HFrVxVc/pe7odo9B/h0NKfACeUKVL4PlxyAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-16\">\n<use xlink:href=\"#td24542-source-791\"/>\n</mask>\n<image id=\"td24542-source-837\" x=\"0\" y=\"0\" width=\"44\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA0CAAAAADUaoUrAAAAAmJLR0QA/4ePzL8AAACsSURBVEiJ7dVBDoUgDARQarz/letGaAu0HSLRjSz1ZZyf/DDExTk0eeTiiQ9xzxNseYo1r7ivxzPtYePryyP4fAvgHKvPMYAlnAHc/ZYMmyIp1tF5Mkk0WgNMVtG7kyV6e/IaBv51w+GPO//4VUwQhm6kBzUIwu063V1DbvAcqw2AaxCC9bhkuFoCsLHlhCrcF0eAx2nzcDiawZGhCDuXxU0x0xYm94Pu48n0X9xeHHOQt5aYAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-17\">\n<use xlink:href=\"#td24542-source-837\"/>\n</mask>\n<image id=\"td24542-source-883\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAAC5SURBVEiJzZVBDgMhDANx1f9/mR5WgQQldipRqdxWDAYSm8Uc6cD5XXAnyzhPcm6TL44NkzE9pLN7JucCC74v4Bew83mQ3sMdht8XS1DUZSmq+v059zQFitt9ppzrPeO8a96aAuO2VvRfNaxx9b4jGIZxv8xlkqOZkWXejsKU/Vhxk3lDP2/f5mhe870JXssRmlxXr8vNu3pmk64ez8f6K7TeA6EXnKpz/rRE5Ui9G5Fq++rCuxGT+gF7zCV5FzKLQAAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-18\">\n<use xlink:href=\"#td24542-source-883\"/>\n</mask>\n<image id=\"td24542-source-929\" x=\"0\" y=\"0\" width=\"35\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAA0CAAAAAAlYd6mAAAAAmJLR0QA/4ePzL8AAAA4SURBVDiNY/zPQAgwMhFUwsBATzUsUJpxkLhnVM3wU8NIKF8wDj43j+aLUTVDRQ3B/DUI3UyMGgD5egNr6oGdlQAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-19\">\n<use xlink:href=\"#td24542-source-929\"/>\n</mask>\n<image id=\"td24542-source-1013\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAAB0SURBVDiN1ZM7DsAgDEPt3v/O6VCI8meoOpSFwMNRAIcwQ3ZANzmkgDV6OHumypItKP7oXjPGBpM1AyAWBra2WoarLFOVvXBWzmmHrC/S/gt+9bbDZ4sqszkFrYfkYE0Hk/+943O1LWXfgrRF5N71F4jNdgN24B8pp2f/NAAAAABJRU5ErkJggg==\"/>\n<mask id=\"td24542-mask-20\">\n<use xlink:href=\"#td24542-source-1013\"/>\n</mask>\n<image id=\"td24542-source-1021\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAACFSURBVDiNvZPBDsAgCEOp2f//MjuoCKwQT/Ni7JOiCYWcpXODCcjIqyDIZFC2dHA2ATzLB5BX6hfCeeoUBmN7DaJZ88EL0VRGW9ZRBNVz9MDW9lf4iJQ/ubEt/tNXFu18JfdtbXE1CcRY2fTZbT+qZP68ZQpHGQdyN7KUgVjGwxsimPgWX0eXITK3gRqSAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-21\">\n<use xlink:href=\"#td24542-source-1021\"/>\n</mask>\n<image id=\"td24542-source-1067\" x=\"0\" y=\"0\" width=\"37\" height=\"5\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAFCAAAAADnWXrpAAAAAmJLR0QA/4ePzL8AAAATSURBVAiZY/zPQARgIkbRAKgCAMC3AQknkirRAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-22\">\n<use xlink:href=\"#td24542-source-1067\"/>\n</mask>\n<image id=\"td24542-source-1151\" x=\"0\" y=\"0\" width=\"7\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAA0CAAAAABj130MAAAAAmJLR0QA/4ePzL8AAAAeSURBVBiVY/zPwMDAwMDAxEAaTWvAyPCfLHcNNxoA2fECTc+qt30AAAAASUVORK5CYII=\"/>\n<mask id=\"td24542-mask-23\">\n<use xlink:href=\"#td24542-source-1151\"/>\n</mask>\n<image id=\"td24542-source-1159\" x=\"0\" y=\"0\" width=\"28\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAhCAAAAADvgpQ7AAAAAmJLR0QA/4ePzL8AAABtSURBVCiRtZPBFkAhBETN+/9/rk2vMEOrWuEezBGwYeX7avQKAiK4JMIE3KzvyZknkaFjBD3LPeMstSAoQSMG0bAAM/M9+WNZEJRJRZ0t2HYU+3vqLYuC0qRRF11+wQwNu65JmWjobgUNe3VIE2yiFS+2AiSuAAAAAElFTkSuQmCC\"/>\n<mask id=\"td24542-mask-24\">\n<use xlink:href=\"#td24542-source-1159\"/>\n</mask>\n</defs>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-0\" x=\"46.909419\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-1\" x=\"61.038901\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-2\" x=\"75.168384\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-3\" x=\"89.298864\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-4\" x=\"103.428347\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-5\" x=\"117.55783\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-6\" x=\"131.687313\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-7\" x=\"145.817793\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-8\" x=\"159.947276\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-0\" x=\"171.967256\" y=\"11.488616\"/>\n<use xlink:href=\"#td24542-glyph-0-9\" x=\"176.187705\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-0\" x=\"186.096738\" y=\"11.488616\"/>\n<use xlink:href=\"#td24542-glyph-0-0\" x=\"190.317188\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-0-0\" x=\"200.226221\" y=\"11.488616\"/>\n<use xlink:href=\"#td24542-glyph-0-1\" x=\"204.446671\" y=\"11.488616\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"6.382237\" y=\"25.129604\"/>\n<use xlink:href=\"#td24542-glyph-1-1\" x=\"12.51902\" y=\"25.129604\"/>\n<use xlink:href=\"#td24542-glyph-1-2\" x=\"17.263634\" y=\"25.129604\"/>\n<use xlink:href=\"#td24542-glyph-1-3\" x=\"21.67695\" y=\"25.129604\"/>\n<use xlink:href=\"#td24542-glyph-1-4\" x=\"26.421565\" y=\"25.129604\"/>\n<use xlink:href=\"#td24542-glyph-1-2\" x=\"29.73813\" y=\"25.129604\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-5\" x=\"33.892219\" y=\"25.129604\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"46.085955\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"60.080852\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"73.959109\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"88.343806\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"102.780343\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"116.734366\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"130.729264\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"144.60752\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"158.992217\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"173.428754\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"187.382778\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"201.377675\" y=\"24.992028\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"23.35297\" y=\"37.990992\"/>\n<use xlink:href=\"#td24542-glyph-1-10\" x=\"28.869017\" y=\"37.990992\"/>\n<use xlink:href=\"#td24542-glyph-1-11\" x=\"32.951036\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"46.085955\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"60.080852\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"73.959109\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"88.088592\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"102.780343\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"116.734366\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"130.732254\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"144.60752\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"158.992217\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"173.428754\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-12\" x=\"188.020813\" y=\"36.860474\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"201.377675\" y=\"37.990992\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"22.008112\" y=\"50.989957\"/>\n<use xlink:href=\"#td24542-glyph-1-2\" x=\"27.875789\" y=\"50.989957\"/>\n<use xlink:href=\"#td24542-glyph-1-1\" x=\"32.289106\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"46.085955\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"60.083843\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"73.959109\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"88.343806\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"102.470298\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"116.734366\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"130.729264\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-12\" x=\"145.631367\" y=\"49.859439\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"158.992217\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"173.428754\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"187.382778\" y=\"50.989957\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-12\" x=\"202.150295\" y=\"49.859439\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"15.381521\" y=\"63.989919\"/>\n<use xlink:href=\"#td24542-glyph-1-11\" x=\"22.021828\" y=\"63.989919\"/>\n<use xlink:href=\"#td24542-glyph-1-1\" x=\"26.103846\" y=\"63.989919\"/>\n<use xlink:href=\"#td24542-glyph-1-13\" x=\"30.848461\" y=\"63.989919\"/>\n<use xlink:href=\"#td24542-glyph-1-14\" x=\"33.040767\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"46.085955\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"60.080852\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"74.214323\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-8\" x=\"88.343806\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"102.780343\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"116.734366\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"130.729264\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-7\" x=\"144.60752\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"159.122815\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-9\" x=\"173.428754\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-6\" x=\"187.382778\" y=\"63.989919\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#td24542-glyph-1-0\" x=\"201.377675\" y=\"63.989919\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 7.085442 6.517974 L 7.085442 -45.638262 L 177.166255 -45.638262 L 177.166255 6.517974 Z M 7.085442 6.517974 \" transform=\"matrix(0.99693, 0, 0, -0.99693, 34.889439, 21.888586)\"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 7.085442 -6.518146 L 177.166255 -6.518146 \" transform=\"matrix(0.99693, 0, 0, -0.99693, 34.889439, 21.888586)\"/>\n</svg>",
+  "siklar": {
+   "A": "123",
+   "B": "129",
+   "C": "135",
+   "D": "147",
+   "E": "150"
+  },
+  "cevap": {
+   "sik": "A",
+   "deger": "123"
+  },
+  "celdiriciler": {
+   "D": "Yanlışların 2 puanını çıkarmak yerine toplama eklemiş.",
+   "B": "Yanlış başına 2 yerine 1 puan düşmüş.",
+   "C": "Yanlışlar için hiç puan düşmemiş.",
+   "E": "Boşları doğru sayıp yanlışlar için de puan düşmemiş: 3 × 10 × 5 = 150."
+  },
+  "celTur": {
+   "D": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Üç öğrencinin toplam puanı.",
+  "bilgi": [
+   {
+    "ad": "Optik form puanı",
+    "ifade": "doğru, yanlış ve boş cevaplar ayrı sayılır; puan, doğru sayısı ile yanlış sayısının kural katsayılarıyla bulunur. Örnek: doğruya 3 puan, yanlışa −1 puan verilen testte 4 doğru, 1 yanlış, 2 boş 11 puandır"
+   }
+  ],
+  "ipuclari": [
+   "Her öğrenci için önce cevapları anahtarla karşılaştırıp doğru, yanlış ve boş sayısını ayrı bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Ece",
+    "aciklama": "9 doğru, 2 yanlış, 1 boş.",
+    "islem": "45 − 4 = 41"
+   },
+   {
+    "baslik": "Can",
+    "aciklama": "8 doğru, 2 yanlış, 2 boş.",
+    "islem": "40 − 4 = 36"
+   },
+   {
+    "baslik": "Deniz",
+    "aciklama": "10 doğru, 2 yanlış, 0 boş.",
+    "islem": "50 − 4 = 46"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Puanlar toplanır.",
+    "islem": "41 + 36 + 46 = 123"
+   }
+  ],
+  "puf": "Her öğrencide doğru, yanlış, boş toplamı 12 olmalı.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-07 · 9/2/1, 8/2/2, 10/2/0; doğru 5, yanlış −2",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0008",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Puan Durumu",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Puan durumu tablosundaki eksik değerleri maç ve puan ilişkisinden çözüp toplam puanı bulur.",
+  "tipId": "syb-tablo",
+  "tip": "Tablo ve sayılar",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "tablo",
+  "adimSayisi": 5,
+  "metin": "Bir turnuvada her takım 10 maç oynamış ve puan durumunun bir bölümü aşağıdaki tabloda verilmiştir; “?” ile gösterilen değerler yazılmamıştır. Galibiyet 3 puan, beraberlik 1 puan, mağlubiyet 0 puan getirmektedir. C takımının beraberlik sayısı, A takımının beraberlik sayısına eşittir.\nBuna göre, A, B ve C takımlarının toplam puanı kaçtır?",
+  "sekil": "<svg viewBox=\"0 0 484 108\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" font-family=\"Plus Jakarta Sans,system-ui,sans-serif\" font-size=\"12\" role=\"img\"><rect x=\"2\" y=\"2\" width=\"480\" height=\"26\" style=\"fill:currentColor;stroke:none\" fill-opacity=\".08\"/><text x=\"31.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Takım</text><text x=\"101.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Oynadığı</text><text x=\"187.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Galibiyet</text><text x=\"281.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Beraberlik</text><text x=\"379.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Mağlubiyet</text><text x=\"455.0\" y=\"19.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">Puan</text><text x=\"31.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">A</text><text x=\"101.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><text x=\"187.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">6</text><text x=\"281.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"379.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">1</text><text x=\"455.0\" y=\"45.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"31.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">B</text><text x=\"101.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><text x=\"187.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"281.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"379.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">2</text><text x=\"455.0\" y=\"71.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">18</text><text x=\"31.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none;font-weight:700\">C</text><text x=\"101.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">10</text><text x=\"187.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"281.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><text x=\"379.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">4</text><text x=\"455.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"11\" style=\"fill:currentColor;stroke:none\">?</text><line x1=\"2\" y1=\"2\" x2=\"482\" y2=\"2\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"28\" x2=\"482\" y2=\"28\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"54\" x2=\"482\" y2=\"54\" stroke-width=\"1\"/><line x1=\"2\" y1=\"80\" x2=\"482\" y2=\"80\" stroke-width=\"1\"/><line x1=\"2\" y1=\"106\" x2=\"482\" y2=\"106\" stroke-width=\"1.4\"/><line x1=\"2\" y1=\"2\" x2=\"2\" y2=\"106\" stroke-width=\"1\"/><line x1=\"60\" y1=\"2\" x2=\"60\" y2=\"106\" stroke-width=\"1\"/><line x1=\"142\" y1=\"2\" x2=\"142\" y2=\"106\" stroke-width=\"1\"/><line x1=\"232\" y1=\"2\" x2=\"232\" y2=\"106\" stroke-width=\"1\"/><line x1=\"330\" y1=\"2\" x2=\"330\" y2=\"106\" stroke-width=\"1\"/><line x1=\"428\" y1=\"2\" x2=\"428\" y2=\"106\" stroke-width=\"1\"/><line x1=\"482\" y1=\"2\" x2=\"482\" y2=\"106\" stroke-width=\"1\"/></svg>",
+  "siklar": {
+   "A": "39",
+   "B": "48",
+   "C": "49",
+   "D": "50",
+   "E": "51"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "51"
+  },
+  "celdiriciler": {
+   "A": "C takımını hesaba katmamış: 21 + 18.",
+   "B": "C takımının yalnız galibiyetlerinden aldığı puanı (9) eklemiş.",
+   "C": "C takımını 10 puan almış sanmış.",
+   "D": "C takımını 3 galibiyet + 2 beraberlik sanıp 11 puanlı hesaplamış: 21 + 18 + 11 = 50."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "Üç takımın toplam puanı.",
+  "bilgi": [
+   {
+    "ad": "Puan durumu tablosu",
+    "ifade": "oynanan maç, galibiyet, beraberlik ve mağlubiyetlerin toplamıdır; puan galibiyet ile beraberliğe verilen katsayılarla bulunur. Örnek: galibiyet 3, beraberlik 1 puan ise 2 galibiyet 1 beraberlik 7 puandır"
+   }
+  ],
+  "ipuclari": [
+   "A takımının beraberlik sayısını maç sayısından bul; sonra B ve C için eksik değerleri sırayla çöz."
+  ],
+  "adimlar": [
+   {
+    "baslik": "A takımı",
+    "aciklama": "10 − 6 − 1 beraberlik; 3 × 6 + 3 puan.",
+    "islem": "B = 3, P = 21"
+   },
+   {
+    "baslik": "B takımı",
+    "aciklama": "G + B = 8 ve 3G + B = 18.",
+    "islem": "G = 5, B = 3"
+   },
+   {
+    "baslik": "C takımı",
+    "aciklama": "Beraberlik 3 ise galibiyet 10 − 4 − 3 = 3.",
+    "islem": "P = 3 × 3 + 3 = 12"
+   },
+   {
+    "baslik": "Toplam",
+    "aciklama": "Üç takımın puanı.",
+    "islem": "21 + 18 + 12 = 51"
+   },
+   {
+    "baslik": "Kontrol",
+    "aciklama": "Her takımda G + B + M = 10.",
+    "islem": "Tutarlı"
+   }
+  ],
+  "puf": "Önce beraberliği maç sayısından bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-08 · A 21, B 18, C 12 puan",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0009",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Yılan Dizilim",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Yılan biçimli sayı dizilimini sürdürerek verilen sayının hemen altındaki sayıyı bulur.",
+  "tipId": "syb-sira",
+  "tip": "Sıra ve dizilim",
+  "zorluk": "orta",
+  "seviye": "ÖSYM",
+  "kalip": "hikâyeli",
+  "adimSayisi": 3,
+  "metin": "Bir fidanlıkta fidan sıraları numaralandırılırken şekildeki yılan biçimli düzen kullanılmıştır: 1’den başlayan doğal sayılar her satırda 5 sayı olacak biçimde, bir satır soldan sağa, sonraki satır sağdan sola yazılarak sürdürülür ve bu düzen sonsuza kadar aynı biçimde devam eder. Fidanlık sahibi 2026 numaralı fidanın hemen altındaki fidanı sulayacaktır.\nBuna göre, sulanacak fidanın numarası kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:255px;height:auto\" role=\"img\" viewBox=\"0 0 134.334 103.513\">\n<defs>\n<g>\n<g id=\"t91d692-glyph-0-0\">\n<rect x=\"-2.5\" y=\"-5.1\" width=\"30\" height=\"61.2\" mask=\"url(#t91d692-mask-0)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.716271, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-1\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#t91d692-mask-1)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-2\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t91d692-mask-2)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-3\">\n<rect x=\"-3.3\" y=\"-4.9\" width=\"39.6\" height=\"58.8\" mask=\"url(#t91d692-mask-3)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.238757, -5.84955)\"/>\n</g>\n<g id=\"t91d692-glyph-0-4\">\n<rect x=\"-3\" y=\"-5.1\" width=\"36\" height=\"61.2\" mask=\"url(#t91d692-mask-4)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -5.84955)\"/>\n</g>\n<g id=\"t91d692-glyph-0-5\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t91d692-mask-5)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-6\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t91d692-mask-6)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-7\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t91d692-mask-7)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-8\">\n<rect x=\"-3.1\" y=\"-5\" width=\"37.2\" height=\"60\" mask=\"url(#t91d692-mask-8)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -5.84955)\"/>\n</g>\n<g id=\"t91d692-glyph-0-9\">\n<rect x=\"-3.1\" y=\"-5.3\" width=\"37.2\" height=\"63.6\" mask=\"url(#t91d692-mask-9)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.358136, -6.088307)\"/>\n</g>\n<g id=\"t91d692-glyph-0-10\">\n<rect x=\"-0.7\" y=\"-0.7\" width=\"8.4\" height=\"8.4\" mask=\"url(#t91d692-mask-10)\" transform=\"matrix(0.119379, 0, 0, 0.119379, 0.83565, -0.83565)\"/>\n</g>\n</g>\n<image id=\"t91d692-source-52\" x=\"0\" y=\"0\" width=\"25\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAzCAAAAABHtfzvAAAAAmJLR0QA/4ePzL8AAABHSURBVDiN7ZQxDgAgCMSq4f9fxkkj5BxMjBNMl3bpBIRzX7NHsW078N1EPk2mAKagKLg1TRZkCmAKPigoU6bMO9Pk//hZMAAdAQhrKqx3IwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t91d692-mask-0\">\n<use xlink:href=\"#t91d692-source-52\"/>\n</mask>\n<image id=\"t91d692-source-98\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNpZQ7AsAgCEMb739nO7TykQQHmSqvoCIBj9lcH3AfCkxeEBj84HQBCPoTON33QcJ+3ukclUY+6l3jAt+viYbjjKe1QYPN0UfPUQJz8v92EnOD4S69ZLWWlR4udsDHorZb98khsDVUF63K7SVh0aGvdXLrc5ma4fQWBeeX4h28C1jQDZceQKFCTozGFdMLWrpNJqk1TtNAIfVHS8Pgoo2BltpkEmICH4nLrjR2iV+AjidO0OjDUwAAAABJRU5ErkJggg==\"/>\n<mask id=\"t91d692-mask-1\">\n<use xlink:href=\"#t91d692-source-98\"/>\n</mask>\n<image id=\"t91d692-source-144\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADGSURBVDiN1ZXBEsMgCERZJ///y/TQoCsumvRWZjKZ8gBBCIUN8fsN0iHDpIaiBFDgIKjwjcA4BcP3WdMmDeIHF0W6xnms5VnrxwhxsybBsG9mhsI9+AZX8f3AT/49y9/8R8Nk6nTlyp/bLfynfmaeT16bPgeu6gu/a0vf1K/Pf1sfW2wHz2K+9wZP5rMWP85HObr+JP4/cL2c4oJbtb0o/s4AbuoWU/9yBJ4/sd+m/ZfX57I/q/zGfEqD6fs77P/j/0dOu8sHvvQsVBIQF9MAAAAASUVORK5CYII=\"/>\n<mask id=\"t91d692-mask-2\">\n<use xlink:href=\"#t91d692-source-144\"/>\n</mask>\n<image id=\"t91d692-source-190\" x=\"0\" y=\"0\" width=\"33\" height=\"49\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAxCAAAAABxWZ8oAAAAAmJLR0QA/4ePzL8AAAB/SURBVDiN7ZQxDsAwCAMN//8zHdJWCoYQKlXqUBaW09lhiIDGzi1jKRNumLCSuPUZ4RVEENBvalSj7eAWjjBwSDMlVPQcUc2JGACFdFIyRcORKi4iB7ZTFopdx0oBzc9NKYkCWmTsNS0U0HVNAFIST36HN4jwldMBvtL0J+Y5AHVvFVog9JvKAAAAAElFTkSuQmCC\"/>\n<mask id=\"t91d692-mask-3\">\n<use xlink:href=\"#t91d692-source-190\"/>\n</mask>\n<image id=\"t91d692-source-236\" x=\"0\" y=\"0\" width=\"30\" height=\"51\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAzCAAAAAClaeeWAAAAAmJLR0QA/4ePzL8AAACTSURBVDiN5ZQxFoAwCEMTXu9/ZRy0FWjB56CDshT9ArHGEoAiCUIytMejuBkdb8/+K27uajcGl1hN0p9gYibWs/VC2injbE6rgQHTV4KuOWOmFt/w2iiXcCdES0lRdL0tH8fJtvRPKsW5dTQvuCzhsIugLOf0Yziv0eQzBSejjknRyGEsovEj7MvEGVZdwZVg95Ib4YIfXnocVDYAAAAASUVORK5CYII=\"/>\n<mask id=\"t91d692-mask-4\">\n<use xlink:href=\"#t91d692-source-236\"/>\n</mask>\n<image id=\"t91d692-source-282\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAACZSURBVDiN7ZXNDoAwCIMp8f1fGQ/up2NseDDxoCZG18+0kGwIocuuB0iCh05GiLuOGDeABa4EA8a0YMXXgnLPbXVFg075XSNMKw1r7zG6hKM/nI7G1/Yidts/4T6+KbqLF7GH8n/+UY6yv6cNWOT364sLrOJt//EcGfH57FF492cD40/S+bebn0dc1uifzud8/qf/j6gPETkBSo4iXB9pR80AAAAASUVORK5CYII=\"/>\n<mask id=\"t91d692-mask-5\">\n<use xlink:href=\"#t91d692-source-282\"/>\n</mask>\n<image id=\"t91d692-source-328\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADKSURBVDiNtZXdFoQgCIQZTu//yuyFP0041B7b9cbkixENCEYj2gQyIcNkhcJkh8YToMCD4IKxLNiSY4GZuToWHdCVkXb14c6YVi7xGYcrO42KDz2/kTeLbf1Hjpf+bcTf4nvLe1L4NcF+ph+JVxt4mTlJPyQ2qPymd9eKGQnbpkPLpvoV1dtVPG2dQ/FsMDPQ6pgeovnUid9Dwtf3X42ysDrc8z+Ldsufat5tvX5uCf37IlPur/z+lFq4jgs3vbn0R36Mgor/R7qQDzdpMVnmhdeXAAAAAElFTkSuQmCC\"/>\n<mask id=\"t91d692-mask-6\">\n<use xlink:href=\"#t91d692-source-328\"/>\n</mask>\n<image id=\"t91d692-source-374\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAAC6SURBVDiNzZXbDsQgCEQZ0///ZfZhq8IA6l6yWZKmkRNGFEohxvT5gnGBIbmRUQNQ4E5Q4RvBYhLD/cS0p+eKBxERDI1WbN5lWhZu1m0RLqI9nsOHpwXg7Uc8HkI7j6lPw9BnAXO/tQBcfUP9wP3h64/oInErqhn1ySnDF+LX/e8a2C1Ozh+wcSHF0/ml/i0N6e4zgz/p77c58usdF/y5/ln9qEyuVVfz72R+bufvwfe1mf/b/welPewBFAE2TzVOgCAAAAAASUVORK5CYII=\"/>\n<mask id=\"t91d692-mask-7\">\n<use xlink:href=\"#t91d692-source-374\"/>\n</mask>\n<image id=\"t91d692-source-420\" x=\"0\" y=\"0\" width=\"31\" height=\"50\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAyCAAAAACB918NAAAAAmJLR0QA/4ePzL8AAAB+SURBVDiNxZRRDsAgCEPX3f/O7Mdsii0Rsk3/zEsrIAA7wnPG+HMOSSzmDcf+kHpr5kJ/V43rn9go70Kv5N9nTvhQmLz/WNe03n2L1/t24/5QfOrWUn9B8XkYmB6Kk1kqxAfF2ajm/aE43QSvzzcU54to9/5Z7n9z95/e380vK5gTV5H+Bt0AAAAASUVORK5CYII=\"/>\n<mask id=\"t91d692-mask-8\">\n<use xlink:href=\"#t91d692-source-420\"/>\n</mask>\n<image id=\"t91d692-source-466\" x=\"0\" y=\"0\" width=\"31\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA1CAAAAACc8m+1AAAAAmJLR0QA/4ePzL8AAADHSURBVDiNtZTbEsIwCEQD4///Mj40NAvdTaujeXAMh1uAYqOdyD8Gvxd4spekx/E9Bk7x8p/YqsAqrukugcJTIjHmz/AhC4mH7XHxv+XcfLgq3EP/dlNH7C9EitTA/gbR1f2dcTM8eQXOF2aJqhZVv7/CGYapcIbhsq9/yPqmurd7P4/7zwOE791/7/9XXGZW7OUM/z9/keAcOC/Xz/2r7z9lwv4M53Tql3O+X1fEanvddnaxHUW37YWO+zruGF8dBNeqkDX8BpNTL13R54DNAAAAAElFTkSuQmCC\"/>\n<mask id=\"t91d692-mask-9\">\n<use xlink:href=\"#t91d692-source-466\"/>\n</mask>\n<image id=\"t91d692-source-512\" x=\"0\" y=\"0\" width=\"7\" height=\"7\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAAAAADhOQgPAAAAAmJLR0QA/4ePzL8AAAAUSURBVAiZY/zPwMDAwMDAxEAaDQA4iQENDkJBFQAAAABJRU5ErkJggg==\"/>\n<mask id=\"t91d692-mask-10\">\n<use xlink:href=\"#t91d692-source-512\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -12.755193 -9.922477 L 12.757388 -9.922477 L 12.757388 9.921514 L -12.755193 9.921514 Z M -12.755193 -9.922477 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"13.771723\" y=\"16.153015\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.757388 -9.922477 L 38.266043 -9.922477 L 38.266043 9.921514 L 12.757388 9.921514 Z M 12.757388 -9.922477 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-1\" x=\"39.156868\" y=\"16.153015\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 38.269969 -9.922477 L 63.778624 -9.922477 L 63.778624 9.921514 L 38.269969 9.921514 Z M 38.269969 -9.922477 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-2\" x=\"64.543009\" y=\"16.153015\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 63.778624 -9.922477 L 89.291205 -9.922477 L 89.291205 9.921514 L 63.778624 9.921514 Z M 63.778624 -9.922477 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-3\" x=\"89.92915\" y=\"16.153015\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.291205 -9.922477 L 114.803785 -9.922477 L 114.803785 9.921514 L 89.291205 9.921514 Z M 89.291205 -9.922477 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-4\" x=\"115.315291\" y=\"16.153015\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -12.755193 -29.762542 L 12.757388 -29.762542 L 12.757388 -9.922477 L -12.755193 -9.922477 Z M -12.755193 -29.762542 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"11.479089\" y=\"35.897127\"/>\n<use xlink:href=\"#t91d692-glyph-0-5\" x=\"16.063226\" y=\"35.897127\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.757388 -29.762542 L 38.266043 -29.762542 L 38.266043 -9.922477 L 12.757388 -9.922477 Z M 12.757388 -29.762542 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-6\" x=\"39.156868\" y=\"35.897127\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 38.269969 -29.762542 L 63.778624 -29.762542 L 63.778624 -9.922477 L 38.269969 -9.922477 Z M 38.269969 -29.762542 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-7\" x=\"64.543009\" y=\"35.897127\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 63.778624 -29.762542 L 89.291205 -29.762542 L 89.291205 -9.922477 L 63.778624 -9.922477 Z M 63.778624 -29.762542 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-8\" x=\"89.92915\" y=\"35.897127\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.291205 -29.762542 L 114.803785 -29.762542 L 114.803785 -9.922477 L 89.291205 -9.922477 Z M 89.291205 -29.762542 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-9\" x=\"115.315291\" y=\"35.897127\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -12.755193 -49.606533 L 12.757388 -49.606533 L 12.757388 -29.762542 L -12.755193 -29.762542 Z M -12.755193 -49.606533 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"11.479089\" y=\"55.642235\"/>\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"16.063226\" y=\"55.642235\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.757388 -49.606533 L 38.266043 -49.606533 L 38.266043 -29.762542 L 12.757388 -29.762542 Z M 12.757388 -49.606533 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"36.86523\" y=\"55.642235\"/>\n<use xlink:href=\"#t91d692-glyph-0-1\" x=\"41.449367\" y=\"55.642235\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 38.269969 -49.606533 L 63.778624 -49.606533 L 63.778624 -29.762542 L 38.269969 -29.762542 Z M 38.269969 -49.606533 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"62.251371\" y=\"55.642235\"/>\n<use xlink:href=\"#t91d692-glyph-0-2\" x=\"66.835508\" y=\"55.642235\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 63.778624 -49.606533 L 89.291205 -49.606533 L 89.291205 -29.762542 L 63.778624 -29.762542 Z M 63.778624 -49.606533 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"87.637511\" y=\"55.642235\"/>\n<use xlink:href=\"#t91d692-glyph-0-3\" x=\"92.221649\" y=\"55.642235\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.291205 -49.606533 L 114.803785 -49.606533 L 114.803785 -29.762542 L 89.291205 -29.762542 Z M 89.291205 -49.606533 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"113.023652\" y=\"55.642235\"/>\n<use xlink:href=\"#t91d692-glyph-0-4\" x=\"117.60779\" y=\"55.642235\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -12.755193 -69.450523 L 12.757388 -69.450523 L 12.757388 -49.606533 L -12.755193 -49.606533 Z M -12.755193 -69.450523 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-1\" x=\"11.479089\" y=\"75.387343\"/>\n<use xlink:href=\"#t91d692-glyph-0-5\" x=\"16.063226\" y=\"75.387343\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 12.757388 -69.450523 L 38.266043 -69.450523 L 38.266043 -49.606533 L 12.757388 -49.606533 Z M 12.757388 -69.450523 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"36.86523\" y=\"75.387343\"/>\n<use xlink:href=\"#t91d692-glyph-0-6\" x=\"41.449367\" y=\"75.387343\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 38.269969 -69.450523 L 63.778624 -69.450523 L 63.778624 -49.606533 L 38.269969 -49.606533 Z M 38.269969 -69.450523 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"62.251371\" y=\"75.387343\"/>\n<use xlink:href=\"#t91d692-glyph-0-7\" x=\"66.835508\" y=\"75.387343\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 63.778624 -69.450523 L 89.291205 -69.450523 L 89.291205 -49.606533 L 63.778624 -49.606533 Z M 63.778624 -69.450523 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"87.637511\" y=\"75.387343\"/>\n<use xlink:href=\"#t91d692-glyph-0-8\" x=\"92.221649\" y=\"75.387343\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 89.291205 -69.450523 L 114.803785 -69.450523 L 114.803785 -49.606533 L 89.291205 -49.606533 Z M 89.291205 -69.450523 \" transform=\"matrix(0.995067, 0, 0, -0.995067, 16.063361, 13.255381)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-0\" x=\"113.023652\" y=\"75.387343\"/>\n<use xlink:href=\"#t91d692-glyph-0-9\" x=\"117.60779\" y=\"75.387343\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-10\" x=\"65.561957\" y=\"88.806812\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-10\" x=\"65.561957\" y=\"92.772153\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t91d692-glyph-0-10\" x=\"65.561957\" y=\"96.737494\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "2026",
+   "B": "2030",
+   "C": "2031",
+   "D": "2034",
+   "E": "2035"
+  },
+  "cevap": {
+   "sik": "E",
+   "deger": "2035"
+  },
+  "celdiriciler": {
+   "A": "2026’nın altında da aynı sayıyı sanmış.",
+   "B": "2026 ile aynı satırın sol ucundaki sayıyı almış: 2026 + 4.",
+   "C": "Yönü unutup altındaki sayıyı 2026 + 5 saymış.",
+   "D": "Sütunu bir kaydırıp 2034’ü bulmuş."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "D": "dikkat"
+  },
+  "istenen": "2026’nın hemen altındaki sayı.",
+  "bilgi": [
+   {
+    "ad": "Yılan dizilim",
+    "ifade": "satır sayısı ve yön, sayının yerini belirler; her satırda sütun sayısı kadar sayı bulunur ve yön satırdan satıra değişir. Örnek: 3 sütunlu yılan dizilimde 1 2 3 üstte, 6 5 4 ikinci satırdadır"
+   }
+  ],
+  "ipuclari": [
+   "2026’nın hangi satırda olduğunu ve bu satırın hangi yönde yazıldığını bul."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Satır",
+    "aciklama": "2026 ÷ 5 yukarı yuvarlanır.",
+    "islem": "406. satır (çift; sağdan sola)"
+   },
+   {
+    "baslik": "Sütun",
+    "aciklama": "Çift satırda satırın ilk sayısı (2026) en sağdadır.",
+    "islem": "2026, 5. sütunda"
+   },
+   {
+    "baslik": "Alt satır",
+    "aciklama": "407. satır tek, soldan sağa: 2031, 2032, 2033, 2034, 2035.",
+    "islem": "5. sütunda 2035"
+   }
+  ],
+  "puf": "Satırın yönü sütunu belirler.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-09 · 5 sütun, yılan dizilim; 2026’nın altı 2035",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ },
+ {
+  "id": "tytmat-sayisekb-0010",
+  "ders": "TYT Matematik",
+  "konu": "Sayı Problemleri · Cebirsel Venn Şeması",
+  "k": "prob|Sayı Problemleri",
+  "kazanim": "Venn şemasındaki cebirsel bölge ifadelerinden iki koşulla x ve y’yi bulup istenen bölgeyi hesaplar.",
+  "tipId": "syb-venn",
+  "tip": "Cebirsel Venn şeması",
+  "zorluk": "zor",
+  "seviye": "ÖSYM",
+  "kalip": "yeni nesil",
+  "adimSayisi": 4,
+  "metin": "Şekildeki Venn şemasında A ve B kümelerinin bölgelerindeki eleman sayıları x ve y cinsinden verilmiştir; dikdörtgen evrensel kümeyi gösterir ve evrensel kümenin 60 elemanı vardır. Bölgelerdeki ifadeler o bölgedeki eleman sayısını belirtir, x ve y pozitif tam sayıdır. A ∪ B kümesinin eleman sayısı, hiçbir kümede olmayan eleman sayısının 5 katıdır.\nBuna göre, yalnız B kümesinde bulunan eleman sayısı kaçtır?",
+  "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:422px;height:auto\" role=\"img\" viewBox=\"0 0 222.208 125.83\">\n<defs>\n<g>\n<g id=\"t770373-glyph-0-0\">\n<rect x=\"-4.6\" y=\"-5.2\" width=\"55.2\" height=\"62.4\" mask=\"url(#t770373-mask-0)\" transform=\"matrix(0.119544, 0, 0, 0.119544, 0.239089, -6.216306)\"/>\n</g>\n<g id=\"t770373-glyph-0-1\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#t770373-mask-1)\" transform=\"matrix(0.119544, 0, 0, 0.119544, 0.83681, -6.216306)\"/>\n</g>\n<g id=\"t770373-glyph-1-0\">\n<path d=\"M 2.453125 -0.671875 C 2.34375 -0.671875 2.234375 -0.65625 2.125 -0.65625 L 1.140625 -0.65625 C 1.40625 -0.921875 2.328125 -1.765625 2.609375 -2 C 3.546875 -2.765625 4.125 -3.25 4.125 -4.109375 C 4.125 -5.140625 3.390625 -6.046875 2.171875 -6.046875 C 1.21875 -6.046875 0.65625 -5.5 0.390625 -4.609375 L 0.796875 -4.09375 C 1.03125 -5.140625 1.5 -5.4375 2.046875 -5.4375 C 2.84375 -5.4375 3.34375 -4.828125 3.34375 -4.09375 C 3.34375 -3.28125 2.765625 -2.765625 2.109375 -2.171875 L 0.453125 -0.609375 L 0.453125 0 L 4.125 0 L 4.125 -0.671875 Z M 2.453125 -0.671875 \"/>\n</g>\n<g id=\"t770373-glyph-1-1\">\n<path d=\"M 3.765625 -2.046875 L 6.3125 -2.046875 C 6.4375 -2.046875 6.625 -2.046875 6.625 -2.234375 C 6.625 -2.4375 6.453125 -2.4375 6.3125 -2.4375 L 3.765625 -2.4375 L 3.765625 -4.984375 C 3.765625 -5.125 3.765625 -5.296875 3.5625 -5.296875 C 3.375 -5.296875 3.375 -5.109375 3.375 -4.984375 L 3.375 -2.4375 L 0.828125 -2.4375 C 0.703125 -2.4375 0.515625 -2.4375 0.515625 -2.25 C 0.515625 -2.046875 0.671875 -2.046875 0.828125 -2.046875 L 3.375 -2.046875 L 3.375 0.515625 C 3.375 0.65625 3.375 0.828125 3.578125 0.828125 C 3.765625 0.828125 3.765625 0.640625 3.765625 0.515625 Z M 3.765625 -2.046875 \"/>\n</g>\n<g id=\"t770373-glyph-1-2\">\n<path d=\"M 3.4375 -1.5 L 4.328125 -1.5 L 4.328125 -2.078125 L 3.4375 -2.078125 L 3.4375 -5.84375 L 2.5625 -5.84375 L 0.265625 -2.078125 L 0.265625 -1.5 L 2.6875 -1.5 L 2.6875 0 L 3.4375 0 Z M 1 -2.078125 L 1.546875 -2.96875 C 1.8125 -3.421875 2.734375 -4.984375 2.734375 -5.4375 L 2.734375 -2.078125 Z M 1 -2.078125 \"/>\n</g>\n<g id=\"t770373-glyph-1-3\">\n<path d=\"M 0.859375 -4.578125 C 1.25 -5.359375 1.9375 -5.484375 2.265625 -5.484375 C 2.71875 -5.484375 3.15625 -5.234375 3.15625 -4.671875 C 3.15625 -4.34375 2.96875 -3.578125 2.015625 -3.484375 C 1.84375 -3.46875 1.703125 -3.453125 1.53125 -3.453125 L 1.53125 -2.875 L 2.203125 -2.875 C 3.0625 -2.875 3.34375 -2.15625 3.34375 -1.625 C 3.34375 -0.921875 2.921875 -0.390625 2.25 -0.390625 C 1.515625 -0.390625 0.828125 -0.78125 0.484375 -1.265625 C 0.421875 -0.90625 0.421875 -0.890625 0.390625 -0.703125 C 0.828125 -0.171875 1.5 0.203125 2.265625 0.203125 C 3.390625 0.203125 4.203125 -0.671875 4.203125 -1.625 C 4.203125 -2.328125 3.6875 -2.90625 2.953125 -3.15625 C 3.578125 -3.484375 3.953125 -4.0625 3.953125 -4.671875 C 3.953125 -5.4375 3.1875 -6.046875 2.265625 -6.046875 C 1.515625 -6.046875 0.890625 -5.65625 0.515625 -5.09375 Z M 0.859375 -4.578125 \"/>\n</g>\n<g id=\"t770373-glyph-2-0\">\n<path d=\"M 2.828125 -2.046875 L 4.921875 -3.96875 L 4.140625 -3.96875 L 2.625 -2.515625 L 1.6875 -3.96875 L 0.890625 -3.96875 L 2.21875 -2.046875 L 0 0 L 0.78125 0 L 2.4375 -1.671875 L 3.4375 0 L 4.234375 0 Z M 2.828125 -2.046875 \"/>\n</g>\n<g id=\"t770373-glyph-2-1\">\n<path d=\"M 4.9375 -3.96875 L 4.234375 -3.96875 C 3.375 -2.59375 2.453125 -1.140625 2.296875 -0.53125 L 2.28125 -0.53125 C 2.296875 -0.578125 2.296875 -0.671875 2.296875 -0.765625 C 2.296875 -1.328125 2.140625 -2.078125 2.015625 -2.640625 L 1.71875 -3.96875 L 0.96875 -3.96875 L 1.890625 -0.140625 L 1.90625 -0.015625 C 1.90625 0.046875 1.5 0.65625 1.4375 0.765625 C 1.078125 1.296875 0.90625 1.296875 0.78125 1.296875 C 0.703125 1.296875 0.40625 1.28125 0.09375 1.140625 L 0.015625 1.765625 C 0.25 1.8125 0.484375 1.828125 0.65625 1.828125 C 0.890625 1.828125 1.28125 1.828125 1.9375 0.796875 Z M 4.9375 -3.96875 \"/>\n</g>\n<g id=\"t770373-glyph-3-0\">\n<path d=\"M 6.03125 -2.046875 C 6.1875 -2.046875 6.359375 -2.046875 6.359375 -2.25 C 6.359375 -2.4375 6.1875 -2.4375 6.03125 -2.4375 L 1.09375 -2.4375 C 0.953125 -2.4375 0.765625 -2.4375 0.765625 -2.25 C 0.765625 -2.046875 0.9375 -2.046875 1.09375 -2.046875 Z M 6.03125 -2.046875 \"/>\n</g>\n</g>\n<image id=\"t770373-source-52\" x=\"0\" y=\"0\" width=\"46\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA0CAAAAADQn1UWAAAAAmJLR0QA/4ePzL8AAADYSURBVEiJvZXBDsQgCESR7P//MntobVkZcIzbcjGVyfBQTJvEsHNtMaVAXsSiHBS0IvksTJTbjWGEXHBHidzSj9w99d9s1TWKaP517hh+kNuotFK+BuO9GrIH7umVbsL8FkY00b1i2YEZbxzQBPeSxcvj24n2myNWszh5ZAE0CvM0DCtHLJFGUXbujs2v6OkP3J26kwGfWC5842djHmwMc0rnPj30Lp832kUEu6+qcLeEoVgOGXOQrq6CvRqGHQCx250zF2UbPey5mblq6xKLtHK6PIeIiHwB5wwmYTORPpwAAAAASUVORK5CYII=\"/>\n<mask id=\"t770373-mask-0\">\n<use xlink:href=\"#t770373-source-52\"/>\n</mask>\n<image id=\"t770373-source-98\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAAC5SURBVEiJzZVBDgMhDANx1f9/mR5WgQQldipRqdxWDAYSm8Uc6cD5XXAnyzhPcm6TL44NkzE9pLN7JucCC74v4Bew83mQ3sMdht8XS1DUZSmq+v059zQFitt9ppzrPeO8a96aAuO2VvRfNaxx9b4jGIZxv8xlkqOZkWXejsKU/Vhxk3lDP2/f5mhe870JXssRmlxXr8vNu3pmk64ez8f6K7TeA6EXnKpz/rRE5Ui9G5Fq++rCuxGT+gF7zCV5FzKLQAAAAABJRU5ErkJggg==\"/>\n<mask id=\"t770373-mask-1\">\n<use xlink:href=\"#t770373-source-98\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.0000292699 -0.00155898 L 0.0000292699 119.058008 L 215.437044 119.058008 L 215.437044 -0.00155898 Z M 0.0000292699 -0.00155898 \" transform=\"matrix(0.996448, 0, 0, -0.996448, 3.374971, 122.146884)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(86.294556%, 94.587708%, 89.350891%)\" fill-opacity=\"0.6\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 130.396736 56.69198 C 130.396736 81.741884 110.090241 102.048378 85.040337 102.048378 C 59.990433 102.048378 39.683938 81.741884 39.683938 56.69198 C 39.683938 31.645996 59.990433 11.339501 85.040337 11.339501 C 110.090241 11.339501 130.396736 31.645996 130.396736 56.69198 Z M 130.396736 56.69198 \" transform=\"matrix(0.996448, 0, 0, -0.996448, 3.374971, 122.146884)\"/>\n<path fill-rule=\"nonzero\" fill=\"rgb(72.587585%, 89.176941%, 78.704834%)\" fill-opacity=\"0.5\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 175.749215 56.69198 C 175.749215 81.741884 155.44664 102.048378 130.396736 102.048378 C 105.346832 102.048378 85.040337 81.741884 85.040337 56.69198 C 85.040337 31.645996 105.346832 11.339501 130.396736 11.339501 C 155.44664 11.339501 175.749215 31.645996 175.749215 56.69198 Z M 175.749215 56.69198 \" transform=\"matrix(0.996448, 0, 0, -0.996448, 3.374971, 122.146884)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-0-0\" x=\"68.098282\" y=\"17.914392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-0-1\" x=\"147.189383\" y=\"17.914392\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-1-0\" x=\"60.69467\" y=\"68.577816\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-2-0\" x=\"65.286305\" y=\"68.577816\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-2-0\" x=\"100.276591\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-1-1\" x=\"107.368315\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-1-2\" x=\"116.547677\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-1-3\" x=\"143.173696\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-2-0\" x=\"147.765331\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-3-0\" x=\"154.857054\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-1-0\" x=\"164.039326\" y=\"68.16429\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t770373-glyph-2-1\" x=\"195.668593\" y=\"111.965174\"/>\n</g>\n</svg>",
+  "siklar": {
+   "A": "8",
+   "B": "12",
+   "C": "16",
+   "D": "22",
+   "E": "34"
+  },
+  "cevap": {
+   "sik": "D",
+   "deger": "22"
+  },
+  "celdiriciler": {
+   "A": "x değerini (8) bölge sayısı sanmış.",
+   "B": "Ortak bölgedeki sayıyı (12) yalnız B bölgesi sanmış.",
+   "C": "Yalnız A bölgesini (16) yalnız B bölgesi sanmış.",
+   "E": "B kümesinin tüm elemanlarını (34) yalnız B’de sanmış."
+  },
+  "celTur": {
+   "A": "dikkat",
+   "B": "dikkat",
+   "C": "dikkat",
+   "E": "dikkat"
+  },
+  "istenen": "Yalnız B kümesindeki eleman sayısı.",
+  "bilgi": [
+   {
+    "ad": "Venn şemasında cebirsel bölgeler",
+    "ifade": "bölgelerin eleman sayıları toplamı evrensel kümenin eleman sayısıdır; bir koşul denklem kurulup çözülür. Örnek: bölgeler x, 2x ve 6 ise evrensel küme 12 elemanlı olduğunda x = 2’dir"
+   }
+  ],
+  "ipuclari": [
+   "A ∪ B bölgelerini ve dışarıdaki bölgeyi y cinsinden yazıp evrensel kümenin eleman sayısıyla ilişkilendir."
+  ],
+  "adimlar": [
+   {
+    "baslik": "Dışarıdaki bölge",
+    "aciklama": "A ∪ B = 5y ve toplam 60.",
+    "islem": "5y + y = 60, y = 10"
+   },
+   {
+    "baslik": "A ∪ B",
+    "aciklama": "Üç bölge toplamı.",
+    "islem": "2x + (x + 4) + (3x − 2) = 6x + 2 = 50"
+   },
+   {
+    "baslik": "x",
+    "aciklama": "Denklem çözülür.",
+    "islem": "x = 8"
+   },
+   {
+    "baslik": "Yalnız B",
+    "aciklama": "3x − 2.",
+    "islem": "3 × 8 − 2 = 22"
+   }
+  ],
+  "puf": "Dışarıdaki bölgeyi önce bul.",
+  "kisaYol": null,
+  "kardes": null,
+  "kaynakKart": "K-SYB-10 · 2x, x+4, 3x−2, y; A∪B = 5y; toplam 60",
+  "dogrulama": {
+   "yontem2": true,
+   "tarama": true,
+   "korCozum": true
+  }
+ }
+]

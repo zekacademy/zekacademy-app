@@ -1,0 +1,198 @@
+{
+ "konu": "Açıortay",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GAI-01",
+   "konu": "Açıortay",
+   "alt": "Parçalardan kenar",
+   "fikir": "İç açıortay teoremi, bilinmeyen komşu kenarı parçaların oranından bulmaya da elverir.",
+   "tuzak": "Oranı ters kurmak; kenar parçalarını komşu kenarlarla eşleştirmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ai-oran",
+   "tip": "İç açıortay teoremiyle uzunluk",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-02",
+   "konu": "Açıortay",
+   "alt": "İç açıortay ve dış açı",
+   "fikir": "Açıortay açıyı yarılar; ADC açısı, ABD üçgeninin dış açısıdır.",
+   "tuzak": "Bütünler açıyı (ADB) cevap sanmak; yarılanan açıyı değil bütününü kullanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ai-aci",
+   "tip": "Açıortay ve açı hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-03",
+   "konu": "Açıortay",
+   "alt": "İki dış açıortayın kesişimi",
+   "fikir": "Dış açıortaylar, iç açılardan bağımsız olarak BEC üçgeninin açılarını belirler.",
+   "tuzak": "Yarılanan dış açıyı iç açı sanmak; BEC yi A açısına eşitlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ai-dis-aci",
+   "tip": "Dış açıortaylar ve açı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-04",
+   "konu": "Açıortay",
+   "alt": "Cebirsel kenar uzunlukları",
+   "fikir": "Kenarlar x türünden verilince açıortay oranı denklem kurar; sonuçta istenen kenarlar x ile hesaplanır.",
+   "tuzak": "Oranı ters yazmak; x i bulup cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ai-oran",
+   "tip": "İç açıortay teoremiyle uzunluk",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-05",
+   "konu": "Açıortay",
+   "alt": "İç ve dış açıortayın kesişimi",
+   "fikir": "Bir iç ve bir dış açıortayın kesiştiği noktada oluşan açı, üçüncü köşedeki açıyla ilişkilidir.",
+   "tuzak": "Bu açıyı iç açıortay formülüyle (90° + A/2) ya da dış formülle (90° − A/2) bulmaya çalışmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ai-aci",
+   "tip": "Açıortay ve açı hesabı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-06",
+   "konu": "Açıortay",
+   "alt": "Açıortay ve paralel: ikizkenar üçgen",
+   "fikir": "Açıortay ile paralel birleşince ikizkenar üçgen çıkar; benzerlikle uzunluk bulunur.",
+   "tuzak": "DE yi AB ya da CE ye eşitlemek; benzerlik oranını ters kurmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ai-paralel",
+   "tip": "Açıortay ve paralel doğru",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-07",
+   "konu": "Açıortay",
+   "alt": "Açıortay noktasından kollara uzaklık ve alan",
+   "fikir": "Açıortay ayağının iki kenara uzaklığı eşittir; üçgen iki üçgenin alanlarının toplamıdır.",
+   "tuzak": "Yalnız bir kenarı taban almak; iki alanı toplarken ½ çarpanını atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ai-alan",
+   "tip": "Açıortay ve alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-08",
+   "konu": "Açıortay",
+   "alt": "İç ve dış açıortayın ayakları arası uzaklık",
+   "fikir": "İç açıortay D yi, dış açıortay E yi verir; E nin yeri dış açıortay oranıyla bulunur ve D ye olan uzaklık toplanır.",
+   "tuzak": "E yi [BC] arasında aramak; E nin hangi taraftan uzantıda olduğunu yanlış belirlemek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ai-dis-oran",
+   "tip": "İç ve dış açıortay birlikte",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-09",
+   "konu": "Açıortay",
+   "alt": "Açıortay ve kenarortay ayakları arasındaki alan",
+   "fikir": "İki ayak arasındaki parça, kenarın bir kesri olarak bulunur; alan aynı yükseklikle oranlanır.",
+   "tuzak": "D nin yerini ters oranla belirlemek; ADM yerine ABD ya da ABM nin alanını vermek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ai-alan",
+   "tip": "Açıortay ve alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GAI-10",
+   "konu": "Açıortay",
+   "alt": "Paralelkenarda komşu açıortaylar",
+   "fikir": "Her açıortay karşı kenardan bir ikizkenar üçgen keser; iki ikizkenarın dayandığı parçalar üst üste binerse fark farklı hesaplanır.",
+   "tuzak": "Fazlalığı (üst üste binmeyi) görmeyip kenar farkını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ai-paralelkenar",
+   "tip": "Paralelkenarda açıortay",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ai-oran",
+   "ad": "İç açıortay teoremiyle uzunluk",
+   "kartlar": [
+    "K-GAI-01",
+    "K-GAI-04"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-aci",
+   "ad": "Açıortay ve açı hesabı",
+   "kartlar": [
+    "K-GAI-02",
+    "K-GAI-05"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-dis-aci",
+   "ad": "Dış açıortaylar ve açı",
+   "kartlar": [
+    "K-GAI-03"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-paralel",
+   "ad": "Açıortay ve paralel doğru",
+   "kartlar": [
+    "K-GAI-06"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-alan",
+   "ad": "Açıortay ve alan",
+   "kartlar": [
+    "K-GAI-07",
+    "K-GAI-09"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-dis-oran",
+   "ad": "İç ve dış açıortay birlikte",
+   "kartlar": [
+    "K-GAI-08"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  },
+  {
+   "tipId": "ai-paralelkenar",
+   "ad": "Paralelkenarda açıortay",
+   "kartlar": [
+    "K-GAI-10"
+   ],
+   "uygulamaKonu": "geo|Açıortay"
+  }
+ ]
+}

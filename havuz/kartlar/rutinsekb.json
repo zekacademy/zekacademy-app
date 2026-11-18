@@ -1,0 +1,184 @@
+{
+ "konu": "Rutin Olmayan Problemler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-RSB-01",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Sayı piramidi",
+   "fikir": "Alt sıradaki her sayının üst kutulara kaç kez katkı yaptığı sayılır; bilinmeyen için denklem kurulur.",
+   "tuzak": "Katkı sayılarını eşit sanmak; bilinmeyen katsayısını unutmak.",
+   "zorluk": "kolay",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "rsb-kural",
+   "tip": "İşlem kuralı ve akış (piramit, şema)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-02",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Akış şeması",
+   "fikir": "Çıkıştan geriye doğru her kolun işlemi tersine çevrilir; bulunan değerin kolun koşulunu sağlayıp sağlamadığı kontrol edilir.",
+   "tuzak": "Koşulu denemeden iki kolun tersini de geçerli saymak.",
+   "zorluk": "kolay",
+   "kalip": "yeni nesil",
+   "adim": 3,
+   "tipId": "rsb-kural",
+   "tip": "İşlem kuralı ve akış (piramit, şema)",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-03",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Işık çizelgesi",
+   "fikir": "Düzenin periyodu belirlenir; ortak periyot boyunca üç lambanın birlikte yanık olduğu saniyeler sayılır, toplam süreye ölçeklenir.",
+   "tuzak": "Yalnız bir periyodu saymak; periyot sayısını cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "rsb-periyot",
+   "tip": "Tekrarlayan düzenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-04",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Zar açınımı",
+   "fikir": "Açınımda katlayınca karşılıklı gelen yüzler belirlenir; bir köşedeki üç yüz her karşılıklı çiftten birer yüz alır.",
+   "tuzak": "Bitişik karelerin karşılıklı olduğunu sanmak; en büyük üç sayıyı almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "rsb-mekan",
+   "tip": "Küp ve şekil muhakemesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-05",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Robot yolu",
+   "fikir": "Bir program turunun yer değiştirmesi ve dönüşü bulunur; dönüş sayesinde tekrar eden yer değiştirmeler çevrilir ve toplanır.",
+   "tuzak": "Dönüşü hesaba katmadan yer değiştirmeyi katlamak; kalan tur sayısını yanlış almak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "rsb-periyot",
+   "tip": "Tekrarlayan düzenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-06",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Dişli zinciri",
+   "fikir": "Her dişlinin dönüş sayısı diş oranından yazılır; hepsinin tam sayı olması için ortak kat aranır.",
+   "tuzak": "Diş sayılarının EKOK’unu cevap sanmak; yalnız iki dişliyi hesaba katmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "rsb-periyot",
+   "tip": "Tekrarlayan düzenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-07",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Mayın tarlası",
+   "fikir": "Sayılı kareler mayınsızdır; en kısıtlı sayıdan başlanarak komşu karelerdeki mayınlar belirlenir.",
+   "tuzak": "Sayıların toplamını mayın sayısı sanmak; sayılı kareyi mayın saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "rsb-cikarim",
+   "tip": "Mantıksal yerleştirme ve çıkarım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-08",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Kenar toplamı düzeni",
+   "fikir": "Verilenlerden ortak kenar toplamı bulunur; kalan sayılar kenar denklemleriyle yerleştirilir.",
+   "tuzak": "İki kenarı sağlayıp üçüncüyü denetlememek; ortak toplamı yanlış bulmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "rsb-cikarim",
+   "tip": "Mantıksal yerleştirme ve çıkarım",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-09",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Şekilde üçgen sayma",
+   "fikir": "Üçgenler tepe noktasına ya da bir kenara göre gruplanarak tekrarsız sayılır.",
+   "tuzak": "Yalnız küçük üçgenleri saymak; üçgenleri iki kez saymak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "rsb-mekan",
+   "tip": "Küp ve şekil muhakemesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  },
+  {
+   "id": "K-RSB-10",
+   "konu": "Rutin Olmayan Problemler",
+   "alt": "Koşullu en kısa yol",
+   "fikir": "Zorunlu noktadan geçen yollar arasından, aynı noktadan iki kez geçmeyen en kısası seçilir.",
+   "tuzak": "Aynı noktadan iki kez geçen yolu geçerli saymak; koşulsuz en kısa yolu yazmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "rsb-yol",
+   "tip": "Koşullu en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli rutin olmayan/muhakeme soruları; yalnız mantık) · MEB 9–10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "rsb-kural",
+   "ad": "İşlem kuralı ve akış (piramit, şema)",
+   "kartlar": [
+    "K-RSB-01",
+    "K-RSB-02"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rsb-periyot",
+   "ad": "Tekrarlayan düzenler",
+   "kartlar": [
+    "K-RSB-03",
+    "K-RSB-05",
+    "K-RSB-06"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rsb-mekan",
+   "ad": "Küp ve şekil muhakemesi",
+   "kartlar": [
+    "K-RSB-04",
+    "K-RSB-09"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rsb-cikarim",
+   "ad": "Mantıksal yerleştirme ve çıkarım",
+   "kartlar": [
+    "K-RSB-07",
+    "K-RSB-08"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  },
+  {
+   "tipId": "rsb-yol",
+   "ad": "Koşullu en kısa yol",
+   "kartlar": [
+    "K-RSB-10"
+   ],
+   "uygulamaKonu": "prob|Rutin Olmayan Problemleri"
+  }
+ ]
+}

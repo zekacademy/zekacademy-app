@@ -1,0 +1,135 @@
+{
+ "konu": "Olasılık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-OSC-01",
+   "konu": "Olasılık",
+   "alt": "Venn şemasından olasılık",
+   "fikir": "İstenen koşulu sağlayan bölgeler belirlenip sayıları toplanır; tüm bölgelerin (dışarıdaki dahil) toplamı örnek uzayı verir.",
+   "tuzak": "Kesişimi iki kez ya da hiç saymamak; dışarıdaki elemanı paydaya katmamak; koşulun tümleyenini yazmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "osc-venn",
+   "tip": "Venn şemasından olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OSC-02",
+   "konu": "Olasılık",
+   "alt": "Sütun grafiğinden olasılık",
+   "fikir": "Sütun yükseklikleri okunur; koşulu sağlayan sütunlar toplanıp toplam frekansa oranlanır; ardışık bağımsız olaylarda dallanma tek tek hesaplanır.",
+   "tuzak": "“En az” ve “tam” koşulunu karıştırmak; kategori değerini kişi sayısı sanmak; bağımsız olayları toplamak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "osc-grafik",
+   "tip": "Sütun grafiğinden olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OSC-03",
+   "konu": "Olasılık",
+   "alt": "Yol şemasında olasılık",
+   "fikir": "Yol ya da rota sayıları çarpma ve toplama ilkesiyle bulunur; kapalı yol ve çift yönlü geçiş gibi koşullar tüm sayımda uygulanır.",
+   "tuzak": "Kapalı yolu atlamak; sayımda tümü yerine yalnız bir bölümü kullanmak; tek yönlü sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "osc-yol",
+   "tip": "Yol şemasında olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OSC-04",
+   "konu": "Olasılık",
+   "alt": "Daire grafiğinden iki seçim",
+   "fikir": "Yüzdelerden kişi sayıları bulunur; iki farklı gruptan birer kişi seçme sayısı toplam çift sayısına oranlanır.",
+   "tuzak": "Geri koyarak çekim gibi hesaplamak; iki sıralamadan yalnız birini saymak; yüzdeleri toplamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "osc-daire",
+   "tip": "Daire grafiğinden iki seçim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OSC-05",
+   "konu": "Olasılık",
+   "alt": "Koltuk ve domino çiftleri",
+   "fikir": "Uygun çift sayısı koşula göre elle sayılır; tüm çift sayısı C(n, 2) ile bulunur; sıra önemli olmadığından çiftler bir kez sayılır.",
+   "tuzak": "Koridoru ya da dolu koltuğu hesaba katmak; çiftleri sıralı saymak; sayımda nesneyi kendisiyle eşlemek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "osc-ikili",
+   "tip": "Koltuk ve domino çiftleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  },
+  {
+   "id": "K-OSC-06",
+   "konu": "Olasılık",
+   "alt": "Zaman şeridinde olasılık",
+   "fikir": "Uygun zaman aralıkları şeritte işaretlenir, örtüşenler birleştirilir ve toplam uzunluk bütün uzunluğa oranlanır.",
+   "tuzak": "Örtüşen aralıkları iki kez saymak; yanlış yöne aralık çizmek; olayları bağımsız sanıp formül uygulamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "osc-zaman",
+   "tip": "Zaman şeridinde olasılık",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli, grafikli ve çizelgeli olasılık soruları; yalnız mantık) · MEB 10. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "osc-venn",
+   "ad": "Venn şemasından olasılık",
+   "kartlar": [
+    "K-OSC-01"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "osc-grafik",
+   "ad": "Sütun grafiğinden olasılık",
+   "kartlar": [
+    "K-OSC-02"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "osc-yol",
+   "ad": "Yol şemasında olasılık",
+   "kartlar": [
+    "K-OSC-03"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "osc-daire",
+   "ad": "Daire grafiğinden iki seçim",
+   "kartlar": [
+    "K-OSC-04"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "osc-ikili",
+   "ad": "Koltuk ve domino çiftleri",
+   "kartlar": [
+    "K-OSC-05"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  },
+  {
+   "tipId": "osc-zaman",
+   "ad": "Zaman şeridinde olasılık",
+   "kartlar": [
+    "K-OSC-06"
+   ],
+   "uygulamaKonu": "matd|Olasılık"
+  }
+ ]
+}

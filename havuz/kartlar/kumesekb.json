@@ -1,0 +1,219 @@
+{
+ "konu": "Kümeler ve Kartezyen Çarpım",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-KVB-01",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Kesirli Venn bölgeleri",
+   "fikir": "Bölgelerin kesirleri toplamı 1’dir; boş kalan bölgenin kesri bulunup evrensel kümeyle çarpılır.",
+   "tuzak": "Kesirleri toplamayı unutmak; birleşimi hesaplayıp dışarıyı almamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "kvb-kesir",
+   "tip": "Kesirli Venn bölgeleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-02",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "İç içe kümeler",
+   "fikir": "İç içe dairelerde farklar alınarak halkalardaki sayılar bulunur.",
+   "tuzak": "Halka yerine dairenin tamamını almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "kvb-ic",
+   "tip": "İç içe kümeler ve farklar",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-03",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Üç kümeli Venn ve bilinmeyen",
+   "fikir": "Bölgelerdeki ifadeler toplamı evrensel kümeyi verir; denklemden x bulunup istenen bölgeler toplanır.",
+   "tuzak": "Bir bölgeyi iki kez saymak; dışarıdaki bölgeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kvb-uc",
+   "tip": "Üç kümeli Venn’de cebirsel bölgeler",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-04",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Şerit modelde kesişim",
+   "fikir": "Ortak kutu sayısı kesişimi, birleşimdeki kutu sayısı toplam kişi sayısını verir; bir kutunun değeri bulunur.",
+   "tuzak": "Ortak kutuları iki kez saymak; kutu değerini bulmadan sayıları yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kvb-serit",
+   "tip": "Şerit modelde kesişim ve birleşim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-05",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Sütun grafiğinden küme sayıları",
+   "fikir": "Sütunlardan s(A), s(B), s(A ∪ B) okunur; kesişim bulunup yalnız bir kümedekiler hesaplanır.",
+   "tuzak": "Birleşimi toplam sanmak; kesişimi iki kez çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "kvb-sutun",
+   "tip": "Sütun grafiğinden kesişim ve yalnız bir küme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-06",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "İsimli Venn ve üyelik değişimi",
+   "fikir": "İsimler sayılarak bölge sayıları bulunur; kişilerin geçişleri bölge sayılarını değiştirir.",
+   "tuzak": "Geçişi yalnız bir bölgede işlemek; kişiyi iki kez saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "kvb-isim",
+   "tip": "İsimli Venn ve üyelik değişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-07",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Daire toplamlı üç kümeli Venn",
+   "fikir": "Dairelerin toplamları ve ikili bölgelerden yalnız bir kümedekiler ile üçlü kesişim denklemle bulunur.",
+   "tuzak": "Üçlü kesişimi sıfır sanmak; ikili bölgeleri iki kez saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kvb-toplam",
+   "tip": "Daire toplamları ve üçlü kesişim",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-08",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "Yüzdeli Venn",
+   "fikir": "Yüzdelerden kesişim ve yalnız bölgeler bulunur; evrensel kümeyle çarpılıp kesirle çarpılır.",
+   "tuzak": "Yüzdeleri toplam sanmak; kesişimi çıkarmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kvb-yuzde",
+   "tip": "Yüzdeli Venn ve kesirli alt grup",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-09",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "İki bilinmeyenli Venn",
+   "fikir": "Toplam ve bir dairenin toplamı için iki denklem yazılır, x ve y bulunur, istenen küme toplanır.",
+   "tuzak": "Bir denklemi eksik yazmak; üçlü kesişimi atlamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kvb-iki",
+   "tip": "İki bilinmeyenli üç kümeli Venn",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  },
+  {
+   "id": "K-KVB-10",
+   "konu": "Kümeler ve Kartezyen Çarpım",
+   "alt": "İki Venn şemasını birleştirme",
+   "fikir": "Her sınıftaki bölgeler bulunur, aynı bölgeler toplanır; istenen bölge birleşik gruptan okunur.",
+   "tuzak": "Sınıfların bölgelerini karıştırmak; tamamlayıcı bölgeyi seçmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "kvb-birles",
+   "tip": "İki Venn şemasını birleştirme",
+   "kaynak": "ÖSYM 2018–2026 TYT Matematik (şekilli Venn ve küme problemleri; yalnız mantık) · MEB 9. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "kvb-kesir",
+   "ad": "Kesirli Venn bölgeleri",
+   "kartlar": [
+    "K-KVB-01"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-ic",
+   "ad": "İç içe kümeler ve farklar",
+   "kartlar": [
+    "K-KVB-02"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-uc",
+   "ad": "Üç kümeli Venn’de cebirsel bölgeler",
+   "kartlar": [
+    "K-KVB-03"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-serit",
+   "ad": "Şerit modelde kesişim ve birleşim",
+   "kartlar": [
+    "K-KVB-04"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-sutun",
+   "ad": "Sütun grafiğinden kesişim ve yalnız bir küme",
+   "kartlar": [
+    "K-KVB-05"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-isim",
+   "ad": "İsimli Venn ve üyelik değişimi",
+   "kartlar": [
+    "K-KVB-06"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-toplam",
+   "ad": "Daire toplamları ve üçlü kesişim",
+   "kartlar": [
+    "K-KVB-07"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-yuzde",
+   "ad": "Yüzdeli Venn ve kesirli alt grup",
+   "kartlar": [
+    "K-KVB-08"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-iki",
+   "ad": "İki bilinmeyenli üç kümeli Venn",
+   "kartlar": [
+    "K-KVB-09"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  },
+  {
+   "tipId": "kvb-birles",
+   "ad": "İki Venn şemasını birleştirme",
+   "kartlar": [
+    "K-KVB-10"
+   ],
+   "uygulamaKonu": "matd|Kümeler-Kartezyen Çarpım"
+  }
+ ]
+}

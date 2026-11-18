@@ -1,0 +1,191 @@
+{
+ "konu": "Prizmalar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GPZ-01",
+   "konu": "Prizmalar",
+   "alt": "Açınımı verilen kutunun hacmi",
+   "fikir": "Açınımdaki toplam genişlik ve yükseklik ayrıt uzunluklarının toplamlarını verir; ayrıtlar çözülünce hacim üç ayrıtın çarpımıdır.",
+   "tuzak": "Hesaplanması gereken ayrıtı doğrudan toplam ölçü sanmak; alan ile hacmi karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "pz-acinim",
+   "tip": "Açınımı verilen prizmanın hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-02",
+   "konu": "Prizmalar",
+   "alt": "Üçgen prizma biçimli çadırın hacmi",
+   "fikir": "Ön yüz ikizkenar üçgendir; hacim, üçgenin alanı ile çadırın uzunluğunun çarpımıdır.",
+   "tuzak": "Üçgen alanındaki 1/2 çarpanını unutmak; üçgenin tabanını ve yüksekliğini çarpıp uzunlukla toplamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "pz-hacim",
+   "tip": "Üçgen ve yamuk tabanlı prizmanın hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-03",
+   "konu": "Prizmalar",
+   "alt": "Dikdörtgenler prizmasında zıt köşelere en kısa yol",
+   "fikir": "Komşu iki yüz aynı düzleme serilince köşeler bir dik üçgenin hipotenüsünün uçları olur; üç farklı serim denenip en küçüğü seçilir.",
+   "tuzak": "Ayrıt toplamını yol sanmak; cisim köşegenini (prizmanın içinden) yol saymak; yalnız tek serimi denemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pz-yol",
+   "tip": "Prizma yüzeyinde en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-04",
+   "konu": "Prizmalar",
+   "alt": "Köşeleri kesilmiş kartondan kutu",
+   "fikir": "Karton köşelerden eş kareler kesilip katlanınca kutunun tabanı iki kenardan da iki kesim payı kısalır; yükseklik kesilen karenin kenarıdır.",
+   "tuzak": "Kesilen kare payını yalnız bir kez çıkarmak; taban alanını yükseklik sanmak; karton alanından kesilen alanı çıkarıp hacim sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pz-karton",
+   "tip": "Kartondan kutu yapımı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-05",
+   "konu": "Prizmalar",
+   "alt": "İki özdeş prizmayı birleştirme",
+   "fikir": "Yapıştırılan iki yüzün alanı toplam alandan iki kez çıkar; çıkan alan ne kadar büyükse kalan yüzey o kadar küçüktür.",
+   "tuzak": "Yapıştırılan yüz alanını bir kez çıkarmak; yüz seçimini yanlış (küçük yüz) yapmak; tek prizmanın alanını vermek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pz-birles",
+   "tip": "İki prizmayı birleştirme ve yüzey alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-06",
+   "konu": "Prizmalar",
+   "alt": "Yamuk tabanlı prizmanın hacmi ve boşaltma",
+   "fikir": "Ön yüz yamuktur; hacim yamuğun alanı ile uzunluğun çarpımıdır; boşaltma süresi hacmin pompa debisine bölümüdür.",
+   "tuzak": "Yamuk alanında 1/2 çarpanını unutmak; paralel kenarlardan birini kullanmak; hacmi debiye bölmemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pz-hacim",
+   "tip": "Üçgen ve yamuk tabanlı prizmanın hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-07",
+   "konu": "Prizmalar",
+   "alt": "Üçgen prizma açınımından hacim",
+   "fikir": "Açınımdaki dikdörtgenlerin enleri üçgenin kenarlarıdır; ikizkenar üçgenin yüksekliği Pisagorla bulunur, hacim taban alanı çarpı dikdörtgenin boyudur.",
+   "tuzak": "Üçgenin yüksekliğini bulmadan kenar uzunluğunu yükseklik sanmak; 1/2 çarpanını unutmak; yarım tabanı yükseklik sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pz-acinim",
+   "tip": "Açınımı verilen prizmanın hacmi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-08",
+   "konu": "Prizmalar",
+   "alt": "Karşılıklı yüzlerdeki iki nokta arasında en kısa yol",
+   "fikir": "Ön yüzden arka yüze üst, alt ya da yan yüz üzerinden geçilir; her serimde yol bir doğru parçasıdır, üçü hesaplanıp en küçüğü seçilir.",
+   "tuzak": "Yalnız üstten geçen yolu hesaplamak; yan yüz yolunda yükseklik farkını unutmak; yolları toplamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "pz-yol",
+   "tip": "Prizma yüzeyinde en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-09",
+   "konu": "Prizmalar",
+   "alt": "Düzgün altıgen prizmanın yüzey alanı",
+   "fikir": "Hacimden taban kenarı bulunur; iki altıgen taban ile altı eş dikdörtgenin alanı toplanır.",
+   "tuzak": "Tek taban saymak; altıgenin alanında 1/4 çarpanını unutmak; yan yüzlerden yalnız bir kısmını saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "pz-altigen",
+   "tip": "Düzgün altıgen prizma",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GPZ-10",
+   "konu": "Prizmalar",
+   "alt": "Üçgen prizmaya iki tur sarılan ip",
+   "fikir": "Yan yüzler yan yana serilince bir dikdörtgen oluşur; iki tur dolanan ip bu dikdörtgenin iki katı genişliğindeki hâlinin köşegenidir.",
+   "tuzak": "Tur sayısını tek saymak; çevre ile yüksekliği toplamak; yalnız bir turun yüksekliğini almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "pz-yol",
+   "tip": "Prizma yüzeyinde en kısa yol",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pz-acinim",
+   "ad": "Açınımı verilen prizmanın hacmi",
+   "kartlar": [
+    "K-GPZ-01",
+    "K-GPZ-07"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "pz-hacim",
+   "ad": "Üçgen ve yamuk tabanlı prizmanın hacmi",
+   "kartlar": [
+    "K-GPZ-02",
+    "K-GPZ-06"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "pz-yol",
+   "ad": "Prizma yüzeyinde en kısa yol",
+   "kartlar": [
+    "K-GPZ-03",
+    "K-GPZ-08",
+    "K-GPZ-10"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "pz-karton",
+   "ad": "Kartondan kutu yapımı",
+   "kartlar": [
+    "K-GPZ-04"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "pz-birles",
+   "ad": "İki prizmayı birleştirme ve yüzey alanı",
+   "kartlar": [
+    "K-GPZ-05"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  },
+  {
+   "tipId": "pz-altigen",
+   "ad": "Düzgün altıgen prizma",
+   "kartlar": [
+    "K-GPZ-09"
+   ],
+   "uygulamaKonu": "geo|Prizmalar"
+  }
+ ]
+}

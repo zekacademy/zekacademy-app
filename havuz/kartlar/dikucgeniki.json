@@ -1,0 +1,191 @@
+{
+ "konu": "Dik Üçgen",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDI-01",
+   "konu": "Dik Üçgen",
+   "alt": "Gölge ve yükselme açısı",
+   "fikir": "Direk, gölge ve güneş ışını dik üçgen oluşturur; 60° açının komşusu bilinirken karşı kenar √3 ile çarpılarak bulunur.",
+   "tuzak": "Karşı ve komşu kenarı karıştırıp √3 ile bölmek; 45° kuralını uygulamak; gölgeyi direk boyu sanmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-di-ozel",
+   "tip": "Özel açılı dik üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-02",
+   "konu": "Dik Üçgen",
+   "alt": "İkizkenar üçgende alan",
+   "fikir": "Yan kenar ve taban verilince yükseklik Pisagorla bulunur (7-24-25); alan taban × yükseklik ÷ 2.",
+   "tuzak": "Yan kenarı yükseklik sanmak; tabanın tamamını Pisagorda kullanmak; alanda yarıyı unutmak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-di-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-03",
+   "konu": "Dik Üçgen",
+   "alt": "Hipotenüs ve bir parça verilince yükseklik",
+   "fikir": "Bir dik kenarın izdüşümü ve hipotenüs bilinirse öbür parça bulunur; yükseklik iki parçanın çarpımının kareköküdür.",
+   "tuzak": "Parçaları karıştırmak; h² = p × c yazmak; yüksekliği parçalardan biriyle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-di-oklid",
+   "tip": "Öklid bağıntıları ile yükseklik",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-04",
+   "konu": "Dik Üçgen",
+   "alt": "Cebirsel kenarlı dik üçgen",
+   "fikir": "Kenarlar x cinsinden verildiğinde Pisagor ikinci derece denklem verir; kök bulunur, alan hesaplanır.",
+   "tuzak": "Denklemi kurarken hipotenüsü yanlış kenar seçmek; x’i bulup alan yerine çevre vermek; yarıyı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-05",
+   "konu": "Dik Üçgen",
+   "alt": "İki özel üçgenin birleşimi",
+   "fikir": "AB ortak dik kenardır; ABD ve ABC üçgenlerinde ayrı ayrı özel üçgen oranı kullanılır, parçalar farkla bulunur.",
+   "tuzak": "Yanlış açının karşısındaki kenarı almak; BD ile DC’yi karıştırmak; hipotenüsü dik kenar sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-ozel2",
+   "tip": "Birleşik özel dik üçgenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-06",
+   "konu": "Dik Üçgen",
+   "alt": "İki direk arasındaki tel",
+   "fikir": "Yükseklik farkı ve yatay uzaklık dik kenar olur; tel hipotenüstür (12-35-37).",
+   "tuzak": "Boyları toplamak; yatay uzaklığı tel sanmak; dik kenarları toplamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-di-pisagor",
+   "tip": "Pisagor bağıntısı ve üçlüleri",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-07",
+   "konu": "Dik Üçgen",
+   "alt": "İkizkenar dik üçgende hipotenüsten alan",
+   "fikir": "Hipotenüsten dik kenar √2 ile bölünerek bulunur; alan dik kenarın karesinin yarısı, yani hipotenüs² ÷ 4.",
+   "tuzak": "Dik kenarı hipotenüse eşit almak; kareyi unutmak; √2 ile çarpmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-di-ozel",
+   "tip": "Özel açılı dik üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-08",
+   "konu": "Dik Üçgen",
+   "alt": "15°-75°-90° üçgende yükseklik",
+   "fikir": "Hipotenüse ait kenarortay çizilir; oluşan 30° lik dış açıyla yarım yükseklik özel üçgeni elde edilir.",
+   "tuzak": "Yüksekliği hipotenüsün yarısı sanmak; 30°-60°-90° kuralını doğrudan uygulamak; yardımcı doğruyu çizmemek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-ozel2",
+   "tip": "Birleşik özel dik üçgenler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-09",
+   "konu": "Dik Üçgen",
+   "alt": "Dik yamukta alan",
+   "fikir": "Eğik kenar ve taban farkından yükseklik Pisagorla bulunur (10-24-26); alan yamuk formülüyle hesaplanır.",
+   "tuzak": "Eğik kenarı yükseklik sanmak; taban farkını yükseklik sanmak; ortalama yerine toplam almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-yamuk",
+   "tip": "Dik yamukta Pisagor",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDI-10",
+   "konu": "Dik Üçgen",
+   "alt": "Prizmanın cisim köşegeni",
+   "fikir": "Önce taban köşegeni, sonra yükseklikle ikinci dik üçgen kurulur; iki kez Pisagor uygulanır.",
+   "tuzak": "Yüz köşegenini cisim köşegeni sanmak; üç ayrıtı toplamak; yüz köşegeninde yüksekliği unutmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-di-uzay",
+   "tip": "Prizmada köşegen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-di-ozel",
+   "ad": "Özel açılı dik üçgen",
+   "kartlar": [
+    "K-GDI-01",
+    "K-GDI-07"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-di-pisagor",
+   "ad": "Pisagor bağıntısı ve üçlüleri",
+   "kartlar": [
+    "K-GDI-02",
+    "K-GDI-04",
+    "K-GDI-06"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-di-oklid",
+   "ad": "Öklid bağıntıları ile yükseklik",
+   "kartlar": [
+    "K-GDI-03"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-di-ozel2",
+   "ad": "Birleşik özel dik üçgenler",
+   "kartlar": [
+    "K-GDI-05",
+    "K-GDI-08"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-di-yamuk",
+   "ad": "Dik yamukta Pisagor",
+   "kartlar": [
+    "K-GDI-09"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  },
+  {
+   "tipId": "ge-di-uzay",
+   "ad": "Prizmada köşegen",
+   "kartlar": [
+    "K-GDI-10"
+   ],
+   "uygulamaKonu": "geo|Dik Üçgen"
+  }
+ ]
+}

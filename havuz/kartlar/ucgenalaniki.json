@@ -1,0 +1,205 @@
+{
+ "konu": "Üçgende Alan",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GUI-01",
+   "konu": "Üçgende Alan",
+   "alt": "Üç yükseklik, tek alan",
+   "fikir": "Üçgenin her kenarı taban olabilir; yüksekliği hangi kenara inildiğine göre okunur.",
+   "tuzak": "Yüksekliği yanlış tabana ait sanmak; alanı hesaplamadan uzunlukları oranlamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ui-yukseklik",
+   "tip": "Farklı tabanlara inen yükseklikler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-02",
+   "konu": "Üçgende Alan",
+   "alt": "İki kenar ve aradaki açı",
+   "fikir": "Köşegen paralelkenarda üçgen ayırır; aradaki açı geniş olabilir.",
+   "tuzak": "Paralelkenarın alanını cevap sanmak; ½ çarpanını atlamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ui-sinus",
+   "tip": "İki kenar ve aradaki açıyla alan",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-03",
+   "konu": "Üçgende Alan",
+   "alt": "Alan bilgisinden uzunluk",
+   "fikir": "Alan bilgisi verilince taban uzunluğu bölünür; yükseklik şekilde görünmez.",
+   "tuzak": "Verilen alanı uzunluk sanmak; parçaları yanlış sırayla eşlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ui-oran",
+   "tip": "Alan bilgisiyle kenar parçalama",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-04",
+   "konu": "Üçgende Alan",
+   "alt": "İki kenarortay, alt bölge",
+   "fikir": "Kenarortaylar üçgeni eş alanlı altı parçaya böler; istenen bölge bu parçalardan oluşur.",
+   "tuzak": "Yalnız bir parçayı cevap sanmak; tüm alanın yarısını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ui-agirlik",
+   "tip": "Kenarortaylarla oluşan bölgeler",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-05",
+   "konu": "Üçgende Alan",
+   "alt": "Dikdörtgen içinde bir nokta",
+   "fikir": "İç noktadan köşelere çizilen doğrular dikdörtgeni dört üçgene böler; üçgenlerin tabanları dikdörtgenin kenarlarıdır.",
+   "tuzak": "Dört alanı toplayıp dikdörtgenin alanını sanmak; karşılıklı olmayan üçgenleri eşlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ui-ic-nokta",
+   "tip": "İç noktadan köşelere bölünen alanlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-06",
+   "konu": "Üçgende Alan",
+   "alt": "Doğrular ve eksenle sınırlı üçgen",
+   "fikir": "Üçgenin köşeleri doğruların kesişim ve eksen noktalarıdır; taban x ekseni üzerinde, yükseklik kesişimin ordinatıdır.",
+   "tuzak": "Eksen kesim noktasını yanlış işaretlemek; kesişimin ordinatı yerine y eksenini kesen değeri kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ui-koordinat",
+   "tip": "Koordinat düzleminde üçgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-07",
+   "konu": "Üçgende Alan",
+   "alt": "Alan ve iç teğet çember",
+   "fikir": "Üçgenin alanı, iç teğet çemberin merkezinden köşelere bölünen üç üçgenin toplamıdır.",
+   "tuzak": "Çevre yerine yarı çevreyi kullanmamak; tabanla yüksekliği karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ui-ic-teget",
+   "tip": "İç teğet çemberin yarıçapı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-08",
+   "konu": "Üçgende Alan",
+   "alt": "Yamukta köşegenle dört alan",
+   "fikir": "Köşegenler yamuğu dört üçgene böler; karşılıklı iki üçgen eş alanlıdır ve taban oranı alan oranının karekökü gibi bulunur.",
+   "tuzak": "Yamuğun alanını iki bilinen üçgenin toplamı sanmak; yan üçgenleri bilinenlerden birine eşitlemek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 6,
+   "tipId": "ui-bolge",
+   "tip": "Köşegen ve doğru parçalarıyla alan bölüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-09",
+   "konu": "Üçgende Alan",
+   "alt": "Eşkenar üçgende iç nokta ve dikmeler",
+   "fikir": "İç noktayı köşelere bağlayınca oluşan üç üçgenin alanları toplamı, bütünün alanıdır; tabanlar eşit olduğundan yükseklikler toplanır.",
+   "tuzak": "Dikmelerin toplamını yüksekliğe eşitlemeyi gözden kaçırmak; yüksekliği kenar sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ui-ic-nokta",
+   "tip": "İç noktadan köşelere bölünen alanlar",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUI-10",
+   "konu": "Üçgende Alan",
+   "alt": "İki doğru parçası ve üç alan",
+   "fikir": "Kesişim noktasını üçüncü köşeye bağlayan yardımcı doğru, iki bilinmeyen alanlı denklem kurdurur.",
+   "tuzak": "Bilinen alanları toplayıp bütünden çıkarmaya çalışmak; ADP ile AEP üçgenlerini eş sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 6,
+   "tipId": "ui-bolge",
+   "tip": "Köşegen ve doğru parçalarıyla alan bölüşümü",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ui-yukseklik",
+   "ad": "Farklı tabanlara inen yükseklikler",
+   "kartlar": [
+    "K-GUI-01"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-sinus",
+   "ad": "İki kenar ve aradaki açıyla alan",
+   "kartlar": [
+    "K-GUI-02"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-oran",
+   "ad": "Alan bilgisiyle kenar parçalama",
+   "kartlar": [
+    "K-GUI-03"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-agirlik",
+   "ad": "Kenarortaylarla oluşan bölgeler",
+   "kartlar": [
+    "K-GUI-04"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-ic-nokta",
+   "ad": "İç noktadan köşelere bölünen alanlar",
+   "kartlar": [
+    "K-GUI-05",
+    "K-GUI-09"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-koordinat",
+   "ad": "Koordinat düzleminde üçgenin alanı",
+   "kartlar": [
+    "K-GUI-06"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-ic-teget",
+   "ad": "İç teğet çemberin yarıçapı",
+   "kartlar": [
+    "K-GUI-07"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  },
+  {
+   "tipId": "ui-bolge",
+   "ad": "Köşegen ve doğru parçalarıyla alan bölüşümü",
+   "kartlar": [
+    "K-GUI-08",
+    "K-GUI-10"
+   ],
+   "uygulamaKonu": "geo|Üçgende Alan"
+  }
+ ]
+}

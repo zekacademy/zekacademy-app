@@ -1,0 +1,205 @@
+{
+ "konu": "Doğrunun Analitiği",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GDQ-01",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Eğimden bilinmeyen koordinat",
+   "fikir": "Eğim, iki nokta arasındaki dikey farkın yatay farka oranıdır; eğim ve yatay fark biliniyorsa dikey fark bulunur.",
+   "tuzak": "Dikey farkı eğime eşitlemek; ilk noktanın ordinatını eklemeyi unutmak; işareti karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-di-egim",
+   "tip": "Eğimden bilinmeyen koordinat",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-02",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Denklemi sağlayan nokta",
+   "fikir": "Doğru üzerindeki her noktanın koordinatları doğrunun denklemini sağlar; bilinen koordinat yerine konunca bilinmeyen kalır.",
+   "tuzak": "Ordinatın işaretini düşürmek; sabit terimin işaretini değiştirmek; koordinatları yer değiştirmek.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-di-nokta",
+   "tip": "Doğru üzerindeki nokta",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-03",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Noktanın doğruya uzaklığı",
+   "fikir": "Noktanın koordinatları doğrunun denkleminin sol tarafında yerine yazılır; mutlak değer, katsayıların karelerinin toplamının karekökü ile bölünür.",
+   "tuzak": "Paydayı karekök almadan yazmak; paydada yalnız x katsayısını kullanmak; koordinatın işaretini düşürmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-di-uzaklik",
+   "tip": "Noktanın doğruya uzaklığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-04",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Üç doğrunun ortak noktası",
+   "fikir": "Grafikle verilen doğrunun denklemi yazılır; ikinci doğruyla kesişim bulunur ve üçüncü doğrunun denklemi bu noktada sağlatılır.",
+   "tuzak": "Kesişimin bir koordinatını almak; koordinatları yer değiştirmek; kesişim yerine eksen kesim noktasını kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-kesisim",
+   "tip": "Üç doğrunun ortak noktası",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-05",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Koordinatlı üçgenin alanı",
+   "fikir": "Üçgeni içine alan dikdörtgenden köşelerdeki dik üçgenler çıkarılarak alan bulunur.",
+   "tuzak": "Dikdörtgenin alanını sonuç sanmak; köşe üçgenlerinden birini unutmak; yarıya bölmeyi atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-di-ucgen-alan",
+   "tip": "Koordinatlı üçgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-06",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Noktadan geçen dik doğru",
+   "fikir": "Verilen doğrunun eğiminden dik doğrunun eğimi bulunur; nokta-eğim denkleminde x = 0 yazılarak y eksenini kestiği nokta elde edilir.",
+   "tuzak": "Dik yerine paralel eğimi almak; eğimin işaretini değiştirmemek; eğimi ters çevirmemek; kesim noktası yerine noktanın ordinatını vermek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-di-dik",
+   "tip": "Noktadan geçen dik doğru",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-07",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Orta dikmenin eksen kesimi",
+   "fikir": "Orta nokta ve doğru parçasının eğimi bulunur; dik eğimle orta noktadan geçen doğrunun denkleminde y = 0 yazılır.",
+   "tuzak": "Orta dikme yerine doğru parçasının kendisini ya da paralelini almak; eğimin işaretini karıştırmak; orta noktanın apsisini cevap sanmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-di-ortadikme",
+   "tip": "Doğru parçasının orta dikmesi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-08",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Doğru üzerinde orijine en yakın nokta",
+   "fikir": "En yakın nokta, orijinden doğruya inilen dikmenin ayağıdır; dik doğru ile verilen doğru kesiştirilir.",
+   "tuzak": "Dik yerine paralel doğruyu almak; eksen kesim noktalarını ya da orta noktasını en yakın nokta sanmak; koordinatları toplamak yerine çarpmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-di-enyakin",
+   "tip": "Doğru üzerinde en yakın nokta",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-09",
+   "konu": "Doğrunun Analitiği",
+   "alt": "İki doğru ve y ekseninin üçgeni",
+   "fikir": "Grafikten bir doğrunun denklemi yazılır; ikinci doğruyla kesişim ve y eksenindeki kesimler bulunur; taban y ekseni üzerinde, yükseklik kesişimin apsisidir.",
+   "tuzak": "Yüksekliği kesişimin ordinatı almak; tabanı eksen kesimlerinden birinden almak; yarıya bölmeyi unutmak ya da iki kez bölmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ge-di-ucgen-alan",
+   "tip": "Koordinatlı üçgenin alanı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GDQ-10",
+   "konu": "Doğrunun Analitiği",
+   "alt": "Köşeden karşı kenara uzaklık",
+   "fikir": "Karşı kenarın doğru denklemi iki köşeden yazılır; üçüncü köşenin bu doğruya uzaklığı yüksekliği verir.",
+   "tuzak": "Payı hesaplayıp paydayı atlamak; alanı yükseklik sanmak; taban uzunluğunu yükseklik sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-di-uzaklik",
+   "tip": "Noktanın doğruya uzaklığı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-di-egim",
+   "ad": "Eğimden bilinmeyen koordinat",
+   "kartlar": [
+    "K-GDQ-01"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-nokta",
+   "ad": "Doğru üzerindeki nokta",
+   "kartlar": [
+    "K-GDQ-02"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-uzaklik",
+   "ad": "Noktanın doğruya uzaklığı",
+   "kartlar": [
+    "K-GDQ-03",
+    "K-GDQ-10"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-kesisim",
+   "ad": "Üç doğrunun ortak noktası",
+   "kartlar": [
+    "K-GDQ-04"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-ucgen-alan",
+   "ad": "Koordinatlı üçgenin alanı",
+   "kartlar": [
+    "K-GDQ-05",
+    "K-GDQ-09"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-dik",
+   "ad": "Noktadan geçen dik doğru",
+   "kartlar": [
+    "K-GDQ-06"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-ortadikme",
+   "ad": "Doğru parçasının orta dikmesi",
+   "kartlar": [
+    "K-GDQ-07"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  },
+  {
+   "tipId": "ge-di-enyakin",
+   "ad": "Doğru üzerinde en yakın nokta",
+   "kartlar": [
+    "K-GDQ-08"
+   ],
+   "uygulamaKonu": "geo|Doğrunun Analitiği"
+  }
+ ]
+}

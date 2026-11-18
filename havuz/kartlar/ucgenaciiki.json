@@ -1,0 +1,198 @@
+{
+ "konu": "Üçgende Açılar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Geometri çıkmış soruları (yalnız mantık), MEB 9–10. sınıf geometri müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-GUZ-01",
+   "konu": "Üçgende Açılar",
+   "alt": "Açılardan kenar sıralaması",
+   "fikir": "Verilen iki açıdan üçüncü bulunur; açıların büyüklük sırası karşılarındaki kenarların büyüklük sırasını verir.",
+   "tuzak": "Üçüncü açıyı hesaplamadan sıralama yapmak; kenarı komşu açıyla eşleştirmek.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "ge-ui-kenar",
+   "tip": "Açı–kenar bağıntısı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-02",
+   "konu": "Üçgende Açılar",
+   "alt": "Paralel doğrular arasında üçgen",
+   "fikir": "Paralel doğrular ve kesenlerle ters açılar eşit olur; üçgenin iki açısı belli olunca üçüncüsü iç açı toplamıyla bulunur.",
+   "tuzak": "Ters açıları yanlış eşleştirmek; verilen açıları üçgenin iç açısı sanıp 180° ten çıkarmamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ui-paralel",
+   "tip": "Paralel doğrular arasında üçgen ve kırık çizgi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-03",
+   "konu": "Üçgende Açılar",
+   "alt": "Yükseklik ile iç açıortay arasındaki açı",
+   "fikir": "Yükseklik B ve C ile dik üçgen kurar; BAH ve BAD açıları bulunup farkı alınır.",
+   "tuzak": "H ile D’nin sırasını karıştırmak; açıortay yerine yüksekliğin açısını vermek; B + C yerine farkı almamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ui-yukseklik",
+   "tip": "Yükseklik ve açıortay",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-04",
+   "konu": "Üçgende Açılar",
+   "alt": "İki yüksekliğin kesişimi",
+   "fikir": "C açısı bulunur; D ve E köşelerinde dik açılı CDHE dörtgeninden DHE, ters açıyla AHB bulunur.",
+   "tuzak": "180° − A ya da 180° − B yazmak; dörtgenin açı toplamını 180° almak; ters açıyı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ui-diklik",
+   "tip": "İki yüksekliğin kesişimi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-05",
+   "konu": "Üçgende Açılar",
+   "alt": "Eşkenar üçgen ve uzantıda ikizkenar",
+   "fikir": "C’deki dış açı 120° olur; ACD ikizkenar üçgeninin taban açıları eşit ve toplamı 60° dir.",
+   "tuzak": "Dış açıyı 60° sanmak; tepe açısını ikizkenarın taban açısı yapmak; 180° − 30° yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ge-ui-ikizkenar",
+   "tip": "Eşkenar ve ikizkenar üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-06",
+   "konu": "Üçgende Açılar",
+   "alt": "İkizkenar üçgende taban açıortayı",
+   "fikir": "Taban açıları eşittir; açıortay B’yi ikiye böler; BDC üçgeninden B açısı, oradan tepe açısı bulunur.",
+   "tuzak": "Taban açılarını eşit saymamak; açıortayın açıyı yarıya bölmesini unutmak; B yerine tepe açısını vermek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-ui-ikizkenar",
+   "tip": "Eşkenar ve ikizkenar üçgen",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-07",
+   "konu": "Üçgende Açılar",
+   "alt": "Dış açılar toplamı 360°",
+   "fikir": "Üç dış açının toplamından x bulunur; istenen köşenin iç açısı 180° den çıkarılarak yazılır.",
+   "tuzak": "İç açıyı sormak yerine dış açıyı vermek; toplamı 180° almak; x’i bulup bırakmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ge-ui-dis-toplam",
+   "tip": "Dış açıların toplamı",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-08",
+   "konu": "Üçgende Açılar",
+   "alt": "Paralel doğrular arasında kırık çizgi",
+   "fikir": "Köşelerden d₁ ve d₂ ye paraleller çizilerek ters açılar eşitlenir; bir yöne bakan açıların toplamı karşı yöne bakanların toplamına eşit olur.",
+   "tuzak": "Kırık çizgi açılarını doğrudan toplamak; paralel çizmeden sonuç yazmak; bütünler açıyı karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "ge-ui-paralel",
+   "tip": "Paralel doğrular arasında üçgen ve kırık çizgi",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-09",
+   "konu": "Üçgende Açılar",
+   "alt": "Köşeden köşeye katlama",
+   "fikir": "B köşesi A’ya geldiği için kat izi [AB] nin orta dikmesidir; E noktasında |EA| = |EB| olur ve EAB = ABC bulunur.",
+   "tuzak": "|EA| = |EB| eşitliğini görmemek; E noktasındaki açıyı yanlış bölmek; A açısını tamamen EAC sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ui-katlama",
+   "tip": "Köşeden köşeye katlama",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  },
+  {
+   "id": "K-GUZ-10",
+   "konu": "Üçgende Açılar",
+   "alt": "Yükseklik ile açıortayın kesişimi",
+   "fikir": "F noktasındaki ters açıdan B bulunur; C ile birlikte A hesaplanır.",
+   "tuzak": "AFE yi doğrudan B sanmak; 90° − B yazıp A’ya geçmemek; açıortayı yükseklik sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ge-ui-yukseklik",
+   "tip": "Yükseklik ve açıortay",
+   "kaynak": "ÖSYM 2018–2026 TYT Geometri soruları (yalnız mantık) · MEB 9–10. sınıf geometri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ge-ui-kenar",
+   "ad": "Açı–kenar bağıntısı",
+   "kartlar": [
+    "K-GUZ-01"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-paralel",
+   "ad": "Paralel doğrular arasında üçgen ve kırık çizgi",
+   "kartlar": [
+    "K-GUZ-02",
+    "K-GUZ-08"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-yukseklik",
+   "ad": "Yükseklik ve açıortay",
+   "kartlar": [
+    "K-GUZ-03",
+    "K-GUZ-10"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-diklik",
+   "ad": "İki yüksekliğin kesişimi",
+   "kartlar": [
+    "K-GUZ-04"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-ikizkenar",
+   "ad": "Eşkenar ve ikizkenar üçgen",
+   "kartlar": [
+    "K-GUZ-05",
+    "K-GUZ-06"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-dis-toplam",
+   "ad": "Dış açıların toplamı",
+   "kartlar": [
+    "K-GUZ-07"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  },
+  {
+   "tipId": "ge-ui-katlama",
+   "ad": "Köşeden köşeye katlama",
+   "kartlar": [
+    "K-GUZ-09"
+   ],
+   "uygulamaKonu": "geo|Üçgende Açılar"
+  }
+ ]
+}
