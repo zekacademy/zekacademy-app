@@ -7,7 +7,10 @@ from collections import OrderedDict
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CIKTI = os.path.join(KOK, "functions", "havuz")
 DERSLER = [("mat", "TYT Matematik", ["mat", "prob", "matd"]), ("geo", "TYT Geometri", ["geo"]),
-           ("fiz", "TYT Fizik", ["fiz"]), ("kim", "TYT Kimya", ["kim"]), ("bio", "TYT Biyoloji", ["bio"])]
+           ("fiz", "TYT Fizik", ["fiz"]), ("kim", "TYT Kimya", ["kim"]), ("bio", "TYT Biyoloji", ["bio"]),
+           ("amat", "AYT Matematik", ["amat"])]
+KLASOR = {"amat": "ayt-mat"}  # diğerleri tyt-<id>
+SINAV = {"amat": "AYT"}  # diğerleri TYT
 ALANLAR = ["id", "konu", "kazanim", "zorluk", "kalip", "metin", "sekil", "siklar", "sekilPng", "cevap", "adimlar", "ipuclari", "bilgi", "puf", "celdiriciler", "kardes", "kartId"]
 TR = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiuCGIOSUAIU")
 
@@ -29,8 +32,9 @@ def kucult(o):
     return o
 
 def yaz(yol, veri):
-    with gzip.open(yol + ".gz", "wt", encoding="utf-8", compresslevel=9) as f:
-        json.dump(veri, f, ensure_ascii=False, separators=(",", ":"))
+    b = json.dumps(veri, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    with open(yol + ".gz", "wb") as h, gzip.GzipFile(filename="", mode="wb", fileobj=h, compresslevel=9, mtime=0) as f:
+        f.write(b)  # mtime=0: aynı veri aynı dosyayı üretir
 
 def norm(s):
     s = s.translate(TR).lower()
@@ -45,13 +49,13 @@ def app_sirasi(hav):
     if not m:
         return out
     try:
-        tyt = json.loads(m.group(1))["TYT"]
+        cur = json.loads(m.group(1))
     except Exception:
         return out
     for d, _, onekler in DERSLER:
         sira = []
         for o in onekler:
-            for x in tyt:
+            for x in cur.get(SINAV.get(d, "TYT"), []):
                 if x["k"] == o:
                     sira += [norm(t) for t in x["t"]]
         out[d] = sira
@@ -73,7 +77,7 @@ def main():
         os.makedirs(os.path.join(CIKTI, d), exist_ok=True)
         konular = OrderedDict()  # k -> [sorular]
         gor = set()
-        for f in sorted(glob.glob(os.path.join(hav, f"tyt-{d}", "*.json"))):
+        for f in sorted(glob.glob(os.path.join(hav, KLASOR.get(d, f"tyt-{d}"), "*.json"))):
             x = json.load(open(f, encoding="utf-8"))
             x = x if isinstance(x, list) else x.get("sorular", [])
             kardes = os.path.basename(f).endswith("-kardes.json")
