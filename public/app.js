@@ -366,7 +366,7 @@ const authMsg = e => ({ "auth/email-already-in-use":"Bu kullanıcı adı alınm�
 
 /* ---------- Telefon bildirimleri ---------- */
 const fns = getFunctions(fbApp, "europe-west3");
-const callFn = (name, data) => window.ZK_ONZ ? Promise.reject(new Error("Önizlemede kullanılamaz")) : httpsCallable(fns, name)(data).then(r => r.data);
+const callFn = (name, data) => window.ZK_ONZ && name!=="havuzGetir" ? Promise.reject(new Error("Önizlemede kullanılamaz")) : httpsCallable(fns, name)(data).then(r => r.data);
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 let pushOk = null;
@@ -580,15 +580,19 @@ const TUR = [
   {view:"daha", nav:"daha", ic:"palette", b:"Daha Fazla", t:"Görünüm’den açık/koyu modu ve tema rengini seçebilirsin. Bu tanıtımı da istediğin zaman “Uygulamayı tanı”dan tekrar açabilirsin."},
   {view:"home", ic:"check", b:"Hazırsın! 🎯", t:"Her gün: görevlerini işaretle, sayacı kullan. Her deneme sonrası: netlerini gir. Her hafta: hedeflerini bitir. Kolay gelsin {Ad}!"} ];
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
-const YENILIK_SURUM = "2026-11-16";
+const YENILIK_SURUM = "2026-11-18";
 const YENILIK = [
-  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Sınıf'a Ödül ve Sıralama Sistemi geldi: günün birincisi ve haftanın ilk 5'i artık ödüllendiriliyor. Kısaca göstereyim."},
-  ...ODUL_ADIM,
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne iki yenilik geldi: soru çözüm asistanın ZEK AI ve konu konu çözebileceğin SORU HAVUZU. Kısaca göstereyim.", kosul:"zekai"},
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne SORU HAVUZU geldi: TYT ve AYT sorularını konu konu, çözümleriyle çözebilirsin. Kısaca göstereyim.", kosul:"zekaiyok"},
+  {view:"ders", nav:"ders", ic:"search", b:"Yeni: ZEK AI 🤖", t:"Soru çözüm asistanın ZEK AI geldi! Ders ekranında, deneme grafiğinin hemen altındaki büyük mor ZEK AI butonunu gör.", kosul:"zekai"},
+  {view:"socoz", nav:"ders", ic:"note", b:"Takıldığın soruyu fotoğrafla 📷", t:"Sorunun fotoğrafını çek, cevap anahtarındaki şıkkı seç; ZEK AI adım adım birlikte çözsün. Anlamadığın adımda “Bu adımı anlamadım”a dokun, daha basit anlatsın. Önce kendin dene, takıldığın yerde sor!", kosul:"zekai"},
+  {view:"ders", nav:"ders", ic:"book", b:"Yeni: SORU HAVUZU 📚", t:"Ders bölümünde ZEK AI'ın altındaki turuncu SORU HAVUZU butonuna dokun. Ders ve konu seç, şıkkı işaretle: doğru mu yanlış mı hemen görürsün. Yanlışsa çözüm adım adım açılır, “Benzer soruyu dene” ile aynı konudan yeni bir soruya geçersin."},
+  ...ODUL_ADIM.map(x=>({...x, kosul:"oduleski"})),
   ...DERS_ADIM.map(x=>({...x, kosul:"derseski"})),
   ...SINIF_ADIM.slice(0, -1).map(x=>({...x, kosul:"sinifyok"})),
   {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨", kosul:"sinifyok"},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin {Ad}! Tanıtımı Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin.", kosul:"sinifvar"} ];
-const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
+const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="zekai" ? !!(aiAcik(S.me) && zkGoster()) : a.kosul==="zekaiyok" ? !(aiAcik(S.me) && zkGoster()) : a.kosul==="oduleski" ? !(st() && (st().yenilik||"") >= "2026-11-16") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
