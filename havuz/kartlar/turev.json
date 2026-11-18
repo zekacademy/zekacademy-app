@@ -1,0 +1,177 @@
+{
+ "konu": "Türev",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2025 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 12. sınıf matematik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ATRV-01",
+   "konu": "Türev",
+   "alt": "Türev tanımı ve limit",
+   "fikir": "Limit ifadesi türev tanımının kalıbına dönüştürülür ya da pay sıfırlanıyorsa terimler ayrılıp f′(a) ve f(a) ile yazılır.",
+   "tuzak": "Limit değerini f(a) sanmak; h yerine −h ya da 2h yazılınca katsayıyı atlamak; paydaki işareti kaçırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "tur-tanim",
+   "tip": "Türev tanımı ve limit",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-02",
+   "konu": "Türev",
+   "alt": "Türev kuralları ve bileşke",
+   "fikir": "Çarpım, bölüm ve zincir kuralı sırayla uygulanır; iç fonksiyonun türevi çarpılır; verilen noktada değer hesaplanır.",
+   "tuzak": "Çarpımın türevini türevlerin çarpımı sanmak; zincirde iç türevi unutmak; trigonometrik türevde işaret ve katsayı hatası.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "tur-kural",
+   "tip": "Türev kuralları ve bileşke",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-03",
+   "konu": "Türev",
+   "alt": "Teğet, normal ve eğim",
+   "fikir": "Değme noktasının koordinatı ve eğim f′(a) ile teğet denklemi kurulur; eksenlerle ya da başka bir eğriyle ilişkisi kurulur.",
+   "tuzak": "f′(a) yerine f(a)’yı eğim sanmak; teğet ile normali karıştırmak; ortak teğette yalnız değer eşitliğini kullanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "tur-teget",
+   "tip": "Teğet, normal ve eğim",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-04",
+   "konu": "Türev",
+   "alt": "f′ grafiğinden f’yi yorumlama",
+   "fikir": "f′’nün işareti f’nin yönünü, işaret değişimi ekstremumu, f′’nün tepe noktası f’nin bükümünü; f′ ile eksen arasındaki işaretli alan f’nin değişimini verir.",
+   "tuzak": "f′ artıyor diye f’yi artan sanmak; sıfırlardan her birini ekstremum saymak; alanı işaretsiz toplamak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "tur-fgraf",
+   "tip": "f′ grafiğinden f’yi yorumlama",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-05",
+   "konu": "Türev",
+   "alt": "Ekstremum ve değişim",
+   "fikir": "Türevin köklerinde işaret incelenir; yerel uç değerler hesaplanır; denklemin kök sayısı yerel uç değerlerle yatay doğrunun konumundan bulunur.",
+   "tuzak": "Kritik noktayı otomatik ekstremum saymak; uç değerleri dahil/hariç karıştırmak; maksimum ile minimum adlarını ters kullanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "tur-ekstrem",
+   "tip": "Ekstremum ve değişim",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-06",
+   "konu": "Türev",
+   "alt": "Enbüyük ve enküçük değer problemleri",
+   "fikir": "Büyüklük tek değişkenli yazılır, türev sıfırlanır, bulunan değer istenen ölçüye (çevre, yüzey alanı, hacim) taşınır.",
+   "tuzak": "Değişkeni yanlış kurmak; ara bölme ya da kenar sayısını yanlış saymak; istenen büyüklük yerine ara sonucu yazmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "tur-optim",
+   "tip": "Enbüyük ve enküçük değer problemleri",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-07",
+   "konu": "Türev",
+   "alt": "Hız, ivme ve konum grafiği",
+   "fikir": "Konum fonksiyonunun türevi hız, hızın türevi ivmedir; hızın sıfırlandığı an yön değişimini verir; yol ile yer değiştirme ayrılır.",
+   "tuzak": "Konumu hız sanmak; yer değiştirmeyi alınan yol saymak; ortalama hız ile anlık hızı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "tur-hareket",
+   "tip": "Hız, ivme ve konum grafiği",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV-08",
+   "konu": "Türev",
+   "alt": "Tablodan bileşke ve çarpım türevi",
+   "fikir": "Tabloda verilen f, g, f′ ve g′ değerleri doğru kurallara yerleştirilir; bileşkede iç değer önce bulunup f′ o noktada okunur.",
+   "tuzak": "Zinciri unutmak; f′’yi iç fonksiyonun değerinde değil x’te okumak; çarpım kuralının bir terimini düşürmek.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "tur-tablo",
+   "tip": "Tablodan bileşke ve çarpım türevi",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türev tanımı, kurallar, teğet, f′ grafiği, ekstremum, optimizasyon, hız-ivme; yalnız mantık) · MEB 12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "tur-tanim",
+   "ad": "Türev tanımı ve limit",
+   "kartlar": [
+    "K-ATRV-01"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-kural",
+   "ad": "Türev kuralları ve bileşke",
+   "kartlar": [
+    "K-ATRV-02"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-teget",
+   "ad": "Teğet, normal ve eğim",
+   "kartlar": [
+    "K-ATRV-03"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-fgraf",
+   "ad": "f′ grafiğinden f’yi yorumlama",
+   "kartlar": [
+    "K-ATRV-04"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-ekstrem",
+   "ad": "Ekstremum ve değişim",
+   "kartlar": [
+    "K-ATRV-05"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-optim",
+   "ad": "Enbüyük ve enküçük değer problemleri",
+   "kartlar": [
+    "K-ATRV-06"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-hareket",
+   "ad": "Hız, ivme ve konum grafiği",
+   "kartlar": [
+    "K-ATRV-07"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur-tablo",
+   "ad": "Tablodan bileşke ve çarpım türevi",
+   "kartlar": [
+    "K-ATRV-08"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  }
+ ]
+}

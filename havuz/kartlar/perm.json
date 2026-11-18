@@ -1,0 +1,219 @@
+{
+ "konu": "Permütasyon ve Kombinasyon",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2025 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-APER-01",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Toplama ve çarpma kuralı (şema, tablo, ağaç)",
+   "fikir": "Şemadan ya da tablodan her aşamadaki seçenek sayıları okunur; art arda aşamalar çarpılır, birbirinin yerine geçen durumlar toplanır, koşullu dallar ayrı ele alınır.",
+   "tuzak": "Çarpılacak yerde toplamak (ya da tersi); bir dalda kaç seçenek olduğunu bütün dallar için aynı sanmak; koşulu sağlamayan dalları saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "pr-sayma",
+   "tip": "Toplama ve çarpma kuralı",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-02",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Sıralı seçim ve sıralama koşulları",
+   "fikir": "Her konum için kalan seçenek sayısı bulunur; kısıtlı konum önce doldurulur; yan yana koşulu blokla, ayrı koşulu tümleyenle çözülür.",
+   "tuzak": "Sıranın önemli olup olmadığını karıştırmak; blok içi sıralamayı unutmak; kısıtlı konumu sona bırakıp seçenek sayısını yanlış bulmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "pr-permutasyon",
+   "tip": "Permütasyon ve sıralama koşulları",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-03",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Izgarada en kısa yol",
+   "fikir": "Yolun yatay ve dikey adımlarının dizilişi sayılır; ara noktadan geçen yollar parçaların çarpımıdır; kapalı yollar tümleyenle ya da tek tek hesapla ayrılır.",
+   "tuzak": "Adım sayısını düğüm sayısıyla karıştırmak; çarpma yerine toplamak; çakışan yolları iki kez çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "pr-izgara",
+   "tip": "Izgarada en kısa yol",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-04",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Dairesel ve sabit sandalyeli oturma düzeni",
+   "fikir": "Sandalyeler numaralıysa sıralama, numarasız yuvarlak masada dönüşler aynı sayılır; ilişkili iki kişi için konum ilişkisi sayılır ya da tümleyen alınır.",
+   "tuzak": "Dönmeyle eşit dizilişleri ayrı saymak; “yan yana” ve “karşılıklı” durumlarından birini unutmak; iki kişinin kendi aralarındaki yer değişimini atlamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "pr-dairesel",
+   "tip": "Dairesel ve sabit sandalyeli oturma",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-05",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Tekrarlı dizilişler ve bloklaştırma",
+   "fikir": "Aynı harf/nesne tekrarı faktöriyellerle bölünür; birlikte olması istenenler blok, ayrı olması istenenler araya yerleştirme ile sayılır.",
+   "tuzak": "Tekrarı bölmeyi unutmak; araya yerleştirmede uçları saymamak; blokları kendi içinde sıralamamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "pr-siralama",
+   "tip": "Tekrarlı dizilişler ve bloklaştırma",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-06",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Permütasyon-kombinasyon özdeşlikleri",
+   "fikir": "Her yargı tanım ya da Pascal özdeşliğiyle sayısal olarak sınanır; küçük bir örnekle yanlış yargı çürütülür.",
+   "tuzak": "P(n, r) ile C(n, r) arasındaki r! çarpanını karıştırmak; faktöriyel sadeleştirmede kalan çarpanları atlamak; Pascal özdeşliğinin alt indislerini kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "pr-ozdeslik",
+   "tip": "Permütasyon-kombinasyon özdeşlikleri",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-07",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Rakamlardan sayı yazma",
+   "fikir": "Koşullu basamak önce doldurulur; baştaki sıfır yasağı ayrı durum olarak ele alınır; her yargı için sayma ayrı yapılır.",
+   "tuzak": "Baştaki sıfırı ayrı düşünmemek; koşullu basamağı sona bırakıp seçenek sayısını yanlış bulmak; durumları iki kez saymak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "pr-sayiyaz",
+   "tip": "Rakamlardan sayı yazma",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-08",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Geometrik nesnelerle sayma",
+   "fikir": "Noktalar, köşeler ya da doğrular arasından seçim yapılır; aynı doğru üzerindeki ya da kenar oluşturan seçimler tümleyenle ayrılır.",
+   "tuzak": "Doğrusal noktalardan üçgen sanmak; iki koşulu çıkarırken ortak durumu iki kez çıkarmak; seçim yerine sıralama yapmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pr-geometri",
+   "tip": "Geometrik nesnelerle sayma",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-09",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Bölge boyama",
+   "fikir": "Bölgeler komşuluk grafiğine göre sırayla boyanır; en çok komşusu olan bölge önce renklendirilir; çakışma yaratacak komşu çiftleri ayrı durum olarak sayılır.",
+   "tuzak": "Komşu olmayan bölgeleri komşu sanmak; döngü kapanışındaki ek koşulu unutmak; kullanılan renk sayısını yanlış belirlemek.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pr-boyama",
+   "tip": "Bölge boyama",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER-10",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Seçim, gruplama ve en az/en çok koşulları",
+   "fikir": "Koşullar bölünüp durumlara ayrılır ya da tümleyenle sayılır; seçimler kombinasyonla, adlandırılmamış gruplar eşit gruplara bölme düzeltmesiyle sayılır.",
+   "tuzak": "Sıra gözetmek; ortak durumu iki kez saymak; adlandırılmamış gruplarda grup sayısının faktöriyeline bölmeyi unutmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "pr-secim",
+   "tip": "Seçim, gruplama ve koşullu sayma",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (Permütasyon-Kombinasyon: oturma düzeni, seçim, sıralama koşulları; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pr-sayma",
+   "ad": "Toplama ve çarpma kuralı",
+   "kartlar": [
+    "K-APER-01"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-permutasyon",
+   "ad": "Permütasyon ve sıralama koşulları",
+   "kartlar": [
+    "K-APER-02"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-izgara",
+   "ad": "Izgarada en kısa yol",
+   "kartlar": [
+    "K-APER-03"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-dairesel",
+   "ad": "Dairesel ve sabit sandalyeli oturma",
+   "kartlar": [
+    "K-APER-04"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-siralama",
+   "ad": "Tekrarlı dizilişler ve bloklaştırma",
+   "kartlar": [
+    "K-APER-05"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-ozdeslik",
+   "ad": "Permütasyon-kombinasyon özdeşlikleri",
+   "kartlar": [
+    "K-APER-06"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-sayiyaz",
+   "ad": "Rakamlardan sayı yazma",
+   "kartlar": [
+    "K-APER-07"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-geometri",
+   "ad": "Geometrik nesnelerle sayma",
+   "kartlar": [
+    "K-APER-08"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-boyama",
+   "ad": "Bölge boyama",
+   "kartlar": [
+    "K-APER-09"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pr-secim",
+   "ad": "Seçim, gruplama ve koşullu sayma",
+   "kartlar": [
+    "K-APER-10"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  }
+ ]
+}

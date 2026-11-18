@@ -1,0 +1,198 @@
+{
+ "konu": "İntegral",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Matematik 2018–2026 çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AINT-01",
+   "konu": "İntegral",
+   "alt": "Belirsiz integral ve başlangıç koşulu",
+   "fikir": "Türevi verilen fonksiyonun kuvvet kuralıyla ters türevi alınır; verilen bir noktadaki değerle sabit bulunur ve istenen noktada hesaplanır.",
+   "tuzak": "Üssü artırıp katsayıyı bölmemek; sabiti unutmak ya da işaretini ters almak; ters türev yerine türev değerini hesaplamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "int-belirsiz",
+   "tip": "Belirsiz integral ve başlangıç koşulu",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-02",
+   "konu": "İntegral",
+   "alt": "Eğri ile eksen arasında alan",
+   "fikir": "Sınırları grafikten okunan alanlar belirli integralle hesaplanır; eğri x eksenini kesiyorsa her işaret aralığı ayrı alınır.",
+   "tuzak": "İşaret değişimini görmeyip tek integral almak (alanların birbirini götürmesi); alt sınırı 0 almak; integral yerine fonksiyon değerlerinin farkını almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "int-egri-alan",
+   "tip": "Eğri ile eksen arasında alan",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-03",
+   "konu": "İntegral",
+   "alt": "İki eğri arasında alan",
+   "fikir": "Kesişim noktaları sınır olur; üstteki fonksiyondan alttaki çıkarılıp integral alınır; alan bir koşula bağlıysa parametre denklemden çözülür.",
+   "tuzak": "Eğriyi x eksenine göre ayrı ayrı integre edip toplamak; üst–alt sırasını ters almak; kesişimlerin yerine başka sınır kullanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "int-iki-egri",
+   "tip": "İki eğri arasında alan",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-04",
+   "konu": "İntegral",
+   "alt": "Grafikten alan ve toplam",
+   "fikir": "Doğru parçalarından oluşan grafikte alan geometrik şekillerle, kırık olmayan grafikte alt ve üst toplam sınırlarıyla bulunur; x ekseninin altı negatif sayılır.",
+   "tuzak": "Üçgende ½ çarpanını unutmak; negatif bölgeyi pozitif saymak; uzaklık–zaman gibi grafiklerde alanın anlamını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "int-grafik-alan",
+   "tip": "Grafikten alan ve toplam",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-05",
+   "konu": "İntegral",
+   "alt": "İntegral özellikleri ve simetri",
+   "fikir": "Her ifadeye integralin toplam, sabit çarpan ve aralık özellikleri ile tek–çift fonksiyon simetrisi ayrı ayrı uygulanıp doğruluğu denetlenir.",
+   "tuzak": "Simetrik aralıkta her integralin sıfır olduğunu sanmak; çarpımın integralini integrallerin çarpımı sanmak; mutlak değeri açmadan integral almak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "int-ozellik",
+   "tip": "İntegral özellikleri ve simetri",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-06",
+   "konu": "İntegral",
+   "alt": "Değişken değiştirme",
+   "fikir": "İçteki ifade u olarak seçilir; du bulunur; sınırlar yeni değişkene dönüştürülür ya da sonuç x cinsinden yazılıp eski sınırlar kullanılır.",
+   "tuzak": "du’daki katsayıyı eksik ya da fazla bırakmak; sınırları değiştirmeden u cinsinden integral almak; f(mx) için 1/m çarpanını unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "int-degisken",
+   "tip": "Değişken değiştirme",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-07",
+   "konu": "İntegral",
+   "alt": "Türev ve integral ilişkisi",
+   "fikir": "f′ grafiği ile f’nin değişimi alandan; F(x) = ∫ₐˣ f(t) dt için F′ = f olduğundan F’nin artanlığı, uç noktaları ve değerleri f’nin işaretinden ve alanlarından bulunur.",
+   "tuzak": "f′ grafiğinden f(x) değerini doğrudan okumak; işaret değişiminde yerel maksimum ile minimumu karıştırmak; alt sınır değerini hesaba katmamak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "int-turev-iliski",
+   "tip": "Türev ve integral ilişkisi",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-08",
+   "konu": "İntegral",
+   "alt": "Sabit içeren integral denklemi",
+   "fikir": "Belirli integral bir sayı olduğundan k diye adlandırılır; fonksiyonun ifadesine yazılıp integral alınarak k için denklem kurulur.",
+   "tuzak": "Sabit terimin integralini k yerine k·(üst − alt) yazmamak; denklemde işaret hatası; k’yı bulunca asıl soruyu cevaplamamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "int-denklem",
+   "tip": "Sabit içeren integral denklemi",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT-09",
+   "konu": "İntegral",
+   "alt": "İntegralin günlük uygulamaları",
+   "fikir": "Hız–zaman, debi–zaman ve alan–maliyet bağlamlarında integral toplam yol, toplam hacim ve toplam bedeli verir; birimler çarpımı sonucun birimini belirler.",
+   "tuzak": "Alan yerine tek bir değeri çarpmak; parçalı alanlarda aralık dışına taşmak; fiyatı yanlış bölgeye uygulamak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "int-uygulama",
+   "tip": "İntegralin günlük uygulamaları",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "int-belirsiz",
+   "ad": "Belirsiz integral ve başlangıç koşulu",
+   "kartlar": [
+    "K-AINT-01"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-egri-alan",
+   "ad": "Eğri ile eksen arasında alan",
+   "kartlar": [
+    "K-AINT-02"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-iki-egri",
+   "ad": "İki eğri arasında alan",
+   "kartlar": [
+    "K-AINT-03"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-grafik-alan",
+   "ad": "Grafikten alan ve toplam",
+   "kartlar": [
+    "K-AINT-04"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-ozellik",
+   "ad": "İntegral özellikleri ve simetri",
+   "kartlar": [
+    "K-AINT-05"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-degisken",
+   "ad": "Değişken değiştirme",
+   "kartlar": [
+    "K-AINT-06"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-turev-iliski",
+   "ad": "Türev ve integral ilişkisi",
+   "kartlar": [
+    "K-AINT-07"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-denklem",
+   "ad": "Sabit içeren integral denklemi",
+   "kartlar": [
+    "K-AINT-08"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int-uygulama",
+   "ad": "İntegralin günlük uygulamaları",
+   "kartlar": [
+    "K-AINT-09"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  }
+ ]
+}

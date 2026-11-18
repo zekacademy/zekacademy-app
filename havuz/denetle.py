@@ -29,7 +29,7 @@ def denetle(Q,korpus=None):
         for g in GEREK:
             if g not in q: H_(f'eksik alan {g}')
         if ids[i]>1: H_('tekrar eden id')
-        if not re.fullmatch(r'tyt[a-z]+-[a-z]+-\d{4}k?',i): H_('id biçimi')
+        if not re.fullmatch(r'(tyt|ayt)[a-z]+-[a-z]+-\d{4}k?',i): H_('id biçimi')
         if i.endswith('k') and not q.get('ana'): H_('kardeş sorunun ana bağlantısı yok')
         if q.get('kisaYol') is not None and (not isinstance(q['kisaYol'],str) or len(q['kisaYol'])<20): H_('kısa yol çok kısa ya da biçimi yanlış')
         if q.get('zorluk') not in ZOR: H_('zorluk')
@@ -129,7 +129,7 @@ def profil(Q,dosyalar):
     P=json.load(open(yol))['hedef']; uy=[]; satir=[]
     gruplar=defaultdict(list)
     for f in dosyalar:
-        m=re.search(r'(tyt-[a-z]+)',f); gruplar[m.group(1)]+=json.load(open(f))
+        m=re.search(r'((?:tyt|ayt)-[a-z]+)',f); gruplar[m.group(1)]+=json.load(open(f))
     import statistics as _st
     for kl,G in gruplar.items():
         n=len(G); H=P['dersler'].get(kl)
@@ -158,7 +158,7 @@ def profil(Q,dosyalar):
             if 'yeni nesil_min' in K and kc['yeni nesil']/n<K['yeni nesil_min']: uy.append(f"{kl}: yeni nesil %{kc['yeni nesil']/n*100:.0f} < %{K['yeni nesil_min']*100:.0f}")
     return satir,uy
 if __name__=='__main__':
-    dosyalar=[a for a in sys.argv[1:] if a.endswith('.json') and re.search(r'tyt-[a-z]+',a) and '--benzerlik' not in a and 'kutup' not in a]
+    dosyalar=[a for a in sys.argv[1:] if a.endswith('.json') and re.search(r'(?:tyt|ayt)-[a-z]+',a) and '--benzerlik' not in a and 'kutup' not in a]
     korpus=None
     if '--benzerlik' in sys.argv:
         korpus=[]

@@ -1,0 +1,177 @@
+{
+ "konu": "Polinomlar",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2025 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-APLN-01",
+   "konu": "Polinomlar",
+   "alt": "Derece ve katsayılar",
+   "fikir": "Çarpım, toplam ve bileşkede derece kuralları ile P(1) ve P(0) değerleri kullanılır; verilen ifade açılmadan yalnız gereken değer hesaplanır.",
+   "tuzak": "Toplamın derecesini toplamak; P(1) yerine P(0) almak; baş katsayıyı sabit terimle karıştırmak; bileşkede dereceyi toplamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "apl-derece",
+   "tip": "Derece ve katsayılar",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-02",
+   "konu": "Polinomlar",
+   "alt": "Grafikten polinom",
+   "fikir": "Grafikteki kökler, kök katlılığı ve verilen bir nokta ile polinom çarpanlı biçimde kurulur; istenen değer ya da işaret bu biçimden bulunur.",
+   "tuzak": "Çift katlı kökü tek kat saymak; baş katsayıyı 1 sanmak; kökün işaretini ters yazmak; kesişmeyen kökü atlamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "apl-grafik",
+   "tip": "Grafikten polinom",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-03",
+   "konu": "Polinomlar",
+   "alt": "Polinom eşitsizliği",
+   "fikir": "Çarpanların işaret çizelgesi çıkarılır; çift katlı kökte işaretin değişmediği ve paydanın kökünün alınmadığı gözetilerek çözüm kümesi yazılır; tam sayılar sayılır.",
+   "tuzak": "Eşitlik uçlarını yanlış almak; çift katlı kökte işareti değiştirmek; paydanın kökünü çözüm kümesine katmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "apl-esitsizlik",
+   "tip": "Polinom eşitsizliği",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-04",
+   "konu": "Polinomlar",
+   "alt": "Kalan ve bölüm ilişkisi",
+   "fikir": "Bölme eşitliğinden kalan polinomu bulmak için bölenin kökleri yerine yazılır; bileşik ya da iç içe bölmelerde kalan, bölenin çarpanlarına ayrılmasıyla bulunur.",
+   "tuzak": "Kalanı bölenle aynı dereceden yazmak; kökler yerine yanlış değer koymak; iç içe bölmede kalanı doğrudan eklemek.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "apl-kalan",
+   "tip": "Kalan ve bölüm ilişkisi",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-05",
+   "konu": "Polinomlar",
+   "alt": "Horner ve bölüm polinomu",
+   "fikir": "Bölme şemasının satırları sütun sütun okunup bilinmeyen katsayılar bulunur; bölüm ve kalan buradan elde edilir.",
+   "tuzak": "Bölenin kökünün işaretini ters almak; alt satırın son sayısını bölüm katsayısı saymak; sütunları kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "apl-horner",
+   "tip": "Horner ve bölüm polinomu",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-06",
+   "konu": "Polinomlar",
+   "alt": "Çarpan, özdeşlik ve alan modeli",
+   "fikir": "Kök bilgisinden çarpan yazılır, katsayı eşitlenir; alan modelinde parçaların çarpımları toplam polinomla karşılaştırılır.",
+   "tuzak": "Kökü çarpanda ters işaretle yazmak; özdeş terimleri farklı dereceyle eşlemek; tam sayı koşulunu kullanmamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "apl-carpan",
+   "tip": "Çarpan, özdeşlik ve alan modeli",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-07",
+   "konu": "Polinomlar",
+   "alt": "Çift ve tek polinom",
+   "fikir": "Simetri koşulu hangi dereceli terimlerin bulunabileceğini ve köklerin eşleşmesini verir; kökler ve baş katsayıyla polinom kurulur.",
+   "tuzak": "Tek polinomda sıfır kökünü unutmak; simetriden gelen kökleri saymamak; çift polinomda tüm köklerin gerçel olduğunu sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "apl-simetri",
+   "tip": "Çift ve tek polinom",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APLN-08",
+   "konu": "Polinomlar",
+   "alt": "Değerlerden polinom ve fonksiyonel eşitlik",
+   "fikir": "Verilen değerlerden katsayı denklemleri kurulur ya da P(x+1) − P(x) eşitliği ardışık değerler için toplanır.",
+   "tuzak": "Denklemleri çözerken işlem hatası yapmak; başlangıç değerini toplama katmamak; baş katsayıyı denklemlere katmamak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "apl-fark",
+   "tip": "Değerlerden polinom ve fonksiyonel eşitlik",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik (polinom soruları; yalnız mantık) · MEB 11. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "apl-derece",
+   "ad": "Derece ve katsayılar",
+   "kartlar": [
+    "K-APLN-01"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-grafik",
+   "ad": "Grafikten polinom",
+   "kartlar": [
+    "K-APLN-02"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-esitsizlik",
+   "ad": "Polinom eşitsizliği",
+   "kartlar": [
+    "K-APLN-03"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-kalan",
+   "ad": "Kalan ve bölüm ilişkisi",
+   "kartlar": [
+    "K-APLN-04"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-horner",
+   "ad": "Horner ve bölüm polinomu",
+   "kartlar": [
+    "K-APLN-05"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-carpan",
+   "ad": "Çarpan, özdeşlik ve alan modeli",
+   "kartlar": [
+    "K-APLN-06"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-simetri",
+   "ad": "Çift ve tek polinom",
+   "kartlar": [
+    "K-APLN-07"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  },
+  {
+   "tipId": "apl-fark",
+   "ad": "Değerlerden polinom ve fonksiyonel eşitlik",
+   "kartlar": [
+    "K-APLN-08"
+   ],
+   "uygulamaKonu": "amat|Polinomlar"
+  }
+ ]
+}

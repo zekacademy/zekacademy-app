@@ -1,0 +1,177 @@
+{
+ "konu": "2.Dereceden Denklemler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 10–11. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AIK-01",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Kökler toplamı ve çarpımı",
+   "fikir": "Kökler bulunmadan ifade, toplam ve çarpım cinsinden yazılır; x₁² + x₂², 1/x₁ + 1/x₂ ve |x₁ − x₂| gibi ifadeler özdeşliklerle bu iki değere indirgenir.",
+   "tuzak": "Toplamın işaretini (−b/a) ters almak; a ≠ 1 iken a’ya bölmeyi unutmak; kare toplamdan 2x₁x₂ yerine x₁x₂ çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ik-vieta",
+   "tip": "Kökler toplamı ve çarpımı",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-02",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Diskriminant ve kök koşulu",
+   "fikir": "Kök sayısı ve türü Δ’nın işaretiyle belirlenir; parametreli denklemde Δ, parametrenin ikinci dereceden ifadesi olur ve işaret incelemesi yapılır.",
+   "tuzak": "Δ’da b’nin karesini almamak ya da 4ac yerine ac yazmak; Δ = 0 ile Δ ≥ 0’ı karıştırmak; uç değerleri dahil etmek.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ik-diskr",
+   "tip": "Diskriminant ve kök koşulu",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-03",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Kökleri verilen denklem kurma",
+   "fikir": "Yeni köklerin toplamı ve çarpımı eski köklerin toplam ve çarpımı cinsinden yazılır; denklem x² − Tx + Ç = 0 biçiminde kurulur.",
+   "tuzak": "Toplamın işaretini yanlış yazmak; eski kökler toplamını yeni kökler toplamı sanmak; çarpımı kare almadan yazmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "ik-kurma",
+   "tip": "Kökleri verilen denklem kurma",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-04",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Ortak kök ve kökler arası ilişki",
+   "fikir": "Ortak kökte denklemler çıkarılarak kök bulunur ve yerine konur; kök ilişkisi (x₁ = 2x₂ gibi) verilirse kökler tek bilinmeyenle yazılıp çarpım ve toplam kullanılır; iki işaretli durum birlikte düşünülür.",
+   "tuzak": "Ortak kök bulunca parametreyi bulmayı unutmak; kök ilişkisinde yalnız bir işaret durumunu almak; ters işaretli köklü durumu atlamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "ik-iliski",
+   "tip": "Ortak kök ve kökler arası ilişki",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-05",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Parabol grafiği ve kökler",
+   "fikir": "Grafikten kökler, tepe noktası ve eksen kesim değerleri okunur; bu veriler denklem kurmada ya da kökler toplamı ve çarpımı hesabında kullanılır; mutlak değerli grafikte doğru ile kesişim sayısı grafiğe bakılarak belirlenir.",
+   "tuzak": "Okunan kök işaretini ters yazmak; tepe noktası yerine kök okumak; mutlak değerli grafikte katlanan kısmı unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "ik-parabol",
+   "tip": "Parabol grafiği ve kökler",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-06",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Denkleme dönüşen problem",
+   "fikir": "Bilinmeyen uzunluk, hız ya da sayı seçilir, durum ikinci dereceden denkleme dönüştürülür; kökler soruya uygunluk (pozitiflik, sınır) için denetlenir.",
+   "tuzak": "Negatif kökü elemeyi unutmak; iki kökün toplamını cevap sanmak; kenar ifadesini yanlış kurmak (x yerine 2x).",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ik-problem",
+   "tip": "Denkleme dönüşen problem",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-07",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Değişken değiştirme",
+   "fikir": "Tekrarlanan ifade yeni değişkenle yazılır; her değer için asıl denklem ayrı çözülür; Δ’sı negatif denklemler çözüme katılmaz.",
+   "tuzak": "Yeni değişkenin değerini asıl bilinmeyen sanmak; karmaşık kökleri toplama katmak; çarpanları yanlış eşleştirmek.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 5,
+   "tipId": "ik-donus",
+   "tip": "Değişken değiştirme",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  },
+  {
+   "id": "K-AIK-08",
+   "konu": "2.Dereceden Denklemler",
+   "alt": "Köklerin sayı doğrusundaki konumu",
+   "fikir": "Köklerin uzaklığı ya da konumu (x₁ − x₂)² = (x₁ + x₂)² − 4x₁x₂ ile parametreye bağlanır; kareköke dikkat edilir.",
+   "tuzak": "Uzaklığı Δ’ya eşitlemek (karekökü unutmak); işaretli farkı mutlak değersiz bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ik-konum",
+   "tip": "Köklerin sayı doğrusundaki konumu",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (2.dereceden denklem soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 10–11. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ik-vieta",
+   "ad": "Kökler toplamı ve çarpımı",
+   "kartlar": [
+    "K-AIK-01"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-diskr",
+   "ad": "Diskriminant ve kök koşulu",
+   "kartlar": [
+    "K-AIK-02"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-kurma",
+   "ad": "Kökleri verilen denklem kurma",
+   "kartlar": [
+    "K-AIK-03"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-iliski",
+   "ad": "Ortak kök ve kökler arası ilişki",
+   "kartlar": [
+    "K-AIK-04"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-parabol",
+   "ad": "Parabol grafiği ve kökler",
+   "kartlar": [
+    "K-AIK-05"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-problem",
+   "ad": "Denkleme dönüşen problem",
+   "kartlar": [
+    "K-AIK-06"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-donus",
+   "ad": "Değişken değiştirme",
+   "kartlar": [
+    "K-AIK-07"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  },
+  {
+   "tipId": "ik-konum",
+   "ad": "Köklerin sayı doğrusundaki konumu",
+   "kartlar": [
+    "K-AIK-08"
+   ],
+   "uygulamaKonu": "amat|2.Dereceden Denklemler"
+  }
+ ]
+}

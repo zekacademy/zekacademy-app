@@ -1,0 +1,177 @@
+{
+ "konu": "Diziler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ADZ-01",
+   "konu": "Diziler",
+   "alt": "Aritmetik dizi ve toplamı",
+   "fikir": "Verilen iki bilgiden ortak fark ve ilk terim kurulur; istenen terim ya da toplam aritmetik dizi formülüyle hesaplanır. Grafik, tablo, sayı doğrusu ve akış şemasından okunan değerler de aynı iki bilinmeyene indirgenir.",
+   "tuzak": "Terim sayısını bir fazla ya da eksik almak (n yerine n − 1); sıra farkı ile terim farkını karıştırmak; toplam formülünde 2 ye bölmeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "dzi-aritmetik",
+   "tip": "Aritmetik dizi ve toplamı",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-02",
+   "konu": "Diziler",
+   "alt": "Genel terim ve örüntü",
+   "fikir": "Şekil ya da tablodaki ilk birkaç terimden farklar incelenir; fark sabitse doğrusal, farkların farkı sabitse ikinci dereceden genel terim kurulur ve sorulan sıraya uygulanır.",
+   "tuzak": "Her dizinin aritmetik olduğunu sanmak; ilk farkı sabit alıp ikinci farkı görmemek; sıra numarasını bir kaydırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "dzi-genel",
+   "tip": "Genel terim ve örüntü",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-03",
+   "konu": "Diziler",
+   "alt": "Geometrik dizi ve toplamı",
+   "fikir": "Ardışık terimlerin oranından ortak çarpan bulunur; terim sayısı doğru sayılarak geometrik toplam formülü ya da toplam yol/adet hesabı kurulur.",
+   "tuzak": "Terim sayısını yanlış saymak; ilk terimi yanlış belirlemek; ortak çarpanı fark gibi toplamak; ilk terimi gövde/başlangıç değerine dahil etmek.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "dzi-geometrik",
+   "tip": "Geometrik dizi ve toplamı",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-04",
+   "konu": "Diziler",
+   "alt": "Ara terim ve ardışık terim koşulu",
+   "fikir": "Ardışık üç terim koşulu ya da iki sayı arasına eşit aralıklı terim yerleştirme koşuluyla ortak fark bulunur; terim sayısı aralık sayısından bir fazla alınır.",
+   "tuzak": "Aralık sayısı ile terim sayısını karıştırmak; ilk ve son terimi saymamak; sıra farkına bölmek yerine terim sayısına bölmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "dzi-ortak",
+   "tip": "Ara terim ve ardışık terim koşulu",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-05",
+   "konu": "Diziler",
+   "alt": "Monotonluk ve sınırlılık",
+   "fikir": "Genel terim yeniden yazılır; ardışık iki terimin farkının işareti ve terimlerin sınır değeri incelenir; öncüller tek tek denetlenir.",
+   "tuzak": "Sınır değerine yaklaşan terimin o değeri aldığını sanmak; birkaç terime bakıp dizinin artan olduğuna karar vermek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "dzi-monoton",
+   "tip": "Monotonluk ve sınırlılık",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-06",
+   "konu": "Diziler",
+   "alt": "Özyinelemeli diziler",
+   "fikir": "Kural ilk terim(ler)den başlayarak art arda uygulanır; terimler kendini tekrar ediyorsa tekrarın uzunluğu bulunur; terim sayısı hesabı tam periyot ve kalan olarak yapılır.",
+   "tuzak": "Kuralda n yi bir kaydırmak; kalan terimleri yanlış sayıdan başlatmak; bir periyodun toplamını sıfır sanıp kalanı unutmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "dzi-ozyine",
+   "tip": "Özyinelemeli diziler",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-07",
+   "konu": "Diziler",
+   "alt": "Sₙ ile aₙ ilişkisi",
+   "fikir": "n ≥ 2 için aₙ = Sₙ − Sₙ₋₁ yazılır; a₁ = S₁ ayrıca denetlenir; ilk terim aynı kurala uymuyorsa dizi geometrik ya da aritmetik değildir. Toplam grafiğinden Sₙ ifadesinin katsayıları bulunur.",
+   "tuzak": "a₁ i genel formüle zorla sokmak; Sₙ − Sₙ₋₂ gibi yanlış fark almak; toplamı terim sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "dzi-sn",
+   "tip": "Sₙ ile aₙ ilişkisi",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  },
+  {
+   "id": "K-ADZ-08",
+   "konu": "Diziler",
+   "alt": "Aritmetik ve geometrik dizi birlikte",
+   "fikir": "İki dizinin ortak bilgileri iki ayrı formülle yazılır; ortak bilinmeyenler denklemle bulunur; sonra istenen terim ya da koşul sağlanan ilk sıra bulunur.",
+   "tuzak": "Eşit sıra numaralarını varsaymak; geometrik dizide üssü n yerine n − 1 yazmamak; koşulu sağlayan ilk sırayı bir kaydırmak.",
+   "zorluk": "zor",
+   "kalip": "yeni nesil",
+   "adim": 5,
+   "tipId": "dzi-karma",
+   "tip": "Aritmetik ve geometrik dizi birlikte",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Diziler soruları; yalnız mantık) · Bilgi Sarmal ve Acil yayınları (yalnız mantık) · MEB 11. sınıf matematik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "dzi-aritmetik",
+   "ad": "Aritmetik dizi ve toplamı",
+   "kartlar": [
+    "K-ADZ-01"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-genel",
+   "ad": "Genel terim ve örüntü",
+   "kartlar": [
+    "K-ADZ-02"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-geometrik",
+   "ad": "Geometrik dizi ve toplamı",
+   "kartlar": [
+    "K-ADZ-03"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-ortak",
+   "ad": "Ara terim ve ardışık terim koşulu",
+   "kartlar": [
+    "K-ADZ-04"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-monoton",
+   "ad": "Monotonluk ve sınırlılık",
+   "kartlar": [
+    "K-ADZ-05"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-ozyine",
+   "ad": "Özyinelemeli diziler",
+   "kartlar": [
+    "K-ADZ-06"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-sn",
+   "ad": "Sₙ ile aₙ ilişkisi",
+   "kartlar": [
+    "K-ADZ-07"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  },
+  {
+   "tipId": "dzi-karma",
+   "ad": "Aritmetik ve geometrik dizi birlikte",
+   "kartlar": [
+    "K-ADZ-08"
+   ],
+   "uygulamaKonu": "amat|Diziler"
+  }
+ ]
+}

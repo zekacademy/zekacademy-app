@@ -1,0 +1,198 @@
+{
+ "konu": "Limit",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Matematik 2018–2026 çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ALM-01",
+   "konu": "Limit",
+   "alt": "Grafik ve tablodan limit",
+   "fikir": "Sol ve sağ limit grafikten ayrı ayrı okunur; içi dolu ve boş noktalar ayırt edilir; bileşkede iç limitin yaklaşma yönü izlenir.",
+   "tuzak": "Limiti fonksiyon değeriyle karıştırmak; yaklaşma yönünü unutmak; bileşkeyi çarpım sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "lm-grafik",
+   "tip": "Grafik ve tablodan limit okuma",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-02",
+   "konu": "Limit",
+   "alt": "Belirsizlik giderme",
+   "fikir": "0/0 belirsizliğinde ortak çarpan ya da eşlenik bulunur; sadeleştirdikten sonra değer yazılır.",
+   "tuzak": "Belirsizliği 0 sanmak; eşlenik çarpımında işaret ya da kök hatası.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "lm-belirsiz",
+   "tip": "Belirsizlik giderme",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-03",
+   "konu": "Limit",
+   "alt": "Sonsuzda limit",
+   "fikir": "x → −∞ iken kökten çıkan |x| işareti hesaba katılır; ∞ − ∞ eşlenikle 0/0 ya da ∞/∞ biçimine getirilir.",
+   "tuzak": "√(x²) = x yazmak; eşlenik paydasındaki iki terimi yanlış toplamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 5,
+   "tipId": "lm-sonsuz",
+   "tip": "Sonsuzda limit",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-04",
+   "konu": "Limit",
+   "alt": "Mutlak değer ve tek yönlü limit",
+   "fikir": "Mutlak değer iki yanda ayrı açılır; tek yönlü limitler hesaplanıp işlem yapılır.",
+   "tuzak": "|u| için iki yanı aynı açmak; yalnız tek yönü hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "lm-parca",
+   "tip": "Mutlak değer ve tek yönlü limit",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-05",
+   "konu": "Limit",
+   "alt": "Süreklilik ve parametre",
+   "fikir": "Bölünme noktalarında sol limit, sağ limit ve değer eşitlenir; belirsizlik varsa pay çarpanına ayrılır; çarpımın sürekliliği tek yönlü limitlerle kurulur.",
+   "tuzak": "Yalnız bir bölünme noktasını kullanmak; işaret hatası; süreksizlik giderilebilirken boşluğu kök sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "lm-surekli",
+   "tip": "Süreklilik ve parametre",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-06",
+   "konu": "Limit",
+   "alt": "Limit özellikleri ve yargılar",
+   "fikir": "Toplam, çarpım ve bileşke limiti ancak limitler varsa yazılır; yargılar grafik ya da tablo verisiyle tek tek sınanır.",
+   "tuzak": "Limit varsa fonksiyon değerine eşit sanmak; bileşkeyi değerle hesaplamak; tek yönlü limitlerle iki yanlı limiti karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "lm-ozellik",
+   "tip": "Limit özellikleri ve yargılar",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-07",
+   "konu": "Limit",
+   "alt": "Asimptot ve sonsuz limit",
+   "fikir": "Dikey asimptot paydayı sıfırlayan ve sadeleşmeyen noktadadır; yatay asimptot sonsuzdaki limittir; sonsuz limitte işaret, pay ve paydanın o yandaki işaretinden bulunur.",
+   "tuzak": "Sadeleşen noktada asimptot sanmak; işaret tablosunu ters okumak; çift katlı kökte işaret değişimi sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "lm-asimptot",
+   "tip": "Asimptot ve sonsuz limit",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-08",
+   "konu": "Limit",
+   "alt": "Trigonometrik limit",
+   "fikir": "sin(ax)/(bx) ve tan(ax)/(bx) türünde limitler a/b olarak bulunur.",
+   "tuzak": "Katsayıları çarpmak ya da çıkarmak; oranı ters yazmak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 2,
+   "tipId": "lm-trig",
+   "tip": "Trigonometrik limit",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ALM-09",
+   "konu": "Limit",
+   "alt": "Geometri problemlerinde limit",
+   "fikir": "Geometrik büyüklükler değişkene bağlı yazılır; eşlenik ya da sin x/x limitiyle sonuç bulunur.",
+   "tuzak": "Alan formülünde ½ çarpanını unutmak; yarım açıyı unutmak; oranı ters kurmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "lm-uygulama",
+   "tip": "Geometri problemlerinde limit",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (Limit ve Süreklilik soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "lm-grafik",
+   "ad": "Grafik ve tablodan limit okuma",
+   "kartlar": [
+    "K-ALM-01"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-belirsiz",
+   "ad": "Belirsizlik giderme",
+   "kartlar": [
+    "K-ALM-02"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-sonsuz",
+   "ad": "Sonsuzda limit",
+   "kartlar": [
+    "K-ALM-03"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-parca",
+   "ad": "Mutlak değer ve tek yönlü limit",
+   "kartlar": [
+    "K-ALM-04"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-surekli",
+   "ad": "Süreklilik ve parametre",
+   "kartlar": [
+    "K-ALM-05"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-ozellik",
+   "ad": "Limit özellikleri ve yargılar",
+   "kartlar": [
+    "K-ALM-06"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-asimptot",
+   "ad": "Asimptot ve sonsuz limit",
+   "kartlar": [
+    "K-ALM-07"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-trig",
+   "ad": "Trigonometrik limit",
+   "kartlar": [
+    "K-ALM-08"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  },
+  {
+   "tipId": "lm-uygulama",
+   "ad": "Geometri problemlerinde limit",
+   "kartlar": [
+    "K-ALM-09"
+   ],
+   "uygulamaKonu": "amat|Limit"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "konu": "Binom ve Olasılık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ABO-01",
+   "konu": "Binom ve Olasılık",
+   "alt": "Genel terimle belirli terim ve parametre",
+   "fikir": "Genel terimde değişkenin kuvveti istenen kuvvete eşitlenerek k bulunur; k ile katsayı ya da parametre hesaplanır.",
+   "tuzak": "k’yı bir kaydırmak; ikinci terimin kuvvetini (işaret ve sayı katsayısı dahil) unutmak; üslü parametreden kök alırken yanlış kuvvet kullanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bn-terim",
+   "tip": "Binom açılımında terim ve parametre",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-02",
+   "konu": "Binom ve Olasılık",
+   "alt": "Pascal üçgeni ve katsayı ilişkileri",
+   "fikir": "Üçgendeki konum C(n, k) ile eşlenir; toplama kuralı, köşegen toplamı ve ardışık katsayı oranları kullanılır.",
+   "tuzak": "Satır numarasını 0 yerine 1’den başlatmak; köşegen toplamında bir alt satırı ya da bir sonraki sütunu karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bn-pascal",
+   "tip": "Pascal üçgeni ve ardışık katsayılar",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-03",
+   "konu": "Binom ve Olasılık",
+   "alt": "Binom özellikleri ve açılım çarpımı",
+   "fikir": "Terim sayısı, katsayılar toplamı, sabit terim yargıları ayrı ayrı sınanır; iki açılımın çarpımında üs toplamı istenen kuvvete eşit olan terim çiftleri toplanır.",
+   "tuzak": "Terim sayısını n sanmak; katsayılar toplamında yanlış değer kullanmak; çarpımda bir terim çiftini atlamak ya da işareti kaçırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "bn-ozellik",
+   "tip": "Binom açılımının özellikleri ve çarpımı",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-04",
+   "konu": "Binom ve Olasılık",
+   "alt": "Koşullu olasılık (çizelge, şema, sayma)",
+   "fikir": "Örnek uzay çizelge, Venn şeması ya da sayma ile kurulur; koşul örnek uzayı daraltır, olasılık daralan uzayda hesaplanır.",
+   "tuzak": "Paydayı yanlış alıp P(A | B) ile P(B | A)’yı karıştırmak; birleşim için olasılıkları kesişimi çıkarmadan toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ol-kosullu",
+   "tip": "Koşullu olasılık",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-05",
+   "konu": "Binom ve Olasılık",
+   "alt": "Bağımsız olaylar ve bağımsızlık koşulu",
+   "fikir": "P(A ∩ B) = P(A) · P(B) koşulu tablo ya da kutu verisine uygulanır; bilinmeyen bu eşitlikten bulunur.",
+   "tuzak": "Kesişimi boş olmayan olayları bağımsız sanmak; çapraz çarpımda yanlış hücreleri eşleştirmek.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "ol-bagimsiz",
+   "tip": "Bağımsız olaylar",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-06",
+   "konu": "Binom ve Olasılık",
+   "alt": "Ağaç şeması: toplam olasılık ve Bayes",
+   "fikir": "Dal olasılıkları çarpılır, aynı sonuca giden yollar toplanır; koşullu sorularda ilgili yol toplama bölünür.",
+   "tuzak": "Yalnız bir kolu almak; dal olasılıklarını toplamak; koşullu olasılıkta paydayı kaynağın olasılığı almak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ol-agac",
+   "tip": "Ağaç şeması ve koşullu olasılık",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-07",
+   "konu": "Binom ve Olasılık",
+   "alt": "Sayma yöntemleriyle olasılık",
+   "fikir": "Elverişli ve bütün durumlar kombinasyon, yol sayma ya da liste ile sayılır; kısıtlar sayımdan önce uygulanır.",
+   "tuzak": "Sırayı karıştırmak; kısıtı sayımın bir kısmında unutmak; payda ile payı farklı evrenlerde saymak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "ol-sayma",
+   "tip": "Sayma ile olasılık",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO-08",
+   "konu": "Binom ve Olasılık",
+   "alt": "Tekrarlı bağımsız denemeler",
+   "fikir": "C(n, k) pᵏ (1 − p)ⁿ⁻ᵏ kalıbı kurulur; p, şema ya da çarktan okunur; “tam k” ile “en az k” ayrılır.",
+   "tuzak": "C(n, k) çarpanını unutmak; q yerine p yazmak; “en az” ile “tam”ı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ol-tekrar",
+   "tip": "Tekrarlı bağımsız denemeler",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bn-terim",
+   "ad": "Binom açılımında terim ve parametre",
+   "kartlar": [
+    "K-ABO-01"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "bn-pascal",
+   "ad": "Pascal üçgeni ve ardışık katsayılar",
+   "kartlar": [
+    "K-ABO-02"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "bn-ozellik",
+   "ad": "Binom açılımının özellikleri ve çarpımı",
+   "kartlar": [
+    "K-ABO-03"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-kosullu",
+   "ad": "Koşullu olasılık",
+   "kartlar": [
+    "K-ABO-04"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-bagimsiz",
+   "ad": "Bağımsız olaylar",
+   "kartlar": [
+    "K-ABO-05"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-agac",
+   "ad": "Ağaç şeması ve koşullu olasılık",
+   "kartlar": [
+    "K-ABO-06"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-sayma",
+   "ad": "Sayma ile olasılık",
+   "kartlar": [
+    "K-ABO-07"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-tekrar",
+   "ad": "Tekrarlı bağımsız denemeler",
+   "kartlar": [
+    "K-ABO-08"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  }
+ ]
+}
