@@ -1439,7 +1439,12 @@ function otoKapanmaKart(s){ if(!s.kronOto) return ""; return `<div class="card g
    gruplar/{gid}/canli/koc: koçun çalışma durumu (koç yazar, üyeler okur). Sıralamaya ve ödüllere GİRMEZ (yalnız uyeler sıralanır).
    gruplar/{gid}.kocNot {metin, at} · .kocYildiz {uid, takma, not, at}: koç yazar; 7 gün görünür. */
 const KOC_UID = "koc", KOC_GUN = 7;
-const tazeMi = x => !!(x && x.at && Date.now() - x.at < KOC_GUN*864e5);
+/* WhatsApp gibi biçim: *kalın* ya da **kalın**, _italik_, alt satır */
+const waBicim = t => esc(t).replace(/\*\*([^*\n]+?)\*\*/g, "<b>$1</b>").replace(/(^|[^0-9A-Za-zÇĞİÖŞÜçğıöşü*])\*(\S(?:[^*\n]*?\S)?)\*(?![0-9A-Za-zÇĞİÖŞÜçğıöşü*])/g, "$1<b>$2</b>").replace(/(^|[\s(])_([^_\n]+?)_(?=$|[\s.,!?)])/g, "$1<i>$2</i>").replace(/\n/g, "<br>");
+const bitisOf = x => x && (x.bitis || (x.at ? x.at + KOC_GUN*864e5 : 0)), tazeMi = x => !!(x && Date.now() < bitisOf(x));
+/* Süre seçimi: n gün = bugün dahil n. günün gece 00:00'ına kadar */
+const gunSonu = n => { const d = new Date(); d.setHours(24,0,0,0); return d.getTime() + (n-1)*864e5; };
+const DSURE = [[1,"Sadece bugün (gece 00:00'a kadar)"],[2,"2 gün"],[3,"3 gün"],[7,"1 hafta"],[14,"2 hafta"],[30,"1 ay"]];
 function kocDurum(gid){ return A() ? (GR.koc.get(gid) || null) : ((GR.canli.get(gid) || new Map()).get(KOC_UID) || null); }
 function kocBugun(k){ if(!k) return 0; const t = today(); return (k.gun===t ? (k.bugunDk||0) : 0) + (canliMi(k.basla) && iso(new Date(k.basla))===t ? gecenSn(k.basla)/60 : 0); }
 function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null, on = k && canliMi(k.basla), bg = kocBugun(k);
@@ -1447,8 +1452,14 @@ function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ?
   const benim = yil && yil.uid===S.me;
   return `<div class="card skoc"><div class="skh"><img class="skav ${on?"on":""}" src="/zekeriya.jpg" alt="Zekeriya Hoca"><div style="min-width:0"><b>Zekeriya Hoca</b><small class="faint">Koçun · sınıfta</small>
       <div class="small">${on ? `<span class="gcanli"><i></i>Şu an çalışıyor · <b class="num" data-gb="${k.basla}">${clock(gecenSn(k.basla))}</b></span>` : bg ? `Bugün ${fmtMin(bg)} çalıştı` : ""}</div></div></div>
-    ${not ? `<div class="sknot">📢 ${esc(not.metin)}</div>` : ""}
+    ${not ? `<div class="sknot">📢 ${waBicim(not.metin)}</div>` : ""}
     ${yil ? `<div class="skyil">⭐ ${benim ? `<b>Koçun yıldızı sensin!</b>` : `Koçun yıldızı: <b>${esc(yil.takma||"")}</b>`}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</div>`; }
+/* Koç panelinde sınıfın altında: yazdığın duyuru ve yıldız (öğrencilerin gördüğü gibi); dokununca düzenlenir */
+function kocNotKoc(gid, g){ const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null; if(!not && !yil) return "";
+  const kalan = x => { const ms = bitisOf(x) - Date.now(), g = Math.ceil(ms/864e5); return ms <= gunSonu(1) - Date.now() ? "bugün gece 00:00'a kadar" : g + " gün daha"; }, ad = yil ? (S.students.get(yil.uid)?.name || yil.takma) : "";
+  return `<button type="button" class="sknotk" data-act="sheet" data-v="grkoc" data-id="${gid}" style="all:unset;display:block;cursor:pointer;margin:8px 0 4px">
+    ${not ? `<div class="sknot" style="margin-top:0">📢 ${waBicim(not.metin)}<div class="faint small" style="margin-top:4px">Öğrenciler görüyor · ${kalan(not)}</div></div>` : ""}
+    ${yil ? `<div class="skyil">⭐ Koçun yıldızı: <b>${esc(ad)}</b>${yil.takma && ad!==yil.takma ? ` <span class="small">(${esc(yil.takma)})</span>` : ""}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</button>`; }
 /* Koç: sınıfta kendi kronometresi (bütün sınıflarda aynı anda görünür) */
 function kocCalisiyor(){ return [...GR.koc.values()].some(k=>k && canliMi(k.basla)); }
 async function kocKronometre(){ const t = today(), now = Date.now(), on = kocCalisiyor();
@@ -1465,14 +1476,16 @@ function kocHeroKart(){ if(!GR.list.size) return ""; const on = kocCalisiyor(), 
     <p class="faint small" style="margin:8px 0 0">Sıralamaya ve ödüllere girmezsin; sınıfın üstünde ayrı görünürsün.</p></div>`; }
 function grKocSheet(gid){ const g = GR.list.get(gid); if(!g) return; const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null;
   const uy = (g.uyeler||[]).map(id=>[id, S.students.get(id)]).filter(([,x])=>x && !x.silindi).sort((a,b)=>(a[1].name||"").localeCompare(b[1].name||"","tr"));
-  return sheet(`<h3>${esc(g.ad)} · duyuru ve yıldız</h3><p class="muted small" style="margin:-6px 0 0">Sınıftaki herkes görür, ${KOC_GUN} gün kalır. Öğrenciler birbirini takma adıyla görür.</p>
-    <label class="f">Sınıfa duyuru<textarea name="metin" rows="2" maxlength="200" placeholder="ör. Bu hafta hedefimiz kişi başı 25 saat 💪">${esc(not ? not.metin : "")}</textarea></label>
+  return sheet(`<h3>${esc(g.ad)} · duyuru ve yıldız</h3><p class="muted small" style="margin:-6px 0 0">Sınıftaki herkes görür. Öğrenciler birbirini takma adıyla görür. *yıldızlar arası* kalın yazılır.</p>
+    <label class="f">Sınıfa duyuru<textarea name="metin" rows="3" maxlength="400" placeholder="ör. Bu hafta hedefimiz kişi başı 25 saat 💪 · *yıldızlar arası* kalın yazılır">${esc(not ? not.metin : "")}</textarea></label>
     <label class="f">Koçun yıldızı<select name="uid"><option value="">— Yok —</option>${uy.map(([id,x])=>`<option value="${id}" ${yil&&yil.uid===id?"selected":""}>${esc(x.name)}${takmaAd(x)?` (${esc(takmaAd(x))})`:""}</option>`).join("")}</select></label>
     <label class="f">Yıldız notu<input type="text" name="ynot" maxlength="80" value="${esc(yil ? (yil.not||"") : "")}" placeholder="ör. Bu hafta istikrarıyla örnek oldu"></label>
+    <label class="f">Ne kadar yayında kalsın?<select name="sure">${(()=>{ const ref = not || yil, kal = ref ? Math.max(1, Math.ceil((bitisOf(ref) - gunSonu(1))/864e5) + 1) : 1, sec = ref ? (DSURE.find(([n])=>n>=kal)||DSURE[DSURE.length-1])[0] : 1;
+      return DSURE.map(([n,l])=>`<option value="${n}" ${n===sec?"selected":""}>${l}</option>`).join(""); })()}</select></label>
     <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
-  fd=>{ const metin = String(fd.get("metin")||"").trim(), uid = fd.get("uid"), ynot = String(fd.get("ynot")||"").trim(), x = uid ? S.students.get(uid) : null;
+  fd=>{ const metin = String(fd.get("metin")||"").trim(), uid = fd.get("uid"), ynot = String(fd.get("ynot")||"").trim(), x = uid ? S.students.get(uid) : null, bitis = gunSonu(+fd.get("sure")||1);
     if(uid && x && !takmaAd(x)) return sheetErr("Bu öğrenci henüz sınıfa girmemiş (takma adı yok); sınıftakiler onu göremez.");
-    const now = Date.now(), yeni = {...g, kocNot: metin ? {metin, at: (not && not.metin===metin) ? not.at : now} : null, kocYildiz: uid ? {uid, takma: takmaAd(x), not: ynot, at: (yil && yil.uid===uid && yil.not===ynot) ? yil.at : now} : null};
+    const now = Date.now(), yeni = {...g, kocNot: metin ? {metin, at: (not && not.metin===metin) ? not.at : now, bitis} : null, kocYildiz: uid ? {uid, takma: takmaAd(x), not: ynot, at: (yil && yil.uid===uid && yil.not===ynot) ? yil.at : now, bitis} : null};
     GR.list.set(gid, yeni); setDoc(doc(fdb,"gruplar",gid), {kocNot: yeni.kocNot, kocYildiz: yeni.kocYildiz}, {merge:true}).then(()=>toast("Sınıfa kaydedildi")).catch(()=>toast("Kaydedilemedi"));
     closeSheet(); render(); }); }
 /* Koç: Çalışma grupları paneli */
@@ -1486,8 +1499,8 @@ function cGruplar(){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.s
     ${kocHeroKart()}
     ${gorSec()}${GR.gor==="liste"?grSekme():""}
     ${G.length && GR.gor!=="liste" ? G.map(([gid,g])=>{ const L = kocUyeler(hepsi, g).sort((a,b)=>a.sira-b.sira);
-      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(kocUyeler(hepsi, g), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
-      return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>
+      return `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${kocNotKoc(gid, g)}${salon(L, true)}</div>`; }).join("") : G.length ? `<div class="ggrid">${G.map(([gid,g])=>{ const L = grSirala(kocUyeler(hepsi, g), GR.sekme), n = L.filter(x=>x.canli).length, top = L.reduce((a,x)=>a+(GR.sekme==="hafta"?x.hafta:x.bugun),0);
+      return `<div class="card glist"><div class="sech"><div style="min-width:0"><h3>${esc(g.ad)}</h3><span class="faint small">${L.length} üye · ${n?`<span class="gcanli"><i></i>${n} çalışıyor</span>`:"şu an çalışan yok"} · ${GR.sekme==="hafta"?"bu hafta":"bugün"} toplam ${fmtMin(top)}</span></div><button class="iconbtn" data-act="sheet" data-v="grkoc" data-id="${gid}" aria-label="Duyuru ve yıldız" title="Duyuru ve yıldız">⭐</button><button class="iconbtn" data-act="sheet" data-v="grup" data-id="${gid}" aria-label="Grubu düzenle">${icon("edit","sm")}</button></div>${kocNotKoc(gid, g)}
         ${L.length ? L.map((x,i)=>grSatir(x, i, GR.sekme, true)).join("") : `<p class="muted small">Bu grupta henüz öğrenci yok. Düzenle'ye dokunup öğrenci ekle.</p>`}</div>`; }).join("")}</div>`
       : `<div class="card"><div class="empty" style="padding:22px 8px">${icon("user")}<b>Henüz grup yok</b><p class="muted small">Öğrencilerini istediğin gibi gruplara ayır (ör. “Hedef Tıp”, “12. sınıflar”). Gruptakiler birbirinin şu an çalışıp çalışmadığını takma adla görür.</p><button class="btn pri" data-act="sheet" data-v="grup">${icon("plus","sm")} İlk grubu kur</button></div></div>`}
     ${disarda.length && G.length ? `<div class="card"><div class="sech"><h3>Gruba eklenmemiş</h3><span class="faint small">${disarda.length} öğrenci</span></div><p class="muted small" style="margin:6px 0 0">${esc(disarda.map(x=>x.ad).join(", "))}</p></div>` : ""}
