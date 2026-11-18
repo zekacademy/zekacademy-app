@@ -2011,7 +2011,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:cGruplar};
+  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:cGruplar, havuz:cHavuz};
   if(S.view==="sohbet") return `<div class="shell msgshell">${cSohbet()}</div>`;
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["ogrenciler","users","Öğrenciler"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
@@ -2357,6 +2357,7 @@ function cMore(){
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
     ${(n=>`<button class="row" data-act="go" data-v="mesajlar"><span class="ri" style="${n?"background:var(--acs);color:var(--ac)":""}">${icon("chat","sm")}</span><div><div class="rt">Mesajlar${n?` <span class="pill ac">${n} yeni</span>`:""}</div><div class="rs">Öğrencilerinle uygulama içinden yazış, duyuru gönder</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(msgToplamOkunmadi())}
     ${(u=>`<button class="row" data-act="go" data-v="bildirim"><span class="ri" style="${u?"background:var(--acs);color:var(--ac)":""}">${icon("bell","sm")}</span><div><div class="rt">Bildirimler${u?` <span class="pill ac">${u} yeni</span>`:""}</div><div class="rs">Yeni kayıtlar ve başvurular</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(x=>!x.read).length)}
+    <button class="row" data-act="go" data-v="havuz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("note","sm")}</span><div><div class="rt">Soru Havuzu</div><div class="rs">TYT soruları konu konu, çözümleri ve konu tekrarı kartlarıyla (sadece koç)</div></div><span class="rx">${icon("chev","sm")}</span></button>
     ${(n=>`<button class="row" data-act="go" data-v="gruplar"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("timer","sm")}</span><div><div class="rt">Çalışma grupları</div><div class="rs">${n?`${n} öğrenci şu an çalışıyor`:"Şu an çalışan yok"} · ${GR.list.size} grup</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>x.timer && canliMi(x.timer.start)).length)}
   </div><h3 class="msec">Uygulama</h3><div class="card">
     <button class="row" data-act="onzac"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("user","sm")}</span><div><div class="rt">Demo öğrenci</div><div class="rs">Uygulamayı öğrenci gözünden gör, yenilikleri dene (kaydedilmez)</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -2366,6 +2367,64 @@ function cMore(){
     <button class="row" data-act="logout"><span class="ri">${icon("logout","sm")}</span><div><div class="rt">Çıkış yap</div></div></button>
   </div><p class="proto">Zekacademy Koç Paneli</p></div>`;
 }
+
+/* ---------- Soru Havuzu (yalnız koç): veri sunucudan havuzGetir ile, konu konu tembel yüklenir ---------- */
+const HV = { index:null, hata:"", yuk:false, ders:"mat", konu:null, konuVeri:{}, konuYuk:"", konuHata:"", kartlar:{}, kartYuk:{}, zor:"tum", ac:new Set() };
+const hvMd = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+const hvImg = (svg, png) => png ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="${esc(png)}">` : svg ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}">` : "";
+const hvHata = e => /permission-denied/.test(e && (e.code||e.message)||"") ? "Bu bölümü sadece koç görebilir." : "Veri yüklenemedi. Bağlantını kontrol edip tekrar dene.";
+function hvTazele(){ if(S.view==="havuz") render(true); }
+function havuzAc(){ if(!A() || HV.index || HV.yuk) return; HV.yuk = true; HV.hata = "";
+  callFn("havuzGetir", {tur:"index"}).then(r=>{ HV.index = r; }).catch(e=>{ HV.hata = hvHata(e); }).finally(()=>{ HV.yuk = false; hvTazele(); }); }
+function havuzDers(id){ HV.ders = id; HV.konu = null; HV.zor = "tum"; HV.ac = new Set(); window.scrollTo(0,0); render(); }
+function havuzKonu(dosya){ HV.konu = dosya; HV.zor = "tum"; HV.ac = new Set(); HV.konuHata = ""; window.scrollTo(0,0);
+  const d = HV.ders, key = d+"/"+dosya;
+  if(!HV.kartlar[d] && !HV.kartYuk[d]){ HV.kartYuk[d] = true; callFn("havuzGetir", {tur:"kartlar", ders:d}).then(r=>{ HV.kartlar[d] = r; }).catch(()=>{ HV.kartlar[d] = {}; }).finally(()=>{ HV.kartYuk[d] = false; hvTazele(); }); }
+  if(!HV.konuVeri[key]){ HV.konuYuk = key; callFn("havuzGetir", {tur:"konu", ders:d, dosya}).then(r=>{ HV.konuVeri[key] = r; }).catch(e=>{ HV.konuHata = hvHata(e); }).finally(()=>{ if(HV.konuYuk===key) HV.konuYuk = ""; hvTazele(); }); }
+  render(); }
+function hvZorPill(z){ return `<span class="pill ${z==="kolay"?"good":z==="zor"?"bad":"warn"}">${z==="kolay"?"Kolay":z==="zor"?"Zor":"Orta"}</span>`; }
+function hvKart(c){ if(!c) return "";
+  const o = c.ornek || {};
+  return `<div class="hvtk"><div class="hvtkh">${icon("book","xs")} Konu tekrarı</div><h4>${esc(c.baslik)}</h4>
+    ${c.olcer ? `<p class="faint small" style="margin:0">Ölçer: ${hvMd(c.olcer)}</p>` : ""}
+    ${c.kural ? `<p>${hvMd(c.kural)}</p>` : ""}
+    ${c.formul ? `<div class="hvfm">${esc(c.formul)}</div>` : ""}
+    ${hvImg(c.sekil, c.sekilPng)}
+    ${o.soru ? `<div class="hvbx"><b>Mini örnek</b><p>${hvMd(o.soru)}</p><ol>${(o.adimlar||[]).map(a=>`<li>${hvMd(a)}</li>`).join("")}</ol>${o.cevap?`<p><b>Cevap:</b> ${hvMd(o.cevap)}</p>`:""}</div>` : ""}
+    ${c.hata ? `<div class="hvbx bad"><b>Sık hata</b><p>${hvMd(c.hata)}</p></div>` : ""}
+    ${c.akilda ? `<div class="hvbx good"><b>Akılda kalsın</b><p>${hvMd(c.akilda)}</p></div>` : ""}</div>`; }
+function hvSoru(q, no, kartlar){
+  const acik = HV.ac.has(q.id), sk = q.siklar || {}, dg = (q.cevap||{}).sik, cel = q.celdiriciler || {};
+  return `<div class="card hvq"><div class="pills"><span class="pill ac">Soru ${no}</span>${hvZorPill(q.zorluk)}${q.kalip?`<span class="pill">${esc(q.kalip)}</span>`:""}${q.kardes?`<span class="pill">kardeş</span>`:""}</div>
+    ${q.kazanim ? `<div class="faint small">${esc(q.kazanim)}</div>` : ""}
+    <p class="hvm">${esc(q.metin)}</p>${hvImg(q.sekil, q.sekilPng)}
+    <div class="hvs">${Object.keys(sk).sort().map(h=>`<div class="hvsk ${acik&&h===dg?"dogru":""}"><b>${esc(h)}</b><span>${esc(sk[h])}</span></div>`).join("")}</div>
+    <button class="btn sm ${acik?"":"pri"}" data-act="hvc" data-id="${esc(q.id)}">${acik?"Gizle":"Cevabı ve çözümü göster"}</button>
+    ${acik ? `<div class="hvcz"><p><b>Doğru cevap: ${esc(dg)}</b>${(q.cevap||{}).deger?` · ${esc(q.cevap.deger)}`:""}</p>
+      ${(q.adimlar||[]).length ? `<h4>Çözüm</h4><ol class="hvad">${q.adimlar.map(a=>`<li><b>${esc(a.baslik)}</b> ${esc(a.aciklama)}${a.islem?`<div class="hvis">${esc(a.islem)}</div>`:""}</li>`).join("")}</ol>` : ""}
+      ${(q.ipuclari||[]).length ? `<h4>İpuçları</h4><ul>${q.ipuclari.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+      ${(q.bilgi||[]).length ? `<h4>Bilgi</h4><ul>${q.bilgi.map(b=>`<li><b>${esc(b.ad)}:</b> ${esc(b.ifade)}</li>`).join("")}</ul>` : ""}
+      ${q.puf ? `<div class="hvbx good"><b>Püf nokta</b><p>${esc(q.puf)}</p></div>` : ""}
+      ${Object.keys(cel).length ? `<h4>Çeldiriciler</h4><ul>${Object.keys(cel).sort().map(h=>`<li><b>${esc(h)}:</b> ${esc(cel[h])}</li>`).join("")}</ul>` : ""}
+      ${q.kartId ? (kartlar ? hvKart(kartlar[q.kartId]) : `<p class="faint small">Konu tekrarı kartı yükleniyor…</p>`) : ""}</div>` : ""}</div>`; }
+function cHavuz(){
+  if(!A()) return "";
+  const geri = `<button class="iconbtn" data-act="${HV.konu?"hvg":"go"}" data-v="daha" aria-label="Geri">${icon("back")}</button>`;
+  const dersler = (HV.index && HV.index.dersler) || [], d = dersler.find(x=>x.id===HV.ders), k = d && HV.konu ? d.konular.find(x=>x.dosya===HV.konu) : null;
+  const tabs = `<div class="seg hvtab">${dersler.map(x=>`<button data-act="hvd" data-v="${x.id}" aria-pressed="${x.id===HV.ders}">${esc(x.ad.replace(/^TYT /,""))}</button>`).join("")}</div>`;
+  let body;
+  if(HV.hata) body = `<div class="err" style="display:block">${esc(HV.hata)}</div><button class="btn sm" data-act="hvyeni">Tekrar dene</button>`;
+  else if(!HV.index) body = `<div class="card"><div class="empty">Havuz yükleniyor…</div></div>`;
+  else if(!k) body = `<div class="card hvkl">${d.konular.map(x=>`<button class="row" data-act="hvk" data-v="${esc(x.dosya)}"><div><div class="rt">${esc(x.ad)}</div><div class="rs">${x.adet} soru · ${x.sekilli} şekilli</div><div class="hvdz"><span class="pill good">Kolay ${x.zorluk.kolay||0}</span><span class="pill warn">Orta ${x.zorluk.orta||0}</span><span class="pill bad">Zor ${x.zorluk.zor||0}</span></div></div><span class="rx">${icon("chev","sm")}</span></button>`).join("")}</div>`;
+  else { const key = d.id+"/"+k.dosya, v = HV.konuVeri[key];
+    if(HV.konuHata) body = `<div class="err" style="display:block">${esc(HV.konuHata)}</div><button class="btn sm" data-act="hvk" data-v="${esc(k.dosya)}">Tekrar dene</button>`;
+    else if(!v) body = `<div class="card"><div class="empty">Sorular yükleniyor…</div></div>`;
+    else { const L = v.map((q,i)=>[q,i+1]).filter(([q])=>HV.zor==="tum" || q.zorluk===HV.zor);
+      body = `<div class="card"><div class="sech"><h3>${esc(k.ad)}</h3><span class="faint small">${k.adet} soru</span></div>
+        <div class="seg">${[["tum","Tümü"],["kolay","Kolay"],["orta","Orta"],["zor","Zor"]].map(([z,l])=>`<button data-act="hvz" data-v="${z}" aria-pressed="${HV.zor===z}">${l}</button>`).join("")}</div></div>
+        ${L.map(([q,n])=>hvSoru(q,n,HV.kartlar[d.id]&&!HV.kartYuk[d.id]?HV.kartlar[d.id]:null)).join("") || `<div class="card"><div class="empty">Bu filtrede soru yok.</div></div>`}`; } }
+  return `${topbar(`<h1 class="ttl">${k?esc(k.ad):"Soru Havuzu"}</h1>`, "", geri)}
+  <div class="page wide">${tabs}${body}<p class="faint small" style="text-align:center">Bu bölümü sadece sen görürsün.</p></div>`; }
 
 /* ---------- Karneden deneme: fotoğraf / PDF → Zek AI okur → öğrenci kontrol edip kaydeder (soru hakkından düşmez) ---------- */
 let KR = null;
@@ -3563,7 +3622,7 @@ document.addEventListener("click", e=>{
     case "onzac": onzAc(); break;
     case "onzkapat": onzKapat(); break;
     case "pushon": enablePush(); break;
-    case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="mesaj") setTimeout(()=>msgAsagi("auto"), 50); if(v==="aipanel") aipYukle(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
+    case "go": S.view=v; if(v==="socoz") szKullanimYukle(); if(v==="mesaj") setTimeout(()=>msgAsagi("auto"), 50); if(v==="aipanel") aipYukle(); if(v==="havuz") havuzAc(); if(v==="program"){ S.pmode="gun"; S.day=today(); S.week= st() ? curStart(st()) : monday(new Date()); if(!A() && st()){ const x=st(); if(x.programYeni && x.programYeni>(x.programSeen||"")){ x.programSeen=x.programYeni; save(); } } } closeSheet(); render(); window.scrollTo(0,0); break;
     case "bell": S.view="bildirim"; render(); window.scrollTo(0,0); break;
     case "open": if(!b.dataset.id) break; S.cur=b.dataset.id; S.week=curStart(st()); S.view="detay"; S.dtab="ozet"; render(); window.scrollTo(0,0); break;
     case "dtab": S.dtab=v; if(v==="program"){ S.pmode="gun"; S.day=today(); S.week=curStart(st()); } render(); break;
@@ -3579,6 +3638,12 @@ document.addEventListener("click", e=>{
     case "kvsil": mutate(x=>{ x.kvid = kvListe(x).filter(y=>y.id!==v); }); save(); render(); toast("Listeden çıkarıldı"); break;
     case "dersac": S.dsk=v; S.dsf="tum"; S.view="dersd"; render(); window.scrollTo(0,0); break;
     case "dsf": S.dsf=v; render(); break;
+    case "hvd": if(A()) havuzDers(v); break;
+    case "hvk": if(A()) havuzKonu(v); break;
+    case "hvg": HV.konu = null; render(); window.scrollTo(0,0); break;
+    case "hvz": HV.zor = v; render(true); break;
+    case "hvc": if(A()){ HV.ac.has(b.dataset.id) ? HV.ac.delete(b.dataset.id) : HV.ac.add(b.dataset.id); render(true); } break;
+    case "hvyeni": HV.hata = ""; havuzAc(); render(); break;
     case "konud": konuDetaySheet(b.dataset.k); break;
     case "kdsay": { const f=b.dataset.f, k=b.dataset.k; let yeni=0; mutate(s=>{ const t=topic(s,k); t[f]=Math.max(0,(t[f]||0)+(+b.dataset.d)); yeni=t[f]; }); const el=$("#kd-"+f); if(el) el.textContent=yeni; render(true); break; }
     case "kdsb": { const f=b.dataset.f, k=b.dataset.k; let on=false; mutate(s=>{ const t=topic(s,k); t[f]=!t[f]; on=t[f]; }); b.setAttribute("aria-pressed", String(on)); render(true); break; }
