@@ -645,7 +645,7 @@ function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1],
       return `<button class="dsr" data-act="dersac" data-v="${esc(sub.k)}"><span class="dsra">${esc(sub.n)}</span><span class="dsrb"><i style="width:${p*100}%"></i></span><span class="num faint small">%${Math.round(p*100)}</span>${icon("chev","xs")}</button>`; }).join("")}</div>`
     : `<button class="card dsl dsr" data-act="go" data-v="konular"><span class="dsra">Konu ilerlemesi</span>${icon("chev","xs")}</button>`;
   /* ZEK AI butonu: deneme grafiğinin hemen altında, tek başına tüm satırı kaplar (koç ZEK AI'ı öğrencilere açınca görünür) */
-  const zkBtn = aiAcik(S.me) && zkGoster() ? `<button class="zkders" data-act="go" data-v="socoz"><img src="/zekai-cozuyor.webp" alt="" width="84" height="84"><span><b>ZEK AI ile soru çöz</b><small>Takıldığın sorunun fotoğrafını çek, adım adım birlikte çözelim</small><em>SORU ÇÖZÜM ASİSTANI</em></span>${icon("chev")}</button>` : "";
+  const zkBtn = aiAcik(S.me) && zkGoster() ? `<button class="zkders" data-act="go" data-v="socoz"><img src="/zekai-cozuyor.webp" alt="" width="84" height="84"><span><b>ZEK AI <i>(Türkiye 1.si)</i></b><em>SORU ÇÖZÜM ASİSTANI</em></span>${icon("chev")}</button>` : "";
   return `${head}<div class="page dsana">${deneme}${zkBtn}${ikili}${om}${dersler}
     <div class="dslink"><button class="link small" data-act="go" data-v="cetele">${icon("list","xs")} Yanlış çetelesi</button><button class="link small" data-act="go" data-v="konular">${icon("book","xs")} Tüm konular</button></div></div>`; }
 /* Ders sayfası: konular, durum noktası, ▶ video; konuya dokununca alt pencere */
