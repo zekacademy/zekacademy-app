@@ -2369,7 +2369,7 @@ function cMore(){
 }
 
 /* ---------- Soru Havuzu (yalnız koç): veri sunucudan havuzGetir ile, konu konu tembel yüklenir ---------- */
-const HV = { index:null, hata:"", yuk:false, ders:"mat", konu:null, konuVeri:{}, konuYuk:"", konuHata:"", kartlar:{}, kartYuk:{}, zor:"tum", ac:new Set() };
+const HV = { index:null, hata:"", yuk:false, ders:"mat", konu:null, konuVeri:{}, konuYuk:"", konuHata:"", kartlar:{}, kartYuk:{}, zor:"tum", ac:new Set(), sec:new Map() };
 const hvMd = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 const hvImg = (svg, png) => png ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="${esc(png)}">` : svg ? `<img class="hvsek" loading="lazy" alt="Soru şekli" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}">` : "";
 const hvHata = e => /permission-denied/.test(e && (e.code||e.message)||"") ? "Bu bölümü sadece koç görebilir." : "Veri yüklenemedi. Bağlantını kontrol edip tekrar dene.";
@@ -2393,13 +2393,15 @@ function hvKart(c){ if(!c) return "";
     ${o.soru ? `<div class="hvbx"><b>Mini örnek</b><p>${hvMd(o.soru)}</p><ol>${(o.adimlar||[]).map(a=>`<li>${hvMd(a)}</li>`).join("")}</ol>${o.cevap?`<p><b>Cevap:</b> ${hvMd(o.cevap)}</p>`:""}</div>` : ""}
     ${c.hata ? `<div class="hvbx bad"><b>Sık hata</b><p>${hvMd(c.hata)}</p></div>` : ""}
     ${c.akilda ? `<div class="hvbx good"><b>Akılda kalsın</b><p>${hvMd(c.akilda)}</p></div>` : ""}</div>`; }
+function hvBenzer(q){ const key = HV.ders+"/"+HV.konu, L = (HV.konuVeri[key]||[]).filter(x=>x.id!==q.id && !HV.sec.has(x.id)); return ((q.kartId && L.find(x=>x.kartId===q.kartId)) || L.find(x=>x.zorluk===q.zorluk) || L[0] || {}).id || ""; }
 function hvSoru(q, no, kartlar){
-  const acik = HV.ac.has(q.id), sk = q.siklar || {}, dg = (q.cevap||{}).sik, cel = q.celdiriciler || {};
-  return `<div class="card hvq"><div class="pills"><span class="pill ac">Soru ${no}</span>${hvZorPill(q.zorluk)}${q.kalip?`<span class="pill">${esc(q.kalip)}</span>`:""}${q.kardes?`<span class="pill">kardeş</span>`:""}</div>
+  const sc = HV.sec.get(q.id), acik = HV.ac.has(q.id), sk = q.siklar || {}, dg = (q.cevap||{}).sik, cel = q.celdiriciler || {};
+  return `<div class="card hvq" id="hvq-${esc(q.id)}"><div class="pills"><span class="pill ac">Soru ${no}</span>${hvZorPill(q.zorluk)}${q.kalip?`<span class="pill">${esc(q.kalip)}</span>`:""}${q.kardes?`<span class="pill">kardeş</span>`:""}</div>
     ${q.kazanim ? `<div class="faint small">${esc(q.kazanim)}</div>` : ""}
     <p class="hvm">${esc(q.metin)}</p>${hvImg(q.sekil, q.sekilPng)}
-    <div class="hvs">${Object.keys(sk).sort().map(h=>`<div class="hvsk ${acik&&h===dg?"dogru":""}"><b>${esc(h)}</b><span>${esc(sk[h])}</span></div>`).join("")}</div>
-    <button class="btn sm ${acik?"":"pri"}" data-act="hvc" data-id="${esc(q.id)}">${acik?"Gizle":"Cevabı ve çözümü göster"}</button>
+    <div class="hvs">${Object.keys(sk).sort().map(h=>`<button class="hvsk ${(acik||sc)&&h===dg?"dogru":""} ${sc===h&&h!==dg?"yanlis":""}" data-act="hvs" data-id="${esc(q.id)}" data-v="${esc(h)}" ${sc?"disabled":""}><b>${esc(h)}</b><span>${esc(sk[h])}</span></button>`).join("")}</div>
+    ${sc ? `<div class="hvsonuc ${sc===dg?"good":"bad"}">${sc===dg?"Doğru! 🎉":`Yanlış. Doğru cevap ${esc(dg)}.`}</div>` : ""}
+    <div class="pills">${sc?`<button class="btn sm" data-act="hvr" data-id="${esc(q.id)}">Yeniden çöz</button>`:""}${sc&&sc!==dg&&hvBenzer(q)?`<button class="btn sm pri" data-act="hvb" data-id="${esc(hvBenzer(q))}">Benzer soruyu dene</button>`:""}<button class="btn sm ${acik||sc?"":"pri"}" data-act="hvc" data-id="${esc(q.id)}">${acik?"Çözümü gizle":"Cevabı ve çözümü göster"}</button></div>
     ${acik ? `<div class="hvcz"><p><b>Doğru cevap: ${esc(dg)}</b>${(q.cevap||{}).deger?` · ${esc(q.cevap.deger)}`:""}</p>
       ${(q.adimlar||[]).length ? `<h4>Çözüm</h4><ol class="hvad">${q.adimlar.map(a=>`<li><b>${esc(a.baslik)}</b> ${esc(a.aciklama)}${a.islem?`<div class="hvis">${esc(a.islem)}</div>`:""}</li>`).join("")}</ol>` : ""}
       ${(q.ipuclari||[]).length ? `<h4>İpuçları</h4><ul>${q.ipuclari.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>` : ""}
@@ -3642,6 +3644,9 @@ document.addEventListener("click", e=>{
     case "hvk": if(A()) havuzKonu(v); break;
     case "hvg": HV.konu = null; render(); window.scrollTo(0,0); break;
     case "hvz": HV.zor = v; render(true); break;
+    case "hvs": if(A() && !HV.sec.has(b.dataset.id)){ HV.sec.set(b.dataset.id, v); HV.ac.add(b.dataset.id); render(true); } break;
+    case "hvr": HV.sec.delete(b.dataset.id); HV.ac.delete(b.dataset.id); render(true); break;
+    case "hvb": { HV.zor = "tum"; render(true); const e = document.getElementById("hvq-"+b.dataset.id); if(e){ e.scrollIntoView({behavior:"smooth", block:"start"}); e.classList.add("hvvurgu"); setTimeout(()=>e.classList.remove("hvvurgu"), 1600); } break; }
     case "hvc": if(A()){ HV.ac.has(b.dataset.id) ? HV.ac.delete(b.dataset.id) : HV.ac.add(b.dataset.id); render(true); } break;
     case "hvyeni": HV.hata = ""; havuzAc(); render(); break;
     case "konud": konuDetaySheet(b.dataset.k); break;
