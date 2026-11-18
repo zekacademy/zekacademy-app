@@ -14,6 +14,9 @@ import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak, sessizMi } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
 import nodemailer from "nodemailer";
+import { readFile } from "node:fs/promises";
+import { gunzipSync } from "node:zlib";
+import { fileURLToPath } from "node:url";
 import { veliOzet, veliEposta, epostaGecerli } from "./veli.js";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
@@ -194,6 +197,34 @@ export const bildirimTest = onCall(async (req) => {
 function requireCoach(req){
   if (!req.auth || req.auth.token.email !== COACH_EMAIL) throw new HttpsError("permission-denied", "Bu işlemi sadece koç yapabilir.");
 }
+/* Soru Havuzu: yalnız koç okuyabilir. Veri functions/havuz/ altında (tools/havuz-paketle.py üretir); istemciye ve Firestore'a hiç açılmaz. */
+const HAVUZ_DIR = fileURLToPath(new URL("./havuz/", import.meta.url));
+const havuzOnbellek = new Map();
+async function havuzOku(rel){
+  if (!havuzOnbellek.has(rel)) havuzOnbellek.set(rel, JSON.parse(gunzipSync(await readFile(HAVUZ_DIR + rel + ".gz")).toString("utf8")));
+  return havuzOnbellek.get(rel);
+}
+export const havuzGetir = onCall({ timeoutSeconds: 60, memory: "512MiB", maxInstances: 5 }, async (req) => {
+  requireCoach(req);
+  const d = req.data || {};
+  try {
+    const index = await havuzOku("index.json");
+    if (d.tur === "index") return index;
+    const ders = typeof d.ders === "string" ? index.dersler.find(x => x.id === d.ders) : null;
+    if (!ders) throw new HttpsError("invalid-argument", "Ders bulunamadı.");
+    if (d.tur === "kartlar") return await havuzOku(`kartlar/${ders.id}.json`);
+    if (d.tur === "konu") {
+      const konu = typeof d.dosya === "string" ? ders.konular.find(x => x.dosya === d.dosya) : null;
+      if (!konu) throw new HttpsError("invalid-argument", "Konu bulunamadı.");
+      return await havuzOku(`${ders.id}/${konu.dosya}`);
+    }
+    throw new HttpsError("invalid-argument", "Geçersiz istek.");
+  } catch (e) {
+    if (e instanceof HttpsError) throw e;
+    logger.error("havuzGetir", e);
+    throw new HttpsError("internal", "Havuz verisi okunamadı.");
+  }
+});
 export const sifreSifirla = onCall(async (req) => {
   requireCoach(req);
   const { uid, sifre } = req.data || {};
