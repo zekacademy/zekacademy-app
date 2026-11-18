@@ -1441,7 +1441,10 @@ function otoKapanmaKart(s){ if(!s.kronOto) return ""; return `<div class="card g
 const KOC_UID = "koc", KOC_GUN = 7;
 /* WhatsApp gibi biçim: *kalın* ya da **kalın**, _italik_, alt satır */
 const waBicim = t => esc(t).replace(/\*\*([^*\n]+?)\*\*/g, "<b>$1</b>").replace(/(^|[^0-9A-Za-zÇĞİÖŞÜçğıöşü*])\*(\S(?:[^*\n]*?\S)?)\*(?![0-9A-Za-zÇĞİÖŞÜçğıöşü*])/g, "$1<b>$2</b>").replace(/(^|[\s(])_([^_\n]+?)_(?=$|[\s.,!?)])/g, "$1<i>$2</i>").replace(/\n/g, "<br>");
-const tazeMi = x => !!(x && x.at && Date.now() - x.at < KOC_GUN*864e5);
+const bitisOf = x => x && (x.bitis || (x.at ? x.at + KOC_GUN*864e5 : 0)), tazeMi = x => !!(x && Date.now() < bitisOf(x));
+/* Süre seçimi: n gün = bugün dahil n. günün gece 00:00'ına kadar */
+const gunSonu = n => { const d = new Date(); d.setHours(24,0,0,0); return d.getTime() + (n-1)*864e5; };
+const DSURE = [[1,"Sadece bugün (gece 00:00'a kadar)"],[2,"2 gün"],[3,"3 gün"],[7,"1 hafta"],[14,"2 hafta"],[30,"1 ay"]];
 function kocDurum(gid){ return A() ? (GR.koc.get(gid) || null) : ((GR.canli.get(gid) || new Map()).get(KOC_UID) || null); }
 function kocBugun(k){ if(!k) return 0; const t = today(); return (k.gun===t ? (k.bugunDk||0) : 0) + (canliMi(k.basla) && iso(new Date(k.basla))===t ? gecenSn(k.basla)/60 : 0); }
 function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null, on = k && canliMi(k.basla), bg = kocBugun(k);
@@ -1453,9 +1456,9 @@ function kocSinifKart(gid, g){ const k = kocDurum(gid), not = tazeMi(g.kocNot) ?
     ${yil ? `<div class="skyil">⭐ ${benim ? `<b>Koçun yıldızı sensin!</b>` : `Koçun yıldızı: <b>${esc(yil.takma||"")}</b>`}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</div>`; }
 /* Koç panelinde sınıfın altında: yazdığın duyuru ve yıldız (öğrencilerin gördüğü gibi); dokununca düzenlenir */
 function kocNotKoc(gid, g){ const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null; if(!not && !yil) return "";
-  const kalan = x => Math.max(1, Math.ceil((x.at + KOC_GUN*864e5 - Date.now())/864e5)), ad = yil ? (S.students.get(yil.uid)?.name || yil.takma) : "";
+  const kalan = x => { const ms = bitisOf(x) - Date.now(), g = Math.ceil(ms/864e5); return ms <= gunSonu(1) - Date.now() ? "bugün gece 00:00'a kadar" : g + " gün daha"; }, ad = yil ? (S.students.get(yil.uid)?.name || yil.takma) : "";
   return `<button type="button" class="sknotk" data-act="sheet" data-v="grkoc" data-id="${gid}" style="all:unset;display:block;cursor:pointer;margin:8px 0 4px">
-    ${not ? `<div class="sknot" style="margin-top:0">📢 ${waBicim(not.metin)}<div class="faint small" style="margin-top:4px">Öğrenciler görüyor · ${kalan(not)} gün daha</div></div>` : ""}
+    ${not ? `<div class="sknot" style="margin-top:0">📢 ${waBicim(not.metin)}<div class="faint small" style="margin-top:4px">Öğrenciler görüyor · ${kalan(not)}</div></div>` : ""}
     ${yil ? `<div class="skyil">⭐ Koçun yıldızı: <b>${esc(ad)}</b>${yil.takma && ad!==yil.takma ? ` <span class="small">(${esc(yil.takma)})</span>` : ""}${yil.not ? ` — ${esc(yil.not)}` : ""}</div>` : ""}</button>`; }
 /* Koç: sınıfta kendi kronometresi (bütün sınıflarda aynı anda görünür) */
 function kocCalisiyor(){ return [...GR.koc.values()].some(k=>k && canliMi(k.basla)); }
@@ -1473,14 +1476,16 @@ function kocHeroKart(){ if(!GR.list.size) return ""; const on = kocCalisiyor(), 
     <p class="faint small" style="margin:8px 0 0">Sıralamaya ve ödüllere girmezsin; sınıfın üstünde ayrı görünürsün.</p></div>`; }
 function grKocSheet(gid){ const g = GR.list.get(gid); if(!g) return; const not = tazeMi(g.kocNot) ? g.kocNot : null, yil = tazeMi(g.kocYildiz) ? g.kocYildiz : null;
   const uy = (g.uyeler||[]).map(id=>[id, S.students.get(id)]).filter(([,x])=>x && !x.silindi).sort((a,b)=>(a[1].name||"").localeCompare(b[1].name||"","tr"));
-  return sheet(`<h3>${esc(g.ad)} · duyuru ve yıldız</h3><p class="muted small" style="margin:-6px 0 0">Sınıftaki herkes görür, ${KOC_GUN} gün kalır. Öğrenciler birbirini takma adıyla görür.</p>
+  return sheet(`<h3>${esc(g.ad)} · duyuru ve yıldız</h3><p class="muted small" style="margin:-6px 0 0">Sınıftaki herkes görür. Öğrenciler birbirini takma adıyla görür. *yıldızlar arası* kalın yazılır.</p>
     <label class="f">Sınıfa duyuru<textarea name="metin" rows="3" maxlength="400" placeholder="ör. Bu hafta hedefimiz kişi başı 25 saat 💪 · *yıldızlar arası* kalın yazılır">${esc(not ? not.metin : "")}</textarea></label>
     <label class="f">Koçun yıldızı<select name="uid"><option value="">— Yok —</option>${uy.map(([id,x])=>`<option value="${id}" ${yil&&yil.uid===id?"selected":""}>${esc(x.name)}${takmaAd(x)?` (${esc(takmaAd(x))})`:""}</option>`).join("")}</select></label>
     <label class="f">Yıldız notu<input type="text" name="ynot" maxlength="80" value="${esc(yil ? (yil.not||"") : "")}" placeholder="ör. Bu hafta istikrarıyla örnek oldu"></label>
+    <label class="f">Ne kadar yayında kalsın?<select name="sure">${(()=>{ const ref = not || yil, kal = ref ? Math.max(1, Math.ceil((bitisOf(ref) - gunSonu(1))/864e5) + 1) : 1, sec = ref ? (DSURE.find(([n])=>n>=kal)||DSURE[DSURE.length-1])[0] : 1;
+      return DSURE.map(([n,l])=>`<option value="${n}" ${n===sec?"selected":""}>${l}</option>`).join(""); })()}</select></label>
     <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
-  fd=>{ const metin = String(fd.get("metin")||"").trim(), uid = fd.get("uid"), ynot = String(fd.get("ynot")||"").trim(), x = uid ? S.students.get(uid) : null;
+  fd=>{ const metin = String(fd.get("metin")||"").trim(), uid = fd.get("uid"), ynot = String(fd.get("ynot")||"").trim(), x = uid ? S.students.get(uid) : null, bitis = gunSonu(+fd.get("sure")||1);
     if(uid && x && !takmaAd(x)) return sheetErr("Bu öğrenci henüz sınıfa girmemiş (takma adı yok); sınıftakiler onu göremez.");
-    const now = Date.now(), yeni = {...g, kocNot: metin ? {metin, at: (not && not.metin===metin) ? not.at : now} : null, kocYildiz: uid ? {uid, takma: takmaAd(x), not: ynot, at: (yil && yil.uid===uid && yil.not===ynot) ? yil.at : now} : null};
+    const now = Date.now(), yeni = {...g, kocNot: metin ? {metin, at: (not && not.metin===metin) ? not.at : now, bitis} : null, kocYildiz: uid ? {uid, takma: takmaAd(x), not: ynot, at: (yil && yil.uid===uid && yil.not===ynot) ? yil.at : now, bitis} : null};
     GR.list.set(gid, yeni); setDoc(doc(fdb,"gruplar",gid), {kocNot: yeni.kocNot, kocYildiz: yeni.kocYildiz}, {merge:true}).then(()=>toast("Sınıfa kaydedildi")).catch(()=>toast("Kaydedilemedi"));
     closeSheet(); render(); }); }
 /* Koç: Çalışma grupları paneli */
