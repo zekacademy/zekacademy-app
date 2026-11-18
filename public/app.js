@@ -582,14 +582,16 @@ const TUR = [
 /* Mevcut öğrencilere bir kerelik "Yenilikler" tanıtımı (sürüm değişince yeniden çıkar) */
 const YENILIK_SURUM = "2026-11-18";
 const YENILIK = [
-  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne SORU HAVUZU geldi: TYT ve AYT sorularını konu konu, çözümleriyle çözebilirsin. Kısaca göstereyim."},
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne iki yenilik geldi: soru çözüm asistanın ZEK AI ve konu konu çözebileceğin SORU HAVUZU. Kısaca göstereyim.", kosul:"zekai"},
+  {nav:null, ic:"flame", b:"Uygulamada yenilikler var! 🎉", t:"{Ad}, Ders bölümüne SORU HAVUZU geldi: TYT ve AYT sorularını konu konu, çözümleriyle çözebilirsin. Kısaca göstereyim.", kosul:"zekaiyok"},
+  {view:"ders", nav:"ders", ic:"search", b:"Yeni: ZEK AI 🤖", t:"Ders bölümünün üstündeki mor ZEK AI butonu senin soru çözüm asistanın. Takıldığın sorunun fotoğrafını çek, ZEK AI adım adım birlikte çözsün. Önce kendin dene, sonra bak!", kosul:"zekai"},
   {view:"ders", nav:"ders", ic:"book", b:"Yeni: SORU HAVUZU 📚", t:"Ders bölümünde ZEK AI'ın altındaki turuncu SORU HAVUZU butonuna dokun. Ders ve konu seç, şıkkı işaretle: doğru mu yanlış mı hemen görürsün. Yanlışsa çözüm adım adım açılır, “Benzer soruyu dene” ile aynı konudan yeni bir soruya geçersin."},
   ...ODUL_ADIM.map(x=>({...x, kosul:"oduleski"})),
   ...DERS_ADIM.map(x=>({...x, kosul:"derseski"})),
   ...SINIF_ADIM.slice(0, -1).map(x=>({...x, kosul:"sinifyok"})),
   {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨", kosul:"sinifyok"},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin {Ad}! Tanıtımı Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin.", kosul:"sinifvar"} ];
-const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="oduleski" ? !(st() && (st().yenilik||"") >= "2026-11-16") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
+const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="zekai" ? !!(aiAcik(S.me) && zkGoster()) : a.kosul==="zekaiyok" ? !(aiAcik(S.me) && zkGoster()) : a.kosul==="oduleski" ? !(st() && (st().yenilik||"") >= "2026-11-16") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
 const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
