@@ -15,7 +15,7 @@ import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hati
 import { getStorage } from "firebase-admin/storage";
 import { KARNE_SISTEM, karneIstegi, karneDuzelt, karneZoraGec } from "./karne.js";
 import { ODUL_BASLA, ODUL, UNVAN, gunEkle, haftaGunu, yarisanlar, siralama, tebrikMetni, duyuruMetni } from "./odul.js";
-import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, turkceMi, TURKCE_BECERI, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
+import { aiCfg, aiAcikMi, ayOf, kullanimId, maliyet, kalanHak, toplamHak, adilKalan, zoraGec, jsonCikar, anahtarDurumu, haftalikPerformans, bonusDagit, bonusMesaj, SISTEM, cozIstegi, takipIstegi, COZ_SABIT, cozDegisken, sozelMi, turkceMi, TURKCE_BECERI, FOTO_BECERI, hakemIstegi, hakemSonucu, anahtarlaSec, sikOf } from "./soru.js";
 
 initializeApp();
 setGlobalOptions({ region: "europe-west3", maxInstances: 2, memory: "256MiB" });
@@ -331,6 +331,8 @@ export const soruCoz = onCall({ timeoutSeconds: 180, memory: "512MiB", maxInstan
   if ((g.dolar || 0) >= c.tavan) throw new HttpsError("resource-exhausted", "butce");
   /* Talimat önbellekte: sabit kısım (şema + kurallar + beceriler) system'de cache_control ile; soruya özgü kısım mesajda */
   const SIS = [{ type: "text", text: SISTEM }, { type: "text", text: COZ_SABIT, cache_control: { type: "ephemeral" } }];
+  /* Fotoğraf okuma becerisi: soru fotoğrafla geldiyse (hemen her zaman) ayrı önbellek bloğu */
+  if (resim) SIS.push({ type: "text", text: FOTO_BECERI, cache_control: { type: "ephemeral" } });
   /* Türkçe becerisi: Türkçe sorusunda (öğrenci "Türkçe" seçtiyse ya da ilk çözüm Türkçe dediyse) ikinci önbellek bloğu olarak eklenir */
   const SIS_TR = [...SIS, { type: "text", text: TURKCE_BECERI, cache_control: { type: "ephemeral" } }];
   let sis = turkceMi(d.ders) ? SIS_TR : SIS;

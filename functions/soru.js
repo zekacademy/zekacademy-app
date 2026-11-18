@@ -2,6 +2,7 @@
 import { addDays, dayTasks } from "./logic.js";
 import { COZUM_BILGI } from "./cozum-bilgi.js";
 import { TURKCE_BECERI } from "./turkce-beceri.js";
+import { FOTO_BECERI } from "./foto-beceri.js";
 
 export const AI_VARSAYILAN = {
   acik: "kapali",            // "kapali" | "pilot" | "herkes"
@@ -180,7 +181,7 @@ export function cozIstegi({ metin, anahtar, tekrar }){
 
 /* Türkçe sorusu mu? (Türkçe becerisi yalnız bunlarda eklenir) */
 export function turkceMi(ders){ return /türkçe|turkce|paragraf/i.test(String(ders || "")); }
-export { TURKCE_BECERI };
+export { TURKCE_BECERI, FOTO_BECERI };
 
 /* Sözel ders mi? (ikinci oy yalnız sözelde: Türkçe, edebiyat, tarih, coğrafya, felsefe, din, sosyal) */
 export function sozelMi(ders){ return /türkçe|turkce|edebiyat|tarih|coğrafya|cografya|felsefe|psikoloji|sosyoloji|mantık|din|sosyal|inkılap|paragraf/i.test(String(ders || "")); }

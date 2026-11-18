@@ -141,3 +141,9 @@ test("hakem: daha güçlü model, modele göre değil gerekçeye göre karar", a
   assert.match(q, /kendin baştan çöz/); assert.doesNotMatch(q, /genelde daha güvenilirdir/);
   assert.ok(maliyet(c, "hakem", { input_tokens: 1e6 }) === 5);
 });
+
+test("fotoğraf okuma becerisi: ayrı blok, sabit kısımda değil, kısa", async () => {
+  const { FOTO_BECERI, COZ_SABIT } = await import("../functions/soru.js");
+  assert.match(FOTO_BECERI, /FOTOĞRAFI DEĞERLENDİR/); assert.match(FOTO_BECERI, /ŞEKLİ ENVANTERLE/); assert.match(FOTO_BECERI, /ÖĞRENCİ İZLERİNİ AYIR/);
+  assert.ok(!COZ_SABIT.includes(FOTO_BECERI)); assert.ok(FOTO_BECERI.split(/\s+/).length < 800);
+});
