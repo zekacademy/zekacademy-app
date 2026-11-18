@@ -706,7 +706,7 @@ function sHome(s){
     ${yaziliKart(s, curStart(s), false)}
     ${ev?`<div class="card evening"><div class="sech"><h3>${icon("moon","sm")} Koçundan akşam hatırlatması</h3></div><p style="margin:8px 0 12px;font-weight:600">${esc(ev.text)}</p><div class="pills">${ev.missTasks?`<button class="btn sm pri" data-act="go" data-v="program">${icon("check","xs")} Görevleri işaretle</button>`:""}${ev.missTime?`<button class="btn sm ${ev.missTasks?"":"pri"}" data-act="go" data-v="kronometre">${icon("timer","xs")} Süremi gir</button>`:""}</div></div>`:""}
     ${mm?`<div class="card morning"><div class="sech"><h3>${icon("sun","sm")} Günün mesajı</h3><span class="faint small">Koçundan</span></div><p style="margin:8px 0 0;font-weight:600;font-size:16px;line-height:1.5">${esc(mm)}</p></div>`:""}
-    ${aiAcik(S.me) ? `<button class="szhome" data-act="go" data-v="socoz"><span class="szhi">${icon("search")}</span><span><b>Soru Çözüm</b><small>Takıldığın soruyu fotoğrafla, adım adım birlikte çözelim</small></span>${s.aiBonus && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<span class="szyeni">🎉 Bonus</span>` : icon("chev","sm")}</button>` : ""}
+    ${aiAcik(S.me) ? `<button class="szhome" data-act="go" data-v="socoz">${zkGoster() ? `<span class="szhi zkav"><img src="/zekai.webp" alt="ZEK AI" width="48" height="48"></span>` : `<span class="szhi">${icon("search")}</span>`}<span><b>${zkGoster() ? "ZEK AI · Soru Çözüm" : "Soru Çözüm"}</b><small>Takıldığın soruyu fotoğrafla, adım adım birlikte çözelim</small></span>${s.aiBonus && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<span class="szyeni">🎉 Bonus</span>` : icon("chev","sm")}</button>` : ""}
     <div class="duo">
       <div class="dcard2"><button class="dch" data-act="go" data-v="program"><b>Bugünkü Program</b>${icon("chev","sm")}</button><p>${msg}</p>
         <div class="dil">${ring(tl.length?done/tl.length:0, `${done}/${tl.length}`)}</div>
@@ -762,7 +762,7 @@ function sMore(s){
       <button class="row" data-act="go" data-v="kronometre"><span class="ri">${icon("timer","sm")}</span><div><div class="rt">Kronometre ve çalışma süresi</div><div class="rs">Bugün ${fmtMin(minutes(s,today()))}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="analiz"><span class="ri">${icon("chart","sm")}</span><div><div class="rt">Analiz ve denemeler</div><div class="rs">Netlerin, deneme takvimi ve yanlış konular</div></div><span class="rx">${icon("chev","sm")}</span></button>
       ${GR.list.size ? (n=>`<button class="row" data-act="go" data-v="grup"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("user","sm")}</span><div><div class="rt">Sınıf</div><div class="rs">${n?`${n} arkadaşın şu an çalışıyor`:"Gruptakiler ne kadar çalıştı, gör"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(grUyeler(GR.list.has(GR.sec)?GR.sec:[...GR.list.keys()][0]).filter(x=>x.canli&&!x.ben).length) : ""}
-      ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span><div><div class="rt">Soru Çözüm</div><div class="rs">Fotoğrafla, yapay zekâ adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
+      ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz">${zkGoster() ? `<span class="ri zkav"><img src="/zekai.webp" alt="" width="36" height="36"></span>` : `<span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span>`}<div><div class="rt">${zkGoster() ? "ZEK AI · Soru Çözüm" : "Soru Çözüm"}</div><div class="rs">Fotoğrafla, ${zkGoster() ? "ZEK AI" : "yapay zekâ"} adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="sheet" data-v="hkarne"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("chart","sm")}</span><div><div class="rt">Haftalık karnem</div><div class="rs">${(s.karnePay||{})[karneBas()]?"Velinle paylaştın ✓":"Dilersen velinle WhatsApp'tan paylaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -2395,7 +2395,7 @@ async function karneOku(files){ const s = st(); if(!s) return;
   }catch(e){ KR = {hata: KRN_HATA(String((e && e.message) || ""))}; }
   if($("#layer .sheet")) openSheet("karne"); }
 function karneSheet(s){
-  if(!KR || KR.yukleniyor) return sheet(`<h3>Karnen okunuyor…</h3><div class="krnload"><span class="spin"></span><p class="muted small">Zek AI netlerini ve yanlış konularını çıkarıyor. 10–40 saniye sürebilir; bu ekrandan çıkma.</p></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button></div>`);
+  if(!KR || KR.yukleniyor) return sheet(`<h3>Karnen okunuyor…</h3><div class="krnload"><span class="spin"></span><p class="muted small">${zkAd()} netlerini ve yanlış konularını çıkarıyor. 10–40 saniye sürebilir; bu ekrandan çıkma.</p></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button></div>`);
   if(KR.hata) return sheet(`<h3>Karne okunamadı</h3><p class="muted">${esc(KR.hata)}</p><div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="sheet" data-v="deneme">Elle gir</button></div>`);
   const L = KR.denemeler || [];
   const kart = (x, i) => { const F = x.tur==="TYT" ? TYTF : AYTF;
@@ -2413,7 +2413,7 @@ function karneSheet(s){
       ${x.notlar.length?`<p class="small" style="margin:6px 0 0;color:var(--warn)">${x.notlar.map(esc).join(" · ")}</p>`:""}</div>`; };
   const ana = L.filter(x=>x.kaynak==="ana"), gec = L.filter(x=>x.kaynak!=="ana");
   return sheet(`<h3>Karneden okunanlar</h3>
-    <p class="muted small" style="margin:-6px 0 0">Zek AI karnenden aşağıdakileri okudu. <b>Sayıları karnenle karşılaştır</b>, gerekirse düzelt, sonra kaydet.</p>
+    <p class="muted small" style="margin:-6px 0 0">${zkAd()} karnenden aşağıdakileri okudu. <b>Sayıları karnenle karşılaştır</b>, gerekirse düzelt, sonra kaydet.</p>
     ${(KR.uyarilar||[]).length?`<div class="card" style="padding:10px 12px;box-shadow:none;background:var(--warns,#FEF3C7)"><p class="small" style="margin:0">${KR.uyarilar.map(esc).join("<br>")}</p></div>`:""}
     ${ana.map(x=>kart(x, L.indexOf(x))).join("")}
     ${gec.length?`<details class="krngec" ${ana.length?"":"open"}><summary><b>Karnedeki geçmiş denemeler (${gec.length})</b> <span class="faint small">uygulamada olmayanları da ekleyebilirsin</span></summary>${gec.map(x=>kart(x, L.indexOf(x))).join("")}</details>`:""}
@@ -2477,6 +2477,9 @@ function onzKapat(){ const o = window.ZK_ONZ || {}; closeSheet(); window.ZK_ONZ 
   S.role = "admin"; S.me = null; S.tur = null; S.turKapandi = false; S.cur = o.cur ?? null; S.view = "daha"; window.scrollTo(0,0); render(); }
 
 /* ---------- Soru Çözüm (yapay zekâ; sunucuda Claude: önce kolay model, gerekirse güçlü model) ---------- */
+/* ZEK AI avatarı: şimdilik yalnız koçta görünür; öğrencilere açmak için ayarlarda ai.avatar = "herkes" */
+const zkGoster = () => A() || (S.settings.ai||{}).avatar === "herkes";
+const zkAd = () => zkGoster() ? "ZEK AI" : "Zek AI";
 const aiC = () => ({ acik:"kapali", pilot:[], aylikHak:120, tavan:100, uyari:80, takipGunluk:15, bonusAcik:true, bonusUyum:70, sinirsiz:true, gunlukSoru:30, aylikSoru:600, ...(S.settings.ai||{}) });
 const aiAcik = sid => { const c = aiC(); return c.acik==="herkes" || (c.acik==="pilot" && (c.pilot||[]).includes(sid)); };
 const aiAy = () => today().slice(0,7);
@@ -2506,7 +2509,7 @@ function szMd(src){ const out = []; let list = null; const close = () => { if(li
     if((m = l.match(/^\s*[-*•]\s+(.*)$/))){ if(list!=="ul"){ close(); out.push("<ul>"); list = "ul"; } out.push(`<li>${szInline(m[1])}</li>`); return; }
     close(); out.push(`<p>${szInline(l)}</p>`); }); close(); return out.join(""); }
 function szBaglam(){ const d = SZ.data || {}; return JSON.stringify({ soru:d.soru, siklar:d.siklar, ders:d.ders, konu:d.konu, adimlar:d.adimlar, cevap:d.cevap }); }
-function szYukleniyor(){ return `${SZ.fotoUrl || SZ.onizleme ? `<div class="szscan"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"><i></i><span>Gönderdiğin soru</span></div>` : ""}<div class="szload"><div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
+function szYukleniyor(){ return `${SZ.fotoUrl || SZ.onizleme ? `<div class="szscan"><img src="${SZ.fotoUrl || SZ.onizleme}" alt="Gönderdiğin soru"><i></i><span>Gönderdiğin soru</span></div>` : ""}<div class="szload">${zkGoster() ? `<div class="zkdus"><img src="/zekai-cozuyor.webp" alt="ZEK AI soruyu çözüyor" width="160" height="160"><b>ZEK AI soruyu çözüyor…</b></div>` : ""}<div class="szph on"><i></i>Soruyu okuyorum</div><div class="szph"><i></i>Çözüyorum</div><div class="szph"><i></i>Her adımı kontrol ediyorum</div><p class="small muted" style="margin:4px 0 0">Zor sorularda bir dakika kadar sürebilir.</p></div>`; }
 let szAsama = null;
 function szAsamaBaslat(){ clearInterval(szAsama); let i = 0; szAsama = setInterval(()=>{ const ph = document.querySelectorAll(".szph"); if(!ph.length || i >= ph.length-1){ return; } ph[i].className = "szph ok"; i++; ph[i].className = "szph on"; }, 8000); }
 /* Zek AI'nin şekilden / resimden okuduğu bilgiler: öğrenci yanlış okuma var mı kontrol edebilsin */
@@ -2544,10 +2547,11 @@ function szBenzer(){ const q = SZ.benzer; if(!q) return ""; const dogru = String
     ${sec ? (sec===dogru ? `<div class="szalert ok"><b>Harika, doğru! 🎉</b> Bu konuyu kaptın.</div>` : `<div class="szalert bad">Bu sefer olmadı, sorun değil. Doğru cevap <b>${esc(dogru)}</b>.</div>`) + (Array.isArray(q.cozum) && q.cozum.length ? `<div class="szex"><b>Kısa çözüm</b><ol>${q.cozum.map(x=>`<li>${szInline(x)}</li>`).join("")}</ol></div>` : "") : ""}</div>`; }
 function pSoruCoz(){
   const s = !A() && st(), c = aiC(), yuk = SZ.busy==="coz";
-  const head = topbar(`<h1 class="ttl">Soru Çözüm</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"ayarlar":"home"}" aria-label="Geri">${icon("back")}</button>`);
+  const head = topbar(`<h1 class="ttl">${zkGoster() ? "ZEK AI" : "Soru Çözüm"}</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"ayarlar":"home"}" aria-label="Geri">${icon("back")}</button>`);
   const hakSerit = !A() && aiC().sinirsiz ? `<div class="szhak sinirsiz"><span>✨ Sınırsız Soru Çözüm</span></div>` : SZ.kalan!=null ? `<div class="szhak"><span>Bu ay soru hakkın</span><b class="num">${SZ.kalan}</b><span>/ ${SZ.toplam}</span><i style="--w:${SZ.toplam ? Math.round(SZ.kalan/SZ.toplam*100) : 0}%"></i></div>` : A() ? `<div class="szhak"><span>Koç denemesi · hak düşmez</span></div>` : "";
   const bonus = s && !aiC().sinirsiz && s.aiBonus && s.aiBonus.at && s.aiBonus.at > (s.aiBonusGoruldu||"") ? `<div class="szbonus"><span>🎉</span><p>${esc(s.aiBonus.mesaj)}</p><button class="iconbtn sm" data-act="szbonuskapat" aria-label="Kapat">${icon("x","sm")}</button></div>` : "";
-  const form = SZ.data || yuk ? "" : `${hakSerit}<div class="card szform">
+  const selam = !zkGoster() ? "" : `<div class="zkselam"><img src="/zekai.webp" alt="ZEK AI" width="64" height="64"><div><b>Merhaba, ben ZEK AI!</b><p>Takıldığın sorunun fotoğrafını çek, birlikte adım adım çözelim.</p></div></div>`;
+  const form = SZ.data || yuk ? "" : `${selam}${hakSerit}<div class="card szform">
       <label class="szdrop" for="szFoto">${SZ.onizleme ? `<img src="${SZ.onizleme}" alt="Seçilen soru"><span><b>Fotoğraf hazır</b><small>Değiştirmek için dokun</small></span>` : `<span class="szdic">${icon("note")}</span><span><b>Sorunun fotoğrafını ekle</b><small>Tek soru, net ve düz olsun</small></span>`}<input type="file" accept="image/*" id="szFoto" hidden></label>
       <div class="sqbtns"><label class="btn pri sm">📷 Kamerayı aç<input type="file" accept="image/*" capture="environment" id="szKamera" hidden></label><label class="btn sm">🖼️ Galeriden seç<input type="file" accept="image/*" id="szGaleri" hidden></label></div>
       <label class="f">Ya da soruyu yaz / not ekle<textarea id="szMetin" rows="2" placeholder="İsteğe bağlı · ör. 12. soru, 18 buldum ama şıklarda yok">${esc(SZ.metin)}</textarea></label>
@@ -2559,7 +2563,7 @@ function pSoruCoz(){
   const devam = SZ.data && SZ.data.okunabildi!==false && (SZ.shown >= (SZ.data.adimlar||[]).length || SZ.mod==="ipucu") ? `<div class="card szdevam">
       <b class="small">Aklına takılanı sor</b>
       <div class="szask"><textarea id="szSor" rows="1" placeholder="ör. 2. adımda neden 16,8'i çıkardık?"></textarea><button class="btn pri" data-act="szsor" ${SZ.busy?"disabled":""}>Sor</button></div></div>` : "";
-  const sohbet = SZ.sohbet.map(m=>`<div class="szmsg ${m.r}">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : m.r==="me" ? szInline(m.t) : szMd(m.t)}</div>`).join("");
+  const sohbet = SZ.sohbet.map(m=>m.r==="me" ? `<div class="szmsg me">${szInline(m.t)}</div>` : (zkGoster() ? `<div class="zkrow"><img class="zkmini" src="${m.t==="…" ? "/zekai-cozuyor.webp" : "/zekai.webp"}" alt="ZEK AI" width="32" height="32"><div class="szmsg ai">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> ZEK AI düşünüyor…` : szMd(m.t)}</div></div>` : `<div class="szmsg ai">${m.t==="…" ? `<span class="szdots"><i></i><i></i><i></i></span> Düşünüyor…` : szMd(m.t)}</div>`)).join("");
   const alt = SZ.data || yuk ? `<div class="pills" style="justify-content:space-between"><button class="btn" data-act="szyeni" ${SZ.busy?"disabled":""}>+ Yeni soru</button>${SZ.hak && !aiC().sinirsiz ? `<span class="faint small" style="align-self:center">${SZ.hak} hak kullanıldı</span>` : ""}</div>` : "";
   return `${head}<div class="page sz">${SZ.data || yuk ? "" : bonus}${form}${yuk ? szYukleniyor() : ""}${SZ.hata && SZ.data ? `<div class="err" style="display:block">${esc(SZ.hata)}</div>` : ""}<div class="szsol">${szCozum()}</div>${szBenzer()}${sohbet ? `<div class="szchat">${sohbet}</div>` : ""}${devam}${alt}
     ${!SZ.data && !yuk ? `<p class="faint small" style="text-align:center;margin:0">Yapay zekâ hata yapabilir. Cevap anahtarındaki şıkla karşılaştırarak kontrol eder; tutmazsa “emin değilim” der.</p>` : ""}</div>`;
