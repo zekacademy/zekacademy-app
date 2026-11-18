@@ -588,8 +588,15 @@ const YENILIK = [
   ...SINIF_ADIM.slice(0, -1).map(x=>({...x, kosul:"sinifyok"})),
   {...SINIF_ADIM[SINIF_ADIM.length-1], b:"Son olarak: karakterin 🎨", kosul:"sinifyok"},
   {nav:null, ic:"check", b:"Hepsi bu kadar 👍", t:"Kolay gelsin {Ad}! Tanıtımı Daha Fazla → “Uygulamayı tanı”dan tekrar açabilirsin.", kosul:"sinifvar"} ];
+/* ZEK AI açıldığında (koç "ZEK AI'ı öğrencilere aç" dediğinde) öğrencilere bir kerelik ZEK AI tanıtımı */
+const ZEK_YENILIK = [
+  {view:"ders", nav:"ders", ic:"flame", b:"Uygulamada yenilik var! 🎉", t:"{Ad}, soru çözüm asistanın ZEK AI geldi! Ders ekranında, deneme grafiğinin hemen altındaki büyük ZEK AI butonunu gör."},
+  {view:"socoz", nav:"ders", ic:"note", b:"Takıldığın soruyu fotoğrafla 📷", t:"Sorunun fotoğrafını çek, cevap anahtarındaki şıkkı seç; ZEK AI adım adım birlikte çözsün. Anlamadığın adımda “Bu adımı anlamadım”a dokun, daha basit anlatsın."},
+  {view:"socoz", nav:"ders", ic:"check", b:"Önce kendin dene 💪", t:"Soruyu önce kendin dene, takıldığın yerde ZEK AI'a sor. Kolay gelsin {Ad}! Bu tanıtımı Daha Fazla → “Yenilikler”den tekrar açabilirsin."} ];
+const zekYeni = () => !A() && aiAcik(S.me) && zkGoster();
+const yenSurum = () => zekYeni() ? "2026-11-19-zekai" : YENILIK_SURUM;
 const turKosul = a => !a.kosul || (a.kosul==="kurulmamis" ? !isStandalone() : a.kosul==="ai" ? aiAcik(S.me) : a.kosul==="derseski" ? !(st() && (st().yenilik||"") >= "2026-11-13") : a.kosul==="sinifyok" ? !(st() && profilVar(st())) : a.kosul==="sinifvar" ? !!(st() && profilVar(st())) : true);
-const turListe = () => (S.turListe==="yeni" ? YENILIK : TUR).filter(turKosul);
+const turListe = () => (S.turListe==="yeni" ? (zekYeni() ? ZEK_YENILIK : YENILIK) : TUR).filter(turKosul);
 function turOrnek(k){
   if(k==="sayac") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">TYT Kimya Çalışması (1,5 saat)</div></div><div class="tright"><span class="pill">${icon("clock","xs")}1,5 saat</span><span class="tplay">${icon("play","xs")}</span></div></div><div class="task running"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Fizik Çalışması (2 saat)</div><div class="trun"><span class="tlive num">24:10</span><span class="btn sm">${icon("stop","xs")} Durdur</span></div></div><span></span></div></div>`;
   if(k==="hedef2") return `<div class="tasks turex"><div class="task"><span class="tick">${icon("check","sm")}</span><div><div class="tt" style="font-weight:600">AYT Matematik Çalışması (2 saat)</div><div class="thd"><span>${icon("target","xs")}Türev</span><span>${icon("book","xs")}Apotemi + Bilgi Sarmal</span><span>${icon("users","xs")}Mert Hoca</span></div></div><span></span></div></div>`;
@@ -609,7 +616,7 @@ function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return ""
 function studentShell(){
   const s = st(); if(!s) return "";
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
-  else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
+  else if(S.tur==null && s.tanitim && s.yenilik!==yenSurum() && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
   const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s), havuz:cHavuz};
   const nots = studentNotices(s).length;
@@ -3713,7 +3720,7 @@ document.addEventListener("click", e=>{
     case "tyapistir": { (S.pano||[]).forEach(t=>gunEkle(b.dataset.date, t)); toast(`${(S.pano||[]).length} görev yapıştırıldı`); break; }
     case "ptemizle": S.pano = []; panoGuncelle(); break;
     case "tur": if(b.dataset.l) S.turListe = b.dataset.l; S.tur = +v; render(); break;
-    case "turbitir": { S.tur = null; S.turKapandi = true; const kar = st() && karakterSor(st()); if(!A()) S.view = kar ? "grup" : "home"; if(!A() && st() && (!st().tanitim || st().yenilik!==YENILIK_SURUM)){ st().tanitim = true; st().yenilik = YENILIK_SURUM; save(); } render();
+    case "turbitir": { S.tur = null; S.turKapandi = true; const kar = st() && karakterSor(st()); if(!A()) S.view = kar ? "grup" : "home"; if(!A() && st() && (!st().tanitim || st().yenilik!==yenSurum())){ st().tanitim = true; st().yenilik = yenSurum(); save(); } render();
       if(kar){ S.profilSinif = S.profilSoruldu = true; setTimeout(()=>{ if(!$("#layer .ov")) openSheet("takma"); }, 350); } break; }
     case "girisgonder": { const id = b.dataset.id, cn = {...(S.cnotes.get(id)||{}), girisGonderildi: nowISO()}; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0);
       setTimeout(()=>{ const r = b.closest(".grrow"); if(r) r.outerHTML = girisSatir(id, S.students.get(id)); }, 300); return; }
