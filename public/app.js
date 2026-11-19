@@ -1402,7 +1402,8 @@ function salonKoltuk(x, koc){
   const ad = koc && x.zek ? x.takma+" 🤖" : koc ? ilkAd(x.ad)+(x.ad.split(/\s+/)[1] ? " "+x.ad.split(/\s+/).slice(-1)[0][0]+"." : "") : (x.takma || "Sen"), alev = x.bugun>=ALEV_DK;
   const sure = x.canli ? `<b class="num" data-gb="${x.basla}">${clock(gecenSn(x.basla))}</b>` : `<b class="num kz">00:00</b>`;
   const sahne = `<div class="ksah ${x.canli?"on":""} ${alev?"alev":""} ${x.lig?"l-"+x.lig.k:""}" style="--gc:${avRenk(x.uid)}">${odulRozet(x)}${alev?`<span class="kalev" aria-label="Bugün 7 saati geçti">${ALEV_SVG}</span>`:""}${x.canli?"":`<span class="kzz">z<small>z</small></span>`}<span class="kisik"></span>${ligArka(x)}${karakterSVG(x.av || avOf(x.uid), x.canli)}${masaSVG(x)}</div>`;
-  return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${alev?"alev":""} ${x.lig?"lig l-"+x.lig.k:""}" title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">
+  const ac = koc && !x.zek && S.students.has(x.uid); /* koç: öğrenciye dokununca bilgileri açılır */
+  return `<div class="kol ${x.canli?"on":""} ${x.ben?"ben":""} ${x.bugun||x.canli?"":"yok"} ${alev?"alev":""} ${x.lig?"lig l-"+x.lig.k:""} ${ac?"kac":""}" ${ac?`data-act="open" data-id="${esc(x.uid)}" role="button" tabindex="0" aria-label="${esc(x.ad)} bilgilerini aç"`:""} title="${esc(koc?x.ad+(x.takma?" · "+x.takma:""):ad)} · bugün ${fmtMin(x.bugun)} · bu hafta ${fmtMin(x.hafta)}">
     <span class="kcz ${x.canli?"on":x.bugun?"ara":""}"></span><b class="kad">${esc(ad)}${x.ben?` <em>sen</em>`:""}</b><small class="kders">${x.canli ? esc(dersEt(x.ders)) : x.bugun ? "Mola" : "Gelmedi"}</small><span class="ksu">${sure}</span>${ligRozet(x)}<span class="ktop"><small>BUGÜN TOPLAM</small><b class="num" ${x.canli?`data-gt="${x.basla}" data-gb0="${x.bugun - gecenSn(x.basla)/60}"`:""}>${fmtMin(x.bugun)}</b></span>${sahne}</div>`; }
 function salon(L, koc){ const F = GR.filtre || "tum", benim = L.find(x=>x.ben), bd = benim && benim.canli ? benim.ders : "";
   let G = L; if(F==="calisan") G = L.filter(x=>x.canli); else if(F==="ayni") G = L.filter(x=>x.canli && x.ders===bd);
@@ -2058,10 +2059,19 @@ function cList(){
   <div class="page wide">
     <div class="search">${icon("search","sm")}<input type="text" id="q" data-act="q" value="${esc(S.q)}" placeholder="Öğrenci ara"></div>
     <div class="pills"><button class="btn sm" data-act="sheet" data-v="girisler">🔑 Giriş bilgilerini WhatsApp’tan gönder</button></div>
-    <div class="card">${all.length? all.map(studentRow).join("") : `<div class="empty">Öğrenci bulunamadı.</div>`}</div>
+    <div class="seg gorseg"><button data-act="ogrgor" data-v="sinif" aria-pressed="${S.ogrGor!=="liste"}">Sınıf</button><button data-act="ogrgor" data-v="liste" aria-pressed="${S.ogrGor==="liste"}">Liste</button></div>
+    ${S.ogrGor==="liste" ? `<div class="card">${all.length? all.map(studentRow).join("") : `<div class="empty">Öğrenci bulunamadı.</div>`}</div>` : ogrSinifGor(all)}
     <div class="card"><h3>Kayıt linki</h3><p class="muted small" style="margin:6px 0 0">Öğrencilerin bu uygulamanın linkinden “Kayıt ol” ile kendileri kaydolur. Her yeni kayıt Bildirimler’e düşer. Link: <b>${esc(location.origin)}</b></p></div>
   </div>`;
 }
+/* Öğrenciler ekranı · Sınıf görünümü: sınıflar salon olarak; öğrenciye dokununca bilgileri açılır (Zek AI arkadaşları gösterilmez) */
+function ogrSinifGor(all){ const ids = new Set(all.map(x=>x.id)), oz = new Map(all.map(x=>[x.id, ogrOzet(x.id, x.s)]));
+  const G = [...GR.list.entries()].sort((a,b)=>(a[1].ad||"").localeCompare(b[1].ad||"","tr")), gruplu = new Set();
+  const blok = (ad, L) => `<div class="sgrup"><div class="sech"><div style="min-width:0"><h3>${esc(ad)}</h3><span class="faint small">${L.length} öğrenci · ${L.filter(x=>x.canli).length} çalışıyor · bugün toplam ${fmtMin(L.reduce((a,x)=>a+x.bugun,0))}</span></div></div>${salon(L, true)}</div>`;
+  const parca = G.map(([gid,g])=>{ const L = (g.uyeler||[]).filter(u=>ids.has(u)).map((u,i)=>{ gruplu.add(u); return {...oz.get(u), sira:i}; }); return L.length ? blok(g.ad, L) : ""; }).join("");
+  const dis = all.filter(x=>!gruplu.has(x.id)).map((x,i)=>({...oz.get(x.id), sira:i}));
+  const h = parca + (dis.length ? blok(G.length ? "Sınıfa eklenmemiş" : "Öğrencilerim", dis) : "");
+  return h || `<div class="card"><div class="empty">Öğrenci bulunamadı.</div></div>`; }
 function cDetail(){
   const s = st(); if(!s){ S.view="ogrenciler"; return cList(); }
   const sqb = soruList(S.cur).filter(([,q])=>q.durum!=="cozuldu").length;
@@ -3283,6 +3293,8 @@ window.addEventListener("popstate", ()=>{
 });
 document.addEventListener("toggle", e=>{ const d = e.target; if(d && d.classList && d.classList.contains("mders")){ S.mOpen = S.mOpen||{}; S.mOpen[d.dataset.ders] = d.open; } }, true);
 document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#layer").innerHTML) closeSheet(); });
+/* Klavye: role="button" olan kutular (salondaki öğrenci masası) Enter/Boşluk ile açılır */
+document.addEventListener("keydown", e=>{ const t = e.target; if((e.key==="Enter" || e.key===" ") && t && t.matches && t.matches('.kol.kac[role="button"]')){ e.preventDefault(); t.click(); } });
 const sheetErr = t => { const e=$("#serr"); if(e) e.textContent=t; };
 
 function openSheet(kind, el){
@@ -3755,6 +3767,7 @@ document.addEventListener("click", e=>{
     case "kockron": kocKronometre(); break;
     case "grsekme": GR.sekme = v; render(); break;
     case "grgor": GR.gor = v; render(); break;
+    case "ogrgor": S.ogrGor = v; render(); break;
     case "avsec": { const k = b.dataset.k; if(k==="masaR"){ S.avT.masaR = +v; } else if(k==="masaSol"||k==="masaSag"||k==="masaOn"){ const ms = masaSecim(S.avT); S.avT.masaSol = ms.sol; S.avT.masaSag = ms.sag; S.avT.masaOn = ms.on; S.avT[k] = v; S.avT.masa = []; } else { S.avT[k] = ["ten","sacR","basR","gom"].includes(k) ? +v : v; if(k==="sac") S.avT._sacSecildi = true; } avYenile(); break; }
     case "avsek": S.avSek = v; avYenile(); break;
     case "avcins": { const a = S.avT, ilk = !a.cins; a.cins = v; if(ilk) Object.assign(a, CINS_ORNEK[v], {masa:a.masa||[]}); else if(!SAC_CINS[v].includes(a.sac)) a.sac = CINS_ORNEK[v].sac; if(v==="k") a.sakal = "yok"; else a.sacAks = "yok"; avYenile(); break; }
