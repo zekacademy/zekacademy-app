@@ -3,36 +3,38 @@
    yazım-noktalama; iklim grafiği; istatistik; prizma; "kesinlikle/olabilir" yargı soruları) çıkarıldı.
    17 Kasım 2026: soru havuzunun mantık kartlarından (tuzak türleri), çeldirici sebeplerinden ve bilgi kutularından
    Türkçe paragraf, cümle anlamı, anlatım bozukluğu, yazım-noktalama, dil bilgisi, coğrafya ve fen kuralları eklendi.
+   19 Kasım 2026: geometri (üçgen eşitsizliği, benzerlik, açıortay, çevre açı), biyoloji (deney karşılaştırma, enzim, kalıtım),
+   kaldırma kuvveti, cümle sıralamada gönderme/sonuç cümlesi; geometri/AYT/biyoloji/fen havuz dalgalarının püf ve çeldiricilerinden.
+   Yer açmak için eski maddeler anlam kaybı olmadan kısaltıldı.
    İki günde bir çalışan "Zek AI çözüm eğitimi" görevi bu dosyayı soru havuzundan ve gerçek hatalardan günceller.
    KURAL: 2026 TYT sınav seti (kör test seti) bu dosyaya örnek olarak GİRMEZ. Soru metni kopyalanmaz, yalnız kural yazılır. */
-export const KAYNAK_COMMIT = "11efaa821ca9b7104bb141f4124e1707d9de4cb3";
-export const GUNCELLEME = "2026-11-17";
+export const KAYNAK_COMMIT = "0a26a4038738fa7e222aed0025625602c560b214";
+export const GUNCELLEME = "2026-11-19";
 
 export const COZUM_BILGI = `ÇÖZÜM BECERİLERİ (her soruda uygula):
 
 GENEL
 - Önce soru kökünü oku ve olumsuz/özel ifadeyi işaretle: "değildir, yoktur, söylenemez, ulaşılamaz, değinilmemiştir, yanlıştır, en az, en çok, kesinlikle, olabilir". Olumsuz kökte YANLIŞ olanı ararsın.
 - Öncüllü sorularda (I, II, III) her öncülü ayrı ayrı doğru/yanlış diye değerlendir; "hangileri" sorusunda doğru olanların hepsi seçilir.
-- Bulduğun cevabı soruda verilen her koşula geri koyarak sına. Bir şıkkı seçmeden önce en güçlü rakip şıkkın neden elendiğini bil.
-- Hesap sonucu hiçbir şıkka uymuyorsa soruyu ve okuduğun değerleri baştan oku; şıkka zorla uydurma.
+- Cevabı her koşula geri koyarak sına; en güçlü rakip şıkkın neden elendiğini bil. Hesap hiçbir şıkka uymuyorsa soruyu ve okuduğun değerleri baştan oku, şıkka zorla uydurma. Sonda istenene dön (parça mı bütün mü).
 - Seçtiğin şıkkı parçadaki bir cümleye, kurala ya da hesaba dayandıramıyorsan veya iki şık arasında kaldıysan emin=false yap.
 
 TÜRKÇE · PARAGRAF
 - Her şıkkı parçadaki bir dayanak cümlesiyle eşleştir. "Çıkarılabilir / ulaşılabilir / söylenebilir": parçada açıkça yazan ya da ondan zorunlu olarak çıkan bilgi. Yorum, genel doğru bilgi ya da parçadan fazlası yanlıştır. Doğru şık çoğu zaman parçadaki bir cümlenin başka sözcüklerle söylenmiş hâlidir.
 - "Ulaşılamaz / değinilmemiştir / söylenemez": dört şıkkın her birinin parçadaki karşılığını bul; karşılığı olmayan ya da parçayla çelişen tek şık cevaptır. Sözcük birebir geçmese de aynı anlam (eş anlamlı ifade, yan cümlede değinme) varsa o şık parçada vardır.
-- Aşırı genelleme: "her, hiç, yalnızca, tümüyle" parçada olmayan bir kesinlik katıyorsa şık parçayı aşar; "çoğu" → "hepsi" yapan, neden-sonucu ters çeviren ya da bir kişinin görüşünü başkasına yükleyen şık da yanlıştır. Ama sözcüğü görüp otomatik eleme: parça gerçekten o genişliği anlatıyorsa (eski konularla birlikte yepyenilerini de kapsıyorsa) "her konu" diyen şık doğrudur.
+- Aşırı genelleme: "her, hiç, yalnızca, tümüyle" parçada olmayan bir kesinlik katıyorsa şık parçayı aşar; "çoğu" → "hepsi" yapan, neden-sonucu ters çeviren ya da bir kişinin görüşünü başkasına yükleyen şık da yanlıştır. Ama sözcüğe bakıp otomatik eleme: parça gerçekten o genişliği anlatıyorsa "her" diyen şık doğrudur.
 - Ana düşünce / asıl anlatılmak istenen: parçanın tamamını kapsayan yargı. Karşıtlık bağlacından (ama, oysa, ne var ki, aslında) sonra gelen yargı genelde yazarın asıl görüşüdür; eleştirilen görüş, örnek ya da parçanın bir bölümü ana düşünce değildir.
 - "Destekler / savunulan": önce yazarın görüşünü bul (karşı çıktığı yaygın görüşten sonra "oysa, ama, söyleyeceğim, tersini savunmak" ile gelir). Doğru şık bu görüşü başka sözlerle söyler ya da ona kanıt olur; yazarın çürüttüğü görüşü destekleyen şık yanlıştır. Parça zincir kuruyorsa ("A ancak B kadar; B de ancak C kadar") doğru şık çoğu zaman zincirin ilk ve son halkasını bağlar.
 - Konu ve başlık: parçanın tamamını karşılamalı; tek örneğe dayanan (dar) ya da parçayı aşan (geniş) şık yanlıştır.
-- Boşluk doldurma: giriş cümlesi kendi başına anlaşılır, "bu, şu, ancak, ayrıca, böylece, bu yüzden, söz konusu, aynı" gibi öncüle dayanan sözcük taşımaz. Ortadaki boşluk hem önceki cümleyle konu ve yön bakımından hem de sonraki cümlenin gönderimiyle (bu, böyle, oysa, bu yüzden) uyuşmalı. Son cümle öncekilerden çıkan sonucu verir, çoğu zaman "bu, budur, bu yüzden" ile önceki açıklamaya gönderir; konuyu yeni bir sayı, örnek ya da yan bilgiyle sürdüren cümle sona gelmez.
-- Cümle sıralama ve paragraf bölme: zamir ya da bağlaçla öncekine bağlı cümle başa gelmez ve yeni paragrafı başlatmaz; birbirine gönderen cümle çiftleri ardışık olmalı ("Çünkü" cümlesi açıkladığı cümlenin hemen ardından gelir). "Dolayısıyla, sonuç olarak, kısacası" ile başlayan sonuç cümlesi, kanıt ve örnek cümlelerinden sonra, çoğu zaman sona gelir. Yeni paragraf konunun ya da bakış açısının değiştiği cümlede başlar.
+- Boşluk doldurma: giriş cümlesi kendi başına anlaşılır, öncüle bağlanan sözcük (bu, şu, ancak, ayrıca, böylece, bu yüzden, söz konusu) taşımaz. Ortadaki cümle hem önceki cümlenin yönüyle hem sonraki cümlenin gönderimiyle (bu, böyle, oysa) uyuşmalı. Son cümle öncekilerden çıkan sonuçtur; konuyu yeni sayı, örnek ya da yan bilgiyle sürdüren cümle sona gelmez.
+- Cümle sıralama ve paragraf bölme: zamir ya da bağlaçla öncekine bağlı cümle başa gelmez ve yeni paragrafı başlatmaz; birbirine gönderen cümle çiftleri ardışık olmalı ("Çünkü" cümlesi açıkladığı cümlenin hemen ardından gelir; "bu kalıplar, bunlar" adını veren cümleye bitişir). "Dolayısıyla, sonuç olarak, kısacası" ile başlayan sonuç cümlesi bütün kanıt ve örnek cümlelerinden sonra, çoğu zaman sona gelir. Yeni paragraf konunun ya da bakış açısının değiştiği cümlede başlar.
 - Akışı bozan cümle: parçanın odağını (neyi, hangi yönden anlattığını) belirle; parçayla aynı anahtar sözcüğü taşısa da bu odaktan başka yöne geçen cümle akışı bozar. Sınama: adayı çıkar; sonraki cümle ("Bu nedenle, Bu yüzden, Böylece" ile başlıyorsa özellikle) bir öncekine daha sıkı bağlanıyorsa çıkardığın cümle akışı bozandır.
 - Anlatım biçimleri: açıklama, tartışma (görüş savunma, karşı görüşü çürütme), öyküleme (zaman akışı), betimleme (görünüşü resmetme); iç içe olabilir.
 - Düşünceyi geliştirme yolları: tanık gösterme = başkasının sözüne başvurma (yalnız kişi adı yetmez); sayısal veri = düşünceyi sayıyla destekleme (her sayı değil); benzetme ("gibi"); karşılaştırma (iki durumu yan yana koyma); örnekleme; tanımlama; kişileştirme. "Yoktur" kökünde parçada hiç kullanılmayanı ara.
 - Yeni nesil: tablodaki her değeri tek tek kontrol et; iki konuşmacılı metinde görüşlerin sahibini karıştırma.
 
 TÜRKÇE · CÜMLE VE SÖZCÜK ANLAMI
-- Sözcükte ve sözde anlam: anlamı cümlenin ya da parçanın kendi açıklamasından çıkar (yanındaki karşıtlık, niteleme: neyle karşılaştırılıyor, kim kurmuş, gönüllü mü zorunlu mu). Sözcüğün en yaygın anlamına ya da çağrışımına göre seçme ("yalın" bağlamda "yüzeysel" olabilir, "süssüz" değil).
+- Sözcükte ve sözde anlam: anlamı parçanın kendi açıklamasından çıkar (yanındaki karşıtlık, niteleme: neyle karşılaştırılıyor, kim kurmuş, gönüllü mü zorunlu mu). Sözcüğün en yaygın anlamına ya da çağrışımına göre seçme ("yalın" bağlamda "yüzeysel" olabilir, "süssüz" değil).
 - Deyim ve atasözü: sözü sadeleştirip özünü çıkar, sonra şıktaki durumun aynı özü taşıyıp taşımadığına bak; ortak sözcüğe değil düşüncenin yönüne göre eşleştir.
 - Anlamca özdeş cümle: "Yalnızca A olanlar B'dir" = "B olan herkes A'dır"; tersi ("A olan herkes B'dir") aynı anlama gelmez.
 - Neden-sonuç: "-dığı için, yüzünden, -dığından"; amaç-sonuç: "için, diye, amacıyla" (ulaşılmak istenen); koşul: "-sa, -mak şartıyla". Amacı nedenle, koşulu nedenle karıştırma.
@@ -60,24 +62,29 @@ TÜRKÇE · DİL BİLGİSİ
 SOSYAL
 - İklim grafiği: Akdeniz yaz kurak, kış yağışlı; Karadeniz her mevsim yağışlı; karasal kış soğuk, yağış az; muson yaz çok yağışlı, kış kurak; ekvatoral her ay sıcak ve yağışlı; savan yaz yağışlı, kış kurak; çöl yağış çok az.
 - Grafikte en sıcak ay Ocak civarındaysa yer Güney Yarım Küre'dedir; mevsimleri buna göre ters düşün.
-- Eş eğri haritaları (izoterm, izobar, izohips): bir noktanın değeri yalnız komşu iki eğri arasında bir aralıktır; eğri üzerindeki nokta eğrinin değerini alır. Aynı aralıktaki iki noktanın kesin sıralamasını, değer yazmıyorsa varsayma.
-- Nüfus piramidi: tabanı geniş → doğum oranı yüksek, genç nüfus fazla; tabanı daralan → doğum oranı düşüyor; üst basamaklar geniş → yaşlı nüfus fazla, ortalama yaşam süresi uzun.
-- Tarih ve felsefe sorularında parçada verilen bilgiyle yetin; ders kitabının ezber cümlesi (ör. "bilim cevaplarla, felsefe sorularla uğraşır") parçada söylenmiyorsa cevap değildir. Kronoloji sorularında olayların tarihlerini yazıp sırala.
-- Teşkilât-ı Esasiye (1921): millî egemenlik, güçler birliği (yasama ve yürütme Meclis'te), Meclis hükûmeti; yeni devletin temel düzenini kurar. Laiklik, kabine sistemi, güçler ayrılığı bu anayasada yoktur.
+- Eş eğri haritalarında (izoterm, izobar, izohips) noktanın değeri komşu iki eğri arasında bir aralıktır, eğri üzerindeki nokta eğrinin değerini alır; aynı aralıktaki iki noktayı kesin sıralama.
+- Nüfus piramidi: geniş taban → doğum oranı yüksek, genç nüfus fazla; daralan taban → doğum düşüyor; geniş üst basamaklar → yaşlı nüfus fazla.
+- Tarih ve felsefe sorularında parçadaki bilgiyle yetin; parçada söylenmeyen ezber cümle cevap değildir. Kronolojide tarihleri yazıp sırala.
+- Teşkilât-ı Esasiye (1921): millî egemenlik, güçler birliği, Meclis hükûmeti; laiklik, kabine sistemi ve güçler ayrılığı yoktur.
 
 MATEMATİK
-- İstatistik: aritmetik ortalama = toplam / sayı; ortanca (medyan) = veriler sıralanınca ortadaki değer, veri sayısı çiftse ortadaki iki değerin ortalaması; tepe değer (mod) = en çok tekrar eden; açıklık = en büyük − en küçük.
-- Grafik ve tablo: her grafiğin eksen ölçeğini ayrı oku (iki grafiğin ölçeği farklı olabilir); "kaç katı", "yüzde kaç arttı" ve "ne kadar arttı" farklı sorulardır.
-- Dikdörtgenler prizması: hacim = abc, yüzey alanı = 2(ab + ac + bc).
-- Problemlerde birimleri eşitle (dakika-saat, cm-m, kuruş-lira); "kaç tane daha / kaç fazla" farkı sorar.
-- Sayı problemlerinde bulunan değerin tam sayı, pozitif, rakam olma, rakamları farklı olma gibi koşulları sağladığını kontrol et; basamak değeri ile sayı değerini karıştırma.
+- İstatistik: ortanca = sıralı verinin ortası (veri sayısı çiftse ortadaki iki değerin ortalaması); tepe değer = en sık; açıklık = en büyük − en küçük; birleşik ortalama = toplamların toplamı / toplam kişi.
+- Grafik ve tablo: her grafiğin eksen ölçeğini ayrı oku; "kaç katı", "yüzde kaç arttı" ve "ne kadar arttı" farklı sorulardır.
+- Dikdörtgenler prizması: hacim abc, yüzey alanı 2(ab + ac + bc).
+- Problemlerde birimleri eşitle (dk-sa, cm-m, kuruş-lira); "kaç tane daha / kaç fazla" farkı sorar.
+- Sayı problemlerinde bulunan değerin koşullarını (tam sayı, pozitif, rakam, farklı rakam) sına; basamak değeri ile sayı değerini karıştırma.
 
 GEOMETRİ
 - Şekil ölçekli değildir; yalnız yazılı değer ve işaretleri kullan. Yamuk alanı = (alt taban + üst taban)/2 · yükseklik; yükseklik tabanlara dik uzaklıktır, yan kenar değildir. Dış açı = komşu olmayan iki iç açının toplamı.
+- Üçgen eşitsizliği |b − c| < a < b + c, uçlar dahil değil. Benzerlikte eşit açıların köşelerini aynı sırayla yaz (ADE ∼ ACB olabilir), oranı eşit açıların karşısındaki kenarlarla kur; alan oranı = (benzerlik oranı)².
+- İç açıortay karşı kenarı komşu kenarlar oranında böler. Çevre açı gördüğü yayın yarısıdır.
 
 FEN
 - "Kesinlikle doğrudur": her olası durumda doğru olmalı. "Doğru olabilir": en az bir durumda mümkün olması yeter. Hal değişimi sırasında ısı alan maddenin sıcaklığı değişmez; ortalama kinetik enerji yalnızca sıcaklığa bağlıdır.
 - Yük ve elektriklenme: dokunma ile elektriklenmede toplam yük korunur, yükler sığalarla orantılı paylaşılır; etki ile elektriklenmede yaklaştırılan cismin yükü değişmez.
 - Grafik sorularında eğim ve alan anlamını kullan (konum-zaman eğimi hız, hız-zaman eğimi ivme, hız-zaman alanı yer değiştirme; eksenin altındaki alan ters yönde yer değiştirmedir).
-- Ağırlık = kütle × g; basınç ve kuvvet hesaplarında kütleyi değil ağırlığı kullan. Mol sayısı = kütle / mol kütlesi; mol ile gramı karıştırma.
+- Ağırlık = kütle × g; basınç ve kuvvet hesaplarında kütleyi değil ağırlığı kullan.
+- Kaldırma kuvveti: yüzen cisimde ağırlığa eşit, batanda V(cisim) · d(sıvı) · g.
+- Deneyde bir etkenin etkisi yalnız o etkenin farklı olduğu düzenekler karşılaştırılarak yorumlanır. Enzim aktivasyon enerjisini düşürür, harcanmaz.
+- Kalıtım: erkek X'ini anneden alır (hasta oğlu olan sağlıklı anne taşıyıcıdır); hasta ebeveynlerden sağlıklı çocuk → özellik baskın. "Kesin" yargı her olası genotipte doğru olmalı.
 `;
