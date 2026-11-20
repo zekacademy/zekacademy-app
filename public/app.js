@@ -2337,7 +2337,7 @@ function cProgram(){
   const s = st();
   return `${topbar(`<h1 class="ttl">Haftalık Program</h1>`)}
   <div class="page wide">
-    ${ids.length?`<label class="f">Öğrenci<select id="pickStu" data-act="pick">${ids.map(([id,x])=>`<option value="${id}" ${id===S.cur?"selected":""}>${esc(x.name)} · ${esc(x.alan)}</option>`).join("")}</select></label>`:""}
+    ${ids.length?`<div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap"><label class="f" style="flex:1 1 220px;margin:0">Öğrenci<select id="pickStu" data-act="pick">${ids.map(([id,x])=>`<option value="${id}" ${id===S.cur?"selected":""}>${esc(x.name)} · ${esc(x.alan)}</option>`).join("")}</select></label>${s?`<button class="btn" data-act="open" data-id="${esc(S.cur)}">${icon("user","xs")} Öğrenci bilgileri</button>`:""}</div>`:""}
     ${s? pProgram(s,true) : `<div class="card"><div class="empty">Program yazmak için önce bir öğrenci ekle.</div></div>`}
   </div>`;
 }
