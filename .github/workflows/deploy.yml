@@ -120,6 +120,7 @@ jobs:
           node tools/safanur-hafta.mjs
           node tools/dilbeste-hafta.mjs
           node tools/nuh-hafta.mjs
+          node tools/fiyat-2026-11-21.mjs
       - name: Temizlik
         if: always()
         run: rm -f "$RUNNER_TEMP/sa.json"
