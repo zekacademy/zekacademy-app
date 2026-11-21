@@ -2028,9 +2028,10 @@ function cOzet(){
   const all = sortedStudents().map(([id,s])=>({id,s,m:coachMetrics(s)}));
   const n = all.length, unread = [...S.notifs.values()].filter(x=>!x.read).length;
   const withP = all.filter(x=>x.m.w.pct!=null), avgP = withP.length ? withP.reduce((a,x)=>a+x.m.w.pct,0)/withP.length : null;
-  /* Öğrenci başı günlük çalışma: son 7 tam gün (dün ve öncesi); bu sürede hiç süre girmeyen (kronometre açmayan) öğrenciler hesaba katılmaz */
-  const t0 = today(), son7 = [1,2,3,4,5,6,7].map(i=>addDays(t0,-i)), gunDk = all.map(x=>son7.reduce((a,d)=>a+minutes(x.s,d,false),0)).filter(v=>v>0);
-  const gunOrt = gunDk.length ? gunDk.reduce((a,v)=>a+v,0)/gunDk.length/7 : 0;
+  /* Öğrenci başı günlük çalışma (koçun isteği): son 7 tam günde (dün ve öncesi) her öğrencinin EN ÇOK çalıştığı 3 günün ortalaması, sonra öğrencilerin ortalaması; hiç süre girmeyen (kronometre açmayan) öğrenciler hesaba katılmaz */
+  const t0 = today(), son7 = [1,2,3,4,5,6,7].map(i=>addDays(t0,-i));
+  const gunDk = all.map(x=>son7.map(d=>minutes(x.s,d,false)).sort((a,b)=>b-a).slice(0,3)).filter(L=>L[0]>0).map(L=>L.reduce((a,v)=>a+v,0)/3);
+  const gunOrt = gunDk.length ? gunDk.reduce((a,v)=>a+v,0)/gunDk.length : 0;
   const att = all.filter(x=>x.m.score>0).sort((a,b)=>b.m.score-a.m.score);
   const q = normName(S.q);
   const rows = all.filter(x=>!q || normName(x.s.name).includes(q)).sort((a,b)=>b.m.score-a.m.score || a.s.name.localeCompare(b.s.name,"tr"));
@@ -2041,7 +2042,7 @@ function cOzet(){
     <div class="kpis">
       ${tile("t-a","users",n,"Öğrenci")}
       ${tile("t-g","target",avgP==null?"—":"%"+Math.round(avgP*100),"Ortalama program uyumu")}
-      ${tile("t-w","clock",fmtMin(gunOrt),`Öğrenci başı günlük çalışma · son 7 gün, ${gunDk.length} öğrenci`)}
+      ${tile("t-w","clock",fmtMin(gunOrt),`Öğrenci başı günlük çalışma · son 7 günün en iyi 3 günü, ${gunDk.length} öğrenci`)}
       ${tile("t-r","alert",att.length,"İlgilenmen gereken")}
     </div>
     ${gununOzeti()}
