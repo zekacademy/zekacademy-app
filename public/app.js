@@ -2313,55 +2313,86 @@ async function karnePaylas(){ const s = st(); if(!s) return; const v = karneVeri
   if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f], text}); gitti = true; }catch(e){ if(e && e.name==="AbortError") return; } }
   if(!gitti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Karne indirildi; WhatsApp'ta fotoğraf olarak gönderebilirsin"); }
   if(!A()) mutate(x=>{ x.karnePay = {...(x.karnePay||{}), [v.bas]: nowISO()}; }); render(); if(gitti) toast("Karne paylaşıldı 👏"); }
-/* Sınıf hikayesi (koç): Instagram hikayesi için 1080×1920 görsel — kara tahta + masalarda öğrenci karakterleri; isimler bulanık, yalnız gerçek öğrenciler */
+/* Sınıf hikayesi (koç): Instagram hikayesi için 1080×1920 görsel — renk teması + düzen (sınıf / podyum / liste); kod adları, yalnız gerçek öğrenciler */
 function hikayeVeri(mod){ const L = [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>ogrOzet(id,x)), dk = x => mod==="hafta" ? x.hafta : x.bugun;
   const cal = L.filter(x=>dk(x) > 0).sort((a,b)=>dk(b)-dk(a)), top = cal.reduce((a,x)=>a+dk(x),0);
   return { mod, L: cal.map(x=>({...x, adT:adSoyad(x.ad||"")||"Öğrenci", dk:dk(x)})), top, kisi:cal.length, canli:L.filter(x=>x.canli).length, ort: cal.length ? top/cal.length : 0, enCok: cal.length ? dk(cal[0]) : 0 }; }
 const svgResim = svg => new Promise(res=>{ const i = new Image(); i.onload = ()=>res(i); i.onerror = ()=>res(null); i.src = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg.replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ')); });
-async function hikayeCiz(mod){ const v = hikayeVeri(mod), W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d"), bugunMu = mod!=="hafta";
+const HK_TEMA = {
+  orman:{ad:"Orman", bg:["#0E3B23","#051A10"], tx:"#FFFFFF", sub:"#D1FAE5", acc:"#86EFAC", chip:"rgba(187,247,208,.4)", chipTx:"#BBF7D0", line:"rgba(255,255,255,.035)", row:"rgba(255,255,255,.06)", offBg:"rgba(255,255,255,.12)", offTx:"#FFFFFF", onBg:"#22C55E", onTx:"#052E16", name:"#E2E8F0", rankBg:"rgba(255,255,255,.14)", rankTx:"#D1FAE5", bar:"rgba(255,255,255,.10)", glow:"74,222,128", logoBg:"#22C55E", logoTx:"#0E3B23", deco:"rgba(34,197,94,.10)", board:["#23493A","#173528"], frame:"#7C4F2A", podyum:["#14532D","#166534","#15803D"]},
+  beyaz:{ad:"Beyaz", bg:["#FFFFFF","#EEF3F1"], tx:"#0F172A", sub:"#475569", acc:"#15803D", chip:"rgba(21,128,61,.35)", chipTx:"#15803D", line:"rgba(15,23,42,.05)", row:"rgba(15,23,42,.045)", offBg:"#E2E8F0", offTx:"#0F172A", onBg:"#16A34A", onTx:"#FFFFFF", name:"#334155", rankBg:"#E2E8F0", rankTx:"#334155", bar:"#E2E8F0", glow:"34,197,94", logoBg:"#16A34A", logoTx:"#FFFFFF", deco:"rgba(34,197,94,.07)", board:["#23493A","#173528"], frame:"#8B5A2B", podyum:["#DCFCE7","#BBF7D0","#86EFAC"]},
+  gece:{ad:"Gece", bg:["#131316","#000000"], tx:"#FFFFFF", sub:"#A1A1AA", acc:"#4ADE80", chip:"rgba(255,255,255,.25)", chipTx:"#E4E4E7", line:"rgba(255,255,255,.04)", row:"rgba(255,255,255,.06)", offBg:"rgba(255,255,255,.12)", offTx:"#FFFFFF", onBg:"#22C55E", onTx:"#04130A", name:"#E4E4E7", rankBg:"rgba(255,255,255,.14)", rankTx:"#E4E4E7", bar:"rgba(255,255,255,.12)", glow:"74,222,128", logoBg:"#22C55E", logoTx:"#000000", deco:"rgba(34,197,94,.07)", board:["#26262B","#17171A"], frame:"#3F3F46", podyum:["#1C1C20","#26262B","#303036"]},
+  nane:{ad:"Nane", bg:["#ECFDF5","#C7F0DA"], tx:"#064E3B", sub:"#047857", acc:"#059669", chip:"rgba(5,150,105,.4)", chipTx:"#047857", line:"rgba(6,78,59,.06)", row:"rgba(255,255,255,.6)", offBg:"rgba(255,255,255,.85)", offTx:"#064E3B", onBg:"#059669", onTx:"#FFFFFF", name:"#065F46", rankBg:"rgba(255,255,255,.9)", rankTx:"#065F46", bar:"rgba(6,78,59,.10)", glow:"16,185,129", logoBg:"#059669", logoTx:"#FFFFFF", deco:"rgba(255,255,255,.5)", board:["#1F5C46","#164A38"], frame:"#9A6B3F", podyum:["#FFFFFF","#F0FDF4","#DCFCE7"]} };
+const HK_DUZEN = {sinif:"Sınıf", podyum:"Podyum", liste:"Liste"};
+function hkSecim(){ let t = S.hkTema, d = S.hkDuzen; try{ t = t || localStorage.getItem("zk-hk-tema"); d = d || localStorage.getItem("zk-hk-duzen"); }catch(e){} return { tema: HK_TEMA[t] ? t : "orman", duzen: HK_DUZEN[d] ? d : "sinif" }; }
+async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TEMA[tema] || HK_TEMA.orman, W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d"), bugunMu = mod!=="hafta";
   const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
   const sa = m => { m = Math.round(m); const h = Math.floor(m/60), d = m%60; return h ? (d ? `${h} sa ${d} dk` : `${h} saat`) : `${d} dk`; };
-  /* duvar ve zemin */ const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,"#0E3B23"); bg.addColorStop(.36,"#0B3220"); bg.addColorStop(.37,"#0A2A1B"); bg.addColorStop(1,"#051A10"); g.fillStyle = bg; g.fillRect(0,0,W,H);
-  g.strokeStyle = "rgba(255,255,255,.035)"; g.lineWidth = 2; for(let y=740; y<H-260; y+=104){ g.beginPath(); g.moveTo(0,y); g.lineTo(W,y); g.stroke(); }
-  /* üst */ g.fillStyle = "#22C55E"; rr(88,130,60,60,18); g.fill(); g.fillStyle = "#0E3B23"; g.font = F(800,34); g.textAlign = "center"; g.fillText("Z", 118, 173); g.textAlign = "left";
-  g.fillStyle = "#fff"; g.font = F(700,34); g.fillText("Zekacademy", 164, 173);
+  const etiket = o => o.takma || o.adT.split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" ");
+  const sigdir = (t, max) => { while(t.length > 2 && g.measureText(t).width > max) t = t.slice(0,-2)+"…"; return t; };
+  const yaz = (t, x, y, f, renk, hiz="left") => { g.font = f; g.fillStyle = renk; g.textAlign = hiz; g.fillText(t, x, y); g.textAlign = "left"; };
+  const madalya = i => i===0 ? "#FACC15" : i===1 ? "#CBD5E1" : i===2 ? "#F59E0B" : T.rankBg;
+  const rozet = (i, x, y, r=24) => { g.fillStyle = madalya(i); g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); yaz(String(i+1), x, y+r*.38, F(800, r*1.08), i<3 ? "#3B2F05" : T.rankTx, "center"); };
+  /* zemin */ const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,T.bg[0]); bg.addColorStop(1,T.bg[1]); g.fillStyle = bg; g.fillRect(0,0,W,H);
+  g.fillStyle = T.deco; g.beginPath(); g.arc(W+40, 120, 300, 0, 7); g.fill();
+  g.strokeStyle = T.line; g.lineWidth = 2; for(let y=740; y<H-260; y+=104){ g.beginPath(); g.moveTo(0,y); g.lineTo(W,y); g.stroke(); }
+  /* üst */ g.fillStyle = T.logoBg; rr(88,130,60,60,18); g.fill(); yaz("Z", 118, 173, F(800,34), T.logoTx, "center"); yaz("Zekacademy", 164, 173, F(700,34), T.tx);
   const sim = new Date(), saat = String(sim.getHours()).padStart(2,"0")+":"+String(sim.getMinutes()).padStart(2,"0");
-  g.font = F(600,27); const et = bugunMu ? `${tYaz(today())} · ${saat}` : "Bu hafta", ew = g.measureText(et).width + 50; g.strokeStyle = "rgba(187,247,208,.4)"; g.lineWidth = 2; rr(W-88-ew,128,ew,64,32); g.stroke(); g.fillStyle = "#BBF7D0"; g.fillText(et, W-88-ew+25, 170);
-  /* kara tahta */ const tx = 88, ty = 236, tw = W-176, th = 420; g.fillStyle = "#7C4F2A"; rr(tx-14,ty-14,tw+28,th+28,22); g.fill(); g.fillStyle = "#9A6636"; rr(tx-14,ty-14,tw+28,8,4); g.fill();
-  const tb = g.createLinearGradient(tx,ty,tx+tw,ty+th); tb.addColorStop(0,"#23493A"); tb.addColorStop(1,"#173528"); g.fillStyle = tb; rr(tx,ty,tw,th,10); g.fill();
+  g.font = F(600,27); const et = bugunMu ? `${tYaz(today())} · ${saat}` : "Bu hafta", ew = g.measureText(et).width + 50; g.strokeStyle = T.chip; g.lineWidth = 2; rr(W-88-ew,128,ew,64,32); g.stroke(); yaz(et, W-88-ew+25, 170, F(600,27), T.chipTx);
+  /* kara tahta */ const tx = 88, ty = 236, tw = W-176, th = 420; g.fillStyle = T.frame; rr(tx-14,ty-14,tw+28,th+28,22); g.fill(); g.fillStyle = "rgba(255,255,255,.12)"; rr(tx-14,ty-14,tw+28,8,4); g.fill();
+  const tb = g.createLinearGradient(tx,ty,tx+tw,ty+th); tb.addColorStop(0,T.board[0]); tb.addColorStop(1,T.board[1]); g.fillStyle = tb; rr(tx,ty,tw,th,10); g.fill();
   g.save(); rr(tx,ty,tw,th,10); g.clip(); g.fillStyle = "rgba(255,255,255,.035)"; for(let i=0;i<5;i++){ g.beginPath(); g.ellipse(tx+120+i*180, ty+90+((i*67)%220), 160, 40, -.2, 0, 7); g.fill(); } g.restore();
-  const tebesir = (t, x, y, f, renk, hiz) => { g.font = f; g.textAlign = hiz || "left"; g.fillStyle = renk; g.globalAlpha = .95; g.fillText(t, x, y); g.globalAlpha = .25; g.fillText(t, x+1.5, y+1); g.globalAlpha = 1; g.textAlign = "left"; };
+  const tebesir = (t, x, y, f, renk) => { g.font = f; g.fillStyle = renk; g.globalAlpha = .95; g.fillText(t, x, y); g.globalAlpha = .25; g.fillText(t, x+1.5, y+1); g.globalAlpha = 1; };
   tebesir(bugunMu ? "BUGÜN SINIFTA" : "BU HAFTA SINIFTA", tx+48, ty+78, F(700,30), "#BBF7D0");
   const tsa = Math.floor(v.top/60), tdk = Math.round(v.top%60); g.font = F(800,150); const sw = g.measureText(String(tsa)).width; tebesir(String(tsa), tx+42, ty+232, F(800,150), "#FFFFFF");
-  tebesir("saat" + (tdk ? ` ${tdk} dk` : ""), tx+42+sw+18, ty+228, F(700,54), "#F1F5F9");
-  tebesir("toplam odaklı çalışma", tx+48, ty+282, F(500,32), "#D1FAE5");
+  tebesir("saat" + (tdk ? ` ${tdk} dk` : ""), tx+42+sw+18, ty+228, F(700,54), "#F1F5F9"); tebesir("toplam odaklı çalışma", tx+48, ty+282, F(500,32), "#D1FAE5");
   g.strokeStyle = "rgba(241,245,249,.35)"; g.lineWidth = 2; g.setLineDash([10,8]); g.beginPath(); g.moveTo(tx+48, ty+318); g.lineTo(tx+tw-48, ty+318); g.stroke(); g.setLineDash([]);
   const alt = [`${v.kisi} öğrenci çalıştı`, `kişi başı ${sa(v.ort)}`, bugunMu && v.canli ? `şu an ${v.canli} kişi masada` : `en uzun ${sa(v.enCok)}`];
   let az = 29; g.font = F(700,az); while(az > 20 && alt.reduce((a,t)=>a+g.measureText(t).width,0) + 2*46 > tw-96){ az--; g.font = F(700,az); }
   let ax = tx+48; alt.forEach((t,i)=>{ if(i){ tebesir("·", ax, ty+372, F(700,az), "#86EFAC"); ax += 30; } tebesir(t, ax, ty+372, F(700,az), i===2 && bugunMu && v.canli ? "#86EFAC" : "#F1F5F9"); g.font = F(700,az); ax += g.measureText(t).width + 16; });
-  g.fillStyle = "#5B3A1E"; rr(tx+tw-260, ty+th+14, 180, 14, 6); g.fill(); g.fillStyle = "#F8FAFC"; rr(tx+tw-236, ty+th+6, 46, 10, 4); g.fill(); g.fillStyle = "#FDE68A"; rr(tx+tw-176, ty+th+6, 34, 10, 4); g.fill();
-  /* masalar: 3 sütun × 3 sıra, en çok çalışan önde */ const N = Math.min(v.L.length, 9), cw = (W-176-40)/3, y0 = 712, rh = 300, sc = 188;
-  const res = await Promise.all(v.L.slice(0,N).map(x=>Promise.all([svgResim(karakterSVG(x.av || avOf(x.uid), bugunMu ? x.canli : true)), svgResim(masaSVG({...x, canli: bugunMu && x.canli}))])));
-  v.L.slice(0,N).forEach((o,i)=>{ const col = i%3, row = Math.floor(i/3), cx = 88 + col*(cw+20), cy = y0 + row*rh, sx = cx + (cw-sc)/2, sy = cy + 52, sh = sc*.86, on = bugunMu && o.canli;
-    if(on){ const lg = g.createRadialGradient(sx+sc/2, sy+sh*.35, 10, sx+sc/2, sy+sh*.35, sc*.62); lg.addColorStop(0,"rgba(74,222,128,.38)"); lg.addColorStop(1,"rgba(74,222,128,0)"); g.fillStyle = lg; g.fillRect(sx-40, sy-60, sc+80, sh+80); }
-    const [kar, masa] = res[i]; g.save(); if(!on && bugunMu) g.globalAlpha = .8; if(kar) g.drawImage(kar, sx + sc*.03, sy - sh*.21, sc*.94, sc*.94); g.restore(); if(masa) g.drawImage(masa, sx, sy + sh - sc*.5, sc, sc*.5);
-    /* sıra rozeti */ g.fillStyle = i===0 ? "#FACC15" : i===1 ? "#E2E8F0" : i===2 ? "#F59E0B" : "rgba(255,255,255,.14)"; g.beginPath(); g.arc(cx+26, cy+30, 24, 0, 7); g.fill(); g.fillStyle = i<3 ? "#0E3B23" : "#D1FAE5"; g.font = F(800,26); g.textAlign = "center"; g.fillText(String(i+1), cx+26, cy+39);
-    /* kod adı; yoksa ad soyad baş harfleri */ let et2 = o.takma || o.adT.split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" "); g.font = F(700,27); while(et2.length > 2 && g.measureText(et2).width > cw-16) et2 = et2.slice(0,-2)+"…";
-    g.fillStyle = "#E2E8F0"; g.textAlign = "center"; g.fillText(et2, cx + cw/2, cy + sh + 82); g.textAlign = "left";
-    /* süre */ g.font = F(800,34); const st = sa(o.dk), stw = g.measureText(st).width + 36; g.fillStyle = on ? "#22C55E" : "rgba(255,255,255,.12)"; rr(cx + cw/2 - stw/2, cy + sh + 94, stw, 52, 26); g.fill();
-    g.fillStyle = on ? "#052E16" : "#FFFFFF"; g.textAlign = "center"; g.fillText(st, cx + cw/2, cy + sh + 132); g.textAlign = "left";
-  });
-  if(v.L.length > N){ g.fillStyle = "#A7F3D0"; g.font = F(600,28); g.textAlign = "center"; g.fillText(`+${v.L.length-N} öğrenci daha çalıştı`, W/2, y0 + 3*rh + 56); g.textAlign = "left"; }
-  if(!v.L.length){ g.fillStyle = "#D1FAE5"; g.font = F(600,36); g.textAlign = "center"; g.fillText("Sınıf yeni doluyor…", W/2, y0+160); g.textAlign = "left"; }
-  /* alt */ g.fillStyle = "#fff"; g.font = F(800,42); g.textAlign = "center"; g.fillText("Zekacademy bireysel koçluk öğrencilerim", W/2, H-150); g.fillStyle = "#86EFAC"; g.font = F(600,30); g.fillText("Plan · takip · birlikte çalışma", W/2, H-104); g.textAlign = "left";
+  g.fillStyle = T.frame; rr(tx+tw-260, ty+th+14, 180, 14, 6); g.fill(); g.fillStyle = "#F8FAFC"; rr(tx+tw-236, ty+th+6, 46, 10, 4); g.fill(); g.fillStyle = "#FDE68A"; rr(tx+tw-176, ty+th+6, 34, 10, 4); g.fill();
+  /* ortak: süre kutusu, ışık */ const sureKutu = (o, x, y, z=34, hiz="center") => { const on = bugunMu && o.canli, st = sa(o.dk); g.font = F(800,z); const w = g.measureText(st).width + z*1.05, h = z*1.53, x0 = hiz==="center" ? x - w/2 : hiz==="right" ? x - w : x;
+      g.fillStyle = on ? T.onBg : T.offBg; rr(x0, y, w, h, h/2); g.fill(); yaz(st, x0 + w/2, y + h*.69, F(800,z), on ? T.onTx : T.offTx, "center"); };
+  const isik = (x, y, r) => { const lg = g.createRadialGradient(x, y, 10, x, y, r); lg.addColorStop(0,`rgba(${T.glow},.38)`); lg.addColorStop(1,`rgba(${T.glow},0)`); g.fillStyle = lg; g.fillRect(x-r, y-r, 2*r, 2*r); };
+  const karR = o => svgResim(karakterSVG(o.av || avOf(o.uid), bugunMu ? o.canli : true));
+  const y0 = 712; let N = 0, sonY = y0;
+  if(duzen==="podyum"){ const P = v.L.slice(0,3), R = v.L.slice(3,8), kr = await Promise.all(P.map(karR)), kr2 = await Promise.all(R.map(karR));
+    const yer = [1,0,2], bw = 276, gap = 22, bx0 = (W - 3*bw - 2*gap)/2, taban = 1190, yuk = [240, 205, 176];
+    yer.forEach((i, sira)=>{ const o = P[i]; if(!o) return; const x = bx0 + sira*(bw+gap), h = yuk[i], y = taban - h, sc = i===0 ? 230 : 196;
+      if(bugunMu && o.canli) isik(x+bw/2, y - sc*.45, sc*.7); if(kr[i]) g.drawImage(kr[i], x + (bw-sc)/2, y - sc*.94, sc, sc);
+      const pg = g.createLinearGradient(0,y,0,taban); pg.addColorStop(0,T.podyum[2-Math.min(i,2)]); pg.addColorStop(1,T.podyum[0]); g.fillStyle = pg; rr(x, y, bw, h, 18); g.fill(); g.fillStyle = madalya(i); rr(x, y, bw, 10, 5); g.fill();
+      rozet(i, x+bw/2, y+46, 26); g.font = F(700,28); yaz(sigdir(etiket(o), bw-24), x+bw/2, y+108, F(700,28), T.tx, "center"); sureKutu(o, x+bw/2, y+124, 28); });
+    sonY = taban + 28; R.forEach((o,j)=>{ const y = sonY + j*86, i = j+3; g.fillStyle = T.row; rr(88, y, W-176, 74, 22); g.fill(); rozet(i, 134, y+37, 20);
+      if(kr2[j]) g.drawImage(kr2[j], 166, y-6, 82, 82); g.font = F(700,28); yaz(sigdir(etiket(o), 230), 262, y+47, F(700,28), T.name);
+      const bx = 520, bw2 = W-176-(bx-88)-220; g.fillStyle = T.bar; rr(bx, y+29, bw2, 16, 8); g.fill(); g.fillStyle = bugunMu && o.canli ? T.onBg : T.acc; rr(bx, y+29, Math.max(16, bw2*o.dk/Math.max(1,v.enCok)), 16, 8); g.fill();
+      sureKutu(o, W-108, y+15, 26, "right"); }); N = P.length + R.length; sonY += R.length*86 + 30; }
+  else if(duzen==="liste"){ const P = v.L.slice(0,8), kr = await Promise.all(P.map(karR)), sh = 112;
+    P.forEach((o,i)=>{ const y = y0 + i*sh; g.fillStyle = i < 3 ? `rgba(${T.glow},.16)` : T.row; rr(88, y, W-176, sh-14, 26); g.fill(); rozet(i, 136, y+49, 22);
+      if(bugunMu && o.canli) isik(222, y+50, 70); if(kr[i]) g.drawImage(kr[i], 174, y-4, 100, 100);
+      g.font = F(700,30); yaz(sigdir(etiket(o), 300), 292, y+44, F(700,30), T.tx); if(bugunMu) yaz(o.canli ? "● " + dersEt(o.ders) : "mola", 292, y+78, F(600,22), o.canli ? T.acc : T.sub);
+      const bx = 292, bw2 = W-176-(bx-88)-230; if(!bugunMu){ g.fillStyle = T.bar; rr(bx, y+62, bw2, 14, 7); g.fill(); g.fillStyle = T.acc; rr(bx, y+62, Math.max(14, bw2*o.dk/Math.max(1,v.enCok)), 14, 7); g.fill(); }
+      sureKutu(o, W-110, y+24, 30, "right"); }); N = P.length; sonY = y0 + N*sh + 26; }
+  else { N = Math.min(v.L.length, 9); const cw = (W-176-40)/3, rh = 300, sc = 188;
+    const res = await Promise.all(v.L.slice(0,N).map(x=>Promise.all([karR(x), svgResim(masaSVG({...x, canli: bugunMu && x.canli}))])));
+    v.L.slice(0,N).forEach((o,i)=>{ const col = i%3, row = Math.floor(i/3), cx = 88 + col*(cw+20), cy = y0 + row*rh, sx = cx + (cw-sc)/2, sy = cy + 52, sh = sc*.86, on = bugunMu && o.canli;
+      if(on) isik(sx+sc/2, sy+sh*.35, sc*.62);
+      const [kar, masa] = res[i]; g.save(); if(!on && bugunMu) g.globalAlpha = .8; if(kar) g.drawImage(kar, sx + sc*.03, sy - sh*.21, sc*.94, sc*.94); g.restore(); if(masa) g.drawImage(masa, sx, sy + sh - sc*.5, sc, sc*.5);
+      rozet(i, cx+26, cy+30, 24); g.font = F(700,27); yaz(sigdir(etiket(o), cw-16), cx + cw/2, cy + sh + 82, F(700,27), T.name, "center"); sureKutu(o, cx + cw/2, cy + sh + 94, 34); });
+    sonY = y0 + 3*rh + 56; }
+  if(v.L.length > N) yaz(`+${v.L.length-N} öğrenci daha çalıştı`, W/2, Math.min(sonY, H-220), F(600,28), T.acc, "center");
+  if(!v.L.length) yaz("Sınıf yeni doluyor…", W/2, y0+160, F(600,36), T.sub, "center");
+  /* alt */ yaz("Zekacademy bireysel koçluk öğrencilerim", W/2, H-150, F(800,42), T.tx, "center"); yaz("Plan · takip · birlikte çalışma", W/2, H-104, F(600,30), T.acc, "center");
   return c; }
-function hikayeSheet(){ const mod = S.hkMod || "bugun";
-  setTimeout(()=>hikayeCiz(mod).then(c=>{ const i = document.getElementById("hkImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
+function hikayeSheet(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim();
+  setTimeout(()=>hikayeCiz(mod, tema, duzen).then(c=>{ const i = document.getElementById("hkImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
+  const cip = (act, k, ad, on, renk) => `<button type="button" class="btn sm ${on?"pri":""}" data-act="${act}" data-v="${k}">${renk?`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${renk};border:1px solid rgba(0,0,0,.2);margin-right:2px"></span>`:""}${ad}</button>`;
   return sheet(`<h3>Sınıf hikayesi</h3><p class="muted small" style="margin:-6px 0 0">Instagram hikayesi için hazır görsel. Öğrenciler kod adlarıyla görünür; kod adı olmayanların yalnız baş harfleri yazılır.</p>
-    <div class="pills" style="margin-top:8px"><button type="button" class="btn sm ${mod==="bugun"?"pri":""}" data-act="hkmod" data-v="bugun">Bugün</button><button type="button" class="btn sm ${mod==="hafta"?"pri":""}" data-act="hkmod" data-v="hafta">Bu hafta</button></div>
-    <img id="hkImg" alt="Sınıf hikayesi önizlemesi" style="width:100%;max-width:340px;aspect-ratio:9/16;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line);background:#0E3B23;opacity:.4">
+    <div class="pills" style="margin-top:8px">${cip("hkmod","bugun","Bugün",mod==="bugun")}${cip("hkmod","hafta","Bu hafta",mod==="hafta")}</div>
+    <div class="pills" style="margin-top:6px">${Object.entries(HK_TEMA).map(([k,t])=>cip("hktema",k,t.ad,tema===k,t.bg[0])).join("")}</div>
+    <div class="pills" style="margin-top:6px">${Object.entries(HK_DUZEN).map(([k,a])=>cip("hkduzen",k,a,duzen===k)).join("")}</div>
+    <img id="hkImg" alt="Sınıf hikayesi önizlemesi" style="width:100%;max-width:340px;aspect-ratio:9/16;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line);background:${HK_TEMA[tema].bg[0]};opacity:.4">
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="hkpaylas">📸 Paylaş</button></div>`); }
-async function hikayePaylas(){ const mod = S.hkMod || "bugun", c = await hikayeCiz(mod), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${today()}.png`, {type:"image/png"});
+async function hikayePaylas(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(), c = await hikayeCiz(mod, tema, duzen), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${today()}.png`, {type:"image/png"});
   if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); return; }catch(e){ if(e && e.name==="AbortError") return; } }
   const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Görsel indirildi; Instagram'da hikaye olarak paylaşabilirsin"); }
 function hkarneSheet(){ const s = st(); if(!s) return; const v = karneVeri(s), url = karneCiz(s, v).toDataURL("image/png"), pay = (s.karnePay||{})[v.bas];
@@ -3752,6 +3783,8 @@ document.addEventListener("click", e=>{
     case "karnepaylas": karnePaylas(); break;
     case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
+    case "hktema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hikaye"); break;
+    case "hkduzen": S.hkDuzen = v; try{ localStorage.setItem("zk-hk-duzen", v); }catch(e){} openSheet("hikaye"); break;
     case "gsil": { const id=b.dataset.id; S.gorus.delete(id); persistDoc("gorusmeler", id, 0); closeSheet(); render(); toast("Görüşme silindi"); break; }
     case "gtaslak": S.gelirTaslak = v==="1"; render(); break;
     case "brehber": rehbereKaydet(b.dataset.id); break;
