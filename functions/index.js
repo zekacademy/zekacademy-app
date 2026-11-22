@@ -522,7 +522,7 @@ export const veliRapor = onSchedule({ schedule: "30 9 * * 1", timeZone: TZ, retr
 export const karneHazir = onSchedule({ schedule: "0 0 * * 1", timeZone: TZ, retryCount: 0, timeoutSeconds: 300 }, async () => {
   const q = await db.collection("students").get(); let giden = 0;
   for (const d of q.docs) { const s = d.data(), tk = studentTokens(s); if (!tk.length) continue;
-    try { const r = await pushTo(tk, "📊 Haftalık karnen hazır", "Dilersen velinle paylaşabilirsin.", "/?ac=karne"); await dropBadStudentTokens(d.id, r.bad); giden++; }
+    try { const r = await pushTo(tk, "📊 Haftalık veli özetin hazır", "İstersen veline WhatsApp'tan gönderebilirsin: Daha Fazla → Haftalık karnem (bildirime dokununca açılır).", "/?ac=karne"); await dropBadStudentTokens(d.id, r.bad); giden++; }
     catch (e) { logger.error("karne bildirimi", d.id, e); } }
   logger.info("karne bildirimi", { giden, toplam: q.size });
 });

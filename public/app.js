@@ -749,6 +749,7 @@ function sHome(s){
     ${goalsCard(s, curStart(s), {compact:true})}
     ${takvimKart(s, 45)}
     ${s.koctanNot&&s.koctanNot.text?`<div class="card note"><span class="av">${icon("grad","sm")}</span><div style="min-width:0"><div class="sech"><b>Koçundan not</b><span class="faint small">${s.koctanNot.date?shortDate(s.koctanNot.date.slice(0,10)):""}</span></div><p style="margin:4px 0 0;white-space:pre-wrap">${esc(s.koctanNot.text)}</p></div></div>`:""}
+    ${karneHomeKart(s)}
   </div>`;
 }
 function sBell(s){
@@ -1403,6 +1404,10 @@ function odulKart(L){ const O = ODR; if(!O || (!O.gun && !O.hafta)) return ""; c
     ${(()=>{ const r = H.findIndex(x=>x.uid===S.me)+1; return r ? `<p class="odben">${r===1?"👑":"🏅"} ${UNVAN[r-1]} sensin! Koçun sana tebrik gönderdi.</p>` : G[0] && G[0].uid===S.me ? `<p class="odben">★ Dün sınıfın birincisi sendin!</p>` : ""; })()}
   </div>`; }
 /* Ana sayfa: dünün birincisi duyurusu (günde bir kez, kapatılınca çıkmaz) */
+/* Ana sayfa: Pazartesi–Çarşamba "haftalık veli özetin hazır" kartı (bildirimi kapalı olan da görsün); paylaşınca ya da kapatınca kaybolur */
+function karneHomeKart(s){ if(A() || !s) return ""; const bas = karneBas(), gun = dIdx(today()); if(gun > 2 || (s.karnePay||{})[bas]) return "";
+  const k = "zk-karne-"+bas; try{ if(localStorage.getItem(k)) return ""; }catch(e){}
+  return `<div class="card" style="display:flex;align-items:center;gap:10px;padding:10px 14px"><span class="small" style="flex:1;min-width:0">📊 <b>Haftalık veli özetin hazır.</b> <span class="faint">İstersen veline gönder.</span></span><button class="btn sm" data-act="sheet" data-v="hkarne">Gönder</button><button class="iconbtn sm" data-act="odulkapat" data-v="${esc(k)}" aria-label="Kapat">${icon("x","sm")}</button></div>`; }
 function odulHomeKart(){ if(A() || !GR.list.size) return ""; const gid = GR.list.has(GR.sec) ? GR.sec : [...GR.list.keys()][0], O = GR.odul.get(gid); const G = O && O.gun && O.gun.liste || [];
   if(!G[0]) return ""; const k = "zk-odul-"+gid+"-"+(O.gun.tarih||""); try{ if(localStorage.getItem(k)) return ""; }catch(e){}
   const ad = G[0].uid===S.me ? "Sen" : G[0].takma;
