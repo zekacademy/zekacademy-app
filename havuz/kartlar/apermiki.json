@@ -1,0 +1,219 @@
+{
+ "konu": "Permütasyon ve Kombinasyon",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-APER2-01",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Takvim ve tümleyen seçim",
+   "fikir": "Şekilden gün sayıları okunur; “en az biri” koşulu tümleyenle ya da durumlara ayırarak sayılır; seçimde sıra gözetilmez.",
+   "tuzak": "Sıralı seçim yapıp ikiye katlamak; “tam biri” ile “en az biri”ni karıştırmak; ortak durumu iki kez saymak.",
+   "zorluk": "kolay",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "pk-takvim",
+   "tip": "Takvim ve tümleyen seçim",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-02",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Şifre ve kutu doldurma",
+   "fikir": "Her kutunun seçenek kümesi şekilden okunur; “farklı olmalı” koşulunda seçenek sayısı azalır, tekrar serbestse azalmaz; öncüllü yargılar ayrı ayrı sayılır.",
+   "tuzak": "Farklı olması gereken kutularda seçenek sayısını azaltmamak; kutu seçeneklerini toplamak; koşullu yargıda durumları iki kez saymak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pk-sifre",
+   "tip": "Şifre ve kutu doldurma",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-03",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Palindrom dizilişler",
+   "fikir": "Palindromda ilk yarı serbest seçilir, ikinci yarı yansımadır; bölünebilme gibi ek koşul yansımış basamaklara uygulanır.",
+   "tuzak": "Palindromda bütün basamakları serbest saymak; yansıyan basamağın koşulunu karıştırmak; baştaki sıfırı unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pk-palindrom",
+   "tip": "Palindrom dizilişler",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-04",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Kısmi sıralama ve öncelik şeması",
+   "fikir": "Okların “önce” ilişkisini gösterdiği şemada her uygun sıra, kaynak kümeden başlayarak tek tek sayılır; koşul sayısı arttıkça sıra sayısı azalır.",
+   "tuzak": "Oklarla bağlı olmayan görevlerin yer değişimini unutmak; öncelik ilişkisini iki yönlü sanmak; aynı sırayı iki kez saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pk-kismi",
+   "tip": "Kısmi sıralama ve öncelik şeması",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-05",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Kombinasyon denklemi ve alt küme sayısı",
+   "fikir": "C(n, r) açılıp sadeleştirilerek n bulunur; alt küme sayıları C(n, r) ile yazılır; C(n, r) = C(n, n − r) kullanılır.",
+   "tuzak": "C(n, r) ve P(n, r) tanımlarını karıştırmak; n yerine n + 1 almak; faktöriyel sadeleştirmesinde çarpan atlamak.",
+   "zorluk": "orta",
+   "kalip": "yeni nesil",
+   "adim": 4,
+   "tipId": "pk-denklem",
+   "tip": "Kombinasyon denklemi ve alt küme sayısı",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-06",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Doğru ve ızgara üzerinde sayma",
+   "fikir": "Dikdörtgeni iki yatay ve iki dikey çizgi belirler; belli bölgeyi içeren dikdörtgenlerde çizgi seçimi bölgenin iki yanından yapılır; aynı noktadan geçen doğrular ortak noktayı tek sayar.",
+   "tuzak": "Tüm dikdörtgenlerden yasaklıları çıkarırken çakışmayı iki kez çıkarmak; paralel doğruların kesişmediğini unutmak; üç doğrunun ortak noktasını üç kez saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pk-sekil",
+   "tip": "Doğru ve ızgara üzerinde sayma",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-07",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Özdeş nesneleri kapasiteli dağıtma",
+   "fikir": "Kutular farklı, nesneler özdeşse her kutudaki nesne sayısı bir üçlü yazılır; en az ve en çok koşulu sayıları sınırlar; geçerli üçlüler tek tek sayılır.",
+   "tuzak": "Kapasiteyi ya da “en az 1” koşulunu atlamak; nesneleri farklı sanıp sıralamak; üçlülerin sırasını yok saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pk-dagitim",
+   "tip": "Özdeş nesneleri kapasiteli dağıtma",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-08",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Yasak karelerle yerleştirme",
+   "fikir": "Her satıra en çok bir nesne düşer; yasak kareli satırlar önce işlenir; kullanılan sütunlar bir sonraki satırın seçeneklerini azaltır.",
+   "tuzak": "Yasak kareleri hiç hesaba katmamak; yalnız satır koşulunu uygulayıp sütun koşulunu unutmak; satır seçimini sıralı saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "pk-yerlesim",
+   "tip": "Yasak karelerle yerleştirme",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-09",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Koşullu alt küme ve seçim",
+   "fikir": "Koşul (ardışık olmama, toplam, çift-tek) durumlara ayrılıp ya da araya yerleştirme ile sayılır; çember üzerinde başlangıç noktası seçilen dizilimde ilk ve son komşuluğu ayrıca ele alınır.",
+   "tuzak": "Çemberde ilk ve son elemanın komşu olduğunu unutmak; durumlardan birini atlamak; seçimde sıra saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "pk-kume",
+   "tip": "Koşullu alt küme ve seçim",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  },
+  {
+   "id": "K-APER2-10",
+   "konu": "Permütasyon ve Kombinasyon",
+   "alt": "Eşleştirme ve koşullu gruplama",
+   "fikir": "Adlandırılmamış çiftlerde grup sayısına bölme düzeltmesi yapılır; istenmeyen eşleşmeler içerme-dışarma ile çıkarılır.",
+   "tuzak": "Grupları adlandırılmış saymak; iki istenmeyen eşleşmenin ortak durumunu iki kez çıkarmak; eşleştirme yerine seçim yapmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "pk-eslestirme",
+   "tip": "Eşleştirme ve koşullu gruplama",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (Permütasyon-Kombinasyon: palindrom, kısmi sıralama, koşullu yerleştirme, seçim; yalnız mantık) · yayın soru bankaları · MEB 11. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "pk-takvim",
+   "ad": "Takvim ve tümleyen seçim",
+   "kartlar": [
+    "K-APER2-01"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-sifre",
+   "ad": "Şifre ve kutu doldurma",
+   "kartlar": [
+    "K-APER2-02"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-palindrom",
+   "ad": "Palindrom dizilişler",
+   "kartlar": [
+    "K-APER2-03"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-kismi",
+   "ad": "Kısmi sıralama ve öncelik şeması",
+   "kartlar": [
+    "K-APER2-04"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-denklem",
+   "ad": "Kombinasyon denklemi ve alt küme sayısı",
+   "kartlar": [
+    "K-APER2-05"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-sekil",
+   "ad": "Doğru ve ızgara üzerinde sayma",
+   "kartlar": [
+    "K-APER2-06"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-dagitim",
+   "ad": "Özdeş nesneleri kapasiteli dağıtma",
+   "kartlar": [
+    "K-APER2-07"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-yerlesim",
+   "ad": "Yasak karelerle yerleştirme",
+   "kartlar": [
+    "K-APER2-08"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-kume",
+   "ad": "Koşullu alt küme ve seçim",
+   "kartlar": [
+    "K-APER2-09"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  },
+  {
+   "tipId": "pk-eslestirme",
+   "ad": "Eşleştirme ve koşullu gruplama",
+   "kartlar": [
+    "K-APER2-10"
+   ],
+   "uygulamaKonu": "amat|Permütasyon ve Kombinasyon"
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "konu": "Türev",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2025 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 12. sınıf matematik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ATRV2-01",
+   "konu": "Türev",
+   "alt": "Grafikte türevin olmadığı noktalar",
+   "fikir": "Grafikte köşe, sıçrama, açık daire ve dikey teğet noktaları işaretlenir; düzgün tepe ve yatay teğet noktaları ayrıca değerlendirilir.",
+   "tuzak": "Düzgün tepe noktasını köşe saymak; açık daire ile dolu dairenin birlikte yer aldığı sıçramayı atlamak; uç noktaları saymak.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "tur2-turevlenebilir",
+   "tip": "Türevlenebilirlik ve süreklilik",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-02",
+   "konu": "Türev",
+   "alt": "Parçalı ve mutlak değerli fonksiyon",
+   "fikir": "Birleşme noktasında süreklilik ve türev eşitliği iki denklem verir; mutlak değerde kökün katlılığı köşe oluşup oluşmadığını belirler.",
+   "tuzak": "Yalnız süreklilik koşuluyla yetinmek; çift katlı köke de köşe demek; iki parçanın türevini aynı noktada değil farklı noktada hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "tur2-turevlenebilir",
+   "tip": "Türevlenebilirlik ve süreklilik",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-03",
+   "konu": "Türev",
+   "alt": "Normal doğrusu",
+   "fikir": "Değme noktası ve teğet eğimi bulunur; normalin eğimi −1/m alınır, nokta–eğim denklemi kurulup istenen kesim noktası hesaplanır.",
+   "tuzak": "Normal yerine teğeti yazmak; −1/m yerine 1/m ya da −m almak; kesim noktası yerine değme noktasını vermek.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "tur2-tegetnormal",
+   "tip": "Teğet ve normal",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-04",
+   "konu": "Türev",
+   "alt": "Noktadan çizilen teğetler",
+   "fikir": "Değme noktasının apsisine t denir; teğet denklemi dış noktadan geçirilince t için ikinci derece denklem oluşur; kökler iki değme noktasını verir.",
+   "tuzak": "Dış noktayı eğri üzerinde sanmak; yalnız bir teğet bulup durmak; kök–katsayı bağıntısında işareti karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "tur2-tegetnormal",
+   "tip": "Teğet ve normal",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-05",
+   "konu": "Türev",
+   "alt": "f, f′ ve f″ grafiklerinin yorumu",
+   "fikir": "Verilen grafiğin hangi fonksiyona ait olduğu belirlenir; işaret değişimleri ekstremum ve büküm noktalarını verir; her öncül ayrı doğrulanır.",
+   "tuzak": "f′ ile f″ grafiğini karıştırmak; işaret değiştirmeyen sıfırı ekstremum saymak; konkavlığı f′’nün işaretiyle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "tur2-grafikoku",
+   "tip": "Grafikten türev yorumu",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-06",
+   "konu": "Türev",
+   "alt": "Kapalı aralıkta uç değer",
+   "fikir": "Kritik noktalar ve iki uç noktadaki değerler hesaplanır; en büyük ve en küçük değerler bu listeden seçilir.",
+   "tuzak": "Uç noktaları unutmak; yerel ekstremum değerini mutlak ekstremum saymak; kritik noktayı aralık dışında bırakmayı atlamak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "tur2-optim",
+   "tip": "En büyük ve en küçük değer",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-07",
+   "konu": "Türev",
+   "alt": "Geometrik optimizasyon",
+   "fikir": "İstenen büyüklük tek değişkenle yazılır, değişkenin aralığı kontrol edilir, türevin kökü uç noktalarla karşılaştırılır; sorulan büyüklük sonda hesaplanır.",
+   "tuzak": "Aralığı kontrol etmemek; en büyük alanı veren değişken değeri ile sorulan uzunluğu karıştırmak; ikinci doğrunun denklemini yanlış çözmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "tur2-optim",
+   "tip": "En büyük ve en küçük değer",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-08",
+   "konu": "Türev",
+   "alt": "Türev tanımı ve trigonometrik türev",
+   "fikir": "Katsayı ve sabit grafikten okunur, zincir kuralıyla türev alınır, özel açı değeri yerine yazılır; limit kalıbı gerekiyorsa f′(a) ile ilişkilendirilir.",
+   "tuzak": "İç fonksiyonun türevini unutmak; trigonometrik değeri yanlış almak; limitte h’nin katsayısını atlamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "tur2-kural",
+   "tip": "Türev kuralları ve uzaklık",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-09",
+   "konu": "Türev",
+   "alt": "Uzaklık fonksiyonunun türevi",
+   "fikir": "Karekök içindeki ifade D(x) alınır, zincir kuralıyla D′/(2√D) bulunur; D′ içinde f(a) ve f′(a) birlikte kullanılır.",
+   "tuzak": "Karekökün türevindeki 1/2 çarpanını ya da paydadaki √D’yi unutmak; f′’nün işaretini ters okumak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "tur2-kural",
+   "tip": "Türev kuralları ve uzaklık",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-10",
+   "konu": "Türev",
+   "alt": "Parametreli artanlık",
+   "fikir": "Her x için artan olma koşulu f′ ≥ 0 olarak yazılır; ikinci derece için diskriminant ≤ 0 ve baş katsayı > 0 kullanılır; aralıktaki tam sayılar sayılır.",
+   "tuzak": "Eşitlik uçlarını dahil etmemek; diskriminantı ters yönde yazmak; yalnız pozitif değerleri saymak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "tur2-ekstremart",
+   "tip": "Artanlık ve ekstremum sayısı",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-11",
+   "konu": "Türev",
+   "alt": "Bileşke fonksiyonun ekstremumu",
+   "fikir": "İç fonksiyonun türevi ile f′ çarpılır; çarpımın işareti aralıklarda incelenir ve işaret değişimleri sayılır; çift katlı kökler ayrıca değerlendirilir.",
+   "tuzak": "f′’nün köklerini doğrudan g’nin köklerine taşımak; x = 0’ı saymamak; işaret değiştirmeyen kökü ekstremum saymak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 6,
+   "tipId": "tur2-ekstremart",
+   "tip": "Artanlık ve ekstremum sayısı",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  },
+  {
+   "id": "K-ATRV2-12",
+   "konu": "Türev",
+   "alt": "Rasyonel fonksiyonda parametre ve normal",
+   "fikir": "Verilen değer ve eğim koşullarından bilinmeyen sabitler bulunur, bölüm kuralıyla türev alınır, eğim bulunduktan sonra normalin eğimi −1/m ile elde edilir.",
+   "tuzak": "Bölüm kuralında paydayı karesiz yazmak; normal yerine teğetin eğimini vermek; sabiti bulmadan türev almak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 5,
+   "tipId": "tur2-rasyonel",
+   "tip": "Rasyonel fonksiyon ve normal",
+   "kaynak": "ÖSYM 2018–2025 AYT Matematik çıkmış türev soruları (türevlenebilirlik, teğet-normal, f′ ve f″ grafiği, ekstremum, optimizasyon; yalnız mantık) · 345 AYT Matematik Soru Bankası · MEB 12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "tur2-turevlenebilir",
+   "ad": "Türevlenebilirlik ve süreklilik",
+   "kartlar": [
+    "K-ATRV2-01",
+    "K-ATRV2-02"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-tegetnormal",
+   "ad": "Teğet ve normal",
+   "kartlar": [
+    "K-ATRV2-03",
+    "K-ATRV2-04"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-grafikoku",
+   "ad": "Grafikten türev yorumu",
+   "kartlar": [
+    "K-ATRV2-05"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-optim",
+   "ad": "En büyük ve en küçük değer",
+   "kartlar": [
+    "K-ATRV2-06",
+    "K-ATRV2-07"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-kural",
+   "ad": "Türev kuralları ve uzaklık",
+   "kartlar": [
+    "K-ATRV2-08",
+    "K-ATRV2-09"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-ekstremart",
+   "ad": "Artanlık ve ekstremum sayısı",
+   "kartlar": [
+    "K-ATRV2-10",
+    "K-ATRV2-11"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  },
+  {
+   "tipId": "tur2-rasyonel",
+   "ad": "Rasyonel fonksiyon ve normal",
+   "kartlar": [
+    "K-ATRV2-12"
+   ],
+   "uygulamaKonu": "amat|Türev"
+  }
+ ]
+}

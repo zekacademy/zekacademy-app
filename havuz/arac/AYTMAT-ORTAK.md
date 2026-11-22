@@ -27,3 +27,11 @@ TYT kurallarının hepsi geçerli: önce `arac/MAT-ORTAK.md` (sonundaki dersler 
 - `python3 kalite.py ayt-mat/<onek> <onek>` → `/tmp/kor/aytmat-<onek>-00NN.png`; şekilli olanların HEPSİNE Read ile bak ve düzelt.
 - Çalışma dosyaların yalnız kendi scratchpad alt klasöründe. hazirla.sh, git, GitHub'a dokunma.
 - Rapor EN FAZLA 3 satır: dosya, zorluk/şekil dağılımı, varsa sorun.
+
+## 2. dalga (ek 300 soru) — yukarıdakilere EK kurallar
+- Önek `<eski önek>iki` (ör. `polinomiki`), dosya `ayt-mat/<onek>-1.json`, id `aytmat-<onek>-00NN`, k aynı konu. Kart öneki `K-A<harfler>2-NN` (grep ile boş olduğunu kontrol et).
+- ÖNCE kendi konunun 1. dalga dosyasını (`ayt-mat/<eski önek>-1.json`) oku: aynı kurguyu, aynı sayıları, aynı tipId'yi TEKRARLAMA. Yeni dalga 1. dalgada eksik kalan ÖSYM kalıplarını kapatsın.
+- Zorluk **3 kolay / 10 orta / 7 zor**. Hedef: öğrenci "bunu ÖSYM hazırlamış" desin. ÖSYM dili: kısa, resmî kök; bilgi önce verilir, soru en sonda ("Buna göre, … kaçtır?"); gereksiz hikâye yok; sayılar temiz ve sonuç tam/sade; sayısal şıklar küçükten büyüğe; tanımlı yeni işlem/fonksiyon, grafikten okuma, öncül ve "aşağıdakilerden hangisi" kalıpları ÖSYM'deki oranlara yakın.
+- Şekil oranı en az %60 (grafik konularında ≥%75), renkli; ÖSYM grafik çizimi gibi sade, eksenler ve noktalar etiketli.
+- Ek kaynak: 345 AYT Matematik Soru Bankası, her 3. sayfanın yazı tanıma çıktısı `/home/claude/kutup/ayt/yayin_345_ayt_mat.txt` ("=== s<sayfa>" başlıklı) ve sayfa resimleri `/home/claude/kutup/ayt/j345/s345_<sayfa>-<sayfa 3 hane>.jpg` (ad için `ls` kullan). Yaklaşık sayfa aralıkları: Polinom 7–15, 2.Derece/Karmaşık 13–50, Parabol 52–73, Eşitsizlik 76–97, Trigonometri 100–157, Logaritma 160–188, Diziler 190–217, Limit 220–237, Türev 238–300, İntegral 302–360, Perm/Binom/Olasılık/İstatistik 361–384 (Fonksiyonlar yoksa ÖSYM + diğer yayınlar). Konunun 3–4 sayfa RESMİNE Read ile bak (şekil ve kurgu stili için); metni yine kopyalama.
+- Yayın örneklerinden en zorlarını seç; kolay alıştırma kalıplarını taşıma.

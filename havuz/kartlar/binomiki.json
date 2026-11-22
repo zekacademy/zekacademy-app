@@ -1,0 +1,177 @@
+{
+ "konu": "Binom ve Olasılık",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 AYT Matematik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11–12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-ABO2-01",
+   "konu": "Binom ve Olasılık",
+   "alt": "Terim, katsayı ortalaması ve eşit katsayılar",
+   "fikir": "Değişkenlerin üsleri ayrı eşitlenerek k bulunur; ortalama için toplam ve terim sayısı, eşit katsayılar için C(n, i) = C(n, j) ⇒ n = i + j kullanılır.",
+   "tuzak": "Terim sayısını n sanmak; üssü yanlış eşlemek; katsayıdaki sayıyı kuvvetlendirmeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "bn-katsayi2",
+   "tip": "Terim, ortalama ve eşit katsayılar",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-02",
+   "konu": "Binom ve Olasılık",
+   "alt": "Pascal satırları, özdeşlikler ve tanımlı üçgenler",
+   "fikir": "Satır toplamları ve tek/çift sıradaki toplamlar x = 1, x = −1 ile; yeni kurallı üçgende satır toplamları kurala göre kurulur.",
+   "tuzak": "Satırı 1’den başlatmak; tek sıra toplamıyla tüm satır toplamını karıştırmak; kuraldaki ek sayıyı unutmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bn-satir2",
+   "tip": "Pascal satırları ve özdeşlikler",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-03",
+   "konu": "Binom ve Olasılık",
+   "alt": "Bağımsız olaylarda birleşim ve çarklar",
+   "fikir": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B); çarkta bölge olasılığı açıdan okunur, çiftler çarpılıp toplanır.",
+   "tuzak": "Bağımsız olayları ayrık sanmak; çarkta bölgeleri eş olasılıklı almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ol-bagimsiz2",
+   "tip": "Bağımsız olaylar ve çarklar",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-04",
+   "konu": "Binom ve Olasılık",
+   "alt": "Ağda rastgele yürüyüş",
+   "fikir": "Her adımda komşu sayısına göre dal olasılıkları çarpılır, aynı düğümde biten yürüyüşler toplanır.",
+   "tuzak": "Komşu sayısını bütün düğümler için aynı almak; yürüyüşlerden birini atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ol-graf",
+   "tip": "Ağ şemasında rastgele yürüyüş",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-05",
+   "konu": "Binom ve Olasılık",
+   "alt": "Sayma yöntemleriyle olasılık (yerleştirme, rakam, kupon)",
+   "fikir": "Uygun ve bütün durumlar çarpma kuralıyla sayılır; kısıt önce uygulanır, koşullu durumda payda daralır.",
+   "tuzak": "Sırayı ya da kısıtı unutmak; paydayı yanlış evrende saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ol-sayma2",
+   "tip": "Kısıtlı sayma ile olasılık",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-06",
+   "konu": "Binom ve Olasılık",
+   "alt": "Koşullu olasılık (grup seçimi, kart, öncül)",
+   "fikir": "Koşul örnek uzayı daraltır; “en az bir” için tümleyen sayılır; iadesiz çekimde ikinci aşama sayıları değişir.",
+   "tuzak": "P(A | B) ile P(B | A) karıştırmak; paydayı koşulsuz uzaydan almak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "ol-kosullu2",
+   "tip": "Koşullu olasılık ve iadesiz çekim",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-07",
+   "konu": "Binom ve Olasılık",
+   "alt": "Çok aşamalı seçim, ağaç ve Bayes",
+   "fikir": "Aşamalar çarpılır, aynı sonuca giden yollar toplanır; sonuç bilindiğinde ilgili yol toplama bölünür.",
+   "tuzak": "Aşama olasılığını sabit saymak; paydada yalnız bir yolu almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ol-agac2",
+   "tip": "Çok aşamalı seçim ve ağaç",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  },
+  {
+   "id": "K-ABO2-08",
+   "konu": "Binom ve Olasılık",
+   "alt": "Tablodaki dağılımlardan bileşik olay",
+   "fikir": "İki bağımsız dağılımda uygun çiftler listelenir, çarpılıp toplanır; eşitlik durumu metne göre değerlendirilir.",
+   "tuzak": "Eşit duruma kural dışı davranmak; çiftlerden birini atlamak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "ol-sure",
+   "tip": "Dağılım tablosundan bileşik olay",
+   "kaynak": "ÖSYM 2018–2026 AYT Matematik (binom açılımı ve olasılık soruları; yalnız mantık) · 345 AYT Matematik Soru Bankası · Bilgi Sarmal AYT denemeleri · MEB 11–12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bn-katsayi2",
+   "ad": "Terim, ortalama ve eşit katsayılar",
+   "kartlar": [
+    "K-ABO2-01"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "bn-satir2",
+   "ad": "Pascal satırları ve özdeşlikler",
+   "kartlar": [
+    "K-ABO2-02"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-bagimsiz2",
+   "ad": "Bağımsız olaylar ve çarklar",
+   "kartlar": [
+    "K-ABO2-03"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-graf",
+   "ad": "Ağ şemasında rastgele yürüyüş",
+   "kartlar": [
+    "K-ABO2-04"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-sayma2",
+   "ad": "Kısıtlı sayma ile olasılık",
+   "kartlar": [
+    "K-ABO2-05"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-kosullu2",
+   "ad": "Koşullu olasılık ve iadesiz çekim",
+   "kartlar": [
+    "K-ABO2-06"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-agac2",
+   "ad": "Çok aşamalı seçim ve ağaç",
+   "kartlar": [
+    "K-ABO2-07"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  },
+  {
+   "tipId": "ol-sure",
+   "ad": "Dağılım tablosundan bileşik olay",
+   "kartlar": [
+    "K-ABO2-08"
+   ],
+   "uygulamaKonu": "amat|Binom ve Olasılık"
+  }
+ ]
+}

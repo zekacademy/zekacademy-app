@@ -1,0 +1,198 @@
+{
+ "konu": "İntegral",
+ "surum": 2,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Matematik 2018–2026 çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 12. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AINT2-01",
+   "konu": "İntegral",
+   "alt": "Aralık ve sabit çarpan özellikleri",
+   "fikir": "Aralığı parçalayıp birleştirerek bilinen integrallerden istenen aralığın değeri bulunur; sabit çarpan dışarı çıkar, sabit terimin integrali uzunlukla çarpılır; her a için verilen aralık koşulunda a’ya uygun değerler yazılır.",
+   "tuzak": "Sabit terimin integralini yalnız sabit olarak yazmak; aralıkları çıkarmak yerine toplamak; kaydırmalı koşulda aralığı yanlış a değerine bağlamak.",
+   "zorluk": "kolay",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "int2-ozellik",
+   "tip": "Aralık ve sabit çarpan özellikleri",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-02",
+   "konu": "İntegral",
+   "alt": "Alanlardan integral değeri",
+   "fikir": "Grafikte x eksenini kesen bir fonksiyonun bölge alanları verilmişse eksenin altındaki alanlar negatif sayılır; integral işaretli toplam, mutlak değerli integral ise alanların toplamıdır; simetri ve iki grafik arasındaki farklar da bu dille okunur.",
+   "tuzak": "Tüm alanları toplayıp integral sanmak; altta kalan alanı pozitif almak; iki grafik arasındaki alanda f − g ile g − f işaretini karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "int2-sembolik",
+   "tip": "Alanlardan integral değeri",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-03",
+   "konu": "İntegral",
+   "alt": "Kök, kübik ve y eksenli alanlar",
+   "fikir": "Kök fonksiyonu x^(1/2) yazılarak integrallenir; y eksenine yaslanan bölgeler dikdörtgenden eğri altı çıkarılarak bulunur; kesişimi çok olan iki eğri arasında işaret değişimi kontrol edilir.",
+   "tuzak": "√x için ters türevde 2/3 katsayısını unutmak; bölgenin dışını eğri altı sanmak; kesişimlerde alanları işaretli toplayıp götürmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "int2-alan",
+   "tip": "Kök, kübik ve y eksenli alanlar",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-04",
+   "konu": "İntegral",
+   "alt": "Değişken değiştirme (kök, iç fonksiyon, tablo)",
+   "fikir": "İç ifade u olarak seçilir, du ile çarpan katsayı ve sınırlar dönüştürülür; f′(g(x))·g′(x) kalıbında sonuç f(g(b)) − f(g(a)) olur ve değerler tablodan okunur.",
+   "tuzak": "Katsayı çarpanını (1/2 ya da 2) yanlış yazmak; sınırları dönüştürmemek; tabloda g’nin değerini f’nin içine koymadan doğrudan f değerlerini çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "int2-degisken",
+   "tip": "Değişken değiştirme (kök, iç fonksiyon, tablo)",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-05",
+   "konu": "İntegral",
+   "alt": "Parametreli integral ve koşullar",
+   "fikir": "İntegral hesaplanıp a cinsinden bir denkleme dönüştürülür; ek koşullar (alan, türev değeri, tam sayı olma) parametreleri belirler ve istenen değer hesaplanır.",
+   "tuzak": "Üssün integralinde a + 1’e bölmemek; koşulu yanlış noktada uygulamak; parametreyi bulunca asıl soruyu atlamak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "int2-parametre",
+   "tip": "Parametreli integral ve koşullar",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-06",
+   "konu": "İntegral",
+   "alt": "Yol ve yer değiştirme",
+   "fikir": "Hız grafiğinden elde edilen integral yer değiştirmeyi verir; hız işaret değiştirirse yer değiştirme işaretli, alınan yol mutlak değerli integralle bulunur.",
+   "tuzak": "Negatif alanı pozitif saymak; işaret değişimini kaçırıp tek integral almak; yolu yer değiştirme sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "int2-uygulama",
+   "tip": "Yol ve yer değiştirme",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-07",
+   "konu": "İntegral",
+   "alt": "Grafikten integral: türev grafiği, simetri, parçalı",
+   "fikir": "f′ grafiğinde alan f’nin değişimini verir; noktaya göre simetri integrali dikdörtgen alanına indirir, içteki katsayı 1/m çarpanı getirir; parçalı grafikte parçaların denklemleri noktalardan yazılıp aralık bölünerek integral alınır.",
+   "tuzak": "Alanı fonksiyon değeri sanmak; simetriyi yok sayıp tek parçayı hesaplamak; 1/m çarpanını unutmak; parçalı grafiği tek doğru sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "int2-grafik",
+   "tip": "Grafikten integral: türev grafiği, simetri, parçalı",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-08",
+   "konu": "İntegral",
+   "alt": "Teğet ve alan",
+   "fikir": "Türevle teğet denklemi yazılır, eğri ve teğetin konumuna göre aralık bölünür ve integral alınır.",
+   "tuzak": "Eğimi yanlış türevden bulmak; bölgenin eksenle sınırını yok saymak; tek integralle tüm bölgeyi almaya çalışmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "int2-turev-alan",
+   "tip": "Teğet ve alan",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  },
+  {
+   "id": "K-AINT2-09",
+   "konu": "İntegral",
+   "alt": "Üst sınırı fonksiyon olan integral",
+   "fikir": "F′(x) = f(g(x))·g′(x) olduğundan F’nin kritik noktaları ve artanlığı bu çarpımın işaretinden bulunur; değerler için sınırlara dönülür.",
+   "tuzak": "İç fonksiyonun türevi olan çarpanı unutmak; işaret tablosunu yanlış kurmak; F(x) değerini F′ ile karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "int2-integral-fonk",
+   "tip": "Üst sınırı fonksiyon olan integral",
+   "kaynak": "ÖSYM AYT Matematik 2018–2026 (İntegral soruları; yalnız mantık) · yayın soru bankaları (yalnız mantık) · MEB 12. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "int2-ozellik",
+   "ad": "Aralık ve sabit çarpan özellikleri",
+   "kartlar": [
+    "K-AINT2-01"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-sembolik",
+   "ad": "Alanlardan integral değeri",
+   "kartlar": [
+    "K-AINT2-02"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-alan",
+   "ad": "Kök, kübik ve y eksenli alanlar",
+   "kartlar": [
+    "K-AINT2-03"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-degisken",
+   "ad": "Değişken değiştirme (kök, iç fonksiyon, tablo)",
+   "kartlar": [
+    "K-AINT2-04"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-parametre",
+   "ad": "Parametreli integral ve koşullar",
+   "kartlar": [
+    "K-AINT2-05"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-uygulama",
+   "ad": "Yol ve yer değiştirme",
+   "kartlar": [
+    "K-AINT2-06"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-grafik",
+   "ad": "Grafikten integral: türev grafiği, simetri, parçalı",
+   "kartlar": [
+    "K-AINT2-07"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-turev-alan",
+   "ad": "Teğet ve alan",
+   "kartlar": [
+    "K-AINT2-08"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  },
+  {
+   "tipId": "int2-integral-fonk",
+   "ad": "Üst sınırı fonksiyon olan integral",
+   "kartlar": [
+    "K-AINT2-09"
+   ],
+   "uygulamaKonu": "amat|İntegral"
+  }
+ ]
+}
