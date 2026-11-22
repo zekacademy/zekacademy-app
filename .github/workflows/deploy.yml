@@ -61,6 +61,11 @@ jobs:
             durum=$(gh api "repos/${{ github.repository }}/pulls/$n" --jq .state 2>/dev/null || echo "?")
             if [ "$durum" = "closed" ]; then firebase hosting:channel:delete "$c" --project "$PROJE" --force > /dev/null 2>&1 && echo "::notice::$c silindi" || true; fi
           done
+      - name: Açılış ölçümü (salt okuma)
+        if: github.event_name == 'pull_request'
+        run: |
+          npm --prefix functions install --no-audit --no-fund > /dev/null
+          node tools/acilis-olcum.mjs || true
       - name: Deneme adresi (pull request)
         if: github.event_name == 'pull_request'
         env:
