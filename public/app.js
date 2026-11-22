@@ -1,7 +1,7 @@
 /* Zekacademy koçluk uygulaması */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth, initializeAuth, inMemoryPersistence, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, setPersistence, browserLocalPersistence, browserSessionPersistence, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-import { getFirestore, doc, setDoc as fsSetDoc, updateDoc as fsUpdateDoc, deleteDoc as fsDeleteDoc, deleteField, FieldPath, collection, onSnapshot, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, doc, setDoc as fsSetDoc, updateDoc as fsUpdateDoc, deleteDoc as fsDeleteDoc, deleteField, FieldPath, collection, onSnapshot, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getMessaging, getToken, isSupported as messagingSupported } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging.js";
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
 import { firebaseConfig, vapidKey } from "./firebase-config.js";
@@ -235,7 +235,9 @@ function blank(f){
 }
 
 /* ---------- Depolama ve giriş (Firebase) ---------- */
-const auth = getAuth(fbApp), fdb = getFirestore(fbApp);
+/* Uygulama hafızası: veriler telefonda saklanır, sonraki açılışta önce oradan gelir, sunucudan yalnız değişenler iner */
+function fsAc(){ try{ return initializeFirestore(fbApp, { localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }) }); }catch(e){ console.warn("yerel hafıza açılamadı", e); return getFirestore(fbApp); } }
+const auth = getAuth(fbApp), fdb = fsAc();
 const COACH_EMAIL = "zekacademy@app.zekacademy.com";
 const EMAIL_DOMAIN = "app.zekacademy.com";
 const emailOf = u => `${u}@${EMAIL_DOMAIN}`;
@@ -279,18 +281,19 @@ let setTimer = null, setDirty = false;
 function saveSettings(delay=0){ setDirty = true; clearTimeout(setTimer); setTimer = setTimeout(()=>{ chain = chain.then(()=>setDoc(doc(fdb,"settings","main"), JSON.parse(JSON.stringify(S.settings)))).then(()=>{ setDirty=false; }).catch(()=>{ setDirty=false; toast("Ayarlar kaydedilemedi"); }); }, delay); }
 function notify(type, data){ const id = uid(); S.notifs.set(id, {type, at:nowISO(), read:false, ...data}); persistDoc("notifs", id, 0); }
 
-const loaded = {};
+const loaded = {}, sunucu = {}; /* sunucu: o koleksiyon sunucudan (hafızadan değil) en az bir kez geldi */
+const sunucudan = (k, snap) => { if(!snap || !snap.metadata || !snap.metadata.fromCache) sunucu[k] = true; };
 function applySnap(coll, snap){
   const m = MAPS[coll](), seen = new Set();
   snap.docs.forEach(d=>{ seen.add(d.id); if(!dirty.has(coll+"/"+d.id)){ const v = JSON.parse(JSON.stringify(d.data())); m.set(d.id, v); BASE.set(coll+"/"+d.id, JSON.parse(JSON.stringify(v))); } });
   [...m.keys()].forEach(k=>{ if(!seen.has(k) && !dirty.has(coll+"/"+k) && k!==ONZ_ID) m.delete(k); });
 }
 function watchColl(coll, need){
-  unsubs.push(onSnapshot(collection(fdb, coll), snap=>{ applySnap(coll, snap); loaded[coll]=true; checkReady(need); render(true); if(coll==="students" && A()) setTimeout(otoSinif, 0); },
+  unsubs.push(onSnapshot(collection(fdb, coll), snap=>{ applySnap(coll, snap); sunucudan(coll, snap); loaded[coll]=true; checkReady(need); render(true); if(coll==="students" && A()) setTimeout(otoSinif, 0); },
     e=>{ console.error(coll, e); loaded[coll]=true; checkReady(need); render(); }));
 }
 function watchSettings(need){
-  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ S.setYuklu = true; if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
+  unsubs.push(onSnapshot(doc(fdb,"settings","main"), s=>{ sunucudan("settings", s); S.setYuklu = true; if(s.exists() && !setDirty){ S.settings = {...S.settings, ...JSON.parse(JSON.stringify(s.data()))}; } if(A() && S.settings.tahmini && S.settings.examDate==="2027-06-19"){ S.settings.tahmini=false; saveSettings(); } /* 19 Haziran 2027 kesinleşti */ loaded.settings=true; checkReady(need); render(true); },
     e=>{ console.error("settings", e); loaded.settings=true; checkReady(need); render(); }));
 }
 /* Bir kerelik düzeltme: Drive aktarımında kitap sütununa karışan saat çizelgesi satırlarını temizle */
@@ -309,9 +312,12 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
     Object.keys(K).forEach(d=>{ const parca = String(K[d]).split(/\s+·\s+/), kal = parca.filter(p=>!saat.test(p.trim())); if(kal.length !== parca.length){ deg = true; if(kal.length) K[d] = kal.join(" · "); else delete K[d]; } });
     if(deg){ n++; persistDoc("students", id, 0); } });
   S.settings.duzeltme = {...(S.settings.duzeltme||{}), kitapCizelge: nowISO()}; saveSettings(); if(n) console.log("kitap çizelge temizliği:", n); }
-function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin") setTimeout(()=>{ duzenSabitle(); kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
+/* Koç bakım düzeltmeleri yalnız sunucudaki güncel veriyle çalışır (hafızadaki eski kopyayla değil) */
+function bakimBekle(need, n=0){ if(!S.ready || S.role!=="admin") return; if(!need.every(k=>sunucu[k]) && n < 40){ setTimeout(()=>bakimBekle(need, n+1), 500); return; } if(!need.every(k=>sunucu[k])) return;
+  setTimeout(()=>{ duzenSabitle(); kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); }
+function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin"){ bakimBekle(need); setTimeout(()=>watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))), 1200); } if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
 function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="karne" && !A()){ S.view="daha"; setTimeout(()=>openSheet("hkarne"), 300); } else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
-function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); grupTemizle(); S.ready = false; }
+function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; for(const k in sunucu) delete sunucu[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); grupTemizle(); S.ready = false; }
 
 let authResolved = false;
 function init(){
@@ -320,7 +326,7 @@ function init(){
     if(!user){ S.role=null; S.me=null; render(); return; }
     if(user.email === COACH_EMAIL){
       S.role = "admin"; S.me = null; S.view = "ozet";
-      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))); unsubs.push(onSnapshot(doc(fdb,"koc","form"), d=>{ S.formDurum = d.exists() ? d.data() : null; render(true); }, e=>console.warn("form durumu", e))); msgIzle(); grupIzle();
+      const need = ["students","notifs","coachNotes","gorusmeler","settings"]; need.slice(0,4).forEach(c=>watchColl(c, need)); watchSettings(need); unsubs.push(onSnapshot(doc(fdb,"koc","form"), d=>{ S.formDurum = d.exists() ? d.data() : null; render(true); }, e=>console.warn("form durumu", e))); msgIzle(); grupIzle();
     } else {
       S.role = "student"; S.me = user.uid; S.view = "home";
       const need = ["students","settings"];
@@ -506,7 +512,10 @@ function bellBtn(count){ return `<button class="iconbtn" data-act="${A()?"go":"b
 
 /* ---------- Ana render ---------- */
 let lastRenderKey = "";
+let snapZ = 0; /* art arda gelen veri güncellemelerini tek çizime topla */
 function render(fromSnap){
+  if(fromSnap === true && S.ready){ if(!snapZ) snapZ = setTimeout(()=>{ snapZ = 0; render("snap"); }, 40); return; }
+  if(snapZ && !fromSnap){ clearTimeout(snapZ); snapZ = 0; }
   const root = $("#root");
   if(!S.role){
     if(!authResolved){ root.innerHTML = `<div class="auth"><div class="apanel" style="align-items:center;padding-top:30vh"><div class="lm" style="width:56px;height:56px;border-radius:16px">${LOGO}</div><p class="muted">Panelin açılıyor…</p></div></div>`; return; }

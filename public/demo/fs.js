@@ -29,3 +29,6 @@ export function onSnapshot(ref, next, err){
   };
   L.push(run); setTimeout(run, 0); return ()=>{ const i = L.indexOf(run); if(i>=0) L.splice(i,1); };
 }
+export function initializeFirestore(){ return {}; }
+export function persistentLocalCache(){ return {}; }
+export function persistentMultipleTabManager(){ return {}; }
