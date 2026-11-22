@@ -2346,18 +2346,18 @@ async function hikayeCiz(mod){ const v = hikayeVeri(mod), W = 1080, H = 1920, c 
     if(on){ const lg = g.createRadialGradient(sx+sc/2, sy+sh*.35, 10, sx+sc/2, sy+sh*.35, sc*.62); lg.addColorStop(0,"rgba(74,222,128,.38)"); lg.addColorStop(1,"rgba(74,222,128,0)"); g.fillStyle = lg; g.fillRect(sx-40, sy-60, sc+80, sh+80); }
     const [kar, masa] = res[i]; g.save(); if(!on && bugunMu) g.globalAlpha = .8; if(kar) g.drawImage(kar, sx + sc*.03, sy - sh*.21, sc*.94, sc*.94); g.restore(); if(masa) g.drawImage(masa, sx, sy + sh - sc*.5, sc, sc*.5);
     /* sıra rozeti */ g.fillStyle = i===0 ? "#FACC15" : i===1 ? "#E2E8F0" : i===2 ? "#F59E0B" : "rgba(255,255,255,.14)"; g.beginPath(); g.arc(cx+26, cy+30, 24, 0, 7); g.fill(); g.fillStyle = i<3 ? "#0E3B23" : "#D1FAE5"; g.font = F(800,26); g.textAlign = "center"; g.fillText(String(i+1), cx+26, cy+39);
-    /* bulanık isim */ const k = document.createElement("canvas"); k.width = 12; k.height = 4; const kg = k.getContext("2d"); kg.fillStyle = "rgba(255,255,255,.75)"; kg.font = F(700,2.6); kg.fillText(o.adT.slice(0,14), 0, 2.9);
-    const k2 = document.createElement("canvas"); k2.width = 48; k2.height = 14; k2.getContext("2d").drawImage(k, 0, 0, 48, 14); g.save(); g.globalAlpha = .8; g.drawImage(k2, cx + cw/2 - 86, cy + sh + 58, 172, 30); g.restore();
+    /* kod adı; yoksa ad soyad baş harfleri */ let et2 = o.takma || o.adT.split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" "); g.font = F(700,27); while(et2.length > 2 && g.measureText(et2).width > cw-16) et2 = et2.slice(0,-2)+"…";
+    g.fillStyle = "#E2E8F0"; g.textAlign = "center"; g.fillText(et2, cx + cw/2, cy + sh + 82); g.textAlign = "left";
     /* süre */ g.font = F(800,34); const st = sa(o.dk), stw = g.measureText(st).width + 36; g.fillStyle = on ? "#22C55E" : "rgba(255,255,255,.12)"; rr(cx + cw/2 - stw/2, cy + sh + 94, stw, 52, 26); g.fill();
     g.fillStyle = on ? "#052E16" : "#FFFFFF"; g.textAlign = "center"; g.fillText(st, cx + cw/2, cy + sh + 132); g.textAlign = "left";
   });
   if(v.L.length > N){ g.fillStyle = "#A7F3D0"; g.font = F(600,28); g.textAlign = "center"; g.fillText(`+${v.L.length-N} öğrenci daha çalıştı`, W/2, y0 + 3*rh + 56); g.textAlign = "left"; }
   if(!v.L.length){ g.fillStyle = "#D1FAE5"; g.font = F(600,36); g.textAlign = "center"; g.fillText("Sınıf yeni doluyor…", W/2, y0+160); g.textAlign = "left"; }
-  /* alt */ g.fillStyle = "#fff"; g.font = F(800,42); g.textAlign = "center"; g.fillText("Zekeriya Hoca ile YKS koçluğu", W/2, H-150); g.fillStyle = "#86EFAC"; g.font = F(600,30); g.fillText("Plan · takip · birlikte çalışma", W/2, H-104); g.textAlign = "left";
+  /* alt */ g.fillStyle = "#fff"; g.font = F(800,42); g.textAlign = "center"; g.fillText("Zekacademy bireysel koçluk öğrencilerim", W/2, H-150); g.fillStyle = "#86EFAC"; g.font = F(600,30); g.fillText("Plan · takip · birlikte çalışma", W/2, H-104); g.textAlign = "left";
   return c; }
 function hikayeSheet(){ const mod = S.hkMod || "bugun";
   setTimeout(()=>hikayeCiz(mod).then(c=>{ const i = document.getElementById("hkImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
-  return sheet(`<h3>Sınıf hikayesi</h3><p class="muted small" style="margin:-6px 0 0">Instagram hikayesi için hazır görsel. Öğrenci isimleri bulanık, yalnızca çalışma süreleri görünür.</p>
+  return sheet(`<h3>Sınıf hikayesi</h3><p class="muted small" style="margin:-6px 0 0">Instagram hikayesi için hazır görsel. Öğrenciler kod adlarıyla görünür; kod adı olmayanların yalnız baş harfleri yazılır.</p>
     <div class="pills" style="margin-top:8px"><button type="button" class="btn sm ${mod==="bugun"?"pri":""}" data-act="hkmod" data-v="bugun">Bugün</button><button type="button" class="btn sm ${mod==="hafta"?"pri":""}" data-act="hkmod" data-v="hafta">Bu hafta</button></div>
     <img id="hkImg" alt="Sınıf hikayesi önizlemesi" style="width:100%;max-width:340px;aspect-ratio:9/16;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line);background:#0E3B23;opacity:.4">
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="hkpaylas">📸 Paylaş</button></div>`); }
