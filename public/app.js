@@ -1515,7 +1515,7 @@ function grKocSheet(gid){ const g = GR.list.get(gid); if(!g) return; const not =
 function cGruplar(kok){ const hepsi = [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>ogrOzet(id,x)), on = hepsi.filter(x=>x.canli).sort((a,b)=>a.basla-b.basla);
   const gruplu = new Set([...GR.list.values()].flatMap(g=>g.uyeler||[])), disarda = hepsi.filter(x=>!gruplu.has(x.uid));
   const G = [...GR.list.entries()].sort((a,b)=>(a[1].ad||"").localeCompare(b[1].ad||"","tr"));
-  return `${kok ? topbar(`<h1 class="ttl">Sınıf</h1>`, `<button class="btn sm" data-act="go" data-v="ogrenciler">${icon("users","xs")} Öğrenci listesi</button><button class="btn sm pri" data-act="sheet" data-v="grup">${icon("plus","xs")} Grup</button>`) : topbar(`<h1 class="ttl">Çalışma Grupları</h1>`, `<button class="btn sm pri" data-act="sheet" data-v="grup">${icon("plus","xs")} Grup</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
+  return `${kok ? topbar(`<h1 class="ttl">Sınıf</h1>`, `<button class="btn sm" data-act="sheet" data-v="hikaye" title="Instagram hikayesi">📸 Hikaye</button><button class="btn sm" data-act="go" data-v="ogrenciler">${icon("users","xs")} Öğrenci listesi</button><button class="btn sm pri" data-act="sheet" data-v="grup">${icon("plus","xs")} Grup</button>`) : topbar(`<h1 class="ttl">Çalışma Grupları</h1>`, `<button class="btn sm pri" data-act="sheet" data-v="grup">${icon("plus","xs")} Grup</button>`, `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
   ${kok ? `<p class="faint small" style="margin:-4px 16px 8px;text-align:center">Bir öğrencinin masasına dokun, bilgileri açılsın.</p>` : ""}
   <div class="page wide">
     <div class="card ghero"><div class="ghh"><div><small>ŞU AN</small><h2><span class="num">${on.length}</span> öğrenci çalışıyor</h2><span class="gonl">${hepsi.filter(x=>x.bugun>0).length} öğrenci bugün çalıştı · ${hepsi.filter(x=>!x.bugun && !x.canli).length} öğrenci henüz başlamadı</span></div></div>
@@ -2313,6 +2313,48 @@ async function karnePaylas(){ const s = st(); if(!s) return; const v = karneVeri
   if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f], text}); gitti = true; }catch(e){ if(e && e.name==="AbortError") return; } }
   if(!gitti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Karne indirildi; WhatsApp'ta fotoğraf olarak gönderebilirsin"); }
   if(!A()) mutate(x=>{ x.karnePay = {...(x.karnePay||{}), [v.bas]: nowISO()}; }); render(); if(gitti) toast("Karne paylaşıldı 👏"); }
+/* Sınıf hikayesi (koç): Instagram hikayesi için 1080×1920 görsel; isimler bulanık, yalnız gerçek öğrenciler */
+function hikayeVeri(mod){ const L = [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>ogrOzet(id,x)), dk = x => mod==="hafta" ? x.hafta : x.bugun;
+  const cal = L.filter(x=>dk(x) > 0).sort((a,b)=>dk(b)-dk(a)), top = cal.reduce((a,x)=>a+dk(x),0);
+  return { mod, L: cal.map(x=>({ad:adSoyad(x.ad||"")||"Öğrenci", dk:dk(x), canli:x.canli, ders:x.canli ? dersEt(x.ders) : ""})), top, kisi:cal.length, canli:L.filter(x=>x.canli).length, ort: cal.length ? top/cal.length : 0, enCok: cal.length ? dk(cal[0]) : 0 }; }
+function hikayeCiz(mod){ const v = hikayeVeri(mod), W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
+  const sa = m => { m = Math.round(m); const h = Math.floor(m/60), d = m%60; return h ? (d ? `${h} sa ${d} dk` : `${h} saat`) : `${d} dk`; };
+  const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,"#0E3B23"); bg.addColorStop(1,"#062014"); g.fillStyle = bg; g.fillRect(0,0,W,H);
+  g.fillStyle = "rgba(34,197,94,.10)"; g.beginPath(); g.arc(W-60, 260, 360, 0, 7); g.fill();
+  /* üst */ g.fillStyle = "#22C55E"; rr(88,150,64,64,19); g.fill(); g.fillStyle = "#0E3B23"; g.font = F(800,36); g.textAlign = "center"; g.fillText("Z", 120, 196); g.textAlign = "left";
+  g.fillStyle = "#fff"; g.font = F(700,36); g.fillText("Zekacademy", 170, 196);
+  const sim = new Date(), saat = String(sim.getHours()).padStart(2,"0")+":"+String(sim.getMinutes()).padStart(2,"0");
+  g.font = F(600,28); const et = mod==="hafta" ? "Bu hafta" : `${tYaz(today())} · ${saat}`, ew = g.measureText(et).width + 52; g.strokeStyle = "rgba(187,247,208,.4)"; g.lineWidth = 2; rr(W-88-ew,148,ew,68,34); g.stroke(); g.fillStyle = "#BBF7D0"; g.fillText(et, W-88-ew+26, 192);
+  /* başlık */ g.fillStyle = "#86EFAC"; g.font = F(700,30); g.fillText(mod==="hafta" ? "BU HAFTA SINIFTA" : "BUGÜN SINIFTA", 88, 330);
+  g.fillStyle = "#fff"; g.font = F(800,150); const th = Math.floor(v.top/60), td = Math.round(v.top%60); g.fillText(String(th), 84, 480); let x0 = 84 + g.measureText(String(th)).width + 16;
+  g.font = F(800,60); g.fillText("saat", x0, 478); x0 += g.measureText("saat").width + 20; if(td){ g.fillStyle = "#D1FAE5"; g.font = F(700,48); g.fillText(`${td} dk`, x0, 478); }
+  g.fillStyle = "#D1FAE5"; g.font = F(500,36); g.fillText("toplam odaklı çalışma", 88, 540);
+  /* kutular */ const K = [[String(v.kisi), "öğrenci çalıştı"], [sa(v.ort), "kişi başı ortalama"], [sa(v.enCok), "en uzun çalışma"]], kw = (W-176-40)/3;
+  K.forEach(([a,b],i)=>{ const x = 88 + i*(kw+20); g.fillStyle = "rgba(255,255,255,.08)"; rr(x,600,kw,170,28); g.fill(); g.fillStyle = "#fff"; g.font = F(800, a.length > 8 ? 40 : 48); g.fillText(a, x+28, 680); g.fillStyle = "#A7F3D0"; g.font = F(600,25); g.fillText(b, x+28, 730); });
+  if(v.canli && mod!=="hafta"){ g.fillStyle = "#22C55E"; g.beginPath(); g.arc(104, 838, 11, 0, 7); g.fill(); g.fillStyle = "#BBF7D0"; g.font = F(700,32); g.fillText(`Şu an ${v.canli} öğrenci masasında`, 130, 850); }
+  if(mod==="hafta"){ g.fillStyle = "#BBF7D0"; g.font = F(700,32); g.fillText(`Pazartesiden bugüne · ${dIdx(today())+1}. gün`, 88, 850); }
+  /* sıralama */ const N = Math.min(v.L.length, 8), y0 = 900, sh = 86, mx = Math.max(1, v.enCok);
+  v.L.slice(0, N).forEach((o,i)=>{ const y = y0 + i*sh; g.fillStyle = i < 3 ? "rgba(34,197,94,.16)" : "rgba(255,255,255,.05)"; rr(88,y,W-176,sh-12,24); g.fill();
+    g.fillStyle = i < 3 ? "#86EFAC" : "#6B8F7B"; g.font = F(800,34); g.textAlign = "center"; g.fillText(String(i+1), 138, y+49); g.textAlign = "left";
+    /* bulanık isim: küçük tuvale çizilip büyütülür, okunmaz (her tarayıcıda çalışır) */ const ad = o.ad.length > 16 ? o.ad.slice(0,16) : o.ad, k = document.createElement("canvas"); k.width = 14; k.height = 4; const kg = k.getContext("2d");
+    kg.fillStyle = "rgba(255,255,255,.7)"; kg.font = F(700,2.6); kg.fillText(ad, 0, 2.9); const k2 = document.createElement("canvas"); k2.width = 56; k2.height = 14; const k2g = k2.getContext("2d"); k2g.imageSmoothingEnabled = true; k2g.drawImage(k, 0, 0, 56, 14);
+    g.save(); g.imageSmoothingEnabled = true; g.globalAlpha = .85; g.drawImage(k2, 186, y+14, 236, 56); g.restore();
+    const bx = 480, bw = W-176-(bx-88)-210; g.fillStyle = "rgba(255,255,255,.10)"; rr(bx, y+30, bw, 18, 9); g.fill(); g.fillStyle = i < 3 ? "#22C55E" : "#4ADE80"; rr(bx, y+30, Math.max(18, bw*o.dk/mx), 18, 9); g.fill();
+    g.fillStyle = "#fff"; g.font = F(800,30); g.textAlign = "right"; g.fillText(sa(o.dk), W-112, y+48); g.textAlign = "left";
+    if(o.canli && mod!=="hafta"){ g.fillStyle = "#22C55E"; g.beginPath(); g.arc(bx-22, y+39, 8, 0, 7); g.fill(); } });
+  if(v.L.length > N){ g.fillStyle = "#A7F3D0"; g.font = F(600,28); g.fillText(`+${v.L.length-N} öğrenci daha çalıştı`, 88, y0 + N*sh + 34); }
+  if(!v.L.length){ g.fillStyle = "#D1FAE5"; g.font = F(600,36); g.fillText("Gün yeni başlıyor…", 88, y0+60); }
+  /* alt */ g.fillStyle = "#fff"; g.font = F(800,44); g.fillText("Zekeriya Hoca ile YKS koçluğu", 88, H-210); g.fillStyle = "#86EFAC"; g.font = F(600,32); g.fillText("Plan · takip · birlikte çalışma", 88, H-160);
+  return c; }
+function hikayeSheet(){ const mod = S.hkMod || "bugun", url = hikayeCiz(mod).toDataURL("image/png");
+  return sheet(`<h3>Sınıf hikayesi</h3><p class="muted small" style="margin:-6px 0 0">Instagram hikayesi için hazır görsel. Öğrenci isimleri bulanık, yalnızca çalışma süreleri görünür.</p>
+    <div class="pills" style="margin-top:8px"><button type="button" class="btn sm ${mod==="bugun"?"pri":""}" data-act="hkmod" data-v="bugun">Bugün</button><button type="button" class="btn sm ${mod==="hafta"?"pri":""}" data-act="hkmod" data-v="hafta">Bu hafta</button></div>
+    <img src="${url}" alt="Sınıf hikayesi önizlemesi" style="width:100%;max-width:340px;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line)">
+    <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="hkpaylas">📸 Paylaş</button></div>`); }
+async function hikayePaylas(){ const mod = S.hkMod || "bugun", c = hikayeCiz(mod), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${today()}.png`, {type:"image/png"});
+  if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); return; }catch(e){ if(e && e.name==="AbortError") return; } }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Görsel indirildi; Instagram'da hikaye olarak paylaşabilirsin"); }
 function hkarneSheet(){ const s = st(); if(!s) return; const v = karneVeri(s), url = karneCiz(s, v).toDataURL("image/png"), pay = (s.karnePay||{})[v.bas];
   return sheet(`<h3>Haftalık karne</h3><p class="muted small" style="margin:-6px 0 0">${A() ? "Veliye WhatsApp'tan fotoğraf olarak gönderebilirsin." : "Dilersen velinle paylaşabilirsin: “Velime gönder”e dokun, WhatsApp'ı seç."}${pay?` · ${A()?"Öğrenci bu karneyi paylaştı":"Bu karneyi paylaştın"} ✓`:""}</p>
     <img src="${url}" alt="Haftalık karne" style="width:100%;border-radius:14px;border:1px solid var(--line);margin-top:6px">
@@ -3480,6 +3522,7 @@ function openSheet(kind, el){
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button></div>`);
   if(kind==="veli") return veliSheet(s);
   if(kind==="hkarne") return hkarneSheet();
+  if(kind==="hikaye") return hikayeSheet();
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
     <label class="f">Sınav tarihi<input type="date" name="d" id="m-exam" value="${S.settings.examDate}"></label>
     <label class="inline"><input type="checkbox" name="t" id="m-tah" ${S.settings.tahmini?"checked":""}>ÖSYM henüz açıklamadı (tahmini)</label>
@@ -3698,6 +3741,8 @@ document.addEventListener("click", e=>{
     case "gwk": S.gday = addDays(monday(S.gday||today()), +b.dataset.d); render(); break;
     case "gdurum": gorusSet(b.dataset.id, g=>{ g.durum = v; }); render(); break;
     case "karnepaylas": karnePaylas(); break;
+    case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
+    case "hkpaylas": hikayePaylas(); break;
     case "gsil": { const id=b.dataset.id; S.gorus.delete(id); persistDoc("gorusmeler", id, 0); closeSheet(); render(); toast("Görüşme silindi"); break; }
     case "gtaslak": S.gelirTaslak = v==="1"; render(); break;
     case "brehber": rehbereKaydet(b.dataset.id); break;
