@@ -624,7 +624,7 @@ function studentShell(){
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
-  const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s), havuz:cHavuz};
+  const pages = {home:sHome, mesaj:sMesaj, socoz:pSoruCoz, program:()=>pProgram(s,false), analiz:()=>dersSayfa(s,"analiz"), konular:()=>dersSayfa(s,"konular"), daha:sMore, cetele:()=>dersSayfa(s,"cetele"), kronometre:()=>pCalisma(s), grup:()=>pGrup(s), bildirim:sBell, sorular:()=>dersSayfa(s,"sorular"), videolar:()=>dersSayfa(s,"videolar"), ders:()=>pDersAna(s), dersd:()=>pDersDetay(s), havuz:cHavuz, kitap:pKitap};
   const nots = studentNotices(s).length;
   if(S.view==="mesaj") return `<div class="shell msgshell">${sMesaj()}</div>`;
   return (window.ZK_ONZ ? `<div class="onzbar"><span>${icon("eye","xs")} Öğrenci gözünden · kaydedilmez</span><button class="btn sm" data-act="onzkapat">Koç paneline dön</button></div>` : "") + `<div class="shell">${(pages[S.view]||sHome)(s)}</div>` + navHTML([["home","home","Ana Sayfa"],["ders","book","Ders"],["program",(s.timer&&s.timer.start)?"timer":"cal",(s.timer&&s.timer.start)?"Çalışıyorsun":"Haftalık Program",true,0,!!(s.timer&&s.timer.start)],["grup","user","Sınıf", false, 0],["daha","more","Daha Fazla", false, 0]]).replace(/(data-v="([a-z]+)")/g, (m, a, v)=> S.tur!=null && turListe()[S.tur]?.nav===v ? a+' data-tur="1"' : a) + (S.tur!=null ? turHTML(s) : "");
@@ -660,7 +660,7 @@ function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1],
   /* ZEK AI butonu: deneme grafiğinin hemen altında, tek başına tüm satırı kaplar (koç ZEK AI'ı öğrencilere açınca görünür) */
   const zkBtn = aiAcik(S.me) && zkGoster() ? `<button class="zkders" data-act="go" data-v="socoz"><img src="/zekai-cozuyor.webp" alt="" width="84" height="84"><span><b>ZEK AI <i>(Türkiye 1.si)</i></b><em>SORU ÇÖZÜM ASİSTANI</em></span>${icon("chev")}</button>` : "";
   const hvBtn = `<button class="zkders hvbtn" data-act="go" data-v="havuz"><img src="/soru-havuzu.webp" alt="" width="84" height="84"><span><b>SORU HAVUZU</b><em>TYT · AYT · KONU KONU ÇÖZ</em></span>${icon("chev")}</button>`;
-  return `${head}<div class="page dsana">${deneme}<div class="dsust">${zkBtn}${hvBtn}</div>${ikili}${om}${dersler}
+  return `${head}<div class="page dsana">${deneme}<div class="dsust">${zkBtn}${hvBtn}</div>${kitapKart()}${ikili}${om}${dersler}
     <div class="dslink"><button class="link small" data-act="go" data-v="cetele">${icon("list","xs")} Yanlış çetelesi</button><button class="link small" data-act="go" data-v="konular">${icon("book","xs")} Tüm konular</button></div></div>`; }
 /* Ders sayfası: konular, durum noktası, ▶ video; konuya dokununca alt pencere */
 function dersBul(s, k){ return [...CURX().TYT, ...CURX().AYT].find(x=>x.k===k) || null; }
@@ -781,6 +781,7 @@ function sMore(s){
       ${GR.list.size ? (n=>`<button class="row" data-act="go" data-v="grup"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("user","sm")}</span><div><div class="rt">Sınıf</div><div class="rs">${n?`${n} arkadaşın şu an çalışıyor`:"Gruptakiler ne kadar çalıştı, gör"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(grUyeler(GR.list.has(GR.sec)?GR.sec:[...GR.list.keys()][0]).filter(x=>x.canli&&!x.ben).length) : ""}
       ${aiAcik(S.me) ? `<button class="row" data-act="go" data-v="socoz">${zkGoster() ? `<span class="ri zkav"><img src="/zekai.webp" alt="" width="36" height="36"></span>` : `<span class="ri" style="background:var(--acs);color:var(--ac)">${icon("search","sm")}</span>`}<div><div class="rt">${zkGoster() ? "ZEK AI · Soru Çözüm" : "Soru Çözüm"}</div><div class="rs">Fotoğrafla, ${zkGoster() ? "ZEK AI" : "yapay zekâ"} adım adım çözsün</div></div><span class="rx">${icon("chev","sm")}</span></button>` : ""}
       <button class="row" data-act="go" data-v="sorular"><span class="ri">${icon("note","sm")}</span><div><div class="rt">Takıldığım sorular</div><div class="rs">${(n=>n?`${n} soru bekliyor`:"Çözemediğin soruların fotoğrafını biriktir")(soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length)}</div></div><span class="rx">${icon("chev","sm")}</span></button>
+      <button class="row" data-act="go" data-v="kitap"><span class="ri" style="background:#E8F0FD;color:#1F6FD8">${icon("note","sm")}</span><div><div class="rt">Kitaplığım</div><div class="rs">Adım adım çözümlü soru bankaları</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="cetele"><span class="ri">${icon("list","sm")}</span><div><div class="rt">Yanlış çetelesi</div><div class="rs">Konu konu yanlışlarını işaretle</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="sheet" data-v="hkarne"><span class="ri" style="background:var(--goods);color:var(--good)">${icon("chart","sm")}</span><div><div class="rt">Haftalık karnem</div><div class="rs">${(s.karnePay||{})[karneBas()]?"Velinle paylaştın ✓":"Dilersen velinle WhatsApp'tan paylaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
       <button class="row" data-act="go" data-v="mesaj"><span class="ri" style="background:var(--acs);color:var(--ac)">${icon("chat","sm")}</span><div><div class="rt">Koçuma yaz</div><div class="rs">${msgOkunmadi(S.me)?`${msgOkunmadi(S.me)} yeni mesaj`:"Uygulamadan koçunla mesajlaş"}</div></div><span class="rx">${icon("chev","sm")}</span></button>
@@ -1872,6 +1873,47 @@ function cGorusme(){
   </div>`;
 }
 
+/* ---------- Kitaplığım: adım adım çözümlü soru bankaları; konu PDF'i indirirken öğrencinin adıyla damgalanır ---------- */
+const KITAPLAR = [{kod:"tyt-mat", ad:"TYT Matematik", renk:"#1F6FD8"}, {kod:"tyt-fiz", ad:"TYT Fizik", renk:"#1F9D49"}, {kod:"tyt-kim", ad:"TYT Kimya", renk:"#7A3FE0"}, {kod:"tyt-bio", ad:"TYT Biyoloji", renk:"#0FA39A"}];
+const KT = { man:{}, yuk:{}, durum:null, ilerle:"" };
+function kitapMan(kod){ if(KT.man[kod]) return KT.man[kod]; if(KT.yuk[kod]) return null; KT.yuk[kod] = fetch(`/kitaplar/${kod}.json`).then(r=>r.json()).then(m=>{ KT.man[kod] = m; render(); }).catch(()=>{ delete KT.yuk[kod]; }); return null; }
+const kitapIndi = (kod, dosya) => { try{ return !!localStorage.getItem(`zk-kt-${kod}/${dosya}`); }catch(e){ return false; } };
+function kitapKart(){ return `<button class="card ktkart" data-act="go" data-v="kitap"><span class="ktkap">${KITAPLAR.map(k=>`<img src="/kitaplar/${k.kod}.webp" alt="" loading="lazy">`).join("")}</span><span style="min-width:0;flex:1"><b>Kitaplığım</b><small class="muted">Adım adım çözümlü soru bankaları · konu konu indir</small></span>${icon("chev","sm")}</button>`; }
+function pKitap(){ const kod = S.kitapKod, k = KITAPLAR.find(x=>x.kod===kod);
+  if(!k) return `${topbar(`<h1 class="ttl">Kitaplığım</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"daha":"ders"}" aria-label="Geri">${icon("back")}</button>`)}<div class="page">
+    <p class="muted small" style="margin:0 4px 10px">Adım adım çözümlü soru bankaların. Her konu ayrı PDF olarak iner; testlerin hemen ardından cevap anahtarı ve çözümler var.</p>
+    <div class="ktgrid">${KITAPLAR.map(x=>{ const m = kitapMan(x.kod); return `<button class="ktkit" data-act="kitapac" data-v="${x.kod}"><img src="/kitaplar/${x.kod}.webp" alt="${esc(x.ad)} kapağı"><b>${esc(x.ad)}</b><small class="muted">${m ? `${m.konular.length} konu · ${m.konular.reduce((a,t)=>a+t.sayfa,0)} sayfa` : "…"}</small></button>`; }).join("")}</div>
+    ${A() ? kitapYukleKart() : `<p class="faint small" style="text-align:center;margin-top:14px">İndirdiğin her PDF'e adın ve öğrenci numaran yazılır; lütfen başkasıyla paylaşma.</p>`}</div>`;
+  const m = kitapMan(kod);
+  return `${topbar(`<h1 class="ttl">${esc(k.ad)}</h1>`, "", `<button class="iconbtn" data-act="kitapac" data-v="" aria-label="Geri">${icon("back")}</button>`)}<div class="page">
+    <div class="card ktust" style="--kr:${k.renk}"><img src="/kitaplar/${kod}.webp" alt=""><div><b>${esc(k.ad)}</b><small class="muted">Adım adım çözümlü soru bankası</small>${m?`<small class="muted">${m.konular.length} konu · ${m.konular.reduce((a,t)=>a+t.sayfa,0)} sayfa</small>`:""}</div></div>
+    <div class="card" style="padding:4px 0">${m ? m.konular.map(t=>{ const ind = kitapIndi(kod, t.dosya), yuk = KT.ilerle===kod+"/"+t.dosya;
+      return `<div class="ktsat"><span class="ktno num" style="--kr:${k.renk}">${t.sira}</span><div style="min-width:0;flex:1"><b>${esc(t.konu)}</b><small class="muted">${t.sayfa} sayfa · ${(t.boyutKB/1024).toFixed(1).replace(".",",")} MB${ind?" · indirildi ✓":""}</small></div><button class="btn sm ${ind?"":"pri"}" data-act="kitapindir" data-kod="${kod}" data-v="${esc(t.dosya)}" ${KT.ilerle?"disabled":""}>${yuk?"Hazırlanıyor…":ind?"Tekrar indir":"İndir"}</button></div>`; }).join("") : `<p class="muted small" style="padding:14px">Yükleniyor…</p>`}</div>
+    <p class="faint small" style="text-align:center">PDF senin adınla hazırlanır; birkaç saniye sürebilir.</p></div>`; }
+async function kitapIndir(kod, dosya){ if(KT.ilerle) return; KT.ilerle = kod+"/"+dosya; render();
+  try{ const r = await callFn("kitapIndir", {kod, dosya}), bin = atob(r.pdf), u = new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i] = bin.charCodeAt(i);
+    const m = KT.man[kod], t = m && m.konular.find(x=>x.dosya===dosya), ad = `${(KITAPLAR.find(x=>x.kod===kod)||{}).ad||"Kitap"} - ${t ? t.konu : dosya}.pdf`.replace(/[\/\\:*?"<>|]/g, "-");
+    const f = new File([u], ad, {type:"application/pdf"}); let paylasti = false;
+    if(/iPhone|iPad|Android/i.test(navigator.userAgent) && navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); paylasti = true; }catch(e){ if(e && e.name==="AbortError") paylasti = true; } }
+    if(!paylasti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = ad; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href), 60000); }
+    try{ localStorage.setItem(`zk-kt-${kod}/${dosya}`, nowISO()); }catch(e){} toast("PDF hazır 📚");
+  }catch(e){ toast(e && /^functions\//.test(e.code||"") && !/internal/i.test(e.code) && e.message ? e.message : "PDF hazırlanamadı, biraz sonra tekrar dene"); }
+  KT.ilerle = ""; render(); }
+/* Koç: konu PDF'lerini depoya yükleme (dosya adları manifest'tekiyle aynı; tüm klasörlerden seçilebilir) */
+function kitapYukleKart(){ if(KT.durum===null){ KT.durum = "yukleniyor"; callFn("kitapDurum", {}).then(r=>{ KT.durum = new Set(r.dosyalar||[]); render(); }).catch(()=>{ KT.durum = new Set(); render(); }); }
+  const D = KT.durum instanceof Set ? KT.durum : null;
+  return `<div class="card" style="margin-top:12px"><div class="sech"><h3>Kitapları yükle</h3><span class="pill">Sadece sen görürsün</span></div>
+    <p class="muted small" style="margin:4px 0 8px">Kitap paketindeki <b>uygulama-paketi</b> klasörlerinden konu PDF'lerini seç (birden çok dosya seçebilirsin). Öğrenciler dosyaları depodan doğrudan göremez; indirirken adlarıyla damgalanır.</p>
+    <div class="ktdurum">${KITAPLAR.map(k=>{ const m = KT.man[k.kod], n = m ? m.konular.filter(t=>D && D.has(`${k.kod}/${t.dosya}`)).length : 0; return `<span><b>${esc(k.ad)}</b> ${D && m ? `${n}/${m.konular.length}${n===m.konular.length?" ✓":""}` : "…"}</span>`; }).join("")}</div>
+    <label class="btn sm pri" style="margin-top:8px">${icon("plus","xs")} PDF seç ve yükle<input type="file" accept="application/pdf" multiple data-kt="yukle" hidden></label>
+    <div class="small" id="kt-yuk" style="margin-top:6px;font-weight:600">${esc(S.ktMsg||"")}</div></div>`; }
+async function kitapYukle(files){ const L = [...files], dosyaKod = {}; KITAPLAR.forEach(k=>{ (KT.man[k.kod]?.konular||[]).forEach(t=>{ dosyaKod[t.dosya] = k.kod; }); });
+  let ok = 0, atla = []; for(const [i,f] of L.entries()){ const kod = dosyaKod[f.name]; if(!kod){ atla.push(f.name); continue; }
+    S.ktMsg = `Yükleniyor ${i+1}/${L.length}: ${f.name}`; const el = document.getElementById("kt-yuk"); if(el) el.textContent = S.ktMsg;
+    const b = new Uint8Array(await f.arrayBuffer()); let s = ""; for(let j=0;j<b.length;j+=0x8000) s += String.fromCharCode.apply(null, b.subarray(j, j+0x8000));
+    try{ await callFn("kitapYukle", {kod, dosya:f.name, veri:btoa(s)}); ok++; if(KT.durum instanceof Set) KT.durum.add(`${kod}/${f.name}`); }catch(e){ atla.push(f.name+" (hata)"); } }
+  S.ktMsg = `${ok} dosya yüklendi${atla.length?` · ${atla.length} dosya atlandı: ${atla.slice(0,3).join(", ")}${atla.length>3?"…":""}`:""}`; render(); }
+
 /* ---------- Öğrenciye WhatsApp ---------- */
 const DEF_WMESAJ = ["Selam {Ad}, nasıl gidiyor hayat, nasılsın? 😊", "{Ad}, bugünkü görüşmemiz saat {Saat}'te. Görüşürüz! 👋", "{Ad}, yarınki görüşmemiz saat {Saat}'te. Görüşmeden önce programını işaretlemeyi unutma 📝", "{Ad}, bu haftanın programını uygulamada işaretlemeyi unutma 📝", "{Ad}, haftalık raporunu bekliyorum 📋 Gönderince yeni haftanın programını hazırlıyorum.", "Tebrikler {Ad}! Bu hafta harika gidiyorsun, aynen devam 👏"];
 const wmesajlar = () => (S.settings.wmesaj && S.settings.wmesaj.length) ? S.settings.wmesaj : DEF_WMESAJ;
@@ -2038,7 +2080,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:()=>cGruplar(false), sinif:()=>cGruplar(true), havuz:cHavuz};
+  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:()=>cGruplar(false), sinif:()=>cGruplar(true), havuz:cHavuz, kitap:pKitap};
   if(S.view==="sohbet") return `<div class="shell msgshell">${cSohbet()}</div>`;
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["sinif","users","Sınıf"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
@@ -2464,6 +2506,7 @@ function cBell(){
 function cMore(){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
   <div class="page wide"><h3 class="msec">İşim</h3><div class="card">
+    <button class="row" data-act="go" data-v="kitap"><span class="ri" style="background:#E8F0FD;color:#1F6FD8">${icon("note","sm")}</span><div><div class="rt">Kitaplığım</div><div class="rs">Çözümlü soru bankaları · PDF yükleme</div></div><span class="rx">${icon("chev","sm")}</span></button>
     ${(b=>`<button class="row" data-act="go" data-v="basvuru"><span class="ri" style="background:#1E9E4A;color:#fff">${icon("user","sm")}</span><div><div class="rt">Başvurular</div><div class="rs">${b?`${b} başvuru süreçte`:"Süreçte başvuru yok"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(n=>n.type==="basvuru" && !["ogrenci","hayir"].includes(n.durum||"yeni")).length)}
     ${(k=>`<button class="row" data-act="go" data-v="giris"><span class="ri" style="${k?"background:var(--bads);color:var(--bad)":"background:var(--acs);color:var(--ac)"}">${icon("eye","sm")}</span><div><div class="rt">Giriş takibi</div><div class="rs">${k?`${k} öğrenci 3+ gündür girmedi`:"Öğrenciler uygulamaya düzenli giriyor"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>["kotu","hic"].includes(girisDurum(x).k)).length)}
     ${(c=>`<button class="row" data-act="go" data-v="odeme"><span class="ri" style="background:${c.kirmizi+c.pembe?"var(--bads);color:var(--bad)":"var(--goods);color:var(--good)"}">${icon("cal","sm")}</span><div><div class="rt">Ödemeler ve gelir</div><div class="rs">${c.kirmizi+c.pembe?`${c.kirmizi+c.pembe} geciken`:"Geciken yok"}${c.turuncu?` · ${c.turuncu} yaklaşan`:""}${c.yok?` · ${c.yok} plansız`:""}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)(odemeSay())}
@@ -3789,6 +3832,8 @@ document.addEventListener("click", e=>{
     case "gorusmesiz": gorusmesizYap(v, true); closeSheet(); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelerden çıkarıldı`); break;
     case "gorusmeli": gorusmesizYap(v, false); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelere geri eklendi`); break;
     case "karnepaylas": karnePaylas(); break;
+    case "kitapac": S.kitapKod = v; render(); window.scrollTo(0,0); break;
+    case "kitapindir": kitapIndir(b.dataset.kod, v); break;
     case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
     case "hktema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hikaye"); break;
@@ -3900,6 +3945,7 @@ document.addEventListener("input", e=>{ const t = e.target; if(!(t.dataset && (t
   const k = t.dataset.krd ?? t.dataset.kry, i = t.dataset.i, D = num($(`#layer [data-krd="${k}"][data-i="${i}"]`)?.value)||0, Y = num($(`#layer [data-kry="${k}"][data-i="${i}"]`)?.value)||0, b = t.parentElement && t.nextElementSibling && t.dataset.kry!=null ? t.nextElementSibling : t.nextElementSibling?.nextElementSibling;
   if(b && b.tagName==="B") b.textContent = fmt(D - Y/4); });
 document.addEventListener("change", e=>{
+  if(e.target && e.target.matches && e.target.matches('input[data-kt="yukle"]')){ const f = e.target.files; if(f && f.length) kitapYukle(f); e.target.value = ""; return; }
   const t = e.target;
   if(t.id==="sesAcik"){ SES.acik = t.checked; try{ localStorage.setItem("zk-ses", t.checked ? "1" : "0"); }catch(_){} if(t.checked) sesCal("basari"); return; }
   if(t.id==="msgFoto" && t.files && t.files[0]){ MSG.foto = t.files[0]; resimKucult(t.files[0], 200, 30000).then(u=>{ MSG.fotoOn = u; render(); msgAsagi(); }).catch(()=>{ MSG.foto = null; toast("Fotoğraf açılamadı"); }); return; }

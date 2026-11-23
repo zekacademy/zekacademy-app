@@ -1,0 +1,7 @@
+rules_version = '2';
+// Depoya uygulamadan doğrudan erişim yok: kitaplar ve yedekler yalnız sunucu fonksiyonlarıyla okunur.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} { allow read, write: if false; }
+  }
+}
