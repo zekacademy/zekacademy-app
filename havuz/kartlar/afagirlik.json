@@ -1,0 +1,345 @@
+{
+ "konu": "Kütle ve Ağırlık Merkezi",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Fizik 2018–2025, 345 AYT Fizik, Bilgi Sarmal AYT Fizik (yalnız mantık), MEB 11–12. sınıf fizik.",
+ "kartlar": [
+  {
+   "id": "K-AFAG-01",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Eş karelerden oluşan levhanın ağırlık merkezi",
+   "fikir": "Levha özdeş karelere ayrılır; her karenin kütlesi eşit ve ağırlığı kendi merkezinde kabul edilir, parçaların ağırlık merkezleri koordinatlarının ortalaması alınarak levhanın ağırlık merkezi bulunur.",
+   "tuzak": "Ağırlık merkezini sınırlayıcı dikdörtgenin ortası sanmak; levhanın yalnız bir koluna bakmak; kareleri sayarken kütleleri unutmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ag-levha-merkez",
+   "tip": "Eş karelerden oluşan türdeş levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-02",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Parça çıkarılmış levhanın ağırlık merkezi",
+   "fikir": "Parça çıkarılan levha, tam levhadan çıkarılan parçanın negatif kütleli eklenmesi gibidir: M·x_tam = m_kalan·x_kalan + m_çıkan·x_çıkan.",
+   "tuzak": "Ağırlık merkezini tam levhanın merkezinde bırakmak; çıkarılan parçanın merkezine göre simetrik bir nokta almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ag-kesme-ekleme",
+   "tip": "Parça kesilip çıkarılan levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-03",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Kütle merkezi ve ağırlık merkezi kavramı",
+   "fikir": "Homojen ve simetrik cismin kütle merkezi geometrik merkezdedir; düzgün çekim alanında ağırlık merkezi ile kütle merkezi çakışır; ağırlık merkezi cismin dışında olabilir.",
+   "tuzak": "Ağırlık merkezinin daima cismin içinde olduğunu sanmak; kütle merkezi ile ağırlık merkezini her koşulda farklı saymak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ag-kavram",
+   "tip": "Kütle merkezi ve ağırlık merkezi kavramları",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-04",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Birden çok parça kesilmiş levha",
+   "fikir": "Kesilen parçaların kütleleri ve merkezleri tek tek yazılıp tam levhanın momentinden çıkarılır; simetrik çıkarılan parçalar merkezi kaydırmaz.",
+   "tuzak": "Kesilen parçaları ayrı ayrı hesaplayıp yön karıştırmak; çıkarılan kütleyi toplam kütleden düşmeyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ag-levha-merkez",
+   "tip": "Eş karelerden oluşan türdeş levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-05",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Ağırlık merkezinin yerinin değişmemesi",
+   "fikir": "Parçalar kesilince ağırlık merkezi yerinde kalıyorsa kesilen parçaların ortak ağırlık merkezi levhanın merkezindedir.",
+   "tuzak": "Her parçayı ayrı ayrı simetrik aramak; yalnız bir koordinatı kontrol etmek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ag-kesme-ekleme",
+   "tip": "Parça kesilip çıkarılan levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-06",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Asılı levhanın dengesi",
+   "fikir": "Levha asıldığında ağırlık merkezi askı noktasının hemen altına gelinceye kadar döner; askı noktası ağırlık merkezinin düşey doğrultusundaysa şekil dönmez.",
+   "tuzak": "Askı noktasının solunda ya da sağında kalan ağırlık merkezinin dönüş yönünü karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ag-asma",
+   "tip": "İple asılan levhanın dengesi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-07",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Katlanan levhanın ağırlık merkezi",
+   "fikir": "Katlanan bölüm, kütlesi korunarak aynalanır; üst üste gelen yerde kütle iki katına çıkar. Ağırlık merkezi, aynalanan parçanın yeni merkeziyle hesaplanır.",
+   "tuzak": "Katlamada kütle kaybolduğunu sanmak; parçanın yeni merkezini aynalamayı unutmak; üst üste gelen bölgeyi tek kat saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ag-katlama",
+   "tip": "Katlanan levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-08",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Bükülmüş telin ağırlık merkezi",
+   "fikir": "Türdeş telde kütle uzunluğuyla orantılıdır; her doğrusal parçanın ağırlık merkezi orta noktasındadır, tel ağırlık merkezi parçaların uzunlukla ağırlıklı ortalamasıdır.",
+   "tuzak": "Telin ağırlık merkezini tel üzerinde aramak; parçaları eşit kütleli saymak; levha gibi alan hesabı yapmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ag-tel",
+   "tip": "Bükülmüş türdeş telin ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-09",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Üçgen biçimli telin ağırlık merkezi",
+   "fikir": "Tel çerçevede kenarlar kütle taşır; her kenarın ağırlık merkezi orta noktasıdır ve uzunluğuyla ağırlıklı ortalama alınır (levhadaki 1/3 kuralı geçerli değildir).",
+   "tuzak": "Üçgen tel için levhanın ağırlık merkezi kuralını (1/3) kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ag-tel",
+   "tip": "Bükülmüş türdeş telin ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-10",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Masa kenarında dengede levha",
+   "fikir": "Devrilmeden kalması için levha ile üzerindeki cismin ortak ağırlık merkezinin düşeyi destek yüzeyi içinde kalmalıdır; sınır durumda ortak merkez masa kenarının tam üstündedir.",
+   "tuzak": "Cismin kütlesini hesaba katmamak; levhanın geometrik merkezini ağırlık merkezi sanmak; taşma miktarını ağırlık merkezinden değil levhanın ucundan ölçmeyi karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ag-levha-merkez",
+   "tip": "Eş karelerden oluşan türdeş levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-11",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Farklı özkütleli bölgelerden oluşan levha",
+   "fikir": "Kütle, alan ve özkütlenin çarpımıdır; ağırlık merkezi kütlelerle ağırlıklandırılır ve daha özkütleli bölgeye doğru kayar.",
+   "tuzak": "Geometrik merkezi ağırlık merkezi sanmak; kütle oranını alan oranıyla karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ag-levha-merkez",
+   "tip": "Eş karelerden oluşan türdeş levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-12",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Dairesel levhadan parça kesip yapıştırma",
+   "fikir": "Dairesel levhada kütle alanla (yarıçapın karesi) orantılıdır; kesilen ve yapıştırılan parçaların momentleri toplanır.",
+   "tuzak": "Kütleyi yarıçapla orantılı almak; kesme ve yapıştırmayı tek adımda yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ag-kesme-ekleme",
+   "tip": "Parça kesilip çıkarılan levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-13",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Noktasal kütle sisteminin kütle merkezi",
+   "fikir": "Kütle merkezi x = Σ m·x ÷ Σ m ile bulunur; ağır cisme daha yakındır.",
+   "tuzak": "Basit ortalama almak; toplam kütleye bölmeyi unutmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ag-noktasal",
+   "tip": "Noktasal kütle sisteminin kütle merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-14",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Dış kuvvet ve kütle merkezinin ivmesi",
+   "fikir": "Sistemin kütle merkezi yalnız dış kuvvetin bileşkesiyle ivmelenir: F_net = M·a_cm; iç kuvvetler (ip gerilmesi) kütle merkezinin ivmesini değiştirmez.",
+   "tuzak": "Kopan ipin kütle merkezinin ivmesini değiştirdiğini sanmak; ip koptuktan sonra L’ye kuvvet uygulanmaya devam ettiğini düşünmek.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "ag-merkez-hareket",
+   "tip": "Kütle merkezinin hareketi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-15",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Dış kuvvet yokken kütle merkezi sabittir",
+   "fikir": "Dış kuvvetin bileşkesi sıfırsa sistemin kütle merkezi durgunsa durgun kalır; iç kuvvetlerle çekilen cisimler kütle merkezinde buluşur, daha hafif olan daha çok yol alır.",
+   "tuzak": "Eşit yol aldıklarını sanmak; kütle merkezinin ağır cisimle birlikte hareket ettiğini düşünmek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ag-merkez-hareket",
+   "tip": "Kütle merkezinin hareketi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-16",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Homojen çubuk ve noktasal kütle",
+   "fikir": "Homojen çubuk kütlesini orta noktasında toplar; eklenen cisimle birlikte kütle merkezi kütlelerin ağırlıklı ortalamasıdır.",
+   "tuzak": "Çubuğun ağırlığını yok saymak; ağırlık merkezini çubuğun orta noktası sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ag-noktasal",
+   "tip": "Noktasal kütle sisteminin kütle merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-17",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Kesilip yeniden yapıştırılan parça",
+   "fikir": "Toplam kütle korunur; parçanın kaydırılmasıyla ağırlık merkezi, kütle oranı × kayma miktarı kadar aynı yönde yer değiştirir.",
+   "tuzak": "Kütle merkezinin değişmediğini sanmak; kaymayı toplam kütle yerine parça kütlesine bölmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ag-kesme-ekleme",
+   "tip": "Parça kesilip çıkarılan levhanın ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-18",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Köşesinden asılan dikdörtgen levha",
+   "fikir": "Askı noktasından ağırlık merkezine çizilen doğru denge durumunda düşeydir; levhanın kenarının düşeyle yaptığı açı köşegen–kenar açısıdır.",
+   "tuzak": "Düşeyin levhanın kenarıyla çakıştığını sanmak; kısa ve uzun kenarı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ag-asma",
+   "tip": "İple asılan levhanın dengesi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-19",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Kesilmiş levhanın asma noktası",
+   "fikir": "Levhanın üst kenarının yatay kalması için askı noktası, ağırlık merkezinin düşeyi üzerinde olmalıdır; kesilen parçalar bu düşeyi değiştirir.",
+   "tuzak": "Kesilmeden önceki levhanın merkezine göre asmak; kesilen parçanın merkezine göre simetriği almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ag-asma",
+   "tip": "İple asılan levhanın dengesi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  },
+  {
+   "id": "K-AFAG-20",
+   "konu": "Kütle ve Ağırlık Merkezi",
+   "alt": "Üç parçalı katlanmış tel",
+   "fikir": "Bir telin ağırlık merkezi, dik katlanan parçaların orta noktalarının uzunlukla ağırlıklı ortalamasıdır; sonuç genelde tel üzerinde değildir.",
+   "tuzak": "Parçaların orta noktalarını yanlış yazmak; kenarları eşit kütleli saymak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ag-tel",
+   "tip": "Bükülmüş türdeş telin ağırlık merkezi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ag-levha-merkez",
+   "ad": "Eş karelerden oluşan türdeş levhanın ağırlık merkezi",
+   "kartlar": [
+    "K-AFAG-01",
+    "K-AFAG-04",
+    "K-AFAG-10",
+    "K-AFAG-11"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-kesme-ekleme",
+   "ad": "Parça kesilip çıkarılan levhanın ağırlık merkezi",
+   "kartlar": [
+    "K-AFAG-02",
+    "K-AFAG-05",
+    "K-AFAG-12",
+    "K-AFAG-17"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-kavram",
+   "ad": "Kütle merkezi ve ağırlık merkezi kavramları",
+   "kartlar": [
+    "K-AFAG-03"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-asma",
+   "ad": "İple asılan levhanın dengesi",
+   "kartlar": [
+    "K-AFAG-06",
+    "K-AFAG-18",
+    "K-AFAG-19"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-katlama",
+   "ad": "Katlanan levhanın ağırlık merkezi",
+   "kartlar": [
+    "K-AFAG-07"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-tel",
+   "ad": "Bükülmüş türdeş telin ağırlık merkezi",
+   "kartlar": [
+    "K-AFAG-08",
+    "K-AFAG-09",
+    "K-AFAG-20"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-noktasal",
+   "ad": "Noktasal kütle sisteminin kütle merkezi",
+   "kartlar": [
+    "K-AFAG-13",
+    "K-AFAG-16"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  },
+  {
+   "tipId": "ag-merkez-hareket",
+   "ad": "Kütle merkezinin hareketi",
+   "kartlar": [
+    "K-AFAG-14",
+    "K-AFAG-15"
+   ],
+   "uygulamaKonu": "afiz|Kütle ve Ağırlık Merkezi"
+  }
+ ]
+}

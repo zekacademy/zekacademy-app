@@ -1,0 +1,177 @@
+{
+ "konu": "Basit Makineler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Fizik çıkmış soruları (yalnız mantık), MEB 11–12. sınıf fizik.",
+ "kartlar": [
+  {
+   "id": "K-AFMAK-01",
+   "konu": "Basit Makineler",
+   "alt": "Makara sistemlerinde kuvvet kazancı",
+   "fikir": "Yükü taşıyan ip sayısı n ise ideal sistemde F = (G + hareketli makara ağırlığı)/n; ipi n kat fazla çekmek gerekir.",
+   "tuzak": "Sabit makarayı kuvvet kazancı sanmak; ip sayısını yanlış saymak; hareketli makara ağırlığını unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bm-makara",
+   "tip": "Makara ve palanga sistemlerinde kuvvet kazancı",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-02",
+   "konu": "Basit Makineler",
+   "alt": "Kaldıraçta tork dengesi",
+   "fikir": "Mesnede göre torkların toplamı sıfır: ΣF·d(sol) = ΣF·d(sağ); kuvvet kolu mesnede dik uzaklıktır.",
+   "tuzak": "Kuvvetleri toplamak; çubuğun ağırlığını unutmak; kolu mesnetten değil uçtan ölçmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bm-kaldirac",
+   "tip": "Kaldıraçta tork dengesi ve kuvvet kazancı",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-03",
+   "konu": "Basit Makineler",
+   "alt": "Çıkrıkta denge",
+   "fikir": "F·R = G·r; kol uzar ya da silindir incelirse kuvvet azalır, yol artar.",
+   "tuzak": "Kuvvet kolu ile yük kolunu ters yazmak; yarıçaplar yerine farkı almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bm-cikrik",
+   "tip": "Çıkrıkta kuvvet ve yol ilişkisi",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-04",
+   "konu": "Basit Makineler",
+   "alt": "Eğik düzlem",
+   "fikir": "Sürtünmesiz eğik düzlemde F·l = G·h; iş sabit, kuvvet azalırsa yol artar.",
+   "tuzak": "h/l yerine cos ya da tersini kullanmak; sürtünmeli ve sürtünmesizi karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "bm-egik",
+   "tip": "Eğik düzlemde kuvvet, yol ve iş",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-05",
+   "konu": "Basit Makineler",
+   "alt": "Dişli sistemleri",
+   "fikir": "Birbirine geçen dişlilerde diş sayısı × tur sayısı eşit, yön zıt; ortak eksenli dişliler aynı turu atar.",
+   "tuzak": "Ortak eksenli dişliyi atlamak; oranı ters kullanmak; yönü yanlış saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bm-disli",
+   "tip": "Dişlilerde tur sayısı ve dönüş yönü",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-06",
+   "konu": "Basit Makineler",
+   "alt": "Verim",
+   "fikir": "η = yararlı iş / harcanan iş; sürtünmeli makinede η < 1, gereken kuvvet ideal kuvvetin 1/η katıdır.",
+   "tuzak": "Oranı ters yazmak; verimi kuvvet değeriyle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bm-verim",
+   "tip": "Verim hesabı",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-07",
+   "konu": "Basit Makineler",
+   "alt": "Grafikle makine analizi",
+   "fikir": "Doğrunun eğimi ve kesim noktası makinenin özelliğini verir (ip sayısı, makara ağırlığı, verim).",
+   "tuzak": "Eğimi ters yorumlamak; kesim noktasını ağırlık sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bm-grafik",
+   "tip": "Grafikten verim ve kuvvet bulma",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  },
+  {
+   "id": "K-AFMAK-08",
+   "konu": "Basit Makineler",
+   "alt": "Basit makine kavramları",
+   "fikir": "Basit makine iş kazancı sağlamaz; kuvvetten kazanç yoldan kayıptır; verim 1’i aşmaz.",
+   "tuzak": "Kuvvet kazancını iş kazancı sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 2,
+   "tipId": "bm-kavram",
+   "tip": "Basit makinelerde kuvvet–yol–iş ilişkisi",
+   "kaynak": "ÖSYM AYT Fizik 2019, 2020, 2026 · 345 AYT Fizik Soru Bankası · Bilgi Sarmal AYT Fizik (yalnız mantık)"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bm-makara",
+   "ad": "Makara ve palanga sistemlerinde kuvvet kazancı",
+   "kartlar": [
+    "K-AFMAK-01"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-kaldirac",
+   "ad": "Kaldıraçta tork dengesi ve kuvvet kazancı",
+   "kartlar": [
+    "K-AFMAK-02"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-cikrik",
+   "ad": "Çıkrıkta kuvvet ve yol ilişkisi",
+   "kartlar": [
+    "K-AFMAK-03"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-egik",
+   "ad": "Eğik düzlemde kuvvet, yol ve iş",
+   "kartlar": [
+    "K-AFMAK-04"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-disli",
+   "ad": "Dişlilerde tur sayısı ve dönüş yönü",
+   "kartlar": [
+    "K-AFMAK-05"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-verim",
+   "ad": "Verim hesabı",
+   "kartlar": [
+    "K-AFMAK-06"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-grafik",
+   "ad": "Grafikten verim ve kuvvet bulma",
+   "kartlar": [
+    "K-AFMAK-07"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  },
+  {
+   "tipId": "bm-kavram",
+   "ad": "Basit makinelerde kuvvet–yol–iş ilişkisi",
+   "kartlar": [
+    "K-AFMAK-08"
+   ],
+   "uygulamaKonu": "afiz|Basit Makineler"
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "konu": "Tork Denge",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2018–2026 Fizik (yalnız mantık), MEB 11. sınıf fizik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AFTORK-01",
+   "konu": "Tork Denge",
+   "alt": "Kaldıraç dengesi, destek tepkisi",
+   "fikir": "Destek noktasına göre torklar eşitlenir; destek tepkisi çubuğa etki eden aşağı kuvvetlerin toplamına eşittir.",
+   "tuzak": "Kolları ters kullanmak; destek tepkisini yalnız bir ağırlığa eşit almak; çubuğun ağırlığını atlamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "tork-kaldirac",
+   "tip": "Kaldıraç dengesi ve destek tepkisi",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-02",
+   "konu": "Tork Denge",
+   "alt": "İp gerilmeleri (iki ip, ağırlıklı çubuk)",
+   "fikir": "Bir ipin bağlandığı noktaya göre tork alınır; çubuk ve cismin ağırlıkları kollarıyla çarpılır, diğer ip bulunur.",
+   "tuzak": "Çubuğun ağırlığını ihmal etmek; ağırlıkları iplere eşit paylaştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "tork-ip",
+   "tip": "Çubuk ve levhada ip gerilmeleri",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-03",
+   "konu": "Tork Denge",
+   "alt": "Menteşeli çubuk, ip gerilmesi ve menteşe tepkisi",
+   "fikir": "Menteşeye göre tork alınır; eğik ipte yalnız çubuğa dik bileşen tork yapar; menteşe tepkisi kuvvet dengesinden bulunur.",
+   "tuzak": "Eğik ipin tamamını dik sanmak; tepkiyi ip gerilmesine eşitlemek; sin–cos karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "tork-mentese",
+   "tip": "Menteşeli çubukta gerilme ve tepki",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-04",
+   "konu": "Tork Denge",
+   "alt": "İki destekli çubuk, devrilme sınırı",
+   "fikir": "Desteklerden biri için tepki sıfır olduğunda devrilme sınırıdır; diğer destekten tork alınır.",
+   "tuzak": "Devrilme sınırında iki tepkinin de sıfırdan farklı olduğunu sanmak; kolları karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "tork-destek",
+   "tip": "İki desteğe oturan çubuk, tepkiler ve devrilme",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-05",
+   "konu": "Tork Denge",
+   "alt": "Kavramsal tork–denge öncülleri",
+   "fikir": "Cismin konumu veya ip değişince gerilme, tepki ve torkların nasıl değiştiği nicel ilişkilerden (τ = F·d) çıkarılır.",
+   "tuzak": "Net torkun dengede de sıfır olduğunu unutmak; tepkiyi gerilmeyle aynı yönde değiştirmek.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "tork-kavram",
+   "tip": "Denge durumunda niceliklerin değişimi",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-06",
+   "konu": "Tork Denge",
+   "alt": "Düğüm noktasında kuvvet dengesi",
+   "fikir": "Düğüme etki eden ip kuvvetleri bileşenlerine ayrılır; yatay ve düşeyde ayrı ayrı ΣF = 0 yazılır.",
+   "tuzak": "sin ve cos bileşenlerini karıştırmak; gerilmeyi ağırlığa eşitlemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "tork-dugum",
+   "tip": "Düğüm noktası ve ip gerilmeleri",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-07",
+   "konu": "Tork Denge",
+   "alt": "Merdiven dengesi",
+   "fikir": "Sürtünmesiz duvara dayalı merdivende zemine göre tork alınarak duvar tepkisi bulunur; yatay dengeden zemin sürtünmesi duvar tepkisine eşittir.",
+   "tuzak": "Yatay kolları yerine merdiven boyunu kullanmak; üstteki kişinin konumunu yanlış almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "tork-merdiven",
+   "tip": "Duvara dayalı merdiven",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-08",
+   "konu": "Tork Denge",
+   "alt": "Tork grafiği (T–x)",
+   "fikir": "Grafikten gerilme–konum ilişkisi okunur; ipin bağlandığı uçtaki değer cismin ağırlığını verir.",
+   "tuzak": "Gerilmeyi menteşe tepkisi sanmak; eğimi tepki saymak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "tork-grafik",
+   "tip": "Gerilme–konum grafiği",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFTORK-09",
+   "konu": "Tork Denge",
+   "alt": "Mobil (iç içe çubuklar)",
+   "fikir": "Alttaki çubuğun toplam ağırlığı üsttekinin ucundaki tek kuvvet gibi alınır; çubuklar sırayla dengelenir.",
+   "tuzak": "Alt sistemi yok sayıp yalnız bir ağırlığı almak; gerilmeyi bölme olarak kullanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "tork-mobil",
+   "tip": "İç içe çubuklardan oluşan mobil",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik (yalnız mantık) · 345 AYT Fizik Soru Bankası · MEB 11. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "tork-kaldirac",
+   "ad": "Kaldıraç dengesi ve destek tepkisi",
+   "kartlar": [
+    "K-AFTORK-01"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-ip",
+   "ad": "Çubuk ve levhada ip gerilmeleri",
+   "kartlar": [
+    "K-AFTORK-02"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-mentese",
+   "ad": "Menteşeli çubukta gerilme ve tepki",
+   "kartlar": [
+    "K-AFTORK-03"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-destek",
+   "ad": "İki desteğe oturan çubuk, tepkiler ve devrilme",
+   "kartlar": [
+    "K-AFTORK-04"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-kavram",
+   "ad": "Denge durumunda niceliklerin değişimi",
+   "kartlar": [
+    "K-AFTORK-05"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-dugum",
+   "ad": "Düğüm noktası ve ip gerilmeleri",
+   "kartlar": [
+    "K-AFTORK-06"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-merdiven",
+   "ad": "Duvara dayalı merdiven",
+   "kartlar": [
+    "K-AFTORK-07"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-grafik",
+   "ad": "Gerilme–konum grafiği",
+   "kartlar": [
+    "K-AFTORK-08"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  },
+  {
+   "tipId": "tork-mobil",
+   "ad": "İç içe çubuklardan oluşan mobil",
+   "kartlar": [
+    "K-AFTORK-09"
+   ],
+   "uygulamaKonu": "afiz|Tork Denge"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "konu": "Bağıl Hareket",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2018–2026 Fizik, MEB 11. sınıf bağıl hareket.",
+ "kartlar": [
+  {
+   "id": "K-AFBH-01",
+   "konu": "Bağıl Hareket",
+   "alt": "Zıt/aynı yönlü araçların bağıl hızı",
+   "fikir": "Yön seçilip hızlar işaretlenir; v_AB = v_A − v_B. Zıt yönde büyüklükler toplanır, aynı yönde çıkarılır; yetişme için kapanma hızı kullanılır.",
+   "tuzak": "Bağıl hızı yalnız bir cismin yere göre hızı sanmak; zıt yönde çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bh-dogrusal",
+   "tip": "Aynı doğrultuda bağıl hız ve yetişme",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-02",
+   "konu": "Bağıl Hareket",
+   "alt": "Akıntıda gidiş–dönüş ve su çerçevesi",
+   "fikir": "Yere göre hız = suya göre hız ± akıntı; gidiş ve dönüş süreleri ayrı hesaplanır. Su çerçevesinde cisimler akıntı yokmuş gibi davranır.",
+   "tuzak": "Dönüş süresini gidiş süresine eşit almak; akıntıyı yok saymak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bh-akinti-yol",
+   "tip": "Akıntılı nehirde doğrusal gidiş–dönüş",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-03",
+   "konu": "Bağıl Hareket",
+   "alt": "Nehirde karşıya geçiş",
+   "fikir": "Hız bileşenleri bağımsızdır: karşıya geçiş süresi yalnız kıyıya dik bileşenle bulunur, sürüklenme akıntı × süredir; dik geçişte suya göre hızın akıntıya zıt bileşeni akıntıyı dengeler.",
+   "tuzak": "Yere göre hız büyüklüğüyle genişliği bölmek; akıntının süreyi değiştirdiğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bh-karsiya-gecis",
+   "tip": "Nehirde karşıya geçiş: süre ve sürüklenme",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-04",
+   "konu": "Bağıl Hareket",
+   "alt": "Vektörel bağıl hız: uçak–rüzgâr, yağmur–araç",
+   "fikir": "Birbirine dik hızlar Pisagor ile bileşke; hedef doğrultusu istenen yönde kalması için bileşenlerden biri sıfırlanır.",
+   "tuzak": "Dik hızları cebirsel toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "bh-vektor",
+   "tip": "Dik hızların bileşkesi ve bağıl hız",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-05",
+   "konu": "Bağıl Hareket",
+   "alt": "Izgarada iki yüzücünün karşılaşması",
+   "fikir": "Yere göre hızlar (suya göre ± akıntı) bulunur; kapanma hızıyla süre ve konum bölmeden okunur.",
+   "tuzak": "Akıntıyı yalnız bir yüzücüye eklemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "bh-izgara",
+   "tip": "Izgara üzerinde karşılaşma noktası",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-06",
+   "konu": "Bağıl Hareket",
+   "alt": "x–t grafiğinden bağıl hız",
+   "fikir": "Eğimler hız verir; bağıl hız eğimlerin vektörel farkıdır.",
+   "tuzak": "Eğimi ilk/son konumdan okumak; zıt işaretleri çıkarmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "bh-xt",
+   "tip": "x–t grafiğinden bağıl hız",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-07",
+   "konu": "Bağıl Hareket",
+   "alt": "v–t grafiğinden bağıl hız ve uzaklık",
+   "fikir": "Bağıl hız v_L − v_K; bağıl hız–zaman alanı aralarındaki uzaklık değişimini verir, bağıl hız sıfırken uzaklık ekstremum olur.",
+   "tuzak": "Hızlar eşitlenince araçlar yan yana sanmak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "bh-vt",
+   "tip": "v–t grafiğinden bağıl hız ve uzaklık",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFBH-08",
+   "konu": "Bağıl Hareket",
+   "alt": "Referans sistemi ve hız zinciri",
+   "fikir": "v_AC = v_AB + v_BC; gözlemci değişince hız değişir ama cismin kendi yürüme hızı sistemden bağımsızdır.",
+   "tuzak": "Bağıl hızı mutlak sanmak; zinciri ters yönde kurmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "bh-referans",
+   "tip": "Referans sistemleri ve bağıl hız zinciri",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik bağıl hareket soruları (yalnız mantık) · 345 AYT Fizik s.22–27 · Bilgi Sarmal AYT denemeleri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "bh-dogrusal",
+   "ad": "Aynı doğrultuda bağıl hız ve yetişme",
+   "kartlar": [
+    "K-AFBH-01"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-akinti-yol",
+   "ad": "Akıntılı nehirde doğrusal gidiş–dönüş",
+   "kartlar": [
+    "K-AFBH-02"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-karsiya-gecis",
+   "ad": "Nehirde karşıya geçiş: süre ve sürüklenme",
+   "kartlar": [
+    "K-AFBH-03"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-vektor",
+   "ad": "Dik hızların bileşkesi ve bağıl hız",
+   "kartlar": [
+    "K-AFBH-04"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-izgara",
+   "ad": "Izgara üzerinde karşılaşma noktası",
+   "kartlar": [
+    "K-AFBH-05"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-xt",
+   "ad": "x–t grafiğinden bağıl hız",
+   "kartlar": [
+    "K-AFBH-06"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-vt",
+   "ad": "v–t grafiğinden bağıl hız ve uzaklık",
+   "kartlar": [
+    "K-AFBH-07"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  },
+  {
+   "tipId": "bh-referans",
+   "ad": "Referans sistemleri ve bağıl hız zinciri",
+   "kartlar": [
+    "K-AFBH-08"
+   ],
+   "uygulamaKonu": "afiz|Bağıl Hareket"
+  }
+ ]
+}
