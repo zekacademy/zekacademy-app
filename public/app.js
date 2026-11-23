@@ -1776,7 +1776,7 @@ const toHm = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padS
 const duzenOf = id => (S.cnotes.get(id)||{}).duzen || null;
 /* Seans günü: elle seçildiyse o gün, yoksa öğrencinin program döngüsünün başladığı gün (Yeni görüşme ile kayarsa seans da kayar) */
 /* Koçluk paketleri (ayarlardan düzenlenir). tur: "seans" = haftalık birebir görüşme, "whatsapp" = ilk görüşme + haftalık rapor */
-const DEF_PAKET = [{k:"super", n:"Premium Koçluk", tur:"seans", fiyat:6900}, {k:"whatsapp", n:"Uygulama Koçluğu", tur:"whatsapp", fiyat:3900}]; /* 21 Kasım 2026 fiyatları; mevcut öğrenciler ödeme planlarındaki tutarla devam eder */
+const DEF_PAKET = [{k:"super", n:"Premium Koçluk", tur:"seans", fiyat:6900}, {k:"whatsapp", n:"Uygulama Koçluğu", tur:"whatsapp", fiyat:3900}, {k:"serbest", n:"Serbest Paket", tur:"seans", fiyat:null}]; /* Serbest: istisnalar için, ücret öğrenci başı ödeme planından elle girilir */ /* 21 Kasım 2026 fiyatları; mevcut öğrenciler ödeme planlarındaki tutarla devam eder */
 function paketOf(x){ const L = cfg().paketler; if(!x) return L[0];
   return L.find(p=>p.k===x.paket) || (x.paket==="whatsapp" ? L.find(p=>p.tur==="whatsapp") : L.find(p=>p.tur!=="whatsapp")) || L[0]; }
 const isWA = x => !!x && paketOf(x)?.tur==="whatsapp";
