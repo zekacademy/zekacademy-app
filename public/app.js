@@ -21,7 +21,7 @@ const CUR = {"TYT": [{"k": "tr", "n": "Türkçe", "g": "Türkçe", "t": ["Sözc�
 /* ---------- Sabitler ---------- */
 /* ---------- Sabitler ---------- */
 /* ---------- Sabitler ---------- */
-const ALANLAR = ["SAY","EA","SÖZ"];
+const ALANLAR = ["SAY","EA","SÖZ","DGS"]; /* DGS: AYT konuları görünmez; Matematik, Geometri, Türkçe (TYT konuları) */
 const SINIFLAR = ["9. sınıf","10. sınıf","11. sınıf","12. sınıf","Mezun"];
 const DERSLER = ["TYT Türkçe","Paragraf","TYT Matematik","Problemler","Geometri","TYT Fizik","TYT Kimya","TYT Biyoloji","TYT Tarih","TYT Coğrafya","TYT Felsefe","TYT Din","AYT Matematik","AYT Fizik","AYT Kimya","AYT Biyoloji","AYT Edebiyat","AYT Tarih","AYT Coğrafya","AYT Felsefe Grubu","TYT Deneme","AYT Deneme","Branş Denemesi","Konu Tekrarı","Diğer"];
 const SURELER = [20,30,40,45,60,75,90,120,150,180];
@@ -1776,7 +1776,7 @@ const toHm = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padS
 const duzenOf = id => (S.cnotes.get(id)||{}).duzen || null;
 /* Seans günü: elle seçildiyse o gün, yoksa öğrencinin program döngüsünün başladığı gün (Yeni görüşme ile kayarsa seans da kayar) */
 /* Koçluk paketleri (ayarlardan düzenlenir). tur: "seans" = haftalık birebir görüşme, "whatsapp" = ilk görüşme + haftalık rapor */
-const DEF_PAKET = [{k:"super", n:"Premium Koçluk", tur:"seans", fiyat:6900}, {k:"whatsapp", n:"Uygulama Koçluğu", tur:"whatsapp", fiyat:3900}]; /* 21 Kasım 2026 fiyatları; mevcut öğrenciler ödeme planlarındaki tutarla devam eder */
+const DEF_PAKET = [{k:"super", n:"Premium Koçluk", tur:"seans", fiyat:6900}, {k:"whatsapp", n:"Uygulama Koçluğu", tur:"whatsapp", fiyat:3900}, {k:"serbest", n:"Serbest Paket", tur:"seans", fiyat:null}]; /* Serbest: istisnalar için, ücret öğrenci başı ödeme planından elle girilir */ /* 21 Kasım 2026 fiyatları; mevcut öğrenciler ödeme planlarındaki tutarla devam eder */
 function paketOf(x){ const L = cfg().paketler; if(!x) return L[0];
   return L.find(p=>p.k===x.paket) || (x.paket==="whatsapp" ? L.find(p=>p.tur==="whatsapp") : L.find(p=>p.tur!=="whatsapp")) || L[0]; }
 const isWA = x => !!x && paketOf(x)?.tur==="whatsapp";
@@ -2192,7 +2192,7 @@ function blkSatir(b){ if(b.tur==="rutin") return b.rutin ? `${b.rutin} ${b.adet|
   let t = b.tur==="deneme" ? `${ex}Genel Deneme` : b.ders ? `${ex}${b.ders} ${etk}` : "";
   if(!t) return ""; if(b.konu.length && b.tur!=="deneme") t += ` – ${b.konu.join(" + ")}`;
   if(b.sure) t += ` (${sureYaz(b.sure)})`; return t; }
-function blkDersler(s){ const L = cfg().hedefDers, al = s.alan, oncelik = {SAY:["Matematik","Geometri","Fizik","Kimya","Biyoloji","Türkçe"], EA:["Matematik","Geometri","Edebiyat","Tarih","Coğrafya","Türkçe"], "SÖZ":["Edebiyat","Tarih","Coğrafya","Felsefe","Türkçe","Din Kültürü"]}[al] || [];
+function blkDersler(s){ const L = cfg().hedefDers, al = s.alan, oncelik = {SAY:["Matematik","Geometri","Fizik","Kimya","Biyoloji","Türkçe"], EA:["Matematik","Geometri","Edebiyat","Tarih","Coğrafya","Türkçe"], "SÖZ":["Edebiyat","Tarih","Coğrafya","Felsefe","Türkçe","Din Kültürü"], DGS:["Matematik","Geometri","Türkçe"]}[al] || [];
   return [...oncelik.filter(x=>L.includes(x)), ...L.filter(x=>!oncelik.includes(x))]; }
 function blkKonular(s, b){ if(!b.ders || b.tur==="deneme") return []; return dersSubs(s, b.ders).filter(x=>!b.ex || !x.ex || x.ex===b.ex || /^\d/.test(x.ex)); }
 function blkKonuHTML(s, b){ const subs = blkKonular(s, b); if(!subs.length) return `<p class="faint small" style="margin:0">${b.tur==="deneme"?"Genel denemede konu seçilmez.":"Önce ders seç."}</p>`;
@@ -2226,7 +2226,7 @@ function netYolculugu(s){ const b = s.baslangic||{};
       <label class="nyb"><small>Başlangıç</small><input type="text" inputmode="decimal" id="baslangic-${k}" data-f="baslangic.${k}" value="${b[k]??""}" placeholder="${b[k+"Yok"]?"girmedi":"net"}"></label>
       <span class="nyok">→</span>
       <div class="nyg"><small>Son ${o?o.n:5} deneme ort.</small><b class="num">${o?fmt(Math.round(o.v*100)/100):"—"}</b>${fark!=null?`<span class="${fark>=0?"up":"down"} small" style="font-weight:800">${fark>=0?"+":""}${fmt(Math.round(fark*100)/100)}</span>`:""}</div></div>`; };
-  return `<div class="card"><h3>Net yolculuğu</h3><div class="nyl">${sat("TYT","tyt")}${s.alan==="DİL"?"":sat("AYT","ayt")}</div></div>`; }
+  return `<div class="card"><h3>Net yolculuğu</h3><div class="nyl">${sat("TYT","tyt")}${s.alan==="DİL"||s.alan==="DGS"?"":sat("AYT","ayt")}</div></div>`; }
 /* ---------- Veli bilgilendirme (öğrenci açar; her pazartesi kısa e-posta) ---------- */
 const epostaOk = e => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(e||"").trim());
 function veliSheet(s){ const v = s.veli || {}, acik = !!v.acik;
@@ -3024,7 +3024,7 @@ function cSettings(){
       ${cur[ex].map((sub,i)=>`<details class="subj"><summary><span><span class="sn">${esc(sub.n)}</span><span class="sg">${sub.t.length} konu</span></span><span></span><span class="pct">${icon("chev","xs")}</span></summary>
         <div class="trow">
           <div class="two"><label class="f">Ders adı<input type="text" id="cu-n-${ex}-${i}" data-cur="${ex}|${i}|n" value="${esc(sub.n)}"></label><label class="f">Etiket<input type="text" id="cu-g-${ex}-${i}" data-cur="${ex}|${i}|g" value="${esc(sub.g||"")}"></label></div>
-          ${ex==="AYT"?`<div class="f">Hangi alanlarda görünsün<div class="chs">${ALANLAR.map(a=>`<label><input type="checkbox" id="cu-a-${i}-${a}" data-cura="${i}|${a}" ${(sub.a||[]).includes(a)?"checked":""}><span>${a}</span></label>`).join("")}</div></div>`:""}
+          ${ex==="AYT"?`<div class="f">Hangi alanlarda görünsün<div class="chs">${ALANLAR.filter(a=>a!=="DGS").map(a=>`<label><input type="checkbox" id="cu-a-${i}-${a}" data-cura="${i}|${a}" ${(sub.a||[]).includes(a)?"checked":""}><span>${a}</span></label>`).join("")}</div></div>`:""}
           <div class="f">Konular <span class="faint" style="font-weight:500">· her satır bir konu</span><textarea id="cu-t-${ex}-${i}" data-curt="${ex}|${i}" rows="${Math.min(14,sub.t.length+1)}">${esc(sub.t.join("\n"))}</textarea></div>
           <div class="pills"><button class="btn sm danger" data-act="cdel" data-v="${ex}|${i}">${icon("trash","xs")} Bu dersi sil</button></div></div></details>`).join("")}
       <div class="pills"><button class="btn sm" data-act="cadd" data-v="${ex}">${icon("plus","xs")} ${ex} dersi ekle</button></div>`, "cur")}
