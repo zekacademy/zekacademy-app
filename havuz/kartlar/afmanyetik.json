@@ -1,0 +1,331 @@
+{
+ "konu": "Manyetik Alan ve Manyetik Kuvvet",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2025 AYT Fizik çıkmış soruları ve yayın soru bankaları (yalnız mantık), MEB 11. sınıf fizik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AFMANYETIK-01",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Düz telin çevresindeki alan yönü",
+   "fikir": "Sağ el kuralıyla tele dik düzlemde alanın dönüş yönü ve alanın uzaklıkla ters orantısı yorumlanır.",
+   "tuzak": "Alan yönünü telden uzaklaşan sanmak; zıt taraflarda alanı aynı yönde saymak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "mn-tel",
+   "tip": "Düz telin manyetik alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-02",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Düz telin alanı (sayısal)",
+   "fikir": "B = 2×10⁻⁷·i ÷ d formülünde birimler SI’ya çevrilerek uygulanır.",
+   "tuzak": "Uzaklığı cm bırakmak; sabiti yanlış almak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "mn-tel",
+   "tip": "Düz telin manyetik alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-03",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Düzgün alanda tel",
+   "fikir": "F = B·i·L·sinθ; θ akım ile alan arasındaki açıdır.",
+   "tuzak": "cosθ kullanmak; sinθ’yı hiç yazmamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "mn-kuvvet",
+   "tip": "Akım taşıyan tele etkiyen kuvvet",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-04",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Dik alanda üç tel (yön)",
+   "fikir": "Her telin akım yönü ve B yönü için F = i·(l × B) ile kuvvet yönü bulunur.",
+   "tuzak": "Kuvveti akım ya da alan doğrultusunda sanmak; sağ el kuralında işaret karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "mn-kuvvet",
+   "tip": "Akım taşıyan tele etkiyen kuvvet",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-05",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Paralel tellerde kuvvet",
+   "fikir": "F = 2×10⁻⁷·i₁·i₂·L ÷ d bağıntısı; boy ve uzaklık SI’da yazılır.",
+   "tuzak": "Akımları toplamak; uzaklığın karesini almak; uzunluğu unutmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mn-paralel",
+   "tip": "Paralel akımlı teller",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-06",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "İki zıt telin bileşke alanı",
+   "fikir": "Her telin alanı sağ el kuralıyla yönlendirilip noktada vektörel toplanır; bileşkenin sıfır olduğu nokta bulunur.",
+   "tuzak": "Yönleri hesaba katmadan büyüklükleri toplamak; sıfır noktasını iki telin arasında aramak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "mn-tel",
+   "tip": "Düz telin manyetik alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-07",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Çembersel bobinin merkezi",
+   "fikir": "B = μ₀·N·i ÷ (2r) ve π = 3 ile işlem; yarıçap metreye çevrilir.",
+   "tuzak": "Sarım sayısını unutmak; yarıçap yerine çap yazmak; 2’yi atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mn-halka",
+   "tip": "Halka ve bobinin alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-08",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Eş merkezli iki halka",
+   "fikir": "Her halkanın merkezdeki alan yönü akım yönüne, büyüklüğü i ÷ r oranına bağlıdır; bileşke vektörel bulunur.",
+   "tuzak": "Akım yönlerini göz ardı etmek; büyük halkanın alanını büyük sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "mn-halka",
+   "tip": "Halka ve bobinin alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-09",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Solenoidin içindeki alan",
+   "fikir": "Sargı akımı yönünden alan yönü; B = μ₀·n·i’ye göre n ve i değişiminin etkisi.",
+   "tuzak": "Alanı kesit alanına bağlamak; boyu uzatınca alanın arttığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "mn-halka",
+   "tip": "Halka ve bobinin alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-10",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Dik alanda pozitif ve negatif yük",
+   "fikir": "Pozitif yük için F = q·(v × B); negatif yükte kuvvet ters yönlüdür.",
+   "tuzak": "Negatif yükte yönü değiştirmemek; kuvveti hız yönünde sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "mn-yuklu",
+   "tip": "Yüklü parçacığın manyetik alandaki hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-11",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Yörüngeden yük işareti",
+   "fikir": "Sapma yönü ve doğrusal giden yörünge, yükün işaretini ve nötr olup olmadığını belirler.",
+   "tuzak": "Doğrusal giden parçacığın yüklü ama hızı alana paralel olduğunu varsaymak; sapma yönünü ters yorumlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "mn-yuklu",
+   "tip": "Yüklü parçacığın manyetik alandaki hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-12",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Hız seçici",
+   "fikir": "Elektrik ve manyetik kuvvet eşit: v = E ÷ B, E = V ÷ d.",
+   "tuzak": "Gerilimi alan sanmak; v = E·B yazmak; d’yi cm bırakmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mn-yuklu",
+   "tip": "Yüklü parçacığın manyetik alandaki hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-13",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Proton ve alfa yörüngeleri",
+   "fikir": "r = m·v ÷ (q·B), T = 2π·m ÷ (q·B), F = q·v·B oranları kütle ve yük oranlarıyla yorumlanır.",
+   "tuzak": "Kuvveti yükten bağımsız sanmak; periyodu hıza bağlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "mn-cember",
+   "tip": "Yüklü parçacığın çembersel hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-14",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Eğri telde net kuvvet",
+   "fikir": "Eğri telin her parçasına etkiyen kuvvetin yönü ve büyüklüğü ayrı bulunup vektörel birleştirilir.",
+   "tuzak": "Telin toplam uzunluğunu kullanmak; parçaları skaler toplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mn-kuvvet",
+   "tip": "Akım taşıyan tele etkiyen kuvvet",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-15",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Kütle spektrometresi",
+   "fikir": "Hız seçiciden çıkan hız ile B₂ bölgesinde çember yarıçapı bulunur; vuruş noktası girişten 2r uzaktadır.",
+   "tuzak": "Yarıçapla çapı karıştırmak; hız seçici alanını çember bölgesinde kullanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mn-cember",
+   "tip": "Yüklü parçacığın çembersel hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-16",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Eğik düzlemde dengedeki çubuk",
+   "fikir": "Manyetik kuvvetin yönü sağ el kuralıyla bulunur; denge eğim doğrultusunda kurulur.",
+   "tuzak": "Kuvveti eğim boyunca saymak; ağırlığın bileşenini yanlış almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mn-kuvvet",
+   "tip": "Akım taşıyan tele etkiyen kuvvet",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-17",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Düz tel + halka alanının sıfırlanması",
+   "fikir": "Tel ve halkanın merkezde zıt yönlü alanları eşitlenir.",
+   "tuzak": "Halka formülünü düz tele uygulamak; 2π ve 2 çarpanlarını karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mn-halka",
+   "tip": "Halka ve bobinin alanı",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-18",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Üç telin net kuvveti",
+   "fikir": "Aynı yönlü akımlar çeker, zıt yönlüler iter; dik iki kuvvet vektörel birleşir.",
+   "tuzak": "Kuvvetleri skaler toplamak; çekme/itme yönünü ters almak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mn-paralel",
+   "tip": "Paralel akımlı teller",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-19",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Alan bölgesinden sapma açısı",
+   "fikir": "Bölge genişliği d ve sapma θ için r = d ÷ sinθ; eşit q, v ve B’de kütle yarıçapla orantılıdır.",
+   "tuzak": "Sapma açısını yarıçapla doğru orantılamak; oranı ters yazmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "mn-cember",
+   "tip": "Yüklü parçacığın çembersel hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  },
+  {
+   "id": "K-AFMANYETIK-20",
+   "konu": "Manyetik Alan ve Manyetik Kuvvet",
+   "alt": "Aynı gerilimle hızlanan parçacıklar",
+   "fikir": "q·V = ½mv² ile hız, ardından r = mv ÷ (qB) ile yarıçap; r ∝ √(m ÷ q).",
+   "tuzak": "Aynı gerilimi aynı hız sanmak; yarıçapı doğrudan kütleyle orantılamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "mn-cember",
+   "tip": "Yüklü parçacığın çembersel hareketi",
+   "kaynak": "ÖSYM 2018–2025 AYT Fizik (manyetik alan, tele ve yüklü parçacığa etkiyen manyetik kuvvet, sağ el kuralı; yalnız mantık) · 345 AYT Fizik · Bilgi Sarmal AYT Fizik denemeleri · MEB 11. sınıf"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "mn-tel",
+   "ad": "Düz telin manyetik alanı",
+   "kartlar": [
+    "K-AFMANYETIK-01",
+    "K-AFMANYETIK-02",
+    "K-AFMANYETIK-06"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  },
+  {
+   "tipId": "mn-kuvvet",
+   "ad": "Akım taşıyan tele etkiyen kuvvet",
+   "kartlar": [
+    "K-AFMANYETIK-03",
+    "K-AFMANYETIK-04",
+    "K-AFMANYETIK-14",
+    "K-AFMANYETIK-16"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  },
+  {
+   "tipId": "mn-paralel",
+   "ad": "Paralel akımlı teller",
+   "kartlar": [
+    "K-AFMANYETIK-05",
+    "K-AFMANYETIK-18"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  },
+  {
+   "tipId": "mn-halka",
+   "ad": "Halka ve bobinin alanı",
+   "kartlar": [
+    "K-AFMANYETIK-07",
+    "K-AFMANYETIK-08",
+    "K-AFMANYETIK-09",
+    "K-AFMANYETIK-17"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  },
+  {
+   "tipId": "mn-yuklu",
+   "ad": "Yüklü parçacığın manyetik alandaki hareketi",
+   "kartlar": [
+    "K-AFMANYETIK-10",
+    "K-AFMANYETIK-11",
+    "K-AFMANYETIK-12"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  },
+  {
+   "tipId": "mn-cember",
+   "ad": "Yüklü parçacığın çembersel hareketi",
+   "kartlar": [
+    "K-AFMANYETIK-13",
+    "K-AFMANYETIK-15",
+    "K-AFMANYETIK-19",
+    "K-AFMANYETIK-20"
+   ],
+   "uygulamaKonu": "afiz|Manyetik Alan ve Manyetik Kuvvet"
+  }
+ ]
+}

@@ -26,3 +26,10 @@ TYT fizik kurallarının hepsi geçerli: önce `arac/FIZ-ORTAK.md`'yi oku (orada
 - `python3 kalite.py ayt-fiz/<onek> <onek>` → `/tmp/kor/aytfiz-<onek>-00NN.png`; şekilli olanların HEPSİNE Read ile bak ve düzelt (ok yönleri, açı, devre bağlantısı, okunan değerler, cevabı ele vermeme).
 - Çalışma dosyaların yalnız kendi scratchpad alt klasöründe. hazirla.sh, git, GitHub'a dokunma.
 - Rapor EN FAZLA 3 satır: dosya, zorluk/şekil/öncüllü dağılımı, varsa sorun.
+
+## 1. parçadan dersler (doğrulayıcı bulguları — baştan uygula)
+- Şekildeki ok boyu/oranı cevabı doğrudan vermesin: istenen büyüklüğün okunu ya eşit/nötr çiz ya da değeri etiketle ver; açı yayı ile çizilen açı uyumlu olsun.
+- İpucu/püf/bilgi kartı sorunun ara sonucunu, öncül hükmünü ya da anahtar fikri söylemesin; kart örneği sorunun sayılarını kullanmasın.
+- Her çeldirici açıklaması tam cümle (".." ile bitmez) ve o DEĞERİ gerçekten üretir; betikte hesapla assert et.
+- "Zor" yalnız gerçek çok adımlı/iki kavramlı sorular; tek adımlı üç yargı "orta"dır. Aynı kalıbı ve aynı sayıları paket içinde tekrarlama.
+- Öncüllü kökte "Buna göre," kalıbı; kişi/cisim durumları (oturan/yürüyen, sabit/hareketli) açık.

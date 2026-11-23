@@ -1,0 +1,177 @@
+{
+ "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2018–2026 Fizik, MEB 12. sınıf indüksiyon, alternatif akım ve transformatörler.",
+ "kartlar": [
+  {
+   "id": "K-AFIND-01",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Manyetik akı ve açı",
+   "fikir": "Φ = B·A·cosθ; θ yüzey normali ile alan arasındaki açıdır, alan çizgisi ile düzlem arasındaki açı verilmişse sinüs kullanılır.",
+   "tuzak": "Düzlemle yapılan açıyı normalle yapılmış gibi almak; açıyı hiç hesaba katmamak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ind-aki",
+   "tip": "Manyetik akı hesabı ve açı",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-02",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Lenz yasası: mıknatıs ve bobin",
+   "fikir": "İndüklenen akım, kendisini doğuran akı değişimine karşı koyar; akı artarken zıt, azalırken aynı yönlü alan oluşur. Akı değişmiyorsa emk yoktur, değişim hızı arttıkça emk büyür.",
+   "tuzak": "Bobinin mıknatısı çekeceğini sanmak; sabit akıda da akım beklemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ind-lenz",
+   "tip": "Lenz yasası ve indüksiyon akımının yönü",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-03",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Faraday yasası: Φ–t ve B–t grafikleri",
+   "fikir": "ε = −N·ΔΦ/Δt; grafikte eğim emk’yı verir. B–t grafiğinde ε = A·ΔB/Δt, dirençteki ısı Q = ε²·t/R.",
+   "tuzak": "Sarım sayısını ya da süreyi katmamak; eğim yerine değer okumak; yükü ısı sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "ind-faraday",
+   "tip": "Faraday yasası ve grafik yorumu",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-04",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Hareketli iletken ve raylar",
+   "fikir": "ε = B·ℓ·v; i = ε/R; sabit hız için F = B·i·ℓ = B²ℓ²v/R. Sınır hızda uygulanan kuvvetin gücü dirençteki ısıl güce eşittir. Çerçeve alana girerken ve çıkarken akım vardır, tamamen içindeyken yoktur.",
+   "tuzak": "ℓ ya da B’yi karesiz almak; akımı kuvvet sanmak; alan içindeki çerçevede de akım beklemek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ind-hareketli",
+   "tip": "Hareketli iletken, emk ve manyetik kuvvet",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-05",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Öz-indüksiyon",
+   "fikir": "ε = L·Δi/Δt; i–t grafiğinde emk eğimle orantılıdır. Akım değişmeyince emk sıfırdır; bobinde depolanan enerji E = ½·L·i²’dir.",
+   "tuzak": "Emk’yı L ile çarpmadan eğim sanmak; ortalama değişim hızını kullanmak; enerjide ½ ve kareyi unutmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "ind-oz",
+   "tip": "Öz-indüksiyon emk’sı ve RL devresi",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-06",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Alternatif akım: etkin değer ve üretim",
+   "fikir": "V_etkin = V_maks/√2, i_etkin = i_maks/√2; ısı ve güç etkin değerlerle bulunur. Döner çerçevede akı en büyükken emk sıfır, düzlem alana paralelken emk en büyüktür.",
+   "tuzak": "Maksimum değerle ısı hesaplamak; grafikten tepeden tepeye değeri okumak; akı ile emk’nın aynı anda en büyük olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "ac-etkin",
+   "tip": "Alternatif akımın etkin değeri ve üretimi",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-07",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "RLC devresi: reaktans, empedans, rezonans",
+   "fikir": "X_L = ωL, X_C = 1/(ωC), Z = √(R² + (X_L − X_C)²). Rezonansta X_L = X_C, Z = R, akım en büyüktür; bobin ve sığaç gerilimleri kaynak gerilimini aşabilir.",
+   "tuzak": "Direnç ve reaktansları cebirsel toplamak; rezonansta bobin gerilimini kaynak gerilimine eşit sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ac-rlc",
+   "tip": "RLC devresi: reaktans, empedans ve rezonans",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  },
+  {
+   "id": "K-AFIND-08",
+   "konu": "İndüksiyon, Alternatif Akım ve Transformatörler",
+   "alt": "Transformatör ve enerji iletimi",
+   "fikir": "V_p/V_s = N_p/N_s; ideal trafoda P_p = P_s, akımlar sarım sayılarıyla ters orantılıdır; verim = P_s/P_p. İletimde gerilim yükseltilince hat akımı ve I²R kaybı azalır.",
+   "tuzak": "Akımı da gerilim gibi dönüştürmek; verimi unutmak; kaybı P = V²/R ya da gerilimle hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "tr-trafo",
+   "tip": "Transformatör ve enerji iletimi",
+   "kaynak": "ÖSYM AYT 2018–2026 Fizik indüksiyon, alternatif akım ve transformatör soruları (yalnız mantık) · 345 AYT Fizik s.220–249 · Bilgi Sarmal AYT denemeleri"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ind-aki",
+   "ad": "Manyetik akı hesabı ve açı",
+   "kartlar": [
+    "K-AFIND-01"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ind-lenz",
+   "ad": "Lenz yasası ve indüksiyon akımının yönü",
+   "kartlar": [
+    "K-AFIND-02"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ind-faraday",
+   "ad": "Faraday yasası ve grafik yorumu",
+   "kartlar": [
+    "K-AFIND-03"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ind-hareketli",
+   "ad": "Hareketli iletken, emk ve manyetik kuvvet",
+   "kartlar": [
+    "K-AFIND-04"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ind-oz",
+   "ad": "Öz-indüksiyon emk’sı ve RL devresi",
+   "kartlar": [
+    "K-AFIND-05"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ac-etkin",
+   "ad": "Alternatif akımın etkin değeri ve üretimi",
+   "kartlar": [
+    "K-AFIND-06"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "ac-rlc",
+   "ad": "RLC devresi: reaktans, empedans ve rezonans",
+   "kartlar": [
+    "K-AFIND-07"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  },
+  {
+   "tipId": "tr-trafo",
+   "ad": "Transformatör ve enerji iletimi",
+   "kartlar": [
+    "K-AFIND-08"
+   ],
+   "uygulamaKonu": "afiz|İndüksiyon, Alternatif Akım ve Transformatörler"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "konu": "Elektrik Alan ve Potansiyel",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Fizik 2018–2025 (yalnız mantık), 345 AYT Fizik Soru Bankası, MEB 11. sınıf fizik müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AFEA-01",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Coulomb kuvveti",
+   "fikir": "İki noktasal yük arasındaki kuvvet F = k·q₁q₂/r² ile bulunur: yüklerin çarpımıyla doğru, uzaklığın karesiyle ters orantılıdır; kuvvetler etki–tepki çiftidir.",
+   "tuzak": "Uzaklığı kare almadan kullanmak; yüklerden yalnız birinin değişimini hesaba katmak; iki yüke etki eden kuvvetleri farklı sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ea-coulomb",
+   "tip": "Coulomb kuvveti ve bileşke kuvvet",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-02",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Noktasal yüklerin elektrik alanı",
+   "fikir": "E = k·q/r²; alan vektörel olup pozitif yükten uzağa, negatif yüke doğrudur. Birden çok yükün alanı vektörel toplanır; iki yük arasındaki sıfır alan noktası büyük yükten uzaktadır.",
+   "tuzak": "Alan vektörlerini büyüklük olarak toplamak; yönleri karıştırmak; sıfır noktasını küçük yüke yakın sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ea-alan",
+   "tip": "Noktasal yüklerin elektrik alanı",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-03",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Elektriksel potansiyel",
+   "fikir": "V = k·q/r skalerdir ve işaretlidir; birden çok yükün potansiyeli cebirsel toplanır; V ile 1/r orantılıdır, 1/r² ile değil.",
+   "tuzak": "Potansiyeli vektör gibi toplamak; işareti atlamak; uzaklığın karesini kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ea-potansiyel",
+   "tip": "Elektriksel potansiyel ve potansiyel farkı",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-04",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Potansiyel enerji ve iş",
+   "fikir": "Yük taşınırken elektriksel kuvvetin işi W = q(V_i − V_s) ve potansiyel enerji değişimi ΔU = q·ΔV; iş yoldan bağımsız, eş potansiyel yüzeyde sıfırdır. İki yükün enerjisi U = k·q₁q₂/r.",
+   "tuzak": "Yükün işaretini atlamak; işin yoldan bağımlı olduğunu sanmak; ΔV yerine V almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ea-enerji",
+   "tip": "Elektriksel potansiyel enerji ve iş",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-05",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Düzgün elektrik alan",
+   "fikir": "Düzgün alanda V farkı ΔV = E·d (d alan doğrultusundaki uzaklık); alana dik doğrultuda potansiyel sabittir; yüklü parçacık sabit kuvvetle hızlanır.",
+   "tuzak": "Eğik yol uzunluğunu d almak; alana dik bileşeni potansiyel farkına katmak; yükün işaretiyle yönü karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ea-duzgun",
+   "tip": "Düzgün elektrik alan ve yüklü parçacığın hareketi",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-06",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Alan, potansiyel ve enerji kavramları",
+   "fikir": "Alan çizgileri birbirini kesmez; iletken kürelerde değme sonrası potansiyel eşitlenir, yük yarıçapla orantılı dağılır; eşit yüklü bölgelerde alan ve potansiyel farklı büyüklüklerdir.",
+   "tuzak": "Alan ile potansiyeli aynı sanmak; yük paylaşımını eşit saymak; skaler–vektör ayrımını unutmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ea-kavram",
+   "tip": "Elektrik alan, potansiyel ve yük dağılımı kavramları",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  },
+  {
+   "id": "K-AFEA-07",
+   "konu": "Elektrik Alan ve Potansiyel",
+   "alt": "Elektriksel denge",
+   "fikir": "Serbest yüklerin dengesinde her yüke etkiyen bileşke kuvvet sıfırdır; asılı yüklü cisimde ip gerilmesi, ağırlık ve elektriksel kuvvet bileşenlerinin dengesi yazılır; ip kopunca net kuvvet gerilmeye eşittir.",
+   "tuzak": "Tek yükün dengesiyle yetinmek; elektriksel kuvvetin yönünü ters almak; ip koptuktan sonra ağırlığı tek başına kullanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "ea-denge",
+   "tip": "Yüklerin dengesi ve asılı yüklü cisim",
+   "kaynak": "ÖSYM AYT Fizik 2018–2025 (yalnız mantık) · 345 AYT Fizik s.190–240 · MEB 11. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ea-coulomb",
+   "ad": "Coulomb kuvveti ve bileşke kuvvet",
+   "kartlar": [
+    "K-AFEA-01"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-alan",
+   "ad": "Noktasal yüklerin elektrik alanı",
+   "kartlar": [
+    "K-AFEA-02"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-potansiyel",
+   "ad": "Elektriksel potansiyel ve potansiyel farkı",
+   "kartlar": [
+    "K-AFEA-03"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-enerji",
+   "ad": "Elektriksel potansiyel enerji ve iş",
+   "kartlar": [
+    "K-AFEA-04"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-duzgun",
+   "ad": "Düzgün elektrik alan ve yüklü parçacığın hareketi",
+   "kartlar": [
+    "K-AFEA-05"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-kavram",
+   "ad": "Elektrik alan, potansiyel ve yük dağılımı kavramları",
+   "kartlar": [
+    "K-AFEA-06"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  },
+  {
+   "tipId": "ea-denge",
+   "ad": "Yüklerin dengesi ve asılı yüklü cisim",
+   "kartlar": [
+    "K-AFEA-07"
+   ],
+   "uygulamaKonu": "afiz|Elektrik Alan ve Potansiyel"
+  }
+ ]
+}
