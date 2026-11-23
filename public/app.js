@@ -1788,7 +1788,10 @@ function paketTahmin(id){ const L = cfg().paketler, tu = num(odemeOf(id)?.tutar)
 function paketOzet(){ const L = cfg().paketler, m = new Map(L.map(p=>[p.k, {p, n:0, tl:0}]));
   S.students.forEach((x,id)=>{ const r = m.get(paketOf(x).k); if(!r) return; r.n++; const o = odemeOf(id); r.tl += num(o?.tutar) ?? num(r.p.fiyat) ?? 0; });
   return [...m.values()]; }
-function seansGunu(sid, d){ const z = duzenOf(sid), x = S.students.get(sid);
+/* Görüşmesiz: koç bu öğrencinin seanslarını takvimine almıyor (ör. başkası görüşüyor); öğrencinin başka hiçbir şeyi değişmez */
+const gorusmesiz = sid => !!(S.cnotes.get(sid)||{}).gorusmesiz;
+function gorusmesizYap(sid, on){ const cn = {...(S.cnotes.get(sid)||{})}; if(on) cn.gorusmesiz = nowISO(); else delete cn.gorusmesiz; S.cnotes.set(sid, cn); persistDoc("coachNotes", sid, 0); }
+function seansGunu(sid, d){ if(gorusmesiz(sid)) return false; const z = duzenOf(sid), x = S.students.get(sid);
   if(isWA(x)){ if(z && z.gun!=null && z.gun!=="") return z.gun===dIdx(d); return pStart(x, d)===d; } /* WhatsApp paketi: döngü gününde haftalık rapor, saat yok */
   const o = sonSaat(sid, d); if(o) return dIdx(o.tarih)===dIdx(d); /* geçen hafta(lar)daki son görüşme hangi gündeyse bu hafta da o gün */
   if(!z) return false; const gunVar = z.gun!=null && z.gun!=="";
@@ -1816,7 +1819,7 @@ function duzenSabitle(){ S.students.forEach((x,sid)=>{ const z = duzenOf(sid); i
 function otoGun(sid){ const x = S.students.get(sid); return x ? dIdx(curStart(x)) : 0; }
 /* Bir günün görüşmeleri: kayıtlı olanlar + haftalık düzenden gelenler (o hafta için ayrıca kaydı yoksa) */
 function gunGorusme(d){
-  const real = [...S.gorus.entries()].filter(([,g])=>g.tarih===d).map(([id,g])=>({...g, id}));
+  const real = [...S.gorus.entries()].filter(([,g])=>g.tarih===d && !(g.sid && gorusmesiz(g.sid) && g.durum!=="yapildi")).map(([id,g])=>({...g, id}));
   const w = monday(d), virt = [];
   S.students.forEach((x,sid)=>{ const z = duzenOf(sid); if(!seansGunu(sid, d) || (z && z.bas && d < z.bas)) return;
     if([...S.gorus.values()].some(g=>g.sid===sid && (g.kaynak==="duzen" || g.tur==="seans") && (g.hafta || monday(g.tarih))===w)) return;
@@ -1828,13 +1831,13 @@ function gunGorusme(d){
 /* Öğrencinin sıradaki görüşmesi (4 hafta içinde, haftalık düzenden gelenler dahil) */
 function siradakiGorusme(sid){ const t = today(); for(let i=0;i<28;i++){ const g = gunGorusme(addDays(t,i)).find(x=>x.sid===sid && x.durum==="planli" && x.tur!=="rapor"); if(g) return g; } return null; }
 const gorusmesiVar = sid => [...S.gorus.values()].some(g=>g.sid===sid) || !!duzenOf(sid)?.saat;
-function gorusmeKart(sid){ const x = S.students.get(sid); if(!x) return ""; const g = siradakiGorusme(sid), z = duzenOf(sid), ilk = !gorusmesiVar(sid) && !g;
+function gorusmeKart(sid){ const x = S.students.get(sid); if(!x) return ""; if(gorusmesiz(sid)) return `<div class="card gkart"><div class="sech"><h3>${icon("clock","sm")} Görüşme</h3><span class="pill">Görüşme listesinde değil</span></div><p class="small muted" style="margin:6px 0 10px">Bu öğrencinin seansları Görüşmeler sayfanda görünmez. Öğrencinin programı ve diğer her şeyi aynen devam eder.</p><div class="pills"><button class="btn sm pri" data-act="gorusmeli" data-v="${esc(sid)}">${icon("plus","xs")} Görüşmelere geri ekle</button></div></div>`; const g = siradakiGorusme(sid), z = duzenOf(sid), ilk = !gorusmesiVar(sid) && !g;
   const duz = z && z.saat && z.gun!=null && z.gun!=="" ? `Her hafta ${GUN[z.gun]} ${z.saat}` : "";
   const ust = g ? `<b>${g.tur==="ilk"?"İlk görüşme":"Sıradaki görüşme"}:</b> ${GUN[dIdx(g.tarih)]}, ${trDate(g.tarih)}${g.saat?` · ${g.saat}`:` · <span style="color:var(--bad)">saat yok</span>`}`
     : ilk ? `<b>İlk görüşme henüz planlanmadı.</b>` : `<span class="muted">Önümüzdeki 4 haftada planlı görüşme yok.</span>`;
   return `<div class="card gkart"><div class="sech"><h3>${icon("clock","sm")} Görüşme</h3>${duz?`<span class="pill">${esc(duz)}</span>`:""}</div>
     <p class="small" style="margin:6px 0 10px">${ust}</p>
-    <div class="pills">${g?`<button class="btn sm" data-act="gmod" data-v="${g.id}">Görüşmeyi aç</button>`:""}<button class="btn sm ${g?"":"pri"}" data-act="sheet" data-v="gplan" data-sid="${sid}">${icon("plus","xs")} ${ilk?"İlk görüşmeyi planla":"Görüşme planla"}</button></div></div>`; }
+    <div class="pills">${g?`<button class="btn sm" data-act="gmod" data-v="${g.id}">Görüşmeyi aç</button>`:""}<button class="btn sm ${g?"":"pri"}" data-act="sheet" data-v="gplan" data-sid="${sid}">${icon("plus","xs")} ${ilk?"İlk görüşmeyi planla":"Görüşme planla"}</button><button class="btn sm" data-act="gorusmesiz" data-v="${esc(sid)}">Görüşmelerden çıkar</button></div></div>`; }
 function gorusAd(g){ return g.sid && S.students.has(g.sid) ? S.students.get(g.sid).name : (g.ad || "İsimsiz"); }
 /* Sanal (düzenden gelen) görüşmeyi gerçek kayda çevirir */
 function gorusGercek(id){ if(!id.startsWith("v:")) return id; const [,sid,d] = id.split(":"); const z = duzenOf(sid) || {};
@@ -1850,7 +1853,7 @@ function cGorusme(){
     const ilk = g.tur==="ilk", dur = g.durum;
     rows.push(`<div class="grow g-${dur} ${g.cakisma?"g-cak":""} ${ilk?"g-ilk":""}"><div class="gsaat">${g.saat?`<b class="num">${g.saat}</b><span class="num">${toHm(a+(g.sure||15))}</span>`:`<b>—</b><span>saat yok</span>`}</div>
       <div style="min-width:0;flex:1;cursor:pointer" data-act="gmod" data-v="${g.id}" role="button" tabindex="0"><b>${esc(gorusAd(g))}</b><div class="gmeta"><span class="gtag">${ilk?"İlk görüşme":"Seans"} · ${g.sure||15} dk</span>${g.sanal||g.kaynak==="duzen"?`<span class="faint">${g.aktar?"geçen haftanın saati":g.tek?"sadece bu hafta":"her hafta"}</span>`:""}${!g.saat?`<span class="gwarn">Saati gir</span>`:""}${g.cakisma?`<span class="gwarn">Çakışıyor</span>`:""}${dur==="yapildi"?`<span class="gok">Yapıldı</span>`:dur==="gelmedi"?`<span class="gwarn">Gelmedi</span>`:dur==="iptal"?`<span class="faint">İptal</span>`:""}</div>${g.not?`<div class="small muted" style="margin-top:4px">${esc(g.not)}</div>`:""}</div>
-      <div class="gact">${g.sid&&S.students.has(g.sid)?`<button class="iconbtn sm wa" data-act="sheet" data-v="wa" data-sid="${g.sid}" aria-label="WhatsApp">${icon("chat","sm")}</button>`:""}<button class="iconbtn sm ${dur==="yapildi"?"on":""}" data-act="gdurum" data-id="${g.id}" data-v="${dur==="yapildi"?"planli":"yapildi"}" aria-label="Yapıldı">${icon("check","sm")}</button><button class="iconbtn sm" data-act="sheet" data-v="gplan" data-id="${g.id}" aria-label="Düzenle">${icon("edit","sm")}</button></div></div>`); });
+      <div class="gact">${g.sid&&S.students.has(g.sid)?`<button class="iconbtn sm wa" data-act="sheet" data-v="wa" data-sid="${g.sid}" aria-label="WhatsApp">${icon("chat","sm")}</button>`:""}<button class="iconbtn sm ${dur==="yapildi"?"on":""}" data-act="gdurum" data-id="${g.id}" data-v="${dur==="yapildi"?"planli":"yapildi"}" aria-label="Yapıldı">${icon("check","sm")}</button><button class="iconbtn sm" data-act="sheet" data-v="gplan" data-id="${g.id}" aria-label="Düzenle">${icon("edit","sm")}</button>${g.sid && S.students.has(g.sid) && !ilk && dur!=="yapildi" ? `<button class="iconbtn sm" data-act="gorusmesiz" data-v="${esc(g.sid)}" aria-label="Görüşmelerden çıkar" title="Görüşmelerden çıkar">${icon("x","sm")}</button>` : ""}</div></div>`); });
   return `${topbar(`<h1 class="ttl">Görüşmeler</h1>`, `<button class="iconbtn" data-act="sheet" data-v="gplan" data-d="${d}" aria-label="Görüşme ekle">${icon("plus")}</button>`)}
   <div class="page wide">
     <div class="wknav"><button class="iconbtn" data-act="gwk" data-d="-7" aria-label="Önceki hafta">${icon("back","sm")}</button><b>${shortDate(w)} – ${shortDate(addDays(w,6))}${w===monday(t)?` <span class="pill ac">Bu hafta</span>`:""}</b><button class="iconbtn" data-act="gwk" data-d="7" aria-label="Sonraki hafta">${icon("chev","sm")}</button></div>
@@ -1861,6 +1864,8 @@ function cGorusme(){
     ${rap.length?`<div class="card"><div class="sech"><h3>${icon("chat","sm")} Haftalık raporlar · WhatsApp</h3><span class="faint small">${rap.filter(g=>g.durum==="yapildi").length}/${rap.length} geldi</span></div>
       <div class="glist">${rap.map(g=>`<div class="grow g-${g.durum} rap"><div style="min-width:0;flex:1;cursor:pointer" data-act="gmod" data-v="${g.id}" role="button" tabindex="0"><b>${esc(gorusAd(g))}</b><div class="gmeta"><span class="gtag">Rapor günü</span>${g.durum==="yapildi"?`<span class="gok">Rapor geldi</span>`:g.durum==="gelmedi"?`<span class="gwarn">Gelmedi</span>`:`<span class="faint">Bekleniyor</span>`}</div>${g.not?`<div class="small muted" style="margin-top:4px">${esc(g.not)}</div>`:""}</div>
         <div class="gact"><button class="iconbtn sm ${g.durum==="yapildi"?"on":""}" data-act="gdurum" data-id="${g.id}" data-v="${g.durum==="yapildi"?"planli":"yapildi"}" aria-label="Rapor geldi">${icon("check","sm")}</button>${waBtn(g.sid,true).replace("WhatsApp","")}</div></div>`).join("")}</div></div>`:""}
+    ${(()=>{ const L = [...S.students.entries()].filter(([id,x])=>!x.silindi && gorusmesiz(id)).sort((a,b)=>(a[1].name||"").localeCompare(b[1].name||"","tr"));
+      return L.length ? `<div class="card"><div class="sech"><h3>Görüşme listesinde olmayanlar</h3><span class="faint small">${L.length} öğrenci</span></div><p class="muted small" style="margin:4px 0 8px">Bunların seansları takviminde görünmez; programları ve diğer her şey aynen devam eder.</p><div class="pills">${L.map(([id,x])=>`<button class="btn sm" data-act="gorusmeli" data-v="${esc(id)}" title="Görüşmelere geri ekle">${icon("plus","xs")} ${esc(x.name||"")}</button>`).join("")}</div></div>` : ""; })()}
     <div class="card"><div class="sech"><h3>Haftalık düzen</h3><button class="btn sm" data-act="sheet" data-v="duzen">Düzenle</button></div>
       <p class="muted small" style="margin:6px 0 0">Seans günü öğrencinin program döngüsünden otomatik gelir (son görüşme günü); sen sadece saati girersin.</p></div>
     <p class="faint small" style="text-align:center">Seans ${SURE_SEANS} dk, ilk görüşme ${SURE_ILK} dk. Bu sayfayı sadece sen görürsün.</p>
@@ -3538,10 +3543,10 @@ function openSheet(kind, el){
       S.gday = tarih; closeSheet(); if(!["basvuru","detay"].includes(S.view)) S.view = "gorusme"; render(); toast("Görüşme kaydedildi"); }); }
   if(kind==="duzen"){ const gunOpt = v => GUN.map((g,i)=>`<option value="${i}" ${v===i?"selected":""}>${g}</option>`).join("");
     return sheet(`<h3>Haftalık düzen</h3><p class="muted small" style="margin:-6px 0 0">Her hafta, geçen hafta ayarladığın gün ve saatte görüşme olur. Burada değiştirirsen sonraki haftalar da öyle devam eder. Saati boş bırakılan öğrenci takvime gelmez.</p>
-      <div class="dzlist">${sortedStudents().map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(gecerliGun(id))}</select>${isWA(x)?`<span class="dzwa">${icon("chat","xs")} Rapor</span>`:`<input type="time" step="300" name="s_${id}" value="${esc((sonSaat(id, today())||{}).saat||z.saat||"")}" aria-label="${esc(x.name)} saati">`}</div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
+      <div class="dzlist">${sortedStudents().filter(([id])=>!gorusmesiz(id)).map(([id,x])=>{ const z = duzenOf(id)||{}; return `<div class="dzrow"><b>${esc(x.name)}</b><select name="g_${id}" aria-label="${esc(x.name)} günü">${gunOpt(gecerliGun(id))}</select>${isWA(x)?`<span class="dzwa">${icon("chat","xs")} Rapor</span>`:`<input type="time" step="300" name="s_${id}" value="${esc((sonSaat(id, today())||{}).saat||z.saat||"")}" aria-label="${esc(x.name)} saati">`}</div>`; }).join("") || `<div class="empty">Henüz öğrenci yok.</div>`}</div>
       <div class="err" id="serr"></div><div class="acts"><button type="button" class="btn" data-close>Vazgeç</button><button class="btn pri">Kaydet</button></div>`,
     fd=>{ let n = 0; const w = monday(today());
-      for(const [id,x] of sortedStudents()){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id), gun = g==="" || g==null ? null : +g, eskiGun = gecerliGun(id), o = isWA(x) ? null : sonSaat(id, today()), eskiSaat = (o&&o.saat) || z?.saat || "";
+      for(const [id,x] of sortedStudents().filter(([id])=>!gorusmesiz(id))){ const g = fd.get("g_"+id), sa = fd.get("s_"+id), z = duzenOf(id), gun = g==="" || g==null ? null : +g, eskiGun = gecerliGun(id), o = isWA(x) ? null : sonSaat(id, today()), eskiSaat = (o&&o.saat) || z?.saat || "";
         if(isWA(x)){ if(gun!==eskiGun || (z?.gun??null)!==gun){ setDuzen(id, gun==null ? null : {gun, bas:z?.bas||w}); n++; } continue; }
         if(!sa){ if(z){ setDuzen(id, null); n++; } continue; }
         if(!z || gun!==eskiGun || sa!==eskiSaat || (z.gun??null)!==gun || z.saat!==sa){ setDuzen(id, {...(z||{}), gun, saat:sa, sure:z?.sure||SURE_SEANS, bas:z?.bas||w}); n++; } }
@@ -3780,6 +3785,8 @@ document.addEventListener("click", e=>{
     case "wagonder": waAc(b.dataset.sid, waDoldur(wmesajlar()[+b.dataset.i], b.dataset.sid)); break;
     case "gwk": S.gday = addDays(monday(S.gday||today()), +b.dataset.d); render(); break;
     case "gdurum": gorusSet(b.dataset.id, g=>{ g.durum = v; }); render(); break;
+    case "gorusmesiz": gorusmesizYap(v, true); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelerden çıkarıldı`); break;
+    case "gorusmeli": gorusmesizYap(v, false); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelere geri eklendi`); break;
     case "karnepaylas": karnePaylas(); break;
     case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
