@@ -2390,18 +2390,24 @@ async function karnePaylas(){ const s = st(); if(!s) return; const v = karneVeri
   if(!gitti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Karne indirildi; WhatsApp'ta fotoğraf olarak gönderebilirsin"); }
   if(!A()) mutate(x=>{ x.karnePay = {...(x.karnePay||{}), [v.bas]: nowISO()}; }); render(); if(gitti) toast("Karne paylaşıldı 👏"); }
 /* Sınıf hikayesi (koç): Instagram hikayesi için 1080×1920 görsel — renk teması + düzen (sınıf / podyum / liste); kod adları, yalnız gerçek öğrenciler */
-function hikayeVeri(mod){ const L = [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>ogrOzet(id,x)), dk = x => mod==="hafta" ? x.hafta : x.bugun;
+/* tarih: gün kipinde o gün, hafta kipinde o haftanın Pazartesisi (boşsa bugün / bu hafta) */
+function hkTarih(mod){ const t = today(), d = S.hkTarih || ""; return mod==="hafta" ? (d && d <= monday(t) ? monday(d) : monday(t)) : (d && d <= t ? d : t); }
+function hikayeVeri(mod, tarih){ const t = today(); tarih = tarih || hkTarih(mod); const gunler = mod==="hafta" ? [0,1,2,3,4,5,6].map(i=>addDays(tarih,i)).filter(d=>d<=t) : [tarih];
+  const ham = new Map([...S.students.entries()]);
+  const L = [...ham.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>{ const o = ogrOzet(id,x); o.gdk = gunler.reduce((a,d)=>a + (d===t ? o.bugun : minutes(x, d, false)), 0); return o; }), dk = x => x.gdk;
   const cal = L.filter(x=>dk(x) > 0).sort((a,b)=>dk(b)-dk(a)), top = cal.reduce((a,x)=>a+dk(x),0);
-  return { mod, L: cal.map(x=>({...x, adT:adSoyad(x.ad||"")||"Öğrenci", dk:dk(x)})), top, kisi:cal.length, canli:L.filter(x=>x.canli).length, ort: cal.length ? top/cal.length : 0, enCok: cal.length ? dk(cal[0]) : 0 }; }
+  return { mod, tarih, L: cal.map(x=>({...x, adT:adSoyad(x.ad||"")||"Öğrenci", dk:dk(x)})), top, kisi:cal.length, canli:L.filter(x=>x.canli).length, ort: cal.length ? top/cal.length : 0, enCok: cal.length ? dk(cal[0]) : 0 }; }
 const svgResim = svg => new Promise(res=>{ const i = new Image(); i.onload = ()=>res(i); i.onerror = ()=>res(null); i.src = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg.replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ')); });
 const HK_TEMA = {
   orman:{ad:"Orman", bg:["#0E3B23","#051A10"], tx:"#FFFFFF", sub:"#D1FAE5", acc:"#86EFAC", chip:"rgba(187,247,208,.4)", chipTx:"#BBF7D0", line:"rgba(255,255,255,.035)", row:"rgba(255,255,255,.06)", offBg:"rgba(255,255,255,.12)", offTx:"#FFFFFF", onBg:"#22C55E", onTx:"#052E16", name:"#E2E8F0", rankBg:"rgba(255,255,255,.14)", rankTx:"#D1FAE5", bar:"rgba(255,255,255,.10)", glow:"74,222,128", logoBg:"#22C55E", logoTx:"#0E3B23", deco:"rgba(34,197,94,.10)", board:["#23493A","#173528"], frame:"#7C4F2A", podyum:["#14532D","#166534","#15803D"]},
   beyaz:{ad:"Beyaz", bg:["#FFFFFF","#EEF3F1"], tx:"#0F172A", sub:"#475569", acc:"#15803D", chip:"rgba(21,128,61,.35)", chipTx:"#15803D", line:"rgba(15,23,42,.05)", row:"rgba(15,23,42,.045)", offBg:"#E2E8F0", offTx:"#0F172A", onBg:"#16A34A", onTx:"#FFFFFF", name:"#334155", rankBg:"#E2E8F0", rankTx:"#334155", bar:"#E2E8F0", glow:"34,197,94", logoBg:"#16A34A", logoTx:"#FFFFFF", deco:"rgba(34,197,94,.07)", board:["#23493A","#173528"], frame:"#8B5A2B", podyum:["#DCFCE7","#BBF7D0","#86EFAC"]},
   gece:{ad:"Gece", bg:["#131316","#000000"], tx:"#FFFFFF", sub:"#A1A1AA", acc:"#4ADE80", chip:"rgba(255,255,255,.25)", chipTx:"#E4E4E7", line:"rgba(255,255,255,.04)", row:"rgba(255,255,255,.06)", offBg:"rgba(255,255,255,.12)", offTx:"#FFFFFF", onBg:"#22C55E", onTx:"#04130A", name:"#E4E4E7", rankBg:"rgba(255,255,255,.14)", rankTx:"#E4E4E7", bar:"rgba(255,255,255,.12)", glow:"74,222,128", logoBg:"#22C55E", logoTx:"#000000", deco:"rgba(34,197,94,.07)", board:["#26262B","#17171A"], frame:"#3F3F46", podyum:["#1C1C20","#26262B","#303036"]},
   nane:{ad:"Nane", bg:["#ECFDF5","#C7F0DA"], tx:"#064E3B", sub:"#047857", acc:"#059669", chip:"rgba(5,150,105,.4)", chipTx:"#047857", line:"rgba(6,78,59,.06)", row:"rgba(255,255,255,.6)", offBg:"rgba(255,255,255,.85)", offTx:"#064E3B", onBg:"#059669", onTx:"#FFFFFF", name:"#065F46", rankBg:"rgba(255,255,255,.9)", rankTx:"#065F46", bar:"rgba(6,78,59,.10)", glow:"16,185,129", logoBg:"#059669", logoTx:"#FFFFFF", deco:"rgba(255,255,255,.5)", board:["#1F5C46","#164A38"], frame:"#9A6B3F", podyum:["#FFFFFF","#F0FDF4","#DCFCE7"]} };
-const HK_DUZEN = {sinif:"Sınıf", podyum:"Podyum", liste:"Liste"};
+HK_TEMA.gunbatimi = {ad:"Gün batımı", bg:["#FFF4EA","#FFD3B8"], tx:"#431407", sub:"#9A3412", acc:"#EA580C", chip:"rgba(234,88,12,.4)", chipTx:"#C2410C", line:"rgba(67,20,7,.05)", row:"rgba(255,255,255,.6)", offBg:"rgba(255,255,255,.85)", offTx:"#431407", onBg:"#EA580C", onTx:"#FFFFFF", name:"#7C2D12", rankBg:"rgba(255,255,255,.9)", rankTx:"#7C2D12", bar:"rgba(67,20,7,.10)", glow:"251,146,60", logoBg:"#EA580C", logoTx:"#FFFFFF", deco:"rgba(255,255,255,.55)", board:["#23493A","#173528"], frame:"#9A5B2E", podyum:["#FFFFFF","#FFEDD5","#FED7AA"]};
+HK_TEMA.okyanus = {ad:"Okyanus", bg:["#0B2447","#061528"], tx:"#FFFFFF", sub:"#BAE6FD", acc:"#5EEAD4", chip:"rgba(186,230,253,.4)", chipTx:"#BAE6FD", line:"rgba(255,255,255,.04)", row:"rgba(255,255,255,.07)", offBg:"rgba(255,255,255,.12)", offTx:"#FFFFFF", onBg:"#2DD4BF", onTx:"#042F2E", name:"#E0F2FE", rankBg:"rgba(255,255,255,.14)", rankTx:"#E0F2FE", bar:"rgba(255,255,255,.12)", glow:"45,212,191", logoBg:"#2DD4BF", logoTx:"#0B2447", deco:"rgba(45,212,191,.08)", board:["#1E3A5F","#132943"], frame:"#5B6B7E", podyum:["#0F2D52","#16406F","#1D5390"]};
+const HK_DUZEN = {sinif:"Sınıf", podyum:"Podyum", liste:"Liste", kartlar:"Kartlar", yildiz:"Yıldız"};
 function hkSecim(){ let t = S.hkTema, d = S.hkDuzen; try{ t = t || localStorage.getItem("zk-hk-tema"); d = d || localStorage.getItem("zk-hk-duzen"); }catch(e){} return { tema: HK_TEMA[t] ? t : "orman", duzen: HK_DUZEN[d] ? d : "sinif" }; }
-async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TEMA[tema] || HK_TEMA.orman, W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d"), bugunMu = mod!=="hafta";
+async function hikayeCiz(mod, tema, duzen, tarih){ const v = hikayeVeri(mod, tarih), T = HK_TEMA[tema] || HK_TEMA.orman, W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d"), t0 = today(), bugunMu = mod!=="hafta" && v.tarih===t0, buHafta = mod==="hafta" && v.tarih===monday(t0);
   const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
   const sa = m => { m = Math.round(m); const h = Math.floor(m/60), d = m%60; return h ? (d ? `${h} sa ${d} dk` : `${h} saat`) : `${d} dk`; };
   const etiket = o => o.takma || o.adT.split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" ");
@@ -2414,12 +2420,12 @@ async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TE
   g.strokeStyle = T.line; g.lineWidth = 2; for(let y=740; y<H-260; y+=104){ g.beginPath(); g.moveTo(0,y); g.lineTo(W,y); g.stroke(); }
   /* üst */ g.fillStyle = T.logoBg; rr(88,130,60,60,18); g.fill(); yaz("Z", 118, 173, F(800,34), T.logoTx, "center"); yaz("Zekacademy", 164, 173, F(700,34), T.tx);
   const sim = new Date(), saat = String(sim.getHours()).padStart(2,"0")+":"+String(sim.getMinutes()).padStart(2,"0");
-  g.font = F(600,27); const et = bugunMu ? `${tYaz(today())} · ${saat}` : "Bu hafta", ew = g.measureText(et).width + 50; g.strokeStyle = T.chip; g.lineWidth = 2; rr(W-88-ew,128,ew,64,32); g.stroke(); yaz(et, W-88-ew+25, 170, F(600,27), T.chipTx);
+  g.font = F(600,27); const et = bugunMu ? `${tYaz(t0)} · ${saat}` : mod==="hafta" ? (buHafta ? "Bu hafta" : `${shortDate(v.tarih)} – ${shortDate(addDays(v.tarih,6))}`) : `${tYaz(v.tarih)} · ${GUN[dIdx(v.tarih)]}`, ew = g.measureText(et).width + 50; g.strokeStyle = T.chip; g.lineWidth = 2; rr(W-88-ew,128,ew,64,32); g.stroke(); yaz(et, W-88-ew+25, 170, F(600,27), T.chipTx);
   /* kara tahta */ const tx = 88, ty = 236, tw = W-176, th = 420; g.fillStyle = T.frame; rr(tx-14,ty-14,tw+28,th+28,22); g.fill(); g.fillStyle = "rgba(255,255,255,.12)"; rr(tx-14,ty-14,tw+28,8,4); g.fill();
   const tb = g.createLinearGradient(tx,ty,tx+tw,ty+th); tb.addColorStop(0,T.board[0]); tb.addColorStop(1,T.board[1]); g.fillStyle = tb; rr(tx,ty,tw,th,10); g.fill();
   g.save(); rr(tx,ty,tw,th,10); g.clip(); g.fillStyle = "rgba(255,255,255,.035)"; for(let i=0;i<5;i++){ g.beginPath(); g.ellipse(tx+120+i*180, ty+90+((i*67)%220), 160, 40, -.2, 0, 7); g.fill(); } g.restore();
   const tebesir = (t, x, y, f, renk) => { g.font = f; g.fillStyle = renk; g.globalAlpha = .95; g.fillText(t, x, y); g.globalAlpha = .25; g.fillText(t, x+1.5, y+1); g.globalAlpha = 1; };
-  tebesir(bugunMu ? "BUGÜN SINIFTA" : "BU HAFTA SINIFTA", tx+48, ty+78, F(700,30), "#BBF7D0");
+  tebesir(bugunMu ? "BUGÜN SINIFTA" : mod==="hafta" ? (buHafta ? "BU HAFTA SINIFTA" : "O HAFTA SINIFTA") : `${tYaz(v.tarih).toLocaleUpperCase("tr")} GÜNÜ SINIFTA`, tx+48, ty+78, F(700,30), "#BBF7D0");
   const tsa = Math.floor(v.top/60), tdk = Math.round(v.top%60); g.font = F(800,150); const sw = g.measureText(String(tsa)).width; tebesir(String(tsa), tx+42, ty+232, F(800,150), "#FFFFFF");
   tebesir("saat" + (tdk ? ` ${tdk} dk` : ""), tx+42+sw+18, ty+228, F(700,54), "#F1F5F9"); tebesir("toplam odaklı çalışma", tx+48, ty+282, F(500,32), "#D1FAE5");
   g.strokeStyle = "rgba(241,245,249,.35)"; g.lineWidth = 2; g.setLineDash([10,8]); g.beginPath(); g.moveTo(tx+48, ty+318); g.lineTo(tx+tw-48, ty+318); g.stroke(); g.setLineDash([]);
@@ -2430,7 +2436,7 @@ async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TE
   /* ortak: süre kutusu, ışık */ const sureKutu = (o, x, y, z=34, hiz="center") => { const on = bugunMu && o.canli, st = sa(o.dk); g.font = F(800,z); const w = g.measureText(st).width + z*1.05, h = z*1.53, x0 = hiz==="center" ? x - w/2 : hiz==="right" ? x - w : x;
       g.fillStyle = on ? T.onBg : T.offBg; rr(x0, y, w, h, h/2); g.fill(); yaz(st, x0 + w/2, y + h*.69, F(800,z), on ? T.onTx : T.offTx, "center"); };
   const isik = (x, y, r) => { const lg = g.createRadialGradient(x, y, 10, x, y, r); lg.addColorStop(0,`rgba(${T.glow},.38)`); lg.addColorStop(1,`rgba(${T.glow},0)`); g.fillStyle = lg; g.fillRect(x-r, y-r, 2*r, 2*r); };
-  const karR = o => svgResim(karakterSVG(o.av || avOf(o.uid), bugunMu ? o.canli : true));
+  const karR = o => svgResim(karakterSVG(o.av || avOf(o.uid), true)); /* paylaşımda herkes uyanık */
   const y0 = 712; let N = 0, sonY = y0;
   if(duzen==="podyum"){ const P = v.L.slice(0,3), R = v.L.slice(3,8), kr = await Promise.all(P.map(karR)), kr2 = await Promise.all(R.map(karR));
     const yer = [1,0,2], bw = 276, gap = 22, bx0 = (W - 3*bw - 2*gap)/2, taban = 1190, yuk = [240, 205, 176];
@@ -2442,6 +2448,20 @@ async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TE
       if(kr2[j]) g.drawImage(kr2[j], 166, y-6, 82, 82); g.font = F(700,28); yaz(sigdir(etiket(o), 230), 262, y+47, F(700,28), T.name);
       const bx = 520, bw2 = W-176-(bx-88)-220; g.fillStyle = T.bar; rr(bx, y+29, bw2, 16, 8); g.fill(); g.fillStyle = bugunMu && o.canli ? T.onBg : T.acc; rr(bx, y+29, Math.max(16, bw2*o.dk/Math.max(1,v.enCok)), 16, 8); g.fill();
       sureKutu(o, W-108, y+15, 26, "right"); }); N = P.length + R.length; sonY += R.length*86 + 30; }
+  else if(duzen==="kartlar"){ const P = v.L.slice(0,8), kr = await Promise.all(P.map(karR)), cw = (W-176-24)/2, ch = 220;
+    P.forEach((o,i)=>{ const x = 88 + (i%2)*(cw+24), y = y0 + Math.floor(i/2)*(ch+16); g.fillStyle = i < 3 ? `rgba(${T.glow},.16)` : T.row; rr(x, y, cw, ch, 28); g.fill();
+      if(bugunMu && o.canli) isik(x+92, y+120, 90); if(kr[i]) g.drawImage(kr[i], x+12, y+40, 160, 160); rozet(i, x+36, y+36, 22);
+      g.font = F(700,30); yaz(sigdir(etiket(o), cw-200), x+186, y+78, F(700,30), T.tx); sureKutu(o, x+186, y+98, 32, "left");
+      g.fillStyle = T.bar; rr(x+186, y+172, cw-210, 14, 7); g.fill(); g.fillStyle = bugunMu && o.canli ? T.onBg : T.acc; rr(x+186, y+172, Math.max(14, (cw-210)*o.dk/Math.max(1,v.enCok)), 14, 7); g.fill(); });
+    N = P.length; sonY = y0 + Math.ceil(P.length/2)*(ch+16) + 30; }
+  else if(duzen==="yildiz"){ const o = v.L[0], R = v.L.slice(1,5), kr = o ? await karR(o) : null, kr2 = await Promise.all(R.map(karR));
+    if(o){ const cx = W/2; isik(cx, y0+190, 260); g.fillStyle = "#FACC15"; [[-200,60,26],[210,40,20],[-150,300,16],[190,280,22],[0,-6,18]].forEach(([dx,dy,r])=>{ g.save(); g.translate(cx+dx, y0+dy); g.beginPath(); for(let k=0;k<10;k++){ const a = -Math.PI/2 + k*Math.PI/5, rr2 = k%2 ? r*.45 : r; g.lineTo(Math.cos(a)*rr2, Math.sin(a)*rr2); } g.closePath(); g.fill(); g.restore(); });
+      if(kr) g.drawImage(kr, cx-170, y0+10, 340, 340); yaz(mod==="hafta" ? "HAFTANIN YILDIZI" : "GÜNÜN YILDIZI", cx, y0+392, F(800,30), T.acc, "center");
+      g.font = F(800,52); yaz(sigdir(etiket(o), W-260), cx, y0+452, F(800,52), T.tx, "center"); sureKutu(o, cx, y0+476, 44); }
+    sonY = y0 + 570; R.forEach((x,j)=>{ const y = sonY + j*86, i = j+1; g.fillStyle = T.row; rr(88, y, W-176, 74, 22); g.fill(); rozet(i, 134, y+37, 20);
+      if(kr2[j]) g.drawImage(kr2[j], 166, y-6, 82, 82); g.font = F(700,28); yaz(sigdir(etiket(x), 230), 262, y+47, F(700,28), T.name);
+      const bx = 520, bw2 = W-176-(bx-88)-220; g.fillStyle = T.bar; rr(bx, y+29, bw2, 16, 8); g.fill(); g.fillStyle = bugunMu && x.canli ? T.onBg : T.acc; rr(bx, y+29, Math.max(16, bw2*x.dk/Math.max(1,v.enCok)), 16, 8); g.fill();
+      sureKutu(x, W-108, y+15, 26, "right"); }); N = (o?1:0) + R.length; sonY += R.length*86 + 30; }
   else if(duzen==="liste"){ const P = v.L.slice(0,8), kr = await Promise.all(P.map(karR)), sh = 112;
     P.forEach((o,i)=>{ const y = y0 + i*sh; g.fillStyle = i < 3 ? `rgba(${T.glow},.16)` : T.row; rr(88, y, W-176, sh-14, 26); g.fill(); rozet(i, 136, y+49, 22);
       if(bugunMu && o.canli) isik(222, y+50, 70); if(kr[i]) g.drawImage(kr[i], 174, y-4, 100, 100);
@@ -2449,26 +2469,28 @@ async function hikayeCiz(mod, tema, duzen){ const v = hikayeVeri(mod), T = HK_TE
       const bx = 292, bw2 = W-176-(bx-88)-230; if(!bugunMu){ g.fillStyle = T.bar; rr(bx, y+62, bw2, 14, 7); g.fill(); g.fillStyle = T.acc; rr(bx, y+62, Math.max(14, bw2*o.dk/Math.max(1,v.enCok)), 14, 7); g.fill(); }
       sureKutu(o, W-110, y+24, 30, "right"); }); N = P.length; sonY = y0 + N*sh + 26; }
   else { N = Math.min(v.L.length, 9); const cw = (W-176-40)/3, rh = 300, sc = 188;
-    const res = await Promise.all(v.L.slice(0,N).map(x=>Promise.all([karR(x), svgResim(masaSVG({...x, canli: bugunMu && x.canli}))])));
+    const res = await Promise.all(v.L.slice(0,N).map(x=>Promise.all([karR(x), svgResim(masaSVG({...x, canli: true}))])));
     v.L.slice(0,N).forEach((o,i)=>{ const col = i%3, row = Math.floor(i/3), cx = 88 + col*(cw+20), cy = y0 + row*rh, sx = cx + (cw-sc)/2, sy = cy + 52, sh = sc*.86, on = bugunMu && o.canli;
       if(on) isik(sx+sc/2, sy+sh*.35, sc*.62);
-      const [kar, masa] = res[i]; g.save(); if(!on && bugunMu) g.globalAlpha = .8; if(kar) g.drawImage(kar, sx + sc*.03, sy - sh*.21, sc*.94, sc*.94); g.restore(); if(masa) g.drawImage(masa, sx, sy + sh - sc*.5, sc, sc*.5);
+      const [kar, masa] = res[i]; g.save(); if(kar) g.drawImage(kar, sx + sc*.03, sy - sh*.21, sc*.94, sc*.94); g.restore(); if(masa) g.drawImage(masa, sx, sy + sh - sc*.5, sc, sc*.5);
       rozet(i, cx+26, cy+30, 24); g.font = F(700,27); yaz(sigdir(etiket(o), cw-16), cx + cw/2, cy + sh + 82, F(700,27), T.name, "center"); sureKutu(o, cx + cw/2, cy + sh + 94, 34); });
     sonY = y0 + 3*rh + 56; }
   if(v.L.length > N) yaz(`+${v.L.length-N} öğrenci daha çalıştı`, W/2, Math.min(sonY, H-220), F(600,28), T.acc, "center");
   if(!v.L.length) yaz("Sınıf yeni doluyor…", W/2, y0+160, F(600,36), T.sub, "center");
   /* alt */ yaz("Zekacademy bireysel koçluk öğrencilerim", W/2, H-150, F(800,42), T.tx, "center"); yaz("Plan · takip · birlikte çalışma", W/2, H-104, F(600,30), T.acc, "center");
   return c; }
-function hikayeSheet(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim();
-  setTimeout(()=>hikayeCiz(mod, tema, duzen).then(c=>{ const i = document.getElementById("hkImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
+function hikayeSheet(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(), tr = hkTarih(mod), t = today(), adim = mod==="hafta" ? 7 : 1, son = mod==="hafta" ? monday(t) : t;
+  const etk = mod==="hafta" ? (tr===son ? "Bu hafta" : `${shortDate(tr)} – ${shortDate(addDays(tr,6))}`) : (tr===t ? "Bugün" : tr===addDays(t,-1) ? "Dün" : `${GUN[dIdx(tr)]}, ${shortDate(tr)}`);
+  setTimeout(()=>hikayeCiz(mod, tema, duzen, tr).then(c=>{ const i = document.getElementById("hkImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
   const cip = (act, k, ad, on, renk) => `<button type="button" class="btn sm ${on?"pri":""}" data-act="${act}" data-v="${k}">${renk?`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${renk};border:1px solid rgba(0,0,0,.2);margin-right:2px"></span>`:""}${ad}</button>`;
   return sheet(`<h3>Sınıf hikayesi</h3><p class="muted small" style="margin:-6px 0 0">Instagram hikayesi için hazır görsel. Öğrenciler kod adlarıyla görünür; kod adı olmayanların yalnız baş harfleri yazılır.</p>
-    <div class="pills" style="margin-top:8px">${cip("hkmod","bugun","Bugün",mod==="bugun")}${cip("hkmod","hafta","Bu hafta",mod==="hafta")}</div>
+    <div class="pills" style="margin-top:8px">${cip("hkmod","bugun","Gün",mod==="bugun")}${cip("hkmod","hafta","Hafta",mod==="hafta")}</div>
+    <div class="wknav" style="margin:6px 0 0"><button type="button" class="iconbtn sm" data-act="hktarih" data-v="${addDays(tr,-adim)}" aria-label="Önceki">${icon("back","sm")}</button><b style="font-size:14px">${esc(etk)}</b><button type="button" class="iconbtn sm" data-act="hktarih" data-v="${addDays(tr,adim)}" aria-label="Sonraki" ${tr>=son?"disabled":""}>${icon("chev","sm")}</button></div>
     <div class="pills" style="margin-top:6px">${Object.entries(HK_TEMA).map(([k,t])=>cip("hktema",k,t.ad,tema===k,t.bg[0])).join("")}</div>
     <div class="pills" style="margin-top:6px">${Object.entries(HK_DUZEN).map(([k,a])=>cip("hkduzen",k,a,duzen===k)).join("")}</div>
     <img id="hkImg" alt="Sınıf hikayesi önizlemesi" style="width:100%;max-width:340px;aspect-ratio:9/16;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line);background:${HK_TEMA[tema].bg[0]};opacity:.4">
     <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="hkpaylas">📸 Paylaş</button></div>`); }
-async function hikayePaylas(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(), c = await hikayeCiz(mod, tema, duzen), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${today()}.png`, {type:"image/png"});
+async function hikayePaylas(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(), tr = hkTarih(mod), c = await hikayeCiz(mod, tema, duzen, tr), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${mod==="hafta"?"hafta-":""}${tr}.png`, {type:"image/png"});
   if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); return; }catch(e){ if(e && e.name==="AbortError") return; } }
   const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Görsel indirildi; Instagram'da hikaye olarak paylaşabilirsin"); }
 function hkarneSheet(){ const s = st(); if(!s) return; const v = karneVeri(s), url = karneCiz(s, v).toDataURL("image/png"), pay = (s.karnePay||{})[v.bas];
@@ -3864,7 +3886,8 @@ document.addEventListener("click", e=>{
     case "kitapac": S.kitapKod = v; render(); window.scrollTo(0,0); break;
     case "kitapindir": kitapIndir(b.dataset.kod, v); break;
     case "calw": S.calW = v || ""; render(); break;
-    case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
+    case "hkmod": S.hkMod = v; S.hkTarih = ""; openSheet("hikaye"); break;
+    case "hktarih": S.hkTarih = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
     case "hktema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hikaye"); break;
     case "hkduzen": S.hkDuzen = v; try{ localStorage.setItem("zk-hk-duzen", v); }catch(e){} openSheet("hikaye"); break;
