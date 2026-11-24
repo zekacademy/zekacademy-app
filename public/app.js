@@ -1907,27 +1907,96 @@ KT.pdf = {};
 async function kitapIndir(kod, dosya){ if(KT.ilerle) return; const key = kod+"/"+dosya; KT.ilerle = key; render();
   try{ const lib = pdfjsYukle(); let u = KT.pdf[key];
     if(!u){ const r = await callFn("kitapIndir", {kod, dosya}), bin = atob(r.pdf); u = new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i] = bin.charCodeAt(i); KT.pdf[key] = u; }
-    const m = KT.man[kod], t = m && m.konular.find(x=>x.dosya===dosya); await kitapGoster(await lib, u.slice(), t ? t.konu : dosya, (KITAPLAR.find(x=>x.kod===kod)||{}).ad || "Kitap");
+    const m = KT.man[kod], t = m && m.konular.find(x=>x.dosya===dosya); await kitapGoster(await lib, u.slice(), t ? t.konu : dosya, (KITAPLAR.find(x=>x.kod===kod)||{}).ad || "Kitap", `${S.me||"koc"}|${key}`);
     try{ localStorage.setItem(`zk-kt-${key}`, nowISO()); }catch(e){}
   }catch(e){ toast(e && /^functions\//.test(e.code||"") && !/internal/i.test(e.code) && e.message ? e.message : "Kitap açılamadı, biraz sonra tekrar dene"); }
   KT.ilerle = ""; render(); }
-async function kitapGoster(lib, veri, konu, kitap){ document.getElementById("ktgor")?.remove();
-  const doc = await lib.getDocument({data: veri}).promise, kap = document.createElement("div"); let olcek = 1;
-  kap.id = "ktgor"; kap.setAttribute("role", "dialog"); kap.setAttribute("aria-label", `${kitap} · ${konu}`);
-  kap.innerHTML = `<div class="ktgh"><div style="min-width:0;flex:1"><small>${esc(kitap)}</small><b>${esc(konu)}</b></div><button class="iconbtn sm" data-z="-1" aria-label="Küçült">−</button><button class="iconbtn sm" data-z="1" aria-label="Büyüt">+</button><button class="iconbtn" data-kapat aria-label="Kapat">${icon("x","sm")}</button></div><div class="ktgs"></div>`;
+/* Kitap üzerinde not: kalem, fosforlu, silgi; notlar yalnız bu cihazda (IndexedDB) saklanır */
+let NOTDB = null, KTGOR_KAPAT = null; /* açık kitap görüntüleyicisini kapatır (geri tuşu da kullanır) */
+const notDb = () => NOTDB || (NOTDB = new Promise((res, rej)=>{ try{ const r = indexedDB.open("zk-kitap-not", 1); r.onupgradeneeded = ()=>r.result.createObjectStore("n"); r.onsuccess = ()=>res(r.result); r.onerror = ()=>rej(r.error); }catch(e){ rej(e); } }).catch(e=>{ NOTDB = null; throw e; }));
+async function notOku(k){ try{ const db = await notDb(); return await new Promise(res=>{ const q = db.transaction("n").objectStore("n").get(k); q.onsuccess = ()=>res(q.result || {}); q.onerror = ()=>res({}); }); }catch(e){ return {}; } }
+async function notYaz(k, v){ try{ const db = await notDb(); db.transaction("n", "readwrite").objectStore("n").put(v, k); }catch(e){} }
+const KT_RENK = { kalem:["#111827","#1D4ED8","#DC2626","#16A34A","#7C3AED"], fosfor:["#FDE047","#86EFAC","#F9A8D4","#93C5FD"] };
+const KT_KAL = { kalem:[0.0032, 0.0055, 0.009], fosfor:[0.018, 0.028, 0.04], silgi:[0.015, 0.03, 0.055] };
+async function kitapGoster(lib, veri, konu, kitap, notKey){ document.getElementById("ktgor")?.remove();
+  const doc = await lib.getDocument({data: veri}).promise, p1 = await doc.getPage(1), oran = p1.getViewport({scale:1}).height / p1.getViewport({scale:1}).width;
+  const N = { olcek:1, arac:"el", renk:{kalem:KT_RENK.kalem[0], fosfor:KT_RENK.fosfor[0]}, kal:{kalem:0, fosfor:1, silgi:1}, notlar: await notOku(notKey), geri:[], ileri:[], kalemVar:false, cizgi:null };
+  try{ const o = JSON.parse(localStorage.getItem("zk-kt-arac") || "{}"); if(o.renk) N.renk = {...N.renk, ...o.renk}; if(o.kal) N.kal = {...N.kal, ...o.kal}; }catch(e){}
+  const kap = document.createElement("div"); kap.id = "ktgor"; kap.setAttribute("role", "dialog"); kap.setAttribute("aria-label", `${kitap} · ${konu}`);
+  kap.innerHTML = `<div class="ktgh"><div style="min-width:0;flex:1"><small>${esc(kitap)}</small><b>${esc(konu)}</b></div><button class="iconbtn sm" data-z="-1" aria-label="Küçült">−</button><button class="iconbtn sm" data-z="1" aria-label="Büyüt">+</button><button class="iconbtn" data-kapat aria-label="Kapat">${icon("x","sm")}</button></div>
+    <div class="ktgs" data-arac="el"><div class="ktgi"></div></div><div class="ktga"></div>`;
   document.body.appendChild(kap); document.body.style.overflow = "hidden";
-  const alan = kap.querySelector(".ktgs"), sayfalar = [];
-  const ciz = async (i) => { const sl = sayfalar[i]; if(sl.cizili === olcek) return; sl.cizili = olcek; const pg = await doc.getPage(i+1), w = alan.clientWidth - 24, v0 = pg.getViewport({scale:1}), sc = w * olcek / v0.width, dpr = Math.min(2, window.devicePixelRatio || 1), v = pg.getViewport({scale: sc * dpr});
-    const c = document.createElement("canvas"); c.width = Math.floor(v.width); c.height = Math.floor(v.height); c.style.width = Math.floor(v.width/dpr)+"px"; c.style.height = Math.floor(v.height/dpr)+"px";
-    await pg.render({canvasContext: c.getContext("2d"), viewport: v}).promise; sl.el.replaceChildren(c); sl.el.style.minHeight = ""; };
-  const kur = () => { alan.innerHTML = ""; sayfalar.length = 0; const w = alan.clientWidth - 24;
-    for(let i=0;i<doc.numPages;i++){ const el = document.createElement("div"); el.className = "ktgp"; el.style.minHeight = Math.round(w*olcek*1.41)+"px"; el.style.width = Math.round(w*olcek)+"px"; el.dataset.i = i; alan.appendChild(el); sayfalar.push({el, cizili:0}); gozcu.observe(el); } };
-  const gozcu = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) ciz(+e.target.dataset.i).catch(()=>{}); }), {root: alan, rootMargin: "600px 0px"});
-  const kapat = () => { gozcu.disconnect(); try{ (doc.loadingTask || doc).destroy?.(); }catch(e){} kap.remove(); document.body.style.overflow = ""; window.removeEventListener("popstate", geri); };
-  const geri = () => kapat(); history.pushState({ktgor:1}, ""); window.addEventListener("popstate", geri);
-  kap.addEventListener("click", e=>{ if(e.target.closest("[data-kapat]")){ history.back(); return; } const z = e.target.closest("[data-z]"); if(z){ const y = Math.max(1, Math.min(2.5, olcek + (+z.dataset.z)*0.5)); if(y!==olcek){ const oran = alan.scrollTop / Math.max(1, alan.scrollHeight); olcek = y; gozcu.disconnect(); kur(); alan.scrollTop = oran * alan.scrollHeight; } } });
+  const alan = kap.querySelector(".ktgs"), ic = kap.querySelector(".ktgi"), bar = kap.querySelector(".ktga"), sayfalar = [];
+  let kayitZ = 0; const kaydet = () => { clearTimeout(kayitZ); kayitZ = setTimeout(()=>notYaz(notKey, N.notlar), 500); };
+  const aracKaydet = () => { try{ localStorage.setItem("zk-kt-arac", JSON.stringify({renk:N.renk, kal:N.kal})); }catch(e){} };
+  /* araç çubuğu */
+  const cubuk = () => { const a = N.arac, renkler = a==="kalem"||a==="fosfor" ? KT_RENK[a] : [];
+    bar.innerHTML = `<div class="ktgar">${[["el","✋","Kaydır"],["kalem","✏️","Kalem"],["fosfor","🖍️","Fosforlu"],["silgi","🧽","Silgi"]].map(([k,i,t])=>`<button class="ktab ${a===k?"on":""}" data-arac="${k}" aria-pressed="${a===k}" title="${t}"><span>${i}</span><small>${t}</small></button>`).join("")}
+      <span class="ktgsep"></span><button class="ktab" data-geri ${N.geri.length?"":"disabled"} title="Geri al"><span>↶</span><small>Geri</small></button><button class="ktab" data-ileri ${N.ileri.length?"":"disabled"} title="İleri al"><span>↷</span><small>İleri</small></button></div>
+      ${a!=="el" ? `<div class="ktgar ktgalt">${renkler.map(r=>`<button class="ktrenk ${N.renk[a]===r?"on":""}" data-renk="${r}" style="--r:${r}" aria-label="Renk"></button>`).join("")}${renkler.length?`<span class="ktgsep"></span>`:""}${[0,1,2].map(i=>`<button class="ktkal ${N.kal[a]===i?"on":""}" data-kal="${i}" aria-label="Kalınlık ${i+1}"><i style="width:${[6,11,17][i]}px;height:${[6,11,17][i]}px;${a!=="silgi"?`background:${N.renk[a]}`:""}"></i></button>`).join("")}</div>` : ""}`;
+    alan.dataset.arac = a; };
+  /* mürekkep çizimi (koordinatlar sayfa genişliğine göre 0–1) */
+  const inkCiz = (i, ek) => { const sl = sayfalar[i]; if(!sl) return; const c = sl.ink, g = c.getContext("2d"), W = sl.w, H = sl.h, dpr = sl.dpr;
+    g.setTransform(dpr,0,0,dpr,0,0); g.clearRect(0,0,W,H); const L = (N.notlar[i]||[]).concat(ek ? [ek] : []);
+    for(const s of L){ g.lineCap = "round"; g.lineJoin = "round"; g.strokeStyle = s.r;
+      if(s.t==="fosfor"){ g.globalAlpha = .38; g.globalCompositeOperation = "multiply"; g.lineWidth = s.k*W; g.beginPath(); s.p.forEach(([x,y],j)=>j ? g.lineTo(x*W, y*W) : g.moveTo(x*W, y*W)); if(s.p.length===1) g.lineTo(s.p[0][0]*W+.1, s.p[0][1]*W); g.stroke(); g.globalAlpha = 1; g.globalCompositeOperation = "source-over"; }
+      else { if(s.p.length===1){ g.fillStyle = s.r; g.beginPath(); g.arc(s.p[0][0]*W, s.p[0][1]*W, s.k*W*(0.5+(s.p[0][2]??.5))/2, 0, 7); g.fill(); continue; }
+        for(let j=1;j<s.p.length;j++){ const [a,b,pa] = s.p[j-1], [x,y,pb] = s.p[j]; g.lineWidth = s.k*W*(0.5 + ((pa??.5)+(pb??.5))/2); g.beginPath(); g.moveTo(a*W, b*W); g.lineTo(x*W, y*W); g.stroke(); } } } };
+  const ciz = async (i) => { const sl = sayfalar[i]; if(sl.cizili === N.olcek) return; sl.cizili = N.olcek; const pg = await doc.getPage(i+1), v0 = pg.getViewport({scale:1}), dpr = Math.min(2, window.devicePixelRatio || 1), v = pg.getViewport({scale: sl.w / v0.width * dpr});
+    const c = document.createElement("canvas"); c.className = "ktpdf"; c.width = Math.floor(v.width); c.height = Math.floor(v.height);
+    await pg.render({canvasContext: c.getContext("2d"), viewport: v}).promise; if(sl.cizili !== N.olcek) return; sl.el.querySelector(".ktpdf")?.remove(); sl.el.prepend(c); };
+  const gozcu = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) ciz(+e.target.dataset.i).catch(()=>{}); }), {root: alan, rootMargin: "800px 0px"});
+  const kur = () => { gozcu.disconnect(); ic.innerHTML = ""; sayfalar.length = 0; const w = Math.round((alan.clientWidth - 24) * N.olcek), h = Math.round(w * oran), dpr = Math.min(2, window.devicePixelRatio || 1);
+    for(let i=0;i<doc.numPages;i++){ const el = document.createElement("div"); el.className = "ktgp"; el.style.width = w+"px"; el.style.height = h+"px"; el.dataset.i = i;
+      const ink = document.createElement("canvas"); ink.className = "ktink"; ink.width = Math.round(w*dpr); ink.height = Math.round(h*dpr); el.appendChild(ink); ic.appendChild(el);
+      sayfalar.push({el, ink, w, h, dpr, cizili:0}); gozcu.observe(el); if(N.notlar[i] && N.notlar[i].length) inkCiz(i); } };
+  const olcekle = (yeni, ax, ay) => { yeni = Math.max(1, Math.min(3, yeni)); if(Math.abs(yeni - N.olcek) < .01) return; const r = alan.getBoundingClientRect(), k = yeni / N.olcek;
+    const ox = alan.scrollLeft + ax - r.left, oy = alan.scrollTop + ay - r.top; N.olcek = yeni; kur(); alan.scrollLeft = ox*k - (ax - r.left); alan.scrollTop = oy*k - (ay - r.top); };
+  /* kalem / silgi: Pointer olayları */
+  const nokta = (e, sl) => { const r = sl.el.getBoundingClientRect(); return [ +((e.clientX - r.left)/sl.w).toFixed(4), +((e.clientY - r.top)/sl.w).toFixed(4), e.pointerType==="pen" ? +(e.pressure||.5).toFixed(2) : .5 ]; };
+  const sil = (i, [x,y]) => { const L = N.notlar[i]; if(!L || !L.length) return; const rr = KT_KAL.silgi[N.kal.silgi], kal = [], gid = [];
+    L.forEach(s=>{ (s.p.some(([a,b])=>Math.hypot(a-x, b-y) < rr + s.k/2) ? gid : kal).push(s); }); if(!gid.length) return;
+    N.notlar[i] = kal; N.geri.push({t:"sil", i, s:gid}); N.ileri = []; inkCiz(i); kaydet(); cubuk(); };
+  alan.addEventListener("pointerdown", e=>{ if(e.pointerType==="pen"){ N.kalemVar = true; if(N.arac==="el"){ N.arac = "kalem"; cubuk(); } }
+    if(N.arac==="el" || (e.pointerType==="touch" && (N.kalemVar || DOKUN.n > 1))) return; const pe = e.target.closest(".ktgp"); if(!pe) return; const i = +pe.dataset.i, sl = sayfalar[i];
+    e.preventDefault(); try{ alan.setPointerCapture(e.pointerId); }catch(_){}
+    if(N.arac==="silgi"){ N.cizgi = {silgi:true, i, id:e.pointerId}; sil(i, nokta(e, sl)); return; }
+    N.cizgi = {i, id:e.pointerId, tip:e.pointerType, s:{t:N.arac, r:N.renk[N.arac], k:KT_KAL[N.arac][N.kal[N.arac]], p:[nokta(e, sl)]}}; inkCiz(i, N.cizgi.s); });
+  alan.addEventListener("pointermove", e=>{ const c = N.cizgi; if(!c || c.id !== e.pointerId) return; e.preventDefault(); const sl = sayfalar[c.i]; if(!sl) return;
+    const L = e.getCoalescedEvents ? e.getCoalescedEvents() : [e]; if(c.silgi){ L.forEach(x=>sil(c.i, nokta(x, sl))); return; }
+    L.forEach(x=>{ const p = nokta(x, sl), q = c.s.p[c.s.p.length-1]; if(Math.hypot(p[0]-q[0], p[1]-q[1]) > 0.0015) c.s.p.push(p); }); inkCiz(c.i, c.s); });
+  const bitir = e => { const c = N.cizgi; if(!c || c.id !== e.pointerId) return; N.cizgi = null; if(c.silgi || e.type==="pointercancel"){ if(!c.silgi) inkCiz(c.i); return; }
+    (N.notlar[c.i] = N.notlar[c.i] || []).push(c.s); N.geri.push({t:"ekle", i:c.i, s:[c.s]}); N.ileri = []; inkCiz(c.i); kaydet(); cubuk(); };
+  alan.addEventListener("pointerup", bitir); alan.addEventListener("pointercancel", bitir);
+  /* dokunma: iki parmakla büyüt/kaydır; kalem varken tek parmakla kaydır */
+  const DOKUN = { n:0, p:null, t:null };
+  const orta = t => [(t[0].clientX+t[1].clientX)/2, (t[0].clientY+t[1].clientY)/2], uzak = t => Math.hypot(t[0].clientX-t[1].clientX, t[0].clientY-t[1].clientY);
+  alan.addEventListener("touchstart", e=>{ DOKUN.n = e.touches.length;
+    if(e.touches.length===2){ if(N.cizgi && N.cizgi.tip==="touch"){ const i = N.cizgi.i; N.cizgi = null; inkCiz(i); } const [mx,my] = orta(e.touches), r = alan.getBoundingClientRect();
+      DOKUN.p = {d:uzak(e.touches), mx, my, ox: alan.scrollLeft + mx - r.left, oy: alan.scrollTop + my - r.top, f:1, nx:mx, ny:my}; ic.style.transformOrigin = `${DOKUN.p.ox}px ${DOKUN.p.oy}px`; }
+    else if(e.touches.length===1 && N.arac!=="el" && N.kalemVar){ DOKUN.t = {x:e.touches[0].clientX, y:e.touches[0].clientY}; } }, {passive:true});
+  alan.addEventListener("touchmove", e=>{ if(e.touches.length===2 && DOKUN.p){ e.preventDefault(); const p = DOKUN.p, [nx,ny] = orta(e.touches); p.f = Math.max(1/N.olcek, Math.min(3/N.olcek, uzak(e.touches)/p.d)); p.nx = nx; p.ny = ny;
+      ic.style.transform = `translate(${nx-p.mx}px, ${ny-p.my}px) scale(${p.f})`; return; }
+    if(e.touches.length===1 && DOKUN.t){ e.preventDefault(); const t = e.touches[0]; alan.scrollBy(DOKUN.t.x - t.clientX, DOKUN.t.y - t.clientY); DOKUN.t = {x:t.clientX, y:t.clientY}; } }, {passive:false});
+  const dokunBitti = e => { DOKUN.n = e.touches.length; if(DOKUN.p && e.touches.length < 2){ const p = DOKUN.p; DOKUN.p = null; ic.style.transform = ""; const r = alan.getBoundingClientRect(), yeni = Math.max(1, Math.min(3, N.olcek * p.f)), k = yeni / N.olcek;
+      if(Math.abs(k - 1) > .02){ N.olcek = yeni; kur(); } alan.scrollLeft = p.ox*k - (p.nx - r.left); alan.scrollTop = p.oy*k - (p.ny - r.top); }
+    if(!e.touches.length) DOKUN.t = null; };
+  alan.addEventListener("touchend", dokunBitti); alan.addEventListener("touchcancel", dokunBitti);
+  /* düğmeler */
+  const kapat = () => { gozcu.disconnect(); clearTimeout(kayitZ); notYaz(notKey, N.notlar); try{ (doc.loadingTask || doc).destroy?.(); }catch(e){} kap.remove(); document.body.style.overflow = ""; KTGOR_KAPAT = null; };
+  KTGOR_KAPAT = kapat;
+  kap.addEventListener("click", e=>{ const b = e.target.closest("button"); if(!b) return;
+    if(b.hasAttribute("data-kapat")){ kapat(); return; }
+    if(b.dataset.z){ const r = alan.getBoundingClientRect(); olcekle(N.olcek + (+b.dataset.z)*0.5, r.left + r.width/2, r.top + r.height/2); return; }
+    if(b.dataset.arac){ N.arac = b.dataset.arac; cubuk(); return; }
+    if(b.dataset.renk){ N.renk[N.arac] = b.dataset.renk; aracKaydet(); cubuk(); return; }
+    if(b.dataset.kal){ N.kal[N.arac] = +b.dataset.kal; aracKaydet(); cubuk(); return; }
+    if(b.hasAttribute("data-geri") || b.hasAttribute("data-ileri")){ const ileriMi = b.hasAttribute("data-ileri"), a = (ileriMi ? N.ileri : N.geri).pop(); if(!a) return;
+      const L = N.notlar[a.i] = N.notlar[a.i] || [], ekle = (a.t==="ekle") === ileriMi;
+      if(ekle) L.push(...a.s); else N.notlar[a.i] = L.filter(s=>!a.s.includes(s));
+      (ileriMi ? N.geri : N.ileri).push(a); inkCiz(a.i); kaydet(); cubuk(); } });
   kap.addEventListener("contextmenu", e=>e.preventDefault());
-  kur(); }
+  cubuk(); kur(); }
 /* Koç: konu PDF'lerini depoya yükleme (dosya adları manifest'tekiyle aynı; tüm klasörlerden seçilebilir) */
 function kitapYukleKart(){ if(KT.durum===null){ KT.durum = "yukleniyor"; callFn("kitapDurum", {}).then(r=>{ KT.durum = new Set(r.dosyalar||[]); render(); }).catch(()=>{ KT.durum = new Set(); render(); }); }
   const D = KT.durum instanceof Set ? KT.durum : null;
@@ -3476,6 +3545,7 @@ function geriKoruma(){ try{ if(!geriKurulu){ history.replaceState({zk:"kok"}, ""
 window.addEventListener("popstate", ()=>{
   if(!S.role || !S.ready) return;
   const ana = A() ? "ozet" : "home";
+  if(KTGOR_KAPAT){ KTGOR_KAPAT(); geriKoruma(); return; }
   if($("#vp")){ vpKapat(); geriKoruma(); return; }
   if($("#layer") && $("#layer").innerHTML.trim()){ closeSheet(); geriKoruma(); return; }
   if(S.view !== ana){ S.view = ana; S.q = ""; render(); window.scrollTo(0,0); geriKoruma(); return; }

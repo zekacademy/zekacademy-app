@@ -121,13 +121,23 @@ img{max-width:100%}
 .sonhs.on{background:var(--acs)}.sonhs i{height:8px;border-radius:4px;background:var(--sunk);overflow:hidden;display:block}.sonhs i b{display:block;height:100%;background:var(--ac);border-radius:4px}.sonhs em{font-style:normal;font-weight:700;min-width:62px;text-align:right}
 .dcard.sgun{border:2px dashed var(--ac)}
 
-/* Kitap görüntüleyici (uygulama içi, indirme yok) */
+/* Kitap görüntüleyici (uygulama içi, indirme yok) + kalem */
 #ktgor{position:fixed;inset:0;z-index:200;background:#3A3F3C;display:flex;flex-direction:column}
 .ktgh{display:flex;align-items:center;gap:8px;padding:calc(env(safe-area-inset-top) + 8px) 12px 8px;background:var(--surface);color:var(--fg);box-shadow:0 1px 6px rgba(0,0,0,.2)}
 .ktgh small{display:block;font-size:11px;color:var(--muted)}.ktgh b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ktgs{flex:1;overflow:auto;padding:12px;-webkit-overflow-scrolling:touch}
-.ktgp{margin:0 auto 12px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.35);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-.ktgp canvas{display:block}
+.ktgs{flex:1;overflow:auto;padding:12px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.ktgs[data-arac="el"]{touch-action:pan-x pan-y}.ktgs:not([data-arac="el"]){touch-action:none}
+.ktgi{display:flex;flex-direction:column;align-items:center;width:max-content;min-width:100%;will-change:transform}
+.ktgp{position:relative;margin:0 0 12px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.35);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;flex:none}
+.ktgp canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ktgs:not([data-arac="el"]) .ktgp{cursor:crosshair}
+.ktga{background:var(--surface);color:var(--fg);padding:6px 8px calc(env(safe-area-inset-bottom) + 6px);box-shadow:0 -1px 6px rgba(0,0,0,.2)}
+.ktgar{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap}.ktgalt{margin-top:6px}
+.ktab{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:52px;padding:5px 6px;border-radius:12px;border:0;background:none;color:inherit;font:inherit;cursor:pointer}
+.ktab span{font-size:20px;line-height:1}.ktab small{font-size:10px;font-weight:600;color:var(--muted)}.ktab.on{background:var(--acs)}.ktab.on small{color:var(--ac)}.ktab:disabled{opacity:.35}
+.ktgsep{width:1px;height:26px;background:var(--line);margin:0 4px}
+.ktrenk{width:28px;height:28px;border-radius:50%;border:3px solid transparent;background:var(--r);box-shadow:0 0 0 1px rgba(0,0,0,.15);cursor:pointer;padding:0}.ktrenk.on{border-color:var(--surface);box-shadow:0 0 0 2px var(--ac)}
+.ktkal{width:34px;height:34px;border-radius:10px;border:0;background:none;display:grid;place-items:center;cursor:pointer}.ktkal.on{background:var(--acs)}.ktkal i{display:block;border-radius:50%;background:var(--fg)}
 </style>
 <style>
 /* Layout: telefonda alt menü (ortada büyük Program butonu), geniş ekranda sol menü; içerik ortada tek sütun */
