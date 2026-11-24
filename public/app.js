@@ -1889,32 +1889,50 @@ const KITAPLAR = [{kod:"tyt-mat", ad:"TYT Matematik", renk:"#1F6FD8"}, {kod:"tyt
 const KT = { man:{}, yuk:{}, durum:null, ilerle:"" };
 function kitapMan(kod){ if(KT.man[kod]) return KT.man[kod]; if(KT.yuk[kod]) return null; KT.yuk[kod] = fetch(`/kitaplar/${kod}.json`).then(r=>r.json()).then(m=>{ KT.man[kod] = m; render(); }).catch(()=>{ delete KT.yuk[kod]; }); return null; }
 const kitapIndi = (kod, dosya) => { try{ return !!localStorage.getItem(`zk-kt-${kod}/${dosya}`); }catch(e){ return false; } };
-function kitapKart(){ return `<button class="card ktkart" data-act="go" data-v="kitap"><span class="ktkap">${KITAPLAR.map(k=>`<img src="/kitaplar/${k.kod}.webp" alt="" loading="lazy">`).join("")}</span><span style="min-width:0;flex:1"><b>Kitaplığım</b><small class="muted">Adım adım çözümlü soru bankaları · konu konu indir</small></span>${icon("chev","sm")}</button>`; }
+function kitapKart(){ return `<button class="card ktkart" data-act="go" data-v="kitap"><span class="ktkap">${KITAPLAR.map(k=>`<img src="/kitaplar/${k.kod}.webp" alt="" loading="lazy">`).join("")}</span><span style="min-width:0;flex:1"><b>Kitaplığım</b><small class="muted">Adım adım çözümlü soru bankaları · konu konu uygulamada aç</small></span>${icon("chev","sm")}</button>`; }
 function pKitap(){ const kod = S.kitapKod, k = KITAPLAR.find(x=>x.kod===kod);
   if(!k) return `${topbar(`<h1 class="ttl">Kitaplığım</h1>`, "", `<button class="iconbtn" data-act="go" data-v="${A()?"daha":"ders"}" aria-label="Geri">${icon("back")}</button>`)}<div class="page">
-    <p class="muted small" style="margin:0 4px 10px">Adım adım çözümlü soru bankaların. Her konu ayrı PDF olarak iner; testlerin hemen ardından cevap anahtarı ve çözümler var.</p>
+    <p class="muted small" style="margin:0 4px 10px">Adım adım çözümlü soru bankaların. Her konu uygulamanın içinde açılır; testlerin hemen ardından cevap anahtarı ve adım adım çözümler var.</p>
     <div class="ktgrid">${KITAPLAR.map(x=>{ const m = kitapMan(x.kod); return `<button class="ktkit" data-act="kitapac" data-v="${x.kod}"><img src="/kitaplar/${x.kod}.webp" alt="${esc(x.ad)} kapağı"><b>${esc(x.ad)}</b><small class="muted">${m ? `${m.konular.length} konu · ${m.konular.reduce((a,t)=>a+t.sayfa,0)} sayfa` : "…"}</small></button>`; }).join("")}</div>
-    ${A() ? kitapYukleKart() : `<p class="faint small" style="text-align:center;margin-top:14px">İndirdiğin her PDF'e adın ve öğrenci numaran yazılır; lütfen başkasıyla paylaşma.</p>`}</div>`;
+    ${A() ? kitapYukleKart() : `<p class="faint small" style="text-align:center;margin-top:14px">Kitap sayfalarında adın ve öğrenci numaran yazılır; lütfen başkasıyla paylaşma.</p>`}</div>`;
   const m = kitapMan(kod);
   return `${topbar(`<h1 class="ttl">${esc(k.ad)}</h1>`, "", `<button class="iconbtn" data-act="kitapac" data-v="" aria-label="Geri">${icon("back")}</button>`)}<div class="page">
     <div class="card ktust" style="--kr:${k.renk}"><img src="/kitaplar/${kod}.webp" alt=""><div><b>${esc(k.ad)}</b><small class="muted">Adım adım çözümlü soru bankası</small>${m?`<small class="muted">${m.konular.length} konu · ${m.konular.reduce((a,t)=>a+t.sayfa,0)} sayfa</small>`:""}</div></div>
     <div class="card" style="padding:4px 0">${m ? m.konular.map(t=>{ const ind = kitapIndi(kod, t.dosya), yuk = KT.ilerle===kod+"/"+t.dosya;
-      return `<div class="ktsat"><span class="ktno num" style="--kr:${k.renk}">${t.sira}</span><div style="min-width:0;flex:1"><b>${esc(t.konu)}</b><small class="muted">${t.sayfa} sayfa · ${(t.boyutKB/1024).toFixed(1).replace(".",",")} MB${ind?" · indirildi ✓":""}</small></div><button class="btn sm ${ind?"":"pri"}" data-act="kitapindir" data-kod="${kod}" data-v="${esc(t.dosya)}" ${KT.ilerle?"disabled":""}>${yuk?"Hazırlanıyor…":ind?"Tekrar indir":"İndir"}</button></div>`; }).join("") : `<p class="muted small" style="padding:14px">Yükleniyor…</p>`}</div>
-    <p class="faint small" style="text-align:center">PDF senin adınla hazırlanır; birkaç saniye sürebilir.</p></div>`; }
-async function kitapIndir(kod, dosya){ if(KT.ilerle) return; KT.ilerle = kod+"/"+dosya; render();
-  try{ const r = await callFn("kitapIndir", {kod, dosya}), bin = atob(r.pdf), u = new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i] = bin.charCodeAt(i);
-    const m = KT.man[kod], t = m && m.konular.find(x=>x.dosya===dosya), ad = `${(KITAPLAR.find(x=>x.kod===kod)||{}).ad||"Kitap"} - ${t ? t.konu : dosya}.pdf`.replace(/[\/\\:*?"<>|]/g, "-");
-    const f = new File([u], ad, {type:"application/pdf"}); let paylasti = false;
-    if(/iPhone|iPad|Android/i.test(navigator.userAgent) && navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); paylasti = true; }catch(e){ if(e && e.name==="AbortError") paylasti = true; } }
-    if(!paylasti){ const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = ad; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href), 60000); }
-    try{ localStorage.setItem(`zk-kt-${kod}/${dosya}`, nowISO()); }catch(e){} toast("PDF hazır 📚");
-  }catch(e){ toast(e && /^functions\//.test(e.code||"") && !/internal/i.test(e.code) && e.message ? e.message : "PDF hazırlanamadı, biraz sonra tekrar dene"); }
+      return `<div class="ktsat"><span class="ktno num" style="--kr:${k.renk}">${t.sira}</span><div style="min-width:0;flex:1"><b>${esc(t.konu)}</b><small class="muted">${t.sayfa} sayfa · ${(t.boyutKB/1024).toFixed(1).replace(".",",")} MB${ind?" · açtın ✓":""}</small></div><button class="btn sm ${ind?"":"pri"}" data-act="kitapindir" data-kod="${kod}" data-v="${esc(t.dosya)}" ${KT.ilerle?"disabled":""}>${yuk?"Açılıyor…":"Aç"}</button></div>`; }).join("") : `<p class="muted small" style="padding:14px">Yükleniyor…</p>`}</div>
+    <p class="faint small" style="text-align:center">Kitap senin adınla hazırlanır; ilk açılış birkaç saniye sürebilir.</p></div>`; }
+/* Kitap uygulama içinde açılır (indirme yok): sunucu öğrencinin adıyla damgalar, sayfalar pdf.js ile çizilir */
+let PDFJS = null; const pdfjsYukle = () => PDFJS || (PDFJS = import("/vendor/pdfjs/pdf.min.mjs").then(m=>{ m.GlobalWorkerOptions.workerSrc = "/vendor/pdfjs/pdf.worker.min.mjs"; return m; }).catch(e=>{ PDFJS = null; throw e; }));
+KT.pdf = {};
+async function kitapIndir(kod, dosya){ if(KT.ilerle) return; const key = kod+"/"+dosya; KT.ilerle = key; render();
+  try{ const lib = pdfjsYukle(); let u = KT.pdf[key];
+    if(!u){ const r = await callFn("kitapIndir", {kod, dosya}), bin = atob(r.pdf); u = new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i] = bin.charCodeAt(i); KT.pdf[key] = u; }
+    const m = KT.man[kod], t = m && m.konular.find(x=>x.dosya===dosya); await kitapGoster(await lib, u.slice(), t ? t.konu : dosya, (KITAPLAR.find(x=>x.kod===kod)||{}).ad || "Kitap");
+    try{ localStorage.setItem(`zk-kt-${key}`, nowISO()); }catch(e){}
+  }catch(e){ toast(e && /^functions\//.test(e.code||"") && !/internal/i.test(e.code) && e.message ? e.message : "Kitap açılamadı, biraz sonra tekrar dene"); }
   KT.ilerle = ""; render(); }
+async function kitapGoster(lib, veri, konu, kitap){ document.getElementById("ktgor")?.remove();
+  const doc = await lib.getDocument({data: veri}).promise, kap = document.createElement("div"); let olcek = 1;
+  kap.id = "ktgor"; kap.setAttribute("role", "dialog"); kap.setAttribute("aria-label", `${kitap} · ${konu}`);
+  kap.innerHTML = `<div class="ktgh"><div style="min-width:0;flex:1"><small>${esc(kitap)}</small><b>${esc(konu)}</b></div><button class="iconbtn sm" data-z="-1" aria-label="Küçült">−</button><button class="iconbtn sm" data-z="1" aria-label="Büyüt">+</button><button class="iconbtn" data-kapat aria-label="Kapat">${icon("x","sm")}</button></div><div class="ktgs"></div>`;
+  document.body.appendChild(kap); document.body.style.overflow = "hidden";
+  const alan = kap.querySelector(".ktgs"), sayfalar = [];
+  const ciz = async (i) => { const sl = sayfalar[i]; if(sl.cizili === olcek) return; sl.cizili = olcek; const pg = await doc.getPage(i+1), w = alan.clientWidth - 24, v0 = pg.getViewport({scale:1}), sc = w * olcek / v0.width, dpr = Math.min(2, window.devicePixelRatio || 1), v = pg.getViewport({scale: sc * dpr});
+    const c = document.createElement("canvas"); c.width = Math.floor(v.width); c.height = Math.floor(v.height); c.style.width = Math.floor(v.width/dpr)+"px"; c.style.height = Math.floor(v.height/dpr)+"px";
+    await pg.render({canvasContext: c.getContext("2d"), viewport: v}).promise; sl.el.replaceChildren(c); sl.el.style.minHeight = ""; };
+  const kur = () => { alan.innerHTML = ""; sayfalar.length = 0; const w = alan.clientWidth - 24;
+    for(let i=0;i<doc.numPages;i++){ const el = document.createElement("div"); el.className = "ktgp"; el.style.minHeight = Math.round(w*olcek*1.41)+"px"; el.style.width = Math.round(w*olcek)+"px"; el.dataset.i = i; alan.appendChild(el); sayfalar.push({el, cizili:0}); gozcu.observe(el); } };
+  const gozcu = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) ciz(+e.target.dataset.i).catch(()=>{}); }), {root: alan, rootMargin: "600px 0px"});
+  const kapat = () => { gozcu.disconnect(); try{ (doc.loadingTask || doc).destroy?.(); }catch(e){} kap.remove(); document.body.style.overflow = ""; window.removeEventListener("popstate", geri); };
+  const geri = () => kapat(); history.pushState({ktgor:1}, ""); window.addEventListener("popstate", geri);
+  kap.addEventListener("click", e=>{ if(e.target.closest("[data-kapat]")){ history.back(); return; } const z = e.target.closest("[data-z]"); if(z){ const y = Math.max(1, Math.min(2.5, olcek + (+z.dataset.z)*0.5)); if(y!==olcek){ const oran = alan.scrollTop / Math.max(1, alan.scrollHeight); olcek = y; gozcu.disconnect(); kur(); alan.scrollTop = oran * alan.scrollHeight; } } });
+  kap.addEventListener("contextmenu", e=>e.preventDefault());
+  kur(); }
 /* Koç: konu PDF'lerini depoya yükleme (dosya adları manifest'tekiyle aynı; tüm klasörlerden seçilebilir) */
 function kitapYukleKart(){ if(KT.durum===null){ KT.durum = "yukleniyor"; callFn("kitapDurum", {}).then(r=>{ KT.durum = new Set(r.dosyalar||[]); render(); }).catch(()=>{ KT.durum = new Set(); render(); }); }
   const D = KT.durum instanceof Set ? KT.durum : null;
   return `<div class="card" style="margin-top:12px"><div class="sech"><h3>Kitapları yükle</h3><span class="pill">Sadece sen görürsün</span></div>
-    <p class="muted small" style="margin:4px 0 8px">Kitap paketindeki <b>uygulama-paketi</b> klasörlerinden konu PDF'lerini seç (birden çok dosya seçebilirsin). Öğrenciler dosyaları depodan doğrudan göremez; indirirken adlarıyla damgalanır.</p>
+    <p class="muted small" style="margin:4px 0 8px">Kitap paketindeki <b>uygulama-paketi</b> klasörlerinden konu PDF'lerini seç (birden çok dosya seçebilirsin). Öğrenciler dosyaları indiremez; kitap uygulamanın içinde, sayfalarda adları yazılı olarak açılır.</p>
     <div class="ktdurum">${KITAPLAR.map(k=>{ const m = KT.man[k.kod], n = m ? m.konular.filter(t=>D && D.has(`${k.kod}/${t.dosya}`)).length : 0; return `<span><b>${esc(k.ad)}</b> ${D && m ? `${n}/${m.konular.length}${n===m.konular.length?" ✓":""}` : "…"}</span>`; }).join("")}</div>
     <label class="btn sm pri" style="margin-top:8px">${icon("plus","xs")} PDF seç ve yükle<input type="file" accept="application/pdf" multiple data-kt="yukle" hidden></label>
     <div class="small" id="kt-yuk" style="margin-top:6px;font-weight:600">${esc(S.ktMsg||"")}</div></div>`; }
