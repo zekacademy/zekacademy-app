@@ -190,7 +190,7 @@ onc('0006','09','Şekilde, asidik elektrolit kullanan bir hidrojen–oksijen yak
  istenen='Doğru olan ifadeler.',
  ip=['H₂ ve O₂’nin hangi elektrotta elektron verip aldığını belirle; sonra yönleri bul.'],
  bilgi=[B('Yakıt pili','yakıtın sürekli verilerek kimyasal enerjinin doğrudan elektrik enerjisine dönüştürüldüğü bir düzenektir. Yükseltgenmenin olduğu elektrot anot, indirgenmenin olduğu elektrot katottur; elektronlar dış devrede anottan katota akar. Örnek: Zn(k) → Zn²⁺ + 2e⁻ anotta olur')],
- puf='Yakıt pilinde yakıt anotta yükseltgenir; elektron anottan katota, katyon elektrolitte anottan katota akar.')
+ puf='Yakıt pili sorularında önce hangi elektrotta yükseltgenme, hangisinde indirgenme olduğunu belirle.')
 
 # =============== 0007 · yanma entalpisi diyagramı · orta ===============
 dHc=Fr(-890); mCH4=Fr(8); M=Fr(16); n7=mCH4/M; Q7=-dHc*n7; assert n7==Fr(1,2) and Q7==445
@@ -248,11 +248,11 @@ q('0009','06',[A('Seçenekleri tek tek ele al','Her şık nükleer enerjiyle ilg
  A('Doğru olanları ayıkla','Fisyon, kontrol çubukları, radyoaktif atık ve füzyon tanımları ders kitabı bilgisidir.','4 şık doğru'),
  A('Yanlış ifadeyi bul','Nükleer santrallerde yakıt yanmaz; çekirdek tepkimesi olur ve CO₂ oluşmaz.','Yanlış: CO₂ salımı fosil yakıtlar kadardır')],
  ne='nükleer enerji ile ilgili yanlış ifade',metin='Bir enerji santralinde uranyum çekirdeklerinin bölünmesiyle ısı elde edilir ve bu ısıyla elektrik üretilir.\nBuna göre nükleer enerji ve nükleer santrallerle ilgili aşağıdakilerden hangisi yanlıştır?',
- dogru=d,sira=sr,yan=y,z='orta',alt='Nükleer Enerji',kaz='Nükleer enerji, fisyon ve füzyon hakkındaki bilgileri doğru–yanlış olarak ayırt eder.',kalip='düz',
+ dogru=d,sira=sr,yan=y,z='kolay',alt='Nükleer Enerji',kaz='Nükleer enerji, fisyon ve füzyon hakkındaki bilgileri doğru–yanlış olarak ayırt eder.',kalip='düz',
  istenen='Yanlış olan ifade.',
- ip=['Nükleer santralde ısının yanma ile mi yoksa çekirdek tepkimesiyle mi elde edildiğini düşün.'],
+ ip=['Her şıkkı ders kitabındaki fisyon, füzyon ve reaktör bilgisiyle tek tek karşılaştır.'],
  bilgi=[B('Fisyon ve füzyon','fisyon ağır bir çekirdeğin nötronla daha küçük çekirdeklere bölünmesi, füzyon hafif çekirdeklerin birleşmesidir; ikisi de çok büyük enerji açığa çıkarır. Örnek: Güneş’te hidrojen çekirdekleri füzyonla helyuma dönüşür')],
- puf='Nükleer santralde ısı yanmadan değil çekirdek tepkimesinden gelir; CO₂ yerine radyoaktif atık sorunu vardır.')
+ puf='Olumsuz köklerde şıkları tek tek doğru–yanlış diye işaretleyip yanlış olanı ayır.')
 
 # =============== 0010 · enerji tüketimi payları · orta · öncüllü + tablo ===============
 T00,T20=400,500; pay={'Fosil yakıtlar':(80,70),'Nükleer enerji':(10,10),'Yenilenebilir enerji':(10,20)}
@@ -294,7 +294,7 @@ onc('0011','10','Şekilde, kenar uzunluğu a olan küp şeklindeki bir madde ör
  istenen='Doğru olan ifadeler.',
  ip=['Küçük küplerin toplam hacmini ve toplam yüzey alanını ilk küple karşılaştır.'],
  bilgi=[B('Küpün hacmi ve yüzey alanı','kenarı k olan küpün hacmi k³, yüzey alanı 6k²’dir. Parçalandığında hacim toplamı değişmez, yüzey alanı toplamı artar. Örnek: k = 2 cm ise hacim 8 cm³, yüzey alanı 24 cm²’dir')],
- puf='Parçalanınca toplam hacim sabit kalır, toplam yüzey alanı artar; nano ölçekte tepkime yüzeyinde gerçekleşir.')
+ puf='Küpte hacim k³, yüzey alanı 6k² ile bulunur; parçalanmadan önce ve sonra bu iki değeri ayrı ayrı hesapla.')
 
 # =============== 0012 · nano tablo · orta · öncüllü ===============
 NU={'A':(100,30),'B':(50,60),'C':(10,300)}
@@ -309,7 +309,7 @@ onc('0012','10','Aynı maddenin küp şeklindeki parçacıklarından oluşan A, 
  istenen='Doğru olan ifadeler.',
  ip=['Tabloda boyut küçüldükçe yüzey alanının nasıl değiştiğine bak ve bunu tepkime hızıyla ilişkilendir.'],
  bilgi=[B('Nanoparçacıklar','boyutları 1–100 nm arasında olan taneciklerdir (1 nm = 10⁻⁹ m). Boyut küçüldükçe birim kütle başına yüzey alanı artar; katı maddeler yüzeylerinde tepkimeye girdiğinden tepkime hızı artar. Örnek: toz hâldeki katı, bloğa göre daha hızlı yanar')],
- puf='Boyut küçülür, birim kütlenin yüzey alanı artar, tepkime hızı artar.')
+ puf='Tablo sorularında her ifadeyi önce tablodaki verilerle sına, veriyle sınanamayanı bilgiyle değerlendir.')
 
 # =============== 0013 · sınırlayıcı + yanma ısısı · zor · tanecik ===============
 nC,nO=3,4; mol_t=Fr(1,2); dH13=Fr(-800)
@@ -459,7 +459,7 @@ q('0018','06',[A('Yarı ömrü oku','Kütlenin 80 g’dan 40 g’a düştüğü 
 onc('0019','05','Gelecekte fosil yakıtların yerine kullanılabilecek alternatif enerji kaynakları ve yakıtlar üzerinde çalışılmaktadır.',
  [('Hidrojen gazı yakıt olarak yandığında ürün olarak yalnızca su oluşur.',False,'H₂ yandığında karbon içermediği için CO₂ oluşmaz; ürün H₂O’dur.','doğru bir ifadeyi yanlış saymış; hidrojenin yanmasını karbon içeren yakıtlarla karıştırmış.','—'),
   ('Biyokütleden elde edilen yakıtlar yandığında oluşan CO₂, bitkilerin fotosentezle bağladığı CO₂ ile dengelenebildiği için net salımı düşük kabul edilir.',False,'Biyokütlenin büyümesi sırasında CO₂ bağlandığından net salım fosil yakıtlara göre düşüktür.','doğru bir ifadeyi yanlış saymış; fotosentezle bağlanan CO₂’yi hesaba katmamış.','—'),
-  ('Jeotermal enerji, yer kabuğundaki fosil yakıtların yanmasıyla açığa çıkan ısıdır.',True,'Jeotermal enerji yerin derinliklerindeki sıcak su ve buhardan gelir; yanma olayı yoktur.','yanlış bir ifadeyi doğru saymış; jeotermal ısının kaynağını fosil yakıt yanması sanmış.','—')],
+  ('Jeotermal enerji, yer kabuğundaki fosil yakıtların yanmasıyla açığa çıkan ısıdır.',True,'Jeotermal enerji yerin derinliklerindeki sıcak su ve buhardan gelir; yanma olayı yoktur.','—','oysa jeotermal enerji yer ısısından gelir, fosil yakıt yanmasından değil.')],
  ['Yalnız III','I ve II','I ve III','II ve III','I, II ve III'],'Buna göre bu ifadelerden hangileri yanlıştır?',
  fiil=('yanlış','doğru'),ne='alternatif enerji kaynakları hakkında yanlış ifadeler',z='orta',alt='Alternatif Enerji',kaz='Hidrojen, biyokütle ve jeotermal enerji hakkındaki ifadeleri doğru–yanlış olarak ayırt eder.',kalip='öncüllü',
  istenen='Yanlış olan ifadeler.',

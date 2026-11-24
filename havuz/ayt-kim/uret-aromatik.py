@@ -57,6 +57,10 @@ def tek_t(dogru,yanlislar,hedef,hedef_bool=True):
     S=[(m,not hedef_bool,n) for m,n in yanlislar]
     S.insert(hedef,(dogru[0],hedef_bool,dogru[1]))
     return tek(S,hedef_bool)
+def tek_k(dogru,yanlislar,hedef):
+    """dogru: ifade; yanlislar: [(ifade,tam cümle açıklama)]; hedef: doğru şıkkın indeksi."""
+    sira=[m for m,_ in yanlislar]; sira.insert(hedef,dogru)
+    return dict(dogru=dogru,yan=[(m,c,'bilgi') for m,c in yanlislar],sira=sira)
 def cap(s): return ('İ' if s[0]=='i' else s[0].upper())+s[1:]
 def oy(d,anahtarlar=None):
     return ' · '.join(f'{k}: '+('doğru' if d[k][0] else 'yanlış') for k in (anahtarlar or d))
@@ -110,10 +114,10 @@ def pozisyon(a,b):
     dd=(b-a)%6; dd=min(dd,6-dd); return {1:'o',2:'m',3:'p'}[dd]
 
 # ============================================================ KARTLAR
-kartla('01','Benzenin yapısı','Benzen düzlemsel altıgendir; C atomları sp² hibritleşmesi yapmıştır, π elektronları halka boyunca dağıldığından altı C–C bağı özdeştir.','Kekulé formülündeki tek ve çift bağların gerçekten ayrı uzunlukta olduğunu sanmak.','kolay','öncüllü',3)
+kartla('01','Benzenin yapısı','Aromatik halkanın geometrisi ve bağ uzunlukları, π elektronlarının nasıl dağıldığıyla belirlenir.','Kekulé formülündeki tek ve çift bağların gerçekten ayrı uzunlukta olduğunu sanmak.','kolay','öncüllü',3)
 kartla('02','Konum ekleri ve adlandırma','İki sübstitüentin halkadaki konumu o- (1,2), m- (1,3), p- (1,4) ile belirtilir; aynı bilgi sayı ile de verilir.','Konumu sayarken halka üzerinde yanlış yönde ya da yanlış atlayarak saymak; grubu yan zincir sanmak.','kolay','şekilli',3)
 kartla('03','Benzen türevinde mol ve atom sayısı','Önce kütleden mol bulunur, sonra molekül formülündeki atom sayısıyla çarpılır.','Molekül molünü atom molü ile karıştırmak; benzenin formülünü toluene uygulamak.','kolay','düz',3)
-kartla('04','Aromatik ve aromatik olmayan halkalar','Aromatik halka düzlemsel, tüm atomları sp² ve halkada π elektronları delokalizedir; tek çift bağlı halkalı hidrokarbon aromatik değildir.','Halka ve çift bağ içeren her bileşiği aromatik sanmak.','orta','şekilli',3)
+kartla('04','Aromatik ve aromatik olmayan halkalar','Aromatik bileşikler benzen halkası taşır; yalnız halka ve çift bağ içermek aromatik olmak için yeterli değildir.','Halka ve çift bağ içeren her bileşiği aromatik sanmak.','orta','şekilli',3)
 kartla('05','Sigma ve pi bağı sayımı','Tüm bağlar σ, her çift bağın ikinci bağı π sayılır; π bağı sayısı Kekulé yapısındaki çift bağ sayısıdır.','Çift bağı iki π, halkayı σ dışında saymak; yalnız C–C bağlarını saymak.','orta','şekilli',4)
 kartla('06','Fonksiyonel grup ve konum izomerliği','Aynı molekül formülüne sahip aromatik bileşikler fonksiyonel grup ve konum bakımından sayılır; halkadaki konumlar dihedral simetriye göre özdeşleşir.','Yalnız bir izomer türünü saymak; aynı bileşiği iki kez saymak.','zor','düz',5)
 kartla('07','Üç yapıda ad–yapı eşleştirme','Her yapıda iki grubun halkadaki konumuna bakılarak o-, m- ya da p- adı belirlenir.','Konumu atlayarak saymak; fenol türevinde -OH grubunu başa almamak.','orta','öncüllü',3)
@@ -122,14 +126,14 @@ kartla('09','Halkada ikinci sübstitüsyon izomerleri','Halkada birden çok fark
 kartla('10','Fenolün özellikleri','Fenol halkaya doğrudan bağlı –OH içerir, zayıf asittir, NaOH ve Na ile tepkime verir; alkoller NaOH ile tepkime vermez.','Fenolü alkol gibi nötr sanmak.','orta','öncüllü',3)
 kartla('11','Fenol–NaOH stokiyometrisi','Fenol NaOH ile sodyum fenolat ve su verir; mol oranı 1:1:1:1.','Ürün kütlesini girenlerin toplamıyla bulmak (suyu unutmak).','orta','düz',4)
 kartla('12','Benzen ve halkalı hidrokarbonlar karşılaştırması','Brom çözeltisinde renk kaybı katılma tepkimesini, FeBr₃ ile HBr çıkışı sübstitüsyonu gösterir.','Benzenin siklohekzen gibi katılma verdiğini sanmak.','orta','tablo',3)
-kartla('13','Toluenin yapısı ve özellikleri','Toluen C₇H₈; halka karbonları sp², CH₃ karbonu sp³; apolar olduğundan suda çözünmez.','Tüm karbonların sp² olduğunu sanmak; apolar bileşiğin suda çözüneceğini düşünmek.','orta','öncüllü',3)
+kartla('13','Toluenin yapısı ve özellikleri','Hibritleşme karbonun yaptığı σ bağı sayısından belirlenir; apolar maddeler polar çözücüde az çözünür.','Aynı bileşikteki tüm karbonların aynı hibritleşmeyi yaptığını varsaymak.','orta','öncüllü',3)
 kartla('14','Kaynama noktası karşılaştırması','Hidrojen bağı yapabilen madde en yüksek kaynama noktasına sahiptir; benzer apolar maddelerde mol kütlesi büyük olanın kaynama noktası yüksektir.','Kütleyi tek ölçüt almak ve hidrojen bağını gözden kaçırmak.','orta','grafik',3)
 kartla('15','Hidrojenleme entalpisinden rezonans enerjisi','Üç izole çift bağlı varsayımsal molekülün hidrojenleme ısısı tek çift bağınkinin üç katıdır; gerçek benzenin ısısı bundan küçüktür, fark rezonans enerjisidir.','Farkı gerçek ve varsayımsal ısının toplamı ile bulmak.','zor','grafik',4)
-kartla('16','Karışım yanması','İki bileşenli karışımda önce mol sayıları denklem sisteminden bulunur, sonra denkleştirilmiş yanma denklemlerinden ürün miktarı hesaplanır.','Eşit mol varsaymak; yalnız tek bileşenin yanma ürününü hesaplamak.','zor','hikâyeli',5)
-kartla('17','Benzenin sübstitüsyon tepkimeleri','Benzende nitrolama, halojenleme ve alkilleme tepkimelerinde H atomu başka atom ya da grupla yer değiştirir.','Benzenin alkenler gibi katılma tepkimesine yatkın olduğunu sanmak.','orta','şekilli',3)
+kartla('16','Karışım yanması','İki bileşenli karışımda önce mol sayıları denklem sisteminden bulunur, sonra denkleştirilmiş yanma denklemlerinden gaz hacmi hesaplanır.','Eşit mol varsaymak; yalnız tek bileşenin yanma denklemini kullanmak.','zor','hikâyeli',5)
+kartla('17','Benzenin sübstitüsyon tepkimeleri','Benzende nitrolama, halojenleme ve sülfolama tepkimelerinde H atomu başka atom ya da grupla yer değiştirir.','Benzenin alkenler gibi katılma tepkimesine yatkın olduğunu sanmak.','orta','şekilli',3)
 kartla('18','Sınırlayıcı bileşen ve verim','Önce sınırlayıcı bileşen bulunur, teorik ürün hesaplanır, sonra verimle çarpılır.','Verimi unutmak; fazla olan bileşene göre hesap yapmak.','zor','tablo',5)
-kartla('19','Kullanım alanları ve sağlık etkileri','Benzen kanserojendir; toluen çözücüdür; fenol dezenfektan ve plastik hammaddesidir; naftalin güve önleyicidir.','Naftalinin suda çözünen iyonik bir madde olduğunu sanmak.','orta','düz',3)
-kartla('20','Fenol, alkol ve eter ayrımı','C₇H₈O: halkada –OH (kresol) Na ve NaOH ile; yan zincirde –OH (benzil alkol) yalnız Na ile; eter (anisol) hiçbiriyle tepkime vermez.','Benzil alkolü fenol gibi NaOH ile tepkimeye girer sanmak.','zor','tablo',4)
+kartla('19','Kullanım alanları ve sağlık etkileri','Aromatik bileşiklerin kullanım alanları ve sağlık etkileri birlikte değerlendirilir.','Maddenin polarlığını gözetmeden çözünürlük ifadelerine güvenmek.','orta','düz',3)
+kartla('20','Fenol, alkol ve eter ayrımı','–OH içeren bileşikler aktif metalle H₂ verir; yalnız asidik –OH (fenol türevi) NaOH ile de tepkimeye girer; eterler bu tepkimeleri vermez.','Alkolün de NaOH ile tepkime vereceğini sanmak.','orta','tablo',4)
 
 # ============================================================ 01 · benzen yapısı (kolay, öncüllü, şekil)
 SK1=tk(ring((0,0),1.0)+etiket(0,-1.45,'Benzen'))
@@ -143,7 +147,7 @@ q('0001',ad=[A('Yapıyı hatırla','Benzen düzlemsel altıgen bir halkadır; Ke
  sekil=SK1,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan öncüller.',
  ip=['Çift bağın π elektronlarının halkada nasıl dağıldığını düşün; bağ uzunlukları buna göre belirlenir.'],
  bilgi=[B('Rezonans','Birden fazla Kekulé yapısı çizilebilen moleküllerde gerçek yapı bu yapıların karışımıdır; elektronlar tek bir bağa ait değildir, halka boyunca dağılmıştır. Örnek: ozon (O₃) molekülünde iki O–O bağı özdeştir')],
- puf='Benzende tek–çift bağ ayrımı yoktur; altı C–C bağı özdeştir ve halka düzlemseldir.')
+ puf='Kekulé formülü gerçek bağ durumunu tam göstermez; her ifadeyi π elektronlarının dağılımına göre değerlendir.')
 
 # ============================================================ 02 · p-klorotoluen (kolay, şekil, adlandırma)
 SK2=tk(ring((0,0),.95,sub={0:ce('CH3'),3:'Cl'}))
@@ -153,7 +157,10 @@ sec2=[('p-klorotoluen','CH3 ve Cl halkanın karşılıklı köşelerindedir (1,4
       ('m-klorotoluen','m- eki 1,3-konumunu gösterir; şekilde gruplar arasında iki karbon değil üç bağ vardır'),
       ('benzil klorür','Cl’un halkaya değil CH3 grubuna bağlı olduğu C₆H₅CH₂Cl bileşiğidir; şekilde Cl doğrudan halkadadır'),
       ('klorobenzen','tek sübstitüentli yapıdır; şekilde halkada metil grubu da bulunmaktadır')]
-r=tek_t(sec2[0],sec2[1:],0)
+r=tek_k(sec2[0][0],[('o-klorotoluen','o- ekini seçmiş; oysa o- iki grubun yan yana (1,2) olduğu yapıyı gösterir, şekildeki gruplar karşılıklı köşelerdedir.'),
+      ('m-klorotoluen','m- ekini seçmiş; oysa m- yalnız bir köşe arayla (1,3) bağlı grupları gösterir.'),
+      ('benzil klorür','Cl’u metil grubuna bağlı sanmış; oysa şekilde Cl doğrudan halkadaki karbona bağlıdır.'),
+      ('klorobenzen','Metil grubunu atlamış; oysa halkada CH₃ ve Cl olmak üzere iki sübstitüent vardır.')],0)
 q('0002',ad=[A('Gruplara bak','Halkaya doğrudan iki grup bağlıdır: CH₃ ve Cl.','Sübstitüentler: –CH₃, –Cl'),A('Konumu say','Birinci gruptan ikinci gruba halka üzerinden kaç bağ olduğuna bakılır.','CH₃ → Cl: 3 bağ (karşılıklı köşe)'),A('Konum önekini seç','Karşılıklı köşe p-, bir köşe arayla m-, komşu o- ile gösterilir.','1,4-konumu = p-'),A('Adı yaz','Ana ad toluen, ek olarak Cl ve konum eki yazılır.','p-klorotoluen')],
  alt='Adlandırma',z='kolay',kaz='Benzen türevlerini o-, m-, p- önekleriyle adlandırır.',kalip='şekilli',ne='p-klorotoluen yapısı',
  metin='Bir benzen türevinin yapı formülü şekilde verilmiştir.\nBuna göre bu bileşiğin adı aşağıdakilerden hangisidir?',
@@ -182,19 +189,19 @@ q('0003',ad=[A('Molar kütleyi bul','Toluenin formülü C₇H₈ olduğundan mol
 # ============================================================ 04 · aromatik mi? (orta, öncüllü, şekil)
 g=ring((0,0),.75,sub={0:'OH'})+etiket(0,-1.35,'I')
 g+=ring((3.2,0),.75,dbl=(0,))+etiket(3.2,-1.35,'II')
-g+=naftalin((5.9,0),.75)+etiket(5.9+.65,-1.35,'III')
+g+=ring((6.4,0),.75,sub={0:'COOH'})+etiket(6.4,-1.35,'III')
 SK4=tk(g)
-d={'I':(True,'bu yapı fenoldür; altı karbonlu düzlemsel halkada delokalize π elektronları bulunur, aromatiktir'),
-   'II':(False,'sikloheksen halkalıdır ama tek çift bağ içerir, delokalize π sistemi yoktur ve aromatik değildir'),
-   'III':(True,'naftalin kenar paylaşan iki benzen halkasından oluşur; halkalardaki π elektronları delokalizedir, aromatiktir')}
+d={'I':(True,'bu yapı fenoldür; benzen halkasına –OH bağlıdır, aromatiktir'),
+   'II':(False,'sikloheksen halkalıdır ama benzen halkası değildir, tek çift bağ içerir ve aromatik değildir'),
+   'III':(True,'bu yapı benzoik asittir; benzen halkasına –COOH grubu bağlıdır, aromatiktir')}
 r=onc_t(d,2)
-q('0004',ad=[A('Aromatik ölçütü hatırla','Aromatik halka düzlemsel olup π elektronları halka boyunca dağılmıştır.','Benzen halkası = aromatik'),adim_onc(d,['I']),adim_onc(d,['II']),adim_onc(d,['III']),sonuc(d,r)],
- alt='Aromatiklik',z='orta',kaz='Verilen yapıların aromatik olup olmadığını belirler.',kalip='öncüllü',ne='fenol, sikloheksen, naftalin yapıları',
+q('0004',ad=[A('Aromatik ölçütü hatırla','Aromatik bileşiklerde benzen halkası bulunur.','Benzen halkası = aromatik'),adim_onc(d,['I']),adim_onc(d,['II']),adim_onc(d,['III']),sonuc(d,r)],
+ alt='Aromatiklik',z='orta',kaz='Verilen yapıların aromatik olup olmadığını belirler.',kalip='öncüllü',ne='fenol, sikloheksen, benzoik asit yapıları',
  metin='Aşağıda yapı formülleri verilen I, II ve III bileşiklerinden bazıları aromatik, bazıları aromatik olmayan bileşiktir (C ve H atomları köşelerde gösterilmemiştir).\nBuna göre hangileri aromatik bileşiktir?',
  sekil=SK4,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Aromatik olan bileşikler.',
- ip=['Her yapıda halkadaki π elektronlarının delokalize olup olmadığını, yani benzen halkası bulunup bulunmadığını incele.'],
- bilgi=[B('Aromatik bileşik','Benzen halkası içeren ya da benzen gibi kararlı delokalize π sistemine sahip bileşiklere aromatik bileşik denir. Örnek: toluen aromatiktir, sikloheksan değildir')],
- puf='Halka ve çift bağ yetmez; delokalize π sistemi (benzen halkası) olmalı.')
+ ip=['Her yapıda benzen halkası bulunup bulunmadığını incele.'],
+ bilgi=[B('Aromatik bileşik','Benzen halkası içeren bileşiklere aromatik bileşik denir. Örnek: toluen aromatiktir, sikloheksan değildir')],
+ puf='Halka ve çift bağ yetmez; benzen halkası aranmalıdır.')
 
 # ============================================================ 05 · etilbenzen σ−π (orta, şekil)
 SK5=tk(ring((0,0),.9,sub={0:ce('C2H5')})+etiket(0,-1.45,'Etilbenzen'))
@@ -257,7 +264,10 @@ sec8=[('1-etil-3-metilbenzen','alfabetik sırada etil önce gelir; konum numaral
       ('1-etil-2-metilbenzen','iki grup arasında bir köşe bulunduğu halde konumu 1,2 (komşu) sanmış'),
       ('1-etil-4-metilbenzen','iki grup karşılıklı olmadığı halde konumu 1,4 saymış'),
       ('1-etil-5-metilbenzen','en küçük numara kuralını uygulamamış; 1,5 yerine 1,3 numaralaması kullanılır')]
-r=tek_t(sec8[0],sec8[1:],4)
+r=tek_k(sec8[0][0],[('3-etil-1-metilbenzen','Numaralamayı metilden başlatmış; oysa numaralar eşitse alfabetik olarak önce gelen etil 1 numarayı alır.'),
+      ('1-etil-2-metilbenzen','Grupları komşu (1,2) sanmış; oysa aralarında bir köşe vardır ve konum 1,3’tür.'),
+      ('1-etil-4-metilbenzen','Grupları karşılıklı (1,4) sanmış; oysa aralarında yalnız bir köşe vardır, konum 1,3’tür.'),
+      ('1-etil-5-metilbenzen','En küçük numara kuralını uygulamamış; oysa halkada aynı konum 1,3 olarak numaralanır, 1,5 kullanılmaz.')],4)
 q('0008',ad=[A('Grupları tanı','Halkaya bir etil (C₂H₅) ve bir metil (CH₃) grubu bağlıdır.','–C₂H₅ ve –CH₃'),A('Konumu bul','Gruplar arasında bir köşe vardır.','1,3-konumu (meta)'),A('Numaralamayı seç','Numaralarda eşitlik varsa alfabetik olarak önce gelen grup 1 olur.','e < m → etil: 1, metil: 3'),A('Adı yaz','Sübstitüentler alfabetik sırayla yazılır, sonra benzen eklenir.','1-etil-3-metilbenzen')],
  alt='IUPAC Adlandırma',z='orta',kaz='Birden fazla sübstitüent taşıyan benzen türevlerini IUPAC kurallarına göre adlandırır.',kalip='şekilli',ne='etil ve metil gruplu benzen türevi',
  metin='Bir aromatik bileşiğin yapı formülü şekilde verilmiştir.\nBuna göre bu bileşiğin IUPAC adı aşağıdakilerden hangisinde doğru olarak verilmiştir?',
@@ -277,7 +287,7 @@ assert len({kanon({0:'CH3',a:'Cl'}) for a in range(1,6)})==3   # monokloro 3 ür
 assert sinif(['Cl','Cl'])==3
 yan9=[(3,'Metil grubunu hesaba katmayıp halkayı benzen gibi düşünmüş; diklorobenzenin o-, m-, p- olmak üzere 3 izomeri olduğundan bu sayıyı vermiştir.','bilgi'),
       (4,'Halkadaki konum çiftlerinden yalnız simetrik eşi olanları saymış, kendi kendine simetrik iki çifti (2,6 ve 3,5) atlamıştır.','dikkat'),
-      (5,'Tek Cl’lu ürünlerde hesaplanan 5 farklı konumu iki Cl için de aynen sanmıştır.','dikkat'),
+      (5,'Halkadaki 5 konumu ürün sayısı sanıp 5 bulmuştur; oysa iki Cl için konum çiftleri sayılmalıdır.','dikkat'),
       (10,'Halkadaki 5 H atomundan ikisini seçerken C(5,2) = 10 bulmuş, simetri nedeniyle özdeş olanları ayrı saymıştır.','islem')]
 q('0009',ad=[A('Konumları numarala','CH₃ taşıyan karbon 1 kabul edilir; Cl yerine geçebilecek H atomları 2–6 konumlarındadır.','5 olası konum'),A('Çiftleri yaz','İki konumdan seçilen tüm Cl çiftleri yazılır.','C(5,2) = 10 çift'),A('Simetriyi uygula','Metil karbonundan geçen eksene göre 2↔6 ve 3↔5 konumları özdeştir.','23=56 · 24=46 · 25=36 · 34=45'),A('Özdeş olanları ele','Kendi kendine simetrik 26 ve 35 çiftleri ayrı sayılır.','4 + 2 = 6 farklı bileşik'),A('Sonucu yaz','Farklı diklorotoluenlerin sayısı bulunur.','6')],
  alt='İzomerlik',z='zor',kaz='Aromatik halkada ikinci sübstitüsyonla oluşan izomer sayısını belirler.',kalip='şekilli',ne='toluenin halkasında iki Cl sübstitüsyonu',
@@ -293,14 +303,17 @@ sec10_y=[('Sodyum hidroksit çözeltisi ile tepkime vererek tuz oluşturur.','fe
          ('Hidroksil grubu doğrudan benzen halkasına bağlıdır.','fenolde –OH grubu halkadaki karbona doğrudan bağlıdır, yan zincirde değildir'),
          ('Su ile hidrojen bağı yapabilir.','–OH grubu sayesinde fenol su moleküllerine hidrojen bağıyla bağlanabilir'),
          ('Aynı koşullarda sikloheksanolden daha kuvvetli asidik özellik gösterir.','halkadaki π elektronları fenoksit iyonunu kararlı kıldığından fenol alkollerden daha asidiktir')]
-r=tek_t(sec10_d,sec10_y,3,False)
+r=tek_k(sec10_d[0],[(sec10_y[0][0],'NaOH ile tepkime verdiğini yanlış sanmış; oysa fenol zayıf asittir ve NaOH ile sodyum fenolat ile su oluşturur.'),
+      (sec10_y[1][0],'Hidroksil grubunun halkaya bağlı olduğunu yanlış sanmış; oysa fenolde –OH doğrudan halkadaki karbona bağlıdır.'),
+      (sec10_y[2][0],'Fenolün su ile hidrojen bağı yapamayacağını sanmış; oysa –OH grubu hidrojen bağı oluşturur.'),
+      (sec10_y[3][0],'Fenolün alkolden daha asidik olduğunu yanlış sanmış; oysa halka fenoksit iyonunu kararlı kılar ve fenol alkolden daha asidiktir.')],3)
 q('0010',ad=[A('Fenolü tanı','Fenol halkaya doğrudan bağlı –OH içerir ve zayıf asittir.','C₆H₅OH'),A('Asitlik tepkimeleri','Zayıf asit olduğundan NaOH ve aktif metallerle tepkime verir.','NaOH ve Na ile tepkime verir'),A('İfadeleri sına','Her ifade fenolün bilinen özellikleriyle karşılaştırılır.','Yalnız bir ifade yanlıştır'),A('Yanlışı seç','Yanlış olan ifade Na ile tepkime vermediğini söyleyendir.','Na ile tepkime verir')],
  alt='Fenol',z='orta',kaz='Fenolün asidik özelliğini ve tepkimelerini açıklar.',kalip='düz',ne='fenolün özellikleri (olumsuz kök)',
  metin='Fenol (C₆H₅OH), dezenfektan ve plastik üretiminde kullanılan, benzen halkasına doğrudan –OH grubu bağlı aromatik bir bileşiktir. Bir öğrenci, fenolün özelliklerini aynı koşullardaki alkollerle karşılaştırmaktadır.\nBuna göre fenolle ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',
  ip=['Fenolün asit özelliği gösterip göstermediğini düşün; asitlerin metallerle ve bazlarla verdiği tepkimeleri hatırla.'],
  bilgi=[B('Alkol ve fenol','–OH grubu halkaya doğrudan bağlıysa bileşik fenoldür, doymuş karbona bağlıysa alkoldür. Örnek: C₆H₁₁OH bir alkoldür, C₆H₅OH fenoldür')],
- puf='Fenol zayıf asittir: Na ve NaOH ile tepkime verir; halkaya bağlı –OH hidrojen bağı da yapar.')
+ puf='Her ifadeyi, fenolün asit–baz ve metalle tepkimeleri ile hidrojen bağı yapma özelliğine göre tek tek sına.')
 
 # ============================================================ 11 · fenol + NaOH (orta, düz)
 MF=6*12+6+16; assert MF==94
@@ -347,7 +360,7 @@ q('0013',ad=[A('Toluenin yapısını yaz','Toluen halkaya CH₃ bağlı aromatik
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan öncüller.',
  ip=['Metil grubundaki karbonun kaç σ bağı yaptığını sayarak hibritleşmesini belirle.'],
  bilgi=[B('Hibritleşme','Dört σ bağı yapan karbon sp³, bir π bağı ve üç σ bağı yapan karbon sp² hibritleşmesi yapar. Örnek: etanda sp³, etende sp² karbonlar vardır')],
- puf='Halka karbonları sp², metil karbonu sp³; apolar bileşik suda çözünmez.')
+ puf='Her karbonun kaç σ bağı yaptığına bak; çözünürlükte maddenin polarlığını düşün.')
 
 # ============================================================ 14 · kaynama noktası grafiği (orta, grafik)
 KN={'K':('toluen',111),'L':('fenol',182),'M':('benzen',80)}
@@ -366,8 +379,11 @@ sec14=[('K: toluen, L: fenol, M: benzen','fenol hidrojen bağı yapabildiğinden
        ('K: fenol, L: toluen, M: benzen','fenol hidrojen bağı yaptığından en yüksek kaynama noktasına sahip olandır; grafikte bu L’dir'),
        ('K: toluen, L: benzen, M: fenol','fenolün kaynama noktası en yüksek olmalıdır; grafikteki en yüksek çubuk M değildir'),
        ('K: benzen, L: toluen, M: fenol','grafikteki en yüksek çubuk L’dir; fenol hidrojen bağı nedeniyle en yüksekte kaynar ve L’ye karşılık gelir')]
-r=tek_t(sec14[0],sec14[1:],2)
-q('0014',ad=[A('Etkileşimleri belirle','Fenol hidrojen bağı yapar; benzen ve toluen apolardır, yalnız London kuvvetleri vardır.','Fenol: H bağı + London'),A('Fenolü bul','Hidrojen bağı yapan madde en yüksek kaynama noktasına sahiptir.','En yüksek çubuk: L = fenol'),A('Benzen ve toluenı ayır','Apolar maddelerde mol kütlesi büyük olanın kaynama noktası yüksektir.','Toluen (92) > benzen (78) → K = toluen, M = benzen'),A('Eşleştirmeyi yaz','Üç madde çubuklarla eşleştirilir.','K: toluen, L: fenol, M: benzen')],
+r=tek_k(sec14[0][0],[('K: benzen, L: fenol, M: toluen','Toluen ile benzeni karıştırmış; oysa mol kütlesi büyük olan toluenin kaynama noktası benzenden yüksektir, bu yüzden K toluen, M benzendir.'),
+      ('K: fenol, L: toluen, M: benzen','Fenolü K sanmış; oysa hidrojen bağı yapan fenolün kaynama noktası en yüksektir ve en yüksek çubuk L’dir.'),
+      ('K: toluen, L: benzen, M: fenol','Fenolü M sanmış; oysa fenolün kaynama noktası en yüksektir, M ise en düşük çubuktur.'),
+      ('K: benzen, L: toluen, M: fenol','Fenolü M, toluen L sanmış; oysa en yüksek çubuk (L) fenola, en düşük çubuk (M) benzene aittir.')],2)
+q('0014',ad=[A('Etkileşimleri belirle','Fenol hidrojen bağı yapar; benzen ve toluen apolardır, yalnız London kuvvetleri vardır.','Fenol: H bağı + London'),A('Fenolü bul','Hidrojen bağı yapan madde en yüksek kaynama noktasına sahiptir.','En yüksek çubuk: L = fenol'),A('Benzen ve toluen ayır','Apolar maddelerde mol kütlesi büyük olanın kaynama noktası yüksektir.','Toluen (92) > benzen (78) → K = toluen, M = benzen'),A('Eşleştirmeyi yaz','Üç madde çubuklarla eşleştirilir.','K: toluen, L: fenol, M: benzen')],
  alt='Kaynama Noktası',z='orta',kaz='Aromatik bileşiklerin kaynama noktalarını molekül etkileşimleriyle yorumlar.',kalip='grafik',ne='K, L, M kaynama noktası grafiği',
  metin='K, L ve M ile gösterilen maddeler; benzen (C₆H₆, 78 g/mol), toluen (C₆H₅CH₃, 92 g/mol) ve fenol (C₆H₅OH, 94 g/mol) bileşikleridir. Aynı dış basınçta bu maddelerin kaynama noktaları grafikte çubuklarla gösterilmiştir.\nBuna göre K, L ve M aşağıdakilerden hangisinde doğru olarak verilmiştir?',
  sekil=SK14,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='K, L, M maddelerinin doğru eşleşmesi.',
@@ -404,40 +420,40 @@ q('0015',ad=[A('Varsayımsal ısıyı bul','Üç yalıtılmış çift bağın hi
 Mb=78; Mt=92
 toplam_mol=Fr(1,2); kutle=Fr(418,10)
 xb=(Mt*toplam_mol-kutle)/(Mt-Mb); xt=toplam_mol-xb; assert (xb,xt)==(Fr(3,10),Fr(1,5)) and xb*Mb+xt*Mt==kutle
-su_mol=3*xb+4*xt; assert su_mol==Fr(17,10)
-dg16=su_mol*18; assert dg16==Fr(306,10)
-yan16=[(toplam_mol*3*18,'Karışımın tamamını benzen sanıp 0,5 × 3 mol su hesaplamıştır.','dikkat'),
-       (toplam_mol*4*18,'Karışımın tamamını toluen sanıp 0,5 × 4 mol su hesaplamıştır.','dikkat'),
-       ((Fr(1,4)*3+Fr(1,4)*4)*18,'Benzen ve toluenin mol sayılarını eşit (0,25’er mol) almıştır.','bilgi'),
-       ((xt*3+xb*4)*18,'Benzen ve toluenin mol sayılarını birbiriyle değiştirmiştir (0,2 mol benzen, 0,3 mol toluen).','islem')]
-assert [y[0] for y in yan16]==[27,36,Fr(63,2),Fr(162,5)]
-q('0016',ad=[A('Bilinmeyenleri tanımla','Benzen ve toluenin mol sayıları x ve y olsun.','x + y = 0,5'),A('Kütle denklemini yaz','Toplam kütle, mol sayıları ile molar kütlelerin çarpımlarının toplamıdır.','78x + 92y = 41,8'),A('Mol sayılarını çöz','İki denklem birlikte çözülür.','x = 0,3 mol · y = 0,2 mol'),A('Su molünü bul','C₆H₆ başına 3 H₂O, C₇H₈ başına 4 H₂O oluşur.','0,3 × 3 + 0,2 × 4 = 1,7 mol'),A('Kütleyi hesapla','Su molü molar kütle ile çarpılır.','1,7 × 18 = 30,6 g')],
- alt='Karışım Yanması',z='zor',kaz='Benzen–toluen karışımından yanma ürünlerini stokiyometrik olarak hesaplar.',kalip='hikâyeli',ne='41,8 g benzen–toluen karışımı',
- metin='Bir çözücü karışımının benzen (C₆H₆) ve toluen (C₆H₅CH₃) içerdiği, başka madde içermediği biliniyor. Karışımdan alınan numune 0,5 mol olup 41,8 gramdır. Bu numune oksijenle tam olarak yakılıyor ve yalnız CO₂ ile H₂O oluşuyor.\n(H: 1 g/mol, C: 12 g/mol, O: 16 g/mol)\nBuna göre oluşan su kaç gramdır?',
- dogru=dg16,yan=yan16,istenen='Oluşan H₂O kütlesi (g).',
+o2=Fr(15,2)*xb+9*xt; assert o2==Fr(81,20)
+dg16=o2*Fr(224,10); assert dg16==Fr(9072,100)
+yan16=[(toplam_mol*Fr(15,2)*Fr(224,10),'Karışımın tamamını benzen sanıp 0,5 × 7,5 mol O₂ hesaplamıştır.','dikkat'),
+       (toplam_mol*9*Fr(224,10),'Karışımın tamamını toluen sanıp 0,5 × 9 mol O₂ hesaplamıştır.','dikkat'),
+       ((Fr(1,4)*Fr(15,2)+Fr(1,4)*9)*Fr(224,10),'Benzen ve toluenin mol sayılarını eşit (0,25’er mol) almıştır.','bilgi'),
+       ((xt*Fr(15,2)+xb*9)*Fr(224,10),'Benzen ve toluenin mol sayılarını birbiriyle değiştirmiştir (0,2 mol benzen, 0,3 mol toluen).','islem')]
+assert [y[0] for y in yan16]==[84,Fr(504,5),Fr(462,5),Fr(2352,25)]
+q('0016',ad=[A('Bilinmeyenleri tanımla','Benzen ve toluenin mol sayıları x ve y olsun.','x + y = 0,5'),A('Kütle denklemini yaz','Toplam kütle, mol sayıları ile molar kütlelerin çarpımlarının toplamıdır.','78x + 92y = 41,8'),A('Mol sayılarını çöz','İki denklem birlikte çözülür.','x = 0,3 mol · y = 0,2 mol'),A('Yanma denklemlerini yaz','C₆H₆ + 7,5 O₂ → 6 CO₂ + 3 H₂O ve C₇H₈ + 9 O₂ → 7 CO₂ + 4 H₂O olur.','O₂: 7,5 ve 9 mol'),A('O₂ molünü bul','Her bileşenin molü ile gereken O₂ molü çarpılıp toplanır.','0,3 × 7,5 + 0,2 × 9 = 4,05 mol'),A('Hacme çevir','NŞA’da 1 mol gaz 22,4 L hacim kaplar.','4,05 × 22,4 = 90,72 L')],
+ alt='Karışım Yanması',z='zor',kaz='Benzen–toluen karışımının yanması için gereken O₂ hacmini hesaplar.',kalip='hikâyeli',ne='41,8 g benzen–toluen karışımı',
+ metin='Bir çözücü karışımının benzen (C₆H₆) ve toluen (C₆H₅CH₃) içerdiği, başka madde içermediği biliniyor. Karışımdan alınan numune 0,5 mol olup 41,8 gramdır. Bu numune oksijenle tam olarak yakılıyor ve yalnız CO₂ ile H₂O oluşuyor.\n(H: 1 g/mol, C: 12 g/mol; NŞA’da 1 mol gaz 22,4 L)\nBuna göre numunenin tam yanması için NŞA’da kaç litre O₂ gerekir?',
+ dogru=dg16,yan=yan16,istenen='Gereken O₂ hacmi (L), NŞA.',
  ip=['Numunedeki iki bileşenin mol sayılarını, toplam mol ve toplam kütle verisinden iki bilinmeyenli denklemle bul.'],
- bilgi=[B('Hidrokarbon yanması','Hidrokarbonlar tam yanınca CO₂ ve H₂O verir; oluşan H₂O molü, bileşikteki H atomu sayısının yarısına eşittir. Örnek: C₂H₆ yanarsa 1 mol C₂H₆’dan 3 mol H₂O oluşur')],
- puf='Mol ve kütle denklemlerini birlikte çöz; su molü H atomu sayısının yarısıdır.')
+ bilgi=[B('Hidrokarbon yanması','Hidrokarbonlar tam yanınca CO₂ ve H₂O verir; denklem atom sayılarına göre denkleştirilir. Örnek: CH₄ + 2 O₂ → CO₂ + 2 H₂O')],
+ puf='Mol ve kütle denklemlerini birlikte çöz, sonra denkleştirilmiş yanma denklemlerinden gazı hesapla.')
 
 # ============================================================ 17 · benzenin tepkimeleri (orta, öncüllü, şema)
 g=ring((0,0),.6,dbl=(0,2,4))+'\\node[font=\\bfseries] at (0,-1.0) {Benzen};'
 g+='\\draw[thick] (.75,0) -- (1.3,0); \\draw[thick] (1.3,-2.3) -- (1.3,2.3);'
-RE=[(2.3,'HNO$_3$ / H$_2$SO$_4$',ce('NO2'),'K'),(0,'Cl$_2$ / FeCl$_3$','Cl','L'),(-2.3,'CH$_3$Cl / AlCl$_3$',ce('CH3'),'M')]
+RE=[(2.3,'HNO$_3$ / H$_2$SO$_4$',ce('NO2'),'K'),(0,'Cl$_2$ / FeCl$_3$','Cl','L'),(-2.3,'H$_2$SO$_4$ (derişik)',ce('SO3H'),'M')]
 for y,reag,sb,lab in RE:
     g+=f'\\draw[thick,{ARR}] (1.3,{y}) -- (4.4,{y}); \\node[above,font=\\footnotesize] at (2.85,{y+.02}) {{{reag}}};'
     g+=ring((5.4,y),.6,dbl=(0,2,4),sub={1:sb})+etiket(5.4,y-1.0,lab)
 SK17=tk(g)
 d={'I':(False,'üç tepkimede de benzen halkasındaki bir H atomu başka bir atom ya da grupla yer değiştirir; bunlar sübstitüsyon tepkimeleridir, katılma değildir'),
    'II':(True,'L, benzenin bir H atomunun Cl ile yer değiştirmesiyle oluşan klorobenzendir; formülü C₆H₅Cl’dir'),
-   'III':(False,'M’de halkaya bir CH₃ grubu bağlanmıştır; bu bileşik toluendür, etilbenzen değildir')}
+   'III':(False,'M’de halkaya –SO₃H grubu bağlanmıştır; bu bileşik benzensülfonik asittir, toluen değildir')}
 r=onc_t(d,0)
 q('0017',ad=[A('Tepkime türünü belirle','Halkaya bir grup bağlanırken bir H ayrılıyorsa tepkime sübstitüsyondur.','K, L, M: H yerine grup'),adim_onc(d,['I']),adim_onc(d,['II']),adim_onc(d,['III']),sonuc(d,r)],
- alt='Sübstitüsyon Tepkimeleri',z='orta',kaz='Benzenin nitrolama, halojenleme ve alkilleme ürünlerini belirler.',kalip='şekilli',ne='benzenden K, L, M elde edilmesi',
- metin='Benzenden başlayarak K, L ve M bileşiklerinin elde edildiği tepkimeler şekilde verilmiştir (C ve H atomları köşelerde gösterilmemiştir).\nI. Üç tepkime de katılma tepkimesidir.\nII. L’nin molekül formülü C₆H₅Cl’dür.\nIII. M’nin adı etilbenzendir.\nBuna göre hangileri doğrudur?',
+ alt='Sübstitüsyon Tepkimeleri',z='orta',kaz='Benzenin nitrolama, halojenleme ve sülfolama ürünlerini belirler.',kalip='şekilli',ne='benzenden K, L, M elde edilmesi',
+ metin='Benzenden başlayarak K, L ve M bileşiklerinin elde edildiği tepkimeler şekilde verilmiştir (C ve H atomları köşelerde gösterilmemiştir).\nI. Üç tepkime de katılma tepkimesidir.\nII. L’nin molekül formülü C₆H₅Cl’dür.\nIII. M’nin adı toluendir.\nBuna göre hangileri doğrudur?',
  sekil=SK17,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan öncüller.',
  ip=['Ürünlerde halkadaki H atomu sayısının benzene göre ne olduğuna bak; her grup halkaya hangi atomla bağlanıyor?'],
  bilgi=[B('Sübstitüsyon','Sübstitüsyon (yer değiştirme) tepkimesinde bir atom ya da atom grubu, molekülden ayrılan bir başka atom ya da grubun yerini alır. Örnek: CH₄ + Cl₂ → CH₃Cl + HCl')],
- puf='Benzende H atomu yer değiştirir, çift bağlara katılma olmaz.')
+ puf='Ürünlerde halkadaki H atomu sayısını benzenle karşılaştırarak tepkime türünü belirle.')
 
 # ============================================================ 18 · nitrobenzen verimi (zor, tablo)
 Mb=78; Mn=6*12+5+14+32; assert Mn==123
@@ -459,19 +475,18 @@ q('0018',ad=[A('Mol sayılarını bul','Her girenin molü kütle / molar kütle 
  puf='Önce sınırlayıcıyı bul, teorik ürünü hesapla, en son verimle çarp.')
 
 # ============================================================ 19 · kullanım alanları (orta, düz, olumsuz kök)
-sec19_d=('Naftalin, suda çok iyi çözünen iyonik yapılı bir katıdır.','naftalin apolar kovalent bir bileşiktir, suda çok az çözünür; bu nedenle yanlış olan ifade budur')
-sec19_y=[('Naftalin, güve önleyici olarak kullanılır.','naftalin süblimleşen bir katıdır ve güve topu olarak kullanılır'),
-         ('Fenol, dezenfektan ve bazı plastiklerin üretiminde kullanılır.','fenol antiseptik özelliği nedeniyle dezenfektanlarda, ayrıca reçine ve plastik üretiminde kullanılır'),
-         ('Toluen, boya ve yapıştırıcılarda çözücü olarak kullanılır.','toluen apolar bir sıvıdır ve boya, yapıştırıcı gibi ürünlerde çözücü görevi görür'),
-         ('Benzen, kanserojen etkili olduğundan kullanımı sınırlandırılmıştır.','benzenin buharı solunduğunda kansere yol açabildiğinden kullanımı kısıtlanmıştır')]
-r=tek_t(sec19_d,sec19_y,3,False)
-q('0019',ad=[A('Her bileşiği tanı','Benzen, toluen, fenol ve naftalin aromatik bileşiklerdir.','Dört bileşik: kullanım ve özellikleri'),A('Kullanımları eşle','Naftalin güve önleyici, fenol dezenfektan, toluen çözücüdür.','Naftalin: güve topu'),A('Çözünürlüğü yorumla','Aromatik hidrokarbonlar apolardır; suda çok az çözünürler.','Naftalin: apolar, suda az çözünür'),A('Yanlışı seç','Naftalinin suda çok iyi çözündüğünü ve iyonik olduğunu söyleyen ifade yanlıştır.','İyonik ve suda çok çözünür: yanlış')],
+sec19_d='Naftalin, güve önleyici olarak kullanılır ve suda iyi çözünür.'
+r=tek_k(sec19_d,[('Toluenin nitrolanmasıyla elde edilen TNT, patlayıcı yapımında kullanılır.','TNT ifadesini yanlış sanmış; oysa toluenin nitrolanmasıyla trinitrotoluen elde edilir ve patlayıcı olarak kullanılır.'),
+ ('Fenol, dezenfektan ve bazı plastiklerin üretiminde kullanılır.','Fenolün dezenfektan olarak kullanılmadığını sanmış; oysa antiseptik özelliği nedeniyle dezenfektan ve plastik üretiminde kullanılır.'),
+ ('Toluen, boya ve yapıştırıcılarda çözücü olarak kullanılır.','Toluenin çözücü olarak kullanılmadığını sanmış; oysa apolar bir sıvı olarak boya ve yapıştırıcılarda çözücüdür.'),
+ ('Benzen, kanserojen etkili olduğundan kullanımı sınırlandırılmıştır.','Benzenin kanserojen etkisini yanlış sanmış; oysa benzen buharı kansere yol açtığı için kullanımı sınırlandırılmıştır.')],3)
+q('0019',ad=[A('Her bileşiği tanı','Benzen, toluen, fenol ve naftalin aromatik bileşiklerdir.','Beş ifade: kullanım ve özellikler'),A('Kullanımları eşle','Fenol dezenfektan, toluen çözücü, TNT patlayıcıdır.','Kullanım ifadeleri doğru'),A('Çözünürlüğü yorumla','Aromatik hidrokarbonlar apolardır; polar su ile iyi karışmazlar.','Apolar madde suda az çözünür'),A('Yanlışı seç','Çözünürlük ifadesi naftalinin apolar yapısıyla çelişir.','Suda iyi çözünme: yanlış')],
  alt='Kullanım ve Etkileri',z='orta',kaz='Aromatik bileşiklerin kullanım alanlarını ve çevre/sağlık etkilerini açıklar.',kalip='düz',ne='aromatik bileşiklerin kullanımı (olumsuz kök)',
  metin='Aromatik bileşikler endüstride ve günlük hayatta pek çok alanda kullanılır; bazılarının sağlığa zararlı etkileri nedeniyle kullanımı sınırlandırılmıştır. Bir kimya öğretmeni, bu bileşiklerle ilgili beş ifade yazıp öğrencilerinden yanlış olanı bulmalarını istemiştir.\nBuna göre aşağıdakilerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',
  ip=['Hidrokarbon yapısındaki aromatik bileşiklerin polarlığını ve bağ türünü düşünerek çözünürlüğe bak.'],
  bilgi=[B('Polarlık ve çözünürlük','Benzer benzeri çözer: apolar maddeler apolar çözücülerde, polar maddeler polar çözücülerde çözünür. Örnek: yağ suda değil, benzende çözünür')],
- puf='Aromatik hidrokarbonlar apolar kovalent yapıdadır; suda çok az çözünürler.')
+ puf='Her ifadede kullanım ve çözünürlük bilgisini maddenin polarlığıyla birlikte sına.')
 
 # ============================================================ 20 · C7H8O tablosu (zor, tablo)
 TAB20=[('K','Tepkime verir, H₂ çıkar','Tepkime verir'),('L','Tepkime verir, H₂ çıkar','Tepkime vermez'),('M','Tepkime vermez','Tepkime vermez')]
@@ -487,16 +502,16 @@ for pm in itertools.permutations(TRUTH.values()):
 sec20=[PM[0],PM[1],PM[3],PM[2],PM[4]]  # doğru + 4 çeldirici
 yl20=[]
 for pm in sec20[1:]:
-    yanl=[f'{k} için {pm[i]} denmiş; oysa {k} için gözlemler {TRUTH[k]} ile uyumludur ({sebep[TRUTH[k]]})' for i,k in enumerate('KLM') if pm[i]!=TRUTH[k]]
-    yl20.append((sirala(pm),yanl[0]))
-r=tek_t((sirala(PM[0]),'K, L ve M sırasıyla halkada –OH, yan zincirde –OH ve eter grubu taşıyan bileşiklerdir'),yl20,4)
+    i=[j for j,k in enumerate('KLM') if pm[j]!=TRUTH[k]][0]; k='KLM'[i]
+    yl20.append((sirala(pm),f'{k} bileşiğini {pm[i]} sanmış; oysa {k} için gözlemler {TRUTH[k]} özelliğini gösterir: {sebep[TRUTH[k]]}.'))
+r=tek_k(sirala(PM[0]),yl20,4)
 q('0020',ad=[A('Gözlemleri sınıfla','Na ile tepkime –OH grubunu, NaOH ile tepkime asidik (fenol) hidrojeni gösterir.','K: Na ve NaOH · L: yalnız Na · M: hiçbiri'),A('K’yi belirle','Hem Na hem NaOH ile tepkime veren –OH halkaya bağlıdır.','K: kresol (fenol türevi)'),A('L ve M’yi belirle','Yalnız Na ile tepkime veren alkoldür; hiçbiriyle vermeyen eterdir.','L: benzil alkol · M: anisol'),A('Eşleştirmeyi yaz','Üç bileşik gözlemlerle eşleştirilir.','K: kresol, L: benzil alkol, M: anisol')],
- alt='Fenol, Alkol ve Eter',z='zor',kaz='C₇H₈O izomerlerini Na ve NaOH ile tepkimelerine göre ayırt eder.',kalip='tablo',ne='C₇H₈O izomerleri K, L, M',
+ alt='Fenol, Alkol ve Eter',z='orta',kaz='C₇H₈O izomerlerini Na ve NaOH ile tepkimelerine göre ayırt eder.',kalip='tablo',ne='C₇H₈O izomerleri K, L, M',
  metin='Molekül formülü C₇H₈O olan ve benzen halkası içeren K, L ve M bileşikleri; kresol (metilfenol), benzil alkol (C₆H₅CH₂OH) ve anisol (C₆H₅OCH₃) bileşiklerinden biridir. Bu bileşiklerin sodyum metali ve sulu NaOH çözeltisi ile tepkime verip vermediği tabloda verilmiştir.\nBuna göre K, L ve M aşağıdakilerden hangisinde doğru olarak verilmiştir?',
  sekil=SK20,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='K, L, M bileşiklerinin doğru eşleşmesi.',
  ip=['–OH grubunun halkaya bağlı olup olmamasının NaOH ile tepkimeyi nasıl etkilediğini; eterde –OH olup olmadığını düşün.'],
  bilgi=[B('Alkol, fenol ve eter','Alkol ve fenol –OH, eter ise C–O–C grubu içerir. Fenol zayıf asit olduğundan NaOH ile de tepkime verir; alkoller yalnız aktif metallerle H₂ çıkarır. Örnek: etanol Na ile tepkime verir, NaOH ile vermez')],
- puf='Na ve NaOH ikisi de: fenol; yalnız Na: alkol; hiçbiri: eter.')
+ puf='Her tepkimenin hangi tür –OH grubunu gösterdiğini ayrı ayrı yorumla.')
 
 # ---------- yaz ----------
 def bitir2(P,onek,k):

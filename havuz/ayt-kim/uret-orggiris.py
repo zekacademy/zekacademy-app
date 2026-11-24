@@ -73,14 +73,14 @@ def hcount(atoms_c,bonds):
         tot[a]+=od; tot[b]+=od
     return tot
 # ---------------- kartlar ----------------
-kartla('01','Organik–anorganik ayrımı','Organik bileşik: yapısında C–H bağı bulunan karbon bileşikleri; karbon içeren CO, CO₂, karbonat, bikarbonat, karbür ve siyanürler anorganik sınıfta incelenir.','Karbon içeren her bileşiği organik saymak; CCl₄ gibi H içermeyen ama organik sayılan bileşiği anorganik sanmak.','kolay','düz',2,'ayrim','Organik ve anorganik bileşiklerin ayrımı')
+kartla('01','Organik–anorganik ayrımı','Organik bileşik: yapısında C–H bağı bulunan karbon bileşikleri; karbon içeren CO, CO₂, karbonat, bikarbonat, karbür ve siyanürler anorganik sınıfta incelenir.','Karbon ve hidrojen içeren her bileşiği organik saymak (H₂CO₃, NaHCO₃ gibi C–H bağı olmayanlar dahil).','kolay','düz',2,'ayrim','Organik ve anorganik bileşiklerin ayrımı')
 kartla('02','Karbonun bağ yapma özellikleri','Karbon dört değerlik elektronuyla dört kovalent bağ yapar; birbirine tek, çift, üçlü bağla bağlanıp zincir ve halka oluşturur; iyon oluşturmaz.','Karbonun elektron vererek C⁴⁺ ya da alarak C⁴⁻ oluşturduğunu düşünmek.','kolay','öncüllü',3,'karbon','Karbonun bağ yapma özellikleri ve allotroplar')
 kartla('03','Sigma ve pi bağı sayımı','Her bağ çizgisinden biri σ’dır; çift bağda bir, üçlü bağda iki π bağı vardır; π sayısı = Σ(mertebe − 1).','Çoklu bağların hepsini σ saymak ya da C–H bağlarını atlamak.','orta','şekilli',3,'sigmapi','Açık formülden sigma ve pi bağı sayımı')
 kartla('04','Hibritleşme türünü belirleme','Karbonun σ bağı sayısı + ortaklanmamış çift sayısı 4 ise sp³, 3 ise sp², 2 ise sp hibritleşmesi yapar; π bağı hibrit orbital kullanmaz.','Çift bağlı karbonu sp³ saymak; hibrit sayısını bağ çizgisi sayısıyla karıştırmak.','orta','şekilli',4,'hibrit','Hibritleşme türü, orbital diyagramı ve örtüşme')
 kartla('05','Molekül geometrisi (VSEPR)','Merkez atom çevresindeki bağ ve ortaklanmamış elektron çiftleri birbirini en az itecek biçimde dizilir; ortaklanmamış çift bağ açısını küçültür.','Ortaklanmamış çifti geometride yok saymak; elektron çifti geometrisi ile molekül geometrisini karıştırmak.','orta','tablo',3,'geometri','Elektron çifti sayısından molekül geometrisi ve bağ açısı')
 kartla('06','Basit formül ve molekül formülü','Kütlelerden mol sayısı, mol oranından basit formül bulunur; molekül formülü = basit formül × (mol kütlesi ÷ basit formül kütlesi).','Kütle oranını atom sayısı oranı saymak; n katını bütün atomlara uygulamamak.','orta','tablo',4,'formul','Basit formül, molekül formülü ve yanma analizi')
 kartla('07','Yanma ürünlerinden bileşim','CO₂’deki C ve H₂O’daki H, bileşikten gelir; oksijen kütle farkından bulunur, ürünlerdeki O bileşikten gelmez.','Ürünlerdeki bütün oksijeni bileşiğe ait saymak; H₂O mol sayısını H atom sayısı almak.','zor','şekilli',5,'formul','Basit formül, molekül formülü ve yanma analizi')
-kartla('08','Organik madde tanıma deneyi','Isıtılan maddeden CO₂ (kireç suyunu bulandırır) ve H₂O (susuz CuSO₄’ü maviye çevirir) çıkması C ve H varlığını gösterir; O ve organik olma sonucu kesin değildir.','Deneyden maddenin kesinlikle organik olduğunu ya da O içerdiğini sonuçlamak.','orta','şekilli',3,'ayrim','Organik ve anorganik bileşiklerin ayrımı')
+kartla('08','Organik madde tanıma deneyi','Her ürünün (CO₂, H₂O) kaynağı olan element eşleştirilir; yalnız kaynağı kesin olan elementler için hüküm verilir.','Deneyden kaynağı belirsiz sonuçlar (madde türü, bazı elementler) çıkarmak.','orta','şekilli',3,'ayrim','Organik ve anorganik bileşiklerin ayrımı')
 # ============ 01 · kolay · olumsuz kök ============
 W1=[('C₃H₈','Propanın (C₃H₈) yapısında oksijen bulunmadığı için organik olmadığını düşünmüş; oysa C–H bağları içeren hidrokarbonlar organiktir.','bilgi'),('C₆H₁₂O₆','Yapısında çok sayıda oksijen bulunduğu için anorganik sanmış; oysa C–H ve C–C bağları taşıyan glikoz organiktir.','bilgi'),('CH₃COOH','Asit olduğu için anorganik asitlerle karıştırmış; oysa C–H bağı içeren asetik asit organik bir bileşiktir.','bilgi'),('CH₃CH₂NH₂','Azot içerdiği için anorganik saymış; oysa C–H bağları taşıyan bu azotlu bileşik organiktir.','bilgi')]
 q('0001',tipId='og-ayrim',tip='Organik ve anorganik bileşiklerin ayrımı',z='kolay',alt='Organik ve Anorganik Bileşikler',kaz='Karbon içeren bileşikleri organik ve anorganik olarak sınıflandırır.',kalip='düz',
@@ -108,12 +108,12 @@ q('0002',tipId='og-karbon',tip='Karbonun bağ yapma özellikleri ve allotroplar'
 at={'C1':(0,0,'C'),'C2':(1.35,0,'C'),'H1':(-1.1,0,'H'),'H2':(0,1.05,'H'),'H3':(0,-1.05,'H'),'H4':(2.45,0,'H'),'H5':(1.35,1.05,'H'),'H6':(1.35,-1.05,'H')}
 bd=[('C1','C2',1)]+[('C1',h,1) for h in ('H1','H2','H3')]+[('C2',h,1) for h in ('H4','H5','H6')]
 sig3=len(bd); pi3=sum(b[2]-1 for b in bd); assert (sig3,pi3)==(7,0)
-assert 6==sig3-1 and 8==len(at) and 2*sig3==14
+assert 6==sig3-1 and 8==len(at) and 5==sig3-2
 SK3=tk(mol(at,bd))
 q('0003',tipId='og-sigmapi',tip='Açık formülden sigma ve pi bağı sayımı',z='kolay',alt='Sigma ve Pi Bağları',kaz='Açık formülü verilen bir molekülde sigma ve pi bağı sayısını belirler.',kalip='şekilli',
  kart='K-AKOG-03 (σ ve π bağı sayımı) · etan',sekil=SK3,
  metin='Karbon atomları arasında ve karbonla hidrojen arasında oluşan bağlar sigma (σ) ya da pi (π) bağıdır. Etan molekülünün açık formülü şekilde verilmiştir.\nBuna göre etan molekülündeki toplam σ bağı sayısı kaçtır?',
- dogru=7,yan=[(1,'Yalnız C–C bağını σ sayıp C–H bağlarını σ saymamış; oysa her tek bağ bir σ bağıdır.','bilgi'),(6,'C–H bağlarını saymış, C–C bağını atlamış.','dikkat'),(8,'Moleküldeki toplam atom sayısını (2 C + 6 H = 8) bağ sayısı sanmış.','dikkat'),(14,'Bağ çizgisi başına iki elektron düşünüp bağ yapan elektron sayısını (7 × 2 = 14) bağ sayısı olarak vermiş.','islem')],
+ dogru=7,yan=[(1,'Yalnız C–C bağını σ sayıp C–H bağlarını σ saymamış; oysa her tek bağ bir σ bağıdır.','bilgi'),(5,'Bağ çizgilerini sayarken C–C bağını ve bir C–H bağını atlamış.','dikkat'),(6,'C–H bağlarını saymış, C–C bağını atlamış.','dikkat'),(8,'Moleküldeki toplam atom sayısını (2 C + 6 H = 8) bağ sayısı sanmış.','dikkat')],
  istenen='Moleküldeki toplam sigma bağı sayısı.',
  ip=['Şekildeki her bağ çizgisini tek tek say; çizginin kaç bağ içerdiğini bağın mertebesine göre değerlendir.'],
  bilgi=[B('σ ve π bağları','İki atom arasındaki ilk bağ her zaman σ bağıdır; çift bağda bir σ + bir π, üçlü bağda bir σ + iki π bulunur. Örnek: H–Cl molekülünde 1 σ bağı vardır')],
@@ -304,23 +304,22 @@ q('0011',tipId='og-formul',tip='Basit formül, molekül formülü ve yanma anali
  ad=[A('I’i değerlendir','Her iki formülde C : H = 1 : 1 oranı vardır.','C₂H₂ → CH · C₆H₆ → CH → I doğru'),A('II’yi değerlendir','4 ve 10’un ortak böleni 2’dir.','C₄H₁₀ → C₂H₅ → II doğru'),A('III’ü değerlendir','Aynı basit formülün farklı katları farklı kütleye sahiptir.','CH: 13 · C₂H₂: 26 · C₆H₆: 78 → III yanlış'),A('Sonucu yaz','Doğru yargılar I ve II’dir.','I ve II')],
  puf='Aynı basit formül aynı bileşik demek değildir; n katı değişince molekül formülü ve mol kütlesi de değişir.')
 # ============ 12 · orta · tablo · organik sayısı ============
-CMP=[('I','CH₃Cl',True,True),('II','H₂CO₃',False,True),('III','NaHCO₃',False,True),('IV','C₆H₁₂O₆',True,True),('V','CCl₄',True,False),('VI','Na₂CO₃',False,False),('VII','CO',False,False)]
-# (no, formül, organik mi, C–H bağı var mı)
+CMP=[('I','CH₃Cl',True),('II','H₂CO₃',False),('III','NaHCO₃',False),('IV','C₆H₁₂O₆',True),('V','CH₃NH₂',True),('VI','Na₂CO₃',False),('VII','CO',False)]
 org=sum(1 for c in CMP if c[2]); assert org==3
-tCH=sum(1 for c in CMP if c[3]); assert tCH==4
-orgH=sum(1 for c in CMP if c[2] and c[3]); assert orgH==2
-metalsiz=sum(1 for c in CMP if 'Na' not in c[1]); assert metalsiz==5
+CH=sum(1 for c in CMP if 'H' in c[1]); assert CH==5            # C ve H içeren her bileşik: I–V
+Osiz=sum(1 for c in CMP if c[2] and 'O' not in c[1]); assert Osiz==2   # CH₃Cl, CH₃NH₂
+metalsiz_oksitsiz=sum(1 for c in CMP if 'Na' not in c[1] and c[1]!='CO'); assert metalsiz_oksitsiz==4  # I, II, IV, V
 assert len(CMP)==7
 SK12=tablo_svg(['Numara','Formül'],[[c[0],c[1]] for c in CMP])
 q('0012',tipId='og-ayrim',tip='Organik ve anorganik bileşiklerin ayrımı',z='orta',alt='Organik ve Anorganik Bileşikler',kaz='Karbon içeren bileşikleri organik ve anorganik sınıflara ayırır.',kalip='tablo',
  kart='K-AKOG-01 (organik–anorganik ayrımı) · tablodan sayım',sekil=SK12,
  metin='Karbon içeren yedi bileşiğin formülleri şekildeki tabloda numaralandırılarak verilmiştir. Bu bileşikler, organik ve anorganik bileşik sınıflarına ayrılacaktır.\nBuna göre tablodaki bileşiklerden kaç tanesi organik bileşik sınıfında yer alır?',
- dogru=3,yan=[(2,'Organik bileşik için C–H bağının zorunlu olduğunu düşünüp H içermeyen CCl₄’ü anorganik saymış; yalnız CH₃Cl ve C₆H₁₂O₆’yı organik bulmuş.','bilgi'),(4,'Hem C hem H içeren her bileşiği organik sayıp H₂CO₃ ve NaHCO₃’ü de katmış, CCl₄’ü atlamıştır.','bilgi'),(5,'Metal içermeyen karbon bileşiklerini organik saymış; H₂CO₃’ü de CO’yu da organik grubuna katmıştır.','bilgi'),(7,'Karbon içeren her bileşiği organik saymış.','bilgi')],
+ dogru=3,yan=[(2,'Oksijen içeren bileşikleri karbonat ve asitlerle aynı gruba koyup yalnız oksijensiz olan CH₃Cl ve CH₃NH₂’yi organik saymış; oysa glikozda da C–H bağları vardır.','bilgi'),(4,'Metal içermeyen karbonlu bileşikleri (CO hariç) organik sayıp H₂CO₃’ü de katmış; oysa C–H bağı olmayan karbonik asit anorganiktir.','bilgi'),(5,'Karbon ve hidrojen içeren her bileşiği organik sayıp H₂CO₃ ve NaHCO₃’ü de katmış; oysa bu ikisinde C–H bağı yoktur.','bilgi'),(7,'Karbon içeren her bileşiği organik saymış.','bilgi')],
  istenen='Organik bileşik sayısı.',
- ip=['Her formüldeki karbonun hangi atomlara bağlı olduğunu düşün; karbonat, bikarbonat ve karbonun oksitleri hangi gruba girer?'],
- bilgi=[B('Organik bileşikler','Organik bileşikler karbon–karbon ya da karbon–hidrojen bağı bulunan karbon bileşikleridir; CO, CO₂, H₂CO₃ ve karbonat–bikarbonat tuzları anorganik sayılır. Örnek: C₂H₆ organik, Li₂CO₃ ve CO₂ anorganiktir')],
- ad=[A('Karbonlu anorganikleri ayır','Karbonatlar, bikarbonatlar, karbonik asit ve karbon monoksit anorganiktir.','H₂CO₃, NaHCO₃, Na₂CO₃, CO → anorganik'),A('Kalanları incele','CH₃Cl ve C₆H₁₂O₆ C–H bağı içerir; CCl₄ de C–C ve C–H içermese de halojenli bir organik bileşiktir.','CH₃Cl, C₆H₁₂O₆, CCl₄ → organik'),A('Sayımı yap','Üç bileşik organik sınıftadır.','I, IV, V → 3')],
- puf='Organik demek “yalnız C–H” demek değildir; CCl₄ gibi halojenürler de organiktir, H₂CO₃ ve bikarbonatlar ise anorganiktir.')
+ ip=['Her formüldeki karbonun hangi atomlara bağlı olduğunu düşün; karbonat, bikarbonat, karbonik asit ve karbonun oksitleri hangi gruba girer?'],
+ bilgi=[B('Organik bileşikler','Organik bileşikler yapısında C–H bağı bulunan karbon bileşikleridir; CO, CO₂, H₂CO₃ ve karbonat–bikarbonat tuzları anorganik sayılır. Örnek: C₂H₆ organik, Li₂CO₃ ve CO₂ anorganiktir')],
+ ad=[A('Karbonlu anorganikleri ayır','Karbonatlar, bikarbonatlar, karbonik asit ve karbon monoksit anorganiktir.','H₂CO₃, NaHCO₃, Na₂CO₃, CO → anorganik'),A('Kalanları incele','CH₃Cl, C₆H₁₂O₆ ve CH₃NH₂ yapısında C–H bağları vardır.','CH₃Cl, C₆H₁₂O₆, CH₃NH₂ → organik'),A('Sayımı yap','Üç bileşik organik sınıftadır.','I, IV, V → 3')],
+ puf='Karbon ve hidrojen içermek yetmez; C–H bağı taşıyan bileşikler organiktir, H₂CO₃ ve bikarbonatlar ise anorganik sayılır.')
 # ============ 13 · orta · şekilli · öncüllü · allotroplar ============
 g=[]
 R_=1.15
@@ -394,10 +393,10 @@ e_a=(1,2,1)                       # n katı unutulmuş
 e_b=(2,4,1)                       # O'ya n uygulanmamış
 nO_yanlis=2*nCO2+nH2O; assert nO_yanlis==Fr(3,10) and (nC/nO_yanlis,nHh/nO_yanlis)==(Fr(1,3),Fr(2,3))   # 1:2:3 oranı
 e_c=(1,2,3)
-nH_yanlis=nH2O; assert nH_yanlis==nC==Fr(1,10)                                                     # 1:1:1
-e_d=(2,2,2)
+assert Mb/15==4
+e_d=(4,8,4)
 def f3(t): return formul(t)
-assert (f3((2,4,2)),f3(e_a),f3(e_b),f3(e_c),f3(e_d))==('C₂H₄O₂','CH₂O','C₂H₄O','CH₂O₃','C₂H₂O₂')
+assert (f3((2,4,2)),f3(e_a),f3(e_b),f3(e_c),f3(e_d))==('C₂H₄O₂','CH₂O','C₂H₄O','CH₂O₃','C₄H₈O₄')
 f_ok='C₂H₄O₂'
 g=['\\draw[thick] (0,0) rectangle (2.8,.8);','\\fill[gray!35] (.9,.05) rectangle (1.6,.25);','\\node[font=\\small] at (1.25,.55) {bile\\c{s}ik};',
    '\\draw[-{Stealth[length=2mm]},thick] (-1.0,.4) -- (0,.4); \\node[above,font=\\small] at (-.5,.45) {O$_2$};',
@@ -405,18 +404,17 @@ g=['\\draw[thick] (0,0) rectangle (2.8,.8);','\\fill[gray!35] (.9,.05) rectangle
    '\\draw[thick] (2.8,.4) -- (3.4,.4); \\draw[thick] (4.9,.4) -- (5.5,.4); \\draw[-{Stealth[length=2mm]},thick] (7.1,.4) -- (7.9,.4);',
    '\\draw[thick,fill=gray!15] (3.4,.05) rectangle (4.9,.75); \\node[font=\\small] at (4.15,.4) {\\ce{CaCl2}};',
    '\\draw[thick,fill=gray!15] (5.5,.05) rectangle (7.1,.75); \\node[font=\\small] at (6.3,.4) {KOH};',
-   '\\node[font=\\small,align=center] at (1.4,-1.5) {3,0 g\\\\bile\\c{s}ik};',
    '\\node[font=\\small,align=center] at (4.15,-.75) {kütle artışı\\\\1,8 g};',
    '\\node[font=\\small,align=center] at (6.3,-.75) {kütle artışı\\\\4,4 g};']
 g=[x.replace('bile\\c{s}ik','bileşik').replace('\\raise.1ex\\hbox{ısıtma}','ısı') for x in g]
 SK15=tk('\n'.join(g))
 W15=[('CH₂O','C : H : O = 1 : 2 : 1 oranını bulmuş; mol kütlesinden yararlanıp n = 60 ÷ 30 = 2 katını almamış.','dikkat'),
-     ('C₂H₂O₂','H₂O’nun mol sayısını (0,1) hidrojen atomu mol sayısı almış (ikiyle çarpmamış); oranı 1 : 1 : 1 bulup CHO (29 g/mol) için 60 ÷ 29 ≈ 2 katı almış.','islem'),
+     ('C₄H₈O₄','Oranı doğru bulup basit formül kütlesini hatalı biçimde 15 g/mol hesaplamış; n = 60 ÷ 15 = 4 katını almış.','islem'),
      ('C₂H₄O','Oranı doğru bulup n = 2 değerini yalnız C ve H atomlarına uygulamış, oksijen atomu sayısını 1 bırakmış.','islem'),
      ('CH₂O₃','Yanma ürünlerindeki bütün oksijeni (0,2 + 0,1 = 0,3 mol) bileşiğe ait saymış; oran 1 : 2 : 3 çıkmış.','bilgi')]
 q('0015',tipId='og-formul',tip='Basit formül, molekül formülü ve yanma analizi',z='zor',alt='Basit Formül ve Molekül Formülü',kaz='Yanma ürünlerinin kütlelerinden bileşiğin basit ve molekül formülünü bulur.',kalip='şekilli',
  kart='K-AKOG-07 (yanma analizi) · CaCl₂ ve KOH tüpleri',sekil=SK15,
- metin='Yalnız C, H ve O içeren bir organik bileşiğin örneği, şekildeki düzenekte fazla miktarda O₂ ile tamamen yakılıyor. Yanma ürünlerinden H₂O buharı yalnız CaCl₂ tüpünde, CO₂ gazı ise yalnız KOH tüpünde tutuluyor. Tüplerin kütle artışları şekilde verilmiştir. Bileşiğin mol kütlesi 60 g/mol’dür. (H = 1, C = 12, O = 16 g/mol)\nBuna göre bileşiğin molekül formülü aşağıdakilerden hangisidir?',
+ metin='Yalnız C, H ve O içeren, kütlesi 3,0 g olan bir organik bileşik örneği, şekildeki düzenekte fazla miktarda O₂ ile tamamen yakılıyor. Yanma ürünlerinden H₂O buharı yalnız CaCl₂ tüpünde, CO₂ gazı ise yalnız KOH tüpünde tutuluyor. Tüplerin kütle artışları şekilde verilmiştir. Bileşiğin mol kütlesi 60 g/mol’dür. (H = 1, C = 12, O = 16 g/mol)\nBuna göre bileşiğin molekül formülü aşağıdakilerden hangisidir?',
  dogru=f_ok,yan=W15,sira=yer(f_ok,W15,'A'),istenen='Bileşiğin molekül formülü.',
  ip=['Her tüpteki artıştan C ve H mol sayılarını bul; oksijen miktarını bileşiğin kütlesinden yararlanarak hesapla.'],
  bilgi=[B('Yanma analizi','Bileşikteki C tamamı CO₂’ye, H tamamı H₂O’ya dönüşür: 1 mol CO₂ → 1 mol C, 1 mol H₂O → 2 mol H. Oksijen miktarı, bileşiğin kütlesinden C ve H kütleleri çıkarılarak bulunur. Örnek: 0,5 mol H₂O oluşuyorsa bileşikte 1 mol H vardır')],
@@ -444,26 +442,26 @@ q('0016',tipId='og-hibrit',tip='Hibritleşme türü, orbital diyagramı ve ört�
  bilgi=[B('Hibrit orbitallerin örtüşmesi','Hibrit orbitallerin uç uca örtüşmesiyle σ bağı oluşur; hibritleşmeyen p orbitallerinin yan yana örtüşmesiyle π bağı oluşur. Örnek: etende C–C σ bağı sp²–sp² örtüşmesiyle, π bağı p–p örtüşmesiyle oluşur')],
  ad=[A('Hibritleşmeleri bul','2 σ → sp, 3 σ → sp², 4 σ → sp³.','Ca, Cb: sp · Cc, Cd: sp² · CH₃: sp³'),A('I’i değerlendir','2 sp ve 1 sp³ karbon var; oran 2’dir.','2 ÷ 1 = 2 → I yanlış'),A('Bağları say','σ: 1 + 1 + 1 + 1 + 1 + 1 + 1 + 3 = 10; π: 2 + 1 = 3.','II doğru'),A('III’ü değerlendir','Cb ile Cc arasındaki tek bağ, Cb’nin sp ve Cc’nin sp² orbitalinden oluşur.','III doğru'),A('Sonucu yaz','Doğru yargılar II ve III’tür.','II ve III')],
  puf='Önce her atomun hibritleşmesini bul; σ bağı hibrit orbitallerin uç uca, π bağı p orbitallerinin yan yana örtüşmesidir.')
-# ============ 17 · zor · tablo · molekül formülü ============
-D17=[('X',(1,2,1),60),('Y',(1,2,0),42),('Z',(1,3,0),30)]
-def kut(t): return t[0]*12+t[1]*1+t[2]*16
-tot_H=0; tot_C=0; fl=[]
-for nm,t,M in D17:
-    assert M%kut(t)==0; n=M//kut(t); tot_H+=n*t[1]; tot_C+=n*t[0]; fl.append(formul(tuple(n*x for x in t)))
-assert (tot_H,tot_C,fl)==(16,7,['C₂H₄O₂','C₃H₆','C₂H₆'])
-sH=sum(t[1] for _,t,_ in D17); assert sH==7
-h9=2*t[1] if False else 4+2+3; assert h9==9
-h14=2*sH; assert h14==14 and tot_C+tot_H==23
-SK17=tablo_svg(['Bileşik','Basit formül','Mol kütlesi (g/mol)'],[['X','CH₂O','60'],['Y','CH₂','42'],['Z','CH₃','30']])
-q('0017',tipId='og-formul',tip='Basit formül, molekül formülü ve yanma analizi',z='zor',alt='Basit Formül ve Molekül Formülü',kaz='Basit formül ve mol kütlesinden molekül formüllerini bulup atom sayılarını toplar.',kalip='tablo',
- kart='K-AKOG-06 (basit/molekül formülü) · üç bileşik, n katı',sekil=SK17,
- metin='X, Y ve Z organik bileşiklerinin basit formülleri ile mol kütleleri şekildeki tabloda verilmiştir. Molekül formülü, basit formülün tam sayı katıdır. (H = 1, C = 12, O = 16 g/mol)\nBuna göre bu üç bileşiğin birer molündeki toplam hidrojen atomu kaç moldür?',
- dogru=16,yan=[(7,'Basit formüllerdeki hidrojen sayılarını (2 + 2 + 3) toplamış; mol kütlesiyle n katını bulmamış.','dikkat'),(9,'Yalnız X için n = 2 bulup 4 hidrojen almış; Y ve Z’de basit formüllerdeki hidrojen sayılarını (2 + 3) kullanmış: 4 + 2 + 3 = 9.','dikkat'),(14,'Üç bileşik için de n = 2 almış: 2 × (2 + 2 + 3) = 14.','islem'),(23,'Hidrojen yerine karbon ve hidrojen atomlarının toplamını (7 + 16) vermiş.','dikkat')],
- istenen='Üç bileşiğin birer molündeki toplam H atomu (mol).',
- ip=['Her bileşiğin mol kütlesini basit formül kütlesine bölerek n değerini bul; n katını bütün atomlara uygula.'],
- bilgi=[B('Molekül formülü bulma','Molekül formülü = (basit formül)ₙ; n = mol kütlesi ÷ basit formül kütlesi. Örnek: basit formülü CH₂ olan ve mol kütlesi 28 g/mol olan bileşik için n = 28 ÷ 14 = 2, molekül formülü C₂H₄’tür')],
- ad=[A('X’i çöz','CH₂O’nun kütlesi 30 g/mol; n = 60 ÷ 30.','n = 2 → C₂H₄O₂ → 4 H'),A('Y’yi çöz','CH₂’nin kütlesi 14 g/mol; n = 42 ÷ 14.','n = 3 → C₃H₆ → 6 H'),A('Z’yi çöz','CH₃’ün kütlesi 15 g/mol; n = 30 ÷ 15.','n = 2 → C₂H₆ → 6 H'),A('Toplamı bul','Üç bileşiğin H atomu mol sayıları toplanır.','4 + 6 + 6 = 16')],
- puf='Her bileşikte n ayrı bulunur ve basit formüldeki bütün atom sayıları n ile çarpılır.')
+# ============ 17 · zor · tablo · σ/π sayısından yapı + hibritleşme ============
+D17=[('X',5,1),('Y',3,2),('Z',7,0)]
+sp3=0; pit=0
+for nm,sg,pi_ in D17:
+    nHh_=sg-1; assert pi_==(4*2-2*1-nHh_)//2 or True
+    cands=[h for h in (2,4,6) if 1+h==sg and (2*(4)-h-2)//2==pi_]   # C₂H_h: π = (8 − h − 2) ÷ 2
+    assert cands==[nHh_]
+    pit+=pi_; sp3+=2 if pi_==0 else 0
+assert (pit,sp3,pit+sp3)==(3,2,5)
+assert (2,3,6,9)==(sp3,pit,6,pit+6)
+SK17=tablo_svg(['Bileşik','σ bağı sayısı','π bağı sayısı'],[[n_,str(a_),str(b_)] for n_,a_,b_ in D17])
+q('0017',tipId='og-hibrit',tip='Hibritleşme türü, orbital diyagramı ve örtüşme',z='zor',alt='Hibritleşme',kaz='σ ve π bağı sayılarından hidrokarbonun yapısını bulur ve karbonların hibritleşmesini belirler.',kalip='tablo',
+ kart='K-AKOG-04 (hibritleşme türü) · σ/π sayısından yapı, hibrit sayımı',sekil=SK17,
+ metin='X, Y ve Z; molekülünde ikişer karbon atomu bulunan hidrokarbonlardır. Her birinin bir molekülündeki σ ve π bağı sayıları şekildeki tabloda verilmiştir.\nBu bileşiklerin 1’er molü karıştırılıyor. Buna göre karışımdaki toplam π bağı mol sayısı ile sp³ hibritleşmesi yapan karbon atomu mol sayısının toplamı kaçtır?',
+ dogru=5,yan=[(2,'Yalnız sp³ hibritleşmesi yapan karbonları (2 mol) saymış, π bağlarını eklememiş.','dikkat'),(3,'Yalnız π bağı mol sayısını (1 + 2 + 0 = 3) bulmuş, sp³ karbonları eklememiş.','dikkat'),(6,'Hibritleşmeyi göz ardı edip bütün karbon atomlarını (6 mol) saymış, π bağlarını eklememiş.','bilgi'),(9,'sp³ hibritli karbonlar yerine bütün karbon atomlarını (6 mol) alıp π bağlarını (3 mol) eklemiş.','bilgi')],
+ istenen='π bağı mol sayısı ile sp³ hibritli karbon mol sayısının toplamı.',
+ ip=['İki karbonlu bir hidrokarbonda σ sayısından hidrojen sayısını, π sayısından C–C bağının mertebesini bul; bağ mertebesi karbonların hibritleşmesini belirler.'],
+ bilgi=[B('σ ve π sayısından yapı','İki karbonlu bir hidrokarbonda σ bağı sayısı, C–C bağı için 1 ve C–H bağları için H sayısı kadardır. π bağı sayısı C–C bağının mertebesinden bir eksiktir. Örnek: C–C bağı üçlü bağsa π bağı sayısı 2’dir')],
+ ad=[A('Bileşikleri belirle','σ = 1 + H sayısı; π, C–C bağının mertebesine bağlıdır.','X: 4 H, 1 π → C₂H₄ · Y: 2 H, 2 π → C₂H₂ · Z: 6 H, 0 π → C₂H₆'),A('Hibritleşmeleri bul','π yoksa sp³, bir π sp², iki π sp hibritleşmesi görülür.','X: sp² · Y: sp · Z: sp³'),A('π bağlarını topla','Her bileşikten 1’er mol alınmıştır.','1 + 2 + 0 = 3 mol π'),A('sp³ karbonları say','Yalnız Z’nin iki karbonu sp³’tür.','2 mol sp³ karbon'),A('Toplamı hesapla','π ve sp³ karbon mol sayıları toplanır.','3 + 2 = 5')],
+ puf='Bağ sayısından yapıyı, yapıdan hibritleşmeyi bul: π bağı olmayan karbon sp³, bir π bağı olan sp², iki π bağı olan sp’dir.')
 # ============ 18 · zor · şekilli · Lewis yapıları · olumsuz kök ============
 def lp(x,y,ang,r=.40,s=.075):
     cx,cy=pol(x,y,ang,r); px,py=-math.sin(math.radians(ang)),math.cos(math.radians(ang))
@@ -496,7 +494,7 @@ W18=[('X’in merkez atomu sp² hibritleşmesi yapmıştır.','B atomunun üç F
      ('Z’nin geometrisi üçgen piramittir.','Azot üzerindeki ortaklanmamış çifti geometride yok sayıp düzlem üçgen bulmuş; oysa 3 bağ + 1 ortaklanmamış çift üçgen piramit verir.','bilgi'),
      ('Z’deki bağ açıları 109,5°’den küçüktür.','Ortaklanmamış çiftin bağ açısını küçülttüğünü bilmeyip NH₃’te açının 109,5° olduğunu sanmış; oysa açı yaklaşık 107°’dir.','bilgi')]
 dg18='X’in geometrisi düzgün dörtyüzlüdür.'
-q('0018',tipId='og-geometri',tip='Elektron çifti sayısından molekül geometrisi ve bağ açısı',z='zor',alt='Molekül Geometrisi',kaz='Lewis yapısından hibritleşme, molekül geometrisi ve bağ açısı değerlendirmesi yapar.',kalip='şekilli',
+q('0018',tipId='og-geometri',tip='Elektron çifti sayısından molekül geometrisi ve bağ açısı',z='orta',alt='Molekül Geometrisi',kaz='Lewis yapısından hibritleşme, molekül geometrisi ve bağ açısı değerlendirmesi yapar.',kalip='şekilli',
  kart='K-AKOG-05 (VSEPR) · BF₃, CO₂, NH₃ Lewis yapıları',sekil=SK18,
  metin='X, Y ve Z moleküllerinin Lewis yapıları şekilde noktalarla gösterilmiştir. Merkez atomun etrafındaki elektron çifti bölgeleri birbirini en az itecek biçimde yerleşir. (₁H, ₅B, ₆C, ₇N, ₈O, ₉F)\nBuna göre bu moleküllerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?',
  dogru=dg18,yan=W18,sira=yer(dg18,W18,'E'),istenen='Yanlış olan ifade.',
@@ -523,7 +521,7 @@ q('0019',tipId='og-ayrim',tip='Organik ve anorganik bileşiklerin ayrımı',z='o
  ip=['Gözlenen iki değişimin hangi maddelerin oluştuğunu gösterdiğini bul; bu maddelerdeki atomların hangi kaynaklardan gelmiş olabileceğini düşün.'],
  bilgi=[B('Organik madde tanıma','Isıtılan madde CO₂ veriyorsa kireç suyu bulanır (C varlığı); H₂O veriyorsa susuz CuSO₄ maviye döner (H varlığı). Oksijen deneyde CuO ya da havadan da gelebilir. Örnek: yalnız H₂O veren bir madde için hidrojen varlığı kesindir, ancak oksijenin kaynağı belli olmaz')],
  ad=[A('Gözlemleri yorumla','Kireç suyunun bulanması CO₂’yi, CuSO₄’ün maviye dönmesi H₂O’yu gösterir.','CO₂ → C · H₂O → H'),A('I’i değerlendir','C ve H atomları X’ten gelir.','I doğru'),A('II’yi değerlendir','Karbon ve hidrojen içeren her madde organik değildir.','II kesin değil'),A('III’ü değerlendir','CuO oksijen sağlar; X’te oksijen olup olmadığı belli olmaz.','III kesin değil'),A('Sonucu yaz','Kesin doğru olan yalnız I’dir.','Yalnız I')],
- puf='Yanma ürünleri yalnız C ve H varlığını gösterir; oksijen için ayrıca bilgi gerekir ve organik olma sonucu kesin değildir.')
+ puf='Her yanma ürününün hangi elementten geldiğini ayrı ayrı eşleştir; kaynağı belli olmayan elementi sonuca katma.')
 # ============ 20 · zor · tablo · yüzde bileşim + gaz hacmi + σ bağı ============
 pC,pH=Fr(80),Fr(20); m20=Fr(6); V20=Fr(448,100); n20=V20/Fr(224,10); assert n20==Fr(1,5); M20=m20/n20; assert M20==30
 rr_=(pC/12,pH/1); assert rr_[1]/rr_[0]==3

@@ -99,8 +99,9 @@ def f_yaprak():
     b.append(etiket('II',7.0,1.9,6.7,1.9,5.6,1.85)); b.append(etiket('IV',7.0,.7,6.7,.7,5.8,.7))
     b.append(etiket('III',-.9,1.55,-.55,1.55,2.4,1.55))
     return tk('\n'.join(b),.82)
-def demet(x,y,ang):
-    return (f'\\begin{{scope}}[shift={{({x:.2f},{y:.2f})}},rotate={ang:.0f}]\\draw[line width=.7pt,fill=white] (0,0) ellipse (.36 and .22);'
+def demet(x,y,ang,kamb=False):
+    kb='\\draw[line width=.9pt] (.0,-.19)--(.0,.19);' if kamb else ''
+    return (f'\\begin{{scope}}[shift={{({x:.2f},{y:.2f})}},rotate={ang:.0f}]\\draw[line width=.7pt,fill=white] (0,0) ellipse (.36 and .22);'+kb+
             '\\fill[black,fill opacity=.55] (-.15,0) circle (.1);\\draw[line width=.5pt,fill=white] (.16,0) circle (.08);\\end{scope}')
 def f_govde():
     b=[]; random.seed(9)
@@ -108,14 +109,14 @@ def f_govde():
         b.append(f'\\draw[line width=1.6pt] ({cx},0) circle (1.95);\\draw[line width=.5pt] ({cx},0) circle (1.75);')
         if ad=='A':
             for k in range(8):
-                a=math.radians(k*45+10); b.append(demet(cx+1.3*math.cos(a),1.3*math.sin(a),math.degrees(a)+180))
+                a=math.radians(k*45+10); b.append(demet(cx+1.3*math.cos(a),1.3*math.sin(a),math.degrees(a),True))
         else:
             pts=[]; dn=0
             while len(pts)<11 and dn<20000:
                 dn+=1
                 r=1.6*math.sqrt(random.random()); a=random.uniform(0,2*math.pi); x,y=r*math.cos(a),r*math.sin(a)
                 if all((x-u)**2+(y-v)**2>.66**2 for u,v in pts): pts.append((x,y))
-            for x,y in pts: b.append(demet(cx+x,y,math.degrees(math.atan2(y,x))+180))
+            for x,y in pts: b.append(demet(cx+x,y,math.degrees(math.atan2(y,x))))
         b.append(f'\\node[font=\\large\\bfseries] at ({cx},-2.45) {{{ad}}};')
     b.append('\\fill[black,fill opacity=.55] (-1.3,-3.35) circle (.1);\\node[anchor=west] at (-1.1,-3.35) {ksilem};\\draw[line width=.5pt,fill=white] (1.2,-3.35) circle (.07);\\node[anchor=west] at (1.4,-3.35) {floem};')
     return tk('\n'.join(b),.78)
@@ -342,7 +343,7 @@ Q('05','yapi','orta','öncüllü','Gövde yapısı','Tek ve çift çenekli bitki
   [A('Kesitleri tanı','A kesitinde iletim demetleri halka biçiminde, B kesitinde ise gövdeye dağınık hâlde dizilmiştir.','A: halka dizilim · B: dağınık dizilim'),
    A('Çenek sayısıyla eşleştir','Halka biçimli dizilim çift çenekli, dağınık dizilim tek çenekli bitkilerin özelliğidir. B bitkisinin tohumunda tek çenek yaprağı bulunur.',oy({'I':d5['I'],'II':d5['II']})),
    A('Kambiyumu değerlendir','Çift çenekli gövdede ksilem ile floem arasında bölünebilen kambiyum bulunur, tek çenekli gövdede bulunmaz.',oy({'III':d5['III']}))],
-  metin='Şekilde, çiçekli iki bitkiye ait gövdelerin enine kesitleri şematik olarak verilmiştir. Kesitlerde iletim demetlerindeki ksilem koyu, floem açık renkli yapılarla gösterilmiştir.\nI. A kesiti, çift çenekli bir bitkiye aittir.\nII. B kesitindeki bitkinin tohumunda iki çenek yaprağı bulunur.\nIII. Ksilem ile floem arasında bölünebilen kambiyum hücreleri, A kesitindeki bitkinin iletim demetlerinde bulunur, B kesitindekinde bulunmaz.\nBuna göre bu yargılardan hangileri doğrudur?',
+  metin='Şekilde, çiçekli iki bitkiye ait gövdelerin enine kesitleri şematik olarak verilmiştir. Kesitlerde iletim demetlerindeki ksilem koyu, floem açık renkli yapılarla gösterilmiş; demet içindeki ince çizgi, ksilem ile floem arasındaki bölünebilen dokuyu göstermektedir.\nI. A kesiti, çift çenekli bir bitkiye aittir.\nII. B kesitindeki bitkinin tohumunda iki çenek yaprağı bulunur.\nIII. A kesitindeki bitkinin iletim demetlerinde, ksilem ile floem arasında bölünme yeteneğini koruyan kambiyum bulunur; B kesitindeki bitkinin demetlerinde bulunmaz.\nBuna göre bu yargılardan hangileri doğrudur?',
   istenen='Doğru olan yargıların belirlenmesi.',ip=['İletim demetlerinin gövde kesitindeki dizilişini, çenek sayısı ve kambiyum ile ilişkilendir.'],
   bilgi=[B('Çenek sayısı','çiçekli bitkiler tohumlarındaki çenek yaprağı sayısına göre tek çenekli ve çift çenekli olarak ikiye ayrılır; bu ayrım kök, gövde ve yaprak yapısına da yansır'),
          B('Kambiyum','ksilem ile floem arasında yer alan, bölünme yeteneğini koruyan meristematik dokudur ve kalınlaşmayı sağlar')],
@@ -369,16 +370,16 @@ Q('06','terleme','orta','öncüllü','Stoma hareketi','Bekçi hücrelerine iyon 
 SK=f_tup()
 d7=[('Bu bitkinin yaprağının üst yüzeyinde stoma bulunmaz.',False,'üst yüzeyi kapatılan L ve N tüplerinde de su kaybı olduğundan bu bilgi deneyden çıkarılamaz.'),
     ('Terleyle kaybedilen suyun büyük bölümü yaprağın alt yüzeyinden olur.',True,'alt yüzeyi kapatılan L tüpünde su kaybı 9 mL’den 2 mL’ye düşmüştür.'),
-    ('Yaprak yüzeyleri vazelinle kapatıldıkça su kaybı azalmıştır.',True,'N tüpünde iki yüzey de kapatılınca kayıp en azdır.'),
-    ('Her iki yüzey kapatıldığında da yaprakta az miktarda su kaybı sürmüştür.',True,'N tüpündeki 1 mL’lik kayıp, yüzeyler kapalıyken de küçük bir su kaybının sürdüğünü gösterir.'),
+    ('L ve N tüplerinde su kaybı, K tüpündekinden azdır.',True,'L’de 2 mL, N’de 1 mL, K’de ise 9 mL su kaybolmuştur.'),
+    ('N tüpünde de su kaybı olmuştur.',True,'N tüpünden 1 mL su kaybolmuştur.'),
     ('Vazelin sürülmeyen K tüpü, diğer tüplerle karşılaştırma yapmaya olanak sağlayan kontrol düzeneğidir.',True,'K tüpünde yüzeylere işlem yapılmamıştır ve diğer tüpler onunla kıyaslanır.')]
 assert KAYIP['K']-KAYIP['M']==UST and KAYIP['K']-KAYIP['L']==ALT and ALT>UST*3
 o=tek(d7,False)
 Q('07','terleme','orta','şekilli','Terleme deneyi','Yaprak yüzeylerinin kapatıldığı deney sonuçlarından terlemenin yaprağın hangi yüzeyinde yoğun olduğunu yorumlar.',
   'Yüzeyi kapatılan tüplerdeki su kaybı farkı, o yüzeyden olan terlemeyi gösterir; deney sonucundan yalnız verilerle desteklenen çıkarımlar yapılabilir.','Su kaybının azalmasından stomanın hiç bulunmadığı sonucunu çıkarmak.','vazelinli yaprak deneyi',
   [A('Deney düzeneğini incele','Dört tüpte eşit hacimde su vardır; suyun yüzeyi yağla örtüldüğünden su kaybı yalnız bitkiden olur. Tüplerde kaybolan su miktarları verilmiştir.','K: 9 · L: 2 · M: 8 · N: 1 (mL)'),
-   A('Yüzey katkılarını hesapla','Üst yüzey katkısı K−M kadar, alt yüzey katkısı K−L kadardır. Kalan kayıp yüzeyler kapalıyken de sürendir.','Üst: 9−8 = 1 · Alt: 9−2 = 7 · Kalan: 1 mL'),
-   A('İfadeleri verilere uydur','Alt yüzeyden kayıp çok, üst yüzeyden az, kapalı durumda da az miktarda kayıp vardır. Üst yüzeyde stoma olmadığı ise verilerle kanıtlanamaz.','Üst yüzeyde stoma yok → deneyden söylenemez')],
+   A('Yüzey katkılarını hesapla','Üst yüzey katkısı K−M kadar, alt yüzey katkısı K−L kadardır.','Üst: 9−8 = 1 · Alt: 9−2 = 7'),
+   A('İfadeleri verilere uydur','Alt yüzeyden kayıp çok, üst yüzeyden az; N’de de kayıp vardır. Üst yüzeyde stoma olmadığı ise verilerle kanıtlanamaz.','Üst yüzeyde stoma yok → deneyden söylenemez')],
   metin='Aynı türden bitkilerin eşit yaprak sayılı dallarından alınan dört parça, eşit hacimde su içeren K, L, M ve N tüplerine yerleştirilmiş, suların yüzeyi ince bir yağ tabakasıyla örtülmüştür. K’de yaprakların hiçbir yüzeyine işlem yapılmamış; L’de alt yüzeyler, M’de üst yüzeyler, N’de her iki yüzey vazelinle kaplanmıştır. Aynı koşullarda 24 saat sonra tüplerden kaybolan su miktarları şekilde verilmiştir.\nBuna göre, bu deneyle ilgili aşağıdakilerden hangisi söylenemez?',
   istenen='Deney sonuçlarından çıkarılamayan ifade.',ip=['Hangi tüpler karşılaştırıldığında her yüzeyin su kaybına katkısının bulunabileceğini düşün; yalnızca verilerle desteklenen ifadeleri ele.'],
   bilgi=[B('Terleme','bitkinin su buharını yaprak yüzeyinden atmasıdır; büyük bölümü stomalardan, az bir bölümü kutikula yoluyla gerçekleşir'),
@@ -387,22 +388,23 @@ Q('07','terleme','orta','şekilli','Terleme deneyi','Yaprak yüzeylerinin kapat�
 
 # ---- 08 · su dengesi grafiği · zor
 SK=f_denge()
-mt=[6,12,15,18,21]
-Q('08','tasima','zor','grafik','Su alımı ve terleme','Su alım ve terleme hızı grafiklerinden bitkideki su miktarının değişimini yorumlar.',
-  'Dokulardaki su miktarı, su alımı ile terleme hızı farkının zaman içindeki toplamına bağlıdır; en düşük değer, terlemenin alımı aştığı sürenin bittiği anda olur.','Terlemenin en yüksek olduğu anı ya da hız farkının en büyük olduğu anı su miktarının en az olduğu an sanmak.','su dengesi grafiği',
-  [A('Grafiği oku','Terleme hızı gündüz artar ve en yüksek değerine ulaşır; su alım hızı terlemeyi gecikmeli izler.','Terleme: 15. saatte en yüksek · Alım: 18. saatte en yüksek'),
-   A('Su dengesinin yönünü belirle','Alım terlemeden küçükken doku suyu azalır, büyükken artar. Bu durum 6. ile 21. saat arasında alımın terlemenin altında kalmasıyla gerçekleşir.','6–21 saat: alım < terleme → su azalır'),
-   A('En düşük anı bul','Su miktarı, azalma sürdüğü sürece düşer. Hız eğrilerinin kesiştiği anda azalma durur ve sonrasında artış başlar.','Eğrilerin kesiştiği an: 21. saat → su en azdır')],
-  metin='Şekilde, açık havada yetişen bir bitkide 24 saat boyunca (0: gece yarısı) terleme hızı ile köklerin su alım hızı gösterilmiştir. Dokulardaki su miktarındaki değişimin yalnızca bu iki hıza bağlı olduğu kabul edilmektedir.\nBuna göre, bitkinin dokularındaki toplam su miktarı hangi saatte en düşük düzeydedir?',
-  dogru=21,
-  yan=[(6,'6. saatte terleme hızı alım hızını aşmaya başlar; su kaybı bu andan sonra sürer ve su miktarı daha da azalır. Bu an su miktarının en düşük anı değildir.','bilgi'),
-       (12,'12. saatte terleme ile alım hızı arasındaki fark en büyüktür; ancak bu hız farkıdır ve su miktarı farkın toplamıyla değişir, azalma bu andan sonra da sürer.','islem'),
-       (15,'15. saat terleme hızının en yüksek olduğu andır; terleme alımı aşmaya devam ettiği için su miktarı bu saatte de azalmaktadır.','bilgi'),
-       (18,'18. saat su alım hızının en yüksek olduğu andır; ancak alım terlemenin altında olduğundan su miktarı bu saatten sonra da azalır.','bilgi')],
-  istenen='Dokulardaki su miktarının en düşük olduğu saat.',ip=['Su miktarındaki değişimin, iki hızın farkının zamanla toplanmasına bağlı olduğunu düşün; azalmanın ne zaman bittiğine bak.'],
-  bilgi=[B('Bitkide su dengesi','bitkinin su miktarı, köklerle alınan su ile yapraklardan terlemeyle kaybedilen suyun farkıyla belirlenir; su kaybı alımı aştığında doku suyu azalır'),
+KAYBOL=-min(DEN); assert KAYBOL==96 and -DEN[4]==36 and -DEN[5]==69 and -DEN[6]==90 and -DEN[8]==93
+Q('08','tasima','zor','grafik','Su alımı ve terleme','Su alım ve terleme hızı grafiklerinden alan hesaplayarak dokulardaki su miktarının değişimini bulur.',
+  'Dokulardaki su miktarı, alım ve terleme hızları farkının zaman içindeki toplamına (eğriler arası alana) bağlıdır; en düşük değer, farkın işaret değiştirdiği anda olur.','Yalnız bir andaki hız farkını ya da gün sonu değerini en büyük azalma sanmak.','su dengesi grafiği',
+  [A('Grafiği oku','Terleme hızı gün içinde artıp azalır; su alım hızı terlemeyi gecikmeli izler. Değerler 3 saatlik aralıklarla okunur.','Terleme ve alım: 3 saatte bir okunan değerler'),
+   A('Her aralıkta net değişimi hesapla','Her 3 saatlik aralıkta (alım hızı ortalaması − terleme hızı ortalaması) × 3 saat net su değişimini verir.','9: −9 · 12: −27 · 15: −33 · 18: −21 · 21: −6 (mL)'),
+   A('Birikimi izle','Net değişimler eksi oldukça su azalır; eğriler 21. saatte kesişince azalma biter. En düşük miktar bu ana kadar toplanan değerdir.','−9 −27 −33 −21 −6 = −96 mL'),
+   A('Sonucu yaz','Gün başına göre en büyük azalma 96 mL’dir.','Cevap: 96')],
+  metin='Şekilde, açık havada yetişen bir bitkide 24 saat boyunca (0: gece yarısı) terleme hızı ile köklerin su alım hızı gösterilmiştir; hızlar 3 saatlik aralıklarla okunup her aralıkta doğrusal değiştiği kabul edilecektir. Dokulardaki su miktarındaki değişimin yalnızca bu iki hıza bağlı olduğu kabul edilmektedir.\nBuna göre, gün boyunca bitkinin dokularındaki su miktarı, gün başındaki değerine göre en fazla kaç mL azalır?',
+  dogru=KAYBOL,
+  yan=[(-DEN[4],'12. saate kadar olan birikim hesaplanmış; oysa su miktarı terleme alımı aştığı sürece 12. saatten sonra da azalmaya devam eder.','dikkat'),
+       (-DEN[5],'15. saate (terlemenin en yüksek olduğu ana) kadar olan birikim alınmış; azalma bu saatten sonra da sürer.','bilgi'),
+       (-DEN[6],'18. saate (alım hızının en yüksek olduğu ana) kadar olan birikim alınmış; alım hâlâ terlemenin altındadır ve azalma sürer.','bilgi'),
+       (-DEN[8],'Gün sonundaki (24. saat) net azalma alınmış; oysa 21. saatten sonra alım terlemeyi aşar ve su miktarı kısmen yeniden artar, en büyük azalma 21. saatte olur.','islem')],
+  istenen='Gün başına göre su miktarındaki en büyük azalma (mL).',ip=['Her 3 saatlik aralıkta iki hızın ortalamasını karşılaştır ve net değişimi biriktirerek izle.'],
+  bilgi=[B('Bitkide su dengesi','bitkinin su miktarı, köklerle alınan su ile yapraklardan terlemeyle kaybedilen suyun farkıyla belirlenir'),
          B('Terleme ve su alımı','terleme yapraklardan su buharı kaybıdır, su alımı ise köklerin topraktan su almasıdır; ikisinin hızı gün boyunca değişir')],
-  puf='Miktarın en düşük olduğu an, azalmayı artışa çeviren kesişim anıdır; hızın en büyük olduğu an değildir.',sekil=SK)
+  puf='Hız grafiklerinde miktar değişimi, eğri altındaki alanların farkıyla bulunur.',sekil=SK)
 
 # ---- 09 · floem şeması · orta · olumsuz
 SK=f_floem()
@@ -419,7 +421,7 @@ Q('09','tasima','orta','şekilli','Floemde taşınma','Kaynak–havuz arasındak
    A('Havuzdaki olayı incele','Havuzda şeker boşaltılınca ozmotik basınç düşer ve su ksileme geri döner. Akış yönü kaynak ile havuzun konumuna göredir.','Su: floem → ksilem'),
    A('Yanlış ifadeyi seç','ATP harcanmadığını söyleyen ifade, yüklemenin difüzyonla olduğunu varsaydığından yanlıştır.','Cevap: difüzyon iddiası')],
   metin='Şekilde, bir bitkideki kaynak organ olan yaprak ile havuz organ arasında floem yoluyla şeker taşınması şematik olarak gösterilmiştir. Yaprakta fotosentezle üretilen şeker, ok yönünde kalburlu boru hücrelerinden geçerek havuza ulaşmaktadır.\nBuna göre, numaralı yapılarla ilgili aşağıdakilerden hangisi yanlıştır?',
-  istenen='Yanlış olan ifade.',ip=['Şekerin kaynakta floeme nasıl yüklendiğini ve yüklemeden sonra ozmotik basınç ile su hareketinin nasıl değiştiğini sırayla düşün.'],
+  istenen='Yanlış olan ifade.',ip=['Şemadaki her numaralı yapının görevini belirle ve ifadeleri sırayla bu görevlerle karşılaştır.'],
   bilgi=[B('Kaynak ve havuz','şeker üretilen ya da depodan salınan organ kaynak, şekerin kullanıldığı ya da depolandığı organ havuzdur; bir organ koşullara göre biri ya da diğeri olabilir'),
          B('Floem ve ksilem','floem canlı hücrelerle organik madde, ksilem cansız hücrelerle su ve mineral taşır')],
   puf='Floemde yükleme aktif taşımayla olur; sonrasında su girişi basıncı artırır ve akışı sürdürür.',**tek([d9[0],d9[1],d9[2],d9[3],d9[4]],False),sekil=SK)
@@ -504,14 +506,14 @@ d14={'I':(True,'A ile B karşılaştırıldığında uç tomurcuk varken yan tom
      'III':(False,'D’de uç tomurcuk kesilmediği hâlde sitokinin sürülen yan tomurcuklar gelişmiştir; sitokinin, uç kesilmeden de uyarıcı olabilir')}
 assert SON['A']!=SON['B'] and SON['C']==SON['A'] and SON['D'] and not d14['III'][0]
 o=onc_t(d14,3)
-Q('14','hormon','zor','öncüllü','Apikal dominans','Uç tomurcuk, oksin ve sitokinin uygulamalı deney sonuçlarından hormonların yan tomurcuk gelişimindeki rolünü çıkarır.',
+Q('14','hormon','orta','öncüllü','Apikal dominans','Uç tomurcuk, oksin ve sitokinin uygulamalı deney sonuçlarından hormonların yan tomurcuk gelişimindeki rolünü çıkarır.',
   'Uç tomurcukta üretilen oksin yan tomurcukların gelişimini baskılar; sitokinin bu baskıyı ortadan kaldırarak yan tomurcuk gelişimini uyarır.','Sitokininin etkisinin yalnız uç kesildiğinde ortaya çıktığını sanmak.','apikal dominans deneyi',
   [A('Grup farklarını belirle','A kontroldür, B’de uç kesilmiştir, C’de uç kesilip kesik yüzeye oksin sürülmüştür, D’de uç bırakılıp yan tomurcuklara sitokinin sürülmüştür.','A: baskılı · B: gelişmiş · C: baskılı · D: gelişmiş'),
    A('I. yargıyı değerlendir','A ve B arasındaki tek fark uç tomurcuktur; uç varken yan tomurcuklar gelişmez, kesilince gelişir.',oy({'I':d14['I']})),
    A('II. yargıyı değerlendir','B ile C arasındaki fark kesik yüzeye sürülen oksindir; oksin sürülünce yan tomurcuk gelişimi yeniden baskılanır.',oy({'II':d14['II']})),
    A('III. yargıyı değerlendir','D’de uç tomurcuk yerindeyken sitokinin sürülen yan tomurcuklar gelişmiştir. Bu nedenle sitokininin etkisi uç kesilmesine bağlı değildir.',oy({'III':d14['III']}))],
   metin='Aynı türden dört bitkiye şu uygulamalar yapılmış ve 10 gün sonraki durumları şekilde gösterilmiştir. A: uç tomurcuk bırakılmıştır. B: uç tomurcuk kesilmiştir. C: uç tomurcuk kesilmiş, kesik yüzeye oksin içeren macun sürülmüştür. D: uç tomurcuk bırakılmış, yan tomurcuklara sitokinin sürülmüştür.\nI. Yan tomurcukların gelişimi, uç tomurcuğun varlığıyla baskılanmaktadır.\nII. Oksin, yan tomurcuk gelişimini baskılayan etkenlerden biridir.\nIII. Sitokinin, yan tomurcuk gelişimini yalnızca uç tomurcuk kesildiğinde uyarabilir.\nBuna göre bu yargılardan hangileri doğrudur?',
-  istenen='Doğru olan yargıların belirlenmesi.',ip=['Yargıları değerlendirirken yalnız tek bir uygulaması farklı olan iki bitkiyi karşılaştır.'],
+  istenen='Doğru olan yargıların belirlenmesi.',ip=['Her yargı için şekildeki uygulamaları ve sonuçları karşılaştır.'],
   bilgi=[B('Tomurcuklar','bitkilerde uç ve yan tomurcuklar bulunur; tomurcukların gelişimi hormonlarla düzenlenir'),
          B('Kontrollü deney','bir değişkenin etkisi, yalnız o değişkenin farklı olduğu gruplar karşılaştırılarak belirlenir')],
   puf='İki grubu karşılaştırırken yalnız tek değişkenin farklı olduğu çifti seç; sonuç o değişkene aittir.',sekil=SK,**o)
@@ -551,26 +553,26 @@ Q('16','ureme','zor','şekilli','Çifte döllenme','Embriyo kesesindeki çekirde
   yan=[(ENDO,'Yalnız endosperm ana hücresi (3n = 36) hesaplanmış, zigot (2n = 24) toplama katılmamıştır.','dikkat'),
        (ZIGOT+(N+N),'Endosperm ana hücresi 2n = 24 sanılmış; oysa iki polar çekirdek ve bir sperm çekirdeği bulunduğundan 3n = 36’dır. 24 + 24 = 48 bulunmuştur.','bilgi'),
        (ZIGOT+4*N,'Endosperm ana hücresi 4n = 48 sanılmış; iki sperm çekirdeğinin ikisi de polar çekirdeklerle birleşmiş kabul edilmiştir. 24 + 48 = 72 bulunmuştur.','bilgi'),
-       (8*N,'Embriyo kesesindeki sekiz çekirdeğin hepsi hesaplanmış (8 × 12 = 96); oysa istenen yalnız zigot ve endosperm ana hücresidir ve sperm çekirdekleri de katkıda bulunur.','dikkat')],
+       (8*N,'Embriyo kesesindeki sekiz çekirdeğin hepsi toplanmış (8 × 12 = 96); oysa istenen yalnız zigot ve endosperm ana hücresinin kromozomlarıdır.','dikkat')],
   istenen='Zigot ile endosperm ana hücresindeki toplam kromozom sayısı.',ip=['Embriyo kesesindeki çekirdeklerin haploit olduğunu ve her sperm çekirdeğinin hangi çekirdekle birleştiğini sırayla izle.'],
   bilgi=[B('Embriyo kesesi','çiçekli bitkilerde dişi gametofittir; megasporun mitozlarıyla oluşan haploit çekirdekleri bulundurur'),
          B('Çifte döllenme','çiçekli bitkilerde döllenme sırasında iki sperm çekirdeği görev alır; oluşan yapıların kromozom sayısı, birleşen çekirdeklerin kromozom sayılarının toplamıdır')],
   puf='Embriyo kesesindeki çekirdekler haploittir: yumurta + sperm = 2n, iki polar çekirdek + sperm = 3n.',sekil=SK)
 
 # ---- 17 · halkalama · zor
-s17=[('Ksilem de zedelendiği için halkanın üstündeki dala su ulaşamaz; salkımlar yalnızca yapraklardaki şekerle büyür.',False,'ksilem zedelenmediğinden su taşınımı sürer ve halkanın üstündeki dal su almaya devam eder.'),
-     ('Şeker halkanın altında birikir; salkımlar şeker alamadığı için küçük kalır ve kökler daha fazla şeker kullanır.',False,'şeker floemden aşağıya geçemeyeceği için halkanın üstünde birikir; üstteki salkımlar havuz olduğundan daha fazla şeker alır.'),
-     ('Floemde şeker yalnız yukarı yönde taşındığından halkanın üstündeki salkımlar şeker alamaz; su ise ksilemle taşınır.',False,'floemde şeker kaynaktan havuza taşınır ve salkımlar havuz olduğunda şeker alır; taşınma yönü yalnız yukarı değildir.'),
-     ('Yapraklardaki şeker floemden halkanın altına geçemez ve üstteki salkımlara yönelir; ksilem sağlam kaldığı için su taşınımı da sürer.',True,''),
-     ('Halkanın altındaki kökler yapraklardan şeker almayı sürdürdüğünden salkımlara giden şeker miktarı değişmez.',False,'floem kesildiği için köklere şeker ulaşamaz; kökler halkanın üstündeki yapraklardan şeker alamaz.')]
+s17=[('Ksilem de zedelendiği için halkanın üstündeki dala su ulaşamaz; salkımlar yalnızca yapraklardaki şekerle büyür ve kökler şeker almayı sürdürür.',False,'ksilem zedelenmediğinden su taşınımı sürer; ayrıca floem kesik olduğundan köklere yapraklardan şeker ulaşmaz.'),
+     ('Şeker halkanın altında birikir; salkımlar şeker alamadığı için küçük kalır ve kökler daha fazla şeker kullanır.',False,'şeker floemden aşağıya geçemeyeceği için halkanın üstünde birikir; üstteki salkımlar havuz olduğundan daha fazla şeker alır ve kökler şekersiz kalır.'),
+     ('Floemde şeker yalnız yukarı yönde taşındığından salkımlar şeker alamaz; kökler ise ksilemden şeker alarak beslenir.',False,'floemde şeker kaynaktan havuza taşınır ve salkımlar havuz olduğunda şeker alır; ksilem ise şeker değil su ve mineral taşır.'),
+     ('Salkımlara giden şeker artar; halkanın altındaki kökler yapraklardan şeker alamadığı için zamanla depo maddelerini kullanır, ksilem sağlam kaldığından su taşınımı sürer.',True,''),
+     ('Halkanın altındaki kökler yapraklardan şeker almayı sürdürdüğünden salkımlara giden şeker miktarı değişmez ve su taşınımı durur.',False,'floem kesildiği için köklere şeker ulaşmaz; ksilem zedelenmediğinden su taşınımı da durmaz.')]
 o=tek(s17,True)
 Q('17','tasima','zor','hikâyeli','Floem ve ksilem','Floemin kesilmesinin şeker ve su taşınmasına etkisini kaynak–havuz ilişkisiyle yorumlar.',
   'Floem şekeri kaynaktan havuza taşır, ksilem suyu kökten yukarı iletir; floem kesilirse şeker kesik yerin üstünde birikir, su taşınımı sürer.','Halkalamanın ksilemi de kestiğini sanmak; floemde yalnız tek yönlü akış olduğunu düşünmek.','halkalama, kaynak ve havuz',
   [A('Uygulamayı yorumla','Kabuk şeridiyle birlikte floem çepeçevre kaldırılmış, odun kısmı yani ksilem sağlam bırakılmıştır.','Floem kesik · ksilem sağlam'),
    A('Şeker taşınmasını incele','Yapraklarda üretilen şeker floemde kaynaktan havuza taşınır. Halkada floem olmadığından şeker aşağıya geçemez ve salkımlara yönelir.','Şeker: halkanın altına inemez'),
    A('Su taşınmasını incele','Su ve mineraller ksilemle yukarı taşınır. Ksilem zedelenmediğinden halkanın üstündeki dala su ulaşmaya devam eder.','Su: ksilemle sürer'),
-   A('Sonucu birleştir','Şekerin salkımlara yönelmesi ve su akışının sürmesi, salkımların iri ve şekerli olmasının nedenidir.','Doğru ifade: şeker üstte kalır, su taşınımı sürer')],
-  metin='Bağcılıkta salkımlardaki taneleri iri ve şekerli elde etmek için, meyve veren bir dalın tabanından floemi içine alacak biçimde çepeçevre ince bir kabuk şeridi kaldırılır; odun kısmı (ksilem) zedelenmez. Dalın üstünde yapraklar ve salkımlar, altında ise gövde ve kökler bulunmaktadır.\nBuna göre, bu uygulamadan sonra halkanın üstündeki yaprak ve salkımlarda aşağıdakilerden hangisi gerçekleşir?',
+   A('Sonucu birleştir','Salkımlara şeker yönelir, kökler depo maddeye döner ve su akışı sürer.','Doğru ifade: şeker üstte kalır, su taşınımı sürer')],
+  metin='Bağcılıkta salkımlardaki taneleri iri ve şekerli elde etmek için, meyve veren bir dalın tabanından floemi içine alacak biçimde çepeçevre ince bir kabuk şeridi kaldırılır; odun kısmı (ksilem) zedelenmez. Dalın üstünde yapraklar ve salkımlar, altında ise gövde ve kökler bulunmaktadır.\nBuna göre, bu uygulamadan sonra aşağıdakilerden hangisi gerçekleşir?',
   istenen='Halkalama sonrası şeker ve su taşınmasıyla ilgili doğru ifade.',ip=['Halkada hangi iletim dokusunun kesildiğini ve hangisinin sağlam kaldığını belirle; sonra şeker ile suyun ayrı yollarını düşün.'],
   bilgi=[B('Kaynak ve havuz','şeker üretilen organ kaynak, kullanıldığı ya da depolandığı organ havuzdur; floemde şeker kaynaktan havuza doğru taşınır'),
          B('Ksilem ve floem','ksilem kökten yukarı su ve mineral taşır, floem yapraklardan şekeri havuza taşır; iki doku ayrı ayrı çalışır')],
@@ -579,17 +581,17 @@ Q('17','tasima','zor','hikâyeli','Floem ve ksilem','Floemin kesilmesinin şeker
 # ---- 18 · ABA grafiği · zor · olumsuz
 SK=f_aba()
 assert all(ABA[i]<ABA[i+1] for i in range(8)) and all(STO[i]>=STO[i+1] for i in range(8))
-assert FOT[4]>50 and STO[4]<50 and FOT[4]<60 and ABA[5]==90 and all(v<20 for v in STO[5:])
+assert FOT[4]>40 and STO[4]<50 and FOT[4]<70 and ABA[5]==90 and all(v<30 for v in STO[5:])
 s18=[('ABA derişimindeki artış, klorofil moleküllerini doğrudan parçalayarak fotosentez hızını düşürmüştür.',False,''),
      ('Kuraklık süresi uzadıkça ABA derişimi artarken stoma açıklığı azalmıştır.',True,'grafikte ABA eğrisi yükselirken stoma açıklığı eğrisi alçalmaktadır.'),
-     ('4. günde fotosentez hızı, 0. gündeki değerinin yarısından fazladır.',True,'4. günde fotosentez hızı yaklaşık %55’tir.'),
-     ('Stoma açıklığı 0. gündeki değerinin %50’sinin altına indiğinde, fotosentez hızı da 0. gündeki değerinin %60’ının altındadır.',True,'stoma açıklığı 4. günde %35’e inmiştir ve bu günde fotosentez hızı yaklaşık %55’tir.'),
-     ('ABA derişimi en yüksek değerinin %90’ına ulaştığında stoma açıklığı 0. gündeki değerinin %20’sinin altına inmiştir.',True,'ABA 5. günde %90’a ulaşmış ve aynı günde stoma açıklığı yaklaşık %18’dir.')]
+     ('4. günde fotosentez hızı, 0. gündeki değerinin %40’ından fazladır.',True,'4. günde fotosentez hızı yaklaşık %55’tir.'),
+     ('4. günde stoma açıklığı 0. gündeki değerinin %50’sinin altındadır ve fotosentez hızı 0. gündeki değerinin %70’inin altındadır.',True,'4. günde stoma açıklığı yaklaşık %35, fotosentez hızı yaklaşık %55’tir.'),
+     ('ABA derişimi en yüksek değerinin %90’ına ulaştığında stoma açıklığı 0. gündeki değerinin %30’unun altına inmiştir.',True,'ABA 5. günde %90’a ulaşmış ve aynı günde stoma açıklığı yaklaşık %18’dir.')]
 o=tek(s18,False)
 Q('18','terleme','zor','grafik','ABA ve stoma','Kuraklıkta ABA, stoma açıklığı ve fotosentez hızı eğrilerini birlikte yorumlar ve grafikle desteklenmeyen çıkarımı ayırt eder.',
   'ABA, kuraklıkta stomaların kapanmasını sağlar; stoma kapanınca CO₂ girişi azalır ve fotosentez hızı düşer; grafikten yalnız verilerle desteklenen çıkarımlar yapılabilir.','Grafikte ölçülmeyen bir mekanizmayı (klorofil yıkımı) veriden çıkarılabilir sanmak.','kuraklık, ABA ve stoma grafiği',
   [A('Eğrileri oku','ABA derişimi günler içinde artarken stoma açıklığı ve fotosentez hızı azalmaktadır. Fotosentez, stomadan biraz gecikmeyle düşmeye başlar.','ABA ↑ · Stoma ↓ · Fotosentez ↓'),
-   A('Yargıları grafikle sına','ABA artarken stomanın azalması, 4. gün fotosentezin %55 olması ve %35 stoma açıklığında fotosentezin %60 altına inmesi grafikte görülür. ABA’nın 5. günde %90’a ulaşması ve stomanın %18 olması da grafikte vardır.','Grafikle desteklenen: 4 yargı'),
+   A('Yargıları grafikle sına','ABA artarken stomanın azalması, 4. gün fotosentezin %55, stoma açıklığının %35 olması grafikte görülür. ABA’nın 5. günde %90’a ulaşması ve stomanın %18 olması da grafikte vardır.','Grafikle desteklenen: 4 yargı'),
    A('Desteklenmeyeni seç','Klorofilin ABA tarafından doğrudan parçalandığına ilişkin bir veri grafikte yoktur; ABA’nın etkisi stomaların kapanmasıdır.','Cevap: klorofil parçalanması iddiası')],
   metin='Şekildeki grafikte, kuraklık stresine giren bir bitkinin yapraklarında ABA derişimi, stoma açıklığı ve fotosentez hızının 8 gün boyunca değişimi verilmiştir. Her büyüklük, kendi en yüksek değerine göre yüzde olarak gösterilmiştir; stoma açıklığı ve fotosentez hızı 0. günde en yüksek değerindedir.\nBuna göre, bu grafikten aşağıdakilerden hangisi çıkarılamaz?',
   istenen='Grafikten çıkarılamayan ifade.',ip=['Her ifadeyi, grafikteki eğrilerin değerleriyle tek tek karşılaştır.'],
@@ -631,6 +633,22 @@ Q('20','ureme','orta','tablo','Çimlenme koşulları','Kontrollü deney tablosun
   bilgi=[B('Çimlenme','tohumun dinlenme durumundan çıkıp embriyonun büyümeye başlamasıdır; su alımı ile başlar ve enzim etkinliği artar'),
          B('Kontrollü deney','bir faktörün etkisini görmek için yalnız o faktör değiştirilir, diğerleri sabit tutulur; karşılaştırılacak kap, kontrol grubuyla yalnız tek farkla ayrılır')],
   puf='Bir koşulun gerekliliği yalnız o koşulun farklı olduğu iki kapla gösterilir; denenmeyen koşul hakkında sonuç çıkarılamaz.',sekil=SK,**o)
+
+
+PUF={'01':'Su ileten ve organik madde taşıyan dokuların hücre canlılığını karşılaştır.','03':'Hücre biçimini ve dizilişini yaprağın görevleriyle eşleştir.','06':'Şekildeki iyon ve su yönünü izle, bekçi hücresinin durumunu buna göre yorumla.',
+ '07':'Karşılaştırma yapılırken yalnız verinin desteklediği sonuçlar kabul edilir.','09':'Yükleme ve boşaltmada suyun ve şekerin yönünü ayrı ayrı izle.','10':'Suyun ve iyonların geçiş yollarını ayrı ayrı düşün.',
+ '11':'Uyaranı algılayan bölgeyi belirle, sonra her düzenekte o bölgenin durumuna bak.','13':'Olayı açıklayan hormonu ve ortam koşulunu birlikte değerlendir.','14':'Karşılaştırmada yalnız bir değişkeni farklı olan grupları eşleştir.',
+ '15':'Döllenme sonrası çiçek kısımlarının akıbetini bir tabloyla çıkar.','16':'Her çekirdeğin ploidisini yazıp birleşmeleri toplayarak ilerle.','17':'İki iletim dokusunun görevini ayrı ayrı değerlendir.','19':'Damlacığın hâlini ve çıkış yerini belirle.','20':'Her yargıyı veriyle sınayarak ilerle.'}
+FIK={'01':'Kök kesitinde dokular canlılık ve yapı bakımından ayrışır.','03':'Yaprak kesitindeki hücre biçimi ve dizilişi dokunun görevine uyum gösterir.','07':'Kontrollü deneyde sonuçlar yalnız verinin desteklediği ölçüde yorumlanır.','08':'Miktar değişimi, hız eğrileri arasındaki alanlarla bulunur.',
+ '09':'Floemde madde taşınması kaynak ve havuz arasında enerji ve basınç farkıyla gerçekleşir.','11':'Yönelim hareketlerinde uyaranı algılayan bölge belirlenir.','15':'Döllenme sonrası çiçek kısımları farklı akıbetlere uğrar.','17':'Ksilem ve floem farklı maddeleri farklı yollarla taşır.','19':'Bitkiler suyu farklı yollarla ve farklı hâllerde atabilir.','20':'Bir faktörün etkisi yalnız o faktörün değiştiği gruplarla sınanır.','18':'Hormon, stoma ve fotosentez arasındaki ilişki grafikle yorumlanır.'}
+TUZ={'07':'Veri yorumunda sonucu verinin ötesine taşımak.','20':'Deneyde sınanmamış bir etkeni sonuca katmak.','18':'Grafikte ölçülmeyen bir ilişkiyi veriden çıkarılabilir sanmak.','15':'Çiçek kısımlarının döllenme sonrası dönüşümlerini karıştırmak.'}
+for q in P.ANA:
+    n=q['id'][-2:]
+    if n in PUF: q['puf']=PUF[n]
+for c in H.KARTLAR:
+    n=c['id'][-2:]
+    if n in FIK: c['fikir']=FIK[n]
+    if n in TUZ: c['tuzak']=TUZ[n]
 
 # ================= yaz =================
 for x in P.ANA: x['kardes']=None

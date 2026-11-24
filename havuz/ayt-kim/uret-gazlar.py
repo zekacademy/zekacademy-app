@@ -64,7 +64,7 @@ card(16,'Yoğunluk–basınç grafiği','Sabit T’de d = (M/RT)·P doğrusunun 
 card(17,'Hız dağılımı grafiği','Sıcaklık artınca dağılım genişler ve sağa kayar, tepe yüksekliği düşer; eğri altındaki alan molekül sayısını gösterir ve değişmez.','Yüksek sıcaklıkta tüm moleküllerin daha hızlı olduğunu sanmak.','orta','grafik',4,'gz-kinetik','Maxwell hız dağılımı')
 card(18,'Efüzyon süreleri','Aynı koşullarda efüzyon süresi mol kütlesinin kareköküyle doğru orantılıdır; süre oranının karesi mol kütle oranını verir.','Süre oranını doğrudan ya da karekökünü mol kütle oranı almak.','orta','tablo',3,'gz-difuz','efüzyon süresi tablosu')
 card(19,'Tepkime sonrası basınç','Sabit hacim ve sıcaklıkta basınç gazın mol sayısıyla orantılıdır; sınırlayıcı bileşen bulunup son mol sayısı yazılır.','Mol sayısının korunduğunu sanmak; suyu sıvı saymak.','zor','şekilli',5,'gz-kismi','H₂ + O₂ karışımının tepkimesi')
-card(20,'Sabit dış basınçta gaz ekleme','Piston dış basıncı sabit tutar; toplam basınç değişmez, kısmi basınç mol kesriyle belirlenir.','Toplam basınçla kısmi basıncı karıştırmak; mol kesrini yanlış hesaplamak.','zor','şekilli',4,'gz-kismi','pistonlu kapta ikinci gaz eklenir')
+card(20,'Sabit dış basınçta gaz ekleme','Piston dış basıncı sabit tutar; toplam basınç değişmez, kısmi basınç mol kesriyle belirlenir.','Toplam basınçla kısmi basıncı karıştırmak; mol kesrini yanlış hesaplamak.','orta','şekilli',4,'gz-kismi','pistonlu kapta ikinci gaz eklenir')
 
 # ============ 0001 · Boyle tablosu · kolay ============
 P1,V1=2,12; K1=P1*V1; Pb=3; X1=Fr(K1,Pb); Vc=4; Y1=Fr(K1,Vc); assert (X1,Y1)==(8,6) and X1+Y1==14
@@ -233,7 +233,7 @@ q('0008',[A('Gazın kısmi basıncını bul','Kapta O₂ ile birlikte su buharı
  metin='Potasyum klorat (KClO₃) katısı ısıtıldığında potasyum klorür (KCl) katısı ve oksijen gazı oluşur.\n2KClO₃(k) → 2KCl(k) + 3O₂(g)\nTepkimede açığa çıkan gaz, şekildeki düzenekte 27 °C’de su üzerinde toplanmıştır. Kabın toplam basıncı 1,04 atm’dir ve 27 °C’de suyun buhar basıncı 0,04 atm alınacaktır. O₂ gazı suda çözünmemektedir. (KClO₃ = 122,5 g/mol, R = 0,082 L·atm/mol·K; gazlar ideal davranmaktadır.)\nBuna göre bozunan KClO₃ kaç gramdır?',
  sekil=SK8,dogru=F('24.5'),yan=[(F('12.25'),'Denklemde O₂ katsayısını (3) KClO₃’ın mol sayısına bölmüş: 0,3 ÷ 3 = 0,1 mol → 12,25 g.','islem'),(F('25.48'),'Toplam basıncı (1,04 atm) O₂ basıncı sanmış: n = 1,04 × 7,38 ÷ 24,6 = 0,312 mol → 0,208 mol KClO₃ → 25,48 g.','bilgi'),
   (F('36.75'),'Mol oranını 1 : 1 almış: n(KClO₃) = n(O₂) = 0,3 mol → 36,75 g.','bilgi'),(F('55.125'),'Katsayı oranını ters kullanmış: 0,3 × 3 ÷ 2 = 0,45 mol → 55,125 g.','islem')],
- istenen='Bozunan KClO₃ kütlesi (g).',ip=['Su üzerinde toplanan gazın tamamının O₂ olmadığını göz önüne alarak ideal gaz denklemine hangi basınç değerini yazman gerektiğini düşün.'],
+ istenen='Bozunan KClO₃ kütlesi (g).',ip=['Toplanan gaz, kaptaki tek gaz mı? Denklemde hangi basıncı kullanacağına buna göre karar ver.'],
  bilgi=[B('Su üzerinde gaz toplama','Toplanan karışımın toplam basıncı, gazın kısmi basıncı ile suyun buhar basıncının toplamıdır: P_toplam = P_gaz + P_buhar. Örnek: toplam 0,95 atm ve buhar basıncı 0,05 atm ise gazın kısmi basıncı 0,90 atm’dir'),
         B('Denklem katsayıları','Katsayılar mol oranını verir. Örnek: 2A → 3B tepkimesinde 4 mol A’dan 6 mol B oluşur')],
  puf='Su üzerinde toplanan gazın mol sayısını bulurken toplam basıncı değil, buhar basıncı çıkarılmış kısmi basıncı kullan.',
@@ -389,8 +389,8 @@ q('0015',[A('Eğrileri gazlara eşle','Çekim kuvvetleri zayıf olan He’un Z d
  metin='273 K sıcaklıkta He ve CH₄ gazlarının farklı basınçlardaki Z = PV/nRT değerleri şekildeki 1 ve 2 numaralı eğrilerle gösterilmiştir. Eğrilerden biri He’a, diğeri CH₄’a aittir.\nI. 1 numaralı eğri CH₄ gazına aittir.\nII. Düşük basınçlarda her iki gaz da ideal gaza yakın davranır.\nIII. 2 numaralı gazın Z değerinin 1’in altına inmesi, moleküller arası çekim kuvvetlerinin etkisiyle açıklanır.\nBuna göre hangileri doğrudur?',
  sekil=SK15,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan öncüller.',
  ip=['Z değerinin 1’in altında ya da üstünde olmasının moleküller arası etkileşimlerle nasıl ilişkili olduğunu düşün.'],
- bilgi=[B('Gerçek gazlar','Z = PV ÷ nRT; ideal gazda Z = 1’dir. Çekim kuvvetleri etkinse Z < 1, molekül hacmi etkinse Z > 1 olur. Örnek: çok yüksek basınçta molekül hacmi hacim ayrılmasına yol açtığından Z 1’in üstüne çıkar')],
- puf='Z < 1 çekim kuvvetinin, Z > 1 molekül hacminin baskın olduğunu gösterir.',
+ bilgi=[B('Gerçek gazlar','Sıkıştırılabilirlik çarpanı Z = PV ÷ nRT ile tanımlanır; ideal gazda her koşulda Z = 1’dir. Gerçek gazların Z değeri basınçla değişir')],
+ puf='Z’nin 1’den sapması, gazın ideallikten ayrıldığını gösterir.',
  tipId='gz-gercek',tip=TIPLER['gz-gercek'],z='orta',alt='Gerçek Gazlar',kaz='Z–P grafiğinden gerçek gazların ideal davranıştan sapmasını yorumlar.',kalip='grafik')
 
 # ============ 0016 · d–P grafiği · orta ============
@@ -400,7 +400,7 @@ g=[]
 g.append(f'\\draw[->,thick] (0,0) -- ({4.5*sxd:.2f},0) node[below right] {{$P$ (atm)}};')
 g.append(f'\\draw[->,thick] (0,0) -- (0,{7*syd:.2f}) node[above] {{$d$ (g/L)}};')
 for p in (1,2,3,4): g.append(f'\\draw ({p*sxd:.2f},.07) -- ({p*sxd:.2f},-.07) node[below] {{{p}}};')
-for dv,t in ((0.8,'0{,}8'),(3.2,'3{,}2'),(6.4,'6{,}4')): g.append(f'\\draw (.07,{dv*syd:.2f}) -- (-.07,{dv*syd:.2f}) node[left] {{${t}$}};')
+for dv,t in ((0.8,'0{,}8'),(3.2,'3{,}2')): g.append(f'\\draw (.07,{dv*syd:.2f}) -- (-.07,{dv*syd:.2f}) node[left] {{${t}$}};')
 g.append(f'\\draw[thick] (0,0) -- ({4*sxd:.2f},{3.2*syd:.2f}); \\draw[thick,vurgu,densely dashed] (0,0) -- ({4*sxd:.2f},{6.4*syd:.2f});')
 g.append(f'\\draw[dotted] (0,{.8*syd:.2f}) -- ({1*sxd:.2f},{.8*syd:.2f}) -- ({1*sxd:.2f},0); \\draw[dotted] (0,{3.2*syd:.2f}) -- ({2*sxd:.2f},{3.2*syd:.2f}) -- ({2*sxd:.2f},0);')
 g.append(f'\\fill ({1*sxd:.2f},{.8*syd:.2f}) circle (1.6pt); \\fill[vurgu] ({2*sxd:.2f},{3.2*syd:.2f}) circle (1.6pt);')
@@ -436,11 +436,11 @@ g.append(f'\\draw[->,thick] (0,0) -- ({6.6*sv+.2:.2f},0) node[below right] {{hı
 g.append(f'\\draw[thick] plot[smooth] coordinates {{{c1}}}; \\draw[thick,vurgu,densely dashed] plot[smooth] coordinates {{{c2}}};')
 g.append(N(1.5*sv-.55,pk1*sf+.2,'$T_1$')); g.append(N(2.5*sv+.9,pk2*sf+.55,'$T_2$','text=vurgu'))
 SK17=tk('\n'.join(g))
-sec=[('T₂ sıcaklığı, T₁ sıcaklığından büyüktür.',True,'dağılımı sağa kayan ve genişleyen T₂ eğrisi daha yüksek sıcaklığa aittir'),
- ('T₂ sıcaklığında moleküllerin ortalama kinetik enerjisi T₁ sıcaklığındakinden büyüktür.',True,'ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır'),
- ('Eğrilerin altında kalan alanlar birbirine eşittir.',True,'eğri altındaki alan toplam molekül sayısını gösterir ve aynı gaz örneği için değişmez'),
- ('En çok ihtimalli hıza sahip molekül sayısı T₁ sıcaklığında daha fazladır.',True,'düşük sıcaklıkta dağılım dar olduğundan tepe noktası daha yüksektir'),
- ('T₂ sıcaklığındaki bütün moleküller T₁ sıcaklığındaki bütün moleküllerden daha hızlıdır.',False,'iki dağılım üst üste biner; T₁’deki bazı moleküller T₂’deki bazı moleküllerden daha hızlıdır')]
+sec=[('T₂ sıcaklığı, T₁ sıcaklığından büyüktür.',True,'dağılımı sağa kayan ve genişleyen T₂ eğrisi daha yüksek sıcaklığa aittir.'),
+ ('T₂ sıcaklığında moleküllerin ortalama kinetik enerjisi T₁ sıcaklığındakinden büyüktür.',True,'ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır.'),
+ ('Eğrilerin altında kalan alanlar birbirine eşittir.',True,'eğri altındaki alan toplam molekül sayısını gösterir ve aynı gaz örneği için değişmez.'),
+ ('En çok ihtimalli hıza sahip molekül sayısı T₁ sıcaklığında daha fazladır.',True,'düşük sıcaklıkta dağılım dar olduğundan tepe noktası daha yüksektir.'),
+ ('T₂ sıcaklığındaki bütün moleküller T₁ sıcaklığındaki bütün moleküllerden daha hızlıdır.',False,'iki dağılım üst üste biner; T₁’deki bazı moleküller T₂’deki bazı moleküllerden daha hızlıdır.')]
 order=[3,1,2,0,4]
 rr=tek([sec[i] for i in order],hedef=False)
 q('0017',[A('Eğrileri karşılaştır','Dağılımı sağa kayan, daha geniş ve alçak olan eğri daha yüksek sıcaklığa aittir.','T₂ > T₁'),
@@ -450,7 +450,7 @@ q('0017',[A('Eğrileri karşılaştır','Dağılımı sağa kayan, daha geniş v
  sekil=SK17,dogru=rr['dogru'],yan=rr['yan'],sira=rr['sira'],istenen='Yanlış olan ifade.',
  ip=['Her ifadeyi eğrilerin tepe konumu, genişliği ve altında kalan alan açısından ayrı ayrı sına.'],
  bilgi=[B('Hız dağılımı','Sıcaklık artınca hız dağılımı sağa kayar, genişler ve tepe yüksekliği azalır; eğrinin altındaki alan molekül sayısına eşittir. Örnek: ısıtılan bir gaz örneğinde molekül sayısı değişmediğinden alan sabittir')],
- puf='Sıcaklık yükselince ortalama hız artar ama her molekül hızlanmaz; dağılımlar üst üste biner.',
+ puf='Ortalama değere değil, tek tek moleküllerin dağılımına bak.',
  tipId='gz-kinetik',tip=TIPLER['gz-kinetik'],z='orta',alt='Gazların Kinetik Teorisi',kaz='Molekül hızı dağılım grafiklerini sıcaklıkla ilişkilendirerek yorumlar.',kalip='grafik')
 
 # ============ 0018 · efüzyon süreleri tablosu · orta ============
@@ -521,10 +521,10 @@ q('0020',[A('Piston ve toplam basınç','Dış basınç sabit olduğundan piston
  metin='Sürtünmesiz hareketli bir pistonla kapatılmış kapta bulunan He gazının üzerine, sabit sıcaklıkta şekilde belirtilen miktarda Ne gazı ekleniyor. Piston yeniden dengeye ulaştığında dış basınç değişmemiştir ve gazlar ideal davranmaktadır.\nBuna göre son durumda He gazının kısmi basıncı kaç atm’dir?',
  sekil=SK20,dogru=F('0.375'),yan=[(F('0.5'),'Gaz miktarı 3 katı sanıp (0,6 ÷ 0,2) basıncı 3’e bölmüş: 1,5 ÷ 3 = 0,5 atm.','islem'),(F('0.75'),'He ile Ne’un mol sayılarını eşit sayıp mol kesrini 1/2 almış: 1,5 ÷ 2 = 0,75 atm.','bilgi'),
   (F('1.125'),'Ne gazının kısmi basıncını (1,5 × 3/4) bulmuş; He’u sormuş olduğunu atlamış.','dikkat'),(F('1.5'),'Toplam basıncı He’un kısmi basıncı sanmış.','bilgi')],
- istenen='He gazının son kısmi basıncı (atm).',ip=['Piston dengede iken toplam gaz basıncının neye eşit kaldığını belirle.'],
+ istenen='He gazının son kısmi basıncı (atm).',ip=['Pistonlu kapta toplam basınç hakkında ne söyleyebilirsin?'],
  bilgi=[B('Kısmi basınç','Karışımdaki bir gazın kısmi basıncı, toplam basıncın o gazın mol kesri ile çarpımıdır. Örnek: toplam basınç 2 atm olan, mol sayıları eşit iki gazlı karışımda her gazın kısmi basıncı 1 atm’dir')],
- puf='Pistonlu kapta toplam basınç dış basınca eşittir; hacim değişse bile kısmi basınç mol kesriyle bulunur.',
- tipId='gz-kismi',tip=TIPLER['gz-kismi'],z='zor',alt='Gaz Karışımları',kaz='Sabit dış basınçlı pistonlu kapta gaz eklenmesiyle oluşan karışımın kısmi basınçlarını mol kesrinden hesaplar.',kalip='şekilli')
+ puf='Kısmi basınç, toplam basıncın mol kesriyle çarpımıdır.',
+ tipId='gz-kismi',tip=TIPLER['gz-kismi'],z='orta',alt='Gaz Karışımları',kaz='Sabit dış basınçlı pistonlu kapta gaz eklenmesiyle oluşan karışımın kısmi basınçlarını mol kesrinden hesaplar.',kalip='şekilli')
 
 # ============ yaz ============
 for qq in P.ANA: qq['kardes']=None

@@ -46,8 +46,8 @@
    "id": "K-ABSIN-04",
    "konu": "Sindirim Sistemi",
    "alt": "Enzimler",
-   "fikir": "Deneyde yalnız bir koşulun farklı olduğu tüpler karşılaştırılarak o koşulun etkisi yorumlanır; kaynatma enzimin yapısını kalıcı olarak bozar, düşük sıcaklık yalnızca yavaşlatır.",
-   "tuzak": "Birden fazla koşulu farklı tüpleri karşılaştırmak; düşük sıcaklığı da denatürasyon saymak.",
+   "fikir": "Deneyde yalnız bir koşulun farklı olduğu tüpler karşılaştırılarak o koşulun etkisi yorumlanır.",
+   "tuzak": "Birden fazla koşulu farklı tüpleri karşılaştırmak.",
    "zorluk": "orta",
    "kalip": "öncüllü",
    "adim": 4,
@@ -59,8 +59,8 @@
    "id": "K-ABSIN-05",
    "konu": "Sindirim Sistemi",
    "alt": "Kimyasal ve Mekanik Sindirim",
-   "fikir": "Sindirilmemiş besin miktarının azaldığı ilk bölge, o besinin kimyasal sindiriminin başladığı yerdir; mide asidi tükürük amilazını etkisiz kılar.",
-   "tuzak": "Nişasta sindiriminin ağızdan sonra midede de sürdüğünü sanmak; yağ sindiriminin midede başladığını düşünmek.",
+   "fikir": "Sindirilmemiş besin miktarının azaldığı ilk bölge, o besinin kimyasal sindiriminin başladığı yerdir.",
+   "tuzak": "Yatay kalan eğri parçasını yanlış yorumlamak; eğrileri besinlerle yanlış eşleştirmek.",
    "zorluk": "orta",
    "kalip": "grafik",
    "adim": 3,
@@ -124,13 +124,13 @@
    "id": "K-ABSIN-10",
    "konu": "Sindirim Sistemi",
    "alt": "Kimyasal ve Mekanik Sindirim",
-   "fikir": "Safra enzim içermez; yağları emülsiyonlaştırarak (mekanik sindirim) lipazın etkisini kolaylaştırır. Kimyasal sindirimi enzimler yapar.",
-   "tuzak": "Safranın yağı kimyasal olarak yıkan bir enzim içerdiğini sanmak.",
+   "fikir": "Her sindirim enzimi belirli bir substrata etki eder; nişasta amilazla, maltoz maltazla, sükroz sükrazla yıkılır.",
+   "tuzak": "Disakkaritlerin hepsinin aynı enzimle yıkıldığını sanmak.",
    "zorluk": "orta",
    "kalip": "düz",
    "adim": 3,
-   "tipId": "sd-yardimci",
-   "tip": "Yardımcı organlar ve salgıları",
+   "tipId": "sd-kimyasal",
+   "tip": "Kimyasal ve mekanik sindirim",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji sindirim sistemi soruları (yalnız mantık) · MEB 11. sınıf Sindirim Sistemi"
   },
   {
@@ -176,8 +176,8 @@
    "id": "K-ABSIN-14",
    "konu": "Sindirim Sistemi",
    "alt": "Kimyasal ve Mekanik Sindirim",
-   "fikir": "Polimerlerin sindiriminde her bağın yıkımı bir su molekülü kullanır (hidroliz); n birimli zincirde n−1 bağ, trigliseritte yağ asidi sayısı kadar ester bağı vardır.",
-   "tuzak": "Bağ sayısı yerine birim sayısını almak; trigliseriti unutmak; ürün sayısını su sayısı sanmak.",
+   "fikir": "Polimerlerin ve trigliseritlerin sindirimi hidrolizdir; bağlar su katılarak yıkılır.",
+   "tuzak": "Bağ ile birim sayısını karıştırmak; bir molekülü hesaba katmamak.",
    "zorluk": "zor",
    "kalip": "şekilli",
    "adim": 3,
@@ -189,8 +189,8 @@
    "id": "K-ABSIN-15",
    "konu": "Sindirim Sistemi",
    "alt": "Hormonal Düzenleme",
-   "fikir": "Sindirim hormonları kimüsün içeriğiyle uyarılır ve kanla taşınarak hedef organların salgılarını düzenler; hormonu üreten doku hasar görürse yalnız o hormonun etkileri azalır.",
-   "tuzak": "Onikiparmak bağırsağı hasarında mide salgısının da durduğunu sanmak; yalnız tek hormonun etkilendiğini düşünmek.",
+   "fikir": "Sindirim hormonları kimüsün içeriğiyle uyarılır ve kanla taşınarak hedef organların salgılarını düzenler; bir hormonun yokluğu yalnız o hormonun hedeflerini ve bunların dolaylı sonuçlarını etkiler.",
+   "tuzak": "Tek bir hormonun yokluğunda tüm salgıların etkileneceğini sanmak; dolaylı sonuçları atlamak.",
    "zorluk": "zor",
    "kalip": "öncüllü",
    "adim": 4,
@@ -215,9 +215,9 @@
    "id": "K-ABSIN-17",
    "konu": "Sindirim Sistemi",
    "alt": "Sindirim Kanalı ve Yardımcı Organlar",
-   "fikir": "Pankreas, onikiparmak bağırsağına enzim ve bikarbonat taşıyan kanalla ve kana hormon veren hücrelerle çalışır; kanal tıkanınca yalnız kanal yoluyla verilen salgılar etkilenir.",
+   "fikir": "Pankreas salgılarını iki farklı yoldan verir; bir yolun tıkanması yalnız o yoldan verilen salgıları etkiler.",
    "tuzak": "Pankreasın tüm salgılarının kanaldan aktığını sanmak; safra üretiminin pankreasa bağlı olduğunu düşünmek; nişasta sindiriminin tamamen durduğunu sanmak.",
-   "zorluk": "zor",
+   "zorluk": "orta",
    "kalip": "şekilli",
    "adim": 3,
    "tipId": "sd-yardimci",
@@ -228,8 +228,8 @@
    "id": "K-ABSIN-18",
    "konu": "Sindirim Sistemi",
    "alt": "Emilim",
-   "fikir": "İnce bağırsakta dairesel kıvrımlar, villuslar ve mikrovilluslar emilim yüzeyini birbiri üzerine kurularak artırır; etkiler çarpılır.",
-   "tuzak": "Etkileri toplamak; kaybolan yapıyı sıfır saymak (çarpımsal etkide kayıp 1 kat olur).",
+   "fikir": "İnce bağırsakta dairesel kıvrımlar, villuslar ve mikrovilluslar emilim yüzeyini birbiri üzerine kurularak artırır; etkiler çarpılır ve iki durum oranlanır.",
+   "tuzak": "Etkileri toplamak; yalnız tek durumun alanını bulup karşılaştırmayı unutmak.",
    "zorluk": "zor",
    "kalip": "tablo",
    "adim": 3,
@@ -253,14 +253,14 @@
   {
    "id": "K-ABSIN-20",
    "konu": "Sindirim Sistemi",
-   "alt": "Enzimler",
-   "fikir": "Bir çıkarım ancak yalnız o koşulun farklı olduğu tüplerden yapılabilir; substrat yıkılmaması, enzimin bozulduğunu değil substrata etki etmediğini de gösterebilir.",
-   "tuzak": "Küçülmenin olmadığı her tüpte enzimin denatüre olduğunu sanmak; birden çok koşulu farklı tüpleri karşılaştırmak.",
+   "alt": "Emilim",
+   "fikir": "Suda çözünen monomerler kan kılcalıyla karaciğere, yağlar lenf yoluyla karaciğere uğramadan kana katılır; karaciğer glikozu depolayıp salabilir.",
+   "tuzak": "Tüm besinlerin karaciğerden geçtiğini sanmak; lenfin kan dolaşımından bağımsız olduğunu düşünmek.",
    "zorluk": "zor",
    "kalip": "şekilli",
    "adim": 3,
-   "tipId": "sd-enzim",
-   "tip": "Enzim etkinliği, pH ve özgüllük",
+   "tipId": "sd-emilim",
+   "tip": "Emilim ve emilim yüzeyi",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji sindirim sistemi soruları (yalnız mantık) · MEB 11. sınıf Sindirim Sistemi"
   }
  ],
@@ -281,8 +281,7 @@
    "kartlar": [
     "K-ABSIN-02",
     "K-ABSIN-04",
-    "K-ABSIN-13",
-    "K-ABSIN-20"
+    "K-ABSIN-13"
    ],
    "uygulamaKonu": "abio|Sindirim Sistemi"
   },
@@ -293,6 +292,7 @@
     "K-ABSIN-03",
     "K-ABSIN-05",
     "K-ABSIN-07",
+    "K-ABSIN-10",
     "K-ABSIN-11",
     "K-ABSIN-14"
    ],
@@ -304,7 +304,8 @@
    "kartlar": [
     "K-ABSIN-06",
     "K-ABSIN-16",
-    "K-ABSIN-18"
+    "K-ABSIN-18",
+    "K-ABSIN-20"
    ],
    "uygulamaKonu": "abio|Sindirim Sistemi"
   },
@@ -321,7 +322,6 @@
    "tipId": "sd-yardimci",
    "ad": "Yardımcı organlar ve salgıları",
    "kartlar": [
-    "K-ABSIN-10",
     "K-ABSIN-12",
     "K-ABSIN-17"
    ],

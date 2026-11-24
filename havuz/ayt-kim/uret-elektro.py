@@ -174,9 +174,9 @@ SK=tk(g)
 q('0008',tipId='el-derisim',tip='Derişim pili ve Nernst eşitliği',z='orta',alt='Elektrot Potansiyelleri',kaz='Derişim pilinin hücre potansiyelini Nernst eşitliğiyle hesaplar.',kalip='şekilli',
  kart='K-AKELEK-08 (Ag derişim pili) · 0,01 M ve 1 M Ag⁺',sekil=SK,
  metin='Aynı metal elektrotlardan oluşan ve yalnız çözelti derişimleri farklı olan bir derişim pili, şekilde görüldüğü gibi 25 °C’de kurulmuştur. İki yarı hücre de aynı hacimde çözelti içerir ve devre tuz köprüsüyle tamamlanmıştır. Elektrokimyasal hücreler için Nernst eşitliği E = E° − (0,059/n)·logQ biçimindedir; burada n, hücre tepkimesinde aktarılan elektron sayısı, Q tepkime denklemindeki derişim oranıdır.\nBuna göre bu pilin başlangıçtaki hücre potansiyeli kaç volttur?',
- dogru=D('0.118'),yan=[(D('0.059'),'Tepkimede aktarılan elektron sayısını n = 2 almış; Ag⁺ + e⁻ → Ag olduğundan n = 1’dir. Bu durumda E = (0,059/2) × 2 değil, yarı değer çıkmıştır.','bilgi'),(D('-0.118'),'Q oranını ters yazarak logaritmanın işaretini değiştirmiş; seyreltik yarı hücre anot olduğundan hücre potansiyeli pozitiftir.','islem'),(D('0.0295'),'Hem n değerini 2 almış hem de derişim oranını 10 sanmış: (0,059/2) × log10 = 0,0295 V.','islem'),(D('5.9'),'Logaritma almayı unutup 0,059 × 100 = 5,9 bulmuş.','islem')],
+ dogru=D('0.118'),yan=[(D('0.059'),'n’yi 2 alıp (0,059/2)·log100 = 0,059 V bulmuş; Ag⁺ + e⁻ → Ag olduğundan n = 1’dir.','bilgi'),(D('-0.118'),'Q oranını ters yazarak logaritmanın işaretini değiştirmiş; seyreltik yarı hücre anot olduğundan hücre potansiyeli pozitiftir.','islem'),(D('0.0295'),'Hem n değerini 2 almış hem de derişim oranını 10 sanmış: (0,059/2) × log10 = 0,0295 V.','islem'),(D('5.9'),'Logaritma almayı unutup 0,059 × 100 = 5,9 bulmuş.','islem')],
  istenen='Başlangıçtaki hücre potansiyeli (V).',ip=['Derişim pilinde iki elektrot aynı olduğundan E° değeri sıfırdır; Q oranını anot ve katot yarı hücre derişimleriyle yaz.'],
- bilgi=[B('Derişim pili','iki yarı hücrede aynı metal ve iyon bulunur, yalnız derişimler farklıdır. Seyreltik çözeltideki elektrot anot, derişik çözeltideki katottur; E° = 0 olduğundan potansiyeli yalnız derişim farkı belirler. Örnek: Cu elektrotlu 0,1 M ve 1 M çözeltilerden oluşan pilde potansiyel (0,059/2)·log(1/0,1) = 0,0295 V’tur')],
+ bilgi=[B('Derişim pili','iki yarı hücrede aynı metal ve iyon bulunur, yalnız derişimler farklıdır. Seyreltik çözeltideki elektrot anot, derişik çözeltideki katottur; E° = 0 olduğundan potansiyeli yalnız derişim farkı belirler. Örnek: Zn elektrotlu 0,2 M ve 2 M çözeltilerden oluşan pilde (n = 2) potansiyel (0,059/2)·log10 = 0,0295 V’tur')],
  ad=[A('Tepkimeyi yaz','Anotta seyreltik taraf yükseltgenir, katotta derişik taraf indirgenir.','Anot: Ag → Ag⁺ + e⁻ · Katot: Ag⁺ + e⁻ → Ag · n = 1'),A('Q’yu yaz','Q = [anot Ag⁺] ÷ [katot Ag⁺].','Q = 0,01 ÷ 1 = 10⁻²'),A('E°’yi belirle','Aynı elektrotlarda E° = 0.','E° = 0 V'),A('Nernst','E = E° − (0,059/1) · logQ.','E = 0 − 0,059 × (−2) = 0,118 V')],
  puf='Derişim pilinde E° = 0’dır; seyreltik taraf anot olur ve potansiyel pozitif çıkar.')
 
@@ -189,7 +189,7 @@ q('0009',tipId='el-faraday',tip='Faraday yasaları hesabı',z='orta',alt='Elektr
  metin='Bir öğrenci, bakır kaplama deneyinde CuSO₄ çözeltisine daldırdığı platin elektrotları üretece bağlamıştır. Çözeltide Cu²⁺ iyonları fazlasıyla bulunmakta ve katotta yalnız Cu metali toplanmaktadır. Devreden 1000 saniye boyunca sabit 9,65 A’lık akım geçirilmiştir.\n(Cu = 64 g/mol; 1 mol elektronun yükü = 96500 C)\nBuna göre katotta toplanan bakırın kütlesi kaç gramdır?',
  dogru=D('3.2'),yan=[(D('6.4'),'Cu²⁺ iyonunun yükünü 1 almış; 0,1 mol elektrondan 0,1 mol Cu elde edilip 6,4 g bulunmuştur. Oysa 1 mol Cu için 2 mol elektron gerekir.','bilgi'),(D('12.8'),'Elektron mol sayısını (0,1) 2 ile çarpıp 0,2 mol Cu bulmuş; 2 yerine bölmesi gerekirdi.','islem'),(32,'Yükü 96500 yerine 9650 C/mol ile bölmüş: 9650 ÷ 9650 = 1 mol elektron, 0,5 mol Cu, 32 g.','islem'),(64,'Hem 9650 C/mol kullanmış hem de Cu²⁺ yükünü 1 almış; 1 mol Cu, yani 64 g bulmuş.','islem')],
  istenen='Katotta toplanan bakırın kütlesi (g).',ip=['Önce geçen yükü bul, sonra yükten mol elektron sayısına, oradan Cu mol sayısına geç.'],
- bilgi=[B('Faraday hesabı','geçen yük Q = i·t’dir. 96500 C, 1 mol elektronun yüküdür. Katotta M+ⁿ + ne⁻ → M tepkimesinde biriken madde mol sayısı, elektron mol sayısının n’ye bölünmesiyle bulunur. Örnek: 2 A akım 4825 s geçerse 9650 C, yani 0,1 mol elektron geçmiştir')],
+ bilgi=[B('Faraday hesabı','geçen yük Q = i·t’dir. 96500 C, 1 mol elektronun yüküdür. Katotta M+ⁿ + ne⁻ → M tepkimesinde biriken madde mol sayısı, elektron mol sayısının n’ye bölünmesiyle bulunur. Örnek: 1 A akım 965 s geçerse 965 C, yani 0,01 mol elektron geçmiştir')],
  ad=[A('Yükü bul','Q = i × t.','Q = 9,65 × 1000 = 9650 C'),A('Elektron mol sayısı','Yükü 96500’e böl.','9650 ÷ 96500 = 0,1 mol e⁻'),A('Cu mol sayısı','Cu²⁺ + 2e⁻ → Cu olduğundan elektron sayısı 2’ye bölünür.','0,1 ÷ 2 = 0,05 mol Cu'),A('Kütleyi bul','Mol sayısı mol kütlesiyle çarpılır.','0,05 × 64 = 3,2 g')],
  puf='Önce Q = i·t, sonra mol e⁻ = Q/96500, sonra katsayıyla mol madde.')
 
@@ -218,35 +218,37 @@ q('0010',tipId='el-korozyon',tip='Korozyon ve korunma',z='orta',alt='Korozyon',k
 
 # ============ 11 · E° tablosu, en küçük hücre potansiyeli · orta · tablo ============
 kartla('11','Hücre potansiyeli karşılaştırması','E°hücre = E°(katot) − E°(anot); E° farkı en küçük olan pil en düşük potansiyeli verir.','Farkı mutlak almayı unutmak; anot–katodu karıştırıp negatif bulmak.','orta','tablo',3,'potansiyel','Elektrot potansiyeli ve istemlilik')
-pair={'MgZn':E['Zn']-E['Mg'],'ZnNi':E['Ni']-E['Zn'],'NiCu':E['Cu']-E['Ni'],'ZnCu':E['Cu']-E['Zn'],'CuAg':E['Ag']-E['Cu']}
-assert pair=={'MgZn':D('1.61'),'ZnNi':D('0.51'),'NiCu':D('0.59'),'ZnCu':D('1.10'),'CuAg':D('0.46')}
-assert min(pair,key=pair.get)=='CuAg' and len(set(pair.values()))==5
-SK=tablo_svg(['Yarı hücre tepkimesi','E° (V)'],rows)
-S11=['Ni(k) | Ni²⁺(suda) || Cu²⁺(suda) | Cu(k)','Cu(k) | Cu²⁺(suda) || Ag⁺(suda) | Ag(k)','Zn(k) | Zn²⁺(suda) || Cu²⁺(suda) | Cu(k)','Mg(k) | Mg²⁺(suda) || Zn²⁺(suda) | Zn(k)','Zn(k) | Zn²⁺(suda) || Ni²⁺(suda) | Ni(k)']
+E2={'Al':D('-1.66'),'Fe':D('-0.44'),'Sn':D('-0.14'),'Cu':D('0.34'),'Hg':D('0.85')}
+pair={'AlFe':E2['Fe']-E2['Al'],'FeSn':E2['Sn']-E2['Fe'],'SnCu':E2['Cu']-E2['Sn'],'FeCu':E2['Cu']-E2['Fe'],'CuHg':E2['Hg']-E2['Cu']}
+assert pair=={'AlFe':D('1.22'),'FeSn':D('0.30'),'SnCu':D('0.48'),'FeCu':D('0.78'),'CuHg':D('0.51')}
+assert min(pair,key=pair.get)=='FeSn' and len(set(pair.values()))==5
+rows11=[['Al³⁺ + 3e⁻ → Al','−1,66'],['Fe²⁺ + 2e⁻ → Fe','−0,44'],['Sn²⁺ + 2e⁻ → Sn','−0,14'],['Cu²⁺ + 2e⁻ → Cu','+0,34'],['Hg²⁺ + 2e⁻ → Hg','+0,85']]
+SK=tablo_svg(['Yarı hücre tepkimesi','E° (V)'],rows11)
+S11=['Sn(k) | Sn²⁺(suda) || Cu²⁺(suda) | Cu(k)','Fe(k) | Fe²⁺(suda) || Sn²⁺(suda) | Sn(k)','Fe(k) | Fe²⁺(suda) || Cu²⁺(suda) | Cu(k)','Al(k) | Al³⁺(suda) || Fe²⁺(suda) | Fe(k)','Cu(k) | Cu²⁺(suda) || Hg²⁺(suda) | Hg(k)']
 q('0011',tipId='el-potansiyel',tip='Elektrot potansiyeli ve istemlilik',z='orta',alt='Elektrot Potansiyelleri',kaz='Standart elektrot potansiyellerinden galvanik hücrelerin standart hücre potansiyellerini hesaplayıp karşılaştırır.',kalip='tablo',
  kart='K-AKELEK-11 (hücre potansiyeli karşılaştırma) · beş hücre gösterimi',sekil=SK,
  metin='Bir laboratuvarda 25 °C’de, standart indirgenme potansiyelleri tabloda verilen yarı hücrelerden ikişer tanesi seçilip tuz köprüsüyle birleştirilerek galvanik hücreler hazırlanacaktır. Her hücrede çözeltilerin derişimi 1 M’dir ve hücreler gösterimde sol taraftaki elektrot anot olacak biçimde yazılmıştır.\nBuna göre aşağıdaki hücrelerden hangisinin standart hücre potansiyeli en küçüktür?',
- dogru=S11[1],sira=S11,yan=[(S11[0],'Ni–Cu hücresini seçmiş; E° farkı 0,34 − (−0,25) = 0,59 V’tur, Cu–Ag hücresinin 0,46 V’undan büyüktür.','islem'),(S11[2],'Elektrot sayılarını ve yükleri benzer sanarak Zn–Cu hücresini seçmiş; E° farkı 1,10 V’tur ve diğerlerinden büyüktür.','dikkat'),(S11[3],'En aktif metali içeren hücrenin en küçük potansiyeli vereceğini düşünmüş; Mg–Zn hücresi 1,61 V ile en büyüktür.','bilgi'),(S11[4],'Zn–Ni hücresini seçmiş; E° farkı −0,25 − (−0,76) = 0,51 V’tur, Cu–Ag hücresinin 0,46 V’undan büyüktür.','islem')],
+ dogru=S11[1],sira=S11,yan=[(S11[0],'Sn–Cu hücresini seçmiş; E° farkı 0,34 − (−0,14) = 0,48 V’tur, Fe–Sn hücresinin 0,30 V’undan büyüktür.','islem'),(S11[2],'Fe–Cu hücresini seçmiş; E° farkı 0,34 − (−0,44) = 0,78 V’tur, Fe–Sn hücresinin 0,30 V’undan büyüktür.','islem'),(S11[3],'E°(anot) − E°(katot) farkını alıp işareti yok saymış; Al–Fe hücresinde |−1,66 − (−0,44)| = 1,22 V bulmuş, bunu yanlışlıkla en küçük sanmıştır. Oysa diğer hücrelerden büyüktür.','dikkat'),(S11[4],'Cu–Hg hücresini seçmiş; E° farkı 0,85 − 0,34 = 0,51 V’tur, Fe–Sn hücresinin 0,30 V’undan büyüktür.','islem')],
  istenen='Standart hücre potansiyeli en küçük olan hücre.',ip=['Her hücre için katodun E° değerinden anodunkini çıkararak beş değeri karşılaştır.'],
- bilgi=[B('Standart hücre potansiyeli','E°hücre = E°katot − E°anot’tur; iki E° değeri arasındaki fark ne kadar küçükse pil o kadar düşük gerilim verir. Örnek: E° = −0,13 V olan Pb ile E° = +0,34 V olan Cu’tan oluşan hücrede 0,34 − (−0,13) = 0,47 V elde edilir')],
- ad=[A('Her hücreyi hesapla','Sağdaki yarı hücre katot, soldaki anottur.','Ni–Cu: 0,59 · Zn–Ni: 0,51 · Zn–Cu: 1,10 · Mg–Zn: 1,61'),A('Cu–Ag hücresi','Katot Ag⁺/Ag (+0,80), anot Cu²⁺/Cu (+0,34).','0,80 − 0,34 = 0,46 V'),A('Karşılaştır','Beş değerin en küçüğü seçilir.','0,46 < 0,51 < 0,59 < 1,10 < 1,61'),A('Sonuç','En küçük potansiyel Cu–Ag hücresindedir.','Cu | Cu²⁺ || Ag⁺ | Ag')],
+ bilgi=[B('Standart hücre potansiyeli','E°hücre = E°katot − E°anot’tur; iki E° değeri arasındaki fark ne kadar küçükse pil o kadar düşük gerilim verir. Örnek: E° = −0,13 V olan Pb ile E° = +0,80 V olan Ag’den oluşan hücrede 0,80 − (−0,13) = 0,93 V elde edilir')],
+ ad=[A('Her hücreyi hesapla','Sağdaki yarı hücre katot, soldaki anottur.','Al–Fe: 1,22 V; Sn–Cu: 0,48 V; Fe–Cu: 0,78 V; Cu–Hg: 0,51 V'),A('Fe–Sn hücresi','Katot Sn²⁺/Sn (−0,14), anot Fe²⁺/Fe (−0,44).','−0,14 − (−0,44) = 0,30 V'),A('Karşılaştır','Beş değerin en küçüğü seçilir.','0,30 < 0,48 < 0,51 < 0,78 < 1,22'),A('Sonuç','En küçük potansiyel Fe–Sn hücresindedir.','Fe | Fe²⁺ || Sn²⁺ | Sn')],
  puf='Hücre potansiyeli, iki elektrodun E° farkıdır; farkı küçük olan pil daha düşük gerilim verir.')
 
 # ============ 12 · CuSO4 elektrolizi, pH · zor ============
 kartla('12','Elektroliz ve çözelti pH değişimi','İnert elektrotlu CuSO₄ elektrolizinde anotta su yükseltgenir (4 mol e⁻ başına 4 mol H⁺ oluşur); H⁺ mol sayısı elektron mol sayısına eşittir.','Anotta H⁺ yerine OH⁻ oluştuğunu sanmak; n’yi atlamak.','zor','hikâyeli',5,'faraday','Faraday yasaları hesabı')
-i12,t12=2,4825; Q12=i12*t12; ne12=D(Q12,96500); assert ne12==D('0.1')
+i12,t12=2,9650; Q12=i12*t12; ne12=D(Q12,96500); assert ne12==D('0.2')
 hmol=ne12  # 2H2O -> O2 + 4H+ + 4e-
-assert hmol/1==D('0.1')
+V12=2; assert hmol/V12==D('0.1')
 import math
-assert round(-math.log10(hmol/1))==1
-assert round(-math.log10(D(1)))==0 and round(-math.log10(D('0.01')))==2 and 14-1==13
+assert round(-math.log10(hmol/V12))==1
+assert D(Q12,9650)/V12==1 and D(1930,96500)/V12==D('0.01') and 14-1==13
 q('0012',tipId='el-faraday',tip='Faraday yasaları hesabı',z='zor',alt='Elektroliz',kaz='İnert elektrotlu CuSO₄ elektrolizinde geçen yükten oluşan H⁺ miktarını ve çözeltinin pH değerini hesaplar.',kalip='hikâyeli',
  kart='K-AKELEK-12 (CuSO₄ elektrolizi, pH) · anotta su yükseltgenmesi',
- metin='Bir laboratuvarda 1 L hacimli, 0,5 M CuSO₄ sulu çözeltisi platin elektrotlar kullanılarak 25 °C’de elektroliz edilmektedir. Sabit 2 A’lık akım 4825 saniye boyunca geçirilmiştir. Katotta yalnız Cu metali, anotta ise yalnız O₂ gazı oluşmuştur. Çözeltinin başlangıçtaki pH değeri ve suyun iyonlaşmasından gelen H⁺ iyonları ile hacim değişimi ihmal edilecektir.\n(1 mol elektronun yükü = 96500 C)\nBuna göre elektroliz sonunda çözeltinin pH değeri kaçtır?',
- dogru=1,yan=[(0,'Elektron mol sayısını 1 mol bulmuş; geçen yükü 96500 C ile değil 9650 C ile bölüp [H⁺] = 1 M, pH = 0 hesaplamıştır.','islem'),(2,'Geçen yükü 965 C hesaplayıp 0,01 mol elektron bulmuş; [H⁺] = 0,01 M, pH = 2 olarak yazmıştır.','islem'),(7,'CuSO₄’ın nötr bir tuz olduğunu düşünerek elektrolizin pH’ı değiştirmeyeceğini sanmıştır.','bilgi'),(13,'Anotta OH⁻ iyonlarının oluştuğunu sanmış: [OH⁻] = 0,1 M, pOH = 1, pH = 14 − 1 = 13 hesaplamıştır.','bilgi')],
+ metin='Bir laboratuvarda 2 L hacimli, 0,5 M CuSO₄ sulu çözeltisi platin elektrotlar kullanılarak 25 °C’de elektroliz edilmektedir. Sabit 2 A’lık akım 9650 saniye boyunca geçirilmiştir. Katotta yalnız Cu metali, anotta ise yalnız O₂ gazı oluşmuştur. Çözeltinin başlangıçtaki pH değeri ve suyun iyonlaşmasından gelen H⁺ iyonları ile hacim değişimi ihmal edilecektir.\n(1 mol elektronun yükü = 96500 C)\nBuna göre elektroliz sonunda çözeltinin pH değeri kaçtır?',
+ dogru=1,yan=[(0,'Geçen yükü 96500 C ile değil 9650 C ile bölüp 2 mol elektron, 2 mol H⁺ bulmuş; [H⁺] = 1 M, pH = 0 hesaplamıştır.','islem'),(2,'Geçen yükü 1930 C hesaplayıp 0,02 mol elektron bulmuş; [H⁺] = 0,02 ÷ 2 = 0,01 M, pH = 2 olarak yazmıştır.','islem'),(7,'CuSO₄’ın nötr bir tuz olduğunu düşünerek elektrolizin pH’ı değiştirmeyeceğini sanmıştır.','bilgi'),(13,'Anotta OH⁻ iyonlarının oluştuğunu sanmış: [OH⁻] = 0,1 M, pOH = 1, pH = 14 − 1 = 13 hesaplamıştır.','bilgi')],
  istenen='Elektroliz sonundaki pH değeri.',ip=['Anotta oluşan ürünün yanında çözeltiye hangi iyonun geçtiğini yaz; elektron sayısını bu iyonun mol sayısıyla ilişkilendir.'],
- bilgi=[B('Elektrolizde pH değişimi','inert elektrotlarla derişik oksijenli asit tuzlarının çözeltisinde anotta su yükseltgenir: 2H₂O → O₂ + 4H⁺ + 4e⁻. Çözeltiye geçen H⁺ mol sayısı, devreden geçen elektron mol sayısına eşittir ve pH = −log[H⁺] ile bulunur. Örnek: 0,01 mol elektron geçen 1 L çözeltide [H⁺] = 0,01 M, pH = 2’dir')],
- ad=[A('Yükü bul','Q = i × t.','Q = 2 × 4825 = 9650 C'),A('Elektron mol sayısı','Yük, 96500 C/mol’e bölünür.','9650 ÷ 96500 = 0,1 mol e⁻'),A('Anot tepkimesi','Anotta su yükseltgenir; 4 mol e⁻ başına 4 mol H⁺ oluşur.','2H₂O → O₂ + 4H⁺ + 4e⁻ → n(H⁺) = 0,1 mol'),A('Derişim','Hacim 1 L’dir.','[H⁺] = 0,1 ÷ 1 = 0,1 M'),A('pH değeri','pH = −log[H⁺].','pH = −log 10⁻¹ = 1')],
+ bilgi=[B('Elektrolizde pH değişimi','inert elektrotlarla derişik oksijenli asit tuzlarının çözeltisinde anotta su yükseltgenir: 2H₂O → O₂ + 4H⁺ + 4e⁻. Çözeltiye geçen H⁺ mol sayısı, devreden geçen elektron mol sayısına eşittir ve pH = −log[H⁺] ile bulunur. Örnek: 0,05 mol elektron geçen 5 L çözeltide [H⁺] = 0,01 M, pH = 2’dir')],
+ ad=[A('Yükü bul','Q = i × t.','Q = 2 × 9650 = 19300 C'),A('Elektron mol sayısı','Yük, 96500 C/mol’e bölünür.','19300 ÷ 96500 = 0,2 mol e⁻'),A('Anot tepkimesi','Anotta su yükseltgenir; 4 mol e⁻ başına 4 mol H⁺ oluşur.','2H₂O → O₂ + 4H⁺ + 4e⁻ → n(H⁺) = 0,2 mol'),A('Derişim','Hacim 2 L’dir.','[H⁺] = 0,2 ÷ 2 = 0,1 M'),A('pH değeri','pH = −log[H⁺].','pH = −log 10⁻¹ = 1')],
  puf='CuSO₄ elektrolizinde oluşan H⁺ mol sayısı, geçen elektron mol sayısına eşittir.')
 
 # ============ 13 · Nernst öncüllü · zor ============
@@ -276,17 +278,17 @@ nAl=D('5.4')/27; ne14=nAl*3; assert nAl==D('0.2') and ne14==D('0.6')
 mCu=ne14/2*64; vO2=ne14/4*D('22.4'); assert mCu==D('19.2') and vO2==D('3.36')
 e1=nAl; assert e1/2*64==D('6.4') and e1/4*D('22.4')==D('1.12')       # n(e-) = n(Al) alınırsa
 assert ne14*64==D('38.4')                                             # Cu n=1
-assert nAl/ (D(1)) *64==D('12.8') and nAl*D('22.4')==D('4.48')        # mol Al mol Cu / mol gaz
+assert (nAl*2)/2*64==D('12.8') and (nAl*2)/4*D('22.4')==D('2.24')   # Al yükü 2 alınırsa
 assert D('19.2')==mCu and ne14/2*D('22.4')==D('6.72')                 # gaz 2e- alınırsa
 g=beaker(0,2.4,2.6,2.0)+beaker(3.6,2.4,2.6,2.0)+elek(0.6,0.4,3.0)+elek(1.8,0.4,3.0)+elek(4.2,0.4,3.0)+elek(5.4,0.4,3.0)
 g+='\\draw[thick] (0.6,3.0) -- (0.6,5.0) -- (2.6,5.0);\\draw[thick] (5.4,3.0) -- (5.4,5.0) -- (3.4,5.0);\\draw[thick] (1.8,3.0) -- (1.8,3.9) -- (4.2,3.9) -- (4.2,3.0);'+bat(3.0,5.0,2.6,3.4)
-g+='\\node[below,align=center] at (1.2,-0.05) {1. kap\\\\erimiş \\ce{AlCl3}\\\\katotta 5,4 g Al};\\node[below,align=center] at (4.8,-0.05) {2. kap\\\\\\ce{CuSO4}(suda)};'
+g+='\\node[below,align=center] at (1.2,-0.05) {1. kap\\\\erimiş \\ce{Al2O3}\\\\(kriyolitli)\\\\katotta 5,4 g Al};\\node[below,align=center] at (4.8,-0.05) {2. kap\\\\\\ce{CuSO4}(suda)};'
 SK=tk(g)
-ops14=['19,2 g – 3,36 L','6,4 g – 1,12 L','38,4 g – 3,36 L','19,2 g – 6,72 L','12,8 g – 4,48 L']
+ops14=['19,2 g – 3,36 L','6,4 g – 1,12 L','38,4 g – 3,36 L','19,2 g – 6,72 L','12,8 g – 2,24 L']
 q('0014',tipId='el-faraday',tip='Faraday yasaları hesabı',z='zor',alt='Elektroliz',kaz='Seri bağlı elektroliz kaplarında geçen elektron miktarından ürün kütle ve hacimlerini hesaplar.',kalip='şekilli',
- kart='K-AKELEK-14 (seri bağlı iki kap) · erimiş AlCl₃ ve sulu CuSO₄',sekil=SK,
- metin='Şekildeki düzenekte, platin elektrotlu iki elektroliz kabı üretece seri bağlanmıştır. 1. kapta erimiş AlCl₃, 2. kapta yeterince derişik CuSO₄ sulu çözeltisi bulunmaktadır. Elektroliz sırasında 1. kaptaki katotta toplanan Al kütlesi şekilde verilmiştir. 2. kapta katotta yalnız Cu metali, anotta yalnız O₂ gazı oluşmuştur.\n(Al = 27 g/mol; Cu = 64 g/mol; NŞA’da 1 mol gaz 22,4 L hacim kaplar)\nBuna göre aynı sürede 2. kaptaki katotta toplanan Cu kütlesi ile anotta oluşan O₂ gazının NŞA’daki hacmi sırasıyla aşağıdakilerden hangisidir?',
- dogru=ops14[0],sira=ops14,yan=[(ops14[1],'Elektron mol sayısını Al mol sayısına (0,2) eşit almış; Al³⁺ iyonunun 3 yükünü hesaba katmamış. Bu durumda 0,1 mol Cu (6,4 g) ve 0,05 mol O₂ (1,12 L) bulmuştur.','bilgi'),(ops14[2],'Cu²⁺ iyonunun yükünü 1 almış; 0,6 mol elektronla 0,6 mol Cu (38,4 g) bulmuş, O₂ hacmini doğru hesaplamıştır.','bilgi'),(ops14[3],'Cu kütlesini doğru bulmuş ama anotta 1 mol O₂ için 2 mol elektron gerektiğini sanmış; 0,3 mol O₂, yani 6,72 L hesaplamıştır.','bilgi'),(ops14[4],'Elektron sayısı yerine Al’nin mol sayısını (0,2) kullanmış; 0,2 mol Cu (12,8 g) ve 0,2 mol gaz (4,48 L) bulmuştur.','bilgi')],
+ kart='K-AKELEK-14 (seri bağlı iki kap) · erimiş Al₂O₃ ve sulu CuSO₄',sekil=SK,
+ metin='Şekildeki düzenekte, platin elektrotlu iki elektroliz kabı üretece seri bağlanmıştır. 1. kapta kriyolit içeren erimiş Al₂O₃, 2. kapta yeterince derişik CuSO₄ sulu çözeltisi bulunmaktadır. Elektroliz sırasında 1. kaptaki katotta toplanan Al kütlesi şekilde verilmiştir. 2. kapta katotta yalnız Cu metali, anotta yalnız O₂ gazı oluşmuştur.\n(Al = 27 g/mol; Cu = 64 g/mol; NŞA’da 1 mol gaz 22,4 L hacim kaplar)\nBuna göre aynı sürede 2. kaptaki katotta toplanan Cu kütlesi ile anotta oluşan O₂ gazının NŞA’daki hacmi sırasıyla aşağıdakilerden hangisidir?',
+ dogru=ops14[0],sira=ops14,yan=[(ops14[1],'Elektron mol sayısını Al mol sayısına (0,2) eşit almış; Al³⁺ iyonunun 3 yükünü hesaba katmamış. Bu durumda 0,1 mol Cu (6,4 g) ve 0,05 mol O₂ (1,12 L) bulmuştur.','bilgi'),(ops14[2],'Cu²⁺ iyonunun yükünü 1 almış; 0,6 mol elektronla 0,6 mol Cu (38,4 g) bulmuş, O₂ hacmini doğru hesaplamıştır.','bilgi'),(ops14[3],'Cu kütlesini doğru bulmuş ama anotta 1 mol O₂ için 2 mol elektron gerektiğini sanmış; 0,3 mol O₂, yani 6,72 L hesaplamıştır.','bilgi'),(ops14[4],'Al³⁺ iyonunun yükünü 2 almış; 0,4 mol elektronla 0,2 mol Cu (12,8 g) ve 0,1 mol O₂ (2,24 L) bulmuştur.','bilgi')],
  istenen='2. kapta katotta biriken Cu kütlesi ve anotta oluşan O₂ hacmi.',ip=['Seri bağlı kaplardan geçen elektron mol sayısı aynıdır; bunu önce 1. kaptan hesapla.'],
  bilgi=[B('Seri bağlı kaplar','seri devrede her elektrolit kabından aynı yük, yani aynı mol sayısında elektron geçer. Bir kaptan hesaplanan elektron mol sayısı, diğer kaptaki ürün miktarını bulmak için kullanılır. Sulu CuSO₄ elektrolizinde anotta su yükseltgenir: 2H₂O → O₂ + 4H⁺ + 4e⁻. Örnek: 0,4 mol elektron geçen bir kapta 0,1 mol O₂ oluşur')],
  ad=[A('Al mol sayısı','Katotta toplanan Al kütlesi mol kütlesine bölünür.','5,4 ÷ 27 = 0,2 mol Al'),A('Elektron sayısı','Al³⁺ + 3e⁻ → Al olduğundan her mol Al için 3 mol elektron gerekir.','0,2 × 3 = 0,6 mol e⁻'),A('Cu kütlesi','Cu²⁺ + 2e⁻ → Cu; aynı 0,6 mol elektron geçer.','0,6 ÷ 2 = 0,3 mol Cu → 0,3 × 64 = 19,2 g'),A('O₂ hacmi','4 mol elektron başına 1 mol O₂ oluşur.','0,6 ÷ 4 = 0,15 mol O₂'),A('Hacmi bul','NŞA’da 1 mol gaz 22,4 L’dir.','0,15 × 22,4 = 3,36 L')],
@@ -313,34 +315,38 @@ q('0015',tipId='el-potansiyel',tip='Elektrot potansiyeli ve istemlilik',z='zor',
  ad=[A('Tabloyu oku','Y hem X²⁺ hem Z²⁺ ile, X yalnız Z²⁺ ile tepkime verir; Z hiçbirini indirgemez.','Y > X > Z'),A('I’i değerlendir','Aktiflik sırası Y > X > Z’dir.','I doğru'),A('II’yi değerlendir','E° farkı, aktiflik farkı büyük olan Y–Z hücresinde daha büyüktür.','Y–Z > X–Z → II doğru'),A('III’ü değerlendir','X anot, Y katot olursa X, Y²⁺’yı indirgemelidir; tablo “yok” diyor.','Hücre istemsiz → III doğru'),A('Sonuç','Üç yargı da doğrudur.','I, II ve III')],
  puf='Tablodaki “var” yerleri, çözünen metalin daha aktif olduğunu gösterir; sıralamayı ondan çıkar.')
 
-# ============ 16 · derişim–zaman, Nernst · zor · grafik ============
-kartla('16','Hücre çalışırken derişim değişimi ve potansiyel','Pil çalışırken Zn²⁺ artar, Cu²⁺ azalır; Q büyüdükçe E düşer. Derişim değişiminden Q hesaplanıp Nernst uygulanır.','Başlangıç derişimleriyle hesap yapmak; n’yi 1 almak.','zor','grafik',5,'derisim','Derişim pili ve Nernst eşitliği')
-Eb=E0-k*zn_cu_log('0.01','1'); Es=E0-k*zn_cu_log('1','0.01')
-assert Eb==D('1.159') and Es==D('1.041')
-assert E0-k*1==D('1.0705') and E0-D('0.059')*(-2)==D('1.218') and E0-D('0.059')*2==D('0.982')
-assert D('0.01')+D('0.99')==1 and 1-D('0.99')==D('0.01')
-g='''\\begin{axis}[width=7cm,height=5.6cm,xmin=0,xmax=64,ymin=0,ymax=1.15,xtick={0,60},ytick={0.01,1.0},yticklabels={0{,}01,1{,}00},tick label style={font=\\small},axis lines=left,xlabel={Zaman (dakika)},ylabel={Derişim (M)},xlabel style={font=\\small},ylabel style={font=\\small},ymajorgrids,grid style={dotted,gray}]
-\\addplot[thick,vurgu,mark=*,mark size=1.4pt] coordinates {(0,1.0) (15,0.55) (30,0.2) (45,0.05) (60,0.01)};
-\\addplot[thick,mark=square*,mark size=1.4pt] coordinates {(0,0.01) (15,0.46) (30,0.81) (45,0.96) (60,1.0)};
-\\node[anchor=south west] at (axis cs:2,0.93) {$\\ce{Cu^{2+}}$};\\node[anchor=north west] at (axis cs:2,0.13) {$\\ce{Zn^{2+}}$};
-\\end{axis}'''
+# ============ 16 · derişim–zaman, Nernst (Cu–Ag) · zor · grafik ============
+kartla('16','Hücre çalışırken derişim değişimi ve potansiyel','Pil çalışırken ürün derişimi artar, giren derişimi azalır; Q büyür ve E düşer. Q yazılırken katsayılar üs olur.','Derişimin katsayısını üs almamak; Q’yu ters yazmak; n’yi yanlış almak.','zor','grafik',5,'derisim','Derişim pili ve Nernst eşitliği')
+E16=D('0.46'); assert D('0.80')-D('0.34')==E16
+def E_(cu,ag):
+    r=D(cu)/D(ag)**2; l=0
+    while r>1: r/=10; l+=1
+    while r<1: r*=10; l-=1
+    assert r==1; return E16-D('0.059')/2*l
+assert E_('1.0','0.1')==D('0.401')
+assert E16-D('0.059')/2*1==D('0.4305') and E16+D('0.059')==D('0.519') and E16+D('0.059')*2==D('0.578')
+assert D('0.1')+D('0.9')==1 and D('1.9')-2*D('0.9')==D('0.1')
+g=r"""\begin{axis}[width=7cm,height=5.6cm,xmin=0,xmax=64,ymin=0,ymax=2.1,xtick={0,60},ytick={0.1,1.0,1.9},yticklabels={0{,}1,1{,}0,1{,}9},tick label style={font=\small},axis lines=left,xlabel={Zaman (dakika)},ylabel={Derişim (M)},xlabel style={font=\small},ylabel style={font=\small},ymajorgrids,grid style={dotted,gray}]
+\addplot[thick,vurgu,mark=*,mark size=1.4pt] coordinates {(0,0.1) (15,0.55) (30,0.8) (45,0.95) (60,1.0)};
+\addplot[thick,mark=square*,mark size=1.4pt] coordinates {(0,1.9) (15,1.0) (30,0.5) (45,0.2) (60,0.1)};
+\node[anchor=south west] at (axis cs:40,0.5) {$\ce{Cu^{2+}}$};\node[anchor=south west] at (axis cs:3,1.7) {$\ce{Ag+}$};
+\end{axis}"""
 SK=tk(g)
-ops16=[D('1.041'),D('1.0705'),D('1.10'),D('1.159'),D('1.218')]
 q('0016',tipId='el-derisim',tip='Derişim pili ve Nernst eşitliği',z='zor',alt='Elektrot Potansiyelleri',kaz='Derişim–zaman grafiğinden hücre tepkimesinin Q değerini bulup Nernst eşitliğiyle hücre potansiyelini hesaplar.',kalip='grafik',
- kart='K-AKELEK-16 (derişim–zaman grafiği) · Zn–Cu hücresi, çalışma boyunca potansiyel',sekil=SK,
- metin='25 °C’de Zn(k) | Zn²⁺(suda) || Cu²⁺(suda) | Cu(k) hücresi çalıştırılırken yarı hücrelerdeki iyon derişimlerinin zamanla değişimi grafikte verilmiştir. Hücre tepkimesi Zn(k) + Cu²⁺(suda) → Zn²⁺(suda) + Cu(k), standart hücre potansiyeli E° = 1,10 V’tur. Nernst eşitliğinde logaritmik terimin katsayısı 0,059/n alınacaktır; burada n, tepkimede aktarılan elektron sayısıdır.\nBuna göre hücre, grafikteki 60. dakikaya geldiğinde hücre potansiyeli kaç volttur?',
- dogru=D('1.041'),sira=None,yan=[(D('1.0705'),'Q oranını 10 almış; 60. dakikada [Zn²⁺]/[Cu²⁺] = 1,00/0,01 = 100’dür, 10 değil. Böylece E = 1,10 − 0,0295 × 1 = 1,0705 V bulmuştur.','islem'),(D('1.10'),'Derişimlerin 1 M olduğunu düşünüp Q = 1 almış; logQ = 0 olduğundan E = E° = 1,10 V bulmuştur.','bilgi'),(D('1.159'),'Grafikteki başlangıç derişimlerini (Zn²⁺ = 0,01 M, Cu²⁺ = 1,00 M) kullanmış; 0. dakikanın potansiyeli olan 1,159 V’u yazmıştır.','dikkat'),(D('1.218'),'Başlangıç derişimleriyle hesap yapmış ve n yerine 1 almıştır: E = 1,10 + 0,059 × 2 = 1,218 V.','islem')],
- istenen='60. dakikadaki hücre potansiyeli (V).',ip=['Grafikten 60. dakikadaki iki derişimi oku, Q’yu yaz ve n = 2 ile Nernst eşitliğinde yerine koy.'],
- bilgi=[B('Hücre çalışırken Q','hücre çalışırken ürün derişimi artar, giren derişimi azalır; Q büyür ve E° değerinden uzaklaşarak azalır. Hücre dengeye ulaşınca Q = K olur ve E = 0 olur. Örnek: Q = 1 iken E = E°’dir; Q 10 kat artarsa n = 2 için E, 0,0295 V azalır')],
- ad=[A('Grafikten oku','60. dakikada Cu²⁺ 0,01 M, Zn²⁺ 1,00 M’dır.','[Cu²⁺] = 0,01 · [Zn²⁺] = 1,00'),A('Q’yu yaz','Q = [Zn²⁺] ÷ [Cu²⁺].','Q = 1,00 ÷ 0,01 = 10²'),A('n’yi belirle','Zn → Zn²⁺ + 2e⁻ olduğundan n = 2’dir.','0,059 ÷ 2 = 0,0295'),A('Nernst','E = E° − (0,059/n)·logQ.','E = 1,10 − 0,0295 × 2 = 1,041 V')],
- puf='Pil çalışırken Q büyür ve potansiyel E°’nin altına düşer.')
+ kart='K-AKELEK-16 (derişim–zaman grafiği) · Cu–Ag hücresi, çalışma boyunca potansiyel',sekil=SK,
+ metin='25 °C’de Cu(k) | Cu²⁺(suda) || Ag⁺(suda) | Ag(k) hücresi çalıştırılırken yarı hücrelerdeki iyon derişimlerinin zamanla değişimi grafikte verilmiştir. Hücre tepkimesi Cu(k) + 2Ag⁺(suda) → Cu²⁺(suda) + 2Ag(k) olup standart hücre potansiyeli E° = 0,46 V’tur. Nernst eşitliğinde logaritmik terimin katsayısı 0,059/n alınacaktır; burada n, tepkimede aktarılan elektron sayısıdır.\nBuna göre hücre, grafikteki 60. dakikaya geldiğinde hücre potansiyeli kaç volttur?',
+ dogru=D('0.401'),yan=[(D('0.4305'),'Q’yu yazarken Ag⁺ derişiminin katsayısını üs almamış: Q = 1,0/0,1 = 10 bulup E = 0,46 − 0,0295 × 1 = 0,4305 V hesaplamıştır.','islem'),(D('0.46'),'Derişimlerin 1 M olduğunu düşünüp Q = 1 almış; logQ = 0 olduğundan E = E° = 0,46 V bulmuştur.','bilgi'),(D('0.519'),'Q’yu ters yazmış: Q = 0,01/1,0 = 10⁻²; E = 0,46 + 0,0295 × 2 = 0,519 V bulmuştur.','islem'),(D('0.578'),'Q’yu ters yazmış ve n yerine 1 almıştır: E = 0,46 + 0,059 × 2 = 0,578 V.','islem')],
+ istenen='60. dakikadaki hücre potansiyeli (V).',ip=['Grafikten 60. dakikadaki iki derişimi oku; Q’yu yazarken katsayıların üs olduğunu unutma ve n’yi tepkimeden bul.'],
+ bilgi=[B('Hücre çalışırken Q','hücre çalışırken ürün derişimi artar, giren derişimi azalır; Q büyür ve E, E° değerinden uzaklaşarak azalır. Q ifadesinde her derişim, tepkime denklemindeki katsayısı kadar üs alır. Hücre dengeye ulaşınca Q = K olur ve E = 0 olur. Örnek: Q = 1 iken E = E°’dir')],
+ ad=[A('Grafikten oku','60. dakikada Cu²⁺ 1,0 M, Ag⁺ 0,1 M’dır.','[Cu²⁺] = 1,0; [Ag⁺] = 0,1'),A('Q’yu yaz','Ag⁺’nın katsayısı 2 olduğundan derişimin karesi alınır.','Q = [Cu²⁺] ÷ [Ag⁺]² = 1,0 ÷ 0,01 = 10²'),A('n’yi belirle','Cu → Cu²⁺ + 2e⁻ olduğundan n = 2’dir.','0,059 ÷ 2 = 0,0295'),A('Nernst','E = E° − (0,059/n)·logQ.','E = 0,46 − 0,0295 × 2 = 0,401 V')],
+ puf='Q yazılırken derişimler katsayı kadar üs alır; pil çalıştıkça Q büyür ve potansiyel düşer.')
 
 # ============ 17 · Pt'li hücre · zor ============
-kartla('17','İnert elektrotlu hücre yorumu','Aynı elementin iki yükseltgenme basamağını içeren yarı hücrede inert elektrot (Pt) elektron ileticidir; kütlesi değişmez.','Pt elektrodu anot ya da çözünen sanmak; Ehücre’yi E° farkıyla bulmayı unutmak.','zor','düz',5,'galvanik','Galvanik hücre yorumu')
+kartla('17','İnert elektrotlu hücre yorumu','Aynı elementin iki yükseltgenme basamağını içeren yarı hücrede inert elektrot (Pt) elektron ileticidir; kütlesi değişmez.','Pt elektrodu anot ya da çözünen sanmak; Ehücre’yi E° farkıyla bulmayı unutmak.','orta','düz',5,'galvanik','Galvanik hücre yorumu')
 E17=D('0.77')-D('-0.76'); assert E17==D('1.53')
 S17=['Standart hücre potansiyeli 0,01 V’tur.','Pt elektrot anottur ve kütlesi zamanla azalır.','Zn elektrodun kütlesi zamanla artar.','Dış devrede elektronlar Pt elektrottan Zn elektroda doğru akar.','Hücre çalışırken Fe²⁺ derişimi artar ve Pt elektrodun kütlesi değişmez.']
 assert D('0.77')+D('-0.76')==D('0.01')
-q('0017',tipId='el-galvanik',tip='Galvanik hücre yorumu',z='zor',alt='Elektrotlar ve Elektrokimyasal Hücreler',kaz='İnert elektrotlu galvanik hücrede elektrot rollerini, elektron akışını ve derişim değişimlerini yorumlar.',kalip='düz',
+q('0017',tipId='el-galvanik',tip='Galvanik hücre yorumu',z='orta',alt='Elektrotlar ve Elektrokimyasal Hücreler',kaz='İnert elektrotlu galvanik hücrede elektrot rollerini, elektron akışını ve derişim değişimlerini yorumlar.',kalip='düz',
  kart='K-AKELEK-17 (Zn | Fe³⁺, Fe²⁺ | Pt hücresi) · inert elektrot',
  metin='Standart koşullarda hazırlanan bir elektrokimyasal hücrenin şematik gösterimi aşağıda verilmiştir.\nZn(k) | Zn²⁺(suda, 1 M) || Fe³⁺(suda, 1 M), Fe²⁺(suda, 1 M) | Pt(k)\nBu hücrede KNO₃ içeren tuz köprüsü kullanılmaktadır.\nZn²⁺(suda) + 2e⁻ → Zn(k)  E° = −0,76 V\nFe³⁺(suda) + e⁻ → Fe²⁺(suda)  E° = +0,77 V\nBuna göre bu hücreyle ilgili aşağıdakilerden hangisi doğrudur?',
  dogru=S17[4],sira=S17,yan=[(S17[0],'E° değerlerini işaretleriyle toplamış: 0,77 + (−0,76) = 0,01 V. Hücre potansiyeli E°(katot) − E°(anot) = 0,77 − (−0,76) = 1,53 V’tur.','islem'),(S17[1],'Pt elektrodu anot ve çözünen bir elektrot sanmış; Pt inerttir, E° değeri büyük olan Fe³⁺/Fe²⁺ yarı hücresi katottur ve Pt’de yalnız elektron aktarımı olur.','bilgi'),(S17[2],'Zn’yi katot sanmış; E° değeri küçük olan Zn yükseltgenerek çözünür ve kütlesi azalır.','bilgi'),(S17[3],'Elektron yönünü ters yazmış; elektronlar anot olan Zn’den dış devreden katot olan Pt elektroda akar.','bilgi')],

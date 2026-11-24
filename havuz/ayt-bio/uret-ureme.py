@@ -263,7 +263,7 @@ def sek_soyagaci():
     b.append(kare(-1.3,2.4)); b.append(daire(1.3,2.4)); b.append('\\draw[line width=1.1pt] (-.98,2.4)--(.96,2.4);')
     b.append('\\draw[line width=1.1pt] (0,2.4)--(0,1.4);\\draw[line width=1.1pt] (-2.3,1.4)--(3.0,1.4);')
     b.append('\\draw[line width=1.1pt] (-2.3,1.4)--(-2.3,.8);'); b.append(daire(-2.3,.45,True))
-    b.append('\\draw[line width=1.1pt] (1.3,1.4)--(1.3,1.0);\\draw[line width=1.1pt] (1.3,1.0)--(.5,.8);\\draw[line width=1.1pt] (1.3,1.0)--(2.1,.8);')
+    b.append('\\draw[line width=1.1pt] (.5,1.4)--(.5,.8);\\draw[line width=1.1pt] (2.1,1.4)--(2.1,.8);')
     b.append(kare(.5,.45)); b.append(daire(2.1,.45))
     b.append('\\node[font=\\small\\bfseries] at (.5,-.2) {X};\\node[font=\\small\\bfseries] at (2.1,-.2) {Y};')
     b.append('\\node[font=\\small,anchor=west] at (3.6,2.4) {\\tikz[baseline=-.5ex]\\draw[line width=1.1pt] (0,0) rectangle (.3,.3); Erkek};')
@@ -295,7 +295,7 @@ Q('ur-erkek','kolay','Erkek üreme sistemi yapıları','Sperm üretimi (testis),
   A('Olgunlaşma ve depolanma','Testiste üretilen spermler epididime geçer; hareket yeteneğini orada kazanır ve orada depolanır.',f'epididim: {N1["epididim"]}'),
   A('Fruktozlu sıvı','Spermlerin enerji kaynağı olan fruktozu seminal vezikül salgılar; prostat ise alkali bir sıvı salgılar.',f'seminal vezikül: {N1["vezikul"]}'),
   A('Sonuç','İki yapının numaraları sırasıyla yazılır.',d1)],
- 'Epididim olgunlaştırır ve depolar; fruktozu seminal vezikül verir.',sekil=sk1,dogru=d1,
+ 'Yapıları üretimden çıkışa doğru sırala; bezlerin salgısını ayrı düşün.',sekil=sk1,dogru=d1,
  yan=[(y1[0],'Spermin üretildiği testisi, olgunlaştığı ve depolandığı yapı sanmış; oysa sperm üretimi testisteki seminifer tübüllerde, olgunlaşma ve depolanma ise epididimde olur.','bilgi'),
       (y1[1],'Fruktozlu sıvıyı prostatın salgıladığını sanmış; oysa prostat alkali sıvı salgılar, fruktozu seminal vezikül verir.','bilgi'),
       (y1[2],'Sperm kanalını depolama yeri sanmış ve fruktozu seminal veziküle doğru atfetmiş; oysa spermler epididimde olgunlaşıp depolanır, sperm kanalı yalnız taşıma görevi yapar.','bilgi'),
@@ -312,7 +312,7 @@ Q('ur-erkek','orta','Sperm hücresinin yapısı ve farklılaşma','Akrozom enzim
  +etiket_oncul('Sperm başındaki akrozom, yumurtanın dış katmanlarını çözen enzimler içerir.','Orta kısımdaki mitokondriler, kuyruğun hareketi için gereken ATP’yi üretir.','Spermatitin sperme farklılaşması sırasında kromozom sayısı yarıya iner.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
  'Sperm hücresinin yapısı ve oluşumuyla ilgili doğru yargılar.','Her yargıda hangi yapının ya da sürecin anlatıldığını belirle; sonra spermatitin farklılaşmasında hangi bölünmenin gerçekleştiğini hatırla.',
  [B('Sperm hücresinin yapısı','Sperm hücresi baş, orta kısım ve kuyruktan oluşur. Mayoz, kromozom sayısını yarıya indiren bölünmedir; mitoz ise kromozom sayısını korur. Örnek: Bir deri hücresi mitozla bölündüğünde yavru hücreler ana hücreyle aynı sayıda kromozom taşır')],
- oadim(T2,n2)+[A('Sonuç','Doğru yargılar I ve II’dir.','I ve II')],'Farklılaşma, bölünme değildir; kromozom sayısı değişmez.',sekil=None,dogru=d2,yan=y2,sira=s2)
+ oadim(T2,n2)+[A('Sonuç','Doğru yargılar I ve II’dir.','I ve II')],'Her yargıdaki yapıyı ya da süreci ayrı ayrı değerlendir.',sekil=None,dogru=d2,yan=y2,sira=s2)
 # ================= 03 · erkek hormonları · orta · olumsuz =================
 D3='Leydig hücreleri seminifer tübüllerin içinde bulunur ve mayoz bölünme geçirerek sperm hücrelerini oluşturur.'
 Y3=[('FSH, seminifer tübüllerdeki Sertoli hücrelerini etkileyerek spermatogenezi destekler.','FSH’nin Sertoli hücrelerini uyararak spermatogenezi desteklediğini bilmeyip ifadeyi yanlış sanmış; oysa bu ifade doğrudur.','bilgi'),
@@ -327,7 +327,7 @@ Q('ur-erkek','orta','Erkekte hormonal kontrol','FSH Sertoli hücrelerini, LH Ley
   A('Hormon–hücre eşleşmesi','FSH Sertoli hücrelerine, LH Leydig hücrelerine etki eder; testosteron geri bildirimle bu salgıyı sınırlar.','FSH→Sertoli · LH→Leydig'),
   A('İfadeleri tara','Dört ifade bu bilgilerle uyumludur; Leydig hücrelerinin tübül içinde sperm oluşturduğunu söyleyen ifade çelişir.','1 ifade yanlış'),
   A('Sonuç','Leydig hücrelerini tübül içinde sperm oluşturan hücre olarak gösteren ifade yanlıştır.','yanlış ifade: Leydig')],
- 'Sertoli tübülün içinde besler; Leydig tübülün dışında testosteron salgılar.',sekil=None,dogru=D3,yan=Y3,sira=yer(D3,[y[0] for y in Y3],'E'))
+ 'Hormonun hangi hücreyi uyardığını ve o hücrenin testisteki yerini ayrı düşün.',sekil=None,dogru=D3,yan=Y3,sira=yer(D3,[y[0] for y in Y3],'E'))
 # ================= 04 · deney tablosu · zor · öncüllü =================
 T4=[False,True,True]
 n4=['tabloda testosteronu veren grupta LH derişimi normale dönüyor; testosteron LH salgısını artırmaz, baskılar (negatif geri bildirim)',
@@ -373,7 +373,7 @@ assert (sg6,kb6,st6,ks6,fark6)==(4,32,16,64,32)
 w_a=ks6
 sg_y=NM; kb_y=sg_y*KROM2N; ks_y=sg_y*4*(KROM2N//2); w_b=ks_y-kb_y; assert w_b==16
 w_c=kb6+ks6; w_d=0; assert w_c==96
-Q('ur-gamet','zor','Mitoz ve mayozla oluşan hücrelerin kromozom sayımı','Mitoz hücre sayısını, mayoz hücre başına kromozom sayısını değiştirir; toplam kromozom sayısı adım adım hesaplanır.','Mayozda toplam kromozom sayısının değişmediğini sanmak; mitoz sayısını hücre sayısıyla karıştırmak.','düz',
+Q('ur-gamet','orta','Mitoz ve mayozla oluşan hücrelerin kromozom sayımı','Mitoz hücre sayısını, mayoz hücre başına kromozom sayısını değiştirir; toplam kromozom sayısı adım adım hesaplanır.','Mayozda toplam kromozom sayısının değişmediğini sanmak; mitoz sayısını hücre sayısıyla karıştırmak.','düz',
  'Kromozom sayısı 2n = 8 olan bir erkek canlıda bir spermatogonyum art arda 2 kez mitoz geçirir. Oluşan hücrelerin tamamı büyüyerek birincil spermatosit olur ve her biri mayozu eksiksiz tamamlayarak spermatitleri oluşturur.\nBuna göre, oluşan spermatitlerin toplam kromozom sayısı, birincil spermatositlerin toplam kromozom sayısından kaç fazladır?',
  'Spermatitlerle birincil spermatositlerin toplam kromozom sayıları arasındaki fark.','Önce mitozlarla kaç hücre oluştuğunu bul; sonra her birincil spermatositten kaç spermatit çıktığını ve hücre başına kromozom sayısını hesapla.',
  [B('Hücre ve kromozom sayısı','Her mitoz hücre sayısını iki katına çıkarır. Bir birincil spermatosit mayoz sonunda 4 spermatit verir ve spermatitler n kromozomludur. Örnek: 3 mitozla bir hücreden 8 hücre oluşur')],
@@ -383,7 +383,7 @@ Q('ur-gamet','zor','Mitoz ve mayozla oluşan hücrelerin kromozom sayımı','Mit
   A('Fark',f'Spermatitlerin toplam kromozomundan birincil spermatositlerin toplamı çıkarılır.',f'{ks6} − {kb6} = {fark6}')],
  'Hücre sayısını ve hücre başına kromozomu ayrı ayrı çarp; sonra çıkar.',dogru=fark6,
  yan=[(w_d,'Mayozda kromozom sayısının yarıya inmesini hücre sayısındaki artışla dengelenmiş sanıp toplamın değişmediğini düşünmüş; oysa hücre sayısı 4 kat artarken hücre başına kromozom yarıya iner, toplam iki katına çıkar.','bilgi'),
-      (w_b,'İki mitoz yerine iki hücre oluştuğunu varsaymış; böyle hesaplayınca 2 birincil spermatosit (16 kromozom) ve 8 spermatit (32 kromozom) bulup farkı 16 saymıştır.','dikkat'),
+      (w_b,'Yalnız tek mitoz geçirdiğini varsaymış: 2 birincil spermatosit (16 kromozom) ve 8 spermatit (32 kromozom) bulup farkı 16 saymıştır.','dikkat'),
       (w_a,'Yalnız spermatitlerin toplam kromozom sayısını bulmuş ve birincil spermatositlerin toplamını çıkarmayı unutmuş.','dikkat'),
       (w_c,'Fark yerine iki toplam kromozom sayısını toplamış.','islem')])
 # ================= 07 · oogenez · orta · şekilli · öncüllü =================
@@ -448,7 +448,7 @@ Q('ur-dongu','orta','Endometriyum ve progesteron grafiği','Endometriyumun döne
   A('Hormon kaynakları','Östrojeni gelişen folikül, progesteronu ovulasyondan sonra oluşan korpus luteum salgılar.','folikül → östrojen · korpus luteum → progesteron'),
   A('İfadeleri sına','Dört ifade grafikle ve bu kaynaklarla uyumludur; II. aralıkta progesteronun en yüksek olduğunu söyleyen ifade grafikle çelişir.','1 ifade çelişir'),
   A('Sonuç','II. aralıkta korpus luteum henüz oluşmamıştır, progesteron düşüktür; bu yüzden yanlış ifade budur.','yanlış ifade: II. aralık')],
- 'Progesteron korpus luteumdan gelir; korpus luteum ovulasyondan önce yoktur.',sekil=sk10,dogru=D10,yan=Y10,sira=yer(D10,[y[0] for y in Y10],'A'))
+ 'Progesteronun kaynağını ve hangi aralıkta oluştuğunu grafikte işaretle.',sekil=sk10,dogru=D10,yan=Y10,sira=yer(D10,[y[0] for y in Y10],'A'))
 # ================= 11 · gebelik grafiği · zor =================
 assert PRO_K(28)<PRO_K(21)-5 and PRO_L(35)>PRO_L(28)>7 and HCG(21)<.6 and HCG(35)>9 and PRO_K(35)<1
 sk11=sek_gebelik()
@@ -457,15 +457,15 @@ Y11=[('K kadınında 21. günden sonra progesteronun azalması, hCG salgısında
      ('L kadınında progesteronun 28. günden sonra yüksek kalması, ovulasyonun ikinci kez gerçekleşmesiyle açıklanabilir.','Progesteronun yüksek kalmasını yeni bir ovulasyona bağlamış; oysa gebelikte ovulasyonlar durur, korpus luteum hCG ile korunur.','bilgi'),
      ('L kadınında hCG, hipofizden salgılanarak FSH ve LH salgısını artırır.','hCG’nin kaynağını hipofiz sanmış; oysa hCG embriyodan köken alan hücrelerce salgılanır ve korpus luteumu korur.','bilgi'),
      ('K kadınında progesteronun artması, endometriyumun dökülmesini başlatan etkenlerden biridir.','Progesteronun yükselmesini kanamaya neden olan etken sanmış; oysa kanamayı başlatan, progesteron derişiminin düşmesidir.','bilgi')]
-Q('ur-dongu','zor','Gebelikte hormon grafiği','Gebelikte embriyonun salgıladığı hCG korpus luteumu korur; progesteron yüksek kalır ve endometriyum dökülmez. Gebe olmayan kadında progesteron düşer.','hCG’yi hipofiz ya da yumurtalık hormonu sanmak; progesteronun düşüşünü kanamanın sonucu saymak.','grafik',
+Q('ur-dongu','orta','Gebelikte hormon grafiği','Gebelikte embriyonun salgıladığı hCG korpus luteumu korur; progesteron yüksek kalır ve endometriyum dökülmez. Gebe olmayan kadında progesteron düşer.','hCG’yi hipofiz ya da yumurtalık hormonu sanmak; progesteronun düşüşünü kanamanın sonucu saymak.','grafik',
  'K ve L kadınlarının her ikisinde de döngünün ilk günü kanamanın başladığı gündür ve ovulasyon 14. günde gerçekleşmiştir. L kadınında döllenme olmuş, embriyo uterus duvarına tutunmuştur. Kadınların kanındaki progesteron derişimi ve L kadınında ayrıca hCG derişimi 35 gün boyunca izlenmiş, sonuçlar grafiklerde verilmiştir.\nBuna göre, aşağıdakilerden hangisi söylenebilir?',
  'Grafiklere göre söylenebilecek ifade.','İki kadının progesteron eğrilerini 21. günden sonra karşılaştır; hCG’nin ortaya çıktığı günü ve ne işe yaradığını düşün.',
  [B('Gebelikte hormonlar','Progesteron endometriyumu embriyoya uygun tutar; derişimi düşerse endometriyum dökülür. Gebelik testleri kanda ya da idrarda hCG hormonunu arar. Örnek: Bir yapıyı uyaran hormon kesilirse o yapı küçülür')],
  [A('K kadınının eğrisi','Progesteron 21. günde en yüksek değere ulaşır, sonra düşer; döllenme olmadığından korpus luteum dejenere olur.','K: düşüş → menstrüasyon'),
-  A('L kadınının eğrisi','Progesteron 28. günden sonra da yüksek kalır; hCG yaklaşık 21. günden itibaren yükselir.','L: progesteron yüksek, hCG artar'),
+  A('L kadınının eğrisi','Progesteron 28. günden sonra da yüksek kalır; hCG yaklaşık 24. günden itibaren yükselir.','L: progesteron yüksek, hCG artar'),
   A('Neden–sonuç','hCG embriyodan gelir ve korpus luteumu korur; korpus luteum progesteron salgılamaya devam eder, endometriyum dökülmez.','hCG → korpus luteum → progesteron'),
   A('Seçenekleri ele','Diğer seçenekler hCG’nin kaynağını, ovulasyonu ya da progesteronun etkisini yanlış anlatır.','doğru ifade: hCG–korpus luteum ilişkisi')],
- 'Gebelikte hCG korpus luteumu korur; progesteron yüksek kalır.',sekil=sk11,dogru=D11,yan=Y11,sira=yer(D11,[y[0] for y in Y11],'E'))
+ 'İki eğriyi 21. günden sonra karşılaştır, hormonların kaynağını düşün.',sekil=sk11,dogru=D11,yan=Y11,sira=yer(D11,[y[0] for y in Y11],'E'))
 # ================= 12 · döngü süresi · kolay · hikâyeli =================
 DONGU=32; LUT=14
 ov=DONGU-LUT; assert ov==18 and ov+LUT==DONGU
@@ -497,27 +497,27 @@ Q('ur-disi','kolay','Dişi üreme sistemi yapıları','Döllenme tubada gerçekl
   A('Döllenme yeri','Atılan ikincil oosit tubaya girer; sperm hücresiyle tubada karşılaşır ve döllenme orada gerçekleşir.',f'döllenme: tuba ({N13["tuba"]})'),
   A('Tutunma yeri','Blastosist uterusa ulaşır ve endometriyuma tutunur.',f'tutunma: uterus ({N13["uterus"]})'),
   A('Sonuç','Sıra döllenme yeri, tutunma yeri olarak yazılır.',d13)],
- 'Döllenme tubada, tutunma uterusta gerçekleşir.',sekil=sk13,dogru=d13,
+ 'Yumurtanın atıldıktan sonraki yolunu sırala.',sekil=sk13,dogru=d13,
  yan=[(y13[0],'Döllenmenin yumurtalıkta gerçekleştiğini sanmış; oysa yumurtalıktan atılan oosit tubaya girer ve döllenme tubada olur.','bilgi'),
       (y13[1],'Embriyonun serviksin içine tutunduğunu sanmış; oysa embriyo uterusun iç yüzeyine (endometriyuma) tutunur.','bilgi'),
       (y13[2],'Döllenmenin yumurtalıkta gerçekleştiğini ve embriyonun tubaya tutunduğunu sanmış; oysa döllenme tubada, tutunma uterus duvarında gerçekleşir.','bilgi'),
       (y13[3],'Embriyonun vajinaya tutunduğunu düşünmüş; oysa vajina doğum kanalıdır, embriyo uterusta gelişir.','bilgi')],
  sira=sorted([d13]+y13))
 # ================= 14 · yumurtalık hormonları · orta · olumsuz =================
-D14='Ovulasyon, FSH derişiminin ani artmasıyla tetiklenir.'
+D14='Ovulasyon, korpus luteumdan salgılanan progesteronun ani artışıyla tetiklenir.'
 Y14=[('Gelişen folikülün hücreleri östrojen salgılar.','Folikül hücrelerinin östrojen salgıladığını bilmeyip ifadeyi yanlış sanmış; oysa bu ifade doğrudur.','bilgi'),
      ('Ovulasyondan sonra boşalan folikül, korpus luteuma dönüşür.','Boşalan folikülün korpus luteuma dönüştüğünü bilmeyip ifadeyi yanlış sanmış; oysa bu ifade doğrudur.','bilgi'),
      ('Korpus luteum, progesteronun yanı sıra az miktarda östrojen de salgılar.','Korpus luteumun yalnız progesteron salgıladığını düşünüp ifadeyi yanlış sanmış; oysa korpus luteum az miktarda östrojen de salgılar.','bilgi'),
      ('Döllenme gerçekleşirse korpus luteum, embriyodan kaynaklanan hCG sayesinde işlevini sürdürür.','hCG’nin korpus luteumu koruduğunu bilmeyip ifadeyi yanlış sanmış; oysa bu ifade doğrudur.','bilgi')]
-Q('ur-disi','orta','Yumurtalık yapıları ve hormonlar','Folikül östrojen, korpus luteum progesteron (az östrojen) salgılar; ovulasyonu ani LH artışı tetikler; hCG korpus luteumu korur.','Ovulasyonu FSH’nin tetiklediğini sanmak.','düz',
+Q('ur-disi','orta','Yumurtalık yapıları ve hormonlar','Folikül östrojen, korpus luteum progesteron (az östrojen) salgılar; ovulasyonu ani LH artışı tetikler; hCG korpus luteumu korur.','Ovulasyonu tetikleyen hormonu karıştırmak.','düz',
  'Dişide yumurtalıktaki folikül, hipofiz hormonlarının etkisiyle gelişir. Folikül, ovulasyonla yumurta hücresini bırakır ve geriye kalan hücreler yeni bir yapıya dönüşerek hormon salgılamayı sürdürür. Bu süreçlerin tümü, hipofiz ve yumurtalık hormonlarının birbirini etkilediği bir denetim altındadır.\nBuna göre, dişi üreme sistemindeki bu olaylarla ilgili aşağıdakilerden hangisi yanlıştır?',
  'Yumurtalıkta gerçekleşen olaylarla ilgili yanlış ifade.','Ovulasyonu başlatan hormonun hangisi olduğunu, korpus luteumun neyi salgıladığını ayrı ayrı hatırla.',
  [B('Folikül ve korpus luteum','Folikül, yumurtalıkta yumurta hücresini çevreleyen yapıdır ve östrojen salgılar. Ovulasyondan sonra folikül hücreleri korpus luteuma dönüşür. Örnek: Hipofizin salgıladığı iki gonadotropin hormon vardır')],
  [A('Olay sırası','Önce folikül gelişir, ovulasyon olur, sonra boşalan folikül korpus luteuma dönüşür.','folikül → ovulasyon → korpus luteum'),
   A('Hormon kaynakları','Folikül östrojen, korpus luteum progesteron ve az östrojen salgılar; hCG korpus luteumu korur.','folikül: östrojen · korpus luteum: progesteron'),
-  A('Ovulasyonun tetikleyicisi','Ovulasyonu başlatan, ani artış gösteren LH’dir; FSH ise folikül gelişimini uyarır.','ovulasyon → LH'),
-  A('Sonuç','Ovulasyonu FSH’nin tetiklediğini söyleyen ifade yanlıştır.','yanlış ifade: FSH')],
- 'Ovulasyonu LH tetikler; FSH folikülü büyütür.',sekil=None,dogru=D14,yan=Y14,sira=yer(D14,[y[0] for y in Y14],'E'))
+  A('Ovulasyonun tetikleyicisi','Ovulasyonu başlatan, ani artış gösteren LH’dir; korpus luteum ise ovulasyondan sonra oluşur, bu yüzden ovulasyonu tetikleyemez.','ovulasyon → LH'),
+  A('Sonuç','Ovulasyonu korpus luteumun progesteronuna bağlayan ifade yanlıştır.','yanlış ifade: progesteron')],
+ 'Ovulasyonu başlatan hormonun hangisi olduğunu ve yapıların oluşum sırasını düşün.',sekil=None,dogru=D14,yan=Y14,sira=yer(D14,[y[0] for y in Y14],'E'))
 # ================= 15 · döllenme · zor · öncüllü =================
 T15=[True,True,True]
 IO=(23,46); K2=(23,23); Z=(46,46)
@@ -526,12 +526,12 @@ n15=['ikincil oositte mayoz II başlamıştır, kromozomlar eşlenmiş durumda o
      'mayoz II’de kardeş kromatitler ayrılır; ikinci kutup hücresi 23 tane tek kromatitli kromozom taşır',
      'zigot, ootit ve sperm çekirdeklerinin birleşmesiyle oluşur: 23 + 23 = 46 kromozom, ikincil oositteki 23’ün iki katıdır']
 d15,y15,s15=onc(T15,n15,'E')
-Q('ur-dollenme','zor','Döllenmede kromozom ve kromatit sayıları','İkincil oosit metafaz II’de (eşlenmiş kromozomlarla) bekler; sperm girişiyle mayoz II tamamlanır, ootit ve ikinci kutup hücresi oluşur; çekirdekler birleşince zigot 2n olur.','Mayoz II sonunda kromozomların hâlâ iki kromatitli kaldığını sanmak; ikincil oositteki kromozom sayısını 46 saymak.','öncüllü',
+Q('ur-dollenme','zor','Döllenmede kromozom ve kromatit sayıları','İkincil oosit metafaz II’de (eşlenmiş kromozomlarla) bekler; sperm girişiyle mayoz II tamamlanır, ootit ve ikinci kutup hücresi oluşur; çekirdekler birleşince zigot 2n olur.','Kromozom ve kromatit sayısını karıştırmak.','öncüllü',
  'İnsanda (2n = 46) metafaz II evresinde bekleyen ikincil oosit tubada bir sperm hücresi ile karşılaşır ve sperm hücresi oositin içine girer. Bu olaydan sonra oosit mayoz II’yi tamamlar; oluşan ootitin çekirdeği ile spermin çekirdeği birleşerek zigot meydana gelir.\n'
  +etiket_oncul('Sperm hücresi oosite girmeden önce ikincil oositteki toplam kromatit sayısı 46’dır.','Mayoz II tamamlandığında oluşan ikinci kutup hücresinde tek kromatitli 23 kromozom bulunur.','Zigottaki toplam kromozom sayısı, ikincil oositteki toplam kromozom sayısının iki katıdır.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
  'Döllenme sürecine ilişkin doğru yargılar.','Mayoz II’nin hangi evrede beklediğini, sperm girişiyle neyin ayrıldığını ve çekirdeklerin birleşmesinin kromozom sayısını nasıl etkilediğini adım adım izle.',
  [B('Döllenme ve ploidi','Mayoz, kromozom sayısını yarıya indirir; eşlenmiş her kromozom iki kardeş kromatitten oluşur. Örnek: 2n = 6 olan bir canlının gametinde 3 kromozom bulunur')],
- oadim(T15,n15)+[A('Sonuç','Üç yargı da doğrudur.','I, II ve III')],'Mayoz II’yi tamamlayan hücrelerde kromozomlar tek kromatitlidir; zigotta sayı yeniden 2n olur.',sekil=None,dogru=d15,yan=y15,sira=s15)
+ oadim(T15,n15)+[A('Sonuç','Üç yargı da doğrudur.','I, II ve III')],'Her aşamada kromozom ve kromatit sayısını ayrı ayrı yaz.',sekil=None,dogru=d15,yan=y15,sira=s15)
 # ================= 16 · ilk evreler şeması · orta · olumsuz · şekilli =================
 AN16=['zig','iki','dort','mor','bla']
 N16={'zig':3,'iki':1,'dort':5,'mor':2,'bla':4}
@@ -549,7 +549,7 @@ Q('ur-dollenme','orta','Zigottan blastosiste yarılma evreleri','Yarılma (segme
   A('Yarılmayı yorumla','Hücreler mitozla bölünür; kromozom sayısı değişmez, hücre boyutu küçülür; çevredeki koruyucu katmanın boyutu aynı kalır.','mitoz, büyüme yok'),
   A('İfadeleri sına','Dört ifade bu bilgilerle uyumludur; toplam hacmin belirgin arttığını söyleyen ifade, şekildeki sabit boyuta ve yarılma özelliğine aykırıdır.','1 ifade çelişir'),
   A('Sonuç','Toplam hacmin belirgin biçimde arttığını söyleyen ifade yanlıştır.','yanlış ifade: hacim artışı')],
- 'Yarılmada hücre sayısı artar, toplam hacim yaklaşık aynı kalır.',sekil=sk16,dogru=D16,yan=Y16,sira=yer(D16,[y[0] for y in Y16],'A'))
+ 'Çevredeki katman ve toplam boyut şekilde nasıl değişiyor, bak.',sekil=sk16,dogru=D16,yan=Y16,sira=yer(D16,[y[0] for y in Y16],'A'))
 # ================= 17 · embriyonik tabakalar tablosu · orta · olumsuz · tablo =================
 TAB17={'X':['Epidermis','Beyin','Göz merceği','Saç ve tırnak'],'Y':['Kalp kası','Kemik','Böbrek','Pankreas'],'Z':['Karaciğer','Akciğer epiteli','Tiroit bezi','Mide epiteli']}
 KOKEN={'Epidermis':'ekto','Beyin':'ekto','Göz merceği':'ekto','Saç ve tırnak':'ekto','Kalp kası':'meso','Kemik':'meso','Böbrek':'meso','Pankreas':'endo','Karaciğer':'endo','Akciğer epiteli':'endo','Tiroit bezi':'endo','Mide epiteli':'endo'}
@@ -575,12 +575,12 @@ n18=['amniyon boşluğundaki sıvı, embriyoyu mekanik darbelere karşı korur',
      'plasentada anne ile embriyonun kanları birbirine karışmaz; madde alışverişi, kılcal damar duvarları arasında difüzyonla gerçekleşir',
      'göbek kordonundaki iki atardamar, embriyodan plasentaya oksijence fakir kan taşır; plasentadan embriyoya oksijence zengin kanı kordondaki toplardamar getirir']
 d18,y18,s18=onc(T18,n18,'A')
-Q('ur-tabaka','zor','Plasenta, göbek kordonu ve embriyo zarları','Amniyon sıvısı korur; plasentada kanlar karışmaz, madde geçişi difüzyonla olur; kordonda 2 atardamar embriyodan plasentaya, 1 toplardamar plasentadan embriyoya kan taşır.','Anne ve embriyo kanının plasentada karıştığını sanmak; kordon damarlarında kanın yönünü ve oksijen durumunu ters yorumlamak.','öncüllü',
+Q('ur-tabaka','orta','Plasenta, göbek kordonu ve embriyo zarları','Amniyon sıvısı korur; plasentada kanlar karışmaz, madde geçişi difüzyonla olur; kordonda 2 atardamar embriyodan plasentaya, 1 toplardamar plasentadan embriyoya kan taşır.','Anne ve embriyo kanının plasentada karıştığını sanmak; kordon damarlarında kanın yönünü ve oksijen durumunu ters yorumlamak.','öncüllü',
  'İnsan embriyosu uterus içinde gelişirken amniyon zarıyla çevrilidir ve göbek kordonuyla plasentaya bağlıdır. Plasenta, embriyonun koryon zarından köken alan kısmı ile annenin endometriyumundan oluşur; embriyonun beslenmesi, solunumu ve boşaltımı plasenta aracılığıyla anneyle gerçekleştirilir.\n'
  +etiket_oncul('Amniyon boşluğundaki sıvı, embriyoyu darbelere karşı korur.','Plasentada anne ve embriyonun kanları birbirine karışarak madde alışverişi sağlanır.','Göbek kordonundaki atardamarlar, plasentadan embriyoya oksijence zengin kan taşır.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
- 'Plasenta ve embriyo zarlarına ilişkin doğru yargılar.','Her yargıda hangi yapıdan söz edildiğini belirle; kordon damarlarında kanın yönünü “atardamar kalpten uzaklaşan, toplardamar kalbe giden damardır” kuralıyla düşün.',
+ 'Plasenta ve embriyo zarlarına ilişkin doğru yargılar.','Her yargıda hangi yapıdan söz edildiğini belirle.',
  [B('Plasenta ve kordon','Plasenta, gebelik süresince oluşan geçici bir organdır. Göbek kordonu, embriyoyu plasentaya bağlar ve içinden damarlar geçer. Örnek: Atardamar, kanı kalpten uzaklaştıran damardır')],
- oadim(T18,n18)+[A('Sonuç','Doğru yargı yalnız I’dir.','Yalnız I')],'Plasentada kanlar karışmaz; kordondaki atardamar embriyodan plasentaya gider.',sekil=None,dogru=d18,yan=y18,sira=s18)
+ oadim(T18,n18)+[A('Sonuç','Doğru yargı yalnız I’dir.','Yalnız I')],'Her yargıdaki yapıyı ve görevini ayrı ayrı değerlendir.',sekil=None,dogru=d18,yan=y18,sira=s18)
 # ================= 19 · ikiz oluşumu şeması · orta · şekilli · öncüllü =================
 T19=[True,True,False]
 n19=['K çiftinde bebekler tek zigottan geliştiğinden, mutasyon olmadıkça aynı genotipe sahiptir',
@@ -604,13 +604,13 @@ assert len({w1,w2,w3,tek,w5})==5
 sk20=sek_soyagaci()
 Q('ur-ikiz','zor','İkizlerde kalıtım olasılığı','Çocuğu albino olan sağlıklı ebeveynler taşıyıcıdır (Aa × Aa); cinsiyetleri farklı ikizler çift yumurta ikizidir ve fenotipleri birbirinden bağımsız belirlenir.','Cinsiyeti farklı ikizleri tek yumurta ikizi sanmak ya da olasılıkları çarpmadan tek çocuk olasılığını vermek.','şekilli',
  'Albinizm, otozomal çekinik bir genle (a) taşınan kalıtsal bir durumdur. Şekilde, fenotipi normal olan bir çiftin albino kızı ve daha sonra doğan X ve Y ikizleri gösterilmiştir. İkizlerin biri erkek, diğeri kızdır; ikizlerin albino olup olmadığı belirtilmemiştir.\nBuna göre, X ve Y ikizlerinden yalnız birinin albino olma olasılığı kaçtır?',
- 'İkizlerden yalnız birinin albino olma olasılığı.','Önce anne ve babanın genotipini, sonra ikizlerin tek yumurta mı çift yumurta mı olduğunu cinsiyetlerinden çıkar.',
+ 'İkizlerden yalnız birinin albino olma olasılığı.','İkizlerin kaç zigottan oluştuğunu belirle.',
  [B('Çekinik kalıtım ve ikizler','Çekinik bir özelliği taşıyan hastalıklı çocuk doğuran sağlıklı ebeveynler taşıyıcıdır. Farklı zigotlardan gelişen kardeşlerin genotipleri birbirinden bağımsız oluşur. Örnek: Bir madeni parayı iki kez atınca sonuçlar birbirini etkilemez')],
  [A('Ebeveyn genotipi','Fenotipi normal ebeveynlerin albino çocuğu olduğundan her ikisi de taşıyıcıdır.','Aa × Aa'),
   A('Tek çocuk olasılığı','Aa × Aa çaprazlamasında aa olasılığı 1/4, normal fenotip olasılığı 3/4’tür.','P(aa) = 1/4'),
   A('İkizin türü','Biri erkek, biri kız olduğundan ikizler iki ayrı zigottan oluşmuştur; fenotipler bağımsızdır.','çift yumurta ikizi'),
   A('Yalnız biri albino','X albino Y normal ya da X normal Y albino olabilir.',f'2 × 1/4 × 3/4 = 3/8')],
- 'Cinsiyeti farklı ikizler bağımsız iki çocuk gibi ele alınır.',sekil=sk20,dogru='3/8',
+ 'Ebeveyn genotipini ve ikizlerin zigot sayısını çıkar.',sekil=sk20,dogru='3/8',
  yan=[('1/16','İkizlerin her ikisinin de albino olma olasılığını (1/4 × 1/4) bulmuş; oysa soru yalnız birinin albino olmasını sormaktadır.','dikkat'),
       ('3/16','Yalnız X’in albino, Y’nin normal olma olasılığını (1/4 × 3/4) bulmuş; Y’nin albino, X’in normal olduğu durumu da saymamıştır.','dikkat'),
       ('1/4','İkizleri tek bir çocuk gibi ele alıp bir çocuğun albino olma olasılığını vermiş.','bilgi'),

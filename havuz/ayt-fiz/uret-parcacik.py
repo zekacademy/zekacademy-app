@@ -68,7 +68,7 @@ q('0001',tipId='pc-kuark',tip=TIPLER['pc-kuark'],z='kolay',alt='Kuarklar',kaz='H
      A('Topla','Payları cebirsel olarak toplayıp sadeleştir.','Q = (2 − 2)e/3 = 0')],
  puf='Hadronun yükü = Σ(kuark yükleri); her kuarkı sayıdaki payıyla ayrı ayrı yazmak hata payını azaltır.')
 # ===== 02 kolay · sınıflandırma şeması
-card(2,'Parçacığı şemada yerleştirme','Foton kuvvet taşıyıcısıdır; müon leptondur (güçlü kuvvet hissetmez); aşağı kuark güçlü kuvvetten etkilenir.','Kuarkları da güçlü kuvvetten etkilenmeyen grupta saymak; fotonu madde parçacığı sanmak.','kolay','şekilli',3,'pc-sinif','sınıflandırma şemasına üç parçacık yerleştirme')
+card(2,'Parçacığı şemada yerleştirme','Madde/kuvvet taşıyıcısı ayrımı ve güçlü kuvvet etkileşimi, parçacıkları şemada yerleştirmenin ölçütüdür.','Kuarkları da güçlü kuvvetten etkilenmeyen grupta saymak; fotonu madde parçacığı sanmak.','kolay','şekilli',3,'pc-sinif','sınıflandırma şemasına üç parçacık yerleştirme')
 o=[ '\\node[box] (T) at (0,3.1) {Temel parçacıklar};',
  '\\node[box] (K) at (-2.2,1.5) {\\textbf{K}\\\\Madde parçacıkları};','\\node[box] (L) at (2.4,1.5) {\\textbf{L}\\\\Kuvvet taşıyıcıları};',
  '\\node[box] (M) at (-3.7,-.3) {\\textbf{M}\\\\Güçlü kuvvetten\\\\etkilenenler};','\\node[box] (N) at (-.6,-.3) {\\textbf{N}\\\\Güçlü kuvvetten\\\\etkilenmeyenler};',
@@ -84,20 +84,20 @@ q('0002',tipId='pc-sinif',tip=TIPLER['pc-sinif'],z='kolay',alt='Standart Model',
  sira=['K – N – M','L – M – M','L – M – N','L – N – M','L – N – N'],istenen='Parçacıkların yerleştirileceği kutular.',
  ip=['Önce her parçacığın madde parçacığı mı kuvvet taşıyıcısı mı olduğuna, sonra güçlü kuvvetten etkilenip etkilenmediğine karar ver.'],bilgi=[SN],
  ad=[A('Foton','Elektromanyetik kuvvetin aracı parçacığıdır.','foton → L'),A('Müon','Leptondur; güçlü kuvvet hissetmez.','müon → N'),A('Aşağı kuark','Kuarklar güçlü kuvvetle etkileşir.','aşağı kuark → M')],
- puf='Önce madde/kuvvet ayrımını yap; madde parçacıklarında kuark mı lepton mu diye güçlü kuvvete bak.')
+ puf='Önce her parçacığın hangi geniş gruba girdiğine, sonra alt gruba karar ver; şemadaki kutu tanımlarını ölçüt al.')
 # ===== 03 kolay · kuvvet–aracı
-card(3,'Kuvvet ve aracı parçacık eşleştirmesi','Güçlü kuvvet gluonla, elektromanyetik kuvvet fotonla, zayıf kuvvet W ve Z bozonlarıyla taşınır.','Gluon ile fotonu karıştırmak; Higgs’i kuvvet taşıyıcısı saymak.','kolay','düz',2,'pc-kuvvet','kuvvet–aracı eşleştirme')
+card(3,'Kuvvet ve aracı parçacık eşleştirmesi','Her temel kuvvetin kendi aracı parçacığı vardır; Higgs kuvvet taşıyıcısı değildir.','Gluon ile fotonu karıştırmak; Higgs’i kuvvet taşıyıcısı saymak.','kolay','düz',2,'pc-kuvvet','kuvvet–aracı eşleştirme')
 q('0003',tipId='pc-kuvvet',tip=TIPLER['pc-kuvvet'],z='kolay',alt='Temel Kuvvetler',kaz='Temel kuvvetleri aracı parçacıklarıyla eşleştirir.',kalip='düz',
  metin='Standart modelde temel kuvvetler, aracı parçacıkların kuvvetin etkidiği parçacıklar arasında değiş tokuş edilmesiyle açıklanır.\nBuna göre aşağıdaki kuvvet – aracı parçacık eşleştirmelerinden hangisi doğrudur?',
  sekil=None,dogru='Güçlü kuvvet – gluon',yan=[('Elektromanyetik kuvvet – gluon','Gluonu elektromanyetik kuvvetin taşıyıcısı sanmış; elektromanyetik kuvvet foton değiş tokuşuyla açıklanır.','bilgi'),
   ('Zayıf kuvvet – foton','Zayıf kuvveti fotonla ilişkilendirmiş; zayıf kuvvet W ve Z bozonlarıyla taşınır.','bilgi'),('Kütle çekim kuvveti – W bozonu','Kütle çekimini W bozonuyla eşleştirmiş; W bozonu zayıf kuvvetin aracısıdır.','bilgi'),
   ('Güçlü kuvvet – Higgs bozonu','Higgs bozonunu güçlü kuvvetin taşıyıcısı saymış; Higgs bozonu parçacıklara kütle kazandırma ile ilgilidir.','bilgi')],
  sira=['Güçlü kuvvet – gluon','Elektromanyetik kuvvet – gluon','Zayıf kuvvet – foton','Kütle çekim kuvveti – W bozonu','Güçlü kuvvet – Higgs bozonu'],istenen='Doğru kuvvet – aracı parçacık eşleştirmesi.',
- ip=['Kuarkları hadron içinde bir arada tutan kuvvetin hangi aracı parçacıkla taşındığını düşün.'],bilgi=[KV],
+ ip=['Her seçenekte kuvvetin etkidiği parçacıkları ve aracı parçacığın rolünü ayrı ayrı sına.'],bilgi=[KV],
  ad=[A('Aracıları hatırla','Her kuvvetin ayrı bir aracı parçacığı vardır.','güçlü: gluon; elektromanyetik: foton; zayıf: W, Z'),A('Higgs bozonunu ayır','Higgs bozonu bir kuvvet taşıyıcısı değil, kütle kazandırma mekanizmasının parçacığıdır.','Higgs → kuvvet taşıyıcısı değil'),A('Seçenekleri ele','Yalnız bir eşleşme bu listeyle uyuşur.','Güçlü kuvvet – gluon')],
- puf='Gluon = güçlü, foton = elektromanyetik, W/Z = zayıf; Higgs kuvvet taşıyıcısı değil, kütle kazandıran alanın bozonudur.')
+ puf='Her temel kuvvetin kendi aracı parçacığı vardır; Higgs kuvvet taşıyıcısı değildir.')
 # ===== 04 orta · kartlar öncüllü
-card(4,'Yük ve kuark sayısından sınıf belirleme','Üç kuarklı parçacık baryon, kuark–karşıt kuark çifti mezon, kuarksız yüklü parçacık lepton olabilir.','İki kuarklı parçacığı lepton saymak.','orta','öncüllü',3,'pc-kuark','yük ve kuark sayısı verilen üç parçacığın sınıfı')
+card(4,'Yük ve kuark sayısından sınıf belirleme','Kuark sayısı ve yük, parçacığın hangi sınıfta olabileceğini sınırlar.','İki kuarklı parçacığı lepton saymak.','orta','öncüllü',3,'pc-kuark','yük ve kuark sayısı verilen üç parçacığın sınıfı')
 def kart_ciz(x,adi,yuk,nk):
     s=[f'\\node[box,minimum width=2.7cm,minimum height=2.9cm] at ({x},0) {{}};',f'\\node at ({x},1.15) {{\\textbf{{{adi}}}}};']
     if nk==0: s.append(f'\\node[font=\\scriptsize] at ({x},.2) {{kuark yok}};')
@@ -113,7 +113,7 @@ q('0004',tipId='pc-kuark',tip=TIPLER['pc-kuark'],z='orta',alt='Hadron ve Lepton'
  sekil=SK,istenen='Doğru yargılar.',
  ip=['Üç kuarklı, iki kuarklı ve kuarksız parçacıkların hangi sınıflara girdiğini ayrı ayrı düşün.'],bilgi=[KU,SN],
  ad=[A('I. yargı','Üç kuarktan oluşan parçacık baryondur.','3 kuark → baryon → I doğru'),A('II. yargı','Yapısında kuark bulunan parçacık hadrondur, lepton olamaz.','2 kuark → mezon (hadron) → II yanlış'),A('III. yargı','Yüklü ve kuarksız parçacık elektron olabilir.','yük −e, kuark yok → III doğru')],
- puf='Kuark içeren parçacık hadrondur (üç kuark: baryon, kuark–karşıt kuark: mezon); kuark içermeyen madde parçacığı leptondur.',
+ puf='Kuark sayısı ve yük, parçacığın sınıfını sınırlar; her öncülde hangi sınıfın olanaklı olduğunu ayrı ayrı sına.',
  **onc([True,False,True],['üç kuarklı parçacık baryon olabilir','kuark içeren parçacık hadrondur ve lepton olamaz','yük −e olan kuarksız parçacık elektron olabilir'],4))
 # ===== 05 zor · nötron bozunumu
 card(5,'Kuark düzeyinde nötron bozunumu','d → u dönüşümünde W bozonu −e yükü taşır; W bozonu bozunurken yük ve lepton sayısı toplamı korunur.','Lepton sayısını unutup nötrino ile karşıt nötrinoyu karıştırmak.','zor','şekilli',4,'pc-tepkime','nötron bozunumu diyagramında X ve Y')
@@ -125,14 +125,14 @@ o=['\\draw[thick,-{Stealth}] (0,2) -- (1.9,2); \\draw[thick] (1.9,2) -- (4,2) no
  '\\draw[thick,-{Stealth}] (0,1) -- (1.9,1); \\draw[thick] (1.9,1) -- (4,1) node[right] {d};','\\node[left] at (0,1) {d};',
  '\\draw[thick,-{Stealth}] (0,0) -- (.9,0); \\draw[thick] (.9,0) -- (1.6,0) coordinate (V1); \\draw[thick,-{Stealth}] (1.6,0) -- (3.4,0); \\draw[thick] (3.4,0) -- (4,0) node[right] {u};','\\node[left] at (0,0) {d};',
  '\\draw[wav] (V1) -- (2.5,-1.1) coordinate (V2);','\\node[right,font=\\small] at (2.05,-.42) {W};',
- '\\draw[thick,-{Stealth}] (V2) -- (3.3,-.55); \\draw[thick] (3.3,-.55) -- (4,-.55) node[right] {X};','\\draw[thick,-{Stealth}] (V2) -- (3.3,-1.65); \\draw[thick] (3.3,-1.65) -- (4,-1.65) node[right] {Y};',
+ '\\draw[thick] (V2) -- (4,-.55) node[right] {X};','\\draw[thick] (V2) -- (4,-1.65) node[right] {Y};',
  '\\node[font=\\small] at (-1.1,1) {nötron};','\\node[font=\\small] at (5.2,1) {proton};',
  '\\draw[thin,gray] (4.55,2.3) -- (4.65,2.3) -- (4.65,-.3) -- (4.55,-.3);']
 SK=tikz(o)
 opt5=[('elektron','karşıt elektron nötrinosu'),('pozitron','elektron nötrinosu'),('elektron','elektron nötrinosu'),('elektron','foton'),('elektron','pozitron')]
 fmt=lambda a:f'X: {a[0]}, Y: {a[1]}'
 q('0005',tipId='pc-tepkime',tip=TIPLER['pc-tepkime'],z='zor',alt='Beta Bozunumu',kaz='Zayıf etkileşimde yük ve lepton sayısı korunumuyla ürün parçacıkları belirler.',kalip='şekilli',
- metin='Şekilde, bir nötronun kuark düzeyinde bozunması gösterilmiştir. Nötron içindeki aşağı kuarklardan biri yukarı kuarka dönüşürken W aracı bozonunu yayınlamakta, W bozonu da hemen X ve Y parçacıklarına bozunmaktadır. Bozunmada toplam yük ve toplam lepton sayısı korunur; kuarkların yükleri +2e/3 ve −e/3’tür.\nBuna göre X ve Y parçacıkları aşağıdakilerden hangisidir?',
+ metin='Şekilde, bir nötronun kuark düzeyinde bozunması gösterilmiştir. Nötron içindeki aşağı kuarklardan biri yukarı kuarka dönüşürken W aracı bozonunu yayınlamakta, W bozonu da hemen X ve Y parçacıklarına bozunmaktadır. Bozunmada toplam yük ve toplam lepton sayısı korunur; kuarkların yükleri +2e/3 ve −e/3’tür. X ve Y çizgilerinde ok yoktur; çizgiler parçacık/karşıt parçacık ayrımını göstermez.\nBuna göre X ve Y parçacıkları aşağıdakilerden hangisidir?',
  sekil=SK,dogru=fmt(opt5[0]),yan=[(fmt(opt5[1]),'W bozonunun yükünü +e almış; oysa d → u dönüşümünde yük −e/3 → +2e/3 olduğundan W bozonu −e yüklüdür.','bilgi'),
   (fmt(opt5[2]),'Yükü doğru bulmuş ama lepton sayısını korumamış; elektron ve nötrino birlikte +2 lepton sayısı getirir, W bozonunun lepton sayısı sıfırdır.','dikkat'),
   (fmt(opt5[3]),'Yükü elektronla sağlamış ama lepton sayısını unutmuş; elektronun +1 lepton sayısını dengeleyen bir karşıt lepton gerekir.','dikkat'),
@@ -157,10 +157,10 @@ q('0006',tipId='pc-karsit',tip=TIPLER['pc-karsit'],z='orta',alt='Yok Olma',kaz='
  istenen='Her bir fotonun enerjisi (MeV).',
  ip=['Yok olmadan önceki toplam enerjiyi bul; iki fotonun enerjisi eşit olduğundan bu enerjiyi nasıl bölüştüklerini düşün.'],bilgi=[KS],
  ad=[A('Toplam enerji','Parçacıklar durgun olduğundan yalnız kütle enerjileri vardır.','E = 0,51 + 0,51 = 1,02 MeV'),A('Enerji korunumu','Yok olmadan önceki toplam enerji iki fotonun enerjileri toplamına eşittir.','Eγ₁ + Eγ₂ = 1,02 MeV'),A('Paylaştır','Fotonların enerjileri eşittir.','Eγ = 1,02 ÷ 2 = 0,51 MeV')],
- puf='Durgun çift yok olurken toplam enerji = 2mc²; her bir foton bunun yarısını, yani bir parçacığın mc² değerini taşır.')
+ puf='Yok olmadan önceki toplam enerjiyi bul, fotonlar arasındaki paylaşımı simetriden çıkar.')
 assert Fr(255,1000)==E1/2
 # ===== 07 orta · evren sıralama
-card(7,'Evrenin evrelerinin sırası','Plazma → hadronlar → helyum çekirdekleri → nötr atomlar → yıldızlar sırası, sıcaklığın düşmesiyle belirlenir.','Atom oluşumunu çekirdek oluşumundan önce sanmak.','orta','şekilli',3,'pc-evren','beş olayın zaman sırası')
+card(7,'Evrenin evrelerinin sırası','Evren soğudukça her yapı belirli bir sıcaklık eşiğinden sonra kararlı kalır; olayların sırası bu eşiklerle belirlenir.','Atom oluşumunu çekirdek oluşumundan önce sanmak.','orta','şekilli',3,'pc-evren','beş olayın zaman sırası')
 EV7={'K':'Proton ve nötronların birleşerek helyum çekirdeklerini oluşturması','L':'Kuarkların bir araya gelerek proton ve nötronları oluşturması','M':'Elektronların çekirdeklere bağlanarak nötr atomların oluşması','N':'Gaz bulutlarının çökmesiyle ilk yıldızların oluşması','P':'Evrenin kuark ve gluonlardan oluşan çok sıcak bir plazma hâlinde bulunması'}
 o=[]; pos7={'K':(0,0),'L':(4.2,0),'M':(0,-1.9),'N':(4.2,-1.9),'P':(2.1,-3.8)}
 import textwrap
@@ -177,7 +177,7 @@ q('0007',tipId='pc-evren',tip=TIPLER['pc-evren'],z='orta',alt='Evrenin Zaman Çi
  sira=['K – P – L – M – N','L – P – K – M – N','P – L – K – M – N','P – L – K – N – M','P – L – M – K – N'],istenen='Olayların zaman sırası.',
  ip=['Evren genişleyip soğudukça hangi yapıların kararlı kalabildiğini enerjiye göre sırala.'],bilgi=[EV],
  ad=[A('Plazma','Sıcaklık çok yüksekken kuark ve gluonlar serbesttir.','P ilk'),A('Hadronlar ve çekirdekler','Soğuyunca kuarklar proton–nötron, sonra çekirdek oluşturur.','L → K'),A('Atomlar ve yıldızlar','Ancak çok soğuyunca elektronlar bağlanır; gaz çöker.','M → N')],
- puf='Sıcaklık düştükçe önce kuarklar, sonra çekirdekler, sonra atomlar, en son yıldızlar bir araya gelir.')
+ puf='Evren soğudukça hangi yapı hangi sıcaklık eşiğinden sonra kararlı kalır diye sor.')
 # ===== 08 orta · kırmızıya kayma
 card(8,'Kırmızıya kayma ve Hubble yasası','Dalga boyu artışı uzaklaşmayı gösterir; v = z × c ve v ∝ d ile hız oranı uzaklık oranına eşittir.','Dalga boyunun kısalmasını uzaklaşma sanmak; kaymayı yüzde olarak yanlış okumak.','zor','şekilli',3,'pc-kanit','üç gökadanın spektral çizgisi')
 lab=600; gal={'A':612,'B':624,'C':648}
@@ -192,16 +192,16 @@ for nm_,l,y in rows:
 o.append(f'\\draw[thin,-{{Stealth}}] ({x0(580):.2f},-4.65) -- ({x0(680):.2f},-4.65) node[right,font=\\footnotesize] {{$\\lambda$}};')
 SK=tikz(o)
 truth8=[True,True,False]
-assert 100*Fr(gal['B']-lab,lab)==4
+assert Fr(gal['B']-lab,lab)*3*10**5/60==200
 q('0008',tipId='pc-kanit',tip=TIPLER['pc-kanit'],z='zor',alt='Kırmızıya Kayma',kaz='Gökada spektrumlarındaki kaymadan uzaklaşma hızını ve göreli uzaklığı yorumlar.',kalip='öncüllü',
- metin='Laboratuvarda dalga boyu 600 nm ölçülen bir spektral çizgi, A, B ve C gökadalarının spektrumlarında şekildeki dalga boylarında gözlenmiştir. Gökadaların hızları ışık hızından çok küçüktür ve Hubble yasası (hız uzaklıkla doğru orantılı) geçerlidir.\nBuna göre,\nI. A, B ve C gökadaları Dünya’dan uzaklaşmaktadır.\nII. C gökadası, A gökadasından 4 kat daha uzaktadır.\nIII. B gökadasının uzaklaşma hızı, ışık hızının %2’sidir.\nyargılarından hangileri doğrudur?',
+ metin='Laboratuvarda dalga boyu 600 nm ölçülen bir spektral çizgi, A, B ve C gökadalarının spektrumlarında şekildeki dalga boylarında gözlenmiştir. Gökadaların hızları ışık hızından çok küçüktür ve Hubble yasası (hız uzaklıkla doğru orantılı) geçerlidir.\nBuna göre,\nI. A, B ve C gökadaları Dünya’dan uzaklaşmaktadır.\nII. C gökadası, A gökadasından 4 kat daha uzaktadır.\nIII. Hubble sabiti 60 km/s/Mpc ve ışık hızı 3 × 10⁵ km/s alınırsa B gökadası Dünya’dan yaklaşık 100 Mpc uzaktadır.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Doğru yargılar.',
  ip=['Her gökada için dalga boyundaki göreli değişimi bul; bu değişimin hız ve uzaklıkla ilişkisini düşün.'],bilgi=[HB],
- ad=[A('Kayma yönü','Gözlenen dalga boyları 600 nm’den büyüktür.','kırmızıya kayma → uzaklaşma → I doğru'),A('Uzaklık oranı','Hız kaymayla, uzaklık da hızla orantılıdır.','dC ÷ dA = 48 ÷ 12 = 4 → II doğru'),A('B’nin hızı','Hız, ışık hızının kayma oranı kadar kesridir.','Δλ ÷ λ₀ = 24 ÷ 600 = %4 → III yanlış')],
- puf='Δλ ÷ λ₀ oranı v ÷ c’ye eşittir; uzaklık oranı da hız oranı kadardır.',
- **onc(truth8,['dalga boyları artmıştır, yani gökadalar uzaklaşmaktadır','hız (dolayısıyla uzaklık) kayma miktarıyla orantılıdır, oran 48 ÷ 12 = 4’tür','B’nin kayma oranı 24 ÷ 600 = %4’tür'],3))
+ ad=[A('Kayma yönü','Gözlenen dalga boyları 600 nm’den büyüktür.','kırmızıya kayma → uzaklaşma → I doğru'),A('Uzaklık oranı','Hız kaymayla, uzaklık da hızla orantılıdır.','dC ÷ dA = 48 ÷ 12 = 4 → II doğru'),A('B’nin uzaklığı','Hız, ışık hızının kayma oranı kadardır; uzaklık hızın H’ye bölümüdür.','v = 0,04 × 3 × 10⁵ = 12000 km/s; d = 12000 ÷ 60 = 200 Mpc → III yanlış')],
+ puf='Δλ ÷ λ₀ oranı v ÷ c’ye eşittir; hızdan uzaklığa Hubble yasasıyla geçilir.',
+ **onc(truth8,['dalga boyları artmıştır, yani gökadalar uzaklaşmaktadır','hız (dolayısıyla uzaklık) kayma miktarıyla orantılıdır, oran 48 ÷ 12 = 4’tür','B’nin hızı 0,04 × 3 × 10⁵ = 12000 km/s’dir ve uzaklığı 12000 ÷ 60 = 200 Mpc’tir'],3))
 # ===== 09 orta · nükleosentez oranı
-card(9,'Hidrojen/helyum çekirdek sayısı oranı','Kütle yüzdesini çekirdek kütlesine bölerek sayıyla orantılı değer bulunur.','Kütle oranını sayı oranı sanmak.','orta','grafik',3,'pc-nukleo','kütle yüzdelerinden sayı oranı')
+card(9,'Hidrojen/helyum çekirdek sayısı oranı','Yüzdeler sayıyı değil kütleyi verir; sayıya geçmek için çekirdek başına düşen kütle gerekir.','Kütle oranını sayı oranı sanmak.','orta','grafik',3,'pc-nukleo','kütle yüzdelerinden sayı oranı')
 mH,mHe=75,25; oran=Fr(mH,1)/Fr(mHe,4); assert oran==12
 assert Fr(mH,mHe)==3 and Fr(mH,4)/Fr(mHe,1)==Fr(3,4) and Fr(mH,1)/Fr(mHe,2)==6 and Fr(mH,mHe)*4*4==48
 o=['\\node[font=\\small] at (4,1.1) {Kütlece bolluk};',
@@ -213,26 +213,26 @@ q('0009',tipId='pc-nukleo',tip=TIPLER['pc-nukleo'],z='orta',alt='Nükleosentez',
  metin='Büyük Patlama’dan birkaç dakika sonra gerçekleşen çekirdek oluşumu sonunda, evrendeki maddenin kütlece bolluğu şekildeki gibi hidrojen ve helyum çekirdeklerinden oluşmaktadır. Bir hidrojen çekirdeğinin kütlesi 1 birim, bir helyum çekirdeğinin kütlesi 4 birim alınacaktır.\nBuna göre hidrojen çekirdeği sayısının helyum çekirdeği sayısına oranı kaçtır?',
  sekil=SK,dogru=12,yan=[(3,'Kütle oranını (75 ÷ 25) çekirdek sayısı oranı olarak yazmış.','bilgi'),(Fr(3,4),'Kütle yüzdelerini çekirdek kütlesiyle ters bölmüş: (75 ÷ 4) ÷ 25 = 0,75.','islem'),(6,'Helyum çekirdeğinin kütlesini 2 birim alarak 75 ÷ (25 ÷ 2) = 6 bulmuş.','islem'),(48,'Kütle oranını iki kez 4 ile çarpmış: 3 × 4 × 4 = 48.','islem')],
  istenen='N(H) ÷ N(He) oranı.',
- ip=['Bir elementin çekirdek sayısı, o elementin toplam kütlesinin tek çekirdeğin kütlesine bölünmesiyle bulunur.'],bilgi=[NK],
+ ip=['Yüzdeler sayı değil kütledir; sayıya geçmek için hangi nicelik gerekir?'],bilgi=[NK],
  ad=[A('Kütleleri oku','Yüzdeler 100 birimlik örnek için kütle gibi alınır.','H: 75 birim, He: 25 birim'),A('Sayıları bul','Sayı = toplam kütle ÷ çekirdek kütlesi.','N(H) = 75 ÷ 1 = 75; N(He) = 25 ÷ 4 = 6,25'),A('Oranla','Hidrojen sayısı helyum sayısına bölünür.','75 ÷ 6,25 = 12')],
- puf='Kütle yüzdesi sayı değildir; her elementin kütlesini çekirdek kütlesine bölüp sonra oranla.')
-# ===== 10 orta · uuu
-card(10,'Yüke göre kuark bileşimi','Üç kuarklı parçacığın yükünden kuark bileşimi bulunur; karşıt kuark yükleri zıttır.','Karşıt kuark yükünü işaretiyle karıştırmak.','orta','şekilli',3,'pc-kuark','yük verilir, kuark bileşimi istenir')
+ puf='Kütle yüzdesi ile sayı aynı şey değildir; sayıya geçmek için çekirdek başına düşen kütleyi kullan.')
+# ===== 10 orta · mezon bileşimi
+card(10,'Yüke göre mezon bileşimi','Mezon bir kuark ve bir karşıt kuarktan oluşur; karşıt kuark yükü zıt işaretlidir.','Karşıt kuark yükünün işaretini karıştırmak.','orta','şekilli',3,'pc-kuark','yük verilir, mezon bileşimi istenir')
 Q4={'u':UK,'d':DK,'ū':-UK,'d̄':-DK}
-bil=lambda s:sum(Q4[k_] for k_ in s.split())
-for s,v in {'u u u':2,'u u d':1,'d d d':-1,'ū ū ū':-2,'d̄ d̄ d̄':1}.items(): assert bil(s)==v,s
+bil=lambda s_:sum(Q4[k_] for k_ in s_.split())
+for s_,v in {'d ū':-1,'u d̄':1,'u ū':0,'d d̄':0,'ū d̄':Fr(-1,3)}.items(): assert bil(s_)==v,s_
 o=['\\filldraw[fill=vurgu!35,thick] (0,0) circle (.55) node {u};','\\node[align=center,font=\\small] at (0,-1.15) {yukarı kuark\\\\yük: $+2e/3$};',
  '\\filldraw[fill=vurgu!10,thick] (3.4,0) circle (.55) node {d};','\\node[align=center,font=\\small] at (3.4,-1.15) {aşağı kuark\\\\yük: $-e/3$};',
  '\\node[align=center,font=\\small] at (7.2,0) {Karşıt kuark: aynı kütle,\\\\zıt yük (örn. $\\bar{\\mathrm{u}}$: $-2e/3$)};']
 SK=tikz(o)
-q('0010',tipId='pc-kuark',tip=TIPLER['pc-kuark'],z='orta',alt='Baryon Yapısı',kaz='Yükü verilen üç kuarklı parçacığın kuark bileşimini belirler.',kalip='şekilli',
- metin='Şekilde bazı kuarkların yükleri ve karşıt kuarkın tanımı verilmiştir. Yapısı yalnızca bu kuarklardan ya da bunların karşıt kuarklarından oluşan, üç parçacıklı bir hadronun elektriksel yükü +2e’dir (e: elektronun yükünün büyüklüğü).\nBuna göre bu hadronun yapısında hangi kuarklar bulunur?',
- sekil=SK,dogru='u u u',yan=[('u u d','Protonun yapısını yazmış; bu bileşimin yükü +2e/3 + 2e/3 − e/3 = +e’dir.','bilgi'),('d d d','Yüklü olduğunu görüp aşağı kuarkları seçmiş; bu bileşimin yükü −e’dir.','dikkat'),
-  ('ū ū ū','Karşıt yukarı kuarkın yük işaretini yanlış almış; bu bileşimin yükü −2e’dir.','dikkat'),('d̄ d̄ d̄','Karşıt aşağı kuarkı seçmiş; yükü +e/3 + e/3 + e/3 = +e olduğundan +2e’yi vermez.','islem')],
- sira=['u u u','u u d','d d d','ū ū ū','d̄ d̄ d̄'],istenen='Hadronun kuark bileşimi.',
- ip=['Her seçenekteki üç kuarkın yük toplamını yaz; karşıt kuarkın yükünün işaretine dikkat et.'],bilgi=[KU],
- ad=[A('Seçenek yüklerini bul','Her kuark için yük toplanır.','uuu: +2e; uud: +e; ddd: −e; ūūū: −2e; d̄d̄d̄: +e'),A('Karşılaştır','Yalnız bir bileşim +2e verir.','u u u'),A('Karşıt kuark kontrolü','Karşıt kuarklar zıt işaretli yük getirir.','ū ū ū: −2e olduğundan elenir')],
- puf='Yük +2e ise üçlü ancak üç yukarı kuarktır; karşıt kuark yüklerini işaretle birlikte hesapla.')
+q('0010',tipId='pc-kuark',tip=TIPLER['pc-kuark'],z='orta',alt='Mezon Yapısı',kaz='Yükü verilen mezonun kuark–karşıt kuark bileşimini belirler.',kalip='şekilli',
+ metin='Şekilde bazı kuarkların yükleri ve karşıt kuarkın tanımı verilmiştir. Bir mezon, yalnızca bu kuarklardan ve bunların karşıt kuarklarından seçilmiş bir kuark ile bir karşıt kuarktan oluşmaktadır ve elektriksel yükü −e’dir (e: elektronun yükünün büyüklüğü).\nBuna göre bu mezonun yapısı aşağıdakilerden hangisidir?',
+ sekil=SK,dogru='d ū',yan=[('u d̄','Karşıt kuark yüklerinin işaretini tersine almış; bu bileşimin yükü +2e/3 + e/3 = +e’dir.','bilgi'),('u ū','Kuark ile karşıtının yüklerinin toplamını −e sanmış; bu bileşimin yükü +2e/3 − 2e/3 = 0’dır.','dikkat'),
+  ('d d̄','Aynı kuark ailesinden çift seçmiş; bu bileşimin yükü −e/3 + e/3 = 0’dır.','dikkat'),('ū d̄','Yapıda iki karşıt kuark seçmiş; mezonda bir kuark bulunmalıdır ve bu bileşimin yükü −2e/3 + e/3 = −e/3’tür.','islem')],
+ sira=['d ū','u d̄','u ū','d d̄','ū d̄'],istenen='Mezonun kuark bileşimi.',
+ ip=['Her seçenekteki kuark ve karşıt kuarkın yüklerini işaretleriyle yazıp toplamlarını karşılaştır.'],bilgi=[KU],
+ ad=[A('Yükleri yaz','Karşıt kuarkın yükü kuarkınkinin tersidir.','u: +2e/3; d: −e/3; ū: −2e/3; d̄: +e/3'),A('Seçenekleri topla','Her bileşimin yükü hesaplanır.','d ū: −e; u d̄: +e; u ū: 0; d d̄: 0; ū d̄: −e/3'),A('Seç','Yalnız bir bileşim −e verir.','d ū')],
+ puf='Her bileşimin yük toplamını karşıt kuark işaretiyle birlikte yaz.')
 # ===== 11 orta · karşıt parçacık tablosu
 card(11,'Parçacık–karşıt parçacık özellikleri','Karşıt parçacık aynı kütleli, zıt yüklü ve zıt baryon/lepton sayılıdır; nötr olması kendisiyle aynı olmasını gerektirmez.','Nötr parçacığın karşıtını kendisi sanmak.','orta','öncüllü',3,'pc-karsit','parçacık–karşıt parçacık çiftleri tablosu')
 tb=[['Elektron','−e','0','+1'],['Pozitron','+e','0','−1'],['Proton','+e','+1','0'],['Antiproton','−e','−1','0'],['Nötron','0','+1','0'],['Antinötron','0','−1','0']]
@@ -243,10 +243,10 @@ q('0011',tipId='pc-karsit',tip=TIPLER['pc-karsit'],z='orta',alt='Karşıt Parça
  sekil=SK,istenen='Doğru yargılar.',
  ip=['Tablodaki işaretlerin parçacıktan karşıt parçacığa geçerken nasıl değiştiğine bak; kütle ve kuark yapısını karşıtlık ilişkisiyle düşün.'],bilgi=[KS,KU],
  ad=[A('I. yargı','Antiprotonun yükü −e olmalıdır; iki yukarı ve bir aşağı kuark +e verir.','antiproton: ū ū d̄ → −e → I yanlış'),A('II. yargı','Karşıt parçacığın kütlesi aynı, yükü zıttır.','m(e⁻) = m(e⁺); yükler −e ve +e → II doğru'),A('III. yargı','Nötr olsa da baryon sayısı zıttır.','+1 ≠ −1 → farklı parçacıklar → III yanlış')],
- puf='Karşıt parçacık: aynı kütle, zıt yük, zıt baryon/lepton sayısı; nötr parçacıkta baryon sayısı farkı yine ayırt eder.',
+ puf='Tablodaki üç niceliğin karşıt parçacıkta nasıl değiştiğini karşılaştır.',
  **onc([False,True,False],['antiprotonun yapısında iki karşıt yukarı kuark ve bir karşıt aşağı kuark bulunur (yük −e)','karşıt parçacığın kütlesi eşit, yükü zıttır','nötronun baryon sayısı +1, antinötronunki −1’dir; ikisi farklı parçacıklardır'],0))
 # ===== 12 orta · şiddet-menzil grafiği
-card(12,'Kuvvetleri şiddet ve menzilden tanıma','Göreli şiddet sırası güçlü > elektromanyetik > zayıf > kütle çekimi; güçlü ve zayıf menzilli kısadır.','Gluon–foton eşleşmesini ters kurmak; zayıf kuvvetin menzilini sonsuz sanmak.','orta','grafik',3,'pc-kuvvet','dört kuvvetin log şiddet–menzil grafiği')
+card(12,'Kuvvetleri şiddet ve menzilden tanıma','Şiddet ve menzil birlikte okunarak her kuvvet tanınır.','Gluon–foton eşleşmesini ters kurmak; zayıf kuvvetin menzilini sonsuz sanmak.','orta','grafik',3,'pc-kuvvet','dört kuvvetin log şiddet–menzil grafiği')
 ls={'K':0,'L':-2,'M':-6,'N':-39}; mz={'K':'$10^{-15}$ m','L':'sonsuz','M':'$10^{-18}$ m','N':'sonsuz'}
 o=['\\draw[thick,-{Stealth}] (0,0) -- (0,-4.5);','\\node[font=\\footnotesize,rotate=90] at (-1.25,-2) {$\\log_{10}$ (göreli şiddet)};','\\draw[thick] (-.05,0) -- (5.2,0);']
 for t in (0,-10,-20,-30,-40): o.append(f'\\draw (0,{t*.1}) -- (-.12,{t*.1}) node[left,font=\\footnotesize] {{${t}$}};')
@@ -258,10 +258,10 @@ SK=tikz(o)
 q('0012',tipId='pc-kuvvet',tip=TIPLER['pc-kuvvet'],z='orta',alt='Kuvvetlerin Karşılaştırılması',kaz='Dört temel kuvveti göreli şiddet ve menzillerine göre ayırt eder.',kalip='grafik',
  metin='Şekilde, dört temel kuvvetin (K, L, M ve N) göreli şiddetlerinin 10 tabanındaki logaritması ve menzilleri gösterilmiştir. Kuvvetlerin hangisinin hangi temel kuvvet olduğu belirtilmemiştir.\nBuna göre,\nI. K kuvvetinin aracı parçacığı fotondur.\nII. M kuvvetinin menzili L kuvvetinin menzilinden büyüktür.\nIII. Gezegenlerin Güneş çevresindeki hareketinden sorumlu kuvvet N’dir.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Doğru yargılar.',
- ip=['Şiddeti ve menzili sıralayarak her harfin hangi temel kuvvete karşılık geldiğini önce belirle.'],bilgi=[KV],
+ ip=['Her harfin şiddetini ve menzilini birlikte okuyup hangi temel kuvvete karşılık geldiğini önce belirle.'],bilgi=[KV],
  ad=[A('Kuvvetleri tanı','En şiddetli ve kısa menzilli K güçlü kuvvettir; menzili sonsuz L elektromanyetik, kısa menzilli M zayıf, en zayıf N kütle çekimidir.','K: güçlü; L: elektromanyetik; M: zayıf; N: kütle çekimi'),
      A('I ve II','Güçlü kuvvetin aracısı gluondur; zayıf kuvvetin menzili kısadır.','K: gluon → I yanlış; M: 10⁻¹⁸ m < sonsuz → II yanlış'),A('III','Yıldız–gezegen sisteminde yüksüz cisimler arasında kütle çekimi etkilidir.','N → III doğru')],
- puf='Şiddet ve menzil birlikte kuvveti tanıtır: güçlü (en şiddetli, kısa), elektromanyetik (sonsuz), zayıf (kısa), kütle çekimi (en zayıf, sonsuz).',
+ puf='Şiddet ve menzili birlikte okuyarak her harfi kuvvetle eşleştir.',
  **onc([False,False,True],['güçlü kuvvetin aracı parçacığı gluondur, foton elektromanyetik kuvvetin taşıyıcısıdır','zayıf kuvvetin menzili kısadır, elektromanyetik kuvvetinki sonsuzdur','gezegenlerin hareketinden kütle çekim kuvveti sorumludur'],1))
 # ===== 13 orta · parçacık–kuvvet tablosu
 card(13,'Parçacıkların etkilendiği kuvvetler','Yüklü leptonlar elektromanyetik ve zayıf, nötrinolar yalnız zayıf; kuark içerenler güçlü kuvvetten de etkilenir.','Yüksüz hadronu güçlü kuvvetten etkilenmez sanmak.','orta','tablo',3,'pc-kuvvet','dört madde parçacığının etkileşimleri')
@@ -286,22 +286,22 @@ q('0014',tipId='pc-kuvvet',tip=TIPLER['pc-kuvvet'],z='orta',alt='Aracı Parçac�
  sekil=SK,istenen='Doğru yargılar.',
  ip=['Elektriksel itmeyi taşıyan aracı parçacığın hangisi olduğunu, yükünü ve menzilini düşün.'],bilgi=[KV],
  ad=[A('X’i belirle','Elektriksel itme elektromanyetik etkileşimdir.','X: foton'),A('Kütle ve yük','Foton kütlesiz ve yüksüzdür.','m = 0 → I doğru; yük = 0 → II yanlış'),A('Menzil','Elektromanyetik kuvvetin menzili sonsuzdur.','III yanlış')],
- puf='Elektriksel etkileşimin aracısı fotondur: kütlesiz, yüksüz, sonsuz menzilli.',
+ puf='Etkileşimin türünü belirleyince aracı parçacığın özelliklerini listele.',
  **onc([True,False,False],['aracı parçacık fotondur ve durgun kütlesi sıfırdır','foton yüksüzdür','elektromanyetik etkileşimin menzili sonsuzdur'],0))
 # ===== 15 zor · çift oluşumu
-card(15,'Çift oluşumunda kinetik enerji','Foton enerjisi önce iki parçacığın kütle enerjisine harcanır, kalan enerji kinetik enerji olarak paylaşılır.','Kütle enerjisini düşmeyi unutmak ya da tek parçacığınkini düşmek.','zor','şekilli',3,'pc-karsit','çift oluşumunda parçacık başına kinetik enerji')
+card(15,'Çift oluşumunda kinetik enerji','Foton enerjisi önce iki parçacığın kütle enerjisine harcanır, kalan enerji kinetik enerji olarak paylaşılır.','Kütle enerjisini düşmeyi unutmak ya da tek parçacığınkini düşmek.','orta','şekilli',3,'pc-karsit','çift oluşumunda parçacık başına kinetik enerji')
 Eph,m0=Fr(202,100),Fr(51,100); Ek=(Eph-2*m0)/2; assert Ek==Fr(1,2)
 assert Eph/2==Fr(101,100) and Eph-2*m0==1 and Eph-m0==Fr(151,100) and Ek/2==Fr(1,4)
 o=['\\foreach \\i in {1,...,3}{\\foreach \\j in {0,...,4}{\\node[gray,font=\\tiny] at (\\i*.95+.1,\\j*.95-1.9) {$\\times$};}}',
  '\\draw[thick,dashed] (-1.1,0) -- (0,0); \\node[above] at (-.7,.05) {$\\gamma$};','\\node[font=\\small,align=center] at (-1.2,.75) {$E=2{,}02$ MeV};',
- '\\draw[very thick,vurgu] (0,0) to[bend left=38] (3.6,2.2); \\node[right] at (3.6,2.2) {$e^+$};','\\draw[very thick,vurgu] (0,0) to[bend right=38] (3.6,-2.2); \\node[right] at (3.6,-2.2) {$e^-$};',
+ '\\draw[very thick,vurgu] (0,0) to[bend left=38] (3.6,2.2); \\node[right] at (3.6,2.2) {$e^-$};','\\draw[very thick,vurgu] (0,0) to[bend right=38] (3.6,-2.2); \\node[right] at (3.6,-2.2) {$e^+$};',
  '\\node[font=\\scriptsize,align=center] at (6.1,0) {her biri için\\\\$mc^2=0{,}51$ MeV\\\\$\\times$: sayfaya dik\\\\içeri manyetik alan};']
 SK=tikz(o)
-q('0015',tipId='pc-karsit',tip=TIPLER['pc-karsit'],z='zor',alt='Çift Oluşumu',kaz='Foton enerjisinden oluşan parçacık–karşıt parçacık çiftinin kinetik enerjisini hesaplar.',kalip='şekilli',
- metin='Şekilde, enerjisi 2,02 MeV olan bir fotonun ağır bir çekirdeğin yakınında bir elektron–pozitron çifti oluşturması ve çiftin manyetik alandaki izleri gösterilmiştir. Çekirdeğin aldığı enerji ihmal edilecektir ve elektron ile pozitron eşit büyüklükte kinetik enerjiyle ayrılmaktadır. Her birinin durgun kütle enerjisi şekilde verilmiştir.\nBuna göre elektronun kinetik enerjisi kaç MeV’dir?',
+q('0015',tipId='pc-karsit',tip=TIPLER['pc-karsit'],z='orta',alt='Çift Oluşumu',kaz='Foton enerjisinden oluşan parçacık–karşıt parçacık çiftinin kinetik enerjisini hesaplar.',kalip='şekilli',
+ metin='Şekilde, enerjisi 2,02 MeV olan bir fotonun ağır bir çekirdeğin yakınında bir elektron–pozitron çifti oluşturması ve çiftin manyetik alandaki izleri gösterilmiştir. Çekirdeğin aldığı enerji ihmal edilecektir ve elektron ile pozitron eşit büyüklükte kinetik enerjiyle ayrılmaktadır. Her birinin durgun kütle enerjisi şekilde verilmiştir.\nBuna göre pozitronun kinetik enerjisi kaç MeV’dir?',
  sekil=SK,dogru=Fr(1,2),yan=[(Fr(1,4),'Kalan kinetik enerjiyi iki kez ikiye bölmüş: 1,00 ÷ 2 ÷ 2 = 0,25.','islem'),(1,'Kalan kinetik enerjiyi (2,02 − 1,02 = 1,00) iki parçacık arasında paylaştırmamış.','dikkat'),
   (Fr(101,100),'Foton enerjisini kütle enerjisi düşmeden ikiye bölmüş: 2,02 ÷ 2 = 1,01.','bilgi'),(Fr(151,100),'Yalnız bir parçacığın kütle enerjisini düşmüş: 2,02 − 0,51 = 1,51.','dikkat')],
- istenen='Elektronun kinetik enerjisi (MeV).',
+ istenen='Pozitronun kinetik enerjisi (MeV).',
  ip=['Foton enerjisinin hangi kısmının yeni parçacıkların varlığına harcandığını, geri kalanın nasıl dağıldığını düşün.'],bilgi=[KS],
  ad=[A('Kütle enerjisi','Çiftin oluşması için iki parçacığın kütle enerjisi gerekir.','2 × 0,51 = 1,02 MeV'),A('Kalan enerji','Foton enerjisinden kütle enerjisi çıkarılır.','2,02 − 1,02 = 1,00 MeV'),A('Paylaştır','İki parçacığın kinetik enerjileri eşittir.','Ek = 1,00 ÷ 2 = 0,50 MeV')],
  puf='Çift oluşumunda E(foton) = 2mc² + Ek(e⁻) + Ek(e⁺); önce kütle enerjisi ayrılır, kalan eşit pay edilir.')
@@ -364,7 +364,7 @@ q('0019',tipId='pc-tepkime',tip=TIPLER['pc-tepkime'],z='orta',alt='Bilinmeyen Ü
  ad=[A('Girenlerin toplamı','Nötron ve nötrinonun değerleri toplanır.','Q = 0; B = +1; L = +1'),A('X için gerekenler','Proton +e, +1, 0 getirir; X bunları tamamlar.','X: Q = −e; B = 0; L = +1'),A('Tabloda ara','Üç değeri birden sağlayan tek parçacık seçilir.','X: elektron')],
  puf='Bilinmeyen ürünü bulmak için sol toplamdan bilinen ürünleri çıkar; çıkan üçlüyü tabloda ara.')
 # ===== 20 zor · sıcaklık ve çift oluşumu
-card(20,'Sıcaklığa göre çift oluşum eşiği','Çift oluşumu için ortalama foton enerjisi iki parçacığın kütle enerjisi toplamına ulaşmalıdır.','Tek parçacığın kütle enerjisini eşik saymak.','zor','tablo',4,'pc-evren','sıcaklık–enerji tablosunda eşik karşılaştırması')
+card(20,'Sıcaklığa göre çift oluşum eşiği','Isıl enerji kT, çiftin durgun kütle enerjileri toplamına ulaştığında çift oluşabilir.','Tek parçacığın kütle enerjisini eşik saymak.','zor','tablo',4,'pc-evren','sıcaklık–enerji tablosunda eşik karşılaştırması')
 Tt=[(14,Fr(8600)),(13,Fr(860)),(12,Fr(86)),(11,Fr(86,10)),(10,Fr(86,100)),(9,Fr(86,1000))]
 me,mp=Fr(51,100),Fr(938)
 def sel(ee,pp): return tuple(e for e,E in Tt if E>=2*ee and E<2*pp) if pp else None
@@ -378,14 +378,14 @@ alt_c=tuple(e for e,E in Tt if E>=me and E<2*mp)
 alt_p=tuple(e for e,E in Tt if E>=2*mp)
 alt_n=tuple(e for e,E in Tt if E<2*me)
 assert alt_e==(14,13,12,11) and alt_c==(13,12,11,10) and alt_p==(14,) and alt_n==(10,9)
-SK=tablo_svg(['Sıcaklık (K)','Ortalama foton enerjisi (MeV)'],[[f'10{sup[e]}',str(E).replace('.',',') if E.denominator==1 else ('%g'%float(E)).replace('.',',')] for e,E in Tt])
+SK=tablo_svg(['Sıcaklık (K)','Isıl enerji kT (MeV)'],[[f'10{sup[e]}',str(E).replace('.',',') if E.denominator==1 else ('%g'%float(E)).replace('.',',')] for e,E in Tt])
 q('0020',tipId='pc-evren',tip=TIPLER['pc-evren'],z='zor',alt='Evrenin İlk Anları',kaz='Evrenin sıcaklığına göre hangi parçacık çiftlerinin oluşabileceğini belirler.',kalip='tablo',
- metin='Büyük Patlama’dan sonra evren soğurken, ışınımdaki fotonların ortalama enerjisinin iki parçacığın durgun kütle enerjileri toplamına ulaşması hâlinde o parçacık–karşıt parçacık çifti oluşabilir. Tabloda evrenin bazı sıcaklıklarındaki ortalama foton enerjisi verilmiştir. Elektronun durgun kütle enerjisi 0,51 MeV, protonunki 938 MeV’dir.\nBuna göre evrenin hangi sıcaklıklarında elektron–pozitron çifti oluşabilirken proton–karşıt proton çifti oluşamaz?',
- sekil=SK,dogru=fs(ans),yan=[(fs(alt_e),'Proton–karşıt proton çifti için eşiği denetlememiş; 10¹⁴ K’de ortalama foton enerjisi 1876 MeV’ten büyüktür ve bu çift de oluşabilir.','dikkat'),(fs(alt_c),'Elektron–pozitron eşiği için yalnız bir elektronun kütle enerjisini (0,51 MeV) almış; çift için 1,02 MeV gerekir.','bilgi'),
-  (fs(alt_p),'Proton–karşıt proton çiftinin oluşabildiği sıcaklığı seçmiş; sorulan, bu çiftin oluşamadığı sıcaklıklardır.','dikkat'),(fs(alt_n),'Foton enerjisi eşiğin altında kalan sıcaklıkları seçmiş; bu sıcaklıklarda elektron–pozitron çifti de oluşamaz.','bilgi')],
+ metin='Büyük Patlama’dan sonra evren soğurken, ışınımın ısıl enerjisi kT’nin (k: Boltzmann sabiti) bir parçacık–karşıt parçacık çiftinin durgun kütle enerjileri toplamına eşit ya da büyük olması hâlinde o çift oluşabilir. Tabloda evrenin bazı sıcaklıklarındaki kT değeri verilmiştir. Elektronun durgun kütle enerjisi 0,51 MeV, protonunki 938 MeV’dir.\nBuna göre evrenin hangi sıcaklıklarında elektron–pozitron çifti oluşabilirken proton–karşıt proton çifti oluşamaz?',
+ sekil=SK,dogru=fs(ans),yan=[(fs(alt_e),'Proton–karşıt proton çifti için eşiği denetlememiş; 10¹⁴ K’de kT değeri 1876 MeV’ten büyüktür ve bu çift de oluşabilir.','dikkat'),(fs(alt_c),'Elektron–pozitron eşiği için yalnız bir elektronun kütle enerjisini (0,51 MeV) almış; çift için 1,02 MeV gerekir.','bilgi'),
+  (fs(alt_p),'Proton–karşıt proton çiftinin oluşabildiği sıcaklığı seçmiş; sorulan, bu çiftin oluşamadığı sıcaklıklardır.','dikkat'),(fs(alt_n),'kT değeri eşiğin altında kalan sıcaklıkları seçmiş; bu sıcaklıklarda elektron–pozitron çifti de oluşamaz.','bilgi')],
  sira=[fs(alt_e),fs(alt_c),fs(alt_p),fs(alt_n),fs(ans)],istenen='İstenen sıcaklıklar.',
  ip=['Her çift için eşik enerjisini iki parçacığın kütle enerjisi toplamı olarak yaz ve tablodaki değerlerle karşılaştır.'],bilgi=[KS,EV],
- ad=[A('Eşikler','Çift oluşumu için iki parçacığın kütle enerjisi gerekir.','e⁻e⁺: 2 × 0,51 = 1,02 MeV; pp̄: 2 × 938 = 1876 MeV'),A('Elektron çifti','Ortalama enerjisi 1,02 MeV veya fazlası olan sıcaklıklar.','10¹⁴, 10¹³, 10¹², 10¹¹ K'),A('Proton çifti oluşamayan','Ortalama enerjisi 1876 MeV’in altında olanlar.','10¹³ K ve altı'),A('Kesişim','Her iki koşulu sağlayan sıcaklıklar.','10¹³, 10¹² ve 10¹¹ K')],
+ ad=[A('Eşikler','Çift oluşumu için iki parçacığın kütle enerjisi gerekir.','e⁻e⁺: 2 × 0,51 = 1,02 MeV; pp̄: 2 × 938 = 1876 MeV'),A('Elektron çifti','kT değeri 1,02 MeV veya fazlası olan sıcaklıklar.','10¹⁴, 10¹³, 10¹², 10¹¹ K'),A('Proton çifti oluşamayan','kT değeri 1876 MeV’in altında olanlar.','10¹³ K ve altı'),A('Kesişim','Her iki koşulu sağlayan sıcaklıklar.','10¹³, 10¹² ve 10¹¹ K')],
  puf='Çift oluşumunda eşik 2mc²’dir; iki eşik arasında kalan sıcaklık aralığını tablodan işaretle.')
 # ===== yaz
 for qq in P.ANA: qq['kardes']=None

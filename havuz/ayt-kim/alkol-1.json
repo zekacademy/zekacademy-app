@@ -183,10 +183,10 @@
    "deger": "CH₃CH₂OH"
   },
   "celdiriciler": {
-   "B": "Bu ifadeyi doğru sanmış; oysa bu molekül polar bağ içermez, yalnız London kuvvetleri etkindir",
-   "C": "Bu ifadeyi doğru sanmış; oysa oksijen atomuna bağlı hidrojen yoktur; oksijen yalnız hidrojen bağı alıcısı olabilir",
-   "D": "Bu ifadeyi doğru sanmış; oysa oksijene bağlı H atomu bulunmaz, bu yüzden saf hâlde molekülleri arasında hidrojen bağı oluşmaz",
-   "E": "Bu ifadeyi doğru sanmış; oysa bu molekül apolardır, yalnız London kuvvetleri etkindir"
+   "B": "Bu ifadeyi doğru sanmış; oysa CH₃CH₂CH₃ yalnız C–H ve C–C bağları içerir, O–H bağı yoktur; yalnız London kuvvetleri etkindir.",
+   "C": "Bu ifadeyi doğru sanmış; oysa CH₃OCH₃’te hidrojenler yalnız karbona bağlıdır; oksijen hidrojen bağı alıcısı olabilir ama saf hâlde verici H yoktur.",
+   "D": "Bu ifadeyi doğru sanmış; oysa CH₃CH₂OCH₃’te O–H bağı yoktur, bu yüzden saf hâlde molekülleri arasında hidrojen bağı oluşmaz.",
+   "E": "Bu ifadeyi doğru sanmış; oysa CH₃CH₂CH₂CH₃ apolardır ve O–H bağı içermez; yalnız London kuvvetleri etkindir."
   },
   "celTur": {
    "B": "bilgi",
@@ -412,18 +412,18 @@
    "A": "Karbon sayısı arttıkça alkol molekülünün su ile yaptığı hidrojen bağı sayısı artar.",
    "B": "Mol kütlesi arttıkça alkollerin suda çözünürlüğü artar.",
    "C": "1-Heptanol, –OH grubu taşımadığı için suyla hidrojen bağı yapamaz.",
-   "D": "Karbon sayısı arttıkça alkol molekülünün apolar hidrokarbon kısmı büyür ve suda çözünürlük azalır.",
+   "D": "Karbon sayısı arttıkça apolar kısım büyür, çözünürlük azalır.",
    "E": "Tablodaki alkollerin tümü suda her oranda çözünür."
   },
   "cevap": {
    "sik": "D",
-   "deger": "Karbon sayısı arttıkça alkol molekülünün apolar hidrokarbon kısmı büyür ve suda çözünürlük azalır."
+   "deger": "Karbon sayısı arttıkça apolar kısım büyür, çözünürlük azalır."
   },
   "celdiriciler": {
-   "A": "Bu ifadeyi doğru sanmış; oysa tablodaki alkollerin her birinde yalnız bir –OH grubu vardır, bu yüzden karbon sayısı hidrojen bağı sayısını artırmaz",
-   "B": "Bu ifadeyi doğru sanmış; oysa tablodaki çözünürlükler mol kütlesi arttıkça azalmaktadır",
-   "C": "Bu ifadeyi doğru sanmış; oysa 1-heptanolün –OH grubu vardır ve suyla hidrojen bağı yapabilir; çözünürlüğü düşük olmasının nedeni uzun apolar kısmıdır",
-   "E": "Bu ifadeyi doğru sanmış; oysa tablodaki çözünürlükler sınırlıdır ve azalmaktadır"
+   "A": "Bu ifadeyi doğru sanmış; oysa tablodaki alkollerin her birinde yalnız bir –OH grubu vardır, bu yüzden karbon sayısı hidrojen bağı sayısını artırmaz.",
+   "B": "Bu ifadeyi doğru sanmış; oysa tablodaki çözünürlükler mol kütlesi arttıkça azalmaktadır.",
+   "C": "Bu ifadeyi doğru sanmış; oysa 1-heptanolün –OH grubu vardır ve suyla hidrojen bağı yapabilir; çözünürlüğü düşük olmasının nedeni uzun apolar kısmıdır.",
+   "E": "Bu ifadeyi doğru sanmış; oysa tablodaki çözünürlükler sınırlıdır ve azalmaktadır."
   },
   "celTur": {
    "A": "bilgi",
@@ -463,7 +463,7 @@
     "islem": "Doğru ifade: apolar kısım büyür"
    }
   ],
-  "puf": "Alkolde zincir uzadıkça polar –OH’nin etkisi azalır, çözünürlük düşer.",
+  "puf": "Tablodaki değişimi, yapıda değişen kısımla ilişkilendir.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKALK-06 (çözünürlük tablosu)",
@@ -755,7 +755,7 @@
    }
   ],
   "ipuclari": [
-   "Eterlerde aynı alkolün iki molekülünün birleşmesini de ayrı bir eter olarak düşün."
+   "Her koşulda hangi moleküllerin birleşip hangilerinin tek başına su kaybettiğini yaz."
   ],
   "adimlar": [
    {
@@ -779,7 +779,7 @@
     "islem": "6 + 2 = 8"
    }
   ],
-  "puf": "n alkolden n(n+1)/2 eter oluşur; metanolden alken oluşmaz.",
+  "puf": "Oluşabilecek tüm ürünleri koşula göre ayrı ayrı listele.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKALK-10 (alkol karışımı)",
@@ -885,25 +885,25 @@
   "siklar": {
    "A": "K",
    "B": "L",
-   "C": "M",
-   "D": "N",
-   "E": "P"
+   "C": "N",
+   "D": "P",
+   "E": "M"
   },
   "cevap": {
-   "sik": "C",
+   "sik": "E",
    "deger": "M"
   },
   "celdiriciler": {
-   "A": "K, –OH taşıyan karbonu iki karbona bağlı olan sekonder alkoldür.",
-   "B": "L, –OH taşıyan karbonu iki karbona bağlı olan sekonder alkoldür.",
-   "D": "N’de –OH’li karbon iki karbona bağlıdır; dallanma sınıfı değiştirmez, sekonder alkoldür.",
-   "E": "P, –OH’li karbonu iki karbona bağlı sekonder alkoldür."
+   "A": "K’de –OH’yi uçtaki karbonda sanıp primer saymış; oysa –OH ortadaki karbondadır ve karbon iki karbona bağlıdır, K sekonderdir.",
+   "B": "3-pentanolde uzun zinciri görüp –OH’li karbona üç karbon bağlı saymış; oysa iki karbona bağlıdır, L sekonderdir.",
+   "C": "N’deki metil dalını –OH’li karbona bağlı sayıp tersiyer sanmış; dal komşu karbondadır, –OH’li karbon iki karbona bağlıdır ve N sekonderdir.",
+   "D": "P’deki etil kolunu görünce –OH’li karbona üç karbon bağlı sanmış; oysa iki karbona bağlıdır, P sekonderdir."
   },
   "celTur": {
    "A": "bilgi",
    "B": "bilgi",
-   "D": "bilgi",
-   "E": "bilgi"
+   "C": "bilgi",
+   "D": "bilgi"
   },
   "istenen": "Sekonder olmayan alkol.",
   "bilgi": [
@@ -922,9 +922,9 @@
     "islem": "1 → primer · 2 → sekonder · 3 → tersiyer"
    },
    {
-    "baslik": "K, L, N, P",
-    "aciklama": "Her birinde –OH’li karbon iki karbona bağlı.",
-    "islem": "Hepsi sekonder"
+    "baslik": "K, L, N, P’yi incele",
+    "aciklama": "Bu dördünde –OH’li karbon iki karbona bağlı.",
+    "islem": "K, L, N, P: sekonder"
    },
    {
     "baslik": "M’yi incele",
@@ -944,7 +944,7 @@
   "dogrulama": {
    "yontem2": true,
    "tarama": true,
-   "korCozum": true
+   "korCozum": false
   }
  },
  {
@@ -1038,7 +1038,7 @@
   "seviye": "ÖSYM",
   "kalip": "düz",
   "adimSayisi": 4,
-  "metin": "C₅H₁₂O molekül formüllü bileşiklerden alkol olanlar arasında kaç tanesi primer (1°) alkoldür?",
+  "metin": "Stereoizomerler ayrı sayılmayacaktır.\nC₅H₁₂O molekül formüllü bileşiklerden alkol olanlar arasında kaç tanesi primer (1°) alkoldür?",
   "sekil": null,
   "siklar": {
    "A": "1",
@@ -1131,10 +1131,10 @@
    "deger": "Asitli KMnO₄ ile yükseltgenince keton oluşur."
   },
   "celdiriciler": {
-   "A": "Bu ifadeyi yanlış sanmış; oysa doğrudur: –OH’li karbon üç karbona bağlıdır",
-   "B": "Bu ifadeyi yanlış sanmış; oysa doğrudur: 4 karbon ve 1 oksijenli doymuş alkoldür",
-   "C": "Bu ifadeyi yanlış sanmış; oysa doğrudur: ana zincir 3 karbonlu, metil 2. karbonda ve –OH 2. karbondadır",
-   "D": "Bu ifadeyi yanlış sanmış; oysa doğrudur: ikisinin de formülü C₄H₁₀O’dur, yapıları farklıdır"
+   "A": "Bu ifadeyi yanlış sanmış; oysa doğrudur: –OH’li karbon üç karbona bağlıdır.",
+   "B": "Bu ifadeyi yanlış sanmış; oysa doğrudur: 4 karbon ve 1 oksijenli doymuş alkoldür.",
+   "C": "Bu ifadeyi yanlış sanmış; oysa doğrudur: ana zincir 3 karbonlu, metil 2. karbonda ve –OH 2. karbondadır.",
+   "D": "Bu ifadeyi yanlış sanmış; oysa doğrudur: ikisinin de formülü C₄H₁₀O’dur, yapıları farklıdır."
   },
   "celTur": {
    "A": "bilgi",
@@ -1174,7 +1174,7 @@
     "islem": "Yükseltgenmez → keton ifadesi yanlış"
    }
   ],
-  "puf": "Keton, yalnız sekonder alkolün yükseltgenmesiyle oluşur.",
+  "puf": "Alkolün sınıfını belirleyip yükseltgenme ürününü ona göre yorumla.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKALK-15 (tersiyer bütanol)",
@@ -1253,7 +1253,7 @@
     "islem": "Sekonder alkol 1 tane → III doğru"
    }
   ],
-  "puf": "C₄H₁₀O: 4 alkol + 3 eter = 7 izomer.",
+  "puf": "İzomerleri sınıflarına ayırıp tek tek say.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKALK-16 (C₄H₁₀O izomerleri)",
@@ -1508,34 +1508,34 @@
   "kazanim": "Aynı alkolün yükseltgenme ve dehidrasyon ürünlerini formül ve sınıf bakımından birlikte değerlendirir.",
   "tipId": "al-tepkime",
   "tip": "Alkollerin tepkimeleri ve yükseltgenme",
-  "zorluk": "zor",
+  "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
   "adimSayisi": 4,
-  "metin": "Şekilde yapısı gösterilen X alkolü, asitli KMnO₄ ile yükseltgenince Y’yi; derişik H₂SO₄ ile 140 °C’de ısıtılınca Z eterini ve su veriyor.\nI. X sekonder alkoldür.\nII. Y’nin molekül formülü C₄H₈O’dur.\nIII. Z’nin molekül formülü C₈H₁₈O’dur.\nBuna göre bu yargılardan hangileri doğrudur?",
+  "metin": "Şekilde yapısı gösterilen X alkolü, asitli KMnO₄ ile yükseltgenince Y’yi; derişik H₂SO₄ ile 140 °C’de ısıtılınca Z eterini ve su veriyor.\nI. X sekonder alkoldür.\nII. Y’nin molekül formülü C₄H₈O’dur.\nIII. Z’nin molekül formülü C₈H₁₆O’dur.\nBuna göre bu yargılardan hangileri doğrudur?",
   "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:342px;height:auto\" role=\"img\" viewBox=\"0 0 180.091 88.979\">\n<defs>\n<g>\n<g id=\"tc1822d-glyph-0-0\">\n<rect x=\"-4.8\" y=\"-5.6\" width=\"57.6\" height=\"67.2\" mask=\"url(#tc1822d-mask-0)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.477472, -6.445868)\"/>\n</g>\n<g id=\"tc1822d-glyph-0-1\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#tc1822d-mask-1)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.835575, -6.207132)\"/>\n</g>\n<g id=\"tc1822d-glyph-0-2\">\n<rect x=\"-5.1\" y=\"-5\" width=\"61.2\" height=\"60\" mask=\"url(#tc1822d-mask-2)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.477472, -5.252189)\"/>\n</g>\n<g id=\"tc1822d-glyph-0-3\">\n<rect x=\"-2.5\" y=\"-3.6\" width=\"30\" height=\"43.2\" mask=\"url(#tc1822d-mask-3)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.238736, -4.177877)\"/>\n</g>\n<g id=\"tc1822d-glyph-0-4\">\n<rect x=\"-2.7\" y=\"-3.4\" width=\"32.4\" height=\"40.8\" mask=\"url(#tc1822d-mask-4)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.716208, -3.939142)\"/>\n</g>\n<g id=\"tc1822d-glyph-1-0\">\n<rect x=\"-4.6\" y=\"-5.2\" width=\"55.2\" height=\"62.4\" mask=\"url(#tc1822d-mask-5)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.358104, -6.207132)\"/>\n</g>\n<g id=\"tc1822d-glyph-1-1\">\n<rect x=\"-4.8\" y=\"-5.2\" width=\"57.6\" height=\"62.4\" mask=\"url(#tc1822d-mask-6)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.238736, -6.207132)\"/>\n</g>\n<g id=\"tc1822d-glyph-1-2\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#tc1822d-mask-7)\" transform=\"matrix(0.119368, 0, 0, 0.119368, 0.477472, -6.207132)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-0\">\n<rect x=\"-2.5\" y=\"-3.3\" width=\"30\" height=\"39.6\" mask=\"url(#tc1822d-mask-8)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -0.747542, -3.764684)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-1\">\n<rect x=\"-2.3\" y=\"-3.3\" width=\"27.6\" height=\"39.6\" mask=\"url(#tc1822d-mask-9)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -0.861992, -3.730593)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-2\">\n<rect x=\"-0.7\" y=\"-4.7\" width=\"8.4\" height=\"56.4\" mask=\"url(#tc1822d-mask-10)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -1.144448, -5.51553)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-3\">\n<rect x=\"-2.1\" y=\"-3.9\" width=\"25.2\" height=\"46.8\" mask=\"url(#tc1822d-mask-11)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -1.180985, -4.383205)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-4\">\n<rect x=\"-0.6\" y=\"-4.7\" width=\"7.2\" height=\"56.4\" mask=\"url(#tc1822d-mask-12)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -1.029997, -5.54962)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-5\">\n<rect x=\"-3.8\" y=\"-4.6\" width=\"45.6\" height=\"55.2\" mask=\"url(#tc1822d-mask-13)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -0.767006, -5.503351)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-6\">\n<rect x=\"-4.7\" y=\"-4.6\" width=\"56.4\" height=\"55.2\" mask=\"url(#tc1822d-mask-14)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -0.767006, -5.503351)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-7\">\n<rect x=\"-2.5\" y=\"-3.1\" width=\"30\" height=\"37.2\" mask=\"url(#tc1822d-mask-15)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -0.484551, -3.718414)\"/>\n</g>\n<g id=\"tc1822d-glyph-2-8\">\n<rect x=\"-4.3\" y=\"-4.8\" width=\"51.6\" height=\"57.6\" mask=\"url(#tc1822d-mask-16)\" transform=\"matrix(0.11445, -0.0340904, 0.0340904, 0.11445, -1.144448, -5.51553)\"/>\n</g>\n<g id=\"tc1822d-glyph-3-0\">\n<rect x=\"-2.3\" y=\"-3.3\" width=\"27.6\" height=\"39.6\" mask=\"url(#tc1822d-mask-17)\" transform=\"matrix(0.114394, -0.0340736, 0.0340736, 0.114394, -1.010034, -3.809071)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-0\">\n<rect x=\"-3.7\" y=\"-4.6\" width=\"44.4\" height=\"55.2\" mask=\"url(#tc1822d-mask-18)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.810316, -4.774353)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-1\">\n<rect x=\"-3.1\" y=\"-4.8\" width=\"37.2\" height=\"57.6\" mask=\"url(#tc1822d-mask-19)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.527408, -5.024524)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-2\">\n<rect x=\"-4.3\" y=\"-4.8\" width=\"51.6\" height=\"57.6\" mask=\"url(#tc1822d-mask-20)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.637297, -4.977764)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-3\">\n<rect x=\"-0.7\" y=\"-1.5\" width=\"8.4\" height=\"18\" mask=\"url(#tc1822d-mask-21)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 0.939899, -0.378774)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-4\">\n<rect x=\"-2.3\" y=\"-4.5\" width=\"27.6\" height=\"54\" mask=\"url(#tc1822d-mask-22)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.653666, -4.711224)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-5\">\n<rect x=\"-3\" y=\"-4.4\" width=\"36\" height=\"52.8\" mask=\"url(#tc1822d-mask-23)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.277237, -4.741616)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-6\">\n<rect x=\"-2.8\" y=\"-4.6\" width=\"33.6\" height=\"55.2\" mask=\"url(#tc1822d-mask-24)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.433887, -4.804745)\"/>\n</g>\n<g id=\"tc1822d-glyph-4-7\">\n<rect x=\"-3.7\" y=\"-4.8\" width=\"44.4\" height=\"57.6\" mask=\"url(#tc1822d-mask-25)\" transform=\"matrix(0.109889, 0.0467604, -0.0467604, 0.109889, 2.637297, -4.977764)\"/>\n</g>\n<g id=\"tc1822d-glyph-5-0\">\n<rect x=\"-2.1\" y=\"-3.4\" width=\"25.2\" height=\"40.8\" mask=\"url(#tc1822d-mask-26)\" transform=\"matrix(0.109835, 0.0467373, -0.0467373, 0.109835, 1.808739, -3.640922)\"/>\n</g>\n<g id=\"tc1822d-glyph-5-1\">\n<rect x=\"-2.3\" y=\"-3.3\" width=\"27.6\" height=\"39.6\" mask=\"url(#tc1822d-mask-27)\" transform=\"matrix(0.109835, 0.0467373, -0.0467373, 0.109835, 1.652167, -3.577824)\"/>\n</g>\n<g id=\"tc1822d-glyph-6-0\">\n<path d=\"M 3.5625 -0.09375 C 3.859375 -0.8125 3.546875 -1.578125 2.859375 -1.859375 C 2.171875 -2.15625 1.375 -1.84375 1.078125 -1.140625 C 0.78125 -0.453125 1.125 0.328125 1.8125 0.625 C 2.5 0.90625 3.265625 0.59375 3.5625 -0.09375 Z M 1.921875 0.328125 C 1.390625 0.09375 1.15625 -0.484375 1.375 -1.015625 C 1.609375 -1.5625 2.203125 -1.8125 2.734375 -1.578125 C 3.25 -1.359375 3.515625 -0.75 3.28125 -0.203125 C 3.0625 0.328125 2.4375 0.546875 1.921875 0.328125 Z M 1.921875 0.328125 \"/>\n</g>\n</g>\n<image id=\"tc1822d-source-90\" x=\"0\" y=\"0\" width=\"48\" height=\"56\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA4CAAAAACeOiQ2AAAAAmJLR0QA/4ePzL8AAADeSURBVEiJ7VZBEgMhCAP+/2d6ad0QUWQ7s9NDvaySYBB1RSVp/v5qgk02Lwg0ZvpMCaOMziTsr/iBBV2fjLMFez6bMqMyxFlhO6vPqSdEKz5jWvIJNURyfjQrTLHgRwIorPkI2XaHE6FLYSOAoDUERJyydNK0TtGYXERE2wq3HaqIBsEaORIR8efW8Hf4DYfyhHwIVp662B68D9UiBmz11cGm3+zDNqYLtIPrjBFhSBsJgOzkjwEC8QVaeSJsCbAJ6Paj2H92+w97v3ToFyf98qdfYPVLuMylKBLJJ0FfAtU2WVLY5lcAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-0\">\n<use xlink:href=\"#tc1822d-source-90\"/>\n</mask>\n<image id=\"tc1822d-source-98\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAAA2SURBVEiJY/zPwMDAwMDAyIADQOWZcMmjgVF1o+pG1eEGjP8Hxl5qq2OB0qPlxqi6UXXDVx0AOqoEZ2R39OAAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-1\">\n<use xlink:href=\"#tc1822d-source-98\"/>\n</mask>\n<image id=\"tc1822d-source-285\" x=\"0\" y=\"0\" width=\"51\" height=\"50\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAAAAADUlrxTAAAAAmJLR0QA/4ePzL8AAABGSURBVEiJY2TAAf4zMDDikMIl/h+PJBMue/CAUT2jekb1DE89jNDighQdjCTqYBj8YYAVjJajo3pG9YzqoZUeXOUOvjYfAKppBl6b5cb1AAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-2\">\n<use xlink:href=\"#tc1822d-source-285\"/>\n</mask>\n<image id=\"tc1822d-source-369\" x=\"0\" y=\"0\" width=\"25\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAkCAAAAABZZs7MAAAAAmJLR0QA/4ePzL8AAACKSURBVCiRpZNLEoAwCEOTTu9/ZVxIS4F0oy6q8iYTfiX8sfXB9N7hI0gB3jAlAIihAYC5wDI+MrEEHBIYHfjPVBYEgKHt/xFRE3eQV1IpdaOhO8o4mz9DK2Tbs7mlXFOatYoor5HN7n0TGhd9m8JlqdS+HbmZXFLWwVkjVXLLjXXaB9CTi5uV4Io8zgYhMvLKT6YAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-3\">\n<use xlink:href=\"#tc1822d-source-369\"/>\n</mask>\n<image id=\"tc1822d-source-377\" x=\"0\" y=\"0\" width=\"27\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAAAAACLyv3sAAAAAmJLR0QA/4ePzL8AAABESURBVCiR7dMxCgAwCEPRn97/znYQoUqFjh3MJD6ELMoAECm+XPQZG/vSrDfLd3YhFJOqgNLJQxeFqSNUijicT1kLeTYoJww7MtaxjgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-4\">\n<use xlink:href=\"#tc1822d-source-377\"/>\n</mask>\n<image id=\"tc1822d-source-147\" x=\"0\" y=\"0\" width=\"46\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA0CAAAAADQn1UWAAAAAmJLR0QA/4ePzL8AAADqSURBVEiJrZbBDsMwCEMx///P2aXTAtiA1OXUgOs8kYQWZseeAWMjpPGbcn1Mu0iJkAsEMmDJvdrnAFIMUg173CEExfeBUfi1aN5IyEpeiCkOgnyxQREGRUZXKexMCPKUasyPkrOgrv8FU/Grz7yjkBOmj4yuU+NSbQ2r++iW5RNOycsaCru2MwzsL+Uv2U+f/u829W+TMwY9a5tAB6Ouyi2XDW+yWVzt5MF9nAUXMHVxhgOpprFuVwm+a3PtoNQl3h+xguNrlPOVN+qhz0w4vq+KncUfR/yqzJcv9vcZ5bZfXO3bhX+blB4f8Pg6WrmebTsAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-5\">\n<use xlink:href=\"#tc1822d-source-147\"/>\n</mask>\n<image id=\"tc1822d-source-193\" x=\"0\" y=\"0\" width=\"48\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA0CAAAAADp+ORNAAAAAmJLR0QA/4ePzL8AAAC7SURBVEiJ7ZVLDoQwDEOT3P/OncWolCS2K8SGRbuCxMavH1S3Yf/hpsal8rGKwrJUAatcb6FJmt6DNGg5EjmHmgEWu+XJQHnSOKKUoiynhPK5rAqq7lMIAUyM5d1B+c1AofrBaUhJBNKmYQs1BVELGggiXUKYtAwSajUDFTkQQTIbdD/uBgrl5Jl9NWkIEh9lpijCxRtyFMVbpB5RBf0IDd1/j5QjelufatB9jHQMx3AMnzGgHx7et0P0fnTTJl1WLtRXAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-6\">\n<use xlink:href=\"#tc1822d-source-193\"/>\n</mask>\n<image id=\"tc1822d-source-239\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAACcSURBVEiJzZXBDoAwCEOp///PetCYySh0m4nuJr61HQeAme1WHkDCzKBhtknUd5z4XoD/a+5jxFeR49wTo77+cUI+JPmcK+M6bK0vvVzIBdiKbyQXcCHWczE2nY/IeY5hk75U7vnJsSnfRK4tZFhTSbHxfLncXSuwUd9K7qqW2OkrTECfj80lSK5+7vJpqPdFW1vQ1tbv99bbfTkAmkkgSGVvJXsAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-7\">\n<use xlink:href=\"#tc1822d-source-239\"/>\n</mask>\n<image id=\"tc1822d-source-578\" x=\"0\" y=\"0\" width=\"25\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAhCAAAAAAJq19/AAAAAmJLR0QA/4ePzL8AAACBSURBVCiRvZJLEoAgDEMThvtfuS4s9GOY0Y1u0LwUSyjhj/lKlJclZ40PfSEKcKPxlH2XXcMkAqATNj8ADgDMYLtGLRCO/v9Tb3+S0ptJogNXcev7WcSa0YUZoAU1TcpxHhHspwzsZU3qPIa1jG1y8JDAaUZ1B2vGeqLxXW6hJHEBv70cL6U2DCMAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-8\">\n<use xlink:href=\"#tc1822d-source-578\"/>\n</mask>\n<image id=\"tc1822d-source-586\" x=\"0\" y=\"0\" width=\"23\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAhCAAAAAAXYm/MAAAAAmJLR0QA/4ePzL8AAAB7SURBVCiRlZExDsAgDAN9Vf//ZToAAYIzlAHEGcXBQX21cYr9CBqMi3YFhyUei6U3+c1ntBN3BT0XFkiT53Y8r94vfjVLIAp+incOxJ6LzzydgO2HZZRGc3bXCq7iN1v+mQ/hf55+7vRx5vLkuc8rtgylL84XmzPGL8AHeMAdLdTitAMAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-9\">\n<use xlink:href=\"#tc1822d-source-586\"/>\n</mask>\n<image id=\"tc1822d-source-594\" x=\"0\" y=\"0\" width=\"7\" height=\"47\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAvCAAAAAAKxo9UAAAAAmJLR0QA/4ePzL8AAAAeSURBVBiVY/zPwMDAwMDAxEAaTW3AyPCfLHcMVRoAkhkCRzbiiecAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-10\">\n<use xlink:href=\"#tc1822d-source-594\"/>\n</mask>\n<image id=\"tc1822d-source-602\" x=\"0\" y=\"0\" width=\"21\" height=\"39\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAnCAAAAADFzlzsAAAAAmJLR0QA/4ePzL8AAABHSURBVCiR7ZJBCgAgCATH/v/n7RCZWHTqUJAXcVxWkDUABIDRq7CqG6hpBQ/4wlN/+HSm8t6oxZ18Tgna5SGL3VGRjTsKsgqOewtDddUCDgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-11\">\n<use xlink:href=\"#tc1822d-source-602\"/>\n</mask>\n<image id=\"tc1822d-source-610\" x=\"0\" y=\"0\" width=\"6\" height=\"47\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAvCAAAAADlBORqAAAAAmJLR0QA/4ePzL8AAAAVSURBVBiVY/zPwMDAwMDEMEpRRgEAhHcBXWjcwn8AAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-12\">\n<use xlink:href=\"#tc1822d-source-610\"/>\n</mask>\n<image id=\"tc1822d-source-770\" x=\"0\" y=\"0\" width=\"38\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAuCAAAAABhBTQfAAAAAmJLR0QA/4ePzL8AAACzSURBVDiNjdRLEoQwCARQ4P53zmzGCtAfdaMlz7QmhjwREZFBj/M/Z/H6UuHYVY41ZVhXmg0l2VSKLSXYVpyBogwVY0QRxhQyqoBxtZlQiyk1mVSDadXZgQvGSJGwrvCJohVwNe+n2Ilz3vL5zD1cLSViC1QyV1vxRlGgaGwRRWILlVn6VYBZ+dS4JPN/r4y1oddJ5jegiH0JfZxhfTHcaL4jsVjLbqwfzTfV7c6Xd4uI8wN8cSxdYuIpbwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-13\">\n<use xlink:href=\"#tc1822d-source-770\"/>\n</mask>\n<image id=\"tc1822d-source-778\" x=\"0\" y=\"0\" width=\"47\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAAAAACdEB/VAAAAAmJLR0QA/4ePzL8AAAC7SURBVEiJvZTBDoQwCETB+P+/PB7ULQUGd6VZLpVhMn1tTBVylkpVt0u2oJT24f+y3vsLIDO6/PVpjcPw0A3s4C3/E9A9t/kEaJL/dv/KgCD2eD2eZAMnDX91o2PWvJ8A5AXj50Bm4nlQtj1+BmT1kA/atHkI0KTGfKSfS3jOrT+pSCCb/088sVOyfEzLs/8HngDk+zQfFKf//mjR0XzQxzH6lXxX+bwW+FVEML+aa3nUravzq9ozsXiqD+oIIFwXov/ZAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-14\">\n<use xlink:href=\"#tc1822d-source-778\"/>\n</mask>\n<image id=\"tc1822d-source-786\" x=\"0\" y=\"0\" width=\"25\" height=\"31\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAfCAAAAAA32zmiAAAAAmJLR0QA/4ePzL8AAABLSURBVCiR7Y0xDgAgCANb4v+/XAcThTo4OJnYAQMHJ5Gi8XBUzUZrhQBi7suOo4oSoo2WsFV5Og4DIJ0QNYod0G2eI/Ff7myfPEc6b7oLP3b5HQ0AAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-15\">\n<use xlink:href=\"#tc1822d-source-786\"/>\n</mask>\n<image id=\"tc1822d-source-794\" x=\"0\" y=\"0\" width=\"43\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAwCAAAAACtJ9xEAAAAAmJLR0QA/4ePzL8AAACnSURBVEiJ7ZVLDoAwCEQd7n/nutJSvk4TExeyUMO8TLFpAYeNcX3AKkjASEVBWh0luRLoUIXAo0gS9zv6e5szJsm2QD0T1Ago0VUSlQ9Qt78jRxdVYiAMdLZK53w722nM+O6wRQm3JulRdDHervdnn8eXzlnezqYi5WnUwd63rf4QV6yy0twfvb6uNzIehqd6KtWrqRlAzRZqZlGzkJqxAV3M7hV30gkOVS5J2aQkWgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-16\">\n<use xlink:href=\"#tc1822d-source-794\"/>\n</mask>\n<image id=\"tc1822d-source-843\" x=\"0\" y=\"0\" width=\"23\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAhCAAAAAAXYm/MAAAAAmJLR0QA/4ePzL8AAABfSURBVCiRtZHBDsAgCMWK///P7ODiAN/Uw8axaQoJRhgHwADahPtE3s2JRz37krvm/uantYMXfbfXS2bj1/rNvV6z7gh95SudJm4JnarTZAVMZw7+dcbzxueIr/p/8wsL4g87iqLOmwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-17\">\n<use xlink:href=\"#tc1822d-source-843\"/>\n</mask>\n<image id=\"tc1822d-source-892\" x=\"0\" y=\"0\" width=\"37\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAuCAAAAACKMo8cAAAAAmJLR0QA/4ePzL8AAAA0SURBVDiNY/zPwMDAwMDAyIAVQGWZsMuigVFVo6qGiirG//S2kZqqWKD0aK4dVTWqCh0AAJwHBFtnHLRjAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-18\">\n<use xlink:href=\"#tc1822d-source-892\"/>\n</mask>\n<image id=\"tc1822d-source-1025\" x=\"0\" y=\"0\" width=\"31\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAwCAAAAADMP/4GAAAAAmJLR0QA/4ePzL8AAAC3SURBVDiNxZRBEsAgCAMTp///sj2IVYTQW9tLlQ0woxFi+/qzYlhscCcUdDJqDIBoFQZwORy7ce3oEvuIUGAAHYT1z/CItBD2Alr5mD6+Kv9Lrk64OJ+jfl6BqWsc95mMXFhrW8be9H8pKPxJlP52/s0lTF3lBOmp9he+FBT3+6Sp++cpFB0kN8H//tWzwfJzgT3LVk4XgOL5zvA1t8II3IoHr3HNh7R39j6Ocsr/b/7O7j+MUQA3s8ErRFEJZ4wAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-19\">\n<use xlink:href=\"#tc1822d-source-1025\"/>\n</mask>\n<image id=\"tc1822d-source-1033\" x=\"0\" y=\"0\" width=\"43\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAwCAAAAACtJ9xEAAAAAmJLR0QA/4ePzL8AAACnSURBVEiJ7ZVLDoAwCEQd7n/nutJSvk4TExeyUMO8TLFpAYeNcX3AKkjASEVBWh0luRLoUIXAo0gS9zv6e5szJsm2QD0T1Ago0VUSlQ9Qt78jRxdVYiAMdLZK53w722nM+O6wRQm3JulRdDHervdnn8eXzlnezqYi5WnUwd63rf4QV6yy0twfvb6uNzIehqd6KtWrqRlAzRZqZlGzkJqxAV3M7hV30gkOVS5J2aQkWgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-20\">\n<use xlink:href=\"#tc1822d-source-1033\"/>\n</mask>\n<image id=\"tc1822d-source-1125\" x=\"0\" y=\"0\" width=\"7\" height=\"15\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAAAAAANaopiAAAAAmJLR0QA/4ePzL8AAAArSURBVAiZjcyxDQAwEMLAI/vvTIpvPl0qS2A5Cg5fDDos8v5Z/upmdWZ2ASJhBRqM96PLAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-21\">\n<use xlink:href=\"#tc1822d-source-1125\"/>\n</mask>\n<image id=\"tc1822d-source-1247\" x=\"0\" y=\"0\" width=\"23\" height=\"45\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAtCAAAAABgoK+3AAAAAmJLR0QA/4ePzL8AAAA9SURBVDiNY2BABv//w1hMKMIIJgtWUYQ4iiADAwMLugA280kQZ2REM58Rm2ryzR8VHxUfDuKMGDmRuuYDAE+FB1xtReYdAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-22\">\n<use xlink:href=\"#tc1822d-source-1247\"/>\n</mask>\n<image id=\"tc1822d-source-1255\" x=\"0\" y=\"0\" width=\"30\" height=\"44\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAsCAAAAABX6VfYAAAAAmJLR0QA/4ePzL8AAAB5SURBVDiN1ZLBCsAgDEPT/v8/u8N0aExLhcFYLx4eL6aigafdhwEAPKB9GK90t3uqxiQLO8Esr7jx1SfhW/RuW4iFPGFFOdwiLGWyWX6wlgduWq69WiSX7FCGx63XcCXDs+hCtUyGJ70AWI6P/vnLWCw0b/pltf/iC3HzFE+nVkvgAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-23\">\n<use xlink:href=\"#tc1822d-source-1255\"/>\n</mask>\n<image id=\"tc1822d-source-1263\" x=\"0\" y=\"0\" width=\"28\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAAAAAAe1CbuAAAAAmJLR0QA/4ePzL8AAACBSURBVDiN7ZRJDsAgDANt1P9/mR4QoTFhkVB7ak7gkYtZGqJVBgCwCfTEiwyYqQyQ6YxZAZcKunYOlyeQ+tx8St32TEmYFAOjWafOHei/WqdzZ3R0NdZxoB9+Djlm9YHJledXA538K73V5kkkty3XEyhj1xP09a9bzciz1d4kSqkb6scdUShIIIgAAAAASUVORK5CYII=\"/>\n<mask id=\"tc1822d-mask-24\">\n<use xlink:href=\"#tc1822d-source-1263\"/>\n</mask>\n<image id=\"tc1822d-source-1309\" x=\"0\" y=\"0\" width=\"37\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAwCAAAAACz7uz3AAAAAmJLR0QA/4ePzL8AAACgSURBVDiN7ZVLDoAwCESHxvtfGRemLfbDTIyJG9nYwCsTaqGGyTys7fZZIp00xgCAHZwBUBSoK/reZ83jM9MCjfINAwA+Ugsm+Al01ZhU17d7WCe5GIQi6MVcSaqomJjRU9BziYqK4KuKP1Xtg7/N2+yBYtYkhV2tUZHNL9rcJY3ecrHTcGXKQZqYZPquylImeYaZ8MJM79CCs1FxBmv0BKYWJEXqxf2WAAAAAElFTkSuQmCC\"/>\n<mask id=\"tc1822d-mask-25\">\n<use xlink:href=\"#tc1822d-source-1309\"/>\n</mask>\n<image id=\"tc1822d-source-941\" x=\"0\" y=\"0\" width=\"21\" height=\"34\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAAAAACVA81fAAAAAmJLR0QA/4ePzL8AAAB6SURBVCiRlZI7AsAgCEMT7n9nOgDykcEy2UdMrEhYKQCA/sXCErAzJ4JZah09GzXUjF4LlRp9VtKjvGaa+QurQWpvtuh0893Tdgf70Set38mi5UzTbFz7O82LZoccDoprxgPGosP6HkoEN5ivpB2c6KMPukDwafL/6QewhBoyHbsrbQAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-26\">\n<use xlink:href=\"#tc1822d-source-941\"/>\n</mask>\n<image id=\"tc1822d-source-1079\" x=\"0\" y=\"0\" width=\"23\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAhCAAAAAAXYm/MAAAAAmJLR0QA/4ePzL8AAABfSURBVCiRtZHBDsAgCMWK///P7ODiAN/Uw8axaQoJRhgHwADahPtE3s2JRz37krvm/uantYMXfbfXS2bj1/rNvV6z7gh95SudJm4JnarTZAVMZw7+dcbzxueIr/p/8wsL4g87iqLOmwAAAABJRU5ErkJggg==\"/>\n<mask id=\"tc1822d-mask-27\">\n<use xlink:href=\"#tc1822d-source-1079\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.670109 -0.00192317 L 25.315646 11.340194 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 25.315646 11.340194 L 25.315646 25.399081 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 25.315646 11.340194 L 44.957257 -0.00192317 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 44.957257 -0.00192317 L 64.575312 11.340194 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-0-0\" x=\"16.288783\" y=\"13.730753\"/>\n<use xlink:href=\"#tc1822d-glyph-0-1\" x=\"23.060526\" y=\"13.730753\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-1-0\" x=\"22.782009\" y=\"65.908389\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 175.994244 41.102947 L 147.95499 41.102947 C 146.306085 41.102947 144.96733 39.764192 144.96733 38.115287 L 144.96733 18.579677 C 144.96733 16.930771 146.306085 15.592016 147.95499 15.592016 L 175.994244 15.592016 C 177.647076 15.592016 178.981904 16.930771 178.981904 18.579677 L 178.981904 38.115287 C 178.981904 39.764192 177.647076 41.102947 175.994244 41.102947 Z M 175.994244 41.102947 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-1-1\" x=\"155.619519\" y=\"19.372278\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 175.99817 -15.591937 L 147.95499 -15.591937 C 146.306085 -15.591937 144.96733 -16.930691 144.96733 -18.579597 L 144.96733 -38.115207 C 144.96733 -39.764113 146.306085 -41.102867 147.95499 -41.102867 L 175.99817 -41.102867 C 177.651002 -41.102867 178.989756 -39.764113 178.989756 -38.115207 L 178.989756 -18.579597 C 178.989756 -16.930691 177.651002 -15.591937 175.99817 -15.591937 Z M 175.99817 -15.591937 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-1-2\" x=\"145.269758\" y=\"75.366649\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-0-2\" x=\"154.079293\" y=\"75.366649\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-0-3\" x=\"164.260248\" y=\"75.366649\"/>\n<use xlink:href=\"#tc1822d-glyph-0-4\" x=\"167.774439\" y=\"75.366649\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 77.955006 8.505646 L 140.813657 27.228581 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.271797 0.00119938 L 1.147569 1.889215 L 2.517894 -0.00194935 L 1.148966 -1.888336 Z M 5.271797 0.00119938 \" transform=\"matrix(0.953517, -0.284016, -0.284016, -0.953517, 135.625935, 18.045296)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-2-0\" x=\"84.20697\" y=\"26.398812\"/>\n<use xlink:href=\"#tc1822d-glyph-2-1\" x=\"88.084549\" y=\"25.243829\"/>\n<use xlink:href=\"#tc1822d-glyph-2-2\" x=\"91.179287\" y=\"24.322024\"/>\n<use xlink:href=\"#tc1822d-glyph-2-3\" x=\"93.105487\" y=\"23.748282\"/>\n<use xlink:href=\"#tc1822d-glyph-2-4\" x=\"96.020538\" y=\"22.88\"/>\n<use xlink:href=\"#tc1822d-glyph-2-2\" x=\"97.946738\" y=\"22.306258\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-2-5\" x=\"102.563207\" y=\"20.931188\"/>\n<use xlink:href=\"#tc1822d-glyph-2-6\" x=\"108.168986\" y=\"19.26144\"/>\n<use xlink:href=\"#tc1822d-glyph-2-7\" x=\"115.212263\" y=\"17.163516\"/>\n<use xlink:href=\"#tc1822d-glyph-2-8\" x=\"119.380546\" y=\"15.921943\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-3-0\" x=\"125.625534\" y=\"15.095762\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 77.955006 -0.00192317 L 140.962844 -26.812349 \" transform=\"matrix(0.994978, 0, 0, -0.994978, -2.27054, 44.478555)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.274229 -0.000410164 L 1.150846 1.888765 L 2.517764 -0.00000318245 L 1.149355 -1.887904 Z M 5.274229 -0.000410164 \" transform=\"matrix(0.915519, 0.389574, 0.389574, -0.915519, 135.862909, 70.253517)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-4-0\" x=\"78.960451\" y=\"58.339592\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-5-0\" x=\"84.043577\" y=\"61.579541\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-4-1\" x=\"87.794294\" y=\"62.098588\"/>\n<use xlink:href=\"#tc1822d-glyph-4-2\" x=\"92.100862\" y=\"63.931129\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-5-1\" x=\"97.436704\" y=\"67.278614\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-4-3\" x=\"101.187421\" y=\"67.797661\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-4-4\" x=\"105.923215\" y=\"69.812847\"/>\n<use xlink:href=\"#tc1822d-glyph-4-5\" x=\"109.799016\" y=\"71.462087\"/>\n<use xlink:href=\"#tc1822d-glyph-4-6\" x=\"113.674818\" y=\"73.111326\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-6-0\" x=\"121.229956\" y=\"73.284533\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tc1822d-glyph-4-7\" x=\"124.087297\" y=\"77.542067\"/>\n</g>\n</svg>",
   "siklar": {
    "A": "Yalnız I",
-   "B": "I ve II",
-   "C": "I ve III",
+   "B": "Yalnız II",
+   "C": "I ve II",
    "D": "II ve III",
    "E": "I, II ve III"
   },
   "cevap": {
-   "sik": "E",
-   "deger": "I, II ve III"
+   "sik": "C",
+   "deger": "I ve II"
   },
   "celdiriciler": {
-   "A": "II öncülünü yanlış sanmış; oysa Y, C₄H₈O formüllü 2-bütanondur (keton). III öncülünü yanlış sanmış; oysa iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O.",
-   "B": "III öncülünü yanlış sanmış; oysa iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O.",
-   "C": "II öncülünü yanlış sanmış; oysa Y, C₄H₈O formüllü 2-bütanondur (keton).",
-   "D": "I öncülünü yanlış sanmış; oysa X’te –OH’li karbon iki karbona bağlıdır; X sekonder alkoldür."
+   "A": "II öncülünü yanlış sanmış; oysa Y, C₄H₈O formüllü 2-bütanondur (keton).",
+   "B": "I öncülünü yanlış sanmış; oysa X’te –OH’li karbon iki karbona bağlıdır; X sekonder alkoldür.",
+   "D": "III öncülünü doğru sanmış; oysa iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O olur, C₈H₁₆O değil. I öncülünü yanlış sanmış; oysa X’te –OH’li karbon iki karbona bağlıdır; X sekonder alkoldür.",
+   "E": "III öncülünü doğru sanmış; oysa iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O olur, C₈H₁₆O değil."
   },
   "celTur": {
    "A": "bilgi",
    "B": "bilgi",
-   "C": "bilgi",
-   "D": "bilgi"
+   "D": "bilgi",
+   "E": "bilgi"
   },
   "istenen": "Doğru olan yargılar.",
   "bilgi": [
@@ -1565,11 +1565,11 @@
    },
    {
     "baslik": "Yargıları birleştir",
-    "aciklama": "Üçü de şemadaki verilerle uyumlu.",
-    "islem": "I, II ve III"
+    "aciklama": "I ve II uyumlu, III’teki formül hidrojen sayısında hatalı.",
+    "islem": "I ve II"
    }
   ],
-  "puf": "Yükseltgenmede 2 H kaybedilir; eter oluşumunda iki alkoldan bir H₂O çıkar.",
+  "puf": "Ürün formülünü, tepkimede kaybolan atomları sayarak kontrol et.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKALK-20 (2-bütanol şeması)",

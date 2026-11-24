@@ -122,7 +122,7 @@ q('0003',tipId='hz-enerji',tip='Aktivasyon enerjisi ve etkin çarpışma',z='kol
  dogru=d3,sira=s3,yan=y3,istenen='Doğru olan yorumlar.',ip=['Çarpışmanın ürün vermesi için gereken koşulları ve aktivasyon enerjisini neyin değiştirebildiğini düşün.'],
  bilgi=[B('Aktivasyon enerjisi','girenlerin ürüne dönüşebilmesi için aşması gereken enerji engelidir; yalnızca yeterli enerjiyle ve uygun doğrultuda yapılan çarpışmalar (etkin çarpışma) tepkime verir. Aktivasyon enerjisi girenlerin ve ürünlerin enerji farkından bağımsızdır; yol değişirse (ör. katalizör) değişir')],
  ad=[A('I’i değerlendir','Çarpışmaların yalnız bir kısmı etkindir.','I: doğru'),A('II’yi değerlendir','Sıcaklık, taneciklerin kinetik enerjisini artırır; aktivasyon enerjisini değiştirmez.','II: yanlış'),A('III’ü değerlendir','Aktivasyon enerjisi girenlerden aktifleşmiş komplekse; ΔH girenlerden ürünlere farktır.','III: yanlış'),A('Sonuç','Yalnız I doğrudur.','Yalnız I')],
- puf='Aktivasyon enerjisini yalnız tepkime yolu (katalizör) değiştirir; sıcaklık ve derişim onu değiştirmez.')
+ puf='Aktivasyon enerjisinin hangi büyüklüklere bağlı olduğunu önce listele, sonra her yargıyı bu listeyle sına.')
 
 # ================= 04 · hız denklemi · orta · tablo =================
 kartla('04','Hız denklemini tablodan bulma','Bir değişken sabitken öbürünün değişimi hıza oranlanır; hız oranı = derişim oranı üzeri mertebe.','İki değişkeni birden değiştiren deneyleri kıyaslamak; mertebeyi derişim katsayısı sanmak.','orta','tablo',3,'denklem','Hız denklemini deney tablosundan bulma')
@@ -145,7 +145,7 @@ q('0004',tipId='hz-denklem',tip='Hız denklemini deney tablosundan bulma',z='ort
 kartla('05','Mertebe, derece ve hız sabitinin birimi','Her derişimin mertebelerinin toplamı tepkime derecesidir; k’nın birimi dereceye bağlıdır: L^(n−1)·mol^(1−n)·s⁻¹.','Mertebeyi katsayıyla karıştırmak; k’nın biriminin dereceden bağımsız olduğunu sanmak.','orta','öncüllü',4,'denklem','Mertebe, derece ve hız sabiti birimi')
 tr5={1:False,2:True,3:True}
 q5_s=sirala('Yalnız II','Yalnız III','I ve II','I ve III','II ve III')
-d5,y5=onc(tr5,q5_s,{1:'iki katına çıkan derişim için hızın 9 katına çıkmasını birinci mertebe sanmış'},
+d5,y5=onc(tr5,q5_s,{1:'3 katına çıkan derişim için hızın 9 katına çıkmasını birinci mertebe sanmış'},
  {2:'mertebeleri toplamayı bilmeden derecesini 2 ya da 4 bulmuş',3:'hız sabitinin biriminin dereceden bağımsız olduğunu sanmış'})
 q('0005',tipId='hz-denklem',tip='Mertebe, derece ve hız sabiti birimi',z='orta',alt='Hız Denklemi',kaz='Deneysel gözlemlerden mertebeyi ve dereceyi bularak hız sabitinin birimini yorumlar.',kalip='öncüllü',
  kart='K-AKHZ-05 (mertebe ve k birimi) · X + Y deneyleri',
@@ -240,7 +240,7 @@ q('0009',tipId='hz-mekanizma',tip='Mekanizma, ara ürün ve katalizör',z='orta'
  puf='Hız denklemi daima yavaş basamaktan yazılır; her iki basamakta da görünüp net denklemde olmayan tür ara üründür.')
 
 # ================= 10 · iki basamaklı enerji diyagramı · zor · öncüllü =================
-kartla('10','İki basamaklı enerji diyagramı','En büyük aktivasyon enerjili basamak hızı belirler; net ΔH ürün–giren farkıdır; ara ürün vadide yer alır.','Basamağın Ea’sını sıfırdan okumak; net ΔH ile basamak ΔH’sini karıştırmak.','zor','öncüllü',5,'enerji','İki basamaklı tepkimede enerji diyagramı')
+kartla('10','İki basamaklı enerji diyagramı','En büyük aktivasyon enerjili basamak hızı belirler; net ΔH ürün–giren farkıdır; ara ürün vadide yer alır.','Basamağın Ea’sını sıfırdan okumak; net ΔH ile basamak ΔH’sini karıştırmak.','orta','öncüllü',5,'enerji','İki basamaklı tepkimede enerji diyagramı')
 R,TS1,IM,TS2,PR=20,70,40,100,10
 Ea1=TS1-R; Ea2=TS2-IM; dH=PR-R
 assert Ea1==50 and Ea2==60 and dH==-10 and Ea2>Ea1
@@ -252,15 +252,15 @@ for yv in (10,20,40,70,100): g+=guide(yv,{10:6.2,20:.8,40:3.2,70:2.0,100:5.0}[yv
 g+=f'\\node[above] at (.4,{R*sc+.05:.3f}) {{A}}; \\node[above] at (3.5,{IM*sc+.05:.3f}) {{B}}; \\node[above] at (6.6,{PR*sc+.05:.3f}) {{C}};'
 SK10=tk(g)
 s10=sirala('Yalnız III','I ve II','I ve III','II ve III','I, II ve III')
-d10,y10=onc(tr10,s10,{3:'2. basamağın aktivasyon enerjisini, basamağın başlangıcından değil girenlerin düzeyinden ölçerek 80 kJ bulmuş'},
- {1:'ürünlerin enerjisinin başlangıçtakinden küçük olduğunu fark etmeyip tepkimeyi endotermik sanmış',2:'en yüksek tepeyi değil ilk tepeyi hız belirleyen sanmış'})
-q('0010',tipId='hz-enerji',tip='İki basamaklı tepkimede enerji diyagramı',z='zor',alt='Aktivasyon Enerjisi',kaz='İki basamaklı tepkimenin enerji diyagramından ΔH, aktivasyon enerjisi ve hız belirleyen basamağı yorumlar.',kalip='öncüllü',
+d10,y10=onc(tr10,s10,{3:'ürünlerin enerjisinden girenlerinkini çıkarmak yerine tersini yaparak ΔH’yi +10 kJ bulmuş'},
+ {1:'B’nin vadide oluşup sonraki basamakta harcandığını görmemiş',2:'en yüksek tepeyi değil ilk tepeyi hız belirleyen sanmış'})
+q('0010',tipId='hz-enerji',tip='İki basamaklı tepkimede enerji diyagramı',z='orta',alt='Aktivasyon Enerjisi',kaz='İki basamaklı tepkimenin enerji diyagramından ara ürünü, ΔH’yi ve hız belirleyen basamağı yorumlar.',kalip='öncüllü',
  kart='K-AKHZ-10 (iki basamaklı diyagram) · A → B → C',sekil=SK10,
- metin='A → C tepkimesi, B ara ürünü üzerinden iki basamakta gerçekleşmektedir. Tepkimenin potansiyel enerji–tepkime koordinatı grafiği şekilde verilmiştir.\nI. Tepkime ekzotermiktir.\nII. Tepkime hızını ikinci basamak belirler.\nIII. İkinci basamağın aktivasyon enerjisi 80 kJ’dir.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
+ metin='A → C tepkimesi, B ara ürünü üzerinden iki basamakta gerçekleşmektedir. Tepkimenin potansiyel enerji–tepkime koordinatı grafiği şekilde verilmiştir.\nI. B ara üründür.\nII. Tepkime hızını ikinci basamak belirler.\nIII. Tepkimenin net entalpi değişimi (ΔH) +10 kJ’dir.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  dogru=d10,sira=s10,yan=y10,istenen='Doğru olan yargılar.',ip=['Her basamağın aktivasyon enerjisini, o basamağın başladığı düzeyden tepe noktasına olan yükseklik olarak bul.'],
  bilgi=[B('İki basamaklı tepkimede enerji','her basamağın aktivasyon enerjisi o basamağın başlangıç düzeyinden tepe noktasına olan farktır; aktivasyon enerjisi en büyük basamak yavaştır ve hızı belirler. Net ΔH, ürünlerin enerjisinden girenlerin enerjisinin çıkarılmasıyla bulunur. Örnek: 10 kJ’den 25 kJ’e çıkan bir basamak için Ea = 15 kJ’dir')],
- ad=[A('Basamak Ea’larını bul','Her basamak kendi başlangıç düzeyinden okunur.','1. basamak: 70 − 20 = 50 kJ · 2. basamak: 100 − 40 = 60 kJ'),A('Hız belirleyeni seç','Ea’sı büyük olan basamak yavaştır.','60 > 50 → 2. basamak hızı belirler → II doğru'),A('Net ΔH’yi bul','Ürünler 10 kJ, girenler 20 kJ düzeyinde.','ΔH = 10 − 20 = −10 kJ → I doğru'),A('III’ü değerlendir','İkinci basamağın Ea’sı 60 kJ’dir; 80 kJ değil.','III yanlış → I ve II')],
- puf='Basamağın aktivasyon enerjisini girenlerin düzeyinden değil, o basamağın başlangıcından ölç.')
+ ad=[A('Basamak Ea’larını bul','Her basamak kendi başlangıç düzeyinden okunur.','1. basamak: 70 − 20 = 50 kJ · 2. basamak: 100 − 40 = 60 kJ'),A('Hız belirleyeni seç','Ea’sı büyük olan basamak yavaştır.','60 > 50 → 2. basamak hızı belirler → II doğru'),A('Ara ürün','B, ilk basamakta oluşup ikinci basamakta harcanan vadi düzeyidir.','B ara üründür → I doğru'),A('Net ΔH’yi bul','Ürünler 10 kJ, girenler 20 kJ düzeyinde.','ΔH = 10 − 20 = −10 kJ → III yanlış (I ve II doğru)')],
+ puf='Her basamağın aktivasyon enerjisini kendi başlangıç düzeyinden tepeye ölç ve karşılaştır.')
 
 # ================= 11 · katalizör · orta · yanlış kök =================
 kartla('11','Katalizörün enerji diyagramındaki etkisi','Katalizör aktivasyon enerjisini ileri ve geri yönde eşit miktarda düşürür; ΔH değişmez.','Katalizörün ΔH’yi değiştirdiğini sanmak.','orta','grafik',3,'katalizor','Katalizörün enerji diyagramına etkisi')
@@ -280,7 +280,7 @@ q('0011',tipId='hz-katalizor',tip='Katalizörün enerji diyagramına etkisi',z='
  istenen='Yanlış olan ifade.',ip=['Her ifadeyi ilgili düzeylerin farkı olarak yeniden hesapla ve katalizörün neyi değiştirip neyi değiştirmediğini düşün.'],
  bilgi=[B('Katalizör','tepkimenin başka, daha düşük enerjili bir yoldan gerçekleşmesini sağlar; ileri ve geri aktivasyon enerjisini aynı miktarda azaltır. Girenlerin ve ürünlerin enerjisi değişmediğinden ΔH değişmez, denge kurulmuşsa dengeyi de kaydırmaz. Örnek: tepe 15 kJ alçalırsa ileri ve geri Ea da 15 kJ azalır')],
  ad=[A('Düzeyleri oku','Girenler 40, ürünler 20, katalizörsüz tepe 100, katalizörlü tepe 70 kJ.','R = 40 · P = 20 · 100 / 70'),A('Aktivasyon enerjileri','Her yolda tepeden ilgili düzeyin farkı alınır.','ileri: 60 → 30 · geri: 80 → 50'),A('ΔH’yi bul','Katalizör girenlerin ve ürünlerin düzeyini değiştirmez.','ΔH = 20 − 40 = −20 kJ'),A('Yanlış ifadeyi seç','ΔH’nin −50 kJ olması mümkün değildir.','−20 → −50 ifadesi yanlış')],
- puf='Katalizör Ea’yı iki yönde eşit düşürür; ΔH’ye dokunmaz.')
+ puf='Her ifadeyi ilgili iki düzeyin farkı olarak yaz ve grafikten oku.')
 
 # ================= 12 · kinetik enerji dağılımı · orta · öncüllü =================
 kartla('12','Kinetik enerji dağılımı ve sıcaklık','Sıcaklık artınca eşik enerjisini aşan tanecik oranı artar; eşik enerjisi değişmez.','Eşik enerjisinin sıcaklıkla değiştiğini sanmak; eğri altındaki alanı farklı sanmak.','orta','öncüllü',3,'sicaklik','Sıcaklığın kinetik enerji dağılımına etkisi')
@@ -377,7 +377,7 @@ q('0016',tipId='hz-denklem',tip='Hız sabitinin özellikleri',z='orta',alt='Hız
  istenen='Yanlış olan yargı.',ip=['Hız sabitinin hangi etkenlere bağlı olduğunu ve zamanla değişip değişmediğini düşün.'],
  bilgi=[B('Hız sabiti','r = k[A]ᵐ[B]ⁿ denkleminde k, tepkimeye özgü bir sabittir; sıcaklığa ve katalizöre bağlıdır, derişime ve zamana bağlı değildir. k’nın birimi tepkimenin derecesine göre değişir. Örnek: aynı tepkime iki farklı sıcaklıkta farklı k değerine sahiptir')],
  ad=[A('Her yargıyı sına','k’nın bağlı olduğu etkenler sıcaklık ve katalizördür.','Sıcaklık → k değişir · katalizör → k değişir'),A('Derişim ve zaman','Derişim azalınca hız azalır, k azalmaz.','k sabittir'),A('Birim','Birim dereceye bağlıdır.','k’nın birimi derecesine göre değişir'),A('Yanlışı seç','Tepkime ilerledikçe k küçülmez.','Yanlış: k’nın küçüldüğü yargısı')],
- puf='Tepkime ilerlerken hız azalır ama k sabit kalır; k’yı yalnız sıcaklık ve katalizör değiştirir.')
+ puf='Hız sabitinin hangi büyüklüklere bağlı olduğunu listele, her yargıyı bu listeyle sına.')
 
 # ================= 17 · mekanizma şeması · zor · öncüllü =================
 kartla('17','Mekanizma şeması: ara ürün, net tepkime ve hacim','Yavaş basamaktan hız denklemi yazılır; ara ürün net denklemde yoktur; hacim küçülünce gazların derişimi artar.','Hız denklemini net tepkimeden yazmak; hızdan bağımsız maddeyi hızı değiştiren sanmak.','zor','öncüllü',5,'mekanizma','Mekanizma şeması ve hız değişimi')
@@ -394,7 +394,7 @@ q('0017',tipId='hz-mekanizma',tip='Mekanizma şeması ve hız değişimi',z='zor
  kart='K-AKHZ-17 (mekanizma şeması) · NO₂ + CO',sekil=SK17,
  metin='NO₂(g) ile CO(g) arasındaki tepkimenin mekanizması şekilde gösterilmiştir. Tepkime sabit sıcaklıkta kapalı bir kapta gerçekleşmektedir.\nI. NO₃ ara üründür.\nII. CO(g)’nin derişimi 2 katına çıkarılırsa tepkime hızı da 2 katına çıkar.\nIII. Kabın hacmi yarıya düşürülürse tepkime hızı 4 katına çıkar.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  dogru=d17,sira=s17,yan=y17,istenen='Doğru olan yargılar.',ip=['Hız denklemini yavaş basamaktan yaz; sonra her yargıdaki değişimin hangi derişimleri etkilediğine bak.'],
- bilgi=[B('Mekanizma ve hız','yavaş basamakta yer alan girenlerin derişimi hızı belirler; hızlı basamakta yer alıp yavaş basamakta bulunmayan madde hız denkleminde görünmez. Ara ürün bir basamakta oluşup sonraki basamakta harcanan türdür. Örnek: yavaş basamak 2A → B + C ise hız = k[A]²')],
+ bilgi=[B('Mekanizma ve hız','yavaş basamakta yer alan girenlerin derişimi hızı belirler; hızlı basamakta yer alıp yavaş basamakta bulunmayan madde hız denkleminde görünmez. Ara ürün bir basamakta oluşup sonraki basamakta harcanan türdür. Örnek: yavaş basamak A + B → C ise hız = k[A][B]’dir')],
  ad=[A('Ara ürünü bul','NO₃ ilk basamakta oluşuyor, ikincide harcanıyor.','NO₃ ara üründür → I doğru'),A('Hız denklemini yaz','Yavaş basamak 1. basamaktır; girenler yalnız NO₂.','hız = k[NO₂]²'),A('CO’nun etkisi','CO hız denkleminde yok.','CO derişimi 2 kat → hız değişmez → II yanlış'),A('Hacim değişimi','Hacim yarıya inince bütün derişimler 2 kat olur.','[NO₂] × 2 → hız × 2² = 4 kat → III doğru')],
  puf='Hız denklemini yalnız yavaş basamağın girenlerinden yaz; hızlı basamaktaki madde hızı etkilemez.')
 
@@ -413,6 +413,8 @@ g+='\\node[rotate=90,anchor=south] at (-1.2,2.6) {Derişim (mol/L)}; \\node[anch
 for tt in t: g+=f'\\draw[thick] ({tt*.14:.3f},-.07) -- ({tt*.14:.3f},.07); \\node[below] at ({tt*.14:.3f},-.05) {{{tt}}};'
 for v in (0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1.0): g+=f'\\draw[thick] (-.07,{v*5:.3f}) -- (.07,{v*5:.3f}); \\node[left] at (-.1,{v*5:.3f}) {{{str(v).replace(".",",")}}};'
 g+=f'\\draw[very thick] plot[smooth] coordinates {{{cx}}}; \\draw[very thick,dashed] plot[smooth] coordinates {{{cy}}};'
+for tt,vx,vy in ((10,.6,.2),(20,.4,.3)):
+    g+=f'\\draw[dotted] ({tt*.14:.3f},0) -- ({tt*.14:.3f},{vx*5:.3f}); \\fill ({tt*.14:.3f},{vx*5:.3f}) circle (.06); \\fill ({tt*.14:.3f},{vy*5:.3f}) circle (.06);'
 g+='\\draw[very thick] (2.9,5.0) -- (3.5,5.0); \\node[right] at (3.55,5.0) {X(g)}; \\draw[very thick,dashed] (2.9,4.4) -- (3.5,4.4); \\node[right] at (3.55,4.4) {Y(g)};'
 SK18=tk(g)
 q('0018',tipId='hz-ifade',tip='İki eğriden katsayı ve tepkime hızı',z='zor',alt='Tepkime Hızları',kaz='Derişim–zaman grafiğindeki iki eğriden katsayı oranını bulup tepkime hızını hesaplar.',kalip='grafik',
@@ -426,23 +428,20 @@ q('0018',tipId='hz-ifade',tip='İki eğriden katsayı ve tepkime hızı',z='zor'
 
 # ================= 19 · kontrollü deney · orta · tablo =================
 kartla('19','Kontrollü değişken ve deney seçimi','Bir etkenin etkisini görmek için yalnız o etkenin farklı, diğerlerinin aynı olduğu deney çifti seçilir.','Birden fazla etkeni değiştiren deneyleri kıyaslamak.','orta','tablo',3,'faktor','Kontrollü deney çifti seçimi')
-exps=[('1','Şerit',1,25),('2','Toz',1,25),('3','Şerit',2,25),('4','Toz',2,40),('5','Şerit',1,40)]
+exps=[('1',Fr(1,10),Fr(1,2),20),('2',Fr(1,5),Fr(1,2),20),('3',Fr(1,10),Fr(1),20),('4',Fr(1,5),Fr(1),40),('5',Fr(1,10),Fr(1,2),40)]
 def fark(a,b): return sum(x!=y for x,y in zip(exps[a][1:],exps[b][1:]))
-cifts=[(a+1,b+1) for a in range(5) for b in range(a+1,5)]
 tek=[(a+1,b+1) for a in range(5) for b in range(a+1,5) if fark(a,b)==1]
-assert (1,3) in tek and [c for c in tek if exps[c[0]-1][2]!=exps[c[1]-1][2]]==[(1,3)]
-for c in [(1,2),(1,5),(2,4),(4,5)]: assert fark(c[0]-1,c[1]-1)==1 or fark(c[0]-1,c[1]-1)==2
-SK19=tablo_svg(['Deney','Mg’nin biçimi','[HCl] (mol/L)','Sıcaklık (°C)'],[[e[0],e[1],str(e[2]),str(e[3])] for e in exps])
-s19=['1 ve 2','1 ve 3','1 ve 5','2 ve 4','4 ve 5']  # B
-assert fark(0,1)==1 and fark(0,4)==1 and fark(3,4)==2 and fark(1,3)==2
+assert [c for c in tek if exps[c[0]-1][2]!=exps[c[1]-1][2]]==[(1,3)] and fark(0,1)==1 and fark(0,4)==1 and fark(1,3)==2 and fark(3,4)==2
+SK19=tablo_svg(['Deney','[Na₂S₂O₃] (mol/L)','[HCl] (mol/L)','Sıcaklık (°C)'],[[e[0],fm(e[1]),fm(e[2]),str(e[3])] for e in exps])
+s19=['1 ve 2','1 ve 3','1 ve 5','2 ve 4','4 ve 5']
 q('0019',tipId='hz-faktor',tip='Kontrollü deney çifti seçimi',z='orta',alt='Hızı Etkileyen Faktörler',kaz='Hızı etkileyen bir etkeni belirlemek için kontrollü deney çiftini seçer.',kalip='tablo',
- kart='K-AKHZ-19 (kontrollü deney) · Mg + HCl, beş deney',sekil=SK19,
- metin='Mg(k) + 2HCl(suda) → MgCl₂(suda) + H₂(g) tepkimesinin hızını etkileyen etkenleri incelemek için aynı kütlede Mg ve aynı hacimde HCl çözeltisi kullanılarak tabloda verilen beş deney yapılmıştır.\nBuna göre HCl derişiminin tepkime hızına etkisini incelemek için hangi iki deneyin sonuçları karşılaştırılmalıdır?',
+ kart='K-AKHZ-19 (kontrollü deney) · Na₂S₂O₃ + HCl, beş deney',sekil=SK19,
+ metin='Na₂S₂O₃(suda) + 2HCl(suda) → 2NaCl(suda) + S(k) + SO₂(g) + H₂O(s) tepkimesinde oluşan katı kükürt çözeltiyi bulandırmaktadır. Hızı etkileyen etkenleri incelemek için aynı hacimli çözeltilerle tabloda verilen beş deney yapılmıştır.\nBuna göre HCl derişiminin tepkime hızına etkisini incelemek için hangi iki deneyin sonuçları karşılaştırılmalıdır?',
  dogru='1 ve 3',sira=s19,
- yan=[(s19[0],'Mg’nin biçiminin farklı olduğu deney çiftini seçmiş; bu çift temas yüzeyini inceler.','dikkat'),(s19[2],'Sıcaklığın farklı olduğu çifti seçmiş; bu çift sıcaklığın etkisini inceler.','dikkat'),(s19[3],'Derişimin farklı olduğu bir çift seçmiş ama sıcaklık da farklı; iki etken birlikte değişiyor.','bilgi'),(s19[4],'Derişimin farklı olduğu bir çift seçmiş ama Mg’nin biçimi de farklı; iki etken birlikte değişiyor.','bilgi')],
- istenen='Derişimin etkisini inceleyen deney çifti.',ip=['İncelenen etken dışındaki bütün koşulları aynı olan iki deneyi ara.'],
+ yan=[(s19[0],'Na₂S₂O₃ derişiminin farklı olduğu çifti seçmiş; bu çift Na₂S₂O₃ derişiminin etkisini inceler.','dikkat'),(s19[2],'Sıcaklığın farklı olduğu çifti seçmiş; bu çift sıcaklığın etkisini inceler.','dikkat'),(s19[3],'HCl derişiminin farklı olduğu bir çift seçmiş ama sıcaklık da farklı; iki etken birlikte değişiyor.','bilgi'),(s19[4],'HCl derişiminin farklı olduğu bir çift seçmiş ama Na₂S₂O₃ derişimi de farklı; iki etken birlikte değişiyor.','bilgi')],
+ istenen='HCl derişiminin etkisini inceleyen deney çifti.',ip=['İncelenen etken dışındaki bütün koşulları aynı olan iki deneyi ara.'],
  bilgi=[B('Kontrollü deney','bir etkenin hıza etkisini görmek için yalnız o etken değiştirilir, diğer koşullar sabit tutulur. Aksi hâlde hız farkının hangi etkenden geldiği anlaşılamaz. Örnek: ısı etkisi için iki deneyde yalnız sıcaklık farklı olmalıdır')],
- ad=[A('Koşulları listele','Tabloyu okuyup her deneyin biçim, derişim ve sıcaklığına bak.','1: şerit, 1, 25 · 3: şerit, 2, 25'),A('Derişimi ayır','Yalnız [HCl]’in farklı olduğu çiftleri ara.','1 ve 3: biçim ve sıcaklık aynı'),A('Diğer çiftleri ele','Öbür çiftlerde birden çok koşul farklı ya da başka etken değişiyor.','2 ve 4: derişim ve sıcaklık farklı · 4 ve 5: biçim ve derişim farklı'),A('Sonuç','Doğru çift 1 ve 3’tür.','1 ve 3')],
+ ad=[A('Koşulları listele','Tabloyu okuyup her deneyin iki derişimine ve sıcaklığına bak.','1: 0,1 · 0,5 · 20 °C ve 3: 0,1 · 1 · 20 °C'),A('HCl’yi ayır','Yalnız [HCl]’in farklı olduğu çiftleri ara.','1 ve 3: Na₂S₂O₃ derişimi ve sıcaklık aynı'),A('Diğer çiftleri ele','Öbür çiftlerde birden çok koşul farklı ya da başka etken değişiyor.','2 ve 4: HCl ve sıcaklık farklı · 4 ve 5: Na₂S₂O₃ ve HCl farklı'),A('Sonuç','Doğru çift 1 ve 3’tür.','1 ve 3')],
  puf='Etkisini incelediğin etken dışında hiçbir koşul farklı olmamalı.')
 
 # ================= 20 · katalizörlü iki basamaklı yol · zor =================
@@ -459,7 +458,7 @@ SK20=tk(g)
 q('0020',tipId='hz-katalizor',tip='Katalizörlü yolda hız belirleyen basamak',z='zor',alt='Katalizör',kaz='Katalizörlü iki basamaklı yolda hız belirleyen basamağı bulup katalizörün sağladığı Ea azalmasını hesaplar.',kalip='grafik',
  kart='K-AKHZ-20 (katalizörlü iki basamaklı yol) · katalizörsüz tek basamak',sekil=SK20,
  metin='Bir tepkime katalizörsüz ortamda tek basamakta gerçekleşmektedir. Ortama katalizör eklendiğinde tepkime ara ürün oluşturarak iki basamakta gerçekleşmektedir. İki yol için potansiyel enerji–tepkime koordinatı grafiği şekilde verilmiştir.\nBuna göre katalizörlü yolda hız belirleyen basamağın aktivasyon enerjisi, katalizörsüz yoldaki aktivasyon enerjisinden kaç kJ daha küçüktür?',
- dogru=30,yan=[(10,'Katalizörlü yolun hızlı basamağının Ea’sını (50 − 40) hız belirleyen sanmış.','bilgi'),(20,'Tepkime entalpisinin büyüklüğünü (30 − 10) aktivasyon enerjisi farkı sanmış.','bilgi'),(50,'Katalizörlü yolun yavaş basamağı yerine hızlı basamağıyla katalizörsüz Ea’yı kıyaslamış (60 − 10).','islem'),(60,'Katalizörsüz yolun Ea’sının tamamının ortadan kalktığını sanmış.','bilgi')],
+ dogru=30,yan=[(10,'Hızlı basamağın aktivasyon enerjisini (10 kJ) doğrudan fark sanmış.','bilgi'),(20,'Tepkime entalpisinin büyüklüğünü (30 − 10) aktivasyon enerjisi farkı sanmış.','bilgi'),(50,'Katalizörlü yolun yavaş basamağı yerine hızlı basamağıyla katalizörsüz Ea’yı kıyaslamış (60 − 10).','islem'),(60,'Katalizörsüz yolun Ea’sının tamamının ortadan kalktığını sanmış.','bilgi')],
  istenen='Ea’daki fark (kJ).',ip=['Katalizörlü yolun her basamağını kendi başlangıç düzeyinden ölçüp hangisinin daha büyük olduğuna bak.'],
  bilgi=[B('Katalizörlü yol','katalizör tepkimeyi daha düşük enerjili, çoğu kez daha çok basamaklı bir yoldan gerçekleştirir. Basamaklı yolda aktivasyon enerjisi en büyük olan basamak hızı belirler. Örnek: iki basamağın Ea’ları 12 ve 8 kJ ise hızı belirleyen 12 kJ’lik basamaktır')],
  ad=[A('Katalizörsüz Ea','Tepe girenlerin düzeyinden okunur.','90 − 30 = 60 kJ'),A('Katalizörlü basamaklar','Her basamak kendi başlangıç düzeyinden ölçülür.','1. basamak: 60 − 30 = 30 kJ · 2. basamak: 50 − 40 = 10 kJ'),A('Hız belirleyen basamak','Ea’sı büyük olan basamak yavaştır.','30 kJ > 10 kJ → 1. basamak'),A('Farkı bul','Katalizörsüz Ea’dan çıkar.','60 − 30 = 30 kJ')],

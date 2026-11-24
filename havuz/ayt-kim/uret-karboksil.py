@@ -182,7 +182,7 @@ Q('0004','asit','orta','tablo','Asitlik ve Ka','Ka değerlerini karşılaştıra
   metin='Aynı sıcaklıkta üç karboksilik asidin asitlik sabitleri (Ka) tabloda verilmiştir. Bu asitlerin 0,1 M derişimli sulu çözeltileri hazırlanıyor.\nI. pH değeri en yüksek olan çözelti metanoik asit çözeltisidir.\nII. İyonlaşma yüzdesi en büyük olan asit metanoik asittir.\nIII. Eşlenik bazı en kuvvetli olan asit propanoik asittir.\nBuna göre bu yargılardan hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Ka değerlerini büyükten küçüğe sırala; sıradaki yerin pH, iyonlaşma yüzdesi ve eşlenik baz gücünü nasıl etkilediğini düşün.'],
   bilgi=[B('Ka ve asit gücü','Zayıf asitte Ka büyüdükçe asit kuvvetlenir; aynı derişimde [H⁺] artar, pH azalır, iyonlaşma yüzdesi artar. Bir asit ne kadar zayıfsa eşlenik bazı o kadar kuvvetlidir. Örnek: Ka = 10⁻³ olan asit, Ka = 10⁻⁶ olan asitten kuvvetlidir')],
-  puf='Ka büyükse asit güçlü, pH düşük, iyonlaşma yüzdesi yüksek, eşlenik baz zayıftır.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Ka büyüdükçe asit kuvvetlenir; sıralamayı Ka’dan başlatıp her büyüklüğü ayrı ayrı yorumla.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 05 · kaynama noktası · orta · grafik =================
 BP={'CH₃CH₂CH₂OH':97,'CH₃COOH':118,'HCOOCH₃':32}
@@ -193,7 +193,7 @@ yan5=[(sirala('CH₃COOH','CH₃CH₂CH₂OH','HCOOCH₃'),'Alkolün kaynama nok
       (sirala('HCOOCH₃','CH₃COOH','CH₃CH₂CH₂OH'),'Esterin kaynama noktasını alkolünkinden yüksek sanmış; oysa esterde O–H bağı yoktur ve saf esterde hidrojen bağı oluşmaz.','bilgi'),
       (sirala('CH₃CH₂CH₂OH','HCOOCH₃','CH₃COOH'),'Esteri asitten daha yüksek, asidi en düşük kaynama noktalı sanmış; oysa asit dimerleşerek üçü arasında en yüksek kaynama noktasına sahiptir.','bilgi'),
       (sirala('HCOOCH₃','CH₃CH₂CH₂OH','CH₃COOH'),'Üç bileşiğin molekül kütlelerinin eşit olmasına bakıp sıralamayı yalnız hidrojen bağı sayısına göre değil, esteri en düşük, asidi en yüksek alarak ters kurmuş; oysa asit en yüksek, ester en düşüktür ve bu sıra Z, X, Y için değil X, Y, Z için sorulmuştur.','dikkat')]
-yan5[3]=(yan5[3][0],'Esteri ve alkolü ters yerleştirmiş; oysa en düşük kaynama noktası hidrojen bağı yapamayan estere, ortadaki değer alkole aittir.','bilgi')
+yan5[3]=(yan5[3][0],'Asidi en düşük, alkolü en yüksek kaynayan sanmış; hidrojen bağı ve dimer etkisini ters değerlendirmiş.','bilgi')
 SK=tk('''\\draw[thick,-{Stealth}] (0,0) -- (0,5.6);\\draw[thick] (0,0) -- (5.2,0);
 \\foreach \\v/\\y in {0/0,20/0.8,40/1.6,60/2.4,80/3.2,100/4.0,120/4.8}{\\draw (0,\\y) -- (-.1,\\y); \\node[left,font=\\small] at (-.1,\\y) {\\v}; \\draw[dotted,gray] (0,\\y) -- (5.2,\\y);}
 \\node[font=\\small,rotate=90] at (-1.0,2.8) {Normal kaynama noktası ($^\\circ$C)};
@@ -262,9 +262,9 @@ Q('0007','asit','orta','grafik','Titrasyon eğrisi ve Ka','Zayıf asit–kuvvetl
   'Zayıf asit titrasyonunda yarı eşdeğerlik noktasında [HA] = [A⁻] olduğundan pH = pKa’dır; eşdeğerlik noktasının hacminin yarısındaki pH okunur.','Başlangıç, eşdeğerlik ya da nötr pH’yi Ka sanmak.','titrasyon eğrisi',
   [A('Eşdeğerlik hacmini bul','Eğrinin dikey sıçradığı hacim eşdeğerlik noktasıdır.','Eşdeğerlik noktası: 20 mL'),A('Yarı eşdeğerlik hacmini al','Asidin yarısı nötrleşmiştir.','20 mL ÷ 2 = 10 mL'),A('pH değerini oku','Bu noktada [HA] = [A⁻] olduğundan pH = pKa’dır.','10 mL’de pH = 5'),A('Ka’yı hesapla','Ka = 10 üzeri −pKa.','Ka = 1·10⁻⁵')],
   metin='Hacmi 20 mL olan, tek protonlu zayıf bir karboksilik asit çözeltisi 0,1 M NaOH çözeltisi ile titre ediliyor. Titrasyon sırasında çözeltinin pH değerinin eklenen NaOH çözeltisi hacmiyle değişimi şekildeki grafikte verilmiştir.\nBuna göre bu asidin Ka değeri kaçtır?',
-  sekil=SK,istenen='Asidin Ka değeri.',ip=['Asidin tam yarısının nötrleştiği noktadaki pH değerinin ne anlama geldiğini düşün.'],
-  bilgi=[B('Yarı eşdeğerlik noktası','Zayıf asit, yarısı kadar kuvvetli bazla nötrleştirildiğinde [HA] = [A⁻] olur. Henderson eşitliğinden pH = pKa bulunur. Örnek: bu noktada pH = 4 ise pKa = 4, Ka = 10⁻⁴ olur')],
-  puf='Zayıf asit titrasyonunda eşdeğerlik hacminin yarısındaki pH, pKa’ya eşittir.',dogru='1·10⁻⁵',yan=yan7,sira=['1·10⁻¹²','1·10⁻⁹','1·10⁻⁷','1·10⁻⁵','1·10⁻³'])
+  sekil=SK,istenen='Asidin Ka değeri.',ip=['Titrasyonun ilerleyen noktalarında asit ve eşlenik bazın derişimlerinin birbirine oranını düşün.'],
+  bilgi=[B('Yarı eşdeğerlik noktası','Zayıf asit, yarısı kadar kuvvetli bazla nötrleştirildiğinde [HA] = [A⁻] olur. Bu noktada pH ile pKa arasındaki ilişkiden Ka bulunur')],
+  puf='Zayıf asit titrasyon eğrisinde Ka, eğrinin özel noktalarından okunur; her noktanın anlamını ayır.',dogru='1·10⁻⁵',yan=yan7,sira=['1·10⁻¹²','1·10⁻⁹','1·10⁻⁷','1·10⁻⁵','1·10⁻³'])
 
 # ================= 08 · tepkimeler · orta · düzenek · öncüllü =================
 d=dict(I=(True,'Mg gibi aktif metaller karboksilik asitle tepkimeye girerek H₂ gazı açığa çıkarır; X tüpünde gaz çıkışı gözlenir'),
@@ -346,19 +346,19 @@ Q('0012','est','orta','öncüllü','Dengeyi etkileyen etmenler','Esterleşme den
   puf='Kc’yi yalnız sıcaklık, denge konumunu derişim ve sıcaklık değiştirir; katalizör hiçbirini değiştirmez.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 13 · verim · zor =================
-n_as=Fr(18,60); n_al=Fr(23,46); Mest=4*12+8+2*16; assert Mest==88
-assert n_as==Fr(3,10) and n_al==Fr(1,2) and n_as<n_al
-teorik=n_as*Mest; dog13=teorik*Fr(3,4); assert dog13==Fr(198,10)
-yan13=[(Fr(135,10),'Asit kütlesinin %75’ini (18 × 0,75) alıp ester kütlesi sanmış; oysa mol sayısı ester mol kütlesiyle çarpılmalıdır.','islem'),
-       (teorik,'Verimi hesaba katmamış; %100 verimle oluşacak ester kütlesini (26,4 g) vermiş.','dikkat'),
-       (n_al*Fr(3,4)*Mest,'Sınırlayıcı bileşeni alkol sanıp 0,5 mol alkol üzerinden %75 verimle hesaplamış.','bilgi'),
+n_as=Fr(37,74); n_al=Fr(192,10)/32; Mest=4*12+8+2*16; assert Mest==88
+assert n_as==Fr(1,2) and n_al==Fr(3,5) and n_as<n_al
+teorik=n_as*Mest; dog13=teorik*Fr(4,5); assert dog13==Fr(352,10)
+yan13=[(Fr(37)*Fr(4,5),'Asit kütlesinin %80’ini (37 × 0,8) alıp ester kütlesi sanmış; oysa mol sayısı ester mol kütlesiyle çarpılmalıdır.','islem'),
+       (n_al*Fr(4,5)*Mest,'Sınırlayıcı bileşeni alkol sanıp 0,6 mol alkol üzerinden %80 verimle hesaplamış.','bilgi'),
+       (teorik,'Verimi hesaba katmamış; %100 verimle oluşacak ester kütlesini (44 g) vermiş.','dikkat'),
        (n_al*Mest,'Sınırlayıcı bileşeni alkol sanmış ve verimi hesaba katmamış.','bilgi')]
-assert [yy[0] for yy in yan13]==[Fr(135,10),Fr(264,10),Fr(33),Fr(44)]
+assert [float(yy[0]) for yy in yan13]==[29.6,42.24,44.0,52.8]
 Q('0013','est','zor','hikâyeli','Esterleşmede sınırlayıcı bileşen ve verim','Esterleşme tepkimesinde sınırlayıcı bileşeni belirler ve verimi kullanarak ester kütlesini hesaplar.',
   'Esterleşmede girenler 1:1 mol oranında tepkimeye girer; az olan mol sınırlayıcıdır, teorik ürün miktarı onunla bulunur ve verimle çarpılır.','Sınırlayıcı bileşeni kütleye bakarak seçmek ya da verimi unutmak.','esterleşme verimi',
-  [A('Mol sayılarını bul','Mol = kütle ÷ mol kütlesi.','Asit: 18 ÷ 60 = 0,3 · alkol: 23 ÷ 46 = 0,5'),A('Sınırlayıcıyı belirle','1:1 oranda az olan mol sınırlar.','CH₃COOH sınırlayıcı'),A('Teorik ester molünü bul','Teorik ürün sınırlayıcı kadardır.','0,3 mol ester'),A('Verimi uygula','Gerçek ürün = teorik × verim.','0,3 × 0,75 = 0,225 mol'),A('Kütleye çevir','Ester mol kütlesi 88 g/mol.','0,225 × 88 = 19,8 g')],
-  metin='Bir laboratuvarda 18 g etanoik asit (CH₃COOH) ile 23 g etanol (CH₃CH₂OH), derişik H₂SO₄ katalizörlüğünde tepkimeye sokularak etil etanoat elde ediliyor. Tepkime sonunda verimin %75 olduğu belirleniyor (H = 1, C = 12, O = 16).\nBuna göre oluşan etil etanoatın kütlesi kaç gramdır?',
-  istenen='Oluşan etil etanoat kütlesi (g).',ip=['İki girenin mol sayısını karşılaştırarak ürün miktarını belirleyen maddeyi bul; verimi en son uygula.'],
+  [A('Mol sayılarını bul','Mol = kütle ÷ mol kütlesi.','Asit: 37 ÷ 74 = 0,5 · alkol: 19,2 ÷ 32 = 0,6'),A('Sınırlayıcıyı belirle','1:1 oranda az olan mol sınırlar.','C₂H₅COOH sınırlayıcı'),A('Teorik ester molünü bul','Teorik ürün sınırlayıcı kadardır.','0,5 mol ester'),A('Verimi uygula','Gerçek ürün = teorik × verim.','0,5 × 0,8 = 0,4 mol'),A('Kütleye çevir','Ester mol kütlesi 88 g/mol.','0,4 × 88 = 35,2 g')],
+  metin='Bir laboratuvarda 37 g propanoik asit (CH₃CH₂COOH) ile 19,2 g metanol (CH₃OH), derişik H₂SO₄ katalizörlüğünde tepkimeye sokularak metil propanoat elde ediliyor. Tepkime sonunda verimin %80 olduğu belirleniyor (H = 1, C = 12, O = 16).\nBuna göre oluşan metil propanoatın kütlesi kaç gramdır?',
+  istenen='Oluşan metil propanoat kütlesi (g).',ip=['İki girenin mol sayısını karşılaştırarak ürün miktarını belirleyen maddeyi bul; verimi en son uygula.'],
   bilgi=[B('Sınırlayıcı bileşen ve verim','Tepkimede önce biten madde ürün miktarını belirler. Verim = gerçek ürün ÷ teorik ürün × 100’dür. Örnek: 1:1 oranında tepkimeye giren A (2 mol) ve B (3 mol) için en çok 2 mol ürün oluşur')],
   puf='Önce sınırlayıcıyı bul, teorik ürünü hesapla, en sonda verimle çarp.',dogru=dog13,yan=yan13)
 
@@ -380,7 +380,7 @@ Q('0014','est','orta','şekilli','Esterin bazik hidrolizi','İskelet formülü v
 # ================= 15 · ester şeması · zor · öncüllü · şekil =================
 d=dict(I=(True,'Y, sodyum etanoattır; kuvvetli asit eklenince zayıf asit olan etanoik asit serbest kalır'),
        II=(True,'Z etanoldür; yeterli yükseltgenle yükseltgenirse etanoik asit oluşur ve bu, Y’den asitle elde edilen ürünle aynıdır'),
-       III=(False,'X’in formülü C₄H₈O₂, Z’nin formülü C₂H₆O’dur; formülleri farklı olduğundan yapı izomeri değildirler'))
+       III=(False,'X’in mol kütlesi 88 g/mol olduğundan 17,6 g X 0,2 mol eder; 0,2 mol Y (CH₃COONa, 82 g/mol) 16,4 g’dır, 8,2 g değil'))
 o=OC(d,sr('Yalnız I','Yalnız II','I ve II','I ve III','II ve III')); assert o['dogru']=='I ve II'
 mx=draw(M_ET_ETA,0,0)
 g=(mx+'\\node[font=\\small\\bfseries] at (1.0,-.95) {X};'
@@ -389,8 +389,8 @@ g=(mx+'\\node[font=\\small\\bfseries] at (1.0,-.95) {X};'
 SK=tk(g)
 Q('0015','est','zor','öncüllü','Esterin hidrolizi ve ürünlerin dönüşümü','Esterin bazik hidroliz ürünlerini bulur; tuzun asitlendirilmesi ve alkolün yükseltgenmesiyle aynı asitin oluştuğunu birleştirir.',
   'Ester, NaOH ile organik tuz ve alkol verir; tuz asitlendirilince karboksilik asit, birincil alkol yeterli yükseltgenle yükseltgenince yine karboksilik asit oluşur.','Tuzun asitlendirilince ne verdiğini ve alkolün yükseltgenme ürününü ilişkilendirememek.','etil etanoat şeması',
-  [A('X’i çöz','Asit kısmı iki karbonlu, alkol kısmı etil grubudur.','X: etil etanoat, C₄H₈O₂'),A('Y ve Z’yi bul','NaOH ile tuz ve alkol oluşur.','Y: CH₃COONa · Z: CH₃CH₂OH'),A('I’i değerlendir','Tuz asitlendirilince asit oluşur.','CH₃COONa + HCl → CH₃COOH → I doğru'),A('II’yi değerlendir','Birincil alkolün yükseltgenmesi asit verir.','CH₃CH₂OH → CH₃COOH → II doğru'),A('III’ü değerlendir','Formülleri karşılaştır.','C₄H₈O₂ ≠ C₂H₆O → III yanlış')],
-  metin='Şekilde iskelet formülü verilen X esteri, NaOH çözeltisiyle ısıtıldığında organik bir tuz olan Y ve bir alkol olan Z oluşturuyor.\nI. Y bileşiğinin sulu çözeltisine yeterli miktarda HCl eklenirse etanoik asit oluşur.\nII. Z bileşiği yeterli miktarda yükseltgenle yükseltgenirse, I’deki ürünle aynı bileşik oluşur.\nIII. X ile Z birbirinin yapı izomeridir.\nBuna göre bu yargılardan hangileri doğrudur?',
+  [A('X’i çöz','Asit kısmı iki karbonlu, alkol kısmı etil grubudur.','X: etil etanoat, C₄H₈O₂'),A('Y ve Z’yi bul','NaOH ile tuz ve alkol oluşur.','Y: CH₃COONa · Z: CH₃CH₂OH'),A('I’i değerlendir','Tuz asitlendirilince asit oluşur.','CH₃COONa + HCl → CH₃COOH → I doğru'),A('II’yi değerlendir','Birincil alkolün yükseltgenmesi asit verir.','CH₃CH₂OH → CH₃COOH → II doğru'),A('III’ü değerlendir','Mol sayısından Y kütlesini bul.','17,6 ÷ 88 = 0,2 mol → 0,2 × 82 = 16,4 g → III yanlış')],
+  metin='Şekilde iskelet formülü verilen X esteri, NaOH çözeltisiyle ısıtıldığında organik bir tuz olan Y ve bir alkol olan Z oluşturuyor.\nI. Y bileşiğinin sulu çözeltisine yeterli miktarda HCl eklenirse etanoik asit oluşur.\nII. Z bileşiği yeterli miktarda yükseltgenle yükseltgenirse, I’deki ürünle aynı bileşik oluşur.\nIII. 17,6 g X tamamen hidroliz edilirse 8,2 g Y oluşur (H = 1, C = 12, O = 16, Na = 23).\nBuna göre bu yargılardan hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['X’in asit ve alkol kısımlarını ayırıp Y ve Z’nin yapılarını yaz; sonra I ve II’deki dönüşümleri ayrı ayrı izle.'],
   bilgi=[B('Asit–alkol–ester dönüşümleri','Ester + NaOH → karboksilat tuzu + alkol. Karboksilat tuzu + güçlü asit → karboksilik asit. Birincil alkol yeterli yükseltgenle karboksilik aside kadar yükseltgenir. Örnek: CH₃CH₂COONa + HCl → CH₃CH₂COOH + NaCl')],
   puf='Esterin bazik hidrolizinden gelen tuz asitlendirilince, alkol de yükseltgenince karboksilik asit verir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
@@ -405,13 +405,13 @@ yan16=[('I, II, III','X’i propanoik asit, Y’yi ester sanmış; oysa X NaHCO�
        ('I, III, II','X’i asit sanıp Z’yi ester saymış; oysa Z NaHCO₃’ten gaz çıkardığı için asittir.','bilgi'),
        ('II, III, I','Doymuş ve doymamış asitleri ters yerleştirmiş; oysa rengi açan Z’nin C=C bağı taşıyan CH₂=CH–COOH olması gerekir.','bilgi'),
        ('III, I, II','Y’yi doymuş asit bulmuş ama X’i doymamış asit, Z’yi ester saymış; oysa X gaz vermez, Z gaz verir ve brom çözeltisinin rengini açar.','bilgi')]
-Q('0016','tep','zor','tablo','Asit, ester ve doymamış asidi ayırt etme','Üç ayırt edici deney sonucunu birleştirerek karboksilik asit, ester ve doymamış karboksilik asidi belirler.',
+Q('0016','tep','orta','tablo','Asit, ester ve doymamış asidi ayırt etme','Üç ayırt edici deney sonucunu birleştirerek karboksilik asit, ester ve doymamış karboksilik asidi belirler.',
   'NaHCO₃ ile gaz karboksilik asidi gösterir; Br₂ çözeltisinin renginin açılması C=C bağını, NaOH ile ısıtılınca tuz ve alkol oluşması esteri gösterir.','Tek bir deney sonucuna bakıp üç maddeyi ayırt etmeye çalışmak.','X, Y, Z maddeleri',
   [A('NaHCO₃ sonucunu oku','Gaz veren madde karboksil grubu taşır.','Y ve Z asit · X asit değil'),A('X’i belirle','Asit olmayan ve NaOH ile tuz ve alkol veren madde estere aittir.','X: CH₃COOCH₃'),A('Br₂ sonucunu oku','Rengi açan madde C=C içerir.','Z: CH₂=CH–COOH'),A('Kalanı eşleştir','Doymuş asit kalır.','Y: CH₃CH₂COOH')],
   metin='X, Y ve Z maddeleri I. CH₃CH₂COOH, II. CH₃COOCH₃ ve III. CH₂=CH–COOH bileşiklerinden birer tanesidir. Bu maddelerle yapılan üç deneyin sonuçları tabloda verilmiştir.\nBuna göre X, Y ve Z maddeleri sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?',
   sekil=SK,istenen='X, Y ve Z’nin sırasıyla hangi bileşikler olduğu.',ip=['Tablodaki her deneyin hangi fonksiyonel grubu ya da bağı ortaya koyduğunu belirleyip adayları teker teker ele.'],
   bilgi=[B('Ayırt etme deneyleri','Karboksilik asit NaHCO₃’ten CO₂ çıkarır, ester çıkarmaz. Doymamış bileşik Br₂ çözeltisinin rengini açar, doymuş bileşik açmaz. Ester NaOH ile ısıtılınca tuz ve alkol verir. Örnek: CH₃COOH gaz verir ama Br₂’nin rengini değiştirmez')],
-  puf='Gaz çıkışı asidi, renk açılması C=C bağını, tuz ve alkol oluşumu esteri gösterir.',dogru=dg16,yan=yan16,sira=['I, II, III',dg16,'I, III, II','II, III, I','III, I, II'])
+  puf='Her deney farklı bir fonksiyonel grubu ya da bağı ayırt eder; sonuçları adaylarla tek tek eşleştir.',dogru=dg16,yan=yan16,sira=['I, II, III',dg16,'I, III, II','II, III, I','III, I, II'])
 
 # ================= 17 · sabun misel · orta · şekil · öncüllü =================
 d=dict(I=(True,'1 ile gösterilen hidrokarbon zinciri apolardır; apolar yağ damlasına doğru yönelir ve London kuvvetleriyle etkileşir'),
@@ -480,12 +480,13 @@ Q('0019','yag','orta','öncüllü','Doymuş ve doymamış yağ asitleri','Doymu�
 nTG2=Fr(884,10)/MTG; assert nTG2==Fr(1,10)
 ndb=3  # şekildeki C=C sayısı
 assert sum(1 for sp in [OLE]*3 for x in sp if x[4]==2 and x[3] is None)==3
-mH=nTG2*ndb*2; dg20=Fr(884,10)+mH; assert dg20==Fr(89)
+nH2=Fr(2,10); assert nH2<nTG2*ndb
+dg20=Fr(884,10)+nH2*2; assert dg20==Fr(888,10)
 yan20=[(Fr(884,10),'Hidrojenleme sonunda kütlenin değişmediğini sanmış; oysa katılan H₂ kütleyi artırır.','bilgi'),
-       (Fr(884,10)+nTG2*1*2,'Yalnız bir çift bağın hidrojenlendiğini kabul etmiş; oysa trigliseritte üç yağ asidi zincirinin her birinde bir C=C vardır.','dikkat'),
-       (Fr(884,10)+nTG2*ndb*1,'H₂ yerine H atomunun kütlesini (1 g/mol) kullanmış.','islem'),
-       (Fr(884,10)+nTG2*(ndb+3)*2,'Üç ester C=O bağını da hidrojenlenebilir sayıp 6 mol H₂ harcamış; oysa Ni katalizörüyle yalnız C=C bağları doyurulur.','bilgi')]
-assert [y[0] for y in yan20]==[Fr(884,10),Fr(886,10),Fr(887,10),Fr(896,10)]
+       (Fr(884,10)+nTG2*1*2,'Yalnız bir çift bağın hidrojenlendiğini kabul etmiş; oysa 0,2 mol H₂ iki C=C bağını doyurur.','dikkat'),
+       (Fr(884,10)+nTG2*ndb*2,'H₂’nin yeterli olduğunu varsayıp tüm C=C bağlarının (0,3 mol) doyduğunu kabul etmiş; oysa yalnız 0,2 mol H₂ vardır.','dikkat'),
+       (Fr(884,10)+nTG2*(ndb+3)*2,'Üç ester C=O bağını da hidrojenlenebilir sayıp 6 mol H₂ bağlayacağını varsaymış; oysa yalnız C=C bağları doyurulur.','bilgi')]
+assert [float(y[0]) for y in yan20]==[88.4,88.6,89.0,89.6]
 tg=''
 for i,yy in enumerate([2.6,1.3,0.0]):
     tg+=draw(OLE,0.9,yy,0.40,'\\footnotesize',0.12)+f'\n\\draw[thick] (0.2,{yy:.2f}) -- (0.9-0.12+0.0,{yy:.2f});'
@@ -493,11 +494,11 @@ tg+='\n\\draw[thick] (0.2,0) -- (0.2,2.6);'
 SK=tk(tg)
 Q('0020','yag','zor','şekilli','Yağın hidrojenlenmesi','Şekilde verilen trigliseritteki C=C sayısından harcanan H₂ miktarını ve hidrojenleme ürününün kütlesini hesaplar.',
   'Hidrojenleme yalnız C=C bağlarına H₂ katar; her C=C için 1 mol H₂ harcanır, ester C=O bağları etkilenmez ve ürün kütlesi başlangıç kütlesi ile eklenen H₂ kütlesinin toplamıdır.','Ester C=O bağlarını da hidrojenlenebilir saymak ya da kütle artışını unutmak.','triolein hidrojenlenmesi',
-  [A('Çift bağları say','Her yağ asidi zincirinde bir C=C vardır.','3 C=C → 3 mol H₂ / mol yağ'),A('Yağın molünü bul','Mol = kütle ÷ mol kütlesi.','88,4 ÷ 884 = 0,1 mol'),A('Harcanan H₂’yi hesapla','Her C=C bağına 1 mol H₂ katılır.','0,1 × 3 = 0,3 mol'),A('H₂ kütlesini bul','H₂ mol kütlesi 2 g/mol.','0,3 × 2 = 0,6 g'),A('Ürün kütlesini yaz','Kütle korunur, H₂ eklenir.','88,4 + 0,6 = 89 g')],
-  metin='Şekilde yapısı gösterilen trigliserit (mol kütlesi 884 g/mol) için köşe ve uç noktalarda karbon bulunur; karbona bağlı hidrojenler yazılmamıştır. Bu trigliseritten 88,4 gramı, Ni katalizörü ve yeterli H₂ ile tamamen doymuş hâle getiriliyor ve katı yağ elde ediliyor (H = 1).\nBuna göre oluşan katı yağın kütlesi kaç gramdır?',
-  sekil=SK,istenen='Hidrojenleme sonunda oluşan katı yağın kütlesi (g).',ip=['Şekilde zincirlerdeki C=C bağlarını sayarak yağın bir molünün kaç mol H₂ bağlayacağını bul.'],
+  [A('Çift bağları say','Her yağ asidi zincirinde bir C=C vardır.','3 C=C → en çok 3 mol H₂ / mol yağ'),A('Yağın molünü bul','Mol = kütle ÷ mol kütlesi.','88,4 ÷ 884 = 0,1 mol → 0,3 mol C=C'),A('Sınırlayıcıyı belirle','Bağlanabilecek H₂ ile verilen H₂ karşılaştırılır.','0,2 mol H₂ < 0,3 mol → H₂ sınırlayıcı'),A('H₂ kütlesini bul','H₂ mol kütlesi 2 g/mol.','0,2 × 2 = 0,4 g'),A('Ürün kütlesini yaz','Kütle korunur, H₂ eklenir.','88,4 + 0,4 = 88,8 g')],
+  metin='Şekilde yapısı gösterilen trigliserit (mol kütlesi 884 g/mol) için köşe ve uç noktalarda karbon bulunur; karbona bağlı hidrojenler yazılmamıştır. Bu trigliseritten 88,4 gramı, Ni katalizörü varlığında 0,2 mol H₂ ile tepkimeye sokuluyor ve H₂’nin tamamı harcanıyor (H = 1).\nBuna göre tepkime sonunda elde edilen yağın kütlesi kaç gramdır?',
+  sekil=SK,istenen='Hidrojenleme sonunda elde edilen yağın kütlesi (g).',ip=['Yağın ve H₂’nin mol sayısını karşılaştırıp hangisinin tepkimeyi sınırladığını belirle.'],
   bilgi=[B('Yağların hidrojenlenmesi','Doymamış yağ, Ni katalizörüyle H₂ ile tepkimeye girince C=C bağları tek bağa dönüşür ve sıvı yağ katı yağa çevrilir. Her C=C için 1 mol H₂ gerekir. Örnek: 2 C=C içeren 1 mol yağ 2 mol H₂ bağlar')],
-  puf='Hidrojenlemede yalnız C=C bağları H₂ bağlar; ürün kütlesi = yağ kütlesi + bağlanan H₂ kütlesi.',dogru=dg20,yan=yan20)
+  puf='Hidrojenlemede kütle artışı bağlanan H₂ kadardır; H₂ yetersizse sınırlayıcı olan belirler.',dogru=dg20,yan=yan20)
 
 # ---------- yaz ----------
 for x_ in P.ANA: x_['kardes']=None

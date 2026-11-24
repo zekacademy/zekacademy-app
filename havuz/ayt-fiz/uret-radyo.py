@@ -52,8 +52,9 @@ def onc(truth,why,pos):
     return dict(dogru=dogru,sira=sira,yan=yan)
 # ---------- bilgi kutuları (örnekler sorulardaki sayıları kullanmaz)
 BZ=B('Bozunma türleri','α bozunmasında ⁴₂He çekirdeği yayınlanır: A 4, Z 2 azalır. β⁻ bozunmasında bir nötron protona dönüşür: A değişmez, Z 1 artar. β⁺ bozunmasında bir proton nötrona dönüşür: Z 1 azalır. γ ışımasında A ve Z değişmez. Her bozunmada toplam A ve toplam Z korunur. Örnek: ¹⁵⁰₆₀X α yayınlarsa ¹⁴⁶₅₈Y oluşur')
+YO2=B('Yarı ömür ve aktivite','kalan çekirdek sayısı N = N₀ × (½)^(t ÷ T) bağıntısıyla bulunur (T: yarı ömür). Aktivite (birim zamandaki bozunma sayısı) kalan çekirdek sayısıyla orantılıdır. Örnek: T = 4 saat ise 12 saat sonra kalan sayı N₀ ÷ 8 olur')
 IS=B('Işımaların özellikleri','α (He çekirdeği, +2e) iyonlaştırması en büyük, nüfuz gücü en küçüktür; kâğıt durdurur. β (elektron ya da pozitron) alüminyum levhada durur. γ yüksüz bir elektromanyetik dalgadır, alanlarda sapmaz ve en fazla işler; kalın kurşun şiddetini azaltır. Örnek: elektrik alanda en çok sapan ışıma, yük ÷ kütle oranı en büyük olan parçacıklardan oluşur')
-YO=B('Yarı ömür','Kalan çekirdek sayısı N = N₀ × (½)^(t ÷ T) bağıntısıyla bulunur; T sıcaklık, basınç ve kimyasal bağdan bağımsızdır. Aktivite (bozunma hızı) kalan çekirdek sayısıyla doğru orantılıdır ve her yarı ömürde yarıya iner. Örnek: T = 4 saat ise 12 saat sonra kalan sayı N₀ ÷ 8 olur')
+YO=B('Yarı ömür','Kalan çekirdek sayısı N = N₀ × (½)^(t ÷ T) bağıntısıyla bulunur; burada T yarı ömürdür ve sıcaklık, basınç, kimyasal bağ gibi dış koşullara bağlı değildir. Aktivite (bozunma hızı) kalan çekirdek sayısıyla doğru orantılıdır ve her yarı ömürde yarıya iner. Örnek: T = 4 saat ise 12 saat sonra kalan sayı N₀ ÷ 8 olur')
 TP=B('Çekirdek tepkimelerinde korunum','girenlerin ve ürünlerin kütle numaraları toplamı ile atom numaraları (yük) toplamı eşittir. Bilinmeyen parçacık bu iki toplamdan bulunur: A = 1, Z = 1 proton; A = 1, Z = 0 nötron; A = 0, Z = −1 elektron; A = 0, Z = +1 pozitron. Örnek: ¹⁴₇N + ¹₀n → ¹⁴₆C + ᴬ_ZX tepkimesinde X, protondur')
 FF=B('Fisyon ve füzyon','Fisyonda ağır bir çekirdek nötron yakalayıp daha hafif iki çekirdeğe ve birkaç nötrona bölünür; füzyonda hafif çekirdekler birleşir. İkisinde de ürünlerin toplam kütlesi girenlerinkinden küçüktür ve fark E = Δm × c² kadar enerjiye dönüşür. Füzyon için çok yüksek sıcaklık gerekir. Örnek: yıldızlarda hidrojen çekirdekleri helyuma dönüşür')
 BE=B('Bağlanma enerjisi','nükleon başına bağlanma enerjisi (Eb ÷ A) A ≈ 56 civarında en büyüktür. Toplam bağlanma enerjisi A × (Eb ÷ A) ile bulunur. Bir tepkimede açığa çıkan enerji, ürünlerin toplam bağlanma enerjisi ile girenlerinkinin farkıdır. Örnek: 40 nükleonlu bir çekirdekte nükleon başına 8 MeV ise toplam bağlanma enerjisi 320 MeV’dir')
@@ -83,7 +84,7 @@ q('0001',tipId='ra-bozunma',tip=TIPLER['ra-bozunma'],z='kolay',alt='Alfa Bozunma
  ad=[A('Kütle numarası','α parçacığı 4 nükleon taşır; kütle numaraları toplamı korunur.','A = 226 − 4 = 222'),
      A('Atom numarası','α parçacığı 2 proton taşır; atom numaraları toplamı korunur.','Z = 88 − 2 = 86'),
      A('Nötron sayısı','Nötron sayısı kütle numarası ile atom numarasının farkıdır.','N = 222 − 86 = 136')],
- puf='α bozunmasında ana çekirdek 2 proton ve 2 nötron kaybeder; nötron sayısı da 2 azalır.')
+ puf='α bozunmasında A ve Z’nin yeni değerlerini yaz; nötron sayısını yeni değerlerden hesapla.')
 # ===== 02 kolay · elektrik alanda ışımalar (öncüllü)
 card(2,'Elektrik alanda ışımaların sapması','Sapmanın yönü yükün işaretini, miktarı yük ÷ kütle oranını verir; yüksüz ışıma sapmaz ve en fazla işler.','Sapmayan ışımanın alan yönüne göre yolunu değiştireceğini sanmak; ağır parçacığın daha çok saptığını düşünmek.','kolay','öncüllü',3,'ra-isinim','alan içinde üç ışımanın izleri')
 o=[D((0,1.05),(2.6,1.05),'ultra thick'),D((0,-1.05),(2.6,-1.05),'ultra thick'),N(1.3,1.45,'(+) levha'),N(1.3,-1.45,'($-$) levha'),
@@ -109,7 +110,7 @@ q('0002',tipId='ra-isinim',tip=TIPLER['ra-isinim'],z='kolay',alt='Işımaların 
  ad=[A('X ve Z demetleri','Zıt yönlerde saparlar; Z daha çok saptığından yük ÷ kütle oranı daha büyüktür, yani daha hafif parçacıklardan oluşur.','X ağır (α), Z hafif (β⁻) → I doğru'),
      A('Y demeti','Sapmayan demet yüksüzdür; elektrik alan yük taşımayan ışımaya kuvvet uygulamaz.','Alan yönü değişse de Y sapmaz → II yanlış'),
      A('Nüfuz gücü','Yüksüz γ ışıması α ve β’dan daha fazla işler.','III doğru')],
- puf='Elektrik alanda sapmayan ışıma yüksüzdür (γ); kütlesi küçük olan parçacık aynı alanda daha çok sapar.',
+ puf='Sapma yönü yükün işaretini, sapma miktarı yük ÷ kütle oranını söyler.',
  **onc(tr2,['α parçacıkları elektronlardan binlerce kat ağırdır','Y demeti yüksüz olduğundan alan yönü değişse de doğrultusu değişmez','Y demeti γ ışımasıdır ve diğerlerinden çok daha fazla işler'],4))
 # ===== 03 kolay · N–t grafiği
 card(3,'Yarı ömür grafiği','Grafikte N’nin yarıya indiği süre yarı ömürdür; sonraki süreler için N₀ ÷ 2ⁿ kullanılır.','Çekirdek sayısının zamanla doğrusal azaldığını ya da kalan sayıyı bölme sayısıyla bölmeyi (N₀ ÷ n) düşünmek.','kolay','grafik',3,'ra-yarisure','N–t grafiğinden yarı ömür ve kalan sayı')
@@ -145,12 +146,12 @@ SK=tikz(o)
 q('0004',tipId='ra-zincir',tip=TIPLER['ra-zincir'],z='orta',alt='Bozunma Zinciri',kaz='Art arda bozunmalarda çekirdeklerin kütle ve atom numaralarını izleyerek izotop, izobar ve nötron sayısı yargılarını değerlendirir.',kalip='öncüllü',
  metin='K çekirdeği art arda dört bozunma geçirerek L, M, N ve P çekirdeklerine dönüşmektedir. Bozunma türleri şekildeki oklar üzerinde gösterilmiştir.\nBuna göre,\nI. K ile N çekirdekleri izotoptur.\nII. L ile M çekirdekleri izobardır.\nIII. P çekirdeğinin nötron sayısı, N çekirdeğininkinden fazladır.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Doğru yargılar.',
- ip=['Her adımda çekirdeğin A ve Z değerini yaz; sonra izotop, izobar ve nötron sayısı tanımlarına bak.'],
+ ip=['Her adımda çekirdeğin A ve Z değerini yaz; sonra tanımlara bak.'],
  bilgi=[BZ,NZ],
  ad=[A('Zinciri izle','α: A − 4, Z − 2; β⁻: Z + 1.','K(238, 92) → L(234, 90) → M(234, 91) → N(234, 92) → P(230, 90)'),
      A('I ve II','Aynı Z izotop, aynı A izobardır.','K ve N: Z = 92 (izotop); L ve M: A = 234 (izobar) → I, II doğru'),
      A('III','Nötron sayısı A − Z ile bulunur.','N: 234 − 92 = 142; P: 230 − 90 = 140 → III yanlış')],
- puf='β⁻ bozunmasında kütle numarası değişmez (izobar kalır), atom numarası 1 artar.',
+ puf='Her adımda A ve Z’yi yaz, sonra tanımlara bak.',
  **onc(t4,['K ile N’nin atom numaraları aynıdır (92)','L ve M’nin kütle numaraları aynıdır (234)','P’nin nötron sayısı 140, N’ninki ise 142’dir'],3))
 # ===== 05 orta · Th → Pb, β⁻ sayısı
 card(5,'Bozunma sayısı','Kütle numarası farkından α sayısı, atom numarası farkından β⁻ sayısı bulunur.','α sayısı ile β⁻ sayısını karıştırmak; α’nın Z’yi 2 azalttığını hesaba katmamak.','orta','grafik',3,'ra-bozunma','başlangıç ve son çekirdekten bozunma sayısı')
@@ -167,12 +168,12 @@ q('0005',tipId='ra-bozunma',tip=TIPLER['ra-bozunma'],z='orta',alt='Bozunma Sayı
  sekil=SK,dogru=top,yan=[(na,'Yalnız α sayısını (24 ÷ 4 = 6) yazmış; β⁻ parçacıklarını saymamış.','dikkat'),(nb,'Yalnız β⁻ sayısını (82 − 78 = 4) yazmış; α parçacıklarını saymamış.','dikkat'),
   (Xz-Yz,'Atom numarası farkını (90 − 82 = 8) bozunma sayısı sanmış.','islem'),(Xa-Ya,'Kütle numarası farkını (232 − 208 = 24) bozunma sayısı sanmış.','islem')],
  istenen='Yayınlanan α ve β⁻ parçacıklarının toplam sayısı.',
- ip=['Önce kütle numarasındaki azalmadan α sayısını bul; sonra atom numarasındaki değişimi iki tür bozunmaya paylaştır.'],
+ ip=['Hangi bozunma türünün kütle numarasını değiştirdiğini düşünerek başla.'],
  bilgi=[BZ],
  ad=[A('α sayısı','Yalnız α kütle numarasını 4 azaltır.','n(α) = (232 − 208) ÷ 4 = 6'),
      A('β⁻ sayısı','6 α, atom numarasını 12 azaltır (90 − 12 = 78); her β⁻ atom numarasını 1 artırır ve 82’ye çıkılmıştır.','n(β⁻) = 82 − 78 = 4'),
      A('Toplam','İki türün sayıları toplanır.','6 + 4 = 10')],
- puf='Önce kütle numarası farkından α sayısını bul; kalan atom numarası farkını β⁻ ile kapat, sonra topla.')
+ puf='Hangi bozunma kütle numarasını değiştirir? Önce onu say.')
 # ===== 06 zor · iki örneğin çekirdek sayılarının eşitlenmesi
 card(6,'Çekirdek sayılarının eşitlenmesi','İki örnekteki N = N₀ ÷ 2^(t ÷ T) ifadeleri eşitlenir; üsler arasındaki fark başlangıç oranına eşit olur.','Başlangıç sayıları oranını doğrudan yarı ömür sayısı sanmak; yarı ömürleri toplamak.','zor','tablo',4,'ra-yarisure','farklı yarı ömürlü iki örnek')
 rows6=[('K',25600,2),('L',3200,3)]
@@ -212,7 +213,7 @@ q('0007',tipId='ra-tepkime',tip=TIPLER['ra-tepkime'],z='orta',alt='Çekirdek Tep
  ad=[A('I. tepkime','A: 27 + 4 = 31 = 30 + A(X); Z: 13 + 2 = 15 = 15 + Z(X).','X: A = 1, Z = 0 → nötron'),
      A('II. tepkime','A: 30 = 30 + A(Y); Z: 15 = 14 + Z(Y).','Y: A = 0, Z = +1 → pozitron'),
      A('Sonuç','İki parçacık birlikte yazılır.','X: nötron, Y: pozitron')],
- puf='Tepkimede A ve Z toplamlarını ayrı ayrı eşitle; A = 0, Z = +1 parçacık pozitrondur, elektron değildir.')
+ puf='A ve Z toplamlarını ayrı ayrı eşitle; elektron ile pozitronu işaretiyle ayır.')
 # ===== 08 orta · uranyum fisyonu (öncüllü)
 card(8,'Fisyon tepkimesi yargıları','Korunumdan bilinmeyen çekirdek bulunur; fisyonda kütle azalır ve ürünler daha sıkı bağlıdır.','Fisyon ürünlerinin bağlanma enerjisinin daha küçük olduğunu ya da kütlenin korunduğunu sanmak.','orta','öncüllü',4,'ra-fisfuz','nötronla uyarılan U fisyonu')
 a8=235+1-141-3; z8=92-56; n8=a8-z8
@@ -228,7 +229,7 @@ q('0008',tipId='ra-fisfuz',tip=TIPLER['ra-fisfuz'],z='orta',alt='Fisyon',kaz='Fi
  ad=[A('X çekirdeği','Kütle numaraları ve atom numaraları toplamı korunur.','A(X) = 235 + 1 − 141 − 3 = 92; Z(X) = 92 − 56 = 36 → I yanlış'),
      A('Kütle ve enerji','Enerji açığa çıktığına göre ürünlerin kütlesi daha küçüktür.','Δm = m(giren) − m(ürün) > 0 → II doğru'),
      A('Bağlanma enerjisi','Ürünler daha kararlıdır; nükleon başına bağlanma enerjileri ağır çekirdeğinkinden büyüktür (≈ 8,4 MeV ve ≈ 7,6 MeV).','III doğru')],
- puf='Fisyonda ürünler orta kütleli çekirdeklerdir; nükleon başına bağlanma enerjisi arttığı için enerji açığa çıkar ve kütle azalır.',
+ puf='Enerji açığa çıkan tepkimede kütle ve bağlanma enerjisinin yönünü karşılaştır.',
  **onc(t8,['X çekirdeğinin atom numarası 92 − 56 = 36’dır','enerji açığa çıktığından girenlerin kütlesi ürünlerinkinden büyüktür','fisyon ürünleri ağır çekirdekten daha sıkı bağlıdır'],4))
 # ===== 09 orta · Eb/A grafiği (öncüllü)
 card(9,'Eb÷A grafiğinde enerji yönü','Tepkimede ürünlerin toplam bağlanma enerjisi girenlerinkinden büyükse enerji açığa çıkar; A ≈ 56 tepe noktasıdır.','Füzyon ve fisyonun her çekirdek için enerji verdiğini sanmak; tepe çekirdeğin bölünmesini de enerji verici saymak.','orta','öncüllü',3,'ra-baglanma','Eb ÷ A–A grafiği')
@@ -250,7 +251,7 @@ q('0009',tipId='ra-baglanma',tip=TIPLER['ra-baglanma'],z='orta',alt='Bağlanma E
  ad=[A('Füzyon','²H’den ⁴He’ye geçişte nükleon başına bağlanma enerjisi yaklaşık 1,1’den 7,1 MeV’e çıkar.','Ürün daha sıkı bağlı → enerji açığa çıkar → I doğru'),
      A('⁵⁶Fe','Grafiğin tepe noktasıdır; bölününce nükleon başına bağlanma enerjisi küçülür.','Enerji gerekir → II yanlış'),
      A('²³⁵U fisyonu','Ürünlerin nükleon başına değeri (≈ 8,5) U’nunkinden (≈ 7,6) büyüktür, nükleon sayısı aynıdır.','Toplam bağlanma enerjisi artar → III yanlış')],
- puf='Grafiğin tepesi (A ≈ 56) en kararlı bölgedir: solda füzyon, sağda fisyon enerji açığa çıkarır.',
+ puf='Enerji açığa çıkması için ürünlerin toplam bağlanma enerjisi girenden büyük olmalı; grafiği bu ölçütle oku.',
  **onc(t9,['iki ²H birleşince nükleon başına bağlanma enerjisi artar','⁵⁶Fe en kararlı çekirdektir; bölünmesi enerji gerektirir','ürünlerin toplam bağlanma enerjisi ²³⁵U’nunkinden büyüktür'],0))
 # ===== 10 orta · Güneş kütle kaybı
 card(10,'Güç ve kütle kaybı','Güç, birim zamandaki enerjidir; kütle kaybı Δm = E ÷ c² ile bulunur.','c yerine c² almamak, ya da c² ile çarpmak; üslerde hata yapmak.','orta','düz',3,'ra-enerji','Güneş’in saniyedeki kütle kaybı')
@@ -269,25 +270,25 @@ q('0010',tipId='ra-enerji',tip=TIPLER['ra-enerji'],z='orta',alt='Kütle–Enerji
      A('Hesap','Saniyedeki enerji doğrudan bağıntıya yazılır.','Δm = 3,6 × 10²⁶ ÷ 9 × 10¹⁶ = 4 × 10⁹ kg')],
  puf='E = Δm × c² bağıntısında c² = 9 × 10¹⁶ alınır; bölme/çarpma ve üs işlemlerini ayrı ayrı yaz.')
 # ===== 11 orta · tablo, kalan kütle
-card(11,'Tablodan yarı ömür','Tablodaki iki değerden yarı ömür bulunur; hedef kütle için gereken yarı ömür sayısı kütle oranından çıkarılır.','Oranı (kütle bölümünü) doğrudan süre sanmak; yarı ömür sayısını bir eksik ya da fazla almak.','orta','tablo',3,'ra-yarisure','kütle–zaman tablosu')
+card(11,'Tablodan aktivite ve yarı ömür','Aktivite kalan çekirdek sayısıyla orantılı azalır; iki değerden yarı ömür, hedef aktivite için gereken yarı ömür sayısı oran bulunur.','Oranı doğrudan süre sanmak; yarı ömür sayısını bir eksik ya da fazla almak.','orta','tablo',3,'ra-yarisure','aktivite–zaman tablosu')
 T11=10; m11=[(0,960),(10,480),(30,120)]
 assert all(Fr(m11[0][1],2**(t//T11))==m for t,m in m11)
 n11=6; assert Fr(960,2**n11)==15 and n11*T11==60
 assert 960//60==16 and T11*4==40 and T11*5==50 and T11*7==70 and Fr(960,15)==64
-SK=tablo_svg(['Zaman (gün)','Bozunmamış kütle (mg)'],[[str(a),str(b)] for a,b in m11])
-q('0011',tipId='ra-yarisure',tip=TIPLER['ra-yarisure'],z='orta',alt='Yarı Ömür',kaz='Tabloda verilen ölçümlerden yarı ömrü bulup belirli bir kütleye ulaşılan süreyi hesaplar.',kalip='tablo',
- metin='Tek tür radyoaktif çekirdek içeren bir örneğin bozunmamış kütlesi, farklı zamanlarda ölçülerek aşağıdaki tabloya yazılmıştır.\nBuna göre, örnekte bozunmamış kütle 15 mg olduğunda başlangıçtan kaç gün geçmiştir?',
- sekil=SK,dogru=60,yan=[(40,'Kalan kütleyi 15 mg yerine 60 mg okumuş: 960 ÷ 60 = 16 = 2⁴ olduğundan 4 × 10 = 40.','dikkat'),(50,'5 yarı ömür saymış (960 ÷ 2⁵ = 30 mg’de durmuş): 5 × 10 = 50.','islem'),
-  (64,'Kütle oranını (960 ÷ 15 = 64) doğrudan süre olarak yazmış.','bilgi'),(70,'7 yarı ömür saymış (960 ÷ 2⁷ = 7,5 mg): 7 × 10 = 70.','islem')],
+SK=tablo_svg(['Zaman (gün)','Aktivite (bozunma/s)'],[[str(a),str(b)] for a,b in m11])
+q('0011',tipId='ra-yarisure',tip=TIPLER['ra-yarisure'],z='orta',alt='Yarı Ömür',kaz='Tabloda verilen aktivite ölçümlerinden yarı ömrü bulup belirli bir aktiviteye ulaşılan süreyi hesaplar.',kalip='tablo',
+ metin='Tek tür radyoaktif çekirdek içeren bir örneğin aktivitesi (saniyedeki bozunma sayısı), farklı zamanlarda ölçülerek aşağıdaki tabloya yazılmıştır.\nBuna göre, örneğin aktivitesi 15 bozunma/s olduğunda başlangıçtan kaç gün geçmiştir?',
+ sekil=SK,dogru=60,yan=[(40,'Hedef aktiviteyi 15 yerine 60 okumuş: 960 ÷ 60 = 16 = 2⁴ olduğundan 4 × 10 = 40.','dikkat'),(50,'5 yarı ömür saymış (aktivite 960 ÷ 2⁵ = 30’da durmuş): 5 × 10 = 50.','islem'),
+  (64,'Aktivite oranını (960 ÷ 15 = 64) doğrudan süre olarak yazmış.','bilgi'),(70,'7 yarı ömür saymış (aktivite 960 ÷ 2⁷ = 7,5): 7 × 10 = 70.','islem')],
  istenen='Bozunmamış kütlenin 15 mg olduğu an (gün).',
- ip=['Tablodaki ilk iki satırdan yarı ömrü bul; 960 mg’ın 15 mg olması için kaç kez yarıya inmesi gerektiğini düşün.'],
- bilgi=[YO],
- ad=[A('Yarı ömür','Kütle 0. günde 960, 10. günde 480 mg’dır.','T = 10 gün'),
+ ip=['Tablodaki ilk iki satırdan aktivitenin yarıya indiği süreyi bul; 15 değerine kaç yarılanmayla ulaşıldığını düşün.'],
+ bilgi=[YO2],
+ ad=[A('Yarı ömür','Aktivite 0. günde 960, 10. günde 480’dir.','T = 10 gün'),
      A('Yarı ömür sayısı','960 ÷ 15 = 64 = 2⁶','n = 6'),
      A('Süre','Süre yarı ömür sayısı ile yarı ömrün çarpımıdır.','t = 6 × 10 = 60 gün')],
- puf='Önce yarı ömrü bul, sonra kütle oranını 2’nin kuvveti olarak yaz; üs yarı ömür sayısıdır.')
+ puf='Aktivite yarı ömürle yarıya iner; önce yarı ömrü bul, sonra oranı 2’nin kuvveti olarak yaz.')
 # ===== 12 orta · nüfuz deneyi (öncüllü)
-card(12,'Nüfuz gücünden ışımayı tanıma','Kâğıtta duran α, alüminyumda duran β, kurşunda ancak azalan γ’dır; buna göre özellikler yorumlanır.','γ ışımasının kurşunda tamamen durduğunu ya da β’nın yüksüz olduğunu sanmak.','orta','öncüllü',3,'ra-isinim','üç kaynağın levhalardan geçişi')
+card(12,'Nüfuz gücünden ışımayı tanıma','Levhaların durdurma sırası nüfuz gücünü verir; ışımanın türü ve özellikleri buradan çıkarılır.','γ ışımasının kurşunda tamamen durduğunu ya da β’nın yüksüz olduğunu sanmak.','orta','öncüllü',3,'ra-isinim','üç kaynağın levhalardan geçişi')
 o=[]
 for x,w,fc,nm in ((2.4,.12,'gray!25','kâğıt'),(3.9,.3,'gray!55','alüminyum'),(5.4,.7,'gray!85','kurşun')):
     o.append(f'\\fill[{fc}] ({x-w/2:.2f},-3.1) rectangle ({x+w/2:.2f},.7);'+f'\\draw[thick] ({x-w/2:.2f},-3.1) rectangle ({x+w/2:.2f},.7);')
@@ -306,7 +307,7 @@ q('0012',tipId='ra-isinim',tip=TIPLER['ra-isinim'],z='orta',alt='Işımaların N
  ad=[A('Işımaları tanı','K kâğıtta, L alüminyumda durur; M kurşunu bile geçer.','K: α, L: β, M: γ'),
      A('I','En az işleyen ışımanın iyonlaştırma gücü en büyüktür.','K (α) en çok iyonlaştırır → I doğru'),
      A('II ve III','β parçacıkları yüklüdür, γ ise elektromanyetik dalgadır.','II doğru, III doğru')],
- puf='Kâğıtta duran α, alüminyumda duran β; kurşunu geçen γ’dır. Nüfuz gücü arttıkça iyonlaştırma gücü azalır.',
+ puf='Levhaların durdurma sırası nüfuz gücünü verir.',
  **onc(t12,['kâğıtta duran α, iyonlaştırması en büyük ışımadır','alüminyumda duran β parçacıkları yüklüdür ve alanda sapar','kurşunu geçen γ ışıması elektromanyetik dalgadır'],4))
 # ===== 13 orta · N–Z düzleminde zincir, A farkı
 def nz(pts,arrs,N0,N1,Z0,Z1,s=.62,lab={}):
@@ -343,7 +344,7 @@ q('0013',tipId='ra-zincir',tip=TIPLER['ra-zincir'],z='orta',alt='N–Z Düzlemi'
      A('Fark','İki α bozunması vardır.','238 − 230 = 8')],
  puf='N–Z düzleminde (−2, −2) adımı α, (−1, +1) adımı β⁻ demektir; yalnız α kütle numarasını değiştirir.')
 # ===== 14 zor · N–Z düzleminde yargılar (öncüllü)
-card(14,'N–Z düzleminde yön ve çekirdek ilişkileri','Okların yönü bozunma türünü, noktaların koordinatları izotop/izobar ilişkisini verir.','β⁺ ile β⁻ yönünü karıştırmak; izobar ile izotopu karıştırmak.','zor','öncüllü',5,'ra-zincir','β⁻, α, β⁺ adımlı zincir')
+card(14,'N–Z düzleminde yön ve çekirdek ilişkileri','Okların yönü bozunma türünü, noktaların koordinatları izotop/izobar ilişkisini verir.','β⁺ ile β⁻ yönünü karıştırmak; izobar ile izotopu karıştırmak.','orta','öncüllü',5,'ra-zincir','β⁻, α, β⁺ adımlı zincir')
 pt14={'X$_1$':(118,80),'X$_2$':(117,81),'X$_3$':(115,79),'X$_4$':(116,78)}
 k1,k2,k3,k4='X$_1$','X$_2$','X$_3$','X$_4$'
 tp14=[(k1,k2),(k2,k3),(k3,k4)]
@@ -355,15 +356,15 @@ A14={k:v[0]+v[1] for k,v in pt14.items()}; assert A14[k3]==A14[k4]==194 and A14[
 t14=[ty14[0]=='b+',A14[k3]==A14[k4],A14[k1]==A14[k3]]
 assert t14==[False,True,False]
 SK=tikz(nz(pt14,tp14,114,119,77,82,s=.8,lab={k1:(.0,.34),k2:(.0,.34),k3:(-.42,0),k4:(.42,-.05)}))
-q('0014',tipId='ra-zincir',tip=TIPLER['ra-zincir'],z='zor',alt='N–Z Düzlemi',kaz='N–Z düzlemindeki bozunma zincirinde bozunma türlerini ve çekirdekler arası ilişkileri değerlendirir.',kalip='öncüllü',
+q('0014',tipId='ra-zincir',tip=TIPLER['ra-zincir'],z='orta',alt='N–Z Düzlemi',kaz='N–Z düzlemindeki bozunma zincirinde bozunma türlerini ve çekirdekler arası ilişkileri değerlendirir.',kalip='öncüllü',
  metin='X₁ çekirdeği art arda üç bozunma geçirerek X₂, X₃ ve X₄ çekirdeklerine dönüşmektedir. Çekirdeklerin nötron sayısı (N) ve proton sayısı (Z) şekildeki düzlemde gösterilmiştir.\nBuna göre,\nI. X₁ → X₂ bozunmasında yayınlanan parçacığın yükü pozitiftir.\nII. X₃ → X₄ bozunmasında kütle numarası değişmez.\nIII. X₁ ile X₃ çekirdekleri izobardır.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Doğru yargılar.',
- ip=['Her okun (N, Z) değişiminden bozunma türünü bul; izobar için kütle numarası A = N + Z’yi hesapla.'],
+ ip=['Her okun (N, Z) değişimini yaz; sonra tanımlara bak.'],
  bilgi=[NZ,BZ],
  ad=[A('Bozunma türleri','X₁→X₂: (−1, +1); X₂→X₃: (−2, −2); X₃→X₄: (+1, −1).','β⁻, α, β⁺'),
      A('I ve II','β⁻ negatif yüklü elektron yayar; β⁺ yalnız Z’yi 1 azaltır, A sabit kalır.','I yanlış, II doğru'),
      A('III','A(X₁) = 118 + 80 = 198; A(X₃) = 115 + 79 = 194.','Kütle numaraları farklı → III yanlış')],
- puf='N–Z düzleminde yön, bozunma türünü verir: (+1, −1) β⁺, (−1, +1) β⁻, (−2, −2) α; yalnız α kütle numarasını değiştirir.',
+ puf='Her okun (N, Z) değişimini yaz; bozunma türünü ve A = N + Z değerini oradan çıkar.',
  **onc(t14,['X₁→X₂ adımı (−1, +1) olduğundan β⁻ yayınlanır ve yük negatiftir','X₃→X₄ adımı (+1, −1) olduğundan A = N + Z değişmez','X₁’in kütle numarası 198, X₃’ünki 194’tür'],0))
 # ===== 15 orta · yarı ömür kavramları (öncüllü)
 card(15,'Yarı ömür kavramı','Yarı ömür dış koşullardan bağımsızdır; aktivite kalan çekirdek sayısıyla orantılı ve yarı ömrü kısa olanda daha büyüktür.','Isıtmayla bozunmanın hızlanacağını ya da kısa yarı ömürlü örneğin daha uzun süre kalacağını sanmak.','orta','öncüllü',3,'ra-yarisure','yarı ömür ve aktivite yargıları')
@@ -371,12 +372,12 @@ t15=[False,True,False]
 q('0015',tipId='ra-yarisure',tip=TIPLER['ra-yarisure'],z='orta',alt='Yarı Ömür',kaz='Yarı ömür ve aktivite kavramlarını farklı örnekler için karşılaştırır.',kalip='öncüllü',
  metin='Aynı sayıda radyoaktif çekirdek içeren, yarı ömürleri farklı iki örnekten K’nın yarı ömrü L’ninkinden kısadır.\nBuna göre,\nI. K örneği ısıtılırsa yarı ömrü kısalır.\nII. Başlangıçta K örneğinin bozunma hızı (aktivitesi) L’ninkinden büyüktür.\nIII. Aynı süre sonunda K örneğindeki bozunmamış çekirdek sayısı, L örneğindekinden fazladır.\nyargılarından hangileri doğrudur?',
  sekil=None,istenen='Doğru yargılar.',
- ip=['Yarı ömrün hangi koşullara bağlı olduğunu ve kısa yarı ömrün bozunma hızıyla ilişkisini düşün.'],
- bilgi=[YO],
+ ip=['Yarı ömür, aktivite ve kalan çekirdek sayısı kavramlarını ayrı ayrı sına.'],
+ bilgi=[YO2],
  ad=[A('I','Yarı ömür çekirdeğin kendi özelliğidir; sıcaklık, basınç ya da kimyasal bağdan etkilenmez.','I yanlış'),
      A('II','Yarı ömrü kısa olan çekirdek birim zamanda daha çok bozunur; aynı sayıda çekirdekte aktivite daha büyüktür.','II doğru'),
      A('III','K daha hızlı bozunduğundan aynı sürede daha çok çekirdeği bozunmuş, daha azı kalmıştır.','III yanlış')],
- puf='Yarı ömür dış koşullara bağlı değildir; kısa yarı ömür demek, daha hızlı bozunma ve daha büyük aktivite demektir.',
+ puf='Yarı ömür ve aktivite arasındaki ilişkiyi, sayıyı ve süreyi ayrı ayrı sına.',
  **onc(t15,['yarı ömür sıcaklık gibi dış koşullardan bağımsızdır','yarı ömrü kısa olan örneğin aktivitesi aynı sayıdaki çekirdekte daha büyüktür','yarı ömrü kısa olan örnekte aynı sürede daha az çekirdek kalır'],0))
 # ===== 16 zor · yaş tayini
 card(16,'Radyoaktif yaş tayini','Ana ve yavru çekirdek sayıları toplamı başlangıçtaki ana çekirdek sayısıdır; kalan oranı 1/2ⁿ ise n yarı ömür geçmiştir.','Pb ÷ U oranını doğrudan yarı ömür sayısı sanmak.','zor','şekilli',4,'ra-yarisure','U–Pb oranından kayanın yaşı')
@@ -402,7 +403,7 @@ q('0016',tipId='ra-yarisure',tip=TIPLER['ra-yarisure'],z='zor',alt='Yaş Tayini'
      A('Yaş','İki yarı ömür geçmiştir.','t = 2 × 4,5 = 9 milyar yıl')],
  puf='Yaş tayininde kalan ana çekirdek sayısını başlangıç sayısıyla (ana + yavru) karşılaştır; Pb ÷ U oranını doğrudan yarı ömür sayısı yapma.')
 # ===== 17 zor · proton–proton zinciri
-card(17,'Füzyon zincirinde sayım','Zincirin sonunda bir ⁴He için ilk iki tepkime ikişer kez gerçekleşir; ışımalar bu sayıya göre sayılır.','Her tepkimeyi bir kez saymak ya da nötrinoyu da sayıma katmak.','zor','şekilli',4,'ra-fisfuz','proton–proton zinciri')
+card(17,'Füzyon zincirinde sayım','Zincirde bir ürünün sayısı, önceki basamakların tekrar sayısını belirler.','Her tepkimeyi bir kez saymak ya da nötrinoyu da sayıma katmak.','zor','şekilli',4,'ra-fisfuz','proton–proton zinciri')
 r1,r2,r3=2,2,1
 assert 2*r3==r2==r1  # iki ³He için ilk iki tepkime ikişer kez
 pozitron=r1; foton=r2; nu=r1; toplam=pozitron+foton; assert toplam==4
@@ -416,13 +417,13 @@ q('0017',tipId='ra-fisfuz',tip=TIPLER['ra-fisfuz'],z='zor',alt='Füzyon',kaz='F�
  sekil=SK,dogru=4,yan=[(2,'Her tepkimenin bir kez gerçekleştiğini düşünmüş: 1 pozitron + 1 foton = 2.','dikkat'),(3,'I. tepkimeyi iki kez, II. tepkimeyi bir kez saymış: 2 + 1 = 3.','islem'),
   (5,'III. tepkimede de bir foton yayınlandığını varsayıp 2 + 2 + 1 = 5 bulmuş.','bilgi'),(6,'Nötrinoları da sayıma katmış: 2 pozitron + 2 foton + 2 nötrino = 6.','dikkat')],
  istenen='Yayınlanan pozitron ve γ fotonlarının toplam sayısı.',
- ip=['III. tepkimeden başlayarak, bir ⁴He için gereken ³He sayısını ve bunların hangi tepkimelerle oluştuğunu geriye doğru say.'],
+ ip=['Zincirde ürünün sayısı ile önceki basamakların tekrar sayısı arasındaki ilişkiyi düşün.'],
  bilgi=[FF,TP],
  ad=[A('III. tepkime','Bir ⁴He için iki ³He gerekir.','III: 1 kez'),
      A('II. tepkime','Her ³He bir II. tepkimeden gelir.','II: 2 kez → 2 foton'),
      A('I. tepkime','Her II. tepkime için bir ²H, yani bir I. tepkime gerekir.','I: 2 kez → 2 pozitron'),
      A('Toplam','Pozitron ve fotonlar toplanır; III. tepkimede ışıma yoktur.','2 + 2 = 4')],
- puf='Zincirde sayımı sondan başa yap: ürünü oluşturan tepkime sayısından önceki tepkimelerin tekrar sayısını çıkar.')
+ puf='Zincirde sayım yaparken her basamağın kaç kez gerçekleşmesi gerektiğini ayrı ayrı sorgula.')
 # ===== 18 zor · bağlanma enerjisinden fisyon enerjisi
 card(18,'Bağlanma enerjisi farkıyla fisyon enerjisi','Açığa çıkan enerji = ürünlerin toplam bağlanma enerjisi − girenin toplam bağlanma enerjisi; her biri A × (Eb ÷ A) ile bulunur.','Nükleon başına farkı toplam enerji sanmak; yalnız tek ürünü hesaba katmak; tüm ürünlere aynı değeri uygulamak.','zor','grafik',4,'ra-baglanma','Eb ÷ A grafiğinden fisyon enerjisi')
 Ag=[(236,Fr(76,10)),(140,Fr(84,10)),(96,Fr(87,10))]
@@ -444,7 +445,7 @@ q('0018',tipId='ra-baglanma',tip=TIPLER['ra-baglanma'],z='zor',alt='Bağlanma En
  ad=[A('Ürünlerin bağlanma enerjisi','Her ürün için A × (Eb ÷ A).','140 × 8,4 + 96 × 8,7 = 1176 + 835,2 = 2011,2 MeV'),
      A('Girenin bağlanma enerjisi','236 nükleonun her biri 7,6 MeV ile bağlıdır.','236 × 7,6 = 1793,6 MeV'),
      A('Fark','Açığa çıkan enerji ürünlerle girenin bağlanma enerjileri farkıdır.','2011,2 − 1793,6 = 217,6 MeV')],
- puf='Fisyon enerjisini nükleon başına farktan değil, ürünler ve girenin toplam bağlanma enerjilerinin farkından hesapla.')
+ puf='Nükleon başına değer toplam enerji değildir; her çekirdek için toplamı ayrı hesapla.')
 # ===== 19 orta · reaktörde fisyon sayısı
 card(19,'Reaktör gücünden fisyon sayısı','Saniyedeki fisyon sayısı = güç ÷ bir fisyonun enerjisi (joule).','MeV’i joule’e çevirirken üssü yanlış almak ya da MeV yerine eV kullanmak.','orta','düz',3,'ra-fisfuz','reaktörde saniyedeki fisyon sayısı')
 Pr=Fr(32,10)*10**8; Ef=200*Fr(16,10)*Fr(1,10**13); rate=Pr/Ef; assert Ef==Fr(32,10)*Fr(1,10**11) and rate==10**19

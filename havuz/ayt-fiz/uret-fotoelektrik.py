@@ -46,7 +46,7 @@ def onc(truth,why,pos):
 HC=12400  # eV·Å
 # ---------- bilgi kutuları (örnekler soruların sayılarını kullanmaz)
 FE=B('Foton enerjisi ve eşik enerjisi','foton enerjisi E = h·f = h·c ÷ λ; hc = 12400 eV·Å. Elektron sökülebilmesi için E > W (eşik enerjisi) olmalıdır ve Ek,maks = E − W. Örnek: λ = 8000 Å için E = 12400 ÷ 8000 = 1,55 eV')
-EKF=B('Ek–f grafiği','Ek,maks = h·f − W doğrusunda f eksenini kestiği nokta eşik frekansı f₀, eğim ise metalden bağımsız Planck sabiti h’dır. Metal değişirse doğru kendine paralel kayar. Örnek: eğimi 0,5 eV/birim olan doğruda f₀’dan 6 birim büyük frekansta Ek = 3 eV’tur')
+EKF=B('Ek–f grafiği','Ek,maks = h·f − W doğrusunda f eksenini kestiği nokta eşik frekansı f₀, eğim ise metalden bağımsız Planck sabiti h’dır. Örnek: eğimi 0,5 eV/birim olan doğruda f₀’dan 6 birim büyük frekansta Ek = 3 eV’tur')
 DUR=B('Durdurma potansiyeli','sökülen en hızlı elektronu durduran ters gerilim Vs için e·Vs = Ek,maks bağıntısı vardır. Ek,maks değeri eV cinsinden, Vs ise volt cinsinden aynı sayıdır. Örnek: Ek,maks = 1,2 eV ise Vs = 1,2 V')
 VSF=B('Vs–f grafiği','Vs = (h ÷ e)·f − W ÷ e olduğundan doğrunun eğimi h ÷ e’dir; Vs = 0 olduğu frekans eşik frekansı f₀’dır ve W = h·f₀ = e × (eğim) × f₀. Örnek: eğim 0,5 V/birim ve f₀ = 6 birim ise W = 3 eV’tur')
 AKIM=B('Akım–gerilim grafiği','akım, gerilim arttıkça artıp doygunluğa ulaşır. Doygunluk akımı birim zamanda sökülen elektron sayısıyla (ışığın şiddetiyle) orantılıdır. Akımın sıfır olduğu ters gerilim Vs ise Ek,maks ile belirlenir. Örnek: aynı frekansta şiddet yarıya inerse doygunluk akımı yarıya iner')
@@ -119,7 +119,7 @@ q('0003',tipId='fe-grafik',tip=TIPLER['fe-grafik'],z='orta',alt='Ek–f Grafiği
  ad=[A('Eğimleri karşılaştır','Eğim her metal için Planck sabiti h’dır; iki doğru paraleldir.','I doğru'),
      A('Eşik enerjilerini karşılaştır','Eşik frekansı büyük olanın eşik enerjisi W = h·f₀ de büyüktür.','f_Y > f_X → W_Y > W_X → II doğru'),
      A('f₁ için kinetik enerjileri karşılaştır','Aynı frekansta eşik enerjisi büyük olandan daha az kinetik enerjili elektron sökülür.','Ek,X > Ek,Y → III yanlış')],
- puf='Farklı metallerin Ek–f doğruları paraleldir; eşik frekansı büyük olan metalin doğrusu sağda kalır ve aynı f için daha az Ek verir.',
+ puf='Eğimin neyi, f eksenini kestiği noktanın neyi gösterdiğini ayır; her yargıyı grafikten ayrı oku.',
  **onc(t3,['iki doğru paraleldir; eğim her metalde h’dır','eşik frekansı büyük olan metalin eşik enerjisi de büyüktür','aynı frekansta eşik enerjisi küçük olan X’ten sökülen elektronlar daha büyük kinetik enerjiye sahiptir'],3))
 # ===== 04 orta · durdurma potansiyeli
 card(4,'Durdurma potansiyeli hesabı','Vs, foton enerjisinden eşik enerjisi çıkarılarak bulunan Ek,maks değerinin eV cinsinden sayısına eşittir.','Foton enerjisini ya da eşik enerjisini doğrudan gerilim sanmak; dalga boyu birimini yanlış dönüştürmek.','orta','hikâyeli',3,'fe-durdurma','ters gerilimle akımı sıfırlama')
@@ -151,7 +151,7 @@ q('0005',tipId='fe-akim',tip=TIPLER['fe-akim'],z='orta',alt='Akım–Gerilim Gra
  ad=[A('Doygunluk akımlarını karşılaştır','Doygunluk akımı birim zamanda sökülen elektron sayısını, yani şiddeti gösterir.','I₁ = 2I₀ > I₂ = I₀ → I doğru'),
      A('Durdurma potansiyellerini karşılaştır','İki eğri akımı aynı ters gerilimde sıfırlıyor; bu, Ek,maks değerlerinin eşit olduğunu gösterir.','Vs₁ = Vs₂ = 2 V → III yanlış'),
      A('Frekansları karşılaştır','Aynı metalde Ek,maks eşitse foton enerjisi, dolayısıyla frekans da eşittir.','f₁ = f₂ → II yanlış')],
- puf='Şiddet doygunluk akımını, frekans ise akımı sıfırlayan ters gerilimi (Vs) belirler; iki eğri aynı gerilimde sıfırlanıyorsa frekanslar eşittir.',
+ puf='Doygunluk akımını ve akımın sıfırlandığı gerilimi ayrı ayrı yorumla.',
  **onc(t5,['doygunluk akımı büyük olan ışıkta birim zamanda daha çok foton gelir; şiddet daha büyüktür','durdurma potansiyelleri eşit olduğundan iki ışığın frekansları eşittir','durdurma potansiyelleri eşit olduğundan maksimum kinetik enerjiler de eşittir'],0))
 # ===== 06 orta · iki frekans, iki durdurma potansiyeli → eşik enerjisi
 card(6,'Eşik enerjisini iki ölçümden bulma','İki ışık için foton enerjileri W + e·Vs biçiminde yazılır; frekans oranı enerji oranına eşit olduğundan W çözülür.','Durdurma potansiyellerinin farkını ya da birini eşik enerjisi sanmak.','orta','hikâyeli',4,'fe-durdurma','iki ışıkta Vs farklı, frekans oranı bilinir')
@@ -179,7 +179,7 @@ q('0007',tipId='fe-kavram',tip=TIPLER['fe-kavram'],z='orta',alt='Işığın Tane
  ad=[A('I. yargıyı sına','Şiddet foton sayısını artırır; her foton ise elektron sökmeye yetmeyecek enerjidedir.','I yanlış'),
      A('II. yargıyı sına','Elektron enerjiyi tek bir fotondan alır; farklı fotonların enerjileri birikmez.','II yanlış'),
      A('III. yargıyı sına','f > f₀ olunca tek foton bile elektronu söker; şiddet yalnız elektron sayısını belirler.','III doğru')],
- puf='Elektron sökülmesini yalnız foton enerjisi (frekans) belirler; şiddet ve süre sökülen elektron sayısını etkiler ama eşiği değiştirmez.',
+ puf='Elektron enerjiyi kaç fotondan alır? Önce bunu belirle.',
  **onc(t7,['her fotonun enerjisi eşik enerjisinden küçük kaldığı için şiddet artsa da elektron sökülmez','elektron enerjiyi tek bir fotondan alır ve enerji birikmez','frekansı f₀’dan büyük ışığın her fotonu tek başına elektron sökebilir'],0))
 # ===== 08 orta · ters gerilimli devrede anota ulaşan elektron
 card(8,'Ters gerilimli devre','Ters bağlı üreteç elektrona e·V kadar iş yapar; anota ulaşan elektronun kinetik enerjisi Ek,maks − e·V olur.','Üretecin yönünü karıştırıp kinetik enerjiye eklemek; akımın kesildiğini varsaymak.','orta','şekilli',4,'fe-devre','ters bağlı üretecin anota ulaşan elektrona etkisi')
@@ -187,7 +187,7 @@ lam8=3100; E8=Fr(HC,lam8); W8=Fr(5,2); K8=E8-W8; V8=1; ans8=K8-V8
 assert E8==4 and K8==Fr(3,2) and K8>V8 and ans8==Fr(1,2) and K8+V8==Fr(5,2)
 def devre(cx=0,cy=0,V='1 V',pol=True):
     o=tube(cx,cy,lab=False)
-    o.append(N(cx-.5,cy-.78,'katot','font=\\scriptsize')); o.append(N(cx+.5,cy-.78,'anot','font=\\scriptsize'))
+    o.append(N(cx-.62,cy-1.3,'katot','font=\\small')); o.append(N(cx+.62,cy-1.3,'anot','font=\\small'))
     o.append(AR((cx-2.3,cy+1.25),(cx-.58,cy+.32),'thick,vurgu')); o.append(N(cx-2.05,cy+1.52,'ışık','font=\\small'))
     y=cy-2.1
     o.append(D((cx-.5,cy-.3),(cx-1.7,cy-.3))); o.append(D((cx-1.7,cy-.3),(cx-1.7,y))); o.append(D((cx-1.7,y),(cx-1.1,y)))
@@ -199,7 +199,7 @@ def devre(cx=0,cy=0,V='1 V',pol=True):
     return o
 SK=tikz(devre())
 q('0008',tipId='fe-devre',tip=TIPLER['fe-devre'],z='orta',alt='Fotoelektrik Devre',kaz='Ters gerilim uygulanan fotoelektrik devresinde anota ulaşan elektronların maksimum kinetik enerjisini hesaplar.',kalip='şekilli',
- metin='Eşik enerjisi 2,5 eV olan katoda dalga boyu 3100 Å olan tek renkli ışık gönderiliyor. Katot ile anot arasına, şekildeki gibi gerilimi verilen bir üreteç bağlanmıştır ve ampermetre bir akım göstermektedir. (hc = 12400 eV·Å)\nBuna göre, anoda ulaşan fotoelektronların sahip olabileceği maksimum kinetik enerji kaç eV’tur?',
+ metin='Eşik enerjisi 2,5 eV olan katoda dalga boyu 3100 Å olan tek renkli ışık gönderiliyor. Katot ile anot arasına, şekildeki gibi gerilimi verilen bir üreteç bağlanmıştır. (hc = 12400 eV·Å)\nBuna göre, anoda ulaşan fotoelektronların sahip olabileceği maksimum kinetik enerji kaç eV’tur?',
  sekil=SK,dogru=ans8,yan=[(4,'Anoda ulaşan elektronun enerjisini foton enerjisine eşit almış; eşik enerjisini ve ters gerilimi hesaba katmamış.','dikkat'),(1,'Anoda ulaşan elektronun kinetik enerjisini ters gerilime (1 V) eşit almış.','bilgi'),(Fr(3,2),'Üretecin etkisini hesaba katmayıp katottan kopan elektronların kinetik enerjisini yazmış.','dikkat'),(Fr(5,2),'Ters bağlı üretecin elektrona kazandırdığını sanıp kinetik enerjiye eklemiş: 1,5 + 1.','bilgi')],
  istenen='Anoda ulaşan fotoelektronların maksimum kinetik enerjisi (eV).',
  ip=['Üretecin kutuplarına bakarak elektronun katottan anoda giderken enerjisinin nasıl değiştiğini belirle.'],
@@ -240,7 +240,7 @@ q('0010',tipId='fe-foton',tip=TIPLER['fe-foton'],z='orta',alt='Foton Momentumu',
  ad=[A('Foton enerjilerini karşılaştır','Dalga boyu küçük olan ışığın fotonu daha enerjilidir.','E_K = 2E_L → I yanlış'),
      A('Foton sayılarını karşılaştır','N = P ÷ E ve P eşit olduğundan enerjisi küçük olan L’de foton sayısı iki kat büyüktür.','N_L = 2N_K → II doğru'),
      A('Kuvvetleri karşılaştır','Tam soğurulan ışıkta saniyede aktarılan toplam momentum P ÷ c’dir ve iki demette eşittir.','F_K = F_L = P ÷ c → III doğru')],
- puf='Güç eşitse foton sayıları enerjilerle ters orantılıdır, ancak ışıkların yüzeye uyguladığı kuvvet (P ÷ c) renge bağlı değildir.',
+ puf='Güç eşitken foton sayısı ve saniyedeki momentum aktarımı neye bağlı olur?',
  **onc(t10,['K’nin fotonu L’ninkinden iki kat enerjilidir','güç eşit olduğundan fotonların enerjisi küçük olan L ışığında foton sayısı daha fazladır','tam soğurulan ışıkta saniyede aktarılan momentum P ÷ c olduğundan kuvvetler eşittir'],3))
 # ===== 11 orta · Compton saçılması yargıları (öncüllü)
 card(11,'Compton saçılması yargıları','Saçılan foton enerji kaybeder (λ′ > λ), elektron kinetik enerji kazanır; enerji ve vektörel momentum korunur.','Saçılan fotonun hızının da azaldığını düşünmek; enerji korunumunu Compton olayına uygulamamak.','orta','öncüllü',3,'fe-compton','saçılma sonrası nicelikler')
@@ -253,33 +253,35 @@ q('0011',tipId='fe-compton',tip=TIPLER['fe-compton'],z='orta',alt='Compton Saç�
  ad=[A('Dalga boyunu yorumla','Foton enerjisinin bir kısmını elektrona verir; enerjisi azalan fotonun dalga boyu büyür.','E′ < E → λ′ > λ → I doğru'),
      A('Enerji korunumunu yaz','Elektron başlangıçta durgun olduğundan başlangıçtaki enerji yalnız fotona aittir.','E = E′ + Ek,e → II doğru'),
      A('Momentum korunumunu yaz','Sisteme dış kuvvet etki etmediğinden toplam momentum vektörel olarak korunur.','p⃗ = p⃗′ + p⃗ₑ → III doğru')],
- puf='Compton saçılması bir çarpışmadır: enerji ve momentum korunur; foton enerji kaybedince dalga boyu büyür, hızı ise c olarak kalır.',
+ puf='Çarpışmada hangi niceliklerin korunduğunu düşün.',
  **onc(t11,['saçılan fotonun enerjisi azaldığından dalga boyu büyür','foton enerjisinin bir kısmı elektronun kinetik enerjisine dönüşür ve toplam enerji korunur','dış kuvvet olmadığından toplam momentum vektörel olarak korunur'],4))
 # ===== 12 orta · saçılma açısına göre dalga boyu sıralaması
-card(12,'Saçılma açısı ve dalga boyu','Δλ = (h ÷ m·c)(1 − cosθ) olduğundan saçılma açısı büyüdükçe dalga boyu artışı büyür.','Dalga boyu artışını sinθ ile ya da açının mutlak kosinüsüyle orantılı sanmak.','orta','şekilli',3,'fe-compton','farklı açılardaki dedektörler')
-aK,aL,aM=45,90,135; dl=lambda a:1-cos(radians(a)); assert dl(aK)<dl(aL)<dl(aM)
-sK,sL,sM=sin(radians(aK)),sin(radians(aL)),sin(radians(aM)); assert abs(sK-sM)<1e-9 and sL>sK
-assert abs(cos(radians(aK))**2-cos(radians(aM))**2)<1e-9 and cos(radians(aL))**2<cos(radians(aK))**2
+card(12,'Saçılma açısı ve dalga boyu','Dalga boyu artışı saçılma açısına (1 − cosθ ile) bağlıdır; gelen foton yönünde (0°) saçılan fotonda artış sıfırdır.','Dalga boyu artışını sinθ ile ya da 1 + cosθ ile orantılı sanmak.','orta','şekilli',3,'fe-compton','farklı açılardaki dedektörler')
+aK,aL,aM=120,0,60; dl=lambda a:1-cos(radians(a)); assert dl(aL)<dl(aM)<dl(aK)
+assert abs(sin(radians(aK))-sin(radians(aM)))<1e-9 and sin(radians(aL))<sin(radians(aM))
+e1=lambda a:1+cos(radians(a)); assert e1(aL)>e1(aM)>e1(aK)
+c1=lambda a:abs(cos(radians(a))); assert c1(aL)>c1(aK) and abs(c1(aK)-c1(aM)) <1e-9 or True
+assert abs(abs(cos(radians(aK)))-abs(cos(radians(aM))))<1e-9 and abs(cos(radians(aL)))>abs(cos(radians(aM)))
 def comp12():
     o=[AR((-2.7,0),(-.12,0))]
-    o.append(N(-1.45,.32,'gelen foton','font=\\small')); o.append(D((0,0),(2.7,0),'dotted,gray')); o.append(DOT((0,0),2.6)); o.append(N(.05,-.38,'hedef','font=\\small,anchor=north west'))
+    o.append(N(-1.45,.32,'gelen foton','font=\\small')); o.append(DOT((0,0),2.6)); o.append(N(.05,-.38,'hedef','font=\\small,anchor=north west'))
     for nm,a in (('K',aK),('L',aL),('M',aM)):
         x,y=2.2*cos(radians(a)),2.2*sin(radians(a))
         o.append(AR((0.12*cos(radians(a)),.12*sin(radians(a))),(1.78*cos(radians(a)),1.78*sin(radians(a))),'thick'))
-        o.append(f'\\node[draw,rounded corners=2pt,inner sep=2pt,align=center,font=\\small] at ({x*1.12:.3f},{y*1.12+(.18 if a==90 else 0):.3f}) {{{nm}\\\\[-1pt]\\scriptsize ${a}^\\circ$}};')
+        o.append(f'\\node[draw,rounded corners=2pt,inner sep=2pt,align=center,font=\\small] at ({x*1.12:.3f},{y*1.12:.3f}) {{{nm}\\\\[-1pt]\\scriptsize ${a}^\\circ$}};')
     return o
 SK=tikz(comp12())
 q('0012',tipId='fe-compton',tip=TIPLER['fe-compton'],z='orta',alt='Compton Saçılması',kaz='Compton saçılmasında saçılma açısı ile saçılan fotonun dalga boyu arasındaki ilişkiyi yorumlar.',kalip='şekilli',
  metin='Dalga boyu aynı olan X-ışını fotonları, durgun ve serbest kabul edilen elektronlardan oluşan bir hedefe gönderiliyor. Saçılan fotonlar, gelen fotonların doğrultusuyla şekilde verilen açıları yapan K, L ve M dedektörleriyle ayrı ayrı inceleniyor. Dedektörlere ulaşan fotonların dalga boyları sırasıyla λK, λL ve λM’dir.\nBuna göre, λK, λL ve λM arasındaki ilişki aşağıdakilerden hangisidir?',
- sekil=SK,dogru='λM > λL > λK',yan=[('λK > λL > λM','Büyük açıda saçılan fotonun enerjisinin daha az değiştiğini düşünmüş; oysa açı büyüdükçe dalga boyu artışı da büyür.','bilgi'),('λK = λL = λM','Gelen fotonların dalga boyunun aynı olmasından saçılanların da aynı olacağını sanmış.','bilgi'),('λL > λK = λM','Dalga boyu artışını sinθ ile orantılı sanmış; 45° ve 135° için aynı, 90° için en büyük değeri bulmuş.','bilgi'),('λK = λM > λL','Dalga boyu artışını cos²θ ile orantılı sanmış; 45° ve 135° için aynı, 90° için en küçük değeri bulmuş.','bilgi')],
- sira=['λK = λL = λM','λK = λM > λL','λK > λL > λM','λL > λK = λM','λM > λL > λK'],
+ sekil=SK,dogru='λK > λM > λL',yan=[('λL > λM > λK','Dalga boyu artışını (1 + cosθ) ile orantılı sanmış; 0° için en büyük, 120° için en küçük değeri bulmuş.','bilgi'),('λK = λL = λM','Gelen fotonların dalga boyunun aynı olmasından saçılanların da aynı olacağını sanmış.','bilgi'),('λK = λM > λL','Dalga boyu artışını sinθ ile orantılı sanmış; 60° ve 120° için aynı, 0° için sıfır değerini bulmuş.','bilgi'),('λL > λK = λM','Dalga boyu artışını |cosθ| ile orantılı sanmış; 60° ve 120° için aynı, 0° için en büyük değeri bulmuş.','bilgi')],
+ sira=['λK = λL = λM','λK = λM > λL','λL > λM > λK','λL > λK = λM','λK > λM > λL'],
  istenen='Saçılan fotonların dalga boyu sıralaması.',
- ip=['Dalga boyundaki artışın saçılma açısına nasıl bağlı olduğunu (1 − cosθ) üç açı için hesapla.'],
+ ip=['Dalga boyundaki artışın saçılma açısına nasıl bağlı olduğunu her dedektör için ayrı ayrı değerlendir.'],
  bilgi=[COM],
  ad=[A('Bağıntıyı yaz','Dalga boyu artışı (h ÷ m·c)(1 − cosθ) ile verilir; sabit çarpan aynıdır.','Δλ ∝ 1 − cosθ'),
-     A('Üç açı için hesapla','Kosinüs değerleri yerine konur.','K: 1 − 0,71 = 0,29 · L: 1 − 0 = 1 · M: 1 + 0,71 = 1,71'),
-     A('Sırala','Gelen foton aynı olduğundan λ′ = λ + Δλ sıralaması Δλ sıralamasıyla aynıdır.','λM > λL > λK')],
- puf='Compton saçılmasında dalga boyu artışı (1 − cosθ) ile orantılıdır: 0° de sıfır, 180° de en büyüktür.')
+     A('Üç açı için hesapla','Kosinüs değerleri yerine konur.','K: 1 − (−0,5) = 1,5 · L: 1 − 1 = 0 · M: 1 − 0,5 = 0,5'),
+     A('Sırala','Gelen foton aynı olduğundan λ′ = λ + Δλ sıralaması Δλ sıralamasıyla aynıdır.','λK > λM > λL')],
+ puf='Dalga boyundaki artışı saçılma açısıyla ilişkilendiren bağıntıyı her dedektör için ayrı değerlendir.')
 # ===== 13 orta · Compton enerji korunumu
 card(13,'Compton enerji aktarımı','Gelen ve saçılan fotonun enerjileri dalga boyundan bulunur; aradaki fark durgun elektronun kinetik enerjisidir.','Saçılan fotonun enerjisini elektrona vermek; dalga boyu farkından enerji hesaplamaya çalışmak.','orta','şekilli',4,'fe-compton','dalga boylarından elektronun kinetik enerjisi')
 l13a,l13b=Fr(1,10),Fr(31,250); E13a=Fr(HC)/l13a; E13b=Fr(HC)/l13b; Ke13=(E13a-E13b)/1000
@@ -304,7 +306,7 @@ q('0013',tipId='fe-compton',tip=TIPLER['fe-compton'],z='orta',alt='Compton Saç�
      A('Saçılan fotonun enerjisi','Aynı bağıntı saçılan foton için de uygulanır.','E′ = 12400 ÷ 0,124 = 100000 eV = 100 keV'),
      A('Enerji korunumunu yaz','Elektron başlangıçta durgun olduğundan kinetik enerjisi fotonun kaybettiği enerjidir.','124 = 100 + Ek,e'),
      A('Elektronun enerjisini bul','Fark alınır.','Ek,e = 24 keV')],
- puf='Compton saçılmasında elektronun kinetik enerjisi, gelen ve saçılan foton enerjilerinin farkıdır: Ek = hc ÷ λ − hc ÷ λ′.')
+ puf='Çarpışmada enerji korunur; elektron başlangıçta durgundur.')
 # ===== 14 orta · de Broglie tablo (öncüllü)
 card(14,'Momentum ve dalga boyu tablosu','De Broglie dalga boyu momentumla ters orantılıdır; momentumlar eşitse dalga boyları da eşittir, kinetik enerji ise p² ÷ 2m ile bulunur.','Kütle ya da hız tek başına büyük olan parçacığın dalga boyunu küçük sanmak.','orta','tablo',4,'fe-debroglie','farklı kütle ve hızlı parçacıklar')
 mv={'K':(1,4),'L':(2,1),'M':(4,1)}; pp={k:m*v for k,(m,v) in mv.items()}; kk={k:Fr(m*v*v,2) for k,(m,v) in mv.items()}
@@ -320,24 +322,25 @@ q('0014',tipId='fe-debroglie',tip=TIPLER['fe-debroglie'],z='orta',alt='De Brogli
      A('Dalga boylarını karşılaştır','λ = h ÷ p olduğundan K ve M’nin dalga boyları eşittir, L’ninki momentumun yarısı nedeniyle iki kat büyüktür.','λM = λK → I yanlış · λL = 2λK → II doğru'),
      A('Kinetik enerjileri hesapla','Ek = ½·m·v² bağıntısı kullanılır.','EK = ½ × m × 16v² = 8mv² · EM = ½ × 4m × v² = 2mv²'),
      A('III. yargıyı değerlendir','K’nin kinetik enerjisi M’ninkinden büyüktür.','III yanlış')],
- puf='Momentumları eşit parçacıkların dalga boyları eşittir; ancak kinetik enerjileri (p² ÷ 2m) kütleye bağlı olarak farklı olur.',
+ puf='Dalga boyunu momentumla, kinetik enerjiyi kütle ve hızla ilişkilendir.',
  **onc(t14,['K ve M’nin momentumları eşit (4mv) olduğundan dalga boyları da eşittir','L’nin momentumu K’ninkinin yarısı olduğundan dalga boyu iki katıdır','K’nin kinetik enerjisi 8mv², M’ninki 2mv²’dir; K’ninki daha büyüktür'],1))
-# ===== 15 zor · Vs–f grafiğinden eşik enerjisi
-card(15,'Vs–f grafiğinden eşik enerjisi','Vs–f doğrusunun eğimi h ÷ e’dir; doğru f eksenine uzatılarak eşik frekansı bulunur ve W = h·f₀ hesaplanır.','Verilen noktadaki Vs ya da f₀ değerini doğrudan eşik enerjisi sanmak; eğimi hesaba katmamak.','zor','grafik',5,'fe-grafik','Vs–f doğrusundan eşik enerjisi')
-fa,Va,fb,Vb=6,Fr(4,5),10,Fr(12,5); sl15=(Vb-Va)/(fb-fa); f0_15=fa-Va/sl15; W15=sl15*f0_15
-assert sl15==Fr(2,5) and f0_15==4 and W15==Fr(8,5) and Vb==Fr(12,5) and sl15==Fr(2,5)
-SK=ptx('\\begin{axis}[width=7.4cm,height=5.2cm,xmin=0,xmax=11,ymin=0,ymax=3.2,xtick={0,1,2,3,4,5,6,7,8,9,10,11},ytick={0,0.4,0.8,1.2,1.6,2.0,2.4,2.8,3.2},grid=both,major grid style={gray!50,thin},tick label style={font=\\scriptsize},axis lines=left,xlabel={$f$ ($10^{14}$ Hz)},ylabel={$V_s$ (V)},label style={font=\\small},'+PGF+']\n\\addplot[thick,vurgu] coordinates {(6,0.8) (10,2.4)};\n\\addplot[only marks,mark=*,mark size=1.8pt] coordinates {(6,0.8) (10,2.4)};\n\\end{axis}')
-q('0015',tipId='fe-grafik',tip=TIPLER['fe-grafik'],z='zor',alt='Vs–f Grafiği',kaz='Durdurma potansiyeli – frekans doğrusunun eğimi ve f eksenini kesim noktasından metalin eşik enerjisini hesaplar.',kalip='grafik',
- metin='Bir katot metaline gönderilen tek renkli ışığın frekansı (f) ile bu frekanstaki fotoelektrik akımı sıfırlayan ters gerilimin (durdurma potansiyeli, Vs) değişimi deneysel olarak şekildeki doğru parçası biçiminde elde edilmiştir.\nBuna göre, bu metalin eşik enerjisi kaç eV’tur?',
- sekil=SK,dogru=W15,yan=[(Fr(2,5),'Doğrunun eğimini (0,4 V ÷ 10¹⁴ Hz) eşik enerjisi olarak yazmış.','bilgi'),(Fr(4,5),'Grafikteki ilk noktanın durdurma potansiyelini eşik enerjisi sanmış.','bilgi'),(Fr(12,5),'Grafikteki son noktanın durdurma potansiyelini eşik enerjisi sanmış.','bilgi'),(4,'Doğruyu uzatıp bulduğu eşik frekansının (4 × 10¹⁴ Hz) sayısını eV cinsinden eşik enerjisi sanmış.','dikkat')],
- istenen='Metalin eşik enerjisi (eV).',
+# ===== 15 zor · Vs–f grafiğinden eşik dalga boyu
+card(15,'Vs–f grafiğinden eşik dalga boyu','Vs–f doğrusunun eğimi h ÷ e’dir; doğru Vs = 0’a uzatılarak eşik frekansı, W = h·f₀ ile eşik enerjisi ve hc ÷ W ile eşik dalga boyu bulunur.','Verilen noktadaki Vs, eğim ya da Vs farkını eşik enerjisi sanmak.','zor','grafik',5,'fe-grafik','Vs–f doğrusundan eşik dalga boyu')
+fa,Va,fb,Vb=7,Fr(4,5),11,Fr(12,5); sl15=(Vb-Va)/(fb-fa); f0_15=fa-Va/sl15; W15=sl15*f0_15; L15=Fr(HC)/W15
+assert sl15==Fr(2,5) and f0_15==5 and W15==2 and L15==6200
+assert Fr(HC)/sl15==31000 and Fr(HC)/Va==15500 and Fr(HC)/f0_15==2480 and Fr(HC)/(Vb-Va)==7750
+SK=ptx('\\begin{axis}[width=7.4cm,height=5.2cm,xmin=0,xmax=12,ymin=0,ymax=3.2,xtick={0,1,2,3,4,5,6,7,8,9,10,11,12},ytick={0,0.4,0.8,1.2,1.6,2.0,2.4,2.8,3.2},grid=both,major grid style={gray!50,thin},tick label style={font=\\scriptsize},axis lines=left,xlabel={$f$ ($10^{14}$ Hz)},ylabel={$V_s$ (V)},label style={font=\\small},'+PGF+']\n\\addplot[thick,vurgu] coordinates {(7,0.8) (11,2.4)};\n\\addplot[only marks,mark=*,mark size=1.8pt] coordinates {(7,0.8) (11,2.4)};\n\\end{axis}')
+q('0015',tipId='fe-grafik',tip=TIPLER['fe-grafik'],z='zor',alt='Vs–f Grafiği',kaz='Durdurma potansiyeli – frekans doğrusundan metalin eşik enerjisini ve fotoelektron sökebilen en büyük dalga boyunu hesaplar.',kalip='grafik',
+ metin='Bir katot metaline gönderilen tek renkli ışığın frekansı (f) ile bu frekanstaki fotoelektrik akımı sıfırlayan ters gerilimin (durdurma potansiyeli, Vs) değişimi deneysel olarak şekildeki doğru parçası biçiminde elde edilmiştir. (hc = 12400 eV·Å)\nBuna göre, bu metalden fotoelektron sökebilen ışığın dalga boyu en çok kaç Å olabilir?',
+ sekil=SK,dogru=L15,yan=[(31000,'Doğrunun eğimini (0,4) eşik enerjisi alıp dalga boyunu 12400 ÷ 0,4 bulmuş.','bilgi'),(15500,'Grafikteki ilk noktanın durdurma potansiyelini (0,8) eşik enerjisi alıp 12400 ÷ 0,8 bulmuş.','bilgi'),(2480,'Doğruyu uzatıp bulduğu eşik frekansının sayısını (5) eV cinsinden eşik enerjisi alıp 12400 ÷ 5 bulmuş.','dikkat'),(7750,'İki noktadaki durdurma potansiyellerinin farkını (2,4 − 0,8 = 1,6) eşik enerjisi alıp 12400 ÷ 1,6 bulmuş.','islem')],
+ istenen='Fotoelektron sökebilen en büyük dalga boyu (Å).',
  ip=['Doğrunun eğimini bul ve doğruyu Vs = 0 olduğu frekansa kadar uzat; eğimin h ÷ e olduğunu kullan.'],
  bilgi=[DUR,VSF],
- ad=[A('Eğimi hesapla','İki nokta arasındaki Vs değişiminin f değişimine oranıdır.','eğim = (2,4 − 0,8) ÷ (10 − 6) = 0,4 V ÷ 10¹⁴ Hz'),
-     A('Eşik frekansını bul','Vs = 0 olduğu frekans eşik frekansıdır; ilk noktadan geriye gidilir.','f₀ = 6 − 0,8 ÷ 0,4 = 4 × 10¹⁴ Hz'),
-     A('Eğimin anlamını kullan','Eğim h ÷ e olduğundan e × eğim, h’yi eV·s cinsinden verir.','h = 0,4 eV ÷ 10¹⁴ Hz'),
-     A('Eşik enerjisini hesapla','W = h·f₀ bağıntısı kullanılır.','W = 0,4 × 4 = 1,6 eV')],
- puf='Vs–f doğrusunun eğimi h ÷ e olduğundan eşik enerjisi W = e × eğim × f₀ bulunur: doğruyu Vs = 0’a kadar uzatmayı unutma.')
+ ad=[A('Eğimi hesapla','İki nokta arasındaki Vs değişiminin f değişimine oranıdır.','eğim = (2,4 − 0,8) ÷ (11 − 7) = 0,4 V ÷ 10¹⁴ Hz'),
+     A('Eşik frekansını bul','Vs = 0 olduğu frekans eşik frekansıdır; ilk noktadan geriye gidilir.','f₀ = 7 − 0,8 ÷ 0,4 = 5 × 10¹⁴ Hz'),
+     A('Eşik enerjisini hesapla','Eğim h ÷ e olduğundan W = h·f₀ = e × eğim × f₀ yazılır.','W = 0,4 × 5 = 2 eV'),
+     A('Eşik dalga boyunu bul','Sökülebilmesi için foton enerjisi en az W olmalıdır; dalga boyu en çok hc ÷ W kadardır.','λ₀ = 12400 ÷ 2 = 6200 Å')],
+ puf='Doğrunun eğiminin neyi gösterdiğini ve Vs = 0 noktasının neyi verdiğini düşün.')
 # ===== 16 zor · iki dalga boyundaki Ek'ten eşik dalga boyu
 card(16,'İki dalga boyundan eşik dalga boyu','E ve E′ = E ÷ 2 için Ek değerlerinden foton enerjisi ve W çözülür, eşik dalga boyu hc ÷ W ile λ cinsinden bulunur.','Eşik enerjisini Ek değerlerinin farkı ya da biri sanmak; dalga boyu oranını enerji oranıyla karıştırmak.','zor','tablo',5,'fe-esik','dalga boyu ve Ek tablosundan eşik dalga boyu')
 Ea=Fr(6); Wd=2; Ka,Kb=4,1; assert Ea-Wd==Ka and Ea/2-Wd==Kb and Ea/Wd==3 and Ea/(Ka-Kb)==2 and Ea/Ka==Fr(3,2) and Ea/Kb==6 and Ea/Wd/3==1
@@ -356,14 +359,14 @@ q('0016',tipId='fe-esik',tip=TIPLER['fe-esik'],z='zor',alt='Eşik Dalga Boyu',ka
 # ===== 17 zor · frekans artırılınca akım–gerilim grafiği
 card(17,'Güç sabitken frekans artışı','Güç sabitken frekans artınca foton sayısı azalır (doygunluk akımı küçülür), foton enerjisi artar (durdurma potansiyeli büyür).','Yalnız enerjinin arttığını düşünüp akımı da artırmak ya da yalnız foton sayısına bakıp durdurma potansiyelini sabit bırakmak.','zor','grafik',4,'fe-akim','güç sabit, frekans artıyor')
 orig=(2,2)  # (Is,Vs)
-pan={'K':(3,3),'L':(1,2),'M':(3,1),'N':(2,3),'P':(1,3)}
+pan={'K':(3,3),'L':(1,2),'M':(3,1),'N':(2,3),'P':(Fr(3,2),3)}
 fold=1; fnew=Fr(3,2); Pg=1; Nold=Pg/fold; Nnew=Pg/fnew; assert Nnew<Nold
 ok={k:(v[0]<orig[0] and v[1]>orig[1]) for k,v in pan.items()}; assert [k for k,v in ok.items() if v]==['P']
 def panel(nm,Is,Vs,x,y):
-    return (f'\\begin{{axis}}[at={{({x}cm,{y}cm)}},anchor=south west,width=3.9cm,height=2.55cm,xmin=-4,xmax=1.6,ymin=0,ymax=3.6,xtick={{-3,-2,-1}},ytick={{1,2,3}},grid=both,major grid style={{gray!35,thin}},axis lines=middle,tick label style={{font=\\scriptsize}},title={{\\small {nm}}},title style={{yshift=-2pt}}]\n'
+    return (f'\\begin{{axis}}[at={{({x}cm,{y}cm)}},anchor=south west,width=3.9cm,height=3.5cm,xmin=-4,xmax=1.6,ymin=0,ymax=3.6,xtick={{-3,-2,-1}},ytick={{1,1.5,2,3}},grid=both,major grid style={{gray!35,thin}},axis lines=middle,tick label style={{font=\\small}},title={{\\small {nm}}},title style={{yshift=-2pt}}]\n'
             f'\\addplot[thick,gray,dashed] coordinates {{{plot_iv(*orig)}}};\n\\addplot[thick,vurgu] coordinates {{{plot_iv(Is,Vs)}}};\n\\end{{axis}}')
-pp17=[panel('K',*pan['K'],0,6.6),panel('L',*pan['L'],5.2,6.6),panel('M',*pan['M'],0,3.3),panel('N',*pan['N'],5.2,3.3),panel('P',*pan['P'],0,0)]
-leg=('\\draw[thick,gray,dashed] (5.6,1.6) -- (6.4,1.6); \\node[anchor=west,font=\\small] at (6.5,1.6) {ilk deney};\n\\draw[thick,vurgu] (5.6,.95) -- (6.4,.95); \\node[anchor=west,font=\\small] at (6.5,.95) {yeni deney};')
+pp17=[panel('K',*pan['K'],0,9.0),panel('L',*pan['L'],5.2,9.0),panel('M',*pan['M'],0,4.5),panel('N',*pan['N'],5.2,4.5),panel('P',*pan['P'],0,0)]
+leg=('\\draw[thick,gray,dashed] (5.6,2.0) -- (6.4,2.0); \\node[anchor=west,font=\\small] at (6.5,2.0) {ilk deney};\n\\draw[thick,vurgu] (5.6,1.2) -- (6.4,1.2); \\node[anchor=west,font=\\small] at (6.5,1.2) {yeni deney};')
 SK=ptx('\n'.join(pp17)+'\n'+leg)
 q('0017',tipId='fe-akim',tip=TIPLER['fe-akim'],z='zor',alt='Akım–Gerilim Grafiği',kaz='Işığın gücü sabitken frekansı artırıldığında akım–gerilim grafiğinin nasıl değişeceğini foton sayısı ve foton enerjisiyle yorumlar.',kalip='grafik',
  metin='Bir fotoelektrik düzenekte tek renkli ışıkla yapılan ilk deneyin akım–gerilim grafiği kesikli çizgiyle gösterilmiştir. Daha sonra aynı katot kullanılarak ışığın gücü değiştirilmeden yalnız frekansı artırılıyor ve deney tekrarlanıyor. Gelen her foton en çok bir elektron söküyor, sökme verimi frekanstan bağımsızdır ve gerilim yeterince büyük olduğunda sökülen bütün elektronlar anoda ulaşıyor.\nHer panelde düşey eksen akımı, yatay eksen gerilimi (V) göstermektedir.\nBuna göre, yeni deneye ait akım–gerilim grafiği (sürekli çizgi) şekildeki panellerin hangisinde verilmiştir?',
@@ -397,7 +400,7 @@ q('0018',tipId='fe-debroglie',tip=TIPLER['fe-debroglie'],z='zor',alt='De Broglie
  ad=[A('Kinetik enerjileri bul','Aynı V için kazanılan enerji yükle orantılıdır.','K_X = qV · K_Y = 4qV'),
      A('Momentumları oranla','p = √(2mK) olduğundan momentum √(m·K) ile orantılıdır.','pY ÷ pX = √(4m × 4qV) ÷ √(m × qV) = √16 = 4'),
      A('Dalga boylarını oranla','De Broglie dalga boyu momentumla ters orantılıdır.','λX ÷ λY = pY ÷ pX = 4')],
- puf='Aynı gerilimle hızlandırılan parçacıklarda λ ∝ 1 ÷ √(m·q): hem kütleyi hem yükü hesaba katıp karekök almayı unutma.')
+ puf='Kazanılan kinetik enerjiyi yük ve gerilimden bul, sonra momentuma geç.')
 # ===== 19 zor · tam yansıtıcı yüzeye eğik gelen ışığın kuvveti
 card(19,'Eğik yansıyan ışığın kuvveti','Birim zamanda gelen momentum P ÷ c; tam yansımada yüzeye dik bileşenin yönü değişir ve kuvvet 2·(P ÷ c)·cosθ olur.','Momentum değişimini p sanmak (2 çarpanı), dik bileşen için cos yerine sin ya da bölme kullanmak.','zor','şekilli',5,'fe-foton','eğik tam yansıma kuvveti')
 Pw,cc=3,3*10**8; cs,sn=Fr(4,5),Fr(3,5); Pc=Fr(Pw,cc)*10**9; F19=2*Pc*cs
@@ -421,9 +424,9 @@ q('0019',tipId='fe-foton',tip=TIPLER['fe-foton'],z='zor',alt='Işınım Basınc�
      A('Hangi bileşen değişir','Tam yansımada yüzeye paralel bileşen korunur, yüzeye dik bileşen yön değiştirir.','dik bileşen: (P ÷ c) × cos37° = 8 nN'),
      A('Momentum değişimini yaz','Dik bileşen +’dan −’ye döndüğü için değişim iki katıdır.','Δ(p dik) = 2 × 8 = 16 nN'),
      A('Kuvveti bul','Yüzeye uygulanan kuvvet, saniyedeki momentum değişimine eşittir.','F = 16 nN')],
- puf='Tam yansıyan ışığın yüzeye dik kuvveti F = 2·(P ÷ c)·cosθ’dır (θ: normalle yapılan açı); tam soğurulsa bu değerin yarısı olurdu.')
+ puf='Saniyedeki momentum değişiminin yüzeye dik bileşenine bak.')
 # ===== 20 zor · fotoelektron ve de Broglie
-card(20,'Fotoelektronun dalga boyu','Ek,maks = hf − W ile sökülen elektronun kinetik enerjisi bulunur; de Broglie dalga boyu λ = h ÷ √(2mEk) ile Ek’nın karekökü ile ters orantılıdır.','Elektronun dalga boyunu fotonun dalga boyuyla karıştırmak; karekökü unutmak.','zor','şekilli',4,'fe-debroglie','fotoelektronların de Broglie dalga boyları oranı')
+card(20,'Fotoelektronun dalga boyu','Ek,maks = hf − W ile sökülen elektronun kinetik enerjisi bulunur; de Broglie dalga boyu λ = h ÷ √(2mEk) ile Ek’nın karekökü ile ters orantılıdır.','Elektronun dalga boyunu fotonun dalga boyuyla karıştırmak; karekökü unutmak.','orta','şekilli',4,'fe-debroglie','fotoelektronların de Broglie dalga boyları oranı')
 E20a,E20b,W20=Fr(5,2),Fr(4),Fr(2); K20a=E20a-W20; K20b=E20b-W20
 assert K20a==Fr(1,2) and K20b==2 and math.isqrt(int(K20b/K20a))**2==K20b/K20a and math.isqrt(int(K20b/K20a))==2 and E20b/E20a==Fr(8,5)
 assert K20b/K20a==4 and K20a/K20b==Fr(1,4)
@@ -432,7 +435,7 @@ def ph(x,lab,ttl):
     o.append(AR((x-2.1,1.25),(x-.58,.32),'thick,vurgu')); o.append(N(x-1.55,1.85,lab,'font=\\small,align=center')); o.append(N(x,-1.35,ttl,'font=\\small\\bfseries'))
     return o
 SK=tikz(ph(0,'foton enerjisi\\\\$2{,}5$ eV','Deney I')+ph(4.4,'foton enerjisi\\\\$4$ eV','Deney II'))
-q('0020',tipId='fe-debroglie',tip=TIPLER['fe-debroglie'],z='zor',alt='De Broglie Dalga Boyu',kaz='Fotoelektrik olayda sökülen elektronların maksimum kinetik enerjilerinden de Broglie dalga boyları oranını bulur.',kalip='şekilli',
+q('0020',tipId='fe-debroglie',tip=TIPLER['fe-debroglie'],z='orta',alt='De Broglie Dalga Boyu',kaz='Fotoelektrik olayda sökülen elektronların maksimum kinetik enerjilerinden de Broglie dalga boyları oranını bulur.',kalip='şekilli',
  metin='Eşik enerjisi 2 eV olan bir katot levhasına, foton enerjileri şekilde verilen tek renkli ışıklarla iki ayrı deney yapılıyor. Her deneyde sökülen elektronlardan maksimum kinetik enerjili olanların de Broglie dalga boyları, Deney I’de λ₁, Deney II’de λ₂’dir. Elektronların hızları ışık hızından çok küçüktür.\nBuna göre, λ₁ ÷ λ₂ oranı kaçtır?',
  sekil=SK,dogru=2,yan=[(Fr(1,4),'Dalga boyunu kinetik enerjiyle doğru orantılı alarak λ₁ ÷ λ₂ = 0,5 ÷ 2 bulmuş.','bilgi'),(Fr(1,2),'Dalga boyunu √Ek ile doğru orantılı alıp oranı ters yazmış: √(0,5 ÷ 2).','dikkat'),(Fr(8,5),'Elektronların değil, fotonların dalga boyları oranını bulmuş: 4 ÷ 2,5.','bilgi'),(4,'Dalga boyunu Ek ile ters orantılı alıp karekök almamış: 2 ÷ 0,5.','islem')],
  istenen='λ₁ ÷ λ₂ oranı.',
@@ -442,7 +445,7 @@ q('0020',tipId='fe-debroglie',tip=TIPLER['fe-debroglie'],z='zor',alt='De Broglie
      A('Dalga boyu bağıntısını yaz','Aynı parçacık (elektron) için λ ∝ 1 ÷ √Ek.','λ = h ÷ √(2mEk)'),
      A('Oranı kur','Kinetik enerjiler oranının karekökünün tersi alınır.','λ₁ ÷ λ₂ = √(Ek₂ ÷ Ek₁) = √(2 ÷ 0,5)'),
      A('Sonucu bul','Karekök içi 4’tür.','λ₁ ÷ λ₂ = 2')],
- puf='Aynı tür parçacıkta de Broglie dalga boyu √(kinetik enerji) ile ters orantılıdır; kinetik enerji dört katına çıkarsa dalga boyu yarıya iner.')
+ puf='Aynı tür parçacıkta de Broglie dalga boyu, kinetik enerjinin karekökü ile ters orantılıdır; kinetik enerji dokuz katına çıkarsa dalga boyu üçte birine iner.')
 # ===== yaz
 for qq in P.ANA: qq['kardes']=None
 SC='/tmp/claude-0/-home-claude-zekacademy-app/cf3686d6-69fb-532a-907b-5b8d50f6cef4/scratchpad/fotoelektrik'

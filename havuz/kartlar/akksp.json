@@ -201,12 +201,12 @@
   {
    "id": "K-AKKSP-16",
    "konu": "Çözünürlük Dengesi",
-   "alt": "pH ve ortak iyon etkisi",
-   "fikir": "pH → [OH⁻] ortak iyonu; çözünürlük Kçç ÷ [OH⁻]²; saf suya oranlanır.",
-   "tuzak": "[OH⁻] derişimini katsayıyla çarpmak; saf sudaki çözünürlüğü yanlış bulmak.",
+   "alt": "Nötrleşme sonrası ortak iyon etkisi",
+   "fikir": "Karışımın OH⁻ derişimi nötrleşme ve seyrelmeyle bulunur; çözünürlük Kçç ÷ [OH⁻]²; saf suya oranlanır.",
+   "tuzak": "HCl ile nötrleşmeyi ya da seyrelmeyi unutmak; [OH⁻] derişiminin karesini almamak.",
    "zorluk": "zor",
    "kalip": "hikâyeli",
-   "adim": 5,
+   "adim": 6,
    "tipId": "ksp-ortak",
    "tip": "Ortak iyon etkisi",
    "kaynak": "ÖSYM AYT 2022–2025 Kimya (yalnız mantık) · MEB 12. sınıf Çözünürlük Dengesi"
@@ -243,7 +243,7 @@
    "alt": "Sıcaklığın çökelme koşuluna etkisi",
    "fikir": "Karışımın iyon çarpımı sabit; Kçç sıcaklıkla artıyorsa çökelme yalnız düşük sıcaklıkta olur ve ısıtınca çökelti çözünür.",
    "tuzak": "Q’yu sıcaklıkla değişen sanmak; Kçç’nin artmasını çözünmenin ekzotermik olmasına yormak.",
-   "zorluk": "zor",
+   "zorluk": "orta",
    "kalip": "öncüllü",
    "adim": 5,
    "tipId": "ksp-sicaklik",
@@ -253,14 +253,14 @@
   {
    "id": "K-AKKSP-20",
    "konu": "Çözünürlük Dengesi",
-   "alt": "Seyreltilmiş ortak iyon çözeltisinde çözünürlük",
-   "fikir": "Önce seyrelme ile ortak iyon derişimi bulunur; sonra çözünürlük Kçç ÷ [F⁻]².",
-   "tuzak": "Seyrelmeyi atlamak; F⁻ derişiminin karesini almamak.",
+   "alt": "Stokiyometrik çökelme ve Kçç",
+   "fikir": "Karışımda önce çökelme tepkimesi stokiyometriyle çözülür; artan iyon derişiminden Kçç ile kalan iyon bulunur.",
+   "tuzak": "Seyrelmeyi ya da 1:2 oranını unutmak; Kçç ifadesinde üssü atlamak.",
    "zorluk": "zor",
    "kalip": "şekilli",
-   "adim": 5,
-   "tipId": "ksp-ortak",
-   "tip": "Ortak iyon etkisi",
+   "adim": 6,
+   "tipId": "ksp-cokelme",
+   "tip": "Çökelme koşulu (Q ile Kçç)",
    "kaynak": "ÖSYM AYT 2022–2025 Kimya (yalnız mantık) · MEB 12. sınıf Çözünürlük Dengesi"
   }
  ],
@@ -311,8 +311,7 @@
    "kartlar": [
     "K-AKKSP-07",
     "K-AKKSP-08",
-    "K-AKKSP-16",
-    "K-AKKSP-20"
+    "K-AKKSP-16"
    ],
    "uygulamaKonu": "akim|Çözünürlük Dengesi"
   },
@@ -322,7 +321,8 @@
    "kartlar": [
     "K-AKKSP-09",
     "K-AKKSP-10",
-    "K-AKKSP-17"
+    "K-AKKSP-17",
+    "K-AKKSP-20"
    ],
    "uygulamaKonu": "akim|Çözünürlük Dengesi"
   },

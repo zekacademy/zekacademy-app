@@ -634,14 +634,14 @@ d=dict(I=(True,'Etine su katılınca kararlı ürün etanal (aldehit) olur; X bi
        III=(True,'Z (metil etanoat) ile propanoik asit aynı formüle (C₃H₆O₂) ve farklı fonksiyonel gruba (ester ve asit) sahiptir'))
 o=OC(d,sr('Yalnız I','Yalnız II','I ve II','I ve III','I, II ve III')); assert o['dogru']=='I ve III'
 SK=tk(satirlar([[('m','C#C'),('->','H$_2$O','',1.8),('kutu','X'),('->','yükseltgenme','',2.5),('kutu','Y')],[('kutu','Y'),('+',),('y','CH$_3$OH'),('->','H$^+$','',1.8),('kutu','Z'),('+',),('y','H$_2$O')]],bosluk=0.5))
-Q('0015','zin','zor','öncüllü','Tepkime zinciri (etin → ester) ve izomerlik','Alkin hidrasyonu, yükseltgenme ve ester oluşumunu izleyip ürünlerin izomerlik ilişkisini yorumlar.',
+Q('0015','zin','orta','öncüllü','Tepkime zinciri (etin → ester) ve izomerlik','Alkin hidrasyonu, yükseltgenme ve ester oluşumunu izleyip ürünlerin izomerlik ilişkisini yorumlar.',
   'Etine su katılınca aldehit; aldehit yükseltgenince asit; asit + alkol → ester; esterler aynı formüllü karboksilik asitlerin fonksiyonel grup izomeridir.','Ester ile aynı sayıda karbonlu asidi aynı formüllü sanmak ya da tersi.','etin → metil etanoat zinciri',
   [A('X’i bul','Etine su katılınca kararlı ürün aldehit olur.','X: etanal'),A('Y’yi bul','Aldehit yükseltgenince karboksilik asit oluşur.','Y: etanoik asit'),
    A('Z’yi bul','Y ile metanol ester ve su verir.','Z: metil etanoat (C₃H₆O₂)'),A('Yargıları değerlendir','Y ile Z’nin formülleri farklı; Z ile propanoik asit aynı formüllü, farklı gruplu.','I ve III doğru')],
   metin='Şekilde etin ile başlayan bir tepkime zinciri gösterilmiştir.\nI. X bileşiği bir aldehittir.\nII. Y ve Z bileşikleri birbirinin yapı izomeridir.\nIII. Z bileşiği ile propanoik asit birbirinin fonksiyonel grup izomeridir.\nBuna göre bu yargılardan hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Zincirdeki bileşiklerin formüllerini yazıp aynı formüllü olanların fonksiyonel gruplarını karşılaştır.'],
-  bilgi=[B('Alkine su katılması','Alkine su katılınca önce kararsız bir enol oluşur ve aldehit ya da ketona dönüşür; etinden aldehit, diğer alkinlerden keton elde edilir. Örnek: 1-bütin + H₂O → 2-bütanon')],
-  puf='Etinin hidrasyonu aldehit verir; esterlerle asitler aynı formülde fonksiyonel grup izomeridir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  bilgi=[B('Alkine su katılması','Alkine su katılınca önce kararsız bir enol oluşur ve karbonil bileşiğine dönüşür; ürün alkinin yapısına göre değişir. Örnek: 1-bütin + H₂O → 2-bütanon')],
+  puf='Zincirde her basamağın ürününü yazıp formülleri ve fonksiyonel grupları karşılaştır.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 16 · gaz karışımı · zor · şekil =================
 mE16,mEt=Fr(28),Fr(30); n_top=Fr(1,2); kt=Fr(56,10); n_eten=kt/mEt if False else kt/mE16; n_etan=n_top-n_eten; assert (n_eten,n_etan)==(Fr(1,5),Fr(3,10))
@@ -704,7 +704,7 @@ S18=[('Yükseltgenmesiyle önce etanal oluşur',True,'birincil alkol yükseltgen
      ('Yükseltgenmesi sonucunda doğrudan bir keton oluşur',False,'birincil alkol keton vermez; aldehit ve asit oluşur')]
 o=tek(S18,hedef=False)
 o['sira']=[S18[4][0],S18[0][0],S18[1][0],S18[2][0],S18[3][0]]
-Q('0018','yuk','orta','düz','Etanolün tepkimeleri','Birincil alkolün yükseltgenme, ayrılma, kondenzasyon ve katılma tepkimelerindeki rolünü ayırt eder.',
+Q('0018','yuk','kolay','düz','Etanolün tepkimeleri','Birincil alkolün yükseltgenme, ayrılma, kondenzasyon ve katılma tepkimelerindeki rolünü ayırt eder.',
   'Birincil alkol yükseltgenince aldehit, sonra asit; derişik H₂SO₄ ile alken; asitle ester verir; alkenden hidrasyonla elde edilir.','Birincil alkolün keton verdiğini sanmak.','etanol',
   [A('Alkol sınıfını bul','Etanolde –OH, iki hidrojen taşıyan ve bir karbona bağlı karbondadır.','Birincil alkol'),
    A('Yükseltgenmeyi hatırla','Birincil alkol önce aldehit, sonra karboksilik asit verir.','Etanol → etanal → etanoik asit'),
@@ -713,7 +713,7 @@ Q('0018','yuk','orta','düz','Etanolün tepkimeleri','Birincil alkolün yükselt
   metin='Etanol (C₂H₅OH) ile ilgili aşağıdakilerden hangisi yanlıştır?',
   sekil=None,istenen='Yanlış olan ifade.',ip=['Etanolün alkol sınıfını belirle ve her ifadeyi bu sınıfın tepkimeleriyle karşılaştır.'],
   bilgi=[B('Alkollerin tepkimeleri','Alkoller yükseltgenme, dehidratasyon ve karboksilik asitle ester oluşturma tepkimelerine girer. Birincil alkol aldehit ve asit, ikincil alkol keton verir. Örnek: 2-propanol → propanon')],
-  puf='Keton yalnız ikincil alkolün yükseltgenme ürünüdür; birincil alkol aldehit ve asit verir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Alkolün sınıfı, yükseltgenme ürününü belirler.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 19 · tanım–dehidratasyon · zor · tablo =================
 L4=uret(4,1,0,0); alk4=[g for g in L4 if sinifla(g)=={'alkol'}]

@@ -54,12 +54,12 @@ CB=((-1.81,.845),(-2.55,.65),(-2.55,-.65),(-1.81,-.845))
 # ---------------- GÖZ ----------------
 EYE_T={ # parça: (hedef noktası, etiket konumu)
  'kornea':(bez(*CB,.25),(-3.3,1.55)),
- 'sulu':((-1.7,.25),(-3.3,.55)),
- 'pupil':((-1.16,.1),(-3.3,-.45)),
- 'iris':((-1.16,-1.15),(-3.0,-1.7)),
+ 'sulu':((-1.7,.3),(-3.3,.6)),
+ 'pupil':((-1.22,.0),(-3.3,-.45)),
+ 'iris':((-1.16,-.8),(-3.0,-1.2)),
  'mercek':((-.7,-.3),(-.2,-2.85)),
  'camsi':((.5,.5),(.9,2.85)),
- 'retina':((1.86*math.cos(math.radians(50)),1.86*math.sin(math.radians(50))),(2.9,2.0)),
+ 'retina':((1.78*math.cos(math.radians(50)),1.78*math.sin(math.radians(50))),(2.9,2.0)),
  'sariben':((1.86,0.0),(3.5,.55)),
  'sinir':((2.45,-.75),(3.5,-1.4)),
  'sert':((2*math.cos(math.radians(-55)),2*math.sin(math.radians(-55))),(2.7,-2.5)),
@@ -300,7 +300,7 @@ Q('0001','yapi','kolay','şekilli','Göz yapıları','Şematik gözde numaralı 
   ip=['Görüntünün retina üzerinde net oluşması için ışığın kırılma miktarını ayarlayabilen saydam yapıyı bul.'],
   bilgi=[B('Gözün katmanları','göz küresi dışta sert tabaka (ön kısmı saydam kornea), ortada damar tabaka (ön kısmı iris ve göz bebeği), içte retina ile örtülüdür; retinada ışığa duyarlı reseptörler bulunur'),
          B('Saydam ortamlar','kornea, sulu sıvı, mercek ve camsı cisim saydamdır; ışığı kırarak retinaya ulaştırırlar')],
-  puf='Odaklamayı ayarlayan yapı mercektir; ışık miktarını ayarlayan ise irisin çevrelediği göz bebeğidir.',sekil=SK1)
+  puf='Kalınlığı ya da eğriliği değişebilen saydam yapı odaklamayı ayarlar; ışık miktarını ayarlayan yapı ise ayrı bir görev üstlenir.',sekil=SK1)
 
 # ===================== 02 · Kulak · kolay · şekilli =====================
 SK2=tk(ear({'koklea':'I','zar':'II','ostaki':'III','yarim':'IV','ors':'V'}),.8)
@@ -384,10 +384,10 @@ Q('0005','retina','zor','grafik','Çubuk, koni ve kör nokta','Retina grafiğind
 
 # ===================== 06 · Göz bebeği tablosu · orta · öncüllü =====================
 CAP=[('K','Çok az (karanlık oda)',7),('L','Orta (aydınlık oda)',4),('M','Çok fazla (güneşli açık alan)',2)]
-assert CAP[0][2]>CAP[1][2]>CAP[2][2]
+assert CAP[0][2]>CAP[1][2]>CAP[2][2] and CAP[0][2]>3*CAP[2][2]
 SK6=tablo_svg(['Ortam','Işık düzeyi','Göz bebeği çapı (mm)'],[[a,b,str(c)] for a,b,c in CAP])
 O6=onc('Aşağıdaki tabloda, sağlıklı bir bireyin göz bebeği çapı, ışık düzeyleri farklı üç ortamda yaklaşık olarak verilmiştir.',
-  [('Göz bebeği çapındaki değişimi iris sağlar.',True,'Göz bebeği, irisin kaslarının kasılıp gevşemesiyle daralır ya da genişler.'),
+  [('K ortamındaki göz bebeği çapı, M ortamındakinin üç katından fazladır.',True,'K’da çap 7 mm, M’de 2 mm’dir; M’nin üç katı 6 mm olduğundan 7 mm bundan büyüktür.'),
    ('Işık düzeyi azaldıkça retinaya ulaşan ışık miktarını artırıcı yönde bir ayarlama yapılır.',True,'Tabloda ışık azaldıkça göz bebeği çapı büyümektedir; büyük bir göz bebeği retinaya daha fazla ışık girmesini sağlar.'),
    ('Göz bebeği çapının ışık düzeyine göre değişmesi, retinadaki reseptörlerden başlayıp irisin kaslarına uzanan sinirsel bir yolla gerçekleşir.',True,'Göz bebeğinin ışığa tepkisi bir refleks olup reseptör, duyu nöronu, merkezi sinir sistemi ve irisin kaslarını uyaran nöronları içerir.')],
   'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',['Yalnız I','Yalnız II','I ve II','II ve III','I, II ve III'])
@@ -462,11 +462,11 @@ Q('0009','kulak','orta','şekilli','Östaki borusu ve basınç','Orta kulak ile 
   ip=['IV numaralı yapının birbirine bağladığı bölgeleri bul ve tıkanmanın hangi bölgedeki basıncı etkilediğini düşün.'],
   bilgi=[B('Orta kulak ve basınç','orta kulak, östaki borusuyla yutağa bağlanan hava dolu bir boşluktur; bu bağlantı kulak zarının iki yüzündeki hava basıncının eşitlenmesini sağlar'),
          B('Kulak zarı','iki yüzündeki basınç eşit olduğunda en iyi titreşir; basınç farkı titreşimini sınırlar')],
-  puf='Östaki borusu orta kulağın basınç ayarıdır; tıkanması basınç ve zar titreşimiyle ilgili sonuçlar doğurur, iç kulak reseptörlerini yapısal olarak bozmaz.',sekil=SK9)
+  puf='Bir yapının tıkanması ya da bozulması önce o yapının görevini, sonra o göreve bağlı yapıları etkiler; sonuçları bu zincirle sırala.',sekil=SK9)
 # yarım daire ve koklea şıkları aynı yönde yorumlanmasın: B şıkkı doğru (beklenmeyen) – harf B
 
 # ===================== 10 · İşitme kayıpları · orta · öncüllü =====================
-O10=onc('İşitme kayıpları, ses titreşiminin iç kulağa iletilmesindeki aksamalardan ya da iç kulak ve işitme sinirindeki hasardan kaynaklanabilir. K kişisinde kulak zarı delinmiş, L kişisinde orta kulaktaki üç kemikçik birbirine kaynamış, M kişisinde ise kokleadaki reseptör hücreler hasar görmüştür.',
+O10=onc('İşitme kaybının nedeni hasarlı yapıya göre değişir. K kişisinde kulak zarı delinmiş, L kişisinde orta kulaktaki üç kemikçik birbirine kaynamış, M kişisinde ise kokleadaki reseptör hücreler hasar görmüştür.',
   [('K’da ses dalgalarının orta kulağa aktarılması aksar.',True,'Delinmiş kulak zarı ses dalgalarıyla etkin biçimde titreşemez; bu nedenle titreşimlerin kemikçiklere aktarılması aksar.'),
    ('L’de kemikçikler titreşimleri iç kulağa etkin biçimde iletemez.',True,'Kaynaşmış kemikçikler serbestçe hareket edemez; kulak zarındaki titreşimi oval pencereye aktarma işlevi bozulur.'),
    ('M’deki işitme kaybı, titreşimlerin iç kulağa iletilmesindeki aksamadan kaynaklanır.',False,'M’de titreşimler iç kulağa ulaşır; sorun titreşimi impulsa çeviren reseptör hücrelerin hasarlı olmasıdır, yani kayıp iletimle değil reseptörle ilgilidir.')],
@@ -499,7 +499,7 @@ Q('0011','deri','orta','şekilli','Derinin tabakaları','Deri kesitinde tabakala
   ip=['Soru bir tabakayı soruyor; deri tabakalarını dıştan içe sırala ve yalnızca tabaka olan numaraları değerlendir.'],
   bilgi=[B('Derinin tabakaları','deri dıştan içe epidermis, dermis ve hipodermis tabakalarından oluşur; epidermisin dış kısmı ölü hücrelerle örtülüdür'),
          B('Deride duyu','deride dokunma, basınç, sıcaklık ve ağrı reseptörleri bulunur ve bu reseptörler sinir uçlarıyla bağlantılıdır')],
-  puf='Reseptör uçları, kan damarları, kıl kökleri ve ter bezleri epidermisin altındaki dermiste toplanır.',sekil=SK11)
+  puf='Soruda bir tabaka isteniyorsa tek yapıları (kıl, bez) değil, onları barındıran tabakaları değerlendir.',sekil=SK11)
 
 # ===================== 12 · İki nokta ayrımı · orta · öncüllü · tablo =====================
 IKI=[('Parmak ucu',3),('Avuç içi',12),('Ön kol',38),('Sırt',45)]
@@ -547,7 +547,7 @@ Q('0014','kemo','orta','hikâyeli','Tat ve koku birlikteliği','Tat ve koku duyu
    A('Doğru ifadeleri ayıkla','Kimyasal maddelerin koku reseptörlerine az ulaşması, lezzetin tat ve kokunun birleşimiyle oluşması, tat tomurcuklarının çözünmüş maddelerle uyarılması ve koku impulslarındaki azalmanın lezzeti zayıflatması doğrudur.','Dört ifade doğru'),
    A('Tat reseptörlerini değerlendir','Dildeki tat reseptörleri burunla ilişkisiz çalışır; burun tıkanması onları işlevsiz yapmaz, yalnız koku katkısını azaltır.','Tat reseptörleri çalışmaya devam eder'),
    A('Söylenemeyeni belirle','Tat reseptörlerinin uyarılamaz hâle geldiğini söyleyen ifade yanlıştır.','Söylenemeyen: tat reseptörlerinin işlevsizleşmesi')],'B',
-  metin='Nezle olan Deniz, burnu tıkalı olduğu günlerde yemeklerin tadını normalden daha az aldığını fark etmiştir. Doktoru bunun nedeninin tat ve koku duyularının birlikte çalışmasıyla ilgili olduğunu söylemiştir.\nBuna göre, Deniz’le ilgili aşağıdakilerden hangisi söylenemez?',
+  metin='Nezle olan Deniz, burnu tıkalı olduğu günlerde yemeklerin tadını normalden daha az aldığını fark etmiştir.\nBuna göre, Deniz’le ilgili aşağıdakilerden hangisi söylenemez?',
   dogru=S14[1],sira=S14,
   yan=[(S14[0],'Bu şıkkı yanlış sanan öğrenci burun tıkanıklığının koku reseptörlerine ulaşan maddeyi azalttığını gözden kaçırmıştır; ifade doğrudur.','dikkat'),
        (S14[2],'Bu şıkkı yanlış sanan öğrenci lezzetin tek bir duyudan geldiğini sanmıştır; lezzet tat ve koku impulslarının birlikte yorumlanmasıyla oluşur ve ifade doğrudur.','bilgi'),
@@ -559,23 +559,25 @@ Q('0014','kemo','orta','hikâyeli','Tat ve koku birlikteliği','Tat ve koku duyu
          B('Lezzet algısı','tat ve koku reseptörlerinden gelen impulslar beyinde birlikte değerlendirilir')],
   puf='Burun tıkanınca yalnız koku girdisi azalır; tat reseptörleri çalışmaya devam eder.')
 
-# ===================== 15 · İşitme kaybı türleri · zor · öncüllü · şekilli =====================
-SK15=tk(ear({'zar':'K','ostaki':'L','ors':'M','yarim':'N','koklea':'P'}),.8)
-O15=onc('Şekilde insan kulağının bazı bölümleri K, L, M, N ve P harfleriyle gösterilmiştir. X kişisinde M ile gösterilen yapı diğer kemikçiklerle kaynaşarak hareket edemez hâle gelmiş, Y kişisinde ise P ile gösterilen yapıdaki reseptör hücreleri hasar görmüştür. Her iki kişide de işitme kaybı vardır.',
-  [('X’te ses titreşimlerinin iç kulağa iletimi aksar.',True,'Kaynaşmış kemikçik zinciri hareket edemediği için kulak zarındaki titreşimi iç kulağa aktaramaz.'),
-   ('Y’de ses dalgaları iç kulağa ulaşamaz.',False,'Y’de kulak zarı ve kemikçikler sağlamdır; titreşimler iç kulağa ulaşır, ancak hasarlı reseptörler bu titreşimleri impulsa çeviremez.'),
-   ('Y’deki işitme kaybının nedeni, ses titreşimlerinin iletiminden sorumlu yapıların bozulması değildir.',True,'Y’nin kaybı titreşimi iletmekle değil, titreşimi impulsa çeviren reseptörlerin hasarıyla ilgilidir.')],
-  'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',['Yalnız I','Yalnız II','I ve II','I ve III','II ve III'])
-assert O15['dogru']=='I ve III'
-Q('0015','isitme','zor','şekilli','İletim ve reseptör kaynaklı kayıplar','Kulak şemasında harfle verilen yapıları tanıyıp iki kişide farklı yapılardaki hasarın işitmeyi nasıl bozduğunu karşılaştırır.',
-  'Kemikçik zinciri titreşimi iletir; koklea reseptörleri impuls üretir; iki hasar türü farklı basamakta kayba yol açar.','Koklea hasarını titreşimlerin iç kulağa ulaşamamasıyla açıklamak.','iki kişide işitme kaybı',
-  [A('Yapıları tanı','Şekilde M orta kulaktaki kemikçik zincirinin bir parçası olan örs, P ise sarmal yapıdaki kokleadır.','M: kemikçik (örs) · P: koklea'),
-   A('Hasarın basamağını belirle','X’te hasar, titreşimin iletildiği orta kulakta; Y’de ise titreşimin impulsa çevrildiği iç kulaktadır.','X: iletim basamağı · Y: impuls basamağı')]+O15['adim']+[A('Sonucu yaz','Doğru olan öncüller I ve III’tür.','Cevap: I ve III')],'D',
-  metin=O15['metin'],dogru=O15['dogru'],yan=O15['yan'],sira=O15['sira'],
-  istenen='Doğru olan yargılar.',
-  ip=['Harfle gösterilen iki yapının ses yolunda hangi basamakta görev yaptığını belirle ve hasarın o basamaktan sonrasını nasıl etkilediğini düşün.'],
-  bilgi=[B('Ses yolu','ses dalgaları kulak zarını titreştirir, titreşim orta kulaktaki kemikçiklerle iç kulağa aktarılır, kokleadaki reseptör hücreler uyarılır ve impuls işitme siniriyle beyne iletilir')],
-  puf='Titreşimi taşıyan yapılar bozulursa iletim, titreşimi impulsa çeviren reseptörler bozulursa algılama basamağında kayıp olur.',sekil=SK15)
+# ===================== 15 · Ses yolu sırası · orta · şekilli =====================
+SK15=tk(ear({'zar':'K','ostaki':'L','ors':'M','uzengi':'N','koklea':'P'}),.8)
+S15=['K – M – N – P','K – N – M – P','M – K – N – P','K – M – P – N','P – K – M – N']
+Q('0015','kulak','orta','şekilli','Sesin izlediği yol','Kulak şemasında harfle verilen yapıların ses titreşimini iletme sırasını belirler.',
+  'Titreşim kulak zarından başlayıp kemikçik zinciriyle iç kulağa aktarılır ve kokleadaki reseptörlerde impulsa dönüşür.','Kemikçiklerin sırasını ya da kokleanın konumunu karıştırmak.','ses yolu sırası',
+  [A('Yapıları tanı','Şekilde K kulak yolunun ucundaki zar, M ve N orta kulaktaki iki kemikçik (örs ve üzengi), P sarmal koklea, L ise orta kulağı yutağa bağlayan borudur.','K: kulak zarı · M: örs · N: üzengi · P: koklea · L: östaki borusu'),
+   A('Titreşimin yolunu çiz','Ses dalgaları önce zarı titreştirir; titreşim kemikçik zincirinde örsten üzengiye, oradan iç kulaktaki kokleaya geçer.','Zar, örs, üzengi, koklea'),
+   A('Borunun rolünü ele','Östaki borusu titreşim iletmez, basıncı dengeler; bu nedenle sıralamada yer almaz.','L sıralamada yok'),
+   A('Sırayı yaz','Zarla başlayan, örs ve üzengiyle sürüp kokleayla biten sıra doğrudur.','K – M – N – P')],'D',
+  metin='Şekilde insan kulağının bazı bölümleri K, L, M, N ve P harfleriyle gösterilmiştir.\nDış ortamdan gelen ses dalgalarının oluşturduğu titreşim, impulsa dönüşünceye kadar şekildeki yapılardan (titreşimi iletmeyen yapı sıralamaya alınmamıştır) hangi sırayla ilerler?',
+  dogru=S15[0],sira=yer('D',S15[0],S15[1:]),
+  yan=[(S15[1],'Bu sırada üzengi örsten önce konmuştur; oysa kemikçik zincirinde titreşim önce örse, sonra üzengiye geçer.','bilgi'),
+       (S15[2],'Bu sırada örs kulak zarından önce konmuştur; oysa titreşim ilk olarak kulak zarında oluşur.','bilgi'),
+       (S15[3],'Bu sırada koklea üzengiden önce konmuştur; oysa kemikçik zinciri titreşimi iç kulaktaki kokleaya aktarır.','bilgi'),
+       (S15[4],'Bu sırada koklea en başa konmuştur; oysa kokleadaki reseptörler titreşimin ulaştığı son basamaktır.','bilgi')],
+  istenen='Titreşimin yapılardan geçiş sırası.',
+  ip=['Titreşimin dış kulaktan iç kulağa doğru hangi yapıdan hangisine aktarıldığını şekildeki konumlara bakarak sırala.'],
+  bilgi=[B('Ses yolu','ses dalgaları dış ortamdan kulak yoluna girer; titreşimin iç kulağa ulaşması için orta kulaktaki yapılar da görev yapar')],
+  puf='Sıralamada titreşimi taşıyan yapıları dıştan içe doğru konumlarına göre diz.',sekil=SK15)
 
 # ===================== 16 · Reseptör uyarısı ve impuls · zor · öncüllü · grafik =====================
 SPL=[1.2,5.0,8.8]; SPM=[0.8,2.2,3.6,5.0,6.4,7.8,9.2,10.4]
@@ -659,7 +661,7 @@ Q('0019','kemo','zor','yeni nesil','Tat–koku deneyi','Deney sonuçlarından ta
 # ===================== 20 · Muayene tablosu · zor · tablo =====================
 MUA=[('K','Net','Bulanık','Yeterli','Yeterli'),('L','Bulanık','Net','Yeterli','Yeterli'),('M','Net','Net','Yetersiz','Yeterli'),('N','Net','Net','Yeterli','Yetersiz')]
 SK20=tablo_svg(['Kişi','Uzak (6 m)','Yakın (30 cm)','Loş ışık','Renk'],[list(r) for r in MUA])
-S20=['K’nın gözlüğü ışınları dağıtan, L’nin gözlüğü ışınları toplayan mercek olmalıdır.','M ve N’nin sorunları retinadaki reseptör hücreleriyle ilgili olabilirken, K ve L’nin sorunları ışığın retina üzerinde odaklanamamasıyla ilgilidir.','M’nin sorunu, merceğin kalınlığını ayarlayan kasların işlev kaybından kaynaklanır.','N’de sorunun nedeni, ışığın retinanın önünde ya da gerisinde odaklanmasıdır.','K ile L’nin her ikisinde de retinadaki ışığa duyarlı hücrelerin sayısı azalmıştır.']
+S20=['K’nın gözlüğü ışınları dağıtan, L’nin gözlüğü ışınları toplayan mercek olmalıdır.','M ve N’nin sorunları retinadaki reseptör hücreleriyle ilgili olabilirken, K ve L’nin sorunları ışığın retina üzerinde odaklanamamasıyla ilgilidir.','M’nin sorunu, retinadaki koni hücrelerinin işlevinin azalmasından kaynaklanır.','N’de sorunun nedeni, ışığın retinanın önünde ya da gerisinde odaklanmasıdır.','K ile L’nin her ikisinde de retinadaki ışığa duyarlı hücrelerin sayısı azalmıştır.']
 Q('0020','kusur','zor','tablo','Muayene sonuçlarının yorumu','Muayene tablosundan odaklama sorunlarını ve reseptör kaynaklı sorunları ayırıp gözlük merceği ve neden yargılarını birlikte değerlendirir.',
   'Uzak ya da yakın bulanıklığı odaklama sorunudur; loş ışıkta ya da renk görmedeki yetersizlik reseptör (çubuk, koni) kaynaklı olabilir.','Her görme sorununu odaklama kusuru sanmak ya da gözlük mercek türlerini ters yazmak.','muayene tablosu',
   [A('Tabloyu oku','K’da yakın, L’de uzak görme bulanıktır; M’de loş ışıkta, N’de renk ayırt etmede yetersizlik vardır.','K: yakın · L: uzak · M: loş ışık · N: renk'),
@@ -669,7 +671,7 @@ Q('0020','kusur','zor','tablo','Muayene sonuçlarının yorumu','Muayene tablosu
   metin='Aşağıdaki tabloda, gözlük kullanmayan dört kişinin görme muayenesi sonuçları verilmiştir. Muayenede kişilerden 6 m uzaklıktaki harf tablosunu ve 30 cm uzaklıktaki yazıyı okumaları, loş ışıkta nesneleri tanımaları ve renk kartlarını ayırt etmeleri istenmiştir; tabloda her isteğe verilen yanıtın yeterliliği gösterilmiştir. Her kişide yalnız tek bir sorun bulunmaktadır.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
   dogru=S20[1],sira=[S20[0],S20[1],S20[2],S20[3],S20[4]],
   yan=[(S20[0],'Bu şıkkı seçen öğrenci mercek türlerini ters yazmıştır; yakını bulanık gören K toplayıcı, uzağı bulanık gören L dağıtıcı mercekle düzeltilir.','bilgi'),
-       (S20[2],'Bu şıkkı seçen öğrenci loş ışıkta görme sorununu akomodasyon kaslarıyla ilişkilendirmiştir; M’nin sorunu loş ışıkta görmeyi sağlayan çubuk hücreleriyle ilgili olabilir, mercek kaslarıyla ilgili değildir.','bilgi'),
+       (S20[2],'Bu şıkkı seçen öğrenci loş ışıkta görme sorununu konilere bağlamıştır; M’nin sorunu loş ışıkta görmeyi sağlayan çubuk hücreleriyle ilgili olabilir, renk ve parlak ışıkta keskin görmeyi sağlayan konilerle ilgili değildir.','bilgi'),
        (S20[3],'Bu şıkkı seçen öğrenci renk görme sorununu odaklama kusuru sanmıştır; N’nin sorunu renk algılayan koni hücreleriyle ilgili olabilir, odak konumuyla ilgili değildir.','bilgi'),
        (S20[4],'Bu şıkkı seçen öğrenci odaklama kusurlarını reseptör kaybıyla açıklamıştır; K ve L’de sorun ışığın retinada odaklanmasındadır ve reseptör sayısı azalmamıştır.','bilgi')],
   istenen='Doğru olan ifade.',

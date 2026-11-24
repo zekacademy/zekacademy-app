@@ -7,7 +7,7 @@ from _hafif_bio import *
 H.KONU='Canlılar ve Çevre'
 P=Parti('cevre','Canlılar ve Çevre','abio|Canlılar ve Çevre',ders='AYT Biyoloji',idon='aytbio')
 KY='ÖSYM AYT 2018–2026 Biyoloji (Canlılar ve Çevre; yalnız mantık) · MEB 12. sınıf biyoloji'
-TIPLER={'cv-karbon':'Karbon döngüsü','cv-azot':'Azot ve fosfor döngüsü','cv-su':'Su döngüsü ve bitki örtüsü','cv-enerji':'Enerji akışı ve besin piramitleri',
+TIPLER={'cv-karbon':'Karbon döngüsü','cv-azot':'Azot döngüsü','cv-fosfor':'Fosfor döngüsü','cv-su':'Su döngüsü ve bitki örtüsü','cv-enerji':'Enerji akışı ve besin piramitleri',
  'cv-birikim':'Biyolojik birikim','cv-sorun':'Çevre sorunları','cv-bioc':'Biyoçeşitlilik','cv-koruma':'Koruma ve sürdürülebilir kullanım'}
 CARD={}
 def card(no,alt,fikir,tuzak,z,kalip,adim,tipId,ozet):
@@ -62,7 +62,7 @@ def rakam(x,y,n): return f'\\node[circle,draw,inner sep=1.2pt,fill=white,font=\\
 KAR=B('Karbon döngüsü','karbon; atmosfer, canlılar, toprak, okyanus ve fosil yakıt yatakları arasında dolaşır. Depolar arasındaki geçişler fotosentez, solunum, ayrışma, çözünme ve yanma gibi olaylarla gerçekleşir. Örnek: okyanus suyunda çözünen karbondioksit, atmosferden okyanus deposuna geçen karbondur')
 KOS=B('Derişim değişimi ve hızlar','kapalı bir ortamdaki CO₂ derişimi, CO₂ bağlanma hızı (fotosentez) ile CO₂ salınma hızı (solunum, ayrışma) arasındaki farka göre değişir: salınım fazlaysa derişim artar, bağlanma fazlaysa azalır, ikisi eşitse değişmez. Örnek: ışığı kesilen kapalı bir kapta fotosentez durursa CO₂ derişimi artmaya başlar')
 AZO=B('Azot döngüsünün basamakları','azot; N₂, amonyak/amonyum, nitrit, nitrat ve organik azot biçimleri arasında değişir. Azot bağlama, nitrifikasyon, denitrifikasyon ve ayrışma bu dönüşümlerin adlarıdır; her birini farklı canlı grupları gerçekleştirir')
-NIT=B('Nitrifikasyon ve kontrol grubu','toprakta amonyum (NH₄⁺), bakteriler aracılığıyla önce nitrite (NO₂⁻), sonra nitrata (NO₃⁻) yükseltgenir; ara ürünün derişimi önce artıp sonra azalabilir. Canlı etkinliğini görmek için aynı örneğin bakterileri ısıtmayla öldürülmüş hâli kontrol olarak kullanılır')
+NIT=B('Nitrifikasyon ve kontrol grubu','toprakta amonyum (NH₄⁺), bakteriler aracılığıyla önce nitrite (NO₂⁻), sonra nitrata (NO₃⁻) yükseltgenir; bu dönüşümler oksijenli ortamda gerçekleşir. Canlı etkinliğini görmek için aynı örneğin bakterileri ısıtmayla öldürülmüş hâli kontrol olarak kullanılır')
 FOS=B('Fosfor döngüsü','fosfor; ATP, nükleik asit ve fosfolipit gibi moleküllerin yapısında bulunur. Doğadaki fosfat bileşikleri kayaç, toprak, su ve canlılar arasında aktarılır; gübre kullanımı bu döngüyü etkileyen insan etkinliklerinden biridir')
 SUD=B('Su döngüsü','su; buharlaşma ve bitkilerin terlemesiyle atmosfere, yağışla yeryüzüne geçer. Yağan suyun bir bölümü yüzeyden akar, bir bölümü toprağa sızarak yer altı suyuna karışır; bitki örtüsü bu dağılımı değiştirir')
 ENJ=B('Enerji akışı','bir basamağın aldığı enerji; solunumda harcanır (ısı olarak kaybolur), ayrıştırıcılara geçen ölü ve atık maddede kalır ya da bir üst basamağa aktarılır. Enerji korunur: aldığı = solunum + ayrıştırıcıya geçen + üst basamağa geçen. Örnek: aldığı 500 birim olan basamak 300 birimini solunumda harcar, 50 birimini üst basamağa aktarırsa 150 birimi ayrıştırıcılara geçer')
@@ -88,27 +88,27 @@ qo('0001',[True,False,True],['fotosentez, atmosferdeki karbondioksitin karbonunu
  tipId='cv-karbon',tip=TIPLER['cv-karbon'],z='kolay',alt='Madde Döngüleri',kaz='Karbonun doğada atmosfer, canlılar ve fosil yakıtlar arasındaki dolaşımını açıklar.',kalip='öncüllü',
  metin='Karbon, ekosistemde canlılar ile cansız ortam arasında sürekli dolaşan temel elementlerden biridir. Buna göre, karbon döngüsüyle ilgili,\nI. Fotosentez yapan canlılar, atmosferdeki karbondioksitin karbonunu organik moleküllerin yapısına katar.\nII. Hayvanlar, atmosferdeki karbondioksiti doğrudan alarak vücutlarındaki organik maddeleri sentezler.\nIII. Fosil yakıtların yakılması, uzun süre yer altında depolanmış karbonu karbondioksit olarak atmosfere verir.\nyargılarından hangileri doğrudur?',
  istenen='Karbon döngüsüyle ilgili doğru yargılar.',ip=['Her yargıda karbonun hangi depodan hangi depoya, hangi olayla geçtiğini ve bu olayı hangi canlı grubunun yapabildiğini düşün.'],
- bilgi=[KAR],puf='Karbonu atmosferden organik maddeye bağlayan yol fotosentezdir; hayvanlar karbonu hazır organik madde olarak besinle alır.')
+ bilgi=[KAR],puf='Karbonun giriş ve çıkış yollarını ayrı ayrı yaz ve her yolu hangi canlı grubunun yürüttüğünü kontrol et.')
 
 # ===================== 02 · kolay · koruma tablosu
 card(2,'Yerinde ve yer dışı koruma','Türün doğal yaşam alanında korunması yerinde, yaşam alanı dışında (bank, bahçe, üretim) korunması yer dışı korumadır.','Tohum ya da gen bankasını yerinde koruma saymak; alanı koruma altına almayı yer dışı koruma saymak.','kolay','tablo',3,'cv-koruma','tabloda yanlış eşleştirilen satırı bulma')
-SATIR=[('I','Tohum bankasında saklama','Doğal ortamında koruma',False),('II','Milli park ilan etme','Doğal ortamında koruma',True),('III','Hayvanat bahçesinde üretme','Doğal ortam dışında koruma',True),
-       ('IV','Sulak alanı koruma altına alma','Doğal ortamında koruma',True),('V','Botanik bahçesinde yetiştirme','Doğal ortam dışında koruma',True)]
+SATIR=[('I','Tohum bankasında saklama','Yerinde koruma',False),('II','Milli park ilan etme','Yerinde koruma',True),('III','Hayvanat bahçesinde üretme','Yer dışı koruma',True),
+       ('IV','Sulak alanı koruma altına alma','Yerinde koruma',True),('V','Botanik bahçesinde yetiştirme','Yer dışı koruma',True)]
 YERINDE={'Tohum bankasında saklama':False,'Milli park ilan etme':True,'Hayvanat bahçesinde üretme':False,'Sulak alanı koruma altına alma':True,'Botanik bahçesinde yetiştirme':False}
-for s in SATIR: assert s[3]==(YERINDE[s[1]]==(s[2]=='Doğal ortamında koruma'))
+for s in SATIR: assert s[3]==(YERINDE[s[1]]==(s[2]=='Yerinde koruma'))
 assert [s[0] for s in SATIR if not s[3]]==['I']
 SK=tablo_svg(['Satır','Koruma çalışması','Koruma yöntemi'],[[s[0],s[1],s[2]] for s in SATIR])
 YAN2={'II':'Milli park ilanıyla tür, doğal yaşam alanında korunur; yerinde koruma doğru eşleştirilmiştir.','III':'Hayvanat bahçesinde üretme, türü doğal ortamının dışında korur; yer dışı koruma doğru eşleştirilmiştir.',
  'IV':'Sulak alanın koruma altına alınması türleri yaşam alanlarında korur; yerinde koruma doğru eşleştirilmiştir.','V':'Botanik bahçesinde yetiştirme bitkiyi doğal ortamı dışında korur; yer dışı koruma doğru eşleştirilmiştir.'}
 q('0002',tipId='cv-koruma',tip=TIPLER['cv-koruma'],z='kolay',alt='Biyoçeşitliliğin Korunması',kaz='Yerinde ve yer dışı koruma yöntemlerini örneklerle ayırt eder.',kalip='tablo',
- metin='Biyoçeşitliliğin korunmasında kullanılan çalışmalar, türün doğal yaşam alanında korunması ya da doğal ortamının dışında korunması biçiminde gruplandırılır. Aşağıdaki tabloda beş koruma çalışması ve her birinin hangi koruma yöntemi kapsamında değerlendirildiği verilmiştir.\nBuna göre, tablodaki hangi satırda koruma yöntemi yanlıştır?',
+ metin='Biyoçeşitliliğin korunmasında türün doğal yaşam alanında korunmasına yerinde koruma, doğal yaşam alanı dışında korunmasına yer dışı koruma denir. Aşağıdaki tabloda beş koruma çalışması ve her birinin hangi koruma yöntemi kapsamında değerlendirildiği verilmiştir.\nBuna göre, tablodaki hangi satırda koruma yöntemi yanlıştır?',
  sekil=SK,dogru='I. satır',sira=['I. satır','II. satır','III. satır','IV. satır','V. satır'],
  yan=[('II. satır',YAN2['II'],'dikkat'),('III. satır',YAN2['III'],'dikkat'),('IV. satır',YAN2['IV'],'dikkat'),('V. satır',YAN2['V'],'dikkat')],
- istenen='Koruma yöntemi yanlış verilen satır.',ip=['Çalışmanın türü doğal yaşam alanında mı yoksa o alanın dışındaki bir yerde mi koruduğuna bak.'],bilgi=[KOR],
- ad=[A('Yöntemlerin tanımını hatırla','Doğal yaşam alanında koruma yerinde, alan dışındaki koruma yer dışı korumadır.','Yerinde: alan korunur · Yer dışı: bank, bahçe, üretim'),
+ istenen='Koruma yöntemi yanlış verilen satır.',ip=['Her çalışmanın nerede yapıldığına bakıp tablodaki yöntemle karşılaştır.'],bilgi=[KOR],
+ ad=[A('Yöntemlerin tanımını hatırla','Tür yaşam alanında korunuyorsa yerinde, alan dışında korunuyorsa yer dışı korumadır.','Yerinde: alan korunur · Yer dışı: bank, bahçe, üretim'),
      A('Satırları tek tek ele','Milli park ve sulak alan koruması alanı korur; hayvanat ve botanik bahçesi türü alan dışında tutar.','II, III, IV, V doğru eşleşmiş'),
      A('Hatalı satırı bul','Tohum bankası, tohumları yaşam alanından alıp depoda saklar; bu yer dışı korumadır.','I. satırda yöntem “yerinde” yazılmış → yanlış')],
- puf='Önce çalışmanın “nerede” yapıldığına bak: tür kendi ortamında kalıyorsa yerinde, bir bank, bahçe ya da üretim tesisindeyse yer dışı korumadır.')
+ puf='Tablo sorularında her satırı tanımla tek tek karşılaştır; kök ve tablodaki terimleri eşleştir.')
 
 # ===================== 03 · kolay · asit yağmuru (olumsuz)
 card(3,'Asit yağmurunun nedeni ve etkisi','Asit yağmuru kükürt dioksit ve azot oksitlerden oluşur; ozon incelmesine yol açan CFC gazlarıyla karıştırılmamalıdır.','Asit yağmuru ile ozon incelmesinin gazlarını ve sonuçlarını birbirine karıştırmak.','kolay','düz',3,'cv-sorun','asit yağmuru, söylenemeyen ifade')
@@ -124,7 +124,7 @@ q('0003',tipId='cv-sorun',tip=TIPLER['cv-sorun'],z='kolay',alt='Çevre Sorunlar�
  ad=[A('Nedeni hatırla','Asit yağmuru, yanma ürünü kükürt dioksit ve azot oksitlerden oluşur.','Neden: SO₂ ve NOx'),
      A('Etkileri ele','Düşük pH göl, toprak ve yapılar üzerinde olumsuz etki yapar.','Dört ifade bu etkilerle uyumlu'),
      A('Yanlış ifadeyi seç','CFC gazları ozon tabakasını inceltir; asit yağmurunun asıl nedeni değildir.','CFC ifadesi söylenemez')],
- puf='Asit yağmuru: SO₂ ve NOx, ozon incelmesi: CFC, sera etkisi: CO₂ ve CH₄ gibi gazlar. Üç sorunu gazlarıyla eşleştir.')
+ puf='Her çevre sorununun sorumlusu farklı gazlardır; sorunu önce nedeniyle eşleştir.')
 
 # ===================== 04 · orta · karbon dioksit günlük grafik (öncüllü)
 card(4,'Günlük CO₂ derişimi grafiği','Derişimin artması salımın bağlanmadan, azalması bağlanmanın salımdan fazla olduğunu; sabit kalması ikisinin eşit olduğunu gösterir; solunum gün boyu sürer.','Gündüz solunumun durduğunu sanmak; derişimin en düşük olduğu noktada fotosentezin en hızlı olduğunu sanmak.','orta','grafik',4,'cv-karbon','orman havasında günlük CO₂ eğrisi')
@@ -142,7 +142,7 @@ qo('0004',[True,True,False],['K noktasında derişim artmaktadır; bu, salınan 
  tipId='cv-karbon',tip=TIPLER['cv-karbon'],z='orta',alt='Madde Döngüleri',kaz='Ekosistemde günlük karbondioksit derişimi değişimini fotosentez ve solunum hızlarıyla ilişkilendirir.',kalip='grafik',
  metin='Büyük bir ormanın içinde, tepe tacı yüksekliğindeki havada ölçülen karbondioksit derişiminin bir gün boyunca değişimi grafikte gösterilmiştir. Orman havasının dış ortamla karbondioksit alışverişi ihmal edilmekte, K, L ve M noktaları grafik üzerinde işaretlenmektedir.\nBuna göre,\nI. K noktasında ekosistemdeki karbondioksit salımı, karbondioksit bağlanmasından fazladır.\nII. M noktasında fotosentezle bağlanan karbondioksit miktarı, solunumla salınan karbondioksit miktarına eşittir.\nIII. L noktasında hücresel solunum durmuştur.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Grafiğe göre doğru yargılar.',ip=['Eğrinin eğiminin yönüne ve eğimin sıfır olduğu noktaya bak: derişim artıyor, azalıyor ya da değişmiyor olabilir.'],bilgi=[KOS],
- puf='Derişimin yönünü bağlanma–salım farkı belirler; solunum canlıda gün boyu sürdüğü için “solunum durdu” yargısı hiçbir noktada doğru olmaz.')
+ puf='Her noktada eğrinin eğiminin işaretini oku ve bunu bağlanma–salım farkıyla ilişkilendir.')
 
 # ===================== 05 · zor · nitrifikasyon grafiği
 card(5,'Nitrifikasyon deneyi ve kontrol','Ardışık dönüşümde ara ürünün derişimi önce artıp sonra azalır; son ürün sürekli artar; bakterileri öldürülmüş kontrol grubunda dönüşüm gözlenmez.','Ara ürünün tepe yaptığı anda son ürünün henüz oluşmadığını sanmak; ısıtılmış toprakta dönüşümün kendiliğinden süreceğini sanmak.','zor','grafik',5,'cv-azot','nitrifikasyon: amonyum–nitrit–nitrat eğrileri ve kontrol')
@@ -160,21 +160,21 @@ SK=pg('\n'.join(b))
 D5='Nitrit derişimi en yüksek değerine ulaştıktan sonra azalırken nitrat derişimi artmaktadır; ısıtılmış toprakta amonyumun nitrite ve nitrata dönüşümü gözlenmez.'
 Y5=['Nitrit derişiminin en yüksek değere ulaştığı ana kadar nitrat oluşumu hiç başlamamıştır; ısıtılmış toprakta da dönüşümler aynı hızda sürer.',
     'Nitrat derişimi artarken amonyum derişimi de artmaktadır; ısıtılmış toprakta dönüşümler gözlenmez.',
-    'Nitrit derişimi en yüksek değerine ulaştıktan sonra azalırken nitrat derişimi artmaktadır; ısıtılmış toprakta dönüşümler canlı etkinliği olmadan da aynı hızda sürer.',
+    'Nitrit derişimi en yüksek değerine ulaştıktan sonra azalırken nitrat derişimi artmaktadır; ısıtılmış toprakta dönüşümler çok daha yavaş da olsa sürer.',
     'Amonyumun nitrata dönüşümü oksijensiz ortamda hızlanır; ısıtılmış toprakta dönüşümler gözlenmez.']
 q('0005',tipId='cv-azot',tip=TIPLER['cv-azot'],z='zor',alt='Azot Döngüsü',kaz='Nitrifikasyon deneyinin zaman grafiğini yorumlar ve kontrol grubu sonucunu öngörür.',kalip='grafik',
  metin='Havalandırılan ve nemli tutulan, bitkisiz bir toprak örneğine deneyin başında amonyum tuzu eklenmiş; topraktaki amonyum, nitrit ve nitrat iyonlarının derişimleri 30 gün boyunca ölçülmüş ve sonuçlar grafikte gösterilmiştir. Aynı deney, aynı topraktan alınıp ısıtılarak içindeki bakterileri öldürülmüş bir örnekle de yürütülmüştür.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
  sekil=SK,dogru=D5,sira=yer('E',D5,Y5),
  yan=[(Y5[0],'Grafikte nitrat derişimi başlangıçtan itibaren artmaktadır; nitrit tepe yaparken nitrat oluşumu çoktan başlamıştır. Isıtılmış toprakta bakteriler öldüğü için dönüşüm de gözlenmez.','bilgi'),
       (Y5[1],'Amonyum derişimi grafikte sürekli azalmaktadır; amonyum nitrite ve nitrata dönüşerek tükenir.','dikkat'),
-      (Y5[2],'Nitrit ve nitrat gelişimi bu yargıda doğru okunmuş; ancak dönüşümü yapan canlılar ısıtmayla öldürüldüğünden kontrol örneğinde dönüşüm gözlenmez.','bilgi'),
+      (Y5[2],'Grafik kısmı doğru okunmuş; ancak dönüşümü yapan bakteriler ısıtmayla öldürüldüğünden kontrol örneğinde dönüşüm yavaşlayarak bile sürmez.','bilgi'),
       (Y5[3],'Amonyumun nitrite ve nitrata yükseltgenmesi oksijen gerektirir; oksijensiz ortamda yavaşlar. Isıtılmış topraktaki sonuç doğru ama nedeni yanlış öngörülmüş.','bilgi')],
  istenen='Grafik ve kontrol deneyi sonucuna göre doğru ifade.',ip=['Üç eğrinin zamanla nasıl değiştiğini ayrı ayrı oku; bakterilerin öldürülmesinin dönüşümleri nasıl etkileyeceğini düşün.'],bilgi=[AZO,NIT],
  ad=[A('Eğrileri oku','Amonyum sürekli azalır, nitrat sürekli artar, nitrit önce artıp sonra azalır.','NH₄⁺ azalır, NO₃⁻ artar, NO₂⁻ tepe yapar'),
      A('Ara ürünü yorumla','Nitrit tepe yaptıktan sonra azaldığı hâlde nitrat artmaya devam eder; nitrit, nitrata dönüşmektedir.','Nitrit azalışı = nitrat artışı'),
      A('Kontrol örneğini düşün','Dönüşümleri bakteriler yapar; ısıtılmış toprakta bakteri yoktur.','Isıtılmış toprakta dönüşüm yok'),
      A('İfadeleri karşılaştır','Yalnız bir ifade hem grafiği hem kontrolü doğru yorumlar.','Doğru ifade bulundu')],
- puf='Ardışık dönüşümlerde ara ürün önce birikir sonra azalır, son ürün sürekli artar; canlı etkinliğiyle yürüyen süreç, canlıları öldürülmüş kontrolde durur.')
+ puf='Her eğriyi ayrı oku, sonra kontrol örneğinde etkinliği hangi canlıların yürüttüğünü düşün.')
 
 # ===================== 06 · orta · azot döngüsü (öncüllü)
 card(6,'Azot bağlama ve denitrifikasyon','Nodül bakterileri N₂’yi amonyağa çevirir; denitrifikasyon nitratı N₂’ye çevirir ve oksijensiz toprakta artar; bitkiler N₂ kullanamaz.','Nodül bakterilerinin N₂’yi doğrudan nitrata çevirdiğini sanmak; bitkilerin atmosferik azotu doğrudan aldığını sanmak.','orta','öncüllü',3,'cv-azot','azot döngüsü, üç yargı')
@@ -184,38 +184,38 @@ qo('0006',[False,True,False],['nodül bakterileri azot gazını amonyağa (amony
  tipId='cv-azot',tip=TIPLER['cv-azot'],z='orta',alt='Azot Döngüsü',kaz='Azot bağlama, nitrifikasyon ve denitrifikasyonun gerçekleştiği koşulları ve canlı gruplarını ayırt eder.',kalip='öncüllü',
  metin='Azot, proteinlerin ve nükleik asitlerin yapısında bulunan, doğada döngüsel olarak dolaşan bir elementtir. Buna göre azot döngüsüyle ilgili,\nI. Baklagil köklerindeki nodüllerde yaşayan bakteriler, atmosferdeki azot gazını doğrudan nitrata dönüştürür.\nII. Su altında kalıp oksijeni azalan topraklarda nitratı azot gazına çeviren bakteriler, toprağın azotça fakirleşmesine neden olabilir.\nIII. Bitkiler, protein sentezi için gereken azotu atmosferdeki azot gazından yaprak gözenekleriyle doğrudan alır.\nyargılarından hangileri doğrudur?',
  istenen='Azot döngüsüyle ilgili doğru yargılar.',ip=['Her yargıda azotun hangi biçimden hangi biçime geçtiğini ve bunu hangi canlı grubunun hangi koşulda yaptığını sorgula.'],bilgi=[AZO],
- puf='Azot gazını bağlayan nodül bakterileri amonyak üretir; nitrata dönüşüm nitrifikasyon bakterilerinindir; N₂’ye dönüş ise denitrifikasyondur.')
+ puf='Azot döngüsünde her dönüşümü farklı bir canlı grubu yapar; yargıdaki canlı grubunu dönüşümle eşleştir.')
 
 # ===================== 07 · orta · biyolojik birikim sütun grafiği (öncüllü)
 card(7,'İki maddenin birikimini karşılaştırma','Birikim yapan madde basamak yükseldikçe artar ve son basamakta en yüksektir; birikmeyen madde basamaklar arasında belirgin değişmez.','Son basamağı ilk basamak sanmak; derişimi sabit kalan maddenin de biriktiğini sanmak.','orta','grafik',3,'cv-birikim','X artan, Y sabit sütun grafiği')
 ORG=['Fitoplankton','Zooplankton','Küçük balık','Büyük balık','Balıkçıl']
-XV=[1,3,9,27,81]; YV=[4,3,4,4,3]
-assert all(XV[i+1]==3*XV[i] for i in range(4)) and max(YV)-min(YV)<=1 and XV.index(max(XV))==4
-SK=barplot(['Fito-\\\\plankton','Zoo-\\\\plankton','Küçük\\\\balık','Büyük\\\\balık','Balıkçıl'],[('X maddesi','vurgu!70',XV),('Y maddesi','gray!35',YV)],95,'µg/kg','0,20,40,60,80',width=8.2,bw=7,rot=0)
+XV=[1,2,5,14,40]; YV=[4,3,4,4,3]
+assert all(XV[i+1]>XV[i] for i in range(4)) and max(YV)-min(YV)<=1 and XV.index(max(XV))==4
+SK=barplot(['Fito-\\\\plankton','Zoo-\\\\plankton','Küçük\\\\balık','Büyük\\\\balık','Balıkçıl'],[('X maddesi','vurgu!70',XV),('Y maddesi','gray!35',YV)],48,'µg/kg','0,10,20,30,40',width=8.2,bw=7,rot=0)
 qo('0007',[False,True,True],['X’in derişimi basamak yükseldikçe artar ve en yüksek değere zincirin son basamağında ulaşır',
   'X’in derişimi basamaklar boyunca artmaktadır, Y’nin derişimi ise belirgin biçimde değişmemektedir',
   'derişimi basamaklarla artan bir madde canlı vücudundan atılamıyor ya da çok yavaş atılıyordur'],3,
  tipId='cv-birikim',tip=TIPLER['cv-birikim'],z='orta',alt='Biyolojik Birikim',kaz='Besin zincirinde derişimi basamaklarla değişen maddelerin grafiğini yorumlayarak biyolojik birikimi açıklar.',kalip='grafik',
  metin='Bir göldeki besin zincirinde yer alan beş canlı grubunun dokularında X ve Y adlı iki yabancı maddenin derişimi ölçülmüş ve sonuçlar grafikte gösterilmiştir. Canlılar, fitoplanktondan balıkçıl kuşuna doğru zincirdeki sıralarına göre verilmiştir.\nBuna göre,\nI. X maddesinin derişimi, zincirin ilk basamağındaki canlıda en yüksektir.\nII. X maddesi biyolojik birikime uğrarken, Y maddesi için grafikte böyle bir birikim görülmemektedir.\nIII. X maddesinin, canlı vücudundan atılamayan ya da çok yavaş atılan bir madde olması beklenir.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Grafiğe göre doğru yargılar.',ip=['İki maddenin derişimlerini zincirin ilk ve son basamağında karşılaştır; basamak yükseldikçe ne olduğuna bak.'],bilgi=[BIR],
- puf='Basamak yükseldikçe derişimi artan madde biriken maddedir; en yüksek derişim zincirin en üst basamağındaki canlıdadır.')
+ puf='İki maddenin derişimini basamaklar boyunca ayrı ayrı izle ve değişimin yönüne bak.')
 
 # ===================== 08 · zor · enerji tablosu (çok adımlı)
 card(8,'Enerji tablosunda eksik değer','Her basamakta aldığı enerji solunum, ayrıştırıcıya geçen ve üst basamağa geçenin toplamına eşittir; üst basamağa geçen sonraki basamağın aldığıdır.','Üst basamağa geçeni toplamdan düşmemek; ayrıştırıcılara geçeni solunum sanmak; %10 kuralını tabloya zorla uygulamak.','zor','tablo',5,'cv-enerji','kJ tablosunda üç basamaklı enerji dengesi')
 U0=80000-32000-40000; assert U0==8000
-D1=U0-4000-800; assert D1==3200
+D1=3200; assert U0-4000-D1==800
 X8=800-280-160; assert X8==360
 assert 4000+800+D1==8000 and 360+280+160==800
-q8=[[ 'Üretici','80000','32000','40000','—'],['Birincil tüketici','—','4000','—','800'],['İkincil tüketici','—','X','280','160']]
+q8=[[ 'Üretici','80000','32000','40000','—'],['Birincil tüketici','—','4000','3200','—'],['İkincil tüketici','—','X','280','160']]
 SK=tablo_svg(['Basamak','Aldığı','Solunum','Ayrıştırıcı','Üst basamak'],q8)
 q('0008',tipId='cv-enerji',tip=TIPLER['cv-enerji'],z='zor',alt='Enerji Akışı',kaz='Besin zincirinde enerji dengesini kullanarak tablodaki bilinmeyen enerji değerini hesaplar.',kalip='tablo',
  metin='Bir ekosistemde üretici, birincil tüketici ve ikincil tüketici basamaklarının bir yıl boyunca aldığı enerjinin nerelerde kullanıldığı tabloda kJ cinsinden verilmiştir. Bir basamağın aldığı enerji; solunumda harcanan, ayrıştırıcılara geçen ve bir üst basamağa aktarılan enerjilerin toplamına eşittir. Birincil tüketicinin aldığı enerji, üreticiden ona aktarılan enerjidir; ikincil tüketici için de aynı durum geçerlidir. Tabloda “—” ile gösterilen değerler verilmemiştir.\nBuna göre, tablodaki X değeri kaç kJ’dür?',
- sekil=SK,dogru=360,yan=[(80,'İkincil tüketicinin aldığı 800 kJ’nin %10’u olan 80 kJ alınmış; tabloda üst basamağa geçen 160 kJ olarak verilmiştir ve %10 kuralı zorla uygulanmamalıdır.','bilgi'),
+ sekil=SK,dogru=360,yan=[(80,'İkincil tüketicinin aldığı 800 kJ’nin %10’u (80 kJ) alınmış; oysa tabloda üst basamağa geçen enerji 160 kJ olarak verilmiştir.','bilgi'),
   (280,'Ayrıştırıcılara geçen enerji (280 kJ), solunumda harcanan enerji sanılmış.','dikkat'),(520,'800 − 280 işlemi yapılmış; üst basamağa geçen 160 kJ da düşülmelidir.','islem'),
   (640,'800 − 160 işlemi yapılmış; ayrıştırıcılara geçen 280 kJ da düşülmelidir.','islem')],
  istenen='İkincil tüketicinin solunumda harcadığı enerji X (kJ).',ip=['Önce birincil tüketicinin aldığı enerjiyi üreticinin satırından bul; sonra ikincil tüketicinin aldığını ve enerji dengesini yaz.'],bilgi=[ENJ],
  ad=[A('Birincil tüketicinin aldığını bul','Üreticinin aldığından solunum ve ayrıştırıcıya geçen çıkarılınca kalan, üst basamağa geçendir.','80000 − 32000 − 40000 = 8000 kJ'),
-     A('İkincil tüketicinin aldığını bul','Birincil tüketicinin üst basamağa geçirdiği enerji, ikincil tüketicinin aldığıdır.','Aldığı = 800 kJ'),
+     A('İkincil tüketicinin aldığını bul','Birincil tüketicinin aldığından solunum ve ayrıştırıcıya geçen çıkarılınca kalan, ikincil tüketicinin aldığıdır.','8000 − 4000 − 3200 = 800 kJ'),
      A('Enerji dengesini kur','İkincil tüketicinin aldığı enerji üç kalemin toplamıdır.','800 = X + 280 + 160'),
      A('X’i hesapla','Bilinen iki kalem çıkarılır.','X = 800 − 280 − 160 = 360 kJ')],
  puf='Tablo sorularında satır dengesi (aldığı = harcanan + ayrıştırıcı + aktarılan) ile “bir basamağın aktardığı = sonrakinin aldığı” bağını birlikte kullan.')
@@ -263,7 +263,7 @@ q('0010',tipId='cv-bioc',tip=TIPLER['cv-bioc'],z='orta',alt='Biyoçeşitlilik',k
  puf='Tür çeşitliliğini karşılaştırırken önce tür sayısına, sonra bireylerin türlere dağılımının dengesine bak; toplam birey sayısı belirleyici değildir.')
 
 # ===================== 11 · zor · göl kesiti diyagramı (öncüllü)
-card(11,'Besin zenginleşmesinin sonuçları','Alg örtüsü ışığı keser, ölü maddenin ayrışması oksijen harcar; dipte oksijen azalınca oksijene bağımlı canlılar zarar görür.','Ayrışmanın oksijen harcamadığını sanmak; yalnız yüzeyde sorun olduğunu düşünmek.','zor','şekilli',5,'cv-sorun','göl kesitinde üç bölge ve gübre akışı')
+card(11,'Besin zenginleşmesinin sonuçları','Alg örtüsü ışığı keser, ölü maddenin ayrışması oksijen harcar; dipte oksijen azalınca oksijene bağımlı canlılar zarar görür.','Ayrışmanın oksijen harcamadığını sanmak; yalnız yüzeyde sorun olduğunu düşünmek.','orta','şekilli',5,'cv-sorun','göl kesitinde üç bölge ve gübre akışı')
 b=[]
 b.append('\\draw[thick,fill=black!25] (-.4,3.6)--(1.7,3.35)--(1.7,3.1)--(-.4,3.1)--cycle;')
 b.append('\\node[font=\\footnotesize] at (.6,4.05) {Tarla};')
@@ -273,13 +273,14 @@ b.append('\\fill[vurgu!45] (1,2.75) rectangle (9,3.4);\\fill[black!8] (1,.7) rec
 b.append('\\draw[thick] '+lake+';\\draw[thick] (1.7,3.35)--(8.1,3.35);')
 b.append(f'\\draw[{OKS},line width=1pt] (.9,3.45)--(2.3,3.25);')
 for x in (3.9,5,6.1): b.append(f'\\draw[{OKS},line width=.8pt] ({x},2.65)--({x},1.0);')
+b+=[f'\\draw[vurgu,line width=1.6pt] ({x},.75)--({x},1.6);' for x in (2.9,3.2)]
 b+= [rakam(7.3,3.07,'1'),rakam(7.0,1.7,'2'),rakam(5,-.1,'3')]
 SK=tk('\n'.join(b),.95)
 qo('0011',[True,False,True],['yüzeydeki yoğun alg örtüsü ışığı tutar; derindeki su bitkileri yeterli ışık alamaz ve fotosentezleri azalır',
   'ölü organik maddeyi ayrıştıran oksijenli solunum yapan canlılar oksijen harcar; dip suyunun oksijeni azalır',
   'dipte oksijen azalınca oksijene gereksinimi olan canlılar zarar görür; oksijensiz solunum yapan bakteriler çoğalabilir'],2,
- tipId='cv-sorun',tip=TIPLER['cv-sorun'],z='zor',alt='Çevre Sorunları',kaz='Besin tuzu zenginleşmesinin ışık ve oksijen koşullarını nasıl değiştirdiğini ve sucul canlılara etkisini açıklar.',kalip='şekilli',
- metin='Şekilde, çevresindeki tarım alanından gübreli su akan bir göl kesiti verilmiştir. Yüzeye yakın bölge 1, orta derinlik 2 ve dip 3 ile gösterilmiştir. Gübrelerle taşınan azot ve fosfor nedeniyle 1. bölgede algler çok çoğalmış, ölen algler dibe çökmüştür.\nBuna göre,\nI. 1. bölgedeki yoğun alg örtüsü, derindeki su bitkilerinin fotosentezini azaltır.\nII. 3. bölgede ölü algleri ayrıştıran canlılar oksijen harcamadığından dip suyunun oksijeni artar.\nIII. 3. bölgede oksijen derişiminin azalması, oksijene gereksinimi olan canlıların ölümüne yol açabilir.\nyargılarından hangileri doğrudur?',
+ tipId='cv-sorun',tip=TIPLER['cv-sorun'],z='orta',alt='Çevre Sorunları',kaz='Besin tuzu zenginleşmesinin ışık ve oksijen koşullarını nasıl değiştirdiğini ve sucul canlılara etkisini açıklar.',kalip='şekilli',
+ metin='Şekilde, çevresindeki tarım alanından gübreli su akan bir göl kesiti verilmiştir. Yüzeye yakın bölge 1, orta derinlik 2 ve dip 3 ile gösterilmiştir. Gübrelerle taşınan azot ve fosfor nedeniyle 1. bölgede algler çok çoğalmış; oklar ölen alglerin dibe çökmesini, 2. bölgedeki yeşil çizgiler su bitkilerini göstermektedir.\nBuna göre,\nI. 1. bölgedeki yoğun alg örtüsü, derindeki su bitkilerinin fotosentezini azaltır.\nII. 3. bölgede ölü algleri ayrıştıran canlılar oksijen harcamadığından dip suyunun oksijeni artar.\nIII. 3. bölgede oksijen derişiminin azalması, oksijene gereksinimi olan canlıların ölümüne yol açabilir.\nyargılarından hangileri doğrudur?',
  sekil=SK,istenen='Göldeki değişimlerle ilgili doğru yargılar.',ip=['Yüzeydeki alg tabakasının ışığa, dipteki ayrışmanın ise oksijene etkisini ayrı ayrı düşün.'],bilgi=[OTR],
  puf='Besin tuzu artışı önce yüzeyde alg patlaması, sonra dipte ayrışma ve oksijen azalması getirir; sorun iki aşamalıdır.')
 
@@ -297,7 +298,7 @@ q('0012',tipId='cv-su',tip=TIPLER['cv-su'],z='orta',alt='Madde Döngüleri',kaz=
  ad=[A('Ağaçların görevlerini listele','Bitki örtüsü toprağı tutar, suyu sızdırır, terler ve fotosentezle karbon bağlar.','Tutma, sızma, terleme, karbon bağlama'),
      A('Kesimin sonucunu yaz','Bu görevlerin hepsi azalır; yüzey akışı ve erozyon artar.','Sızma ↓, terleme ↓, karbon bağlama ↓, akış ↑'),
      A('Uyumsuz ifadeyi bul','Fotosentez yapan ağaçlar kesilince karbon bağlama artmaz, azalır.','Karbon bağlanmasının artması söylenemez')],
- puf='Ormansızlaşmada bağlanan karbon, terleme ve sızma azalırken yüzey akışı ve erozyon artar; yönleri tersine karıştırma.')
+ puf='Ağaçların her görevini ayrı ele al ve kesilince her birinin yönünü ayrı değerlendir.')
 
 # ===================== 13 · orta · istilacı tür (olumsuz)
 card(13,'İstilacı türün biyoçeşitliliğe etkisi','İstilacı türün artışı yerli türleri azaltabilir; toplam birey sayısı artsa bile tür çeşitliliği düşebilir.','Toplam birey artınca çeşitliliğin de arttığını sanmak.','orta','grafik',4,'cv-bioc','istilacı tür girişi öncesi ve sonrası sütun grafiği')
@@ -319,50 +320,50 @@ q('0013',tipId='cv-bioc',tip=TIPLER['cv-bioc'],z='orta',alt='Biyoçeşitlilik',k
  ad=[A('Sütunları oku','Her tür için üç zamandaki birey sayıları karşılaştırılır.','K: 400→300→150 · L: 300→150→0 · M: 250→100→0 · İ: 0→450→900'),
      A('Genel eğilimi belirle','İstilacı tür artarken yerli türler azalmış, tür sayısı düşmüştür.','Tür sayısı 3 → 4 → 2'),
      A('Söylenemeyeni bul','Başlangıç ile 10. yıl karşılaştırılınca K, L ve M’nin üçünde de azalma görülür.','Hiçbirinin azalmaması söylenemez')],
- puf='“Hiçbiri” ya da “her zaman” gibi kesin ifadeleri tek bir karşı örnekle sına; grafikte bir tür bile azalmışsa ifade yanlıştır.')
+ puf='Kesin ifadeleri grafikteki verilerle tek tek sına.')
 
 # ===================== 14 · zor · ters biyokütle piramidi tablosu
-card(14,'Biyokütle ve yıllık üretim farkı','Hızlı yenilenen üreticilerin biyokütlesi az olsa da yıllık üretimi çoktur; biyokütle piramidi ters olabilir, enerji (üretim) piramidi düz kalır.','Biyokütlesi az olan basamağın enerjisinin de az olduğunu sanmak; ters biyokütle piramidinin enerji kuralını bozduğunu sanmak.','zor','tablo',5,'cv-enerji','açık denizde biyokütle ve yıllık üretim tablosu')
+card(14,'Biyokütle ve yıllık üretim farkı','Biyokütle bir andaki canlı kütlesi, üretim bir yıl içinde oluşan madde miktarıdır; biyokütlesi az olan basamak üretimde önde olabilir.','Biyokütlesi az olan basamağın enerjisinin de az olduğunu sanmak.','zor','tablo',5,'cv-enerji','açık denizde biyokütle ve yıllık üretim tablosu')
 BM={'Fitoplankton':(4,600),'Zooplankton':(20,100),'Balıklar':(8,15)}
 tn={k:v[1]/v[0] for k,v in BM.items()}; assert BM['Fitoplankton'][0]<BM['Zooplankton'][0] and BM['Fitoplankton'][1]>BM['Zooplankton'][1]>BM['Balıklar'][1]
 assert tn['Fitoplankton']==150 and tn['Zooplankton']==5 and tn['Fitoplankton']>tn['Zooplankton']
 SK=tablo_svg(['Canlı grubu','Biyokütle (g/m²)','Yıllık üretim (g/m²)'],[[k,str(v[0]),str(v[1])] for k,v in BM.items()])
-D14='Fitoplanktonun biyokütlesi zooplanktonunkinden az olsa da yıllık üretiminin biyokütlesine oranı çok daha büyüktür; bu nedenle biyokütle piramidi ters olsa da yıllık üretim (enerji) piramidi düzdür.'
-Y14=['Biyokütle piramidi her ekosistemde düzdür; bu nedenle tabloda yanlış değer verilmiştir.','Zooplanktonun yıllık üretimi fitoplanktonunkinden fazladır; çünkü biyokütlesi daha büyüktür.',
-     'Fitoplanktonun biyokütlesi az olduğundan, bu basamak ekosisteme en az enerjiyi sağlayan basamaktır.','Balıkların yıllık üretiminin zooplanktonunkinden fazla olması, enerji piramidinin ters olmasına yol açmıştır.']
+D14='Fitoplanktonun biyokütlesi en az olsa da yıllık üretimi en yüksektir; yıllık üretim (enerji) basamaklar boyunca azalır.'
+Y14=['Zooplanktonun yıllık üretimi, biyokütlesi daha büyük olduğu için fitoplanktonunkinden fazladır.','Biyokütlesi en az olan basamak, ekosisteme en az enerji sağlayan basamaktır.',
+     'Balıkların yıllık üretimi, biyokütleleri fitoplanktonunkinden büyük olduğu için zooplanktonunkinden fazladır.','Biyokütle sıralaması ile yıllık üretim sıralaması basamaklarda aynı yöndedir.']
 q('0014',tipId='cv-enerji',tip=TIPLER['cv-enerji'],z='zor',alt='Besin Piramitleri',kaz='Biyokütle ile yıllık üretimi ayırt ederek ters biyokütle piramidi ile düz enerji piramidini birlikte yorumlar.',kalip='tablo',
  metin='Açık denizde yaşayan, besin zincirini oluşturan üç canlı grubunun bir andaki toplam biyokütlesi ile bir yıl içinde ürettikleri organik madde miktarı, deniz yüzeyinin birim alanı için tabloda verilmiştir. Üretim değerleri, her basamağın zincire sağladığı enerjiyle orantılı kabul edilecektir.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
  sekil=SK,dogru=D14,sira=yer('D',D14,Y14),
- yan=[(Y14[0],'Tabloda fitoplanktonun biyokütlesi (4) zooplanktonunkinden (20) azdır; bu, bazı ekosistemlerde biyokütle piramidinin ters olabileceğini gösterir, değerler yanlış değildir.','bilgi'),
-      (Y14[1],'Zooplanktonun yıllık üretimi 100, fitoplanktonunki 600 g/m²’dir; biyokütle büyük olsa da üretim küçüktür.','dikkat'),
-      (Y14[2],'Fitoplanktonun yıllık üretimi (600) en yüksektir; bu basamak zincire en çok enerji sağlayandır.','bilgi'),
-      (Y14[3],'Balıkların yıllık üretimi (15), zooplanktonunkinden (100) azdır; enerji piramidi düzdür.','dikkat')],
+ yan=[(Y14[0],'Zooplanktonun yıllık üretimi 100, fitoplanktonunki 600 g/m²’dir; biyokütle büyük olsa da üretim küçüktür.','dikkat'),
+      (Y14[1],'Fitoplanktonun yıllık üretimi (600) en yüksektir; bu basamak zincire en çok enerji sağlayandır.','bilgi'),
+      (Y14[2],'Balıkların yıllık üretimi (15), zooplanktonunkinden (100) azdır; biyokütle büyüklüğü üretimi belirlemez.','dikkat'),
+      (Y14[3],'Biyokütlede zooplankton, üretimde fitoplankton birinci sıradadır; iki sıralama aynı yönde değildir.','bilgi')],
  istenen='Tabloya göre doğru ifade.',ip=['Biyokütle sütununu ve yıllık üretim sütununu ayrı ayrı sıralayıp iki sıralamanın uyuşup uyuşmadığını karşılaştır.'],bilgi=[PIR],
  ad=[A('Biyokütle sıralamasını yaz','Biyokütle sütununa göre en büyük zooplanktondur.','Zooplankton 20 > Balıklar 8 > Fitoplankton 4'),
      A('Üretim sıralamasını yaz','Yıllık üretim üreticiden üst basamağa doğru azalır.','Fitoplankton 600 > Zooplankton 100 > Balıklar 15'),
      A('Yenilenme hızını hesapla','Yıllık üretimin biyokütleye oranı, basamağın yılda kaç kez yenilendiğini gösterir.','Fitoplankton: 600 ÷ 4 = 150 · Zooplankton: 100 ÷ 20 = 5'),
-     A('Sonucu yaz','Üretim piramidi düz, biyokütle piramidi ters olabilir.','Biyokütle ters, enerji düz')],
- puf='Biyokütle “bir anda var olan”, üretim “bir yılda oluşan” demektir; hızlı yenilenen basamak az biyokütleyle çok enerji sağlayabilir.')
+     A('Sonucu yaz','Biyokütle sıralaması ile üretim sıralaması farklıdır; üretim basamaklarda azalır.','Üretim: 600 > 100 > 15')],
+ puf='Biyokütle ile üretim sütunlarını ayrı ayrı sırala ve sıralamaları karşılaştır.')
 
 # ===================== 15 · zor · besin zinciri, birikim katsayısı
-card(15,'Birikim katsayısıyla derişim tahmini','Her basamakta derişim aynı katsayıyla artıyorsa iki basamak arasındaki oran katsayının karesidir; son basamak ilk derişim × katsayı üzeri basamak sayısıdır.','İki basamağın oranını tek basamağın katsayısı sanmak; basamak sayısını yanlış saymak.','zor','şekilli',4,'cv-birikim','besin zincirinde ilk ve üçüncü basamak derişimi verilir')
-c0,c2=2,18; f=int(math.isqrt(c2//c0)); assert f*f==c2//c0==9 and f==3
-C15=[c0*f**i for i in range(5)]; assert C15==[2,6,18,54,162] and C15[2]==c2
-assert c2*f**2==162 and c2*f==54 and c2*(c2//c0)==162 and c2*(c2//c0)**1==162
-assert c0*9**4==13122 and c2*(c2//c0)**2==1458 and c2*18==324 and c2*f**3==486
-b=[kutu(0,0,'Fitoplankton\\\\2 µg/kg'),kutu(3.5,0,'Zooplankton\\\\?'),kutu(7,0,'Küçük balık\\\\18 µg/kg'),kutu(7,-2.3,'Büyük balık\\\\?'),kutu(3.5,-2.3,'Balıkçıl\\\\X')]
-b+=[f'\\draw[{OKS},line width=.9pt] (1.2,0)--(2.3,0);',f'\\draw[{OKS},line width=.9pt] (4.7,0)--(5.8,0);',f'\\draw[{OKS},line width=.9pt] (7,-.6)--(7,-1.7);',f'\\draw[{OKS},line width=.9pt] (5.8,-2.3)--(4.7,-2.3);']
+card(15,'İki besin kaynağında birikim','Her basamakta derişim aynı katsayıyla artıyorsa iki basamak arasındaki oran katsayının karesidir; iki besin kaynağı olan canlıda yenen besinlerin derişim ortalaması katsayıyla çarpılır.','Katsayıyı tek basamak yerine iki basamak oranı sanmak; iki kaynağın ortalaması yerine toplamını ya da yalnız birini almak.','zor','şekilli',5,'cv-birikim','besin ağında iki besin kaynağı ve birikim katsayısı')
+c0,c2=2,32; f=int(math.isqrt(c2//c0)); assert f*f==c2//c0==16 and f==4
+BB=c2*f; assert BB==128
+X15=f*Fr(c2+BB,2); assert X15==320
+assert f*BB==512 and f*c2==128 and Fr(c2+BB,2)==80 and f*(c2+BB)==640 and X15*f==1280
+b=[kutu(0,0,'Fitoplankton\\\\2 µg/kg'),kutu(3.5,0,'Zooplankton\\\\?'),kutu(7,0,'Küçük balık\\\\32 µg/kg'),kutu(7,-2.3,'Büyük balık\\\\?'),kutu(3.5,-2.3,'Balıkçıl\\\\X')]
+b+=[f'\\draw[{OKS},line width=.9pt] (1.2,0)--(2.3,0);',f'\\draw[{OKS},line width=.9pt] (4.7,0)--(5.8,0);',f'\\draw[{OKS},line width=.9pt] (7,-.6)--(7,-1.7);',f'\\draw[{OKS},line width=.9pt] (5.8,-2.3)--(4.7,-2.3);',f'\\draw[{OKS},line width=.9pt] (6.3,-.6)--(4.3,-1.7);']
 SK=tk('\n'.join(b),1.0)
-q('0015',tipId='cv-birikim',tip=TIPLER['cv-birikim'],z='zor',alt='Biyolojik Birikim',kaz='Besin zincirinde basamak başına sabit katsayıyla artan derişimden üst basamaktaki derişimi hesaplar.',kalip='şekilli',
- metin='Şekilde, bir göldeki besin zincirinde yer alan canlılar ve bazılarının dokularında ölçülen, doğada kolay ayrışmayan bir zehirli maddenin derişimi gösterilmiştir. Oklar yenen canlıdan yiyen canlıya doğrudur. Zincirdeki her basamakta bu maddenin derişimi, bir önceki basamaktaki derişimin aynı katı kadar artmaktadır; şekilde “?” ile gösterilen değerler ölçülmemiştir.\nBuna göre, balıkçıl kuşunun dokularındaki bu maddenin derişimi olan X kaç µg/kg’dır?',
- sekil=SK,dogru=162,yan=[(54,'Büyük balığın derişimi bulunmuş; balıkçıl bir basamak daha yukarıdadır.','dikkat'),(324,'Küçük balıktaki derişim 18’in kendisiyle çarpılmış; katsayı 3 yerine 18 alınmıştır.','islem'),
-  (486,'Küçük balıktan balıkçıla iki değil üç basamak çıkılmış gibi hesaplanmıştır.','islem'),(1458,'İlk iki basamak arasındaki toplam oran (9) her basamağın katsayısı sanılmış; 18, iki basamak için 9 ile iki kez çarpılmıştır.','bilgi')],
- istenen='Balıkçıl kuşundaki derişim X (µg/kg).',ip=['Fitoplankton ile küçük balık arasında kaç basamak olduğunu say; iki basamak için toplam oranı bulup basamak başına katsayıya çevir.'],bilgi=[BIR,BIK],
- ad=[A('Basamak sayısını bul','Fitoplanktondan küçük balığa iki basamak çıkılmıştır.','Fitoplankton → zooplankton → küçük balık: 2 basamak'),
-     A('Toplam oranı hesapla','Küçük balıktaki derişim, fitoplanktondakinin kaç katıdır?','18 ÷ 2 = 9'),
-     A('Basamak başına katsayıyı bul','İki basamak için oran 9 ise her basamakta 3 katına çıkılmıştır.','3 × 3 = 9 → katsayı 3'),
-     A('X’i hesapla','Küçük balıktan balıkçıla iki basamak daha vardır.','18 × 3 × 3 = 162 µg/kg')],
- puf='Basamak başına katsayı, iki basamak arasındaki oranın kökü kadardır; basamak sayısını okla saymadan önce kutuları say.')
+q('0015',tipId='cv-birikim',tip=TIPLER['cv-birikim'],z='zor',alt='Biyolojik Birikim',kaz='Basamak başına sabit katsayıyla artan derişimden, iki besin kaynağı olan canlının derişimini hesaplar.',kalip='şekilli',
+ metin='Şekilde, bir göldeki besin ağında yer alan canlılar ve bazılarının dokularında ölçülen, doğada kolay ayrışmayan bir zehirli maddenin derişimi gösterilmiştir. Oklar yenen canlıdan yiyen canlıya doğrudur; “?” ile gösterilen değerler ölçülmemiştir. Her canlının dokusundaki derişim, yediği canlıların derişimleri ortalamasının aynı katı kadardır (yalnız tek besini olan canlıda bu besinin derişiminin katıdır). Balıkçıl, küçük balık ve büyük balığı eşit miktarda yemektedir.\nBuna göre, balıkçıl kuşunun dokularındaki bu maddenin derişimi olan X kaç µg/kg’dır?',
+ sekil=SK,dogru=320,yan=[(128,'Balıkçılın yalnız küçük balıkla beslendiği varsayılmış (32 × 4); büyük balık da yenmektedir.','dikkat'),(512,'Balıkçılın yalnız büyük balıkla beslendiği varsayılmış (128 × 4); küçük balık da yenmektedir.','dikkat'),
+  (640,'İki besinin derişimlerinin ortalaması yerine toplamı alınmış (4 × 160).','islem'),(1280,'Bulunan değer bir basamak daha yukarıdaki canlı için uygulanmış gibi bir kez daha 4 ile çarpılmıştır.','islem')],
+ istenen='Balıkçıl kuşundaki derişim X (µg/kg).',ip=['Önce fitoplanktondan küçük balığa kaç basamak olduğunu say; sonra balıkçılın yediği canlıları belirle.'],bilgi=[BIR,BIK],
+ ad=[A('Katsayıyı bul','Fitoplanktondan küçük balığa iki basamak vardır; toplam oran kaç ise her basamağın katsayısı onun karekökü olur.','32 ÷ 2 = 16 → katsayı 4'),
+     A('Büyük balığın derişimini bul','Büyük balık yalnız küçük balığı yer.','32 × 4 = 128 µg/kg'),
+     A('Balıkçılın besinlerini ortala','Balıkçıl iki canlıyı eşit miktarda yer.','(32 + 128) ÷ 2 = 80'),
+     A('X’i hesapla','Ortalama katsayıyla çarpılır.','80 × 4 = 320 µg/kg')],
+ puf='Önce basamak sayısını say, sonra yenen canlıların hangileri olduğunu belirle; ardından derişimleri sırayla hesapla.')
 
 # ===================== 16 · orta · sera etkisi (olumsuz)
 card(16,'Sera gazı artışında ışın akışları','Sera gazları arttıkça yeryüzüne geri gönderilen ısı artar, uzaya çıkan azalır.','Uzaya çıkan ışınların arttığını sanmak; geri gönderilen ışınların azaldığını sanmak.','orta','şekilli',4,'cv-sorun','sera etkisi şemasında numaralı oklar')
@@ -387,7 +388,7 @@ q('0016',tipId='cv-sorun',tip=TIPLER['cv-sorun'],z='orta',alt='Çevre Sorunları
  ad=[A('Okların anlamını yaz','Numaralı oklar sırasıyla gelen, yayılan, geri gönderilen ve uzaya çıkan ışınlardır.','1 gelen · 2 yayılan · 3 geri gönderilen · 4 uzaya çıkan'),
      A('Derişim artışını uygula','Daha fazla sera gazı, ısı ışınlarının daha büyük bölümünü tutar.','3 artar, 4 azalır'),
      A('Yanlış ifadeyi bul','Ters yönde verilen değişim yanlıştır.','3 azalır, 4 artar ifadesi yanlış')],
- puf='Sera gazı artınca atmosferde tutulan ve yeryüzüne geri dönen ısı artar; uzaya kaçan ısı azalır.')
+ puf='Tutulan ısının akıbetini izle ve her okun yönünü bu akışla ilişkilendir.')
 
 # ===================== 17 · zor · brüt üretim hesabı
 card(17,'Net üretimden brüt üretime','Etçildeki enerjiden basamak basamak geri gidilip net üretim bulunur; brüt üretim, solunumda harcanan yüzde çıkarılmış kalanın tamamlanmasıyla bulunur.','Net üretimi brüt sanmak; solunum yüzdesini net üretime eklemek.','zor','düz',5,'cv-enerji','etçilden geriye brüt üretim hesabı')
@@ -405,12 +406,12 @@ q('0017',tipId='cv-enerji',tip=TIPLER['cv-enerji'],z='zor',alt='Enerji Akışı'
  puf='Brüt üretimden net üretime geçerken solunum payı çıkarılır; tersini yaparken net üretimi (1 − solunum oranı)’na bölmek gerekir.')
 
 # ===================== 18 · orta · fosfor döngüsü (öncüllü)
-card(18,'Fosfor döngüsünün özellikleri','Fosforun atmosferik evresi önemsizdir; bitkiler fosfatı topraktan alıp ATP ve nükleik asitlere katar; gübrenin bir kısmı sulara karışır.','Fosforun azot gibi atmosferden bağlandığını sanmak; gübrenin tamamının bitkilerce alındığını sanmak.','orta','öncüllü',3,'cv-azot','fosfor döngüsü, üç yargı')
+card(18,'Fosfor döngüsünün özellikleri','Fosforun atmosferik evresi önemsizdir; bitkiler fosfatı topraktan alıp ATP ve nükleik asitlere katar; gübrenin bir kısmı sulara karışır.','Fosforun azot gibi atmosferden bağlandığını sanmak; gübrenin tamamının bitkilerce alındığını sanmak.','orta','öncüllü',3,'cv-fosfor','fosfor döngüsü, üç yargı')
 qo('0018',[True,True,False],['fosfor döngüsünde azot ve karbon döngülerinden farklı olarak önemli bir atmosferik (gaz) evre bulunmaz; fosfor kayaç ve topraktan canlılara geçer',
   'bitkiler fosforu topraktan fosfat iyonu olarak alır ve ATP ile nükleik asit gibi moleküllerin yapısına katar',
-  'gübredeki fosfatın bir bölümü bitkilerce alınmadan yüzey sularına karışabilir'],1,
- tipId='cv-azot',tip=TIPLER['cv-azot'],z='orta',alt='Madde Döngüleri',kaz='Fosfor döngüsünün diğer döngülerden farkını ve fosforun canlılardaki görevini açıklar.',kalip='öncüllü',
- metin='Fosfor, canlıların yapısında bulunan ve doğada çoğunlukla kayaçlarda ile toprakta fosfat bileşikleri hâlinde bulunan bir elementtir. Buna göre fosfor döngüsüyle ilgili,\nI. Azot ve karbon döngülerinden farklı olarak, önemli bir atmosferik (gaz) evresi bulunmaz.\nII. Bitkiler fosforu topraktan fosfat iyonu olarak alır ve ATP ile nükleik asit gibi moleküllerin yapısına katar.\nIII. Tarım alanlarına verilen fosfatlı gübrelerin tamamı bitkiler tarafından alınır, yüzey sularına karışması mümkün değildir.\nyargılarından hangileri doğrudur?',
+  'gübredeki fosfatın bir bölümü bitkilerce alınmadan yüzey sularına karışabilir; tamamının alınması gerekmez'],1,
+ tipId='cv-fosfor',tip=TIPLER['cv-fosfor'],z='orta',alt='Madde Döngüleri',kaz='Fosfor döngüsünün diğer döngülerden farkını ve fosforun canlılardaki görevini açıklar.',kalip='öncüllü',
+ metin='Fosfor, canlıların yapısında bulunan ve doğada çoğunlukla kayaçlarda ve toprakta fosfat bileşikleri hâlinde bulunan bir elementtir. Buna göre fosfor döngüsüyle ilgili,\nI. Azot ve karbon döngülerinden farklı olarak, önemli bir atmosferik (gaz) evresi bulunmaz.\nII. Bitkiler fosforu topraktan fosfat iyonu olarak alır ve ATP ile nükleik asit gibi moleküllerin yapısına katar.\nIII. Tarım alanlarına verilen fosfatlı gübrelerdeki fosfatın tamamı bitkilerce alınır; hiçbiri yüzey sularına karışmaz.\nyargılarından hangileri doğrudur?',
  istenen='Fosfor döngüsüyle ilgili doğru yargılar.',ip=['Fosforun doğada hangi biçimlerde ve hangi ortamlarda bulunduğunu, canlıların onu hangi biçimde aldığını düşün.'],bilgi=[FOS],
  puf='Fosfor döngüsünde gaz evresi yoktur; fosfat kayaç, toprak, su ve canlılar arasında dolaşır, fazlası sulara karıştığında ötrofikasyona yol açabilir.')
 

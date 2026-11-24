@@ -160,7 +160,6 @@ def mito_svg(num):
     b.append('\\draw[line width=1.6pt] (0,0) ellipse (3 and 1.75);')
     b.append('\\draw[line width=1.6pt,rounded corners=2.5pt] '+' -- '.join('(%.3f,%.3f)'%p for p in MP)+' -- cycle;')
     b.append('\\draw[line width=1pt] (-.3,-.62) circle (.2);\\fill (-.5,-.55) circle (.04);\\fill (-.1,-.7) circle (.04);\\fill (-.27,-.35) circle (.04);')
-    for (rx,ry) in [(.9,.6),(1.2,.35),(-1.9,.2),(-2.1,-.2),(.1,-.85)]: b.append(f'\\fill ({rx},{ry}) circle (.035);')
     def lab(t,tx,ty,ex,ey): return f'\\node[font=\\normalsize\\bfseries] at ({tx},{ty}) {{{t}}};\\draw[{OKS},line width=.8pt] ({tx+(ex-tx)*.12:.3f},{ty+(ey-ty)*.12:.3f})--({ex},{ey});'
     # dış zar
     th=math.radians(165); b.append(lab(num['dis'],-4.1,1.6,3*math.cos(th),1.75*math.sin(th)))
@@ -190,7 +189,7 @@ q('0001',tipId='hs-yer',tip='Mitokondri bölümleri ve hücresel solunum yeri',z
  ad=[A('Bölümleri tanı','Dıştaki düz zar dış zar, kıvrımlı zar iç zar, iki zar arası boşluk zarlar arası boşluktur. İç zarın içindeki sıvı matrikstir.','II: dış zar · III: zarlar arası boşluk · IV: iç zar · I: matriks · V: DNA'),
      A('Krebs yerini hatırla','Krebs döngüsü enzimleri matriks sıvısında çözünmüş hâlde bulunur; zara gömülü değildir.','Krebs → matriks'),
      A('Numarayı eşle','Matriks şemada I ile gösterilmiştir.','Cevap: I')],
- puf='Zara gömülü basamaklar (ETS) zarda, çözünmüş enzimle yürüyenler (Krebs) mitokondri sıvısında gerçekleşir.',sekil=SK1)
+ puf='Bir basamağın zarda mı yoksa zarların çevrelediği sıvıda mı yürüdüğünü ayırt ederek bölgeyi seç.',sekil=SK1)
 SIRA[1]=1
 
 # -------- N2 · Glikoliz yanlıştır · kolay
@@ -202,17 +201,17 @@ q('0002',tipId='hs-basamak',tip='Glikolizin özellikleri',z='kolay',alt='Glikoli
  dogru='Glikozun yıkılabilmesi için ortamda oksijen bulunması gerekir.',
  sira=yer('C','Glikozun yıkılabilmesi için ortamda oksijen bulunması gerekir.',['Sitoplazmada gerçekleşir.','Bir glikozdan iki pirüvik asit molekülü oluşur.','ATP, substrat düzeyinde fosforilasyonla sentezlenir.','NAD⁺ indirgenerek NADH’a dönüşür.']),
  yan=[('Sitoplazmada gerçekleşir.','Kökün yanlış ifadeyi istediğini gözden kaçırıp doğru bir ifadeyi seçmek; glikoliz gerçekten sitoplazmada gerçekleşir.','dikkat'),
-      ('Bir glikozdan iki pirüvik asit molekülü oluşur.','Doğru bir ifadeyi seçmek; üç karbonlu glikozun yıkımıyla iki pirüvik asit oluşur, bu da ortak bir bilgidir.','dikkat'),
+      ('Bir glikozdan iki pirüvik asit molekülü oluşur.','Doğru bir ifadeyi seçmek; altı karbonlu glikozun yıkımıyla üç karbonlu iki pirüvik asit oluşur.','dikkat'),
       ('ATP, substrat düzeyinde fosforilasyonla sentezlenir.','Doğru bir ifadeyi yanlış sanmak; glikolizde ATP, fosfat grubunun bir bileşikten doğrudan ADP’ye aktarılmasıyla yapılır.','bilgi'),
       ('NAD⁺ indirgenerek NADH’a dönüşür.','Doğru bir ifadeyi yanlış sanmak; glikolizde glikozdan alınan hidrojenler NAD⁺’yı NADH’a indirger.','bilgi')],
  istenen='Glikolizle ilgili yanlış ifade.',
- ip=['Kök yanlış ifadeyi istiyor; glikolizin fermantasyon yapan hücrelerde de gerçekleştiğini hatırlayarak ifadeleri tek tek sına.'],
+ ip=['Kök yanlış ifadeyi istiyor; her ifadeyi glikolizin yeri ve koşulları açısından tek tek sına.'],
  bilgi=[GLB],
  ad=[A('Kökü oku','Yanlış ifade isteniyor; doğru olanlar tek tek elenecek.','Aranan: yanlış ifade'),
      A('Doğruları ele','Glikoliz sitoplazmada yürür, bir glikozdan iki pirüvik asit verir, ATP’yi substrat düzeyinde üretir ve NAD⁺’yı indirger.','4 ifade doğru'),
      A('Koşulu sına','Glikoliz fermantasyonda da gerçekleşir; fermantasyon oksijensiz ortamda olduğundan glikoliz oksijen gerektirmez.','Oksijen şartı yanlış'),
      A('Sonuç','Yanlış olan, oksijen gerektiğini söyleyen ifadedir.','Yanlış: oksijen şartı')],
- puf='Hem oksijenli solunumda hem fermantasyonda ortak olan basamak, oksijen gerektirmeyen glikolizdir.')
+ puf='Olumsuz köklerde ifadeleri tek tek doğru ya da yanlış diye işaretleyip kalanı seç.')
 SIRA[2]=2
 
 # -------- N3 · Kültür tablosu · kolay · öncüllü (tablo)
@@ -249,11 +248,11 @@ q('0004',tipId='hs-ets',tip='Elektron taşıma sistemi ve kemiozmoz',z='orta',al
  ip=['Elektronların NADH’tan oksijene kadar izlediği yolu aşama aşama düşün ve her öncülü bu yolla karşılaştır.'],
  bilgi=[B('Kemiozmotik ATP sentezi','elektronların taşıyıcılarda ilerlemesiyle H⁺’lar zarın bir yanına pompalanır; derişim farkına uyarak geri akan H⁺’ların enerjisi ATP sentaz enzimiyle ATP’ye dönüştürülür')],
  ad=onc_adim({k for k,v in T4.items() if v},N4)+[A('Sonuç','Kökte yanlış olanlar istendiğinden yalnız ilk öncül seçilir.','Yanlış olan: I')],
- puf='Elektronlar taşıyıcıdan taşıyıcıya geçer; oksijen yalnız zincirin sonunda elektron alır ve suya indirgenir.')
+ puf='ETS sorularında elektronların izlediği yolu sırayla yaz ve her öncülü bu yolla karşılaştır.')
 SIRA[4]=4
 
 # -------- N5 · Basamak akış şeması · orta · öncüllü + olumsuz · şema
-k5=kartla(5,'Basamaklarda CO₂ çıkışı','CO₂, oksijenli solunumda yalnız pirüvatın asetil CoA’ya dönüşümünde ve Krebs döngüsünde açığa çıkar; glikolizde ve ETS’de CO₂ oluşmaz.','Glikolizde CO₂ çıktığını sanmak; ETS’yi CO₂ üreten basamak saymak.','orta','şekilli',3,'hs-basamak','Basamaklardaki ürünler')
+k5=kartla(5,'Basamaklarda CO₂ çıkışı','Her basamağın girdi ve çıktısındaki karbon sayısı karşılaştırılarak CO₂ çıkışı belirlenir.','Glikolizde CO₂ çıktığını sanmak; ETS’yi CO₂ üreten basamak saymak.','orta','şekilli',3,'hs-basamak','Basamaklardaki ürünler')
 def akis():
     b=[]
     yer_={'Glikoz':(0,1.5),'Pirüvat':(3.6,1.5),'Asetil CoA':(7.2,1.5),'NADH ve\\\\FADH$_2$':(7.2,-.5),'H$_2$O':(3.6,-.5)}
@@ -289,7 +288,7 @@ q('0005',tipId='hs-basamak',tip='Basamaklardaki ürünler',z='orta',alt='Basamak
      A('CO₂ çıkışını sına','Karbon kaybı yalnız pirüvatın dönüşümünde ve Krebs döngüsünde olur.','CO₂ var: II, III'),
      A('Kökü uygula','Kökte CO₂ çıkmayanlar istenir; glikoliz ve ETS CO₂ üretmez.','CO₂ çıkmaz: I, IV'),
      A('Sonuç','CO₂ çıkmayan dönüşümler I ve IV’tür.','Doğru: I ve IV')],
- puf='Glikoz sonunda tamamen CO₂’ye dönüştüğü hâlde CO₂ yalnız asetil CoA oluşumunda ve Krebs döngüsünde çıkar; ilk ve son basamak CO₂ üretmez.',sekil=SK5)
+ puf='Her basamağın girdi ve çıktısındaki karbon sayısını karşılaştırarak CO₂ çıkışını bul.',sekil=SK5)
 SIRA[5]=5
 
 # -------- N6 · Respirometre (KOH) · orta · düzenek
@@ -317,7 +316,7 @@ q('0006',tipId='hs-deney',tip='KOH’lu solunum düzeneği',z='orta',alt='Solunu
 SIRA[6]=6
 
 # -------- N7 · O₂ tüketimi ve laktik asit grafiği · orta · öncüllü
-k7=kartla(7,'Egzersizde laktik asit birikimi grafiği','O₂ tüketimi sürerken laktik asit de artıyorsa hücrede oksijenli solunum ve laktik asit fermantasyonu birlikte yürür.','O₂ tüketim eğrisi yatay diye solunumun durduğunu sanmak; laktik asit artışını oksijenli solunumun bittiği anlamına getirmek.','orta','grafik',3,'hs-grafik','Egzersizde solunum grafiği')
+k7=kartla(7,'Egzersizde laktik asit birikimi grafiği','Her eğri ayrı ayrı yorumlanır, sonra aynı zaman diliminde birleştirilerek hücredeki olaylar çıkarılır.','O₂ tüketim eğrisi yatay diye solunumun durduğunu sanmak; laktik asit artışını oksijenli solunumun bittiği anlamına getirmek.','orta','grafik',3,'hs-grafik','Egzersizde solunum grafiği')
 SK7=tk(grafik([([(0,1),(3,6),(6,9.5),(30,9.5)],'line width=1.8pt'),([(0,1),(10,1),(14,3.2),(20,7.5),(30,9.5)],'line width=1.8pt,dash pattern=on 5pt off 3pt')],30,10.5,[0,5,10,15,20,25,30],[],'Zaman (dk)','Göreli değer',W=6.2,Hh=3.2,etik=[(24,10.1,'O$_2$ tüketim hızı','above'),(21.5,6.2,'Laktik asit derişimi','below right')]),.85)
 T7={'I':True,'II':False,'III':True}
 N7={'I':'Laktik asit derişimi artmaktadır; bu, pirüvatın laktik aside indirgendiğini, yani laktik asit fermantasyonunun gerçekleştiğini gösterir.',
@@ -332,7 +331,7 @@ q('0007',tipId='hs-grafik',tip='Egzersizde solunum grafiği',z='orta',alt='Oksij
  ip=['İki eğriyi aynı zaman aralığında ayrı ayrı oku: biri sabit ve sıfırdan büyük, diğeri artıyor; bunların hangi olaylara karşılık geldiğini düşün.'],
  bilgi=[B('Laktik asit fermantasyonu','pirüvik asit NADH ile laktik aside indirgenir ve NAD⁺ yenilenir · İskelet kasında oksijen yetersiz kaldığında ya da ATP gereksinimi arttığında oksijenli solunumla birlikte görülebilir')],
  ad=onc_adim({k for k,v in T7.items() if v},N7)+[A('Sonuç','Grafikten çıkarılabilecek yargılar I ve III’tür.','Doğru: I ve III')],
- puf='Laktik asit birikmesi oksijenli solunumun bittiğini göstermez; O₂ tüketimi sürüyorsa ETS de çalışır.',sekil=SK7)
+ puf='Grafikte her eğriyi önce ayrı ayrı yorumla, sonra aynı zaman diliminde birleştir.',sekil=SK7)
 SIRA[7]=7
 
 # -------- N8 · Krebs + ETS ATP hesabı · orta · tablo
@@ -363,25 +362,25 @@ q('0008',tipId='hs-atp',tip='Krebs ve ETS kaynaklı ATP hesabı',z='orta',alt='A
 SIRA[8]=8
 
 # -------- N9 · İki fermantasyonun ortak yönleri · orta · öncüllü
-k9=kartla(9,'Laktik asit ve etil alkol fermantasyonu karşılaştırması','İki fermantasyonda da pirüvat (ya da türevi) NADH ile indirgenir ve NAD⁺ yenilenir; CO₂ yalnız etil alkol fermantasyonunda çıkar.','Laktik asit fermantasyonunda da CO₂ çıktığını sanmak; fermantasyonda ETS çalıştığını düşünmek.','orta','öncüllü',3,'hs-ferm','Fermantasyon türlerinin karşılaştırılması')
+k9=kartla(9,'Laktik asit ve etil alkol fermantasyonu karşılaştırması','İki fermantasyonun ürünleri ve ATP sağlayan basamakları yan yana yazılıp karşılaştırılır.','Laktik asit fermantasyonunda da CO₂ çıktığını sanmak; fermantasyonda ETS çalıştığını düşünmek.','orta','öncüllü',3,'hs-ferm','Fermantasyon türlerinin karşılaştırılması')
 T9={'I':True,'II':True,'III':False}
 N9={'I':'Her iki fermantasyonda da NADH, pirüvatı ya da pirüvattan türeyen asetaldehiti indirger; bu ortak bir olaydır.',
-    'II':'Her iki fermantasyonda da glikolizde oluşan NADH yükseltgenir ve NAD⁺ yenilenir; bu ortak bir olaydır.',
+    'II':'Her iki fermantasyonda da ATP, glikolizde substrat düzeyinde fosforilasyonla sentezlenir; bu ortak bir olaydır.',
     'III':'CO₂ yalnız etil alkol fermantasyonunda çıkar; laktik asit fermantasyonunda pirüvat doğrudan laktik aside dönüştüğünden CO₂ oluşmaz.'}
 d9,s9=onc_sec({k for k,v in T9.items() if v},'C')
 q('0009',tipId='hs-ferm',tip='Fermantasyon türlerinin karşılaştırılması',z='orta',alt='Fermantasyon',kaz='Laktik asit ve etil alkol fermantasyonlarının ortak yönlerini ayırt eder.',kalip='öncüllü',
  kart=f'{k9} (fermantasyon karşılaştırma) · ortak olaylar',
- metin='Kas hücreleri oksijensiz kaldığında laktik asit fermantasyonu, maya hücreleri oksijensiz ortamda etil alkol fermantasyonu yapar. Her iki süreçte de glikoz önce glikolizle yıkılır.\nI. NADH’ın pirüvat ya da türevini indirgemesi\nII. NAD⁺’nın yenilenmesi\nIII. CO₂’nin açığa çıkması\nBuna göre, yukarıdaki olaylardan hangileri bu iki fermantasyonda ortak olarak gerçekleşir?',
+ metin='Kas hücreleri oksijensiz kaldığında laktik asit fermantasyonu, maya hücreleri oksijensiz ortamda etil alkol fermantasyonu yapar. Her iki süreçte de glikoz önce glikolizle yıkılır.\nI. NADH’ın pirüvat ya da türevini indirgemesi\nII. ATP’nin substrat düzeyinde fosforilasyonla sentezlenmesi\nIII. CO₂’nin açığa çıkması\nBuna göre, yukarıdaki olaylardan hangileri bu iki fermantasyonda ortak olarak gerçekleşir?',
  dogru=d9,sira=s9,yan=onc_cel({k for k,v in T9.items() if v},s9,d9,N9),
  istenen='Her iki fermantasyonda da görülen olaylar.',
  ip=['İki fermantasyonun ürünlerini yan yana yaz ve glikolizin sürebilmesi için hangi taşıyıcının yenilenmesi gerektiğini düşün.'],
  bilgi=[B('Fermantasyonun amacı','glikolizde NAD⁺ tükenirse glikoliz durur · Fermantasyon, NADH’ı yükseltgeyerek NAD⁺’yı yeniler ve böylece glikolizle ATP üretimi sürer')],
  ad=onc_adim({k for k,v in T9.items() if v},N9)+[A('Sonuç','Ortak olanlar I ve II’dir.','Doğru: I ve II')],
- puf='Fermantasyonun ortak görevi NAD⁺’yı yenilemektir; CO₂ üretimi türe göre değişir.')
+ puf='İki sürecin ürünlerini ve ATP sağlayan basamaklarını yan yana yazıp kıyasla.')
 SIRA[9]=9
 
 # -------- N10 · ATP sentezlenmeyen olay · orta · olumsuz
-k10=kartla(10,'ATP sentezi olmayan basamak','Glikolizde, Krebs döngüsünde ve ETS’de ATP sentezi vardır; pirüvatın asetil CoA’ya dönüşümü ve fermantasyonun ikinci basamağı ATP üretmez.','Pirüvatın asetil CoA’ya dönüşümünü ATP üreten basamak saymak.','orta','düz',3,'hs-basamak','ATP sentezi olmayan basamak')
+k10=kartla(10,'ATP sentezi olmayan basamak','Her olay ait olduğu ATP sentez türüne (substrat düzeyi, kemiozmotik ya da yok) eşlenir.','Pirüvatın asetil CoA’ya dönüşümünü ATP üreten basamak saymak.','orta','düz',3,'hs-basamak','ATP sentezi olmayan basamak')
 A10='Pirüvik asitten asetil CoA oluşumu sırasında'
 q('0010',tipId='hs-basamak',tip='ATP sentezi olmayan basamak',z='orta',alt='ATP üretimi',kaz='Hücresel solunum ve fermantasyon basamaklarından ATP sentezinin olmadığı olayı belirler.',kalip='düz',
  kart=f'{k10} (ATP sentezi olmayan basamak) · yanlış basamak seçimi',
@@ -399,11 +398,11 @@ q('0010',tipId='hs-basamak',tip='ATP sentezi olmayan basamak',z='orta',alt='ATP 
      A('ATP sentezli olanları ele','Glikoliz ve Krebs’te substrat düzeyinde, ATP sentazdan H⁺ geçişinde kemiozmotik ATP sentezi vardır.','3 olay ATP üretir'),
      A('Fermantasyonu değerlendir','Fermantasyon sürecinde ATP, glikoliz basamağında sentezlenir.','Alkol fermantasyonunda ATP var'),
      A('Sonuç','Pirüvatın asetil CoA’ya dönüşümünde NADH ve CO₂ oluşur ama ATP sentezlenmez.','ATP yok: pirüvat → asetil CoA')],
- puf='Pirüvat → asetil CoA basamağı NADH ve CO₂ verir, ATP vermez.')
+ puf='Her olayın hangi ATP sentez türüne ait olduğunu eşle.')
 SIRA[10]=10
 
 # -------- N11 · Maya grafiği · orta · grafik
-k11=kartla(11,'Oksijen azalırken etil alkol artışı','Ortamda O₂ azalırken etil alkol birikiyorsa hücrelerde oksijenli solunum ile alkol fermantasyonu birlikte yürür; O₂ bitince ATP yalnız fermantasyonla üretilir.','Fermantasyonun O₂ sıfır olunca başladığını sanmak; fermantasyonda ATP üretilmediğini düşünmek.','orta','grafik',3,'hs-grafik','Maya kültüründe O₂ ve etil alkol grafiği')
+k11=kartla(11,'Oksijen azalırken etil alkol artışı','Grafik zaman dilimlerine ayrılır ve her dilimde hangi eğrinin değiştiği okunarak etkin olaylar belirlenir.','Fermantasyonun O₂ sıfır olunca başladığını sanmak; fermantasyonda ATP üretilmediğini düşünmek.','orta','grafik',3,'hs-grafik','Maya kültüründe O₂ ve etil alkol grafiği')
 SK11=tk(grafik([([(0,100),(40,0),(60,0)],'line width=1.8pt'),([(0,0),(30,0),(60,90)],'line width=1.8pt,dash pattern=on 5pt off 3pt')],60,110,[0,10,20,30,40,50,60],[0,50,100],'Zaman (dk)','Miktar (birim)',W=6.2,Hh=3.2,etik=[(12,100,'Ortamdaki O$_2$','above right'),(39,58,'Etil alkol','left')]),.85)
 A11='30. ile 40. dakikalar arasında maya hücrelerinde hem oksijenli solunum hem de alkol fermantasyonu gerçekleşir.'
 q('0011',tipId='hs-grafik',tip='Maya kültüründe O₂ ve etil alkol grafiği',z='orta',alt='Oksijenli solunum ve fermantasyon',kaz='O₂ ve etil alkol eğrilerinden maya hücrelerindeki solunum türlerini çıkarır.',kalip='grafik',
@@ -422,51 +421,52 @@ q('0011',tipId='hs-grafik',tip='Maya kültüründe O₂ ve etil alkol grafiği',
      A('0–30. dakikayı yorumla','O₂ tüketildiğine göre oksijenli solunum vardır; etil alkol oluşmadığından fermantasyon yoktur.','Yalnız oksijenli solunum'),
      A('30–40. dakikayı yorumla','O₂ hâlâ azalmakta, etil alkol artmaktadır; iki yol birlikte yürür.','Oksijenli solunum + fermantasyon'),
      A('Sonuç','Diğer yargılar grafiğe ya da fermantasyon bilgisine aykırıdır; doğru yargı ikinci dönem içindir.','30–40. dakika: iki yol birlikte')],
- puf='Bir grafik dilimin içinde iki eğri birden değişiyorsa iki olay birlikte gerçekleşir.',sekil=SK11)
+ puf='Grafiği dilimlere ayır ve her dilimde hangi eğrinin değiştiğini ayrı oku.',sekil=SK11)
 SIRA[11]=13
 
 # -------- N12 · FADH₂ hesabı · orta · sayısal
-k12=kartla(12,'CO₂ miktarından FADH₂ miktarı','CO₂ sayısından yıkılan glikoz sayısı, buradan Krebs ürünleri bulunur: glikoz başına 6 CO₂ ve Krebs’te 2 FADH₂.','Krebs’te yalnız CO₂ oluştuğunu sanmak; NADH ile FADH₂ sayısını karıştırmak.','orta','hikâyeli',3,'hs-atp','CO₂’den Krebs ürünlerini hesaplama')
+k12=kartla(12,'CO₂ miktarından NADH miktarı','CO₂ sayısından yıkılan glikoz sayısı, buradan basamaklarda oluşan taşıyıcılar bulunur.','Basamaklardaki NADH sayılarını karıştırmak.','orta','düz',3,'hs-atp','CO₂’den taşıyıcı sayısını hesaplama')
 CO2_T=48; g12=Fr(CO2_T,OKS_CO2); assert g12==8
-f12=KG['FADH2']*g12; assert f12==16
-y12=[(KG['FADH2']//2*g12,'Krebs’te glikoz başına yalnız 1 FADH₂ oluştuğunu varsaymak.','bilgi'),
-     (KG['FADH2']*Fr(CO2_T,KG['CO2']),'Tüm CO₂’nin yalnız Krebs’te çıktığını (glikoz başına 4) varsayıp glikoz sayısını fazla bulmak.','islem'),
-     (KG['CO2']*g12,'FADH₂ yerine glikoz başına Krebs’te çıkan CO₂ sayısını (4) kullanmak.','islem'),
-     (KG['NADH']*g12,'FADH₂ yerine Krebs’te oluşan NADH sayısını hesaplamak.','dikkat')]
+f12=PO['NADH']*g12; assert f12==16
+y12=[(PO['NADH']//2*g12,'Pirüvatın dönüşümünde glikoz başına yalnız 1 NADH oluştuğunu varsaymak.','bilgi'),
+     (Fr(CO2_T,2),'NADH sayısını CO₂ sayısının yarısı olarak almak.','islem'),
+     ]+[
+     (KG['CO2']*g12,'NADH yerine glikoz başına Krebs’te çıkan CO₂ sayısını (4) kullanmak.','islem'),
+     (KG['NADH']*g12,'Pirüvatın dönüşümü yerine Krebs döngüsünde oluşan NADH sayısını hesaplamak.','dikkat')]
 assert sorted([f12]+[v for v,_,_ in y12])==[8,16,24,32,48]
-q('0012',tipId='hs-atp',tip='CO₂’den Krebs ürünlerini hesaplama',z='orta',alt='ATP ve taşıyıcı hesapları',kaz='CO₂ miktarından yıkılan glikozu bulup Krebs’te oluşan FADH₂ sayısını hesaplar.',kalip='hikâyeli',
- kart=f'{k12} (CO₂ → FADH₂) · glikoz sayısı üzerinden',
- metin='Oksijenli solunum yapan bir hücre kültüründe, glikozun tamamı CO₂ ve H₂O’ya yıkılırken toplam 48 molekül CO₂ açığa çıkmıştır.\nAynı sürede Krebs döngüsünde oluşan FADH₂ molekülü sayısı kaçtır?',
+q('0012',tipId='hs-atp',tip='CO₂’den taşıyıcı sayısını hesaplama',z='orta',alt='ATP ve taşıyıcı hesapları',kaz='CO₂ miktarından yıkılan glikozu bulup pirüvatın asetil CoA’ya dönüşümünde oluşan NADH sayısını hesaplar.',kalip='düz',
+ kart=f'{k12} (CO₂ → NADH) · glikoz sayısı üzerinden',
+ metin='Oksijenli solunum yapan bir hücre kültüründe, glikozun tamamı CO₂ ve H₂O’ya yıkılırken toplam 48 molekül CO₂ açığa çıkmıştır.\nBuna göre, aynı sürede pirüvatın asetil CoA’ya dönüştürüldüğü basamakta oluşan NADH molekülü sayısı kaçtır?',
  dogru=int(f12),yan=[(int(v),t,tu) for v,t,tu in y12],
- istenen='Krebs döngüsünde oluşan toplam FADH₂ sayısı.',
- ip=['CO₂ sayısından yıkılan glikoz sayısına ulaş; sonra bir glikoz için Krebs’te oluşan FADH₂ sayısıyla çarp.'],
- bilgi=[B('Bir glikozun ürünleri','glikozun altı karbonu oksijenli solunumda tamamen CO₂’ye dönüşür · Asetil CoA sayısı pirüvat sayısına eşittir ve her asetil CoA Krebs döngüsünün bir turunu işletir')],
+ istenen='Pirüvatın asetil CoA’ya dönüşümünde oluşan toplam NADH sayısı.',
+ ip=['CO₂ sayısından yıkılan glikoz sayısına ulaş; sonra o basamakta bir glikoz için oluşan NADH sayısını kullan.'],
+ bilgi=[B('Basamak ürünleri','1 glikoz glikolizde 2 pirüvat verir · Her pirüvat mitokondride bir basamakta asetil CoA’ya dönüşür')],
  ad=[A('Glikoz sayısını bul','1 glikoz oksijenli solunumda 6 CO₂ verir; toplam CO₂ buna bölünür.','48 ÷ 6 = 8 glikoz'),
-     A('Tur sayısını bul','1 glikozdan 2 asetil CoA oluşur; her biri Krebs’te bir tur döner.','8 × 2 = 16 tur'),
-     A('FADH₂ sayısını hesapla','Krebs döngüsünün her turunda 1 FADH₂ oluşur.','16 × 1 = 16 FADH₂')],
- puf='Önce CO₂’den glikoz sayısına, sonra glikozdan tur sayısına geç; taşıyıcılar tur sayısıyla orantılıdır.')
+     A('Pirüvat sayısını bul','Her glikozdan 2 pirüvat oluşur ve her biri asetil CoA’ya dönüşür.','8 × 2 = 16 pirüvat'),
+     A('NADH sayısını hesapla','Her pirüvatın dönüşümünde 1 NADH oluşur.','16 × 1 = 16 NADH')],
+ puf='Önce CO₂’den glikoz sayısına, sonra ilgili basamağın çarpanına geç.')
 SIRA[12]=11
 
 # -------- N13 · İşaretli atomlar · zor · öncüllü
-k13=kartla(13,'İşaretli atomların izlenmesi','Glikozun karbonları pirüvat ve CO₂’ye, O₂’nin oksijeni ETS’de H₂O’ya geçer; işaretli atomun izi bu yollar üzerinden sürülür.','O₂’nin oksijeninin CO₂’ye geçtiğini sanmak; glikozun karbonunun H₂O’da bulunacağını düşünmek.','zor','öncüllü',4,'hs-basamak','İşaretli atomların izlenmesi')
+k13=kartla(13,'İşaretli atomların izlenmesi','Her işaretli atomun izlediği yol ayrı ayrı çizilir.','O₂’nin oksijeninin CO₂’ye geçtiğini sanmak; glikozun karbonunun H₂O’da bulunacağını düşünmek.','orta','öncüllü',3,'hs-basamak','İşaretli atomların izlenmesi')
 T13={'I':True,'II':False,'III':True}
 N13={'I':'Karbonları ¹⁴C ile işaretli glikoz glikolizde pirüvata dönüşür; pirüvatın karbonları glikozdan geldiğinden ¹⁴C bulunur.',
      'II':'H₂O’nun oksijeni ETS’de O₂’den gelir ve suyda karbon bulunmaz; bu yüzden H₂O’da ¹⁴C bulunmaz.',
      'III':'O₂ ETS’de son elektron alıcısı olarak H₂O’ya indirgenir; bu yüzden H₂O’da ¹⁸O bulunur.'}
 d13,s13=onc_sec({k for k,v in T13.items() if v},'E')
-q('0013',tipId='hs-basamak',tip='İşaretli atomların izlenmesi',z='zor',alt='İşaretli madde deneyleri',kaz='İşaretli karbon ve oksijenin oksijenli solunumda hangi ürünlere geçtiğini belirler.',kalip='öncüllü',
+q('0013',tipId='hs-basamak',tip='İşaretli atomların izlenmesi',z='orta',alt='İşaretli madde deneyleri',kaz='İşaretli karbon ve oksijenin oksijenli solunumda hangi ürünlere geçtiğini belirler.',kalip='öncüllü',
  kart=f'{k13} (işaretli atomlar) · ¹⁴C glikoz ve ¹⁸O₂',
  metin='Karbon atomlarının tamamı ¹⁴C ile işaretli glikoz ve oksijen atomları ¹⁸O ile işaretli O₂, oksijenli solunum yapan bir hücre kültürüne birlikte verilmiştir. Hücrelerde solunum tamamlanana kadar beklenmiştir.\nI. Glikolizde oluşan pirüvik asitte ¹⁴C\nII. ETS sonunda oluşan H₂O’da ¹⁴C\nIII. ETS sonunda oluşan H₂O’da ¹⁸O\nBuna göre, yukarıdaki moleküllerin hangilerinin belirtilen işaretli atomu içermesi beklenir?',
  dogru=d13,sira=s13,yan=onc_cel({k for k,v in T13.items() if v},s13,d13,N13),
  istenen='İşaretli atomu içermesi beklenen moleküller.',
  ip=['Glikozdan başlayan ve oksijenden başlayan iki ayrı yolu izle; karbonun ve oksijen atomunun hangi son ürünlere ulaştığını ayrı ayrı bul.'],
- bilgi=[B('Atomların kaynağı','organik maddeden gelen karbonlar CO₂’ye dönüşür · ETS’de oluşan suyun hidrojeni NADH ve FADH₂’den, oksijeni ise solunan O₂’den gelir')],
+ bilgi=[B('İşaretli atomların izi','işaretli bir atom, bulunduğu molekülden tepkimelerle başka moleküllere aktarılır · İzini sürmek için o atomun geçtiği tepkime zincirini yaz')],
  ad=onc_adim({k for k,v in T13.items() if v},N13)+[A('Sonuç','Beklenen işaretli atomlar I ve III’te bulunur.','Doğru: I ve III')],
- puf='Karbon glikozdan CO₂’ye, oksijen gazı O₂’den H₂O’ya gider; iki yol ETS’de kesişmez.')
+ puf='Her atomun izlediği yolu ayrı ayrı çiz.')
 SIRA[13]=15
 
 # -------- N14 · İç zar, geçirgenlik · zor · öncüllü · şema
-k14=kartla(14,'Protonlara geçirgen iç zar','İç zar H⁺’lara geçirgen olursa derişim farkı azalır, ATP sentazdan geçen H⁺ azalır; ETS’nin elektron akışı ise sürer.','Elektron akışının da durduğunu sanmak; ATP sentezinin değişmeyeceğini düşünmek.','zor','şekilli',4,'hs-ets','İç zarın geçirgenliği ve kemiozmoz')
+k14=kartla(14,'ATP sentaz ve proton dağılımı','Şemadaki ok engellenen basamakla eşleştirilir ve yargılar bu basamağın sonuçlarına bağlanır.','H⁺ dağılımını ters kurmak; ATP sentezinin sürdüğünü sanmak.','zor','şekilli',4,'hs-ets','ATP sentaz ve kemiozmoz')
 def ic_zar():
     b=[]
     # dış zar (üstte, çift çizgi), iç zar (ortada)
@@ -499,19 +499,19 @@ def ic_zar():
     return tk('\n'.join(b),.78)
 SK14=ic_zar()
 T14={'I':True,'II':True,'III':False}
-N14={'I':'Protonlar sızdıkça K ile L arasındaki derişim farkı azalır; derişim farkı proton sızıntısıyla kapanır.',
-     'II':'Derişim farkı azalınca ATP sentazdan geçen H⁺ sayısı ve dolayısıyla ATP sentezi azalır.',
-     'III':'Elektron akışı protonları pompalamak zorunda olmadığında bile sürer; NADH yükseltgenmeye devam eder ve O₂ tüketimi durmaz.'}
+N14={'I':'Madde ATP sentazdan H⁺ geçişini engellediğinden 2 numaralı geçiş durur.',
+     'II':'H⁺ ATP sentazdan geçemediği için ATP sentezi durur.',
+     'III':'ETS çalıştıkça H⁺ K bölgesine pompalanır ve geri dönemez; K’deki derişim yüksek kalır, L’deki derişimin K’dekinden yüksek olması beklenmez.'}
 d14,s14=onc_sec({k for k,v in T14.items() if v},'D')
-q('0014',tipId='hs-ets',tip='İç zarın geçirgenliği ve kemiozmoz',z='zor',alt='ETS ve kemiozmoz',kaz='İç zar H⁺ geçirgenliği artarsa derişim farkı, ATP sentezi ve elektron akışının nasıl etkileneceğini yorumlar.',kalip='şekilli',
- kart=f'{k14} (geçirgen iç zar) · proton sızıntısı',
- metin='Şekilde bir mitokondrinin iç zarının bir bölümü ve zarın iki yanındaki K ve L bölgeleri gösterilmiştir. 1 ve 2 numaralı oklar H⁺ geçişlerini göstermektedir. Zarın H⁺’lara geçirgenliğini, ATP sentaz dışındaki yollardan da H⁺ geçecek biçimde artıran bir madde ortama eklenmiştir. Ortamda NADH ve O₂ bulunmaktadır.\nI. K ile L arasındaki H⁺ derişim farkı azalır.\nII. ATP sentaz aracılığıyla gerçekleşen ATP sentezi azalır.\nIII. Elektron taşıma sistemi çalışmaz.\nBuna göre, madde eklendikten sonra, eklenmeden önceki duruma göre yukarıdakilerden hangileri söylenebilir?',
+q('0014',tipId='hs-ets',tip='ATP sentaz ve kemiozmoz',z='zor',alt='ETS ve kemiozmoz',kaz='ATP sentaz işlevsiz kalırsa H⁺ geçişi, ATP sentezi ve H⁺ dağılımının nasıl etkileneceğini yorumlar.',kalip='şekilli',
+ kart=f'{k14} (ATP sentaz engellenmesi) · H⁺ geçişi',
+ metin='Şekilde bir mitokondrinin iç zarının bir bölümü ve zarın iki yanındaki K ve L bölgeleri gösterilmiştir. 1 ve 2 numaralı oklar H⁺ geçişlerini göstermektedir. Ortama, ATP sentaz enziminin H⁺ geçirmesini engelleyen bir madde eklenmiştir. Ortamda NADH ve O₂ bulunmaktadır.\nI. 2 numaralı geçiş durur.\nII. ATP sentaz aracılığıyla ATP sentezi durur.\nIII. L bölgesindeki H⁺ derişimi, K bölgesindekinden yüksek hâle gelir.\nBuna göre, madde eklendikten sonra yukarıdakilerden hangileri söylenebilir?',
  dogru=d14,sira=s14,yan=onc_cel({k for k,v in T14.items() if v},s14,d14,N14),
  istenen='Maddenin eklenmesiyle ortaya çıkacak değişiklikler.',
- ip=['Önce şemada hangi bölgenin matriks, hangisinin zarlar arası boşluk olduğunu belirle; sonra H⁺ derişim farkının neyi sürdürdüğünü düşün.'],
- bilgi=[B('Protonlar ve ATP sentezi','protonlar ETS çalışırken matriksten zarlar arası boşluğa pompalanır · ATP sentez enzimi, derişim farkıyla geri akan protonların enerjisini kullanır · Elektron taşınması ile proton pompalanması birbirine bağlı yürür')],
- ad=onc_adim({k for k,v in T14.items() if v},N14)+[A('Sonuç','Madde eklendiğinde derişim farkı ve ATP sentezi azalır, ETS çalışır.','Doğru: I ve II')],
- puf='Proton derişim farkı ATP sentezinin kaynağıdır; farkı bozan madde ATP’yi azaltır, ama elektron akışını durdurmaz.',sekil=SK14)
+ ip=['Şemada K ve L bölgelerini belirle; maddenin hangi oku etkilediğini ve H⁺’ların nerede biriktiğini düşün.'],
+ bilgi=[B('Protonlar ve ATP sentezi','protonlar ETS çalışırken matriksten zarlar arası boşluğa pompalanır · ATP sentez enzimi, derişim farkıyla geri akan protonların enerjisini kullanır')],
+ ad=onc_adim({k for k,v in T14.items() if v},N14)+[A('Sonuç','Madde eklendiğinde 2 numaralı geçiş ve ATP sentezi durur; L’deki derişim K’dekini aşmaz.','Doğru: I ve II')],
+ puf='Şemadaki oku engellenen basamakla eşleyip her yargıyı bu basamağın sonuçlarına bağla.',sekil=SK14)
 SIRA[14]=14
 
 # -------- N15 · Maya tüpleri · zor · öncüllü · düzenek
@@ -545,48 +545,49 @@ q('0015',tipId='hs-deney',tip='Mayalı deney tüplerinin karşılaştırılması
 SIRA[15]=16
 
 # -------- N16 · Üç hücre tablo · zor · sayısal
-k16=kartla(16,'Ürün sayısından glikoz sayısı ve net ATP','Ürün sayısından hücrenin yıktığı glikoz sayısı bulunur: oksijenli solunumda 6 CO₂, laktik asit fermantasyonunda 2 laktik asit, alkol fermantasyonunda 2 CO₂ oluşur; glikolizde net 2 ATP kazanılır.','Her glikoz için CO₂ sayısını karıştırmak; net ATP yerine brüt ATP’yi kullanmak.','zor','tablo',5,'hs-atp','Ürün sayısından glikoz ve net ATP hesabı')
-g=Fr(24,OKS_CO2)+Fr(10,FERM['laktik']['laktat'])+Fr(6,FERM['alkol']['CO2']); assert g==4+5+3==12
-c16=g*GL['net']; assert c16==24
-y16=[(int((Fr(24,2)+5+3)*2),'Oksijenli solunumda glikoz başına yalnız 2 CO₂ çıktığını varsaymak, böylece X’te yıkılan glikoz sayısını fazla bulmak.','bilgi'),
-     (int((4+5+Fr(6,6))*2),'Alkol fermantasyonunda glikoz başına 6 CO₂ çıktığını varsaymak, böylece Z’de yıkılan glikoz sayısını az bulmak.','bilgi'),
-     (int((4+10+3)*2),'1 glikozdan 1 laktik asit oluştuğunu varsaymak, böylece Y’de yıkılan glikoz sayısını fazla bulmak.','bilgi'),
-     (int(12*GL['uretilen']),'Net ATP yerine glikolizde üretilen toplam ATP’yi (glikoz başına 4) kullanmak.','islem')]
-assert [v for v,_,_ in y16]==[40,20,34,48]
+k16=kartla(16,'Ürün sayısından glikoz ve substrat düzeyi ATP','Ürün sayısından hücrenin yıktığı glikoz sayısı, hangi hücrede hangi basamakların işlediği belirlenerek substrat düzeyinde ATP toplanır.','Krebs döngüsünü fermantasyon yapan hücrelere de saymak; glikoz başına ürün sayısını karıştırmak.','zor','tablo',5,'hs-atp','Ürün sayısından glikoz ve ATP hesabı')
+g_K=Fr(24,OKS_CO2); g_L=Fr(10,FERM['laktik']['laktat']); g_M=Fr(6,FERM['alkol']['CO2']); assert (g_K,g_L,g_M)==(4,5,3)
+c16=(g_K+g_L+g_M)*GL['net']+g_K*KG['ATP']; assert c16==32
+y16=[(int((g_K+g_L+g_M)*GL['net']),'Krebs döngüsünde substrat düzeyinde üretilen ATP’yi hesaba katmamak.','bilgi'),
+     (int((g_K+g_L+g_M)*(GL['net']+KG['ATP'])),'Krebs döngüsünü fermantasyon yapan hücrelerde de gerçekleşiyor saymak.','bilgi'),
+     (int(((24//2)+g_L+g_M)*GL['net']+(24//2)*KG['ATP']),'K hücresinde glikoz başına yalnız 2 CO₂ çıktığını varsaymak, böylece K’de yıkılan glikoz sayısını fazla bulmak.','bilgi'),
+     (int((g_K+10+g_M)*GL['net']+g_K*KG['ATP']),'L hücresinde 1 glikozdan 1 laktik asit oluştuğunu varsaymak, böylece L’de yıkılan glikoz sayısını fazla bulmak.','bilgi')]
+assert sorted([c16]+[v for v,_,_ in y16])==[24,32,42,48,64],[v for v,_,_ in y16]
 SK16=tablo_svg(['Hücre','Solunum türü','Ölçülen ürün','Molekül sayısı'],[['K','Oksijenli solunum','CO₂','24'],['L','Laktik asit fermantasyonu','Laktik asit','10'],['M','Etil alkol fermantasyonu','CO₂','6']])
-q('0016',tipId='hs-atp',tip='Ürün sayısından glikoz ve net ATP hesabı',z='zor',alt='ATP hesapları',kaz='Farklı solunum türlerindeki ürün sayılarından yıkılan glikoz sayısını ve glikolizdeki net ATP’yi hesaplar.',kalip='tablo',
- kart=f'{k16} (ürün sayısı → glikoz → net ATP) · K, L, M hücreleri',
- metin='K, L ve M hücreleri glikozu farklı yollarla yıkmış ve her hücrede bir süre sonra ölçülen ürünlerin molekül sayıları tabloda verilmiştir. Hücrelerde glikozun tamamı yıkılmış ve başka ürün birikmemiştir.\nBuna göre, üç hücrede de glikolizde kazanılan toplam net ATP sayısı kaçtır?',
+q('0016',tipId='hs-atp',tip='Ürün sayısından glikoz ve ATP hesabı',z='zor',alt='ATP hesapları',kaz='Farklı solunum türlerindeki ürün sayılarından yıkılan glikoz sayısını ve substrat düzeyinde kazanılan ATP’yi hesaplar.',kalip='tablo',
+ kart=f'{k16} (ürün sayısı → glikoz → substrat düzeyi ATP) · K, L, M hücreleri',
+ metin='K, L ve M hücreleri glikozu farklı yollarla yıkmış ve her hücrede bir süre sonra ölçülen ürünlerin molekül sayıları tabloda verilmiştir. Hücrelerde glikozun tamamı yıkılmış ve başka ürün birikmemiştir.\nBuna göre, üç hücrede de glikolizde ve Krebs döngüsünde substrat düzeyinde kazanılan toplam net ATP sayısı kaçtır?',
  dogru=int(c16),yan=y16,
- istenen='Üç hücrede glikolizle kazanılan toplam net ATP sayısı.',
- ip=['Her hücre için ölçülen ürün sayısından yıkılan glikoz sayısını ayrı ayrı bul; sonra tek glikozun glikolizdeki net kazancını kullan.'],
- bilgi=[B('Ürünler ve glikoz','oksijenli solunumda 1 glikozdan 6 CO₂, fermantasyonda ise 2’şer molekül ürün oluşur · Glikolizde 1 glikozdan 2 ATP harcanır ve 4 ATP üretilir')],
+ istenen='Üç hücrede glikoliz ve Krebs döngüsünde substrat düzeyinde kazanılan toplam net ATP sayısı.',
+ ip=['Her hücrenin hangi solunum türünü yaptığına göre yıkılan glikoz sayısını ve hangi basamakların işlediğini ayrı ayrı değerlendir.'],
+ bilgi=[B('Ürünler ve basamaklar','oksijenli solunumda 1 glikozdan 6 CO₂, fermantasyonda ise 2’şer molekül ürün oluşur · Krebs döngüsü yalnız oksijenli solunumda işler')],
  ad=[A('K hücresi','Oksijenli solunumda 1 glikozdan 6 CO₂ çıkar.','24 ÷ 6 = 4 glikoz'),
      A('L hücresi','Laktik asit fermantasyonunda 1 glikozdan 2 laktik asit oluşur.','10 ÷ 2 = 5 glikoz'),
      A('M hücresi','Alkol fermantasyonunda 1 glikozdan 2 CO₂ çıkar.','6 ÷ 2 = 3 glikoz'),
-     A('Toplam glikoz','Üç hücrenin yıktığı glikozlar toplanır.','4 + 5 + 3 = 12 glikoz'),
-     A('Net ATP','Glikolizde glikoz başına net kazanç 4 − 2 = 2 ATP’dir.','12 × 2 = 24 ATP')],
- puf='Her solunum türünün ürün/glikoz oranını bil; önce glikoz sayısını bul, sonra ATP’ye geç.',sekil=SK16)
+     A('Glikolizdeki kazanç','Üç hücrede de glikoz başına net 2 ATP kazanılır.','12 × 2 = 24 ATP'),
+     A('Krebs’teki kazanç','Krebs yalnız K’de işler; glikoz başına 2 ATP üretilir ve toplama eklenir.','24 + 4 × 2 = 32 ATP')],
+ puf='Önce her hücrenin yıktığı glikoz sayısını bul, sonra hangi basamakların işlediğine göre ATP’yi topla.',sekil=SK16)
 SIRA[16]=17
 
-# -------- N17 · Pasteur etkisi grafiği · zor · grafik
-k17=kartla(17,'Oksijen verilince glikoz tüketim hızı','ATP üretim hızı sabitse glikoz tüketim hızı, glikoz başına ATP verimiyle ters orantılıdır; hız oranı verim oranını verir.','Hız oranını doğrudan ATP sayısı sanmak; net ATP yerine ezber toplam ATP değerini yazmak.','zor','grafik',5,'hs-grafik','Verim farkı ve glikoz tüketim hızı')
-before,after=18,1; net_ferm=GL['net']
-x17=net_ferm*Fr(before,after); assert x17==36
-y17=[(before//after,'Hız oranını doğrudan ATP sayısı sanmak.','islem'),(before//after+net_ferm,'Hız oranına 2 ATP eklemek.','islem'),(38,'Grafikten yararlanmadan ezberlenmiş 38 ATP değerini seçmek.','bilgi'),(GL['uretilen']*(before//after),'Net ATP yerine glikolizde üretilen toplam ATP’yi (4) kullanmak.','islem')]
-assert [v for v,_,_ in y17]==[18,20,38,72]
-SK17=tk(grafik([([(0,18),(10,18),(10.4,1),(20,1)],'line width=1.8pt')],20,21,[0,5,10,15,20],[1,18],'Zaman (dk)','Glikoz tüketim hızı (µmol/dk)',W=6.0,Hh=3.3,kes=[(10,None,''),(10,18,''),(10,1,'')],etik=[]),.85)
+# -------- N17 · glikoz tüketim hızı grafiği · zor
+k17=kartla(17,'Oksijen verilince glikoz tüketim hızı','ATP üretim hızı sabitse glikoz tüketim hızı, glikoz başına ATP verimiyle ters orantılıdır.','Hız oranını doğrudan ATP sayısı sanmak; net ve brüt ATP’yi karıştırmak.','zor','grafik',5,'hs-grafik','Verim farkı ve glikoz tüketim hızı')
+before,after=19,1; net_ferm=GL['net']
+x17=net_ferm*Fr(before,after); assert x17==38
+assert 2+2+10*ETS_N+2*ETS_F==38   # Soru 8 katsayılarıyla tutarlı: 2+2 substrat, 10 NADH, 2 FADH2
+y17=[(before-net_ferm,'Hız oranından 2 ATP çıkarmak.','islem'),(before//after,'Hız oranını doğrudan ATP sayısı sanmak.','islem'),(x17+net_ferm,'Glikolizin 2 ATP’sini oksijenli solunumun net ATP’sine ayrıca eklemek.','islem'),(GL['uretilen']*(before//after),'Net ATP yerine glikolizde üretilen toplam ATP’yi (4) kullanmak.','islem')]
+assert sorted([int(x17)]+[v for v,_,_ in y17])==[17,19,38,40,76],[v for v,_,_ in y17]
+SK17=tk(grafik([([(0,19),(10,19),(10.4,1),(20,1)],'line width=1.8pt')],20,22,[0,5,10,15,20],[1,19],'Zaman (dk)','Glikoz tüketim hızı (µmol/dk)',W=6.0,Hh=3.3,kes=[(10,None,''),(10,19,''),(10,1,'')],etik=[]),.85)
 q('0017',tipId='hs-grafik',tip='Verim farkı ve glikoz tüketim hızı',z='zor',alt='ATP hesapları',kaz='ATP üretim hızı sabitken glikoz tüketim hızı değişiminden oksijenli solunumdaki net ATP sayısını çıkarır.',kalip='grafik',
  kart=f'{k17} (glikoz tüketim hızı) · O₂ verildiğinde verim farkı',
  metin='Oksijensiz ortamda, ATP’yi yalnız alkol fermantasyonuyla üreten bir maya kültürünün glikoz tüketim hızı ölçülmüştür. Kültürün 10. dakikada ortamına O₂ verilmiş ve bundan sonra glikozun tamamının oksijenli solunumla yıkıldığı gözlenmiştir. Glikoz tüketim hızının zamana bağlı değişimi grafikte verilmiştir. Kültürün ATP üretim hızı deney boyunca değişmemiştir.\nBuna göre, oksijenli solunumda 1 glikozdan kazanılan net ATP sayısı kaçtır?',
  dogru=int(x17),yan=y17,
  istenen='Oksijenli solunumda 1 glikozdan elde edilen net ATP sayısı.',
- ip=['ATP üretim hızı sabit olduğuna göre iki dönemde “glikoz tüketim hızı × glikoz başına net ATP” çarpımlarını eşitle.'],
+ ip=['ATP üretim hızı sabit olduğuna göre iki dönemi karşılaştır; glikoz tüketim hızı ile glikoz başına ATP arasındaki ilişkiyi düşün.'],
  bilgi=[B('Net ATP ve hız','bir hücrenin ATP üretim hızı, birim zamanda yıkılan glikoz sayısı ile bir glikozdan kazanılan net ATP’nin çarpımına eşittir · Alkol fermantasyonunda glikoz başına net ATP, glikolizdeki net kazançtır')],
- ad=[A('İlk dönemi yorumla','Oksijensiz dönemde ATP yalnız glikolizle üretilir; glikoz başına net 2 ATP kazanılır.','Hız: 18 · net ATP: 2'),
+ ad=[A('İlk dönemi yorumla','Oksijensiz dönemde ATP yalnız glikolizle üretilir; glikoz başına net 2 ATP kazanılır.','Hız: 19 · net ATP: 2'),
      A('İkinci dönemi oku','Grafikte oksijen verildikten sonra glikoz tüketim hızı belirgin biçimde düşer.','Hız: 1'),
-     A('ATP hızlarını eşitle','ATP üretim hızı değişmediğinden iki dönemdeki çarpımlar eşittir.','18 × 2 = 1 × x'),
-     A('Sonuç','Eşitlikten oksijenli solunumdaki net ATP bulunur.','x = 36')],
+     A('ATP hızlarını eşitle','ATP üretim hızı değişmediğinden iki dönemdeki çarpımlar eşittir.','19 × 2 = 1 × x'),
+     A('Sonuç','Eşitlikten oksijenli solunumdaki net ATP bulunur.','x = 38')],
  puf='ATP ihtiyacı sabitken tüketim hızı ile glikoz başına verim ters orantılıdır.',sekil=SK17)
 SIRA[17]=20
 
@@ -631,11 +632,11 @@ q('0019',tipId='hs-yer',tip='Prokaryotta hücresel solunum',z='orta',alt='Solunu
      A('Doğru ifadeleri ele','Glikoliz sitoplazmada gerçekleşir; ETS elemanları hücre zarındadır, son elektron alıcısı O₂’dir ve ATP kemiozmotik yolla sentezlenebilir.','Dört ifade doğru'),
      A('Kalan ifadeyi sına','Krebs döngüsü bakteride sitoplazmada gerçekleşir; zarla çevrili organel bulunmadığından ifade yanlıştır.','Zarlı organel yok'),
      A('Sonuç','Yanlış olan, Krebs döngüsünün zarlı organelde gerçekleştiğini söyleyen ifadedir.','Yanlış: zarlı organel')],
- puf='Oksijenli solunum için mitokondri şart değildir; prokaryotta olaylar sitoplazma ve hücre zarında yürür.')
+ puf='Hücrede bulunan yapıları listele ve solunum olaylarını bu yapılara yerleştir.')
 SIRA[19]=19
 
 # -------- N20 · Respirometre sıcaklık hesabı · zor · düzenek+tablo
-k20=kartla(20,'Kontrollü respirometre ve oran','Kaynatılmış tohumlu düzenek fiziksel etkileri gösterir; canlı tohumlu düzeneğin damla hareketinden bu değer çıkarılarak solunum hızı bulunur.','Kontrol değerini düşmemek; oranı ham değerlerle hesaplamak.','zor','şekilli',5,'hs-deney','Kontrollü respirometre ve oran')
+k20=kartla(20,'Kontrollü respirometre ve oran','Kontrol düzeneğinin neyi gösterdiğini belirleyip deney düzeneğiyle birlikte yorumlamak.','Kontrol değerini düşmemek; oranı ham değerlerle hesaplamak.','zor','şekilli',5,'hs-deney','Kontrollü respirometre ve oran')
 def tabsvg(rows):
     b=[]; cw=[1.7,2.9,2.5,3.4]; x0=0; y0=0; rh=.68
     heads=['Düzenek','Tohum','Sıcaklık (°C)','Hareket (mm)']
@@ -668,7 +669,7 @@ q('0020',tipId='hs-deney',tip='Kontrollü respirometre ve oran',z='zor',alt='Sol
      A('20 °C’ı düzelt','Canlı tohumlu K’den, kaynatılmış tohumlu L çıkarılır.','10 − 2 = 8 mm'),
      A('30 °C’ı düzelt','Canlı tohumlu M’den, kaynatılmış tohumlu N çıkarılır.','26 − 6 = 20 mm'),
      A('Oranı kur','30 °C’taki net hareket 20 °C’takine bölünür.','20 ÷ 8 = 2,5')],
- puf='Kontrollü deneyde ham değer değil, kontrol değeri çıkarılmış net değer karşılaştırılır.',sekil=SK20)
+ puf='Kontrol düzeneğinin neyi gösterdiğini düşün.',sekil=SK20)
 SIRA[20]=18
 
 # ===================== SIRALAMA VE YAZMA =====================
@@ -680,7 +681,7 @@ P.ANA.sort(key=lambda x:x['id'])
 for c in H.KARTLAR: c['kaynak']=KY
 for qq in P.ANA: assert qq['zorluk'] in ('kolay','orta','zor')
 cnt=Counter(qq['zorluk'] for qq in P.ANA); print(cnt)
-assert cnt==Counter(kolay=3,orta=11,zor=6),cnt
+assert cnt==Counter(kolay=3,orta=12,zor=5),cnt
 P.yaz(os.path.join(BD,'hucresolunum-1.json'),'/tmp/bos-hucresolunum.json')
 tipler={}
 for c in H.KARTLAR: tipler.setdefault(c['tipId'],dict(tipId=c['tipId'],ad=c['tip'],kartlar=[],uygulamaKonu=KK))['kartlar'].append(c['id'])

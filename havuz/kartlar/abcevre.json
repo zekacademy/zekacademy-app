@@ -65,7 +65,7 @@
    "kalip": "grafik",
    "adim": 5,
    "tipId": "cv-azot",
-   "tip": "Azot ve fosfor döngüsü",
+   "tip": "Azot döngüsü",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji (Canlılar ve Çevre; yalnız mantık) · MEB 12. sınıf biyoloji"
   },
   {
@@ -78,7 +78,7 @@
    "kalip": "öncüllü",
    "adim": 3,
    "tipId": "cv-azot",
-   "tip": "Azot ve fosfor döngüsü",
+   "tip": "Azot döngüsü",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji (Canlılar ve Çevre; yalnız mantık) · MEB 12. sınıf biyoloji"
   },
   {
@@ -139,7 +139,7 @@
    "alt": "Besin zenginleşmesinin sonuçları",
    "fikir": "Alg örtüsü ışığı keser, ölü maddenin ayrışması oksijen harcar; dipte oksijen azalınca oksijene bağımlı canlılar zarar görür.",
    "tuzak": "Ayrışmanın oksijen harcamadığını sanmak; yalnız yüzeyde sorun olduğunu düşünmek.",
-   "zorluk": "zor",
+   "zorluk": "orta",
    "kalip": "şekilli",
    "adim": 5,
    "tipId": "cv-sorun",
@@ -176,8 +176,8 @@
    "id": "K-ABCEV-14",
    "konu": "Canlılar ve Çevre",
    "alt": "Biyokütle ve yıllık üretim farkı",
-   "fikir": "Hızlı yenilenen üreticilerin biyokütlesi az olsa da yıllık üretimi çoktur; biyokütle piramidi ters olabilir, enerji (üretim) piramidi düz kalır.",
-   "tuzak": "Biyokütlesi az olan basamağın enerjisinin de az olduğunu sanmak; ters biyokütle piramidinin enerji kuralını bozduğunu sanmak.",
+   "fikir": "Biyokütle bir andaki canlı kütlesi, üretim bir yıl içinde oluşan madde miktarıdır; biyokütlesi az olan basamak üretimde önde olabilir.",
+   "tuzak": "Biyokütlesi az olan basamağın enerjisinin de az olduğunu sanmak.",
    "zorluk": "zor",
    "kalip": "tablo",
    "adim": 5,
@@ -188,12 +188,12 @@
   {
    "id": "K-ABCEV-15",
    "konu": "Canlılar ve Çevre",
-   "alt": "Birikim katsayısıyla derişim tahmini",
-   "fikir": "Her basamakta derişim aynı katsayıyla artıyorsa iki basamak arasındaki oran katsayının karesidir; son basamak ilk derişim × katsayı üzeri basamak sayısıdır.",
-   "tuzak": "İki basamağın oranını tek basamağın katsayısı sanmak; basamak sayısını yanlış saymak.",
+   "alt": "İki besin kaynağında birikim",
+   "fikir": "Her basamakta derişim aynı katsayıyla artıyorsa iki basamak arasındaki oran katsayının karesidir; iki besin kaynağı olan canlıda yenen besinlerin derişim ortalaması katsayıyla çarpılır.",
+   "tuzak": "Katsayıyı tek basamak yerine iki basamak oranı sanmak; iki kaynağın ortalaması yerine toplamını ya da yalnız birini almak.",
    "zorluk": "zor",
    "kalip": "şekilli",
-   "adim": 4,
+   "adim": 5,
    "tipId": "cv-birikim",
    "tip": "Biyolojik birikim",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji (Canlılar ve Çevre; yalnız mantık) · MEB 12. sınıf biyoloji"
@@ -233,8 +233,8 @@
    "zorluk": "orta",
    "kalip": "öncüllü",
    "adim": 3,
-   "tipId": "cv-azot",
-   "tip": "Azot ve fosfor döngüsü",
+   "tipId": "cv-fosfor",
+   "tip": "Fosfor döngüsü",
    "kaynak": "ÖSYM AYT 2018–2026 Biyoloji (Canlılar ve Çevre; yalnız mantık) · MEB 12. sınıf biyoloji"
   },
   {
@@ -296,11 +296,10 @@
   },
   {
    "tipId": "cv-azot",
-   "ad": "Azot ve fosfor döngüsü",
+   "ad": "Azot döngüsü",
    "kartlar": [
     "K-ABCEV-05",
-    "K-ABCEV-06",
-    "K-ABCEV-18"
+    "K-ABCEV-06"
    ],
    "uygulamaKonu": "abio|Canlılar ve Çevre"
   },
@@ -338,6 +337,14 @@
    "ad": "Su döngüsü ve bitki örtüsü",
    "kartlar": [
     "K-ABCEV-12"
+   ],
+   "uygulamaKonu": "abio|Canlılar ve Çevre"
+  },
+  {
+   "tipId": "cv-fosfor",
+   "ad": "Fosfor döngüsü",
+   "kartlar": [
+    "K-ABCEV-18"
    ],
    "uygulamaKonu": "abio|Canlılar ve Çevre"
   }

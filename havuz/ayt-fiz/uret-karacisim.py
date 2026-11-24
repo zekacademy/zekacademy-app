@@ -110,9 +110,9 @@ onc('0002','A','K, L ve M kara cisimlerinin ışıma şiddetinin dalga boyuna ba
  [('Cisimlerin sıcaklıkları arasında T_K > T_L > T_M ilişkisi vardır.',True,'Tepe dalga boyu en küçük olan cisim en sıcak, en büyük olan en soğuktur; 600 < 750 < 900 nm olduğundan K en sıcak, M en soğuktur.','I numaralı yargıda tepe dalga boyu büyük olan cismin daha sıcak olduğunu düşünmüş.'),
   ('M cisminin en şiddetle yaydığı fotonun frekansı, üç cismin içinde en büyüğüdür.',False,'Frekans dalga boyuyla ters orantılıdır; tepe dalga boyu en büyük olan M’nin tepe fotonunun frekansı en küçüktür.','II numaralı yargıda dalga boyu büyük olan ışığın frekansının da büyük olduğunu düşünmüş.'),
   ('Cisimlerden yalnız K, kızılötesi bölgede ışıma yapar.',False,'Kara cisim sürekli bir spektrum yayar; üç cismin de eğrisi uzun dalga boylarında sıfırdan büyüktür, yani hepsi kızılötesinde de ışıma yapar.','III numaralı yargıda ışımanın yalnız tepe dalga boyunda yapıldığını düşünmüş.')],
- ['Her yargıda tepe dalga boyunun neyi belirlediğini ve eğrilerin tamamının ne gösterdiğini düşün.'],
+ ['Her yargının eğrinin hangi özelliğiyle (tepe konumu, yükseklik, yayılım) ilgili olduğunu belirle.'],
  [B('Kara cisim spektrumu','Kara cisim, her dalga boyunda ışıma yapar; sıcaklık yalnız eğrinin şeklini ve tepe noktasını değiştirir. Örnek: 3000 K’lik bir cisim de çok az da olsa mor ışık yayar')],
- 'Eğri sürekli bir spektrumdur; tepe, yalnız en şiddetli bölgeyi gösterir.','Doğru olan yargılar.','kc-grafik','Işıma şiddeti–dalga boyu grafiği yorumu','kolay','Işıma Grafikleri','Üç eğrili grafikte sıcaklık, frekans ve spektrum hakkındaki yargıları değerlendirir.','K-AFKC-01 (üç eğri) · nitel öncüllü','grafik',sekil=SK)
+ 'Yargıdaki niceliği eğri üzerinde nerede okuyacağını belirle.','Doğru olan yargılar.','kc-grafik','Işıma şiddeti–dalga boyu grafiği yorumu','kolay','Işıma Grafikleri','Üç eğrili grafikte sıcaklık, frekans ve spektrum hakkındaki yargıları değerlendirir.','K-AFKC-01 (üç eğri) · nitel öncüllü','grafik',sekil=SK)
 
 # ---- 03 kolay · Wien orantısı, şekilsiz ----
 T3a,T3b,l3=2000,4000,1500
@@ -151,9 +151,9 @@ onc('0005','D','Bir kara cismin T₁ ve T₂ sıcaklıklarındaki ışıma şidd
  [('T₂ sıcaklığında ışıma eğrisinin tepe dalga boyu, T₁ sıcaklığındakinden küçüktür.',True,'Eğrinin tepesi T₂’de daha kısa dalga boyundadır; Wien yasasına göre bu, sıcaklığın T₂’de daha büyük olduğunu gösterir.','I numaralı yargıda sıcaklık arttıkça tepe dalga boyunun büyüdüğünü düşünmüş.'),
   ('Cismin birim zamanda yaydığı toplam enerji, T₂ sıcaklığında T₁ sıcaklığındakinden büyüktür.',True,'Eğrinin altındaki alan toplam ışıma gücünü verir; T₂ eğrisi her dalga boyunda daha yukarıda olduğundan alanı daha büyüktür.','II numaralı yargıda toplam ışımanın sıcaklıkla değişmediğini düşünmüş.'),
   ('T₂ sıcaklığında yayılan fotonların her birinin enerjisi, T₁ sıcaklığında yayılan fotonların her birinin enerjisinden büyüktür.',False,'İki sıcaklıkta da spektrum süreklidir; T₂’de de uzun dalga boylu, düşük enerjili fotonlar yayılır ve T₁’de de kısa dalga boylu fotonlar vardır.','III numaralı yargıda bütün fotonların enerjisinin sıcaklıkla arttığını düşünmüş.')],
- ['Eğrinin altında kalan alanın neyi temsil ettiğini ve spektrumun sürekli olduğunu düşün.'],
+ ['Eğrinin altındaki alanın ve tepe konumunun neyi gösterdiğini düşün.'],
  [B('Eğri altındaki alan','Işıma şiddeti–dalga boyu eğrisinin altındaki alan, cismin birim zamanda yaydığı toplam enerjiyi (ışıma gücünü) gösterir. Örnek: bir eğri diğerinin her noktasının üstündeyse alanı daha büyüktür')],
- 'Sıcaklık artınca eğri yukarı ve sola kayar; ama spektrum yine süreklidir.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','orta','Sıcaklığın Etkisi','Aynı cismin farklı sıcaklıklardaki ışıma eğrilerini karşılaştırarak tepe dalga boyu, toplam güç ve foton enerjisi hakkında yargılar değerlendirir.','K-AFKC-03 (T₁–T₂ eğrileri) · toplam güç ve foton enerjisi','grafik',sekil=SK)
+ 'Eğri altındaki alanın ve tepe konumunun ne gösterdiğine bak.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','orta','Sıcaklığın Etkisi','Aynı cismin farklı sıcaklıklardaki ışıma eğrilerini karşılaştırarak tepe dalga boyu, toplam güç ve foton enerjisi hakkında yargılar değerlendirir.','K-AFKC-03 (T₁–T₂ eğrileri) · toplam güç ve foton enerjisi','grafik',sekil=SK)
 
 # ---- 06 orta · Planck merdiveni öncüllü ----
 SK=merdiven(4,[(3,2,'K'),(4,2,'L'),(3,0,'M')])
@@ -167,7 +167,8 @@ onc('0006','A','Planck’ın kuantum varsayımına göre ışıma yapan bir sal�
 
 # ---- 07 orta · kuantum sayısı, şekilsiz ----
 h7=Fr(66,10)*Fr(10)**-34; f7=5*Fr(10)**14; E7=Fr(132,100)*Fr(10)**-18
-n7=E7/(h7*f7); assert n7==4 and E7/(h7*Fr(5)*Fr(10)**15)==Fr(2,5) and E7/(h7*Fr(5)*Fr(10)**13)==40 and E7/(h7*f7/2)==8 and E7/(2*h7*f7)==2
+n7=E7/(h7*f7); assert Fr(66,10)*Fr(10)**-34*4*Fr(10)**14==Fr(264,100)*Fr(10)**-19
+assert n7==4 and E7/(h7*Fr(5)*Fr(10)**15)==Fr(2,5) and E7/(h7*Fr(5)*Fr(10)**13)==40 and E7/(h7*f7/2)==8 and E7/(2*h7*f7)==2
 q('0007',[A('Bir kuantumun enerjisini bul','Salınıcı enerjisini hf’nin katları olarak alır; önce hf hesaplanır.','hf = 6,6 × 10⁻³⁴ × 5 × 10¹⁴ = 3,3 × 10⁻¹⁹ J'),
   A('Planck bağıntısını yaz','Toplam enerji, kuantum sayısı ile hf’nin çarpımıdır.','E = n × h × f'),
   A('Kuantum sayısını bul','Toplam enerji hf’ye bölünür.','n = 1,32 × 10⁻¹⁸ ÷ 3,3 × 10⁻¹⁹ = 4')],
@@ -191,24 +192,28 @@ q('0008',[A('Tepe dalga boylarını sırala','Eğrilerin tepe noktaları görün
  tipId='kc-renk',tip='Tepe dalga boyu, renk ve görünür bölge',z='orta',alt='Işımanın Rengi',kaz='Işıma grafiğindeki tepe dalga boylarına göre cisimlerin en şiddetle yaydığı ışığın renklerini belirler.',
  kart='K-AFKC-04 (tepe dalga boyu ve renk) · görünür bölge sınırları',kalip='grafik',
  metin='K, L ve M kara cisimlerinin ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. Görünür ışık bölgesi yaklaşık 400 nm (mor) ile 700 nm (kırmızı) arasındadır.\nBuna göre, K, L ve M cisimlerinin en şiddetle yaydığı ışıkların renkleri sırasıyla aşağıdakilerden hangisidir?',
- dogru=cev8,yan=[('Mor – Yeşil – Kırmızı','Sıcak cismin kırmızı, soğuk cismin mor ışıma yaptığını düşünerek renkleri tersine eşleştirmiş.','bilgi'),('Yeşil – Kırmızı – Mor','K’nin eğrisini L’nin eğrisiyle karıştırıp renkleri yanlış sırayla eşleştirmiş.','dikkat'),('Kırmızı – Mor – Yeşil','Yalnız K’yi doğru eşleştirip L ile M’nin tepe dalga boylarının sırasını karıştırmış.','dikkat'),('Mor – Kırmızı – Yeşil','Tepe dalga boyu küçük olan K’yi mora, büyük olan M’yi yeşile eşleştirip eğrilerin sırasını yanlış okumuş.','dikkat')],
+ dogru=cev8,yan=[('Mor – Yeşil – Kırmızı','Dalga boyu büyük olan ışığı mor, küçük olanı kırmızı sanarak renk sırasını tersine bilmiş.','bilgi'),('Yeşil – Kırmızı – Mor','Renk sırasını yeşil, kırmızı, mor biçiminde bilip dalga boyu büyükten küçüğe bu sırayı izlemiş.','bilgi'),('Kırmızı – Mor – Yeşil','Renk sırasını kırmızı, mor, yeşil biçiminde bilip dalga boyu büyükten küçüğe bu sırayı izlemiş.','bilgi'),('Mor – Kırmızı – Yeşil','Renk sırasını mor, kırmızı, yeşil biçiminde bilip dalga boyu büyükten küçüğe bu sırayı izlemiş.','bilgi')],
  sira=[cev8,'Mor – Yeşil – Kırmızı','Yeşil – Kırmızı – Mor','Kırmızı – Mor – Yeşil','Mor – Kırmızı – Yeşil'],
  istenen='K, L ve M’nin en şiddetle yaydığı ışıkların renkleri.',ip=['Görünür bölgede dalga boyu ile renk arasındaki sıralamayı, grafikteki işaretli iki sınır değerinden yararlanarak kur.'],
  bilgi=[B('Görünür ışık','Görünür bölgede dalga boyu büyükten küçüğe doğru renkler kırmızı, turuncu, sarı, yeşil, mavi, mordur. Örnek: 600 nm civarındaki ışık turuncu–sarıdır')],
- puf='Tepe dalga boyu küçüldükçe cisim daha sıcak olur ve ışığın rengi mora kayar.',sekil=SK)
+ puf='Grafikteki sınır değerlerini renk uçlarıyla eşleştir.',sekil=SK)
 
-# ---- 09 orta · tepe fotonunun enerjisi (Å) ----
-l9=620; E9=Fr(12400,l9*10); assert E9==2 and Fr(12400,l9)==20 and Fr(12400,l9//10)==200 and Fr(12400,l9*100)==Fr(1,5) and Fr(l9*10,12400)==Fr(1,2)
-SK=egri_sekil([('',l9)],1860,[l9],w=7.0)
-q('0009',[A('Tepe dalga boyunu oku','Grafikte eğrinin tepe noktasının altındaki değer 620 nm’dir.','λ_maks = 620 nm'),
-  A('Ångström’e çevir','hc değeri eV·Å cinsinden verildiği için dalga boyu Å olmalıdır; 1 nm = 10 Å.','λ_maks = 620 × 10 = 6200 Å'),
-  A('Foton enerjisini yaz','Fotonun enerjisi hc’nin dalga boyuna bölümüdür.','E = hc ÷ λ'),
-  A('Enerjiyi hesapla','Değerler yerine konur.','E = 12400 ÷ 6200 = 2 eV')],
- tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='orta',alt='Foton Enerjisi',kaz='Işıma grafiğindeki tepe dalga boyuna karşılık gelen fotonun enerjisini hesaplar.',
- kart='K-AFKC-07 (E = hc/λ, Å birimi) · tepe fotonu',kalip='grafik',
- metin='Isıtılan bir demir bloğun yaydığı ışımanın şiddet–dalga boyu eğrisi şekilde gösterilmiştir. Blok kara cisim gibi davranmaktadır.\n(hc = 12400 eV·Å alınız.)\nBuna göre, cismin en şiddetle yaydığı fotonun enerjisi kaç eV’tur?',
- dogru=2,yan=[(Fr(1,5),'1 nm’yi 100 Å alarak dalga boyunu 62000 Å bulmuş ve 12400 ÷ 62000 = 0,2 hesaplamış.','islem'),(Fr(1,2),'Bağıntıyı ters kurup λ ÷ hc = 6200 ÷ 12400 = 0,5 bulmuş.','bilgi'),(20,'nm cinsindeki dalga boyunu Å’e çevirmeden 12400 ÷ 620 = 20 hesaplamış.','dikkat'),(200,'620 nm’yi 62 Å alarak (10’a bölerek) 12400 ÷ 62 = 200 bulmuş.','islem')],
- istenen='En şiddetle yayılan fotonun enerjisi (eV).',ip=['hc değerinin birimi ile grafikteki dalga boyunun biriminin aynı olması gerekir.'],
+# ---- 09 orta · iki yıldız, tepe fotonu enerji farkı (Å) ----
+la,lb=800,1240; Ea=Fr(12400,la*10); Eb=Fr(12400,lb*10); d9=Ea-Eb
+assert Ea==Fr(155,100) and Eb==1 and d9==Fr(55,100)
+assert Fr(12400,la)-Fr(12400,lb)==Fr(55,10) and Fr(12400,la*100)-Fr(12400,lb*100)==Fr(55,1000) and Ea+Eb==Fr(255,100)
+l9=[('K',la),('L',lb)]
+for lam in (300,800,1240,2500): v=sira_cmp(l9,lam); assert v[0]>v[1]
+SK=egri_sekil(l9,3000,[la,lb])
+q('0009',[A('Tepe dalga boylarını oku','Grafikte K’nin tepesi 800 nm’de, L’nin tepesi 1240 nm’dedir.','λ_K = 800 nm · λ_L = 1240 nm'),
+  A('Ångström’e çevir','hc değeri eV·Å cinsinden verildiği için dalga boyları Å olmalıdır; 1 nm = 10 Å.','λ_K = 8000 Å · λ_L = 12400 Å'),
+  A('Foton enerjilerini hesapla','Fotonun enerjisi hc’nin dalga boyuna bölümüdür.','E_K = 12400 ÷ 8000 = 1,55 eV · E_L = 12400 ÷ 12400 = 1 eV'),
+  A('Farkı bul','K’nin tepe fotonunun enerjisinden L’ninki çıkarılır.','ΔE = 1,55 − 1 = 0,55 eV')],
+ tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='orta',alt='Foton Enerjisi',kaz='Işıma grafiğindeki tepe dalga boylarına karşılık gelen foton enerjilerini hesaplayıp karşılaştırır.',
+ kart='K-AFKC-07 (E = hc/λ, Å birimi) · iki yıldızın tepe fotonları',kalip='grafik',
+ metin='Yüzey sıcaklıkları farklı K ve L yıldızlarının ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. Yıldızlar kara cisim gibi davranmaktadır.\n(hc = 12400 eV·Å alınız.)\nBuna göre, K yıldızının en şiddetle yaydığı fotonun enerjisi, L yıldızınınkinden kaç eV fazladır?',
+ dogru=d9,yan=[(Fr(55,1000),'1 nm’yi 100 Å alarak dalga boylarını 80000 Å ve 124000 Å bulmuş: 0,155 − 0,1 = 0,055.','islem'),(Fr(155,100),'Yalnız K’nin tepe fotonunun enerjisini (1,55 eV) vermiş, L’ninkini çıkarmamış.','dikkat'),(Fr(255,100),'İki fotonun enerjisini çıkarmak yerine toplamış: 1,55 + 1 = 2,55.','dikkat'),(Fr(55,10),'nm cinsindeki dalga boylarını Å’e çevirmeden kullanmış: 15,5 − 10 = 5,5.','dikkat')],
+ istenen='K’nin tepe fotonunun enerjisinin L’ninkinden fazlası (eV).',ip=['hc değerinin birimi ile grafikteki dalga boylarının biriminin aynı olması gerekir.'],
  bilgi=[B('Foton enerjisi','E = h·f = hc/λ. Birimler: hc = 12400 eV·Å = 1240 eV·nm ve 1 nm = 10 Å. Örnek: 4000 Å’luk bir fotonun enerjisi 12400 ÷ 4000 = 3,1 eV’tur')],
  puf='Foton enerjisi dalga boyuyla ters orantılıdır; birimleri eşitlemeyi unutma.',sekil=SK)
 
@@ -239,20 +244,20 @@ onc('0010','E','Bir kara cismin ışıma şiddetinin dalga boyuna bağlı deği�
   ('Planck, Eğri 2’yi açıklamak için salınıcıların enerji alışverişinin kesikli olduğunu varsaymıştır.',True,'Planck, deneyle uyum için salınıcı enerjisinin hf’nin tam katları olduğunu, yani enerji alışverişinin kesikli olduğunu varsaymıştır; böylece kısa dalga boyunda şiddet sınırsız artmaz.','III numaralı yargıda Planck’ın klasik fizikteki sürekli enerji anlayışını koruduğunu düşünmüş.')],
  ['Eğrilerden hangisinin kısa dalga boylarında sınırsız yükseldiğini ve Planck’ın hangi varsayımı getirdiğini düşün.'],
  [B('Klasik fizik ve Planck','Klasik fizik, kısa dalga boylarında ışıma şiddetinin sonsuza gideceğini öngörür; deney ise tepe yapıp azalan bir eğri verir. Planck, enerji alışverişinin hf’nin tam katlarıyla olduğunu varsayarak deneyle uyum sağlamıştır. Örnek: frekansı arttıkça kuantum enerjisi arttığından yüksek frekanslı ışıma güçleşir')],
- 'Klasik eğri kısa dalga boyunda patlar; Planck bunu kesikli enerjiyle çözdü.','Doğru olan yargılar.','kc-tarih','Klasik fiziğin yetersizliği ve Planck’ın çözümü','orta','Planck ve Klasik Fizik','Klasik fiziğin öngördüğü ve deneysel ışıma eğrilerini karşılaştırır, Planck’ın varsayımının gerekçesini değerlendirir.','K-AFKC-06 (klasik–deneysel eğri) · Planck’ın çözümü','grafik',sekil=SK)
+ 'Hangi eğrinin kısa dalga boyunda sınırsız arttığını ayırt et.','Doğru olan yargılar.','kc-tarih','Klasik fiziğin yetersizliği ve Planck’ın çözümü','orta','Planck ve Klasik Fizik','Klasik fiziğin öngördüğü ve deneysel ışıma eğrilerini karşılaştırır, Planck’ın varsayımının gerekçesini değerlendirir.','K-AFKC-06 (klasik–deneysel eğri) · Planck’ın çözümü','grafik',sekil=SK)
 
 # ---- 11 orta · iki sıcaklık, fark verilmiş ----
 SK=egri_sekil([('T₁',1200),('T₂',800)],3600,[800,1200])
-T1=Fr(2000); T2=T1*Fr(1200,800); assert T2-T1==1000 and T2==3000 and Fr(1200,800)==Fr(3,2)
-assert Fr(3,2)*1000==1500 and T1+T2==5000
+T1=Fr(2400); T2=T1*Fr(1200,800); assert T2-T1==1200 and T2==3600 and Fr(1200,800)==Fr(3,2)
+assert Fr(3,2)*1200==1800 and T1+T2==6000 and Fr(1,2)*1200==600
 q('0011',[A('Tepe dalga boylarını oku','Grafikte T₁ eğrisinin tepesi 1200 nm’de, T₂ eğrisinin tepesi 800 nm’dedir.','λ₁ = 1200 nm · λ₂ = 800 nm'),
   A('Sıcaklık oranını kur','Tepe dalga boyu ile sıcaklık ters orantılıdır; dalga boyu küçük olan T₂ daha sıcaktır.','T₂ ÷ T₁ = λ₁ ÷ λ₂ = 1200 ÷ 800 = 3 ÷ 2'),
-  A('Farkı kullan','T₂, T₁’in 1,5 katı olduğundan aradaki fark T₁’in yarısıdır.','T₂ − T₁ = 0,5 × T₁ = 1000 K'),
-  A('Sıcaklığı bul','Denklem çözülür.','T₁ = 2000 K')],
+  A('Farkı kullan','T₂, T₁’in 1,5 katı olduğundan aradaki fark T₁’in yarısıdır.','T₂ − T₁ = 0,5 × T₁ = 1200 K'),
+  A('Sıcaklığı bul','Denklem çözülür.','T₁ = 2400 K')],
  tipId='kc-wien',tip='Wien yasası ve tepe dalga boyu hesabı',z='orta',alt='Wien Yasası',kaz='Aynı cismin iki sıcaklıktaki eğrilerinden oran kurup sıcaklık farkı bilgisiyle sıcaklığı bulur.',
  kart='K-AFKC-02 (iki sıcaklık, oran ve fark) · T₁’i bulma',kalip='grafik',
- metin='Bir kara cismin T₁ ve T₂ sıcaklıklarındaki ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. T₂ sıcaklığı, T₁ sıcaklığından 1000 K büyüktür.\nBuna göre, T₁ sıcaklığı kaç K’dir?',
- dogru=2000,yan=[(5000,'T₁ ile T₂’nin toplamını (2000 + 3000) T₁ olarak vermiş.','dikkat'),(1000,'Sıcaklık farkını (1000 K) doğrudan T₁ olarak yazmış.','dikkat'),(1500,'Sıcaklık farkını tepe dalga boylarının oranıyla çarpmış: 1000 × 1,5 = 1500.','islem'),(3000,'Tepe dalga boyu büyük olan eğriyi daha sıcak alıp T₁ = 1,5·T₂ kurmuş; 0,5·T₂ = 1000 ve T₂ = 2000 bulup T₁ = 3000 yazmış.','bilgi')],
+ metin='Bir kara cismin T₁ ve T₂ sıcaklıklarındaki ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. T₂ sıcaklığı, T₁ sıcaklığından 1200 K büyüktür.\nBuna göre, T₁ sıcaklığı kaç K’dir?',
+ dogru=2400,yan=[(6000,'T₁ ile T₂’nin toplamını (2400 + 3600) T₁ olarak vermiş.','dikkat'),(1200,'Sıcaklık farkını (1200 K) doğrudan T₁ olarak yazmış.','dikkat'),(1800,'Sıcaklık farkını tepe dalga boylarının oranıyla çarpmış: 1200 × 1,5 = 1800.','islem'),(3600,'Tepe dalga boyu büyük olan eğriyi daha sıcak alıp T₁ = 1,5·T₂ kurmuş; 0,5·T₂ = 1200 ve T₂ = 2400 bulup T₁ = 3600 yazmış.','bilgi')],
  istenen='T₁ sıcaklığı (K).',ip=['Önce iki sıcaklığın oranını tepe dalga boylarından yaz; sonra sıcaklık farkını bu oranla ilişkilendir.'],
  bilgi=[B('Wien yasasıyla oran','λ₁·T₁ = λ₂·T₂ olduğundan T₂ ÷ T₁ = λ₁ ÷ λ₂’dir. Örnek: tepe dalga boyu yarıya inen cismin sıcaklığı 2 katına çıkmıştır')],
  puf='Oranı Wien yasasından yaz, farkı oranla birlikte denkleme koy.',sekil=SK)
@@ -271,120 +276,123 @@ onc('0012','E','K, L ve M kara cisimlerinin sıcaklıkları tabloda verilmiştir
  'Önce tepe dalga boyunu hesapla, sonra hangi bölgeye düştüğüne bak.','Doğru olan yargılar.','kc-renk','Tepe dalga boyu, renk ve görünür bölge','orta','Işımanın Rengi','Tabloda verilen sıcaklıklardan tepe dalga boylarını bulup görünür bölge ve foton enerjisi hakkındaki yargıları değerlendirir.','K-AFKC-04 (sıcaklık tablosu) · görünür bölge ve foton enerjisi','tablo',sekil=SK)
 
 # ---- 13 orta · Planck varsayımı nitel, şekilsiz ----
-onc('0013','E','Planck, kara cisim ışımasını açıklamak için ışıma yapan salınıcıların enerji alışverişinin kesikli olduğunu ileri sürmüştür.',
+onc('0013','E','Planck, kara cisim ışımasını açıklamak için ışıma yapan salınıcıların enerji alışverişinin kesikli olduğunu ileri sürmüştür.\n(Planck sabiti h = 6,6 × 10⁻³⁴ J·s alınız.)',
  [('Planck sabiti, ışığın frekansına göre değişmeyen bir sabittir.',True,'h evrensel bir sabittir; foton enerjisinin frekansla artması E = h·f bağıntısındaki f’nin değişmesinden gelir, h’nin değişmesinden değil.','I numaralı yargıda Planck sabitinin ışığın rengine göre değiştiğini düşünmüş.'),
   ('Salınıcılar enerji alışverişini yalnız hf’nin tam katları kadar yapabilir.',True,'Planck varsayımına göre salınıcının enerjisi n·h·f değerlerini alır; bu yüzden alınıp verilen enerji hf’nin tam katlarıdır.','II numaralı yargıda enerji alışverişinin her değerde olabileceğini düşünmüş.'),
-  ('Kırmızı ışığın bir kuantumunun enerjisi, mor ışığın bir kuantumunun enerjisinden küçüktür.',True,'Kırmızı ışığın frekansı moradan küçüktür; E = h·f olduğundan kuantum enerjisi de küçüktür.','III numaralı yargıda kırmızı ışığın kuantumunun daha büyük enerjili olduğunu düşünmüş.')],
+  ('Frekansı 4 × 10¹⁴ Hz olan ışığın bir kuantumunun enerjisi 2,64 × 10⁻¹⁹ J’dir.',True,'E = h·f = 6,6 × 10⁻³⁴ × 4 × 10¹⁴ = 26,4 × 10⁻²⁰ = 2,64 × 10⁻¹⁹ J’dir.','III numaralı yargıda 10’un kuvvetlerini toplarken hata yapıp enerjiyi farklı bulmuş.')],
  ['Kuantum enerjisinin neye bağlı olduğunu ve h’nin ne tür bir nicelik olduğunu düşün.'],
  [B('Enerji kuantumu','E = h·f; h evrensel bir sabittir (yaklaşık 6,6 × 10⁻³⁴ J·s) ve kuantum enerjisi yalnız frekansa bağlıdır. Örnek: frekansı 2 katına çıkan ışığın kuantumunun enerjisi de 2 katına çıkar')],
- 'Kuantum enerjisi frekansla artar; h ise hiç değişmez.','Doğru olan yargılar.','kc-planck','Planck’ın kuantum varsayımı ve enerji düzeyleri','orta','Planck Varsayımı','Planck’ın kuantum varsayımı ve kuantum enerjisiyle ilgili yargıları değerlendirir.','K-AFKC-05 (kuantum, h sabiti, renk) · nitel öncüllü','öncüllü')
+ 'Her yargıda hangi niceliğin neye bağlı olduğunu ayır.','Doğru olan yargılar.','kc-planck','Planck’ın kuantum varsayımı ve enerji düzeyleri','orta','Planck Varsayımı','Planck’ın kuantum varsayımı ve kuantum enerjisiyle ilgili yargıları değerlendirir.','K-AFKC-05 (kuantum, h sabiti, renk) · nitel öncüllü','öncüllü')
 
 # ---- 14 orta · iki eğri, doğru yargı ----
 l14=[('K',500),('L',750)]
 for lam in (300,500,750,1500,2200): v=sira_cmp(l14,lam); assert v[0]>v[1]
 SK=egri_sekil(l14,2250,[500,750])
 dog14='K cisminin en şiddetle yaydığı fotonun enerjisi, L cisminin en şiddetle yaydığı fotonun enerjisinden büyüktür.'
-s14=['K cisminin sıcaklığı, L cisminin sıcaklığından küçüktür.','L cisminin en şiddetle yaydığı fotonun frekansı, K cisminin en şiddetle yaydığı fotonun frekansından büyüktür.','L cisminin birim zamanda yaydığı toplam enerji, K cisminin birim zamanda yaydığı toplam enerjiden büyüktür.','L cismi yalnız kızılötesi bölgede ışıma yapar.']
+s14=['K cisminin sıcaklığı, L cisminin sıcaklığından küçüktür.','L cisminin en şiddetle yaydığı fotonun frekansı, K cisminin en şiddetle yaydığı fotonun frekansından büyüktür.','L cisminin birim zamanda yaydığı toplam enerji, K cisminin birim zamanda yaydığı toplam enerjiden büyüktür.','L cisminin sıcaklığı artırılırsa en şiddetle yaydığı ışığın dalga boyu büyür.']
 q('0014',[A('Tepe dalga boylarını karşılaştır','K’nin tepe dalga boyu 500 nm, L’ninki 750 nm’dir; Wien yasasına göre K daha sıcaktır.','λ_K < λ_L → T_K > T_L'),
   A('Foton enerjilerini karşılaştır','Fotonun enerjisi dalga boyuyla ters orantılıdır; K’nin tepe fotonu daha kısa dalga boyludur.','E = hc ÷ λ → E_K > E_L'),
-  A('Şıkları ele','Daha sıcak K’nin toplam gücü ve tepe frekansı da daha büyüktür; L ise sürekli bir spektrum yayar.','A, B, C, D: yanlış · E: doğru')],
+  A('Şıkları ele','Daha sıcak K’nin toplam gücü ve tepe frekansı da daha büyüktür; sıcaklık artınca tepe dalga boyu küçülür.','A, B, C, D: yanlış · E: doğru')],
  tipId='kc-grafik',tip='Işıma şiddeti–dalga boyu grafiği yorumu',z='orta',alt='Işıma Grafikleri',kaz='İki eğrili grafikten sıcaklık, foton enerjisi ve toplam güç hakkında doğru çıkarımı belirler.',
  kart='K-AFKC-01 (iki eğri, doğru çıkarım) · foton enerjisi',kalip='grafik',
  metin='Bir laboratuvarda sıcaklıkları farklı olan K ve L kara cisimlerinin spektrumları ölçülmüş ve elde edilen eğriler şekilde gösterilmiştir.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
- dogru=dog14,yan=[(s14[0],'Tepe dalga boyu küçük olan cismin daha soğuk olduğunu düşünmüş.','bilgi'),(s14[1],'Dalga boyu büyük olan ışığın frekansının da büyük olduğunu düşünmüş.','bilgi'),(s14[2],'Eğri altındaki alanın daha küçük olduğu halde, tepe dalga boyu büyük olan cismin daha çok enerji yaydığını düşünmüş.','dikkat'),(s14[3],'Kara cismin yalnız tepe dalga boyunda ışıma yaptığını, yani spektrumun tek bölgede olduğunu düşünmüş.','bilgi')],
+ dogru=dog14,yan=[(s14[0],'Tepe dalga boyu küçük olan cismin daha soğuk olduğunu düşünmüş.','bilgi'),(s14[1],'Dalga boyu büyük olan ışığın frekansının da büyük olduğunu düşünmüş.','bilgi'),(s14[2],'Eğri altındaki alanın daha küçük olduğu halde, tepe dalga boyu büyük olan cismin daha çok enerji yaydığını düşünmüş.','dikkat'),(s14[3],'Sıcaklık arttıkça tepe dalga boyunun büyüdüğünü düşünmüş.','bilgi')],
  sira=s14+[dog14],
  istenen='Grafiğe göre doğru olan yargı.',ip=['Önce hangi cismin daha sıcak olduğunu bul; sonra her şıkkı sıcaklıkla ilişkilendir.'],
  bilgi=[B('Foton enerjisi ve dalga boyu','E = hc/λ olduğundan dalga boyu küçük olan fotonun enerjisi ve frekansı büyüktür. Örnek: mor ışık fotonu kırmızı ışık fotonundan daha enerjilidir')],
  puf='Önce sıcaklık sıralamasını çıkar, sonra frekans, enerji ve güç için aynı sırayı kullan.',sekil=SK)
 
-# ---- 15 zor · sıcaklık 4 katına çıkınca tepe fotonu enerjisi ----
-l15=1240; E15=Fr(1240,l15); l15b=Fr(l15,4); E15b=Fr(1240)/l15b
-assert E15==1 and l15b==310 and E15b==4 and E15*Fr(1,4)==Fr(1,4) and E15*16==16 and E15*2==2
+# ---- 15 zor · enerji oranı ve sıcaklık farkı ----
+l15=1240; E15=Fr(1240,l15); E15b=3; T15=Fr(4800,E15b-1); T15b=T15*E15b
+assert E15==1 and T15==2400 and T15b==7200 and Fr(4800,3)==1600 and 4800*3==14400 and abs(Fr(3*10**6,l15)-T15)<80
 SK=egri_sekil([('',l15)],3720,[l15],w=7.0)
-q('0015',[A('İlk tepe dalga boyunu oku','Grafikte tepe noktasının altındaki dalga boyu 1240 nm’dir.','λ₁ = 1240 nm'),
-  A('Yeni tepe dalga boyunu bul','Sıcaklık 4 katına çıkınca tepe dalga boyu Wien yasasına göre dörtte birine iner.','λ₂ = 1240 ÷ 4 = 310 nm'),
-  A('Foton enerjisi bağıntısını yaz','Enerji hc’nin dalga boyuna bölümüdür; nm için hc = 1240 eV·nm alınır.','E = hc ÷ λ'),
-  A('Yeni enerjiyi hesapla','Değerler yerine konur.','E₂ = 1240 ÷ 310 = 4 eV')],
- tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='zor',alt='Foton Enerjisi',kaz='Sıcaklık değişince tepe dalga boyunu ve tepe fotonunun enerjisini Wien yasası ile foton enerjisi bağıntısını birleştirerek hesaplar.',
- kart='K-AFKC-07 (sıcaklık değişimi ve tepe fotonu) · iki kavram birleşimi',kalip='grafik',
- metin='Bir fırın içindeki kara cismin ışıma eğrisi şekilde verilmiştir. Fırın ısıtılarak cismin mutlak sıcaklığı 4 katına çıkarılıyor.\n(hc = 1240 eV·nm alınız.)\nBuna göre, sıcaklık değiştirildikten sonra cismin en şiddetle yaydığı fotonun enerjisi kaç eV olur?',
- dogru=4,yan=[(Fr(1,4),'Foton enerjisinin sıcaklıkla ters orantılı olduğunu düşünüp ilk enerjiyi (1 eV) 4’e bölmüş.','bilgi'),(2,'Enerjinin sıcaklığın kareköküyle orantılı olduğunu düşünüp 1 × √4 = 2 bulmuş.','bilgi'),(1,'İlk durumdaki tepe fotonunun enerjisini (1240 ÷ 1240 = 1 eV) yeni durumun enerjisi olarak yazmış.','dikkat'),(16,'Enerjinin sıcaklığın karesiyle orantılı olduğunu düşünüp 1 × 4² = 16 bulmuş.','bilgi')],
- istenen='Yeni sıcaklıkta tepe fotonunun enerjisi (eV).',ip=['Önce sıcaklık artınca tepe dalga boyunun nasıl değiştiğini bul, sonra bu dalga boyundaki fotonun enerjisine geç.'],
- bilgi=[B('Foton enerjisi ve sıcaklık','Tepe fotonunun enerjisi E = hc/λ_maks’tır ve λ_maks ∝ 1/T olduğundan E ∝ T’dir. Örnek: sıcaklık 3 katına çıkan cismin tepe fotonunun enerjisi de 3 katına çıkar')],
- puf='Tepe fotonunun enerjisi sıcaklıkla doğru orantılı artar.',sekil=SK)
+q('0015',[A('İlk tepe fotonunun enerjisini bul','Grafikteki tepe dalga boyuna karşılık gelen foton enerjisi hc’nin dalga boyuna bölümüdür.','E₁ = 1240 ÷ 1240 = 1 eV'),
+  A('Enerji oranını sıcaklık oranına çevir','Tepe fotonunun enerjisi sıcaklıkla doğru orantılıdır.','E₂ ÷ E₁ = 3 = T₂ ÷ T₁'),
+  A('Farkı yaz','T₂ = 3·T₁ olduğundan iki sıcaklığın farkı T₁’in 2 katıdır.','T₂ − T₁ = 2 × T₁ = 4800 K'),
+  A('Sıcaklığı hesapla','Denklem çözülür.','T₁ = 2400 K')],
+ tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='zor',alt='Foton Enerjisi',kaz='Foton enerjisi bağıntısı ile Wien yasasını birleştirip sıcaklık farkından başlangıç sıcaklığını hesaplar.',
+ kart='K-AFKC-07 (enerji oranı ve sıcaklık farkı) · iki kavram birleşimi',kalip='grafik',
+ metin='Bir kara cismin ışıma şiddetinin dalga boyuna bağlı değişim grafiği şekilde verilmiştir. Cismin sıcaklığı 4800 K artırıldığında en şiddetle yaydığı fotonun enerjisi 3 eV olmaktadır.\n(hc = 1240 eV·nm alınız.)\nBuna göre, cismin başlangıçtaki sıcaklığı kaç K’dir?',
+ dogru=2400,yan=[(1600,'Sıcaklık artışını enerji oranına (3) bölmüş: 4800 ÷ 3 = 1600.','islem'),(4800,'Sıcaklık artışını (4800 K) doğrudan başlangıç sıcaklığı olarak yazmış.','dikkat'),(7200,'Artıştan sonraki sıcaklığı (2400 + 4800 = 7200 K) başlangıç sıcaklığı olarak yazmış.','dikkat'),(14400,'Sıcaklık artışını enerji oranıyla çarpmış: 4800 × 3 = 14400.','islem')],
+ istenen='Cismin başlangıçtaki sıcaklığı (K).',ip=['Grafikten başlangıçtaki tepe fotonunun enerjisini bul; sonra enerji ile sıcaklık arasındaki ilişkiyi kur.'],
+ bilgi=[B('Foton enerjisi ve tepe dalga boyu','E = hc/λ_maks ve nm için hc = 1240 eV·nm’dir. Tepe dalga boyu sıcaklıkla ters orantılı olduğundan tepe fotonunun enerjisi sıcaklıkla aynı yönde değişir. Örnek: tepe dalga boyu 2480 nm olan cismin tepe fotonunun enerjisi 0,5 eV’tur')],
+ puf='Enerji ile sıcaklık arasındaki orantıyı kurup farkı denkleme koy.',sekil=SK)
 
-# ---- 16 zor · Planck merdiveni, dalga boyu ----
-l16=1200; dn=5-2; assert Fr(l16,dn)==400 and Fr(l16,5)==240 and Fr(l16,2)==600 and l16*dn==3600
-SK=merdiven(5,[(5,2,'K')])
-q('0016',[A('Geçişteki enerji farkını bul','Salınıcı 5hf düzeyinden 2hf düzeyine iner; yayılan fotonun enerjisi iki düzeyin farkına eşittir.','ΔE = 5hf − 2hf = 3hf'),
-  A('Frekansı yaz','Foton enerjisi hf’nin 3 katı olduğundan fotonun frekansı salınıcı frekansının 3 katıdır.','f_foton = 3f'),
-  A('Dalga boyuna geç','Frekans 3 katına çıkınca aynı ortamda dalga boyu üçte birine iner.','λ = 1200 ÷ 3'),
-  A('Sonucu yaz','Hesap yapılır.','λ = 400 nm')],
- tipId='kc-planck',tip='Planck’ın kuantum varsayımı ve enerji düzeyleri',z='zor',alt='Planck Varsayımı',kaz='Salınıcının enerji düzeyleri arasındaki geçişte yayılan fotonun dalga boyunu hesaplar.',
- kart='K-AFKC-05 (düzeyler arası geçiş, dalga boyu) · iki kavram birleşimi',kalip='şekilli',
- metin='Frekansı f olan bir salınıcının enerji düzeyleri şekilde verilmiştir. Frekansı f olan ışığın boşluktaki dalga boyu 1200 nm’dir. Salınıcı, şekilde gösterilen K geçişini yaparken tek bir foton yaymaktadır.\nBuna göre, yayılan fotonun boşluktaki dalga boyu kaç nm’dir?',
- dogru=400,yan=[(240,'Yayılan fotonun enerjisini başlangıç düzeyinin enerjisi (5hf) sanıp 1200 ÷ 5 = 240 bulmuş.','dikkat'),(600,'Yayılan fotonun enerjisini bitiş düzeyinin enerjisi (2hf) sanıp 1200 ÷ 2 = 600 bulmuş.','dikkat'),(1200,'Fotonun enerjisini hf alıp dalga boyunun değişmediğini düşünmüş.','bilgi'),(3600,'Frekansın 3 katına çıkmasını dalga boyunun 3 katına çıkması sanıp 1200 × 3 = 3600 bulmuş.','bilgi')],
- istenen='Yayılan fotonun dalga boyu (nm).',ip=['Yayılan fotonun enerjisi iki düzeyin enerji farkına eşittir; bu, fotonun frekansını belirler.'],
- bilgi=[B('Frekans ve dalga boyu','Boşlukta c = λ·f olduğundan frekans k katına çıkınca dalga boyu k kat küçülür. Örnek: frekansı 4 katına çıkan ışığın dalga boyu dörtte birine iner')],
- puf='Foton enerjisi iki düzeyin farkıdır; enerji k kat büyükse dalga boyu k kat küçüktür.',sekil=SK)
+# ---- 16 zor · soğurma + yayma, dalga boyları ----
+lk=600; lL16=Fr(lk)*Fr(3,2)
+assert lL16==900 and Fr(lk)*Fr(2,3)==400 and Fr(lk)*Fr(4,2)==1200 and Fr(lk)*Fr(1,4)==150
+SK=merdiven(4,[(1,4,'K'),(4,2,'L')])
+q('0016',[A('K geçişinin enerji farkını bul','Salınıcı 1hf düzeyinden 4hf düzeyine çıkarken bu farkı soğurur.','E_K = 4hf − hf = 3hf'),
+  A('L geçişinin enerji farkını bul','4hf düzeyinden 2hf düzeyine inerken bu farkı yayar.','E_L = 4hf − 2hf = 2hf'),
+  A('Dalga boyu ilişkisini kur','Dalga boyu foton enerjisiyle ters orantılıdır.','λ_L ÷ λ_K = E_K ÷ E_L = 3 ÷ 2'),
+  A('Dalga boyunu hesapla','Değerler yerine konur.','λ_L = 600 × 3 ÷ 2 = 900 nm')],
+ tipId='kc-planck',tip='Planck’ın kuantum varsayımı ve enerji düzeyleri',z='zor',alt='Planck Varsayımı',kaz='Salınıcının enerji düzeyleri arasındaki soğurma ve yayma geçişlerinde fotonların dalga boylarını karşılaştırır.',
+ kart='K-AFKC-05 (soğurma ve yayma geçişi, dalga boyu oranı) · iki geçiş',kalip='şekilli',
+ metin='Frekansı f olan bir salınıcının enerji düzeyleri şekilde verilmiştir. Salınıcı K geçişini yaparken bir foton soğurmakta, L geçişini yaparken bir foton yaymaktadır. K geçişinde soğurulan fotonun boşluktaki dalga boyu 600 nm’dir.\nBuna göre, L geçişinde yayılan fotonun boşluktaki dalga boyu kaç nm’dir?',
+ dogru=900,yan=[(150,'Geçişlerin başlangıç düzeylerinin enerjilerini (hf ve 4hf) foton enerjisi sanıp 600 × 1 ÷ 4 = 150 bulmuş.','dikkat'),(400,'Dalga boyunu enerjiyle doğru orantılı alıp 600 × 2 ÷ 3 = 400 bulmuş.','bilgi'),(600,'İki geçişte de enerji farkını hf alıp iki fotonun dalga boyunu eşit bulmuş.','bilgi'),(1200,'Geçişlerin bitiş düzeylerinin enerjilerini (4hf ve 2hf) foton enerjisi sanıp 600 × 4 ÷ 2 = 1200 bulmuş.','dikkat')],
+ istenen='L geçişinde yayılan fotonun dalga boyu (nm).',ip=['Her geçişte soğurulan ya da yayılan fotonun enerjisini iki düzeyin farkından bul.'],
+ bilgi=[B('Foton enerjisi ve dalga boyu','Boşlukta E = hc/λ olduğundan foton enerjisi k kat büyükse dalga boyu k kat küçüktür. Salınıcıda yayılan ya da soğurulan fotonun enerjisi, düzeylerin enerji farkına eşittir. Örnek: 6hf ile 5hf düzeyleri arasındaki geçişte foton enerjisi hf’dir')],
+ puf='Foton enerjisi iki düzeyin farkıdır; dalga boyu enerjiyle ters orantılıdır.',sekil=SK)
 
-# ---- 17 zor · sıcaklık farkı ile tepe dalga boyu ----
-lL17=1500; TL17=Fr(3*10**6,lL17); TK17=TL17+1000; lK17=Fr(3*10**6)/TK17
-assert TL17==2000 and TK17==3000 and lK17==1000 and Fr(lL17*TL17,1000*0+TL17)==1500
-assert Fr(lL17*3,2)==2250 and Fr(3*10**6)/(TL17-1000)==3000 and lL17-1000==500
-SK=egri_sekil([('L',lL17)],4500,[lL17],w=7.0)
-q('0017',[A('L’nin sıcaklığını bul','Wien yasasından sıcaklık, Wien sabitinin tepe dalga boyuna bölümüdür; dalga boyu metreye çevrilir.','T_L = 3 × 10⁻³ ÷ (1500 × 10⁻⁹) = 2000 K'),
-  A('K’nin sıcaklığını bul','K cismi L’den 1000 K daha sıcaktır.','T_K = 2000 + 1000 = 3000 K'),
-  A('K’nin tepe dalga boyunu yaz','Wien yasası yeniden uygulanır.','λ_K = 3 × 10⁻³ ÷ 3000 = 10⁻⁶ m'),
-  A('Nanometreye çevir','1 m = 10⁹ nm olduğundan sonuç nm cinsinden yazılır.','λ_K = 1000 nm')],
- tipId='kc-wien',tip='Wien yasası ve tepe dalga boyu hesabı',z='zor',alt='Wien Yasası',kaz='Wien yasasını iki cisim için art arda uygulayıp sıcaklık farkından tepe dalga boyunu hesaplar.',
- kart='K-AFKC-02 (iki cisim, sıcaklık farkı) · çok adımlı',kalip='grafik',
- metin='L kara cisminin ışıma şiddetinin dalga boyuna bağlı değişim grafiği şekilde verilmiştir. K kara cisminin sıcaklığı, L cisminin sıcaklığından 1000 K büyüktür.\n(Wien sabiti 3 × 10⁻³ m·K alınız.)\nBuna göre, K cisminin tepe dalga boyu kaç nm’dir?',
- dogru=1000,yan=[(500,'Sıcaklık farkını (1000 K) dalga boyu farkı sanıp 1500 − 1000 = 500 bulmuş.','dikkat'),(1500,'Tepe dalga boyunun sıcaklıkla değişmediğini düşünmüş.','bilgi'),(2250,'Dalga boyunu sıcaklıkla doğru orantılı alıp 1500 × 3000 ÷ 2000 = 2250 bulmuş.','bilgi'),(3000,'K’yi L’den 1000 K daha soğuk alıp T_K = 1000 K bulmuş; 3 × 10⁻³ ÷ 1000 = 3 × 10⁻⁶ m = 3000 nm yazmış.','dikkat')],
- istenen='K cisminin tepe dalga boyu (nm).',ip=['Önce L’nin sıcaklığını bulmak, sonra K’nin sıcaklığına geçmek gerekir; dalga boyunu metreye çevirmeyi unutma.'],
- bilgi=[B('Sıcaklıktan tepe dalga boyuna','Wien yasasında λ_maks = b ÷ T’dir; yani sıcaklığı bilinen cismin tepe dalga boyu, sıcaklığı bilinmeyenin sıcaklığından bulunur. Örnek: sıcaklığı 1500 K olan cismin tepe dalga boyu 2 × 10⁻⁶ m’dir')],
- puf='Sıcaklığı bulup sıcaklığı değiştir, sonra tepe dalga boyuna geri dön.',sekil=SK)
+# ---- 17 zor · sıcaklık farkı, Wien ve foton enerjisi ----
+lL17=2000; TL17=Fr(3*10**6,lL17); TK17=TL17+1500; lK17=Fr(3*10**6)/TK17; EK17=Fr(12400)/(lK17*10)
+assert TL17==1500 and TK17==3000 and lK17==1000 and EK17==Fr(124,100)
+assert Fr(12400,1000)==Fr(124,10) and Fr(12400,1000*100)==Fr(124,1000) and Fr(12400,20000)==Fr(62,100)
+assert Fr(12400,(lL17-1500)*10)==Fr(248,100) and Fr(12400,Fr(lL17*3000,1500)*10)==Fr(31,100)
+SK=egri_sekil([('L',lL17)],6000,[lL17],w=7.0)
+q('0017',[A('L’nin sıcaklığını bul','Wien yasasından sıcaklık, Wien sabitinin tepe dalga boyuna bölümüdür; dalga boyu metreye çevrilir.','T_L = 3 × 10⁻³ ÷ (2000 × 10⁻⁹) = 1500 K'),
+  A('K’nin sıcaklığını bul','K cismi L’den 1500 K daha sıcaktır.','T_K = 1500 + 1500 = 3000 K'),
+  A('K’nin tepe dalga boyunu yaz','Wien yasası yeniden uygulanır ve Å’e çevrilir.','λ_K = 3 × 10⁻³ ÷ 3000 = 10⁻⁶ m = 10000 Å'),
+  A('Tepe fotonunun enerjisini hesapla','Foton enerjisi hc’nin dalga boyuna bölümüdür.','E_K = 12400 ÷ 10000 = 1,24 eV')],
+ tipId='kc-wien',tip='Wien yasası ve tepe dalga boyu hesabı',z='zor',alt='Wien Yasası',kaz='Wien yasasını art arda uygulayıp sıcaklık farkından tepe dalga boyunu ve tepe fotonunun enerjisini hesaplar.',
+ kart='K-AFKC-02 (iki cisim, sıcaklık farkı) · Wien ve foton enerjisi',kalip='grafik',
+ metin='L kara cisminin ışıma şiddetinin dalga boyuna bağlı değişim grafiği şekilde verilmiştir. K kara cisminin sıcaklığı, L cisminin sıcaklığından 1500 K büyüktür.\n(Wien sabiti 3 × 10⁻³ m·K, hc = 12400 eV·Å alınız.)\nBuna göre, K cisminin en şiddetle yaydığı fotonun enerjisi kaç eV’tur?',
+ dogru=EK17,yan=[(Fr(31,100),'Dalga boyunu sıcaklıkla doğru orantılı alıp λ_K = 2000 × 3000 ÷ 1500 = 4000 nm = 40000 Å bulmuş: 12400 ÷ 40000 = 0,31.','bilgi'),(Fr(62,100),'Tepe dalga boyunun sıcaklıkla değişmediğini düşünüp 2000 nm = 20000 Å için 12400 ÷ 20000 = 0,62 bulmuş.','bilgi'),(Fr(248,100),'Sıcaklık farkını (1500 K) dalga boyu farkı sanıp 2000 − 1500 = 500 nm = 5000 Å için 12400 ÷ 5000 = 2,48 bulmuş.','dikkat'),(Fr(124,10),'Hesapladığı 1000 nm’yi Å’e çevirmeden 1000 Å alıp 12400 ÷ 1000 = 12,4 bulmuş.','dikkat')],
+ istenen='K cisminin en şiddetle yaydığı fotonun enerjisi (eV).',ip=['Önce L’nin sıcaklığını bulmak, sonra K’nin tepe dalga boyuna ve fotonunun enerjisine geçmek gerekir; birimlere dikkat et.'],
+ bilgi=[B('Sıcaklıktan tepe fotonuna','Wien yasasında λ_maks = b ÷ T’dir; bulunan dalga boyu Å’e çevrilip E = hc/λ ile fotonun enerjisine geçilir. Örnek: tepe dalga boyu 2 × 10⁻⁶ m olan cismin sıcaklığı 1500 K’dir')],
+ puf='Sıcaklığı bul, tepe dalga boyuna geç, sonra enerjiyi hesapla.',sekil=SK)
 
-# ---- 18 zor · K ve L, öncüllü (Yalnız III) ----
+# ---- 18 orta · K ve L, öncüllü (Yalnız III) ----
 l18=[('K',600),('L',900)]
 for lam in (300,600,900,1800,2500): v=sira_cmp(l18,lam); assert v[0]>v[1]
 SK=egri_sekil(l18,2700,[600,900])
-onc('0018','A','K ve L kara cisimlerinin ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. Görünür ışık bölgesi 400 nm ile 700 nm arasındadır.',
+onc('0018','A','K ve L kara cisimlerinin ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir.',
  [('L cisminin sıcaklığı, K cisminin sıcaklığının 1,5 katıdır.',False,'Tepe dalga boyu ile sıcaklık ters orantılıdır; K’nin tepe dalga boyu daha küçük olduğundan sıcaklığı L’ninkinin 900 ÷ 600 = 1,5 katıdır; L daha soğuktur.','I numaralı yargıda dalga boyu büyük olan cismin sıcaklığını 1,5 kat büyük sanmış.'),
-  ('L cisminin yaydığı ışımanın tamamı kızılötesi bölgededir.',False,'L’nin tepe dalga boyu kızılötesinde olsa da eğrisi görünür bölgede de sıfırdan büyüktür; kara cisim sürekli spektrum yayar.','II numaralı yargıda ışımanın yalnız tepe dalga boyundaki bölgede yapıldığını düşünmüş.'),
+  ('K cisminin sıcaklığı artırılırsa en şiddetle yaydığı ışığın dalga boyu 600 nm’den büyük olur.',False,'Sıcaklık artınca eğrinin tepesi daha kısa dalga boyuna kayar; K’nin tepe dalga boyu 600 nm’den küçük olur.','II numaralı yargıda sıcaklık arttıkça tepe dalga boyunun büyüdüğünü düşünmüş.'),
   ('K cisminin en şiddetle yaydığı fotonun enerjisi, L cisminin en şiddetle yaydığı fotonun enerjisinin 1,5 katıdır.',True,'Foton enerjisi dalga boyuyla ters orantılıdır; E_K ÷ E_L = λ_L ÷ λ_K = 900 ÷ 600 = 1,5.','III numaralı yargıda enerji oranını dalga boyu oranıyla doğru orantılı kurup yanlış değerlendirmiş.')],
- ['Sıcaklık oranını tepe dalga boylarından, ışımanın bölgesini ise eğrinin tamamından yorumla.'],
- [B('Oran kurma','Tepe fotonunun enerjisi E ∝ 1/λ_maks ∝ T’dir; iki cismin enerji oranı sıcaklık oranına, dalga boylarının ters oranına eşittir. Örnek: tepe dalga boyu yarı olan cismin tepe fotonu 2 kat enerjilidir')],
- 'Oranları her zaman tepe dalga boylarının tersiyle kur; kara cisim her bölgede ışıma yapar.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','zor','Sıcaklığın Etkisi','İki cismin ışıma eğrilerinden sıcaklık oranı, ışıma bölgesi ve foton enerjisi oranı hakkındaki yargıları birlikte değerlendirir.','K-AFKC-03 (iki eğri, oran ve bölge) · öncüllü','grafik',sekil=SK)
+ ['Sıcaklık, tepe dalga boyu ve foton enerjisi arasındaki ilişkileri ayrı ayrı kur.'],
+ [B('Oran kurma','İki cismin tepe dalga boyları oranı, sıcaklıkların ve tepe fotonu enerjilerinin ters oranına eşittir. Örnek: tepe dalga boyu yarı olan cismin tepe fotonu 2 kat enerjilidir')],
+ 'Oranları her zaman tepe dalga boylarının tersiyle kur.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','orta','Sıcaklığın Etkisi','İki cismin ışıma eğrilerinden sıcaklık oranı, tepe dalga boyunun sıcaklıkla değişimi ve foton enerjisi oranı hakkındaki yargıları değerlendirir.','K-AFKC-03 (iki eğri, oran ve değişim) · öncüllü','grafik',sekil=SK)
 
-# ---- 19 zor · üç eğri, öncüllü (II ve III) ----
+# ---- 19 zor · üç eğri, öncüllü (II ve III), nicel yargılar ----
 l19=[('K',800),('L',1000),('M',1200)]
-for lam in (300,800,900,1000,2000,3000): v=sira_cmp(l19,lam); assert v[0]>v[1]>v[2]
-assert Fr(1200,800)==Fr(3,2)
+for lam in (300,800,1000,1200,2000): v=sira_cmp(l19,lam); assert v[0]>v[1]>v[2]
+assert Fr(3*10**6,1200)==2500 and Fr(1200,800)==Fr(3,2) and Fr(1240,1000)==Fr(124,100) and Fr(3,1000)/Fr(12,10**8)==25000
 SK=egri_sekil(l19,1600,[800,1000,1200])
-onc('0019','D','K, L ve M kara cisimlerinin ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir. Görünür ışık bölgesi 400 nm ile 700 nm arasındadır.',
- [('M cismi görünür bölgede ışıma yapmaz.',False,'M’nin tepe dalga boyu görünür bölgenin dışında olsa da eğrisi 400–700 nm aralığında sıfırdan büyüktür; yani M de çok az görünür ışık yayar.','I numaralı yargıda tepe dalga boyu görünür bölgede olmayan cismin hiç görünür ışık yaymadığını düşünmüş.'),
+onc('0019','D','K, L ve M kara cisimlerinin ışıma şiddetinin dalga boyuna bağlı değişim grafikleri şekilde verilmiştir.\n(Wien sabiti 3 × 10⁻³ m·K, hc = 1240 eV·nm alınız.)',
+ [('M cisminin sıcaklığı 25000 K’dir.',False,'M’nin tepe dalga boyu 1200 nm = 1,2 × 10⁻⁶ m’dir; T = 3 × 10⁻³ ÷ (1,2 × 10⁻⁶) = 2500 K bulunur, 25000 K değil.','I numaralı yargıda 1200 nm’yi 1,2 × 10⁻⁷ m alarak sıcaklığı 25000 K bulmuş.'),
   ('K cisminin en şiddetle yaydığı fotonun enerjisi, M cisminin en şiddetle yaydığı fotonun enerjisinin 1,5 katıdır.',True,'Foton enerjisi dalga boyuyla ters orantılıdır; E_K ÷ E_M = λ_M ÷ λ_K = 1200 ÷ 800 = 1,5.','II numaralı yargıda enerji oranını dalga boyu oranıyla doğru orantılı kurup 2/3 bulmuş.'),
-  ('M cisminin birim zamanda yaydığı toplam enerji, L cisminin birim zamanda yaydığı toplam enerjiden küçüktür.',True,'M’nin tepe dalga boyu daha büyük olduğundan sıcaklığı daha düşüktür; eğrisi her dalga boyunda L’nin eğrisinin altında kaldığından altındaki alan, yani toplam güç daha küçüktür.','III numaralı yargıda tepe dalga boyu büyük olan cismin daha çok enerji yaydığını düşünmüş.')],
- ['Görünür bölgedeki dalga boylarında üç eğrinin de sıfırdan büyük olup olmadığına ve tepe fotonlarının enerji oranına bak.'],
- [B('Sürekli spektrum','Kara cismin ışıma spektrumu süreklidir; tepe dalga boyu görünür bölgede olmasa bile eğri görünür bölgede sıfırdan büyüktür. Eğri altındaki alan toplam ışıma gücünü verir. Örnek: sıcaklığı 3000 K olan cisim mor ışığı da az miktarda yayar')],
- 'Tepe, spektrumun yalnız en şiddetli noktasıdır; ışıma her bölgede vardır.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','zor','Sıcaklığın Etkisi','Üç eğrili grafikte ışıma bölgesi, tepe fotonlarının enerji oranı ve toplam güç hakkındaki yargıları birlikte değerlendirir.','K-AFKC-03 (üç eğri, bölge, oran ve alan) · öncüllü','grafik',sekil=SK)
+  ('L cisminin en şiddetle yaydığı fotonun enerjisi 1,24 eV’tur.',True,'L’nin tepe dalga boyu 1000 nm’dir; E = hc ÷ λ = 1240 ÷ 1000 = 1,24 eV bulunur.','III numaralı yargıda enerjiyi hc ile dalga boyunun çarpımına bölerek ya da birimi karıştırarak farklı bir değer bulmuş.')],
+ ['Her yargıdaki niceliği, grafikteki tepe dalga boyundan Wien yasası ya da foton enerjisi bağıntısıyla ayrı ayrı hesapla.'],
+ [B('Tepe dalga boyundan nicelikler','Tepe dalga boyundan sıcaklık T = b ÷ λ_maks, foton enerjisi E = hc ÷ λ_maks ile bulunur; nm–m dönüşümüne dikkat edilir. Örnek: tepe dalga boyu 2000 nm olan cismin tepe fotonunun enerjisi 1240 ÷ 2000 = 0,62 eV’tur')],
+ 'Her yargıyı grafikten okuduğun tepe dalga boyuyla ayrı ayrı hesapla.','Doğru olan yargılar.','kc-sicaklik','Sıcaklık değişiminin ışımaya etkisi','zor','Sıcaklığın Etkisi','Üç eğrili grafikte tepe dalga boylarından sıcaklık ve foton enerjisi hesaplayarak nicel yargıları değerlendirir.','K-AFKC-03 (üç eğri, nicel yargılar) · öncüllü','grafik',sekil=SK)
 
-# ---- 20 zor · Güneş, enerji yarıya ----
-l20=Fr(5,10**7); T20=Fr(3,1000)/l20; assert T20==6000
-TY=T20*Fr(1,2); assert TY==3000 and T20*2==12000 and T20*4==24000 and T20/4==1500
+# ---- 20 zor · foton enerjisinden sıcaklık oranı ----
+l20=Fr(5,10**7); TG=Fr(3,1000)/l20; E20=Fr(124,100); lY=Fr(1240)/E20
+assert TG==6000 and lY==1000 and Fr(500)/lY==Fr(1,2) and Fr(lY,500)==2 and Fr(500,lY)**2==Fr(1,4) and Fr(lY,500)**2==4
 SK=egri_sekil([('Güneş',500)],1500,[500],w=7.0)
-q('0020',[A('Güneş’in sıcaklığını bul','Tepe dalga boyu metreye çevrilip Wien yasası uygulanır.','T = 3 × 10⁻³ ÷ (5 × 10⁻⁷) = 6000 K'),
-  A('Enerji ile sıcaklık ilişkisini kur','Tepe fotonunun enerjisi tepe dalga boyuyla ters, sıcaklıkla doğru orantılıdır.','E ∝ 1 ÷ λ_maks ∝ T'),
-  A('Oranı yaz','Yıldızın tepe fotonu, Güneş’inkinin yarısı kadar enerjilidir.','E_Y ÷ E_G = T_Y ÷ T_G = 1 ÷ 2'),
-  A('Sıcaklığı hesapla','Güneş’in sıcaklığı yarıya indirilir.','T_Y = 6000 ÷ 2 = 3000 K')],
- tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='zor',alt='Foton Enerjisi',kaz='Wien yasası ve tepe fotonu enerjisi ilişkisini birleştirip başka bir yıldızın sıcaklığını bulur.',
- kart='K-AFKC-07 (Wien ve foton enerjisi oranı) · yıldız sıcaklığı',kalip='grafik',
- metin='Güneş’in yaydığı ışımanın şiddetinin dalga boyuna bağlı değişim grafiği şekilde verilmiştir. Güneş’i kara cisim kabul eden bir araştırmacı, başka bir yıldızın en şiddetle yaydığı fotonun enerjisinin Güneş’inkinin yarısı olduğunu belirlemiştir.\n(Wien sabiti 3 × 10⁻³ m·K alınız.)\nBuna göre, bu yıldızın yüzey sıcaklığı kaç K’dir?',
- dogru=3000,yan=[(1500,'Enerjinin sıcaklığın karesiyle orantılı olduğunu düşünüp 6000 ÷ 4 = 1500 bulmuş.','bilgi'),(6000,'Yalnız Güneş’in sıcaklığını hesaplayıp yıldız için bir değişiklik yapmamış.','dikkat'),(12000,'Enerji yarıya inince sıcaklığın 2 katına çıktığını düşünüp 6000 × 2 = 12000 bulmuş.','bilgi'),(24000,'Enerjinin sıcaklıkla ters kare orantılı olduğunu düşünüp 6000 × 4 = 24000 bulmuş.','bilgi')],
- istenen='Yıldızın yüzey sıcaklığı (K).',ip=['Tepe fotonunun enerjisinin sıcaklıkla nasıl değiştiğini Wien yasası ve foton enerjisi bağıntısını birleştirerek bul.'],
- bilgi=[B('Enerji ve sıcaklık oranı','Tepe fotonunun enerjisi sıcaklıkla doğru orantılıdır (E ∝ T). Enerji oranı sıcaklık oranına eşittir. Örnek: tepe fotonu 3 kat enerjili olan cismin sıcaklığı 3 kat büyüktür')],
- puf='Tepe fotonunun enerjisi sıcaklıkla aynı oranda değişir.',sekil=SK)
+q('0020',[A('Yıldızın tepe dalga boyunu bul','Fotonun enerjisi ve hc bilindiğinden dalga boyu hc’nin enerjiye bölümüyle bulunur.','λ_Y = 1240 ÷ 1,24 = 1000 nm'),
+  A('Güneş’in tepe dalga boyunu oku','Grafikte tepe noktasının altındaki değer 500 nm’dir.','λ_G = 500 nm'),
+  A('Wien yasasını uygula','Sıcaklık tepe dalga boyuyla ters orantılıdır.','T_Y ÷ T_G = λ_G ÷ λ_Y'),
+  A('Oranı hesapla','Değerler yerine konur.','T_Y ÷ T_G = 500 ÷ 1000 = 1/2')],
+ tipId='kc-enerji',tip='Tepe fotonunun enerjisi ve sıcaklık',z='zor',alt='Foton Enerjisi',kaz='Tepe fotonunun enerjisinden tepe dalga boyunu bulup Wien yasasıyla sıcaklık oranını hesaplar.',
+ kart='K-AFKC-07 (enerjiden dalga boyu, sıcaklık oranı) · iki kavram birleşimi',kalip='grafik',
+ metin='Güneş’in yaydığı ışımanın şiddetinin dalga boyuna bağlı değişim grafiği şekilde verilmiştir. Güneş’i kara cisim kabul eden bir araştırmacı, başka bir yıldızın en şiddetle yaydığı fotonun enerjisini 1,24 eV olarak belirlemiştir.\n(hc = 1240 eV·nm alınız.)\nBuna göre, bu yıldızın yüzey sıcaklığının Güneş’in yüzey sıcaklığına oranı kaçtır?',
+ dogru='1/2',yan=[('1/4','Oranın karesini alarak (500 ÷ 1000)² = 1/4 bulmuş.','islem'),('1','Tepe fotonunun enerjisinin sıcaklıktan bağımsız olduğunu düşünüp iki yıldızı aynı sıcaklıkta kabul etmiş.','bilgi'),('2','Oranı ters kurmuş: λ_Y ÷ λ_G = 1000 ÷ 500 = 2.','bilgi'),('4','Oranı ters kurup karesini almış: (1000 ÷ 500)² = 4.','islem')],
+ sira=['1/4','1/2','1','2','4'],
+ istenen='Yıldızın sıcaklığının Güneş’in sıcaklığına oranı.',ip=['Önce yıldızın tepe dalga boyunu bul, sonra sıcaklık ile tepe dalga boyu arasındaki ilişkiyi kullan.'],
+ bilgi=[B('Enerjiden dalga boyuna','E = hc/λ bağıntısından λ = hc/E bulunur; nm için hc = 1240 eV·nm’dir. Örnek: enerjisi 2,48 eV olan fotonun dalga boyu 500 nm’dir')],
+ puf='Önce enerjiyi dalga boyuna çevir, sonra Wien yasasıyla oranla.',sekil=SK)
 
 # ---------- yaz ----------
 for x in P.ANA: x['kardes']=None

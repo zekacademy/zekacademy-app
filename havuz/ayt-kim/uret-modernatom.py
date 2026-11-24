@@ -279,7 +279,7 @@ S7=[('R’nin birinci iyonlaşma enerjisinin S’ninkinden büyük olması, R’
 assert IE1[7]>IE1[8] and IE1[4]>IE1[5] and IE1[6]>IE1[5]
 dg=S7[0][0]
 q('0007','07',[A('Elementleri tanı','Elementler 2. periyotta atom numarası artan sırada dizilmiştir: K 1A grubundan başlayıp V soy gaza uzanır.','K, L, M, N, R, S, T, V = 1A, 2A, 3A, 4A, 5A, 6A, 7A, 8A'),
-  A('Sapmaları bul','Grafikte L ve S noktaları kendinden önceki elemente göre düşüştedir; bu sapmalar dolu ve yarı dolu alt kabukların kararlılığıyla ilgilidir.','L: 2s² dolu · R: 2p³ yarı dolu'),
+  A('Sapmaları bul','Grafikte M ve S noktaları kendinden önceki elemente göre düşüştedir; bu sapmalar dolu ve yarı dolu alt kabukların kararlılığıyla ilgilidir.','M: 2p¹ (önceki L’de 2s² dolu) · S: 2p⁴ (önceki R’de 2p³ yarı dolu)'),
   A('Seçenekleri sına','Her seçenekteki grup, yarıçap ya da neden bu bilgilerle karşılaştırılır.','Yalnız R–S karşılaştırması ve nedeni doğrudur')],
  ne='Grafiğe göre doğru yargı',z='orta',alt='İyonlaşma Enerjisi',kaz='Birinci iyonlaşma enerjisi grafiğindeki sapmaları elektron dizilimiyle açıklar.',kalip='grafik',sekil=SK,
  metin='2. periyotta atom numaraları ardışık olan sekiz elementin birinci iyonlaşma enerjileri atom numarasına göre aşağıdaki grafikte gösterilmiştir. Elementler atom numarası artan sırada K, L, M, N, R, S, T ve V simgeleriyle belirtilmiştir.\nBuna göre aşağıdakilerden hangisi doğrudur?',
@@ -339,10 +339,10 @@ sy=[('s orbitallerinde toplam 6 elektron vardır.',say(C,lambda n,l,ml,ms:l==0)=
 assert [s[1] for s in sy]==[True,True,True,True,False] and say(C,lambda n,l,ml,ms:ml==0)==10
 q('0010','10',[A('Dizilimi yaz','17Cl atomunun elektron dizilimi orbitallere yerleştirilir.','1s² 2s² 2p⁶ 3s² 3p⁵'),
   A('Yargıları say','s, l = 1 ve n = 3 sayıları alt kabuklardan toplanır; eşleşmemiş elektron 3p’deki tek elektronludur.','s: 2 + 2 + 2 = 6 · l = 1: 6 + 5 = 11 · n = 3: 2 + 5 = 7 · eşleşmemiş: 1'),
-  A('ml = 0 sayısını bul','Her alt kabukta ml = 0 olan orbital 2 elektron alır; 3p’de ml = 0 orbitali doludur.','1s: 2 · 2s: 2 · 2p(ml=0): 2 · 3s: 2 · 3p(ml=0): 2 → 10'),
+  A('ml = 0 sayısını bul','Verilen sıraya göre 3p⁵’te ml = −1 ve ml = 0 orbitalleri çifttir, ml = +1 orbitalinde tek elektron vardır; ml = 0 orbitali doludur.','1s: 2 · 2s: 2 · 2p(ml=0): 2 · 3s: 2 · 3p(ml=0): 2 → 10'),
   A('Yanlışı seç','ml = 0 için verilen 9 değeri hesapla uyuşmaz.','Yanlış: ml = 0 olan 9 elektron')],
  ne='17Cl atomu için yanlış yargı',z='orta',alt='Elektron Dizilimi',kaz='Elektron dizilimi üzerinden s, l, n, ml ve eşleşmemiş elektron sayılarını değerlendirir.',kalip='düz',
- metin='Atom numarası 17 olan klor (Cl) atomunun temel hâldeki elektron dizilimi orbital orbital yazılıp elektronlar kuantum sayılarına göre sayılıyor.\nBuna göre bu atomla ilgili aşağıdakilerden hangisi yanlıştır?',
+ metin='Atom numarası 17 olan klor (Cl) atomunun temel hâldeki elektron dizilimi orbital orbital yazılıp elektronlar kuantum sayılarına göre sayılıyor. Bir p alt kabuğunda elektronlar orbitallere ml = −1, 0, +1 sırasıyla yerleşmektedir (önce birer birer, sonra eşleşerek).\nBuna göre bu atomla ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=sy[4][0],sira=yer(sy[4][0],[s[0] for s in sy[:4]],0),yan=[(s[0],s[2],'islem' if i<3 else 'bilgi') for i,s in enumerate(sy[:4])],istenen='Yanlış olan yargı.',
  ip=['Yargıları tek tek ele alıp her sayıyı dizilimdeki alt kabuklardan yeniden hesapla.'],
  bilgi=[B('ml ile sayım','Her alt kabukta ml = 0 değerine sahip tek bir orbital vardır ve bu orbital dolu ise 2 elektron içerir. Örnek: 2p⁶ alt kabuğunda ml = 0 olan 2 elektron bulunur')],
@@ -356,8 +356,8 @@ SK=tk(kutular([[('4s',['ud']),('3d',['ud','u','u','u','u'])]],w=.62,aralik=.6))
 D11=[(3,'Elektronları önce 3d’den vermiş (3d³ 4s²); oysa katyonda elektron önce en büyük n’li 4s orbitalinden alınır.','bilgi'),
      (4,'Nötr atomun eşleşmemiş elektron sayısını bulmuş; yükü hesaba katmamış.','dikkat'),
      (6,'3d orbitallerindeki elektron sayısını (6) eşleşmemiş elektron sayısı sanmış.','bilgi'),
-     (7,'Atomdaki 4 eşleşmemiş elektrona iyon yükünü (3) ekleyerek 7 bulmuş.','islem')]
-assert essiz(c3_ilk3d)==3 and un_atom()==4
+     (1,'3d’deki tek elektronlu üç orbitalden elektron verip (↑↓ ↑ kalır) 4s²’yi korumuş; bu durumda 1 eşleşmemiş elektron bulmuş.','bilgi')]
+assert 6-3-2*0>=0 and essiz(c3_ilk3d)==3 and un_atom()==4
 q('0011','11',[A('Atomun dizilimini oku','Diyagramda 4s² 3d⁶ dizilimi görülür; daha içteki orbitaller tam doludur.','4s²: ↑↓ · 3d⁶: ↑↓ ↑ ↑ ↑ ↑'),
   A('3 elektron ver','X³⁺ iyonunda elektronlar önce en büyük n’li 4s orbitalinden, sonra 3d’den çıkar.','4s² → 0 · 3d⁶ → 3d⁵'),
   A('Eşleşmemişleri say','3d⁵’te beş orbitalin her birinde bir elektron vardır.','Eşleşmemiş elektron: 5')],
@@ -433,18 +433,19 @@ V16=[1000,1900,2900,5000,6300,21300]
 assert [round(x,-2) for x in ARD[15]]==[1000,1900,2900,5000,6300,21300]
 SK=tk(cubuk_grafik(['1.','2.','3.','4.','5.','6.'],V16,25000,5000,'İyonlaşma enerjisi\\\\(kJ/mol)','Koparılan elektronun sırası',dx=.95))
 Z16=15; atomsay=lambda Z:say(alt(Z),lambda n,l,ml,ms:l==1)
-assert atomsay(15)==9 and atomsay(13)==7 and atomsay(14)==8 and atomsay(16)==10 and sum(k for (n,l),k in alt(15).items() if (n,l)==(3,1))==3
+assert essiz(alt(15))==3 and essiz(alt(13))==1 and essiz(alt(14))==2 and atomsay(15)==9 and atomsay(13)==7 and atomsay(14)==8 and atomsay(16)==10 and sum(k for (n,l),k in alt(15).items() if (n,l)==(3,1))==3
 q('0016','16',[A('Sıçramayı oku','İyonlaşma enerjisi 5. ile 6. elektron arasında birden çok kat artmıştır.','1.–5. enerjiler ≈ 1000–6300 · 6. enerji ≈ 21300'),
   A('Grubu ve atomu bul','5 değerlik elektronu olan 3. periyot elementi 5A grubundadır.','3s² 3p³ → 2 + 8 + 5 = 15'),
   A('Dizilimi yaz','Atom numarası 15 olan atomun dizilimi yazılır.','1s² 2s² 2p⁶ 3s² 3p³'),
-  A('l = 1 elektronlarını say','p orbitallerindeki elektronlar toplanır.','2p⁶ + 3p³ = 9')],
- ne='X’in l = 1 elektron sayısı',z='zor',alt='İyonlaşma Enerjisi',kaz='Ardışık iyonlaşma enerjisi grafiğinden atomu belirleyip l = 1 elektronlarını sayar.',kalip='grafik',sekil=SK,
- metin='3. periyotta bulunan X atomunun ardışık iyonlaşma enerjileri (kJ/mol) aşağıdaki grafikte gösterilmiştir.\nBuna göre, X atomunun temel hâldeki elektron diziliminde açısal momentum kuantum sayısı (l) 1 olan toplam kaç elektron vardır?',
- dogru=9,yan=[(3,'Yalnız dış katmandaki 3p³ elektronlarını sayıp 2p’deki 6 elektronu unutmuş.','dikkat'),(7,'Sıçramayı 3. ile 4. elektron arasında okuyup X’i 3A grubunda (3p¹) saymış; bu durumda 6 + 1 = 7 bulmuş.','bilgi'),
-  (8,'Sıçramayı 4. ile 5. elektron arasında okuyup X’i 4A grubunda (3p²) saymış; bu durumda 6 + 2 = 8 bulmuş.','bilgi'),(10,'Grafikteki 6 çubuğu değerlik elektron sayısı sanıp X’i 6A grubunda (3p⁴) saymış; bu durumda 6 + 4 = 10 bulmuş.','bilgi')],istenen='l = 1 olan elektron sayısı.',
+  A('Eşleşmemişleri say','Hund kuralına göre 3p³’te üç orbitalin her birinde bir elektron vardır; diğer alt kabuklar tam doludur.','3p³ → 3 eşleşmemiş elektron')],
+ ne='X’in eşleşmemiş elektron sayısı',z='zor',alt='İyonlaşma Enerjisi',kaz='Ardışık iyonlaşma enerjisi grafiğinden atomu belirleyip eşleşmemiş elektron sayısını bulur.',kalip='grafik',sekil=SK,
+ metin='3. periyotta bulunan X atomunun ardışık iyonlaşma enerjileri (kJ/mol) aşağıdaki grafikte gösterilmiştir.\nBuna göre, X atomunun temel hâlinde kaç elektron eşleşmemiş durumdadır?',
+ dogru=3,yan=[(1,'Sıçramayı 3. ile 4. elektron arasında okuyup X’i 3A grubunda (3p¹) saymış; bu durumda 1 eşleşmemiş elektron bulmuş.','bilgi'),
+  (2,'Sıçramayı 4. ile 5. elektron arasında okuyup X’i 4A grubunda (3p²) saymış; bu durumda 2 eşleşmemiş elektron bulmuş.','bilgi'),
+  (5,'Değerlik elektronlarının (3s² 3p³) hepsini eşleşmemiş saymış; oysa 3s² eşleşmiş elektronlardır.','dikkat'),(6,'Grafikteki 6 çubuğu eşleşmemiş elektron sayısı sanmış.','dikkat')],istenen='Eşleşmemiş elektron sayısı.',
  ip=['Çubukların büyüklüğündeki ani değişimin hangi sıradaki elektronla başladığını bul.'],
  bilgi=[B('Sıçrama ve grup','İç katmandan elektron koparmak gerektiğinde iyonlaşma enerjisi birden çok kat artar; sıçramadan önceki elektron sayısı A grubu numarasını verir. Örnek: Sıçrama 2. ile 3. elektron arasında ise atom 2A grubundadır')],
- puf='Sıçramadan önceki basamak sayısı grubu, periyot atom numarasını verir; sonra dizilimden l = 1 elektronlarını topla.')
+ puf='Sıçramadan önceki basamak sayısı grubu, periyot atom numarasını verir; sonra dizilimden eşleşmemiş elektronları say.')
 
 # =============== 0017 · izoelektronik iyonlar · zor · öncüllü ===============
 Xi=iyon(20,2); Yi=dict(alt(16)); Yi[(3,1)]+=2
@@ -452,32 +453,33 @@ assert sum(Xi.values())==sum(Yi.values())==18 and Xi==Yi and say(Xi,lambda n,l,m
 assert [Z for Z in range(3,37) if iyon(Z,2) in [alt(g) for g in (2,10,18,36)] and say(iyon(Z,2),lambda n,l,ml,ms:l==1)==12]==[20]
 assert sum(k for (n,l),k in alt(20).items() if l==0)==8 and sum(k for (n,l),k in alt(20).items() if l==0)!=6
 onc('0017','17','X²⁺ ve Y²⁻ iyonları izoelektroniktir. X²⁺ iyonu soy gaz elektron dizilimine sahiptir ve bu iyonda açısal momentum kuantum sayısı (l) 1 olan toplam 12 elektron bulunmaktadır.',
- [('X’in atom numarası Y’ninkinden 4 fazladır.',True,'12 elektron 2p⁶ ve 3p⁶’dır; X²⁺ 18 elektronludur, X 20 elektronlu atomdur. Y²⁻ da 18 elektronlu olduğundan Y 16 elektronludur; fark 4’tür.','iyon yüklerini ters işleyip atom numaralarını 16 ve 20 yerine ters bulmuş.'),
+ [('X’in atom numarası Y’ninkinden 4 fazladır.',True,'12 elektron 2p⁶ ve 3p⁶’dır; X²⁺ 18 elektronludur, X 20 elektronlu atomdur. Y²⁻ da 18 elektronlu olduğundan Y 16 elektronludur; fark 4’tür.','iyon yüklerini ters işleyip X’in atom numarasını 16, Y’ninkini 20 bulmuş ve farkı −4 saymış.'),
   ('X atomunun elektron diziliminde s orbitallerinde toplam 8 elektron vardır.',True,'X (Z = 20) dizilimi 1s² 2s² 2p⁶ 3s² 3p⁶ 4s²’dir; s orbitallerinde 2 + 2 + 2 + 2 = 8 elektron bulunur.','4s² elektronlarını saymayı unutup s orbitallerinde yalnız 6 elektron bulmuş.'),
   ('Y atomunun yarıçapı X atomunun yarıçapından büyüktür.',False,'Y (S) 3. periyotta, X (Ca) 4. periyottadır; katman sayısı fazla olan X’in yarıçapı daha büyüktür.','anyonun atomdan büyük olmasını atoma uygulayıp Y atomunun yarıçapını büyük saymış.')],
  1,'Buna göre, yukarıdaki ifadelerden hangileri doğrudur?',ne='X²⁺ ve Y²⁻ izoelektronik iyonları',z='zor',alt='İyonların Elektron Dizilimi',kaz='l = 1 elektron sayısından iyon dizilimini bulup atomların özelliklerini karşılaştırır.',kalip='öncüllü',
  ip=['l = 1 olan elektronların hangi alt kabuklarda bulunduğunu düşünerek iyonun toplam elektron sayısına ulaş.'],
  bilgi=[B('İzoelektronik iyonlar','Elektron sayıları eşit olan taneciklere izoelektronik denir; katyonun atom numarası elektron sayısından yükü kadar fazla, anyonun ise yükü kadar azdır. Örnek: Mg²⁺ ve O²⁻ izoelektroniktir, ikisi de 10 elektronludur')],
- puf='l = 1 elektron sayısı soy gaz dizilimini verir; izoelektronikte elektron sayısı eşit, atom numarası yüke göre değişir.')
+ puf='İzoelektronik taneciklerde elektron sayıları eşittir; atom numarası iyon yüküne göre değişir.')
 
 # =============== 0018 · ardışık beş elementin 1. IE grafiği · zor · grafik ===============
 H18=['X','Y','Z','T','R']; V18=[500,740,580,790,1010]
 assert [IE1[z] for z in range(11,16)]==[496,738,578,787,1012]
 SK=tk(cizgi_grafik(H18,V18,1200,200,'1. iyonlaşma enerjisi\\\\(kJ/mol)','Atom numarası artan sırada elementler',dx=.95))
-S18=['Y’nin birinci iyonlaşma enerjisinin Z’ninkinden büyük olması, Y’de 3s alt kabuğunun tam dolu olmasıyla açıklanır.',
- 'T atomunun 3p orbitallerinde eşleşmemiş elektron sayısı 3’tür.','R atomunun atom yarıçapı T atomununkinden büyüktür.','X’in ikinci iyonlaşma enerjisi Y’ninkinden küçüktür.','Z atomunun elektron dizilimi 3s² 3p² ile sona erer.']
+S18=['Y’nin birinci iyonlaşma enerjisi Z’ninkinden büyüktür; X’in ikinci iyonlaşma enerjisi ise Y’ninkinden büyüktür.',
+ 'T atomunun 3p orbitallerinde 3 eşleşmemiş elektron vardır; R atomunun yarıçapı T atomununkinden küçüktür.','R atomunun atom yarıçapı T atomununkinden büyüktür; Z atomunun 3p alt kabuğunda 1 elektron vardır.',
+ 'X’in ikinci iyonlaşma enerjisi Y’ninkinden küçüktür; Y’nin birinci iyonlaşma enerjisi Z’ninkinden büyüktür.','Y’nin birinci iyonlaşma enerjisi Z’ninkinden küçüktür; X’in ikinci iyonlaşma enerjisi Y’ninkinden büyüktür.']
 assert essiz({(3,1):2})==2 and essiz({(3,1):3})==3 and ARD[11][1]>ARD[12][1] and ATOMYARI.get(15,100)<110
 q('0018','18',[A('Elementleri belirle','X, 3. periyot 1A grubunda olduğundan ardışık beş element Na, Mg, Al, Si, P’dir.','X: 1A · Y: 2A · Z: 3A · T: 4A · R: 5A'),
   A('Grafikteki sapmayı bul','Y’den Z’ye değer düşer; Y’de 3s tam dolu, Z’de 3p’de tek elektron vardır.','3s² (Y) · 3s² 3p¹ (Z)'),
-  A('Seçenekleri sına','T’nin 3p’sinde 2, R’nin 3p’sinde 3 elektron vardır; yarıçap soldan sağa azalır; X⁺ soy gaz dizilimindedir.','T: 3p² → 2 eşleşmemiş; yarıçap: R < T; X’in 2. IE’si büyük'),
-  A('Doğruyu seç','Yalnız ilk seçenek hem nedeni hem sonucu doğru verir.','Y > Z: 3s² tam dolu')],
+  A('Seçenekleri sına','Her seçeneğin iki parçası ayrı sınanır: eşleşmemiş sayısı, yarıçap eğilimi ve X⁺’nın soy gaz dizilimi nedeniyle ikinci iyonlaşma enerjisi.','T: 3p² → 2 eşleşmemiş; yarıçap: R < T; X’in 2. IE’si büyük'),
+  A('Doğruyu seç','İki parçası da doğru olan tek seçenek birincisidir.','1. IE: Y > Z · 2. IE: X > Y')],
  ne='Grafiğe göre doğru yargı',z='zor',alt='İyonlaşma Enerjisi',kaz='Birinci iyonlaşma enerjisi grafiğinden elementleri belirleyip dizilim ve periyodik özellik yargılarını değerlendirir.',kalip='grafik',sekil=SK,
  metin='Atom numaraları ardışık olan beş elementin birinci iyonlaşma enerjileri atom numarasına göre aşağıdaki grafikte gösterilmiştir. Elementler atom numarası artan sırada X, Y, Z, T ve R ile simgelenmiştir. X elementi 3. periyotta ve 1A grubundadır.\nBuna göre aşağıdakilerden hangisi doğrudur?',
  dogru=S18[0],sira=yer(S18[0],[S18[1],S18[2],S18[3],S18[4]],0),
  yan=[(S18[1],'T’yi 5A grubunun elementi sanıp 3p’de 3 eşleşmemiş elektron bulmuş; T 4A grubundadır ve 3p²’de 2 eşleşmemiş elektron vardır.','bilgi'),
-      (S18[2],'Periyotta soldan sağa atom yarıçapının arttığını sanmış; oysa çekirdek yükü arttığı için yarıçap azalır, R’nin yarıçapı T’ninkinden küçüktür.','bilgi'),
+      (S18[2],'Periyotta soldan sağa atom yarıçapının arttığını sanmış; oysa çekirdek yükü arttığı için R’nin yarıçapı T’ninkinden küçüktür.','bilgi'),
       (S18[3],'X’in birinci iyonlaşma enerjisinin küçük olmasından ikinci enerjisinin de küçük olacağını sanmış; X⁺ soy gaz dizilimindedir ve ikinci elektron çok zor koparılır.','dikkat'),
-      (S18[4],'Z’yi T ile karıştırmış; Z 3A grubundadır ve dizilimi 3s² 3p¹ ile sona erer.','dikkat')],istenen='Doğru yargı.',
+      (S18[4],'Grafikte Y’nin değerini Z’ninkinden küçük okumuş; oysa Y’den Z’ye değer düşer, yani Y’nin birinci iyonlaşma enerjisi daha büyüktür.','dikkat')],istenen='Doğru yargı.',
  ip=['Grafikteki ilk elementten başlayarak noktaları sırayla elementlerle eşleştir.'],
  bilgi=[B('Ardışık elementleri tanıma','Atom numaraları ardışık elementler aynı periyotta soldan sağa dizilir; ilk elementin grubu bilindiğinde diğerleri de bellidir. Örnek: 2. periyotta 1A elementinden başlayarak 2A, 3A, 4A… diye gidilir')],
  puf='Önce noktaları elementlerle eşle; sonra düşüşün (Y→Z) nedenini alt kabuk doluluğuyla ilişkilendir.')
@@ -490,14 +492,16 @@ lp=lambda Z:say(alt(Z),lambda n,l,ml,ms:l==1)
 assert lp(8)==4 and lp(13)==7 and lp(12)==6 and lp(7)==3 and lp(9)==5 and lp(14)==8
 dg=4+7
 assert dg==11 and lp(7)+lp(12)==9 and 4+lp(12)==10 and lp(9)+lp(13)==12
+U=lambda Z:essiz(alt(Z))
+assert U(8)==2 and U(11)==1 and U(13)==1 and U(8)+U(11)+U(13)==4 and U(8)+U(11)==3 and U(7)+U(11)+U(13)==5 and U(8)==2 and U(12)==0
 q('0019','19',[A('Yeni periyodu bul','Yarıçap L’den M’ye ani bir artış gösterir; bu artış yeni periyodun başlangıcıdır ve M, 1A grubundadır.','M: 3. periyot 1A (Na)'),
   A('Elementleri eşle','Soy gaz atlandığı için L, 2. periyodun son elementidir (7A); K da 6A grubudur. N ve R de M’yi izler.','K = O; L = F; M = Na; N = Mg; R = Al'),
-  A('l = 1 elektronlarını say','K: 1s² 2s² 2p⁴ → 4 · R: 1s² 2s² 2p⁶ 3s² 3p¹ → 6 + 1','K: 4 · R: 7'),
-  A('Topla','İki sayı toplanır.','4 + 7 = 11')],
- ne='K ve R atomlarındaki l = 1 elektron sayıları toplamı',z='zor',alt='Periyodik Özellikler',kaz='Atom yarıçapı grafiğinden elementleri belirleyip l = 1 elektronlarını sayar.',kalip='grafik',sekil=SK,
- metin='Atom numarası artan sırada K, L, M, N ve R elementlerinin atom yarıçapları aşağıdaki grafikte gösterilmiştir. Elementler birbirini izleyen elementlerdir; yalnız aradaki soy gaz atomu grafikte yer almamaktadır. K elementi 2. periyottadır.\nBuna göre, K ve R atomlarının temel hâldeki elektron dizilimlerinde açısal momentum kuantum sayısı (l) 1 olan elektron sayılarının toplamı kaçtır?',
- dogru=11,yan=[(7,'Yalnız R atomunun l = 1 elektronlarını (6 + 1) sayıp K atomunu hesaba katmamış.','dikkat'),(9,'K’yi N, R’yi Mg sanmış: l = 1 elektronları 3 + 6 = 9 çıkmış; sıçrama noktasını bir element erken okumuş.','bilgi'),
-  (10,'R’yi Mg sanmış: K için 4, R için 6 bulup 4 + 6 = 10 yazmış.','bilgi'),(12,'K’yi F sanıp 2p⁵ ile 5, R’yi doğru 7 alarak 12 bulmuş.','bilgi')],istenen='l = 1 elektron sayıları toplamı.',
+  A('Eşleşmemişleri say','K: 2p⁴ → 2 · M: 3s¹ → 1 · R: 3p¹ → 1','2 + 1 + 1'),
+  A('Topla','Üç sayı toplanır.','2 + 1 + 1 = 4')],
+ ne='K, M ve R atomlarındaki eşleşmemiş elektron sayıları toplamı',z='zor',alt='Periyodik Özellikler',kaz='Atom yarıçapı grafiğinden elementleri belirleyip eşleşmemiş elektron sayılarını toplar.',kalip='grafik',sekil=SK,
+ metin='Atom numarası artan sırada K, L, M, N ve R elementlerinin atom yarıçapları aşağıdaki grafikte gösterilmiştir. Elementler birbirini izleyen elementlerdir; yalnız aradaki soy gaz atomu grafikte yer almamaktadır. K elementi 2. periyottadır.\nBuna göre, K, M ve R atomlarının temel hâldeki elektron dizilimlerindeki eşleşmemiş elektron sayıları toplamı kaçtır?',
+ dogru=4,yan=[(1,'Yalnız M atomunun eşleşmemiş elektronunu (3s¹) sayıp K ve R’yi hesaba katmamış.','dikkat'),(2,'Yalnız K atomunun 2 eşleşmemiş elektronunu sayıp M ve R’yi atlamış.','dikkat'),
+  (3,'R atomunu hesaba katmayıp yalnız K (2) ve M (1) için 2 + 1 = 3 bulmuş.','dikkat'),(5,'K’yi N sanıp 2p³ ile 3 eşleşmemiş elektron almış: 3 + 1 + 1 = 5 bulmuş.','bilgi')],istenen='Eşleşmemiş elektron sayıları toplamı.',
  ip=['Yarıçaptaki ani artışın hangi iki element arasında olduğunu belirle.'],
  bilgi=[B('Yarıçap ve periyot','Periyotta soldan sağa atom yarıçapı azalır; yeni bir periyoda geçilirken katman sayısı arttığı için yarıçap birden büyür. Örnek: 1A grubundaki bir atomun yarıçapı, bir önceki periyodun 7A atomundan çok büyüktür')],
  puf='Yarıçaptaki ani artış yeni periyodun 1A elementini gösterir; oradan geriye ve ileriye elementleri sırala.')
@@ -507,14 +511,17 @@ SK=tk(kesit([3,4],{(3,'2A'):'X',(3,'7A'):'Y',(4,'1A'):'Z',(4,'2A'):'T'}))
 assert son(19)[:2]==(4,0)
 y1=iyon(17,-1) if False else None
 Ycl=dict(alt(17)); Ycl[(3,1)]+=1; assert Ycl==iyon(20,2)
-assert ATOMYARI[12]<ATOMYARI.get(20,180) and say(alt(19),lambda n,l,ml,ms:True)==19
+assert IE1[19]<IE1[20] and say(alt(19),lambda n,l,ml,ms:True)==19
 onc('0020','20','Periyodik tablonun 3. ve 4. periyotlarından alınan bir kesitte X, Y, Z ve T elementlerinin yerleri gösterilmiştir. (X, Y, Z ve T elementlerin gerçek sembolleri değildir.)',
  [('Z atomunun en yüksek enerjili elektronunun baş ve açısal momentum kuantum sayıları sırasıyla 3 ve 2’dir.',False,'Z, 4. periyot 1A elementidir; son elektronu 4s orbitalinde olup n = 4 ve l = 0’dır.','Z’nin son elektronunu 3d orbitaline yerleştirmiş; oysa 4s orbitali 3d’den önce dolar.'),
   ('Y⁻ iyonu ile T²⁺ iyonunun elektron dizilimleri aynıdır.',True,'Y (3. periyot 7A) Y⁻ olunca 18 elektronlu olur; T (4. periyot 2A) T²⁺ olunca 18 elektronlu olur; ikisi de 1s² 2s² 2p⁶ 3s² 3p⁶ dizilimindedir.','Y⁻ ve T²⁺ iyonlarının her ikisinin de 18 elektronlu olduğunu hesaplamamış.'),
-  ('X atomunun yarıçapı T atomunun yarıçapından küçüktür.',True,'X ile T aynı grupta (2A) olup T daha alt periyottadır; katman sayısı fazla olan T’nin yarıçapı büyüktür.','aynı grupta yukarıdan aşağıya yarıçapın arttığını unutmuş.')],
+  ('Z atomunun birinci iyonlaşma enerjisi T atomununkinden küçük, ikinci iyonlaşma enerjisi ise T atomununkinden büyüktür.',True,'Z (4s¹) ilk elektronunu T’ye (4s²) göre daha kolay verir; ancak Z⁺ iyonu soy gaz dizilimindedir ve ikinci elektron çok zor koparılır, T⁺ ise 4s¹ ile bir elektron daha kolay verir.','Z⁺’nın soy gaz dizilimine sahip olduğunu görmeyip ikinci iyonlaşma enerjisini T’ninkinden küçük sanmış.')],
  4,'Buna göre, yukarıdaki ifadelerden hangileri doğrudur?',ne='3. ve 4. periyot kesiti',z='zor',alt='Periyodik Özellikler',kaz='Periyodik tablo kesitinden elementleri belirleyip kuantum sayıları, iyon dizilimi ve yarıçap yargılarını değerlendirir.',kalip='öncüllü',sekil=SK,
  ip=['Kesitten her elementin atom numarasını bulduktan sonra yargıları tek tek sına.'],
  bilgi=[B('4. periyot başı','4. periyotta 4s alt kabuğu 3d’den önce dolar; 1A ve 2A elementlerinin son elektronları 4s’de bulunur. Örnek: 2. periyotta son elektronlar 2s’de, 3. periyotta 3s’dedir')],
  puf='Kesitten atom numarasını bul; iyonlarda elektron sayısını eşitleyerek izoelektroniği, grup ve periyotla yarıçapı değerlendir.')
 
 bitir(P,'modernatom',UK)
+import json as _j
+_k=os.path.join(HV,'kartlar','modernatom.json'); _d=_j.load(open(_k)); _d['not_']='Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT Kimya çıkmış soruları, MEB 11. sınıf Modern Atom Teorisi kazanımları.'
+_j.dump(_d,open(os.path.join(HV,'kartlar','akmodernatom.json'),'w'),ensure_ascii=False,indent=1); os.remove(_k)

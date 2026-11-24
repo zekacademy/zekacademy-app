@@ -140,7 +140,7 @@ it2=[('Aynı amino asidi şifreleyen birden fazla kodon bulunabilir.',True,'amin
      ('Kodonlar mRNA üzerinde birbirini örtmeden ardışık olarak okunur.',True,'genetik şifre üçer nükleotitlik gruplar hâlinde, örtüşmeden ve boşluksuz okunur'),
      ('Toplam 64 kodonun tamamı birer amino asidi şifreler.',False,'64 kodondan 3’ü (UAA, UAG, UGA) dur kodonudur ve amino asit şifrelemez; amino asit şifreleyen kodon sayısı 61’dir'),
      ('Dur kodonlarına karşılık gelen antikodona sahip bir tRNA bulunmaz.',True,'dur kodonlarını tanıyan tRNA yoktur; sentez bu kodonlarda sonlanır')]
-r2,n2=tek(it2,False,'D')
+r2,n2=tek(it2,False,'A')
 assert 64-3==61 and n2.startswith('64 kodondan 3')
 q('0002',[A('Her ifadeyi değerlendir','Kodon sayısı, kodonların okunuşu ve dur kodonları genetik şifrenin temel özellikleridir.','Aynı amino asit, çoklu kodon: doğru · AUG: doğru · örtüşmeme: doğru · dur için tRNA yok: doğru'),
    A('Kodon sayısını say','Dört bazın üçlü kombinasyonları 4 × 4 × 4 = 64 kodon verir; bunların 3’ü dur kodonudur.','64 − 3 = 61 amino asit kodonu'),
@@ -149,7 +149,7 @@ q('0002',[A('Her ifadeyi değerlendir','Kodon sayısı, kodonların okunuşu ve 
   metin='Canlılarda genetik bilgi, mRNA üzerindeki nükleotit dizisinin üçer nükleotitlik kodonlar hâlinde okunmasıyla polipeptite çevrilir. Kodonların hangi amino asidi şifrelediğini gösteren genetik şifre tablosu, bütün canlılarda büyük ölçüde ortaktır.\nBuna göre, genetik şifre ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?',
   dogru=r2['dogru'],yan=r2['yan'],sira=r2['sira'],istenen='Genetik şifre hakkında yanlış olan ifade.',
   ip=['Kodonların toplam sayısı ile dur kodonlarının amino asit şifreleyip şifrelemediğini düşün.'],bilgi=[BS],
-  puf='64 kodonun 61’i amino asit, 3’ü dur kodonudur; “hepsi amino asit şifreler” ifadesi hep yanlıştır.')
+  puf='Her ifadeyi 61 amino asit kodonu, 3 dur kodonu ve okunuş kuralları ile sına.')
 
 # ===== 03 · kolay · su molekülü sayısı
 card(3,'pr-sayim','Peptit bağı ve su sayısı','n amino asitli tek zincirde n − 1 peptit bağı oluşur ve her bağda 1 su açığa çıkar.','Amino asit sayısı kadar su sanmak; her bağda iki su saymak.','kolay','düz',3,'polipeptit sentezinde su sayısı')
@@ -230,6 +230,7 @@ def transl_fig():
     for (cx,cy) in ((2.75,2.3),(2.4,2.8),(2.75,3.2)): b.append(f'\\draw[line width=.9pt,fill=vurgu!45] ({cx},{cy}) circle (.17);')
     b.append('\\draw[line width=.9pt] (2.75,2.13)--(2.75,2.0);\\draw[line width=.6pt] (2.75,2.3)--(2.4,2.8)--(2.75,3.2);')
     b.append('\\draw[line width=.9pt,fill=vurgu!45] (4.85,2.3) circle (.17);\\draw[line width=.9pt] (4.85,2.13)--(4.85,2.0);')
+    b.append(N(2.75,-0.38,'antikodon','font=\\small'));b.append(N(4.85,-0.38,'antikodon','font=\\small'))
     b.append(N(2.75,-0.95,'P','font=\\normalsize\\bfseries')); b.append(N(4.85,-0.95,'A','font=\\normalsize\\bfseries'))
     b.append('\\draw[line width=1.2pt,-{Stealth[length=2.3mm,width=1.9mm]}] (6.6,-0.9)--(7.9,-0.9);')
     return tk('\n'.join(b))
@@ -245,7 +246,7 @@ q('0006',[A('Antikodonlardan kodonlara','Antikodon, bağlandığı kodona tümle
 # ===== 07 · orta · prokaryot–ökaryot (yanlış olanlar)
 card(7,'pr-transk','Bakteri ve ökaryot protein sentezi','Bakteride transkripsiyon ve translasyon aynı bölmede eş zamanlı; ökaryotta mRNA çekirdekte sentezlenir, sitoplazmada ribozomlarda okunur.','Ökaryotta translasyonun çekirdekte olduğunu sanmak.','orta','öncüllü',3,'bakteri–insan protein sentezi')
 d7={'I':('Bakterilerde mRNA sentezi sürerken ribozomlar mRNA’ya bağlanıp translasyona başlayabilir.',True,'bakterilerde çekirdek zarı yoktur, transkripsiyon ve translasyon aynı bölmede ve eş zamanlı yürüyebilir'),
-    'II':('İnsan hücrelerinde mRNA’nın sentezlendiği bölme ile polipeptit sentezinin yapıldığı bölme aynıdır.',False,'insan hücrelerinde mRNA çekirdekte sentezlenir, polipeptit sitoplazmadaki ribozomlarda sentezlenir'),
+    'II':('İnsan hücresinin çekirdeğindeki bir genden sentezlenen mRNA için, mRNA’nın sentezlendiği bölme ile polipeptit sentezinin yapıldığı bölme aynıdır.',False,'insan hücrelerinde mRNA çekirdekte sentezlenir, polipeptit sitoplazmadaki ribozomlarda sentezlenir'),
     'III':('Hem bakterilerde hem insanda polipeptit sentezi ribozomlarda gerçekleşir.',True,'translasyon her iki canlı grubunda da ribozomlarda yapılır')}
 r7=onc(d7,'A',neg=True)
 q('0007',oncad(d7,True),'pr-transk','orta','Prokaryot ve ökaryot','Prokaryot ve ökaryotlarda transkripsiyon–translasyon bölmelerini karşılaştırır.','öncüllü',
@@ -297,7 +298,7 @@ q('0009',oncad(d9,True,etiket=('ulaşılabilir','ulaşılamaz'),bas=[A('Verileri
   puf='Yargı gerçekte doğru olsa bile, veriler onu göstermiyorsa o deneyle ulaşılamaz.')
 
 # ===== 10 · orta · transkripsiyon şeması · yanlış ifade
-card(10,'pr-transk','Transkripsiyon şeması','RNA polimeraz kalıp ipliği 3’→5’ okur, mRNA 5’→3’ uzar; mRNA kalıba tümleyen, kodlayıcı iplikle benzerdir.','Kalıbın 5’→3’ okunduğunu sanmak.','orta','şekilli',3,'transkripsiyon şeması ifadeleri')
+card(10,'pr-transk','Transkripsiyon şeması','RNA polimeraz kalıp ipliği 3’→5’ okur, mRNA 5’→3’ uzar; mRNA kalıba tümleyen, kodlayıcı iplikle benzerdir.','Kalıp ile kodlayıcı ipliği karıştırmak.','orta','şekilli',3,'transkripsiyon şeması ifadeleri')
 def transk_fig():
     b=[]
     b.append('\\draw[fill=vurgu!16,draw=none] (4.0,0.7) ellipse (1.55 and 1.5);')
@@ -318,19 +319,19 @@ def transk_fig():
     return tk('\n'.join(b),0.95)
 it10=[('II numaralı iplik kalıp olarak kullanılır; mRNA bu ipliğe tümleyen ribonükleotitlerle sentezlenir.',True,'mRNA, II numaralı ipliğe tümleyen nükleotitlerle uzamaktadır; bu iplik kalıptır'),
       ('III numaralı yapı, ribonükleotitleri birbirine bağlayarak mRNA zincirini uzatır.',True,'III numaralı yapı RNA polimerazdır ve ribonükleotitleri birbirine bağlar'),
-      ('RNA polimeraz, kalıp ipliği 5’→3’ yönünde okuyarak ilerler.',False,'kalıp olan II numaralı iplik soldan sağa 3’→5’ yönündedir ve enzim bu yönde ilerlediğinden kalıp 3’→5’ yönünde okunur'),
+      ('III numaralı yapı, I numaralı ipliği kalıp olarak kullanarak mRNA’yı sentezler.',False,'mRNA, şekilde II numaralı ipliğe tümleyen uzamaktadır; kalıp II numaralı iplik, I numaralı iplik ise kodlayıcı iplik olduğundan bu ifade yanlıştır'),
       ('IV numaralı molekülün dizisi, I numaralı ipliğin dizisine benzer; yalnız timin yerine urasil içerir.',True,'mRNA kalıba tümleyendir; kalıba karşı duran kodlayıcı iplikle aynı diziyi, T yerine U ile taşır'),
       ('Şekildeki olay, ökaryotik hücrelerde çekirdekte gerçekleşir.',True,'ökaryotlarda mRNA sentezi çekirdekte yapılır')]
 r10,n10=tek(it10,False,'C',yon=('Bu ifadeyi doğru sanmış; oysa yanlıştır: ','Bu ifadeyi yanlış sanmış; oysa doğrudur: '))
 q('0010',[A('Şekli oku','Soldan sağa I iplik 5’→3’, II iplik 3’→5’ uzanır; enzim sağa doğru ilerler, mRNA IV ise II’ye tümleyen olarak uzamaktadır.','II: kalıp · III: enzim · IV: mRNA'),
    A('Doğru ifadeleri ele','Kalıp ve mRNA ilişkisi, enzimin görevi, mRNA–kodlayıcı iplik benzerliği ve olayın yeri doğru verilmiştir.','Dört ifade doğru'),
-   A('Okuma yönünü incele','Kalıp II numaralı iplik 3’ ucu solda olacak biçimde yazılmıştır ve enzim sağa ilerlemektedir; bu da 3’→5’ yönüne karşılık gelir.','Enzim kalıbı 3’→5’ okur'),
-   A('Yanlışı seç','Kalıbın 5’→3’ okunduğunu söyleyen ifade şekille ve temel bilgiyle çelişir.','“5’→3’ okuyarak” yanlış')],
+   A('Kalıbı belirle','mRNA hangi ipliğe eşleşerek uzuyorsa kalıp odur; şekilde sentezlenen RNA II numaralı ipliğe bağlıdır.','Kalıp: II · Kodlayıcı: I'),
+   A('Yanlışı seç','I numaralı ipliği kalıp olarak gösteren ifade şekille çelişir.','“I numaralı iplik kalıp” yanlış')],
   'pr-transk','orta','Transkripsiyon','Transkripsiyon şemasını yorumlayarak yanlış ifadeyi bulur.','şekilli',
   metin='Şekilde, bir ökaryotik hücrenin çekirdeğinde mRNA sentezinin gerçekleştiği DNA bölgesi gösterilmiştir. I ve II DNA ipliklerini, III ve IV ise olaya katılan diğer yapıları göstermektedir; ok, III numaralı yapının ilerleme yönünü belirtmektedir. Uçlar 5’ ve 3’ ile işaretlenmiştir.\nBuna göre, şekildeki olayla ilgili aşağıdakilerden hangisi yanlıştır?',
   sekil=transk_fig(),dogru=r10['dogru'],yan=r10['yan'],sira=r10['sira'],istenen='Şekille ilgili yanlış olan ifade.',
-  ip=['mRNA’nın hangi DNA ipliğine tümleyen uzadığına ve enzimin bu iplik üzerinde hangi uçtan hangi uca ilerlediğine bak.'],bilgi=[BT,BK],
-  puf='mRNA 5’→3’ uzar; bunun için RNA polimeraz kalıbı 3’→5’ okur.')
+  ip=['mRNA’nın hangi DNA ipliğine eşleşerek uzadığına bak; her ifadeyi şekille karşılaştır.'],bilgi=[BT,BK],
+  puf='Kalıp iplik, sentezlenen RNA’nın eşleşerek uzadığı iplik; şekilde bu eşleşmeyi izle.')
 
 # ===== 11 · orta · kalıp bileşiminden mRNA bileşimi
 card(11,'pr-kodlama','Kalıp bileşiminden mRNA bileşimi','mRNA’daki her nükleotit sayısı kalıptaki tümleyen nükleotidin sayısına eşittir.','Kalıptaki sayıları doğrudan mRNA’ya taşımak.','orta','düz',3,'kalıptan mRNA nükleotit sayıları')
@@ -351,14 +352,14 @@ q('0011',[A('Eşleşmeleri belirle','mRNA’da A kalıptaki T’ye, G kalıptaki
   puf='mRNA’daki bir nükleotidin sayısı, kalıptaki tümleyen nükleotidin sayısına eşittir.')
 
 # ===== 12 · zor · gen yapısı · ekson–intron
-card(12,'pr-transk','Eksonlardan polipeptit uzunluğu','Olgun mRNA yalnız eksonlardan oluşur; kodon sayısı eksonların toplamının 3’e bölümüdür ve dur kodonu amino asit vermez.','İntronları da saymak; dur kodonunu amino asit saymak.','zor','şekilli',5,'ekson–intron ve amino asit sayısı')
+card(12,'pr-transk','Hatalı işlenmiş mRNA’dan polipeptit uzunluğu','mRNA’da kalan bölgelerin toplamı 3’e bölünür ve dur kodonu amino asit vermez.','Kalan intronu unutmak ya da tüm intronları saymak; dur kodonunu amino asit saymak.','zor','şekilli',5,'hatalı mRNA işlenmesi ve amino asit sayısı')
 ex=[150,120,210,90]; inn=[240,300,90]; assert sum(ex)%3==0
-top=sum(ex)+sum(inn); aa12=(sum(ex)-3)//3; assert (top,sum(ex),aa12)==(1200,570,189)
-d12=[(sum(ex)//3,'Olgun mRNA’daki 190 kodondan dur kodonunu da amino asit saymış; dur kodonu amino asit şifrelemez.','bilgi'),
-     (top//3-1,'İntronları çıkarmadan 1200 nükleotitin tamamını kodon saymış (1200 ÷ 3 − 1 = 399); intronlar mRNA’dan atılır.','bilgi'),
-     (top//3,'İntronları çıkarmamış ve dur kodonunu da amino asit saymış (1200 ÷ 3 = 400).','bilgi'),
-     (sum(ex),'Eksonların nükleotit sayısını (570) amino asit sayısı sanmış; her amino asit üç nükleotitle şifrelenir.','islem')]
-assert [x[0] for x in d12]==[190,399,400,570]
+top=sum(ex)+sum(inn); aa12=(sum(ex)+inn[1]-3)//3; assert (top,sum(ex),aa12)==(1200,570,289)
+d12=[((sum(ex)+inn[1])//3,'Dur kodonunu da amino asit sayarak (870 ÷ 3 = 290) bulmuş; dur kodonu amino asit şifrelemez.','bilgi'),
+     (top//3-1,'Bütün intronlar mRNA’da kalmış sanarak (1200 ÷ 3 − 1 = 399) bulmuş; yalnız 2. intron çıkarılmamıştır.','bilgi'),
+     (top//3,'Bütün intronları katmış ve dur kodonunu da amino asit saymış (1200 ÷ 3 = 400).','bilgi'),
+     (sum(ex),'Eksonların nükleotit sayısını (570) amino asit sayısı sanmış; her amino asit üç nükleotitle şifrelenir ve kalan intron da okunur.','islem')]
+assert [x[0] for x in d12]==[290,399,400,570] and (sum(ex)+inn[1])%3==0
 def gen_fig():
     b=[]; x=0.0; sc=1/120
     for i,e in enumerate(ex):
@@ -370,14 +371,15 @@ def gen_fig():
     b.append('\\draw[line width=1.3pt] (4.2,-0.85)--(4.9,-0.85);'); b.append(N(5.05,-0.85,'İntron','anchor=west,font=\\normalsize'))
     b.append(N(6.9,-0.85,'(sayılar nükleotit sayısıdır)','anchor=west,font=\\normalsize'))
     return tk('\n'.join(b),0.95)
-q('0012',[A('Eksonları topla','Olgun mRNA’da yalnız eksonlar kalır; intronlar transkripsiyondan sonra çıkarılır.','150 + 120 + 210 + 90 = 570 nükleotit'),
-   A('Kodon sayısını bul','Her kodon üç nükleotitten oluşur.','570 ÷ 3 = 190 kodon'),
-   A('Dur kodonunu çıkar','Kodlayıcı bölgenin son kodonu dur kodonudur ve amino asit şifrelemez.','190 − 1 = 189 amino asit')],
+q('0012',[A('Eksonları topla','Normal işlemede mRNA’da yalnız eksonlar kalır.','150 + 120 + 210 + 90 = 570 nükleotit'),
+   A('Kalan intronu ekle','Çıkarılmayan 2. intron mRNA’nın kodlayıcı bölgesine katılır.','570 + 300 = 870 nükleotit'),
+   A('Kodon sayısını bul','Her kodon üç nükleotitten oluşur.','870 ÷ 3 = 290 kodon'),
+   A('Dur kodonunu çıkar','Son kodon dur kodonudur ve amino asit şifrelemez.','290 − 1 = 289 amino asit')],
   'pr-transk','zor','Ekson–intron','Eksonların toplamından dur kodonunu çıkararak polipeptit uzunluğunu hesaplar.','şekilli',
-  metin='Şekilde, ökaryotik bir genin ekson ve intron bölgeleri nükleotit sayılarıyla birlikte gösterilmiştir. Gen transkribe edildikten sonra intronlar çıkarılıp eksonlar birleştirilmekte; oluşan olgun mRNA’nın tamamı translasyonda kodlayıcı bölge olarak kullanılmaktadır. İlk ekson başlangıç kodonuyla başlar, son ekson dur kodonuyla biter ve olgun mRNA’da başka nükleotit bulunmaz.\nBuna göre, bu genden sentezlenen polipeptit kaç amino asitten oluşur?',
+  metin='Şekilde, ökaryotik bir genin ekson ve intron bölgeleri nükleotit sayılarıyla birlikte gösterilmiştir. İlk ekson başlangıç kodonuyla başlar, son ekson dur kodonuyla biter. Bu genin işlenmesinde bir hata olmuş; yalnız 2. intron (300 nükleotit) mRNA’dan çıkarılmayıp olgun mRNA’da kalmış, diğer intronlar normal çıkarılmıştır. Kalan intron bölgesinde dur kodonu oluşmamakta ve okuma çerçevesi bozulmamaktadır; mRNA’da başka nükleotit bulunmaz.\nBuna göre, hatalı işlenmiş bu mRNA’dan sentezlenen polipeptit kaç amino asitten oluşur?',
   sekil=gen_fig(),dogru=aa12,yan=d12,istenen='Polipeptidin amino asit sayısı.',
   ip=['Hangi bölgelerin olgun mRNA’da kaldığını belirle; kalan nükleotitlerden kodon sayısına, oradan amino asit sayısına geç.'],bilgi=[BT,BN],
-  puf='Olgun mRNA = eksonlar; amino asit sayısı = eksonların toplamı ÷ 3 − 1.')
+  puf='Önce mRNA’da hangi bölgelerin kaldığını belirle, sonra kodon sayısından dur kodonunu çıkar.')
 
 # ===== 13 · orta · dizi şekli · anlamsız mutasyon
 card(13,'pr-mutasyon','Anlamsız mutasyonun etkisi','Tek nükleotit değişimiyle bir kodon UAA, UAG ya da UGA olursa polipeptit orada sonlanır.','Yalnız tek amino asidin değiştiğini sanmak.','orta','şekilli',4,'anlamsız mutasyonda kısalma')
@@ -440,21 +442,21 @@ q('0015',[A('Hidrojen bağı değişimi','G≡C çifti 3, A=T çifti 2 hidrojen 
   puf='G≡C ile A=T arasındaki dönüşüm 1 hidrojen bağı farkı yaratır; erken dur kodonu, kaybolan amino asit sayısı kadar peptit bağı azaltır.')
 
 # ===== 16 · zor · tablo · nükleik asit bileşimi (kesinlikle doğru)
-card(16,'pr-nukleik','Nükleotit bileşiminden molekül türü','Urasil RNA’yı gösterir; A = T ve G = C olması çift zincir için gerekli ama yeterli kanıt değildir; eşitlik bozuksa çift zincir olamaz.','Eşit oranları çift zincirin kanıtı saymak.','zor','tablo',4,'X, Y, Z nükleik asit bileşimi')
+card(16,'pr-nukleik','Nükleotit bileşiminden molekül türü','Urasil RNA’yı gösterir; A = T ve G = C olması çift zincir için gerekli ama yeterli kanıt değildir; eşitlik bozuksa çift zincir olamaz.','Eşit oranları çift zincirin kanıtı saymak.','orta','tablo',4,'X, Y, Z nükleik asit bileşimi')
 t16={'X':(30,30,0,20,20),'Y':(24,0,30,26,20),'Z':(22,28,0,18,32)}
 X,Y,Z=t16['X'],t16['Y'],t16['Z']
 assert Y[2]>0 and X[0]==X[1] and X[3]==X[4] and Z[1]>0 and Z[0]!=Z[1] and Z[3]!=Z[4]
 d16={'I':('Y bir RNA molekülüdür.',True,'Y’de urasil bulunur ve DNA’da urasil bulunmaz'),
-     'II':('X çift zincirli bir DNA molekülüdür.',False,'X’te A = T ve G = C olması çift zincirli olduğunu kesinleştirmez; tek zincirli bir DNA’da da sayılar tesadüfen eşit olabilir'),
+     'II':('X tek zincirli bir DNA molekülü olamaz.',False,'tek zincirli bir DNA’da da A = T ve G = C sayıları tesadüfen eşit olabilir; bu nedenle X için tek zincirli olamaz denemez'),
      'III':('Z tek zincirli bir DNA molekülüdür.',True,'Z’de timin bulunduğundan DNA’dır ve A ile T, G ile C sayıları eşit olmadığından çift zincirli olamaz')}
 r16=onc(d16,'C')
 q('0016',oncad(d16,False,son='Kesinlikle doğru olan yargılar bir arada yazılır.',bas=[A('Tabloyu oku','Urasil ve timin sütunları RNA–DNA ayrımını, A–T ve G–C eşitlikleri ise zincir sayısı hakkında bilgi verir.','X: A = T ve G = C; Y: urasil var; Z: timin var, A ≠ T ve G ≠ C')]),
-  'pr-nukleik','zor','Nükleik asit bileşimi','Nükleotit sayılarından molekülün türü ve zincir sayısı hakkında kesin çıkarım yapar.','tablo',
+  'pr-nukleik','orta','Nükleik asit bileşimi','Nükleotit sayılarından molekülün türü ve zincir sayısı hakkında kesin çıkarım yapar.','tablo',
   metin=oncmetin('Tabloda, tek bir nükleik asit molekülünden oluşan X, Y ve Z örneklerindeki nükleotit sayıları verilmiştir. Örneklerdeki moleküllerin hepsi tam olarak çözümlenmiş ve başka nükleotit bulunmamıştır.',d16,'Buna göre, bu yargılardan hangileri kesinlikle doğrudur?'),
   sekil=tablo_svg(['Molekül','Adenin','Timin','Urasil','Guanin','Sitozin'],[[k]+[str(x) for x in v] for k,v in t16.items()]),
   dogru=r16['dogru'],yan=r16['yan'],sira=r16['sira'],istenen='Kesinlikle doğru olan yargılar.',
-  ip=['Hangi nükleotitin bulunması DNA ya da RNA için ayırt edicidir; eşit oranların neyi kesinleştirip neyi kesinleştirmediğini düşün.'],bilgi=[BC,BH],
-  puf='Urasil RNA’yı kesinleştirir; A = T ve G = C yalnız çift zincire uyumdur, ama eşitlik yoksa çift zincir kesinlikle olamaz.')
+  ip=['Verinin hangi yargıyı kesinleştirdiğini, hangisini yalnızca olası bıraktığını ayrı ayrı düşün.'],bilgi=[BC,BH],
+  puf='Kesin yargı için verinin başka olasılığı dışladığından emin ol: oranlar bazı sonuçları kesinleştirir, bazılarını kesinleştirmez.')
 
 # ===== 17 · zor · mRNA bileşimi → gen hidrojen bağı ve timin sayısı
 card(17,'pr-sayim','mRNA oranlarından gen bağ ve nükleotit sayısı','mRNA’daki A + U toplamı gendeki A=T çift sayısını, G + C toplamı G≡C çift sayısını verir; kalıptaki T sayısı mRNA’daki A sayısına eşittir.','Kalıp ve kodlayıcı iplik sayılarını karıştırmak; hidrojen bağlarını ters almak.','zor','düz',5,'mRNA oranlarından gen hidrojen bağı')
@@ -478,13 +480,12 @@ q('0017',[A('Nükleotit sayılarını bul','mRNA’nın 300 nükleotitindeki say
   puf='Gendeki baz çifti sayıları mRNA’daki A + U ve G + C toplamlarına eşittir.')
 
 # ===== 18 · zor · polizom şeması (öncüllü)
-card(18,'pr-transl','Polizom ve polipeptit uzunlukları','Ribozomlar mRNA üzerinde 5’→3’ ilerler; 3’ uca en yakın ribozomun zinciri en uzundur; peptit bağı = amino asit − 1.','Peptit bağı sayısını amino asit sayısına eşitlemek.','zor','şekilli',5,'polizom yargıları')
-nz=[3,7,12]; kod18=25; ex_b=sum(n-1 for n in nz); fin_b=3*(kod18-1-1)
-assert (ex_b,fin_b)==(19,69)
-d18={'I':('En uzun polipeptiti sentezleyen ribozom, mRNA’nın 3’ ucuna en yakın olandır.',True,'ribozomlar mRNA üzerinde 5’→3’ ilerler; en uzun zincire sahip ribozom en çok ilerlemiş olduğundan 3’ uca en yakındır'),
-     'II':('Şekildeki üç polipeptit zincirinde toplam 22 peptit bağı bulunur.',ex_b==22,'zincirlerde 3 + 7 + 12 = 22 amino asit vardır; tek zincirde bağ sayısı amino asit sayısından 1 eksik olduğundan 2 + 6 + 11 = 19 peptit bağı bulunur'),
-     'III':('Üç ribozom da sentezi tamamladığında oluşan polipeptitlerde toplam 72 peptit bağı bulunur.',fin_b==72,'25 kodonun biri dur kodonudur; 24 amino asitli her zincirde 23 bağ olduğundan toplam 3 × 23 = 69 peptit bağı oluşur')}
-r18=onc(d18,'A')
+card(18,'pr-transl','Polizom ve polipeptit uzunlukları','Ribozomlar mRNA üzerinde 5’→3’ ilerler; 3’ uca en yakın ribozomun zinciri en uzundur; aynı mRNA aynı polipeptiti verir.','Zincir uzunluğu ile mRNA üzerindeki konumu ters ilişkilendirmek.','zor','şekilli',5,'polizom yargıları')
+nz=[3,7,12]
+d18={'I':('En kısa polipeptiti taşıyan ribozom, mRNA’nın 3’ ucuna en yakın olandır.',False,'ribozomlar mRNA üzerinde 5’→3’ ilerler; en çok ilerleyen, yani en uzun zincirli ribozom 3’ uca en yakındır, kısa zincirli ribozom 5’ uca yakındır'),
+     'II':('Üç ribozom da sentezine mRNA’nın başlangıç kodonunu okuyarak başlamıştır.',True,'her ribozom mRNA’nın 5’ ucuna yakın başlangıç kodonuna bağlanıp oradan ilerlemeye başlar'),
+     'III':('Üç ribozom sentezi tamamladığında oluşan polipeptitlerin amino asit dizilimleri aynıdır.',True,'üçü de aynı mRNA’yı okuduğundan aynı amino asit dizilimli polipeptitler oluşur')}
+r18=onc(d18,'D')
 def poli_fig():
     b=['\\draw[line width=2pt] (0,0)--(11,0);',N(-0.45,0,f'5{PR}'),N(11.45,0,f'3{PR}')]
     for n in nz:
@@ -496,10 +497,10 @@ def poli_fig():
     return tk('\n'.join(b),0.9)
 q('0018',oncad(d18,False,bas=[A('Şekli oku','Zincirdeki amino asit sayıları şekilde verilmiştir; ribozomlar soldan sağa, 5’ uçtan 3’ uca doğru ilerler.','Zincirler: 3, 7 ve 12 amino asit')]),
   'pr-transl','zor','Polizom','Polizom şemasında ribozom konumu ve polipeptit uzunluklarıyla peptit bağı sayılarını değerlendirir.','şekilli',
-  metin=oncmetin('Şekilde, tek bir mRNA molekülü üzerinde aynı anda translasyon yapan üç ribozom ve her birinin o anda sentezlediği polipeptit zincirinin amino asit sayısı gösterilmiştir. mRNA’nın kodlayıcı bölgesi, dur kodonu dahil 25 kodondan oluşmaktadır.',d18,'Buna göre, bu yargılardan hangileri doğrudur?'),
+  metin=oncmetin('Şekilde, tek bir mRNA molekülü üzerinde aynı anda translasyon yapan üç ribozom ve her birinin o anda sentezlediği polipeptit zincirinin amino asit sayısı gösterilmiştir. Ribozomların hepsi aynı mRNA’yı sonuna kadar okuyacaktır.',d18,'Buna göre, bu yargılardan hangileri doğrudur?'),
   sekil=poli_fig(),dogru=r18['dogru'],yan=r18['yan'],sira=r18['sira'],istenen='Doğru olan yargılar.',
-  ip=['Ribozomların ilerleme yönünü ve peptit bağı sayısının amino asit sayısıyla ilişkisini hatırla; üçüncü yargıda dur kodonuna dikkat et.'],bilgi=[BL,BP],
-  puf='Zincir uzunluğu ribozomun mRNA üzerinde ne kadar ilerlediğini gösterir; bağ sayısı hep amino asit sayısından 1 eksiktir.')
+  ip=['Ribozomların mRNA üzerindeki ilerleme yönünü ve hepsinin aynı mRNA’yı okuduğunu düşün.'],bilgi=[BL],
+  puf='Polizomda zincir uzunluğu ribozomun mRNA üzerinde ne kadar ilerlediğini gösterir.')
 
 # ===== 19 · orta · aynı polipeptit, farklı genler (ulaşılabilir)
 card(19,'pr-sifre','Aynı polipeptidi şifreleyen farklı mRNA’lar','Aynı amino asit dizilimi, farklı nükleotit dizili mRNA’larla şifrelenebilir; amino asit sayısı ve peptit bağı sayısı eşit kalır.','Amino asit dizilimi aynıysa mRNA dizisinin de aynı olması gerektiğini sanmak.','orta','öncüllü',3,'aynı polipeptit, farklı mRNA')
@@ -524,7 +525,7 @@ q('0020',oncad(d20,True,son='Doğru olduğu söylenemeyen yargılar bir arada ya
   'pr-transl','orta','Translasyon evreleri','Translasyonun başlama ve sonlanma evrelerindeki olayları değerlendirir.','öncüllü',
   metin=oncmetin('Ökaryotik bir hücrede ribozomlarda polipeptit sentezi sırasında mRNA, ribozom ve tRNA’lar arasında gerçekleşen olaylarla ilgili aşağıdaki yargılar öne sürülüyor.',d20,'Buna göre, bu yargılardan hangilerinin doğru olduğu söylenemez?'),
   dogru=r20['dogru'],yan=r20['yan'],sira=r20['sira'],istenen='Doğru olduğu söylenemeyen yargılar.',
-  ip=['Ribozomun hangi alt biriminin mRNA ile ilk eşleştiğini ve dur kodonuna ne olduğunu hatırla.'],bilgi=[BL,BS],
+  ip=['Translasyonun başlangıcında ve bitişinde hangi yapıların rol aldığını düşün.'],bilgi=[BL,BS],
   puf='Translasyonda mRNA’ya küçük alt birim bağlanır; dur kodonunda tRNA değil sonlanma gerçekleşir.')
 
 # ---------------- bitiş ----------------

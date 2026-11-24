@@ -24,6 +24,7 @@ TAIL='\n\\end{tikzpicture}'
 def fig(*parts): return tikz_svg(HEAD+'\n'.join(parts)+TAIL)
 def fmx(x): return fm(F(x))
 def onc(truth,reasons,sira,neg=False):
+    cap=lambda t:(t[0].upper()+t[1:]).rstrip('.')+'.'
     def kume(l):
         if l=='I, II ve III': return {'I','II','III'}
         return set(l.replace('Yalnız ','').replace(' ve ',' ').split())
@@ -35,11 +36,11 @@ def onc(truth,reasons,sira,neg=False):
         k=kume(l); c=[]
         for x in ('I','II','III'):
             if x in k and x not in hedef:
-                c.append(f'{x}. öncülü '+('yanlış' if neg else 'doğru')+f' saymış, oysa '+('doğrudur' if neg else 'yanlıştır')+f': {reasons[x]}')
+                c.append(f'{x}. öncülü '+('yanlış' if neg else 'doğru')+f' saymış, oysa '+('doğrudur' if neg else 'yanlıştır')+f': {reasons[x]}.')
             if x in hedef and x not in k:
-                c.append(f'{x}. öncülünü '+('doğru' if neg else 'yanlış')+f' saymış, oysa '+('yanlıştır' if neg else 'doğrudur')+f': {reasons[x]}')
+                c.append(f'{x}. öncülünü '+('doğru' if neg else 'yanlış')+f' saymış, oysa '+('yanlıştır' if neg else 'doğrudur')+f': {reasons[x]}.')
         yan.append((l,' '.join(c),'bilgi'))
-    ad=[A(f'{x}. öncülü incele',reasons[x],f'{x}: '+('doğru' if truth[x] else 'yanlış')) for x in ('I','II','III')]
+    ad=[A(f'{x}. öncülü incele',cap(reasons[x]),f'{x}: '+('doğru' if truth[x] else 'yanlış')) for x in ('I','II','III')]
     ad.append(A('Sonuca var',('Yanlış olan öncüller seçilir.' if neg else 'Doğru öncüller birleştirilir.'),('Yanlış: ' if neg else 'Doğru: ')+', '.join(sorted(hedef))))
     return dog[0],yan,ad
 S5=['Yalnız I','Yalnız II','I ve II','I ve III','II ve III']
@@ -285,18 +286,18 @@ q('0010',tipId='cozelti-cozunurluk-hesap',tip='Çözünürlük hesapları',z='or
  ad=[A('Grafikten oku','50 °C’de çözünürlük 60, 20 °C’de 30 g/100 g sudur.','S₅₀ = 60, S₂₀ = 30'),A('Çözeltiyi parçala','100 g suya 60 g X çözünür; çözelti 160 g olur. 240 g için oranla.','Su = 150 g, X = 90 g'),A('20 °C’de çözünebilen','150 g su, 20 °C’de 30 × 1,5 kadar X çözer.','45 g X çözeltide kalır'),A('Çöken','Başlangıçtaki X’ten kalan çıkarılır.','90 − 45 = 45 g')],
  puf='Çözünürlük 100 g su içindir; önce gerçek su kütlesine ölçekle, sonra çıkar.',sekil=sk)
 # ================= 11 · orta · çözünürlük eğrileri (öncüllü) =================
-sk=fig(*cgraf([('K',[(0,20),(100,95)],'vurgu!70!black',(92,102)),('L',[(0,60),(100,20)],'orange!80!black',(8,66)),('G',[(0,18),(100,2)],'blue!60!black',(10,30))],[20,50,80],[20,40,60,80],ymax=105))
+sk=fig(*cgraf([('K',[(0,20),(100,95)],'vurgu!70!black',(92,102)),('L',[(0,60),(100,20)],'orange!80!black',(8,66)),('M',[(0,35),(100,40)],'blue!60!black',(10,31))],[20,50,80],[20,40,60,80],ymax=105))
 truth={'I':True,'II':False,'III':True}
 reasons={'I':'sıcaklık arttıkça K’nın çözünürlüğü artar; bu, çözünmenin ortamdan ısı alan (endotermik) bir süreç olduğunu gösterir',
  'II':'L’nin çözünürlüğü sıcaklıkla azaldığından çözünmesi ortama ısı veren (egzotermik) bir süreçtir; ΔH sıfırdan küçüktür',
- 'III':'gazların sudaki çözünürlüğü sıcaklıkla azalır; bu, gazın çözünmesinin egzotermik olduğunu gösterir'}
+ 'III':'M’nin çözünürlüğü sıcaklıkla çok az değişir; bu, çözünmenin ısı alışverişinin çok küçük olduğunu gösterir'}
 dg,yn,ad=onc(truth,reasons,S5)
 q('0011',tipId='cozelti-cozunurluk-etken',tip='Çözünürlüğü etkileyen faktörler',z='orta',alt='Çözünürlük',kaz='Çözünürlük–sıcaklık eğrilerinden çözünme ısısının işaretini yorumlar.',
- kart='K-AKCOZ-10 (çözünürlük faktörleri) · K, L katıları ve G gazı',kalip='öncüllü',
- metin='Şekilde, katı K ve L ile gaz G’nin sudaki çözünürlüklerinin sıcaklıkla değişimi verilmiştir. (G için basınç sabittir.)\nI. K’nın suda çözünmesi endotermiktir.\nII. L’nin çözünme entalpisi (ΔH) sıfırdan büyüktür.\nIII. G’nin suda çözünmesi egzotermiktir.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
+ kart='K-AKCOZ-10 (çözünürlük faktörleri) · K, L ve M katıları',kalip='öncüllü',
+ metin='Şekilde, K, L ve M katılarının sudaki çözünürlüklerinin sıcaklıkla değişimi verilmiştir.\nI. K’nın suda çözünmesi endotermiktir.\nII. L’nin çözünme entalpisi (ΔH) sıfırdan büyüktür.\nIII. M’nin suda çözünmesi sırasındaki ısı alışverişi, K ve L’ninkine göre çok küçüktür.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  dogru=dg,yan=yn,sira=S5,istenen='Doğru olan öncüller.',
- ip=['Çözünürlüğün sıcaklıkla artması ya da azalması, çözünmenin ısı alan mı yoksa ısı veren bir süreç mi olduğuyla ilişkilidir.'],bilgi=[B_E],ad=ad,
- puf='Sıcaklıkla çözünürlük artıyorsa çözünme endotermik, azalıyorsa egzotermiktir.',sekil=sk)
+ ip=['Eğrilerin eğimini, çözünme entalpisiyle ilişkilendirmeyi dene.'],bilgi=[B_E],ad=ad,
+ puf='Çözünürlük eğrisinin eğimi, çözünmenin ısı alışverişi hakkında bilgi verir.',sekil=sk)
 # ================= 12 · orta · enerji diyagramı (öncüllü) =================
 kafes=F(800); hid=F(-780); dH=kafes+hid; assert dH==20
 h=lambda e: float(e)*2.2/800
@@ -315,8 +316,8 @@ q('0012',tipId='cozelti-cozunme-enerji',tip='Çözünme sürecinde enerji',z='or
  kart='K-AKCOZ-11 (çözünme entalpisi) · MX katısı',kalip='öncüllü',
  metin='Şekilde, iyonik MX katısının suda çözünmesine ilişkin enerji değişimleri verilmiştir.\nI. MX’in suda çözünmesi endotermiktir.\nII. MX çözünürken çözeltinin sıcaklığı düşer.\nIII. Sıcaklık arttıkça MX’in sudaki çözünürlüğü azalır.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  dogru=dg,yan=yn,sira=S5,istenen='Doğru olan öncüller.',
- ip=['Kafesin dağılması ve iyonların hidratasyonu sırasındaki enerji değişimlerini toplayarak net işareti bulmayı dene.'],bilgi=[B_EN,B_E],ad=ad,
- puf='Net ΔH pozitifse çözünme endotermiktir; çözelti soğur ve çözünürlük sıcaklıkla artar.',sekil=sk)
+ ip=['Kafesin dağılması ve iyonların hidratasyonu sırasındaki enerji değişimlerini toplayarak net işareti bulmayı dene.'],bilgi=[B_EN],ad=ad,
+ puf='Kafesin dağılması ve hidratasyonun enerjilerini işaretleriyle topla.',sekil=sk)
 # ================= 13 · orta · ozmos U tüpü (olumsuz, öncüllü) =================
 sk=fig('\\fill[vurgu!12] (0,0) rectangle (1,2.0); \\fill[vurgu!12] (1,0) rectangle (1.45,.6);',
  '\\fill[vurgu!45] (1.9,0) rectangle (2.9,2.0); \\fill[vurgu!45] (1.45,0) rectangle (1.9,.6);',
@@ -335,7 +336,7 @@ q('0013',tipId='cozelti-koligatif-yorum',tip='Koligatif özelliklerin yorumlanma
  metin='Şekildeki U borusunun orta bölümüne yalnız su moleküllerini geçiren yarı geçirgen bir zar yerleştirilmiş; zarın solundaki kola 0,1 M, sağındaki kola 0,3 M glikoz sulu çözeltisi eşit yükseklikte konulmuştur.\nI. Su molekülleri soldan sağa doğru net geçiş yapar.\nII. Zamanla sağ koldaki sıvı düzeyi yükselir.\nIII. Denge kurulduğunda iki koldaki glikoz derişimleri eşit olur.\nBuna göre yukarıdaki yargılardan hangileri yanlıştır?',
  dogru=dg,yan=yn,sira=S5b,istenen='Yanlış olan öncüller.',
  ip=['Zardan yalnız çözücünün geçtiğini göz önüne alıp suyun hangi yöne ve neden geçtiğini düşün.'],bilgi=[B_O],ad=ad,
- puf='Ozmosta su seyreltikten derişiğe geçer; çözünen zardan geçmediği için derişimler eşitlenmez.',sekil=sk)
+ puf='Zardan geçebilen ve geçemeyen maddeyi ayırt edip net akışın yönünü belirle.',sekil=sk)
 # ================= 14 · orta · karıştırma + buharlaştırma =================
 a_,pa,b_,pb,bf=F(200),F(10),F(100),F(40),F(100)
 cs=a_*pa/100+b_*pb/100; ct=a_+b_; p14=cs/(ct-bf)*100
@@ -423,7 +424,7 @@ cok19=xm-SXf(20); assert cok19==40
 d_a=ym; d_b=xm; d_c=xm+ym; d_d=SXf(80)-SXf(20)
 assert d_d==60 and len({cok19,d_a,d_b,d_c,d_d})==5
 sk=fig(*cgraf([('X',[(0,10),(100,110)],'vurgu!70!black',(95,103)),('Y',[(0,F(100,3).__float__() +0),(20,40),(80,60),(100,F(200,3))],'orange!80!black',(92,76))],[20,80],[30,40,60,90],ymax=115))
-q('0019',tipId='cozelti-cozunurluk-hesap',tip='Çözünürlük hesapları',z='zor',alt='Çözünürlük',kaz='Çözünürlük eğrilerinden iki katının soğutmayla ayrılmasını yorumlar.',
+q('0019',tipId='cozelti-cozunurluk-hesap',tip='Çözünürlük hesapları',z='orta',alt='Çözünürlük',kaz='Çözünürlük eğrilerinden iki katının soğutmayla ayrılmasını yorumlar.',
  kart='K-AKCOZ-09 (çözünürlük ve çökelme) · X ve Y katılarının karışımı',kalip='grafik',
  metin='X ve Y katılarının sudaki çözünürlüklerinin sıcaklıkla değişimi şekildeki grafikte verilmiştir.\n70 g X ve 36 g Y katıları karışımı 80 °C’de 100 g suda tamamen çözülüyor. Sonra çözelti 20 °C’a soğutuluyor.\nBuna göre dibe çöken katı kaç gramdır? (X ve Y birbirinin çözünürlüğünü etkilemez.)',
  dogru=cok19,yan=[(d_a,'Çöken katıyı Y sanmış: 36.','bilgi'),(d_b,'Soğutmada X’in tamamının çöktüğünü sanmış: 70.','dikkat'),(d_c,'Her iki katının da tamamının çöktüğünü sanmış: 70 + 36 = 106.','dikkat'),(d_d,'X’in 80 °C ve 20 °C’deki çözünürlük farkını çöken saymış: 90 − 30 = 60.','dikkat')],

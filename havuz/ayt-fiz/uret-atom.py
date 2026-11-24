@@ -65,7 +65,7 @@ d1,y1,ad1=onc(tr,rs,S5)
 q('0001',1,z='kolay',kalip='öncüllü',tipId='atom-model',tip='Atom modellerinin karşılaştırılması',kaz='Şekli verilen atom modelinin kabullerini yorumlar.',
  metin='Şekilde, atomun yapısını açıklamak için ortaya atılan bir model gösterilmiştir.\nBuna göre, bu modelle ilgili;\nI. Atomun pozitif yükü atom hacmine düzgün dağılmıştır.\nII. Elektronlar, atomun merkezindeki çekirdeğin etrafında yörüngelerde dolanır.\nIII. Atomun kütlesinin büyük bölümü merkezde küçük bir hacimde toplanmıştır.\nyargılarından hangileri doğrudur?',
  dogru=d1,yan=y1,sira=S5,istenen='Modelle uyumlu yargılar.',ip=['Şekilde elektronların nerede bulunduğuna ve atom içinde ayrı bir merkez bölge çizilip çizilmediğine bak.'],bilgi=[B_MOD],ad=ad1,
- puf='Thomson modelinde çekirdek ve yörünge yoktur; elektronlar pozitif kürenin içindedir.',sekil=sk)
+ puf='Her modelin kabulünü şekildeki çizimle eşleştirerek öncülleri tek tek sına.',sekil=sk)
 # ================= 02 · kolay · α saçılması =================
 sk=fig('\\fill (0,0) circle (.1);',
  f'\\draw[thick,{ARR}] (-4,3.3) -- (4,3.3);',N(-4.3,3.3,'K','left'),
@@ -116,7 +116,7 @@ d5,y5,ad5=onc(tr,rs,S5)
 q('0005',4,z='orta',kalip='öncüllü',tipId='atom-bohr',tip='Bohr modelinde yörünge nicelikleri',kaz='Bohr modelinde yörünge değişiminde nicelikler arasındaki değişimi yorumlar.',
  metin='Şekilde, Bohr atom modeline göre hidrojen atomunun ilk üç yörüngesi ve bu yörüngelerdeki elektronun konumu gösterilmiştir. Atomun elektronu, bir foton soğurarak 2. yörüngeden 3. yörüngeye çıkıyor.\nBuna göre, bu olay sırasında;\nI. elektronun kinetik enerjisi artar.\nII. elektronun yörüngedeki dolanma periyodu artar.\nIII. atomun toplam enerjisi artar.\nyargılarından hangileri doğrudur?',
  dogru=d5,yan=y5,sira=S5,istenen='Doğru olan yargılar.',ip=['Elektronun hızının ve toplam enerjisinin yörünge numarasıyla nasıl değiştiğini ayrı ayrı düşün.'],bilgi=[B_BOH],ad=ad5,
- puf='Dış yörüngede hız ve kinetik enerji azalır, periyot ve toplam enerji artar.',sekil=sk)
+ puf='Her niceliğin n ile bağıntısını ayrı yaz; yönünü n = 2 ve n = 3 değerleriyle karşılaştır.',sekil=sk)
 # ================= 06 · orta · dalga boyu sıralaması =================
 sc=.22; ye={1:0,2:12*sc,3:15*sc}
 lev=''.join(f'\\draw[thick] (0,{ye[n]}) -- (4.6,{ye[n]}); '+N(-.1,ye[n],f'$n={n}$','left')+N(4.7,ye[n],'$'+('-' if True else '')+str(abs(v))+'$ eV','right') for n,v in ((1,18),(2,6),(3,3)))
@@ -126,10 +126,14 @@ sk=fig(lev,
  f'\\draw[very thick,{ARR}] (3.6,{ye[3]}) -- (3.6,{ye[2]+.05});'+N(3.6,ye[2]-.3,'M',''))
 gK,gL,gM=Fr(-3)-Fr(-18),Fr(-6)-Fr(-18),Fr(-3)-Fr(-6)
 assert (gK,gL,gM)==(15,12,3)
+def sirala(e): return sorted('KLM',key=lambda k:1/e[k],reverse=True)
+assert sirala(dict(K=gK,L=gL,M=gM))==['M','L','K'] and sirala(dict(K=gL,L=gK,M=gM))==['M','K','L']
+assert sorted('KLM',key=lambda k:dict(K=gK,L=gL,M=gM)[k],reverse=True)==['K','L','M']
+assert 1/18==1/18 and 1/6>1/18 and 1/3==1/3 and 1/6<1/3
 q('0006',5,z='orta',kalip='şekilli',tipId='atom-seviye',tip='Enerji düzeyleri ve foton geçişleri',kaz='Düzeyler arası geçişlerde yayımlanan fotonların dalga boylarını karşılaştırır.',
  metin='Şekilde, üç enerji düzeyi gösterilen bir atomda elektronun yaptığı K, L ve M geçişleri okla gösterilmiştir. Bu geçişlerde yayımlanan fotonların dalga boyları sırasıyla λ_K, λ_L ve λ_M’dir (düzeyler ölçekli çizilmemiştir).\nBuna göre, λ_K, λ_L ve λ_M arasındaki ilişki aşağıdakilerden hangisidir?',
- dogru='λ_M > λ_L > λ_K',yan=[('λ_K > λ_L > λ_M','Dalga boyunu enerji farkıyla doğru orantılı almıştır; enerji farkı büyük olan geçişin dalga boyu küçüktür.','bilgi'),('λ_L > λ_K > λ_M','Dalga boylarını geçişin başladığı düzeyin sırasına göre dizmiştir; foton yalnız enerji farkına bağlıdır.','dikkat'),('λ_K > λ_M > λ_L','Geçişleri kendi aralarında karıştırmış, M geçişinin enerji farkını L’ninkinden büyük sanmıştır.','dikkat'),('λ_L > λ_M > λ_K','L geçişinin enerji farkını (12 eV) en küçük sanmıştır; en küçük fark M’ninki olan 3 eV’tur.','islem')],
- sira=['λ_K > λ_L > λ_M','λ_L > λ_K > λ_M','λ_K > λ_M > λ_L','λ_L > λ_M > λ_K','λ_M > λ_L > λ_K'],
+ dogru='λ_M > λ_L > λ_K',yan=[('λ_K > λ_L > λ_M','Dalga boyunu enerji farkıyla doğru orantılı almıştır (E_K > E_L > E_M ise λ_K > λ_L > λ_M demiştir); oysa dalga boyu enerjiyle ters orantılıdır.','bilgi'),('λ_M > λ_K > λ_L','K ve L geçişlerinin enerji farklarını yer değiştirmiştir (K: 12 eV, L: 15 eV); bu durumda ters orantıyla λ_M > λ_K > λ_L bulunur.','islem'),('λ_M > λ_K = λ_L','Foton enerjisi yerine yalnız alt düzeyin enerji büyüklüğünü almıştır (K ve L için 18 eV, M için 6 eV); ters orantıyla λ_M > λ_K = λ_L bulunur.','bilgi'),('λ_K = λ_M > λ_L','Foton enerjisi yerine yalnız başladığı düzeyin enerji büyüklüğünü almıştır (K ve M için 3 eV, L için 6 eV); ters orantıyla λ_K = λ_M > λ_L bulunur.','bilgi')],
+ sira=['λ_K > λ_L > λ_M','λ_M > λ_K > λ_L','λ_M > λ_K = λ_L','λ_K = λ_M > λ_L','λ_M > λ_L > λ_K'],
  istenen='Dalga boyları arasındaki sıralama.',ip=['Her okun başladığı ve bittiği düzeylerin enerjilerinden foton enerjisini bul; sonra dalga boyunun enerjiyle ilişkisini düşün.'],bilgi=[B_SEV],
  ad=[A('Enerji farklarını bul','Her geçişte foton enerjisi iki düzeyin enerji farkıdır.','K: −3 − (−18) = 15 eV · L: −6 − (−18) = 12 eV · M: −3 − (−6) = 3 eV'),A('Enerjileri sırala','Enerjiler arasındaki sıra:','E_K > E_L > E_M'),A('Dalga boyuna geç','Dalga boyu foton enerjisiyle ters orantılıdır (λ = hc/E).','Enerji büyük → dalga boyu küçük'),A('Sonuç','Sıralamayı ters çevir.','λ_M > λ_L > λ_K')],
  puf='Dalga boyu ile foton enerjisi ters orantılıdır; en büyük enerji farkı en kısa dalga boyunu verir.',sekil=sk)
@@ -221,7 +225,7 @@ d12,y12,ad12=onc(tr,rs,S5)
 q('0012',1,z='orta',kalip='öncüllü',tipId='atom-model',tip='Atom modellerinin karşılaştırılması',kaz='Şekilleri verilen atom modellerini tanıyıp başarı ve sınırlarını değerlendirir.',
  metin='Şekilde, K, L ve M ile gösterilen üç atom modeli çizilmiştir.\nBuna göre;\nI. K modeline göre atomun kütlesinin büyük bölümü merkezdeki çekirdekte toplanmıştır.\nII. L modeline göre çekirdek etrafında dolanan elektron, klasik elektromanyetizmaya göre enerji yayarak çekirdeğe düşmelidir.\nIII. M modeli, çok elektronlu atomların çizgi spektrumlarını başarıyla açıklar.\nyargılarından hangileri doğrudur?',
  dogru=d12,yan=y12,sira=S5,istenen='Doğru olan yargılar.',ip=['Önce her şeklin hangi atom modeline ait olduğunu elektronların ve çekirdeğin çizimine bakarak belirle.'],bilgi=[B_MOD],ad=ad12,
- puf='Thomson’da çekirdek yok, Rutherford’da kararlılık sorunu var, Bohr yalnız tek elektronlu atomlarda başarılı.',sekil=sk)
+ puf='Önce her şeklin modelini çizimden belirle; sonra her modelin kabul ve eksiklerini ayrı ayrı yaz.',sekil=sk)
 # ================= 13 · orta · spektrum çizgisi λ =================
 sx=8/200
 ax='\\draw[thick] (0,0) -- (8.4,0);'+''.join(f'\\draw[thick] ({v*sx:.2f},0) -- ({v*sx:.2f},-.12); '+N(v*sx,-.38,str(v),'font=\\footnotesize') for v in (0,50,100,150,200))
@@ -233,7 +237,7 @@ assert l32==300 and l21-l31==50 and l31*l21/(l31+l21)==60 and (l31+l21)/2==125 a
 q('0013',7,z='orta',kalip='grafik',tipId='atom-spektrum',tip='Spektrum çizgileri ve seriler',kaz='Üç düzeyli atomda iki çizgiden üçüncünün dalga boyunu bulur.',
  metin='Üç enerji düzeyi (n = 1, 2, 3) bulunan bir atomun yayımladığı çizgi spektrumunun iki çizgisi şekilde gösterilmiştir. K çizgisi elektronun 3. düzeyden 1. düzeye, L çizgisi ise 2. düzeyden 1. düzeye inmesiyle oluşmaktadır.\nBuna göre, elektronun 3. düzeyden 2. düzeye inmesiyle oluşan çizginin dalga boyu kaç nm’dir?',
  dogru=l32,yan=[(50,'Dalga boylarının farkını almıştır: 150 − 100 = 50 nm.','bilgi'),(60,'Enerjiler toplanırken yanlışlıkla 1/λ değerlerini toplamıştır: 1/λ = 1/100 + 1/150 → 60 nm.','islem'),(125,'Dalga boylarının ortalamasını almıştır: (100 + 150) ÷ 2 = 125 nm.','bilgi'),(250,'Dalga boylarını toplamıştır: 100 + 150 = 250 nm.','bilgi')],
- istenen='3 → 2 geçişinde yayımlanan fotonun dalga boyu (nm).',ip=['Üç düzey arasındaki enerji farklarını yaz; 3 → 2 enerjisi diğer ikisinin farkıdır; enerjiyi dalga boyuyla ilişkilendir.'],bilgi=[B_SPE,B_SEV],
+ istenen='3 → 2 geçişinde yayımlanan fotonun dalga boyu (nm).',ip=['Üç geçişin enerjileri arasında düzey şemasından bir ilişki kur; enerjiyi dalga boyuyla ilişkilendir.'],bilgi=[B_SPE,B_SEV],
  ad=[A('Enerji ilişkisini kur','3 → 1 geçişi, 3 → 2 ve 2 → 1 geçişlerinin toplamıdır.','E₃₁ = E₃₂ + E₂₁'),A('Dalga boyuna çevir','E = hc/λ olduğundan her enerji 1/λ ile orantılıdır.','1/λ₃₁ = 1/λ₃₂ + 1/λ₂₁'),A('Değerleri yaz','Şekilden λ₃₁ = 100 nm ve λ₂₁ = 150 nm okunur.','1/λ₃₂ = 1/100 − 1/150 = 1/300'),A('Sonuç','Tersini al.','λ₃₂ = 300 nm')],
  puf='Enerjiler toplanır, dalga boyları değil; 1/λ üzerinden işlem yap.',sekil=sk)
 # ================= 14 · orta · öncüllü · metin =================
@@ -245,7 +249,7 @@ d14,y14,ad14=onc(tr,rs,S14)
 q('0014',4,z='orta',kalip='öncüllü',tipId='atom-bohr',tip='Bohr modelinde yörünge nicelikleri',kaz='Bohr modelinde yörünge numarası değişince açısal momentum, yarıçap ve kinetik enerji değişimini yorumlar.',
  metin='Bohr atom modeline göre hidrojen atomunun elektronu, enerji alarak 2. yörüngeden 4. yörüngeye çıkıyor.\nBuna göre, bu değişimle ilgili;\nI. Elektronun açısal momentumu 2 katına çıkar.\nII. Elektronun yörünge yarıçapı 4 katına çıkar.\nIII. Elektronun kinetik enerjisi 4 kat azalır.\nyargılarından hangileri doğrudur?',
  dogru=d14,yan=y14,sira=S14,istenen='Doğru olan yargılar.',ip=['Açısal momentum, yarıçap ve kinetik enerjinin yörünge numarası n ile nasıl orantılı olduğunu ayrı ayrı yaz.'],bilgi=[B_BOH],ad=ad14,
- puf='L ∝ n, r ∝ n², E_k ∝ 1/n²: oranları n’lerin oranından kur.')
+ puf='Her niceliğin n ile bağıntısını yaz; oranı n = 4 ve n = 2 değerleriyle kur.')
 # ================= 15 · zor · He+ → H =================
 EHe=lambda n: E(n,2)
 fo=EHe(4)-EHe(2); assert fo==Fr(51,5)==E(2)-E(1)
@@ -285,7 +289,7 @@ assert d_ratio==Fr(1,2) and Fr(1,ma)==Fr(1,4) and qa==2 and qa**2==4
 def para(y,ad,isim): return f'\\draw[thick,{ARR}] (-3.2,{y}) -- (-.5,{y});'+N(-3.6,y,isim,'left')+N(-1.85,y+.45,ad,'')+N(-1.85,y-.45,'$v$ hızıyla','font=\\footnotesize')+f'\\fill[vurgu!45!black] (1.2,{y}) circle (.25);'+N(1.2,y-.6,'$+Ze$','')
 sk=fig(para(1.6,'$+e$, $m$','Deney 1'),para(-.6,'$+2e$, $4m$','Deney 2'))
 q('0017',3,z='zor',kalip='şekilli',tipId='atom-rutherford',tip='Rutherford saçılması ve çekirdek',kaz='Aynı hızlı farklı yük ve kütleli iki parçacığın en yakın yaklaşma uzaklıklarını karşılaştırır.',
- metin='Özdeş ve hareketsiz iki ağır çekirdeğin merkezlerine doğru, iki ayrı deneyde şekildeki gibi proton (yükü +e, kütlesi m) ve α parçacığı (yükü +2e, kütlesi 4m) aynı büyüklükte v hızıyla doğrusal yörüngede gönderiliyor. Parçacıklar çekirdeğe yaklaşırken yalnızca elektriksel itme kuvvetinin etkisinde kalıyor ve çekirdeğe en yakın noktada anlık olarak duruyorlar.\nBuna göre, α parçacığının çekirdeğe en yakın olduğu uzaklığın protonunkine oranı kaçtır?',
+ metin='Özdeş ve hareketsiz iki ağır çekirdeğin merkezlerine doğru, iki ayrı deneyde şekildeki gibi proton ve α parçacığı (yükleri ve kütleleri şekilde verilmiştir) aynı büyüklükte v hızıyla doğrusal yörüngede gönderiliyor. Parçacıklar çekirdeğe yaklaşırken yalnızca elektriksel itme kuvvetinin etkisinde kalıyor ve çekirdeğe en yakın noktada anlık olarak duruyorlar.\nBuna göre, α parçacığının çekirdeğe en yakın olduğu uzaklığın protonunkine oranı kaçtır?',
  dogru='1/2',yan=[('1/4','Yalnızca kütleyi hesaba katmış, yük farkını unutmuştur: kinetik enerji 4 kat, uzaklık 1/4.','dikkat'),('1','Aynı hızla gönderildikleri için uzaklıkların da aynı olacağını sanmıştır; oysa kinetik enerji ve yük farklıdır.','bilgi'),('2','Yalnızca yük oranını almıştır: (2e)/(e) = 2; kinetik enerji farkını katmamıştır.','dikkat'),('4','Yük oranının karesini almıştır: 2² = 4; uzaklık yükle doğru orantılıdır, yükün karesiyle değil.','islem')],
  sira=['1/4','1/2','1','2','4'],
  istenen='Uzaklıkların oranı d_α / d_p.',ip=['Her parçacık için en yakın noktada enerjinin korunumunu yaz; kinetik enerjiyi kütle ve hızla, potansiyel enerjiyi yükle ifade et.'],bilgi=[B_RUT],
@@ -294,7 +298,7 @@ q('0017',3,z='zor',kalip='şekilli',tipId='atom-rutherford',tip='Rutherford saç
 # ================= 18 · zor · He+ ve H · r, v =================
 rr,vv=Fr(2**2,2)/1,Fr(2,2)/1; assert rr==2 and vv==1
 assert Fr(2**2)==4 and Fr(1,2)==Fr(1)/2 and Fr(2**2*2)==8 and Fr(2,1)==2 and Fr(1,2**2*Fr(1,1))*4==1
-q('0018',8,z='zor',kalip='yeni nesil',tipId='atom-benzeri',tip='Hidrojen benzeri iyonlar',kaz='Hidrojen benzeri iyonun yarıçap ve hız niceliklerini hidrojeninkilerle karşılaştırır.',
+q('0018',8,z='orta',kalip='yeni nesil',tipId='atom-benzeri',tip='Hidrojen benzeri iyonlar',kaz='Hidrojen benzeri iyonun yarıçap ve hız niceliklerini hidrojeninkilerle karşılaştırır.',
  metin='Bohr modeline göre, atom numarası Z olan tek elektronlu bir iyonda elektronun n. yörüngedeki yarıçapı r = a₀·n²/Z, hızı ise v = v₁·Z/n bağıntılarıyla bulunur. Burada a₀ ve v₁, hidrojen atomunun temel hâldeki elektronunun yarıçapı ve hızıdır.\nBuna göre, He⁺ iyonunun (Z = 2) 2. yörüngesindeki elektronun yarıçapı ve hızı, hidrojen atomunun temel hâldeki elektronununkilerle karşılaştırıldığında aşağıdakilerden hangisi doğru olur?',
  dogru='r: 2 katı · v: aynı',yan=[('r: 4 katı · v: yarısı','Z’yi bağıntılara katmamıştır: r = a₀·4 ve v = v₁/2 bulmuştur.','dikkat'),('r: 8 katı · v: aynı','Yarıçap bağıntısında Z’yi paya yazmıştır: r = a₀·4·2 = 8a₀.','bilgi'),('r: 2 katı · v: 2 katı','Hız bağıntısında n’yi unutmuştur: v = v₁·Z = 2v₁.','islem'),('r: aynı · v: 2 katı','Yarıçapta Z²’ye bölmüş (4/4 = 1) ve hızda n’yi unutmuştur.','bilgi')],
  sira=['r: 2 katı · v: aynı','r: 4 katı · v: yarısı','r: 8 katı · v: aynı','r: 2 katı · v: 2 katı','r: aynı · v: 2 katı'],
@@ -311,7 +315,7 @@ sk=fig('\\draw[very thick] (.5,1.7) -- (5.5,1.7); \\draw[very thick] (.5,-.1) --
  f'\\draw[thick,{ARR}] (6.7,.1) -- (6.7,1.5);'+N(6.9,.8,'$E=3000$ V/m','right'),
  N(3.0,-.95,'$\\odot$: $B=1{,}5$ mT (sayfa düzleminden dışarı)',''))
 q('0019',2,z='orta',kalip='şekilli',tipId='atom-thomson',tip='Thomson deneyi ve hız seçici',kaz='Elektrik ve manyetik alanın birlikte bulunduğu bölgede sapmadan geçen elektronun hızını hesaplar.',
- metin='Şekilde, yatay ve düzgün bir elektrik alanın ve sayfa düzleminden dışarı yönlü düzgün bir manyetik alanın birlikte bulunduğu bölgeye soldan giren elektron, doğrultusundan sapmadan geçmektedir. Alanların büyüklükleri şekilde verilmiştir. Elektronun ağırlığı ihmal edilmektedir.\nBuna göre, elektronun hızı kaç m/s’dir?',
+ metin='Şekilde, düşey ve düzgün bir elektrik alanın ve sayfa düzleminden dışarı yönlü düzgün bir manyetik alanın birlikte bulunduğu bölgeye soldan giren elektron, doğrultusundan sapmadan geçmektedir. Alanların büyüklükleri şekilde verilmiştir. Elektronun ağırlığı ihmal edilmektedir.\nBuna göre, elektronun hızı kaç m/s’dir?',
  dogru='2 × 10⁶',yan=[('5 × 10⁻⁷','Hızı B/E oranı olarak yazmıştır; doğru bağıntı v = E/B’dir.','bilgi'),('4,5','Hızı E ile B’nin çarpımı olarak yazmıştır: 3000 × 0,0015 = 4,5.','bilgi'),('2 × 10³','mT’yi tesla’ya çevirmeden B = 1,5 alıp 3000 ÷ 1,5 = 2000 bulmuştur.','islem'),('2 × 10⁹','mT’yi μT gibi çevirip B = 1,5 × 10⁻⁶ T almıştır: 3000 ÷ (1,5 × 10⁻⁶) = 2 × 10⁹.','islem')],
  sira=['5 × 10⁻⁷','4,5','2 × 10³','2 × 10⁶','2 × 10⁹'],
  istenen='Elektronun hızı (m/s).',ip=['Elektronun sapmadan gitmesi için elektrik ve manyetik kuvvetler arasındaki ilişkiyi yaz ve birimleri SI’ya çevir.'],bilgi=[B_THO],

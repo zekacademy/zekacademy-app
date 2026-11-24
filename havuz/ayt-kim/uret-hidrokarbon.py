@@ -578,7 +578,7 @@ nd=['X, Br₂ ile karanlıkta tepkime vermediğine göre açık zincirli doymuş
     '0,1 mol Z, 0,2 mol Br₂ bağladığından iki mol katılma gerçekleşir; H₂ da Br₂ gibi katıldığı için 0,1 mol Z’yi doyurmak 0,2 mol H₂ ister',
     'Z, mol sayısının iki katı Br₂ bağladığından iki π bağı içerir; en fazla bir çok katlı bağlı olduğuna göre bu bağ üçlü bağdır']
 d11,y11,s11=onc(tr,nd,'E')
-sk11=pgf('\\addplot[fill=vurgu!35,draw=black,nodes near coords] coordinates {(X,0) (Y,0.1) (Z,0.2)};',w='6.4cm',h='5cm',
+sk11=pgf('\\addplot[fill=vurgu!35,draw=black,nodes near coords] coordinates {(X,0) (Y,0.1) (Z,0.2)};\n\\node[above] at (axis cs:X,0) {0};',w='6.4cm',h='5cm',
          ek='ybar,symbolic x coords={X,Y,Z},xtick=data,bar width=26pt,ymin=0,ymax=0.3,ytick={0,0.1,0.2,0.3},ylabel={Harcanan Br$_2$ (mol)},xlabel={Bileşik (0,1’er mol)},enlarge x limits=0.3,ymajorgrids,/pgf/number format/use comma,point meta=explicit symbolic')
 Q('hk-katilma','orta','Br₂ tüketiminden doymamışlık','Alken 1, alkin 2 mol Br₂ ya da H₂ bağlar; doymuş hidrokarbon Br₂’yi karanlıkta bağlamaz.','Br₂ tüketimini bileşik sınıfıyla ilişkilendirememek; X’i CₙH₂ₙ sanmak.','öncüllü',
  'Açık zincirli ve her birinde en fazla bir çok katlı bağ bulunan X, Y ve Z hidrokarbonlarının 0,1’er molü, karanlıkta Br₂’nin CCl₄’teki çözeltisiyle tam olarak tepkimeye sokuluyor. Harcanan Br₂ mol sayıları grafikte verilmiştir.\n'+etiket_oncul('X’in genel formülü CₙH₂ₙ’dir.','Z’nin 0,1 molünü tamamen doyurmak için 0,2 mol H₂ gerekir.','Z’nin molekülünde üçlü bağ bulunur.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
@@ -611,21 +611,24 @@ Q('hk-katilma','orta','Alkine HX katılması','Alkine iki mol HX art arda katıl
       (n12[3],'İkinci HCl’nin katılmasını hesaba katmamış; ürün, 1 mol HCl katılmış halojenli alkendir.','dikkat')])
 
 # ================= 13 · katılma · zor · hikâyeli =================
-a13,b13=Fr(1,10),Fr(1,5); assert a13+b13==Fr(3,10) and 2*a13+b13==Fr(2,5)
-assert a13*40==4 and a13*42==Fr(21,5) and Fr(1,5)*40==8 and Fr(3,10)*40==12 and Fr(2,5)*40==16
-Q('hk-katilma','zor','Karışımın H₂ ile doyurulması','Alkine 2 mol, alkene 1 mol H₂ katılır; karışımın toplam mol ve H₂ mol sayıları iki denklem verir.','Her bileşiğe 1 mol H₂ katıldığını sanmak; bileşenlerin mol kütlelerini karıştırmak.','hikâyeli',
- 'Bir laboratuvarda propin (C₃H₄) ve propen (C₃H₆) gazlarından oluşan 0,3 mol karışım, Ni katalizörlüğünde yeterli miktarda H₂ ile tamamen doymuş hidrokarbona dönüştürülüyor. Bu işlemde toplam 0,4 mol H₂ harcanıyor.\n(H: 1, C: 12)\nBuna göre, başlangıç karışımındaki propinin kütlesi kaç gramdır?',
- 'Karışımdaki propinin kütlesi (g).','Propin için kaç mol, propen için kaç mol H₂ gerektiğini yazıp iki bilinmeyenli denklem kur.',
+n13=4; assert 14*n13-2==54; mA=Fr(54,54); nA=Fr(1,10); nH=Fr(1,2)
+harcan=2*nA; kalan=nH-harcan; toplam=kalan+nA
+assert (nA,harcan,kalan,toplam)==(Fr(1,10),Fr(1,5),Fr(3,10),Fr(2,5))
+assert (nH-nA)+nA==Fr(1,2) and nA+nH==Fr(3,5) and nA+nH+nA==Fr(7,10) and nH+nA+harcan==Fr(4,5)
+Q('hk-katilma','zor','Alkine H₂ katılması ve artan gaz','Alkinin formülü mol kütlesinden bulunur; alkine 2 mol H₂ katılarak alkan oluşur, artan H₂ ile ürün birlikte sayılır.','Alkine 1 mol H₂ katıldığını sanmak; harcanan H₂’yi toplam mole yeniden eklemek.','hikâyeli',
+ 'Bir laboratuvarda, genel formülü CₙH₂ₙ₋₂ olan açık zincirli bir hidrokarbonun 5,4 gramı, Ni katalizörlüğünde 0,5 mol H₂ ile tam verimle tepkimeye sokuluyor. Hidrokarbonun tamamı doymuş hidrokarbona dönüşüyor ve tepkime sonunda tüm maddeler gaz hâlindedir.\n(H: 1, C: 12)\nBuna göre, tepkime sonunda kapta bulunan toplam gaz kaç moldür?',
+ 'Tepkime sonundaki toplam gaz mol sayısı.','Önce mol kütlesinden n’yi bul; sonra hidrokarbonu doyurmak için gereken H₂ miktarını ve artan H₂’yi hesapla.',
  [B('H₂ katılması','Ni katalizörlüğünde çift bağın her molüne 1, üçlü bağın her molüne 2 mol H₂ katılır. Örnek: 1 mol etin → 2 mol H₂ ile etan; 1 mol eten → 1 mol H₂ ile etan')],
- [A('Denklemleri kur','Propin a mol, propen b mol olsun. Toplam mol 0,3; harcanan H₂ 2a + b’dir.','a + b = 0,3 ve 2a + b = 0,4'),
-  A('Çöz','İkinci denklemden birincisini çıkarınca a bulunur.','a = 0,1 mol propin; b = 0,2 mol propen'),
-  A('Mol kütlesi','Propinin mol kütlesi 3 × 12 + 4 = 40 g/mol’dür.','M(C₃H₄) = 40'),
-  A('Kütleyi bul','Kütle = mol sayısı × mol kütlesi.','0,1 × 40 = 4 g')],
- 'Alkin 2, alken 1 mol H₂ bağlar: iki denklem, iki bilinmeyen.',
- dogru=4,yan=[(Fr(21,5),'Propinin mol sayısını doğru bulmuş ama kütleyi propenin mol kütlesiyle (42 g/mol) hesaplamış.','islem'),
-              (8,'Katsayıları ters yazıp a + 2b = 0,4 almış; böylece 0,2 mol propin bulmuş.','bilgi'),
-              (12,'Karışımın tamamını (0,3 mol) propin saymış.','dikkat'),
-              (16,'Harcanan H₂ mol sayısını (0,4 mol) propinin mol sayısı sanmış.','dikkat')])
+ [A('Formülü bul','CₙH₂ₙ₋₂ için mol kütlesi 14n − 2 olup 54’e eşitlenir.','14n − 2 = 54 → n = 4 (C₄H₆)'),
+  A('Mol sayısı','5,4 g hidrokarbon, 54 g/mol’e bölünür.','5,4 ÷ 54 = 0,1 mol'),
+  A('Harcanan H₂','Alkin tam doyunca alkan olur ve her molüne 2 mol H₂ katılır.','0,1 × 2 = 0,2 mol H₂'),
+  A('Artan H₂','Başlangıçtaki H₂’den harcanan çıkarılır.','0,5 − 0,2 = 0,3 mol H₂'),
+  A('Toplam gaz','Kapta artan H₂ ile oluşan C₄H₁₀ (0,1 mol) vardır.','0,3 + 0,1 = 0,4 mol')],
+ 'Tepkime sonunda gaz = artan H₂ + oluşan ürün.',
+ dogru=Fr(2,5),yan=[(Fr(1,2),'Alkine yalnız 1 mol H₂ katıldığını sanmış: artan H₂ 0,4 mol, ürün 0,1 mol.','bilgi'),
+              (Fr(3,5),'Tepkimeyi hesaba katmamış; başlangıçtaki hidrokarbon (0,1 mol) ile H₂’yi (0,5 mol) toplamış.','dikkat'),
+              (Fr(7,10),'Hidrokarbonu hem başlangıçta hem üründe saymış: 0,1 + 0,5 + 0,1.','islem'),
+              (Fr(4,5),'Başlangıçtaki H₂ye (0,5 mol) ürünü (0,1 mol) ve harcanan H₂’yi (0,2 mol) de eklemiş.','islem')])
 
 # ================= 14 · yer değiştirme · orta · öncüllü =================
 KL=[('K','CCCCC'),('L','CC(C)CC'),('M','CC(C)(C)C')]

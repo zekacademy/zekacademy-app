@@ -20,6 +20,8 @@ TIP={'sinif':('al-sinif','Alkollerin sınıflandırılması (1°, 2°, 3°)'),'a
 def Q(no,tp,z,kalip,alt,kaz,fikir,tuzak,ozet,ad,**k):
     t,tn=TIP[tp]; kartla(no[-2:],alt,fikir,tuzak,z,kalip,len(ad),t,tn)
     q(no,ad,tipId=t,tip=tn,z=z,alt=alt,kaz=kaz,kalip=kalip,kart=f'K-AKALK-{no[-2:]} ({ozet})',**k)
+def nk(o):
+    o['yan']=[(m,(e if e.endswith('.') else e+'.'),t) for m,e,t in o['yan']]; return o
 def yer(dogru,digerler,i): return list(digerler[:i])+[dogru]+list(digerler[i:])
 
 # ---------------- yapı modeli ----------------
@@ -167,9 +169,9 @@ Q('0002','ad','kolay','şekilli','Alkol adlandırma','İskelet formülü verilen
   puf='Alkolde numaralamayı her zaman –OH grubuna en küçük numara verecek uçtan başlat.',dogru=dg,yan=yan2,sira=yer(dg,[y[0] for y in yan2],4))
 
 # ================= 03 · hidrojen bağı · kolay =================
-sec=[('CH₃CH₂CH₃',False,'bu molekül polar bağ içermez, yalnız London kuvvetleri etkindir'),('CH₃OCH₃',False,'oksijen atomuna bağlı hidrojen yoktur; oksijen yalnız hidrojen bağı alıcısı olabilir'),
-     ('CH₃CH₂OH',True,''),('CH₃CH₂OCH₃',False,'oksijene bağlı H atomu bulunmaz, bu yüzden saf hâlde molekülleri arasında hidrojen bağı oluşmaz'),('CH₃CH₂CH₂CH₃',False,'bu molekül apolardır, yalnız London kuvvetleri etkindir')]
-o=tek(sec,True)
+sec=[('CH₃CH₂CH₃',False,'CH₃CH₂CH₃ yalnız C–H ve C–C bağları içerir, O–H bağı yoktur; yalnız London kuvvetleri etkindir'),('CH₃OCH₃',False,'CH₃OCH₃’te hidrojenler yalnız karbona bağlıdır; oksijen hidrojen bağı alıcısı olabilir ama saf hâlde verici H yoktur'),
+     ('CH₃CH₂OH',True,''),('CH₃CH₂OCH₃',False,'CH₃CH₂OCH₃’te O–H bağı yoktur, bu yüzden saf hâlde molekülleri arasında hidrojen bağı oluşmaz'),('CH₃CH₂CH₂CH₃',False,'CH₃CH₂CH₂CH₃ apolardır ve O–H bağı içermez; yalnız London kuvvetleri etkindir')]
+o=nk(tek(sec,True))
 Q('0003','fiz','kolay','düz','Hidrojen bağı','Bir bileşiğin saf hâlde molekülleri arasında hidrojen bağı yapıp yapmadığını bağ yapısından belirler.',
   'Saf hâlde hidrojen bağı için molekülde N, O ya da F’ye bağlı H atomu bulunmalıdır; eterde oksijene bağlı H yoktur.','Oksijen içeren her bileşiğin hidrojen bağı yaptığını sanmak.','hidrojen bağı',
   [A('Koşulu hatırla','Hidrojen bağı için H atomu N, O ya da F’ye bağlı olmalıdır.','O–H, N–H, F–H'),A('Her bileşiği tara','Oksijenli bileşiklerde H’nin kime bağlı olduğuna bak.','CH₃CH₂OH: O–H var · eterlerde O–H yok'),A('Hidrokarbonları ele','Yalnız C ve H içeren moleküller apolardır.','CH₃CH₂CH₃, CH₃CH₂CH₂CH₃ → London'),A('Sonuç','Yalnız etanolde O–H grubu vardır.','CH₃CH₂OH')],
@@ -220,19 +222,19 @@ Q('0005','fiz','orta','grafik','Alkol ve alkan kaynama noktaları','Grafikten al
 # ================= 06 · çözünürlük tablosu · orta =================
 cz=[('1-Bütanol',4,'7,7'),('1-Pentanol',5,'2,2'),('1-Heksanol',6,'0,6'),('1-Heptanol',7,'0,2')]
 SK=tablo_svg(['Alkol','Karbon sayısı','Çözünürlük (g/100 g su)'],[[a,str(b),c] for a,b,c in cz])
-sec=[('Karbon sayısı arttıkça alkol molekülünün apolar hidrokarbon kısmı büyür ve suda çözünürlük azalır.',True,''),
+sec=[('Karbon sayısı arttıkça apolar kısım büyür, çözünürlük azalır.',True,''),
      ('Karbon sayısı arttıkça alkol molekülünün su ile yaptığı hidrojen bağı sayısı artar.',False,'tablodaki alkollerin her birinde yalnız bir –OH grubu vardır, bu yüzden karbon sayısı hidrojen bağı sayısını artırmaz'),
      ('Mol kütlesi arttıkça alkollerin suda çözünürlüğü artar.',False,'tablodaki çözünürlükler mol kütlesi arttıkça azalmaktadır'),
      ('1-Heptanol, –OH grubu taşımadığı için suyla hidrojen bağı yapamaz.',False,'1-heptanolün –OH grubu vardır ve suyla hidrojen bağı yapabilir; çözünürlüğü düşük olmasının nedeni uzun apolar kısmıdır'),
      ('Tablodaki alkollerin tümü suda her oranda çözünür.',False,'tablodaki çözünürlükler sınırlıdır ve azalmaktadır')]
-o=tek(sec,True)
+o=nk(tek(sec,True))
 Q('0006','fiz','orta','tablo','Alkollerin suda çözünürlüğü','Alkollerin suda çözünürlüğünü hidroksil grubu ve hidrokarbon zincir uzunluğuyla ilişkilendirir.',
   'Alkolde –OH grubu suyla hidrojen bağı yaparak çözünmeyi sağlar; hidrokarbon zincir uzadıkça apolar kısım etkisini artırır ve çözünürlük azalır.','Çözünürlüğün –OH sayısıyla değil mol kütlesiyle arttığını sanmak.','çözünürlük tablosu',
   [A('Veriyi oku','Çözünürlük 7,7’den 0,2’ye düşüyor.','Karbon ↑ → çözünürlük ↓'),A('Yapıyı düşün','Hepsinde bir –OH grubu, zincir uzunluğu farklı.','–OH sayısı sabit'),A('Nedeni bul','Uzayan zincir apolar kısmı büyütür, suyla etkileşimi zayıflatır.','Apolar kısım ↑'),A('Şıkları ele','Verilerle çelişen ya da yapıya aykırı ifadeleri ele.','Doğru ifade: apolar kısım büyür')],
   metin='Aşağıdaki tabloda aynı sıcaklıkta bazı 1-alkanollerin (her birinde bir tane –OH grubu bulunur) 100 g suda çözünen yaklaşık kütleleri verilmiştir.\nBu verilere göre aşağıdakilerden hangisi söylenebilir?',
   sekil=SK,istenen='Verilerle uyumlu ifade.',ip=['Tüm alkollerde –OH sayısı aynıdır; değişen yapı parçasının suyla etkileşimini düşün.'],
   bilgi=[B('Alkoller ve su','Alkoldeki –OH grubu suyla hidrojen bağı yapar. Hidrokarbon zincir uzadıkça molekülün apolar kısmı büyür ve suda çözünürlük azalır. Örnek: etanol suda her oranda çözünür, uzun zincirli 1-dekanol ise çok az çözünür')],
-  puf='Alkolde zincir uzadıkça polar –OH’nin etkisi azalır, çözünürlük düşer.',dogru=o['dogru'],yan=o['yan'],sira=yer(sec[0][0],[s[0] for s in sec[1:]],3))
+  puf='Tablodaki değişimi, yapıda değişen kısımla ilişkilendir.',dogru=o['dogru'],yan=o['yan'],sira=yer(sec[0][0],[s[0] for s in sec[1:]],3))
 
 # ================= 07 · yükseltgenme · orta · öncüllü =================
 assert sinif(M_2BUT)=='sek' and sinif(M_2M2B)=='ter' and sinif(M_2M1P)=='prim'
@@ -297,12 +299,12 @@ SK=tk(sahne([[(M_METOH,'metanol'),(M_ETOH,'etanol'),(M_2P,'2-propanol')]]))
 yan10=[(6,'Eter sayısını doğru bulmuş (6) ama alkenleri hiç saymamış; 170 °C’de etanol ve 2-propanol alken verir.','dikkat'),(5,'Yalnız farklı alkol çiftlerinden oluşan 3 eteri sayıp aynı alkolden oluşanları (dimetil, dietil, di-izopropil) atlamış; alkenleri 2 almış.','dikkat'),
        (7,'Eterleri 6 sayıp alkenleri 1 almış; etanol ve 2-propanol alken verir.','dikkat'),(9,'Metanolün de alken verebileceğini sanıp alkenleri 3 saymış; metanolde komşu karbon yoktur.','bilgi')]
 Q('0010','eter','zor','şekilli','Alkol karışımından eter ve alken','Birden fazla alkolün karışımında oluşan eter ve alken sayısını dehidrasyon koşullarına göre bulur.',
-  'n farklı alkolün karışımı 140 °C’de n(n+1)/2 farklı eter verir (aynı alkolden oluşanlar dahil); alken ancak komşu karbonda H bulunan alkolden oluşur.','Aynı alkolden oluşan eterleri saymamak; metanolden alken oluştuğunu sanmak.','alkol karışımı',
+  'Karışımda eter, alkol moleküllerinin ikili birleşmelerinden; alken ise her alkolün kendi içinde su kaybından oluşur.','Aynı alkolden oluşan eterleri saymamak; metanolden alken oluştuğunu sanmak.','alkol karışımı',
   [A('Eter sayısı','3 alkolün ikili birleşmeleri, aynı alkolün kendisiyle birleşmesi dahil sayılır.','3 + 3 = 6 eter'),A('Eterleri sırala','Dimetil, dietil, di-izopropil ve üç karışık eter.','6 eter'),A('Alkenleri bul','Alkenin oluşması için –OH’li karbonun komşusunda H olmalıdır.','metanol: yok · etanol: eten · 2-propanol: propen → 2 alken'),A('Toplamı yaz','Eter ve alken sayıları toplanır.','6 + 2 = 8')],
   metin='Şekilde iskelet formülleri verilen metanol, etanol ve 2-propanolden oluşan bir karışım iki ayrı deneyde ele alınıyor:\n• Derişik H₂SO₄ ile 140 °C’de ısıtıldığında eter oluşuyor.\n• Derişik H₂SO₄ ile 170 °C’de ısıtıldığında alken oluşuyor.\nBuna göre birinci deneyde oluşabilecek farklı eter sayısı ile ikinci deneyde oluşabilecek farklı alken sayısının toplamı kaçtır?',
-  sekil=SK,istenen='Farklı eter sayısı + farklı alken sayısı.',ip=['Eterlerde aynı alkolün iki molekülünün birleşmesini de ayrı bir eter olarak düşün.'],
+  sekil=SK,istenen='Farklı eter sayısı + farklı alken sayısı.',ip=['Her koşulda hangi moleküllerin birleşip hangilerinin tek başına su kaybettiğini yaz.'],
   bilgi=[B('Karışımda dehidrasyon','140 °C’de iki alkol molekülü su kaybederek R–O–R′ eterini oluşturur; R ve R′ aynı ya da farklı olabilir. 170 °C’de her alkol molekülü kendi içinde su kaybeder ve alken oluşur; –OH’li karbonun komşusunda H bulunmalıdır')],
-  puf='n alkolden n(n+1)/2 eter oluşur; metanolden alken oluşmaz.',dogru=8,yan=yan10)
+  puf='Oluşabilecek tüm ürünleri koşula göre ayrı ayrı listele.',dogru=8,yan=yan10)
 
 # ================= 11 · eter adlandırma · orta · şekil =================
 dg='2-etoksipropan'
@@ -321,14 +323,14 @@ Q('0011','ad','orta','şekilli','Eter adlandırma','İskelet formülü verilen e
 sp=dict(K=M_2P,L=M_3P,M=M_2M1P,N=M_3M2B,P=M_2BUT)
 assert [k for k,v in sp.items() if sinif(v)!='sek']==['M']
 SK=tk(sahne([[(sp['K'],'K'),(sp['L'],'L'),(sp['M'],'M')],[(sp['N'],'N'),(sp['P'],'P')]],bosluk=1.0,satir_ara=.9))
-yan12=[('K','K, –OH taşıyan karbonu iki karbona bağlı olan sekonder alkoldür.','bilgi'),('L','L, –OH taşıyan karbonu iki karbona bağlı olan sekonder alkoldür.','bilgi'),('N','N’de –OH’li karbon iki karbona bağlıdır; dallanma sınıfı değiştirmez, sekonder alkoldür.','bilgi'),('P','P, –OH’li karbonu iki karbona bağlı sekonder alkoldür.','bilgi')]
+yan12=[('K','K’de –OH’yi uçtaki karbonda sanıp primer saymış; oysa –OH ortadaki karbondadır ve karbon iki karbona bağlıdır, K sekonderdir.','bilgi'),('L','3-pentanolde uzun zinciri görüp –OH’li karbona üç karbon bağlı saymış; oysa iki karbona bağlıdır, L sekonderdir.','bilgi'),('N','N’deki metil dalını –OH’li karbona bağlı sayıp tersiyer sanmış; dal komşu karbondadır, –OH’li karbon iki karbona bağlıdır ve N sekonderdir.','bilgi'),('P','P’deki etil kolunu görünce –OH’li karbona üç karbon bağlı sanmış; oysa iki karbona bağlıdır, P sekonderdir.','bilgi')]
 Q('0012','sinif','orta','şekilli','Sekonder alkol belirleme','Dallanmış yapılarda –OH’li karbonun komşu karbon sayısını sayarak alkol sınıfını bulur.',
   'Dallanma, alkolün sınıfını belirlemez; yalnız –OH taşıyan karbona doğrudan bağlı karbon sayısı önemlidir.','Dallanmış zincirde –OH’nin yakınındaki dalı sayıp primer alkolü sekonder sanmak.','K, L, M, N, P alkolleri',
-  [A('Sınıfı belirleme ölçütü','–OH’li karbona bağlı karbon sayısı sayılır.','1 → primer · 2 → sekonder · 3 → tersiyer'),A('K, L, N, P','Her birinde –OH’li karbon iki karbona bağlı.','Hepsi sekonder'),A('M’yi incele','–OH’li karbon yalnız CH karbonuna bağlı, dal ondan sonra başlıyor.','M primer'),A('Sonuç','Sekonder olmayan alkol M’dir.','M')],
+  [A('Sınıfı belirleme ölçütü','–OH’li karbona bağlı karbon sayısı sayılır.','1 → primer · 2 → sekonder · 3 → tersiyer'),A('K, L, N, P’yi incele','Bu dördünde –OH’li karbon iki karbona bağlı.','K, L, N, P: sekonder'),A('M’yi incele','–OH’li karbon yalnız CH karbonuna bağlı, dal ondan sonra başlıyor.','M primer'),A('Sonuç','Sekonder olmayan alkol M’dir.','M')],
   metin='K, L, M, N ve P alkollerinin yapıları şekilde gösterilmiştir.\nBu alkollerden hangisi sekonder (2°) alkol değildir?',
   sekil=SK,istenen='Sekonder olmayan alkol.',ip=['Her alkolde –OH’nin bağlandığı karbonun doğrudan kaç karbonla komşu olduğunu say; dalın uzaklığı sonucu değiştirmez.'],
   bilgi=[B('Sınıfı belirleyen karbon','Alkolün sınıfı yalnızca –OH’nin bağlandığı karbona doğrudan bağlı karbon sayısına bağlıdır. Örnek: 2-metil-1-bütanolde –OH’li karbon tek karbona bağlıdır; dal uzakta olsa da alkol primerdir')],
-  puf='Dal uzakta kalırsa sınıf değişmez; yalnız –OH’li karbonun komşularını say.',dogru='M',yan=yan12,sira=yer('M',[y[0] for y in yan12],2))
+  puf='Dal uzakta kalırsa sınıf değişmez; yalnız –OH’li karbonun komşularını say.',dogru='M',yan=yan12,sira=yer('M',[y[0] for y in yan12],4))
 
 # ================= 13 · C3H8O izomerleri · orta · öncüllü =================
 assert formul(M_1P)==formul(M_2P)==formul(M_MOET)==(3,8,1) and IZ[3]=={'prim':1,'sek':1,'ter':0,'eter':1}
@@ -358,7 +360,7 @@ assert IZ[5]['prim']==4 and IZ[5]['sek']==3 and IZ[5]['ter']==1
 Q('0014','izo','orta','düz','Alkol izomerlerini sayma','C₅H₁₂O formüllü alkollerin izomerlerini sınıflandırıp primer olanları sayar.',
   'Pentanın üç karbon iskeleti üzerinde –OH’nin olası yerleri taranır; –OH’li karbona komşu karbon sayısına göre sınıflandırılır.','Aynı yapıyı iki kez saymak ya da dallı iskeletlerde –OH’nin olası yerlerini atlamak.','C₅H₁₂O alkol izomerleri',
   [A('İskeletleri yaz','5 karbonlu üç iskelet: n-pentan, 2-metilbütan, 2,2-dimetilpropan.','3 iskelet'),A('–OH’yi yerleştir','Her iskelette farklı konumlara –OH koy, eş yapıları ele.','Toplam 8 alkol'),A('Sınıflandır','–OH’li karbona komşu karbon sayısına bak.','primer 4 · sekonder 3 · tersiyer 1'),A('Primerleri seç','İstenen yalnız primer alkollerdir.','4')],
-  metin='C₅H₁₂O molekül formüllü bileşiklerden alkol olanlar arasında kaç tanesi primer (1°) alkoldür?',
+  metin='Stereoizomerler ayrı sayılmayacaktır.\nC₅H₁₂O molekül formüllü bileşiklerden alkol olanlar arasında kaç tanesi primer (1°) alkoldür?',
   istenen='Primer alkol izomerlerinin sayısı.',ip=['Önce 5 karbonlu üç farklı karbon iskeletini yaz; sonra her iskelette –OH’nin uçtaki, ortadaki ve dallı karbonlardaki yerlerini tara.'],
   bilgi=[B('Alkol izomerlerini sayma','Karbon iskeletleri çizilir, –OH grubu tüm olası karbonlara yerleştirilir ve aynı çıkanlar atılır. Örnek: C₃H₈O için 2 alkol vardır: 1-propanol ve 2-propanol')],
   puf='Önce iskeletleri, sonra –OH konumlarını sistemli tara.',dogru=4,yan=yan14)
@@ -367,7 +369,7 @@ Q('0014','izo','orta','düz','Alkol izomerlerini sayma','C₅H₁₂O formüllü
 sec=[('Tersiyer alkoldür.',True,'–OH’li karbon üç karbona bağlıdır'),('Molekül formülü C₄H₁₀O’dur.',True,'4 karbon ve 1 oksijenli doymuş alkoldür'),
      ('Asitli KMnO₄ ile yükseltgenince keton oluşur.',False,''),('2-metil-2-propanol adını alır.',True,'ana zincir 3 karbonlu, metil 2. karbonda ve –OH 2. karbondadır'),
      ('1-bütanolün yapı izomeridir.',True,'ikisinin de formülü C₄H₁₀O’dur, yapıları farklıdır')]
-o=tek(sec,False)
+o=nk(tek(sec,False))
 SK=tk(sahne([[(M_TBUT,'X')]]))
 Q('0015','yuk','orta','şekilli','Tersiyer alkolün özellikleri','Tersiyer alkolün sınıfını, adını, izomerini ve yükseltgenmeme özelliğini birlikte değerlendirir.',
   'Tersiyer alkolün –OH’li karbonunda H yoktur; yükseltgenmez. Keton, ancak sekonder alkolden oluşur.','Tersiyer alkolün de keton verdiğini düşünmek.','tersiyer bütanol',
@@ -375,7 +377,7 @@ Q('0015','yuk','orta','şekilli','Tersiyer alkolün özellikleri','Tersiyer alko
   metin='Yapısı şekilde gösterilen X alkolü ile ilgili olarak aşağıdakilerden hangisi yanlıştır?',
   sekil=SK,istenen='Yanlış olan ifade.',ip=['–OH taşıyan karbonda hidrojen kalıp kalmadığına bak.'],
   bilgi=[B('Tersiyer alkol','Tersiyer alkolün –OH taşıyan karbonunda hidrojen bulunmaz; bu nedenle ılımlı koşullarda yükseltgenmez. Primer alkol aldehit/asit, sekonder alkol keton verir. Örnek: 2-metil-2-bütanol yükseltgenme ürünü vermez')],
-  puf='Keton, yalnız sekonder alkolün yükseltgenmesiyle oluşur.',dogru=sec[2][0],yan=o['yan'],sira=yer(sec[2][0],[s[0] for s in sec if s[1]],4))
+  puf='Alkolün sınıfını belirleyip yükseltgenme ürününü ona göre yorumla.',dogru=sec[2][0],yan=o['yan'],sira=yer(sec[2][0],[s[0] for s in sec if s[1]],4))
 
 # ================= 16 · C4H10O izomerleri · zor · öncüllü =================
 assert IZ[4]['prim']+IZ[4]['sek']+IZ[4]['ter']==4 and IZ[4]['eter']==3 and sum(IZ[4].values())==7
@@ -384,12 +386,12 @@ d=dict(I=(True,'C₄H₁₀O için 4 alkol (1-bütanol, 2-bütanol, 2-metil-1-pr
        III=(True,'yükseltgenince keton veren yalnız sekonder alkol 2-bütanoldür'))
 o=OC(d,sr('Yalnız I','Yalnız II','I ve III','II ve III','I, II ve III')); assert o['dogru']=='I ve III'
 Q('0016','izo','zor','öncüllü','C₄H₁₀O izomerleri ve yükseltgenme','C₄H₁₀O’nun alkol ve eter izomerlerini sayıp yükseltgenme ürünleriyle ilişkilendirir.',
-  'C₄H₁₀O için 4 alkol (2 primer, 1 sekonder, 1 tersiyer) ve 3 eter vardır; keton yalnız sekonder alkolden oluşur.','İzomer sayısını yanlış saymak; eterleri alkolden fazla sanmak; tersiyer alkolü yükseltgenebilir saymak.','C₄H₁₀O izomerleri',
+  'Alkol ve eter izomerleri ayrı ayrı sayılır; yükseltgenme ürünü alkolün sınıfına göre değişir.','İzomer sayısını yanlış saymak; eterleri alkolden fazla sanmak; tersiyer alkolü yükseltgenebilir saymak.','C₄H₁₀O izomerleri',
   [A('Alkolleri yaz','Bütanın iki iskeleti üzerinde –OH konumlarını tara.','4 alkol: 2 primer, 1 sekonder, 1 tersiyer'),A('Eterleri yaz','O atomunu karbon zincirine yerleştir.','dietil, metil propil, metil izopropil → 3 eter'),A('I’i ve II’yi değerlendir','Toplam 4 + 3 = 7; eter sayısı alkoldan az.','I doğru · II yanlış'),A('III’ü değerlendir','Keton yalnız sekonder alkolden gelir.','Sekonder alkol 1 tane → III doğru')],
   metin='C₄H₁₀O molekül formülüne sahip, her biri yalnız tek bağlı bileşiklerden oluşan yapı izomerleri ile ilgili,\nI. Toplam yedi tane yapı izomeri vardır.\nII. Eter olan izomerlerin sayısı, alkol olan izomerlerin sayısından fazladır.\nIII. Uygun yükseltgenle yükseltgenince keton oluşturabilen yalnız bir izomer vardır.\nyargılarından hangileri doğrudur?',
   istenen='Doğru olan yargılar.',ip=['Alkolleri –OH konumuna, eterleri iki yandaki karbon gruplarına göre ayrı ayrı sayarak başla.'],
   bilgi=[B('İzomerleri sayarken','Alkol izomerleri karbon iskeleti ve –OH konumuyla, eter izomerleri oksijenin iki yanındaki karbon dağılımıyla sayılır; aynı yapının dönmüş hâlini iki kez sayma. Örnek: C₃H₈O için 2 alkol ve 1 eter, toplam 3 izomer vardır')],
-  puf='C₄H₁₀O: 4 alkol + 3 eter = 7 izomer.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='İzomerleri sınıflarına ayırıp tek tek say.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 17 · tablo · tanıma · zor =================
 SK=tablo_svg(['Madde','Na metali ile','Asitli KMnO₄ ile'],[['K','H₂ gazı çıkar','Keton oluşur'],['L','H₂ gazı çıkar','Yükseltgenmez'],['M','Tepkime vermez','Yükseltgenmez']])
@@ -458,17 +460,17 @@ g=(mgx+'\\node[font=\\small\\bfseries] at (1.0,-.65) {X};'
 SK=tk(g)
 d=dict(I=(True,'X’te –OH’li karbon iki karbona bağlıdır; X sekonder alkoldür'),
        II=(True,'sekonder alkolün yükseltgenme ürünü olan Y bir ketondur (C₄H₈O); keton, ılımlı yükseltgenle daha ileri yükseltgenmez'),
-       III=(True,'iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O'))
+       III=(False,'iki X molekülü bir su çıkararak Z’yi verir: 2 C₄H₁₀O − H₂O = C₈H₁₈O olur, C₈H₁₆O değil'))
 d['II']=(True,'Y, C₄H₈O formüllü 2-bütanondur (keton)')
 yan_d=d
-o=OC(d,sr('Yalnız I','I ve II','I ve III','II ve III','I, II ve III')); assert o['dogru']=='I, II ve III'
-Q('0020','yuk','zor','öncüllü','Alkolün yükseltgenme ve eter ürünleri','Aynı alkolün yükseltgenme ve dehidrasyon ürünlerini formül ve sınıf bakımından birlikte değerlendirir.',
-  'Sekonder alkol yükseltgenince keton (C sayısı aynı, 2 H eksik), 140 °C’de dehidrasyonla simetrik eter (2 alkol − H₂O) oluşur.','Eter formülünü bulurken suyu çıkarmayı ya da molekül sayısını (2 alkol) unutmak.','2-bütanol şeması',
-  [A('X’i sınıflandır','–OH’li karbon iki karbona bağlı.','X: sekonder alkol (C₄H₁₀O)'),A('Y’yi bul','Sekonder alkol yükseltgenince keton olur, 2 H kaybeder.','Y: C₄H₈O, keton'),A('Z’yi bul','140 °C’de iki alkol bir H₂O çıkararak birleşir.','2 C₄H₁₀O − H₂O = C₈H₁₈O'),A('Yargıları birleştir','Üçü de şemadaki verilerle uyumlu.','I, II ve III')],
-  metin='Şekilde yapısı gösterilen X alkolü, asitli KMnO₄ ile yükseltgenince Y’yi; derişik H₂SO₄ ile 140 °C’de ısıtılınca Z eterini ve su veriyor.\nI. X sekonder alkoldür.\nII. Y’nin molekül formülü C₄H₈O’dur.\nIII. Z’nin molekül formülü C₈H₁₈O’dur.\nBuna göre bu yargılardan hangileri doğrudur?',
+o=OC(d,sr('Yalnız I','Yalnız II','I ve II','II ve III','I, II ve III')); assert o['dogru']=='I ve II'
+Q('0020','yuk','orta','öncüllü','Alkolün yükseltgenme ve eter ürünleri','Aynı alkolün yükseltgenme ve dehidrasyon ürünlerini formül ve sınıf bakımından birlikte değerlendirir.',
+  'Yükseltgenme ve dehidrasyon ürünlerinin formülleri, kaybolan atomlar izlenerek bulunur.','Eter formülünü bulurken suyu çıkarmayı ya da molekül sayısını (2 alkol) unutmak.','2-bütanol şeması',
+  [A('X’i sınıflandır','–OH’li karbon iki karbona bağlı.','X: sekonder alkol (C₄H₁₀O)'),A('Y’yi bul','Sekonder alkol yükseltgenince keton olur, 2 H kaybeder.','Y: C₄H₈O, keton'),A('Z’yi bul','140 °C’de iki alkol bir H₂O çıkararak birleşir.','2 C₄H₁₀O − H₂O = C₈H₁₈O'),A('Yargıları birleştir','I ve II uyumlu, III’teki formül hidrojen sayısında hatalı.','I ve II')],
+  metin='Şekilde yapısı gösterilen X alkolü, asitli KMnO₄ ile yükseltgenince Y’yi; derişik H₂SO₄ ile 140 °C’de ısıtılınca Z eterini ve su veriyor.\nI. X sekonder alkoldür.\nII. Y’nin molekül formülü C₄H₈O’dur.\nIII. Z’nin molekül formülü C₈H₁₆O’dur.\nBuna göre bu yargılardan hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Yükseltgenmede kaybolan atomlarla dehidrasyonda kaybolan atomları ayrı ayrı yaz.'],
   bilgi=[B('Formül hesabı','Yükseltgenme (alkol → keton/aldehit): molekülden 2 H gider. Eter oluşumu: 2 alkol → eter + H₂O. Örnek: C₃H₈O yükseltgenince C₃H₆O; iki C₃H₈O’dan eter oluşunca C₆H₁₄O verir')],
-  puf='Yükseltgenmede 2 H kaybedilir; eter oluşumunda iki alkoldan bir H₂O çıkar.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Ürün formülünü, tepkimede kaybolan atomları sayarak kontrol et.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ---------- yaz ----------
 for x in P.ANA: x['kardes']=None

@@ -86,8 +86,8 @@ def sekil_nef1():
     return tk(nefron(e),.8)
 # --- Q11: altı kısım numaralı nefron ---
 def sekil_nef3():
-    e=(lab('I',-2.0,6.0,-1.55,6.0,-.9,6.0)+lab('II',-1.9,4.4,-1.45,4.4,-.85,4.3)+lab('III',-1.0,2.0,-.6,2.0,-.12,2.0)+lab('IV',2.1,2.0,1.7,2.0,1.12,2.0)
-       +lab('V',1.4,5.45,1.5,5.1,1.58,4.3)+lab('VI',4.3,2.8,3.95,2.8,3.4,2.8))
+    e=(lab('III',-2.0,6.0,-1.55,6.0,-.9,6.0)+lab('V',-1.9,4.4,-1.45,4.4,-.85,4.3)+lab('I',-1.0,2.0,-.6,2.0,-.12,2.0)+lab('VI',2.1,2.0,1.7,2.0,1.12,2.0)
+       +lab('II',1.4,5.45,1.5,5.1,1.58,4.3)+lab('IV',4.3,2.8,3.95,2.8,3.4,2.8))
     return tk(nefron(e),.8)
 
 # --- Q10: kılcal damarlı nefron ve numaralı geçişler (1 süzülme, 2 geri emilim, 3 salgılama) ---
@@ -171,7 +171,7 @@ def sekil_g9():
                 +f'\\addplot[fill=vurgu!45,draw=black,line width=1pt,nodes near coords,nodes near coords style={{font=\\small}}] coordinates {{'+coords(G9[key])+'};\\end{axis}')
     return tk(ax(0,80,'0,20,40,60,80','İdrar miktarı (mL/gün)','idrar')+ax(6.2,2400,'0,600,1200,1800,2400','İdrar ozmolaritesi (mosm/L)','ozm'),.78)
 # --- Q14: böbrek atardamarı ve toplardamarı ---
-G14={'K':(100,35),'L':(100,100),'M':(100,108)}
+G14={'K':(100,80),'L':(100,100),'M':(100,108)}
 def sekil_g14():
     b=['\\begin{axis}[ybar,width=7.8cm,height=5.6cm,xmin=.4,xmax=3.6,xtick={1,2,3},xticklabels={K,L,M},ymin=0,ymax=130,ytick={0,50,100},xlabel={Madde},ylabel={Bağıl derişim},bar width=16pt,legend style={font=\\small,at={(0.5,1.03)},anchor=south,legend columns=-1,draw=none,fill=none},'+AX+']']
     b.append('\\addplot[fill=red!45,draw=black,line width=1pt] coordinates {'+' '.join(f'({i+1},{G14[k][0]})' for i,k in enumerate('KLM'))+'};\\addlegendentry{Böbrek atardamarı}')
@@ -197,7 +197,7 @@ q(1,*T_YAPI,'kolay','Nefron','Nefronun kısımlarını şekilden tanıyıp göre
   ('IV','IV numaralı yapı distal tüptür; tuz ve su geri emilimi ile H⁺ ve K⁺ salgılanması burada gerçekleşir, süzüntüde artık glikoz kalmaz.','bilgi'),
   ('V','V numaralı yapı toplama kanalıdır; ADH etkisiyle su geri emilir ve idrar bu kanaldan havuzcuğa ilerler.','bilgi')],
  istenen='Glikoz ve amino asitlerin tamamının geri emildiği kısmın numarası.',ip=['Besin maddelerinin süzüntüden geri alınmasının nefronun hangi bölümünde tamamlandığını düşün.'],bilgi=[NEF],
- puf='Besin maddelerinin tamamı süzüntü Henle kulpuna ulaşmadan geri alınır; ilk kıvrımlı tüpü ara.',sekil=SK1)
+ puf='Süzüntü Henle kulpuna girmeden hangi tüp kısmında bu maddeleri kaybeder?',sekil=SK1)
 # ---------- 02 · böbrek kesiti · kolay ----------
 SK2=sekil_bobrek()
 q(2,*T_YAPI,'kolay','Böbrek','Böbreğin kesit şemasında bölgeleri tanır ve nefron kısımlarının bulunduğu yeri belirler.','şekilli','böbrek kesiti, numaralı bölgeler','böbrek kesiti',
@@ -252,7 +252,7 @@ S5c='M maddesinin derişim oranı I ile II arasında değişmemiş, sonraki kıs
 S5e='Tüp sıvısında en fazla derişen madde L’dir ve bu durum V numaralı kısımda görülür.'
 S5d='I ile II arasında L ve M maddelerinin derişim oranlarının değişmemesi, bu kısımda bu maddelerin hiç geri emilmediğini gösterir.'
 q(5,*T_SUREC,'orta','Nefronda madde geçişi','Nefron boyunca derişim oranı grafiğinden maddelerin geri emilim durumunu yorumlar.','grafik','derişim oranı grafiği, su ve madde geri emilimi','tüp sıvısı/plazma derişim oranı grafiği',
- 'Tüp sıvısındaki derişimin plazmadakine oranı sabit kalıyorsa madde, suyla aynı oranda geri emilmiştir; artıyorsa su maddeden daha çok, azalıyorsa madde sudan daha çok geri emilmiştir.','Oran değişmediğinde geri emilimin olmadığını düşünmek; oranın artmasını maddenin salgılanmasına bağlamak.',
+ 'Derişim oranındaki değişim, maddenin geri emilimini suyun geri emilimiyle karşılaştırmayı sağlar.','Oran değişimini suyun geri emilimini hesaba katmadan yorumlamak.',
  [A('Grafiği oku','K oranı II’de 0’a düşer, L oranı V’te 12’ye ulaşır, M oranı I ile II arasında 1’de kalır ve sonra azalır.','K: 1 → 0 · L: 1 → 12 · M: 1 → 0,1'),
   A('Oran değişiminin anlamını hatırla','Oran sabitse madde ile su aynı oranda geri emilmiştir; maddeye ait geri emilim yok demek değildir.','Oran sabit → madde ve su aynı oranda geri emilir'),
   A('Şıkları sına','K, L ve M için verilen yorumlar grafikle uyumludur; I–II arasında L ve M için “hiç geri emilmedi” yorumu uyumlu değildir.','Hatalı yorum: I–II arasında geri emilim yok'),
@@ -262,21 +262,21 @@ q(5,*T_SUREC,'orta','Nefronda madde geçişi','Nefron boyunca derişim oranı gr
   (S5b,'L maddesinin oranı tüp boyunca 1’den 12’ye çıkmıştır; bu, suyun maddeden daha çok geri emildiğini gösterir ve ifade söylenebilir.','bilgi'),
   (S5c,'M maddesinin oranı I ve II’de 1’dir, sonra azalarak 0,1’e düşer; ifade grafikle uyumludur ve söylenebilir.','bilgi'),
   (S5e,'L maddesinin oranı V’te 12’dir ve K ile M’nin değerlerinden büyüktür; ifade söylenebilir.','bilgi')],
- istenen='Grafiğe göre söylenemeyen ifade.',ip=['Oranın değişmemesinin madde ile suyun geri emilim miktarları açısından ne anlama geldiğini düşün.'],
- bilgi=[B('Tüp sıvısı/plazma oranı','tüp sıvısındaki derişimin plazmadakine oranı, maddenin geri emilen su miktarına göre ne kadar geri emildiğini gösterir; oran sabitse madde ve su aynı oranda geri emilmiştir')],
- puf='Oran sabitken “madde hiç geri emilmedi” sonucuna varılamaz; sudaki değişimle birlikte düşün.',sekil=sekil_g5())
+ istenen='Grafiğe göre söylenemeyen ifade.',ip=['Her ifadeyi grafikteki oran değerleriyle ve suyun geri emilimiyle karşılaştır.'],
+ bilgi=[B('Tüp sıvısı/plazma oranı','tüp sıvısındaki derişimin plazmadakine oranı, maddenin geri emilen su miktarına göre ne kadar geri emildiğini gösterir; oran, madde ile suyun geri emilimini karşılaştırmaya yarar')],
+ puf='Her şıkkı grafikteki değerlerle tek tek sına.',sekil=sekil_g5())
 # ---------- 06 · ADH ve idrar miktarı grafiği · orta · öncüllü ----------
 assert G6['ADH'][1]<G6['ADH'][0] and G6['ADH'][3]>G6['ADH'][2] and G6['IDR'][2]>G6['IDR'][0] and G6['IDR'][4]<G6['IDR'][2]
 d6={'I':(True,'1. saatte ADH düzeyi 0. saate göre düşmüştür; ADH azaldığında toplama kanalında geri emilen su miktarı azalır.'),
     'II':(False,'2. saatte ADH düzeyi düşük, idrar miktarı yüksektir; idrar seyreltik olduğundan ozmotik derişimi 0. saattekinden düşüktür.'),
     'III':(True,'3. ve 4. saatlerde ADH düzeyi artmış, idrar miktarı azalmıştır; ADH su geri emilimini artırarak idrar miktarını azaltır.')}
-r=onc(d6,'D')
+r=onc(d6,'E')
 qo(6,r,*T_HORMON,'orta','ADH','ADH düzeyi ile idrar miktarı arasındaki ilişkiyi grafikten yorumlar.','ADH düzeyi ve idrar miktarı grafiği','su içildikten sonra ADH ve idrar miktarı',
  'ADH toplama kanalının suya geçirgenliğini artırır; kan plazması seyrelince ADH azalır, su geri emilimi azalır ve bol, seyreltik idrar oluşur.','ADH azaldığında idrarın daha derişik olacağını düşünmek; grafikteki zaman gecikmesini yok saymak.',
  metin='Sağlıklı bir birey 0. saatte kısa sürede 1 litre su içiyor. Sonraki 4 saat boyunca kandaki ADH düzeyi ile idrar miktarı ölçülüyor ve bağıl değerlerle grafikte gösteriliyor.\nBuna göre,\nI. 1. saatte toplama kanalından geri emilen su miktarı, 0. saatteki değerden azdır.\nII. 2. saatte idrarın ozmotik derişimi, 0. saattekinden yüksektir.\nIII. 3. ve 4. saatlerde idrar miktarındaki azalma, ADH düzeyindeki artışla uyumludur.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['ADH düzeyindeki değişimin toplama kanalındaki su geri emilimini ve idrarın derişimini nasıl etkilediğini düşün.'],
  bilgi=[B('ADH','hipotalamusta üretilir, hipofizin arka lobundan salgılanır; distal tüp ve toplama kanalının suya geçirgenliğini artırır ve geri emilen su miktarını yükseltir')],
- puf='ADH ile geri emilen su aynı yönde değişir; idrar miktarı ve derişimi ise bunun tersine yönelir.',sekil=sekil_g6())
+ puf='ADH düzeyi ile geri emilen su miktarı aynı yönde, idrar miktarı ters yönde değişir.',sekil=sekil_g6())
 # ---------- 07 · aldosteron tablosu · orta · olumsuz ----------
 T7={'K':('Normal',150,80),'L':('Yüksek',20,140),'M':('Düşük',280,40)}
 assert T7['L'][1]<T7['K'][1]<T7['M'][1] and T7['L'][2]>T7['K'][2]>T7['M'][2]
@@ -287,19 +287,19 @@ S7c='M bireyinde kan hacminin ve kan basıncının, K bireyine göre düşük ol
 S7d='L bireyinde idrarla atılan K⁺ miktarının artması, aldosteronun K⁺ salgılanmasını artırmasıyla açıklanır.'
 S7e='Aldosteron düzeyi yüksek olan L bireyinde, Na⁺ ile birlikte suyun geri emilimi de artar.'
 q(7,*T_HORMON,'orta','Aldosteron','Aldosteron düzeyine bağlı Na⁺ ve K⁺ atılımını tablodan yorumlar.','tablo','aldosteron düzeyi ve iyon atılımı tablosu','aldosteron tablosu',
- 'Aldosteron böbrek üstü bezi korteksinden salgılanır; distal tüp ve toplama kanalında Na⁺ geri emilimini ve K⁺ salgılanmasını artırır, su Na⁺’yı izler ve kan hacmi ile kan basıncı yükselir.','Aldosteronu böbrek üstü bezi medullasına ait sanmak; K⁺ geri emilimini artırdığını düşünmek.',
+ 'Aldosteronun üretim yeri ve nefron tüplerindeki etkisi, tablodaki iyon atılımıyla birlikte yorumlanır.','Hormonun üretim yerini ya da etkisini yanlış hatırlamak.',
  [A('Tabloyu oku','L bireyinde idrarla Na⁺ az, K⁺ çok atılmıştır; M bireyinde Na⁺ çok, K⁺ az atılmıştır.','L: Na⁺ 20, K⁺ 140 · M: Na⁺ 280, K⁺ 40 · K: Na⁺ 150, K⁺ 80'),
   A('Aldosteronun etkisini hatırla','Aldosteron Na⁺ geri emilimini ve K⁺ salgısını artırır; su Na⁺ ile birlikte geri emilir.','Aldosteron ↑ → Na⁺ geri emilimi ↑ · K⁺ salgısı ↑'),
   A('Şıkları sına','L ve M için yazılan yorumlar tabloyla uyumludur; üretim yeri ve K⁺ etkisini söyleyen ifade bilgiyle çelişir.','Yanlış ifade: medulla ve K⁺ geri emilimi'),
   A('Şıkkı seç','Yanlış olan ifade aldosteronun üretim yeri ve etkisini yanlış veren ifadedir.','Cevap: bu ifade')],
- metin='Tabloda üç bireyin kan aldosteron düzeyleri ile bir günde idrarla attıkları Na⁺ ve K⁺ miktarları (mmol/gün) verilmiştir. K bireyi sağlıklıdır; L ve M bireylerinde ise böbrek üstü bezinin korteks bölgesiyle ilgili farklı sorunlar vardır.\nBuna göre, aşağıdaki ifadelerden hangisi yanlıştır?',
+ metin='Tabloda üç bireyin kan aldosteron düzeyleri ile bir günde idrarla attıkları Na⁺ ve K⁺ miktarları (mmol/gün) verilmiştir. K bireyi sağlıklıdır; L ve M bireylerinde ise böbrek üstü bezinin işleviyle ilgili farklı sorunlar vardır.\nBuna göre, aşağıdaki ifadelerden hangisi yanlıştır?',
  dogru=S7y,sira=yer('A',S7y,[S7b,S7c,S7d,S7e]),yan=[(S7b,'L bireyinin idrarındaki Na⁺ miktarı K bireyinkinden azdır; bu, aldosteronun Na⁺ geri emilimini artırdığını gösterir ve ifade doğrudur.','bilgi'),
   (S7c,'M bireyi Na⁺ kaybettiği için su da kaybeder; kan hacminin ve basıncının düşmesi beklenir, ifade doğrudur.','bilgi'),
   (S7d,'L bireyinin idrarındaki K⁺ miktarı K bireyinkinden fazladır; aldosteron K⁺ salgılanmasını artırır ve ifade doğrudur.','bilgi'),
   (S7e,'Su, geri emilen Na⁺ ile birlikte kana geçer; aldosteron fazlalığında su geri emilimi de artar ve ifade doğrudur.','bilgi')],
  istenen='Yanlış olan ifade.',ip=['Aldosteronun üretildiği bezi ve distal tüpte Na⁺ ile K⁺ üzerindeki etkisini hatırla.'],
- bilgi=[B('Aldosteron','böbrek üstü bezinin korteks bölgesinden salgılanan hormondur; distal tüp ve toplama kanalında tuz dengesini düzenler')],
- puf='Aldosteron tuzu kana alır, K⁺’yı tüpe verir; üretim yeri bezin dış kısmıdır.',sekil=SK7)
+ bilgi=[B('Aldosteron','böbrek üstü bezinden salgılanan, nefron tüplerinde tuz dengesini düzenleyen hormondur')],
+ puf='Aldosteronun üretim yerini ve K⁺ üzerindeki etkisini tabloyla karşılaştır.',sekil=SK7)
 # ---------- 08 · ozmotik derişim grafiği · zor ----------
 assert G8['K'][:4]==G8['L'][:4] and G8['K'][2]==max(G8['K']) and G8['K'][3]<G8['K'][1] and G8['K'][5]>G8['K'][4]>G8['K'][3] and G8['L'][5]<G8['L'][4]==G8['L'][3]
 S8e='ADH varken V ile VI arasında ozmotik derişimin artması, toplama kanalından suyun geri emilmesinden kaynaklanır.'
@@ -334,7 +334,7 @@ q(9,*T_HORMON,'orta','ADH','ADH eksikliği ve takviyesi deneyinin sonuçlarını
   A('Hormonun etkisini çıkar','Arka lob çıkarılınca idrar artmış ve seyrelmiş, ADH verilince değerler kontrole yaklaşmıştır.','ADH yok → bol, seyreltik idrar · ADH var → az, derişik idrar'),
   A('Nedeni belirle','İdrar miktarının artışı, toplama kanalından geri emilen su miktarının azalmasından kaynaklanır.','Geri emilen su ↓ → idrar miktarı ↑'),
   A('Şıkkı seç','Bu yorumu yapan ifade doğrudur.','Cevap: II. gruptaki artışın nedenini veren ifade')],
- metin='Bir araştırmacı fareleri üç gruba ayırıyor. I. grup kontrol grubudur; II. grupta hipofiz arka lobu çıkarılmış; III. grupta hipofiz arka lobu çıkarılmış ve ADH enjekte edilmiştir. Bir gün sonra her grubun günlük idrar miktarı ve idrarın ozmotik derişimi ölçülmüş, sonuçlar grafiklerde gösterilmiştir.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
+ metin='Bir araştırmacı sıçanları üç gruba ayırıyor. I. grup kontrol grubudur; II. grupta hipofiz arka lobu çıkarılmış; III. grupta hipofiz arka lobu çıkarılmış ve ADH enjekte edilmiştir. Bir gün sonra her grubun günlük idrar miktarı ve idrarın ozmotik derişimi ölçülmüş, sonuçlar grafiklerde gösterilmiştir.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
  dogru=S9c,sira=yer('C',S9c,[S9a,S9b,S9d,S9e]),yan=[(S9a,'ADH, toplama kanalının suya geçirgenliğini artırır; geçirgenliği azalttığı yorumu verilerle çelişir ve idrar miktarını azaltır.','bilgi'),
   (S9b,'ADH’si olmayan II. grup çok su kaybettiği için kan plazmasının ozmotik derişimi I. gruptakinden yüksektir; ifade ters kurulmuştur.','bilgi'),
   (S9d,'III. grupta idrarın ozmotik derişimi II. gruptan yüksektir; enjekte edilen ADH idrarı derişik hâle getirmiştir, azaltmamıştır.','bilgi'),
@@ -354,20 +354,21 @@ qo(10,r,*T_SUREC,'orta','Nefronda madde geçişi','Süzülme, geri emilim ve sal
  bilgi=[B('Üç temel olay','süzülme glomerulustan Bowman kapsülüne, geri emilim tüpten kılcal damara, salgılama kılcal damardan tüpe doğru madde geçişidir')],
  puf='Önce okun başlangıç ve bitiş noktasına bakıp olayı adlandır; sonra enerji gereksinimini düşün.',sekil=sekil_nef2())
 # ---------- 11 · üre molekülünün yolu · orta ----------
-SIRA11=['I','II','III','IV','V','VI']
-def seq(l): return ' - '.join(l)
-dog11=seq(SIRA11)
-w11=[(seq(['I','II','IV','III','V','VI']),'III numaralı yapı inen kol, IV numaralı yapı çıkan koldur; sıvı önce inen kola, sonra çıkan kola geçer, bu dizide ters yazılmıştır.'),
-     (seq(['I','III','II','IV','V','VI']),'Süzüntü Bowman kapsülünden sonra önce proksimal tüpe (II) geçer; bu dizide Henle kulpunun inen kolu (III) proksimal tüpten önce yazılmıştır.'),
-     (seq(['I','II','III','IV','VI','V']),'Süzüntü toplama kanalına (VI) girmeden önce distal tüpten (V) geçer; bu dizide iki kısım yer değiştirmiştir.'),
-     (seq(['II','I','III','IV','V','VI']),'Süzülme glomerulus ve Bowman kapsülünde (I) gerçekleşir ve süzüntü proksimal tüpe (II) bu kısımdan geçer; bu dizide ilk iki kısım ters yazılmıştır.')]
+NM={'kapsül':'III','proksimal':'V','inen':'I','çıkan':'VI','distal':'II','toplama':'IV'}
+def seq(l): return ' - '.join(NM[x] for x in l)
+YOL=['kapsül','proksimal','inen','çıkan','distal','toplama']
+dog11=seq(YOL)
+w11=[(['kapsül','proksimal','çıkan','inen','distal','toplama'],'Sıvı Henle kulpunun önce inen koluna, sonra çıkan koluna geçer; bu dizide bu iki kısım ters yazılmıştır.'),
+     (['kapsül','inen','proksimal','çıkan','distal','toplama'],'Süzüntü Bowman kapsülünden sonra önce proksimal tüpe geçer; bu dizide Henle kulpunun inen kolu proksimal tüpten önce yazılmıştır.'),
+     (['kapsül','proksimal','inen','çıkan','toplama','distal'],'Süzüntü toplama kanalına girmeden önce distal tüpten geçer; bu dizide bu iki kısım yer değiştirmiştir.'),
+     (['proksimal','kapsül','inen','çıkan','distal','toplama'],'Süzüntü proksimal tüpe Bowman kapsülünden geçerek ulaşır; bu dizide ilk iki kısım ters yazılmıştır.')]
 q(11,*T_YAPI,'orta','Nefron','Süzüntünün nefron kısımlarından geçiş sırasını belirler.','şekilli','nefron şeması, süzüntünün yolu','süzüntünün nefronda izlediği yol',
  'Süzüntü Bowman kapsülünden proksimal tüpe, Henle kulpunun inen ve çıkan koluna, distal tüpe ve toplama kanalına sırayla geçer; bu sıra değişmez.','Henle kulpunun inen ve çıkan kollarını karıştırmak; distal tüp ile toplama kanalının sırasını ters almak.',
- [A('Kısımları tanı','I Bowman kapsülü, II proksimal tüp, III Henle kulpunun inen kolu, IV çıkan kolu, V distal tüp, VI toplama kanalıdır.','I: kapsül · II: proksimal · III: inen kol · IV: çıkan kol · V: distal · VI: toplama'),
+ [A('Kısımları tanı','III Bowman kapsülü, V proksimal tüp, I Henle kulpunun inen kolu, VI çıkan kolu, II distal tüp, IV toplama kanalıdır.','III: kapsül · V: proksimal · I: inen kol · VI: çıkan kol · II: distal · IV: toplama'),
   A('Süzüntünün yolunu kur','Üre süzülür, geri emilmeden tüp boyunca ilerleyerek idrara karışır; sıra kapsülden toplama kanalına doğrudur.','Kapsül → proksimal → inen → çıkan → distal → toplama'),
-  A('Dizinin numaralarını yaz','Bu sıranın numaraları, şekildeki gösterime göre yazılır.','I - II - III - IV - V - VI')],
+  A('Dizinin numaralarını yaz','Bu sıranın numaraları, şekildeki gösterime göre yazılır.',dog11)],
  metin='Şekilde bir nefronun kısımları I, II, III, IV, V ve VI ile numaralandırılmıştır. Glomerulustan Bowman kapsülüne süzülen bir üre molekülü, nefron tüplerinde hiç geri emilmeden idrarla atılmaktadır.\nBuna göre, bu üre molekülü numaralı yapılardan hangi sırayla geçmiştir?',
- dogru=dog11,sira=yer('D',dog11,[w[0] for w in w11]),yan=[(a,b,'bilgi') for a,b in w11],istenen='Üre molekülünün yapılardan geçiş sırası.',ip=['Süzüntünün Bowman kapsülünden idrar çıkışına kadar tüp boyunca ilerleme sırasını izle.'],
+ dogru=dog11,sira=yer('D',dog11,[seq(w[0]) for w in w11]),yan=[(seq(a),b,'bilgi') for a,b in w11],istenen='Üre molekülünün yapılardan geçiş sırası.',ip=['Süzüntünün Bowman kapsülünden idrar çıkışına kadar tüp boyunca ilerleme sırasını izle.'],
  bilgi=[B('Süzüntünün yolu','süzüntü nefron tüplerinde ilerlerken geri emilim ve salgılama ile içeriği değişir, sonunda toplama kanalıyla havuzcuğa ulaşır')],
  puf='Tüpü kapsülden başlayıp toplama kanalına kadar parça parça izle; U biçimli kısımda önce inen kol gelir.',sekil=sekil_nef3())
 # ---------- 12 · geri emilen miktar · orta · sayısal ----------
@@ -391,7 +392,7 @@ q(12,*T_TABLO,'orta','Geri emilim hesabı','Süzülen ve atılan miktarlardan ge
 PL,GFR,TM=300,120,300   # mg/100 mL, mL/dk, mg/dk
 suz=Fr(PL,100)*GFR; assert suz==360; at_dk=suz-TM; assert at_dk==60; saat=at_dk*60; assert saat==3600 and suz*60==21600 and TM*60==18000
 q(13,*T_TABLO,'zor','Glikoz geri emilimi','Süzülen glikoz miktarını ve taşıma kapasitesini birlikte kullanarak idrarla atılan miktarı hesaplar.','düz','glikoz taşıma kapasitesi hesabı','glikoz süzülmesi ve en yüksek geri emilim hızı',
- 'Süzülen glikoz, plazma derişimi ile süzülme hızının çarpımıdır; proksimal tüp en çok kapasitesi kadar glikoz geri emebilir, aşan kısım idrarla atılır.','Plazma derişimi ile kapasite aynı sayı olduğu için fazlalık olmadığını düşünmek; geri emilimi hesaba katmadan süzülen miktarı atılan saymak.',
+ 'Süzülen glikoz, plazma derişimi ile süzülme hızının çarpımıdır; proksimal tüp en çok kapasitesi kadar glikoz geri emebilir, aşan kısım idrarla atılır.','Süzülen miktarı kapasiteyle karşılaştırmadan fazlalığı yok saymak; geri emilimi hesaba katmadan süzülen miktarı atılan saymak.',
  [A('Süzülen glikozu bul','Dakikada süzülen glikoz, plazma derişimi (mg/mL) ile süzülme hızının çarpımıdır.','3 mg/mL × 120 mL/dk = 360 mg/dk'),
   A('Kapasiteyle karşılaştır','Proksimal tüp dakikada en çok 300 mg geri emebilir; fazlası tüpte kalır.','360 > 300'),
   A('Dakikada atılanı bul','Geri emilemeyen miktar idrarla atılır.','360 − 300 = 60 mg/dk'),
@@ -417,7 +418,7 @@ def yan14(p):
 ps=[('Karbondioksit','Üre','Plazma proteini'),('Plazma proteini','Karbondioksit','Üre'),('Plazma proteini','Üre','Karbondioksit'),('Üre','Karbondioksit','Plazma proteini')]
 q(14,*T_TABLO,'orta','Böbrek dolaşımı','Böbrek atardamarı ve toplardamarındaki madde derişimi değişimini yorumlar.','grafik','böbrek atardamarı ve toplardamarı çubuk grafiği','böbrek atardamarı ve toplardamarında derişim farkı',
  'Böbrek toplardamarında üre atardamara göre azdır, plazma proteini aynı kalır, karbondioksit artar; çünkü üre süzülür, proteinler süzülmez ve böbrek hücreleri solunum yapar.','Derişimi değişmeyen maddeyi üre sanmak; karbondioksiti toplardamarda azalan saymak.',
- [A('Grafiği oku','K 100’den 35’e düşer, L 100’de kalır, M 100’den 108’e çıkar.','K: ↓ · L: = · M: ↑'),
+ [A('Grafiği oku','K 100’den 80’e düşer, L 100’de kalır, M 100’den 108’e çıkar.','K: ↓ · L: = · M: ↑'),
   A('Azalan maddeyi bul','Böbrekte süzülüp idrarla atılan ve kandan uzaklaşan madde ürenin derişimini azaltır.','K → üre'),
   A('Değişmeyeni ve artanı bul','Proteinler süzülmediğinden L aynı kalır; böbrek hücreleri CO₂ ürettiğinden M artar.','L → plazma proteini · M → karbondioksit'),
   A('Diziyi yaz','Sıra K, L, M şeklindedir.','Üre – Plazma proteini – Karbondioksit')],
@@ -445,18 +446,18 @@ q(15,*T_SAGLIK,'orta','Diyaliz','Hemodiyaliz düzeneğinde madde geçişini ve n
   (S15e,'Derişimler eşit olduğunda glikozun net geçişi olmaz; ifade doğrudur.','bilgi')],
  istenen='Yanlış olan ifade.',ip=['Zar boyunca madde geçişinin hangi tür taşıma ile ve hangi derişim farkıyla gerçekleştiğini düşün.'],
  bilgi=[B('Hemodiyaliz','işlevini yitiren böbreğin yerine kandaki atıkları yarı geçirgen zar aracılığıyla diyaliz sıvısına aktaran yapay temizleme yöntemidir')],
- puf='Zardan geçişte enerji gerekmez; geçiş yönü ve hızı derişim farkıyla belirlenir.',sekil=sekil_diyaliz())
+ puf='Madde geçişinin yönünü ve enerji gereksinimini şıklarda ayrı ayrı sına.',sekil=sekil_diyaliz())
 # ---------- 16 · ADH ve aldosteron birlikte · zor · öncüllü ----------
-d16={'I':(True,'Kan plazmasının ozmotik derişimi arttığında ADH salgısı artar; ADH toplama kanalında su geri emilimini artırır ve idrar miktarını azaltır.'),
-     'II':(False,'Aldosteron distal tüpte Na⁺ geri emilimini artırır ve K⁺ salgılanmasını da artırır.'),
-     'III':(False,'Kan plazmasının ozmotik derişimi arttığında hipotalamustaki ozmoreseptörler uyarılır ve ADH salgısı artar.')}
+d16={'I':(True,'Kan plazmasının ozmotik derişimi arttığında ADH salgısı artar; ADH toplama kanalında geri emilen su miktarını artırarak idrarın ozmotik derişimini yükseltir.'),
+     'II':(False,'Kan hacminin azalması aldosteron salgısını artırır; aldosteron distal tüpte Na⁺ geri emilimini artırır.'),
+     'III':(False,'ADH ve aldosteronun etkisiyle idrarla atılan su ve Na⁺ miktarı azalır.')}
 r=onc(d16,'A')
-qo(16,r,*T_HORMON,'zor','ADH ve aldosteron','Su kaybı ve kan basıncı düşmesi durumunda ADH ile aldosteronun birlikte etkilerini değerlendirir.','su kaybında ADH ve aldosteron','çok terleyen bireyde ADH ve aldosteron',
- 'Plazma ozmotik derişimi artınca ADH salgısı artar ve su geri emilimi yükselir; kan hacmi ve basıncı düşünce aldosteron artar, Na⁺ geri emilimini ve K⁺ salgısını yükseltir.','Aldosteronun K⁺ salgısını azalttığını düşünmek; ADH’nin plazma derişimi artınca azaldığını sanmak.',
- metin='Sıcak havada uzun süre su içmeden çalışan ve çok terleyen bir kişide kan hacmi ve kan basıncı azalmakta, kan plazmasının ozmotik derişimi artmaktadır.\nBuna göre, bu kişide,\nI. ADH etkisiyle toplama kanalında su geri emilimi artar ve idrar miktarı azalır.\nII. Aldosteron etkisiyle distal tüpte Na⁺ geri emilimi artarken K⁺ salgılanması azalır.\nIII. Hipotalamustaki ozmoreseptörler uyarılır ve ADH salgısı azalır.\nifadelerinden hangileri doğrudur?',
+qo(16,r,*T_HORMON,'zor','ADH ve aldosteron','Su kaybı ve kan basıncı düşmesi durumunda ADH ile aldosteronun birlikte etkilerini neden–sonuç zinciriyle değerlendirir.','su kaybında ADH ve aldosteron','çok terleyen bireyde ADH ve aldosteron',
+ 'Plazma ozmotik derişimi artınca ADH salgısı artar ve su geri emilimi yükselir; kan hacmi ve basıncı düşünce aldosteron artar, Na⁺ geri emilimini ve K⁺ salgısını yükseltir.','Aldosteron salgısının kan hacmi azalınca azaldığını düşünmek; ADH’nin plazma derişimi artınca azaldığını sanmak.',
+ metin='Sıcak havada uzun süre su içmeden çalışan ve çok terleyen bir kişide kan hacmi ve kan basıncı azalmakta, kan plazmasının ozmotik derişimi artmaktadır.\nBuna göre, bu kişide,\nI. Plazma ozmotik derişiminin artması ADH salgısını artırır; bu durum toplama kanalında geri emilen su miktarını artırarak idrarın ozmotik derişimini yükseltir.\nII. Kan hacminin azalması aldosteron salgısını azaltır; bu durum distal tüpte Na⁺ geri emilimini azaltır.\nIII. ADH ve aldosteronun etkisiyle idrarla atılan su ve Na⁺ miktarı artar.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Plazma derişimi ve kan hacmindeki değişimin her bir hormonun salgısını hangi yönde etkilediğini ayrı ayrı düşün.'],
  bilgi=[B('Su-tuz dengesi','kan plazmasının ozmotik derişimi ve kan hacmi, ADH ile aldosteronun salgılanmasını denetler; her iki hormon nefron tüplerinin geri emilim yeteneğini değiştirir')],
- puf='Önce hangi değişimin hangi hormonu tetiklediğini yaz, sonra her hormonun tüpte yaptığı etkiyi ayrı ayrı kontrol et.')
+ puf='Her öncülde önce neden–sonuç zincirinin her halkasını ayrı ayrı sına.')
 # ---------- 17 · nefronda olaylar · orta · olumsuz ----------
 S17y='Üre gibi azotlu atıkların tamamı proksimal tüpte geri emilir ve idrarla atılmaz.'
 S17a='Süzülme, kan basıncının etkisiyle ve molekül büyüklüğüne bağlı olarak gerçekleşir.'
@@ -476,37 +477,37 @@ q(17,*T_SUREC,'orta','İdrar oluşumu','Nefronda süzülme, geri emilim ve salg�
   (S17e,'ADH toplama kanalının suya geçirgenliğini artırır ve su geri emilimi yükselir; ifade doğrudur.','bilgi')],
  istenen='Yanlış olan ifade.',ip=['Azotlu atıkların idrarla atılıp atılmadığını ve her nefron kısmında hangi olayın gerçekleştiğini düşün.'],
  bilgi=[B('İdrar oluşumu','süzülme, geri emilim ve salgılama sonucunda su, üre ve bazı iyonlar içeren idrar oluşur; glikoz, amino asit ve proteinler sağlıklı bireyin idrarında bulunmaz')],
- puf='İdrarın içeriğini düşün: atık maddelerin hepsi tüpten kana dönseydi idrarda bulunmazlardı.')
+ puf='Her ifadeyi nefronun ilgili kısmıyla eşleştirip tek tek sına.')
 # ---------- 18 · diyabet ve idrar · zor · öncüllü ----------
 d18={'I':(True,'İdrarda glikoz bulunması, proksimal tüpteki taşıyıcı proteinlerin geri emilim kapasitesinin aşıldığını gösterir.'),
      'II':(True,'Tüpte kalan glikoz, tüp sıvısının ozmotik derişimini artırır ve suyun geri emilimini azaltır.'),
-     'III':(True,'Su geri emilimi azaldığında idrar miktarı artar.')}
-r=onc(d18,'E')
-qo(18,r,*T_SAGLIK,'zor','Diyabet','Yüksek kan glikozunun nefrondaki sonuçlarını zincirleme yorumlar.','diyabette idrarda glikoz ve idrar miktarı','kontrolsüz diyabette nefron ve idrar',
- 'Kan glikozu yüksekse süzülen glikoz geri emilim kapasitesini aşar, tüpte kalan glikoz suyu tutar ve idrar miktarı artar; bu zincirin her halkası bir sonrakini belirler.','İdrarda glikozu süzülme bozukluğuna bağlamak; idrar miktarının artışını ADH artışına bağlamak.',
- metin='Kan glikoz düzeyi kontrolsüz biçimde yüksek olan bir bireyin idrarında glikoz bulunmakta ve bu birey sık idrara çıkmaktadır. Bireyin glomerulus süzme işlevi sağlıklıdır.\nBuna göre,\nI. İdrarda glikoz bulunması, proksimal tüpteki taşıyıcı proteinlerin glikoz geri emilim kapasitesinin aşıldığını gösterir.\nII. Tüpte kalan glikoz, tüp sıvısının ozmotik derişimini artırarak suyun geri emilimini azaltır.\nIII. İdrar miktarındaki artış, suyun geri emiliminin azalmasıyla ilişkilidir.\nifadelerinden hangileri doğrudur?',
- istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Süzülen glikoz miktarı arttığında geri emilimin ve tüp sıvısının derişiminin nasıl değiştiğini sırayla düşün.'],
+     'III':(False,'Bu bireyde plazma ozmotik derişimi arttığı için ADH salgısı artar; idrar miktarındaki artış ADH eksikliğine bağlı değildir.')}
+r=onc(d18,'D')
+qo(18,r,*T_SAGLIK,'zor','Diyabet','Yüksek kan glikozunun nefrondaki sonuçlarını ADH etkisiyle birlikte zincirleme yorumlar.','diyabette idrarda glikoz ve idrar miktarı','kontrolsüz diyabette nefron ve idrar',
+ 'Kan glikozu yüksekse süzülen glikoz geri emilim kapasitesini aşar ve tüpte kalan glikoz suyu tutar; bu durumda ADH düzeyi ile idrar miktarı birbirinden bağımsız değerlendirilmelidir.','İdrar miktarının artışını ADH eksikliğine bağlamak; idrarda glikozu süzülme bozukluğuna bağlamak.',
+ metin='Kan glikoz düzeyi kontrolsüz biçimde yüksek olan bir bireyin idrarında glikoz bulunmakta ve bu birey sık idrara çıkmaktadır. Bireyin glomerulus süzme işlevi sağlıklıdır ve kan plazmasının ozmotik derişimi yükselmiştir.\nBuna göre,\nI. İdrarda glikoz bulunması, proksimal tüpteki taşıyıcı proteinlerin glikoz geri emilim kapasitesinin aşıldığını gösterir.\nII. Tüpte kalan glikoz, tüp sıvısının ozmotik derişimini artırarak suyun geri emilimini azaltır.\nIII. İdrar miktarındaki artış, bu bireyde ADH salgısının azalmasıyla açıklanır.\nifadelerinden hangileri doğrudur?',
+ istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Süzülen glikoz miktarı arttığında geri emilimin, tüp sıvısının derişiminin ve ADH etkisinin nasıl değiştiğini sırayla düşün.'],
  bilgi=[B('Glikozun geri emilimi','glikoz proksimal tüpte taşıyıcı proteinlerle geri emilir; taşıyıcıların sayısı sınırlı olduğundan süzülen miktar belirli bir değeri aşarsa fazlası idrara geçer')],
- puf='Olayları sıraya diz: kapasite aşılır, tüpte glikoz kalır, tüp sıvısı derişir, su geri emilimi azalır.')
+ puf='Her öncülde olayın nedenini ve sonucunu ayrı ayrı sına.')
 # ---------- 19 · glomerulus hasarı ve ödem · zor · öncüllü ----------
-d19={'I':(False,'Plazma proteinlerinin idrarla kaybı, kan plazmasının ozmotik basıncını azaltır.'),
-     'II':(False,'Alyuvarlar sağlıklı bireylerde süzülmez; idrarda bulunmaları süzme yüzeyinin zarar gördüğünü gösterir.'),
-     'III':(True,'Plazmanın ozmotik basıncı azaldığında kılcal damardan doku sıvısına geçen su artar ve ödem oluşur.')}
+d19={'I':(False,'Albümin kaybı, kan plazmasının ozmotik basıncını azaltır; bu da kılcal damardan doku sıvısına su geçişini artırır.'),
+     'II':(False,'Alyuvarların idrarda bulunması, süzme yüzeyinin geçirgenliğinin arttığını gösterir.'),
+     'III':(True,'Plazma proteinlerinin idrarla kaybı plazmanın ozmotik basıncını azaltır; doku sıvısında su birikmesi ödeme yol açar.')}
 r=onc(d19,'B')
 qo(19,r,*T_SAGLIK,'zor','Glomerulus hasarı','Süzme yüzeyi hasarının idrar içeriğine ve doku sıvısı dengesine etkisini birlikte yorumlar.','glomerulus hasarı, albümin kaybı ve ödem','glomerulus hasarı ve ödem',
- 'Süzme yüzeyi zarar görünce proteinler ve alyuvarlar idrara geçer; plazma proteinleri azalınca kılcal damarlarda ozmotik basınç düşer ve doku sıvısı artarak ödem oluşur.','Alyuvarların normalde de süzüldüğünü sanmak; protein kaybında plazma ozmotik basıncının arttığını düşünmek.',
- metin='Glomerulus kılcal damarlarında hasar bulunan bir bireyin idrarında albümin ve alyuvarlar saptanmış, bacaklarında ise ödem gözlenmiştir.\nBuna göre bu bireyle ilgili,\nI. Kan plazmasının ozmotik basıncı, sağlıklı bireye göre artmıştır.\nII. İdrarda alyuvar bulunması, alyuvarların sağlıklı bireylerde de süzülüp proksimal tüpte geri emildiğini gösterir.\nIII. Kılcal damardan doku sıvısına geçen su miktarındaki artış, ödemin nedenidir.\nifadelerinden hangileri doğrudur?',
- istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Albümin kaybının kan plazmasındaki ozmotik basıncı ve kılcal damarla doku sıvısı arasındaki su geçişini nasıl etkilediğini düşün.'],
+ 'Süzme yüzeyi zarar görünce proteinler ve alyuvarlar idrara geçer; plazma proteinleri azalınca kılcal damarlarda ozmotik basınç düşer ve doku sıvısı artarak ödem oluşur.','Süzme yüzeyi hasarını geçirgenlik azalması saymak; protein kaybında plazma ozmotik basıncının arttığını düşünmek.',
+ metin='Glomerulus kılcal damarlarında hasar bulunan bir bireyin idrarında albümin ve alyuvarlar saptanmış, bacaklarında ise ödem gözlenmiştir.\nBuna göre bu bireyle ilgili,\nI. Albümin kaybı, kan plazmasının ozmotik basıncını artırarak kılcal damardan doku sıvısına su geçişini artırır.\nII. Alyuvarların idrarda bulunması, süzme yüzeyinin geçirgenliğinin azaldığını gösterir.\nIII. Plazma proteinlerinin idrarla kaybı plazmanın ozmotik basıncını azaltır ve doku sıvısında su birikmesi ödeme yol açar.\nifadelerinden hangileri doğrudur?',
+ istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Albümin kaybının plazma ozmotik basıncını ve süzme yüzeyinin geçirgenliğini nasıl etkilediğini ayrı ayrı düşün.'],
  bilgi=[B('Doku sıvısı ve ödem','doku sıvısı kılcal damardan sızan plazmanın bir kısmıdır; sızan sıvı miktarı kan plazmasının ozmotik basıncına bağlıdır ve doku sıvısının aşırı artması ödeme yol açar')],
- puf='Plazmada kalan protein su tutar; kaybı olursa kılcal damardan dışarı geçen su miktarının nasıl değiştiğini düşün.')
+ puf='Her öncülde olayın nedenini ve sonucunu ayrı ayrı sına.')
 # ---------- 20 · canlılarda boşaltım · orta · öncüllü ----------
 d20={'I':(True,'Planaryada boşaltım alev hücreleri aracılığıyla yapılır.'),
-     'II':(True,'Yağmur solucanında her halkada bulunan nefridyumlar boşaltımı sağlar.'),
-     'III':(False,'Böceklerde Malpighi tüpleri, boşaltım ürünlerini sindirim kanalına boşaltır; kana vermez.')}
+     'II':(True,'Yağmur solucanında halkalarda çift hâlinde bulunan nefridyumlar boşaltımı sağlar.'),
+     'III':(False,'Böceklerde Malpighi tüpleri, boşaltım ürünlerini sindirim kanalına boşaltır; doğrudan vücut dışına boşaltmaz.')}
 r=onc(d20,'B')
 qo(20,r,*T_DIGER,'orta','Canlılarda boşaltım','Omurgasız canlı gruplarında boşaltım yapılarını eşleştirir.','canlılarda boşaltım yapıları','omurgasızlarda boşaltım organları',
- 'Planaryada alev hücreleri, yağmur solucanında nefridyumlar, böceklerde Malpighi tüpleri boşaltımı yapar; Malpighi tüplerinin ürünü sindirim kanalına boşaltılır.','Malpighi tüplerinin atıkları kana verdiğini sanmak; boşaltım yapılarını canlı gruplarıyla karıştırmak.',
- metin='Canlı gruplarında boşaltım, metabolizma artıklarının vücuttan uzaklaştırılmasını sağlayan farklı yapılarla gerçekleştirilir.\nBuna göre,\nI. Planaryada boşaltım, alev hücreleri aracılığıyla yapılır.\nII. Yağmur solucanında her halkada bulunan nefridyumlar boşaltımı sağlar.\nIII. Böceklerde Malpighi tüpleri, boşaltım ürünlerini kana verir.\nifadelerinden hangileri doğrudur?',
+ 'Omurgasız gruplarında boşaltım yapıları ve ürünlerin boşaltıldığı yer gruba özgüdür.','Boşaltım yapılarını ve ürünlerin boşaltıldığı yeri gruplarla karıştırmak.',
+ metin='Canlı gruplarında boşaltım, metabolizma artıklarının vücuttan uzaklaştırılmasını sağlayan farklı yapılarla gerçekleştirilir.\nBuna göre,\nI. Planaryada boşaltım, alev hücreleri aracılığıyla yapılır.\nII. Yağmur solucanında halkalarda çift hâlinde bulunan nefridyumlar boşaltımı sağlar.\nIII. Böceklerde Malpighi tüpleri, boşaltım ürünlerini doğrudan vücut dışına boşaltır.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Her canlı grubunun boşaltım yapısını ve bu yapının ürününü nereye ilettiğini hatırla.'],
  bilgi=[B('Boşaltım','metabolizma artıklarının vücuttan uzaklaştırılmasıdır; omurgasız grupları bu işi böbrekten farklı yapılarla gerçekleştirir')],
  puf='Her öncülde yapı ile canlı grubunu eşleştir; ürünün gittiği yeri de kontrol et.')

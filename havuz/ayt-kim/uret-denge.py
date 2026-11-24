@@ -60,7 +60,7 @@ def tek(opts,hedef,pos):
 # ---------- bilgi kutuları (örnekler soruların maddelerini/sayılarını kullanmaz)
 DD=B('Dinamik denge','kapalı kapta ileri ve geri tepkimelerin hızları eşitlenince denge kurulur; tepkimeler durmaz, madde derişimleri sabit kalır. Örnek: CO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g) dengesinde dört gazın da derişimi sabittir, ama her iki yönde tepkime sürer')
 KCB=B('Denge sabiti (Kc)','aA + bB ⇌ cC + dD için Kc = [C]ᶜ[D]ᵈ ÷ [A]ᵃ[B]ᵇ; derişimler denge anındaki mol/L değerleridir. Saf katı ve sıvılar ifadeye yazılmaz. Örnek: 2A(g) + B(g) ⇌ C(g) için Kc = [C] ÷ ([A]² × [B])')
-KPB=B('Kısmi basınç ve Kp','gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: A(g) ⇌ 2B(g) için Kp = P_B² ÷ P_A')
+KPB=B('Kısmi basınç ve Kp','gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: 2A(g) ⇌ B(g) + C(g) için Kp = P_B × P_C ÷ P_A²')
 KPKC=B('Kp ile Kc ilişkisi','Kp = Kc × (R·T)^Δn; Δn = gaz hâlindeki ürünlerin katsayıları toplamı − gaz hâlindeki girenlerin katsayıları toplamı. Δn = 0 ise Kp = Kc olur. Örnek: A(g) + B(g) ⇌ 3C(g) için Δn = +1')
 LCB=B('Le Chatelier ilkesi','dengedeki sisteme dışarıdan etki edilirse sistem etkiyi azaltacak yönde yeni bir dengeye gelir. Gaz derişimi artarsa o gazı harcayan yöne, hacim küçülürse gaz mol sayısı az olan yöne, sıcaklık artarsa endotermik yöne kayar. Katalizör dengeyi kaydırmaz, yalnız dengeye ulaşma süresini kısaltır')
 KTB=B('K ve sıcaklık','denge sabiti yalnız sıcaklığa bağlıdır. Endotermik tepkimede sıcaklık artınca K artar, ekzotermik tepkimede K azalır. Derişim, basınç, hacim ve katalizör K değerini değiştirmez. Örnek: ΔH < 0 olan bir tepkime ısıtılınca ürün miktarı azalır')
@@ -245,23 +245,23 @@ q('0008',7,[A('Gaz mol sayılarını karşılaştır','Girenlerde 1, ürünlerde
  metin='Sabit sıcaklıkta, sürtünmesiz hareketli pistonlu bir kapta\nPCl₅(g) ⇌ PCl₃(g) + Cl₂(g)\ntepkimesi dengededir. Piston, şekilde gösterildiği gibi itilerek gazların hacmi yarıya düşürülüyor ve sistem yeniden dengeye geliyor.\nBuna göre,\nI. PCl₅ mol sayısı artar.\nII. Kc değeri değişmez.\nIII. PCl₃ derişimi ilk dengedekinden küçük olur.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w8['dogru'],yan=w8['yan'],sira=w8['sira'],istenen='Doğru olan yargılar.',
  ip=['Hacim değişiminin hangi yöndeki tepkimeyi desteklediğini gaz mol sayılarına bakarak belirle; derişimlerin önce ne olduğunu da düşün.'],bilgi=[LCB],
- puf='Hacim küçülünce derişimler önce artar, sonra denge kaymasıyla kısmen geri döner; ilk değerine hiçbir zaman dönmez.')
+ puf='Hacim değişince derişimlere önce ne olduğunu, sonra dengenin ne yaptığını sırayla düşün.')
 
 # ================ 09 · orta · Kc–T grafiği
 card(8,'Sıcaklık, K ve ΔH','Kc sıcaklıkla azalıyorsa tepkime ekzotermiktir; sıcaklık artınca ürün azalır, tüm hızlar artar.','Sıcaklıkla yalnız endotermik yöndeki hızın arttığını sanmak.','orta','grafik',3,'de-le','Kc–sıcaklık grafiği ve denge')
 kt=[(x,1.2+8*exp(-0.42*(x-1))) for x in [1+0.4*i for i in range(21)]]
 SK=pg('width=6.2cm,height=4.6cm,axis lines=left,xmin=0,xmax=10,ymin=0,ymax=10,xtick=\\empty,ytick=\\empty,xlabel={Sıcaklık (K)},ylabel={$K_c$},label style={font=\\small}',
  f'\\addplot[thick,smooth] coordinates {{{co(kt)}}};')
-w9=onc([True,True,True],['denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0)','sıcaklık artınca K küçülür; denge girenler yönüne kayar ve C gazının mol sayısı azalır','sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız ileri ile geri hız farklı oranda artar'],4)
+w9=onc([True,True,False],['denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0)','sıcaklık artınca K küçülür; denge girenler yönüne kayar ve C gazının mol sayısı azalır','sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız geri tepkimenin hızı artmaz'],1)
 q('0009',8,[A('Grafiği yorumla','Kc sıcaklıkla azalıyor; ürün oranı küçülüyor.','Tepkime ekzotermik (ΔH < 0) → I: doğru'),
    A('Dengenin kaymasına bak','Sıcaklık artınca denge girenler yönüne kayar.','C miktarı azalır → II: doğru'),
-   A('Hızları değerlendir','Sıcaklık arttıkça tanecikler daha çok çarpışır; her iki yönün hızı da artar.','III: doğru'),
-   A('Sonuç','Üç yargı da doğrudur.','I, II ve III')],
+   A('Hızları değerlendir','Sıcaklık arttıkça tanecikler daha çok çarpışır; her iki yönün hızı da artar.','III: yanlış'),
+   A('Sonuç','I ve II doğrudur.','I ve II')],
  tipId='de-le',z='orta',alt='Sıcaklığın Etkisi',kaz='Kc–sıcaklık grafiğinden tepkimenin ısı değişimini yorumlar; sıcaklık artışının denge ve hızlara etkisini belirler.',kalip='grafik',
- metin='Belirli bir sıcaklık aralığında\nA(g) + B(g) ⇌ 2C(g)\ndengesine ait denge sabiti (Kc) değerinin sıcaklıkla değişimi grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. Sabit hacimde sıcaklık artırılırsa C gazının mol sayısı azalır.\nIII. Sıcaklık artırılırsa ileri ve geri yöndeki tepkimelerin hızları artar.\nyargılarından hangileri doğrudur?',
+ metin='Belirli bir sıcaklık aralığında\nA(g) + B(g) ⇌ 2C(g)\ndengesine ait denge sabiti (Kc) değerinin sıcaklıkla değişimi grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. Sabit hacimde sıcaklık artırılırsa C gazının mol sayısı azalır.\nIII. Sıcaklık artırılırsa yalnız geri yöndeki tepkimenin hızı artar.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w9['dogru'],yan=w9['yan'],sira=w9['sira'],istenen='Doğru olan yargılar.',
  ip=['Grafiği yorumlayıp her yargıyı Le Chatelier ilkesi ve sıcaklığın hıza etkisiyle sına.'],bilgi=[KTB],
- puf='K sıcaklıkla azalıyorsa tepkime ekzotermiktir; sıcaklık artışı her iki yönün hızını artırır.')
+ puf='Grafikten ısı değişimini çıkar, sonra her yargıyı sıcaklığın denge ve hız üzerindeki etkisiyle ayrı ayrı sına.')
 
 # ================ 10 · orta · derişim–zaman, bileşen eklenmesi (olumsuz kök)
 n0,h0,a0_=0.4,0.2,0.2; Kc10=a0_**2/(n0*h0**3); assert abs(Kc10-12.5)<1e-9
@@ -288,15 +288,15 @@ o10=tek([('t₂ anında kaba H₂ gazı eklenmiştir.',True,'Grafikte t₂ anın
  ('t₂–t₃ aralığında ileri yöndeki tepkime hızı geri yöndekinden büyüktür.',True,'H₂ eklenince denge ürünler yönüne kayar; NH₃ derişimi arttığına göre ileri hız geri hızdan büyüktür, bu ifade doğrudur.'),
  ('t₃ anında NH₃ derişimi t₁ anındakinden büyüktür.',True,'Grafikte NH₃ eğrisi t₃ anında t₁ anındaki değerin üstündedir; bu ifade doğrudur.'),
  ('t₃ anında Kc değeri t₁ anındakinden büyüktür.',False,'Sıcaklık sabit olduğundan Kc değişmez; bu ifade yanlıştır.')],False,0)
-q('0010',10,[A('t₂ anını yorumla','Yalnız H₂ derişimi ani olarak artmış; bu, kaba H₂ eklendiğini gösterir.','A: doğru'),
-   A('Denge aralıklarına bak','t₁–t₂ aralığında derişimler sabittir; hızlar eşittir.','B: doğru'),
-   A('Yeni dengeye giden yolu incele','H₂ azalıyor, N₂ azalıyor, NH₃ artıyor; ileri hız geri hızdan büyüktür ve NH₃ ilkinden fazladır.','C ve D: doğru'),
+q('0010',10,[A('t₂ anını yorumla','Yalnız H₂ derişimi ani olarak artmış; bu, kaba H₂ eklendiğini gösterir.','H₂ ekleme ifadesi: doğru'),
+   A('Denge aralıklarına bak','t₁–t₂ aralığında derişimler sabittir; hızlar eşittir.','Hızların eşitliği ifadesi: doğru'),
+   A('Yeni dengeye giden yolu incele','H₂ azalıyor, N₂ azalıyor, NH₃ artıyor; ileri hız geri hızdan büyüktür ve NH₃ ilkinden fazladır.','Hız ve NH₃ derişimi ifadeleri: doğru'),
    A('Kc değerini değerlendir','Kc yalnız sıcaklığa bağlıdır ve sıcaklık sabittir.','Kc değişmez → bu ifade söylenemez')],
  tipId='de-grafik',z='orta',alt='Derişim–Zaman Grafikleri',kaz='Derişim–zaman grafiğinde bir maddenin eklenmesini fark eder; yeni dengeye geçişte hız, derişim ve Kc değişimlerini yorumlar.',kalip='grafik',
  metin='Sabit hacimli kapalı bir kapta, sabit sıcaklıkta\nN₂(g) + 3H₂(g) ⇌ 2NH₃(g)\ntepkimesi t₁ anında dengeye ulaşıyor. t₂ anında sisteme bir etki yapılıyor ve t₃ anında yeniden denge kuruluyor. Gazların derişimlerinin zamanla değişimi grafikte verilmiştir.\nBuna göre, aşağıdaki ifadelerden hangisi söylenemez?',
  sekil=SK,dogru=o10['dogru'],yan=o10['yan'],sira=o10['sira'],istenen='Söylenemeyen (yanlış) ifade.',
  ip=['Sıcaklık sabit tutulurken t₂ anında hangi eğrinin ani değiştiğine bakarak yapılan etkiyi belirle.'],bilgi=[DTB],
- puf='Anlık sıçrama bir maddenin eklendiğini, kesintisiz değişim ise tepkimenin ilerlediğini gösterir; sabit sıcaklıkta Kc değişmez.')
+ puf='Grafikte ani değişimlerin ve düzgün değişimlerin ne anlama geldiğini ayrı ayrı yorumla.')
 
 # ================ 11 · orta · derişim–zaman → Kc (katsayılar grafikten)
 X0,X1,Y0,Y1,Z0,Z1=Fr(1),Fr(2,5),Fr(4,5),Fr(1,2),Fr(0),Fr(3,5)
@@ -393,7 +393,7 @@ q('0015',14,[A('Kc ifadesini yaz','Δn = 0 olduğundan hacim sadeleşse de deri�
    A('H₂ derişimini bul','[H₂] = [I₂] olduğundan paydada [H₂]² vardır.','36 = 3² ÷ [H₂]² → [H₂] = 0,5 mol/L'),
    A('Denge ve tüketilen mol','H₂ denge molü, HI oluşumundan tüketilen H₂ molü.','n(H₂) = 0,5 × 2 = 1 mol · tüketilen = 6 ÷ 2 = 3 mol'),
    A('Başlangıcı bul','Başlangıç = denge + tüketilen.','1 + 3 = 4 mol')],
- tipId='de-ice',z='zor',alt='Denge Hesapları',kaz='Denge sabiti ve bir denge miktarından, tüketilen miktarı katsayılarla ilişkilendirerek başlangıç mol sayısını hesaplar.',kalip='hikâyeli',
+ tipId='de-ice',z='orta',alt='Denge Hesapları',kaz='Denge sabiti ve bir denge miktarından, tüketilen miktarı katsayılarla ilişkilendirerek başlangıç mol sayısını hesaplar.',kalip='hikâyeli',
  metin='2 L hacimli kapalı bir kaba eşit mol sayısında H₂ ve I₂ gazları konuluyor ve belirli bir sıcaklıkta\nH₂(g) + I₂(g) ⇌ 2HI(g)\ntepkimesi dengeye ulaşıyor. Bu sıcaklıkta Kc = 36 olup denge anında kapta 6 mol HI gazı bulunmaktadır.\nBuna göre, başlangıçta kaba konulan H₂ gazı kaç moldür?',
  dogru=4,yan=[(m15[0],'Denge anındaki H₂ mol sayısını (1 mol) başlangıç miktarı olarak yazmış.','dikkat'),
   (m15[1],'Başlangıç miktarını mol yerine derişim olarak bulmuş (4 ÷ 2 = 2 mol/L) ve hacimle çarpmayı unutmuş.','islem'),
@@ -467,7 +467,7 @@ q('0018',17,[A('Kp ifadesini yaz','Katılar yazılmaz.','Kp = P(CO₂) = 0,5 atm
  metin='Sabit sıcaklıkta, sürtünmesiz hareketli pistonlu bir kapta yeterli miktarda CaCO₃(k) ve CaO(k) ile\nCaCO₃(k) ⇌ CaO(k) + CO₂(g)\ntepkimesi dengededir. Dengedeki CO₂ gazının basıncı şekilde verilmiştir.\nBuna göre, sabit sıcaklıkta,\nI. Piston itilerek hacim yarıya düşürülüp yeniden denge kurulduğunda CO₂ basıncı 1 atm olur.\nII. Hacim sabit tutulup kaba bir miktar CaO(k) eklenirse CO₂ mol sayısı azalır.\nIII. Piston çekilerek hacim iki katına çıkarılıp yeniden denge kurulduğunda CO₂ mol sayısı artar.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w18['dogru'],yan=w18['yan'],sira=w18['sira'],istenen='Doğru olan yargılar.',
  ip=['Bu denge için Kp ifadesini yazıp hangi niceliğin sabit sıcaklıkta sabit kaldığına bak.'],bilgi=[HETB,LCB],
- puf='Tek gaz içeren heterojen dengede basınç sabittir; hacim değişince değişen gaz mol sayısıdır.')
+ puf='Önce Kp ifadesini yaz; ifadede hangi maddenin kaldığına göre hangi niceliğin sabit olduğuna karar ver.')
 
 # ================ 19 · zor · enerji diyagramı + denge, öncüllü
 card(18,'Enerji diyagramı ve denge','Ea(ileri) − Ea(geri) = ΔH; endotermik tepkimede sıcaklık artınca K artar; katalizör iki aktifleşme enerjisini eşit azaltır.','Katalizörün ΔH’yi ya da K’yi değiştirdiğini sanmak; endotermikte sıcaklık artışının ürünü azalttığını düşünmek.','zor','şekilli',5,'de-enerji','enerji diyagramı ve denge yorumu')

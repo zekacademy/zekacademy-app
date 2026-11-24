@@ -116,8 +116,8 @@ def sk5():
 SK5=sk5()
 
 # --- 06 Elodea düzeneği
-D0,D1,BAZ,CAP=40,10,3,36
-assert min(CAP,BAZ*(D0//D1)**2)==36 and BAZ*(D0//D1)**2==48
+D0,D1,BAZ,CAP=40,10,3,60
+assert min(CAP,BAZ*(D0//D1)**2)==48 and BAZ*(D0//D1)**2==48
 def sk6():
     s=.2; x0=0; xl=-D0*s; xk=-D1*s
     b=[]
@@ -216,26 +216,20 @@ def sk16():
     return tk('\n'.join(b))
 SK16=sk16()
 
-# --- 17 kapalı kapta CO2 – zaman
-PM=40.0; R0=PM*0.5
-def Pf(t): return PM*math.sin(math.pi*(t-6)/12) if 6<=t<=18 else 0.0
-CO={0:0.0}; dt=.01; t=0.0; c=0.0; seri=[]
-while t<24-1e-9:
-    c+=(R0-Pf(t+dt/2))*dt; t+=dt
-    if abs(t-round(t))<1e-6: seri.append((round(t),c))
-cur=dict(seri); cur[0]=0.0
-mx=max((k for k in cur if k<=12),key=lambda k:cur[k]); mn=min((k for k in cur if 6<=k<=20),key=lambda k:cur[k])
-assert mx in (8,) and mn==16,(mx,mn)
-assert Pf(8)==R0 or abs(Pf(8)-R0)<1e-9 and abs(Pf(16)-R0)<1e-9 and Pf(12)>R0 and Pf(22)==0 and cur[22]>cur[16]
-KT,LT,MT,NT=8,12,16,22
+# --- 17 kapalı kapta CO2 – zaman (0-6 sa karanlık, 6. saatte ışık açılır ve sürer)
+R0=10.0; CC=40.0
+def co2(t): return R0*t if t<=6 else CC+(R0*6-CC)*math.exp(-(t-6)/3)
+cur={k:co2(k) for k in range(0,25)}
+KT,LT,MT=3,10,21
+assert cur[6]>CC and all(cur[k+1]>cur[k] for k in range(0,6)) and all(cur[k+1]<cur[k] for k in range(6,24)) and abs(cur[24]-cur[21])<1.0 and cur[LT]<cur[LT-1]
 def sk17():
-    pts=' '.join(f'({k},{cur[k]:.2f})' for k in range(0,25))
-    ymin=min(cur.values())-12; ymax=max(cur.values())+25
-    b=[rf'\begin{{axis}}[width=7.8cm,height=5.4cm,xmin=0,xmax=24,ymin={ymin:.0f},ymax={ymax:.0f},xtick={{0,6,12,18,24}},ytick=\empty,axis lines=left,xlabel={{Zaman (saat)}},ylabel={{Kaptaki CO$_2$ derişimi}},tick label style={{font=\footnotesize}},label style={{font=\small}},every axis plot/.append style={{line width=1.6pt}}]',
-       rf'\fill[vurgu,fill opacity=.14] (axis cs:6,{ymin:.0f}) rectangle (axis cs:18,{ymin+.13*(ymax-ymin):.0f});\node[font=\footnotesize,vurgu] at (axis cs:12,{ymin+.065*(ymax-ymin):.0f}) {{ışık verilen süre}};',
-       rf'\addplot[black,smooth] coordinates {{{pts}}};']
+    pts=' '.join(f'({k/2},{co2(k/2):.2f})' for k in range(0,49))
+    ymin=-12; ymax=75
+    b=[rf'\begin{{axis}}[width=7.8cm,height=5.4cm,xmin=0,xmax=24,ymin={ymin},ymax={ymax},xtick={{0,6,12,18,24}},ytick=\empty,axis lines=left,xlabel={{Zaman (saat)}},ylabel={{Kaptaki CO$_2$ derişimi}},tick label style={{font=\footnotesize}},label style={{font=\small}},every axis plot/.append style={{line width=1.6pt}}]',
+       rf'\fill[vurgu,fill opacity=.14] (axis cs:6,{ymin}) rectangle (axis cs:24,{ymin+7});\node[font=\footnotesize,vurgu] at (axis cs:15,{ymin+3.5}) {{ışık verilen süre}};',
+       rf'\addplot[black] coordinates {{{pts}}};']
     for tt,nm in ((KT,'K'),(LT,'L'),(MT,'M')):
-        b.append(rf'\addplot[only marks,mark=*,mark size=2.2pt,black] coordinates {{({tt},{cur[tt]:.2f})}};\node[font=\small\bfseries,anchor=south] at (axis cs:{tt},{cur[tt]+7:.2f}) {{{nm}}};')
+        b.append(rf'\addplot[only marks,mark=*,mark size=2.2pt,black] coordinates {{({tt},{cur[tt]:.2f})}};\node[font=\small\bfseries,anchor=south] at (axis cs:{tt},{cur[tt]+2.5:.2f}) {{{nm}}};')
     b.append(r'\end{axis}'); return tk('\n'.join(b))
 SK17=sk17()
 
@@ -266,7 +260,7 @@ Q('1','klo','kolay','şekilli','Kloroplast yapısı','Şematik kloroplastta stro
   istenen='Karbonhidrat sentezinin yapıldığı kısmın numarası.',
   ip=['Karbonhidrat sentezi ışığa bağımlı mı yoksa ışıktan bağımsız evrede mi gerçekleşir? Sonra o evrenin organeldeki ortamını düşün.'],
   bilgi=[KLO,FOT],
-  ad=[A('Yapıları numaralara eşle','Dıştaki iki zar I ve II, zarlar arasında kalan sıvı kısım III, disk yığınları IV, disk içi boşluk V ile gösterilmiştir.','I: dış zar · II: iç zar · III: stroma · IV: granum · V: lümen'),
+  ad=[A('Yapıları numaralara eşle','Dıştaki iki zar I ve II, iç zarın içinde kalan sıvı kısım (stroma) III, disk yığınları IV, disk içi boşluk V ile gösterilmiştir.','I: dış zar · II: iç zar · III: stroma · IV: granum · V: lümen'),
       A('Olayı evreye bağla','CO₂ nin organik maddeye dönüştürüldüğü tepkimeler ışıktan bağımsız evreye, yani Calvin döngüsüne aittir.','CO₂ → karbonhidrat: Calvin döngüsü'),
       A('Evrenin yerini bul','Calvin döngüsünün enzimleri tilakoit zarların dışındaki sıvıda, stromada bulunur.','Calvin döngüsü → stroma = III')],
   puf='Işığa bağımlı evre tilakoitte, karbonhidrat sentezi (Calvin) stromada gerçekleşir.',sekil=SK1)
@@ -287,7 +281,7 @@ Q('2','isik','orta','öncüllü','Işığa bağımlı tepkimeler','Işığa bağ
       A('Elektron akışını izle','Fotolizden gelen elektronlar ışığı soğurup elektron kaybeden klorofile aktarılır.','2. öncül: doğru'),
       A('NADPH’ın görevini hatırla','NADP⁺ elektron alıp NADPH olur ve Calvin döngüsüne gider.','3. öncül: doğru'),
       A('Yanlış olanı belirle',f'Soru yanlış ifadeleri istediğinden yalnız ilk öncül seçilir.','Yanlış olan: yalnız ilk öncül')],
-  puf='Işığa bağımlı evrenin tüm enerjisi güneşten gelir; besin yıkımı yoktur.')
+  puf='Enerji kaynağını, elektronların yolunu ve ürünleri sırayla sorgula.')
 
 # 03 · zor · Calvin sayısal
 Q('3','cal','zor','şekilli','Calvin döngüsü','Calvin döngüsünün bir glikoz sentezi için ATP ve NADPH gereksinimini sayısal olarak hesaplar.',
@@ -305,7 +299,7 @@ Q('3','cal','zor','şekilli','Calvin döngüsü','Calvin döngüsünün bir glik
       A('PGA → PGAL basamağı','12 PGA nın her biri 1 ATP ve 1 NADPH harcar.','12 ATP · 12 NADPH'),
       A('RuBP yenilenmesi','10 PGAL ile 6 RuBP oluşur ve RuBP başına 1 ATP harcanır.','6 ATP'),
       A('Toplamı bul','ATP: 12 + 6 = 18; NADPH: 12. Toplamları sorulduğundan ikisi toplanır.','18 + 12 = 30')],
-  puf='Bir glikoz için Calvin döngüsü 18 ATP ve 12 NADPH harcar; ATP daha çoktur çünkü RuBP de ATP ile yenilenir.',sekil=SK3)
+  puf='Her basamakta kaç molekülün dönüştüğünü say; ATP ve NADPH harcamalarını ayrı ayrı bul, sonra topla.',sekil=SK3)
 
 # 04 · orta · öncüllü grafik
 pre4=[('K noktasında fotosentez hızını sınırlayan faktör ışık şiddetidir.',True,'iki ortamda da hız aynıdır ve ışıkla artmaktadır'),
@@ -355,20 +349,20 @@ Q('5','fak','orta','grafik','Sıcaklık ve ışık','Fotosentez hızı–sıcakl
 # 06 · zor · Elodea
 Q('6','fak','zor','şekilli','Işık şiddeti ve uzaklık','Işık şiddetinin uzaklıkla değişimi ile CO₂ sınırını birlikte yorumlayıp baloncuk sayısını hesaplar.',
   'Işık şiddeti uzaklığın karesiyle ters orantılıdır; fotosentez hızı ışık sınırlayıcıyken ışık şiddetiyle orantılı artar, ama başka bir faktörün belirlediği üst sınırı aşamaz.','Işık şiddetini uzaklıkla doğrusal ters orantılı almak ya da üst sınırı unutmak.','Elodea, lamba uzaklığı ve baloncuk sayısı',
-  metin='Bir öğrenci, su dolu bir kapta bulunan Elodea bitkisinin fotosentez hızını, bitkiden çıkan O2 baloncuğu sayısıyla ölçüyor. Işığın bitkiye ulaşan şiddeti, lamba ile bitki arasındaki uzaklığın karesiyle ters orantılıdır. Öğrenci ilk ölçümü şekildeki ilk konumda yapıyor. Ortamdaki CO2 miktarı nedeniyle bitki, ışık şiddeti ne olursa olsun dakikada en fazla 36 baloncuk verebilmektedir.\nLamba, şekilde kesikli çizgiyle gösterilen konuma getirilirse bitki dakikada en çok kaç baloncuk verir?',
-  dogru=36,yan=[(BAZ*2,'Işık şiddetinin uzaklıkla doğrusal değil karesiyle ters orantılı olduğu unutulmuş; ayrıca kare yerine karekök alınmış: 3 × 2 = 6.','bilgi'),
+  metin='Bir öğrenci, su dolu bir kapta bulunan Elodea bitkisinin fotosentez hızını, bitkiden çıkan O2 baloncuğu sayısıyla ölçüyor. Işığın bitkiye ulaşan şiddeti, lamba ile bitki arasındaki uzaklığın karesiyle ters orantılıdır. Öğrenci ilk ölçümü şekildeki ilk konumda yapıyor. Işık şiddeti sınırlayıcıyken baloncuk sayısı ışık şiddetiyle doğru orantılıdır. Öğrenci lambayı şekilde kesikli çizgiyle gösterilen konuma getirirken ortama CO2 ekleyerek bitkinin ışık şiddeti ne olursa olsun verebileceği en yüksek değeri dakikada 60 baloncuğa çıkarıyor.\nBuna göre, yeni konumda bitki dakikada en çok kaç baloncuk verir?',
+  dogru=48,yan=[(BAZ*2,'Işık şiddetinin uzaklıkla doğrusal değil karesiyle ters orantılı olduğu unutulmuş; ayrıca kare yerine karekök alınmış: 3 × 2 = 6.','bilgi'),
        (BAZ*(D0//D1),'Uzaklık 4 kat azaldığı için ışık şiddeti 4 kat artmış sanılmış: 3 × 4 = 12. Oysa şiddet uzaklığın karesiyle ters orantılıdır.','bilgi'),
        ((D0//D1)**2,'Işık şiddetindeki artış katı (16) doğrudan baloncuk sayısı sanılmış; ilk baloncuk sayısıyla çarpılmamış.','islem'),
-       (BAZ*(D0//D1)**2,'Hesap doğru yapılmış (3 × 16 = 48) ama CO₂ nin belirlediği üst sınır (36) göz ardı edilmiş.','dikkat')],
+       (CAP,'Hız doğrudan ortamın izin verdiği üst sınıra (60) eşitlenmiş; oysa hız ışık şiddetiyle orantılı artar ve bu değere ulaşmaz.','dikkat')],
   istenen='Yeni konumda dakikadaki en çok baloncuk sayısı.',
-  ip=['Önce ışık şiddetinin kaç kat değiştiğini uzaklık ilişkisinden bul, sonra bulduğun sonucun ortamın izin verdiği üst sınırla uyumuna bak.'],
+  ip=['Önce uzaklığın kaç kat değiştiğini, ardından bunun ışık şiddetini kaç kat değiştirdiğini bul.'],
   bilgi=[B('Işık şiddeti ve uzaklık','bir ışık kaynağından uzaklaştıkça ışık şiddeti uzaklığın karesiyle ters orantılı azalır · uzaklık 2 katına çıkarsa şiddet 4 kat azalır'),
          B('Fotosentez hızı ölçümü','suda yaşayan bitkilerde birim zamanda çıkan O₂ baloncuğu sayısı fotosentez hızının göstergesi olarak kullanılır')],
   ad=[A('Uzaklık değişimini oku','İlk konum 40 cm, yeni konum 10 cm; uzaklık 4 kat azalıyor.','40 / 10 = 4'),
       A('Işık şiddeti artışını bul','Şiddet uzaklığın karesiyle ters orantılı olduğundan 4² = 16 kat artar.','4² = 16'),
       A('Hızı hesapla','Işık sınırlayıcıysa hız ışık şiddetiyle orantılıdır: 3 × 16 = 48 baloncuk/dk.','3 × 16 = 48'),
-      A('Üst sınırla karşılaştır','CO₂ nedeniyle hız 36 baloncuğu aşamaz; 48 değeri ulaşılamaz.','min (48; 36) = 36')],
-  puf='Hız artışını hesapladıktan sonra mutlaka başka bir faktörün koyduğu üst sınırı kontrol et.',sekil=SK6)
+      A('Üst sınırla karşılaştır','Bulunan değer ortamın izin verdiği üst sınırı aşmadığından hız bu değerdir.','48 < 60 → 48')],
+  puf='Işık şiddetindeki değişimi önce uzaklıktan hesapla, sonra hıza çevir.',sekil=SK6)
 
 # 07 · orta · öncüllü · işaretli atom
 pre7=[('Y düzeneğinde açığa çıkan O₂ gazı işaretli oksijen içerir.',False,'O₂ suyun fotolizinden gelir ve Y de su işaretsizdir'),
@@ -385,7 +379,7 @@ Q('7','den','orta','öncüllü','İşaretli atom deneyi','Fotosentezde O₂ nin 
   ad=[A('O₂ nin kaynağını belirle','Fotosentezde O₂ suyun fotolizinden açığa çıkar; işaretli su X teki O₂ yi işaretler, Y de işaretli CO₂ O₂ yi işaretlemez.','X: O₂ işaretli · Y: O₂ işaretsiz'),
       A('Glikozun oksijeninin kaynağı','Glikozun oksijen atomları CO₂ den gelir; X te CO₂ işaretsizdir, Y de işaretlidir.','X: glikoz işaretsiz · Y: glikoz işaretli'),
       A('Öncülleri değerlendir',f'Üç öncülün doğru–yanlış durumu bu çıkarımlarla belirlenir.',i7)],
-  puf='İşaretli suyun oksijeni O₂ ye, işaretli CO₂ nin oksijeni glikoza gider.',sekil=SK7)
+  puf='Ürünlerdeki oksijen atomlarının kaynağını ayrı ayrı izle.',sekil=SK7)
 
 # 08 · kolay · spektrum
 SR=['K > M > L','K = M > L','M > K > L','K > L > M','L > K > M']
@@ -457,7 +451,7 @@ Q('11','kem','orta','düz','Kemosentez','Kemosentezin enerji kaynağını, ürü
        (o11[2],'Kemosentez ışık gerektirmediğinden ışıksız ortamda da sürer; ifade doğrudur.','dikkat'),
        (o11[3],'Kemosentez yapan bakteriler de CO₂ yi karbon kaynağı olarak kullanır; ifade doğrudur.','bilgi')],
   istenen='Kemosentezle ilgili yanlış olan ifade.',
-  ip=['Kemosentezde O₂ nin fotosentezdeki gibi suyun ayrışmasından gelip gelmediğini düşün.'],
+  ip=['Kemosentezin enerji kaynağını ve ürünlerini fotosentezinkilerle karşılaştır.'],
   bilgi=[B('Kemosentez','inorganik maddelerin yükseltgenmesinden sağlanan enerjiyle CO₂ den organik madde yapılmasıdır · örnekler: nitrit, nitrat, demir ve kükürt bakterileri'),
          B('Fotosentezle fark','fotosentezde enerji ışıktır ve su fotolizinden O₂ çıkar · kemosentezde ışık ve klorofil gerekmez, su fotolizi olmaz')],
   ad=[A('İfadeleri kemosentez bilgisiyle karşılaştır','Kemosentezde enerji, inorganik bir maddenin yükseltgenmesinden gelir ve ATP sentezinde kullanılır.','Enerji kaynağı: kimyasal'),
@@ -470,7 +464,7 @@ pre12=[('Bu bakterilerin organik madde sentezi, ışığın bulunmadığı topra
        ('X bakterisinin ürettiği nitrit, Y bakterisi için enerji sağlayan bir yükseltgenme basamağının girdisidir.',True,'Y, nitriti nitrata yükseltgeyerek enerji elde eder'),
        ('Y bakterisinin faaliyetleri sonucu toprakta bitkilerin kullanabileceği azot miktarı azalır.',False,'oluşan nitrat bitkilerce kullanılabilen bir azot kaynağıdır ve miktarı artar')]
 s12,sr12,d12,y12,i12=oncul(pre12,False,'B')
-Q('12','kem','zor','öncüllü','Kemosentez ve azot dönüşümü','Nitrit ve nitrat bakterilerinin kemosentezini azot döngüsü ve bitki beslenmesiyle birlikte yorumlar.',
+Q('12','kem','orta','öncüllü','Kemosentez ve azot dönüşümü','Nitrit ve nitrat bakterilerinin kemosentezini azot döngüsü ve bitki beslenmesiyle birlikte yorumlar.',
   'Kemosentetik bakteriler enerji için inorganik maddeyi yükseltger; bu yükseltgenme zinciri toprakta bitkilerin kullanabileceği nitrat oluşturur.','Kemosentetik bakterilerin ışığa gereksinim duyduğunu ya da bitki azotunu azalttığını düşünmek.','nitrit ve nitrat bakterileri',
   metin='Toprakta yaşayan X bakterisi amonyağı nitrite, Y bakterisi ise nitriti nitrata yükseltger. Her iki bakteri de bu tepkimelerden elde ettiği enerjiyle CO2 ve H2O den organik madde sentezler. Bir tarım alanında bu bakterilerin etkinliği incelenmektedir.\n'+s12+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d12,sira=sr12,yan=y12,istenen='Doğru olan öncüller.',
@@ -518,13 +512,13 @@ Q('14','klo','orta','şekilli','Tilakoit zar ve kemiozmoz','Tilakoit zarında pr
        (o14[2],'Fotolizde açığa çıkan H⁺ lar lümende birikir; ifade doğrudur.','bilgi'),
        (o14[3],'ATP stromaya verilir ve Calvin döngüsünde kullanılır; ifade doğrudur.','bilgi')],
   istenen='Yanlış olan ifade.',
-  ip=['Protonları zarın bir yanından diğerine taşıyan enerjinin kaynağını ve ATP sentazdaki proton akış yönünü düşün.'],
+  ip=['Şekildeki yapıların konumuna, okların yönüne ve protonların iki bölgedeki dağılımına bak.'],
   bilgi=[B('Kemiozmotik ATP sentezi','elektron taşıma sistemindeki enerjiyle protonlar zarın bir yanında biriktirilir; protonlar ATP sentaz boyunca derişimi az tarafa geçerken ATP sentezlenir'),
          B('Fotosentezde proton gradyanı','tilakoit boşluğu (lümen) H⁺ bakımından zengin, stroma ise fakirdir')],
   ad=[A('Bölgeleri tanı','Şekilde H⁺ lar II numaralı bölgede çok, I numaralı bölgede azdır; ATP sentazın knob kısmı I tarafındadır.','II: lümen · I: stroma'),
       A('Proton akışını izle','Elektron akışının enerjisi protonları I → II pompalar; ATP sentazdan II → I akarken ATP üretilir.','Pompalama: elektron enerjisi · ATP: akış sırasında'),
       A('İfadeleri ele','Pompalama için ATP harcandığını söyleyen ifade yanlıştır; diğerleri doğrudur.','Yanlış: pompalamada ATP harcanır ifadesi')],
-  puf='Fotosentezde protonlar ATP harcanarak değil, elektron akışının enerjisiyle pompalanır; ATP proton akışıyla yapılır.',sekil=SK14)
+  puf='Zar üzerindeki akış yönlerini ve her akışın enerji kaynağını ayrı ayrı sorgula.',sekil=SK14)
 
 # 15 · orta · tablo deney
 o15=['Yalnız 2','1 ve 2','2 ve 4','3 ve 4','1, 2 ve 4']
@@ -555,7 +549,7 @@ Q('16','fak','zor','grafik','Net O₂ alışverişi','Net gaz alışverişi graf
        (nx(IQ)+ny(IQ),'Net değerler toplanmış (4 + 3 = 7); fark yerine toplam alınmış ve solunum eklenmemiş.','islem'),
        (gx(IQ),'Yalnızca X in toplam fotosentezi (4 + 4 = 8) bulunmuş; Y ninki çıkarılmamış.','islem')],
   istenen='Toplam fotosentez farkı (birim).',
-  ip=['Işık şiddeti sıfırken okunan değerlerin neyi gösterdiğini düşün; net değeri toplam fotosentez için nasıl düzeltirsin?'],
+  ip=['Işık şiddeti sıfırken okunan değerin ne anlama geldiğini düşün.'],
   bilgi=[B('Net ve toplam fotosentez','toplam fotosentez O₂ üretimi = net O₂ salınımı + solunumla tüketilen O₂'),
          B('Kompanzasyon noktası','fotosentez hızının solunum hızına eşit olduğu ışık şiddetidir; bu noktada net gaz alışverişi sıfırdır')],
   ad=[A('Solunum hızlarını oku','Işık şiddeti sıfırken fotosentez yoktur; eğrilerin y eksenini kestiği değerler solunumda tüketilen O₂ yi verir.','X: 4 birim · Y: 1 birim'),
@@ -565,21 +559,22 @@ Q('16','fak','zor','grafik','Net O₂ alışverişi','Net gaz alışverişi graf
   puf='Eksendeki net değerler fotosentezin tamamı değildir; y eksenindeki negatif başlangıç değeri solunumu verir ve eklenmelidir.',sekil=SK16)
 
 # 17 · zor · öncüllü · kapalı kapta CO2
-pre17=[('K anında bitkide fotosentez hızı, hücresel solunum hızından büyüktür.',False,'K de CO₂ derişimi en yüksektir ve eğri yataydır; iki hız eşittir'),
+pre17=[('K anında bitkide hücresel solunum gerçekleşmez.',False,'solunum canlı hücrede sürekli yürür; K de CO₂ derişimi solunum yüzünden artmaktadır'),
        ('L anında bitkinin birim zamanda fotosentezle tükettiği CO₂ miktarı, solunumla ürettiği CO₂ miktarından fazladır.',True,'L de CO₂ derişimi azalmaktadır'),
-       ('M anından sonraki CO₂ artışı, bu andan sonra bitkide fotosentezin durduğunu gösterir.',False,'ışık hâlâ verilmektedir ve fotosentez sürer; yalnızca solunum hızı fotosentezi geçmiştir')]
+       ('M anından sonra CO₂ derişimi değişmediği için bu aralıkta bitkide fotosentez durmuştur.',False,'derişimin sabit kalması iki hızın eşit olduğunu gösterir; fotosentez ışık sürdüğü için devam eder')]
 s17,sr17,d17,y17,i17=oncul(pre17,False,'A')
 Q('17','fak','zor','öncüllü','Kapalı kapta gaz değişimi','Kapalı kapta CO₂ değişim grafiğinden fotosentez ve solunum hızlarını karşılaştırır.',
   'Kaptaki CO₂ derişiminin değişimi, solunumla üretilen ve fotosentezle tüketilen CO₂ nin farkını verir; eğri yatayken iki hız eşittir.','CO₂ derişiminin arttığı her anda fotosentezin durduğunu düşünmek.','kapalı kapta CO₂–zaman grafiği',
-  metin='Şekilde, saydam ve kapalı bir kapta bulunan bir bitkinin etrafındaki CO2 derişiminin 24 saat boyunca değişimi gösterilmiştir. Kap yalnızca işaretli süre boyunca aydınlatılmış, bitki dışında CO2 kaynağı yoktur ve hücresel solunum hızı sabit kabul edilmiştir.\n'+s17+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
+  metin='Şekilde, saydam ve kapalı bir kapta bulunan bir bitkinin etrafındaki CO2 derişiminin 24 saat boyunca değişimi gösterilmiştir. Kap yalnızca işaretli süre boyunca aydınlatılmış ve ışık şiddeti bu sürede sabit tutulmuştur; bitki dışında CO2 kaynağı yoktur ve hücresel solunum hızı sabittir.\n'+s17+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d17,sira=sr17,yan=y17,istenen='Doğru olan öncüller.',
-  ip=['Eğrinin eğimi CO₂ nin arttığını mı azaldığını mı gösterdiğine, yatay olduğu noktada iki hızın nasıl olması gerektiğine bak.'],
+  ip=['Eğrinin her noktadaki eğiminin yönüne ve yatay bölgelerinde üretim ile tüketimin nasıl olması gerektiğine bak.'],
   bilgi=[B('Kapalı kapta gaz değişimi','solunum CO₂ üretir, fotosentez CO₂ tüketir · derişim, bu iki hızın farkına göre artar, azalır ya da sabit kalır'),
          B('Hız eşitliği','CO₂ derişimi değişmiyorsa üretim ve tüketim hızları birbirine eşittir')],
-  ad=[A('Eğriyi bölgelere ayır','Karanlıkta yalnız solunum vardır; ışıkta ise fotosentez ve solunum birlikte sürer.','Karanlık: CO₂ artar · ışık: farklı eğimler'),
-      A('K ve M noktalarını yorumla','K ve M de eğri yataydır; K de CO₂ artıştan azalışa, M de azalıştan artışa döner.','K, M: üretim = tüketim'),
-      A('Öncülleri değerlendir','K de hızlar eşittir (1. öncül yanlış); L de CO₂ azalmaktadır (2. öncül doğru); M den sonra ışık sürdüğü için fotosentez durmaz (3. öncül yanlış).',i17)],
-  puf='Kaptaki CO₂ derişimi yatay olduğunda fotosentez ve solunum hızları eşittir; artış fotosentezin durduğunu göstermez.',sekil=SK17)
+  ad=[A('Eğriyi bölgelere ayır','Karanlıkta yalnız solunum vardır ve CO₂ artar; ışık verilince fotosentez de başlar, CO₂ azalır ve sonunda sabitlenir.','0–6 saat: artış · sonrası: azalış, ardından yatay'),
+      A('K ve L noktalarını yorumla','K karanlıktadır, solunum sürer; L de CO₂ azaldığından tüketim üretimden fazladır.','K: solunum var · L: tüketim > üretim'),
+      A('M bölgesini yorumla','Derişim sabitken üretim ve tüketim eşittir; ışık sürdüğü için fotosentez durmamıştır.',i17)],
+  puf='Derişimin yönü ve sabitliği, üretim ile tüketim hızlarının karşılaştırmasını verir.',
+  sekil=SK17)
 
 # 18 · zor · öncüllü · ışık kesilince Calvin ara ürünleri
 pre18=[('K eğrisi PGA, L eğrisi RuBP miktarındaki değişimi göstermektedir.',False,'ışık kesilince PGA birikir; yani artan L, PGA yı gösterir'),
@@ -605,20 +600,20 @@ d19='Elektronların son alıcısının oksijen olması'
 o19=['Elektronların zarda yer alan taşıyıcılar aracılığıyla aktarılması','Protonların zarın bir yanında derişim farkı oluşturacak biçimde birikmesi','ATP sentaz enzimi aracılığıyla ADP nin fosforillenmesi','Zarla çevrili bir organelin zar sisteminde gerçekleşmesi']
 Q('19','isik','orta','düz','Fotosentez ve solunum karşılaştırması','Işığa bağımlı elektron taşınımı ile oksijenli solunum ETS sini karşılaştırır.',
   'Her iki zincirde de elektron taşıyıcılar, proton gradyanı ve ATP sentaz vardır; fark son elektron alıcısıdır (NADP⁺ ya da O₂).','Fotosentez ve solunumun elektron zincirlerinin son alıcılarını karıştırmak.','ışığa bağımlı tepkimeler ve solunum ETS si',
-  metin='Bir bitki hücresinde, kloroplastların tilakoit zarlarındaki elektron taşınımı ile mitokondrinin iç zarındaki elektron taşıma sistemi karşılaştırılıyor. Bu iki sürecin benzer ve farklı yönleri tabloya yazılıyor.\nBuna göre, aşağıdakilerden hangisi bu iki sürecin ortak özelliği değildir?',
+  metin='Bir bitki hücresinde, kloroplastların tilakoit zarlarındaki elektron taşınımı ile mitokondrinin iç zarındaki elektron taşıma sistemi karşılaştırılıyor.\nBuna göre, aşağıdakilerden hangisi bu iki sürecin ortak özelliği değildir?',
   dogru=d19,sira=yer('A',d19,o19),
   yan=[(o19[0],'İki süreçte de elektronlar zardaki taşıyıcılar arasında aktarılır; ifade ortak bir özelliktir.','bilgi'),
        (o19[1],'İki süreçte de proton gradyanı oluşur; ortak özellik olduğu için bu şık yanlıştır.','bilgi'),
        (o19[2],'Her ikisinde de ATP sentaz ADP yi fosforiller; ortak özelliktir.','bilgi'),
        (o19[3],'Kloroplast ve mitokondri zarla çevrili organellerdir ve süreçler zarlarında gerçekleşir; ortak özelliktir.','bilgi')],
   istenen='İki sürecin ortak özelliği olmayan ifade.',
-  ip=['Işığa bağımlı tepkimelerde elektronların son olarak hangi moleküle aktarıldığını, solunumda ise hangisine aktarıldığını karşılaştır.'],
+  ip=['İki zincirin başlangıç ve bitiş moleküllerini karşılaştır.'],
   bilgi=[B('Solunumda ETS','NADH ve FADH₂ den gelen elektronlar iç zardaki taşıyıcılardan geçer ve son olarak O₂ ye aktarılır; ATP kemiozmozla sentezlenir'),
          B('Işığa bağımlı evrede ETS','elektronlar tilakoit zardaki taşıyıcılardan geçer, son olarak NADP⁺ ya aktarılır ve NADPH oluşur')],
   ad=[A('Benzerlikleri sırala','İki süreçte de taşıyıcılar, proton gradyanı ve ATP sentaz vardır; ikisi de zarlı organelde yürür.','Taşıyıcı, gradyan, ATP sentaz, organel zarı: ortak'),
       A('Farkı bul','Solunumda son elektron alıcısı O₂, ışığa bağımlı tepkimelerde NADP⁺ dır.','Son alıcı: O₂ ≠ NADP⁺'),
       A('Ortak olmayan ifadeyi seç','Son alıcının oksijen olması yalnız solunuma özgüdür.','Cevap: son alıcının oksijen olması')],
-  puf='İki zincir de aynı düzenekle çalışır; ayıran şey son elektron alıcısıdır: fotosentezde NADP⁺, solunumda O₂.')
+  puf='İki süreci aynı ölçütlerle (taşıyıcı, gradyan, enzim, başlangıç ve bitiş molekülü) sırayla karşılaştır.')
 
 # 20 · orta · olumsuz · stoma kapanması
 d20='Fotosentez durduğu için bitki hücrelerinde hücresel solunumun da durması'

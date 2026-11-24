@@ -30,9 +30,9 @@ def onc(ST,iste,harf,seed=1):
     for l in alt+ust:
         W=kume(l); parc=[]
         for r in sorted(W-hedef):
-            t=ST[r][0]; parc.append(f"{r} öncülü {'doğru' if t else 'yanlış'}tır. {ST[r][2]} Ancak {'yanlış' if t else 'doğru'} sanılarak kümeye alınmıştır.")
+            t=ST[r][0]; parc.append(f"{r} öncülü {'doğru' if t else 'yanlış'}{'dur' if t else 'tır'}. {ST[r][2]} Ancak {'yanlış' if t else 'doğru'} sanılarak kümeye alınmıştır.")
         for r in sorted(hedef-W):
-            t=ST[r][0]; parc.append(f"{r} öncülü {'doğru' if t else 'yanlış'}tır. {ST[r][2]} Ancak {'yanlış' if t else 'doğru'} sanılarak dışarıda bırakılmıştır.")
+            t=ST[r][0]; parc.append(f"{r} öncülü {'doğru' if t else 'yanlış'}{'dur' if t else 'tır'}. {ST[r][2]} Ancak {'yanlış' if t else 'doğru'} sanılarak dışarıda bırakılmıştır.")
         yan.append((l,' '.join(parc),'bilgi'))
     ad=[A(f'{r} öncülünü değerlendir',ST[r][2],f"{r}: {'doğru' if ST[r][0] else 'yanlış'}") for r in ST]
     ad.append(A('Kümeyi oluştur',f"İstenen yargılara uyan öncüller: {', '.join(sorted(hedef))}.",'Cevap: '+dg))
@@ -46,10 +46,10 @@ kartla('K-ABSS-02','Soluk alma–verme mekaniği','Diyafram ve dış kaburga ara
 kartla('K-ABSS-03','Solunum hacimleri','Tidal hacim, soluk alma/verme yedek hacmi ve rezidüel hacim spirometre eğrisinden okunur; vital kapasite rezidüeli içermez.','Rezidüel hacmi vital kapasiteye katmak; grafikte fark yerine mutlak değer okumak.','zor','grafik',4,'ss-hacim','Spirometre grafiği ve solunum hacimleri')
 kartla('K-ABSS-04','Gaz değişimi ve kısmi basınç','Gazlar kısmi basıncın yüksek olduğu ortamdan düşük olduğu ortama difüzyonla, enerji harcamadan geçer; alveolde ve dokuda gaz değişimi aynı ilkeye dayanır.','Difüzyonu aktif taşıma sanmak; yönü derişim yerine gazın türüne bağlamak.','orta','tablo',3,'ss-gaz-degisimi','Kısmi basınç farkı ve gaz değişimi')
 kartla('K-ABSS-05','Hemoglobin ve oksijen taşınması','Oksijenin büyük kısmı hemoglobinle taşınır; CO2 artışı ve pH düşüşü hemoglobinin oksijene ilgisini azaltır (eğri sağa kayar), CO daha güçlü bağlanır.','Çok oksijenin plazmada taşındığını sanmak; pH düşünce ilginin arttığını düşünmek.','zor','grafik',4,'ss-hb-oksijen','Hemoglobin ve oksijen–hemoglobin eğrisi')
-kartla('K-ABSS-06','Karbondioksit taşınması','CO2 en çok bikarbonat (alyuvarda karbonik anhidraz), sonra karbaminohemoglobin, en az plazmada çözünmüş olarak taşınır; akciğerde süreç tersine döner.','Karbaminohemoglobini en büyük pay sanmak; bikarbonatın plazmada oluştuğunu düşünmek.','zor','tablo',4,'ss-co2-tasima','Karbondioksit taşınma biçimleri')
+kartla('K-ABSS-06','Karbondioksit taşınması','CO2 kanda üç biçimde taşınır; payları farklıdır ve alyuvardaki enzim bikarbonat oluşumunu hızlandırır; akciğerde süreç tersine döner.','Taşınma biçimlerini birbirine karıştırmak; bikarbonatın plazmada oluştuğunu düşünmek.','zor','tablo',4,'ss-co2-tasima','Karbondioksit taşınma biçimleri')
 kartla('K-ABSS-07','Solunumun düzenlenmesi','Solunum merkezi omurilik soğanındadır; kan CO2 artışı ve pH düşüşü en etkili uyarıcıdır; O2 azalması kemoreseptörlerle ancak belirgin düşüşte etkili olur.','Asıl uyarıcının O2 azlığı olduğunu sanmak; fazla O2 solumanın nefes tutmayı uzatma nedenini hemoglobine bağlamak.','orta','tablo',4,'ss-duzenleme','Solunumun düzenlenmesi')
 kartla('K-ABSS-08','Yüksek rakım ve uyum','Yükseklikte oksijen yüzdesi değişmez, kısmi basıncı düşer; kemoreseptörler solunumu hızlandırır, eritropoietin alyuvar üretimini artırır.','Oksijen yüzdesinin azaldığını sanmak; hızlı solunumda pH düşeceğini düşünmek.','zor','öncüllü',4,'ss-iliskili','Çok kavramlı solunum yorumları')
-B_YOL=B('Solunum yolu','burun boşluğu havayı süzer, ısıtır ve nemlendirir · gırtlak ses tellerini taşır · soluk borusu C biçimli kıkırdak halkalarla açık kalır · bronşlar bronşçuklara ayrılır · gaz değişimi yalnız alveollerde olur')
+B_YOL=B('Solunum yolu','burun boşluğu havayı süzer, ısıtır ve nemlendirir · gırtlak ses tellerini taşır · soluk borusu ve bronşlar hava yolunu açık tutan destek yapılarına sahiptir · bronşlar bronşçuklara ayrılır · gaz değişimi yalnız alveollerde olur')
 B_ALV=B('Alveol','tek katlı yassı epitelden oluşan, çevresi kılcal damar ağıyla sarılı keseciklerdir · iç yüzeyi nemlidir ve surfaktanla kaplıdır · surfaktan yüzey gerilimini azaltarak alveolün sönmesini önler')
 B_MEK=B('Soluk alma ve verme','soluk alırken diyafram kasılıp düzleşir, dış kaburga arası kaslar kasılıp kaburgaları yukarı–öne kaldırır; göğüs boşluğu hacmi artar, akciğer içi basınç atmosferin altına düşer ve hava girer · dinlenmede soluk verme kasların gevşemesiyle olur')
 B_PLEV=B('Plevra','akciğeri saran çift zarlı yapıdır; zarlar arasındaki sıvı sürtünmeyi azaltır ve akciğerin göğüs boşluğunu izlemesini sağlar · bu boşluğun basıncı atmosfer basıncından düşüktür')
@@ -57,9 +57,9 @@ B_HAC=B('Solunum hacimleri','normal soluk alıp vermede taşınan hava tidal hac
 B_KB=B('Kısmi basınç ve difüzyon','bir gazın kısmi basıncı karışımdaki payıyla orantılıdır · gazlar kısmi basıncı yüksek ortamdan düşük ortama enerji harcanmadan geçer · bu yüzden alveol ve doku kılcallarında gaz değişimi difüzyonla olur')
 B_HB=B('Hemoglobin','alyuvarda bulunan, demirli hem gruplarıyla oksijen bağlayan proteindir · oksijenle birleşince oksihemoglobin olur · karbonmonoksit hemoglobine oksijenden çok daha güçlü bağlanır')
 B_BOHR=B('Oksijen–hemoglobin eğrisi','eğri oksijenin kısmi basıncına göre hemoglobinin doygunluğunu verir · kanda CO2 artınca ve pH düşünce eğri sağa kayar: aynı oksijen basıncında hemoglobin daha az oksijen bağlı tutar ve dokuya daha çok bırakır')
-B_CO2=B('CO2 taşınması','CO2 kanda üç biçimde taşınır: bikarbonat iyonu (en büyük pay), hemoglobine bağlı karbaminohemoglobin, plazmada çözünmüş · alyuvardaki karbonik anhidraz CO2 ile suyun birleşmesini hızlandırır')
+B_CO2=B('CO2 taşınması','CO2 kanda üç biçimde taşınır: bikarbonat iyonu, hemoglobine bağlı karbaminohemoglobin ve plazmada çözünmüş CO2 · alyuvardaki karbonik anhidraz CO2 ile suyun birleşmesini hızlandırır')
 B_DUZ=B('Solunum merkezi','solunum merkezi omurilik soğanındadır ve diyafram ile kaburga arası kasları sinirlerle uyarır · kandaki CO2 artışı ve pH düşüşü merkezi uyarır · karotis ve aort cisimcikleri oksijen azlığını da algılar')
-B_YUK=B('Yüksek rakım','yükseklere çıkıldıkça havanın oksijen yüzdesi sabit kalır, toplam basınç ve dolayısıyla oksijenin kısmi basıncı azalır · uzun süre kalınca eritropoietin artar ve alyuvar üretimi hızlanır')
+B_YUK=B('Kısmi basınç ve yükseklik','bir gazın kısmi basıncı, karışımdaki oranı ile toplam basıncın çarpımıdır · yükseklere çıkıldıkça toplam basınç azalır, havanın bileşimi değişmez')
 # =================== 01 · solunum yolu şeması · kolay ===================
 b=[]
 def kume(x,y,r=.2):
@@ -92,7 +92,7 @@ q('0001',tipId='ss-yol-alveol',tip='Solunum yolu ve alveol yapısı',z='kolay',a
  ad=[A('Yapıları sırala','Hava yukarıdan aşağı burun boşluğu, gırtlak, soluk borusu, bronş ve alveol kümelerine ilerler.','I: burun boşluğu · II: gırtlak · III: soluk borusu · IV: bronş · V: alveol'),
      A('Özelliği yapıyla eşleştir','C biçimli kıkırdak halkalar boru biçimli, açık kalması gereken soluk borusunun duvarındadır.','C halkalar → soluk borusu'),
      A('Numarayı bul','Soluk borusu gırtlak ile bronşlar arasındadır.','Cevap: III')],
- puf='Gırtlaktan sonra bronşlara ayrılmadan önce gelen halkalı borunun adı soluk borusudur.',sekil=SK1)
+ puf='Sıraya bak: gırtlaktan sonra, bronşlardan önce gelen yapı.',sekil=SK1)
 # =================== 02 · alveol öncüllü · kolay ===================
 ST2={'I':(True,'Alveoller tek katlı yassı epitel hücrelerinden oluşan ince duvarlı keseciklerdir.','Alveol duvarı tek katlı yassı epitelden yapılmıştır, bu da gazların kısa mesafeden geçmesini sağlar.'),
      'II':(False,'Alveollerin iç yüzeyini kaplayan surfaktan, yüzey gerilimini artırarak alveolün sönmesini önler.','Surfaktan yüzey gerilimini azaltır; gerilim artsaydı alveoller sönerdi.'),
@@ -103,7 +103,7 @@ q('0002',tipId='ss-yol-alveol',tip='Solunum yolu ve alveol yapısı',z='kolay',a
  metin=onctxt('İnsanda alveollerle ilgili olarak aşağıdaki yargılar verilmiştir.',ST2,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=dg,sira=sr,yan=yn,istenen='Doğru olan yargıların belirlenmesi.',
  ip=['Alveoldeki gaz geçişinin hangi taşıma türüne girdiğini ve surfaktanın gerilime etkisini ayrı ayrı düşün.'],bilgi=[B_ALV,B_KB],ad=ad,
- puf='Alveolde yassı epitel gaz geçişini kolaylaştırır; surfaktan gerilimi azaltır; geçiş difüzyonladır.')
+ puf='Her yargıyı alveolün yapı ve işleviyle ayrı ayrı karşılaştır.')
 # =================== 03 · zar modeli · kolay ===================
 b=[]
 b.append('\\draw[line width=1.4pt] (-1.5,0)--(-1.5,3.0) arc (180:0:1.5) -- (1.5,0);')
@@ -166,7 +166,7 @@ q('0004',tipId='ss-mekanik',tip='Soluk alıp verme mekanizması',z='orta',alt='S
      A('Kas durumunu bul','Diyaframın düzleşmesi ve kaburgaların kalkması kasların kasılmasıyla olur.','II: kaslar kasılı'),
      A('Hacim ve basıncı yorumla','Hacim büyüyünce akciğer içi basınç düşer ve hava girer.','II: hacim ↑, basınç ↓, soluk alma'),
      A('İfadeleri ele','Yalnız II’deki kasılma ve büyük hacmi söyleyen ifade şekille uyumludur.','Doğru ifade belirlendi')],
- puf='Düz diyafram ve yukarı kalkmış kaburga: kaslar kasılı, hacim büyük, soluk alma.',sekil=SK4)
+ puf='Her iki şekilde diyafram biçimini ve kaburga eğimini karşılaştır.',sekil=SK4)
 # =================== 05 · öncüllü yanlış · orta ===================
 ST5={'I':(False,'Soluk alma sırasında diyaframın gevşeyip kubbeleşmesi göğüs boşluğunun hacmini artırır.','Soluk alırken diyafram kasılıp düzleşir; gevşeyip kubbeleşmesi soluk vermede olur.'),
      'II':(True,'Dinlenme hâlinde soluk verme, solunum kaslarının gevşemesiyle büyük ölçüde pasif olarak gerçekleşir.','Dinlenmede soluk verme, kasların gevşeyip göğüs boşluğunun küçülmesiyle pasif olarak olur.'),
@@ -177,7 +177,7 @@ q('0005',tipId='ss-mekanik',tip='Soluk alıp verme mekanizması',z='orta',alt='S
  metin=onctxt('İnsanda soluk alıp verme mekanizmasıyla ilgili olarak aşağıdaki yargılar verilmiştir.',ST5,'Buna göre, bu yargılardan hangileri yanlıştır?'),
  dogru=dg,sira=sr,yan=yn,istenen='Yanlış olan yargıların belirlenmesi.',
  ip=['Her yargıyı diyafram–kaburga hareketi ve basınç–hacim ilişkisi bakımından ayrı ayrı sına.'],bilgi=[B_MEK,B_PLEV],ad=ad,
- puf='Soluk almada kaslar kasılır; dinlenme soluk vermesi pasiftir; plevra boşluğu basıncı atmosferin altındadır.')
+ puf='Her yargıyı kas durumu ve basınç–hacim ilişkisiyle ayrı ayrı sına.')
 # =================== 06 · spirometre · zor ===================
 pts=[]
 for i in range(0,61): 
@@ -208,13 +208,13 @@ q('0006',tipId='ss-hacim',tip='Spirometre grafiği ve solunum hacimleri',z='zor'
    (2000,'Normal soluk alma sonundaki grafik değeri (2000 mL) okunmuş; oysa istenen normal soluk verme sonundaki hacimdir ve rezidüel hacim zaten bu okumaya dahil değildir.','islem'),
    (6000,'Vital kapasite (5000 mL) ile rezidüel hacim (1000 mL) toplanmış; bu toplam akciğer kapasitesidir, normal soluk verme sonundaki hava değildir.','bilgi')],
  istenen='Normal soluk verme sonunda akciğerde kalan hava hacmi (mL).',
- ip=['Normal soluk verme sonunda ne kadar daha hava verilebildiğini grafikten oku, sonra hiç verilemeyen havayı ekle.'],
+ ip=['Grafiği, en zorlu soluk verme sonu seviyesine göre okumayı dene.'],
  bilgi=[B_HAC,B('Hacimlerin okunması','spirometre grafiğinde iki seviye arasındaki fark hacmi verir · en zorlu soluk verme sonu seviyesi 0 alınırsa, normal soluk verme sonu seviyesi soluk verme yedek hacmine eşittir')],
  ad=[A('Normal soluk verme seviyesini oku','Normal soluk alıp vermedeki en alt seviye, normal soluk verme sonunu gösterir; bu seviye 0 mL’nin 1500 mL üstündedir.','Soluk verme yedek hacmi = 1500 mL'),
      A('Atılamayan havayı belirle','En zorlu soluk vermeden sonra bile akciğerde kalan hava rezidüel hacimdir ve grafikte ölçülemez.','Rezidüel hacim = 1000 mL'),
      A('İkisini topla','Normal soluk verme sonunda akciğerde yedek hava ve rezidüel hava birlikte bulunur.','1500 + 1000 = 2500 mL'),
      A('Sonucu kontrol et','Bu değer, vital kapasite 5000 mL ve toplam kapasite 6000 mL olan bireyde ikisinin arasında kalır.','Cevap: 2500 mL')],
- puf='Normal soluk verme sonunda akciğerde kalan hava = soluk verme yedek hacmi + rezidüel hacim.',sekil=SK6)
+ puf='Normal soluk verme sonunda akciğerde hangi hacimlerin kaldığını düşün.',sekil=SK6)
 # =================== 07 · vital kapasite · orta ===================
 ST7={'I':(True,'Vital kapasite, tidal hacim ile soluk alma ve soluk verme yedek hacimlerinin toplamıdır.','Vital kapasite tidal hacim, soluk alma yedek hacmi ve soluk verme yedek hacminin toplamına eşittir.'),
      'II':(False,'Vital kapasite, rezidüel hacmi de içeren toplam hava miktarıdır.','Rezidüel hacim en zorlu soluk vermede de atılamadığından vital kapasiteye dahil değildir; rezidüel hacim vital kapasiteye eklendiğinde toplam kapasite bulunur.'),
@@ -225,7 +225,7 @@ q('0007',tipId='ss-hacim',tip='Spirometre grafiği ve solunum hacimleri',z='orta
  metin=onctxt('İnsanda akciğer hacimleri ve kapasiteleriyle ilgili olarak aşağıdaki yargılar verilmiştir.',ST7,'Buna göre, bu yargılardan hangileri yanlıştır?'),
  dogru=dg,sira=sr,yan=yn,istenen='Yanlış olan yargıların belirlenmesi.',
  ip=['Vital kapasitenin hangi hacimlerden oluştuğunu ve hangi hacmin dışarıda kaldığını düşün.'],bilgi=[B_HAC,B('Vital kapasite','en derin soluk alındıktan sonra zorlu soluk vermeyle dışarı verilebilen en fazla hava hacmidir · solunum kaslarının gücü, akciğer esnekliği ve göğüs kafesi yapısı bu değeri etkiler')],ad=ad,
- puf='Vital kapasite = tidal + alma yedek + verme yedek; rezidüel hacim buna dahil değildir.')
+ puf='Kapasiteleri oluşturan hacimleri ayrı ayrı sırala.')
 # =================== 08 · basınç–zaman · zor ===================
 cx=[(i/20,-math.sin(math.pi*(i/20)/2)) for i in range(0,41) if i/20<=2]+[(i/20,math.sin(math.pi*(i/20-2)/2)) for i in range(41,81)]
 cy=[(i/20,-5-3*math.sin(math.pi*(i/20)/2)) for i in range(0,41)]+[(i/20,-5) for i in range(41,81)]
@@ -238,7 +238,7 @@ b=['\\begin{axis}[width=8cm,height=5.4cm,xmin=0,xmax=4,ymin=-9,ymax=2,xtick={0,1
    '\\node[font=\\small\\bfseries,vurgu!80!black] at (axis cs:3.45,1.0) {X};\\node[font=\\small\\bfseries] at (axis cs:3.45,-4.1) {Y};','\\end{axis}']
 SK8=graf('\n'.join(b))
 dog8='Y eğrisi plevra boşluğunun basıncını göstermektedir; II anında akciğer içi basınç atmosfer basıncından yüksek olduğundan hava akciğerlerden dışarı çıkmaktadır.'
-q('0008',tipId='ss-mekanik',tip='Soluk alıp verme mekanizması',z='zor',alt='Basınç değişimleri',kaz='Akciğer içi ve plevra basıncı eğrilerini ayırt edip soluk alma–verme evrelerini yorumlar.',kalip='grafik',
+q('0008',tipId='ss-mekanik',tip='Soluk alıp verme mekanizması',z='orta',alt='Basınç değişimleri',kaz='Akciğer içi ve plevra basıncı eğrilerini ayırt edip soluk alma–verme evrelerini yorumlar.',kalip='grafik',
  kart='K-ABSS-02 (basınç–zaman) · plevra negatif basıncı ve evre belirleme',
  metin='Sağlıklı bir insanın bir soluk alıp verme döngüsü sırasında, akciğer içi basınç ile plevra zarları arasındaki boşluğun basıncı ölçülmüş ve bu basınçların zamanla değişimi grafikteki X ve Y eğrileriyle gösterilmiştir. Basınçlar, atmosfer basıncı sıfır kabul edilerek verilmiştir. Grafikte I ve II ile işaretlenen anlarda ölçümler yapılmıştır.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
  dogru=dog8,sira=yer('A',dog8,['X eğrisi plevra boşluğunun basıncını göstermektedir; I anında diyafram kasılmış ve hava akciğerlere girmektedir.','Y eğrisi plevra boşluğunun basıncını göstermektedir; I anında akciğer içi basınç atmosfer basıncından yüksektir ve hava akciğerlere girmektedir.','Her iki anda da plevra boşluğunun basıncı atmosfer basıncından yüksektir ve akciğerler bu sayede şişkin kalır.','Y eğrisi plevra boşluğunun basıncını göstermektedir; II anında diyafram kasılarak düzleşmekte ve akciğer içi basınç artmaktadır.']),
@@ -247,13 +247,13 @@ q('0008',tipId='ss-mekanik',tip='Soluk alıp verme mekanizması',z='zor',alt='Ba
       ('Her iki anda da plevra boşluğunun basıncı atmosfer basıncından yüksektir ve akciğerler bu sayede şişkin kalır.','Plevra basıncı her iki anda da atmosfer basıncının altındadır; negatif basınç akciğerin göğüs boşluğunu izlemesini sağlar.','bilgi'),
       ('Y eğrisi plevra boşluğunun basıncını göstermektedir; II anında diyafram kasılarak düzleşmekte ve akciğer içi basınç artmaktadır.','II anında hava dışarı çıktığı için diyafram gevşemiştir; kasılması soluk almaya özgüdür. Basınç artışı doğru ama diyafram durumu yanlış okunmuş.','dikkat')],
  istenen='Grafiğe göre doğru olan ifade.',
- ip=['Hangi eğrinin her an atmosfer basıncının altında kaldığını bul; sonra I ve II anlarında akciğer içi basıncın işaretine bak.'],
+ ip=['Eğrilerin sıfır çizgisine göre konumlarını karşılaştır.'],
  bilgi=[B_MEK,B_PLEV],
  ad=[A('Eğrileri tanı','Y eğrisi tüm zaman boyunca sıfırın altındadır; yalnız plevra boşluğunun basıncı sürekli negatiftir. X ise sıfırın altına ve üstüne geçer.','Y: plevra · X: akciğer içi'),
      A('I anını yorumla','I anında X yaklaşık −1’dir; akciğer içi basınç atmosferin altındadır, hava girer, diyafram kasılıdır.','I: soluk alma'),
      A('II anını yorumla','II anında X yaklaşık +1’dir; akciğer içi basınç atmosferin üstündedir, hava çıkar, kaslar gevşemiştir.','II: soluk verme'),
      A('İfadeleri karşılaştır','Y’nin plevra basıncı ve II anındaki yüksek akciğer içi basınç birlikte yalnız bir ifadede doğrudur.','Doğru ifade belirlendi')],
- puf='Plevra boşluğunun basıncı hep negatiftir; akciğer içi basınç soluk almada negatif, soluk vermede pozitiftir.',sekil=SK8)
+ puf='Önce eğrileri tanı, sonra her anda basıncın işaretine bak.',sekil=SK8)
 # =================== 09 · kısmi basınç tablosu · orta ===================
 KB={'Alveol havası':(104,40),'Akciğer kılcalına gelen kan':(40,46),'Dokuya ulaşan kan':(100,40),'Doku hücresi':(20,50)}
 assert KB['Alveol havası'][0]>KB['Akciğer kılcalına gelen kan'][0] and KB['Alveol havası'][1]<KB['Akciğer kılcalına gelen kan'][1]
@@ -263,9 +263,9 @@ dog9='Alveolden kana O₂, kandan alveole CO₂ geçer; doku kılcallarında ise
 q('0009',tipId='ss-gaz-degisimi',tip='Kısmi basınç farkı ve gaz değişimi',z='orta',alt='Gaz değişimi',kaz='Kısmi basınç verilerinden alveolde ve dokuda gaz geçiş yönlerini belirler.',kalip='tablo',
  kart='K-ABSS-04 (kısmi basınç tablosu) · alveol ve doku geçişleri',
  metin='Tabloda, sağlıklı bir insanın dolaşımındaki dört ortamda ölçülen oksijen (pO₂) ve karbondioksit (pCO₂) kısmi basınçları verilmiştir. Ölçümler dinlenme hâlinde yapılmıştır.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
- dogru=dog9,sira=yer('D',dog9,['Alveolden kana CO₂, kandan alveole O₂ geçer; doku kılcallarında ise O₂ hücreden kana, CO₂ kandan hücreye geçer.','Gazlar kısmi basıncı düşük ortamdan yüksek olana doğru geçtiği için bu geçişlerde ATP harcanır.','Alveol havasındaki CO₂ kısmi basıncı kandakinden yüksek olduğundan CO₂ alveolden kana geçer.','Dokuya ulaşan kandaki O₂ kısmi basıncı hücredekinden yüksek olduğundan O₂ hücreden kana geçer.']),
+ dogru=dog9,sira=yer('D',dog9,['Alveolden kana CO₂, kandan alveole O₂ geçer; doku kılcallarında ise O₂ hücreden kana, CO₂ kandan hücreye geçer.','Alveolde gaz geçişi kısmi basınç farkıyla, doku kılcallarında ise taşıyıcı proteinlerle gerçekleşir.','Alveol havasındaki CO₂ kısmi basıncı kandakinden yüksek olduğundan CO₂ alveolden kana geçer.','Dokuya ulaşan kandaki O₂ kısmi basıncı hücredekinden yüksek olduğundan O₂ hücreden kana geçer.']),
  yan=[('Alveolden kana CO₂, kandan alveole O₂ geçer; doku kılcallarında ise O₂ hücreden kana, CO₂ kandan hücreye geçer.','Gazların yönü ters alınmış: O₂ kısmi basıncı alveolde ve arteriyel kanda yüksektir, bu yüzden O₂ kana ve hücreye doğru geçer.','bilgi'),
-      ('Gazlar kısmi basıncı düşük ortamdan yüksek olana doğru geçtiği için bu geçişlerde ATP harcanır.','Gazlar kısmi basıncı yüksek ortamdan düşüğe, enerji harcamadan difüzyonla geçer; tabloda hiçbir geçiş aktif taşıma gerektirmez.','bilgi'),
+      ('Alveolde gaz geçişi kısmi basınç farkıyla, doku kılcallarında ise taşıyıcı proteinlerle gerçekleşir.','Her iki bölgede de gazlar kısmi basınç farkına dayalı difüzyonla geçer; taşıyıcı protein gerekmez.','bilgi'),
       ('Alveol havasındaki CO₂ kısmi basıncı kandakinden yüksek olduğundan CO₂ alveolden kana geçer.','Alveol havasında CO₂ kısmi basıncı 40, akciğer kılcalına gelen kanda 46 mmHg’dir; CO₂ yüksek olan kandan alveole geçer. Tablo yanlış okunmuş.','dikkat'),
       ('Dokuya ulaşan kandaki O₂ kısmi basıncı hücredekinden yüksek olduğundan O₂ hücreden kana geçer.','Gerekçe doğru okunmuş ama sonuç ters yazılmış: O₂ basıncı yüksek olan kandan düşük olan hücreye geçer.','dikkat')],
  istenen='Tablodaki verilere göre doğru olan ifade.',
@@ -314,7 +314,7 @@ q('0011',tipId='ss-hb-oksijen',tip='Hemoglobin ve oksijen–hemoglobin eğrisi',
      A('40 mmHg değerlerini oku','40 mmHg’de X eğrisi %75, Y eğrisi %50 doygunluğu gösterir.','X: %75 · Y: %50'),
      A('Farkı hesapla','Doku kılcalında Y koşulunda hemoglobin daha az doygundur; aradaki fark bırakılan fazladan O₂’yi gösterir.','75 − 50 = 25 puan'),
      A('Yorumu seç','Y’nin pH 7,2’ye ait olduğunu ve dokuya daha çok O₂ bırakıldığını söyleyen ifade doğrudur.','Doğru ifade belirlendi')],
- puf='pH düşünce eğri sağa kayar: aynı basınçta hemoglobin daha az doygun kalır, doku daha çok O₂ alır.',sekil=SK11)
+ puf='Hangi eğrinin hangi pH’a ait olduğunu belirleyip aynı basınçta doygunlukları karşılaştır.',sekil=SK11)
 # =================== 12 · hemoglobin öncüllü · orta ===================
 ST12={'I':(True,'Hemoglobin, her biri demir taşıyan dört hem grubu içerir ve bir molekülü en fazla dört oksijen molekülü bağlayabilir.','Hemoglobinde dört hem grubu vardır ve her biri bir oksijen molekülü bağlayabilir.'),
       'II':(False,'Hemoglobin yalnız oksijen bağlayabilir, diğer gazların taşınmasında rol almaz.','Hemoglobin CO₂ ile karbaminohemoglobin, CO ile karboksihemoglobin oluşturur; yalnız oksijen taşımaz.'),
@@ -325,13 +325,13 @@ q('0012',tipId='ss-hb-oksijen',tip='Hemoglobin ve oksijen–hemoglobin eğrisi',
  metin=onctxt('Hemoglobinle ilgili olarak aşağıdaki yargılar verilmiştir.',ST12,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=dg,sira=sr,yan=yn,istenen='Doğru olan yargıların belirlenmesi.',
  ip=['Hemoglobinin hangi gazlarla bağ kurabildiğini ve bağlanma güçlerini düşün.'],bilgi=[B_HB,B_CO2],ad=ad,
- puf='Hemoglobin O₂, CO₂ ve CO ile bağ kurar; CO’nun ilgisi en yüksektir.')
+ puf='Her yargıyı hemoglobinin bağladığı gazlar bakımından sına.')
 # =================== 13 · CO2 taşınması tablo · zor ===================
 CO2={'Plazmada çözünmüş':14,'I':140,'II':46}; TOP=sum(CO2.values()); assert TOP==200 and 14*10==TOP*7//10//1 or True
 assert CO2['I']==TOP*70//100 and CO2['II']==TOP*23//100 and CO2['Plazmada çözünmüş']==TOP*7//100
 KAT=Fr(5,2); dg13=CO2['II']*KAT; assert dg13==115
 SK13=tablo_svg(['Taşınma biçimi','CO₂ miktarı (mL/dk)'],[[k,str(v)] for k,v in CO2.items()])
-q('0013',tipId='ss-co2-tasima',tip='Karbondioksit taşınma biçimleri',z='zor',alt='CO₂ taşınması',kaz='Tablodaki verilerden karbaminohemoglobin payını belirleyip değişen koşulda hesaplar.',kalip='tablo',
+q('0013',tipId='ss-co2-tasima',tip='Karbondioksit taşınma biçimleri',z='orta',alt='CO₂ taşınması',kaz='Tablodaki verilerden karbaminohemoglobin payını belirleyip değişen koşulda hesaplar.',kalip='tablo',
  kart='K-ABSS-06 (CO₂ biçimleri) · bikarbonat/karbaminohemoglobin ayrımı ve hesap',
  metin='Dinlenme hâlindeki bir insanda dokulardan kana geçen CO₂’nin taşınma biçimleri tabloda verilmiştir. I ve II ile gösterilen biçimlerden biri bikarbonat iyonu, diğeri hemoglobine bağlı (karbaminohemoglobin) taşınmadır; hangisinin hangisi olduğu belirtilmemiştir.\nBu kişi egzersiz yaptığında dokulardan kana geçen CO₂ miktarı 2,5 katına çıkıyor ve biçimlerin payları değişmiyor.\nBuna göre, egzersiz sırasında dakikada hemoglobine bağlanarak taşınan CO₂ miktarı kaç mL’dir?',
  dogru=115,yan=[(35,'Plazmada çözünmüş CO₂ miktarı (14 mL) 2,5 ile çarpılmış; oysa hemoglobine bağlı olan payı bu değildir.','dikkat'),
@@ -345,24 +345,24 @@ q('0013',tipId='ss-co2-tasima',tip='Karbondioksit taşınma biçimleri',z='zor',
      A('Hemoglobinle taşınanı bul','Karbaminohemoglobin payı tablodaki II’dir.','Dinlenmede 46 mL/dk'),
      A('Egzersiz artışını uygula','Toplam CO₂ 2,5 katına çıkarken payların oranı değişmediği için her biçim 2,5 katına çıkar.','46 × 2,5 = 115 mL/dk'),
      A('Sonucu kontrol et','Pay %23 olduğundan 500 mL’nin %23’ü de 115 mL eder.','Cevap: 115 mL')],
- puf='CO₂ taşınmasında sıralama: bikarbonat > karbaminohemoglobin > plazmada çözünmüş.',sekil=SK13)
+ puf='Önce I ve II’nin hangi biçim olduğunu ayır, sonra katsayıyı uygula.',sekil=SK13)
 # =================== 14 · oksijen taşınması · orta · olumsuz ===================
 dog14='Oksijenin büyük bölümü plazmada çözünmüş hâlde taşınır; hemoglobin yalnızca küçük bir kısmını taşır.'
-q('0014',tipId='ss-hb-oksijen',tip='Hemoglobin ve oksijen–hemoglobin eğrisi',z='orta',alt='Oksijen taşınması',kaz='İnsanda oksijen taşınmasına ilişkin yanlış bilgiyi ayırt eder.',kalip='düz',
+q('0014',tipId='ss-hb-oksijen',tip='Hemoglobin ve oksijen–hemoglobin eğrisi',z='orta',alt='Oksijen taşınması',kaz='Hemoglobin ve oksijen taşınmasına ilişkin yanlış bilgiyi ayırt eder.',kalip='düz',
  kart='K-ABSS-05 (O₂ taşınması) · plazma–hemoglobin payı ve CO',
- metin='Bir biyoloji öğrencisi, insan kanında oksijenin akciğerlerden dokulara taşınmasını inceleyerek hemoglobinin görevini, çevre koşullarının etkisini ve zehirlenme durumlarını not alıyor. Notlarını arkadaşlarına sunmadan önce öğretmenine kontrol ettiriyor.\nBuna göre, öğrencinin notlarındaki aşağıdaki ifadelerden hangisi yanlıştır?',
- dogru=dog14,sira=yer('E',dog14,['Her hemoglobin molekülü en fazla dört oksijen molekülü bağlayabilir.','Uzun süre yüksek rakımda kalan bireylerde alyuvar sayısı artabilir.','Karbonmonoksit zehirlenmesinde hemoglobinin oksijen taşıma kapasitesi azalır.','Dokularda kanın karbondioksit düzeyinin artması, oksihemoglobinden oksijenin ayrılmasını kolaylaştırır.']),
- yan=[('Her hemoglobin molekülü en fazla dört oksijen molekülü bağlayabilir.','Bu ifade doğrudur: hemoglobinde dört hem grubu vardır ve her biri bir O₂ bağlar. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('Uzun süre yüksek rakımda kalan bireylerde alyuvar sayısı artabilir.','Bu ifade doğrudur: oksijen azlığı eritropoietini artırır ve alyuvar üretimi hızlanır. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('Karbonmonoksit zehirlenmesinde hemoglobinin oksijen taşıma kapasitesi azalır.','Bu ifade doğrudur: CO hemoglobine O₂’den çok daha güçlü bağlanır ve O₂ taşıyacak hemoglobin azalır. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('Dokularda kanın karbondioksit düzeyinin artması, oksihemoglobinden oksijenin ayrılmasını kolaylaştırır.','Bu ifade doğrudur: CO₂ artışı ve pH düşüşü hemoglobinin O₂’ye ilgisini azaltır. Yanlış sanılarak seçilmiş.','bilgi')],
+ metin='Hemoglobinle ve oksijenin kanda taşınmasıyla ilgili aşağıdakilerden hangisi yanlıştır?',
+ dogru=dog14,sira=yer('E',dog14,['İnsanın olgun alyuvarlarında çekirdek bulunmaz; bu durum hemoglobine daha fazla yer ayrılmasını sağlar.','Uzun süre yüksek rakımda kalan bireylerde alyuvar sayısı artabilir.','Oksijenin kısmi basıncı yüksek olan akciğer kılcallarında hemoglobin oksijenle birleşerek oksihemoglobin oluşturur.','Dokularda kanın karbondioksit düzeyinin artması, oksihemoglobinden oksijenin ayrılmasını kolaylaştırır.']),
+ yan=[('İnsanın olgun alyuvarlarında çekirdek bulunmaz; bu durum hemoglobine daha fazla yer ayrılmasını sağlar.','Olgun alyuvarda çekirdek yoktur ve hacmin büyük kısmı hemoglobinle doludur; bu ifade doğrudur. Çekirdeksizliğin taşıma kapasitesini azalttığı sanılmıştır.','bilgi'),
+      ('Uzun süre yüksek rakımda kalan bireylerde alyuvar sayısı artabilir.','Yükseklikte oksijenin kısmi basıncı azaldığı için alyuvar üretimi artabilir; bu ifade doğrudur. Alyuvar sayısının sabit kalacağı sanılmıştır.','bilgi'),
+      ('Oksijenin kısmi basıncı yüksek olan akciğer kılcallarında hemoglobin oksijenle birleşerek oksihemoglobin oluşturur.','Yüksek kısmi basınçta hemoglobinin oksijene doygunluğu artar; bu ifade doğrudur. Oksihemoglobinin dokuda oluştuğu sanılmıştır.','bilgi'),
+      ('Dokularda kanın karbondioksit düzeyinin artması, oksihemoglobinden oksijenin ayrılmasını kolaylaştırır.','CO₂ artışı ve pH düşüşü hemoglobinin oksijene ilgisini azaltır; bu ifade doğrudur. CO₂’nin oksijen bırakımını güçleştireceği sanılmıştır.','bilgi')],
  istenen='Yanlış olan ifade.',
  ip=['Oksijenin kanda ağırlıklı olarak hangi bileşikle taşındığını hatırlayıp her ifadeyi bu bilgiyle sına.'],
  bilgi=[B_HB,B_BOHR],
  ad=[A('İfadeleri tek tek sına','Dört hem grubu, yükseklikte alyuvar artışı, CO’nun güçlü bağlanması ve CO₂’nin O₂ bırakımını artırması bilinen gerçeklerdir.','Dört ifade doğru'),
      A('Taşınma payına bak','O₂’nin çok büyük kısmı alyuvardaki hemoglobinle, çok küçük kısmı plazmada çözünmüş hâlde taşınır.','Hemoglobin: büyük pay · plazma: küçük pay'),
      A('Yanlış ifadeyi seç','Plazma payını büyük gösteren ifade bu bilgiyle çelişir.','Cevap: plazma payı ifadesi')],
- puf='O₂ taşınmasında asıl taşıyıcı hemoglobindir; plazmada çözünen pay çok azdır.')
+ puf='Her ifadeyi oksijenin kandaki taşınma biçimiyle sına.')
 # =================== 15 · CO2 solunum hızı sütun grafik · orta ===================
 CZ=[('I',0.04,12),('II',2,15),('III',4,22),('IV',6,30)]
 assert [c[2] for c in CZ]==sorted(c[2] for c in CZ)
@@ -371,15 +371,15 @@ b=['\\begin{axis}[ybar,width=7.6cm,height=5cm,bar width=.7cm,ymin=0,ymax=35,symb
    '\\addplot[fill=vurgu!45,draw=black] coordinates {'+' '.join(f'({c[0]},{c[2]})' for c in CZ)+'};','\\end{axis}']
 b.append('\\node[font=\\scriptsize] at (1.55,-1.15) {};')
 SK15=graf('\n'.join(b))
-dog15='Solunan havadaki CO₂ arttıkça kanın CO₂ düzeyi yükselir ve pH düşer; bu durum omurilik soğanındaki solunum merkezini uyararak soluk sayısını artırır.'
+dog15='Kandaki CO₂ düzeyi yükselir ve pH düşer; bu durum omurilik soğanındaki solunum merkezini uyararak soluk sayısını artırır.'
 q('0015',tipId='ss-duzenleme',tip='Solunumun düzenlenmesi',z='orta',alt='Solunumun düzenlenmesi',kaz='CO₂ derişimi–soluk sayısı verisini solunum merkezi mekanizmasıyla açıklar.',kalip='grafik',
  kart='K-ABSS-07 (CO₂ uyarısı) · solunan hava CO₂ yüzdesi–soluk sayısı',
  metin='Sağlıklı bir gönüllü, karbondioksit yüzdeleri farklı dört gaz karışımını birer dakika boyunca solumuştur. Karışımların hepsinde oksijen yüzdesi normal hava ile aynıdır. Gönüllünün her karışımdaki dakikalık soluk sayısı grafikte verilmiştir.\nBuna göre, soluk sayısındaki değişimin nedeni aşağıdakilerden hangisidir?',
- dogru=dog15,sira=yer('D',dog15,['Soluk sayısındaki artış, kandaki O₂ azalmasının solunum merkezini CO₂’den daha güçlü uyarmasından kaynaklanmaktadır.','CO₂ artışı beyincik tarafından algılanmakta ve soluk sayısı beyincik aracılığıyla artırılmaktadır.','Kan pH’ı yükseldiği için karotis ve aort cisimcikleri uyarılmakta ve soluk sayısı artmaktadır.','Soluk sayısındaki artış istemli olarak yapılmaktadır; çünkü solunum yalnızca beyin kabuğuyla denetlenir.']),
- yan=[('Soluk sayısındaki artış, kandaki O₂ azalmasının solunum merkezini CO₂’den daha güçlü uyarmasından kaynaklanmaktadır.','Karışımların hepsinde O₂ yüzdesi aynıdır; değişen CO₂’dir. Solunum merkezini en güçlü uyaran da O₂ azalması değil CO₂ artışıdır.','bilgi'),
-      ('CO₂ artışı beyincik tarafından algılanmakta ve soluk sayısı beyincik aracılığıyla artırılmaktadır.','Solunum merkezi beyincikte değil omurilik soğanındadır; beyincik denge ve kas koordinasyonuyla ilgilidir.','bilgi'),
-      ('Kan pH’ı yükseldiği için karotis ve aort cisimcikleri uyarılmakta ve soluk sayısı artmaktadır.','CO₂ artışı kanı asitleştirir, pH yükselmez; düşen pH solunum merkezini uyarır.','bilgi'),
-      ('Soluk sayısındaki artış istemli olarak yapılmaktadır; çünkü solunum yalnızca beyin kabuğuyla denetlenir.','Solunum büyük ölçüde omurilik soğanıyla istemsiz denetlenir; istemli kontrol yalnız bir ölçüde ve geçici olarak yapılabilir.','bilgi')],
+ dogru=dog15,sira=yer('D',dog15,['Kandaki O₂ düzeyi azalır; bu durum solunum merkezini CO₂’den daha güçlü biçimde uyarır.','Kandaki CO₂ düzeyi yükselir; bu durum beyinciğe iletilir ve beyincik solunum kaslarını uyarır.','Kandaki CO₂ düzeyi yükselir ve pH da yükselir; bu durum karotis ve aort cisimciklerini uyarır.','Kandaki CO₂ düzeyi yükselir; bu durum beyin kabuğunu uyarır ve soluk alıp verme istemli olarak hızlanır.']),
+ yan=[('Kandaki O₂ düzeyi azalır; bu durum solunum merkezini CO₂’den daha güçlü biçimde uyarır.','Karışımların hepsinde O₂ yüzdesi aynıdır; değişen CO₂’dir. Solunum merkezini en güçlü uyaran da O₂ azalması değil CO₂ artışıdır.','bilgi'),
+      ('Kandaki CO₂ düzeyi yükselir; bu durum beyinciğe iletilir ve beyincik solunum kaslarını uyarır.','Solunum merkezi beyincikte değil omurilik soğanındadır; beyincik denge ve kas koordinasyonuyla ilgilidir.','bilgi'),
+      ('Kandaki CO₂ düzeyi yükselir ve pH da yükselir; bu durum karotis ve aort cisimciklerini uyarır.','CO₂ artışı kanı asitleştirir, pH yükselmez; düşen pH solunum merkezini uyarır.','bilgi'),
+      ('Kandaki CO₂ düzeyi yükselir; bu durum beyin kabuğunu uyarır ve soluk alıp verme istemli olarak hızlanır.','Solunum büyük ölçüde omurilik soğanıyla istemsiz denetlenir; istemli kontrol yalnız bir ölçüde ve geçici olarak yapılabilir.','bilgi')],
  istenen='Soluk sayısı artışının nedeni.',
  ip=['Deneyde sabit tutulan ve değişen gazı belirle; değişen gazın kan pH’ı ve solunum merkeziyle ilişkisini düşün.'],
  bilgi=[B_DUZ],
@@ -398,7 +398,7 @@ q('0016',tipId='ss-co2-tasima',tip='Karbondioksit taşınma biçimleri',z='orta'
  metin=onctxt('İnsanda karbondioksitin dokulardan akciğerlere taşınmasıyla ilgili olarak aşağıdaki yargılar verilmiştir.',ST16,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=dg,sira=sr,yan=yn,istenen='Doğru olan yargıların belirlenmesi.',
  ip=['CO₂’nin kanda hangi biçimde en büyük payı aldığını ve alyuvardaki enzimin görevini düşün.'],bilgi=[B_CO2,B_KB],ad=ad,
- puf='CO₂’nin en büyük bölümü bikarbonat olarak taşınır; alyuvardaki karbonik anhidraz süreci hızlandırır.')
+ puf='Her yargıyı CO₂’nin kandaki yolunun ilgili basamağıyla karşılaştır.')
 # =================== 17 · deney tablosu · zor · olumsuz ===================
 DN={'K':('Normal solunum',45),'L':('Hızlı ve derin soluma',80),'M':('Kapalı torbaya soluma',25)}
 assert DN['L'][1]>DN['K'][1]>DN['M'][1]
@@ -419,7 +419,7 @@ q('0017',tipId='ss-duzenleme',tip='Solunumun düzenlenmesi',z='zor',alt='Nefes t
      A('CO₂ düzeyini yorumla','Hiperventilasyon kandaki CO₂’yi düşürür; torbaya soluma CO₂’yi artırır. Solunum merkezi CO₂ artışıyla uyarıldığından süreler bu sırayla değişir.','L: CO₂ düşük · M: CO₂ yüksek'),
      A('O₂ iddiasını sına','Normal soluyan bireyde hemoglobin zaten çok yüksek oranda O₂’ye doygundur; hiperventilasyon doygunluğu belirgin artırmaz.','O₂ nedeni geçersiz'),
      A('Yanlış yorumu seç','O₂ artışını neden gösteren yorum geçersizdir.','Yanlış yorum belirlendi')],
- puf='Nefes tutma süresini O₂ azalması değil, CO₂ artışı sonlandırır; hiperventilasyon CO₂’yi düşürür, O₂’yi belirgin artırmaz.',sekil=SK17)
+ puf='Nefes tutmayı sonlandıran uyarıyı belirle.',sekil=SK17)
 # =================== 18 · solunum merkezi öncüllü · orta ===================
 ST18={'I':(True,'Kandaki CO₂ düzeyinin artması solunum merkezini uyarır.','Kandaki CO₂ artışı solunum merkezini uyaran en etkili faktördür.'),
       'II':(True,'Kan pH’ının düşmesi solunum merkezinin uyarılmasına katkıda bulunur.','pH düşüşü solunum merkezini uyarır ve soluk alıp verme hızını artırır.'),
@@ -430,7 +430,7 @@ q('0018',tipId='ss-duzenleme',tip='Solunumun düzenlenmesi',z='orta',alt='Solunu
  metin=onctxt('İnsanda solunumun düzenlenmesiyle ilgili olarak aşağıdaki durumlar verilmiştir.',{k:(v[0],v[1],v[2]) for k,v in ST18.items()},'Buna göre, bu durumlardan hangileri solunum hızının artmasına yol açar?'),
  dogru=dg,sira=sr,yan=yn,istenen='Solunum hızını artıran durumların belirlenmesi.',
  ip=['Solunum merkezinin konumunu ve hangi kimyasal değişimleri algıladığını düşün.'],bilgi=[B_DUZ],ad=ad,
- puf='CO₂ artışı, pH düşüşü ve belirgin O₂ azalması solunum hızını artırır; en güçlü uyarıcı CO₂’dir.')
+ puf='Her durumun solunum merkezini nasıl etkilediğini ayrı ayrı sına.')
 # =================== 19 · alveol–kılcal şeması · orta · olumsuz ===================
 b=[]
 b.append('\\draw[line width=1.4pt,fill=vurgu!10] (0,0) circle (1.6);')
@@ -441,33 +441,34 @@ b.append('\\node[font=\\normalsize\\bfseries] at (2.4,1.1) {X};\\node[font=\\nor
 b.append('\\node[font=\\small,align=center] at (-.2,0) {alveol};\\node[font=\\small,align=left,anchor=west] at (4.4,0) {kılcal\\\\damar};')
 b.append('\\node[font=\\small,align=center] at (3.6,3.5) {akciğere\\\\gelen kan};\\node[font=\\small,align=center] at (3.6,-3.5) {akciğerden\\\\ayrılan kan};')
 SK19=tk('\n'.join(b),.95)
-dog19='X ile gösterilen gazın alveole geçişi, enerji harcanarak aktif taşımayla gerçekleşir.'
-q('0019',tipId='ss-yol-alveol',tip='Solunum yolu ve alveol yapısı',z='orta',alt='Alveolde gaz değişimi',kaz='Alveol–kılcal damar şemasında gaz geçişlerini yorumlar.',kalip='şekilli',
- kart='K-ABSS-01 (alveol–kılcal) · okların yönü ve kan akışı',
- metin='Şekilde bir alveol ile çevresindeki kılcal damar ve gaz değişimi sırasında iki gazın geçiş yönleri X ve Y okları ile gösterilmiştir. Kılcal damar kanın akış yönü oklarla belirtilmiştir.\nBuna göre, aşağıdaki ifadelerden hangisi yanlıştır?',
- dogru=dog19,sira=yer('B',dog19,['Y ile gösterilen gazın büyük kısmı kanda alyuvarlardaki hemoglobine bağlanarak taşınır.','X ile gösterilen gazın kısmi basıncı, alveole gelen kanda alveol havasındakinden yüksektir.','Alveolden ayrılan kanda Y ile gösterilen gazın kısmi basıncı, alveole gelen kandakinden yüksektir.','X ve Y ile gösterilen gazların alveol ile kılcal damar arasındaki geçişi difüzyonla gerçekleşir.']),
- yan=[('Y ile gösterilen gazın büyük kısmı kanda alyuvarlardaki hemoglobine bağlanarak taşınır.','Bu ifade doğrudur: kana geçen gaz O₂’dir ve büyük kısmı oksihemoglobin olarak taşınır. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('X ile gösterilen gazın kısmi basıncı, alveole gelen kanda alveol havasındakinden yüksektir.','Bu ifade doğrudur: CO₂ kısmi basıncı alveole gelen kanda alveoldekinden yüksek olduğu için kandan alveole geçer. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('Alveolden ayrılan kanda Y ile gösterilen gazın kısmi basıncı, alveole gelen kandakinden yüksektir.','Bu ifade doğrudur: kana O₂ geçtiği için kanın O₂ kısmi basıncı alveolden ayrılırken yükselmiştir. Yanlış sanılarak seçilmiş.','bilgi'),
-      ('X ve Y ile gösterilen gazların alveol ile kılcal damar arasındaki geçişi difüzyonla gerçekleşir.','Bu ifade doğrudur: gazlar kısmi basınç farkıyla pasif olarak geçer. Yanlış sanılarak seçilmiş.','bilgi')],
+dog19='Alveolden ayrılan kanda X ile gösterilen gazın kısmi basıncı, alveole gelen kandakinden yüksektir.'
+q('0019',tipId='ss-yol-alveol',tip='Solunum yolu ve alveol yapısı',z='zor',alt='Alveolde gaz değişimi',kaz='Alveol–kılcal damar şemasında okların yönünden gazları belirleyip kandaki kısmi basınç ve pH değişimini yorumlar.',kalip='şekilli',
+ kart='K-ABSS-01 (alveol–kılcal) · okların yönü, kısmi basınç ve pH değişimi',
+ metin='Şekilde bir alveol ile çevresindeki kılcal damar ve gaz değişimi sırasında iki gazın geçiş yönleri X ve Y okları ile gösterilmiştir. Kılcal damarda kanın akış yönü oklarla belirtilmiştir.\nBuna göre, aşağıdaki ifadelerden hangisi yanlıştır?',
+ dogru=dog19,sira=yer('B',dog19,['Y ile gösterilen gazın kandaki taşınmasında alyuvarlardaki hemoglobin rol oynar.','X ile gösterilen gazın kısmi basıncı, alveole gelen kanda alveol havasındakinden yüksektir.','Alveolden ayrılan kanda Y ile gösterilen gazın kısmi basıncı, alveole gelen kandakinden yüksektir.','Alveolden ayrılan kanın pH değeri, alveole gelen kanın pH değerinden yüksektir.']),
+ yan=[('Y ile gösterilen gazın kandaki taşınmasında alyuvarlardaki hemoglobin rol oynar.','Alveolden kana geçen Y gazı O₂’dir ve büyük kısmı hemoglobinle taşınır; ifade doğrudur. Hemoglobinin O₂ taşımadığı sanılmıştır.','bilgi'),
+      ('X ile gösterilen gazın kısmi basıncı, alveole gelen kanda alveol havasındakinden yüksektir.','Kandan alveole geçen X gazı CO₂’dir; geçiş yönü, kısmi basıncın kanda alveolden yüksek olduğunu gösterir ve ifade doğrudur. Okun yönü ters yorumlanmıştır.','dikkat'),
+      ('Alveolden ayrılan kanda Y ile gösterilen gazın kısmi basıncı, alveole gelen kandakinden yüksektir.','Kana O₂ geçtiği için kanın O₂ kısmi basıncı akciğerden ayrılırken yükselir; ifade doğrudur. Kanın akış yönü gözden kaçırılmıştır.','dikkat'),
+      ('Alveolden ayrılan kanın pH değeri, alveole gelen kanın pH değerinden yüksektir.','Akciğerde CO₂ kandan alveole geçince kanın asitliği azalır ve pH yükselir; ifade doğrudur. CO₂ kaybının pH’ı düşüreceği sanılmıştır.','bilgi')],
  istenen='Yanlış olan ifade.',
- ip=['Kanın akciğere hangi gaz bakımından zengin geldiğini düşünerek okların yönünden gazları belirle; sonra geçişin taşıma türünü sorgula.'],
+ ip=['Kanın akciğere hangi gaz bakımından zengin geldiğini düşünerek okların yönünden X ve Y gazlarını belirle.'],
  bilgi=[B_ALV,B_KB],
  ad=[A('Gazları belirle','Akciğere gelen kan O₂’ce fakir, CO₂’ce zengindir; kandan alveole geçen X gazı CO₂, alveolden kana geçen Y gazı O₂’dir.','X: CO₂ · Y: O₂'),
-     A('Geçiş türünü sorgula','Gazlar kısmi basıncı yüksek ortamdan düşüğe, enerji harcamadan difüzyonla geçer.','Geçiş pasif'),
-     A('İfadeleri ele','Hemoglobinle O₂ taşınması, kandaki kısmi basınç farkları ve difüzyon ifadeleri doğrudur; aktif taşıma ifadesi yanlıştır.','Yanlış ifade belirlendi')],
- puf='Alveolde gazlar yalnız difüzyonla, kısmi basınç farkı yönünde geçer; enerji harcanmaz.',sekil=SK19)
+     A('Kandaki değişimi yorumla','Kan alveol çevresinden geçerken O₂ kazanır, CO₂ kaybeder; CO₂ azalınca pH yükselir.','O₂ ↑ · CO₂ ↓ · pH ↑'),
+     A('İfadeleri ele','Hemoglobin, kısmi basınç ve pH ifadeleri bu değişimle uyumludur; CO₂ için artış söyleyen ifade çelişir.','Yanlış ifade belirlendi')],
+ puf='Önce okların yönünden gazları, sonra kandaki değişimin yönünü belirle.',sekil=SK19)
 # =================== 20 · yüksek rakım öncüllü · zor ===================
-ST20={'I':(False,'4000 m yükseklikteki havada oksijenin yüzdesi, deniz seviyesindekine göre belirgin biçimde azalmıştır.','Yükseklikte oksijenin yüzdesi değişmez; toplam basınç düştüğü için oksijenin kısmi basıncı azalır.'),
-      'II':(True,'Alveol havasındaki O₂ kısmi basıncının düşmesi, karotis ve aort cisimciklerini uyararak solunum hızını artırır.','O₂ kısmi basıncı belirgin düşünce kemoreseptörler solunum merkezine uyarı gönderir ve solunum hızlanır.'),
-      'III':(True,'Yüksekte uzun süre kalan bireylerde eritropoietin salgısının artması alyuvar üretimini artırır.','Eritropoietin kemik iliğinde alyuvar üretimini artırarak kanın oksijen taşıma kapasitesini yükseltir.')}
-dg,sr,yn,ad=onc(ST20,True,'E',seed=9)
-q('0020',tipId='ss-iliskili',tip='Çok kavramlı solunum yorumları',z='zor',alt='Yüksek rakım',kaz='Yüksek rakımda kısmi basınç, solunum hızı ve alyuvar üretimi ilişkisini yorumlar.',kalip='öncüllü',
- kart='K-ABSS-08 (yüksek rakım) · kısmi basınç yanılgısı, kemoreseptör, eritropoietin',
+PB0,PB1,FO=760,600,Fr(21,100); D0=PB0*FO; D1=PB1*FO; assert (D0,D1)==(Fr(1596,10),126) and D0-D1==Fr(168,5)
+ST20={'I':(True,'Deniz seviyesinde toplam basınç 760 mmHg, 4000 m yükseklikte 600 mmHg ve havanın oksijen oranı hacimce %21 ise, oksijenin kısmi basıncı 4000 m’de deniz seviyesine göre 33,6 mmHg azalmıştır.','Oksijenin kısmi basıncı toplam basıncın %21’i kadardır; 760 × 0,21 = 159,6 ve 600 × 0,21 = 126 olduğundan fark 33,6 mmHg’dir.'),
+      'II':(False,'4000 m yükseklikte havadaki oksijenin hacimce oranı, deniz seviyesindekine göre azalarak yaklaşık %16,6’ya düşmüştür.','Yükseklikte havanın oksijen oranı değişmez; düşen, toplam basınç ve dolayısıyla oksijenin kısmi basıncıdır.'),
+      'III':(True,'Alveol havasındaki O₂ kısmi basıncının düşmesi karotis ve aort cisimciklerini uyararak solunum hızını artırır; uzun süre kalındığında ise alyuvar üretimi artar.','Kemoreseptörler belirgin O₂ azalmasında solunum merkezini uyararak solunumu hızlandırır; oksijen azlığı uzun sürerse alyuvar üretimi artar.')}
+dg,sr,yn,ad=onc(ST20,True,'E',seed=9); assert dg=='I ve III'
+q('0020',tipId='ss-iliskili',tip='Çok kavramlı solunum yorumları',z='zor',alt='Yüksek rakım',kaz='Yüksek rakımda kısmi basıncı hesaplayıp oksijen oranı yanılgısını ve solunumsal uyumu yorumlar.',kalip='öncüllü',
+ kart='K-ABSS-08 (yüksek rakım) · kısmi basınç hesabı, oran yanılgısı, kemoreseptör',
  metin=onctxt('Deniz seviyesinde yaşayan sağlıklı bir dağcı, 4000 m yükseklikteki bir kampa çıkıp birkaç hafta kalıyor. Bu süreçte dağcının solunum sistemi ve kanıyla ilgili olarak aşağıdaki yargılar ileri sürülüyor.',ST20,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=dg,sira=sr,yan=yn,istenen='Doğru olan yargıların belirlenmesi.',
- ip=['Yükseklikte değişenin havanın oksijen yüzdesi mi yoksa oksijenin kısmi basıncı mı olduğunu ayırt et.'],bilgi=[B_YUK,B_DUZ],ad=ad,
- puf='Yükseklikte O₂ yüzdesi sabittir; kısmi basıncı düşer ve solunumun hızlanmasına ve alyuvar artışına yol açar.')
+ ip=['Kısmi basıncın nasıl hesaplandığını ve yükseklikle hangi niceliğin değiştiğini düşün.'],bilgi=[B_YUK,B_DUZ],ad=ad,
+ puf='Her yargıyı hesap ve solunumsal uyum bakımından ayrı ayrı sına.')
 # =================== yaz ===================
 for qq in P.ANA: qq['kardes']=None
 P.yaz(os.path.join(BD,'solunumsis-1.json'),'/tmp/bos-solunumsis.json')

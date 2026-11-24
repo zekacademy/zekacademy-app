@@ -305,7 +305,7 @@
     "islem": "Propanoik asit en zayıf → III doğru"
    }
   ],
-  "puf": "Ka büyükse asit güçlü, pH düşük, iyonlaşma yüzdesi yüksek, eşlenik baz zayıftır.",
+  "puf": "Ka büyüdükçe asit kuvvetlenir; sıralamayı Ka’dan başlatıp her büyüklüğü ayrı ayrı yorumla.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKKAR-04 (Ka tablosu)",
@@ -344,7 +344,7 @@
    "B": "Alkolün kaynama noktasını asitten yüksek sanmış; oysa asit molekülleri ikişer hidrojen bağıyla dimer oluşturduğundan karboksilik asidin kaynama noktası alkolden yüksektir.",
    "C": "Esterin kaynama noktasını alkolünkinden yüksek sanmış; oysa esterde O–H bağı yoktur ve saf esterde hidrojen bağı oluşmaz.",
    "D": "Esteri asitten daha yüksek, asidi en düşük kaynama noktalı sanmış; oysa asit dimerleşerek üçü arasında en yüksek kaynama noktasına sahiptir.",
-   "E": "Esteri ve alkolü ters yerleştirmiş; oysa en düşük kaynama noktası hidrojen bağı yapamayan estere, ortadaki değer alkole aittir."
+   "E": "Asidi en düşük, alkolü en yüksek kaynayan sanmış; hidrojen bağı ve dimer etkisini ters değerlendirmiş."
   },
   "celTur": {
    "B": "bilgi",
@@ -514,11 +514,11 @@
   "bilgi": [
    {
     "ad": "Yarı eşdeğerlik noktası",
-    "ifade": "Zayıf asit, yarısı kadar kuvvetli bazla nötrleştirildiğinde [HA] = [A⁻] olur. Henderson eşitliğinden pH = pKa bulunur. Örnek: bu noktada pH = 4 ise pKa = 4, Ka = 10⁻⁴ olur"
+    "ifade": "Zayıf asit, yarısı kadar kuvvetli bazla nötrleştirildiğinde [HA] = [A⁻] olur. Bu noktada pH ile pKa arasındaki ilişkiden Ka bulunur"
    }
   ],
   "ipuclari": [
-   "Asidin tam yarısının nötrleştiği noktadaki pH değerinin ne anlama geldiğini düşün."
+   "Titrasyonun ilerleyen noktalarında asit ve eşlenik bazın derişimlerinin birbirine oranını düşün."
   ],
   "adimlar": [
    {
@@ -542,7 +542,7 @@
     "islem": "Ka = 1·10⁻⁵"
    }
   ],
-  "puf": "Zayıf asit titrasyonunda eşdeğerlik hacminin yarısındaki pH, pKa’ya eşittir.",
+  "puf": "Zayıf asit titrasyon eğrisinde Ka, eğrinin özel noktalarından okunur; her noktanın anlamını ayır.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKKAR-07 (titrasyon eğrisi)",
@@ -964,32 +964,32 @@
   "seviye": "ÖSYM",
   "kalip": "hikâyeli",
   "adimSayisi": 5,
-  "metin": "Bir laboratuvarda 18 g etanoik asit (CH₃COOH) ile 23 g etanol (CH₃CH₂OH), derişik H₂SO₄ katalizörlüğünde tepkimeye sokularak etil etanoat elde ediliyor. Tepkime sonunda verimin %75 olduğu belirleniyor (H = 1, C = 12, O = 16).\nBuna göre oluşan etil etanoatın kütlesi kaç gramdır?",
+  "metin": "Bir laboratuvarda 37 g propanoik asit (CH₃CH₂COOH) ile 19,2 g metanol (CH₃OH), derişik H₂SO₄ katalizörlüğünde tepkimeye sokularak metil propanoat elde ediliyor. Tepkime sonunda verimin %80 olduğu belirleniyor (H = 1, C = 12, O = 16).\nBuna göre oluşan metil propanoatın kütlesi kaç gramdır?",
   "sekil": null,
   "siklar": {
-   "A": "13,5",
-   "B": "19,8",
-   "C": "26,4",
-   "D": "33",
-   "E": "44"
+   "A": "29,6",
+   "B": "35,2",
+   "C": "42,24",
+   "D": "44",
+   "E": "52,8"
   },
   "cevap": {
    "sik": "B",
-   "deger": "19,8"
+   "deger": "35,2"
   },
   "celdiriciler": {
-   "A": "Asit kütlesinin %75’ini (18 × 0,75) alıp ester kütlesi sanmış; oysa mol sayısı ester mol kütlesiyle çarpılmalıdır.",
-   "C": "Verimi hesaba katmamış; %100 verimle oluşacak ester kütlesini (26,4 g) vermiş.",
-   "D": "Sınırlayıcı bileşeni alkol sanıp 0,5 mol alkol üzerinden %75 verimle hesaplamış.",
+   "A": "Asit kütlesinin %80’ini (37 × 0,8) alıp ester kütlesi sanmış; oysa mol sayısı ester mol kütlesiyle çarpılmalıdır.",
+   "C": "Sınırlayıcı bileşeni alkol sanıp 0,6 mol alkol üzerinden %80 verimle hesaplamış.",
+   "D": "Verimi hesaba katmamış; %100 verimle oluşacak ester kütlesini (44 g) vermiş.",
    "E": "Sınırlayıcı bileşeni alkol sanmış ve verimi hesaba katmamış."
   },
   "celTur": {
    "A": "islem",
-   "C": "dikkat",
-   "D": "bilgi",
+   "C": "bilgi",
+   "D": "dikkat",
    "E": "bilgi"
   },
-  "istenen": "Oluşan etil etanoat kütlesi (g).",
+  "istenen": "Oluşan metil propanoat kütlesi (g).",
   "bilgi": [
    {
     "ad": "Sınırlayıcı bileşen ve verim",
@@ -1003,27 +1003,27 @@
    {
     "baslik": "Mol sayılarını bul",
     "aciklama": "Mol = kütle ÷ mol kütlesi.",
-    "islem": "Asit: 18 ÷ 60 = 0,3 · alkol: 23 ÷ 46 = 0,5"
+    "islem": "Asit: 37 ÷ 74 = 0,5 · alkol: 19,2 ÷ 32 = 0,6"
    },
    {
     "baslik": "Sınırlayıcıyı belirle",
     "aciklama": "1:1 oranda az olan mol sınırlar.",
-    "islem": "CH₃COOH sınırlayıcı"
+    "islem": "C₂H₅COOH sınırlayıcı"
    },
    {
     "baslik": "Teorik ester molünü bul",
     "aciklama": "Teorik ürün sınırlayıcı kadardır.",
-    "islem": "0,3 mol ester"
+    "islem": "0,5 mol ester"
    },
    {
     "baslik": "Verimi uygula",
     "aciklama": "Gerçek ürün = teorik × verim.",
-    "islem": "0,3 × 0,75 = 0,225 mol"
+    "islem": "0,5 × 0,8 = 0,4 mol"
    },
    {
     "baslik": "Kütleye çevir",
     "aciklama": "Ester mol kütlesi 88 g/mol.",
-    "islem": "0,225 × 88 = 19,8 g"
+    "islem": "0,4 × 88 = 35,2 g"
    }
   ],
   "puf": "Önce sınırlayıcıyı bul, teorik ürünü hesapla, en sonda verimle çarp.",
@@ -1127,7 +1127,7 @@
   "seviye": "ÖSYM",
   "kalip": "öncüllü",
   "adimSayisi": 5,
-  "metin": "Şekilde iskelet formülü verilen X esteri, NaOH çözeltisiyle ısıtıldığında organik bir tuz olan Y ve bir alkol olan Z oluşturuyor.\nI. Y bileşiğinin sulu çözeltisine yeterli miktarda HCl eklenirse etanoik asit oluşur.\nII. Z bileşiği yeterli miktarda yükseltgenle yükseltgenirse, I’deki ürünle aynı bileşik oluşur.\nIII. X ile Z birbirinin yapı izomeridir.\nBuna göre bu yargılardan hangileri doğrudur?",
+  "metin": "Şekilde iskelet formülü verilen X esteri, NaOH çözeltisiyle ısıtıldığında organik bir tuz olan Y ve bir alkol olan Z oluşturuyor.\nI. Y bileşiğinin sulu çözeltisine yeterli miktarda HCl eklenirse etanoik asit oluşur.\nII. Z bileşiği yeterli miktarda yükseltgenle yükseltgenirse, I’deki ürünle aynı bileşik oluşur.\nIII. 17,6 g X tamamen hidroliz edilirse 8,2 g Y oluşur (H = 1, C = 12, O = 16, Na = 23).\nBuna göre bu yargılardan hangileri doğrudur?",
   "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:431px;height:auto\" role=\"img\" viewBox=\"0 0 226.683 76.467\">\n<defs>\n<g>\n<g id=\"t890e19-glyph-0-0\">\n<rect x=\"-4.8\" y=\"-5.6\" width=\"57.6\" height=\"67.2\" mask=\"url(#t890e19-mask-0)\" transform=\"matrix(0.11914, 0, 0, 0.11914, 0.47656, -6.433559)\"/>\n</g>\n<g id=\"t890e19-glyph-1-0\">\n<rect x=\"-4.6\" y=\"-5.2\" width=\"55.2\" height=\"62.4\" mask=\"url(#t890e19-mask-1)\" transform=\"matrix(0.11914, 0, 0, 0.11914, 0.35742, -6.195279)\"/>\n</g>\n<g id=\"t890e19-glyph-1-1\">\n<rect x=\"-4.8\" y=\"-5.2\" width=\"57.6\" height=\"62.4\" mask=\"url(#t890e19-mask-2)\" transform=\"matrix(0.11914, 0, 0, 0.11914, 0.23828, -6.195279)\"/>\n</g>\n<g id=\"t890e19-glyph-1-2\">\n<rect x=\"-5.2\" y=\"-5.3\" width=\"62.4\" height=\"63.6\" mask=\"url(#t890e19-mask-3)\" transform=\"matrix(0.11914, 0, 0, 0.11914, 0.47656, -5.361299)\"/>\n</g>\n<g id=\"t890e19-glyph-1-3\">\n<rect x=\"-3.9\" y=\"-5.2\" width=\"46.8\" height=\"62.4\" mask=\"url(#t890e19-mask-4)\" transform=\"matrix(0.11914, 0, 0, 0.11914, 0.47656, -6.195279)\"/>\n</g>\n<g id=\"t890e19-glyph-2-0\">\n<rect x=\"-3.5\" y=\"-4.6\" width=\"42\" height=\"55.2\" mask=\"url(#t890e19-mask-5)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.834392, -5.483147)\"/>\n</g>\n<g id=\"t890e19-glyph-2-1\">\n<rect x=\"-2.5\" y=\"-3.3\" width=\"30\" height=\"39.6\" mask=\"url(#t890e19-mask-6)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.357597, -3.814363)\"/>\n</g>\n<g id=\"t890e19-glyph-2-2\">\n<rect x=\"-4.3\" y=\"-4.8\" width=\"51.6\" height=\"57.6\" mask=\"url(#t890e19-mask-7)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.476795, -5.602346)\"/>\n</g>\n<g id=\"t890e19-glyph-2-3\">\n<rect x=\"-3.7\" y=\"-4.6\" width=\"44.4\" height=\"55.2\" mask=\"url(#t890e19-mask-8)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.715193, -5.483147)\"/>\n</g>\n<g id=\"t890e19-glyph-2-4\">\n<rect x=\"-1.7\" y=\"-6.7\" width=\"20.4\" height=\"80.4\" mask=\"url(#t890e19-mask-9)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.595994, -5.959943)\"/>\n</g>\n<g id=\"t890e19-glyph-2-5\">\n<rect x=\"-2.8\" y=\"-4.4\" width=\"33.6\" height=\"52.8\" mask=\"url(#t890e19-mask-10)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.238398, -3.695164)\"/>\n</g>\n<g id=\"t890e19-glyph-2-6\">\n<rect x=\"-1.7\" y=\"-6.7\" width=\"20.4\" height=\"80.4\" mask=\"url(#t890e19-mask-11)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.476795, -5.959943)\"/>\n</g>\n<g id=\"t890e19-glyph-2-7\">\n<rect x=\"-0.7\" y=\"-1.5\" width=\"8.4\" height=\"18\" mask=\"url(#t890e19-mask-12)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.715193, -0.715193)\"/>\n</g>\n<g id=\"t890e19-glyph-2-8\">\n<rect x=\"-0.6\" y=\"-3\" width=\"7.2\" height=\"36\" mask=\"url(#t890e19-mask-13)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.595994, -3.575966)\"/>\n</g>\n<g id=\"t890e19-glyph-2-9\">\n<rect x=\"-2.3\" y=\"-3.3\" width=\"27.6\" height=\"39.6\" mask=\"url(#t890e19-mask-14)\" transform=\"matrix(0.119199, 0, 0, 0.119199, 0.238398, -3.814363)\"/>\n</g>\n</g>\n<image id=\"t890e19-source-52\" x=\"0\" y=\"0\" width=\"48\" height=\"56\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA4CAAAAACeOiQ2AAAAAmJLR0QA/4ePzL8AAADeSURBVEiJ7VZBEgMhCAP+/2d6ad0QUWQ7s9NDvaySYBB1RSVp/v5qgk02Lwg0ZvpMCaOMziTsr/iBBV2fjLMFez6bMqMyxFlhO6vPqSdEKz5jWvIJNURyfjQrTLHgRwIorPkI2XaHE6FLYSOAoDUERJyydNK0TtGYXERE2wq3HaqIBsEaORIR8efW8Hf4DYfyhHwIVp662B68D9UiBmz11cGm3+zDNqYLtIPrjBFhSBsJgOzkjwEC8QVaeSJsCbAJ6Paj2H92+w97v3ToFyf98qdfYPVLuMylKBLJJ0FfAtU2WVLY5lcAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-0\">\n<use xlink:href=\"#t890e19-source-52\"/>\n</mask>\n<image id=\"t890e19-source-101\" x=\"0\" y=\"0\" width=\"46\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA0CAAAAADQn1UWAAAAAmJLR0QA/4ePzL8AAADqSURBVEiJrZbBDsMwCEMx///P2aXTAtiA1OXUgOs8kYQWZseeAWMjpPGbcn1Mu0iJkAsEMmDJvdrnAFIMUg173CEExfeBUfi1aN5IyEpeiCkOgnyxQREGRUZXKexMCPKUasyPkrOgrv8FU/Grz7yjkBOmj4yuU+NSbQ2r++iW5RNOycsaCru2MwzsL+Uv2U+f/u829W+TMwY9a5tAB6Ouyi2XDW+yWVzt5MF9nAUXMHVxhgOpprFuVwm+a3PtoNQl3h+xguNrlPOVN+qhz0w4vq+KncUfR/yqzJcv9vcZ5bZfXO3bhX+blB4f8Pg6WrmebTsAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-1\">\n<use xlink:href=\"#t890e19-source-101\"/>\n</mask>\n<image id=\"t890e19-source-610\" x=\"0\" y=\"0\" width=\"48\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA0CAAAAADp+ORNAAAAAmJLR0QA/4ePzL8AAAC7SURBVEiJ7ZVLDoQwDEOT3P/OncWolCS2K8SGRbuCxMavH1S3Yf/hpsal8rGKwrJUAatcb6FJmt6DNGg5EjmHmgEWu+XJQHnSOKKUoiynhPK5rAqq7lMIAUyM5d1B+c1AofrBaUhJBNKmYQs1BVELGggiXUKYtAwSajUDFTkQQTIbdD/uBgrl5Jl9NWkIEh9lpijCxRtyFMVbpB5RBf0IDd1/j5QjelufatB9jHQMx3AMnzGgHx7et0P0fnTTJl1WLtRXAAAAAElFTkSuQmCC\"/>\n<mask id=\"t890e19-mask-2\">\n<use xlink:href=\"#t890e19-source-610\"/>\n</mask>\n<image id=\"t890e19-source-656\" x=\"0\" y=\"0\" width=\"52\" height=\"53\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA1CAAAAAArT5eSAAAAAmJLR0QA/4ePzL8AAABMSURBVEiJ7dYxCgAgDEPRxPvfuU6OKdRBEH5Hw0N0CLXClCSHLJ1Xl650UzcgEAjUjU/xTIjHRrLn5u1H3LwpBHQ5CAT6AKUKa3fYDdXvCGJ3nzf9AAAAAElFTkSuQmCC\"/>\n<mask id=\"t890e19-mask-3\">\n<use xlink:href=\"#t890e19-source-656\"/>\n</mask>\n<image id=\"t890e19-source-702\" x=\"0\" y=\"0\" width=\"39\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA0CAAAAAAsin7cAAAAAmJLR0QA/4ePzL8AAACcSURBVEiJzZXBDoAwCEOp///PetCYySh0m4nuJr61HQeAme1WHkDCzKBhtknUd5z4XoD/a+5jxFeR49wTo77+cUI+JPmcK+M6bK0vvVzIBdiKbyQXcCHWczE2nY/IeY5hk75U7vnJsSnfRK4tZFhTSbHxfLncXSuwUd9K7qqW2OkrTECfj80lSK5+7vJpqPdFW1vQ1tbv99bbfTkAmkkgSGVvJXsAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-4\">\n<use xlink:href=\"#t890e19-source-702\"/>\n</mask>\n<image id=\"t890e19-source-416\" x=\"0\" y=\"0\" width=\"35\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAuCAAAAACHLP9bAAAAAmJLR0QA/4ePzL8AAACNSURBVDiNpdFRDsAgCANQ8f53Zh9bJpO2GcifsXkCmo+nbOS6L+d2RjXpDcxQqOCYgir9KKg4F4XeDFozfgtCK8OhvWcEhQyF0uwAihkG5R1mqLxnw1D9vzBUdzDUcCDUcRDUcsDPMsd1JkG0H9eZHeJzuc5skNiP68wX6u15Qa4zv96K0IkTRztyAnQBay0WW4yB3MwAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-5\">\n<use xlink:href=\"#t890e19-source-416\"/>\n</mask>\n<image id=\"t890e19-source-424\" x=\"0\" y=\"0\" width=\"25\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAhCAAAAAAJq19/AAAAAmJLR0QA/4ePzL8AAACBSURBVCiRvZJLEoAgDEMThvtfuS4s9GOY0Y1u0LwUSyjhj/lKlJclZ40PfSEKcKPxlH2XXcMkAqATNj8ADgDMYLtGLRCO/v9Tb3+S0ptJogNXcev7WcSa0YUZoAU1TcpxHhHspwzsZU3qPIa1jG1y8JDAaUZ1B2vGeqLxXW6hJHEBv70cL6U2DCMAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-6\">\n<use xlink:href=\"#t890e19-source-424\"/>\n</mask>\n<image id=\"t890e19-source-432\" x=\"0\" y=\"0\" width=\"43\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAwCAAAAACtJ9xEAAAAAmJLR0QA/4ePzL8AAACnSURBVEiJ7ZVLDoAwCEQd7n/nutJSvk4TExeyUMO8TLFpAYeNcX3AKkjASEVBWh0luRLoUIXAo0gS9zv6e5szJsm2QD0T1Ago0VUSlQ9Qt78jRxdVYiAMdLZK53w722nM+O6wRQm3JulRdDHervdnn8eXzlnezqYi5WnUwd63rf4QV6yy0twfvb6uNzIehqd6KtWrqRlAzRZqZlGzkJqxAV3M7hV30gkOVS5J2aQkWgAAAABJRU5ErkJggg==\"/>\n<mask id=\"t890e19-mask-7\">\n<use xlink:href=\"#t890e19-source-432\"/>\n</mask>\n<image id=\"t890e19-source-440\" x=\"0\" y=\"0\" width=\"37\" height=\"46\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAuCAAAAACKMo8cAAAAAmJLR0QA/4ePzL8AAAA0SURBVDiNY/zPwMDAwMDAyIAVQGWZsMuigVFVo6qGiirG//S2kZqqWKD0aK4dVTWqCh0AAJwHBFtnHLRjAAAAAElFTkSuQmCC\"/>\n<mask id=\"t890e19-mask-8\">\n<use xlink:href=\"#t890e19-source-440\"/>\n</mask>\n<image id=\"t890e19-source-448\" x=\"0\" y=\"0\" width=\"17\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAABDCAAAAABfQLHaAAAAAmJLR0QA/4ePzL8AAACDSURBVDiN3ZRBDsQwCAPt/P/P3kuyNRDalZrT5jgaA4oEhD0BAAtgMVgiIwDACFZVpszX0eWNlFnEFHdoxBVzaCQoacJAaESN8wOhETXOW0KlVscq/ysh8ped68XGUSEPldk4zX4twkJibCBLVkdOuHemNIlJDALLhNru191t2dyfiT7SRxh6HGtKugAAAABJRU5ErkJggg==\"/>\n<mask id=\"t890e19-mask-9\">\n<use xlink:href=\"#t890e19-source-448\"/>\n</mask>\n<image id=\"t890e19-source-456\" x=\"0\" y=\"0\" width=\"28\" height=\"44\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAsCAAAAABTHIflAAAAAmJLR0QA/4ePzL8AAACBSURBVDiN7ZNLEoAwCEMTxvtfuW4UIY06unPGrqCvSekHIscAAHCKM93nGiwIALc8DMuUhlX/wmQp1aXiJcNExwiorMRhq2FXGtNia6Hc4gPlF6F/0fDH77ZWerkn7WMPVY6J9Q9GWXX5Ne8KmqWURup9pF3mGuvk9mqXvan2hwBWRaEgP7qfQOsAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-10\">\n<use xlink:href=\"#t890e19-source-456\"/>\n</mask>\n<image id=\"t890e19-source-464\" x=\"0\" y=\"0\" width=\"17\" height=\"67\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAABDCAAAAABfQLHaAAAAAmJLR0QA/4ePzL8AAACJSURBVDiN7ZQxEsMgDATv+P+flcIhLELyOEW60Nis98RYM8ghSdZaVkZWRlZGY74ECevOHXNjfQwS5uC8paEs0bmkSVw7ioNszvlfn9hNqiBunPiyTk/Yq2icP+FCx66G+VdnGSQa5wFxd7/uUgaJ2jHIUjbHIFDoGI9tKIyUqe5XNVuO+XPMqBfmCRh7PmTuMQAAAABJRU5ErkJggg==\"/>\n<mask id=\"t890e19-mask-11\">\n<use xlink:href=\"#t890e19-source-464\"/>\n</mask>\n<image id=\"t890e19-source-472\" x=\"0\" y=\"0\" width=\"7\" height=\"15\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAAAAAANaopiAAAAAmJLR0QA/4ePzL8AAAArSURBVAiZjcyxDQAwEMLAI/vvTIpvPl0qS2A5Cg5fDDos8v5Z/upmdWZ2ASJhBRqM96PLAAAAAElFTkSuQmCC\"/>\n<mask id=\"t890e19-mask-12\">\n<use xlink:href=\"#t890e19-source-472\"/>\n</mask>\n<image id=\"t890e19-source-556\" x=\"0\" y=\"0\" width=\"6\" height=\"30\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAeCAAAAAAqIjBiAAAAAmJLR0QA/4ePzL8AAAATSURBVAiZY/zPwMDAwMDEMGwoAOmdATtIw3eoAAAAAElFTkSuQmCC\"/>\n<mask id=\"t890e19-mask-13\">\n<use xlink:href=\"#t890e19-source-556\"/>\n</mask>\n<image id=\"t890e19-source-564\" x=\"0\" y=\"0\" width=\"23\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAhCAAAAAAXYm/MAAAAAmJLR0QA/4ePzL8AAAB7SURBVCiRlZExDsAgDAN9Vf//ZToAAYIzlAHEGcXBQX21cYr9CBqMi3YFhyUei6U3+c1ntBN3BT0XFkiT53Y8r94vfjVLIAp+incOxJ6LzzydgO2HZZRGc3bXCq7iN1v+mQ/hf55+7vRx5vLkuc8rtgylL84XmzPGL8AHeMAdLdTitAMAAAAASUVORK5CYII=\"/>\n<mask id=\"t890e19-mask-14\">\n<use xlink:href=\"#t890e19-source-564\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 0.00148703 -0.000540491 L 19.645275 11.339676 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 20.919722 11.339676 L 20.919722 29.197666 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 18.366895 11.339676 L 18.366895 29.197666 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 19.645275 11.339676 L 35.092043 2.410681 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 43.454617 2.410681 L 58.905318 11.339676 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 58.905318 11.339676 L 78.549106 -0.000540491 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-0-0\" x=\"20.119289\" y=\"9.15022\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-0-0\" x=\"39.627312\" y=\"42.929765\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-1-0\" x=\"28.99542\" y=\"69.672361\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 90.711419 8.503639 L 174.667571 8.503639 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 3.990711, 39.839307)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.272912 -0.000481401 L 1.150628 1.887588 L 2.515544 -0.000481401 L 1.150628 -1.888551 Z M 5.272912 -0.000481401 \" transform=\"matrix(0.993078, 0, 0, -0.993078, 175.1464, 31.394053)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-2-0\" x=\"112.999881\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-1\" x=\"118.934792\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-2\" x=\"122.973249\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-3\" x=\"129.182317\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-4\" x=\"135.117228\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-1\" x=\"138.386852\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-5\" x=\"142.42531\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-6\" x=\"146.766532\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-7\" x=\"150.036156\" y=\"23.744493\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-2-8\" x=\"155.173147\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-9\" x=\"157.179264\" y=\"23.744493\"/>\n<use xlink:href=\"#t890e19-glyph-2-8\" x=\"160.402401\" y=\"23.744493\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-1-1\" x=\"193.869196\" y=\"34.017884\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-1-2\" x=\"203.295304\" y=\"34.017884\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#t890e19-glyph-1-3\" x=\"213.737676\" y=\"34.017884\"/>\n</g>\n</svg>",
   "siklar": {
    "A": "Yalnız I",
@@ -1143,8 +1143,8 @@
   "celdiriciler": {
    "A": "II öncülünü yanlış sanmış; oysa Z etanoldür; yeterli yükseltgenle yükseltgenirse etanoik asit oluşur ve bu, Y’den asitle elde edilen ürünle aynıdır.",
    "B": "I öncülünü yanlış sanmış; oysa Y, sodyum etanoattır; kuvvetli asit eklenince zayıf asit olan etanoik asit serbest kalır.",
-   "D": "III öncülünü doğru sanmış; oysa X’in formülü C₄H₈O₂, Z’nin formülü C₂H₆O’dur; formülleri farklı olduğundan yapı izomeri değildirler. II öncülünü yanlış sanmış; oysa Z etanoldür; yeterli yükseltgenle yükseltgenirse etanoik asit oluşur ve bu, Y’den asitle elde edilen ürünle aynıdır.",
-   "E": "III öncülünü doğru sanmış; oysa X’in formülü C₄H₈O₂, Z’nin formülü C₂H₆O’dur; formülleri farklı olduğundan yapı izomeri değildirler. I öncülünü yanlış sanmış; oysa Y, sodyum etanoattır; kuvvetli asit eklenince zayıf asit olan etanoik asit serbest kalır."
+   "D": "III öncülünü doğru sanmış; oysa X’in mol kütlesi 88 g/mol olduğundan 17,6 g X 0,2 mol eder; 0,2 mol Y (CH₃COONa, 82 g/mol) 16,4 g’dır, 8,2 g değil. II öncülünü yanlış sanmış; oysa Z etanoldür; yeterli yükseltgenle yükseltgenirse etanoik asit oluşur ve bu, Y’den asitle elde edilen ürünle aynıdır.",
+   "E": "III öncülünü doğru sanmış; oysa X’in mol kütlesi 88 g/mol olduğundan 17,6 g X 0,2 mol eder; 0,2 mol Y (CH₃COONa, 82 g/mol) 16,4 g’dır, 8,2 g değil. I öncülünü yanlış sanmış; oysa Y, sodyum etanoattır; kuvvetli asit eklenince zayıf asit olan etanoik asit serbest kalır."
   },
   "celTur": {
    "A": "bilgi",
@@ -1185,8 +1185,8 @@
    },
    {
     "baslik": "III’ü değerlendir",
-    "aciklama": "Formülleri karşılaştır.",
-    "islem": "C₄H₈O₂ ≠ C₂H₆O → III yanlış"
+    "aciklama": "Mol sayısından Y kütlesini bul.",
+    "islem": "17,6 ÷ 88 = 0,2 mol → 0,2 × 82 = 16,4 g → III yanlış"
    }
   ],
   "puf": "Esterin bazik hidrolizinden gelen tuz asitlendirilince, alkol de yükseltgenince karboksilik asit verir.",
@@ -1207,7 +1207,7 @@
   "kazanim": "Üç ayırt edici deney sonucunu birleştirerek karboksilik asit, ester ve doymamış karboksilik asidi belirler.",
   "tipId": "ka-tepkime",
   "tip": "Karboksilik asitlerin tepkimeleri",
-  "zorluk": "zor",
+  "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "tablo",
   "adimSayisi": 4,
@@ -1268,7 +1268,7 @@
     "islem": "Y: CH₃CH₂COOH"
    }
   ],
-  "puf": "Gaz çıkışı asidi, renk açılması C=C bağını, tuz ve alkol oluşumu esteri gösterir.",
+  "puf": "Her deney farklı bir fonksiyonel grubu ya da bağı ayırt eder; sonuçları adaylarla tek tek eşleştir.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKKAR-16 (X, Y, Z maddeleri)",
@@ -1532,32 +1532,32 @@
   "seviye": "ÖSYM",
   "kalip": "şekilli",
   "adimSayisi": 5,
-  "metin": "Şekilde yapısı gösterilen trigliserit (mol kütlesi 884 g/mol) için köşe ve uç noktalarda karbon bulunur; karbona bağlı hidrojenler yazılmamıştır. Bu trigliseritten 88,4 gramı, Ni katalizörü ve yeterli H₂ ile tamamen doymuş hâle getiriliyor ve katı yağ elde ediliyor (H = 1).\nBuna göre oluşan katı yağın kütlesi kaç gramdır?",
+  "metin": "Şekilde yapısı gösterilen trigliserit (mol kütlesi 884 g/mol) için köşe ve uç noktalarda karbon bulunur; karbona bağlı hidrojenler yazılmamıştır. Bu trigliseritten 88,4 gramı, Ni katalizörü varlığında 0,2 mol H₂ ile tepkimeye sokuluyor ve H₂’nin tamamı harcanıyor (H = 1).\nBuna göre tepkime sonunda elde edilen yağın kütlesi kaç gramdır?",
   "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:389px;height:auto\" role=\"img\" viewBox=\"0 0 204.888 102.22\">\n<defs>\n<g>\n<g id=\"tcc42b4-glyph-0-0\">\n<rect x=\"-4.3\" y=\"-4.8\" width=\"51.6\" height=\"57.6\" mask=\"url(#tcc42b4-mask-0)\" transform=\"matrix(0.119121, 0, 0, 0.119121, 0.476483, -5.598675)\"/>\n</g>\n</g>\n<image id=\"tcc42b4-source-52\" x=\"0\" y=\"0\" width=\"43\" height=\"48\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAwCAAAAACtJ9xEAAAAAmJLR0QA/4ePzL8AAACnSURBVEiJ7ZVLDoAwCEQd7n/nutJSvk4TExeyUMO8TLFpAYeNcX3AKkjASEVBWh0luRLoUIXAo0gS9zv6e5szJsm2QD0T1Ago0VUSlQ9Qt78jRxdVYiAMdLZK53w722nM+O6wRQm3JulRdDHervdnn8eXzlnezqYi5WnUwd63rf4QV6yy0twfvb6uNzIehqd6KtWrqRlAzRZqZlGzkJqxAV3M7hV30gkOVS5J2aQkWgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tcc42b4-mask-0\">\n<use xlink:href=\"#tcc42b4-source-52\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 28.459241 75.402159 L 35.319788 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 36.59507 79.369704 L 36.59507 87.308731 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 34.044506 79.369704 L 34.044506 87.308731 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 35.319788 79.369704 L 45.155995 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 45.155995 73.701782 L 54.964649 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 54.964649 79.369704 L 64.800855 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 64.800855 73.701782 L 74.609509 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 74.609509 79.369704 L 84.418163 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 84.418163 73.701782 L 94.25437 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 94.25437 79.369704 L 104.063024 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.063024 73.701782 L 113.899231 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 78.094422 L 125.235075 78.094422 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 80.644987 L 125.235075 80.644987 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 125.235075 79.369704 L 135.043729 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 135.043729 73.701782 L 144.879936 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 144.879936 79.369704 L 154.68859 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 154.68859 73.701782 L 164.497244 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 164.497244 79.369704 L 174.33345 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 174.33345 73.701782 L 184.142104 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 184.142104 79.369704 L 193.978311 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 193.978311 73.701782 L 203.786965 79.369704 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"20.670977\" y=\"25.336666\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"30.404703\" y=\"8.458457\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.66947 73.701782 L 22.110381 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 28.459241 38.552793 L 35.319788 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 36.59507 42.520338 L 36.59507 50.455429 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 34.044506 42.520338 L 34.044506 50.455429 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 35.319788 42.520338 L 45.155995 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 45.155995 36.852416 L 54.964649 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 54.964649 42.520338 L 64.800855 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 64.800855 36.852416 L 74.609509 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 74.609509 42.520338 L 84.418163 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 84.418163 36.852416 L 94.25437 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 94.25437 42.520338 L 104.063024 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.063024 36.852416 L 113.899231 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 41.245056 L 125.235075 41.245056 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 43.795621 L 125.235075 43.795621 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 125.235075 42.520338 L 135.043729 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 135.043729 36.852416 L 144.879936 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 144.879936 42.520338 L 154.68859 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 154.68859 36.852416 L 164.497244 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 164.497244 42.520338 L 174.33345 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 174.33345 36.852416 L 184.142104 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 184.142104 42.520338 L 193.978311 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 193.978311 36.852416 L 203.786965 42.520338 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"20.670977\" y=\"61.9086\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"30.404703\" y=\"45.029399\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.66947 36.852416 L 22.110381 36.852416 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 28.459241 1.699491 L 35.319788 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 36.59507 5.670972 L 36.59507 13.606063 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 34.044506 5.670972 L 34.044506 13.606063 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 35.319788 5.670972 L 45.155995 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 45.155995 -0.000885786 L 54.964649 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 54.964649 5.670972 L 64.800855 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 64.800855 -0.000885786 L 74.609509 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 74.609509 5.670972 L 84.418163 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 84.418163 -0.000885786 L 94.25437 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 94.25437 5.670972 L 104.063024 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 104.063024 -0.000885786 L 113.899231 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 4.391754 L 125.235075 4.391754 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 113.899231 6.946255 L 125.235075 6.946255 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 125.235075 5.670972 L 135.043729 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 135.043729 -0.000885786 L 144.879936 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 144.879936 5.670972 L 154.68859 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 154.68859 -0.000885786 L 164.497244 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 164.497244 5.670972 L 174.33345 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 174.33345 -0.000885786 L 184.142104 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 184.142104 5.670972 L 193.978311 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 193.978311 -0.000885786 L 203.786965 5.670972 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"20.670977\" y=\"98.479542\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tcc42b4-glyph-0-0\" x=\"30.404703\" y=\"81.60034\"/>\n</g>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.66947 -0.000885786 L 22.110381 -0.000885786 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 5.66947 -0.000885786 L 5.66947 73.701782 \" transform=\"matrix(0.992427, 0, 0, -0.992427, -1.544505, 95.733496)\"/>\n</svg>",
   "siklar": {
    "A": "88,4",
    "B": "88,6",
-   "C": "88,7",
+   "C": "88,8",
    "D": "89",
    "E": "89,6"
   },
   "cevap": {
-   "sik": "D",
-   "deger": "89"
+   "sik": "C",
+   "deger": "88,8"
   },
   "celdiriciler": {
    "A": "Hidrojenleme sonunda kütlenin değişmediğini sanmış; oysa katılan H₂ kütleyi artırır.",
-   "B": "Yalnız bir çift bağın hidrojenlendiğini kabul etmiş; oysa trigliseritte üç yağ asidi zincirinin her birinde bir C=C vardır.",
-   "C": "H₂ yerine H atomunun kütlesini (1 g/mol) kullanmış.",
-   "E": "Üç ester C=O bağını da hidrojenlenebilir sayıp 6 mol H₂ harcamış; oysa Ni katalizörüyle yalnız C=C bağları doyurulur."
+   "B": "Yalnız bir çift bağın hidrojenlendiğini kabul etmiş; oysa 0,2 mol H₂ iki C=C bağını doyurur.",
+   "D": "H₂’nin yeterli olduğunu varsayıp tüm C=C bağlarının (0,3 mol) doyduğunu kabul etmiş; oysa yalnız 0,2 mol H₂ vardır.",
+   "E": "Üç ester C=O bağını da hidrojenlenebilir sayıp 6 mol H₂ bağlayacağını varsaymış; oysa yalnız C=C bağları doyurulur."
   },
   "celTur": {
    "A": "bilgi",
    "B": "dikkat",
-   "C": "islem",
+   "D": "dikkat",
    "E": "bilgi"
   },
-  "istenen": "Hidrojenleme sonunda oluşan katı yağın kütlesi (g).",
+  "istenen": "Hidrojenleme sonunda elde edilen yağın kütlesi (g).",
   "bilgi": [
    {
     "ad": "Yağların hidrojenlenmesi",
@@ -1565,36 +1565,36 @@
    }
   ],
   "ipuclari": [
-   "Şekilde zincirlerdeki C=C bağlarını sayarak yağın bir molünün kaç mol H₂ bağlayacağını bul."
+   "Yağın ve H₂’nin mol sayısını karşılaştırıp hangisinin tepkimeyi sınırladığını belirle."
   ],
   "adimlar": [
    {
     "baslik": "Çift bağları say",
     "aciklama": "Her yağ asidi zincirinde bir C=C vardır.",
-    "islem": "3 C=C → 3 mol H₂ / mol yağ"
+    "islem": "3 C=C → en çok 3 mol H₂ / mol yağ"
    },
    {
     "baslik": "Yağın molünü bul",
     "aciklama": "Mol = kütle ÷ mol kütlesi.",
-    "islem": "88,4 ÷ 884 = 0,1 mol"
+    "islem": "88,4 ÷ 884 = 0,1 mol → 0,3 mol C=C"
    },
    {
-    "baslik": "Harcanan H₂’yi hesapla",
-    "aciklama": "Her C=C bağına 1 mol H₂ katılır.",
-    "islem": "0,1 × 3 = 0,3 mol"
+    "baslik": "Sınırlayıcıyı belirle",
+    "aciklama": "Bağlanabilecek H₂ ile verilen H₂ karşılaştırılır.",
+    "islem": "0,2 mol H₂ < 0,3 mol → H₂ sınırlayıcı"
    },
    {
     "baslik": "H₂ kütlesini bul",
     "aciklama": "H₂ mol kütlesi 2 g/mol.",
-    "islem": "0,3 × 2 = 0,6 g"
+    "islem": "0,2 × 2 = 0,4 g"
    },
    {
     "baslik": "Ürün kütlesini yaz",
     "aciklama": "Kütle korunur, H₂ eklenir.",
-    "islem": "88,4 + 0,6 = 89 g"
+    "islem": "88,4 + 0,4 = 88,8 g"
    }
   ],
-  "puf": "Hidrojenlemede yalnız C=C bağları H₂ bağlar; ürün kütlesi = yağ kütlesi + bağlanan H₂ kütlesi.",
+  "puf": "Hidrojenlemede kütle artışı bağlanan H₂ kadardır; H₂ yetersizse sınırlayıcı olan belirler.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKKAR-20 (triolein hidrojenlenmesi)",

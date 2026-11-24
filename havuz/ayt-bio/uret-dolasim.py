@@ -54,14 +54,14 @@ TAIL='\n\\end{tikzpicture}'
 ARR='-{Stealth[length=2.3mm,width=1.9mm]}'
 def tk(g,sc=1.0): return tikz_svg(HEAD.replace('font=\\small]',f'font=\\small,scale={sc}]')+g+TAIL)
 def pl(pts,ex='',sm=True): return '\\draw[%s] plot%s coordinates {%s};'%(ex,'[smooth]' if sm else '',' '.join(f'({x:.2f},{y:.2f})' for x,y in pts))
-def tube(c,w,fill=True,kapat=True):
+def tube(c,w,fill=True,kapat=True,col='cyan!25'):
     """c: orta çizgi noktaları; iki yan çizgi + serbest uç kapağı."""
     n=len(c); L=[];R=[]
     for i,(x,y) in enumerate(c):
         a=c[max(i-1,0)]; b=c[min(i+1,n-1)]; dx,dy=b[0]-a[0],b[1]-a[1]; m=math.hypot(dx,dy); nx,ny=-dy/m,dx/m
         L.append((x+nx*w/2,y+ny*w/2)); R.append((x-nx*w/2,y-ny*w/2))
     s=''
-    if fill: s+='\\fill[black,fill opacity=.10] plot[smooth] coordinates {%s} -- plot[smooth] coordinates {%s} -- cycle;'%(' '.join(f'({x:.2f},{y:.2f})' for x,y in L),' '.join(f'({x:.2f},{y:.2f})' for x,y in R[::-1]))
+    if fill: s+='\\fill[%s] plot[smooth]'%col+' coordinates {%s} -- plot[smooth] coordinates {%s} -- cycle;'%(' '.join(f'({x:.2f},{y:.2f})' for x,y in L),' '.join(f'({x:.2f},{y:.2f})' for x,y in R[::-1]))
     s+=pl(L,'line width=1pt')+pl(R,'line width=1pt')
     if kapat: s+='\\draw[line width=1pt] (%.2f,%.2f)--(%.2f,%.2f);'%(L[-1][0],L[-1][1],R[-1][0],R[-1][1])
     return s
@@ -74,11 +74,11 @@ def kalp(et):
     b.append(tube([(.5,.3),(.5,1.8),(.9,2.6),(1.8,3.0),(2.7,2.7),(3.1,2.0)],.6))   # aort
     b.append(tube([(3.7,1.45),(2.5,1.4)],.5,kapat=True)); b.append(tube([(3.7,.85),(2.5,.9)],.5,kapat=True))  # akciğer toplardamarları
     # kulakçıklar
-    b.append('\\draw[line width=1.2pt,fill=black,fill opacity=.10] (-1.6,1.25) ellipse (.85 and .95);\\draw[line width=1.4pt] (-1.6,1.25) ellipse (.85 and .95);')
-    b.append('\\draw[line width=1.2pt,fill=black,fill opacity=.10] (1.8,1.25) ellipse (.8 and .95);\\draw[line width=1.4pt] (1.8,1.25) ellipse (.8 and .95);')
+    b.append('\\draw[line width=1.2pt,fill=orange!30] (-1.6,1.25) ellipse (.85 and .95);\\draw[line width=1.4pt] (-1.6,1.25) ellipse (.85 and .95);')
+    b.append('\\draw[line width=1.2pt,fill=orange!30] (1.8,1.25) ellipse (.8 and .95);\\draw[line width=1.4pt] (1.8,1.25) ellipse (.8 and .95);')
     # karıncıklar (dış hat) ve sol karıncık iç boşluğu (kalın duvar)
     dis=[(-2.3,.3),(-2.35,-.9),(-1.5,-2.2),(0,-2.95),(.9,-3.1),(1.9,-2.5),(2.6,-1.2),(2.6,.3)]
-    b.append('\\fill[black,fill opacity=.10] plot[smooth] coordinates {%s} -- cycle;'%' '.join(f'({x:.2f},{y:.2f})' for x,y in dis))
+    b.append('\\fill[orange!30] plot[smooth] coordinates {%s} -- cycle;'%' '.join(f'({x:.2f},{y:.2f})' for x,y in dis))
     b.append(pl(dis,'line width=1.4pt'))
     b.append('\\draw[line width=1.2pt] (.1,.3)--(.95,-2.9);')                                           # septum
     b.append(pl([(.45,.3),(.5,-1.2),(.95,-2.5),(1.65,-1.9),(2.15,-.9),(2.15,.3)],'line width=1pt'))     # sol karıncık boşluğu
@@ -111,7 +111,7 @@ it=[('5 numaralı damardaki kan basıncı, 2 numaralı damardaki kan basıncınd
     ('4 numaralı bölümün duvarı, sağ karıncığın duvarından daha kalındır.',True,'sol karıncık kanı bütün vücuda pompaladığı için duvarı sağ karıncıktan daha kalındır')]
 r,g=tek(it,False,'A',sanc_yanlis)
 Q('0001','kalp','kolay','şekilli','Kalbin bölümleri ve damarlar','Kalp odacıkları ve ona bağlı damarlar için kan akışı, oksijen durumu ve basınç ilişkilerini değerlendirir.','numaralı kalp şeması, olumsuz kök',
- 'Her numaranın hangi odacık ya da damar olduğunu belirleyip taşıdığı kanın oksijen durumu ve basıncı ile ilişkilendirmek gerekir.','Aort ile akciğer atardamarındaki basıncı aynı sanmak.',
+ 'Her numaranın hangi odacık ya da damar olduğunu belirleyip taşıdığı kanın oksijen durumu ve basıncı ile ilişkilendirmek gerekir.','Damarların taşıdığı kanın özelliklerini karıştırmak.',
  [A('Numaraları adlandır','Şekilde 1 üst ana toplardamar, 2 akciğer atardamarı, 3 sol kulakçık, 4 sol karıncık, 5 aorttur.','1 üst ana toplardamar · 2 akciğer atardamarı · 3 sol kulakçık · 4 sol karıncık · 5 aort'),
   A('Kanın niteliğini belirle','Akciğer atardamarı ve üst ana toplardamar oksijence fakir kan taşır; sol kulakçık akciğerden oksijence zengin kan alır.','2 ve 1: oksijence fakir · 3: oksijence zengin'),
   A('Basınç ve duvar kalınlığı','Sol karıncık kanı tüm vücuda pompaladığından duvarı kalın, çıkan kanın basıncı yüksektir; sağ karıncık yalnız akciğerlere pompalar.','sol karıncık duvarı > sağ karıncık duvarı · aort basıncı > akciğer atardamarı basıncı'),
@@ -119,19 +119,19 @@ Q('0001','kalp','kolay','şekilli','Kalbin bölümleri ve damarlar','Kalp odacı
  metin='Şekilde, sağlıklı bir insana ait kalp ve kalbe bağlı bazı damarlar 1, 2, 3, 4 ve 5 ile numaralandırılmıştır. Kalbin sağ ve sol yarısı birbirinden bir kas duvarla ayrılmıştır; kapakçıklar kanın yalnız tek yönde akmasını sağlar.\nBuna göre, numaralı yapılarla ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',ip=['Hangi yapının kanı vücuda, hangisinin akciğerlere gönderdiğini düşün.'],
  bilgi=[B('Kalp odacıkları','Sağ yarı oksijence fakir kanı akciğerlere, sol yarı oksijence zengin kanı vücuda pompalar · Kulakçıklar kanı alır, karıncıklar pompalar')],
- puf='Kalbin sol yarısı yüksek basınçla tüm vücuda pompalar; bu yüzden sol karıncığın duvarı kalın, aort basıncı yüksektir.',sekil=S1)
+ puf='Her numaranın hangi odacık ya da damar olduğunu belirleyip görevini ve taşıdığı kanın özelliğini sorgula.',sekil=S1)
 
 # ======================= 02 · kolay · öncüllü · kan hücreleri =======================
 d={'I':('Olgun insan alyuvarlarında çekirdek bulunmaz.',True,'olgun alyuvarlar çekirdeğini yitirir; böylece hemoglobine daha fazla yer kalır'),
    'II':('Kan pulcukları (trombositler), kanın pıhtılaşmasında görev alır.',True,'trombositler kanamada damar yaralanmasını kapatmaya ve pıhtı oluşumuna katılır'),
    'III':('Akyuvarların tamamı, vücuda giren mikroorganizmaları fagositozla yok eder.',False,'yalnız bazı akyuvarlar (nötrofil, makrofaj gibi) fagositoz yapar; lenfositler ise antikor üretir ya da enfekte hücreleri yok eder')}
-r=onc(d,'C')
+r=onc(d,'D')
 Q('0002','kan','kolay','öncüllü','Kanın hücresel bileşenleri','Alyuvar, akyuvar ve kan pulcuklarının yapı ve görevlerini ayırt eder.','kan hücreleri öncülleri',
  'Her kan hücresinin çekirdek durumu ve görevi ayrı ayrı bilinmelidir.','Bütün akyuvarların fagositoz yaptığını sanmak.',
  oad(d),metin=omet('Kanın hücresel bileşenleri olan alyuvarlar, akyuvarlar ve kan pulcukları kemik iliğindeki kök hücrelerden oluşur ve kanda farklı görevler üstlenir. Bu hücrelerle ilgili aşağıdaki yargılar verilmiştir.',d,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Akyuvarların çeşitli türleri olduğunu ve her türün aynı görevi yapmadığını hatırla.'],
  bilgi=[B('Kan hücreleri','Alyuvar: oksijen taşır, olgunlaşınca çekirdeğini yitirir · Akyuvar: savunma · Kan pulcuğu: pıhtılaşma')],
- puf='“Tamamı” içeren genellemeleri kuşkuyla incele; akyuvarların yalnız bir kısmı fagositoz yapar.')
+ puf='“Tamamı” ve “hiçbiri” gibi genellemelerde istisna olup olmadığını sorgula.')
 
 # ======================= 03 · kolay · tablo · kan grubu =======================
 KISI=[('Ali',1,0,1),('Burak',0,1,0),('Derya',1,1,0),('Ece',1,0,0),('Cem',0,0,1)]
@@ -159,8 +159,8 @@ assert all(BAS[i]>BAS[i+1] for i in range(4)) and HIZ.index(min(HIZ))==2 and ALA
 def egri4(v,ex): return pl([(i*1.9,x/100*3.4) for i,x in enumerate(v)],ex)
 g4=eksen(7.6,3.4,'Damar türleri','Göreli değer',xt=range(5),xs=1.9,xtl={i:'\\shortstack{%s}'%c for i,c in enumerate(CAT)},xly=-1.5)
 g4=g4.replace('node[below=1pt]','node[below=1pt,font=\\normalsize]')
-g4+=egri4(ALAN,'line width=1.5pt')+egri4(BAS,'line width=1.5pt,dash pattern=on 6pt off 3pt')+egri4(HIZ,'line width=1.7pt,dash pattern=on 1.5pt off 3pt')
-g4+='\\node[font=\\large\\bfseries] at (4.3,3.7) {X};\\node[font=\\large\\bfseries] at (1.2,3.5) {Y};\\node[font=\\large\\bfseries] at (8.0,1.75) {Z};'
+g4+=egri4(ALAN,'line width=1.7pt,blue!70!black')+egri4(BAS,'line width=1.7pt,red!75!black,dash pattern=on 6pt off 3pt')+egri4(HIZ,'line width=1.9pt,green!50!black,dash pattern=on 1.5pt off 3pt')
+g4+='\\node[font=\\large\\bfseries,text=blue!70!black] at (4.3,3.7) {X};\\node[font=\\large\\bfseries,text=red!75!black] at (1.2,3.5) {Y};\\node[font=\\large\\bfseries,text=green!50!black] at (8.0,1.75) {Z};'
 S4=tk(g4,.85)
 d={'I':('X eğrisi, kan akış hızını göstermektedir.',False,'X eğrisi kılcal damarlarda en yüksek değere ulaştığından toplam kesit alanını gösterir; kan akış hızı bu bölgede en düşüktür'),
    'II':('Y eğrisi, kan basıncını göstermektedir.',True,'kan basıncı kalpten uzaklaştıkça sürekli azalır ve toplardamarlarda çok düşüktür; yalnız Y eğrisi böyle seyreder'),
@@ -170,9 +170,9 @@ Q('0004','damar','orta','grafik','Damarlarda basınç, hız ve kesit alanı','Da
  'Toplam kesit alanı arttıkça kan akış hızı azalır; basınç kalpten uzaklaştıkça düşer.','Hız ile toplam kesit alanı eğrilerini karıştırmak.',
  oad(d,[A('Eğrileri tanı','Kılcal damarlarda en yüksek olan eğri toplam kesit alanıdır; hız bu bölgede en düşüktür. Aortta en yüksek olup sürekli azalan eğri basınçtır.','alan, basınç, hız eğrilerinin ayrılması')]),
  metin=omet('Şekilde, kanın dolaşım sırasında geçtiği damar türlerindeki kan basıncı, kan akış hızı ve toplam kesit alanının değişimi X, Y ve Z eğrileriyle gösterilmiştir. Hangi eğrinin hangi büyüklüğe ait olduğu belirtilmemiştir.',d,'Buna göre, bu yargılardan hangileri doğrudur?'),
- dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Kılcal damarlarda kanın en yavaş aktığını düşünerek hangi eğrinin ne olduğunu bulmaya başla.'],
+ dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Toplam kesit alanı ile akış hızının nasıl ilişkili olduğunu düşün.'],
  bilgi=[B('Damarlarda akış','Toplam kesit alanı en geniş yer kılcal damarlardır; akış orada en yavaştır · Kan basıncı kalpten uzaklaştıkça düşer')],
- puf='Önce kılcal damarlarda tepe yapan eğriyi bul: o toplam kesit alanıdır; hız onun tersi gibi davranır.',sekil=S4)
+ puf='Akış hızı ile toplam kesit alanı ters ilişkilidir.',sekil=S4)
 
 # ======================= 05 · zor · grafik · kalp döngüsü =======================
 TT=[0,.05,.1,.15,.2,.25,.3,.35,.4,.42,.45,.5,.6,.8]
@@ -187,11 +187,11 @@ assert D5['K']==dict(av=True,sl=False,kasilma=False) or (D5['K']['av'] and not D
 assert (D5['L']['av'],D5['L']['sl'])==(False,False) and (D5['M']['av'],D5['M']['sl'])==(False,True) and (D5['N']['av'],D5['N']['sl'])==(False,False) and (D5['O']['av'],D5['O']['sl'])==(True,False) and (D5['K']['av'],D5['K']['sl'])==(True,False)
 def e5(v,ex): return pl([(t/.8*7.2,x/110*4.2) for t,x in zip(TT,v)],ex)
 g5=eksen(7.2,4.2,'Zaman (s)','Basınç',xt=[0,.2,.4,.6,.8],xs=7.2/.8,xtl={0:'0',.2:'0,2',.4:'0,4',.6:'0,6',.8:'0,8'})
-g5+=e5(AO,'line width=1.5pt')+e5(LV,'line width=1.5pt,dash pattern=on 6pt off 3pt')+e5(LA,'line width=1.7pt,dash pattern=on 1.5pt off 3pt')
+g5+=e5(AO,'line width=1.7pt,blue!70!black')+e5(LV,'line width=1.7pt,red!75!black,dash pattern=on 6pt off 3pt')+e5(LA,'line width=1.9pt,green!50!black,dash pattern=on 1.5pt off 3pt')
 for k,t in K5.items(): g5+=f'\\draw[dash pattern=on 1pt off 2pt,line width=.6pt] ({t/.8*7.2:.2f},0)--({t/.8*7.2:.2f},4.55);\\node[font=\\large\\bfseries] at ({t/.8*7.2:.2f},4.85) {{{k}}};'
 g5+='\\node[anchor=west] at (7.35,2.9) {\\normalsize Aort};\\node[anchor=west] at (7.35,.55) {\\normalsize Kulakçık};\\node[anchor=west] at (7.35,.05) {\\normalsize Karıncık};'
 # eğri türü açıklaması: düz çizgi aort, kesikli sol karıncık, noktalı sol kulakçık
-g5+='\\draw[line width=1.5pt] (7.0,3.35)--(7.35,3.35);\\node[anchor=west] at (7.45,3.35) {\\normalsize Aort};\\draw[line width=1.5pt,dash pattern=on 6pt off 3pt] (7.0,2.85)--(7.35,2.85);\\node[anchor=west] at (7.45,2.85) {\\normalsize Karıncık};\\draw[line width=1.7pt,dash pattern=on 1.5pt off 3pt] (7.0,2.35)--(7.35,2.35);\\node[anchor=west] at (7.45,2.35) {\\normalsize Kulakçık};'
+g5+='\\draw[line width=1.7pt,blue!70!black] (7.0,3.35)--(7.35,3.35);\\node[anchor=west] at (7.45,3.35) {\\normalsize Aort};\\draw[line width=1.7pt,red!75!black,dash pattern=on 6pt off 3pt] (7.0,2.85)--(7.35,2.85);\\node[anchor=west] at (7.45,2.85) {\\normalsize Karıncık};\\draw[line width=1.9pt,green!50!black,dash pattern=on 1.5pt off 3pt] (7.0,2.35)--(7.35,2.35);\\node[anchor=west] at (7.45,2.35) {\\normalsize Kulakçık};'
 g5=g5.replace('\\node[anchor=west] at (7.35,2.9) {\\normalsize Aort};\\node[anchor=west] at (7.35,.55) {\\normalsize Kulakçık};\\node[anchor=west] at (7.35,.05) {\\normalsize Karıncık};','')
 S5=tk(g5,.7)
 it=[('K anında iki loblu kapakçık kapalı, aort kapakçığı açıktır.',False,'K anında sol kulakçık basıncı sol karıncık basıncından yüksektir; iki loblu kapakçık açıktır ve karıncık basıncı aort basıncından düşük olduğundan aort kapakçığı kapalıdır'),
@@ -212,10 +212,10 @@ Q('0005','dongu','zor','grafik','Kalp döngüsünde kapakçıklar','Kulakçık, 
  puf='Her an için iki karşılaştırma yap: kulakçık-karıncık ve karıncık-aort; sonuçlar iki kapakçığın durumunu verir.',sekil=S5)
 
 # ======================= 06 · orta · olumsuz · kalp atış hızı =======================
-it=[('Dinlenme hâlindeki bir kişinin derin uykuya geçmesi ve parasempatik sinirlerin etkisinin baskın hâle gelmesi',False,''),
-    ('Bir kişinin ani bir korku yaşaması ve kanındaki adrenalin hormonu miktarının artması',True,'adrenalin kalp atış hızını artırır; korku durumunda salgısı artan hormon kalbi hızlandırır'),
-    ('Kan karbon dioksit derişiminin yükselmesi',True,'kandaki CO2 artışı kalp ve solunum merkezlerini uyararak atış hızını artırır'),
-    ('Tiroksin hormonunu normalden fazla salgılayan bir kişinin dinlenme hâlinde olması',True,'tiroksin metabolizma hızını artırır ve kalp atış hızını yükseltir'),
+it=[('Derin uykuya geçen kişide parasempatik etkinin baskın olması',False,''),
+    ('Ani bir korku yaşayan kişide kana adrenalin salgılanması',True,'adrenalin kalp atış hızını artırır; korku durumunda salgısı artan hormon kalbi hızlandırır'),
+    ('Kan karbon dioksit derişimi yükselen kişinin dinlenme hâlinde olması',True,'kandaki CO2 artışı kalp ve solunum merkezlerini uyararak atış hızını artırır'),
+    ('Tiroksin hormonu fazla salgılanan kişinin dinlenme hâlinde olması',True,'tiroksin metabolizma hızını artırır ve kalp atış hızını yükseltir'),
     ('Sempatik sinir uçlarından kalbe noradrenalin salgılanması',True,'sempatik sinirler kalp atışını hızlandırır')]
 def sanc6(m,n): return f'Bu durumda kalp atış hızının artmayacağını sanmış; oysa artış beklenir: {n}.'
 r,g=tek(it,False,'A',sanc6)
@@ -227,7 +227,7 @@ Q('0006','dongu','orta','düz','Kalp atışının düzenlenmesi','Kalp atış h�
  metin='Kalp kasının kasılma ritmini sağ kulakçıktaki sinüs düğümü başlatır; bu ritim, otonom sinir sistemi ile bazı hormon ve kimyasal maddeler tarafından değiştirilebilir. Aşağıda, sağlıklı insanlarda görülebilecek beş durum verilmiştir.\nBuna göre, bu durumlardan hangisinde kalp atış hızında artış beklenmez?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Kalp atış hızında artış beklenmeyen durum.',ip=['Hızlandırıcı ve yavaşlatıcı sinirleri ayrı ayrı hatırla.'],
  bilgi=[B('Kalp atışının düzenlenmesi','Sempatik sinirler (noradrenalin) ve adrenalin kalbi hızlandırır · Parasempatik sinirler (asetilkolin) kalbi yavaşlatır · Kandaki CO2 artışı atış hızını artırır')],
- puf='Sempatik etki “savaş ya da kaç” durumunda kalbi hızlandırır; parasempatik etki dinlenmede yavaşlatır.')
+ puf='Her etkenin kalbi hızlandırıcı mı yavaşlatıcı mı olduğunu ayrı ayrı sorgula.')
 
 # ======================= 07 · orta · sayısal · kalp debisi =======================
 DAK1,HAC1,DAK2,HAC2=60,80,150,120
@@ -258,14 +258,14 @@ filt=sum(max(hid(x)-OSM,0) for x in xs)/1000; reab=sum(max(OSM-hid(x),0) for x i
 assert hid(0)>OSM and hid(1)<OSM and filt>reab*1.5
 g8=eksen(6.4,4.0,'Kılcal damar boyunca konum','Basınç (mmHg)',xt=[0,1],xs=6.4,xtl={0:'Atardamar ucu',1:'Toplardamar ucu'},yt=[0,20,40],ys=4.0/40,ylab_gap=1.0)
 g8=g8.replace('node[below=1pt]','node[below=1pt,font=\\normalsize]').replace('at (0.00,-.05) {Atardamar ucu}','at (.45,-.05) {Atardamar ucu}').replace('at (6.40,-.05) {Toplardamar ucu}','at (5.9,-.05) {Toplardamar ucu}')
-g8+=f'\\draw[line width=1.6pt] (0,{hid(0)/10:.2f})--(6.4,{hid(1)/10:.2f});\\draw[line width=1.6pt,dashed] (0,{OSM/10:.2f})--(6.4,{OSM/10:.2f});'
+g8+=f'\\draw[line width=1.7pt,red!75!black] (0,{hid(0)/10:.2f})--(6.4,{hid(1)/10:.2f});\\draw[line width=1.7pt,blue!70!black,dashed] (0,{OSM/10:.2f})--(6.4,{OSM/10:.2f});'
 g8+='\\node[anchor=west,font=\\normalsize] at (6.55,1.6) {Osmotik basınç};\\node[anchor=west,font=\\normalsize] at (6.55,2.2) {Hidrostatik basınç};'
 g8=g8.replace('\\node[anchor=west,font=\\normalsize] at (6.55,1.6) {Osmotik basınç};\\node[anchor=west,font=\\normalsize] at (6.55,2.2) {Hidrostatik basınç};','')
-g8+='\\draw[line width=1.6pt] (3.9,4.75)--(4.35,4.75);\\node[anchor=west,font=\\normalsize] at (4.45,4.75) {Hidrostatik};\\draw[line width=1.6pt,dashed] (3.9,4.3)--(4.35,4.3);\\node[anchor=west,font=\\normalsize] at (4.45,4.3) {Osmotik};'
+g8+='\\draw[line width=1.7pt,red!75!black] (3.9,4.75)--(4.35,4.75);\\node[anchor=west,font=\\normalsize] at (4.45,4.75) {Hidrostatik};\\draw[line width=1.7pt,blue!70!black,dashed] (3.9,4.3)--(4.35,4.3);\\node[anchor=west,font=\\normalsize] at (4.45,4.3) {Osmotik};'
 S8=tk(g8,.8)
 d={'I':('Atardamar ucunda sıvı, osmotik basıncın hidrostatik basınçtan büyük olması nedeniyle damar dışına çıkar.',False,'atardamar ucunda hidrostatik basınç osmotik basınçtan büyüktür; bu fark sıvıyı doku sıvısına doğru iter, osmotik basınç sıvıyı damar içinde tutmaya çalışır'),
    'II':('Toplardamar ucunda osmotik basınç hidrostatik basınçtan büyük olduğundan doku sıvısındaki sıvının bir bölümü kana geri döner.',True,'toplardamar ucunda hidrostatik basınç osmotik basıncın altına düşer ve net basınç damar içine doğru olur'),
-   'III':('Damar dışına çıkan sıvının tamamı toplardamar ucunda geri alınamaz; kalan kısım lenf damarlarıyla kana taşınır.',True,'atardamar ucunda sıvının damar dışına çıktığı basınç farkı alanı, toplardamar ucunda geri döndüğü alandan büyüktür; geri alınamayan sıvı lenf kılcallarına geçer')}
+   'III':('Kılcal damardan doku sıvısına geçen sıvı miktarı, doku sıvısından kana geri dönen sıvı miktarından fazladır.',True,'atardamar ucunda damar dışına itme farkı toplardamar ucunda içeri çekme farkından hem büyük hem daha geniş bir bölgede sürer; grafikteki iki fark alanı karşılaştırıldığında dışarı çıkan sıvı fazladır')}
 r=onc(d,'E')
 Q('0008','damar','zor','grafik','Kılcal damarlarda sıvı alışverişi','Hidrostatik ve osmotik basınç eğrilerini karşılaştırarak kılcal damarda sıvı geçişinin yönünü ve lenf sisteminin işlevini yorumlar.','hidrostatik–osmotik basınç eğrileri',
  'Net basınç farkı sıvının yönünü belirler; damar dışına çıkan sıvı geri dönen sıvıdan fazla olduğundan fazlalığı lenf toplar.','Osmotik basıncın sıvıyı damar dışına çıkardığını sanmak.',
@@ -273,7 +273,7 @@ Q('0008','damar','zor','grafik','Kılcal damarlarda sıvı alışverişi','Hidro
  metin=omet('Şekilde, sağlıklı bir insanda bir kılcal damar boyunca kanın hidrostatik basıncı (kan basıncı) ile plazma proteinlerinin oluşturduğu osmotik basıncın değişimi gösterilmiştir. Sıvı, net basıncın yönüne doğru hareket eder; hidrostatik basınç sıvıyı damardan dışarı iter, osmotik basınç ise sıvıyı damar içinde tutmaya çalışır.',d,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Eğriler arasındaki farkın hangi uçta hangi yöne doğru olduğuna ve iki bölgedeki farkın büyüklüğüne bak.'],
  bilgi=[B('Kılcal damar alışverişi','Hidrostatik basınç sıvıyı damardan dışarı, plazma proteinlerinin osmotik basıncı damar içine çeker · Geri dönemeyen sıvı lenf kılcallarına geçer')],
- puf='Atardamar ucunda hidrostatik basınç baskındır, toplardamar ucunda osmotik basınç; aradaki fazla sıvıyı lenf taşır.',sekil=S8)
+ puf='Net basınç farkının yönü sıvının yönünü, fark alanlarının büyüklüğü sıvı miktarını belirler.',sekil=S8)
 
 # ======================= 09 · orta · öncüllü · lenf =======================
 d={'I':('Lenf sıvısı alyuvar içerir ve oksijen taşınmasında görev alır.',False,'lenf sıvısında alyuvar bulunmaz; oksijen taşımaz'),
@@ -285,7 +285,7 @@ Q('0009','lenf','orta','öncüllü','Lenf sistemi','Lenfin bileşimini, hareketi
  oad(d),metin=omet('İnsanda lenf sistemi; lenf kılcalları, lenf damarları ve lenf düğümlerinden oluşur. Bu sistemle ve lenf sıvısıyla ilgili aşağıdaki yargılar verilmiştir.',d,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Lenf sıvısının kanın hangi bileşenlerini içerdiğini ve lenfi hareket ettiren etkenleri düşün.'],
  bilgi=[B('Lenf sistemi','Doku sıvısının fazlasını toplayıp kana taşır · Lenf düğümlerinde lenfositler bulunur · Lenf damarlarında kapakçık vardır')],
- puf='Lenfte alyuvar yoktur ama akyuvar vardır; lenfi kalp değil kasların ve kapakçıkların işbirliği ilerletir.')
+ puf='Lenfin bileşimini ve hareket mekanizmasını kan dolaşımıyla karşılaştırarak sorgula.')
 
 # ======================= 10 · orta · tablo · kan grubu ve kan nakli =======================
 KG=[('Ayşe',1,0,1),('Berk',0,1,0),('Can',1,1,0),('Deniz',0,0,1),('Elif',0,0,0)]
@@ -343,7 +343,7 @@ Q('0011','kan','zor','şekilli','Kan grubu ve Rh kalıtımı','Soy ağacından e
  metin='Soy ağacında, bir ailenin bazı bireylerinin ABO kan grupları ve Rh özellikleri gösterilmiştir. ABO kan grupları IA, IB ve i alelleriyle belirlenir (IA ve IB eş baskın, ikisi de i’ye baskındır). Rh pozitiflik (D) Rh negatifliğe (d) baskındır; iki özelliğin genleri farklı kromozomlardadır.\nII. kuşaktaki 2 numaralı birey ile 4 numaralı bireyin evliliğinden doğacak ilk çocuğun kan grubunun B ve Rh negatif olma olasılığı kaçtır?',
  dogru='1/6',sira=s11,yan=[(v,HAR[Fr(*map(int,v.split('/')))],'islem' if v in('1/12','1/8','1/4') else 'dikkat') for v in s11 if v!='1/6'],
  istenen='Çocuğun B grubu ve Rh negatif olma olasılığı.',ip=['Önce II. kuşaktaki Rh negatif bireyden yararlanarak I. kuşağın Rh genotiplerini belirle.'],
- bilgi=[B('Koşullu genotip olasılığı','Baskın fenotipli bireyin genotipi, ebeveyn çaprazından bulunan baskın genotipler yeniden oranlanarak bulunur · Örnek: Aa × Aa çaprazında baskın görünümlü bireyin 1/3’ü AA, 2/3’ü Aa’dır'),B('ABO kan grubu kalıtımı','IA ve IB eş baskındır, her ikisi de i’ye baskındır · AB × O çaprazından A ya da B grubu çocuklar doğar')],
+ bilgi=[B('Koşullu genotip olasılığı','Baskın fenotipli bireyin genotipi, ebeveyn çaprazından bulunan baskın genotipler yeniden oranlanarak bulunur · Örnek: Aa × Aa çaprazında baskın görünümlü bireyin 1/3’ü AA, 2/3’ü Aa’dır'),B('ABO kan grubu kalıtımı','IA ve IB alelleri birbirine eş baskındır, ikisi de i alelline baskındır; fenotip bu alellerin ilişkisiyle belirlenir')],
  puf='Baskın fenotipli bireyin genotipini sorarken önce ebeveyn çaprazından olasılıkları bul, sonra yalnız baskın fenotipli bireyler arasında yeniden oranla.',sekil=S11)
 
 # ======================= 12 · orta · olumsuz · Rh uyuşmazlığı =======================
@@ -363,11 +363,11 @@ Q('0012','kan','orta','düz','Rh uyuşmazlığı','Rh negatif annenin Rh pozitif
  metin='Rh negatif bir kadın ile Rh pozitif bir erkeğin ilk çocukları Rh pozitif olarak doğmuştur. Anne, bu doğum sonrasında Rh uyuşmazlığına yönelik herhangi bir önlem almamıştır. Çift ikinci kez çocuk sahibi olmak istemektedir.\nBuna göre, bu çiftteki Rh uyuşmazlığıyla ilgili aşağıdakilerden hangisi söylenemez?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Söylenemeyecek olan ifade.',ip=['Annede antikor oluşumunun ne zaman başladığını ve antikorların hangi bebeği etkileyebileceğini düşün.'],
  bilgi=[B('Rh uyuşmazlığı','Rh antijeni taşımayan anne, Rh pozitif bebeğin alyuvarlarına karşı antikor üretebilir · Antikorlar sonraki Rh pozitif bebeklerin alyuvarlarına zarar verir')],
- puf='Rh uyuşmazlığında antikor önce oluşur, zarar sonraki Rh pozitif gebelikte görülür.')
+ puf='Antikorun ne zaman oluştuğunu ve kimi etkileyebildiğini ayrı ayrı sorgula.')
 
 # ======================= 13 · orta · tablo · deney · bağışıklık türleri =======================
 S13=tablo_svg(['Grup','0. gün','14. gün','28. gün'],[['1','Tuzlu su','Canlı X','Hastalandı'],['2','Öldürülmüş X','Canlı X','Sağlıklı'],['3','—','Canlı X + X’e karşı serum','Sağlıklı']])
-it=[('1. gruptaki farelerde kazanılmış aktif bağışıklık gelişmiştir.',False,'1. gruptaki fareler X’e önceden maruz kalmamıştır ve hastalanmıştır; aktif bağışıklık gelişmemiştir'),
+it=[('1. gruptaki fareler X’e karşı korunmuştur.',False,'tabloya göre 1. gruptaki fareler 28. günde hastalanmıştır; korunmamışlardır'),
     ('2. gruptaki fareler, ilk uygulamayla dışarıdan hazır antikor almıştır.',False,'öldürülmüş X bir antijen kaynağıdır (aşı gibidir); fareler antikorları kendi bağışıklık sistemleriyle üretir'),
     ('3. gruptaki fareler, canlı X’e karşı korumayı kendi ürettikleri antikorlarla sağlamıştır.',False,'serum, hazır antikor içerir; 3. gruptaki fareler korumayı dışarıdan aldıkları antikorlarla sağlamıştır'),
     ('3. gruptaki fareler, canlı X ile ikinci kez karşılaştıklarında hızlı bir ikinci yanıt vermiştir.',False,'3. gruptaki fareler X’e karşı bellek hücresi oluşturmadığından hızlı ikinci yanıt oluşmaz'),
@@ -393,14 +393,14 @@ def esik(v,a,e):  # a'dan sonra e değerine ulaşılan ilk gün (doğrusal)
 assert zirve(AX,28,56)>4*zirve(AX,0,27) and zirve(AY,28,56)==zirve(AX,0,27) and esik(AX,28,10)-28<esik(AX,0,10) and esik(AY,28,10)-28>esik(AX,28,10)-28
 def e14(v,ex): return pl([(x/56*6.8,y/110*3.6) for x,y in v],ex)
 g14=eksen(6.8,3.6,'Zaman (gün)','Antikor derişimi',xt=[0,14,28,42,56],xs=6.8/56,yt=[0,50,100],ys=3.6/110,ylab_gap=1.0)
-g14+=e14(AX,'line width=1.6pt')+e14(AY,'line width=1.8pt,dash pattern=on 6pt off 3pt')
+g14+=e14(AX,'line width=1.7pt,blue!70!black')+e14(AY,'line width=1.8pt,red!75!black,dash pattern=on 6pt off 3pt')
 g14+=f'\\draw[{ARR},line width=.9pt] (0,4.55)--(0,4.0);\\node[font=\\normalsize] at (0,4.85) {{X}};\\draw[{ARR},line width=.9pt] ({28/56*6.8:.2f},4.55)--({28/56*6.8:.2f},4.0);\\node[font=\\normalsize] at ({28/56*6.8:.2f},4.85) {{X ve Y}};'
-g14+='\\draw[line width=1.6pt] (.9,3.25)--(1.3,3.25);\\node[anchor=west,font=\\normalsize] at (1.4,3.25) {X’e karşı};\\draw[line width=1.8pt,dash pattern=on 6pt off 3pt] (.9,2.75)--(1.3,2.75);\\node[anchor=west,font=\\normalsize] at (1.4,2.75) {Y’ye karşı};'
+g14+='\\draw[line width=1.7pt,blue!70!black] (.9,3.25)--(1.3,3.25);\\node[anchor=west,font=\\normalsize] at (1.4,3.25) {X’e karşı};\\draw[line width=1.8pt,red!75!black,dash pattern=on 6pt off 3pt] (.9,2.75)--(1.3,2.75);\\node[anchor=west,font=\\normalsize] at (1.4,2.75) {Y’ye karşı};'
 S14=tk(g14,.8)
 d={'I':('28. günden sonra Y’ye karşı oluşan antikorlar, X için oluşan bellek hücrelerinden üretilmiştir.',False,'Y’ye karşı yanıt X’e karşı oluşan belleğe bağlı değildir; Y ile ilk kez karşılaşıldığından birincil yanıt gibi geç ve düşüktür'),
    'II':('0–28. günler arasında X’e karşı antikor derişiminin azalması, X’e özgü bellek hücrelerinin de yok olduğunu gösterir.',False,'antikor derişimi azalsa da bellek hücreleri kalır; ikinci temasta X’e karşı yanıtın hızlı ve güçlü olması bunu gösterir'),
    'III':('X’e karşı ikinci yanıtın birincil yanıttan daha hızlı ve güçlü olması, ilk temasta oluşan bellek hücrelerinden kaynaklanır.',True,'ilk temasta oluşan bellek hücreleri ikinci temasta hızla çoğalıp antikor üreten hücrelere dönüşür')}
-r=onc(d,'A')
+r=onc(d,'C')
 Q('0014','bag','orta','grafik','Birincil ve ikincil bağışıklık yanıtı','Antikor derişimi–zaman grafiğinden birincil ve ikincil yanıtı karşılaştırıp bellek hücrelerinin rolünü yorumlar.','antikor–zaman grafiği',
  'İkinci temasta bellek hücreleri sayesinde yanıt daha hızlı, daha güçlü ve daha uzun sürelidir; ilk kez karşılaşılan antijene karşı yanıt birincil yanıttır.','Antikor derişiminin azalmasını belleğin kaybolması sanmak.',
  oad(d,[A('Grafiği oku','X’e ilk kez 0. günde, ikinci kez 28. günde maruz kalınmıştır; Y ile ilk karşılaşma 28. gündedir. X’e karşı ikinci yanıt daha hızlı ve çok daha yüksektir; Y’ye karşı yanıt ilk X yanıtına benzer.','X: ikinci yanıt hızlı ve yüksek · Y: birincil yanıt')]),
@@ -419,13 +419,13 @@ assert deg(K1,1)>deg(K2,1)*10 and all(deg(K1,t)>deg(K1,t+10) for t in (1,10,20,3
 assert deg(K2,53)>deg(K1,53)*20 and deg(K2,26)==30 and deg(K2,50)>deg(K1,50)*5
 def e15(v,ex): return pl([(x/80*6.8,y/110*3.6) for x,y in v],ex)
 g15=eksen(6.8,3.6,'Zaman (gün)','Antikor derişimi',xt=[0,20,40,60,80],xs=6.8/80,yt=[0,50,100],ys=3.6/110,ylab_gap=1.0)
-g15+=e15(K1,'line width=1.8pt,dash pattern=on 6pt off 3pt')+e15(K2,'line width=1.6pt')
+g15+=e15(K1,'line width=1.8pt,red!75!black,dash pattern=on 6pt off 3pt')+e15(K2,'line width=1.7pt,blue!70!black')
 g15+=f'\\draw[{ARR},line width=.9pt] (0,4.55)--(0,4.0);\\node[font=\\normalsize,anchor=south] at (0,4.55) {{uygulama}};\\draw[{ARR},line width=.9pt] ({50/80*6.8:.2f},4.55)--({50/80*6.8:.2f},4.0);\\node[font=\\normalsize,anchor=south] at ({50/80*6.8:.2f},4.55) {{mikrop}};'
-g15+='\\draw[line width=1.8pt,dash pattern=on 6pt off 3pt] (2.3,3.25)--(2.7,3.25);\\node[anchor=west,font=\\normalsize] at (2.8,3.25) {Kişi 1};\\draw[line width=1.6pt] (2.3,2.75)--(2.7,2.75);\\node[anchor=west,font=\\normalsize] at (2.8,2.75) {Kişi 2};'
+g15+='\\draw[line width=1.8pt,red!75!black,dash pattern=on 6pt off 3pt] (2.3,3.25)--(2.7,3.25);\\node[anchor=west,font=\\normalsize] at (2.8,3.25) {Kişi 1};\\draw[line width=1.7pt,blue!70!black] (2.3,2.75)--(2.7,2.75);\\node[anchor=west,font=\\normalsize] at (2.8,2.75) {Kişi 2};'
 S15=tk(g15,.8)
 def sanc15(m,n): return f'Bu ifadeyi doğru sanmış; oysa yanlıştır: {n}.'
 it=[('Kişi 1’e aşı, Kişi 2’ye serum uygulanmıştır.',False,'Kişi 1’de antikor derişimi uygulamadan hemen sonra yüksektir ve zamanla azalır; bu hazır antikor (serum) uygulamasının, Kişi 2’deki yavaş artış ise aşının sonucudur'),
-    ('Kişi 2’de 50. günden sonra görülen hızlı ve güçlü yanıt, aşıyla oluşan bellek hücrelerinden kaynaklanır; Kişi 1’deki antikorları ise kişinin kendi bağışıklık sistemi üretmemiştir.',True,'aşı bellek hücreleri oluşturur ve ikinci karşılaşmada hızlı yanıt sağlar; serumdaki antikorlar hazır verilmiştir ve bellek oluşturmaz'),
+    ('Kişi 2’de 50. günden sonra ulaşılan en yüksek derişim, aşıdan sonraki ilk zirveden daha yüksektir ve bu bellek hücrelerinden kaynaklanır; Kişi 1’deki antikorları ise kişinin kendi bağışıklık sistemi üretmemiştir.',True,'aşı bellek hücreleri oluşturur ve ikinci karşılaşmada hızlı yanıt sağlar; serumdaki antikorlar hazır verilmiştir ve bellek oluşturmaz'),
     ('Kişi 1’de 1–40. günlerde görülen antikor azalması, antikorların bellek hücrelerine dönüşmesinin sonucudur.',False,'antikorlar bellek hücresine dönüşmez; hazır verilen antikorlar zamanla yıkılır ve derişimleri azalır'),
     ('Kişi 2’ye uygulanan işlem, uygulamadan hemen sonra Kişi 1’dekinden daha hızlı koruma sağlar.',False,'uygulamadan hemen sonra antikor derişimi Kişi 1’de çok yüksek, Kişi 2’de çok düşüktür; hazır antikor anında koruma sağlar, aşının etkisi ise gecikmelidir'),
     ('Kişi 1’in 50. günden sonraki yanıtının yavaş olması, bu kişide bağışıklık belleğinin oluşmuş olmasından kaynaklanır.',False,'bellek oluşmuş olsaydı yanıt hızlı olurdu; Kişi 1’de bellek hücresi oluşmadığı için yanıt birincil yanıt gibi yavaş ve düşüktür')]
@@ -439,7 +439,7 @@ Q('0015','bag','zor','grafik','Aşı ve serum','Antikor derişimi–zaman grafi�
  metin='Aynı mikroba karşı, biri hazır antikor içeren bir serum, diğeri ise aşı olmak üzere iki farklı uygulama, Kişi 1 ve Kişi 2’ye 0. günde yapılmıştır. İki kişinin kanındaki antikor derişimleri izlenmiş; 50. günde her iki kişi de bu mikropla karşılaşmıştır. Sonuçlar şekilde gösterilmiştir.\nBuna göre, aşağıdakilerden hangisi doğrudur?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan ifade.',ip=['Uygulamadan hemen sonraki ilk günlerde ve 50. günden sonra antikor derişimlerinin nasıl değiştiğine bak.'],
  bilgi=[B('Aşı ve serum','Aşı: zayıflatılmış ya da öldürülmüş mikrop (antijen) verilir, vücut antikor ve bellek hücresi üretir · Serum: hazır antikor verilir, etki hızlıdır ama geçicidir')],
- puf='Etki hemen başlıyor ve çabuk sönüyorsa serum; geç başlıyor ve uzun sürüyorsa aşıdır.',sekil=S15)
+ puf='Antikorların kaynağını ve etkinin zamanını eğriden okuyarak uygulamanın türünü sorgula.',sekil=S15)
 
 # ======================= 16 · zor · şekil · öncüllü · kapakçık yetmezliği =======================
 S16=kalp({'ra':1,'la':2,'lv':3,'ao':4,'pv':5})
@@ -460,21 +460,21 @@ def damar_sekli():
     b=[]
     # 1: atardamar (kalın, çok katlı duvar; dar boşluk)
     x=0
-    for a,c in ((-.9,-.3),(.3,.9)): b.append(f'\\draw[line width=1.2pt,fill=black,fill opacity=.22] ({x+a},0) rectangle ({x+c},3.4);')
+    for a,c in ((-.9,-.3),(.3,.9)): b.append(f'\\draw[line width=1.2pt,fill=orange!35] ({x+a},0) rectangle ({x+c},3.4);')
     for a in (-.9,-.6,-.3,.3,.6,.9): b.append(f'\\draw[line width=1pt] ({x+a},0)--({x+a},3.4);')
     # 2: toplardamar (ince duvar, geniş boşluk, kapakçık)
     x=3.6
-    for a,c in ((-.9,-.65),(.65,.9)): b.append(f'\\draw[line width=1.2pt,fill=black,fill opacity=.22] ({x+a},0) rectangle ({x+c},3.4);')
+    for a,c in ((-.9,-.65),(.65,.9)): b.append(f'\\draw[line width=1.2pt,fill=orange!35] ({x+a},0) rectangle ({x+c},3.4);')
     b.append(f'\\draw[line width=1.2pt] ({x-.9},0)--({x-.9},3.4);\\draw[line width=1.2pt] ({x+.9},0)--({x+.9},3.4);')
     b.append(f'\\draw[line width=1.3pt] ({x-.65},1.2) .. controls ({x-.5},1.7) and ({x-.2},1.9) .. ({x-.05},2.0);\\draw[line width=1.3pt] ({x+.65},1.2) .. controls ({x+.5},1.7) and ({x+.2},1.9) .. ({x+.05},2.0);')
     # 3: kılcal damar (tek katlı duvar, alyuvarlar tek sıra)
     x=7.2
     b.append(f'\\draw[line width=1.2pt] ({x-.35},0)--({x-.35},3.4);\\draw[line width=1.2pt] ({x+.35},0)--({x+.35},3.4);')
-    for y in (.5,1.7,2.9): b.append(f'\\draw[line width=1pt,fill=black,fill opacity=.25] ({x},{y}) ellipse (.24 and .38);')
+    for y in (.5,1.7,2.9): b.append(f'\\draw[line width=1pt,fill=red!40] ({x},{y}) ellipse (.24 and .38);')
     for x0,n in ((0,1),(3.6,2),(7.2,3)): b.append(f'\\node[font=\\large\\bfseries] at ({x0},-.6) {{{n}}};')
     return tk(''.join(b),.8)
 S17=damar_sekli()
-it=[('2 numaralı damarda kanın geri akışını kapakçıklar engeller; kanın ilerlemesi yalnızca damar duvarındaki düz kasların kasılmasıyla sağlanır.',False,'toplardamarlarda kan, çevredeki iskelet kaslarının kasılmasıyla ve solunum hareketleriyle ilerler; kapakçıklar geri akışı önler'),
+it=[('2 numaralı damarda kanın geri akışını kapakçıklar engeller; kanın ilerlemesi damar duvarındaki düz kasların kasılmasıyla sağlanır.',False,'toplardamarlarda kan, çevredeki iskelet kaslarının kasılmasıyla ve solunum hareketleriyle ilerler; kapakçıklar geri akışı önler'),
     ('1 numaralı damar, kalpten uzaklaşan kanı taşır ve kan basıncının en yüksek olduğu damar türüdür.',True,'atardamarın kalın ve esnek duvarı yüksek basınca dayanır; kalpten uzaklaştıkça basınç düşer'),
     ('3 numaralı damarın duvarı tek katlı epitelden oluştuğu için madde alışverişi bu damarda gerçekleşir.',True,'kılcal damar duvarı tek hücre kalınlığındadır; gazlar ve besinler doku sıvısıyla buradan alışveriş eder'),
     ('2 numaralı damardaki kanın akış hızı, 3 numaralı damardakinden yüksektir.',True,'kılcal damarlarda toplam kesit alanı en geniş olduğundan akış en yavaştır; toplardamarlarda hız artar'),
@@ -488,7 +488,7 @@ Q('0017','damar','orta','şekilli','Damar yapıları','Atardamar, toplardamar ve
  metin='Şekilde, insan dolaşım sisteminde bulunan üç farklı damar türünün uzunlamasına kesiti gösterilmiştir. Damarların duvar yapısı, iç boşluk genişliği ve iç yapıları birbirinden farklıdır.\nBuna göre, numaralı damarlarla ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',ip=['Duvar kalınlığı ve kapakçık gibi şekil ipuçlarından önce damar türlerini belirle.'],
  bilgi=[B('Damar türleri','Atardamar: kalın, esnek duvar, yüksek basınç · Toplardamar: ince duvar, kapakçık · Kılcal damar: tek katlı duvar, madde alışverişi')],
- puf='Toplardamarda kan, kalbin itişinden çok çevre kaslarının baskısı ve kapakçıklar sayesinde ilerler.',sekil=S17)
+ puf='Damar türünü duvar yapısından ve kapakçıktan belirleyip her ifadeyi ayrı ayrı sına.',sekil=S17)
 
 # ======================= 18 · zor · düz · lenf yolu ve dolaşım =======================
 YAP={1:'Lakteal (bağırsak tümseğindeki lenf kılcalı)',2:'Göğüs kanalı',3:'Sol köprücükaltı toplardamarı',4:'Sağ kulakçık',5:'Akciğer atardamarı',6:'Sol kulakçık',7:'Aort'}
@@ -500,20 +500,20 @@ W18=[((1,3,2,4,5,6,7),'Lenfin önce toplardamara, sonra göğüs kanalına geçt
      ((1,2,3,5,4,6,7),'Akciğer atardamarını sağ kulakçıktan önce yerleştirmiştir; kan sağ kulakçıktan sağ karıncığa geçer ve akciğer atardamarına ondan sonra girer.','bilgi')]
 assert DOGRU18 not in [w[0] for w in W18] and len(set(w[0] for w in W18))==4
 s18=[yol(W18[0][0]),yol(W18[1][0]),yol(DOGRU18),yol(W18[2][0]),yol(W18[3][0])]
-Q('0018','lenf','zor','düz','Yağ sindirim ürünlerinin taşınma yolu','Yağ asidinin lenf yoluyla kana karışmasını ve ardından kalp ile akciğer dolaşımındaki yolunu sıraya koyar.','taşınma yolu sıralama',
+Q('0018','lenf','orta','düz','Yağ sindirim ürünlerinin taşınma yolu','Yağ asidinin lenf yoluyla kana karışmasını ve ardından kalp ile akciğer dolaşımındaki yolunu sıraya koyar.','taşınma yolu sıralama',
  'Yağ asidi ve gliserol lakteale geçer; lenf göğüs kanalı ve sol köprücükaltı toplardamarıyla kana boşalır, kan önce sağ kalbe ve akciğere gider.','Bütün besinlerin karaciğer kapı toplardamarıyla taşındığını sanmak; akciğer dolaşımının sırasını karıştırmak.',
  [A('Emilimi belirle','Yağın sindirim ürünleri (yağ asidi, gliserol) bağırsak tümseğindeki lenf kılcalına (lakteal) geçer; glikoz gibi karaciğer kapı toplardamarına geçmez.','başlangıç: 1'),
   A('Lenfin kana karışması','Lenf göğüs kanalında toplanır ve sol köprücükaltı toplardamarına boşalır; kan oradan üst ana toplardamara ve sağ kulakçığa ilerler.','1 → 2 → 3 → 4'),
   A('Kalp ve akciğer yolunu izle','Sağ kulakçıktan sağ karıncığa geçen kan akciğer atardamarıyla akciğere gider; akciğer toplardamarlarıyla sol kulakçığa döner ve sol karıncık yoluyla aorta pompalanır.','4 → 5 → 6 → 7'),
   A('Sıralamayı yaz','Tüm yapılar bu sırayla birleştirilir.',yol(DOGRU18))],
- metin='Bir kişi yağlı bir yemek yemiştir. İnce bağırsakta sindirilen yağın son ürünleri olan yağ asidi ve gliserol, bağırsak tümseklerindeki lenf kılcallarına geçmiş ve oradan kana karışmıştır. Aşağıda bazı yapılar numaralandırılmıştır:\n'+'\n'.join(f'{k}. {v}' for k,v in YAP.items())+'\nBu yağ asidi molekülü kana karıştıktan sonra aorta ulaşıncaya kadar yukarıdaki yapılardan hangi sırayla geçer?',
+ metin='Bir kişi yağlı bir yemek yemiştir. İnce bağırsakta sindirilen yağın son ürünleri olan yağ asidi ve gliserol, bağırsak epitelinden emilmiştir. Aşağıda bazı yapılar numaralandırılmıştır:\n'+'\n'.join(f'{k}. {v}' for k,v in YAP.items())+'\nBu yağ asidi molekülü emildikten sonra aorta ulaşıncaya kadar yukarıdaki yapılardan hangi sırayla geçer?',
  dogru=yol(DOGRU18),sira=s18,yan=[(yol(t),a,tu) for t,a,tu in W18],
  istenen='Yağ asidinin yapılardan geçiş sırası.',ip=['Yağın sindirim ürünlerinin kana hangi damar sistemiyle, hangi toplardamara boşalarak karıştığını hatırla.'],
  bilgi=[B('Lenfin kana karışması','Lenf damarları birleşerek göğüs kanalını oluşturur; lenf köprücükaltı toplardamarlarında kana karışır'),B('Akciğer dolaşımı','Sağ karıncık → akciğer atardamarı → akciğer → akciğer toplardamarı → sol kulakçık')],
- puf='Yağlar lenfle kana karışır, glikoz kapı toplardamarıyla; ikisi de sonra kalbin sağ tarafına gelir.')
+ puf='Besin ürününün emildiği yapıyı belirleyip hangi damar sistemine geçtiğini sorgula.')
 
 # ======================= 19 · orta · öncüllü · bağışıklık hücreleri =======================
-d={'I':('Makrofajlar, vücuda giren mikroorganizmaları fagositozla yok eder ve bu işlem özgül olmayan savunmanın bir parçasıdır.',True,'makrofajlar fagositozla mikropları yok eder; bu etki mikrop türüne özgü değildir'),
+d={'I':('Makrofajlar, vücuda giren mikroorganizmaları fagositozla yok eder ve bu işlem mikrop türüne özgü (özgül) savunmanın bir parçasıdır.',False,'makrofajların fagositozu mikrop türünü ayırt etmez; özgül olmayan savunmanın parçasıdır'),
    'II':('B lenfositlerden farklılaşan plazma hücreleri, antijene özgü antikor üretir.',True,'B lenfositler antijenle karşılaşınca plazma hücrelerine dönüşür ve antikor salgılar'),
    'III':('Sitotoksik T lenfositler, enfekte olmuş vücut hücrelerini yok ederek hücresel bağışıklıkta görev alır.',True,'sitotoksik T lenfositler virüslü ya da bozulmuş hücreleri öldürür; bu hücresel bağışıklıktır')}
 r=onc(d,'E')
@@ -522,7 +522,7 @@ Q('0019','bag','orta','öncüllü','Bağışıklık hücreleri','Doğal ve kazan
  oad(d),metin=omet('İnsan vücudu mikroorganizmalara karşı doğal ve kazanılmış bağışıklık mekanizmalarıyla korunur. Bu mekanizmalarda görev alan bazı hücreler ve işlevleriyle ilgili aşağıdaki yargılar verilmiştir.',d,'Buna göre, bu yargılardan hangileri doğrudur?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Her hücre türünün özgül mü özgül olmayan mı savunmada görev yaptığını ve ne ürettiğini düşün.'],
  bilgi=[B('Bağışıklık hücreleri','Makrofaj: fagositoz · B lenfosit → plazma hücresi → antikor · T lenfosit: hücresel bağışıklık')],
- puf='Fagositoz özgül değildir; antikor üretimi B lenfosit kökenli, hücre öldürme T lenfosit kökenlidir.')
+ puf='Her hücrenin hangi savunma basamağında ve hangi işlevle görev aldığını ayrı ayrı sorgula.')
 
 # ======================= 20 · orta · olumsuz · bağışıklık türleri ve savunma =======================
 it=[('Suçiçeği geçiren bir kişinin aynı virüse karşı uzun süre korunması, kazanılmış aktif bağışıklığa örnektir.',True,'hastalığı geçirmek antikor ve bellek hücresi oluşturur; bu aktif bağışıklıktır'),
@@ -531,7 +531,7 @@ it=[('Suçiçeği geçiren bir kişinin aynı virüse karşı uzun süre korunma
     ('Deri ve mukus, mikroorganizmaların vücuda girişini engelleyen özgül olmayan savunma engelleridir.',True,'deri ve mukus mikrop türü ayırt etmeden fiziksel ve kimyasal engel oluşturur'),
     ('İnterferonlar, virüs enfekte hücreler tarafından salgılanır ve komşu hücrelerin virüse karşı korunmasına yardımcı olur.',True,'interferonlar komşu hücrelerde virüs çoğalmasını engelleyen özgül olmayan savunma maddeleridir')]
 def sanc20(m,n): return f'Bu ifadeyi yanlış sanmış; oysa doğrudur: {n}.'
-r,g=tek(it,False,'D',sanc20)
+r,g=tek(it,False,'A',sanc20)
 Q('0020','bag','orta','düz','Doğal ve kazanılmış bağışıklık','Özgül olmayan savunma, aktif ve pasif bağışıklık kavramlarını doğru ve yanlış ifadeler içinde ayırt eder.','bağışıklık ifadeleri, olumsuz kök',
  'Hazır antikor geçişi (anne sütü, plasenta, serum) pasif bağışıklıktır: geçicidir ve bellek hücresi oluşturmaz.','Anneden geçen antikorların kalıcı bellek oluşturduğunu sanmak.',
  [A('Savunma türlerini hatırla','Deri, mukus ve interferon özgül olmayan; antikor ve bellek hücreleri özgül savunmadandır. Vücudun kendi ürettiği antikor aktif, hazır alınan antikor pasif bağışıklıktır.','özgül olmayan: deri, mukus, interferon · aktif: kendi üretimi · pasif: hazır antikor'),
@@ -540,7 +540,7 @@ Q('0020','bag','orta','düz','Doğal ve kazanılmış bağışıklık','Özgül 
  metin='Vücudun savunması, mikroorganizmaların vücuda girişini engelleyen engellerden başlayarak antikor ve bellek hücrelerinin görev aldığı özgül yanıta kadar uzanan basamaklardan oluşur. Bağışıklık kazanma yolları aktif ya da pasif olabilir.\nBuna göre, bu savunma basamakları ve bağışıklık türleriyle ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',ip=['Antikorların kişinin kendi hücrelerince mi üretildiğini, yoksa hazır mı geçtiğini ayırt et.'],
  bilgi=[B('Bağışıklık türleri','Aktif: vücut antikor ve bellek hücresi üretir · Pasif: hazır antikor alınır, bellek oluşmaz, koruma geçicidir · Doğal ve yapay olabilir')],
- puf='Anne sütü, plasenta ve serum pasiftir; hastalık geçirmek ve aşı aktiftir.')
+ puf='Antikorun kaynağını (kendi ürettiği mi, hazır mı) sorgula.')
 
 # ======================= yaz =======================
 assert len(P.ANA)==20,len(P.ANA)

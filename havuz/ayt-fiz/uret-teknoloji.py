@@ -44,7 +44,9 @@ def onc(truth,why,pos):
     sira=sorted(sec+[dogru],key=SIR.index); assert sira.index(dogru)==pos
     return dict(dogru=dogru,sira=sira,yan=yan)
 LZ=B('Lazer ışığı','uyarılmış emisyonla oluşur; fotonlar aynı frekanslı (tek renkli), aynı fazlı (eş fazlı) ve aynı doğrultuludur; demet çok az dağılır. Atom E₂ → E₁ geçişinde E = E₂ − E₁ enerjili foton yayar. Örnek: 3 eV’luk iki düzey arası geçişte 3 eV’luk foton çıkar')
-FE=B('Foton enerjisi','E = h × f = h × c ÷ λ. h × c = 1240 eV·nm alınırsa λ(nm) = 1240 ÷ E(eV) olur. Örnek: E = 4 eV ise λ = 310 nm')
+FE=B('Foton enerjisi','E = h × f = h × c ÷ λ. h × c = 1240 eV·nm alınırsa λ(nm) = 1240 ÷ E(eV) olur. Örnek: E = 5 eV ise λ = 248 nm')
+LE=B('LED’de foton enerjisi','LED’in yaydığı fotonun enerjisi yaklaşık olarak yarı iletkenin yasak bant aralığına eşittir; E büyüdükçe dalga boyu kısalır. h × c = 1240 eV·nm ile λ = 1240 ÷ E. Örnek: E = 2,48 eV ise λ = 500 nm')
+GR3=B('Görüntüleme cihazlarında ışınım','X ışınları ve gama ışınları iyonlaştırıcıdır; yüksek enerjili elektromanyetik dalgalardır. Gama fotonları çekirdek olaylarından ya da parçacıkların yok olmasından çıkar. Örnek: ultrason cihazı elektromanyetik dalga değil, ses dalgası kullanır')
 GRN=B('Görüntüleme yöntemleri','röntgen ve bilgisayarlı tomografi (BT) X ışınlarıyla, MR güçlü manyetik alan ve radyo dalgalarıyla, PET hastaya verilen radyoaktif izleyicinin yaydığı pozitronun elektronla yok olurken oluşturduğu gama fotonlarıyla görüntü verir. X ışını ve gama ışını iyonlaştırıcıdır; MR’da iyonlaştırıcı ışınım yoktur')
 YI=B('Yarı iletkenler','silisyum ve germanyum gibi son yörüngesinde 4 elektron bulunan maddelerdir. Katkı ile n tipi (serbest elektron fazla) ya da p tipi (deşik fazla) elde edilir. Diyot p–n birleşimidir; p ucu üretecin (+) kutbuna bağlıysa akım geçirir, ters bağlıysa geçirmez. Yarı iletkenin direnci sıcaklık artınca azalır')
 DY=B('Diyot ve LED','ideal diyot ileri yönde dirençsiz iletir, ters yönde hiç iletmez; sembolde üçgenin gösterdiği yön akımın geçebildiği yöndür. LED ışık yayan diyottur; ileri gerilim düşümü Vd olan LED’le seri direnç üzerindeki gerilim V − Vd’dir')
@@ -62,7 +64,7 @@ q('0001',tipId='te-lazer',tip=TIPLER['te-lazer'],z='kolay',alt='Lazer',kaz='Laze
  ad=[A('I. yargı','Lazerde uyarılmış düzeydeki atomlar gelen fotonla aynı özellikte foton yayar; kendiliğinden yayınlama lazeri oluşturmaz.','Uyarılmış emisyon → I yanlış'),
      A('II. yargı','Uyarılmış emisyonla çıkan fotonlar gelen fotonla aynı fazlı ve aynı doğrultudadır.','Eş fazlı → II doğru'),
      A('III. yargı','Lazer demeti paralele yakındır ve çok az dağılır; geniş açıyla dağılan sıradan lambadır.','III yanlış')],
- puf='Lazer = uyarılmış emisyon + eş faz + tek renk + paralel demet.',
+ puf='Lazer ışığını sıradan lambanın ışığıyla her yönden karşılaştır.',
  **onc([False,True,False],['lazer kendiliğinden yayınlamayla değil, uyarılmış emisyonla oluşur','uyarılmış emisyonla çıkan fotonlar aynı fazlıdır','lazer demeti çok az dağılır, geniş açıyla yayılmaz'],0))
 # ===== 02 kolay · enerji düzeyleri
 E1,E2,E3=Fr(0),Fr(2),Fr(5,2); HC=1240
@@ -93,11 +95,11 @@ q('0003',tipId='te-goruntu',tip=TIPLER['te-goruntu'],z='kolay',alt='Görüntüle
  metin='Bir hastanede kullanılan üç görüntüleme cihazı ile her cihazın görüntü elde etmede yararlandığı ışınım aşağıdaki tabloda eşleştirilmiştir.\nBuna göre tablodaki I, II ve III numaralı eşleştirmelerden hangileri doğrudur?',
  sekil=SK,istenen='Doğru eşleştirmeler.',
  ip=['Her cihazın görüntüyü hangi fiziksel olaydan elde ettiğini ayrı ayrı düşün.'],
- bilgi=[GRN],
+ bilgi=[GR3],
  ad=[A('Röntgen','Röntgen cihazı, dokularda farklı soğurulan X ışınlarıyla görüntü verir.','I: X ışını → doğru'),
      A('MR','MR güçlü manyetik alan ve radyo dalgası kullanır; radyoaktif izleyici gerekmez.','II: gama ışını → yanlış'),
      A('PET','PET’te pozitron ile elektron yok olurken zıt yönlü gama fotonları çıkar.','III: gama fotonu → doğru')],
- puf='Röntgen: X ışını · MR: manyetik alan ve radyo dalgası · PET: yok olma gamaları.',
+ puf='Cihazın görüntüyü hangi fiziksel olaydan aldığına bak.',
  **onc([True,False,True],['röntgen X ışınlarıyla görüntü verir','MR radyoaktif izleyicinin gamasıyla değil, manyetik alan ve radyo dalgalarıyla çalışır','PET pozitron–elektron yok olmasından çıkan gamaları kullanır'],4))
 # ===== 04 zor · diyotlu paralel kollar
 card(4,'Diyot yönü ve kol akımları','İdeal diyot yalnız ileri yönde iletir; ileten kolların akımları lamba direncinden hesaplanır ve toplanır.','Ters bağlı diyotlu kolu da ileten saymak ya da seri iki lambayı tek lamba gibi hesaplamak.','zor','şekilli',5,'te-yari','dört kollu diyotlu devrede pil akımı')
@@ -143,7 +145,7 @@ q('0005',tipId='te-super',tip=TIPLER['te-super'],z='orta',alt='Süper İletkenli
  ad=[A('I. yargı','30 K’de K telinin direnci sıfırdır; ısı gücü i² × R ile bulunur.','R = 0 → P = 0 → I doğru'),
      A('II. yargı','70 K’de K eğrisi yaklaşık 4,5 Ω, L eğrisi yaklaşık 3,1 Ω’dur.','R_K > R_L → II doğru'),
      A('III. yargı','L eğrisi hiçbir sıcaklıkta sıfıra inmez.','L süper iletken değil → III doğru')],
- puf='Grafikte direnci sıfır olan bölge süper iletken haldir; sıfıra inmeyen eğri normal iletkendir.',
+ puf='Her yargıdaki sıcaklıkta iki eğriyi ayrı ayrı oku.',
  **onc([True,True,True],['K telinin direnci 30 K’de sıfırdır ve ısı oluşmaz','70 K’de K telinin direnci L telinden büyüktür','L telinin direnci hiçbir sıcaklıkta sıfır olmaz'],4))
 # ===== 06 orta · güneş pili şeması
 o=['\\draw[thick] (0,1.3) rectangle (4,2.0); \\draw[thick] (0,.6) rectangle (4,1.3);',N(2,1.65,'N tipi yarı iletken'),N(2,.95,'P tipi yarı iletken'),
@@ -161,7 +163,7 @@ q('0006',tipId='te-gunes',tip=TIPLER['te-gunes'],z='orta',alt='Güneş Pili',kaz
  ad=[A('I. yargı','Güneş pili ışık enerjisini doğrudan elektrik enerjisine dönüştürür.','I yanlış'),
      A('II. yargı','Foton yeterli enerjiliyse yarı iletkende elektron–deşik çifti oluşur.','II doğru'),
      A('III. yargı','Şiddet artınca birim zamanda yutulan foton sayısı artar.','akım artar → III doğru')],
- puf='Güneş pili: foton → elektron–deşik çifti → akım; şiddet arttıkça akım artar.',
+ puf='Pilin dönüştürdüğü enerji türünü ve fotonun yarı iletkendeki etkisini ayır.',
  **onc([False,True,True],['pil ışık enerjisini doğrudan elektrik enerjisine dönüştürür','fotonlar elektron–deşik çifti oluşturur','şiddet arttıkça yutulan foton sayısı ve akım artar'],4))
 # ===== 07 orta · LED tablo
 Eg={'K':Fr(31,20),'L':Fr(2),'M':Fr(31,10)}; lm={k:Fr(1240)/v for k,v in Eg.items()}
@@ -174,27 +176,27 @@ q('0007',tipId='te-led',tip=TIPLER['te-led'],z='orta',alt='LED',kaz='Yasak bant 
   (800,'Yalnız K LED’inin dalga boyunu hesaplayıp L ile farkını almayı unutmuş.','dikkat'),(1420,'Dalga boylarının farkı yerine toplamını almış: 800 + 620 = 1420 nm.','islem')],
  istenen='K ve L LED’lerinin ışık dalga boyları farkı (nm).',
  ip=['İki LED için de foton enerjisinden dalga boyunu ayrı ayrı bul, sonra farkı al.'],
- bilgi=[DY,FE],
+ bilgi=[LE],
  ad=[A('K LED’i','Foton enerjisi bant aralığına eşittir.','λ_K = 1240 ÷ 1,55 = 800 nm'),
      A('L LED’i','Aynı bağıntı L için uygulanır.','λ_L = 1240 ÷ 2,0 = 620 nm'),
      A('Fark','İstenen K’nin L’den fazlalığıdır.','800 − 620 = 180 nm')],
  puf='LED’de bant aralığı büyüdükçe foton enerjisi artar, dalga boyu kısalır.')
-# ===== 08 orta · LED + seri direnç
-Vs,Vd,Ia=6,2,Fr(20,1000); Rr=(Vs-Vd)/Ia
-assert Rr==200 and Fr(Vd)/Ia==100 and Fr(Vs)/Ia==300 and Fr(Vs+Vd)/Ia==400 and (Vs-Vd)*20==80
-o=['\\draw (0,3) to[battery1,l=$6$ V] (0,0);',N(-.45,2.6,'$+$'),N(-.45,.4,'$-$'),'\\draw (0,3) -- (1.2,3) to[R,l=$R$] (3.4,3) -- (4.4,3);','\\draw (4.4,3) to[leD,l=LED] (4.4,0);','\\draw (4.4,0) -- (0,0);']
+# ===== 08 orta · iki LED + seri direnç
+Vs,Vd,Ia=9,2,Fr(20,1000); Rr=(Vs-2*Vd)/Ia
+assert Rr==250 and Fr(Vd)/Ia==100 and Fr(2*Vd)/Ia==200 and (Vs-Vd)/Ia==350 and Fr(Vs)/Ia==450
+o=['\\draw (0,3) to[battery1,l=$9$ V] (0,0);',N(-.45,2.6,'$+$'),N(-.45,.4,'$-$'),'\\draw (0,3) -- (1.2,3) to[R,l=$R$] (3.4,3) -- (4.4,3);','\\draw (4.4,3) to[leD,l=LED$_1$] (4.4,1.5) to[leD,l=LED$_2$] (4.4,0);','\\draw (4.4,0) -- (0,0);']
 SK=tikz(o,CHEAD)
-card(8,'LED’e seri direnç','LED üzerinde ileri gerilim düşümü kadar gerilim düşer; kalanı seri dirence düşer.','Direnç hesabında LED gerilimini hesaba katmamak ya da eklemek.','orta','şekilli',3,'te-led','LED akımına göre seri direnç')
-q('0008',tipId='te-led',tip=TIPLER['te-led'],z='orta',alt='LED',kaz='LED’in ileri gerilim düşümünü kullanarak seri direnç değerini hesaplar.',kalip='şekilli',
- metin='Şekildeki devrede 6 V’luk üretecin iç direnci ihmal edilmiştir. LED ileri yönde çalışırken uçları arasında 2 V’luk sabit gerilim düşmekte ve LED’den 20 mA akım geçmektedir.\nBuna göre, R direnci kaç Ω’dur?',
- sekil=SK,dogru=200,yan=[(80,'Gerilim farkını (4 V) akımla çarpmış: 4 × 20 = 80.','islem'),(100,'Yalnız LED’in gerilimini (2 V) akıma bölmüş.','dikkat'),(300,'Üretecin gerilimini LED gerilimini hesaba katmadan akıma bölmüş: 6 ÷ 0,02 = 300 Ω.','dikkat'),(400,'LED gerilimini üreteç gerilimine eklemiş: (6 + 2) ÷ 0,02 = 400 Ω.','bilgi')],
+card(8,'Seri LED’lere seri direnç','LED’ler üzerinde ileri gerilim düşümü kadar gerilim düşer; kalan gerilim seri dirence düşer.','LED sayısını ya da gerilim düşümünü hesaba katmamak.','orta','şekilli',4,'te-led','iki LED ve direnç seri')
+q('0008',tipId='te-led',tip=TIPLER['te-led'],z='orta',alt='LED',kaz='Seri bağlı LED’lerin ileri gerilim düşümlerini kullanarak seri direnç değerini hesaplar.',kalip='şekilli',
+ metin='Şekildeki devrede 9 V’luk üretecin iç direnci ihmal edilmiştir. Özdeş LED₁ ve LED₂ ileri yönde çalışırken her birinin uçları arasında 2 V’luk sabit gerilim düşmekte ve devreden 20 mA akım geçmektedir.\nBuna göre, R direnci kaç Ω’dur?',
+ sekil=SK,dogru=250,yan=[(100,'Yalnız bir LED’in gerilimini (2 V) akıma bölmüş: 2 ÷ 0,02 = 100 Ω.','dikkat'),(200,'İki LED’in toplam gerilimini (4 V) akıma bölmüş: 4 ÷ 0,02 = 200 Ω.','dikkat'),(350,'Yalnız bir LED’in gerilimini düşmüş: (9 − 2) ÷ 0,02 = 350 Ω.','bilgi'),(450,'LED gerilimlerini hesaba katmadan üreteç gerilimini akıma bölmüş: 9 ÷ 0,02 = 450 Ω.','bilgi')],
  istenen='R direnci (Ω).',
- ip=['Seri devrede üreteç gerilimi LED ile direnç arasında paylaşılır; direnç üzerindeki gerilimi bul.'],
+ ip=['Seri devrede üreteç gerilimi dirençle iki LED arasında paylaşılır; direnç üzerindeki gerilimi bul.'],
  bilgi=[DY],
- ad=[A('Direnç gerilimi','Üreteç gerilimi LED ve dirençte paylaşılır.','V_R = 6 − 2 = 4 V'),
-     A('Akım birimi','mA, A’e çevrilir.','20 mA = 0,02 A'),
-     A('Ohm yasası','Seri devrede akım ortaktır.','R = 4 ÷ 0,02 = 200 Ω')],
- puf='LED’li devrede direnç, üreteç gerilimiyle LED gerilimi farkı üzerinden hesaplanır.')
+ ad=[A('LED gerilimleri','İki LED seri bağlıdır; gerilim düşümleri toplanır.','V_LED = 2 + 2 = 4 V'),
+     A('Direnç gerilimi','Üreteç gerilimi LED’ler ve dirençte paylaşılır.','V_R = 9 − 4 = 5 V'),
+     A('Ohm yasası','Seri devrede akım ortaktır; 20 mA = 0,02 A.','R = 5 ÷ 0,02 = 250 Ω')],
+ puf='Seri elemanların gerilim düşümleri toplamı üreteç gerilimine eşittir.')
 # ===== 09 orta · fiber optik tam yansıma öncüllü
 n1,n2=Fr(3,2),Fr(6,5); th=60
 s60=sqrt(3)/2
@@ -214,7 +216,7 @@ q('0009',tipId='te-fiber',tip=TIPLER['te-fiber'],z='orta',alt='Fiber Optik',kaz=
  ad=[A('I. yargı','Kritik açının sinüsü indis oranıdır.','sinθ_c = 1,2 ÷ 1,5 = 0,8 < 0,87 → tam yansıma → I doğru'),
      A('II. yargı','Yeni oran: 1,4 ÷ 1,5 ≈ 0,93.','0,87 < 0,93 → ışın kılıfa geçer → II yanlış'),
      A('III. yargı','Hız v = c ÷ n olduğundan indisi büyük ortamda hız küçüktür.','v_çekirdek < v_kılıf → III yanlış')],
- puf='Tam yansıma için sin(gelme açısı) > n_kılıf ÷ n_çekirdek olmalıdır; kılıfın indisi büyüdükçe koşul zorlaşır.',
+ puf='Tam yansıma koşulunu indis oranıyla kur.',
  **onc([True,False,False],['gelme açısının sinüsü (0,87) kritik açının sinüsünden (0,8) büyüktür','kılıfın indisi 1,4 olunca kritik açının sinüsü 0,93 olur ve ışın kılıfa geçer','ışık indisi büyük ortamda daha yavaş yayılır; çekirdekte hız daha küçüktür'],0))
 # ===== 10 zor · fiber optik giriş açısı
 nf=Fr(5,4); sc_=1/nf; cth=sqrt(1-float(sc_)**2); sin_max=nf*Fr(3,5)
@@ -254,7 +256,7 @@ q('0011',tipId='te-goruntu',tip=TIPLER['te-goruntu'],z='orta',alt='Röntgen',kaz
  metin='Şekildeki röntgen tüpünde katottan kopan elektronlar, 31 kV’luk gerilimle hızlandırılarak anoda çarpmakta ve X ışını oluşmaktadır. Elektronların katottan kopma anındaki kinetik enerjisi ihmal edilecektir. Bir elektronun kinetik enerjisinin tamamı tek bir X ışını fotonuna dönüştüğünde en kısa dalga boylu foton elde edilir. h × c = 1240 eV·nm’dir.\nBuna göre, tüpten çıkan X ışınlarının en kısa dalga boyu kaç nm’dir?',
  sekil=SK,dogru=Fr(4,100),yan=[(Fr(2,100),'Elektronun enerjisini iki katı (62 keV) almış.','bilgi'),(Fr(8,100),'Enerjinin yarısının (15,5 keV) fotona gittiğini düşünmüş.','bilgi'),(Fr(4,10),'31 kV’u 3100 V almış; ondalık kaydırmayı yanlış yapmış.','islem'),(40,'31 kV’u 31 V yani 31 eV almış; kilo çevirmesini unutmuş.','islem')],
  istenen='En kısa dalga boylu X ışınının dalga boyu (nm).',
- ip=['Elektronun anoda varırken kazandığı enerjiyi eV cinsinden yaz; bu enerji foton enerjisinin üst sınırıdır.'],
+ ip=['Elektronun anoda varırken kazandığı enerjiyi eV cinsinden yaz.'],
  bilgi=[FE,GRN],
  ad=[A('Elektron enerjisi','Elektron 31 kV’luk gerilimle hızlanır.','E = e × V = 31 000 eV'),
      A('En kısa dalga boyu','Enerjinin tamamı tek fotona gidince foton enerjisi en büyük olur.','λ_min = 1240 ÷ 31 000'),
@@ -277,28 +279,29 @@ q('0012',tipId='te-goruntu',tip=TIPLER['te-goruntu'],z='zor',alt='PET',kaz='PET�
  ad=[A('Yol farkı','Fotonlar ışık hızıyla gider; zaman farkı yol farkını verir.','Δs = c × Δt = 3 × 10⁸ × 0,5 × 10⁻⁹ = 0,15 m = 15 cm'),
      A('Geometri','E merkezden x kadar D₂ yönündeyse D₁’e olan yol D₂’ye olandan 2x fazladır.','Δs = (R + x) − (R − x) = 2x'),
      A('Uzaklık','Yol farkı iki x’e eşitlenir.','x = 15 ÷ 2 = 7,5 cm')],
- puf='PET’te iki foton zıt yöndedir: merkezden x kayma, yol farkında 2x olarak görünür.')
+ puf='İki fotonun yol farkını E’nin konumuyla ilişkilendir.')
 # ===== 13 orta · MR grafiği
 gB=Fr(3,2); gf=63; k=Fr(gf)/gB; assert k==42 and 3*k==126 and Fr(126)/gf==2 and 126-gf==63 and 126*Fr(3,2)==189
-gx=['\\begin{axis}[width=6.6cm,height=5.2cm,xmin=0,xmax=3.5,ymin=0,ymax=160,xtick distance=.5,ytick distance=20,grid=both,major grid style={gray!45,thin},tick label style={font=\\scriptsize},axis lines=left,xlabel={$B$ (T)},ylabel={$f$ (MHz)},xlabel style={font=\\small},ylabel style={font=\\small}]',
- f'\\addplot[thick,vurgu] coordinates {{(0,0) (3.5,{float(k*Fr(7,2))})}};','\\addplot[only marks,mark=*,mark size=2pt] coordinates {(1.5,63)};','\\node[font=\\scriptsize,anchor=south east] at (axis cs:1.45,66) {K};','\\end{axis}']
+gx=['\\begin{axis}[width=6.6cm,height=5.2cm,xmin=0,xmax=2,ymin=0,ymax=90,xtick distance=.5,ytick distance=10,tick label style={font=\\scriptsize},axis lines=left,xlabel={$B$ (T)},ylabel={$f$ (MHz)},xlabel style={font=\\small},ylabel style={font=\\small}]',
+ f'\\addplot[thick,vurgu] coordinates {{(0,0) (2,{float(k*2)})}};','\\addplot[only marks,mark=*,mark size=2pt] coordinates {(1.5,63)};','\\node[font=\\scriptsize,anchor=south east] at (axis cs:1.45,66) {K};','\\end{axis}']
 SK=tikz(gx)
 card(13,'MR’da rezonans frekansı','MR’da hidrojen çekirdeklerinin rezonans frekansı manyetik alanla doğru orantılıdır.','Orantıyı kurmadan oranı ya da farkı doğrudan cevap saymak.','orta','grafik',3,'te-goruntu','f–B grafiğinden alan bulma')
 q('0013',tipId='te-goruntu',tip=TIPLER['te-goruntu'],z='orta',alt='MR',kaz='MR cihazında rezonans frekansı ile manyetik alanın doğru orantılı değişimini grafikten yorumlar.',kalip='grafik',
- metin='Bir MR cihazında hidrojen çekirdeklerinin rezonans frekansının, cihazın oluşturduğu manyetik alan şiddetiyle değişimi grafikte verilmiştir. Grafikteki K noktası, 1,5 T’lık alandaki ölçümü göstermektedir.\nBuna göre, rezonans frekansının 126 MHz olması için manyetik alan şiddeti kaç T olmalıdır?',
+ metin='Bir MR cihazında hidrojen çekirdeklerinin rezonans frekansının, cihazın oluşturduğu manyetik alan şiddetiyle değişimi grafikte verilmiştir. Grafikteki K noktası, 1,5 T’lık alandaki ölçümü göstermektedir; ilişki grafiğin çizilmediği değerlerde de aynen sürmektedir.\nBuna göre, rezonans frekansının 126 MHz olması için manyetik alan şiddeti kaç T olmalıdır?',
  sekil=SK,dogru=3,yan=[(2,'Frekansların oranını (126 ÷ 63 = 2) doğrudan alan şiddeti sanmış.','dikkat'),(63,'Frekanslar farkını (126 − 63 = 63) alan şiddeti olarak yazmış.','dikkat'),(126,'Frekansın sayısal değerini alan şiddeti olarak yazmış.','dikkat'),(189,'126 değerini 1,5 ile çarpmış; doğru orantı yerine ters işlem yapmış.','islem')],
  istenen='Rezonans için gerekli manyetik alan şiddeti (T).',
- ip=['Grafik doğrusal ve orijinden geçiyor; K noktasından f ÷ B oranını bul.'],
+ ip=['Grafiğin biçiminden iki nicelik arasındaki ilişkiyi belirle; K noktasındaki değerleri kullan.'],
  bilgi=[GRN],
- ad=[A('Orantı sabiti','Doğru orijinden geçtiği için f ÷ B sabittir.','f ÷ B = 63 ÷ 1,5 = 42 MHz/T'),
+ ad=[A('Orantı sabiti','Doğru orijinden geçtiği için f ÷ B sabittir; K noktasından okunur.','f ÷ B = 63 ÷ 1,5 = 42 MHz/T'),
      A('Alanı bul','İstenen frekansı sabite böl.','B = 126 ÷ 42'),
      A('Sonuç','Bölme yapılır.','B = 3 T')],
- puf='Orijinden geçen doğru grafiği doğru orantı demektir: bir noktadan sabit oranı bul, diğer değeri o oranla hesapla.')
+ puf='Grafik, çizili aralığın dışındaki bir değer için de ilişkiyi kurmanı sağlar.')
 # ===== 14 orta · Meissner öncüllü
-o=['\\fill[gray!35] (-2.2,0) rectangle (2.2,.5); \\draw[thick] (-2.2,0) rectangle (2.2,.5);',N(0,.25,'süper iletken disk ($T<T_c$)','font=\\scriptsize')]
-for rx in (1.3,1.9): o.append(f'\\draw[vurgu] (0,1.55) ellipse ({rx} and .85);')
+o=['\\fill[gray!35] (-2.4,0) rectangle (2.4,.5); \\draw[thick] (-2.4,0) rectangle (2.4,.5);',N(0,.25,'süper iletken disk ($T<T_c$)','font=\\scriptsize')]
+for cy in (2.5,3.4): o.append(f'\\draw[vurgu,-{{Stealth[length=1.9mm,width=1.7mm]}}] (-.6,1.6) .. controls (-2.4,{cy}) and (2.4,{cy}) .. (.6,1.6);')
+for cx in (.75,): o.append('\\draw[vurgu,-{Stealth[length=1.9mm,width=1.7mm]}] (-.6,1.4) .. controls (-1.5,.75) and (1.5,.75) .. (.6,1.4);')
 o.append('\\draw[thick,fill=white] (-.6,1.3) rectangle (0,1.8); \\draw[thick,fill=gray!20] (0,1.3) rectangle (.6,1.8);'); o.append(N(-.3,1.55,'N','font=\\scriptsize')); o.append(N(.3,1.55,'S','font=\\scriptsize'))
-o.append(N(2.3,1.55,'mıknatıs','right,font=\\scriptsize')); o.append(N(0,-.4,'sıvı azotla soğutulmuş','font=\\scriptsize'))
+o.append(N(2.9,1.55,'mıknatıs','right,font=\\scriptsize')); o.append(N(0,-.4,'sıvı azotla soğutulmuş','font=\\scriptsize'))
 SK=tikz(o)
 card(14,'Süper iletken üzerinde mıknatıs','Süper iletken manyetik alan çizgilerini içine almaz; mıknatıs ile disk arasındaki kuvvet itmedir ve T_c altında direnç sıfırdır.','Kuvvetin çekim olduğunu sanmak; Meissner olayını dirençle karıştırmak.','orta','öncüllü',3,'te-super','mıknatısın süper iletken diskte havada kalması')
 q('0014',tipId='te-super',tip=TIPLER['te-super'],z='orta',alt='Süper İletkenlik',kaz='Süper iletken üzerinde mıknatısın havada kalmasını Meissner olayı ve sıfır direnç ile açıklar.',kalip='öncüllü',
@@ -309,7 +312,7 @@ q('0014',tipId='te-super',tip=TIPLER['te-super'],z='orta',alt='Süper İletkenli
  ad=[A('I. yargı','Mıknatıs havada kaldığına göre disk onu ağırlığına zıt yönde, yani yukarı doğru iter.','itme → I yanlış'),
      A('II. yargı','Süper iletken alan çizgilerini içine almaz (Meissner olayı).','II doğru'),
      A('III. yargı','Kritik sıcaklığın altında direnç sıfırdır.','III doğru')],
- puf='Süper iletken = sıfır direnç + alanı dışlama; mıknatıs bu yüzden itilir ve havada durur.',
+ puf='Disk ile mıknatısın ağırlık dengesini ve kritik sıcaklık altındaki özellikleri düşün.',
  **onc([False,True,True],['disk mıknatısı itmektedir; kuvvet çekim kuvveti değildir','alan çizgileri süper iletken içine girmez','kritik sıcaklığın altında direnç sıfırdır'],4))
 # ===== 15 zor · nano küp
 Lc=10**-2; ac=10*10**-9
@@ -332,28 +335,28 @@ q('0015',tipId='te-nano',tip=TIPLER['te-nano'],z='zor',alt='Nanoteknoloji',kaz='
      A('Küp sayısı','Hacim eşitliği: n × a³ = L_K³.','n = (10⁶)³ = 10¹⁸'),
      A('Toplam alan','Her küçük küpün alanı 6a²’dir.','A_toplam = 10¹⁸ × 6a²'),
      A('Oran','K’nin alanı 6L_K²’dir.','A_toplam ÷ A_K = 10¹⁸ × (a ÷ L_K)² = 10¹⁸ × 10⁻¹² = 10⁶')],
- puf='Hacim sabitken kenar kaç kat küçülürse toplam yüzey alanı o kadar kat büyür.')
+ puf='Küp sayısını hacimden, toplam alanı tek tek alanlardan bul.')
 # ===== 16 orta · lazer düzeneği
 o=['\\draw[thick,fill=gray!15] (1,0) rectangle (4,1.2);',N(2.5,.6,'aktif ortam','font=\\scriptsize'),'\\draw[line width=3pt] (.9,-.2) -- (.9,1.4);','\\draw[line width=3pt,gray] (4.1,-.2) -- (4.1,1.4);',
    N(.9,1.7,'M$_1$'),N(4.1,1.7,'M$_2$')]
 o+=[AR((1.8,2.2),(1.8,1.3),'thick'),AR((3.2,2.2),(3.2,1.3),'thick'),N(2.5,2.45,'pompa (enerji kaynağı)','font=\\scriptsize'),AR((4.3,.6),(5.6,.6),'very thick,vurgu'),N(5.0,.95,'lazer demeti','font=\\scriptsize')]
 SK=tikz(o)
 card(16,'Lazer düzeneğinde ışığın kuvvetlenmesi','Pompa atomları uyarır; aynalar arasında gidip gelen fotonlar uyarılmış emisyonu tetikleyerek ışığı kuvvetlendirir.','Pompanın atomları taban düzeye indirdiğini ya da lazerin kendiliğinden yayılmayla oluştuğunu sanmak.','orta','şekilli',3,'te-lazer','lazer düzeneğinin çalışma ilkesi')
-dg='Aynalar arasında gidip gelen fotonlar, uyarılmış atomların aynı özellikte foton yaymasını sağlar ve ışık şiddeti artar.'
+dg='Aynalar, fotonların aktif ortamdan defalarca geçmesini sağlar.'
 q('0016',tipId='te-lazer',tip=TIPLER['te-lazer'],z='orta',alt='Lazer',kaz='Lazer düzeneğinin bölümlerinin işlevini ve ışığın kuvvetlenmesini açıklar.',kalip='şekilli',
  metin='Şekildeki basit lazer düzeneğinde aktif ortam, iki ayna arasına yerleştirilmiştir. M₁ aynası ışığın tamamını yansıtırken M₂ aynası ışığın bir bölümünü geçirir; pompa ise ortamdaki atomlara dışarıdan enerji verir.\nBuna göre, düzeneğin çalışmasıyla ilgili aşağıdakilerden hangisi doğrudur?',
- sekil=SK,dogru=dg,yan=[('Pompa, atomları taban düzeye indirerek foton yayılmasını sağlar.','Pompanın atomları taban düzeye indirdiğini sanmış; oysa pompa atomları uyarılmış düzeye çıkarır.','bilgi'),
-  ('Işığın dalga boyu aynalardan her yansımada artarak demet kuvvetlenir.','Kuvvetlenmeyi dalga boyunun artışına bağlamış; oysa dalga boyu değişmez, foton sayısı artar.','bilgi'),
-  ('Demetteki fotonların fazları rastgeledir ve demet geniş açıyla dağılır.','Lazer ışığını sıradan ışığa benzetmiş; oysa fotonlar aynı fazlı ve aynı doğrultudadır.','bilgi'),
-  ('Lazer ışığı, atomların kendiliğinden yayınlamasıyla oluşur.','Kendiliğinden yayınlamayı lazerin oluşum yolu sanmış; oysa lazer uyarılmış emisyonla oluşur.','bilgi')],
- sira=['Pompa, atomları taban düzeye indirerek foton yayılmasını sağlar.','Işığın dalga boyu aynalardan her yansımada artarak demet kuvvetlenir.','Demetteki fotonların fazları rastgeledir ve demet geniş açıyla dağılır.',dg,'Lazer ışığı, atomların kendiliğinden yayınlamasıyla oluşur.'],
+ sekil=SK,dogru=dg,yan=[('Aktif ortamdaki atomların çoğu taban düzeyde bulunmalıdır.','Ortamda taban düzeydeki atomların çok olması gerektiğini sanmış; oysa uyarılmış atomlar taban düzeydekilerden fazla olmalıdır.','bilgi'),
+  ('Işığın dalga boyu aynalardan her yansımada artar.','Yansımanın dalga boyunu değiştirdiğini sanmış; oysa yansımada dalga boyu değişmez.','bilgi'),
+  ('Demet, tam yansıtıcı olan M₁ aynasından dışarı çıkar.','Çıkış aynasını karıştırmış; tam yansıtıcı ayna ışığı geçirmez, demet M₂’den çıkar.','dikkat'),
+  ('Pompa, atomları taban düzeye indirerek foton yayılmasını sağlar.','Pompanın atomları taban düzeye indirdiğini sanmış; oysa pompa atomları uyarılmış düzeye çıkarır.','bilgi')],
+ sira=['Aktif ortamdaki atomların çoğu taban düzeyde bulunmalıdır.','Işığın dalga boyu aynalardan her yansımada artar.','Demet, tam yansıtıcı olan M₁ aynasından dışarı çıkar.',dg,'Pompa, atomları taban düzeye indirerek foton yayılmasını sağlar.'],
  istenen='Lazer düzeneği için doğru ifade.',
- ip=['Her seçenekte pompanın, aynaların ve uyarılmış emisyonun görevini ayrı ayrı sına.'],
+ ip=['Her seçenekte pompanın, aynaların ve atomların düzeylerinin görevini ayrı ayrı sına.'],
  bilgi=[LZ],
  ad=[A('Pompa','Pompa atomları uyarılmış düzeye çıkarır.','taban düzey → uyarılmış düzey'),
-     A('Aynalar','Fotonlar aktif ortamdan defalarca geçer ve uyarılmış emisyonu tetikler.','foton sayısı artar, dalga boyu değişmez'),
-     A('Seçenekler','Çıkan demet eş fazlı ve paraleldir; yalnız bir ifade bu işleyişe uyar.','Doğru ifade: gidip gelen fotonlar uyarılmış emisyonla ışığı kuvvetlendirir')],
- puf='Lazerde pompa uyarır, aynalar geri besleme yapar, uyarılmış emisyon ışığı kuvvetlendirir.')
+     A('Aynalar','Fotonlar aynalar arasında gidip gelerek ortamdan defalarca geçer ve uyarılmış emisyonu tetikler.','dalga boyu değişmez, foton sayısı artar'),
+     A('Seçenekler','M₁ ışığı geçirmez, demet M₂’den çıkar; yalnız bir ifade bu işleyişe uyar.','Doğru ifade: aynalar fotonların ortamdan defalarca geçmesini sağlar')],
+ puf='Pompanın, aynaların ve atomların düzeylerinin görevini ayır.')
 # ===== 17 orta · yarı iletken öncüllü
 card(17,'Katkılı yarı iletkenler','Beş değerlik elektronlu katkı n tipi, üç değerlik elektronlu katkı p tipi verir; yarı iletkende sıcaklık artınca direnç azalır.','p tipinde çoğunluk taşıyıcıyı elektron sanmak.','orta','öncüllü',3,'te-yari','n/p tipi ve sıcaklık etkisi yargıları')
 q('0017',tipId='te-yari',tip=TIPLER['te-yari'],z='orta',alt='Yarı İletkenler',kaz='Katkılı yarı iletkenlerin türlerini ve yarı iletkende direncin sıcaklıkla değişimini yargılar.',kalip='öncüllü',
@@ -364,43 +367,44 @@ q('0017',tipId='te-yari',tip=TIPLER['te-yari'],z='orta',alt='Yarı İletkenler',
  ad=[A('I. yargı','Beş değerlik elektronlu atomun fazla elektronu serbest kalır.','n tipi → I doğru'),
      A('II. yargı','p tipinde üç değerlik elektronlu katkı deşik oluşturur; çoğunluk taşıyıcı deşiklerdir.','II yanlış'),
      A('III. yargı','Sıcaklık artınca serbest yük sayısı artar, direnç azalır.','III doğru')],
- puf='n tipi: fazla elektron; p tipi: fazla deşik; yarı iletkenin direnci ısındıkça azalır.',
+ puf='Katkı atomunun değerlik elektronunu ve sıcaklığın serbest yük sayısına etkisini düşün.',
  **onc([True,False,True],['beş değerlik elektronlu katkı serbest elektron fazlalığı oluşturur','p tipinde çoğunluk yük taşıyıcıları serbest elektronlar değil deşiklerdir','sıcaklık artınca serbest yük sayısı artar ve direnç azalır'],3))
-# ===== 18 zor · lazer foton sayısı
-eV=Fr(16,10)*Fr(1,10**19); Eph=2*eV; Pw=Fr(32,10)*Fr(1,1000)
+# ===== 18 zor · lazer verimi ve foton sayısı
+eV=Fr(16,10)*Fr(1,10**19); Eph=2*eV; Pel=Fr(320,1000); Pw=Pel/100
 Nph=Pw/Eph
-assert lam(2)==620 and Nph==10**16 and Pw*1000/Eph==10**19 and Pw/1000/Eph==10**13 and Pw/eV==2*10**16 and Pw/(4*eV)==5*10**15
-card(18,'Lazerin birim zamandaki foton sayısı','N = P ÷ E_foton; foton enerjisi 1240 ÷ λ (eV) ile bulunup joule’e çevrilir.','mW–W dönüşümünü ve eV–J dönüşümünü karıştırmak.','zor','düz',4,'te-lazer','lazer gücü ve foton sayısı')
-q('0018',tipId='te-lazer',tip=TIPLER['te-lazer'],z='zor',alt='Lazer',kaz='Lazerin gücü ve dalga boyundan saniyede yaydığı foton sayısını hesaplar.',kalip='düz',
- metin='Dalga boyu 620 nm olan bir lazer işaretleyici, tek renkli ışığı 3,2 mW’lık sabit güçle yaymaktadır. Işığın tamamının lazer demeti olarak çıktığı kabul edilecektir. h × c = 1240 eV·nm ve 1 eV = 1,6 × 10⁻¹⁹ J’dir.\nBuna göre, lazerin 1 saniyede yaydığı foton sayısı kaçtır?',
- sekil=None,dogru='1 × 10¹⁶',yan=[('1 × 10¹³','Gücü 3,2 mW yerine 3,2 µW almış.','islem'),('5 × 10¹⁵','Foton enerjisini 4 eV bulmuş; dalga boyunu 310 nm gibi hesaba katmış.','islem'),('2 × 10¹⁶','Foton enerjisini 1 eV bulmuş.','islem'),('1 × 10¹⁹','Gücü 3,2 W almış; mW’ı W’a çevirmemiş.','islem')],
- sira=['1 × 10¹³','5 × 10¹⁵','1 × 10¹⁶','2 × 10¹⁶','1 × 10¹⁹'],
+assert lam(2)==620 and Pw==Fr(32,10)*Fr(1,1000) and Nph==10**16 and Pel/Eph==10**18 and Pel/100/100/Eph==10**14 and Pw/eV==2*10**16 and Pw/(4*eV)==5*10**15
+card(18,'Lazerin verimi ve foton sayısı','Işık gücü = verim × elektrik gücü; foton sayısı ışık gücünün foton enerjisine oranıdır.','Verimi hesaba katmamak; eV–J ve mW–W dönüşümlerini karıştırmak.','zor','düz',5,'te-lazer','lazer verimi, gücü ve foton sayısı')
+q('0018',tipId='te-lazer',tip=TIPLER['te-lazer'],z='zor',alt='Lazer',kaz='Lazerin elektrik gücü, verimi ve dalga boyundan saniyede yaydığı foton sayısını hesaplar.',kalip='düz',
+ metin='Dalga boyu 620 nm olan tek renkli bir lazer işaretleyici, 320 mW’lık elektrik gücüyle çalışmaktadır. Elektrik enerjisinin yalnızca %1’i lazer ışığına dönüşmektedir. h × c = 1240 eV·nm ve 1 eV = 1,6 × 10⁻¹⁹ J’dir.\nBuna göre, lazerin 1 saniyede yaydığı foton sayısı kaçtır?',
+ sekil=None,dogru='1 × 10¹⁶',yan=[('1 × 10¹⁴','Verimi iki kez uygulamış: elektrik gücünün %1’inin de %1’ini ışık gücü almış.','islem'),('5 × 10¹⁵','Foton enerjisini 4 eV (λ’yı 310 nm) bulmuş: 3,2 × 10⁻³ ÷ 6,4 × 10⁻¹⁹ = 5 × 10¹⁵.','islem'),('2 × 10¹⁶','Foton enerjisini 1 eV bulmuş: 3,2 × 10⁻³ ÷ 1,6 × 10⁻¹⁹ = 2 × 10¹⁶.','islem'),('1 × 10¹⁸','Verimi hesaba katmadan 0,32 W’lık elektrik gücünü foton enerjisine bölmüş.','dikkat')],
+ sira=['1 × 10¹⁴','5 × 10¹⁵','1 × 10¹⁶','2 × 10¹⁶','1 × 10¹⁸'],
  istenen='Lazerin 1 saniyede yaydığı foton sayısı.',
- ip=['Bir fotonun enerjisini joule cinsinden bul; saniyedeki enerji ile karşılaştır.'],
+ ip=['Önce ışık olarak çıkan gücü bul; sonra bir fotonun enerjisini joule cinsinden hesapla.'],
  bilgi=[FE],
- ad=[A('Foton enerjisi','Verilen h × c çarpımı kullanılır.','E = 1240 ÷ 620 = 2 eV'),
+ ad=[A('Işık gücü','Elektrik gücünün yalnız %1’i ışığa dönüşür.','P = 0,32 W × 0,01 = 3,2 × 10⁻³ W'),
+     A('Foton enerjisi','Verilen h × c çarpımı kullanılır.','E = 1240 ÷ 620 = 2 eV'),
      A('Joule’e çevir','1 eV = 1,6 × 10⁻¹⁹ J.','E = 3,2 × 10⁻¹⁹ J'),
-     A('Güç','mW, W’a çevrilir.','P = 3,2 × 10⁻³ W = 3,2 × 10⁻³ J/s'),
-     A('Foton sayısı','Saniyedeki enerji, foton enerjisine bölünür.','N = 3,2 × 10⁻³ ÷ 3,2 × 10⁻¹⁹ = 10¹⁶')],
- puf='Saniyedeki foton sayısı, ışınım gücünün bir fotonun enerjisine oranıdır; birimleri W ve J’de eşitle.')
-# ===== 19 orta · güneş pili hücreleri
-assert 6//Fr(1,2)==12 and Fr(4,2)==2 and 12*2==24 and 12+2==14 and 12*4==48
-card(19,'Güneş pili hücrelerinin bağlanması','Gerilim için hücreler seri, akım için paralel kol eklenir; toplam hücre sayısı kol sayısı ile kol başına hücre sayısının çarpımıdır.','Yalnız gerilim ya da yalnız akım koşulunu düşünmek; sayıları toplamak.','orta','düz',4,'te-gunes','hücrelerden panel oluşturma')
-q('0019',tipId='te-gunes',tip=TIPLER['te-gunes'],z='orta',alt='Güneş Pili',kaz='Özdeş güneş pili hücrelerini seri ve paralel bağlayarak istenen gerilim ve akımı sağlayan en az hücre sayısını bulur.',kalip='düz',
- metin='Her biri tam ışık altında 0,5 V gerilim ve en çok 2 A akım verebilen özdeş güneş pili hücreleri, bir panel oluşturmak için seri ve paralel bağlanacaktır. Panel, 6 V gerilimde 4 A akım çeken bir cihazı besleyecektir; hücrelerin iç dirençleri ve bağlantı kayıpları ihmal edilmektedir.\nBuna göre, panelde en az kaç hücre kullanılmalıdır?',
- sekil=None,dogru=24,yan=[(2,'Yalnızca akım koşulunu düşünüp 4 ÷ 2 = 2 hücre bulmuş.','dikkat'),(12,'Yalnızca gerilim koşulunu düşünüp 6 ÷ 0,5 = 12 hücre bulmuş.','dikkat'),(14,'Seri hücre sayısı ile paralel kol sayısını çarpmak yerine toplamış: 12 + 2 = 14.','islem'),(48,'Paralel kol sayısı olarak akım değerini (4) almış: 12 × 4 = 48.','islem')],
+     A('Foton sayısı','Saniyedeki ışık enerjisi, foton enerjisine bölünür.','N = 3,2 × 10⁻³ ÷ 3,2 × 10⁻¹⁹ = 10¹⁶')],
+ puf='Işık gücünü bulduktan sonra birimleri W ve J’de eşitle.')
+# ===== 19 orta · güneş pili hücreleri, ışık şiddeti
+assert 6//Fr(1,2)==12 and Fr(4,1)==4 and 12*2==24 and 12*4==48 and 24*4==96
+card(19,'Güneş pili hücrelerinin bağlanması','Gerilim için hücreler seri, akım için paralel kol eklenir; hücre akımı ışık şiddetiyle orantılıdır.','Işık şiddetinin değişmesini hesaba katmamak; yalnız tek koşulu sağlamak.','orta','düz',4,'te-gunes','hücrelerden panel, ışık şiddeti')
+q('0019',tipId='te-gunes',tip=TIPLER['te-gunes'],z='orta',alt='Güneş Pili',kaz='Özdeş güneş pili hücrelerinden, ışık şiddeti değişince de istenen gerilim ve akımı sağlayan en az hücre sayısını bulur.',kalip='düz',
+ metin='Her biri tam şiddetli ışık altında 0,5 V gerilim ve en çok 2 A akım verebilen özdeş güneş pili hücreleri seri ve paralel bağlanarak bir panel yapılacaktır. Hücrenin verebileceği en büyük akım ışık şiddetiyle doğru orantılıdır; gerilimi ise şiddetten bağımsızdır. Panel, tam şiddetin yarısı kadar şiddetli ışık altında 6 V gerilimde 4 A akım çeken bir cihazı besleyecektir. Hücrelerin iç dirençleri ve bağlantı kayıpları ihmal edilmektedir.\nBuna göre, panelde en az kaç hücre kullanılmalıdır?',
+ sekil=None,dogru=48,yan=[(4,'Yalnız akım koşulunu düşünüp 4 ÷ 1 = 4 hücre bulmuş.','dikkat'),(12,'Yalnız gerilim koşulunu düşünüp 6 ÷ 0,5 = 12 hücre bulmuş.','dikkat'),(24,'Işık şiddetinin yarıya indiğini unutup hücre akımını 2 A almış: 12 × 2 = 24.','dikkat'),(96,'Gerilimin de yarıya indiğini düşünüp seri hücre sayısını 24 almış: 24 × 4 = 96.','bilgi')],
  istenen='Gerekli en az hücre sayısı.',
- ip=['Gerilimi sağlayan seri kolu ve akımı sağlamak için gereken kol sayısını ayrı ayrı bul.'],
+ ip=['Düşük şiddette bir hücrenin verebileceği akımı ve gerilimini ayrı ayrı bul; cihazın iki koşulunu ayrı ayrı sağla.'],
  bilgi=[GP],
- ad=[A('Seri hücreler','Gerilimler seri bağlamada toplanır.','6 ÷ 0,5 = 12 hücre'),
-     A('Paralel kollar','Akımlar paralel kollarda toplanır; her kol en çok 2 A verir.','4 ÷ 2 = 2 kol'),
-     A('Toplam','Hücre sayısı kol sayısı ile kol başına hücre sayısının çarpımıdır.','12 × 2 = 24 hücre')],
- puf='Gerilim hücreleri seri ekleyerek, akım kolları paralel ekleyerek sağlanır; toplam sayı çarpımdır.')
+ ad=[A('Hücre değerleri','Yarı şiddette akım yarıya iner, gerilim değişmez.','V = 0,5 V ; i = 1 A'),
+     A('Seri hücreler','Gerilimler seri bağlamada toplanır.','6 ÷ 0,5 = 12 hücre'),
+     A('Paralel kollar','Akımlar paralel kollarda toplanır.','4 ÷ 1 = 4 kol'),
+     A('Toplam','Hücre sayısı kol sayısı ile kol başına hücre sayısının çarpımıdır.','12 × 4 = 48 hücre')],
+ puf='Gerilim ve akım koşullarını ayrı ayrı sağla.')
 # ===== 20 zor · süper iletken hat
 Rkm=Fr(1,2); Lh=8; Rh=2*Lh*Rkm; Ih=100; Ph=Ih**2*Rh/1000; Eh=Ph*3
 assert Rh==8 and Ph==80 and Eh==240 and Ih**2*Lh*Rkm/1000*3==120 and Ph==80 and Ih**2*Lh*Rkm/1000==40 and Ih**2*(2*Rh)/1000*3==480
 card(20,'Süper iletken hatla önlenen kayıp','Joule kaybı P = i²R; gidiş–dönüş iki tel olduğundan toplam direnç iki katıdır; enerji = güç × süre.','Dönüş telini unutmak ya da süreyi katmadan kW’ı kWh yazmak.','zor','düz',5,'te-super','iletim hattında önlenen Joule kaybı')
-q('0020',tipId='te-super',tip=TIPLER['te-super'],z='zor',alt='Süper İletkenlik',kaz='Süper iletken kablo kullanılınca önlenen Joule kaybını, hat direncinden ve süreden hesaplar.',kalip='düz',
+q('0020',tipId='te-super',tip=TIPLER['te-super'],z='orta',alt='Süper İletkenlik',kaz='Süper iletken kablo kullanılınca önlenen Joule kaybını, hat direncinden ve süreden hesaplar.',kalip='düz',
  metin='Bir tesisi besleyen 8 km uzunluğundaki bakır hat, gidiş ve dönüş olmak üzere iki telden oluşmaktadır; her telin direnci kilometre başına 0,5 Ω’dur. Hattan 3 saat boyunca sabit 100 A akım geçmektedir. Bu hat, aynı akımı taşıyan ve kritik sıcaklığın altında tutulan süper iletken bir kabloyla değiştiriliyor.\nBuna göre, 3 saatte hatta ısıya dönüşen ve süper iletken kabloyla önlenen enerji kaç kWh’tir?',
  sekil=None,dogru=240,yan=[(40,'Yalnız gidiş telini (4 Ω) hesaba katıp süreyi hesaba katmamış: 40 kW.','dikkat'),(80,'Gücü doğru bulmuş (80 kW) ama süre ile çarpmayı unutmuş.','dikkat'),(120,'Yalnız gidiş telinin direncini (4 Ω) alıp süreyle çarpmış: 40 × 3 = 120 kWh.','dikkat'),(480,'Gidiş–dönüş direncini bir kez daha ikiye katlayarak 16 Ω almış: 160 kW × 3 = 480 kWh.','islem')],
  istenen='Önlenen enerji (kWh).',
@@ -410,7 +414,7 @@ q('0020',tipId='te-super',tip=TIPLER['te-super'],z='zor',alt='Süper İletkenlik
      A('Isıya dönüşen güç','Joule ısınması i²R ile bulunur.','P = 100² × 8 = 80 000 W = 80 kW'),
      A('Enerji','Enerji güç ile süre çarpımıdır.','E = 80 × 3 = 240 kWh'),
      A('Süper iletken kablo','Kritik sıcaklığın altında R = 0 olduğundan bu enerji kaybı olmaz.','Önlenen enerji = 240 kWh')],
- puf='Süper iletkende P = i²R = 0’dır; önlenen kayıp, eski hattın i²R × süre değeridir.')
+ puf='Süper iletkende ısıya giden enerji sıfırdır; önceki durumda ne kadardı?')
 # ===== yaz
 for qq in P.ANA: qq['kardes']=None
 SC='/tmp/claude-0/-home-claude-zekacademy-app/cf3686d6-69fb-532a-907b-5b8d50f6cef4/scratchpad/tekn'

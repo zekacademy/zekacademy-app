@@ -171,7 +171,7 @@ q('0004','denge','AgCl doygun çözelti tanecik modeli',
  sekil=SK,z='orta',alt='Dengeyi Etkileyen Faktörler',kaz='Doygun çözeltideki dinamik dengeyi tanecik modeliyle yorumlar.',kalip='şekilli',
  istenen='Doğru olan yargılar.',ip=['Şekilde katı fazın varlığı, çözeltinin hangi durumda olduğunu söyler; katının derişiminin denge ifadesinde yer almadığını hatırla.'],
  bilgi=[B('Dinamik denge','Doygun çözeltide katıdan iyonlara geçiş ile iyonlardan katıya geçiş aynı hızda sürer. Örnek: PbSO₄(k) ⇌ Pb²⁺ + SO₄²⁻ dengesinde iki yöndeki hız eşittir')],
- puf='Katı varken doygunluk korunur: Kçç sabit, iyon derişimleri sabit.',**r)
+ puf='Katı varken çözeltinin doygun olup olmadığına bak.',**r)
 
 # ============ 05 · Kçç–sıcaklık grafiği · öncüllü · orta ============
 kartla('05','sicaklik','Kçç ve sıcaklık','Kçç yalnız sıcaklığa bağlıdır; sıcaklıkla artıyorsa çözünme endotermiktir.','Kçç artıyorsa tepkimeyi ekzotermik sanmak.','orta','öncüllü',3)
@@ -249,11 +249,11 @@ sK=Fr(1,10**5); sL=Ks/Fr(1,10); sM=Ks/Fr(2,10)
 assert sK**2==Ks and sL==E(1,-9) and sM==E(5,-10) and sK>sL>sM
 s_inv_L=Ks*Fr(1,10); s_inv_M=Ks*Fr(2,10)
 assert s_inv_M>s_inv_L and sK>s_inv_M
-r=tek_t(('K > L > M','CaCl₂ 0,1 M olduğundan M’de [Cl⁻] = 0,2 M’dir; L’de [Ag⁺] = 0,1 M olduğundan çözünürlükler K: 1 × 10⁻⁵, L: 1 × 10⁻⁹, M: 5 × 10⁻¹⁰ M bulunur'),
- [('K = L = M','Kçç sabit olduğundan çözünürlüğün de sabit kaldığını sanmış; oysa ortak iyon çözünürlüğü azaltır'),
-  ('K > L = M','CaCl₂’den 0,1 M Cl⁻ geldiğini düşünmüş; oysa 0,1 M CaCl₂ 0,2 M Cl⁻ verir, çözünürlük L’dekinden küçüktür'),
-  ('M > L > K','Ortak iyonun çözünürlüğü artırdığını düşünmüş; derişim arttıkça çözünürlük azalır'),
-  ('K > M > L','Çözünürlüğü, Kçç ile ortak iyon derişiminin çarpımı (Kçç · [ortak iyon]) olarak almış: M için 2 × 10⁻¹¹, L için 1 × 10⁻¹¹ bulmuş; oysa bölme gerekir')],4)
+r=dict(dogru='K > L > M',sira=['K = L = M','K > L = M','K > M > L','M > L > K','K > L > M'],yan=[
+ ('K = L = M','Kçç sabit olduğundan çözünürlüğün de her kapta aynı olacağını sanmış.','bilgi'),
+ ('K > L = M','CaCl₂ çözeltisinden gelen Cl⁻ derişimini 0,1 M alıp L ile M’nin eşit olduğunu düşünmüş; oysa 0,1 M CaCl₂ 0,2 M Cl⁻ verir.','dikkat'),
+ ('K > M > L','Çözünürlüğü Kçç ile ortak iyon derişiminin çarpımı sanmış: M için 2 × 10⁻¹¹, L için 1 × 10⁻¹¹ bulmuş.','islem'),
+ ('M > L > K','Ortak iyonun çözünürlüğü artırdığını sanıp sıralamayı ters kurmuş.','bilgi')])
 tx=[0,3.3,6.6]
 g=''
 for i,(x,nm,sol) in enumerate(zip(tx,'KLM',['saf su','0,1 M AgNO$_3$\\\\ \\scriptsize çözeltisi','0,1 M CaCl$_2$\\\\ \\scriptsize çözeltisi'])):
@@ -281,7 +281,7 @@ assert Kp(*Kn)<4 and Kp(*Lp)==4 and Kp(*Mn)>4
 d={'I':(False,'K noktasında [Ag⁺] · [Cl⁻] = 2 × 10⁻¹⁰, Kçç = 4 × 10⁻¹⁰’dan küçüktür; çözelti doymamıştır'),
    'II':(False,'L noktası eğri üzerindedir, iyon çarpımı Kçç’ye eşittir; çözeltide denge vardır ve iki yöndeki hız eşittir'),
    'III':(True,'M noktasında [Ag⁺] · [Cl⁻] = 9 × 10⁻¹⁰, Kçç = 4 × 10⁻¹⁰’dan büyüktür; çözeltiden AgCl katısı çöker')}
-r=onc_t(d,1)
+r=onc_t(d,2)
 coords=' '.join(f'({x:.2f},{y:.2f})' for x,y in cur)
 g='''\\begin{axis}[width=7cm,height=6.2cm,xmin=0,xmax=6,ymin=0,ymax=6,xtick={0,1,2,3,4,5,6},ytick={0,1,2,3,4,5,6},tick label style={font=\\small},axis lines=left,
 xlabel={[Cl$^-$] ($\\times10^{-5}$ M)},ylabel={[Ag$^+$] ($\\times10^{-5}$ M)},xlabel style={font=\\small},ylabel style={font=\\small}]
@@ -377,10 +377,10 @@ q('0012','sicaklik','X katısının çözünürlük eğrisi',
 # ============ 13 · dengeyi etkileyen · olumsuz · orta ============
 kartla('13','denge','Ca(OH)₂ çözünme dengesine etkiler','Ortak iyon eklemek dengeyi katıya, iyonu tüketen madde eklemek çözünmeye kaydırır; Kçç yalnız sıcaklığa bağlıdır.','Kçç’nin derişimle değiştiğini sanmak.','orta','düz',4)
 r=tek_t(('Sıcaklık sabitken kaba saf su eklenip katı kalmaya devam ederse Kçç değeri küçülür.','Kçç yalnız sıcaklığa bağlıdır; su eklense de sıcaklık sabit olduğundan değeri değişmez'),
- [('Dengede Ca²⁺ derişimi ile OH⁻ derişiminin çarpımı Kçç’ye eşittir.','Doygun çözeltide iyon çarpımı Kçç’ye eşit olur, böyle olmasaydı çözelti doygun olmazdı'),
+ [('Dengede Ca²⁺ derişimi ile OH⁻ derişiminin çarpımı Kçç’ye eşittir.','doygun çözeltide iyon çarpımı Kçç’ye eşit olur, böyle olmasaydı çözelti doygun olmazdı'),
   ('Kaba NaOH katısı eklenirse çözünmeden kalan Ca(OH)₂ miktarı artar.','OH⁻ ortak iyon olduğundan denge katıya doğru kayar ve çöken Ca(OH)₂ artar'),
   ('Kaba HCl çözeltisi eklenirse Ca²⁺ derişimi artar.','H⁺ iyonları OH⁻ ile tepkimeye girip OH⁻ azalttığından denge sağa kayar ve Ca²⁺ derişimi artar'),
-  ('Dengede çözünme hızı çökelme hızına eşittir.','Doygun çözeltide dinamik dengede iki yöndeki hızlar eşittir')],4)
+  ('Dengede çözünme hızı çökelme hızına eşittir.','doygun çözeltide dinamik dengede iki yöndeki hızlar eşittir')],4)
 q('0013','denge','Ca(OH)₂ doygun çözeltisine yapılan etkiler',
  [A('Dengeyi yaz','Ca(OH)₂(k) ⇌ Ca²⁺ + 2OH⁻ ve Kçç = [Ca²⁺] · [OH⁻]².','Kçç yalnız sıcaklığın fonksiyonudur'),
   A('Ortak iyon etkisini uygula','NaOH, OH⁻ ekler; denge girenler yönüne (katıya) kayar.','Katı miktarı artar → doğru'),
@@ -417,64 +417,61 @@ q('0014','hesap','CaF₂ kütlesinden Kçç',
 
 # ============ 15 · seçici çökelme · zor · düzenek ============
 kartla('15','secici','Seçici çökelme','Her tuz için çökelme eşiği ([Ag⁺]) hesaplanır; küçük eşikli olan önce çöker; ikinci çökelme başlarken birincinin kalan derişimi bulunur.','Önce çöken tuzun tamamen çöktüğünü sanmak; Ag₂CrO₄ için karekök almayı unutmak.','zor','şekilli',5)
-Kcl,Kcr=E(1,-10),E(4,-12); c0=E(1,-2)
-th1=Kcl/c0; th2sq=Kcr/c0
-assert th1==E(1,-8) and th2sq==E(4,-10) and th2sq**1==Fr(2,10**5)**2
-th2=Fr(2,10**5)
-clk=Kcl/th2; assert clk==E(5,-6)
-assert Kcl/Fr(2,10**6)==E(5,-5)
-r=sn(clk,[(th1,'AgCl’nin çökmeye başladığı [Ag⁺] = 1 × 10⁻⁸ M değerini Cl⁻ derişimi sanmış.','dikkat'),
-          (th2,'Ag₂CrO₄’ın çökmeye başladığı [Ag⁺] = 2 × 10⁻⁵ M değerini Cl⁻ derişimi olarak yazmış.','dikkat'),
-          (Kcl/Fr(2,10**6),'CrO₄²⁻ derişimini hesaba katmayıp [Ag⁺] = √(4 × 10⁻¹²) = 2 × 10⁻⁶ M almış: [Cl⁻] = 1 × 10⁻¹⁰ ÷ 2 × 10⁻⁶ = 5 × 10⁻⁵ M.','bilgi'),
-          (c0,'Cl⁻ derişiminin hiç değişmediğini, 0,01 M kaldığını sanmış.','dikkat')])
+Kcl,Kcr=E('1,8',-10),E('3,6',-11); cCl=E(2,-2); cCr=E(4,-2)
+th1=Kcl/cCl; assert th1==E(9,-9)
+th2=Fr(3,10**5); assert th2**2==Kcr/cCr==E(9,-10) and th1<th2
+clk=Kcl/th2; assert clk==E(6,-6)
+alt_=Kcl/(th2/2); assert alt_==E('1,2',-5)
+r=sn(clk,[(th1,'AgCl’nin çökmeye başladığı [Ag⁺] = 9 × 10⁻⁹ M değerini Cl⁻ derişimi sanmış.','dikkat'),
+          (th2,'Ag₂CrO₄’ın çökmeye başladığı [Ag⁺] = 3 × 10⁻⁵ M değerini Cl⁻ derişimi olarak yazmış.','dikkat'),
+          (alt_,'Ag₂CrO₄ için eşik [Ag⁺] değerini 3 × 10⁻⁵ yerine 1,5 × 10⁻⁵ M bulmuş (iki Ag⁺ nedeniyle ikiye bölmüş): [Cl⁻] = 1,8 × 10⁻¹⁰ ÷ 1,5 × 10⁻⁵ = 1,2 × 10⁻⁵ M.','islem'),
+          (cCl,'Cl⁻ derişiminin hiç değişmediğini, 0,02 M kaldığını sanmış.','dikkat')])
 print('q15 poz',poz(r))
 g=''
-# büret
 g+='\\draw[thick] (1.0,5.6) rectangle (1.35,3.4); \\draw[thick] (1.0,3.4) -- (1.175,3.1) -- (1.35,3.4);\\fill[vurgu!30] (1.03,5.0) rectangle (1.32,3.43);'
 g+='\\foreach \\y in {3.8,4.2,4.6,5.0,5.4}{\\draw (1.0,\\y) -- (1.1,\\y);}'
 g+='\\draw[thick,fill=white] (1.175,2.75) circle (.07); \\draw[thick,fill=white] (1.175,2.45) circle (.07);'
 g+='\\node[anchor=east,align=right] at (.85,4.5) {\\scriptsize AgNO$_3$\\\\ \\scriptsize çözeltisi};'
-g+=kap(0,2.4,2.0,1.4)+'\\node[align=center] at (1.2,.7) {\\scriptsize Cl$^-$: 0,01 M\\\\ \\scriptsize CrO$_4^{2-}$: 0,01 M};'
+g+=kap(0,2.4,2.0,1.4)+'\\node[align=center] at (1.2,.7) {\\scriptsize Cl$^-$: 0,02 M\\\\ \\scriptsize CrO$_4^{2-}$: 0,04 M};'
 g+='\\node[below] at (1.2,-.05) {\\scriptsize 1 L çözelti};'
-g+='\\node[anchor=west,align=left] at (3.1,3.4) {\\scriptsize AgCl: '+KC+' = $1\\times10^{-10}$};'
-g+='\\node[anchor=west,align=left] at (3.1,2.6) {\\scriptsize Ag$_2$CrO$_4$: '+KC+' = $4\\times10^{-12}$};'
+g+='\\node[anchor=west,align=left] at (3.1,3.4) {\\scriptsize AgCl: '+KC+' = $1{,}8\\times10^{-10}$};'
+g+='\\node[anchor=west,align=left] at (3.1,2.6) {\\scriptsize Ag$_2$CrO$_4$: '+KC+' = $3{,}6\\times10^{-11}$};'
 SK=tk(g)
 q('0015','secici','Cl⁻ ve CrO₄²⁻ içeren çözeltiye AgNO₃',
- [A('Çökelme eşiklerini bul','Her iyonun çökmeye başladığı Ag⁺ derişimi Kçç ÷ derişim ile hesaplanır.','AgCl: [Ag⁺] = 1 × 10⁻¹⁰ ÷ 10⁻² = 1 × 10⁻⁸ M'),
-  A('Ag₂CrO₄ eşiği','Ag₂CrO₄ için Kçç = [Ag⁺]² · [CrO₄²⁻] bağıntısından kök alınır.','[Ag⁺]² = 4 × 10⁻¹² ÷ 10⁻² = 4 × 10⁻¹⁰ → [Ag⁺] = 2 × 10⁻⁵ M'),
-  A('Çökelme sırasını belirle','Küçük eşik değerli AgCl önce çöker; Ag₂CrO₄ çökerken AgCl de dengededir.','1 × 10⁻⁸ < 2 × 10⁻⁵ → önce AgCl'),
-  A('Kalan Cl⁻ derişimini bul','Ag₂CrO₄ çökmeye başlarken [Ag⁺] = 2 × 10⁻⁵ M olur ve AgCl için Kçç sağlanır.','[Cl⁻] = 1 × 10⁻¹⁰ ÷ 2 × 10⁻⁵ = 5 × 10⁻⁶ M')],
+ [A('Çökelme eşiklerini bul','Her iyonun çökmeye başladığı Ag⁺ derişimi hesaplanır.','AgCl: [Ag⁺] = 1,8 × 10⁻¹⁰ ÷ 2 × 10⁻² = 9 × 10⁻⁹ M'),
+  A('Ag₂CrO₄ eşiği','Ag₂CrO₄ için Kçç = [Ag⁺]² · [CrO₄²⁻] bağıntısından kök alınır.','[Ag⁺]² = 3,6 × 10⁻¹¹ ÷ 4 × 10⁻² = 9 × 10⁻¹⁰ → [Ag⁺] = 3 × 10⁻⁵ M'),
+  A('Çökelme sırasını belirle','Küçük eşik değerli AgCl önce çöker; Ag₂CrO₄ çökerken AgCl de dengededir.','9 × 10⁻⁹ < 3 × 10⁻⁵ → önce AgCl'),
+  A('Kalan Cl⁻ derişimini bul','Ag₂CrO₄ çökmeye başlarken [Ag⁺] = 3 × 10⁻⁵ M olur ve AgCl için Kçç sağlanır.','[Cl⁻] = 1,8 × 10⁻¹⁰ ÷ 3 × 10⁻⁵ = 6 × 10⁻⁶ M')],
  metin='Bir öğrenci, şekilde verilen çözeltiye AgNO₃ çözeltisini büretten damla damla ekliyor. Eklenen çözeltinin hacmi ihmal edilecek ve çökmeyen iyonların derişimlerinin yalnızca çökelmeyle değiştiği kabul edilecektir. Sıcaklık sabittir.\nBuna göre Ag₂CrO₄ çökmeye başladığı anda çözeltide kalan Cl⁻ derişimi kaç M’dir?',
  sekil=SK,z='zor',alt='Seçici Çökelme',kaz='Aynı çözeltideki iki iyonun Ag⁺ ile çökelme sırasını belirler ve ikinci çökelme anındaki kalan derişimi hesaplar.',kalip='şekilli',
- istenen='Ag₂CrO₄ çökmeye başladığında kalan [Cl⁻] (M).',ip=['Hangi tuzun daha az Ag⁺ derişiminde çökmeye başladığını bul; ikinci çökelme anındaki Ag⁺ derişimini birincinin Kçç ifadesinde kullan.'],
+ istenen='Ag₂CrO₄ çökmeye başladığında kalan [Cl⁻] (M).',ip=['Çökelme sırasını belirlemek için iki tuzun eşik değerlerini aynı iyon cinsinden karşılaştır.'],
  bilgi=[B('Çökelme eşiği','Bir iyonun çökmeye başladığı anda iyon çarpımı Kçç’ye eşittir. Örnek: Kçç = 1 × 10⁻⁸ olan AB tuzunda [B⁻] = 0,01 M iken [A⁺] = 1 × 10⁻⁶ M olduğunda çökelme başlar')],
- puf='İki çökelmede ortak iyonun (Ag⁺) eşik değerini hesapla; ikinci eşiği birinci tuzun Kçç’sinde kullan.',**r)
+ puf='Hangi iyonun önce çöktüğünü eşik [Ag⁺] ile karşılaştır.',**r)
 
-# ============ 16 · pH ile çözünürlük oranı · zor ============
-kartla('16','ortak','pH ve ortak iyon etkisi','pH → [OH⁻] ortak iyonu; çözünürlük Kçç ÷ [OH⁻]²; saf suya oranlanır.','[OH⁻] derişimini katsayıyla çarpmak; saf sudaki çözünürlüğü yanlış bulmak.','zor','hikâyeli',5)
-Km=E(4,-12); s_su=Fr(1,10**4); assert 4*s_su**3==Km
-OH12=E(1,-2); s_12=Km/OH12**2; assert s_12==E(4,-8)
-oran=s_su/s_12; assert oran==2500
-o1=s_12/s_su; o2=s_su/(Km/(2*OH12)**2); o3=s_su/(Km/OH12); o4=Fr(2,10**6)/s_12
-assert o1==E(4,-4) and o2==10**4 and o3==E(2.5,5) if False else True
-o3=s_su/(Km/OH12); assert o3==E(2.5,5) if False else o3==250000
-assert o4==50
-r=sn(oran,[(o1,'Oranı ters kurup 4 × 10⁻⁸ ÷ 1 × 10⁻⁴ = 4 × 10⁻⁴ bulmuş.','dikkat'),
-           (o4,'Saf sudaki çözünürlüğü √Kçç = 2 × 10⁻⁶ M (AB tipi) alıp 2 × 10⁻⁶ ÷ 4 × 10⁻⁸ = 50 bulmuş.','bilgi'),
-           (o2,'[OH⁻] = 2 × 10⁻² M almış (OH⁻ katsayısıyla çarpmış): s = 4 × 10⁻¹² ÷ (2 × 10⁻²)² = 1 × 10⁻⁸ M; oran 1 × 10⁴ olmuş.','bilgi'),
-           (o3,'OH⁻ derişiminin karesini almayıp s = 4 × 10⁻¹² ÷ 1 × 10⁻² = 4 × 10⁻¹⁰ M bulmuş; oran 2,5 × 10⁵ olmuş.','bilgi')],gorec=lambda v:sci(v) if v<1 else fm(v))
-assert Km/Fr(4,10**4)==E(1,-8) and Km/OH12==E(4,-10) and s_su/E(4,-10)==250000 and s_su/E(1,-8)==10**4
+# ============ 16 · NaOH–HCl karışımı, pH ve çözünürlük oranı · zor ============
+kartla('16','ortak','Nötrleşme sonrası ortak iyon etkisi','Karışımın OH⁻ derişimi nötrleşme ve seyrelmeyle bulunur; çözünürlük Kçç ÷ [OH⁻]²; saf suya oranlanır.','HCl ile nötrleşmeyi ya da seyrelmeyi unutmak; [OH⁻] derişiminin karesini almamak.','zor','hikâyeli',6)
+Km=E('3,2',-11); s_su=Fr(2,10**4); assert 4*s_su**3==Km
+nOH=Fr(100,1000)*E(3,-2); nH=Fr(100,1000)*E(1,-2); OHm=(nOH-nH)/Fr(200,1000); assert OHm==E(1,-2)
+s_m=Km/OHm**2; assert s_m==E('3,2',-7)
+oran=s_su/s_m; assert oran==625
+o1=s_m/s_su; o2=s_su/(Km/(E(2,-2))**2); o3=s_su/(Km/(E(1,-2)*Fr(3,2))**2); o4=s_su/(Km/OHm)
+assert o1==E('1,6',-3) and o2==2500 and o3==Fr(140625,100) and o4==62500
+r=sn(oran,[(o1,'Oranı ters kurup 3,2 × 10⁻⁷ ÷ 2 × 10⁻⁴ = 1,6 × 10⁻³ bulmuş.','dikkat'),
+           (o3,'HCl ile nötrleşmeyi hesaba katmayıp yalnız NaOH’ın seyrelmesini düşünmüş: [OH⁻] = 0,015 M, oran 1406,25 olmuş.','bilgi'),
+           (o2,'Karışımla hacmin iki katına çıktığını hesaba katmayıp [OH⁻] = 0,03 − 0,01 = 0,02 M almış: oran 2500 olmuş.','dikkat'),
+           (o4,'[OH⁻] derişiminin karesini almayıp s = 3,2 × 10⁻¹¹ ÷ 1 × 10⁻² = 3,2 × 10⁻⁹ M bulmuş; oran 62500 olmuş.','islem')],gorec=lambda v:sci(v) if v<1 else fm(v))
 print('q16 poz',poz(r))
-q('0016','ortak','Mg(OH)₂ saf suda ve pH = 12 ortamında',
- [A('Saf sudaki çözünürlüğü bul','Mg(OH)₂(k) ⇌ Mg²⁺ + 2OH⁻ için Kçç = 4s³.','4s³ = 4 × 10⁻¹² → s = 1 × 10⁻⁴ M'),
-  A('pH = 12’de [OH⁻] değerini bul','pOH = 2 olduğundan OH⁻ derişimi sabittir ve ortak iyondur.','[OH⁻] = 1 × 10⁻² M'),
-  A('Bu ortamdaki çözünürlüğü hesapla','Çözünürlük [Mg²⁺] değerine eşittir.','s = 4 × 10⁻¹² ÷ (10⁻²)² = 4 × 10⁻⁸ M'),
-  A('Oranı yaz','Saf sudaki çözünürlük bu ortamdakine bölünür.','1 × 10⁻⁴ ÷ 4 × 10⁻⁸ = 2500')],
- metin='25 °C’de Mg(OH)₂’nin Kçç değeri 4 × 10⁻¹²’dir. Bir öğrenci bu katının saf sudaki ve pH değeri 12 olarak sabit tutulan tamponlu çözeltideki çözünürlüğünü karşılaştırıyor. Tamponlu çözeltide OH⁻ derişimi Mg(OH)₂’nin çözünmesiyle değişmemektedir. (Ksu = 1 × 10⁻¹⁴)\nBuna göre Mg(OH)₂’nin saf sudaki çözünürlüğü, bu tamponlu çözeltideki çözünürlüğünün kaç katıdır?',
- z='zor',alt='Ortak İyon Etkisi',kaz='pH’ı sabit bir ortamda hidroksit tuzunun çözünürlüğünü hesaplayıp saf sudakiyle karşılaştırır.',kalip='hikâyeli',
- istenen='Saf sudaki çözünürlüğün tamponlu ortamdakine oranı.',ip=['Önce saf sudaki çözünürlüğü bul; sonra tamponlu çözeltide OH⁻ derişimini sabit alıp Kçç ifadesinden Mg²⁺ derişimini hesapla.'],
- bilgi=[B('Ortak iyon olarak OH⁻','pH’ı sabit tutulan ortamda [OH⁻] sabittir ve ortak iyon gibi davranır. Örnek: pH = 11 olan ortamda [OH⁻] = 1 × 10⁻³ M’dir')],
- puf='Saf suda 4s³, tamponda Kçç ÷ [OH⁻]²: iki çözünürlüğü ayrı hesapla, sonra oranla.',**r)
+q('0016','ortak','NaOH ve HCl karışımında Mg(OH)₂',
+ [A('Saf sudaki çözünürlüğü bul','Mg(OH)₂(k) ⇌ Mg²⁺ + 2OH⁻ için Kçç = 4s³.','4s³ = 3,2 × 10⁻¹¹ → s = 2 × 10⁻⁴ M'),
+  A('Nötrleşmeyi hesapla','Artan OH⁻ mol sayısı bulunur.','3 × 10⁻³ − 1 × 10⁻³ = 2 × 10⁻³ mol OH⁻'),
+  A('Karışımdaki [OH⁻] değerini bul','Toplam hacim 200 mL’dir.','[OH⁻] = 2 × 10⁻³ ÷ 0,2 = 1 × 10⁻² M'),
+  A('Bu ortamdaki çözünürlüğü hesapla','OH⁻ ortak iyondur; çözünürlük [Mg²⁺] değerine eşittir.','s = 3,2 × 10⁻¹¹ ÷ (10⁻²)² = 3,2 × 10⁻⁷ M'),
+  A('Oranı yaz','Saf sudaki çözünürlük bu ortamdakine bölünür.','2 × 10⁻⁴ ÷ 3,2 × 10⁻⁷ = 625')],
+ metin='25 °C’de Mg(OH)₂’nin Kçç değeri 3,2 × 10⁻¹¹’dir. Bir öğrenci 100 mL 0,03 M NaOH çözeltisi ile 100 mL 0,01 M HCl çözeltisini karıştırıyor ve oluşan çözeltiye Mg(OH)₂ katısı ekleyerek doygun hâle getiriyor. Mg(OH)₂’nin çözünmesiyle çözeltideki OH⁻ derişiminde olan değişim ihmal edilecektir.\nBuna göre Mg(OH)₂’nin saf sudaki çözünürlüğü, bu çözeltideki çözünürlüğünün kaç katıdır?',
+ z='zor',alt='Ortak İyon Etkisi',kaz='Asit–baz karışımından kalan OH⁻ derişimini bulup hidroksit tuzunun çözünürlüğünü saf sudakiyle karşılaştırır.',kalip='hikâyeli',
+ istenen='Saf sudaki çözünürlüğün bu çözeltidekine oranı.',ip=['Önce karışımda artan iyonun derişimini bul; sonra bunu ortak iyon olarak Kçç ifadesinde kullan.'],
+ bilgi=[B('Ortak iyon olarak OH⁻','Karışımdaki OH⁻ derişimi nötrleşmeden sonra kalan mol sayısının toplam hacme bölünmesiyle bulunur ve ortak iyon gibi davranır. Örnek: 50 mL 0,1 M NaOH ile 50 mL 0,04 M HCl karışımında [OH⁻] = 0,03 M’dir')],
+ puf='Önce nötrleşmeyi çöz, sonra ortak iyon derişimiyle çözünürlüğü hesapla.',**r)
 
 # ============ 17 · karışımda eşik derişim · zor · düzenek ============
 kartla('17','cokelme','Çökelmeyi başlatan en küçük derişim','Karışımda seyrelme sonrası [Pb²⁺] bulunur; Kçç ifadesinden eşik [I⁻] hesaplanıp ilk derişime dönülür.','Yalnız bir çözeltinin seyrelmesini hesaba katmak; I⁻ için üssü unutmak.','zor','şekilli',5)
@@ -524,8 +521,8 @@ cl_c=' '.join(f'({t:.2f},{clt(t):.4f})' for t in [3+i*.5 for i in range(11)])
 g='''\\begin{axis}[width=7.6cm,height=5.8cm,xmin=0,xmax=11,ymin=0,ymax=3,xtick={3,8},xticklabels={$t_1$,$t_2$},ytick={0,0.5,1,2,2.5},yticklabels={0,0{,}5,1,2,2{,}5},tick label style={font=\\small},axis lines=left,
 xlabel={Zaman},ylabel={Derişim ($\\times10^{-5}$ M)},xlabel style={font=\\small},ylabel style={font=\\small},clip=false]
 \\addplot[thick] coordinates {(0,1) (3,1) '''+ag_c+''' (11,0.5)};
-\\addplot[thick,dashed] coordinates {(0,2) (3,2) (3,2.5) '''+cl_c+''' (11,2)};
-\\draw[dotted,gray] (axis cs:3,0) -- (axis cs:3,3);\\draw[dotted,gray] (axis cs:8,0) -- (axis cs:8,3);\\node[anchor=south] at (axis cs:9.8,2.05) {[Cl$^-$]}; \\node[anchor=south] at (axis cs:9.8,.55) {[Ag$^+$]};
+\\addplot[thick,dashed] coordinates {(0,1) (3,1) (3,2.5) '''+cl_c+''' (11,2)};
+\\draw[dotted,gray] (axis cs:3,0) -- (axis cs:3,3);\\draw[dotted,gray] (axis cs:8,0) -- (axis cs:8,3);\\node[anchor=south] at (axis cs:9.8,2.05) {[Cl$^-$]}; \\node[anchor=south] at (axis cs:9.8,.55) {[Ag$^+$]};\\node[anchor=south west,font=\\footnotesize] at (axis cs:0.15,1.08) {[Ag$^+$]=[Cl$^-$]};
 \\end{axis}'''
 SK=tk(g)
 q('0018','denge','AgCl dengesine NaCl eklenmesi, derişim–zaman grafiği',
@@ -537,7 +534,7 @@ q('0018','denge','AgCl dengesine NaCl eklenmesi, derişim–zaman grafiği',
  puf='Yeni dengede Q = Kçç aynıdır, ama iyon derişimleri ve katı miktarı değişir.',**r)
 
 # ============ 19 · Kçç–sıcaklık tablosu ile çökelme · öncüllü · zor ============
-kartla('19','sicaklik','Sıcaklığın çökelme koşuluna etkisi','Karışımın iyon çarpımı sabit; Kçç sıcaklıkla artıyorsa çökelme yalnız düşük sıcaklıkta olur ve ısıtınca çökelti çözünür.','Q’yu sıcaklıkla değişen sanmak; Kçç’nin artmasını çözünmenin ekzotermik olmasına yormak.','zor','öncüllü',5)
+kartla('19','sicaklik','Sıcaklığın çökelme koşuluna etkisi','Karışımın iyon çarpımı sabit; Kçç sıcaklıkla artıyorsa çökelme yalnız düşük sıcaklıkta olur ve ısıtınca çökelti çözünür.','Q’yu sıcaklıkla değişen sanmak; Kçç’nin artmasını çözünmenin ekzotermik olmasına yormak.','orta','öncüllü',5)
 Kt={25:E(2,-6),50:E(8,-6)}
 xm=Fr(4,10**3)*Fr(1,2); ym=xm; Qm=xm*ym; assert Qm==E(4,-6)
 assert Qm>Kt[25] and Qm<Kt[50] and Kt[50]>Kt[25]
@@ -550,46 +547,46 @@ SK=tablo_svg(['Sıcaklık (°C)','XY için Kçç'],[['25','2 × 10⁻⁶'],['50'
 q('0019','sicaklik','XY için iki sıcaklıkta Kçç ve karışım',
  [adim_onc(d,['I']),adim_onc(d,['II']),adim_onc(d,['III']),sonuc(d,r)],
  metin='XY tuzunun Kçç değerleri iki farklı sıcaklıkta tabloda verilmiştir. Bir öğrenci 100 mL 4 × 10⁻³ M X⁺ iyonu içeren çözelti ile 100 mL 4 × 10⁻³ M Y⁻ iyonu içeren çözeltiyi 25 °C’de karıştırıyor ve oluşan karışımı 50 °C’ye ısıtıyor. Hacimler toplanabilmekte, çözeltilerde başka tepkime olmamaktadır.\nI. 25 °C’de karıştırıldığında çökelme olmaz.\nII. Aynı karışım 50 °C’de hazırlansaydı çökelme olmazdı.\nIII. 25 °C’de oluşan çökelti, karışım 50 °C’ye ısıtılınca tamamen çözünür.\nBuna göre bu yargılardan hangileri doğrudur?',
- sekil=SK,z='zor',alt='Sıcaklığın Etkisi',kaz='Karışımın iyon çarpımı ile farklı sıcaklıklardaki Kçç değerlerini karşılaştırarak çökelmeyi yorumlar.',kalip='tablo',
+ sekil=SK,z='orta',alt='Sıcaklığın Etkisi',kaz='Karışımın iyon çarpımı ile farklı sıcaklıklardaki Kçç değerlerini karşılaştırarak çökelmeyi yorumlar.',kalip='tablo',
  istenen='Doğru olan yargılar.',ip=['Karışımdaki iyon derişimlerini bulup iyon çarpımını hesapla; sonra her sıcaklıktaki Kçç ile ayrı ayrı karşılaştır.'],
  bilgi=[B('Çökelti ve sıcaklık','Çözünmesi endotermik olan tuzun Kçç değeri sıcaklıkla artar; bu yüzden aynı iyon çarpımında düşük sıcaklıkta çöken tuz yüksek sıcaklıkta çözünebilir. Örnek: Q = 9 × 10⁻⁸ iken Kçç 5 × 10⁻⁸’den 2 × 10⁻⁷’ye çıkıyorsa çökelti çözünür')],
  puf='Q karışıma bağlıdır, Kçç sıcaklığa; her sıcaklıkta ayrı karşılaştır.',**r)
 
-# ============ 20 · seyreltme + ortak iyon · zor · düzenek ============
-kartla('20','ortak','Seyreltilmiş ortak iyon çözeltisinde çözünürlük','Önce seyrelme ile ortak iyon derişimi bulunur; sonra çözünürlük Kçç ÷ [F⁻]².','Seyrelmeyi atlamak; F⁻ derişiminin karesini almamak.','zor','şekilli',5)
-KF=E(4,-11); n_F=Fr(50,1000)*E(4,-2); cF=n_F/Fr(200,1000)
-assert cF==E(1,-2)
-s20=KF/cF**2; assert s20==E(4,-7)
-a1=KF/E(4,-2)**2; a2=KF/cF; a3=KF/(cF/10)**2
-assert a1==E('2,5',-8) and a2==E(4,-9) and a3==E(4,-5)
-r=sn(s20,[(a2,'[F⁻] derişiminin karesini almayıp s = 4 × 10⁻¹¹ ÷ 1 × 10⁻² = 4 × 10⁻⁹ M bulmuş.','islem'),
-          (a1,'Seyrelmeyi hesaba katmayıp [F⁻] = 0,04 M almış: s = 4 × 10⁻¹¹ ÷ (4 × 10⁻²)² = 2,5 × 10⁻⁸ M.','dikkat'),
-          (Fr(1,10**7),'F⁻ derişimini 2 × 10⁻² M almış (50 mL’yi 100 mL’ye seyrelterek): s = 4 × 10⁻¹¹ ÷ (2 × 10⁻²)² = 1 × 10⁻⁷ M.','islem'),
-          (a3,'Çözeltiyi 2 L’ye seyrelmiş sanıp [F⁻] = 1 × 10⁻³ M almış: s = 4 × 10⁻¹¹ ÷ (1 × 10⁻³)² = 4 × 10⁻⁵ M.','dikkat')])
-assert KF/Fr(2,10**2)**2==E(1,-7)
+# ============ 20 · NaF + CaCl₂ karışımı, çökelme sonrası kalan F⁻ · zor · düzenek ============
+kartla('20','cokelme','Stokiyometrik çökelme ve Kçç','Karışımda önce çökelme tepkimesi stokiyometriyle çözülür; artan iyon derişiminden Kçç ile kalan iyon bulunur.','Seyrelmeyi ya da 1:2 oranını unutmak; Kçç ifadesinde üssü atlamak.','zor','şekilli',6)
+KF=E('3,2',-11); nF=Fr(100,1000)*E(4,-2); nCa=Fr(100,1000)*E(3,-2)
+assert (nCa/Fr(200,1000))*(nF/Fr(200,1000))**2>KF
+nCa_k=nCa-nF/2; cCa=nCa_k/Fr(200,1000); assert cCa==E(5,-3)
+F2=KF/cCa; assert F2==E('6,4',-9); fK=Fr(8,10**5); assert fK**2==F2
+b1=F2; b2=KF/Fr(2,10)**0*0+Fr(4,10**5); b3=KF/(cCa**2)
+assert (KF/Fr(1,50))**Fr(1,2)==Fr(4,10**5) if False else True
+cCa2=(nCa-nF/2)/Fr(1,10); assert cCa2==E(1,-2)
+y4=Fr(4,10**5)   # seyreltmeyi atlayan: [Ca2+]=0,02? kontrol aşağıda
+cCa3=Fr(3,100)-Fr(1,100); assert cCa3==Fr(2,100) and (KF/cCa3)==E('1,6',-9) and Fr(4,10**5)**2==E('1,6',-9)
+assert b3==E('1,28',-6)
+r=sn(fK,[(b1,'Kçç ÷ [Ca²⁺] = 6,4 × 10⁻⁹ değerinin karekökünü almayı unutup bunu [F⁻] sanmış.','islem'),
+         (b3,'Kçç ifadesinde [Ca²⁺]² · [F⁻] yazıp [F⁻] = 3,2 × 10⁻¹¹ ÷ (5 × 10⁻³)² = 1,28 × 10⁻⁶ M bulmuş.','bilgi'),
+         (Fr(4,10**5),'Çökelmeden sonra kalan Ca²⁺ derişimini seyrelmeyi hesaba katmadan 0,03 − 0,01 = 0,02 M almış: [F⁻] = √(1,6 × 10⁻⁹) = 4 × 10⁻⁵ M.','dikkat'),
+         (Fr(1,10**2),'Ca²⁺ ile F⁻’nin 1:1 oranında harcandığını sanmış: 0,02 − 0,01 = 0,01 M.','bilgi')])
 print('q20 poz',poz(r))
-g=kap(0,2.1,2.4,1.7)+'\\node[align=center] at (1.05,.85) {\\scriptsize 0,04 M\\\\ \\scriptsize NaF};'
-g+='\\node[below] at (1.05,-.05) {\\scriptsize 50 mL};'
-g+=f'\\draw[{ARR},thick] (2.35,1.4) -- (3.5,1.4); \\node[above,align=center] at (2.92,1.45) {{\\scriptsize + saf su}};'
-# balon joje
-g+='\\begin{scope}\\clip (4.8,1.2) circle (1.0);\\fill[vurgu!15] (3.7,.1) rectangle (5.9,1.5);\\end{scope}'
-g+='\\draw[thick] (4.6,3.0) -- (4.6,2.18) arc[start angle=101.5,end angle=438.5,radius=1.0] -- (5.0,3.0);'
-g+='\\draw (4.6,2.6) -- (5.0,2.6);'
-g+='\\node[align=center] at (4.8,.8) {\\scriptsize NaF\\\\ \\scriptsize çözeltisi};'
-g+='\\node[below] at (4.8,.15) {\\scriptsize 200 mL}; '
-g+=f'\\draw[{ARR},thick] (6.1,1.2) -- (7.0,1.2);'
-g+=kap(7.2,2.2,2.4,1.7)+kati(7.2,2.2,.4)+'\\node[anchor=west] at (7.35,.72) {\\scriptsize CaF$_2$(k)};'
+g=kap(0,2.1,2.4,1.5)+kap(3.0,2.1,2.4,1.5)+kap(6.7,2.4,2.4,2.4)
+g+='\\node[align=center] at (1.05,.75) {\\scriptsize 0,04 M\\\\ \\scriptsize NaF};\\node[align=center] at (4.05,.75) {\\scriptsize 0,03 M\\\\ \\scriptsize CaCl$_2$};'
+g+='\\node[below] at (1.05,-.05) {\\scriptsize 100 mL};\\node[below] at (4.05,-.05) {\\scriptsize 100 mL};'
+g+='\\node at (2.55,1.2) {\\Large $+$};'
+g+=f'\\draw[{ARR},thick] (5.3,1.2) -- (6.4,1.2);'
+g+=kati(6.7,2.4,.4)+'\\node[align=center] at (7.9,1.4) {\\scriptsize Karışım\\\\ \\scriptsize 200 mL};'
 SK=tk(g)
-q('0020','ortak','NaF çözeltisinin seyreltilip CaF₂ eklenmesi',
- [A('Seyrelmeyi hesapla','Mol sayısı değişmez; hacim 50 mL’den 200 mL’ye çıkar.','n = 0,05 · 0,04 = 2 × 10⁻³ mol · [F⁻] = 2 × 10⁻³ ÷ 0,2 = 0,01 M'),
-  A('Ortak iyonu belirle','NaF’den gelen F⁻ derişimi, CaF₂’nin çözünmesinden gelen F⁻ yanında baskındır.','[F⁻] ≈ 1 × 10⁻² M'),
-  A('Kçç ifadesinden Ca²⁺ derişimini bul','Kçç = [Ca²⁺] · [F⁻]²','[Ca²⁺] = 4 × 10⁻¹¹ ÷ (10⁻²)² = 4 × 10⁻⁷ M'),
-  A('Çözünürlüğü yaz','Çözünen CaF₂ mol sayısı Ca²⁺ mol sayısına eşittir.','s = 4 × 10⁻⁷ M')],
- metin='Bir öğrenci 50 mL 0,04 M NaF çözeltisini şekilde görüldüğü gibi saf suyla 200 mL’ye tamamlıyor ve bu çözeltiye 25 °C’de CaF₂ katısı ekleyip doygun hâle getiriyor. CaF₂’nin Kçç değeri 4 × 10⁻¹¹’dir. CaF₂’nin çözünmesiyle çözeltiye geçen F⁻ iyonları ihmal edilecek ve katı ilavesiyle hacim değişmeyecektir.\nBuna göre CaF₂’nin bu çözeltideki molar çözünürlüğü kaç M’dir?',
- sekil=SK,z='zor',alt='Ortak İyon Etkisi',kaz='Seyrelmiş ortak iyon çözeltisinde az çözünen tuzun molar çözünürlüğünü hesaplar.',kalip='şekilli',
- istenen='CaF₂’nin molar çözünürlüğü (M).',ip=['Önce F⁻ iyonlarının son derişimini bul; çözünürlüğü, çözünen tuzdan gelen iyonlar üzerinden yaz.'],
- bilgi=[B('Seyrelme ve ortak iyon','Seyrelmede mol sayısı sabit kalır, derişim hacimle ters orantılı değişir. Örnek: 100 mL 0,2 M çözelti 400 mL’ye tamamlanırsa derişim 0,05 M olur')],
- puf='Önce seyrelmeyi çöz, sonra ortak iyon derişimini Kçç ifadesine yerleştir.',**r)
+q('0020','cokelme','NaF ve CaCl₂ çözeltilerinin karışımı',
+ [A('Karışımdaki mol sayılarını bul','Her çözeltiden gelen iyonların mol sayısı hesaplanır.','n(F⁻) = 4 × 10⁻³ mol; n(Ca²⁺) = 3 × 10⁻³ mol'),
+  A('Çökelme tepkimesini yaz','Ca²⁺ + 2F⁻ → CaF₂(k) olduğundan F⁻ tükenecek kadar Ca²⁺ harcanır.','Harcanan Ca²⁺ = 2 × 10⁻³ mol → kalan 1 × 10⁻³ mol'),
+  A('Ca²⁺ derişimini bul','Toplam hacim 200 mL’dir.','[Ca²⁺] = 1 × 10⁻³ ÷ 0,2 = 5 × 10⁻³ M'),
+  A('Kalan F⁻ derişimini hesapla','Kçç = [Ca²⁺] · [F⁻]² bağıntısı kullanılır.','[F⁻]² = 3,2 × 10⁻¹¹ ÷ 5 × 10⁻³ = 6,4 × 10⁻⁹'),
+  A('Kökü al','Çökelme sonrası çözeltide kalan F⁻ bulunur.','[F⁻] = 8 × 10⁻⁵ M')],
+ metin='25 °C’de CaF₂’nin Kçç değeri 3,2 × 10⁻¹¹’dir. Bir öğrenci şekilde verilen NaF ve CaCl₂ çözeltilerini karıştırıyor. Çökelme tamamlandıktan sonra çözeltide katı CaF₂ ile denge kurulmuştur. Çökelen katının çözünmesinden çözeltiye geçen Ca²⁺ miktarı ihmal edilecektir.\nBuna göre çökelme sonrasında çözeltide kalan F⁻ derişimi kaç M’dir?',
+ sekil=SK,z='zor',alt='Çökelme Koşulu',kaz='İki çözeltinin karışımında stokiyometrik çökelmeyi çözüp kalan iyon derişimini Kçç ile hesaplar.',kalip='şekilli',
+ istenen='Çökelme sonrası kalan [F⁻] (M).',ip=['Önce çökelme tepkimesindeki mol oranlarını kullanarak hangi iyonun artacağını belirle; sonra denge ifadesine geç.'],
+ bilgi=[B('Artan iyon ve Kçç','Çökelme sonunda hangi iyon artıyorsa onun derişimi Kçç ifadesinde bilinen değer olarak kullanılır. Örnek: Ag⁺ artan çözeltide [Cl⁻] = Kçç ÷ [Ag⁺] ile bulunur')],
+ puf='Önce mol sayılarıyla çökelmeyi çöz, sonra artan iyonla Kçç ifadesine geç.',**r)
 
 # ---------- kayıt ----------
 def bitir_ayt(P,onek,k):

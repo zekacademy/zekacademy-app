@@ -129,8 +129,8 @@ q('0003',3,[A('Kökü yorumla','Soru yanlış olan ifadeyi arıyor; bu yüzden d
  tipId='en-genel',z='kolay',alt='Hormonların Genel Özellikleri',kaz='Hormonların salgılanma, taşınma ve etki özelliklerine ilişkin yanlış ifadeyi belirler.',kalip='düz',
  metin='İnsanda hormonlar, vücuttaki iç dengenin korunmasında görev alan kimyasal haberci moleküllerdir. Bu moleküller endokrin bezlerden salgılanır ve vücudun çeşitli bölgelerindeki hücreleri etkiler.\nHormonların özellikleri ve etki biçimleriyle ilgili aşağıdakilerden hangisi yanlıştır?',
  dogru=w3['dogru'],yan=w3['yan'],sira=w3['sira'],istenen='Yanlış olan ifade.',
- ip=['Kanalsız bez ile dış salgı bezi arasındaki farkı düşün; hormonların hedefe nasıl ulaştığına odaklan.'],bilgi=[BEZ],
- puf='Hormonlar kanalsız bezlerden kana geçer; özel kanallarla taşınmaz.')
+ ip=['Her ifadeyi hormonların bez–kan–hedef yolculuğuyla karşılaştır.'],bilgi=[BEZ],
+ puf='Hormonların bezden hedefe yolculuğunu adım adım düşün.')
 
 # ================ 04 · orta · grafik · kan glikozu · öncüllü
 card(4,'Glikoz–hormon grafiği','Glikoz yükselince artan, sonra glikozu azaltan hormon insülindir; bu bir negatif geri bildirimdir.','Glikozu düşüren hormonun karaciğerde glikojeni yıkacağını sanmak; geri bildirimin yönünü karıştırmak.','orta','grafik',4,'en-glikoz','glikoz–hormon grafiğini yorumlama')
@@ -147,7 +147,7 @@ q('0004',4,[A('Grafiği oku','Glikoz öğünden sonra yükselmiş, X hormonu da 
  metin='Sağlıklı bir birey karbonhidrattan zengin bir öğün yedikten sonra alınan kan örneklerinde, kan glikoz derişimi ile pankreastan salgılanan X hormonunun derişimi ölçülüyor. Ölçüm sonuçları grafikte gösterilmiştir.\nBuna göre,\nI. X hormonu, karaciğerde glikojenin yıkımını hızlandırır.\nII. X hormonunun derişimindeki değişim, kan glikoz düzeyindeki değişime bağlı olarak gerçekleşmiştir.\nIII. t₁ anından sonra kan glikozunun azalmasında pozitif geri bildirim rol oynamıştır.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w4['dogru'],yan=w4['yan'],sira=w4['sira'],istenen='Grafiğe göre doğru olan yargılar.',
  ip=['Hangi eğrinin değişimden önce, hangisinin sonra gerçekleştiğine bak; sonra değişimi geri çeviren yönü düşün.'],bilgi=[GLK,GER],
- puf='Bir değer yükselince salgısı artan ve o değeri geri azaltan hormon, negatif geri bildirimle çalışır.')
+ puf='Grafikte önce hangi eğrinin değiştiğine, sonra diğerinin nasıl yanıt verdiğine bak.')
 
 # ================ 05 · orta · olumsuz · geri bildirim şeması
 card(5,'Hipotalamus–hipofiz–tiroit ekseni','Hipotalamus ön hipofizi, ön hipofiz tiroit bezini uyarır; tiroksin artınca ikisini de baskılar (negatif geri bildirim).','Geri dönen oklarda salgının artacağını sanmak; tiroksinin metabolizmayı azalttığını düşünmek.','orta','şekilli',4,'en-geri','tiroit ekseninde numaralı yollar')
@@ -172,7 +172,7 @@ q('0005',5,[A('Şemayı oku','Düz oklar uyarı yolunu, kesikli oklar tiroit bez
  metin='Şekilde, insanda tiroit bezinin çalışmasının hipotalamus ve ön hipofiz tarafından düzenlenmesi şematik olarak gösterilmiştir. Düz oklar uyarı yolunu, kesikli oklar ise tiroit bezi salgısının geri dönen etkilerini göstermektedir.\nBuna göre, numaralı yollarla ilgili aşağıdakilerden hangisi yanlıştır?',
  sekil=SK,dogru=w5['dogru'],yan=w5['yan'],sira=w5['sira'],istenen='Yanlış olan ifade.',
  ip=['Düz oklarla kesikli okları ayrı ayrı yorumla; tiroit bezinin hormonunun hem hedef hücrelerdeki hem de geri dönüş yollarındaki etkisini düşün.'],bilgi=[TIR,GER],
- puf='Eksen yukarıdan aşağı uyarır; son hormon, kendisini uyaran yapıları baskılar.')
+ puf='Düz ve kesikli okları ayrı ayrı yorumla.')
 
 # ================ 06 · orta · şekilli · kan glikozu hormonları
 card(6,'Glikoz düzenleyici hormonları ayırt etme','Kan glikozu yükselince azaltan, düşünce artıran ve stres hormonu ayrı hormonlardır; etkinin yönü hormonu belirler.','İnsülin ile glukagonun yönlerini ters yazmak; adrenalini pankreas hormonu sanmak.','orta','şekilli',3,'en-glikoz','kan glikozunu değiştiren üç durumda hormon belirleme')
@@ -248,20 +248,20 @@ q('0008',8,[A('Şemayı oku','a ve b hipotalamusun hipofiz lobları ile bağlant
  metin='Şekilde, insanda hipotalamus ile hipofizin iki lobu ve bu yapıların hormonlarıyla etkilediği bazı hedefler şematik olarak gösterilmiştir.\nBuna göre,\nI. a yolu ile hipotalamustan gelen hormonlar, 2 numaralı yapının hormon salgısını düzenler.\nII. c yolu ile taşınan hormon, tiroit bezinin hormon salgısını uyarır.\nIII. d yolu ile taşınan hormon, 3 numaralı yapının hücrelerinde sentezlenir.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w8['dogru'],yan=w8['yan'],sira=w8['sira'],istenen='Şemaya göre doğru olan yargılar.',
  ip=['Her yolun hedefine bak ve oraya ulaşan hormonun hangisi olduğunu, nerede sentezlenip nerede salgılandığını düşün.'],bilgi=[HIP],
- puf='Arka hipofiz hormon sentezlemez; hipotalamusta sentezlenen ADH ve oksitosini depolar ve salgılar.')
+ puf='Her yolun hedefini ve taşıdığı hormonun kimliğini belirleyip yargıyla karşılaştır.')
 
 # ================ 09 · orta · sinirsel ve hormonal düzenleme · öncüllü
 card(9,'Sinirsel ve hormonal düzenleme','Hormonlar kanla taşındığından etkileri geç başlar ve uzun sürer; hipotalamus nöron yapısında olduğu hâlde hormon salgılar; hedef hücre reseptöre bağlıdır.','Hipotalamusun hormon salgılayamayacağını sanmak; hormonların her hücreyi etkilediğini düşünmek.','orta','öncüllü',3,'en-genel','sinirsel–hormonal düzenleme karşılaştırması')
-w9=onc([True,False,True],['hormonlar kanla taşındığı için etkileri genellikle sinirsel uyarıya göre daha geç başlar ve daha uzun sürer','hipotalamus sinir sisteminin bir parçası olmakla birlikte hormon salgılar ve endokrin sistemi sinir sistemine bağlar','bir hormonun yalnız belirli hücreleri etkilemesi, o hücrelerde hormona özgü reseptörlerin bulunmasına bağlıdır'],3)
-q('0009',9,[A('I. yargıyı değerlendir','Hormonlar kan yoluyla hedefe ulaşır; bu, sinirsel iletimden yavaştır ve etki daha uzun sürer.','I: doğru'),
+w9=onc([True,False,True],['hormonlar kanla taşındığı için vücudun birçok bölgesindeki hedef hücrelere aynı anda ulaşabilir','hipotalamus sinir sisteminin bir parçası olmakla birlikte hormon salgılar ve endokrin sistemi sinir sistemine bağlar','bir hormonun yalnız belirli hücreleri etkilemesi, o hücrelerde hormona özgü reseptörlerin bulunmasına bağlıdır'],3)
+q('0009',9,[A('I. yargıyı değerlendir','Hormonlar kanla taşındığı için birçok bölgedeki hedef hücrelere aynı anda ulaşabilir.','I: doğru'),
    A('II. yargıyı değerlendir','Hipotalamus hem sinir sistemine ait hem de hormon salgılayan bir yapıdır.','II: yanlış'),
    A('III. yargıyı değerlendir','Hormon yalnız özgün reseptörü olan hücrelerde etki eder.','III: doğru'),
    A('Sonuç','I ve III yargıları doğrudur.','I ve III')],
  tipId='en-genel',z='orta',alt='Sinirsel ve Hormonal Düzenleme',kaz='Sinir sistemi ile hormonal sistemin çalışma özelliklerini karşılaştırır ve hormon–reseptör ilişkisini yorumlar.',kalip='öncüllü',
- metin='İnsanda iç dengenin korunması, sinir sistemi ile hormonal sistemin birlikte çalışmasıyla sağlanır. Bu iki sistemin çalışma biçimleriyle ilgili,\nI. Hormonlar kanla taşındığı için etkileri genellikle sinirsel uyarıya göre daha geç başlar ve daha uzun sürer.\nII. Hipotalamus, sinir sisteminin bir parçası olduğu için hormon salgılayamaz.\nIII. Bir hormonun yalnız belirli hücreleri etkilemesi, o hücrelerde hormona özgü reseptörlerin bulunmasına bağlıdır.\nyargılarından hangileri doğrudur?',
+ metin='İnsanda iç dengenin korunması, sinir sistemi ile hormonal sistemin birlikte çalışmasıyla sağlanır. Bu iki sistemin çalışma biçimleriyle ilgili,\nI. Bir hormon, kan yoluyla vücudun birçok bölgesindeki hedef hücreleri aynı anda etkileyebilir.\nII. Hipotalamus, sinir sisteminin bir parçası olduğu için hormon salgılayamaz.\nIII. Bir hormonun yalnız belirli hücreleri etkilemesi, o hücrelerde hormona özgü reseptörlerin bulunmasına bağlıdır.\nyargılarından hangileri doğrudur?',
  dogru=w9['dogru'],yan=w9['yan'],sira=w9['sira'],istenen='Doğru olan yargılar.',
- ip=['Hormonların hedefe ulaşma yolunu ve hedef hücrenin hormonu nasıl algıladığını düşün; hipotalamusun işlevini de hatırla.'],bilgi=[ORT],
- puf='Hormon hız bakımından sinirden yavaş, süre bakımından uzundur; etkisi reseptöre bağlıdır.')
+ ip=['Her yargıyı, hormonların taşınma yolu ve hedef hücrelerdeki etkisi açısından ayrı ayrı sına.'],bilgi=[ORT],
+ puf='Her yargıyı ayrı ayrı sına; iki sistemin çalışma biçimini karşılaştır.')
 
 # ================ 10 · orta · olumsuz · adrenalin
 card(10,'Adrenalinin etkileri','Adrenalin stres anında kalp ve solunum hızını artırır, karaciğerde glikojen yıkımını hızlandırarak kan glikozunu yükseltir.','Adrenalinin glikoz depolayacağını sanmak; glikojen sentezi ile yıkımını karıştırmak.','orta','hikâyeli',3,'en-bez','adrenalinin etkileri (beklenmeyen)')
@@ -279,14 +279,14 @@ q('0010',10,[A('Durumu yorumla','Sınav heyecanı sinirsel uyarıyla böbreküst
  metin='Önemli bir sınava girmeden önce çok heyecanlanan sağlıklı bir bireyde, sinirsel uyarı sonucu böbreküstü bezinin medullasından adrenalin salgısı artıyor.\nBu bireyle ilgili aşağıdakilerden hangisinin gerçekleşmesi beklenmez?',
  dogru=w10['dogru'],yan=w10['yan'],sira=w10['sira'],istenen='Gerçekleşmesi beklenmeyen değişiklik.',
  ip=['Adrenalinin kalp, solunum ve karaciğerdeki etkilerini düşün; hangi seçeneğin karaciğerde ters yönde bir olay olduğuna bak.'],bilgi=[BOB],
- puf='Adrenalin “savaş ya da kaç” hormonudur: harcamayı hızlandırır, depolamayı değil.')
+ puf='Adrenalinin karaciğerdeki etkisini düşün.')
 
 # ================ 11 · orta · ADH
 card(11,'Terleme ve ADH','Kanın ozmotik derişimi artınca ozmoreseptörler uyarılır, ADH salgısı artar, böbrek tüplerinde su geri emilimi artar, idrar derişik ve az olur.','ADH’yi böbreküstü bezinden sanmak; ADH artınca idrarın seyreleceğini düşünmek.','orta','hikâyeli',4,'en-hipo','terleme sonrası ADH ve idrar')
 o11=[('Arka hipofizden ADH salgısı artar ve böbrek tüplerinde su geri emilimi artar.',True,''),
      ('Hipotalamus uyarılır ve böbrek tüplerinde su geri emilimi azalır.',False,'Hipotalamusun uyarıldığını doğru bulmuş; ancak ADH artınca su geri emilimi azalmaz, artar.'),
      ('ADH salgısı azalır ve oluşan idrar seyrelir.',False,'Derişim arttığında ADH salgısının azalacağını sanmış; oysa su tutulması gerektiğinden ADH artar.'),
-     ('Böbreküstü bezinden ADH salgısı artar ve idrar miktarı artar.',False,'ADH’yi böbreküstü bezine bağlamış; ADH hipotalamusta sentezlenir, arka hipofizden salgılanır.'),
+     ('Böbreküstü bezinden ADH salgısı artar ve idrar miktarı artar.',False,'ADH’yi böbreküstü bezine bağlamış; ADH böbreküstü bezinden değil, arka hipofizden salgılanır.'),
      ('Arka hipofizden ADH salgısı azalır ve idrarın ozmotik derişimi artar.',False,'ADH azalınca idrarın derişik olmayacağını gözden kaçırmış; ADH azalırsa su kaybı artar ve idrar seyrelir.')]
 w11=tek(o11,True,0)
 q('0011',11,[A('Durumu yorumla','Terleme su kaybettirir; kanın ozmotik derişimi artar.','Ozmotik derişim ↑'),
@@ -298,18 +298,18 @@ q('0011',11,[A('Durumu yorumla','Terleme su kaybettirir; kanın ozmotik derişim
  metin='Sıcak bir günde uzun süre su içmeden spor yapan sağlıklı bir bireyde terleme nedeniyle kanın ozmotik derişimi artıyor.\nBu bireyin vücudunda gerçekleşen değişikliklerle ilgili aşağıdakilerden hangisi doğrudur?',
  dogru=w11['dogru'],yan=w11['yan'],sira=w11['sira'],istenen='Doğru olan ifade.',
  ip=['Ozmotik derişimin artması hangi algılayıcıları uyarır; vücut su kaybını azaltmak için hangi hormonu ve hangi yapıyı kullanır?'],bilgi=[OZM],
- puf='Ozmotik derişim artınca ADH artar; su tutulur, idrar azalır ve derişikleşir.')
+ puf='Ozmotik derişimdeki değişimin hangi algılayıcıyı ve hormonu devreye soktuğunu sırayla izle.')
 
 # ================ 12 · orta · büyüme hormonu
 card(12,'Yetişkinde büyüme hormonu fazlalığı','Büyüme çağı bittikten sonra büyüme hormonu fazlalığında boy uzamaz; el, ayak ve çene gibi kemikler kalınlaşıp büyür (akromegali).','Fazlalığı her yaşta devlikle özdeşleştirmek.','orta','hikâyeli',3,'en-bez','büyüme hormonu fazlalığının sonucu')
-o12=[('Boyun belirgin biçimde uzaması',False,'Çocukluktaki fazlalığın sonucunu (devlik) yetişkine uygulamış; büyüme çağı bittiğinden uzun kemikler boyuna uzamaz.'),
+o12=[('Boy uzunluğunda belirgin artış',False,'Çocukluktaki fazlalığın sonucunu (devlik) yetişkine uygulamış; büyüme çağı bittiğinden uzun kemikler boyuna uzamaz.'),
      ('El, ayak ve çene kemiklerinde kalınlaşma ve büyüme',True,''),
      ('Bazal metabolizma hızında belirgin azalma',False,'Büyüme hormonunu tiroksinle karıştırmış; metabolizma hızını düzenleyen hormon tiroksindir.'),
      ('Böbreklerde su geri emiliminin artması ve idrarın derişmesi',False,'Büyüme hormonunu ADH ile karıştırmış; su geri emilimini düzenleyen hormon ADH’dir.'),
      ('Vücut oranları korunarak cüce kalma',False,'Cüceliği hormonun fazlalığı sanmış; oysa cücelik çocuklukta büyüme hormonunun yetersizliğinde görülür.')]
 w12=tek(o12,True,1)
 q('0012',12,[A('Durumu yorumla','Birey yetişkindir; büyüme çağı tamamlanmış ve uzun kemiklerin büyüme plakları kapanmıştır.','Yetişkin + fazla hormon'),
-   A('Boy uzamasını ele','Plaklar kapandığı için kemikler boyuna uzamaz; devlik çocukluk dönemi durumudur.','Boy uzaması: beklenmez'),
+   A('Boy artışını ele','Plaklar kapandığı için kemikler boyuna uzamaz; devlik çocukluk dönemi durumudur.','Boy artışı: beklenmez'),
    A('Diğer hormonları ayır','Metabolizma hızı tiroksinle, su geri emilimi ADH ile ilgilidir.','Tiroksin ve ADH dışı'),
    A('Kemik etkisini bul','Büyüme hormonu el, ayak ve çene gibi kemiklerde kalınlaşma ve büyümeye yol açar.','Akromegali'),
    A('Sonuç','Beklenen sonuç, el, ayak ve çene kemiklerinin büyümesidir.','El, ayak, çene')],
@@ -317,29 +317,29 @@ q('0012',12,[A('Durumu yorumla','Birey yetişkindir; büyüme çağı tamamlanm�
  metin='Büyüme çağını tamamlamış sağlıklı bir yetişkinde, ön hipofizdeki bir tümör nedeniyle büyüme hormonu salgısı uzun süre normalin üzerinde kalıyor.\nBu bireyde aşağıdakilerden hangisinin görülmesi beklenir?',
  dogru=w12['dogru'],yan=w12['yan'],sira=w12['sira'],istenen='Bireyde beklenen sonuç.',
  ip=['Bireyin yaşını ve büyüme çağını tamamlamış olmasını düşün; hangi dokular hormona hâlâ yanıt verebilir?'],bilgi=[GH],
- puf='Büyüme hormonu fazlalığı çocukta boyun uzamasına, yetişkinde uç kemiklerin kalınlaşmasına yol açar.')
+ puf='Hormonun etkisini bireyin büyüme durumuyla birlikte değerlendir.')
 
 # ================ 13 · orta · pozitif geri bildirim şeması · öncüllü
-card(13,'Doğumda oksitosin döngüsü','Rahim ağzındaki gerilme oksitosin salgısını artırır; oksitosin kasılmayı artırır; kasılma gerilmeyi artırır: pozitif geri bildirim.','Her geri bildirimi negatif sanmak; oksitosinin sentez yerini karıştırmak.','orta','şekilli',3,'en-geri','oksitosinde pozitif geri bildirim şeması')
+card(13,'Doğumda oksitosin döngüsü','Döngüdeki her adımın bir sonrakini nasıl etkilediği okunarak geri bildirimin türü belirlenir.','Her geri bildirimi negatif sanmak.','orta','şekilli',3,'en-geri','oksitosinde pozitif geri bildirim şeması')
 b=['\\tikzset{box/.style={draw,rounded corners=3pt,minimum height=1.0cm,align=center,line width=.9pt,text width=3.7cm}}',
    '\\node[box] (a) at (0,0) {Bebeğin baskısıyla rahim ağzı gerilir};\\node[box] (b) at (5.6,0) {Sinirsel uyarı\\\\hipotalamusa iletilir};',
    '\\node[box] (c) at (5.6,-2.3) {Arka hipofizden kana oksitosin verilir};\\node[box] (d) at (0,-2.3) {Rahim kasları kasılır};',
    f'\\draw[{OK},line width=.9pt] (a.east)--(b.west);\\draw[{OK},line width=.9pt] (b.south)--(c.north);\\draw[{OK},line width=.9pt] (c.west)--(d.east);\\draw[{OK},line width=.9pt] (d.north)--(a.south);']
 SK=tk('\n'.join(b))
-w13=onc([False,False,True],['şekildeki mekanizmada kasılmanın artması gerilmeyi, gerilme de oksitosin salgısını artırır; bu, pozitif geri bildirimdir','oksitosin hipotalamusta sentezlenir ve arka hipofizden kana verilir; ön hipofizde sentezlenmez','oksitosin salgısı arttıkça rahim kaslarının kasılması da artar'],1)
+w13=onc([False,False,True],['şekildeki mekanizmada kasılmanın artması gerilmeyi, gerilme de oksitosin salgısını artırır; bu, pozitif geri bildirimdir','oksitosin hormondur ve rahim kaslarına sinir uzantılarıyla değil, kan yoluyla ulaşır','oksitosin salgısı arttıkça rahim kaslarının kasılması da artar'],1)
 q('0013',13,[A('Şemayı oku','Gerilme sinirsel uyarıya, uyarı oksitosin salgısına, oksitosin kasılmaya, kasılma yeniden gerilmeye yol açar.','Gerilme → oksitosin → kasılma → gerilme'),
    A('I. yargıyı değerlendir','Döngü, değişimi azaltmaz; artırır. Bu pozitif geri bildirimdir, negatif değil.','I: yanlış'),
-   A('II. yargıyı değerlendir','Oksitosin hipotalamusta sentezlenir; arka hipofiz yalnız depolayıp kana verir.','II: yanlış'),
+   A('II. yargıyı değerlendir','Oksitosin bir hormondur; kana verilir ve kanla rahim kaslarına taşınır.','II: yanlış'),
    A('III. yargıyı değerlendir','Şemada oksitosin kası kasıyor; salgı arttıkça kasılma da artar.','III: doğru'),
    A('Sonuç','Yalnız III yargısı doğrudur.','Yalnız III')],
- tipId='en-geri',z='orta',alt='Pozitif Geri Bildirim',kaz='Doğumda oksitosin döngüsünü şemadan yorumlayarak pozitif geri bildirimi ve oksitosinin sentez yerini belirler.',kalip='öncüllü',
- metin='Şekilde, doğum eyleminde rahim kaslarının kasılmasını düzenleyen mekanizma şematik olarak gösterilmiştir.\nBuna göre,\nI. Şekildeki mekanizma negatif geri bildirime örnektir.\nII. Oksitosin hormonu ön hipofizde sentezlenir.\nIII. Oksitosin salgısı arttıkça rahim kaslarının kasılması da artar.\nyargılarından hangileri doğrudur?',
+ tipId='en-geri',z='orta',alt='Pozitif Geri Bildirim',kaz='Doğumda oksitosin döngüsünü şemadan yorumlayarak geri bildirimin türünü ve hormonun taşınma yolunu belirler.',kalip='öncüllü',
+ metin='Şekilde, doğum eyleminde rahim kaslarının kasılmasını düzenleyen mekanizma şematik olarak gösterilmiştir.\nBuna göre,\nI. Şekildeki mekanizma negatif geri bildirime örnektir.\nII. Oksitosin, rahim kaslarına sinir uzantıları aracılığıyla ulaşır.\nIII. Oksitosin salgısı arttıkça rahim kaslarının kasılması da artar.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w13['dogru'],yan=w13['yan'],sira=w13['sira'],istenen='Şemaya göre doğru olan yargılar.',
  ip=['Oklarla halkayı tamamla ve her adımın bir önceki adımın etkisini artırıp azalttığına bak.'],bilgi=[GER],
- puf='Etki, kendisini başlatan uyarıyı güçlendiriyorsa mekanizma pozitif geri bildirimdir.')
+ puf='Oklarla halkayı tamamlayıp her adımın etkisinin yönünü izle.')
 
 # ================ 14 · orta · antagonist çift
-card(14,'Zıt etkili hormon çiftleri','Aynı değeri zıt yönde etkileyen hormonlar antagonist çalışır: kalsitonin–parathormon kan kalsiyumunu zıt yönlerde değiştirir.','Aynı yönde etkili hormonları (adrenalin–glukagon) zıt sanmak.','orta','düz',3,'en-genel','antagonist hormon çifti')
+card(14,'Zıt etkili hormon çiftleri','Antagonist hormonlar aynı kan değerini birbirine zıt yönde değiştirir.','Aynı yönde etkili hormonları zıt sanmak.','orta','düz',3,'en-genel','antagonist hormon çifti')
 o14=[('Adrenalin – glukagon',False,'Her iki hormon da kan glikozunu artırır; aynı yönde etkili hormonlar birbirine zıt değildir.'),
      ('Büyüme hormonu – tiroksin',False,'İkisi de büyüme ve gelişmeyi destekler; farklı değerleri etkilediklerinden zıt çift sayılmaz.'),
      ('Kalsitonin – parathormon',True,''),
@@ -371,7 +371,7 @@ q('0015',15,[A('Grafiği oku','Tiroksin ilaçla yükselince TSH düşmüş; ila�
  metin='Sağlıklı bir bireye t₁ anında dışarıdan tiroksin içeren bir ilaç verilmeye başlanıyor ve ilaç t₃ anında bırakılıyor. Bireyin kanındaki tiroksin ve TSH derişimlerinin zamanla değişimi grafikte verilmiştir.\nBuna göre,\nI. t₁–t₃ aralığında ön hipofizin TSH salgısı artmıştır.\nII. t₃ anından sonra tiroit bezinin etkinliği artmıştır.\nIII. Grafikteki değişimler negatif geri bildirim mekanizmasıyla açıklanabilir.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w15['dogru'],yan=w15['yan'],sira=w15['sira'],istenen='Grafiğe göre doğru olan yargılar.',
  ip=['İlaç alınırken ve bırakıldıktan sonra iki eğrinin zıt yönlü değişimini ayrı ayrı yorumla.'],bilgi=[TIR,GER],
- puf='Dışarıdan hormon verilirse onu uyaran hormonun salgısı azalır; kesilince yeniden artar.')
+ puf='Önce iki eğrinin yönünü oku, sonra yargıyı sına.')
 
 # ================ 16 · zor · olumsuz · kalsiyum grafiği
 card(16,'Kalsiyum yüklemesi ve iki hormon','Kan kalsiyumu artınca kalsitonin artar, parathormon azalır; beklenmeyen sonuç kemikten kana kalsiyum geçişinin artmasıdır.','Hormonları grafikten ayırt edememek; parathormonun etkisini kalsitoninle karıştırmak.','zor','grafik',5,'en-ca','kalsiyum yüklemesinde hormon grafiği (olumsuz)')
@@ -393,21 +393,21 @@ q('0016',16,[A('Grafiği oku','Kalsiyum t₁’de yükselmiş ve sonra normale d
  metin='Sağlıklı bir bireyin damarına t₁ anında hızlı biçimde kalsiyum çözeltisi veriliyor. Bireyin kan kalsiyum derişimi ile iki hormonun (X ve Y) kandaki derişimlerinin zamanla değişimi grafikte gösterilmiştir. Bu hormonlardan biri tiroit bezi, diğeri paratiroit bezi tarafından salgılanmaktadır.\nBuna göre, t₁–t₃ aralığında aşağıdakilerden hangisinin gerçekleşmesi beklenmez?',
  sekil=SK,dogru=w16['dogru'],yan=w16['yan'],sira=w16['sira'],istenen='Gerçekleşmesi beklenmeyen olay.',
  ip=['Kalsiyum yükseldikten sonra hangi eğrinin arttığına, hangisinin azaldığına bakarak hormonları ayır; ardından her olayı o hormonun etkisiyle karşılaştır.'],bilgi=[CAL],
- puf='Kan kalsiyumu artınca kalsitonin artar, parathormon azalır; kalsiyum azalınca tersi olur.')
+ puf='Önce eğrilerin yönünü oku, sonra hormonları kimlikle eşleştir.')
 
-# ================ 17 · zor · tablo · tiroit çıkarma deneyi · öncüllü
-card(17,'Tiroit çıkarma ve tiroksin verme deneyi','Kontrol, bezsiz ve bezsiz+hormon gruplarının oksijen tüketimi ve TSH değerleri karşılaştırılarak hormonun etkisi ve geri bildirim yorumlanır.','TSH artışını tiroksinin uyardığı biçiminde yorumlamak; sahte ameliyat grubunun amacını bilmemek.','zor','tablo',5,'en-geri','tiroit deneyinde tablo yorumlama')
-SK=tablo_svg(['Grup','Uygulama','O₂ tüketimi (mL/g·sa)','TSH düzeyi'],[['K','Sahte ameliyat','2,0','1'],['L','Tiroit çıkarıldı','1,0','5'],['M','Tiroit çıkarıldı + tiroksin','2,0','1']])
-w17=onc([True,False,True],['tiroit bezi çıkarılan L grubunda oksijen tüketimi düşmüş, tiroksin verilen M grubunda yeniden K grubu düzeyine çıkmıştır','L grubunda TSH’nin yüksek olması tiroksinin yokluğunun hipofiz baskısını kaldırdığını gösterir; tiroksin hipofizi uyarmaz, baskılar','K grubu, ameliyatın kendi etkisini ayırt etmek için kullanılan kontrol grubudur'],2)
-q('0017',17,[A('Grupları tanı','K kontrol, L tiroitsiz, M tiroitsiz ve tiroksin verilen gruptur.','K: kontrol · L: tiroksin yok · M: dışarıdan tiroksin'),
-   A('I. yargıyı değerlendir','L’de oksijen tüketimi düşmüş, M’de tiroksinle K düzeyine dönmüştür; tiroksin metabolizmayı artırır.','I: doğru'),
-   A('II. yargıyı değerlendir','L’de TSH’nin artması, tiroksinin hipofizi baskıladığını gösterir; uyardığını değil.','II: yanlış'),
-   A('III. yargıyı değerlendir','Sahte ameliyat grubu, ameliyatın etkisini ayırt etmek için kontroldür.','III: doğru'),
+# ================ 17 · zor · tablo · hipofiz çıkarma deneyi · öncüllü
+card(17,'Hipofiz çıkarma ve TSH verme deneyi','Hipofizsiz grup, kontrol ve TSH verilen grupla karşılaştırılarak tiroit bezinin hipofiz hormonuna bağımlılığı yorumlanır.','Tiroksinin tiroit bezini uyardığını sanmak; ölçümleri gruplar arası karşılaştırmadan yorumlamak.','zor','tablo',5,'en-geri','hipofiz deneyinde tablo yorumlama')
+SK=tablo_svg(['Grup','Uygulama','Tiroit kütlesi (mg)','Kan tiroksini'],[['K','Sahte ameliyat','20','8'],['L','Hipofiz çıkarıldı','8','2'],['M','Hipofiz çıkarıldı + TSH','20','8']])
+w17=onc([True,False,True],['hipofizi çıkarılan L grubunda kan tiroksini azalmış, TSH verilen M grubunda ise K grubu düzeyine dönmüştür','tiroit bezini uyaran hormon tiroksin değil, hipofizden salgılanan TSH’dir; M grubundaki yanıt TSH’nin etkisini gösterir','L grubunda tiroit kütlesinin azalması, tiroit bezinin çalışması için hipofiz hormonuna gereksinim olduğunu gösterir'],2)
+q('0017',17,[A('Grupları tanı','K sahte ameliyatlı, L hipofizsiz, M hipofizsiz ve TSH verilen gruptur.','K: hipofiz var · L: hipofiz yok · M: hipofiz yok + TSH'),
+   A('I. yargıyı değerlendir','Hipofiz çıkarılınca kan tiroksini düşmüş; TSH ile K düzeyine dönmüştür.','I: doğru'),
+   A('II. yargıyı değerlendir','M grubundaki yanıt, tiroit bezini uyaran hormonun tiroksin değil TSH olduğunu gösterir.','II: yanlış'),
+   A('III. yargıyı değerlendir','Hipofizsiz grupta tiroit küçülmüş; bezin işlevi hipofiz hormonuna bağlıdır.','III: doğru'),
    A('Sonuç','I ve III yargıları doğrudur.','I ve III')],
- tipId='en-geri',z='zor',alt='Deney Yorumlama',kaz='Tiroit çıkarma ve tiroksin verme deneyinin sonuçlarını tablodan yorumlar; tiroksinin etkisini, geri bildirimi ve kontrol grubunu değerlendirir.',kalip='tablo',
- metin='Aynı yaş ve kütledeki fareler üç gruba ayrılıyor. K grubuna sahte ameliyat uygulanıyor (tiroit bezi yerinde bırakılıyor). L grubunun tiroit bezi çıkarılıyor. M grubunun tiroit bezi çıkarılıyor ve bu gruba her gün tiroksin enjekte ediliyor. Bütün gruplar aynı koşullarda beslendikten dört hafta sonra yapılan ölçümler tabloda verilmiştir.\nBuna göre,\nI. Tiroksin, hücrelerdeki oksijen tüketimini artırarak metabolizma hızını yükseltir.\nII. L grubunda TSH düzeyinin yüksek olması, tiroksinin hipofizi uyardığını gösterir.\nIII. K grubu, ameliyatın sonuçlar üzerindeki etkisini ayırt etmek için kontrol grubudur.\nyargılarından hangileri doğrudur?',
+ tipId='en-geri',z='zor',alt='Deney Yorumlama',kaz='Hipofiz çıkarma ve TSH verme deneyinin sonuçlarını tablodan yorumlayarak hipofiz–tiroit ilişkisini değerlendirir.',kalip='tablo',
+ metin='Aynı yaş ve kütledeki fareler üç gruba ayrılıyor. K grubuna sahte ameliyat uygulanıyor (hipofiz yerinde bırakılıyor). L grubunun hipofizi çıkarılıyor. M grubunun hipofizi çıkarılıyor ve bu gruba her gün ön hipofiz hormonu olan TSH enjekte ediliyor. Bütün gruplar aynı koşullarda beslendikten dört hafta sonra yapılan ölçümler tabloda verilmiştir.\nBuna göre,\nI. Hipofizin çıkarılması kandaki tiroksin düzeyini azaltmıştır.\nII. M grubundaki sonuç, tiroksinin tiroit bezini uyardığını gösterir.\nIII. L grubundaki tiroit küçülmesi, tiroit bezinin çalışması için hipofiz hormonuna gereksinim olduğunu gösterir.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w17['dogru'],yan=w17['yan'],sira=w17['sira'],istenen='Deney sonuçlarına göre doğru olan yargılar.',
- ip=['Üç grubu ikişer ikişer karşılaştır; hangi uygulamanın hangi ölçümü değiştirdiğini ve K grubunun ne için bulunduğunu düşün.'],bilgi=[TIR,DEN],
+ ip=['Üç grubu ikişer ikişer karşılaştır; hangi uygulamanın hangi ölçümü değiştirdiğine bak.'],bilgi=[TIR],
  puf='Bir hormonun etkisi, hormonsuz grupla hormon verilen grubun karşılaştırılmasıyla anlaşılır.')
 
 # ================ 18 · zor · tablo · diyabet
@@ -429,11 +429,11 @@ q('0018',18,[A('Tabloyu oku','K’nin değerleri normal; L’de glikoz çok yük
  tipId='en-glikoz',z='zor',alt='Diyabet',kaz='Glikoz ve insülin düzeylerini içeren tablodan sağlıklı, insülin üretemeyen ve insüline duyarlılığı azalmış bireyleri ayırt eder.',kalip='tablo',
  metin='Yaş ve beden kütlesi benzer K, L ve M yetişkinlerinden biri sağlıklı, birinin pankreasında insülin üreten hücreler tahrip olmuş, birinde ise hedef hücrelerin insüline duyarlılığı azalmıştır. Bu kişilerin açlık kan glikoz ve insülin düzeyleri ile glikoz içtikten iki saat sonraki kan glikoz düzeyleri tabloda verilmiştir (glikoz mg/100 mL, insülin göreli birimdir).\nBuna göre, K, L ve M kişilerinin durumları sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?',
  sekil=SK,dogru=dg18,yan=y18,sira=sr18,istenen='K, L ve M kişilerinin sırasıyla durumları.',
- ip=['Glikoz ve insülin düzeylerinin birlikte ne anlattığına bak; yüksek glikozun iki ayrı nedeni insülin düzeyiyle ayırt edilir.'],bilgi=[DIY,GLK2],
- puf='Yüksek glikozla birlikte insülin çok düşükse üretim, yüksekse hedef hücre duyarlılığı sorunludur.')
+ ip=['Her kişinin açlık ve 2. saat glikozunu insülin düzeyiyle birlikte oku.'],bilgi=[DIY,GLK2],
+ puf='Tablodaki iki ölçümü birlikte yorumla.')
 
 # ================ 19 · zor · olumsuz · ADH yokluğu
-card(19,'ADH salgılayamayan birey','ADH yoksa su geri emilimi azalır; idrar çok ve seyrek olur, kan ozmotik derişimi artma eğilimi gösterir; ADH salgısı artırılamaz.','Ozmotik derişim artınca hastanın ADH salgılayabileceğini sanmak.','zor','hikâyeli',5,'en-hipo','ADH yetersizliğinde beklenen/beklenmeyen sonuçlar (olumsuz)')
+card(19,'ADH salgılayamayan birey','ADH yoksa su geri emilimi azalır; idrar çok ve seyrek olur, kan ozmotik derişimi artma eğilimi gösterir; ADH salgısı artırılamaz.','Ozmotik derişim artınca hastanın ADH salgılayabileceğini sanmak.','orta','hikâyeli',5,'en-hipo','ADH yetersizliğinde beklenen/beklenmeyen sonuçlar (olumsuz)')
 o19=[('Günlük idrar miktarı sağlıklı bir bireye göre fazladır.',True,'Doğru bir ifadeyi yanlış sanmış; ADH olmadığı için su geri emilimi azalır ve idrar miktarı artar.'),
      ('İdrarın ozmotik derişimi sağlıklı bir bireye göre düşüktür.',True,'Doğru bir ifadeyi yanlış sanmış; su geri emilmediği için idrar seyrek olur.'),
      ('Böbrek tüplerinde suyun geri emilimi sağlıklı bir bireye göre azalmıştır.',True,'Doğru bir ifadeyi yanlış sanmış; ADH suyun geri emilimini artırır, yokluğunda azalır.'),
@@ -445,11 +445,11 @@ q('0019',19,[A('Durumu yorumla','Arka hipofiz hasarlı olduğundan ADH salgılan
    A('Kana etkiyi çıkar','Su kaybı arttığı için kan plazmasının ozmotik derişimi yükselme eğilimi gösterir.','Ozmotik derişim ↑ eğilimi'),
    A('Telafiyi sına','Hasar nedeniyle ADH salgılanamaz; derişim artsa da ADH ile idrar azaltılamaz.','ADH yok → idrar azalmaz'),
    A('Sonuç','ADH’nin idrar miktarını azalttığını söyleyen ifade bu hasta için söylenemez.','ADH ile idrar azalması: söylenemez')],
- tipId='en-hipo',z='zor',alt='ADH ve Su Dengesi',kaz='ADH salgılayamayan bir bireyde idrar, kan ve böbrek tüpleriyle ilgili söylenemeyecek ifadeyi belirler.',kalip='hikâyeli',
+ tipId='en-hipo',z='orta',alt='ADH ve Su Dengesi',kaz='ADH salgılayamayan bir bireyde idrar, kan ve böbrek tüpleriyle ilgili söylenemeyecek ifadeyi belirler.',kalip='hikâyeli',
  metin='Bir kaza sonucunda hipofizin arka lobu hasar gören ve bu nedenle ADH salgılayamayan sağlıklı bir yetişkin, günlük su gereksinimini karşılayacak kadar su içmektedir.\nBu bireyle ilgili aşağıdakilerden hangisi söylenemez?',
  dogru=w19['dogru'],yan=w19['yan'],sira=w19['sira'],istenen='Bu bireyle ilgili söylenemeyecek ifade.',
  ip=['Hormon salgılanamıyorsa hangi böbrek işleminin değişeceğini ve vücudun bunu telafi edip edemeyeceğini düşün.'],bilgi=[OZM],
- puf='Hormon yoksa onu gerektiren işlem de gerçekleşmez; ozmotik derişim artsa bile ADH salgılanamaz.')
+ puf='Eksik hormonun görevlerini ve vücudun bunu telafi edip edemeyeceğini düşün.')
 
 # ================ 20 · zor · tiroit çıkarılması
 card(20,'Tiroidektomi sonrası değişimler','Tiroit çıkarılınca tiroksin azalır, TSH artar, metabolizma hızı düşer; paratiroit korunduğundan kan kalsiyumu parathormonla düzenlenir.','Kalsitonin yokluğunda kalsiyum düzenin tamamen bozulacağını sanmak; TSH’nin azalacağını düşünmek.','zor','hikâyeli',5,'en-ca','tiroit çıkarıldığında TSH, metabolizma ve kalsiyum')

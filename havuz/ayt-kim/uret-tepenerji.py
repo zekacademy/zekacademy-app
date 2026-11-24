@@ -179,7 +179,7 @@ onc('0005','05','Şekilde, ısı veren bir tepkimenin katalizörsüz (düz çizg
  istenen='Doğru ifadeler.',
  ip=['Katalizörlü ve katalizörsüz yolların hangi düzeylerde birleştiğine bak.'],
  bilgi=[B('Katalizör','tepkimeye girip kendisi sonunda değişmeden kalan ve tepkimeye daha düşük enerjili bir yol sağlayan maddedir; girenlerin ve ürünlerin enerjisi bu nedenle değişmez')],
- puf='Katalizör tepe noktasını düşürür; giren ve ürün düzeyleri, yani ΔH aynı kalır.')
+ puf='Diyagramda giren, ürün ve tepe düzeylerini ayrı ayrı oku; her ifadeyi bu düzeylerle sına.')
 
 # =============== 0006 · Hess şeması SO3 · orta · öncüllü ===============
 dA,dB=-396,-297; dC=dA-dB; assert dC==-99 and 2*dC==-198
@@ -243,7 +243,7 @@ q('0008','07',[A('Kırılan bağları belirle','CH₄’te 1 tane C–H bağı v
  z='orta',alt='Bağ Enerjileri',kaz='Tepkime entalpisi ve bilinen bağ enerjilerinden bilinmeyen bağ enerjisini bulur.',kalip='şekilli',sekil=SK,
  istenen='C–Cl bağının enerjisi (kJ/mol).',
  ip=['Yapı formüllerini karşılaştırarak hangi bağların kırılıp hangilerinin oluştuğunu belirle.'],
- bilgi=[B('Kırılan ve oluşan bağlar','tepkimede değişmeyen bağlar hesaba katılmaz; yalnız kopan ve yeni oluşan bağlar sayılır. Örnek: X–Y + Z–Z → X–Z + Y–Z tepkimesinde X–Y ve Z–Z kırılır, X–Z ile Y–Z oluşur')],
+ bilgi=[B('Kırılan ve oluşan bağlar','tepkimede değişmeyen bağlar hesaba katılmaz; yalnız kopan ve yeni oluşan bağlar sayılır. Örnek: A₂ + B₂ → 2AB tepkimesinde A–A ve B–B kırılır, iki tane A–B bağı oluşur')],
  puf='Yalnız değişen bağları yaz: ΔH = kırılanlar − oluşanlar.')
 
 # =============== 0009 · kavramlar · orta · olumsuz kök ===============
@@ -258,11 +258,11 @@ q('0009','03',[A('İfadeleri sırayla ele al','Soruda yanlış olan ifade aranı
  A('Yanlış ifadeyi seç','Katsayılar 2 katına çıkınca ΔH de 2 katına çıkar; değişmez diyen ifade yanlıştır.','D: yanlış')],
  ne='yanlış ifade',metin='Bir öğretmen, kimyasal tepkimelerde enerji değişimine ilişkin öğrencilerinden aşağıdaki ifadelerden birinin yanlış olduğunu bulmalarını istiyor. İfadeler tepkimelerin sabit sıcaklık ve basınçta gerçekleştiği varsayılarak yazılmıştır.\nBuna göre aşağıdakilerden hangisi yanlıştır?',
  dogru=d,sira=[ 'Ekzotermik bir tepkimede girenlerin toplam potansiyel enerjisi, ürünlerinkinden büyüktür.','Standart koşullarda kararlı hâldeki bir elementin standart oluşum entalpisi sıfırdır.','Endotermik bir tepkimenin entalpi değişimi pozitif değerlidir.','Bir tepkimenin tüm katsayıları iki katına çıkarılırsa entalpi değişimi değişmez.','Bir maddenin yanma tepkimesi ekzotermiktir; çevreye ısı verir.'],yan=y,
- z='orta',alt='Ekzotermik ve Endotermik Tepkimeler',kaz='Entalpi ile ilgili temel kavramlardaki yanlış ifadeyi bulur.',kalip='düz',
+ z='kolay',alt='Ekzotermik ve Endotermik Tepkimeler',kaz='Entalpi ile ilgili temel kavramlardaki yanlış ifadeyi bulur.',kalip='düz',
  istenen='Yanlış olan ifade.',
- ip=['ΔH’ın tepkimedeki madde miktarıyla ilişkisini düşün.'],
+ ip=['Her ifadeyi ΔH ve potansiyel enerji tanımlarına göre sına.'],
  bilgi=[B('Ekzotermik ve endotermik','ekzotermik tepkimede ürünlerin enerjisi girenlerden düşüktür ve ΔH < 0’dır; endotermik tepkimede ürünlerin enerjisi yüksektir ve ΔH > 0’dır. Örnek: ΔH = −30 kJ ise tepkime ısı verir')],
- puf='ΔH, tepkimedeki mol sayısıyla doğru orantılıdır; tepkimeyi tersine çevirmek yalnız işareti değiştirir.')
+ puf='Yanlış ifadeyi bulmak için her seçeneği ilgili tanıma göre tek tek sına.')
 
 # =============== 0010 · kalorimetre NaOH · orta · öncüllü · düzenek ===============
 m10,c10,T1,T2_=100,Fr(42,10),25,35; dT10=T2_-T1; q10=m10*c10*dT10; n10=Fr(4,40); dHm=-q10/1000/n10
@@ -317,16 +317,16 @@ q('0011','02',[A('Grafiği oku','Her çubuk, maddenin 1 molünün elementlerinde
  istenen='Yanlış olan ifade.',
  ip=['Grafikteki değerlerin kaç mol madde için verildiğine dikkat et.'],
  bilgi=[B('Oluşum entalpisi yorumu','ΔHf negatifse bileşik elementlerinden ısı vererek, pozitifse ısı alarak oluşur; değer 1 mol bileşik içindir. Örnek: ΔHf = −20 kJ/mol olan bileşiğin 3 molü oluşurken 60 kJ ısı açığa çıkar')],
- puf='Oluşum entalpisi 1 mol bileşik içindir; denklemde katsayı varsa değer o kadar katlanır.')
+ puf='Grafikteki değerlerin hangi madde miktarı için verildiğine bak; her ifadeyi buna göre sına.')
 
 # =============== 0012 · tablo öncüllü · orta ===============
-hf12={'C₂H₄(g)':52,'C₂H₆(g)':-84,'CO₂(g)':-394}
-dH12=hf12['C₂H₆(g)']-hf12['C₂H₄(g)']; assert dH12==-136 and hf12['C₂H₆(g)']<0 and hf12['C₂H₄(g)']>0
+hf12={'C₂H₂(g)':227,'C₂H₄(g)':52,'CO₂(g)':-394}
+dH12=hf12['C₂H₄(g)']-hf12['C₂H₂(g)']; assert dH12==-175 and hf12['C₂H₄(g)']>0 and hf12['C₂H₂(g)']>0
 SK=tablo_svg(['Madde','Standart oluşum entalpisi (kJ/mol)'],[[k,('+' if v>0 else '')+fm(v)] for k,v in hf12.items()])
 onc('0012','02','Aşağıdaki tabloda bazı gazların 25 °C’deki standart oluşum entalpileri verilmiştir.',
- [('C₂H₆(g)’nin elementlerinden oluşması ekzotermiktir.',True,'ΔHf(C₂H₆) = −84 kJ/mol negatif olduğundan oluşum sırasında ısı açığa çıkar.','—','negatif oluşum entalpisini ısı alınması sanmış.'),
-  ('C₂H₄(g) + H₂(g) → C₂H₆(g) tepkimesinin entalpi değişimi −136 kJ’dir.',True,'ΔH° = (−84) − (+52 + 0) = −136 kJ; H₂ element olduğundan sıfırdır.','—','H₂’nin oluşum entalpisini ya da girenlerin çıkarılmasını yanlış uygulamış.'),
-  ('C₂H₄(g)’nin elementlerinden oluşması sırasında ortama ısı verilir.',False,'ΔHf(C₂H₄) = +52 kJ/mol pozitif olduğundan oluşum sırasında ısı alınır.','pozitif değerin ısı verildiği anlamına geldiğini sanmış.','—')],
+ [('C₂H₄(g)’nin elementlerinden oluşması endotermiktir.',True,'ΔHf(C₂H₄) = +52 kJ/mol pozitif olduğundan oluşum sırasında ısı alınır.','—','pozitif oluşum entalpisini ısı verilmesi sanmış.'),
+  ('C₂H₂(g) + H₂(g) → C₂H₄(g) tepkimesinin entalpi değişimi −175 kJ’dir.',True,'ΔH° = (+52) − (+227 + 0) = −175 kJ; H₂ element olduğundan sıfırdır.','—','H₂’nin oluşum entalpisini ya da girenlerin çıkarılmasını yanlış uygulamış.'),
+  ('C₂H₂(g)’nin elementlerinden oluşması sırasında ortama ısı verilir.',False,'ΔHf(C₂H₂) = +227 kJ/mol pozitif olduğundan oluşum sırasında ısı alınır.','pozitif değerin ısı verildiği anlamına geldiğini sanmış.','—')],
  ['Yalnız I','I ve II','I ve III','II ve III','I, II ve III'],'Buna göre yukarıdaki ifadelerden hangileri doğrudur?',
  ne='oluşum entalpisi tablosundan yargılar',z='orta',alt='Oluşum Entalpisi',kaz='Oluşum entalpisi tablosundan oluşum ve tepkime ısılarına ilişkin yargıları değerlendirir.',kalip='öncüllü',sekil=SK,
  istenen='Doğru ifadeler.',
@@ -341,7 +341,7 @@ q('0013','06',[A('Hedefi belirle','İstenen tepkimede NO girenler tarafında de�
  A('Tepkimeleri topla','Ortak maddeler sadeleşir.','N₂ + 2O₂ → 2NO₂ ve 2NO₂ → 2NO + O₂'),
  A('Entalpileri topla','ΔH değerleri de toplanır.','ΔH = 68 + 114 = +182 kJ')],
  ne='N₂ + O₂ → 2NO tepkimesinin ΔH’ı',metin='Aşağıda iki tepkime ve standart entalpi değişimleri verilmiştir.\nN₂(g) + 2O₂(g) → 2NO₂(g)    ΔH = +68 kJ\n2NO(g) + O₂(g) → 2NO₂(g)    ΔH = −114 kJ\nBuna göre N₂(g) + O₂(g) → 2NO(g) tepkimesinin standart entalpi değişimi kaç kJ’dir?',
- dogru=dH13,yan=[(-dH13,'İkinci tepkimeyi çevirmiş ama ilk tepkimenin işaretini de değiştirmiş.','islem'),(a13+b13,'İkinci tepkimeyi tersine çevirmeden iki ΔH’ı toplamış (68 − 114).','bilgi'),(Fr(dH13,2),'Bulduğu değeri 1 mol NO için yazmış; denklemde 2 mol NO oluşuyor.','dikkat'),(-b13,'Yalnız ikinci tepkimenin ΔH’ının mutlak değerini yazmış; ilk tepkimeyi hesaba katmamış.','dikkat')],
+ dogru=dH13,yan=[(-dH13,'Doğru toplamı (+182 kJ) bulmuş ama sonucun işaretini ters yazmış.','islem'),(a13+b13,'İkinci tepkimeyi tersine çevirmeden iki ΔH’ı toplamış (68 − 114).','bilgi'),(Fr(dH13,2),'Bulduğu değeri 1 mol NO için yazmış; denklemde 2 mol NO oluşuyor.','dikkat'),(-b13,'Yalnız ikinci tepkimenin ΔH’ının mutlak değerini yazmış; ilk tepkimeyi hesaba katmamış.','dikkat')],
  z='orta',alt='Hess Yasası',kaz='Tepkimeleri ters çevirip toplayarak istenen tepkimenin entalpi değişimini bulur.',kalip='düz',
  istenen='N₂(g) + O₂(g) → 2NO(g) tepkimesinin ΔH’ı (kJ).',
  ip=['NO’nun hangi tepkimede girenler, hangisinde ürünler tarafında olması gerektiğine bak.'],
@@ -359,7 +359,7 @@ onc('0014','06','X(g) + Y(g) → Z(g)    ΔH = −60 kJ\nZ(g) → T(g)    ΔH = 
  istenen='Doğru ifadeler.',
  ip=['Her ifadede tepkimenin verilenlere göre nasıl değiştirildiğine bak.'],
  bilgi=[B('Hess yasası kuralları','ters çevirmede ΔH’ın işareti değişir, katsayılarla çarpmada ΔH de aynı sayıyla çarpılır, toplamada ΔH’lar toplanır. Örnek: M → N ΔH = +9 kJ ise 3M → 3N için ΔH = +27 kJ’dir')],
- puf='Tepkimeye ne yapılırsa ΔH’a da aynısı yapılır: çevir → işaret, çarp → çarp, topla → topla.')
+ puf='Verilen tepkimeye uygulanan işlemi ΔH’a da uygula.')
 
 # =============== 0015 · karışım · zor · tablo ===============
 hc={'CH₄(g)':890,'C₂H₆(g)':1560}; Mk={'CH₄(g)':16,'C₂H₆(g)':30}
@@ -398,27 +398,30 @@ q('0016','07',[A('Kırılan bağları belirle','1 mol H–H ve ½ mol O=O bağı
  A('O–H bağ enerjisini bul','Eşitlik E için çözülür.','E = (685 + 241) ÷ 2 = 463 kJ/mol')],
  ne='O–H bağının enerjisi',metin='Gaz hâlindeki suyun standart oluşum entalpisi −241 kJ/mol’dür. Şekilde H₂O(g)’nin elementlerinden oluşumu yapı formülleriyle ve bazı bağ enerjileriyle verilmiştir.\nBuna göre O–H bağının enerjisi kaç kJ/mol’dür?',
  dogru=ohb,yan=[(v1,'ΔH’ı eşitlikte işaretiyle ters kullanmış (685 − 241 = 444 kJ’yi 2’ye bölmüş).','bilgi'),(v2,'Toplam enerjiyi 4’e bölmüş; H₂O’da yalnız 2 O–H bağı olduğunu görmemiş.','dikkat'),(v3,'O=O bağını ½ ile çarpmadan tam almış (436 + 498 + 241 = 1175 kJ’yi 2’ye bölmüş).','dikkat'),(v4,'Bulduğu 926 kJ’yi bağ sayısı olan 2’ye bölmemiş; iki O–H bağının toplamını yazmış.','islem')],
- z='zor',alt='Bağ Enerjileri',kaz='Oluşum entalpisi ve bağ enerjilerini birleştirerek bilinmeyen bağ enerjisini hesaplar.',kalip='şekilli',sekil=SK,
+ z='orta',alt='Bağ Enerjileri',kaz='Oluşum entalpisi ve bağ enerjilerini birleştirerek bilinmeyen bağ enerjisini hesaplar.',kalip='şekilli',sekil=SK,
  istenen='O–H bağının enerjisi (kJ/mol).',
  ip=['Şekildeki tepkimede katsayıların ½ olduğuna ve 1 mol suda kaç O–H bağı bulunduğuna dikkat et.'],
- bilgi=[B('Bağ sayısı','bir molekülde aynı türden birden fazla bağ varsa toplam bağ enerjisi bağ sayısıyla çarpılır; kesirli katsayılar bağ sayısına da yansır. Örnek: ½ molekülde 2 bağ varsa kırılan bağ sayısı 1 mol olur')],
+ bilgi=[B('Bağ sayısı','bir molekülde aynı türden birden fazla bağ varsa toplam bağ enerjisi bağ sayısıyla çarpılır; katsayılar bağ sayısına da yansır. Örnek: katsayısı 3 olan bir molekülde molekül başına 2 aynı bağ varsa 6 mol bağ vardır')],
  puf='Katsayıları bağ sayısına yansıt; oluşum entalpisi 1 mol bileşik içindir.')
 
-# =============== 0017 · iki basamaklı diyagram · zor · öncüllü ===============
-lv=[(40,'p'),(100,'t'),(20,'v'),(70,'t'),(10,'p')]
-dHt=10-40; ea1=100-40; ea2=70-20; eag=100-10
-assert (dHt,ea1,ea2,eag)==(-30,60,50,90) and ea1>ea2
-SK=pe_fig([(lv,'thick,vurgu')],[10,20,40,70,100],{0:('Girenler','a'),2:('Ara ürün','b'),4:('Ürünler','a')})
-onc('0017','05','Şekilde, iki basamakta gerçekleşen bir tepkimenin potansiyel enerji–tepkime koordinatı diyagramı verilmiştir.',
- [('Tepkimenin toplam entalpi değişimi −30 kJ’dir.',True,'ΔH, ürünlerle girenlerin enerji farkıdır: 10 − 40 = −30 kJ.','—','ara ürünün enerjisini ürün sanıp basamak farkını toplam ΔH almış.'),
-  ('Hız belirleyen basamak ikinci basamaktır.',False,'Birinci basamağın aktivasyon enerjisi 60 kJ, ikincinin 50 kJ’dir; en yüksek engelli birinci basamak yavaştır.','ikinci basamağın tepesinin daha yüksek olduğunu düşünmüş.','—'),
-  ('Geri tepkimenin aktivasyon enerjisi 90 kJ’dir.',True,'Geri tepkime ürünlerden başlar; en yüksek tepe 100 kJ olduğundan 100 − 10 = 90 kJ gerekir.','—','geri tepkimenin ürünlerden başladığını görmemiş.')],
- ['Yalnız I','Yalnız III','I ve II','I ve III','I, II ve III'],'Buna göre yukarıdaki ifadelerden hangileri doğrudur?',
- ne='iki basamaklı diyagramın yorumu',z='zor',alt='Potansiyel Enerji Diyagramı',kaz='İki basamaklı diyagramda toplam ΔH, yavaş basamak ve geri aktivasyon enerjisini yorumlar.',kalip='öncüllü',sekil=SK,
- istenen='Doğru ifadeler.',
- ip=['Toplam ΔH için uçlara, aktivasyon enerjileri için hangi düzeyden hangi tepeye çıkıldığına bak.'],
- bilgi=[B('Basamaklı tepkime diyagramı','ara ürün iki tepe arasındaki çukurdur; her basamağın aktivasyon enerjisi, o basamağın başlangıç düzeyinden kendi tepesine olan farktır; en büyük engelli basamak en yavaş basamaktır')],
- puf='Toplam ΔH uç düzeylerden; her basamağın engeli kendi başlangıcından hesaplanır.')
+# =============== 0017 · Hess + kütle (termit) · zor ===============
+h1,h2=-1676,-824; dT=h1-h2; assert dT==-852
+Q17=1278; nr17=Fr(Q17,-dT); assert nr17==Fr(3,2)
+mFe=2*nr17*56; assert mFe==168
+y1=nr17*56; y2=3*27; y3=nr17*160; y4=nr17*102
+assert (y1,y2,y3,y4)==(84,81,240,153) and len({mFe,y1,y2,y3,y4})==5
+q('0017','09',[A('Hedef tepkimeyi belirle','Fe₂O₃ + 2Al → Al₂O₃ + 2Fe elde edilmeli; Al₂O₃ üründe, Fe₂O₃ girende olmalı.','(1) aynen, (2) ters'),
+ A('Tepkimeleri topla','İkinci tepkime çevrilince ΔH’ın işareti değişir.','ΔH = −1676 + 824 = −852 kJ'),
+ A('Tepkime sayısını bul','−852 kJ, denklemin bir kez gerçekleşmesi içindir.','1278 ÷ 852 = 1,5 kez'),
+ A('Fe mol sayısını bul','Her gerçekleşmede 2 mol Fe oluşur.','1,5 × 2 = 3 mol Fe'),
+ A('Kütleyi hesapla','Mol sayısı mol kütlesiyle çarpılır.','3 × 56 = 168 g')],
+ ne='1278 kJ ısıyla oluşan Fe kütlesi',metin='25 °C’de aşağıdaki tepkimelerin standart entalpi değişimleri verilmiştir.\n2Al(k) + 3/2O₂(g) → Al₂O₃(k)    ΔH = −1676 kJ\n2Fe(k) + 3/2O₂(g) → Fe₂O₃(k)    ΔH = −824 kJ\nFe₂O₃(k) + 2Al(k) → Al₂O₃(k) + 2Fe(k) tepkimesinde 1278 kJ ısı açığa çıkıyor.\nFe’nin atom kütlesi 56 g/mol olduğuna göre oluşan Fe kaç gramdır?',
+ dogru=mFe,yan=[(y1,'Tepkime sayısını (1,5) Fe’nin mol sayısı sanmış (1,5 × 56).','islem'),(y2,'Isıyı yanlış yorumlayıp harcanan Al’nin kütlesini (3 mol × 27) bulmuş.','dikkat'),(y3,'Harcanan Fe₂O₃’ün kütlesini (1,5 mol × 160) bulmuş.','dikkat'),(y4,'Oluşan Al₂O₃’ün kütlesini (1,5 mol × 102) bulmuş.','dikkat')],
+ z='zor',alt='Hess Yasası ve Stokiyometri',kaz='Hess yasasıyla tepkime entalpisini bulup ısı miktarından oluşan madde kütlesini hesaplar.',kalip='düz',
+ istenen='Oluşan Fe kütlesi (g).',
+ ip=['Önce verilen tepkimeleri hedef tepkimeyi verecek biçimde düzenle.'],
+ bilgi=[B('Isı–mol orantısı','tepkimenin ΔH değeri, denklemdeki katsayılarla gerçekleşmesi için geçerlidir; açığa çıkan ısı bu değerin kaç katı ise tepkime o kadar kez gerçekleşmiştir.')],
+ puf='Önce Hess ile ΔH, sonra ısı ÷ ΔH ile tepkime sayısı, sonra mol ve kütle.')
 
 # =============== 0018 · Hess şeması + kütle · zor ===============
 dd1,dd2=-788,-566; dd3=dd1-dd2; assert dd3==-222 and 2*(-394)==dd1

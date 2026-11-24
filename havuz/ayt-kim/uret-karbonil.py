@@ -94,6 +94,7 @@ M_2PNON=[('c1',None,0,None),('c2','c1',30,None),('o','c2',90,'O',True),('c3','c2
 M_3PNON=[('c1',None,0,None),('c2','c1',30,None),('c3','c2',-30,None),('o','c3',-90,'O',True),('c4','c3',30,None),('c5','c4',-30,None)]                             # 3-pentanon
 M_BUTNON=[('c1',None,0,None),('c2','c1',30,None),('o','c2',90,'O',True),('c3','c2',-30,None),('c4','c3',30,None)]                                                  # bütanon
 M_3M2B=[('c1',None,0,None),('c2','c1',30,None),('o','c2',90,'O',True),('c3','c2',-30,None),('m','c3',-90,None),('c4','c3',30,None)]                                # 3-metil-2-bütanon
+M_PENTAL=[('c1',None,0,None),('c2','c1',30,None),('c3','c2',-30,None),('c4','c3',30,None),('c5','c4',-30,None),('o','c1',90,'O',True),('h','c1',210,'H')]
 M_NEOP=[('c1',None,0,None),('c2','c1',30,None),('m1','c2',90,None),('m2','c2',-30,None),('m3','c2',150,None),('o','c1',-90,'O',True),('h','c1',210,'H')]           # 2,2-dimetilpropanal (çizim: m3 ters)
 M_1P=[('o',None,0,'HO'),('c1','o',-30,None),('c2','c1',30,None),('c3','c2',-30,None)]
 M_1B=[('o',None,0,'HO'),('c1','o',-30,None),('c2','c1',30,None),('c3','c2',-30,None),('c4','c3',30,None)]
@@ -101,7 +102,7 @@ M_2BUT=[('a',None,0,None),('b','a',30,None),('o','b',90,'OH'),('c','b',-30,None)
 M_TBUT=[('c',None,0,None),('m1','c',180,None),('m2','c',0,None),('m3','c',-90,None),('o','c',90,'OH')]
 M_2MP1=[('o',None,0,'HO'),('c1','o',-30,None),('c2','c1',30,None),('c3','c2',-30,None),('c4','c2',90,None)]
 for sp,f,s in [(M_3MB,(5,10,1),'ald'),(M_BUTAL,(4,8,1),'ald'),(M_2MPAL,(4,8,1),'ald'),(M_PRPAL,(3,6,1),'ald'),(M_2M3P,(6,12,1),'ket'),(M_2PNON,(5,10,1),'ket'),(M_3PNON,(5,10,1),'ket'),
-               (M_BUTNON,(4,8,1),'ket'),(M_3M2B,(5,10,1),'ket'),(M_NEOP,(5,10,1),'ald')]:
+               (M_BUTNON,(4,8,1),'ket'),(M_3M2B,(5,10,1),'ket'),(M_NEOP,(5,10,1),'ald'),(M_PENTAL,(5,10,1),'ald')]:
     assert formul(sp)==f,(sp,formul(sp)); assert sinif(sp)==s
 for sp,f in [(M_1P,(3,8,1)),(M_1B,(4,10,1)),(M_2BUT,(4,10,1)),(M_TBUT,(4,10,1)),(M_2MP1,(4,10,1))]: assert formul(sp)==f
 # ---------- izomer sayımı (kaba kuvvet): CnH2nO karbonil izomerleri ----------
@@ -165,8 +166,8 @@ Q('0003','ayirt','kolay','düz','Tollens ayıracı','Tollens ayıracı ile aldeh
   [A('Testin ilkesi','Tollens ayıracı yalnız aldehit grubunu yükseltger ve kendisi gümüşe indirgenir.','–CHO + Ag⁺ → –COOH + Ag'),A('Bileşikleri sınıflandır','Her formülde karbonil grubunun yerine bak.','Keton: R–CO–R · aldehit: R–CHO'),A('Alkol ve eteri ele','Bu iki grup Tollens ayıracıyla tepkime vermez.','CH₃CH₂OH, CH₃OCH₂CH₃ → tepkime yok'),A('Sonuç','Yalnız CH₃CH₂CHO aldehittir.','CH₃CH₂CHO')],
   metin='Amonyaklı gümüş nitrat çözeltisi (Tollens ayıracı) ile hafifçe ısıtılan bir organik bileşik, deney tüpünün çeperinde parlak bir gümüş tabakası oluşturuyor.\nBuna göre bu bileşik aşağıdakilerden hangisi olabilir?',
   istenen='Gümüş aynası veren bileşik.',ip=['Hangi fonksiyonel grubun Tollens ayıracını indirgeyebildiğini düşün.'],
-  bilgi=[B('Tollens testi','Tollens ayıracı Ag(NH₃)₂⁺ iyonu içerir. Aldehit yükseltgenip karboksilik asit olurken Ag⁺ iyonu Ag metaline indirgenir ve tüpün çeperinde ayna oluşur. Örnek: etanal ile gümüş aynası görülür, etanon ile görülmez')],
-  puf='Gümüş aynası = aldehit; keton ayna vermez.',dogru=o['dogru'],yan=o['yan'],sira=yer('CH₃CH₂CHO',[s[0] for s in sec if not s[1]],3))
+  bilgi=[B('Tollens testi','Tollens ayıracı Ag(NH₃)₂⁺ iyonu içerir. Aldehit yükseltgenip karboksilik asit olurken Ag⁺ iyonu Ag metaline indirgenir ve tüpün çeperinde ayna oluşur. Örnek: propanal ile gümüş aynası görülür, propanon ile görülmez')],
+  puf='Ayıraçlar karbonil bileşiklerini fonksiyonel gruplarına göre ayırt eder.',dogru=o['dogru'],yan=o['yan'],sira=yer('CH₃CH₂CHO',[s[0] for s in sec if not s[1]],3))
 
 # ================= 04 · sınıflandırma · kolay · şekil · öncüllü =================
 SK=tk(sahne([(M_BUTAL,'A'),(M_2PNON,'B'),(M_1P,'C')]))
@@ -202,7 +203,7 @@ Q('0005','elde','orta','öncüllü','Primer alkolden aldehit ve asit eldesi','Pr
   metin='Şekilde 1-propanolün iki basamaklı yükseltgenmesi gösterilmiştir.\nBuna göre,\nI. A bir aldehittir.\nII. B’nin molekül formülü C₃H₆O₂’dir.\nIII. B’nin sulu çözeltisi mavi turnusolu kırmızıya çevirir.\nyargılarından hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Her yükseltgenme basamağında karbonil grubunun nasıl değiştiğini ve formülde ne değiştiğini izle.'],
   bilgi=[B('Primer alkolün yükseltgenmesi','Primer alkol → aldehit → karboksilik asit sırasıyla yükseltgenir. Alkolden aldehite geçerken molekül 2 H kaybeder, aldehitten asite geçerken 1 O kazanır. Örnek: CH₃CH₂OH → CH₃CHO → CH₃COOH')],
-  puf='Primer alkol → aldehit → asit: ilk adımda 2 H gider, ikinci adımda 1 O eklenir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Yükseltgenme basamaklarında fonksiyonel grubun değişimini izle.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 06 · elde edilme · orta · şekil · öncüllü =================
 SK=tk(sahne([(M_1B,'X'),(M_2BUT,'Y'),(M_TBUT,'Z')]))
@@ -216,7 +217,7 @@ Q('0006','elde','orta','öncüllü','Alkol sınıfına göre yükseltgenme ürü
   metin=MK+' X, Y ve Z alkollerinin her biri asitli K₂Cr₂O₇ çözeltisiyle ılımlı koşullarda ayrı ayrı yükseltgenmeye çalışılıyor.\nBuna göre,\nI. X’ten oluşan ürün Tollens ayıracı ile gümüş aynası verir.\nII. Y’den oluşan ürün Fehling ayıracı ile tuğla kırmızısı çökelti verir.\nIII. Z’den oluşan ürün bir ketondur.\nyargılarından hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Önce her alkolün sınıfını belirle; sonra bu sınıfın yükseltgenme ürününü bul.'],
   bilgi=[B('Alkol sınıfı ve ürün','Primer alkol → aldehit, sekonder alkol → keton verir; tersiyer alkolde –OH taşıyan karbonda H olmadığından ılımlı yükseltgenme olmaz. Örnek: 1-propanol → propanal, 2-propanol → propanon')],
-  puf='Yükseltgenme için –OH’li karbonda en az bir H gerekir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Alkolün sınıfı, yükseltgenme ürününün sınıfını belirler.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 07 · Tollens/Fehling · orta · tablo · öncüllü =================
 SK=tablo_svg(['Madde','Tollens ayıracı','Fehling ayıracı'],[['X','Gümüş aynası oluştu','Kırmızı çökelti oluştu'],['Y','Değişiklik olmadı','Değişiklik olmadı'],['Z','Gümüş aynası oluştu','Kırmızı çökelti oluştu']])
@@ -230,7 +231,7 @@ Q('0007','ayirt','orta','öncüllü','Tollens ve Fehling deney sonuçları','Tol
   metin='X, Y ve Z maddelerinin her biri karbonil grubu içeren bir organik bileşiktir (aldehit ya da keton). Bu maddelerle yapılan Tollens ve Fehling deneylerinin sonuçları aşağıdaki tabloda verilmiştir.\nBuna göre,\nI. X ve Z aldehit grubu içerir.\nII. Y ketondur.\nIII. X ve Z birbirinin yapı izomeridir.\nyargılarından hangileri kesinlikle doğrudur?',
   sekil=SK,istenen='Kesinlikle doğru olan yargılar.',ip=['Aldehit ve ketonun iki ayıraca verdiği tepkimeleri karşılaştır; tablodan çıkarılamayan bilgiyi ayıkla.'],
   bilgi=[B('Tollens ve Fehling','Aldehit, Tollens ayıracıyla gümüş aynası, Fehling ayıracıyla tuğla kırmızısı Cu₂O çökeltisi oluşturur. Ketonlar bu ayıraçlarla tepkimeye girmez. Örnek: propanal iki testte de pozitif, propanon iki testte de negatiftir')],
-  puf='Aldehit iki ayıraçta da pozitif, keton ikisinde de negatiftir; izomerlik formül ister.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Ayıraç sonuçları yalnızca fonksiyonel grubu belirler; formül hakkında bilgi vermez.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 # ================= 08 · Tollens hesabı · orta · şekil =================
 n_ald=Fr(22,10)/44; assert n_ald==Fr(1,20)
 dg_=n_ald*2*AG; assert dg_==Fr(54,5)
@@ -286,42 +287,41 @@ sec=[('L ile M birbirinin fonksiyonel grup izomeridir.',True,'ikisinin de formü
 o=tek2(sec,False)
 Q('0010','fiz','orta','tablo','Karbonil bileşiklerinin kaynama noktaları','Aldehit ve ketonun kaynama noktalarını alkan ve alkolle karşılaştırıp etkileşim türlerini yorumlar.',
   'Aldehit ve keton polardır (dipol–dipol), saf hâlde hidrojen bağı yapmazlar; kaynama noktaları aynı mol kütleli alkandan yüksek, alkolden düşüktür.','Aldehit ve ketonun saf hâlde hidrojen bağı yaptığını sanmak.','kaynama noktası tablosu',
-  [A('Tabloyu yorumla','Mol kütleleri yakın olsa da kaynama noktaları farklı.','K < L < M < N'),A('Etkileşimleri ele','K: London · L, M: dipol–dipol · N: hidrojen bağı.','Sıra etkileşim gücüyle uyumlu'),A('İfadeleri sına','Aldehitte O’ya bağlı H yoktur.','L’de H bağı yok'),A('Sonuç','Söylenemeyen ifade L’nin hidrojen bağı yaptığı yargısıdır.','L ... hidrojen bağı → yanlış')],
+  [A('Tabloyu yorumla','Mol kütleleri yakın olsa da kaynama noktaları farklı.','K < L < M < N'),A('Etkileşimleri ele','K: London · L, M: dipol–dipol · N: hidrojen bağı.','Sıra etkileşim gücüyle uyumlu'),A('İfadeleri sına','Aldehitte O’ya bağlı H yoktur.','L’de H bağı yok'),A('Sonuç','L propanaldir; O–H bağı taşımaz ve saf hâlde hidrojen bağı yapmaz.','L’de hidrojen bağı yoktur → ilgili ifade söylenemez')],
   metin='Aşağıdaki tabloda mol kütleleri birbirine yakın dört organik bileşiğin formülleri ve normal kaynama noktaları verilmiştir.\nBu verilere göre aşağıdakilerden hangisi söylenemez?',
   sekil=SK,istenen='Söylenemeyen ifade.',ip=['Her bileşiğin molekülleri arasındaki etkileşim türünü belirle; O atomuna bağlı H olup olmadığına bak.'],
   bilgi=[B('Karbonil bileşiklerinde etkileşim','Aldehit ve ketonda C=O polardır; moleküller arası dipol–dipol etkileşimi vardır. O–H bağı olmadığından saf hâlde hidrojen bağı yapmazlar. Örnek: etanal (CH₃CHO) molekülleri arasında hidrojen bağı bulunmaz')],
   puf='Hidrojen bağı için H atomu N, O ya da F’ye doğrudan bağlı olmalıdır.',dogru=o['dogru'],yan=o['yan'],sira=yer(o['dogru'],[s[0] for s in sec if s[1]],0))
 
 # ================= 11 · izomer · orta · düz =================
-IZ5=IZ[5]; assert IZ5['ket']==3
-vals=dict(d=IZ[5]['ket'],atla=IZ[5]['ket']-1,ald=IZ[5]['ald'],c6=IZ[6]['ket'],hepsi=IZ[5]['ald']+IZ[5]['ket'])
-assert len(set(vals.values()))==5
-Q('0011','izo','orta','düz','Keton izomerlerini sayma','C₅H₁₀O formüllü ketonların tümünü zincir ve konum izomerliğini tarayarak sayar.',
-  'Ketonlarda karbonil iç karbonda bulunur; zincir ve karbonil konumu değiştirilerek tüm yapılar taranır (C₅H₁₀O için 3).','Dallanmış ketonu atlamak ya da aldehitleri de saymak.','C₅H₁₀O ketonları',
-  [A('Zincir türlerini yaz','5 karbonlu düz ve 4 karbonlu dallı iskeletleri ayrı ayrı düşün.','düz C₅ · dallı C₄–C'),A('Düz zincirde konum','Karbonil uçta olamaz (aldehit olur).','2-pentanon · 3-pentanon'),A('Dallı zincirde konum','Dallı iskelette karbonil iç karbonda olmalı.','3-metil-2-bütanon'),A('Say','Toplam keton sayısını bul.','2 + 1 = 3')],
-  metin='Molekül formülü C₅H₁₀O olan, karbonil grubu içeren ve halkalı yapıda ya da çift bağlı olmayan bileşiklerden kaç tanesi ketondur?',
-  istenen='C₅H₁₀O formüllü keton sayısı.',ip=['Karbonil grubunun zincir ucunda mı yoksa içte mi olması gerektiğini düşün; düz ve dallı iskeletleri ayrı tara.'],
+vals=dict(d=IZ[6]['ket'],atla=IZ[6]['ket']-1,c5=IZ[5]['ket'],ald=IZ[6]['ald'],hepsi=IZ[6]['ald']+IZ[6]['ket'])
+assert vals['d']==6 and len(set(vals.values()))==5
+Q('0011','izo','orta','düz','Keton izomerlerini sayma','C₆H₁₂O formüllü ketonların tümünü zincir ve konum izomerliğini tarayarak sayar.',
+  'Ketonlarda karbonil iç karbonda bulunur; zincir ve karbonil konumu değiştirilerek tüm yapılar taranır.','Dallanmış ketonlardan birini atlamak ya da aldehitleri de saymak.','C₆H₁₂O ketonları',
+  [A('İskeletleri yaz','6 karbonlu düz, 5 karbonlu bir dallı ve 4 karbonlu iki dallı iskeletleri ayrı ayrı düşün.','düz C₆ · C₅+CH₃ · C₄+2CH₃'),A('Düz zincirde konum','Karbonil uçta olamaz (aldehit olur).','2-heksanon · 3-heksanon'),A('Dallı zincirlerde konum','Karbonil iç karbonda olmalı.','3-metil-2-pentanon · 4-metil-2-pentanon · 2-metil-3-pentanon · 3,3-dimetil-2-bütanon'),A('Say','Toplam keton sayısını bul.','2 + 4 = 6')],
+  metin='Stereoizomerler ayrı sayılmayacaktır.\nMolekül formülü C₆H₁₂O olan, karbonil grubu içeren ve halka ve C=C bağı içermeyen bileşiklerden kaç tanesi ketondur?',
+  istenen='C₆H₁₂O formüllü keton sayısı.',ip=['Karbonil grubunun zincir ucunda mı yoksa içte mi olması gerektiğini düşün; düz ve dallı iskeletleri ayrı tara.'],
   bilgi=[B('Yapı izomerliği','Aynı molekül formülüne sahip, atomların bağlanma düzeni farklı bileşiklere yapı izomeri denir. Örnek: C₄H₁₀ için bütan ve 2-metilpropan zincir izomeridir')],
   puf='Keton için karbonil iç karbonda olmalı; uçtaysa aldehit olur.',dogru=vals['d'],
-  yan=[(vals['atla'],'Dallanmış 3-metil-2-bütanonu atlayıp yalnız düz zincirli iki ketonu saymış.','dikkat'),
-       (vals['ald'],'Ketonlar yerine aldehit izomerlerini saymış; C₅H₁₀O’nun 4 aldehit izomeri vardır.','dikkat'),
-       (vals['c6'],'Karbon sayısını 6 alıp C₆H₁₂O formüllü ketonları saymış.','dikkat'),
-       (vals['hepsi'],'Aldehit ve ketonların tümünü (4 + 3) saymış; soru yalnız ketonları sormaktadır.','dikkat')])
+  yan=[(vals['atla'],'Dallanmış ketonlardan birini atlayıp beş keton saymış.','dikkat'),
+       (vals['c5'],'Karbon sayısını 5 alıp C₅H₁₀O formüllü ketonları saymış.','dikkat'),
+       (vals['ald'],'Ketonlar yerine C₆H₁₂O formüllü aldehit izomerlerini saymış.','dikkat'),
+       (vals['hepsi'],'Aldehit ve ketonların tümünü (8 + 6) saymış; soru yalnız ketonları sormaktadır.','dikkat')])
 
 # ================= 12 · izomer · orta · şekil · öncüllü =================
-SK=tk(sahne([(M_BUTAL,'A'),(M_BUTNON,'B'),(M_2MPAL,'C')]))
-assert formul(M_BUTAL)==formul(M_BUTNON)==formul(M_2MPAL)
+SK=tk(sahne([(M_PENTAL,'A'),(M_3PNON,'B'),(M_3MB,'C')]))
+assert formul(M_PENTAL)==formul(M_3PNON)==formul(M_3MB)
 d=dict(I=(False,'A ile B aynı formüllü ama farklı fonksiyonel gruplu (aldehit–keton) bileşiklerdir; bu fonksiyonel grup izomerliğidir, zincir izomerliği değil'),
        II=(True,'A ve C’nin ikisi de aldehittir ve karbon iskeletleri farklıdır (düz ve dallı); zincir izomeridirler'),
-       III=(True,'B keton, C aldehittir ve ikisinin de formülü C₄H₈O’dur; fonksiyonel grup izomeridirler'))
+       III=(True,'B keton, C aldehittir ve ikisinin de formülü C₅H₁₀O’dur; fonksiyonel grup izomeridirler'))
 o=OC(d,sr('Yalnız I','Yalnız III','I ve II','I ve III','II ve III')); assert o['dogru']=='II ve III'
 Q('0012','izo','orta','öncüllü','Aldehit–keton izomerliği','Aynı formüllü karbonil bileşiklerinde zincir ve fonksiyonel grup izomerliğini ayırt eder.',
   'Aynı fonksiyonel grupta iskelet farkı zincir izomerliği; aynı formülde farklı fonksiyonel grup (aldehit–keton) fonksiyonel grup izomerliğidir.','Zincir ve fonksiyonel grup izomerliğini karıştırmak.','A, B, C izomerleri',
-  [A('Formülleri karşılaştır','Üç bileşiğin de formülü C₄H₈O.','A, B, C izomerdir'),A('A ve B','Aldehit ve keton: fonksiyonel grup farkı.','I yanlış'),A('A ve C','İkisi de aldehit, iskelet farklı.','II doğru'),A('B ve C','Keton ve aldehit: fonksiyonel grup farkı.','III doğru')],
+  [A('Formülleri karşılaştır','Üç bileşiğin de formülü C₅H₁₀O.','A, B, C izomerdir'),A('A ve B','Aldehit ve keton: fonksiyonel grup farkı.','I yanlış'),A('A ve C','İkisi de aldehit, iskelet farklı.','II doğru'),A('B ve C','Keton ve aldehit: fonksiyonel grup farkı.','III doğru')],
   metin=MK+' A, B ve C bileşiklerinin molekül formülleri aynıdır.\nBuna göre,\nI. A ile B birbirinin zincir izomeridir.\nII. A ile C birbirinin zincir izomeridir.\nIII. B ile C birbirinin fonksiyonel grup izomeridir.\nyargılarından hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Her çiftte fonksiyonel grupların ve karbon iskeletlerinin aynı mı farklı mı olduğunu karşılaştır.'],
   bilgi=[B('İzomer türleri','Zincir izomerleri aynı fonksiyonel gruba, farklı karbon iskeletine sahiptir; fonksiyonel grup izomerleri farklı fonksiyonel gruplara sahiptir. Örnek: bütan–2-metilpropan zincir; etanol–dimetil eter fonksiyonel grup izomeridir')],
-  puf='Aynı grup, farklı iskelet: zincir izomeri. Farklı grup, aynı formül: fonksiyonel grup izomeri.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='İzomer türünü fonksiyonel grupları ve iskeletleri karşılaştırarak belirle.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 13 · elde edilme · orta · şema =================
 fE=lambda c,h,o_:(c,h,o_)
@@ -345,30 +345,31 @@ Q('0013','elde','orta','şekilli','Etinin hidrasyonu ve ürünün tepkimeleri','
   [A('X’i bul','Etinin hidrasyonu aldehit verir.','C₂H₂ + H₂O → C₂H₄O: etanal'),A('Y’yi bul','H₂/Ni karbonili indirger.','CH₃CHO → CH₃CH₂OH (C₂H₆O)'),A('Z’yi bul','Tollens ayıracı aldehiti asite yükseltger.','CH₃CHO → CH₃COOH'),A('Birleştir','Üç bileşik sırasıyla yazılır.','etanal · etanol · etanoik asit')],
   metin='Şekilde etin gazından başlayarak yapılan dönüşümler gösterilmiştir. Etinin uygun koşullarda su ile tepkimesinden kararlı X bileşiği oluşmuştur.\nBuna göre X, Y ve Z bileşikleri aşağıdakilerden hangisinde doğru verilmiştir?',
   sekil=SK,istenen='X, Y ve Z’nin adları.',ip=['Hidrasyon ürününün formülünü ve fonksiyonel grubunu belirle; H₂/Ni ile Tollens ayıracının yönlerini ayrı ayrı düşün.'],
-  bilgi=[B('Alkin hidrasyonu','Etinin su ile tepkimesi etanal verir; diğer alkinlerin hidrasyonu ise keton verir. Örnek: propinin hidrasyonundan propanon oluşur')],
-  puf='Etin hidrasyonu aldehit, diğer alkinlerin hidrasyonu keton verir.',dogru=dg,yan=yan,sira=yer(dg,[y[0] for y in yan],0))
+  bilgi=[B('Alkin hidrasyonu','Alkine uygun koşullarda su katılınca kararlı ürün olarak bir karbonil bileşiği oluşur. Örnek: propinin hidrasyonundan propanon oluşur')],
+  puf='Hidrasyon ürününün formülünü yazıp karbonil grubunun yerine bak.',dogru=dg,yan=yan,sira=yer(dg,[y[0] for y in yan],0))
 
-# ================= 14 · yükseltgenme · orta · grafik =================
+# ================= 14 · yükseltgenme · orta · grafik · öncüllü =================
 ald={0:Fr(1),10:Fr(7,10),20:Fr(2,5),30:Fr(1,5),40:Fr(1,10)}; asit={t:1-v for t,v in ald.items()}
 assert all(ald[t]+asit[t]==1 for t in ald)
-Ag=2*ald[20]; assert Ag==Fr(4,5)
-vals=dict(d=Ag,bir=ald[20],asit=asit[20],asit2=2*asit[20],hep=Fr(2))
-assert len(set(vals.values()))==5
+assert ald[20]<asit[20] and (ald[0]-ald[40])==asit[40]-asit[0] and ald[40]>0
 g=('\\begin{axis}[width=7.2cm,height=5.8cm,xmin=0,xmax=45,ymin=0,ymax=1.1,xtick={0,10,20,30,40},ytick={0,0.2,0.4,0.6,0.8,1},tick label style={font=\\small},axis lines=left,'
    'xlabel={Süre (dk)},ylabel={Mol sayısı},label style={font=\\small},grid=both,grid style={gray!25}]\n'
    +'\\addplot[thick,vurgu,mark=*,mark size=2pt] coordinates {'+' '.join(f'({t},{float(v)})' for t,v in ald.items())+'};\n'
    +'\\addplot[thick,mark=square*,mark size=2pt] coordinates {'+' '.join(f'({t},{float(v)})' for t,v in asit.items())+'};\n'
    +'\\node[font=\\small\\bfseries] at (axis cs:35,0.3) {\\ce{CH3CHO}};\n\\node[font=\\small\\bfseries] at (axis cs:35,0.72) {\\ce{CH3COOH}};\n\\end{axis}')
 SK=tk(g)
-Q('0014','tep','orta','grafik','Aldehit yükseltgenmesinde mol–zaman grafiği','Grafikten belirli bir andaki aldehit mol sayısını okuyup Tollens tepkimesindeki gümüş miktarını hesaplar.',
-  'Aldehit yükseltgenirken mol sayısı azalır, oluşan asit artar; Tollens ayıracıyla yalnız kalan aldehit gümüş oluşturur (1 : 2).','Asidi de gümüş oluşturan madde saymak ya da mol oranını 1 : 1 almak.','mol–zaman grafiği',
-  [A('Grafiği oku','20. dakikada eğrilere bak.','CH₃CHO: 0,4 mol · CH₃COOH: 0,6 mol'),A('Tepkiyen maddeyi seç','Tollens ayıracı yalnız aldehitle tepkime verir.','Asit tepkimeye girmez'),A('Oranı uygula','1 mol aldehitten 2 mol Ag oluşur.','0,4 × 2'),A('Sonuç','Oluşan Ag mol sayısını yaz.','0,8 mol')],
-  metin='Etanalin bir yükseltgenle asite dönüşmesi sırasında etanal ve etanoik asidin mol sayılarının zamanla değişimi grafikte verilmiştir. 20. dakikada tepkime kabındaki tüm karışım alınıyor ve fazla Tollens ayıracı ile tamamen tepkimeye sokuluyor. Tollens tepkimesinde 1 mol aldehitten 2 mol Ag oluşmaktadır.\nBuna göre bu işlemde oluşan Ag katısı kaç moldür?',
-  sekil=SK,istenen='Oluşan Ag’nin mol sayısı.',ip=['20. dakikada karışımda hangi maddelerin ne kadar bulunduğunu oku; hangisinin Tollens ayıracıyla tepkime verdiğine karar ver.'],
-  bilgi=[B('Mol oranı','Tepkime denklemindeki katsayılar mol oranını verir. Örnek: 1 mol X’ten 3 mol Y oluşuyorsa 0,2 mol X’ten 0,6 mol Y oluşur')],
-  puf='Tollens ayıracı yalnız aldehitle tepkimeye girer; asit hesaba katılmaz.',dogru=vals['d'],
-  yan=[(vals['bir'],'Mol oranını 1 : 1 alıp 0,4 mol Ag bulmuş.','bilgi'),(vals['asit'],'Asidin mol sayısını (0,6) gümüş sanmış; oysa asit Tollens ayıracıyla tepkime vermez.','bilgi'),
-       (vals['asit2'],'Asidi de tepkimeye sokmuş ve 0,6 × 2 = 1,2 mol bulmuş.','bilgi'),(vals['hep'],'Başlangıçtaki 1 mol aldehitin tamamının kaldığını varsayıp 1 × 2 = 2 mol bulmuş.','dikkat')])
+d=dict(I=(True,'20. dakikada etanal 0,4 mol, etanoik asit 0,6 mol’dür; etanalin mol sayısı asidinkinden azdır'),
+       II=(True,'etanalin azalan mol sayısı, aynı sürede oluşan asidin mol sayısına eşittir; çünkü 1 mol aldehitten 1 mol asit oluşur ve toplam 1 mol kalır'),
+       III=(False,'40. dakikada grafikte etanalin mol sayısı 0,1’dir; etanal henüz tükenmemiştir'))
+o=OC(d,sr('Yalnız I','Yalnız III','I ve II','II ve III','I, II ve III')); assert o['dogru']=='I ve II'
+Q('0014','tep','orta','öncüllü','Aldehit yükseltgenmesinde mol–zaman grafiği','Mol–zaman grafiğinden aldehit ve asit miktarlarının değişimini yorumlar.',
+  'Aldehit yükseltgenirken mol sayısı azalır, oluşan asidin mol sayısı artar; 1 : 1 dönüşümde toplam mol sabit kalır.','Grafikteki eğrileri karıştırmak ya da tepkimenin bittiğini varsaymak.','mol–zaman grafiği',
+  [A('Eğrileri ayır','Azalan eğri etanal, artan eğri etanoik asittir.','CH₃CHO ↓ · CH₃COOH ↑'),A('I’i oku','20. dakikada eğrilerin değerlerini karşılaştır.','0,4 < 0,6 → I doğru'),A('II’yi sına','Azalan ve artan mol sayılarını karşılaştır.','Azalan = artan → II doğru'),A('III’ü oku','40. dakikada etanal eğrisine bak.','0,1 mol → III yanlış')],
+  metin='Etanalin bir yükseltgenle etanoik aside dönüşmesi sırasında etanal ve etanoik asidin mol sayılarının zamanla değişimi grafikte verilmiştir. Tepkimede 1 mol etanalden 1 mol etanoik asit oluşmaktadır.\nBuna göre,\nI. 20. dakikada etanalin mol sayısı etanoik asidinkinden azdır.\nII. Etanalin azalan mol sayısı, oluşan etanoik asidin mol sayısına eşittir.\nIII. 40. dakikada etanal tamamen tükenmiştir.\nyargılarından hangileri doğrudur?',
+  sekil=SK,istenen='Doğru olan yargılar.',ip=['Hangi eğrinin hangi maddeye ait olduğunu belirle ve istenen anlardaki değerleri grafikten oku.'],
+  bilgi=[B('Mol–zaman grafiği','Tepkimeye giren madde zamanla azalır, ürün artar; katsayılar eşitse azalan ve artan mol sayıları birbirine eşittir. Örnek: 1 : 1 tepkimede X’in 0,3 mol azalması Y’de 0,3 mol artış demektir')],
+  puf='Grafikte önce eğrileri maddelerle eşleştir, sonra değerleri oku.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+
 # ================= 15 · Tollens karışım · zor · şema =================
 M_=72; assert 4*12+8+16==M_
 mk_=Fr(288,10); ag=Fr(324,10)
@@ -387,7 +388,7 @@ Q('0015','ayirt','zor','şekilli','Aldehit–keton karışımında Tollens hesab
   metin='Şekilde bütanal ve bütanondan oluşan bir karışımın fazla miktarda Tollens ayıracı ile tepkimesi gösterilmiştir. Tepkime %100 verimle gerçekleşmekte ve 1 mol aldehitten 2 mol Ag katısı oluşmaktadır.\n(C₄H₈O: 72 g/mol, Ag: 108 g/mol)\nBuna göre karışımdaki bütanonun kütlesi kaç gramdır?',
   sekil=SK,istenen='Karışımdaki bütanonun kütlesi (g).',ip=['Hangi bileşiğin gümüş oluşturduğunu belirle; iki bileşiğin mol kütlelerinin ilişkisinden yararlan.'],
   bilgi=[B('Karışım hesabı','Karışımda yalnız bir bileşik tepkimeye girerse, onun miktarı ürün miktarından bulunur; kalan miktar toplamdan çıkarılır. Örnek: 5 mol karışımın 2 molü tepkimeye giriyorsa diğer bileşik 3 moldür')],
-  puf='Yalnız aldehit Ag verir: Ag molünün yarısı aldehit molüdür.',dogru=vals['d'],
+  puf='Karışımda tepkimeye giren bileşiği belirleyip yalnız onun miktarını üründen bul.',dogru=vals['d'],
   yan=[(vals['bir'],'Mol oranını 1 : 1 alıp aldehiti 0,3 mol bulmuş; ketonu (0,4 − 0,3) × 72 = 7,2 g hesaplamış.','bilgi'),
        (vals['ald'],'Aldehitin kütlesini (0,15 × 72 = 10,8 g) bulup ketonun kütlesi olarak yazmış.','dikkat'),
        (vals['yari'],'Karışımın yarı yarıya olduğunu varsayıp 28,8 / 2 = 14,4 g bulmuş.','bilgi'),
@@ -414,24 +415,25 @@ Q('0016','izo','zor','öncüllü','C₄H₁₀O alkollerinin yükseltgenme ürü
   metin=MK+' A, B, C ve D alkollerinin dördü de C₄H₁₀O formüllüdür ve her biri ılımlı koşullarda asitli K₂Cr₂O₇ ile yükseltgenmeye çalışılıyor; oluşan ürünler Tollens ayıracı ile deneniyor.\nBuna göre,\nI. Gümüş aynası veren ürün sayısı üçtür.\nII. D’den oluşan ürün bir ketondur.\nIII. A’dan ve C’den oluşan ürünler birbirinin zincir izomeridir.\nyargılarından hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Önce her alkolün sınıfını belirle; sonra ürünlerin sınıfını ve formülünü yazarak yargıları tek tek sına.'],
   bilgi=[B('Yükseltgenme ve izomerlik','Alkolden karbonil bileşiğine geçerken molekül 2 H kaybeder. Aynı formüllü ürünler iskelet düzenine göre zincir, fonksiyonel grubuna göre fonksiyonel grup izomeridir. Örnek: propanal ve propanon fonksiyonel grup izomeridir')],
-  puf='Alkolün sınıfı ürünün sınıfını belirler; tersiyer alkolde ürün yoktur.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Alkolün sınıfı, ürünün sınıfını belirler.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
-# ================= 17 · alkol → aldehit → Ag · zor · tablo =================
-mol=dict(I=Fr(2,10),II=Fr(3,10),III=Fr(1,10))
-vals=dict(d=mol['I']*2*AG,bir=mol['I']*AG,sek=(mol['I']+mol['II'])*2*AG,hepsi=(mol['I']+mol['II']+mol['III'])*2*AG,sekter=(mol['II']+mol['III'])*2*AG)
-assert vals['d']==Fr(216,5) and vals['bir']==Fr(108,5) and vals['sek']==108 and vals['hepsi']==Fr(648,5) and vals['sekter']==Fr(432,5) and len(set(vals.values()))==5
-SK=tablo_svg(['Tüp','Alkol','Madde miktarı (mol)'],[['I','1-propanol','0,2'],['II','2-propanol','0,3'],['III','2-metil-2-propanol','0,1']])
-Q('0017','ayirt','zor','tablo','Alkol karışımından gümüş eldesi','Alkol sınıfına göre yükseltgenebilenleri belirleyip oluşan aldehitten Tollens tepkimesiyle gümüş kütlesini hesaplar.',
+# ================= 17 · alkol → aldehit → Ag · zor · şekil =================
+mol=dict(I=Fr(2,10),II=Fr(3,10),III=Fr(1,10),IV=Fr(1,10))
+assert [alk_sinif(x) for x in (M_2MP1,M_2BUT,M_TBUT,M_1B)]==['prim','sek','ter','prim']
+vals=dict(d=(mol['I']+mol['IV'])*2*AG,bir=(mol['I']+mol['IV'])*AG,sek=(mol['I']+mol['II']+mol['IV'])*2*AG,hepsi=sum(mol.values())*2*AG,sekter=(mol['II']+mol['III'])*2*AG)
+assert vals['d']==Fr(324,5) and vals['bir']==Fr(162,5) and vals['sek']==Fr(648,5) and vals['hepsi']==Fr(756,5) and vals['sekter']==Fr(432,5) and len(set(vals.values()))==5
+SK=tk(sahne([(M_2MP1,'\\textbf{I}: 0,2 mol'),(M_2BUT,'\\textbf{II}: 0,3 mol'),(M_TBUT,'\\textbf{III}: 0,1 mol'),(M_1B,'\\textbf{IV}: 0,1 mol')],bosluk=.8))
+Q('0017','ayirt','zor','şekilli','Alkol karışımından gümüş eldesi','İskelet formülünden alkol sınıfını belirleyip yükseltgenebilenlerin aldehit ürününden Tollens tepkimesiyle gümüş kütlesini hesaplar.',
   'Yalnız primer alkol aldehit verir; tersiyer yükseltgenmez, sekonder keton verir. Gümüş yalnız aldehitten ve 1 : 2 oranında oluşur.','Her alkolün aldehit verdiğini varsaymak ya da oranı 1 : 1 almak.','alkol tüpleri',
-  [A('Alkolleri sınıflandır','–OH’li karbona bağlı karbon sayısına bak.','I: primer · II: sekonder · III: tersiyer'),A('Ürünleri belirle','Yalnız primer alkolden aldehit oluşur.','I → propanal (0,2 mol) · II → keton · III → ürün yok'),A('Gümüşün molü','1 mol aldehitten 2 mol Ag.','0,2 × 2 = 0,4 mol Ag'),A('Kütleye çevir','Ag: 108 g/mol.','0,4 × 108 = 43,2 g')],
-  metin='Tabloda verilen üç ayrı tüpteki alkollerin tamamı, ılımlı koşullarda yeterli asitli K₂Cr₂O₇ ile tepkimeye sokuluyor; yükseltgenebilen alkoller %100 verimle yükseltgenmekte ve yükseltgenme aldehit ya da keton basamağında kalmaktadır. Oluşan ürünler tek kapta birleştirilip fazla Tollens ayıracı ile tamamen tepkimeye sokuluyor. Tepkimede 1 mol aldehitten 2 mol Ag katısı oluşmaktadır.\n(Ag: 108 g/mol)\nBuna göre oluşan Ag katısının kütlesi kaç gramdır?',
-  sekil=SK,istenen='Oluşan Ag kütlesi (g).',ip=['Hangi tüplerde Tollens ayıracıyla tepkime verecek bir ürün oluştuğunu alkolün sınıfına bakarak belirle.'],
+  [A('Alkolleri sınıflandır','–OH’li karbona bağlı karbon sayısına bak.','I: primer · II: sekonder · III: tersiyer · IV: primer'),A('Ürünleri belirle','Yalnız primer alkolden aldehit oluşur.','I → 2-metilpropanal (0,2 mol) · IV → bütanal (0,1 mol) · II → keton · III → ürün yok'),A('Gümüşün molü','1 mol aldehitten 2 mol Ag.','(0,2 + 0,1) × 2 = 0,6 mol Ag'),A('Kütleye çevir','Ag: 108 g/mol.','0,6 × 108 = 64,8 g')],
+  metin=MK+' Şekilde verilen dört ayrı tüpteki alkollerin tamamı, ılımlı koşullarda yeterli asitli K₂Cr₂O₇ ile tepkimeye sokuluyor; yükseltgenebilen alkoller %100 verimle yükseltgenmekte ve yükseltgenme aldehit ya da keton basamağında kalmaktadır. Oluşan ürünler tek kapta birleştirilip fazla Tollens ayıracı ile tamamen tepkimeye sokuluyor. Tepkimede 1 mol aldehitten 2 mol Ag katısı oluşmaktadır.\n(Ag: 108 g/mol)\nBuna göre oluşan Ag katısının kütlesi kaç gramdır?',
+  sekil=SK,istenen='Oluşan Ag kütlesi (g).',ip=['Hangi tüplerde Tollens ayıracıyla tepkime verecek bir ürün oluştuğunu belirlemek için yapılara bak.'],
   bilgi=[B('Alkol sınıfı ve ürün','Primer alkol → aldehit, sekonder alkol → keton verir; tersiyer alkol ılımlı koşullarda yükseltgenmez. Örnek: 1-bütanol → bütanal, 2-bütanol → bütanon')],
-  puf='Gümüş yalnız primer alkolün aldehit ürününden gelir.',dogru=vals['d'],
-  yan=[(vals['bir'],'1 mol aldehitten 1 mol Ag oluştuğunu varsayıp 0,2 × 108 = 21,6 g bulmuş.','bilgi'),
-       (vals['sek'],'Sekonder alkolün de aldehit verdiğini sanmış; (0,2 + 0,3) × 2 × 108 = 108 g bulmuş.','bilgi'),
-       (vals['hepsi'],'Üç alkolün de aldehit verdiğini sanmış; 0,6 × 2 × 108 = 129,6 g bulmuş.','bilgi'),
-       (vals['sekter'],'Sekonder ve tersiyer alkolü aldehit veren, primer alkolü vermeyen sanmış; 0,4 × 2 × 108 = 86,4 g bulmuş.','bilgi')])
+  puf='Önce yapıları sınıflandır, sonra mol oranlarını uygula.',dogru=vals['d'],
+  yan=[(vals['bir'],'1 mol aldehitten 1 mol Ag oluştuğunu varsayıp 0,3 × 108 = 32,4 g bulmuş.','bilgi'),
+       (vals['sek'],'Sekonder alkolün de aldehit verdiğini sanmış; (0,2 + 0,3 + 0,1) × 2 × 108 = 129,6 g bulmuş.','bilgi'),
+       (vals['hepsi'],'Dört alkolün de aldehit verdiğini sanmış; 0,7 × 2 × 108 = 151,2 g bulmuş.','bilgi'),
+       (vals['sekter'],'Sekonder ve tersiyer alkolü aldehit veren, primer alkolleri vermeyen sanmış; 0,4 × 2 × 108 = 86,4 g bulmuş.','bilgi')])
 
 # ================= 18 · izomer + indirgenme · zor · öncüllü =================
 tum=IZ[5]['ald']+IZ[5]['ket']; assert tum==7
@@ -442,10 +444,10 @@ o=OC(d,sr('Yalnız I','Yalnız II','Yalnız III','I ve II','I ve III')); assert 
 Q('0018','izo','zor','öncüllü','C₅H₁₀O izomerleri ve indirgenme ürünleri','C₅H₁₀O karbonil izomerlerini sayıp hepsinin indirgenme ürünlerini birlikte değerlendirir.',
   'C₅H₁₀O için 4 aldehit ve 3 keton vardır; her biri indirgenince iskeletini koruyan farklı bir alkol (aldehitler primer, ketonlar sekonder) verir.','Aldehit ve keton sayılarını karıştırmak ya da farklı bileşiklerin aynı alkolü vereceğini sanmak.','C₅H₁₀O karbonilleri',
   [A('İzomerleri say','Aldehit ve keton iskeletlerini ayrı tara.','4 aldehit + 3 keton = 7'),A('I’i sına','Gümüş aynası aldehitten gelir.','Aldehit sayısı 4 → “üç” yanlış'),A('II’yi sına','İndirgenmede iskelet değişmez, her izomer farklı alkol verir.','7 farklı alkol → II doğru'),A('III’ü sına','Aldehit 4, keton 3.','Eşit değil → III yanlış')],
-  metin='Molekül formülü C₅H₁₀O olan, karbonil grubu içeren ve halkalı yapıda ya da çift bağlı olmayan bütün izomerler (aldehit ve ketonlar) dikkate alınıyor.\nBuna göre,\nI. Tollens ayıracı ile gümüş aynası veren izomer sayısı üçtür.\nII. Bu izomerlerin tamamı H₂/Ni ile indirgenirse birbirinden farklı yedi alkol oluşur.\nIII. Keton izomerlerinin sayısı aldehit izomerlerinin sayısına eşittir.\nyargılarından hangileri doğrudur?',
+  metin='Molekül formülü C₅H₁₀O olan, karbonil grubu içeren ve halka ve C=C bağı içermeyen bütün izomerler (aldehit ve ketonlar) dikkate alınıyor; stereoizomerler ayrı sayılmayacaktır.\nBuna göre,\nI. Tollens ayıracı ile gümüş aynası veren izomer sayısı üçtür.\nII. Bu izomerlerin tamamı H₂/Ni ile indirgenirse birbirinden farklı yedi alkol oluşur.\nIII. Keton izomerlerinin sayısı aldehit izomerlerinin sayısına eşittir.\nyargılarından hangileri doğrudur?',
   istenen='Doğru olan yargılar.',ip=['Önce aldehit ve keton izomerlerini ayrı ayrı say; sonra indirgenmede iskeletin değişip değişmediğini düşün.'],
   bilgi=[B('İndirgenme ve iskelet','Karbonil indirgenmesinde yalnız C=O doyar, karbon iskeleti değişmez; farklı iskeletli iki bileşik aynı alkolü vermez. Örnek: bütanal → 1-bütanol, bütanon → 2-bütanol')],
-  puf='İndirgenmede iskelet korunur; farklı bileşik farklı alkol verir.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Aynı formüllü bileşikleri iskelet ve fonksiyonel grup bakımından ayrı ayrı sınıflandır.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 19 · şema · zor · öncüllü =================
 Xf=(4,8,1); Yf=(4,10,1); assert (Xf[0],Xf[1]+2,Xf[2])==Yf
@@ -463,10 +465,10 @@ o=OC(d,sr('Yalnız I','Yalnız III','I ve II','I ve III','I, II ve III')); asser
 Q('0019','tep','zor','şekilli','İndirgenme–yükseltgenme zinciri','Tollens bilgisinden karbonil bileşiğini belirleyip indirgenme–yükseltgenme zincirini ve mol hesabını birleştirir.',
   'Tollens vermeyen C₄H₈O bütanondur; H₂/Ni ile 2-bütanole indirgenir, ılımlı yükseltgenince yine bütanona döner. 1 mol karbonil 1 mol H₂ alır.','Zincirin sonunda başka bir bileşik oluştuğunu sanmak ya da H₂ molünü yanlış oranlamak.','şema: X → Y → Z',
   [A('X’i belirle','C₄H₈O ve Tollens negatif: aldehit olamaz.','X: bütanon (keton) → I doğru'),A('Y’yi bul','Keton indirgenince sekonder alkol olur.','Y: 2-bütanol'),A('Z’yi bul','Sekonder alkol ılımlı yükseltgenince keton verir.','Z: bütanon = X → III doğru'),A('H₂ molünü hesapla','7,2 g X’in mol sayısı kadar H₂ harcanır.','7,2 / 72 = 0,1 mol → II yanlış')],
-  metin='Molekül formülü C₄H₈O olan X bileşiği Tollens ayıracı ile tepkime vermemektedir. X bileşiğinden başlanarak şekildeki dönüşümler gerçekleştiriliyor.\n(C₄H₈O: 72 g/mol)\nBuna göre,\nI. X bütanondur.\nII. 7,2 g X’in tamamının indirgenmesi için 0,2 mol H₂ gerekir.\nIII. Z, X ile aynı bileşiktir.\nyargılarından hangileri doğrudur?',
+  metin='Molekül formülü C₄H₈O olan ve karbonil grubu içeren X bileşiği Tollens ayıracı ile tepkime vermemektedir. X bileşiğinden başlanarak şekildeki dönüşümler gerçekleştiriliyor.\n(C₄H₈O: 72 g/mol)\nBuna göre,\nI. X bütanondur.\nII. 7,2 g X’in tamamının indirgenmesi için 0,2 mol H₂ gerekir.\nIII. Z, X ile aynı bileşiktir.\nyargılarından hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Tollens sonucundan X’in sınıfını çıkar; sonra her basamakta fonksiyonel grubun nasıl değiştiğini izle.'],
   bilgi=[B('İndirgenme–yükseltgenme','Keton ile sekonder alkol, H₂/Ni ile indirgenme ve ılımlı yükseltgenme yoluyla birbirine dönüştürülebilir. Örnek: propanon ⇄ 2-propanol')],
-  puf='Keton ⇄ sekonder alkol dönüşümü tersinir çiftlerdir: H₂/Ni ileri, yükseltgen geri.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Her basamakta fonksiyonel grubun nasıl değiştiğini izle.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 20 · olumsuz kök · zor · şekil =================
 SK=tk(sahne([(M_NEOP,'K'),(M_3PNON,'L'),(M_3MB,'M')],bosluk=1.0))
@@ -477,13 +479,13 @@ sec=[('K, Tollens ayıracıyla gümüş aynası verir.',True,'K’de karbonil ka
      ('L ile M birbirinin fonksiyonel grup izomeridir.',True,'ikisinin de formülü C₅H₁₀O’dur ve biri keton, diğeri aldehittir'),
      ('L, Fehling ayıracıyla tuğla kırmızısı çökelti verir.',False,'')]
 o=tek2(sec,False)
-Q('0020','tep','zor','şekilli','Aldehit ve ketonun tepkime ve izomerlik karşılaştırması','Aynı formüllü aldehit ve ketonun Tollens, Fehling, indirgenme ve izomerlik özelliklerini birlikte değerlendirir.',
+Q('0020','tep','orta','şekilli','Aldehit ve ketonun tepkime ve izomerlik karşılaştırması','Aynı formüllü aldehit ve ketonun Tollens, Fehling, indirgenme ve izomerlik özelliklerini birlikte değerlendirir.',
   'Aynı formülde aldehit ve keton: aldehit Tollens/Fehling verir, keton vermez; ikisi de indirgenince alkol verir; iskelet farkı zincir, grup farkı fonksiyonel grup izomerliğidir.','Ketonun Fehling ayıracıyla çökelti verdiğini sanmak ya da izomerlik türlerini karıştırmak.','K, L, M yapıları',
   [A('Formülleri doğrula','Üç bileşiğin de formülü C₅H₁₀O.','K, L, M izomerdir'),A('Sınıfları belirle','K ve M: karbonil karbonunda H var; L: iki karbon.','K, M aldehit · L keton'),A('İfadeleri sına','Her yargıyı sınıfa göre incele.','A, B, C, D doğru'),A('Yanlışı bul','Keton Fehling ayıracıyla tepkime vermez.','L + Fehling → değişiklik yok')],
   metin=MK+' K, L ve M bileşiklerinin molekül formülleri aynıdır.\nBuna göre aşağıdaki yargılardan hangisi yanlıştır?',
   sekil=SK,istenen='Yanlış olan yargı.',ip=['Her bileşiğin sınıfını belirleyip bu sınıfın ayıraçlarla, H₂/Ni ile ve izomerlikle ilgili davranışını sırayla sına.'],
   bilgi=[B('Aldehit ve keton karşılaştırması','Aldehit Tollens ve Fehling ayıracıyla tepkime verir, keton vermez; ikisi de H₂/Ni ile alkole indirgenir. Örnek: propanal gümüş aynası verir, propanon vermez')],
-  puf='Ayıraçlar yalnız aldehiti tanır; ketonu tanımaz.',dogru=o['dogru'],yan=o['yan'],sira=yer(o['dogru'],[s[0] for s in sec if s[1]],4))
+  puf='Her bileşiğin sınıfını belirleyip yargıları sınıfa göre sına.',dogru=o['dogru'],yan=o['yan'],sira=yer(o['dogru'],[s[0] for s in sec if s[1]],4))
 
 # ---------- yaz ----------
 for x in P.ANA: x['kardes']=None

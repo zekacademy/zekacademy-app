@@ -159,7 +159,7 @@ Q('0001','noron','kolay','şekilli','Nöronun yapısı','Şematik nöronda dendr
 # ======================= 02 · Beyin bölümleri (kolay, şekilli) =======================
 SK2=f_beyin(dict(omsogan='I',buyuk='II',beyincik='III',ara='IV',orta='V'))
 BEY=B('Beyin bölümleri','beyin; büyük beyin, ara beyin, orta beyin, beyincik ve omurilik soğanından oluşur · Orta beyin, köprü ve omurilik soğanı birlikte beyin sapını kurar ve beyin sapı omurilikle birleşir')
-Q('0002','beyin','kolay','şekilli','Beyin bölümleri','Beyin bölümlerinin görevlerini şekil üzerinde eşleştirir.','Kalp atışı ve solunum merkezi omurilik soğanıdır.','Kalp ve solunumu büyük beyin ya da hipotalamusla ilişkilendirmek.','kalp–solunum merkezi',
+Q('0002','beyin','kolay','şekilli','Beyin bölümleri','Beyin bölümlerinin görevlerini şekil üzerinde eşleştirir.','Beyin bölümlerinin görevleri şekil üzerinde eşleştirilir.','Kalp ve solunumu büyük beyin ya da hipotalamusla ilişkilendirmek.','kalp–solunum merkezi',
  [A('Şekli oku','Şekilde büyük beyin, beyincik ve beyin sapının bölümleri numaralandırılmıştır.','Beyin sapı: omurilikle birleşen sap'),
   A('Görevi hatırla','Kalp atışı ve solunum gibi yaşamsal olaylar, omuriliğe bağlanan sap bölümünün alt ucundaki merkezlerce denetlenir.','Yaşamsal merkez: omurilik soğanı'),
   A('Numarayı bul','Omurilik soğanı beyin sapının omuriliğe en yakın bölümüdür.','Omurilik soğanı: I numaralı yapı')],
@@ -169,7 +169,7 @@ Q('0002','beyin','kolay','şekilli','Beyin bölümleri','Beyin bölümlerinin g�
       ('III','III numaralı yapı beyinciktir; denge ve kas koordinasyonundan sorumludur.','bilgi'),
       ('IV','IV numaralı yapı ara beyindir; vücut ısısı, açlık ve susuzluk gibi dengeleri düzenler, kalp ve solunum merkezi değildir.','bilgi'),
       ('V','V numaralı yapı orta beyindir; göz hareketleri ve bazı refleksleri denetler.','bilgi')],
- istenen='Kalp atışı ve solunumu denetleyen merkez',ip=['Yaşamsal olayların denetlendiği merkez, beyin sapının omuriliğe en yakın ucundadır.'],bilgi=[BEY],puf='Yaşamsal merkez omurilik soğanındadır.')
+ istenen='Kalp atışı ve solunumu denetleyen merkez',ip=['Yaşamsal olayları denetleyen merkezin bulunduğu beyin bölümünü düşün.'],bilgi=[BEY],puf='Yaşamsal merkez omurilik soğanındadır.')
 
 # ======================= 03 · MSS / ÇSS (kolay) =======================
 Q('0003','mss','kolay','düz','Merkezi ve çevresel sinir sistemi','Merkezi ve çevresel sinir sistemi yapılarını ayırt eder.','Omurilik merkezi, kranyal ve spinal sinirler çevresel sinir sistemindedir.','Omuriliği çevresel sinirle karıştırmak.','MSS–ÇSS ayrımı',
@@ -189,11 +189,11 @@ Q('0004','noron','orta','hikâyeli','Miyelin kılıf ve iletim','Miyelin kılıf
   A('İletim türünü belirle','Kılıflı aksonda impuls boğumdan boğuma sıçrar; kılıf yoksa impuls aksonun her noktasında sırayla oluşur.','Sıçramalı iletim yok · kesintisiz iletim'),
   A('Hızı yorumla','Kesintisiz iletim, sıçramalı iletimden yavaştır; impuls oluşumu ve genliği ise değişmez.','İletim hızı azalır')],
  metin='Multipl skleroz gibi bazı hastalıklarda sinir hücrelerinin akson çevresindeki miyelin kılıf zarar görür ve aksonun bazı bölümleri kılıfsız kalır. Bir hastanın duyu nöronunun aksonunda kılıf tamamen kaybolmuştur. Bu akson eşik değerin üzerindeki bir uyarıyla uyarılmaktadır.\nBuna göre, bu aksonda aşağıdakilerden hangisinin gerçekleşmesi beklenir?',
- **tek(('İmpulsun akson boyunca sıçramalı iletim yerine kesintisiz iletimle ilerlemesi ve iletim hızının azalması',''),
-       [('Zar potansiyelinin oluşmaması nedeniyle aksonda hiçbir uyarıya yanıt verilememesi','impuls oluşumu için kılıf gerekmez; kılıfsız akson da impuls üretir'),
-        ('İmpulsun genliğinin küçülmesi ve iletim hızının artması','hep-hiç yasası nedeniyle impuls genliği değişmez; kılıf kaybı hızı artırmaz, azaltır'),
-        ('Na⁺–K⁺ pompasının ATP harcamaksızın çalışmaya devam etmesi','pompa her zaman ATP harcar; kılıfla ilgisi yoktur'),
-        ('Aksondaki impulsun akson ucuna ulaştığında nörotransmitter salgılatamaması','kılıfsız akson ucuna da impuls ulaşır ve nörotransmitter salınır')],4),
+ **tek(('İmpulsun sıçramalı iletim yerine kesintisiz iletimle ilerlemesi ve hızının azalması',''),
+       [('Aksonda impuls oluşumunun durması ve iletim hızının azalması','impuls oluşumu için kılıf gerekmez; kılıfsız akson da impuls üretir ve yalnız iletim hızı azalır'),
+        ('İmpuls genliğinin küçülmesi ve iletim hızının artması','hep-hiç yasası nedeniyle impuls genliği değişmez; kılıf kaybı hızı artırmaz, azaltır'),
+        ('Na⁺–K⁺ pompasının ATP harcamaması ve iletim hızının azalması','pompa her zaman ATP harcar ve kılıf kaybı iletimi hızlandırmaz'),
+        ('İmpulsun akson ucuna ulaşamaması ve iletim hızının artması','kılıfsız akson ucuna da impuls ulaşır ve kılıf kaybı hızı artırmaz')],4),
  istenen='Kılıfı kaybolan aksonda beklenen sonuç',ip=['Kılıfın hangi iletim türünü sağladığını düşün; impulsun oluşup oluşmayacağı ile hızı ayır.'],
  bilgi=[B('Miyelin kılıf','miyelin kılıf akson çevresinde yalıtkan bir örtüdür ve Ranvier boğumlarında kesintiye uğrar · Sinir hücrelerinde impuls iletimi, impulsun akson boyunca ilerlemesidir')],puf='Kılıf hızı belirler; impulsun oluşup oluşmayacağını belirlemez.')
 
@@ -217,9 +217,9 @@ Q('0005','impuls','orta','grafik','Aksiyon potansiyeli','Aksiyon potansiyeli gra
  yan=[('I','I numaralı aralık dinlenme düzeyidir; Na⁺ kanalları kapalıdır ve Na⁺ pompayla dışarı taşınır.','bilgi'),
       ('III','III numaralı aralıkta K⁺ kanalları açıktır ve K⁺ hücre dışına çıkar; Na⁺ girişi sona ermiştir.','bilgi'),
       ('IV','IV numaralı aralık dinlenme düzeyinin altındadır; K⁺ çıkışı sürmektedir ve Na⁺ kanalları kapalıdır.','bilgi'),
-      ('V','V numaralı aralık dinlenme düzeyine dönüştür; iyon dağılımı pompayla düzeltilir, Na⁺ girişi yoktur.','bilgi')],
+      ('V','V numaralı aralık dinlenme düzeyine dönüşüdür; iyon dağılımı pompayla düzeltilir, Na⁺ girişi yoktur.','bilgi')],
  istenen='Na⁺ girişinin hızlı olduğu aralık',ip=['Potansiyelin hangi yönde değiştiği, hangi iyonun hangi yöne hareket ettiğini gösterir.'],
- bilgi=[B('İmpuls oluşumu','dinlenmede hücre içi dışına göre negatiftir · Uyarılan nöronun zar potansiyeli önce depolarizasyon, sonra repolarizasyon evrelerinden geçer; iyonlar kanallardan ve pompadan geçer')],puf='Yükselme Na⁺ girişidir, düşüş K⁺ çıkışıdır.')
+ bilgi=[B('İmpuls oluşumu','dinlenmede hücre içi dışına göre negatiftir · Uyarılan nöronun zar potansiyeli önce depolarizasyon, sonra repolarizasyon evrelerinden geçer; iyonlar kanallardan ve pompadan geçer')],puf='Grafikte potansiyelin yönü, iyonun hangi yöne hareket ettiğini gösterir.')
 
 # ======================= 06 · Na–K pompası (orta, öncüllü) =======================
 d6={'I':(True,'dinlenmede Na⁺–K⁺ pompası ATP harcayarak Na⁺ iyonlarını dışarı, K⁺ iyonlarını içeri taşır'),
@@ -262,7 +262,7 @@ Q('0007','impuls','orta','grafik','Eşik değer ve hep-hiç','Eşik değer ve "y
        [('1. uyarının şiddeti, nöronun eşik değerinin altındadır.','1. uyarı impuls oluşturmamıştır, bu nedenle eşik altındadır'),
         ('Nöronun eşik değeri 10 birimden büyüktür.','10 birimlik uyarı impuls oluşturmamıştır'),
         ('2. ve 3. uyarılara nöron aynı büyüklükte impulsla yanıt vermiştir.','iki impulsun tepe noktası aynıdır'),
-        ('Eşik değerin üzerindeki uyarıların şiddeti artırıldığında impulsun büyüklüğü değişmemiştir.','20 birimden 40 birime çıkıldığında genlik aynı kalmıştır')],1,hedef=False),
+        ('2. uyarının şiddeti, nöronun eşik değerine eşit veya eşik değerinden büyüktür.','2. uyarı impuls oluşturmuştur')],1,hedef=False),
  istenen='Kayıttan çıkarılamayan ifade',ip=['Her şıkkı, grafikteki üç tepkiyle tek tek karşılaştır.'],
  bilgi=[B('Eşik değer','impuls oluşturabilen en küçük uyarı şiddetine eşik değer denir · Zar potansiyelindeki değişim grafikle izlenir')],puf='Şiddet impulsun büyüklüğünü değil, sıklığını etkiler.')
 
@@ -281,17 +281,18 @@ b8=['\\draw[line width=1.6pt] (0,3.0)--(7.2,3.0);\\draw[line width=1.6pt] (0,1.7
     f'\\addplot[black] coordinates {{{pgf(ptX)}}};\\addplot[vurgu] coordinates {{{pgf(ptY)}}};',
     '\\node[font=\\normalsize\\bfseries] at (axis cs:33.5,35) {X};\\node[font=\\normalsize\\bfseries,vurgu] at (axis cs:5.2,35) {Y};','\\end{axis}']
 SK8=tikz_svg('\\begin{tikzpicture}[font=\\small]\n'+'\n'.join(b8)+'\n\\end{tikzpicture}')
-d8={'I':(True,'hız = 12 cm / 30 ms = 4 m/s ve 12 cm / 2 ms = 60 m/s olarak bulunur'),
-    'II':(False,'X aksonundaki hız Y aksonundakinin 15 katı değil, Y aksonundaki hız X aksonundakinin 15 katıdır'),
-    'III':(True,'miyelin kılıflı ve sıçramalı iletim yapan aksonlarda hız, kılıfsız aksonlara göre çok daha büyüktür')}
+d8={'I':(True,'hız = 12 cm / 30 ms = 4 m/sn ve 12 cm / 2 ms = 60 m/sn olarak bulunur'),
+    'II':(True,'Y aksonunda 3 cm yol 0,03 m / 60 m/sn = 0,0005 sn = 0,5 ms sürer'),
+    'III':(False,'X aksonunda 3 cm yol 0,03 m / 4 m/sn = 0,0075 sn = 7,5 ms sürer, 5 ms değil')}
+assert Fr(3,100)/vy==Fr(5,10000) and Fr(3,100)/vx==Fr(75,10000)
 r8=onc(d8,2)
 Q('0008','impuls','zor','grafik','İmpuls iletim hızı','Kayıt grafiğinden iletim hızını hesaplayıp miyelin kılıfla ilişkilendirir.','Hız = yol / süre; hızlı iletim miyelin kılıf ve sıçramalı iletimle açıklanır.','Süre farkını hız oranıyla ters yorumlamak; hızı hesaplarken cm ve ms birimlerini karıştırmak.','iletim hızı öncülleri',
  [A('Verileri oku','İki akson için uyarı ve kayıt elektrotları arası yol 12 cm; impulsun kayıt noktasına ulaşma zamanı grafikten okunur.','X: 30 ms · Y: 2 ms · yol: 12 cm = 0,12 m'),
   A('Hızları hesapla','Hız, yolun süreye bölünmesiyle bulunur; süreler saniyeye çevrilir.','X: 0,12 / 0,03 = 4 m/sn · Y: 0,12 / 0,002 = 60 m/sn'),
-  A('Oranı yorumla','Y aksonundaki hız X aksonundakinin 15 katıdır; yani hızlı olan Y aksonudur.','60 / 4 = 15'),
-  A('Nedeni değerlendir','Hızlı iletimi miyelin kılıf ve sıçramalı iletim açıklayabilir.','I: doğru · II: yanlış · III: doğru')],
- metin='Aynı uzunlukta iki sinir lifinde (X ve Y) iletim hızını ölçmek için düzenek şekildeki gibi kurulmuştur. Her aksonun bir ucundan eşik değerin üzerinde uyarı verilmiş, uyarı anından itibaren aksonların diğer ucuna yerleştirilen elektrottaki potansiyel değişimi kaydedilmiştir. Elektrotlar arası uzaklık her iki akson için 12 cm’dir.\nBu düzenek ve kayıtla ilgili,\nI. X aksonunda impuls 4 m/s, Y aksonunda 60 m/s hızla iletilmiştir.\nII. X aksonundaki iletim hızı, Y aksonundakinin 15 katıdır.\nIII. Y aksonunun X aksonundan hızlı iletim yapması, Y aksonunun miyelin kılıflı olmasıyla açıklanabilir.\nifadelerinden hangileri doğrudur?',
- sekil=SK8,istenen='Doğru olan öncüller',ip=['Hızı bulmak için yolu metre, zamanı saniye cinsinden yazıp oranla.'],
+  A('3 cm için süre bul','Süre, yolun hıza bölünmesiyle bulunur.','Y: 0,03 / 60 = 0,0005 sn = 0,5 ms · X: 0,03 / 4 = 0,0075 sn = 7,5 ms'),
+  A('Öncülleri değerlendir','İlk iki öncül doğrudur, üçüncüde X için süre 7,5 ms bulunur.','I: doğru · II: doğru · III: yanlış')],
+ metin='Aynı uzunlukta iki sinir lifinde (X ve Y) iletim hızını ölçmek için düzenek şekildeki gibi kurulmuştur. Her aksonun bir ucundan eşik değerin üzerinde uyarı verilmiş, uyarı anından itibaren aksonların diğer ucuna yerleştirilen elektrottaki potansiyel değişimi kaydedilmiştir. Elektrotlar arası uzaklık her iki akson için 12 cm’dir.\nBu düzenek ve kayıtla ilgili,\nI. X aksonunda impuls 4 m/s, Y aksonunda 60 m/s hızla iletilmiştir.\nII. Y aksonunda impuls, uyarı noktasından 3 cm uzaklığa 0,5 ms’de ulaşır.\nIII. X aksonunda impuls, uyarı noktasından 3 cm uzaklığa 5 ms’de ulaşır.\nifadelerinden hangileri doğrudur?',
+ sekil=SK8,istenen='Doğru olan öncüller',ip=['Grafikten okuduğun süreleri yola oranlamadan önce birimleri kontrol et.'],
  bilgi=[B('Hız','hız, alınan yolun geçen süreye oranıdır · Hesapta uzunluk ve zaman birimleri aynı sisteme çevrilir')],puf='Önce birimleri eşitle, sonra yolu süreye böl.',**r8)
 
 # ======================= 09 · Sinaps (orta, şekilli) =======================
@@ -304,7 +305,7 @@ Q('0009','sinaps','orta','şekilli','Sinaps yapısı','Sinapstaki yapıların g�
  metin='Şekilde iki nöron arasındaki bir sinaps gösterilmiş ve bazı yapılar I, II, III ve IV ile numaralandırılmıştır. Üstteki nöronun akson ucuna bir impuls ulaşmıştır.\nBuna göre, bu sinapsta gerçekleşen olaylarla ilgili aşağıdakilerden hangisi doğrudur?',
  sekil=SK9,
  **tek(('III numaralı yapılara nörotransmitter bağlandığında alttaki nöronun zarında impuls oluşumu başlayabilir.',''),
-       [('I numaralı yapıların içindeki nörotransmitterler, II numaralı bölgeye difüzyonla geçer.','nörotransmitterler veziküllerin zarla kaynaşmasıyla ekzositozla salınır'),
+       [('I numaralı yapılar, nörotransmitterleri aktif taşımayla doğrudan III numaralı yapıların içine aktarır.','nörotransmitterler veziküllerden ekzositozla aralığa bırakılır ve III numaralı yapıların içine aktarılmaz'),
         ('II numaralı bölgede impuls elektriksel olarak aktarıldığından nörotransmitter gerekmez.','sinaptik aralıkta iletim kimyasaldır, nörotransmitterle sağlanır'),
         ('Alttaki nöronda oluşan impuls IV numaralı yapıya geri iletilerek üstteki nöronu uyarabilir.','sinapsta iletim tek yönlüdür, presinaptik nörondan postsinaptik nörona doğrudur'),
         ('Nörotransmitter III numaralı yapılara bağlandıktan sonra hücre zarından geçip alttaki nöronun sitoplazmasında impuls başlatır.','nörotransmitter reseptöre bağlanır, zardan geçip hücreye girmez')],3),
@@ -313,23 +314,21 @@ Q('0009','sinaps','orta','şekilli','Sinaps yapısı','Sinapstaki yapıların g�
 # dogru metni ve neden: tek() 'neden' yalnız yanlışlarda kullanılır
 
 # ======================= 10 · İlaç etkisi (zor, tablo) =======================
-MEK={'I':'Presinaptik nörondan nörotransmitter salınmasını engelleme','II':'Postsinaptik zardaki reseptörlere bağlanarak nörotransmitterin bağlanmasını engelleme','III':'Nörotransmitteri parçalayan enzimin çalışmasını engelleme'}
-ILAC={'X':'III','Y':'I','Z':'II'}
 SK10=tablo_svg(['İlaç','Sinaptik aralıkta nörotransmitter','Postsinaptik nöron'],[['Kontrol','Normal','Uyarıya bağlı impuls'],['X','Normalden çok','Sürekli impuls'],['Y','Normalden az','İmpuls oluşmaz'],['Z','Normal','İmpuls oluşmaz']])
-dog10=' – '.join(ILAC[k] for k in 'XYZ'); assert dog10=='III – I – II'
-dg10=[('I – II – III','X ilacını salınımı engelleyen, Y ilacını reseptör bloke eden, Z ilacını enzim engelleyen sanmış; oysa X’te nörotransmitter fazla ve impuls sürekli olduğundan X enzim engelleyicidir.'),
-      ('II – I – III','X ilacının reseptörleri bloke ettiğini sanmış; oysa reseptör engellenseydi impuls oluşmazdı, X’te ise impuls sürekli oluşur.'),
-      ('III – II – I','Y ilacının reseptörleri bloke ettiğini sanmış; oysa Y’de nörotransmitter miktarı azdır, bu salınımın engellendiğini gösterir.'),
-      ('I – III – II','X ilacını salınımı engelleyen sanmış; oysa salınım engellenseydi aralıktaki nörotransmitter azalır ve impuls oluşmazdı.')]
-r10=dizi(dog10,dg10,1,None)
-Q('0010','sinaps','zor','tablo','Sinaps ve ilaç etkisi','Tablodaki verilerden sinapsı etkileyen ilaçların mekanizmasını belirler.','Nörotransmitter miktarı ve impuls durumu, ilacın salınımı, parçalanmayı ya da reseptörü etkilediğini gösterir.','Nörotransmitter miktarını ve impuls durumunu birlikte yorumlamamak.','ilaç mekanizması',
+Q('0010','sinaps','zor','tablo','Sinaps ve ilaç etkisi','Tablodan ilaçların etki basamağını çıkarıp ilaçların birlikte etkisini öngörür.','Nörotransmitter miktarı ve impuls durumu ilacın hangi basamağı etkilediğini gösterir; birlikte etkide salınmayan nörotransmitter yıkım engelinden etkilenmez.','İlaçların basamaklarını belirlemeden birlikte etkiyi tahmin etmeye çalışmak.','ilaçların birlikte etkisi',
  [A('Kontrolü oku','Normal sinapsta nörotransmitter normal miktardadır ve her uyarıda kısa süreli impuls oluşur.','Kontrol: normal · uyarıya bağlı impuls'),
-  A('X ilacını çöz','Nörotransmitter fazla ve impuls sürekliyse nörotransmitter yıkılamıyordur.','X: enzim engellenmiş'),
-  A('Y ve Z ilaçlarını çöz','Nörotransmitter azsa salınım engellenmiştir; nörotransmitter normalken impuls yoksa reseptörler bloke edilmiştir.','Y: salınım engellenmiş · Z: reseptör engellenmiş'),
-  A('Sıraya diz','Mekanizmalar X, Y ve Z sırasıyla yazılır.','X: III; Y: I; Z: II')],
- metin='Bir araştırmacı, aynı tür sinapslara sahip üç sinir–kas preparatına X, Y ve Z ilaçlarını ayrı ayrı uygulamıştır. Her preparatta presinaptik nöron aynı şiddette uyarılmış; sinaptik aralıktaki nörotransmitter miktarı ve postsinaptik nörondaki impuls durumu kontrol grubuyla birlikte tabloda verilmiştir.\nİlaçların etki mekanizmaları,\nI. Presinaptik nörondan nörotransmitter salınmasını engelleme\nII. Postsinaptik zardaki reseptörleri bloke etme\nIII. Nörotransmitteri parçalayan enzimin çalışmasını engelleme\nolduğuna göre, X, Y ve Z ilaçlarının etki mekanizmaları sırasıyla aşağıdakilerin hangisinde doğru verilmiştir?',
- sekil=SK10,istenen='X, Y ve Z ilaçlarının mekanizmaları',ip=['Her ilaçta aralıktaki nörotransmitter miktarı ile impuls durumunu birlikte değerlendir.'],
- bilgi=[B('Sinapsta kimyasal iletim','sinapsta iletimi nörotransmitter denilen kimyasal maddeler sağlar · Nörotransmitter etki gösterdikten sonra ortamdan uzaklaştırılır ve iletim sona erer')],puf='Miktar ve impuls durumu birlikte mekanizmayı belirler.',**r10)
+  A('X ve Y ilaçlarını çöz','X’te nörotransmitter fazla ve impuls sürekli: yıkım engellenmiştir. Y’de nörotransmitter az ve impuls yok: salınım engellenmiştir.','X: yıkım engeli · Y: salınım engeli'),
+  A('Birlikte etkiyi öngör','Salınım engellendiğinden aralığa az nörotransmitter geçer; yıkımın engellenmesi olmayan nörotransmitteri çoğaltmaz.','Aralıkta az nörotransmitter'),
+  A('Sonucu yaz','Aralıkta az nörotransmitter olduğundan postsinaptik nöronda impuls oluşmaz.','Az nörotransmitter · impuls yok')],
+ metin='Bir araştırmacı, aynı tür sinapslara sahip üç sinaps preparatına X, Y ve Z ilaçlarını ayrı ayrı uygulamıştır. Her preparatta presinaptik nöron aynı şiddette uyarılmış; sinaptik aralıktaki nörotransmitter miktarı ve postsinaptik nörondaki impuls durumu kontrol grubuyla birlikte tabloda verilmiştir. İlaçlardan her biri nörotransmitterin salınmasını, yıkımını ya da reseptörlere bağlanmasını etkilemektedir.\nBuna göre, X ve Y ilaçları aynı preparata birlikte uygulanıp presinaptik nöron uyarıldığında, aşağıdakilerden hangisi gözlenir?',
+ sekil=SK10,sira=['Aralıkta nörotransmitter normalden çok, postsinaptik nöronda sürekli impuls','Aralıkta nörotransmitter normalden az, postsinaptik nöronda impuls yok','Aralıkta nörotransmitter normal, postsinaptik nöronda impuls yok','Aralıkta nörotransmitter normalden çok, postsinaptik nöronda impuls yok','Aralıkta nörotransmitter normalden az, postsinaptik nöronda sürekli impuls'],
+ dogru='Aralıkta nörotransmitter normalden az, postsinaptik nöronda impuls yok',
+ yan=[('Aralıkta nörotransmitter normalden çok, postsinaptik nöronda sürekli impuls','Yalnız X ilacının etkisini yazmış; oysa Y ilacı nörotransmitter salınmasını engellediğinden aralıkta fazla nörotransmitter birikmez.','bilgi'),
+      ('Aralıkta nörotransmitter normal, postsinaptik nöronda impuls yok','Z ilacının etkisini yazmış; oysa Z uygulanmamıştır ve salınım engellendiğinden nörotransmitter normal miktarda olamaz.','bilgi'),
+      ('Aralıkta nörotransmitter normalden çok, postsinaptik nöronda impuls yok','Yıkımın engellenmesinin nörotransmitteri artıracağını sanmış; oysa salınmayan nörotransmitter yıkım engeliyle çoğalmaz.','bilgi'),
+      ('Aralıkta nörotransmitter normalden az, postsinaptik nöronda sürekli impuls','Yıkım engelinin sürekli impuls oluşturacağını sanmış; oysa aralıkta bol nörotransmitter olmadığı için sürekli impuls oluşmaz.','bilgi')],
+ istenen='X ve Y ilaçlarının birlikte etkisi',ip=['Önce her ilacın hangi basamağı etkilediğini tablodan çıkar.'],
+ bilgi=[B('Sinapsta kimyasal iletim','sinapsta iletimi nörotransmitter denilen kimyasal maddeler sağlar · Nörotransmitter etki gösterdikten sonra ortamdan uzaklaştırılır ve iletim sona erer')],puf='Önce her ilacın basamağını bul, sonra birlikte etkiyi düşün.')
 
 # ======================= 11 · Nöron zinciri (zor, şekilli, öncüllü) =======================
 SK11=f_zincir({(2.0,):'I',(7.5,):'II',(11.5,):'III'})
@@ -342,7 +341,7 @@ Q('0011','sinaps','zor','şekilli','Sinaps yönü ve eşik','Eşik değer ve sin
   A('Eşiği uygula','Birinci uyarı eşik altıdır, hiçbir noktada impuls oluşturmaz; yalnız ikinci uyarı impuls oluşturur.','1. uyarı: impuls yok · 2. uyarı: impuls var'),
   A('İletim yönünü belirle','Sinapsta iletim tek yönlü olduğundan impuls B’nin aksonundan C’ye ilerler, A’ya geri dönmez.','B → C: evet · B → A: hayır'),
   A('Öncülleri değerlendir','II ve III noktalarında impuls kaydedilir, I noktasında kaydedilmez.','I: yanlış · II: doğru · III: doğru')],
- metin='Şekilde A, B ve C nöronları arasındaki sinapslar gösterilmiştir; sinapslar uyarıcıdır. B nöronunun hücre gövdesine sırayla iki uyarı verilmiştir: birinci uyarı B nöronunun eşik değerinin altında, ikinci uyarı ise eşik değerinin üzerindedir. Aksonlar üzerindeki I, II ve III noktalarından impuls kaydı alınmıştır.\nBuna göre, bu noktalardan hangilerinde impuls yalnızca ikinci uyarıdan sonra kaydedilir?',
+ metin='Şekilde A, B ve C nöronları arasındaki sinapslar gösterilmiştir; sinapslar uyarıcıdır ve B’nin akson ucundan salınan nörotransmitter, C nöronunu eşik değerin üzerinde uyarmaktadır. B nöronunun hücre gövdesine sırayla iki uyarı verilmiştir: birinci uyarı B nöronunun eşik değerinin altında, ikinci uyarı ise eşik değerinin üzerindedir. Aksonlar üzerindeki I, II ve III noktalarından impuls kaydı alınmıştır.\nBuna göre, bu noktalardan hangilerinde impuls yalnızca ikinci uyarıdan sonra kaydedilir?',
  sekil=SK11,istenen='Yalnızca ikinci uyarıdan sonra impuls kaydedilen noktalar',ip=['Eşik altı uyarıdan sonra impuls olup olmadığına ve sinapsın iletim yönüne bak.'],
  bilgi=[B('Sinaps ve iletim','sinaps, presinaptik akson ucu ile postsinaptik hücre arasındaki bağlantı bölgesidir · Zincirdeki her nöron, eşik değerin üzerinde uyarıldığında impuls oluşturur')],puf='Zincirde impuls yalnız ileri yönde geçer.',**r11)
 
@@ -364,17 +363,17 @@ Q('0012','refleks','orta','şekilli','Refleks yayı','Refleks yayını oluştura
  bilgi=[B('Refleks yayı','refleks, uyarıya karşı istem dışı oluşan hızlı yanıttır · Refleks yayını reseptör, duyu nöronu, motor nöron, ara nöron ve efektör kurar')],puf='Reseptörden efektöre: duyu, ara, motor.',**r12)
 
 # ======================= 13 · Refleks öncülleri (orta) =======================
-d13={'I':(True,'refleks yanıtı omurilik düzeyinde oluştuğundan impulsun beyne ulaşması beklenmez ve yanıt kısa sürede gerçekleşir'),
+d13={'I':(True,'refleks istem dışı bir yanıttır ve aynı uyarıya karşı her seferinde benzer biçimde oluşur'),
      'II':(True,'ara nöronlardan beyne giden yollarla duyu bilgisi beyne de iletilir, kişi uyarıyı sonradan fark eder'),
      'III':(False,'ara nöronlar omurilikte, yani merkezi sinir sisteminde bulunur')}
 r13=onc(d13,1)
-Q('0013','refleks','orta','öncüllü','Refleks ve ara nöron','Refleks yayının çalışma özelliklerini değerlendirir.','Basit refleks omurilik düzeyinde gerçekleşir; ara nöron MSS içindedir.','Bütün refleks yayı nöronlarını çevresel sinir sistemine ait saymak; refleks için beyin gerektiğini düşünmek.','refleks öncülleri',
- [A('Refleksi tanımla','Refleks, uyarıya karşı hızlı, istem dışı ve omurilik düzeyinde oluşan yanıttır.','Hızlı · istem dışı · omurilik'),
-  A('Birinci ve ikinci öncülü sına','Yanıt beyne ulaşılmadan oluşur; duyu bilgisi ise beyne de gider ve fark etme sonradan olur.','I: doğru · II: doğru'),
+Q('0013','refleks','orta','öncüllü','Refleks ve ara nöron','Refleks yayının çalışma özelliklerini değerlendirir.','Refleks istem dışıdır; ara nöron MSS içindedir.','Bütün refleks yayı nöronlarını çevresel sinir sistemine ait saymak; refleks için beyin gerektiğini düşünmek.','refleks öncülleri',
+ [A('Refleksi tanımla','Refleks, uyarıya karşı hızlı ve istem dışı oluşan yanıttır.','Hızlı · istem dışı'),
+  A('Birinci ve ikinci öncülü sına','Yanıt istem dışı ve kalıplaşmıştır; duyu bilgisi ise beyne de gider ve fark etme sonradan olur.','I: doğru · II: doğru'),
   A('Üçüncü öncülü sına','Ara nöron omurilikte bulunur; omurilik merkezi sinir sistemindedir.','III: yanlış')],
- metin='Sıcak bir cisme dokunan kişi elini, sıcaklığı fark etmeden hemen önce geri çeker. Bu tepki bir refleks örneğidir ve refleks yayını oluşturan nöronlar omurilik ile çevresel sinirler boyunca dizilmiştir.\nBu refleksle ilgili,\nI. Yanıt, impulsun beyne ulaşması beklenmeden omurilik düzeyinde oluşur.\nII. Duyu bilgisi omurilikten beyne de iletilir ve kişi sıcaklığı sonradan fark eder.\nIII. Refleks yayını oluşturan bütün nöronlar çevresel sinir sisteminde yer alır.\nifadelerinden hangileri doğrudur?',
+ metin='Sıcak bir cisme dokunan kişi elini, sıcaklığı fark etmeden hemen önce geri çeker. Bu tepki bir refleks örneğidir.\nBu refleksle ilgili,\nI. Yanıt istem dışı oluşur ve aynı uyarı karşısında her seferinde benzer biçimde gerçekleşir.\nII. Duyu bilgisi omurilikten beyne de iletilir ve kişi sıcaklığı sonradan fark eder.\nIII. Refleks yayını oluşturan bütün nöronlar çevresel sinir sisteminde yer alır.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüller',ip=['Her öncülde sözü edilen nöronun omurilik içinde mi, dışında mı bulunduğuna bak.'],
- bilgi=[B('Refleks yayı','refleks, uyarıya karşı istem dışı oluşan hızlı yanıttır · Nöronlar, bulundukları yere göre merkezi ya da çevresel sinir sistemine ait sayılır')],puf='Refleks omurilikte işlenir, beyin sonradan haberdar olur.',**r13)
+ bilgi=[B('Refleks yayı','refleks, uyarıya karşı istem dışı oluşan hızlı yanıttır · Nöronlar, bulundukları yere göre merkezi ya da çevresel sinir sistemine ait sayılır')],puf='Nöronların bulunduğu yer, hangi sisteme ait olduğunu belirler.',**r13)
 
 # ======================= 14 · Hasta tablosu (zor, tablo) =======================
 YAPI={'I':'Motor nöron','II':'Büyük beyindeki hareket merkezi','III':'Duyu nöronu','IV':'Omurilik ile beyin arasındaki yollar'}
@@ -408,7 +407,7 @@ Q('0015','mss','orta','şekilli','Omurilik yapısı','Omurilik enine kesitinde y
         ('II numaralı bölge, miyelinli aksonlardan oluşur ve omurilik ile beyin arasında impuls taşır.','II numaralı beyaz madde miyelinli aksonlar içerir ve yukarı ile aşağı yollarla beyne bağlanır'),
         ('III numaralı kök, duyu nöronlarının aksonlarını omuriliğe getirir.','III numaralı arka kök duyu bilgisini omuriliğe taşır'),
         ('IV numaralı kökten motor nöronların aksonları omurilikten çıkar.','IV numaralı ön kök motor aksonları omurilikten kas ve bezlere götürür')],2,hedef=False),
- istenen='Yanlış olan ifade',ip=['Sinir düğümünde hangi nöron türünün gövdelerinin bulunduğunu hatırla.'],
+ istenen='Yanlış olan ifade',ip=['Her numarayı gri madde, beyaz madde ya da kök olarak adlandırıp görevini ayrı sına.'],
  bilgi=[B('Omurilik','kelebek biçimli gri madde nöron gövdelerinden, çevresindeki beyaz madde miyelinli aksonlardan oluşur · Duyu nöronları omuriliğe arka kökten girer, motor nöronlar ön kökten çıkar')],puf='Arka kök duyu, ön kök motor; duyu gövdesi düğümdedir.')
 
 # ======================= 16 · Otonom sinir sistemi (orta, tablo, olumsuz) =======================
@@ -424,8 +423,8 @@ Q('0016','mss','orta','tablo','Otonom sinir sistemi','Sempatik ve parasempatik s
         ('Y sistemi vücudu dinlenme durumuna yönlendiren etkiler yapar.','Y’nin kalbi yavaşlatması ve sindirimi hızlandırması parasempatik sistemin etkisidir'),
         ('X ve Y, bir organa zıt yönde etki ederek iç dengenin korunmasına katkı sağlar.','tabloda her organa X ve Y zıt yönde etki etmiştir'),
         ('Y sistemi uyarıldığında sindirim kanalındaki hareketler hızlanır.','tabloda Y uyarıldığında sindirim kanalı hareketleri hızlanmıştır')],3,hedef=False),
- istenen='Yanlış olan ifade',ip=['Otonom sistemin hangi organları denetlediğini ve bu denetimin istemli olup olmadığını düşün.'],
- bilgi=[B('Otonom sinir sistemi','otonom sinir sistemi sempatik ve parasempatik olmak üzere iki koldan oluşur · Bu kollar çevresel sinir sisteminin parçasıdır')],puf='Sempatik hazırlar, parasempatik dinlendirir; ikisi de istem dışıdır.')
+ istenen='Yanlış olan ifade',ip=['Her ifadeyi tabloyla ve otonom sistemin görevleriyle karşılaştır.'],
+ bilgi=[B('Otonom sinir sistemi','otonom sinir sistemi sempatik ve parasempatik olmak üzere iki koldan oluşur · Bu kollar çevresel sinir sisteminin parçasıdır')],puf='Tablodaki zıt etkiler hangi kolun hangisi olduğunu gösterir.')
 
 # ======================= 17 · Beyin öncülleri (orta, şekilli, öncüllü) =======================
 SK17=f_beyin(dict(buyuk='I',beyincik='II',ara='III',omsogan='IV',orta='V'))
@@ -446,7 +445,7 @@ d18={'I':(False,'sol yarım küre hasarında vücudun sağ tarafı etkilenir; so
      'II':(True,'sol kol ve bacaktaki istemli hareket kaybı, sağ yarım küredeki hareket merkezinin hasarıyla açıklanabilir'),
      'III':(True,'diz kapağı refleksi omurilik düzeyinde gerçekleştiği için beyindeki hasar bu refleksi bozmaz')}
 r18=onc(d18,4)
-Q('0018','deney','zor','öncüllü','İnme sonrası bulgular','Çaprazlanmayı ve refleksin omurilik merkezli olduğunu bir vakada birleştirir.','Beyin yarım küreleri karşı tarafı denetler; refleks omurilikte gerçekleşir.','Hasarı aynı taraftaki yarım küreye yazmak; refleksin de bozulmasını beklemek.','inme vakası',
+Q('0018','deney','orta','öncüllü','İnme sonrası bulgular','Çaprazlanmayı ve refleksin omurilik merkezli olduğunu bir vakada birleştirir.','Beyin yarım küreleri karşı tarafı denetler; refleks omurilikte gerçekleşir.','Hasarı aynı taraftaki yarım küreye yazmak; refleksin de bozulmasını beklemek.','inme vakası',
  [A('Bulguları ayır','Sol kol ve bacak istemli hareket etmiyor; dokunma, refleks, solunum ve kalp normal.','İstemli hareket yok · refleks var · yaşamsal olaylar normal'),
   A('Çaprazlanmayı uygula','Vücudun sol tarafını sağ yarım küre denetler; bu nedenle sol yanın felci sağ yarım küre hasarını düşündürür.','I: yanlış · II: doğru'),
   A('Refleksi yorumla','Diz kapağı refleksinin sürmesi, refleks merkezinin omurilikte olduğunu gösterir.','III: doğru')],
@@ -464,22 +463,22 @@ Q('0019','deney','zor','öncüllü','Refleks deneyi yorumlama','Refleks deneyini
   A('Birinci öncülü sına','Beyni tahrip edilmiş grup yanıt verdiğine göre refleks için beyin gerekmez.','I: doğru'),
   A('İkinci öncülü sına','Her iki kök kesildiğinde de yanıt kaybolur; iki kök de yayın parçasıdır.','II: doğru'),
   A('Üçüncü öncülü sına','Hangi kökün duyu, hangisinin motor olduğu bu gözlemlerden çıkmaz; duyu ve hareket ayrıca incelenmelidir.','III: yanlış')],
- metin='Bir araştırmacı, aynı türden kurbağaları dört gruba ayırarak arka bacağın derisine asit emdirilmiş pamuk temas ettirmiş ve bacağın çekilip çekilmediğini gözlemiştir.\n1. grup: Sağlam kurbağalar; bacak çekilmiştir.\n2. grup: Omuriliğe bağlanan arka kökler kesilmiştir; bacak çekilmemiştir.\n3. grup: Omurilikten çıkan ön kökler kesilmiştir; bacak çekilmemiştir.\n4. grup: Beyni tahrip edilmiş, omuriliği sağlam kurbağalar; bacak çekilmiştir.\nBu deneyin sonuçlarına bakılarak,\nI. Bacağı çekme refleksinin gerçekleşmesi için beynin sağlam olması gerekmez.\nII. Hem arka kökler hem de ön kökler refleksin gerçekleşmesi için gereklidir.\nIII. Arka kökler duyu nöronlarının, ön kökler motor nöronların aksonlarını taşır.\nifadelerinden hangilerine kesin olarak ulaşılabilir?',
+ metin='Bir araştırmacı, aynı türden kurbağaları dört gruba ayırarak arka bacağın derisine asit emdirilmiş pamuk temas ettirmiş ve bacağın çekilip çekilmediğini gözlemiştir.\n1. grup: Sağlam kurbağalar; bacak çekilmiştir.\n2. grup: Arka kökler kesilmiştir; bacak çekilmemiştir.\n3. grup: Ön kökler kesilmiştir; bacak çekilmemiştir.\n4. grup: Beyni tahrip edilmiş, omuriliği sağlam kurbağalar; bacak çekilmiştir.\nBu deneyin sonuçlarına bakılarak,\nI. Bacağı çekme refleksinin gerçekleşmesi için beynin sağlam olması gerekmez.\nII. Hem arka kökler hem de ön kökler refleksin gerçekleşmesi için gereklidir.\nIII. Arka kökler duyu nöronlarının, ön kökler motor nöronların aksonlarını taşır.\nifadelerinden hangilerine kesin olarak ulaşılabilir?',
  istenen='Deney sonuçlarından kesin çıkarılabilen öncüller',ip=['Her öncülün, dört grubun gözlemlerinden doğrudan çıkıp çıkmadığına bak.'],
- bilgi=[B('Deney sonucu yorumlama','bir sonuca ulaşmak için yalnız gözlemlenen verilere dayanılır; deneyde ölçülmeyen bir özellik hakkında kesin hüküm verilemez')],puf='Sonuç, gözlemin gösterdiğinden fazlasını söylemez.',**r19)
+ bilgi=[B('Deney sonucu yorumlama','bir deneyden çıkarılacak sonuçlar yalnız gözlemlenen verilere dayanır')],puf='Sonuç, gözlemin gösterdiğinden fazlasını söylemez.',**r19)
 
 # ======================= 20 · Zarlar ve BOS (orta, öncüllü, olumsuz) =======================
-d20={'I':(False,'omurilik kafatası kemikleriyle değil, omurga kemiği (omurlar) tarafından korunur'),
+d20={'I':(False,'beyin-omurilik sıvısı hem beyin boşluklarında hem omurilik kanalında bulunur'),
      'II':(True,'beyin-omurilik sıvısı merkezi sinir sistemini darbelere karşı korur'),
      'III':(True,'merkezi sinir sistemi, meninks adı verilen üç katlı zarla örtülüdür')}
 r20=onc(d20,0,hedef=False)
-Q('0020','mss','orta','öncüllü','Merkezi sinir sisteminin korunması','Beyin ve omuriliği koruyan yapıları ayırt eder.','Beyin kafatasıyla, omurilik omurgayla korunur; zarlar ve BOS ek koruma sağlar.','Omuriliğin de kafatasıyla korunduğunu sanmak.','MSS koruması',
+Q('0020','mss','orta','öncüllü','Merkezi sinir sisteminin korunması','Beyin ve omuriliği koruyan yapıları ayırt eder.','Beyin kafatasıyla, omurilik omurgayla korunur; zarlar ve BOS ek koruma sağlar.','Sıvının yalnız beyinde bulunduğunu sanmak.','MSS koruması',
  [A('Koruma katmanlarını sırala','Merkezi sinir sistemi kemik, zar ve sıvıyla korunur.','Kemik · meninks · beyin-omurilik sıvısı'),
-  A('Birinci öncülü sına','Beyni kafatası, omuriliği omurga korur.','I: yanlış'),
+  A('Birinci öncülü sına','Beyin-omurilik sıvısı beyin boşluklarında ve omurilik kanalında bulunur.','I: yanlış'),
   A('Diğerlerini sına','Meninks üç katlı zardır; sıvı darbeyi sönümler.','II: doğru · III: doğru')],
- metin='Merkezi sinir sistemi, hayati önemi nedeniyle birden fazla yapı tarafından korunur. Beyin ve omurilik çevrelerindeki kemik yapıların içinde yer alır, ayrıca zarlar ve sıvıyla da sarılmıştır.\nBu korumayla ilgili,\nI. Omurilik, kafatası kemikleri tarafından korunur.\nII. Beyin-omurilik sıvısı, merkezi sinir sistemini darbelere karşı korur.\nIII. Merkezi sinir sistemi, meninks adı verilen üç katlı zarla örtülüdür.\nifadelerinden hangileri yanlıştır?',
+ metin='Merkezi sinir sistemi, hayati önemi nedeniyle birden fazla yapı tarafından korunur. Beyin ve omurilik çevrelerindeki kemik yapıların içinde yer alır, ayrıca zarlar ve sıvıyla da sarılmıştır.\nBu korumayla ilgili,\nI. Beyin-omurilik sıvısı yalnız beyin boşluklarında bulunur, omurilik kanalında bulunmaz.\nII. Beyin-omurilik sıvısı, merkezi sinir sistemini darbelere karşı korur.\nIII. Merkezi sinir sistemi, meninks adı verilen üç katlı zarla örtülüdür.\nifadelerinden hangileri yanlıştır?',
  istenen='Yanlış olan öncül',ip=['Beyin ve omuriliğin hangi kemik yapılarla korunduğunu ayır.'],
- bilgi=[B('Merkezi sinir sistemi','merkezi sinir sistemi beyin ve omurilikten oluşur · Bu yapıların korunmasında kemik, zar ve sıvı rol alır')],puf='Beyin kafatasında, omurilik omurgadadır.',**r20)
+ bilgi=[B('Merkezi sinir sistemi','merkezi sinir sistemi beyin ve omurilikten oluşur · Bu yapıların korunmasında kemik, zar ve sıvı rol alır')],puf='Sıvı, beyin ve omurilik için ortak koruyucudur.',**r20)
 
 # ======================= bitiş =======================
 for q in P.ANA: q['kardes']=None

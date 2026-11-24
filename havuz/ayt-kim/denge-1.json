@@ -356,7 +356,7 @@
   "bilgi": [
    {
     "ad": "Kısmi basınç ve Kp",
-    "ifade": "gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: A(g) ⇌ 2B(g) için Kp = P_B² ÷ P_A"
+    "ifade": "gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: 2A(g) ⇌ B(g) + C(g) için Kp = P_B × P_C ÷ P_A²"
    }
   ],
   "ipuclari": [
@@ -616,7 +616,7 @@
     "islem": "I ve II"
    }
   ],
-  "puf": "Hacim küçülünce derişimler önce artar, sonra denge kaymasıyla kısmen geri döner; ilk değerine hiçbir zaman dönmez.",
+  "puf": "Hacim değişince derişimlere önce ne olduğunu, sonra dengenin ne yaptığını sırayla düşün.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKDE-07 (piston ile hacim değişimi ve denge)",
@@ -638,30 +638,30 @@
   "seviye": "ÖSYM",
   "kalip": "grafik",
   "adimSayisi": 4,
-  "metin": "Belirli bir sıcaklık aralığında\nA(g) + B(g) ⇌ 2C(g)\ndengesine ait denge sabiti (Kc) değerinin sıcaklıkla değişimi grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. Sabit hacimde sıcaklık artırılırsa C gazının mol sayısı azalır.\nIII. Sıcaklık artırılırsa ileri ve geri yöndeki tepkimelerin hızları artar.\nyargılarından hangileri doğrudur?",
+  "metin": "Belirli bir sıcaklık aralığında\nA(g) + B(g) ⇌ 2C(g)\ndengesine ait denge sabiti (Kc) değerinin sıcaklıkla değişimi grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. Sabit hacimde sıcaklık artırılırsa C gazının mol sayısı azalır.\nIII. Sıcaklık artırılırsa yalnız geri yöndeki tepkimenin hızı artar.\nyargılarından hangileri doğrudur?",
   "sekil": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"width:100%;max-width:291px;height:auto\" role=\"img\" viewBox=\"0 0 153.279 109.636\">\n<defs>\n<g>\n<g id=\"tfb45ee-glyph-0-0\">\n<rect x=\"-3.5\" y=\"-5.6\" width=\"42\" height=\"67.2\" mask=\"url(#tfb45ee-mask-0)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.358226, -6.448073)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-1\">\n<rect x=\"-0.6\" y=\"-3.3\" width=\"7.2\" height=\"39.6\" mask=\"url(#tfb45ee-mask-1)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.716453, -3.940489)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-2\">\n<rect x=\"-2.8\" y=\"-3.6\" width=\"33.6\" height=\"43.2\" mask=\"url(#tfb45ee-mask-2)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.358226, -4.179306)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-3\">\n<rect x=\"-2.7\" y=\"-3.6\" width=\"32.4\" height=\"43.2\" mask=\"url(#tfb45ee-mask-3)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.358226, -4.179306)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-4\">\n<rect x=\"-3\" y=\"-5.4\" width=\"36\" height=\"64.8\" mask=\"url(#tfb45ee-mask-4)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.716453, -6.448073)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-5\">\n<rect x=\"-0.6\" y=\"-5.4\" width=\"7.2\" height=\"64.8\" mask=\"url(#tfb45ee-mask-5)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.716453, -6.448073)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-6\">\n<rect x=\"-1.9\" y=\"-7.4\" width=\"22.8\" height=\"88.8\" mask=\"url(#tfb45ee-mask-6)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.716453, -6.68689)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-7\">\n<rect x=\"-4.2\" y=\"-5.2\" width=\"50.4\" height=\"62.4\" mask=\"url(#tfb45ee-mask-7)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.835861, -6.209255)\"/>\n</g>\n<g id=\"tfb45ee-glyph-0-8\">\n<rect x=\"-1.9\" y=\"-7.4\" width=\"22.8\" height=\"88.8\" mask=\"url(#tfb45ee-mask-8)\" transform=\"matrix(0.119409, 0, 0, 0.119409, 0.477635, -6.68689)\"/>\n</g>\n<g id=\"tfb45ee-glyph-1-0\">\n<path d=\"M -3.75 -4.203125 L -6.1875 -7.1875 L -6.1875 -6.296875 L -2.90625 -2.296875 L -6.1875 -3 L -6.1875 -2.1875 L 0 -0.875 L 0 -1.6875 L -2.03125 -2.109375 L -3.21875 -3.5625 L 0 -5.109375 L 0 -5.984375 Z M -3.75 -4.203125 \"/>\n</g>\n<g id=\"tfb45ee-glyph-2-0\">\n<path d=\"M -0.65625 -2.71875 C -0.46875 -2.421875 -0.34375 -2.0625 -0.34375 -1.671875 C -0.34375 -1.125 -0.78125 -0.984375 -1.0625 -0.984375 C -1.546875 -0.984375 -2.328125 -1.328125 -2.328125 -2.109375 C -2.328125 -2.484375 -2.25 -2.671875 -2.046875 -2.953125 L -2.46875 -3.125 C -2.65625 -2.828125 -2.734375 -2.640625 -2.734375 -2.203125 C -2.734375 -1.1875 -1.8125 -0.46875 -1.03125 -0.46875 C -0.421875 -0.46875 0.0625 -0.890625 0.0625 -1.578125 C 0.0625 -2.109375 -0.140625 -2.53125 -0.21875 -2.671875 Z M -0.65625 -2.71875 \"/>\n</g>\n</g>\n<image id=\"tfb45ee-source-242\" x=\"0\" y=\"0\" width=\"35\" height=\"56\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAA4CAAAAABSox7dAAAAAmJLR0QA/4ePzL8AAADXSURBVDiNzZXBEsMgCER3nf7/L9NDAyrCNp1e4iUOvqwSWUJsw3zCJcgKSGtsiblKQfg6NQIQeNVHtYTNyJqAB/kJW0E4RQAj5XBmBQyXOZGIjWIpQxQyPrTOs5n+Uu/psL+uQkeWUF3oHdNQW401IJuzFP4qDsxj1rvrNw+qDVMOB8b6g1iGmk9rN5jtgoQfwuGifuL1mzX2dbe/dS6hp/pUM8LFV/sa2uqxVwd5FxwAYFqKZY/H1tkjr6y1Gvz8eyC3Ceq0wjstxfVRU4eXS/flWXbVHG9+zTJM9vOCQQAAAABJRU5ErkJggg==\"/>\n<mask id=\"tfb45ee-mask-0\">\n<use xlink:href=\"#tfb45ee-source-242\"/>\n</mask>\n<image id=\"tfb45ee-source-250\" x=\"0\" y=\"0\" width=\"6\" height=\"33\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAhCAAAAADfDoUaAAAAAmJLR0QA/4ePzL8AAAATSURBVAiZY/zPwMDAwMDEMLwpAAPXAUFcQ5YgAAAAAElFTkSuQmCC\"/>\n<mask id=\"tfb45ee-mask-1\">\n<use xlink:href=\"#tfb45ee-source-250\"/>\n</mask>\n<image id=\"tfb45ee-source-258\" x=\"0\" y=\"0\" width=\"28\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAAAAAC/TwWIAAAAAmJLR0QA/4ePzL8AAAB0SURBVDiN1ZM7DsAgDEPt3v/O6VCI8meoOpSFwMNRAIcwQ3ZANzmkgDV6OHumypItKP7oXjPGBpM1AyAWBra2WoarLFOVvXBWzmmHrC/S/gt+9bbDZ4sqszkFrYfkYE0Hk/+943O1LWXfgrRF5N71F4jNdgN24B8pp2f/NAAAAABJRU5ErkJggg==\"/>\n<mask id=\"tfb45ee-mask-2\">\n<use xlink:href=\"#tfb45ee-source-258\"/>\n</mask>\n<image id=\"tfb45ee-source-266\" x=\"0\" y=\"0\" width=\"27\" height=\"36\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAkCAAAAABdkx7xAAAAAmJLR0QA/4ePzL8AAACGSURBVCiRxZNLDsAgCERnjPe/Ml1Ylc+wa1I2Gp6MCEgcs3cl4sbgjW6J5Lgp0fIP4d9SLi5dTcycHHjo0uRFTnXEoKAhAnICEnZv+IOlPK1hpR3swGGKyN5ye6ZHKbFZx8uxjgDDWvRtPS0w+XjW4bDCRPnY1BK+eJoVuLXq/7uny+dx9gCi4iEzdjjubAAAAABJRU5ErkJggg==\"/>\n<mask id=\"tfb45ee-mask-3\">\n<use xlink:href=\"#tfb45ee-source-266\"/>\n</mask>\n<image id=\"tfb45ee-source-274\" x=\"0\" y=\"0\" width=\"30\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA2CAAAAAD1pHYlAAAAAmJLR0QA/4ePzL8AAACGSURBVDiN7dTBDoAwCANQIP7/L+NFN0qLB+NRLkt4odlcnKeZmbnpiqH/889f86Gaea0up7cqLiq4KjMoMWrnpo27IpMCs1YWWljpZqmL02Q59XW4rvlKiN3JC6vHK0BpPKqyByhtL5q2DdDBMJ7PDT5+tZxY37eMl+HbX/3Aa3yYvv05PE9A/R1wNZfxDgAAAABJRU5ErkJggg==\"/>\n<mask id=\"tfb45ee-mask-4\">\n<use xlink:href=\"#tfb45ee-source-274\"/>\n</mask>\n<image id=\"tfb45ee-source-282\" x=\"0\" y=\"0\" width=\"6\" height=\"54\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAA2CAAAAADB3bc5AAAAAmJLR0QA/4ePzL8AAAAVSURBVBiVY/zPwMDAwMDEMErRmQIAyMwBazeLJUoAAAAASUVORK5CYII=\"/>\n<mask id=\"tfb45ee-mask-5\">\n<use xlink:href=\"#tfb45ee-source-282\"/>\n</mask>\n<image id=\"tfb45ee-source-404\" x=\"0\" y=\"0\" width=\"19\" height=\"74\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAABKCAAAAAB8ujAvAAAAAmJLR0QA/4ePzL8AAACXSURBVDiN3ZRLEoAgDEMb7n/nuHGwaYOfGd3oCh+vDQsoQj5GRMAgGAumEB3FUBQhLGYkWuXhMcmjVU7GvsWs1dzKIIwrD8KKdp4BYbX06nyNQVhr97jfTSbXYfTYr3L/ybD0aNiLZ+nBl+/tnLWG06NhxavFy7mBlXeILgPZ0bmh9zn/UFkWoRJMLpXBrOzstDPWzuIdbjY7HIbOhRsjAAAAAElFTkSuQmCC\"/>\n<mask id=\"tfb45ee-mask-6\">\n<use xlink:href=\"#tfb45ee-source-404\"/>\n</mask>\n<image id=\"tfb45ee-source-412\" x=\"0\" y=\"0\" width=\"42\" height=\"52\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA0CAAAAADZdPVsAAAAAmJLR0QA/4ePzL8AAADHSURBVEiJldVBDsQwCANA4P9/Zi9VG8DG2V4SNSNkVZB6mpmZubHnAeZBSZem6CcVPaSgp9xpkSutcqNNLrRLToekdEpGgSQUSUyhhBRLRIlcvuvo4Elprw/Kp6LTZX7iWjaabeUUCkgTbhEtx8BGP+R3RzA5y3p95dc94FuEGLKHh9TbmpQ62GEKzhPTImGEQPKqCbcIjIIItOrFbPEIerhT0z+ujBFhoy3CWlXfhCTCTksEUVVf8DCCokcEWVX/t0AETd8IP2KMMWervIQlAAAAAElFTkSuQmCC\"/>\n<mask id=\"tfb45ee-mask-7\">\n<use xlink:href=\"#tfb45ee-source-412\"/>\n</mask>\n<image id=\"tfb45ee-source-420\" x=\"0\" y=\"0\" width=\"19\" height=\"74\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAABKCAAAAAB8ujAvAAAAAmJLR0QA/4ePzL8AAACXSURBVDiN5ZTLEoMwDAO9/P8/u6fUVi3Sx8CpnMhGsiYMERkRQfSHmJCYkJiQmPB4vqUyjV1LcR9tP5WJu+uWEF0zdK9eDGsTirmzlXCb0cxDl2+9lrlvtQb+Mu9jhuavzEsz/pPh/uf7c9ndt+/nISxPdYax6w2VFSuZzUBkTB3izb7l7hsl0zstTt8bJ91pOtZ0sensB1NmHIf6/d4+AAAAAElFTkSuQmCC\"/>\n<mask id=\"tfb45ee-mask-8\">\n<use xlink:href=\"#tfb45ee-source-420\"/>\n</mask>\n</defs>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00028529 -0.000168402 L 128.923626 -0.000168402 \" transform=\"matrix(0.995318, 0, 0, -0.995318, 19.086221, 88.409989)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" d=\"M 149.390625 88.410156 L 146.214844 86.824219 L 147.40625 88.410156 L 146.214844 89.996094 \"/>\n<path fill=\"none\" stroke-width=\"0.3985\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M -0.00028529 -0.000168402 L -0.00028529 83.570783 \" transform=\"matrix(0.995318, 0, 0, -0.995318, 19.086221, 88.409989)\"/>\n<path fill-rule=\"nonzero\" fill=\"currentColor\" fill-opacity=\"1\" d=\"M 19.085938 3.246094 L 17.5 6.421875 L 19.085938 5.230469 L 20.671875 6.421875 \"/>\n<path fill=\"none\" stroke-width=\"0.79701\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"currentColor\" stroke-opacity=\"1\" stroke-miterlimit=\"10\" d=\"M 13.092262 78.716023 C 13.092262 78.716023 16.8756 70.843226 18.327711 68.131311 C 19.779822 65.42332 22.111048 61.475148 23.563159 59.183167 C 25.019195 56.891187 27.350422 53.555256 28.802533 51.620416 C 30.254644 49.681652 32.585871 46.859847 34.037982 45.223278 C 35.490093 43.58671 37.82132 41.200538 39.273431 39.819071 C 40.729467 38.433678 43.056769 36.420346 44.512804 35.246883 C 45.964915 34.077345 48.296142 32.374058 49.748253 31.385053 C 51.200364 30.396047 53.531591 28.95571 54.983702 28.119765 C 56.439738 27.28382 58.76704 26.063262 60.223076 25.35683 C 61.675187 24.650397 64.006414 23.622146 65.458525 23.025603 C 66.910636 22.42906 69.241863 21.557793 70.693974 21.051517 C 72.146085 20.54524 74.477312 19.811335 75.933347 19.383551 C 77.385458 18.955767 79.716685 18.335677 81.168796 17.974611 C 82.620907 17.613546 84.952134 17.087646 86.404245 16.781525 C 87.856356 16.475405 90.187583 16.031922 91.639694 15.776822 C 93.09573 15.517796 95.423032 15.141032 96.879067 14.921253 C 98.331178 14.705399 100.662405 14.387505 102.114516 14.203047 C 103.566627 14.01859 105.897854 13.751715 107.349965 13.59473 C 108.806001 13.437745 111.133303 13.210117 112.589339 13.080605 C 114.04145 12.947167 117.824788 12.644971 117.824788 12.644971 \" transform=\"matrix(0.995318, 0, 0, -0.995318, 19.086221, 88.409989)\"/>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfb45ee-glyph-0-0\" x=\"61.398193\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-1\" x=\"66.49217\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-2\" x=\"68.680932\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-3\" x=\"72.756353\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-4\" x=\"77.162536\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-5\" x=\"81.643947\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-1\" x=\"83.832709\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-4\" x=\"86.021471\" y=\"100.688234\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfb45ee-glyph-0-6\" x=\"93.563958\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-7\" x=\"97.129504\" y=\"100.688234\"/>\n<use xlink:href=\"#tfb45ee-glyph-0-8\" x=\"103.511901\" y=\"100.688234\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfb45ee-glyph-1-0\" x=\"12.476313\" y=\"50.919339\"/>\n</g>\n<g fill=\"currentColor\" fill-opacity=\"1\">\n<use xlink:href=\"#tfb45ee-glyph-2-0\" x=\"13.46765\" y=\"44.536363\"/>\n</g>\n</svg>",
   "siklar": {
-   "A": "Yalnız III",
+   "A": "Yalnız II",
    "B": "I ve II",
    "C": "I ve III",
    "D": "II ve III",
    "E": "I, II ve III"
   },
   "cevap": {
-   "sik": "E",
-   "deger": "I, II ve III"
+   "sik": "B",
+   "deger": "I ve II"
   },
   "celdiriciler": {
-   "D": "I. yargının doğru olduğunu görememiş; denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0).",
-   "C": "II. yargının doğru olduğunu görememiş; sıcaklık artınca K küçülür; denge girenler yönüne kayar ve C gazının mol sayısı azalır.",
-   "B": "III. yargının doğru olduğunu görememiş; sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız ileri ile geri hız farklı oranda artar.",
-   "A": "I. yargının doğru olduğunu görememiş; denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0). II. yargının doğru olduğunu görememiş; sıcaklık artınca K küçülür; denge girenler yönüne kayar ve C gazının mol sayısı azalır."
+   "A": "I. yargının doğru olduğunu görememiş; denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0).",
+   "E": "III. yargıyı da doğru sanmış; oysa sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız geri tepkimenin hızı artmaz.",
+   "C": "III. yargıyı da doğru sanmış; oysa sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız geri tepkimenin hızı artmaz. II. yargının doğru olduğunu görememiş; sıcaklık artınca K küçülür; denge girenler yönüne kayar ve C gazının mol sayısı azalır.",
+   "D": "III. yargıyı da doğru sanmış; oysa sıcaklık artınca hem ileri hem geri tepkimenin hızı artar; yalnız geri tepkimenin hızı artmaz. I. yargının doğru olduğunu görememiş; denge sabiti sıcaklık arttıkça küçüldüğüne göre tepkime ekzotermiktir (ΔH < 0)."
   },
   "celTur": {
-   "D": "dikkat",
-   "C": "dikkat",
-   "B": "dikkat",
-   "A": "dikkat"
+   "A": "dikkat",
+   "E": "bilgi",
+   "C": "bilgi",
+   "D": "bilgi"
   },
   "istenen": "Doğru olan yargılar.",
   "bilgi": [
@@ -687,15 +687,15 @@
    {
     "baslik": "Hızları değerlendir",
     "aciklama": "Sıcaklık arttıkça tanecikler daha çok çarpışır; her iki yönün hızı da artar.",
-    "islem": "III: doğru"
+    "islem": "III: yanlış"
    },
    {
     "baslik": "Sonuç",
-    "aciklama": "Üç yargı da doğrudur.",
-    "islem": "I, II ve III"
+    "aciklama": "I ve II doğrudur.",
+    "islem": "I ve II"
    }
   ],
-  "puf": "K sıcaklıkla azalıyorsa tepkime ekzotermiktir; sıcaklık artışı her iki yönün hızını artırır.",
+  "puf": "Grafikten ısı değişimini çıkar, sonra her yargıyı sıcaklığın denge ve hız üzerindeki etkisiyle ayrı ayrı sına.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKDE-08 (Kc–sıcaklık grafiği ve denge)",
@@ -756,17 +756,17 @@
    {
     "baslik": "t₂ anını yorumla",
     "aciklama": "Yalnız H₂ derişimi ani olarak artmış; bu, kaba H₂ eklendiğini gösterir.",
-    "islem": "A: doğru"
+    "islem": "H₂ ekleme ifadesi: doğru"
    },
    {
     "baslik": "Denge aralıklarına bak",
     "aciklama": "t₁–t₂ aralığında derişimler sabittir; hızlar eşittir.",
-    "islem": "B: doğru"
+    "islem": "Hızların eşitliği ifadesi: doğru"
    },
    {
     "baslik": "Yeni dengeye giden yolu incele",
     "aciklama": "H₂ azalıyor, N₂ azalıyor, NH₃ artıyor; ileri hız geri hızdan büyüktür ve NH₃ ilkinden fazladır.",
-    "islem": "C ve D: doğru"
+    "islem": "Hız ve NH₃ derişimi ifadeleri: doğru"
    },
    {
     "baslik": "Kc değerini değerlendir",
@@ -774,7 +774,7 @@
     "islem": "Kc değişmez → bu ifade söylenemez"
    }
   ],
-  "puf": "Anlık sıçrama bir maddenin eklendiğini, kesintisiz değişim ise tepkimenin ilerlediğini gösterir; sabit sıcaklıkta Kc değişmez.",
+  "puf": "Grafikte ani değişimlerin ve düzgün değişimlerin ne anlama geldiğini ayrı ayrı yorumla.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKDE-10 (derişim–zaman grafiğinde bileşen eklenmesi)",
@@ -1108,7 +1108,7 @@
   "kazanim": "Denge sabiti ve bir denge miktarından, tüketilen miktarı katsayılarla ilişkilendirerek başlangıç mol sayısını hesaplar.",
   "tipId": "de-ice",
   "tip": "Denge hesabı (başlangıç–değişim–denge)",
-  "zorluk": "zor",
+  "zorluk": "orta",
   "seviye": "ÖSYM",
   "kalip": "hikâyeli",
   "adimSayisi": 5,
@@ -1225,7 +1225,7 @@
   "bilgi": [
    {
     "ad": "Kısmi basınç ve Kp",
-    "ifade": "gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: A(g) ⇌ 2B(g) için Kp = P_B² ÷ P_A"
+    "ifade": "gaz karışımında i gazının kısmi basıncı Pᵢ = (mol kesri) × P_toplam; Kp ifadesi Kc gibi yazılır, ama derişim yerine kısmi basınç kullanılır. Örnek: 2A(g) ⇌ B(g) + C(g) için Kp = P_B × P_C ÷ P_A²"
    },
    {
     "ad": "Le Chatelier ilkesi",
@@ -1434,7 +1434,7 @@
     "islem": "Yalnız III"
    }
   ],
-  "puf": "Tek gaz içeren heterojen dengede basınç sabittir; hacim değişince değişen gaz mol sayısıdır.",
+  "puf": "Önce Kp ifadesini yaz; ifadede hangi maddenin kaldığına göre hangi niceliğin sabit olduğuna karar ver.",
   "kisaYol": null,
   "kardes": null,
   "kaynakKart": "K-AKDE-17 (heterojen dengede hacim etkisi)",

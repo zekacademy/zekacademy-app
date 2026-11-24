@@ -219,7 +219,7 @@ q('0006','buyume','orta','tablo','Logaritmik büyüme ve en yüksek artış','S 
  [A('Her aralıktaki net artışı bul','Ardışık yıllardaki birey sayıları farkı alınır.','40, 100, 180, 220, 190, 130, 70, 30'),
   A('En büyük artışı seç','Yıllık net artış 3–4. yıllar arasında 220 ile en büyüktür.','560 − 340 = 220'),
   A('Taşıma kapasitesiyle karşılaştır','Bu aralık, K/2 = 500 değerini içerir; S tipi büyümede en hızlı artış beklenen yerdir.','340 < 500 < 560')],
- metin='Taşıma kapasitesi 1000 birey olan bir adada yaşayan bir kuş popülasyonunun ilk sekiz yıl boyunca her yıl başında sayılan birey sayıları tabloda verilmiştir.\nBuna göre popülasyonun yıllık net artışı (birey/yıl) hangi zaman aralığında en fazladır?',
+ metin='Taşıma kapasitesi 1000 birey olan bir adada yaşayan bir kuş popülasyonunun 0’dan 8. yıla kadar her yıl başında sayılan birey sayıları tabloda verilmiştir.\nBuna göre popülasyonun yıllık net artışı (birey/yıl) hangi zaman aralığında en fazladır?',
  sekil=SEK06,dogru=ar(3),yan=[(ar(0),'Birey başına artış oranına bakmış; ilk aralıkta oran 2’dir, ancak toplam artış yalnız 40 bireydir.','dikkat'),
    (ar(2),'Birey sayısı K/2 = 500’e ulaşmadan hızın en yüksek olduğunu sanmış; bu aralıkta artış 340 − 160 = 180’dir.','bilgi'),
    (ar(4),'Artışın K/2’yi geçtikten sonra da arttığını sanmış; bu aralıkta artış 750 − 560 = 190’dır.','bilgi'),
@@ -282,14 +282,14 @@ it=[('Arı – çiçekli bitki: mutualizm',True,'arı nektar ve polen elde ederk
  ('Tenya – insan: parazitlik',True,'tenya konağın sindirim kanalındaki besinden yararlanırken konak zarar görür'),
  ('Aslan – zebra: av–avcı ilişkisi',True,'aslan, zebrayı besin olarak kullanır; biri yarar sağlar, diğeri zarar görür'),
  ('Mantar – alg (liken): mutualizm',True,'mantar alge su ve mineral ile barınak sağlarken alg fotosentezle ürettiği besini mantarla paylaşır'),
- ('Aynı otlakta aynı otlarla beslenen zebra – antilop: kommensalizm',False,'aynı sınırlı kaynağı kullanan zebra ve antilop birbirinin besin miktarını azalttığı için bu ilişki rekabettir')]
+ ('Aynı otlakta otlayan zebra – antilop: kommensalizm',False,'aynı sınırlı kaynağı kullanan zebra ve antilop birbirinin besin miktarını azalttığı için bu ilişki rekabettir')]
 r,gz=tek(it,False,'A')
 q('0009','iliski','orta','düz','Canlı çiftleri ve ilişki türleri','Verilen örneklerde ilişki türünün doğru adlandırılıp adlandırılmadığını değerlendirir.','yanlış eşleşmeyi bulma',
  'Her ilişki türü tarafların etkilenme biçimiyle tanımlanır; ortak kaynak kullanımı rekabete işaret eder.','Aynı ortamda yaşamayı kommensalizm saymak.',
  [A('Her çiftin durumunu belirle','Her örnekte hangi tarafın yarar sağladığı ya da zarar gördüğü düşünülür.','yarar · zarar · etkilenmeme'),
   A('Rekabeti ayır','Aynı sınırlı kaynağı kullanan iki tür birbirini olumsuz etkiler.','zebra – antilop: iki taraf da zarar görür'),
   A('Yanlış eşleşmeyi seç','Rekabet örneği kommensalizm olarak adlandırıldığı için yanlıştır.','yanlış eşleşme belirlendi')],
- metin='Bir biyoloji öğretmeni, canlı çiftleri arasındaki ilişkileri öğrencilerine örneklendirmek için aşağıdaki eşleştirmeleri tahtaya yazmıştır. Yazdığı eşleştirmelerden biri hatalıdır.\nBuna göre öğretmenin yazdığı eşleştirmelerden hangisi yanlıştır?',
+ metin='Aşağıda bazı canlı çiftleri ve aralarındaki ilişkiler eşleştirilmiştir. Bu eşleştirmelerden biri hatalıdır.\nBuna göre aşağıdaki eşleştirmelerden hangisi yanlıştır?',
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış eşleştirme.',ip=['Her çiftte iki canlının yarar mı zarar mı gördüğünü ayrı ayrı düşün.'],
  bilgi=[B('Ekolojik ilişkiler','Taraflardan her biri yarar (+), zarar (−) ya da etkilenmeme (0) durumunda olabilir'),B('Rekabet','İki tarafın da sınırlı bir kaynak yüzünden olumsuz etkilendiği ilişkidir')],
  puf='İki tarafın da zarar gördüğü ilişki rekabettir.')
@@ -344,17 +344,17 @@ q('0011','sukses','orta','şekilli','Birincil süksesyon basamakları','Birincil
  puf='Toprak yoksa birincil, toprak varsa ikincil süksesyon söz konusudur.')
 
 # ===== 12 · orta · öncüllü · ikincil süksesyon =====
-d={'I':('Bu süreç ikincil süksesyondur ve toprak hazır olduğundan çıplak kayada başlayan sürece göre daha kısa sürede ilerler.',True,'toprak ve tohum bankası korunduğundan süreç, toprak oluşumunu beklemeden başlar ve birincil süksesyondan kısa sürer'),
+d={'I':('Toprakta kalan tohumlar ve kök sürgünleri, bitki örtüsünün yeniden oluşmasını hızlandırabilir.',True,'toprakta kalan tohumlar ve kökler, bitki örtüsünün toprak oluşumunu beklemeden yeniden gelişmesini sağlar'),
    'II':('Yangından sonra alana ilk yerleşen canlılar, kayalık yüzeylerde yaşayabilen likenler ve karayosunlarıdır.',False,'toprağı ve tohumları yanmayan bir ormanda ilk önce toprakta bulunan tohum ve köklerden otsu bitkiler çıkar; liken öncülüğü çıplak kayada görülür'),
    'III':('Süreç boyunca ortamdaki organik madde miktarı azalır.',False,'bitkilerin ölü kalıntıları toprağa karıştığından organik madde miktarı süreç boyunca artar')}
 r=onc(d,'A')
 q('0012','sukses','orta','öncüllü','İkincil süksesyon','İkincil süksesyonun başlangıç koşullarını ve ilerleyişini birincil süksesyonla karşılaştırır.','ikincil süksesyon yorumu',
- 'Toprağın korunduğu alanlarda süksesyon toprak oluşumunu beklemeden başlar ve daha hızlı ilerler.','Yangın sonrası sürecin öncü türlerinin liken olduğunu sanmak.',
- oad(d,bas=[A('Başlangıç koşulunu belirle','Yangında yalnız ağaçlar yanmış; toprak ve tohumlar durmaktadır.','toprak var → ikincil süksesyon')]),
- metin=omet('Bir çam ormanında çıkan yangın sonucunda ağaçlar yanmış, ancak toprak ve toprak altındaki tohumlar zarar görmemiştir. Yıllar içinde alanda önce otsu bitkiler, sonra çalılar ve son olarak ağaçlar yerleşmeye başlamıştır.\nBu süreçle ilgili,',d,'yargılarından hangileri doğrudur?'),
+ 'Süksesyonun başlangıç koşulları, sürecin hızını ve öncü türleri belirler.','Yangın sonrası sürecin öncü türlerinin liken olduğunu sanmak.',
+ oad(d,bas=[A('Başlangıç koşulunu belirle','Yangında yalnız ağaçlar yanmış; toprak ve tohumlar durmaktadır.','toprak var')]),
+ metin=omet('Bir çam ormanında çıkan yangın sonucunda ağaçlar yanmış, ancak toprak ve toprak altındaki tohumlar zarar görmemiştir. Yıllar içinde alanın bitki örtüsü yeniden oluşmuştur.\nBu süreçle ilgili,',d,'yargılarından hangileri doğrudur?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',ip=['Yangından sonra toprağın ve tohumların korunup korunmadığını düşün.'],
  bilgi=[B('İkincil süksesyon','Yangın, sel ya da tarımın bırakılması gibi nedenlerle bozulmuş, ancak toprağı korunmuş alanlarda başlar'),B('Hız','Toprağın hazır olması nedeniyle birincil süksesyondan daha hızlı ilerler')],
- puf='Toprak hazırsa süreç ikincil süksesyondur ve daha hızlıdır.')
+ puf='Önce alanda toprağın ve tohumun korunup korunmadığını belirle, sonra öncü türleri düşün.')
 
 # ===== 13 · orta · niş örtüşmesi · öncüllü =====
 def ga(t,m,s): return 3.0*math.exp(-((t-m)**2)/(2*s*s))
@@ -386,14 +386,14 @@ it=[('Deniz yıldızı bu komünitede kilit taşı tür olarak değerlendirilebi
  ('Bu deney, avcı baskısının bazı komünitelerde tür çeşitliliğinin korunmasını sağlayabildiğini göstermektedir.',True,'avcının varlığında rekabette üstün tür baskın hale gelemediğinden daha fazla tür bir arada yaşayabilir')]
 r,gz=tek(it,False,'B')
 q('0014','komunite','orta','düz','Kilit taşı türler','Kilit taşı türün komünite yapısı üzerindeki etkisini deney sonuçlarından yorumlar.','kilit taşı tür yorumu',
- 'Kilit taşı tür, sayısından bağımsız olarak komünitenin yapısını belirler.','Kilit taşı türü komünitede en kalabalık tür sanmak.',
+ 'Kilit taşı türün rolü deney verisinden yorumlanır.','Kilit taşı özelliğini tanımda yer almayan bir ölçüte bağlamak.',
  [A('Deney sonucunu yorumla','Avcı kaldırılınca midye baskın hale gelmiş ve tür sayısı azalmıştır.','avcı yok → midye çoğalır → çeşitlilik azalır'),
-  A('Kilit taşı tür kavramını hatırla','Kilit taşı tür, sayısı az olsa bile komüniteyi etkiler.','etki ≠ yoğunluk'),
+  A('Kilit taşı tür kavramını hatırla','Kilit taşı tür, komünite yapısı üzerindeki etkisiyle tanımlanır.','tanım: komünite etkisi'),
   A('Yanlış ifadeyi seç','Kilit taşı olmayı yoğunluğa bağlayan ifade yanlıştır.','yanlış ifade belirlendi')],
  metin='Kayalık bir kıyı komünitesinde deniz yıldızı, midyeleri ve diğer kabuklu canlıları avlayan bir türdür. Bilim insanları bir kıyı kesitinde deniz yıldızlarını uzaklaştırmış; zamanla midyelerin kıyıyı kapladığı ve alandaki tür sayısının 15’ten 8’e düştüğü, deniz yıldızlarının bırakıldığı kesitte ise tür sayısının değişmediği gözlenmiştir.\nBu deneyle ilgili aşağıdakilerden hangisi yanlıştır?',
- dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',ip=['Kilit taşı olmanın neye göre belirlendiğini düşün: sayı mı, komüniteye etki mi?'],
+ dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan ifade.',ip=['Deney sonucundan bir türün hangi özelliği çıkarılabilir, hangisi çıkarılamaz?'],
  bilgi=[B('Kilit taşı tür','Komünitenin yapısı üzerinde, sayısıyla orantısız büyük etkisi olan türdür; çoğu kez bir avcıdır'),B('Avcının rolü','Avcı, rekabette üstün türün çoğalmasını sınırlayarak diğer türlerin yaşamasını sağlayabilir')],
- puf='Kilit taşı tür, sayısıyla değil komünitedeki etkisiyle tanımlanır.')
+ puf='Bir türün komünitedeki rolünü, kaldırılınca komüniteye etkisine bakarak değerlendir.')
 
 # ===== 15 · zor · doğum–ölüm oranı grafiği · sayısal =====
 b_=lambda N:0.6-0.005*N; d_=lambda N:0.1+0.005*N
@@ -471,13 +471,13 @@ q('0017','yapi','zor','şekilli','İki popülasyonun yaş piramidi karşılaşt�
  puf='Önce yüzdeleri birey sayısına çevir, sonra karşılaştır.')
 
 # ===== 18 · zor · öncüllü · ikincil süksesyon + rekabet =====
-d={'I':('Bu süreç, çıplak kayada başlayan süreçle karşılaştırıldığında toprak oluşumu için daha uzun süre gerektirir.',False,'terk edilmiş tarla toprağı hazır olduğundan süreç toprak oluşumunu beklemez ve çıplak kayadaki süreçten daha hızlı ilerler'),
+d={'I':('Süreç ilerledikçe baskın bitkilerin boyu genel olarak kısalır.',False,'baskın bitkiler yıllık otlardan çalılara ve ağaçlara geçtiğinden boy genel olarak uzar'),
    'II':('Çalıların büyümesiyle zemine ulaşan ışığın azalması, ışık isteyen otların rekabette zayıflamasına yol açabilir.',True,'yoğun çalı örtüsü zemini gölgelediğinden ışık isteyen otların rekabet gücü azalır ve yerlerini gölgeye dayanıklı türler alabilir'),
    'III':('Süksesyonun ilerleyen basamaklarında türler arası rekabet tamamen ortadan kalkar.',False,'rekabet süksesyonun her basamağında vardır; yalnız rekabette üstün türler değişir')}
 r=onc(d,'E',neg=True)
-q('0018','sukses','zor','öncüllü','İkincil süksesyonda tür değişimi','İkincil süksesyonu ve rekabetin tür değişimindeki rolünü birlikte yorumlar.','süksesyon + rekabet',
+q('0018','sukses','orta','öncüllü','İkincil süksesyonda tür değişimi','İkincil süksesyonu ve rekabetin tür değişimindeki rolünü birlikte yorumlar.','süksesyon + rekabet',
  'Süksesyonda ortamı değiştiren türler, rekabette üstün olan türleri değiştirir; rekabet hiçbir basamakta bitmez.','Rekabetin yalnız öncü basamakta etkili olduğunu sanmak.',
- oad(d,neg=True,bas=[A('Süreci tanımla','Tarla toprağı hazır olduğu için süreç ikincil süksesyondur.','toprak var → ikincil')]),
+ oad(d,neg=True,bas=[A('Baskın bitkileri sırala','Otlardan çalılara, çalılardan ağaçlara doğru bir değişim vardır.','ot → çalı → ağaç')]),
  metin=omet('Terk edilmiş bir buğday tarlasında önce yıllık otlar, birkaç yıl sonra çok yıllık otlar, daha sonra çalılar ve son olarak ışık seven ağaçlar baskın hale gelmiştir. Yıllar sonra ağaçların gölgesinde, gölgede yetişebilen ağaç türleri çoğalmaya başlamıştır.\nBu süreçle ilgili,',d,'yargılarından hangileri yanlıştır?'),
  dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Yanlış olan yargılar.',ip=['Başlangıçta toprağın hazır olup olmadığını ve ışığın türler arası rekabeti nasıl etkilediğini düşün.'],
  bilgi=[B('Süksesyonda tür değişimi','Her basamaktaki türler ortamı (ışık, toprak, nem) değiştirir; bu değişim sonraki türlerin rekabet gücünü etkiler'),B('Rekabet','Süksesyonun tüm basamaklarında görülür; rekabet gücü üstün tür değiştikçe komünite de değişir')],
@@ -500,33 +500,33 @@ g+='\\draw[fill=black,fill opacity=.12,line width=.8pt] (1.2,-1.5) rectangle (1.
 SEK19=tk(g)
 it=[('A alanında tür sayısı yıllar içinde sürekli artmıştır.',False,'A alanında tür sayısı 15, 15, 14, 15 olarak değişmiştir; belirgin bir artış yoktur'),
  ('B alanında X türünün kaplama oranı arttıkça tür sayısı da artmıştır.',False,'B alanında X türünün kaplama oranı artarken tür sayısı 15’ten 7’ye düşmüştür'),
- ('Avcı tür, X türünün popülasyonunu tamamen yok ettiği için A alanında tür sayısı sabit kalmıştır.',False,'A alanında X türünün kaplama oranı yaklaşık %30 düzeyinde kalmıştır; avcı tür X türünü yok etmemiştir'),
- ('Deney, avcı türün komünitedeki en kalabalık popülasyon olduğunu göstermektedir.',False,'deney avcı türün popülasyon yoğunluğuna ilişkin bir veri vermez; yalnız avcının varlığı ve yokluğunun etkisini gösterir'),
+ ('Otçul tür, X türünün popülasyonunu tamamen yok ettiği için A alanında tür sayısı sabit kalmıştır.',False,'A alanında X türünün kaplama oranı yaklaşık %30 düzeyinde kalmıştır; otçul tür X türünü yok etmemiştir'),
+ ('Deney, otçul türün komünitedeki en kalabalık popülasyon olduğunu göstermektedir.',False,'deney otçul türün popülasyon yoğunluğuna ilişkin bir veri vermez; yalnız otçulun varlığı ve yokluğunun etkisini gösterir'),
  ('B alanında X türünün kaplama oranı 2 katından fazla artarken tür sayısı yarıdan fazla azalmıştır.',True,'X türünün kaplama oranı %30’dan %80’e (2 katından fazla), tür sayısı 15’ten 7’ye (yarıdan fazla) değişmiştir')]
 r,gz=tek(it,True,'E')
-q('0019','komunite','zor','grafik','Avcı uzaklaştırma deneyi','Avcı uzaklaştırma deneyinde iki grafikteki verileri birlikte yorumlayarak kilit taşı türün etkisini değerlendirir.','iki grafik birlikte yorum',
- 'Kilit taşı avcı kalkınca rekabette üstün tür çoğalır ve tür çeşitliliği azalır.','Tür sayısının azalmasını yalnız avcının varlığına bağlamak.',
- [A('A alanını oku','Avcı varken tür sayısı yaklaşık 15’te, X türünün kaplama oranı yaklaşık %30’da kalır.','A: ≈15 tür · ≈%30'),
-  A('B alanını oku','Avcı uzaklaştırılınca X türünün kaplama oranı %30’dan %80’e çıkar, tür sayısı 15’ten 7’ye iner.','B: %30 → %80 · 15 → 7'),
+q('0019','komunite','zor','grafik','Otçul uzaklaştırma deneyi','Otçul uzaklaştırma deneyinde iki grafikteki verileri birlikte yorumlayarak kilit taşı türün etkisini değerlendirir.','iki grafik birlikte yorum',
+ 'Kilit taşı otçul kalkınca rekabette üstün tür çoğalır ve tür çeşitliliği azalır.','Tür sayısının azalmasını yalnız otçulun varlığına bağlamak.',
+ [A('A alanını oku','Otçul varken tür sayısı yaklaşık 15’te, X türünün kaplama oranı yaklaşık %30’da kalır.','A: ≈15 tür · ≈%30'),
+  A('B alanını oku','Otçul uzaklaştırılınca X türünün kaplama oranı %30’dan %80’e çıkar, tür sayısı 15’ten 7’ye iner.','B: %30 → %80 · 15 → 7'),
   A('Oranları karşılaştır','80 ÷ 30 yaklaşık 2,7 olduğundan kaplama 2 katından fazla artmıştır; 7 sayısı 15’in yarısından (7,5) küçüktür.','2,7 > 2 · 7 < 7,5'),
   A('Doğru ifadeyi seç','Bu iki bulguyu birlikte veren ifade doğrudur.','doğru ifade belirlendi')],
- metin='Bir kıyı komünitesinde, rekabette üstün olan X türünü de avlayan bir avcı türün etkisini araştırmak için iki alanda üç yıl süren bir deney yapılmıştır. A alanında avcı tür bırakılmış, B alanında ise avcı tür uzaklaştırılmıştır. Alanlardaki tür sayısı ve X türünün kaplama oranı (%) her yılın sonunda ölçülmüştür. Sonuçlar şekilde verilmiştir.\nBuna göre aşağıdakilerden hangisi doğrudur?',
- sekil=SEK19,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan ifade.',ip=['İki grafikte B alanındaki ilk ve son yıl değerlerini oranlayarak karşılaştır.'],
- bilgi=[B('Avcı baskısı ve çeşitlilik','Avcı baskısı kalkınca rekabette üstün tür aşırı çoğalıp diğer türlerin elenmesine yol açabilir')],
- puf='İki grafiği birlikte okurken oranları (kaç katı, yarısı) sayıya çevirerek karşılaştır.')
+ metin='Bir çayır komünitesinde, rekabette üstün olan X türünü tüketen bir otçul türün etkisini araştırmak için iki alanda üç yıl süren bir deney yapılmıştır. A alanında otçul tür bırakılmış, B alanında ise otçul tür uzaklaştırılmıştır. Alanlardaki tür sayısı ve X türünün kaplama oranı (%) her yılın sonunda ölçülmüştür. Sonuçlar şekilde verilmiştir.\nBuna göre aşağıdakilerden hangisi doğrudur?',
+ sekil=SEK19,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan ifade.',ip=['İki grafiği aynı alan için birlikte oku.'],
+ bilgi=[B('Otçul baskısı ve çeşitlilik','Otçul baskısı kalkınca rekabette üstün tür aşırı çoğalıp diğer türlerin elenmesine yol açabilir')],
+ puf='İki grafiği aynı alan için birlikte okuyup her ifadeyi verilerle sına.')
 
 # ===== 20 · zor · öncüllü · besin zinciri etkisi =====
 d={'I':('Küçük balıkların popülasyon yoğunluğu azalabilir.',True,'turna balığı küçük balıkları avladığından sayısı artınca küçük balıkların yoğunluğu azalabilir'),
    'II':('Su pirelerinin popülasyon yoğunluğu artabilir.',True,'küçük balıkların azalması, su pirelerinin avcı baskısını azaltır ve su pirelerinin çoğalmasına yol açabilir'),
-   'III':('Alg yoğunluğu azalabilir.',True,'su pirelerinin artması, algin daha çok tüketilmesine ve yoğunluğunun azalmasına yol açabilir')}
+   'III':('Kabuklu türün popülasyon yoğunluğu azalabilir.',True,'su pirelerinin artması, aynı alglerden yararlanan kabuklu türle rekabeti artırır ve kabuklunun yoğunluğunu azaltabilir')}
 r=onc(d,'E')
 q('0020','komunite','zor','öncüllü','Besin zincirinde dolaylı etkiler','Komünitedeki bir türün sayısının değişmesinin besin zinciri boyunca dolaylı etkilerini yorumlar.','dolaylı etki zinciri',
- 'Komünitede bir türdeki değişim, besin ilişkileri yoluyla birbirini izleyen türlerin yoğunluğunu da değiştirir.','Etkinin yalnız doğrudan yenen türle sınırlı olduğunu sanmak.',
- oad(d,bas=[A('Besin zincirini kur','Alg → su piresi → küçük balık → turna balığı sırasıyla beslenme gerçekleşir.','alg → pire → küçük balık → turna')]),
- metin=omet('Bir göl komünitesinde su pireleri algleri, küçük balıklar su pirelerini, turna balıkları ise küçük balıkları tüketmektedir. Başka bir göldeki turna balığı, bu göle çok sayıda bırakılmış ve popülasyonu hızla büyümüştür. Gölde başka bir değişiklik olmamıştır.\nBu durumda,',d,'yargılarından hangilerinin gerçekleşmesi beklenebilir?'),
- dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Gerçekleşmesi beklenebilen yargılar.',ip=['Turna balığındaki artışın, besin zincirinde ondan sonraki basamaklara etkisini adım adım izle.'],
+ 'Komünitede bir türdeki değişim, besin ilişkileri yoluyla birbirini izleyen türlerin yoğunluğunu da değiştirir.','Etkinin yalnız doğrudan avlanan türle sınırlı olduğunu sanmak.',
+ oad(d,bas=[A('Besin zincirini ve rekabeti kur','Su pireleri ile kabuklu tür aynı alglerden yararlanır; zincir alg, su piresi, küçük balık ve turna şeklindedir.','turna ↑ → küçük balık ↓ → pire ↑ → ?')]),
+ metin=omet('Bir göl komünitesinde su pireleri algleri, küçük balıklar su pirelerini, turna balıkları ise küçük balıkları tüketmektedir. Algleri tüketen bir kabuklu tür de su pireleriyle aynı alglerden yararlanmakta, ancak turna balığının ve küçük balıkların besini olmamaktadır. Başka bir göldeki turna balığı, bu göle çok sayıda bırakılmış ve popülasyonu hızla büyümüştür. Gölde başka bir değişiklik olmamıştır.\nBu durumda,',d,'yargılarından hangilerinin gerçekleşmesi beklenebilir?'),
+ dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Gerçekleşmesi beklenebilen yargılar.',ip=['Değişimin her basamakta hangi türü, nasıl etkilediğini sırayla izle.'],
  bilgi=[B('Besin ilişkileri ve komünite','Komünitedeki türler besin ilişkileriyle birbirine bağlıdır; bir türün sayısındaki değişim zincirdeki diğer türleri dolaylı olarak etkiler')],
- puf='Etkiyi zincir boyunca adım adım izle: artan avcı, avı azaltır; avın avı artar.')
+ puf='Etkiyi basamak basamak izle ve besin ilişkisinin yanında rekabeti de ele al.')
 
 # ===== bitiş =====
 assert len(USED)==20
