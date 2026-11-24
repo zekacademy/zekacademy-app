@@ -13,6 +13,7 @@ import { getMessaging } from "firebase-admin/messaging";
 import { GoogleAuth } from "google-auth-library";
 import { morningText, eveningText, due, cfg, odemeHatirlat, gunGorusmeleri, hatirlatilacak, sessizMi } from "./logic.js";
 import { getStorage } from "firebase-admin/storage";
+import { damgala, dosyaGecerli } from "./kitap.js";
 import nodemailer from "nodemailer";
 import { readFile } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
@@ -573,4 +574,41 @@ export const sinifOdul = onSchedule({ schedule: "0 8 * * *", timeZone: TZ, retry
         await duyur(g.uyeler || [], kazanan, duyuruMetni(tur, liste));
         logger.info("sınıf ödülü", { gid: gd.id, tur, id, ilk: liste[0].takma }); }
     } catch (e) { logger.error("sınıf ödülü", gd.id, e); } }
+});
+
+/* Kitaplığım: konu PDF'ini öğrencinin adı ve numarasıyla damgalayıp döndürür. Öğrenci numarası ilk indirmede bir kez verilir. */
+const KITAP_GUN_SINIR = 60;
+export const kitapIndir = onCall({ timeoutSeconds: 60, memory: "512MiB", maxInstances: 5 }, async (req) => {
+  const uid = req.auth?.uid; if (!uid) throw new HttpsError("unauthenticated", "Giriş gerekli");
+  const { kod, dosya } = req.data || {}; if (!dosyaGecerli(kod, dosya)) throw new HttpsError("invalid-argument", "Geçersiz dosya");
+  const koc = req.auth.token?.email === COACH_EMAIL; let ad = "Zekeriya Hoca", no = "koç";
+  if (!koc) {
+    const ref = db.doc(`students/${uid}`), snap = await ref.get(), s = snap.data();
+    if (!snap.exists || s.silindi) throw new HttpsError("permission-denied", "Kitaplar yalnız aktif öğrencilere açık");
+    ad = String(s.name || "Öğrenci").trim();
+    no = s.kitapNo || await db.runTransaction(async t => { const sy = db.doc("system/sayac"), cur = (await t.get(sy)).data() || {}, x = (await t.get(ref)).data() || {};
+      if (x.kitapNo) return x.kitapNo; const n = (cur.kitapNo || 1000) + 1; t.set(sy, { kitapNo: n }, { merge: true }); t.update(ref, { kitapNo: n }); return n; });
+    const gun = new Date().toLocaleDateString("sv-SE", { timeZone: TZ }), say = db.doc(`indirmeler/${uid}/gunler/${gun}`), sn = (await say.get()).data()?.n || 0;
+    if (sn >= KITAP_GUN_SINIR) throw new HttpsError("resource-exhausted", "Bugünlük indirme sınırına ulaştın, yarın tekrar deneyebilirsin");
+    await say.set({ n: sn + 1 }, { merge: true });
+  }
+  const [ham] = await getStorage().bucket().file(`kitaplar/${kod}/${dosya}`).download().catch(() => { throw new HttpsError("not-found", "Bu kitap henüz yüklenmedi"); });
+  const pdf = await damgala(ham, ad, no);
+  await db.collection(`indirmeler/${uid}/kayit`).add({ kod, dosya, at: new Date().toISOString(), no: String(no) });
+  return { ad: dosya, no, pdf: Buffer.from(pdf).toString("base64") };
+});
+
+/* Koç: kitap konu PDF'ini depoya yükler (uygulamadaki "Kitapları yükle"). Dosya adı manifest'tekiyle aynı olmalı. */
+export const kitapYukle = onCall({ timeoutSeconds: 60, memory: "512MiB", maxInstances: 3 }, async (req) => {
+  if (req.auth?.token?.email !== COACH_EMAIL) throw new HttpsError("permission-denied", "Yalnız koç yükleyebilir");
+  const { kod, dosya, veri } = req.data || {}; if (!dosyaGecerli(kod, dosya) || typeof veri !== "string") throw new HttpsError("invalid-argument", "Geçersiz dosya");
+  const b = Buffer.from(veri, "base64"); if (b.length < 1000 || b.subarray(0, 4).toString() !== "%PDF") throw new HttpsError("invalid-argument", "PDF değil");
+  await getStorage().bucket().file(`kitaplar/${kod}/${dosya}`).save(b, { contentType: "application/pdf", resumable: false });
+  return { tamam: true, kb: Math.round(b.length / 1024) };
+});
+/* Koç: depoda hangi kitap dosyalarının olduğu (yükleme ekranındaki ✓ işaretleri için) */
+export const kitapDurum = onCall(async (req) => {
+  if (req.auth?.token?.email !== COACH_EMAIL) throw new HttpsError("permission-denied", "Yalnız koç");
+  const [f] = await getStorage().bucket().getFiles({ prefix: "kitaplar/" });
+  return { dosyalar: f.map(x => x.name.replace(/^kitaplar\//, "")) };
 });
