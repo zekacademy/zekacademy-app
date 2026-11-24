@@ -8,9 +8,10 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CIKTI = os.path.join(KOK, "functions", "havuz")
 DERSLER = [("mat", "TYT Matematik", ["mat", "prob", "matd"]), ("geo", "TYT Geometri", ["geo"]),
            ("fiz", "TYT Fizik", ["fiz"]), ("kim", "TYT Kimya", ["kim"]), ("bio", "TYT Biyoloji", ["bio"]),
-           ("amat", "AYT Matematik", ["amat"])]
-KLASOR = {"amat": "ayt-mat"}  # diğerleri tyt-<id>
-SINAV = {"amat": "AYT"}  # diğerleri TYT
+           ("amat", "AYT Matematik", ["amat"]), ("afiz", "AYT Fizik", ["afiz"]),
+           ("akim", "AYT Kimya", ["akim"]), ("abio", "AYT Biyoloji", ["abio"])]
+KLASOR = {"amat": "ayt-mat", "afiz": "ayt-fiz", "akim": "ayt-kim", "abio": "ayt-bio"}  # diğerleri tyt-<id>
+SINAV = {"amat": "AYT", "afiz": "AYT", "akim": "AYT", "abio": "AYT"}  # diğerleri TYT
 ALANLAR = ["id", "konu", "kazanim", "zorluk", "kalip", "metin", "sekil", "siklar", "sekilPng", "cevap", "adimlar", "ipuclari", "bilgi", "puf", "celdiriciler", "kardes", "kartId"]
 TR = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiuCGIOSUAIU")
 
