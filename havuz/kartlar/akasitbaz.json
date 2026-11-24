@@ -1,0 +1,135 @@
+{
+ "konu": "Asit-Baz Dengesi",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2018–2026 Kimya (yalnız mantık), MEB 12. sınıf kimya müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AKASB-01",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "pH, pOH ve karışımlar",
+   "fikir": "pH = −log[H⁺] ve pH + pOH = 14 ile çözeltinin pH’ı bulunur; seyrelmede mol sabit kalır, asit–baz karışımında artan madde toplam hacme bölünür.",
+   "tuzak": "pH ile pOH’u karıştırmak; baz formülündeki OH⁻ sayısını unutmak; mL–L dönüşümü ve toplam hacmi atlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ab-ph",
+   "tip": "pH, pOH ve seyrelme/karıştırma hesapları",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB-02",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Ka, Kb ve iyonlaşma",
+   "fikir": "Zayıf asit–bazda Ka (Kb) = [iyon]²/[başlangıç]; iyonlaşma yüzdesi seyrelmeyle artar, Ka yalnız sıcaklığa bağlıdır.",
+   "tuzak": "Ka’yı başlangıç derişimiyle karıştırmak; iyonlaşma yüzdesini derişimle doğru orantılı sanmak; Ka’nın derişimle değiştiğini düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ab-ka",
+   "tip": "Ka, Kb, asit kuvveti ve iyonlaşma yüzdesi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB-03",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Titrasyon eğrisi okuma",
+   "fikir": "Eğrinin sıçrama noktası eşdeğerliği verir; başlangıç pH, eşdeğerlik pH ve yarı eşdeğerlik pH’ından asit türü, derişim ve Ka çıkarılır.",
+   "tuzak": "Eşdeğerlik pH’ını her zaman 7 sanmak; yarı eşdeğerlik noktasını eşdeğerlik noktasıyla karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "ab-titra",
+   "tip": "Titrasyon eğrisinden asit türü, derişim ve Ka çıkarma",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB-04",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Tampon çözelti",
+   "fikir": "Tampon HA/A⁻ çiftidir; pH = pKa + log([A⁻]/[HA]); eklenen H⁺ A⁻’yi, eklenen OH⁻ HA’yı harcar.",
+   "tuzak": "Eklenen kuvvetli asit/baz sonrası mol sayısını güncellememek; oranı ters yazmak; yarı nötrleşmeyi tam nötrleşme sanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ab-tampon",
+   "tip": "Tampon çözelti: oluşum, etki ve pH hesabı",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB-05",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Tuz çözeltilerinin hidrolizi",
+   "fikir": "Zayıf asidin tuzu bazik, zayıf bazın tuzu asidik çözelti verir; Kb(A⁻) = Kw/Ka ile pH ve Ka birbirine dönüştürülür.",
+   "tuzak": "Her tuzun nötr olduğunu sanmak; Ka yerine Kb kullanmak; hidroliz derişimini başlangıç derişimiyle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "ab-hidroliz",
+   "tip": "Tuz çözeltilerinin hidrolizi, pH ve Ka ilişkisi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB-06",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Nötrleşme hesabı ve indikatör",
+   "fikir": "Tam nötrleşmede n(H⁺) = n(OH⁻); titrasyonda büret okumasından hacim, eşdeğerlik pH’ından uygun indikatör bulunur.",
+   "tuzak": "Çok değerlikli asit/bazda katsayıyı atlamak; büret son okumasını hacim saymak; eşdeğerlik pH’ını 7 almak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ab-notrles",
+   "tip": "Nötrleşme hesabı ve indikatör seçimi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 12. sınıf kimya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ab-ph",
+   "ad": "pH, pOH ve seyrelme/karıştırma hesapları",
+   "kartlar": [
+    "K-AKASB-01"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  },
+  {
+   "tipId": "ab-ka",
+   "ad": "Ka, Kb, asit kuvveti ve iyonlaşma yüzdesi",
+   "kartlar": [
+    "K-AKASB-02"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  },
+  {
+   "tipId": "ab-titra",
+   "ad": "Titrasyon eğrisinden asit türü, derişim ve Ka çıkarma",
+   "kartlar": [
+    "K-AKASB-03"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  },
+  {
+   "tipId": "ab-tampon",
+   "ad": "Tampon çözelti: oluşum, etki ve pH hesabı",
+   "kartlar": [
+    "K-AKASB-04"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  },
+  {
+   "tipId": "ab-hidroliz",
+   "ad": "Tuz çözeltilerinin hidrolizi, pH ve Ka ilişkisi",
+   "kartlar": [
+    "K-AKASB-05"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  },
+  {
+   "tipId": "ab-notrles",
+   "ad": "Nötrleşme hesabı ve indikatör seçimi",
+   "kartlar": [
+    "K-AKASB-06"
+   ],
+   "uygulamaKonu": "akim|Asit-Baz Dengesi"
+  }
+ ]
+}

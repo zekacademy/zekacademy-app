@@ -1,0 +1,338 @@
+{
+ "konu": "Kimyasal Tepkimelerde Denge",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2020–2026 Kimya (yalnız mantık), MEB 12. sınıf kimya.",
+ "kartlar": [
+  {
+   "id": "K-AKDE-01",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Dinamik denge ve hız grafiği",
+   "fikir": "Hız–zaman grafiğinde eğrilerin birleştiği an dengedir; sonrasında ileri ve geri hız eşit ve sıfırdan farklıdır, derişimler sabittir.",
+   "tuzak": "Dengede tepkimenin durduğunu sanmak; denge sonrası ürün derişiminin artmaya devam ettiğini düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "de-dinamik",
+   "tip": "Dinamik denge ve hız–zaman grafiği",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-02",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Derişim tablosundan Kc",
+   "fikir": "Kc ifadesi katsayıları üs yaparak yazılır; denge derişimleri yerine konur.",
+   "tuzak": "Katsayıları üs yapmamak; ürün ve girenleri ters yazmak.",
+   "zorluk": "kolay",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "de-kc",
+   "tip": "Kc ifadesi ve hesabı",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-09",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Derişim–zaman grafikleri",
+   "fikir": "Yatay bölge dengedir; değişim miktarlarının oranı katsayıları verir; dengede iki yöndeki hız eşittir.",
+   "tuzak": "Dengede derişimlerin eşit olduğunu sanmak; değişimleri katsayıdan bağımsız okumak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "de-grafik",
+   "tip": "Derişim–zaman grafikleri",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-03",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Mol tablosundan Kc",
+   "fikir": "Denge mol sayıları hacme bölünerek derişime çevrilir; tüketilen miktarlar katsayılarla orantılıdır.",
+   "tuzak": "Hacmi hesaba katmamak; tüketilen miktarı katsayıyla ilişkilendirmemek.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "de-kc",
+   "tip": "Kc ifadesi ve hesabı",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-05",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Kısmi basınç ve Kp",
+   "fikir": "Kısmi basınç = mol kesri × toplam basınç; Kp ifadesinde Kc gibi katsayılar üs olur.",
+   "tuzak": "Toplam basıncı kısmi basınç yerine kullanmak; tanecik sayılarını doğrudan Kp ifadesine yazmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "de-kp",
+   "tip": "Kp, kısmi basınç ve Kp–Kc ilişkisi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-06",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Kp–Kc ilişkisi",
+   "fikir": "Kp = Kc·(RT)^Δn; RT > 1 olduğunda Δn < 0 ise Kp < Kc, Δn > 0 ise Kp > Kc, Δn = 0 ise Kp = Kc.",
+   "tuzak": "Katı ve sıvıları Δn hesabına katmak; Δn işaretini ters yorumlamak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "de-kp",
+   "tip": "Kp, kısmi basınç ve Kp–Kc ilişkisi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-04",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Katı içeren denge",
+   "fikir": "Saf katı ve sıvılar Kc ifadesine yazılmaz; yalnız gazların derişimleri kullanılır.",
+   "tuzak": "Katıları Kc ifadesine yazmak; mol sayısı ile derişimi karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "de-kc",
+   "tip": "Kc ifadesi ve hesabı",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-07",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Hacim değişimi ve denge",
+   "fikir": "Hacim azalınca denge gaz mol sayısı az olan yöne kayar; Kc değişmez; yeni derişimler ilk derişimlerden büyük kalır.",
+   "tuzak": "Kc’nin değiştiğini sanmak; derişimin ilk değerine döndüğünü düşünmek.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "de-le",
+   "tip": "Le Chatelier ilkesi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-08",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Sıcaklık, K ve ΔH",
+   "fikir": "Kc sıcaklıkla azalıyorsa tepkime ekzotermiktir; sıcaklık artınca ürün azalır, tüm hızlar artar.",
+   "tuzak": "Sıcaklıkla yalnız endotermik yöndeki hızın arttığını sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "de-le",
+   "tip": "Le Chatelier ilkesi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-10",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Derişim–zaman grafiğinde etki",
+   "fikir": "Anlık sıçrama maddenin eklendiğini gösterir; denge o maddeyi harcayan yöne kayar; K sabit sıcaklıkta değişmez.",
+   "tuzak": "Kc değerinin etki sonrası değiştiğini sanmak; sıçramayı sıcaklık etkisiyle karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "de-grafik",
+   "tip": "Derişim–zaman grafikleri",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-11",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Tepkime bölümü Q",
+   "fikir": "Q, başlangıç derişimleriyle Kc gibi hesaplanır; Q < K ise ileri, Q > K ise geri yönde ilerler; K sabit sıcaklıkta değişmez.",
+   "tuzak": "Mol sayısını derişim yerine kullanmak; Q ile K’yı karşılaştırırken yönü ters yorumlamak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "de-qk",
+   "tip": "Tepkime bölümü (Q) ve denge sabiti",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-12",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Denge sabitlerinin birleştirilmesi",
+   "fikir": "Tepkime tersine çevrilirse K → 1/K, katsayılar n katına çıkarsa K → Kⁿ, tepkimeler toplanırsa K’ler çarpılır.",
+   "tuzak": "Ters çevirme ya da yarıya bölmeyi hesaba katmamak; toplama yerine bölme yapmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 4,
+   "tipId": "de-kb",
+   "tip": "Denge sabitlerinin birleştirilmesi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-13",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Katı içeren denge ve Kp",
+   "fikir": "Kp ifadesine yalnız gazların kısmi basınçları girer; sabit hacimde basınç değişimi gaz mol sayısı değişimini verir.",
+   "tuzak": "Katıyı Kp ifadesine yazmak; toplam basıncı kısmi basınç yerine kullanmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "de-kp",
+   "tip": "Kp, kısmi basınç ve Kp–Kc ilişkisi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-14",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Denge hesabı ve başlangıç miktarı",
+   "fikir": "Kc ve bir denge miktarı bilindiğinde değişim tablosu geriye doğru kurulur; başlangıç = denge + tüketilen.",
+   "tuzak": "Hacme bölmeyi unutmak; denge miktarını başlangıç sanmak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 5,
+   "tipId": "de-ice",
+   "tip": "Denge hesabı (başlangıç–değişim–denge)",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-15",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Hacim değişiminden sonra yeni denge",
+   "fikir": "Hacim küçülünce kısmi basınçlar önce katlanır; Q ile K karşılaştırılıp denge kayması Kp’den hesaplanır.",
+   "tuzak": "Kaymayı hesaba katmamak; basıncın hacimden bağımsız olduğunu sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "de-ice",
+   "tip": "Denge hesabı (başlangıç–değişim–denge)",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-16",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Madde eklenince yeni denge",
+   "fikir": "Kc sabit kalır; eklenen maddenin derişimi katlanır, değişim miktarı kareli denklemden bulunur.",
+   "tuzak": "Eklenen miktarı hacme bölmemek; Kc’yi eski değerinde tutmamak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 6,
+   "tipId": "de-ice",
+   "tip": "Denge hesabı (başlangıç–değişim–denge)",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-17",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Heterojen denge ve hacim",
+   "fikir": "Yalnız CO₂ gazı Kp ifadesinde yer alır: Kp = P(CO₂). Sabit T’de basınç sabit kalır, hacim değişince gaz mol sayısı değişir.",
+   "tuzak": "Hacim küçülünce basıncın artacağını sanmak; saf katı eklenince dengenin kaydığını düşünmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "de-le",
+   "tip": "Le Chatelier ilkesi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-18",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Enerji diyagramı ve denge",
+   "fikir": "Ea(ileri) − Ea(geri) = ΔH; endotermik tepkimede sıcaklık artınca K artar; katalizör iki aktifleşme enerjisini eşit azaltır.",
+   "tuzak": "Katalizörün ΔH’yi ya da K’yi değiştirdiğini sanmak; endotermikte sıcaklık artışının ürünü azalttığını düşünmek.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 5,
+   "tipId": "de-enerji",
+   "tip": "Enerji diyagramı ve denge",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKDE-19",
+   "konu": "Kimyasal Tepkimelerde Denge",
+   "alt": "Ayrışma yüzdesi, Kc ve Kp",
+   "fikir": "Ayrışma yüzdesinden denge mol sayıları, derişimler, Kc ve Kp = Kc(RT)^Δn zinciri kurulur.",
+   "tuzak": "Hacme bölmemek; Δn ile RT’yi birlikte kullanmamak.",
+   "zorluk": "zor",
+   "kalip": "hikâyeli",
+   "adim": 6,
+   "tipId": "de-kp",
+   "tip": "Kp, kısmi basınç ve Kp–Kc ilişkisi",
+   "kaynak": "ÖSYM AYT 2020–2026 Kimya (Kimyasal Denge, Dengeyi Etkileyen Faktörler; yalnız mantık) · MEB 12. sınıf kimya"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "de-dinamik",
+   "ad": "Dinamik denge ve hız–zaman grafiği",
+   "kartlar": [
+    "K-AKDE-01"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-kc",
+   "ad": "Kc ifadesi ve hesabı",
+   "kartlar": [
+    "K-AKDE-02",
+    "K-AKDE-03",
+    "K-AKDE-04"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-grafik",
+   "ad": "Derişim–zaman grafikleri",
+   "kartlar": [
+    "K-AKDE-09",
+    "K-AKDE-10"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-kp",
+   "ad": "Kp, kısmi basınç ve Kp–Kc ilişkisi",
+   "kartlar": [
+    "K-AKDE-05",
+    "K-AKDE-06",
+    "K-AKDE-13",
+    "K-AKDE-19"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-le",
+   "ad": "Le Chatelier ilkesi",
+   "kartlar": [
+    "K-AKDE-07",
+    "K-AKDE-08",
+    "K-AKDE-17"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-qk",
+   "ad": "Tepkime bölümü (Q) ve denge sabiti",
+   "kartlar": [
+    "K-AKDE-11"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-kb",
+   "ad": "Denge sabitlerinin birleştirilmesi",
+   "kartlar": [
+    "K-AKDE-12"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-ice",
+   "ad": "Denge hesabı (başlangıç–değişim–denge)",
+   "kartlar": [
+    "K-AKDE-14",
+    "K-AKDE-15",
+    "K-AKDE-16"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  },
+  {
+   "tipId": "de-enerji",
+   "ad": "Enerji diyagramı ve denge",
+   "kartlar": [
+    "K-AKDE-18"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Denge"
+  }
+ ]
+}

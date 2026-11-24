@@ -1,0 +1,345 @@
+{
+ "konu": "Radyoaktivite",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM AYT 2018–2025 Fizik (yalnız mantık), 345 AYT Fizik, Bilgi Sarmal AYT Fizik, MEB 12. sınıf fizik.",
+ "kartlar": [
+  {
+   "id": "K-AFRA-01",
+   "konu": "Radyoaktivite",
+   "alt": "Alfa bozunmasında nükleon sayıları",
+   "fikir": "α bozunmasında A 4, Z 2 azalır; nötron sayısı N = A − Z yeni değerlerle bulunur.",
+   "tuzak": "Nötron sayısının değişmediğini ya da A’yı sabit bırakıp yalnız Z’yi değiştirmeyi sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "ra-bozunma",
+   "tip": "Alfa, beta ve gama bozunmaları",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-02",
+   "konu": "Radyoaktivite",
+   "alt": "Elektrik alanda ışımaların sapması",
+   "fikir": "Sapmanın yönü yükün işaretini, miktarı yük ÷ kütle oranını verir; yüksüz ışıma sapmaz ve en fazla işler.",
+   "tuzak": "Sapmayan ışımanın alan yönüne göre yolunu değiştireceğini sanmak; ağır parçacığın daha çok saptığını düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ra-isinim",
+   "tip": "Işımaların özellikleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-03",
+   "konu": "Radyoaktivite",
+   "alt": "Yarı ömür grafiği",
+   "fikir": "Grafikte N’nin yarıya indiği süre yarı ömürdür; sonraki süreler için N₀ ÷ 2ⁿ kullanılır.",
+   "tuzak": "Çekirdek sayısının zamanla doğrusal azaldığını ya da kalan sayıyı bölme sayısıyla bölmeyi (N₀ ÷ n) düşünmek.",
+   "zorluk": "kolay",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "ra-yarisure",
+   "tip": "Yarı ömür",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-04",
+   "konu": "Radyoaktivite",
+   "alt": "Zincirde izotop, izobar ve nötron sayısı",
+   "fikir": "Her bozunmada A ve Z yeni değerleri bulunur; aynı Z izotop, aynı A izobar, N = A − Z karşılaştırılır.",
+   "tuzak": "β⁻ bozunmasında kütle numarasının da değiştiğini sanmak; izotop ile izobarı karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ra-zincir",
+   "tip": "Bozunma zincirleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-05",
+   "konu": "Radyoaktivite",
+   "alt": "Bozunma sayısı",
+   "fikir": "Kütle numarası farkından α sayısı, atom numarası farkından β⁻ sayısı bulunur.",
+   "tuzak": "α sayısı ile β⁻ sayısını karıştırmak; α’nın Z’yi 2 azalttığını hesaba katmamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "ra-bozunma",
+   "tip": "Alfa, beta ve gama bozunmaları",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-06",
+   "konu": "Radyoaktivite",
+   "alt": "Çekirdek sayılarının eşitlenmesi",
+   "fikir": "İki örnekteki N = N₀ ÷ 2^(t ÷ T) ifadeleri eşitlenir; üsler arasındaki fark başlangıç oranına eşit olur.",
+   "tuzak": "Başlangıç sayıları oranını doğrudan yarı ömür sayısı sanmak; yarı ömürleri toplamak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 4,
+   "tipId": "ra-yarisure",
+   "tip": "Yarı ömür",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-07",
+   "konu": "Radyoaktivite",
+   "alt": "Tepkimede bilinmeyen parçacıklar",
+   "fikir": "Toplam A ve Z korunur; kalan A ve Z’ye göre parçacık adlandırılır.",
+   "tuzak": "Pozitron ile elektronu, nötron ile protonu karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ra-tepkime",
+   "tip": "Çekirdek tepkimeleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-08",
+   "konu": "Radyoaktivite",
+   "alt": "Fisyon tepkimesi yargıları",
+   "fikir": "Korunumdan bilinmeyen çekirdek bulunur; fisyonda kütle azalır ve ürünler daha sıkı bağlıdır.",
+   "tuzak": "Fisyon ürünlerinin bağlanma enerjisinin daha küçük olduğunu ya da kütlenin korunduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "ra-fisfuz",
+   "tip": "Fisyon ve füzyon",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-09",
+   "konu": "Radyoaktivite",
+   "alt": "Eb÷A grafiğinde enerji yönü",
+   "fikir": "Tepkimede ürünlerin toplam bağlanma enerjisi girenlerinkinden büyükse enerji açığa çıkar; A ≈ 56 tepe noktasıdır.",
+   "tuzak": "Füzyon ve fisyonun her çekirdek için enerji verdiğini sanmak; tepe çekirdeğin bölünmesini de enerji verici saymak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ra-baglanma",
+   "tip": "Bağlanma enerjisi",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-10",
+   "konu": "Radyoaktivite",
+   "alt": "Güç ve kütle kaybı",
+   "fikir": "Güç, birim zamandaki enerjidir; kütle kaybı Δm = E ÷ c² ile bulunur.",
+   "tuzak": "c yerine c² almamak, ya da c² ile çarpmak; üslerde hata yapmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ra-enerji",
+   "tip": "Kütle–enerji dönüşümü",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-11",
+   "konu": "Radyoaktivite",
+   "alt": "Tablodan yarı ömür",
+   "fikir": "Tablodaki iki değerden yarı ömür bulunur; hedef kütle için gereken yarı ömür sayısı kütle oranından çıkarılır.",
+   "tuzak": "Oranı (kütle bölümünü) doğrudan süre sanmak; yarı ömür sayısını bir eksik ya da fazla almak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "ra-yarisure",
+   "tip": "Yarı ömür",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-12",
+   "konu": "Radyoaktivite",
+   "alt": "Nüfuz gücünden ışımayı tanıma",
+   "fikir": "Kâğıtta duran α, alüminyumda duran β, kurşunda ancak azalan γ’dır; buna göre özellikler yorumlanır.",
+   "tuzak": "γ ışımasının kurşunda tamamen durduğunu ya da β’nın yüksüz olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ra-isinim",
+   "tip": "Işımaların özellikleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-13",
+   "konu": "Radyoaktivite",
+   "alt": "N–Z düzleminde bozunma türü",
+   "fikir": "Okun yönünden bozunma türü anlaşılır: (−2, −2) α, (−1, +1) β⁻; A = N + Z değişimi bulunur.",
+   "tuzak": "β⁻ bozunmasında A’nın da azaldığını sanmak; okların sayısıyla α sayısını karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ra-zincir",
+   "tip": "Bozunma zincirleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-14",
+   "konu": "Radyoaktivite",
+   "alt": "N–Z düzleminde yön ve çekirdek ilişkileri",
+   "fikir": "Okların yönü bozunma türünü, noktaların koordinatları izotop/izobar ilişkisini verir.",
+   "tuzak": "β⁺ ile β⁻ yönünü karıştırmak; izobar ile izotopu karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "ra-zincir",
+   "tip": "Bozunma zincirleri",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-15",
+   "konu": "Radyoaktivite",
+   "alt": "Yarı ömür kavramı",
+   "fikir": "Yarı ömür dış koşullardan bağımsızdır; aktivite kalan çekirdek sayısıyla orantılı ve yarı ömrü kısa olanda daha büyüktür.",
+   "tuzak": "Isıtmayla bozunmanın hızlanacağını ya da kısa yarı ömürlü örneğin daha uzun süre kalacağını sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "ra-yarisure",
+   "tip": "Yarı ömür",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-16",
+   "konu": "Radyoaktivite",
+   "alt": "Radyoaktif yaş tayini",
+   "fikir": "Ana ve yavru çekirdek sayıları toplamı başlangıçtaki ana çekirdek sayısıdır; kalan oranı 1/2ⁿ ise n yarı ömür geçmiştir.",
+   "tuzak": "Pb ÷ U oranını doğrudan yarı ömür sayısı sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ra-yarisure",
+   "tip": "Yarı ömür",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-17",
+   "konu": "Radyoaktivite",
+   "alt": "Füzyon zincirinde sayım",
+   "fikir": "Zincirin sonunda bir ⁴He için ilk iki tepkime ikişer kez gerçekleşir; ışımalar bu sayıya göre sayılır.",
+   "tuzak": "Her tepkimeyi bir kez saymak ya da nötrinoyu da sayıma katmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ra-fisfuz",
+   "tip": "Fisyon ve füzyon",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-18",
+   "konu": "Radyoaktivite",
+   "alt": "Bağlanma enerjisi farkıyla fisyon enerjisi",
+   "fikir": "Açığa çıkan enerji = ürünlerin toplam bağlanma enerjisi − girenin toplam bağlanma enerjisi; her biri A × (Eb ÷ A) ile bulunur.",
+   "tuzak": "Nükleon başına farkı toplam enerji sanmak; yalnız tek ürünü hesaba katmak; tüm ürünlere aynı değeri uygulamak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 4,
+   "tipId": "ra-baglanma",
+   "tip": "Bağlanma enerjisi",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-19",
+   "konu": "Radyoaktivite",
+   "alt": "Reaktör gücünden fisyon sayısı",
+   "fikir": "Saniyedeki fisyon sayısı = güç ÷ bir fisyonun enerjisi (joule).",
+   "tuzak": "MeV’i joule’e çevirirken üssü yanlış almak ya da MeV yerine eV kullanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "ra-fisfuz",
+   "tip": "Fisyon ve füzyon",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  },
+  {
+   "id": "K-AFRA-20",
+   "konu": "Radyoaktivite",
+   "alt": "Alfa bozunmasında enerji paylaşımı",
+   "fikir": "Momentumlar eşit büyüklükte olduğundan kinetik enerjiler kütlelerle ters orantılıdır; hafif parçacık enerjinin büyük kısmını alır.",
+   "tuzak": "Enerjinin eşit paylaşıldığını ya da kütle ile doğru orantılı bölüneceğini sanmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
+   "tipId": "ra-bozunma",
+   "tip": "Alfa, beta ve gama bozunmaları",
+   "kaynak": "ÖSYM AYT 2018–2025 Fizik (Radyoaktivite, çekirdek tepkimeleri; yalnız mantık) · 345 AYT Fizik s.331–392 · Bilgi Sarmal AYT Fizik · MEB 12. sınıf fizik"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "ra-bozunma",
+   "ad": "Alfa, beta ve gama bozunmaları",
+   "kartlar": [
+    "K-AFRA-01",
+    "K-AFRA-05",
+    "K-AFRA-20"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-isinim",
+   "ad": "Işımaların özellikleri",
+   "kartlar": [
+    "K-AFRA-02",
+    "K-AFRA-12"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-yarisure",
+   "ad": "Yarı ömür",
+   "kartlar": [
+    "K-AFRA-03",
+    "K-AFRA-06",
+    "K-AFRA-11",
+    "K-AFRA-15",
+    "K-AFRA-16"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-zincir",
+   "ad": "Bozunma zincirleri",
+   "kartlar": [
+    "K-AFRA-04",
+    "K-AFRA-13",
+    "K-AFRA-14"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-tepkime",
+   "ad": "Çekirdek tepkimeleri",
+   "kartlar": [
+    "K-AFRA-07"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-fisfuz",
+   "ad": "Fisyon ve füzyon",
+   "kartlar": [
+    "K-AFRA-08",
+    "K-AFRA-17",
+    "K-AFRA-19"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-baglanma",
+   "ad": "Bağlanma enerjisi",
+   "kartlar": [
+    "K-AFRA-09",
+    "K-AFRA-18"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  },
+  {
+   "tipId": "ra-enerji",
+   "ad": "Kütle–enerji dönüşümü",
+   "kartlar": [
+    "K-AFRA-10"
+   ],
+   "uygulamaKonu": "afiz|Radyoaktivite"
+  }
+ ]
+}

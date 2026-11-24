@@ -1,0 +1,338 @@
+{
+ "konu": "Kimyasal Tepkimelerde Hız",
+ "surum": 1,
+ "not_": "Kart = fikir; soru metni içermez. Kaynaklar: ÖSYM 2018–2026 TYT Kimya çıkmış soruları, MEB 9–10. sınıf müfredatı.",
+ "kartlar": [
+  {
+   "id": "K-AKHZ-01",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Tepkime hızı ve katsayı ilişkisi",
+   "fikir": "Her maddenin hızı katsayısına bölününce tepkime hızı bulunur: r = −Δ[A]/(aΔt) = Δ[C]/(cΔt).",
+   "tuzak": "Maddelerin hızını doğrudan tepkime hızı sanmak; katsayı oranını ters uygulamak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "hz-ifade",
+   "tip": "Hız ifadesi ve ortalama hız",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-02",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Ortalama hızı tanecik modelinden bulma",
+   "fikir": "Tanecik sayısını mole, mol sayısını hacme bölerek derişimi bul; derişim değişimini süreye böl.",
+   "tuzak": "Hacme bölmeyi unutmak; kalan madde miktarını harcanan sanmak.",
+   "zorluk": "kolay",
+   "kalip": "şekilli",
+   "adim": 3,
+   "tipId": "hz-ifade",
+   "tip": "Hız ifadesi ve ortalama hız",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-03",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Aktivasyon enerjisi ve çarpışma",
+   "fikir": "Tepkime için etkin çarpışma gerekir; aktivasyon enerjisi sıcaklıkla değişmez, ΔH ile eşit değildir.",
+   "tuzak": "Her çarpışmanın ürün verdiğini sanmak; sıcaklığın Ea’yı düşürdüğünü sanmak; Ea ile ΔH’yi karıştırmak.",
+   "zorluk": "kolay",
+   "kalip": "öncüllü",
+   "adim": 2,
+   "tipId": "hz-enerji",
+   "tip": "Aktivasyon enerjisi ve enerji diyagramı",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-04",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Hız denklemini tablodan bulma",
+   "fikir": "Bir değişken sabitken öbürünün değişimi hıza oranlanır; hız oranı = derişim oranı üzeri mertebe.",
+   "tuzak": "İki değişkeni birden değiştiren deneyleri kıyaslamak; mertebeyi derişim katsayısı sanmak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-05",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Mertebe, derece ve hız sabitinin birimi",
+   "fikir": "Her derişimin mertebelerinin toplamı tepkime derecesidir; k’nın birimi dereceye bağlıdır: L^(n−1)·mol^(1−n)·s⁻¹.",
+   "tuzak": "Mertebeyi katsayıyla karıştırmak; k’nın biriminin dereceden bağımsız olduğunu sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 4,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-06",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Hız denklemi, k ve yeni hız",
+   "fikir": "Mertebeler iki deney çiftinden bulunur, k bir deneyden hesaplanır ve istenen derişimlerde hız bulunur.",
+   "tuzak": "Bir mertebeyi yanlış almak; k yerine bir deneyin hızını kullanmak.",
+   "zorluk": "zor",
+   "kalip": "tablo",
+   "adim": 5,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-07",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Derişim–zaman grafiğini yorumlama",
+   "fikir": "Eğimin mutlak değeri hızdır; zamanla derişim azaldıkça hız azalır; iki grafik aynı zaman aralığında kıyaslanır.",
+   "tuzak": "Hızın zamanla sabit kaldığını sanmak; ortalama hızı yanlış aralıkta hesaplamak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hz-faktor",
+   "tip": "Hızı etkileyen faktörler",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-08",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Hız–derişim grafiğinde birinci mertebe",
+   "fikir": "Başlangıç noktasından geçen doğru birinci mertebeyi gösterir; eğim k’dır.",
+   "tuzak": "Doğrusal grafiği derişimle hızın sabit olduğu sanmak; tepkime hızını maddenin hızı sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-09",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Mekanizma ve yavaş basamak",
+   "fikir": "Hız denklemi yavaş basamaktan yazılır; her iki basamakta da görünen ve net tepkimede olmayan tür ara üründür, yeniden oluşan tür katalizördür.",
+   "tuzak": "Hız denklemini net tepkimeden yazmak; ara ürünle katalizörü karıştırmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "hz-mekanizma",
+   "tip": "Mekanizma ve hızı belirleyen basamak",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-10",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "İki basamaklı enerji diyagramı",
+   "fikir": "En büyük aktivasyon enerjili basamak hızı belirler; net ΔH ürün–giren farkıdır; ara ürün vadide yer alır.",
+   "tuzak": "Basamağın Ea’sını sıfırdan okumak; net ΔH ile basamak ΔH’sini karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "hz-enerji",
+   "tip": "Aktivasyon enerjisi ve enerji diyagramı",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-11",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Katalizörün enerji diyagramındaki etkisi",
+   "fikir": "Katalizör aktivasyon enerjisini ileri ve geri yönde eşit miktarda düşürür; ΔH değişmez.",
+   "tuzak": "Katalizörün ΔH’yi değiştirdiğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hz-katalizor",
+   "tip": "Katalizör ve aktivasyon enerjisi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-12",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Kinetik enerji dağılımı ve sıcaklık",
+   "fikir": "Sıcaklık artınca eşik enerjisini aşan tanecik oranı artar; eşik enerjisi değişmez.",
+   "tuzak": "Eşik enerjisinin sıcaklıkla değiştiğini sanmak; eğri altındaki alanı farklı sanmak.",
+   "zorluk": "orta",
+   "kalip": "öncüllü",
+   "adim": 3,
+   "tipId": "hz-sicaklik",
+   "tip": "Sıcaklık ve kinetik enerji dağılımı",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-13",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Her 10 °C’de hızın katlanması",
+   "fikir": "Hız ve tamamlanma süresi ters orantılıdır; sıcaklık farkı kaç basamağa bölünürse hız o kadar kez katlanır.",
+   "tuzak": "Süreyi hızla aynı yönde çarpmak; basamak sayısını yanlış bulmak.",
+   "zorluk": "orta",
+   "kalip": "hikâyeli",
+   "adim": 3,
+   "tipId": "hz-sicaklik",
+   "tip": "Sıcaklık ve kinetik enerji dağılımı",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-14",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Hacim–zaman grafiğiyle faktör belirleme",
+   "fikir": "Aynı son hacimde yalnız eğim artmışsa hızı artıran, madde miktarını değiştirmeyen bir etken uygulanmıştır.",
+   "tuzak": "Madde miktarını artırmanın hızı artıracağını, ürün miktarını değiştirmeyeceğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "grafik",
+   "adim": 3,
+   "tipId": "hz-faktor",
+   "tip": "Hızı etkileyen faktörler",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-15",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Mertebe ve hacim değişiminin birlikte etkisi",
+   "fikir": "Hacim küçülünce gazın derişimi artar; yeni hız derişim oranlarının mertebe kuvvetlerinin çarpımıdır.",
+   "tuzak": "Hacim değişimini hıza doğrudan katmak; mol sayısı artışını derişim artışı gibi kullanmak.",
+   "zorluk": "zor",
+   "kalip": "düz",
+   "adim": 4,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-16",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Hız sabitinin bağlı olduğu etkenler",
+   "fikir": "k yalnız sıcaklığa, katalizöre ve tepkimeye bağlıdır; derişim ve zamanla değişmez.",
+   "tuzak": "k’nın derişimle değiştiğini sanmak.",
+   "zorluk": "orta",
+   "kalip": "düz",
+   "adim": 3,
+   "tipId": "hz-denklem",
+   "tip": "Hız denklemi ve hız sabiti",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-17",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Mekanizma şeması: ara ürün, net tepkime ve hacim",
+   "fikir": "Yavaş basamaktan hız denklemi yazılır; ara ürün net denklemde yoktur; hacim küçülünce gazların derişimi artar.",
+   "tuzak": "Hız denklemini net tepkimeden yazmak; hızdan bağımsız maddeyi hızı değiştiren sanmak.",
+   "zorluk": "zor",
+   "kalip": "öncüllü",
+   "adim": 5,
+   "tipId": "hz-mekanizma",
+   "tip": "Mekanizma ve hızı belirleyen basamak",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-18",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "İki maddenin derişim–zaman grafiğinden tepkime hızı",
+   "fikir": "Derişim değişim oranı katsayı oranını verir; tepkime hızı bir maddenin hızının katsayısına bölünmesiyle bulunur.",
+   "tuzak": "Eğriyi tanımadan hız hesaplamak; katsayıya bölmeyi unutmak; yanlış aralığı almak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "hz-ifade",
+   "tip": "Hız ifadesi ve ortalama hız",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-19",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Kontrollü değişken ve deney seçimi",
+   "fikir": "Bir etkenin etkisini görmek için yalnız o etkenin farklı, diğerlerinin aynı olduğu deney çifti seçilir.",
+   "tuzak": "Birden fazla etkeni değiştiren deneyleri kıyaslamak.",
+   "zorluk": "orta",
+   "kalip": "tablo",
+   "adim": 3,
+   "tipId": "hz-faktor",
+   "tip": "Hızı etkileyen faktörler",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "id": "K-AKHZ-20",
+   "konu": "Kimyasal Tepkimelerde Hız",
+   "alt": "Katalizörlü çok basamaklı yolda hız belirleyen Ea",
+   "fikir": "Katalizörlü yolda en yüksek Ea’lı basamak hızı belirler; katalizörsüz yolla farkı katalizörün sağladığı azalmadır.",
+   "tuzak": "Katalizörlü tepenin en yükseğini tek aktivasyon enerjisi sanmak; Ea’yı girenlerden okumak.",
+   "zorluk": "zor",
+   "kalip": "grafik",
+   "adim": 5,
+   "tipId": "hz-katalizor",
+   "tip": "Katalizör ve aktivasyon enerjisi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (yalnız mantık) · MEB 11. sınıf Kimyasal Tepkimelerde Hız"
+  }
+ ],
+ "tipler": [
+  {
+   "tipId": "hz-ifade",
+   "ad": "Hız ifadesi ve ortalama hız",
+   "kartlar": [
+    "K-AKHZ-01",
+    "K-AKHZ-02",
+    "K-AKHZ-18"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-enerji",
+   "ad": "Aktivasyon enerjisi ve enerji diyagramı",
+   "kartlar": [
+    "K-AKHZ-03",
+    "K-AKHZ-10"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-denklem",
+   "ad": "Hız denklemi ve hız sabiti",
+   "kartlar": [
+    "K-AKHZ-04",
+    "K-AKHZ-05",
+    "K-AKHZ-06",
+    "K-AKHZ-08",
+    "K-AKHZ-15",
+    "K-AKHZ-16"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-faktor",
+   "ad": "Hızı etkileyen faktörler",
+   "kartlar": [
+    "K-AKHZ-07",
+    "K-AKHZ-14",
+    "K-AKHZ-19"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-mekanizma",
+   "ad": "Mekanizma ve hızı belirleyen basamak",
+   "kartlar": [
+    "K-AKHZ-09",
+    "K-AKHZ-17"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-katalizor",
+   "ad": "Katalizör ve aktivasyon enerjisi",
+   "kartlar": [
+    "K-AKHZ-11",
+    "K-AKHZ-20"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  },
+  {
+   "tipId": "hz-sicaklik",
+   "ad": "Sıcaklık ve kinetik enerji dağılımı",
+   "kartlar": [
+    "K-AKHZ-12",
+    "K-AKHZ-13"
+   ],
+   "uygulamaKonu": "akim|Kimyasal Tepkimelerde Hız"
+  }
+ ]
+}
