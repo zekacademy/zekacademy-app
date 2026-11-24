@@ -971,6 +971,13 @@ function planEditor(s){
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
         <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${d}" aria-label="${g} için blok ekle">${icon("plus","xs")} Blok</button><button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
+  const sg = pNext(s, w), sgl = dayTasks(s, sg), sgg = GUN[dIdx(sg)];
+  const sonrakiGun = `<div class="dcard sgun"><div class="dch"><b>${sgg}</b><span class="pill ac">Sonraki görüşme günü</span><span class="faint small">${shortDate(sg)}</span></div>
+      <p class="faint small" style="margin:0 0 6px">Yeni haftanın ilk günü. Görüşmeden önce öğrenci boş kalmasın diye bu günün görevlerini de şimdi yazabilirsin.</p>
+      <div class="tl" id="tl-sg" data-i="sg">${sgl.map(x=>tlSatir(taskText(x), x.done)).join("")}${tlSatir("", false, true)}</div>
+      <textarea id="pl-sg" data-plan="${sg}" hidden>${esc(sgl.map(taskText).join("\n"))}</textarea>
+      <div class="dcf"><span class="faint small">${sgl.length?`${sgl.length} görev`:"Henüz görev yok"}</span>
+        <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${sg}" aria-label="${sgg} için blok ekle">${icon("plus","xs")} Blok</button><button class="link small" data-act="sheet" data-v="copyday" data-date="${sg}">${icon("copy","xs")} Kopyala</button></div></div></div>`;
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
     <div class="pills"><button class="iconbtn sm" data-act="geri" title="Geri al (⌘Z)" aria-label="Geri al" ${(HIST[sid()]||{u:[]}).u.length?"":"disabled"}>↶</button><button class="iconbtn sm" data-act="ileri" title="İleri al (⇧⌘Z)" aria-label="İleri al" ${(HIST[sid()]||{r:[]}).r.length?"":"disabled"}>↷</button><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button>${plan(s,S.week).yazili?"":`<button class="btn sm" data-act="yazili" data-w="${S.week}">📝 Yazılı haftası yap</button>`}<button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
@@ -983,7 +990,7 @@ function planEditor(s){
     <details class="card" style="padding:12px 16px"><summary class="small" style="cursor:pointer;font-weight:700;color:var(--muted)">Süre yazmayan satırlar için ortalama süreler</summary>
       <div class="pills" style="margin-top:10px">${cfg().sureler.filter(r=>r.k&&r.dk).map(r=>`<span class="pill">${esc(r.k)} · <b>${fmtMin(r.dk)}</b></span>`).join("")}<button class="link small" data-act="go" data-v="ayarlar">Ayarlardan düzenle</button></div>
       <p class="faint small" style="margin:8px 0 0">Satırda “(2 saat)” gibi süre yazarsan o geçerli olur. “x2” yazarsan süre ikiyle çarpılır. Günün çalışma süresi kutusunu boş bırakırsan bu toplam kullanılır.</p></details>
-    <div class="daygrid">${days}</div>
+    <div class="daygrid">${days}${sonrakiGun}</div>
   </div>`;
 }
 
@@ -1104,8 +1111,9 @@ function pCetele(s){
   </div>`;
 }
 function pCalisma(s){
-  const t = today(), run = !!(s.timer && s.timer.start), w = curStart(s);
+  const t = today(), run = !!(s.timer && s.timer.start), bu = curStart(s), w = S.calW && S.calW <= bu ? pStart(s, S.calW) : bu;
   const days = pDays(s,w); const mins = days.map(d=>minutes(s,d)); const mx = Math.max(60,...mins);
+  const son8 = []; for(let x = bu, i = 0; i < 8; i++, x = pPrev(s, x)){ son8.push([x, pDays(s,x).reduce((a,d)=>a+minutes(s,d,false),0)]); } const mx8 = Math.max(60, ...son8.map(a=>a[1]));
   const head = A() ? "" : topbar(`<h1 class="ttl">Kronometre</h1>`, "", `<button class="iconbtn" data-act="go" data-v="home" aria-label="Geri">${icon("back")}</button>`);
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${A()?"":otoKapanmaKart(s)}
@@ -1116,10 +1124,13 @@ function pCalisma(s){
       ${run?"":`<p class="faint small" style="margin:0;text-align:center">İpucu: Ana sayfada bir görevin yanındaki ▶ ile o görev için sayaç başlatırsan süre derse göre de kaydedilir.</p>`}
       <div class="muted small">Bugün toplam: <b class="num" style="color:var(--fg)" id="ttoday">${fmtMin(minutes(s,t))}</b></div></div>`}
     ${A()?"":grupKart(s)}
-    <div class="card" id="calisma"><div class="sech"><h3>Bu hafta çalışma</h3><b class="num">${fmtMin(mins.reduce((a,b)=>a+b,0))}</b></div>
+    <div class="card" id="calisma"><div class="wknav" style="margin:-4px 0 6px"><button class="iconbtn sm" data-act="calw" data-v="${pPrev(s,w)}" aria-label="Önceki hafta">${icon("back","sm")}</button><b style="font-size:14px">${w===bu?"Bu hafta":`${shortDate(w)} – ${shortDate(pEnd(s,w))}`}</b><button class="iconbtn sm" data-act="calw" data-v="${w<bu?pNext(s,w):""}" aria-label="Sonraki hafta" ${w<bu?"":"disabled"}>${icon("chev","sm")}</button></div>
+      <div class="sech"><h3>${w===bu?"Bu hafta çalışma":"O hafta çalışma"}</h3><b class="num">${fmtMin(mins.reduce((a,b)=>a+b,0))}</b></div>
       <div class="bars7">${days.map((d,i)=>`<button class="b7 ${d===t?"today":""}" data-act="sheet" data-v="sure" data-date="${d}" aria-label="${GUN[dIdx(d)]} süresini düzenle"><em class="num">${mins[i]?fmtMin(mins[i]):""}</em><i style="height:${mins[i]/mx*100}%"></i><span>${GUNK[dIdx(d)]}</span></button>`).join("")}</div>
       <p class="faint small" style="margin:10px 0 0">Bir güne dokunarak süreyi elle düzeltebilirsin.</p>
       <button class="btn full" style="margin-top:10px" data-act="sheet" data-v="sure" data-date="${t}">${icon("plus","sm")} Elle süre ekle</button></div>
+    <div class="card"><div class="sech"><h3>Son haftalar</h3><span class="faint small">haftalık toplam</span></div>
+      <div class="sonh">${son8.map(([x,dk])=>`<button class="sonhs ${x===w?"on":""}" data-act="calw" data-v="${x===bu?"":x}"><span>${x===bu?"Bu hafta":`${shortDate(x)} – ${shortDate(pEnd(s,x))}`}</span><i><b style="width:${dk/mx8*100}%"></b></i><em class="num">${dk?fmtMin(dk):"—"}</em></button>`).join("")}</div></div>
     ${dersDagilimKart(s, w)}
   </div>`;
 }
@@ -3789,6 +3800,7 @@ document.addEventListener("click", e=>{
     case "gorusmesiz": gorusmesizYap(v, true); closeSheet(); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelerden çıkarıldı`); break;
     case "gorusmeli": gorusmesizYap(v, false); render(); toast(`${(S.students.get(v)?.name||"Öğrenci")} görüşmelere geri eklendi`); break;
     case "karnepaylas": karnePaylas(); break;
+    case "calw": S.calW = v || ""; render(); break;
     case "hkmod": S.hkMod = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
     case "hktema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hikaye"); break;
@@ -3960,7 +3972,7 @@ document.addEventListener("input", e=>{
   if(t.dataset.dy) updateNets();
   else if(t.dataset.act==="q"){ S.q=t.value; const pos=t.selectionStart; render(); const n=$("#q"); if(n){ n.focus(); try{ n.setSelectionRange(pos,pos); }catch(_){} } }
   else if(t.dataset.act==="tnote"){ mutate(s=>{ topic(s,t.dataset.k).n=t.value; }); }
-  else if(t.dataset.plan && A()){ const d=t.dataset.plan; mutate(s=>setDayTasks(s,d,linesToTasks(dayTasks(s,d), t.value))); const ph=document.getElementById("ps-"+pIdx(st(),d)); if(ph){ const a=autoHours(st(),d); ph.placeholder = a?String(Math.round(a*10)/10).replace(".",","):"0"; } }
+  else if(t.dataset.plan && A()){ const d=t.dataset.plan; mutate(s=>setDayTasks(s,d,linesToTasks(dayTasks(s,d), t.value))); const ph=pStart(st(),d)===S.week?document.getElementById("ps-"+pIdx(st(),d)):null; if(ph){ const a=autoHours(st(),d); ph.placeholder = a?String(Math.round(a*10)/10).replace(".",","):"0"; } }
   else if(t.dataset.hs!=null && t.dataset.hs!=="" && A()){ const i=t.dataset.hs; mutate(s=>{ const p=ensurePlan(s,S.week); const v=num(t.value); if(v==null) delete p.saat[i]; else p.saat[i]=Math.max(0,Math.min(16,v)); }); }
   else if(t.dataset.hd && A()){ const d=t.dataset.ders, v=t.value; mutate(s=>{ if(t.dataset.hd==="kitap"){ s.kitaplar=s.kitaplar||{}; if(v.trim()) s.kitaplar[d]=v; else delete s.kitaplar[d]; } else { const p=ensurePlan(s,S.week); if(v.trim()) p.hedef[d]={konu:v, done:!!(p.hedef[d]&&p.hedef[d].done)}; else delete p.hedef[d]; } }); }
   else if(t.dataset.cnote && A()){ S.cnotes.set(S.cur, {...(S.cnotes.get(S.cur)||{}), not:t.value}); persistDoc("coachNotes", S.cur, 800); }
