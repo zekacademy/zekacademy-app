@@ -8,10 +8,11 @@
    Yer açmak için eski maddeler anlam kaybı olmadan kısaltıldı.
    23 Kasım 2026: AYT Matematik 2. dalganın (300 soru) püf ve çeldiricilerinden AYT MATEMATİK bölümü (eşitsizlik, limit,
    türev, integral, olasılık, logaritma, karmaşık, fonksiyon) eklendi; gerçek hata kaydı yoktu. Yer için bazı maddeler kısaltıldı.
+   25 Kasım 2026: 1 gerçek hata (paragraf, neden-sonuç eşleştirme) üzerine neden-sonuç yön kuralı; ayrıntısı turkce-beceri.js'de.
    İki günde bir çalışan "Zek AI çözüm eğitimi" görevi bu dosyayı soru havuzundan ve gerçek hatalardan günceller.
    KURAL: 2026 TYT sınav seti (kör test seti) bu dosyaya örnek olarak GİRMEZ. Soru metni kopyalanmaz, yalnız kural yazılır. */
 export const KAYNAK_COMMIT = "ea3f1a1a8c77c5f85562432e237f1eb07dd015d8";
-export const GUNCELLEME = "2026-11-23";
+export const GUNCELLEME = "2026-11-25";
 
 export const COZUM_BILGI = `ÇÖZÜM BECERİLERİ (her soruda uygula):
 
@@ -24,7 +25,7 @@ GENEL
 TÜRKÇE · PARAGRAF
 - Her şıkkı parçadaki bir dayanak cümlesiyle eşleştir. "Çıkarılabilir / ulaşılabilir / söylenebilir": parçada açıkça yazan ya da ondan zorunlu olarak çıkan bilgi. Yorum, genel doğru bilgi ya da parçadan fazlası yanlıştır. Doğru şık çoğu zaman parçadaki bir cümlenin başka sözcüklerle söylenmiş hâlidir.
 - "Ulaşılamaz / değinilmemiştir / söylenemez": dört şıkkın her birinin parçadaki karşılığını bul; karşılığı olmayan ya da parçayla çelişen tek şık cevaptır. Sözcük birebir geçmese de aynı anlam (eş anlamlı ifade, yan cümlede değinme) varsa o şık parçada vardır.
-- Aşırı genelleme: "her, hiç, yalnızca, tümüyle" parçada olmayan bir kesinlik katıyorsa şık parçayı aşar; "çoğu" → "hepsi" yapan, neden-sonucu ters çeviren ya da bir kişinin görüşünü başkasına yükleyen şık da yanlıştır. Ama sözcüğe bakıp otomatik eleme: parça gerçekten o genişliği anlatıyorsa "her" diyen şık doğrudur.
+- Aşırı genelleme: "her, hiç, yalnızca, tümüyle" parçada olmayan bir kesinlik katıyorsa şık parçayı aşar; "çoğu" → "hepsi" yapan, neden-sonucu ters çeviren ya da bir kişinin görüşünü başkasına yükleyen şık da yanlıştır. Ama parça gerçekten o genişliği anlatıyorsa "her" diyen şık doğrudur.
 - Ana düşünce / asıl anlatılmak istenen: parçanın tamamını kapsayan yargı. Karşıtlık bağlacından (ama, oysa, ne var ki, aslında) sonra gelen yargı genelde yazarın asıl görüşüdür; eleştirilen görüş, örnek ya da parçanın bir bölümü ana düşünce değildir.
 - "Destekler / savunulan": önce yazarın görüşünü bul (karşı çıktığı yaygın görüşten sonra "oysa, ama, söyleyeceğim, tersini savunmak" ile gelir). Doğru şık bu görüşü başka sözlerle söyler ya da ona kanıt olur; yazarın çürüttüğü görüşü destekleyen şık yanlıştır. Parça zincir kuruyorsa ("A ancak B kadar; B de ancak C kadar") doğru şık çoğu zaman zincirin ilk ve son halkasını bağlar.
 - Konu ve başlık: parçanın tamamını karşılamalı; tek örneğe dayanan (dar) ya da parçayı aşan (geniş) şık yanlıştır.
@@ -39,7 +40,7 @@ TÜRKÇE · CÜMLE VE SÖZCÜK ANLAMI
 - Sözcükte ve sözde anlam: anlamı parçanın kendi açıklamasından çıkar (yanındaki karşıtlık, niteleme: neyle karşılaştırılıyor, kim kurmuş, gönüllü mü zorunlu mu). Sözcüğün en yaygın anlamına ya da çağrışımına göre seçme ("yalın" bağlamda "yüzeysel" olabilir, "süssüz" değil).
 - Deyim ve atasözü: sözü sadeleştirip özünü çıkar, sonra şıktaki durumun aynı özü taşıyıp taşımadığına bak; ortak sözcüğe değil düşüncenin yönüne göre eşleştir.
 - Anlamca özdeş cümle: "Yalnızca A olanlar B'dir" = "B olan herkes A'dır"; tersi ("A olan herkes B'dir") aynı anlama gelmez.
-- Neden-sonuç: "-dığı için, yüzünden, -dığından"; amaç-sonuç: "için, diye, amacıyla" (ulaşılmak istenen); koşul: "-sa, -mak şartıyla". Amacı nedenle, koşulu nedenle karıştırma.
+- Neden-sonuç: "-dığı için, yüzünden, -dığından"; amaç-sonuç: "için, diye, amacıyla" (ulaşılmak istenen); koşul: "-sa, -mak şartıyla". Amacı ya da koşulu nedenle karıştırma; eşleştirmede yönü parçadaki gibi al.
 - Öznel yargı beğeni, duygu, değer bildirir (bence, güzel, gereksiz), kanıtlanamaz; nesnel yargı doğrulanabilir.
 - İki cümlenin birleştirilmesi: iki cümledeki bilgilerin hepsi korunmalı, aralarındaki anlam ilişkisi (neden-sonuç, karşıtlık, zaman sırası, koşul) değişmemeli.
 

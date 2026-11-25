@@ -7,7 +7,9 @@
    3) Paragraf yapısında (akış, son cümle, sıralama) gönderim ve bağlaçları sınamadı.
    4) Parçadaki cümlenin başka sözcüklerle söylenmiş hâlini tanımadı; genel doğru bilgiye kaydı.
    5) Dil bilgisi/yazım/noktalama sorularında her birimi tek tek taramadan karar verdi.
-   6) Bu hataların çoğunda "eminim" dedi. Bu beceri her şıkkı yazılı olarak etiketletip dayanak ister. */
+   6) Bu hataların çoğunda "eminim" dedi. Bu beceri her şıkkı yazılı olarak etiketletip dayanak ister.
+   25 Kasım 2026: gerçek hata (paragraf, neden-sonuç eşleştirme; anahtar uyuşmadı) üzerine neden-sonuç eşleştirme kuralı:
+   7) Parçanın kurduğu yön yerine sağduyuya uygun görünen eşleşmeyi seçti. */
 
 export const TURKCE_BECERI = `TÜRKÇE BECERİSİ (bu soru Türkçe; aşağıdaki yöntemi adım adım uygula)
 
@@ -30,6 +32,7 @@ ADIM 4 · TİPE ÖZEL KURALLAR
 - Akışı bozan cümle: odağı yaz (neyi, hangi yönden). Her adayı çıkarıp sınama yap: çıkarınca sonraki cümle ("Bu nedenle, Bu yüzden" ile başlıyorsa özellikle) öncekine daha sıkı bağlanıyorsa o cümle akışı bozar. Aynı anahtar sözcüğü taşımak cümleyi uygun yapmaz.
 - Paragraf bölme: yeni paragraf konu ya da bakış açısı değiştiğinde başlar; öncekine gönderen (bu, bunun, böylece) cümle yeni paragrafı başlatmaz.
 - Anlatım biçimi ve düşünceyi geliştirme: tanık gösterme = başkasının sözüne başvurma (yalnız ad geçmesi yetmez); sayısal veri = düşünceyi sayıyla destekleme; örnekleme, karşılaştırma (iki durumu yan yana koyma), benzetme ("gibi"), tanımlama, kişileştirme. "Yoktur" kökünde her yolu parçada tek tek ara.
+- Neden-sonuç eşleştirme ("hangi neden-sonuç ilişkisi doğrudur / kurulamaz"): her şık için parçada iki olayı BİRBİRİNE BAĞLAYAN ifadeyi bul (bu yüzden, bu nedenle, -dığı için, -ınca, yüzünden, sonucunda, yol açtı, arttıkça) ve 'kontrol' alanında "X → Y (hangi cümle)" diye zinciri yaz. Yönü parçanın kurduğu biçimde al: parçada X yüzünden Y olduysa "Neden: X – Sonuç: Y" doğrudur; yönü ters kurulan şık TERS'tir. Gerçek hayatta akla yatkın görünen ama parçada bu iki olayı bağlayan cümlesi olmayan eşleşme YOK'tur; iki olayın parçada ayrı ayrı geçmesi yetmez. Parçanın kurduğu ilişki sağduyuya ters görünse bile parçaya uy; kendi bildiğin neden-sonucu ekleme.
 - Cümle anlamı: neden (-dığı için) / amaç (için, diye) / koşul (-sa) ayrımı; "Yalnızca A olanlar B'dir" = "B olan herkes A'dır". Öznel yargı değer ve beğeni bildirir.
 
 ADIM 5 · DİL BİLGİSİ, YAZIM, NOKTALAMA: KARAR VERMEDEN ÖNCE TARA
