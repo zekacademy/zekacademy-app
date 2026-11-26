@@ -139,6 +139,13 @@ img{max-width:100%}
 .ktgsep{width:1px;height:26px;background:var(--line);margin:0 4px}
 .ktrenk{width:28px;height:28px;border-radius:50%;border:3px solid transparent;background:var(--r);box-shadow:0 0 0 1px rgba(0,0,0,.15);cursor:pointer;padding:0}.ktrenk.on{border-color:var(--surface);box-shadow:0 0 0 2px var(--ac)}
 .ktkal{width:34px;height:34px;border-radius:10px;border:0;background:none;display:grid;place-items:center;cursor:pointer}.ktkal.on{background:var(--acs)}.ktkal i{display:block;border-radius:50%;background:var(--fg)}
+
+/* Ödemeler: toplam getiri */
+.gtop{display:flex;flex-direction:column;gap:2px;background:linear-gradient(135deg,var(--acs),var(--surface))}
+.gtop>small{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--ac)}.gtop>b{font-size:34px;line-height:1.15}
+.gtopa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.gtopa span{display:flex;flex-direction:column;gap:2px;min-width:0}.gtopa b{font-size:17px}.gtopa small{font-size:11px;color:var(--muted);line-height:1.25}
+@media(max-width:420px){.gtopa{grid-template-columns:1fr 1fr}.gtopa span:last-child{grid-column:1/-1}}
 </style>
 <style>
 /* Layout: telefonda alt menü (ortada büyük Program butonu), geniş ekranda sol menü; içerik ortada tek sütun */
@@ -659,13 +666,13 @@ button.hvsk{font:inherit;color:inherit;background:var(--card);text-align:left;wi
 .segr input:checked+span{background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
 .segr input:focus-visible+span{outline:2px solid var(--ac)}
 /* Gelir paneli */
-.mbars{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;height:170px;align-items:end;margin-top:14px;border-bottom:1px solid var(--line)}
+.gbars{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;height:170px;align-items:end;margin-top:14px;border-bottom:1px solid var(--line)}
 .mbar{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;border:0;background:none;padding:0 6px;font:inherit;cursor:pointer}
 .mbar i{display:block;width:100%;max-width:44px;background:color-mix(in srgb,var(--ac) 45%,var(--surface));border-radius:4px 4px 0 0}
 .mbar.cur i{background:var(--ac)}
 .mbar em{font-style:normal;font-size:11px;font-weight:800;color:var(--fg);white-space:nowrap}
 .mbar span{position:absolute;bottom:-20px;font-size:11px;font-weight:700;color:var(--muted)}
-.mbars{margin-bottom:22px}
+.gbars{margin-bottom:22px}
 .mbar:hover i,.mbar:focus-visible i{filter:brightness(1.1)}
 .mbar:hover::after,.mbar:focus::after{content:attr(data-tip);position:absolute;top:-6px;left:50%;transform:translate(-50%,-100%);background:var(--fg);color:var(--bg);font-size:12px;font-weight:700;padding:5px 8px;border-radius:8px;white-space:nowrap;z-index:2}
 .hbars{display:flex;flex-direction:column;gap:8px}
