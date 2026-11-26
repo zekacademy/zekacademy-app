@@ -2091,14 +2091,15 @@ function cGmod(){
 const AYK = ["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
 function gelirVeri(taslak){
   const t = today(), ay = t.slice(0,7), aylar = []; for(let i=5;i>=0;i--){ const x = addMonthsISO(ay+"-15", -i).slice(0,7); aylar.push(x); }
-  const tah = Object.fromEntries(aylar.map(a=>[a,0])); let buAyVade = 0, buAyOdenen = 0, geciken = 0, gecikenN = 0, gelecek30 = 0, aktif = 0, tutarlar = [];
-  S.students.forEach((x,id)=>{ const o = odemeOf(id); if(!o || !o.bas || (o.taslak && !taslak)) return; aktif++; const tu = num(o.tutar)||0; if(tu) tutarlar.push(tu);
-    Object.values(o.odenen||{}).forEach(p=>{ const m = String(p.t||"").slice(0,7); if(m in tah) tah[m] += num(p.tutar) ?? tu; });
+  const tah = Object.fromEntries(aylar.map(a=>[a,0])); let buAyVade = 0, buAyOdenen = 0, geciken = 0, gecikenN = 0, gelecek30 = 0, aktif = 0, tutarlar = [], toplam = 0, yil = 0, aylik = 0, aylikN = 0; const yilK = t.slice(0,4);
+  S.students.forEach((x,id)=>{ const o = odemeOf(id); if(!o || !o.bas || (o.taslak && !taslak)) return; const tu = num(o.tutar)||0;
+    Object.values(o.odenen||{}).forEach(p=>{ const v = num(p.tutar) ?? tu, m = String(p.t||"").slice(0,7); toplam += v; if(m.slice(0,4)===yilK) yil += v; if(m in tah) tah[m] += v; });
+    if(x.silindi) return; aktif++; if(tu){ tutarlar.push(tu); aylik += o.periyot==="hafta4" ? tu*365/12/28 : tu; aylikN++; }
     vadeler(o).forEach(d=>{ const paid = (o.odenen||{})[d];
       if(d.slice(0,7)===ay){ buAyVade += tu; if(paid) buAyOdenen += tu; }
       if(!paid && d < t){ geciken += tu; gecikenN++; }
       if(!paid && d >= t && d <= addDays(t,30)) gelecek30 += tu; }); });
-  return {aylar, tah, buAyVade, buAyOdenen, geciken, gecikenN, gelecek30, aktif, ort: tutarlar.length ? tutarlar.reduce((a,b)=>a+b,0)/tutarlar.length : 0}; }
+  return {aylar, tah, buAyVade, buAyOdenen, geciken, gecikenN, gelecek30, aktif, toplam, yil, aylik:Math.round(aylik), aylikN, ort: tutarlar.length ? tutarlar.reduce((a,b)=>a+b,0)/tutarlar.length : 0}; }
 function gelirOzet(){
   const taslakVar = [...S.students.keys()].some(id=>odemeOf(id)?.taslak), g = gelirVeri(!!S.gelirTaslak), mx = Math.max(1, ...g.aylar.map(a=>g.tah[a])), cur = g.aylar[g.aylar.length-1];
   const bas = [...S.notifs.values()].filter(n=>n.type==="basvuru" && !n.deneme), ay = today().slice(0,7);
@@ -2106,6 +2107,8 @@ function gelirOzet(){
   const pct = g.buAyVade ? Math.round(g.buAyOdenen/g.buAyVade*100) : 0;
   return `
     ${taslakVar?`<div class="seg"><button data-act="gtaslak" data-v="0" aria-pressed="${!S.gelirTaslak}">Gerçek veriler</button><button data-act="gtaslak" data-v="1" aria-pressed="${!!S.gelirTaslak}">Taslaklar dahil</button></div>`:""}
+    <div class="card gtop"><small>TOPLAM GETİRİ</small><b class="num">${fmtTL(g.toplam)||"0 ₺"}</b><span class="muted small">Öğrencilerinden bugüne kadar tahsil ettiğin toplam</span>
+      <div class="gtopa"><span><b class="num">${fmtTL(g.yil)||"0 ₺"}</b><small>${today().slice(0,4)} yılında</small></span><span><b class="num">${fmtTL(g.aylik)||"0 ₺"}</b><small>Aylık düzenli gelir · ${g.aylikN} öğrenci</small></span><span><b class="num">${fmtTL(g.aylik*12)||"0 ₺"}</b><small>Yıllık tahmini (bu düzenle)</small></span></div></div>
     <div class="kpis">
       ${tile("t-g","check",fmtTL(g.tah[cur])||"0 ₺","Bu ay tahsil edilen")}
       ${tile("t-a","cal",fmtTL(g.buAyVade-g.buAyOdenen)||"0 ₺",`Bu ay bekleyen · %${pct} tahsil`)}
@@ -2113,7 +2116,7 @@ function gelirOzet(){
       ${tile("t-w","users",g.aktif,`Aktif öğrenci · ort. ${fmtTL(Math.round(g.ort))||"—"}`)}
     </div>
     <div class="card"><div class="sech"><h3>Aylık tahsilat</h3><span class="faint small">Son 6 ay · ödenme tarihine göre</span></div>
-      <div class="mbars" role="img" aria-label="Son 6 ayın tahsilatı">${g.aylar.map(a=>{ const v = g.tah[a], h = v/mx*100, [y,m] = a.split("-");
+      <div class="gbars" role="img" aria-label="Son 6 ayın tahsilatı">${g.aylar.map(a=>{ const v = g.tah[a], h = v/mx*100, [y,m] = a.split("-");
         return `<button class="mbar ${a===cur?"cur":""}" data-tip="${AYK[+m-1]} ${y}: ${fmtTL(v)||"0 ₺"}" aria-label="${AYK[+m-1]} ${y}: ${fmtTL(v)||"0 ₺"}"><em class="num">${a===cur||v===mx&&v>0?(fmtTL(v)||""):""}</em><i style="height:${Math.max(v?3:0,h)}%"></i><span>${AYK[+m-1]}</span></button>`; }).join("")}</div>
       <p class="faint small" style="margin:8px 0 0">Bir sütuna dokununca tutarı görürsün.</p>
       <table class="sr-only"><caption>Aylık tahsilat</caption>${g.aylar.map(a=>`<tr><th>${a}</th><td>${g.tah[a]}</td></tr>`).join("")}</table></div>
@@ -2160,7 +2163,7 @@ function cOdeme(){
     ${taslakVar||planYok?`<div class="card" style="box-shadow:none;border-style:dashed">${taslakVar?`<p class="small" style="margin:0 0 10px"><b>Taslak veriler gösteriliyor.</b> Başlangıç tarihleri örnek olarak oluşturuldu; gerçek tarihleri girince taslak etiketi kalkar.</p>`:""}
       <div class="pills">${planYok?`<button class="btn sm" data-act="otaslak">${icon("plus","xs")} ${planYok} öğrenciye taslak tarih ver</button>`:""}${taslakVar?`<button class="btn sm danger" data-act="otaslaksil">Taslakları sil</button>`:""}</div></div>`:""}
     <div class="olist">${rows.map(({id,x,d,o})=>`<div class="orow o-${d.k}"><button class="ohead" data-act="sheet" data-v="odeme" data-id="${id}"><span class="av">${esc(initials(x.name))}</span><div style="min-width:0;flex:1"><b>${esc(x.name)}</b>${o&&o.taslak?` <span class="pill">taslak</span>`:""}
-        <div class="osub">${esc(paketOf(x).n)} · ${o&&o.bas?`${PERIYOT[o.periyot||"ay"]}${o.tutar?" · "+fmtTL(o.tutar):""} · Başlangıç ${shortDate(o.bas)}`:"Başlangıç tarihi girilmedi"}</div></div>
+        <div class="osub">${esc(paketOf(x).n)} · ${o&&o.bas?`${PERIYOT[o.periyot||"ay"]}${o.tutar?" · "+fmtTL(o.tutar):""} · Başlangıç ${shortDate(o.bas)}${(t=>t?` · <b>toplam ${fmtTL(t)}</b>`:"")(Object.values(o.odenen||{}).reduce((a,p)=>a+(num(p.tutar) ?? num(o.tutar) ?? 0),0))}`:"Başlangıç tarihi girilmedi"}</div></div>
         <div class="ostat"><span class="otag">${ODEME_ETIKET[d.k]}</span><span class="small">${esc(d.t)}</span></div></button>
         ${d.k==="kirmizi"||d.k==="pembe"||d.k==="turuncu"?`<button class="btn sm ${d.k==="turuncu"?"":"pri"} opay" data-act="odendi" data-id="${id}" data-d="${d.d}">${icon("check","xs")} ${shortDate(d.d)} ödendi</button>`:""}</div>`).join("") || `<div class="card"><div class="empty">Henüz öğrenci yok.</div></div>`}</div>
     <p class="faint small" style="text-align:center">${cfg().odemeAcik?`Ödemesi yapılmamış öğrenciye ödeme gününde ve 5 gün sonra saat ${esc(cfg().odemeSaat)}'de hatırlatma bildirimi gider (taslaklara gitmez). `:""}Pembe: ödeme günü geçti · Kırmızı: 5 günden fazla gecikti · Turuncu: 3 gün ya da daha az kaldı. Bu sayfayı sadece sen görürsün.</p>
