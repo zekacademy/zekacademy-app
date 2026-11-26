@@ -977,10 +977,6 @@ function planEditor(s){
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
         <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${d}" aria-label="${g} için blok ekle">${icon("plus","xs")} Blok</button><button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
-  const sg = pNext(s, w), sgg = GUN[dIdx(sg)], sgVar = dayTasks(s, sg), ilk = dayTasks(s, w), sgl = sgVar.length ? sgVar : ilk;
-  const sonrakiGun = `<div class="dcard sgun"><div class="dch"><b>${sgg}</b><span class="pill ac">Sonraki görüşme günü</span><span class="faint small">${shortDate(sg)}</span></div>
-      <p class="faint small" style="margin:0 0 8px">${sgVar.length ? "Bu gün için yazılmış görevler var; değiştirmek için sonraki haftaya geç." : `Görüşme günü öğrenci boş kalmaz: bu haftanın ilk gününe (${GUN[dIdx(w)]}) ne yazdıysan o gün aynısını görür.`}</p>
-      ${sgl.length ? `<ul class="sgl">${sgl.map(x=>`<li>${esc(taskText(x))}</li>`).join("")}</ul>` : `<p class="muted small" style="margin:0">İlk güne görev yazınca burada da görünür.</p>`}</div>`;
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
     <div class="pills"><button class="iconbtn sm" data-act="geri" title="Geri al (⌘Z)" aria-label="Geri al" ${(HIST[sid()]||{u:[]}).u.length?"":"disabled"}>↶</button><button class="iconbtn sm" data-act="ileri" title="İleri al (⇧⌘Z)" aria-label="İleri al" ${(HIST[sid()]||{r:[]}).r.length?"":"disabled"}>↷</button><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button>${plan(s,S.week).yazili?"":`<button class="btn sm" data-act="yazili" data-w="${S.week}">📝 Yazılı haftası yap</button>`}<button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
@@ -993,7 +989,7 @@ function planEditor(s){
     <details class="card" style="padding:12px 16px"><summary class="small" style="cursor:pointer;font-weight:700;color:var(--muted)">Süre yazmayan satırlar için ortalama süreler</summary>
       <div class="pills" style="margin-top:10px">${cfg().sureler.filter(r=>r.k&&r.dk).map(r=>`<span class="pill">${esc(r.k)} · <b>${fmtMin(r.dk)}</b></span>`).join("")}<button class="link small" data-act="go" data-v="ayarlar">Ayarlardan düzenle</button></div>
       <p class="faint small" style="margin:8px 0 0">Satırda “(2 saat)” gibi süre yazarsan o geçerli olur. “x2” yazarsan süre ikiyle çarpılır. Günün çalışma süresi kutusunu boş bırakırsan bu toplam kullanılır.</p></details>
-    <div class="daygrid">${days}${sonrakiGun}</div>
+    <div class="daygrid">${days}</div>
   </div>`;
 }
 
