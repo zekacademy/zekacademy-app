@@ -648,7 +648,7 @@ const dersListesi = (s, tur) => isMaarif(s) ? [] : tur==="TYT" ? CURX().TYT : ay
 function pDersAna(s){ const tur = S.ex, L = exams(s, tur), last = L[L.length-1], prev = L[L.length-2];
   const tot = last ? totalOf(last) : null, dl = last && prev ? tot - totalOf(prev) : null, hedef = num((s.hedef||{})[tur.toLowerCase()]);
   const son = vSon(), bek = soruList(S.me).filter(([,q])=>q.durum!=="cozuldu").length, subs = dersListesi(s, tur);
-  const head = topbar(`<h1 class="ttl">Ders</h1>`, isMaarif(s) ? "" : `<div class="seg dsseg"><button data-act="ex" data-v="TYT" aria-pressed="${tur==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${tur==="AYT"}">AYT</button></div>`);
+  const head = topbar(`<h1 class="ttl">Ders</h1>`, `<div class="seg dsseg"><button data-act="ex" data-v="TYT" aria-pressed="${tur==="TYT"}">TYT</button><button data-act="ex" data-v="AYT" aria-pressed="${tur==="AYT"}">AYT</button></div>`);
   const deneme = `<button class="card dsden" data-act="go" data-v="analiz">
     ${last ? `<div class="dsdh"><div><small>Son ${tur} denemen · ${esc(last.yayin||"")}</small><div class="dsnet"><b class="num">${fmt(tot)}</b>${dl!=null?`<span class="${dl>=0?"up":"down"}">${dl>0?"↑ ":dl<0?"↓ ":""}${fmt(Math.abs(dl))} net</span>`:""}</div></div></div>
       <div class="dsgr">${netChart(s, tur)}</div>`
@@ -832,7 +832,7 @@ const kitap = (s,d) => (s.kitaplar||{})[d] || "";
 const hoca = (s,d) => (s.hocalar||{})[d] || "";
 /* TYT ve AYT kitapları ayrı tutulan dersler (öğrencinin alanına göre); AYT kitabı "Ders|AYT" anahtarında */
 const AYT_DERS = {SAY:["Matematik","Fizik","Kimya","Biyoloji"], EA:["Matematik","Tarih","Coğrafya"], "SÖZ":["Tarih","Coğrafya","Felsefe","Din Kültürü"]};
-const ikiSinavli = (s, d) => !!s && !isMaarif(s) && (AYT_DERS[s.alan]||[]).includes(d);
+const ikiSinavli = (s, d) => !!s && (AYT_DERS[s.alan]||[]).includes(d);
 const kitapK = (s, d, ex) => (s.kitaplar||{})[ex==="AYT" ? d+"|AYT" : d] || "";
 /* Takip edilen kitap ve hocalar (ayarlardan düzenlenir). "# Başlık" satırları grup başlığıdır. */
 /* Koçun kendi listesi + piyasada öne çıkan kaynaklar (TYT/AYT ayrı); "M:" ile başlayanlar Maarif (9–11. sınıf) listeleri */
@@ -1044,9 +1044,10 @@ const MAARIF_SINIF = ["9. sınıf","10. sınıf","11. sınıf"];
 const isMaarif = s => !!s && MAARIF_SINIF.includes(s.sinif);
 const MAARIF_ALAN = {mat:["SAY","EA"], fiz:["SAY"], kim:["SAY"], bio:["SAY"], tde:["EA","SÖZ"], tar:["EA","SÖZ"], cog:["EA","SÖZ"], fel:["SÖZ"]};
 const MAARIF_GRUP = {mat:["mat",0], fiz:["fen",0], kim:["fen",1], bio:["fen",2], tde:["tr",0], tar:["sos",0], cog:["sos",1], fel:["sos",2]};
-const MAARIF_SUBS = MAARIF.flatMap(x=>x.t.map(([n,t],i)=>({k:`m${x.s}${x.dk}${i+1}`, n, ders:x.d, dk:x.dk, sinif:x.s, asama:x.s<=10?1:2, ex:`${x.s}. sınıf`, g:`${x.s}. sınıf · ${i+1}. tema`, t, a:MAARIF_ALAN[x.dk]})));
+const MAARIF_SUBS = MAARIF.flatMap(x=>x.t.map(([n,t],i)=>({k:`m${x.s}${x.dk}${i+1}`, n, ders:x.d, dk:x.dk, sinif:x.s, asama:x.s<=10?1:2, sx:x.s<=10?"TYT":"AYT", ex:`${x.s}. sınıf`, g:`${x.s}. sınıf · ${i+1}. tema`, t, a:MAARIF_ALAN[x.dk]})));
 function maarifList(s, asama, all){ return MAARIF_SUBS.filter(x=>x.asama===asama && (asama===1 || all || !ALANLAR.includes(s.alan) || x.a.includes(s.alan))); }
-const asamaSeg = () => `<div class="seg">${[[1,"1. Aşama"],[2,"2. Aşama"]].map(([k,l])=>`<button data-act="mx" data-v="${k}" aria-pressed="${(S.mx||1)===k}">${l}</button>`).join("")}</div>`;
+/* Maarif: 9–10. sınıf konuları TYT, 11–12. sınıf konuları AYT olarak gösterilir (koçun kararı, 26 Kasım 2026) */
+const asamaSeg = () => `<div class="seg">${[[1,"TYT · 9–10"],[2,"AYT · 11–12"]].map(([k,l])=>`<button data-act="mx" data-v="${k}" aria-pressed="${(S.mx||1)===k}">${l}</button>`).join("")}</div>`;
 function pKonularMaarif(s){
   const mx = S.mx || 1, list = maarifList(s, mx, S.aytAll), CLS = subColors(list);
   let sum = 0, c = 0; list.forEach(sub=>sub.t.forEach(n=>{ sum += topicScore(s.topics[tkey(sub.k,n)]); c++; })); const pct = c ? sum/c : 0;
@@ -1054,7 +1055,7 @@ function pKonularMaarif(s){
   const head = A() ? "" : topbar(`<h1 class="ttl">Konu Takibi</h1>`);
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
     ${asamaSeg()}
-    <div class="card"><div class="sech"><h3>${mx}. Aşama ilerlemesi${mx===2?` · ${esc(s.alan)}`:""}</h3><b class="num">%${Math.round(pct*100)}</b></div><div class="bar" style="margin-top:10px"><i style="width:${pct*100}%"></i></div>
+    <div class="card"><div class="sech"><h3>${mx===1?"TYT":"AYT"} konuları ilerlemesi${mx===2?` · ${esc(s.alan)}`:""}</h3><b class="num">%${Math.round(pct*100)}</b></div><div class="bar" style="margin-top:10px"><i style="width:${pct*100}%"></i></div>
       <p class="muted small" style="margin:10px 0 0">Maarif Modeli konuları, temalara göre. ${mx===1?"9. ve 10. sınıf temaları.":"11. sınıf temaları."} Her konuda: tekrar sayısı, 1. ve 2. soru bankası. Üçü tamamlanan konu yeşil olur.</p>
       ${mx===2?`<div class="pills" style="margin-top:10px"><button class="tog" data-act="aytall" aria-pressed="${S.aytAll}">${S.aytAll?"Tüm dersler gösteriliyor":"Tüm dersleri göster"}</button></div>`:""}</div>
     ${dersler.map(d=>{ const subs = list.map((x,i)=>[x,i]).filter(([x])=>x.ders===d); let ds=0, dc=0; subs.forEach(([x])=>x.t.forEach(n=>{ ds+=topicScore(s.topics[tkey(x.k,n)]); dc++; }));
@@ -1096,7 +1097,7 @@ function pKonular(s){
   </div>`;
 }
 function pCetele(s){
-  const MX = isMaarif(s), ex = MX ? `${S.mx||1}. Aşama` : S.ex, list = MX ? maarifList(s, S.mx||1, S.aytAll) : ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll);
+  const MX = isMaarif(s), ex = MX ? ((S.mx||1)===2 ? "AYT" : "TYT") : S.ex, list = MX ? maarifList(s, S.mx||1, S.aytAll) : ex==="TYT" ? CURX().TYT : aytSubjects(s, S.aytAll);
   const CLS = subColors(list); let max = 1, total = 0; list.forEach(sub=>sub.t.forEach(n=>{ const y=(s.topics[tkey(sub.k,n)]||{}).y||0; max=Math.max(max,y); total+=y; }));
   const head = A() ? "" : topbar(`<h1 class="ttl">Yanlış Çetelesi</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`);
   return `${head}<div class="page ${A()?"wide":""}" style="${A()?"padding:0;max-width:none;width:100%":""}">
@@ -2337,7 +2338,7 @@ function blkSatir(b){ if(b.tur==="rutin") return b.rutin ? `${b.rutin} ${b.adet|
   if(b.sure) t += ` (${sureYaz(b.sure)})`; return t; }
 function blkDersler(s){ const L = cfg().hedefDers, al = s.alan, oncelik = {SAY:["Matematik","Geometri","Fizik","Kimya","Biyoloji","Türkçe"], EA:["Matematik","Geometri","Edebiyat","Tarih","Coğrafya","Türkçe"], "SÖZ":["Edebiyat","Tarih","Coğrafya","Felsefe","Türkçe","Din Kültürü"], DGS:["Matematik","Geometri","Türkçe"]}[al] || [];
   return [...oncelik.filter(x=>L.includes(x)), ...L.filter(x=>!oncelik.includes(x))]; }
-function blkKonular(s, b){ if(!b.ders || b.tur==="deneme") return []; return dersSubs(s, b.ders).filter(x=>!b.ex || !x.ex || x.ex===b.ex || /^\d/.test(x.ex)); }
+function blkKonular(s, b){ if(!b.ders || b.tur==="deneme") return []; return dersSubs(s, b.ders).filter(x=>!b.ex || (x.sx ? x.sx===b.ex : (!x.ex || x.ex===b.ex))); }
 function blkKonuHTML(s, b){ const subs = blkKonular(s, b); if(!subs.length) return `<p class="faint small" style="margin:0">${b.tur==="deneme"?"Genel denemede konu seçilmez.":"Önce ders seç."}</p>`;
   return subs.map(sub=>`<div class="kgrp ex-${subEx(sub)||"x"}" data-grp><div class="gh">${esc(sub.ex||"")} · ${esc(sub.n)}</div>${sub.t.map(n=>`<button type="button" class="kt ${topicScore((s.topics||{})[tkey(sub.k,n)])>=1?"bitti":""}" data-act="bkk" data-v="${esc(n)}" data-q="${esc(trLow(n+" "+sub.n))}" aria-pressed="${b.konu.includes(n)}">${icon("check","xs")}<span>${esc(n)}</span></button>`).join("")}</div>`).join(""); }
 function blkGuncelle(){ const s = st(), b = S.blk; if(!b) return;
@@ -3608,10 +3609,10 @@ function openSheet(kind, el){
       <div class="acts"><button type="button" class="btn" data-act="kytemiz">Temizle</button><button type="button" class="btn pri" data-close>Bitti</button></div>`,
     ()=>closeSheet()); }
   if(kind==="blok"){ const d = el.dataset.date, MX = isMaarif(s);
-    S.blk = {d, rutin:S.blk?.rutin||"", adet:S.blk?.adet||20, ders:S.blk?.ders||"", ex: MX ? "" : (S.blk?.ex ?? (s.sinif==="Mezun"||s.sinif==="12. sınıf" ? "TYT" : "TYT")), tur:S.blk?.tur||"konusoru", konu:[], sure:S.blk?.sure||null, elle:false}; const b = S.blk;
+    S.blk = {d, rutin:S.blk?.rutin||"", adet:S.blk?.adet||20, ders:S.blk?.ders||"", ex: S.blk?.ex ?? (MX && s.sinif==="11. sınıf" ? "AYT" : "TYT"), tur:S.blk?.tur||"konusoru", konu:[], sure:S.blk?.sure||null, elle:false}; const b = S.blk;
     return sheet(`<h3>${GUN[dIdx(d)]} ${shortDate(d)} · blok ekle</h3>
       <div class="bkrow bk-nr bk-nd"><div class="gh">Ders</div><div class="chips">${blkDersler(s).map(x=>`<button type="button" class="chip" data-act="bkd" data-v="${esc(x)}" aria-pressed="${x===b.ders}">${esc(x)}</button>`).join("")}</div></div>
-      ${MX?"":`<div class="bkrow bk-nr"><div class="gh">Sınav</div><div class="chips"><button type="button" class="chip" data-act="bke" data-v="TYT" aria-pressed="${b.ex==="TYT"}">TYT</button><button type="button" class="chip" data-act="bke" data-v="AYT" aria-pressed="${b.ex==="AYT"}">AYT</button><button type="button" class="chip" data-act="bke" data-v="" aria-pressed="${!b.ex}">Yazma</button></div></div>`}
+      ${`<div class="bkrow bk-nr"><div class="gh">Sınav</div><div class="chips"><button type="button" class="chip" data-act="bke" data-v="TYT" aria-pressed="${b.ex==="TYT"}">TYT</button><button type="button" class="chip" data-act="bke" data-v="AYT" aria-pressed="${b.ex==="AYT"}">AYT</button><button type="button" class="chip" data-act="bke" data-v="" aria-pressed="${!b.ex}">Yazma</button></div></div>`}
       <div class="bkrow"><div class="gh">Tür</div><div class="chips">${BLK_TUR.map(([k,l])=>`<button type="button" class="chip" data-act="bkt" data-v="${k}" aria-pressed="${turBasili(b,k)}">${l}</button>`).join("")}</div></div>
       <div class="bkrow bk-r"><div class="gh">Günlük rutin</div><div class="chips">${BLK_RUTIN.map(x=>`<button type="button" class="chip" data-act="bkr" data-v="${x}" aria-pressed="${x===b.rutin}">${x}</button>`).join("")}</div>
         <div class="chips">${BLK_ADET.map(n=>`<button type="button" class="chip" data-act="bka" data-v="${n}" aria-pressed="${n===(b.adet||20)}">${n} soru</button>`).join("")}</div></div>
@@ -3909,7 +3910,7 @@ document.addEventListener("click", e=>{
     case "day": S.day=v; S.pmode="gun"; render(); break;
     case "hgun": { const x = st(); S.view = "program"; S.pmode = "gun"; S.day = v; if(x) S.week = curStart(x); render(); window.scrollTo(0,0); break; }
     case "wk": { const d=+b.dataset.d, x=st(); S.week = d<0 ? pPrev(x,S.week) : d>0 ? pNext(x,S.week) : curStart(x); S.day = d ? S.week : today(); render(); break; }
-    case "ex": S.ex=v; render(); break;
+    case "ex": S.ex=v; S.mx = v==="AYT" ? 2 : 1; render(); break;
     case "odulkapat": try{ localStorage.setItem(v, "1"); }catch(e){} render(); break;
     case "odulgor": try{ localStorage.setItem(v, "1"); }catch(e){} S.view = "grup"; render(); window.scrollTo(0,0); break;
     case "kvekle": kvEkle(); break;
@@ -3930,7 +3931,7 @@ document.addEventListener("click", e=>{
     case "kdsay": { const f=b.dataset.f, k=b.dataset.k; let yeni=0; mutate(s=>{ const t=topic(s,k); t[f]=Math.max(0,(t[f]||0)+(+b.dataset.d)); yeni=t[f]; }); const el=$("#kd-"+f); if(el) el.textContent=yeni; render(true); break; }
     case "kdsb": { const f=b.dataset.f, k=b.dataset.k; let on=false; mutate(s=>{ const t=topic(s,k); t[f]=!t[f]; on=t[f]; }); b.setAttribute("aria-pressed", String(on)); render(true); break; }
     case "aytall": S.aytAll=!S.aytAll; render(); break;
-    case "mx": S.mx = +v; render(); break;
+    case "mx": S.mx = +v; S.ex = +v===2 ? "AYT" : "TYT"; render(); break;
     case "odendi": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); render(); toast(`${S.students.get(id)?.name||""}: ${trDate(d)} ödemesi işlendi`); break; }
     case "vtog": { const id=b.dataset.id, d=b.dataset.d; setOdeme(id, o=>{ o.odenen = {...(o.odenen||{})}; if(o.odenen[d]) delete o.odenen[d]; else o.odenen[d] = {t:today(), tutar:o.tutar??null}; }); openSheet("odeme", b); render(); break; }
     case "osil": { const id=b.dataset.id; const cn = {...(S.cnotes.get(id)||{})}; cn.odeme = null; S.cnotes.set(id, cn); persistDoc("coachNotes", id, 0); closeSheet(); render(); toast("Ödeme planı silindi"); break; }
