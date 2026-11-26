@@ -354,8 +354,13 @@ async function resimKucult(file, max, limit){ const img = await new Promise((res
   return data; }
 function startStudent(id){
   S.me=id; S.view="home"; S.day=today(); S.week=S.students.get(id) ? curStart(S.students.get(id)) : monday(new Date());
-  girisKaydet();
+  girisKaydet(); setTimeout(ilkGunTekrar, 800);
 }
+/* Görüşme günü (yeni haftanın ilk günü) boş kalmasın: koç o günü boş bıraktıysa geçen haftanın ilk günündeki görevler aynen (işaretsiz) yazılır */
+const tekrarKaynak = (s, w) => { const pw = pPrev(s, w); if(pw === w) return []; return ((s.weeks||{})[pw]||{})[0] || []; };
+function ilkGunTekrar(){ const s = st(), t = today(); if(!s || A() || S.tekrarGun === t) return; S.tekrarGun = t;
+  const w = curStart(s); if(w !== t || (((s.weeks||{})[w]||{})[0]||[]).length) return; const src = tekrarKaynak(s, w); if(!src.length) return;
+  mutate(x=>{ x.weeks = x.weeks||{}; x.weeks[w] = x.weeks[w]||{}; if((x.weeks[w][0]||[]).length) return; x.weeks[w][0] = src.map(g=>{ const k = {...g, id:uid(), done:false, doneAt:null, tekrar:true}; delete k.dk; return k; }); }); render(); }
 /* Öğrencinin girişini kaydeder: son giriş saati + son 30 günün giriş günleri (15 dakikada en fazla bir yazma) */
 function girisKaydet(){ if(S.role!=="student" || !S.me) return; const s = S.students.get(S.me); if(!s) return;
   const t = today(), son = Date.parse(s.sonGiris||"") || 0; if(s.lastSeen===t && Date.now()-son < 15*60e3) return;
@@ -620,7 +625,7 @@ function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return ""
     <div class="turnok">${L.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
     <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(karakterSor(s)?"Karakterimi oluştur":S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
 function studentShell(){
-  const s = st(); if(!s) return "";
+  const s = st(); if(!s) return ""; if(S.tekrarGun !== today()) setTimeout(ilkGunTekrar, 0);
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
@@ -972,13 +977,6 @@ function planEditor(s){
       <div class="dcf"><label class="hrs">Çalışma süresi<input type="number" min="0" max="16" step="0.5" id="ps-${i}" data-hs="${i}" value="${sv!=null&&sv!==""?sv:""}" placeholder="${auto?String(Math.round(auto*10)/10).replace(".",","):"0"}"> saat</label>
         <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${d}" aria-label="${g} için blok ekle">${icon("plus","xs")} Blok</button><button type="button" class="btn sm qbtn" data-act="sheet" data-v="hizli" data-date="${d}" aria-label="${g} için hızlı ekle">${icon("search","xs")} Hızlı ekle</button></div></div>
       <div class="dcs"><span>${l.length?`Öğrenci <b class="num">${dn}/${l.length}</b> işaretledi`:"Henüz görev yok"} · <b class="num">${fmtMin(minutes(s,d))}</b> çalıştı</span><button class="link small" data-act="sheet" data-v="copyday" data-date="${d}">${icon("copy","xs")} Kopyala</button></div></div>`; }).join("");
-  const sg = pNext(s, w), sgl = dayTasks(s, sg), sgg = GUN[dIdx(sg)];
-  const sonrakiGun = `<div class="dcard sgun"><div class="dch"><b>${sgg}</b><span class="pill ac">Sonraki görüşme günü</span><span class="faint small">${shortDate(sg)}</span></div>
-      <p class="faint small" style="margin:0 0 6px">Yeni haftanın ilk günü. Görüşmeden önce öğrenci boş kalmasın diye bu günün görevlerini de şimdi yazabilirsin.</p>
-      <div class="tl" id="tl-sg" data-i="sg">${sgl.map(x=>tlSatir(taskText(x), x.done)).join("")}${tlSatir("", false, true)}</div>
-      <textarea id="pl-sg" data-plan="${sg}" hidden>${esc(sgl.map(taskText).join("\n"))}</textarea>
-      <div class="dcf"><span class="faint small">${sgl.length?`${sgl.length} görev`:"Henüz görev yok"}</span>
-        <div class="dcbtn"><button type="button" class="btn sm pri qbtn" data-act="sheet" data-v="blok" data-date="${sg}" aria-label="${sgg} için blok ekle">${icon("plus","xs")} Blok</button><button class="link small" data-act="sheet" data-v="copyday" data-date="${sg}">${icon("copy","xs")} Kopyala</button></div></div></div>`;
   return `<div style="display:flex;flex-direction:column;gap:14px">
     ${weekNav(s)}
     <div class="pills"><button class="iconbtn sm" data-act="geri" title="Geri al (⌘Z)" aria-label="Geri al" ${(HIST[sid()]||{u:[]}).u.length?"":"disabled"}>↶</button><button class="iconbtn sm" data-act="ileri" title="İleri al (⇧⌘Z)" aria-label="İleri al" ${(HIST[sid()]||{r:[]}).r.length?"":"disabled"}>↷</button><button class="btn sm pri" data-act="sheet" data-v="gorusme">${icon("plus","xs")} Yeni görüşme</button>${plan(s,S.week).yazili?"":`<button class="btn sm" data-act="yazili" data-w="${S.week}">📝 Yazılı haftası yap</button>`}<button class="btn sm" data-act="copyweek">${icon("copy","xs")} Geçen haftayı bu haftaya kopyala</button><span class="faint small" style="align-self:center">Küçük değişiklikleri doğrudan yaz; otomatik kaydedilir.</span></div>
@@ -991,7 +989,7 @@ function planEditor(s){
     <details class="card" style="padding:12px 16px"><summary class="small" style="cursor:pointer;font-weight:700;color:var(--muted)">Süre yazmayan satırlar için ortalama süreler</summary>
       <div class="pills" style="margin-top:10px">${cfg().sureler.filter(r=>r.k&&r.dk).map(r=>`<span class="pill">${esc(r.k)} · <b>${fmtMin(r.dk)}</b></span>`).join("")}<button class="link small" data-act="go" data-v="ayarlar">Ayarlardan düzenle</button></div>
       <p class="faint small" style="margin:8px 0 0">Satırda “(2 saat)” gibi süre yazarsan o geçerli olur. “x2” yazarsan süre ikiyle çarpılır. Günün çalışma süresi kutusunu boş bırakırsan bu toplam kullanılır.</p></details>
-    <div class="daygrid">${days}${sonrakiGun}</div>
+    <div class="daygrid">${days}</div>
   </div>`;
 }
 
