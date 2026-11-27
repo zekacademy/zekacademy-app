@@ -29,3 +29,10 @@ TYT biyoloji kurallarının hepsi geçerli: önce `arac/BIO-ORTAK.md`'yi oku (ok
 - Her çeldirici açıklaması tam cümle (".." ile bitmez) ve o DEĞERİ gerçekten üretir; betikte hesapla assert et.
 - "Zor" yalnız gerçek çok adımlı/iki kavramlı sorular; tek adımlı üç yargı "orta"dır. Aynı kalıbı ve aynı sayıları paket içinde tekrarlama.
 - Öncüllü kökte "Buna göre," kalıbı; kişi/cisim durumları (oturan/yürüyen, sabit/hareketli) açık.
+
+## 2. dalga (ek 10'luk paketler) — yukarıdakilere EK kurallar
+- Önek `<eski önek>iki`, dosya `<ders klasörü>/<onek>-1.json`, kart dosyası `kartlar/<ak|ab><onek>.json`, kart öneki eski öneke `2` ekle (ör. `K-AKGAZ2-NN`); grep ile boş olduğunu kontrol et.
+- Paket **10 soru**: zorluk **2 kolay / 5 orta / 3 zor**; harfler A–E ikişer; 4–6 tipId; şekil ≥ %60.
+- ÖNCE konunun 1. dalga dosyasını (`<onek>-1.json`) oku: aynı kurguyu, sayıları, tipId'yi TEKRARLAMA; 1. dalgada eksik kalan ÖSYM kalıplarını kapat.
+- Yayın kaynakları (yazı tanıma; kurgu için oku, metin kopyalama): Kimya `/home/claude/kutup/ayt/yayin_345_ayt_kim.txt`, `yayin_345zor_ayt_kim.txt`; Biyoloji `/home/claude/kutup/ayt/yayin_345_ayt_bio.txt`, `yayin_drbio_ayt_bio.txt` ("=== s<sayfa>" başlıklı). Sayfa resimleri `/home/claude/kutup/ayt/jkim/`, `/home/claude/kutup/ayt/jbio/` — konunun 2 sayfa resmine Read ile bak.
+- 1. dalga doğrulamasında en sık bulunan hatalar (baştan kaçın): ipucu/püf/bilgi kartı/kart doğru şıkkı, öncül hükmünü ya da sorunun sayısını söylüyor; "zor" etiketi tek adımlı sorulara verilmiş; çeldirici açıklaması değeri üretmiyor ya da yarım cümle; şekil cevabı veriyor; ikinci savunulabilir öncül ("kesin/olabilir" belirsizliği); MEB 11–12 dışı içerik.
