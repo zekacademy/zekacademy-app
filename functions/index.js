@@ -612,3 +612,12 @@ export const kitapDurum = onCall(async (req) => {
   const [f] = await getStorage().bucket().getFiles({ prefix: "kitaplar/" });
   return { dosyalar: f.map(x => x.name.replace(/^kitaplar\//, "")) };
 });
+
+/* Koça her akşam 23.00'te hikaye hatırlatması (yalnız koçun cihazlarına; öğrencilere gitmez). Ayarlardan kapatılabilir. */
+const HKY_ONERI = ["Sınıf hikayesi", "YKS geri sayım", "Haftalık program tanıtımı", "Net yükselişi", "Sanal sınıf tanıtımı", "Seri rekorları", "ZEK AI tanıtımı", "Koçlukta neler var?", "Kronometre tanıtımı", "Deneme takibi tanıtımı", "Mesajlaşma tanıtımı", "Konu ve video tanıtımı", "Veli karnesi tanıtımı"];
+export const hikayeHatirlat = onSchedule({ schedule: "0 23 * * *", timeZone: TZ, retryCount: 0 }, async () => {
+  const ayar = (await db.doc("settings/main").get()).data() || {}; if (ayar.hikayeHatirlat === false) return;
+  const tokens = await coachTokens(); if (!tokens.length) return;
+  const gun = new Date().toLocaleDateString("sv-SE", { timeZone: TZ }), oneri = HKY_ONERI[Math.floor(new Date(gun + "T12:00:00Z").getTime() / 864e5) % HKY_ONERI.length];
+  await pushTo(tokens, "📸 Bugünün hikayesi hazır", `Öneri: ${oneri}. Dokun, rengini seç, Instagram'da paylaş.`, "/?ac=hikaye");
+});

@@ -316,7 +316,7 @@ function kitapCizelgeTemizle(){ if(!A() || !S.setYuklu || S.settings.duzeltme?.k
 function bakimBekle(need, n=0){ if(!S.ready || S.role!=="admin") return; if(!need.every(k=>sunucu[k]) && n < 40){ setTimeout(()=>bakimBekle(need, n+1), 500); return; } if(!need.every(k=>sunucu[k])) return;
   setTimeout(()=>{ duzenSabitle(); kitapCizelgeTemizle(); organikBol(); setTimeout(kitapAyir, 800); }, 1500); }
 function checkReady(need){ if(!S.ready && need.every(k=>loaded[k])){ S.ready = true; geriKoruma(); if(S.role==="admin"){ bakimBekle(need); setTimeout(()=>watchSorular(query(collection(fdb,"sorular"), where("durum","==","bekliyor"))), 1200); } if(S.role==="student") startStudent(S.me); openDeepLink(); render(); pushSupported().then(()=>{ refreshPush(); render(); }); } }
-function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="karne" && !A()){ S.view="daha"; setTimeout(()=>openSheet("hkarne"), 300); } else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
+function openDeepLink(){ const v = new URLSearchParams(location.search).get("ac"); if(!v) return; if(v==="program"){ S.view="program"; S.pmode="gun"; S.day=today(); if(st()) S.week=curStart(st()); } else if(v==="bildirim") S.view="bildirim"; else if(v==="hikaye" && A()) S.view="hikaye"; else if(v==="karne" && !A()){ S.view="daha"; setTimeout(()=>openSheet("hkarne"), 300); } else if(v==="grup" && !A()) S.view="grup"; else if(v==="socoz"){ S.view="socoz"; setTimeout(szKullanimYukle, 1500); } else if(v==="mesaj"){ S.view = A() ? "mesajlar" : "mesaj"; } else if(v.startsWith("sohbet-") && A()){ S.msgSid = v.slice(7); S.view = "sohbet"; } else if(v==="ayarlar" && A()) S.view="ayarlar"; history.replaceState(null, "", "/"); }
 function stopWatching(){ msgKapat(); S.sohbet = new Map(); unsubs.forEach(u=>{ try{ u(); }catch(e){} }); unsubs = []; for(const k in SQK) delete SQK[k]; S.sorular = new Map(); BASE.clear(); for(const k in loaded) delete loaded[k]; for(const k in sunucu) delete sunucu[k]; S.students.clear(); S.notifs.clear(); S.cnotes.clear(); S.gorus.clear(); grupTemizle(); S.ready = false; }
 
 let authResolved = false;
@@ -2180,7 +2180,7 @@ function odemeTaslak(){ const fark = [-9,-3,2,0,12,-6,5,1,20,-2], t = today(); l
 /* ---------- Koç ---------- */
 function coachShell(){
   const unread = [...S.notifs.values()].filter(n=>!n.read).length;
-  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:()=>cGruplar(false), sinif:()=>cGruplar(true), havuz:cHavuz, kitap:pKitap};
+  const pages = {mesajlar:cMesajlar, sohbet:cSohbet, socoz:pSoruCoz, aipanel:cAiPanel, ozet:cOzet, ogrenciler:cList, detay:cDetail, program:cProgram, bildirim:cBell, daha:cMore, ayarlar:cSettings, odeme:cOdeme, basvuru:cBasvuru, giris:cGiris, gorusme:cGorusme, gelir:cOdeme, gmod:cGmod, gruplar:()=>cGruplar(false), sinif:()=>cGruplar(true), havuz:cHavuz, kitap:pKitap, hikaye:cHikayeler};
   if(S.view==="sohbet") return `<div class="shell msgshell">${cSohbet()}</div>`;
   return `<div class="shell">${(pages[S.view]||cOzet)()}</div>` + navHTML([["ozet","home","Özet"],["sinif","users","Sınıf"],["program","cal","Haftalık Program",true],["gorusme","clock","Görüşmeler",false,gunGorusme(today()).filter(g=>g.durum==="planli").length],["daha","more","Daha Fazla",false,unread]]);
 }
@@ -2564,6 +2564,87 @@ function hikayeSheet(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(
 async function hikayePaylas(){ const mod = S.hkMod || "bugun", {tema, duzen} = hkSecim(), tr = hkTarih(mod), c = await hikayeCiz(mod, tema, duzen, tr), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-sinif-${mod==="hafta"?"hafta-":""}${tr}.png`, {type:"image/png"});
   if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); return; }catch(e){ if(e && e.name==="AbortError") return; } }
   const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Görsel indirildi; Instagram'da hikaye olarak paylaşabilirsin"); }
+/* ---------- Hikayeler (koç): uygulamayı tanıtan ve koçluğa davet eden hazır Instagram hikayeleri ---------- */
+const HKY_TANITIM = [
+  {k:"program", img:"1-program", kick:"HAFTALIK PROGRAM", h:["Haftan, sana özel","planlı."], p:"Koçunun hazırladığı program gün gün önünde.", c:["Gün gün görevler","Haftalık konu hedefleri","Programa uyum yüzdesi"]},
+  {k:"kronometre", img:"2-kronometre", kick:"KRONOMETRE", h:["Görevini seç,","süren işlesin."], p:"Hangi göreve çalıştığını seç, başlat.", c:["Ara ver ya da bitir, süren kaydolur","Günlük süre hedefi","Ders ders çalışma süren"]},
+  {k:"sinif", img:"3-sinif", kick:"SANAL SINIF", h:["Yalnız değil,","sınıfınla çalış."], p:"Kim şu an çalışıyor, canlı gör.", c:["Günün ve haftanın birincisi","Seri ve lig rozetleri","Takma adınla, kendi karakterinle"]},
+  {k:"zekai", img:"4-sorucoz", kick:"ZEK AI SORU ÇÖZÜM", h:["Takıldığın soruyu","fotoğrafla."], p:"Zek AI seninle adım adım çözsün.", c:["Adım adım çözüm","İstersen önce ipucu","Cevap anahtarıyla kontrol"]},
+  {k:"mesaj", img:"5-mesaj", kick:"KOÇUNLA MESAJLAŞMA", h:["Koçun bir mesaj","uzağında."], p:"Zekeriya Hoca'ya uygulamadan yaz.", c:["Birebir mesaj","Sesli mesaj ve fotoğraf","Koçundan duyurular"]},
+  {k:"deneme", img:"6-deneme", kick:"DENEME TAKİBİ", h:["Netlerin artışını","gör."], p:"Her deneme grafiğe işlenir.", c:["Karneyi fotoğrafla, netler dolsun","Ders ders analiz","Hedefine kalan net"]},
+  {k:"ders", img:"7-ders", kick:"KONU VE VİDEO", h:["Konu konu ilerle,","eksiğini kapat."], p:"TYT ve AYT konuların tek yerde.", c:["Konu takibi ve ilerleme","Hocana göre konu anlatım videoları","Takıldığın soruları biriktir"]},
+  {k:"karne", img:"8-karne", kick:"VELİYE HAFTALIK KARNE", h:["Emeğini velinle","paylaş."], p:"Her pazar gecesi karnen hazır.", c:["Çalışma süren, gün gün","Denemelerin ve bitirdiğin konular","Tek dokunuşla WhatsApp'tan"]}];
+const HKY_KOCLUK = [{k:"sayac", ad:"YKS geri sayım", alt:"Kalan gün + bu haftaki toplam çalışma", ic:"⏳"}, {k:"net", ad:"Net yükselişi", alt:"Öğrencilerin ortalama net artışı (isimsiz)", ic:"📈"}, {k:"seri", ad:"Seri rekorları", alt:"Her gün çalışan öğrenciler (kod adıyla)", ic:"🔥"}, {k:"paket", ad:"Koçlukta neler var?", alt:"Bireysel koçluğun tanıtımı", ic:"🎯"}];
+const HKY_ONERI = ["sinif-gun", "sayac", "program", "net", "sinif", "seri", "zekai", "paket", "kronometre", "deneme", "mesaj", "ders", "karne"];
+const hkyBugun = () => HKY_ONERI[Math.floor(new Date(today()+"T12:00:00").getTime()/864e5) % HKY_ONERI.length];
+function hkyVeri(){ const L = [...S.students.entries()].filter(([,x])=>!x.silindi), w = monday(today()), t = today(); let hafta = 0;
+  L.forEach(([,x])=>{ for(let i=0;i<7;i++){ const d = addDays(w,i); if(d<=t) hafta += minutes(x, d, d===t); } });
+  const sinir = addDays(t,-120), artis = [];
+  L.forEach(([,x])=>{ const E = exams(x,"TYT").filter(e=>e.tarih && e.tarih >= sinir); if(E.length >= 2){ const a = tytTotal(E[0]), b = tytTotal(E[E.length-1]); if(a!=null && b!=null) artis.push([a,b]); } });
+  const seri = L.map(([id,x])=>({id, x, n:streak(x)})).filter(o=>o.n>=3).sort((a,b)=>b.n-a.n);
+  return { ogr:L.length, hafta, artis, ilk: artis.length ? artis.reduce((a,v)=>a+v[0],0)/artis.length : 0, son: artis.length ? artis.reduce((a,v)=>a+v[1],0)/artis.length : 0, seri }; }
+const hkyResim = src => new Promise(res=>{ const i = new Image(); i.onload = ()=>res(i); i.onerror = ()=>res(null); i.src = src; });
+async function hkyCiz(k, tema){ const T = HK_TEMA[tema] || HK_TEMA.orman, W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const F = (w, z) => `${w} ${z}px -apple-system, "Segoe UI", Roboto, Arial, sans-serif`, rr = (x,y,w,h,r) => { g.beginPath(); g.roundRect ? g.roundRect(x,y,w,h,r) : g.rect(x,y,w,h); };
+  const yaz = (t, x, y, f, renk, hiz="left") => { g.font = f; g.fillStyle = renk; g.textAlign = hiz; g.fillText(t, x, y); g.textAlign = "left"; };
+  const sa = m => { m = Math.round(m); const h = Math.floor(m/60), d = m%60; return h ? (d ? `${h} sa ${d} dk` : `${h} saat`) : `${d} dk`; };
+  const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,T.bg[0]); bg.addColorStop(1,T.bg[1]); g.fillStyle = bg; g.fillRect(0,0,W,H);
+  g.fillStyle = T.deco; g.beginPath(); g.arc(W+40, 200, 380, 0, 7); g.fill(); g.beginPath(); g.arc(-120, H-420, 300, 0, 7); g.fill();
+  g.fillStyle = T.logoBg; rr(88,150,60,60,18); g.fill(); yaz("Z", 118, 193, F(800,34), T.logoTx, "center"); yaz("Zekacademy", 164, 193, F(700,34), T.tx);
+  g.font = F(600,26); const ust = "Bireysel YKS koçluğu", uw = g.measureText(ust).width + 48; g.strokeStyle = T.chip; g.lineWidth = 2; rr(W-88-uw,148,uw,64,32); g.stroke(); yaz(ust, W-88-uw+24, 190, F(600,26), T.chipTx);
+  const tik = (x, y, r=14) => { g.strokeStyle = T.acc; g.lineWidth = 4; g.lineCap = "round"; g.lineJoin = "round"; g.beginPath(); g.moveTo(x-r*.6, y); g.lineTo(x-r*.15, y+r*.45); g.lineTo(x+r*.65, y-r*.5); g.stroke(); };
+  const cip = (t, x, y) => { g.font = F(600,29); const w = g.measureText(t).width + 92; g.fillStyle = T.row; rr(x, y, w, 64, 32); g.fill(); tik(x+38, y+32); yaz(t, x+66, y+42, F(600,29), T.tx); return w; };
+  const cta = (t, y) => { g.font = F(800,36); const w = g.measureText(t).width + 96; g.fillStyle = T.onBg; rr((W-w)/2, y, w, 92, 46); g.fill(); yaz(t, W/2, y+59, F(800,36), T.onTx, "center"); };
+  const D = "Bilgi ve kayıt için DM 📩";
+  const tn = HKY_TANITIM.find(x=>x.k===k);
+  if(tn){ yaz(tn.kick, 88, 330, F(700,28), T.acc); tn.h.forEach((l,i)=>yaz(l, 84, 432 + i*92, F(800,86), T.tx)); yaz(tn.p, 88, 432 + tn.h.length*92 + 10, F(500,34), T.sub);
+    tn.c.forEach((t,i)=>cip(t, 88, 668 + i*78));
+    const px = (W-600)/2, py = 960, img = await hkyResim(`/hikaye/${tn.img}.webp`); g.save(); g.shadowColor = "rgba(0,0,0,.35)"; g.shadowBlur = 60; g.shadowOffsetY = 30; g.fillStyle = "#050807"; rr(px, py, 600, 1298, 84); g.fill(); g.restore();
+    if(img){ g.save(); rr(px+18, py+18, 564, 1262, 66); g.clip(); const sc = 564/img.width; g.drawImage(img, px+18, py+18, 564, img.height*sc); g.restore(); }
+    return c; }
+  const v = hkyVeri();
+  if(k==="sayac"){ const gun = examDays(); yaz("YKS'YE KALAN", W/2, 400, F(800,34), T.acc, "center"); yaz(String(gun), W/2, 660, F(900,300), T.tx, "center"); yaz("gün", W/2, 760, F(800,64), T.sub, "center");
+    g.fillStyle = T.row; rr(88, 860, W-176, 360, 40); g.fill(); yaz("BU HAFTA SINIFIMIZ", W/2, 940, F(700,28), T.acc, "center"); yaz(sa(v.hafta).replace(" sa ", " saat ").replace(" dk"," dk"), W/2, 1050, F(800,84), T.tx, "center"); yaz("odaklı çalıştı", W/2, 1118, F(600,34), T.sub, "center"); yaz(`${v.ogr} öğrenci · plan · takip · birlikte çalışma`, W/2, 1180, F(500,28), T.sub, "center");
+    yaz("Her gün bir adım. Sen de aramıza katıl.", W/2, 1380, F(700,40), T.tx, "center"); cta(D, 1450); }
+  else if(k==="net"){ yaz("NET YÜKSELİŞİ", W/2, 360, F(800,34), T.acc, "center");
+    if(v.artis.length){ const fark = v.son - v.ilk, f = Math.round(fark*10)/10; yaz((f>=0?"+":"")+String(f).replace(".",","), W/2, 620, F(900,260), T.tx, "center"); yaz("TYT net (ortalama)", W/2, 700, F(700,44), T.sub, "center");
+      const bx = 220, bw = W-440, by = 1180, mx = Math.max(v.ilk, v.son, 1); [[v.ilk,"Başlangıç"],[v.son,"Şimdi"]].forEach(([n,ad],i)=>{ const h = 320*n/mx, x = bx + i*(bw/2) + bw/4 - 90; g.fillStyle = i ? T.onBg : T.offBg; rr(x, by-h, 180, h, 24); g.fill(); yaz(String(Math.round(n*10)/10).replace(".",","), x+90, by-h-24, F(800,44), T.tx, "center"); yaz(ad, x+90, by+52, F(600,30), T.sub, "center"); });
+      yaz(`${v.artis.length} öğrencinin son 4 aydaki ilk ve son TYT denemesi`, W/2, 1320, F(500,28), T.sub, "center"); }
+    else { yaz("Deneme verisi biriktikçe", W/2, 640, F(700,48), T.tx, "center"); yaz("burada net artışı görünecek.", W/2, 710, F(700,48), T.tx, "center"); }
+    yaz("Planlı çalışma, düzenli takip.", W/2, 1420, F(700,40), T.tx, "center"); cta(D, 1480); }
+  else if(k==="seri"){ yaz("SERİ REKORLARI 🔥", W/2, 360, F(800,34), T.acc, "center"); yaz("Her gün çalışanlar", W/2, 450, F(800,72), T.tx, "center");
+    const L = v.seri.slice(0,5); if(!L.length) yaz("Seriler başlıyor…", W/2, 700, F(700,44), T.sub, "center");
+    for(const [i,o] of L.entries()){ const y = 540 + i*150, et = takmaAd(o.x) || (adSoyad(o.x.name||"")||"").split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" ");
+      g.fillStyle = i ? T.row : `rgba(${T.glow},.2)`; rr(88, y, W-176, 128, 34); g.fill(); const kr = await svgResim(karakterSVG(o.x.avatar || avOf(o.id), true)); if(kr) g.drawImage(kr, 110, y+4, 120, 120);
+      yaz(et, 250, y+78, F(700,40), T.tx); yaz(`${o.n} gün`, W-130, y+80, F(900,52), T.acc, "right"); }
+    yaz("Seri bozulmasın diye her gün masaya oturuyorlar.", W/2, 1380, F(600,32), T.sub, "center"); cta(D, 1450); }
+  else { yaz("BİREYSEL KOÇLUK", W/2, 340, F(800,34), T.acc, "center"); yaz("Koçlukta neler var?", W/2, 440, F(800,76), T.tx, "center");
+    const M = [["📅","Sana özel haftalık program"],["💬","Birebir görüşme ve mesajlaşma"],["👥","Canlı sanal sınıf"],["🤖","ZEK AI ile adım adım soru çözümü"],["📚","Çözümlü soru bankaları"],["📊","Veliye haftalık karne"]];
+    M.forEach(([ic,t],i)=>{ const y = 530 + i*130; g.fillStyle = T.row; rr(88, y, W-176, 108, 30); g.fill(); yaz(ic, 150, y+72, F(400,48), T.tx, "center"); yaz(t, 210, y+68, F(700,36), T.tx); });
+    yaz("Kontenjan sınırlı.", W/2, 1380, F(700,40), T.tx, "center"); cta(D, 1450); }
+  yaz("Zekacademy bireysel koçluk öğrencilerim", W/2, H-150, F(800,40), T.tx, "center"); yaz("Plan · takip · birlikte çalışma", W/2, H-104, F(600,30), T.acc, "center");
+  return c; }
+function cHikayeler(){ const on = hkyBugun(), hat = S.settings.hikayeHatirlat !== false, kart = (k, ust, alt, ic) => `<button class="card hkyk ${k===on?"on":""}" data-act="hkyac" data-v="${k}">${ic}<span style="min-width:0;flex:1"><b>${esc(ust)}</b><small class="muted">${esc(alt)}</small></span>${k===on?`<span class="pill ac">Bugünün önerisi</span>`:""}${icon("chev","xs")}</button>`;
+  return `${topbar(`<h1 class="ttl">Hikayeler</h1>`, "", `<button class="iconbtn" data-act="go" data-v="daha" aria-label="Geri">${icon("back")}</button>`)}
+  <div class="page">
+    <p class="muted small" style="margin:0 4px">Instagram hikayesi için hazır görseller. Birine dokun, rengini seç, paylaş. Bu sayfayı sadece sen görürsün.</p>
+    <label class="card hkyhat"><span style="flex:1"><b>Her akşam 23.00'te bana hatırlat</b><small class="muted">Sadece sana bildirim gelir; öğrencilere hiçbir şey gitmez.</small></span><input type="checkbox" class="sw" data-set-hky ${hat?"checked":""}></label>
+    <h3 class="sec">Sınıf</h3>
+    ${kart("sinif-gun", "Sınıf hikayesi", "Günün ya da haftanın çalışma tablosu · 5 düzen", `<span class="hkyi">🏫</span>`)}
+    <h3 class="sec">Koçluğa davet</h3>
+    ${HKY_KOCLUK.map(x=>kart(x.k, x.ad, x.alt, `<span class="hkyi">${x.ic}</span>`)).join("")}
+    <h3 class="sec">Uygulama tanıtımı</h3>
+    <div class="hkyg">${HKY_TANITIM.map(x=>`<button class="hkyt ${x.k===on?"on":""}" data-act="hkyac" data-v="${x.k}"><img src="/hikaye/${x.img}.webp" alt="" loading="lazy"><b>${esc(x.kick.charAt(0)+x.kick.slice(1).toLocaleLowerCase("tr"))}</b></button>`).join("")}</div>
+  </div>`; }
+function hkySheet(){ const k = S.hkyK, tema = hkSecim().tema, ad = (HKY_KOCLUK.find(x=>x.k===k)||{}).ad || (HKY_TANITIM.find(x=>x.k===k)||{}).kick || "Hikaye";
+  setTimeout(()=>hkyCiz(k, tema).then(c=>{ const i = document.getElementById("hkyImg"); if(i){ i.src = c.toDataURL("image/png"); i.style.opacity = 1; } }), 0);
+  return sheet(`<h3>${esc(ad.charAt(0)+ad.slice(1).toLocaleLowerCase("tr"))}</h3>
+    <div class="pills" style="margin-top:4px">${Object.entries(HK_TEMA).map(([kk,t])=>`<button type="button" class="btn sm ${tema===kk?"pri":""}" data-act="hkytema" data-v="${kk}"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${t.bg[0]};border:1px solid rgba(0,0,0,.2);margin-right:2px"></span>${t.ad}</button>`).join("")}</div>
+    <img id="hkyImg" alt="Hikaye önizlemesi" style="width:100%;max-width:340px;aspect-ratio:9/16;display:block;margin:10px auto 0;border-radius:14px;border:1px solid var(--line);background:${HK_TEMA[tema].bg[0]};opacity:.4">
+    <div class="acts"><button type="button" class="btn" data-close>Kapat</button><button type="button" class="btn pri" data-act="hkypaylas">📸 Paylaş</button></div>`); }
+async function hkyPaylas(){ const c = await hkyCiz(S.hkyK, hkSecim().tema), b = await new Promise(r=>c.toBlob(r, "image/png")), f = new File([b], `zekacademy-${S.hkyK}-${today()}.png`, {type:"image/png"});
+  if(navigator.canShare && navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f]}); return; }catch(e){ if(e && e.name==="AbortError") return; } }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); toast("Görsel indirildi; Instagram'da hikaye olarak paylaşabilirsin"); }
 function hkarneSheet(){ const s = st(); if(!s) return; const v = karneVeri(s), url = karneCiz(s, v).toDataURL("image/png"), pay = (s.karnePay||{})[v.bas];
   return sheet(`<h3>Haftalık karne</h3><p class="muted small" style="margin:-6px 0 0">${A() ? "Veliye WhatsApp'tan fotoğraf olarak gönderebilirsin." : "Dilersen velinle paylaşabilirsin: “Velime gönder”e dokun, WhatsApp'ı seç."}${pay?` · ${A()?"Öğrenci bu karneyi paylaştı":"Bu karneyi paylaştın"} ✓`:""}</p>
     <img src="${url}" alt="Haftalık karne" style="width:100%;border-radius:14px;border:1px solid var(--line);margin-top:6px">
@@ -2628,6 +2709,7 @@ function cBell(){
 function cMore(){
   return `${topbar(`<h1 class="ttl">Daha Fazla</h1>`)}
   <div class="page wide"><h3 class="msec">İşim</h3><div class="card">
+    <button class="row" data-act="go" data-v="hikaye"><span class="ri" style="background:#FCE7F3;color:#DB2777">${icon("camera","sm")}</span><div><div class="rt">Hikayeler</div><div class="rs">Instagram için hazır tanıtım ve sınıf hikayeleri</div></div><span class="rx">${icon("chev","sm")}</span></button>
     <button class="row" data-act="go" data-v="kitap"><span class="ri" style="background:#E8F0FD;color:#1F6FD8">${icon("note","sm")}</span><div><div class="rt">Kitaplığım</div><div class="rs">Çözümlü soru bankaları · PDF yükleme</div></div><span class="rx">${icon("chev","sm")}</span></button>
     ${(b=>`<button class="row" data-act="go" data-v="basvuru"><span class="ri" style="background:#1E9E4A;color:#fff">${icon("user","sm")}</span><div><div class="rt">Başvurular</div><div class="rs">${b?`${b} başvuru süreçte`:"Süreçte başvuru yok"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.notifs.values()].filter(n=>n.type==="basvuru" && !["ogrenci","hayir"].includes(n.durum||"yeni")).length)}
     ${(k=>`<button class="row" data-act="go" data-v="giris"><span class="ri" style="${k?"background:var(--bads);color:var(--bad)":"background:var(--acs);color:var(--ac)"}">${icon("eye","sm")}</span><div><div class="rt">Giriş takibi</div><div class="rs">${k?`${k} öğrenci 3+ gündür girmedi`:"Öğrenciler uygulamaya düzenli giriyor"}</div></div><span class="rx">${icon("chev","sm")}</span></button>`)([...S.students.values()].filter(x=>["kotu","hic"].includes(girisDurum(x).k)).length)}
@@ -3735,6 +3817,7 @@ function openSheet(kind, el){
   if(kind==="veli") return veliSheet(s);
   if(kind==="hkarne") return hkarneSheet();
   if(kind==="hikaye") return hikayeSheet();
+  if(kind==="hky") return hkySheet();
   if(kind==="sinav") return sheet(`<h3>YKS tarihi</h3>
     <label class="f">Sınav tarihi<input type="date" name="d" id="m-exam" value="${S.settings.examDate}"></label>
     <label class="inline"><input type="checkbox" name="t" id="m-tah" ${S.settings.tahmini?"checked":""}>ÖSYM henüz açıklamadı (tahmini)</label>
@@ -3961,6 +4044,9 @@ document.addEventListener("click", e=>{
     case "hkmod": S.hkMod = v; S.hkTarih = ""; openSheet("hikaye"); break;
     case "hktarih": S.hkTarih = v; openSheet("hikaye"); break;
     case "hkpaylas": hikayePaylas(); break;
+    case "hkyac": if(v==="sinif-gun"){ S.hkMod = "bugun"; S.hkTarih = ""; openSheet("hikaye"); } else if(v==="sinif"){ S.hkyK = v; openSheet("hky"); } else { S.hkyK = v; openSheet("hky"); } break;
+    case "hkytema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hky"); break;
+    case "hkypaylas": hkyPaylas(); break;
     case "hktema": S.hkTema = v; try{ localStorage.setItem("zk-hk-tema", v); }catch(e){} openSheet("hikaye"); break;
     case "hkduzen": S.hkDuzen = v; try{ localStorage.setItem("zk-hk-duzen", v); }catch(e){} openSheet("hikaye"); break;
     case "gsil": { const id=b.dataset.id; S.gorus.delete(id); persistDoc("gorusmeler", id, 0); closeSheet(); render(); toast("Görüşme silindi"); break; }
@@ -4070,6 +4156,7 @@ document.addEventListener("input", e=>{ const t = e.target; if(!(t.dataset && (t
   const k = t.dataset.krd ?? t.dataset.kry, i = t.dataset.i, D = num($(`#layer [data-krd="${k}"][data-i="${i}"]`)?.value)||0, Y = num($(`#layer [data-kry="${k}"][data-i="${i}"]`)?.value)||0, b = t.parentElement && t.nextElementSibling && t.dataset.kry!=null ? t.nextElementSibling : t.nextElementSibling?.nextElementSibling;
   if(b && b.tagName==="B") b.textContent = fmt(D - Y/4); });
 document.addEventListener("change", e=>{
+  if(e.target && e.target.matches && e.target.matches("[data-set-hky]")){ S.settings.hikayeHatirlat = e.target.checked; saveSettings(); toast(e.target.checked ? "Her akşam 23.00'te hatırlatılacak" : "Hikaye hatırlatması kapatıldı"); return; }
   if(e.target && e.target.matches && e.target.matches('input[data-kt="yukle"]')){ const f = e.target.files; if(f && f.length) kitapYukle(f); e.target.value = ""; return; }
   const t = e.target;
   if(t.id==="sesAcik"){ SES.acik = t.checked; try{ localStorage.setItem("zk-ses", t.checked ? "1" : "0"); }catch(_){} if(t.checked) sesCal("basari"); return; }
