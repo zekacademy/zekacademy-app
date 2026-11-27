@@ -356,11 +356,16 @@ function startStudent(id){
   S.me=id; S.view="home"; S.day=today(); S.week=S.students.get(id) ? curStart(S.students.get(id)) : monday(new Date());
   girisKaydet(); setTimeout(ilkGunTekrar, 800);
 }
-/* Görüşme günü (yeni haftanın ilk günü) boş kalmasın: koç o günü boş bıraktıysa geçen haftanın ilk günündeki görevler aynen (işaretsiz) yazılır */
-const tekrarKaynak = (s, w) => { const pw = pPrev(s, w); if(pw === w) return []; return ((s.weeks||{})[pw]||{})[0] || []; };
-function ilkGunTekrar(){ const s = st(), t = today(); if(!s || A() || S.tekrarGun === t) return; S.tekrarGun = t;
-  const w = curStart(s); if(w !== t || (((s.weeks||{})[w]||{})[0]||[]).length) return; const src = tekrarKaynak(s, w); if(!src.length) return;
-  mutate(x=>{ x.weeks = x.weeks||{}; x.weeks[w] = x.weeks[w]||{}; if((x.weeks[w][0]||[]).length) return; x.weeks[w][0] = src.map(g=>{ const k = {...g, id:uid(), done:false, doneAt:null, tekrar:true}; delete k.dk; return k; }); }); render(); }
+/* Program asla boş görünmesin: bu haftanın boş kalan her günü (görüşme günü dahil) geçen haftanın AYNI GÜNÜNDEKİ görevlerle, işaretsiz dolar.
+   Koçun yazdığı günlere dokunulmaz. Öğrenci açınca ve koç programı açınca çalışır (günde bir kez). */
+function haftaTamamla(){ const s = st(), t = today(), anahtar = (A() ? S.cur : S.me) + "|" + t; if(!s || S.tekrarK === anahtar) return; S.tekrarK = anahtar;
+  const w = curStart(s), gunler = pDays(s, w), plan = [];
+  gunler.forEach((d,i)=>{ if(dayTasks(s, d).length) return; for(const k of [7,14]){ const sd = addDays(d,-k), L = dayTasks(s, sd); if(L.length){ const sw = pStart(s, sd), sv = ((s.plan||{})[sw]||{}).saat?.[dDiff(sw, sd)]; plan.push([i, L, sv]); break; } } });
+  if(!plan.length) return;
+  mutate(x=>{ x.weeks = x.weeks||{}; x.weeks[w] = x.weeks[w]||{}; const P = ensurePlan(x, w); P.saat = P.saat||{};
+    plan.forEach(([i, L, sv])=>{ if((x.weeks[w][i]||[]).length) return; x.weeks[w][i] = L.map(g=>{ const k = {...g, id:uid(), done:false, doneAt:null, tekrar:true}; delete k.dk; return k; }); if(sv!=null && sv!=="" && (P.saat[i]==null || P.saat[i]==="")) P.saat[i] = sv; }); });
+  render(); }
+const ilkGunTekrar = haftaTamamla;
 /* Öğrencinin girişini kaydeder: son giriş saati + son 30 günün giriş günleri (15 dakikada en fazla bir yazma) */
 function girisKaydet(){ if(S.role!=="student" || !S.me) return; const s = S.students.get(S.me); if(!s) return;
   const t = today(), son = Date.parse(s.sonGiris||"") || 0; if(s.lastSeen===t && Date.now()-son < 15*60e3) return;
@@ -625,7 +630,7 @@ function turHTML(s){ const L = turListe(), i = S.tur, a = L[i]; if(!a) return ""
     <div class="turnok">${L.map((_,k)=>`<i class="${k===i?"on":""}"></i>`).join("")}</div>
     <div class="acts">${i?`<button class="btn" data-act="tur" data-v="${i-1}">Geri</button>`:""}<button class="btn pri" data-act="${i===L.length-1?"turbitir":"tur"}" data-v="${i+1}">${i===L.length-1?(karakterSor(s)?"Karakterimi oluştur":S.turListe==="yeni"?"Tamam":"Başlayalım"):"İleri"}</button></div></div></div>`; }
 function studentShell(){
-  const s = st(); if(!s) return ""; if(S.tekrarGun !== today()) setTimeout(ilkGunTekrar, 0);
+  const s = st(); if(!s) return ""; if(S.tekrarK !== S.me+"|"+today()) setTimeout(haftaTamamla, 0);
   if(S.tur==null && !s.tanitim && !S.turKapandi){ S.turListe = "tur"; S.tur = 0; }
   else if(S.tur==null && s.tanitim && s.yenilik!==YENILIK_SURUM && !S.turKapandi){ S.turListe = "yeni"; S.tur = 0; }
   if(S.tur!=null){ const ad = turListe()[S.tur]; if(ad && ad.view) S.view = ad.view; }
@@ -965,6 +970,7 @@ function studentProgram(s){
 }
 
 function planEditor(s){
+  if(S.week === curStart(s) && S.tekrarK !== S.cur+"|"+today()) setTimeout(haftaTamamla, 0);
   const w = S.week, p = plan(s,w), h = p.hedef||{}, ws = weekStats(s,w), g = weekGoals(s,w);
   const goals = `<div class="card"><div class="sech"><h3>Haftalık hedefler</h3><span class="faint small">${g.list.length?`Öğrenci ${g.done}/${g.list.length} işaretledi`:"Boş bırakılan ders öğrenciye görünmez"}</span></div>
     <div class="glist">${cfg().hedefDers.map(d=>hedefSatir(s, w, h, d)).join("")}</div>
