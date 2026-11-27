@@ -146,6 +146,14 @@ img{max-width:100%}
 .gtopa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
 .gtopa span{display:flex;flex-direction:column;gap:2px;min-width:0}.gtopa b{font-size:17px}.gtopa small{font-size:11px;color:var(--muted);line-height:1.25}
 @media(max-width:420px){.gtopa{grid-template-columns:1fr 1fr}.gtopa span:last-child{grid-column:1/-1}}
+
+/* Hikayeler */
+.hkyk{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;color:inherit;font:inherit;margin-bottom:8px}.hkyk b{display:block;font-size:15px}.hkyk small{display:block;margin-top:2px}.hkyk.on{box-shadow:0 0 0 2px var(--ac)}
+.hkyi{width:44px;height:44px;border-radius:14px;background:var(--sunk);display:grid;place-items:center;font-size:22px;flex:none}
+.hkyg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:720px){.hkyg{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.hkyt{display:flex;flex-direction:column;gap:6px;padding:8px;border-radius:16px;background:var(--surface);border:1px solid var(--line);cursor:pointer;color:inherit;font:inherit;text-align:left}.hkyt.on{box-shadow:0 0 0 2px var(--ac)}
+.hkyt img{width:100%;aspect-ratio:9/12;object-fit:cover;object-position:top;border-radius:10px;background:var(--sunk)}.hkyt b{font-size:13px}
+.hkyhat{display:flex;align-items:center;gap:12px;cursor:pointer}.hkyhat b{display:block}.hkyhat small{display:block;margin-top:2px}
 </style>
 <style>
 /* Layout: telefonda alt menü (ortada büyük Program butonu), geniş ekranda sol menü; içerik ortada tek sütun */
