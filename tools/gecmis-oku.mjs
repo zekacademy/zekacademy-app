@@ -1,11 +1,13 @@
-/* Salt okuma: Müberra'nın 27 Kasım haftasını geçmiş zamanlardan okuyup günlüğe JSON olarak yazar (kurtarma için). Hiçbir şey yazmaz. */
+/* Kurtarma yedeği: TÜM öğrencilerin 16 Kasım sonrası haftalarını geçmiş zamanlardan (Firestore readTime, en fazla 1 saat geri) okur ve
+   yalnız sunucunun erişebildiği "kurtarma" koleksiyonuna yazar. Öğrenci kayıtlarına dokunmaz; günlüğe veri yazmaz. */
 import { createRequire } from "node:module";
 const require = createRequire(new URL("../functions/package.json", import.meta.url));
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore, Timestamp } = require("firebase-admin/firestore");
-const db = getFirestore(initializeApp({ projectId: process.env.PROJE }, "gecmis"));
-const ref = db.doc("students/eFT3ckPmSjeNCDPrS2lyawAIKTP2"), now = Date.now();
-for (const dk of [59.5, 58, 55, 50, 45, 40, 30, 20, 10]) { const t = now - dk*60e3;
-  try { const d = (await db.runTransaction(tx => tx.get(ref), { readOnly: true, readTime: Timestamp.fromMillis(t) })).data() || {};
-    console.log(`KURTARMA ${new Date(t).toISOString()} ` + JSON.stringify({ weeks: (d.weeks||{})["2026-11-27"], plan: (d.plan||{})["2026-11-27"] })); }
-  catch (e) { console.log(`KURTARMA ${new Date(t).toISOString()} HATA ${e.message}`); } }
+const db = getFirestore(initializeApp({ projectId: process.env.PROJE }, "kurtarma"));
+const now = Date.now(), ids = (await db.collection("students").select().get()).docs.map(d=>d.id);
+for (const dk of [59.4, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5]) { const t = now - dk*60e3, iso = new Date(t).toISOString(); let n = 0;
+  try { const snap = await db.runTransaction(tx => tx.getAll(...ids.map(i=>db.doc("students/"+i))), { readOnly: true, readTime: Timestamp.fromMillis(t) });
+    const b = db.batch(); snap.forEach(d=>{ const x = d.data(); if(!x) return; const W = {}, P = {}; Object.keys(x.weeks||{}).filter(w=>w>="2026-11-16").forEach(w=>W[w]=x.weeks[w]); Object.keys(x.plan||{}).filter(w=>w>="2026-11-16").forEach(w=>P[w]=x.plan[w]);
+      b.set(db.doc(`kurtarma/${iso}_${d.id}`), {sid:d.id, an:iso, donem:x.donem||[], weeks:W, plan:P}); n++; }); await b.commit(); console.log(`::notice::${iso}: ${n} öğrenci yedeklendi`); }
+  catch (e) { console.log(`::notice::${iso}: okunamadı (${String(e.code||"")})`); } }
