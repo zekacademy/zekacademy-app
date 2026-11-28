@@ -58,8 +58,8 @@ def f_zar():
         b.append(f'\\draw[line width=1pt,fill=white] ({x-.38},1.88) rectangle ({x+.38},2.62);')
         y1,y2=(3.7,1.05) if h=='iç' else (1.05,3.7)
         b.append(f'\\draw[{OKS},line width=1.4pt,color=vurgu] ({x},{y1})--({x},{y2});')
-        sy=3.2 if h=='iç' else 1.5
-        b.append(f'\\node[font=\\small\\bfseries,anchor=west] at ({x+.2},{sy}) {{{NA if ion=="Na" else KK}}};')
+        sy=3.3 if h=='iç' else 1.35
+        b.append(f'\\node[font=\\normalsize\\bfseries,anchor=west,fill=white,inner sep=1pt] at ({x+.1},{sy}) {{{NA if ion=="Na" else KK}}};')
         b.append(f'\\node[font=\\normalsize\\bfseries] at ({x},4.15) {{{"I II III IV V".split()[k]}}};')
     b.append('\\node[font=\\small,anchor=east,align=right] at (-.3,3.2) {Hücre dışı\\\\[-1pt]'+NA+' çok, '+KK+' az};')
     b.append('\\node[font=\\small,anchor=east,align=right] at (-.3,1.3) {Hücre içi\\\\[-1pt]'+NA+' az, '+KK+' çok};')
@@ -82,7 +82,7 @@ Q('0001','iyon','kolay','şekilli','Dinlenme hâlinde iyon hareketleri','Zar iki
 # ======================= 02 · Nörotransmitter (kolay, düz, olumsuz) =======================
 Q('0002','sinaps','kolay','düz','Nörotransmitterler','Nörotransmitterlerin salınımı ve etkisiyle ilgili yanlış ifadeyi belirler.','Nörotransmitter akson ucundaki veziküllerden salınır ve hedef hücre reseptörüne bağlanır.','Salınımın dendrit ucundan olduğunu sanmak.','nörotransmitter özellikleri',
  [A('İfadeleri sırala','Her ifade, nörotransmitterin depolanması, salınımı ve etkisi bakımından kontrol edilir.','Depolama · salınım · etki'),
-  A('Salınım yerini hatırla','Nörotransmitter, nöronun akson ucundaki veziküllerde bulunur ve oradan sinaptik aralığa salınır.','Salınım yeri: akson ucu'),
+  A('Bölgeleri karşılaştır','Her ifadede söylenen yapının sinapstaki görevi, nöronun uzantılarının işleviyle karşılaştırılır.','Uzantı işlevi ↔ ifade'),
   A('Yanlışı bul','Dendrit uzantıları uyarıyı alır, nörotransmitter salmaz.','Yanlış: dendrit uçlarından salınır')],
  metin='İki nöron arasındaki iletim, bir nörondan salınan kimyasal maddelerin diğer nörona etki etmesiyle sağlanır.\nNörotransmitterlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?',
  **tek(('Sinaptik aralığa yalnız dendrit uçlarından salınırlar.','nörotransmitterler akson ucundaki veziküllerden salınır, dendrit uçlarından değil'),
@@ -91,7 +91,7 @@ Q('0002','sinaps','kolay','düz','Nörotransmitterler','Nörotransmitterlerin sa
         ('Karşı nörondaki reseptörlere bağlanarak etki gösterirler.','etki, karşı nöron zarındaki özgül reseptörlere bağlanmayla başlar'),
         ('Etkilerini tamamladıktan sonra yıkılabilir ya da geri alınabilirler.','sinaptik aralıktaki nörotransmitter enzimlerle yıkılabilir veya akson ucuna geri alınabilir')],0,hedef=False),
  istenen='Nörotransmitterle ilgili yanlış ifade',ip=['Nörotransmitterin hangi uzantıdan salındığını ve hangi yapıya bağlandığını düşün.'],
- bilgi=[B('Sinaps','sinaps; bir nöronun akson ucu ile diğer nöronun zarı arasındaki bağlantı bölgesidir · Kimyasal sinapsta iletim, nörotransmitter denen maddelerle sağlanır')],puf='Akson ucu gönderir, karşı zar alır.')
+ bilgi=[B('Sinaps','sinaps; iki nöron arasındaki bağlantı bölgesidir · Kimyasal sinapsta iletim, nörotransmitter denen maddelerle sağlanır')],puf='Her ifadenin sinapsta hangi nöron bölgesini anlattığını ayrı ayrı sına.')
 
 def gr(govde): return tikz_svg('\\begin{tikzpicture}[font=\\small]\n'+govde+'\n\\end{tikzpicture}')
 def onctxt(giris,ifd,kok): return giris+'\n'+'\n'.join(f'{r}. {t}' for r,t in ifd.items())+'\n'+kok
@@ -200,13 +200,13 @@ Q('0006','yol','zor','şekilli','Refleks yayında iletim süresi','İletim hız�
  bilgi=[B('İletim süresi','bir nöronda geçen süre, akson uzunluğunun iletim hızına oranıdır · sinapsta impuls kimyasal iletim nedeniyle kısa bir süre gecikir')],puf='Süre = uzunluk / hız; sinaps gecikmelerini ayrıca ekle.')
 
 # ======================= 07 · Tek yönlü iletim ve elektrot kaydı (orta, şekilli, olumsuz, D) =======================
-KAYIT={'I':False,'II':True,'III':True,'IV':True,'V':False}
+KAYIT={'I':False,'II':True,'III':True,'IV':False,'V':False}
 NEDEN07={'I':'A nöronu B’nin presinaptik nöronudur; sinapsta iletim tek yönlü olduğundan impuls B’den A’ya geçmez ve bu elektrotta kayıt alınmaz',
  'II':'uyarı aksonun ortasına verildiğinde impuls iki yönde ilerler; hücre gövdesi yönüne giden impuls bu elektrotta kaydedilir',
  'III':'akson ucu yönüne giden impuls bu elektrottan geçer ve kaydedilir',
- 'IV':'B’nin akson ucuna ulaşan impuls sinapsı geçerek C nöronunu eşik değerin üzerinde uyarır ve C’nin aksonunda impuls oluşur',
+ 'IV':'B’nin akson ucuna ulaşan impuls engelleyici sinapsta C zarını eşik değerden uzaklaştırır; C’nin aksonunda impuls oluşmaz ve kayıt alınmaz',
  'V':'D nöronu da B’nin presinaptik nöronudur; impuls sinapsta geriye geçmediğinden bu elektrotta kayıt alınmaz'}
-assert [r for r,v in KAYIT.items() if not v]==['I','V']
+assert [r for r,v in KAYIT.items() if v]==['II','III']
 b=[]
 def nor(x,y,ad_): b.append(f'\\draw[line width=1.2pt,fill=vurgu!15] ({x},{y}) circle (.42);\\node[font=\\small\\bfseries] at ({x},{y}) {{{ad_}}};')
 def tut(x,y,r): b.append(f'\\draw[line width=1.6pt,fill=black] ({x},{y+.4})--({x-.14},{y+.68})--({x+.14},{y+.68})--cycle;\\draw[line width=.8pt] ({x},{y+.68})--({x},{y+.85});\\node[font=\\normalsize\\bfseries] at ({x},{y+1.12}) {{{r}}};')
@@ -215,28 +215,29 @@ b.append('\\draw[line width=1.3pt] (.42,0)--(2.9,0);\\fill (2.9,0) circle (.14);
 b.append('\\draw[line width=1.3pt] (4.22,0)--(8.6,0);\\fill (8.6,0) circle (.14);')
 b.append('\\draw[line width=1.3pt] (9.82,0)--(12.0,0);')
 b.append('\\draw[line width=1.3pt] (1.62,2.5) to[out=0,in=100] (3.6,.55);\\fill (3.6,.55) circle (.14);')
+b.append('\\node[font=\\small,color=vurgu!70!black] at (3.2,-.75) {uyarıcı};\\node[font=\\small,color=vurgu!70!black] at (2.55,1.3) {uyarıcı};\\node[font=\\small\\bfseries,align=center] at (8.6,-.75) {engelleyici};')
 tut(1.7,0,'I'); tut(4.9,0,'II'); tut(7.4,0,'III'); tut(11.0,0,'IV'); tut(2.55,2.0,'V')
 b.append(f'\\draw[{OKS},line width=1.8pt,color=vurgu] (6.2,-1.25)--(6.2,-.2);\\node[font=\\small\\bfseries,color=vurgu!70!black] at (6.2,-1.55) {{Uyarı}};')
 SK7=tk('\n'.join(b),.78)
-d7=['Yalnız I','II ve III','I, II ve V','I ve V','I, IV ve V']
+d7=['Yalnız II','II, III ve IV','I ve V','II ve III','I, IV ve V']
 def kume07(o):
     S=set(o.replace('Yalnız ','').replace(' ve ',',').replace(', ',',').split(',')); return S
-assert kume07(d7[3])=={'I','V'}
+assert kume07(d7[3])=={'II','III'}
 def yan07(o):
     S=kume07(o); p=[]
     for r in 'I II III IV V'.split():
-        if r in S and KAYIT[r]: p.append(f'{r} elektrotunda kayıt alınır: {NEDEN07[r]}')
-        if r not in S and not KAYIT[r]: p.append(f'{r} elektrotunda kayıt alınmaz: {NEDEN07[r]}')
-    return 'Kümeye göre yanlış yerleştirilen elektrotlar şunlardır. '+'. '.join(x[0].upper()+x[1:] for x in p)+'.'
+        if r in S and not KAYIT[r]: p.append(f'{r} elektrotunda kayıt alınmaz: {NEDEN07[r]}')
+        if r not in S and KAYIT[r]: p.append(f'{r} elektrotunda kayıt alınır: {NEDEN07[r]}')
+    return '. '.join(x[0].upper()+x[1:] for x in p)+'.'
 Q('0007','yol','orta','şekilli','Tek yönlü iletim ve elektrot kaydı','İmpulsun akson boyunca iki yönlü, sinapslarda tek yönlü iletildiğini yorumlayarak elektrot kayıtlarını öngörür.','Uyarı aksonun ortasına verilirse impuls iki yöne ilerler; sinapsı yalnız presinaptikten postsinaptik nörona geçer ve geriye geçmez.','Aksondaki iletimi tek yönlü, sinapstaki iletimi çift yönlü sanmak.','akson ve sinaps iletim yönü',
  [A('İletim yönlerini ayır','Aksonun ortasında oluşan impuls iki yöne ilerler; sinapsta ise iletim tek yönlüdür.','Akson: iki yön · sinaps: tek yön'),
   A('Elektrotları yerleştir','II ve III aynı aksonun iki yanındadır, IV sinapsın ilerisindedir; I ve V ise B’nin gerisindeki nöronlardadır.','II, III: B aksonu; IV: C; I, V: presinaptik'),
-  A('Kayıt almayanı bul','Presinaptik nöronlardaki I ve V numaralı elektrotlara impuls geçmez.','Kayıt yok: I ve V')],
- metin='Şekilde A, B, C ve D nöronları arasındaki bağlantılar ile sinir sistemindeki dört elektrodun (I–V) konumları gösterilmiştir. A ve D nöronları B ile, B nöronu C ile sinaps yapmaktadır; sinapsların hepsi uyarıcıdır ve B’nin akson ucundan salınan nörotransmitter C nöronunu eşik değerin üzerinde uyarmaktadır. B nöronunun aksonunun ortasına eşik değerin üzerinde bir uyarı verilmiştir.\nBuna göre, numaralı elektrotların hangilerinde impuls kaydedilmez?',
- sekil=SK7,sira=d7,dogru='I ve V',
- yan=[(o,yan07(o),'bilgi') for o in d7 if o!='I ve V'],
- istenen='İmpuls kaydedilmeyen elektrotlar',ip=['Aksondaki ve sinapstaki iletim yönünü ayrı ayrı düşün, her elektrodun hangi nöronda olduğuna bak.'],
- bilgi=[B('İmpuls iletimi','akson boyunca iletim, uyarılan noktadan her iki yöne doğru olabilir · sinapsta nörotransmitter yalnız akson ucundan salındığı için iletim tek yönlüdür')],puf='Akson iki yöne, sinaps tek yöne iletir.')
+  A('Kayıt alınanı bul','Aksondaki II ve III numaralı elektrotlardan impuls geçer; I ve V presinaptik nöronlarda, IV ise engelleyici sinapsın ilerisindedir.','Kayıt: II ve III')],
+ metin='Şekilde A, B, C ve D nöronları arasındaki bağlantılar ile sinir sistemindeki beş elektrodun (I–V) konumları gösterilmiştir. A ve D nöronlarının B ile yaptığı sinapslar uyarıcı, B nöronunun C ile yaptığı sinaps ise engelleyicidir. B nöronunun aksonunun ortasına eşik değerin üzerinde bir uyarı verilmiştir.\nBuna göre, numaralı elektrotların hangilerinde impuls kaydedilir?',
+ sekil=SK7,sira=d7,dogru='II ve III',
+ yan=[(o,yan07(o),'bilgi') for o in d7 if o!='II ve III'],
+ istenen='İmpuls kaydedilen elektrotlar',ip=['Aksondaki ve sinapstaki iletim yönünü ayrı ayrı düşün, her elektrodun hangi nöronda olduğuna bak.'],
+ bilgi=[B('İmpuls iletimi','akson boyunca iletim uyarılan noktadan başlar · sinapsta iletim akson ucundan salınan nörotransmitterle sağlanır')],puf='Her elektrodun hangi nöronda ve sinapsın hangi yanında olduğunu işaretle.')
 
 # ======================= 08 · Otonom sinirler ve kalp atış hızı (zor, grafik, öncüllü, E) =======================
 def sm(t,a,b_): 
@@ -267,21 +268,21 @@ Q('0008','kosul','zor','grafik','Otonom sinirlerin kalp atışına etkisi','Sini
  bilgi=[B('Otonom sinirler','sempatik sinirler kalp atışını hızlandırır · parasempatik sinirler kalp atışını yavaşlatır · iki sistem birlikte kalp hızını ayarlar')],puf='Dinlenme hızı ve egzersizdeki artışı kontrolle karşılaştır.')
 
 # ======================= 09 · Uyarıcı ve engelleyici sinapslar (zor, tablo, A) =======================
-ET={'A':('Uyarıcı',2),'B':('Uyarıcı',3),'E':('Uyarıcı',5),'C':('Engelleyici',-3)}; ESIK=5
+ET={'A':('Uyarıcı',2),'B':('Uyarıcı',3),'E':('Uyarıcı',5),'C':('Engelleyici',-3),'F':('Engelleyici',-2)}; ESIK=6
 net=lambda s: sum(ET[x][1] for x in s)
-assert net('BEC')>=ESIK and net('AEC')==4 and net('ABC')==2 and net('EC')==2 and net('BC')==0
+assert net('ABEC')==7 and net('BEC')==5 and net('AECF')==2 and net('ABECF')==5 and net('ABCF')==0
 SK9=tablo_svg(['Nöron','Sinaps türü','Uyarıldığında D’de etki (birim)'],[[k,v[0],('+'+str(v[1]) if v[1]>0 else '−'+str(-v[1]))] for k,v in ET.items()])
-d9=['B, E ve C','B ve C','E ve C','A, B ve C','A, E ve C']
+d9=['A, B, E ve C','B, E ve C','A, E, C ve F','A, B, E, C ve F','A, B, C ve F']
 Q('0009','sinaps','zor','tablo','Uyarıcı ve engelleyici sinapsların toplamı','Uyarıcı ve engelleyici sinapsların etkilerini toplayarak postsinaptik nörondaki impuls oluşumunu öngörür.','Postsinaptik nöronda uyarıcı etkiler artı, engelleyici etkiler eksi olarak toplanır; toplam eşik değere ulaşırsa impuls oluşur.','Engelleyici sinapsın etkisini toplama katmak yerine çıkarmamak; eşik değerin altındaki toplamda da impuls beklemek.','uyarıcı–engelleyici toplamı',
- [A('Etkileri oku','A, B ve E uyarıcıdır ve D’de artı etki yapar; C engelleyicidir ve eksi etki yapar.','A: +2 · B: +3 · E: +5 · C: −3'),
+ [A('Etkileri oku','A, B ve E uyarıcıdır ve D’de artı etki yapar; C ve F engelleyicidir ve eksi etki yapar.','A: +2 · B: +3 · E: +5 · C: −3 · F: −2'),
   A('Toplamları hesapla','Her şıktaki nöronların etkileri cebirsel olarak toplanır.','Her şık için net etki'),
-  A('Eşikle karşılaştır','Net etkisi en az eşik değer olan şıkta D’de impuls oluşur.','Net etki ≥ 5 olan şık')],
- metin='D nöronuna A, B, C ve E nöronları sinaps yapmaktadır. Tabloda bu nöronlardan her biri tek başına uyarıldığında D nöronunun zarında oluşturduğu etki verilmiştir. Birden fazla nöron aynı anda uyarılırsa etkiler cebirsel olarak toplanır ve toplam etki en az +5 birim olduğunda D nöronunda impuls oluşur.\nBuna göre, aşağıdaki nöron gruplarından hangisi aynı anda uyarıldığında D nöronunda impuls oluşur?',
+  A('Eşikle karşılaştır','Net etkisi en az eşik değer olan şıkta D’de impuls oluşur.','Net etki ≥ 6 olan şık')],
+ metin='D nöronuna A, B, C, E ve F nöronları sinaps yapmaktadır. Tabloda bu nöronlardan her biri tek başına uyarıldığında D nöronunun zarında oluşturduğu etki verilmiştir. Birden fazla nöron aynı anda uyarılırsa etkiler cebirsel olarak toplanır ve toplam etki en az +6 birim olduğunda D nöronunda impuls oluşur.\nBuna göre, aşağıdaki nöron gruplarından hangisi aynı anda uyarıldığında D nöronunda impuls oluşur?',
  sekil=SK9,sira=d9,dogru=d9[0],
- yan=[(d9[1],'Toplam etki +3 + (−3) = 0 birimdir; eşik değer olan +5’in çok altındadır ve impuls oluşmaz.','islem'),
-      (d9[2],'Toplam etki +5 + (−3) = +2 birimdir; E’nin etkisi engelleyici C ile azaldığından eşik değere ulaşılamaz.','islem'),
-      (d9[3],'Toplam etki +2 + 3 + (−3) = +2 birimdir; eşik değer olan +5’in altında kaldığı için impuls oluşmaz.','islem'),
-      (d9[4],'Toplam etki +2 + 5 + (−3) = +4 birimdir; eşik değerin yalnız 1 birim altındadır ve impuls oluşmaz.','dikkat')],
+ yan=[(d9[1],'Toplam etki +3 + 5 + (−3) = +5 birimdir; eşik değer olan +6’nın 1 birim altındadır ve impuls oluşmaz.','dikkat'),
+      (d9[2],'Toplam etki +2 + 5 + (−3) + (−2) = +2 birimdir; iki engelleyici nöron etkiyi eşik değerin çok altına düşürür.','islem'),
+      (d9[3],'Toplam etki +2 + 3 + 5 + (−3) + (−2) = +5 birimdir; eşik değerin yalnız 1 birim altında kaldığı için impuls oluşmaz.','dikkat'),
+      (d9[4],'Toplam etki +2 + 3 + (−3) + (−2) = 0 birimdir; eşik değer olan +6’ya ulaşılamaz.','islem')],
  istenen='D nöronunda impuls oluşturan grup',ip=['Engelleyici nöronun etkisini eksi işaretle toplayıp eşik değerle karşılaştır.'],
  bilgi=[B('Uyarıcı ve engelleyici sinapslar','uyarıcı sinapslar postsinaptik nöronu eşik değere yaklaştırır · engelleyici sinapslar eşik değerden uzaklaştırır · nöron eşik değere ulaşırsa impuls oluşturur')],puf='Etkileri işaretleriyle topla, eşikle karşılaştır.')
 

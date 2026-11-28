@@ -59,9 +59,11 @@ def pe(curves,ticks,ymax,leg,sc=0.03):
     return tikz(o)
 BLK='black'; BLU='blue!70!black'; RED='red!70!black'
 
+TAB=B('Tanecik modelinde derişim','derişim, tanecik sayısının hacme bölümüdür; aynı tanecik sayısı daha küçük hacimde daha büyük derişim demektir. Hız denklemi verilmişse iki kaptaki hız oranı, derişimlerin üslü çarpımlarının oranıdır. Örnek: r = k[P]² iken derişim 3 katına çıkarsa hız 9 katına çıkar')
+KATB=B('İki yolun karşılaştırılması','aynı tepkimenin farklı yollarında girenler ve ürünler aynı düzeydedir; yollar yalnız tepe noktalarıyla ayrılır. Tepesi daha düşük yolun aktivasyon enerjisi küçüktür ve hızı büyüktür. Örnek: tepeleri 90 ve 70 kJ olan iki yolda, girenleri 30 kJ’de olan tepkimenin ileri Eₐ’ları 60 ve 40 kJ’dir')
 # ---------- bilgi kutuları (örnekler soruların madde ve sayılarını kullanmaz)
-ORTB=B('Ortalama hız','ortalama hız, derişim değişiminin süreye oranıdır (mol/L·s). Maddelerin hızları katsayılarıyla orantılıdır; tepkime hızı bir maddenin hızının kendi katsayısına bölünmesiyle bulunur. Örnek: 2P → 3R tepkimesinde R’nin oluşma hızı, P’nin harcanma hızının 3/2 katıdır')
-ETB=B('Hızı etkileyen etkenler','derişim, yüzey alanı, sıcaklık ve katalizör hızı değiştirir. Tepkimeye girmeyen bir maddenin eklenmesi, hacim değişmiyorsa girenlerin derişimini değiştirmez. Örnek: katı bir girenin toz hâli, aynı kütlenin parçasından daha hızlı tepkime verir')
+ORTB=B('Ortalama hız','ortalama hız, derişim değişiminin süreye oranıdır (mol/L·s). Maddelerin hızları katsayılarıyla orantılıdır; tepkime hızı bir maddenin hızının kendi katsayısına bölünmesiyle bulunur. Hacim hesaba katılmadığında hız mol/s olarak da verilebilir. Örnek: 2P → 3R tepkimesinde R’nin oluşma hızı, P’nin harcanma hızının 3/2 katıdır')
+ETB=B('Hızı etkileyen etkenler','derişim, yüzey alanı, sıcaklık ve katalizör hızı değiştirir. Bir etkenin hızı değiştirmesi için derişimi, temas yüzeyini, çarpışma enerjisini ya da tepkime yolunu gerçekten değiştirmesi gerekir. Örnek: katalizör, aynı tepkimeyi daha düşük aktivasyon enerjili bir yoldan yürütür')
 MEB=B('Mekanizma','tepkime basamaklarının toplamı net tepkimeyi verir; yalnız ara basamaklarda görünen madde ara üründür. Hız denklemini en yavaş basamak belirler: o basamaktaki girenlerin katsayıları üs olur. Örnek: yavaş basamak P + 2Q → … ise r = k[P][Q]²')
 KUB=B('Hız sabitinin birimi','r = k[A]ᵐ[B]ⁿ ise k’nın birimi (mol/L·s) ÷ (mol/L)ᵐ⁺ⁿ ile bulunur; toplam derece 2 ise L/mol·s, 3 ise L²/mol²·s olur. Örnek: toplam derecesi 1 olan tepkimede k’nın birimi 1/s’dir')
 DEB=B('Deney tablosundan hız denklemi','bir derişimi sabit tutup diğerini değiştirdiğin iki deneyi karşılaştır: derişim a kat olunca hız aⁿ kat oluyorsa o maddeye göre derece n’dir. Hızı değişmeyen maddenin derecesi sıfırdır ve denklemde yer almaz. Örnek: derişim 2 katına çıkınca hız 8 katına çıkıyorsa derece 3’tür')
@@ -72,7 +74,7 @@ KTB=B('Kütle kaybından hız','açık kapta gaz çıkan tepkimede kütledeki az
 
 # ================ kartlar
 card(1,'Katsayı oranıyla ortalama hız','Tablodan bir maddenin mol değişimi bulunur, hacme ve süreye bölünür; başka madde için katsayı oranı uygulanır.','Katsayıyı mol sayısı sanmak; hacme bölmeyi unutmak.','kolay','tablo',3,'hz-ifade','tablodan ortalama oluşma hızı')
-card(2,'Hızı etkileyen etkenleri yorumlama','Her etken derişimi, yüzeyi, çarpışma enerjisini ya da yolu değiştirir; tepkimeye girmeyen madde derişimi her koşulda değiştirmez.','Asal gazın sabit hacimde de derişimi azalttığını sanmak.','kolay','düz',3,'hz-faktor','hız etkenlerinde yanlış açıklamayı bulma')
+card(2,'Hızı etkileyen etkenleri yorumlama','Her etken derişimi, yüzeyi, çarpışma enerjisini ya da yolu değiştirir; her açıklamada ileri sürülen neden gerçekten bu niceliklerden birini değiştirmelidir.','Etkeni, ileri sürülen nedeni sorgulamadan kabul etmek.','kolay','düz',3,'hz-faktor','hız etkenlerinde yanlış açıklamayı bulma')
 card(3,'Mekanizmada ara ürün ve hız denklemi','Yavaş basamak hız denklemini verir; yalnız ara basamaklarda görünen tür ara üründür; k’nın birimi toplam dereceden çıkar.','Hız denklemini net tepkime katsayılarından yazmak.','orta','tablo',4,'hz-mekanizma','mekanizma tablosunu yorumlama')
 card(4,'Katalizörlü yolda geri tepkime Eₐ’sı','Katalizör tepe noktasını indirir; geri Eₐ’yı da ileri Eₐ ile aynı miktarda azaltır.','Katalizörü yalnız ileri tepkimeye etkili saymak.','orta','şekilli',3,'hz-enerji','enerji diyagramından geri Eₐ okuma')
 card(5,'Üç maddeli deney tablosu','Her maddenin derecesi ayrı deney çiftlerinden bulunur; sıfırıncı dereceli madde denklemde yer almaz.','Hızı değişmeyen maddeyi de denkleme katmak.','orta','tablo',4,'hz-denklem','deney tablosundan k hesabı')
@@ -96,8 +98,8 @@ q('0001',1,[A('Mol değişimini bul','İlk 25 saniyede N₂O₅ 3 − 2 = 1 mol 
   (d1[1],'N₂O₅’in 1 mol azalmasına karşılık 4 mol NO₂ oluştuğunu sanmış (katsayıyı mol saymış): 4 ÷ 5 ÷ 25 = 0,032.','bilgi'),
   (d1[2],'N₂O₅’in mol değişimini (1 mol) doğrudan süreye bölmüş (1 ÷ 25); hacmi ve katsayı oranını hesaba katmamıştır.','islem'),
   (d1[3],'Oluşan NO₂ mol sayısını (2 mol) doğru bulmuş ama hacme bölmeden süreye bölmüştür: 2 ÷ 25 = 0,08.','islem')],
- istenen='NO₂ gazının ilk 25 saniyedeki ortalama oluşma hızı.',ip=['Önce tablodan N₂O₅’in mol değişimini bul, sonra hacmi ve katsayıları hesaba kat.'],bilgi=[ORTB],
- puf='Mol değişimini hacme ve süreye böl, sonra istenen maddenin katsayısıyla N₂O₅’in katsayısını oranla.')
+ istenen='NO₂ gazının ilk 25 saniyedeki ortalama oluşma hızı.',ip=['Tabloda hangi maddenin verisi var, hangi maddenin hızı isteniyor?'],bilgi=[ORTB],
+ puf='Hız, derişim değişiminin süreye oranıdır; maddelerin hızları katsayılarıyla orantılıdır.')
 
 # ================ 02 · kolay · olumsuz kök, metin
 o2=[('Magnezyum şerit yerine magnezyum tozu kullanıldığında temas yüzeyi arttığı için HCl çözeltisiyle tepkime daha hızlı gerçekleşir.',True,'Bu açıklama doğrudur: katı girenin yüzeyi büyüdükçe etkin çarpışma sayısı artar. Bu şıkkı seçen öğrenci doğru bir açıklamayı yanlış sanmıştır.'),
@@ -113,7 +115,7 @@ q('0002',2,[A('Her açıklamayı sına','Yüzey alanı, hacim, sıcaklık ve kat
  metin='Bir kimya öğretmeni, tepkime hızını etkileyen etkenleri anlatmak için laboratuvardan ve günlük yaşamdan örnekler veriyor. Öğrencilerden, her örnekte verilen açıklamanın bilimsel olarak doğru olup olmadığını değerlendirmelerini istiyor. Öğretmenin verdiği açıklamalar aşağıda sıralanmıştır.\nBuna göre bu açıklamalardan hangisi yanlıştır?',
  sekil=None,dogru=r2['dogru'],yan=r2['yan'],sira=r2['sira'],istenen='Yanlış olan açıklama.',
  ip=['Her açıklamada ileri sürülen nedenin derişimi, yüzeyi ya da enerjiyi gerçekten değiştirip değiştirmediğini düşün.'],bilgi=[ETB],
- puf='Tepkimeye girmeyen maddenin etkisini, hacmin değişip değişmediğine bakarak değerlendir.')
+ puf='İleri sürülen nedenin derişimi, yüzeyi ya da enerjiyi gerçekten değiştirip değiştirmediğine bak.')
 
 # ================ 03 · orta · mekanizma tablosu, öncüllü
 SK=tablo_svg(['Basamak','Tepkime','Hız'],[['1','2NO(g) + H₂(g) → N₂(g) + H₂O₂(g)','Yavaş'],['2','H₂O₂(g) + H₂(g) → 2H₂O(g)','Hızlı']])
@@ -128,7 +130,7 @@ q('0003',3,[A('Ara ürünü bul','H₂O₂ yalnız 1. basamakta oluşur, 2. basa
  metin='Sabit sıcaklıkta gerçekleşen\n2NO(g) + 2H₂(g) → N₂(g) + 2H₂O(g)\ntepkimesinin mekanizması, basamakları ve bu basamakların hızları ile birlikte tabloda verilmiştir.\nI. H₂O₂ ara üründür.\nII. Tepkimenin hız denklemi r = k[NO]²[H₂]²’dir.\nIII. Hız sabitinin (k) birimi L²/mol²·s’dir.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  sekil=SK,dogru=w3['dogru'],yan=w3['yan'],sira=w3['sira'],istenen='Doğru olan yargılar.',
  ip=['Hız denklemini yazarken hangi basamağın hızı belirlediğine bak, k’nın birimini de bu denklemden çıkar.'],bilgi=[MEB,KUB],
- puf='Net tepkimedeki katsayıları değil, yavaş basamaktaki girenlerin katsayılarını üs al.')
+ puf='Her yargıyı basamak tablosundaki bilgilerle ayrı ayrı sına.')
 
 # ================ 04 · orta · enerji diyagramı, katalizörlü yolda geri Ea
 R4,T4,P4,TK4=40,130,10,105
@@ -145,7 +147,7 @@ q('0004',4,[A('Katalizörlü yolu oku','Katalizörlü yolun tepe noktasının en
   (d4[2],'Katalizörsüz yoldaki geri Eₐ’yı (130 − 10 = 120) vermiş; katalizörün geri tepkimenin Eₐ’sını da azalttığını unutmuştur.','dikkat'),
   (d4[3],'Katalizörün tepeyi indirdiği 25 kJ’yi geri Eₐ’ya eklemiş: 120 + 25 = 145; katalizör Eₐ’yı azaltır.','islem')],
  istenen='Katalizörlü yolda geri tepkimenin aktivasyon enerjisi.',ip=['Geri tepkimenin Eₐ’sının hangi iki enerji düzeyi arasındaki fark olduğunu düşün.'],bilgi=[PEB],
- puf='Geri Eₐ, ilgili yolun tepe noktasından ürünlerin enerjisini çıkararak bulunur.')
+ puf='Aktivasyon enerjisi yöne bağlıdır; hangi yönün ve hangi yolun istendiğine dikkat et.')
 
 # ================ 05 · orta · üç maddeli deney tablosu, k
 exps=[(Fr(1,10),Fr(1,10),Fr(1,10),Fr(2,1000)),(Fr(2,10),Fr(1,10),Fr(1,10),Fr(4,1000)),(Fr(1,10),Fr(2,10),Fr(1,10),Fr(8,1000)),(Fr(1,10),Fr(1,10),Fr(2,10),Fr(2,1000))]
@@ -165,7 +167,7 @@ q('0005',5,[A('X’in derecesini bul','1. ve 2. deneyde yalnız [X] 2 katına ç
   (d5[2],'Hız hiç değişmediği hâlde Z’yi 1. dereceden denkleme katmış: 0,002 ÷ (0,1 × 0,01 × 0,1) = 20.','bilgi'),
   (d5[3],'Z’yi 2. dereceden denkleme katmış: 0,002 ÷ (0,1 × 0,01 × 0,01) = 200.','bilgi')],
  istenen='Hız sabitinin (k) değeri.',ip=['Her maddenin derecesini, yalnız o maddenin derişiminin değiştiği deney çiftinden bul.'],bilgi=[DEB],
- puf='Hızı değiştirmeyen madde denklemde yer almaz; k’yı geriye kalan derecelerle bul.')
+ puf='Önce her maddenin derecesini ayrı deney çiftlerinden bul, sonra k’yı hesapla.')
 
 # ================ 06 · orta · derişim–zaman grafiği, öncüllü
 def Aa(t): return Fr(6,5)*(1-Fr(t,20))**2
@@ -215,29 +217,29 @@ q('0007',7,[A('Derişimleri yaz','Kap I’de [A] = 4/V, [B] = 1/V; Kap II’de h
   (d7[1],'[A]’yı hacme göre düzeltmiş ama [B]’yi sayı olarak bırakmıştır: (6² × 4) ÷ 16 = 9.','islem'),
   (d7[2],'A’nın üssünü 1 almış: (6 × 8) ÷ (4 × 1) = 12; denklemde [A] ikinci kuvvettedir.','bilgi'),
   (d7[3],'Üsleri ters almış (r = k[A][B]²): (6 × 8²) ÷ (4 × 1²) = 96.','bilgi')],
- istenen='Kap II’deki başlangıç hızının Kap I’dekine oranı.',ip=['Önce her kapta A ve B’nin derişimini hacme göre hesapla.'],bilgi=[DEB],
+ istenen='Kap II’deki başlangıç hızının Kap I’dekine oranı.',ip=['Kapların hacimleri farklıdır; bu, derişimleri nasıl etkiler?'],bilgi=[TAB],
  puf='Derişim, tanecik sayısının hacme bölümüdür; hızı denklemdeki üslerle hesapla.')
 
 # ================ 08 · zor · basınç–zaman, C'nin oluşma hızı
 V8=Fr(246,10); R8=Fr(82,1000); T8=300; assert R8*T8==V8
-Pt={0:Fr(1),20:Fr(3,2),40:Fr(9,5),60:Fr(39,20),80:Fr(2)}
+Pt={0:Fr(1),20:Fr(6,5),40:Fr(33,25),60:Fr(7,5),80:Fr(29,20)}
 nn=lambda p:p*V8/(R8*T8); xx=lambda p:(nn(p)-1)/2
-assert [xx(Pt[t]) for t in (0,20,40,80)]==[0,Fr(1,4),Fr(2,5),Fr(1,2)] and 2*xx(Pt[80])==1
-C20,C40=3*xx(Pt[20]),3*xx(Pt[40]); rC=(C40-C20)/20; assert rC==Fr(9,400)
-d8=(C20/20, C40/40, 3*(Pt[40]-Pt[20])/20, C40/20)
-assert d8==(Fr(3,80),Fr(3,100),Fr(9,200),Fr(3,50)) and len({rC,*d8})==5
-SK=pg('width=7.2cm,height=5.4cm,axis lines=left,xmin=0,xmax=90,ymin=0.8,ymax=2.2,xtick={0,20,40,60,80},ytick={1.0,1.5,1.8,2.0},yticklabel={\\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use comma]{\\tick}},grid=major,major grid style={gray!45,thin},xlabel={Zaman (s)},ylabel={Toplam basınç (atm)},label style={font=\\small},tick label style={font=\\small}',
+assert [xx(Pt[t]) for t in (0,20,40,60)]==[0,Fr(1,10),Fr(4,25),Fr(1,5)] and 3*xx(Pt[80])<1
+C20,C40=4*xx(Pt[20]),4*xx(Pt[40]); rC=(C40-C20)/20; assert rC==Fr(3,250)
+d8=(C20/20, C40/40, 4*(Pt[40]-Pt[20])/20, C40/20)
+assert d8==(Fr(1,50),Fr(2,125),Fr(3,125),Fr(4,125)) and len({rC,*d8})==5
+SK=pg('width=7.2cm,height=5.4cm,axis lines=left,xmin=0,xmax=90,ymin=0.9,ymax=1.6,xtick={0,20,40,60,80},ytick={1.0,1.2,1.32,1.4},yticklabel={\\pgfmathprintnumber[fixed,fixed zerofill,precision=2,use comma]{\\tick}},grid=major,major grid style={gray!45,thin},xlabel={Zaman (s)},ylabel={Toplam basınç (atm)},label style={font=\\small},tick label style={font=\\small}',
  f'\\addplot[thick,color=blue!70!black,smooth,mark=*,mark size=1.6pt] coordinates {{{co([(t,float(p)) for t,p in Pt.items()])}}};')
-q('0008',8,[A('Toplam molü bul','PV = nRT ve V = 24,6 L, RT = 0,082 × 300 = 24,6 olduğundan n = P (mol); toplam mol 20 s’de 1,5, 40 s’de 1,8’dir.','n = 1,5 ve 1,8 mol'),
-   A('İlerlemeyi bul','2A → B + 3C’de bir ilerlemede toplam mol 2 artar: x(20) = 0,25, x(40) = 0,4 mol.','Δn = 2x'),
-   A('C’nin molünü bul','C’nin mol sayısı 3x’tir: 0,75 mol ve 1,2 mol.','Δn(C) = 1,2 − 0,75 = 0,45 mol'),
-   A('Hızı hesapla','0,45 mol ÷ 20 s = 0,0225 mol/s.','0,0225 mol/s')],
+q('0008',8,[A('Toplam molü bul','PV = nRT ve V = 24,6 L, RT = 0,082 × 300 = 24,6 olduğundan n = P (mol); toplam mol 20 s’de 1,20, 40 s’de 1,32’dir.','n = 1,20 ve 1,32 mol'),
+   A('İlerlemeyi bul','3A → B + 4C’de bir ilerlemede toplam mol 2 artar: x(20) = 0,10, x(40) = 0,16 mol.','Δn = 2x'),
+   A('C’nin molünü bul','C’nin mol sayısı 4x’tir: 0,40 mol ve 0,64 mol.','Δn(C) = 0,64 − 0,40 = 0,24 mol'),
+   A('Hızı hesapla','0,24 mol ÷ 20 s = 0,012 mol/s.','0,012 mol/s')],
  tipId='hz-ifade',z='zor',alt='Basınçtan Hız',kaz='Toplam basınç–zaman grafiğinden gaz hâlindeki bir ürünün ortalama oluşma hızını hesaplar.',kalip='grafik',
- metin='Hacmi 24,6 L olan sabit hacimli bir kaba yalnız A gazı konularak 300 K sabit sıcaklıkta\n2A(g) → B(g) + 3C(g)\ntepkimesi gerçekleştiriliyor. Kaptaki toplam basıncın zamanla değişimi grafikte verilmiştir. (R = 0,082 L·atm/mol·K)\nBuna göre tepkimenin 20–40 saniye aralığında C gazının ortalama oluşma hızı kaç mol/s’dir?',
- sekil=SK,dogru=rC,yan=[(d8[1],'0–40 s aralığındaki oluşumu (1,2 mol) 40 s’ye bölmüş: 1,2 ÷ 40 = 0,03; istenen aralık 20–40 s’dir.','dikkat'),
-  (d8[0],'0–20 s aralığındaki oluşumu almış: 0,75 ÷ 20 = 0,0375; istenen aralık 20–40 s’dir.','dikkat'),
-  (d8[2],'Toplam basınç artışını (0,3 atm = 0,3 mol) doğrudan 3 ile çarpmış: 0,9 ÷ 20 = 0,045; toplam mol artışı ilerlemenin 2 katıdır.','islem'),
-  (d8[3],'C’nin 0–40 s aralığındaki oluşumunu (1,2 mol) 20 s’ye bölmüş: 1,2 ÷ 20 = 0,06.','islem')],
+ metin='Hacmi 24,6 L olan sabit hacimli bir kaba yalnız A gazı konularak 300 K sabit sıcaklıkta\n3A(g) → B(g) + 4C(g)\ntepkimesi gerçekleştiriliyor. Kaptaki toplam basıncın zamanla değişimi grafikte verilmiştir. (R = 0,082 L·atm/mol·K)\nBuna göre tepkimenin 20–40 saniye aralığında C gazının ortalama oluşma hızı kaç mol/s’dir?',
+ sekil=SK,dogru=rC,yan=[(d8[1],'0–40 s aralığındaki oluşumu (0,64 mol) 40 s’ye bölmüş: 0,64 ÷ 40 = 0,016; istenen aralık 20–40 s’dir.','dikkat'),
+  (d8[0],'0–20 s aralığındaki oluşumu almış: 0,40 ÷ 20 = 0,02; istenen aralık 20–40 s’dir.','dikkat'),
+  (d8[2],'Toplam basınç artışını (0,12 atm = 0,12 mol) doğrudan 4 ile çarpmış: 0,48 ÷ 20 = 0,024; toplam mol artışı ilerlemenin 2 katıdır.','islem'),
+  (d8[3],'C’nin 0–40 s aralığındaki oluşumunu (0,64 mol) 20 s’ye bölmüş: 0,64 ÷ 20 = 0,032.','islem')],
  istenen='C gazının 20–40 s aralığındaki ortalama oluşma hızı.',ip=['Basınç değerlerini önce mol sayısına çevir, sonra ilerleme miktarını katsayılarla ilişkilendir.'],bilgi=[GZB,ORTB],
  puf='Toplam mol artışı ilerlemenin kaç katıdır, bunu denklemin katsayılarından bul.')
 
@@ -251,8 +253,8 @@ assert (rI,rII,rII/rI)==(Fr(1,200),Fr(1,100),2)
 r_wrong=(II_pts[2][1]-II_pts[0][1])/mCO2/10; assert r_wrong/rI==Fr(3,2)
 d9=(rII/(rI/2), rII*2/(rI/2), rI/rII, r_wrong/rI); assert d9==(4,8,Fr(1,2),Fr(3,2))
 def kf(pts): return [(t,float(v)) for t,v in pts]
-SK=pg('width=7cm,height=5.4cm,axis lines=left,xmin=0,xmax=44,ymin=0,ymax=5.3,xtick={0,10,20,30,40},ytick={0,1.1,2.2,3.3,4.4},yticklabel={\\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use comma]{\\tick}},grid=major,major grid style={gray!45,thin},xlabel={Zaman (s)},ylabel={Kütle azalması (g)},label style={font=\\small},tick label style={font=\\small}',
- f'\\addplot[thick,color=blue!70!black,smooth] coordinates {{{co(kf(I_pts))}}};\n\\addplot[thick,dashed,color=red!70!black,smooth] coordinates {{{co(kf(II_pts))}}};\n\\node[anchor=west,font=\\small] at (axis cs:31,2.7) {{Deney I}};\n\\node[anchor=west,font=\\small] at (axis cs:21.5,4.4) {{Deney II}};')
+SK=pg('width=7cm,height=5.4cm,axis lines=left,xmin=0,xmax=44,ymin=0,ymax=5.3,xtick={0,5,10,15,20,25,30,35,40},ytick={0,1.1,2.2,3.3,4.4},yticklabel={\\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use comma]{\\tick}},grid=major,major grid style={gray!45,thin},xlabel={Zaman (s)},ylabel={Kütle azalması (g)},label style={font=\\small},tick label style={font=\\small}',
+ f'\\addplot[thick,color=blue!70!black,smooth,mark=*,mark size=1.6pt] coordinates {{{co(kf(I_pts))}}};\n\\addplot[thick,dashed,color=red!70!black,smooth,mark=square*,mark size=1.6pt] coordinates {{{co(kf(II_pts))}}};\n\\node[anchor=west,font=\\small] at (axis cs:31,2.7) {{Deney I}};\n\\node[anchor=west,font=\\small] at (axis cs:21.5,4.4) {{Deney II}};')
 q('0009',9,[A('CO₂ miktarlarını bul','Deney I’de 10–20 s aralığında kütle 2,2 → 3,3 g azalır: 1,1 g CO₂ = 0,025 mol.','Δn(CO₂) = 0,025 mol'),
    A('I’de HCl’nin hızı','1 CO₂’ye karşılık 2 HCl harcanır: 0,05 mol ÷ 10 s = 0,005 mol/s.','0,005 mol/s'),
    A('II’de CaCO₃’ün hızı','0–5 s aralığında 2,2 g CO₂ = 0,05 mol; CaCO₃ da 0,05 mol azalır: 0,05 ÷ 5 = 0,01 mol/s.','0,01 mol/s'),
@@ -262,28 +264,28 @@ q('0009',9,[A('CO₂ miktarlarını bul','Deney I’de 10–20 s aralığında k
  sekil=SK,dogru=2,yan=[(d9[3],'Deney II’de 0–5 s yerine 0–10 s aralığını almış: 0,0075 ÷ 0,005 = 1,5.','dikkat'),
   (d9[2],'Oranı ters kurmuş: 0,005 ÷ 0,01 = 0,5; istenen Deney II’deki hızın Deney I’dekine oranıdır.','dikkat'),
   (d9[0],'HCl’nin hızını CO₂ ile 1 : 1 saymış (0,0025): 0,01 ÷ 0,0025 = 4; HCl’nin katsayısı 2’dir.','bilgi'),
-  (d9[1],'Hem HCl’yi 1 : 1 saymış hem de CaCO₃’ü 2 katına çıkarmış: 0,02 ÷ 0,0025 = 8.','islem')],
- istenen='İki hızın birbirine oranı.',ip=['Kütle azalmasını önce CO₂’nin molüne çevir, sonra katsayılarla maddelere geç.'],bilgi=[KTB],
- puf='Her aralık için kütle azalmasını mol ve süreye çevir; maddelerin katsayılarını unutma.')
+  (d9[1],'HCl’nin katsayısını (2) CaCO₃’e de uygulamış ve HCl’yi CO₂ ile 1 : 1 saymış: 0,02 ÷ 0,0025 = 8; CaCO₃’ün katsayısı 1’dir.','islem')],
+ istenen='İki hızın birbirine oranı.',ip=['Grafikteki kütle azalması hangi maddenin kütlesine karşılık gelir?'],bilgi=[KTB],
+ puf='Her aralık için hangi maddenin değişimi sorulduğuna ve katsayılara dikkat et.')
 
 # ================ 10 · zor · iki katalizörlü diyagram, öncüllü
 R10,P10,T0,T1,T2=50,20,140,110,95
 assert (T0-R10,T0-P10,T1-R10,T1-P10,T2-R10,T2-P10)==(90,120,60,90,45,75)
-assert T1-P10==T0-R10 and T2>R10 and T2<T1<T0 and P10-R10==-30
+assert (T2-P10)==(T0-R10)-15 and T2>R10 and T2<T1<T0 and P10-R10==-30
 SK=pe([(R10,T0,P10,'solid',BLK),(R10,T1,P10,'dashed',BLU),(R10,T2,P10,'dotted',RED)],[P10,R10,T2,T1,T0],T0,[('Katalizörsüz','solid',BLK),('$K_1$','dashed',BLU),('$K_2$','dotted',RED)])
 w10=onc([False,True,True],['ΔH girenlerle ürünlerin enerji farkıdır ve katalizör ΔH’ı değiştirmediğinden her iki yolda da −30 kJ’dir',
   'K₂’li yolun tepe noktası K₁’li yoldakinden düşüktür; Eₐ’sı küçük olan yol daha hızlıdır',
-  'K₁’li yolda geri Eₐ = 110 − 20 = 90 kJ, katalizörsüz yolda ileri Eₐ = 140 − 50 = 90 kJ’dir, ikisi eşittir'],3)
+  'K₂’li yolda geri Eₐ = 95 − 20 = 75 kJ, katalizörsüz yolda ileri Eₐ = 140 − 50 = 90 kJ’dir; fark 15 kJ’dir'],3)
 q('0010',10,[A('Enerjileri oku','Girenler 50, ürünler 20 kJ; tepeler 140 (katalizörsüz), 110 (K₁), 95 kJ (K₂).','Düzeyler okundu'),
    A('I’i değerlendir','ΔH = 20 − 50 = −30 kJ her yolda aynıdır; K₂ için de K₁ için de değişmez.','I: yanlış'),
    A('II’yi değerlendir','K₂’de ileri Eₐ = 45 kJ, K₁’de 60 kJ; tepe daha düşük olduğu için K₂’li yol daha hızlıdır.','II: doğru'),
-   A('III’ü değerlendir','K₁’li yolda geri Eₐ = 110 − 20 = 90; katalizörsüz ileri Eₐ = 140 − 50 = 90.','III: doğru'),
+   A('III’ü değerlendir','K₂’li yolda geri Eₐ = 95 − 20 = 75; katalizörsüz ileri Eₐ = 140 − 50 = 90; fark 15 kJ.','III: doğru'),
    A('Sonuç','II ve III doğrudur.','II ve III')],
  tipId='hz-katalizor',z='zor',alt='Katalizörlü Yollar',kaz='İki farklı katalizörlü yola ait enerji diyagramından ΔH, hız ve aktivasyon enerjilerini karşılaştırır.',kalip='şekilli',
- metin='Aynı tepkime için katalizörsüz yol ile K₁ ve K₂ katalizörlerinin kullanıldığı iki yola ait potansiyel enerji–tepkime koordinatı grafiği şekilde verilmiştir.\nI. K₂ kullanılan yolda tepkime entalpisi (ΔH), K₁ kullanılan yoldakinden küçüktür.\nII. Aynı sıcaklıkta tepkime hızı K₂ varlığında K₁ varlığındakinden büyüktür.\nIII. K₁ kullanılan yolda geri tepkimenin aktivasyon enerjisi, katalizörsüz yolda ileri tepkimenin aktivasyon enerjisine eşittir.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
+ metin='Aynı tepkime için katalizörsüz yol ile K₁ ve K₂ katalizörlerinin kullanıldığı iki yola ait potansiyel enerji–tepkime koordinatı grafiği şekilde verilmiştir.\nI. K₂ kullanılan yolda tepkime entalpisi (ΔH), K₁ kullanılan yoldakinden küçüktür.\nII. Aynı sıcaklıkta tepkime hızı K₂ varlığında K₁ varlığındakinden büyüktür.\nIII. K₂ kullanılan yolda geri tepkimenin aktivasyon enerjisi, katalizörsüz yolda ileri tepkimenin aktivasyon enerjisinden 15 kJ küçüktür.\nBuna göre yukarıdaki yargılardan hangileri doğrudur?',
  sekil=SK,dogru=w10['dogru'],yan=w10['yan'],sira=w10['sira'],istenen='Şekle göre doğru olan yargılar.',
- ip=['Her yargı için ilgili enerji düzeylerini grafikten okuyup farkları ayrı ayrı hesapla.'],bilgi=[PEB],
- puf='Katalizör ΔH’ı değiştirmez; ileri ve geri Eₐ için tepe noktasından sırasıyla girenlere ve ürünlere bak.')
+ ip=['Her yargı için ilgili enerji düzeylerini grafikten okuyup farkları ayrı ayrı hesapla.'],bilgi=[KATB],
+ puf='Aktivasyon enerjisi, tepe noktası ile ilgili yönün başlangıç düzeyi arasındaki farktır.')
 
 # ================ yaz
 for qq in P.ANA: qq['kardes']=None

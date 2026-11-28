@@ -52,20 +52,18 @@ def beaker(bx,w,h,lvl,oy=0):
 def elek(x,y0,y1):
     return '\\draw[thick,fill=gray!45] (%g,%g) rectangle (%g,%g);'%(x-0.14,y0,x+0.14,y1)
 
-# ============ 01 · Mg–Ni galvanik hücre, öncüllü · kolay · şekil ============
-kartla('01','Galvanik hücrede anot–katot, tuz köprüsü ve derişim yorumu','Küçük E°’lu elektrot anot; anotta kütle azalır, anyonlar tuz köprüsünden anot yarı hücresine, katyonlar katot yarı hücresine gider; katotta katyon derişimi azalır.','Tuz köprüsü yönünü ters almak; katottaki iyon derişiminin artacağını sanmak.','kolay','öncüllü',3,'galvanik','Galvanik hücre yorumu')
-assert D('-0.25')-D('-2.37')==D('2.12') and D('-2.37')<D('-0.25')
-I1=[True,True,False]   # I: Mg anot, kütle azalır · II: NO3⁻ Mg tarafına · III: Ni²⁺ derişimi artar (yanlış)
-assert I1==[True,True,False]
-SK=tk(pil(0,0.3,'1 M \\ce{Mg^{2+}}\\\\(suda)','1 M \\ce{Ni^{2+}}\\\\(suda)','Mg','Ni'))
-q('0001',tipId='elk2-galvanik',tip='Galvanik hücre yorumu',z='kolay',alt='Elektrotlar ve Elektrokimyasal Hücreler',kaz='Galvanik hücrede anot–katot, tuz köprüsündeki iyon akışı ve derişim değişimini yorumlar.',kalip='öncüllü',
- kart='K-AKELEK2-01 (galvanik hücre yorumu) · Mg–Ni hücresi, KNO₃ tuz köprüsü',sekil=SK,
- metin='Bir öğrenci 25 °C’de, şekilde gösterilen düzeneği kurarak 1 M derişimli çözeltilerle bir galvanik hücre hazırlamıştır. Tuz köprüsünde KNO₃(suda) bulunmaktadır ve devre tamamlandığında hücre çalışmaya başlamıştır.\nMg²⁺(suda) + 2e⁻ → Mg(k)  E° = −2,37 V\nNi²⁺(suda) + 2e⁻ → Ni(k)  E° = −0,25 V\nI. Mg elektrot anottur ve kütlesi zamanla azalır.\nII. Tuz köprüsündeki NO₃⁻ iyonları Mg yarı hücresine doğru hareket eder.\nIII. Ni²⁺ iyonlarının derişimi zamanla artar.\nBuna göre bu yargılardan hangileri doğrudur?',
- dogru='I ve II',sira=S5,yan=[('Yalnız I','II’nin yanlış olduğunu düşünmüş; tuz köprüsünde anyonların katot yarı hücresine gittiğini sanmış. Oysa anyonlar yükseltgenmenin olduğu anot yarı hücresine yönelir.','bilgi'),('Yalnız II','I’in yanlış olduğunu düşünmüş; E° değeri küçük olan Mg’yi katot sanıp kütlesinin artacağını sanmıştır. Oysa Mg yükseltgenerek çözünür ve kütlesi azalır.','bilgi'),('Yalnız III','Yalnız III’ü doğru saymış; Ni²⁺ iyonlarının katotta indirgenip tükendiğini ve derişimlerinin azaldığını görmemiştir. I ve II ise doğrudur.','dikkat'),('I ve III','III’ü doğru sanmış ve II’yi yanlış saymış; Ni²⁺ derişiminin azaldığını ve anyonların anot yarı hücresine gittiğini görmemiştir.','bilgi')],
- istenen='Doğru olan yargılar.',ip=['E° değerlerini karşılaştırıp anot ve katodu belirle; sonra her yarı hücrede yük dengesinin nasıl korunduğunu düşün.'],
- bilgi=[B('Tuz köprüsü ve derişim','anotta çözeltiye katyon geçtiği için anyonlar anot yarı hücresine, katotta katyon tükendiği için katyonlar katot yarı hücresine yönelir. Katotta indirgenen iyonun derişimi azalır. Örnek: Zn–Cu hücresinde SO₄²⁻ iyonları Zn yarı hücresine gider, Cu²⁺ derişimi azalır')],
- ad=[A('Anot ve katodu bul','E° değeri küçük olan Mg yükseltgenir, Ni²⁺ indirgenir.','Anot: Mg · Katot: Ni'),A('I’i değerlendir','Anot yükseltgenerek çözünür.','Mg → Mg²⁺ + 2e⁻ → kütlesi azalır → I doğru'),A('II’yi değerlendir','Anyonlar anot yarı hücresine gider.','NO₃⁻ → Mg yarı hücresi → II doğru'),A('III’ü değerlendir','Ni²⁺ katotta Ni olarak birikir.','[Ni²⁺] azalır → III yanlış')],
- puf='Anyonlar anot yarı hücresine, katyonlar katot yarı hücresine yönelir.')
+# ============ 01 · Al–Cu galvanik hücre, öncüllü · kolay · şekil ============
+kartla('01','Galvanik hücrede elektron yönü, derişim değişimi ve hücre potansiyeli','Küçük E°’lu elektrot anottur; elektronlar dış devrede anottan katoda akar, anot yarı hücresinde katyon derişimi artar, katot yarı hücresinde azalır; hücre potansiyeli E°(katot) − E°(anot) farkıdır.','Elektron yönünü ters almak; E° farkını hesaplarken değerleri toplamak.','kolay','öncüllü',3,'galvanik','Galvanik hücre yorumu')
+assert D('0.34')-D('-1.66')==D('2.00') and D('-1.66')<D('0.34')
+SK=tk(pil(0,0.3,'1 M \\ce{Al^{3+}}\\\\(suda)','1 M \\ce{Cu^{2+}}\\\\(suda)','Al','Cu'))
+q('0001',tipId='elk2-galvanik',tip='Galvanik hücre yorumu',z='kolay',alt='Elektrotlar ve Elektrokimyasal Hücreler',kaz='Galvanik hücrede elektron yönünü, derişim değişimini ve standart hücre potansiyelini yorumlar.',kalip='öncüllü',
+ kart='K-AKELEK2-01 (galvanik hücre yorumu) · Al–Cu hücresi',sekil=SK,
+ metin='Bir öğrenci 25 °C’de, şekilde gösterilen düzeneği kurarak 1 M derişimli çözeltilerle bir galvanik hücre hazırlamıştır. Devre tamamlandığında hücre çalışmaya başlamıştır.\nAl³⁺(suda) + 3e⁻ → Al(k)  E° = −1,66 V\nCu²⁺(suda) + 2e⁻ → Cu(k)  E° = +0,34 V\nI. Dış devrede elektronlar Cu elektrottan Al elektroda doğru akar.\nII. Zamanla Al³⁺ iyonlarının derişimi artar.\nIII. Hücrenin standart potansiyeli 2,00 V’tur.\nBuna göre bu yargılardan hangileri doğrudur?',
+ dogru='II ve III',sira=['Yalnız I','Yalnız II','I ve III','II ve III','I, II ve III'],yan=[('Yalnız I','I’i doğru, II ve III’ü yanlış saymış; elektronların aktif metalden değil Cu’dan aktığını düşünmüştür. Oysa Al anottur ve elektronlar Al’dan Cu’ya akar.','bilgi'),('Yalnız II','III’ü yanlış saymış; E°(katot) − E°(anot) = 0,34 − (−1,66) = 2,00 V olduğunu görmemiştir.','islem'),('I ve III','I’i doğru ve II’yi yanlış saymış; elektron yönünü ters almış ve anotta Al³⁺ derişiminin arttığını görmemiştir.','bilgi'),('I, II ve III','Üç yargıyı da doğru sanmış; elektronların anottan değil katottan anota aktığını düşünmüştür.','bilgi')],
+ istenen='Doğru olan yargılar.',ip=['E° değerlerini karşılaştırıp anot ve katodu belirle; sonra elektron yönünü, derişim değişimini ve E° farkını ayrı ayrı sına.'],
+ bilgi=[B('Galvanik hücre','Küçük E°’lu elektrot anot, büyük E°’lu elektrot katottur; elektronlar dış devrede anottan katoda akar. Anotta yükseltgenen metal çözeltiye katyon verir, katotta katyon indirgenir. Örnek: Mg–Ag hücresinde Mg anot, Ag katottur ve elektronlar Mg’den Ag’ye akar')],
+ ad=[A('Anot ve katodu bul','E° değeri küçük olan Al yükseltgenir, Cu²⁺ indirgenir.','Anot: Al · Katot: Cu'),A('I’i değerlendir','Elektronlar anottan katoda akar.','Al → Cu → I yanlış'),A('II’yi değerlendir','Anotta Al, Al³⁺ iyonuna dönüşür.','[Al³⁺] artar → II doğru'),A('III’ü değerlendir','E° = E°(katot) − E°(anot).','0,34 − (−1,66) = 2,00 V → III doğru')],
+ puf='Elektron yönünü ve derişim değişimini her yarı hücre için ayrı düşün.')
 
 # ============ 02 · erimiş NaBr elektrolizi, yanlış ifade · kolay · şekil ============
 kartla('02','Erimiş tuz elektrolizi','Elektroliz hücresinde üretecin (+) kutbuna bağlı elektrot anottur; anyonlar anotta yükseltgenir, katyonlar katotta indirgenir; elektronlar anottan üretece, üreteçten katoda akar; katyonlar katoda, anyonlar anoda gider.','İyonların yönünü galvanik hücre gibi düşünmek.','kolay','şekilli',3,'elektroliz','Elektroliz')
@@ -106,12 +104,12 @@ q('0003',tipId='elk2-nernst',tip='Nernst eşitliği',z='zor',alt='Elektrot Potan
  puf='Nernst doğrusunda kesim E°, eğim −0,059/n’dir.')
 
 # ============ 04 · galvanizli ve kalaylı levha · orta · öncüllü · şekil ============
-kartla('04','Kaplamalı demir ve korozyon','Kaplama çizilince oluşan pil, kaplama metali ile demirden oluşur; E° değeri küçük olan yükseltgenir. Kaplama demirden aktifse (Zn) demir korunur, demirden az aktifse (Sn) demir çürür.','Çizildiğinde her kaplamanın demiri koruyacağını sanmak; elektron yönünü ters almak.','orta','öncüllü',4,'korozyon','Korozyon ve kaplamalı metaller')
-EZ,EF,ES=D('-0.76'),D('-0.44'),D('-0.14')
+kartla('04','Kaplamalı demir ve korozyon','Kaplama çizilince açıkta kalan demir ile kaplama metali bir pil oluşturur; bu pilde E° değeri küçük olan metal anot olur ve yükseltgenir.','Çizildiğinde her kaplamanın demiri koruyacağını sanmak; elektron yönünü ters almak.','orta','öncüllü',4,'korozyon','Korozyon ve kaplamalı metaller')
+EZ,EF,ES=D('-1.66'),D('-0.44'),D('-0.25')
 assert EZ<EF<ES
 I4=[False,True,False]  # I: 1. levhada demir anot (yanlış) · II: 2. levhada yükseltgenen Fe (doğru) · III: 1. levhada e⁻ Fe→Zn (yanlış)
 g=''
-for ox,ad_,kp in [(0,'1. levha','Zn'),(4.6,'2. levha','Sn')]:
+for ox,ad_,kp in [(0,'1. levha','Al'),(4.6,'2. levha','Ni')]:
     g+='\\draw[thick,fill=gray!45] (%g,0) rectangle (%g,0.9);'%(ox,ox+3.4)
     g+='\\node at (%g,0.45) {Fe};'%(ox+1.7)
     g+='\\draw[thick,fill=vurgu!30] (%g,0.9) rectangle (%g,1.25);\\draw[thick,fill=vurgu!30] (%g,0.9) rectangle (%g,1.25);'%(ox,ox+1.35,ox+2.05,ox+3.4)
@@ -122,54 +120,55 @@ SK=tk(g)
 S4=['Yalnız I','Yalnız II','I ve II','I ve III','I, II ve III']
 q('0004',tipId='elk2-korozyon',tip='Korozyon ve kaplamalı metaller',z='orta',alt='Korozyon',kaz='Kaplamalı demirde çizik oluştuğunda anot–katot ve elektron akışını E° değerlerine göre yorumlar.',kalip='öncüllü',
  kart='K-AKELEK2-04 (galvanizli–kalaylı levha) · çizik ve nemli ortam',sekil=SK,
- metin='Demir levhaların yüzeyi, şekilde görüldüğü gibi biri çinko, diğeri kalay ile kaplanmıştır. Her iki levhanın kaplaması çizilerek demir açığa çıkarılmış ve çizik bölgeye su damlatılmıştır. Çiziklerde, açıkta kalan metallerle kaplama arasında bir pil oluşmaktadır.\nZn²⁺ + 2e⁻ → Zn  E° = −0,76 V\nFe²⁺ + 2e⁻ → Fe  E° = −0,44 V\nSn²⁺ + 2e⁻ → Sn  E° = −0,14 V\nI. 1. levhada çizik bölgede demir anot olarak davranır.\nII. 2. levhada çizik bölgede yükseltgenen metal demirdir.\nIII. 1. levhada dış devrede elektronlar demirden çinkoya doğru akar.\nBuna göre bu yargılardan hangileri doğrudur?',
- dogru='Yalnız II',sira=S4,yan=[('Yalnız I','I’i doğru, II’yi yanlış saymış; çinkoyu demirden az aktif sanıp demirin yükseltgeneceğini düşünmüş. E° değeri küçük olan çinko yükseltgenir.','bilgi'),('I ve II','I’i de doğru saymış; kaplamayı koruyucu sanma düşüncesiyle iki levhada da demirin anot olduğunu düşünmüştür. 1. levhada anot çinkodur.','bilgi'),('I ve III','II’yi yanlış saymış; kalayın demirden daha aktif olduğunu düşünüp demirin korunacağını sanmıştır. Sn’nin E° değeri demirinkinden büyüktür.','bilgi'),('I, II ve III','Üç yargıyı da doğru sanmış; elektronların aktifliği az olan metalden fazla olana aktığını düşünmüştür. Elektronlar anot olan çinkodan demire akar.','bilgi')],
+ metin='Demir levhaların yüzeyi, şekilde görüldüğü gibi biri alüminyum, diğeri nikel ile kaplanmıştır. Her iki levhanın kaplaması çizilerek demir açığa çıkarılmış ve çizik bölgeye su damlatılmıştır. Çiziklerde, açıkta kalan metallerle kaplama arasında bir pil oluşmaktadır.\nAl³⁺ + 3e⁻ → Al  E° = −1,66 V\nFe²⁺ + 2e⁻ → Fe  E° = −0,44 V\nNi²⁺ + 2e⁻ → Ni  E° = −0,25 V\nI. 1. levhada çizik bölgede demir anot olarak davranır.\nII. 2. levhada çizik bölgede yükseltgenen metal demirdir.\nIII. 1. levhada dış devrede elektronlar demirden alüminyuma doğru akar.\nBuna göre bu yargılardan hangileri doğrudur?',
+ dogru='Yalnız II',sira=S4,yan=[('Yalnız I','I’i doğru, II’yi yanlış saymış; alüminyumu demirden az aktif sanıp demirin yükseltgeneceğini düşünmüş. E° değeri küçük olan alüminyum yükseltgenir.','bilgi'),('I ve II','I’i de doğru saymış; kaplamayı koruyucu sanma düşüncesiyle iki levhada da demirin anot olduğunu düşünmüştür. 1. levhada anot alüminyumdur.','bilgi'),('I ve III','II’yi yanlış saymış; nikelin demirden daha aktif olduğunu düşünüp demirin korunacağını sanmıştır. Ni’nin E° değeri demirinkinden büyüktür.','bilgi'),('I, II ve III','Üç yargıyı da doğru sanmış; elektronların aktifliği az olan metalden fazla olana aktığını düşünmüştür. Elektronlar anot olan alüminyumdan demire akar.','bilgi')],
  istenen='Doğru olan yargılar.',ip=['Her çizikte pili oluşturan iki metalin E° değerlerini karşılaştır; küçük olan hangi levhada hangi metaldir?'],
- bilgi=[B('Kurban anot','demirle temas eden metal demirden daha aktifse (E° küçükse) o yükseltgenir ve demiri korur; daha az aktifse demir yükseltgenir ve daha hızlı çürür. Örnek: Mg, demir boruyu korur; Cu ile temas eden demir hızlı paslanır')],
- ad=[A('1. levhayı incele','Zn’nin E° değeri Fe’ninkinden küçüktür.','Anot: Zn · Katot: Fe → I yanlış'),A('2. levhayı incele','Sn’nin E° değeri Fe’ninkinden büyüktür.','Anot: Fe · Katot: Sn → II doğru'),A('Elektron yönünü bul','1. levhada elektronlar anottan katoda akar.','Zn → Fe → III yanlış'),A('Sonuç','Yalnız II doğrudur.','Yalnız II')],
- puf='Çizilmiş kaplamada E° değeri küçük olan metal anot olur ve yükseltgenir.')
+ bilgi=[B('Kaplamalı metaller ve pil','nemli ortamda birbirine değen iki metal bir pil oluşturur; E° değeri küçük olan metal anot olur, yükseltgenir ve çözünür; büyük olan katot olur. Örnek: Zn–Cu çifti nemli ortamda temas ederse Zn anot, Cu katot olur')],
+ ad=[A('1. levhayı incele','Al’nin E° değeri Fe’ninkinden küçüktür.','Anot: Al · Katot: Fe → I yanlış'),A('2. levhayı incele','Ni’nin E° değeri Fe’ninkinden büyüktür.','Anot: Fe · Katot: Ni → II doğru'),A('Elektron yönünü bul','1. levhada elektronlar anottan katoda akar.','Al → Fe → III yanlış'),A('Sonuç','Yalnız II doğrudur.','Yalnız II')],
+ puf='Çizikte oluşan pilde iki metalin E° değerlerini karşılaştır.')
 
-# ============ 05 · Ni–Ag Nernst · orta · düz ============
-kartla('05','Nernst eşitliği ile hücre potansiyeli','Q’da ürün derişimleri paydaya, katsayılar üs olarak yazılır; E = E° − (0,059/n)·log Q. Katsayı üs olur, E° değeri katsayıdan etkilenmez.','Gümüş derişiminin karesini almamak; n yerine 1 almak; E° hesabında işareti karıştırmak.','orta','düz',4,'nernst','Nernst eşitliği')
-EAg,ENi=D('0.80'),D('-0.25'); E05=EAg-ENi; assert E05==D('1.05')
-NiC,AgC=D('0.01'),D('0.01'); Q5=NiC/AgC**2; assert Q5==100
-e_dog=E05-D('0.059')/2*2; assert e_dog==D('0.991')
-e_kare=E05-D('0.059')/2*0; assert e_kare==D('1.05') and NiC/AgC==1
-e_n1=E05-D('0.059')*2; assert e_n1==D('0.932')
-e_isr=E05+D('0.059')/2*2; assert e_isr==D('1.109')
-e_ikisi=E05+D('0.059')*2; assert e_ikisi==D('1.168')
-q('0005',tipId='elk2-nernst',tip='Nernst eşitliği',z='orta',alt='Elektrot Potansiyelleri',kaz='Derişimleri standart olmayan hücrenin potansiyelini Nernst eşitliğiyle hesaplar.',kalip='düz',
- kart='K-AKELEK2-05 (Nernst, katsayı üssü) · Ni–Ag hücresi',
- metin='25 °C’de şematik gösterimi aşağıda verilen bir galvanik hücre hazırlanmıştır.\nNi(k) | Ni²⁺(suda, 0,01 M) || Ag⁺(suda, 0,01 M) | Ag(k)\nNi²⁺(suda) + 2e⁻ → Ni(k)  E° = −0,25 V\nAg⁺(suda) + e⁻ → Ag(k)  E° = +0,80 V\n(25 °C’de Nernst eşitliğinde logaritmik terimin katsayısı 0,059/n alınacaktır; n, tepkimede aktarılan elektron sayısıdır.)\nBuna göre bu hücrenin potansiyeli kaç volttur?',
- dogru=e_dog,yan=[(e_n1,'Aktarılan elektron sayısını 1 almış; log Q = 2 için 1,05 − 0,059 × 2 = 0,932 V bulmuştur.','bilgi'),(e_kare,'Ag⁺ derişiminin karesini almamış; Q = 1 bulup log Q = 0 kabul etmiş ve E = E° = 1,05 V demiştir.','bilgi'),(e_isr,'Logaritmik terimin işaretini ters yazmış; 1,05 + 0,0295 × 2 = 1,109 V bulmuştur.','islem'),(e_ikisi,'Hem n’yi 1 almış hem de işareti ters yazmıştır; 1,05 + 0,059 × 2 = 1,168 V bulmuştur.','islem')],
- istenen='Hücre potansiyeli (V).',ip=['Hücre tepkimesini elektron sayıları eşit olacak biçimde yazıp Q’yu katsayıları üs yaparak kur.'],
+# ============ 05 · Zn–Ag Nernst, potansiyel değişimi · orta · düz ============
+kartla('05','Nernst eşitliği ile potansiyel değişimi','Q’da ürün derişimleri paya, girenler paydaya yazılır ve katsayılar üs olur; derişimler değişince potansiyel farkı, (0,059/n) ile log Q farkının çarpımıdır.','Gümüş derişiminin karesini almamak; n yerine 1 almak; log Q farkının işaretini karıştırmak.','orta','düz',4,'nernst','Nernst eşitliği')
+EAg,EZn5=D('0.80'),D('-0.76'); E05=EAg-EZn5; assert E05==D('1.56')
+Q1=D('0.1')/D('0.1')**2; Q2=D('1')/D('0.01')**2; assert (Q1,Q2)==(10,10000)
+dE=D('0.059')/2*(4-1); assert dE==D('0.0885')
+d_n1=D('0.059')*3; assert d_n1==D('0.177')
+d_us=D('0.059')/2*(2-0); assert d_us==D('0.059')     # Ag⁺ derişimi karesiz: Q1=1, Q2=100
+d_top=D('0.059')/2*(4+1); assert d_top==D('0.1475')
+d_zn=D('0.059')/2*4; assert d_zn==D('0.118')
+q('0005',tipId='elk2-nernst',tip='Nernst eşitliği',z='orta',alt='Elektrot Potansiyelleri',kaz='Derişimleri değiştirilen hücrenin potansiyelindeki değişimi Nernst eşitliğiyle hesaplar.',kalip='düz',
+ kart='K-AKELEK2-05 (Nernst, potansiyel değişimi) · Zn–Ag hücresi',
+ metin='25 °C’de şematik gösterimi aşağıda verilen bir galvanik hücre hazırlanmıştır.\nZn(k) | Zn²⁺(suda, 0,1 M) || Ag⁺(suda, 0,1 M) | Ag(k)\nZn²⁺(suda) + 2e⁻ → Zn(k)  E° = −0,76 V\nAg⁺(suda) + e⁻ → Ag(k)  E° = +0,80 V\nBu hücrede Zn²⁺ derişimi 1 M’a çıkarılıp Ag⁺ derişimi 0,01 M’a düşürülüyor.\n(25 °C’de Nernst eşitliğinde logaritmik terimin katsayısı 0,059/n alınacaktır; n, tepkimede aktarılan elektron sayısıdır.)\nBuna göre hücre potansiyeli kaç volt azalır?',
+ dogru=dE,yan=[(d_zn,'Başlangıç Q’yu bulurken Ag⁺ derişiminin karesini almamış (Q₁ = 1, log Q₁ = 0); (0,059 ÷ 2) × (4 − 0) = 0,118 V bulmuştur.','bilgi'),(d_us,'Ag⁺ derişiminin karesini almamış; Q’yu 1’den 100’e giden bir değişim sanıp (0,059 ÷ 2) × 2 = 0,059 V bulmuştur.','bilgi'),(d_top,'log Q değerlerini çıkarmak yerine toplamış (1 + 4 = 5); (0,059 ÷ 2) × 5 = 0,1475 V bulmuştur.','islem'),(d_n1,'Aktarılan elektron sayısını 1 almış; 0,059 × 3 = 0,177 V bulmuştur.','bilgi')],
+ istenen='Hücre potansiyelindeki azalma (V).',ip=['Hücre tepkimesini elektron sayıları eşit olacak biçimde yazıp her iki durum için Q’yu katsayıları üs yaparak kur.'],
  bilgi=[B('Q yazımı','denge kesrinde saf katılar yer almaz, her iyonun derişimi tepkimedeki katsayısı kadar üs alır. Örnek: Zn + 2Fe³⁺ → Zn²⁺ + 2Fe²⁺ tepkimesi için Q = [Zn²⁺][Fe²⁺]² ÷ [Fe³⁺]² olur')],
- ad=[A('Hücre tepkimesi ve E°','Ni anot, Ag katottur; Ag yarı tepkimesi 2 ile çarpılır, E° değişmez.','Ni + 2Ag⁺ → Ni²⁺ + 2Ag · E° = 0,80 − (−0,25) = 1,05 V'),A('n’yi belirle','Tepkimede 2 mol elektron aktarılır.','n = 2'),A('Q’yu yaz','Ag⁺ derişimi karesiyle yazılır.','Q = 0,01 ÷ (0,01)² = 100'),A('Nernst','log 100 = 2.','E = 1,05 − (0,059 ÷ 2) × 2'),A('Sonuç','Çarpımı çıkar.','E = 1,05 − 0,059 = 0,991 V')],
- puf='Q’da katsayılar üs olur; E° katsayıyla çarpılmaz.')
+ ad=[A('Hücre tepkimesi','Zn anot, Ag katottur; Ag yarı tepkimesi 2 ile çarpılır.','Zn + 2Ag⁺ → Zn²⁺ + 2Ag · n = 2'),A('İlk Q','Q = [Zn²⁺] ÷ [Ag⁺]².','0,1 ÷ (0,1)² = 10 → log Q = 1'),A('Son Q','Yeni derişimler yazılır.','1 ÷ (0,01)² = 10⁴ → log Q = 4'),A('Potansiyel farkı','E = E° − (0,059 ÷ n) log Q olduğundan fark log Q farkıyla orantılıdır.','ΔE = (0,059 ÷ 2) × (4 − 1)'),A('Sonuç','Çarpımı hesapla.','0,0295 × 3 = 0,0885 V azalır')],
+ puf='Q’da katsayılar üs olur; potansiyel farkı log Q farkından bulunur.')
 
-# ============ 06 · sulu NaCl elektrolizi, gaz hacmi · zor · şekil ============
-kartla('06','Sulu NaCl elektrolizi ve gaz hacmi','Sulu NaCl çözeltisinde katotta su indirgenip H₂ çıkar, anotta Cl⁻ yükseltgenip Cl₂ çıkar; 2 mol e⁻ ile 1 mol H₂ ve 1 mol Cl₂ oluşur; NŞA’da 1 mol gaz 22,4 L’dir.','Anotta O₂ çıktığını sanmak; elektron mol sayısını gaz mol sayısına doğrudan eşitlemek.','zor','şekilli',5,'elektroliz','Elektroliz')
+# ============ 06 · seri bağlı NaCl ve CuSO4 elektrolizi, gaz mol oranı · zor · şekil ============
+kartla('06','Seri bağlı elektroliz kapları ve gaz miktarı','Seri bağlı kaplardan aynı yük geçer; her kapta elektrot ürünü o kaptaki iyonlara ve suya göre belirlenir, ürün miktarı geçen elektron mol sayısıyla ilişkilendirilir.','Anotta Cl⁻ ya da su ayrımını yapmamak; elektron mol sayısını gaz mol sayısına doğrudan eşitlemek.','zor','şekilli',5,'elektroliz','Elektroliz')
 i6,t6=D('1.93'),5000; Q6=i6*t6; ne6=Q6/96500; assert Q6==9650 and ne6==D('0.1')
-nH2=ne6/2; nCl2=ne6/2; V6=(nH2+nCl2)*D('22.4'); assert V6==D('2.24')
-v_O2=(nH2+ne6/4)*D('22.4'); assert v_O2==D('1.68')
-v_tek=nH2*D('22.4'); assert v_tek==D('1.12')
-v_h1=(ne6+nCl2)*D('22.4'); assert v_h1==D('3.36')
-v_yalnizO2=(ne6/4)*D('22.4'); assert v_yalnizO2==D('0.56')
-g=beaker(0,4.2,2.6,2.0)+elek(1.0,0.5,3.2)+elek(3.2,0.5,3.2)
-g+='\\draw[thick] (1.0,3.2) -- (1.0,4.3) -- (1.75,4.3);\\draw[thick] (3.2,3.2) -- (3.2,4.3) -- (2.45,4.3);'+bat(2.1,4.3,1.75,2.45)
-for bx,by in [(0.75,1.0),(0.95,1.45),(0.8,1.9),(3.45,1.1),(3.35,1.55),(3.5,1.95)]:
+n1=ne6/2+ne6/2; n2=ne6/4; assert (n1,n2)==(D('0.1'),D('0.025')) and n1/n2==4
+r_cl=(ne6/2)/n2; assert r_cl==2
+r_o2=(ne6/2+ne6/4)/n2; assert r_o2==3
+r_8=n1/(ne6/8); assert r_8==8
+r_1=n1/ne6; assert r_1==1
+g=beaker(0,3.6,2.6,2.0)+elek(0.9,0.5,3.2)+elek(2.7,0.5,3.2)+beaker(4.6,3.6,2.6,2.0)+elek(5.5,0.5,3.2)+elek(7.3,0.5,3.2)
+g+='\\draw[thick] (0.9,3.2) -- (0.9,4.4) -- (3.8,4.4);\\draw[thick] (4.4,4.4) -- (7.3,4.4) -- (7.3,3.2);'+bat(4.1,4.4,3.8,4.4)
+g+='\\draw[thick] (2.7,3.2) -- (2.7,3.75) -- (5.5,3.75) -- (5.5,3.2);'
+for bx,by in [(0.65,1.0),(0.8,1.5),(0.7,1.9),(2.95,1.1),(2.85,1.6),(3.0,1.95),(7.55,1.2),(7.45,1.7)]:
     g+='\\draw[thin] (%g,%g) circle (0.08);'%(bx,by)
-g+='\\node[below] at (2.1,-0.05) {\\ce{NaCl}(suda), Pt elektrot};'
-g+='\\node[align=left,right] at (4.5,2.6) {$i=1{,}93$ A\\\\$t=5000$ s};'
+g+='\\node[below,align=center] at (1.8,-0.05) {I. kap\\\\\\ce{NaCl}(suda)};\\node[below,align=center] at (6.4,-0.05) {II. kap\\\\\\ce{CuSO4}(suda)};'
+g+='\\node[align=left,right] at (8.5,2.0) {Pt elektrot\\\\$i=1{,}93$ A\\\\$t=5000$ s};'
 SK=tk(g)
-q('0006',tipId='elk2-elektroliz',tip='Elektroliz',z='zor',alt='Elektroliz',kaz='Sulu NaCl çözeltisi elektrolizinde elektrotlardaki ürünleri belirler ve akım–süreden toplam gaz hacmini hesaplar.',kalip='şekilli',
- kart='K-AKELEK2-06 (sulu NaCl, gaz hacmi) · Pt elektrot, sabit akım',sekil=SK,
- metin='Platin elektrotlar kullanılarak sulu NaCl çözeltisi, şekilde verilen akım ve süre koşullarında elektroliz edilmektedir. Elektrotlarda yalnız gaz çıkışı gözlenmekte, oluşan gazların tamamı toplanmakta ve gazların suda çözünmediği kabul edilmektedir.\n(1 mol elektronun yükü = 96500 C; normal şartlarda 1 mol gaz = 22,4 L)\nBuna göre elektroliz sonunda toplanan gazların toplam hacmi normal şartlarda kaç litredir?',
- dogru=V6,yan=[(v_O2,'Anotta Cl⁻ yerine suyun yükseltgendiğini düşünmüş; 0,05 mol H₂ ile 0,025 mol O₂ toplamı olan 0,075 mol gazı 22,4 ile çarparak 1,68 L bulmuştur.','bilgi'),(v_tek,'Yalnız bir elektrottaki gazı (0,05 mol) saymış; 0,05 × 22,4 = 1,12 L bulmuştur.','dikkat'),(v_h1,'Katotta 1 mol e⁻ için 1 mol H₂ çıktığını sanmış; 0,1 mol H₂ ile 0,05 mol Cl₂ toplamı 0,15 mol gazı 22,4 ile çarparak 3,36 L bulmuştur.','bilgi'),(v_yalnizO2,'Yalnız anotta O₂ çıktığını sanıp katotta gaz oluşmadığını düşünmüş; 0,025 mol gazı 22,4 ile çarparak 0,56 L bulmuştur.','bilgi')],
- istenen='Toplanan gazların toplam hacmi (L, NŞA).',ip=['Sulu çözeltide her elektrotta hangi taneciğin tepkime verdiğini belirle, sonra geçen yükten başla.'],
- bilgi=[B('Sulu çözelti elektrolizi','sulu NaCl çözeltisinde Na⁺ yerine su katotta indirgenir (2H₂O + 2e⁻ → H₂ + 2OH⁻), anotta ise Cl⁻ yükseltgenir (2Cl⁻ → Cl₂ + 2e⁻). Örnek: 0,2 mol elektron geçtiğinde 0,1 mol H₂ ve 0,1 mol Cl₂ oluşur')],
- ad=[A('Elektrot tepkimeleri','Katotta su indirgenir, anotta Cl⁻ yükseltgenir.','Katot: 2H₂O + 2e⁻ → H₂ + 2OH⁻ · Anot: 2Cl⁻ → Cl₂ + 2e⁻'),A('Geçen yükü bul','Q = i × t.','Q = 1,93 × 5000 = 9650 C'),A('Elektron mol sayısı','Yükü 96500’e böl.','9650 ÷ 96500 = 0,1 mol e⁻'),A('Gaz mol sayıları','Her gazın 1 molü için 2 mol elektron gerekir.','H₂ = 0,05 mol · Cl₂ = 0,05 mol'),A('Toplam hacim','Toplam mol sayısı 22,4 ile çarpılır.','0,1 × 22,4 = 2,24 L')],
- puf='Sulu NaCl elektrolizinde 2 mol e⁻ başına 1 mol H₂ ve 1 mol Cl₂ çıkar.')
+q('0006',tipId='elk2-elektroliz',tip='Elektroliz',z='zor',alt='Elektroliz',kaz='Seri bağlı sulu NaCl ve CuSO₄ elektrolizinde elektrot ürünlerini belirleyip toplanan gaz mol sayılarını karşılaştırır.',kalip='şekilli',
+ kart='K-AKELEK2-06 (seri bağlı kaplar, gaz oranı) · Pt elektrot, sabit akım',sekil=SK,
+ metin='Platin elektrotlar kullanılarak sulu NaCl ve sulu CuSO₄ çözeltileri, şekilde verilen seri bağlı düzenekte akım ve süre koşullarında elektroliz edilmektedir. Elektrotlarda oluşan gazların tamamı toplanmakta ve gazların suda çözünmediği kabul edilmektedir.\n(1 mol elektronun yükü = 96500 C)\nBuna göre I. kapta toplanan gazların toplam mol sayısının, II. kapta toplanan gazın mol sayısına oranı kaçtır?',
+ dogru=D(4),yan=[(r_cl,'I. kapta yalnız anottaki Cl₂’yi saymış; 0,05 ÷ 0,025 = 2 bulmuştur, katottaki H₂’yi unutmuştur.','dikkat'),(r_o2,'I. kapta anotta Cl₂ yerine O₂ çıktığını düşünmüş; (0,05 + 0,025) ÷ 0,025 = 3 bulmuştur.','bilgi'),(r_8,'II. kapta 1 mol O₂ için 8 mol elektron gerektiğini varsaymış; 0,1 ÷ 0,0125 = 8 bulmuştur.','bilgi'),(r_1,'II. kapta anotta 0,1 mol gaz çıktığını (elektron mol sayısı kadar) sanmış; 0,1 ÷ 0,1 = 1 bulmuştur.','bilgi')],
+ istenen='I. kaptaki toplam gaz mol sayısının II. kaptaki gaz mol sayısına oranı.',ip=['Seri bağlı kaplardan geçen yükü ve her kapta her elektrotta hangi taneciğin tepkime verdiğini ayrı ayrı belirle.'],
+ bilgi=[B('Elektroliz ve geçen yük','Geçen yük Q = i × t bağıntısıyla bulunur; yükü 96500’e bölmek elektronun mol sayısını verir. Sulu çözeltide katotta ve anotta tepkime veren tanecik, iyonların ve suyun yükseltgenme–indirgenme eğilimine göre belirlenir. Örnek: 2 A akım 965 s geçince 1930 C yük, yani 0,02 mol elektron geçer')],
+ ad=[A('Elektron mol sayısı','Seri bağlı kaplardan aynı yük geçer; Q = i × t ve elektron mol sayısı yükten bulunur.','1,93 × 5000 = 9650 C → 0,1 mol e⁻'),A('I. kapı çöz','Katotta su indirgenir (H₂), anotta Cl⁻ yükseltgenir (Cl₂); her gazın 1 molü için 2 mol e⁻ gerekir.','H₂ = 0,05 mol · Cl₂ = 0,05 mol → 0,1 mol'),A('II. kapı çöz','Katotta Cu²⁺ indirgenir (gaz yok), anotta su yükseltgenir ve O₂ çıkar; 1 mol O₂ için 4 mol e⁻ gerekir.','O₂ = 0,1 ÷ 4 = 0,025 mol'),A('Oranla','I. kaptaki toplam gaz mol sayısı II. kaptaki gaza bölünür.','0,1 ÷ 0,025 = 4')],
+ puf='Her kapta elektrotlardaki tepkimeyi ayrı yaz.')
 
 # ============ 07 · SHE hücresi, derişim bulma · orta · şekil ============
 kartla('07','Standart hidrojen elektrodu ile derişim bulma','E = E° − (0,059/n)·log Q; ölçülen E ve E° bilinirse Q’dan derişim bulunur. Hidrojen elektrodunda H₂ 1 atm ve H⁺ 1 M’dir.','n yerine 1 almak; log Q işaretini ters kullanmak; ölçülen değeri standart sanmak.','orta','şekilli',4,'nernst','Nernst eşitliği')
@@ -224,7 +223,7 @@ g+='\\node[below] at (2.1,-0.05) {\\ce{CuSO4}(suda)};'
 SK=tk(g)
 q('0009',tipId='elk2-elektroliz',tip='Elektroliz',z='orta',alt='Elektroliz',kaz='Elektrolitik arıtmada elektrotlardaki değişimleri ve safsızlıkların davranışını yorumlar.',kalip='öncüllü',
  kart='K-AKELEK2-09 (bakır arıtma) · Zn ve Ag safsızlığı',sekil=SK,
- metin='Zn ve Ag safsızlıkları içeren ham bakır levha ile saf bakır levha, şekildeki gibi CuSO₄(suda) çözeltisine daldırılarak üretece bağlanmıştır. Üretecin gerilimi Cu ve Zn’yi yükseltgemeye yeterli, Ag’yi yükseltgemeye yeterli değildir.\nZn²⁺ + 2e⁻ → Zn  E° = −0,76 V\nCu²⁺ + 2e⁻ → Cu  E° = +0,34 V\nAg⁺ + e⁻ → Ag  E° = +0,80 V\nI. Saf bakır levhanın kütlesi zamanla azalır.\nII. Çözeltide Zn²⁺ iyonlarının derişimi zamanla artar.\nIII. Ag, çözünmeden kaptan dibe çöker.\nBuna göre bu yargılardan hangileri doğrudur?',
+ metin='Zn ve Ag safsızlıkları içeren ham bakır levha ile saf bakır levha, şekildeki gibi CuSO₄(suda) çözeltisine daldırılarak üretece bağlanmıştır. Elektroliz, Cu’nun yükseltgenmeye başladığı en küçük gerilimden biraz büyük bir gerilimde yürütülmektedir.\nZn²⁺ + 2e⁻ → Zn  E° = −0,76 V\nCu²⁺ + 2e⁻ → Cu  E° = +0,34 V\nAg⁺ + e⁻ → Ag  E° = +0,80 V\nI. Saf bakır levhanın kütlesi zamanla azalır.\nII. Çözeltide Zn²⁺ iyonlarının derişimi zamanla artar.\nIII. Ag, çözünmeden kaptan dibe çöker.\nBuna göre bu yargılardan hangileri doğrudur?',
  dogru='II ve III',sira=S5b,yan=[('Yalnız I','Saf bakırı anot sanmış; saf levha üretecin (−) kutbuna bağlı katottur ve üzerinde Cu birikerek kütlesi artar.','bilgi'),('Yalnız III','II’yi yanlış saymış; Zn’nin katotta da biriktiğini düşünmüş. Cu²⁺ daha büyük E°’ya sahip olduğu için katotta Zn²⁺ indirgenmez, çözeltide kalır.','bilgi'),('I ve II','I’i doğru saymış; katot kütlesinin azalacağını düşünmüştür. Katotta Cu biriktiği için kütle artar.','bilgi'),('I ve III','I’i doğru saymış ve II’yi yanlış saymıştır; katot kütlesinin arttığını ve Zn²⁺’nın çözeltide biriktiğini görmemiştir.','bilgi')],
  istenen='Doğru olan yargılar.',ip=['Üretecin (+) kutbuna bağlı levhayı belirle; sonra ham bakırdaki her metalin E° değerini Cu ile karşılaştır.'],
  bilgi=[B('Anot çamuru','ham metalin anotta çözünmesi sırasında metalden daha az aktif olan safsızlıklar yükseltgenmez ve anot çamuru olarak dibe çöker; daha aktif safsızlıklar iyon olarak çözeltide kalır. Örnek: ham nikel anodunda altın çamur olur, demir çözeltide kalır')],
@@ -241,7 +240,7 @@ SK=tablo_svg(['Yarı hücre tepkimesi','E° (V)'],rows)
 q('0010',tipId='elk2-potansiyel',tip='Standart hücre potansiyeli',z='orta',alt='Elektrot Potansiyelleri',kaz='Standart elektrot potansiyellerinden hücre potansiyelini ve aktarılan elektron sayısını hesaplayıp katsayıyla ilişkisini yorumlar.',kalip='öncüllü',
  kart='K-AKELEK2-10 (E° ve katsayı) · Al–Fe hücresi, E° tablosu',sekil=SK,
  metin='25 °C’de standart koşullarda çalışan bir galvanik hücrede gerçekleşen tepkime aşağıda verilmiştir. Bazı yarı hücre tepkimelerinin standart indirgenme potansiyelleri tabloda verilmiştir.\n2Al(k) + 3Fe²⁺(suda) → 2Al³⁺(suda) + 3Fe(k)\nI. Standart hücre potansiyeli 1,22 V’tur.\nII. Tepkimenin tüm katsayıları 2 katına çıkarılırsa standart hücre potansiyeli 2,44 V olur.\nIII. Tepkimede toplam 6 mol elektron aktarılır.\nBuna göre bu yargılardan hangileri doğrudur?',
- dogru='I ve III',sira=S5,yan=[('Yalnız I','III’ü yanlış saymış; 2 mol Al’nin her biri 3 elektron verdiği için aktarılan elektronun 6 mol olduğunu görmemiştir.','dikkat'),('Yalnız II','Yalnız II’yi doğru saymış; E°’nin katsayıyla çarpıldığını düşünmüştür. E° bir derişim ya da miktar değil, birim yük başına potansiyeldir ve değişmez.','bilgi'),('Yalnız III','Yalnız III’ü doğru bulmuş; E° farkını doğru hesaplayamamış sanılır. Katot Fe, anot Al olduğundan E° = −0,44 − (−1,66) = 1,22 V’tur.','islem'),('I ve II','II’yi doğru saymış ve III’ü yanlış saymıştır; E°’nin katsayıyla orantılı olduğunu düşünmüş, elektron sayısını da hesaplayamamıştır.','bilgi')],
+ dogru='I ve III',sira=S5,yan=[('Yalnız I','III’ü yanlış saymış; 2 mol Al’nin her biri 3 elektron verdiği için aktarılan elektronun 6 mol olduğunu görmemiştir.','dikkat'),('Yalnız II','Yalnız II’yi doğru saymış; E°’nin katsayıyla çarpıldığını düşünmüştür. E° bir derişim ya da miktar değil, birim yük başına potansiyeldir ve değişmez.','bilgi'),('Yalnız III','Yalnız III’ü doğru bulmuş, I’i yanlış saymıştır; E° farkını −1,66 + (−0,44) = −2,10 V gibi toplayarak bulmuştur. Oysa E° = −0,44 − (−1,66) = 1,22 V’tur.','islem'),('I ve II','II’yi doğru saymış ve III’ü yanlış saymıştır; E°’nin katsayıyla orantılı olduğunu düşünmüş, elektron sayısını da hesaplayamamıştır.','bilgi')],
  istenen='Doğru olan yargılar.',ip=['Anot ve katodu E° değerlerinden belirle; katsayı değişince hangi büyüklüklerin değiştiğini ayır.'],
  bilgi=[B('E° ve katsayı','standart hücre potansiyeli E°(katot) − E°(anot) farkıdır; tepkime katsayılarla çarpılsa bile değişmez, çünkü potansiyel bir şiddet özelliğidir. Aktarılan elektron sayısı ise katsayılarla birlikte değişir. Örnek: Zn + Cu²⁺ tepkimesi 3 ile çarpılırsa E° aynı kalır, aktarılan elektron 2’den 6’ya çıkar')],
  ad=[A('Anot ve katodu bul','Al yükseltgenir, Fe²⁺ indirgenir.','Anot: Al · Katot: Fe'),A('I’i hesapla','E°(katot) − E°(anot).','−0,44 − (−1,66) = 1,22 V → I doğru'),A('II’yi değerlendir','E° katsayıdan bağımsızdır.','E° = 1,22 V kalır → II yanlış'),A('III’ü değerlendir','2 Al atomu, her biri 3 e⁻ verir.','2 × 3 = 6 mol e⁻ → III doğru')],

@@ -86,11 +86,12 @@ def tek(opts,hedef,pos):
 # ---------- bilgi kutuları (örnekler soruların maddelerini/sayılarını kullanmaz)
 HALB=B('Hâl değişimi entalpileri','erime, buharlaşma ve süblimleşme ısı alan (ΔH > 0), donma, yoğuşma ve kırağılaşma ısı veren (ΔH < 0) olaylardır. Ters olayın entalpisi aynı büyüklükte, zıt işaretlidir. Entalpi yoldan bağımsız olduğundan basamak ΔH’ları toplanır. Örnek: X(k) → X(s) için +a, X(s) → X(g) için +b ise X(k) → X(g) için +(a + b) olur')
 YNB=B('Molar yanma entalpisi','1 mol maddenin standart koşullarda oksijenle tam yanması sırasındaki entalpi değişimidir; ürünler kararlı hâlde (CO₂(g), H₂O(s)) olmalıdır. Karbon CO’ya dönüşüyorsa yanma tamamlanmamıştır. Örnek: CH₃OH(s) + 3/2O₂(g) → CO₂(g) + 2H₂O(s) tepkimesinin ΔH’ı CH₃OH’ın molar yanma entalpisidir')
-YN2B=B('Yanma ve oluşum entalpisi ilişkisi','yanma tepkimesinde ΔH = Σ n·ΔHf(ürünler) − Σ n·ΔHf(girenler) yazılır; O₂ elementtir ve ΔHf’i sıfırdır. Üç değerden ikisi biliniyorsa üçüncüsü bulunur. Örnek: A + O₂ → B tepkimesinde ΔHyanma ve ΔHf(B) biliniyorsa ΔHf(A) = ΔHf(B) − ΔHyanma olur')
+YN2B=B('Yanma ve oluşum entalpisi ilişkisi','yanma tepkimesinde ΔH = Σ n·ΔHf(ürünler) − Σ n·ΔHf(girenler) yazılır; O₂ elementtir ve ΔHf’i sıfırdır. Üç değerden ikisi biliniyorsa üçüncüsü bulunur. Örnek: bir yanma tepkimesinde ürünlerin oluşum entalpileri toplamı −900 kJ ve ΔH = −600 kJ ise girenlerin oluşum entalpileri toplamı −300 kJ’dir')
+YN3B=B('Yanma entalpilerinden tepkime entalpisi','tepkimedeki maddelerin molar yanma entalpileri biliniyorsa tepkime ΔH’ı, katsayılar hesaba katılarak girenlerin yanma entalpileri toplamından ürünlerin yanma entalpileri toplamı çıkarılarak bulunur. Yanmayan maddenin (CO₂, H₂O gibi) yanma entalpisi sıfırdır. Örnek: 2P → Q tepkimesinde P için −100, Q için −150 kJ/mol ise ΔH = 2·(−100) − (−150) = −50 kJ olur')
 HESB=B('Entalpi çevrimi','iki yoldan aynı ürüne gidilirse ΔH’lar eşittir; çevrimdeki bilinmeyen basamak diğerlerinin farkından bulunur. Tepkime ΔH’ı mol sayısına orantılıdır: ΔH’ın verildiği tepkimedeki madde miktarı kadar ısı alışverişi olur. Örnek: 2A → B için ΔH = +30 kJ ise 3 mol A için +45 kJ’dir')
 KALB=B('Kalorimetre ve ısı','ısı yalıtımlı kapta q = m·c·ΔT ya da q = C·ΔT (C: ısı kapasitesi) bağıntısı kullanılır. Açığa çıkan ısı, ΔH ile tepkimeye giren sınırlayıcı maddenin mol sayısının çarpımına eşittir. Örnek: ΔH = −50 kJ/mol ve 0,2 mol madde harcanıyorsa 10 kJ ısı açığa çıkar')
 KAL2B=B('Birden çok olayda ısı','kapta birden çok olay oluyorsa her olayın ısısı kendi mol sayısıyla ayrı hesaplanır ve toplanır; hangi maddenin tükendiğine bakılır. Örnek: ΔH₁ = −10 kJ/mol olan olayda 2 mol, ΔH₂ = −20 kJ/mol olan olayda 1 mol madde girerse toplam ısı 40 kJ’dir')
-PEB=B('Çok basamaklı tepkime','her tepe bir basamağın aktivasyon enerjisini belirler: Ea = tepe − o basamağın başlangıç düzeyi. En büyük Ea’lı basamak en yavaş basamaktır ve hızı belirler. ΔH = ürün − giren düzeyidir. Örnek: ara ürün 30, ikinci tepe 80 ise ikinci basamağın Ea’sı 50 kJ’dir')
+PEB=B('Çok basamaklı tepkime','her tepe bir basamağın aktivasyon enerjisini belirler: Ea = tepe − o basamağın başlangıç düzeyi. En büyük Ea’lı basamak en yavaş basamaktır ve hızı belirler. Ters yöndeki Ea = tepe − basamağın bitiş düzeyidir. ΔH = ürün − giren düzeyidir. Örnek: ara ürün 30, ikinci tepe 80 ise ikinci basamağın Ea’sı 50 kJ’dir')
 BAGB=B('Atomlaşma çevrimi','elementlerden bileşiğe oluşum, önce elementlerin gaz atomlarına ayrışması sonra atomlardan bağ oluşması olarak da düşünülebilir. ΔHf = Σ(atomlaşma ve bağ kırılma ısıları) − Σ(oluşan bağ enerjileri). Katı elementin gaz atomuna geçişi (süblimleşme) ısı alır. Örnek: ΔHf(XH₂) = süblimleşme(X) + D(H–H) − 2·D(X–H)')
 VRMB=B('Verim ve ısı','verimli tepkimelerde gerçekten oluşan ürün miktarı kadar ısı alışverişi olur. Önce girenlerden teorik ürün mol sayısı hesaplanır, verim yüzdesiyle çarpılarak gerçek ürün bulunur. Örnek: 5 mol teorik ürünün %60’ı 3 moldür')
 
@@ -100,8 +101,8 @@ card(2,'Molar yanma entalpisi tanımı','Molar yanma entalpisi, 1 mol yakıtın 
 card(3,'Yanma ve oluşum entalpisi','Yanma entalpisi ile ürünlerin oluşum entalpileri verilince yakıtın oluşum entalpisi ΔH = ΣΔHf(ürün) − ΣΔHf(giren) denkleminden çözülür.','Katsayıları unutmak; işareti ters kurmak.','orta','tablo',4,'te-yanma','yanma entalpisinden oluşum entalpisi')
 card(4,'Entalpi çevriminden ayrışma ısısı','Elementlerden iki yola ilişkin ΔH’ların farkı tepkime entalpisini verir; mol sayısıyla çarpılarak ısı bulunur.','Farkı ters almak; kütleyi mole çevirmemek.','orta','şekilli',4,'te-hess','çevrimden tepkime ısısı ve yargılar')
 card(5,'Nötrleşme kalorimetresi','Sınırlayıcı maddenin mol sayısıyla ısı bölünerek molar nötrleşme entalpisi bulunur; kütle toplam çözelti kütlesidir.','Fazla maddeyi mol hesabında kullanmak; J ile kJ’yi karıştırmak.','orta','grafik',4,'te-kalori','nötrleşme ısısının kalorimetrik hesabı')
-card(6,'Çok basamaklı tepkime diyagramı','Basamağın Ea’sı o basamağın tepesi ile başlangıç düzeyinin farkıdır; en büyük Ea’lı basamak yavaştır.','Tepe düzeyini ya da toplam yüksekliği basamağın Ea’sı sanmak.','orta','şekilli',4,'te-pe','çok basamaklı diyagram yargıları')
-card(7,'Yanma entalpilerinden tepkime entalpisi','Yanma entalpileri verilince ΔH = Σ(girenlerin yanma ısıları) − Σ(ürünlerin yanma ısıları) ile bulunur; ısı mol sayısıyla orantılıdır.','Çıkarmayı ters yapmak; yanma tepkimesi olmayan maddeyi kapsam dışı bırakmak.','orta','tablo',4,'te-yanma','yanma entalpisinden tepkime ısısı')
+card(6,'Çok basamaklı tepkime diyagramı','Basamağın Ea’sı o basamağın tepesi ile başlangıç düzeyinin farkıdır, ters yöndeki Ea tepe ile bitiş düzeyinin farkıdır; en büyük Ea’lı basamak yavaştır.','Tepe düzeyini ya da toplam yüksekliği basamağın Ea’sı sanmak.','orta','şekilli',4,'te-pe','çok basamaklı diyagram yargıları')
+card(7,'Yanma entalpilerinden tepkime entalpisi','Yanma entalpileri verilince tepkime ΔH’ı katsayılar hesaba katılarak girenlerle ürünlerin yanma ısıları karşılaştırılarak bulunur; ısı mol sayısıyla orantılıdır.','Çıkarmayı ters yapmak; yanma tepkimesi olmayan maddeyi kapsam dışı bırakmak.','orta','tablo',4,'te-yanma','yanma entalpisinden tepkime ısısı')
 card(8,'Çözünme ve nötrleşme ısıları','İki olayın ısıları kendi mol sayılarıyla ayrı hesaplanır; sınırlayıcı madde nötrleşme miktarını belirler, toplam ısı ısı kapasitesine bölünür.','Nötrleşmeyi fazla maddeyle hesaplamak; çözünmeyi atlamak.','zor','şekilli',6,'te-kalori','iki aşamalı kalorimetre hesabı')
 card(9,'Atomlaşma çevrimiyle bağ enerjisi','Oluşum entalpisi, atomlaşma ısılarının toplamı eksi oluşan bağ enerjileridir; bağ sayısı yapıdan bulunur.','Atomlaşmayı hesaba katmamak; H₂’nin bağ enerjisini 2 ile çarpmamak.','zor','şekilli',5,'te-bag','oluşum entalpisinden C–H bağ enerjisi')
 card(10,'Yanma entalpisinden oluşum ve verim','Yanma entalpilerinden oluşum entalpisi bulunur; ısı, gerçekten oluşan ürün mol sayısıyla orantılıdır.','Verimi uygulamamak ya da iki kez uygulamak; C mol sayısı ile ürün mol sayısını karıştırmak.','zor','tablo',6,'te-hess','yanma entalpilerinden oluşum ve verimli ısı')
@@ -161,7 +162,7 @@ q('0003',3,[A('Yanma tepkimesini yaz','1 mol C₄H₁₀ yanınca 4 mol CO₂ ve
   (d2,'Ürünlerin katsayılarını unutarak −394 − 286 = −680 almış ve −680 + 2877 = +2197 bulmuştur.','dikkat'),
   (d3,'H₂O’nun katsayısını 1 almış: 4 × (−394) + (−286) = −1862; −1862 + 2877 = +1015 bulmuştur.','dikkat'),
   (d4,'Yanma entalpisini ürünlerin oluşum entalpileri toplamına ekleyerek −3006 − 2877 = −5883 bulmuştur.','bilgi')],
- istenen='C₄H₁₀(g)’nin standart oluşum entalpisi (kJ/mol).',ip=['Yanma tepkimesinde ürün − giren bağıntısını yazıp bilinmeyen oluşum entalpisini çöz.'],bilgi=[YN2B],
+ istenen='C₄H₁₀(g)’nin standart oluşum entalpisi (kJ/mol).',ip=['Tabloda hangi üç değerin verildiğini, hangisinin istendiğini belirle.'],bilgi=[YN2B],
  puf='Yanma ΔH’ı ile ürünlerin oluşum entalpileri toplamı arasındaki farkı bilinmeyene bağla.')
 
 # ================ 04 · orta · CaCO₃ çevrimi, öncüllü
@@ -179,8 +180,8 @@ q('0004',4,[A('İki yolu karşılaştır','Elementlerden CaCO₃’a ΔH₁ = �
  tipId='te-hess',z='orta',alt='Entalpi Çevrimi',kaz='Entalpi şemasından ayrışma tepkimesinin entalpisini bulur ve kütleyle ilişkilendirerek yargıları değerlendirir.',kalip='şekilli',
  metin='Şekilde, Ca(k), C(grafit) ve O₂(g) elementlerinden CaCO₃(k) ile CaO(k) + CO₂(g) karışımına ulaşılması entalpi düzeylerinde gösterilmiştir. Standart koşullarda CaCO₃’ın mol kütlesi 100 g/mol’dür.\nBuna göre,\nI. CaCO₃(k) → CaO(k) + CO₂(g) tepkimesinin entalpi değişimi +178 kJ’dir.\nII. 50 g CaCO₃(k) ayrışırken ortamdan 89 kJ ısı soğurulur.\nIII. CaO(k) + CO₂(g) → CaCO₃(k) tepkimesi endotermiktir.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w4['dogru'],yan=w4['yan'],sira=w4['sira'],istenen='Doğru olan yargılar.',
- ip=['Şemadaki iki ΔH’tan ayrışma tepkimesinin ΔH’ını bul, sonra kütleyi mole çevir.'],bilgi=[HESB],
- puf='Önce ürün düzeyinden giren düzeyini çıkar; sonra mol sayısıyla ΔH’ı çarp.')
+ ip=['Şemada hangi iki yolun aynı düzeye gittiğine dikkat et.'],bilgi=[HESB],
+ puf='ΔH = ürün düzeyi − giren düzeyi; ısı, mol sayısıyla orantılıdır.')
 
 # ================ 05 · orta · nötrleşme kalorimetresi
 Vh,Mh,Vn,Mn=50,Fr(1),50,Fr(6,5)
@@ -204,45 +205,46 @@ q('0005',5,[A('Çözelti kütlesini bul','Çözeltilerin yoğunluğu 1 g/mL oldu
   (y2,'Çözelti kütlesini yalnız HCl çözeltisinin 50 g’ı almış: 1470 ÷ 0,05 = 29 400 J/mol = −29,4 kJ/mol bulmuştur.','islem'),
   (y3,'Hesabı doğru yapıp ısının açığa çıktığını görmemiş; ekzotermik tepkimede ΔH negatif olduğundan işareti yanlış yazmıştır.','bilgi'),
   (y4,'2940 J ÷ 0,05 mol = 58 800 J/mol değerini kJ’ye çevirmeden yazmıştır.','islem')],
- istenen='Nötrleşme tepkimesinin entalpi değişimi (kJ/mol).',ip=['Isıyı kütle ve sıcaklık artışından bulduktan sonra tükenen maddenin mol sayısına böl.'],bilgi=[KALB],
- puf='Çözeltilerden hangisinin tükendiğini bul; ısıyı o maddenin mol sayısına bölerek kJ/mol’e çevir.')
+ istenen='Nötrleşme tepkimesinin entalpi değişimi (kJ/mol).',ip=['Karışımda hangi maddenin artakaldığını düşün.'],bilgi=[KALB],
+ puf='Molar entalpi, tepkimeye tam giren maddenin mol sayısı başınadır; birimi kJ/mol’e çevir.')
 
-# ================ 06 · orta · çok basamaklı PE diyagramı, öncüllü
-R6,T16,I6,T26,P6=40,100,70,150,20
-ea1=T16-R6; ea2=T26-I6; dH6=P6-R6; assert (ea1,ea2,dH6)==(60,80,-20) and ea2>ea1
-SK=pe_fig([(R6,'p'),(T16,'t'),(I6,'v'),(T26,'t'),(P6,'p')],[P6,R6,I6,T16,T26],{0:('A','a'),2:('B','b'),4:('C','a')})
-w6=onc([True,False,True],['girenin düzeyi 40, ürünün düzeyi 20 kJ’dir; ΔH = 20 − 40 = −20 kJ’dir',
-  'ikinci basamağın aktivasyon enerjisi (150 − 70 = 80 kJ) birinciden (100 − 40 = 60 kJ) büyüktür, yavaş basamak ikincidir',
-  'ikinci basamağın aktivasyon enerjisi 150 − 70 = 80 kJ’dir'],4)
-q('0006',6,[A('Düzeyleri oku','A: 40, birinci tepe: 100, B: 70, ikinci tepe: 150, C: 20 kJ.','40 · 100 · 70 · 150 · 20'),
-   A('Basamakların Ea’sını bul','Her basamakta Ea = tepe − o basamağın başlangıcı.','Ea₁ = 60 kJ · Ea₂ = 80 kJ'),
-   A('ΔH’ı bul','ΔH = ürün − giren.','ΔH = 20 − 40 = −20 kJ'),
-   A('Yargıları sına','ΔH negatif ve ikinci basamağın Ea’sı 80 kJ; yavaş basamak ikincidir.','I: doğru · II: yanlış · III: doğru')],
- tipId='te-pe',z='orta',alt='Çok Basamaklı Tepkime',kaz='Çok basamaklı tepkimenin potansiyel enerji diyagramından ΔH, basamak aktivasyon enerjileri ve yavaş basamak yargılarını değerlendirir.',kalip='şekilli',
- metin='Şekilde, A(g) → B(g) → C(g) şeklinde iki basamakta gerçekleşen bir tepkimenin potansiyel enerji–tepkime koordinatı diyagramı verilmiştir.\nBuna göre,\nI. Tepkimenin entalpi değişimi −20 kJ’dir.\nII. Hızı belirleyen yavaş basamak, birinci basamaktır.\nIII. İkinci basamağın aktivasyon enerjisi 80 kJ’dir.\nyargılarından hangileri doğrudur?',
+# ================ 06 · orta · üç basamaklı PE diyagramı, öncüllü
+R6,T16,I6,T26,I26,T36,P6=20,80,50,130,40,90,30
+ea1=T16-R6; ea2=T26-I6; ea3=T36-I26; dH6=P6-R6; rev3=T36-P6
+assert (ea1,ea2,ea3,dH6,rev3)==(60,80,50,10,60) and ea2>ea1 and ea2>ea3
+SK=pe_fig([(R6,'p'),(T16,'t'),(I6,'v'),(T26,'t'),(I26,'v'),(T36,'t'),(P6,'p')],[R6,P6,I26,I6,T16,T36,T26],{0:('A','a'),2:('B','b'),4:('C','b'),6:('D','a')})
+w6=onc([True,False,True],['girenin düzeyi 20, ürünün düzeyi 30 kJ’dir; ΔH = 30 − 20 = +10 kJ’dir',
+  'basamakların aktivasyon enerjileri 60, 80 ve 50 kJ’dir; en büyüğü ikinci basamaktadır, yavaş basamak üçüncü değil ikincidir',
+  'üçüncü basamağın ters yöndeki aktivasyon enerjisi tepe − bitiş düzeyi = 90 − 30 = 60 kJ’dir'],4)
+q('0006',6,[A('Düzeyleri oku','A: 20, 1. tepe: 80, B: 50, 2. tepe: 130, C: 40, 3. tepe: 90, D: 30 kJ.','20 · 80 · 50 · 130 · 40 · 90 · 30'),
+   A('Basamakların Ea’sını bul','Her basamakta Ea = tepe − o basamağın başlangıcı.','Ea₁ = 60 · Ea₂ = 80 · Ea₃ = 50 kJ'),
+   A('ΔH ve ters Ea’yı bul','ΔH = ürün − giren; ters Ea = tepe − bitiş düzeyi.','ΔH = +10 kJ · 3. basamak ters Ea = 60 kJ'),
+   A('Yargıları sına','ΔH = +10 kJ; yavaş basamak ikincidir; üçüncü basamağın ters Ea’sı 60 kJ’dir.','I: doğru · II: yanlış · III: doğru')],
+ tipId='te-pe',z='orta',alt='Çok Basamaklı Tepkime',kaz='Üç basamaklı tepkimenin potansiyel enerji diyagramından ΔH, basamak aktivasyon enerjileri ve ters yöndeki aktivasyon enerjisini değerlendirir.',kalip='şekilli',
+ metin='Şekilde, A(g) → B(g) → C(g) → D(g) şeklinde üç basamakta gerçekleşen bir tepkimenin potansiyel enerji–tepkime koordinatı diyagramı verilmiştir.\nBuna göre,\nI. Tepkimenin entalpi değişimi +10 kJ’dir.\nII. Hızı belirleyen yavaş basamak, üçüncü basamaktır.\nIII. Üçüncü basamağın ters yöndeki aktivasyon enerjisi 60 kJ’dir.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w6['dogru'],yan=w6['yan'],sira=w6['sira'],istenen='Doğru olan yargılar.',
- ip=['Her basamağın aktivasyon enerjisini ayrı ayrı, kendi başlangıç düzeyine göre bul.'],bilgi=[PEB],
+ ip=['Her basamağın aktivasyon enerjisini kendi başlangıç düzeyine göre ayrı ayrı değerlendir.'],bilgi=[PEB],
  puf='Basamak Ea’sı = tepe − o basamağın başlangıç düzeyidir; toplam ΔH uçların farkıdır.')
 
 # ================ 07 · orta · yanma entalpilerinden tepkime entalpisi
-yC2H4,yH2,yC2H6=-1411,-286,-1560
-dH7=(yC2H4+yH2)-yC2H6; assert dH7==-137
-n7=Fr(14,28); r7=n7*dH7; assert r7==Fr(-137,2)
-e1=dH7; e2=-r7; e3=(yC2H4+yH2+yC2H6)*n7; e4=(yC2H4-yC2H6)*n7
-assert (e3,e4)==(Fr(-3257,2),Fr(149,2)) and len({r7,e1,e2,e3,e4})==5
-SK=tablo_svg(['Madde','Molar yanma entalpisi (kJ/mol)'],[['C₂H₄(g)','−1411'],['H₂(g)','−286'],['C₂H₆(g)','−1560']])
-q('0007',7,[A('Hess ilişkisini kur','Yanma entalpileriyle ΔH = Σ(girenlerin yanma ΔH’ı) − Σ(ürünlerin yanma ΔH’ı).','ΔH = [ΔH(C₂H₄) + ΔH(H₂)] − ΔH(C₂H₆)'),
-   A('1 mol için hesapla','Değerler yerine yazılır.','(−1411 − 286) − (−1560) = −137 kJ'),
-   A('Mol sayısını bul','14 g ÷ 28 g/mol.','n(C₂H₄) = 0,5 mol'),
-   A('Isıyı bul','ΔH’ı mol sayısıyla çarp.','0,5 × (−137) = −68,5 kJ')],
+yC2H2,yH2,yC2H6=-1300,-286,-1560
+dH7=(yC2H2+2*yH2)-yC2H6; assert dH7==-312
+n7=Fr(13,26); r7=n7*dH7; assert r7==-156
+e1=dH7; e2=-r7; e3=(yC2H2+2*yH2+yC2H6)*n7; e4=(yC2H2-yC2H6)*n7
+assert (e3,e4)==(-1716,130) and len({r7,e1,e2,e3,e4})==5
+SK=tablo_svg(['Madde','Molar yanma entalpisi (kJ/mol)'],[['C₂H₂(g)','−1300'],['H₂(g)','−286'],['C₂H₆(g)','−1560']])
+q('0007',7,[A('Hess ilişkisini kur','Yanma entalpileriyle ΔH = Σ(girenlerin yanma ΔH’ı) − Σ(ürünlerin yanma ΔH’ı).','ΔH = [ΔH(C₂H₂) + 2·ΔH(H₂)] − ΔH(C₂H₆)'),
+   A('1 mol için hesapla','Değerler yerine yazılır.','(−1300 − 572) − (−1560) = −312 kJ'),
+   A('Mol sayısını bul','13 g ÷ 26 g/mol.','n(C₂H₂) = 0,5 mol'),
+   A('Isıyı bul','ΔH’ı mol sayısıyla çarp.','0,5 × (−312) = −156 kJ')],
  tipId='te-yanma',z='orta',alt='Yanma Entalpilerinden Tepkime Entalpisi',kaz='Yanma entalpilerinden hidrojenlenme tepkimesinin entalpisini bulur ve kütleyle ilişkilendirir.',kalip='tablo',
- metin='Tabloda bazı gazların standart molar yanma entalpileri verilmiştir. C₂H₄’ün mol kütlesi 28 g/mol’dür.\nBuna göre standart koşullarda C₂H₄(g) + H₂(g) → C₂H₆(g) tepkimesinde 14 g C₂H₄(g) harcandığında entalpi değişimi kaç kJ olur?',
- sekil=SK,dogru=r7,yan=[(e1,'Tepkime entalpisini (−137 kJ) bulmuş ama 14 g C₂H₄’ün 0,5 mol olduğunu hesaba katmamıştır.','dikkat'),
-  (e2,'Yanma entalpilerini ürün − giren sırasıyla çıkarmış: (−1560) − (−1697) = +137; 0,5 ile çarparak +68,5 bulmuştur.','islem'),
-  (e3,'Üç yanma entalpisini de toplayıp 0,5 ile çarpmıştır: −3257 × 0,5 = −1628,5.','bilgi'),
-  (e4,'H₂’nin yanma entalpisini hesaba katmamıştır: (−1411) − (−1560) = +149; 0,5 ile çarparak +74,5 bulmuştur.','dikkat')],
- istenen='14 g C₂H₄(g) harcanırken entalpi değişimi (kJ).',ip=['Önce 1 mol C₂H₄ için tepkime entalpisini yanma entalpilerinden bul.'],bilgi=[YN2B],
- puf='Yanma entalpilerinde giren toplamı eksi ürün toplamı alınır; sonra mol sayısıyla çarpılır.')
+ metin='Tabloda bazı gazların standart molar yanma entalpileri verilmiştir. C₂H₂’nin mol kütlesi 26 g/mol’dür.\nBuna göre standart koşullarda C₂H₂(g) + 2H₂(g) → C₂H₆(g) tepkimesinde 13 g C₂H₂(g) harcandığında entalpi değişimi kaç kJ olur?',
+ sekil=SK,dogru=r7,yan=[(e1,'Tepkime entalpisini (−312 kJ) bulmuş ama 13 g C₂H₂’nin 0,5 mol olduğunu hesaba katmamıştır.','dikkat'),
+  (e2,'Yanma entalpilerini ürün − giren sırasıyla çıkarmış: (−1560) − (−1872) = +312; 0,5 ile çarparak +156 bulmuştur.','islem'),
+  (e3,'Girenlerle ürünün yanma entalpilerini toplayıp 0,5 ile çarpmıştır: (−1300 − 572 − 1560) × 0,5 = −1716.','bilgi'),
+  (e4,'H₂’nin yanma entalpisini hesaba katmamıştır: (−1300) − (−1560) = +260; 0,5 ile çarparak +130 bulmuştur.','dikkat')],
+ istenen='13 g C₂H₂(g) harcanırken entalpi değişimi (kJ).',ip=['Tablodaki değerlerin hangi maddelere ait olduğuna ve tepkime katsayılarına dikkat et.'],bilgi=[YN3B],
+ puf='Yanma entalpileriyle çalışırken tepkimedeki katsayıları ve harcanan madde miktarını unutma.')
 
 # ================ 08 · zor · çözünme + nötrleşme kalorimetresi
 n8N=Fr(4,40); n8H=Fr(50*1,1000); assert (n8N,n8H)==(Fr(1,10),Fr(1,20))
@@ -266,13 +268,13 @@ q('0008',8,[A('Mol sayılarını bul','NaOH: 4 ÷ 40 = 0,1 mol; HCl: 0,05 L × 1
    A('Sıcaklık artışını bul','ΔT = q ÷ C.','7200 ÷ 400 = 18 °C'),
    A('Son sıcaklığı yaz','Başlangıç 20 °C.','20 + 18 = 38 °C')],
  tipId='te-kalori',z='zor',alt='Çözünme ve Nötrleşme Isıları',kaz='Çözünme ve nötrleşme entalpilerini sınırlayıcı maddeye göre birleştirerek kalorimetredeki son sıcaklığı hesaplar.',kalip='şekilli',
- metin='Şekildeki ısı yalıtımlı kalorimetre kabına, 20 °C’de 50 mL 1,0 M HCl çözeltisi üzerine 4 g NaOH katısı ekleniyor ve katının tamamı çözünürken ortamdaki H⁺ ile OH⁻ iyonları tükenene kadar tepkimeye giriyor.\nNaOH(k) → Na⁺(suda) + OH⁻(suda)    ΔH = −44 kJ/mol\nH⁺(suda) + OH⁻(suda) → H₂O(s)    ΔH = −56 kJ/mol\nKap ile içindekilerin toplam ısı kapasitesi 400 J/°C ve NaOH’ın mol kütlesi 40 g/mol olduğuna göre, karışımın en yüksek sıcaklığı kaç °C’dir?',
+ metin='Şekildeki ısı yalıtımlı kalorimetre kabında HCl çözeltisi bulunmaktadır. Bu çözeltiye şekilde belirtilen miktarda NaOH katısı ekleniyor; katının tamamı çözünüyor ve nötrleşme tam olabildiği kadar gerçekleşiyor.\nNaOH(k) → Na⁺(suda) + OH⁻(suda)    ΔH = −44 kJ/mol\nH⁺(suda) + OH⁻(suda) → H₂O(s)    ΔH = −56 kJ/mol\nKap ile içindekilerin toplam ısı kapasitesi 400 J/°C ve NaOH’ın mol kütlesi 40 g/mol olduğuna göre, karışımın en yüksek sıcaklığı kaç °C’dir?',
  sekil=SK,dogru=T8,yan=[(f8[0],'Yalnız çözünme ısısını hesaba katmış: 4400 ÷ 400 = 11 °C artış, 31 °C bulmuştur; nötrleşmeyi atlamıştır.','dikkat'),
   (f8[1],'Yalnız nötrleşme ısısını hesaba katmış: 2800 ÷ 400 = 7 °C artış, 27 °C bulmuştur; çözünmeyi atlamıştır.','dikkat'),
   (f8[2],'Nötrleşmeyi 0,1 mol OH⁻ ile hesaplamış: (4,4 + 5,6) kJ = 10 000 J, 25 °C artış ve 45 °C bulmuştur; HCl’nin yalnız 0,05 mol olduğunu görmemiştir.','bilgi'),
   (f8[3],'Çözünme ısısını hesaba katmadan nötrleşmeyi 0,1 mol için almış: 5600 ÷ 400 = 14 °C artış, 34 °C bulmuştur.','islem')],
- istenen='Karışımın ulaştığı en yüksek sıcaklık (°C).',ip=['Hangi maddenin tükendiğini bulup iki olayın ısısını kendi mol sayılarıyla ayrı hesapla.'],bilgi=[KAL2B],
- puf='Çözünme için NaOH’ın tüm molünü, nötrleşme için tükenen H⁺ molünü kullan.')
+ istenen='Karışımın ulaştığı en yüksek sıcaklık (°C).',ip=['Şekildeki verilerden iki maddenin mol sayısını bul ve karşılaştır.'],bilgi=[KAL2B],
+ puf='Her olayın ısısı, o olaya gerçekten katılan madde miktarıyla hesaplanır.')
 
 # ================ 09 · zor · atomlaşma çevrimi ve C–H bağ enerjisi
 sub,hh,hfm=717,436,-75
@@ -292,8 +294,8 @@ q('0009',9,[A('Atomlaşma ısısını bul','C(k) → C(g) için +717 kJ; 2 mol H
   (g2,'H–H bağını yalnız bir kez saymış: (717 + 436 + 75) ÷ 4 = 307 bulmuştur.','dikkat'),
   (g3,'ΔH₃’ün işaretini ters kullanmış: (1589 − 75) ÷ 4 = 378,5 bulmuştur.','islem'),
   (g4,'Karbonun atomlaşma ısısını atlamış: (872 + 75) ÷ 4 = 236,75 bulmuştur.','bilgi')],
- istenen='C–H bağ enerjisi (kJ/mol).',ip=['İki yolda aynı sonuca gitmek için basamak ΔH’larının toplamını eşitle.'],bilgi=[BAGB],
- puf='Atomlaşma ısılarını toplayıp bağ oluşumuyla birleştir; bir bağ için toplam bağ enerjisini bağ sayısına böl.')
+ istenen='C–H bağ enerjisi (kJ/mol).',ip=['Şemadaki üç ΔH’ın birbirleriyle ilişkisini düşün.'],bilgi=[BAGB],
+ puf='Bir bağın enerjisi, aynı tür bağların toplam enerjisinin bağ sayısına bölünmesiyle bulunur.')
 
 # ================ 10 · zor · yanma entalpilerinden oluşum + verim
 yC,yH,yE=-394,-286,-1411
@@ -313,8 +315,8 @@ q('0010',10,[A('Oluşum entalpisini bul','2C + 2H₂ → C₂H₄: ΔH = [2·(�
   (h2,'Bulduğu ΔH’ı (+51 kJ) 120 g grafit için de aynen yazmıştır; mol sayısını hesaba katmamıştır.','dikkat'),
   (h3,'Verimi iki kez uygulamış: 5 mol × 0,8 × 0,8 = 3,2 mol ve 3,2 × 51 = 163,2 kJ bulmuştur.','islem'),
   (h4,'Verimi hiç uygulamamış: teorik 5 mol C₂H₄ için 5 × 51 = 255 kJ bulmuştur.','bilgi')],
- istenen='Soğurulan ısı (kJ).',ip=['Önce yanma entalpilerinden tepkimenin ΔH’ını bul; sonra gerçekten oluşan ürün mol sayısını hesapla.'],bilgi=[YN2B,VRMB],
- puf='ΔH’ı 1 mol C₂H₄ için bul; ısı için verime göre gerçekten oluşan mol sayısını kullan.')
+ istenen='Soğurulan ısı (kJ).',ip=['Isının hangi madde miktarıyla orantılı olduğunu düşün.'],bilgi=[VRMB],
+ puf='Isı, teorik değil gerçekte oluşan ürün miktarıyla orantılıdır.')
 
 # ================ yaz
 for qq in P.ANA: qq['kardes']=None

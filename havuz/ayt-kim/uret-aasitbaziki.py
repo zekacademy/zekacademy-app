@@ -58,12 +58,13 @@ B_TIT=B('Titrasyon eğrisi','Eşdeğerlik hacmi titre edilen maddenin mol sayıs
 B_TAM=B('Tampon çözelti','Zayıf asit ile eşlenik bazı (ya da zayıf baz ile eşlenik asidi) birlikte bulunan çözeltidir. pH = pKa + log([A⁻]/[HA]) bağıntısı kullanılır; oran mol sayılarıyla da yazılabilir. Eklenen OH⁻ asidik bileşeni, eklenen H⁺ bazik bileşeni harcar. Örnek: [A⁻]/[HA] = 10 ise pH = pKa + 1’dir')
 B_HID=B('Tuzların hidrolizi','Zayıf asidin eşlenik bazı olan anyon suyla OH⁻ oluşturur (bazik); zayıf bazın eşlenik asidi olan katyon H⁺ oluşturur (asidik). A⁻ + H₂O ⇌ HA + OH⁻ için Kb = Kw/Ka ve [OH⁻] = √(Kb·C)’dir; BH⁺ için Ka = Kw/Kb ve [H⁺] = √(Ka·C)’dir. Örnek: Ka = 1·10⁻⁶ ise 0,01 M NaA’da Kb = 10⁻⁸’dir')
 # =============== KARTLAR
-card(1,'pH ölçeği ve seyrelme','pH ölçeğinde her birim H⁺ derişiminde 10 kat fark yaratır; seyrelmede kuvvetli asidin pH’ı hacim oranının logaritması kadar, zayıf asidinki bunun yarısı kadar artar.','pH ile pOH’u karıştırmak; zayıf asidin seyrelince kuvvetli asit gibi davrandığını sanmak.','orta','grafik',3,'ab-ph','pH ölçeği ve seyrelme grafiği')
+card(1,'pH ölçeği ve seyrelme','pH ölçeğinde her birim H⁺ derişiminde 10 kat fark yaratır; seyrelince asit çözeltilerinin pH değeri artar; artış miktarı asidin kuvvetine göre farklıdır.','pH ile pOH’u karıştırmak; zayıf asidin seyrelince kuvvetli asit gibi davrandığını sanmak.','orta','grafik',3,'ab-ph','pH ölçeği ve seyrelme grafiği')
 card(2,'Brønsted–Lowry asit ve baz','Proton veren asit, proton alan bazdır; aynı tür tepkimeye göre hem asit hem baz olabilir, su amfoterdir.','Suyun her tepkimede asit ya da her tepkimede baz olduğunu sanmak.','kolay','tablo',3,'ab-bl','Brønsted–Lowry tanımı ve amfoter türler')
-card(3,'Aynı pH’lı kuvvetli ve zayıf asit','Aynı pH’ta zayıf asidin derişimi çok büyüktür; nötrleşmede asidin başlangıç mol sayısı hesaba katılır, o anki iyon sayısı değil.','Aynı pH’lı asitlerin aynı miktarda baz harcadığını sanmak.','orta','şekilli',4,'ab-notrles','Aynı pH’lı kuvvetli–zayıf asidin nötrleştirilmesi')
+card(3,'Aynı pH’lı kuvvetli ve zayıf asit','Nötrleşme hesabında çözeltinin içeriğinden mol sayıları bulunur; kuvvetli ve zayıf asit için bu mol sayıları ayrı yollarla hesaplanır.','Aynı pH’lı asitlerin aynı miktarda baz harcadığını sanmak.','orta','şekilli',4,'ab-notrles','Aynı pH’lı kuvvetli–zayıf asidin nötrleştirilmesi')
 card(4,'Titrasyon eğrisinden sabit okuma','Eşdeğerlik hacminden derişim, başlangıç ve yarı eşdeğerlik pH’ından Ka–Kb ve tuz pH’ı bulunur.','Yarı eşdeğerlik ile eşdeğerlik noktasını karıştırmak; asit tuzunun pH’ını pKa sanmak.','orta','grafik',4,'ab-titra','Titrasyon eğrisinden Ka, Kb ve tuz pH’ı')
 card(5,'Tampon oluşumu ve hazırlama','Tampon, tepkime sonunda zayıf asit ve eşlenik bazının birlikte artması ile oluşur; mol sayıları tepkimeye göre güncellenip Henderson bağıntısı uygulanır.','Tepkimede harcanan miktarı güncellememek; oranı ters yazmak; kuvvetli asit/baz artığını tampon saymak.','orta','tablo',4,'ab-tampon','Tampon oluşumu, pH ve hazırlama')
-card(6,'Kuvvetli ve zayıf baz karşılaştırması','Aynı derişimli kuvvetli ve zayıf bazda OH⁻ derişimi ve iyonlaşma yüzdesi farklıdır; tam nötrleşme için gereken asit miktarı ise toplam mol sayısına bağlıdır.','İyonlaşma yüzdesini pH’tan doğrudan okumak; zayıf bazın daha az asit harcadığını sanmak.','orta','şekilli',3,'ab-ka','Kuvvetli–zayıf baz karşılaştırması')
+card(6,'Kuvvetli ve zayıf baz karşılaştırması','Aynı derişimli kuvvetli ve zayıf bazda OH⁻ derişimi ve iyonlaşma yüzdesi farklıdır; nötrleşme sonunda oluşan tuzun pH değeri bazın kuvvetine bağlıdır.','İyonlaşma yüzdesini pH’tan doğrudan okumak; zayıf bazın tuzunun da nötr olduğunu sanmak.','orta','şekilli',3,'ab-ka','Kuvvetli–zayıf baz karşılaştırması')
+card(7,'Tuz çözeltilerinin pH değeri','Zayıf asit ya da zayıf bazdan türeyen tuzun iyonlarından biri suyla tepkime verir; Kb = Kw/Ka ve Ka = Kw/Kb bağıntılarıyla pH hesaplanır.','Her tuzun nötr çözelti verdiğini sanmak; Kb ile Ka’yı karıştırmak.','zor','şekilli',4,'ab-ka','Tuz çözeltilerinin hidrolizi ve pH')
 # ======================================================================
 # 0001 · kolay · pH ölçeği, öncüllü  (A: Yalnız I)
 # ======================================================================
@@ -130,7 +131,7 @@ q('0003',1,[A('Grafiği oku','Seyrelme katı 1’den 100’e çıkarken X’in p
  metin='25 °C’de X ve Y monoprotik asitlerinin sulu çözeltilerinden biri kuvvetli, diğeri zayıf asit çözeltisidir. İki çözeltinin de başlangıç pH değeri 3’tür. Çözeltilerin her birine saf su eklenerek seyreltiliyor ve pH değerinin, toplam hacmin başlangıç hacmine oranı (seyrelme katı) ile değişimi grafikte gösteriliyor.\nBuna göre,\nI. X kuvvetli, Y zayıf asit çözeltisidir.\nII. Seyreltmeden önce X ve Y çözeltilerinin molar derişimleri eşittir.\nIII. Seyrelme katı 100 olduğunda iki çözeltinin pH değerleri arasındaki fark 1’dir.\nyargılarından hangileri doğrudur?',
  sekil=sk,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',
  ip=['Seyrelme katı arttıkça iki eğrinin pH değerlerinin hangi miktarlarda değiştiğini karşılaştır.'],bilgi=[B_SEY,B_PH],
- puf='Kuvvetli asitte pH değişimi log(seyrelme katı) kadar, zayıf asitte bunun yarısı kadardır.')
+ puf='Seyrelme katı 10 olunca pH’ın kaç birim değiştiğine bak.')
 # ======================================================================
 # 0004 · orta · eşit pH'lı HCl ve HA, NaOH hacim farkı  (C)
 # ======================================================================
@@ -148,8 +149,8 @@ q('0004',3,[A('HCl için NaOH','pH = 2 ise [H⁺] = 10⁻² M; n(HCl) = 0,01 · 
    (5,'Yalnız HCl çözeltisinin harcadığı NaOH hacmini (5 mL) hesaplamış ve fark almayı atlamıştır.','islem'),
    (50,'Yalnız HA çözeltisinin harcadığı NaOH hacmini (50 mL) vermiş; HCl’nin harcadığı 5 mL’yi çıkarmamıştır.','islem'),
    (55,'İki hacmi çıkarmak yerine toplamıştır (50 + 5).','islem')],
- istenen='İki nötrleşme arasındaki NaOH hacim farkı (mL).',ip=['Her asidin başlangıçtaki toplam mol sayısını ayrı ayrı bulmaya çalış.'],bilgi=[B_KA,B_NOT],
- puf='Nötrleşmede çözeltideki toplam asit miktarı belirleyicidir; pH yalnız iyonlaşmış kısmı gösterir.')
+ istenen='İki nötrleşme arasındaki NaOH hacim farkı (mL).',ip=['NaOH’nin çözeltide neyi nötrleştirdiğini düşün.'],bilgi=[B_KA,B_NOT],
+ puf='Her kap için önce asidin mol sayısını yaz.')
 # ======================================================================
 # 0005 · orta · zayıf baz titrasyon eğrisi, Kb  (C)
 # ======================================================================
@@ -200,64 +201,69 @@ OHn=Fr(1,10); OHb=Fr(1,10**4); Cb=Fr(1,10); assert OHb/Cb*100==Fr(1,10) and OHn/
 sk=fig(*kap(0,['100 mL','0,1 M \\ce{NaOH}','pH $=13$'],'I'),*kap(3.4,['100 mL','0,1 M B','pH $=10$'],'II'))
 d={'I':(False,'B çözeltisinde pH 10 olduğundan [OH⁻] = 10⁻⁴ M’dir ve iyonlaşma yüzdesi (10⁻⁴/0,1)·100 = %0,1’dir'),
    'II':(True,'[OH⁻] NaOH’de 10⁻¹ M, B’de 10⁻⁴ M olduğundan oran 1000’dir'),
-   'III':(True,'iki çözeltide de bazın toplam mol sayısı eşit olduğundan nötrleşme için aynı mol H⁺ gerekir')}
+   'III':(True,'eşdeğerlik noktasında NaOH’den NaCl oluşur (pH = 7), B’den ise hidroliz eden BH⁺ iyonu içeren tuz oluşur ve ortam asidik olur (pH < 7)')}
 r=onc(d,L2)
 q('0007',6,[A('OH⁻ derişimleri','NaOH’de pOH = 1, B’de pOH = 4’tür.','[OH⁻]: 10⁻¹ M ve 10⁻⁴ M'),
    A('İyonlaşma yüzdesi','B için (10⁻⁴/0,1)·100 hesaplanır.','%0,1 → I yanlış'),
    A('Derişim oranı','10⁻¹/10⁻⁴ oranı alınır.','1000 kat → II doğru'),
-   A('Nötrleşme','Her iki çözeltide 0,01 mol baz vardır ve aynı derişimli HCl’nin eşit hacmi gerekir.','III doğru → II ve III')],
+   A('Eşdeğerlik noktası','NaCl nötr tuzdur; zayıf baz B’nin tuzundaki BH⁺ ise suyla H⁺ oluşturur.','NaCl: pH = 7 · BCl: pH < 7 → III doğru → II ve III')],
  tipId='ab-ka',z='orta',alt='Kuvvetli ve Zayıf Baz',kaz='Aynı derişimli kuvvetli ve zayıf bazın OH⁻ derişimini, iyonlaşma yüzdesini ve nötrleşme miktarını karşılaştırır.',kalip='şekilli',
- metin='25 °C’de hazırlanan, aynı hacimli ve aynı derişimli NaOH ve zayıf monoprotik B bazı çözeltileri ile bu çözeltilerin pH değerleri şekilde verilmiştir.\nBuna göre,\nI. B bazının iyonlaşma yüzdesi %1’dir.\nII. NaOH çözeltisindeki OH⁻ derişimi, B çözeltisindekinin 1000 katıdır.\nIII. Çözeltilerin tamamen nötrleşmesi için aynı derişimli HCl çözeltisinden eşit hacim gerekir.\nyargılarından hangileri doğrudur?',
+ metin='25 °C’de hazırlanan, aynı hacimli ve aynı derişimli NaOH ve zayıf monoprotik B bazı çözeltileri ile bu çözeltilerin pH değerleri şekilde verilmiştir.\nBuna göre,\nI. B bazının iyonlaşma yüzdesi %1’dir.\nII. NaOH çözeltisindeki OH⁻ derişimi, B çözeltisindekinin 1000 katıdır.\nIII. Çözeltiler HCl çözeltisiyle tamamen nötrleştirildiğinde, oluşan çözeltilerden yalnız B’ninkinin pH değeri 7’den küçüktür.\nyargılarından hangileri doğrudur?',
  sekil=sk,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',
- ip=['Her çözeltide pH değerinden OH⁻ derişimini bul; bazın toplam miktarı ile iyonlaşan kısmını ayrı düşün.'],bilgi=[B_KA,B_NOT],
- puf='pH iyonlaşan kısmı, nötrleşme miktarı ise bazın toplam mol sayısını gösterir.')
+ ip=['Her çözeltide pH değerinden OH⁻ derişimini bul; nötrleşme sonunda hangi tuzların oluştuğunu düşün.'],bilgi=[B_KA,B_HID],
+ puf='Her çözeltide OH⁻ derişimini pH’tan bul.')
 # ======================================================================
-# 0008 · zor · NH4Cl pH → tampon pH  (E: 9,6)
+# 0008 · zor · NaA ve NH4Cl tuz çözeltileri, öncüllü  (E: I ve II)
 # ======================================================================
-C8=Fr(1,10); Ka8=Fr(1,10**5)**2/C8; assert Ka8==Fr(1,10**9) and Fr(1,10**14)/Ka8==Fr(1,10**5)
-nNH4=C8*Fr(100,1000); nOH=Fr(1,10)*Fr(80,1000); assert nNH4==Fr(1,100) and nOH==Fr(8,1000)
-nNH3=nOH; nNH4r=nNH4-nOH; assert nNH4r==Fr(2,1000) and nNH3/nNH4r==4
-L2_=0.3; pH8=9+2*L2_; pOH8=5-2*L2_; assert abs(pH8-9.6)<1e-9 and abs(pOH8-4.4)<1e-9 and abs((5+2*L2_)-5.6)<1e-9 and abs(9-2*L2_-8.4)<1e-9
-sk=fig(*kap(0,['100 mL','0,1 M \\ce{NH4Cl}','pH $=5$'],''),'\\node at (1.95,1.0) {\\Large $+$};',*kap(3.9,['80 mL','0,1 M \\ce{NaOH}'],''),
- '\\draw[-{Stealth[length=2.2mm]},thick] (5.2,1.0) -- (6.3,1.0);',*kap(7.6,['180 mL','karışım','pH $=\\,?$'],''))
-q('0008',5,[A('Ka değeri','NH₄⁺ ⇌ NH₃ + H⁺ dengesinde [H⁺] = 10⁻⁵ M ve [NH₄⁺] ≈ 0,1 M alınır.','Ka = (10⁻⁵)²/0,1 = 10⁻⁹ (pKa = 9)'),
-   A('Mol sayıları','n(NH₄⁺) = 0,1 · 0,1 ve n(OH⁻) = 0,1 · 0,08 hesaplanır.','10⁻² mol NH₄⁺, 8·10⁻³ mol OH⁻'),
-   A('Tepkime sonrası','NH₄⁺ + OH⁻ → NH₃ + H₂O tepkimesinde OH⁻ tükenir.','NH₃ = 8·10⁻³ mol, NH₄⁺ = 2·10⁻³ mol → tampon'),
-   A('pH','Henderson bağıntısında log 4 = 2 log 2 = 0,6 alınır.','pH = 9 + log(8/2) = 9,6')],
- tipId='ab-tampon',z='zor',alt='Tuz Çözeltisinden Tampon Hazırlama',kaz='Tuz çözeltisinin pH değerinden Ka’yı bulur ve kuvvetli baz ilavesiyle oluşan tamponun pH değerini hesaplar.',kalip='şekilli',
- metin='25 °C’de 100 mL 0,1 M NH₄Cl çözeltisinin pH değeri 5 olarak ölçülüyor. Bu çözeltiye 0,1 M NaOH çözeltisinden 80 mL ekleniyor ve karışımın hacminin toplam hacme eşit olduğu, tepkimenin tam gerçekleştiği kabul ediliyor. NH₄⁺ iyonunun hidroliz eden miktarı başlangıç derişimine göre ihmal edilecek ve log 2 = 0,3 alınacaktır.\nBuna göre, oluşan çözeltinin pH değeri kaçtır?',
- sekil=sk,dogru=Fr(96,10),yan=[(Fr(44,10),'Tampon çözeltideki pOH değerini (4,4) pH olarak vermiştir.','dikkat'),(Fr(56,10),'Oranı ters yazarak pOH = 5 + 0,6 = 5,6 bulmuş ve bunu pH olarak vermiştir.','islem'),
-   (Fr(84,10),'[NH₃]/[NH₄⁺] oranını ters yazarak pH = 9 − 0,6 = 8,4 bulmuştur.','islem'),(Fr(90,10),'Tamponda pH = pKa olduğunu sanarak 9 bulmuştur; oysa oran 1 değildir.','bilgi')],
- istenen='Oluşan çözeltinin pH değeri.',ip=['Tuz çözeltisinin pH değerinden eşlenik çiftin sabitini bul, sonra NaOH ekledikten sonra ortamda ne kaldığına bak.'],bilgi=[B_HID,B_TAM],
- puf='Önce hidrolizden pKa’yı bul, sonra tepkimeye göre mol sayılarını güncelleyip Henderson bağıntısını uygula.')
+KaHA=Fr(1,10**5); KbNH3=Fr(1,10**5); C8=Fr(1,10); Kw_=Fr(1,10**14)
+KbA=Kw_/KaHA; KaNH4=Kw_/KbNH3; assert KbA==Fr(1,10**9)==KaNH4
+assert math.isclose(math.sqrt(float(KbA*C8)),1e-5) and math.isclose(math.sqrt(float(KaNH4*C8)),1e-5)
+pH_NaA=14-5; pH_NH4=5; assert pH_NaA+pH_NH4==14
+assert math.isclose(math.sqrt(float(KbA*C8/100)),1e-6)   # 100 kat seyrelme: pOH 6 -> pH 8
+# eşit hacim karışımı: A- + NH4+ <-> HA + NH3, K = 1 -> pH = (pKa(HA)+pKa(NH4+))/2 = 7
+assert (5+9)/2==7
+sk=fig(*kap(0,['100 mL','0,1 M \\ce{NaA}'],'I'),*kap(3.4,['100 mL','0,1 M \\ce{NH4Cl}'],'II'))
+d={'I':(True,'NaA çözeltisinde pH = 14 − 5 = 9, NH₄Cl çözeltisinde pH = 5 olduğundan pH değerlerinin toplamı 14’tür'),
+   'II':(True,'A⁻ ile NH₄⁺ karışınca denge sabiti 1 olur (Kb(A⁻) = Ka(NH₄⁺)); [HA] = [NH₃] olacağından pH 7’dir'),
+   'III':(False,'100 kat seyrelen NaA çözeltisinde [OH⁻] = √(10⁻⁹·10⁻³) = 10⁻⁶ M, pH = 8’dir; 7 değildir')}
+r=onc(d,[('I',),('II',),('III',),('I','III'),('I','II')])
+q('0008',7,[A('Tuz sabitlerini bul','A⁻ için Kb = Kw/Ka, NH₄⁺ için Ka = Kw/Kb bağıntısı kullanılır.','Kb(A⁻) = 10⁻⁹ · Ka(NH₄⁺) = 10⁻⁹'),
+   A('pH değerlerini hesapla','NaA’da [OH⁻] = √(10⁻⁹·0,1) = 10⁻⁵ M; NH₄Cl’de [H⁺] = √(10⁻⁹·0,1) = 10⁻⁵ M.','pH = 9 ve pH = 5 → I doğru'),
+   A('Karışımı yorumla','A⁻ + NH₄⁺ ⇌ HA + NH₃ dengesinde sabit 1’dir; HA ve NH₃ eşit oluşur.','pH = 7 → II doğru'),
+   A('Seyrelmeyi hesapla','100 kat seyrelen NaA’da C = 10⁻³ M olur; [OH⁻] = √(10⁻⁹·10⁻³) = 10⁻⁶ M.','pH = 8 → III yanlış')],
+ tipId='ab-ka',z='zor',alt='Tuz Çözeltilerinin pH Değeri',kaz='Zayıf asit ve zayıf baz tuzlarının çözeltilerinin pH değerini hesaplar, karışım ve seyrelme sonucunu yorumlar.',kalip='şekilli',
+ metin='25 °C’de şekilde verilen I. ve II. kaplarda sırasıyla NaA ve NH₄Cl çözeltileri bulunmaktadır. HA zayıf asidinin Ka değeri ile NH₃ bazının Kb değeri birbirine eşit ve 1·10⁻⁵’tir. Hidroliz eden miktar başlangıç derişimine göre ihmal edilecektir.\nBuna göre,\nI. I. ve II. kaptaki çözeltilerin pH değerlerinin toplamı 14’tür.\nII. İki çözelti eşit hacimde karıştırılırsa oluşan çözeltinin pH değeri 7’dir.\nIII. I. kaptaki çözelti saf suyla 100 katına seyreltilirse pH değeri 7 olur.\nyargılarından hangileri doğrudur?',
+ sekil=sk,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',
+ ip=['Her tuzun iyonlarından hangisinin suyla tepkime verdiğini belirle; Kb ile Ka arasındaki bağıntıyı kullan.'],bilgi=[B_HID,B_SEY],
+ puf='Önce her tuzun hidroliz sabitini yaz.')
 # ======================================================================
-# 0009 · zor · tanecik modeli, tampon hazırlama  (B: 300)
+# 0009 · zor · tanecik modeli, tampon hazırlama  (D: 200)
 # ======================================================================
-tan=Fr(1,100); HAn,Aan=8*tan,2*tan; assert 5+2*0.3==5.6
-x9=Fr(6,100); assert (Aan+x9)/(HAn-x9)==4 and x9/Fr(2,10)*1000==300
-assert (Aan+Fr(3,100))/(HAn-Fr(3,100))==1 and Fr(3,100)/Fr(2,10)*1000==150
-x2=Fr(64,1000); assert x2/(HAn-x2)==4 and x2/Fr(2,10)*1000==320
+tan=Fr(1,100); HAn,Aan=8*tan,4*tan; Ka9=Fr(4,10**6); assert abs(6-0.6-5.4)<1e-9 and abs(5.4+0.3-5.7)<1e-9
+x9=Fr(4,100); assert (Aan+x9)/(HAn-x9)==2 and x9/Fr(2,10)*1000==200
+assert (Aan+Fr(2,100))/(HAn-Fr(2,100))==1 and Fr(2,100)/Fr(2,10)*1000==100
+x2=Fr(56,1000); assert (Aan+x2)/(HAn-x2)==4 and x2/Fr(2,10)*1000==280
 assert HAn/Fr(2,10)*1000==400
-x4=4*HAn-Aan; assert x4==Fr(3,10) and x4/Fr(2,10)*1000==1500
+x4=2*HAn-Aan; assert x4==Fr(12,100) and x4/Fr(2,10)*1000==600
 poz=[(-1.2,1.65),(-.4,1.65),(.4,1.65),(1.2,1.65),(-1.2,1.0),(-.4,1.0),(.4,1.0),(1.2,1.0)]
-s=['\\draw[thick] (-1.7,2.3) -- (-1.7,-.1) -- (1.7,-.1) -- (1.7,2.3);','\\draw[vurgu] (-1.68,2.05) -- (1.68,2.05);']
+s=['\\draw[thick] (-1.7,2.3) -- (-1.7,-.8) -- (1.7,-.8) -- (1.7,2.3);','\\draw[vurgu] (-1.68,2.05) -- (1.68,2.05);']
 for (x,y) in poz: s.append(f'\\draw[fill=white] ({x-.1:.2f},{y:.2f}) circle (.1); \\draw[fill=gray!35] ({x+.07:.2f},{y:.2f}) circle (.17);')
-for (x,y,kind) in [(-1.2,.35,'A'),(-.4,.35,'N'),(.4,.35,'A'),(1.2,.35,'N')]:
+for (x,y,kind) in [(-1.2,.35,'A'),(-.4,.35,'N'),(.4,.35,'A'),(1.2,.35,'N'),(-1.2,-.3,'A'),(-.4,-.3,'N'),(.4,-.3,'A'),(1.2,-.3,'N')]:
     if kind=='A': s.append(f'\\draw[fill=gray!35] ({x:.2f},{y:.2f}) circle (.2); \\node[font=\\small] at ({x:.2f},{y:.2f}) {{$-$}};')
     else: s.append(f'\\draw[fill=white] ({x:.2f},{y:.2f}) circle (.17); \\node[font=\\small] at ({x:.2f},{y:.2f}) {{$+$}};')
 s+=['\\draw[fill=white] (2.2,1.9) circle (.1); \\draw[fill=gray!35] (2.37,1.9) circle (.17); \\node[anchor=west] at (2.7,1.9) {\\ce{HA}};',
     '\\draw[fill=gray!35] (2.35,1.25) circle (.2); \\node[font=\\small] at (2.35,1.25) {$-$}; \\node[anchor=west] at (2.7,1.25) {\\ce{A-}};',
     '\\draw[fill=white] (2.35,.6) circle (.17); \\node[font=\\small] at (2.35,.6) {$+$}; \\node[anchor=west] at (2.7,.6) {\\ce{Na+}};']
 sk=fig(*s)
-q('0009',5,[A('Mol sayıları','Her tanecik 0,01 mol olduğundan şekildeki sayılar mole çevrilir.','n(HA) = 0,08 mol, n(A⁻) = 0,02 mol'),
-   A('Hedef oran','pH = pKa + log([A⁻]/[HA]) bağıntısında pKa = 5 ve log 4 = 0,6 alınır.','5,6 = 5 + log oran → oran = 4'),
-   A('NaOH mol sayısı','x mol NaOH, x mol HA’yı harcar ve x mol A⁻ oluşturur: (0,02 + x)/(0,08 − x) = 4.','x = 0,06 mol'),
-   A('Hacim','V = n/M bağıntısı kullanılır.','V = 0,06/0,2 = 0,3 L = 300 mL')],
+q('0009',5,[A('Mol sayıları','Her tanecik 0,01 mol olduğundan şekildeki sayılar mole çevrilir.','n(HA) = 0,08 mol, n(A⁻) = 0,04 mol'),
+   A('Hedef oran','pKa = 6 − log 4 = 5,4 olur; pH = pKa + log([A⁻]/[HA]) bağıntısında log 2 = 0,3 alınır.','5,7 = 5,4 + log oran → oran = 2'),
+   A('NaOH mol sayısı','x mol NaOH, x mol HA’yı harcar ve x mol A⁻ oluşturur: (0,04 + x)/(0,08 − x) = 2.','x = 0,04 mol'),
+   A('Hacim','V = n/M bağıntısı kullanılır.','V = 0,04/0,2 = 0,2 L = 200 mL')],
  tipId='ab-tampon',z='zor',alt='Tamponun pH Değerini Ayarlama',kaz='Tanecik modelinden mol sayılarını okuyarak hedef pH için eklenmesi gereken kuvvetli baz hacmini hesaplar.',kalip='şekilli',
- metin='Ka değeri 1·10⁻⁵ olan zayıf HA asidinin sulu çözeltisine bir miktar NaOH eklenmesiyle hazırlanan çözeltideki taneciklerin modeli şekilde verilmiştir (su molekülleri gösterilmemiştir). Şekildeki her tanecik 0,01 mol’ü temsil etmektedir.\nBu çözeltiye 0,2 M NaOH çözeltisinden bir miktar eklenerek pH değeri 5,6 olan bir çözelti elde edilecektir. NaOH’nin HA ile tam tepkime verdiği ve hacimlerin toplanabildiği kabul edilecektir. (log 2 = 0,3)\nBuna göre, kaç mL NaOH çözeltisi eklenmelidir?',
- sekil=sk,dogru=300,yan=[(150,'Hedef pH’ı pKa’ya eşit sanarak [A⁻] = [HA] koşulunu kurmuş ve 150 mL bulmuştur.','dikkat'),(320,'Çözeltide başlangıçtan beri bulunan 0,02 mol A⁻’yi yok sayarak 320 mL bulmuştur.','islem'),
-   (400,'Tüm HA’yı (0,08 mol) nötrleştirmek için gereken hacmi (400 mL) vermiştir.','dikkat'),(1500,'HA mol sayısını azaltmayı unutup (0,02 + x) = 4 · 0,08 yazarak 1500 mL bulmuştur.','islem')],
- istenen='Eklenmesi gereken NaOH çözeltisi hacmi (mL).',ip=['Şekildeki tanecik sayılarını mol sayısına çevir ve hedef pH’ın hangi mol oranını gerektirdiğini düşün.'],bilgi=[B_TAM,B_NOT],
+ metin='Ka değeri 4·10⁻⁶ olan zayıf HA asidinin sulu çözeltisine bir miktar NaOH eklenmesiyle hazırlanan çözeltideki taneciklerin modeli şekilde verilmiştir (su molekülleri gösterilmemiştir). Şekildeki her tanecik 0,01 mol’ü temsil etmektedir.\nBu çözeltiye 0,2 M NaOH çözeltisinden bir miktar eklenerek pH değeri 5,7 olan bir çözelti elde edilecektir. NaOH’nin HA ile tam tepkime verdiği ve hacimlerin toplanabildiği kabul edilecektir. (log 2 = 0,3)\nBuna göre, kaç mL NaOH çözeltisi eklenmelidir?',
+ sekil=sk,dogru=200,yan=[(100,'Hedef pH’ı pKa’ya eşit sanarak [A⁻] = [HA] koşulunu kurmuş ve 100 mL bulmuştur.','dikkat'),(280,'log 2 yerine 0,6 alıp oranı 4 bulmuş: (0,04 + x) = 4(0,08 − x) denkleminden 280 mL bulmuştur.','islem'),
+   (400,'Tüm HA’yı (0,08 mol) nötrleştirmek için gereken hacmi (400 mL) vermiştir.','dikkat'),(600,'HA mol sayısını azaltmayı unutup (0,04 + x) = 2 · 0,08 yazarak 600 mL bulmuştur.','islem')],
+ istenen='Eklenmesi gereken NaOH çözeltisi hacmi (mL).',ip=['Şekildeki tanecik sayılarını mol sayısına çevir; NaOH eklenince HA ve A⁻ miktarlarının nasıl değiştiğini yaz.'],bilgi=[B_TAM,B_NOT],
  puf='Eklenen NaOH, HA’dan ne kadar azaltıyorsa A⁻’yi o kadar artırır; oranı bu iki değişimle kur.')
 # ======================================================================
 # 0010 · zor · iki zayıf asit titrasyonu → NaX pH  (D: 8)

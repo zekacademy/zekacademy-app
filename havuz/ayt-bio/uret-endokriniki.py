@@ -197,7 +197,7 @@ q('0005',5,[A('Tabloyu oku','K’de yalnız boy kısadır; L’de boy kısa, zih
  puf='Her bireyi tablodaki bulgularıyla ilgili hormona bağla, sonra ifadeleri tek tek sına.')
 
 # ================ 06 · orta · grafik · melatonin · olumsuz
-card(6,'Melatonin ve ışık','Melatonin salgısı gün içinde değişir; karanlıkta artar, ışıkta baskılanır; gündüz eğrilerinin benzer olması bezin çalıştığını gösterir.','Melatoninin ışıkla birlikte arttığını sanmak; gecedeki düşük salgıyı bezin tamamen bozulmasına bağlamak.','orta','grafik',4,'en2-ritim','melatonin–saat grafiği')
+card(6,'Melatonin ve ışık','Melatonin salgısı gün içinde değişir; karanlıkta artar, ışıkta baskılanır; ışık baskısı geri dönüşlü olabilir, bir grafikten kalıcı kayıp çıkarılamaz.','Melatoninin ışıkla birlikte arttığını sanmak; gecedeki düşük salgıyı bezin tamamen bozulmasına bağlamak.','orta','grafik',4,'en2-ritim','melatonin–saat grafiği')
 KM=ck([(0,8),(3,9),(6,6),(7.5,1.5),(18,1.5),(21,5),(24,8)]); LM=ck([(0,2.2),(6,2.0),(8,1.5),(18,1.5),(21,2.0),(24,2.2)])
 def ort(pts,a,b): v=[y for x,y in pts if a<=x<=b]; return sum(v)/len(v)
 assert ort(KM,0,5)>3*ort(KM,9,17) and abs(ort(KM,9,17)-ort(LM,9,17))<.1 and ort(LM,0,5)<2.5
@@ -213,12 +213,12 @@ w6=tek(o6,False,0)
 q('0006',6,[A('K eğrisini oku','K bireyinde derişim gece saatlerinde yüksek, gündüz saatlerinde düşüktür.','K: gece ↑ · gündüz ↓'),
    A('L eğrisini oku','L bireyinde derişim gece boyunca düşük kalır; gündüz değeri K ile aynıdır.','L: gece ↓ · gündüz = K'),
    A('Doğru ifadeleri ayır','Dört ifade grafik ve melatonin bilgisiyle uyumludur.','Dört ifade doğru'),
-   A('Yanlışı seç','Gündüz değeri K ile aynı olan L’nin bezi çalışmaktadır; gecedeki düşük değer ışığın baskısıyla açıklanabilir, kalıcı kayıpla açıklanamaz.','Yanlış: kalıcı yitirme çıkarımı')],
+   A('Yanlışı seç','Işıkla baskılanma geri dönüşlü olabilir; grafikteki gece değerinden bezin kalıcı olarak bozulduğu çıkarılamaz.','Yanlış: kalıcı yitirme çıkarımı')],
  tipId='en2-ritim',z='orta',alt='Epifiz Bezi ve Melatonin',kaz='Melatonin derişiminin gün içindeki değişimini ve ışığın etkisini grafikten yorumlar.',kalip='grafik',
  metin='K ve L bireyleri gündüz çalışıp gece uyuyan sağlıklı kişilerdir. K bireyi geceyi normal karanlıkta geçirirken L bireyi geceyi, ışığı sürekli açık bir odada geçirmiştir. Bu bireylerin kanındaki melatonin derişiminin gün içindeki değişimi grafikte verilmiştir.\nBuna göre, aşağıdakilerden hangisi söylenemez?',
  sekil=SK6,dogru=w6['dogru'],yan=w6['yan'],sira=w6['sira'],istenen='Söylenemeyecek ifade.',
  ip=['İki bireyin eğrilerini gündüz ve gece saatlerinde ayrı ayrı karşılaştır.'],bilgi=[MEL],
- puf='Gündüz eğrilerinin benzerliği, bezin çalıştığı konusunda ne söyler diye düşün.')
+ puf='Her ifadenin grafikten mi yoksa grafiğin söyleyemediği bir varsayımdan mı çıktığını ayır.')
 
 # ================ 07 · orta · metin · eşey bezi · öncüllü
 card(7,'Eşey bezi çıkarılması ve geri bildirim','Eşey bezi çıkarılınca onun hormonu azalır; hipofiz üzerindeki baskı kalktığı için uyarıcı hormonlar artar.','Hipofizin de çalışmasının durduğunu sanmak.','orta','öncüllü',4,'en2-bozuk','testis çıkarılmasının hormon düzeylerine etkisi')
@@ -273,9 +273,9 @@ q('0009',9,[A('Tabloyu oku','L: ADH çok düşük, idrar çok, glikoz yok. M: AD
 # ================ 10 · zor · grafik · glukagon
 card(10,'Düşen glikoz ve glukagon geri bildirimi','Kan glikozu düşünce glukagon salgısı artar, karaciğerden glikoz salınımıyla düşüş sınırlanır; olayların sırası grafikten okunur.','Glikozu düşüren etkiyi glukagona bağlamak; değişimlerin sırasını gözden kaçırmak.','zor','grafik',5,'en2-glikoz','glikoz–glukagon grafiği')
 t1,t2,t3=1.5,3.2,7.0
-GL=ck([(0,90),(t1,90),(t2,55),(4.5,62),(t3,90),(9,90)]); GG=ck([(0,2),(2.0,2),(3.8,7),(5.8,4.8),(8.0,2),(9,2)])
+GL=ck([(0,90),(t1,90),(t2,55),(4.5,62),(t3,90),(9,90)]); GG=ck([(0,2),(3.0,2),(4.6,7),(6.2,4.8),(8.0,2),(9,2)])
 fall=min(x for x,y in GL if y<89.5); rise=min(x for x,y in GG if y>2.05)
-assert fall<rise and abs(argmin(GL)-t2)<.05 and GL[-1][1]==90 and argmax(GG)>t2
+assert rise-fall>1.2 and abs(argmin(GL)-t2)<.05 and GL[-1][1]==90 and argmax(GG)>t2
 SK10=pg(f'width=7.2cm,height=5.4cm,{AXO},xmin=0,xmax=9,ymin=0,ymax=105,xtick={{0,{t1},{t2},{t3}}},xticklabels={{0,$t_1$,$t_2$,$t_3$}},ytick={{55,90}},ylabel={{Kan glikozu (mg/100 mL)}},xlabel={{Zaman}},legend style={{font=\\small,at={{(0.5,1.04)}},anchor=south,legend columns=-1,draw=none}}',
  f'\\addplot[thick,smooth,no marks] coordinates {{{co(GL)}}};\\addlegendentry{{Kan glikozu}}\n\\addplot[thick,dashed,smooth,no marks] coordinates {{{co([(x,y*10) for x,y in GG])}}};\\addlegendentry{{Glukagon (göreli)}}')
 o10=[('t₁ anından sonra kan glikozunun azalmasında glukagon derişimindeki artış etkili olmuştur.',False,'Glukagon kan glikozunu artırır; t₁ sonrasındaki düşüş dışarıdan verilen insülinin etkisidir ve glukagon artışı bu düşüşten sonra başlamıştır.'),

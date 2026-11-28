@@ -372,7 +372,7 @@ Q('0002','kat','kolay','şekilli','Doyurma için gereken H₂','Çoklu bağ say�
   yan=[(Fr(3,10),'Her bileşiğe yalnız 1 mol H₂ yazmıştır; L ve M’nin ikişer π bağı olduğunu hesaba katmamıştır.','bilgi'),
        (Fr(2,5),'Üçlü bağı tek π bağı saymıştır; 0,1 × (1 + 2 + 1) işlemi 0,4 verir.','bilgi'),
        (Fr(3,5),'Üçlü bağı üç π bağı saymıştır; 0,1 × (1 + 2 + 3) işlemi 0,6 verir.','bilgi'),
-       (Fr(4,5),'Her bileşiğin π bağ sayısına bir de iskelet için 1 ekleyerek 0,1 × (2 + 3 + 3) işlemi 0,8 bulmuştur.','islem')])
+       (Fr(1),'Toplam π bağ sayısını (1 + 2 + 2 = 5) doğru bulmuş, ancak her bileşiğin 0,1 mol değil 0,2 mol olduğunu varsayarak 5 × 0,2 işlemini yapmıştır.','islem')])
 
 # ================= 03 · alkine HBr · orta · öncüllü · şekil =================
 P3=parse('C#CC'); X3=alkinHX(P3,'Br'); assert len(X3)==1 and ayni(X3[0],parse('CC(Br)=C'))
@@ -391,7 +391,7 @@ Q('0003','kat','orta','öncüllü','Alkine ardışık HX katılması','Alkine HB
   metin='Şekilde propinin hidrojen bromürle ardışık tepkimeleri gösterilmiştir. Her basamakta ana ürün oluşmaktadır.\nI. X bileşiğinin adı 2-bromopropendir.\nII. Y bileşiğinde iki brom atomu aynı karbona bağlıdır.\nIII. Y bileşiğinin adı 1,2-dibromopropandır.\nBuna göre bu yargılardan hangileri doğrudur?',
   sekil=SK,istenen='Doğru olan yargılar.',ip=['Her basamakta çoklu bağın hangi karbonunun daha az hidrojen taşıdığını belirleyip bromun yerini buna göre yaz.'],
   bilgi=[B('Alkine HX katılması','Alkine HX iki basamakta katılır: önce haloalken, sonra dihaloalkan oluşur. Her basamakta halojen, hidrojeni az olan karbona bağlanır. Örnek: 1-bütin + 2HCl → 2,2-diklorobütan')],
-  puf='İki katılmada da halojen hidrojeni az olan karbona gider; Y’de halojenler yan yana değil, aynı karbondadır.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='İki katılmada da bromun hangi karbona gittiğini ayrı ayrı belirle.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= 04 · propanollerin yükseltgenmesi · orta · öncüllü · şekil =================
 K4,L4,M4=parse('CCCO'),parse('CC(O)C'),parse('CC(C)(C)O')
@@ -403,7 +403,7 @@ d=dict(I=(True,'K birincil alkoldür; önce propanale, ardından propanoik aside
 o=OC(d,sr('Yalnız I','Yalnız II','I ve II','II ve III','I, II ve III')); assert o['dogru']=='Yalnız I'
 SK=tk(satirlar([[('m','CCCO',None,'K'),('m','CC(O)C',None,'L'),('m','CC(C)(C)O',None,'M')]],bosluk=1.2))
 Q('0004','yuk','orta','öncüllü','Alkollerin sınıfına göre yükseltgenmesi','Birincil, ikincil ve üçüncül alkollerin yükseltgenme ürünlerini karşılaştırır.',
-  'Birincil alkol aldehit, sonra asit; ikincil alkol keton verir; üçüncül alkol yükseltgenmez. Aynı sayıda karbonlu aldehit ve keton fonksiyonel grup izomeridir.','Üçüncül alkolün de keton verdiğini sanmak; aldehit–keton ilişkisini zincir izomerliği saymak.','alkol sınıfları',
+  'Birincil alkol aldehit, sonra asit; ikincil alkol keton verir; üçüncül alkol yükseltgenmez. Ürünlerin formülünü ve fonksiyonel grubunu ayrı ayrı yazmak gerekir.','Üçüncül alkolün de keton verdiğini sanmak.','alkol sınıfları',
   [A('Alkolleri sınıflandır','–OH taşıyan karbona bağlı karbon sayısına bak.','K: birincil · L: ikincil · M: üçüncül'),
    A('Ürünleri yaz','Birincil alkol aldehite, ikincil alkol ketona yükseltgenir; üçüncül alkol tepkime vermez.','K → propanal · L → propanon · M → tepkime yok'),
    A('Yargıları sına','Propanal ile propanon aynı formüllü, farklı gruplu olduğundan fonksiyonel grup izomeridir.','Yalnız I doğru')],
@@ -424,7 +424,7 @@ Q('0005','yer','orta','şekilli','Alkanın çok klorlanması','Propanın iki hid
    A('Aynı karbonda iki klor','Uç karbonda ya da ortadaki karbonda iki klor bulunabilir.','1,1-diklor · 2,2-diklor'),
    A('Farklı karbonlarda iki klor','Komşu karbonlar ve uçtaki iki karbon seçilebilir; komşu uç–orta seçimi simetriyle tek bileşik verir.','1,2-diklor · 1,3-diklor'),
    A('Say','Dört farklı yapı vardır; 1,1 ile 3,3 ve 1,2 ile 2,3 özdeştir.','4 bileşik')],
-  metin='Şekilde propanın ışık altında yeterli miktarda Cl₂ ile tepkimesi gösterilmiştir. Tepkimede iki hidrojen atomu iki klor atomuyla yer değiştirmektedir.\nBuna göre C₃H₆Cl₂ formülüne sahip kaç farklı organik bileşik oluşabilir?',
+  metin='Şekilde propanın ışık altında yeterli miktarda Cl₂ ile tepkimesi gösterilmiştir. Tepkimede iki hidrojen atomu iki klor atomuyla yer değiştirmektedir. Stereoizomerler ayrı sayılmayacaktır.\nBuna göre C₃H₆Cl₂ formülüne sahip kaç farklı organik bileşik oluşabilir?',
   sekil=SK,istenen='Oluşabilecek farklı bileşik sayısı.',ip=['Önce iki klorun aynı karbonda olduğu yapıları, sonra farklı karbonlarda olduğu yapıları ayrı ayrı yaz ve simetrik olanları ele.'],
   bilgi=[B('Alkanlarda yer değiştirme','Alkanlar ışık altında halojenle yer değiştirme tepkimesi verir; her adımda bir hidrojen halojenle yer değiştirir ve HX oluşur. Simetri eksenine göre özdeş olan konumlar tek ürün verir. Örnek: etanın iki klorlanmasıyla 1,1- ve 1,2-dikloroetan oluşur')],
   puf='İki klorun konum çiftlerini yazarken simetri nedeniyle özdeş olanları ele.',dogru=4,
@@ -455,26 +455,26 @@ Q('0006','zin','orta','şekilli','Tepkime zinciri (etan → eten → dibromoetan
 
 # ================= 07 · Br2 grafiği · orta · grafik =================
 n0=Fr(2,5)
-gK=[(0,0.4),(0.4,0.0),(0.5,0.0)]; gL=[(0,0.4),(0.2,0.0),(0.5,0.0)]; gM=[(0,0.4),(0.5,0.4)]
-assert Fr(2,5)/1==Fr(2,5) and Fr(2,5)/2==Fr(1,5)
-SK=pg('width=7.2cm,height=5.2cm,axis lines=left,xmin=0,xmax=0.5,ymin=0,ymax=0.5,xtick={0,0.1,0.2,0.3,0.4,0.5},ytick={0,0.1,0.2,0.3,0.4,0.5},grid=major,major grid style={gray!45,thin},xlabel={Geçirilen gaz (mol)},ylabel={Br$_2$ (mol)},label style={font=\\small},tick label style={font=\\small},/pgf/number format/use comma',
+gK=[(0,0.6),(0.6,0.0)]; gL=[(0,0.6),(0.3,0.0),(0.6,0.0)]; gM=[(0,0.6),(0.6,0.6)]
+assert Fr(3,5)/1==Fr(3,5) and Fr(3,5)/2==Fr(3,10)
+SK=pg('width=7.2cm,height=5.2cm,axis lines=left,xmin=0,xmax=0.6,ymin=0,ymax=0.7,xtick={0,0.1,0.2,0.3,0.4,0.5,0.6},ytick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7},grid=major,major grid style={gray!45,thin},xlabel={Geçirilen gaz (mol)},ylabel={Br$_2$ (mol)},label style={font=\\small},tick label style={font=\\small},/pgf/number format/use comma',
  f'\\addplot[thick,color=blue!70!black] coordinates {{{co(gK)}}};\n\\addplot[thick,dashed,color=red!70!black] coordinates {{{co(gL)}}};\n\\addplot[thick,dotted,color=green!45!black] coordinates {{{co(gM)}}};\n'
- '\\node[font=\\small\\bfseries,anchor=south west] at (axis cs:0.3,0.12) {K};\n\\node[font=\\small\\bfseries,anchor=south west] at (axis cs:0.03,0.1) {L};\n\\node[font=\\small\\bfseries,anchor=south] at (axis cs:0.25,0.42) {M};')
+ '\\node[font=\\small\\bfseries,anchor=south west] at (axis cs:0.4,0.2) {K};\n\\node[font=\\small\\bfseries,anchor=south west] at (axis cs:0.03,0.1) {L};\n\\node[font=\\small\\bfseries,anchor=south] at (axis cs:0.25,0.62) {M};')
 o7=dict(dogru='K: propen · L: propin · M: propan',yan=[
- ('K: propin · L: propen · M: propan','K’nin 0,4 mol gazla, L’nin 0,2 mol gazla bitmesi K’nin 1, L’nin 2 mol Br₂ harcadığını gösterir; bu seçenekte sıra ters yazılmıştır.','dikkat'),
+ ('K: propin · L: propen · M: propan','K’nin 0,6 mol gazla, L’nin 0,3 mol gazla bitmesi K’nin 1, L’nin 2 mol Br₂ harcadığını gösterir; bu seçenekte sıra ters yazılmıştır.','dikkat'),
  ('K: propen · L: propan · M: propin','Propan Br₂ ile tepkime vermez; Br₂ miktarı değişmeyen M propandır, L ise Br₂ harcayan bir bileşik olmalıdır.','bilgi'),
- ('K: propan · L: propen · M: propin','Propan ve propen ile propin sıralaması grafikle uyuşmaz; yatay çizgi Br₂ harcamayan bileşiği, yani propanı gösterir.','bilgi'),
- ('K: 1,3-bütadien · L: propen · M: propan','1,3-bütadien iki π bağlıdır; Br₂ ile 1 : 2 harcar ve eğrisi L gibi daha dik olurdu. K’nin eğimi bir π bağına uygundur.','bilgi')])
+ ('K: propan · L: propen · M: propin','K’yi propan yapar; oysa propan Br₂ harcamaz ve eğrisi yatay olur, K’nin eğrisi ise Br₂’yi sıfıra indirmektedir. M’nin yatay çizgisi de propine uymaz.','bilgi'),
+ ('K: propin · L: propan · M: propen','M’yi propen yapar; propen Br₂ harcar, M’nin eğrisi yatay olamaz. L’yi propan yapmak da yanlıştır, çünkü L’nin eğrisi Br₂’yi sıfıra indirir.','bilgi')])
 for nm,s,p in (('propen','C=CC',1),('propin','C#CC',2),('propan','CCC',0),('butadien','C=CC=C',2)): assert sum(parse(s)[a][b]['o']-1 for a,b in parse(s).edges)==p
 Q('0007','kat','orta','grafik','Br₂ ile katılma grafiği','Br₂ harcanma grafiğinden bileşiklerin π bağ sayısını çıkarır.',
   'Grafikte Br₂ ne kadar hızlı biterse bileşiğin π bağı o kadar çoktur; Br₂ miktarı değişmiyorsa bileşik doymuştur.','Eğimi bileşiğin molekül kütlesiyle ilişkilendirmek.','Br₂ harcanması',
   [A('Br₂ harcayanları ayır','Yatay çizgi Br₂ ile tepkime vermeyen doymuş bileşiği gösterir.','M doymuş'),
-   A('Eğimleri karşılaştır','K’de 0,4 mol Br₂ 0,4 mol gazla, L’de 0,2 mol gazla biter.','K: 1 mol Br₂/mol · L: 2 mol Br₂/mol'),
+   A('Eğimleri karşılaştır','K’de 0,6 mol Br₂ 0,6 mol gazla, L’de 0,3 mol gazla biter.','K: 1 mol Br₂/mol · L: 2 mol Br₂/mol'),
    A('Bileşikleri eşleştir','K bir π bağlı, L iki π bağlı, M doymuştur.','K alken · L alkin · M alkan')],
-  metin='Üç özdeş kapta 0,4 mol Br₂ içeren çözeltiye K, L ve M gazları ayrı ayrı geçiriliyor. Br₂ mol sayısının geçirilen gaz miktarına göre değişimi grafikte verilmiştir. Gazlar propan, propen ve propin bileşiklerinden birer tanesidir.\nBuna göre K, L ve M gazları aşağıdakilerden hangisinde doğru verilmiştir?',
+  metin='Üç özdeş kapta 0,6 mol Br₂ içeren çözeltiye K, L ve M gazları ayrı ayrı geçiriliyor. Br₂ mol sayısının geçirilen gaz miktarına göre değişimi grafikte verilmiştir. Gazlar propan, propen ve propin bileşiklerinden birer tanesidir.\nBuna göre K, L ve M gazları aşağıdakilerden hangisinde doğru verilmiştir?',
   sekil=SK,istenen='K, L ve M’nin doğru eşleşmesi.',ip=['Eğrilerin Br₂ mol sayısını sıfıra indirdiği gaz miktarını bir π bağının harcadığı Br₂ ile ilişkilendir.'],
   bilgi=[B('Br₂ ile katılma','Br₂ çözeltisi doymamış hidrokarbonlara katılır ve rengi açılır; çift bağ başına 1, üçlü bağ başına 2 mol Br₂ harcanır. Alkanlar karanlıkta Br₂ ile tepkime vermez. Örnek: 1 mol 2-bütin 2 mol Br₂ harcar')],
-  puf='Br₂ ne kadar çabuk bitiyorsa molekülde o kadar çok π bağı vardır.',dogru=o7['dogru'],yan=o7['yan'],sira=['K: propin · L: propen · M: propan','K: propen · L: propan · M: propin','K: propan · L: propen · M: propin','K: 1,3-bütadien · L: propen · M: propan','K: propen · L: propin · M: propan'])
+  puf='Yatay çizgi tepkime olmadığını gösterir.',dogru=o7['dogru'],yan=o7['yan'],sira=['K: propin · L: propen · M: propan','K: propen · L: propan · M: propin','K: propan · L: propen · M: propin','K: propin · L: propan · M: propen','K: propen · L: propin · M: propan'])
 
 # ================= 08 · karışım: H2 + Br2 + toplam · zor · tablo =================
 a_,b_,c_=Fr(1,10),Fr(3,10),Fr(1,5)
@@ -493,9 +493,9 @@ Q('0008','hes','zor','tablo','Üçlü gaz karışımı bileşimi','Doyurma ve Br
    A('Çöz','b = 0,5 − 2a değerini kütle denkleminde yazınca a ve b bulunur.','a = 0,1 mol · b = 0,3 mol'),
    A('Etanı bul','Toplamdan doymamışlar çıkarılır ve mol kütlesiyle çarpılır.','(0,6 − 0,4) × 30 = 6 g')],
   metin='Etin (C₂H₂), eten (C₂H₄) ve etan (C₂H₆) gazlarından oluşan bir karışımla yapılan deneylerin verileri tabloda verilmiştir (H: 1, C: 12 g/mol).\nBuna göre karışımdaki etanın kütlesi kaç gramdır?',
-  sekil=SK,istenen='Karışımdaki etanın kütlesi (g).',ip=['Etin ve eten için mol sayılarını bilinmeyen alıp H₂ harcanması ve kütle artışından iki denklem yaz.'],
+  sekil=SK,istenen='Karışımdaki etanın kütlesi (g).',ip=['Her deneyin hangi bileşenler hakkında bilgi verdiğini yaz.'],
   bilgi=[B('Karışım hesabı','Karışımdaki bileşenlerin mollerini bilinmeyen alıp her deneyden bir denklem yazılır. H₂ ya da Br₂ yalnız doymamış bileşenlere katılır; Br₂ çözeltisinin kütle artışı katılan gazın kütlesine eşittir. Örnek: 0,2 mol C₃H₆ geçirilince kütle 8,4 g artar')],
-  puf='Üç bilinmeyen için üç veri: toplam mol, H₂ molü ve kütle artışı.',dogru=cc*30,
+  puf='H₂ ve Br₂ yalnız doymamış bileşenlerle tepkime verir.',dogru=cc*30,
   yan=[(Fr(9),'Etanı toplam moldan yalnız eteni çıkararak bulmuştur (0,6 − 0,3 = 0,3 mol); etin molünü unutmuştur.','dikkat'),
        (Fr(15),'Etanı toplam moldan yalnız etini çıkararak bulmuştur (0,6 − 0,1 = 0,5 mol); eten molünü hesaba katmamıştır.','dikkat'),
        (Fr(12),'Etinin mol sayısı yerine harcadığı H₂ molünü (0,2) çıkarmıştır; (0,6 − 0,2) × 30 işlemi 12 verir.','islem'),
@@ -516,36 +516,39 @@ d=dict(I=(False,'X etil etanoattır; metil propanoat, hidrolizinde metanol ve pr
 o=OC(d,sr('Yalnız I','Yalnız III','I ve II','II ve III','I, II ve III')); assert o['dogru']=='II ve III'
 SK=tk(satirlar([[('kutu','X'),('+',),('y','H$_2$O'),('->','H$^+$','',1.8),('kutu','Y'),('+',),('kutu','Z')],[('kutu','Y'),('->','yükseltgenme','',2.6),('kutu','Z')]],bosluk=0.5))
 Q('0009','zin','zor','şekilli','Ester yapısını bulma ve yükseltgenme','Esterin hidroliz ürünlerinin yükseltgenme ilişkisinden esterin yapısını bulur ve yargıları yorumlar.',
-  'Esterin hidrolizinde asit ve alkol oluşur; alkol yükseltgenince aynı asit çıkıyorsa ikisinin karbon sayısı eşittir, ester formülündeki karbonlar iki eşit parçaya bölünür.','Alkolü yükseltgenince oluşan asidi hidrolizdeki asitten farklı sanmak.','C₄H₈O₂ esteri',
+  'Esterin hidrolizinde asit ve alkol oluşur; alkolün yükseltgenme ürünü ile asit arasındaki ilişkiden iki bileşiğin iskeleti hakkında sonuç çıkarılır.','Alkolü yükseltgenince oluşan asidi hidrolizdeki asitten farklı sanmak.','C₄H₈O₂ esteri',
   [A('Formül bilgisini kullan','X, C₄H₈O₂ formüllü bir esterdir; hidroliz ürünleri Y (alkol) ve Z (asit).','X: C₄H₈O₂'),
    A('Y ve Z’yi ilişkilendir','Y’nin yükseltgenmesiyle Z oluşuyorsa Y ve Z aynı sayıda karbona sahiptir.','Karbon sayısı: 2 + 2'),
    A('X’i yaz','İki karbonlu asit ve iki karbonlu alkolün esteri etil etanoattır.','CH₃COOC₂H₅'),
    A('Yargıları değerlendir','Y etanoldür; birincil alkol olduğundan yükseltgenme sırasında aldehit oluşur. Bütanoik asit X ile aynı formüllü ama farklı gruplu bir bileşiktir.','II ve III doğru')],
   metin='Şekilde C₄H₈O₂ formüllü X esterinin asit katalizörlüğünde suyla tepkimesi ve Y bileşiğinin yükseltgenmesi gösterilmiştir. Y alkol, Z karboksilik asittir; Y’nin yükseltgenmesiyle Z oluşmaktadır.\nI. X bileşiğinin adı metil propanoattır.\nII. Y’nin yükseltgenmesi sırasında ara ürün olarak aldehit oluşur.\nIII. X ile bütanoik asit birbirinin fonksiyonel grup izomeridir.\nBuna göre bu yargılardan hangileri doğrudur?',
-  sekil=SK,istenen='Doğru olan yargılar.',ip=['Y’nin yükseltgenme ürünü Z ise Y ile Z’nin karbon sayıları arasında nasıl bir ilişki olması gerektiğini düşün.'],
+  sekil=SK,istenen='Doğru olan yargılar.',ip=['Y’nin yükseltgenmesiyle Z’nin oluşması, ikisinin karbon iskeleti hakkında ne söyler?'],
   bilgi=[B('Esterin hidrolizi','Ester, asit katalizörlüğünde su ile tepkimeye girerek kendisini oluşturan karboksilik asit ve alkole ayrılır. Asit kısmı C=O taşıyan, alkol kısmı oksijene bağlı alkil grubu olan taraftır. Örnek: propil metanoat → metanoik asit + 1-propanol')],
-  puf='Alkol ve asit aynı karbon iskeletine sahipse ester iki eşit karbon yarısından oluşur.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+  puf='Önce hidroliz ürünlerinin ne olduğunu yaz, sonra yükseltgenmeyi ekle.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
-# ================= 10 · C4H10O izomerleri · zor · öncüllü · düz =================
-IZ=uret(4,1,0,0); assert len(IZ)==7
-alk=[g for g in IZ if sinifla(g)=={'alkol'}]; ete=[g for g in IZ if sinifla(g)=={'eter'}]; assert (len(alk),len(ete))==(4,3)
-yuk=[g for g in IZ if yukseltgen(g) is not None]; assert len(yuk)==3
-ald=[g for g in yuk if sinifla(yukseltgen(g))=={'aldehit'}]; ket=[g for g in yuk if sinifla(yukseltgen(g))=={'keton'}]; assert (len(ald),len(ket))==(2,1)
-assert len(IZ)-len(yuk)==4
-d=dict(I=(True,'Dört alkol ve üç eter olmak üzere yedi açık zincirli yapı izomeri vardır'),
-       II=(False,'Aldehit veren izomerler yalnız 1-bütanol ve 2-metil-1-propanoldür, yani iki tanedir; 2-bütanol keton verir'),
-       III=(True,'Üç eter ve üçüncül alkol (2-metil-2-propanol) yükseltgenmez; yükseltgenemeyen izomer sayısı dörttür'))
+# ================= 10 · C5H12O alkolleri · zor · öncüllü · şekil =================
+IZ=[g for g in uret(5,1,0,0) if sinifla(g)=={'alkol'}]; assert len(IZ)==8
+yuk=[g for g in IZ if yukseltgen(g) is not None]; assert len(IZ)-len(yuk)==1
+K10,L10,M10,N10=parse('CCCCCO'),parse('CCC(C)CO'),parse('CCCC(C)O'),parse('CCC(C)(C)O')
+for g in (K10,L10,M10,N10): assert any(ayni(g,x) for x in IZ)
+kk,ll,mm=yukseltgen(K10),yukseltgen(L10),yukseltgen(M10)
+assert sinifla(kk)=={'aldehit'} and sinifla(ll)=={'aldehit'} and sinifla(mm)=={'keton'} and formul(kk)==formul(ll)==formul(mm) and not ayni(kk,ll)
+assert yukseltgen(N10) is None
+d=dict(I=(True,'K ve L birincil alkoldür; ilk ürünleri pentanal ve 2-metilbütanaldir, aynı sınıfta ve aynı formüllü, iskeletleri farklıdır; zincir izomeridirler'),
+       II=(False,'M’nin ürünü 2-pentanon ketondur, K’nin ürünü pentanal aldehittir; bunlar zincir değil fonksiyonel grup izomeridir'),
+       III=(True,'Sekiz alkol izomerinden yalnız –OH taşıyan karbonu hidrojensiz olan 2-metil-2-bütanol yükseltgenmez'))
 o=OC(d,sr('Yalnız I','Yalnız II','I ve II','I ve III','II ve III')); assert o['dogru']=='I ve III'
-Q('0010','yuk','zor','öncüllü','C₄H₁₀O izomerleri ve yükseltgenme','Bir molekül formülüne ait alkol ve eter izomerlerini sayıp yükseltgenme davranışlarını karşılaştırır.',
-  'C₄H₁₀O için dört alkol ve üç eter yazılır; yalnız –OH taşıyan karbonunda hidrojen bulunan alkoller yükseltgenir (birincil: aldehit, ikincil: keton).','Eterleri ya da üçüncül alkolü yükseltgenebilir saymak; yapı izomerlerini eksik yazmak.','C₄H₁₀O izomerleri',
-  [A('İzomerleri yaz','Dört karbonlu dört alkol ve üç eter yazılır.','4 alkol + 3 eter = 7'),
-   A('Yükseltgenenleri ayır','İki birincil ve bir ikincil alkol yükseltgenir; üçüncül alkol ve eterler yükseltgenmez.','Yükseltgenen: 3 · yükseltgenmeyen: 4'),
-   A('Ürünleri say','Birincil alkoller aldehit, ikincil alkol keton verir.','Aldehit: 2 · keton: 1'),
-   A('Yargıları değerlendir','I ve III doğru, II yanlıştır.','I ve III')],
-  metin='C₄H₁₀O molekül formülüne sahip, açık zincirli (halkasız) ve yalnız tek bağ içeren bütün yapı izomerleri ile ilgili,\nI. Toplam yedi farklı yapı izomeri vardır.\nII. Yükseltgenme sonucu aldehit veren üç izomer vardır.\nIII. Yükseltgenme koşullarında tepkime vermeyen dört izomer vardır.\nyargılarından hangileri doğrudur?',
-  sekil=None,istenen='Doğru olan yargılar.',ip=['Önce alkol ve eter izomerlerini ayrı ayrı yaz, sonra her birinin –OH taşıyan karbonundaki hidrojen sayısını incele.'],
-  bilgi=[B('Yapı izomerlerini sayma','Önce fonksiyonel grup türüne, sonra karbon iskeletine göre sistematik yaz; aynı bileşiği iki kez yazmamak için bağlanma sırasını karşılaştır. Örnek: C₃H₈O için iki alkol ve bir eter yazılabilir')],
-  puf='İzomerleri grup türüne ve karbon iskeletine göre sırayla yaz; yükseltgenmeyi –OH taşıyan karbondaki hidrojen sayısı belirler.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
+SK=tk(satirlar([[('m','CCCCCO',None,'K'),('m','CCC(C)CO',None,'L')],[('m','CCCC(C)O',None,'M'),('m','CCC(C)(C)O',None,'N')]],bosluk=1.2))
+Q('0010','yuk','zor','öncüllü','C₅H₁₂O alkolleri ve yükseltgenme','Alkol izomerlerinin sınıfını belirleyip yükseltgenme ürünleri arasındaki izomeri ilişkisini yorumlar.',
+  'Birincil alkol aldehite, ikincil alkol ketona yükseltgenir; üçüncül alkol yükseltgenmez. Ürünlerin formülü, sınıfı ve iskeleti karşılaştırılarak aralarındaki izomeri türü belirlenir.','Üçüncül alkolü yükseltgenebilir saymak; fonksiyonel grup ile zincir izomerliğini karıştırmak.','C₅H₁₂O alkolleri',
+  [A('Alkolleri sınıflandır','–OH taşıyan karbondaki hidrojen sayısına bak.','K, L: birincil · M: ikincil · N: üçüncül'),
+   A('Ürünleri yaz','K ve L aldehit, M keton verir; N yükseltgenmez.','pentanal · 2-metilbütanal · 2-pentanon'),
+   A('İzomeri türünü belirle','K ve L ürünleri aynı gruplu, iskeleti farklıdır; M’nin ürünü farklı gruplu aynı formüllüdür.','I doğru · II yanlış'),
+   A('Sekiz alkolü tara','C₅H₁₂O için sekiz alkol yazılır; yalnız biri üçüncül alkoldür.','III doğru')],
+  metin='Şekilde iskelet formülleri verilen K, L, M ve N bileşikleri C₅H₁₂O formüllü alkollerdir.\nI. K ve L’nin yükseltgenmesiyle oluşan ilk ürünler birbirinin zincir izomeridir.\nII. M’nin yükseltgenme ürünü ile K’nin ilk yükseltgenme ürünü birbirinin zincir izomeridir.\nIII. C₅H₁₂O formüllü açık zincirli alkol yapı izomerlerinin yalnız biri yükseltgenme koşullarında tepkime vermez.\nBuna göre bu yargılardan hangileri doğrudur?',
+  sekil=SK,istenen='Doğru olan yargılar.',ip=['Her alkolün ilk yükseltgenme ürününü yazıp formülünü, grubunu ve iskeletini karşılaştır.'],
+  bilgi=[B('Alkollerin yükseltgenmesi','–OH taşıyan karbonda en az bir hidrojen varsa alkol yükseltgenir. Birincil alkol aldehit, ikincil alkol keton verir; üçüncül alkol yükseltgenmez. Örnek: 2-bütanol → 2-bütanon')],
+  puf='Ürünlerin formülünü, fonksiyonel grubunu ve iskeletini ayrı ayrı karşılaştır.',dogru=o['dogru'],yan=o['yan'],sira=o['sira'])
 
 # ================= yaz =================
 for x in P.ANA: x['kardes']=None

@@ -81,7 +81,7 @@ def sekil_arteriyol():
     b.append(f'\\draw[{KAP},line width=1.4pt] plot[smooth cycle] coordinates {{(-.6,.4) (-.2,.8) (.4,.6) (.6,.1) (.3,-.4) (-.2,-.7) (-.6,-.3)}};\\draw[{KAP},line width=1.1pt] (-.3,.1) to[bend left=50] (.25,.2);')
     b.append(f'\\draw[{KAP},line width=7pt] (-3.0,.9)--(-.9,.5);')
     b.append(f'\\draw[{KAP},line width=3pt] (-.8,-.45)--(-1.7,-.9)--(-1.7,-3.2)--(3.1,-3.2);')
-    b.append(f'\\draw[cyan!70!blue,line width=4pt] (1.2,0)--(2.4,0)--(2.4,-2.4);')
+    b.append(f'\\draw[black!45,line width=4pt] (1.2,0)--(2.4,0)--(2.4,-2.4);')
     b.append(f'\\draw[{KAP},line width=1.6pt] plot[smooth] coordinates {{(3.1,-3.2) (3.5,-2.8) (3.0,-2.4) (3.5,-2.0) (3.0,-1.6) (3.5,-1.2) (3.0,-.8)}};')
     b.append(lab('I',-3.4,1.6,-3.1,1.4,-2.5,.95))
     b.append(lab('II',-2.6,-2.0,-2.2,-2.0,-1.8,-2.0))
@@ -93,11 +93,11 @@ def sekil_damar():
     b=['\\node[draw,ellipse,line width=1.4pt,fill=red!15,minimum width=2.2cm,minimum height=1.1cm,font=\\normalsize\\bfseries] at (0,5.4) {Kalp};']
     b.append(f'\\draw[{KAP},line width=4pt,{OKU}] (.5,4.8)--(.5,.8);\\draw[{VEN},line width=4pt,{OKU}] (-.5,.8)--(-.5,4.8);')
     b.append('\\node[draw,rounded corners=4pt,line width=1.4pt,fill=brown!30,minimum width=2.2cm,minimum height=1.2cm,font=\\normalsize\\bfseries] at (-3.3,3.6) {Karaciğer};')
-    b.append('\\node[draw,rounded corners=4pt,line width=1.4pt,fill=orange!30,minimum width=2.2cm,minimum height=1.2cm,font=\\normalsize\\bfseries] at (3.3,1.8) {Böbrek};')
+    b.append('\\node[draw,rounded corners=4pt,line width=1.4pt,fill=orange!30,minimum width=2.2cm,minimum height=1.2cm,font=\\normalsize\\bfseries] at (-3.3,.6) {Bağırsak};')
     b.append(f'\\draw[{KAP},line width=2.6pt,{OKU}] (.5,3.9)--(-2.2,3.9);\\draw[{VEN},line width=2.6pt,{OKU}] (-2.2,3.3)--(-.5,3.3);')
-    b.append(f'\\draw[{KAP},line width=2.6pt,{OKU}] (.5,2.1)--(2.2,2.1);\\draw[{VEN},line width=2.6pt,{OKU}] (2.2,1.5)--(-.5,1.5);')
-    nm=lambda t,x,y:f'\\node[font=\\large\\bfseries] at ({x},{y}) {{{t}}};'
-    b+= [nm('K',-1.5,4.3),nm('L',-1.5,2.9),nm('M',1.4,2.5),nm('N',1.4,1.1)]
+    b.append(f'\\draw[{VEN},line width=2.6pt,{OKU}] (-3.3,1.25)--(-3.3,2.95);')
+    nm=lambda t,x,y:f'\\node[font=\\large\\bfseries,fill=white,inner sep=1.5pt] at ({x},{y}) {{{t}}};'
+    b+= [nm('M',-1.4,4.3),nm('L',-1.4,2.9),nm('K',-2.8,2.1)]
     return tk('\n'.join(b),.8)
 # Q4 kontraktil koful grafiği
 G4={'K':[20,12,6,0,0],'L':[1,1,0,0,0]}; X4=[0,50,100,150,200]
@@ -123,6 +123,9 @@ def sekil_g9():
     b=['\\begin{axis}[width=7.6cm,height=5.6cm,xmin=.6,xmax=5.4,ymin=0,ymax=110,xtick={1,2,3,4,5},xticklabels={I,II,III,IV,V},ytick={0,25,50,75,100},xlabel={Nefron üzerindeki kısım},ylabel={Tüp sıvısı hacmi (birim)},'+LEG+','+AX+']']
     for k,st,mk_ in [('K','red!75','square*'),('L','blue!70','*')]:
         b.append(f'\\addplot[{st},mark={mk_},mark size=2.3pt] coordinates {{'+coords(H9[k])+f'}};\\addlegendentry{{{k}}}')
+    for x in (1,2,3): b.append(f'\\node[font=\\small,above right,inner sep=1.5pt] at (axis cs:{x},{H9["K"][x-1]}) {{{H9["K"][x-1]}}};')
+    b.append(f'\\node[font=\\small,below left,inner sep=1.5pt,text=red!75!black] at (axis cs:4,{H9["K"][3]}) {{{H9["K"][3]}}};\\node[font=\\small,above right,inner sep=1.5pt,text=blue!70!black] at (axis cs:4,{H9["L"][3]}) {{{H9["L"][3]}}};')
+    b.append(f'\\node[font=\\small,above right,inner sep=1.5pt,text=red!75!black] at (axis cs:5,{H9["K"][4]}) {{{H9["K"][4]}}};\\node[font=\\small,above right,inner sep=1.5pt,text=blue!70!black] at (axis cs:5,{H9["L"][4]}) {{{H9["L"][4]}}};')
     b.append('\\end{axis}')
     return tk('\n'.join(b),.95)
 # ============ SORULAR ============
@@ -164,16 +167,16 @@ d3={'I':(True,'K numaralı olayda amino asitlerden amino grubu ayrılır ve zehi
     'III':(False,'Üre böbrekte sentezlenmez; karaciğerde oluşan üre kanla böbreğe taşınır ve süzülerek atılır.')}
 r=onc(d3,'C')
 qo(3,r,*T_AZOT,'orta','Azotlu atıkların oluşumu','Amino asit yıkımından üre oluşumuna ve atılımına kadar olan basamakları değerlendirir.','amino asit–amonyak–üre dönüşümü şeması','amino asitten üre ve idrara giden yol',
- 'amino asitlerden ayrılan amino grubu amonyağa dönüşür; amonyak karaciğerde üreye çevrilir; üre kanla böbreğe taşınır ve idrarla atılır','Üre sentezinin böbrekte olduğunu sanmak; amonyağın üreden az zehirli olduğunu düşünmek.',
+ 'azotlu atıklar vücutta birbirine dönüşebilir; dönüşümün ve atımın yapıldığı organlar birbirinden farklı olabilir','Bir atığın oluştuğu yer ile atıldığı yeri aynı sanmak; atıkların zehirlilik sırasını karıştırmak.',
  metin='Şekilde bir insanda amino asitlerin yıkımından başlayarak idrarın oluşmasına kadar gerçekleşen olaylar K, L ve M okları ile gösterilmiştir.\nBuna göre,\nI. K numaralı olayda amino asitlerden amino grubu ayrılır ve zehirliliği yüksek amonyak oluşur.\nII. L numaralı olayda amonyak, karaciğer hücrelerinde üreye dönüştürülür.\nIII. Üre, M numaralı olay sırasında böbrek hücrelerinde amonyaktan sentezlenir.\nifadelerinden hangileri doğrudur?',
- istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Üre oluşumunun ve üreyi atan organın ayrı organlar olduğunu hatırla.'],
- bilgi=[B('Üre oluşumu','amino asitlerin yıkımıyla ortaya çıkan amonyak karaciğerde üreye çevrilir; üre kanla böbreğe taşınarak idrarla atılır')],
+ istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Her ok için dönüşümün hangi organda yapıldığını ve ürünün ne olduğunu düşün.'],
+ bilgi=[B('Azotlu atıkların oluşumu','proteinlerin yıkımıyla azotlu atıklar oluşur · bu atıklar vücutta dönüştürülebilir ve belirli organlarla uzaklaştırılır')],
  puf='Her ok için olayın gerçekleştiği organı ve ürünün özelliğini ayrı ayrı sına.',sekil=sekil_azot())
 # ---------- 04 · kontraktil koful · orta · grafik · D ----------
 S4={'a':'K grubunda dış ortamın ozmotik derişimi arttıkça hücreye giren su miktarı artar.','b':'L grubunda atım sayısının çok az olması, hücreye su girişinin durduğunu gösterir.','c':'K grubunda dış ortamın ozmotik derişimi 100 mosm/L iken atım sayısı, 50 mosm/L iken olandan fazladır.','d':'Dış ortamın ozmotik derişimi 0 mosm/L iken L grubu hücrelerinin hacminin, K grubuna göre daha hızlı artması beklenir.','e':'K grubunda 150 mosm/L iken atımın durması, kontraktil kofulun ATP kullanmadığını gösterir.'}
 assert G4['K'][2]<G4['K'][1]
 q(4,*T_SUREC,'orta','Kontraktil koful','Tek hücrelilerde kontraktil koful işlevini ozmotik derişim ve ATP üretimiyle birlikte yorumlar.','grafik','dış ortam derişimi–atım sayısı grafiği','kontraktil koful atım sayısı grafiği',
- 'tatlı su protistlerinde hücre içi derişimi dış ortamdan yüksektir; ozmozla giren fazla suyu kontraktil koful ATP harcayarak dışarı atar, dış ortam derişimi arttıkça giren su azalır','Atım sayısının artmasını su çıkışı ile karıştırmak; ATP olmadığında hücreye su girişinin de durduğunu düşünmek.',
+ 'tatlı su protistlerinde hücre içi derişimi dış ortamdan yüksektir; ozmozla giren fazla suyu kontraktil koful dışarı atar','Grafikte ölçülen niceliği, onunla ilişkili başka bir nicelikle karıştırmak.',
  [A('K grubunu oku','Dış ortam derişimi arttıkça atım sayısı 20, 12, 6 ve 0 olarak azalır.','0: 20 · 50: 12 · 100: 6 · 150: 0'),
   A('L grubunu yorumla','ATP üretimi engellenen hücrelerde kontraktil koful atım yapamaz; su yine hücreye girmeye devam eder.','L: atım ≈ 0 ama su girişi sürer'),
   A('Hacmi karşılaştır','0 mosm/L ortamda su girişi en fazladır; L grubunda bu su dışarı atılamadığı için hücre K grubundan daha hızlı şişer.','Hacim artışı: L > K'),
@@ -183,9 +186,9 @@ q(4,*T_SUREC,'orta','Kontraktil koful','Tek hücrelilerde kontraktil koful işle
   (S4['b'],'L grubunda ATP olmadığı için kontraktil koful çalışamaz; su girişi ozmozla sürer, atımın azalması su girişinin durduğunu göstermez.','bilgi'),
   (S4['c'],'K grubunda 100 mosm/L iken atım sayısı 6, 50 mosm/L iken 12’dir; yani 100 mosm/L’deki değer daha azdır.','islem'),
   (S4['e'],'150 mosm/L’de dış ortam hücre içiyle aynı derişimdedir; net su girişi olmadığı için atım gerekmez, bu ATP kullanılmadığı anlamına gelmez.','bilgi')],
- istenen='Grafikten söylenebilecek ifade.',ip=['Kontraktil kofulun işlevini ve ATP olmadığında suyun hücreye girmeye devam edip etmeyeceğini düşün.'],
+ istenen='Grafikten söylenebilecek ifade.',ip=['Atım sayısı neyin göstergesi, hangi koşulda değişir?'],
  bilgi=[B('Kontraktil koful','tatlı su protistlerinde hücreye ozmozla giren fazla suyu ATP harcayarak dışarı atan organeldir')],
- puf='Atım sayısı su girişiyle ilişkilidir ama atımın azalması su girişinin azaldığı anlamına gelmeyebilir; ATP etkisini ayrı düşün.',sekil=sekil_g4())
+ puf='Grafikte ölçülen niceliğin tam olarak ne olduğunu ve hangi koşulda değiştiğini belirle.',sekil=sekil_g4())
 # ---------- 05 · günlük su dengesi · orta · tablo · olumsuz · E ----------
 T5={'K':(1500,700,300,1500,100,900),'L':(3000,700,300,700,100,3200)}
 for k,v in T5.items(): assert sum(v[:3])==sum(v[3:]),k
@@ -193,7 +196,7 @@ assert sum(T5['K'][:3])==2500 and sum(T5['L'][:3])==4000 and T5['K'][5]>T5['K'][
 SK5=tablo_svg(['Birey','İçilen sıvı','Besin','Metabolizma','İdrar','Dışkı','Deri-akciğer'],[[k,*T5[k]] for k in 'KL'])
 S5={'y':'L bireyinde idrar miktarının azalması, kandaki ADH düzeyinin azalmasıyla açıklanır.','a':'Her iki bireyde de günlük su kazancı, günlük su kaybına eşittir.','b':'Metabolizma sonucu oluşan su miktarı iki bireyde de aynıdır.','c':'K bireyinde deri ve akciğerlerden kaybedilen su miktarı, besinlerle alınan su miktarından fazladır.','d':'L bireyinde idrar miktarının K bireyine göre az olması, böbrekte su geri emiliminin arttığını gösterir.'}
 q(5,*T_DENGE,'orta','Su dengesi','Günlük su kazancı ve kaybını tablodan hesaplayıp ADH ile ilişkilendirir.','tablo','günlük su kazanç ve kayıp tablosu','günlük su dengesi tablosu',
- 'sağlıklı bireyde günlük su kazancı su kaybına eşittir; vücut çok su kaybedince ADH artar, böbrekte su geri emilimi artar ve idrar azalır','ADH düzeyinin su kaybında azaldığını sanmak; metabolik suyu kazanç saymamak.',
+ 'sağlıklı bireyde günlük su kazancı su kaybına eşittir; su dengesi böbrek ve hormonlarla ayarlanır','Su kazancına metabolik suyu katmamak; kayıp kalemlerinden birini unutmak.',
  [A('Kazanç ve kaybı topla','Her bireyde ilk üç sütun su kazancını, son üç sütun su kaybını gösterir.','K: 1500 + 700 + 300 = 2500 = 1500 + 100 + 900 · L: 3000 + 700 + 300 = 4000 = 700 + 100 + 3200'),
   A('Doğru ifadeleri ayır','Kazanç–kayıp eşitliği, metabolik su ve K’nin deri-akciğer kaybı tabloyla uyumludur.','Metabolizma: 300 = 300 · K: 900 > 700'),
   A('L bireyini yorumla','Terlemeyle çok su kaybeden L bireyinde plazmanın ozmotik derişimi artar; bu ADH salgısını artırır, su geri emilimi artar ve idrar azalır.','Ter ↑ → ADH ↑ → idrar ↓'),
@@ -204,12 +207,12 @@ q(5,*T_DENGE,'orta','Su dengesi','Günlük su kazancı ve kaybını tablodan hes
   (S5['c'],'K bireyinde deri ve akciğerlerden kayıp 900 mL, besinle alınan su 700 mL’dir; 900 > 700 olduğundan ifade doğrudur.','islem'),
   (S5['d'],'L bireyinin idrarı 700 mL, K bireyinin 1500 mL’dir; idrarın azalması su geri emiliminin arttığını gösterir ve ifade doğrudur.','bilgi')],
  istenen='Yanlış olan ifade.',ip=['Terleyen bireyin kan plazmasındaki değişimin ADH salgısını ve idrar miktarını nasıl etkilediğini düşün.'],
- bilgi=[B('Su dengesi','vücutta günlük su kazancı, su kaybına eşit olduğunda su dengesi korunur; su kaybı arttığında ADH salgısı artar ve idrar azalır')],
+ bilgi=[B('Su dengesi','vücutta günlük su kazancı, su kaybına eşit olduğunda su dengesi korunur · su dengesi böbrek ve hormonlarla ayarlanır')],
  puf='Önce kazanç ve kayıp toplamlarını bul, sonra hormon ve idrar ilişkisini sına.',sekil=SK5)
 # ---------- 06 · glomerulus damarları · orta · olumsuz · A ----------
 S6={'y':'II numaralı damardaki kanın plazma proteini derişimi ve ozmotik basıncı, I numaralı damardakine göre düşüktür.','a':'II numaralı damarın çapının I numaralı damardan dar olması, glomerulus kılcallarında kan basıncının yüksek kalmasına katkı sağlar.','b':'Glomerulus kılcalları, iki atardamar arasında yer alır.','c':'IV numaralı kılcallarda kan basıncı glomerulus kılcallarındakinden düşüktür; bu durum V numaralı yapıdan kana madde geçişini kolaylaştırır.','d':'III numaralı yapıya geçen sıvıda kan hücreleri ve büyük plazma proteinleri bulunmaz.'}
 q(6,*T_YAPI,'orta','Glomerulus','Glomerulus ve nefron kılcallarının damar bağlantılarını, basınç ve ozmotik basınç farklarıyla yorumlar.','şekilli','getirici ve götürücü damar, nefron kılcalları','glomerulusa gelen ve giden damarlar',
- 'glomerulus kılcalları getirici ve götürücü iki atardamar arasındadır; götürücü damar dar olduğundan basınç yüksektir; süzülmeyen büyük proteinler kanda kaldığı için götürücü damarda plazma ozmotik basıncı artar','Götürücü damarın toplardamar olduğunu sanmak; süzülmeden sonra kandaki protein derişiminin azaldığını düşünmek.',
+ 'glomerulus kılcalları getirici ve götürücü iki atardamar arasındadır; süzülme kan basıncıyla gerçekleşir; süzülmeden sonra kanın bileşimi değişir','Götürücü damarın toplardamar olduğunu sanmak; süzülmenin kanı değiştirmediğini düşünmek.',
  [A('Damarları tanı','I numaralı damar glomerulusa kan getirir, II numaralı damar glomerulustan kan çıkarır; ikisi de atardamardır.','I ve II: atardamar'),
   A('Basıncı yorumla','Götürücü damarın dar olması glomerulusta kan basıncını yüksek tutar; nefron kılcallarında basınç düşüktür.','Glomerulus: basınç yüksek · IV: basınç düşük'),
   A('Süzülmenin etkisini düşün','Sıvı ve küçük moleküller kapsüle geçer, büyük proteinler damarda kalır; bu yüzden II numaralı damarda protein derişimi ve ozmotik basınç I’den yüksektir.','II: protein derişimi ↑'),
@@ -219,20 +222,20 @@ q(6,*T_YAPI,'orta','Glomerulus','Glomerulus ve nefron kılcallarının damar ba�
   (S6['b'],'Glomerulus kılcalları getirici ve götürücü atardamar arasındadır; ifade doğrudur.','bilgi'),
   (S6['c'],'Nefron kılcallarında basınç düşüktür; tüpten geri emilen maddeler kana kolayca geçer ve ifade doğrudur.','bilgi'),
   (S6['d'],'Kan hücreleri ve büyük proteinler süzülemez; Bowman kapsülündeki sıvıda bulunmazlar ve ifade doğrudur.','bilgi')],
- istenen='Yanlış olan ifade.',ip=['Süzülme sırasında kandan hangi maddelerin ayrıldığını, hangilerinin damarda kaldığını düşün.'],
+ istenen='Yanlış olan ifade.',ip=['Her yapının hangi damar ya da kılcal olduğunu ve süzülmenin kanı nasıl değiştirdiğini düşün.'],
  bilgi=[B('Glomerulus damarları','glomerulus kılcalları getirici ve götürücü atardamar arasında yer alır; süzülme kan basıncıyla gerçekleşir')],
- puf='Damarın atardamar ya da toplardamar olduğu kandaki gaz oranına değil, kalbe göre yönüne bağlıdır; şekilde damarların bağlantısına bak.',sekil=sekil_arteriyol())
+ puf='Her ifadede söz edilen yapıyı şekilde bul ve komşu yapılarla ilişkisini karşılaştır.',sekil=sekil_arteriyol())
 # ---------- 07 · karaciğer/böbrek damarları · orta · öncüllü · C ----------
-d7={'I':(True,'L numaralı damardaki kanın üre derişimi, K numaralı damardakinden yüksektir; karaciğer amonyağı üreye çevirip kana verir.'),
-    'II':(True,'N numaralı damardaki kanın üre derişimi, M numaralı damardakinden düşüktür; böbrek üreyi kandan süzerek uzaklaştırır.'),
-    'III':(False,'N numaralı damardaki kanın üre derişimi, K numaralı damardakinden düşüktür; çünkü K ve M aynı kandır ve böbrekten geçen kanın üresi azalır.')}
+d7={'I':(True,'Sindirimle bağırsaktan emilen amino asitler karaciğere K damarıyla taşınır; bu nedenle yemekten sonra K damarındaki amino asit derişimi, karaciğere atardamarla gelen M damarındakinden yüksektir.'),
+    'II':(True,'Karaciğer amonyağı üreye çevirerek kana üre verir; L damarındaki kanın üre derişimi, karaciğere girmeden önceki K damarındakinden yüksektir.'),
+    'III':(False,'Karaciğerden çıkan L damarındaki kana karaciğerde sentezlenen üre eklenir; M damarındaki kanın üre derişimi L damarındakinden yüksek değildir.')}
 r=onc(d7,'C')
-qo(7,r,*T_AZOT,'orta','Üre ve organlar','Karaciğer ve böbreğe giden ve bu organlardan çıkan damarlardaki üre derişimini karşılaştırır.','kalp, karaciğer ve böbrek damar şeması','karaciğer ve böbrek damarları',
- 'karaciğerden çıkan kanda üre derişimi artar, böbrekten çıkan kanda azalır; aynı büyük atardamardan ayrılan dalların kanı özdeştir','Böbreğe giden ve böbrekten çıkan damarlardaki kanı tam tersi sanmak; atardamar kanında üreyi sıfır varsaymak.',
- metin='Şekilde, bir insanda kalpten çıkan atardamardan ayrılarak karaciğere ve böbreğe giden K ve M damarları ile bu organlardan kalbe dönen L ve N damarları gösterilmiştir. K ve M damarları aynı büyük atardamardan ayrılmıştır.\nBuna göre,\nI. L numaralı damardaki kanın üre derişimi, K numaralı damardakinden yüksektir.\nII. N numaralı damardaki kanın üre derişimi, M numaralı damardakinden düşüktür.\nIII. N numaralı damardaki kanın üre derişimi, K numaralı damardakinden yüksektir.\nifadelerinden hangileri doğrudur?',
- istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Her organdan geçen kanda hangi azotlu atığın oluştuğunu ya da uzaklaştırıldığını düşün.'],
- bilgi=[B('Karaciğer ve böbrek','karaciğer amonyağı üreye çevirir, böbrek ise üreyi kandan süzerek idrarla uzaklaştırır')],
- puf='K ve M aynı kandır; yalnız organdan geçen kandaki değişimi izle.',sekil=sekil_damar())
+qo(7,r,*T_AZOT,'orta','Karaciğer ve besin yolu','Sindirim kanalından karaciğere giden ve karaciğerden çıkan damarlardaki madde derişimlerini karaciğerin işleviyle ilişkilendirir.','bağırsak, karaciğer ve kalp damar şeması','bağırsak–karaciğer damarları',
+ 'karaciğerden geçen kanın bileşimi, organın işlevine göre değişir; sindirim kanalından emilen maddeler önce karaciğere uğrar','Sindirim kanalından emilen maddelerin doğrudan kalbe döndüğünü sanmak; organdan çıkan kanın bileşiminin giren kanla aynı kaldığını düşünmek.',
+ metin='Şekilde, sağlıklı bir bireyde sindirim kanalından karaciğere kan getiren K damarı, kalpten çıkan atardamardan ayrılarak karaciğere kan getiren M damarı ve karaciğerden kalbe dönen L damarı gösterilmiştir. Bu bireyde protein içeren bir öğünden bir süre sonra damarlardaki kan örnekleri alınmıştır.\nBuna göre,\nI. K damarındaki kanın amino asit derişimi, M damarındakinden yüksektir.\nII. L damarındaki kanın üre derişimi, K damarındakinden yüksektir.\nIII. M damarındaki kanın üre derişimi, L damarındakinden yüksektir.\nifadelerinden hangileri doğrudur?',
+ istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Her damarın hangi organdan hangi organa kan taşıdığını ve karaciğerin bu kanı nasıl değiştirdiğini düşün.'],
+ bilgi=[B('Karaciğer ve dolaşım','karaciğer, sindirim kanalından gelen kanla beslenen ve bu kandaki maddeleri işleyen bir organdır')],
+ puf='Her ifadede iki damarı karşılaştırırken kanın karaciğerden önce mi sonra mı olduğuna bak.',sekil=sekil_damar())
 # ---------- 08 · glikoz eşik · zor · sayısal · B ----------
 GFR2=50; PL2=500
 S2s=Fr(PL2*GFR2,100); G2=min(S2s,TM); A2=S2s-G2
@@ -275,17 +278,17 @@ q(9,*T_DENGE,'zor','Nefronda su geri emilimi','Nefron kısımlarında tüp sıv�
 # ---------- 10 · karaciğer yetmezliği · zor · öncüllü · E ----------
 d10={'I':(False,'Kandaki amonyağın yüksek olması böbreğin süzme işlevinin bozulduğunu göstermez; amonyak karaciğer işlev göremediği için üreye çevrilemez ve kanda birikir.'),
      'II':(True,'Üre sentezi azaldığından kandaki üre ve süzülen üre azdır; bu nedenle idrarla atılan üre miktarı sağlıklı bireye göre azdır.'),
-     'III':(True,'Albümin düşük olunca plazmanın ozmotik basıncı azalır, doku sıvısının kılcal damara geri emilimi zayıflar ve ödem riski artar.')}
+     'III':(True,'Karaciğer safra üretir; safra yağların sindirimini kolaylaştırır. Karaciğerin büyük bölümü işlev göremediğinde safra üretimi azalır ve yağ sindirimi güçleşir.')}
 r=onc(d10,'E')
-qo(10,r,*T_SAGLIK,'zor','Karaciğer yetmezliği','Karaciğer işlevinin bozulmasının üre, amonyak ve plazma proteinleri üzerindeki etkilerini böbrek işleviyle ayırarak değerlendirir.','karaciğer yetmezliği hasta tablosu','karaciğer yetmezliği olan birey',
- 'karaciğer işlevi bozulunca amonyak üreye çevrilemez, kanda amonyak artıp üre azalır; plazma proteini sentezi de azaldığından plazma ozmotik basıncı düşer ve ödem görülebilir','Amonyak artışını böbrek hasarına bağlamak; albümin azalmasının ozmotik basıncı artırdığını düşünmek.',
- metin='Karaciğer hücrelerinin büyük bölümü işlev göremeyen bir bireyin kan tahlilinde amonyak düzeyi yüksek, üre düzeyi düşük bulunmuştur. Bu bireyin kan plazmasındaki albümin düzeyi de düşüktür; böbrekleri ise sağlıklıdır.\nBuna göre bu bireyle ilgili,\nI. Kanda amonyağın yüksek olması, böbrekte süzülme işleminin bozulduğunu gösterir.\nII. Günlük idrarla atılan üre miktarı, sağlıklı bir bireye göre azdır.\nIII. Albümin düzeyinin düşük olması, doku sıvısının kılcal damara geri dönüşünü azaltarak ödem riskini artırır.\nifadelerinden hangileri doğrudur?',
- istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Karaciğerin hangi iki işlevinin bozulduğunu ve sağlam kalan böbreğin neyi süzeceğini düşün.'],
- bilgi=[B('Karaciğerin işlevleri','karaciğer amonyağı üreye çevirir ve albümin gibi plazma proteinlerini sentezler; plazma proteinleri plazmanın ozmotik basıncını oluşturur')],
+qo(10,r,*T_SAGLIK,'orta','Karaciğer yetmezliği','Karaciğer işlevinin bozulmasının üre, amonyak ve sindirim üzerindeki etkilerini böbrek işleviyle ayırarak değerlendirir.','karaciğer yetmezliği hasta tablosu','karaciğer yetmezliği olan birey',
+ 'karaciğer işlevi bozulunca organın görevleriyle ilişkili süreçler aksar; her bulgu, sorumlu organ ve süreçle eşleştirilerek yorumlanır','Karaciğer kaynaklı bir bulguyu böbrek hasarına bağlamak; organın tek bir işlevi olduğunu düşünmek.',
+ metin='Karaciğer hücrelerinin büyük bölümü işlev göremeyen bir bireyin kan tahlilinde amonyak düzeyi yüksek, üre düzeyi düşük bulunmuştur. Bu bireyin böbrekleri ise sağlıklıdır.\nBuna göre bu bireyle ilgili,\nI. Kanda amonyağın yüksek olması, böbrekte süzülme işleminin bozulduğunu gösterir.\nII. Günlük idrarla atılan üre miktarı, sağlıklı bir bireye göre azdır.\nIII. Safra üretiminin azalması nedeniyle yağların sindirimi güçleşir.\nifadelerinden hangileri doğrudur?',
+ istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Karaciğerin hangi işlevlerinin bozulduğunu ve sağlam kalan böbreğin neyi süzeceğini düşün.'],
+ bilgi=[B('Karaciğerin işlevleri','karaciğer metabolizmada birçok işlev görür · işlevi bozulunca etkilenen süreçler organın görevleriyle ilişkilendirilir')],
  puf='Her öncülde sorunun kaynağını karaciğer ya da böbrek olarak ayrı ayrı değerlendir.')
 # ============================ YAZ ============================
 assert len(P.ANA)==10
-Z=Counter(x['zorluk'] for x in P.ANA); assert Z=={'kolay':2,'orta':5,'zor':3},Z
+Z=Counter(x['zorluk'] for x in P.ANA); assert Z=={'kolay':2,'orta':6,'zor':2},Z
 HR=Counter(x['cevap']['sik'] for x in P.ANA); assert all(HR[h]==2 for h in 'ABCDE'),HR
 assert 4<=len({x['tipId'] for x in P.ANA})<=6
 SEK=sum(1 for x in P.ANA if x['sekil']); assert SEK>=6,SEK

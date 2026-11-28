@@ -160,7 +160,7 @@ kt('05','Anyon orbital diyagramından atom','Anyonun son orbital diyagramından 
 kt('06','Kuantum sayıları tablosu','Üç sayı aynıysa elektronlar aynı orbitaldedir; iki sayı aynıysa aynı alt kabuktadır; enerji n + l ile belirlenir.','Yalnız n eşitliğini aynı alt kabuk saymak.','orta','tablo',3,'kuantum')
 kt('07','Eşleşmemiş elektron grafiği','Grafikteki değer deseninden elementler bulunur; sonra l ve ml sayımı dizilim üzerinden yapılır.','Aynı değerli iki çubuğu birbirine karıştırmak.','orta','grafik',4,'periyodik')
 kt('08','Katyon diyagramından atoma dönüş','İyonun diyagramından atomun dizilimi kurulur; sonra ml sayımı alt kabuk alt kabuk yapılır.','Atomun 4s elektronlarını sayıma katmamak.','zor','şekilli',4,'iyon')
-kt('09','İstisnalı dizilimlerde iyonlar','4s¹ 3d¹⁰ ve 4s² 3d¹⁰ dizilimli atomların iyonları karşılaştırılır; her iyonda önce 4s boşalır.','İyon oluşumunda 3d elektronundan başlamak.','zor','öncüllü',4,'dizilim')
+kt('09','İstisnalı dizilimlerde iyonlar','İstisnalı ve istisnasız dizilimli atomların iyonları karşılaştırılır; elektronun hangi alt kabuktan ayrıldığı iyon dizilimini belirler.','İyon dizilimini atomun dizilimiyle karıştırmak.','zor','öncüllü',4,'dizilim')
 kt('10','Kesit, ml sayımı ve izoelektronik iyonlar','Kesitten elementler bulunur; ml ve eşleşmemiş elektron sayımı ile izoelektronik iyon yarıçapı birlikte değerlendirilir.','İzoelektronik iyonlarda yarıçapı proton sayısıyla orantılı sanmak.','zor','öncüllü',4,'periyodik')
 assert len(TIP)==10
 
@@ -207,22 +207,23 @@ q('0002','02',[A('Alt kabuğu oku','Etiket 3d olduğundan n = 3 ve d alt kabuğu
 
 # =============== 0003 · Cr istisnası · orta · düz ===============
 cfg=alt(24); cfg0=dict(cfg); cfg0[(4,0)]=2; cfg0[(3,2)]=4
-u=essiz(cfg); p1=kn(24,L1); assert (u,p1)==(6,12) and u+p1==18 and essiz(cfg0)==4
-assert (essiz(cfg0)+p1,5+p1,u+6,1+p1)==(16,17,12,13)
+SP=lambda n,l,ml,ms:ms>0; N3=lambda n,l,ml,ms:n==3; N4=lambda n,l,ml,ms:n==4
+sp,n3=say(cfg,SP),say(cfg,N3); assert (sp,n3,essiz(cfg))==(15,13,6) and sp+n3==28
+assert (say(cfg0,SP),say(cfg0,N3),say(cfg0,SP)+say(cfg0,N3))==(14,12,26) and (24-essiz(cfg))//2==9 and 9+n3==22 and 24//2+n3==25
 q('0003','03',[A('Dizilimi yaz','Cr atomunda yarı dolu 3d kararlılığı nedeniyle bir 4s elektronu 3d’ye geçer.','1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁵'),
-  A('l = 1 elektronlarını say','l = 1 olan alt kabuklar 2p ve 3p’dir; her biri 6 elektron taşır.','6 + 6 = 12'),
-  A('Eşleşmemiş elektronları say','4s¹’de 1, 3d⁵’te 5 elektron eşleşmemiştir.','1 + 5 = 6'),
-  A('Topla','Eşleşmemiş elektron sayısı ile l = 1 olan elektron sayısı toplanır.','6 + 12 = 18')],
- ne='Cr atomunda istisnalı dizilim',z='orta',alt='Elektron Dizilimi İstisnaları',kaz='Krom atomunun istisnalı dizilimine göre l ve eşleşmemiş elektron sayımı yapar.',kalip='düz',
- metin='Atom numarası 24 olan krom (Cr) atomunun temel hâl elektron dizilimi, aynı alt kabuktaki orbitallerin yarı dolu olmasının kararlılık sağlaması nedeniyle Aufbau sırasından farklıdır.\nBuna göre, Cr atomundaki açısal momentum kuantum sayısı (l) 1 olan elektronların sayısı ile eşleşmemiş elektronların sayısının toplamı kaçtır?',
- dogru=18,yan=[(16,'Dizilimi istisnasız 4s² 3d⁴ yazmış: eşleşmemiş elektron sayısını 4 bulup 4 + 12 = 16 hesaplamıştır.','bilgi'),
-  (17,'4s¹ elektronunu eşleşmemiş saymamış: yalnız 3d⁵’teki 5 elektronu alıp 5 + 12 = 17 bulmuştur.','dikkat'),
-  (12,'2p ve 3p’den yalnız birini sayıp 6 elektron almış; eşleşmemişleri 6 bulduğundan 6 + 6 = 12 hesaplamıştır.','dikkat'),
-  (13,'Eşleşmemiş elektron olarak yalnız 4s¹’i saymış: 1 + 12 = 13 bulmuştur; 3d⁵’teki 5 elektron da eşleşmemiştir.','islem')],
- istenen='l = 1 olan elektron sayısı ile eşleşmemiş elektron sayısının toplamı.',
- ip=['Önce dizilimi Aufbau sırasından farklı olduğunu dikkate alarak yaz.'],
+  A('ms = +1/2 olanları say','6 eşleşmemiş elektronun hepsi +1/2’dir; geri kalan 18 elektron 9 çift oluşturur ve her çiftten biri +1/2’dir.','6 + 9 = 15'),
+  A('n = 3 olanları say','3. enerji düzeyinde 3s², 3p⁶ ve 3d⁵ bulunur.','2 + 6 + 5 = 13'),
+  A('Topla','İki sayı toplanır.','15 + 13 = 28')],
+ ne='Cr atomunda istisnalı dizilim',z='orta',alt='Elektron Dizilimi İstisnaları',kaz='Krom atomunun istisnalı dizilimine göre ms ve n kuantum sayılarına göre elektron sayımı yapar.',kalip='düz',
+ metin='Atom numarası 24 olan krom (Cr) atomunun temel hâl elektron dizilimi, aynı alt kabuktaki orbitallerin yarı dolu olmasının kararlılık sağlaması nedeniyle Aufbau sırasından farklıdır. (Eşleşmemiş elektronların hepsinin spini ms = +1/2 kabul edilecektir.)\nBuna göre, Cr atomunda spin kuantum sayısı (ms) +1/2 olan elektronların sayısı ile baş kuantum sayısı (n) 3 olan elektronların sayısının toplamı kaçtır?',
+ dogru=28,yan=[(26,'Dizilimi istisnasız 4s² 3d⁴ yazmış: ms = +1/2 olan 14, n = 3 olan 12 elektron sayıp 14 + 12 = 26 bulmuştur.','bilgi'),
+  (15,'n = 3 olan elektronları saymayı unutmuş; yalnız ms = +1/2 olan 15 elektronu yazmıştır.','dikkat'),
+  (25,'ms = +1/2 olan elektron sayısını toplam elektronun yarısı (12) almış: 12 + 13 = 25; eşleşmemiş 6 elektronun hepsi +1/2 olduğundan bu sayı 15’tir.','dikkat'),
+  (22,'Eşleşmemiş elektronları +1/2 saymayıp yalnız çiftlerden gelen 9 elektronu almış: 9 + 13 = 22.','islem')],
+ istenen='ms = +1/2 olan elektron sayısı ile n = 3 olan elektron sayısının toplamı.',
+ ip=['Atomun dizilimini yazarken kararlılık kuralını dikkate al.'],
  bilgi=[B('Yarı dolu kararlılığı','Bir d alt kabuğu tam dolu ya da yarı dolu olduğunda daha kararlıdır; bu nedenle bazı atomlarda 4s’den 3d’ye bir elektron geçer. Örnek: 29. elementte 3d tam dolu olabilmesi için 4s’deki elektron sayısı azalır')],
- puf='Dizilim yazılırken 4s’deki elektron sayısına dikkat et; sonra her alt kabuğu ayrı ayrı say.')
+ puf='Önce dizilimi yaz, sonra her sayımı alt kabuk alt kabuk yap.')
 
 # =============== 0004 · Bohr enerji düzeyleri · orta · şekil ===============
 En=lambda n:Fr(-144,n*n)
@@ -329,11 +330,11 @@ q('0008','08',[A('Atomu bul','İyonda 18 + 7 = 25 elektron vardır; X²⁺ oldu�
 # =============== 0009 · Cu / Zn iyonları · zor · öncüllü ===============
 cu=alt(29); zn=alt(30); assert cu[(4,0)]==1 and cu[(3,2)]==10 and zn[(4,0)]==2
 assert iyon(29,1)==iyon(30,2) and (4,0) not in iyon(29,1)
-assert iyon(29,2)[(3,2)]==9 and zn[(3,2)]==10
+assert iyon(29,2)[(3,2)]==9 and zn[(3,2)]==10 and essiz(iyon(29,2))+essiz(zn)==essiz(cu)==1
 onc('0009','09','Atom numaraları 29 olan bakır (Cu) ve 30 olan çinko (Zn) elementlerinin temel hâldeki atomları ile bu atomlardan oluşan iyonlar karşılaştırılıyor. Cu atomu istisnalı elektron dizilimine sahiptir.',
  [('Cu⁺ ve Zn²⁺ iyonlarının elektron dizilimleri aynıdır.',True,'Cu⁺: 4s¹ elektronu gider, 3d¹⁰ kalır; Zn²⁺: 4s² elektronu gider, 3d¹⁰ kalır. İkisi de 28 elektronludur ve dizilimleri aynıdır.','Cu⁺ ve Zn²⁺ iyonları 28 elektronludur ve ikisinin de dizilimi 3d¹⁰ ile biter.'),
   ('Cu⁺ iyonunun 4s orbitalinde 1 elektron bulunur.',False,'Cu atomunun 4s¹ elektronu iyon oluşurken önce verilir; Cu⁺ iyonunda 4s boştur ve 3d¹⁰ doludur.','Katyon oluşurken elektron önce 4s’den verildiği için Cu⁺ iyonunda 4s boştur.'),
-  ('Cu²⁺ iyonunda l = 2 olan elektron sayısı, Zn atomundakinden 1 eksiktir.',True,'Cu²⁺ iyonunda 3d⁹ olduğundan l = 2 elektronu 9’dur; Zn atomunda 3d¹⁰ olduğundan 10’dur; fark 1’dir.','Cu²⁺ iyonunda 9, Zn atomunda 10 elektron l = 2 değerindedir; fark 1’dir.')],
+  ('Cu²⁺ iyonu ile Zn atomunun eşleşmemiş elektron sayılarının toplamı, Cu atomundaki eşleşmemiş elektron sayısına eşittir.',True,'Cu²⁺ iyonu 3d⁹ olduğundan 1, Zn atomu 3d¹⁰ 4s² olduğundan 0 eşleşmemiş elektrona sahiptir; Cu atomu 4s¹ 3d¹⁰ ile 1 eşleşmemiş elektron taşır, 1 + 0 = 1 eşitlik sağlanır.','Cu²⁺ iyonunda 1, Zn atomunda 0, Cu atomunda 1 eşleşmemiş elektron vardır; 1 + 0 = 1 olur.')],
  2,'Buna göre, yukarıdaki ifadelerden hangileri doğrudur?',ne='Cu ve Zn iyonları',z='zor',alt='İstisnalı Dizilimlerde İyonlar',kaz='Cu ve Zn atomlarından oluşan iyonların dizilimlerini karşılaştırarak yargıları değerlendirir.',kalip='öncüllü',
  ip=['Her iyonun elektron dizilimini, atomdan hangi elektronların ayrıldığını düşünerek yaz.'],
  bilgi=[B('Katyon dizilimi','Katyon oluşurken elektronlar önce en dıştaki, yani en büyük baş kuantum sayılı alt kabuktan verilir; bu alt kabuk boşaldıktan sonra d alt kabuğundan elektron ayrılır. Örnek: 4s² 3d⁶ dizilimli bir atomda 1+ iyon oluşurken ayrılan elektron 4s’den gelir')],
@@ -343,7 +344,7 @@ onc('0009','09','Atom numaraları 29 olan bakır (Cu) ve 30 olan çinko (Zn) ele
 SK=tk(kesit([2,3],{(2,'5A'):'X',(2,'7A'):'Y',(3,'2A'):'T',(3,'6A'):'Z'}))
 assert (kn(7,lambda n,l,ml,ms:ml==-1),kn(9,lambda n,l,ml,ms:ml==-1))==(1,2)
 assert kn(16,lambda n,l,ml,ms:ml==1)==3 and 12-2==10==9+1
-onc('0010','10','Periyodik tablonun 2. ve 3. periyotlarından alınan bir kesitte X, Y, T ve Z elementlerinin yerleri gösterilmiştir. (X, Y, T ve Z elementlerin gerçek sembolleri değildir.)',
+onc('0010','10','Periyodik tablonun 2. ve 3. periyotlarından alınan bir kesitte X, Y, T ve Z elementlerinin yerleri gösterilmiştir. (X, Y, T ve Z elementlerin gerçek sembolleri değildir.) Bir p alt kabuğunun orbitallerine elektronlar ml = −1, 0, +1 sırasıyla önce birer birer yerleşir, sonra aynı sırayla eşleşir.',
  [('X atomunda ml = −1 olan elektron sayısı, Y atomundakinden fazladır.',False,'X (2. periyot 5A) atomunda 2p³ ile ml = −1 olan 1 elektron; Y (2. periyot 7A) atomunda 2p⁵ ile 2 elektron vardır.','X atomunda ml = −1 olan 1 elektron, Y atomunda 2 elektron bulunur.'),
   ('T²⁺ iyonunun yarıçapı, Y⁻ iyonunun yarıçapından küçüktür.',True,'T²⁺ ve Y⁻ iyonları 10 elektronludur; T’nin proton sayısı Y’ninkinden fazla olduğundan T²⁺ daha küçüktür.','İki iyon izoelektroniktir; proton sayısı fazla olan T²⁺ iyonunun yarıçapı daha küçüktür.'),
   ('Z atomunda ml = +1 olan elektron sayısı 3’tür.',True,'Z (3. periyot 6A) atomunda 2p’de 2, 3p⁴’te 1 elektron ml = +1 değerindedir; toplam 3’tür.','Z atomunda ml = +1 olan 2 elektron 2p’de, 1 elektron 3p’de bulunur.')],

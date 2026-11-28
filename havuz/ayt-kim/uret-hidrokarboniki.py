@@ -397,7 +397,7 @@ dub=[i for i in M3.carbons() if h3[i]=='sp2']; duzlem=set(dub)|{w for i in dub f
 sig3=len(M3.b)+M3.formula()[1]; assert sig3==14
 sk3=tk(ciz(S3)[0])
 tr=[True,False,True]
-nd=['çift bağı oluşturan iki karbon sp² hibritleşmesi yapar; üç metil karbonu ile 3. karbon ise tek bağlıdır',
+nd=['çift bağı oluşturan iki karbon sp² hibritleşmesi yapar; kalan üç metil karbonu tek bağlıdır',
     'molekülde yalnız tek bağ yapan üç karbon (üç metil grubu) vardır; bunların hepsi sp³ hibritleşmesi yaptığından sp³ karbon sayısı 3’tür',
     'çift bağdaki iki karbon ve bunlara doğrudan bağlı bütün karbonlar aynı düzlemdedir; bu molekülde beş karbonun tümü bu gruba girer']
 d3,y3,s3=onc(tr,nd,'E'); assert d3=='I ve III'
@@ -406,7 +406,7 @@ Q('hk2-yapi','orta','Hibritleşme ve molekül düzlemi','Çift bağlı karbonlar
  'Doğru yargıların belirlenmesi.','Her karbonun yaptığı en yüksek bağ türüne bak; çift bağın iki ucundaki karbonlara bağlanan atomların hepsinin tek düzlemde olduğunu düşün.',
  [B('Hibritleşme','Üçlü bağlı karbon sp, çift bağlı karbon sp², yalnız tek bağ yapan karbon sp³ hibritleşmesi yapar. Örnek: propende (CH₂=CH–CH₃) 2 sp² ve 1 sp³ karbon bulunur')],
  oadim(tr,nd)+[A('Sonuç','Doğru yargılar I ve III’tür.','I ve III')],
- 'Çift bağlı karbon sayısı sp² sayısını, geri kalanlar sp³ sayısını verir.',sekil=sk3,dogru=d3,yan=y3,sira=s3)
+ 'Her karbonun yaptığı en yüksek bağ türü hibritleşmesini belirler.',sekil=sk3,dogru=d3,yan=y3,sira=s3)
 
 # ================= 04 · kaynama noktası · orta · tablo · olumsuz kök =================
 SK={'K':('CCCC','CH₃–CH₂–CH₂–CH₃',-1),'L':('CC(C)C','CH₃–CH(CH₃)–CH₃',-12),'M':('CCCCC','CH₃–CH₂–CH₂–CH₂–CH₃',36),'N':('CC(C)CC','CH₃–CH(CH₃)–CH₂–CH₃',28)}
@@ -464,19 +464,19 @@ def urunler(M,X):
     for hed in (a,c):
         bb=[(p,q,(r_-1 if (p,q,r_)==(a,c,o) else r_)) for p,q,r_ in b]; e2=el+[X]; bb.append((hed,len(el),1)); r.add(canon(mol_kur(e2,bb)))
     return r
-K6,L6,M6='CC=CC','C=CCC','CC(C)=CC'
+K6,L6,M6='CC=CC','C=CCC','CC(C)=C'
 assert len(urunler(Mol(K6),'Br'))==1 and urunler(Mol(K6),'Br')=={canon(Mol('CC(Br)CC'))} and AD('CC(Br)CC')=='2-Bromobütan'
 assert len(urunler(Mol(L6),'Br'))==2
 sL=hx_katil(Mol(L6),'O'); assert ayni(sL,'CC(O)CC'); oc=[i for i,e in enumerate(sL.el) if e=='O'][0]; cx=sL.adj[oc][0][0]; assert sum(1 for w,_ in sL.adj[cx] if sL.el[w]=='C')==2   # ikincil alkol
-assert ayni(hx_katil(Mol(M6),'Cl'),'CC(C)(Cl)CC') and AD('CC(C)(Cl)CC')=='2-Kloro-2-metilbütan' and ayni(hx_katil(Mol(M6),'Cl',ters=True),'CC(C)C(Cl)C')
+assert ayni(hx_katil(Mol(M6),'Cl'),'CC(C)(Cl)C') and AD('CC(C)(Cl)C')=='2-Kloro-2-metilpropan' and ayni(hx_katil(Mol(M6),'Cl',ters=True),'CC(C)CCl') and AD('CC(C)CCl')=='1-Kloro-2-metilpropan'
 sk6=tk(satir([(K6,'K',{(1,2):'trans'}),(L6,'L',None),(M6,'M',None)],aralik=1.5))
 tr=[True,True,False]
 nd=['K simetrik bir alkendir; çift bağın iki ucundaki karbonların hidrojen sayıları eşit olduğundan HBr hangi yönde katılırsa katılsın aynı bileşik, 2-bromobütan oluşur',
     'L’ye su katılırken Markovnikov kuralına göre OH grubu H’si az olan 2. karbona bağlanır; ana ürün olan 2-bütanolde OH’li karbon iki karbona bağlı olduğundan ikincil alkoldür',
-    'M’de çift bağın bir ucunda hiç hidrojen yoktur; Cl, H’si az olan karbona bağlanacağından ana ürün 2-kloro-2-metilbütandır, 2-kloro-3-metilbütan değil']
+    'M’de çift bağın bir ucunda hiç hidrojen yoktur; Cl, H’si az olan karbona bağlanacağından ana ürün 2-kloro-2-metilpropandır, 1-kloro-2-metilpropan değil']
 d6,y6,s6=onc(tr,nd,'C'); assert d6=='I ve II'
 Q('hk2-katilma','orta','HX ve H₂O katılması (Markovnikov)','Simetrik alkende tek ürün, asimetrik alkende ana ürün Markovnikov kuralıyla bulunur; H, H’si fazla karbona, X ya da OH ise H’si az karbona bağlanır.','Simetrik alkende iki ürün aramak; X’i H’si fazla karbona bağlamak.','öncüllü',
- 'Aşağıda çizgi formülleri verilen K, L ve M, açık zincirli alkenlerdir. Katılma tepkimeleri uygun koşullarda gerçekleşmektedir.\n'+etiket_oncul('K’ye HBr katılması sonucu tek bir ürün oluşur.','L’ye su katılması sonucu oluşan ana ürün, ikincil (sekonder) alkoldür.','M’ye HCl katılması sonucu oluşan ana ürün 2-kloro-3-metilbütandır.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
+ 'Aşağıda çizgi formülleri verilen K, L ve M, açık zincirli alkenlerdir. Katılma tepkimeleri uygun koşullarda gerçekleşmektedir.\n'+etiket_oncul('K’ye HBr katılması sonucu tek bir ürün oluşur.','L’ye su katılması sonucu oluşan ana ürün, ikincil (sekonder) alkoldür.','M’ye HCl katılması sonucu oluşan ana ürün 1-kloro-2-metilpropandır.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
  'Doğru yargıların belirlenmesi.','Her alkenin çift bağındaki iki karbonun hidrojen sayılarını karşılaştır; eşitse ürün tektir, değilse Markovnikov kuralını uygula.',
  [B('Katılma ve Markovnikov kuralı','Simetrik olmayan HX ya da H₂O alkene katılırken H, çift bağdaki H sayısı fazla olan karbona gider; X ya da OH diğer karbona bağlanır. Örnek: propen + H₂O → 2-propanol')],
  oadim(tr,nd)+[A('Sonuç','Doğru yargılar I ve II’dir.','I ve II')],
@@ -494,14 +494,14 @@ assert (mco2,mh2o)==(Fr(132,5),Fr(54,5)) and kt/Fr(mX,3)==Fr(3,5)
 mo2=mco2+mh2o-kt; assert mo2==Fr(144,5) and mo2/32==Fr(9,10)
 d7=Fr(9,10); assert nco2+nh2o/2==d7
 sk7=tbl(['Bileşik','Molekül formülü','Mol kütlesi (g/mol)'],[['X','C₃H₆','42'],['Y','C₄H₈','56']])
-Q('hk2-yanma','zor','Alken karışımının yanması ve kütle oranı','Tüm alkenler CₙH₂ₙ formülünde olduğundan C ve H kütle oranı sabittir; karışımın bileşimi bilinmese de yanma ürünlerinin kütlesi bulunur.','Karışımın mol oranını bilinmeyen sanıp çözümsüz kalmak; O₂ miktarını yalnız bir üründen bulmak.','tablo',
+Q('hk2-yanma','zor','Alken karışımının yanması ve kütle oranı','Aynı genel formüllü bileşiklerin karışımında bileşim bilinmese de elementlerin kütle oranı ortaktır; yanma ürünleri C ve H kütlesinden bulunur.','Karışımın mol oranını bilinmeyen sanıp çözümsüz kalmak; O₂ miktarını yalnız bir üründen bulmak.','tablo',
  'Açık zincirli X ve Y alkenlerinin bileşimi bilinmeyen bir karışımından 8,4 g alınıyor ve yeterli miktarda O₂ ile tamamen yakılıyor (ürünler CO₂ ve H₂O). X ve Y’nin molekül formülleri ile mol kütleleri tabloda verilmiştir (H: 1, C: 12, O: 16).\nBuna göre, yakma işleminde harcanan O₂ kaç moldür?',
- 'Harcanan O₂ mol sayısı.','Bütün alkenlerde karbon ve hidrojenin kütle oranı aynıdır; önce karışımdaki C ve H kütlelerini, sonra CO₂ ve H₂O mol sayılarını bul.',
- [B('Alkenlerde kütle oranı','CₙH₂ₙ formüllü bileşiklerde 12n gram karbona 2n gram hidrojen düşer; kütlece C : H oranı n’den bağımsız olarak 6 : 1’dir. Örnek: 7 g herhangi bir alkende 6 g karbon, 1 g hidrojen bulunur')],
+ 'Harcanan O₂ mol sayısı.','Karışımın bileşimini bilmeden C ve H kütlesine ulaşmanın yolunu ara.',
+ [B('Alkenlerde kütle oranı','Aynı genel formüllü bileşik ailesinde elementlerin kütle oranı formüldeki sayılardan bulunur. Örnek: 1 mol C₃H₆ molekülünde 36 g karbon ve 6 g hidrojen bulunur')],
  [A('C ve H kütlesi','Alkenlerde kütlece C : H = 12n : 2n = 6 : 1’dir; karışımın bileşimi önemli değildir.','8,4 g → C: 7,2 g; H: 1,2 g'),
   A('Mol sayıları','7,2 g karbon 0,6 mol C atomu, 1,2 g hidrojen 1,2 mol H atomudur; her C bir CO₂, her 2 H bir H₂O verir.','CO₂: 0,6 mol; H₂O: 0,6 mol'),
   A('O₂ mol sayısı','CO₂ için 0,6 mol, H₂O için 0,6 / 2 = 0,3 mol O₂ gerekir.','0,6 + 0,3 = 0,9 mol')],
- 'Alkenlerde C : H kütle oranı 6 : 1’dir; O₂ = n(CO₂) + n(H₂O)/2.',sekil=sk7,
+ 'Yanma ürünlerindeki oksijen atomlarının toplamını O₂ molüne çevir.',sekil=sk7,
  dogru=d7,yan=[(Fr(3,5),'Yalnız CO₂ oluşumu için gereken O₂’yi (0,6 mol) bulmuş; H₂O’daki oksijeni hesaba katmamış.','dikkat'),
                (Fr(3,10),'Yalnız H₂O için düşünüp 0,6 mol O atomunu ikiye bölerek 0,3 mol O₂ bulmuş; CO₂ için gereken O₂’yi unutmuş.','dikkat'),
                (Fr(6,5),'CO₂ için 0,6 mol, H₂O için de 0,6 mol O₂ toplamış; H₂O’daki oksijen atomlarını da tam bir O₂ molekülü saymış.','bilgi'),
@@ -525,14 +525,14 @@ sk8=tk(['\\draw[thick] (-0.35,1.55) -- (-1.15,0) -- (1.15,0) -- (0.35,1.55);',
         '\\node[font=\\small] at (1.8,2.65) {C$_2$H$_2$ gazı};',
         '\\node[align=center,font=\\small] at (3.6,-1.0) {yeterli Br$_2$\\\\içeren CCl$_4$ çözeltisi};'])
 Q('hk2-eldepolimer','zor','Asetilen eldesi, verim ve Br₂ tüketimi','CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂; saf CaC₂ mol sayısı verimle çarpılarak C₂H₂ bulunur, 1 mol alkin 2 mol Br₂ bağlar.','Saflık ya da verimi unutmak; alkine 1 mol Br₂ katıldığını sanmak.','şekilli',
- 'Asetilen (C₂H₂) gazı laboratuvarda kalsiyum karbürün (CaC₂) su ile tepkimesinden elde edilir:\nCaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂\nŞekildeki düzenekte, numunedeki CaC₂’nin tamamı %75 verimle tepkimeye giriyor; oluşan C₂H₂ gazının tamamı yeterli miktarda Br₂ içeren CCl₄ çözeltisinden geçirilerek tepkimeye sokuluyor (C: 12, Ca: 40, Br: 80).\nBuna göre, çözeltide harcanan Br₂ kaç gramdır?',
+ 'Asetilen (C₂H₂) gazı laboratuvarda kalsiyum karbürün (CaC₂) su ile tepkimesinden elde edilir:\nCaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂\nŞekildeki düzenekte, numunedeki CaC₂’den %75 verimle C₂H₂ elde ediliyor; oluşan C₂H₂ gazının tamamı yeterli miktarda Br₂ içeren CCl₄ çözeltisinden geçirilerek tepkimeye sokuluyor (C: 12, Ca: 40, Br: 80).\nBuna göre, çözeltide harcanan Br₂ kaç gramdır?',
  'Harcanan Br₂ kütlesi.','Önce numunedeki saf CaC₂ kütlesini ve mol sayısını bul; verimi uygula; sonra C₂H₂’nin Br₂ ile tepkime oranını yaz.',
  [B('Verim ve saflık','Tepkimede yararlanılan madde miktarı saf kütleyle sınırlıdır; verim, gerçekte oluşan ürünün kuramsal ürüne oranıdır. Örnek: kuramsal olarak 0,4 mol ürün veren tepkime %50 verimle 0,2 mol ürün verir')],
  [A('Saf CaC₂','20 g numunenin %80’i CaC₂’dir; mol kütlesi 40 + 24 = 64 g/mol.','16 g → 16 / 64 = 0,25 mol'),
   A('C₂H₂ miktarı','Tepkime katsayıları 1 : 1 olduğundan kuramsal 0,25 mol C₂H₂ oluşur; verim %75.','0,25 × 0,75 = 0,1875 mol'),
   A('Br₂ miktarı','Alkin 2 mol Br₂ bağlar: C₂H₂ + 2Br₂ → C₂H₂Br₄.','0,1875 × 2 = 0,375 mol'),
   A('Kütleyi bul','Br₂’nin mol kütlesi 160 g/mol.','0,375 × 160 = 60 g')],
- 'Saf kütle → mol → verim → ×2 (Br₂) → ×160.',sekil=sk8,
+ 'Yalnız saf madde tepkimeye girer.',sekil=sk8,
  dogru=60,yan=[(30,'Alkine yalnız 1 mol Br₂ katıldığını düşünmüş; 0,1875 mol Br₂ × 160 = 30 g bulmuş.','bilgi'),
                (75,'Numunenin saflığını hesaba katmayıp 20 g’ın tamamını CaC₂ sanmış: 20 / 64 × 0,75 × 2 × 160 = 75 g.','dikkat'),
                (80,'Verimi unutmuş; 0,25 mol C₂H₂’nin tamamının oluştuğunu varsayıp 0,25 × 2 × 160 = 80 g bulmuş.','dikkat'),
@@ -550,13 +550,13 @@ def kutu9(x0,y0,w,h,metin):
     return [f'\\draw[thick] ({x0},{y0}) rectangle ({x0+w},{y0+h});',f'\\node[align=center,font=\\small] at ({x0+w/2},{y0+h/2}) {{{metin}}};']
 sk9=tk(kutu9(0,0,4.2,2.0,'C$_2$H$_2$ ve C$_3$H$_6$\\\\(toplam 0,5 mol)\\\\+ H$_2$ (0,7 mol)'),[ok_(4.4,1.0,6.3,1.0,'Ni katalizörü')],kutu9(6.5,0,3.8,2.0,'Yalnız C$_2$H$_6$\\\\ve C$_3$H$_8$\\\\(H$_2$ kalmadı)'))
 Q('hk2-katilma','zor','Alkin–alken karışımının hidrojenlenmesi','Alken 1 mol, alkin 2 mol H₂ bağlar; toplam karışım mol sayısı ile harcanan H₂ mol sayısından iki bilinmeyenli denklem kurulur.','Karışımın tamamına aynı sayıda H₂ bağlandığını sanmak; mol sayılarını ters yazmak.','şekilli',
- 'Kapalı bir kapta, açık zincirli C₂H₂ ve C₃H₆ gazlarından oluşan toplam 0,5 mol karışım, 0,7 mol H₂ ile Ni katalizörlüğünde tepkimeye sokuluyor. Tepkime sonunda kapta yalnız C₂H₆ ve C₃H₈ gazları bulunmaktadır (H: 1, C: 12).\nBuna göre, başlangıçtaki karışımın kütlesi kaç gramdır?',
- 'Başlangıç karışımının kütlesi.','C₂H₂ ve C₃H₆’nın mol sayılarını x ve y yaz; toplam mol sayısı ile harcanan H₂ için birer denklem kur.',
+ 'Şekilde kapalı bir kapta, açık zincirli C₂H₂ ve C₃H₆ gazlarından oluşan karışımın H₂ ile Ni katalizörlüğünde tepkimesi gösterilmiştir; madde miktarları şekilde verilmiştir (H: 1, C: 12).\nBuna göre, başlangıçtaki karışımın kütlesi kaç gramdır?',
+ 'Başlangıç karışımının kütlesi.','Her gazın kaç mol H₂ bağladığını yaz.',
  [B('Hidrojenleme','Alken 1 mol, alkin 2 mol H₂ bağlayarak alkana dönüşür. Örnek: 0,2 mol propin ile 0,1 mol propen birlikte 0,5 mol H₂ harcar')],
  [A('Denklemleri kur','C₂H₂ x mol, C₃H₆ y mol olsun; x + y = 0,5 ve harcanan H₂ için 2x + y = 0,7.','x + y = 0,5; 2x + y = 0,7'),
   A('Çöz','İkinci denklemden birincisi çıkarılır.','x = 0,2 mol; y = 0,3 mol'),
   A('Kütleyi hesapla','C₂H₂ 26 g/mol, C₃H₆ 42 g/mol.','0,2 × 26 + 0,3 × 42 = 5,2 + 12,6 = 17,8 g')],
- 'Harcanan H₂ − toplam mol = alkinin mol sayısı.',sekil=sk9,
+ 'Her bileşiğin kaç mol H₂ bağladığını yaz.',sekil=sk9,
  dogru=d9,yan=[(13,'Karışımın tamamını C₂H₂ gibi düşünüp 0,5 × 26 = 13 g bulmuş.','dikkat'),
                (21,'Karışımın tamamını C₃H₆ gibi düşünüp 0,5 × 42 = 21 g bulmuş.','dikkat'),
                (Fr(81,5),'Mol sayılarını ters bulmuş (0,3 mol C₂H₂, 0,2 mol C₃H₆): 0,3 × 26 + 0,2 × 42 = 16,2 g.','bilgi'),
@@ -572,15 +572,15 @@ sk10=tk(['\\draw[thick] (-0.95,0.55) -- (0,0) -- (0.9,0.52) -- (1.85,0);','\\dra
          '\\node[font=\\small] at (1.95,-0.75) {$n$};'])
 tr=[False,True,True]
 nd=['polimerin tekrarlayan birimi –CH₂–CHCl– olduğundan monomerin yapısında bir çift bağ vardır; adı kloroetan değil kloroeten’dir',
-    'bu tepkime katılma polimerleşmesidir; monomerlerin çift bağları açılarak birbirine bağlanır ve yan ürün oluşmaz',
-    'monomerin mol kütlesi 2 × 12 + 3 × 1 + 35,5 = 62,5 g/mol’dür ve 31250 / 62,5 = 500 tekrarlayan birim bulunur']
+    'monomerin mol kütlesi 2 × 12 + 3 × 1 + 35,5 = 62,5 g/mol’dür ve 31250 / 62,5 = 500 tekrarlayan birim bulunur',
+    'monomer CH₂=CHCl çift bağı bir tane olduğundan 1 mol monomeri doyurmak için 1 mol H₂ yeterlidir; ürün kloroetandır']
 d10,y10,s10=onc(tr,nd,'D'); assert d10=='II ve III'
-Q('hk2-eldepolimer','orta','Katılma polimerinin monomeri ve mol kütlesi','Katılma polimerinde tekrarlayan birim monomerle aynı atomları içerir; yan ürün yoktur; polimerin mol kütlesi n × monomerin mol kütlesidir.','Monomerde çift bağ olduğunu görmemek; polimerleşmede yan ürün çıktığını sanmak.','öncüllü',
- 'Boru ve kablo kaplamalarında kullanılan polivinil klorürün (PVC) tekrarlayan birimi şekilde verilmiştir (H: 1, C: 12, Cl: 35,5).\n'+etiket_oncul('Monomerinin adı kloroetandır.','Oluşumu sırasında yan ürün açığa çıkmaz.','Mol kütlesi 31250 g/mol olan PVC molekülünde 500 tekrarlayan birim bulunur.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
- 'Doğru yargıların belirlenmesi.','Tekrarlayan birimin başına bir çift bağ ekleyerek monomeri yaz; sonra polimerin mol kütlesini monomerin mol kütlesine böl.',
+Q('hk2-eldepolimer','orta','Katılma polimerinin monomeri ve mol kütlesi','Katılma polimerinde tekrarlayan birim monomerle aynı atomları içerir; polimerin mol kütlesi n × monomerin mol kütlesidir.','Monomerde çift bağ olduğunu görmemek; tekrar sayısını yanlış hesaplamak.','öncüllü',
+ 'Boru ve kablo kaplamalarında kullanılan polivinil klorürün (PVC) tekrarlayan birimi şekilde verilmiştir (H: 1, C: 12, Cl: 35,5).\n'+etiket_oncul('Monomerinin adı kloroetandır.','Mol kütlesi 31250 g/mol olan PVC molekülünde 500 tekrarlayan birim bulunur.','Monomerinin 1 molünü Ni katalizörlüğünde doyurmak için 1 mol H₂ gerekir.')+'Buna göre, yukarıdaki yargılardan hangileri doğrudur?',
+ 'Doğru yargıların belirlenmesi.','Polimeri oluşturan küçük molekülün yapısını düşün; her yargıyı o molekül üzerinden sına.',
  [B('Katılma polimerleşmesi','Çift bağlı monomerlerin çift bağı açılarak birbirine bağlanması katılma polimerleşmesidir; atom kaybı olmaz. Örnek: 1 mol eten 28 g ise n mol eten birleşince polietilenin mol kütlesi 28n g/mol olur')],
  oadim(tr,nd)+[A('Sonuç','Doğru yargılar II ve III’tür.','II ve III')],
- 'Monomer = tekrarlayan birim + çift bağ; n = polimerin mol kütlesi ÷ monomerin mol kütlesi.',sekil=sk10,dogru=d10,yan=y10,sira=s10)
+ 'Önce monomerin molekül formülünü ve mol kütlesini yaz.',sekil=sk10,dogru=d10,yan=y10,sira=s10)
 
 # ================= yaz =================
 def bitir_ak():

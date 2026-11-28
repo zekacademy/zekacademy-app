@@ -73,7 +73,7 @@ card(1,'Kc ifadesini yazma','Kc ifadesinde yalnız gaz ve çözünen türler yer
 card(2,'Hız–zaman grafiğiyle etkiyi bulma','Grafikte yalnız bir hızın ani sıçraması derişim değişimini, ikisinin birlikte sıçraması sıcaklık ya da hacim değişimini gösterir.','Ürün eklendiğinde de ileri hızın sıçradığını sanmak.','kolay','grafik',3,'de-dinamik','hız–zaman grafiğinden yapılan etkiyi bulma')
 card(3,'Sıcaklık ve tanecik modeli','Aynı kaplarda sıcaklık yükselince ürün taneciği artıyorsa K büyümüş, tepkime endotermiktir.','Dengede hızların sıfır olduğunu düşünmek; K oranını tanecik sayısı oranı almak.','orta','şekilli',4,'de-le','tanecik modelinden K ve ΔH çıkarma')
 card(4,'Asal gaz eklenmesi','Asal gaz sabit hacimde denge kaydırmaz; serbest pistonda hacmi büyüttüğü için denge gaz mol sayısı çok yöne kayar.','Asal gazın her durumda dengeyi kaydırmadığını sanmak.','orta','şekilli',4,'de-le','sabit hacim ve sabit basınçta asal gaz etkisi')
-card(5,'Q ile K karşılaştırma','Kaplardaki karışımın Q değeri K ile karşılaştırılarak net tepkime yönü bulunur.','Q ile K’yı ters kıyaslamak; derişimleri üssüz çarpmak.','orta','tablo',3,'de-qk','Q ve K ile yön belirleme')
+card(5,'Q ile K karşılaştırma','Kaplardaki karışımın bileşimi denge durumuyla ilişkilendirilerek net tepkime yönü bulunur.','Q ile K’yı ters kıyaslamak; derişimleri üssüz çarpmak.','orta','tablo',3,'de-qk','Q ve K ile yön belirleme')
 card(6,'Dengede mol hesabı','Kc tanımından x çözülür; toplam mol hesaplanırken tüm türler toplanır.','Mol sayısını derişimle karıştırmak.','orta','tablo',4,'de-ice','Kc verilen dengede mol hesabı')
 card(7,'Katalizörlü ve katalizörsüz deney','Katalizör yalnız hızı etkiler; grafikte ürün derişimleri aynı değere daha çabuk ya da yavaş ulaşır.','Katalizörün denge derişimini artırdığını sanmak.','orta','grafik',3,'de-grafik','katalizörün grafikteki izi')
 card(8,'Sıcaklık değişiminin grafikteki etkisi','Derişimlerin sıçramadan kayması sıcaklık değişimini gösterir; iki dengeden iki Kc hesaplanıp karşılaştırılır.','Sıcaklık değişiminde de derişimlerin ani sıçradığını sanmak.','zor','grafik',5,'de-grafik','iki dengeden Kc oranı ve mol kesri')
@@ -200,8 +200,8 @@ q('0005',5,[A('Q ifadesini yaz','Q = [CO₂][H₂] ÷ ([CO][H₂O]); değerler m
  tipId='de-qk',z='orta',alt='Tepkime Bölümü',kaz='Farklı karışımların Q değerlerini Kc ile karşılaştırarak net tepkime yönünü belirler.',kalip='tablo',
  metin='Belirli bir sıcaklıkta\nCO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g)    Kc = 4\ntepkimesi için özdeş üç kaba CO, H₂O, CO₂ ve H₂ gazları karıştırılıyor. Kaplardaki başlangıç derişimleri tabloda verilmiştir.\nBuna göre, bu sıcaklıkta I, II ve III numaralı kaplardaki net tepkimenin yönü aşağıdakilerden hangisinde doğru verilmiştir?',
  sekil=tab5,dogru=dog5,yan=yan5,sira=sira5,istenen='Kaplardaki net tepkime yönleri.',
- ip=['Her kap için Kc ile aynı biçimde bir değer hesapla ve K ile kıyasla.'],bilgi=[QKB],
- puf='Q değerini üs ve oran kuralıyla yaz; sonra yalnız Q ile K’nın büyüklüğüne bak.')
+ ip=['Her kaptaki derişimlerden ürünlerin çarpımının girenlerin çarpımına oranını yaz.'],bilgi=[QKB],
+ puf='Kc ifadesine yalnız o anki derişimleri yaz.')
 
 # ================ 06 · orta · Kc verilen dengede mol
 V6=2; Kc6=2; x6=1
@@ -268,46 +268,44 @@ q('0008',8,[A('Dengeleri oku','t₁: [X] = 1, [Y] = 2 · t₃: [X] = 0,5, [Y] = 
  ip=['İki dengeden Kc değerlerini ayrı ayrı hesaplamadan hiçbir yargıyı karara bağlama.'],bilgi=[SKB,KCB],
  puf='Sıcaklık değişiminde Kc değişir; her denge için derişimleri ifadeye yeniden yaz.')
 
-# ================ 09 · zor · ek maddeyle yeni denge
-V9=2; Kc9=4
-e=dict(SO2=2,NO2=2,SO3=4,NO=4); assert Fr(e['SO3']*e['NO'],e['SO2']*e['NO2'])==Kc9
-add=dict(SO2=6,NO2=2,SO3=2,NO=0)
-ini={k:Fr(e[k]+add[k],V9) for k in e}; assert ini=={'SO2':4,'NO2':2,'SO3':3,'NO':2}
-Qn=ini['SO3']*ini['NO']/(ini['SO2']*ini['NO2']); assert Qn==Fr(3,4)<Kc9
-y9=Fr(1); assert (ini['SO3']+y9)*(ini['NO']+y9)==Kc9*(ini['SO2']-y9)*(ini['NO2']-y9)
-for yy in (Fr(26,3),): assert yy>ini['NO2']
-mol9=(ini['SO3']+y9)*V9; assert mol9==8
-m9=(ini['SO3']+y9, ini['SO3']*V9, (ini['SO3']+y9)*V9-1, (ini['SO3']-y9)*V9+0); 
-m9=(Fr(4), Fr(6), Fr(7), Fr(5)); assert m9==(ini['SO3']+y9, ini['SO3']*V9, ini['SO3']*V9+y9, ini['SO3']*V9-y9)
-SK=tablo_svg(['Gaz','Dengedeki mol','Eklenen mol'],[['SO₂(g)','2','6'],['NO₂(g)','2','2'],['SO₃(g)','4','2'],['NO(g)','4','0']])
-q('0009',9,[A('İlk dengeyi doğrula','Derişimler 1, 1, 2, 2 mol/L; Kc = (2 × 2) ÷ (1 × 1) = 4.','Kc = 4'),
-   A('Yeni başlangıcı yaz','Eklenenlerle birlikte mol/L: SO₂ = 4, NO₂ = 2, SO₃ = 3, NO = 2.','Q = (3 × 2) ÷ (4 × 2) = 0,75 < 4'),
-   A('Kayma yönü','Q < Kc olduğundan ileri yönde x mol/L ilerler.','(3 + x)(2 + x) = 4(4 − x)(2 − x)'),
-   A('x’i çöz','3x² − 29x + 26 = 0 denkleminin uygun kökü.','x = 1 mol/L'),
-   A('Mole çevir','[SO₃] = 3 + 1 = 4 mol/L; hacim 2 L.','n(SO₃) = 4 × 2 = 8 mol')],
+# ================ 09 · zor · ek maddeyle yeni denge (H2 + I2 <-> 2HI)
+V9=2
+e=dict(H2=1,I2=4,HI=6); Kc9=Fr(e['HI']**2,e['H2']*e['I2']); assert Kc9==9
+add=dict(H2=3,I2=0,HI=1)
+ini={k:Fr(e[k]+add[k],V9) for k in e}; assert ini=={'H2':2,'I2':2,'HI':Fr(7,2)}
+Qn=ini['HI']**2/(ini['H2']*ini['I2']); assert Qn==Fr(49,16)<Kc9
+x9=Fr(1,2); assert (ini['HI']+2*x9)**2==Kc9*(ini['H2']-x9)*(ini['I2']-x9) and (ini['HI']+2*x9)==3*(2-x9)
+mol9=(ini['HI']+2*x9)*V9; assert mol9==9
+m9=(Fr(9,2), Fr(7), Fr(8), Fr(5)); assert m9==(ini['HI']+2*x9, ini['HI']*V9, ini['HI']*V9+2*x9, (ini['HI']-2*x9)*V9)
+SK=tablo_svg(['Gaz','Dengedeki mol','Eklenen mol'],[['H₂(g)','1','3'],['I₂(g)','4','0'],['HI(g)','6','1']])
+q('0009',9,[A('Kc’yi bul','Dengedeki mol/L değerleri: H₂ = 0,5, I₂ = 2, HI = 3; Kc = [HI]² ÷ ([H₂] × [I₂]).','Kc = 9 ÷ (0,5 × 2) = 9'),
+   A('Yeni başlangıcı yaz','Eklenenlerle birlikte mol/L: H₂ = 2, I₂ = 2, HI = 3,5.','Q = 3,5² ÷ (2 × 2) ≈ 3,06 < 9'),
+   A('Kayma yönü','Q < Kc olduğundan ileri yönde x mol/L ilerler.','(3,5 + 2x)² = 9 (2 − x)²'),
+   A('x’i çöz','Her iki tarafın kökü alınır: 3,5 + 2x = 3(2 − x).','x = 0,5 mol/L'),
+   A('Mole çevir','[HI] = 3,5 + 1 = 4,5 mol/L; hacim 2 L.','n(HI) = 4,5 × 2 = 9 mol')],
  tipId='de-ice',z='zor',alt='Yeni Denge Hesabı',kaz='Dengedeki sisteme eklenen maddeler sonrası Q ile Kc’yi karşılaştırıp yeni denge mol sayısını hesaplar.',kalip='tablo',
- metin='2 L hacimli kapalı bir kapta\nSO₂(g) + NO₂(g) ⇌ SO₃(g) + NO(g)    Kc = 4\ntepkimesi sabit sıcaklıkta dengededir. Dengedeki gazların mol sayıları ile bu dengedeki kaba sabit sıcaklıkta eklenen gaz miktarları tabloda verilmiştir.\nEkleme yapıldıktan sonra sistem yeniden dengeye geldiğine göre, yeni dengede SO₃ gazının mol sayısı kaçtır?',
- sekil=SK,dogru=8,yan=[(m9[0],'Sonucu mol/L olarak bırakmış: [SO₃] = 4 mol/L; hacim olan 2 L ile çarpmayı unutmuştur.','dikkat'),
-  (m9[3],'İlerlemeyi ters yönde almış ve 1 mol/L’yi mol sayısı sanmış: 6 − 1 = 5 bulmuştur.','islem'),
-  (m9[1],'Eklemeden sonraki karışımı denge sanmış; SO₃ mol sayısı 4 + 2 = 6 kalmıştır, oysa Q < Kc olduğundan tepkime ileri yönde sürer.','bilgi'),
-  (m9[2],'İlerleme miktarını 1 mol/L yerine 1 mol almış: 6 + 1 = 7 bulmuştur.','islem')],
- istenen='Yeni dengede SO₃ gazının mol sayısı.',ip=['Eklemeden sonraki karışımın hangi yöne ilerleyeceğini belirlemek için önce Q’yu hesapla.'],bilgi=[ICEB,QKB],
- puf='Δn = 0 olsa da eklenenlerle birlikte yeni başlangıç derişimlerini kur; x’i derişim cinsinden çöz.')
+ metin='2 L hacimli kapalı bir kapta\nH₂(g) + I₂(g) ⇌ 2HI(g)\ntepkimesi sabit sıcaklıkta dengededir. Dengedeki gazların mol sayıları ile bu dengedeki kaba sabit sıcaklıkta eklenen gaz miktarları tabloda verilmiştir.\nEkleme yapıldıktan sonra sistem yeniden dengeye geldiğine göre, yeni dengede HI gazının mol sayısı kaçtır?',
+ sekil=SK,dogru=9,yan=[(m9[0],'Sonucu mol/L olarak bırakmış: [HI] = 4,5 mol/L; hacim olan 2 L ile çarpmayı unutmuştur.','dikkat'),
+  (m9[3],'İlerlemeyi ters yönde almış: 7 − 2 = 5 bulmuştur.','islem'),
+  (m9[1],'Eklemeden sonraki karışımı denge sanmış; HI mol sayısı 6 + 1 = 7 kalmıştır, oysa Q < Kc olduğundan tepkime ileri yönde sürer.','bilgi'),
+  (m9[2],'İlerleme miktarını (0,5 mol/L) mol sayısı sanmış: 7 + 2 · 0,5 = 8 bulmuştur.','islem')],
+ istenen='Yeni dengede HI gazının mol sayısı.',ip=['Eklemeden sonraki karışımın hangi yöne ilerleyeceğini düşün.'],bilgi=[ICEB,QKB],
+ puf='Eklenenlerle birlikte yeni başlangıç derişimlerini kur; x’i derişim cinsinden çöz.')
 
 # ================ 10 · zor · verim–sıcaklık, öncüllü
 Tx=[400,500,600,700,800]; Pa=[97,80,60,42,28]; Pb=[90,50,32,20,12]
 assert all(a>b for a,b in zip(Pa,Pb)) and Pa==sorted(Pa,reverse=True) and Pb==sorted(Pb,reverse=True)
-assert Fr(100-Pb[1],100-Pa[1])==Fr(5,2)
+assert 3-Fr(Pa[1],100)==Fr(11,5) and 3-Fr(Pb[1],100)==Fr(5,2) and Fr(5,2)-Fr(11,5)==Fr(3,10)
 pa=[(t,v) for t,v in zip(Tx,Pa)]; pb=[(t,v) for t,v in zip(Tx,Pb)]
 SK=pg('width=7cm,height=5.4cm,axis lines=left,xmin=400,xmax=800,ymin=0,ymax=100,xtick={400,500,600,700,800},xticklabels={400,$T_1$,600,700,800},ytick distance=10,grid=major,major grid style={gray!45,thin},xlabel={Sıcaklık (K)},ylabel={Verim (\\%)},label style={font=\\small},tick label style={font=\\small}',
  f'\\addplot[thick,color=blue!70!black,smooth] coordinates {{{co(pa)}}};\n\\addplot[thick,dashed,color=red!70!black,smooth] coordinates {{{co(pb)}}};\n\\node[anchor=south west,font=\\small] at (axis cs:640,62) {{$P_1$}};\n\\node[anchor=south west,font=\\small] at (axis cs:640,34) {{$P_2$}};')
-w10=onc([True,True,True],['verim sıcaklıkla azaldığından denge sıcaklık artınca girenler yönüne kayar; bu ileri tepkimenin ekzotermik olduğunu gösterir','gaz mol sayısı azalan bu tepkimede basınç artınca verim artar; aynı sıcaklıkta P₁ eğrisi üstte olduğundan P₁ > P₂ dir','T₁ sıcaklığında kalan SO₂ yüzdesi P₁ için 20, P₂ için 50 olduğundan oran 50 ÷ 20 = 2,5 tir'],4)
+w10=onc([True,True,True],['verim sıcaklıkla azaldığından denge sıcaklık artınca girenler yönüne kayar; bu ileri tepkimenin ekzotermik olduğunu gösterir','gaz mol sayısı azalan bu tepkimede basınç artınca verim artar; aynı sıcaklıkta P₁ eğrisi üstte olduğundan P₁ > P₂ dir','T₁ sıcaklığında verim P₁ için %80, P₂ için %50 olduğundan toplam gaz mol sayısı P₁ için 3 − 0,8 = 2,2 mol, P₂ için 3 − 0,5 = 2,5 mol bulunur; fark 0,3 moldür'],4)
 q('0010',10,[A('Isı türünü belirle','Eğriler sıcaklıkla aşağı iner: verim sıcaklıkla azalır, tepkime ekzotermiktir.','I: doğru'),
    A('Basıncı kıyasla','Girenlerde 3, ürünlerde 2 mol gaz var; basınç artınca verim artar. P₁ eğrisi üstte olduğundan P₁ > P₂.','II: doğru'),
-   A('Kalan SO₂’yi bul','T₁’de verim P₁ için %80, P₂ için %50; kalan SO₂ %20 ve %50.','50 ÷ 20 = 2,5'),
+   A('Toplam molü bul','T₁’de verim P₁ için %80, P₂ için %50; Başlangıçta 2 mol SO₂ ve 1 mol O₂ vardır; tepkime tam yürürse toplam mol 3’ten 2’ye iner, yani her 1 mol verim için toplam 1 mol azalır.','P₁: 3 − 0,8 = 2,2 mol · P₂: 3 − 0,5 = 2,5 mol → fark 0,3'),
    A('Sonuç','Üç yargı da doğrudur.','I, II ve III')],
  tipId='de-le',z='zor',alt='Verim–Sıcaklık Grafiği',kaz='Verim–sıcaklık eğrilerinden tepkimenin ısı türünü, basınçların büyüklüğünü ve kalan giren miktarlarını yorumlar.',kalip='grafik',
- metin='Her denemede 2 mol SO₂ ve 1 mol O₂ ile başlanarak\n2SO₂(g) + O₂(g) ⇌ 2SO₃(g)\ntepkimesi, P₁ ve P₂ basınçlarında ve farklı sıcaklıklarda dengeye getiriliyor. Her denemede SO₂’nin SO₃’e dönüşen yüzdesi (verim) grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. P₁ basıncı P₂ basıncından büyüktür.\nIII. T₁ sıcaklığında P₂ basıncındaki dengede kalan SO₂ mol sayısı, P₁ basıncındakinin 2,5 katıdır.\nyargılarından hangileri doğrudur?',
+ metin='Her denemede 2 mol SO₂ ve 1 mol O₂ ile başlanarak\n2SO₂(g) + O₂(g) ⇌ 2SO₃(g)\ntepkimesi, P₁ ve P₂ basınçlarında ve farklı sıcaklıklarda dengeye getiriliyor. Her denemede SO₂’nin SO₃’e dönüşen yüzdesi (verim) grafikte verilmiştir.\nBuna göre,\nI. Tepkime ekzotermiktir.\nII. P₁ basıncı P₂ basıncından büyüktür.\nIII. T₁ sıcaklığında P₂ basıncındaki dengede toplam gaz mol sayısı, P₁ basıncındakinden 0,3 mol fazladır.\nyargılarından hangileri doğrudur?',
  sekil=SK,dogru=w10['dogru'],yan=w10['yan'],sira=w10['sira'],istenen='Grafiğe göre doğru olan yargılar.',
  ip=['Her yargıyı grafikteki eğrilerin konumu ve T₁’deki değerlerle ayrı ayrı sına.'],bilgi=[VRB,SKB],
  puf='Eğrilerin konumuna ve sıcaklıkla gidişine bakarak her yargıyı ayrı sına.')

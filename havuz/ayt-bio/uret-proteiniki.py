@@ -96,7 +96,7 @@ COD=cod_svg()
 # ---------------- bilgi kutuları (örnekler soru sayılarını kullanmaz) ----------------
 BKOD=B('Kodon ve başlangıç','Translasyon, mRNA’da 5’ ucundan başlayarak rastlanan ilk AUG kodonunda başlar; kodonlar üçer nükleotitlik gruplar hâlinde, örtüşmeden okunur. AUG aynı zamanda metiyonin kodonudur. UAA, UAG ve UGA amino asit şifrelemez ve okumayı sonlandırır.')
 BRNA=B('Protein sentezinde RNA çeşitleri','mRNA genin kalıp ipliğinden kopyalanır ve kodon dizisini taşır. tRNA bir ucunda amino asit taşır, antikodonuyla mRNA kodonuna eşleşir. rRNA, ribozomun protein ile birlikte oluşturduğu yapısal bileşenidir. Üçü de DNA’dan transkripsiyonla sentezlenir.')
-BDEN=B('Deney verisini yorumlama','Bir bileşen yokken olay gerçekleşmiyorsa o bileşen olay için gereklidir. Bir yargıya ulaşılabilmesi için yargının doğrudan verilerden çıkarılabilmesi gerekir; gerçekte doğru bir bilgi veride görünmüyorsa o veriyle desteklenmiş sayılmaz.')
+BDEN=B('Deney verisini yorumlama','Bir bileşen yokken olay gerçekleşmiyorsa o bileşen olay için gereklidir. Bir yargıya ulaşılabilmesi için yargının doğrudan verilerden çıkarılabilmesi gerekir; yalnız verilen veriden doğrudan çıkarılabilen yargılara ulaşılabilir.')
 BGRAF=B('Grafik okuma','Sabit hızla ilerleyen bir olayda grafik doğrusal artar; eğimin aynı olması hızın aynı olduğunu, doğruların birbirinden yatay uzaklığı ise olayların başlama zamanı farkını gösterir.')
 BTRNA=B('Kodon–antikodon eşleşmesi','tRNA’nın antikodonu, bağlandığı kodona tümleyendir ve karşılıklı iki ucu zıt yönlüdür; mRNA 5’→3’ yönündeyse antikodon 3’→5’ yönünde yazıldığında kodonla aynı sırada karşı karşıya gelir. Dur kodonlarına karşılık gelen tRNA yoktur. Aynı kodon tekrarlanırsa aynı tRNA çeşidi yeniden kullanılabilir.')
 BMUT=B('Mutasyon ve polipeptit','Nükleotit değişimi aynı amino asidi şifreleyen bir kodon oluşturursa polipeptit değişmez; bir nükleotitin eklenmesi ya da çıkması çıkış noktasından sonraki kodonları değiştirir. Kodonun dur kodonuna dönüşmesi polipeptiti kısaltır.')
@@ -144,15 +144,15 @@ TUP=[('1','Var','Var','Var','Var','Var'),('2','Yok','Var','Var','Var','Yok'),('3
 assert all(t[5]=='Var' for t in TUP if all(x=='Var' for x in t[1:5])) and sum(1 for t in TUP if t[5]=='Var')==1
 for t in TUP[1:]: assert t[1:5].count('Yok')==1 and t[5]=='Yok'
 d3={'I':('Polipeptit sentezi için ribozom, mRNA, tRNA ve amino asidin dördü de gereklidir.',True,'her bileşen tek tek çıkarıldığında polipeptit sentezlenmemiştir; bu, dört bileşenin de gerekli olduğunu gösterir'),
-    'II':('tRNA’ların antikodonları mRNA’daki kodonlarla eşleşir.',False,'bu bilgi doğrudur ama tüplerde antikodon–kodon eşleşmesi incelenmediğinden tablodaki verilerden çıkarılamaz'),
+    'II':('Ribozom bulunmayan ortamda mRNA ve tRNA, polipeptit sentezini tek başına sağlayabilir.',False,'ribozomun bulunmadığı 2. tüpte mRNA, tRNA ve amino asit bulunduğu hâlde polipeptit sentezlenmemiştir; veri bu yargıyla çelişir'),
     'III':('Polipeptit sentezi için DNA da gereklidir.',False,'DNA hiçbir tüpe eklenmediği hâlde 1. tüpte polipeptit sentezlenmiştir; veri bu yargıyla çelişir')}
 sab3=('{x}. yargıya ulaşılabileceğini görememiş: {n}.','{x}. yargıya ulaşılamayacağını görememiş: {n}.')
 r3=onc(d3,'E',neg=True,sab=sab3); assert r3['dogru']=='II ve III'
-Q('0003','transl','orta','tablo','Hücre dışı protein sentezi deneyi','Hücre dışı sistem deneyinden hangi sonuçlara ulaşılabileceğini ayırt eder.','Bir bileşen yokken sentez olmuyorsa bileşen gereklidir; verilerde bulunmayan bilgiye bu deneyle ulaşılamaz.','Doğru bilgiyi her zaman veriden çıkarılabilir saymak.','bileşen eksikliği ve sonuç yorumu',
+Q('0003','transl','orta','tablo','Hücre dışı protein sentezi deneyi','Hücre dışı sistem deneyinden hangi sonuçlara ulaşılabileceğini ayırt eder.','Bir bileşen yokken sentez olmuyorsa bileşen gereklidir; verilerle çelişen yargıya ulaşılamaz.','Verideki karşılaştırmayı yargının hükmüyle eşleştirmemek.','bileşen eksikliği ve sonuç yorumu',
  oncad(d3,True,('ulaşılabilir','ulaşılamaz'),son='Deney sonuçlarından çıkarılamayan yargılar bir arada yazılır.'),
- metin=oncmetin('Bir araştırmacı, hücre özütü içermeyen bir düzenekte 5 tüp hazırlıyor. Her tüpe ATP ve gerekli enzimler eklenmiş, tüplerin hiçbirine DNA konmamıştır. Tüplere eklenen bileşenler ve polipeptit sentezlenip sentezlenmediği tabloda verilmiştir.',d3,'Buna göre, bu deney sonuçlarından yararlanarak yukarıdaki yargılardan hangilerine ulaşılamaz?'),
+ metin=oncmetin('Bir araştırmacı, hücre özütü içermeyen bir düzenekte 5 tüp hazırlıyor. Her tüpe ATP ve gerekli enzimler eklenmiş, tüplerin hiçbirine DNA konmamıştır. Tüplere eklenen bileşenler ve polipeptit sentezlenip sentezlenmediği tabloda verilmiştir.',d3,'Buna göre, yalnız bu tablodaki verilerden doğrudan çıkarılabilenler dikkate alındığında yukarıdaki yargılardan hangilerine ulaşılamaz?'),
  sekil=tablo_svg(['Tüp','Ribozom','mRNA','tRNA','Amino asit','Polipeptit sentezi'],[list(t) for t in TUP]),dogru=r3['dogru'],yan=r3['yan'],sira=r3['sira'],
- istenen='Deney sonuçlarından çıkarılamayan yargılar',ip=['Her yargı için tabloda bunu gösteren bir karşılaştırma var mı diye bak.'],bilgi=[BDEN],puf='Veride görünmeyen bilgi, doğru olsa da bu deneyle desteklenmez.')
+ istenen='Deney sonuçlarından çıkarılamayan yargılar',ip=['Her yargı için tabloda bunu gösteren bir karşılaştırma var mı diye bak.'],bilgi=[BDEN],puf='Her yargıyı tablodaki bir karşılaştırmayla doğrula ya da çürüt.')
 
 # ===== 04 · orta · grafik · üç ribozom, zaman–uzunluk
 HIZ=2; UZ=60; BAS={1:0,2:10,3:20}; BIT={k:v+UZ//HIZ for k,v in BAS.items()}
@@ -162,7 +162,7 @@ assert aa_at(2,35)==50 and BAS[2]<=35<BIT[2]          # II
 assert all(aa_at(k,BIT[k])==UZ for k in BAS)          # III: hepsi aynı uzunlukta
 d4={'I':('25. saniyede mRNA üzerinde üç ribozom da translasyon yapmaktadır.',True,'1. ribozom 30. saniyeye, 2. ribozom 40. saniyeye, 3. ribozom 50. saniyeye kadar sentez yaptığından 25. saniyede üçü de etkindir'),
     'II':('35. saniyede 2. ribozomun sentezlediği polipeptit zincirinde 50 amino asit bulunur.',True,'2. ribozom 10. saniyede başlamış ve saniyede 2 amino asit eklediğinden 35. saniyede 50 amino asitlik zincire ulaşmıştır'),
-    'III':('3. ribozomun tamamladığı polipeptit, 1. ribozomunkinden daha kısadır.',False,'her üç ribozom da aynı mRNA’yı sonuna kadar okur ve 60 amino asitlik aynı polipeptiti tamamlar; yalnız başlama zamanları farklıdır')}
+    'III':('3. ribozom, 1. ribozomdan daha hızlı ilerlemektedir.',False,'üç doğru da paraleldir; eğimler eşit olduğundan ribozomların ilerleme hızı aynıdır, yalnız başlama zamanları farklıdır')}
 r4=onc(d4,'D'); assert r4['dogru']=='I ve II'
 def f4():
     b=[r'\begin{axis}[width=8.2cm,height=5.4cm,xmin=0,xmax=56,ymin=0,ymax=70,xtick={0,10,20,30,40,50},ytick={0,20,40,60},axis lines=left,xlabel={Zaman (saniye)},ylabel={Polipeptitteki amino asit sayısı},tick label style={font=\footnotesize},label style={font=\small},every axis plot/.append style={line width=1.6pt},grid=both,grid style={black!12}]']
@@ -170,7 +170,7 @@ def f4():
     for k in (1,2,3): b.append(rf'\addplot[{sty[k]}] coordinates {{({BAS[k]},0)({BIT[k]},{UZ})}};')
     for k in (1,2,3): b.append(rf'\node[font=\small\bfseries,anchor=west] at (axis cs:{BIT[k]+.8},{UZ}) {{{k}}};')
     b.append(r'\end{axis}'); return tk('\n'.join(b),.95)
-Q('0004','transl','orta','grafik','Polizomda ribozomların ilerlemesi','Grafikten ribozomların başlama zamanı ve polipeptit uzunluğunu yorumlar.','Aynı hızla ilerleyen ribozomların doğruları paraleldir; her ribozom aynı polipeptiti tamamlar.','Geç başlayan ribozomun daha kısa polipeptit yaptığını sanmak.','grafikte ribozom ilerlemesi',
+Q('0004','transl','orta','grafik','Polizomda ribozomların ilerlemesi','Grafikten ribozomların başlama zamanı ve polipeptit uzunluğunu yorumlar.','Aynı hızla ilerleyen ribozomların doğruları paraleldir; eğimler hızı, yatay uzaklık başlama farkını gösterir.','Geç başlayan ribozomun daha yavaş ya da daha kısa polipeptit yaptığını sanmak.','grafikte ribozom ilerlemesi',
  oncad(d4,False,son='Doğru yargılar bir arada yazılır.',bas=[A('Grafiği oku','Her ribozomun başlama anı ve dur kodonuna ulaştığı an doğruların başlangıç ve bitiş noktalarından okunur.','1. ribozom 0 – 30 s · 2. ribozom 10 – 40 s · 3. ribozom 20 – 50 s')]),
  metin=oncmetin('Şekilde, bir mRNA üzerinde translasyon yapan üç ribozomun (1, 2 ve 3) sentezlediği polipeptit zincirlerindeki amino asit sayısının zamanla değişimi gösterilmiştir. Ribozomların üçü de mRNA’nın başlangıç kodonundan başlayıp dur kodonuna kadar aynı sabit hızla ilerlemekte; dur kodonuna ulaşan ribozom polipeptiti tamamlayıp mRNA’dan ayrılmaktadır.',d4,'Buna göre, yukarıdaki yargılardan hangileri doğrudur?'),
  sekil=f4(),dogru=r4['dogru'],yan=r4['yan'],sira=r4['sira'],istenen='Grafikle uyumlu doğru yargılar',ip=['Her doğrunun hangi saniyede başlayıp hangi saniyede bittiğini ayrı ayrı oku.'],bilgi=[BGRAF],puf='Paralel doğrular: aynı hız, farklı başlangıç zamanı.')
@@ -193,7 +193,7 @@ Q('0005','kodlama','orta','tablo','tRNA çeşidi ve peptit bağı sayısı','Kod
   A('Toplamı bul','tRNA çeşidi sayısı ile peptit bağı sayısı toplanır.','4 + 4')],
  metin='Tabloda, bir bakteri hücresindeki altı tRNA çeşidinin antikodonları 3’→5’ yönünde verilmiştir. Bu hücrede mRNA’nın 5’–AUGUUCGCCUUCGAAUAG–3’ bölümü başlangıç kodonundan başlayarak dur kodonuna kadar eksiksiz translasyona uğramaktadır. Her tRNA çeşidi yalnız kendi antikodonuna tümleyen kodona bağlanmakta ve bir tRNA çeşidi yeniden kullanılabilmektedir.\nBuna göre, bu translasyonda kullanılan tRNA çeşidi sayısı ile sentezlenen polipeptitteki peptit bağı sayısının toplamı kaçtır?',
  sekil=tablo_svg(['tRNA','Antikodon (3’→5’)'],[[k,v] for k,v in ANT.items()]),dogru=VAL5['dogru'],yan=VAL5['yan'],
- istenen='tRNA çeşidi sayısı ile peptit bağı sayısının toplamı',ip=['Önce kaç farklı kodonun amino asit şifrelediğini ve kaç amino asit bağlandığını say.'],bilgi=[BTRNA],puf='Farklı kodon sayısı tRNA çeşidini, amino asit sayısı eksi bir peptit bağını verir.')
+ istenen='tRNA çeşidi sayısı ile peptit bağı sayısının toplamı',ip=['mRNA’yı kodonlara ayır, her kodonu tabloyla eşleştir.'],bilgi=[BTRNA],puf='Farklı kodon sayısı tRNA çeşidini, amino asit sayısı eksi bir peptit bağını verir.')
 
 # ===== 06 · orta · düz · mutasyon yargıları (yanlış)
 M6='AUGGAACUGAAAGGCUACUGA'; K6=[M6[i:i+3] for i in range(0,21,3)]
@@ -227,7 +227,7 @@ Q('0007','sifre','zor','şekilli','Sınırlı nükleotitle kodon çeşitleri','K
   A('Amino asitleri çizelgeden ayır','Kalan 26 kodonun şifrelediği amino asitler çizelgeden okunur ve tekrar edenler bir kez sayılır.','11 farklı amino asit'),
   A('Sonuçları sırala','Kodon çeşidi, dur kodonu sayısı ve amino asit çeşidi sırayla yazılır.','27 – 1 – 11')],
  metin='Şekilde genetik şifre çizelgesi verilmiştir. Bir araştırmacı, hücre dışı protein sentezi düzeneğinde yalnız adenin, sitozin ve urasil nükleotitlerinden oluşan yapay mRNA’lar kullanıyor; bu üç nükleotit mRNA’larda her sırada bulunabilmektedir.\nBuna göre, bu mRNA’larda bulunabilecek kodon çeşidi, dur kodonu çeşidi ve şifrelenen amino asit çeşidi sayıları sırasıyla aşağıdakilerden hangisidir?',
- sekil=COD,dogru=dg7,yan=D7,sira=yer('E',dg7,[x[0] for x in D7]),istenen='Kodon, dur kodonu ve amino asit çeşidi sayıları',ip=['Önce üç nükleotitle kaç kodon yazılabildiğini bul; sonra çizelgede guanin içeren kodonları dışarıda bırak.'],bilgi=[BSAY],puf='Kodon sayısı n³; amino asit çeşidi çizelgeden tekrarsız sayılır.')
+ sekil=COD,dogru=dg7,yan=D7,sira=yer('E',dg7,[x[0] for x in D7]),istenen='Kodon, dur kodonu ve amino asit çeşidi sayıları',ip=['Önce üç nükleotitle kaç kodon yazılabildiğini bul; sonra yazılabilecek kodonların hangi nükleotitleri içerdiğine bak.'],bilgi=[BSAY],puf='Kodon sayısı n³; amino asit çeşidi çizelgeden tekrarsız sayılır.')
 
 # ===== 08 · orta · tablo · bakteri kültürleri, engelleyici maddeler
 T8=[('1','Yok','Var','Var'),('2','X','Yok','Yok'),('3','Y','Var','Yok')]
@@ -235,7 +235,7 @@ dg8='X: transkripsiyon – Y: translasyon'
 D8=[('X: translasyon – Y: transkripsiyon','Maddelerin etkilerini ters yazmış; oysa X varlığında yeni RNA oluşmadığından X, Y varlığında yeni RNA oluşup polipeptit oluşmadığından Y etkilidir.','dikkat'),
     ('X: replikasyon – Y: translasyon','X için replikasyonu seçmiş; oysa replikasyon engellense de RNA sentezi sürebilir, 2. kültürde RNA hiç oluşmadığından X transkripsiyonu engeller.','bilgi'),
     ('X: transkripsiyon – Y: replikasyon','Y için replikasyonu seçmiş; oysa 3. kültürde RNA oluşurken polipeptit oluşmadığından Y translasyonu engeller.','bilgi'),
-    ('X: translasyon – Y: replikasyon','Her iki maddenin etkisini yanlış yorumlamış; X RNA sentezini, Y polipeptit sentezini engelleyen maddedir.','bilgi')]
+    ('X: translasyon – Y: replikasyon','X’in RNA oluşumunu değil polipeptiti engellediğini sanıp translasyonu seçmiş; Y’de polipeptit oluşmadığı için sorunu çoğalmaya (replikasyon) bağlamış; oysa X RNA sentezini (transkripsiyon), Y RNA okunmasını (translasyon) engeller.','bilgi')]
 assert len({dg8}|{x[0] for x in D8})==5 and T8[1][2:]==('Yok','Yok') and T8[2][2:]==('Var','Yok')
 Q('0008','transk','orta','tablo','Engelleyici maddelerin etkisi','Kültür verilerinden maddelerin hangi evreyi engellediğini çıkarır.','Yeni RNA oluşmuyorsa transkripsiyon, RNA oluşup polipeptit oluşmuyorsa translasyon engellenmiştir.','Polipeptit oluşmamasını her zaman translasyon engeli saymak.','transkripsiyon ve translasyon engeli',
  [A('Kontrolü incele','Madde eklenmeyen kültürde hem yeni RNA hem yeni polipeptit oluşur; engellenen olay bu duruma göre anlaşılır.','1. kültür: RNA var, polipeptit var'),
@@ -287,7 +287,7 @@ t=K10.index('TAC'); assert t==2
 K10m=K10[:t]+'C'+K10[t+1:]; M10m=mrna_of(K10m); assert M10m[:5]=='GCGUG' and M10m.index('AUG')==6
 mu,smu=cevir(M10m,M10m.index('AUG')); assert ''.join(mu)=='MN' and smu
 dg10=ad3(mu); assert KOD['GUG']=='V' and KOD['AAU']=='N' and KOD['UAG']=='*'
-D10=[('Val – His – Glu – Leu – Ala','Translasyonun, değişen GUG kodonuyla başladığını sanmış; oysa GUG başlangıç kodonu değildir ve okuma sonraki AUG kodonundan başlar.','dikkat'),
+D10=[('Val – His – Glu – Leu – Ala','Translasyonun, değişen GUG kodonuyla başladığını sanmış; oysa bu soruda translasyon yalnız AUG kodonundan başlar; okuma sonraki AUG kodonundan başlar.','dikkat'),
      ('Met – His – Glu – Leu – Ala','Mutasyonun polipeptiti etkilemediğini sanmış; oysa ilk AUG kodonu bozulduğundan okuma başka bir AUG kodonundan başlar.','bilgi'),
      ('His – Glu – Leu – Ala','Okumayı bozulan AUG’den sonraki kodondan sürdürmüş; oysa ribozom, ilk bozulmamış AUG kodonunu arar.','dikkat'),
      ('Asn','Başlangıç kodonunu amino asit saymamış; oysa ikinci AUG kodonu da metiyonin şifreler ve ilk amino asit olur.','dikkat')]
@@ -300,7 +300,7 @@ def f10():
 Q('0010','mutasyon','zor','şekilli','Başlangıç kodonunun bozulması','Başlangıç kodonunu bozan mutasyonun okuma çerçevesine ve polipeptit dizilimine etkisini değerlendirir.','İlk AUG bozulursa okuma sonraki AUG’den, onun belirlediği çerçeveyle başlar.','Okumanın bozulan kodondan ya da aynı çerçeveden sürdüğünü sanmak.','başlangıç kodonu mutasyonu',
  [A('mRNA’yı yaz','Kalıp iplikteki her nükleotitin tümleyeni alınarak mRNA oluşturulur.','GCAUGCAUGAAUUAGCUUGACC'),
   A('Mutasyonu uygula','Kalıptaki T nükleotidinin C ile değişmesi, mRNA’da bu kodonun ilk nükleotidinin A yerine G olmasına yol açar.','İlk AUG → GUG'),
-  A('Yeni başlangıcı bul','GUG başlangıç kodonu değildir; ribozom mRNA’da ilk bulduğu bozulmamış AUG’den başlar ve çerçeve bu noktadan belirlenir.','AUG · AAU · UAG'),
+  A('Yeni başlangıcı bul','Bu soruda translasyon yalnız AUG kodonundan başlar; ribozom mRNA’da ilk bulduğu bozulmamış AUG’den başlar ve çerçeve bu noktadan belirlenir.','AUG · AAU · UAG'),
   A('Dizilimi yaz','Dur kodonuna kadar okunan kodonların amino asitleri sırayla yazılır.','Met – Asn')],
  metin='Şekilde, bir bakteri geninin kalıp ipliğinin 3’→5’ yönündeki 22 nükleotitlik bölümü verilmiştir. Bu bölümün tamamından mRNA sentezlenmekte ve ribozom, mRNA’da rastladığı ilk AUG kodonundan translasyonu başlatıp ilk dur kodonunda sonlandırmaktadır. Bu bölümdeki ilk AUG kodonunu şifreleyen TAC üçlüsünün T nükleotidi, mutasyonla C ile yer değiştiriyor.\nKodon–amino asit ilişkileri: AUG: Met, CAU: His, GAA: Glu, UUA: Leu, GCU: Ala, AAU: Asn, GUG: Val; UGA ve UAG: dur.\nBuna göre, mutasyondan sonra oluşan polipeptitin amino asit dizilimi aşağıdakilerden hangisidir?',
  sekil=f10(),dogru=dg10,yan=D10,sira=yer('D',dg10,[x[0] for x in D10]),istenen='Mutant polipeptitin amino asit dizilimi',ip=['Mutasyondan sonra mRNA’yı yeniden yaz ve ribozomun başlayabileceği AUG kodonunu ara.'],bilgi=[BKUL],puf='Önce mutant mRNA’yı yaz, ilk AUG’yi bul, çerçeveyi oradan kur.')

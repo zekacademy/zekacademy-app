@@ -95,7 +95,7 @@ def hucre_svg(n):
        '\\draw[line width=1.6pt,rounded corners=2.5pt,fill=orange,fill opacity=.18] '+' -- '.join('(%.3f,%.3f)'%p for p in MP)+' -- cycle;',
        '\\draw[line width=1pt] (-.3,-.62) circle (.2);']
     for (x,y) in [(-3.9,.8),(-3.6,-.2),(-3.2,.55),(-4.3,-.5),(3.8,-.9),(4.2,.2),(3.5,-1.8),(-3.3,-1.8)]: b.append(f'\\fill[blue!55!black] ({x},{y}) circle (.07);')
-    th=math.radians(52); b.append(lab(n['arasi'],3.3,2.2,2.775*math.cos(th),1.55*math.sin(th)))
+    th=math.radians(35); b.append(lab(n['arasi'],3.3,2.2,2.775*math.cos(th),1.55*math.sin(th)))
     th=math.radians(205); b.append(lab(n['ic'],-3.9,-2.1,2.55*math.cos(th),1.35*math.sin(th)))
     b.append(lab(n['matriks'],1.0,2.45,1.0,.55))
     b.append(lab(n['sit'],-4.5,1.9,-3.5,1.05))
@@ -283,9 +283,9 @@ gr8=r'''\draw[-{Stealth[length=2.2mm,width=1.8mm]},line width=1pt] (0,0)--(6.4,0
 SK8=tk(gr8,.85)
 q('0008',tipId='hs-grafik',z='zor',alt='ATP hesapları',kaz='O₂ ve CO₂ grafiğinden iki yolla yıkılan glikozları bulup toplam net ATP’yi hesaplar.',kalip='grafik',
  kart=f'{k8} · kapalı kapta maya, O₂ ve CO₂',
- metin='Glikozlu besiyeri içeren kapalı bir kapta maya hücreleri bulunmakta ve kaptaki O₂ ile CO₂ moleküllerinin sayısı zamanla ölçülmektedir. Sonuçlar grafikte verilmiştir. Maya hücreleri ATP’yi yalnız oksijenli solunumla ve etil alkol fermantasyonuyla üretmekte, glikozun tamamını yıkmakta; ortamda başka CO₂ kaynağı ya da CO₂ tüketimi bulunmamaktadır. ETS’de 1 NADH’ın yükseltgenmesiyle 3 ATP, 1 FADH₂’nin yükseltgenmesiyle 2 ATP sentezlendiği ve glikolizde oluşan NADH’ın da ETS’de yükseltgendiği kabul edilecektir.\nBuna göre, 10. dakikaya kadar maya hücrelerinin hücresel solunumla kazandığı toplam net ATP sayısı kaçtır?',
+ metin='Glikozlu besiyeri içeren kapalı bir kapta maya hücreleri bulunmakta ve kaptaki O₂ ile CO₂ moleküllerinin sayısı zamanla ölçülmektedir. Sonuçlar grafikte verilmiştir. Maya hücreleri ATP’yi yalnız oksijenli solunumla ve etil alkol fermantasyonuyla üretmekte, glikozun tamamını yıkmakta; ortamda başka CO₂ kaynağı ya da CO₂ tüketimi bulunmamaktadır. ETS’de 1 NADH’ın yükseltgenmesiyle 3 ATP, 1 FADH₂’nin yükseltgenmesiyle 2 ATP sentezlendiği ve glikolizde oluşan NADH’ın da ETS’de yükseltgendiği kabul edilecektir.\nBuna göre, 10. dakikaya kadar maya hücrelerinin oksijenli solunum ve etil alkol fermantasyonuyla kazandığı toplam net ATP sayısı kaçtır?',
  dogru=int(atp8),yan=y8,
- istenen='10. dakikaya kadar kazanılan toplam net ATP sayısı.',
+ istenen='10. dakikaya kadar oksijenli solunum ve fermantasyonla kazanılan toplam net ATP sayısı.',
  ip=['O₂ yalnız bir yolda tüketilir; bu yolun CO₂’sini ayırarak kalan CO₂’nin hangi yola ait olduğunu bul ve iki yolun glikoz başına ATP’sini ayrı hesapla.'],
  bilgi=[B('Gaz alışverişi ve glikoz','oksijenli solunumda tüketilen O₂ ile çıkan CO₂ sayıları eşittir · Etil alkol fermantasyonunda ise O₂ tüketilmez ve glikoz başına CO₂ çıkar')],
  ad=[A('Oksijenli solunumu bul','Tüketilen O₂ oksijenli solunumdandır; 1 glikoz 6 O₂ tüketir.','24 ÷ 6 = 4 glikoz'),
@@ -299,12 +299,12 @@ SIRA[8]=8
 # ===================== Q9 · bitki gaz alışverişi · zor · sayısal =====================
 k9=kartla(9,'Işıkta solunum ve net CO₂ alışverişi','Işık varken de solunum sürer; net CO₂ alışverişi fotosentezle alınan ve solunumla verilen CO₂’nin farkıdır. Solunum hızı, ışık şiddeti sıfırken ölçülen CO₂ salınımından okunur.','Işık varken solunumun durduğunu sanmak; net CO₂ alımını solunuma ait saymak.','zor','grafik',4,'hs-grafik')
 S9=12; N9=24
-g9=Fr(S9,6); atp9=g9*NET_G; assert atp9==76
-y9=[(int(Fr(S9,KG['CO2'])*NET_G),'Solunum CO₂’sini yalnız Krebs döngüsündeki CO₂ (glikoz başına 4) kabul edip glikoz sayısını fazla bulmak.','islem'),
-    (int(Fr(N9,6)*NET_G),'Net CO₂ alımını solunumla yıkılan glikoz hesabında kullanmak.','islem'),
-    (int(Fr(N9+S9,6)*NET_G),'Fotosentezle alınan toplam CO₂’yi solunumla yıkılan glikoz hesabında kullanmak.','islem'),
-    (S9*NET_G,'Solunumla verilen CO₂ sayısını yıkılan glikoz sayısı sanmak.','dikkat')]
-assert sayisal(int(atp9),y9)==[76,114,152,228,456]
+g9=Fr(S9,6); NN=GL['NADH']+PO['NADH']+KG['NADH']; atp9=g9*NN; assert atp9==20
+y9=[(int(Fr(S9,KG['CO2'])*NN),'Solunum CO₂’sini yalnız Krebs döngüsündeki CO₂ (glikoz başına 4) kabul edip glikoz sayısını fazla bulmak.','islem'),
+    (int(Fr(N9,6)*NN),'Net CO₂ alımını solunumla yıkılan glikoz hesabında kullanmak.','islem'),
+    (int(Fr(N9+S9,6)*NN),'Fotosentezle alınan toplam CO₂’yi solunumla yıkılan glikoz hesabında kullanmak.','islem'),
+    (S9*NN,'Solunumla verilen CO₂ sayısını yıkılan glikoz sayısı sanmak.','dikkat')]
+assert sayisal(int(atp9),y9)==[20,30,40,60,120]
 gr9=r'''\draw[-{Stealth[length=2.2mm,width=1.8mm]},line width=1pt] (0,0)--(6.6,0);\draw[-{Stealth[length=2.2mm,width=1.8mm]},line width=1pt] (0,-1.9)--(0,3.9);
 \draw (0,-1.5)--(-.09,-1.5) node[left,font=\footnotesize] {$-12$};\draw (0,0)--(-.09,0) node[left,font=\footnotesize] {0};\draw (0,3)--(-.09,3) node[left,font=\footnotesize] {24};
 \draw (5.4,0)--(5.4,-.09) ;\node[font=\small\bfseries,below] at (5.4,-.08) {K};
@@ -313,17 +313,17 @@ gr9=r'''\draw[-{Stealth[length=2.2mm,width=1.8mm]},line width=1pt] (0,0)--(6.6,0
 \draw[dashed,line width=.6pt] (5.4,0)--(5.4,3);\draw[dashed,line width=.6pt] (0,3)--(5.4,3);
 \node[font=\footnotesize,text width=2cm,align=left] at (7.6,1.2) {$+$: alınan\\$-$: verilen};'''
 SK9=tk(gr9,.8)
-q('0009',tipId='hs-grafik',z='zor',alt='ATP hesapları',kaz='Işık şiddetine bağlı net CO₂ alışverişi grafiğinden solunum hızını okuyup oksijenli solunumla sentezlenen net ATP’yi hesaplar.',kalip='grafik',
+q('0009',tipId='hs-grafik',z='zor',alt='Taşıyıcı hesapları',kaz='Işık şiddetine bağlı net CO₂ alışverişi grafiğinden solunum hızını okuyup ETS’de yükseltgenen NADH sayısını hesaplar.',kalip='grafik',
  kart=f'{k9} · bitkide net CO₂ alışverişi',
- metin='Bir bitkinin yaprak hücrelerinde, farklı ışık şiddetlerinde dakikada gerçekleşen net CO₂ alışverişi grafikte gösterilmiştir. Bitki hücrelerinde oksijenli solunum hızı ışık şiddetinden bağımsız ve sabittir; solunum yalnız glikozla yapılmaktadır. ETS’de 1 NADH’ın yükseltgenmesiyle 3 ATP, 1 FADH₂’nin yükseltgenmesiyle 2 ATP sentezlendiği ve glikolizde oluşan NADH’ın da ETS’de yükseltgendiği kabul edilecektir.\nBuna göre, ışık şiddeti K olduğunda bu hücrelerde dakikada oksijenli solunumla kazanılan toplam net ATP sayısı kaçtır?',
+ metin='Bir bitkinin yaprak hücrelerinde, farklı ışık şiddetlerinde dakikada gerçekleşen net CO₂ alışverişi grafikte gösterilmiştir. Bitki hücrelerinde oksijenli solunum hızı ışık şiddetinden bağımsız ve sabittir; solunum yalnız glikozla yapılmaktadır. Glikolizde, pirüvatın asetil CoA’ya dönüşümünde ve Krebs döngüsünde oluşan tüm NADH’ın ETS’de yükseltgendiği kabul edilecektir.\nBuna göre, ışık şiddeti K olduğunda bu hücrelerde dakikada ETS’de yükseltgenen toplam NADH sayısı kaçtır?',
  dogru=int(atp9),yan=y9,
- istenen='K ışık şiddetinde dakikada oksijenli solunumla kazanılan toplam net ATP sayısı.',
+ istenen='K ışık şiddetinde dakikada ETS’de yükseltgenen toplam NADH sayısı.',
  ip=['Solunum hızının ışıktan bağımsız olduğunu kullan; solunuma ait CO₂ salınımını ışığın hiç olmadığı durumdan oku ve glikoz sayısına çevir.'],
  bilgi=[B('Net CO₂ alışverişi','ışık varken hem fotosentez hem solunum sürer; grafikteki değer bu iki olayın farkını gösterir · Işık yokken fotosentez olmaz, yalnız solunumun CO₂ salınımı ölçülür')],
  ad=[A('Solunum hızını oku','Işık şiddeti sıfırken yalnız solunum sürer; hücreler dakikada CO₂ verir.','12 CO₂/dk'),
      A('Glikoza çevir','Oksijenli solunumda 1 glikozdan 6 CO₂ çıkar; hız sabit olduğundan K’de de aynıdır.','12 ÷ 6 = 2 glikoz/dk'),
-     A('Glikoz başına net ATP','Glikolizde 2, Krebs’te 2, ETS’de 10 × 3 + 2 × 2 = 34 ATP.','2 + 2 + 34 = 38'),
-     A('Sonuç','Yıkılan glikoz sayısı ile glikoz başına net ATP çarpılır.','2 × 38 = 76')],
+     A('Glikoz başına NADH','Glikolizde 2, pirüvat dönüşümünde 2, Krebs döngüsünde 6 NADH oluşur.','2 + 2 + 6 = 10 NADH'),
+     A('Sonuç','Yıkılan glikoz sayısı ile glikoz başına NADH sayısı çarpılır.','2 × 10 = 20')],
  puf='Işıktan bağımsız olan olayın değerini ışığın bulunmadığı koşuldan oku.',sekil=SK9)
 SIRA[9]=9
 

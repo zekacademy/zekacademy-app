@@ -108,7 +108,7 @@ assert DIN['Beyin']*1000/TD==140 and EGZ['Beyin']*1000/TE==35
 assert DIN['Sindirim']*1000/TD==240 and EGZ['Sindirim']*1000/TE==25
 assert sum(DIN[o] for o in ORG[:3])==3000 and sum(EGZ[o] for o in ORG[:3])==1700
 def sekil_bar():
-    b=['\\begin{axis}[ybar,bar width=9pt,width=8.2cm,height=6cm,xmin=.4,xmax=4.6,xtick={1,2,3,4},xticklabels={Beyin,Sindirim,Böbrek,Kas},scaled y ticks=false,ymin=0,ymax=13500,ytick={0,3000,6000,9000,12000},xlabel={Organ},ylabel={Kan akışı (mL/dk)},'+LEG+','+AX+',every axis plot/.append style={line width=.8pt}]']
+    b=['\\begin{axis}[ybar,bar width=9pt,width=8.2cm,height=6cm,xmin=.4,xmax=4.6,xtick={1,2,3,4},xticklabels={Beyin,Sindirim,Böbrek,Kas},scaled y ticks=false,ymin=0,ymax=16500,ytick={0,3000,6000,9000,12000},nodes near coords,nodes near coords style={font=\\footnotesize,rotate=90,anchor=west},xlabel={Organ},ylabel={Kan akışı (mL/dk)},'+LEG+','+AX+',every axis plot/.append style={line width=.8pt}]']
     b.append('\\addplot[fill=blue!35,draw=blue!70!black] coordinates {'+' '.join(f'({i+1},{DIN[o]})' for i,o in enumerate(ORG))+'};\\addlegendentry{Dinlenme}')
     b.append('\\addplot[fill=red!45,draw=red!70!black] coordinates {'+' '.join(f'({i+1},{EGZ[o]})' for i,o in enumerate(ORG))+'};\\addlegendentry{Egzersiz}')
     b.append('\\end{axis}')
@@ -164,10 +164,10 @@ d3={'I':(True,'Sitrat Ca²⁺ iyonlarını bağladığında pıhtı oluşmaz, or
 r=onc(d3,'C')
 SK3=tablo_svg(['Tüp','Eklenen madde','Sonuç'],[['K','Yok','Pıhtı oluştu'],['L','Sodyum sitrat','Pıhtı oluşmadı'],['M','Sodyum sitrat ve CaCl₂','Pıhtı oluştu']])
 qo(3,r,*T_KAN,'orta','Kanın pıhtılaşması','Pıhtılaşma deneyinin sonuçlarından Ca²⁺ iyonlarının işlevini çıkarır.','pıhtılaşma deney tablosu','pıhtılaşma deneyi',
- 'yaralanmada trombositler ve pıhtılaşma faktörleri etkinleşir; Ca²⁺ ve K vitamini gerekir; protrombin trombine, trombin de fibrinojeni fibrine dönüştürür','Pıhtılaşmayı yalnız trombositlerin yaptığını sanmak; bir maddenin pıhtıyı engellemesini fibrinojenin azalmasına bağlamak.',
+ 'yaralanmada trombositler ve pıhtılaşma faktörleri etkinleşir; pıhtılaşma faktörleri ve bazı inorganik iyonlar gerekir; protrombin trombine, trombin de fibrinojeni fibrine dönüştürür','Pıhtılaşmayı yalnız trombositlerin yaptığını sanmak; bir maddenin pıhtıyı engellemesini fibrinojenin azalmasına bağlamak.',
  metin='Bir araştırmacı, aynı sağlıklı bireyden alınan eşit hacimli taze kan örneklerini K, L ve M tüplerine koymuş; tüplere tabloda belirtilen maddeleri eklemiştir. Sodyum sitrat kandaki Ca²⁺ iyonlarını bağlayan, CaCl₂ ise ortama Ca²⁺ veren bir maddedir.\nBuna göre,\nI. Pıhtılaşmada Ca²⁺ iyonları gereklidir.\nII. M tüpünde sitratın etkisi, eklenen Ca²⁺ ile ortadan kalkmıştır.\nIII. L tüpünde pıhtı oluşmaması, fibrinojen miktarının azalmasından kaynaklanmıştır.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Tüpleri birbiriyle karşılaştırırken hangi maddenin eklenmesinin sonucu değiştirdiğine bak.'],
- bilgi=[B('Pıhtılaşma','kanın pıhtılaşması trombositlerin ve pıhtılaşma faktörlerinin etkinleşmesiyle gerçekleşir; bu olayda Ca²⁺ iyonları ve K vitamini görev alır')],
+ bilgi=[B('Pıhtılaşma','kanın pıhtılaşması trombositlerin ve pıhtılaşma faktörlerinin etkinleşmesiyle gerçekleşir; bu olay için pıhtılaşma faktörleri ve bazı inorganik iyonlar gerekir')],
  puf='Sonucu değiştiren tek farkı bulmak için tüpleri ikişerli karşılaştır.',sekil=SK3)
 # ---------- 04 · yangısal tepki · orta · şekilli · olumsuz · D ----------
 S4={'y':'I numaralı hücre antikor üretir ve bu antikorlar III numaralı hücrelerin fagositoz yapmasını sağlar.','a':'I numaralı hücre bağ dokuda bulunur ve IV ile gösterilen maddeyi salgılar.','b':'IV ile gösterilen madde II numaralı damarın geçirgenliğini artırır.','c':'III numaralı hücreler II numaralı damarın duvarından doku sıvısına geçebilir.','d':'V numaralı canlılar, III numaralı hücreler tarafından hücre içine alınarak parçalanabilir.'}
@@ -184,7 +184,7 @@ q(4,*T_DOGAL,'orta','Yangısal tepki','Yangısal tepkideki hücre ve maddeleri �
   (S4['d'],'Fagositler mikroorganizmaları hücre içine alıp parçalar; ifade doğrudur.','bilgi')],
  istenen='Yanlış olan ifade.',ip=['Yangısal tepkideki her hücrenin hangi maddeyi salgıladığını ya da hangi işi yaptığını ayrı ayrı sına.'],
  bilgi=[B('Yangısal tepki','doku hasarında mast hücrelerinden histamin salgılanır; damar geçirgenliği artar ve akyuvarlar bölgeye göç ederek fagositoz yapar')],
- puf='Antikor üretiminden hangi hücre grubunun sorumlu olduğunu hatırla.',sekil=sekil_yangi())
+ puf='Her hücrenin yangıdaki görevini ayrı ayrı sına.',sekil=sekil_yangi())
 # ---------- 05 · toplardamar kapakçık · orta · olumsuz · E ----------
 S5={'y':'II numaralı kapakçık açık, III numaralı kapakçık kapalıdır.','a':'Kasların kasılması IV numaralı toplardamar bölümüne baskı yaparak kanın kalbe doğru ilerlemesine yardım eder.','b':'II numaralı kapakçık kapalıdır ve kanın IV numaralı bölümden geriye akmasını engeller.','c':'Kas gevşediğinde kan geriye doğru akmak ister ancak III numaralı kapakçık kapanarak bunu engeller.','d':'Toplardamarlarda kan basıncı düşük olduğundan kanın kalbe dönüşünde kapakçıklar ve kas kasılması önem taşır.'}
 q(5,*T_DAMAR,'orta','Toplardamar kapakçıkları','Çevre kaslarının kasılmasıyla toplardamarda kanın tek yönlü ilerlemesini kapakçık durumlarıyla açıklar.','şekilli','toplardamar ve iskelet kası şeması','toplardamar kapakçık şeması',
@@ -213,29 +213,29 @@ qo(6,r,*T_OZGUL,'orta','Bağışıklık bozuklukları','Alerji, otoimmün hastal
  bilgi=[B('Bağışıklık bozuklukları','alerji, otoimmün hastalık ve doku reddi bağışıklık sisteminin istenmeyen yanıtlarıdır')],
  puf='Her öncülde yanıtın hedefini belirle; sonra doku uyumu ile ret ilişkisini yönüyle sına.')
 # ---------- 07 · kılcal damar grafikleri · orta · B ----------
-S7={'d':'K: Oksijen · L: Karbondioksit · M: Hemoglobin','a':'K: Karbondioksit · L: Oksijen · M: Hemoglobin','b':'K: Oksijen · L: Karbondioksit · M: Glikoz','c':'K: Oksijen · L: Hemoglobin · M: Karbondioksit','e':'K: Hemoglobin · L: Oksijen · M: Karbondioksit'}
+S7={'d':'K: Oksijen · L: Karbondioksit · M: Hemoglobin','a':'K: Karbondioksit · L: Oksijen · M: Hemoglobin','b':'K: Oksijen · L: Karbondioksit · M: Laktik asit','c':'K: Oksijen · L: Hemoglobin · M: Karbondioksit','e':'K: Hemoglobin · L: Oksijen · M: Karbondioksit'}
 q(7,*T_DAMAR,'orta','Kılcal damar','Çalışan bir dokunun kılcal damarı boyunca madde miktarı değişimlerini grafiklerden tanır.','grafik','kılcal damar boyunca madde miktarı grafikleri','kılcal damar madde değişimi grafikleri',
- 'dokuda hücreler oksijen ve besin kullanır, karbondioksit ve atık üretir; bu yüzden kılcal damarda atardamar ucundan toplardamar ucuna oksijen azalır, karbondioksit artar; hemoglobin alyuvar içinde kaldığından değişmez','Kılcal damar boyunca oksijenin arttığını sanmak; hemoglobinin kana karışıp azaldığını düşünmek.',
+ 'kılcal damarda atardamar ucundan toplardamar ucuna madde miktarı, maddenin hücrelerce kullanılmasına ya da üretilmesine ve kılcal damar duvarından geçip geçmemesine göre değişir','Hücrelerin kandan aldığı maddenin kılcal damar boyunca arttığını sanmak; kandan ayrılmayan maddenin de azaldığını düşünmek.',
  [A('K grafiğini yorumla','Atardamar ucundan toplardamar ucuna azalan madde doku hücrelerince kullanılan maddedir.','K: azalıyor → oksijen'),
   A('L grafiğini yorumla','Hücrelerce üretilip kana geçen madde toplardamar ucuna doğru artar.','L: artıyor → karbondioksit'),
   A('M grafiğini yorumla','Alyuvarın içinde bulunan ve kılcal damardan ayrılmayan madde miktarı değişmez.','M: sabit → hemoglobin')],
  metin='Şekilde, çalışmakta olan bir iskelet kasındaki kılcal damarın atardamar ucundan toplardamar ucuna doğru akan kanda bazı maddelerin miktarındaki değişim K, L ve M grafikleriyle gösterilmiştir. Bu değişimlerin üç farklı maddeye ait olduğu bilinmektedir.\nBuna göre, K, L ve M grafikleri aşağıdaki maddelerden hangileriyle doğru eşleştirilmiştir?',
  dogru=S7['d'],sira=yer('B',S7['d'],[S7['a'],S7['b'],S7['c'],S7['e']]),yan=[(S7['a'],'K ve L ters yazılmıştır; kasta oksijen kullanıldığı için azalan eğri oksijene, artan eğri karbondioksite aittir.','bilgi'),
-  (S7['b'],'M grafiği sabit kalmaktadır; kas hücreleri glikozu kullandığından glikoz miktarı toplardamar ucuna doğru azalır ve M ile eşleşmez.','bilgi'),
+  (S7['b'],'M grafiği sabit kalmaktadır; çalışan kasta laktik asit üretilip kana geçtiğinden laktik asit miktarı toplardamar ucuna doğru artar ve M ile eşleşmez.','bilgi'),
   (S7['c'],'L grafiği artmaktadır; hemoglobin alyuvardan ayrılmadığı için artmaz, artan madde karbondioksittir.','bilgi'),
   (S7['e'],'K grafiği azalmaktadır; hemoglobin miktarı değişmediği için azalan eğri hemoglobine değil oksijene aittir.','bilgi')],
  istenen='K, L ve M grafikleriyle doğru eşleştirilen maddeler.',ip=['Çalışan bir doku hücresinin kandan hangi maddeyi aldığını, kana hangi maddeyi verdiğini düşün.'],
- bilgi=[B('Kılcal damarda madde alışverişi','dokulardaki kılcal damarlarda kanla hücreler arasında gaz ve besin alışverişi gerçekleşir; alyuvar içeriği kılcal damardan ayrılmaz')],
+ bilgi=[B('Kılcal damarda madde alışverişi','dokulardaki kılcal damarlarda kanla hücreler arasında madde alışverişi gerçekleşir; kanla hücreler arasındaki geçiş kılcal damar duvarından olur')],
  puf='Eğrinin yönünü (azalan, artan, sabit) önce yaz; sonra her yönü bir maddeyle ilişkilendir.',sekil=sekil_kilcal())
 # ---------- 08 · deri nakli deneyi · zor · öncüllü · C ----------
 d8={'I':(True,'Ret süresinin 12 günden 4 güne inmesi, ilk nakilde oluşan hafıza T hücrelerinin ikinci karşılaşmada hızlı yanıt vermesiyle açıklanır.'),
     'II':(False,'Timusu alınmış farede T lenfositleri yoktur ama B lenfositleri ve antikorlar vardır; ret görülmemesi, reddin antikorlarla değil T lenfositlerle gerçekleştiğini gösterir.'),
     'III':(True,'Timussuz farede ret görülmezken T lenfositleri aktarılınca hızlı ret görülür; bu, doku reddinde T lenfositlerin görevli olduğunu destekler.')}
 r=onc(d8,'C')
-SK8=tablo_svg(['Deney','Y soyundan farenin durumu','Ret süresi'],[['1','Daha önce nakil yok','12 gün'],['2','Ret sonrası 30. gün','4 gün'],['3','Timusu alınmış','Ret yok'],['4','Timussuz + T lenfosit','4 gün']])
+SK8=tablo_svg(['Deney','Y soyundan farenin durumu','Ret süresi'],[['1','Daha önce nakil yok','12 gün'],['2','Ret sonrası 30. günde X nakli','4 gün'],['3','Timusu alınmış','Ret yok'],['4','Timussuz + T lenfosit','4 gün']])
 qo(8,r,*T_OZGUL,'zor','Doku reddi deneyi','Deri nakli deneyinin sonuçlarından hafıza hücreleri ve T lenfositlerin doku reddindeki rolünü çıkarır.','deri nakli deney tablosu','deri nakli ve ret süresi',
  'nakledilen dokunun reddi hücresel bağışıklıkla gerçekleşir; ilk karşılaşmada hafıza T hücreleri oluşur, ikinci karşılaşmada ret daha hızlıdır; timus T lenfositlerin olgunlaştığı yerdir','Doku reddini antikorlara bağlamak; hafıza hücrelerini yalnız B lenfositlere özgü sanmak.',
- metin='Saf ırk X soyundan farelerin derisi, saf ırk Y soyundan farelere nakledilmiş ve nakil yerindeki deri parçasının reddedilmesi için geçen süre izlenmiştir. Her deneyde Y soyundan fareler tabloda belirtilen durumdadır. Nakil yapılan fare, deneyde kendi yaşamı boyunca başka bir antijenle karşılaşmamıştır.\nBuna göre,\nI. 2. deneyde ret süresinin kısalması, 1. deneyde oluşan hafıza hücreleriyle açıklanır.\nII. 3. deneyde ret görülmemesi, doku reddinden antikorların sorumlu olduğunu gösterir.\nIII. 3. ve 4. deneyler birlikte, doku reddinde T lenfositlerin görevli olduğunu destekler.\nifadelerinden hangileri doğrudur?',
+ metin='Saf ırk X soyundan farelerin derisi, saf ırk Y soyundan farelere nakledilmiş ve nakil yerindeki deri parçasının reddedilmesi için geçen süre izlenmiştir. Her deneyde Y soyundan fareler tabloda belirtilen durumdadır; 2. deneyde, 1. deneydeki ret tamamlandıktan 30 gün sonra aynı fareye yine X soyundan deri nakledilmiştir. Nakil yapılan fare, deneyde kendi yaşamı boyunca başka bir antijenle karşılaşmamıştır.\nBuna göre,\nI. 2. deneyde ret süresinin kısalması, 1. deneyde oluşan hafıza hücreleriyle açıklanır.\nII. 3. deneyde ret görülmemesi, doku reddinden antikorların sorumlu olduğunu gösterir.\nIII. 3. ve 4. deneyler birlikte, doku reddinde T lenfositlerin görevli olduğunu destekler.\nifadelerinden hangileri doğrudur?',
  istenen='Doğru olan öncüllerin hangileri olduğu.',ip=['Hangi fare grubunda hangi lenfosit türünün bulunmadığını ya da sonradan eklendiğini belirleyip sonuçla ilişkilendir.'],
  bilgi=[B('Hücresel bağışıklık','T lenfositler timusta olgunlaşır; yabancı doku hücrelerine karşı hücresel bağışıklıkta görev alır ve hafıza hücreleri oluşturur')],
  puf='Önce ilk satırı referans al; sonra her satırın referanstan hangi tek farkla ayrıldığına bak.',sekil=SK8)
@@ -262,11 +262,11 @@ d10={'I':(True,'Virüs yardımcı T lenfositlerinde çoğalır; enfeksiyonun ba�
      'III':(False,'HIV alyuvarları değil, yardımcı T lenfositlerini yok eder; fırsatçı enfeksiyonlar bağışıklık sisteminin zayıflamasından kaynaklanır ve ifade yanlıştır.')}
 assert KV[3]==10 and KV[6]==20 and LT[3]==82 and LT[6]==34 and LT[3]>LT[6] and KV[1]>KV[2]
 r=onc(d10,'E','yanlis')
-qo(10,r,*T_OZGUL,'zor','HIV ve bağışıklık yetmezliği','Enfeksiyon sürecinde virüs miktarı ve T lenfosit sayısı grafiğini bağışıklık yetmezliği mekanizmasıyla birleştirir.','HIV enfeksiyonu virüs–T lenfosit grafiği','HIV grafiği',
- 'HIV yardımcı T lenfositlerini hedef alır; bu hücreler azaldıkça bağışıklık yanıtı zayıflar ve fırsatçı enfeksiyonlar ortaya çıkar','Virüsün alyuvarlara saldırdığını sanmak; virüs miktarı düşükken T lenfosit sayısının sabit kaldığını düşünmek.',
+qo(10,r,*T_OZGUL,'orta','HIV ve bağışıklık yetmezliği','Enfeksiyon sürecinde virüs miktarı ve T lenfosit sayısı grafiğini bağışıklık yetmezliği mekanizmasıyla birleştirir.','HIV enfeksiyonu virüs–T lenfosit grafiği','HIV grafiği',
+ 'HIV bağışıklık sistemi hücrelerini hedef alan bir virüstür; hastalığın seyri virüs miktarı ile ilgili hücre sayısının birlikte izlenmesiyle yorumlanır','Virüsün alyuvarlara saldırdığını sanmak; virüs miktarı düşükken T lenfosit sayısının sabit kaldığını düşünmek.',
  metin='Grafikte, HIV ile enfekte olmuş ve tedavi görmeyen bir bireyde kandaki virüs miktarı ile yardımcı T lenfosit sayısının zamanla değişimi, başlangıç değerlerine göre göreli olarak verilmiştir. Eğrilerden biri virüs miktarını, diğeri yardımcı T lenfosit sayısını göstermektedir.\nBuna göre,\nI. K eğrisinin ilk haftalarda hızla yükselmesi, virüsün yardımcı T lenfositlerinde çoğalmasıyla ilişkilidir.\nII. K eğrisinin 2. ve 8. yıl arasında düşük kalması, bu dönemde L eğrisinin sabit kaldığını gösterir.\nIII. Hastalığın son döneminde görülen fırsatçı enfeksiyonlar, virüsün alyuvarları yok etmesinden kaynaklanır.\nifadelerinden hangileri yanlıştır?',
  istenen='Yanlış olan öncüllerin hangileri olduğu.',ip=['Hangi eğrinin virüse, hangisinin yardımcı T lenfositlere ait olduğunu, virüsün hedef hücresine bakarak belirle.'],
- bilgi=[B('Bağışıklık yetmezliği','HIV yardımcı T lenfositlerini yok ederek bağışıklık sistemini zayıflatır; bu durum fırsatçı enfeksiyonlara yol açar')],
+ bilgi=[B('Bağışıklık yetmezliği','HIV, bağışıklık sisteminin hücrelerini hedef alan bir virüstür; hastalığın seyri virüs miktarı ve ilgili hücre sayısıyla izlenir')],
  puf='Önce eğrileri virüs ve T lenfosit olarak adlandır; sonra her öncülü grafikten ve mekanizmadan ayrı ayrı sına.',sekil=sekil_hiv())
 # ---------- bitiş ----------
 for q_ in P.ANA: q_['kardes']=None

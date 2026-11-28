@@ -45,15 +45,15 @@ V224=Fr(224,10)
 
 # ============ kartlar ============
 card(1,'NŞA yoğunluğundan molekül formülü','Normal koşullarda 1 mol gaz 22,4 L hacim kaplar; yoğunluk × 22,4 değeri mol kütlesini verir ve formül kütlesiyle karşılaştırılır.','Yoğunluğu doğrudan mol kütlesi sanmak; formül kütlesini yanlış toplamak.','kolay','düz',3,'gz-yogunluk','NŞA yoğunluğu, CₓHᵧ formülü')
-card(2,'V–T grafiği ve basınç','Aynı miktar gazın sabit basınçtaki V–T doğrusunun eğimi nR/P ile orantılıdır; eğimi büyük doğru daha düşük basınca aittir.','Eğimi büyük doğruyu yüksek basınca bağlamak; mol sayısının basınçla değiştiğini sanmak.','kolay','öncüllü',3,'gz-grafik','iki izobar, öncüllü yargılar')
+card(2,'V–T grafiği ve basınç','Sabit basınçtaki V–T doğrusunun eğimi nR/P ile orantılıdır; grafikteki iki doğru karşılaştırılırken hangi niceliklerin sabit olduğuna bakılır.','Grafikteki doğruyu gerçek gazlar için sınırsız uzatmak; sabit olan niceliği yanlış belirlemek.','kolay','öncüllü',3,'gz-grafik','iki izobar, öncüllü yargılar')
 card(3,'Vakumlu kaba gaz geçişi','Musluk açılınca her gaz toplam hacmi kaplar; kısmi basınç = n·RT ÷ toplam hacim olup başlangıçtaki P·V çarpımı bu amaçla kullanılır.','Vakum bölmenin hacmini hesaba katmamak; toplam basıncı kısmi basınç sanmak.','orta','şekilli',4,'gz-musluk','üç bölmeli kap, vakum')
 card(4,'Ayrışma, yoğunluk ve sıcaklık','Sabit basınçta hacim n·T ile orantılıdır; kütle korunduğundan yoğunluk 1 ÷ (n·T) ile değişir.','Yoğunluğu mol sayısıyla doğru orantılı almak; sıcaklığı unutmak.','zor','şekilli',5,'gz-yogunluk','NH₃ ayrışması, ısıtma, piston')
-card(5,'Yoğunluk–sıcaklık grafiği','Sabit dış basınçta kapalı kaptaki gazın kütlesi ve mol sayısı değişmez; yoğunluk mutlak sıcaklıkla ters orantılı olduğundan d·T sabittir.','Isınınca mol sayısının azaldığını düşünmek; yoğunluğu sıcaklıkla doğru orantılı sanmak.','orta','grafik',4,'gz-grafik','d–T eğrisi, olumsuz kök')
+card(5,'Yoğunluk–sıcaklık grafiği','Yoğunluk d = P·M ÷ (R·T) ile yazılır; grafikteki noktalardan çarpım ya da oran kurularak yoğunlukla sıcaklık arasındaki ilişki belirlenir.','Grafikteki noktaları karşılaştırmadan yorum yapmak.','orta','grafik',4,'gz-grafik','d–T eğrisi, olumsuz kök')
 card(6,'Farklı koşullardaki örneklerden mol kütlesi','Aynı basınçta n ∝ V ÷ T olur; mol sayısı bulunup kütleye bölünerek mol kütlesine geçilir.','Sıcaklık farkını yok saymak; oranı ters kurmak.','orta','tablo',4,'gz-ideal','tablo: kütle, hacim, sıcaklık')
 card(7,'Karışımın yoğunluğu','Karışımın ortalama mol kütlesi toplam kütle ÷ toplam mol olup d = P·M ÷ (R·T) bağıntısında kullanılır.','Mol kütlelerinin aritmetik ortalamasını almak.','orta','grafik',4,'gz-yogunluk','mol çubuk grafiği, d = PM/RT')
 card(8,'Sabit dış basınçlı piston ve musluk','Piston serbestken gaz basıncı dış basınca eşit kalır; toplam hacim n·T ile orantılıdır, sabit kabın hacmi ayrıca çıkarılır.','Pistonlu bölmenin hacmi yerine toplam hacmi vermek; ısınmayı yok saymak.','zor','şekilli',6,'gz-musluk','rijit kap + pistonlu kap + ısıtma')
 card(9,'Katı tepkimesi ve karışımın ortalama mol kütlesi','Saf madde kütlesi mol sayısına, mol sayısı katsayı oranıyla gaz mol sayısına çevrilir; karışımda M = toplam kütle ÷ toplam mol.','Saflığı yok saymak; kütlesini bulunan katıyı gaza katmak.','zor','düz',6,'gz-ideal','CaCO₃ ayrışması, He ile karışım')
-card(10,'P–1/V grafiği','Sabit sıcaklıkta P = nRT·(1/V) doğrusunun eğimi n ile orantılıdır; sıcaklık artınca eğim büyür.','Eğimi hacimle ilişkilendirmek; sıcaklığın eğimi küçülttüğünü sanmak.','orta','grafik',4,'gz-grafik','iki doğru, öncüllü')
+card(10,'P–1/V grafiği','Sabit sıcaklıkta P = nRT·(1/V) doğrusunun eğimi hangi niceliklere bağlıdır, grafikten ve bağıntıdan çıkarılır.','Eğimi hacimle ilişkilendirmek.','orta','grafik',4,'gz-grafik','iki doğru, öncüllü')
 
 # ============ 0001 · NŞA yoğunluk · kolay ============
 d1=Fr(5,2); M1=d1*V224; assert M1==56
@@ -100,8 +100,8 @@ q('0002',[A('Doğruların eğimini karşılaştır','Aynı T’de I doğrusunun 
  metin='Aynı miktardaki ideal bir gaz örneğinin, sabit tutulan iki farklı basınçta (I ve II) hacminin mutlak sıcaklıkla değişimi şekilde verilmiştir.\nI. I doğrusundaki gazın basıncı II doğrusundakinden küçüktür.\nII. I doğrusundaki gazın mol sayısı II doğrusundakinden fazladır.\nIII. Gerçek gazlar da 0 K’e kadar gaz hâlinde kalarak bu doğruları izler.\nBuna göre bu yargılardan hangileri doğrudur?',
  sekil=SK2,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',
  ip=['Aynı sıcaklıkta iki doğrudaki hacimleri karşılaştırıp V = nRT ÷ P bağıntısına bak.'],
- bilgi=[B('Charles yasası grafiği','Sabit basınçta ve sabit mol sayısında V–T grafiği orijinden geçen bir doğrudur; eğim nR ÷ P kadardır. Örnek: aynı gaz örneği için eğimi 2 kat büyük olan doğru, basıncın yarısına karşılık gelir')],
- puf='Aynı n ve T’de hacim büyükse basınç küçüktür; mol sayısı grafikten değil gazın miktarından gelir.',
+ bilgi=[B('Charles yasası grafiği','Sabit basınçta ve sabit mol sayısında V–T grafiği orijinden geçen bir doğrudur; eğim nR ÷ P kadardır. Örnek: eğimi 0,2 L/K olan bir izobarda 500 K’de gazın hacmi 100 L’dir')],
+ puf='Eğimi nR ÷ P ile ilişkilendir; hangi niceliklerin iki doğruda da aynı kaldığını belirle.',
  tipId='gz-grafik',tip=TIPLER['gz-grafik'],z='kolay',alt='Gaz Grafikleri',kaz='V–T grafiğindeki doğruları basınç ve mol sayısıyla ilişkilendirir.',kalip='öncüllü')
 
 # ============ 0003 · vakumlu üç bölme · orta ============
@@ -182,8 +182,8 @@ q('0005',[A('Eğri üzerindeki değerleri oku','İlk iki noktadaki yoğunluk ve 
  metin='Sürtünmesiz ve hareketli bir pistonla kapatılmış kapta bulunan belirli miktardaki ideal gazın yoğunluğunun, dış basınç sabit tutularak mutlak sıcaklıkla değişimi şekilde verilmiştir.\nI. Gazın yoğunluğu ile mutlak sıcaklığının çarpımı sabittir.\nII. Isıtma sırasında kaptaki gazın mol sayısı azalır.\nIII. Gazın yoğunluğu mutlak sıcaklıkla doğru orantılı değişir.\nBuna göre bu yargılardan hangileri yanlıştır?',
  sekil=SK5,dogru=rn['dogru'],yan=rn['yan'],sira=rn['sira'],istenen='Yanlış olan yargılar.',
  ip=['Grafikteki noktalardan çarpım ya da oran kurarak yoğunlukla sıcaklık arasındaki ilişkinin türünü belirle.'],
- bilgi=[B('Yoğunluk ve sıcaklık','Sabit basınçta ve kapalı kapta d = P·M ÷ (R·T) olduğundan yoğunluk mutlak sıcaklıkla ters orantılıdır. Örnek: 150 K’de 8 g/L olan bir gazın yoğunluğu 300 K’de 4 g/L olur')],
- puf='Yoğunluk–sıcaklık grafiği hiperbol ise ters orantı vardır; kapalı kapta mol sayısı sabittir.',
+ bilgi=[B('Yoğunluk ve sıcaklık','Sabit basınçta ve kapalı kapta d = P·M ÷ (R·T) olduğundan yoğunluk mutlak sıcaklıkla ters orantılıdır. Örnek: P = 2 atm, M = 20 g/mol ve R·T = 20 atm·L/mol ise d = 2 × 20 ÷ 20 = 2 g/L’dir')],
+ puf='Grafikteki noktalardan çarpım ya da oran kur; kütle, basınç ve mol sayısı hakkında bilinenleri de hesaba kat.',
  tipId='gz-grafik',tip=TIPLER['gz-grafik'],z='orta',alt='Gaz Grafikleri',kaz='Sabit basınçta yoğunluk–sıcaklık grafiğini yorumlar.',kalip='grafik')
 
 # ============ 0006 · tablo, mol kütlesi · orta ============
@@ -300,20 +300,20 @@ g.append(f'\\fill ({sx:.3f},{4*sy:.3f}) circle (1.6pt); \\fill[vurgu] ({sx:.3f},
 g.append(N(1.75*sx,8*sy*1.75/2+.4,'I')+N(1.8*sx,4*sy*1.8/2-.4,'\\textcolor{vurgu}{II}'))
 SK10=tk('\n'.join(g))
 d={'I':(True,'T aynıyken eğim nRT ile orantılıdır; eğimi 2 kat büyük olan doğrunun mol sayısı da 2 kattır'),
-   'II':(True,'II doğrusunda P = 2 atm iken 1/V = 1 L⁻¹, yani V = 1 L’dir'),
+   'II':(True,'II doğrusunda P = 4 atm iken 1/V = 2 L⁻¹, yani V = 0,5 L’dir'),
    'III':(True,'eğim n·R·T olduğundan sıcaklık artınca nRT büyür ve doğrunun eğimi büyür')}
 r=_onc(d,[('I',),('II',),('I','II'),('II','III'),('I','II','III')])
 assert r['dogru']=='I, II ve III'
 q('0010',[A('Grafikten eğimleri oku','I doğrusu 1/V = 1 L⁻¹’de 4 atm, II doğrusu 2 atm’dir.','Eğim(I) = 4 · Eğim(II) = 2 (atm·L)'),
  A('I. öncülü incele','T aynı olduğundan eğim n ile orantılıdır.','n(I) = 2·n(II) → I: doğru'),
- A('II. öncülü incele','P = 2 atm için II doğrusunda 1/V okunur ve tersi alınır.','1/V = 1 → V = 1 L → II: doğru'),
+ A('II. öncülü incele','P = 4 atm için II doğrusunda 1/V okunur ve tersi alınır.','1/V = 2 → V = 0,5 L → II: doğru'),
  A('III. öncülü incele','Eğim n·R·T olduğundan T artarsa büyür.','III: doğru'),
  A('Sonucu yaz','Doğru öncüller birleştirilir.',oy(d)+' · Sonuç: '+r['dogru'])],
- metin='Aynı sıcaklıktaki I ve II ideal gaz örneklerinin basıncının 1/V ile değişimi şekilde verilmiştir.\nI. I gazının mol sayısı II gazının mol sayısının 2 katıdır.\nII. II gazı 2 atm basınçta 1 L hacim kaplar.\nIII. Sıcaklık artırılırsa I gazına ait doğrunun eğimi büyür.\nBuna göre bu yargılardan hangileri doğrudur?',
+ metin='Aynı sıcaklıktaki I ve II ideal gaz örneklerinin basıncının 1/V ile değişimi şekilde verilmiştir.\nI. I gazının mol sayısı II gazının mol sayısının 2 katıdır.\nII. II gazı 4 atm basınçta 0,5 L hacim kaplar.\nIII. Sıcaklık artırılırsa I gazına ait doğrunun eğimi büyür.\nBuna göre bu yargılardan hangileri doğrudur?',
  sekil=SK10,dogru=r['dogru'],yan=r['yan'],sira=r['sira'],istenen='Doğru olan yargılar.',
  ip=['P ile 1/V arasındaki bağıntıdan doğrunun eğimini hangi büyüklüklerin belirlediğini çıkar.'],
  bilgi=[B('P–1/V grafiği','Sabit sıcaklıkta P = n·R·T·(1/V) olduğundan P–1/V grafiği orijinden geçen bir doğrudur; eğim n·R·T’dir. Örnek: eğimi 6 atm·L olan bir gaz örneğinde 1/V = 0,5 L⁻¹ iken P = 3 atm olur')],
- puf='Eğim = n·R·T; T aynıysa eğim mol sayısını, mol sayısı aynıysa sıcaklığı yansıtır.',
+ puf='Önce P ile 1/V arasındaki bağıntıyı yaz; eğimde hangi niceliklerin yer aldığına bak.',
  tipId='gz-grafik',tip=TIPLER['gz-grafik'],z='orta',alt='Gaz Grafikleri',kaz='P–1/V grafiğindeki doğruların eğimini mol sayısı ve sıcaklıkla ilişkilendirir.',kalip='grafik')
 
 # ============ bitiş ============

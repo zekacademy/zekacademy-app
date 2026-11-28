@@ -114,7 +114,7 @@ def sk5():
     # halkalar dıştan içe
     rr=R4
     for i in range(len(W5)-1,-1,-1):
-        fill='yellow!45' if i%2==0 else 'orange!25'
+        fill='yellow!40'
         b.append(rf'\draw[line width=.7pt,fill={fill}] (0,0) circle ({rr:.2f});'); rr-=W5[i]
     b.append(rf'\draw[line width=.7pt,fill=green!25] (0,0) circle ({rr:.2f});'); assert abs(rr-.4)<1e-9
     r1=.4+W5[0]/2; r3=.4+W5[0]+W5[1]+W5[2]/2; rk=R4+.05
@@ -191,7 +191,7 @@ o2=['I numaralı yapı, döllenmiş yumurta hücresinin gelişmesiyle oluşmuşt
     'IV numaralı yapıdaki hücreler, mayoz bölünmeyle çoğalarak gövdeyi oluşturur.']
 Q('2','ure','kolay','şekilli','Tohumun yapısı','Çift çenekli bir tohumda tohum kabuğu, çenek, kökçük ve tomurcuğun çimlenmedeki görevlerini ayırt eder.',
   'Tohumda kabuk embriyoyu korur, çenek besin depolar; embriyonun kökçüğü köke, tomurcuğu ise gövde ve yapraklara dönüşür.','Çeneğin sürgüne dönüştüğünü ya da kabuğun embriyoya ait olduğunu düşünmek.','çift çenekli tohum şeması',
-  metin='Şekilde, çift çenekli bir bitkinin tohumunun boyuna kesiti şematik olarak gösterilmiştir. Tohum kabuğu I, çenek II, kökçük III ve tomurcuk IV ile numaralandırılmıştır.\nBuna göre, numaralı yapılarla ilgili aşağıdakilerden hangisi doğrudur?',
+  metin='Şekilde, çift çenekli bir bitkinin tohumunun boyuna kesiti şematik olarak gösterilmiş ve yapıları I, II, III ve IV ile numaralandırılmıştır.\nBuna göre, numaralı yapılarla ilgili aşağıdakilerden hangisi doğrudur?',
   dogru=d2,sira=yer('B',d2,o2),
   yan=[(o2[0],'Tohum kabuğu döllenmiş yumurtadan değil, tohum taslağının örtülerinden oluşur; bu nedenle ifade yanlıştır.','bilgi'),
        (o2[1],'Çenek çimlenmede besin depolar ve embriyoya besin sağlar; gövde ve yaprakları tomurcuk oluşturur.','dikkat'),
@@ -211,7 +211,7 @@ pre3=[('K ile L nin sonuçları, nişasta yıkımını uyaran maddenin embriyoda
       ('L ile M nin sonuçları, giberellinin nişasta yıkımını uyarmada embriyonun yerini tutabildiğini gösterir.',True,'embriyosuz tohumda giberellin yıkımı başlatmıştır'),
       ('K ile N nin sonuçları, absisik asidin embriyonun nişasta yıkımını uyaran etkisini artırdığını gösterir.',False,'N de yıkım görülmemiştir; absisik asit uyarıcı etkiyi artırmamış, engellemiştir')]
 s3,sr3,d3,y3=oncul(pre3,'C')
-Q('3','hor','zor','tablo','Giberellin ve nişasta yıkımı','Tablodaki deney düzeneklerini karşılaştırarak embriyo, giberellin ve absisik asidin nişasta yıkımına etkisini yorumlar.',
+Q('3','hor','orta','tablo','Giberellin ve nişasta yıkımı','Tablodaki deney düzeneklerini karşılaştırarak embriyo, giberellin ve absisik asidin nişasta yıkımına etkisini yorumlar.',
   'Bir sonuç yalnız bir faktörün farklı olduğu iki düzeneğin karşılaştırılmasıyla yorumlanır; çimlenmede giberellin depo nişastasının yıkımını başlatır, absisik asit ise çimlenmeyi baskılar.','Birden fazla faktörün değiştiği kapları kıyaslayıp tek faktöre bağlı sonuç çıkarmak.','dört kaplı hormon deneyi',
   metin='Nişasta içeren, aynı büyüklükte ve aynı sıcaklıktaki yarım arpa tohumları, tabloda belirtilen koşullarda dört ayrı kapta aynı süre bekletiliyor. Sonunda her kapta nişasta yıkımının olup olmadığına bakılıyor.\n'+s3+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d3,sira=sr3,yan=y3,istenen='Doğru olan öncüller.',
@@ -245,10 +245,10 @@ Q('4','hor','orta','grafik','Çimlenmede hormon dengesi','Grafikteki eğrilerden
   ad=[A('Eğrileri tanı','Çimlenmeyle azalan L eğrisi absisik asit, artan K eğrisi giberellindir.','L: absisik asit · K: giberellin'),
       A('Çimlenme gününü oku','12. günde absisik asit 3, giberellin 6 dır; giberellin daha yüksektir.','12. gün: 3 < 6'),
       A('İfadeleri sına','Diğer dört ifade grafikteki değerlerle uyuşur; çimlenme anında absisik asidin yüksek olduğu ifadesi uyuşmaz.','Söylenemez: ABA > giberellin')],
-  puf='Çimlenme çizgisinde iki eğrinin hangisinin üstte olduğuna bak.',sekil=SK4)
+  puf='Her ifadedeki günü ve eğriyi grafikten oku.',sekil=SK4)
 
 # 05 · orta · yıllık halka
-d5='II numaralı halkanın dar olması, o yıl kambiyumun az miktarda ksilem oluşturduğunu gösterir.'
+d5='II numaralı halkanın I numaralı halkadan dar olması, II nin oluştuğu yıl kambiyumun daha az ksilem oluşturduğunu gösterir.'
 o5=['I numaralı halka, ağacın yaşamının son yılında oluşmuştur.',
     'III numaralı yapı, bölünerek her yıl dışa doğru ksilem, içe doğru floem oluşturur.',
     'Yıllık halkalar, odun gövdede floem dokusunun her yıl yenilenmesiyle oluşur.',
@@ -265,9 +265,9 @@ Q('5','dok','orta','şekilli','Yıllık halkalar','Odunsu bir gövdenin enine ke
   ip=['Kambiyumun hangi yönlere hangi dokuyu eklediğini ve halkaların hangi dokudan oluştuğunu düşün.'],
   bilgi=[B('Sekonder büyüme','kambiyumun bölünmesiyle gövdenin ve kökün kalınlaşmasıdır; ksilem içe, floem dışa eklenir'),
          B('Yıllık halka','her yıl oluşan ksilem halkasıdır; halka genişliği o yıl oluşan ksilem miktarını yansıtır')],
-  ad=[A('Yapıları tanı','I: en eski halka · II: dar üçüncü halka · III: kambiyum.','I eski · II dar · III kambiyum'),
+  ad=[A('Yapıları tanı','I: en içteki, en eski halka · II: üçüncü halka · III: kambiyum.','I eski · II üçüncü · III kambiyum'),
       A('Kambiyumun görevini uygula','Kambiyum içe ksilem, dışa floem ekler; halkalar ksilemdir ve içten dışa gittikçe yenidir.','Halka = ksilem'),
-      A('Halka genişliğini yorumla','Dar halka, o yıl az ksilem oluştuğunu gösterir; doğru ifade budur.','Dar halka = az ksilem')],
+      A('Halka genişliğini yorumla','Şekilde II, I den daha dardır; halka genişliği o yıl oluşan ksilem miktarını gösterdiğinden doğru ifade budur.','Dar halka = az ksilem')],
   puf='Halkalar ksilemden oluşur ve içten dışa doğru yeniden eskiye değil, eskiden yeniye sıralanır.',sekil=SK5)
 
 # 06 · zor · öncüllü · su potansiyeli
@@ -312,7 +312,7 @@ Q('7','hor','orta','şekilli','Yerçekimi tepkisi','Klinostat düzeneğinde dön
   puf='Dönme, yerçekiminin tek yönlü etkisini ortadan kaldırır.',sekil=SK7)
 
 # 08 · orta · öncüllü · K+ alımı
-pre8=[('K⁺ nin kök hücrelerine alınmasında enerji gerektiren bir taşıma da rol oynar.',True,'solunumu engelleyen maddenin bulunduğu ortamda alım hızı düşük kalır ve O₂ arttıkça hız yükselir'),
+pre8=[('K⁺ nin kök hücrelerine alınmasında enerji gerektiren bir taşıma da rol oynar.',True,'L de ATP sentezi engellendiği için alım hızı O₂ den bağımsız düşük kalır; K–L farkı enerji gerektiren taşımayı gösterir'),
       ('Ortamdaki O₂ derişimi %0 iken K⁺ alımı tamamen durur.',False,'K eğrisi %0 O₂ de de sıfır değildir, çok düşük de olsa alım sürer'),
       ('O₂ derişimi %20 nin üzerine çıkarıldığında K⁺ alım hızı artmaz; bu aralıkta O₂ sınırlayıcı değildir.',True,'K eğrisi %20 den sonra yataydır')]
 s8,sr8,d8,y8=oncul(pre8,'C')
@@ -333,7 +333,7 @@ Q('8','tas','orta','grafik','Kökte mineral alımı','Grafikten kökte mineral i
 d9='B deki meyvede, döllenmiş yumurta hücresinden gelişen embriyo bulunur.'
 o9=['A daki meyve, çiçeğin yumurtalığının gelişmesiyle oluşmuştur.',
     'B deki meyvenin oluşumunda uygulanan oksin, döllenmenin yaptığı uyarıyı yerine getirmiştir.',
-    'C de çiçeğin dökülmesi, ne tozlaşmanın ne de oksin uygulamasının olmamasıyla ilişkilidir.',
+    'C de çiçeğin dökülmesi, tozlaşma ve oksin uygulamasının ikisinin de olmamasıyla ilişkilidir.',
     'A ve B deki meyveler yumurtalık duvarından gelişir.']
 Q('9','ure','orta','tablo','Tohumsuz meyve','Döllenme olmadan oksinle meyve oluşumunu yorumlayıp meyve ve tohumun hangi yapılardan geliştiğini ayırt eder.',
   'Meyve yumurtalıktan, tohum ise tohum taslağından gelişir; meyve gelişimi döllenmeden doğan hormon uyarısına bağlıdır ve bu uyarı oksin uygulamasıyla verilebilir.','Her meyvenin tohum ve embriyo içerdiğini düşünmek.','tozlaşma ve oksin uygulaması',
@@ -350,10 +350,10 @@ Q('9','ure','orta','tablo','Tohumsuz meyve','Döllenme olmadan oksinle meyve olu
   ad=[A('Koşulları oku','A: tozlaşma var · B ve C: tozlaşma engellenmiş · yalnız B ye oksin uygulanmış.','A tozlaşmış · B oksin · C hiçbiri'),
       A('Döllenmeyi belirle','Tozlaşma olmadığından B ve C de döllenme gerçekleşmez; embriyo oluşmaz.','B de zigot yok'),
       A('Söylenemeyeni seç','B deki meyvede embriyo bulunduğunu söyleyen ifade söylenemez.','Söylenemez: B de embriyo')],
-  puf='Tozlaşma yoksa döllenme de yoktur; döllenme yoksa embriyo da oluşmaz.',sekil=SK9)
+  puf='Her çiçekte hangi koşulun sağlandığını ve hangi olayın gerçekleşebileceğini ayrı ayrı belirle.',sekil=SK9)
 
 # 10 · zor · hesap · sperm / embriyo kesesi
-Q('10','ure','zor','düz','Gamet sayımı','Mikrospor ve megaspor ana hücrelerinden oluşan yapıları sayıp gametofit hücre sayılarını karşılaştırır.',
+Q('10','ure','orta','düz','Gamet sayımı','Mikrospor ve megaspor ana hücrelerinden oluşan yapıları sayıp gametofit hücre sayılarını karşılaştırır.',
   'Bir mikrospor ana hücresi mayozla 4 mikrospor, her mikrospor ise polen tanesi verir; bir megaspor ana hücresinden yalnız bir işlevsel megaspor ve bir embriyo kesesi oluşur.','Her mayoz ürününün işlevsel olduğunu ya da embriyo kesesinde hücre ile çekirdek sayısının aynı olduğunu düşünmek.','12 mikrospor ana hücresi ve 3 megaspor ana hücresi',
   metin='Bir çiçekli bitkinin çiçeğinde 12 mikrospor ana hücresi ve 3 megaspor ana hücresi bulunmaktadır. Tüm ana hücreler mayoz geçirir; oluşan tüm mikrosporlar polen tanesine dönüşür ve her polen tanesi 2 sperm hücresi oluşturur. Her megaspor ana hücresinden yalnız bir işlevsel megaspor kalır ve bu megaspor 7 hücreli (8 çekirdekli) bir embriyo kesesi oluşturur.\nBuna göre, bu çiçekte oluşan toplam sperm hücresi sayısı, embriyo keselerindeki toplam hücre sayısından kaç fazladır?',
   dogru=D10,yan=[(Y10[0],'Embriyo keselerinin çekirdek sayısı (3 × 8 = 24) hücre sayısı yerine kullanılmış; 96 − 24 = 72 bulunmuştur.','islem'),
@@ -372,7 +372,7 @@ Q('10','ure','zor','düz','Gamet sayımı','Mikrospor ve megaspor ana hücreleri
 
 # ============================ YAZ ============================
 assert len(P.ANA)==10
-Z=Counter(q['zorluk'] for q in P.ANA); assert Z=={'kolay':2,'orta':5,'zor':3},Z
+Z=Counter(q['zorluk'] for q in P.ANA); assert Z=={'kolay':2,'orta':7,'zor':1},Z
 HR=Counter(q['cevap']['sik'] for q in P.ANA); assert all(HR[h]==2 for h in 'ABCDE'),HR
 assert 4<=len({q['tipId'] for q in P.ANA})<=6
 SEK=sum(1 for q in P.ANA if q['sekil']); assert SEK>=6,SEK

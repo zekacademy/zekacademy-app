@@ -41,19 +41,19 @@ def onctxt(giris,ST,kok): return giris+'\n'+'\n'.join(f'{r}. {ST[r][1]}' for r i
 def tablo_s(bas,sat): return tablo_svg(bas,sat)
 def graf(govde,w='7.4cm',h='5cm'): return tikz_svg('\\begin{tikzpicture}[font=\\small]\n'+govde+'\n\\end{tikzpicture}')
 # ---- kartlar (2. dalga: K-ABSS2-NN) ----
-kartla('K-ABSS2-01','Soluk havasının bileşimi ve gaz değişim yüzeyi','Soluk alınan ve verilen havanın bileşimi, alveolde kana geçen ve kandan alveole gelen gazların farkını yansıtır; gaz değişimi hızı yüzey alanı, duvar kalınlığı ve kısmi basınç farkıyla artar, kanın kılcaldaki kalış süresi de sonucu belirler.','Azotun da gaz değişimine katıldığını sanmak; kısmi basınç dengesi kurulduktan sonra da gaz geçişinin sürdüğünü düşünmek.','kolay','tablo',3,'ss-gaz-yuzey','Hava bileşimi ve gaz değişim yüzeyi')
+kartla('K-ABSS2-01','Soluk havasının bileşimi ve gaz değişim yüzeyi','Soluk alınan ve verilen havanın bileşimi, alveolde kana geçen ve kandan alveole gelen gazların farkını yansıtır; gaz değişimi hızı gaz değişim yüzeyinin özelliklerine ve kısmi basınç farkına bağlıdır, kanın kılcaldaki kalış süresi de sonucu belirler.','Azotun da gaz değişimine katıldığını sanmak; kısmi basınç dengesi kurulduktan sonra da gaz geçişinin sürdüğünü düşünmek.','kolay','tablo',3,'ss-gaz-yuzey','Hava bileşimi ve gaz değişim yüzeyi')
 kartla('K-ABSS2-02','Solunum sistemi hastalıkları','Solunum hastalıkları ya hava yolunu (astım, bronşit) ya da alveolleri (amfizem, zatürre) etkiler; kirpikli epitel ve mukus hava yolunu temizler; hastalığın etkisi gaz değişim yüzeyi ve hava akışı üzerinden yorumlanır.','Her solunum hastalığının aynı yapıyı bozduğunu sanmak; alveol kaybının yüzey alanını artırdığını düşünmek.','kolay','şekilli',3,'ss-hastalik','Solunum sistemi hastalıkları ve savunma')
 kartla('K-ABSS2-03','Solunum hacimleri ve dakikada solunan hava','Dakikada akciğerlere giren hava, bir solukta alınan hava ile dakikadaki soluk sayısının çarpımıdır; hacimler grafikte iki seviye arasındaki farktan okunur; egzersizde kapasiteler korunur, yedek hacimler değişir.','Grafikteki en yüksek değeri soluk hacmi sanmak; kapasiteleri değişen büyüklük sanmak.','orta','grafik',4,'ss-hacim-hesap','Hacim–zaman grafiği ve dakikada solunan hava')
 kartla('K-ABSS2-04','Hemoglobin ve oksijen taşıma kapasitesi','Kanın oksijen taşıma kapasitesi hemoglobin miktarına ve hemoglobinin oksijenle birleşebilen kısmına bağlıdır; plazmada çözünen oksijenin kısmi basıncı bu kapasiteyle aynı şey değildir; CO2 ve H+ hemoglobinin ilgisini değiştirir.','Kısmi basıncı normal olan her kanın oksijeni yeterli taşıdığını sanmak; CO2 taşınmasında enzimin yerini karıştırmak.','zor','tablo',4,'ss-hb-tasima','Hemoglobin, oksijen taşıma ve CO₂ taşınması')
 kartla('K-ABSS2-05','Solunumun kimyasal düzenlenmesi','Solunum hızı, kemoreseptörlerin algıladığı kan gazı ve pH değişimleriyle ayarlanır; O2 azalması belirli bir eşikten sonra belirgin etki yapar; CO2 ve pH değişimi ise küçük sapmalarda bile etkilidir.','Oksijen azlığının her düzeyde solunumu orantılı artırdığını sanmak.','orta','grafik',4,'ss-kemoreseptor','Kemoreseptörler ve solunum hızı')
-kartla('K-ABSS2-06','Plevra ve akciğerin göğüs boşluğuna bağlılığı','Her akciğer kendi plevra boşluğu içindedir; plevra boşluğundaki basıncın atmosferin altında olması akciğeri göğüs duvarına bağlı tutar, bu basınç bozulursa akciğer esnekliğiyle küçülür.','İki akciğerin tek ortak boşlukta olduğunu sanmak; diyafram kasılınca her akciğerin otomatik şiştiğini düşünmek.','zor','şekilli',4,'ss-pnomotoraks','Plevra basıncı ve akciğerin şişmesi')
+kartla('K-ABSS2-06','Plevra ve akciğerin göğüs boşluğuna bağlılığı','Akciğerler plevra zarıyla örtülüdür; akciğerin göğüs duvarını izleyerek hacmini değiştirmesi plevra boşluğundaki basınca bağlıdır.','İki akciğerin tek ortak boşlukta olduğunu sanmak; diyafram kasılınca her akciğerin otomatik şiştiğini düşünmek.','zor','şekilli',4,'ss-pnomotoraks','Plevra basıncı ve akciğerin şişmesi')
 B_HAVA=B('Soluk havasının bileşimi','soluk alınan hava ile soluk verilen havanın bileşimi, akciğerlerde gaz değişimi olduğu için farklıdır · azot gaz değişiminde belirgin rol almaz')
-B_YUZ=B('Gaz değişimi hızı','difüzyonla geçen gazın miktarı yüzey alanı arttıkça ve duvar inceldikçe artar · kısmi basınç farkı ne kadar büyükse geçiş o kadar hızlıdır · kan kılcal damarda sınırlı süre kalır')
-B_HAST=B('Solunum hastalıkları','astımda bronş ve bronşçuklar daralır · amfizemde alveol duvarları yıkılır ve gaz değişim yüzeyi daralır · hava yolunu döşeyen epitelde mukus ve kirpikli hücreler bulunur')
+B_YUZ=B('Gaz değişimi hızı','gazlar alveol ile kılcal damar arasında difüzyonla geçer · geçiş hızı gaz değişim yüzeyinin özelliklerine ve kısmi basınç farkına bağlıdır · kan kılcal damarda sınırlı süre kalır')
+B_HAST=B('Solunum hastalıkları','solunum hastalıkları hava yolunu ya da alveolleri etkileyebilir · bir hastalığın sonucu, etkilenen yapının normal işleviyle yorumlanır')
 B_HESAP=B('Dakikada solunan hava','bir solukla alınan hava hacmi ile dakikadaki soluk sayısının çarpımı dakikada akciğerlere giren havayı verir · kapasiteler birkaç hacmin toplamıdır')
 B_HBK=B('Taşıma kapasitesi','oksijeni asıl taşıyan hemoglobindir, plazmada çözünen oksijen çok azdır · taşınan oksijen miktarı hemoglobin miktarına ve onun oksijen bağlayabilen kısmına bağlıdır')
 B_KEMO=B('Solunumun kimyasal düzenlenmesi','kemoreseptörler kandaki gaz ve pH değişimini algılar · bu bilgi omurilik soğanındaki solunum merkezine iletilir · merkez solunum kaslarının çalışma hızını ayarlar')
-B_PLV=B('Plevra boşluğu','her akciğer ayrı bir plevra kesesi içindedir · zarlar arasındaki basınç atmosferin altındadır ve akciğerin göğüs duvarını izlemesini sağlar')
+B_PLV=B('Plevra','akciğerler plevra denen zarla örtülüdür · plevra boşluğundaki basınç akciğerin göğüs duvarını izlemesini etkiler')
 B_HAC=B('Solunum hacimleri','soluk hacmi dinlenme soluğunda alınıp verilen havadır · vital kapasite soluk hacmi ile iki yedek hacmin toplamıdır · egzersizde soluk hacmi artar, vital kapasite sabit kalır')
 B_HB=B('Hemoglobin','her hemoglobin molekülü dört hem grubu taşır ve en çok dört O₂ bağlar · oksihemoglobin oranı O₂ bağlama bölgelerinin dolu kısmını gösterir · CO hemoglobine O₂’den çok daha güçlü bağlanır')
 B_CO2=B('CO₂ taşınması','CO₂ kanda bikarbonat, karbaminohemoglobin ve çözünmüş CO₂ biçimlerinde taşınır · alyuvardaki karbonik anhidraz CO₂ ile suyun tepkimesini hızlandırır · H⁺ hemoglobine bağlanabilir')
@@ -90,7 +90,7 @@ SK2=tk('\n'.join(b),.85)
 dog2='Gaz değişimine ayrılan toplam yüzey alanı daralmıştır; bu nedenle birim zamanda kana geçen O₂ miktarı azalır.'
 q('0002',tipId='ss-hastalik',tip='Solunum sistemi hastalıkları ve savunma',z='kolay',alt='Alveol hasarı',kaz='Alveol yapısının bozulmasının gaz değişim yüzeyi ve oksijen geçişi üzerindeki etkisini yorumlar.',kalip='şekilli',
  kart='K-ABSS2-02 (amfizem) · alveol sayısı ve yüzey alanı',
- metin='Şekilde, aynı büyütmeyle çizilmiş iki akciğer dokusu kesiti verilmiştir. I sağlıklı bir bireyin dokusunu, II ise alveol duvarlarının yıkılarak alveollerin birleştiği ve büyük hava boşluklarının oluştuğu bir hastalığı (amfizem) göstermektedir. Her iki kesit de aynı doku hacmini temsil etmektedir.\nBuna göre, II numaralı dokuda aşağıdakilerden hangisinin gerçekleşmesi beklenir?',
+ metin='Şekilde, aynı büyütmeyle çizilmiş iki akciğer dokusu kesiti verilmiştir. I sağlıklı bir bireyin dokusunu, II ise amfizem hastalığı olan bir bireyin dokusunu göstermektedir. Her iki kesit de aynı doku hacmini temsil etmektedir.\nBuna göre, II numaralı dokuda aşağıdakilerden hangisinin gerçekleşmesi beklenir?',
  dogru=dog2,sira=yer('A',dog2,['Alveol sayısı azaldığı için her alveolde gaz geçişi hızlanır ve kanın O₂ düzeyi artar.','Bronşların iç çapı daralır ve soluk borusundaki kıkırdak halkalar kaybolur.','Gaz değişimine ayrılan yüzey alanı daralır; ancak gazlar difüzyonla geçtiği için kana geçen O₂ miktarı değişmez.','Alveol duvarı kalınlaşır ve gazların geçmesi gereken mesafe uzar; yüzey alanı ise değişmez.']),
  yan=[('Alveol sayısı azaldığı için her alveolde gaz geçişi hızlanır ve kanın O₂ düzeyi artar.','Şekilde II’de alveol sayısı 9’dan 3’e inmiştir; toplam yüzey alanı daraldığından kana geçen O₂ artmaz, azalır.','islem'),
       ('Bronşların iç çapı daralır ve soluk borusundaki kıkırdak halkalar kaybolur.','Bronş daralması astımın özelliğidir; şekildeki değişim alveollerdedir ve soluk borusunun halkalarıyla ilgisi yoktur.','bilgi'),
@@ -98,7 +98,7 @@ q('0002',tipId='ss-hastalik',tip='Solunum sistemi hastalıkları ve savunma',z='
       ('Alveol duvarı kalınlaşır ve gazların geçmesi gereken mesafe uzar; yüzey alanı ise değişmez.','Şekilde duvar kalınlığı değil alveol sayısı ve yüzey alanı değişmiştir; alveollerin birleşmesi yüzey alanını belirgin biçimde küçültür.','bilgi')],
  istenen='II numaralı dokuda beklenen sonuç.',
  ip=['Alveollerin sayısı ve boyutu değişince gaz değişimine açık toplam yüzeyin nasıl etkilendiğini düşün.'],
- bilgi=[B_HAST,B_YUZ],
+ bilgi=[B('Gaz değişimi hızı','gazlar alveol ile kılcal damar arasında difüzyonla geçer · geçen gaz miktarı gaz değişim yüzeyinin özelliklerine bağlıdır')],
  ad=[A('Şekilleri karşılaştır','I’de çok sayıda küçük alveol, II’de az sayıda büyük boşluk vardır.','I: 9 küçük alveol · II: 3 büyük boşluk'),
      A('Yüzey alanına çevir','Küçük keseciklerin toplam yüzeyi, aynı hacimdeki birkaç büyük boşluğun yüzeyinden çok daha geniştir.','II’de toplam yüzey alanı azalır'),
      A('Gaz geçişini yorumla','Difüzyonla geçen gaz miktarı yüzey alanıyla orantılıdır; alan azalınca birim zamanda kana geçen O₂ azalır.','O₂ geçişi azalır')],
@@ -135,7 +135,7 @@ q('0004',tipId='ss-hacim-hesap',tip='Hacim–zaman grafiği ve dakikada solunan 
    (D4[2],'Soluk hacmi yerine grafikteki en yüksek değer (4000 mL) alınmış; 4 × 24 = 96 litre bulunmuştur.','islem'),
    (D4[3],'Soluk hacmi yerine en yüksek ve en düşük değerler toplanmış; (4000 + 2500) mL × 24 = 156 litre bulunmuştur.','islem')],
  istenen='Egzersiz sırasında dakikada akciğerlere giren hava hacmi (L).',
- ip=['Bir soluk için hacim değişimini en yüksek ve en düşük seviye arasındaki farktan, soluk sayısını ise kaydın süresinden bul.'],
+ ip=['Bir solukta ne kadar hava hareket ediyor, dakikada kaç soluk var?'],
  bilgi=[B_HESAP,B_HAC],
  ad=[A('Y eğrisinde soluk hacmini oku','Bir soluk alınırken hacim 2500 mL’den 4000 mL’ye çıkar; bu farkı soluk hacmi verir.','4000 − 2500 = 1500 mL'),
      A('Soluk sayısını bul','10 saniyelik kayıtta Y eğrisi 4 tam tekrar yapar; bir dakika bunun 6 katıdır.','4 × 6 = 24 soluk/dk'),
@@ -190,31 +190,31 @@ q('0006',tipId='ss-kemoreseptor',tip='Kemoreseptörler ve solunum hızı',z='ort
      A('Karşılaştır','O₂ düşüşünün neden olduğu artış 4 L, CO₂ artışının neden olduğu artış 7 L olduğundan O₂’nin etkisi daha büyük değildir.','4 < 7 → ilgili ifade yanlıştır')],
  puf='Her ifadedeki iki aralığı grafikte ayrı ayrı bulup farkları karşılaştır.',sekil=SK6)
 # =================== 07 · pnömotoraks şekli · zor · B ===================
-b=['\\draw[line width=1.3pt,rounded corners=22pt] (-3.1,-1.7) rectangle (3.1,2.3);',
-   '\\draw[line width=1.6pt,vurgu!80!black] (-3.1,-1.15) .. controls (-1.6,-.35) and (1.6,-.35) .. (3.1,-1.15);',
-   '\\fill[gray!22] (-2.85,-.9) .. controls (-2.95,1.4) and (-2.5,2.0) .. (-.35,2.0) .. controls (-.3,1.0) and (-.3,-.2) .. (-.45,-.45) .. controls (-1.4,-.2) and (-2.3,-.55) .. (-2.85,-.9) -- cycle;',
-   '\\draw[line width=1.1pt,fill=vurgu!18] (-2.1,.15) .. controls (-2.3,.5) and (-2.2,1.15) .. (-1.7,1.35) .. controls (-1.2,1.25) and (-.95,.6) .. (-1.1,.05) .. controls (-1.4,-.15) and (-1.8,-.1) .. (-2.1,.15) -- cycle;',
+b=['\\draw[line width=1.3pt,rounded corners=22pt] (-3.7,-1.7) rectangle (3.1,2.3);',
+   '\\draw[line width=1.6pt,vurgu!80!black] (-3.7,-1.15) .. controls (-1.6,-.35) and (1.6,-.35) .. (3.1,-1.15);',
+   '\\fill[gray!35,rounded corners=3pt] (-3.55,-.85) rectangle (-2.9,2.0);',
+   '\\draw[line width=1.1pt,fill=vurgu!18] (-.45,-.55) .. controls (-.3,.6) and (-.35,1.7) .. (-.7,2.0) .. controls (-1.5,2.1) and (-2.6,1.8) .. (-2.85,.7) .. controls (-2.95,-.1) and (-2.7,-.7) .. (-2.4,-.85) .. controls (-1.6,-.6) and (-1.0,-.65) .. (-.45,-.55) -- cycle;',
    '\\draw[line width=1.1pt,fill=vurgu!18] (.45,-.55) .. controls (.3,.6) and (.35,1.7) .. (.7,2.0) .. controls (1.5,2.1) and (2.6,1.8) .. (2.85,.7) .. controls (2.95,-.1) and (2.7,-.7) .. (2.4,-.85) .. controls (1.6,-.6) and (1.0,-.65) .. (.45,-.55) -- cycle;',
    '\\draw[line width=1.2pt] (-.1,-.5) -- (-.1,2.0) -- (.15,2.0) -- (.15,-.5) -- cycle;',
-   '\\node[font=\\normalsize\\bfseries] at (-1.6,.75) {K};\\node[font=\\normalsize\\bfseries] at (1.6,.85) {L};\\node[font=\\normalsize\\bfseries] at (-2.45,1.65) {M};\\node[font=\\small] at (0,-1.45) {diyafram};',
-   '\\draw[line width=.9pt,-{Stealth[length=2mm]}] (-3.9,1.0) -- (-2.7,1.0);']
+   '\\node[font=\\normalsize\\bfseries] at (-1.6,.85) {K};\\node[font=\\normalsize\\bfseries] at (1.6,.85) {L};\\node[font=\\normalsize\\bfseries] at (-3.22,.6) {M};\\node[font=\\small] at (-.3,-1.45) {diyafram};',
+   '\\draw[line width=.9pt,-{Stealth[length=2mm]}] (-4.6,1.0) -- (-3.4,1.0);']
 SK7=tk('\n'.join(b),.9)
 dog7='L akciğeri şişerek hava alır; K akciğerinin hacmi ise diyafram kasılsa da belirgin biçimde artmaz.'
 q('0007',tipId='ss-pnomotoraks',tip='Plevra basıncı ve akciğerin şişmesi',z='zor',alt='Plevra boşluğu ve pnömotoraks',kaz='Plevra boşluğundaki basıncın akciğerin göğüs duvarını izlemesindeki rolünü yeni bir durumda yorumlar.',kalip='şekilli',
  kart='K-ABSS2-06 (plevra) · ayrı plevra boşlukları ve basınç',
- metin='Şekilde, göğüs duvarında oluşan bir yırtıktan geçen havanın yalnız sağ plevra boşluğunu (M) doldurduğu ve bu boşlukta basıncın atmosfer basıncına eşitlendiği bir bireyin göğüs kafesi kesiti verilmiştir. K ve L bireyin akciğerlerini göstermektedir; solunum kasları normal çalışmaktadır.\nBuna göre, bu bireyin soluk alması sırasında aşağıdakilerden hangisi gerçekleşir?',
+ metin='Şekilde, göğüs duvarında oluşan bir yırtıktan geçen havanın yalnız sağ plevra boşluğunu (M) doldurduğu ve bu boşlukta basıncın atmosfer basıncına eşitlendiği bir bireyin göğüs kafesi kesiti verilmiştir. K sağ akciğeri, L sol akciğeri göstermektedir; solunum kasları normal çalışmaktadır.\nBuna göre, bu bireyin soluk alması sırasında aşağıdakilerden hangisi gerçekleşir?',
  dogru=dog7,sira=yer('B',dog7,['Her iki akciğer de şişer; çünkü iki akciğer tek bir plevra boşluğu içinde yer alır.','L akciğeri şişmez; çünkü bir plevra boşluğundaki basınç kaybı diğer akciğerin plevra basıncını da atmosfer düzeyine çıkarır.','K akciğeri de şişer; çünkü akciğer dokusundaki kas lifleri kasılarak akciğeri genişletir.','K akciğeri de aynı oranda şişer; çünkü akciğerler diyaframa doğrudan bağlıdır ve onunla birlikte aşağı iner.']),
  yan=[('Her iki akciğer de şişer; çünkü iki akciğer tek bir plevra boşluğu içinde yer alır.','Her akciğer ayrı bir plevra kesesi içindedir; M’deki basınç değişimi L’nin plevra boşluğunu etkilemez ve K’nin şişmesini de sağlayamaz.','bilgi'),
       ('L akciğeri şişmez; çünkü bir plevra boşluğundaki basınç kaybı diğer akciğerin plevra basıncını da atmosfer düzeyine çıkarır.','Plevra boşlukları birbirinden ayrı olduğundan L’nin plevra basıncı atmosferin altında kalır; diyafram kasılınca L şişer.','dikkat'),
       ('K akciğeri de şişer; çünkü akciğer dokusundaki kas lifleri kasılarak akciğeri genişletir.','Akciğer dokusunda akciğeri kendi başına genişletecek kas lifi yoktur; akciğer, plevra basıncı sayesinde göğüs duvarını izleyerek şişer.','bilgi'),
       ('K akciğeri de aynı oranda şişer; çünkü akciğerler diyaframa doğrudan bağlıdır ve onunla birlikte aşağı iner.','Akciğer diyaframa doğrudan bağlı değildir; plevra boşluğundaki atmosferin altındaki basınç akciğeri duvara tutar. M’de bu basınç bozulduğundan K diyaframı izlemez.','islem')],
  istenen='Soluk alma sırasında gerçekleşen durum.',
- ip=['Akciğerin hacminin neden göğüs duvarını izlediğini ve her akciğerin plevra boşluğunun ayrı olup olmadığını düşün.'],
+ ip=['Akciğerin göğüs duvarını izlemesini sağlayan koşulun hangi akciğerde sürdüğünü düşün.'],
  bilgi=[B_PLV,B_HAC],
  ad=[A('Durumu belirle','M’de basınç atmosfere eşitlenmiş, L’nin plevra boşluğu ise sağlam kalmıştır.','K: plevra basıncı = atmosfer · L: atmosferin altında'),
      A('Akciğerin şişme koşulunu hatırla','Akciğerin göğüs duvarını izleyerek şişmesi, plevra boşluğundaki basıncın atmosferin altında olmasına bağlıdır.','Plevra basıncı düşük → akciğer duvarı izler'),
      A('Her akciğeri değerlendir','L’de koşul sürdüğünden L şişer; K’de koşul bozulduğundan K esnekliğiyle küçük kalır.','L şişer · K şişmez')],
- puf='Akciğerin neden göğüs duvarını izlediğini ve plevra boşluklarının ayrı olup olmadığını düşün.',sekil=SK7)
+ puf='Göğüs duvarını izleme koşulunu her akciğer için ayrı ayrı sına.',sekil=SK7)
 # =================== 08 · hemoglobin sayısal tablo · zor · C ===================
 HB8={'K':(100,96,75),'L':(50,96,56)}
 SAY=lambda n,a,v:Fr(n*4*(a-v),100)
@@ -229,7 +229,7 @@ q('0008',tipId='ss-hb-tasima',tip='Hemoglobin, oksijen taşıma ve CO₂ taşın
  kart='K-ABSS2-04 (taşıma) · hemoglobin sayısı, doygunluk farkı ve O₂ bağlama bölgesi',
  metin='Tabloda, K ve L bireylerinin eşit hacimli kan örneklerindeki hemoglobin molekülü sayıları ile bu örneklerin akciğerden çıkışta ve dokulardan dönüşte ölçülen oksihemoglobin yüzdeleri verilmiştir. Oksihemoglobin yüzdesi, hemoglobinlerin O₂ bağlayabileceği toplam bölgenin O₂ ile dolu olan kısmını göstermektedir.\nBuna göre, kan örneklerinin dokulara bıraktığı O₂ molekülü sayısı K’de L’dekinden kaç milyon fazladır?',
  dogru=4,yan=yan8,istenen='K ile L örneklerinin dokulara bıraktığı O₂ molekülü sayıları arasındaki fark (milyon).',
- ip=['Bir hemoglobinin bağlayabileceği O₂ sayısını ve kanın dokuda kaç yüzde puan O₂ bıraktığını ayrı ayrı belirle.'],
+ ip=['Dokuya bırakılan O₂’nin hangi iki niceliğe bağlı olduğunu düşün.'],
  bilgi=[B_HB,B_HBK],
  ad=[A('Bırakılan yüzdeyi bul','Dokuya bırakılan O₂, akciğerden çıkan ve dokudan dönen kandaki oksihemoglobin yüzdelerinin farkıdır.','K: 96 − 75 = 21 · L: 96 − 56 = 40'),
      A('Bölge sayısını hesapla','Her hemoglobin 4 O₂ bağlayabildiğinden toplam bağlama bölgesi hemoglobin sayısının 4 katıdır.','K: 100 × 4 = 400 · L: 50 × 4 = 200'),
@@ -248,7 +248,7 @@ q('0009',tipId='ss-gaz-yuzey',tip='Hava bileşimi ve gaz değişim yüzeyi',z='o
       ('Kandaki CO₂ kısmi basıncının alveol havasındakine göre artması','CO₂ geçişi kısmi basıncın yüksek olduğu kandan alçak olduğu alveole doğrudur; fark büyüdükçe CO₂ çıkışı hızlanır.','dikkat')],
  istenen='Gaz geçiş hızını artırmayan durum.',
  ip=['Difüzyon hızını yüzey alanı, mesafe ve kısmi basınç farkının nasıl etkilediğini düşün.'],
- bilgi=[B_YUZ,B_HAST],
+ bilgi=[B_YUZ],
  ad=[A('Etmenleri belirle','Difüzyon hızı yüzey alanı ile artar, gazların kat ettiği mesafe ile azalır, kısmi basınç farkı büyüdükçe artar.','Alan ↑ · mesafe ↓ · fark ↑ → hız ↑'),
      A('Seçenekleri değerlendir','Dört seçenek bu etmenlerden birini hızı artıracak yönde değiştirir; mesafeyi artıran seçenek ise hızı düşürür.','Mesafe ↑ → hız ↓'),
      A('Sonucu belirle','Hızı artırmayan durum, gazların geçeceği doku mesafesinin artmasıdır.','Doğru seçenek belirlendi')],

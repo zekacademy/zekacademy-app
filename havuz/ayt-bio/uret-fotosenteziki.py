@@ -76,7 +76,7 @@ def sk2():
         b.append(rf'\draw[line width=.8pt,fill=green!55!black!60] ({x-.35},1.15) ellipse (.38 and .17);\draw[line width=.8pt,fill=green!55!black!60] ({x+.35},1.4) ellipse (.38 and .17);')
         b.append(rf'\node[font=\small] at ({x},4.0) {{{ad}}};\node[font=\large\bfseries] at ({x},-.5) {{{k}}};')
     return tk('\n'.join(b),.9)
-SK2=sk2()
+SK2=tablo_svg(['Bitki','Lambanın ışığı','Klorofil çözeltisinden geçen ışık (%)'],[['K','450 nm','15'],['L','550 nm','85'],['M','680 nm','30']])
 # ============================ SORU 3 · yaprak kesiti ============================
 KLO3={'I':False,'II':True,'III':True,'IV':True}   # numaralı hücrede kloroplast var mı (I: üst epidermis; IV: bekçi hücresi)
 assert [k for k,v in KLO3.items() if not v]==['I']
@@ -170,7 +170,7 @@ def sk9():
        r'\addplot[vurgu,smooth] coordinates {(0,8)(3,8)(4,4.6)(5,2.7)(6,1.6)(8,.8)(10,.5)};',
        r'\node[font=\small\bfseries,anchor=north] at (axis cs:9.2,7.4) {K};\node[font=\small\bfseries,vurgu,anchor=south] at (axis cs:9.2,.8) {L};',r'\end{axis}']
     return tk('\n'.join(b),.95)
-SK9=sk9()
+SK9=tablo_svg(['Ortam','ATP','NADPH','PGAL sentez hızı'],[['1','10','10','8'],['2','14','14','3'],['3','4','4','3']])
 # ============================ SORU 10 · iki fotosentez denklemi ============================
 from collections import Counter as C_
 def atom(d):
@@ -217,26 +217,26 @@ Q('1','den','kolay','şekilli','Nişasta deneyi','Klorofil ve ışığın fotose
 d2='K ve M nin fotosentez hızı, L nin fotosentez hızından yüksektir.'
 o2=['Üç bitkinin fotosentez hızı eşittir.','L nin fotosentez hızı, K ve M nin fotosentez hızından yüksektir.','L nin fotosentez hızı, M nin fotosentez hızından yüksektir.','K ve L nin fotosentez hızı, M nin fotosentez hızından yüksektir.']
 Q('2','pig','kolay','şekilli','Işığın rengi','Klorofilin yeşil ışığı az, mavi ve kırmızı ışığı çok soğurduğunu bitkilerin fotosentez hızına uygular.',
-  'Fotosentez hızı klorofil ve diğer pigmentlerin soğurduğu ışık miktarıyla ilişkilidir; yeşil ışık büyük ölçüde yansıtıldığı için en az etkilidir.','Işığın şiddeti eşit olunca her renkte aynı hızın beklendiğini düşünmek.','mavi, yeşil ve kırmızı ışıkta üç bitki',
-  metin='Aynı türden, özdeş saksı ve toprakta yetişen K, L ve M bitkileri, şekilde gösterildiği gibi eşit şiddette ve farklı renkte ışık veren birer lamba ile aynı süre aydınlatılıyor. Bitkilerin diğer tüm yaşam koşulları ortaktır.\nBuna göre, bu bitkilerin fotosentez hızlarıyla ilgili aşağıdakilerden hangisi doğrudur?',
+  'Fotosentez hızı klorofil ve diğer pigmentlerin soğurduğu ışık miktarıyla ilişkilidir; yeşil ışık büyük ölçüde yansıtıldığı için en az etkilidir.','Işığın şiddeti eşit olunca her renkte aynı hızın beklendiğini düşünmek.','klorofil çözeltisinin ışık geçirgenliği tablosu',
+  metin='Bir araştırmacı, bir bitkinin yapraklarından elde ettiği klorofil çözeltisine eşit şiddette ve farklı dalga boylarında (450, 550 ve 680 nm) ışık gönderiyor ve çözeltiden geçen ışığın yüzdesini ölçüyor; sonuçlar tabloda verilmiştir. Daha sonra aynı türden, özdeş saksı ve toprakta yetişen K, L ve M bitkileri, tabloda belirtilen dalga boylarında ve eşit şiddette ışık veren birer lamba ile aynı süre aydınlatılıyor. Bitkilerin diğer tüm yaşam koşulları ortaktır ve fotosentez hızı yalnız soğurulan ışık miktarına bağlıdır.\nBuna göre, bu bitkilerin fotosentez hızlarıyla ilgili aşağıdakilerden hangisi doğrudur?',
   dogru=d2,sira=yer('C',d2,o2),
-  yan=[(o2[0],'Işık şiddeti eşit olsa da pigmentler farklı dalga boylarını farklı düzeyde soğurur; hızlar eşit olmaz.','bilgi'),
-       (o2[1],'Yeşil ışık klorofil tarafından en az soğurulduğundan L bitkisinin hızı en düşüktür; en yüksek olması yanlıştır.','dikkat'),
-       (o2[2],'Yeşil ışık kırmızı ışıktan daha az soğurulur; bu nedenle L nin hızı M ninkinden düşüktür.','dikkat'),
-       (o2[3],'L bitkisi yeşil ışıkta olduğundan hızı M ninkinden düşüktür; bu yüzden K ve L nin birlikte M den yüksek olması yanlıştır.','dikkat')],
+  yan=[(o2[0],'Işık şiddeti eşit olsa da klorofil farklı dalga boylarını farklı düzeyde soğurur (geçen ışık %15, %85, %30); hızlar eşit olmaz.','bilgi'),
+       (o2[1],'L nin ışığı çözeltiden en fazla geçtiği için klorofil tarafından en az soğurulur; L bitkisinin hızı en düşüktür, en yüksek olması yanlıştır.','dikkat'),
+       (o2[2],'L nin ışığının %85 i geçerken M nin ışığının %30 u geçer; L daha az soğurulduğundan L nin hızı M ninkinden düşüktür.','dikkat'),
+       (o2[3],'L nin ışığı M ninkinden daha az soğurulduğundan L nin hızı M ninkinden düşüktür; bu yüzden K ve L nin birlikte M den yüksek olması yanlıştır.','dikkat')],
   istenen='Fotosentez hızları için doğru ifade.',
-  ip=['Klorofilin hangi renkteki ışığı çok, hangi renkteki ışığı az soğurduğunu düşün.'],
+  ip=['Çözeltiden geçen ışık yüzdesinden soğurulan ışık miktarını çıkar.'],
   bilgi=[B('Klorofil ve ışık','klorofil mavi-mor ve kırmızı ışığı çok, yeşil ışığı çok az soğurur · yeşil ışık büyük ölçüde yansıtılır'),
          B('Hız ve soğurma','birim zamanda soğurulan ışık enerjisi arttıkça, ışık dışındaki faktörler sınırlayıcı olmadığı sürece fotosentez hızı artar')],
-  ad=[A('Işık renklerini soğurmaya çevir','Mavi ve kırmızı ışık iyi soğurulur; yeşil ışık çok az soğurulur.','K, M: çok · L: az'),
+  ad=[A('Geçen ışığı soğurmaya çevir','Soğurulan ışık yüzdesi 100 − geçen yüzdedir: K %85, L %15, M %70.','K, M: çok · L: az'),
       A('Hızlara aktar','Soğurulan ışık fazla olan bitkilerde fotosentez hızı da yüksektir; L en düşüktür.','L < K ve L < M'),
       A('İfadeyi seç','K ve M nin L den yüksek olduğunu söyleyen ifade doğrudur; K ile M arasında sıra belirtilmemiştir.','K, M > L')],
-  puf='Yaprak yeşil görünür çünkü yeşil ışığı yansıtır; yansıttığı ışık fotosentezde en az kullanılır.',sekil=SK2)
+  puf='Çözeltiden geçen ışık ne kadar fazlaysa soğurulan o kadar azdır.',sekil=SK2)
 
 # 03 · orta · olumsuz · yaprak kesiti
 d3='I'; o3=['II','III','IV','II ve III']
 Q('3','klo','orta','şekilli','Yaprak hücreleri ve kloroplast','Yaprak kesitinde hangi hücrelerin kloroplast taşıdığını ayırt eder.',
-  'Kloroplast, yapraktaki fotosentez yapan hücrelerde bulunur; yaprağın koruyucu örtü dokusundaki sıradan hücrelerde bulunmaz, ancak stomayı çevreleyen bekçi hücreleri bu açıdan farklıdır.','Yaprağın tüm hücrelerinin ya da epidermisin tamamının kloroplast taşıdığını sanmak.','yaprak enine kesiti',
+  'Kloroplast, yapraktaki fotosentez yapan hücrelerde bulunur; her hücre tipinin kloroplast taşıyıp taşımadığı ayrı ayrı sorgulanmalıdır.','Yaprağın tüm hücrelerinin ya da epidermisin tamamının kloroplast taşıdığını sanmak.','yaprak enine kesiti',
   metin='Şekilde bir bitki yaprağının enine kesiti şematik olarak verilmiş ve bazı hücreleri I, II, III ve IV ile numaralandırılmıştır.\nBuna göre, numaralı hücrelerden hangisinde ışığa bağımlı tepkimeler gerçekleşmez?',
   dogru=d3,sira=yer('A',d3,['II','III','IV','II ve III']),
   yan=[('II','II numaralı palizat hücrelerinde çok sayıda kloroplast bulunur; ışığa bağımlı tepkimeler burada gerçekleşir.','dikkat'),
@@ -250,7 +250,7 @@ Q('3','klo','orta','şekilli','Yaprak hücreleri ve kloroplast','Yaprak kesitind
   ad=[A('Dokuları tanı','I: üst epidermis · II: palizat parankiması · III: sünger parankima · IV: stoma bekçi hücreleri.','I epidermis · II palizat · III sünger · IV bekçi'),
       A('Kloroplast varlığını tara','Palizat, sünger ve bekçi hücreleri kloroplast taşır; epidermisin sıradan hücreleri taşımaz.','II, III, IV: var · I: yok'),
       A('Olumsuz kökü uygula','Işığa bağımlı tepkimelerin gerçekleşmediği hücre kloroplastsız olan I dir.','Cevap: I')],
-  puf='Bekçi hücreleri epidermis içinde olsa da kloroplastlıdır; epidermisin diğer hücreleri kloroplastsızdır.',sekil=SK3)
+  puf='Hangi hücre tipinin fotosentetik organel taşıyıp taşımadığını tek tek sorgula.',sekil=SK3)
 
 # 04 · orta · öncüllü · KOH düzeneği
 pre4=[('L düzeneğindeki yaprak iyot çözeltisiyle boyandığında mavi-mor renk gözlenir.',True,'L de CO₂ vardır ve ışıkta fotosentez sonucu nişasta birikir'),
@@ -311,24 +311,24 @@ Q('6','fak','orta','şekilli','Fotosentez ve solunum dengesi','Bitki hücresinde
   ad=[A('Dış ortam oklarını oku','I: dış ok yok · II: dışarıya O₂ verilir, dışarıdan CO₂ alınır · III: dışarıdan O₂ alınır, dışarıya CO₂ verilir.','I: net 0 · II: O₂ çıkışı · III: O₂ girişi'),
       A('Hızları karşılaştır','Dışarıya O₂ verilmesi, üretilen O₂ nin tüketilenden fazla olduğunu, yani fotosentez hızının büyük olduğunu gösterir.','II: fotosentez > solunum'),
       A('Diğer hücreleri yorumla','I de iki hız eşit, III te solunum hızı büyüktür.','I: eşit · III: solunum > fotosentez')],
-  puf='Dışarıya net O₂ veren hücrede fotosentez hızı solunum hızından büyüktür.',sekil=SK6)
+  puf='Dış ortama verilen ya da alınan net gazı iki hızın farkıyla ilişkilendir.',sekil=SK6)
 
 # 07 · orta · öncüllü · kemosentez
-pre7=[('Kükürt bakterileri, H₂S nin yükseltgenmesiyle açığa çıkan enerjiyi organik madde sentezinde kullanır.',True,'kemosentezde enerji inorganik maddelerin yükseltgenmesinden sağlanır'),
-      ('Kükürt bakterilerinin organik madde sentezi, ışık enerjisi gerektiğinden ışıksız ortamda gerçekleşemez.',False,'kemosentez ışığa bağımlı değildir, ışıksız ortamda sürebilir'),
-      ('Kükürt bakterileri karbon kaynağı olarak CO₂ yi kullanabilir ve kendi besinlerini üretebildiklerinden ototroftur.',True,'kemosentez yapanlar CO₂ den organik madde sentezleyen ototroflardır')]
+pre7=[('K ve L, karbon kaynağı olarak CO₂ yi kullandıklarından ototrofturlar.',True,'iki canlının da karbon kaynağı CO₂ dir'),
+      ('L nin organik madde sentezinde kullandığı enerji ışıktan sağlanır.',False,'L karanlıkta da sentez yaptığından enerjisi ışıktan değil, inorganik maddelerin yükseltgenmesinden gelir'),
+      ('M, K ve L den farklı olarak karbon kaynağı olarak organik madde kullanır.',True,'M nin karbon kaynağı organik maddedir, K ve L ninki CO₂ dir')]
 s7,sr7,d7,y7,i7=oncul(pre7,'D')
 Q('7','kem','orta','öncüllü','Kükürt bakterileri','Kemosentez yapan bir bakterinin enerji kaynağını, ışık gereksinimini ve beslenme türünü değerlendirir.',
-  'Kemosentezde organik madde sentezinin enerjisi ışıktan değil, inorganik maddelerin yükseltgenmesinden gelir; bu canlılar da CO₂ den besin ürettiği için ototroftur.','Her ototrofun ışık enerjisiyle besin ürettiğini düşünmek.','kükürt bakterisi kemosentezi',
-  metin='Derin deniz tabanındaki hidrotermal bacaların çevresinde yaşayan bazı kükürt bakterileri, ortamdaki H2S yi yükseltgeyerek enerji elde eder ve bu enerjiyle CO2 ve H2O den organik madde sentezler. Bu bölgeye güneş ışığı ulaşmamaktadır.\n'+s7+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
+  'Kemosentezde organik madde sentezinin enerjisi ışıktan değil, inorganik maddelerin yükseltgenmesinden gelir; bu canlılar da CO₂ den besin ürettiği için ototroftur.','Her ototrofun ışık enerjisiyle besin ürettiğini düşünmek; karbon ve enerji kaynağını karıştırmak.','ototrof ve heterotrof karşılaştırma tablosu',
+  metin='K bir yeşil alg, L bir kükürt bakterisi, M ise hazır organik maddeleri parçalayarak yaşayan bir bakteridir. Bu üç canlının kullandığı karbon kaynağı ve karanlıkta organik madde sentezi yapıp yapamadığı tabloda verilmiştir.\n'+s7+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d7,sira=sr7,yan=y7,istenen='Doğru olan öncüller.',
   ip=['Bu bakterinin enerji kaynağını, ışığa gereksinimi olup olmadığını ve karbon kaynağını ayrı ayrı sorgula.'],
   bilgi=[B('Kemosentez','bazı bakterilerin inorganik maddeleri yükseltgeyerek elde ettiği enerjiyle CO₂ den organik madde sentezlemesidir'),
          B('Ototrof beslenme','inorganik maddelerden kendi organik besinini üretebilen canlıların beslenme biçimidir')],
-  ad=[A('Enerji kaynağını belirle','Bakteri H₂S yi yükseltgeyerek enerji elde eder; bu enerji organik madde sentezinde kullanılır.','I: doğru'),
-      A('Işık gereksinimini sorgula','Ortama ışık ulaşmadığı hâlde sentez sürüyor; süreç ışığa bağımlı değildir.','II: yanlış'),
-      A('Beslenme türünü belirle','Bakteri karbonu CO₂ den alıp organik madde üretir; ototroftur.','III: doğru')],
-  puf='Kemosentezde enerji ışıktan değil, inorganik maddelerin yükseltgenmesinden gelir.')
+  ad=[A('Karbon kaynaklarını oku','K ve L karbonu CO₂ den alır; M organik madde kullanır.','K, L: CO₂ · M: organik madde'),
+      A('Işık gereksinimini sorgula','L karanlıkta da organik madde sentezlediğinden enerjisi ışıktan sağlanmaz.','II: yanlış'),
+      A('Beslenme türlerini karşılaştır','CO₂ den organik madde üretenler ototrof, hazır organik madde kullananlar heterotroftur; I ve III doğrudur.','I, III: doğru')],
+  puf='Karbon kaynağını ve enerji kaynağını ayrı ayrı sorgula.',sekil=tablo_svg(['Canlı','Karbon kaynağı','Karanlıkta organik madde sentezi'],[['K','CO₂','Yok'],['L','CO₂','Var'],['M','Organik madde','Yok']]))
 
 # 08 · zor · gün boyu net CO2
 Q('8','fak','zor','grafik','Günlük karbonhidrat bütçesi','Net CO₂ grafiğinden aydınlık ve karanlık sürelerde net alımı ve solunumu birleştirip günlük net glikoz birikimini hesaplar.',
@@ -349,44 +349,44 @@ Q('8','fak','zor','grafik','Günlük karbonhidrat bütçesi','Net CO₂ grafiği
   puf='Önce süreyi ve hızı çarp, net CO₂ yi bul; en sonda 6 ya böl.',sekil=SK8)
 
 # 09 · zor · öncüllü · CO2 kesilince
-pre9=[('K eğrisi RuBP, L eğrisi PGA miktarındaki değişimi göstermektedir.',True,'CO₂ kesilince RuBP e CO₂ bağlanamaz: RuBP birikir, PGA azalır'),
-      ('CO₂ kesildikten sonra PGAL oluşum hızı azalır.',True,'PGA azalınca PGAL e dönüşecek madde kalmaz'),
-      ('CO₂ kesildikten sonra stromada NADP⁺ miktarı artar.',False,'PGAL e dönüşüm yavaşlayınca NADPH harcanmaz, NADP⁺ azalır')]
+pre9=[('2. ortamda ATP ve NADPH derişimlerinin artması, Calvin döngüsünün yavaşlamasıyla ilişkilidir.',True,'CO₂ azalınca döngü yavaşlar, ATP ve NADPH harcanmadan birikir'),
+      ('3. ortamda PGAL sentez hızının düşmesi, ışığa bağımlı evrede üretilen ATP ve NADPH un azalmasıyla ilişkilidir.',True,'ışık azalınca ATP ve NADPH üretimi düşer, PGAL sentezi için gerekli girdi azalır'),
+      ('2. ortamda PGAL sentez hızının düşmesi, ışığa bağımlı evrenin yavaşlamasından kaynaklanır.',False,'2. ortamda ATP ve NADPH derişimi yüksektir; sınırlayıcı olan CO₂ dir, ışığa bağımlı evre değil')]
 s9,sr9,d9,y9,i9=oncul(pre9,'D')
-Q('9','cal','zor','öncüllü','CO₂ kesilmesi ve Calvin döngüsü','CO₂ kaynağı kesilince Calvin döngüsü ara ürünlerindeki ve ışığa bağımlı evre ürünlerindeki değişimi birlikte yorumlar.',
-  'Calvin döngüsünde CO₂ RuBP ye bağlanarak PGA oluşturur; CO₂ kesilirse bu basamak durur ve bunun sonuçları döngü ile ATP ve NADPH tüketimine yansır.','CO₂ eksikliğinde ışığa bağımlı evre ürünlerinin tüketiminde de bir değişiklik olmayacağını sanmak.','CO₂ kesilince RuBP ve PGA',
-  metin='Işık altındaki yeşil alg hücrelerinin bulunduğu ortamda, şekildeki işaretli anda CO2 girişi durduruluyor; ışık ve diğer koşullar değişmiyor. Bu hücrelerde Calvin döngüsünün iki ara ürünü olan RuBP ve PGA miktarlarındaki değişim K ve L eğrileriyle gösterilmiştir.\n'+s9+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
+Q('9','cal','zor','öncüllü','CO₂ kesilmesi ve Calvin döngüsü','Işık ve CO₂ değişiminin ATP, NADPH ve PGAL üzerindeki etkisini tablodan birlikte yorumlar.',
+  'Işığa bağımlı evre ürünleri (ATP, NADPH) Calvin döngüsünde harcanır; hangi evrenin sınırlayıcı olduğu bu maddelerin birikmesi ya da azalmasından anlaşılır.','Bir faktör azalınca ışığa bağımlı evre ürünlerinin hep azaldığını sanmak; sınırlayıcı faktörü ayırt etmemek.','ışık ve CO₂ değişiminin ATP, NADPH ve PGAL üzerindeki etkisi',
+  metin='Yeşil alg hücre süspansiyonu üç ortamda ışıkta bekletiliyor: 1. ortamda ışık şiddeti ve CO2 derişimi normal, 2. ortamda CO2 derişimi azaltılmış, 3. ortamda ışık şiddeti azaltılmıştır. Denge kurulduktan sonra hücrelerin stromasında ATP ve NADPH derişimleri ile PGAL sentez hızı ölçülmüş ve sonuçlar göreli birimle tabloda verilmiştir.\n'+s9+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d9,sira=sr9,yan=y9,istenen='Doğru olan öncüller.',
-  ip=['CO₂ nin döngüde hangi maddeyle birleşerek hangi maddeyi oluşturduğunu düşün; bu basamak durunca diğer basamaklara ne olur?'],
-  bilgi=[B('Calvin döngüsünün basamakları','CO₂ RuBP ye bağlanır ve PGA oluşur · PGA, ATP ve NADPH kullanılarak PGAL e çevrilir · PGAL nin bir bölümüyle RuBP yeniden oluşur'),
-         B('Işığa bağımlı evre ürünleri','ATP ve NADPH Calvin döngüsünde harcanır; harcama azalırsa ADP ve NADP⁺ yeniden oluşumu da azalır')],
-  ad=[A('Ara ürünlerin yönünü belirle','CO₂ olmayınca RuBP PGA ya çevrilemez; RuBP birikir, PGA azalır.','K ↑ RuBP · L ↓ PGA'),
-      A('PGAL sentezini yorumla','PGA miktarı azaldıkça PGAL e dönüşen madde de azalır; PGAL oluşumu yavaşlar.','II: doğru'),
-      A('NADPH tüketimini yorumla','PGAL oluşumu yavaşlayınca NADPH harcanmaz; NADP⁺ miktarı artmaz, azalır.','III: yanlış'),
+  ip=['Her ortamda ATP ve NADPH nin üretim ve harcama dengesini ayrı ayrı yorumla.'],
+  bilgi=[B('Calvin döngüsünün girdileri','CO₂ RuBP ye bağlanır ve PGA oluşur · PGA, ATP ve NADPH kullanılarak PGAL e çevrilir'),
+         B('Işığa bağımlı evre ürünleri','ATP ve NADPH ışığa bağımlı evrede üretilir, Calvin döngüsünde harcanır; üretim ya da harcama azalınca derişimleri değişir')],
+  ad=[A('2. ortamı yorumla','CO₂ azalınca Calvin döngüsü yavaşlar; ATP ve NADPH harcanamadığından birikir ve PGAL sentezi düşer.','ATP, NADPH ↑ · PGAL ↓'),
+      A('3. ortamı yorumla','Işık azalınca ATP ve NADPH üretimi azalır; PGAL sentezi için girdi yetersiz kalır.','ATP, NADPH ↓ · PGAL ↓'),
+      A('Üçüncü yargıyı sına','2. ortamda ATP ve NADPH yüksek olduğundan ışığa bağımlı evre sınırlayıcı değildir; III yanlıştır.','III: yanlış'),
       A('Öncülleri birleştir','I ve II doğru, III yanlıştır.','I ve II')],
-  puf='CO₂ yoksa PGA oluşmaz; sonrasındaki basamaklar da onu izler.',sekil=SK9)
+  puf='Bir maddenin birikmesi, onu harcayan evrenin yavaşladığını gösterir.',sekil=SK9)
 
 # 10 · zor · öncüllü · 18O iki denklem
-pre10=[('X te açığa çıkan O₂ gazı işaretli oksijen içerir.',False,'O₂ suyun fotolizinden gelir, işaretli olan CO₂ nin oksijeni O₂ ye geçmez'),
-       ('X te denklemin ürünlerinden olan H₂O işaretli oksijen içerir.',True,'CO₂ nin 12 oksijen atomundan 6 sı glikoza, 6 sı H₂O ya geçer'),
-       ('Y de sentezlenen glikoz işaretli oksijen içerir.',True,'glikozun oksijen atomları CO₂ den gelir')]
+pre10=[('X te açığa çıkan O₂ gazı işaretli oksijen içerir.',True,'O₂ nin oksijen atomları suyun parçalanmasından gelir ve X te su işaretlidir'),
+       ('X te sentezlenen glikoz işaretli oksijen içerir.',False,'glikozun oksijen atomları CO₂ den gelir; X te CO₂ işaretsizdir'),
+       ('Y de denklemin ürünlerinden olan H₂O işaretli oksijen içerir.',True,'Y de CO₂ nin 12 oksijen atomundan 6 sı glikoza, 6 sı H₂O ya geçer')]
 s10,sr10,d10,y10,i10=oncul(pre10,'E')
-Q('10','kem','zor','öncüllü','Denklemlerde atom izleme','İki farklı fotosentez denkleminde işaretli oksijenin hangi ürünlere geçtiğini atom sayımıyla izler.',
+Q('10','kem','orta','öncüllü','Denklemlerde atom izleme','İki farklı fotosentez denkleminde işaretli oksijenin hangi ürünlere geçtiğini atom sayımıyla izler.',
   'Genel fotosentez denklemlerinde ürünlerdeki her atom girenlerden gelir; oksijenin kaynağı, atomların denklemdeki dağılımı izlenerek bulunur.','Ürün olarak yazılan her H₂O nin ve O₂ nin aynı kaynaktan geldiğini düşünmek.','iki farklı fotosentez denklemi',
-  metin='Işık enerjisiyle organik madde sentezleyen X (alg) ve Y (yeşil kükürt bakterisi) canlılarında gerçekleşen olayların genel denklemleri şekilde verilmiştir. İki canlıya da oksijen atomları 18O ile işaretlenmiş CO2 veriliyor; su ve H2S işaretsizdir.\n'+s10+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
+  metin='Işık enerjisiyle organik madde sentezleyen X (alg) ve Y (yeşil kükürt bakterisi) canlılarında gerçekleşen olayların genel denklemleri şekilde verilmiştir. X e oksijen atomları 18O ile işaretlenmiş H2O, Y ye ise oksijen atomları 18O ile işaretlenmiş CO2 veriliyor; X in CO2 si ile Y nin H2S si işaretsizdir.\n'+s10+'\nBuna göre, yukarıdaki ifadelerden hangileri doğrudur?',
   dogru=d10,sira=sr10,yan=y10,istenen='Doğru olan öncüller.',
-  ip=['İşaretli oksijenin hangi girenden başladığını belirle ve ürünlerdeki oksijen atomlarının kaynağını denklemde tek tek izle.'],
+  ip=['Her canlıda işaretli oksijenin hangi girenden başladığını belirle ve ürünlerdeki oksijen atomlarının kaynağını denklemde tek tek izle.'],
   bilgi=[B('Atomların izlenmesi','kimyasal tepkimede girenlerin atomları ürünlere dağılır; yeni atom oluşmaz · işaretli atomlar hangi ürünlerde bulunabileceği denklemden bulunur'),
          B('Oksijenli ve oksijensiz fotosentez','suyun hidrojen kaynağı olduğu fotosentezde O₂ açığa çıkar; H₂S gibi başka kaynak kullanıldığında O₂ yerine başka bir ürün çıkar')],
-  ad=[A('X te oksijenin kaynağı','X te O₂ suyun parçalanmasından gelir; işaretli oksijen CO₂ de olduğundan O₂ işaretsizdir.','I: yanlış'),
-      A('X te CO₂ nin oksijenleri','6 CO₂ de 12 oksijen vardır; 6 sı glikoza geçer, kalan 6 sı ürün H₂O ya gider.','II: doğru'),
-      A('Y de glikozun oksijenleri','Glikozun 6 oksijeni CO₂ den gelir; Y de CO₂ işaretlidir.','III: doğru'),
-      A('Öncülleri birleştir','II ve III doğru, I yanlıştır.','II ve III')],
-  puf='Ürünlerdeki oksijen atomlarını girenlerle eşleştirerek say; O₂ nin kaynağı sudur.',sekil=SK10)
+  ad=[A('X te işaretli suyun oksijeni','X te işaretli olan su, parçalanınca oksijen atomlarını O₂ ye verir; I doğrudur.','I: doğru'),
+      A('X te glikozun oksijenleri','Glikozun 6 oksijeni CO₂ den gelir; X te CO₂ işaretsizdir, glikoz da işaretsizdir.','II: yanlış'),
+      A('Y de CO₂ nin oksijenleri','Y de 6 CO₂ nin 12 oksijeninden 6 sı glikoza, kalan 6 sı ürün H₂O ya geçer; CO₂ işaretli olduğundan ürün H₂O da işaretlidir.','III: doğru'),
+      A('Öncülleri birleştir','I ve III doğru, II yanlıştır.','I ve III')],
+  puf='Ürünlerdeki oksijen atomlarını girenlerle eşleştirerek say.',sekil=SK10)
 
 # ============================ YAZ ============================
 assert len(P.ANA)==10
-Z=Counter(q['zorluk'] for q in P.ANA); assert Z=={'kolay':2,'orta':5,'zor':3},Z
+Z=Counter(q['zorluk'] for q in P.ANA); assert Z=={'kolay':2,'orta':6,'zor':2},Z
 HR=Counter(q['cevap']['sik'] for q in P.ANA); assert all(HR[h]==2 for h in 'ABCDE'),HR
 assert 4<=len({q['tipId'] for q in P.ANA})<=6
 SEK=sum(1 for q in P.ANA if q['sekil']); assert SEK>=6,SEK
