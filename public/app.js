@@ -330,7 +330,7 @@ function init(){
     } else {
       S.role = "student"; S.me = user.uid; S.view = "home";
       const need = ["students","settings"];
-      unsubs.push(onSnapshot(doc(fdb,"students",user.uid), s=>{ if(!dirty.has("students/"+user.uid)){ if(s.exists()){ const v = JSON.parse(JSON.stringify(s.data())); S.students.set(user.uid, v); BASE.set("students/"+user.uid, JSON.parse(JSON.stringify(v))); } else S.students.delete(user.uid); } loaded.students=true; checkReady(need); render(true); },
+      unsubs.push(onSnapshot(doc(fdb,"students",user.uid), s=>{ sunucudan("ogr", s); if(!dirty.has("students/"+user.uid)){ if(s.exists()){ const v = JSON.parse(JSON.stringify(s.data())); S.students.set(user.uid, v); BASE.set("students/"+user.uid, JSON.parse(JSON.stringify(v))); } else S.students.delete(user.uid); } loaded.students=true; checkReady(need); render(true); },
         e=>{ console.error(e); loaded.students=true; checkReady(need); render(); }));
       watchSettings(need); watchSorular(query(collection(fdb,"sorular"), where("sid","==",user.uid))); msgIzle(); grupIzle();
     }
@@ -358,7 +358,9 @@ function startStudent(id){
 }
 /* Program asla boş görünmesin: bu haftanın boş kalan her günü (görüşme günü dahil) geçen haftanın AYNI GÜNÜNDEKİ görevlerle, işaretsiz dolar.
    Koçun yazdığı günlere dokunulmaz. Öğrenci açınca ve koç programı açınca çalışır (günde bir kez). */
-function haftaTamamla(){ const s = st(), t = today(), anahtar = (A() ? S.cur : S.me) + "|" + t; if(!s || S.tekrarK === anahtar) return; S.tekrarK = anahtar;
+function haftaTamamla(){ const s = st(), t = today(), id = A() ? S.cur : S.me, anahtar = id + "|" + t; if(!s || S.tekrarK === anahtar) return;
+  /* Yalnız sunucudan gelen GÜNCEL veriyle çalış: telefondaki eski kopya koçun yeni yazdığı günleri boş sanıp üzerine yazmasın */
+  if(!(A() ? sunucu.students : sunucu.ogr) || dirty.has("students/"+id)){ setTimeout(haftaTamamla, 1500); return; } S.tekrarK = anahtar;
   const w = curStart(s), gunler = pDays(s, w), plan = [];
   gunler.forEach((d,i)=>{ if(dayTasks(s, d).length) return; for(const k of [7,14]){ const sd = addDays(d,-k), L = dayTasks(s, sd); if(L.length){ const sw = pStart(s, sd), sv = ((s.plan||{})[sw]||{}).saat?.[dDiff(sw, sd)]; plan.push([i, L, sv]); break; } } });
   if(!plan.length) return;
