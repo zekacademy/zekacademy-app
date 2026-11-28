@@ -2587,7 +2587,7 @@ const hkyBugun = () => HKY_ONERI[Math.floor(new Date(today()+"T12:00:00").getTim
 function hkyVeri(){ const L = [...S.students.entries()].filter(([,x])=>!x.silindi), w = monday(today()), t = today(); let hafta = 0;
   L.forEach(([,x])=>{ for(let i=0;i<7;i++){ const d = addDays(w,i); if(d<=t) hafta += minutes(x, d, d===t); } });
   const artis = [];
-  L.forEach(([,x])=>{ const E = exams(x,"TYT").filter(e=>e.tarih); if(E.length >= 2){ const a = tytTotal(E[0]), b = tytTotal(E[E.length-1]); if(a!=null && b!=null) artis.push([a,b]); } });
+  L.forEach(([,x])=>{ const E = exams(x,"TYT").filter(e=>e.tarih); if(E.length >= 2){ const a = tytTotal(E[0]), b = tytTotal(E[E.length-1]); if(a!=null && b!=null) artis.push([a,b,x]); } });
   const seri = L.map(([id,x])=>({id, x, n:streak(x)})).filter(o=>o.n>=3).sort((a,b)=>b.n-a.n);
   return { ogr:L.length, hafta, artis, ilk: artis.length ? artis.reduce((a,v)=>a+v[0],0)/artis.length : 0, son: artis.length ? artis.reduce((a,v)=>a+v[1],0)/artis.length : 0, seri }; }
 function basariAdaylar(){ return [...S.students.entries()].filter(([,x])=>!x.silindi).map(([id,x])=>{ const E = exams(x,"TYT").filter(e=>e.tarih && tytTotal(e)!=null); return {id, x, E, artis: E.length>=2 ? tytTotal(E[E.length-1]) - tytTotal(E[0]) : null}; }).filter(o=>o.artis!=null).sort((a,b)=>b.artis-a.artis); }
@@ -2648,10 +2648,16 @@ async function hkyCiz(k, tema){ const T = HK_TEMA[tema] || HK_TEMA.orman, W = 10
       yaz((f>=0?"+":"")+String(f).replace(".",","), W/2, 620, F(900,260), T.tx, "center"); yaz("ilk denemeye göre ortalama TYT net artışı", W/2, 700, F(700,38), T.sub, "center");
       g.font = F(800,34); const etk = [`%${yuz} artış`, `en yüksek +${String(Math.round(enIyi*10)/10).replace(".",",")} net`], ew = etk.map(x=>g.measureText(x).width + 60), top = ew.reduce((a,b)=>a+b,0) + 20; let ex = (W-top)/2;
       etk.forEach((x,i)=>{ g.fillStyle = i ? T.row : T.onBg; rr(ex, 750, ew[i], 70, 35); g.fill(); yaz(x, ex + ew[i]/2, 797, F(800,34), i ? T.tx : T.onTx, "center"); ex += ew[i] + 20; });
-      const bx = 220, bw = W-440, by = 1240, mx = Math.max(v.ilk, v.son, 1); [[v.ilk,"Başlangıç"],[v.son,"Şimdi"]].forEach(([n,ad],i)=>{ const h = 300*n/mx, x = bx + i*(bw/2) + bw/4 - 90; g.fillStyle = i ? T.onBg : T.offBg; rr(x, by-h, 180, h, 24); g.fill(); yaz(String(Math.round(n*10)/10).replace(".",","), x+90, by-h-24, F(800,44), T.tx, "center"); yaz(ad, x+90, by+52, F(600,30), T.sub, "center"); });
-      yaz(`${v.artis.length} öğrencinin ilk ve son TYT denemesi karşılaştırıldı`, W/2, 1350, F(500,28), T.sub, "center"); }
+      const fmtN = n => String(Math.round(n*10)/10).replace(".",","), ilk3 = v.artis.slice().sort((p,q)=>(q[1]-q[0])-(p[1]-p[0])).slice(0,3), etk3 = x => takmaAd(x) || (adSoyad(x.name||"")||"").split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" ");
+      yaz("EN ÇOK NET ARTIRANLAR", W/2, 900, F(800,30), T.acc, "center");
+      ilk3.forEach(([a0,b0,x],i)=>{ const y = 940 + i*132, md = ["#FACC15","#CBD5E1","#F59E0B"][i]; g.fillStyle = i ? T.row : `rgba(${T.glow},.18)`; rr(88, y, W-176, 112, 34); g.fill();
+        g.fillStyle = md; g.beginPath(); g.arc(150, y+56, 30, 0, 7); g.fill(); yaz(String(i+1), 150, y+68, F(900,32), "#3B2F05", "center");
+        g.font = F(700,40); let ad = etk3(x); while(ad.length > 2 && g.measureText(ad).width > 300) ad = ad.slice(0,-2)+"…"; yaz(ad, 204, y+70, F(700,40), T.tx);
+        yaz(`${fmtN(a0)} → ${fmtN(b0)}`, 640, y+70, F(700,34), T.sub, "center");
+        g.font = F(900,40); const pt = `+${fmtN(b0-a0)}`, pw = g.measureText(pt).width + 44; g.fillStyle = T.onBg; rr(W-110-pw, y+28, pw, 58, 29); g.fill(); yaz(pt, W-110-pw/2, y+70, F(900,40), T.onTx, "center"); });
+      yaz(`${v.artis.length} öğrencinin ilk ve son TYT denemesi karşılaştırıldı · kod adlarıyla`, W/2, 1372, F(500,28), T.sub, "center"); }
     else { yaz("Deneme verisi biriktikçe", W/2, 640, F(700,48), T.tx, "center"); yaz("burada net artışı görünecek.", W/2, 710, F(700,48), T.tx, "center"); }
-    yaz("Planlı çalışma, düzenli takip.", W/2, 1440, F(700,40), T.tx, "center"); cta(D, 1500); }
+    yaz("Planlı çalışma, düzenli takip.", W/2, 1460, F(700,40), T.tx, "center"); cta(D, 1515); }
   else if(k==="seri"){ const alev = await svgResim(ALEV_SVG), L = v.seri.slice(0,5), etk = o => takmaAd(o.x) || (adSoyad(o.x.name||"")||"").split(/\s+/).filter(Boolean).map(p=>p[0].toLocaleUpperCase("tr")+".").join(" ");
     g.save(); g.globalAlpha = .1; if(alev) [[120,560,90],[930,640,120],[80,1240,70],[980,1180,90],[540,1660,60]].forEach(([x,y,z])=>g.drawImage(alev, x-z/2, y-z*.67, z, z*1.33)); g.restore();
     yaz("SERİ REKORLARI", W/2, 330, F(800,34), "#F97316", "center"); yaz("Her gün masadalar", W/2, 420, F(800,74), T.tx, "center");
