@@ -7,7 +7,7 @@
    "id": "K-AKASB2-01",
    "konu": "Asit-Baz Dengesi",
    "alt": "pH ölçeği ve seyrelme",
-   "fikir": "pH ölçeğinde her birim H⁺ derişiminde 10 kat fark yaratır; seyrelmede kuvvetli asidin pH’ı hacim oranının logaritması kadar, zayıf asidinki bunun yarısı kadar artar.",
+   "fikir": "pH ölçeğinde her birim H⁺ derişiminde 10 kat fark yaratır; seyrelince asit çözeltilerinin pH değeri artar; artış miktarı asidin kuvvetine göre farklıdır.",
    "tuzak": "pH ile pOH’u karıştırmak; zayıf asidin seyrelince kuvvetli asit gibi davrandığını sanmak.",
    "zorluk": "orta",
    "kalip": "grafik",
@@ -33,7 +33,7 @@
    "id": "K-AKASB2-03",
    "konu": "Asit-Baz Dengesi",
    "alt": "Aynı pH’lı kuvvetli ve zayıf asit",
-   "fikir": "Aynı pH’ta zayıf asidin derişimi çok büyüktür; nötrleşmede asidin başlangıç mol sayısı hesaba katılır, o anki iyon sayısı değil.",
+   "fikir": "Nötrleşme hesabında çözeltinin içeriğinden mol sayıları bulunur; kuvvetli ve zayıf asit için bu mol sayıları ayrı yollarla hesaplanır.",
    "tuzak": "Aynı pH’lı asitlerin aynı miktarda baz harcadığını sanmak.",
    "zorluk": "orta",
    "kalip": "şekilli",
@@ -72,11 +72,24 @@
    "id": "K-AKASB2-06",
    "konu": "Asit-Baz Dengesi",
    "alt": "Kuvvetli ve zayıf baz karşılaştırması",
-   "fikir": "Aynı derişimli kuvvetli ve zayıf bazda OH⁻ derişimi ve iyonlaşma yüzdesi farklıdır; tam nötrleşme için gereken asit miktarı ise toplam mol sayısına bağlıdır.",
-   "tuzak": "İyonlaşma yüzdesini pH’tan doğrudan okumak; zayıf bazın daha az asit harcadığını sanmak.",
+   "fikir": "Aynı derişimli kuvvetli ve zayıf bazda OH⁻ derişimi ve iyonlaşma yüzdesi farklıdır; nötrleşme sonunda oluşan tuzun pH değeri bazın kuvvetine bağlıdır.",
+   "tuzak": "İyonlaşma yüzdesini pH’tan doğrudan okumak; zayıf bazın tuzunun da nötr olduğunu sanmak.",
    "zorluk": "orta",
    "kalip": "şekilli",
    "adim": 3,
+   "tipId": "ab-ka",
+   "tip": "Ka, Kb, asit kuvveti ve iyonlaşma yüzdesi",
+   "kaynak": "ÖSYM AYT 2018–2026 Kimya (Asit-Baz Dengesi, titrasyon, tampon; yalnız mantık) · MEB 12. sınıf kimya"
+  },
+  {
+   "id": "K-AKASB2-07",
+   "konu": "Asit-Baz Dengesi",
+   "alt": "Tuz çözeltilerinin pH değeri",
+   "fikir": "Zayıf asit ya da zayıf bazdan türeyen tuzun iyonlarından biri suyla tepkime verir; Kb = Kw/Ka ve Ka = Kw/Kb bağıntılarıyla pH hesaplanır.",
+   "tuzak": "Her tuzun nötr çözelti verdiğini sanmak; Kb ile Ka’yı karıştırmak.",
+   "zorluk": "zor",
+   "kalip": "şekilli",
+   "adim": 4,
    "tipId": "ab-ka",
    "tip": "Ka, Kb, asit kuvveti ve iyonlaşma yüzdesi",
    "kaynak": "ÖSYM AYT 2018–2026 Kimya (Asit-Baz Dengesi, titrasyon, tampon; yalnız mantık) · MEB 12. sınıf kimya"
@@ -127,7 +140,8 @@
    "tipId": "ab-ka",
    "ad": "Ka, Kb, asit kuvveti ve iyonlaşma yüzdesi",
    "kartlar": [
-    "K-AKASB2-06"
+    "K-AKASB2-06",
+    "K-AKASB2-07"
    ],
    "uygulamaKonu": "akim|Asit-Baz Dengesi"
   }
