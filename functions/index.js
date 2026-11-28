@@ -123,14 +123,14 @@ async function gorusmeHatirlatmalari(date, minutes, waKeys){
 }
 
 /* Haftalık yedek: her pazar 03:30, tüm veriler Storage'a JSON olarak (son 12 hafta tutulur) */
-export const haftalikYedek = onSchedule({ schedule: "30 3 * * 0", timeZone: TZ, retryCount: 1, memory: "512MiB", timeoutSeconds: 300 }, async () => {
+export const haftalikYedek = onSchedule({ schedule: "30 3 * * *", /* 28 Kasım 2026: haftalıktan günlüğe (koçun isteği) */ timeZone: TZ, retryCount: 1, memory: "512MiB", timeoutSeconds: 300 }, async () => {
   const { date } = istanbulNow();
   const kol = ["students", "coachNotes", "notifs", "gorusmeler", "settings"], veri = { tarih: new Date().toISOString() };
   for (const k of kol) veri[k] = Object.fromEntries((await db.collection(k).get()).docs.filter(d => !(k === "settings" && d.id === "foto")).map(d => [d.id, d.data()]));
   const bucket = getStorage().bucket(), ad = `yedekler/zekacademy-${date}.json`, icerik = JSON.stringify(veri);
   await bucket.file(ad).save(icerik, { contentType: "application/json", resumable: false });
   const [dosyalar] = await bucket.getFiles({ prefix: "yedekler/" });
-  const eski = dosyalar.map(f => f.name).sort().slice(0, -12);
+  const eski = dosyalar.map(f => f.name).sort().slice(0, -30); /* son 30 gün */
   for (const n of eski) await bucket.file(n).delete().catch(() => {});
   await db.doc("settings/yedek").set({ son: date, boyutKB: Math.round(icerik.length / 1024), ogrenci: Object.keys(veri.students).length });
   logger.info(`Yedek alındı: ${ad} (${Math.round(icerik.length / 1024)} KB)`);
@@ -620,4 +620,18 @@ export const hikayeHatirlat = onSchedule({ schedule: "0 23 * * *", timeZone: TZ,
   const tokens = await coachTokens(); if (!tokens.length) return;
   const gun = new Date().toLocaleDateString("sv-SE", { timeZone: TZ }), oneri = HKY_ONERI[Math.floor(new Date(gun + "T12:00:00Z").getTime() / 864e5) % HKY_ONERI.length];
   await pushTo(tokens, "📸 Bugünün hikayesi hazır", `Öneri: ${oneri}. Dokun, rengini seç, Instagram'da paylaş.`, "/?ac=hikaye");
+});
+
+/* Program yedeği (Firestore, Storage'dan bağımsız): günde iki kez her öğrencinin son 3 haftalık programı ve hedefleri yedek_program'a yazılır; 14 günden eskiler silinir.
+   Bir program yanlışlıkla silinir ya da ezilirse en fazla yarım günlük kayıpla geri getirilebilir. */
+export const programYedek = onSchedule({ schedule: "15 3,15 * * *", timeZone: TZ, retryCount: 1, memory: "512MiB", timeoutSeconds: 300 }, async () => {
+  const an = new Date().toISOString(), sinir = new Date(Date.now() - 21 * 864e5).toISOString().slice(0, 10), q = await db.collection("students").get();
+  let b = db.batch(), n = 0;
+  for (const d of q.docs) { const x = d.data(); if (x.silindi) continue; const W = {}, P = {};
+    Object.keys(x.weeks || {}).filter(w => w >= sinir).forEach(w => W[w] = x.weeks[w]); Object.keys(x.plan || {}).filter(w => w >= sinir).forEach(w => P[w] = x.plan[w]);
+    b.set(db.doc(`yedek_program/${an.slice(0, 16)}_${d.id}`), { sid: d.id, an, donem: x.donem || [], weeks: W, plan: P }); if (++n % 400 === 0) { await b.commit(); b = db.batch(); } }
+  await b.commit();
+  const eski = await db.collection("yedek_program").where("an", "<", new Date(Date.now() - 14 * 864e5).toISOString()).get();
+  let s2 = db.batch(), m = 0; for (const d of eski.docs) { s2.delete(d.ref); if (++m % 400 === 0) { await s2.commit(); s2 = db.batch(); } } await s2.commit();
+  logger.info(`Program yedeği: ${n} öğrenci, ${m} eski yedek silindi`);
 });
