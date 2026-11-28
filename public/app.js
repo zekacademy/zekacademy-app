@@ -358,7 +358,8 @@ function startStudent(id){
 }
 /* Program asla boş görünmesin: bu haftanın boş kalan her günü (görüşme günü dahil) geçen haftanın AYNI GÜNÜNDEKİ görevlerle, işaretsiz dolar.
    Koçun yazdığı günlere dokunulmaz. Öğrenci açınca ve koç programı açınca çalışır (günde bir kez). */
-function haftaTamamla(){ const s = st(), t = today(), anahtar = (A() ? S.cur : S.me) + "|" + t; if(!s || S.tekrarK === anahtar) return; S.tekrarK = anahtar;
+const HAFTA_TAMAMLA_ACIK = false; /* 28 Kasım 2026: kapatıldı — eski önbellekle koçun yeni programının üzerine yazdı */
+function haftaTamamla(){ if(!HAFTA_TAMAMLA_ACIK) return; const s = st(), t = today(), anahtar = (A() ? S.cur : S.me) + "|" + t; if(!s || S.tekrarK === anahtar) return; S.tekrarK = anahtar;
   const w = curStart(s), gunler = pDays(s, w), plan = [];
   gunler.forEach((d,i)=>{ if(dayTasks(s, d).length) return; for(const k of [7,14]){ const sd = addDays(d,-k), L = dayTasks(s, sd); if(L.length){ const sw = pStart(s, sd), sv = ((s.plan||{})[sw]||{}).saat?.[dDiff(sw, sd)]; plan.push([i, L, sv]); break; } } });
   if(!plan.length) return;
